@@ -16,9 +16,9 @@ With the help of the Commerce Manager client, administrative users adjust system
 
 The <a class="crosslink" href="https://virtocommerce.com/ecommerce-website" target="_blank">web Storefront</a> is a website where customers shop for the products that are offered through the Commerce Manager. 
 
-The mobile Storefront app duplicates web Storefront and gives better user experience for mobile users. Check more on [Mobile Starter app page](docs/vc2userguide/introduction-to-virtocommerce/mobile-starter-app).
+The mobile Storefront app duplicates web Storefront and gives better user experience for mobile users. Check more on [Mobile Starter app page](https://virtocommerce.com/docs/vc2userguide/introduction-to-virtocommerce/mobile-starter-app).
 
-For the detailed descriptions of the platform components please refer to the [Developer Guide](docs/vc2devguide) and [Installation Deployment Guide](docs/vc2devguide/deployment).
+For the detailed descriptions of the platform components please refer to the [Developer Guide](https://virtocommerce.com/docs/vc2devguide) and [Installation Deployment Guide](https://virtocommerce.com/docs/vc2devguide/deployment).
 
 
 ## Architecture diagram
