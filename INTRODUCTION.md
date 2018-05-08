@@ -17,11 +17,11 @@ For the detailed descriptions of the platform components please refer to the [De
 
 ### Architecture diagram
 
-![Virto Commerce 2 Architecture](../../assets/images/docs/architecture-circle.png "Virto Commerce 2 Architecture")
+![Virto Commerce 2 Architecture](../images/architecture-circle.jpg "Virto Commerce 2 Architecture")
 
 ### Used stack of technologies
 
-![Virto Commerce 2 Technology Stack](../../assets/images/docs/image04.jpg "Virto Commerce 2 Technology Stack")
+![Modern Technology Stack](../images/stack.jpg "Modern Technology Stack")
 
 Our decision to use these technologies was the consequence of our extensive experience with Microsoft products.
 
@@ -35,7 +35,14 @@ We decided to use the following stack of technologies:
 
 **AngularJS** - for **SPA** user interface. One of the major decisions for picking it is due to its popularity and quality documentation. We didn’t have any prior experience working with AngularJS. Looking back, we never had any regrets with our decision to do so.
 
+![Virto Commerce 2 Technology Stack](../images/image04.jpg "Virto Commerce 2 Technology Stack")
+
 <a class="crosslink" href="https://virtocommerce.com/glossary/what-is-b2b-ecommerce" target="_blank">Platform and modules</a> are written using <a href="https://en.wikipedia.org/wiki/Domain-driven_design" rel="nofollow">DDD</a>, <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)" rel="nofollow">SOLID</a>, <a href="https://en.wikipedia.org/wiki/Test-driven_development" rel="nofollow">Test Driven Development</a> methodologies. For a presentation layer, we use <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" rel="nofollow">MVVM</a> (thanks to AngularJS - the transition from WPF didn’t create any complications).
 
 ### The main advantages
-
+* One of the main advantages of the platform is its modularity,
+that gives high speed and isolation of development and releases, simplicity of scaling and increased fault tolerance.
+* Used modern stack of technologies.
+* The platform supports the creation of multichannel and multilanguage solutions.
+* All code of the platform and its modules, as well as the development process is available in clear form on GitHub (https://github.com/VirtoCommerce)
+* The results of code quality evaluation are also available in open form in SonarQube (https://sonar.virtocommerce.com/projects?sort=-analysis_date)
