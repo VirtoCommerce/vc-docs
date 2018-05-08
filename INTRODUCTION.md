@@ -1,4 +1,10 @@
-# introduction
+---
+title: Virto Commerce documentation - Introduction
+description: Virto Commerce documentation - Introduction
+layout: docs
+date: 2018-05-04
+priority: 1
+---
 
 ### Main goals
 
@@ -17,7 +23,7 @@ For the detailed descriptions of the platform components please refer to the [De
 
 ### Architecture diagram
 
-![Virto Commerce 2 Architecture](../images/architecture-circle.jpg "Virto Commerce 2 Architecture")
+![Virto Commerce 2 Architecture](./images/architecture-circle.jpg "Virto Commerce 2 Architecture")
 
 ### Used stack of technologies
 
