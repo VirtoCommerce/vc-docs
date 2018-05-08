@@ -6,8 +6,8 @@ date: 2018-05-07
 priority: 2
 ---
 
-### Get started as user
-## Logging on to the Commerce Manager
+## Get started as user
+### Logging on to the Commerce Manager
 
 * You can open Commerce Manager in any of the support browsers. Ask you administrator for a URL
 * Enter your user name and password
@@ -15,7 +15,7 @@ priority: 2
 
 Permissions determine which activities and functionality the user can access and what data blocks will be visible on the dashboard.
 
-### Get started as developer
+## Get started as developer
 
 There are several ways to start with <a class="crosslink" href="https://virtocommerce.com/b2b-ecommerce-platform" target="_blank">Virto Commerce</a>. Below are some of your options:
 
