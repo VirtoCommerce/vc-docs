@@ -27,7 +27,7 @@ For the detailed descriptions of the platform components please refer to the [De
 
 ### Used stack of technologies
 
-![Modern Technology Stack](../images/stack.jpg "Modern Technology Stack")
+![Modern Technology Stack](./images/stack.jpg "Modern Technology Stack")
 
 Our decision to use these technologies was the consequence of our extensive experience with Microsoft products.
 
@@ -41,7 +41,7 @@ We decided to use the following stack of technologies:
 
 **AngularJS** - for **SPA** user interface. One of the major decisions for picking it is due to its popularity and quality documentation. We didn’t have any prior experience working with AngularJS. Looking back, we never had any regrets with our decision to do so.
 
-![Virto Commerce 2 Technology Stack](../images/image04.jpg "Virto Commerce 2 Technology Stack")
+![Virto Commerce 2 Technology Stack](./images/image04.jpg "Virto Commerce 2 Technology Stack")
 
 <a class="crosslink" href="https://virtocommerce.com/glossary/what-is-b2b-ecommerce" target="_blank">Platform and modules</a> are written using <a href="https://en.wikipedia.org/wiki/Domain-driven_design" rel="nofollow">DDD</a>, <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)" rel="nofollow">SOLID</a>, <a href="https://en.wikipedia.org/wiki/Test-driven_development" rel="nofollow">Test Driven Development</a> methodologies. For a presentation layer, we use <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" rel="nofollow">MVVM</a> (thanks to AngularJS - the transition from WPF didn’t create any complications).
 
