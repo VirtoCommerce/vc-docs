@@ -128,4 +128,4 @@ Mind the **priority** property as it defines the menu position relative to the o
 
 That's it. Run VirtoCommerce Manager application to check how your new module looks like. It should have its own menu entry in the main menu:
 
-![Module in the main menu](./images/image2015-4-21_14-24-35.png)
+![Module in the main menu](../images/image2015-4-21_14-24-35.png)

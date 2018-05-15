@@ -24,13 +24,13 @@ Download [Virto Commerce Module template](https://marketplace.visualstudio.com/i
 
 Create project by using our template as follows:
 
-![Virto Commerce Module Template](./images/project-template.png)
+![Virto Commerce Module Template](../images/project-template.png)
 
 ### Module solution structure
 
 After clicking OK button you will have the following project:
 
-![Virto Commerce Module Project](./images/project-structure.png)
+![Virto Commerce Module Project](../images/project-structure.png)
 
 * **module.manifest** Contains various attributes describing the module and its content.
 * **module.ignore** Contains a list of files which should be excluded from the resulting module package. This is useful if your module depends on some other module and you don't want files which are already included in that module to be duplicated in your module.
@@ -63,14 +63,14 @@ mklink /d ManagedModule1 <full_path_to_ManagedModule1_project>
 
 Compile your solution, restart IIS and open Manager in browser to check how your new module looks like. You should see a new item in the menu, which opens a Hello World blade:
 
-![Hello World](./images/hello-world.png)
+![Hello World](../images/hello-world.png)
 
 ### Creating and installing a module package
 
 1. Open Tools > NuGet Package Manager > Package Manager Console
 2. Run the following command: **Compress-Module**
 
-![Compress Module](./images/compress-module.png)
+![Compress Module](../images/compress-module.png)
 
 The output will show the location of the created module package (ManagedModule1_1.0.0.zip).
 
@@ -80,9 +80,9 @@ If **Compress-Module** command is not recognized, restart Visual Studio and repe
 4. Navigate to Modules > Advanced
 5. Upload your ManagedModule1_1.0.0.zip:
 
-![Module Upload](./images/modules-advanced.png)
+![Module Upload](../images/modules-advanced.png)
 
-![Module Upload](./images/module-install.png)
+![Module Upload](../images/module-install.png)
 
 6. Click install
 

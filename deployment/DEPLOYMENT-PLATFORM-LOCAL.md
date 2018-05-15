@@ -41,7 +41,7 @@ To retrieve changes from original Virto Commerce Platform repository, merge **up
 Restore NuGet packages in one of the following ways:
 * Open **VirtoCommerce.Platform.sln** solution in Visual Studio. In Solution Explorer window right-click on solution and select **Manage NuGet Packages for Solution**. In the opened window click the **Restore** button.
 
-![Restore NuGet packages for solution](./images/image2016-7-26_11-23-32.png "Restore NuGet packages for solution")
+![Restore NuGet packages for solution](../images/image2016-7-26_11-23-32.png "Restore NuGet packages for solution")
 * Run this command:
 ```
 nuget restore C:\vc-platform\VirtoCommerce.Platform.Web\VirtoCommerce.Platform.sln
@@ -52,7 +52,7 @@ Build the solution.
 
 SQL Server Authentication mode must be enabled.
   
-![Configure SQL Server](./images/image2015-4-7_11-44-53.png "Configure SQL Server") 
+![Configure SQL Server](../images/image2015-4-7_11-44-53.png "Configure SQL Server") 
 
 Create the new login named **virto** with password **virto**. The password policy enforcement should be switched off for a simple password like this.
 
@@ -72,25 +72,25 @@ Open the **C:\vc-platform\VirtoCommerce.Platform.Web\web.config** file and make 
 
 Open **IIS Manager** and add new application to **Default Web Site** with alias **admin** and physical path to **C:\vc-platform\VirtoCommerce.Platform.Web**. Select application pool which uses **.NET CLR Version 4.0** and **Integrated pipeline mode**.
 
-![Create new web application for Virto Commerce Platform](./images/add-admin-application-source-code.png "Create new web application for Virto Commerce Platform")
+![Create new web application for Virto Commerce Platform](../images/add-admin-application-source-code.png "Create new web application for Virto Commerce Platform")
 
 Inside the **admin** application add a new virtual directory with alias **assets** and physical path to **C:\vc-platform\VirtoCommerce.Platform.Web\App_Data\Assets**. If there is no Assets directory inside App_Data, create it.
 
-![Create a virtual directory for Virto Commerce Platform assets](./images/create-platform-assets-virtual-folder-source-code.png "Create a virtual directory for Virto Commerce Platform assets")
+![Create a virtual directory for Virto Commerce Platform assets](../images/create-platform-assets-virtual-folder-source-code.png "Create a virtual directory for Virto Commerce Platform assets")
 
 Your web site structure should be similar to the one shown below:
 
-![Virto Commerce Platform website structure](./images/image2016-7-26_12-8-20.png "Virto Commerce Platform website structure")
+![Virto Commerce Platform website structure](../images/image2016-7-26_12-8-20.png "Virto Commerce Platform website structure")
 
 ### Configure file system
 
 Open properties for the folder where you have extracted precompiled version or source code **(C:\vc-platform)** and give permission **Read & execute** to **Users** group if this permission is not inherited from the parent folder.
   
-![Set permissions for Virto Commerce Platform application folder](./images/image2015-8-21_15-46-0.png "Set permissions for Virto Commerce Platform application folder")
+![Set permissions for Virto Commerce Platform application folder](../images/image2015-8-21_15-46-0.png "Set permissions for Virto Commerce Platform application folder")
 
 Open properties for **C:\vc-platform\VirtoCommerce.Platform.Web\App_Data** folder and give permission **Modify** to **IIS_IUSRS** user group.
 
-![Set permissions for Virto Commerce Platform App_Data folder](./images/image2015-9-23_11-29-42.png "Set permissions for Virto Commerce Platform App_Data folder")
+![Set permissions for Virto Commerce Platform App_Data folder](../images/image2015-9-23_11-29-42.png "Set permissions for Virto Commerce Platform App_Data folder")
 
 Open properties for **C:\vc-platform\VirtoCommerce.Platform.Web\Modules** (create this folder if not exsist) folder and give permission **Modify** to **IIS_IUSRS** user group as shown above.
 
@@ -115,7 +115,7 @@ Open the http://localhost/admin URL in browser. 
 
 A sign in page should open:
 
-![Virto Commerce Platform login screen](./images/image2015-2-26_12-5-39.png "Virto Commerce Platform login screen")
+![Virto Commerce Platform login screen](../images/image2015-2-26_12-5-39.png "Virto Commerce Platform login screen")
 
 The default administrator account login is **admin** and the password is **store**.
 
@@ -147,7 +147,7 @@ Why not to **create your own** module? Follow the steps described in [Developin
 
 #### How platform loads modules
 
-![Virto Commerce Platform loading modules scheme](./images/VC_modules_copy_process.png "Virto Commerce Platform loading modules scheme")
+![Virto Commerce Platform loading modules scheme](../images/VC_modules_copy_process.png "Virto Commerce Platform loading modules scheme")
 
 ### Sample data
 
@@ -155,7 +155,7 @@ If you have no data for your VirtoCommerce Platform, but want to easy develop Vi
 
 At first login you will see the following dialog after optional module choice & installation:
 
-![Virto Commerce Platform sample data installation](./images/sample-data-installation.png "Virto Commerce Platform sample data installation")
+![Virto Commerce Platform sample data installation](../images/sample-data-installation.png "Virto Commerce Platform sample data installation")
 
 Click to **Clothing and Electronics**. Sample data installation will start.
 

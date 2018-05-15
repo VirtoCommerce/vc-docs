@@ -13,11 +13,11 @@ You can <a class="crosslink" href="https://virtocommerce.com/ecommerce-hosting" 
 * Open the code repository <a href="https://github.com/VirtoCommerce/vc-community" rel="nofollow">https://github.com/VirtoCommerce/vc-community</a>
 * Scroll to the end of the page and click the **Deploy to Azure** button
 
-![Deploy to Azure button](./images/image2015-4-6_16-43-13.png "Deploy to Azure button")
+![Deploy to Azure button](../images/image2015-4-6_16-43-13.png "Deploy to Azure button")
 
 You will see the first page of the deployment wizard:
 
-![Start page of Deploy Wizard](./images/image2016-6-6_14-43-29.png "Start page of Deploy Wizard")
+![Start page of Deploy Wizard](../images/image2016-6-6_14-43-29.png "Start page of Deploy Wizard")
   
 * **Directory** and **Subscription** options define which Azure subscription will be used.
 * **Resource group** option allows you to create a new Azure resource group or select an existing one from the list. The new SQL server and the new website will be added to this group.
@@ -36,16 +36,16 @@ You will see the first page of the deployment wizard:
 * Enter the password for SQL Server administrator and click **Next** button.
 * On the second page of the deployment wizard click **Deploy** button.
 
-![Final step of Deploy Wizard](./images/image2016-6-6_14-51-36.png "Final step of Deploy Wizard")
+![Final step of Deploy Wizard](../images/image2016-6-6_14-51-36.png "Final step of Deploy Wizard")
 
 The deployment process will take about 3 minutes.
 
-![Deployment process](./images/image2016-6-6_15-0-35.png "Deployment process")
+![Deployment process](../images/image2016-6-6_15-0-35.png "Deployment process")
   
 * You can now browse to the VirtoCommerce Platform, the login is: **admin**, and password is **store**.
 * If you selected to install the Commerce bundle, it will be installed automatically after you have signed in:
 
-![Extracting Virto Commerce 2 bundles](./images/image2016-6-6_15-8-42.png "Installing Virto Commerce 2 bundles")
+![Extracting Virto Commerce 2 bundles](../images/image2016-6-6_15-8-42.png "Installing Virto Commerce 2 bundles")
   
 * Click **Restart** button to activate installed modules.
 
@@ -53,7 +53,7 @@ The deployment process will take about 3 minutes.
 
 Sometimes the deployment process fails while **Running deployment command**:
 
-![Deployment error](./images/image2015-8-3_12-24-53.png "Deployment error")
+![Deployment error](../images/image2015-8-3_12-24-53.png "Deployment error")
 
 Clicking the green (View Error) link will not explain anything, you should go to Azure Portal and check the deployment log.
 
@@ -63,7 +63,7 @@ Open Web Apps and select your recenly created web app.Click on **Active Deployme
 
 Open Web App settings.Open **Deployment source**.Click **Sync** button in the toolbar.
 
-![Updating Virto Commerce 2](./images/image2016-6-6_15-18-58.png "Updating Virto Commerce 2")
+![Updating Virto Commerce 2](../images/image2016-6-6_15-18-58.png "Updating Virto Commerce 2")
 
 This operation will download the latest source code from GitHub repository, compile it, copy the result to the wwwroot directory and restart the web site.
 

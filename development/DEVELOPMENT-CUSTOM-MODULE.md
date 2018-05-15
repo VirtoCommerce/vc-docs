@@ -38,14 +38,13 @@ You can create custom modules with and without managed code. Each module will be
 
 ### Publishing
 
-![Modules contributing process](./images/Modules_contributing_process.png)
-
+![Modules contributing process](../images/Modules_contributing_process.png)
 
 ### Packaging
 
 Module package is a distributable piece of software that can be installed in VirtoCommerce Platform. Technically, module package is a ZIP archive containing module manifest and other module content:
 
-![ZIP archive](./images/image2015-5-29_12-13-41.png)
+![ZIP archive](../images/image2015-5-29_12-13-41.png)
 
 Modules can be unmanaged (JavaScript only) or managed (containing .NET assemblies).
 
@@ -65,7 +64,7 @@ The following steps are needed only once per module. Skip this paragraph if you
 * In the "Default project" list select the module project (the one with module.manifest file);
 * Install VirtoCommerce.Module package (execute command: Install-Package VirtoCommerce.Module). More info on the package: <a href="https://www.nuget.org/packages/VirtoCommerce.Module" rel="nofollow">https://www.nuget.org/packages/VirtoCommerce.Module</a>
 * readme.txt is displayed after the package installation is completed.
-![Package installation completed](./images/image2016-6-1_10-21-32.png)
+![Package installation completed](../images/image2016-6-1_10-21-32.png)
 
 The module is ready to be build as a package.
 
@@ -75,7 +74,7 @@ Execute these steps every time when you need the module package to be created / 
 
 Open and build the module project in VS;If need, update the module version (in module.manifest) and build again;Open Package Manager Console (Tools -> NuGet Package Manager -> Package Manager Console);In the "Default project" list select the module project (the one with module.manifest file);Execute command: Compress-Module
 
-![Compress-Module](./images/image2016-6-1_10-44-13.png)
+![Compress-Module](../images/image2016-6-1_10-44-13.png)
 
 The module package is created in the project directory.
 

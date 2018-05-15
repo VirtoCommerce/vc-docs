@@ -13,11 +13,11 @@ Before starting <a class="crosslink" href="https://virtocommerce.com/ecommerce-w
 * Open the code repository <a href="https://github.com/VirtoCommerce/vc-storefront" rel="nofollow">https://github.com/VirtoCommerce/vc-storefront</a>
 * Scroll to the end of the page and click the **Deploy to Azure** button
 
-![Deploy to Azure button](./images/image2015-4-6_16-43-13.png "Deploy to Azure button")
+![Deploy to Azure button](../images/image2015-4-6_16-43-13.png "Deploy to Azure button")
   
 You will see the first page of the deployment wizard:
   
-![First step of Deploy Wizard](./images/image2016-6-10_15-59-8.png "First step of Deploy Wizard")
+![First step of Deploy Wizard](../images/image2016-6-10_15-59-8.png "First step of Deploy Wizard")
   
 * **Directory** and **Subscription** options define which Azure subscription will be used.
 * **Resource group** option allows you to create a new Azure resource group or select an existing one from the list. The new website will be added to this group.
@@ -28,7 +28,7 @@ You will see the first page of the deployment wizard:
 * **Virto Commerce Api Hmac App Secret Key** is the Hmac secret key will used for API calls authentication (default value: **34f0a3c12c9dbb59b63b5fece955b7b2b9a3b20f84370cba1524dd5c53503a2e2cb733536ecf7ea1e77319a47084a3a2c9d94d36069a432ecc73b72aeba6ea78**)
 * **Content Storage Connection string** is the connection string with have syntax provider=AzureBlobStorage;DefaultEndpointsProtocol=http;AccountName=XXXX;AccountKey=YYYY and should pointed to CMS content blob  storage . You can get it value from your VC 2.11 platform application settings.
 
-![Virto Commerce 2 application settings in Azure](./images/image2016-6-10_16-15-5.png "Virto Commerce 2 application settings in Azure")
+![Virto Commerce 2 application settings in Azure](../images/image2016-6-10_16-15-5.png "Virto Commerce 2 application settings in Azure")
 
 On the second page of the deployment wizard click **Deploy** button. And wait until deploy process will finished. And click to resulting link in final screen.
 

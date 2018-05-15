@@ -41,7 +41,7 @@ To retrieve changes from original Virto Commerce Storefront repository, merge **
 Restore NuGet packages in one of the following ways:
 * Open **VirtoCommerce.Storefront.sln** solution in Visual Studio. In Solution Explorer window right-click on solution and select **Manage NuGet Packages for Solution**. In the opened window click the **Restore** button.
 
-![Restore NuGet packages for solution](./images/restore-packages-in-storefront.png "Restore NuGet packages for solution")
+![Restore NuGet packages for solution](../images/restore-packages-in-storefront.png "Restore NuGet packages for solution")
 
 * Run this command:
 ```
