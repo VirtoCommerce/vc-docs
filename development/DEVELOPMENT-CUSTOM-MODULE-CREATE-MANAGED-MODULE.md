@@ -1,6 +1,6 @@
 ---
-title: Virto Commerce documentation - Custom module development: create managed module
-description: Virto Commerce documentation - Custom module development: create managed module
+title: Virto Commerce documentation - Custom module development, create managed module
+description: Virto Commerce documentation - Custom module development, create managed module
 layout: docs
 date: 2018-05-14
 priority: 9

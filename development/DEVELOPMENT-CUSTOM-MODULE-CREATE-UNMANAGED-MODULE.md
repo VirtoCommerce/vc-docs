@@ -1,6 +1,6 @@
 ---
-title: Virto Commerce documentation - Custom module development: create unmanaged module
-description: Virto Commerce documentation - Custom module development: create unmanaged module
+title: Virto Commerce documentation - Custom module development, create unmanaged module
+description: Virto Commerce documentation - Custom module development, create unmanaged module
 layout: docs
 date: 2018-05-14
 priority: 10

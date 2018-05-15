@@ -1,6 +1,6 @@
 ---
-title: Virto Commerce documentation - Custom module development: module.manifest
-description: Virto Commerce documentation - Custom module development: module.manifest module
+title: Virto Commerce documentation - Custom module development, module.manifest
+description: Virto Commerce documentation - Custom module development, module.manifest module
 layout: docs
 date: 2018-05-14
 priority: 11
