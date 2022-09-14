@@ -11,7 +11,7 @@ To download the latest Marketing module release, click [here](https://github.com
 Virto's Marketing module provides the following key features:
  
 + Managing [dynamic content](#dynamic-content) for Storefront
-+ Managing [published content](#working-with-dynamic-content)
++ Managing [published content](managing-published-content.md)
 + Creating and running [promotions](#promotions)
 
 ## Dynamic Content
