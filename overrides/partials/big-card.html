@@ -1,0 +1,15 @@
+<!-- Card -->
+{% if card %}
+<a href="{{card.link}}" class="big-card" {% if not card.link %} style="cursor: pointer;" {% endif %}>
+    <div class="big-card__header">
+        <h2 class="big-card__title">
+            {% if "icon" in card %}
+            <span class="big-card__title-icon">{% include card.icon %}</span>
+            {% endif %}
+            {{ card.title }}</h2>
+    </div>
+    <div class="big-card__content">
+        <p>{{ card.description }}</p>
+    </div>
+</a>
+{% endif %}

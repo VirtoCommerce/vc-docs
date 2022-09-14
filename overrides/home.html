@@ -1,0 +1,85 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+
+<section class="main-container md-grid">
+    <div class="md-typeset main-container__wrapper">
+        <div class="main-container__head">
+            <h1 class="main-container__title">Welcome to Virto Documentation Center</h1>
+            <p class="main-container__desc">All the technical details of Virto Commerce Platform</p>
+            <button class="main-container__button">Explore Atomic Architecture&#8482;</button>
+        </div>
+        <img class="main-container__image" src="v2.0/assets/icons/main.svg" alt="Coding">
+    </div>
+    {% if not config.extra.main_page.top_cards is mapping %}
+    <h1 class="main-container__header-title">Select your primary role, and we will find the most suitable docs for you:</h1>
+    <div class="main-container__cards">
+
+        <div class="main-container__cards-row">
+            {% for card in config.extra.main_page.top_cards %}
+            <div class="main-container__cards-col main-container__cards-col_wide">
+                    {% include "partials/big-card.html" %}
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+    {% endif %}
+</section>
+
+<section class="main-container md-grid">
+    <div class="md-typeset">
+        <h1 class="main-container__title">Product Catalog</h1>
+    </div>
+    {% if not config.extra.main_page.wide_cards is mapping %}
+    <div class="main-container__cards">
+        <div class="main-container__cards-row">
+            {% for card in config.extra.main_page.wide_cards %}
+            <div class="main-container__cards-col main-container__cards-col_wide">
+                {% include "partials/wide-card.html" %}
+            </div>
+            {% endfor %}
+    </div>
+    {% endif %}
+</section>
+
+<section class="main-container md-grid">
+    <div class="md-typeset">
+        <h1 class="main-container__title">Virto Education</h1>
+    </div>
+    {% if not config.extra.main_page.education is mapping %}
+    <div class="main-container__cards">
+        <div class="main-container__cards-row">
+            {% for card in config.extra.main_page.education %}
+            <div class="main-container__cards-col main-container__cards-col_wide">
+                {% include "partials/card.html" %}
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+<section class="main-container md-grid">
+    <div class="main-container__subscribe-wrap">
+        <h2 class="main-container__subscribe-title">Want amazing technical news & updates straight to your inbox?</h2>
+        <img class="main-container__subscribe-arrow" src="v2.0/assets/icons/link.svg" alt="Arrow">
+    </div>
+    <div class="main-container__subscribe-block">
+        <div class="main-container__subscribe-input-wrap">
+            <input type="email" placeholder="We saved a spot for your email" class="main-container__subscribe-input" />
+            <button class="main-container__subscribe-input-button">SUBSCRIBE</button>
+        </div>
+        <p class="main-container__subscribe-desc">By clicking send you'll receive occasional emails from Virto Developer Center. You always have the choice to unsubscribe within every email you receive.</p>
+    </div>
+</section>
+
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

@@ -1,0 +1,116 @@
+.md-nav__link {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 0.583rem;
+    line-height: 0.833rem;
+    letter-spacing: 0.01em;
+    padding: 0.25rem 1rem;
+    color: var(--sidebar-text-color);
+}
+
+.md-nav__item .md-nav__link--active {
+    color: var(--sidebar-text-color);
+    background-color: var(--sidebar-hover-color);
+}
+
+.md-nav__item {
+    position: relative;
+}
+
+.md-nav__item .md-nav__item--active:not(.md-nav__item--nested):before  {
+    content: '';
+    width: 0.167rem;
+    height: 100%;
+    background-color: var(--primary-70);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.md-nav__link .md-nav__link--active:before {
+    content: '';
+    width: 0.167rem;
+    height: 100%;
+    background-color: var(--primary-70);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.md-nav__link:is(:focus,:hover) {
+    background-color: var(--sidebar-hover-color);
+    color: var(--sidebar-text-color);
+}
+
+.md-nav__link:-webkit-any(:focus,:hover) {
+    background-color: var(--sidebar-hover-color);
+    color: var(--sidebar-text-color);
+}
+
+.md-nav.md-nav--secondary {
+    height: 100%;
+}
+
+.md-nav.md-nav--secondary .md-nav__item {
+    position: static;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__link {
+    height: 100%;
+    margin-top: 0;
+    padding: 0.167rem 0.667rem;
+    display: block;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__link:before {
+    content: '';
+    width: 0.083rem;
+    height: inherit;
+    background-color: var(--neutral-80);
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    margin-top: -4px;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__list .md-nav__item.md-nav__link:before {
+    left: 0;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__link.md-nav__link--active {
+    color: var(--primary-70);
+    background-color: transparent;
+    z-index: 1;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__link.md-nav__link--active:before {
+    background-color: var(--primary-70);
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__list[data-md-component=toc] {
+    overflow: hidden;
+    position: relative;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__list[data-md-component=toc] > .md-nav__item {
+    padding: 0;
+}
+
+.md-sidebar.md-sidebar--secondary .md-nav__link:is(:focus,:hover) {
+    background-color: transparent;
+    color: var(--primary-70);
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 12px;
+}

@@ -1,0 +1,168 @@
+.md-nav__item .md-nav__icon {
+    display: none;
+}
+
+.md-nav .md-nav__palette {
+    display: none;
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-nav__item {
+        position: static;
+    }
+
+    .md-nav__item .md-nav__item--active:not(.md-nav__item--nested):before {
+        display: none;
+    }
+
+    .md-nav--primary .md-nav__item--active > .md-nav__link {
+        color: var(--primary-70);
+        background: transparent;
+    }
+
+    .md-nav__item .md-nav__link :not([data-md-component=toc]){
+        color: var(--header-title-primary-color);
+        font-size: 15px;
+        line-height: 20px;
+        padding: 16px 24px;
+    }
+
+    .md-nav--primary .md-nav__link .md-nav__icon:after {
+        height: 11px;
+        width: 5px;
+        background-color: var(--burger-color);
+    }
+
+    .md-nav__item .md-nav__link--active {
+        color: var(--primary-70);
+    }
+
+    .md-nav--primary .md-nav__item--active>.md-nav__link:is(:focus,:hover) {
+        color: var(--primary-70);
+    }
+
+    .md-nav--primary .md-nav__link .md-nav__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .md-nav--primary .md-nav__title .md-nav__icon {
+        position: static;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .md-nav--primary .md-nav__title .md-nav__icon:after {
+        height: 11px;
+        background-color: var(--burger-color);
+    }
+
+    .md-nav--primary .md-nav__title[for^=__nav_] {
+        text-transform: none;
+        padding: 16px 24px;
+        background-color: transparent;
+        font-size: 15px;
+        line-height: 20px;
+        border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+    }
+
+    .md-nav--primary > .md-nav__list {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .md-nav__header[for^=__nav_] {
+        padding: 16px 25px;
+        background: transparent;
+    }
+
+    .md-sidebar__scrollwrap .md-header__option {
+        display: flex;
+        z-index: 1;
+    }
+
+    .md-sidebar__scrollwrap .md-header__option label:not([hidden]) {
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        display: flex;
+    }
+
+    .md-nav .md-nav__palette {
+        display: block;
+    }
+
+    .md-nav__palette {
+        font-family: 'Circular Std', sans-serif;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: var(--text-color);
+        margin: 24px;
+    }
+
+    .md-sidebar__scrollwrap [for^=__palette2] .md-header__button {
+        background: var(--palette-button-nav);
+        border-radius: 2px;
+        height: auto;
+        margin: 0;
+    }
+
+    .md-sidebar__scrollwrap [for^=__palette2] .md-header__button:not([for="__drawer"]) svg path{
+        fill: var(--icon-color);
+    }
+
+    .md-option:checked+label:not([hidden]) {
+        display: flex;
+    }
+
+    .md-nav__item--active > .md-nav__link .md-nav__icon:after {
+        background-color: var(--primary-70);
+    }
+
+    .md-nav--primary .md-nav__title~.md-nav__list>:last-child {
+        border-bottom: 0.05rem solid var(--md-default-fg-color--lightest)
+    }
+
+    .md-nav--primary .md-nav__title[for=__drawer] {
+        background-color: var(--md-default-bg-color);
+    }
+
+    .md-nav__title .md-nav__button.md-logo :-webkit-any(img,svg) {
+        height: 1.318rem;
+        width: auto;
+    }
+
+    .md-nav--primary .md-nav__title .md-logo {
+        position: static;
+    }
+
+    .md-nav--primary .md-nav__title {
+        padding: 0;
+        height: auto;
+    }
+
+    .md-nav--primary .md-nav__title {
+        font-family: 'Circular Std', sans-serif;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 0.682rem;
+        line-height: 0.909rem;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: var(--text-color);
+        display: flex;
+        padding: 12px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .md-nav--primary .md-nav__title[for=__drawer] {
+        color: var(--text-color);
+    }
+}

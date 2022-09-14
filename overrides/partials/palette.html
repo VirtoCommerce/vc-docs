@@ -1,0 +1,40 @@
+<form class="md-header__option" data-md-component="palette">
+    {% for option in config.theme.palette %}
+    <input
+        class="md-option"
+        data-md-color-media="{{ option.media }}"
+        data-md-color-scheme="{{ option.scheme }}"
+        data-md-color-primary="{{ primary }}"
+        data-md-color-accent="{{ accent }}"
+        {% if option.toggle %}
+        aria-label="{{ option.toggle.name }}"
+        {% else  %}
+        aria-hidden="true"
+        {% endif %}
+        type="radio"
+        name="{{paletteVar}}"
+        id="{{paletteVar}}{{ loop.index }}"
+    />
+    {% if option.toggle %}
+    <label
+        title="{{ option.toggle.name }}"
+        for="{{paletteVar}}{{ loop.index0 or loop.length }}"
+        hidden
+    >
+        {% if paletteVar == "__palette2" %}
+        {% if option.toggle %}
+        <span>{{ option.toggle.name }}</span>
+        {% else  %}
+        {% endif %}
+        {% endif %}
+
+        {% if option.toggle.icon %}
+        <span class="md-header__button md-icon">
+            {% include option.toggle.icon %}
+        </span>
+        {% endif %}
+
+    </label>
+    {% endif %}
+    {% endfor %}
+</form>

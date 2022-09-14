@@ -1,0 +1,106 @@
+.md-source {
+    display: flex;
+    margin-right: 3.2rem;
+}
+
+.md-header__source {
+    display: contents;
+}
+
+.md-source__facts {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    opacity: 1;
+    font-size: 0.6rem;
+}
+
+.md-source__fact--version {
+    display: none;
+}
+
+.md-source__fact--forks:before {
+    content: "•";
+    -webkit-mask-image: none;
+    background-color: transparent;
+    font-size: 6px;
+    line-height: 15px;
+    text-align: center;
+}
+
+[dir=ltr] .md-source__fact:before {
+    margin-right: 0.1rem;
+}
+
+[dir=ltr] .md-source__fact:nth-child(1n+2):before {
+    margin-left: 0.1rem;
+}
+
+
+.md-source__fact--stars:before {
+    display: none;
+}
+
+.md-source__fact--stars:after {
+    content: " Stars"
+}
+
+.md-source__fact--forks:after {
+    content: " Forks"
+}
+
+.md-source__icon {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.md-source__icon.md-icon svg {
+    height: 32px;
+    width: auto;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.md-source__repository {
+    max-width: 100%;
+}
+
+@media  screen and (max-width: 720px) {
+    .md-source {
+        margin-right: 1.6rem;
+    }
+}
+
+@media  screen and (max-width: 590px) {
+    .md-source__icon.md-icon svg {
+        height: 24px;
+    }
+
+    [dir=ltr] .md-source__icon+.md-source__repository {
+        padding-left: 1.5rem;
+    }
+
+    .md-source__repository {
+        font-size: 0.55rem;
+        line-height: 0.6rem;
+    }
+
+    .md-source__facts {
+        font-size: 0.55rem;
+    }
+
+    .md-source {
+        margin-right: 0.8rem;
+    }
+}
+
+@media  screen and (max-width: 400px) {
+    .md-header__source {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-left: 5rem;
+    }
+}

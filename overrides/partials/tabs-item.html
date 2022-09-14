@@ -1,0 +1,14 @@
+<!-- Determine class according to state -->
+{% if not class %}
+{% set class = "md-tabs__link" %}
+{% if nav_item.active %}
+{% set class = class ~ " md-tabs__link--active" %}
+{% endif %}
+{% endif %}
+
+<!-- Main navigation item -->
+<li class="md-tabs__item">
+    <a href="{{ nav_item.url | url }}" class="{{ class }}">
+        {{ nav_item.title }}
+    </a>
+</li>

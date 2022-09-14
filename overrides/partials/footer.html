@@ -1,0 +1,62 @@
+<!-- Footer -->
+<footer class="md-footer">
+    <nav
+        class="md-grid md-footer-meta__inner"
+        aria-label="{{ lang.t('header.title') }}"
+    >
+
+        <div class="md-footer__logo">
+            <!-- Link to home -->
+            <a
+                href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+                title="{{ config.site_name | e }}"
+                class="md-footer__button md-logo"
+                aria-label="{{ config.site_name }}"
+                data-md-component="logo"
+            >
+                {% if config.theme.logo %}
+                <img src="{{ config.theme.logobw | url }}" alt="logo">
+                {% endif %}
+            </a>
+
+            <!-- Footer title -->
+            <div class="md-footer__title">
+                <div class="md-footer__ellipsis">
+                    <div class="md-footer__topic">
+                  <span class="md-ellipsis">
+                    {{ config.site_name }}
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+
+                <div class="md-tabs">
+                    <div class="md-tabs__inner md-grid">
+                        {% if not config.links is mapping %}
+                        <ul class="md-tabs__list">
+                            {% for link in config.links %}
+                            <li class="md-tabs__item">
+                                <a href="{{link.url}}" class="md-tabs__link">{{ link.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+
+        <!-- Further information -->
+        <div class="md-footer-meta md-typeset">
+            <!-- Social links -->
+            {% if config.extra.social %}
+            {% include "partials/social.html" %}
+            {% endif %}
+        </div>
+    </nav>
+    <div class="md-footer__bottom">
+        <p>Copyright © 2022. All rights reserved.</p>
+    </div>
+</footer>

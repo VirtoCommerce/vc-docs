@@ -1,0 +1,20 @@
+<!-- Card -->
+{% if card %}
+<a class="card" href="{{card.link}}">
+    {% if "image" in card %}
+    <div class="card__icon-wrap">
+        <div class="card__icon" style="background-image: url('{{card.image}}')"></div>
+    </div>
+    {% endif %}
+    <div class="card__wrapper">
+        <div class="card__header">
+            <h2 class="card__title">
+                {{ card.title }}</h2>
+        </div>
+        <div class="card__content">
+            <p>{{ card.description }}</p>
+        </div>
+    </div>
+
+</a>
+{% endif %}
