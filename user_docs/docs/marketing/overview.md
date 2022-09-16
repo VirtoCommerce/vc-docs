@@ -62,22 +62,6 @@ For more information on managing dynamic content, please refer to these dedicate
 
 [Managing Content Publishing](managing-published-content.md)
 
-### Tags
-
-You can use the dynamic content feature to display specific content to the customers being targeted. Technically, this targeting is managed through tags. Virto Commerce incorporates a tagging system that is used to set and evaluate tags used to segment customers and to decide when, where, and to which customer the relevant piece of content should be displayed.
-
-The tagging data about a customer is captured in a variety of ways, including the following:
-
-1. Information provided upon customer signup.
-2. Information entered by a customer service agent about a customer during the call.
-3. Target and referring URLs and search terms captured when a user clicks a link that brings them to Storefront.
-4. Customer location.
-
-The data captured by the tags is stored within the user session while the user continues shopping in Storefront. This data can then be used to evaluate whether the customer meets the conditions set for displaying the dynamic content. You can set those conditions whenever you have the ***Dynamic Content*** permissions.
-
-!!! tip
-	Refer to [this article](publishing-conditions.md) if you want to learn more about publishing conditions.
-
 ## Promotions
 
 ***Promotion*** is a marketing tool used to boost sales. In Virto Commerce, you can add a lot of various kinds of promotions to your stores that would yield such rewards as discounts, shipping discounts, or gifts. You can also create or import coupons that could be later used by your customers.
