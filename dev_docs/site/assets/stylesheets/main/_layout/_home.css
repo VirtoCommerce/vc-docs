@@ -1,0 +1,299 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 3.2rem;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0.909rem;
+}
+
+.main-container:last-of-type {
+    margin-bottom: 3.3rem;
+}
+
+.main-container__title {
+    margin: 0 0 1.2rem 0;
+    font-size: 2.1rem !important;
+    line-height: 120% !important;
+}
+
+.main-container__desc {
+    margin-bottom: 1.2rem !important;
+    font-size: 18px !important;
+    line-height: 150% !important;
+}
+
+.main-container__button {
+    background: #ED5814;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-family: 'Circular Std Book', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-container__button:hover {
+    opacity: 0.92;
+}
+
+.main-container__button:after {
+    content: '';
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M10.2197 13.7803C10.5126 14.0732 10.9874 14.0732 11.2803 13.7803L17.5303 7.53033C17.8232 7.23744 17.8232 6.76256 17.5303 6.46967L11.2803 0.21967C10.9874 -0.0732231 10.5126 -0.0732231 10.2197 0.21967C9.92678 0.512563 9.92678 0.987437 10.2197 1.28033L15.1893 6.25L0.75 6.25C0.335786 6.25 0 6.58579 0 7C0 7.41421 0.335786 7.75 0.75 7.75L15.1893 7.75L10.2197 12.7197C9.92678 13.0126 9.92678 13.4874 10.2197 13.7803Z' fill='white'/></svg>");
+    display: block;
+    height: 14px;
+    width: 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 12px;
+}
+
+.main-container__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.main-container__cards {
+    width: inherit;
+}
+
+.main-container__cards-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -12px;
+}
+
+.main-container__cards-col {
+    display: flex;
+    margin: 12px
+}
+
+.main-container__cards-col_four {
+    flex: 1 1 calc(25% - 24px);
+}
+
+.main-container__cards-col_wide {
+    flex: 0 1 calc(50% - 24px);
+}
+
+.main-container__subscribe-title {
+    font-family: 'Circular Std Book', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--subscribe-title-color);
+    max-width: 50vw;
+    margin: 0;
+}
+
+.main-container__subscribe-block {
+    max-width: 406px;
+    align-self: flex-end;
+}
+
+.main-container__subscribe-wrap {
+    display: flex;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.main-container__subscribe-input-wrap {
+    border-bottom: 1px solid var(--text-color);
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.main-container__subscribe-arrow {
+    width: 160px;
+    margin-top: 30px;
+    margin-left: 8px;
+}
+
+.main-container__subscribe-input {
+    width: 100%;
+    background: transparent;
+    font-family: 'Circular Std Book', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.main-container__subscribe-input::placeholder {
+    color: var(--subscribe-placeholder);
+}
+
+.main-container__subscribe-desc {
+    font-family: 'Circular Std Book', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 10px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    color: var(--subscribe-description);
+}
+
+.main-container__subscribe-input-button {
+    font-family: 'Circular Std Book', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--table-text);
+}
+
+.main-container__header-title {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.02em;
+    margin: 0 0 1.2rem;
+}
+
+@media screen and (min-width: 60em) {
+    .main-container ~ .md-main {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .main-container:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 76.25em) {
+    .main-container ~ .md-main {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        padding: 0 4.8rem;
+        margin-top: 3.2rem;
+    }
+}
+
+@media  screen and (max-width: 960px) {
+    .main-container {
+        padding: 0 3.2rem;
+    }
+
+    .main-container__title {
+        font-size: 46px !important;
+    }
+
+    .main-container__desc {
+        font-size: 17px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .main-container__button {
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 720px) {
+    .main-container {
+        padding: 0 2rem;
+    }
+
+    .main-container__cards-col_four {
+        flex: 1 1 100%;
+    }
+
+    .main-container__cards-col_wide {
+        flex: 1 1 100%;
+    }
+
+    .main-container__image {
+        height: 206px !important;
+    }
+
+    .main-container__subscribe-arrow {
+        display: none;
+    }
+
+    .main-container__subscribe-title {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .main-container__subscribe-block {
+        align-self: center;
+    }
+
+    .main-container__wrapper {
+        margin-bottom: 2.8rem;
+    }
+}
+
+@media  screen and (max-width: 660px) {
+    .main-container__image {
+        display: none
+    }
+
+    .main-container__subscribe-block {
+        max-width: 100%;
+    }
+}
+
+@media  screen and (max-width: 428px) {
+    .main-container {
+        padding: 0 0.8rem;
+    }
+
+    .main-container__title {
+        font-size: 36px !important;
+    }
+
+    .main-container__desc {
+        font-size: 15px !important;
+    }
+
+    .main-container__wrapper {
+        margin-bottom: 3.2rem;
+    }
+}
+
+@media  screen and (max-width: 320px) {
+    .main-container {
+        padding: 0 0.6rem;
+    }
+
+    .main-container__title {
+        font-size: 31px !important;
+    }
+
+    .main-container__desc {
+        font-size: 14px !important;
+    }
+
+    .main-container__wrapper {
+        margin-bottom: 2.8rem;
+    }
+}
+
+

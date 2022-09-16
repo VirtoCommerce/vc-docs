@@ -5,8 +5,8 @@ theme:
 #    features:
 #        - instant # (still experimental) feature fails to load images when folder changes
     favicon: legacy/media/favicon.ico
-    logo: v2.0/assets/icons/logo.svg
-    logobw: v2.0/assets/icons/logo-bw.svg
+    logo: assets/icons/logo.svg
+    logobw: assets/icons/logo-bw.svg
     palette:
         -   scheme: default
             toggle:
@@ -56,10 +56,10 @@ plugins:
 #    - monorepo
 
 # Project information
-site_name: Developer Center
+site_name: Documentation
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
-site_url: https://virtocommerce.com/docs/latest
+site_url: https://virtocommerce.com/
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
@@ -69,193 +69,6 @@ edit_uri: edit/dev/docs/
 # Copyright
 copyright: Copyright &copy; 2022. All rights reserved.
 
-# Page tree
-nav:
-  - Home: v2.0/dev_docs/index.md
-  - Getting Started:
-    - System Requirements: v2.0/dev_docs/Getting-Started/system-requirements-in-progress.md
-    - Installation Guide:
-      - Windows:
-        - Prerequisites: v2.0/dev_docs/Getting-Started/Installation-Guide/Installing-on-Windows/01-installation-windows-on-premises-prerequisites.md
-        - Installing with Precompiled Binaries: v2.0/dev_docs/Getting-Started/Installation-Guide/Installing-on-Windows/02-installation-windows-on-premises-precompiled-binaries.md
-        - Installing with CLI: v2.0/dev_docs/Getting-Started/Installation-Guide/Installing-on-Windows/03-installation-windows-on-premises-CLI.md
-      - Post Installation Steps:
-        - Setting Up Self Signed SSL Certificate: v2.0/dev_docs/Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
-        - Configuring Email Notifications: v2.0/dev_docs/Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
-        - Configuring Asset Blob Storage: v2.0/dev_docs/Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage.md
-        - Importing Sample Data: v2.0/dev_docs/Getting-Started/Post-Installation-Steps/04-importing-sample-data.md
-  - Fundamentals:
-    - Caching:
-      - Overview: v2.0/dev_docs/Fundamentals/Caching/01-overview-in-progress.md
-      - Cache Configuration: v2.0/dev_docs/Fundamentals/Caching/02-cache-configuration.md
-      - Setting Up Redis Backplane for Scaling Out: v2.0/dev_docs/Fundamentals/Caching/03-setting-up-Redis.md
-    - Configuration Reference:
-      - Appsettings.json: v2.0/dev_docs/Fundamentals/Configuration-Reference/appsettingsjson.md
-    - Data Import:
-      - Main Concept: v2.0/dev_docs/Fundamentals/Data-Import/01-main-concept.md
-      - Building Custom Importer: v2.0/dev_docs/Fundamentals/Data-Import/02-building-custom-importer.md
-    - Indexed Search:
-      - Overview: v2.0/dev_docs/Fundamentals/Indexed-Search/overview.md 
-      - Search Query Syntax Reference: v2.0/dev_docs/Fundamentals/Indexed-Search/search-query-syntax-reference.md
-      - Indexing:
-        - Overview: v2.0/dev_docs/Fundamentals/Indexed-Search/indexing/overview.md
-        - Indexing in Platform Manager: v2.0/dev_docs/Fundamentals/Indexed-Search/indexing/indexing-in-platform-manager.md
-        - Blue-Green Indexing: v2.0/dev_docs/Fundamentals/Indexed-Search/indexing/blue-green-indexing.md
-      - Search:
-          - Overview: v2.0/dev_docs/Fundamentals/Indexed-Search/search/overview.md
-          - Faceted Search Overview and Configuration: v2.0/dev_docs/Fundamentals/Indexed-Search/search/faceted-search.md
-      - Integration:
-        - Configuring Elasticsearch: v2.0/dev_docs/Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md
-        - Configuring Azure Cognitive Search: v2.0/dev_docs/Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
-        - Elastic App Search Overview: v2.0/dev_docs/Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
-        - Configuring Elastic App Search: v2.0/dev_docs/Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
-    - Modularity:
-      - Overview: v2.0/dev_docs/Fundamentals/Modularity/01-overview-IN-PROGRESS.md
-      - Folder Structure: v2.0/dev_docs/Fundamentals/Modularity/02-folder-structure-IN-PROGRESS.md
-      - Versioning and Dependencies: v2.0/dev_docs/Fundamentals/Modularity/03-versioning-and-dependencies.md
-      - Loading Modules into App Process: v2.0/dev_docs/Fundamentals/Modularity/04-loading-modules-into-app-process.md
-      - Best Practices: v2.0/dev_docs/Fundamentals/Modularity/05-best-practices.md
-      - Module.manifest File: v2.0/dev_docs/Fundamentals/Modularity/06-module-manifest-file.md
-    - Extensibility:
-      - Overview: v2.0/dev_docs/Fundamentals/Extensibility/overview.md
-    - Event Driven Development:
-      - Using Domain Events: v2.0/dev_docs/Fundamentals/Event-Driven-Development/using-domain-events.md
-    - Integration:
-      - Payment Gateways:
-        - Registering New Payment Method: v2.0/dev_docs/Fundamentals/Integration/Payment-Gateways/new-payment-method-registration.md
-      - Shipping Providers:
-        - Registering New Shipping Method: v2.0/dev_docs/Fundamentals/Integration/Shipping-Providers/new-shipping-method-registration.md
-      - Tax Providers:
-        - Registering New Tax Provider: v2.0/dev_docs/Fundamentals/Integration/Tax-Providers/new-tax-provider-registration.md
-    - Dynamic Properties:
-      - Overview: v2.0/dev_docs/Fundamentals/Dynamic-Properties/overview.md
-    - Security:
-      - Extending Authorizarion Policies: v2.0/dev_docs/Fundamentals/Security/extending-authorization-policies.md
-  - Back End Architecture:
-    - Tech Stack: v2.0/dev_docs/Back-End-Architecture/01-tech-stack.md
-    - Conceptual Overview: v2.0/dev_docs/Back-End-Architecture/02-conceptual-overview-in-progress.md
-  - Platform Manager:
-    - Style Guide: v2.0/dev_docs/Platform-Manager/style-guide.md
-    - UI Scroll Directive: v2.0/dev_docs/Platform-Manager/ui-scroll-directive.md
-    - Extensibility Points:
-      - Extending Main Menu: v2.0/dev_docs/Platform-Manager/Extensibility-Points/extending-main-menu.md
-      - Blades and Navigation: v2.0/dev_docs/Platform-Manager/Extensibility-Points/blades-and-navigation.md
-      - Metaform: v2.0/dev_docs/Platform-Manager/Extensibility-Points/metaform.md
-      - Widgets: v2.0/dev_docs/Platform-Manager/Extensibility-Points/widgets.md
-      - Extending Grid Columns: v2.0/dev_docs/Platform-Manager/Extensibility-Points/extending-grid-columns.md
-      - Blade Toolbar: v2.0/dev_docs/Platform-Manager/Extensibility-Points/blade-toolbar.md
-  - GraphQL Storefront API Reference (xAPI):
-    - Overview: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/index.md
-    - Getting Started: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md
-    - Catalog:
-      - Overview: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
-      - Queries:
-        - Product: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/01-product.md
-        - Products: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/02-products.md
-        - Categories: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/03-categories.md
-        - Properties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/04-properties.md
-        - Property: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/05-property.md
-        - Fulfullment Center: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/06-fulfillment-center.md
-        - Fulfullment Centers: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/07-fulfillment-centers.md
-      - Objects:
-        - ProductType: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/01-ProductType.md
-        - CategoryType: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/02-CategoryType.md
-        - FulfullmentCenterType: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/03-FulfillmentCenterType.md
-      - Examples:
-        - Full Text Search: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/01-full-text-search.md
-        - Fuzzy Search: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/02-fuzzy-search.md
-        - Filter Syntax: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/03-filter-syntax.md
-        - Filtering: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/04-filtering.md
-        - Facets: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/05-facets.md
-        - Multi Select Faceting Search: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/06-multi-select-faceting-search.md
-    - Cart:
-      - Overview: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md
-      - Queries:
-        - Query List: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/query-list.md
-        - Cart: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
-        - Cart Connection: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart-connection.md
-      - Mutations:
-        - Overview: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/01-overview.md
-        - Mutation List: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/02-mutation-list.md
-        - AddItem: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/03-add-item.md
-        - ClearCart: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/04-clear-cart.md
-        - ChangeComment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/05-change-comment.md
-        - ChangeCartItemPrice: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/06-change-cart-item-price.md
-        - ChangeCartItemQuantity: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/07-change-cart-item-quantity.md
-        - ChangeCartItemComment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/08-change-cart-item-comment.md
-        - RemoveCartItem: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/09-remove-cart-item.md
-        - AddCoupon: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/10-add-coupon.md
-        - RemoveCoupon: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/11-remove-coupon.md
-        - RemoveShipment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/12-remove-shipment.md
-        - AddOrUpdateCartShipment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/13-add-or-update-cart-shipment.md
-        - AddOrUpdateCartPayment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/14-add-or-update-cart-payment.md
-        - ValidateCoupon: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/15-validate-coupon.md
-        - MergeCart: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/16-merge-cart.md
-        - RemoveCart: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/17-remove-cart.md
-        - ClearShipments: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/18-clear-shipments.md
-        - ClearPayments: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/19-clear-payments.md
-        - UpdateCartDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/20-update-cart-dynamic-properties.md
-        - UpdateCartItemDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/21-update-cart-item-dynamic-properties.md
-        - UpdateCartShipmentDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/22-update-cart-shipment-dynamic-properties.md
-        - UpdateCartPaymentDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/23-update-cart-payment-dynamic-properties.md
-        - AddCartAddress: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/24-add-cart-address.md
-        - AddWishListBulkItem: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/25-add-wish-list-bulk-item.md
-      - Objects:
-        - CartType: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
-    - Order:
-        - Overview: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
-        - Queries:
-          - Overview: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/queries/overview.md
-          - Order: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
-          - Order Connection: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/queries/order-connection.md
-        - Mutations:
-          - Mutation List: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/01-mutation-list.md
-          - CreateOrderFromCart: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/02-create-order-from-cart.md
-          - ChangeOrderStatus: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/03-change-order-status.md
-          - ConfirmOrderPayment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/04-confirm-order-payment.md
-          - CancelOrderPayment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/05-cancel-order-payment.md
-          - UpdateOrderDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/06-update-order-dynamic-properties.md
-          - UpdateOrderItemDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/07-update-order-item-dynamic-properties.md
-          - UpdateOrderShipmentDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/08-update-order-shipment-dynamic-properties.md
-          - UpdateOrderPaymentDynamicProperties: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/09-update-order-payment-dynamic-properties.md
-          - InitializePayment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/10-initialize-payment.md
-          - AuthorizePayment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/11-authorize-payment.md
-          - AddOrUpdateOrderPayment: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/12-add-or-update-order-payment.md
-        - Objects:
-          - OrderType: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
-    - xAPI Extensions: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
-    - Troubleshooting: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
-    - Samples and Recommendations: v2.0/dev_docs/GraphQL-Storefront-API-Reference-xAPI/recommendations.md
-  - Tutorials and How-tos:
-    - Tutorials:
-      - Creating Custom Module: v2.0/dev_docs/Tutorials-and-How-tos/Tutorials/creating-custom-module.md
-      - Extending Domain Models: v2.0/dev_docs/Tutorials-and-How-tos/Tutorials/extending-domain-models.md
-  - User Documentation:
-    - Catalog:
-      - Overview: v2.0/user_docs/catalog/index.md
-      - Terminology: v2.0/user_docs/catalog/glossary.md
-      - Structure Chart: v2.0/user_docs/catalog/structure-chart.md
-      - Adding New Catalog: v2.0/user_docs/catalog/add-new-catalog.md
-      - Catalog Search: v2.0/user_docs/catalog/catalog-search.md
-      - Managing Categories: v2.0/user_docs/catalog/managing-categories.md
-      - Managing Products: v2.0/user_docs/catalog/managing-products.md
-      - Managing Product Variations: v2.0/user_docs/catalog/managing-product-variations.md
-      - Managing Properties: v2.0/user_docs/catalog/managing-properties.md
-      - Managing Search Index: v2.0/user_docs/catalog/managing-search-index.md
-      - Product Indexing: v2.0/user_docs/catalog/product-indexing.md
-      - Search Engine Architecture: v2.0/user_docs/catalog/search-engine-architecture-details.md
-      - Viewing Catalog and Product Details: v2.0/user_docs/catalog/view-catalogs-and-physical-items.md
-      - Viewing Catalog Properties: v2.0/user_docs/catalog/view-properties.md
-    - Marketing:
-      - Overview: v2.0/user_docs/marketing/overview.md
-      - Managing Content Items: v2.0/user_docs/marketing/managing-content-items.md
-      - Managing Content Placeholders: v2.0/user_docs/marketing/managing-content-placeholders.md
-      - Managing Published Content: v2.0/user_docs/marketing/managing-published-content.md
-      - Publish Conditions: v2.0/user_docs/marketing/publish-conditions.md
-      - Adding Advertising Spot: v2.0/user_docs/marketing/advertising-spot.md
-      - Managing Promotions: v2.0/user_docs/marketing/managing-promotions.md
-      - Promotion Combination Policies: v2.0/user_docs/marketing/combining-active-promotions.md
-      - Promotion Rules: v2.0/user_docs/marketing/promotion-rules.md
 
 extra:
     social:
@@ -284,11 +97,11 @@ extra:
             -   title: User
                 icon: assets/icons/person.svg
                 description: I use or am going to use Virto solutions on a regular basis.
-                link: v2.0/user_docs
+                link: /user_docs
             -   title: Developer
                 icon: assets/icons/code-square.svg
                 description: I need to know how the Virto platform works so that I may customize it best for my team or customers.
-                link: v2.0/dev_docs
+                link: /dev_docs
             -   title: Business Analyst
                 icon: assets/icons/briefcase.svg
                 description: I need to know how to implement Virto solutions across my team or externally.
@@ -328,8 +141,8 @@ extra:
               image: ./v2.0/assets/icons/stories.png
               link: under-construction
 extra_javascript:
-    - legacy/scripts/scripts-loader.js
+    - assets/scripts/scripts-loader.js
 
 extra_css:
-    - v2.0/assets/stylesheets/main.css
-    - v2.0/assets/stylesheets/fonts.css
+    - assets/stylesheets/main.css
+    - assets/stylesheets/fonts.css

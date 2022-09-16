@@ -1,0 +1,5356 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.">
+      
+      
+        <meta name="author" content="Virto Commerce">
+      
+      
+        <link rel="canonical" href="https://virtocommerce.com/docs/latest/Getting-Started/Post-Installation-Steps/04-importing-sample-data/">
+      
+      <link rel="icon" href="../../../assets/icons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.1">
+    
+    
+<title>Post Installation Steps - Importing Sample Data - Developer Center</title>
+
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Circular+Std:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Circular Std";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/fonts.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#importing-sample-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!-- Determine class according to configuration -->
+
+
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav
+        class="md-header__inner md-grid"
+        aria-label="Header"
+    >
+        <!-- Button to open drawer -->
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.75 12.5C0.335787 12.5 0 12.1642 0 11.75C0 11.3358 0.335786 11 0.75 11H17.25C17.6642 11 18 11.3358 18 11.75C18 12.1642 17.6642 12.5 17.25 12.5H0.75ZM0.75 7.25C0.335787 7.25 0 6.91421 0 6.5C0 6.08579 0.335786 5.75 0.75 5.75H17.25C17.6642 5.75 18 6.08579 18 6.5C18 6.91421 17.6642 7.25 17.25 7.25H0.75ZM0.75 2C0.335787 2 0 1.66421 0 1.25C0 0.835786 0.335786 0.5 0.75 0.5H17.25C17.6642 0.5 18 0.835786 18 1.25C18 1.66421 17.6642 2 17.25 2H0.75Z" fill="#BCBDC0"/>
+</svg>
+        </label>
+
+        <div class="md-header__logo">
+            <!-- Header title -->
+            <div class="md-header__title">
+                <div class="md-header__ellipsis">
+                    <div class="md-header__topic">
+                        <a
+                            href="../../.."
+                            title="Developer Center"
+                            class="md-header__button md-logo"
+                            aria-label="Developer Center"
+                            data-md-component="logo"
+                        >
+                            
+  <img src="../../../assets/icons/logo.svg" alt="logo">
+
+                        </a>
+                      <span class="md-ellipsis">
+                        Developer Center
+                      </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="md-header__source">
+            <a href="https://github.com/VirtoCommerce/vc-platform" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    VirtoCommerce/vc-platform
+  </div>
+</a>
+        </div>
+        
+
+        <!-- Color palette -->
+        
+            
+            <form class="md-header__option" data-md-component="palette">
+    
+    <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary=""
+        data-md-color-accent=""
+        
+        aria-label="Night mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette1"
+    />
+    
+    <label
+        title="Night mode"
+        for="__palette2"
+        hidden
+    >
+        
+
+        
+        <span class="md-header__button md-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1487 2.9995C10.1487 6.86549 7.01466 9.9995 3.14867 9.9995C2.86476 9.9995 2.58453 9.98255 2.309 9.94956C3.30469 11.5796 5.10062 12.6665 7.14867 12.6665C10.2783 12.6665 12.8153 10.1294 12.8153 6.99983C12.8153 4.95194 11.7286 3.15614 10.0988 2.1604C10.1317 2.43574 10.1487 2.71578 10.1487 2.9995ZM8.99402 1.64013C9.09519 2.07691 9.14867 2.53196 9.14867 2.9995C9.14867 6.31321 6.46238 8.9995 3.14867 8.9995C2.68096 8.9995 2.22575 8.94598 1.78882 8.84474C1.78768 8.84448 1.78653 8.84421 1.78539 8.84394C1.74783 8.83522 1.71041 8.82614 1.67312 8.81671C1.53539 8.78188 1.39955 8.74229 1.2658 8.69812C1.00397 8.61166 0.732689 8.83808 0.81948 9.0998C0.869672 9.25115 0.925141 9.4001 0.985669 9.54642C1.00274 9.58768 1.0202 9.62872 1.03807 9.66956C1.03906 9.67183 1.04006 9.67409 1.04105 9.67636C2.07204 12.0256 4.41873 13.6665 7.14867 13.6665C10.8306 13.6665 13.8153 10.6817 13.8153 6.99983C13.8153 4.27008 12.1747 1.92352 9.8257 0.892424C9.82343 0.891429 9.82117 0.890434 9.8189 0.889442C9.77807 0.871573 9.73702 0.854102 9.69577 0.837032C9.54945 0.776492 9.40051 0.721011 9.24916 0.670807C8.98745 0.583994 8.761 0.85526 8.84745 1.11709C8.8916 1.25085 8.93118 1.38669 8.966 1.52443C8.97543 1.56171 8.9845 1.59913 8.99322 1.63669C8.99349 1.63784 8.99376 1.63898 8.99402 1.64013Z" fill="#4E4E4E"/>
+</svg>
+        </span>
+        
+
+    </label>
+    
+    
+    <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="slate"
+        data-md-color-primary=""
+        data-md-color-accent=""
+        
+        aria-label="Light mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette2"
+    />
+    
+    <label
+        title="Light mode"
+        for="__palette1"
+        hidden
+    >
+        
+
+        
+        <span class="md-header__button md-icon">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.14893 11.6667C10.174 11.6667 11.8156 10.025 11.8156 8C11.8156 5.97496 10.174 4.33333 8.14893 4.33333C6.12388 4.33333 4.48226 5.97496 4.48226 8C4.48226 10.025 6.12388 11.6667 8.14893 11.6667ZM8.14893 12.6667C10.7263 12.6667 12.8156 10.5773 12.8156 8C12.8156 5.42267 10.7263 3.33333 8.14893 3.33333C5.5716 3.33333 3.48226 5.42267 3.48226 8C3.48226 10.5773 5.5716 12.6667 8.14893 12.6667Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1489 8C16.1489 8.27614 15.9251 8.5 15.6489 8.5H13.9823C13.7061 8.5 13.4823 8.27614 13.4823 8C13.4823 7.72386 13.7061 7.5 13.9823 7.5L15.6489 7.5C15.9251 7.5 16.1489 7.72386 16.1489 8ZM2.81559 8C2.81559 8.27614 2.59173 8.5 2.31559 8.5H0.648926C0.372784 8.5 0.148926 8.27614 0.148926 8C0.148926 7.72386 0.372784 7.5 0.648926 7.5H2.31559C2.59173 7.5 2.81559 7.72386 2.81559 8Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8057 2.34322C14.001 2.53849 14.001 2.85507 13.8057 3.05033L12.6272 4.22884C12.4319 4.4241 12.1153 4.4241 11.9201 4.22884C11.7248 4.03358 11.7248 3.717 11.9201 3.52173L13.0986 2.34322C13.2939 2.14796 13.6104 2.14796 13.8057 2.34322ZM4.37761 11.7713C4.57287 11.9666 4.57287 12.2832 4.37761 12.4784L3.1991 13.6569C3.00384 13.8522 2.68726 13.8522 2.49199 13.6569C2.29673 13.4617 2.29673 13.1451 2.49199 12.9498L3.67051 11.7713C3.86577 11.5761 4.18235 11.5761 4.37761 11.7713Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.14893 0C8.42507 1.19209e-07 8.64893 0.223858 8.64893 0.5V2.16667C8.64893 2.44281 8.42507 2.66667 8.14893 2.66667C7.87278 2.66667 7.64893 2.44281 7.64893 2.16667L7.64893 0.5C7.64893 0.223857 7.87278 -1.19209e-07 8.14893 0ZM8.14893 13.3333C8.42507 13.3333 8.64893 13.5572 8.64893 13.8333V15.5C8.64893 15.7761 8.42507 16 8.14893 16C7.87278 16 7.64893 15.7761 7.64893 15.5V13.8333C7.64893 13.5572 7.87278 13.3333 8.14893 13.3333Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.49215 2.34322C2.68741 2.14796 3.00399 2.14796 3.19926 2.34322L4.37777 3.52174C4.57303 3.717 4.57303 4.03358 4.37777 4.22884C4.18251 4.4241 3.86592 4.4241 3.67066 4.22884L2.49215 3.05033C2.29689 2.85507 2.29689 2.53849 2.49215 2.34322ZM11.9202 11.7713C12.1155 11.5761 12.4321 11.5761 12.6273 11.7713L13.8059 12.9498C14.0011 13.1451 14.0011 13.4617 13.8059 13.6569C13.6106 13.8522 13.294 13.8522 13.0988 13.6569L11.9202 12.4784C11.725 12.2832 11.725 11.9666 11.9202 11.7713Z" fill="#4E4E4E"/>
+</svg>
+        </span>
+        
+
+    </label>
+    
+    
+</form>
+        
+
+        <!-- Button to open search modal -->
+        
+        <label class="md-header__button md-icon" for="__search">
+            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.98218 0.333008C2.94461 0.333008 0.482178 2.79544 0.482178 5.83301C0.482178 8.87057 2.94461 11.333 5.98218 11.333C7.32093 11.333 8.54796 10.8547 9.50171 10.0596L13.2953 13.8532C13.4906 14.0485 13.8071 14.0485 14.0024 13.8532C14.1977 13.658 14.1977 13.3414 14.0024 13.1461L10.2088 9.35254C11.0039 8.39879 11.4822 7.17176 11.4822 5.83301C11.4822 2.79544 9.01974 0.333008 5.98218 0.333008ZM1.48218 5.83301C1.48218 3.34773 3.4969 1.33301 5.98218 1.33301C8.46746 1.33301 10.4822 3.34773 10.4822 5.83301C10.4822 8.31829 8.46746 10.333 5.98218 10.333C3.4969 10.333 1.48218 8.31829 1.48218 5.83301Z" fill="#4E4E4E"/>
+</svg>
+        </label>
+
+        <!-- Search interface -->
+        <!-- Search interface -->
+<div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+        <form class="md-search__form" name="search">
+
+            <!-- Search input -->
+            <input
+                type="text"
+                class="md-search__input"
+                name="query"
+                aria-label="Search"
+                placeholder="Search"
+                autocapitalize="off"
+                autocorrect="off"
+                autocomplete="off"
+                spellcheck="false"
+                data-md-component="search-query"
+                required
+            />
+
+            <!-- Button to open search -->
+            <label class="md-search__icon md-icon" for="__search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </label>
+
+            <!-- Search options -->
+            <nav
+                class="md-search__options"
+                aria-label="Search"
+            >
+
+                <!-- Button to share search -->
+                
+
+                <!-- Button to reset search -->
+                <button
+                    type="reset"
+                    class="md-search__icon md-icon"
+                    aria-label="Clear"
+                    tabindex="-1"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+                </button>
+            </nav>
+
+            <!-- Search suggestions -->
+            
+        </form>
+        <div class="md-search__output">
+            <div class="md-search__scrollwrap" data-md-scrollfix>
+
+                <!-- Search results -->
+                <div class="md-search-result" data-md-component="search-result">
+                    <div class="md-search-result__meta">
+                        Initializing search
+                    </div>
+                    <ol class="md-search-result__list"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    </nav>
+
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Determine class according to configuration -->
+
+
+
+<!-- Main navigation -->
+<nav
+    class="md-nav md-nav--primary"
+    aria-label="Navigation"
+    data-md-level="0"
+>
+
+    <!-- Site title -->
+    <label class="md-nav__title" for="__drawer">
+        <a
+            href="../../.."
+            title="Developer Center"
+            class="md-nav__button md-logo"
+            aria-label="Developer Center"
+            data-md-component="logo"
+        >
+            
+  <img src="../../../assets/icons/logo.svg" alt="logo">
+
+        </a>
+        Developer Center
+    </label>
+
+    <!-- Render item list -->
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+        Home
+    </a>
+</li>
+
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_2"
+        type="checkbox"
+        id="__nav_2"
+        checked
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Getting Started"
+        data-md-level="1"
+    >
+        <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../system-requirements-in-progress/" class="md-nav__link">
+        System Requirements
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_2_2"
+        type="checkbox"
+        id="__nav_2_2"
+        checked
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_2_2">
+        Installation Guide
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Installation Guide"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_2_2_1"
+        type="checkbox"
+        id="__nav_2_2_1"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_2_2_1">
+        Windows
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Windows"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../Installation-Guide/Installing-on-Windows/01-installation-windows-on-premises-prerequisites/" class="md-nav__link">
+        Prerequisites
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../Installation-Guide/Installing-on-Windows/02-installation-windows-on-premises-precompiled-binaries/" class="md-nav__link">
+        Installing with Precompiled Binaries
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../Installation-Guide/Installing-on-Windows/03-installation-windows-on-premises-CLI/" class="md-nav__link">
+        Installing with CLI
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_2_2_2"
+        type="checkbox"
+        id="__nav_2_2_2"
+        checked
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_2_2_2">
+        Post Installation Steps
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Post Installation Steps"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Post Installation Steps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../01-setting-up-self-signed-ssl-cert/" class="md-nav__link">
+        Setting Up Self Signed SSL Certificate
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../02-configuring-email-notifications/" class="md-nav__link">
+        Configuring Email Notifications
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../03-configuring-asset-blob-storage/" class="md-nav__link">
+        Configuring Asset Blob Storage
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item md-nav__item--active">
+    
+
+    <!-- Active checkbox expands items contained within nested section -->
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+    />
+
+    <!-- Hack: see partials/toc.html for more information -->
+    
+    
+    
+    
+
+    <!-- Render table of contents, if not empty -->
+    
+    <label class="md-nav__link md-nav__link--active" for="__toc">
+        Importing Sample Data
+    </label>
+    
+    <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+    >
+        Importing Sample Data
+    </a>
+
+    <!-- Show table of contents -->
+    
+    <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#importing-sample-data-manually" class="md-nav__link">
+        Importing Sample Data Manually
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
+    
+</li>
+
+<!-- Main navigation item -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3"
+        type="checkbox"
+        id="__nav_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3">
+        Fundamentals
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Fundamentals"
+        data-md-level="1"
+    >
+        <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_1"
+        type="checkbox"
+        id="__nav_3_1"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_1">
+        Caching
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Caching"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Caching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Caching/01-overview-in-progress/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Caching/02-cache-configuration/" class="md-nav__link">
+        Cache Configuration
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Caching/03-setting-up-Redis/" class="md-nav__link">
+        Setting Up Redis Backplane for Scaling Out
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_2"
+        type="checkbox"
+        id="__nav_3_2"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_2">
+        Configuration Reference
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Configuration Reference"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Configuration-Reference/appsettingsjson/" class="md-nav__link">
+        Appsettings.json
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_3"
+        type="checkbox"
+        id="__nav_3_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_3">
+        Data Import
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Data Import"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Import
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Data-Import/01-main-concept/" class="md-nav__link">
+        Main Concept
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Data-Import/02-building-custom-importer/" class="md-nav__link">
+        Building Custom Importer
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_4"
+        type="checkbox"
+        id="__nav_3_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_4">
+        Indexed Search
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Indexed Search"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Indexed Search
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/search-query-syntax-reference/" class="md-nav__link">
+        Search Query Syntax Reference
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_4_3"
+        type="checkbox"
+        id="__nav_3_4_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_4_3">
+        Indexing
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Indexing"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Indexing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/indexing/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/indexing/indexing-in-platform-manager/" class="md-nav__link">
+        Indexing in Platform Manager
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/indexing/blue-green-indexing/" class="md-nav__link">
+        Blue-Green Indexing
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_4_4"
+        type="checkbox"
+        id="__nav_3_4_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_4_4">
+        Search
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Search"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Search
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/search/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/search/faceted-search/" class="md-nav__link">
+        Faceted Search Overview and Configuration
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_4_5"
+        type="checkbox"
+        id="__nav_3_4_5"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_4_5">
+        Integration
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Integration"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/integration/configuring-elasticsearch/" class="md-nav__link">
+        Configuring Elasticsearch
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search/" class="md-nav__link">
+        Configuring Azure Cognitive Search
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/integration/elastic-app-search-overview/" class="md-nav__link">
+        Elastic App Search Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Indexed-Search/integration/configuring-elastic-app-search/" class="md-nav__link">
+        Configuring Elastic App Search
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_5"
+        type="checkbox"
+        id="__nav_3_5"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_5">
+        Modularity
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Modularity"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Modularity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Modularity/01-overview-IN-PROGRESS/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Modularity/02-folder-structure-IN-PROGRESS/" class="md-nav__link">
+        Folder Structure
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Modularity/03-versioning-and-dependencies/" class="md-nav__link">
+        Versioning and Dependencies
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Modularity/04-loading-modules-into-app-process/" class="md-nav__link">
+        Loading Modules into App Process
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Modularity/05-best-practices/" class="md-nav__link">
+        Best Practices
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Modularity/06-module-manifest-file/" class="md-nav__link">
+        Module.manifest File
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_6"
+        type="checkbox"
+        id="__nav_3_6"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_6">
+        Extensibility
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Extensibility"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Extensibility/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_7"
+        type="checkbox"
+        id="__nav_3_7"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_7">
+        Event Driven Development
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Event Driven Development"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Event Driven Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Event-Driven-Development/using-domain-events/" class="md-nav__link">
+        Using Domain Events
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_8"
+        type="checkbox"
+        id="__nav_3_8"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_8">
+        Integration
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Integration"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_8_1"
+        type="checkbox"
+        id="__nav_3_8_1"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_8_1">
+        Payment Gateways
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Payment Gateways"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_3_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Payment Gateways
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Integration/Payment-Gateways/new-payment-method-registration/" class="md-nav__link">
+        Registering New Payment Method
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_8_2"
+        type="checkbox"
+        id="__nav_3_8_2"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_8_2">
+        Shipping Providers
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Shipping Providers"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_3_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Shipping Providers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Integration/Shipping-Providers/new-shipping-method-registration/" class="md-nav__link">
+        Registering New Shipping Method
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_8_3"
+        type="checkbox"
+        id="__nav_3_8_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_8_3">
+        Tax Providers
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Tax Providers"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_3_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tax Providers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Integration/Tax-Providers/new-tax-provider-registration/" class="md-nav__link">
+        Registering New Tax Provider
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_9"
+        type="checkbox"
+        id="__nav_3_9"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_9">
+        Dynamic Properties
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Dynamic Properties"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dynamic Properties
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Dynamic-Properties/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3_10"
+        type="checkbox"
+        id="__nav_3_10"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_3_10">
+        Security
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Security"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Fundamentals/Security/extending-authorization-policies/" class="md-nav__link">
+        Extending Authorizarion Policies
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_4"
+        type="checkbox"
+        id="__nav_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_4">
+        Back End Architecture
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Back End Architecture"
+        data-md-level="1"
+    >
+        <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Back End Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Back-End-Architecture/01-tech-stack/" class="md-nav__link">
+        Tech Stack
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Back-End-Architecture/02-conceptual-overview-in-progress/" class="md-nav__link">
+        Conceptual Overview
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_5"
+        type="checkbox"
+        id="__nav_5"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_5">
+        Platform Manager
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Platform Manager"
+        data-md-level="1"
+    >
+        <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/style-guide/" class="md-nav__link">
+        Style Guide
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/ui-scroll-directive/" class="md-nav__link">
+        UI Scroll Directive
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_5_3"
+        type="checkbox"
+        id="__nav_5_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_5_3">
+        Extensibility Points
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Extensibility Points"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility Points
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/Extensibility-Points/extending-main-menu/" class="md-nav__link">
+        Extending Main Menu
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/Extensibility-Points/blades-and-navigation/" class="md-nav__link">
+        Blades and Navigation
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/Extensibility-Points/metaform/" class="md-nav__link">
+        Metaform
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/Extensibility-Points/widgets/" class="md-nav__link">
+        Widgets
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/Extensibility-Points/extending-grid-columns/" class="md-nav__link">
+        Extending Grid Columns
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Platform-Manager/Extensibility-Points/blade-toolbar/" class="md-nav__link">
+        Blade Toolbar
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6"
+        type="checkbox"
+        id="__nav_6"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6">
+        GraphQL Storefront API Reference (xAPI)
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="GraphQL Storefront API Reference (xAPI)"
+        data-md-level="1"
+    >
+        <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            GraphQL Storefront API Reference (xAPI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/getting-started/" class="md-nav__link">
+        Getting Started
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_3"
+        type="checkbox"
+        id="__nav_6_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_3">
+        Catalog
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Catalog"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Catalog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_3_2"
+        type="checkbox"
+        id="__nav_6_3_2"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_3_2">
+        Queries
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Queries"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/01-product/" class="md-nav__link">
+        Product
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/02-products/" class="md-nav__link">
+        Products
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/03-categories/" class="md-nav__link">
+        Categories
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/04-properties/" class="md-nav__link">
+        Properties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/05-property/" class="md-nav__link">
+        Property
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/06-fulfillment-center/" class="md-nav__link">
+        Fulfullment Center
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/07-fulfillment-centers/" class="md-nav__link">
+        Fulfullment Centers
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_3_3"
+        type="checkbox"
+        id="__nav_6_3_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_3_3">
+        Objects
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Objects"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/01-ProductType/" class="md-nav__link">
+        ProductType
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/02-CategoryType/" class="md-nav__link">
+        CategoryType
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/03-FulfillmentCenterType/" class="md-nav__link">
+        FulfullmentCenterType
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_3_4"
+        type="checkbox"
+        id="__nav_6_3_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_3_4">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Examples"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/01-full-text-search/" class="md-nav__link">
+        Full Text Search
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/02-fuzzy-search/" class="md-nav__link">
+        Fuzzy Search
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/03-filter-syntax/" class="md-nav__link">
+        Filter Syntax
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/04-filtering/" class="md-nav__link">
+        Filtering
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/05-facets/" class="md-nav__link">
+        Facets
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/06-multi-select-faceting-search/" class="md-nav__link">
+        Multi Select Faceting Search
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_4"
+        type="checkbox"
+        id="__nav_6_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_4">
+        Cart
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Cart"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_4_2"
+        type="checkbox"
+        id="__nav_6_4_2"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_4_2">
+        Queries
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Queries"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/queries/query-list/" class="md-nav__link">
+        Query List
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart/" class="md-nav__link">
+        Cart
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart-connection/" class="md-nav__link">
+        Cart Connection
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_4_3"
+        type="checkbox"
+        id="__nav_6_4_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_4_3">
+        Mutations
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Mutations"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mutations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/01-overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/02-mutation-list/" class="md-nav__link">
+        Mutation List
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/03-add-item/" class="md-nav__link">
+        AddItem
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/04-clear-cart/" class="md-nav__link">
+        ClearCart
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/05-change-comment/" class="md-nav__link">
+        ChangeComment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/06-change-cart-item-price/" class="md-nav__link">
+        ChangeCartItemPrice
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/07-change-cart-item-quantity/" class="md-nav__link">
+        ChangeCartItemQuantity
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/08-change-cart-item-comment/" class="md-nav__link">
+        ChangeCartItemComment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/09-remove-cart-item/" class="md-nav__link">
+        RemoveCartItem
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/10-add-coupon/" class="md-nav__link">
+        AddCoupon
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/11-remove-coupon/" class="md-nav__link">
+        RemoveCoupon
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/12-remove-shipment/" class="md-nav__link">
+        RemoveShipment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/13-add-or-update-cart-shipment/" class="md-nav__link">
+        AddOrUpdateCartShipment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/14-add-or-update-cart-payment/" class="md-nav__link">
+        AddOrUpdateCartPayment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/15-validate-coupon/" class="md-nav__link">
+        ValidateCoupon
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/16-merge-cart/" class="md-nav__link">
+        MergeCart
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/17-remove-cart/" class="md-nav__link">
+        RemoveCart
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/18-clear-shipments/" class="md-nav__link">
+        ClearShipments
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/19-clear-payments/" class="md-nav__link">
+        ClearPayments
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/20-update-cart-dynamic-properties/" class="md-nav__link">
+        UpdateCartDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/21-update-cart-item-dynamic-properties/" class="md-nav__link">
+        UpdateCartItemDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/22-update-cart-shipment-dynamic-properties/" class="md-nav__link">
+        UpdateCartShipmentDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/23-update-cart-payment-dynamic-properties/" class="md-nav__link">
+        UpdateCartPaymentDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/24-add-cart-address/" class="md-nav__link">
+        AddCartAddress
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/25-add-wish-list-bulk-item/" class="md-nav__link">
+        AddWishListBulkItem
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_4_4"
+        type="checkbox"
+        id="__nav_6_4_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_4_4">
+        Objects
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Objects"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type/" class="md-nav__link">
+        CartType
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_5"
+        type="checkbox"
+        id="__nav_6_5"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_5">
+        Order
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Order"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Order
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_5_2"
+        type="checkbox"
+        id="__nav_6_5_2"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_5_2">
+        Queries
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Queries"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/queries/overview/" class="md-nav__link">
+        Overview
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/queries/order/" class="md-nav__link">
+        Order
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/queries/order-connection/" class="md-nav__link">
+        Order Connection
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_5_3"
+        type="checkbox"
+        id="__nav_6_5_3"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_5_3">
+        Mutations
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Mutations"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mutations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/01-mutation-list/" class="md-nav__link">
+        Mutation List
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/02-create-order-from-cart/" class="md-nav__link">
+        CreateOrderFromCart
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/03-change-order-status/" class="md-nav__link">
+        ChangeOrderStatus
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/04-confirm-order-payment/" class="md-nav__link">
+        ConfirmOrderPayment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/05-cancel-order-payment/" class="md-nav__link">
+        CancelOrderPayment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/06-update-order-dynamic-properties/" class="md-nav__link">
+        UpdateOrderDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/07-update-order-item-dynamic-properties/" class="md-nav__link">
+        UpdateOrderItemDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/08-update-order-shipment-dynamic-properties/" class="md-nav__link">
+        UpdateOrderShipmentDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/09-update-order-payment-dynamic-properties/" class="md-nav__link">
+        UpdateOrderPaymentDynamicProperties
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/10-initialize-payment/" class="md-nav__link">
+        InitializePayment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/11-authorize-payment/" class="md-nav__link">
+        AuthorizePayment
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/mutations/12-add-or-update-order-payment/" class="md-nav__link">
+        AddOrUpdateOrderPayment
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_6_5_4"
+        type="checkbox"
+        id="__nav_6_5_4"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_6_5_4">
+        Objects
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Objects"
+        data-md-level="3"
+    >
+        <label class="md-nav__title" for="__nav_6_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type/" class="md-nav__link">
+        OrderType
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/x-api-extensions/" class="md-nav__link">
+        xAPI Extensions
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/troubleshooting/" class="md-nav__link">
+        Troubleshooting
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI/recommendations/" class="md-nav__link">
+        Samples and Recommendations
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_7"
+        type="checkbox"
+        id="__nav_7"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_7">
+        Tutorials and How-tos
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Tutorials and How-tos"
+        data-md-level="1"
+    >
+        <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials and How-tos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_7_1"
+        type="checkbox"
+        id="__nav_7_1"
+        
+    />
+    
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Render toggle to expand nested items -->
+    
+    <label class="md-nav__link" for="__nav_7_1">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+
+    <!-- Render link to index page + toggle -->
+    
+
+    <!-- Render nested navigation -->
+    <nav
+        class="md-nav"
+        aria-label="Tutorials"
+        data-md-level="2"
+    >
+        <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Render nested item list -->
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Tutorials-and-How-tos/Tutorials/creating-custom-module/" class="md-nav__link">
+        Creating Custom Module
+    </a>
+</li>
+
+
+            
+            
+            
+            
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+    <a href="../../../Tutorials-and-How-tos/Tutorials/extending-domain-models/" class="md-nav__link">
+        Extending Domain Models
+    </a>
+</li>
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+            
+            
+        </ul>
+    </nav>
+</li>
+
+<!-- Currently active page -->
+
+
+        
+    </ul>
+    
+    <div class="md-nav__palette">
+        
+        <form class="md-header__option" data-md-component="palette">
+    
+    <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary=""
+        data-md-color-accent=""
+        
+        aria-label="Night mode"
+        
+        type="radio"
+        name="__palette2"
+        id="__palette21"
+    />
+    
+    <label
+        title="Night mode"
+        for="__palette22"
+        hidden
+    >
+        
+        
+        <span>Night mode</span>
+        
+        
+
+        
+        <span class="md-header__button md-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1487 2.9995C10.1487 6.86549 7.01466 9.9995 3.14867 9.9995C2.86476 9.9995 2.58453 9.98255 2.309 9.94956C3.30469 11.5796 5.10062 12.6665 7.14867 12.6665C10.2783 12.6665 12.8153 10.1294 12.8153 6.99983C12.8153 4.95194 11.7286 3.15614 10.0988 2.1604C10.1317 2.43574 10.1487 2.71578 10.1487 2.9995ZM8.99402 1.64013C9.09519 2.07691 9.14867 2.53196 9.14867 2.9995C9.14867 6.31321 6.46238 8.9995 3.14867 8.9995C2.68096 8.9995 2.22575 8.94598 1.78882 8.84474C1.78768 8.84448 1.78653 8.84421 1.78539 8.84394C1.74783 8.83522 1.71041 8.82614 1.67312 8.81671C1.53539 8.78188 1.39955 8.74229 1.2658 8.69812C1.00397 8.61166 0.732689 8.83808 0.81948 9.0998C0.869672 9.25115 0.925141 9.4001 0.985669 9.54642C1.00274 9.58768 1.0202 9.62872 1.03807 9.66956C1.03906 9.67183 1.04006 9.67409 1.04105 9.67636C2.07204 12.0256 4.41873 13.6665 7.14867 13.6665C10.8306 13.6665 13.8153 10.6817 13.8153 6.99983C13.8153 4.27008 12.1747 1.92352 9.8257 0.892424C9.82343 0.891429 9.82117 0.890434 9.8189 0.889442C9.77807 0.871573 9.73702 0.854102 9.69577 0.837032C9.54945 0.776492 9.40051 0.721011 9.24916 0.670807C8.98745 0.583994 8.761 0.85526 8.84745 1.11709C8.8916 1.25085 8.93118 1.38669 8.966 1.52443C8.97543 1.56171 8.9845 1.59913 8.99322 1.63669C8.99349 1.63784 8.99376 1.63898 8.99402 1.64013Z" fill="#4E4E4E"/>
+</svg>
+        </span>
+        
+
+    </label>
+    
+    
+    <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="slate"
+        data-md-color-primary=""
+        data-md-color-accent=""
+        
+        aria-label="Light mode"
+        
+        type="radio"
+        name="__palette2"
+        id="__palette22"
+    />
+    
+    <label
+        title="Light mode"
+        for="__palette21"
+        hidden
+    >
+        
+        
+        <span>Light mode</span>
+        
+        
+
+        
+        <span class="md-header__button md-icon">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.14893 11.6667C10.174 11.6667 11.8156 10.025 11.8156 8C11.8156 5.97496 10.174 4.33333 8.14893 4.33333C6.12388 4.33333 4.48226 5.97496 4.48226 8C4.48226 10.025 6.12388 11.6667 8.14893 11.6667ZM8.14893 12.6667C10.7263 12.6667 12.8156 10.5773 12.8156 8C12.8156 5.42267 10.7263 3.33333 8.14893 3.33333C5.5716 3.33333 3.48226 5.42267 3.48226 8C3.48226 10.5773 5.5716 12.6667 8.14893 12.6667Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1489 8C16.1489 8.27614 15.9251 8.5 15.6489 8.5H13.9823C13.7061 8.5 13.4823 8.27614 13.4823 8C13.4823 7.72386 13.7061 7.5 13.9823 7.5L15.6489 7.5C15.9251 7.5 16.1489 7.72386 16.1489 8ZM2.81559 8C2.81559 8.27614 2.59173 8.5 2.31559 8.5H0.648926C0.372784 8.5 0.148926 8.27614 0.148926 8C0.148926 7.72386 0.372784 7.5 0.648926 7.5H2.31559C2.59173 7.5 2.81559 7.72386 2.81559 8Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8057 2.34322C14.001 2.53849 14.001 2.85507 13.8057 3.05033L12.6272 4.22884C12.4319 4.4241 12.1153 4.4241 11.9201 4.22884C11.7248 4.03358 11.7248 3.717 11.9201 3.52173L13.0986 2.34322C13.2939 2.14796 13.6104 2.14796 13.8057 2.34322ZM4.37761 11.7713C4.57287 11.9666 4.57287 12.2832 4.37761 12.4784L3.1991 13.6569C3.00384 13.8522 2.68726 13.8522 2.49199 13.6569C2.29673 13.4617 2.29673 13.1451 2.49199 12.9498L3.67051 11.7713C3.86577 11.5761 4.18235 11.5761 4.37761 11.7713Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.14893 0C8.42507 1.19209e-07 8.64893 0.223858 8.64893 0.5V2.16667C8.64893 2.44281 8.42507 2.66667 8.14893 2.66667C7.87278 2.66667 7.64893 2.44281 7.64893 2.16667L7.64893 0.5C7.64893 0.223857 7.87278 -1.19209e-07 8.14893 0ZM8.14893 13.3333C8.42507 13.3333 8.64893 13.5572 8.64893 13.8333V15.5C8.64893 15.7761 8.42507 16 8.14893 16C7.87278 16 7.64893 15.7761 7.64893 15.5V13.8333C7.64893 13.5572 7.87278 13.3333 8.14893 13.3333Z" fill="#4E4E4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.49215 2.34322C2.68741 2.14796 3.00399 2.14796 3.19926 2.34322L4.37777 3.52174C4.57303 3.717 4.57303 4.03358 4.37777 4.22884C4.18251 4.4241 3.86592 4.4241 3.67066 4.22884L2.49215 3.05033C2.29689 2.85507 2.29689 2.53849 2.49215 2.34322ZM11.9202 11.7713C12.1155 11.5761 12.4321 11.5761 12.6273 11.7713L13.8059 12.9498C14.0011 13.1451 14.0011 13.4617 13.8059 13.6569C13.6106 13.8522 13.294 13.8522 13.0988 13.6569L11.9202 12.4784C11.725 12.2832 11.725 11.9666 11.9202 11.7713Z" fill="#4E4E4E"/>
+</svg>
+        </span>
+        
+
+    </label>
+    
+    
+</form>
+        
+    </div>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#importing-sample-data-manually" class="md-nav__link">
+        Importing Sample Data Manually
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Source file information -->
+
+<!-- Source file information -->
+<div class="md-source-file">
+    <small>
+
+        <!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        Last update:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2022</span>
+        
+
+        <!-- mkdocs-git-revision-date-plugin -->
+        
+    </small>
+</div>
+
+
+<!-- Tags -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+
+
+<!-- Markdown content -->
+<h1 id="importing-sample-data">Importing Sample Data</h1>
+<p>To make it easier for you to explore what Virto Commerce can do, we provide a sample data set that you can import to automatically populate various entities. On the first launch, the platform displays a wizard that will prompt you to choose and import sample data. Currently, we only offer <em>Clothing and Electronics</em> sample data set that includes products, categories, customers, and other demo data that can assist developers and platform managers with learning how Virto Commerce works.</p>
+<p><img alt="Import Sample Data wizard" src="../media/06-import-sample-data-wizard.png" /></p>
+<p>In some cases, however, you may want to skip this step when getting started and import sample data later. In so, you will need to do this manually later on.</p>
+<h2 id="importing-sample-data-manually">Importing Sample Data Manually</h2>
+<p>To manually install sample data, open <em>More → Settings → Platform → Setup</em> in the Virto Commerce platform and click the <em>Import Sample Data</em> widget:</p>
+<p><img alt="Import Sample Data widget" src="../media/07-import-sample-data-widget.png" /></p>
+<p>Select <em>Clothing and Electronics</em> in the popup window that will show up and wait until the sample data has been downloaded and imported into your system. Once finished, you will have a complete sample data set that is ready to use.</p>
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!-- Footer -->
+<footer class="md-footer">
+    <nav
+        class="md-grid md-footer-meta__inner"
+        aria-label="Header"
+    >
+
+        <div class="md-footer__logo">
+            <!-- Link to home -->
+            <a
+                href="../../.."
+                title="Developer Center"
+                class="md-footer__button md-logo"
+                aria-label="Developer Center"
+                data-md-component="logo"
+            >
+                
+                <img src="../../../assets/icons/logo-bw.svg" alt="logo">
+                
+            </a>
+
+            <!-- Footer title -->
+            <div class="md-footer__title">
+                <div class="md-footer__ellipsis">
+                    <div class="md-footer__topic">
+                  <span class="md-ellipsis">
+                    Developer Center
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+
+                <div class="md-tabs">
+                    <div class="md-tabs__inner md-grid">
+                        
+                        <ul class="md-tabs__list">
+                            
+                            <li class="md-tabs__item">
+                                <a href="google.com" class="md-tabs__link">Support</a>
+                            </li>
+                            
+                            <li class="md-tabs__item">
+                                <a href="google.com" class="md-tabs__link">Community</a>
+                            </li>
+                            
+                            <li class="md-tabs__item">
+                                <a href="google.com" class="md-tabs__link">FAQ</a>
+                            </li>
+                            
+                            <li class="md-tabs__item">
+                                <a href="google.com" class="md-tabs__link">Release Notes</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+
+        <!-- Further information -->
+        <div class="md-footer-meta md-typeset">
+            <!-- Social links -->
+            
+            <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/VirtoCommerce" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/VirtoCommerce" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/virtocommerce?lang=en" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    <a href="google.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/virto-commerce/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/Virtocommerce/videos" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+            
+        </div>
+    </nav>
+    <div class="md-footer__bottom">
+        <p>Copyright © 2022. All rights reserved.</p>
+    </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d691e9de.min.js"></script>
+      
+        <script src="../../../assets/scripts/scripts-loader.js"></script>
+      
+    
+  </body>
+</html>
