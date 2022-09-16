@@ -256,6 +256,8 @@ nav:
       - Managing Promotions: v2.0/user_docs/marketing/managing-promotions.md
       - Promotion Combination Policies: v2.0/user_docs/marketing/combining-active-promotions.md
       - Promotion Rules: v2.0/user_docs/marketing/promotion-rules.md
+    - Pricing:
+      - Overview: v2.0/user_docs/pricing/overview.md
 
 extra:
     social:

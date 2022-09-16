@@ -2,39 +2,41 @@
 
 Virto Commerce ***Pricing*** module is designed for storing, managing, and calculating product prices.
 
-The Pricing Module is consisted of three main objects:
+The Pricing module comprises three core entities:
 
-1. Price
-1. Price list
-1. Price list Assignment
++ Price
++ Price list
++ Price list assignment
+
+We will cover them one by one below.
 
 ## Price
 
-The purpose of this object is to store the item price in the system and support a static discount and a tier price. The price has the following key characteristics:
+The price entity stores the item price supports static discounts and tier prices. It's key properties are:
 
-- **Product** (required) - is an object that the current price relates to.
-- **List price** (required) – represents the base price for the product in currency of owned price. The List price is a pre-promotional regular price.  
-- **Sale price** (optional) – is the discounted price of an item from the regular sale price.
-- **Min quantity** (min. 1) – represents lower inclusive limit for products quantity starting from which, this price will be valid. The min QTY is used for achieving Tier pricing functionality.
++ ***Product*** (required): Item the current price refers to.
++ ***List price*** (required): Base product price in the appropriate currency, without any promotions or offers applied.  
++ ***Sale price*** (optional): Discount price, i.e. with all relevant offers or promotions applied.
++ ***Mininum quantity*** (the minimum value is 1): The lowest number of items possible, with which the price is valid.
 
-## Pricelist
+## Price List
 
-The Pricelist plays the role of a container for prices with single currency. The Pricelist has the following key characteristics:
+A price list is, technically, a container that stores prices in a single currency. Its key properties are:
 
-- **Currency** (required) – single currency for all prices included into the Price list.  
-- **Prices** – the list of prices included into the Price list.  
++ ***Currency*** (required): Single currency for all prices included into the price list.  
++ ***Prices***: List of prices included into the price list.
 
-## Pricelist Assignment
+## Price List Assignment
 
-The Pricelist Assignment allows associating the specific Pricelist with a catalog based on specific rules and conditions.  
+Price list assignments enable associating  specific price lists with catalogs based on the relevant rules and conditions.  
 
-The Pricelist Assignment has the following key characteristics:
+Any price list assignment has the following key properties:
 
-- **Pricelist** (required) - relation to selected pricelist.  
-- **Catalog** (required) - relation to selected catalog.
-- **Enable** (start) and **Expiration dates** – the specified Enabled and Expiration dates determine the validation period of the pricelist assignment.  
-- **Priority**  defines the priority of the Pricelist. The system will apply the pricelist that has the highest priority.  
-- **Dynamic Assignment** of applicability.
++ ***Price list*** (required) - relation to selected pricelist.  
++ ***Catalog*** (required) - relation to selected catalog.
++ ***Enable*** (start) and ***Expiration dates*** – the specified Enabled and Expiration dates determine the validation period of the pricelist assignment.  
++ ***Priority***  defines the priority of the Pricelist. The system will apply the pricelist that has the highest priority.  
++ ***Dynamic Assignment*** of applicability.
 
 ## Key Features 
 
