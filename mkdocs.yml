@@ -90,10 +90,10 @@ extra:
         icon: assets/icons/rss.svg
     main_page:
         top_cards:
-            -   title: Architect
-                icon: assets/icons/package.svg
-                description: I need to build the platform's architecture or learn how I can do that.
-                link: https://docs.virtocommerce.org/architecture-center/B2B-multiregional/
+            # -   title: Architect
+            #     icon: assets/icons/package.svg
+            #     description: I need to build the platform's architecture or learn how I can do that.
+            #     link: https://docs.virtocommerce.org/architecture-center/B2B-multiregional/
             -   title: User
                 icon: assets/icons/person.svg
                 description: I use or am going to use Virto solutions on a regular basis.
@@ -102,43 +102,43 @@ extra:
                 icon: assets/icons/code-square.svg
                 description: I need to know how the Virto platform works so that I may customize it best for my team or customers.
                 link: /dev_docs
-            -   title: Business Analyst
-                icon: assets/icons/briefcase.svg
-                description: I need to know how to implement Virto solutions across my team or externally.
-                link: https://docs.virtocommerce.org/BA%20docs/
-        wide_cards:
-            -   title: B2C solution
-                icon: b2b-second.svg
-                description: Learn how to build an online store your customers will buy goods and services from.
-                link: under-construction
-            -   title: E-commerce platform
-                icon: platform.svg
-                description: Explore Virto's e-commerce opportunities and learn how to leverage them.
-                link: under-construction
-            -   title: VirtoCloud
-                icon: cloud.svg
-                description: Cloud techs are currently in the forefront of the IT industry. Learn how to them with Virto.
-                link: under-construction
-            -   title: Marketplace
-                icon: marketplace.svg
-                description: Virto Commerce allows you to build your very own unique online marketplace. See how!
-                link: under-construction
+            # -   title: Business Analyst
+            #     icon: assets/icons/briefcase.svg
+            #     description: I need to know how to implement Virto solutions across my team or externally.
+            #     link: https://docs.virtocommerce.org/BA%20docs/
+        # wide_cards:
+        #     -   title: B2C solution
+        #         icon: b2b-second.svg
+        #         description: Learn how to build an online store your customers will buy goods and services from.
+        #         link: under-construction
+        #     -   title: E-commerce platform
+        #         icon: platform.svg
+        #         description: Explore Virto's e-commerce opportunities and learn how to leverage them.
+        #         link: under-construction
+        #     -   title: VirtoCloud
+        #         icon: cloud.svg
+        #         description: Cloud techs are currently in the forefront of the IT industry. Learn how to them with Virto.
+        #         link: under-construction
+        #     -   title: Marketplace
+        #         icon: marketplace.svg
+        #         description: Virto Commerce allows you to build your very own unique online marketplace. See how!
+        #         link: under-construction
         education:
             - title: Videos
               description: Explore our video tutorials
-              image: ./v2.0/assets/icons/videos.png
+              image: assets/icons/videos.png
               link: https://www.youtube.com/c/Virtocommerce
             - title: Tech Blog
               description: Hints, tips, and so much more!
-              image: ./v2.0/assets/icons/articles.png
+              image: assets/icons/articles.png
               link: https://www.virtocommerce.org/
             - title: Case Studies
               description: Best case studies provided by our dev team
-              image: ./v2.0/assets/icons/videos-second.png
+              image: assets/icons/videos-second.png
               link: under-construction
             - title: Code samples
               description: Most used code samples
-              image: ./v2.0/assets/icons/stories.png
+              image: assets/icons/stories.png
               link: under-construction
 extra_javascript:
     - assets/scripts/scripts-loader.js
