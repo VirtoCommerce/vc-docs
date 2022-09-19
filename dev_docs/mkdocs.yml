@@ -62,9 +62,10 @@ site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
 
 # Repository
-repo_name: VirtoCommerce/vc-docs
-repo_url: https://github.com/vc-docs
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
+
 
 # Copyright
 copyright: Copyright &copy; 2022. All rights reserved.
