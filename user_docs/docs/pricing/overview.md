@@ -4,9 +4,9 @@ Virto Commerce ***Pricing*** module is designed for storing, managing, and calcu
 
 ## Related Components
 
-To view the source code of Virto Commerce Marketing module, check out our GitHub repository.
+To view the source code of Virto Commerce Pricing module, check out our [GitHub repository](https://github.com/VirtoCommerce/vc-module-pricing).
 
-To download the latest Marketing module release, click here.
+To download the latest Pricing module release, click [here](https://github.com/VirtoCommerce/vc-module-pricing/releases).
 
 ## Core Entities
 
@@ -42,7 +42,11 @@ Any price list assignment has the following key properties:
 
 + ***Price list*** (required): Refers to a specific price list.  
 + ***Catalog*** (required): Refers to a specific catalog.
-+ ***Enable date*** , ***Expiration date***: Start and end dates that determine the period, during which the pricelist assignment is valid.  
++ ***Enable date*** , ***Expiration date***: Start and end dates that determine the period, during which the pricelist assignment is valid.
+
+!!! note
+	If no expiration and enable dates are provided, the price list assignment becomes available immediately and does not expire.
+
 + ***Priority***: Price list priority. The price list having the highest priority will be used first.
 
 ## Key Features 
