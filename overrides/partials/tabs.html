@@ -1,0 +1,16 @@
+{% set class = "" %}
+
+<!-- Navigation tabs -->
+<nav class="md-tabs" aria-label="{{ lang.t('tabs.title') }}" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+        {% if not config.extra.tabs_links is mapping %}
+        <ul class="md-tabs__list">
+            {% for link in config.extra.tabs_links %}
+            <li class="md-tabs__item">
+                <a href="{{ link.url | url }}" class="md-tabs__link">{{ link.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</nav>

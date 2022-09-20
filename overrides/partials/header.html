@@ -6,10 +6,8 @@
 
 <!-- Header -->
 <header class="{{ class }}" data-md-component="header">
-    <nav
-        class="md-header__inner md-grid"
-        aria-label="{{ lang.t('header.title') }}"
-    >
+    <nav class="md-header__inner md-grid"
+         aria-label="{{ lang.t('header.title') }}">
         <!-- Button to open drawer -->
         <label class="md-header__button md-icon" for="__drawer">
             {% include "assets/icons/menu.svg" %}
@@ -20,18 +18,16 @@
             <div class="md-header__title">
                 <div class="md-header__ellipsis">
                     <div class="md-header__topic">
-                        <a
-                            href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-                            title="{{ config.site_name | e }}"
-                            class="md-header__button md-logo"
-                            aria-label="{{ config.site_name }}"
-                            data-md-component="logo"
-                        >
+                        <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+                           title="{{ config.site_name | e }}"
+                           class="md-header__button md-logo"
+                           aria-label="{{ config.site_name }}"
+                           data-md-component="logo">
                             {% include "partials/logo.html" %}
                         </a>
-                      <span class="md-ellipsis">
-                        {{ config.site_name }}
-                      </span>
+                        <span class="md-ellipsis">
+                            {{ config.site_name }}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -45,8 +41,8 @@
 
         <!-- Color palette -->
         {% if not config.theme.palette is mapping %}
-            {% set paletteVar = "__palette" %}
-            {% include "partials/palette.html" %}
+        {% set paletteVar = "__palette" %}
+        {% include "partials/palette.html" %}
         {% endif %}
 
         <!-- Button to open search modal -->
@@ -59,5 +55,12 @@
         {% include "partials/search.html" %}
         {% endif %}
     </nav>
+
+    <!-- Navigation tabs (sticky) -->
+    {% if "navigation.tabs.sticky" in features %}
+     {% if "navigation.tabs" in features %}
+        {% include "partials/tabs.html" %}
+     {% endif %}
+    {% endif %}
 
 </header>

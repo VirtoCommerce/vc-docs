@@ -21,6 +21,11 @@ theme:
         code: Ubuntu Mono
     icon:
         repo: fontawesome/brands/github
+    features:
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
 markdown_extensions:
     - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
     - codehilite
@@ -33,15 +38,6 @@ markdown_extensions:
         emoji_index: !!python/name:materialx.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
 
-links:
-    - title: Support
-      url: google.com
-    - title: Community
-      url: google.com
-    - title: FAQ
-      url: google.com
-    - title: Release Notes
-      url: google.com
 plugins:
     - search # necessary for search to work
  #   - autolinks
@@ -118,6 +114,22 @@ extra:
         icon: assets/icons/search.svg
     rss:
         icon: assets/icons/rss.svg
+    tabs_links:
+      - title: Home
+        url: /new
+      - title: Developer docs
+        url: /new/dev_docs
+      - title: User docs
+        url: /new/user_docs    
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
   
 extra_javascript:
     - assets/scripts/scripts-loader.js
