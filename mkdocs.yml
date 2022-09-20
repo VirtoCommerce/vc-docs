@@ -46,7 +46,7 @@ plugins:
     - redirects:
         redirect_maps:
             'redir.md': 'index.md'
-    - monorepo
+ #   - monorepo
 
 # Project information
 site_name: Documentation
