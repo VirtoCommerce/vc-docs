@@ -252,7 +252,7 @@ extra:
         url: /new
       - title: Developer docs
         url: /new/dev_docs
-      - title: User docss
+      - title: User docs
         url: /new/user_docs    
     footer_links:
         - title: Support
