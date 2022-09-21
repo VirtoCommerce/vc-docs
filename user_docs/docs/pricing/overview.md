@@ -54,10 +54,9 @@ Any price list assignment has the following key properties:
 With the Pricing module, you can count on the following key features and user scenarios:
 
 + [Creating New Price list](creating-new-price-list.md)
-    + [Adding Products to New Price List](adding-products-to-new-price-list.md)
-    + [Adding Prices to Products](adding-prices-to-products.md)      
++ [Adding Products to New Price List](adding-products-to-new-price-list.md)    
 + [View Price list via Catalog Module](viewing-price-list-in-catalog.md)
-+ [Adding New Assignment](adding-new-assignment.md)
-+ [Managing Pricing Module Settings](managing-pricing-module-settings.md)
++ [Adding New Price List Assignment](adding-new-assignment.md)
++ [Pricing Module Settings](managing-pricing-module-settings.md)
 + [Exporting Prices and Price List Assignments](export-functionality.md)
 + [Troubleshooting Incorrect Prices in Storefront](troubleshooting-guide.md)

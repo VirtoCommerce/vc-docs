@@ -1,20 +1,18 @@
-# Create a New Price list
+# Creating New Price List
 
-![Create a New Price list](media/diagram-create-new-price-list.png)
+Price lists act as containers for various product prices. They may come in handy when you want to store prices for items, say, of a specific category in a single place.
 
-In order to create a new Price list, the user should first go to Virto Commerce Platform and select the Pricing Module
+To create a new price list, navigate to the ***Pricing*** module and do the following
 
-1. Once the Pricing module is selected by the user, the system will display the Pricing main menu, consisted of a list of different Price lists created before.
-1. The user clicks the **Add** button to create a new Price list
-1. The system will display the **New Price List** screen:
-    1. Price list name - required
-    1. Select the currency from the drop-down list - required
-    1. Add description- optional
-    1. Assignment widget with **zero** assignments
-    1. **Create** button remains disabled until the user enters the Name and selects the currency
-1. The user fills out the required fields and clicks the **Create** button
-![Price list blade](media/screen-new-price-list-blade.png)
-1. The New Price List will be created by the system:
-    1. The New Price List is displayed on the Price Lists screen  
-    1. Prices and Assignments widgets are active
-![Prices and Assignments widgets](media/screen-assignments-widget.png)
++ Click the **Add** button on the top toolbar, above the existing price lists (if there are any). This will open the ***New Price List*** screen:
+
+![New Price List screen](media/creating-new-price-list/new-price-list-screen.png)
+
++ Give your new price list a new and a description, and hit ***Create***:
+
+![New Price List screen with name and description](media/creating-new-price-list/new-price-list-filled.png)
+
+Your new price list will appear in the list.
+
+!!! tip
+	You can also add price list assignments to your price lists. Read more about price lists assignments [here](adding-new-assignment.md).

@@ -1,50 +1,26 @@
-# Add New Assignment
+# Adding New Price List Assignment
 
-## Scenario
+Price list assignments associate specific price lists with the approrpiate catalogs and stores, i.e. they do all the linking job, so that the prices may be asdsigned to the correct items. Apart from that, with a price list assignment, you can target specific custmers eligible for the prices in question.
 
-![Add New Assignment](media/diagram-add-new-assignment.png)
+To add a new price list assignment, navigate to the ***Pricing*** module and select ***Price List Assignments*** to open the ***Price List Assignments*** screen:
 
-## Simple Assignment without rules and conditions
+![New price list assignment screen](media/adding-price-list-assignment/new-price-list-assignment.png)
 
-1. The user selects **Price List** on the Price Lists screen and clicks on the **Assignments widget**
-![Price list](media/screen-price-lists.png)
-1. The system opens a new screen with an active **Add** button that enables the user to add a new Assignment to the selected Price List
-1. The user clicks the **Add** button and the system opens the **New Price List Assignment** screen. The screen will display the following elements:
-    1. Assignment Name input field - required
-    1. Catalog drop down - disabled if Store is selected.
-    1. Store drop down - disabled if Catalog is selected. 
-    1. Price List drop down- required
-    1. Priority input field - required
-    1. Description input field- optional
-    1. Enable date – date picker optional
-    1. Expiration date- date picker optional
-    1. Under Eligible Shoppers:
-        1. If any of these conditions are true:
-            1. Any is a link
-            1. Under Any selection is available: ALL, ANY
-        1. **Add condition** button
-    1. **Create** button becomes active only when required fields are filled out
-1. The user fills out the required data:
-    1. Enters the Assignment Name
-    1. Selects the Catalog or Store from the drop-down list. User can select either Catalog or Store to attach an assignment to.
-    1. Selects the Price List from the drop-down list
-    1. Specifies the Priority (1, 2, 3, etc.). The system will then display on the Storefront the Price List with the highest priority
-    1. The user can also fill out the fill out the **Description** field, but it’s optional
-    1. The user can optionally specify the date range using the date pickers **from** - **to** to determine Price List availability. If the user leaves the fields blank, that will mean the Price List is always available
-![New price list assignment](media/screen-new-price-list-assignment.png)
-1. The system will create an assignment without additional rules and conditions
-1. The system will display the number of assignments created in the Assignment widget
-![Assignment](media/screen-assignment.png)
+Give your new assignment a name and a description, select the appropriate price list, specify the relevant store or catalog, and provide priority, enable date, and expiration date:
 
-## Assignment with Rules and Conditions
+![New price list assignment screen](media/adding-price-list-assignment/new-price-list-assignment-filled.png)
 
-1. In the created Assignment under Eligible Shoppers the user should first select if Any or All conditions are true by clicking the **Any** link and selecting the option
-1. The system will display the selected option: Any or All
-1. The user clicks the **Add condition** icon
-1. The system will display the list of different conditions previously added to the system. Below is an example of different rules and conditions that can be assigned to the Price List
-![List of different conditions](media/screen-list-of-different-conditions.png)
-1. The user selects as many conditions and needed from the list
-1. The system will display the selected conditions with possibility to delete them as shown on the screen shot bellow
-![Selected conditions](media/screen-selected-conditions.png)
-1. The user clicks the **Save** button on the top of the screen and the system will save the selected conditions
-1. The conditions will be assigned to the Price List
+!!! warning
+	For a price list assignment, you can either specify a store or a catalog, but not both.
+
+!!! note
+	Adding a start and end date for your price list assignment is optional and may come in handy when you create a special price list for a promotion with a certain validity period. If you leave the date fields blank, your price list assignment will be valid until you delete it or change dates.
+	
+## Customer Targeting
+
+The targeting feature allows you to tailor your price list assignment (and, eventually, the price list in question) to only specific customer categories.
+
+The targeting feature in the Pricing module works pretty much in the same way as in the Marketing module. You can read about it in the [Promotion Rules guide](../marketing/promotion-rules.md), and, specifically, in the [Customer Targeting](../marketing/promotion-rules.md#customer-targeting) section.
+
+
+

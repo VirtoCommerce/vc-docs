@@ -98,6 +98,9 @@ nav:
       - Promotion Rules: marketing/promotion-rules.md
     - Pricing:
       - Overview: pricing/overview.md
+      - Creating New Price List: pricing/creating-new-price-list.md
+      - Adding Products to Price List: pricing/adding-products-to-new-price-list.md
+      - Adding New Price List Assignment: pricing/adding-new-assignment.md
 
   
 extra:
