@@ -26,17 +26,46 @@ theme:
         - navigation.instant
         - navigation.tabs
         - navigation.tabs.sticky
+
 markdown_extensions:
-    - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
-    - codehilite
-    - meta
-    # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
-    - pymdownx.superfences
-    - pymdownx.magiclink
-    - attr_list
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+     - abbr
+     - admonition
+     - attr_list
+     - def_list
+     - footnotes
+     - md_in_html
+     - toc:
+         permalink: true
+     - pymdownx.arithmatex:
+         generic: true
+     - pymdownx.betterem:
+         smart_enable: all
+     - pymdownx.caret
+     - pymdownx.details
+     - pymdownx.emoji:
+         emoji_generator: !!python/name:materialx.emoji.to_svg
+         emoji_index: !!python/name:materialx.emoji.twemoji
+     - pymdownx.highlight:
+         anchor_linenums: true
+     - pymdownx.inlinehilite
+     - pymdownx.keys
+     - pymdownx.magiclink:
+         repo_url_shorthand: true
+         user: squidfunk
+         repo: mkdocs-material
+     - pymdownx.mark
+     - pymdownx.smartsymbols
+     - pymdownx.superfences:
+         custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+     - pymdownx.tabbed:
+         alternate_style: true
+     - pymdownx.tasklist:
+         custom_checkbox: true
+     - pymdownx.tilde 
+     - pymdownx.snippets
 
 plugins:
     - search # necessary for search to work
@@ -79,7 +108,6 @@ nav:
       - Managing Properties: catalog/managing-properties.md
       - Managing Search Index: catalog/managing-search-index.md
       - Product Indexing: catalog/product-indexing.md
-      - Search Engine Architecture: catalog/search-engine-architecture-details.md
       - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
       - Viewing Catalog Properties: catalog/view-properties.md
     - Marketing:

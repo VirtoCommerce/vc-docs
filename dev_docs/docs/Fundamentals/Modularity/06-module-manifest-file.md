@@ -1,4 +1,4 @@
-﻿# Module.manifest
+# Module.manifest
 The _module.manifest_ file is used both to build the module package and to provide information to the platform runtime when a module is loading . The manifest is always included into a module package.
 
 _Module.manifest_ is an XML file containing a top-level <module> node, which in its turn contains section elements described in the section below.
@@ -7,9 +7,8 @@ _Module.manifest_ is an XML file containing a top-level <module> node, which in 
 
 Below, you can find an example of a _module.manifest_ file that illustrates a number of settings including optional ones:
 
-`module.manifest`
 
-```xml
+``` xml title="module.manifest"
 <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!-- 
