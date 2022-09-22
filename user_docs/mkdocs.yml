@@ -82,7 +82,7 @@ plugins:
 
 # Project information
 site_name: User Guides
-site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
+site_description: Documentation portal for Virto Commerce, an enterprise-level Microsoft .NET ecommerce platform.
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
 
@@ -151,9 +151,9 @@ extra:
     tabs_links:
       - title: Home
         url: /new
-      - title: Developer docs
+      - title: Developer Docs
         url: /new/dev_docs
-      - title: User docs
+      - title: User Docs
         url: /new/user_docs    
     footer_links:
         - title: Support
