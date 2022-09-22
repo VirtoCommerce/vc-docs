@@ -21,27 +21,52 @@ theme:
         code: Ubuntu Mono
     icon:
         repo: fontawesome/brands/github
-markdown_extensions:
-    - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
-    - codehilite
-    - meta
-    # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
-    - pymdownx.superfences
-    - pymdownx.magiclink
-    - attr_list
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+    features:
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
 
-links:
-    - title: Support
-      url: google.com
-    - title: Community
-      url: google.com
-    - title: FAQ
-      url: google.com
-    - title: Release Notes
-      url: google.com
+markdown_extensions:
+     - abbr
+     - admonition
+     - attr_list
+     - def_list
+     - footnotes
+     - md_in_html
+     - toc:
+         permalink: true
+     - pymdownx.arithmatex:
+         generic: true
+     - pymdownx.betterem:
+         smart_enable: all
+     - pymdownx.caret
+     - pymdownx.details
+     - pymdownx.emoji:
+         emoji_generator: !!python/name:materialx.emoji.to_svg
+         emoji_index: !!python/name:materialx.emoji.twemoji
+     - pymdownx.highlight:
+         anchor_linenums: true
+     - pymdownx.inlinehilite
+     - pymdownx.keys
+     - pymdownx.magiclink:
+         repo_url_shorthand: true
+         user: squidfunk
+         repo: mkdocs-material
+     - pymdownx.mark
+     - pymdownx.smartsymbols
+     - pymdownx.superfences:
+         custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+     - pymdownx.tabbed:
+         alternate_style: true
+     - pymdownx.tasklist:
+         custom_checkbox: true
+     - pymdownx.tilde 
+     - pymdownx.snippets
+
 plugins:
     - search # necessary for search to work
  #   - autolinks
@@ -59,7 +84,7 @@ plugins:
 site_name: User Guides
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
-site_url: https://virtocommerce.com/docs/latest
+site_url: https://docs.virtocommerce.org/new
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
@@ -83,7 +108,6 @@ nav:
       - Managing Properties: catalog/managing-properties.md
       - Managing Search Index: catalog/managing-search-index.md
       - Product Indexing: catalog/product-indexing.md
-      - Search Engine Architecture: catalog/search-engine-architecture-details.md
       - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
       - Viewing Catalog Properties: catalog/view-properties.md
     - Marketing:
@@ -124,6 +148,22 @@ extra:
         icon: assets/icons/search.svg
     rss:
         icon: assets/icons/rss.svg
+    tabs_links:
+      - title: Home
+        url: /new
+      - title: Developer docs
+        url: /new/dev_docs
+      - title: User docs
+        url: /new/user_docs    
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
   
 extra_javascript:
     - assets/scripts/scripts-loader.js

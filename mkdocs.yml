@@ -21,6 +21,8 @@ theme:
         code: Ubuntu Mono
     icon:
         repo: fontawesome/brands/github
+    features:
+        - navigation.tabs
 markdown_extensions:
     - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
     - codehilite
@@ -33,15 +35,6 @@ markdown_extensions:
         emoji_index: !!python/name:materialx.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
 
-links:
-    - title: Support
-      url: google.com
-    - title: Community
-      url: google.com
-    - title: FAQ
-      url: google.com
-    - title: Release Notes
-      url: google.com
 plugins:
     - search # necessary for search to work
  #   - autolinks
@@ -53,13 +46,13 @@ plugins:
     - redirects:
         redirect_maps:
             'redir.md': 'index.md'
-#    - monorepo
+ #   - monorepo
 
 # Project information
 site_name: Documentation
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
-site_url: https://virtocommerce.com/
+site_url: https://docs.virtocommerce.org/new
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
@@ -68,7 +61,6 @@ edit_uri: edit/dev/docs/
 
 # Copyright
 copyright: Copyright &copy; 2022. All rights reserved.
-
 
 extra:
     social:
@@ -88,6 +80,15 @@ extra:
         icon: assets/icons/search.svg
     rss:
         icon: assets/icons/rss.svg
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
     main_page:
         top_cards:
             # -   title: Architect
@@ -97,11 +98,11 @@ extra:
             -   title: User
                 icon: assets/icons/person.svg
                 description: I use or am going to use Virto solutions on a regular basis.
-                link: /user_docs
+                link: user_docs
             -   title: Developer
                 icon: assets/icons/code-square.svg
                 description: I need to know how the Virto platform works so that I may customize it best for my team or customers.
-                link: /dev_docs
+                link: dev_docs
             # -   title: Business Analyst
             #     icon: assets/icons/briefcase.svg
             #     description: I need to know how to implement Virto solutions across my team or externally.
@@ -135,11 +136,11 @@ extra:
             - title: Case Studies
               description: Best case studies provided by our dev team
               image: assets/icons/videos-second.png
-              link: under-construction
+              link: https://virtocommerce.com/case-studies
             - title: Code samples
               description: Most used code samples
               image: assets/icons/stories.png
-              link: under-construction
+              link: https://github.com/VirtoCommerce/vc-samples
 extra_javascript:
     - assets/scripts/scripts-loader.js
 

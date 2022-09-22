@@ -1,4 +1,4 @@
-﻿# Overview
+# Overview
 
 Caching is one of the most effective ways to improve website performance. We at Virto Commerce have so far used a few various ways to cache application data to reduce the load on the external services and database, and minimize the application latency when handling API requests. In this article, we will describe the technical details and the best caching practices we employ in our platform.
 
@@ -31,17 +31,17 @@ For platform cache, we experimented with [IMemoryCache](https://docs.microsoft.c
 
 A simple Cache-Aside pattern implementation using IMemoryCache looks like this:
 
-``` json
-1 public object GetDataById(string objectId)
-2 {
-3    object data;
-4    if (!this._memoryCache.TryGetValue($"cache-key-{objectId}", out data))
-5    {
-6        data = this.GetObjectFromDatabase(objectId);
-7        this._memoryCache.Set($"cache-key-{objectId}", data, new TimeSpan(0, 5, 0));
-8    }
-9    return data;
-10 }
+``` csharp
+ public object GetDataById(string objectId)
+ {
+    object data;
+    if (!this._memoryCache.TryGetValue($"cache-key-{objectId}", out data))
+    {
+        data = this.GetObjectFromDatabase(objectId);
+        this._memoryCache.Set($"cache-key-{objectId}", data, new TimeSpan(0, 5, 0));
+    }
+    return data;
+ }
 ```
 
 This code has a few disadvantages:
@@ -62,18 +62,18 @@ To solve the issues we mentioned above, we defined our own [IMemoryCacheExtensio
 
 Here is a variation of the previous code example with a new extension:
 
-```json
-1  public object GetDataById(string objectId)
-2  {
-3      object data;
-4      var cacheKey = CacheKey.With(GetType(), nameof(GetDataById), id);
-5      var data = _memoryCache.GetOrCreateExclusive(cacheKey, cacheEntry =>
-6          {
-7            cacheEntry.AddExpirationToken(MyCacheRegion.CreateChangeToken()); 
-8            return this.GetObjectFromDatabase(objectId);
-9          });
-10      return data;
-11 }
+``` csharp linenums="1"
+  public object GetDataById(string objectId)
+  {
+      object data;
+      var cacheKey = CacheKey.With(GetType(), nameof(GetDataById), id);
+      var data = _memoryCache.GetOrCreateExclusive(cacheKey, cacheEntry =>
+          {
+            cacheEntry.AddExpirationToken(MyCacheRegion.CreateChangeToken()); 
+            return this.GetObjectFromDatabase(objectId);
+          });
+      return data;
+ }
 ```
 
 Now, some notes to the code:
@@ -82,25 +82,24 @@ Now, some notes to the code:
 
 Here is an example:
 
-```
+``` csharp
  CacheKey.With(GetType(), nameof(GetDataById), "123"); /* => "TypeName:GetDataById-123" */
-
 ```
 
 `CacheKey` can also be used to generate cache keys for complex object types. Most of the platform types are derived from the `Entity` or `ValueObject` classes, each of those implementing the `ICacheKey` interface that contains the `GetCacheKey()` method, which can be used for cache key generation.
 
 The following code sample shows how to create a cache key for a complex object type:
 
-```json
-1 class ComplexValueObject : ValueObject
-2 {
-3    public string Prop1 { get; set; }
-4    public string Prop2 { get; set; }
-5 }
-6
-7 var valueObj = new ComplexValueObject { Prop1 = "Prop1Value", Prop2 = "Prop2Value" };
-8 var data = CacheKey.With(valueObj.GetCacheKey());
-10 //cacheKey will take the "Prop1Value-Prop2Value" value
+``` csharp
+ class ComplexValueObject : ValueObject
+ {
+    public string Prop1 { get; set; }
+    public string Prop2 { get; set; }
+ }
+
+ var valueObj = new ComplexValueObject { Prop1 = "Prop1Value", Prop2 = "Prop2Value" };
+ var data = CacheKey.With(valueObj.GetCacheKey());
+ //cacheKey will take the "Prop1Value-Prop2Value" value
 ```
 
 **Line 5: Thread-safe caching and avoiding race conditions.** The `_memoryCache.GetOrCreateExclusive()` method calls a thread-safe caching extension that guarantees that the cacheable delegate (cache miss) should run only once in a multiple thread race.
@@ -109,21 +108,21 @@ An asynchronous version of this extension method, `_memoryCache.GetOrCreateExclu
 
 The following code sample shows how this exclusive access to the cacheable delegate works:
 
-```json
-1 public void GetOrCreateExclusive()
-2        {
-3            var sut = new MemoryCache();
-4            int counter = 0;
-5            Parallel.ForEach(Enumerable.Range(1, 10), i =>
-6            {
-7               var item = sut.GetOrCreateExclusive("test-key", cacheEntry =>
-8                {
-9                    cacheEntry.SlidingExpiration = TimeSpan.FromSeconds(10);
-10                    return Interlocked.Increment(ref counter);
-11                });
-12               Console.Write($"{item} ");
-13            });
-14        }
+``` csharp 
+ public void GetOrCreateExclusive()
+        {
+            var sut = new MemoryCache();
+            int counter = 0;
+            Parallel.ForEach(Enumerable.Range(1, 10), i =>
+            {
+               var item = sut.GetOrCreateExclusive("test-key", cacheEntry =>
+                {
+                    cacheEntry.SlidingExpiration = TimeSpan.FromSeconds(10);
+                    return Interlocked.Increment(ref counter);
+                });
+               Console.Write($"{item} ");
+            });
+        }
 ```
 
 This will output the following:
@@ -145,31 +144,31 @@ Thanks to the _Clean Architecture_ and the _Bounded_ contexts, where each bounda
 
 The platform supports a construct called _strongly typed cache regions_ that is used to control a set of cache keys and provides the tools to evict grouped or related data from the cache to keep the latter consistent. To define your own cache region, you need to derive it from `CancellableCacheRegion<>`. Then, the `ExpireRegion` method can be used to remove all keys within a single region:
 
-```json
-1  //Region definition
-2  public static class MyCacheRegion : CancellableCacheRegion<MyCacheRegion>
-3  {    
-4  }
-5
-6  //Usage
-7  cacheEntry.AddExpirationToken(MyCacheRegion.CreateChangeToken()); 
-8
-9  //Expire all data associated with the region
-10 MyCacheRegion.ExpireRegion();
+``` csharp
+  //Region definition
+  public static class MyCacheRegion : CancellableCacheRegion<MyCacheRegion>
+  {    
+  }
+
+  //Usage
+  cacheEntry.AddExpirationToken(MyCacheRegion.CreateChangeToken()); 
+
+  //Expire all data associated with the region
+ MyCacheRegion.ExpireRegion();
 ```
 
 There is also a special `GlobalCacheRegion` that can be used to expire all cached data of the entire application:
 
-```json
-1 //Expire all cached data for entire application
-2 GlobalCacheRegion.ExpireRegion();
+``` csharp
+ //Expire all cached data for entire application
+ GlobalCacheRegion.ExpireRegion();
 ```
 
 ## Caching Null Values
 
 By default, the platform caches null values. If you opt for negative caching, this default behavior can be changed by providing the `false` value to `cacheNullValue` in the `GetOrCreateExclusive` method, e.g.:
 
-```json
+``` csharp
  var data = _memoryCache.GetOrCreateExclusive(cacheKey, cacheEntry => {}, cacheNullValue: false);
 ```
 

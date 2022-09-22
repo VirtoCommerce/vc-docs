@@ -1,14 +1,13 @@
-﻿# Configuring Cache
+# Configuring Cache
 Cache configuration is commonly provided by the _Caching_ section of the _appsettings.json_ files:
 
-`appsettings.json`
 
-```json
-1 "Caching": {
-2       "CacheEnabled": true, 
-3       "CacheSlidingExpiration": "0:15:00", 
-4       //"CacheAbsoluteExpiration": "0:15:00"
-5    }
+``` json title="appsettings.json"
+ "Caching": {
+       "CacheEnabled": true, 
+       "CacheSlidingExpiration": "0:15:00", 
+       //"CacheAbsoluteExpiration": "0:15:00"
+    }
 ```
 Notes: 
 

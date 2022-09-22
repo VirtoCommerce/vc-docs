@@ -1,4 +1,4 @@
-﻿# Setting up Redis Backplane for Scaling out
+# Setting up Redis Backplane for Scaling out
 Running multiple instances of your application, all accessing the same distributed cache, can be tricky. This article explains how and when you should use the cache backplane feature provided by Virto Commerce.
 
 ## Multi Level Caching
@@ -19,22 +19,25 @@ The chart below shows how it all works:
 Redis Pub/Sub is used to send messages to the Redis server on any key change, clear cache, clear region, or remove key operation. Every cache instance with the same configuration gets subscribed to the same channel and can react on those messages to keep other cache handles in sync with the master.
 
 You can add a Redis cache backplane to the Virto platform at the stage of its configuration by copying the primary connection string (`StackExchange.Redis`) to [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0):
-    	
-    - For local deployment: Save the connection string with [Secret Manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0#secret-manager) or `appsetting.json`.
+
+[`For local deployment`](#mode:local){ #mode:local }
+
+:   Save the connection string with [Secret Manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0#secret-manager) or `appsetting.json`.
         
-    - For Azure based instance: Save the connection string in App Service Configuration or another secure storage.
+[`For Azure based instance`](#mode:azure){ #mode:azure }
+
+:   Save the connection string in App Service Configuration or another secure storage.
 
 The following example shows you how to set up the Redis backplane for memory cache in `appsettings.json`:
 
-`appsettings.json`
 
-```json
-1 "ConnectionStrings": {
-2         ...
-3         //Add RedisConnectionString value to start using Redis server as backplane for memory cache synchronization
-4        "RedisConnectionString": "vc.redis.cache.windows.net:6380,password={password}=,ssl=True,abortConnect=False"
-5        ...
-6    },
+``` json title="appsettings.json"
+"ConnectionStrings": {
+   ...
+   //Add RedisConnectionString value to start using Redis server as backplane for memory cache synchronization
+   "RedisConnectionString": "vc.redis.cache.windows.net:6380,password={password}=,ssl=True,abortConnect=False"
+   ...
+},
 ```
 
 !!!warning

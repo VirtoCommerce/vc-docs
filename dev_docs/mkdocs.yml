@@ -21,27 +21,53 @@ theme:
         code: Ubuntu Mono
     icon:
         repo: fontawesome/brands/github
-markdown_extensions:
-    - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
-    - codehilite
-    - meta
-    # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
-    - pymdownx.superfences
-    - pymdownx.magiclink
-    - attr_list
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+    features:
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
 
-links:
-    - title: Support
-      url: google.com
-    - title: Community
-      url: google.com
-    - title: FAQ
-      url: google.com
-    - title: Release Notes
-      url: google.com
+markdown_extensions:
+     - abbr
+     - admonition
+     - attr_list
+     - def_list
+     - footnotes
+     - md_in_html
+     - toc:
+         permalink: true
+     - pymdownx.arithmatex:
+         generic: true
+     - pymdownx.betterem:
+         smart_enable: all
+     - pymdownx.caret
+     - pymdownx.details
+     - pymdownx.emoji:
+         emoji_generator: !!python/name:materialx.emoji.to_svg
+         emoji_index: !!python/name:materialx.emoji.twemoji
+     - pymdownx.highlight:
+         anchor_linenums: true
+     - pymdownx.inlinehilite
+     - pymdownx.keys
+     - pymdownx.magiclink:
+         repo_url_shorthand: true
+         user: squidfunk
+         repo: mkdocs-material
+     - pymdownx.mark
+     - pymdownx.smartsymbols
+     - pymdownx.superfences:
+         custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+     - pymdownx.tabbed:
+         alternate_style: true
+     - pymdownx.tasklist:
+         custom_checkbox: true
+     - pymdownx.tilde 
+     - pymdownx.snippets
+
+
 plugins:
     - search # necessary for search to work
  #   - autolinks
@@ -59,12 +85,13 @@ plugins:
 site_name: Developer Center
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
-site_url: https://virtocommerce.com/docs/latest
+site_url: https://docs.virtocommerce.org/new
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
+
 
 # Copyright
 copyright: Copyright &copy; 2022. All rights reserved.
@@ -84,13 +111,14 @@ nav:
         - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
         - Configuring Asset Blob Storage: Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage.md
         - Importing Sample Data: Getting-Started/Post-Installation-Steps/04-importing-sample-data.md
+  - Back End Architecture:
+    - Tech Stack: Back-End-Architecture/01-tech-stack.md
+    - Conceptual Overview: Back-End-Architecture/02-conceptual-overview-in-progress.md
   - Fundamentals:
     - Caching:
       - Overview: Fundamentals/Caching/01-overview-in-progress.md
       - Cache Configuration: Fundamentals/Caching/02-cache-configuration.md
       - Setting Up Redis Backplane for Scaling Out: Fundamentals/Caching/03-setting-up-Redis.md
-    - Configuration Reference:
-      - Appsettings.json: Fundamentals/Configuration-Reference/appsettingsjson.md
     - Data Import:
       - Main Concept: Fundamentals/Data-Import/01-main-concept.md
       - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
@@ -120,20 +148,18 @@ nav:
       - Overview: Fundamentals/Extensibility/overview.md
     - Event Driven Development:
       - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
-    - Integration:
-      - Payment Gateways:
-        - Registering New Payment Method: Fundamentals/Integration/Payment-Gateways/new-payment-method-registration.md
-      - Shipping Providers:
-        - Registering New Shipping Method: Fundamentals/Integration/Shipping-Providers/new-shipping-method-registration.md
-      - Tax Providers:
-        - Registering New Tax Provider: Fundamentals/Integration/Tax-Providers/new-tax-provider-registration.md
+    - Payments:
+      - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
+    - Fulfillment:
+      - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
+    - Taxes:
+      - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
     - Dynamic Properties:
       - Overview: Fundamentals/Dynamic-Properties/overview.md
     - Security:
       - Extending Authorizarion Policies: Fundamentals/Security/extending-authorization-policies.md
-  - Back End Architecture:
-    - Tech Stack: Back-End-Architecture/01-tech-stack.md
-    - Conceptual Overview: Back-End-Architecture/02-conceptual-overview-in-progress.md
+  - Configuration Reference:
+      - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
     - Style Guide: Platform-Manager/style-guide.md
     - UI Scroll Directive: Platform-Manager/ui-scroll-directive.md
@@ -225,7 +251,7 @@ nav:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
-    - Samples and Recommendations: GraphQL-Storefront-API-Reference-xAPI/recommendations.md
+
   - Tutorials and How-tos:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
@@ -249,6 +275,22 @@ extra:
         icon: assets/icons/search.svg
     rss:
         icon: assets/icons/rss.svg
+    tabs_links:
+      - title: Home
+        url: /new
+      - title: Developer docs
+        url: /new/dev_docs
+      - title: User docs
+        url: /new/user_docs    
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
   
 extra_javascript:
     - assets/scripts/scripts-loader.js
