@@ -1,37 +1,20 @@
-# Export Function
+# Export Feature
 
-## Export Prices
+Virto's Pricing module provides the Export feature out-of-the-box, which allows you to export various data, including prices, price lists, and price list assignments.
 
-The Pricing module includes Export functionality, which allows the user to export data using different export criteria. The following types of data objects are allowed to be exported from Pricing module:
+## Exporting Pricing Data
 
-1. Prices;
-1. Price lists;
-1. Price list assignments.
+To start exporting your pricing data, navigate to the Pricing module, select either ***Price Lists*** or ***Price List Assignments***, depending on what you are going to export, select the relevant data by ticking the appropriate checkboxes, and hit ***Export***:
 
-The user can start the data export by filtering/selecting data and going to generic export wizard using Export button.
+![Exporting pricing data](media/export/export.png)
 
- The Export function is integrated with the Pricing Module and provided out-of-the-box. The screenshots bellow show the main steps of the data export in Pricing module:
+!!! tip
+	You can tick the top checkbox to select all data.
 
-### Export Price lists
+Once you have clicked the ***Export*** button, a dedicated screen will show up:
 
-The user can either select all the price lists available from the list as shown below:
+![Export screen](media/export/export-screen.png)
 
-![Start Export](media/screen-start-export.png)
+Check whether the data type is correct, select export provider (either CSV or JSON), select more data or properties, if required, and click ***Start***.
 
-![Export Prices](media/screen-export-prices.png)
-
-or select some specific price lists:
-
-![Three of ten selected](media/screen-three-items-selected.png)
-
-![Pricelist export](media/screen-pricelist-export.png)
-
-### Export Price list assignments
-
-![Export assignments](media/screen-export-assignments.png)
-
-![Price Assignments Export](media/screen-price-assignment-export.png)
-
-For more details about Export functionality, please follow the link bellow to view the Generic Export Module document
-
-https://github.com/VirtoCommerce/vc-module-export
+<!---add note and link to the Export module--->

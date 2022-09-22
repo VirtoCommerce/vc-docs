@@ -1,11 +1,13 @@
-# Managing Pricing module settings
+# Pricing Module Settings
 
-The following infrastructure for settings is provided:
-**Standard UI accessible through Browse->Settings->Pricing**
-Allows to view and edit simple settings
+In order to access Pricing settings, navigate to ***Settings*** and select ***Pricing***:
 
-## Indexing
+![Selecting pricing settings](media/settings/selecting-pricing-settings.png)
 
-Indexing is a function that enables including the Pricing module into the global system of platform indexing. This functionality allows product re-indexing after changing the product price.
-The Index content can be viewed on **Search Index details** screen. In order to access this screen, the user should open the **Physical item details** screen and select the **Indexed** widget
-![Physical item details](media/screen-physical-item-details.png)
+The ***Settings*** screen has two options, ***General*** and ***Search***. Use general settings to configure the page size for export and import and enable or disable logging pricing changes and event-based indexing:
+
+![General settings](media/settings/general-settings.png)
+
+The ***Search*** settings have only one option that allows you to enable or disable price indexing:
+
+![Search settings](media/settings/search-settings.png)

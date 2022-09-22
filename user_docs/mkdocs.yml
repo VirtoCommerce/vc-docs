@@ -101,8 +101,11 @@ nav:
       - Creating New Price List: pricing/creating-new-price-list.md
       - Adding Products to Price List: pricing/adding-products-to-new-price-list.md
       - Adding New Price List Assignment: pricing/adding-new-assignment.md
-
-  
+      - Export Feature: pricing/export-functionality.md
+      - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
+      - Settings: pricing/managing-pricing-module-settings.md
+      - Troubleshooting Guide: pricing/troubleshooting-guide.md
+      
 extra:
     social:
       - icon: fontawesome/brands/github

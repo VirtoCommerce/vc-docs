@@ -20,7 +20,7 @@ Give your new assignment a name and a description, select the appropriate price 
 
 The targeting feature allows you to tailor your price list assignment (and, eventually, the price list in question) to only specific customer categories.
 
-The targeting feature in the Pricing module works pretty much in the same way as in the Marketing module. You can read about it in the [Promotion Rules guide](../marketing/promotion-rules.md), and, specifically, in the [Customer Targeting](../marketing/promotion-rules.md#customer-targeting) section.
+The targeting feature in the Pricing module works pretty much in the same way as in the Marketing module. You can read about it in the [Publish Conditions guide](../marketing/publish-conditions.md).
 
 
 
