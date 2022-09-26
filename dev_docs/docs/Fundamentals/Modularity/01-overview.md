@@ -63,7 +63,7 @@ Each Virto module breaks down into multiple layers and encapsulates and groups a
 
 Instead of being coupled across a layer, a module is coupled vertically along a slice, while minimizing coupling between slices and maximizing it within a slice. This architecture is very convenient, as, when it comes to adding or changing a feature in an module, logically, e.g., changing the user interface, adding fields to models, modifying validation, and so on, you can do it all on each layer and then couple it vertically along a slice.
 
-For module solution, there is also a determined folder structure that reflects this logical structure, which is described in detail [here](02-folder-structure-IN-PROGRESS.md).
+For module solution, there is also a determined folder structure that reflects this logical structure, which is described in detail [here](02-folder-structure.md).
 
 ## Modules Relationships
 

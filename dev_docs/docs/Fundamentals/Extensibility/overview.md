@@ -135,9 +135,9 @@ To address crucial extension requirements, the platform contains various **exten
     * [Extending blade toolbar](../../Platform-Manager/Extensibility-Points/blade-toolbar.md)
     * [Extending grid columns](../../Platform-Manager/Extensibility-Points/extending-grid-columns.md)
 * Extending commerce logic:
-    * [New payment method registration](../Integration/Payment-Gateways/new-payment-method-registration.md)
-    * [New shipping method registration](../Integration/Shipping-Providers/new-shipping-method-registration.md)
-    * [New tax provider registration](../Integration/Tax-Providers/new-tax-provider-registration.md)
+    * [New payment method registration](../Payments/new-payment-method-registration.md)
+    * [New shipping method registration](../Shipments/new-shipping-method-registration.md)
+    * [New tax provider registration](../Taxes/new-tax-provider-registration.md)
 
   
 ## Customization Type Comparison

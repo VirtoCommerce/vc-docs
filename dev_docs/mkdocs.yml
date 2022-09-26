@@ -100,7 +100,7 @@ copyright: Copyright &copy; 2022. All rights reserved.
 nav:
   - Home: index.md
   - Getting Started:
-    - System Requirements: Getting-Started/system-requirements-in-progress.md
+    - System Requirements: Getting-Started/system-requirements.md
     - Installation Guide:
       - Windows:
         - Prerequisites: Getting-Started/Installation-Guide/Installing-on-Windows/01-installation-windows-on-premises-prerequisites.md
@@ -116,7 +116,7 @@ nav:
     - Conceptual Overview: Back-End-Architecture/02-conceptual-overview-in-progress.md
   - Fundamentals:
     - Caching:
-      - Overview: Fundamentals/Caching/01-overview-in-progress.md
+      - Overview: Fundamentals/Caching/01-overview.md
       - Cache Configuration: Fundamentals/Caching/02-cache-configuration.md
       - Setting Up Redis Backplane for Scaling Out: Fundamentals/Caching/03-setting-up-Redis.md
     - Data Import:
@@ -138,8 +138,8 @@ nav:
         - Elastic App Search Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
         - Configuring Elastic App Search: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
     - Modularity:
-      - Overview: Fundamentals/Modularity/01-overview-IN-PROGRESS.md
-      - Folder Structure: Fundamentals/Modularity/02-folder-structure-IN-PROGRESS.md
+      - Overview: Fundamentals/Modularity/01-overview.md
+      - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
       - Versioning and Dependencies: Fundamentals/Modularity/03-versioning-and-dependencies.md
       - Loading Modules into App Process: Fundamentals/Modularity/04-loading-modules-into-app-process.md
       - Best Practices: Fundamentals/Modularity/05-best-practices.md

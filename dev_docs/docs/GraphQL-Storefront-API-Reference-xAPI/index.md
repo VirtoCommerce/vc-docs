@@ -6,18 +6,16 @@ Below, you can see the content chart for xAPI:
 
 ![image](https://user-images.githubusercontent.com/7566324/84039908-38258300-a9a2-11ea-9421-2c51462d69af.png)
 
-## Key concepts
+## Key Concepts
 - Use GraphQL protocol to leverage more selective and flexible control of resulting data retrieving from API;
 - Fast and reliable indexed search thanks to integration with ES 7.x  and single data source for indexed search and data storage (<= 300ms);
 - Autonomy. Shared nothing with rest VC data infrastructure except index data source;
 - Tracing and performance requests metrics.
 
-## Key features
-- [X-Catalog docs](./x-catalog-reference.md)
-- [X-Purchase cart docs](./x-purchase-cart-reference.md)
-- [X-Purchase order docs](./x-purchase-order-reference.md)
-- [X-UserProfile module](https://github.com/VirtoCommerce/vc-module-profile-experience-api) (moved to a separate module)
-- [Recommendations Gateway API](./gateway-api-reference.md) (prototype)
+## Key Features
+- [Catalog xAPI](Catalog/overview.md)
+- [Cart xAPI](Cart/overview.md)
+- [Order xAPI](Order/overview.md)
 
 !!! warning
 	The xAPI project can be integrated with Elastic Search 7.x and Azure Search Service for indexed search. Lucene search provider is not supported.
