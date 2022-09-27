@@ -89,7 +89,7 @@ To deploy Elastic App Search using Docker, do the following:
    + Create a strong password and place it instead of `!!!changeme!!!`
    + Create a file named `docker-compose.yml` and place it with the `.env` file:
    
-        ```yml
+        ```
         version: "2.2"
 
         services:
@@ -261,13 +261,13 @@ To deploy Elastic App Search using Docker, do the following:
 !!! note
 	There are custom settings for `enterprisesearch` in the `.yml` file:
 	 
-   ```     
+  ```     
   app_search.engine.total_fields.limit=128
   ```
   
   + Bring up the Elastic cluster with the following command (run it from the directory where the `.yml` file is):
   
-        ```
+    ```
         docker-compose up
     ``` 
     
@@ -324,7 +324,7 @@ dotnet run
 
 ### Working with Elastic App Search
 
-- In `Kibana`, open the App Search `Engines` overview page. Here can see four engines created after rebuilding the indexes. Clicking on the `products` engine, you will see general analytics about incoming queries and will be able to manage indexed documents and tune engine behavior with `Relevance Tuning`, `Synonyms`, and `Curations`.
++ In `Kibana`, open the App Search `Engines` overview page. Here can see four engines created after rebuilding the indexes. Clicking on the `products` engine, you will see general analytics about incoming queries and will be able to manage indexed documents and tune engine behavior with `Relevance Tuning`, `Synonyms`, and `Curations`.
 
 + Open the `Documents` menu to examine all indexed documents and their content. 
 

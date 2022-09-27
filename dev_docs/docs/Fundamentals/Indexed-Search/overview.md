@@ -14,13 +14,13 @@ Below, you can find more info on the main Virto Commerce Indexed Search concepts
 
 **Search indexes:** A logical group (container) that contains all documents (rows) of a single document (*Type*). Each document also has *Fields* (columns). Usually it is mapped to a specific index within the index provider, e.g., Elasticsearch index. In Virto, we have the following indexes by default:
 
-+ Product: For catalog item search
++ **Product:** For catalog item search
 
-+ Category: For catalog category search
++ **Category:** For catalog category search
 
-+ Member: For customer data  search
++ **Member:** For customer data search
 
-+ CustomerOrder: For order search
++ **CustomerOrder:** For order search
 
 ![Search index types](media/02-search-index-types.png)
 

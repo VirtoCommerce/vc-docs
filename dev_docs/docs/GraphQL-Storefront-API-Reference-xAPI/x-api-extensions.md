@@ -14,8 +14,7 @@ In order to register a new query or mutation you need to derive the custom schem
 
 Here an example how to define schema types for existing domain types. On this example we define the new GraphQL schema  object type - `InventoryType` for underlying domain type `Inventory` from the  `inventory module`.
 
-*CustomSchema.cs*
-```csharp
+```csharp title="CustomSchema.cs"
  public class CustomSchema : ISchemaBuilder
     {
         public void Build(ISchema schema)
@@ -37,8 +36,7 @@ Here an example how to define schema types for existing domain types. On this ex
     }
 ```
 
-*module.cs*
-```csharp
+```csharp title="module.cs"
  public class Module : IModule
  {
     public void Initialize(IServiceCollection services)
@@ -55,8 +53,7 @@ To extend the existing GraphQL type you need to do the following steps
 
 Derive your schema type from the existing one that you want to extend
 
-*CartType2.cs*
-```csharp
+```csharp title="CartType2.cs"
   public class CartType2 : CartType
     {
         public CartType2(ICartAvailMethodsService cartAvailMethods) : base(cartAvailMethods)
@@ -68,8 +65,7 @@ Derive your schema type from the existing one that you want to extend
 
 Register your override with the special syntax in the `module.cs`.
 
-*module.cs*
-```csharp
+```csharp title="module.cs"
  public class Module : IModule
  {
     public void Initialize(IServiceCollection services)
@@ -79,12 +75,12 @@ Register your override with the special syntax in the `module.cs`.
     }
  }
 ```
+
 ## Extend validation logic / replace validators
 The system uses Platform's abstract type factory to instantiate validators. Therefore the approach of validation logic extension similar to other cases (such as domain model extension):
 - Derive your custom validator from original one:
 
-*CartValidator2.cs*
-```csharp
+```csharp title="CartValidator2.cs"
     public class CartValidator2 : CartValidator
     {
         public CartValidator2()
@@ -94,10 +90,10 @@ The system uses Platform's abstract type factory to instantiate validators. Ther
         }
     }
 ```
+
 - Override original validator type with your custom in order to tell the factory CartValidator2 replaces the original validator:
 
-*module.cs*
-```csharp
+```csharp title="module.cs"
     public class Module : IModule
     {
         public void PostInitialize(IApplicationBuilder appBuilder)
@@ -109,7 +105,6 @@ The system uses Platform's abstract type factory to instantiate validators. Ther
         }
     }
 ```
-
 
 ## Generic behavior pipelines
 xAPI extension points are not limited to data structure extensions. You can also change behavior and business logic outside from  the your custom module without touching the original source code.
@@ -135,9 +130,7 @@ services.AddPipeline<SearchProductResponse>(builder =>
 
 First we need to define the new middleware
 
-*MyCoolMiddleware.cs*
-
-```csharp
+```csharp title="MyCoolMiddleware.cs"
 public class MyCoolMiddleware : IAsyncMiddleware<SearchProductResponse>
 {
     //code skipped for better clarity
@@ -146,9 +139,7 @@ public class MyCoolMiddleware : IAsyncMiddleware<SearchProductResponse>
 
 The last step is register it for the generic behavior pipeline
 
-*module.cs*
-
-```csharp
+```csharp title="module.cs"
  public class Module : IModule
  {
     public void Initialize(IServiceCollection services)
@@ -190,14 +181,12 @@ To do this, it is just enough to replace the required handler in the DI containe
 
 To replace an existing command with your own implementation first register and override of your Input type
 
-*module.cs*
-```csharp
+```csharp title="module.cs"
 services.AddSchemaType<InputRemoveCartType2>().OverrideType<InputRemoveCartType, InputRemoveCartType2>();
 ```
 
 And then regiser your implementations of Command and Handler like this
 
-*module.cs*
-```csharp
+```csharp title="module.cs"
 services.OverrideCommandType<RemoveCartCommand, RemoveCartCommandExtended>().WithCommandHandler<RemoveCartCommandHandlerExtended>();
 ```

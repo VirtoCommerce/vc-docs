@@ -42,7 +42,7 @@ To manage blades, we use `platformWebApp.bladeNavigationService` that has the fo
 |closeChildrenBlades(blade, callback)|Attempts to close all child blades. The callback function is called only if all child blades were closed successfully.|
 |setError(msg, blade)|Sets an error message for the blade. To clear an error message, leave the `msg` parameter blank.|
 
-```
+```js
 angular.module('sampleApp')
 .controller('sampleController', ['$scope', 'platformWebApp.bladeNavigationService', function ($scope, bladeNavigationService) {
 

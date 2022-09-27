@@ -1,4 +1,4 @@
-## Introduction
+# Widgets
 
 A **widget** is a relatively simple and intuitive web UI [component](http://en.wikipedia.org/wiki/Software_component) within Virto Commerce Platform. It is basically a transient or auxiliary tile, which:
 

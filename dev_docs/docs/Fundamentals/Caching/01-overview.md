@@ -18,11 +18,11 @@ We do not use distributed cache in the platform code, because we want to keep th
 
 There are three additional cons of using distributed cache that influenced our decision:
 
--   All cached data must support serialization and deserialization, which is not always possible with distributed cache.
++ All cached data must support serialization and deserialization, which is not always possible with distributed cache.
     
--   Compared to memory cache, distributed cache has somewhat worse performance due to network latency.
++ Compared to memory cache, distributed cache has somewhat worse performance due to network latency.
     
--   Using both memory and distributed cache leads to complexity.
++ Using both memory and distributed cache leads to complexity.
     
 
 ## Cache-Aside Basic Implementation
@@ -46,17 +46,17 @@ A simple Cache-Aside pattern implementation using IMemoryCache looks like this:
 
 This code has a few disadvantages:
 
--   It contains too many lines and must be simplified.
++ It contains too many lines and must be simplified.
     
--   It requires manual creation of the cache key, which cannot guarantee its uniqueness.
++ It requires manual creation of the cache key, which cannot guarantee its uniqueness.
     
--   It does not protect against race conditions when multiple streams will try to access the same cache key simultaneously, which may lead to excess data eviction. This may not be an issue, unless your application has a high concurrent load and costly back end requests, or the back end is not designed to handle simultaneous requests.
++ It does not protect against race conditions when multiple streams will try to access the same cache key simultaneously, which may lead to excess data eviction. This may not be an issue, unless your application has a high concurrent load and costly back end requests, or the back end is not designed to handle simultaneous requests.
     
--   It assumes you would be manually controlling the cached data lifetime. Choosing proper values for the lifetime is a complicated task and reduces developer's productivity.    
++ It assumes you would be manually controlling the cached data lifetime. Choosing proper values for the lifetime is a complicated task and reduces developer's productivity.    
 
 With the relatively new MemoryCache methods, `GetOrCreate` and `GetOrCreateAsync`, the above issues are here to stay, which means one cannot use them on an as-is basis either. To see the bigger picture and learn more about the `GetOrCreate` method, you can refer to [this article](https://blog.novanet.no/asp-net-core-memory-cache-is-get-or-create-thread-safe/).
 
-# What We Did to Improve Code
+## What We Did to Improve Code
 
 To solve the issues we mentioned above, we defined our own [IMemoryCacheExtensions](https://github.com/VirtoCommerce/vc-platform/blob/master/src/VirtoCommerce.Platform.Core/Caching/MemoryCacheExtensions.cs). This implementation ensures that cached delegates (cache misses) are called only once, even if multiple threads are accessing the cache concurrently under race conditions. In addition, this extension provides a more compact syntax for the client code.
 
@@ -134,7 +134,7 @@ This will output the following:
 **Line 7: Cache expiration and eviction.** We get a `CancellationTokenSource` object that is associated with the cache data and a strongly typed cache region, which allows multiple cache entries to be evicted as a group (see [ASP.NET Core Memory Cache Dependencies](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-3.1#cache-dependencies)).
 
 !!! warning
-    * We intentionally disable the inheritance for cached entry expiration tokens and time-based expiration settings. When one cache entry is used to create another, the child copies the parent entry expiration settings and cannot get expired by manually removing or updating the parent entry. This leads to unpredictable side effects, and it is hard to maintain and debug such cache dependencies.
+    We intentionally disable the inheritance for cached entry expiration tokens and time-based expiration settings. When one cache entry is used to create another, the child copies the parent entry expiration settings and cannot get expired by manually removing or updating the parent entry. This leads to unpredictable side effects, and it is hard to maintain and debug such cache dependencies.
 
 We avoid manual control of the cached data lifetime in our code. The platform has a special `CachingOptions` object that contains the settings for **Absolute** or **Sliding** lifetimes for all cached data (see below).
 
@@ -174,7 +174,7 @@ By default, the platform caches null values. If you opt for negative caching, th
 
 ## Cache Settings
 
-To learn how to configure cache settings, see [this article](02-cache-configuration.md)<!-- Update link if required -->.
+To learn how to configure cache settings, see [this article](02-cache-configuration.md).
 
 ## Scaling
 
@@ -185,21 +185,21 @@ Running multiple platform instances, each with its own local cache, and which in
 # Summary
 To wrap it up, here are some rules to follow and notes to consider:
  
--   We only use in-memory cache by default (neither distributed nor mixed).
++ We only use in-memory cache by default (neither distributed nor mixed).
     
--   When performing platform scale out configuration, you need to have a Redis server configured as a backplane to sync cached data in memory for multiple platform instances in a consistent state. <TODO: add link>
++ When performing platform scale out configuration, you need to have a [Redis server configured](03-setting-up-Redis.md) as a backplane to sync cached data in memory for multiple platform instances in a consistent state.
     
--   The [IMemoryCacheExtensions](https://github.com/VirtoCommerce/vc-platform/blob/master/src/VirtoCommerce.Platform.Core/Caching/MemoryCacheExtensions.cs) extension contains sync and async extension methods that represent a compact version of the Cache-Aside pattern implementation based on the ASP.NET Core IMemoryCache interface and provide exclusive access to the original data under race conditions.
++ The [IMemoryCacheExtensions](https://github.com/VirtoCommerce/vc-platform/blob/master/src/VirtoCommerce.Platform.Core/Caching/MemoryCacheExtensions.cs) extension contains sync and async extension methods that represent a compact version of the Cache-Aside pattern implementation based on the ASP.NET Core IMemoryCache interface and provide exclusive access to the original data under race conditions.
     
--   In order to avoid issues with stale cached data, always keep your cached data in a consistent state using the strongly typed cache regions that enable evicting groups of data.
++ In order to avoid issues with stale cached data, always keep your cached data in a consistent state using the strongly typed cache regions that enable evicting groups of data.
     
--   The platform uses an aggressive caching policy for most DAL services, even when caching large search results. Do not use relative size metrics for cached data, as it may lead to high memory utilization in some production scenarios. Play with the `CacheSlidingExpiration` and `CacheAbsoluteExpiration` values to find an optimal balance of memory consumption and application performance.
++ The platform uses an aggressive caching policy for most DAL services, even when caching large search results. Do not use relative size metrics for cached data, as it may lead to high memory utilization in some production scenarios. Play with the `CacheSlidingExpiration` and `CacheAbsoluteExpiration` values to find an optimal balance of memory consumption and application performance.
 
-## Additional resources
+## Additional Resources
 To learn more about the things covered by this article, you might also want to check out these sources:
 
--   [Caching in ASP.NET by Microsoft](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-6.0)
++ [Caching in ASP.NET by Microsoft](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-6.0)
     
--   [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
++ [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
     
--   [Cache Configuration by Virto Commerce](02-cache-configuration.md)<!-- Update link if required -->
++ [Cache Configuration by Virto Commerce](02-cache-configuration.md)<!-- Update link if required -->

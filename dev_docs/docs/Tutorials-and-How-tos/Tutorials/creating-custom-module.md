@@ -1,13 +1,12 @@
 ﻿# Creating New Module
-
 The Virto Commerce ecosystem allows you to create your own custom module according to your business or technical needs. In this tutorial, you will learn how you can do so.
 
 ## Creating Solution from Template
 To run your own Virto Commerce module, you can create it from scratch. However, it is recommendable you do it based on a predefined template. For that, you need to: 
 
-* Create a source directory or, if you already have it, navigate to it
-* Open Windows CMD or PowerShell
-* Run these commands:
++ Create a source directory or, if you already have it, navigate to it
++ Open Windows CMD or PowerShell
++ Run these commands:
 
 ```console
 	dotnet new --install VirtoCommerce.Module.Template
@@ -22,7 +21,7 @@ Once you are done, you will get your `vc-module-MyCoolModule` solution with the 
 
 Your next step is connecting your module to a database. Namely, you need to define a model, entity, and repository classes that would make up the persistent layer.
 
-* In the *Data Project Models* directory, add a file called `Blog.cs` with the following code:
+In the *Data Project Models* directory, add a file called `Blog.cs` with the following code:
 
 ```csharp
 using System;
@@ -76,7 +75,7 @@ public class BlogEntity : AuditableEntity, IDataEntity<BlogEntity, Blog>
 }
 ```
 
-* In the *Data Project Repositories* directory, add `BlogRepository.cs` with the following code:
+In the *Data Project Repositories* directory, add `BlogRepository.cs` with the following code:
 
 ```csharp
 using System;
@@ -108,7 +107,7 @@ public class BlogRepository : DbContextRepositoryBase<MyCoolModuleDbContext>
 }
 ```
 
-* In the same *Data Project Repositories* directory, change the `MyCoolModuleDbContext.cs` file as follows:
+In the same *Data Project Repositories* directory, change the `MyCoolModuleDbContext.cs` file as follows:
 
 ```csharp
 using EntityFrameworkCore.Triggers;
@@ -140,9 +139,9 @@ public class MyCoolModuleDbContext : DbContextWithTriggers
 }
 ```
 
-* Create the initial migration file in Visual Studio:
-	* Navigate to *Tools > NuGet Package Manager > Package Manager Console*
-	* Run the following command:
+Create the initial migration file in Visual Studio:
++ Navigate to *Tools > NuGet Package Manager > Package Manager Console*
++ Run the following command:
 
 	```console
 	Add-Migration InitialMigration -Context MyCoolCompany.MyCoolModule.Data.Repositories.MyCoolModuleDbContext -Verbose -OutputDir Migrations -Project MyCoolCompany.MyCoolModule.Data -StartupProject MyCoolCompany.MyCoolModule.Data -Debug
@@ -153,7 +152,7 @@ This will bring the `InitialMigration.cs` file to the *Data Project Migrations* 
 
 Next, you need to define services and an API layer to access the model.
 
-* In the *Data Project Services* directory, add the `BlogService.cs` file with the following code:
+In the *Data Project Services* directory, add the `BlogService.cs` file with the following code:
 
 ```csharp
 using System;
@@ -255,7 +254,7 @@ public class BlogSearchCriteria : SearchCriteriaBase { }
 public class BlogSearchResult : GenericSearchResult<Blog> { }
 ```
 
-* In the *Web project Controllers/Api* directory, change `MyCoolModuleController.cs` as follows: 
+In the *Web project Controllers/Api* directory, change `MyCoolModuleController.cs` as follows: 
 
 ```csharp
 using System.Collections.Generic;
@@ -304,7 +303,7 @@ namespace MyCoolCompany.MyCoolModule.Web.Controllers.Api
 }
 ```
 
-* Register all created services by changing the **Initialize** method in `Module.cs` as follows:
+Register all created services by changing the **Initialize** method in `Module.cs` as follows:
 
 ```csharp
 	public void Initialize(IServiceCollection serviceCollection)
@@ -329,36 +328,38 @@ namespace MyCoolCompany.MyCoolModule.Web.Controllers.Api
 
 After you are done creating your module, you need then to install it from your source and debug it. This can be handled with a few steps:
 
-* Link the *Module Web* directory to the *Platform/modules* directory: 
++ Link the *Module Web* directory to the *Platform/modules* directory:
+
 ```console
 	mklink /d c:\source\vc-platform\src\VirtoCommerce.Platform.Web\modules\my-cool-module\ c:\source\vc-module-MyCoolModule\src\MyCoolCompany.MyCoolModule.Web\
 ```
 
 !!! note
-    * In the above example, `c:\source\` means the path to your repository.
+    In the above example, `c:\source\` means the path to your repository.
 
-* Restart the platform
++ Restart the platform
 
-* Open Swagger API at http://localhost:10645/docs/index.html, find `MyCoolModule extension module`, and run the POST method to verify whether everything is working properly:
++ Open Swagger API at http://localhost:10645/docs/index.html, find `MyCoolModule extension module`, and run the POST method to verify whether everything is working properly:
 
 ![Running POST method in Swagger](media/02-swagger-post.png)
 
 This will create a new blog record.
 
-* Finally, to debug your module, attach the platform process to the Visual Studio module solution by navigating to *Tools > Attach to Process > [Find the platform process] > Attach*:
++ Finally, to debug your module, attach the platform process to the Visual Studio module solution by navigating to *Tools > Attach to Process > [Find the platform process] > Attach*:
 
 ![debug](media/03-debugging.png)
 
 ## Extending VC Manager with New UI 
 
 Our module template provides scripts that will help you extend the Platform Manager UI. You can find these scripts in the *Web Scripts* directory:
-+ module.js: contains UI module registration code 
-+ resources/my-cool-module-api.js: contains the web API service
-+ blades/hello-world.js: houses the basic blade template
+
++ `module.js`: contains UI module registration code 
++ `resources/my-cool-module-api.js`: contains the web API service
++ `blades/hello-world.js`: houses the basic blade template
 
 To start extending the Platform Manager UI, do the following:
 
-* Change **blades/hello-world.js** as follows:
++ Change **blades/hello-world.js** as follows:
 
 ```js
 	angular.module('MyCoolModule')
@@ -378,8 +379,8 @@ To start extending the Platform Manager UI, do the following:
 		}]);
 ```
 
-* Change **blades/hello-world.html** as follows:
-* 
++ Change **blades/hello-world.html** as follows:
+
 ```html
 <div class="blade-content">
     <div class="blade-inner">
@@ -402,16 +403,16 @@ To start extending the Platform Manager UI, do the following:
 </div>
 ```
 
-* Build script artifacts:
-	* Navigate to the module *Web project* directory
-	* Open Windows CMD or PowerShell and run the following commands:
++ Build script artifacts:
+	+ Navigate to the module *Web project* directory
+	+ Open Windows CMD or PowerShell and run the following commands:
 
 	```console
 	npm install
 	npm run webpack:build
 	```
 
-* Verify that the platform UI was extended with your module scripts: by opening the platform UI and navigating to the `MyCoolModule` menu, you should see all created *Blogs* records.
++ Verify that the platform UI was extended with your module scripts: by opening the platform UI and navigating to the `MyCoolModule` menu, you should see all created *Blogs* records.
 
 ## Adding Authentication Options
 Our module template also provides you with out of the box default authentication permissions, which are located in the `ModuleConstants.cs` file:
@@ -454,9 +455,9 @@ To restrict access to an endpoint with a permission, add the **Authorize** attri
 
 To build your custom module for distribution, use our Virto Commerce CLI tool:
 
-* Navigate to the module root  directory
-* Open Windows CMD or PowerShell
-* Run the following commands:
++ Navigate to the module root  directory
++ Open Windows CMD or PowerShell
++ Run the following commands:
 
 ```console
 	dotnet tool install VirtoCommerce.GlobalTool -g
@@ -468,16 +469,16 @@ This is what you will get:
 ![Build tools](media/04-build-tools.png)
 
 !!! note
-    * The new module package will be created in the *Artifacts* folder. 
+    The new module package will be created in the *Artifacts* folder. 
 
 ## Distribution and Installation
 
 The module package can be uploaded and installed to the Virto Commerce Platform. To do this, you need to:
 
-* Open Virto Commerce Admin Portal and sign into it
-* Select the `Modules` menu and navigate to the `Advanced` section
-* Install or update the module from a file
-* Restart the platform
++ Open Virto Commerce Admin Portal and sign into it
++ Select the `Modules` menu and navigate to the `Advanced` section
++ Install or update the module from a file
++ Restart the platform
 
 If the module is installed properly, you should see the new module in the list of the installed modules, Admin UI, and Swagger API:
 

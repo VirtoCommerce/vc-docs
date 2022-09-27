@@ -9,6 +9,7 @@ Cache configuration is commonly provided by the _Caching_ section of the _appset
        //"CacheAbsoluteExpiration": "0:15:00"
     }
 ```
+
 Notes: 
 
 + `CacheEnabled`: Set to `false` to disable caching of application data for the entire application.

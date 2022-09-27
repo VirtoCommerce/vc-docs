@@ -9,7 +9,7 @@ A module encapsulates a portion of the application's overall functionality and t
 Modules are independent of one another but can communicate with each other in a loosely coupled fashion. Either way, it is important to keep the communication between modules to a minimum to avoid dependency issues. Overall, modular architecture makes it easier for you to develop, test, deploy, and maintain your application.
 
 !!! note
-    * When designing your modules, you have to stick to the the loosely coupled and shared-nothing infrastructure principles.
+    When designing your modules, you have to stick to the the loosely coupled and shared-nothing infrastructure principles.
 
 The following chart shows the overall design concept of the platform application:
 
@@ -17,13 +17,13 @@ The following chart shows the overall design concept of the platform application
 
 Notes to the chart:
 
--   Platform application: Works as a runtime environment that hosts the modules running within the same process and having access to shared resources and dependencies.
++ **Platform application:** Works as a runtime environment that hosts the modules running within the same process and having access to shared resources and dependencies.
     
--   Modularity engine: A software component that is responsible for module discovery, initialization, and loading into the main [ASP.NET](http://asp.net/) app process.
++ **Modularity engine:** A software component that is responsible for module discovery, initialization, and loading into the main [ASP.NET](http://asp.net/) app process.
     
--   Module: A piece of functionality that can be added into the platform app at runtime.
++ **Module:** A piece of functionality that can be added into the platform app at runtime.
     
--   Cross-cutting functionality: Common or shared logic that can be reused from any program level or component. e.g., caching, security, logging, etc.
++ **Cross-cutting functionality:** Common or shared logic that can be reused from any program level or component. e.g., caching, security, logging, etc.
 
 ## Virto Architecture: Plugins or Modules?
 
@@ -45,15 +45,15 @@ At the same time, the Virto platform cannot be considered as a pure **Modular Mo
 
 Virto uses modular architecture since it provides our solutions with various benefits, such as:
 
--   Reduced complexity: Each module only gets linked to the code it specifically needs.
++ Reduced complexity: Each module only gets linked to the code it specifically needs.
     
--   Easier to refactor: Changing a module has less or no effect on other modules.
++ Easier to refactor: Changing a module has less or no effect on other modules.
     
--   Better for teams: It is easier for developers to work on different parts of the code.
++ Better for teams: It is easier for developers to work on different parts of the code.
     
--   Enforcing boundaries: Once each component has achieved one hundred percent isolation, boundaries will be enforced between them.
++ Enforcing boundaries: Once each component has achieved one hundred percent isolation, boundaries will be enforced between them.
     
--   Scaling the development process up to multiple teams: You can have independent development and release cycles for each module implemented by different dev teams.
++ Scaling the development process up to multiple teams: You can have independent development and release cycles for each module implemented by different dev teams.
 
 ## Module Structure
 
@@ -83,17 +83,17 @@ The chart below shows all possible types of relationships between modules and th
 
 Apart from the above, there are several loosely coupled communication patterns, each with their own strong points. Typically, combinations of such patterns (see below) are used to create the resulting solution:
 
--  **Integration events:** A module may log events, while other modules can subscribe to such events and get notified when it occurs. Integration events are a lightweight manner of setting up communication between two modules; therefore, they are easily implemented.
++ **Integration events:** A module may log events, while other modules can subscribe to such events and get notified when it occurs. Integration events are a lightweight manner of setting up communication between two modules; therefore, they are easily implemented.
 
--  **Program and UI extension points:** Certain extension points each module can expose to tasks to extend or supplement the existing module functionality with a new one.
++ **Program and UI extension points:** Certain extension points each module can expose to tasks to extend or supplement the existing module functionality with a new one.
 
--  **UI widgets and navigations**
++ **UI widgets and navigations**
     
--  **Domain model overriding**
++ **Domain model overriding**
     
--  **Persistent layer extensions**
++ **Persistent layer extensions**
     
--  **Shared services:** A shared service is a class that can be accessed through a common interface. Typically, shared services are located in shared assemblies and provide system-wide services, such as authentication, logging, or configuration.
++ **Shared services:** A shared service is a class that can be accessed through a common interface. Typically, shared services are located in shared assemblies and provide system-wide services, such as authentication, logging, or configuration.
 
 You can read more about modules versioning and dependencies [here](03-versioning-and-dependencies.md).
 
@@ -103,18 +103,17 @@ Virto offers two different ways to install and update modules: **Runtime** and *
 
 The **Runtime** mode is used to update and install modules on a working system or at the first time setup. This process is based on requesting the `modules.json` file, a registry that can be either public or internal and contains information on all modules and their latest major versions (minor and patch versions history is not stored). You can set the path to this file with the `module.manifest` setting in the `appsettings.json` file (see string 7):
 
-`appsettings.json`
-```json
-1 ...
-2 "ExternalModules": {
-3         //flag indicates to display and be able to install pre-release versions of modules
-4        "IncludePrerelease": true,
-5        //url to json that contains all information about all available virto modules versions
-6        //This URL can be changed to point into a file with modules versions specific for your solution
-7        "ModulesManifestUrl": "https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json",
-8        ...
-9 }
-10 ...
+```json title="appsettings.json" linenums="1"
+...
+"ExternalModules": {
+        //flag indicates to display and be able to install pre-release versions of modules
+       "IncludePrerelease": true,
+       //url to json that contains all information about all available virto modules versions
+       //This URL can be changed to point into a file with modules versions specific for your solution
+       "ModulesManifestUrl": "https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json",
+       ...
+				   }
+...
 ```
 
 When using Virto Commerce in your production environment, you will rather have to deal with a list of your custom modules that have dependencies to the Virto modules that are not upgraded to the latest version. If this is the case, it is better to define your own version of the `modules.json` file that will contain a list of your custom and Virto modules with specific versions for your solution. Having your own `modules.json` file is basically the same as having `package.json` for NPM dependencies; the difference lies in the shared nature and the option to use it globally.
@@ -141,20 +140,20 @@ For the **module deployment process**, you can also use our  [**VirtoCommerce.Gl
 
 Now that we explained some basic things about Virto's modular architecture, feel free to check out other guides on this topic:
 
--   [Module Solution Folder Structure](link-to-module-solution-folder-structure)
++ [Module Solution Folder Structure](02-folder-structure.md)
     
--   [How to Create New Module](link-to-how-to-create-new-module)<!---how to create new module---> 
++ [How to Create New Module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md) 
 
 ## Related Sources
 
 To learn more on the concepts covered by this article, we encourage you to also check out these sources: 
 
--   [Modular Monolith by Kamil Grzybek](https://www.kamilgrzybek.com/design/modular-monolith-primer/ "https://www.kamilgrzybek.com/design/modular-monolith-primer/")
++ [Modular Monolith by Kamil Grzybek](https://www.kamilgrzybek.com/design/modular-monolith-primer/ "https://www.kamilgrzybek.com/design/modular-monolith-primer/")
     
--   [Vertical Slice Architecture by Jimmy Bogard](https://jimmybogard.com/vertical-slice-architecture/ "https://jimmybogard.com/vertical-slice-architecture/")
++ [Vertical Slice Architecture by Jimmy Bogard](https://jimmybogard.com/vertical-slice-architecture/ "https://jimmybogard.com/vertical-slice-architecture/")
     
--   [Software Architecture Patterns by Mark Richards (Microkernel Architecture)](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html "https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html")
++ [Software Architecture Patterns by Mark Richards (Microkernel Architecture)](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html "https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html")
     
--   [Bounded Context by Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html "https://martinfowler.com/bliki/BoundedContext.html")
++ [Bounded Context by Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html "https://martinfowler.com/bliki/BoundedContext.html")
     
--   [Context Mapping Pattern](https://www.infoq.com/articles/ddd-contextmapping/ "https://www.infoq.com/articles/ddd-contextmapping/")
++ [Context Mapping Pattern](https://www.infoq.com/articles/ddd-contextmapping/ "https://www.infoq.com/articles/ddd-contextmapping/")

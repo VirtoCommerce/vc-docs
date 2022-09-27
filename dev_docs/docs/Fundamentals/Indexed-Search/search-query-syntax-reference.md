@@ -1,7 +1,7 @@
 ﻿# Search Query Syntax Reference
 Virto's unified search supports a special query syntax that is processed by our proprietary **query syntax parser** and interprets it into the Virto query object model that then gets translated into specific search engine syntax by an appropriate search adapter. This makes the **query syntax** truly search engine agnostic.
 
-The table below shows how the syntax defines the grammar for the **.** `searchPhrase` expression:
+The table below shows how the syntax defines the grammar for the `searchPhrase` expression:
 
 ```
 1  searchPhrase          : WS* phrase (WS phrase)* WS*;
@@ -39,13 +39,13 @@ The table below shows how the syntax defines the grammar for the **.** `searchPh
 
 Strings transferred to the `searchPhrase` parameter can include `keyword` for full text search and `filters` to apply additional criteria to a search in any supported language, with boolean operators, precedence operators, wildcard or prefix characters for *starts with* queries, escape characters, and URL encoding characters.
 
--   A _term phrase_ is a query consisting of one or more terms, where any of the terms are considered a match, such as single words like *test* or *hello*.
++ A **term phrase** is a query consisting of one or more terms, where any of the terms are considered a match, such as single words like *test* or *hello*.
     
--   A _phrase phrase_ is an exact phrase enclosed in quotation marks (`" "`). For example, while `Red wine` (without quotes) would search for documents containing `Red` and/or `wine` anywhere in any order, `"Red wine"` (with quotes) will only match documents that contain the entire phrase in the appropriate order (lexical analysis still applies).
++ A **phrase** is an exact phrase enclosed in quotation marks (`" "`). For example, while `Red wine` (without quotes) would search for documents containing `Red` and/or `wine` anywhere in any order, `"Red wine"` (with quotes) will only match documents that contain the entire phrase in the appropriate order (lexical analysis still applies).
     
 Depending on your search client, you might need to escape the quotation marks in a phrase search. For example, in Postman, in a POST request, a phrase search on `"Red wine"` in the request body would be specified as `"\"Red wine\""`.
     
--   A _filter phrase_ is used to apply additional criteria to a search query apart from the full text search terms.
++ A **filter phrase** is used to apply additional criteria to a search query apart from the full text search terms.
 
 # Full Text Search (Term and Phrase Search)
 The parameter that performs full text search against the document index is `query`, and you need to provide a full text search phrase to make it work.
@@ -111,7 +111,7 @@ The following example search request filters products of a certain brand, Onkyo,
 `color:Black brand:Onkyo`
 
 !!! warning
-    * At the moment, only logical ***AND*** operators are supported for filter expressions.
+    At the moment, we support only logical ***AND*** operators for filter expressions.
 
 ## Wildcard Search
 You can use single and multiple character wildcard search within a single phrase or phrase terms. To perform a single character wildcard search, use a quotation mark (`?`), while for a multiple character wildcard search use an asterisk (`*`).
@@ -120,7 +120,7 @@ For instance, with this search request:
  
 `te?t`
 
-multiple character wildcard search will look for 0 or more characters.
+Multiple character wildcard search will look for 0 or more characters.
 
 Alternatively, to search for, say, *test*, *tests*, or *tester*, you can use the following expression:
 

@@ -58,7 +58,7 @@ In  the ***Top queries with no results***  section, you can find query results. 
 
 ![Searching for a product with no result](media/searching-for-duplicator.png)
 
-It is a common mistake that may to poor search relevance: you are selling movies, but they want  _films_.
+It is a common mistake that may lead to poor search relevance: you are selling movies, but they want  _films_.
 
 The Synonym feature builds  ***synonym sets***. A synonym set contains two or more queries that have similar meanings. Each synonym set can contain up to 32 words.
 

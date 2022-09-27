@@ -1,4 +1,4 @@
-## Introduction
+# Metaform
 
 Most Virto Commerce Platform's blades contain lists or data entry forms. Typically, the data entry form is made of static HTML code with Angular.js bindings. 
 

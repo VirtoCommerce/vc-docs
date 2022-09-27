@@ -21,12 +21,12 @@ The muti-select faceting search policy is enabled by default and you do not need
 
 This section is based on example of catalog entities, where the properties available for faceted search are configured at the **Store** level in Platform Manager.
 
-1.  Open **Stores**, select an appropriate store, click the **Aggregation Properties** widget, and pick catalog properties eligible for filtering in this store:
+Open **Stores**, select an appropriate store, click the **Aggregation Properties** widget, and pick catalog properties eligible for filtering in this store:
 
 ![Configuring Faceted Search](media/03-configuring-faceted-search.png)
 
 There are two facet types (aggregation types) that are supported for configuration:
 
--   Attribute facet: Displays and enables using all or selected values of the selected property for facet filters, e.g `color: Red(1), Blue(22)`, etc.
++ Attribute facet: Displays and enables using all or selected values of the selected property for facet filters, e.g `color: Red(1), Blue(22)`, etc.
     
--   Range facet: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.
++ Range facet: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.

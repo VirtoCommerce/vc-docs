@@ -14,8 +14,7 @@ Let’s see how the domain model extension works by extending the `CustomerOrder
 
 Our first step is to define a new subclass, `CustomerOrder2`, derived from the original `CustomerOrder` class.
 
-`VirtoCommerce.OrdersModule2.Web/Model/CustomerOrder2.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Model/CustomerOrder2.cs"
     public class CustomerOrder2 : CustomerOrder
     {
         public CustomerOrder2()
@@ -29,8 +28,7 @@ Our first step is to define a new subclass, `CustomerOrder2`, derived from the o
 
 Now, we need to register the newly defined `CustomerOrder2` type in `AbstractFactory<>` to tell the system that `CustomerOrder2` is now overriding (replacing) the original `CustomerOrder` class and will be used everywhere instead of it.
 
-`VirtoCommerce.OrdersModule2.Web/Module.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Module.cs"
     public class Module : IModule
     {
         public void PostInitialize(IApplicationBuilder appBuilder)
@@ -56,8 +54,7 @@ This is how the type extension magic works.
 
 We just extended the existing `CustomerOrder` class with a new `CustomerOrder2` class housing new  properties. The questions now is: how can you actually change the current DB schema and persist these new types into the database through Entity Framework (EF) Core? To solve this task, we can also use the inheritance techniques and define and derive new `Order2DbContext` from original `OrderDbContext`, along with `OrderRepository2` derived from `OrderRepository`.
 
-`VirtoCommerce.OrdersModule2.Web/Repositories/Order2DbContext.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Repositories/Order2DbContext.cs"
     //Derive custom DB context from the OrderDbContext
     public class Order2DbContext : OrderDbContext
     {
@@ -71,8 +68,7 @@ We just extended the existing `CustomerOrder` class with a new `CustomerOrder2` 
     }
 ```
 
-`VirtoCommerce.OrdersModule2.Web/Repositories/OrderRepository2.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Repositories/OrderRepository2.cs"
  public class OrderRepository2 : OrderRepository
     {
         public OrderRepository2(Order2DbContext dbContext, IUnitOfWork unitOfWork = null) : base(dbContext, unitOfWork)
@@ -90,8 +86,7 @@ Each domain type has its own representation in the database, namely dedicated `D
 
 Now let’s define the new persistence `CustomerOrder2Entity` type that will represent the persistence schema model of the new `CustomerOrder2` class:
 
-`VirtoCommerce.OrdersModule2.Web/Model/CustomerOrder2Entity.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Model/CustomerOrder2Entity.cs"
     public class CustomerOrder2Entity : CustomerOrderEntity
     {
         public override OrderOperation ToModel(OrderOperation operation)
@@ -114,8 +109,7 @@ Add-Migration InitialOrder2 -Context VirtoCommerce.OrdersModule2.Web.Repositorie
 
 Running this command will yield the `Migrations/XXXXXX_InitialOrder2.cs` file containing the original (extendable) order module DB schema along with a new one. Thus, you will have to manually edit the resulting `InitialOrder2.cs` file leaving only those DB schema changes that are relevant to your extension. 
 
-`VirtoCommerce.OrdersModule2.Web/Migrations/20200324130250_InitialOrders2.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Migrations/20200324130250_InitialOrders2.cs"
     public partial class InitialOrders2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -130,8 +124,7 @@ Running this command will yield the `Migrations/XXXXXX_InitialOrder2.cs` file co
 
 Finally, the last step is to register our derived `OrderRepository2` and `Order2DbContext` in a DI container. By registering the new `OrderRepository2` in DI, we override the base `OrderRepository` defined in `CustomerOrder.Module`:
 
-`VirtoCommerce.OrdersModule2.Web/Module.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Module.cs"
     public class Module : IModule
     {
         public void Initialize(IServiceCollection serviceCollection)
@@ -147,8 +140,7 @@ Finally, the last step is to register our derived `OrderRepository2` and `Order2
 
 It is also important to register our new persistent schema representation, `CustomerOrder2Entity`, in `AbstractTypeFactory<>` and override the base `CustomerOrderEntity` with new type:
 
-`VirtoCommerce.OrdersModule2.Web/Module.cs`
-```C#
+```cs title="VirtoCommerce.OrdersModule2.Web/Module.cs"
     public class Module : IModule
     {
         public void PostInitialize(IApplicationBuilder appBuilder)

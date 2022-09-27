@@ -7,7 +7,7 @@ In order to define a new shipping method, you need to:
 + Create a new module by following [this guide](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md))
 + Create a class derived from the `ShippingMethod` abstract class and override all abstract methods; each of them will be called on the appropriate stage of the payment processing workflow: 
 
-```C#
+```cs
   public class FixedRateShippingMethod : ShippingMethod
     {
         public FixedRateShippingMethod() : base("FixedRate")
@@ -22,7 +22,7 @@ In order to define a new shipping method, you need to:
 
 + Register your module class in the DI container. This must be done in the `PostInitialize` method. You can also associate the settings, which will be used in your method and can be changed in the management UI. 
 
-```C#
+```cs
 public void PostInitialize(IApplicationBuilder applicationBuilder)
 {
   ...

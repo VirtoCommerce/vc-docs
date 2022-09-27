@@ -62,10 +62,10 @@ Moreover, it simplifies DevOps processes and optimizes performance.
 
 With a custom module, you can extend every layer:
 
-* **Admin UI**
-* **API**
-* **Business Logic**
-* **Database**
++ **Admin UI**
++ **API**
++ **Business Logic**
++ **Database**
 
 !!! tip
     You can revert back to the original state by uninstalling the extension. 

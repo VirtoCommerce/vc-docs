@@ -3,7 +3,7 @@
 This section will guide you through building your own data importer of a specific type. All steps described below are based on a real example of importing product images from a CSV file.
 
 !!! note
-    * Currently, we only support CSV for out-of-the-box import. You can, however, create your own file reader if you want to use a different format.
+    Currently, we only support CSV for out-of-the-box import. You can, however, create your own file reader if you want to use a different format.
 
 <!--- Link to source code - TBA --->
 
@@ -31,8 +31,7 @@ Since we are going to use built-in _CsvDataReader_ to read the data from the CSV
 
 For that purpose, you need to create a new file, `CsvProductImageClassMap`, with the following content:
 
-`CsvProductImageClassMap.cs`
-```cs
+```cs title="CsvProductImageClassMap.cs"
 1 public class CsvProductImageClassMap : ClassMap<ProductImage>
 2    {
 3        public CsvProductImageClassMap()
@@ -49,8 +48,7 @@ This will map the class properties to the column headers of the CSV file. This e
 
 Each importer might provide a set of settings that can be changed by user for any certain import profile instance. At this stage, we actually define the settings that will be used by our importer in the `ProductImageImporterSettings.cs` file:
 
-`ProductImageImporterSettings.cs`
-```cs
+```cs title="ProductImageImporterSettings.cs"
 1 public class ProductImageImporterSettings
 2    {
 3        public static SettingDescriptor DebugSetting { get; } = new SettingDescriptor
@@ -75,54 +73,55 @@ Each importer might provide a set of settings that can be changed by user for an
 
 At this step, we will create a new class, naming it _CsvProductImageWriter_, with the following content:
 
-`CsvProductImageWriter.cs`
-```cs
-1 public sealed class CsvProductImageWriter : IImportDataWriter
-2    {
-3        private readonly bool _debug;
-4        public CsvProductImageWriter(ImportContext context)
-5        {
-6            _debug = Convert.ToBoolean(context.ImportProfile.Settings.FirstOrDefault(x => x.Name == ProductImageImporterSettings.DebugSetting.Name)?.Value ?? false);
-7        }
-8        public Task WriteAsync(object[] items, ImportContext context)
-9        {
-10            var index = 0;
-11            try
-12            {
-13                foreach (var image in items.OfType<ProductImage>())
-14                {
-15                    var line = context.ProgressInfo.ProcessedCount + index;
-16                    //TODO: Add code for adding image to product
-17                   if (_debug)
-18                    {
-19                        Debug.WriteLine($"Line {line}: {image.ImageUrl} is added to product #{image.ProductId}");
-20                    }
-21                    index++;
-22                }
-23            }
-24            catch (Exception ex)
-25            {
-26                var errorInfo = new ErrorInfo
-27                {
-28                    ErrorLine = context.ProgressInfo.ProcessedCount + index,
-29                    ErrorMessage = ex.Message,
-30                };
-31                context.ErrorCallback(errorInfo);
-32            }
-33            return Task.CompletedTask;
-34        }
-35
-36        public void Dispose()
-37        {
-38            //nothing to dispose
-39        }
-40    }
+```cs title="CsvProductImageWriter.cs" linenums="1"
+public sealed class CsvProductImageWriter : IImportDataWriter
+   {
+        private readonly bool _debug;
+        public CsvProductImageWriter(ImportContext context)
+        {
+            _debug = Convert.ToBoolean(context.ImportProfile.Settings.FirstOrDefault(x => x.Name == ProductImageImporterSettings.DebugSetting.Name)?.Value ?? false);
+        }
+        public Task WriteAsync(object[] items, ImportContext context)
+        {
+            var index = 0;
+            try
+            {
+                foreach (var image in items.OfType<ProductImage>())
+                {
+                    var line = context.ProgressInfo.ProcessedCount + index;
+                    //TODO: Add code for adding image to product
+                   if (_debug)
+                    {
+                        Debug.WriteLine($"Line {line}: {image.ImageUrl} is added to product #{image.ProductId}");
+                    }
+                    index++;
+                }
+            }
+            catch (Exception ex)
+            {
+                var errorInfo = new ErrorInfo
+                {
+                    ErrorLine = context.ProgressInfo.ProcessedCount + index,
+                    ErrorMessage = ex.Message,
+                };
+                context.ErrorCallback(errorInfo);
+            }
+            return Task.CompletedTask;
+        }
+
+        public void Dispose()
+        {
+            //nothing to dispose
+        }
+   }
 ```
 
 !!! note
-    * Line 6: Getting a value for setting from the profile. This setting value can be provided by user for the particular import profile instance.
-	* Line 13: Creating a loop between passed objects of the `ProductImage` type. Inside this loop, you can add a piece of code that saves the passed object within the system.
-	*Line 31: This line notifies the one who runs the importer about any possible error when writing the data being imported  through `context.ErrorCallback`.
+    Line 6: Getting a value for setting from the profile. This setting value can be provided by user for the particular import profile instance.
+	
+	Line 13: Creating a loop between passed objects of the `ProductImage` type. Inside this loop, you can add a piece of code that saves the passed object within the system.
+	
+	Line 31: This line notifies the one who runs the importer about any possible error when writing the data being imported  through `context.ErrorCallback`.
 
 ## Creating Custom Importer
 
@@ -130,84 +129,83 @@ This is the central object in the _DataImport_ extension system, as the object o
 
 In order to define new importer, we will create a new class, _CsvProductImageImporter_, with the following content:
 
-`CsvProductImageImporter.cs`
-```cs
-1 public sealed class CsvProductImageImporter : IDataImporter
-2    {
-3        private readonly IBlobStorageProvider _blobStorageProvider;
-4        public CsvProductImageImporter(IBlobStorageProvider blobStorageProvider)
-5        {
-6            _blobStorageProvider = blobStorageProvider;
-7        }
-8         /// <summary>
-9         /// Descrimiator
-10        /// </summary>
-11        public string TypeName { get; } = nameof(CsvProductImageImporter);
-12
-13        /// <summary>
-14        /// Uses to pass some extra data fror importer to outside 
-15        /// </summary>
-16        public Dictionary<string, string> Metadata { get; private set; }
-17
-18        /// <summary>
-19        /// Avail settings that importer exposes and allows to edit by users
-20        /// </summary>
-21        public SettingDescriptor[] AvailSettings { get; set; }
-22
-23        public IImportDataReader OpenReader(ImportContext context)
-24        {
-25            if (string.IsNullOrEmpty(context.ImportProfile.ImportFileUrl))
-26            {
-27                throw new OperationCanceledException($"Import file must be set");
-28            }
-29            var importStream = _blobStorageProvider.OpenRead(context.ImportProfile.ImportFileUrl);  
-30
-31            return new CsvDataReader<ProductImage, CsvProductImageClassMap>(importStream, context);
-32        }
-33
-34        public IImportDataWriter OpenWriter(ImportContext context)
-35        {
-36            return new CsvProductImageWriter(context);
-37        }
-38        public object Clone()
-39        {
-40            var result = MemberwiseClone() as CsvProductImageImporter;
-41            return result;
-42        }
-43
-44    }
+```cs title="CsvProductImageImporter.cs" linenums="1"
+public sealed class CsvProductImageImporter : IDataImporter
+   {
+       private readonly IBlobStorageProvider _blobStorageProvider;
+       public CsvProductImageImporter(IBlobStorageProvider blobStorageProvider)
+       {
+           _blobStorageProvider = blobStorageProvider;
+       }
+        /// <summary>
+        /// Descrimiator
+        /// </summary>
+        public string TypeName { get; } = nameof(CsvProductImageImporter);
+
+        /// <summary>
+        /// Uses to pass some extra data fror importer to outside 
+        /// </summary>
+        public Dictionary<string, string> Metadata { get; private set; }
+
+        /// <summary>
+        /// Avail settings that importer exposes and allows to edit by users
+        /// </summary>
+        public SettingDescriptor[] AvailSettings { get; set; }
+
+        public IImportDataReader OpenReader(ImportContext context)
+        {
+            if (string.IsNullOrEmpty(context.ImportProfile.ImportFileUrl))
+            {
+                throw new OperationCanceledException($"Import file must be set");
+            }
+            var importStream = _blobStorageProvider.OpenRead(context.ImportProfile.ImportFileUrl);  
+
+            return new CsvDataReader<ProductImage, CsvProductImageClassMap>(importStream, context);
+        }
+
+        public IImportDataWriter OpenWriter(ImportContext context)
+        {
+            return new CsvProductImageWriter(context);
+        }
+        public object Clone()
+        {
+            var result = MemberwiseClone() as CsvProductImageImporter;
+            return result;
+        }
+
+   }
 ```
 
 !!! note
-    * Lines 23 and 34: Factory methods that return both the reader and writer and get executed by the import process manager.
+	Lines 23 and 34: Factory methods that return both the reader and writer and get executed by the import process manager.
 
 ## Registering Data Importer
 
 Now that we have everything at hand to wire up our new _CsvProductImageImporter_ and run it, we add the following content to the _module.cs_ file:
 
-`module.cs`
-```cs
-1 public void Initialize(IServiceCollection serviceCollection)
-2 {
-3  serviceCollection.AddTransient<CsvProductImageImporter>();
-4 }
-5 public void PostInitialize(IApplicationBuilder appBuilder)
-6  {
-7  var importerRegistrar = appBuilder.ApplicationServices.GetService<IDataImporterRegistrar>();
-8  importerRegistrar.Register<CsvProductImageImporter>(() => appBuilder.ApplicationServices.GetService<CsvProductImageImporter>())
-9                    .WithSettings(CsvSettings.AllSettings)
-10                   .WithSettings(ProductImageImporterSettings.AllSettings);
-11 }
+```cs title:"module.cs" linenums="1"
+public void Initialize(IServiceCollection serviceCollection)
+ {
+ serviceCollection.AddTransient<CsvProductImageImporter>();
+ }
+ public void PostInitialize(IApplicationBuilder appBuilder)
+  {
+  var importerRegistrar = appBuilder.ApplicationServices.GetService<IDataImporterRegistrar>();
+  importerRegistrar.Register<CsvProductImageImporter>(() => appBuilder.ApplicationServices.GetService<CsvProductImageImporter>())
+                    .WithSettings(CsvSettings.AllSettings)
+                    .WithSettings(ProductImageImporterSettings.AllSettings);
+  }
 ```
 
 !!! note
-    * Line 3: Registering `CsvProductImageImporter` in the DI
-	* Line 8: Registering `CsvProductImageImporter` in the global importer registry, so that the new importer may become available for import profile creation and for running the import process.
+    Line 3: Registering `CsvProductImageImporter` in the DI
+	
+	Line 8: Registering `CsvProductImageImporter` in the global importer registry, so that the new importer may become available for import profile creation and for running the import process.
 
 ## Running Data Importer
 
 You can choose either of the following options to run your newly created data importer:
 
--   Directly from UI as _ImportProfile_ that has an assigned _CsvProductImageImporter_ (TBA)
-    
--   Using code (TBA)
++ Directly from UI as `ImportProfile` that has an assigned `CsvProductImageImporter`<!---add more info-->
+
++ Through code<!---add info-->

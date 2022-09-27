@@ -6,7 +6,7 @@ An important benefit of domain events is that any side effects of something happ
 ## How to Define Domain Events
 A domain event is just a simple POCO type that represents an interesting occurence in the domain:
 
-```C#
+```csharp
 public class CustomDomainEvent : DomainEvent
 {
  public Customer Customer { get; set; }
@@ -16,7 +16,7 @@ public class CustomDomainEvent : DomainEvent
 ## How to Define New Event Handler 
 Defining a new event handler works in the following way:
 
-```C#
+```csharp
 public class CutomDomainEventHandler : IEventHandler<CustomDomainEvent>
 {
   public async Task Handle(CustomDomainEventmessage)
@@ -29,7 +29,7 @@ public class CutomDomainEventHandler : IEventHandler<CustomDomainEvent>
 ## How to Register Event Handler and Subscribe to Domain Event
 To register an event handler or subscribe to a domain event, use the following code:
 
-```C#
+```csharp
 void  Initialize(IServiceCollection serviceCollection)
 {
   ...
@@ -57,7 +57,7 @@ eventPublisher.Publish(new CustomDomainEvent()));
 ## How to Override Existing Event Handler with New Derived Type
 This option may be also of use in some cases, and it is done this way:
 
-```C#
+```csharp
 //Derive a new handler from an overrided handler class
 public class CustomDomainEventHandler2 : CustomDomainEventHandler
 { .... }

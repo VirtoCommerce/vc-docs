@@ -1,5 +1,5 @@
 # Overview
-The project "Experience API" it is primarily a intermediated layer between clients and enterprise  services powered by GraphQL protocol and is tightly coupled to a specific user/touchpoint  experience with fast and reliable access, it represents an implementation of Backend for Frontend design pattern (BFF).
+The Experience API (xAPI) project is primarily an intermediated layer between clients and enterprise  services powered by GraphQL protocol, and is tightly coupled to a specific user/touchpoint  experience with fast and reliable access. It represents an implementation of the *back end for front end* (BFF) design pattern.
 
 ## Context Chart
 Below, you can see the content chart for xAPI:
@@ -7,12 +7,15 @@ Below, you can see the content chart for xAPI:
 ![image](https://user-images.githubusercontent.com/7566324/84039908-38258300-a9a2-11ea-9421-2c51462d69af.png)
 
 ## Key Concepts
+
 - Use GraphQL protocol to leverage more selective and flexible control of resulting data retrieving from API;
 - Fast and reliable indexed search thanks to integration with ES 7.x  and single data source for indexed search and data storage (<= 300ms);
 - Autonomy. Shared nothing with rest VC data infrastructure except index data source;
 - Tracing and performance requests metrics.
 
 ## Key Features
+The xAPI project provides the following major features:
+
 - [Catalog xAPI](Catalog/overview.md)
 - [Cart xAPI](Cart/overview.md)
 - [Order xAPI](Order/overview.md)
@@ -25,6 +28,7 @@ Below, you can see the content chart for xAPI:
 ### Playground IDE
 To explore the GraphQL API, you can use an interactive  [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment.
 To open playground console open  `ui/playground` in the platform manager application.
+
 ```
 http://localhost:10645/ui/playground
 ```

@@ -5,10 +5,10 @@ As Virto Commerce Platform (VC Platform) is an ASP.NET Core based application, i
 The configuration keys are hierarchic, and the most convenient way to manage them is working with the _appsettings.json_ file. The sections below, broken down by configuration nodes, show the overall file structure, provide default values, and explain what each key is about.
 
 !!! note
-    * All settings listed below are optional unless marked **Required**.
+    All settings listed below are optional unless marked **Required**.
 
 ### ConnectionStrings
- These **required** settings represent connection strings for VC Platform and modules.
+These **required** settings represent connection strings for VC Platform and modules.
 
 | Node | Default or Sample Value | Description  |
 | ------------- | ------------------------ | ------------ |
@@ -275,9 +275,9 @@ Example settings for the `Presets` node:
 ## Hierarchic Keys and Separators
 When working with keys, one should follow these rules:
 
-* Within the Configuration API, a colon separator (`:`) works on all platforms.
-* In environment variables, a colon separator may not work on all platforms. A double underscore, `__`, is supported by all platforms and is automatically converted into a colon `:`.
-* In Azure Key Vault, hierarchic keys use double hyphen `--` as a separator. The Azure Key Vault configuration provider automatically replaces `--` with a `:` when the secrets are loaded into the app configuration.
++ Within the Configuration API, a colon separator (`:`) works on all platforms.
++ In environment variables, a colon separator may not work on all platforms. A double underscore, `__`, is supported by all platforms and is automatically converted into a colon `:`.
++ In Azure Key Vault, hierarchic keys use double hyphen `--` as a separator. The Azure Key Vault configuration provider automatically replaces `--` with a `:` when the secrets are loaded into the app configuration.
 
 The images below show some examples of using the above rules:
 
@@ -285,16 +285,13 @@ The images below show some examples of using the above rules:
 
 *Configuring ElasticSearch on localhost in the `appsettings.json` file*
 
-
 ![Configuring the environment variables with Docker)](media/02-configuring-docker.png)
 
 _Configuring `VirtoCommerce ConnectionString` and other settings through **environment variables** in the **docker-compose.yml** file_
 
-
 ![Application settings in Azure](media/03-app-settings-azure.png)
 
 _Configuring `AzureSearch` and other settings trough the **Application settings** in **Azure**_
-
 
 You can find more details in [this ASP.NET configuration guide](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1#configuration-keys-and-values).
 

@@ -1,5 +1,4 @@
-## Introduction
-
+# Blade Toolbar
 Blade toolbar represents a dedicated area inside a **blade**, where one can add **controls**, which we will call, for convenience, **toolbar items**.
 
 ![Blade toolbar](media/02-blade-toobar.png)
@@ -9,7 +8,6 @@ Blade toolbar represents a dedicated area inside a **blade**, where one can add
 Toolbar items can be added to a **blade instance** directly or using Virto Commerce platform toolbar extensibility service.
 
 ## Adding Toolbar Items Directly to Blade Instance
-
 Toolbar items are usually defined and added in the Angular.js controller, which is bound to a specific blade in the UI. Adding an item to the toolbar is pretty straightforward: you just need to define the **$scope.blade.toolbarCommands** array with the items in question:
 
 ```JS
@@ -63,7 +61,6 @@ $scope.blade.toolbarCommands = [
 ```
 
 ## Adding Toolbar Items from External Code
-
 A dedicated service is used for adding toolbar items externally, without having any reference to the blade instance. The preferred place for registering a toolbar item is the **module run** block in Angular.js. What you need is reference `platformWebApp.toolbarService` as `toolbarService`, create item option, and call `register` against the service:
 
 ```JS
