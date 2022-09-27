@@ -130,6 +130,9 @@ nav:
       - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
       - Settings: pricing/managing-pricing-module-settings.md
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
+    - Notifications:
+      - Overview: notifications/overview.md
+      - Notification List: notifications/notification-list.md
       
 extra:
     social:
