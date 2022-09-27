@@ -8,10 +8,14 @@ This strategy comes with the following drawbacks:
 + You cannot update the existing UI without changing the source code.
 + Most content is produced through copying and pasting HTML code, which may lead to maintenance problems in the future, as data entry forms may potentially lose their common *look and feel*.
 
-In order to eliminate the issues above, we developed a new Angular.js component called *metaform*:
+In order to eliminate the issues above, we developed a new Angular.js component called *Metaform*:
 
 + **Metaform** is a placeholder (container) control that renders UI content based on the provided metadata.
-+ **Meta-field** is a JavaScript object defining metadata for a single logical element inside the **metaform** being rendered.
++ **Meta-field** is a JavaScript object defining metadata for a single logical element inside the *metaform* being rendered.
+
+Here is how we use Metaform out of the box in our Catalog module:
+
+![Metaform sample](media/03-metaform-sample.png)
 
 ## Using Metaform
 
@@ -43,11 +47,11 @@ You can view and download our Metaform sample code [here](https://github.com/Vir
 
 Here is how you can run meta-field registration directly in a blade:
 
-```
+```js
 blade.metaFields = [
 {
   name: 'isApproved',
-  title: "Is approved",
+  title: "Approved",
   valueType: "Boolean",
   isVisibleFn: function (blade) {
     return !blade.isNew;
@@ -60,7 +64,7 @@ blade.metaFields = [
 {
   name: 'startDate',
   isReadOnly: true,
-  title: "Data created",
+  title: "Create date",
   valueType: "DateTime"
 },
 {

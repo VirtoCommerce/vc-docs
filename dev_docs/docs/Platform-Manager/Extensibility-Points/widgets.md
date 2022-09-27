@@ -15,6 +15,10 @@ A **widget container** is a placeholder control for **widgets**, which:
 
 A **widget service** is a platform level engine for registering **widgets** and distributing them to the appropriate **widget containers**.
 
+Here is how we use widgets out of the box in our Catalog module:
+
+![Widget sample](media/04-widget-sample.png)
+
 ## Widget Container
 
 You can implement widget containes as the **vaWidgetContainer** Angular.js directive. We use [angular-gridster](http://manifestwebdesign.github.io/angular-gridster/) under the hood, which means our containers support and accept angular-gridster options. 
