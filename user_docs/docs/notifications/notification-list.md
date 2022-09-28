@@ -4,33 +4,28 @@ The notification list shows all existing notifications that are currently config
 
 ![Notification list](media/notification-list.png)
 
+!!! note
+	Email and text message are two types of notifications Virto Commerce supplies by default. Your development team may configure other types that will notify your customers through other communication channels, such as messengers.
+
 ## Notification Details
-Once you click any notification in the list, the ***Notification Details*** screen will show up:
+Once you click any notification in the list, the ***Notification Details*** screen will show up. The way it looks like depends on the notification type:
+
++ Email notofication:
 
 ![Notification details](media/notification-details.png)
 
++ Text message (SMS) notification:
+
+![Notification details for text messages](media/notification-details-sms.png)
+
+### Email Notification Details
 While the *Notification name* field is uneditable, you can provide emails for the ***CC*** and ***BCC*** fields and toggle the ***Active*** button, which activates or disables your notification.
 
-Apart from those fields, you also have two widgets to manage your notifications, which we will cover below.
+!!! note
+	Both the ***CC*** and ***BCC*** fields are provided for testing purposes only, e.g., when you want to see whether your email notification works correctly and can reach the specified addresses. In the production environment, the emails will be programmed to be sent to the relevant customer addresses, and you won't need to provide those manually.
 
-### Widgets
+### Text Notification Details
+Text message notifications, logically, do not have the ***CC*** and ***BCC*** fields; instead, they provide you with an option to add a phone number, which is again for testing purposes only.
 
-The first widget, ***Templates***, shows the list of templates for your notification:
-
-![Notification template list](media/notification-template-list.png)
-
-Templates are, basically, containers that house all content for your notification, i.e. the message you are sending to your customer. For each template, you can set language, assign specific layout<!---add link to notif layouts-->, and provide the subject line and the message itself:
-
-<!---add image-->
-
-As you can see, you can format your message with both HTML and Markdown, and then click ***Preview*** to see how it will roughly look like:
-
-<!---add image-->
-
-Finally, you can provide sample JSON data to replace the variables with specific values in the preview:
-
-<!---add image-->
-
-The ***Notification log*** widget is pretty simple and shows whether the notification was delivered successfully or failed when it was being sent:
-
-<!---add image-->
+## More Info
+Apart from the fields described above, you also have two widgets to manage your notifications, [Templates](notification-templates.md) and [Notification log](notification-log.md), which we cover in the respective sections.

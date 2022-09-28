@@ -22,6 +22,7 @@ If you would like to register a notification e.g. 'SampleEmailNotification':
     registrar.RegisterNotification<SampleEmailNotification>();
     ```
     >look at [the code](https://github.com/VirtoCommerce/vc-module-notification/blob/dev/samples/VirtoCommerce.NotificationsSampleModule.Web/Module.cs#L59)
+	
 ## How to define a template for the notification    
 1. If need to use predefined templates then 
     1. use construction:
