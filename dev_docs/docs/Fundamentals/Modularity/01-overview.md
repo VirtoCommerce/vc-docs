@@ -1,4 +1,4 @@
-﻿# Modular Architecture Overview
+# Modular Architecture Overview
 
 This article provides an overview of modular architecture, a pillar principle of any Virto Commerce solution.
 
@@ -125,13 +125,13 @@ Here are a few examples of interface commands you can use to perform various ope
 + Installing the latest version of a particular module:
 
 ```
-1vc-build install -Module VirtoCommerce.Store
+vc-build install -Module VirtoCommerce.Store
 ``` 
 
 + Updating the platform and all installed modules to the latest version:
 
 ```
-1vc-build update
+vc-build update
 ``` 
 
 For the **module deployment process**, you can also use our  [**VirtoCommerce.GlobalTool**](https://github.com/VirtoCommerce/vc-build "https://github.com/VirtoCommerce/vc-build"), which helps bundle your module solution to the deployment package; you can read more on this [here](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/build-automation.md).
