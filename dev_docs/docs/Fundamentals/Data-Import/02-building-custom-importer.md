@@ -183,7 +183,7 @@ public sealed class CsvProductImageImporter : IDataImporter
 
 Now that we have everything at hand to wire up our new _CsvProductImageImporter_ and run it, we add the following content to the _module.cs_ file:
 
-```cs title:"module.cs" linenums="1"
+```cs title="module.cs" linenums="1"
 public void Initialize(IServiceCollection serviceCollection)
  {
  serviceCollection.AddTransient<CsvProductImageImporter>();

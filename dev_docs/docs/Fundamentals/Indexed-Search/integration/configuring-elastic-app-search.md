@@ -57,7 +57,7 @@ Finally, you will also need to set up `Vue B2B Theme`:
 yarn dev
 ```
 
-- Or build the theme to get an installable artifact:
++ Or build the theme to get an installable artifact:
 
 ```bash
 yarn compress
@@ -66,35 +66,37 @@ yarn compress
 ## Setting up Elastic App Search
 
 ### Deploying Elastic App Search using Docker
-To deploy Elastic App Search using Docker, do the following: 
+To deploy Elastic App Search using Docker, complete the steps below: 
 
-+ Install `Docker` for [Windows](https://docs.docker.com/desktop/install/windows-install/) or [Linux](https://www.docker.com/get-started/)
-+ Install `Elastic App Search` Container using `Docker-Compose`:
+Install `Docker` for [Windows](https://docs.docker.com/desktop/install/windows-install/) or [Linux](https://www.docker.com/get-started/).
 
-    + Create a directory and with a file named `.env` inside:
+Install `Elastic App Search` container using `Docker-Compose` by doing the following:
 
-        ```
-        STACK_VERSION=8.3.3
-        ELASTIC_PASSWORD=!!!changeme!!!
-        KIBANA_PASSWORD=!!!changeme!!!
-        ES_PORT=9200
-        CLUSTER_NAME=es-cluster
-        LICENSE=basic
-        MEM_LIMIT=1073741824
-        KIBANA_PORT=5601
-        ENTERPRISE_SEARCH_PORT=3002
-        ENCRYPTION_KEYS=secret
-        ```
+Create a directory and with a file named `.env` inside:
 
-   + Create a strong password and place it instead of `!!!changeme!!!`
-   + Create a file named `docker-compose.yml` and place it with the `.env` file:
+```
+STACK_VERSION=8.3.3
+ELASTIC_PASSWORD=!!!changeme!!!
+KIBANA_PASSWORD=!!!changeme!!!
+ES_PORT=9200
+CLUSTER_NAME=es-cluster
+LICENSE=basic
+MEM_LIMIT=1073741824
+KIBANA_PORT=5601
+ENTERPRISE_SEARCH_PORT=3002
+ENCRYPTION_KEYS=secret
+```
+
+Create a strong password and place it instead of `!!!changeme!!!`.
+
+Create a file named `docker-compose.yml` and place it with the `.env` file:
    
-        ```
-        version: "2.2"
+``` yaml
+version: "2.2"
 
-        services:
+services:
         setup:
-            image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+			image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
             volumes:
             - certs:/usr/share/elasticsearch/config/certs
             user: "0"
@@ -256,7 +258,7 @@ To deploy Elastic App Search using Docker, do the following:
             driver: local
         kibanadata:
             driver: local
-        ```
+```
 
 !!! note
 	There are custom settings for `enterprisesearch` in the `.yml` file:
@@ -265,13 +267,13 @@ To deploy Elastic App Search using Docker, do the following:
   app_search.engine.total_fields.limit=128
   ```
   
-  + Bring up the Elastic cluster with the following command (run it from the directory where the `.yml` file is):
+Bring up the Elastic cluster with the following command (run it from the directory where the `.yml` file is):
   
-    ```
-        docker-compose up
-    ``` 
+```
+docker-compose up
+``` 
     
-+ Access Kibana at http://localhost:5601. Log in as `elastic` for username, your password being the value you provided for ELASTIC_PASSWORD in your `.env` file. Then Access Elasticsearch at http://localhost:9200.
+Access Kibana at http://localhost:5601. Log in as `elastic` for username, your password being the value you provided for ELASTIC_PASSWORD in your `.env` file. Then Access Elasticsearch at http://localhost:9200.
 
 !!!tip 
 	You can find more info on deploying Elastic App Search with Docker [here](https://www.elastic.co/guide/en/enterprise-search/8.3/docker.html).
