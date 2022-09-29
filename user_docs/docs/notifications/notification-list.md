@@ -10,7 +10,7 @@ The notification list shows all existing notifications that are currently config
 ## Notification Details
 Once you click any notification in the list, the ***Notification Details*** screen will show up. The way it looks like depends on the notification type:
 
-+ Email notofication:
++ Email notification:
 
 ![Notification details](media/notification-details.png)
 

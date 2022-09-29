@@ -12,7 +12,7 @@ Virto's *Notifications* module allows you to work with various notification scen
 The *Notifications* module has the following key features:
 
 1. [Notification list](notification-list.md)
-2. [Notification layout](notification-layout.md)
-3. [Notification activity feed](notification-activity-feed.md)
+2. [Notification layout](notification-layouts.md)
+3. [Notification activity feed](notification-log.md#notification-activity-feed)
 
 ![Notification features](media/notification-features.png)

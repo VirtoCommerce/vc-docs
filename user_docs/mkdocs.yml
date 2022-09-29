@@ -136,7 +136,6 @@ nav:
       - Notification Templates: notifications/notification-templates.md
       - Notification Log: notifications/notification-log.md
       - Notification Layouts: notifications/notification-layouts.md
-      - Notification Activity Feed: notifications/notification-activity-feed.md
       - Settings: notifications/settings.md
       
 extra:
