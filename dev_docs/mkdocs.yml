@@ -157,7 +157,10 @@ nav:
     - Dynamic Properties:
       - Overview: Fundamentals/Dynamic-Properties/overview.md
     - Security:
-      - Extending Authorizarion Policies: Fundamentals/Security/extending-authorization-policies.md
+      - Overview: Fundamentals/Security/overview.md
+      - Configuring and Managing Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
+      - Extensions:
+        - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
@@ -251,7 +254,6 @@ nav:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
-
   - Tutorials and How-tos:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
