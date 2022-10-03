@@ -126,7 +126,7 @@ To address crucial extension requirements, the platform contains various **exten
 * Domain and business logic extension:
     * [Extending domain models](../../Tutorials-and-How-tos/Tutorials/extending-domain-models.md)
     * [Extending through domain events](../Event-Driven-Development/using-domain-events.md)
-    * [Extending authorization policies](../Security/extending-authorization-policies.md)
+    * [Extending authorization policies](../Security/extensions/extending-authorization-policies.md)
     * [Dynamic properties](../Dynamic-Properties/overview.md)
 * Platform manager UI extension:
     * [Extending main menu](../../Platform-Manager/Extensibility-Points/extending-main-menu.md)
