@@ -14,19 +14,17 @@ Once you have downloaded and unpacked the files, you will need to adjust the set
 !!! warning
     * The provided user must have enough permissions to create a new database.
 
-<details><summary>ConnectionStrings Section Example</summary>
+### ConnectionStrings Section Example
 
-```json
-1 "ConnectionStrings": {
-2 "VirtoCommerce" : "Data Source={SQL Server URL};Initial Catalog={Database name};Persist Security Info=True;User ID={User name};Password={User password};MultipleActiveResultSets=True;Connect Timeout=30"
-3 },
+```json title="appsettings.json"
+"ConnectionStrings": {
+"VirtoCommerce" : "Data Source={SQL Server URL};Initial Catalog={Database name};Persist Security Info=True;User ID={User name};Password={User password};MultipleActiveResultSets=True;Connect Timeout=30"
+},
 ```
-</details>
 
 This is how the string in question may look like after you change it:
 
-`appsettings.json`
-```json
+```json title="appsettings.json"
 `"VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30",`
 ```
 
@@ -41,15 +39,17 @@ For more information, please refer to [this Microsoft article](https://docs.micr
 
 ## Launching Platform
 In order to launch the platform, run this command:
+
 ```
 dotnet VirtoCommerce.Platform.Web.dll
 ```
 
 !!! note
     *The command above will run the Platform enforcing the HTTPS schema. You can also add HTTP URLs in the `--urls` argument of the `dotnet` command for development or demo purposes (see below). For security reasons, however, you should never use it in the production mode.
-```
-dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
-```
+	
+	```
+	dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
+	```
 
 ## First Time Launch
 To launch the platform for the first time, open your browser and type http://localhost:5000 or https://localhost:5001. You may get the *Your connection is not private* error; in this case, click *Advanced* and then *Proceed to...*:
