@@ -33,7 +33,7 @@ Pragma: no-cache
 }
 ```
 
-The issued access token life time is controlled by the `Authorization:AccessTokenLifeTime` setting, the default value being one hour.<!---Add link to settings - WHAT SETTINGS!?-->
+The issued access token life time is controlled by the `Authorization:AccessTokenLifeTime` setting, the default value being one hour.<!---Add link to settings-->
 
 ## Client Credentials Flow (Recommended for Machine-to-Machine Communication)
 

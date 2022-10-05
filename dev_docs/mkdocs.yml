@@ -144,8 +144,6 @@ nav:
       - Loading Modules into App Process: Fundamentals/Modularity/04-loading-modules-into-app-process.md
       - Best Practices: Fundamentals/Modularity/05-best-practices.md
       - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
-    - Extensibility:
-      - Overview: Fundamentals/Extensibility/overview.md
     - Event Driven Development:
       - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
     - Payments:
@@ -158,8 +156,6 @@ nav:
       - Overview: Fundamentals/Dynamic-Properties/overview.md
     - Security:
       - Overview: Fundamentals/Security/overview.md
-      - Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
-      - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Authentication:
         - Issuing and Using Access Token: Fundamentals/Security/authentication/issuing-and-using-access-token.md
         - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
@@ -167,8 +163,13 @@ nav:
       - Authorization:
         - Overview: Fundamentals/Security/authorization/overview.md
         - Global Permissions: Fundamentals/Security/authorization/global-permissions.md
+        - Scope Based Permissions: Fundamentals/Security/authorization/scope-based-permissions.md
+      - Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
+      - Encryption and Signing Credentials: Fundamentals/Security/encryption-and-signing-credentials.md
       - Extensions:
         - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
+        - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
+      - Security in Depth: Fundamentals/Security/security-in-depth.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
@@ -262,6 +263,9 @@ nav:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
+  - Extensibility:
+    - Overview: Extensibility/overview.md
+    - Key Extensibility Points: Extensibility/key-extensibility-points.md
   - Tutorials and How-tos:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
