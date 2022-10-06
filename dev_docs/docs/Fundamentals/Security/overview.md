@@ -11,8 +11,8 @@ There are many aspects of security in Virto Platform and Web API. We will, howev
 
 ## Next steps
 
-+ Learn how the Virto authentication works<!---link to Authentication-->
++ Learn how the [Virto authentication](authentication/issuing-and-using-access-token.md) works
 
-+ Learn how Virto authorizes API calls <!---link to Authorization-->
++ Learn how Virto [authorizes](authorization/overview.md) API calls
 
-+ Explore how to extend authorization <!---link to Extensibility-->
++ Explore how to [extend authorization](extensions/extending-authorization-policies.md)

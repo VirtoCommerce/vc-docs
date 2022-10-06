@@ -234,13 +234,42 @@ Example settings for the `AzureBlobStorage` node:
 ```
 
 ### AzureAd
-This node is used for authentication with Azure Active Directory. Check [how to enable authentication with Azure Active Directory](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/techniques/authentication-with-azure-ad.md) for details.
+This node is used for authentication with Azure Active Directory. Check [how to enable authentication with Azure Active Directory](../Fundamentals/Security/configuring-and-managing-azure-auth.md) for details.
 
 | Node | Default or Sample Value | Description  |
 | ------------- | ------------------------ | ------------ |
 | Enabled | `false` | Enables authentication with Azure Active Directory. By default, this value is `false`, i.e. the authentication is deisabled.
 | UsePreferredUsername | `false` | If set to `true`, the system will check the `preffered_username` in case the `upn` claim returns empty.
 | Priority | 0 | Configures the priority of the Azure Active Directory login popup on the _Login_ page. The lowest value means the highest priority.
+| AuthenticationType |  |Provides the authentication scheme. Must always have the `AzureAD` value set
+| AuthenticationCaption |  | Sets a human-readable caption for the Azure AD authentication provider. Visible on the Sign In page
+| ApplicationId | 01234567-89ab-cdef-0123-456789abcdef | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through ***Azure Active Directory > App registrations > (platform app) > Application ID***
+| TenantId | abcdef01-2345-6789-abcd-ef0123456789 | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through ***Azure Active Directory > Properties > Directory ID***
+| AzureAdInstance |https://login.microsoftonline.com | URL of the Azure AD endpoint used for authentication
+| DefaultUserType | `Manager`, `Customer` | Default user type for new users created upon first sign in by Azure AD accounts
+| MetadataAddress |  | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys
+| UsePreferredUsername | `false` | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting user name
+
+!!! note
+	***Note to the `MetadataAddress` node***
+	If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information, For instance, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e).
+
+#### Examples
+Example settings for the `AzureAD` section:
+
+```json
+"AzureAd": {
+		"Enabled": true,
+		"AuthenticationType": "AzureAD",
+		"AuthenticationCaption": "Azure Active Directory",
+		"ApplicationId": "b6d8dc6a-6ddd-4497-ad55-d65f91ca7f50",
+		"TenantId": "fe353e8f-5f08-43b4-89d1-f4acec93df33",
+		"AzureAdInstance": "https://login.microsoftonline.com/",
+		"DefaultUserType": "Manager",
+		"UsePreferredUsername": false,
+		"Priority": 0
+	},
+```
 
 ### PasswordLogin
 This node enables authentication with username and password.
