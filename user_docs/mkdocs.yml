@@ -110,6 +110,11 @@ nav:
       - Product Indexing: catalog/product-indexing.md
       - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
       - Viewing Catalog Properties: catalog/view-properties.md
+    - Catalog Personalization:
+      - Overview: catalog-personalization/overview.md
+      - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
+      - User Groups: catalog-personalization/user-groups.md
+      - Settings: catalog-personalization/settings.md
     - Marketing:
       - Overview: marketing/overview.md
       - Managing Content Items: marketing/managing-content-items.md
