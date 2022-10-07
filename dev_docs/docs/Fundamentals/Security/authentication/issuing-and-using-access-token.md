@@ -89,7 +89,7 @@ grant_type=refresh_token&refresh_token={token}&scope=offline_access
 }
 ```
 
-The issued access refresh token life time is controlled by the `Authorization:RefreshTokenLifeTime` setting with the default value of 14 days.<!---Add link to settings - WHAT SETTINGS!?-->
+The issued access refresh token life time is controlled by the `Authorization:RefreshTokenLifeTime` setting with the default value of 14 days.<!---Add link to auth settings-->
 
 ### Using an access token
 
