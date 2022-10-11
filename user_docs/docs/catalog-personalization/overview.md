@@ -8,9 +8,16 @@ The core purpose of Virto's Catalog Personalization module is to customize catal
 1. Tag propagation and inheritance across catalog objects, with [***UpTree*** and ***DownTree*** policies](tag-inheritance.md) in catalog object hierarchy.
 1. Working with [***User groups***](user-groups.md) to filter products or categories in the Storefront search.
 
-## More Info
+## Next Steps
 Check out the details of how the Personalization module works:
 
 + [Tag inheritance](tag-inheritance.md)
 + [Tag propagation](tag-propagation.md)
 + [Working with user groups](user-groups.md)
+
+## In-depth Insights
+Check out our videos to learn in-depth how to work with Virto personalization options and, spercifically, user groups:
+
++ [Working with user groups for customer personalization in Virto Commerce: Part 1](https://www.youtube.com/watch?v=kujqWb0HDEc)
+
++ [Working with user groups for customer personalization in Virto Commerce: Part 2](https://www.youtube.com/watch?v=H3H8E7RbOCE)
