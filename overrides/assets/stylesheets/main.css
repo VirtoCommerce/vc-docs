@@ -38,3 +38,18 @@
 .md-grid {
     max-width: 54.6rem;
 }
+
+@media screen and (min-width: 60em) {
+    .md-nav--secondary .md-nav__title {
+        box-shadow: none !important;
+    }
+}
+
+.md-clipboard {
+    visibility: hidden;
+}
+
+pre[id^="__code"]:hover > .md-clipboard {
+    visibility: visible !important;
+    color: var(--md-default-fg-color--lightest) !important;
+}
