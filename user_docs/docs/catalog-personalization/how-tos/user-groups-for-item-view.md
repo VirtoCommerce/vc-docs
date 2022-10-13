@@ -10,7 +10,8 @@ In our example, we created a group called *VIP* and assigned various contacts to
 
 ## Assigning User Group to Category or Product
 By default, the item we will be selling to loyal customers only (Samsung smartphone in our example) is visible to everyone who visits the store:
-<!---add screen capture-->
+
+![Default product view](media/default-product-view.png)
 
 To limit the access and allow only our *VIP* customers to see it, we need to assign the *VIP* group to the product or category in question, as described [here](../user-groups.md#assigning-user-group-to-contact).
 
@@ -18,7 +19,9 @@ To limit the access and allow only our *VIP* customers to see it, we need to ass
 	Once we do so, we must rebuild the index so that our changes may come into effect.
 
 Now, if anyone who is not included into our *VIP* group visits our store, they won't see the item in question:
-<!---add screen capture-->
+
+![Hidden view](media/hidden-product-view.png)
 
 However, once Alex Starberg, our loyal customer, logs into the store, he will be immediately able to purchase it:
-<!---add screen capture-->
+
+![Targeted view](media/targeted-product-view.png)

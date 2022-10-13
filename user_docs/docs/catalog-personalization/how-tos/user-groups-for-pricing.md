@@ -9,20 +9,26 @@ In our example, we created a group called *VIP* and assigned various contacts to
 ![Adding contact to user group](media/adding-to-ug.png)
 
 ## Assigning User Group to Price List
-By default, the item we will be selling to loyal customers with a discount (Samsung smartphone in our example) has the same price for everyone who visits the store:
-<!---add screen capture-->
+By default, the items we will be selling to loyal customers with a discount (printers in our example) has the same price for everyone who visits the store:
+
+![Regular prices](media/regular-prices.jpg)
 
 To enable the special price for the VIP customers, you should do the following:
 
-1. Create a dedicated price list assignment, as described [here](../../pricing/adding-new-assignment.md)
-2. Assign the group in question to the price list through the ***User group contains...*** menu:
+Create a new price list, as described [here](../../pricing/creating-new-price-list.md), and [provide special prices](../../pricing/adding-products-to-new-price-list.md) to the products in question. In our example, we want to offer printers at $50 per item:
+
+![Adding prices](media/adding-prices.png)
+
+Create a dedicated price list assignment, as described [here](../../pricing/adding-new-assignment.md) and attach the price list you just created to it:
+
+![Price list added](media/price-list-added.png)
+
+Finally, assign the group in question through the ***User group contains...*** menu:
 
 ![Adding contact to user group](media/adding-ug-to-price-list-1.png)
 
 ![Adding contact to user group](media/adding-ug-to-price-list-2.png)
 
-Now, if anyone who is not included into our *VIP* group visits our store, they will see the regular price for the item in question:
-<!---add screen capture-->
+Now, if anyone who is not included into our *VIP* group visits our store, they will see the regular price for the item in question, as shown above. However, once Alex Starberg, our loyal customer, logs into the store, he will get his discount:
 
-However, once Alex Starberg, our loyal customer, logs into the store, he will get his discount:
-<!---add screen capture-->
+![Prices for targeted user](media/price-list-for-targeted-user.png)

@@ -12,7 +12,6 @@ The core purpose of Virto's Catalog Personalization module is to customize catal
 Check out the details of how the Personalization module works:
 
 + [Tag inheritance](tag-inheritance.md)
-+ [Tag propagation](tag-propagation.md)
 + [Working with user groups](user-groups.md)
 
 ## In-depth Insights
