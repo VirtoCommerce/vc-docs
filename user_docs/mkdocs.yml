@@ -115,6 +115,9 @@ nav:
       - Overview: catalog-personalization/overview.md
       - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
       - User Groups: catalog-personalization/user-groups.md
+      - How Tos:
+        - Showing or Hiding Catalog Items for Specific Users: catalog-personalization/how-tos/user-groups-for-item-view.md
+        - Showing Special Prices to Specific Customers: catalog-personalization/how-tos/user-groups-for-pricing.md 
       - Settings: catalog-personalization/settings.md
     - Marketing:
       - Overview: marketing/overview.md
