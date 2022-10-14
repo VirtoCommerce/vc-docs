@@ -144,6 +144,8 @@ This enables notification configuration for the `VirtoCommerce.Notifications` mo
 | DefaultSender | E.g., `"noreply@gmail.com"` | This **required** setting provides sender identification used by the current notification sending gateway.
 | Smtp || SMTP gateway configuration. Used if the `Gateway` setting has the `Smtp` value.
 | SendGrid || SendGrid gateway configuration. Used when the `Gateway` setting has the `SendGrid` value.
+|`Notifications:DiscoveryPath`|`Templates`|Relative folder path in the local file system that will be used to discover notification template files during notification rendering.
+|`Notifications:FallbackDiscoveryPath`||Alternative relative folder path in the local file system that will be used to discover alternative template files during notification rendering. Templates found through this path will be used as backup, in case the templates defined in the `Notifications:DiscoveryPath` setting are not found.
 
 #### Examples
 Example settings for the `Smtp` node:
