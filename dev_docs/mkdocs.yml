@@ -173,6 +173,12 @@ nav:
       - Security in Depth: Fundamentals/Security/security-in-depth.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
+  - Notifications:
+    - Overview: Notifications/overview.md
+    - Registering New Notification Type: Notifications/registering-new-notification-type.md
+    - Notification Templates: Notifications/notification-templates.md
+    - Extending Notification Types: Notifications/extending-notification-types.md
+    - Configuration: Notifications/configuration.md
   - Platform Manager:
     - Style Guide: Platform-Manager/style-guide.md
     - UI Scroll Directive: Platform-Manager/ui-scroll-directive.md
