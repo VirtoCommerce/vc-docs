@@ -1,4 +1,4 @@
-﻿# Appsettings.json
+# Appsettings.json
 As Virto Commerce Platform (VC Platform) is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
 
 ## Configuration Settings
@@ -204,6 +204,8 @@ Example settings for the `ElasticSearch` node:
 "User": "elastic",
 "Key": "",
 "EnableHttpCompression": ""
+  <!-- For ES 8.0 and higher must be set to True -->
+"EnableCompatibilityMode": true 
 } 
 ```
 
