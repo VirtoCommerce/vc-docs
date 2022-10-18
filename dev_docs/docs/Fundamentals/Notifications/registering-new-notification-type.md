@@ -26,26 +26,28 @@ Your next step is registering your `SampleEmailNotification` in the notification
 
 ```csharp title="module.cs" linenums="1"
 public void PostInitialize(IApplicationBuilder appBuilder)
-{
-...
-var registrar = appBuilder.ApplicationServices.GetService<INotificationRegistrar>();
-registrar.RegisterNotification<SampleEmailNotification>().WithTemplates(new EmailNotificationTemplate()
+	{
+	...
+	var registrar = appBuilder.ApplicationServices.GetService<INotificationRegistrar>();
+	registrar.RegisterNotification<SampleEmailNotification>().WithTemplates(new EmailNotificationTemplate()
             {
                 Sample = "",
                 Subject = "Hi { greeting }",
                 Body = "My cool email body
             });
-...
-}
+	...
+	}
 ```
 
 !!! note
 	***Notes to the code:***
-*Line 4:* Getting the instance of `INotificationRegistrar` type that stores all known notification types used in the system.
-*Line 5:* Registering `SampleEmailNotification` and setting a default template by running the `WithTemplates` extension method. In `Template.Subject`, we use the `{greeting}` liquid expression that will be replaced with the `Greeting` property value of the `SampleEmailNotification` class instance after rendering.
+	
+	*Line 4:* Getting the instance of `INotificationRegistrar` type that stores all known notification types used in the system.
+	
+	*Line 5:* Registering `SampleEmailNotification` and setting a default template by running the `WithTemplates` extension method. In `Template.Subject`, we use the `{greeting}` liquid expression that will be replaced with the `Greeting` property value of the `SampleEmailNotification` class instance after rendering.
 
 !!! tip
-	You can register your notification templates as files being part of your solution. <!---ET: read Notification templates TODO. GP: Why 'read'?-->
+	You can [register your notification templates as files being part of your solution](notification-templates.md).
 
 ## Notification Localization
 
@@ -96,6 +98,9 @@ public class SampleSenderService
 ```
 
 !!! note
+
 	***Notes to the code:***
+	
 	*Line 15:* Constructing a new instance of the `SampleEmailNotification` type by calling the `INotificationSearchService.GetNotificationAsync<>` extension method.
+	
 	*Lines 16 to 19:* Populating the required email notification properties, such as `From` and `To`, and setting a value for our custom `Greeting` property; this value will be eventually interpolated in the email subject, e.g. *Hi { greeting } → Hi John*.

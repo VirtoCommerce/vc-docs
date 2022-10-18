@@ -1,6 +1,6 @@
 ﻿# Notification Templates
 
-Although users can [modify or define notification templates through Platform Manager](../../../user_docs/docs/notifications/notification-templates.md), in real environments, it is more convenient to declare and store the notification templates under the source code control along with the main code of the module’s solution. This method has the following advantages:
+Although users can [modify or define notification templates through Platform Manager](https://docs.virtocommerce.org/new/user_docs/notifications/notification-templates), in real environments, it is more convenient to declare and store the notification templates under the source code control along with the main code of the module’s solution. This method has the following advantages:
 
 + You can see and control all change history
     
@@ -57,16 +57,17 @@ In addition, if you want to use a different discovery path for individual notifi
 
 ```csharp title="module.cs" linenums="1"
 public void PostInitialize(IApplicationBuilder appBuilder)
-{
-...
-var moduleTemplatesPath = Path.Combine(ModuleInfo.FullPhysicalPath, "Templates2");
-registrar.RegisterNotification<SampleEmailNotification>()
+	{
+	...
+	var moduleTemplatesPath = Path.Combine(ModuleInfo.FullPhysicalPath, "Templates2");
+	registrar.RegisterNotification<SampleEmailNotification>()
          .WithTemplatesFromPath(moduleTemplatesPath);
-...
-}
+	...
+	}
 ```
 
-Through lines 4 and 5, you tell to the notification system to discover template files in the */Templates2* relative path for a notification with the `SampleEmailNotification` type.
+!!! note
+	Through lines 4 and 5, you tell to the notification system to discover template files in the */Templates2* relative path for a notification with the `SampleEmailNotification` type.
 
 ## Inline Definition in Source Code
 
