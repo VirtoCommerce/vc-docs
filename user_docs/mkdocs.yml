@@ -70,6 +70,7 @@ markdown_extensions:
 plugins:
     - search # necessary for search to work
     - git-revision-date-localized
+    - include-markdown
  #   - autolinks
     - awesome-pages:
  #       strict: false

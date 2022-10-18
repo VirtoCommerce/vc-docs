@@ -134,7 +134,7 @@ Example settings for the `Redis` node:
 "BusRetryCount": 3
 } 
 ```
-
+<!--notifications-start-->
 ### Notifications
 This enables notification configuration for the `VirtoCommerce.Notifications` module.
 
@@ -166,7 +166,7 @@ Example settings for the `SendGrid` node:
 "ApiKey": "my-SendGrid-Api-Key"
 } 
 ```
-
+<!--notifications-end-->
 ### Search
 This configures full text search for the `VirtoCommerce.Search` module.
 
