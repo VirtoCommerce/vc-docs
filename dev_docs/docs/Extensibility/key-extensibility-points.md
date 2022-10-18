@@ -29,6 +29,6 @@ To address crucial extension requirements, the platform contains various **exten
     * [Extending authorization policies](../Fundamentals/Security/extensions/extending-authorization-policies.md)
     * [Extending ASP.NET Identity UserManager and RoleManager](../Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md)
 * Notification extensions:
-    * [Extending notification types](../Notifications/extending-notification-types.md)
+    * [Extending notification types](../Fundamentals/Notifications/extending-notification-types.md)
 
  
