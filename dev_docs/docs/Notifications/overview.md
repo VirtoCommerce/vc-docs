@@ -18,7 +18,7 @@ For data modeling purposes, the notification data model contains the following e
 !!! note
 	To edit the notifications sent from your store, you can [provide basic customization](https://docs.virtocommerce.org/new/user_docs/notifications/notification-templates) to your notification templates.
 
-**Notification message:** The rsulting text or email message scheduled or sent by a specific sender and stored in the notification feed within the system.
+**Notification message:** The resulting text or email message scheduled or sent by a specific sender and stored in the notification feed within the system.
 
 ## Next Steps
 Check out these guides to continue working with notifications:

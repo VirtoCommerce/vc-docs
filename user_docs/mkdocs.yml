@@ -146,6 +146,10 @@ nav:
       - Notification Log: notifications/notification-log.md
       - Notification Layouts: notifications/notification-layouts.md
       - Settings: notifications/settings.md
+    - Thumbnails:
+      - Overview: thumbnails/overview.md
+      - Generating Thumbnails: thumbnails/generating-thumbnails.md
+      - Settings: thumbnails/settings.md
       
 extra:
     social:
