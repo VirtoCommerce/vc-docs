@@ -278,6 +278,12 @@ nav:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
       - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
+  - Updating Virto Commerce Based Projects:
+    - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
+    - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
+    - Edge Releases: Updating-Virto-Commerce-Based-Project/edge-releases.md
+    - Installing Specific Version: Updating-Virto-Commerce-Based-Project/installing-specific-version.md
+    - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
   
 extra:
     social:

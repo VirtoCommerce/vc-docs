@@ -56,6 +56,7 @@ The ***Notification*** module performs discovery for template files through the 
 In addition, if you want to use a different discovery path for individual notification types, you can add the following code in `Module.cs`:
 
 ```csharp title="module.cs" linenums="1"
+
 public void PostInitialize(IApplicationBuilder appBuilder)
 	{
 	...
