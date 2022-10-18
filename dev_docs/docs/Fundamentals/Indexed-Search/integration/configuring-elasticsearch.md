@@ -35,9 +35,8 @@ To configure Elasticsearch as a search provider, use the following schema:
             "User": "elastic",
         <!-- A password for either elastic cloud cluster or private elastic server. Optional. -->
             "Key": "{SECRET_KEY}",
-        <!-- Compatibilty with eralier version, optional -->
-            "EnableCompatibilityMode": "true",
-            "CertificateFingerprint": "{CERTIFICATE_FINGERPRINT}"
+        <!-- Compatibilty with eralier version, optional. Must be set to True for ES 8.0 and higher -->
+            "EnableCompatibilityMode": "true"         
          }
     }
 ```
@@ -57,6 +56,7 @@ To activate Elasticsearch integration, make the following changes to the platfor
             "User": "elastic",
             "Key": "{SECRET_KEY}",
             "EnableCompatibilityMode": "true",
+            <!-- Optional -->
             "CertificateFingerprint": "{CERTIFICATE_FINGERPRINT}"
          }
     }

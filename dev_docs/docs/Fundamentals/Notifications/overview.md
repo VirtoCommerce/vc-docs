@@ -1,4 +1,4 @@
-﻿VirtoCommerce provides a customizable logic for managing and sending end user notifications via different channels, such as email or text messages. This guide will explain technical details of the notifications logic data model and outline some basic development scenarios.
+VirtoCommerce provides a customizable logic for managing and sending end user notifications via different channels, such as email or text messages. This guide will explain technical details of the notifications logic data model and outline some basic development scenarios.
 
 ## Notification Data Model
 
