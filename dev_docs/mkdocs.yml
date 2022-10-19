@@ -121,6 +121,7 @@ nav:
       - Overview: Fundamentals/Caching/01-overview.md
       - Cache Configuration: Fundamentals/Caching/02-cache-configuration.md
       - Setting Up Redis Backplane for Scaling Out: Fundamentals/Caching/03-setting-up-Redis.md
+      - Configuration: Fundamentals/Caching/configuration.md
     - Data Import:
       - Main Concept: Fundamentals/Data-Import/01-main-concept.md
       - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
@@ -139,6 +140,7 @@ nav:
         - Configuring Azure Cognitive Search: Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
         - Elastic App Search Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
         - Configuring Elastic App Search: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
+      - Configuration: Fundamentals/Indexed-Search/configuration.md
     - Modularity:
       - Overview: Fundamentals/Modularity/01-overview.md
       - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
@@ -146,6 +148,7 @@ nav:
       - Loading Modules into App Process: Fundamentals/Modularity/04-loading-modules-into-app-process.md
       - Best Practices: Fundamentals/Modularity/05-best-practices.md
       - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
+      - Configuration: Fundamentals/Modularity/configuration.md
     - Event Driven Development:
       - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
     - Payments:
@@ -178,6 +181,7 @@ nav:
         - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
         - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
       - Security in Depth: Fundamentals/Security/security-in-depth.md
+      - Configuration: Fundamentals/Security/configuration.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md 
   - Platform Manager:

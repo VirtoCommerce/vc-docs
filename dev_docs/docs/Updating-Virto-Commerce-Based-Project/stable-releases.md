@@ -1,4 +1,4 @@
-﻿
+
 ## Installing Stable Release
 To install a stable release:
 
@@ -18,13 +18,13 @@ To install a stable release:
 + In the command prompt, navigate to your `vc-platform` folder:
 
 ```console
-1cd C:\vc-platform-stable
+cd C:\vc-platform-stable
 ```
 
 + Install the latest stable release for the platform and modules:
 
 ```console
-1vc-build install
+vc-build install
 ```
 
 ## Updating to Latest Stable Release
@@ -42,11 +42,11 @@ To update to the latest stable release:
 + In the command prompt, navigate to your `vc-platform` folder:
 
 ```console
-1cd C:\vc-platform-stable
+cd C:\vc-platform-stable
 ```
 
 Install the latest stable release for both platform and modules from the `vc-package.json` file:
 
 ```console
-1vc-build install
+vc-build install
 ```
