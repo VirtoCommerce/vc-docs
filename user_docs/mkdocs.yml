@@ -150,6 +150,7 @@ nav:
     - Thumbnails:
       - Overview: thumbnails/overview.md
       - Generating Thumbnails: thumbnails/generating-thumbnails.md
+      - Managing Thumbnail Options: thumbnails/thumbnail-options.md
       - Settings: thumbnails/settings.md
       
 extra:

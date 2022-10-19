@@ -20,10 +20,13 @@ As you can see, apart from the size in pixels, you can also use the predefined s
 
 !!! note
 	You can use any number of resolution options according to your needs. In the example above, for instance, you will get thumbnails for all selected images both with 64x64 and 128x128 size. Please note, however, that selecting many resolution options may lead to slower performance.
+	
+!!! tip
+	For more details on the thumbnail generation options, please refer to [this dedicated guide](thumbnail-options.md). 
 
 Once you are done, hit ***Save*** in the top toolbar. Your job will appear in the list on the Thumbnails module main screen:
 
-![Job in the list](media/job-in-the-list.png) 
+![Job in the list](media/job-in-the-list.png)
 
 ## Running Thumbnail Generation Job
 
