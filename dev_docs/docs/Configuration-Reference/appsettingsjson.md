@@ -27,7 +27,6 @@ This configuration node defines VC Platform system settings.
 | LicenseFilePath |      `"App_Data/VirtoCommerce.lic"`                            | VC Platform license file location
 | LocalUploadFolderPath | `"App_Data/Uploads"`                                     | The *Uploads* folder location
 | SampleDataUrl | E.g., `"http://virtocommerce.azureedge.net/sample-data"` | URL to download sample data upon the initial Platform setup
-| DiscoveryPath | `"./Modules"` | Relative or absolute folder location where the platform will discover the installed modules from
 | AllowInsecureHttp | `false` | Manages how the OpenID Connect server (ASOS) handles the incoming requests: whether those arriving to non-HTTPS endpoints should be rejected or not. By default, this property is set to false to help mitigate the man-in-the-middle attacks.
 | Hangfire || Background processing library (Hangfire) configuration.<br><br> `JobStorageType`: Current job storage. Supported values: _Memory_, _SqlServer_.<br> `UseHangfireServer`: Enables or disables Hangfire for this app instance.<br> `AutomaticRetryCount`: Maximum number of automatic retry attempts. <br>`SqlServerStorageOptions`: Hangfire.SqlServer.SqlServerStorageOptions. Check [Hangfire's SQL Server Configuration](https://docs.hangfire.io/en/latest/configuration/using-sql-server.html#configuration) documentation for details.
 | Swagger || Allows you to disable Swagger initialization upon platform startup to prevent access to Swagger UI and documents.
@@ -94,27 +93,20 @@ Example settings for the `AzureBlobStorage` node:
 "CdnUrl": ""
 }  
 ```
-
-### IdentityOptions
- There are options to configure the ASP.NET Core Identity system. You might want to check out [this guide](https://github.com/dotnet/AspNetCore.Docs/blob/master/aspnetcore/security/authentication/identity-configuration.md#configure-aspnet-core-identity) for details.
-
-| Node | Description  |
-| ------------- | ------------ |
-| Password.PasswordHistory | The number of recent user passwords to check during password validation. An old password cannot be reused for this number of cycles.<br>If the value is set to `0` or not defined, the password history will be disabled.
-| Password.RepeatedResetPasswordTimeLimit | The time limit after which a user can request password reset.
-| User.MaxPasswordAge | The time span defining the maximum user password age until it expires. The user is forced to change the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled.
-| User.RemindPasswordExpiryInDays | Number of days to start showing password expiry warning in the Platform Manager UI. Used only when password expiration is enabled.
-
-### ExternalModules
-This node configures external sources, from which modules are being installed.
+<!--modularity-start-->
+### Modularity
+This node configures external sources, from which modules are being installed and discovered.
 
 | Node | Default or Sample Value | Description  |
 | ------------- | ------------------------ | ------------ |
 | IncludePrerelease | `false` | Shows module versions marked as *Prerelease* if value is `true`.
+| DiscoveryPath | `"./Modules"` | Relative or absolute folder location where the platform will discover the installed modules from
 | ModulesManifestUrl | E.g., `"https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json"` | URL to the *.json* file that contains module manifests.
 | AuthorizationToken | | The authorization token to access `ModulesManifestUrl`, added to the `Authorization` header, if specified.
 | AutoInstallModuleBundles | `["commerce"]` | Group(s) of modules to install automatically during the initial Platform setup. If you do not need to install anything here, provide an empty array.
+<!--modularity-end-->
 
+<!--caching-start-->
 ### Caching
 This node manages caching configuration.
 
@@ -134,6 +126,7 @@ Example settings for the `Redis` node:
 "BusRetryCount": 3
 } 
 ```
+<!--caching-end-->
 <!--notifications-start-->
 ### Notifications
 This enables notification configuration for the `VirtoCommerce.Notifications` module.
@@ -167,6 +160,7 @@ Example settings for the `SendGrid` node:
 } 
 ```
 <!--notifications-end-->
+<!--search-start-->
 ### Search
 This configures full text search for the `VirtoCommerce.Search` module.
 
@@ -208,6 +202,7 @@ Example settings for the `ElasticSearch` node:
 "EnableCompatibilityMode": true 
 } 
 ```
+<!--search-end-->
 
 ### Content
 This **required** setting is used for static content configuration (including themes) for the `VirtoCommerce.Content` module.
@@ -236,6 +231,19 @@ Example settings for the `AzureBlobStorage` node:
 "CdnUrl": ""
 }
 ```
+
+
+<!--security-start-->
+### IdentityOptions
+ There are options to configure the ASP.NET Core Identity system. You might want to check out [this guide](https://github.com/dotnet/AspNetCore.Docs/blob/master/aspnetcore/security/authentication/identity-configuration.md#configure-aspnet-core-identity) for details.
+
+| Node | Description  |
+| ------------- | ------------ |
+| Password.PasswordHistory | The number of recent user passwords to check during password validation. An old password cannot be reused for this number of cycles.<br>If the value is set to `0` or not defined, the password history will be disabled.
+| Password.RepeatedResetPasswordTimeLimit | The time limit after which a user can request password reset.
+| User.MaxPasswordAge | The time span defining the maximum user password age until it expires. The user is forced to change the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled.
+| User.RemindPasswordExpiryInDays | Number of days to start showing password expiry warning in the Platform Manager UI. Used only when password expiration is enabled.
+
 
 ### AzureAd
 This node is used for authentication with Azure Active Directory. Check [how to enable authentication with Azure Active Directory](../Fundamentals/Security/configuring-and-managing-azure-auth.md) for details.
@@ -305,6 +313,7 @@ Example settings for the `Presets` node:
 }
 ] 
 ```
+<!--security-end-->
 
 ## Hierarchic Keys and Separators
 When working with keys, one should follow these rules:

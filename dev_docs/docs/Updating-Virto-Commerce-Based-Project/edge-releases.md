@@ -1,4 +1,4 @@
-﻿## Installing Latest Edge Release
+## Installing Latest Edge Release
 
 You can use Virto Commerce CLI (***vc-build***) to automate all installation and update processes.
 
@@ -12,21 +12,21 @@ To install the latest edge release:
 + In the command prompt, navigate to your vc-platform folder:
 
 ```console
-1cd C:\vc-platform-edge
+cd C:\vc-platform-edge
 ```
 
 + Install the latest edge release for the platform and modules:
 
 ```console
-1vc-build install
+vc-build install
 ```
 
 ## Updating to Latest Edge Release
 
 In the command line go to the vc-platform folder
 
-`1cd C:\vc-platform-edge`
+`cd C:\vc-platform-edge`
 
 Install latest edge release for platform and modules from commerce bundle
 
-`1vc-build update`
+`vc-build update`

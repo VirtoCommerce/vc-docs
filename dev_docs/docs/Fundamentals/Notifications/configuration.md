@@ -3,6 +3,6 @@ This section explains the basic configuration for the Notifications module.
 
 {%
    include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--notifications-start-->"
-   end="<!--notifications-end-->"
+   start="<!--security-start-->"
+   end="<!--security-end-->"
 %}
