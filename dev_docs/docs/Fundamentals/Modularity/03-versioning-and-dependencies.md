@@ -1,4 +1,4 @@
-﻿# Module Versioning and Dependencies
+# Module Versioning and Dependencies
 
 Virto modules and platform use the [SemVer](https://semver.org/ "https://semver.org/") pattern. Short for Semantic Versioning, SemVer, in its latest incarnation (v2.0.0), describes the versioning scheme as **MAJOR.MINOR.PATCH**, where:
 
@@ -54,3 +54,8 @@ As all module assemblies are copied into the *probing* folder before being loade
     The assembly with the highest version or the one that was modified last, wins.
 
 This fact may lead to an unexpected update of third party dependencies for other modules and the platform application itself when resolving an assembly at runtime. You should always consider this fact when updating dependencies for your custom modules.
+
+
+## Additional Resources
+
++ [VirtoCommerce release strategy overview](../../Updating-Virto-Commerce-Based-Project/release-strategy-overview.md)

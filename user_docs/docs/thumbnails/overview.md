@@ -1,4 +1,4 @@
-﻿
+
 # Thumbnails Module
 
 Most likely, your online store will need images. Moreover, you will need not only full-size product images (which are stored in Virto's Assets module<!---link-->), but also smaller images, or thumbnails, to fit product lists, search results, previews, catalog grid view, etc.
@@ -15,12 +15,10 @@ To download the latest Marketing module release, click  [here](https://github.co
 ## Key Features
 Virto's Thumbnails module contains the following key features:
 
-+ Creating image thumbnails and using them for various purposes
-+ Running thumbnail generation jobs against assets in the background mode
-+ Support for all image formats
++ [Generating image thumbnails in background](generating-thumbnails.md)
++ [Various resize options and support for popular image formats](thumbnail-options.md)
++ [Direct access to resulting thumbnails](using-thumbnails.md)
 
 ## More Info
-Learn more about the Thumbnails module here:
 
-+ [Generating thumbnails](generating-thumbnails.md)
 + [Thumbnails module settings](settings.md)

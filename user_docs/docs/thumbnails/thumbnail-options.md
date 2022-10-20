@@ -23,7 +23,9 @@ After you click the ***Add*** button on the ***Thumbnail settings*** screen, you
 After giving your new pattern a name, which is self explanatory, you will need to provide the thumbnail file name suffix and the resize method.
 
 ### Thumbnail Suffix
-Thumbnail file name suffix is a suffix added to the thumbnail image URL as opposed to its 'parent'. For instance, if the image URL is `../catalog/1428965138000_1133723.jpg`, the thumbnail URL will become `../catalog/1428965138000_1133723_YourSuffix.jpg`. In our example, we use the `xs` for 'extra small', so the URL will be `../catalog/1428965138000_1133723_xs.jpg`.
+Thumbnail file name suffix is a suffix added to the thumbnail image URL as opposed to its 'parent'.
+For instance, if the image URL is `../catalog/1428965138000_1133723.jpg`, the thumbnail URL will become `../catalog/1428965138000_1133723_YourSuffix.jpg`.
+In our example, we use the `xs` for 'extra small', so the URL will be `../catalog/1428965138000_1133723_xs.jpg`.
 
 !!! tip
 	Your suffix should be meaningful so that everyone who works with assets and thumbnails (and especially yourself) could easily identify the purpose of the thumbnail by its file name or URL. Do not make the suffixes too long, however, as they may then make your image URLs even longer.
