@@ -140,6 +140,12 @@ nav:
       - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
       - Settings: pricing/managing-pricing-module-settings.md
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
+    - Contracts:
+      - Overview: contracts/overview.md
+      - Terminology: contracts/terminology.md
+      - Creating and Terminating Contracts: contracts/creating-and-terminating-contracts.md
+      - Managing Contract Prices: contracts/managing-contract-prices.md
+      - Managing Contract Customers: contracts/managing-contract-customers.md
     - Notifications:
       - Overview: notifications/overview.md
       - Notification List: notifications/notification-list.md
