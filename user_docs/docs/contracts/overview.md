@@ -14,20 +14,6 @@ To simplify user experience for those who manage contracts, there is an option t
 
 You can also use the same contract for multiple organizations, which is especially valuable for companies that sell goods or services to businesses with complicated organizational structure.
 
-Once you create a contract, the system will automatically:
-
-1.  Create a new user group, which is equal to the unique contract code
-
-2.  Assign the created user group to the companies that are included into the contract
-
-4.  Create a new price list assignment that will link the default price list with the new user group (equal to contract code)
-
-5.  Create a new price list with all contract custom price updates registered
-
-6.  Create a new price list assignment that will link the new price list with the new user group (equal to contract code).
-    
-All these changes may get recorded to the appropriate entities (companies, price lists, and price lists assignments), if required, while the user who manages contracts can easily work with the module without being aware of all these details.
-
 
 ## Related Components
 
@@ -42,3 +28,38 @@ Virto's Contract module contains the following key features:
 + [Managing contracts](creating-and-terminating-contracts.md)
 + [Managing contract prices](managing-contract-prices.md)
 + [Managing contract customers](managing-contract-customers.md)
+
+
+## Basic scenario  
+
+When account manager wants to assign specific contract prices to this B2B customer (organization) he should do the following: 
+
++ Create a contact 
+
++ Add a default price list to the contract 
+
++ Update the default price list: add new prices or update the existent ones 
+
++ Add B2B customer organization to the contract 
+
++ Save the contract 
+
++ Since the contract is saved, prices become applicable for all organization members (users) on the storefront. 
+
+
+## Understanding how contracts work
+
+Since the contract is build on top of existing virto capabilities such (pricing, personalization and customer management) is it worth to explain how it works
+in terms of exists virto objects.  Once you create a contract, the system will automatically:
+
+1.  Create a new user group, which is equal to the unique contract code
+
+2.  Assign the created user group to the companies that are included into the contract
+
+4.  Create a new price list assignment that will link the default price list with the new user group (equal to contract code)
+
+5.  Create a new price list with all contract custom price updates registered
+
+6.  Create a new price list assignment that will link the new price list with the new user group (equal to contract code).
+    
+All these changes may get recorded to the appropriate entities (companies, price lists, and price lists assignments), if required, while the user who manages contracts can easily work with the module without being aware of all these details.
