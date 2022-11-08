@@ -1,21 +1,72 @@
 ﻿# Module Solution Folder Structure
-<!---TODO: Add chart with folder structure + notes --->
 
-Typically, any Virto module solution is organized in the following way:
+Typically, any Virto module solution is organized as shown below:
 
-+ **Module.Core**: This project contains all abstractions and domain model definitions and serves as an API to access all module functionality and enable interaction between other modules. This project has a class library project type and can be packaged and distributed as a **NuGet** package.
+```
+├── Module.Core
+	├── Events
+	├── Services
+	├── Model
+	└── ModuleConstants.cs
+├── Module.Data
+	├── Caching
+	├── Handlers
+	├── Migrations
+	├── Model
+	├── Repositories
+	└── Services
+├── Content
+	├── Scripts
+	├── dist
+	├── Controllers
+	├── Localizations
+	├── Module.cs
+	└── module.manifest
+```
 
-+   **Events**: A folder containing all domain and integration events the module in question can trigger within the application.
-    
-+ **Services**: Contains all abstractions and interfaces of all services that represent a programming API to the entire functionality of the module domain.
-    
-+ **Model**: Contains domain model classes.
-    
-+ **ModuleConstants.cs**: Houses all module constants, such as permissions, settings, and string literals.   
+The sections below break down the core folder structure and clarify which folder or file stands for what.
 
-+ **Module.Data**: This project is comprised of business layers and may include repositories and domain service implementations. It is also of the class library type and can be packaged and distributed as a **NuGet** package and used as a reference from other modules.
+## Module.Core
+This project contains all abstractions and domain model definitions and serves as an API to access all module functionality and enable interaction between other modules. This project has a class library project type and can be packaged and distributed as a **NuGet** package.
 
-+ **Caching**: Contains strongly typed cache regions used in the module<!---add link to how Virto cache works!--->.
+The `Module.Core` project consists of the followng folders and files:
+
+```
+Module.Core
+├── Events
+├── Services
+├── Model
+└── ModuleConstants.cs
+```
+
+***Notes:***
+
++ **Events**: A folder containing all domain and integration events the module in question can trigger within the application.
+
++ **Services:** Contains all abstractions and interfaces of all services that represent a programming API to the entire functionality of the module domain.
+
++ **Model:** Contains domain model classes.
+
++ **ModuleConstants.cs:** Houses all module constants, such as permissions, settings, and string literals.
+
+## Module.Data
+This project is comprised of business layers and may include repositories and domain service implementations. It is also of the class library type and can be packaged and distributed as a **NuGet** package and used as a reference from other modules.
+
+The `Module.Data` project consists of the followng folders:
+
+```
+Module.Data
+├── Caching
+├── Handlers
+├── Migrations
+├── Model
+├── Repositories
+└── Services
+```
+
+***Notes:***
+
++ **Caching**: Contains strongly typed cache regions used in the module.
     
 + **Handlers**: Houses domain and integration event handlers.
     
@@ -27,7 +78,24 @@ Typically, any Virto module solution is organized in the following way:
     
 + **Services**: Contains the domain CRUD services and other business logic implementations.
 
-+ [**Module.Web**](http://module.web/): Represents an application level of module domain. This project uses all services and domain types in order to implement business scenarios. Initialization, public API, and user interface are also implemented on this level. This project cannot be used directly from other modules and is not distributed as a **NuGet** package.
+## Module.Web
+
+The [**Module.Web**](http://module.web/) project represents an application level of module domain. This project uses all services and domain types in order to implement business scenarios. Initialization, public API, and user interface are also implemented on this level. This project cannot be used directly from other modules and is not distributed as a **NuGet** package.
+
+The `Module.Core` project consists of the followng folders and files:
+
+```
+Module.Web
+├── Content
+├── Scripts
+├── dist
+├── Controllers
+├── Localizations
+├── Module.cs
+└── module.manifest
+```
+
+***Notes:***
 
 + **Content**: Has **CSS** styles for the module user interface.
     
