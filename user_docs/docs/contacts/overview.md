@@ -1,5 +1,4 @@
-﻿
-# Contacts Module Overview
+﻿# Contacts Module Overview
 The Contacts module allows you to manage various profiles within Virto Commerce, which includes companies, vendors, and individual customers.
 
 ## Related Components

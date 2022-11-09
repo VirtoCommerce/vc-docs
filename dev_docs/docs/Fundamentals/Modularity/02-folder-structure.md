@@ -4,24 +4,29 @@ Typically, any Virto module solution is organized as shown below:
 
 ```
 ├── Module.Core
-	├── Events
-	├── Services
-	├── Model
-	└── ModuleConstants.cs
+|
+|	├── Events
+|	├── Services
+|	├── Model
+|	└── ModuleConstants.cs
+|
 ├── Module.Data
-	├── Caching
-	├── Handlers
-	├── Migrations
-	├── Model
-	├── Repositories
-	└── Services
+|
+|	├── Caching
+|	├── Handlers
+|	├── Migrations
+|	├── Model
+|	├── Repositories
+|	└── Services
+|
 ├── Content
-	├── Scripts
-	├── dist
-	├── Controllers
-	├── Localizations
-	├── Module.cs
-	└── module.manifest
+|
+|	├── Scripts
+|	├── dist
+|	├── Controllers
+|	├── Localizations
+|	├── Module.cs
+|	└── module.manifest
 ```
 
 The sections below break down the core folder structure and clarify which folder or file stands for what.
@@ -32,11 +37,12 @@ This project contains all abstractions and domain model definitions and serves a
 The `Module.Core` project consists of the followng folders and files:
 
 ```
-Module.Core
-├── Events
-├── Services
-├── Model
-└── ModuleConstants.cs
+├── Module.Core
+|
+|	├── Events
+|	├── Services
+|	├── Model
+|	└── ModuleConstants.cs
 ```
 
 ***Notes:***
@@ -55,13 +61,14 @@ This project is comprised of business layers and may include repositories and do
 The `Module.Data` project consists of the followng folders:
 
 ```
-Module.Data
-├── Caching
-├── Handlers
-├── Migrations
-├── Model
-├── Repositories
-└── Services
+├── Module.Data
+|
+|	├── Caching
+|	├── Handlers
+|	├── Migrations
+|	├── Model
+|	├── Repositories
+|	└── Services
 ```
 
 ***Notes:***
@@ -85,14 +92,15 @@ The [**Module.Web**](http://module.web/) project represents an application level
 The `Module.Core` project consists of the followng folders and files:
 
 ```
-Module.Web
-├── Content
-├── Scripts
-├── dist
-├── Controllers
-├── Localizations
-├── Module.cs
-└── module.manifest
+├── Module.Web
+|
+|	├── Content
+|	├── Scripts
+|	├── dist
+|	├── Controllers
+|	├── Localizations
+|	├── Module.cs
+|	└── module.manifest
 ```
 
 ***Notes:***
