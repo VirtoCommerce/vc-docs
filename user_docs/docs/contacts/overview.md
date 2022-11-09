@@ -10,7 +10,7 @@ To download the latest Marketing module release, click [here](https://github.com
 ## Key Concepts
 The chart below shows the Contacts module's core entities and how they are related to each other:
 
-<!---CHART--->
+![Contacts module entity chart](media/entity-chart.png)
 
 ### Terms and Definitions:
 
@@ -33,5 +33,5 @@ The Contacts module has the following features:
 ## More on Contacts Module
 Learn how to manage:
 
-+ Customer contact details<!---LINK--->
-+ Contact module settings<!---LINK--->
++ [Contact profiles](managing-contacts.md)
++ [Contact module settings](settings.md)

@@ -142,6 +142,8 @@ nav:
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
     - Contacts:
       - Overview: contacts/overview.md
+      - Managing Contacts: contacts/managing-contacts.md
+      - Settings: contacts/settings.md
     - Contracts:
       - Overview: contracts/overview.md
       - Terminology: contracts/terminology.md
