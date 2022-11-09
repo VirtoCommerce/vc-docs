@@ -140,6 +140,8 @@ nav:
       - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
       - Settings: pricing/managing-pricing-module-settings.md
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
+    - Contacts:
+      - Overview: contacts/overview.md
     - Contracts:
       - Overview: contracts/overview.md
       - Terminology: contracts/terminology.md
