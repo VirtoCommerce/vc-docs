@@ -26,7 +26,9 @@ Typically, any Virto module solution is organized as shown below:
 |	└── Services
 |	|	└──...
 |
-├── Content
+├── Module.Web
+|	├── Content
+|	|	└──...
 |	├── Scripts
 |	|	└──...
 |	├── dist
