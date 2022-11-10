@@ -4,14 +4,12 @@ Typically, any Virto module solution is organized as shown below:
 
 ```
 ├── Module.Core
-|
 |	├── Events
 |	├── Services
 |	├── Model
 |	└── ModuleConstants.cs
 |
 ├── Module.Data
-|
 |	├── Caching
 |	├── Handlers
 |	├── Migrations
@@ -20,7 +18,6 @@ Typically, any Virto module solution is organized as shown below:
 |	└── Services
 |
 ├── Content
-|
 |	├── Scripts
 |	├── dist
 |	├── Controllers
