@@ -142,7 +142,8 @@ nav:
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
     - Contacts:
       - Overview: contacts/overview.md
-      - Managing Contacts: contacts/managing-contacts.md
+      - Managing Contact Entities: contacts/managing-contacts.md
+      - Search: contacts/search.md
       - Settings: contacts/settings.md
     - Contracts:
       - Overview: contracts/overview.md

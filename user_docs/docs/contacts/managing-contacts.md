@@ -1,4 +1,4 @@
-﻿# Managing Contacts
+﻿# Managing Contacts Module Entities
 Managing contacts includes adding, editing, and deleting various contact entities (companies, employees, customers, and vendors) using the Contacts module.
 
 ## Adding Contacts

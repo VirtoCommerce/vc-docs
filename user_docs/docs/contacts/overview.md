@@ -33,4 +33,5 @@ The Contacts module has the following features:
 Learn how to manage:
 
 + [Contact profiles](managing-contacts.md)
++ [Searching and filtering](search.md)
 + [Contact module settings](settings.md)
