@@ -275,6 +275,12 @@ nav:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
+  - Storefront Development:
+    - Overview: storefront-development/overview.md
+    - Getting Started:
+      - Quick Start (Windows): storefront-development/getting-started/quickstart-on-windows.md
+      - ASP.NET Core Storefront Runtime:
+        - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
   - Extensibility:
     - Overview: Extensibility/overview.md
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
