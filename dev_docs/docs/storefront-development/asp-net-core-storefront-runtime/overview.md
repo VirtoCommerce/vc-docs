@@ -2,13 +2,13 @@
 
 ## Key Features
 
-- ***Multistore and multi-theme***: You can run multiple stores or websites based on `vc-storefront`. Each store might have its own theme with a specific layout still being based on the same catalog and customer data. As a result, you can host multiple websites with custom themes in a single application.<!---TODO: link to themes-->
+- ***Multistore and multi-theme***: You can run multiple stores or websites based on `vc-storefront`. Each store might have its own theme with a specific layout still being based on the same catalog and customer data. As a result, you can host multiple websites with [custom themes](../../under-construction/under-construction.md)<!---link to themes--> in a single application.
     
-- ***Native integration with VC Platform API*** to use data based on the platform API resources on the theme pages. <!---TODO: Link to WorkContext and dynamic data sources-->
+- ***Native integration with VC Platform API*** to use data based on the [platform API resources on the theme pages](../../under-construction/under-construction.md)<!---Link to WorkContext and dynamic data sources-->.
     
-- ***Customer sessions and all security aspects*** that are specific to web ecommerce projects, such as anonymous checkout, single sign on with popular social media, 2F authentication, and more.<!---TODO: link to Security aspects-->
+- ***Customer sessions and all security aspects*** that are specific to web ecommerce projects, such as [anonymous checkout, single sign on with popular social media, 2F authentication, and more](../../under-construction/under-construction.md)<!---link to Security aspects-->.
     
-- ***Out-of-the-box Server Side Rendering and SEO capabilities***: `vc-storefront` generates server-side rendered pages to improve SEO results and provides rich capabilities to handle slug routes, automatic site map generations, and redirect rules, along with caching for data and even page improvements for boosting the overall SEO rating for websites running on `vc-storefront`. <!---TODO: link to SEO details-->
+- ***Out-of-the-box Server Side Rendering and SEO capabilities***: `vc-storefront` generates server-side rendered pages to improve SEO results and provides rich capabilities to handle slug routes, automatic site map generations, and redirect rules, along with caching for data and even page improvements for [boosting the overall SEO rating for websites running on `vc-storefront`](../../under-construction/under-construction.md)<!---link to SEO details-->.
     
 
 ## Technologies and Frameworks Used

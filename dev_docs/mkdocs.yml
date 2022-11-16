@@ -279,8 +279,8 @@ nav:
     - Overview: storefront-development/overview.md
     - Getting Started:
       - Quick Start (Windows): storefront-development/getting-started/quickstart-on-windows.md
-      - ASP.NET Core Storefront Runtime:
-        - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
+    - ASP.NET Core Storefront Runtime:
+      - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
   - Extensibility:
     - Overview: Extensibility/overview.md
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
