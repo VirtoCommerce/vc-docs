@@ -142,6 +142,7 @@ nav:
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
     - Store:
       - Overview: store/overview.md
+      - Adding New Store: store/adding-new-store.md
     - Contacts:
       - Overview: contacts/overview.md
       - Managing Contact Entities: contacts/managing-contacts.md
