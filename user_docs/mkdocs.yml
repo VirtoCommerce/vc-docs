@@ -143,6 +143,8 @@ nav:
     - Store:
       - Overview: store/overview.md
       - Adding New Store: store/adding-new-store.md
+      - Configuring Your Store: store/configuring-store.md
+      - Settings: store/settings.md
     - Contacts:
       - Overview: contacts/overview.md
       - Managing Contact Entities: contacts/managing-contacts.md
