@@ -284,6 +284,7 @@ nav:
   - Extensibility:
     - Overview: Extensibility/overview.md
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
+    - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
   - Tutorials and How-tos:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md

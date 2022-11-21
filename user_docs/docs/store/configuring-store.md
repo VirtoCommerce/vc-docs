@@ -1,5 +1,4 @@
-﻿
-# Configuring Your Store
+﻿# Configuring Your Store
 Once you have [created your new store](adding-new-store.md) and selected it in the store list, you will see your store screen with all settings and properties available:
 
 ![Store settings screen](media/all-store-settings.png)
@@ -40,9 +39,15 @@ You can have multiple SEO sets for your store pages. Each set includes meta titl
 ![SEO settings](media/SEO.png)
 
 ### Advanced Properties
-Here, you can provide store description and specify location settings. You can also provide email contacts for your store (both regular and admin):
+Here, you can provide store description and specify location settings. You can also provide email contacts for your store:
 
 ![Advanced properties](media/advanced-properties.png)
+
+!!! tip
+	For regular email, provide the email address which common notifications will be coming from (e.g., purchase confirmation, order details, etc.). Use admin email for system notifications, such as password reset.
+
+### Dynamic Properties
+This widget enables configuring dynamic properties.
 
 ### Settings
 This widget houses all specific settings you can configure for your store. Each setting has a tip which tells you what it is exactly about.
@@ -50,18 +55,30 @@ This widget houses all specific settings you can configure for your store. Each 
 The Store module allows you to manage general settings, as well as SEO, Product Review, Sitemap, Google Analytics settings, and more.
 
 !!! tip
-	You can also access some of those settings through the global [Store Settings](settings.md) menu. Those settings will apply to all stores you have. In the meantime, the settings you configure through the widget will apply to the particular store only.
+	For more information on store settings, refer to this [dedicated guide](settings.md).
 
 ### Notification and Notification Log
 These widgets help you configure notifications for your store and view the notification log. These properties are borrowed from Virto's Notifications module, which we describe in detail [here](https://docs.virtocommerce.org/new/user_docs/notifications/overview/).
+<!---Aggregation properties: TBA-->
 
 ### Shipping and Payment Methods
-You can configure and activate various shipping and payment methods for each individual store. As a user, you cannot add a new method through the Store module UI, so you will need assistance from your development team for that.
+You can configure and activate various shipping and payment methods for each individual store. As a user, you cannot add a new method through the Store module UI, so you will need assistance from your development team for that.<!---Add link to shipping and payment methods-->
 
 ### Tax Providers
-Similarly to the previous one, this widget allows you to configure and activate various tax providers for each individual store. Again, adding a new provider requires development effort.
+Similarly to the previous one, this widget allows you to configure and activate various tax providers for each individual store. Again, adding a new provider requires development effort.<!---Add link to tax providers-->
+
+### Fulfillment Centers
+You can specify default and additional fulfillment centers that will work with your store, as well as return fulfillment centers. Clicking the appropriate pencil icon will open the ***Fulfillment Centers*** screen, where you will be able to select the centers you need or add a new one:<!---Add link to fulfillment centers-->
+
+![Fulfillment centers screen](media/fulfillment-center-screen.png)
+
+### Theme
+This widget will take you to the ***Content*** section, where you can specify the theme(s) for your store. You can read more about themes and visual content [here](link-to-themes).
+
+### Sitemaps
+Finally, this widget allows you to select and add sitemaps for your store. This is done through our dedicated ***Sitemaps*** module, which we cover in detail [here](link-to-sitemaps).
 
 ## Conclusion
 Once you are done with settings, hit the ***Save*** button. Alternatively, you can click ***Open in browser*** to see how your store will look like for customers:
 
-![Top tolbar buttons](media/save-and-open-in-browser.png)
+![Top toolbar buttons](media/save-and-open-in-browser.png)

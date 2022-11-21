@@ -1,21 +1,12 @@
 ﻿# Store Module Settings
-After navigating to ***More > Settings > Store***, you will access the global settings screen for the store module:
+As a user, you can specify store settings both through the [Settings widget](configuring-store.md#settings) (which will then be specific for a particular store) and by navigating to ***More > Settings > Store***, which are global settings working for all your stores.
 
-![Settings screen](media/global-settings.png)
+You can find the detailed list of store settings below. Global settings will be highlighted as such.
 
-!!! note
-	The settings described in this section are global and apply to all stores you have. To manage settings of a specific store, use the [appropriate widget](configuring-store.md#settings) while configuring it.
+## General Settings
+General settings allow you to configure the following:
 
-The global settings consist of just three sections:
+![General settings](media/general-settings.png)
 
-+ ***General***, where you can configure general options:
-
-![General settings](media/general-settings-global.png)
-
-+ ***Product Reviews***, which allows you to enable or disable product reviews<!---link to prod reviews--> for your stores:
-
-![Product reviews settings](media/product-reviews-settings.png)
-
-+ ***SEO***, which has only one setting (others are configured through the [appropriate widget](configuring-store.md#SEO):
-
-![SEO settings](media/seo-settings-global.png)
++ **Enable tax calculation:** You can enable or disable tax calculation for your store.
++ **Allow anonymous users to visit the store:** 
