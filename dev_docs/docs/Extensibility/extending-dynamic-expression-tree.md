@@ -8,7 +8,7 @@ This article will show you how to extend the existing promotion expression tree 
 
 + New block element:
 
-![New block element](10-new-block-element.png)
+![New block element](media/10-new-block-element.png)
 
 To view or download our sample code, click [here](https://github.com/VirtoCommerce/vc-module-marketing/tree/dev/samples/VirtoCommerce.MarketingSampleModule.Web).
 
