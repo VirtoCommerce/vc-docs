@@ -145,9 +145,9 @@ nav:
       - Adding New Store: store/adding-new-store.md
       - Configuring Your Store: store/configuring-store.md
       - Settings: store/settings.md
-    - Contacts:
+    - Companies and Contacts:
       - Overview: contacts/overview.md
-      - Managing Contact Entities: contacts/managing-contacts.md
+      - Managing Companies and Contacts: contacts/managing-contacts.md
       - Search: contacts/search.md
       - Settings: contacts/settings.md
     - Contracts:
