@@ -8,9 +8,9 @@ Not only is it a real-world solution that implements practical business use case
 
 The **xStorefront** framework comes with two out-of-the-box projects: [**Vue.js Starter Theme**](https://github.com/VirtoCommerce/vc-theme-b2b-vue)  and [**ASP.NET Core Storefront Runtime**](https://github.com/VirtoCommerce/vc-storefront).
 
--   [**vc-storefront**](https://github.com/VirtoCommerce/vc-theme-b2b-vue) **(**[**ASP.NET**](http://ASP.NET) **Core Storefront runtime)** is a functionally sufficient and production-ready theme that is an ultimate starting point for all new themes to build custom storefront solutions upon. It includes all best practices we deem appropriate for most projects and showcases the possible features when building a theme. It can be customized via direct theme code modification and contains a set of specific commerce components that help accelerate your development process. This theme is styled using the [Tailwind CSS](https://tailwindcss.com/) utility library.
+-   [**vc-storefront**](https://github.com/VirtoCommerce/vc-storefront) **(**[**ASP.NET**](http://ASP.NET) **Core Storefront runtime)** is a functionally sufficient and production-ready theme that is an ultimate starting point for all new themes to build custom storefront solutions upon. It includes all best practices we deem appropriate for most projects and showcases the possible features when building a theme. It can be customized via direct theme code modification and contains a set of specific commerce components that help accelerate your development process. This theme is styled using the [Tailwind CSS](https://tailwindcss.com/) utility library.
     
--   [**vc-theme-b2b-vue**](https://github.com/VirtoCommerce/vc-storefront) **(Vue.js starter theme)** represents the host environment (runtime) for storefront themes and provides SSR (Server Side Rendering) along with other options, such as dynamic routing and security concerns, e.g., user session, authentication, and authorization. It is designed as a project not intended to be customized and can be used as a binary application.
+-   [**vc-theme-b2b-vue**](https://github.com/VirtoCommerce/vc-theme-b2b-vue) **(Vue.js starter theme)** represents the host environment (runtime) for storefront themes and provides SSR (Server Side Rendering) along with other options, such as dynamic routing and security concerns, e.g., user session, authentication, and authorization. It is designed as a project not intended to be customized and can be used as a binary application.
 
 The **xStorefront** framework provides you with the following advantages:
 
@@ -28,4 +28,4 @@ The **xStorefront** framework provides you with the following advantages:
     
 
 ## Live demo
-You can see how a typical **xStorefront**-based online store looks like and works [here](https://vcst-demo-storefront.paas.govirto.com/).
+You can see how a typical **xStorefront**-based online store looks like and works [here](https://virtostart-demo-store.govirto.com/).
