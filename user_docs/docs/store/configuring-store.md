@@ -59,16 +59,18 @@ The Store module allows you to manage general settings, as well as SEO, Product 
 
 ### Notification and Notification Log
 These widgets help you configure notifications for your store and view the notification log. These properties are borrowed from Virto's Notifications module, which we describe in detail [here](https://docs.virtocommerce.org/new/user_docs/notifications/overview/).
-<!---Aggregation properties: TBA-->
+
+### Aggregation properties
+This widget allows you to configure aggregation properties for [faceted search](https://docs.virtocommerce.org/new/dev_docs/Fundamentals/Indexed-Search/search/faceted-search/).
 
 ### Shipping and Payment Methods
-You can configure and activate various shipping and payment methods for each individual store. As a user, you cannot add a new method through the Store module UI, so you will need assistance from your development team for that.<!---Add link to shipping and payment methods-->
+You can configure and activate various [shipping](link-to-shipping-methods) and [payment methods](link-to-payment-methods) for each individual store. As a user, you cannot add a new method through the Store module UI, so you will need assistance from your development team for that.
 
 ### Tax Providers
-Similarly to the previous one, this widget allows you to configure and activate various tax providers for each individual store. Again, adding a new provider requires development effort.<!---Add link to tax providers-->
+Similarly to the previous one, this widget allows you to configure and activate various [tax providers](link-to-tax-providers) for each individual store. Again, adding a new provider requires development effort.
 
 ### Fulfillment Centers
-You can specify default and additional fulfillment centers that will work with your store, as well as return fulfillment centers. Clicking the appropriate pencil icon will open the ***Fulfillment Centers*** screen, where you will be able to select the centers you need or add a new one:<!---Add link to fulfillment centers-->
+You can specify default and additional [fulfillment centers](link-to-fulfillment-centers) that will work with your store, as well as return fulfillment centers. Clicking the appropriate pencil icon will open the ***Fulfillment Centers*** screen, where you will be able to select the centers you need or add a new one:
 
 ![Fulfillment centers screen](media/fulfillment-center-screen.png)
 
