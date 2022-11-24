@@ -281,6 +281,8 @@ nav:
       - Quick Start (Windows): storefront-development/getting-started/quickstart-on-windows.md
     - ASP.NET Core Storefront Runtime:
       - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
+    - Vue.js Starter Theme:
+      - Overview: storefront-development/vue-js-starter-theme/overview.md
   - Extensibility:
     - Overview: Extensibility/overview.md
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
