@@ -45,7 +45,7 @@ These **global** settings enable the [Product Review](link-to-product-reviews) m
 ![Product review settings](media/product-reviews-settings.png)
 
 ## Sitemaps Settings
-These settings allow you to configure various options for the [Sitemaps](links-to-sitemaps) module applicable to your store:
+These settings allow you to configure various options for the [Sitemaps](../sitemaps/overview.md) module applicable to your store:
 
 ![Sitemaps settings](media/sitemaps-setting.png)
 
