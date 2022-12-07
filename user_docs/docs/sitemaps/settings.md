@@ -5,6 +5,10 @@ The Virto Commerce Sitemaps module has multiple settings, each of them influenci
 ## General Settings
 
 + Record limit (default value:  **10000**): Sets the maximum number of URL records per sitemap file.
+
+!!! note
+	A sitemap file must not include more than 10,000 URLs and must not be larger than 50MB (52,428,800 bytes). In case the number of records exceeds the maximum, the file will be split into multiple ones, e.g., the  `products.xml`  sitemap file with 15,000 records will be transformed into  `products--1.xml`  (10,000 records) and  `products--2.xml`  (5,000 records).
+
 + Filename separator (default value:  **--**): Sets the sitemap location separator in case the sitemap item number exceeds the  _Record limit_  parameter value (i.e.:  `products.xml`  ->  `products--1.xml`  and  `products--2.xml`).
 + Search bunch size (default value:  **1000**): This parameter is used in the long-term search processes (i.e. catalog search) to split search requests, and sets the search request bunch size parameter.
 + Export/Import description (default value:  **Export/Import sitemaps with all sitemap items**): Sets the description for the platform export/import process.
