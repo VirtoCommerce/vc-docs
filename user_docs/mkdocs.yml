@@ -140,6 +140,11 @@ nav:
       - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
       - Settings: pricing/managing-pricing-module-settings.md
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
+    - Inventory:
+      - Overview: inventory/overview.md
+      - Managing Inventory: inventory/managing-inventory.md
+      - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
+      - Settings: inventory/settings.md
     - Store:
       - Overview: store/overview.md
       - Adding New Store: store/adding-new-store.md
@@ -163,6 +168,10 @@ nav:
       - Notification Log: notifications/notification-log.md
       - Notification Layouts: notifications/notification-layouts.md
       - Settings: notifications/settings.md
+    - Sitemaps:
+      - Overview: sitemaps/overview.md
+      - Configuring sitemaps: sitemaps/configuring-sitemaps.md
+      - Settings: sitemaps/settings.md
     - Thumbnails:
       - Overview: thumbnails/overview.md
       - Generating Thumbnails: thumbnails/generating-thumbnails.md

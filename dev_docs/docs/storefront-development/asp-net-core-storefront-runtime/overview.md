@@ -22,3 +22,6 @@
 ## How to Work with `vc-storefront`
 
 As a developer, you will use Storefront as a precompiled application to host custom themes. Since the custom themes are the primary point of customization, you will rarely have to make any changes to the `vc-storefront` solution.
+
+### Useful Links
+Click [here](https://github.com/VirtoCommerce/vc-storefront) to browse Virto Commerce's Storefront project on hour GitHub repository.
