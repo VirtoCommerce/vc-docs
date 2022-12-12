@@ -8,7 +8,7 @@ Web crawlers usually discover pages from links within the website, as well as fr
 + Generating sitemap files on-the-fly by an API call, or manually
 + Creating sitemaps based on catalog items, vendor items, custom or static content items
 + Scheduling and configuring a recurring job to generate sitemap files
-+ Downloading sitemap zip packages
++ Downloading sitemap ZIP packages with XML files
 
 ## Related Components
 
