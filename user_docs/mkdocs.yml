@@ -173,6 +173,7 @@ nav:
       - Managing User Accounts: security/managing-users.md
       - Roles and Permissions: security/roles-and-permissions.md
       - API Key: security/api-key.md
+      - Login on Behalf Feature: security/login-on-behalf.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
       - Configuring sitemaps: sitemaps/configuring-sitemaps.md
