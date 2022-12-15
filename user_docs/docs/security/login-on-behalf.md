@@ -4,7 +4,7 @@ If you are an administrator or a support engineer maintaining a Virto Commerce b
 !!! note
 	All actions performed through the Login on Behalf feature are strictly logged to avoid possible claims from customers.
 
-## How it works
+## How It Works
 
 The ***Login on Behalf*** feature helps you increase the performance of those who work with your web store. It also contributes significantly to customer satisfaction and brand loyalty while decreasing the number of abandoned carts.
 
