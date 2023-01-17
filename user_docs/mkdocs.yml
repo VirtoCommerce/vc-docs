@@ -68,7 +68,8 @@ markdown_extensions:
      - pymdownx.snippets
 
 plugins:
-    - search # necessary for search to work
+    - search:
+         lang: en
     - git-revision-date-localized
     - include-markdown
  #   - autolinks
