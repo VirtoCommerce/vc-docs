@@ -13,7 +13,7 @@ At the next stage, all specific search services are materialized in all found do
 !!! note
 	In Virto search, we use an additional roundtrip call to the data source to get the actual entity data for the resulting documents the index engine returns.
 
-Restated, query execution has four stages:
+Restated, query execution has three stages:
 
 1. Query parsing
 
