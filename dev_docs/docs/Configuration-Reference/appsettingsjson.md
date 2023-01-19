@@ -244,6 +244,20 @@ Example settings for the `AzureBlobStorage` node:
 | User.MaxPasswordAge | The time span defining the maximum user password age until it expires. The user is forced to change the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled.
 | User.RemindPasswordExpiryInDays | Number of days to start showing password expiry warning in the Platform Manager UI. Used only when password expiration is enabled.
 
+### DataProtection
+ There are options to configure lifetimes for security tokens that are issued by platform like password reset 
+| Node | Description  |
+| ------------- | ------------ |
+| DataProtection.TokenLifespan |  The amount of time a generated token remains valid.
+#### Examples
+Example settings for the `DataProtection` section:
+
+```json
+"DataProtection": {
+		"TokenLifespan": "24:00:00",		
+	},
+```
+
 
 ### AzureAd
 This node is used for authentication with Azure Active Directory. Check [how to enable authentication with Azure Active Directory](../Fundamentals/Security/configuring-and-managing-azure-auth.md) for details.
