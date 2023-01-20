@@ -246,9 +246,9 @@ Example settings for the `AzureBlobStorage` node:
 
 ### DataProtection
  There are options to configure lifetimes for security tokens that are issued by platform like password reset 
-| Node | Description  |
-| ------------- | ------------ |
-| DataProtection.TokenLifespan |  The amount of time a generated token remains valid.
+| Node | Default value | Description  |
+| ------------- | ----------|------------ |
+| DataProtection.TokenLifespan | "1.00:00:00" - Defaults to 1 day | The amount of time a generated token remains valid.
 #### Examples
 Example settings for the `DataProtection` section:
 
