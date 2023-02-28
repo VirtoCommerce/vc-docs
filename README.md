@@ -22,7 +22,6 @@ pip install mkdocs
 ```
 
 ## Preview User docs
-1. Run:
 ```
 cd user_docs
 mkdocs serve
