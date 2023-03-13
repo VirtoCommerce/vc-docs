@@ -273,8 +273,14 @@ nav:
           - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/10-initialize-payment.md
           - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/11-authorize-payment.md
           - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/12-add-or-update-order-payment.md
-        - Objects:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
+    - Marketing:
+        - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+        - Objects: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/objects.md 
+        - Mutations: GraphQL-Storefront-API-Reference-xAPI/Marketing/mutations/mutations-list.md
+        - Queries: 
+          - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/overview.md
+          - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
   - Storefront Development:
