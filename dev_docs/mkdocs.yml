@@ -180,6 +180,7 @@ nav:
       - Extensions:
         - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
         - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
+        - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
       - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Configuration: Fundamentals/Security/configuration.md
   - Configuration Reference:
