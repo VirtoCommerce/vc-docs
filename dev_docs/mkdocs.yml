@@ -208,6 +208,7 @@ nav:
         - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/05-property.md
         - Fulfullment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/06-fulfillment-center.md
         - Fulfullment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/07-fulfillment-centers.md
+        - Child categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/08-child-categories.md
       - Objects:
         - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/01-ProductType.md
         - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/02-CategoryType.md
