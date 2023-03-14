@@ -38,6 +38,8 @@ evaluateDynamicContent(
 
 ## Example
 
+Code:
+
 ```json
 {
   evaluateDynamicContent(
@@ -60,3 +62,24 @@ evaluateDynamicContent(
   }
 }
 ```
+Return:
+
+```json
+{
+  "data": {
+    "evaluateDynamicContent": {
+      "items": [
+        {
+          "id": "1165b9ab-205f-488f-a9c7-64187bb85702",
+          "name": "B2B slider",
+          "contentType": "slider",
+          "dynamicProperties": [
+            {
+              "name": "Content type",
+              "value": "slider"            }
+          ]
+        }
+      ],
+      "totalCount": 1    }
+  }
+}
