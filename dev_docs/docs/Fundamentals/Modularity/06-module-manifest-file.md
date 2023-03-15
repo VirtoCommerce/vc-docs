@@ -7,7 +7,7 @@ The **module.manifest** file is always included into a module package to:
 * Provide information to the platform runtime when a module is loading.
 * Build the module package. 
 
-## Manifest File Settings
+## File Settings
 
 The **module.manifest** file can be configured using a number of required and optional settings.
 
@@ -112,3 +112,29 @@ The **module.manifest** file can be configured using a number of required and op
   </module>
   ```
 </details>  
+
+## Adding a New App
+
+To add a new web, add the app section into the **module.manifest** file:
+
+```xml
+...
+<apps>
+    <app id="reports">
+        <title>Reports</title>
+        <description>Power BI Commerce Reports</description>
+        <iconUrl>/apps/reports/power_bi_logo.svg</iconUrl>
+        <permission>PowerBiReports:access</permission>
+    </app>
+</apps>
+...
+```
+
+You can use the following attributes:
+
+* `id`: A unique identifier for the app, which distinguishes it from other apps in the system.
+* `title`: The name or title of the app that is displayed to the users.
+* `description`: A short description of the app that gives users an overview of what the app does and its purpose.
+* `iconUrl`: The URL or path to the app's icon or logo used to identify the app in the system.
+* `permission`: The permissions or access rights required to use the app, which are used to control who can access the app and its features.
+*  `contentPath`: The default path to the app's content  specifying where the app's files are stored. If the ContentPath is set to `[VcModuleWeb]/Content/[Id]`, the app's content is stored in the **Content** folder of the **VcModuleWeb** module, with the app's Id appended to the end of the path.

@@ -14,8 +14,3 @@ VirtoCommerce Vue3 Frontend for specialized back-office applications is created 
 * **Vue 3** as a background for our solution.
 * **webpack** for easy build and deployment based on `vue-cli-service`.
 * **storybook** for interactive documentation.
-
-## Demo
-
-* [Demo Manager](https://demo-manager.govirto.com/)
-* [UI Kit Storybook](https://ui-kit.govirto.com/)

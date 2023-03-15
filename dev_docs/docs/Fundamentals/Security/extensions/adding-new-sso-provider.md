@@ -19,7 +19,7 @@ To create credentials for your project:
 1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the platform using the https scheme. Otherwise, the SSO won't work.
 
     !!! Note
-        * If your platform is running on a local machine, put [https://localhost:10645/signin-google](https://localhost:10645/signin-google)
+        * If your platform is running on a local machine, put `https://localhost:10645/signin-google`.
 
 1.  Click **CREATE**.
 1.   Save **Client ID** and **Client Secret** to use them in the module.

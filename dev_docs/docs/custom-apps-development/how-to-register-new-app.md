@@ -8,7 +8,7 @@ Using the Reports application as an example, let's look at the application insta
         * [Virto Commerce CLI (VC-BUILD) 3.12+](https://github.com/VirtoCommerce/vc-build)
         * [Virto Shell VueJS Framework](https://github.com/VirtoCommerce/vc-shell)
 
-1. Add web app in the [module.manifest](../Fundamentals/Modularity/06-module-manifest-file.md):
+1. Add a web app in the [module.manifest](../Fundamentals/Modularity/06-module-manifest-file.md):
 
     1. Add the app section in the **module.manifest**.
 

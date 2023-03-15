@@ -1,8 +1,1 @@
-New Mutations:
-
-submitQuoteRequest
-cancelQuoteRequest
-changeQuoteComment
-changeQuoteItemQuantity
-removeQuoteItem
-updateQuoteAddresses
+# In progress
