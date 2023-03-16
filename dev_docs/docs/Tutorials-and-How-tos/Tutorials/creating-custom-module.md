@@ -10,7 +10,7 @@ To run your own Virto Commerce module, you can create it from scratch. However, 
 
 ```console
 	dotnet new --install VirtoCommerce.Module.Template
-	dotnet new vc-module --ModuleName MyCoolModule --Author "Jon Doe" --CompanyName MyCoolCompany --PlatformVersion "3.200.0" --PlatformNuGetPackageVersion "3.200.0"
+    dotnet new vc-module --ModuleName MyCoolModule --Author "Jon Doe" --CompanyName MyCoolCompany
 ```
 
 Once you are done, you will get your `vc-module-MyCoolModule` solution with the following structure, which you will be able to see as you open your newly created module with Visual Studio:
