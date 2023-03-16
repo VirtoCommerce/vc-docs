@@ -10,5 +10,6 @@ Here are some basic topics we cover here:
 + [Platform Manager](Platform-Manager/style-guide.md)
 + [xAPI](GraphQL-Storefront-API-Reference-xAPI/index.md)
 + [Tutorials](Tutorials-and-How-tos/Tutorials/creating-custom-module.md)
++ [Custom Apps Development](custom-apps-development/overview.md)
 
 <!---If you want to get back to our home page, click [here](link-to-home-page).-->

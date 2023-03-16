@@ -174,6 +174,9 @@ nav:
       - Roles and Permissions: security/roles-and-permissions.md
       - API Key: security/api-key.md
       - Login on Behalf Feature: security/login-on-behalf.md
+    - Google Analytics:
+      - Overview: google-analytics/overview.md
+      - Integration: google-analytics/integration.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
       - Configuring sitemaps: sitemaps/configuring-sitemaps.md

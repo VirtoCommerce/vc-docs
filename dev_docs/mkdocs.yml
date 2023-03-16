@@ -180,6 +180,7 @@ nav:
       - Extensions:
         - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
         - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
+        - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
       - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Configuration: Fundamentals/Security/configuration.md
   - Configuration Reference:
@@ -207,6 +208,7 @@ nav:
         - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/05-property.md
         - Fulfullment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/06-fulfillment-center.md
         - Fulfullment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/07-fulfillment-centers.md
+        - Child categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/08-child-categories.md
       - Objects:
         - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/01-ProductType.md
         - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/02-CategoryType.md
@@ -271,8 +273,14 @@ nav:
           - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/10-initialize-payment.md
           - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/11-authorize-payment.md
           - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/12-add-or-update-order-payment.md
-        - Objects:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
+    - Marketing:
+        - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+        - Objects: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/objects.md 
+        - Mutations: GraphQL-Storefront-API-Reference-xAPI/Marketing/mutations/mutations-list.md
+        - Queries: 
+          - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/overview.md
+          - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
   - Storefront Development:
@@ -297,6 +305,14 @@ nav:
     - Edge Releases: Updating-Virto-Commerce-Based-Project/edge-releases.md
     - Installing Specific Version: Updating-Virto-Commerce-Based-Project/installing-specific-version.md
     - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
+  - Custom Apps Development:
+    - Overview: custom-apps-development/overview.md
+    - How to Register a New App: custom-apps-development/how-to-register-new-app.md
+    - VC Shell:
+      - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
+      - Getting Started: custom-apps-development/vc-shell/getting-started.md
+    
+        
   
 extra:
     social:
