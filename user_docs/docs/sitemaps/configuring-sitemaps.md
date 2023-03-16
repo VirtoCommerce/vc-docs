@@ -45,3 +45,24 @@ Adding sitemap items includes the following steps:
 + The selected item will be added to the  _Sitemap_  screen:
 
 ![Items added](media/items-added.png)
+
+## Downloading Sitemaps
+You can download a ZIP package containing your sitemap(s) in order to view what it includes. To do so, after creating your sitemap, click the ***Download sitemaps*** button on the top toolbar:
+
+![Downloading sitemaps](media/downloading-sitemaps.png)
+
+The ZIP package you just downloaded contains the `sitemap.xml` file with the sitemap locations (see the example above) and the sitemap item XML files:
+
+![Sitemap ZIP package folder structure](media/sitemap-folders.png)
+
+Each sitemap item file includes the respective URL with a specific language culture:
+
+```xml
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vcplatform-storefront.qa.govirto.com/en-US/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
+```

@@ -63,3 +63,31 @@ query {
   }
 }
 ```
+
+## Example 3
+
+Requesting stock quantities for a specific product across different fulfilment centres to track inventory levels, manage product availability, and make informed decisions about shipping and fulfilment:
+```js
+{
+  products (storeId:"B2B-store")
+  {
+    items{
+      name
+      availabilityData
+      {
+        isActive
+        inventories
+        {
+          fulfillmentCenterId
+          fulfillmentCenterName
+          inStockQuantity
+        }
+      }
+    }
+  }
+}
+```
+Result: 
+
+![Result](../../media/request-stock-quantity.png)
+
