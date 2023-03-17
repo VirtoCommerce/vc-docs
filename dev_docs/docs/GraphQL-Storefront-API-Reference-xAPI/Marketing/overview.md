@@ -7,7 +7,7 @@ One of its key features is its ability to evaluate dynamic content based on cond
 For more information, see the following sections:
 
 + [Queries](queries/overview.md)
-+ [Mutations](mutations/multations-list.md)
++ [Mutations](mutations/mutations-list.md)
 + [Objects](objects/objects.md)
 
 ## How to use

@@ -22,6 +22,6 @@ query {
 ```
 ## Result 
 
-![Request Child Categories](/../../media/request-child-categories.png)
+![Request Child Categories](../../media/request-child-categories.png)
 
 
