@@ -12,29 +12,20 @@ This query allows you to evaluate dynamic content based on:
 ## Definition
 
 ```
-evaluateDynamicContent(
-  storeId: String, 
-  placeName: String, 
-  categoryId: String, 
-  productId: String, 
-  cultureName: String, 
-  toDate: DateTime, 
-  tags: [String], 
-  userGroups: [String])
-)
+evaluateDynamicContent( storeId: !string, placeName: !string, categoryId: !string, productId: !string, cultureName: !string, toDate: DateTime, tags: [!string], userGroups: [!string])
 ```
 
 ## Arguments
-|Name        |Type                       |Description                |
-|------------|---------------            |---------------------------|
-|storeId     |StringGraphType            |Store Id                   |
-|placeName   |StringGraphType            |Dynamic content place name |
-|categoryId  |StringGraphType            |Category Id                |
-|productId   |StringGraphType            |Product Id                 |
-|cultureName |StringGraphType            |Culture name (e.g. "en-US")|
-|toDate      |StringGraphType            |Evaluation date            |
-|tags        |List of StringGraphType    |List of tags               |
-|userGroups  |List of StringGraphType    |List of user groups|
+|Name          |Type                       |Description                |
+|--------------|---------------            |---------------------------|
+|`storeId`     |StringGraphType            |Store Id.                   |
+|`placeName`   |StringGraphType            |Dynamic content place name. |
+|`categoryId`  |StringGraphType            |Category Id.                |
+|`productId`   |StringGraphType            |Product Id.                 |
+|`cultureName` |StringGraphType            |Culture name.<br> **Example**: "en-US"|
+|`toDate`      |StringGraphType            |Evaluation date.            |
+|`tags`        |List of StringGraphType    |List of tags.               |
+|`userGroups`  |List of StringGraphType    |List of user groups.|
 
 ## Example
 
