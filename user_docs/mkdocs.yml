@@ -174,9 +174,6 @@ nav:
       - Roles and Permissions: security/roles-and-permissions.md
       - API Key: security/api-key.md
       - Login on Behalf Feature: security/login-on-behalf.md
-    - Google Analytics:
-      - Overview: google-analytics/overview.md
-      - Integration: google-analytics/integration.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
       - Configuring sitemaps: sitemaps/configuring-sitemaps.md
@@ -187,7 +184,24 @@ nav:
       - Managing Thumbnail Options: thumbnails/thumbnail-options.md
       - Using Thumbnails: thumbnails/using-thumbnails.md
       - Settings: thumbnails/settings.md
-      
+    - Order management:
+      - Overview: order-management/overview.md
+      - Order Information: order-management/main-objects.md
+      - Order Processing Scenarios: order-management/order-processing-scenarios.md
+      - Notifications: order-management/notifications.md
+      - Settings: order-management/settings.md
+    - Integrations:
+      - Avalara Tax:
+        - Overview: integrations/avalara/overview.md
+        - Orders Synchronization: integrations/avalara/orders-synchronization.md
+        - Taxes Calculation: integrations/avalara/taxes-calculation.md
+        - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
+        - Address validation: integrations/avalara/address-validation.md
+        - Settings: integrations/avalara/settings.md
+      - Google Analytics:
+        - Overview: integrations/google-analytics/overview.md
+        - Integration: integrations/google-analytics/integration.md
+        - Settings: integrations/google-analytics/settings.md
 extra:
     social:
       - icon: fontawesome/brands/github
