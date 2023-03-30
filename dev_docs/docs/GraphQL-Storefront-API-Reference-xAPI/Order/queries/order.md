@@ -1,11 +1,20 @@
-# Order
+## General Order Details
 
-```
-{
+Get information about the order with the following queries:
+
+
+* General order information:
+  ```
+  {
   order(
-    number: "CU1508131823002"
-    userId: "0cda0396-43fe-4034-a20e-d0bab4c88c93"
-  ) {
+    number: 
+    userId:
+  )
+  }
+  ```
+* Customer information:
+  ```
+  {
     id
     customerId
     customerName
@@ -14,24 +23,47 @@
     addresses {
       postalCode
     }
-    currency {
-      code
-    }
+  }
+  ```
+
+* Order items information:
+  ```
+  {
     items {
       sku
       name
       quantity
     }
+  }
+  ```
+
+* Currency:
+  ```
+  {
+    currency {
+    code
+    }
+  }
+  ```
+
+* Total amount:
+  ```
+  {
     total {
       amount
     }
+  }
+
+  ```
+* Cancellation date:
+  ```
+  {
     cancelledDate
   }
-}
-```
+  ```
 
 <details>
-<summary>Result (click to expand)</summary>
+<summary>Example</summary>
 
 ```
 {
@@ -40,7 +72,7 @@
       "id": "9d27c868-2e31-4ab4-861b-909bc3f86657",
       "customerId": "0cda0396-43fe-4034-a20e-d0bab4c88c93",
       "customerName": "George Basker",
-      "createdDate": "2019-01-06",
+      "createdDate": "2021-01-06",
       "addresses": [
         {
           "postalCode": "77462"
@@ -75,4 +107,5 @@
 </p>
 
 > !!! tip
-	See the [OrderType chart](../objects/order-type.md) for better understanding of the fields you can use in your requests.
+	The fields you can use in your requests are listed in the [OrderType chart](../objects/order-type.md).
+

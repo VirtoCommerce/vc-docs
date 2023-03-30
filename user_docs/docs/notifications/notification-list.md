@@ -27,5 +27,15 @@ While the *Notification name* field is uneditable, you can provide emails for th
 ### Text Notification Details
 Text message notifications, logically, do not have the ***CC*** and ***BCC*** fields; instead, they provide you with an option to add a phone number, which is again for testing purposes only.
 
+### Enabling/Disabling Notifications
+
+1. To enable sending particular notifications, switch the **Active** option to on.
+
+![Notification details](media/notification-on.png)
+
+1. To disable sending particular notifications, switch the **Active** option to off.
+
+![Notification details](media/notification-off.png)
+
 ## More Info
 Apart from the fields described above, you also have two widgets to manage your notifications, [Templates](notification-templates.md) and [Notification log](notification-log.md), which we cover in the respective sections.

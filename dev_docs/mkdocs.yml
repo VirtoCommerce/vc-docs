@@ -282,6 +282,23 @@ nav:
         - Queries: 
           - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/overview.md
           - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
+    - Quote:
+        - Overview:  GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md
+        - Queries:
+          - Query list: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/query-list.md
+          - Quote: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quote.md
+          - Quotes: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quotes.md
+        - Mutations:
+          - Mutations list: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/mutations-list.md
+          - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
+          - changeQuoteComment: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment.md
+          - changeQuoteItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-item-quantity.md
+          - createQuoteFromCart: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart.md
+          - removeQuoteItem: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/remove-quote-item.md
+          - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
+          - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
+        - Objects:
+          - Objects: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/objects.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
   - Storefront Development:
