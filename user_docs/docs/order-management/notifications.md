@@ -1,6 +1,12 @@
-All existing order-specific notifications are:
+The customer is notified of any changes from the time the order is placed to the time the order is shipped:
 
-![General order information](media/order-notifications-list.png)
+| Processing step 	| Notification                                                                                                                         	| Description                                                                                                                                                                                                                                                                                                     	|
+|-----------------	|--------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Order           	| <ul> <li>Notification on created order</li><br> <li>Notification on new order status</li><br> <li>Notification on cancelled order</li> </ul> 	| <ul> <li>The customer will get an email notification after submitting their details through a form in Storefront.</li> <li>The customer will get an email notification when the status of any order gets changed.</li> <li>The customer will get an email notification when an order gets cancelled.</li> </ul> 	|
+| Payment         	| Notification on order payment                                                                                                        	| The customer will get an email notification when all payments related to an order have been completed.                                                                                                                                                                                                          	|
+| Shipment        	| Notification on shipped order                                                                                                        	| The customer will get an email notification when all ordered items have been shipped.                                                                                                                                                                                                                           	|
+
+## Viewing Order Notifications
 
 To view the list of the particular order notifications:
 

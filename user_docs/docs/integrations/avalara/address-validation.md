@@ -1,11 +1,12 @@
+# In Progress
 
-Address validation can be used in storefront theme to prevent creation of orders with invalid (not acceptable by AvaTax) address.
+Address validation is used in storefront theme to prevent creation of orders with invalid (not acceptable by AvaTax) address.
 
-To validate addresses:
+To validate addresses, use:
 
-1. Go to **api > tax > avatax > address > validate**.
-2. Use **POST** method.
-3. Apply `request` parameter — an instance of `AddressValidationRequest` class. It contains:
+1. Path: `/api/tax/avatax/address/validate`.
+2. Method: `POST`.
+3. Parameters: `request` — an instance of `AddressValidationRequest` class. 
+    It contains:
     * The address to validate. 
-    * StoreId to extract Ava.Tax connection settings for address validation.
-
+    * `StoreId` to extract AvaTax connection settings for address validation.

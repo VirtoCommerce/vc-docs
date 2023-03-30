@@ -24,7 +24,7 @@ In some cases, you may need the option to manually send transaction data to AvaT
 To send the data to AvaTax manually:
 
 1. Go to **Orders**.
-1. Select the incorrect order.
+1. Select the required order.
 1. Click the red button to send the order to AvaTax.
 
 ![Send data manually](../media/send-orders-manually.png)
