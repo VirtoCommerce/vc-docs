@@ -199,7 +199,7 @@ nav:
         - Indexation: order-management/indexation.md
       - Notifications: order-management/notifications.md
       - Settings: order-management/settings.md
-      - Roles: order-management/roles.md
+      - Roles: order-management/permissions.md
     - Integrations:
       - Avalara Tax:
         - Overview: integrations/avalara/overview.md

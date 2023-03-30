@@ -1,9 +1,7 @@
 
-Each user must have at least one role in Virto Commerce Platform. 
+The pre-defined order-related permissions are:
 
-The pre-defined order-related roles are:
-
-| Role                   	| Descrpiption               	|
+| Permission                   	| Descrpiption               	|
 |------------------------	|----------------------------	|
 | order:read             	| View order related data.   	|
 | order:create           	| Create order related data. 	|
