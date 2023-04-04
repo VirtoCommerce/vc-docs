@@ -1,15 +1,23 @@
-# X-Marketing 
+# Overview
 
-The X-Marketing module is a powerful new tool for e-commerce businesses that provides high-performance search queries for dynamic content. This module makes it easier for users to evaluate dynamic content, such as banners and slideshows, based on dynamic conditions.
+Virto Commerce Quote Module represents a Quotes management system. It helps store owners easily manage cliets' quotes and send a precise cost estimate without having to manually create them.
 
-One of its key features is its ability to evaluate dynamic content based on conditions, such as customer behavior or the time of day. This allows businesses to create targeted and personalized experiences for their customers, increasing engagement and conversions.
+## Key features
 
-For more information, see the following sections:
+* Unlimited tiers.
+* Discounts per tier or for the entire quote.
+* Full line items management even after the initial quote is created.
+* Attachments, dynamic properties support.
+* Creation of a Regular Order once the Quote is confirmed by the customer.
+* Setting default quote status.
+* Organization maintainers can update quotes created by members of their organization.
 
-+ [Queries](queries/overview.md)
-+ [Mutations](mutations/multations-list.md)
-+ [Objects](objects/objects.md)
+For more information about its functions, refer to:
 
-## How to use
+* [Queries](queries/query-list.md)
+* [Mutations](mutations/mutations-list.md)
+* [Objects](objects/objects.md)
 
-See [Experience API Overview](https://docs.virtocommerce.org/new/dev_docs/GraphQL-Storefront-API-Reference-xAPI/) for more information on how to use X-Marketing. 
+## How to Use
+
+For more information on how to use X-Quote, refer to the [Experience API Overview](https://docs.virtocommerce.org/new/dev_docs/GraphQL-Storefront-API-Reference-xAPI/).

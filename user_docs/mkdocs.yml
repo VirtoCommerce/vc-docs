@@ -1,4 +1,4 @@
-theme:
+nav:
     name: material
     custom_dir: ../overrides
     language: en
@@ -112,6 +112,7 @@ nav:
       - Product Indexing: catalog/product-indexing.md
       - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
       - Viewing Catalog Properties: catalog/view-properties.md
+      - Viewing Product Variations: catalog/view-product-variations.md
     - Catalog Personalization:
       - Overview: catalog-personalization/overview.md
       - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
@@ -174,9 +175,6 @@ nav:
       - Roles and Permissions: security/roles-and-permissions.md
       - API Key: security/api-key.md
       - Login on Behalf Feature: security/login-on-behalf.md
-    - Google Analytics:
-      - Overview: google-analytics/overview.md
-      - Integration: google-analytics/integration.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
       - Configuring sitemaps: sitemaps/configuring-sitemaps.md
@@ -187,7 +185,34 @@ nav:
       - Managing Thumbnail Options: thumbnails/thumbnail-options.md
       - Using Thumbnails: thumbnails/using-thumbnails.md
       - Settings: thumbnails/settings.md
-      
+    - Order Management:
+      - Overview: order-management/overview.md
+      - Order Information: order-management/main-objects.md
+      - Order Processing Scenarios:
+        - Overview: order-management/order-processing-scenarios-overview.md
+        - Getting Invoice PDF: order-management/getting-invoice-pdf.md
+        - Creating a New Shipment Document: order-management/new-shipment-document.md
+        - Creating a New Payment Document: order-management/new-payment-document.md
+        - Tracking Order Changes: order-management/tracking-order-changes.md
+        - Creating Returns: order-management/creating-returns.md
+        - Processing Returns: order-management/processing-returns.md
+        - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
+        - Indexation: order-management/indexation.md
+      - Notifications: order-management/notifications.md
+      - Settings: order-management/settings.md
+      - Permissions: order-management/permissions.md
+    - Integrations:
+      - Avalara Tax:
+        - Overview: integrations/avalara/overview.md
+        - Orders Synchronization: integrations/avalara/orders-synchronization.md
+        - Taxes Calculation: integrations/avalara/taxes-calculation.md
+        - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
+        - Address Validation: integrations/avalara/address-validation.md
+        - Settings: integrations/avalara/settings.md
+      - Google Analytics:
+        - Overview: integrations/google-analytics/overview.md
+        - Integration: integrations/google-analytics/integration.md
+        - Settings: integrations/google-analytics/settings.md
 extra:
     social:
       - icon: fontawesome/brands/github
