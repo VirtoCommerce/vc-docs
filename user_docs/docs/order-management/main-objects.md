@@ -21,7 +21,7 @@ Once the order is created by customer, the details are immediately displayed on 
 | 13   | Order totals.                                                                                  |
 | 14   | Order comments.                                                                                |
 | 15   | Configured order properties.                                                                   |
-| 16   | Return list. For more information, see [Order Processing Scenarios](order-processing-scenarios.md).                                                                                   |
+| 16   | Return list. For more information, see [Order Processing Scenarios](order-processing-scenarios-overview.md).                                                                                   |
 | 17   | Subscription details and related documents.                                                    |
 
 
@@ -31,7 +31,7 @@ Once the order is created by customer, the details are immediately displayed on 
 
 | Item 	| Description                                                                                                                                                                                                                                                                                                   	|
 |------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| 1    	| Shipment and payment documents. For more information, see [Order Processing Scenarios](order-processing-scenarios.md). |
-| 2    	| AvaTax details. The button indicates the last time the order information was sent to AvaTax or the option to send data to AvaTax.<br> For more information about sending orders information to AvaTax manually, see [Order Processing Scenarios](order-processing-scenarios.md).<br> For more information about automatic tax calculation, see [AvaTax module](../integrations/avalara/taxes-calculation.md). 	|
-| 3    	| Last indexation date. For more information, see [Order Processing Scenarios](order-processing-scenarios.md). |
+| 1    	| Shipment and payment documents. For more information, see [Order Processing Scenarios](order-processing-scenarios-overview.md). |
+| 2    	| AvaTax details. The button indicates the last time the order information was sent to AvaTax or the option to send data to AvaTax.<br> For more information about sending orders information to AvaTax manually, see [Order Processing Scenarios](order-processing-scenarios-overview.md).<br> For more information about automatic tax calculation, see [AvaTax module](../integrations/avalara/taxes-calculation.md). 	|
+| 3    	| Last indexation date. For more information, see [Order Processing Scenarios](order-processing-scenarios-overview.md). |
 
