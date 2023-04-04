@@ -1,4 +1,4 @@
-theme:
+nav:
     name: material
     custom_dir: ../overrides
     language: en
@@ -68,8 +68,7 @@ markdown_extensions:
      - pymdownx.snippets
 
 plugins:
-    - search:
-         lang: en
+    - search # necessary for search to work
     - git-revision-date-localized
     - include-markdown
  #   - autolinks
@@ -113,6 +112,7 @@ nav:
       - Product Indexing: catalog/product-indexing.md
       - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
       - Viewing Catalog Properties: catalog/view-properties.md
+      - Viewing Product Variations: catalog/view-product-variations.md
     - Catalog Personalization:
       - Overview: catalog-personalization/overview.md
       - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
@@ -200,7 +200,7 @@ nav:
         - Indexation: order-management/indexation.md
       - Notifications: order-management/notifications.md
       - Settings: order-management/settings.md
-      - Roles: order-management/permissions.md
+      - Permissions: order-management/permissions.md
     - Integrations:
       - Avalara Tax:
         - Overview: integrations/avalara/overview.md
