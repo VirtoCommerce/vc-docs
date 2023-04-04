@@ -50,7 +50,7 @@ Once your account is up and running, edit the `Notifications`  section in the *a
 
 ## Testing Notification Sending Process
 
-To test your notifications, you will need to use REST Admin API queries that require a valid Shopify access token.
+To test your notifications, you will need to use REST Admin API queries that require a valid access token.
 
 To test whether an email has been sent successfully, run this query:
 

@@ -69,7 +69,8 @@ markdown_extensions:
 
 
 plugins:
-    - search # necessary for search to work
+    - search:
+         lang: en
     - git-revision-date-localized
     - include-markdown
  #   - autolinks
