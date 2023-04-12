@@ -128,7 +128,7 @@ Our Vue.js Starter Theme has an adaptive design that allows it to look smooth an
 
 - Single-page checkout
     
-- Multi-page checkout *
+- Multi-page checkout *. Dynamic checkout routing
     
 - Anonymous checkout
     

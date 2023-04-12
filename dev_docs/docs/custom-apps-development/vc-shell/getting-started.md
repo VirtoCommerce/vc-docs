@@ -1,6 +1,6 @@
-# Getting started
+# Getting Started
 
-Complete the following steps to start using VC shell.
+To start using VC shell:
 
 1. Install and relocate root and packages dependencies. This will also install and configure package dependencies and git hooks
     ```bash

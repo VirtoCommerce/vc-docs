@@ -6,13 +6,11 @@ Use this technique if you want to develop a module that can work with different 
 
 To create a new module with a database agnostic approach:
 
-1. Run the following command:
+1. Run the following command to create a CustomerReviews folder containing all the required projects and files for your module:
 
     ```cmd
     dotnet new vc-module-dba-template --ModuleName CustomerReviews --Author "Jon Doe" --CompanyName VirtoCommerce
-    ```
-
-    This creates a CustomerReviews folder containing all the required projects and files for your module. 
+    ``` 
 
 1. Open the solution in Visual Studio.
 

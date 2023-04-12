@@ -30,7 +30,13 @@ For the Windows family, the requirements are as follows:
 <!--- ADD THIS FOR LINUX IF/WHEN IT BECOMES APPLICABLE: For Linux, the requirements are the following: ... --->
 
 ## Supported Databases
-The Virto platform supports MS SQL Server 2017 and above.
+The Virto platform supports:
+
+* MS SQL Server 2019 and higher.
+* MySql Server 5.7 and higher.
+* PostgreSQL 12 and higher.
+
+To learn more about configuring the platform with database providers, read the [DB Agnostic](/../Fundamentals/DB-Agnostic/overview.md) section.
 
 ## Supported Browsers
 The Virto platform supports the following browsers:

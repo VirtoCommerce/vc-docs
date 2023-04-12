@@ -142,11 +142,13 @@ nav:
         - Elastic App Search Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
         - Configuring Elastic App Search: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
       - Configuration: Fundamentals/Indexed-Search/configuration.md
-    - DB Agnostic Architecture:
-      - Overview: Fundamentals/DB-Agnostic/overview.md
-      - Launching VC with DB Provider: Fundamentals/DB-Agnostic/postgre.md
-      - Creating Custom Module with DB Agnostic Approach: Fundamentals/DB-Agnostic/creating-custom-module.md
-      - Transforming Custom Module to Support DB Agnostic Approach: Fundamentals/DB-Agnostic/transforming-custom-module.md
+    - Persistence:
+      - DB Agnostic Architecture:
+        - Overview: Fundamentals/Persistence/DB-Agnostic/overview.md
+        - Configuring VC with DB Providers: Fundamentals/Persistence/DB-Agnostic/configuring-vc-with-db-providers.md
+        - Creating Custom Module with DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/creating-custom-module.md
+        - Transforming Custom Module to Support DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/transforming-custom-module.md
+      - Concurrency Handling: Fundamentals/Persistence/Concurrency-handling/concurrency-handling.md
     - Modularity:
       - Overview: Fundamentals/Modularity/01-overview.md
       - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
@@ -319,17 +321,7 @@ nav:
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
     - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
   - Operations:
-    - Maintenance Tasks for SQL: 
-      - Overview: Operations/maintenance-task-for-sql/overview.md
-      - Index Defragmentation and Rebuilding: Operations/maintenance-task-for-sql/index-defragmentation.md
-      - Finding and Creating Missing Index: Operations/maintenance-task-for-sql/creating-missing-index.md
-      - Control and Elimination of Long-Running Queries: Operations/maintenance-task-for-sql/control-long-running-queries.md
-      - Prune of PlatformOperationLog and NotificationMessage tables: Operations/maintenance-task-for-sql/prune-of-tables.md
-      - Table Size Control: Operations/maintenance-task-for-sql/table-size-control.md
-      - Using Azure SQL Elastic Pool and several databases instead of the Big One: Operations/maintenance-task-for-sql/azure-sql-elastic-pool.md
-      - Use Azure tools: Operations/maintenance-task-for-sql/use-azure-tools.md
-      - Find blocking queries in SQL Azure: Operations/maintenance-task-for-sql/find-blocking-queries.md
-      - Set the maximum number of concurrent requests and sessions: Operations/maintenance-task-for-sql/set-number-of-concurrent-sessions.md
+    - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
   - Tutorials and How-tos:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md

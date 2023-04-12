@@ -7,6 +7,7 @@ The basic order processing scenarios are:
 * [Getting invoice PDF](getting-invoice-pdf.md).
 * [Creating a new shipment document](new-shipment-document.md).
 * [Creating a new payment document](new-payment-document.md).
+* [Creating a new refund document](new-refund-document.md)
 * [Tracking order changes](tracking-order-changes.md).
 * [Creating returns](creating-returns.md).
 * [Processing returns](processing-returns.md).

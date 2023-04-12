@@ -56,7 +56,6 @@ To start using Source Link for debugging:
 Now you can continue debugging the third-party module as it is included into your solution as source code.
 
 ## Loading PDB from Public Symbol Servers
-
 If the third-party component doesn't support Source Link and you haven't loaded the PDB file for the library:
 
 1. Go to **Debug** > **Window** > **Modules** and load symbols of Newtonsoft.Json library manually.
