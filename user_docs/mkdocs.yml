@@ -98,29 +98,66 @@ copyright: Copyright &copy; 2022. All rights reserved.
 
 # Page tree
 nav:
+  - Platform:
+    - Orders:
+        - Overview: order-management/overview.md
+        - Order Information: order-management/main-objects.md
+        - Order Processing Scenarios:
+          - Overview: order-management/order-processing-scenarios-overview.md
+          - Getting Invoice PDF: order-management/getting-invoice-pdf.md
+          - Creating a New Shipment Document: order-management/new-shipment-document.md
+          - Creating a New Payment Document: order-management/new-payment-document.md
+          - Creating a New Refund Document: order-management/new-refund-document.md
+          - Tracking Order Changes: order-management/tracking-order-changes.md
+          - Creating Returns: order-management/creating-returns.md
+          - Processing Returns: order-management/processing-returns.md
+          - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
+          - Indexation: order-management/indexation.md
+        - Notifications: order-management/notifications.md
+        - Settings: order-management/settings.md
+        - Permissions: order-management/permissions.md
     - Catalog:
-      - Overview: catalog/index.md
-      - Terminology: catalog/glossary.md
-      - Structure Chart: catalog/structure-chart.md
-      - Adding New Catalog: catalog/add-new-catalog.md
-      - Catalog Search: catalog/catalog-search.md
-      - Managing Categories: catalog/managing-categories.md
-      - Managing Products: catalog/managing-products.md
-      - Managing Product Variations: catalog/managing-product-variations.md
-      - Managing Properties: catalog/managing-properties.md
-      - Managing Search Index: catalog/managing-search-index.md
-      - Product Indexing: catalog/product-indexing.md
-      - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
-      - Viewing Catalog Properties: catalog/view-properties.md
-      - Viewing Product Variations: catalog/view-product-variations.md
-    - Catalog Personalization:
-      - Overview: catalog-personalization/overview.md
-      - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
-      - User Groups: catalog-personalization/user-groups.md
-      - How Tos:
-        - Showing or Hiding Catalog Items for Specific Users: catalog-personalization/how-tos/user-groups-for-item-view.md
-        - Showing Special Prices to Specific Customers: catalog-personalization/how-tos/user-groups-for-pricing.md 
-      - Settings: catalog-personalization/settings.md
+      - Catalog:
+        - Overview: catalog/index.md
+        - Terminology: catalog/glossary.md
+        - Structure Chart: catalog/structure-chart.md
+        - Adding New Catalog: catalog/add-new-catalog.md
+        - Catalog Search: catalog/catalog-search.md
+        - Managing Categories: catalog/managing-categories.md
+        - Managing Products: catalog/managing-products.md
+        - Managing Product Variations: catalog/managing-product-variations.md
+        - Managing Properties: catalog/managing-properties.md
+        - Managing Search Index: catalog/managing-search-index.md
+        - Product Indexing: catalog/product-indexing.md
+        - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
+        - Viewing Catalog Properties: catalog/view-properties.md
+        - Viewing Product Variations: catalog/view-product-variations.md
+      - Catalog Personalization:
+        - Overview: catalog-personalization/overview.md
+        - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
+        - User Groups: catalog-personalization/user-groups.md
+        - How Tos:
+          - Showing or Hiding Catalog Items for Specific Users: catalog-personalization/how-tos/user-groups-for-item-view.md
+          - Showing Special Prices to Specific Customers: catalog-personalization/how-tos/user-groups-for-pricing.md 
+        - Settings: catalog-personalization/settings.md
+    - Stores:
+      - Overview: store/overview.md
+      - Adding New Store: store/adding-new-store.md
+      - Configuring Your Store: store/configuring-store.md
+      - Settings: store/settings.md
+    - Notifications:
+      - Overview: notifications/overview.md
+      - Notification List: notifications/notification-list.md
+      - Notification Templates: notifications/notification-templates.md
+      - Notification Log: notifications/notification-log.md
+      - Notification Layouts: notifications/notification-layouts.md
+      - Settings: notifications/settings.md
+    - Security:
+      - Overview: security/overview.md
+      - Managing User Accounts: security/managing-users.md
+      - Roles and Permissions: security/roles-and-permissions.md
+      - API Key: security/api-key.md
+      - Login on Behalf Feature: security/login-on-behalf.md
     - Marketing:
       - Overview: marketing/overview.md
       - Managing Content Items: marketing/managing-content-items.md
@@ -146,11 +183,6 @@ nav:
       - Managing Inventory: inventory/managing-inventory.md
       - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
       - Settings: inventory/settings.md
-    - Store:
-      - Overview: store/overview.md
-      - Adding New Store: store/adding-new-store.md
-      - Configuring Your Store: store/configuring-store.md
-      - Settings: store/settings.md
     - Companies and Contacts:
       - Overview: contacts/overview.md
       - Managing Companies and Contacts: contacts/managing-contacts.md
@@ -162,19 +194,6 @@ nav:
       - Creating and Terminating Contracts: contracts/creating-and-terminating-contracts.md
       - Managing Contract Prices: contracts/managing-contract-prices.md
       - Managing Contract Customers: contracts/managing-contract-customers.md
-    - Notifications:
-      - Overview: notifications/overview.md
-      - Notification List: notifications/notification-list.md
-      - Notification Templates: notifications/notification-templates.md
-      - Notification Log: notifications/notification-log.md
-      - Notification Layouts: notifications/notification-layouts.md
-      - Settings: notifications/settings.md
-    - Security:
-      - Overview: security/overview.md
-      - Managing User Accounts: security/managing-users.md
-      - Roles and Permissions: security/roles-and-permissions.md
-      - API Key: security/api-key.md
-      - Login on Behalf Feature: security/login-on-behalf.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
       - Configuring sitemaps: sitemaps/configuring-sitemaps.md
@@ -185,34 +204,18 @@ nav:
       - Managing Thumbnail Options: thumbnails/thumbnail-options.md
       - Using Thumbnails: thumbnails/using-thumbnails.md
       - Settings: thumbnails/settings.md
-    - Order Management:
-      - Overview: order-management/overview.md
-      - Order Information: order-management/main-objects.md
-      - Order Processing Scenarios:
-        - Overview: order-management/order-processing-scenarios-overview.md
-        - Getting Invoice PDF: order-management/getting-invoice-pdf.md
-        - Creating a New Shipment Document: order-management/new-shipment-document.md
-        - Creating a New Payment Document: order-management/new-payment-document.md
-        - Tracking Order Changes: order-management/tracking-order-changes.md
-        - Creating Returns: order-management/creating-returns.md
-        - Processing Returns: order-management/processing-returns.md
-        - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
-        - Indexation: order-management/indexation.md
-      - Notifications: order-management/notifications.md
-      - Settings: order-management/settings.md
-      - Permissions: order-management/permissions.md
-    - Integrations:
-      - Avalara Tax:
-        - Overview: integrations/avalara/overview.md
-        - Orders Synchronization: integrations/avalara/orders-synchronization.md
-        - Taxes Calculation: integrations/avalara/taxes-calculation.md
-        - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
-        - Address Validation: integrations/avalara/address-validation.md
-        - Settings: integrations/avalara/settings.md
-      - Google Analytics:
-        - Overview: integrations/google-analytics/overview.md
-        - Integration: integrations/google-analytics/integration.md
-        - Settings: integrations/google-analytics/settings.md
+  - Integrations:
+    - Avalara Tax:
+      - Overview: integrations/avalara/overview.md
+      - Orders Synchronization: integrations/avalara/orders-synchronization.md
+      - Taxes Calculation: integrations/avalara/taxes-calculation.md
+      - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
+      - Address Validation: integrations/avalara/address-validation.md
+      - Settings: integrations/avalara/settings.md
+    - Google Analytics:
+      - Overview: integrations/google-analytics/overview.md
+      - Integration: integrations/google-analytics/integration.md
+      - Settings: integrations/google-analytics/settings.md
 extra:
     social:
       - icon: fontawesome/brands/github

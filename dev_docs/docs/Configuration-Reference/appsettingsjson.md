@@ -254,10 +254,12 @@ The result will be as follows:
 ![PasswordChangeByAdminEnabled-result](media/05-password-change-by-admin-result.png)
 
 ### DataProtection
- There are options to configure lifetimes for security tokens that are issued by platform like password reset 
+There are options to configure lifetimes for security tokens that are issued by platform like password reset.
+
 | Node | Default value | Description  |
 | ------------- | ----------|------------ |
 | DataProtection.TokenLifespan | "1.00:00:00" - Defaults to 1 day | The amount of time a generated token remains valid.
+
 #### Examples
 
 Example settings for the `DataProtection` section:

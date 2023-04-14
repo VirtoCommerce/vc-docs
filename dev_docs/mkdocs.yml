@@ -142,6 +142,13 @@ nav:
         - Elastic App Search Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
         - Configuring Elastic App Search: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
       - Configuration: Fundamentals/Indexed-Search/configuration.md
+    - Persistence:
+      - DB Agnostic Architecture:
+        - Overview: Fundamentals/Persistence/DB-Agnostic/overview.md
+        - Configuring VC with DB Providers: Fundamentals/Persistence/DB-Agnostic/configuring-vc-with-db-providers.md
+        - Creating Custom Module with DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/creating-custom-module.md
+        - Transforming Custom Module to Support DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/transforming-custom-module.md
+      - Concurrency Handling: Fundamentals/Persistence/Concurrency-handling/concurrency-handling.md
     - Modularity:
       - Overview: Fundamentals/Modularity/01-overview.md
       - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
@@ -313,10 +320,14 @@ nav:
     - Overview: Extensibility/overview.md
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
     - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
+  - Operations:
+    - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
   - Tutorials and How-tos:
     - Tutorials:
       - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
       - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
+    - How-tos:
+      - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
   - Updating Virto Commerce Based Projects:
     - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
     - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
