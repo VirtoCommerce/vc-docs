@@ -27,6 +27,14 @@
     bottom: 0;
 }
 
+.md-nav__item .md-nav__item--section>.md-nav__link {
+    font-weight: 900;
+}
+
+.md-nav__item .md-nav__item--section:first-child {
+    margin-top: 0;
+}
+
 .md-nav__link .md-nav__link--active:before {
     content: '';
     width: 0.167rem;

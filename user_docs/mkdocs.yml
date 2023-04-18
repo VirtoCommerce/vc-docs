@@ -22,6 +22,7 @@ nav:
     icon:
         repo: fontawesome/brands/github
     features:
+        - navigation.sections
         - navigation.tracking
         - navigation.instant
         - navigation.tabs
@@ -64,7 +65,7 @@ markdown_extensions:
          alternate_style: true
      - pymdownx.tasklist:
          custom_checkbox: true
-     - pymdownx.tilde 
+     - pymdownx.tilde
      - pymdownx.snippets
 
 plugins:
@@ -119,7 +120,7 @@ nav:
       - User Groups: catalog-personalization/user-groups.md
       - How Tos:
         - Showing or Hiding Catalog Items for Specific Users: catalog-personalization/how-tos/user-groups-for-item-view.md
-        - Showing Special Prices to Specific Customers: catalog-personalization/how-tos/user-groups-for-pricing.md 
+        - Showing Special Prices to Specific Customers: catalog-personalization/how-tos/user-groups-for-pricing.md
       - Settings: catalog-personalization/settings.md
     - Marketing:
       - Overview: marketing/overview.md
@@ -237,7 +238,7 @@ extra:
       - title: Developer Docs
         url: /new/dev_docs
       - title: User Docs
-        url: /new/user_docs    
+        url: /new/user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home
@@ -247,7 +248,7 @@ extra:
           url: https://www.virtocommerce.org/faq
         - title: Release Notes
           url: https://www.virtocommerce.org/c/news-digest/15
-  
+
 extra_javascript:
     - assets/scripts/scripts-loader.js
 
