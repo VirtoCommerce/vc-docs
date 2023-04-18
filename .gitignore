@@ -288,3 +288,5 @@ app_data/
 /src/VirtoCommerce.Platform.DistributedLock/VirtoCommerce.Platform.DistributedLock.xml
 /src/VirtoCommerce.Platform.Modules/VirtoCommerce.Platform.Modules.xml
 /src/VirtoCommerce.Platform.Security/VirtoCommerce.Platform.Security.xml
+
+.history
