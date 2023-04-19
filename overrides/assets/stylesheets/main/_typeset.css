@@ -112,6 +112,7 @@
 .md-typeset code {
     padding: 0.2rem 0.4rem;
     border-radius: 0.2rem;
+    border: 1px solid grey;
 }
 
 .md-typeset pre>code {
