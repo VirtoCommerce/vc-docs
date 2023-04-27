@@ -1,20 +1,23 @@
 ﻿# Prerequisites
-In order to run Virto Commerce, you will first need to install the below prerequisites.
+To run Virto Commerce, install:
 
-## Required Software Components
-This components must be installed in your Windows environment before running the Virto Commerce platform:
+1. Required software components:
 
- - [ASP.NET Core Runtime 6.0.2](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing ASP.NET Core Runtime")
- - [MS SQL Server 2017 or above](https://www.microsoft.com/en-us/sql-server/sql-server-downloads "Installing MS SQL Server")
+    * [ASP.NET Core Runtime 6.0.2](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing ASP.NET Core Runtime")
+    * [MS SQL Server 2017 or higher](https://www.microsoft.com/en-us/sql-server/sql-server-downloads "Installing MS SQL Server")
 
-!!! note
-    * After installing MS SQL server, please switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
+    !!! note
+        * After installing MS SQL server, please switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
 
-![Selecting server authentication mode](media/01-selecting-server-authentication.png)
+    ![Selecting server authentication mode](media/01-selecting-server-authentication.png)
 
-- [Virto Commerce CLI](https://github.com/VirtoCommerce/vc-build), our proprietary command line interface that enables automating the installation process and updating the dependencies.
+    - [Virto Commerce CLI](https://github.com/VirtoCommerce/vc-build), our proprietary command line interface that enables automating the installation process and updating the dependencies.
 
-## Optional software components
-For VirtoCommerce 3.200 or above, we recommend you installing MS Visual Studio 2022 (version 17.0 or above). You might also want to install [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing .NET 6 SDK") in case you will need to edit the source code.
+1. Optional software components:
 
-For better search capabilities, you can install [Elastic search 7.15](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-0). By default, VirtoCommerce uses [Lucene .NET](https://lucenenet.apache.org/); however, it has very limited functionality and cannot be used in production.
+    * For VirtoCommerce 3.200 or higher, install MS Visual Studio 2022 (version 17.0 or higher). 
+    * To edit the source code, install [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing .NET 6 SDK").
+    * For better search capabilities, install [Elastic search 7.15](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-0). 
+
+        !!! note
+            * By default, VirtoCommerce uses [Lucene .NET](https://lucenenet.apache.org/). However, it cannot be used in production due to its limited functionality.

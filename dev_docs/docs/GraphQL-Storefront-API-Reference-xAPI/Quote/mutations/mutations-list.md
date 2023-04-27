@@ -1,4 +1,4 @@
-# In progress
+# Mutations List
 
 | Endpoint | Arguments | Description |
 |---|---|---|

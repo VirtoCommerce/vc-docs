@@ -106,27 +106,28 @@ This node configures external sources, from which modules are being installed an
 | AutoInstallModuleBundles | `["commerce"]` | Group(s) of modules to install automatically during the initial Platform setup. If you do not need to install anything here, provide an empty array.
 <!--modularity-end-->
 
-<!--caching-start-->
+
 ### Caching
 This node manages caching configuration.
-
+<!--caching-start-->
 | Node | Default or Sample Value | Description  |
 | ------------- | ------------------------ | ------------ |
-| Redis || Redis configuration, which includes the message channel to use and number of times to retry.
-| CacheEnabled | `true` | If set to `true`, cache entries are retained based on the _expiration settings_. Otherwise, cache entries will expire immediately.<br>Used if _ConnectionStrings\:RedisConnectionString_ is not specified.
-| CacheSlidingExpiration | E.g., `"0:15:00"` | Cache entry will expire if it has not been accessed in a set amount of time. Used in case `CacheAbsoluteExpiration` was not defined.
-| CacheAbsoluteExpiration | E.g., `"0:5:00"` | Cache entry will expire after a set amount of time. Used in case `RedisConnectionString` was not specified.
+| Redis || Redis configuration. Includes the message channel to use and the number of retries.
+| CacheEnabled | <ul><li>`true`</li><br><li>`false`</li></ul> | <ul><li>Cache entries are retained based on the expiration settings.</li><li>Disables caching of application data for the entire application.</li></ul> <br>Used when `ConnectionStrings:RedisConnectionString` is not specified.
+| CacheSlidingExpiration | `"0:15:00"` | The cache entry will expire if it is not accessed for a specified amount of time.<br>Used when `CacheAbsoluteExpiration` is not defined.
+| CacheAbsoluteExpiration | `"0:5:00"` | The Cache entry will expire after a specified amount of time. <br>Used when `RedisConnectionString` is not specified.
+<!--caching-end-->
 
 #### Examples
 Example settings for the `Redis` node:
 
-```json
+```json title="appsettings.json"
 "Redis": {
 "ChannelName": "VirtoCommerceChannel",
 "BusRetryCount": 3
 } 
 ```
-<!--caching-end-->
+
 <!--notifications-start-->
 ### Notifications
 This enables notification configuration for the `VirtoCommerce.Notifications` module.

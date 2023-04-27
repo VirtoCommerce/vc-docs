@@ -2,7 +2,7 @@
 
 The chart below shows the components and relations of the `CartType` object:
 
-![CartType chart](media/CartType.jpeg)
+![CartType chart](media/cart-type.png)
 
 ## CartType Address Field
 

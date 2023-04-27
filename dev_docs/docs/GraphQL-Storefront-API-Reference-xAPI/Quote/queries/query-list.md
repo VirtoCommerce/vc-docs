@@ -1,5 +1,4 @@
-# In progress
-
+# Queries List
 | Endpoint | Arguments | Return |
 |---|---|---|
 | [quote](quote.md) | `id`<br> `storeId`<br> `userId`<br> `currencyCode`<br> `cultureName`<br> | A particular quote. |
