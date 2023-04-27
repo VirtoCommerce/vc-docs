@@ -26,6 +26,8 @@ theme:
         - navigation.instant
         - navigation.tabs
         - navigation.tabs.sticky
+        - navigation.sections
+        - toc.follow
 
 markdown_extensions:
      - abbr
@@ -97,7 +99,7 @@ edit_uri: edit/dev/docs/
 
 
 # Copyright
-copyright: Copyright &copy; 2022. All rights reserved.
+copyright: Copyright &copy; 2023. All rights reserved.
 
 # Page tree
 nav:
@@ -122,13 +124,12 @@ nav:
       - Overview: Fundamentals/Caching/01-overview.md
       - Cache Configuration: Fundamentals/Caching/02-cache-configuration.md
       - Setting Up Redis Backplane for Scaling Out: Fundamentals/Caching/03-setting-up-Redis.md
-      - Configuration: Fundamentals/Caching/configuration.md
     - Data Import:
       - Main Concept: Fundamentals/Data-Import/01-main-concept.md
       - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
     - Indexed Search:
       - Overview: Fundamentals/Indexed-Search/overview.md 
-      - Search Query Syntax Reference: Fundamentals/Indexed-Search/search-query-syntax-reference.md
+      - Search Query Syntax: Fundamentals/Indexed-Search/search-query-syntax-reference.md
       - Indexing:
         - Overview: Fundamentals/Indexed-Search/indexing/overview.md
         - Indexing in Platform Manager: Fundamentals/Indexed-Search/indexing/indexing-in-platform-manager.md
@@ -161,6 +162,7 @@ nav:
       - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
     - Payments:
       - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
+      - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
     - Fulfillment:
       - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
     - Taxes:

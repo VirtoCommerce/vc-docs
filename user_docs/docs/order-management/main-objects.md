@@ -7,7 +7,7 @@ Once the order is created by customer, the details are immediately displayed on 
 | Item | Description                                                                                    |
 |------|------------------------------------------------------------------------------------------------|
 | 1    | Switch for approval or rejection of the order.                                                 |
-| 2    | The assignee's name. The admin can select the assignee from the drop-down list.                |
+| 2    | The assignee's name. The admin can select the assignee from the drop-down list. The assignee receives notification of the assigned task.               |
 | 3    | Automatically generated customer order number. Use [Settings](settings.md) to configure the template. |
 | 4    | The date of order creation.                                                                    |
 | 5    | Order status to be selected from the drop-down list.                                           |
@@ -31,7 +31,7 @@ Once the order is created by customer, the details are immediately displayed on 
 
 | Item 	| Description                                                                                                                                                                                                                                                                                                   	|
 |------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| 1    	| Shipment and payment documents. For more information, see [Order Processing Scenarios](order-processing-scenarios-overview.md). |
+| 1    	| Shipment, payment, and refund documents. For more information, see [Order Processing Scenarios](order-processing-scenarios-overview.md). |
 | 2    	| AvaTax details. The button indicates the last time the order information was sent to AvaTax or the option to send data to AvaTax.<br> For more information about sending orders information to AvaTax manually, see [Order Processing Scenarios](order-processing-scenarios-overview.md).<br> For more information about automatic tax calculation, see [AvaTax module](../integrations/avalara/taxes-calculation.md). 	|
 | 3    	| Last indexation date. For more information, see [Order Processing Scenarios](order-processing-scenarios-overview.md). |
 

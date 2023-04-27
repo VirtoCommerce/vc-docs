@@ -1,71 +1,60 @@
 ﻿# Manual Installation with Precompiled Binaries
-This section explains how to install Virto Commerce on a Windows based PC.
+To install Virto Commerce on a Windows based PC:
 
-## Downloading Precompiled Platform Version
-To download the precompiled files, navigate to the [Releases](https://github.com/VirtoCommerce/vc-platform/releases "https://github.com/VirtoCommerce/vc-platform/releases") section of our public GitHub repository.
+1. Download precompiled platform version:
 
-Locate the *VirtoCommerce.Platform.3.x.x.zip* archive, which already has the website built and can be run without any additional compilation. The source code, however, is not included.
+	1. Go to the [Releases](https://github.com/VirtoCommerce/vc-platform/releases "https://github.com/VirtoCommerce/vc-platform/releases") section of our public GitHub repository.
+	1. Unpack the *VirtoCommerce.Platform.3.x.x.zip* to a local directory, for example, C:\vc-platform-3. The archive contains the website built. It can be run without additional compilation. The source code is not included.
 
-Unpack the zipped archive to a local directory, e.g., `C:\vc-platform-3`. That's it, you've got a directory with the precompiled platform files.
+1. Update settings file:
 
-## Updating Settings File
-Once you have downloaded and unpacked the files, you will need to adjust the settings. Open the *appsettings.json* file in your text editor and change the `VirtoCommerce` string in the `ConnectionStrings` section.
+	1. Open the *appsettings.json* file in your text editor.
+	1. Change the `VirtoCommerce` string in the `ConnectionStrings` section.
 
-!!! warning
-    * The provided user must have enough permissions to create a new database.
+	!!! warning
+		* The provided user must have sufficient permissions to create a new database.
 
-### ConnectionStrings Section Example
+	<details><summary>Connection strings section example</summary>
+		
+	```json title="appsettings.json"
+	"ConnectionStrings": {
+	"VirtoCommerce" : "Data Source={SQL Server URL};Initial Catalog={Database name};Persist Security Info=True;User ID={User name};Password={User password};MultipleActiveResultSets=True;Connect Timeout=30"
+	},
+	```
+	</details>
 
-```json title="appsettings.json"
-"ConnectionStrings": {
-"VirtoCommerce" : "Data Source={SQL Server URL};Initial Catalog={Database name};Persist Security Info=True;User ID={User name};Password={User password};MultipleActiveResultSets=True;Connect Timeout=30"
-},
-```
+	<details><summary>Modified string section example</summary>
 
-This is how the string in question may look like after you change it:
+	```json title="appsettings.json"
+	`"VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30",`
+	```
+	</details>
 
-```json title="appsettings.json"
-`"VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30",`
-```
 
-## Installing Self Signed SSL Certificate
-Another step before launching the platform is installing and trusting the HTTPS certificate.
+1. Install and trust a self-signed SSL certificate by running `dotnet dev-certs https --trust`.
+	For more information, read [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio#trust).
 
-In order to trust the certificate, run this command:
+1. Launch the platform by running `dotnet VirtoCommerce.Platform.Web.dll`.
 
-`dotnet dev-certs https --trust`
+	!!! note
+		This command runs the Platform enforcing the HTTPS schema. Add HTTP URLs in the `--urls` argument of the `dotnet` command for development or demo purposes (see below). For security reasons, never use it in the production mode.
+		
+		```
+		dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
+		```
 
-For more information, please refer to [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio#trust).
-
-## Launching Platform
-In order to launch the platform, run this command:
-
-```
-dotnet VirtoCommerce.Platform.Web.dll
-```
-
-!!! note
-    *The command above will run the Platform enforcing the HTTPS schema. You can also add HTTP URLs in the `--urls` argument of the `dotnet` command for development or demo purposes (see below). For security reasons, however, you should never use it in the production mode.
+1. Launch the platform for the first time:
 	
-	```
-	dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
-	```
+	1. Open your browser and type http://localhost:5000 or https://localhost:5001. 
+		1. If you get the *Your connection is not private* error, use one of the following methods:
+			* Click *Advanced* and then *Proceed to...*:
+			![Your Connection Is Not Private screen](media/04-your-connection-is-not-private-screen.png)
+			* Use a [self-signed certificate](https://www.hanselman.com/blog/DevelopingLocallyWithASPNETCoreUnderHTTPSSSLAndSelfSignedCerts.aspx).
+		1. The application creates and initializes the database. The sign in page appears. 
+	1. Supply *admin* for login and *store* for password.
+	1. The installation wizard starts downloading default modules and sample data:
+		![Installation wizard screen](media/02-module-auto-installation-screen.png)
+	1. After installation, reset default credentials:
+		![Resetting default credentials](media/03-resetting-default-credentials.png)
 
-## First Time Launch
-To launch the platform for the first time, open your browser and type http://localhost:5000 or https://localhost:5001. You may get the *Your connection is not private* error; in this case, click *Advanced* and then *Proceed to...*:
-
-![Your Connection Is Not Private screen](media/04-your-connection-is-not-private-screen.png)
-
-You can also remove this error using a [self signed certificate](https://www.hanselman.com/blog/DevelopingLocallyWithASPNETCoreUnderHTTPSSSLAndSelfSignedCerts.aspx).
-
-The application will then create and initialize the database. After that, you should see the sign in page. Supply *admin* for login and *store* for password.
-
-After you log into the platform for the first time, the installation wizard will show up and download default modules and sample data:
-
-![Installation wizard screen](media/02-module-auto-installation-screen.png)
-
-Once the wizard is done installing, you will be prompted to reset the default credentials:
-
-![Resetting default credentials](media/03-resetting-default-credentials.png)
-
-This is it! Your platform is good to go.
+Your platform is ready to go.

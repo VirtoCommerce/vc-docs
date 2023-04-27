@@ -23,6 +23,7 @@ theme:
         repo: fontawesome/brands/github
     features:
         - navigation.tabs
+        - --md-code-bg-color
 markdown_extensions:
     - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
     - codehilite
