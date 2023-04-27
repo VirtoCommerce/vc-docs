@@ -121,6 +121,14 @@
     color: var(--md-code-hl-generic-color);
 }
 
+.md-typeset pre>code::-webkit-scrollbar-thumb {
+    background-color: var(--md-code-scrollbar-thumb-color);
+}
+
+.md-typeset pre>code::-webkit-scrollbar-track {
+    background-color: var(--md-code-scrollbar-track-color);
+}
+
 .highlight :is(.ge,.gr,.gh,.go,.gp,.gs,.gu,.gt,.err,.mi,.na) {
     color: var(--md-code-hl-generic-color);
 }
