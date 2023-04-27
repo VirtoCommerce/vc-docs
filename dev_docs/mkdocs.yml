@@ -22,6 +22,7 @@ theme:
     icon:
         repo: fontawesome/brands/github
     features:
+        - navigation.sections
         - navigation.tracking
         - navigation.instant
         - navigation.tabs
@@ -66,7 +67,7 @@ markdown_extensions:
          alternate_style: true
      - pymdownx.tasklist:
          custom_checkbox: true
-     - pymdownx.tilde 
+     - pymdownx.tilde
      - pymdownx.snippets
 
 
@@ -194,7 +195,7 @@ nav:
       - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Configuration: Fundamentals/Security/configuration.md
   - Configuration Reference:
-      - Appsettings.json: Configuration-Reference/appsettingsjson.md 
+      - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
     - Style Guide: Platform-Manager/style-guide.md
     - UI Scroll Directive: Platform-Manager/ui-scroll-directive.md
@@ -286,9 +287,9 @@ nav:
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
     - Marketing:
         - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
-        - Objects: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/objects.md 
+        - Objects: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/objects.md
         - Mutations: GraphQL-Storefront-API-Reference-xAPI/Marketing/mutations/mutations-list.md
-        - Queries: 
+        - Queries:
           - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/overview.md
           - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
     - Quote:
@@ -342,9 +343,9 @@ nav:
     - VC Shell:
       - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
       - Getting Started: custom-apps-development/vc-shell/getting-started.md
-    
-        
-  
+
+
+
 extra:
     social:
       - icon: fontawesome/brands/github
@@ -369,7 +370,7 @@ extra:
       - title: Developer docs
         url: /new/dev_docs
       - title: User docs
-        url: /new/user_docs    
+        url: /new/user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home
@@ -379,7 +380,7 @@ extra:
           url: https://www.virtocommerce.org/faq
         - title: Release Notes
           url: https://www.virtocommerce.org/c/news-digest/15
-  
+
 extra_javascript:
     - assets/scripts/scripts-loader.js
 
