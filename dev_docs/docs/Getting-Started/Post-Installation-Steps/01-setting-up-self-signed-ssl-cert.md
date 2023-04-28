@@ -13,7 +13,7 @@ This is because it is a locally generated, untrusted SSL certificate.
 
 If this warning appears:
 
-1. Run `1 dotnet dev-certs https --trust`
+1. Run `dotnet dev-certs https --trust`
 
 1. Click **Yes** in a popup dialog asking to install this localhost certificate:
 
