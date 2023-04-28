@@ -2,6 +2,8 @@
 
 [VirtoCommerce Vue3 Frontend](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current vc-platform manager concept.
 
+![Vendor-portal](../media/vendor-portal.png)
+
 ## Main project goals
 
 * Technological shift from AngularJS to Vue3 for platform backoffice UI development.
