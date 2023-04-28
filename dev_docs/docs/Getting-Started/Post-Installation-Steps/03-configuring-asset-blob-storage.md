@@ -12,7 +12,7 @@ By default, the platform allows you to configure one of the following blob stora
 
 The FileSystem provider uses the local file system to store and provide public access to all media files. This mode implements [Static files in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-6.0) with all files stored within the app local directory. The FileSystem storage provides public access to the files via relative URIs. 
 
-To switch platform to using this provider, edit the `Assets` section of the *appsetting.json* file:
+To switch platform to using this provider, edit the `Assets` section of the appsetting.json file:
 
 1. Specify `FileSystem` as your default asset provider in the line 2.
 1. For `RootPath`, provide the base path to the `wwwroot` directory inside app folder in the line 4.

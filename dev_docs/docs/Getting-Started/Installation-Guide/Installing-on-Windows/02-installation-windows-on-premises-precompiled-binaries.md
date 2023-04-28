@@ -4,11 +4,11 @@ To install Virto Commerce on a Windows based PC:
 1. Download precompiled platform version:
 
 	1. Go to the [Releases](https://github.com/VirtoCommerce/vc-platform/releases "https://github.com/VirtoCommerce/vc-platform/releases") section of our public GitHub repository.
-	1. Unpack the *VirtoCommerce.Platform.3.x.x.zip* to a local directory, for example, C:\vc-platform-3. The archive contains the website built. It can be run without additional compilation. The source code is not included.
+	1. Unpack the VirtoCommerce.Platform.3.x.x.zip to a local directory, for example, C:\vc-platform-3. The archive contains the website built. It can be run without additional compilation. The source code is not included.
 
 1. Update settings file:
 
-	1. Open the *appsettings.json* file in your text editor.
+	1. Open the appsettings.json file in your text editor.
 	1. Change the `VirtoCommerce` string in the `ConnectionStrings` section.
 
 	!!! warning

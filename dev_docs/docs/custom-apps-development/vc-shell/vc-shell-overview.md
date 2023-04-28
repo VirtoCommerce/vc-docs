@@ -1,6 +1,6 @@
 # VirtoShell
 
-VirtoCommerce Vue3 Frontend for specialized back-office applications is created to replace the current vc-platform manager concept.
+[VirtoCommerce Vue3 Frontend](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current vc-platform manager concept.
 
 ## Main project goals
 

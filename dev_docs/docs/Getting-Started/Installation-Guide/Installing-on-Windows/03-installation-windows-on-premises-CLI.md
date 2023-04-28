@@ -26,7 +26,7 @@ Once the platform is installed:
 
 1. Adjust SQL connection settings:
 
-    1. Open the *appsettings.json* file in your text editor.
+    1. Open the appsettings.json file in your text editor.
     1. Change the `VirtoCommerce` string in the `ConnectionStrings` section.
 
     !!! warning
