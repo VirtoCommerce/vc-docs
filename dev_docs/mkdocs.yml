@@ -194,6 +194,9 @@ nav:
         - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
       - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Configuration: Fundamentals/Security/configuration.md
+    - Logging:
+      - Overview: Fundamentals/Logging/overview.md
+      - Configuration: Fundamentals/Logging/configuration.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
