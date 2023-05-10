@@ -29,6 +29,7 @@ theme:
         - navigation.tabs.sticky
         - navigation.sections
         - toc.follow
+        - toc.integrate
 
 markdown_extensions:
      - abbr
@@ -196,7 +197,8 @@ nav:
       - Configuration: Fundamentals/Security/configuration.md
     - Logging:
       - Overview: Fundamentals/Logging/overview.md
-      - Configuration: Fundamentals/Logging/configuration.md
+      - Serilog Configuration: Fundamentals/Logging/serilog-configuration.md
+      - AppInsights Configuration: Fundamentals/Logging/application-insights-configuration.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
