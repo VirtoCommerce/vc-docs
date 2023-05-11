@@ -19,12 +19,13 @@ To implement single sign-on, Virto Commerce Platform uses the [OpenID Connect](h
 
 
 ## Prerequisites
-To enable Azure Active Directory authentication, you will need to make sure that:
+To enable Azure Active Directory authentication, make sure that:
 
-+ Your company has a valid Azure Active Directory tenant. If it does not, follow this [quickstart quide](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) to create one.
++ Your company has a valid Azure Active Directory tenant. If it does not, follow this [quickstart guide](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) to create one.
 + You have an Azure account that belongs to your company's Azure Active Directory tenant. If you do not have an Azure account yet, you can [start a free Azure subscription](https://azure.microsoft.com/free/).
 + You have a Virto Commerce Platform instance running, either locally or with Azure. You will need to modify its configuration, so make sure you have privileges to do that.
 + You have administrator access to Virto Commerce Platform Manager if you want to manage roles and privileges for the users signed up with Azure AD.
++ You have installed the [Azure module](https://github.com/VirtoCommerce/vc-module-azure-ad).
 
 ## Setup
 To set up the Azure Active Directory based authentication in Virto Commerce Platform Manager, go through these three simple steps:

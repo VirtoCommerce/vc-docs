@@ -10,12 +10,12 @@ Once the order is created by customer, the details are immediately displayed on 
 | 2    | The assignee's name. The admin can select the assignee from the drop-down list. The assignee receives notification of the assigned task.               |
 | 3    | Automatically generated customer order number. Use [Settings](settings.md) to configure the template. |
 | 4    | The date of order creation.                                                                    |
-| 5    | Order status to be selected from the drop-down list.                                           |
+| 5    | Order status to be selected from the dropdown list.                                           |
 | 6    | Customer's name.                                                                               |
 | 7    | The discount amount.                                                                           |
 | 8    | Name of the store.                                                                             |
 | 9    | Notifications sent to the customer about ordering, paying, shipping, etc. For more information, see [Notifications](notifications.md).                      |
-| 10   | Order line items.                                                                              |
+| 10   | Order line items. Each line is assigned a status:<br><ul><li>Pending</li><li>In progress</li><li>Pending</li><li>Shipped</li><li>Delivered</li><li>Cancelled</li></ul>                                                                             |
 | 11   | Order, payment, and delivery status change history.                                            |
 | 12   | Billing, shipping, and other addresses.                                                         |
 | 13   | Order totals.                                                                                  |
