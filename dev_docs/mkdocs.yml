@@ -197,8 +197,10 @@ nav:
       - Configuration: Fundamentals/Security/configuration.md
     - Logging:
       - Overview: Fundamentals/Logging/overview.md
-      - Serilog Configuration: Fundamentals/Logging/serilog-configuration.md
-      - AppInsights Configuration: Fundamentals/Logging/application-insights-configuration.md
+      - How to update to Serilog integrated version: Fundamentals/Logging/how-to-update.md
+      - AppInsights: Fundamentals/Logging/application-insights.md
+      - Extending logging: Fundamentals/Logging/extended-logging.md
+      - Seq log module: Fundamentals/Logging/seq-module.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
