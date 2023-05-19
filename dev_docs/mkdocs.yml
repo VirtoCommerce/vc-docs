@@ -27,6 +27,7 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - toc.follow
+        - toc.integrate
 
 markdown_extensions:
      - abbr
@@ -194,6 +195,12 @@ nav:
         - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
       - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Configuration: Fundamentals/Security/configuration.md
+    - Logging:
+      - Overview: Fundamentals/Logging/overview.md
+      - How to update to Serilog integrated version: Fundamentals/Logging/how-to-update.md
+      - AppInsights: Fundamentals/Logging/application-insights.md
+      - Extending logging: Fundamentals/Logging/extended-logging.md
+      - Seq log module: Fundamentals/Logging/seq-module.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:
