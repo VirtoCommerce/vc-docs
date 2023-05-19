@@ -48,7 +48,7 @@ plugins:
         redirect_maps:
             'redir.md': 'index.md'
  #   - monorepo
-     - glightbox:
+    - glightbox:
         zoomable: true
 
 # Project information
