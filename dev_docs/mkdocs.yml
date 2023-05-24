@@ -22,14 +22,11 @@ theme:
     icon:
         repo: fontawesome/brands/github
     features:
-        - navigation.sections
         - navigation.tracking
         - navigation.instant
         - navigation.tabs
         - navigation.tabs.sticky
-        - navigation.sections
         - toc.follow
-
 markdown_extensions:
      - abbr
      - admonition
@@ -270,7 +267,7 @@ nav:
         - Queries:
           - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/queries/overview.md
           - Order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
-          - Order Connection: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order-connection.md
+          - Orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order-connection.md
         - Mutations:
           - Mutation List: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/01-mutation-list.md
           - CreateOrderFromCart: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/02-create-order-from-cart.md
@@ -285,6 +282,16 @@ nav:
           - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/11-authorize-payment.md
           - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/12-add-or-update-order-payment.md
           - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
+    - Pages:
+      - Overview: GraphQL-Storefront-API-Reference-xAPI/Pages/overview.md
+      - Query:
+        - Pages: GraphQL-Storefront-API-Reference-xAPI/Pages/pages.md
+    - Linklists:
+      - Overview: GraphQL-Storefront-API-Reference-xAPI/Linklists/overview.md
+      - Queries: 
+          - Menu: GraphQL-Storefront-API-Reference-xAPI/Linklists/menu.md
+          - Menus: GraphQL-Storefront-API-Reference-xAPI/Linklists/menus.md
+
     - Marketing:
         - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
         - Objects: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/objects.md

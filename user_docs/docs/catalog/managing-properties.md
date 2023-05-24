@@ -1,59 +1,85 @@
 # Managing Properties
 
-## Managing Catalog Properties
+Managing properties includes:
 
-### Adding Catalog Property
+* Adding:
+     * Catalog properties.
+     * Category properties.
+     * Product properties.
+     * Variations properties.
+* Editing properties.
+* Deleting properties.
 
-1. The user browses the Catalog Module, selects a catalog from the displayed list and clicks on the three dots located on the left side of the catalog name and selects 'Manage' option
-1. The system will open the 'Catalog details' screen
-1. The user selects the 'Properties' widget
-1. The system will display the 'Properties list' containing the following property types:
-     1. Catalog Properties;
-     1. Category Properties;
-     1. Product Properties;
-     1. Variations Properties.
-1. The user clicks the 'Add property' button
-1. The system will display the 'Edit property information' screen;
-1. The user enters the new property information, selects 'Apply to Catalog' and saves the changes;
-1. The new catalog property will be added and displayed on the catalog properties list.
+## Adding properties
 
-![Fig. Catalog details](media/screen-catalog-details-properties.png)
+To add a property:
 
-![Fig. Add Catalog Property](media/screen-add-catalog-property.png)
+1. Open the **Catalog** module and select a required catalog from the list. 
+1. Click on the three dots located on the left side of the catalog name and select **Manage**.  
 
-![Fig. Property Applies to catalog](media/screen-property-applies-to-catalog.png)
+     ![manage properties](media/manage-properties.png){: width="400" height="400"}
 
-![Fig. New Property Added](media/screen-new-catalog-property-added.png)
+1. In the new **Catalog details** blade, select the **Properties** widget. 
+1. The **Property list** blade appears. 
+1. Click **Add property** to open **New property** blade. 
+1. Select the property you need to add:
+     * Catalog property.
+     * Category property.
+     * Product property.
+     * Catalog variation property.
 
-### Adding Category Property
+1. Fill in the fields:
 
-1. The user browses the Catalog Module, selects a catalog from the displayed list, than selects a Category and clicks on the three dots located on the left side of the category name and selects 'Manage' option
-1. The system displays the 'Category details' screen
-1. The selects the 'Properties' widget;
-1. The system will display the Category Properties list with the following types of properties:
-     1. Category properties;
-     1. Product properties;
-     1. Variation properties;
-1. The user clicks the 'Add property' button
-1. The system will open the 'Edit property information' screen;
-1. The user enters the new property information, selects 'Apply to category' and saves the changes;
-1. The system will create a new Category property, which will be displayed on the list of Category properties.
+     | Field                      	| Description                                                                                                                                                                                        	|
+     |----------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+     | **Property name**          	| Name of the property in the property list.                                                                                                                                                         	|
+     | **Display name**           	| The property name that is publicly shown or displayed to others (optional).                                                                                                                        	|
+     | **Display order**          	| Position of the property in the property list. If no number is selected, the properties are listed alphabetically.                                                                                 	|
+     | **Dictionary** switch      	| Enables selecting value from a dictionary.<br>![dictionary](media/dictionary-switch.png){: width="350" height="300"} <br>Activates dictionary field in the **Manage property** blade. Select this field to add, edit, and delete dictionary values.           	|
+     | **Multi value** switch     	| Enables entering several property values.<br>![multi-value-switch](media/multi-value-switch.png){: width="350" height="300"}                                                                                                                               	|
+     | **Multi langauge** switch  	| Enables multi-language property values.<br>![multi-language](media/multi-language-switch.png){: width="350" height="300"}                                                                                                                                     	|
+     | **Hidden property** switch 	| If on, excludes properties from xAPI response.                                                                                                                                                     	|
+     | **Applies to**             	| Information about a category the property is applied to.                                                                                                                                           	|
+     | **Value type**             	| Opens a dropdown list with following values:<ul> <li>Short Text.</li> <li>Long Text.</li> <li>Decimal Numbers.</li> <li>Date time.</li> <li>Boolean.</li> <li>Integer.</li> <li>Geo point.</li> </ul> 	|
+     | **Validation rules**       	| Opens **Validation rules** blade.<br> Specify:<ul> <li>If the property is required.</li> <li>A minimum and maximum number of characters.</li> <li>A specific pattern.</li> </ul>                      	|
+     | **Attributes**             	| Opens the **New property attributes** blade to add or delete property attributes.                                                                                                                  	|
 
-![Add Category Property](media/screen-add-category-property.png)
+1. Click **Save** to save changes.
 
-![New category Property added](media/screen-new-category-property-added.png)
+The new catalog property was added to the catalog properties list.
 
-### Adding Product Property
+## Editing properties
 
-1. The user browses the Catalog Module, selects a catalog from the displayed list-> selects  Categories and Items-> selects a Product and clicks on the three dots located on the left side of the category name and selects 'Manage' option or simply clicks on the selected item;
-1. The system will display the 'Physical item details' screen;
-1. The user selects the 'Properties' widget;
-1. The system will open the 'Properties list' screen with the following types of properties:
-     1. Product properties;
-     1. Variation properties.
-1. The user click the 'Add property' button;
-1. The system will display the 'Edit item property' screen;
-1. The user should enter the new item property name and specify the 'Value type' (select from drop-down box). Once the property information is entered, the user saves the changes made;
-1. The system will add the new item property and display it on the 'Properties list'.
+To edit a property:
 
-![Add Product Property](media/screen-add-item-property.png)
+1. Open the **Catalog** module and select a required catalog from the list. 
+1. Click on the three dots located on the left side of the catalog name and select **Manage**.  
+
+     ![manage properties](media/manage-properties.png){: width="400" height="400"}
+
+1. In the new **Catalog details** blade, select the **Properties** widget. 
+1. The **Property list** blade appears. 
+1. Click ![](../tasks/media/pencil.png){: width="30" height="30"} to select a property.
+1. Edit a property.
+1. Click **Save** to save changes.
+
+The property was edited.
+
+## Deleting properties
+
+To delete a property:
+
+1. Open the **Catalog** module and select a required catalog from the list. 
+1. Click on the three dots located on the left side of the catalog name and select **Manage**.  
+
+     ![manage properties](media/manage-properties.png){: width="400" height="400"}
+
+1. In the new **Catalog details** blade, select the **Properties** widget. 
+1. The **Property list** blade appears. 
+1. Click ![](../tasks/media/pencil.png){: width="30" height="30"} to select a property you need to delete.
+1. Click delete and select the appropriate delete option:
+
+     * Remove only Property metadata and keep the values in the related objects.
+     * Delete completely with all related values.
+
+The property was deleted.
