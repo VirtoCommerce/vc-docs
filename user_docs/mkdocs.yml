@@ -82,6 +82,8 @@ plugins:
         redirect_maps:
             'redir.md': 'index.md'
 #    - monorepo
+    - glightbox:
+        zoomable: true
 
 # Project information
 site_name: User Guides
@@ -185,6 +187,11 @@ nav:
       - Managing Inventory: inventory/managing-inventory.md
       - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
       - Settings: inventory/settings.md
+    - Tasks:
+      - Overview: tasks/overview.md
+      - Using Tasks application: tasks/using-application.md
+      - Settings: tasks/settings.md
+      - Roles and permissions: tasks/roles-permissions.md
     - Companies and Contacts:
       - Overview: contacts/overview.md
       - Managing Companies and Contacts: contacts/managing-contacts.md

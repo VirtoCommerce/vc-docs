@@ -30,6 +30,17 @@ To create a new task:
     | Status	    | Current task status. Assigned automatically.                                                                                              |
     | Attachments	| Attachments to the task.                                                                                                                	|
 
+    | Item 	| Description                                                                                                                             	|
+    |------	|-----------------------------------------------------------------------------------------------------------------------------------------	|
+    | 1    	| Select a task type from a dropdown list.<br>Read more about creating and configuring task types in the [Settings](settings.md) section.                             	|
+    | 2    	| Descriptive title.                                                                                                                      	|
+    | 3    	| Task detailed description (optional).                                                                                                   	|
+    | 4    	| Task priority. Select from a dropdown list:<br> <ul> <li>Lowest.</li> <li>Low.</li> <li>Normal.</li><li>High.</li> <li>Highest.</li></ul>  	|
+    | 5    	| Deadline.                                                                                                                               	|
+    | 6    	| From a dropdown list, select the employee the task is assigned to.<br>Read more about [Roles and permissions](roles-permissions.md).                        	|
+    | 7    	| Current task status. **To do** by default.                                                                                              	|
+    | 8    	| Attachments to the task.                                                                                                                	|
+
 1. Click ![Save](media/save.png){: width="30" height="30"} to save changes.
 
 The assignee recieves an email notification of the assigned task.

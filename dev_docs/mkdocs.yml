@@ -27,6 +27,8 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - toc.follow
+        - toc.integrate
+
 markdown_extensions:
      - abbr
      - admonition
@@ -83,6 +85,8 @@ plugins:
         redirect_maps:
             'redir.md': 'index.md'
 #    - monorepo
+    - glightbox:
+        zoomable: true
 
 # Project information
 site_name: Developer Center
@@ -126,7 +130,7 @@ nav:
       - Main Concept: Fundamentals/Data-Import/01-main-concept.md
       - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
     - Indexed Search:
-      - Overview: Fundamentals/Indexed-Search/overview.md 
+      - Overview: Fundamentals/Indexed-Search/overview.md
       - Search Query Syntax: Fundamentals/Indexed-Search/search-query-syntax-reference.md
       - Indexing:
         - Overview: Fundamentals/Indexed-Search/indexing/overview.md
@@ -191,6 +195,12 @@ nav:
         - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
       - Security in Depth: Fundamentals/Security/security-in-depth.md
       - Configuration: Fundamentals/Security/configuration.md
+    - Logging:
+      - Overview: Fundamentals/Logging/overview.md
+      - How to update to Serilog integrated version: Fundamentals/Logging/how-to-update.md
+      - AppInsights: Fundamentals/Logging/application-insights.md
+      - Extending logging: Fundamentals/Logging/extended-logging.md
+      - Seq log module: Fundamentals/Logging/seq-module.md
   - Configuration Reference:
       - Appsettings.json: Configuration-Reference/appsettingsjson.md
   - Platform Manager:

@@ -31,5 +31,9 @@ To address crucial extension requirements, the platform contains various **exten
     * [Adding New SSO Provider](../Fundamentals/Security/extensions/adding-new-sso-provider.md)
 * Notification extensions:
     * [Extending notification types](../Fundamentals/Notifications/extending-notification-types.md)
+* Logging extension:
+    * [Using MS Azure Application Insights](../Fundamentals/Logging/application-insights.md)
+    * [Using Seq log module](../Fundamentals/Logging/seq-module.md)
+
 
  
