@@ -84,8 +84,6 @@ plugins:
         redirect_maps:
             'redir.md': 'index.md'
 #    - monorepo
-    - glightbox:
-        zoomable: true
 
 # Project information
 site_name: Developer Center
