@@ -1,26 +1,28 @@
 ﻿# Overview
 Virto's Inventory module enables tracking the stock level and managing fulfillment centers.
 
-Generally, inventory is often the largest item a business has, meaning it must be accurately monitored. The inventory is counted and valued at the end of each accounting period to determine the company profits or losses.
-
 In the ecommerce sector, day-to-day inventory management helps increase business intelligence and visibility. Ecommerce business owners have better ongoing control when they constantly keep an eye on their inventory.
 
 ## Related Components
-To view the source code of Virto Commerce Inventory module, check out our [GitHub repository](https://github.com/VirtoCommerce/vc-module-inventory).
 
-To download the latest Inventory module release, click [here](https://github.com/VirtoCommerce/vc-module-inventory/releases).
+[View the source code of the Inventory module](https://github.com/VirtoCommerce/vc-module-inventory){ .md-button }
+
+[Download latest Inventory module release](https://github.com/VirtoCommerce/vc-module-inventory/releases){ .md-button }
 
 ## Key Features
-Virto's Inventory module supplies the following key features:
+The Inventory module by Virto offers the following essential features:
 
-+ Inventory and stock tracking: Keep your inventory up-to-date and provide the correct in-stock item number, each time, every time  
-+ Managing fulfillment centers: Add as many fulfillment centers as you need and edit their details
-+ Pre-oder and backorder: Allow your customers to pre-order items 
-+ Easy customization: Tailor the Inventory module to your needs
+* Comprehensive inventory and stock tracking: Ensure accurate and real-time inventory management, consistently delivering precise in-stock item counts.
 
-## More Info
-Read on to learn how to:
+* Efficient fulfillment center management: Seamlessly integrate multiple fulfillment centers, enabling effortless editing of their specific details.
 
-+ [Work with inventory](managing-inventory.md)
-+ [Manage fulfillment centers](managing-fulfillment-centers.md)
-+ [Manage the Inventory module settings](settings.md)
+* Pre-order and backorder capabilities: Empower your customers with the ability to pre-order items, optimizing sales and enhancing customer satisfaction.
+
+* Streamlined customization options: Easily customize the Inventory module to align with your unique business requirements, fostering a tailored and efficient inventory management solution.
+
+## Related links
+
+* [Work with inventory](managing-inventory.md)
+* [Manage fulfillment centers](managing-fulfillment-centers.md)
+* [Manage the Inventory module settings](settings.md)
+* [Managing product availability](../catalog/setting-product-availability.md)

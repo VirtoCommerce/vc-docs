@@ -12,9 +12,9 @@ This is a guide to installing VirtCommerce in demo mode on Windows using Virto C
 ## Installation Process
 To install the Virto Commerce platform using CLI:
 
-1. Run `1dotnet tool install -g VirtoCommerce.GlobalTool` to install vc-build.
-1. Create an empty folder on your local disk for the platform files. To install it on your C drive, type `1cd c:\vc-platform`
-1. Run `1vc-build install` to install both platform and modules with the latest versions.
+1. Run `dotnet tool install -g VirtoCommerce.GlobalTool` to install vc-build.
+1. Create an empty folder on your local disk for the platform files. To install it on your C drive, type `cd c:\vc-platform`
+1. Run `vc-build install` to install both platform and modules with the latest versions.
 
 Now you have the latest platform application release with the default module settings installed to your `C:\vc-platform` folder.
 
