@@ -18,7 +18,7 @@ To create a new task:
 
 1. Select **All tasks** and click ![Create](media/create.png){: width="25" height="25"}.
 
-    ![New task](media/create-new-tasks.png)
+1. Fill in the fields:
 
     | Item 	| Description                                                                                                                             	|
     |------	|-----------------------------------------------------------------------------------------------------------------------------------------	|
@@ -48,7 +48,7 @@ To process the assigned task:
 
 1. Process the task:
 
-    * Click ![Complete](media/tick-complete.png){: width="25" height="25"}. The task wil be archived with the **Done** status. 
+    * Click ![Complete](media/tick-complete.png){: width="25" height="25"} to complete the task. The task wil be archived with the **Done** status. 
     * Click ![Reject](media/reject.png){: width="25" height="25"} to reject the task. The task wil be archived with the **Canceled** status.
     * Click ![Restore](media/restore.png){: width="25" height="25"} to restore the original version of the task.
     * Click ![Save](media/save.png){: width="30" height="30"} to save changes.
