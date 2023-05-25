@@ -132,6 +132,7 @@ nav:
         - Managing Properties: catalog/managing-properties.md
         - Managing Search Index: catalog/managing-search-index.md
         - Product Indexing: catalog/product-indexing.md
+        - Managing Product Availability: catalog/setting-product-availability.md
         - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
         - Viewing Catalog Properties: catalog/view-properties.md
         - Viewing Product Variations: catalog/view-product-variations.md
@@ -224,6 +225,9 @@ nav:
       - Overview: integrations/google-analytics/overview.md
       - Integration: integrations/google-analytics/integration.md
       - Settings: integrations/google-analytics/settings.md
+    - Hotjar:
+      - Overview: integrations/hotjar/overview.md
+      - Getting started: integrations/hotjar/getting-started.md
 extra:
     social:
       - icon: fontawesome/brands/github
