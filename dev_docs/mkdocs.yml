@@ -22,14 +22,11 @@ theme:
     icon:
         repo: fontawesome/brands/github
     features:
-        - navigation.sections
         - navigation.tracking
         - navigation.instant
         - navigation.tabs
         - navigation.tabs.sticky
-        - navigation.sections
         - toc.follow
-        - toc.integrate
 
 markdown_extensions:
      - abbr
