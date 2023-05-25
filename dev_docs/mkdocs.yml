@@ -27,7 +27,6 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - toc.follow
-        - toc.integrate
 
 markdown_extensions:
      - abbr
