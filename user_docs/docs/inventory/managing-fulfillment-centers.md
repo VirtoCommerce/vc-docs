@@ -1,29 +1,49 @@
 ﻿# Fulfillment Centers
-Fulfillment centers are processing units involved in receiving, processing, and delivering orders to end customers. Usually, fulfillment in ecommerce includes receiving goods from a supplier, their storage, order processing, and shipping.
+Fulfillment centers are processing units involved in receiving, processing, and delivering orders to end customers. The fulfillment process in e-commerce includes the following steps:
 
-## Fulfillment Lifecycle
-In Virto Commerce, the fulfillment lifecycle looks as follows:
+* Receiving goods from a supplier.
+* Storing the received goods.
+* Processing customer orders.
+* Shipping the orders to customers.
 
-1. *Shipment created:* As the first step of fulfillment, we create shipment, which may include one or more items in the order. Each order can contain one or more shipments.
-2. *Items assigned:* Once the shipment is created, we check whether the items ordered are available; if they are, they get assigned to the relevant shipment.
-3. *Released for picking or packaging:* The goods assigned are released for picking or packaging by a customer service representative (CSR).
-4. *Packaging:* The goods are packed according to the shipping requirements, e.g., fragile items, special marking, etc.
-5. *Shipping:* The packed items are sent to the delivery service for shipping.
+## Adding and editing fulfillment center
 
-## Managing Fulfillment Centers
-The Inventory module enables managing multiple fulfillment centers. To access the fulfillment center list, navigate to ***More -> Catalog -> Categories and items -> Item details*** and select the ***Fulfillment centers*** widget:
+The Inventory module enables managing multiple fulfillment centers. 
 
-![Fulfillment centers widget](media/fulfillment-centers-widget.png)
+To add or edit a fulfillment center:
 
-To view the details of a specific fulfillment center and edit them, or add a new fulfillment center, click ***Managing fulfillment centers***:
+1. Go to **Catalog** -> **Categories and items** -> **Item details** and select the **Fulfillment centers** widget:
 
-![Manage fulfillment centers button](media/manage-fulfillment-centers-button.png)
+	![Fulfillment centers widget](media/fulfillment-centers-widget.png)
 
-Click the fulfillment center which you need to edit the details of to open the following screen:
+1. Click **Managing fulfillment centers** to view the list of fulfillment centers. 
 
-![Editing fulfillment center](media/editing-fulfillment-center.png)
+	![Manage fulfillment centers button](media/manage-fulfillment-centers-button.png)
 
-As the image shows, you can edit fulfillment center description (both long and short) in the HTML/Markdown format, provide location, and edit address.
+1. Click the fulfillment center you need to edit or **Add** to add a new one. This opens the following screen:
 
-!!! tip
-	To add a new fulfillment center, click the ***Add*** button on the top toolbar. This will open the ***New fulfillment screen***, where you will be able to add the same details as above.
+	![Editing fulfillment center](media/editing-fulfillment-center.png)
+
+1. Fill in the fields:
+
+	| Field                 	| Description                                                                                                                               	|
+	|-----------------------	|-------------------------------------------------------------------------------------------------------------------------------------------	|
+	| **Name**              	| Fulfillment center name.                                                                                                                  	|
+	| **Location**          	| Latitude and longitude separated with a comma without spaces. Example: 41.40338,2.17403.                                                  	|
+	| **Outer ID**          	| Unique ID for connecting the fulfillment center with an outer system.                                                                     	|
+	| **Address** widget      	| Specify:<ul><li>Country.</li><li>State/province.</li><li>City.</li><li>Address.</li><li>ZIP code.</li><li>Email.</li><li>Phone.</li></ul> 	|
+	| **Short description** 	| Short description of the fullfillment center in the HTML/Markdown format.                                                                 	|
+	| **Description**       	| Detailed fulfillment center description in the HTML/Markdown format.                                                                      	|
+
+1. Click **Save** to save the changes.
+
+## Deleting fullfillment center
+
+To delete a fulfillment center:
+
+1. Go to **Catalog** -> **Categories and items** -> **Item details** -> **Fulfillment centers**.
+1. Click **Managing fulfillment centers** to see the list of fulfillment centers.
+	* Click three dots on the left side of each item of the fullfillment center list and click **Delete** in the popup menu.
+	* Click the fulfillment center you need to delete and then click **Delete** in the new blade.
+
+Once you confirm the deletion, the fulfillment center will be permanently removed.
