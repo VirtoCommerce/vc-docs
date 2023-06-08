@@ -27,6 +27,7 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - toc.follow
+        - toc.integrate
 
 markdown_extensions:
      - abbr
@@ -35,6 +36,14 @@ markdown_extensions:
      - def_list
      - footnotes
      - md_in_html
+     - pymdownx.critic
+     - pymdownx.caret
+     - pymdownx.keys
+     - pymdownx.mark
+     - pymdownx.tilde
+     - pymdownx.highlight
+     - pymdownx.inlinehilite
+
      - toc:
          permalink: true
      - pymdownx.arithmatex:
@@ -218,16 +227,54 @@ nav:
       - Queries:
         - Product: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/01-product.md
         - Products: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/02-products.md
+        - Category: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/category.md
         - Categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/03-categories.md
-        - Properties: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/04-properties.md
         - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/05-property.md
+        - Properties: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/04-properties.md
         - Fulfullment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/06-fulfillment-center.md
         - Fulfullment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/07-fulfillment-centers.md
         - Child categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/08-child-categories.md
       - Objects:
         - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/01-ProductType.md
-        - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/02-CategoryType.md
-        - FulfullmentCenterType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/03-FulfillmentCenterType.md
+        - Category: 
+          - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryType.md
+          - CategoryDescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType.md
+        - DescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType.md
+        - VariationType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType.md
+        - AvailabilityData: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/AvailabilityData.md
+        - ImageType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ImageType.md
+        - Price:
+          - PriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/PriceType.md
+          - TierPriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/TierPriceType.md
+          - CatalogDiscountType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/CatalogDiscountType.md
+        - Property: 
+          - PropertyType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/Property.md
+          - PropertyDictItemConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemConnection.md
+          - PropertyDictItemEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemEdge.md
+          - PropertyDictItem: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItem.md
+        - Asset: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Asset.md
+        - PageInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo.md
+        - InventoryInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo.md
+        - SeoInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo.md
+        - VideoConnection: 
+          - VideoConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection.md
+          - VideoEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge.md
+          - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
+        - Outline Type:
+          - Outline Type: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType/OutlineType.md
+          - Outline ItemType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType/OutlineItemType.md
+        - Breadcrumb: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb.md
+        - Commonvendor:
+          - Commonvendor: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor.md
+          - Rating: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Rating.md
+        - ProductAssociation: 
+          - ProductAssociationConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationConnection.md
+          - ProductAssociationEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationEdge.md
+          - ProductAssociation: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociation.md
+        - VideoConnection: 
+          - VideoConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection.md
+          - VideoEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge.md
+          - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
       - Examples:
         - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/01-full-text-search.md
         - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/02-fuzzy-search.md

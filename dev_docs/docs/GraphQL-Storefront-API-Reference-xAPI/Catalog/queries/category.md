@@ -1,11 +1,11 @@
-# Property ==~query~==
+# Category ==~query~==
 
-This connection allows you to get metadata for a specific catalog property.
+This connection allows you to search for a specific category.
 
 <br>
 
 <div style="display: flex;">
-    <div style="flex: 0 0 55%;">
+    <div style="flex: 0 0 50%;">
         <style type="text/css">
         .tg  {border:none;border-collapse:collapse;border-spacing:0;}
         .tg td{border-color:white;border-style:solid;border-width:1px;font-family:Circular Std;font-size:14px;
@@ -20,20 +20,34 @@ This connection allows you to get metadata for a specific catalog property.
         </style>
         <table class="tg">
         <thead>
-          <tr>
+        <tr>
             <th class="tg-0lax"><code>id</code> {==String!==}</th>
-            <th class="tg-0lax">Identifies the property.</th>
-          </tr>
+            <th class="tg-0lax">Identifies the category.</th>
+        </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="tg-0lax"><code>cultureName</code> {==String==}</td>
+        <tr>
+            <td class="tg-0lax"><code>storeId</code> {==String!==}</td>
+            <td class="tg-0lax">Specifies the ID of the store to retrieve pages from.</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax"><code>userId</code> {==String==}</td>
+            <td class="tg-0lax">Identifies the user.</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax"><code>currencyCode</code> {==String!==}</td>
+            <td class="tg-0lax">A standardized code representing a specific currency.</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax"><code>cultureName</code> {==String!==}</td>
             <td class="tg-0lax">Specifies the language.</td>
-          </tr>
+        </tr>
         </tbody>
         </table>
     </div>
-    <div style="flex: 0 0 45%;">
+    <div style="flex: 0 0 10%;">
+    </div>
+    <div style="flex: 0 0 40%;">
         <style>
     .tab {
         display: none;
@@ -65,51 +79,40 @@ This connection allows you to get metadata for a specific catalog property.
     <p><pre>
     ```json
     {
-      property (id:"43d14478-d142-4a65-956f-0a308d0c4ee8", cultureName:"de-DE")
-      {
-        propertyDictItems
-        {
-          items
-          {
-            value
-          }
+        category (storeId:"B2B-store",
+        id:"02fe37dcaeb2458a831011abe43fd335", 
+        cultureName:"en-US", currencyCode:"USD")  
+        {    
+            name    
+            code    
+            id    
+            level    
+            path    
+            parent    
+            {      
+                name    
+            }  
         }
-      }
     }
     ```
     </pre></p>
 </div>
 
 <div id="Return" class="tab">
-    <p><pre>
-    ```json
+    <p><pre><code>
     {
-      "data": {
-        "property": {
-          "propertyDictItems": {
-            "items": [
-              {
-                "value": "3DR"
-              },
-              {
-                "value": "Apple"
-              },
-              {
-                "value": "Asus"
-              },
-              {
-                "value": "Beats By Dr Dre"
-              },
-              {
-                "value": "BLU"
-              }
-            ]
-          }
-        }
-      }
+        "data": {
+            "category": {
+            "name": "Bolts",
+            "code": "cd9312",
+            "id": "02fe37dcaeb2458a831011abe43fd335",
+            "level": 1,
+            "path": "Bolts",
+            "parent": null
+            }
+        }
     }
-    ```
-    </pre></p>
+    </code></pre></p>
 </div>
 
 <script>
@@ -130,6 +133,3 @@ This connection allows you to get metadata for a specific catalog property.
 
     </div>
 </div>
-
-
-

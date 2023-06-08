@@ -1,11 +1,12 @@
 # Getting Started
-The Experience API (xAPI) project is primarily an intermediated layer between clients and enterprise  services powered by GraphQL protocol and is tightly coupled to a specific user/touchpoint experience with fast and reliable access. At the same time, it represents an implementation of the *back end for front end* (BFF) design pattern.
+The Experience API (xAPI) project is primarily an intermediated layer between clients and enterprise  services powered by GraphQL protocol. 
+It is tightly coupled to a specific user/touchpoint experience with fast and reliable access. At the same time, it represents an implementation of the back end for front end (BFF) design pattern.
 
 ## Prerequisites
 To run our xAPI, you will need:
 
-- VC platform 3.0 or later
-- The platform configured to use ElasticSearch engine
+* VC platform 3.0 or later.
+* The platform configured to use ElasticSearch engine.
 
 ```json title="appsettings.json"
 "Search": {
@@ -20,47 +21,26 @@ To run our xAPI, you will need:
     "OrderFullTextSearchEnabled": true
 }
 ```
+## Enabling indexing
 
-1. Enable *Store full object in index modules* settings for catalog and pricing modules:
+To enable indexing:
 
-    ![image](https://user-images.githubusercontent.com/7566324/82232622-29adf380-992f-11ea-8df6-9d08fb0b421a.png)
-    ![image](https://user-images.githubusercontent.com/7566324/82232762-5530de00-992f-11ea-8c8c-22766f8fa121.png)
+1. Open **Settings**, choose **Catalog**, and then choose **Search**.
+1. Turn **Store serialized catalog objects in the index** to on and click **Save**.
 
-2. Rebuild index.
+    ![Catalog-settings-enable](media/catalog-settings-enable.png)
 
-## Test Environment
+1. Open **Settings**, choose **Pricing**, and then choose **Search**.
+1. Turn **Enable product price indexing** to on and click **Save**.
 
-+ Deploy `vc-module-experience-api` into the platform of 3.0 version or latest, following [this article] (https://github.com/VirtoCommerce/vc-platform/blob/master/docs/developer-guide/deploy-module-from-source-code.md)
-+ Restart the platform instance
-+ Open GraphQL UI playground in the browser: `http://{platform url}/ui/playground`
+    ![Pricing-settings-enable](media/pricing-settings-enable.png)
 
-**Sample requests:**
+1. Rebuild index.
 
-```json
-{
-  product(id: "0f7a77cc1b9a46a29f6a159e5cd49ad1")
-  {
-    id
-    name
+## Using test environment
 
-    properties {
-      name
-      type
-      values
-    }
-  }
+To start using test environment:
 
-  products(query: "sony" fuzzy: true filter: "price.USD:(400 TO 1000]")
-  {
-    totalCount
-    items {
-       name
-       id
-       prices (currency: "USD") {
-        list
-        currency
-      }
-    }
-  }
-}
-```
+1. Deploy `vc-module-experience-api` into the platform of 3.0 version or later according to [this article](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/developer-guide/deploy-module-from-source-code.md).
+1. Restart the platform instance.
+1. Open GraphQL UI playground in browser `http://{platform url}/ui/playground`.

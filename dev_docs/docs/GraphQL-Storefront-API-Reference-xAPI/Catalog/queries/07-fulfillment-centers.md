@@ -1,93 +1,207 @@
-# Fulfillment Centers
+# fullfillmentCenters ==~query~==
 
 This connection allows you to search for fulfillment centers.
-
-## Definition
-
-```
-fulfillmentCenters(after: String, first: Int, storeId: String, query: String, sort: String, fulfillmentCenterIds: [String])
-```
-
-## Arguments
-
-|#|Name        |Type         |Description|
-|--|-----------|-------------|-----------|
-| 1|first |IntGraphType |Pagination size. Default is 20|
-| 2|after |StringGraphType |Pagination cursor|
-| 3|sort |StringGraphType |The sort expression|
-| 4|storeId |StringGraphType |Search fulfillment centers by store ID|
-| 5|query |StringGraphType |Search by fulfillment center name|
-| 6|fulfillmentCenterIds |List of StringGraphType |Get fulfillment centers by provided IDs. Note: this argument is exclusive, if set it will override all other arguments|
-
-
-## Example 1
-
-Getting two fulfillment centers by known IDs:
-
-```js
-query {
-  fulfillmentCenters(
-    fulfillmentCenterIds: ["vendor-fulfillment", "los-angeles-fulfillment"]
-  ) {
-    totalCount
-    items {
-      id
-      name
-      shortDescription
-      address {
-        city
-        countryCode
-      }
+<br>
+<br>
+<div style="display: flex;">
+    <div style="flex: 0 0 45%;">
+    <style type="text/css">
+    .tg  {border:none;border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:white;border-style:solid;border-width:1px;font-family:Circular Std;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Circular Std;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-0lax{border-color:#ffffff;text-align:left;vertical-align:top}
+    .tg .tg-0pky:nth-child(1),
+    .tg .tg-0lax:nth-child(1) {width: 40%;}
+    .tg .tg-0pky:nth-child(2),
+    .tg .tg-0lax:nth-child(2) {width: 60%;}
+    </style>
+    <table class="tg">
+      <tr>
+        <td class="tg-0lax"><code>after</code> {==String==}</th>
+        <td class="tg-0lax">Defines a cursor value to paginate through the results.</th>
+      </tr>
+    <tbody>
+      <tr>
+        <td class="tg-0lax"><code>first</code> {==Int==}</td>
+        <td class="tg-0lax">Indicates the number of pages in a single query.</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><code>storeId</code> {==String==}</td>
+        <td class="tg-0lax">Specifies the ID of the store to retrieve pages from.</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><code>query</code> {==String==}</td>
+        <td class="tg-0lax">Performs the full-text search.</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><code>sort</code> {==String==}</td>
+        <td class="tg-0lax">Specifies the sorting order of the returned products.</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><code>fullfillmentCenters</code><br>{==String==}</td>
+        <td class="tg-0lax">Identifies fullfillment centers.<br>This argument is exclusive! If set, it overrides all other arguments.</td>
+      </tr>
+    </tbody>
+    </table>
+    </div>
+    <div style="flex: 0 0 5%;">
+    </div>
+    <div style="flex: 0 0 50%;">
+        <style>
+    .tab {
+        display: none;
     }
-  }
-}
-```
 
-## Example 2
-
-Getting all fulfillment centers attached to B2B Store: 
-
-```js
-query {
-  fulfillmentCenters(
-    storeId: "B2B-store"
-  )
-   {
-    totalCount
-    items {
-      id
-      name
-      outerId
-      geoLocation
+    .tab.active {
+        display: block;
     }
-  }
-}
-```
 
-## Example 3
+    .tab-button {
+        background-color: #f2f2f2;
+        border: none;
+        color: #000;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
 
-Requesting stock quantities for a specific product across different fulfilment centres to track inventory levels, manage product availability, and make informed decisions about shipping and fulfilment:
-```js
-{
-  products (storeId:"B2B-store")
-  {
-    items{
-      name
-      availabilityData
-      {
-        isActive
-        inventories
-        {
-          fulfillmentCenterId
-          fulfillmentCenterName
-          inStockQuantity
+    .tab-button.active {
+        background-color: #ccc;
+    }
+</style>
+
+<div>
+    <button class="tab-button" onclick="openTab('Query 1')">Query 1</button>
+    <button class="tab-button" onclick="openTab('Return 1')">Return 1</button>
+    <button class="tab-button" onclick="openTab('Query 2')">Query 2</button>
+    <button class="tab-button" onclick="openTab('Return 2')">Return 2</button>
+</div>
+
+<div id="Query 1" class="tab active">
+    <p><pre>
+    ```json
+    {
+      fulfillmentCenters(
+        fulfillmentCenterIds: ["vendor-fulfillment", "los-angeles-fulfillment"]
+      ) {
+        totalCount
+        items {
+          id
+          name
+          shortDescription
+          address {
+            city
+            countryCode
+          }
         }
       }
     }
-  }
-}
-```
-Result: 
+    ```
+    </pre></p>
+</div>
 
-![Result](../../media/request-stock-quantity.png)
+<div id="Return 1" class="tab">
+    <p><pre>
+    ```json
+    {
+      "data": {
+        "fulfillmentCenters": {
+          "totalCount": 1,
+          "items": [
+            {
+              "id": "vendor-fulfillment",
+              "name": "Los Angeles Branch",
+              "shortDescription": null,
+              "address": {
+                "city": "Los Angeles",
+                "countryCode": "USA"
+              }
+            }
+          ]
+        }
+      }
+    }    
+    ```
+    </pre></p>
+</div>
 
+<div id="Query 2" class="tab">
+    <p><pre>
+    ```json
+    {
+      products (storeId:"B2B-store")
+      {
+        items{
+          name
+          availabilityData
+          {
+            isActive
+            inventories
+            {
+              fulfillmentCenterId
+              fulfillmentCenterName
+              inStockQuantity
+            }
+          }
+        }
+      }
+    }
+    ```
+    </pre></p>
+</div>
+
+<div id="Return 2" class="tab">
+    <p><pre>
+    ```json
+    {
+      "data": {
+        "products": {
+          "items": [
+            {
+              "name": "SunBriteTV DS-3214P-BL 32\" Weatherproof LED - Portrait Mode (Black)",
+              "availabilityData": {
+                "isActive": true,
+                "inventories": [
+                  {
+                    "fulfillmentCenterId": "tulsa-branch",
+                    "fulfillmentCenterName": "Tennessee Branch",
+                    "inStockQuantity": 760
+                  },
+                  {
+                    "fulfillmentCenterId": "142ba5568ae4454aad553ece41b9c3b5",
+                    "fulfillmentCenterName": "Chicago Branch",
+                    "inStockQuantity": 10
+                  },
+                  {
+                    "fulfillmentCenterId": "vendor-fulfillment",
+                    "fulfillmentCenterName": "Los Angeles Branch",
+                    "inStockQuantity": 5
+                  }
+                }
+            }
+          ]
+        }
+      }
+    }
+    ```
+    </pre></p>
+</div>
+<script>
+    function openTab(tabName) {
+        var tabs = document.getElementsByClassName("tab");
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var j = 0; j < tabButtons.length; j++) {
+            tabButtons[j].classList.remove("active");
+        }
+        document.querySelector('[onclick="openTab(\'' + tabName + '\')"]').classList.add("active");
+    }
+</script>
+
+    </div>
+</div>

@@ -27,7 +27,6 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - toc.follow
-
 markdown_extensions:
      - abbr
      - admonition
