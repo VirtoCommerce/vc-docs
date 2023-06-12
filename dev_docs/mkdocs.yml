@@ -295,7 +295,7 @@ nav:
         - Pages: GraphQL-Storefront-API-Reference-xAPI/Pages/pages.md
     - Linklists:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Linklists/overview.md
-      - Queries: 
+      - Queries:
           - Menu: GraphQL-Storefront-API-Reference-xAPI/Linklists/menu.md
           - Menus: GraphQL-Storefront-API-Reference-xAPI/Linklists/menus.md
 
@@ -397,6 +397,7 @@ extra:
 
 extra_javascript:
     - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
 
 extra_css:
     - assets/stylesheets/main.css

@@ -146,6 +146,7 @@ extra:
               link: https://github.com/VirtoCommerce/vc-samples
 extra_javascript:
     - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
 
 extra_css:
     - assets/stylesheets/main.css
