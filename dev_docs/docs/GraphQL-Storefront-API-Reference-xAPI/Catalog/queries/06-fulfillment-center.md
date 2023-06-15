@@ -1,41 +1,73 @@
-# Fulfillment Center
+# FulfillmentCenter ==~query~==
 
-This query allows you to get a fulfillment center by its ID.
+This query allows you to get a fulfillment center by its Id.
 
-## Definition
+## Argument
 
-```
-fulfillmentCenter(id: !string)
-```
+| Argument           	| Description                         	|
+|--------------------	|-------------------------------------	|
+| `id` {==String!==} 	| Identifies the fullfillment center. 	|
 
-## Arguments
+## Possible returns
 
-|#|Name        |Type         |Description|
-|--|-----------|-------------|-----------|
-| 1|id |Non null StringGraphType |Fulfillment center id |
+| Possible return                                	                    | Description                       	|
+|--------------------------------------------------------------------	|------------------------------------	|
+| [`FulfillmentCenterType`](../objects/FulfillmentCenterType.md) 	    | A type or category of properties.  	|
 
-
-## Example
-Getting a single fulfillment center with the top three nearest fulfillment centers:
-
-```js
-query {
-  fulfillmentCenter(
-    id: "vendor-fulfillment"
-  ) {
-    id
-    name
-    description
-    shortDescription
-    outerId
-    geoLocation
-    address {
-      city
+## Examples
+<hr />
+=== "Query"
+    ```json
+    {
+      fulfillmentCenter(
+        id: "vendor-fulfillment"
+      ) {
+        id
+        name
+        description
+        shortDescription
+        outerId
+        geoLocation
+        address {
+          city
+        }
+        nearest (take: 3) {
+          name
+          id
+        }
+      }
     }
-    nearest (take: 3) {
-      name
-      id
-    }
-  }
-}
-```
+    ```
+
+=== "Return"
+    ```json
+      {
+        "data": {
+          "fulfillmentCenter": {
+            "id": "vendor-fulfillment",
+            "name": "Los Angeles Branch",
+            "description": "<h3>Open 24/7</h3>,
+            "shortDescription": null,
+            "outerId": null,
+            "geoLocation": null,
+            "address": {
+              "city": "Los Angeles"
+            },
+            "nearest": [
+              {
+                "name": "Chicago Branch",
+                "id": "142ba5568ae4454aad553ece41b9c3b5"
+              },
+              {
+                "name": "New York Branch",
+                "id": "c20d27cdb09c4c7abd5d78a71510ab83"
+              },
+              {
+                "name": "Tennessee Branch",
+                "id": "tulsa-branch"
+              }
+            ]
+          }
+        }
+      }    
+    ```
