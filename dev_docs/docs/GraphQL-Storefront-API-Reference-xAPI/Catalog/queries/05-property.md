@@ -1,35 +1,63 @@
-# Property
+# Property ==~query~==
 
 This connection allows you to get metadata for a specific catalog property.
 
-## Definition
-
-```
-property(id: !string, cultureName: string)
-```
-
 ## Arguments
 
-|#|Name        |Type                     |Description                |
-|--|------------|-------------------------|---------------------------|
-| 1|id      |Non null StringGraphType |Property id            |
-| 2|cultureName      |StringGraphType |Culture name (e.g. "en-US")            |
+| Argument                   	| Description              	|
+|----------------------------	|--------------------------	|
+| `id` {==String!==}        	| Identifies the property. 	|
+| `cultureName` {==String==} 	| Specifies the language.  	|
 
-## Example
+## Possible returns
 
-Getting a single property with dictionary items for a specific culture:
+| Possible return                                	| Description                       	|
+|------------------------------------------------	|------------------------------------	|
+| [`Property`](../objects/Property/Property.md) 	| A type or category of properties.  	|
 
-```json
-{
-  property (id:"43d14478-d142-4a65-956f-0a308d0c4ee8", cultureName:"de-DE")
-  {
-    propertyDictItems
+## Examples
+<hr />
+=== "Query"
+    ```json
     {
-      items
+      property (id:"43d14478-d142-4a65-956f-0a308d0c4ee8", cultureName:"de-DE")
       {
-        value
+        propertyDictItems
+        {
+          items
+          {
+            value
+          }
+        }
       }
     }
-  }
-}
-```
+    ```
+
+=== "Return"
+    ```json
+    {
+      "data": {
+        "property": {
+          "propertyDictItems": {
+            "items": [
+              {
+                "value": "3DR"
+              },
+              {
+                "value": "Apple"
+              },
+              {
+                "value": "Asus"
+              },
+              {
+                "value": "Beats By Dr Dre"
+              },
+              {
+                "value": "BLU"
+              }
+            ]
+          }
+        }
+      }
+    }
+    ```
