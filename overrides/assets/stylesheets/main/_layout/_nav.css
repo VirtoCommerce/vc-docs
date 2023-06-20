@@ -1,9 +1,12 @@
-.md-nav__item .md-nav__icon {
+.md-nav .md-nav__palette {
     display: none;
 }
 
-.md-nav .md-nav__palette {
-    display: none;
+@media screen and (min-width: 76.25em) {
+    .md-nav__icon {
+        height: 10px;
+        width: 10px;
+    }
 }
 
 @media screen and (max-width: 76.1875em) {
