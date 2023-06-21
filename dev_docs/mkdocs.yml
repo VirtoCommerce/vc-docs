@@ -408,9 +408,13 @@ nav:
     - How to Register a New App: custom-apps-development/how-to-register-new-app.md
     - VC Shell:
       - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
-      - Getting Started: custom-apps-development/vc-shell/getting-started.md
-
-
+      - Getting Started: 
+        - Getting Started: custom-apps-development/vc-shell/getting-started.md
+        - Creating First Custom App: custom-apps-development/vc-shell/creating-first-custom-app.md
+      - Essentials:
+        - Navigation: custom-apps-development/vc-shell/navigation.md
+        - Notifications: custom-apps-development/vc-shell/notifications.md
+      - API reference: custom-apps-development/vc-shell/api-reference.md
 
 extra:
     social:

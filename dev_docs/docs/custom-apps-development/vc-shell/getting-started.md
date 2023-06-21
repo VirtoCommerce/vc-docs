@@ -11,11 +11,14 @@ To start using VC shell:
     yarn bootstrap
     ```
 1. Build packages:
-    * All at once.
+
+    <hr />
+    === "All at once"
         ```bash
         yarn build
         ```
-    * One by one.
+
+    === "One by one"
         ```bash
         yarn build-framework:ui
         yarn build-framework:core
@@ -24,11 +27,14 @@ To start using VC shell:
         ```
 
 1. Generate api clients (require .NET Core 6 on Mac OS or Linux):
-    * All at once.
+
+    <hr />
+    === "All at once"
         ```bash
         yarn generate-api-client
         ```
-    * One by one.
+
+    === "One by one"
         ```bash
         yarn generate-api-client:api-client
         yarn generate-api-client:vendor-portal
@@ -40,11 +46,13 @@ To start using VC shell:
     ```
 
 1. Interactive documentation can be:
-    * Run.
+
+    <hr />
+    === "Run"
         ```bash
         yarn storybook-serve
         ```
-    * Built.
+    === "Built"
         ```bash
-         yarn storybook-build
+        yarn storybook-build
         ```
