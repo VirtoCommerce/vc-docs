@@ -14,6 +14,6 @@ document$.subscribe(() => {
     setTimeout(() => {
         const activeLink = document.querySelectorAll("a.md-nav__link--active");
         const scrollWrap = document.querySelector(".md-sidebar__scrollwrap");
-        scrollWrap.scrollTo(0, activeLink[0].getBoundingClientRect().top - scrollWrap.offsetHeight/2 -)
+        scrollWrap.scrollTo(0, activeLink[0].getBoundingClientRect().top - scrollWrap.offsetHeight/2 - 100)
     }, 0);
 });
