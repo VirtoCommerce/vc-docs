@@ -22,9 +22,9 @@ This query allows you to retrieve a list of child categories for a given parent 
 | `ChildCategoriesQueryResponseType` 	                                            | A response for a query that retrieves child categories.           |
 
 ## Examples
-<hr />
+
 === "Query"
-    ```json
+    ```json linenums="1"
     {
     childCategories(storeId:"B2B-Store",
     cultureName:"en-US",
@@ -44,7 +44,7 @@ This query allows you to retrieve a list of child categories for a given parent 
     ```
 
 === "Return"
-    ```json
+    ```json linenums="1"
     {
     "data": {
         "childCategories": {

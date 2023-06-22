@@ -15,9 +15,9 @@ This query allows you to get a fulfillment center by its Id.
 | [`FulfillmentCenterType`](../objects/FulfillmentCenterType.md) 	    | A type or category of properties.  	|
 
 ## Examples
-<hr />
+
 === "Query"
-    ```json
+    ```json linenums="1"
     {
       fulfillmentCenter(
         id: "vendor-fulfillment"
@@ -40,7 +40,7 @@ This query allows you to get a fulfillment center by its Id.
     ```
 
 === "Return"
-    ```json
+    ```json linenums="1"
       {
         "data": {
           "fulfillmentCenter": {

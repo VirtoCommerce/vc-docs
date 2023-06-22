@@ -41,9 +41,8 @@ The `productType` field represents the type or category of the product. It is us
 
 ## Examples
 
-<hr />
 === "Query"
-    ```json
+    ```json linenums="1"
     query {
       products(
         storeId: "B2B-store"
@@ -81,7 +80,7 @@ The `productType` field represents the type or category of the product. It is us
     ```
 
 === "Return"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "products": {

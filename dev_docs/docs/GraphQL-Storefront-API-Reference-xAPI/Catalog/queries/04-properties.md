@@ -21,9 +21,9 @@ This connection allows you to search for catalog property metadata.
 
 
 ## Examples
-<hr />
+
 === "Query 1"
-    ```json
+    ```json linenums="1"
     {
       properties (storeId:"Electronics", cultureName:"de-DE", 
       filter:"keyword:Brand", types:[PRODUCT, VARIATION])
@@ -48,7 +48,7 @@ This connection allows you to search for catalog property metadata.
     ```
 
 === "Return 1"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "properties": {
