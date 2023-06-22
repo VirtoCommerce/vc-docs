@@ -91,10 +91,6 @@
     border: none;
 }
 
-.md-typeset table:not([class]) tbody tr:nth-child(even) {
-    background-color: var(--table-cell);
-}
-
 .md-typeset table:not([class]) th {
     padding: 0.4rem;
     background-color: var(--table-head);

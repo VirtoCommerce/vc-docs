@@ -12,7 +12,7 @@
 
 ## Tech stack
 
-* **lerna** for managing monorepo and its packages dependencies.
-* **Vue 3** as a background for our solution.
-* **webpack** for easy build and deployment based on `vue-cli-service`.
+* **Yarn berry** for managing monorepo and its packages dependencies.
+* **Vue 3** as background for our solution.
+* **Vite** for easy build and deployment.
 * **storybook** for interactive documentation.

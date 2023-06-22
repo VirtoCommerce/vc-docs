@@ -1,4 +1,4 @@
-# Getting Started
+# Start using VC shell
 
 To start using VC shell:
 
@@ -6,13 +6,12 @@ To start using VC shell:
     ```bash
     yarn
     ```
-1. Reinstall or refresh packages dependencies.
-    ```bash
-    yarn bootstrap
-    ```
-1. Build packages:
+2. Clone Vendor Portal from github
+   ```bash
+   yarn vendor-portal-app-init
+   ```
+3. Build packages:
 
-    <hr />
     === "All at once"
         ```bash
         yarn build
@@ -20,39 +19,30 @@ To start using VC shell:
 
     === "One by one"
         ```bash
-        yarn build-framework:ui
-        yarn build-framework:core
-        yarn build-framework:api-client
-        yarn build-apps:vendor-portal
+        yarn build-framework
+        yarn build:import-module
+        yarn build-cli:config
+        yarn build-cli:api-client
+        yarn build-cli:create-vc-app
         ```
 
-1. Generate api clients (require .NET Core 6 on Mac OS or Linux):
-
-    <hr />
-    === "All at once"
-        ```bash
-        yarn generate-api-client
-        ```
-
-    === "One by one"
-        ```bash
-        yarn generate-api-client:api-client
-        yarn generate-api-client:vendor-portal
-        ```
-
-1. Start Vendor Portal with hot reload at localhost:8080
+4. Generate api client (require .NET Core 6 on Mac OS or Linux):
     ```bash
-    yarn serve-apps:vendor-portal
+    yarn generate-api-client:api-client
     ```
 
-1. Interactive documentation can be:
+5. Start Vendor Portal with hot reload at localhost:8080
+    ```bash
+    cd apps/vendor-portal && yarn serve
+    ```
 
-    <hr />
+6. Interactive documentation:
+
     === "Run"
         ```bash
         yarn storybook-serve
         ```
-    === "Built"
+    === "Build"
         ```bash
         yarn storybook-build
         ```
