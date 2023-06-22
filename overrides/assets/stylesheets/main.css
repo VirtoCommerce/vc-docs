@@ -35,6 +35,10 @@
     scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
 }
 
+.md-grid {
+    max-width: 74rem;
+}
+
 @media screen and (min-width: 60em) {
     .md-nav--secondary .md-nav__title {
         box-shadow: none !important;
