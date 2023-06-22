@@ -4,32 +4,32 @@ This connection allows you to search for products.
 
 ## Arguments
 
-| Argument                        	      | Description                                                                                                                                             	|
-|---------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `after`<br>{==String==}               	| Defines a cursor value to paginate through the results.                                                                                                 	|
-| `first` <br>{==Int==}                 	| Indicates the number of pages in a single query.                                                                                                        	|
-| `storeId` <br>{==String!==}           	| Specifies the ID of the store to retrieve pages from.                                                                                                   	|
-| `userId` <br>{==String==}             	| Identifies the user.                                                                                                                                    	|
-| `currencyCode` <br>{==String==}       	| A standardized code representing a specific currency.                                                                                                   	|
-| `query` <br>{==String==}              	| Performs the full-text search.                                                                                                                          	|
-| `cultureName` <br>{==String==}        	| Specifies the language.                                                                                                                                 	|
-| `filter` <br>{==String==}             	| Applies a filter to the query results.                                                                                                                  	|
-| `fuzzy` <br>{==Boolean==}             	| If true, includes slight variations of the search text<br>in the returned products.                                                                        	|
-| `fuzzyLevel` <br>{==Int==}            	| The fuzziness level is measured by the Damerau-Levenshtein distance.<br>It calculates the number of operations required to transform one word into another. 	|
-| `facet` <br>{==String==}              	| Calculates statistical counts to aid in faceted navigation.                                                                                             	|
-| `sort` <br>{==String==}               	| Specifies the sorting order of the returned products.                                                                                                   	|
-| `productIds` <br>{==String==}         	| Identifies specific products within a given store.                                                                                                      	|
+| Argument                     	      | Description                                                                                                                                             	|
+|------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| `after` {==String==}               	| A cursor value to paginate through the results.                                                                                                 	|
+| `first` {==Int==}                 	| The number of pages in a single query.                                                                                                        	|
+| `storeId` {==String!==}           	| The ID of the store to retrieve pages from.                                                                                                   	|
+| `userId` {==String==}             	| The user Id.                                                                                                                                    	|
+| `currencyCode` {==String==}       	| A standardized code of a specific currency.                                                                                                   	|
+| `query` {==String==}              	| Performs the full-text search.                                                                                                                          	|
+| `cultureName` {==String==}        	| The language to retrieve data in.                                                                                                                                 	|
+| `filter` {==String==}             	| Filters query results.                                                                                                                  	|
+| `fuzzy` {==Boolean==}             	| If true, includes slight variations of the search text<br>in the returned products.                                                                       |
+| `fuzzyLevel` {==Int==}            	| The fuzziness level is measured by the Damerau-Levenshtein distance.<br>It calculates the number of operations required to transform one word into another.|
+| `facet` {==String==}              	| Calculates statistical counts to aid in faceted navigation.                                                                                             	|
+| `sort` {==String==}               	| Specifies the sorting order of the returned products.                                                                                                   	|
+| `productIds` {==String==}         	| Identifies specific products within a given store.                                                                                                      	|
 
 ## Possible returns
 
-| Possible return                                          	| Description                           	|
-|---------------------------------------------------------	|---------------------------------------	|
-| [`ProductConnection`](../objects/ProductConnection/ProductConnection.md)            	|  A connection to a list of products.   	|
+| Possible return                                                         	| Description                           	|
+|--------------------------------------------------------------------------	|---------------------------------------	|
+| [`ProductConnection`](../objects/ProductConnection/ProductConnection.md)  |  A connection to a list of products.   	|
 
 ## Examples
-<hr />
+
 === "Query"
-    ```json
+    ```json linenums="1"
     {
         products(
             storeId: "Electronics"
@@ -54,7 +54,7 @@ This connection allows you to search for products.
     ```
 
 === "Return"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "products": {

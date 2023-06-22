@@ -19,9 +19,9 @@ This connection allows you to search for a specific category.
 | [`CategoryType`](../objects/category/CategoryType.md)                 	| The description of a category. 	|
 
 **Examples**
-<hr />
-=== "Query"
-    ```json
+
+=== "Query" 
+    ```json linenums="1"
     {
         category (storeId:"B2B-store",
         id:"02fe37dcaeb2458a831011abe43fd335", 
@@ -40,7 +40,7 @@ This connection allows you to search for a specific category.
     }
     ```
 === "Return"
-    ```json
+    ```json linenums="1"
     {
         "data": {
             "category": {

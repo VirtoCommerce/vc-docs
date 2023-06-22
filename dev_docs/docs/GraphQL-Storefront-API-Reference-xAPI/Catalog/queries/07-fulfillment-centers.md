@@ -20,9 +20,9 @@ This connection allows you to search for fulfillment centers.
 | [`FulfillmentCenterConnection`](../objects/FulfillmentCenterConnection.md) 	    | A data type that describes a fulfillment center.              	|
 
 ## Examples
-<hr />
+
 === "Query 1"
-    ```json
+    ```json linenums="1"
     {
       fulfillmentCenters(
         fulfillmentCenterIds: ["vendor-fulfillment", "los-angeles-fulfillment"]
@@ -42,7 +42,7 @@ This connection allows you to search for fulfillment centers.
     ```
 
 === "Return 1"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "fulfillmentCenters": {
@@ -63,7 +63,7 @@ This connection allows you to search for fulfillment centers.
     }    
     ```
 === "Query 2"
-    ```json
+    ```json linenums="1"
     {
       products (storeId:"B2B-store")
       {
@@ -84,7 +84,7 @@ This connection allows you to search for fulfillment centers.
     }
     ```
 === "Return 2"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "products": {

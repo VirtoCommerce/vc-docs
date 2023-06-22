@@ -20,9 +20,8 @@ This query allows you to get a product by its Id and calculate all fields based 
 
 ## Examples
 
-<hr />
 === "Query 1"
-    ```json
+    ```json linenums="1"
     {
       product(
           id: "8b7b07c165924a879392f4f51a6f7ce0"
@@ -38,7 +37,7 @@ This query allows you to get a product by its Id and calculate all fields based 
     ```
 
 === "Return 1"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "product": {
@@ -50,7 +49,7 @@ This query allows you to get a product by its Id and calculate all fields based 
     ```
 
 === "Query 2"
-    ```json
+    ```json linenums="1"
     {
         product(
                 id:"9cbd8f316e254a679ba34a900fccb076" 
@@ -74,7 +73,7 @@ This query allows you to get a product by its Id and calculate all fields based 
     ```
 
 === "Return 2"
-    ```json
+    ```json linenums="1"
         {
         "data": {
             "product": {
