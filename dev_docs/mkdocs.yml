@@ -367,7 +367,7 @@ nav:
         - Pages: GraphQL-Storefront-API-Reference-xAPI/Pages/pages.md
     - Linklists:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Linklists/overview.md
-      - Queries: 
+      - Queries:
           - Menu: GraphQL-Storefront-API-Reference-xAPI/Linklists/menu.md
           - Menus: GraphQL-Storefront-API-Reference-xAPI/Linklists/menus.md
 
@@ -428,8 +428,8 @@ nav:
     - How to Register a New App: custom-apps-development/how-to-register-new-app.md
     - VC Shell:
       - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
-      - Getting Started: 
-        - Getting Started: custom-apps-development/vc-shell/getting-started.md
+      - Getting Started:
+        - Start using VC shell: custom-apps-development/vc-shell/getting-started.md
         - Creating First Custom App: custom-apps-development/vc-shell/creating-first-custom-app.md
       - Essentials:
         - Navigation: custom-apps-development/vc-shell/navigation.md

@@ -2,7 +2,7 @@
 
 An application can have two types of notifications:
 
-* Toasts (push). They are used for short notifications, such as new push notification or result of some action. 
+* Toasts (push). They are used for short notifications, such as new push notification or result of some action.
 * A list of notifications in the top bar menu (dropdown). It is used to display detailed notifications with their name, time, and description e.g. status of long running tasks.
 
 To start working with push notifications, import `useNotifications` composable from @vc-shell/framework.
@@ -19,8 +19,8 @@ There are two options for displaying the type of toast:
 
     Provides a single method where you specify the type of the notification through the options object:
 
-    ```css linenums="1"
-    
+    ```typescript linenums="1"
+
     import { notification } from "@vc-shell/framework";
 
     notification("My notification text!", {
@@ -32,7 +32,7 @@ There are two options for displaying the type of toast:
 
     Offers separate methods for each notification type, making it more explicit and straightforward to display different types of toast notifications.
 
-    ```css linenums="1"
+    ```typescript linenums="1"
 
     import { notification } from "@vc-shell/framework";
 
@@ -48,7 +48,7 @@ When you update toast, all options and content are inherited.
 
 The most basic usage looks like this:
 
-```css linenums="1"
+```typescript linenums="1"
 import { ref } from "vue";
 import { notification } from "@vc-shell/framework";
 
@@ -73,7 +73,7 @@ function updateToast() {
 
 To prevent duplicate toasts, set a `notificationId`.
 
-```css linenums="1"
+```typescript linenums="1"
 import { notification } from "@vc-shell/framework";
 
 notification("My notification text!", {
@@ -85,7 +85,7 @@ notification("My notification text!", {
 
 === "Remove all visible toasts"
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     import { notification } from "@vc-shell/framework";
 
     notification.clearAll();
@@ -93,7 +93,7 @@ notification("My notification text!", {
 
 === "Remove particular toast"
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     import { notification } from "@vc-shell/framework";
 
     const notificationId = ref();
@@ -119,7 +119,7 @@ If you want to display push notifications for a specific module, when initializi
 
 The most basic usage looks like this:
 
-```css linenums="1"
+```typescript linenums="1"
 import { watch } from "vue";
 import { useNotifications } from "@vc-shell/framework";
 
@@ -128,7 +128,7 @@ const { moduleNotifications, markAsRead } = useNotifications("YourNotificationTy
 
 And if you want to see a toast thereof:
 
-```css linenums="1"
+```typescript linenums="1"
 watch(
   moduleNotifications,
   (newVal) => {
@@ -144,14 +144,14 @@ watch(
   { deep: true }
 );
 ```
- 
+
 ### Dropdown list
 
 To display your template in a dropdown list, you need to pass all global templates to the `VcNotificationDropdown` component in **App.vue** file. Since this component must be located in the toolbar, you should pass an array of toolbar components to `VcApp` component as props.
 
 The most basic usage looks like this:
 
-```css title="App.vue" linenums="1"
+```typescript title="App.vue" linenums="1"
 
 import { markRaw, computed } from 'vue';
 import { toolbarComposer, notificationTemplatesSymbol, useNotifications, VcNotificationDropdown } from '@vc-shell/framework';
@@ -187,7 +187,7 @@ Notification template should be stored in the particular module in the **<my-mod
 
 1. Create basic template using `VcNotificationTemplate` component from @vc-shell/framework, to which you can pass your markup in Vue's default slot, or you can create your own template from scratch. The most basic usage with `VcNotificationTemplate` looks like this:
 
-    ```css title ="<my-module-name>/ components/ notifications/ <template>. vue" linenums="1"
+    ```html title="my-module-name/components/notifications/template.vue" linenums="1"
     <VcNotificationTemplate
       :color="notificationStyle.color"
       :title="notification.title"
@@ -195,7 +195,8 @@ Notification template should be stored in the particular module in the **<my-mod
     >
       <!-- any content -->
     </VcNotificationTemplate>
-
+    ```
+    ```typescript linenums="1"
     <script lang="ts" setup>
     import { PushNotification } from "@vc-shell/framework";
 
@@ -219,8 +220,7 @@ Notification template should be stored in the particular module in the **<my-mod
 
 1. Make your template globally available. To do this, when initializing the module, you should add it to the module initialization file:
 
-    ```css title="<my-module-name>/index.ts" linenums="1"
-
+    ```typescript title="my-module-name/index.ts" linenums="1"
     import * as pages from "./pages";
     import * as locales from "./locales";
     import * as notificationTemplates from "./components/notifications";
@@ -238,8 +238,7 @@ You also have the ability to perform any actions by clicking on these notificati
 
 1. Make a click handler in the module itself:
 
-    ```css title="<my-module-name>/pages/<blade>.vue" linenums="1"
-
+    ```typescript title="my-module-name/pages/<blade>.vue" linenums="1"
     <script lang="ts" setup>
     defineOptions({
       url: "/my-blade",
@@ -258,7 +257,7 @@ You also have the ability to perform any actions by clicking on these notificati
 
 2. Add async `onClick` method in the dropdown component initialization object in the **App.vue** file to handle this click:
 
-    ```css title="App.vue" linenums="1"
+    ```typescript title="App.vue" linenums="1"
 
     const { openBlade } = useBladeNavigation();
 

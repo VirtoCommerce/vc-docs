@@ -11,13 +11,13 @@ To create and install custom app:
 
 1. Install and execute create-vc-app scaffolding tool:
 
-    ```css
+    ```bash
     npm init @vc-shell/vc-app@latest
     ```
 
 1. Configure options from the list. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
 
-    ```css
+    ```bash
     ✔ App name: … <your-app-name>
     ✔ Add Dashboard page? … No / Yes
     ✔ Add Login/Invite/Reset password pages? … No / Yes
@@ -31,19 +31,19 @@ To create and install custom app:
 
 1. Once application is created, follow instructions to install dependencies and start the dev server:
 
-    ```css
+    ```bash
     $ cd <your-app-name>
     $ yarn
     $ yarn serve
     ```
 
-You first application is ready to run! 
+You first application is ready to run!
 
 ![New app](../media/new-app.png)
 
 !!! info "Note"
 
-    The example components in the generated application are written using the Vue Composition API and `<script setup>`. 
+    The example components in the generated application are written using the Vue Composition API and `<script setup>`.
 
 
 !!! info "Tip"
@@ -87,7 +87,7 @@ After the application is scaffolded, the folder structure will look as follows:
 │  └─ types                       // Typescript .d.ts files
 ```
 
-Let's take a look at the modules directory as it represents the key concept in the application's architecture. 
+Let's take a look at the modules directory as it represents the key concept in the application's architecture.
 
 ### Modules directory structure
 
@@ -99,7 +99,7 @@ The **Components folder** contains the collection of components specific to this
 
 The **Composables folder** contains the collection of shared logic written using Composable API pattern. It may include, for example, logic for loading data from the backend which is used by blade.
 
-The **Locales folder** contains locale files used to provide translated content specific to module. If you need to translate your blades into several languages, you can store all the translations in json format in this folder, which is then processed using **vue-i18n** library. 
+The **Locales folder** contains locale files used to provide translated content specific to module. If you need to translate your blades into several languages, you can store all the translations in json format in this folder, which is then processed using **vue-i18n** library.
 
 [Read more about the syntax of localization files](https://kazupon.github.io/vue-i18n/){ .md-button }
 
@@ -121,13 +121,11 @@ To be able to use the module in the application, it must be initialized.
 
 All modules are created as a Vue plugin. For convenience, module installation is initialized using a special method `createAppModule` that takes `pages`, `locales` and, if necessary, `notificationTemplates` as arguments:
 
-```css
-index.ts
-
+```typescript title="index.ts" linenums="1"
 // your blade pages
-import * as pages from "./pages"; 
+import * as pages from "./pages";
 // its locale files if any
-import * as locales from "./locales"; 
+import * as locales from "./locales";
 // import createAppModule to initialize your module in application
 import { createAppModule } from "@vc-shell/framework";
 
@@ -139,7 +137,7 @@ export * from "./composables";
 export * from "./components";
 ```
 
-Now you are ready to use your module! 
+Now you are ready to use your module!
 
 ## Related links
 

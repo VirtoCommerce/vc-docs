@@ -43,7 +43,7 @@ The navigation menu is created in the **App.vue** file and displays links to the
 
 To create a navigation menu, there is a special typed method `navigationMenuComposer` that will process the component provided to it. If there are option props set in the components and you want to pass them, they will all be available directly from the `navigationMenuComposer`. It is also possible to create nested menu items using the `children` key.
 
-```css title="App.vue" linenums="1"
+```typescript title="App.vue" linenums="1"
 const menuItems = reactive(
   navigationMenuComposer([
     {
@@ -77,82 +77,82 @@ To start working with the application's navigation system, import the `useBladeN
 
 * A blade consists of a template with a `VcBlade` component added to it as the root component. `VcBlade` is the main component for creating a blade.
 
-    ```css linenums="1"
+    ```html linenums="1"
     <template>
-    <VcBlade
-        title="My first blade"
-        :expanded="expanded"
-        :closable="closable"
-        width="50%"
-        @close="$emit('close:blade')"
-        @expand="$emit('expand:blade')"
-        @collapse="$emit('collapse:blade')"
-    >
-        <!-- blade content -->
-    </VcBlade>
+        <VcBlade
+            title="My first blade"
+            :expanded="expanded"
+            :closable="closable"
+            width="50%"
+            @close="$emit('close:blade')"
+            @expand="$emit('expand:blade')"
+            @collapse="$emit('collapse:blade')"
+        >
+            <!-- blade content -->
+        </VcBlade>
     </template>
     ```
 
 * Each blade has its own default props interface:
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     export interface Props {
-    expanded: boolean; // To pass into VcBlade component (required)
-    closable: boolean; // To pass into VcBlade component (required)
-    param?: string; // Blade additional param e.g. to fetch some data
-    options?: {}; // Any additional options to pass in blade
+        expanded: boolean; // To pass into VcBlade component (required)
+        closable: boolean; // To pass into VcBlade component (required)
+        param?: string; // Blade additional param e.g. to fetch some data
+        options?: {}; // Any additional options to pass in blade
     }
     ```
 
 * Each blade has its own events that this blade can emit, depending on your needs:
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     export interface Emits {
-    (event: "parent:call", args: IParentCallArgs): void; // optional
-    (event: "close:blade"): void; // required
-    (event: "collapse:blade"): void; // required
-    (event: "expand:blade"): void; // required
+        (event: "parent:call", args: IParentCallArgs): void; // optional
+        (event: "close:blade"): void; // required
+        (event: "collapse:blade"): void; // required
+        (event: "expand:blade"): void; // required
     }
     ```
 
 * If you want your blade to have its own path, use `defineOptions` macro:
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     defineOptions({
-    url: "/<blade-url>",
+        url: "/<blade-url>",
     });
     ```
 
 * To create blade toolbar, use `IBladeToolbar` interface:
 
-    ``` css linenums="1"
+    ```typescript linenums="1"
     const bladeToolbar = ref<IBladeToolbar>([
-    {
-        id: "item", // any id
-        title: "My action", // title of toolbar button
-        icon: "fas fa-save", // icon to display
-        clickHandler() {
-        // any action on click
+        {
+            id: "item", // any id
+            title: "My action", // title of toolbar button
+            icon: "fas fa-save", // icon to display
+            clickHandler() {
+            // any action on click
+            },
         },
-    },
     ]);
     ```
 
 * To perform any action when closing the blade, you need to create a function and expose it. The name of this function should be `onBeforeClose`:
- 
-    ```css linenums="1"
+
+    ```typescript linenums="1"
     async function onBeforeClose() {
-    return await showConfirmation("Are you sure you want to close the blade?");
+        return await showConfirmation("Are you sure you want to close the blade?");
     }
 
     defineExpose({
-    onBeforeClose,
+        onBeforeClose,
     })
     ```
 
 ## Routing
 
-Routing in the application is available using the `openBlade` method from `useBladeNavigation` composable. 
+Routing in the application is available using the `openBlade` method from `useBladeNavigation` composable.
 
 If you want to navigate to a module or open a new blade, you just need to use the `openBlade` method with the blade argument, where blade is the imported blade component, which you want to navigate to. As arguments, you can take param, options, and two types of callbacks - `onOpen` and `onClose`, which will be executed when opening and closing the blade, respectively.
 
@@ -160,9 +160,9 @@ If you want to navigate to a module or open a new blade, you just need to use th
 
 After creating your blade template, you need to initialize it. In the module’s **index.ts** file, register it in the application by using the `createAppModule` method and you are ready to go.
 
-``` css linenums="1"
+```typescript linenums="1"
 // your blade pages
-import * as pages from "./pages"; 
+import * as pages from "./pages";
 import { createAppModule } from "@vc-shell/framework";
 
 export default createAppModule(pages, locales);
@@ -173,8 +173,7 @@ export default createAppModule(pages, locales);
 <hr />
 === "App.vue"
 
-    ```css linenums="1"
-
+    ```html linenums="1"
     <template>
       <VcApp
         :menu-items="menuItems" // navigation menu items
@@ -197,12 +196,12 @@ export default createAppModule(pages, locales);
     </template>
     ```
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     import { watch, ref, reactive } from "vue";
-    import { `useBladeNavigation`, navigationMenuComposer } from "@vc-shell/framework";
+    import { useBladeNavigation, navigationMenuComposer } from "@vc-shell/framework";
     import Blade from "../modules/my-blade";
 
-    const { blades, bladesRefs, parentBladeOptions, parentBladeParam, closeBlade, onParentCall } = `useBladeNavigation`();
+    const { blades, bladesRefs, parentBladeOptions, parentBladeParam, closeBlade, onParentCall } = useBladeNavigation();
     const bladeNavigationRefs = ref();
 
     /**
@@ -232,7 +231,8 @@ export default createAppModule(pages, locales);
     ```
 
 === "Vue router config"
-    ```css linenums="1"
+
+    ```typescript linenums="1"
     import Blade from "../modules/my-blade";
 
     const routes: RouteRecordRaw[] = [
@@ -249,7 +249,7 @@ export default createAppModule(pages, locales);
         path: "/:pathMatch(.*)*",
         component: App,
         beforeEnter: (to) => {
-          /** 
+          /**
           * Unknown and error routes resolve method
           */
           const { resolveUnknownRoutes } = `useBladeNavigation`();
@@ -267,7 +267,7 @@ export default createAppModule(pages, locales);
 
 === "Blade"
 
-    ```css linenums="1"
+    ```html linenums="1"
     <template>
       <VcBlade
         title="My first blade"
@@ -281,8 +281,8 @@ export default createAppModule(pages, locales);
         <!-- blade content -->
       </VcBlade>
     </template>
-
-
+    ```
+    ```typescript linenums="1"
     <script lang="ts" setup>
     export interface Props {
       expanded?: boolean;
@@ -316,9 +316,9 @@ export default createAppModule(pages, locales);
 
 === "Open blade"
 
-    If you want to open a new workspace you can use vue-router's `router.push(blade path)`, but it is more convenient to use the `openBlade` method from `useBladeNavigation` composable function, as it allows you to set the initial data when opening the blade.  All imported blade components should be used in `openBlade` with Vue's markRaw method to tell Vue not to be converted to a proxy, avoiding performance hit.  
+    If you want to open a new workspace you can use vue-router's `router.push(blade path)`, but it is more convenient to use the `openBlade` method from `useBladeNavigation` composable function, as it allows you to set the initial data when opening the blade.  All imported blade components should be used in `openBlade` with Vue's markRaw method to tell Vue not to be converted to a proxy, avoiding performance hit.
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     openBlade({
       blade: markRaw(MyImportedNewBlade),
       options: {}, // typed MyImportedNewBlade options if any
@@ -336,7 +336,7 @@ export default createAppModule(pages, locales);
 
     If you want close the blade, it should emit a `close:blade` event from your blade component. `VcBlade` component, with which the blade is built, emits this event on clicking the close button.
 
-    ```css linenums="1"
+    ```html linenums="1"
     <VcBlade
         @close="$emit('close:blade')"
         ...
@@ -349,7 +349,7 @@ export default createAppModule(pages, locales);
 
     Each blade can emit a `parent:call` event to run method in its parent. Every method you want to execute in parent blade must be exposed by `defineExpose` in it.
 
-    ```css linenums="1"
+    ```typescript linenums="1"
     // Parent blade
     function reload() {
       // reload something
@@ -359,7 +359,7 @@ export default createAppModule(pages, locales);
       reload,
     })
 
-    // Child blade 
+    // Child blade
     interface Emits {
       (event: 'parent:call', args: IParentCallArgs): void;
     }
