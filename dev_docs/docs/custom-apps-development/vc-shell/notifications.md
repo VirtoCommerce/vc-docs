@@ -187,7 +187,7 @@ Notification template should be stored in the particular module in the **<my-mod
 
 1. Create basic template using `VcNotificationTemplate` component from @vc-shell/framework, to which you can pass your markup in Vue's default slot, or you can create your own template from scratch. The most basic usage with `VcNotificationTemplate` looks like this:
 
-    ```html title="<my-module-name>/ components/ notifications/ <template>.vue" linenums="1"
+    ```html title="my-module-name/components/notifications/template.vue" linenums="1"
     <VcNotificationTemplate
       :color="notificationStyle.color"
       :title="notification.title"
@@ -220,8 +220,7 @@ Notification template should be stored in the particular module in the **<my-mod
 
 1. Make your template globally available. To do this, when initializing the module, you should add it to the module initialization file:
 
-    ```typescript title="<my-module-name>/index.ts" linenums="1"
-
+    ```typescript title="my-module-name/index.ts" linenums="1"
     import * as pages from "./pages";
     import * as locales from "./locales";
     import * as notificationTemplates from "./components/notifications";
@@ -239,8 +238,7 @@ You also have the ability to perform any actions by clicking on these notificati
 
 1. Make a click handler in the module itself:
 
-    ```typescript title="<my-module-name>/pages/<blade>.vue" linenums="1"
-
+    ```typescript title="my-module-name/pages/<blade>.vue" linenums="1"
     <script lang="ts" setup>
     defineOptions({
       url: "/my-blade",
