@@ -52,3 +52,4 @@ This query allows you to retrieve information about shopping carts and wishlists
     }
   }
 }
+```

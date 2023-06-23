@@ -27,20 +27,23 @@ Using the Reports application as an example, let's look at the application insta
 
         <details><summary>Attributes description</summary>
 
-        * `id`: A unique identifier for the app, which distinguishes it from other apps in the system.
-        * `title`: The name or title of the app that is displayed to the users.
-        * `description`: A short description of the app that gives users an overview of what the app does and its purpose.
-        * `iconUrl`: The URL or path to the app's icon or logo used to identify the app in the system.
-        * `permission`: The permissions or access rights required to use the app, which are used to control who can access the app and its features.
-        * `contentPath`: The default path to the app's content, which is used to specify where the app's files are stored and accessed. In this example, the ContentPath is set to [VcModuleWeb]/Content/[Id], which means that the app's content will be stored in the Content folder of the VcModuleWeb module, with the app's Id appended to the end of the path.
+        | `id`           	| A unique identifier for the app, which distinguishes it from other apps in the system.       	|
+        |----------------	|----------------------------------------------------------------------------------------------	|
+        | `title`        	| The name or title of the app that is displayed to the users.                                	|
+        | `description`  	| A short description of the app that gives users an overview of what the app does and its purpose.|
+        | `iconUrl`      	| The URL or path to the app's icon or logo used to identify the app in the system.          	|
+        | `permission`   	| The permissions or access rights required to use the app, which are used to control<br>who can access the app and its features.     	|
+        | `contentPath`  	| The default path to the app's content, which is used to specify where the app's files<br>are stored and accessed. In this example, the ContentPath is set to [VcModuleWeb]/Content/[Id],<br>which means that the app's content will be stored in the Content folder of the VcModuleWeb module,<br>with the app's Id appended to the end of the path. 	|
 
         </details>
         
     1. Go to the Apps Menu.
-    ![image](media/app-menu-1.png)
+
+        ![image](media/app-menu-1.png)
 
     1. Find the added app.
-    ![image](media/app-menu-2.png)
+    
+        ![image](media/app-menu-2.png)
 
 
 1. Create Content/[app_id] folder in the web project. Virto Commerce reads the manifest and adds binding to this folder. You can put any web content here. It can be a Virto Shell or any other HTML application.
