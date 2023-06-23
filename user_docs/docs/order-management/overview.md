@@ -11,7 +11,7 @@ The Orders Module is designed to:
 The order itself contains minimum details.  You will find payment, shipment, and other order details on the documents.
 
 !!! note
-    * The Order Management process in VitroCommerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
+    * The Order Management process in VirtoCommerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
 
 ## Related Components¶
 

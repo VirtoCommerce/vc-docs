@@ -2,14 +2,14 @@
 
 An application can have two types of notifications:
 
-* Toasts (push). They are used for short notifications, such as new push notification or result of some action.
-* A list of notifications in the top bar menu (dropdown). It is used to display detailed notifications with their name, time, and description e.g. status of long running tasks.
+* Toasts (push notifications). They are used for short notifications, such as new push notification or result of some action.
+* A list of notifications in the top bar menu (dropdown lists). It is used to display detailed notifications with their name, time, and description e.g. status of long running tasks.
 
 To start working with push notifications, import `useNotifications` composable from @vc-shell/framework.
 
 `useNotifications` has one argument `notifyType?: string | string[]`, which is an identifier for the type of notifications displayed in a particular module.
 
-## Toasts (push)
+## Toasts
 
 To display notifications as a toast, there is a notification method imported from @vc-shell/framework.
 
@@ -109,9 +109,9 @@ notification("My notification text!", {
 
 ## How to use notifications in modules
 
+To use notifications in modules, you can leverage toast notifications and dropdown lists to provide user updates and alerts.
 
-
-### Toasts (push notifications)
+### Toasts
 
 If you want to display push notifications for a specific module, when initializing the `useNotifications` method, you need to pass an argument to it, which is the type of push notification supported by this module.
 

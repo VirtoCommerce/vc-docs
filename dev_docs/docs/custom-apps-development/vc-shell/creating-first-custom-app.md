@@ -91,19 +91,14 @@ Let's take a look at the modules directory as it represents the key concept in t
 
 ### Modules directory structure
 
-**Module** is a set of composables, locales, components and pages. Each module is responsible for its own functionality and can contain the number of blades you need that serves your needs, which are stored in the pages folder.
-
-**Blade** is a separate page with its own functionality and template. Blades is not connected to each other, but can be used together using special methods.
-
-The **Components folder** contains the collection of components specific to this module. If you want to create a component for your module, the components folder is the best place to do it. A component placed in a module should only be used in it, otherwise it is better to place them in thecomponents folder in the application root folder.
-
-The **Composables folder** contains the collection of shared logic written using Composable API pattern. It may include, for example, logic for loading data from the backend which is used by blade.
-
-The **Locales folder** contains locale files used to provide translated content specific to module. If you need to translate your blades into several languages, you can store all the translations in json format in this folder, which is then processed using **vue-i18n** library.
-
-[Read more about the syntax of localization files](https://kazupon.github.io/vue-i18n/){ .md-button }
-
-The **Pages folder** contains set of blades used within application router. For more information, refer to the [Blades section](../../Platform-Manager/Extensibility-Points/blades-and-navigation.md).
+| Item               	| Description                                                                                                 	|
+|--------------------	|--------------------------------------------------------------------------------------------------------------	|
+| **Module**             	| A set of composables, locales, components and pages. Each module is responsible for its own functionality<br>and can contain the number of blades you need that serves your needs, which are stored in the pages folder.                                                                                                             	|
+| **Blade**             | A separate page with its own functionality and template.<br>Blades is not connected to each other, but can be used together using special methods.                                                                                                                                                                                   	|
+| **Components folder**  	| The collection of components specific to this module. If you want to create a component for your module,<br>the components folder is the best place to do it. A component placed in a module should only be used in it,<br>otherwise it is better to place them in thecomponents folder in the application root folder.              	|
+| **Composables folder** 	| The collection of shared logic written using Composable API pattern.<br>It may include, for example, logic for loading data from the backend which is used by blade.                                                                                                                                                                 	|
+| **Locales folder**     	| Locale files used to provide translated content specific to module.<br>If you need to translate your blades into several languages, you can store all the translations in json format in this folder,<br>which is then processed using vue-i18n library.<br> [Read more about the syntax of localization files](https://kazupon.github.io/vue-i18n/){ .md-button } 	|
+| **Pages folder**   	| A set of [Blades](../../Platform-Manager/Extensibility-Points/blades-and-navigation.md) used within application router.                 	|
 
 ### Creating a new module
 To create your own modules within the scaffolded application folder structure:

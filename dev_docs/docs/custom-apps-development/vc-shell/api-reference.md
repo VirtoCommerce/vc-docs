@@ -9,8 +9,8 @@ The VcBlade API reference provides detailed information about the props, events,
     | `icon` {==String==}                       | undefined  | Font Awesome icon to display in the blade header.                                                                              |
     | `title` {==String==}                      | undefined  | Title to display in the blade header.                                                                                          |
     | `subtitle` {==String==}                   | undefined  | Subtitle to display in the blade header.                                                                                       |
-    | `width` {==Number==}/{==String==}         | "30%"      | The minimum width of the blade in pixels or as a percentage.                                                                   |
-    | `expanded` {==Boolean==}                  | true       | Handled by the VcVladeNavigation component, the state depends on the number of active blades. You can watch this value to perform actions, such as changing the table layout when two blades are active.|
+    | `width` {==Number==} {==String==}         | "30%"      | The minimum width of the blade in pixels or as a percentage.                                                                   |
+    | `expanded` {==Boolean==}                  | true       | Handled by the VcVladeNavigation component, the state depends<br>on the number of active blades. You can watch this value<br>to perform actions, such as changing the table layout when two blades are active.|
     | `expandable` {==String==}                 | true       | Activates the ability to expand and collapse the component by default.                                                         |
     | `closable` {==String==}                   | true       | Determines whether the blade has a close button.                                                                               |
     | `toolbarItems`  {==IBladeToolbar[]==}     | () => []   | An array of items to be displayed in the toolbar                                                                               |
@@ -51,7 +51,7 @@ The VcBlade API reference provides detailed information about the props, events,
         | Property                                                                                                      | Description                                                        |
         | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
         | `blade` {==BladeConstructor<T>==}                                                                             | Blade component.                                                   |
-        | `options` (optional)  {==ExtractedBladeOptions<InstanceType<BladeConstructor<T>>["$props"], "options">==}     | Key-value pairs with blade options, extracted from the component.  |
+        | `options` (optional)  {==ExtractedBladeOptions==}                                                             | Key-value pairs with blade options, extracted from the component.  |
         | `param` (optional)    {==String==}                                                                            | String with blade parameter.                                       |
         | `onOpen` (optional)   {==() => void==}                                                                        | Method called when the blade is opened.                            |
         | `onClose` (optional)  {==() => void==}                                                                        | Method called when the blade is closed.                            |
@@ -87,13 +87,13 @@ The `notification` method is used to display toast notifications.
 
 Method signatures are as follows:
 
-    * `notification(content: string, options?: NotificationOptions): string | number;`
-    * `error(content: string, options?: NotificationOptions): string | number;`
-    * `warning(content: string, options?: NotificationOptions): string | number;`
-    * `success(content: string, options?: NotificationOptions): string | number;`
-    * `clearAll(): void;`
-    * `remove(notificationId?: number | string): void;`
-    * `update(notificationId: string | number, options: NotificationOptions): void;`
+* `notification(content: string, options?: NotificationOptions): string | number;`
+* `error(content: string, options?: NotificationOptions): string | number;`
+* `warning(content: string, options?: NotificationOptions): string | number;`
+* `success(content: string, options?: NotificationOptions): string | number;`
+* `clearAll(): void;`
+* `remove(notificationId?: number | string): void;`
+* `update(notificationId: string | number, options: NotificationOptions): void;`
 
 ### NotificationOptions interface
 
@@ -101,14 +101,14 @@ Method signatures are as follows:
 | ----------------------------------------- | -------------------------------------------------------- |
 | limit {==Number==}                        | Limit the number of toasts displayed (default 3)         |
 | pauseOnHover {==Boolean==}                | Pause timeout on hover                                   |
-| timeout {==Number {==Boolean==}           | Accept a duration in ms or false (default 3000)          |
+| timeout {==Number==} {==Boolean==}           | Accept a duration in ms or false (default 3000)          |
 | content {==String==}                      | Text to be displayed in toast                            |
-| notificationId {==Number==}/ {==String==} | ID of toast notification                                 |
+| notificationId {==Number==} {==String==} | ID of toast notification                                 |
 | type {==NotificationType==}               | Default value - 'default'                                |
 | onOpen {==<T>(payload: T) => void==}      | Method that is called when the toast is opened           |
 | onClose {==<T>(payload: T) => void==}     | Method that is called when the toast closes              |
-| payload {==String {==Record<string, any>==}| Any string or object data that will be used as an argument to the onOpen and onClose method |
-| updateId {==String {==Number==}           | ID of updated toast notification. Used during update     |
+| payload {==String{==Record<string,any>==}| Any string or object data that will be used as an argument to the onOpen and onClose method |
+| updateId {==String==} {==Number==}           | ID of updated toast notification. Used during update     |
 
 
 ## useNotifications composable API reference
@@ -118,7 +118,7 @@ Method signatures are as follows:
 | Property                                                    | Description                                                               |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
 | `notifications` {==ComputedRef<PushNotification[]>==}       | An array containing push notification objects received from the backend.  |
-| `moduleNotifications` {==ComputedRef<PushNotification[]>==} | A computed array of notifications that belong to a particular module, specified when initializing the useNotifications function with the notifyType argument. |
+| `moduleNotifications` {==ComputedRef<PushNotification[]>==} | A computed array of notifications that belong to a particular module,<br>specified when initializing the useNotifications function with the notifyType argument. |
 
 
 ### Methods
@@ -163,6 +163,6 @@ Method signatures are as follows:
 
 | Prop  | Description                 |
 | ----- | --------------------------- |
-| color | Icon circle color           |
-| title | Title of the notification   |
-| icon  | Any icon from Font Awesome  |
+| color | Icon circle color.           |
+| title | Title of the notification.   |
+| icon  | Any icon from Font Awesome.  |

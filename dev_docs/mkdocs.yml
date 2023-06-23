@@ -293,8 +293,6 @@ nav:
         - Cart: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
         - Carts: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts.md
       - Mutations:
-        - Overview: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/overview.md
-        - Mutation List: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/mutation-list.md
         - AddItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
         - ClearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
         - ChangeComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-comment.md

@@ -69,4 +69,4 @@ The `InputAddOrUpdateCartPaymentType` represents the input object type used for 
     }
     ```
 
-[See all parametrs for the Payment object](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/XPurchase/VirtoCommerce.XPurchase/Schemas/InputPaymentType.cs){ .md-button }
+[See all parameters for the Payment object](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/XPurchase/VirtoCommerce.XPurchase/Schemas/InputPaymentType.cs){ .md-button }
