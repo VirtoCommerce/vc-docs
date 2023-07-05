@@ -1,6 +1,6 @@
 # TierPriceType ==~object~==
 
-The `TierPriceType` represents the pricing information for a specific tier or quantity range of a product. It allows setting different prices based on the quantity purchased.
+The `TierPriceType` represents the pricing information for a specific tier or quantity range of a product. 
 
 ## Fields
 

@@ -1,10 +1,10 @@
 # OutlineType ==~object~==
 
-The `outlineType`object refers to a hierarchical structure or organization of data, where each level represents a category, section, or segment. 
+The `outlineType` object refers to a hierarchical structure or organization of data, where each level represents a category, section, or segment. 
 
 ## Fields
 
-| Fields                        	                                | Description           	|
-|----------------------------------------------------------------	|------------------------	|
-| `items` [{==OutlineItemType==}](OutlineType/OutlineItemType.md) 	| Represents the collection of outline items that define the hierarchical structure or path. Each outline item contains information about a specific level or segment within the outline structure. 	|
+| Fields                        	                                | Description                                                         	|
+|----------------------------------------------------------------	|---------------------------------------------------------------------	|
+| `items` [{==OutlineItemType==}](OutlineItemType.md) 	| The collection of outline items that define the hierarchical structure or path. 	|
 

@@ -18,7 +18,7 @@ The `priceType` object represents the pricing information for a product or varia
 | `currency` {==String==}                 	| The currency code in which the prices are expressed.                                                                  	|
 | `startDate` {==DateTime==}              	| The start date and time of the pricing period or promotion.                                                           	|
 | `endDate` {==DateTime==}                	| The end date and time of the pricing period or promotion.                                                             	|
-| `tierPrices` [{==TierPriceType==}](TierPriceType.md)        	| The tiered pricing options available for the item,<br>which offer different prices based on quantity or customer groups. 	|
-| `discounts` [{==CatalogDiscountType==}](CatalogDiscountType.md)   	| The catalog-level discounts applied to the item.                                                                      	|
-| `pricelistId` {==String==}              	| The unique identifier of the price list to which the item's price belongs.                                            	|
+| `tierPrices` [{==TierPriceType==}](TierPriceType.md)        	| The tiered pricing options available for the item. 	                                                |
+| `discounts` [{==CatalogDiscountType==}](CatalogDiscountType.md)   	| The catalog-level discounts applied to the item.                                             	|
+| `pricelistId` {==String==}              	| The Id of the price list to which the item's price belongs.                                                           	|
 | `minQuantity` {==Int==}                 	| The minimum quantity required to be eligible for the price or discount.                                               	|

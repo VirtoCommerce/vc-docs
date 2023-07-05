@@ -6,5 +6,5 @@ The `PropertyDictionaryItemEdge` is an edge in a connection from an object to an
 
 | Field                                                     	| Description                                 	|
 |------------------------------------------------------------	|---------------------------------------------	|
-| `cursor` {==String!==}                                       	| The unique identifier of the property type. 	|
-| `node` [{==PropertyDictionaryItem==}](PropertyDictItem.md)  	| The name or title of the property type.     	|
+| `cursor` {==String!==}                                       	| The cursor associated with the node.       	|
+| `node` [{==PropertyDictionaryItem==}](PropertyDictItem.md)  	| The item at the end of the edge.            	|

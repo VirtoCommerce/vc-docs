@@ -12,4 +12,4 @@ The `ProductAssociation` represents the association between products in queries.
 | `associatedObjectId` {==String==}                         	| The ID of the associated object.                               	|
 | `associatedObjectType` {==String==}                       	| The type of the associated object.                             	|
 | `tags` {==String==}                                         	| Tags or labels associated with the product association.        	|
-| `product` [{==Product==}](../01-ProductType.md)            	| The product object associated with the association.            	|
+| `product` [{==Product==}](../ProductType.md)               	| The product object associated with the association.            	|

@@ -8,5 +8,5 @@ The `PageInfo` provides information about pagination in a connection.
 |--------------------------------	|------------------------------------------------------------------	|
 | `hasNextPage` {==Boolean!==}     	| Indicates whether there is a next page of data available.        	|
 | `hasPreviousPage` {==Boolean!==} 	| Indicates whether there is a previous page of data available.    	|
-| `startCursor` {==String==}       	|  The cursor or identifier of the first item in the current page. 	|
-| `endCursor` {==String==}         	|  The cursor or identifier of the last item in the current page.  	|
+| `startCursor` {==String==}       	| The cursor of the first item in the current page. 	            |
+| `endCursor` {==String==}         	| The cursor of the last item in the current page.  	            |
