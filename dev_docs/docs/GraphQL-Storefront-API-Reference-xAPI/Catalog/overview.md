@@ -1,6 +1,6 @@
 # Catalog
 
-The `Catalog` provides high performance search queries for catalog data directly from the search index engine.
+The `Catalog` module provides high performance search queries for catalog data directly from the search index engine.
 
 | Queries                                                             	| Objects                                        	| Examples                                                                    	|
 |--------------------------------------------------------------------	|-------------------------------------------------	|----------------------------------------------------------------------------	|

@@ -1,6 +1,6 @@
 # Content
 
-The `Content` serves as a component for managing and delivering dynamic content within the system. It provides capabilities for creating, organizing, and presenting various types of content.
+The `Content` module serves as a component for managing and delivering dynamic content within the system. It provides capabilities for creating, organizing, and presenting various types of content.
 
 | Queries                                                                        	| Objects                                        	| 
 |-------------------------------------------------------------------------------	|-------------------------------------------------	|

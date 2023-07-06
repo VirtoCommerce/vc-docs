@@ -1,6 +1,6 @@
 # Profile
 
-`Profile` provides high performance search queries for user, organization, contacts, and passwords data.
+The `Profile` module provides high performance search queries for user, organization, contacts, and passwords data.
 
 | Queries                                                             	| Objects                                        	| Mutations|
 |--------------------------------------------------------------------	|-------------------------------------------------	|----------|
