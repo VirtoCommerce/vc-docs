@@ -387,17 +387,6 @@ nav:
         - ContactConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactConnection.md
         - ContactEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactEdge.md
         - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/UserType.md
-        - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RoleType.md
-        - InputUpdateRoleInnerType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateRoleInnerType.md
-        - InputAssignPermissionType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionType.md
-        - InputAssignPermissionScopeType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionScopeType.md
-        - Member: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberType.md
-        - MemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressType.md
-        - MemberAddressConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressConnection.md
-        - MemberAddressEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressEdge.md
-        - InputMemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputMemberAddressType.md
-        - InputAssignRoleType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignRoleType.md
-        - InputDynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType.md
         - InputCreateUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateUserType.md
         - InputCreateApplicationUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateApplicationUserType.md
         - InputUpdateApplicationUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateApplicationUserType.md
@@ -406,6 +395,17 @@ nav:
         - IdentityResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityResultType.md
         - IdentityErrorType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorType.md
         - IdentityErrorInfoType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorInfoType.md
+        - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RoleType.md
+        - InputAssignRoleType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignRoleType.md
+        - InputUpdateRoleInnerType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateRoleInnerType.md
+        - InputAssignPermissionType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionType.md
+        - InputAssignPermissionScopeType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionScopeType.md
+        - Member: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberType.md
+        - MemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressType.md
+        - MemberAddressConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressConnection.md
+        - MemberAddressEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressEdge.md
+        - InputMemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputMemberAddressType.md
+        - InputDynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType.md
         - RequestRegistrationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RequestRegistrationType.md
         - RegisterOrganizationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterOrganizationType.md
         - RegisterContactType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterContactType.md
