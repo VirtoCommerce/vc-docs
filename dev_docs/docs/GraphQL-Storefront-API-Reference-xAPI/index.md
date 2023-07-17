@@ -1,50 +1,56 @@
 # Overview
-The Experience API (xAPI) project is primarily an intermediated layer between clients and enterprise  services powered by GraphQL protocol, and is tightly coupled to a specific user/touchpoint  experience with fast and reliable access. It represents an implementation of the *back end for front end* (BFF) design pattern.
 
-## Context Chart
-Below, you can see the content chart for xAPI:
+The main function of the Experience API (xAPI) project is to serve as a middle layer connecting clients and enterprise services using the GraphQL protocol. 
 
-![image](https://user-images.githubusercontent.com/7566324/84039908-38258300-a9a2-11ea-9421-2c51462d69af.png)
+It is closely associated with a particular user or touchpoint experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
 
 ## Key Concepts
 
-- Use GraphQL protocol to leverage more selective and flexible control of resulting data retrieving from API;
-- Fast and reliable indexed search thanks to integration with ES 7.x  and single data source for indexed search and data storage (<= 300ms);
-- Autonomy. Shared nothing with rest VC data infrastructure except index data source;
-- Tracing and performance requests metrics.
+* Utilize GraphQL protocol for precise and flexible data retrieval control from the API.
+* Achieve fast and dependable indexed search through integration with ES 7.x and a unified data source for search and storage (<= 300ms).
+* Maintain autonomy by exclusively relying on the index data source, separate from the rest of the VC data infrastructure.
+* Capture tracing and performance metrics for request monitoring.
 
 ## Key Features
+
 The xAPI project provides the following major features:
 
-- [Catalog xAPI](Catalog/overview.md)
-- [Cart xAPI](Cart/overview.md)
-- [Order xAPI](Order/overview.md)
+- [Catalog](Catalog/overview.md)
+- [Cart](Cart/overview.md)
+- [Order](Order/overview.md)
+- [Pages](Pages/overview.md)
+- [Linklists](Linklists/overview.md)
+- [Marketing](Quote/overview.md)
+- [Quote](Quote/overview.md)
 
-!!! warning
+!!! note
 	The xAPI project can be integrated with Elastic Search 7.x and Azure Search Service for indexed search. Lucene search provider is not supported.
 
 ## How to use
 
 ### Playground IDE
-To explore the GraphQL API, you can use an interactive  [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment.
-To open playground console open  `ui/playground` in the platform manager application.
+To explore the GraphQL API, use an interactive [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment: open `ui/playground` in the platform manager application.
 
 ```
 http://localhost:10645/ui/playground
 ```
 
 ### Curl
+Another way to interact with the GraphQL API is through Curl commands. 
 
 ```curl
 POST https://{platform-url}/graphql
 ```
 
-It accepts POST requests with following fields in a JSON body:
-- `query` - String - GraphQL query as a string
-- `variables` - Object - Optional - containing JSON object that defines variables for your query
-- `operationName` - String - Optional - the name of the operation, in case you defined several of them in the query
+By sending POST requests to the specified endpoint and including the necessary fields in the JSON body, you can retrieve the desired data. Here's an example of how to structure your Curl command to query the API.
 
-Here is an example of a GraphQL query:
+| Field           	| Description                                                    	|
+|-----------------	|----------------------------------------------------------------	|
+| `query`         	| GraphQL query as a string.                                     	|
+| `variables`     	| JSON object that defines variables for your query.             	|
+| `operationName` 	| The name of the operation, if there are over one in the query. 	|
+
+**Sample query**
 
 ```curl linenums="1"
 $ curl -X POST http://localhost:10645/graphql \
@@ -55,5 +61,5 @@ $ curl -X POST http://localhost:10645/graphql \
 
 ## Next Steps
 
-+ Learn how to get started with xAPI [here](getting-started.md)
-+ Learn how to extend xAPI [here](x-api-extensions.md)
+* [Getting started with xAPI](getting-started.md)
+* [Extending xAPI](x-api-extensions.md)

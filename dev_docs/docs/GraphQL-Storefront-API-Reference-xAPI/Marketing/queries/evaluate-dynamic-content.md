@@ -1,77 +1,70 @@
-# Evaluate dynamic content
+# Evaluate dynamic content ==~query~==
 
-This query allows you to evaluate dynamic content based on:
-
-* Dynamic content place.
-* Store.
-* Product.
-* Category.
-* Tags.
-* User groups.
-
-## Definition
-
-```
-evaluateDynamicContent( storeId: !string, placeName: !string, categoryId: !string, productId: !string, cultureName: !string, toDate: DateTime, tags: [!string], userGroups: [!string])
-```
+This query allows you to evaluate dynamic content.
 
 ## Arguments
-|Name          |Type                       |Description                |
-|--------------|---------------            |---------------------------|
-|`storeId`     |StringGraphType            |Store Id.                   |
-|`placeName`   |StringGraphType            |Dynamic content place name. |
-|`categoryId`  |StringGraphType            |Category Id.                |
-|`productId`   |StringGraphType            |Product Id.                 |
-|`cultureName` |StringGraphType            |Culture name.<br> **Example**: "en-US"|
-|`toDate`      |StringGraphType            |Evaluation date.            |
-|`tags`        |List of StringGraphType    |List of tags.               |
-|`userGroups`  |List of StringGraphType    |List of user groups.|
 
-## Example
+| Argument                   	| Description              	                                 |
+|----------------------------	|----------------------------------------------------------	 |
+| `storeId` {==String==}     	| The Id of the store.     	                                 |
+| `placeName` {==String==}    | The name of the place where the content is evaluated.      |
+| `categoryId` {==String==}   | The Id of the category to which the content belongs.       |
+| `productId` {==String==}    | The Id of the product for which the content is evaluated.  |
+| `cultureName` {==String==} 	| A language to retrieve data in.  	                         |
+| `toDate` {==DateTime==}     | The date up to which the content is evaluated.             |
+| `tags` {==[String]==}       | An array of tags associated with the dynamic content.      |
+| `userGroups` {==[String]==} | An array of user groups used to filter the content.        |
 
-Code:
+## Possible returns
 
-```json
-{
-  evaluateDynamicContent(
-    storeId: "B2B-store"
-    placeName: "MainSlider"
-    tags: ["Main"]
-    userGroups: ["Customers"]
-    productId: "8b7b07c165924a879392f4f51a6f7ce0"
-  ) {
-    items {
-      id
-      name
-      contentType
-      dynamicProperties {
-        name
-        value
+| Possible return             	                                                          | Description                                          	|
+|---------------------------------------------------------------------------------------	|-----------------------------------------------------	|
+| [`EvaluateDynamicContentResultType`](../objects/EvaluateDynamicContentResultType.md)    | The result type for the evaluation of dynamic content.|
+
+## Examples
+
+=== "Query"
+    ```json linenums="1"
+    {
+      evaluateDynamicContent(
+        storeId: "B2B-store"
+        placeName: "MainSlider"
+        tags: ["Main"]
+        userGroups: ["Customers"]
+        productId: "8b7b07c165924a879392f4f51a6f7ce0"
+      ) {
+        items {
+          id
+          name
+          contentType
+          dynamicProperties {
+            name
+            value
+          }
+        }
+        totalCount
       }
     }
-    totalCount
-  }
-}
-```
-Return:
+    ```
 
-```json
-{
-  "data": {
-    "evaluateDynamicContent": {
-      "items": [
-        {
-          "id": "1165b9ab-205f-488f-a9c7-64187bb85702",
-          "name": "B2B slider",
-          "contentType": "slider",
-          "dynamicProperties": [
+=== "Return"
+    ```json linenums="1"
+    {
+      "data": {
+        "evaluateDynamicContent": {
+          "items": [
             {
-              "name": "Content type",
-              "value": "slider"            }
-          ]
-        }
-      ],
-      "totalCount": 1    }
-  }
-}
-```
+              "id": "1165b9ab-205f-488f-a9c7-64187bb85702",
+              "name": "B2B slider",
+              "contentType": "slider",
+              "dynamicProperties": [
+                {
+                  "name": "Content type",
+                  "value": "slider"            }
+              ]
+            }
+          ],
+          "totalCount": 1    }
+      }
+    }
+    ```

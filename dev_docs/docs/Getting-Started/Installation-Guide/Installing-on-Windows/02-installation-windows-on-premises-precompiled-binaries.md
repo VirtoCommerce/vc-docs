@@ -55,6 +55,7 @@ To install Virto Commerce on a Windows based PC:
 	1. The installation wizard starts downloading default modules and sample data:
 		![Installation wizard screen](media/02-module-auto-installation-screen.png)
 	1. After installation, reset default credentials:
+	
 		![Resetting default credentials](media/03-resetting-default-credentials.png)
 
 Your platform is ready to go.

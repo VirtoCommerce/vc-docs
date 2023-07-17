@@ -18,6 +18,4 @@ For more information about its functions, refer to:
 * [Mutations](mutations/mutations-list.md)
 * [Objects](objects/objects.md)
 
-## How to Use
-
-For more information on how to use X-Quote, refer to the [Experience API Overview](https://docs.virtocommerce.org/new/dev_docs/GraphQL-Storefront-API-Reference-xAPI/).
+[Download Quote module](https://github.com/VirtoCommerce/vc-module-quote/){ .md-button }

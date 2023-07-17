@@ -1,66 +1,72 @@
 # Getting Started
-The Experience API (xAPI) project is primarily an intermediated layer between clients and enterprise  services powered by GraphQL protocol and is tightly coupled to a specific user/touchpoint experience with fast and reliable access. At the same time, it represents an implementation of the *back end for front end* (BFF) design pattern.
+
+This section explains how to prepare your environment for testing XApi.
 
 ## Prerequisites
-To run our xAPI, you will need:
 
-- VC platform 3.0 or later
-- The platform configured to use ElasticSearch engine
+* VC platform 3.0 or higher.
+* The platform configured to use ElasticSearch engine.
+  ```json title="appsettings.json"
+  "Search": {
+      "Provider": "ElasticSearch",
+      "Scope": "default",
+      "ElasticSearch": {
+          "Server": "localhost:9200",
+          "User": "elastic",
+          "Key": "",
+          "EnableHttpCompression": ""
+      },
+      "OrderFullTextSearchEnabled": true
+  }
+  ```
 
-```json title="appsettings.json"
-"Search": {
-    "Provider": "ElasticSearch",
-    "Scope": "default",
-    "ElasticSearch": {
-        "Server": "localhost:9200",
-        "User": "elastic",
-        "Key": "",
-        "EnableHttpCompression": ""
-    },
-    "OrderFullTextSearchEnabled": true
-}
-```
+## Presettings
 
-1. Enable *Store full object in index modules* settings for catalog and pricing modules:
+To start using XApi:
 
-    ![image](https://user-images.githubusercontent.com/7566324/82232622-29adf380-992f-11ea-8df6-9d08fb0b421a.png)
-    ![image](https://user-images.githubusercontent.com/7566324/82232762-5530de00-992f-11ea-8c8c-22766f8fa121.png)
+1. Open the Platform and go to **Settings**.
+1. Select **Catalog**.
+1. Select **Search**.
+1. Enable **Store serialized catalog objects in index** option:
 
-2. Rebuild index.
+    ![Catalog-enabled](media/catalog-index-enabled.png)
+
+1. Rebuild index.
 
 ## Test Environment
 
-+ Deploy `vc-module-experience-api` into the platform of 3.0 version or latest, following [this article] (https://github.com/VirtoCommerce/vc-platform/blob/master/docs/developer-guide/deploy-module-from-source-code.md)
-+ Restart the platform instance
-+ Open GraphQL UI playground in the browser: `http://{platform url}/ui/playground`
+To set up the test environment:
 
-**Sample requests:**
+1. Install `vc-module-experience-api` on the platform version 3.0 or higher, using [this guide](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/developer-guide/deploy-module-from-source-code.md).
+1. Restart the platform instance.
+1. Open GraphQL UI playground in the browser: **http://{platform url}/ui/playground**
 
-```json
-{
-  product(id: "0f7a77cc1b9a46a29f6a159e5cd49ad1")
-  {
-    id
-    name
+??? "View sample request"
+    ```json
+    {
+      product(id: "0f7a77cc1b9a46a29f6a159e5cd49ad1")
+      {
+        id
+        name
 
-    properties {
-      name
-      type
-      values
-    }
-  }
+        properties {
+          name
+          type
+          values
+        }
+      }
 
-  products(query: "sony" fuzzy: true filter: "price.USD:(400 TO 1000]")
-  {
-    totalCount
-    items {
-       name
-       id
-       prices (currency: "USD") {
-        list
-        currency
+      products(query: "sony" fuzzy: true filter: "price.USD:(400 TO 1000]")
+      {
+        totalCount
+        items {
+          name
+          id
+          prices (currency: "USD") {
+            list
+            currency
+          }
+        }
       }
     }
-  }
-}
-```
+    ```

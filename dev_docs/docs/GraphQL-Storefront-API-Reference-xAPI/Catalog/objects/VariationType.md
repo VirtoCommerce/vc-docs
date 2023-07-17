@@ -18,7 +18,7 @@ The `VariationType` is used to differentiate or group different types of product
 | `prices` [{==PriceType==}](Price/PriceType.md)                        	| The prices associated with the variation.                     	|
 | `properties` [{==Property==}](Property/Property.md)                     	| The properties associated with the variation.                 	|
 | `assets` [{==Asset==}](Asset.md)                                         	| The assets associated with the variation.                     	|
-| `outlines` [{==OutlineType==}](OutlineType.md)                        	| The hierarchical outlines of the variation and its ancestors. 	|
+| `outlines` [{==OutlineType==}](OutlineType.md)                        	| The hierarchical outlines of the variation.                   	|
 | `slug` {==String==}                       	                            | The URL slug of the variation.                                	|
 | `vendor` [{==CommonVendor==}](CommonVendor/Commonvendor.md)              	| The vendor associated with the variation.                     	|
 

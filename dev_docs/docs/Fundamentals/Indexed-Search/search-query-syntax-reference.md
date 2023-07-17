@@ -4,7 +4,7 @@ Virto's unified search has a special query syntax. It is processed by our propri
 
 The syntax defines the grammar for the `searchPhrase` expression as follows:
 
-```
+```json
 1  searchPhrase          : WS* phrase (WS phrase)* WS*;
 2  phrase                : keyword | filters;
 3  keyword               : String;
