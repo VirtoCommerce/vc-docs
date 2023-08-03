@@ -1,76 +1,52 @@
-# AddOrUpdateOrderPayment
+# AddOrUpdateOrderPayment ==~mutation~==
 
-This mutation adds or updates payment details for the order. It supports partial update, with all fields in `command.payment` and `command.payment.billingAddress` being optional. If you provide `command.payment.id`, the existing payment will be updated.
+This mutation adds or updates the payment details for the order. It supports partial update, with all fields in `command.payment` and `command.payment.billingAddress` being optional. If you provide `command.payment.id`, the existing payment will be updated.
 
-## Query
+## Fields
 
-```
-mutation addOrUpdateOrderPayment($command: InputAddOrUpdateOrderPaymentType!) {
-  addOrUpdateOrderPayment(command: $command) {
+The `InputAddOrUpdateOrderPaymentType` is a type that represents the input object for adding or updating an order payment. 
+
+| Field                                                                             | Description                                                       |
+|-----------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| `orderId` {==String!==}                                                           | The Id of the order to which the payment will be added or updated.|
+| `payment` [{==InputOrderPaymentType!==}](../objects/input-order-payment-type.md)  | The payment details to be added or updated for the order.         |
+
+## Possible returns
+
+| Possible return                                                       | Description          	|
+|-----------------------------------------------------------------------|---------------------	|
+| [`CustomerOrderType`](../objects/customer-order-type.md)           	  |  A customer order.  	|
+
+
+=== "Mutation"
+    ```json linenums="1"
+    mutation addOrUpdateOrderPayment ($command: InputAddOrUpdateOrderPaymentType!) {
+      addOrUpdateOrderPayment (command: $command)
+    {
+    id
+      inPayments
+      {
         id
-        inPayments (first: 10, sort:"ModifiedDate:desc") {
-          id
-          createdDate
-          billingAddress {
-            id
-            city
-            countryCode
-            countryName
-            email
-            firstName
-            lastName
-            line1
-            line2
-            middleName
-            name
-            organization
-            phone
-            postalCode
-            regionId
-            regionName
-            zip
-            addressType
-          }
-          paymentMethod {
-            code
-            paymentMethodType
-            paymentMethodGroupType
-          }
+        number
+        sum
+        {
+          amount
         }
       }
-  }
+    }}
+    ```
 
-```
-
-## Variables
-
-```
-"command": {
-    "orderId": "74d8b492-0bb5-486e-a0e6-0915848a7379",
-    "payment": {
-        "id": "New-Id-1",
-        "paymentGatewayCode": "AuthorizeNetPaymentMethod",          
-        "billingAddress": {
-            "city": "Test",
-            "countryCode": "US",
-            "countryName": "US",
-            "email": "address@mail.test",
-            "firstName": "First test name",
-            "id": "KeyTest",
-            "key": "KeyTest",
-            "lastName": "Last name test",
-            "line1": "Address Line 1",
-            "line2": "Address line 2",
-            "middleName": "Test Middle Name",
-            "name": "First name address",
-            "organization": "OrganizationTestName",
-            "phone": "88005553535",
-            "postalCode": "111111",
-            "regionId": "Test region",
-            "regionName": "Region 15",
-            "zip": "13413",
-            "addressType": 2
+=== "Variables"
+    ```json linenums="1"
+    {
+      "command": {
+        "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+        "payment": {
+          "id": "testpaymentId",
+          "price": 20,
+          "comment": "this is a comment"
         }
+      }
     }
-}
-```
+    ```
+

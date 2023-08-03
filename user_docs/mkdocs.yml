@@ -134,6 +134,7 @@ nav:
         - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
         - Viewing Catalog Properties: catalog/view-properties.md
         - Viewing Product Variations: catalog/view-product-variations.md
+        - Settings: catalog/settings.md
       - Catalog Personalization:
         - Overview: catalog-personalization/overview.md
         - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
@@ -251,6 +252,10 @@ extra:
         url: /new/dev_docs
       - title: User Docs
         url: /new/user_docs
+      - title: Marketplace Developer Docs
+        url: /new/marketplace_dev_docs
+      - title: Marketplace User Docs
+        url: /new/marketplace_user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home

@@ -16,7 +16,6 @@ Before installing, make sure your computer meets these minimum requirements:
 
 The Virto platform runs on .NET 6, which supports installation on Windows and Linux.
 
-<hr />
 === "Windows"
 
     |Version|Subversion|Type|
@@ -47,7 +46,7 @@ The Virto platform supports:
 * MySql Server 5.7 and higher.
 * PostgreSQL 12 and higher.
 
-To learn more about configuring the platform with database providers, read the [DB Agnostic](/../Fundamentals/DB-Agnostic/overview.md) section.
+To learn more about configuring the platform with database providers, read the [DB Agnostic](../Fundamentals/Persistence/DB-Agnostic/overview.md) section.
 
 ## Supported Browsers
 The Virto platform supports:

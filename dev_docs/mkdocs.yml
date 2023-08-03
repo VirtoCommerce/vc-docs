@@ -289,6 +289,29 @@ nav:
       - Queries:
         - Cart: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
         - Carts: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts.md
+      - Objects:
+        - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
+        - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
+        - CartEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-edge.md
+        - CartShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-shipment-item-type.md
+        - CartAddressType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-address-type.md
+        - MoneyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type.md        
+        - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/currency-type.md
+        - TaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/tax-detail-type.md
+        - ShipmentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipment-type.md
+        - ShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipping-method-type.md
+        - PaymentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-type.md
+        - PaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-method-type.md
+        - DiscountType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/discount-type.md
+        - GiftItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/gift-item-type.md
+        - CouponType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/coupon-type.md
+        - DynamicPropertyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-type.md
+        - DynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type.md
+        - LineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/line-item-type.md
+        - DictionaryItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-type.md
+        - DictionaryItemConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-connection.md
+        - ValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type.md
+        - ErrorParameterType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type.md
       - Mutations:
         - AddItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
         - ClearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
@@ -313,41 +336,41 @@ nav:
         - UpdateCartPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties.md
         - AddCartAddress: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address.md
         - AddWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
-      - Objects:
-        - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
-        - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
-        - CartEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-edge.md
-        - CartShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-shipment-item-type.md
-        - CartAddressType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-address-type.md
-        - MoneyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type.md        
-        - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/currency-type.md
-        - TaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/tax-detail-type.md
-        - ShipmentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipment-type.md
-        - ShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipping-method-type.md
-        - PaymentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-type.md
-        - PaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-method-type.md
-        - DiscountType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/discount-type.md
-        - GiftItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/gift-item-type.md
-        - CouponType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/coupon-type.md
-        - DynamicPropertyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-type.md
-        - DynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type.md
-        - LineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/line-item-type.md
-        - DictionaryItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-type.md
-        - DictionaryItemConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-connection.md
-        - ValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type.md
-        - ErrorParameterType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type.md
     - Order:
         - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
         - Queries:
           - Order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
-          - Orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order-connection.md
+          - Orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders.md
+          - OrganizationOrders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders.md
         - Objects:
-          - CustomerOrderType: GraphQL-Storefront-API-Reference-xAPI/Order/queries/CustomerOrderType.md 
+          - CustomerOrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-type.md
+          - CustomerOrderConnection: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-connection.md
+          - OrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-address-type.md
+          - OrderLineItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-line-item-type.md
+          - PaymentInType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-in-type.md
+          - ProcessPaymentRequestResultType: GraphQL-Storefront-API-Reference-xAPI/Order/process-payment-request-result-type.md
+          - InputOrderBankCardInfoType: GraphQL-Storefront-API-Reference-xAPI/Order/input-order-bank-card-info-type.md
+          - InputOrderPaymentType: GraphQL-Storefront-API-Reference-xAPI/Order/input-order-payment-type.md
+          - PaymentTransactionType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-transaction-type.md
+          - AuthorizePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/authorize-payment-result-type.md
+          - InitializePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/initialize-payment-result-type.md
+          - OrderShipmentType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-type.md
+          - OrderShippingMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipping-method-type.md
+          - OrderShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-item-type.md
+          - OrderShipmentPackageType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-package-type.md
+          - InputOrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-address-type.md
+          - OrderTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-tax-detail-type.md
+          - OrderDiscountType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-discount-type.md
+          - OrderPaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-payment-method-type.md
+          - CustomerOrderEdge: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-edge.md
+          - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type.md
+          - KeyValuetype: GraphQL-Storefront-API-Reference-xAPI/Order/key-value-type.md
+          - InputKeyValuetype: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type.md
         - Mutations:
+          - ChangePurchaseOrderNumber: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-purchase-order-number.md
           - CreateOrderFromCart: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/create-order-from-cart.md
           - ChangeOrderStatus: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-order-status.md
-          - ConfirmOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/confirm-order-payment.md
-          - CancelOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/cancel-order-payment.md
+          - ProcessOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/process-order-payment.md
           - UpdateOrderDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-dynamic-properties.md
           - UpdateOrderItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-item-dynamic-properties.md
           - UpdateOrderShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-shipment-dynamic-properties.md
@@ -355,7 +378,6 @@ nav:
           - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment.md
           - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment.md
           - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
-          - OrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-type.md
     - Content:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
       - Queries: 
@@ -530,6 +552,10 @@ extra:
         url: /new/dev_docs
       - title: User docs
         url: /new/user_docs
+      - title: Marketplace Developer Docs
+        url: /new/marketplace_dev_docs
+      - title: Marketplace User Docs
+        url: /new/marketplace_user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home
