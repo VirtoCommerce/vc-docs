@@ -1,7 +1,7 @@
 # How to update platform to Serilog integrated version
 
 !!! note
-    Along with updating platform to 3.304.0 version you have to update XApi module to [version 3.314.0](https://github.com/VirtoCommerce/vc-module-experience-api/releases/tag/3.314.0) or higher.
+    Along with updating platform to 3.304.0 version you have to update xAPI module to [version 3.314.0](https://github.com/VirtoCommerce/vc-module-experience-api/releases/tag/3.314.0) or higher.
 
 To update your platform version to [3.304.0 and higher](https://github.com/VirtoCommerce/vc-platform/releases), use one of the following options:
 

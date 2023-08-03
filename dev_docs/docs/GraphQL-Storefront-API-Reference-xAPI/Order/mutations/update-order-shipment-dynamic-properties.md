@@ -1,55 +1,55 @@
-# UpdateOrderShipmentDynamicProperties
+# UpdateOrderShipmentDynamicProperties ==~mutation~==
 
 This mutation updates dynamic properties for the order shipping method.
 
-## Query
+## Arguments
 
-```
-mutation ($command: InputUpdateOrderShipmentDynamicPropertiesType!)
-{
-    updateOrderShipmentDynamicProperties(command: $command)
+The `InputUpdateOrderShipmentDynamicPropertiesType` is a type that represents the input object for updating dynamic properties of an order shipment.
+
+## Fields
+
+| Field                                                                                                                | Description                                                                                   |
+|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| `orderId` {==String==}                                                                                               | The Id of the order for which the order shipment's dynamic properties will be updated.        |
+| `shipmentId` {==String==}                                                                                            | The Id of the order shipment for which the dynamic properties will be updated.                |
+| `dynamicProperties` [{==[InputDynamicPropertyValueType]!==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic property value types representing the updated dynamic properties of the order shipment.|
+
+
+## Possible returns
+
+| Possible return                                                       | Description          	|
+|-----------------------------------------------------------------------|---------------------	|
+| [`CustomerOrderType`](../objects/customer-order-type.md)           	|  A customer order.  	|
+
+
+=== "Mutation"
+    ```json linenums="1"
+    mutation updateOrderShipmentDynamicProperties ($command: InputUpdateOrderShipmentDynamicPropertiesType!) {
+    updateOrderShipmentDynamicProperties (command: $command)
     {
-        shipments
+    id
+    shipments{
+    dynamicProperties
+    {
+        value
+        name
+    }}
+    }}
+    ```
+
+=== "Variables"
+    ```json linenums="1"
+    {
+    "command": {
+        "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+        "shipmentId": "testshipmentid",
+        "dynamicProperties": [
         {
-            id
-            dynamicProperties
-            {
-                name
-                value
-                valueType
-                dictionaryItem
-                {
-                    label
-                    name
-                    id
-                }
-            }
+            "name": "propery1",
+            "value": "value1"
         }
+        ]
     }
-}
-```
+    }
+    ```
 
-#### Variables:
-
-```
-"command": {
-    "orderId": "d548c750-5a74-4e54-b72b-f5209f44caa6",
-    "shipmentId": "79b8f095-9740-4353-998b-e1c4dd577ee6",
-    "dynamicProperties": [
-        {
-            "name": "Example string property",
-            "value": "12345678"
-        },
-        {
-            "name": "Example multilanguage property",
-            "locale":"de-DE",
-            "value": "hallo welt"
-        },
-        {
-            "name": "Example dictionary property",
-            "value": "578fadeb1d2a40b3b08b1daf8db09463"
-        }
-  	]
-  }
-}
-```

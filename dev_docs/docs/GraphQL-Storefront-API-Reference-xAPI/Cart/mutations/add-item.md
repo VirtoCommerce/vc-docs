@@ -23,7 +23,7 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 | `quantity` {==Int!==}            | The quantity of the product to add to the cart.                                              |
 | `price` {==Decimal==}            | The price of the product.                                                                    |
 | `comment` {==String==}           | A comment or note associated with the added item.                                             |
-| `dynamicProperties` {==[InputDynamicPropertyValueType]==} | The dynamic properties associated with the added item.               |
+| `dynamicProperties` [{==[InputDynamicPropertyValueType]==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic properties associated with the added item.               |
 
 ## Possible returns
 

@@ -1,55 +1,56 @@
-# UpdateOrderItemDynamicProperties
+# UpdateOrderItemDynamicProperties ==~mutation~==
 
-This mutation updates dynamic properties for an order item.
+This mutation updates the dynamic properties for the order item.
 
-## Query
+## Arguments
 
-```
-mutation ($command: InputUpdateOrderItemDynamicPropertiesType!)
-{
-    updateOrderItemDynamicProperties(command: $command)
+The `InputUpdateOrderItemDynamicPropertiesType` is a type that represents the input object for updating dynamic properties of an order item.
+
+## Fields
+
+| Field                                     | Description                                                                                  |
+|-------------------------------------------|----------------------------------------------------------------------------------------------|
+| `orderId` {==String==}                    | The Id of the order for which the order item's dynamic properties will be updated.           |
+| `lineItemId` {==String==}                 | The Id of the order item for which the dynamic properties will be updated.                   |
+| `dynamicProperties` [{==[InputDynamicPropertyValueType]!==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic property value types representing the updated dynamic properties of the order item.|
+
+## Possible returns
+
+| Possible return                                                       | Description          	|
+|-----------------------------------------------------------------------|---------------------	|
+| [`CustomerOrderType`](../objects/customer-order-type.md)           	|  A customer order  	|
+
+
+=== "Mutation"
+    ```json linenums="1"
+    mutation updateOrderItemDynamicProperties ($command: InputUpdateOrderItemDynamicPropertiesType!) {
+    updateOrderItemDynamicProperties (command: $command)
     {
-        items
-        {
-            id
-            dynamicProperties
-            {
-                name
-                value
-                valueType
-                dictionaryItem
-                {
-                    label
-                    name
-                    id
-                }
-            }
-        }
+    id
+    items{
+    dynamicProperties
+    {
+        value
+        name
     }
-}
-```
+    }
+    }
+    }
+    ```
 
-## Variables
-
-```
-"command": {
-    "orderId": "d548c750-5a74-4e54-b72b-f5209f44caa6",
-    "lineItemId": "dab09410-aa1a-4daf-8a32-4e41abee77b8",
-    "dynamicProperties": [
+=== "Variables"
+    ```json linenums="1"
+    {
+    "command": {
+        "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+        "lineItemId": "testlineitemid",
+        "dynamicProperties": [
         {
-            "name": "Example string property",
-            "value": "12345678"
-        },
-        {
-            "name": "Example multilanguage property",
-            "locale":"de-DE",
-            "value": "hallo welt"
-        },
-        {
-            "name": "Example dictionary property",
-            "value": "578fadeb1d2a40b3b08b1daf8db09463"
+            "name": "propery1",
+            "value": "value1"
         }
-  	]
-  }
-}
-```
+        ]
+    }
+    }
+    ```
+

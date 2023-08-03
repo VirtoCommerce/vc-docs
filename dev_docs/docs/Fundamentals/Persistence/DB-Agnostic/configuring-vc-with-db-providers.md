@@ -10,7 +10,6 @@ At the same time, Virto Commerce Architectire allows you add custom database pro
 
 Select the tab with the required provider setup information.
 
-<hr />
 === "Microsoft SQL Server"
 
     **Supported version**: Microsoft SQL Server 2019 or higher

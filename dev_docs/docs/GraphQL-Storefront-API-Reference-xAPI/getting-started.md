@@ -1,11 +1,11 @@
 # Getting Started
 
-This section explains how to prepare your environment for testing XApi.
+This section explains how to prepare your environment for testing xAPI.
 
 ## Prerequisites
 
 * VC platform 3.0 or higher.
-* The platform configured to use ElasticSearch engine.
+* The platform is configured to use ElasticSearch engine.
   ```json title="appsettings.json"
   "Search": {
       "Provider": "ElasticSearch",
@@ -22,7 +22,7 @@ This section explains how to prepare your environment for testing XApi.
 
 ## Presettings
 
-To start using XApi:
+To start using xAPI:
 
 1. Open the Platform and go to **Settings**.
 1. Select **Catalog**.

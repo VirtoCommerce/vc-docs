@@ -1,55 +1,51 @@
-# UpdateOrderPaymentDynamicProperties
+# UpdateOrderPaymentDynamicProperties ==~mutation~==
 
 This mutation updates dynamic properties for the order payment.
 
-## Query
+## Arguments
 
-```
-mutation ($command: InputUpdateOrderPaymentDynamicPropertiesType!)
-{
-    updateOrderPaymentDynamicProperties(command: $command)
+The `InputUpdateOrderPaymentDynamicPropertiesType` is a type that represents the input object for updating dynamic properties of an order payment.
+
+## Fields
+
+| Field                                     | Description                                                                                                   |
+|-------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| `orderId` {==String==}                    | An optional identifier of the order for which the order payment's dynamic properties will be updated.        |
+| `paymentId` {==String==}                  | An optional identifier of the order payment for which the dynamic properties will be updated.                |
+| `dynamicProperties` [{==[InputDynamicPropertyValueType]!==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | Dynamic property value types representing the updated dynamic properties of the order payment.|
+
+## Possible returns
+
+| Possible return                                                       | Description          	|
+|-----------------------------------------------------------------------|---------------------	|
+| [`CustomerOrderType`](../objects/customer-order-type.md)           	|  A customer order.  	|
+
+
+=== "Mutation"
+    ```json linenums="1"
+    mutation updateOrderPaymentDynamicProperties ($command: InputUpdateOrderPaymentDynamicPropertiesType!) {
+    updateOrderPaymentDynamicProperties (command: $command)
     {
-        inPayments
-        {
-            id
-            dynamicProperties
-            {
-                name
-                value
-                valueType
-                dictionaryItem
-                {
-                    label
-                    name
-                    id
-                }
-            }
-        }
-    }
-}
-```
+    id
+    inPayments{
+    dynamicProperties
+    {
+        value
+        name
+    }}
+    }}
+    ```
 
-#### Variables
-
-```
-"command": {
-    "orderId": "d548c750-5a74-4e54-b72b-f5209f44caa6",
-    "paymentId": "0859f1e8-16e8-4924-808b-47e03560085d",
+=== "Variables"
+    ```json linenums="1"
+    "command": {
+    "orderId":  "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+    "paymentId":  "testpaymentid",
     "dynamicProperties": [
-        {
-            "name": "Example string property",
-            "value": "12345678"
-        },
-        {
-            "name": "Example multilanguage property",
-            "locale":"de-DE",
-            "value": "hallo welt"
-        },
-        {
-            "name": "Example dictionary property",
-            "value": "578fadeb1d2a40b3b08b1daf8db09463"
-        }
-  	]
-  }
-}
-```
+        {"name": "propery1",
+        "value": "value1"}
+    ]
+
+    }
+    ```
+

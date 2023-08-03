@@ -113,7 +113,7 @@ This node manages caching configuration.
 | Node | Default or Sample Value | Description  |
 | ------------- | ------------------------ | ------------ |
 | Redis || Redis configuration. Includes the message channel to use and the number of retries.
-| CacheEnabled | <ul><li>`true`</li><br><li>`false`</li></ul> | <ul><li>Cache entries are retained based on the expiration settings.</li><li>Disables caching of application data for the entire application.</li></ul> <br>Used when `ConnectionStrings:RedisConnectionString` is not specified.
+| CacheEnabled | <ul><li>`true`</li><li>`false`</li></ul> | <ul><li>Cache entries are retained based on the expiration settings.</li><li>Disables caching of application data for the entire application.</li></ul> <br>Used when `ConnectionStrings:RedisConnectionString` is not specified.
 | CacheSlidingExpiration | `"0:15:00"` | The cache entry will expire if it is not accessed for a specified amount of time.<br>Used when `CacheAbsoluteExpiration` is not defined.
 | CacheAbsoluteExpiration | `"0:5:00"` | The Cache entry will expire after a specified amount of time. <br>Used when `RedisConnectionString` is not specified.
 <!--caching-end-->
@@ -233,26 +233,53 @@ Example settings for the `AzureBlobStorage` node:
 }
 ```
 
+### Tax
+
+This setting is used to configure tax providers.
+
+| Node                    | Default Value | Description                                                                                           |
+|-------------------------|---------------|-------------------------------------------------------------------------------------------------------|
+| `FixedRateTaxProvider`  | false         | Determines whether the `FixedRateTaxProvider` is enabled or disabled. When set to `false`, the `FixedRateTaxProvider` is not active, and tax calculations will not be performed using this provider. When set to `true` the `FixedRateTaxProvider` will be enabled, allowing the platform to use fixed-rate tax calculations. |
+
+#### Example
+
+```json
+{
+"FixedRateTaxProvider": {"Enabled": false}
+}
+```
 
 <!--security-start-->
 ### IdentityOptions
  There are options to configure the ASP.NET Core Identity system. You might want to check out [this guide](https://github.com/dotnet/AspNetCore.Docs/blob/master/aspnetcore/security/authentication/identity-configuration.md#configure-aspnet-core-identity) for details.
 
-| Node | Description  |
-| ------------- | ------------ |
-| Password.PasswordHistory | The number of recent user passwords to check during password validation. An old password cannot be reused for this number of cycles.<br>If the value is set to `0` or not defined, the password history will be disabled.
-| Password.RepeatedResetPasswordTimeLimit | The time limit after which a user can request password reset.
-| User.MaxPasswordAge | The time span defining the maximum user password age until it expires. The user is forced to change the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled.
-| User.RemindPasswordExpiryInDays | Number of days to start showing password expiry warning in the Platform Manager UI. Used only when password expiration is enabled.
-| Password:PasswordChangeByAdminEnabled | Application setting to disable administrators to set passwords for users in the system. If you set the PasswordChangeByAdminEnabled to false, admin UI and API will limit changing the password for administrators.
+| Node                                  | Description                                                                                                                   |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Password.PasswordHistory              | The number of recent user passwords to check during password validation. An old password cannot be reused for this number of cycles.<br>If the value is set to `0` or not defined, the password history will be disabled. |
+| Password.RepeatedResetPasswordTimeLimit | The time limit after which a user can request a password reset.                                                               |
+| User.MaxPasswordAge                   | The time span defining the maximum user password age until it expires. The user is forced to change the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled. |
+| User.RemindPasswordExpiryInDays       | Number of days to start showing a password expiry warning in the Platform Manager UI. Used only when password expiration is enabled. |
+| Password:PasswordChangeByAdminEnabled | Application setting to disable administrators from setting passwords for users in the system. If you set PasswordChangeByAdminEnabled to false, admin UI and API will limit changing the password for administrators. |
+| AutoAccountsLockoutJobEnabled         | A boolean value (default: false) indicating whether the automatic accounts lockout job is enabled.                            |
+| LockoutMaximumDaysFromLastLogin       | An integer value (default: 365) representing the maximum number of days since the last login before an account is locked out. |
+| CronAutoAccountsLockoutJob            | A string (default: "0 0 * * *") defining the cron expression for the automatic accounts lockout job.                         |
 
-#### Example
 
-Setting the PasswordChangeByAdminEnabled to false:
+#### Example 1
+
+Setting the `PasswordChangeByAdminEnabled` to false:
+
 ![PasswordChangeByAdminEnabled](media/04-password-change-by-admin.png)
 
 The result will be as follows:
+
 ![PasswordChangeByAdminEnabled-result](media/05-password-change-by-admin-result.png)
+
+#### Example 2
+
+Setting the `AutoAccountsLockoutJobEnabled` to true:
+
+![AutoAccountsLockoutJobEnabled](media/AutoAccountsLockoutJobEnabled.png)
 
 ### DataProtection
 There are options to configure lifetimes for security tokens that are issued by platform like password reset.
@@ -281,17 +308,19 @@ This node is used for authentication with Azure Active Directory. Check [how to 
 | Priority | 0 | Configures the priority of the Azure Active Directory login popup on the _Login_ page. The lowest value means the highest priority.
 | AuthenticationType |  |Provides the authentication scheme. Must always have the `AzureAD` value set
 | AuthenticationCaption |  | Sets a human-readable caption for the Azure AD authentication provider. Visible on the Sign In page
-| ApplicationId | 01234567-89ab-cdef-0123-456789abcdef | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through ***Azure Active Directory > App registrations > (platform app) > Application ID***
-| TenantId | abcdef01-2345-6789-abcd-ef0123456789 | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through ***Azure Active Directory > Properties > Directory ID***
+| ApplicationId | 01234567-89ab-cdef-0123-456789abcdef | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory > App registrations > (platform app) > Application ID**
+| TenantId | abcdef01-2345-6789-abcd-ef0123456789 | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory > Properties > Directory ID**
 | AzureAdInstance |https://login.microsoftonline.com | URL of the Azure AD endpoint used for authentication
 | DefaultUserType | `Manager`, `Customer` | Default user type for new users created upon first sign in by Azure AD accounts
+| DefaultUserRoles| `Order manager`, `Store manager`| Default user roles assigned to new users created upon first sign-in by Azure AD accounts.
 | MetadataAddress |  | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys
 | UsePreferredUsername | `false` | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting user name
 
 !!! note
-	***Note to the `MetadataAddress` node***
+	**Note to the `MetadataAddress` node**
 	
-	If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information, For instance, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e).
+	If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information.
+    For instance, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e).
 
 #### Examples
 Example settings for the `AzureAD` section:
