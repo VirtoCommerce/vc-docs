@@ -114,7 +114,8 @@ nav:
   - Getting started:
     - System requirements: Getting-started/system-requirements.md
     - Installation guide:
-      - Installation via VC CLI: Getting-started/installation-guide/installation-using-virto-commerce-CLI.md
+      - Installation via VC CLI: Getting-started/Installation-guide/installation-using-virto-commerce-CLI.md
+  - Localization: Localization/localization.md
 
 extra:
     social:
