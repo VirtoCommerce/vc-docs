@@ -444,6 +444,8 @@ nav:
         - createContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createContact.md
         - updateContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateContact.md
         - deleteContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteContact.md
+        - confirmEmail: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/confirmEmail.md
+        - sendVerifyEmail: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/sendVerifyEmail.md
         - createUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createUser.md
         - updateUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateUser.md
         - inviteUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/inviteUser.md
@@ -508,6 +510,7 @@ nav:
       - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
     - How-tos:
       - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
+      - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
   - Updating Virto Commerce Based Projects:
     - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
     - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
@@ -552,10 +555,6 @@ extra:
         url: /new/dev_docs
       - title: User docs
         url: /new/user_docs
-      - title: Marketplace Developer Docs
-        url: /new/marketplace_dev_docs
-      - title: Marketplace User Docs
-        url: /new/marketplace_user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home

@@ -1,3 +1,43 @@
+
+## Search
+
+Virto Commerce offers the Search tool that provides high level relevance, multiple languages, and near-instantaneous responses.
+
+### Key Advantages:
+- Document based full text search and text analysis for Products, Categories, and Members   
+- Search by keyword, filters, aggregations, and geo-search  
+- Supports multiple search engines: Elastic Search, Elastic Cloud, Azure Search, and Lucene
+- Inherent complexity of information retrieval processed through REST API or .NET SDK
+- The supported document types can be easily extended by a third-party team
+
+
+
+### Search Index
+
+The Virto Commerce platform provides a unified solution for indexing and searching for various types of objects. The Search Index is used to improve the search performance and speed.
+
+The indexing process starts automatically based on a pre-defined schedule. However, you can start the indexing process manually at any time, if required.
+
+!!!tip
+	You can read more about the search index here:<br>
+	[Managing Search Index](managing-search-index.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Catalog Search
 This section explains you how to configure and run search within the Catalog module.
 

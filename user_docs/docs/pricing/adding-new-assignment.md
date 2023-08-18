@@ -1,26 +1,22 @@
-# Adding New Price List Assignment
+# Managing price list assignments
 
-Price list assignments associate specific price lists with the approrpiate catalogs and stores, i.e. they do all the linking job, so that the prices may be asdsigned to the correct items. Apart from that, with a price list assignment, you can target specific custmers eligible for the prices in question.
+Price list assignments associate specific price lists with the appropriate catalogs and stores, i.e. they handle all the necessary linking, ensuring that prices are accurately assigned to the respective items. You can also use a price list assignment to target specific customers who are eligible for the relevant prices.
 
-To add a new price list assignment, navigate to the ***Pricing*** module and select ***Price List Assignments*** to open the ***Price List Assignments*** screen:
+## Add price list assignment
 
-![New price list assignment screen](media/adding-price-list-assignment/new-price-list-assignment.png)
+To add a new price list assignment:
 
-Give your new assignment a name and a description, select the appropriate price list, specify the relevant store or catalog, and provide priority, enable date, and expiration date:
+1. Click **Pricing** in the main menu.
+1. In the next blade, select **Price List Assignments**.
+1. In the next blade, click **Add** in the toolbar to open the **New Price List Assignment** blade.
+1. Fill in the following fields.
 
-![New price list assignment screen](media/adding-price-list-assignment/new-price-list-assignment-filled.png)
+	![New price list assignment screen](media/price-list-assignments.png)
 
-!!! warning
-	For a price list assignment, you can either specify a store or a catalog, but not both.
 
 !!! note
-	Adding a start and end date for your price list assignment is optional and may come in handy when you create a special price list for a promotion with a certain validity period. If you leave the date fields blank, your price list assignment will be valid until you delete it or change dates.
+
+	The targeting feature in the Pricing module functions quite similarly to that in the Marketing module.
 	
-## Customer Targeting
-
-The targeting feature allows you to tailor your price list assignment (and, eventually, the price list in question) to only specific customer categories.
-
-The targeting feature in the Pricing module works pretty much in the same way as in the Marketing module. You can read about it in the [Publish Conditions guide](../marketing/publish-conditions.md).
-
-
+	Read more about it in the [Publish conditions guide](../marketing/publish-conditions.md).
 

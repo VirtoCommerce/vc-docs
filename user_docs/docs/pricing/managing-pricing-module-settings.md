@@ -1,13 +1,37 @@
-# Pricing Module Settings
+# Settings
 
-In order to access Pricing settings, navigate to ***Settings*** and select ***Pricing***:
+The Price module settings include:
 
-![Selecting pricing settings](media/settings/selecting-pricing-settings.png)
+* [General settings](managing-pricing-module-settings.md#general-settings)
+* [Search settings](managing-pricing-module-settings.md#search-settings)
 
-The ***Settings*** screen has two options, ***General*** and ***Search***. Use general settings to configure the page size for export and import and enable or disable logging pricing changes and event-based indexing:
+## General settings
 
-![General settings](media/settings/general-settings.png)
+To configure general settings:
 
-The ***Search*** settings have only one option that allows you to enable or disable price indexing:
+1. Click **Settings**.
 
-![Search settings](media/settings/search-settings.png)
+1. Type **Pricing** to find the settings related to the module.
+
+1. Select **General** to :
+    * Configure the page size for export or import.
+    * Enable/ disable logging of pricing changes.
+    * Enable/ disable and event-based indexing.
+
+	![General settings](media/general-settings.png)
+
+1. Click **Save** to save the changes.
+
+## Search settings
+
+To configure search settings: 
+
+1. Click **Settings**.
+
+1. Type **Pricing** to find the settings related to the module.
+
+1. Select **Search** to enable or disable price indexing.
+
+	![Search settings](media/search-settings.png)
+
+1. Click **Save** to save the changes.

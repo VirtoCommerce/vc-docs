@@ -1,20 +1,20 @@
-# Export Feature
+# Pricing data export
 
-Virto's Pricing module provides the Export feature out-of-the-box, which allows you to export various data, including prices, price lists, and price list assignments.
+Virto's Pricing module provides the Export feature out-of-the-box, enabling you to export various data, including prices, price lists, and price list assignments.
 
-## Exporting Pricing Data
+To start exporting your pricing data:
 
-To start exporting your pricing data, navigate to the Pricing module, select either ***Price Lists*** or ***Price List Assignments***, depending on what you are going to export, select the relevant data by ticking the appropriate checkboxes, and hit ***Export***:
+1. Click **Pricing** in the main menu. 
+1. In the next blade, click **Price Lists** or **Price List Assignments** depending on what you are going to export.
+1. Check the relevant data.
+1. Click **Export**.
 
-![Exporting pricing data](media/export/export.png)
+	![Exporting pricing data](media/pricing-data-export1.png)
 
-!!! tip
-	You can tick the top checkbox to select all data.
+1. Fill in the following fields:
 
-Once you have clicked the ***Export*** button, a dedicated screen will show up:
+	![Export screen](media/pricing-data-export2.png)
 
-![Export screen](media/export/export-screen.png)
-
-Check whether the data type is correct, select export provider (either CSV or JSON), select more data or properties, if required, and click ***Start***.
+1. Click **Start**.
 
 <!---add note and link to the Export module--->

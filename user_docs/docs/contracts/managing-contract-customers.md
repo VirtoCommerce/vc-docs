@@ -1,26 +1,42 @@
-﻿# Managing Contract Customers
+﻿# Managing сontract сustomers
 
-## Adding Companies to Contract
-To manage the list of customers who are linked with the contract (i.e., get prices based on this contract), click the ***Customers*** widget:
+Managing contract customers includes:
 
-![Customers widget](media/customers-widget.png)
+* [Adding companies to the contract](managing-contract-customers.md#add-companies-to-contract)
+* [Removing companies from the contract](managing-contract-customers.md#remove-companies-from-contract)
 
-This will open the ***Customers*** screen, where you need to click the ***Add*** button:
+## Add companies to contract
 
-![Add button](media/customers-add-button.png)
+To manage the list of customers linked to the contract (get prices based on this contract):
 
-This will open the screen with the full list of contacts and companies. Select the companies you need to add them to your contract. This will also add all child companies and related contacts, so it is not required to add each individual user.
+1. Select the contract in the **Contracts** blade.
 
-When you are done, click the ***Confirm*** button:
+1. In the next blade, click the **Customers** widget.
 
-![Adding customers to contract](media/add-customers.png)
+1. In the next blade, click **Add** to open the list of contacts and organizations.
 
-That's it, the specified companies have now been added to the contract:
+    ![Add companies](media/add-customers1.png)
 
-![Customers added to contract](media/customers-added.png)
+1. Check the companies you need to add to your contract. 
 
-## Removing Companies from Contract
+1. Click **Confirm** in the toolbar.
 
-To remove a company from your contract, select one or more companies that should be removed and click the ***Delete*** button on the top toolbar:
+    ![Add companies](media/add-customers2.png){: width="400" height="400"}
 
-![Customers removed from contract](media/removing-customers.png)
+The specified companies have now been added to the contract. This also adds all child companies and related contacts, so it is not necessary to add each user individually.
+
+## Remove companies from contract
+
+To remove a company from your contract:
+
+1. Select the contract in the **Contracts** blade.
+
+1. In the next blade, click the **Customers** widget.
+
+1. Check one or more companies that you want to remove. 
+
+1. Click **Delete** in the top toolbar.
+
+    ![Delete companies](media/delete-customers.png)
+
+1. Confirm your action.

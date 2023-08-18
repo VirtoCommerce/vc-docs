@@ -1,65 +1,43 @@
 # Overview
 
-***Contracts*** is a Virto’s module that enables creation and management of customer contracts. Each contract defines prices the customer gets during the contract period. The feature was designed with B2B companies in mind.
+Virto's Contracts module allows you to create and manage customer contracts. Each contract defines the prices the customer receives during the contract period. The feature is designed with B2B companies in mind.
 
-The contract feature is based on the native Virto Commerce personalization engine in order to provide comfortable employee experience for users who manage B2B customer personalization.
+The Contracts feature is based on Virto Commerce's native personalization engine to provide a convenient experience for users managing B2B customer personalization.
 
-The chart below shows how various high-level entities are linked one to another in the Virto Platform:
+The diagram below illustrates how different high-level entities are related in the Virto platform:
 
-![Chart depicting contract entities](media/contract-entity-chart.png)
+![Chart depicting contract entities](media/contract-entity-chart.png){: width="400" height="400"}
 
-By creating a contract, you link the buyer company, or contact, with the price list that will be applicable to the company during the contract period in the selected store.
+By creating a contract, you link the buyer's company or contact with the price list that will apply to the company during the contract period in the selected store.
 
-To simplify user experience for those who manage contracts, there is an option to select an existing price list as a `_default_` one for the contract and then update specific prices within it. This enables creating large custom price lists with minimum effort.
+To simplify the user experience for those managing contracts, there is an option to select an existing price list as the `_default_` for the contract and then update specific prices within it. This allows you to create large custom price lists with minimal effort.
 
-You can also use the same contract for multiple organizations, which is especially valuable for companies that sell goods or services to businesses with complicated organizational structure.
+You can also use the same contract for multiple organizations, which is especially valuable for companies that sell goods or services to companies with complicated organizational structures.
 
+[View the source code of Virto Commerce Contract module](https://github.com/VirtoCommerce/vc-module-contract){ .md-button }
 
-## Related Components
-
-To view the source code of Virto Commerce Contract module, check out our  [GitHub repository](https://github.com/VirtoCommerce/vc-module-contract).
-
-To download the latest Contract module release, click  [here](https://github.com/VirtoCommerce/vc-module-contract/releases).
-
+[Download latest Contract module release](https://github.com/VirtoCommerce/vc-module-contract/releases){ .md-button }
 
 ## Key Features
 Virto's Contract module contains the following key features:
 
-+ [Managing contracts](creating-and-terminating-contracts.md)
-+ [Managing contract prices](managing-contract-prices.md)
-+ [Managing contract customers](managing-contract-customers.md)
-
-
-## Basic scenario  
-
-When account manager wants to assign specific contract prices to this B2B customer (organization) he should do the following: 
-
-+ Create a contact 
-
-+ Add a default price list to the contract 
-
-+ Update the default price list: add new prices or update the existent ones 
-
-+ Add B2B customer organization to the contract 
-
-+ Save the contract 
-
-+ Since the contract is saved, prices become applicable for all organization members (users) on the storefront. 
-
+* [Managing contracts](creating-and-terminating-contracts.md)
+* [Managing contract prices](managing-contract-prices.md)
+* [Managing contract customers](managing-contract-customers.md)
 
 ## Understanding how contracts work
 
-Since the contract is build on top of existing virto capabilities such (pricing, personalization and customer management) is it worth to explain how it works
-in terms of exists virto objects.  Once you create a contract, the system will automatically:
+Since the contract is built on top of existing Virto capabilities such as pricing, personalization, and customer management, it is worth explaining how it works.
+in terms of existing Virto objects. Once you create a contract, the system will automatically:
 
-1.  Create a new user group, which is equal to the unique contract code
+* Create a new user group equal to the unique contract code.
 
-2.  Assign the created user group to the companies that are included into the contract
+* Assign the created user group to the companies included in the contract.
 
-4.  Create a new price list assignment that will link the default price list with the new user group (equal to contract code)
+* Create a new price list assignment that links the default price list to the new user group (equal to the contract code).
 
-5.  Create a new price list with all contract custom price updates registered
+* Create a new price list with all registered contract custom price updates.
 
-6.  Create a new price list assignment that will link the new price list with the new user group (equal to contract code).
+* Create a new price list association that links the new price list to the new user group (equal to the contract code).
     
-All these changes may get recorded to the appropriate entities (companies, price lists, and price lists assignments), if required, while the user who manages contracts can easily work with the module without being aware of all these details.
+All these changes can be recorded to the appropriate entities (companies, price lists and price list assignments) if required, while the user who manages contracts can easily work with the module without being aware of all these details.
