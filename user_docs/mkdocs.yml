@@ -104,36 +104,26 @@ nav:
         - Overview: order-management/overview.md
         - Order Information: order-management/main-objects.md
         - Order Processing Scenarios:
-          - Overview: order-management/order-processing-scenarios-overview.md
-          - Getting Invoice PDF: order-management/getting-invoice-pdf.md
-          - Creating a New Shipment Document: order-management/new-shipment-document.md
-          - Creating a New Payment Document: order-management/new-payment-document.md
-          - Creating a New Refund Document: order-management/new-refund-document.md
+          - Managing documents: order-management/managing-documents.md
           - Tracking Order Changes: order-management/tracking-order-changes.md
-          - Creating Returns: order-management/creating-returns.md
-          - Processing Returns: order-management/processing-returns.md
+          - Managing returns: order-management/managing-returns.md
           - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
           - Indexation: order-management/indexation.md
         - Notifications: order-management/notifications.md
-        - Settings: order-management/settings.md
         - Permissions: order-management/permissions.md
+
+        - Settings: order-management/settings.md
     - Catalog:
       - Catalog:
-        - Overview: catalog/index.md
-        - Terminology: catalog/glossary.md
-        - Structure Chart: catalog/structure-chart.md
-        - Adding New Catalog: catalog/add-new-catalog.md
-        - Catalog Search: catalog/catalog-search.md
+        - Overview: catalog/overview.md
+        - Managing Catalogs: catalog/add-new-catalog.md
         - Managing Categories: catalog/managing-categories.md
         - Managing Products: catalog/managing-products.md
         - Managing Product Variations: catalog/managing-product-variations.md
+        - Managing Product Availability: catalog/setting-product-availability.md
         - Managing Properties: catalog/managing-properties.md
         - Managing Search Index: catalog/managing-search-index.md
         - Product Indexing: catalog/product-indexing.md
-        - Managing Product Availability: catalog/setting-product-availability.md
-        - Viewing Catalog and Product Details: catalog/view-catalogs-and-physical-items.md
-        - Viewing Catalog Properties: catalog/view-properties.md
-        - Viewing Product Variations: catalog/view-product-variations.md
         - Settings: catalog/settings.md
       - Catalog Personalization:
         - Overview: catalog-personalization/overview.md
@@ -174,10 +164,9 @@ nav:
       - Settings: marketing/settings.md
     - Pricing:
       - Overview: pricing/overview.md
-      - Creating New Price List: pricing/creating-new-price-list.md
-      - Adding Products to Price List: pricing/adding-products-to-new-price-list.md
-      - Adding New Price List Assignment: pricing/adding-new-assignment.md
-      - Export Feature: pricing/export-functionality.md
+      - Managing Price Lists: pricing/creating-new-price-list.md
+      - Managing Price List Assignments: pricing/adding-new-assignment.md
+      - Pricing Data Export: pricing/export-functionality.md
       - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
       - Settings: pricing/managing-pricing-module-settings.md
       - Troubleshooting Guide: pricing/troubleshooting-guide.md
@@ -191,20 +180,18 @@ nav:
       - Using Tasks application: tasks/using-application.md
       - Settings: tasks/settings.md
       - Roles and permissions: tasks/roles-permissions.md
-    - Companies and Contacts:
+    - Contacts:
       - Overview: contacts/overview.md
       - Managing Companies and Contacts: contacts/managing-contacts.md
-      - Search: contacts/search.md
       - Settings: contacts/settings.md
     - Contracts:
       - Overview: contracts/overview.md
-      - Terminology: contracts/terminology.md
-      - Creating and Terminating Contracts: contracts/creating-and-terminating-contracts.md
-      - Managing Contract Prices: contracts/managing-contract-prices.md
-      - Managing Contract Customers: contracts/managing-contract-customers.md
+      - Managing contracts: contracts/creating-and-terminating-contracts.md
+      - Managing contract prices: contracts/managing-contract-prices.md
+      - Managing contract customers: contracts/managing-contract-customers.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
-      - Configuring sitemaps: sitemaps/configuring-sitemaps.md
+      - Managing sitemaps: sitemaps/configuring-sitemaps.md
       - Settings: sitemaps/settings.md
     - Thumbnails:
       - Overview: thumbnails/overview.md
@@ -212,6 +199,7 @@ nav:
       - Managing Thumbnail Options: thumbnails/thumbnail-options.md
       - Using Thumbnails: thumbnails/using-thumbnails.md
       - Settings: thumbnails/settings.md
+    - Search options: search.md
   - Integrations:
     - Avalara Tax:
       - Overview: integrations/avalara/overview.md
@@ -227,6 +215,24 @@ nav:
     - Hotjar:
       - Overview: integrations/hotjar/overview.md
       - Getting started: integrations/hotjar/getting-started.md
+  - Marketplace: 
+    - Overview: marketplace_user_docs/overview.md
+    - Vendor portal:
+      - Overview: marketplace_user_docs/Vendor-portal/overview.md
+      - Offers management by vendor: marketplace_user_docs/Vendor-portal/offers-management-by-vendor.md
+      - Products management by vendor: marketplace_user_docs/Vendor-portal/products-management-by-vendor.md
+    - Operator portal:
+      - Overview: marketplace_user_docs/Operator-portal/overview.md
+      - Master catalog taxonomy management: marketplace_user_docs/Operator-portal/master-catalog-taxonomy-management.md
+      - Commission fees setup:
+        - Overview: marketplace_user_docs/Operator-portal/Commission-fees-setup/overview.md
+        - Static commission fees: marketplace_user_docs/Operator-portal/Commission-fees-setup/static-commission-fees.md
+        - Dynamic commission fees: marketplace_user_docs/Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
+      - Vendors management:
+        - Vendor onboarding: marketplace_user_docs/Operator-portal/Vendors-management/vendor-onboarding.md
+        - Vendor management: marketplace_user_docs/Operator-portal/Vendors-management/vendor-management.md
+      - Products management: marketplace_user_docs/Operator-portal/products-management.md
+  - Glossary: glossary.md
 extra:
     social:
       - icon: fontawesome/brands/github
@@ -252,10 +258,6 @@ extra:
         url: /new/dev_docs
       - title: User Docs
         url: /new/user_docs
-      - title: Marketplace Developer Docs
-        url: /new/marketplace_dev_docs
-      - title: Marketplace User Docs
-        url: /new/marketplace_user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home

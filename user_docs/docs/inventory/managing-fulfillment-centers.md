@@ -1,4 +1,5 @@
-﻿# Fulfillment Centers
+﻿# Managing fulfillment centers
+
 Fulfillment centers are processing units involved in receiving, processing, and delivering orders to end customers. The fulfillment process in e-commerce includes the following steps:
 
 * Receiving goods from a supplier.
@@ -6,44 +7,41 @@ Fulfillment centers are processing units involved in receiving, processing, and 
 * Processing customer orders.
 * Shipping the orders to customers.
 
-## Adding and editing fulfillment center
+To start managing fulfillment centers:
 
-The Inventory module enables managing multiple fulfillment centers. 
+1. Click **Catalog** in the main menu to open the list of catalogs.
+1. Select the relevant catalog in the **Catalog** blade.
+1. In the next **Categories and Items** blade, select the product.
+1. On the product page, click the **Fulfillment centers** widget.
+1. In the next blade, click **Managing fulfillment centers** in the toolbar to view the list of fulfillment centers. 
 
-To add or edit a fulfillment center:
+	![Managing fulfillment centers](media/fulfillment-centers-path.png)
 
-1. Go to **Catalog** -> **Categories and items** -> **Item details** and select the **Fulfillment centers** widget:
+Now you can:
 
-	![Fulfillment centers widget](media/fulfillment-centers-widget.png)
+* [Add and edit fulfillment centers](managing-fulfillment-centers.md#add-and-edit-fulfillment-center)
+* [Delete fulfillment centers](managing-fulfillment-centers.md#delete-fullfillment-center)
 
-1. Click **Managing fulfillment centers** to view the list of fulfillment centers. 
+## Add and edit fulfillment center
 
-	![Manage fulfillment centers button](media/manage-fulfillment-centers-button.png)
+In the list of fulfillment centers:
 
-1. Click the fulfillment center you need to edit or **Add** to add a new one. This opens the following screen:
+1. Click the fulfillment center you need to edit or **Add** to add a new one. This opens **Editing fulfillment center** blade.
+1. Fill in the following fields
+1. Fill in the fields:
 
 	![Editing fulfillment center](media/editing-fulfillment-center.png)
 
-1. Fill in the fields:
-
-	| Field                 	| Description                                                                                                                               	|
-	|-----------------------	|-------------------------------------------------------------------------------------------------------------------------------------------	|
-	| **Name**              	| Fulfillment center name.                                                                                                                  	|
-	| **Location**          	| Latitude and longitude separated with a comma without spaces. Example: 41.40338,2.17403.                                                  	|
-	| **Outer ID**          	| Unique ID for connecting the fulfillment center with an outer system.                                                                     	|
-	| **Address** widget      	| Specify:<ul><li>Country.</li><li>State/province.</li><li>City.</li><li>Address.</li><li>ZIP code.</li><li>Email.</li><li>Phone.</li></ul> 	|
-	| **Short description** 	| Short description of the fullfillment center in the HTML/Markdown format.                                                                 	|
-	| **Description**       	| Detailed fulfillment center description in the HTML/Markdown format.                                                                      	|
-
 1. Click **Save** to save the changes.
 
-## Deleting fullfillment center
+## Delete fullfillment center
 
-To delete a fulfillment center:
+In the list of fulfillment centers:
 
-1. Go to **Catalog** -> **Categories and items** -> **Item details** -> **Fulfillment centers**.
-1. Click **Managing fulfillment centers** to see the list of fulfillment centers.
-	* Click three dots on the left side of each item of the fullfillment center list and click **Delete** in the popup menu.
-	* Click the fulfillment center you need to delete and then click **Delete** in the new blade.
+1. Click:
+	* Three dots on the left side of each item of the fullfillment center list and click **Delete** in the popup menu.
+	* The fulfillment center you need to delete and then click **Delete** in the new blade.
 
-Once you confirm the deletion, the fulfillment center will be permanently removed.
+1. Confirm the deletion. 
+
+The fulfillment center are permanently removed.

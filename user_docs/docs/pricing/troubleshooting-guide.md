@@ -1,16 +1,14 @@
-# Troubleshooting Incorrect Prices in Storefront
+# Troubleshooting
 
-Since the Pricing module enables adding multiple prices of the same currency to a single product, situations may occur where prices displayed in the Storefront catalog are not the ones expected. 
-For example, say, you may add a new price to your product but Storefront will display it incorrectly:
+As the Pricing module allows for the addition of multiple prices of the same currency to a single product, sometimes the prices shown in the Storefront catalog aren't what you expect. For example, you add a new price to your product, but Storefront presents it incorrectly:
 
-![Incorrect price](media/troubleshooting/incorrect-price.png)
+![Incorrect price](media/incorrect-price.png)
 
-Here are some steps you can follow to find out why the correct price does not appear:
+Here are steps to help you determine why the correct price isn't showing up:
 
-1. Open the product with the incorrect price in Catalog and navigate to the ***Price*** widget, as explained [here](viewing-price-list-in-catalog.md).
-2. Make sure the new price is included into the Price list.
-3. Open the assignment list and make sure the price has the assignment that meets the following conditions:
-    + The assignment ***Priority*** is the highest among other price list assignments. Price with the highest priority assignment is used first.  
-    + The ***Catalog*** assignment references the correct catalog. For example, if the store your Storefront is configured to work with uses a virtual catalog and the assignment points to a physical one (where the product actually is), the price will not be displayed. Alternatively, you can set the ***Store*** assignment instead of ***Catalog*** to avoid confusion.
-    + If the assignment has any special conditions, make sure they are applicable. For instance, if the assignment has the ***User group containss*** condition enables, a customer should be added to the correct user group.   
-    + Build the product index and check the Storefront price once again.
+* In the **Catalog** module, open the **Price** widget of the product with incorrect price. Make sure the new price is included in the Price list.
+* In the **Pricing** module, select **Price List Assignments**. Make sure the price meets the following conditions in its assignment:
+    * The assignment has the highest **Priority** compared to other price list assignments. The price with the top priority assignment is used first.
+    * The assignment references the correct **Catalog**. For instance, if your Storefront is set up to work with a virtual catalog, but the assignment points to a physical one (where the product is actually located), the price won't be displayed. To avoid confusion, consider using the **Store** assignment instead of **Catalog**.
+    * If there are any specific conditions for the assignment, ensure they apply. For example, if the assignment relies on the **User group contains** condition, make sure the customer is added to the appropriate user group.
+    * Rebuild the product index and recheck the Storefront price.

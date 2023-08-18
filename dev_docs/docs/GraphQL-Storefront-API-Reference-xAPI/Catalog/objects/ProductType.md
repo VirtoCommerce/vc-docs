@@ -29,6 +29,7 @@ The `productType` field represents the type or category of the product. It is us
 | `images` [{==ImageType==}](ImageType.md)                                	| The images associated with the product.                                                     	|
 | `price` [{==PriceType==}](Price/PriceType.md)                             | The price of the product.                                                                    	|
 | `prices` [{==PriceType==}](Price/PriceType.md)         	                  | A list of prices associated with the product.                                                	|
+| `minVariationPrice` [{==PriceType==}](Price/PriceType.md)                | The minimum price among the product's variations.                                             |
 | `properties(...)` [{==Property==}](Property/Property.md)                	| The properties associated with the product.                                                 	|
 | `keyProperties(...)` [{==Property==}](Property/Property.md)               | The properties associated with the product. The `keyProperties` field can be limited by the `take` argument.        	|
 | `assets` [{==Asset==}](Asset.md)                                         	| The assets associated with the product.                                                     	|
@@ -48,24 +49,20 @@ The `productType` field represents the type or category of the product. It is us
         storeId: "B2B-store"
         cultureName: "en-US"
       ) {
-        items 
-        {
-          keyProperties (take:3) {
+        items {
+          keyProperties(take: 3) {
             name
             value
             label
             displayOrder
-            propertyDictItems
-            {
-              pageInfo
-              {
+            propertyDictItems {
+              pageInfo {
                 endCursor
                 hasNextPage
                 hasPreviousPage
               }
               totalCount
-              items
-              {
+              items {
                 sortOrder
                 __typename
                 value
@@ -73,6 +70,10 @@ The `productType` field represents the type or category of the product. It is us
             }
             id
             type
+          }
+          minVariationPrice {
+            amount
+            currency
           }
         }
       }
@@ -82,23 +83,25 @@ The `productType` field represents the type or category of the product. It is us
 === "Return"
     ```json linenums="1"
     {
-      "data": {
-        "products": {
-          "items": [
-            {
-              "keyProperties": []
+    "data": {
+      "products": {
+        "items": [
+          {
+            "keyProperties": [],
+            "minVariationPrice": {
+              "amount": 100.0,
+              "currency": "USD"
             },
-            {
-              "keyProperties": []
+          },
+          {
+            "keyProperties": [],
+            "minVariationPrice": {
+              "amount": 150.0,
+              "currency": "USD"
             },
-            {
-              "keyProperties": []
-            },
-            {
-              "keyProperties": []
-            }
-          ]
-        }
+          },
+          }
+        ]
       }
     }
     ```

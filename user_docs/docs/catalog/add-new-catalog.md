@@ -1,33 +1,40 @@
-# Adding New Catalog
+# Managing catalogs
 
-To add a new catalog, you need to follow these steps:
+Virto Commerce supports managing two types of catalogs:
 
-+ Navigate to the **Catalog** module and click the **Add** button.  
-+ The **New catalog** screen will show up, and you will be prompted to choose the new catalog type:
+* [Physical catalogs](add-new-catalog.md#physical-catalogs)
+* [Virtual catalogs](add-new-catalog.md#virtual-catalogs)
 
-![New catalog](media/adding-new-catalog/01-adding-new-catalog.png)
+You can readily differentiate physical catalogs from virtual ones through their respective folder or cloud icons. Additionally, virtual catalogs will include the **Virtual** suffix in their names.
 
-+ Select either **Physical Catalog** or **Virtual Catalog**, depending on what kind of catalog you need.
+![Physical vs. Virtual catalogs](media/physical-virtual-catalogs.png)
 
 !!! note
-	Physical and virtual catalogs are used for different purposes. While physical catalogs just house the relevant categories and products, virtual ones allow you to pick various items from other catalogs, while keeping the original linking. For instance, you may need to display seasonal goods together, each item belomnging technically to a different catalog. You may create any reasonable number of physical and virtual catalogs, as you deem fit.
-	
-!!! tip	
-	For more info on how physical and virtual catalogs differ, refer to the [Overview](index.md) and [Terminology](glossary.md) sections. 
+	Fulfillment centers are relevant to physical products only. If a store markets digital content, such as software or music, it will not require any such centers.
 
-+ The next screen, **Catalog Details**, will show up, prompting you to enter the catalog's name and specify the languages:
+## Physical catalogs
 
-![New catalog details](media/adding-new-catalog/02-new-catalog-details.png)
+A physical catalog is an online inventory of products or services that a company presents. These products can be categorized, where each product may belong to a single category or can directly belong to a catalog without being associated with any specific category.
 
-+ Provide the catalog name and specify the default and additional languages:
+## Virtual catalogs
 
-![Specifying new catalog languages](media/adding-new-catalog/03-new-catalog-managing-languages.png)
-	
-+ Confirm your selection by clicking **OK**.
+Virtual catalogs are created on the basis of one or more physical catalogs. A virtual catalog serves as a platform to showcase seasonal goods, technically representing a collection of diverse items selected from various physical catalogs.
 
-+ Click **Create**. Your catalog is ready to use!
+Every virtual catalog requires a unique name not shared by other virtual or physical catalogs. While virtual catalogs consist of products and categories found in physical catalogs, it's not possible to include products from one virtual catalog in another virtual catalog.
 
-!!! tip
-	You can easily tell physical catalogs from virtual ones by the respective folder  or cloud icons. Virtual catalogs will also have the ***(virtual)*** suffix in their names:
-	
-	![Different icons and names for physical and virtual catalogs](media/adding-new-catalog/04-virtual-physical-icons.png)
+Basically, a virtual catalog is a method to visually present products. All items are situated in physical catalogs, which is why they are referred to as such. This also implies that any changes made to an item in a physical catalog will be immediately reflected in the associated virtual catalogs.
+
+### Add new catalog
+
+To add a new catalog:
+
+1. In the main menu, click **Catalog** module.
+1. In the next blade, click **Add**.  
+1. In the **New catalog** blade, choose the catalog type: physical or virtual.
+1. In the next blade, enter the catalog's name and specify the language.
+1. Click **Create** to save the changes.
+
+	![New catalog](media/add-new-catalog.png)
+
+Your catalog is ready to use!
+

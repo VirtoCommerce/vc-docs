@@ -1,9 +1,38 @@
-﻿# Contact Module Settings
-The contact module settings consist of two sections.
-The first section is general settings, which are self-explanatory:
+﻿# Contact module settings
 
-![General settings](media/general_settings.png)
+The Contact module settings include:
 
-The second settings section is module specific and allows you to add and edit statuses for various contact entities. In the examples below, we are adding the ***Pending*** status to the ***Company*** entity:
+* [General settings](settings.md#general-settings)
+* [Settings for contact entities statuses](settings.md#statuses)
 
-![Status settings](media/status-settings.png)
+## General settings
+
+To configure general settings:
+
+1. Click **Settings**.
+
+1. Type **Customer** to find the settings related to customer.
+
+1. Select **General**.
+
+1. In the next blade, configure the general settings:
+
+    ![General settings](media/general_settings.png)
+
+1. Click **Save** to save the changes.
+
+## Statuses
+
+To add and edit statuses for various contact entities: 
+
+1. Click **Settings**.
+
+1. Type **Customer** to find the settings related to customer.
+
+1. Select **Statuses**.
+
+1. In the next blade, configure the statuses. In the example below, we add the **Pending** status to the **Company** entity:
+
+    ![Status settings](media/status-settings.png){: width="600" height="600"}
+
+1. Click **Save** to save the changes.
