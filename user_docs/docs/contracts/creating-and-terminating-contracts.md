@@ -20,7 +20,7 @@ To create a new contract:
 
 After the contract is created, new widgets become available:
 
-![Contract widgets available](media/widgets.png)
+![Contract widgets available](media/widgets.png){: width="300" height="300"}
 
 Use these widgets to manage:
 
@@ -39,8 +39,8 @@ To delete a contract:
 
 1. Check one or more contracts.
 
-1. Click **Delete** on the toolbar.
+1. Click **Delete** in the toolbar.
 
-	![Deleting contract](media/deleting-contract.png)
+	![Deleting contract](media/deleting-contract.png){: width="500" height="500"}
 
 1. Confirm the deletion.
