@@ -3,7 +3,7 @@ To maintain data security and privacy, specify what actions, such as reading, wr
 
 The pre-defined order-related permissions are:
 
-| Permission                   	| Descrpiption               	|
+| Permission               	| Descrpiption               	|
 |------------------------	|----------------------------	|
 | order:read             	| View order related data.   	|
 | order:create           	| Create order related data. 	|
@@ -15,19 +15,20 @@ The pre-defined order-related permissions are:
 | order:capture_payment  	| Capture payment.           	|
 | order:refund           	| Refund order.              	|
 
-## Order Assignees
+## Assign users to proceed orders
 
 To assign order procession to specific users: 
 
-1. Select the required order in the **Orders** module.
-
+1. In the main menu, click **Orders**.
+1. In the next **Customer orders** blade, select the required order.
 1. In the **Assigned to** field, select the assignee from a drop-down list.
+1. Click **Save** to save the changes.
 
-![Assigning orders](media/assigning-orders.png)
+    ![Assigning orders](media/assignees-path.png){: width="800"}
 
 Now only the assigned user can process the order.
 
+## Related links
 
-To create a new role and assign permissions to a user, follow the instructions in the [Creating New Role](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#creating-new-role) section. 
-
-To edit roles and permissions, follow the instructions in the [Editing Roles](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#editing-roles) section.
+* [Creating new role](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#creating-new-role) 
+* [Editing roles](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#editing-roles)

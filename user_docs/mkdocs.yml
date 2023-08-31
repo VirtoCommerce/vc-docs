@@ -127,29 +127,26 @@ nav:
         - Settings: catalog/settings.md
       - Catalog Personalization:
         - Overview: catalog-personalization/overview.md
-        - Tag Inheritance and Propagation: catalog-personalization/tag-inheritance.md
-        - User Groups: catalog-personalization/user-groups.md
-        - How Tos:
-          - Showing or Hiding Catalog Items for Specific Users: catalog-personalization/how-tos/user-groups-for-item-view.md
-          - Showing Special Prices to Specific Customers: catalog-personalization/how-tos/user-groups-for-pricing.md
+        - Managing User Groups: catalog-personalization/user-groups.md
+        - Example: catalog-personalization/example.md
         - Settings: catalog-personalization/settings.md
     - Stores:
       - Overview: store/overview.md
       - Adding New Store: store/adding-new-store.md
-      - Configuring Your Store: store/configuring-store.md
+      - Configuring Store: store/configuring-store.md
       - Settings: store/settings.md
     - Notifications:
       - Overview: notifications/overview.md
       - Notification List: notifications/notification-list.md
-      - Notification Templates: notifications/notification-templates.md
-      - Notification Log: notifications/notification-log.md
       - Notification Layouts: notifications/notification-layouts.md
+      - Notification Log: notifications/notification-log.md
+      - Notification Templates: notifications/notification-templates.md
       - Settings: notifications/settings.md
     - Security:
       - Overview: security/overview.md
       - Managing User Accounts: security/managing-users.md
-      - Roles and Permissions: security/roles-and-permissions.md
-      - API Key: security/api-key.md
+      - Managing Roles and Permissions: security/roles-and-permissions.md
+      - Generating API Key: security/api-key.md
       - Login on Behalf Feature: security/login-on-behalf.md
     - Marketing:
       - Overview: marketing/overview.md
@@ -169,7 +166,8 @@ nav:
       - Pricing Data Export: pricing/export-functionality.md
       - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
       - Settings: pricing/managing-pricing-module-settings.md
-      - Troubleshooting Guide: pricing/troubleshooting-guide.md
+      - Troubleshooting: pricing/troubleshooting-guide.md
+      - Example: pricing/example.md
     - Inventory:
       - Overview: inventory/overview.md
       - Managing Inventory: inventory/managing-inventory.md
@@ -189,6 +187,12 @@ nav:
       - Managing contracts: contracts/creating-and-terminating-contracts.md
       - Managing contract prices: contracts/managing-contract-prices.md
       - Managing contract customers: contracts/managing-contract-customers.md
+    - Generic Export:
+      - Overview: generic-export/overview.md
+      - Assigning Permissions: generic-export/assigning-permissions.md
+      - Data Export: generic-export/exporting-data.md
+      - Advanced Filtering: generic-export/advanced-filtering.md
+      - Settings: generic-export/settings.md
     - Sitemaps:
       - Overview: sitemaps/overview.md
       - Managing sitemaps: sitemaps/configuring-sitemaps.md
@@ -196,10 +200,11 @@ nav:
     - Thumbnails:
       - Overview: thumbnails/overview.md
       - Generating Thumbnails: thumbnails/generating-thumbnails.md
-      - Managing Thumbnail Options: thumbnails/thumbnail-options.md
+      - Managing Thumbnail Settings: thumbnails/thumbnail-options.md
       - Using Thumbnails: thumbnails/using-thumbnails.md
       - Settings: thumbnails/settings.md
     - Search options: search.md
+    - Glossary: glossary.md
   - Integrations:
     - Avalara Tax:
       - Overview: integrations/avalara/overview.md
@@ -232,7 +237,6 @@ nav:
         - Vendor onboarding: marketplace_user_docs/Operator-portal/Vendors-management/vendor-onboarding.md
         - Vendor management: marketplace_user_docs/Operator-portal/Vendors-management/vendor-management.md
       - Products management: marketplace_user_docs/Operator-portal/products-management.md
-  - Glossary: glossary.md
 extra:
     social:
       - icon: fontawesome/brands/github

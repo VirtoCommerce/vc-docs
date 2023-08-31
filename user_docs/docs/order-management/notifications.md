@@ -1,18 +1,27 @@
 The customer is notified of any changes from the time the order is placed to the time the order is shipped:
 
-| Processing step 	| Notification                                                                                                                         	| Description                                                                                                                                                                                                                                                                                                     	|
-|-----------------	|--------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| Order           	| <ul> <li>Notification on created order</li><br> <li>Notification on new order status</li> <li>Notification on cancelled order</li> </ul> 	| <ul> <li>The customer will get an email notification after submitting their details through a form in Storefront.</li><br><li>The customer will get an email notification when the status of any order gets changed.</li> <li>The customer will get an email notification when an order gets cancelled.</li> </ul> 	|
-| Payment         	| Notification on order payment                                                                                                        	| The customer will get an email notification when all payments related to an order have been completed.                                                                                                                                                                                                          	|
-| Shipment        	| Notification on shipped order                                                                                                        	| The customer will get an email notification when all ordered items have been shipped.                                                                                                                                                                                                                           	|
+| Processing step 	| Notification                             	| Description                                                                                                                                         |
+|-----------------	|----------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------	|
+| Order           	| <ul> <li>Notification on created order</li><br> <li>Notification on new order status</li> <li>Notification on cancelled order</li> </ul> 	| <ul> <li>The customer gets an email notification after submitting their details through a form in the Storefront.</li><li>The customer gets an email notification when the status of any order gets changed.</li><br><li>The customer gets an email notification when an order gets cancelled.</li> </ul> 	|
+| Payment         	| Notification on order payment           	| The customer gets an email notification when all payments related to an order have been completed.                                   	|
+| Shipment        	| Notification on shipped order             | The customer gets an email notification when all ordered items have been shipped.                                                    	|
 
-## Viewing Order Notifications
+The users can:
+
+* [View order notifications](notifications.md#view-order-notifications)
+* [Assign Store order notifications](notifications.md#store-specific-notifications)
+* [Create new notifications](../notifications/notification-templates.md)
+* [Enable/ disable notifications](../notifications/notification-list.md#enablingdisabling-notifications)
+
+## View order notifications
 
 To view the list of the particular order notifications:
 
-1. Select the required order and click **Notification feed**.
+1. In the main menu, click **Orders**.
+1. In the next **Customer orders** blade, select the required order.
+1. In the **Edit order details and related documents** blade, click on the **Notification feed** widget. 
 
-    ![General order information](media/current-order-notifications.png)
+    ![General order information](media/notification-path.png)
 
 1. The list of current notifications appears in the new blade.
 
@@ -24,28 +33,27 @@ To view the list of the particular order notifications:
 
 For more information, see [Notifications](../notifications/overview.md).
 
-## Store Specific Notifications
+## Assign store specific notifications
 
 To assign store specific notifications: 
 
-1. Select the required store in the **Stores** module.
+1. In the main menu, click **Stores**.
+1. Select the required store in the **Stores** blade.
+1. Click on the **Notification** widget.
+1. In the **Notifications** blade, select the required notification.
+1. In the next blade, click the **Templates** widget to see the list of templates. 
 
-1. Click **Notification** and select the required one in the new blade.
+    ![Store specific notifications](media/store-specific-notifications.png)
 
-1. In the new blade, click **Templates** to see the list of templates. 
+1. Click **default** to use or edit the default notification template.
+1. Click **Add** in the toolbar to create a new template. 
 
-    * Use or edit the default notification template.
+    ??? Example
+        ![Template](media/notification-template.png){: width="600"}
 
-    ![Default template](media/default-template.png)
+1. Make sure the **Active** switch is on in the notification details blade.
+1. Click **Save** to save the changes.
 
-    * Create a new template. 
+    ![Default template](media/default-template.png){: width="550"}
 
-    ![Add template](media/add-template.png)
-
-1. Make sure the **Active** switch is on.
-
-    ![Active switch on](media/switch-on.png)
-
-To create new notifications, follow the instructions in the [Notification Template](../notifications/notification-templates.md) section.
-
-To enable/disable particular notifications, follow the instructions in the  [Notification List](../notifications/notification-list.md) section.
+Your notification has been added to the list.

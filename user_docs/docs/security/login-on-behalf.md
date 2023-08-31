@@ -1,35 +1,48 @@
-﻿# Login on Behalf Feature
-If you are an administrator or a support engineer maintaining a Virto Commerce based web store, you can log in under another user account through our ***Login on Behalf*** feature. You may want to do so to see what a user sees on a webpage, help them place an order, or even make payment on their behalf.
+﻿# Login on behalf
+
+If you are an administrator or support engineer responsible for maintaining a Virto Commerce-based web store, you can use our **Login on behalf** feature. This feature allows you to log in as another user, which can be helpful for:
+
+* Assessing what a user sees on a webpage.
+* Assisting with order placement.
+* Making payments on their behalf, and more.
 
 !!! note
-	All actions performed through the Login on Behalf feature are strictly logged to avoid possible claims from customers.
+	All actions performed through the **Login on Behalf** feature are strictly logged to avoid potential customer claims.
 
-## How It Works
+## How it works
 
-The ***Login on Behalf*** feature helps you increase the performance of those who work with your web store. It also contributes significantly to customer satisfaction and brand loyalty while decreasing the number of abandoned carts.
+The **Login on behalf** feature enhances the efficiency of your web store operations and significantly contributes to customer satisfaction and brand loyalty, while reducing cart abandonment rates.
 
-When a user reports an issue with an order processing operation or finds a bug, a support engineer often needs to see what that user sees. This is especially important in cases when an application error occurs, since it may be difficult to re-create the error.
+When a user encounters issues with order processing or identifies a bug, support engineers often require a view of the user's perspective. This becomes especially crucial when dealing with application errors, which can be challenging to reproduce.
 
-Additionally, with ***Login on Behalf***, more experienced people can show the staff how to move around the app. For example, an admin can help a salesperson bulk-add products from an Excel file.
+Moreover, **Login on behalf** enables experienced users to guide staff through the application. For instance, an administrator can assist a salesperson in bulk-adding products from an Excel file.
 
-## Step by Step Instructions
-To log in on behalf of another user, you should first sign into Virto Commerce portal as an administrator.
+To log in on behalf of another user, sign into Virto Commerce portal as an administrator. Make sure the admin role and the respective permissions have been assigned properly. You can log in on behalf of another user via the **User information** blade. It can be accessed via the **Contacts** or **Security** module.
 
-!!! note
-	After signing in, make sure to check the admin role and the respective permissions have been assigned properly.
+=== "Contacts module"
 
-Go to the [Companies and Contacts](https://docs.virtocommerce.org/new/user_docs/contacts/overview/) module and find the customer you need to log in on behalf of. On the ***Contact Details*** screen, click the ***Accounts*** widget to open the customer's user account profile:
+    To access the **User information** blade via the Contacts module:
 
-![Opening customer account](media/opening-customer-account.png)
+	1. Click **Contacts** in the main menu.
+	1. In the next **Companies and Contacts** blade, select the required contact.
+	1. In the next **Contact details** blade, click the **Accounts** widget.
+	1. In the next blade, select the required account from the list.
+	1. The **User information** blade appears. Click **Login on behalf** in the toolbar.  
 
-In the account profile, click the ***Login on behalf*** button:
+		![Loging via Contacts](media/login-on-behalf-path.png)
 
-![Login on Behalf button](media/login-on-behalf-button.png)
+=== "Security module"
 
-Virto Commerce will open a new tab with Storefront and prompt you to re-enter your credentials, for security reasons:
+    To access the **User information** blade via the Security module:
 
-![Redirection to Storefront](media/redirection-to-storefront.png)
+	1. Click **Security** in the main menu.
+	1. In the next **User management** blade, click **Users**.
+	1. In the next **Users** blade, select the required account from the list.
+	1. The **User information** blade appears. Click **Login on behalf** in the toolbar.  
 
-That's it. You are now logged in on behalf of your customer:
+		![Loging via Contacts](media/login-on-behalf-path2.png){: width="800"}
 
-![Login on behalf result](media/login-on-behalf-result.png)
+
+The Storefront front page will open in a new window and prompt you to re-enter your credentials for security purposes:
+
+![Redirection to Storefront](media/redirection-to-storefront.png){: width="750"}

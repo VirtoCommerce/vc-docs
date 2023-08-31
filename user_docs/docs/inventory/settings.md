@@ -9,7 +9,7 @@ The Inventory module settings include:
 
 To configure general settings:
 
-1. Click **Settings**.
+1. Click **Settings** in the main menu.
 
 1. Type **Inventory** to find the settings related to the module.
 
@@ -23,7 +23,7 @@ To configure general settings:
 
 To configure search settings: 
 
-1. Click **Settings**.
+1. Click **Settings** in the main menu.
 
 1. Type **Inventory** to find the settings related to the module.
 

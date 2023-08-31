@@ -1,14 +1,36 @@
-﻿# Roles and Permissions
-In Virto Commerce Platform, each user must have at least one role assigned. Virto provides some pre-defined roles out-of-the-box; you can both edit them as you deem fit and create your own ones.
+﻿# Roles and permissions
 
-## Creating New Role
-To create a new role, go to ***More -> Security*** and select the ***Roles*** option. This will open the ***Roles*** screen, where you need to click the add button:
+In Virto Commerce Platform, each user must have at least one role assigned. Virto Commerce offers pre-defined roles by default, which you can customize or create new ones according to your needs.
 
-![Role list](media/role-list.png)
+Managing roles includes:
 
-In the ***New Role*** screen, provide the role name and description and check all applicable permissions. Virto's Security service enables you to assign as granular permissions as possible: for each module and the platform itself, you can select create, read, access, update, delete, and other permissions. In our case, for indicative purposes only, we are creating a role that would allow full access to the Customer module:
+* [Creating new roles and assigning permissions](roles-and-permissions.md#create-new-role)
+* [Editing new roles](roles-and-permissions.md#edit-roles)
 
-![Creating new role](media/creating-new-role.png)
+## Create new role and assign permissions
 
-## Editing Roles
-After you hit ***Create***, your new role will appear in the list on the ***Roles*** screen. Select it to open it for editing at any time and assign or remove additional permissions as you deem fit.
+To create new roles and assign permissions to them:
+
+1. Click **Security** in the main menu.
+1. In the next blade, click **Roles** to open the **Roles** blade.
+1. Click **Add** in the toolbar.
+
+	![Path](media/roles-path.png)
+
+1. Fill in the following fields:
+
+	![New user](media/new-role-fields.png)
+
+1. Click **Create** to save the changes.
+
+The new user has been added to the list in the **Roles** blade.
+
+## Edit roles
+
+To edit a role:
+
+1. Follow steps 1-2 from the instruction above.
+1. Click the required role and edit it in the next blade: assign new permissions or delete the existing ones.
+1. Click **Save** in the toolbar to save the changes.
+
+The role has been modified.

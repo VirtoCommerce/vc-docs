@@ -1,46 +1,47 @@
-﻿
-# Generating Thumbnails
-As long as your asset folders have any images inside, you can create a new thumbnail generation job and either run it manually or schedule it to run every X hours, days, etc.
+﻿# Generate thumbnails
 
-## Creating New Job
-To create a new thumbnail generation job, navigate to the Thumbnails module and click the ***Add*** button in the top toolbar. This will open the ***Thumbnail generation task details*** screen:
+If your asset folders contain any images, you have the option to create a new thumbnail generation job. You can then choose to execute it manually or schedule it to run at specific intervals, such as every X hours, days, and so on.
 
-![Creating new thumbnail generation job](media/creating-new-job.png) 
+## Create new job
 
-Give your job a name (in our example, we call it *All catalog images*, so that one might understand which images it covers) and provide the path to original images.
+To create a new thumbnail generation job:
 
-!!! note
-	The ***Path to images*** section allows you to select only an asset folder (and only a single one). You can neither select multiple folders nor individual images.
+1. Click **Thumbnails** in the main menu.
+1. In the next **Thumbnail generation tasks list** blade, click **Add** in the toolbar.
+1. Fill in the following fields:
 
-Finally, select all image sizes that apply:
+	![fields](media/thumbnail-job.png)
 
-![Job screen filled](media/job-screen-filled.png)
+1. Click **Save** in the toolbar to save the changes.
 
-As you can see, apart from the size in pixels, you can also use the predefined sizes (large, medium, small) we provide out-of-the-box.
+Your job has been added to the list.
 
-!!! note
-	You can use any number of resolution options according to your needs. In the example above, for instance, you will get thumbnails for all selected images both with 64x64 and 128x128 size. Please note, however, that selecting many resolution options may lead to slower performance.
-	
-!!! tip
-	For more details on the thumbnail generation options, please refer to [this dedicated guide](thumbnail-options.md). 
+## Run thumbnail generation job
 
-Once you are done, hit ***Save*** in the top toolbar. Your job will appear in the list on the Thumbnails module main screen:
+The created job can be run:
 
-![Job in the list](media/job-in-the-list.png)
+* [Manually](generating-thumbnails.md#manual-run).
+* Automatically via the [Scheduled run](settings.md) feature.
 
-## Running Thumbnail Generation Job
+### Manual run
 
-### Manual Run
-Once you have created your new job, you can immediately run it manually by clicking the respective button on the ***Thumbnails generation task details*** screen's toolbar:
+To run the job manually:
 
-![Run button](media/run-button.png)
+1. Check the required job.
+1. Click **Run** in the toolbar.
+1. Select the required action in the notification window:
+	* **Process changes** to generate thumbnails only for new or changed images.
+	* **Regenerate** to force generation process for all images.
 
-The system will then prompt you to select one of the options: either process all images or run the job for the new images only:
+		![notification](media/notification.png)
 
-![System prompt](media/system-prompt.png)
+	!!! note
+		If you are running this job for the first time, the **Process Changes** option will be grayed out.
 
-!!! note
-	If this your first time to run this job, the ***Process changes*** option will be grayed out.
+1. The result is diplayed in the next **Process images** blade:
 
-### Scheduled Run
-Apart from running thumbnail generation jobs manually, you can also schedule them to run in the background once in a period of time. To learn how to do this, please proceed to the [Settings](settings.md) section. 
+	![result](media/result.png)
+
+### Scheduled run
+
+You can schedule thumbnail generation to run in the background once in a certain period of time. Read more about it in the [Settings](settings.md) section. 

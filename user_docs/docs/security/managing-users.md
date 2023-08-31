@@ -1,53 +1,41 @@
-﻿# Managing User Accounts
+﻿# Managing user accounts
 
-This guide will explain you how to create and manage user accounts in Virto Commerce.
+Managing user accounts includes:
 
-## Creating New User
-Once you install Virto Commerce Platform, it will create a single user with the administrator privileges. You will then need to create more users and assign roles to them as you see fit for your company.
+* [Creating new users and assigning roles to them](managing-users.md#create-new-user)
+* [Editing user accounts](managing-users.md#edit-user-account)
 
-!!! note
-	Only administrator users have permission to manage users and roles.
+## Create new users and assign roles to them
 
-To create a new user, you first need to go to ***More -> Security***. The system will automatically open the ***Users*** screen with a list, which will have only one user in case you just installed the platform. Click the ***Add*** button on the top toolbar to open the ***New Account*** screen:
+After installing Virto Commerce Platform, a single user with administrator rights will be automatically created. Following this, you will need to create additional users and assign roles to them based on your company's requirements. Only users with administrator rights possess the permission to manage users and roles.
 
-![New Account screen](media/new-account-screen.png) 
+To create new users and assign roles to them:
 
-The first part of the screen allows you to specify account type, username (login), email, status, and password:
+1. Click **Security** in the main menu.
+1. In the next blade, click **Users** to open the **Users** blade.
+1. Click **Add** in the toolbar.
 
-![Creating new user account, part 1](media/creating-new-account-part-1.png)
+	![Path](media/add-user-path.png)
 
-!!! note
-	The account type determines which kind of access the user you are creating will have:
-	
-	+ *Customer:* The user will not have access to the VC admin side at all.
-	+ *Manager:*: The user will be able to login to the VC admin side but will only see blank interface, unless provided with specific permissions.
-	+ *Admin:* This account type provides the user with full access to the VC admin side.
+1. Fill in the fields. Each user must have at least one role assigned.
 
-The second part of the screen allows you to assign one or more roles to your user:
+	![New user](media/new-account-screen.png)
 
-![Creating new user account, part 2](media/creating-new-account-part-2.png)
+1. Click **Create** to save the changes.
 
-!!! tip
-	You can read more about user roles in [this dedicated guide](roles-and-permissions.md).
+Your new user has been added to the list in the **Users** blade.
 
-!!! note
-	Each user must have at least one role assigned.
+## Edit user account
 
-After providing all details and assigning roles, hit the ***Create*** button. Your new user will appear in the list on the ***Users*** screen.
+To edit a user:
 
-## Managing User Account
-Once you create a new user account, you can select it to provide some additional details and tweak a few more things, such as:
+1. Follow steps 1-2 from the instruction above.
+1. Select the required user and edit the following fields in the next blade. 
 
-+ Use the ***Administrator*** toggle to provide full access to the system
-+ Use the ***Verified*** toggle to specify whether the user is verified
-+ Specify the catalog or store the user will have access to
-+ Assign additional roles to the user through the ***Roles*** widget
-+ View the changelog through the ***Changes*** widget
-+ Generate the [API key](api-key.md) through the ***API key*** widget
+	![Managing user details](media/managing-user-details.png)
 
-Once you provided all additional details, hit the ***Save*** button:
+1. Confirm changes.
 
-![Managing user details](media/managing-user-details.png)
+[Read more about Login on behalf](login-on-behalf.md){ .md-button }
 
-!!! note
-	The ***Locked state*** field cannot be edited. However, you can lock and unlock user accounts using the respective button on the top toolbar. 
+[Read more about API keys](api-key.md){ .md-button }

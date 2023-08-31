@@ -1,13 +1,20 @@
 ﻿# Generating API Key
-Sometimes, for API authentication, you will need to generate an API key for a [user you created](managing-users.md). To do so:
 
-+ Open the user account
-+ Select the ***API key*** widget
-+ Click the ***Generate*** button in the menu bar
-+ Activate the key by toggling the ***Active*** button:
+To generate an API key for API authentication of a user you have created: 
 
-![enter image description here](media/generating-api-key.png)
+1. Click **Security** in the main menu.
+1. In the next blade, click **Users** to open the **Users** blade.
+1. Select the required user. 
+1. In the **User information** blade, click on the **API key** widget.
 
-!!! warning
-	+ If you de-activate your API key, the system will not allow API calls using the old key.
-	+ In case you de-activate and then re-activate your API key, the system will not allow the old key, and a new API key will be generated instead.
+	![path](media/api-path.png)
+
+1. In the **Api key** blade, click **Generate** in the toolbar. The new API key appears.
+1. Switch the **Is active** option to on to activate the key. If you deactivate your API key, the system will not allow API calls using the old key. If you deactivate and then reactivate your API key, the system will not allow the old key and will generate a new API key instead.
+1. Click **OK** to save the changes.
+
+	![path](media/api-path-2.png){: width="350"}
+
+1. Click **Save** in the **User information** blade.
+
+The API key has been generated.

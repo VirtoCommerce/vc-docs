@@ -11,6 +11,8 @@ Variations inherit property values from the master product, including descriptio
 
 [Read more about Managing Product Variations](managing-product-variations.md){ .md-button }
 
+[Read more about assigning User Groups to products](../catalog-personalization/user-groups.md){ .md-button }
+
 ## Add product
 
 To add a new product to your catalog:
@@ -42,3 +44,4 @@ To view the product details of the added product:
 		![Products details fields](media/product-properties-fields.png)
 	* Widgets:
 		![Products details widgets](media/product-properties-widgets.png)
+

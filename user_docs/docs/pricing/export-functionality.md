@@ -9,12 +9,14 @@ To start exporting your pricing data:
 1. Check the relevant data.
 1. Click **Export**.
 
-	![Exporting pricing data](media/pricing-data-export1.png)
+	![Exporting pricing data](media/pricing-data-export1.png){: width="750"}
 
 1. Fill in the following fields:
 
 	![Export screen](media/pricing-data-export2.png)
 
 1. Click **Start**.
+
+The export process is initiated.
 
 <!---add note and link to the Export module--->
