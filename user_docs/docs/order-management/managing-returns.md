@@ -9,28 +9,30 @@ Managing returns includes:
 
 To create a return for a particular order:
 
-1. Select the order and click **Create return**.
+1. In the main menu, click **Orders**.
+1. In the next **Customer orders** blade select the required order.
+1. In the **Edit order details and related documents** blade, click **Create return**.
 1. In the new blade, check the items that require a return. Enter the return reason, if necessary.
 1. Click **Make return**.
 
     ![Creating a return](media/make-return-1.png)
 
-1. The return specifications opens in a new blade.
+1. In the **Return** blade, fill in the following fields:
 
     ![Return specification](media/make-return-2.png)
 
+1. In the toolbar, click **Save** to save the changes.
+
 # Process return
 
-To process the received returns:
+To process the returns:
 
-1. Select the required order and click **Returns**.
+1. In the main menu, click **Orders**.
+1. In the next **Customer orders** blade select the required order.
+1. In the **Edit order details and related documents** blade, click on the **Returns** widget.
+1. In the next blade, select the required return from the list.
 
     ![Return processing](media/return-processing.png)
 
-1. A list of returns appears in the new blade. Click the required return.
-
-    ![Selecting a return](media/return-selecting.png)
-
-1. In the new blade, change the return status, enter your resolution, click **Save**.
-
-    ![Saving a return](media/return-saving.png)
+1. In the **Return** blade, change the return status and enter your resolution.
+1. In the toolbar, click **Save** to save the changes.

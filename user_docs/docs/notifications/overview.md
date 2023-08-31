@@ -1,18 +1,19 @@
 # Overview
 
-Virto's *Notifications* module allows you to work with various notification scenarios for your customers.
+The Virto Commerce Notifications module enables you to manage a variety of notification scenarios for your customers. You'll need to send notifications to your customers in various situations:
 
-!!! note
-	While managing your online store, you will need to send notifications to your customers in various cases, e.g., when they successfully sign up, when they request password reset, or when their order is complete. For all such scenarios, the Notifications module will enable sending an email or other message informing your customers on the next steps they should take or just providing them with the required info.
-	
-!!! tip
-	Virto Commerce provides a medley of notifications out of the box. Your development team can configure way more themselves, too.<!---link to dev_docs/creating_your_own_notification-->
+* When they successfully sign up.
+* When they request a password reset.
+* When their order is complete, and more.
+
+For all these scenarios, the Notifications module facilitates sending emails or other messages to inform your customers about the next steps they should take or provide them with the necessary information.
+
+Virto Commerce offers a range of pre-configured notifications right out of the box. Additionally, your development team can also [configure](../../../dev_docs/docs/Fundamentals/Notifications/configuration.md) custom notifications as needed.
 	
 ## Key Features
-The *Notifications* module has the following key features:
 
-1. [Notification list](notification-list.md)
-2. [Notification layout](notification-layouts.md)
-3. [Notification activity feed](notification-log.md#notification-activity-feed)
+With the Notifications module, you can:
 
-![Notification features](media/notification-features.png)
+1. [Manage email and text notifications](notification-list.md)
+2. [Create new notification layouts](notification-layouts.md)
+3. [View the notifications logs](notification-log.md)

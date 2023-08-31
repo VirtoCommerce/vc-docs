@@ -1,21 +1,24 @@
-Once you have successfully generated thumbnails for your images, you can access it just by adding suffix with the required resolution (defined by options siffix) to original image url
+# Using thumbnails
 
-For example, if the original image is accessible by this url
+After successfully generating thumbnails for your images, you can access them simply by adding the desired resolution suffix (defined by the options suffix) to the original image URL.
 
-```url
-https://localhost/assets/catalog/my-cool-image.jpg
-```
+For instance:
 
-if we have generated thumbnails with options having the following suffixes: `64x64` and `small` the resulting thumbnail URLs
-will become:
+* If the original image is accessible via this URL:
 
-```url
-https://localhost/assets/catalog/my-cool-image_64x64.jpg
-```
+    ```url
+    https://localhost/assets/catalog/my-cool-image.jpg
+    ```
 
-and 
+* And you've generated thumbnails with suffixes `64x64` and `small`, the resulting thumbnail URLs will be:
+    1. 
+        ```url
+        https://localhost/assets/catalog/my-cool-image_64x64.jpg
+        ```
 
-```url
-https://localhost/assets/catalog/my-cool-image_small.jpg
-```
-respectively.
+    2. 
+        ```url
+        https://localhost/assets/catalog/my-cool-image_small.jpg
+        ```
+
+This makes it easy to retrieve the specific thumbnail you need.

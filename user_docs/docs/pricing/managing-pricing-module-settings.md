@@ -1,6 +1,6 @@
 # Settings
 
-The Price module settings include:
+The Pricing module settings include:
 
 * [General settings](managing-pricing-module-settings.md#general-settings)
 * [Search settings](managing-pricing-module-settings.md#search-settings)

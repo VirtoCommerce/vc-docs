@@ -2,14 +2,13 @@
 
 To start indexation:
 
-1. Click the button with the last indexation date:
+1. In the main menu, click **Orders**.
+1. In the next **Customer orders** blade, select the required order.
+1. In the **Edit order details and related documents** blade, click on the **Indexation** widget.
+1. In the next blade, click **Build index**.
 
-    ![General order information](media/indexation.png)
+    ![New payment document](media/indexation.png)
 
-1. In the new blade, click **Build index**.
-
-    ![Build index](media/new-indexation.png)
-
-1. The notification of successful indexation appears.
+1. The result of indexing is displayed in the next blade.
 
     ![Indexation completed](media/indexation-completed.png)

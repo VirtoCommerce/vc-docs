@@ -1,17 +1,20 @@
-# Sending Order Information to AvaTax
+# Sending order information to AvaTax
 
 To send the order information to AvaTax manually:
 
-1. Click the button:
+1. In the main menu, click **Orders**.
+1. In the next **Customer orders** blade, select the required order.
+1. In the **Edit order details and related documents** blade, click on the AvaTax widget.
+1. In the next **Order in AvaTax** blade, click **Send to AvaTax**. 
 
-    ![General order information](media/send-to-avalara.png)
+    ![Path](media/avatax_path.png)
 
-1. In the new blade, click **Send to AvaTax**. 
+1. The result of the operation is diplayed in the next blade.
+
+    ![Result](media/result.png)
+
+1. Click on the Avatax widget to see the updated information:
 
     ![General order information](media/send-to-avalara1.png)
-
-1. Check the updated information on the button:
-
-    ![General order information](media/avatax.png)
 
 To set automatic tax calculation, see [AvaTax module](../integrations/avalara/taxes-calculation.md). 

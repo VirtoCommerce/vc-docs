@@ -1,47 +1,26 @@
-# Managing Search Index
+# Managing search index
 
-VirtoCommerce uses custom analyzer to extract tokens from the text when building search index. Following token filters are supported:
+Virto Commerce uses custom analyzer to extract tokens from the text when building search index. The following token filters are supported:
 
-custom_edge_ngram (default)
-custom_ngram
+* custom_edge_ngram (default)
+* custom_ngram
 
-## Scenarios
+To manage search index: 
 
-### View Document Types in Search Index
+1. In the main menu, click **Search index**.
+1. In the next **Record types blade**, check the required document.
+1. Click **Build index** in the toolbar.
 
-1. In order to view the Documents type, the user should open the 'Search index' tab;
-1. The system will open the 'Document types' blade and display a table containing the following columns:
-     1. Document type;
-     1. Last indexed;
-     1. Docs count;
-     1. Provider;
-     1. Scope.
-1. The following types of documents will be displayed in the table:
-     1. Product;
-     1. Category;
-     1. Member.
-1. The 'Build index' button is disabled if no document type is selected.
+     ![Build index](media/search-index-path.png){: width="650"}
 
-### Build Index
+1. In the popup window:
+     1. Click **Build** to initiate the process of building and indexing all the objects into the search engine.
+     1. Click **Delete and build** to delete search index of the selected document and rebuild it from scratch. 
 
-1. The user selects a Document type (example Product) and clicks the 'Build Index' button
-1. The system will display a pop up window with the following message: **'Choose how to update the Search Index. Options:
-Build: index for all data without recreating.
-Delete + build: Current search index will be deleted and built from scratch. Note that there WON'T BE ANY SEARCH RESULTS until the build process finishes.'**
-1. 'Build', 'Delete + Build', 'Cancel' buttons are active
-1. The user clicks the 'Build' button
-1. The build will run through all the objects and index them into the search engine.
+          ![Index options](media/popup-window-build-index.png)  
 
-![Fig. Build Index](media/screen-build-index.png)
+1. The result of the indexation process appears in the new blade.
 
-### Delete And Build Index
+     ![Result](media/indexation-result.png)
 
-1. The user selects a Document type (example Product) and clicks the 'Build Index' button
-1. The system will display a pop up window with the following message: **'Choose how to update the Search Index. Options:
-Build: index for all data without recreating.
-Delete + build: Current search index will be deleted and built from scratch. Note that there WON'T BE ANY SEARCH RESULTS until the build process finishes.'**
-1. 'Build', 'Delete + Build', 'Cancel' buttons are active
-1. The user clicks the 'Delete+Build' button
-1. The current search index of the selected document will be deleted and indexing process will start. 'Delete+Build' is a system operation.
-
-![Fig. Delete and Build Index](media/screen-deletebuild-index.png)
+The search results will become available once the build process is finished.

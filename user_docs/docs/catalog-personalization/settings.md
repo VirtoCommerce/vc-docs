@@ -1,19 +1,14 @@
 # Settings
 
-To open the Personalization module settongs, navigate to ***Settings -> Personalization -> General***.
+To manage personalization settings:
 
-## Toggling Tag Propagation Policies
-The first setting section allows you to switch the tag propagation policy from ***DownTree*** to ***UpTree***, and vice versa:
+1. Click **Settings** in the main menu.
+1. In the next blade, type **Personalization** to find settings related to the module.
+1. Select **General**.
+1. In the next blade, configure the settings:
 
-![Propagation policy settings](media/policy-settings.png)
+	![Settings](media/personalization-settings.png)
 
-Once you've switched the plicy, click ***Save*** and restart the app, so that your changes may come into effect.
+1. Click **Save** in the toolbar to save the changes.
 
-## Synchronizing Outlines
-
-The ***Synchronize outlines*** feature helps propagate tags automatically from a product to all product parents. You can provide a cron expression to schedule the sync job, and view this job stats by clicking the respective widget:
-
-![Synchronizing outlines](media/sync-outline.png)
-
-!!! note
-	The ***Synchronize outlines*** feature works for the ***UpTree*** policy only.
+The settings have been saved.

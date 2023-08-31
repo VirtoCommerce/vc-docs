@@ -21,17 +21,7 @@ The order itself contains minimum details.  You will find payment, shipment, and
 
 Virto Commerce Orders Module supports the following functionalities:
 
-* Document based order structure. The order, being a document itself, is also a container for documents related to the order processing, shipping, and payment.
-* Status update for each document type.
-* Manage additional invoices.
-* Changing Order products (quantity, product change, new products).
-* Possibility to make changes to order product price.
-* Possibility to change discounts.
-* Payment history tracking. These documents allow keeping bills information and full logging of payment gateway transactions related to the order.
-* Refunding possibilities.
-* Possibility to change Product items.
-* Save order details change history (logs).
-* Save payment details (emails, phone numbers).
-* Manage split shipments.
-* Single shipment delivery of more than one order.
-* Real time integration with Avalara Tax automation.
+* [Managing shipment, payment, and refund documents](managing-documents.md)
+* [Managing returns](managing-returns.md)
+* [Sending order information to Avalara](sending-order-information-to-avatax.md)
+* [Tracking order changes](tracking-order-changes.md)

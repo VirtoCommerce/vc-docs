@@ -68,28 +68,6 @@ To add a new SEO block:
 
 Your new SEO block has been added to the SEO list.  
 
-### User groups
-
-The **User groups** widget allows you to associate specific user groups with a category. This association can determine which user groups have access to view or interact with the products within that category.
-
-To assign user groups to a certain category:  
-
-1. In the **Category details** blade,  select the **User Groups** widget.  
-1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a drop-down list.
-
-    ![User groups](media/user-groups-widget.png)
-
-1. Click **Save** in the toolbar to save the changes. 
-
-To add new user groups:
-
-1. In the **Category** blade, click ![pencil](media/pencil.png){: width="30" height="30"} next to the **Available User Groups** field to open the **Member group dictionary** blade.
-1. Click **Add** in the toolbar.
-1. Type the name of the tax type and click ![Save](media/save.png){: width="30" height="30"}. 
-1. Click **Save** in the toolbar to save the changes.
-
-Your new user group has been created.
-
 ### Links
 
 To link categories to the catalog items:
@@ -104,3 +82,5 @@ To link categories to the catalog items:
 The links to the current category within the selected virtual catalogs and categories have been created.
 
 [Read more about the Properties widget](managing-properties.md){ .md-button }
+
+[Read more about the User Groups widget](../catalog-personalization/user-groups.md){ .md-button }

@@ -1,20 +1,18 @@
 # Overview
 
-The core purpose of Virto's Catalog Personalization module is to customize catalogs, price lists, and marketing actions using tags and user groups to make them more convenient and useful for you.
+The Virto Commerce Catalog Personalization is designed to personalize the online shopping experience for customers by showing them tailored product recommendations, content, or offers via the user groups feature.
 
-## Key Features
+The **User groups** feature allows you to associate specific user groups with a product or category. This association can determine which user groups have access to view or interact with the products within that category.
 
-1. Controlling the visibility of such catalog objects as products and categories through manually labelling them with the special ***Tag*** property. Tags may contain multiple predefined values, which can also be defined for customer profiles.
-1. Tag propagation and inheritance across catalog objects, with [***UpTree*** and ***DownTree*** policies](tag-inheritance.md) in catalog object hierarchy.
-1. Working with [***User groups***](user-groups.md) to filter products or categories in the Storefront search.
 
-## Next Steps
-Check out the details of how the Personalization module works:
+## Key features
 
-+ [Tag inheritance](tag-inheritance.md)
-+ [Working with user groups](user-groups.md)
+* [Assigning user groups to products](user-groups.md#assign-user-groups-to-product)
+* [Assigning user groups to categories](user-groups.md#assign-user-groups-to-category)
+* [Managing personal prices](../pricing/managing-personal-prices.md)
 
-## In-depth Insights
+
+## In-depth insights
 Check out our videos to learn in-depth how to work with Virto personalization options and, spercifically, user groups:
 
 + [Working with user groups for customer personalization in Virto Commerce: Part 1](https://www.youtube.com/watch?v=kujqWb0HDEc)
