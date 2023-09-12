@@ -1,9 +1,9 @@
 :root > * {
-    --header-footer-primary-color: #212121;
+    --header-footer-primary-color: #ffffff;
     --md-primary-bg-color: #FFFFFF;
     --header-button-primary-color: rgba(237, 237, 237, 0.2);
-    --header-button-primary-border-color: rgba(211, 211, 211, 0.2);
-    --header-title-primary-color: #ffffff;
+    --header-button-primary-border-color: #C2C2C2;
+    --header-title-primary-color: #1B1B1B;
     --palette-button-nav: rgba(204, 204, 204, 0.24);
     --text-color: #000000;
     --md-default-fg-color--light: var(--text-color);
@@ -14,7 +14,7 @@
     --scrollbar-track-color: #FBFBFB;
     --scrollbar-thumb-color: #EDEDED;
     --md-typeset-table-color: #D3D3D3;
-    --md-code-bg-color: #EDEDED;
+    --md-code-bg-color: #F8F8F8;
     --md-code-pre-bg-color: var(--md-code-bg-color);
     --md-code-hl-number-color: #383838;
     --md-code-hl-name-color: #383838;
@@ -24,23 +24,26 @@
     --md-code-hl-generic-color: #383838;
     --md-code-scrollbar-track-color: #FBFBFB;
     --md-code-scrollbar-thumb-color: #A7A7A7;
+    --teritary-60: #69ABCC;
     --teritary-70: #3390FF;
-    --teritary-99: #D6E9FF;
+    --teritary-99: #EDF8FD;
+    --secondary-60: #FFBA35;
     --secondary-70: #F69802;
-    --secondary-99: #FCE0B3;
+    --secondary-99: #FFF6D6;
     --success-40: #1D4B12;
     --primary-99: #FBDDDA;
     --primary-70: #EB5547;
     --primary-80: #EF776C;
     --neutral-80: #D3D3D3;
     --neutral-60: #A7A7A7;
+    --neutral-70: #F6F6F6;
     --neutral-95: #F4F4F4;
     --neutral-90: #EDEDED;
     --neutral-99: #FBFBFB;
     --neutral-40: #7A7A7A;
     --neutral-0: #222222;
-    --table-cell: #FFF8E6;
-    --table-head: #EDEDED;
+    --table-cell: #FFEDDD;
+    --table-head: #F6F6F6;
     --table-head-title: var(--text-color);
     --table-text: #222222;
     --pill-color-primary: #D6E9FF;
@@ -68,8 +71,8 @@
     --admonition-info-text: var(--text-color);
 
     --admonition-warning-bg: var(--secondary-99);
-    --admonition-warning-border: var(--secondary-70);
-    --admonition-warning-title: var(--secondary-70);
+    --admonition-warning-border: var(--secondary-60);
+    --admonition-warning-title: var(--secondary-60);
     --admonition-warning-text: var(--text-color);
 
     --admonition-error-bg: var(--primary-99);
@@ -77,14 +80,14 @@
     --admonition-error-title: var(--primary-70);
     --admonition-error-text: var(--text-color);
 
-    --admonition-tip-bg: #C8EBC0;
-    --admonition-tip-border: #6DC956;
+    --admonition-tip-bg: #E9F4E2;
+    --admonition-tip-border: #5EAB57;
     --admonition-tip-title: var(--success-40);
     --admonition-tip-text: var(--text-color);
 
     --admonition-note-bg: var(--teritary-99);
-    --admonition-note-border: var(--teritary-70);
-    --admonition-note-title: var(--teritary-70);
+    --admonition-note-border: var(--teritary-60);
+    --admonition-note-title: var(--teritary-60);
     --admonition-note-text: var(--text-color);
 
     --admonition-github-bg: rgba(34, 34, 34, 0.05);
@@ -98,4 +101,6 @@
 
     --admonition-yellow-highlight-bg: #FBD69A;
     --admonition-yellow-highlight-text: var(--text-color);
+
+    --md-accent-fg-color: #EB5547;
 }

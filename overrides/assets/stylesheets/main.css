@@ -39,6 +39,30 @@
     max-width: 74rem;
 }
 
+.md-icon svg {
+    fill: currentcolor;
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.md-tabs {
+    background-color: var(--neutral-70);
+    color: var(--header-title-primary-color);
+}
+
+.md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child{
+  color: var(--neutral-0);
+  font-weight: 600;
+}
+
+.js .md-typeset .tabbed-labels:before {
+    background: var(--md-accent-fg-color);
+}
+
+
+
+
 @media screen and (min-width: 60em) {
     .md-nav--secondary .md-nav__title {
         box-shadow: none !important;

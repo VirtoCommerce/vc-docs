@@ -5,14 +5,16 @@
 
 .md-header__source {
     display: contents;
+    color: var(--neutral-0);
 }
 
 .md-source__facts {
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
     opacity: 1;
     font-size: 0.6rem;
+    color: var(--neutral-40);
 }
 
 .md-source__fact--version {

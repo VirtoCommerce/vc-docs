@@ -149,7 +149,7 @@
 
 .md-typeset :is(.admonition-title,summary) {
     font-style: normal;
-    font-weight: 450;
+    font-weight: 600;
     font-size: 0.8rem;
     line-height: 1.2rem;
     letter-spacing: 0.01em;
@@ -166,8 +166,10 @@
     letter-spacing: 0.01em;
     color: #051322;
     box-shadow: none;
-    border-radius: 4px;
+    border-radius: 6px;
 }
+
+
 
 @media screen and (max-width: 1024px) {
     .md-typeset :is(.admonition-title,summary) {

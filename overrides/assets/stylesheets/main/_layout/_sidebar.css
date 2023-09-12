@@ -9,8 +9,9 @@
 }
 
 .md-nav__item .md-nav__link--active {
-    color: var(--sidebar-text-color);
+    color: var(--neutral-0);
     background-color: var(--sidebar-hover-color);
+    font-weight: 600;
 }
 
 .md-nav__item {
@@ -86,9 +87,11 @@
 }
 
 .md-sidebar.md-sidebar--secondary .md-nav__link.md-nav__link--active {
-    color: var(--primary-70);
+    /* color: var(--primary-70); */
+    color: var(--neutral-0);
     background-color: transparent;
     z-index: 1;
+    font-weight: 600;
 }
 
 .md-sidebar.md-sidebar--secondary .md-nav__link.md-nav__link--active:before {

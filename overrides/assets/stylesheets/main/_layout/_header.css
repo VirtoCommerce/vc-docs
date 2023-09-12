@@ -26,9 +26,9 @@
 .md-header__title {
     font-family: 'Circular Std Book', sans-serif;
     font-style: normal;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     line-height: 150%;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--header-title-primary-color);
     display: flex;
@@ -60,7 +60,7 @@
 }
 
 .md-header__topic:first-child {
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .md-header[data-md-state=shadow] {
@@ -70,9 +70,9 @@
 .md-header__button:not(.md-logo):not([for="__drawer"]) {
     height: 1.6rem;
     width: 1.6rem;
-    background: var(--header-button-primary-color);
+    background: var(--header-footer-primary-color);
     border: 1px solid var(--header-button-primary-border-color);
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 0.25rem;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .md-header__button.md-icon:not([for="__drawer"]) :-webkit-any(svg) path {
-    fill: #ffffff;
+    fill: var(--md-default-fg-color--light);
 }
 
 .md-header__button.md-icon[for="__drawer"] svg {
@@ -94,6 +94,8 @@
 .md-header__button[for=__search] {
     display: block;
 }
+
+
 
 @media screen and (max-width: 1599px) {
     .md-header__button.md-icon:not([for="__drawer"]) :-webkit-any(img,svg) {

@@ -45,7 +45,8 @@
         --card-button-icon: #D3D3D3;
         --card-icon-holder: rgba(255, 255, 255, 0.05);
         --burger-color: var(--neutral-40);
-        --icon-color: currentColor;
+        /* --icon-color: currentColor; */
+        --icon-color: var(--md-default-fg-color--light);
         --card-bg: rgba(255, 252, 250, 0.9);
         --card-bg-color: rgba(255, 255, 255, 0.8);
         --subscribe-title-color: rgba(255, 255, 255, 0.92);
