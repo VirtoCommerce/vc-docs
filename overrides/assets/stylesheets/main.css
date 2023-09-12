@@ -39,6 +39,16 @@
     max-width: 74rem;
 }
 
+.md-content {
+    padding-top: 0.2rem;
+}
+
+.md-main__inner {
+    display: flex;
+    height: 100%;
+    margin-top: 0rem;
+}
+
 .md-icon svg {
     fill: currentcolor;
     display: block;

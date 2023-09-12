@@ -1,5 +1,5 @@
 .md-header {
-    background-color: var(--header-footer-primary-color);
+    background: url(../../../images/header-bg.svg) var(--header-footer-primary-color) no-repeat center top;
 }
 
 .md-header__inner {

@@ -56,6 +56,13 @@
     color: var(--sidebar-text-color);
 }
 
+.md-sidebar--primary{
+border-right: 1px var(--neutral-90) solid;
+height: auto;
+padding-top: 1.5rem;
+}
+
+
 .md-nav.md-nav--secondary {
     height: 100%;
 }

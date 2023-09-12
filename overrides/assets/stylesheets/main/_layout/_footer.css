@@ -9,7 +9,7 @@
 }
 
 .md-footer-meta__inner.md-grid {
-    max-width: 54.6rem;
+    max-width: 74.6rem;
     display: flex;
     align-items: center;
 }
@@ -17,9 +17,9 @@
 .md-footer__title {
     font-family: 'Circular Std Book', sans-serif;
     font-style: normal;
-    font-size: 0.5rem;
-    line-height: 0.5rem;
-    letter-spacing: 0.01em;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--header-title-primary-color);
     padding: 0 0.5rem 0 0;
@@ -27,6 +27,7 @@
     width: auto;
     display: flex;
     align-items: center;
+    font-weight: 700;
 }
 
 [dir=ltr] .md-footer__title {
@@ -36,13 +37,14 @@
 .md-footer__bottom {
     font-style: normal;
     font-weight: 450;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.01em;
     color: var(--md-source-primary-color);
-    background-color: var(--header-footer-primary-color);
-    padding: 1rem 0;
-    text-align: center;
+    /* background-color: var(--neutral-99); */
+    background: url(../../../images/footer-bg.svg) var(--neutral-99) no-repeat center top;
+    padding: 1rem 0 1rem 2rem;
+    text-align: left;
 }
 
 .md-footer__bottom p {
@@ -95,6 +97,7 @@
 
 html .md-footer-meta.md-typeset a {
     color: #ffffff;
+     color: var(--text-color);
     opacity: 0.92;
 }
 
@@ -142,9 +145,10 @@ html .md-footer-meta.md-typeset a:is(:focus,:hover) {
     font-size: 0.7rem;
     line-height: 135%;
     letter-spacing: 0.04em;
-    color: #ffffff;
+    color: var(--text-color);
     margin-top: 0;
     opacity: 1;
+    font-weight: 500;
 }
 
 .md-footer .md-tabs__item {
