@@ -20,12 +20,9 @@ This connection allows you to get metadata for a specific catalog property.
 === "Query"
     ```json linenums="1"
     {
-      property (id:"43d14478-d142-4a65-956f-0a308d0c4ee8", cultureName:"de-DE")
-      {
-        propertyDictItems
-        {
-          items
-          {
+      property(id: "43d14478-d142-4a65-956f-0a308d0c4ee8", cultureName: "de-DE") {
+        propertyDictItems {
+          items {
             value
           }
         }

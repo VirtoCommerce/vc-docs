@@ -21,7 +21,9 @@ To create a return for a particular order:
 
     ![Return specification](media/make-return-2.png)
 
-1. In the toolbar, click **Save** to save the changes.
+1. Сlick **Save** in the toolbar to save the changes.
+
+The return has been created.
 
 # Process return
 
@@ -35,4 +37,6 @@ To process the returns:
     ![Return processing](media/return-processing.png)
 
 1. In the **Return** blade, change the return status and enter your resolution.
-1. In the toolbar, click **Save** to save the changes.
+1. Click **Save** in the toolbar to save the changes.
+
+The modifications have been saved.

@@ -20,7 +20,7 @@ Select the tab with the required provider setup information.
     1. Create a user with access to the database.
     1. Open the appsettings.json file in Visual Studio or other text editor. 
     1. Change `DatabaseProvider` to `"SqlServer"`.
-    1. Change "ConnectionString" as follows: 
+    1. Change `ConnectionStrings` as follows: 
 
         ```json
         "DatabaseProvider": "SqlServer",
@@ -39,7 +39,7 @@ Select the tab with the required provider setup information.
     1. Create a user with access to the database.
     1. Open the appsettings.json file in Visual Studio or other text editor. 
     1. Change `DatabaseProvider` to `"MySql"`.
-    1. Change "ConnectionString" as follows: 
+    1. Change `ConnectionStrings` as follows: 
 
         ```json
         "DatabaseProvider": "MySql",

@@ -12,13 +12,13 @@ By default, the platform allows you to configure one of the following blob stora
 
 The FileSystem provider uses the local file system to store and provide public access to all media files. This mode implements [Static files in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-6.0) with all files stored within the app local directory. The FileSystem storage provides public access to the files via relative URIs. 
 
-To switch platform to using this provider, edit the `Assets` section of the *appsetting.json* file:
+To switch platform to using this provider, edit the `Assets` section of the **appsetting.json** file:
 
 1. Specify `FileSystem` as your default asset provider in the line 2.
 1. For `RootPath`, provide the base path to the `wwwroot` directory inside app folder in the line 4.
 1. Provide the base URL that will be used when generating a public URI [ASP.NET](http://asp.net/ "http://ASP.NET") Core app serves directly in the line 5. Make sure both host and port are up-to-date and valid for your platform instance.
 
-```json title="appsettings.json"
+``` title="appsettings.json"
 1 "Assets": {
 2        "Provider": "FileSystem",
 3        "FileSystem": {
@@ -40,17 +40,17 @@ To switch platform to using this provider, edit the `Assets` section of the *app
 ### Setting up Azure Blob Storage in Production Mode
 
 To set up Azure blob storage:
+
 1. Create Azure blob storage according to this [quick start guide by Microsoft](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal).
 
-1. Open *appsettings.json*.
+1. Open **appsettings.json**.
 
 1. Add the connection string under the `Assets` section.
 
     1. Specify `AzureBlobStorage` as your default asset provider in the line 2.
     1. In `ConnectionString`, provide the connection string of your storage account.
 
-        ```json title="appsettings.json"
-        ```json
+        ``` title="appsettings.json"
         1 "Assets": {
         2        "Provider": "AzureBlobStorage",
         3        "AzureBlobStorage": {

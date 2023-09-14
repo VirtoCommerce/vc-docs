@@ -41,3 +41,6 @@ in terms of existing Virto objects. Once you create a contract, the system will 
 * Create a new price list association that links the new price list to the new user group (equal to the contract code).
     
 All these changes can be recorded to the appropriate entities (companies, price lists and price list assignments) if required, while the user who manages contracts can easily work with the module without being aware of all these details.
+
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H6vlkDRPrrs?si=xlte--NF63dg3BBB)

@@ -12,7 +12,7 @@ These are two types of notifications Virto Commerce provides by default. Your de
 
 To view the list of available email notifications:
 
-1. In the main menu, click **Notifications**.
+1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification list**.
 1. In the next blade, select the required notification with ![icon](media/mail-message.png){: width="30" height="30"} next to it.  
 
@@ -25,7 +25,7 @@ To view the list of available email notifications:
 
 To view the list of available email notifications:
 
-1. In the main menu, click **Notifications**.
+1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification list**
 1. In the next blade, select the required notification with ![icon](media/text-message.png){: width="30" height="30"} next to it.  
 

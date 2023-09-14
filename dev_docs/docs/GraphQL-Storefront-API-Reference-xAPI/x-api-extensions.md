@@ -111,7 +111,7 @@ xAPI extension points are not limited to data structure extensions. You can also
 
 *Generic behavior pipelines* - is primarily intended to split the complex logic into multiple lousily coupled stages (middleware) that can be define on the different places and  that are combined into one logical pipeline that can executed for some system events of requests.
 
-![image](media/x-api-extensions-1.png)
+![image](media/x-api-extensions-1.png){: width="380"}
 
 You can extend the existing generic pipelines with you own middlewares or even replace an existing to your custom version.
 

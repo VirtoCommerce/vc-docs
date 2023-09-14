@@ -54,16 +54,16 @@ The section below explains you how to manage the filtering process in the most c
       products(
         storeId: "B2B-store"
         cultureName: "en-US"
-        first:20
+        first: 20
         after: "0"
-        filter:"status:hidden,visible category.path:7829d35f417e4dd98851f51322f32c23/4fbaca886f014767a52f3f38b9df648f"
+        filter: "status:hidden,visible category.path:7829d35f417e4dd98851f51322f32c23/4fbaca886f014767a52f3f38b9df648f"
       ) {
-        items 
-        {
+        items {
           name
         }
         totalCount
-      }}
+      }
+    }
     ```
 === "Sample return"
     ```json linenums="1"
@@ -80,9 +80,12 @@ The section below explains you how to manage the filtering process in the most c
             {
               "name": "1-1/4\" Steel Carriage Bolt, Grade A, Hot Dipped Galvanized Finish, 1/4\"-20 Dia/Thread Size, 1100 PK"
             },
+            {
+              "name": "1-1/4\" Steel Carriage Bolt, Grade A, Hot Dipped Galvanized Finish, 5/16\"-18 Dia/Thread Size, 700 PK"
+            },
             // ... more product items
           ],
-          "totalCount": 26
+          "totalCount": 23
         }
       }
     }

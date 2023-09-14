@@ -24,36 +24,70 @@ This query allows you to retrieve information about a shopping cart.
 === "Query"
     ```json linenums="1"
     {
-        cart (storeId: "Electronics"
-            cartName: "default"
-            userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
-            cultureName: "en-Us"
-            currencyCode: "USD"
-            cartType: "cart")
-        {
-            id
-            name
-            hasPhysicalProducts
-            status
-            storeId
-            isAnonymous
-            comment
-            taxPercentRate
-            taxType
-            addresses { countryName regionName city addressType }
-            dynamicProperties { name value valueType }
-            shipments { shipmentMethodCode shipmentMethodOption }
-            availableShippingMethods { code optionName optionDescription }
-            discounts { amount description }
-            currency { code symbol }
-            payments { paymentGatewayCode }
-            availablePaymentMethods { code paymentMethodType }
-            items { id sku }
-            coupons { code isAppliedSuccessfully }
-            itemsCount
-            itemsQuantity
-            type
+    cart(
+        storeId: "B2B-Store"
+        cartName: "default"
+        userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
+        cultureName: "en-Us"
+        currencyCode: "USD"
+        cartType: "cart"
+    ) {
+        id
+        name
+        hasPhysicalProducts
+        status
+        storeId
+        isAnonymous
+        comment
+        taxPercentRate
+        taxType
+        addresses {
+        countryName
+        regionName
+        city
+        addressType
         }
+        dynamicProperties {
+        name
+        value
+        valueType
+        }
+        shipments {
+        shipmentMethodCode
+        shipmentMethodOption
+        }
+        availableShippingMethods {
+        code
+        optionName
+        optionDescription
+        }
+        discounts {
+        amount
+        description
+        }
+        currency {
+        code
+        symbol
+        }
+        payments {
+        paymentGatewayCode
+        }
+        availablePaymentMethods {
+        code
+        paymentMethodType
+        }
+        items {
+        id
+        sku
+        }
+        coupons {
+        code
+        isAppliedSuccessfully
+        }
+        itemsCount
+        itemsQuantity
+        type
+    }
     }
     ```
 
@@ -62,17 +96,53 @@ This query allows you to retrieve information about a shopping cart.
     {
     "data": {
         "cart": {
-        "id": "5abc76d6-02ca-4a5b-af5f-92088a631f4c",
+        "id": "6255f029-d3d9-41ea-9643-a1f99c29c534",
         "name": "default",
         "hasPhysicalProducts": false,
         "status": null,
-        "storeId": "Electronics",
+        "storeId": "B2B-Store",
         "isAnonymous": true,
         "comment": null,
         "taxPercentRate": 0,
         "taxType": null,
         "addresses": [],
-        "dynamicProperties": [],
+        "dynamicProperties": [
+            {
+            "name": "CartModule_ShoppingCart_Boolean_0_0_0",
+            "value": null,
+            "valueType": "Boolean"
+            },
+            {
+            "name": "CartModule_ShoppingCart_DateTime_0_0_0",
+            "value": null,
+            "valueType": "DateTime"
+            },
+            {
+            "name": "CartModule_ShoppingCart_Decimal_0_0_0",
+            "value": null,
+            "valueType": "Decimal"
+            },
+            {
+            "name": "CartModule_ShoppingCart_Decimal_1_0_0",
+            "value": null,
+            "valueType": "Decimal"
+            },
+            {
+            "name": "CartModule_ShoppingCart_Html_0_0_0",
+            "value": null,
+            "valueType": "Html"
+            },
+            {
+            "name": "CartModule_ShoppingCart_Html_0_1_0",
+            "value": null,
+            "valueType": "Html"
+            },
+            {
+            "name": "CartModule_ShoppingCart_Image_0_0_0",
+            "value": null,
+            "valueType": "Image"
+            },
+        ],
         "shipments": [],
         "availableShippingMethods": [
             {
@@ -93,6 +163,10 @@ This query allows you to retrieve information about a shopping cart.
         },
         "payments": [],
         "availablePaymentMethods": [
+            {
+            "code": "AuthorizeNetPaymentMethod",
+            "paymentMethodType": "PreparedForm"
+            },
             {
             "code": "DefaultManualPaymentMethod",
             "paymentMethodType": "Unknown"

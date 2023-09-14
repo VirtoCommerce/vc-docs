@@ -1,21 +1,20 @@
 # Overview
 
-Virto Commerce Quote Module represents a Quotes management system. It helps store owners easily manage cliets' quotes and send a precise cost estimate without having to manually create them.
+The Virto Commerce Quote Module is a quote management system. It allows shop owners to easily manage customer quotes and send out accurate quotes without having to create them manually.
 
-## Key features
+The module offers the following key features:
 
 * Unlimited tiers.
-* Discounts per tier or for the entire quote.
-* Full line items management even after the initial quote is created.
-* Attachments, dynamic properties support.
-* Creation of a Regular Order once the Quote is confirmed by the customer.
-* Setting default quote status.
-* Organization maintainers can update quotes created by members of their organization.
+* Discounts can be applied either per tier or to the entire quote.
+* Full line item management, even after the initial quote has been created.
+* Support for attachments and dynamic properties.
+* The ability to create a Regular Order once the Quote is confirmed by the customer.
+* The option to set a default quote status.
+* Organization maintainers have the capability to update quotes created by members of their organization.
 
-For more information about its functions, refer to:
+| Queries                    	| Objects                                               | Mutations                                                                                                      	|
+|----------------------------	|-----------------------------------------------------	|----------------------------------------------------------------------------------------------------------------	|
+| [Quote](queries/quote.md) <br> [Quotes](queries/quotes.md)  	| [QuoteType](objects/QuoteType.md)<br> [QuoteConnection](objects/QuoteConnection.md)<br> [QuoteTotalsType](objects/QuoteTotalsType.md)<br> [QuoteItemtype](objects/QuoteItemtype.md)<br> [QuoteTierPriceType](objects/QuoteTierPriceType.md)<br> [QuoteAddressType](objects/QuoteAddressType.md)<br> [QuoteAttachmentType](objects/QuoteAttachmentType.md)<br> [QuoteShipmentMethodType](objects/QuoteShipmentMethodType.md)<br> [QuoteTaxDetailType](objects/QuoteTaxDetailType.md)<br> [QuoteEdge](objects/QuoteEdge.md)<br> [CancelQuoteCommandType](objects/CancelQuoteCommandType.md)<br> [ChangeQuoteCommentCommandType](objects/ChangeQuoteCommentCommandType.md)<br> [ChangeQuoteItemQuantityCommandType](objects/ChangeQuoteItemQuantityCommandType.md)<br> [CreateQuoteFromCartCommandType](objects/CreateQuoteFromCartCommandType.md)<br> [RemoveQuoteItemCommandtype](objects/RemoveQuoteItemCommandtype.md)<br> [SubmitQuoteCommandType](objects/SubmitQuoteCommandType.md)<br> [UpdateQuoteAddressCommandType](objects/UpdateQuoteAddressCommandType.md)<br> [InputQuoteAddressCommandType](objects/InputQuoteAddressCommandType.md)<br> 	| [cancelQuoteRequest](mutations/cancel-quote-request.md)<br> [changeQuoteComment](mutations/change-quote-comment.md)<br> [changeQuoteItemQuantity](mutations/change-quote-item-quantity.md)<br> [createQuoteFromCart](mutations/create-quote-from-cart.md)<br> [removeQuoteItem](mutations/remove-quote-item.md)<br> [submitQuoteRequest](mutations/submit-quote-request.md)<br> [updateQuoteAddresses](mutations/update-quote-address.md)<br> 	|
 
-* [Queries](queries/query-list.md)
-* [Mutations](mutations/mutations-list.md)
-* [Objects](objects/objects.md)
 
-[Download Quote module](https://github.com/VirtoCommerce/vc-module-quote/){ .md-button }
+[Download Quote module](https://github.com/VirtoCommerce/vc-module-quote/releases){ .md-button }

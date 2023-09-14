@@ -22,4 +22,4 @@ To configure notification settings:
         1. Check the item to delete.
         1. Click **Delete** in the toolbar.
 
-1. In the **General** blade, click **Save** to save the changes.
+1. In the **General** blade, click **Save** in the toolbar to save the changes.

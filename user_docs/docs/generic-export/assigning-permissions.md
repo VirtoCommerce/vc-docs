@@ -23,5 +23,5 @@ To create a new role:
 
 ## Assign roles to users
 
-[Read more about assigning roles to users](../security/roles-and-permissions.md#create-new-role-and-assign-permissions){ .md-button }
+[Read more about assigning roles to users](../security/managing-users.md#assign-roles-to-users){ .md-button }
 

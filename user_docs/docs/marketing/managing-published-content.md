@@ -1,35 +1,46 @@
-# Managing Published Content
+# Managing published content
 
-As the name suggests, the published content feature determines the conditions, under which your content will be published or displayed on your website or online store. This means, after creating your marketing [content items](managing-content-items.md), be it banners, sliders, or otherwise, and setting their locations on your website ([placeholders](managing-content-placeholders.md)), your next step is configuring published content, so that your banners or sliders may finally come online.
+The published content management feature determines the conditions under which your content is published or displayed on your website or online store.
 
-## Adding Published Content
+This is the third step of bringing marketing content online:
 
-To add a published content item, you need to do the following:
+![step1](media/step3.png)
 
-+ Open the *Marketing* module and select *Dynamic Content*. The *Dynamic Content* screen will show up, allowing you to select one of the options: *Content items*, *Content placeholders*, or *Published content*. Your choice here is *Published content*:
+## Add published content
 
-![Selecting Published Content option](media/published-content/published-content-option.png)
+To add a published content item:
 
-+ The *Published Content* screen will show up and display the existing items, if there are any. Click the *Add* button on the top of the screen to add new published content.
+1. Click **Marketing** in the main menu.
+1. In the next blade, click **Dynamic content**.
+1. In the next blade, click **Published content**.
+1. In the next **Published content** blade, click **Add** in the toolbar.
 
-+ This will open the *New Published Content Element* screen, where you can give your new item a name and description, provide dates between which the content will be displayed, specify the stores it will apply to, and add the appropriate content items and their placeholders:
+	![Published content path](media/published-content-path.png)
 
-![New Published Content screen](media/published-content/new-published-content-screen.png)
+1. Fill in the following fields:
 
-!!! note
-	Each published content item may be configured for a single store only. If you need the same item for multiple stores, you will have to recreate your published content item for each store.
+	![Fields](media/published-content.png)
 
-This screen also allows you to configure publish conditions, which we specifically cover [here](publish-conditions.md).
+The published content has been added.
 
-## Editing and Deleting Published Content
+[Read more about publish conditions](publish-conditions.md){ .md-button }
 
-To edit a published content item, open the *Marketing* module, navigate to *Published Content* and select the item you need to edit. After making changes, make sure to save it using the upper toolbar button:
+## Edit published content
 
-![Editing published content](media/published-content/editing-published-content.png)
+To edit your published content:
 
-To delete a content item, select it by ticking the appropriate checkbox and click the *Delete* button:
+1. Follow steps 1-3 from the instruction above.
+1. Click the required content element in the **Published content** blade.
+1. Modify your published content element in the next blade.
+1. Click **Save** in the toolbar to save the changes.
 
-![Deleting published content](media/published-content/deleting-published-content.png)
+Your modifications have been saved.
 
-The system will ask you to confirm the delete, click *Yes*. The item in question will be deleted and removed from the published content item list.
+## Delete published content
 
+1. Follow steps 1-3 from the instruction above.
+1. Check the required placeholder(s) in the **Published content** blade.
+1. Click **Delete** in the toolbar.
+1. Confirm the deletion.
+
+The content element has been deleted.

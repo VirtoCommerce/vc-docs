@@ -32,16 +32,18 @@ In the list of fulfillment centers:
 
 	![Editing fulfillment center](media/editing-fulfillment-center.png)
 
-1. Click **Save** to save the changes.
+1. Click **Save** in the toolbar to save the changes.
+
+The modifications have been saved.
 
 ## Delete fullfillment center
 
 In the list of fulfillment centers:
 
 1. Click:
-	* Three dots on the left side of each item of the fullfillment center list and click **Delete** in the popup menu.
+	* Three dots to the left of each item in the fullfillment center list and click **Delete** from the popup menu.
 	* The fulfillment center you need to delete and then click **Delete** in the new blade.
 
 1. Confirm the deletion. 
 
-The fulfillment center are permanently removed.
+The fulfillment center have been permanently removed.

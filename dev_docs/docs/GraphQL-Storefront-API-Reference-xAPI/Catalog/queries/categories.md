@@ -31,26 +31,24 @@ This connection allows you to search for categories.
 === "Query"
     ```json linenums="1"
     {
-        categories(
-            storeId: "Electronics"
-            userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
-            cultureName: "en-Us"
-            currencyCode: "USD"
-      	    first: 10
-  	        after: "10")
-        {
-            items
-            {
-                id
-                name
-                hasParent
-            }
-            pageInfo
-            {
-                hasNextPage
-                startCursor
-            }
+      categories(
+        storeId: "B2B-Store"
+        userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
+        cultureName: "en-Us"
+        currencyCode: "USD"
+        first: 10
+        after: "10"
+      ) {
+        items {
+          id
+          name
+          hasParent
         }
+        pageInfo {
+          hasNextPage
+          startCursor
+        }
+      }
     }
     ```
 === "Return"
@@ -58,37 +56,42 @@ This connection allows you to search for categories.
     {
       "data": {
         "categories": {
-            "items": [
-                {
-                  "id": "0d133bb06cc7437cb33402124719029b",
-                  "name": "SunBriteTV",
-                  "hasParent": true
-                },
-                {
-                  "id": "c8eacb22b7754e83be794713e3fb175a",
-                  "name": "Vizio",
-                  "hasParent": true
-                },
-                {
-                  "id": "d70d0ecf-6aa9-420a-99fc-d6f1c93bb4b5",
-                  "name": "X-category",
-                  "hasParent": false
-                },
-                {
-                  "id": "62303567-745e-4ecf-89f3-35246e5b5156",
-                  "name": "B-category",
-                  "hasParent": false
-                },
-                {
-                  "id": "bb06b0cb-4555-4a45-a3ff-b7db8325d38f",
-                  "name": "D-category",
-                  "hasParent": false
-                }
-            ],
-            "pageInfo": {
-              "hasNextPage": false,
-              "startCursor": "10"
+          "items": [
+            {
+              "id": "b674f311-5dbe-42f7-bc30-8076744c59bf",
+              "name": "Kitchen supplies",
+              "hasParent": false
+            },
+            {
+              "id": "177c7dc2-7e21-4890-81fb-c7c0d37125b0",
+              "name": "Coffee",
+              "hasParent": true
+            },
+            {
+              "id": "12240a74-ebc2-40cf-baea-5ba1a6408713",
+              "name": "Tea",
+              "hasParent": true
+            },
+            {
+              "id": "782ed5be-08a6-4609-908a-d54f6cd15cd6",
+              "name": "Gift cards",
+              "hasParent": true
+            },
+            {
+              "id": "e411f61f-f688-41db-80a0-fa804beb670f",
+              "name": "Chocolate",
+              "hasParent": true
+            },
+            {
+              "id": "1df5e23c-6eef-4fa8-bf79-fa6777f19114",
+              "name": "Cookie",
+              "hasParent": true
             }
+          ],
+          "pageInfo": {
+            "hasNextPage": true,
+            "startCursor": "10"
+          }
         }
       }
     }

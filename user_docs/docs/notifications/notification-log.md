@@ -9,7 +9,7 @@ You can view a log of:
 
 To view the log of a specific notification:
 
-1. In the main menu, click **Notifications**.
+1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification list**.
 1. In the next blade, select the required notification.
 1. In the next blade, click on the **Notification log** widget.
@@ -21,7 +21,7 @@ To view the log of a specific notification:
 
 To view the log of all the notififcations sent:
 
-1. In the main menu, click **Notifications**.
+1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification activity feed**.
 1. The next blade shows the notifications log.
 

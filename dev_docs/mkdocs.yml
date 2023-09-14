@@ -474,20 +474,34 @@ nav:
     - Quote:
         - Overview:  GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md
         - Queries:
-          - Query list: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/query-list.md
           - Quote: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quote.md
           - Quotes: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quotes.md
+        - Objects:
+          - QuoteType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteType.md
+          - QuoteConnection: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteConnection.md
+          - QuoteTotalsType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTotalsType.md
+          - QuoteItemType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteItemtype.md
+          - QuoteTierPriceType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTierPriceType.md
+          - QuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAddressType.md
+          - QuoteAttachmentType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAttachmentType.md
+          - QuoteShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteShipmentMethodType.md
+          - QuoteTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTaxDetailType.md
+          - QuoteEdge: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteEdge.md
+          - CancelQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CancelQuoteCommandType.md
+          - ChangeQuoteCommentCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteCommentCommandType.md
+          - ChangeQuoteItemQuantityCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteItemQuantityCommandType.md
+          - CreateQuoteFromCartCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CreateQuoteFromCartCommandType.md
+          - RemoveQuoteItemCommandtype: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/RemoveQuoteItemCommandtype.md
+          - SubmitQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/SubmitQuoteCommandType.md
+          - UpdateQuoteAddressCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteAddressCommandType.md
+          - InputQuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/InputQuoteAddressType.md
         - Mutations:
-          - Mutations list: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/mutations-list.md
-          - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
-          - changeQuoteComment: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment.md
-          - changeQuoteItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-item-quantity.md
           - createQuoteFromCart: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart.md
+          - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
+          - changeQuoteItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-item-quantity.md
           - removeQuoteItem: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/remove-quote-item.md
           - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
           - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
-        - Objects:
-          - Objects: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/objects.md
     - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
     - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
   - Storefront Development:

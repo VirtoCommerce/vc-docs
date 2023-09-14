@@ -8,7 +8,7 @@ Virto Commerce reindexes automatically whenever one or more items change (e.g., 
 
 To start indexation:
 
-1. In the main menu, click **Catalog**.
+1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
 1. In the next **Categories and itens** blade, click on the required product.
 1. In the next **Physical items details** blade, scroll down and click the index widget.  

@@ -12,17 +12,17 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 
 | Field                         | Description                                                                                  |
 |----------------------------------|----------------------------------------------------------------------------------------------|
-| `cartId` {==String==}            | The identifier of the cart.                                                                  |
-| `storeId` {==String!==}          | The identifier of the store.                                                                 |
+| `cartId` {==String==}            | The Id of the cart.                                                                  |
+| `storeId` {==String!==}          | The Id of the store.                                                                 |
 | `cartName` {==String==}          | The name or description of the cart.                                                         |
-| `userId` {==String!==}           | The identifier of the user.                                                                  |
+| `userId` {==String!==}           | The Id of the user.                                                                  |
 | `currencyCode` {==String==}      | The currency code for the cart.                                                              |
 | `cultureName` {==String==}       | The culture or locale name for the cart.                                                     |
-| `cartType` {==String==}          | The type or category of the cart.                                                            |
-| `productId` {==String!==}       | The identifier of the product to add to the cart.                                             |
+| `cartType` {==String==}          | The type of the cart.                                                            |
+| `productId` {==String!==}       | The Id of the product to add to the cart.                                             |
 | `quantity` {==Int!==}            | The quantity of the product to add to the cart.                                              |
 | `price` {==Decimal==}            | The price of the product.                                                                    |
-| `comment` {==String==}           | A comment or note associated with the added item.                                             |
+| `comment` {==String==}           | A comment associated with the added item.                                             |
 | `dynamicProperties` [{==[InputDynamicPropertyValueType]==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic properties associated with the added item.               |
 
 ## Possible returns

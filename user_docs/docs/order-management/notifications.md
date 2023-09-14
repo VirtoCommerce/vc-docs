@@ -52,7 +52,7 @@ To assign store specific notifications:
         ![Template](media/notification-template.png){: width="600"}
 
 1. Make sure the **Active** switch is on in the notification details blade.
-1. Click **Save** to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
     ![Default template](media/default-template.png){: width="550"}
 

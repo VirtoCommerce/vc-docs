@@ -1,14 +1,14 @@
 # Settings
-This section covers the Marketing module settings.
 
-## Promotion Policy Settings
+In the Marketing module settings, you can configure promotion policies:
 
-As mentioned [here](combining-active-promotions.md), the best reward policy is enabled by default. If you need to switch to the stackable policy, do the following:
+1. Click **Settings** in the main menu.
+1. In the search field, type **Marketing** to find the settings related to the module.
+1. Click **General** to select **BestReward** or **CombineStackable** policies from a drop-down list. **BestReward** is enabled by default.
 
-+ Go to *Settings -> Marketing -> General*.
-+ In the dropdown list, choose *CombineStackable*:
+	![General settings](media/promotion-policies/switching-promotion-policies.png)
 
-![Switching promotion policies](media/promotion-policies/switching-promotion-policies.png)
+1. Click **Save** in the toolbar to save the changes.
+1. **Restart** the application for the new settings to come into effect.
 
-+ Click *Save*.
-+ Restart the application for the new settings to come into effect.
+The modifications have been saved.

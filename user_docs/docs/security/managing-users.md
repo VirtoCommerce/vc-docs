@@ -2,8 +2,9 @@
 
 Managing user accounts includes:
 
-* [Creating new users and assigning roles to them](managing-users.md#create-new-user)
+* [Creating new users](managing-users.md#create-new-user)
 * [Editing user accounts](managing-users.md#edit-user-account)
+* [Assigning roles to the users](managing-users.md#assign-roles-to-users)
 
 ## Create new users and assign roles to them
 
@@ -30,12 +31,30 @@ Your new user has been added to the list in the **Users** blade.
 To edit a user:
 
 1. Follow steps 1-2 from the instruction above.
-1. Select the required user and edit the following fields in the next blade. 
+1. In the **Users** blade, select the required user and edit the following fields in the next blade. 
 
 	![Managing user details](media/managing-user-details.png)
 
 1. Confirm changes.
 
+The modifications have been saved.
+
 [Read more about Login on behalf](login-on-behalf.md){ .md-button }
 
 [Read more about API keys](api-key.md){ .md-button }
+
+## Assign roles to users
+
+To assign roles to users:
+
+1. Follow steps 1-2 from the instruction above.
+1. In the **Users** blade, select the required user.
+1. In the **User information** blade, click on the **Roles** widget.
+1. In the **Manage roles** blade, click **Assign** in the toolbar.
+1. In the **Assign roles** blade, check the roles to be assigned to the user.
+1. Click **OK** to save the changes.
+
+![path](media/assigning-roles-path.png)
+
+The role has been assigned to the user.
+

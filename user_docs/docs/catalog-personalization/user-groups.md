@@ -14,7 +14,7 @@ The user groups within a Catalog module can be assigned to:
 
 To assign user groups to a category:  
 
-1. In the main menu, click **Catalog**.
+1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
 1. In the next **Categories and items** blade, click three dots to the left of the category name, then click **Manage** in the popup menu. 
 1. In the next **Category details** blade, click on the **User Groups** widget.
@@ -47,7 +47,7 @@ Your new user group has been created.
 
 To assign user groups to a product:
 
-1. In the main menu, click **Catalog**.
+1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
 1. In the next **Categories and items** blade, click the required product.
 1. In the next **Physical items details** blade, click on the **User Groups** widget.

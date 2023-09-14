@@ -25,20 +25,19 @@ This connection allows you to search for catalog property metadata.
 === "Query 1"
     ```json linenums="1"
     {
-      properties (storeId:"Electronics", cultureName:"de-DE", 
-      filter:"keyword:Brand", types:[PRODUCT, VARIATION])
-      {
-        items
-        {
+      properties(
+        storeId: "B2B-Store"
+        cultureName: "en-EN"
+        types: [PRODUCT, VARIATION]
+      ) {
+        items {
           name
           type
           id
           multivalue
-          propertyDictItems
-          {
+          propertyDictItems {
             totalCount
-            items
-            {
+            items {
               value
             }
           }
@@ -54,32 +53,23 @@ This connection allows you to search for catalog property metadata.
         "properties": {
           "items": [
             {
-              "name": "Brand",
+              "name": "date_prp",
               "type": "Product",
-              "id": "43d14478-d142-4a65-956f-0a308d0c4ee8",
+              "id": "2e412a78-e6fb-46d9-837e-e187512b7f62",
               "multivalue": false,
               "propertyDictItems": {
-                "totalCount": 21,
-                "items": [
-                  {
-                    "value": "3DR"
-                  },
-                  {
-                    "value": "Apple"
-                  },
-                  {
-                    "value": "Asus"
-                  },
-                  {
-                    "value": "Beats By Dr Dre"
-                  },
-                  {
-                    "value": "BLU"
-                  },
-                  {
-                    "value": "DJI"
-                  }
-                ]
+                "totalCount": 0,
+                "items": []
+              }
+            },
+            {
+              "name": "variation_prop_date",
+              "type": "Variation",
+              "id": "0a1b9281-b567-40c5-b456-f3c5f420f5bd",
+              "multivalue": false,
+              "propertyDictItems": {
+                "totalCount": 0,
+                "items": []
               }
             }
           ]
@@ -89,22 +79,19 @@ This connection allows you to search for catalog property metadata.
     ```
     
 === "Query 2"
-    ```json
+    ```json linenums="1"
     {
-      properties (storeId:"Electronics", 
-      filter:"categoryId:53e239451c844442a3b2fe9aa82d95c8")
+      properties(
+        storeId: "B2B-Store")
       {
-        items
-        {
+        items {
           name
           type
           id
           multivalue
-          propertyDictItems
-          {
+          propertyDictItems {
             totalCount
-            items
-            {
+            items {
               value
             }
           }
@@ -114,15 +101,15 @@ This connection allows you to search for catalog property metadata.
     ```
 
 === "Return 2"
-    ```json
+    ```json linenums="1"
     {
       "data": {
         "properties": {
           "items": [
             {
-              "name": "Camcorder_Type",
-              "type": "Category",
-              "id": "4af9a56f-fcf2-4a2d-b5bb-8b979ae38f9b",
+              "name": "catalog_0_0_0",
+              "type": "Catalog",
+              "id": "2cdd23ca-f7cc-4496-a46b-2ab7063e86a5",
               "multivalue": false,
               "propertyDictItems": {
                 "totalCount": 0,
@@ -130,26 +117,36 @@ This connection allows you to search for catalog property metadata.
               }
             },
             {
-              "name": "Features",
-              "type": "Product",
-              "id": "1b91897a-19d4-41d9-97db-9b3b2bd3637b",
-              "multivalue": false,
+              "name": "propertycatalog_d",
+              "type": "Catalog",
+              "id": "bbe0d9f6-7ddd-417c-bb1d-c297044b2b57",
+              "multivalue": true,
               "propertyDictItems": {
                 "totalCount": 4,
                 "items": [
                   {
-                    "value": "3D"
+                    "value": "qwertyq"
                   },
                   {
-                    "value": "GPS"
+                    "value": "3"
                   },
                   {
-                    "value": "Waterproof"
+                    "value": "2"
                   },
                   {
-                    "value": "Wi-Fi"
+                    "value": "4"
                   }
                 ]
+              }
+            },
+            {
+              "name": "variation_prop_date",
+              "type": "Variation",
+              "id": "0a1b9281-b567-40c5-b456-f3c5f420f5bd",
+              "multivalue": false,
+              "propertyDictItems": {
+                "totalCount": 0,
+                "items": []
               }
             }
           ]

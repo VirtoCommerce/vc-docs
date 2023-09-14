@@ -22,8 +22,8 @@ The product's availability displayed in the Storefront is determined by the info
 
 To set product's availability:
 
-1. In the main menu, click **Catalog**.
-1. In the next blade, select the required catalog to open the **Categories and Items** blade.
+1. Click **Catalog** in the main menu.
+1. In the next **Manage catalogs** blade, select the required catalog to open the **Categories and Items** blade.
 1. Click the product you need to set availability for.
 1. In the new blade, set the product's availability statuses by switching the toggles on and off in the order they are listed in the table below:
 
@@ -37,7 +37,7 @@ To set product's availability:
     !!! info 
         Track inventory switch can be applied to both digital and physical products. By default, the switch is off for digital products, on for physical ones. 
 
-1. In the same blade, click the **Fullfillment Centers** widget.
+1. In the same blade, click on the **Fullfillment Centers** widget.
 
     ![add-inventory](media/inventory-path.png)
 
@@ -49,7 +49,7 @@ To set product's availability:
 To check product's availability:
 
 1. Follow steps 1-3 from the instruction above.
-1. In the next blade, click the **Index** widget.
+1. In the next blade, click on the **Index** widget.
 
     ![Index widget](media/index-widget.png){: width="300" height="300"}
 

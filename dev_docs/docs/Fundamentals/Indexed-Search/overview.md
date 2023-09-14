@@ -8,7 +8,7 @@ A search service is an intermediary between:
 - Client application. It sends query requests to a search index and handles the response.
 - External search engines, which manage all index and search requests.
 
-![Search architecture](media/01-search-architecture.png)
+![Search architecture](media/01-search-architecture.png){: width="800" }
 
 ## Main Concepts
 

@@ -20,9 +20,7 @@ It's possible to have one or multiple stores, each of which can be associated wi
 [Download latest Catalog module release](https://github.com/VirtoCommerce/vc-module-catalog/releases){ .md-button }
 
 
-
-
-
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/E3JX9xgLAZo?si=tq_CaZ5J1JXqNs1R)
 
 
 

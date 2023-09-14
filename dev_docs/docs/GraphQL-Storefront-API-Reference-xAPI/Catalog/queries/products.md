@@ -31,25 +31,23 @@ This connection allows you to search for products.
 === "Query"
     ```json linenums="1"
     {
-        products(
-            storeId: "Electronics"
-            userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
-            cultureName: "en-Us"
-            currencyCode: "USD"
-  	        first: 10
-  	        after: "10")
-        {
-            items
-            {
-                id
-                code
-            }
-            pageInfo
-            {
-                hasNextPage
-                startCursor
-            }
+      products(
+        storeId: "B2B-Store"
+        userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
+        cultureName: "en-Us"
+        currencyCode: "USD"
+        first: 10
+        after: "10"
+      ) {
+        items {
+          id
+          code
         }
+        pageInfo {
+          hasNextPage
+          startCursor
+        }
+      }
     }
     ```
 
@@ -60,31 +58,27 @@ This connection allows you to search for products.
         "products": {
           "items": [
             {
-              "id": "7c835a9b1c8e4445aa118dae659231c3",
-              "code": "SAG920F32GBB"
+              "id": "120bd04d270a42f1b6f490f0cafd4ca7",
+              "code": "5ZU94"
             },
             {
-              "id": "8db64bd60a354c4c96e25e61d7361565",
-              "code": "LG65EG9600"
+              "id": "74f89c449ad44d52a148123e587212c2",
+              "code": "5ZE93"
             },
             {
-              "id": "8e3a763a3cff407b97e2a2f6390b4048",
-              "code": "SAHTJ5500W"
+              "id": "439218e0d5ca4e748cabdd7190e9ccc2",
+              "code": "3JWN8"
             },
             {
-              "id": "92e671024a8648de97dedcd488f58455",
-              "code": "SUDS3214PSL"
-            },
-            {
-              "id": "be4ab6701f84440ea84ccd09210cbe0a",
-              "code": "VIM70C3"
+              "id": "9fc0bb2a9be646778952d0adf4c862e1",
+              "code": "41MY53"
             }
-        ],
-        "pageInfo": {
+          ],
+          "pageInfo": {
             "hasNextPage": true,
             "startCursor": "10"
+          }
         }
       }
-     }
     }
     ```
