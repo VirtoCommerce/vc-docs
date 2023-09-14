@@ -57,7 +57,7 @@
     --card-button-hover-color: #D6E9FF;
     --card-button-icon: #4E4E4E;
     --card-icon-holder: rgba(34, 34, 34, 0.05);
-    --burger-color: #BCBDC0;
+    --burger-color: var(--primary-80);
     --icon-color: #CCCCCC;
     --card-bg: #FFFCFA;
     --card-bg-color: transparent;

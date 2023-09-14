@@ -62,6 +62,11 @@ height: auto;
 padding-top: 1.5rem;
 }
 
+@media screen and (max-width: 76.1875em){
+.md-sidebar--primary{
+ height: 100%;
+}
+}
 
 .md-nav.md-nav--secondary {
     height: 100%;
