@@ -86,9 +86,9 @@
 }
 
 .md-header__button.md-icon[for="__drawer"] svg {
-    width: 18px;
-    height: 12px;
-    fill: var(--burger-color);
+    width: 20px;
+    height: 14px;
+    fill: var(--primary-80);
 }
 
 .md-header__button[for=__search] {
