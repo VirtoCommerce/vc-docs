@@ -12,7 +12,7 @@ To create a new contract:
 
 1. Click **Contracts** in the main menu. 
 
-1. In the new blade, click **Add** on the toolbar to open the **Create new contract** blade:
+1. In the new blade, click **Add** in the toolbar to open the **Create new contract** blade:
 
 	![Create new contract screen](media/create-new-contract-screen.png)
 
@@ -39,8 +39,10 @@ To delete a contract:
 
 1. Check one or more contracts.
 
-1. Click **Delete** on the toolbar.
+1. Click **Delete** in the toolbar.
 
-	![Deleting contract](media/deleting-contract.png)
+	![Deleting contract](media/deleting-contract.png){: width="550"}
 
 1. Confirm the deletion.
+
+The contract has been deleted.

@@ -4,7 +4,7 @@ The architecture and behavior of Virto Commerce Import Framework allows to easil
 ## Overview
 VC Data Import allows you to define what kind of data you want to import into your application. It uses custom configurable import profiles, where you can specify what kind of data to import and from which data sources.
 
-![Data types and sources for import](media/01-import-data-chart.png)
+![Data types and sources for import](media/01-import-data-chart.png){: width="650" }
 
 Using VC Data Import, you can benefit from:
 
@@ -17,7 +17,7 @@ Using VC Data Import, you can benefit from:
 ## Core Structure
 The chart below shows VC Data Import's high level logical structure:
 
-![VC Data Import structure](media/02-vc-data-import-structure-chart.png)
+![VC Data Import structure](media/02-vc-data-import-structure-chart.png){: width="550" }
 
 VC Data Import is based on three main objects:
 

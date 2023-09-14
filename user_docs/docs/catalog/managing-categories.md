@@ -10,9 +10,9 @@ If you have large catalogs containing many items, you might want to create multi
 
 To add a new category to the catalog:
 
-1. In the main menu, click **Catalog**.
-1. In the next blade, select the required catalog.
-1. In the next **Categories and Items** blade, click **Add**.
+1. Click **Catalog** in the main menu.
+1. In the next **Manage catalogs** blade, select the required catalog.
+1. In the next **Categories and Items** blade, click **Add** in the toolbar.
 1. In the **New category item** blade, select **Category**.  
 1. Fill in the category name. The code is generated automatically.
 

@@ -4,7 +4,7 @@ Templates are containers that hold all the content for your notification, i.e. t
 
 To add a new notification template:
 
-1. In the main menu, click **Notifications**.
+1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification list**.
 1. In the next blade, select the required notification.  
 1. In the next blade, click on the **Templates** widget to open the **Manage notification templates** blade. The list of available templates appears.

@@ -17,3 +17,5 @@ With the Store module, you can:
 * [Set individual payment and shipping methods](configuring-store.md).
 * [Manage tax providers](configuring-store.md).
 * [Linking customer accounts across stores](configuring-store.md).
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/BJ9EKH2OCzQ?si=2XEGzzKv0liXnVhT)

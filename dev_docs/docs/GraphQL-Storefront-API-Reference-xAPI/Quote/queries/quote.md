@@ -1,50 +1,97 @@
 
-# Quote
+# Quote ==~query~==
 
-This query allows you to get a quote by its ID and calculate the totals.
-
-## Definition
-
-```
-quote(id: !string, storeId: !string, userId: !string, currencyCode: !string, cultureName: !string)
-```
+This query is used to get a quote by its Id.​
 
 ## Arguments
 
-| Name | Type | Description |
-|---|---|---|
-| `id` | Non null StringGraphType | Id of the product. |
-| `storeId` | Non null StringGraphType | Store Id. |
-| `userId` | Non null StringGraphType | Current user Id. |
-| `currencyCode` | StringGraphType | The currency for which all prices<br> data will be returned.<br> **Example**: `"USD"` |
-| `cultureName` | StringGraphType | The language for which all localized<br> property dictionary items will be returned.<br> **Example**: `"en-US"` |
+| Argument                  | Description                     |
+|---------------------------|---------------------------------|
+| `id` {==String==}         | The Id of the query.            |
+| `storeId` {==String==}    | The Id of the store.            |
+| `userId` {==String==}     | The Id of the user.             |
+| `currency code` {==String==}     | The code of the currency related to the query.|
+| `cultureName` {==String==}| A language to retrieve data in. |
 
-## Example
+## Possible returns
 
-```
-query {
-  quote(id: "70e6807d-bd42-4c78-bc0d-bb2f3ff7ae65") {
-    id
-    number
-    status
-    comment
-    totals {
-      grandTotalInclTax {
-        formattedAmount
-      }
-    }
-    items {
-      name
-      salePrice {
-        formattedAmount
-      }
-      selectedTierPrice {
-        quantity
-        price {
-          formattedAmount
+| Possible return                                         | Description           |
+|---------------------------------------------------------|----------------------	|
+| [`QuoteType`](../objects/----------------------)        | The structured data for quote information.   	|
+
+## Examples
+
+=== "Query"
+
+    ```json linenums="1"
+    query {
+      quote(id: "70e6807d-bd42-4c78-bc0d-bb2f3ff7ae65") {
+        id
+        number
+        status
+        totals {
+          grandTotalInclTax {
+            formattedAmount
+          }
+        }
+        items {
+          name
+          salePrice {
+            formattedAmount
+          }
+          selectedTierPrice {
+            quantity
+            price {
+              formattedAmount
+            }
+          }
         }
       }
     }
-  }
-}
-```
+    ```
+
+
+=== "Return"
+
+    ```json linenums="1"
+    {
+      "data": {
+        "quote": {
+          "id": "70e6807d-bd42-4c78-bc0d-bb2f3ff7ae65",
+          "number": "Q12345",
+          "status": "Approved",
+          "totals": {
+            "grandTotalInclTax": {
+              "formattedAmount": "$1,234.56"
+            }
+          },
+          "items": [
+            {
+              "name": "Product A",
+              "salePrice": {
+                "formattedAmount": "$99.99"
+              },
+              "selectedTierPrice": {
+                "quantity": 1,
+                "price": {
+                  "formattedAmount": "$99.99"
+                }
+              }
+            },
+            {
+              "name": "Product B",
+              "salePrice": {
+                "formattedAmount": "$49.99"
+              },
+              "selectedTierPrice": {
+                "quantity": 5,
+                "price": {
+                  "formattedAmount": "$44.99"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+    ```

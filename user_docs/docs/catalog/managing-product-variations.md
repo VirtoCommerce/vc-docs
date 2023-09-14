@@ -12,14 +12,14 @@ Variations inherit property values from the master product, including descriptio
 
 To add a new variation to a product:
 
-1. In the main menu, click **Catalog**.
+1. Click **Catalog** in the main menu.
 1. In the next blade, select the required catalog to open the **Categories and Items** blade.
 1. Click the product you need to add variations to.
 1. In the next **Physical item details**, click the **Variations** widget. 
 
     ![Create new products variation](media/create-new-product-variation-path.png)
 
-1. In the next blade, click **Add** to open the **New variation** blade.
+1. In the next blade, click **Add** in the toolbar to open the **New variation** blade.
 1. Fill in the following fields:
 
     ![new variation](media/new-variation.png)

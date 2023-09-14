@@ -111,7 +111,6 @@ nav:
           - Indexation: order-management/indexation.md
         - Notifications: order-management/notifications.md
         - Permissions: order-management/permissions.md
-
         - Settings: order-management/settings.md
     - Catalog:
       - Catalog:
@@ -150,14 +149,18 @@ nav:
       - Login on Behalf Feature: security/login-on-behalf.md
     - Marketing:
       - Overview: marketing/overview.md
-      - Managing Content Items: marketing/managing-content-items.md
-      - Managing Content Placeholders: marketing/managing-content-placeholders.md
-      - Managing Published Content: marketing/managing-published-content.md
-      - Publish Conditions: marketing/publish-conditions.md
-      - Adding Advertising Spot: marketing/advertising-spot.md
-      - Managing Promotions: marketing/managing-promotions.md
-      - Promotion Combination Policies: marketing/combining-active-promotions.md
-      - Promotion Rules: marketing/promotion-rules.md
+      - Dynamic Content: 
+        - Overview: marketing/dynamic-content-overview.md
+        - Managing Content Items: marketing/managing-content-items.md
+        - Managing Content Placeholders: marketing/managing-content-placeholders.md
+        - Managing Published Content: marketing/managing-published-content.md
+        - Publish Conditions: marketing/publish-conditions.md
+        - Adding Advertising Spot: marketing/advertising-spot.md
+      - Promotions:
+        - Overview: marketing/promotions-overview.md
+        - Managing Promotions: marketing/managing-promotions.md
+        - Promotion Combination Policies: marketing/combining-active-promotions.md
+        - Promotion Rules: marketing/promotion-rules.md
       - Settings: marketing/settings.md
     - Pricing:
       - Overview: pricing/overview.md
@@ -237,6 +240,20 @@ nav:
         - Vendor onboarding: marketplace_user_docs/Operator-portal/Vendors-management/vendor-onboarding.md
         - Vendor management: marketplace_user_docs/Operator-portal/Vendors-management/vendor-management.md
       - Products management: marketplace_user_docs/Operator-portal/products-management.md
+  - Storefront and Theme <br>[In progress]:
+    - Overview: storefront/overview.md
+    - Navigation:
+      - Overview: storefront/navigation/overview.md
+    - Registration and signing in:
+      - Overview: storefront/registration_and_signing_in/overview.md
+    - Managing account:
+      - Overview: storefront/managing_account/overview.md
+    - Shopping: 
+      - Overview: storefront/shopping/overview.md
+    - Returns and refunds: 
+      - Overview: storefront/returns_and_refunds/overview.md
+    - Themes and customization:
+      - Overview: storefront/themes_and_customization/overview.md
 extra:
     social:
       - icon: fontawesome/brands/github

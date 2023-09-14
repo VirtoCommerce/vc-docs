@@ -23,74 +23,82 @@ This query allows you to get a product by its Id and calculate all fields based 
 === "Query 1"
     ```json linenums="1"
     {
-      product(
-          id: "8b7b07c165924a879392f4f51a6f7ce0"
-          storeId: "Electronics"
-          userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
-          cultureName: "en-us"
-          currencyCode: "USD")
-      {
+    product(
+        id: "2dcd49147dc04892892af26bb91e5530"
+        storeId: "B2B-Store"
+        cultureName: "en-us"
+        currencyCode: "USD")
+    {
         id
         name
-      }
-    }  
+    }
+    }
     ```
 
 === "Return 1"
     ```json linenums="1"
     {
-      "data": {
+    "data": {
         "product": {
-          "id": "8b7b07c165924a879392f4f51a6f7ce0",
-          "name": "ASUS ZenFone 2 ZE551ML 16GB Smartphone"
+        "id": "2dcd49147dc04892892af26bb91e5530",
+        "name": "Eye Bolt,Carbon Steel 4.6,M6x70,PK25"
         }
-      }
+    }
     }
     ```
 
 === "Query 2"
     ```json linenums="1"
     {
-        product(
-                id:"9cbd8f316e254a679ba34a900fccb076" 
-                storeId:"Electronics"
-                currencyCode:"USD")
-        {
-            prices
-            {
-            minQuantity
-            tierPrices
-            {
-                quantity
-                price
-            {
-                amount
-            }
-            }
+    product(
+        id: "2dcd49147dc04892892af26bb91e5530"
+        storeId: "B2B-store"
+        currencyCode: "USD"
+    ) {
+        images {
+        id
+        name
+        group
+        }
+        prices {
+        minQuantity
+        tierPrices {
+            quantity
+            price {
+            amount
             }
         }
         }
+    }
+    }
     ```
 
 === "Return 2"
     ```json linenums="1"
-        {
-        "data": {
-            "product": {
-            "prices": [
+    {
+    "data": {
+        "product": {
+        "images": [
+            {
+            "id": "3aba9278b27442489c13848cc0d12f7d",
+            "name": "5ZA21_AS01.jpg",
+            "group": "images"
+            }
+        ],
+        "prices": [
+            {
+            "minQuantity": 1,
+            "tierPrices": [
                 {
-                "minQuantity": 1,
-                "tierPrices": [
-                    {
-                    "quantity": 1,
-                    "price": {
-                        "amount": 995.99
-                    }
-                    }
-                ]
+                "quantity": 1,
+                "price": {
+                    "amount": 57.25
+                }
                 }
             ]
             }
+        ]
         }
-        }
+    }
+    }
     ```

@@ -25,8 +25,10 @@ This query is used to retrieve a list of customer orders based on various criter
 === "Query"
 
     ```json linenums="1"
-    {
-      order (id:"498a60ee-b73a-4235-a0d8-4f013a6b3201") {
+    query {
+      orders {
+        totalCount
+        items {
           id
           status
           number
@@ -63,6 +65,7 @@ This query is used to retrieve a list of customer orders based on various criter
           }
         }
       }
+    }
     ```
 
 
@@ -71,55 +74,100 @@ This query is used to retrieve a list of customer orders based on various criter
     ```json linenums="1"
     {
       "data": {
-        "order": {
-          "id": "498a60ee-b73a-4235-a0d8-4f013a6b3201",
-          "status": "Processing",
-          "number": "ORD-20230701",
-          "createdDate": "2023-07-01T12:30:45Z",
-          "modifiedDate": "2023-07-01T14:20:10Z",
-          "customerId": "45d3f671-c2a1-45e1-9ab7-56fd98d28be9",
-          "customerName": "John Doe",
-          "shipments": [
+        "orders": {
+          "totalCount": 3,
+          "items": [
             {
-              "id": "7a98e3f4-5aee-4f08-9326-c93a701037a1",
-              "status": "Shipped",
-              "shipmentMethodCode": "Standard",
-              "shipmentMethodOption": "Express",
+              "id": "order_id_1",
+              "status": "Processing",
+              "number": "ORD-20230702",
+              "createdDate": "2023-07-02T10:15:30Z",
+              "modifiedDate": "2023-07-02T11:45:25Z",
+              "customerId": "customer_id_1",
+              "customerName": "Alice Johnson",
+              "shipments": [
+                {
+                  "id": "shipment_id_1",
+                  "status": "Shipped",
+                  "shipmentMethodCode": "Standard",
+                  "shipmentMethodOption": "Express",
+                  "total": {
+                    "amount": 45.99
+                  }
+                }
+              ],
+              "addresses": [
+                {
+                  "id": "address_id_1",
+                  "firstName": "Alice",
+                  "lastName": "Johnson",
+                  "line1": "789 Oak Street",
+                  "countryName": "United States",
+                  "countryCode": "US",
+                  "postalCode": "56789"
+                }
+              ],
               "total": {
-                "amount": 55.99
+                "amount": 149.99
+              },
+              "subTotal": {
+                "amount": 129.99
+              },
+              "discountTotal": {
+                "amount": 20.00
               }
-            }
-          ],
-          "addresses": [
-            {
-              "id": "7b60f3e8-498d-4e4f-9fc7-5ad05ab5ac64",
-              "firstName": "John",
-              "lastName": "Doe",
-              "line1": "123 Main Street",
-              "countryName": "United States",
-              "countryCode": "US",
-              "postalCode": "12345"
             },
             {
-              "id": "e7e83c51-1c92-4dc8-a66e-7a9e0f8a9c88",
-              "firstName": "Jane",
-              "lastName": "Doe",
-              "line1": "456 Elm Avenue",
-              "countryName": "United States",
-              "countryCode": "US",
-              "postalCode": "67890"
-            }
-          ],
-          "total": {
-            "amount": 199.99
-          },
-          "subTotal": {
-            "amount": 169.99
-          },
-          "discountTotal": {
-            "amount": 20.00
+              "id": "order_id_2",
+              "status": "Shipped",
+              "number": "ORD-20230703",
+              "createdDate": "2023-07-03T14:20:00Z",
+              "modifiedDate": "2023-07-03T16:05:15Z",
+              "customerId": "customer_id_2",
+              "customerName": "Bob Smith",
+              "shipments": [
+                {
+                  "id": "shipment_id_2",
+                  "status": "Delivered",
+                  "shipmentMethodCode": "Express",
+                  "shipmentMethodOption": "Next Day",
+                  "total": {
+                    "amount": 65.99
+                  }
+                }
+              ],
+              "addresses": [
+                {
+                  "id": "address_id_2",
+                  "firstName": "Bob",
+                  "lastName": "Smith",
+                  "line1": "456 Pine Avenue",
+                  "countryName": "Canada",
+                  "countryCode": "CA",
+                  "postalCode": "A1B 2C3"
+                }
+              ],
+              "total": {
+                "amount": 199.99
+              },
+              "subTotal": {
+                "amount": 169.99
+              },
+              "discountTotal": {
+                "amount": 20.00
+              }
+            },
+              "total": {
+                "amount": 159.99
+              },
+              "subTotal": {
+                "amount": 139.99
+              },
+              "discountTotal": {
+                "amount": 20.00
+              }
+            ]  
           }
-        }
       }
     }
     ```

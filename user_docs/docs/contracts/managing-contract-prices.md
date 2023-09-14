@@ -24,7 +24,7 @@ To add a price list to the contract:
 
 1. Click **Confirm** in the toolbar.
 
-	![Adding price list](media/adding-price-list.png){: width="400" height="400"}
+	![Adding price list](media/adding-price-list.png){: width="350"}
 
 The appropriate prices will be displayed in the **Contract prices** blade.
 

@@ -10,3 +10,5 @@ To configure Generic Export settings:
     ![General settings](media/settings.png){: width="700"}
 
 1. Click **Save** in the toolbar to save the changes.
+
+Your settings have been saved.

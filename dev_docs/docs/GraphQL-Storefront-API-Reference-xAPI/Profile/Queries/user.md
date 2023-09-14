@@ -24,16 +24,18 @@ This connection allows you to get the user by several arguments.
 === "Query"
     ```json linenums="1"
     {
-      user(id: "9b605a3096ba4cc8bc0b8d80c397c59f") {
-        accessFailedCount
-        contact {
-          id
-          name
-        }
-        createdDate
-        email
-        isAdministrator
-        passwordHash
+      user(id: "78b0208a-bb52-4a33-9250-583d63aa1f77") {
+      accessFailedCount
+      contact {
+        id
+        name
+      }
+      createdDate
+      email
+      isAdministrator
+      passwordExpiryInDays
+      passwordExpired
+      userName
       }
     }
     ```
@@ -44,13 +46,15 @@ This connection allows you to get the user by several arguments.
         "user": {
           "accessFailedCount": 0,
           "contact": {
-            "id": "9b605a3096ba4cc8bc0b8d80c397c59f",
-            "name": "John Doe"
+            "id": "cb0a5340-f9fb-4f49-bd62-9d03518868ff",
+            "name": "b2b admin"
           },
-          "createdDate": "2022-05-15T12:30:00Z",
-          "email": "johndoe@example.com",
-          "isAdministrator": true,
-          "passwordHash": "**********"
+          "createdDate": "2022-04-18T13:18:33.6009031Z",
+          "email": "b2badmin@test.com",
+          "isAdministrator": false,
+          "passwordExpiryInDays": 83,
+          "passwordExpired": false,
+          "userName": "b2badmin"
         }
       }
     }

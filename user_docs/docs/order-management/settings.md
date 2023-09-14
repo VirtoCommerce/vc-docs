@@ -2,7 +2,7 @@
 
 To manage the settings:
 
-1. Click **Settings**.
+1. Click **Settings** in the main menu.
 1. In the next blade, type **Orders** to find the settings related to the module.
 1. Select **Orders**.
 1. Select:

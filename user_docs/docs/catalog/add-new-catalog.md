@@ -28,8 +28,8 @@ Basically, a virtual catalog is a method to visually present products. All items
 
 To add a new catalog:
 
-1. In the main menu, click **Catalog** module.
-1. In the next blade, click **Add**.  
+1. Click **Catalog** module in the main menu.
+1. In the next **Manage catalogs** blade, click **Add** in the toolbar.  
 1. In the **New catalog** blade, choose the catalog type: physical or virtual.
 1. In the next blade, enter the catalog's name and specify the language.
 1. Click **Create** to save the changes.

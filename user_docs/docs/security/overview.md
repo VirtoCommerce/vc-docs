@@ -1,4 +1,4 @@
-﻿# Overview
+# Overview
 
 Virto Commerce Security module provides various options to manage security and authentication for your online store or website. This includes managing:
 
@@ -15,3 +15,5 @@ With the Security module, you can:
 * [Assign various roles to users](managing-users.md). Each role includes specific granular permissions that give or restrict access to specific features within the platform. This is useful when you want to restrict access to a specific store or do not want regular platform users to edit sensitive data.
 * [Generate API keys](api-key.md) for specific users.
 * [Log in to Storefront on behalf](login-on-behalf.md) of any user.
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H-yFuT_EP8A?si=P1Ha4dM7pQ7naIuN)

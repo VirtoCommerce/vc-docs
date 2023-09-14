@@ -94,14 +94,3 @@ The range facet type counts the products for which the query value is a range sp
 | `ranges.includeTo`  | Indicates whether the lower bound of the range is included.                                                                                                              |
 | `ranges.includeFrom`| Indicates whether the upper bound of the range is included.                                                                                                              |
 | `ranges.isSelected` | Indicates whether the requested facet term is used in the `filter` expression.<br>This flag simplifies displaying the already selected facet terms on the frontend.         |
-
-## Querying Product Breadcrumbs
-
-When querying breadcrumbs of the product make sure your store's **SEO Links** setting is **not** set to **None**, otherwise breadcrumbs for the store would not be created:
-
-1. Open the Platform.
-1. Select **Settings**.
-1. Select **SEO links**.
-1. From a dropdown list, select any option other than **None**.
-  
-  ![SEO links](../media/seo-link.png)

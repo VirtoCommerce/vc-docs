@@ -19,9 +19,7 @@ This query allows you to get a fulfillment center by its Id.
 === "Query"
     ```json linenums="1"
     {
-      fulfillmentCenter(
-        id: "vendor-fulfillment"
-      ) {
+      fulfillmentCenter(id: "vendor-fulfillment") {
         id
         name
         description
@@ -31,7 +29,7 @@ This query allows you to get a fulfillment center by its Id.
         address {
           city
         }
-        nearest (take: 3) {
+        nearest(take: 3) {
           name
           id
         }
@@ -41,33 +39,33 @@ This query allows you to get a fulfillment center by its Id.
 
 === "Return"
     ```json linenums="1"
-      {
-        "data": {
-          "fulfillmentCenter": {
-            "id": "vendor-fulfillment",
-            "name": "Los Angeles Branch",
-            "description": "<h3>Open 24/7</h3>,
-            "shortDescription": null,
-            "outerId": null,
-            "geoLocation": null,
-            "address": {
-              "city": "Los Angeles"
+    {
+      "data": {
+        "fulfillmentCenter": {
+          "id": "vendor-fulfillment",
+          "name": "Los Angeles Branch",
+          "description": "<h3>Branch Hours</h3>\n                            <table class=\"table\">\n                                <tbody>\n                                    <tr>\n                                        <th class=\"day\">Day</th>\n                                        <th><span class=\"hours\">Hours</span></th>\n                                    </tr>\n                                    <tr>\n                                        <td>MON</td>\n                                        <td>7:30 AM - 5:00 PM</td>\n                                    </tr>\n                                    <tr>\n                                        <td>TUE</td>\n                                        <td>7:30 AM - 5:00 PM</td>\n                                    </tr>\n                                    <tr>\n                                        <td>WED</td>\n                                        <td>7:30 AM - 5:00 PM</td>\n                                    </tr>\n                                    <tr>\n                                        <td>THU</td>\n                                        <td>7:30 AM - 5:00 PM</td>\n                                    </tr>\n                                    <tr>\n                                        <td>FRI</td>\n                                        <td>7:30 AM - 5:00 PM</td>\n                                    </tr>\n                                    <tr>\n                                        <td>SAT</td>\n                                        <td>\n\n                                            CLOSED\n                                        </td>\n                                    </tr>\n                                    <tr>\n                                        <td>SUN</td>\n                                        <td>CLOSED</td>\n                                    </tr>\n                                </tbody>\n                            </table>",
+          "shortDescription": null,
+          "outerId": null,
+          "geoLocation": null,
+          "address": {
+            "city": "Los Angeles"
+          },
+          "nearest": [
+            {
+              "name": "Bristol Branch",
+              "id": "e5aea833-dfce-4347-bf38-a479d33dce28"
             },
-            "nearest": [
-              {
-                "name": "Chicago Branch",
-                "id": "142ba5568ae4454aad553ece41b9c3b5"
-              },
-              {
-                "name": "New York Branch",
-                "id": "c20d27cdb09c4c7abd5d78a71510ab83"
-              },
-              {
-                "name": "Tennessee Branch",
-                "id": "tulsa-branch"
-              }
-            ]
-          }
+            {
+              "name": "Chicago Branch",
+              "id": "142ba5568ae4454aad553ece41b9c3b5"
+            },
+            {
+              "name": "Kuala Lumpur City Center",
+              "id": "3856d415-bcfb-493e-b946-af572e852b1e"
+            }
+          ]
         }
-      }    
+      }
+    }
     ```

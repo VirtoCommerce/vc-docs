@@ -16,4 +16,4 @@ Before generating your thumbnails, you can edit various settings to adjust the i
 
 Your new setting appears in the list.
 
-[Define the color code](https://htmlcolorcodes.com/){ .md-button }
+[Define color code](https://htmlcolorcodes.com/){ .md-button }

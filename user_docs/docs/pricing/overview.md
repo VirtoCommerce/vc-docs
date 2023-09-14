@@ -22,3 +22,5 @@ With the Pricing module, you can:
 * [Configure the Pricing Module](managing-pricing-module-settings.md)
 * [Export prices and price list assignments](export-functionality.md)
 * [Troubleshoot problems with incorrect prices in the Storefront](troubleshooting-guide.md)
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/IVGHRjw0hZ0?si=De1AQoAQRb5ECdaH)

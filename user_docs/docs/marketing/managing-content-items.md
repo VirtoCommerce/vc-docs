@@ -1,58 +1,60 @@
-# Managing Dynamic Content Items
+# Manage dynamic content items
 
-This section explains how to manage dynamic content items in Virto Commerce Marketing.
+Managing synamic content items includes:
+
+* [Creating contact items](managing-content-items.md#creating-content-items)
+* [Editing contact items](managing-content-items.md#editing-and-deleting-content-items)
+* [Deleting contact items](managing-content-items.md#delete-content-items)
+
+## Create content items
+
+The first step of bringing marketing content online is creating content items:
+
+![step1](media/step1.png)
+
+To create a dynamic content item:
+
+1. Click **Marketing** in the main menu.
+1. In the next blade, click **Dynamic content**.
+1. In the next blade, click **Content items**.
+1. In the next **Content items** blade, click **Add** in the toolbar.
+1. In the next **New content item** blade, click **Content item**. 
+
+	![path](media/add-content-item-path.png)
+
+1. Fill in the following fields:
+
+	![fields](media/new-content-item.png)
+
+1. Click **Create** to save the changes.
 
 !!! note
-	You create ***Dynamic Content*** to specify what kind of content to deliver, e.g., images, flash files, etc., while with [***Published Content***](managing-published-content.md), you determine which dynamic content items should be displayed, and under which conditions.
-	
-!!! note
-	The dynamic content you create may be reused as many times as required through published content items.
+	Content items can be grouped into folders by location (home page, checkout page, etc.), type (banners, sliders, etc.), or anything else you see fit.
+
+Your new content item has been added to the list.
+
+## Edit content items
+
+To edit a content item:
+
+1. Follow steps 1-3 from the instruction above.
+1. Click the required item in the **Content item list**.
+1. Modify the item in the next blade.
+1. Click **Save** in the toolbar to save the changes.
 
 !!! warning
-	Your dynamic content items will not be available on the front end until they are assigned to a [published content item](managing-published-content.md).
+	When you edit the type of a dynamic content item, the relevant properties of such an item are also changed.
 
-## Creating Content Items
+The modifications have been saved.
 
-To create a dynamic content item in Virto Commerce Platform Manager, do the following:
+## Delete content items
 
-+ Open the *Marketing* module and select *Dynamic Content*. The *Dynamic Content* screen will show up, allowing you to select one of the options: *Content items*, *Content placeholders*, or *Published content*. Your choice is *Content items*:
-
-![Selecting Content Items option](media/managing-content-items/content-items-option.png)
-
-+ The *Content Items* screen will show up and display the existing content items, if there are any. Click the *Add* button on the top of the screen to add your new item.
-
-+ This will open the *New Content Item* screen with two options; you can either create a new content item folder or an individual content item:
-
-![New Content Item screen](media/managing-content-items/new-content-item-screen.png)
+1. Follow steps 1-3 from the instruction above.
+1. Check the required item(s) in the **Content item list**.
+1. Click **Delete** in the toolbar.
+1. Confirm the deletion.
 
 !!! note
-	Unlike folders, individual content items have one more option that allows you to specify their type:
-	
-	![New Content Item type](media/managing-content-items/new-content-item-type.png)
-	
-	You can read more about dynamic content types in [this section](overview.md#dynamic-content) of the overview guide (scroll down to the table).
+	You can delete only those dynamic content items that do not belong to published content; otherwise, the system displays a message that the associated published content should be deleted first.
 
-!!! note
-	Content item folders serve as containers for your content items. You can use those to group your content items by their location (e.g., home page, checkout page, etc.), type (e.g. banners), or otherwise, as you find appropriate.
-
-+ Give your folder or content item a name, provide description, and hit *Create*. Once you are done, it will appear on the *Content Items* screen:
-
-![Content item list](media/managing-content-items/content-item-list.png)
-
-## Editing and Deleting Content Items
-
-To edit a content item, open the *Marketing* module, navigate to *Content Items* and select the item you need to edit. After making changes, make sure to save it using the upper toolbar button:
-
-![Editing content item](media/managing-content-items/editing-content-item.png)
-
-!!! warning
-	If you edit the type of a dynamic content item, the relevant properties of such an item will be changed as well.
-
-To delete a content item, select it by ticking the appropriate checkbox and click the *Delete* button:
-
-![Deleting content item](media/managing-content-items/deleting-content-item.png)
-
-The system will ask you to confirm the delete, click *Yes*. The item in question will be deleted and removed from the content item list. 
-
-!!! warning
-	You can only delete those dynamic content items that do not belong to published content; otherwise, the system will display a message saying the associated published content should be deleted first.
+The item has been deleted.

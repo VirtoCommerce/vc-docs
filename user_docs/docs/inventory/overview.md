@@ -25,3 +25,6 @@ The Inventory module by Virto offers the following essential features:
 * [Manage fulfillment centers](managing-fulfillment-centers.md)
 * [Manage the Inventory module settings](settings.md)
 * [Managing product availability](../catalog/setting-product-availability.md)
+
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/LAI1ejDnze8?si=lQia2WtwY1QuxoGs)

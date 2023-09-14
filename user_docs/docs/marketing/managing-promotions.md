@@ -1,107 +1,83 @@
-# Managing Promotions
+# Managing promotions
 
-This section explains how to manage promotions in Virto Commerce Marketing.
+Managing promotions includes:
 
-## Creating New Promotion
+* [Creating new promotions](managing-promotions.md#creating-new-promotion)
+* [Creating coupons and gift cards](managing-promotions.md#create-coupons-and-gift-cards)
+* [Editing promotions](managing-promotions.md#edit-promotion)
+* [Deleting promotions](managing-promotions.md#delete-promotion)
+
+## Create new promotion
 
 !!! Note
 	To create a promotion, the user must have the [Manage promotions permission](../security/managing-users.md).
 
-1. Open the **Marketing** module, go to **Promotions** blade.
-1. Click **Add** to open the **New Promotion** blade. 
-1. Fill in the fields:
+1. Click **Marketing** in the main menu.
+1. In the next blade, click **Promotions**.
+1. In the **Promotions** blade, click **Add** in the toolbar.
 
-	| Field                                      	| Description                                                                                                                                        	|
-	|-------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------	|
-	| **Promotion Name**                        	| A descriptive name of your promotion.                                                                                                              	|
-	| **Description**                           	| Promotion description (optional).                                                                                                                   	|
-	| **Active** switch                         	| Enables or disables your current promotion.                                                                                                        	|
-	| **Start date**                            	| First day of the promotion. Without specifying it, the promotion becomes active immediately after being saved.                              	|
-	| **Expiration date**                       	| Last day of the promotion. Without specifying it, the promotion remains active until you deactivate it.                                            	|
-	| **Exclusivity**                           	| Select an option from a dropdown list: <ul> <li>Valid with other offers.</li> <li>Globally exclusive. Blocks applying other promotions.</li> </ul> 	|
-	| **Can be redeemed more than once** switch 	| Enable the option if multiple coupons are required to redeem the offer.                                                                           	|
-	| **Stores**                                	| The store your promotion applies to.                                                                                                               	|
-	| **Coupons**                               	| [Creating coupons and gift cards](#coupons-and-gift-cards) for the current promotion.                                                                                                  	|
+	![path](media/add-promotion-path.png){: width="550"}
 
-1. Set up promotions conditions.
-	1. Select one or several customers groups the promotion is aimed at:
-		* **Registered users**.
-		* **Everyone**.
-		* **First-time customers**.
-		* **User group contains**: enter the condition specifying the user group.
-	1. Set one or several catalog conditions for the promotion:
-		* **Specific category**: select a product category the promotion will be applied to.
-		* **Product code contains**: enter product code to define products the promotion will be applied to.
-		* **Currency**: select currency from a dropdown list.
-		* **Specific product**: select a product from catalog to apply promotion to.
-		* **In stock quantity**: enter the required amount of product.
-		* **Apply only to full price items and not sales items**.
-	1. Set one or more cart conditions for the promotion:
-		* **Number of items in the shopping cart**.
-		* **Number of items out of a category in the shopping cart**.
-		* **Number of specific product items in the shopping cart**.
-		* **Cart subtotal is**.  
+1. Fill in the following fields in the **New promotion** blade.
 
-	[Read more about promotion conditions](promotion-rules.md){ .md-button }.
+	![fields](media/create-promotion.png)
 
-1. Click **Create**. Your newly created promotion appears in the promotions list:
+1. Click **Create** to save the changes. 
 
-	![Promotions list](media/managing-promotions/promotion-list.png)
+Your newly created promotion appears in the promotions list.
 
-### Coupons and gift cards
+[Read more about promotion conditions](promotion-rules.md){ .md-button }
 
-As of [VC Marketing module version 3.210.0](https://github.com/VirtoCommerce/vc-module-marketing/releases/tag/3.210.0), creating personal coupons is possible. 
+## Create coupons and gift cards
+
+Creating personal coupons is possible as of [VC Marketing module version 3.210.0](https://github.com/VirtoCommerce/vc-module-marketing/releases/tag/3.210.0) 
 
 To create a coupon:
 
-1. Open the **Marketing** module, go to **Promotions** blade.
-1. Select a promotion you want to create coupons or gift cards for.
+1. Click **Marketing** in the main menu.
+1. In the next blade, click **Promotions**.
+1. Click the required promotion in the **Promotions** blade.
 1. In the new blade, click on the **Coupons** widget. 
-1. Click **Add** or **Import** coupons in the **Coupons** blade.
+1. In the **Coupons** blade, click **Add** to add a coupon manually or **Import** to import a coupon via CSV.
 
-<hr />
+	![path](media/add-coupon-path.png)
 
 === "Add coupon"
 
-	1. Fill in the fields:
+	1. Fill in the following fields:
 
-		| Field                      	| Description                                                                                                                                                                       	|
-		|----------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-		| Code                       	| Specify a coupon code using only alphanumeric characters.                                                                                                                         	|
-		| Coupon expiration date     	| Leave this field blank in case it is the same as the promotion expiration date.                                                                                                   	|
-		| Maximum use number         	| Specify how many times this coupon may be redeemed.<br>If you do not want to set any limit, put 0.                                                                                   	|
-		| Maximum uses per customer  	| Specify how many times this coupon may be redeemed by a single user.<br>If you do not want to set any limit, put 0.                                                                  	|
-		| Customer                   	| Select a customer or organization from a dropdown list. Only the specified person or organization will be able to use to coupon.<br>This feature allows issuing personal gift cards. 	|
+		![fields](media/new-coupon-fields.png)
 
-	1. Click **Save**.
+	1. Click **Save** in the toolbar to save the changes.
 
 === "Import coupon from CSV file"
 
-	1. Fill in the fields.
+	1. Fill in the following fields:
 
-		| Field                	| Description                                                                                                        	|
-		|----------------------	|--------------------------------------------------------------------------------------------------------------------	|
-		| CSV column delimiter 	| Select a delimiter from a dropdown list: <ul> <li>Space.</li> <li>Comma.</li> <li>Semicolon.</li> <li>Tab.</li>  </ul> 	|
-		| Expiration date      	| Leave this field blank in case it is the same as the promotion expiration date.                                    	|
+		![fields](media/import-coupons.png)
 
 	1. Upload CSV file.
 	1. Click **Start import**.
 
+Your new coupon has been added to the promotion.
 
-## Editing and deleting promotions
+## Edit promotion
 
 To edit a promotion:
 
-1. Open the **Marketing** module.
-1. Go to **Promotions** and select the promotion you need to edit. 
+1. Follow steps 1-3 from the instruction above.
+1. Edit the required fields.
 1. Click **Save** to save the changes.
+
+The modifications have been saved.
+
+## Delete promotion
 
 To delete a promotion:
 
-1. Open the **Marketing** module.
-1. Go to **Promotions** and tick the promotion in the promotions list. 
-1. Click **Delete**:
+1. Follow steps 1-2 from the instruction above.
+1. In the promotions list, check the promotion(s) you need to delete. 
+1. Click **Delete** in the toolbar.
+1. Confirm the deletion. 
 
-	![Deleting promotion](media/managing-promotions/deleting-promotion.png)
-
-1. Click **Yes** to confirm deleting. The promotion will be removed from the promotions list.
+The promotion has been removed from the promotions list.

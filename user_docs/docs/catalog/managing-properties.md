@@ -11,7 +11,7 @@ All properties defined at a higher level are automatically inherited at all lowe
 
 To start managing properties:
 
-1. In the main menu, click **Catalog** and find the required catalog from the list. 
+1. Click **Catalog** in the main menu and find the required catalog from the list. 
 1. Click on the three dots located on the left side of the catalog name and select **Manage**.  
 1. In the next **Catalog details** blade, click on the **Properties** widget. 
 1. The **Property list** blade appears. 
@@ -29,7 +29,7 @@ To add a property:
 
      ![Add property](media/screen-add-property.png)
 
-1. Click **Save** to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 The new property has been added to the properties list.
 

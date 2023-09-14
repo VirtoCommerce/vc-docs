@@ -2,7 +2,7 @@
 
 The chart below shows the high level architecture of the platform:
 
-![Back end architecture](media/01-back-end-architecture-chart.png)
+![Back end architecture](media/01-back-end-architecture-chart.png){: width="650" }
 
 The Virto Commerce platform's core components are:
 

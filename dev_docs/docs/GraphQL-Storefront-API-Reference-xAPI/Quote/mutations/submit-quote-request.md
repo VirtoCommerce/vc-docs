@@ -1,52 +1,41 @@
-# submitQuoteRequest
+# submitQuoteRequest ==~mutation~==
 
 This mutation confirms and submits quotes request.
 
-```
-mutation submitQuoteRequest($command: SubmitQuoteCommandType!){
-  submitQuoteRequest(command:$command){
-    id
-    status
-    storeId
-    customerId
-    customerName
-    comment
-    number
-        items{
-      productId
-      name
-      sku
-      product{
+## Arguments
+
+The `SubmitQuoteCommandType!` represents .
+
+| Field                        | Description                                |
+| ---------------------------- | -------------------------------------------|
+| `quoteId` {==String!==}      | The Id of the quote request to be updated. |
+| `comment` {==String!==}      | A comment associated with the submission.  |
+
+## Possible returns
+
+| Possible return                                          	| Description                    	|
+|---------------------------------------------------------	|-------------------------------	|
+| [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the order.  	|
+
+=== "Mutation"
+    ```json linenums="1"
+    mutation SubmitQuoteRequest($command: SubmitQuoteCommandType!) {
+      submitQuoteRequest(command: $command) {
         id
-        name
-      }
-      }
-    addresses{
-      countryCode
-      countryName
-      city
-      regionName
-      line1
-      line2
-      email
-      firstName
-      lastName
-      phone
-      postalCode
-      organization
-      addressType
-    }
-    totals{
-      originalSubTotalExlTax{
-        amount
-      }
-      subTotalExlTax{
-        amount
-      }
-      shippingTotal{
-        amount
+        status
+        coupon
+        comment
       }
     }
-  }
-}
-```
+    ```
+
+=== "Variables"
+    ```json linenums="1"
+    {
+      "command": {
+        "quoteId": "80d92257-5286-4fe2-933c-e1280d16677f",
+        "comment": "this is a comment"
+      }
+    }
+    ```
+ 

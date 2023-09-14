@@ -6,6 +6,8 @@ A product is a basic entity that represents an item that can be purchased in an 
 - Digital product: Intangible products, such as software or music.
 - Product with a bill of materials: A special type of product that has a list of additional materials required for a specific item.
 
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/1Q6mbML7XtM?si=vQzWF4hzsVubyUWH)
+
 Variations are individual product entities linked to their master product. For instance, a master product like a mobile phone can have variations like black, white, or red versions, or 5’’ and 6’’ models (or both).
 Variations inherit property values from the master product, including descriptions and assets, while also allowing overrides when necessary.
 
@@ -17,7 +19,7 @@ Variations inherit property values from the master product, including descriptio
 
 To add a new product to your catalog:
 
-1. In the main menu, click **Catalog**.
+1. Click **Catalog** in the main menu.
 1. In the next blade, select the required catalog to open the **Categories and Items** blade.
 1. Click **Add** in the toolbar.
 1. In the **New category item** blade, select the type of the product to add. 

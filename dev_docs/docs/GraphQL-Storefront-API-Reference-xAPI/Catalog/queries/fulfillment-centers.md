@@ -90,26 +90,63 @@ This connection allows you to search for fulfillment centers.
         "products": {
           "items": [
             {
-              "name": "SunBriteTV DS-3214P-BL 32\" Weatherproof LED - Portrait Mode (Black)",
+              "name": "1\" Steel Carriage Bolt, Grade 5, Chrome Plated Finish, 1/4\"-20 Dia/Thread Size, 5 PK",
               "availabilityData": {
                 "isActive": true,
                 "inventories": [
                   {
                     "fulfillmentCenterId": "tulsa-branch",
                     "fulfillmentCenterName": "Tennessee Branch",
-                    "inStockQuantity": 760
-                  },
-                  {
-                    "fulfillmentCenterId": "142ba5568ae4454aad553ece41b9c3b5",
-                    "fulfillmentCenterName": "Chicago Branch",
                     "inStockQuantity": 10
                   },
                   {
                     "fulfillmentCenterId": "vendor-fulfillment",
                     "fulfillmentCenterName": "Los Angeles Branch",
-                    "inStockQuantity": 5
+                    "inStockQuantity": 10
                   }
-                }
+                ]
+              }
+            },
+            {
+              "name": "Eye Bolt,Carbon Steel 4.6,M6x70,PK25",
+              "availabilityData": {
+                "isActive": true,
+                "inventories": [
+                  {
+                    "fulfillmentCenterId": "vendor-fulfillment",
+                    "fulfillmentCenterName": "Los Angeles Branch",
+                    "inStockQuantity": 9
+                  },
+                  {
+                    "fulfillmentCenterId": "c20d27cdb09c4c7abd5d78a71510ab83",
+                    "fulfillmentCenterName": "New York Branch",
+                    "inStockQuantity": 9
+                  },
+                  {
+                    "fulfillmentCenterId": "tulsa-branch",
+                    "fulfillmentCenterName": "Tennessee Branch",
+                    "inStockQuantity": 9
+                  },
+                  {
+                    "fulfillmentCenterId": "142ba5568ae4454aad553ece41b9c3b5",
+                    "fulfillmentCenterName": "Chicago Branch",
+                    "inStockQuantity": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Eyebolt, 1/2-13,3/8In",
+              "availabilityData": {
+                "isActive": true,
+                "inventories": [
+                  {
+                    "fulfillmentCenterId": "vendor-fulfillment",
+                    "fulfillmentCenterName": "Los Angeles Branch",
+                    "inStockQuantity": 245
+                  }
+                ]
+              }
             }
           ]
         }

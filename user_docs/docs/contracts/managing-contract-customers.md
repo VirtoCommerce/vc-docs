@@ -21,7 +21,7 @@ To manage the list of customers linked to the contract (get prices based on this
 
 1. Click **Confirm** in the toolbar.
 
-    ![Add companies](media/add-customers2.png){: width="400" height="400"}
+    ![Add companies](media/add-customers2.png){: width="350"}
 
 The specified companies have now been added to the contract. This also adds all child companies and related contacts, so it is not necessary to add each user individually.
 

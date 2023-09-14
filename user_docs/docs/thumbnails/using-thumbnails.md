@@ -17,6 +17,7 @@ For instance:
         ```
 
     2. 
+
         ```url
         https://localhost/assets/catalog/my-cool-image_small.jpg
         ```

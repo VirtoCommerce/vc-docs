@@ -32,6 +32,7 @@ The `UserType` represents a user with its corresponding information.
 | `userName` {==String==}               | The username of the user.                                                	|
 | `userType` {==String==}               | The type of the user.                                                    	|
 | `forcePasswordChange` {==Boolean==}   | Indicates whether the user is required to change their password.         	|
+| `passwordExpiryInDays` {==Int==}      | Notifies the user about the password expiration date​.                     |
 | `contact` [{==ContactType==}](ContactType.md)| The contact associated with the user.                              |
 | `lockedState` {==Boolean==}           | Indicates whether the user is in a locked state.                         	|
 | `operator` [{==UserType==}](UserType.md)| The operator associated with the user.                                  |
