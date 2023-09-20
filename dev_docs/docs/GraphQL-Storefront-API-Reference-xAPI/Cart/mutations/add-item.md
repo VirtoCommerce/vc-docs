@@ -1,4 +1,4 @@
-# AddItem ==~mutation~==
+# addItem ==~mutation~==
 
 This mutation:
 
@@ -10,20 +10,20 @@ This mutation:
 
 The `InputAddItemType` represents the arguments for the ClearCart operation. 
 
-| Field                         | Description                                                                                  |
+| Field                            | Description                                                                                  |
 |----------------------------------|----------------------------------------------------------------------------------------------|
-| `cartId` {==String==}            | The Id of the cart.                                                                  |
-| `storeId` {==String!==}          | The Id of the store.                                                                 |
+| `cartId` {==String==}            | The Id of the cart.                                                                          |
+| `storeId` {==String!==}          | The Id of the store.                                                                         |
 | `cartName` {==String==}          | The name or description of the cart.                                                         |
-| `userId` {==String!==}           | The Id of the user.                                                                  |
+| `userId` {==String!==}           | The Id of the user.                                                                          |
 | `currencyCode` {==String==}      | The currency code for the cart.                                                              |
 | `cultureName` {==String==}       | The culture or locale name for the cart.                                                     |
-| `cartType` {==String==}          | The type of the cart.                                                            |
-| `productId` {==String!==}       | The Id of the product to add to the cart.                                             |
+| `cartType` {==String==}          | The type of the cart.                                                                        |
+| `productId` {==String!==}        | The Id of the product to add to the cart.                                                    |
 | `quantity` {==Int!==}            | The quantity of the product to add to the cart.                                              |
 | `price` {==Decimal==}            | The price of the product.                                                                    |
-| `comment` {==String==}           | A comment associated with the added item.                                             |
-| `dynamicProperties` [{==[InputDynamicPropertyValueType]==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic properties associated with the added item.               |
+| `comment` {==String==}           | A comment associated with the added item.                                                    |
+| `dynamicProperties` [{==[InputDynamicPropertyValueType]==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic properties associated with the added item.  |
 
 ## Possible returns
 
@@ -34,38 +34,40 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputAddItemType!)
-    {
-        (command: $command)
-        {
-            name
-            items
-            {
-                id
-                sku
-            }
-            itemsCount
-            itemsQuantity
+    mutation addItem($command: InputAddItemType!) {
+      addItem(command: $command) {
+        id
+        items {
+          id
+          quantity
+          listPrice {
+            amount
+          }
+          note
         }
+        total {
+          amount
+        }
+        discountTotal {
+          amount
+        }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "productId": "9cbd8f316e254a679ba34a900fccb076",
-        "quantity": 1,
-        "dynamicProperties": [
-            {
-                "name": "ItemProperty",
-                "value": "test value"
-            }
-        ]
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "cartType": "null",
+      "productId": "ec235043d51848249e90ef170c371a1c",
+      "quantity": 1,
+      "currencyCode": "USD",
+      "cultureName":"en-US",
+      "price": 10.85,
+      "comment": ""
     }
     ```

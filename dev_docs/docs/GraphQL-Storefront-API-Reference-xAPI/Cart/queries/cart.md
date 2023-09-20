@@ -24,14 +24,14 @@ This query allows you to retrieve information about a shopping cart.
 === "Query"
     ```json linenums="1"
     {
-    cart(
+      cart(
         storeId: "B2B-Store"
         cartName: "default"
         userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
         cultureName: "en-Us"
         currencyCode: "USD"
         cartType: "cart"
-    ) {
+      ) {
         id
         name
         hasPhysicalProducts
@@ -42,59 +42,59 @@ This query allows you to retrieve information about a shopping cart.
         taxPercentRate
         taxType
         addresses {
-        countryName
-        regionName
-        city
-        addressType
+          countryName
+          regionName
+          city
+          addressType
         }
         dynamicProperties {
-        name
-        value
-        valueType
+          name
+          value
+          valueType
         }
         shipments {
-        shipmentMethodCode
-        shipmentMethodOption
+          shipmentMethodCode
+          shipmentMethodOption
         }
         availableShippingMethods {
-        code
-        optionName
-        optionDescription
+          code
+          optionName
+          optionDescription
         }
         discounts {
-        amount
-        description
+          amount
+          description
         }
         currency {
-        code
-        symbol
+          code
+          symbol
         }
         payments {
-        paymentGatewayCode
+          paymentGatewayCode
         }
         availablePaymentMethods {
-        code
-        paymentMethodType
+          code
+          paymentMethodType
         }
         items {
-        id
-        sku
+          id
+          sku
         }
         coupons {
-        code
-        isAppliedSuccessfully
+          code
+          isAppliedSuccessfully
         }
         itemsCount
         itemsQuantity
         type
-    }
+      }
     }
     ```
 
 === "Return"
     ```json linenums="1"
     {
-    "data": {
+      "data": {
         "cart": {
         "id": "6255f029-d3d9-41ea-9643-a1f99c29c534",
         "name": "default",
@@ -178,6 +178,6 @@ This query allows you to retrieve information about a shopping cart.
         "itemsQuantity": 0,
         "type": "cart"
         }
-    }
+      }
     }
     ```

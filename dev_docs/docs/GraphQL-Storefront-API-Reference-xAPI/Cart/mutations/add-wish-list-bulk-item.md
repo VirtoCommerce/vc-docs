@@ -1,4 +1,4 @@
-# AddWishListBulkItem ==~mutation~==
+# addWishListBulkItem ==~mutation~==
 
 This mutation adds products to various wish lists.
 
@@ -6,10 +6,10 @@ This mutation adds products to various wish lists.
 
 The `InputAddWishlistBulkItemType` is an input object type used for adding multiple items to one or more wishlists. 
 
-| Field               | Description                                                                                      |
-|---------------------|--------------------------------------------------------------------------------------------------|
-| `listIds` {==[String]==}    | An array of wishlist IDs to which the items will be added.                                        |
-| `productId` {==String==}    | The ID of the product to be added to the wishlists.                                               |
+| Field                       | Description                                                                                       |
+|-----------------------------|---------------------------------------------------------------------------------------------------|
+| `listIds` {==[String]==}    | An array of wishlist Ids to which the items will be added.                                        |
+| `productId` {==String==}    | The Id of the product to be added to the wishlists.                                               |
 | `quantity` {==Int==}        | The quantity of the product to be added. This field is optional and can be omitted if not needed. |
 
 
@@ -23,19 +23,19 @@ The `InputAddWishlistBulkItemType` is an input object type used for adding multi
 === "Mutation"
     ```json linenums="1"
     mutation addWishlistBulkItem ($command: InputAddWishlistBulkItemType!) {
-        addWishlistBulkItem (command: $command) {    
-            wishlists {          
+      addWishlistBulkItem (command: $command) {    
+        wishlists {          
+          name
+          id
+          items {
+            id
+            quantity
+            product {
               name
-              id
-              items {
-                id
-                quantity
-                product {
-                  name
-                }
-              }
             }
+          }
         }
+      }
     }
     ```
 

@@ -2,9 +2,9 @@
 
 The Virto Commerce Generic Export module provides the ability to export data from the Catalog and Pricing modules. Before starting the export, the user can first filter the data by object type and properties, select the export provider using the advanced filter.
 
-[View the source code of Virto Commerce Generic Export module](https://github.com/VirtoCommerce/vc-module-export/){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-export)
 
-[Download latest Generic Export module release](https://github.com/VirtoCommerce/vc-module-export/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-export/releases)
 
 ## Key features
 

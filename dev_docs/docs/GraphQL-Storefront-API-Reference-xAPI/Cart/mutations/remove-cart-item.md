@@ -1,4 +1,4 @@
-# RemoveCartItem ==~mutation~==
+# removeCartItem ==~mutation~==
 
 This mutation enables removing an item from the cart.
 
@@ -6,51 +6,49 @@ This mutation enables removing an item from the cart.
 
 The `InputRemoveItemType` represents the input object type used for removing a specific item from a cart.
 
-| Field                          | Description                                                        |
-|-----------------------------------|--------------------------------------------------------------------|
-| `cartId` {==String==}             | The ID of the cart from which the item is to be removed.               |
-| `storeId` {==String!==}           | The ID of the store associated with the cart.                         |
-| `cartName` {==String==}         | The name of the cart.                                                |
-| `userId` {==String==}           | The ID of the user who owns the cart.                                 |
-| `currencyCode` {==String==}     | The currency code for the cart.                                      |
-| `cultureName` {==String==}      | The culture or language associated with the cart.                     |
-| `cartType` {==String==}         | The type of the cart.                                                |
-| `lineItemId` {==String==}       | The ID of the line item to be removed from the cart.                  |
+| Field                           | Description                                                        |
+|---------------------------------|--------------------------------------------------------------------|
+| `cartId` {==String==}           | The ID of the cart from which the item is to be removed.           |
+| `storeId` {==String!==}         | The ID of the store associated with the cart.                      |
+| `cartName` {==String==}         | The name of the cart.                                              |
+| `userId` {==String==}           | The ID of the user who owns the cart.                              |
+| `currencyCode` {==String==}     | The currency code for the cart.                                    |
+| `cultureName` {==String==}      | The culture or language associated with the cart.                  |
+| `cartType` {==String==}         | The type of the cart.                                              |
+| `lineItemId` {==String==}       | The ID of the line item to be removed from the cart.               |
 
 ## Possible returns
 
 | Possible return                                          	| Description                                                 	|
-|---------------------------------------------------------	|------------------------------------------------------------	|
+|---------------------------------------------------------	|--------------------------------------------------------------	|
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputRemoveItemType!)
-    {
-        (command: $command)
-        {
+    mutation removeCartItem ($command: InputRemoveItemType!) {
+      removeCartItem (command: $command) {
+        items{
+          id
+          quantity
+          product{
             id
-            items
-            {
-                sku
-                productId
-            }
-            itemsCount
-            itemsQuantity
+          }
         }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
-    "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "lineItemId": "9cbd8f316e254a679ba34a900fccb076",
+      "command": {
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "cartType": "null",
+      "currencyCode": "USD",
+      "cultureName":"en-US",
+      "lineItemId": "a3c9e72a-5b33-48c2-90b4-780886f54ec8"
     }
     ```

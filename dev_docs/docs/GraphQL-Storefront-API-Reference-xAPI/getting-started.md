@@ -1,4 +1,4 @@
-# Getting Started
+# Getting started
 
 This section explains how to prepare your environment for testing xAPI.
 
@@ -33,7 +33,7 @@ To start using xAPI:
 
 1. Rebuild index.
 
-## Test Environment
+## Test environment
 
 To set up the test environment:
 
@@ -70,3 +70,44 @@ To set up the test environment:
       }
     }
     ```
+
+## Authorization and token usage
+
+Some GraphQL queries and mutations require addition authorization. To test the query or mutation without authorization errors:
+
+1. Open the [Virto Commerce API Docs (v1)](https://virtostart-demo-admin.govirto.com/docs/index.html) in your browser.
+1. **Authorize** as an administrator or manager.
+
+    ![Auth](media/authorization.png)
+
+1. Expand `POST/connect/token` section to fill in the required fields with appropriate credentials, then click **Execute**.
+
+    ![token](media/token-field.png)
+
+1. Copy the token that appears in the field below:
+
+    ![token](media/token-code.png)
+
+1. Open [QraphQL playground]().
+1. Open the **HTTP HEADERS** tab. 
+
+    ![http headers](media/playground.png)
+
+1. Paste the token as follows:
+
+    ```json linenums="1"
+    {
+      "authorization": "Bearer your-bearer-token"
+    }
+    ```
+
+    ??? Example "View sample"
+        ```json
+        {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkM5QjVEMTJENjNDREI5Qzg5RTk1NEVCNTcyRjdERkFBQTNFRjgyNEMiLCJ4NXQiOiJ5YlhSTFdQTnVjaWVsVTYxY3ZmZnFxUHZna3ciLCJ0eXAiOiJhdCtqd3QifQ.eyJuYW1lIjoiMWViMmZhOGFjNjU3NDU0MWFmZGI1MjU4MzNkYWRiNDYiLCJzdWIiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluQHZjLWRlbW9zdG9yZS5jb20iLCJyb2xlIjoiX19hZG1pbmlzdHJhdG9yIiwibWVtYmVySWQiOiIiLCJvaV9hdV9pZCI6ImE3M2FkMzU3LTZlMTMtNDIxOS1hMzJmLTBhOWJiNjM4NmEyZSIsIm9pX3Rrbl9pZCI6ImE1YjA4ODQ5LWI1Y2MtNDAyZi04YTJmLTNjZDljYTQyMmJjNiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsInNjb3BlJbzSZkNLe_3pHA2zf_nPQBCwbum_wYPTbOEHNap-A"
+        }
+        ```
+
+!!! info
+    Variables required for mutations and queries can be obtained from other queries. For instance, you can retrieve the user ID by executing the `createUser` mutation, and to obtain the cart ID, you can use the `cart` query.
+

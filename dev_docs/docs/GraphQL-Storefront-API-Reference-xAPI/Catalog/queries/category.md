@@ -23,35 +23,35 @@ This connection allows you to search for a specific category.
 === "Query" 
     ```json linenums="1"
     {
-    category(
+      category(
         storeId: "B2B-store"
         id: "02fe37dcaeb2458a831011abe43fd335"
         cultureName: "en-US"
         currencyCode: "USD"
-    ) {
+      ) {
         name
         code
         id
         level
         path
         parent {
-        name
+          name
         }
-    }
+      }
     }
     ```
 === "Return"
     ```json linenums="1"
     {
-    "data": {
+      "data": {
         "category": {
-        "name": "Bolts",
-        "code": "cd931",
-        "id": "02fe37dcaeb2458a831011abe43fd335",
-        "level": 1,
-        "path": "Bolts",
-        "parent": null
+          "name": "Bolts",
+          "code": "cd931",
+          "id": "02fe37dcaeb2458a831011abe43fd335",
+          "level": 1,
+          "path": "Bolts",
+          "parent": null
         }
-    }
+      }
     }
     ```

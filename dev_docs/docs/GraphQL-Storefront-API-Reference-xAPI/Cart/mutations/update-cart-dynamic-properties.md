@@ -1,4 +1,4 @@
-# UpdateCartDynamicProperties ==~mutation~==
+# updateCartDynamicProperties ==~mutation~==
 
 This mutation updates dynamic properties within the cart.
 
@@ -6,16 +6,16 @@ This mutation updates dynamic properties within the cart.
 
 The `InputUpdateCartDynamicPropertiesType` represents the input object type used for updating dynamic properties of a cart.
 
-| Field                      | Description                                                       |
-|----------------------------|-------------------------------------------------------------------|
-| `cartId` {==String==}                  | The ID of the cart to update the dynamic properties.                       |
-| `storeId` {==String!==}               | The ID of the store associated with the cart.                                |
-| `cartName` {==String==}                | The name of the cart.                                                       |
-| `userId` {==String==}                  | The ID of the user who owns the cart.                                        |
-| `currencyCode` {==String==}            | The currency code for the cart.                                             |
-| `cultureName` {==String==}             | The culture or language associated with the cart.                            |
-| `cartType` {==String==}                | The type of the cart.                                                       |
-| `dynamicProperties` {==[InputDynamicPropertyValueType]!==} | The updated dynamic properties of the cart.                          |
+| Field                                 | Description                                                       |
+|---------------------------------------|-------------------------------------------------------------------|
+| `cartId` {==String==}                 | The Id of the cart to update the dynamic properties.              |
+| `storeId` {==String!==}               | The Id of the store associated with the cart.                     |
+| `cartName` {==String==}               | The name of the cart.                                             |
+| `userId` {==String==}                 | The Id of the user who owns the cart.                             |
+| `currencyCode` {==String==}           | The currency code for the cart.                                   |
+| `cultureName` {==String==}            | The culture or language associated with the cart.                 |
+| `cartType` {==String==}               | The type of the cart.                                             |
+| `dynamicProperties` {==[InputDynamicPropertyValueType]!==} | The updated dynamic properties of the cart.  |
 
 ## Possible returns
 
@@ -26,50 +26,43 @@ The `InputUpdateCartDynamicPropertiesType` represents the input object type used
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command: InputUpdateCartDynamicPropertiesType!)
-    {
-        updateCartDynamicProperties(command: $command)
-        {
-            dynamicProperties
-            {
-                name
-                value
-                valueType
-                dictionaryItem
-                {
-                    label
-                    name
-                    id
-                }
-            }
+    mutation updateCartDynamicProperties(
+      $command: InputUpdateCartDynamicPropertiesType!
+    ) {
+      updateCartDynamicProperties(command: $command) {
+        id
+        dynamicProperties {
+          name
+          value
+          valueType
+          dictionaryItem {
+            label
+            name
+            id
+          }
         }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "dynamicProperties": [
-            {
-                "name": "Example string property",
-                "value": "12345678"
-            },
-            {
-                "name": "Example multilanguage property",
-                "locale":"de-DE",
-                "value": "hallo welt"
-            },
-            {
-                "name": "Example dictionary property",
-                "value": "578fadeb1d2a40b3b08b1daf8db09463"
-            }
-        ]
-    }
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-Store",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "currencyCode": "USD",
+      "cultureName": "en-US",
+      "cartName": "default",
+      "dynamicProperties": [
+        {
+          "name":"Purchase order number",
+          "value":"new value_1_2"
+        },
+        {
+        "name":"Decimal",
+        "value":"33.88"
+        }
+      ]
     }
     ```

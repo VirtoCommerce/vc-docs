@@ -13,9 +13,9 @@ The order itself contains minimum details.  You will find payment, shipment, and
 !!! note
     * The order management process in Virto Commerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
 
-[View the source code of Virto Commerce Order module](https://github.com/VirtoCommerce/vc-module-order){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-order)
 
-[Download latest Order module release](https://github.com/VirtoCommerce/vc-module-order/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-order/releases)
 
 ## Key Features
 
@@ -25,3 +25,5 @@ Virto Commerce Orders Module supports the following functionalities:
 * [Managing returns](managing-returns.md)
 * [Sending order information to Avalara](sending-order-information-to-avatax.md)
 * [Tracking order changes](tracking-order-changes.md)
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/qENWENyS0H0?si=jFpI5N7uNIn2U0LQ)

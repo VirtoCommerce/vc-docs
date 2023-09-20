@@ -1,4 +1,4 @@
-# ChangeCartItemQuantity ==~mutation~==
+# changeCartItemQuantity ==~mutation~==
 
 This mutation changes the cart item quantity.
 
@@ -6,17 +6,17 @@ This mutation changes the cart item quantity.
 
 The `InputChangeCartItemQuantityType` represents the input object type used for changing the quantity of a specific item in a cart. 
 
-| Field                | Description                                                                                      |
-|--------------------------|--------------------------------------------------------------------------------------------------|
-| `cartId` {==String==}    | The identifier of the cart to which the item belongs.                                             |
-| `storeId` {==String!==}  | The identifier of the store to which the cart belongs.                                           |
-| `cartName` {==String==}  | The name or description of the cart.                                                             |
-| `userId` {==String==}    | The identifier of the user associated with the cart.                                             |
-| `currencyCode` {==String==} | The currency code for the cart.                                                             |
-| `cultureName` {==String==} | The culture or locale name for the cart.                                                    |
-| `cartType` {==String==} | The type or category of the cart.                                                              |
-| `lineItemId` {==String==} | The identifier of the specific item within the cart for which the quantity is being changed.    |
-| `quantity` {==Int!==}   | The new quantity value to be set for the item.                                                  |
+| Field                     | Description                                                                             |
+|---------------------------|-----------------------------------------------------------------------------------------|
+| `cartId` {==String==}     | The Id of the cart to which the item belongs.                                           |
+| `storeId` {==String!==}   | The Id of the store to which the cart belongs.                                          |
+| `cartName` {==String==}   | The name or description of the cart.                                                    |
+| `userId` {==String==}     | The Id of the user associated with the cart.                                            |
+| `currencyCode` {==String==} | The currency code for the cart.                                                       |
+| `cultureName` {==String==}| The culture or locale name for the cart.                                                |
+| `cartType` {==String==}   | The type or category of the cart.                                                       |
+| `lineItemId` {==String==} | The Id of the specific item within the cart for which the quantity is being changed.    |
+| `quantity` {==Int!==}     | The new quantity value to be set for the item.                                          |
 
 ## Possible returns
 
@@ -27,33 +27,32 @@ The `InputChangeCartItemQuantityType` represents the input object type used for 
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputChangeCartItemQuantityType!)
-    {
-        (command: $command)
-        {
-            id
-            items
-            {
-                sku
-                productId
-                quantity
-            }
-            itemsCount
-            itemsQuantity
+    mutation changeCartItemQuantity($command: InputChangeCartItemQuantityType!) {
+      changeCartItemQuantity(command: $command) {
+        id
+        items {
+          id
+          name
+          quantity
         }
+        total {
+          amount
+        }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "lineItemId": "9cbd8f316e254a679ba34a900fccb076",
-        "quantity": 7
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "cartType": "null",
+      "currencyCode": "USD",
+      "cultureName":"en-US",
+      "lineItemId": "e3ce8982-b5d7-4246-8d1a-840ed52368d4",
+      "quantity": 1
     }
     ```

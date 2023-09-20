@@ -2,9 +2,9 @@
 
 The Virto Commerce Pricing module is designed for storing, managing, and calculating product prices.
 
-[View the source code of Virto Commerce Pricing module](https://github.com/VirtoCommerce/vc-module-pricing){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pricing)
 
-[Download latest Pricing module release](https://github.com/VirtoCommerce/vc-module-pricing/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-pricing/releases)
 
 The Pricing module includes the following entities:
 

@@ -20,6 +20,7 @@ The `LineItemType` represents the data structure that holds information about a 
 | `isGift` {==Boolean==}             | Indicates whether the line item is a gift.                                                            |
 | `isReadOnly` {==Boolean==}         | Indicates whether the line item is read-only.                                                         |
 | `isReccuring` {==Boolean==}        | Indicates whether the line item is recurring.                                                         |
+| `selectedForCheckout` {==Boolean==}| Indicates whether the line item is selected for buying.                                               |
 | `languageCode` {==String==}        | The language code associated with the line item.                                                      |
 | `length` {==Decimal==}             | The length of the product.                                                                            |
 | `measureUnit` {==String==}         | The unit of measurement for the product.                                                              |

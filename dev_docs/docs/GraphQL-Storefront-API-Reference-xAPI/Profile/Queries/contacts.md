@@ -26,7 +26,7 @@ This connection allows you to retrieve the desired list of contacts.
         after: "cursorValue"
         first: 10
         searchPhrase: "John"
-        sort: "name
+        sort: "name"
       ) {
         edges {
           node {
