@@ -1,4 +1,4 @@
-# ChangeCartItemComment ==~mutation~==
+# changeCartItemComment ==~mutation~==
 
 This mutation changes cart item comments.
 
@@ -6,17 +6,17 @@ This mutation changes cart item comments.
 
 The `InputChangeCartItemCommentType` represents the input object type used for changing the comment of a specific item in a cart. 
 
-| Field            | Description                                                               |
-|------------------|---------------------------------------------------------------------------|
-| `cartId` {==String==}           | The ID of the cart to which the item belongs.                                |
-| `storeId` {==String!==}        | The ID of the store associated with the cart.                                |
-| `cartName` {==String==}         | The name of the cart.                                                       |
-| `userId` {==String==}           | The ID of the user who owns the cart.                                        |
-| `currencyCode` {==String==}     | The currency code associated with the cart.                                  |
-| `cultureName` {==String==}      | The culture or language name associated with the cart.                       |
-| `cartType` {==String==}         | The type of the cart.                                                        |
-| `lineItemId` {==String!==}     | The ID of the line item for which the comment is being changed.              |
-| `comment` {==String!==}        | The new comment to be assigned to the line item.                             |
+| Field                         | Description                                                               |
+|-------------------------------|---------------------------------------------------------------------------|
+| `cartId` {==String==}         | The Id of the cart to which the item belongs.                             |
+| `storeId` {==String!==}       | The Id of the store associated with the cart.                             |
+| `cartName` {==String==}       | The name of the cart.                                                     |
+| `userId` {==String==}         | The Id of the user who owns the cart.                                     |
+| `currencyCode` {==String==}   | The currency code associated with the cart.                               |
+| `cultureName` {==String==}    | The culture or language name associated with the cart.                    |
+| `cartType` {==String==}       | The type of the cart.                                                     |
+| `lineItemId` {==String!==}    | The Id of the line item for which the comment is being changed.           |
+| `comment` {==String!==}       | The new comment to be assigned to the line item.                          |
 
 ## Possible returns
 
@@ -27,31 +27,28 @@ The `InputChangeCartItemCommentType` represents the input object type used for c
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputChangeCartItemCommentType!)
-    {
-        (command: $command)
-        {
-            id
-            items
-            {
-                sku
-                productId
-                comment
-            }
+    mutation ($command:InputChangeCartItemCommentType!) {
+      (command: $command) {
+        id
+        items {
+          sku
+          productId
+          comment
         }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "lineItemId": "9cbd8f316e254a679ba34a900fccb076",
-        "comment": "nice product"
+      "storeId": "B2B-store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "cultureName": "en-US",
+      "currencyCode": "USD",
+      "cartType": "cart",
+      "lineItemId": "127fffb3-9840-454e-a879-c0e621d7f128"
+      "comment": "nice product"
     }
     ```

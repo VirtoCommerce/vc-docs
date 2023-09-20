@@ -25,17 +25,17 @@ This connection allows you to get the user by several arguments.
     ```json linenums="1"
     {
       user(id: "78b0208a-bb52-4a33-9250-583d63aa1f77") {
-      accessFailedCount
-      contact {
-        id
-        name
-      }
-      createdDate
-      email
-      isAdministrator
-      passwordExpiryInDays
-      passwordExpired
-      userName
+        accessFailedCount
+        contact {
+          id
+          name
+        }
+        createdDate
+        email
+        isAdministrator
+        passwordExpiryInDays
+        passwordExpired
+        userName
       }
     }
     ```

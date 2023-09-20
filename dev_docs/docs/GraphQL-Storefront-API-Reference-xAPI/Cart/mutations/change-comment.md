@@ -1,4 +1,4 @@
-# ChangeComment ==~mutation~==
+# changeComment ==~mutation~==
 
 This mutation changes the cart comments.
 
@@ -7,12 +7,12 @@ This mutation changes the cart comments.
 The `InputChangeCommentType` represents the input object type used for changing the comment or note associated with a cart.  
 
 
-| Field                   | Description                                                            |
+| Field                   | Description                                                                  |
 |----------------------------|---------------------------------------------------------------------------|
-| `cartId` {==String==}      | The identifier of the cart.                                               |
-| `storeId` {==String!==}    | The identifier of the store.                                              |
+| `cartId` {==String==}      | The Id of the cart.                                                       |
+| `storeId` {==String!==}    | The Id of the store.                                                      |
 | `cartName` {==String==}    | The name of the cart.                                                     |
-| `userId` {==String!==}     | The identifier of the user.                                               |
+| `userId` {==String!==}     | The Id of the user.                                                       |
 | `currencyCode` {==String==}| The currency code for the cart.                                           |
 | `cultureName` {==String==} | The culture or locale name for the cart.                                  |
 | `cartType` {==String==}    | The type or category of the cart.                                         |
@@ -27,21 +27,19 @@ The `InputChangeCommentType` represents the input object type used for changing 
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputChangeCommentType!)
-    {
-        (command: $command)
-        {
-            name
-            comment
-        }
+    mutation($command: InputChangeCommentType!) {
+      changeComment(command: $command) {
+        name
+        comment
+      }
     }
     ```
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
+        "storeId": "B2B-store",
         "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
+        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
         "cultureName": "en-US",
         "currencyCode": "USD",
         "cartType": "cart",

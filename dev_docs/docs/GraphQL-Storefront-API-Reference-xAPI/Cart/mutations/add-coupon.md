@@ -1,4 +1,4 @@
-# AddCoupon ==~mutation~==
+# addCoupon ==~mutation~==
 
 This mutation checks and adds coupons to a cart.
 
@@ -27,29 +27,35 @@ The `InputAddCouponType` represents the input object type used for adding a coup
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputAddCouponType!)
-    {
-        (command: $command)
-        {
-            name
-            coupons
-            {
-                code
-                isAppliedSuccessfully
-            }
+    mutation addCoupon($command: InputAddCouponType!) {
+      addCoupon(command: $command) {
+        id
+        name
+        customerName
+        coupons {
+          code
+          isAppliedSuccessfully
         }
+        discounts {
+          coupon
+        }
+        discountTotal {
+          amount
+        }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "couponCode": "freeItemsCouponCode",
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "currencyCode": "USD",
+      "cultureName":"en-US",
+      "cartType": "null",
+      "couponCode": "CouponXAPI"
     }
     ```

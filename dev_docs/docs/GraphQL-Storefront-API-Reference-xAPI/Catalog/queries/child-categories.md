@@ -6,11 +6,11 @@ This query allows you to retrieve a list of child categories for a given parent 
 
 | Argument                          	| Description                                                                       	|
 |-----------------------------------	|-----------------------------------------------------------------------------------	|
-| `storeId` {==String==}              	| The ID of the store to retrieve pages from.                                        	|
+| `storeId` {==String==}              	| The Id of the store to retrieve pages from.                                        	|
 | `userId` {==String==}               	| The current user Id.                                                              	|
 | `cultureName` {==String==}          	| A language to retrieve data in.                                                      	|
 | `currencyCode` {==String==}         	| A standardized code of a specific currency.                                         	|
-| `categoryId` {==String==}           	| Filters the child categories based on a specific category ID.                     	|
+| `categoryId` {==String==}           	| Filters the child categories based on a specific category Id.                     	|
 | `maxLevel` {==Int==}                	| The maximum depth or level of child categories to retrieve.                       	|
 | `onlyActive` {==Boolean==}          	| Indicates whether only active child categories should be included in the results. 	|
 | `productFilter` {==String==}        	| Filtering criteria for the products within the child categories.                  	|
@@ -26,26 +26,26 @@ This query allows you to retrieve a list of child categories for a given parent 
 === "Query"
     ```json linenums="1"
     {
-    childCategories(
+      childCategories(
         storeId: "B2B-Store"
         cultureName: "en-US"
         currencyCode: "USD"
         maxLevel: 2
         productFilter: "price:(0 TO) instock_quantity:(0 TO)"
-    ) {
+      ) {
         childCategories {
-        name
-        id
-        code
+          name
+          id
+          code
         }
-    }
+      }
     }
     ```
 
 === "Return"
     ```json linenums="1"
     {
-    "data": {
+      "data": {
         "childCategories": {
         "childCategories": [
             {
@@ -88,8 +88,8 @@ This query allows you to retrieve a list of child categories for a given parent 
             "id": "d6019d4d27e44854a58ebbd5428b873b",
             "code": "b76cb"
             }
-        ]
+          ]
         }
-    }
+      }
     }
     ```

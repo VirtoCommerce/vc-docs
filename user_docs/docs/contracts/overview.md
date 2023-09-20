@@ -14,9 +14,9 @@ To simplify the user experience for those managing contracts, there is an option
 
 You can also use the same contract for multiple organizations, which is especially valuable for companies that sell goods or services to companies with complicated organizational structures.
 
-[View the source code of Virto Commerce Contract module](https://github.com/VirtoCommerce/vc-module-contract){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-contract)
 
-[Download latest Contract module release](https://github.com/VirtoCommerce/vc-module-contract/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-contract/releases)
 
 ## Key Features
 Virto's Contract module contains the following key features:
