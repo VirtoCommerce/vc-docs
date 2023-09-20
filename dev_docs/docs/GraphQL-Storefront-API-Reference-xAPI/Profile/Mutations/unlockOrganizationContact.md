@@ -20,16 +20,16 @@ The `InputLockUnlockOrganizationContactType!` provides the necessary input value
 === "Mutation"
     ```json linenums="1"
     mutation unlockContact($command: InputLockUnlockOrganizationContactType!){
-    unlockOrganizationContact(command: $command){
-    }
+      unlockOrganizationContact(command: $command){
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "userId":"5f807280-bb1a-42b2-9a96-ed107269ea06"
-    }
+      }
     }
     ```

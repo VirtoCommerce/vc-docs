@@ -22,14 +22,14 @@ The `InputChangeOrganizationContactRoleType!` provides the necessary input value
 === "Mutation"
     ```json linenums="1"
     mutation changeOrganizationContactRole($command:  InputChangeOrganizationContactRoleType!){
-    changeOrganizationContactRole(command:$command){
+      changeOrganizationContactRole(command:$command){
         succeeded
         errors
         {
-        code
-        description
+          code
+          description
         }
-    }
+      }
     }
     ```
 
@@ -37,9 +37,9 @@ The `InputChangeOrganizationContactRoleType!` provides the necessary input value
     ```json linenums="1"
     {
     "command":
-    {
-        "userId": "237a4784-d25f-419e-b4d7-cf151393d1cc",
-        "roleIds": ["org-maintainer","purchasing-agent"]
-        }
+      {
+      "userId": "237a4784-d25f-419e-b4d7-cf151393d1cc",
+      "roleIds": ["org-maintainer","purchasing-agent"]
+      }
     }
     ```

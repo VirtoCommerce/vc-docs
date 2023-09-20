@@ -47,18 +47,26 @@ This connection allows you to retrieve the desired list of contacts.
           "edges": [
             {
               "node": {
-                "id": "123456",
-                "name": "John Smith",
-                "email": "john@example.com",
+                "id": "contact1",
+                "name": "John Doe",
+                "email": "john.doe@example.com",
                 "phone": "123-456-7890"
               }
             },
             {
               "node": {
-                "id": "789012",
-                "name": "John Doe",
-                "email": "johndoe@example.com",
+                "id": "contact2",
+                "name": "John Smith",
+                "email": "john.smith@example.com",
                 "phone": "987-654-3210"
+              }
+            },
+            {
+              "node": {
+                "id": "contact3",
+                "name": "John Walker",
+                "email": "johnny@example.com",
+                "phone": "555-555-5555"
               }
             }
           ]

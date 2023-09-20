@@ -22,9 +22,9 @@ The `InputUpdateMemberAddressType!` represents the input values for updating mem
 === "Mutation"
     ```json linenums="1"
     mutation updateMemberAddresses($command: InputUpdateMemberAddressType!) {
-    updateMemberAddresses(command: $command) {
+      updateMemberAddresses(command: $command) {
         addresses {
-        items {
+          items {
             id
             key
             city
@@ -42,32 +42,32 @@ The `InputUpdateMemberAddressType!` represents the input values for updating mem
             regionId
             regionName
             zip
+          }
         }
-        }
-    }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "memberId": "820c58c5-b518-454b-aefd-2fc4616bd25e",
-        "addresses": [{
-            "addressType": 1,
-            "city": "Thousand oaks 25",
-            "countryCode": "USA",
-            "countryName": "United States",
-            "email": "alivemenone@gmail.com",
-            "firstName": "Steven",
-            "key": "3b6fddca-6024-4df9-9e2a-5f13329202cb",
-            "lastName": "Woodward",
-            "line1": "1888, colgate dr",
-            "name": "Steven Woodward  1888, colgate dr Thousand oaks California 91360 United States",
-            "postalCode": "91360",
-            "regionId": "CA",
-            "regionName": "California"
-        }]
-    }
+        "addresses": {
+          "addressType": 1,
+          "city": "Thousand oaks 25",
+          "countryCode": "USA",
+          "countryName": "United States",
+          "email": "alivemenone@gmail.com",
+          "firstName": "Steven",
+          "key": "3b6fddca-6024-4df9-9e2a-5f13329202cb",
+          "lastName": "Woodward",
+          "line1": "1888, colgate dr",
+          "name": "Steven Woodward  1888, colgate dr Thousand oaks California 91360 United States",
+          "postalCode": "91360",
+          "regionId": "CA",
+          "regionName": "California"
+        }
+      }
     }
     ```

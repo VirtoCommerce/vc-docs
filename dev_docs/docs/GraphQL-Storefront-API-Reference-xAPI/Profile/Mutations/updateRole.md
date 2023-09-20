@@ -20,32 +20,20 @@ The `InputUpdateRoleType!` represents the input data required to update a role.
 
 === "Mutation"
     ```json linenums="1"
-    mutation($command: InputUpdateRoleType!) {
-    updateRole(command: $command) {
-        succeeded
+    mutation updateRole ($command: InputUpdateRoleType!) {
+      updateRole (command: $command) {
         errors {
-        code
-        description
+          code
+          description
         }
-    }
+        succeeded
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
-        "id": "e75700bb597948cca7962e0bbcfdb97c",
-        "name": "Use api",
-        "permissions": [
-        {
-            "name": "platform:setting:read"
-        },
-        {
-            "name": "catalog:create"
-        }
-        ],
-        "concurrencyStamp": ""
-    }
+      "command": {"contactId": "550e9b14-ddde-46fe-bc28-0afec83ade96", "organizationId": "689a72757c754bef97cde51afc663430"}
     }
     ```

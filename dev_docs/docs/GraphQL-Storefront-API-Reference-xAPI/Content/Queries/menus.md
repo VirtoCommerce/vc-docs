@@ -1,4 +1,4 @@
-# Menus
+# Menus ==~query~==
 
 This query is used to retrieve a collection of menus based on the provided criteria. 
 

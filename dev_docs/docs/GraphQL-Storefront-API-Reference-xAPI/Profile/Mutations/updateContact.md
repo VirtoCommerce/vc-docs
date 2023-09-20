@@ -37,11 +37,13 @@ The `InputUpdateContactType!` represents the fields that can be updated for a co
 
 === "Mutation"
     ```json linenums="1"
-    mutation($command: InputUpdateContactType!){
-    updateContact(command: $command) {
+    mutation updateContact($command: InputUpdateContactType!) {
+      updateContact(command: $command) {
+        fullName
         id
+        lastName
         name
-    }
+      }
     }
     ```
 
@@ -49,15 +51,13 @@ The `InputUpdateContactType!` represents the fields that can be updated for a co
     ```json linenums="1"
     {
     "command": {
-        "id": "550e9b14-ddde-46fe-bc28-0afec83ade96",
-        "firstName": "testGraphQlFirstName2",
-        "lastName": "testGraphQlLastName2",
-        "dynamicProperties": [
-        {
-            "name": "Default shipping address",
-            "value": "test value"
-        }
-        ]
-        }
+      "id": "916abee5-1b4d-4f1f-80f2-8be0a55cf011",
+      "name": "UserA",
+      "memberType": "Contact",
+      "addresses": [],
+      "fullName": "UserA",
+      "firstName": "UserA",
+      "lastName": "UserA"
+      }
     }
     ```

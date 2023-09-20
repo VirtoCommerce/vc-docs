@@ -40,14 +40,14 @@ The `InputInviteUserType!` represents the input for inviting users.
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
-    "storeId": "Electronics",
+      "command": {
+        "storeId": "Electronics",
         "organizationId": "72c4d52a-9504-4704-8009-6335f68ad092" ,
         "emails":
-    [
-        "test_user@test1.com",
-        "test_user@test2.com"
-    ]
-    }
+        [
+          "test_user@test1.com",
+          "test_user@test2.com"
+        ]
+      }
     }
     ```

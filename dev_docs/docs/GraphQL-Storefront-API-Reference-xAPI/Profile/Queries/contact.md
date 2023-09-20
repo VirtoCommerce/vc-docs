@@ -29,21 +29,31 @@ This connection allows you to get the contact by its Id.
         organizationId
         emails
         organizations {
-          name
-        }
+          totalCount
+          pageInfo
+          edges
+          items
+        }    
         addresses {
-          name
-          addressType
-          isDefault
+          totalCount
+          pageInfo
+          edges
+          items
         }
         defaultBillingAddress {
-          name
+          id
+          key
+          city
+          countryName
         }
         defaultShippingAddress {
-          name
+          id
+          key
+          city
+          countryName
         }
       }
-    }
+    }  
     ```
 === "Return"
     ```json linenums="1"
@@ -52,35 +62,99 @@ This connection allows you to get the contact by its Id.
         "contact": {
           "id": "5f807280-bb1a-42b2-9a96-ed107269ea06",
           "fullName": "John Doe",
-          "memberType": "Employee",
-          "name": "John",
-          "organizationId": "689a72757c754bef97cde51afc663430",
-          "emails": [
-            "john.doe@example.com",
-            "johndoe@gmail.com"
-          ],
-          "organizations": [
-            {
-              "name": "Example Organization"
-            }
-          ],
-          "addresses": [
-            {
-              "name": "Home",
-              "addressType": "Physical",
-              "isDefault": true
+          "memberType": "Customer",
+          "name": "johndoe",
+          "organizationId": "123456",
+          "emails": ["john.doe@example.com", "johndoe@gmail.com"],
+          "organizations": {
+            "totalCount": 2,
+            "pageInfo": {
+            "hasNextPage": false,
+            "hasPreviousPage": false,
+            "startCursor": null,
+            "endCursor": null
             },
-            {
-              "name": "Office",
-              "addressType": "Physical",
-              "isDefault": false
-            }
-          ],
+            "edges": [
+              {
+                "node": {
+                "id": "org1",
+                "key": "companyA",
+                "city": "New York",
+                "countryName": "United States"
+                }
+              },
+              {
+                "node": {
+                "id": "org2",
+                "key": "companyB",
+                "city": "London",
+                "countryName": "United Kingdom"
+                }
+              }
+            ],
+            "items": [
+              {
+                "id": "org1",
+                "name": "Company A"
+              },
+              {
+                "id": "org2",
+                "name": "Company B"
+              }
+            ]
+          },
+          "addresses": {
+            "totalCount": 2,
+            "pageInfo": {
+              "hasNextPage": false,
+              "hasPreviousPage": false,
+              "startCursor": null,
+              "endCursor": null
+            },
+            "edges": [
+              {
+                "node": {
+                  "id": "addr1",
+                  "key": "home",
+                  "city": "New York",
+                  "countryName": "United States"
+                }
+              },
+              {
+                "node": {
+                  "id": "addr2",
+                  "key": "office",
+                  "city": "San Francisco",
+                  "countryName": "United States"
+                }
+              }
+            ],
+            "items": [
+              {
+                "id": "addr1",
+                "name": "Home",
+                "addressType": "Residential",
+                "isDefault": true
+              },
+              {
+                "id": "addr2",
+                "name": "Office",
+                "addressType": "Business",
+                "isDefault": false
+              }
+            ]
+          },
           "defaultBillingAddress": {
-            "name": "Home"
+            "id": "addr1",
+            "key": "home",
+            "city": "New York",
+            "countryName": "United States"
           },
           "defaultShippingAddress": {
-            "name": "Home"
+            "id": "addr1",
+            "key": "home",
+            "city": "New York",
+            "countryName": "United States"
           }
         }
       }

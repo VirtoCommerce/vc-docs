@@ -20,21 +20,21 @@ The `InputDeleteUserType!` represents the input structure for deleting user data
 === "Mutation"
     ```json linenums="1"
     mutation($command: InputDeleteUserType!) {
-    deleteUsers(command: $command) {
+      deleteUsers(command: $command) {
         succeeded
         errors{
-        code
-        description
+          code
+          description
         }
-    }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "userNames": ["graphqlTestUserName2"]
-    }
+      }
     }
     ```
