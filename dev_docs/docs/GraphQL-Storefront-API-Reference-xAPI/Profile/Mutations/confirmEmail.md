@@ -22,16 +22,16 @@ The `InputConfirmEmailType` represents the input for the `confirmEmail` mutation
 === "Mutation"
     ```json linenums="1"
     mutation ($command: InputConfirmEmailType){
-    confirmEmail(command:$command)
+      confirmEmail(command:$command)
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "userId": 4162ff51-c880-4e42-bc4b-4bfd120a0bdf",
         "token: CfDJ88BluBQSMjM5OhRGBcqa2bBAuYkKMUo18c..."
-    }
+      }
     }
     ```

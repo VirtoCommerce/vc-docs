@@ -1,4 +1,4 @@
-# ChangePurchaseOrderNumber ==~mutation~==
+# changePurchaseOrderNumber ==~mutation~==
 
 This mutation changes purchase order number.
 
@@ -43,8 +43,8 @@ The `InputChangePurchaseOrderNumber` represents the input object for changing th
 === "Variables"
     ```json linenums="1"
     "command": {
-    "storeId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
-    "userId": "23eed211-ee84-4dd5-aa9b-dsacg32210",
-      "purchaseOrderNumber": "test purchase order"
+      "storeId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+      "userId": "23eed211-ee84-4dd5-aa9b-dsacg32210",
+        "purchaseOrderNumber": "test purchase order"
     }
     ```

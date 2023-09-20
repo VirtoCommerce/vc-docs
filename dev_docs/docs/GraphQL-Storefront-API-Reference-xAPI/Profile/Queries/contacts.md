@@ -22,42 +22,55 @@ This connection allows you to retrieve the desired list of contacts.
 === "Query"
     ```json linenums="1"
     query {
-    contacts(after: "cursorValue", first: 10, searchPhrase: "John", sort: "name") {
+      contacts(
+        after: "cursorValue"
+        first: 10
+        searchPhrase: "John"
+        sort: "name
+      ) {
         edges {
-        node {
+          node {
             id
             name
             email
             phone
+          }
         }
-        }
-    }
+      }
     }
     ```
 === "Return"
     ```json linenums="1"
     {
-    "data": {
+      "data": {
         "contacts": {
-        "edges": [
+          "edges": [
             {
-            "node": {
-                "id": "123456",
-                "name": "John Smith",
-                "email": "john@example.com",
+              "node": {
+                "id": "contact1",
+                "name": "John Doe",
+                "email": "john.doe@example.com",
                 "phone": "123-456-7890"
-            }
+              }
             },
             {
-            "node": {
-                "id": "789012",
-                "name": "John Doe",
-                "email": "johndoe@example.com",
+              "node": {
+                "id": "contact2",
+                "name": "John Smith",
+                "email": "john.smith@example.com",
                 "phone": "987-654-3210"
+              }
+            },
+            {
+              "node": {
+                "id": "contact3",
+                "name": "John Walker",
+                "email": "johnny@example.com",
+                "phone": "555-555-5555"
+              }
             }
-            }
-        ]
+          ]
         }
-    }
+      }
     }
     ```

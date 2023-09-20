@@ -19,14 +19,10 @@ The `InputUpdateUserType!` represents the input object for creating a contact.
 
 === "Mutation"
     ```json linenums="1"
-    mutation($command: InputUpdateUserType!) {
-    updateUser(command: $command) {
+    mutation updateUser($command: InputUpdateUserType!) {
+      updateUser(command: $command) {
         succeeded
-        errors{
-        code
-        description
-        }
-    }
+      }
     }
     ```
 
@@ -34,11 +30,13 @@ The `InputUpdateUserType!` represents the input object for creating a contact.
     ```json linenums="1"
     {
     "command": {
-        "id": "ae6f1cd7-957d-4b30-864c-8f40232a4df3",
+        "id": "916abee5-1b4d-4f1f-80f2-8be0a55cf011",
         "userName": "graphqlTestUserName2",
-        "userType": "Manager",
+        "userType": "Customer",
+        "roles": [],
         "securityStamp": "",
         "email": "graphql2@test.local"
-    }
+        "storeId": "B2B-Store"
+      }
     }
     ```

@@ -1,4 +1,4 @@
-# CreateOrderFromCart ==~mutation~==
+# createOrderFromCart ==~mutation~==
 
 This mutation creates an order from the cart with a specific Id.
 

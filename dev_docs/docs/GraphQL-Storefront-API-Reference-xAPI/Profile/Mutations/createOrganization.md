@@ -8,13 +8,13 @@ The `InputCreateOrganizationType!` represents the input object for creating a co
 
 | Field                                                                                 | Description                                           |
 |---------------------------------------------------------------------------------------|-------------------------------------------------------|
-| `id` {==String==}                                                                     | The ID of the organization.                           |
+| `id` {==String==}                                                                     | The Id of the organization.                           |
 | `name` {==String==}                                                                   | The name of the organization.                         |
 | `memberType` {==String==}                                                             | The member type of the organization.                  |
 | `addresses` [{==[InputMemberAddressType]==}](../Objects/InputMemberAddressType.md)    | The addresses associated with the organization.       |
-| `phones` [{==String==}]                                                               | The phone numbers associated with the organization.   |
-| `emails` [{==String==}]                                                               | The emails associated with the organization.          |
-| `groups` [{==String==}]                                                               | The groups associated with the organization.          |
+| `phones` {==[String]==}                                                               | The phone numbers associated with the organization.   |
+| `emails` {==[String]==}                                                               | The emails associated with the organization.          |
+| `groups` {==[String]==}                                                               | The groups associated with the organization.          |
 | `dynamicProperties` [{==InputDynamicPropertyValueType==}](../Objects/InputDynamicPropertyValueType.md) | The dynamic properties of the organization. |
 
 ## Possible returns
@@ -26,27 +26,29 @@ The `InputCreateOrganizationType!` represents the input object for creating a co
 
 === "Mutation"
     ```json linenums="1"
-    mutation($command: InputCreateOrganizationType!) {
-    createOrganization(command: $command) {
+    mutation createOrganization  ($command: InputCreateOrganizationType!) {
+      createOrganization (command: $command) {
         id
         name
-        memberType
-    }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
-        "name": "testOrganizationName",
-        "emails": ["testOrg.graphql.local"],
-        "dynamicProperties": [
-        {
-            "name": "Sector,
-            "value": "test value"
+      "command": {
+        "name": "NewOrgADMIN",
+        "addresses": {
+          "city": "Berlin",
+          "countryCode": "DE",
+          "countryName": "German",
+          "email": "t123@t123.com",
+          "line1": "line1",
+          "firstName": "first123",
+          "postalCode": "44232",
+          "description": "test"
         }
-        ]
-    }
+      }
     }
     ```

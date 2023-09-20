@@ -20,19 +20,21 @@ The `InputCreateUserType!` represents the input object for creating a user.
 === "Mutation"
     ```json linenums="1"
     mutation($command: InputCreateUserType!) {
-    createUser(command: $command) {
+      createUser(command: $command) {
         succeeded
-    }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
-    {
-    "command": {
-        "email": "graphql@test.local",
-        "userName": "graphqlTestUserName",
-        "userType": "Customer"
-    }
-    }
+{
+  "command": {"applicationUser": {
+    "email": "graphql@test.local",
+    "userName": "graphqlTestUserName",
+    "userType": "Customer",
+    "createdBy": "admin"
+  }
+ }
+}
     ```

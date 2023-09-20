@@ -22,25 +22,24 @@ The `InputDeleteMemberAddressType!` represents the input fields required to dele
 === "Mutation"
     ```json linenums="1"
     mutation deleteMemberAddresses ($command: InputDeleteMemberAddressType!) {
-    deleteMemberAddresses (command: $command) {
-    id
-        name
-        addresses
-        {
-        items{
+      deleteMemberAddresses (command: $command) {
         id
-        }}
-    }
+        name
+        addresses {
+          items{
+            id
+          }
         }
+      }
+    }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "memberId": "393ceb5d-125c-479f-b993-81e2b9679dea",
-        "addresses": [
-        {
+        "addresses": {
             "key": "0afd4d27-488c-487e-adea-01b818f4ee8e",
             "city": "third",
             "countryCode": "AFG",
@@ -53,7 +52,6 @@ The `InputDeleteMemberAddressType!` represents the input fields required to dele
             "postalCode": "third",
             "regionName": "third"
         }
-        ]
-    }
+      }
     }
     ```

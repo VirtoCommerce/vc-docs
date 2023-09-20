@@ -20,15 +20,15 @@ The `InputDeleteContactType!` represents the input object for deleting a contact
 === "Mutation"
     ```json linenums="1"
     mutation($command: InputDeleteContactType!){
-    deleteContact(command: $command)
+      deleteContact(command: $command)
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "contactId": "550e9b14-ddde-46fe-bc28-0afec83ade96"
-    }
+      }
     }
     ```

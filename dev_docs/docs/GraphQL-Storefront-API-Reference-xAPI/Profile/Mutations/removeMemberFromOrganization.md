@@ -22,27 +22,27 @@ The `InputRemoveMemberFromOrganizationType!` represents the input object used to
 === "Mutation"
     ```json linenums="1"
     mutation removeMemberFromOrganization(
-    $command: InputRemoveMemberFromOrganizationType!
+      $command: InputRemoveMemberFromOrganizationType!
     ) {
-    removeMemberFromOrganization(command: $command) {
+      removeMemberFromOrganization(command: $command) {
         id
         name
         organizations {
-        items {
+          items {
             name
             id
+          }
         }
-        }
-    }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
+      "command": {
         "contactId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
         "organizationId": "23eed211-ee84-4dd5-aa9b-dsacg32210"
-    }
+      }
     }
     ```

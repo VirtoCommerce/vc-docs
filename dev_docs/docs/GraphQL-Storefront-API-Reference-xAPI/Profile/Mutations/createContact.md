@@ -8,7 +8,7 @@ The `InputCreateContactType!` represents the input object for creating a contact
 
 | Field                                                                 | Description                                                             |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------|
-| `id` {==String!==}                                                    |  The Id of the contact.                                                 |
+| `id` {==String!==}                                                    | The Id of the contact.                                                  |
 | `outerId` {==String==}                                                | The external Id of the contact.                                         |
 | `memberType` {==String!==}                                            | The type of the contact.                                                |
 | `name` {==String==}                                                   | The name of the contact.                                                |
@@ -42,29 +42,26 @@ The `InputCreateContactType!` represents the input object for creating a contact
 
 === "Mutation"
     ```json linenums="1"
-    mutation($command: InputCreateContactType!) {
-    createContact(command: $command) {
+    mutation createContact($command: InputCreateContactType!) {
+      createContact(command: $command) {
+        fullName
         id
-        name
-        firstName
         lastName
-    }
+        name
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     {
-    "command": {
-    "firstName": "testGraphQlFirstName",
-    "lastName": "testGraphQlLastName",
-    "name": "testGraphQlName",
-    "dynamicProperties": [
-        {
-            "name": "Default shipping address",
-            "value": "test value"
-        }
-        ]
-        }
+      "command": {
+        "name": "UserA",
+        "memberType": "Contact",
+        "addresses": [],
+        "fullName": "UserA",
+        "firstName": "UserA",
+        "lastName": "UserA"
+      }
     }
     ```
