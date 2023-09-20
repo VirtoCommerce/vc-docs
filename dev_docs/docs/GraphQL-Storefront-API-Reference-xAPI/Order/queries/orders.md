@@ -157,6 +157,36 @@ This query is used to retrieve a list of customer orders based on various criter
                 "amount": 20.00
               }
             },
+            {
+              "id": "order_id_3",
+              "status": "Processing",
+              "number": "ORD-20230704",
+              "createdDate": "2023-07-04T09:30:45Z",
+              "modifiedDate": "2023-07-04T10:55:20Z",
+              "customerId": "customer_id_3",
+              "customerName": "Eve Davis",
+              "shipments": [
+                {
+                  "id": "shipment_id_3",
+                  "status": "Processing",
+                  "shipmentMethodCode": "Standard",
+                  "shipmentMethodOption": "Ground",
+                  "total": {
+                    "amount": 59.99
+                  }
+                }
+              ],
+              "addresses": [
+                {
+                  "id": "address_id_3",
+                  "firstName": "Eve",
+                  "lastName": "Davis",
+                  "line1": "123 Elm Street",
+                  "countryName": "United States",
+                  "countryCode": "US",
+                  "postalCode": "12345"
+                }
+              ],
               "total": {
                 "amount": 159.99
               },
@@ -166,8 +196,9 @@ This query is used to retrieve a list of customer orders based on various criter
               "discountTotal": {
                 "amount": 20.00
               }
-            ]  
-          }
+            }
+          ]
+        }
       }
     }
     ```

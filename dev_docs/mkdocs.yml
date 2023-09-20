@@ -313,29 +313,33 @@ nav:
         - ValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type.md
         - ErrorParameterType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type.md
       - Mutations:
-        - AddItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
-        - ClearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
-        - ChangeComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-comment.md
-        - ChangeCartItemPrice: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-price.md
-        - ChangeCartItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-quantity.md
-        - ChangeCartItemComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-comment.md
-        - RemoveCartItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart-item.md
-        - AddCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-coupon.md
-        - RemoveCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-coupon.md
-        - RemoveShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-shipment.md
-        - AddOrUpdateCartShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-shipment.md
-        - AddOrUpdateCartPayment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-payment.md
-        - ValidateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/validate-coupon.md
-        - MergeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart.md
-        - RemoveCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart.md
-        - ClearShipments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-shipments.md
-        - ClearPayments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-payments.md
-        - UpdateCartDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-dynamic-properties.md
-        - UpdateCartItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-item-dynamic-properties.md
-        - UpdateCartShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-shipment-dynamic-properties.md
-        - UpdateCartPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties.md
-        - AddCartAddress: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address.md
-        - AddWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
+        - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
+        - clearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
+        - selectCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartItems.md
+        - unselectCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectCartItems.md
+        - selectAllCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartItems.md
+        - unselectAllCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectAllCartItems.md
+        - changeComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-comment.md
+        - changeCartItemPrice: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-price.md
+        - changeCartItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-quantity.md
+        - changeCartItemComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-comment.md
+        - removeCartItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart-item.md
+        - addCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-coupon.md
+        - removeCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-coupon.md
+        - removeShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-shipment.md
+        - addOrUpdateCartShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-shipment.md
+        - addOrUpdateCartPayment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-payment.md
+        - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/validate-coupon.md
+        - mergeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart.md
+        - removeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart.md
+        - clearShipments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-shipments.md
+        - clearPayments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-payments.md
+        - updateCartDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-dynamic-properties.md
+        - updateCartItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-item-dynamic-properties.md
+        - updateCartShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-shipment-dynamic-properties.md
+        - updateCartPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties.md
+        - addCartAddress: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address.md
+        - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
     - Order:
         - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
         - Queries:

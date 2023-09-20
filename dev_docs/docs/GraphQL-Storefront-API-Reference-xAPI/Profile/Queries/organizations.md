@@ -22,42 +22,47 @@ This connection allows you to retrieve the desired list of organizations, meetin
 === "Query"
     ```json linenums="1"
     query {
-    organizations(after: "cursorValue", first: 10, searchPhrase: "Company", sort: "name") {
+      organizations(
+        after: "cursorValue"
+        first: 10
+        searchPhrase: "Company"
+        sort: "name"
+      ) {
         edges {
-        node {
+          node {
             id
             name
             ownerId
             businessCategory
+          }
         }
-        }
-    }
+      }
     }
     ```
 === "Return"
     ```json linenums="1"
     {
-    "data": {
+      "data": {
         "organizations": {
-        "edges": [
+          "edges": [
             {
-            "node": {
+              "node": {
                 "id": "123456",
                 "name": "Company A",
                 "ownerId": "789012",
                 "businessCategory": "Technology"
-            }
+              }
             },
             {
-            "node": {
+              "node": {
                 "id": "345678",
                 "name": "Company B",
                 "ownerId": "901234",
                 "businessCategory": "Finance"
+              }
             }
-            }
-        ]
+          ]
         }
-    }
+      }
     }
     ```

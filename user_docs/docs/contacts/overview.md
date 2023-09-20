@@ -2,9 +2,9 @@
 
 The Contacts module allows you to manage various profiles within Virto Commerce, which includes companies, vendors, and individual customers.
 
-[View the source code of Virto Commerce Contacts module](https://github.com/VirtoCommerce/vc-module-customer){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-customer)
 
-[Download latest Customer module release](https://github.com/VirtoCommerce/vc-module-customer/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-customer/releases)
 
 The illustration below shows core entities of the Contacts module and how they relate to each other:
 
@@ -21,3 +21,5 @@ The Contacts module features are:
     [Read more about user groups](https://docs.virtocommerce.org/new/user_docs/catalog-personalization/user-groups/){ .md-button }
 
 * **Connection to Storefront:** You can link all your contacts and their hierarchy to the Storefront application.
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/pGv8uF0iiyc?si=dyhOu5MuUfKVqfB0)

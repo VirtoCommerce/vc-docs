@@ -1,4 +1,4 @@
-# ClearCart ==~mutation~==
+# clearCart ==~mutation~==
 
 This mutation:
 
@@ -10,15 +10,15 @@ This mutation:
 
 The `InputClearCartType` represents the arguments for the ClearCart operation. 
 
-| Field                                | Description                                                                                  |
-|------------------------------------ ----|----------------------------------------------------------------------------------------------|
-| `cartId` {==String==}                   | The identifier of the cart.                                                                  |
-| `storeId` {==String!==}                 | The identifier of the store.                                                                 |
-| `cartName` {==String==}                 | The name of the cart.                                                                        |
-| `userId` {==String!==}                  | The identifier of the user.                                                                  |
-| `currencyCode` {==String==}             | The currency code for the cart.                                                              |
-| `cultureName` {==String==}              | The culture or locale name for the cart.                                                     |
-| `cartType` {==String==}                 | The type or category of the cart.                                                            |
+| Field                                   | Description                                                 |
+|-----------------------------------------|-------------------------------------------------------------|
+| `cartId` {==String==}                   | The Id of the cart.                                         |
+| `storeId` {==String!==}                 | The Id of the store.                                        |
+| `cartName` {==String==}                 | The name of the cart.                                       |
+| `userId` {==String!==}                  | The Id of the user.                                         |
+| `currencyCode` {==String==}             | The currency code for the cart.                             |
+| `cultureName` {==String==}              | The culture or locale name for the cart.                    |
+| `cartType` {==String==}                 | The type or category of the cart.                           |
 
 ## Possible returns
 
@@ -29,32 +29,28 @@ The `InputClearCartType` represents the arguments for the ClearCart operation.
 
 === "Mutation"
     ```json linenums="1"
-
-    mutation ($command:InputClearCartType!)
-    {
-        (command: $command)
-        {
-            name
-            items
-            {
-                id
-                sku
-            }
-            itemsCount
-            itemsQuantity
+    mutation($command: InputClearCartType!) {
+      clearCart(command: $command) {
+        name
+        items {
+          id
+          sku
         }
+      itemsCount
+      itemsQuantity
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
-
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart"
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "currencyCode": "USD",
+      "cultureName":"en-US",
+      "cartType": "null"
     }
     ```

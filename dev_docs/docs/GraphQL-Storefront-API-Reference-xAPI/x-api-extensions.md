@@ -1,123 +1,139 @@
 # How to extend
-The xAPI provides default GraphQL schemas for types,  queries, and mutations. However, each project has its unique requirements, and we can’t foresee all of them and include into the base schema, but thanks to extensions points that the xAPI provides you can change the baseline behavior and data structures. On this article are described the main extension points and techniques that you can use in your custom projects.
 
-At the moment the xAPI project has the following main extensions points in addition to the extension points that platform provides [extensibility overview](https://virtocommerce.com/docs/latest/fundamentals/extensibility/overview/)
+The xAPI offers default GraphQL schemas for types, queries, and mutations. However, as every project has unique requirements, it's impossible to anticipate and include them all in the base schema. Fortunately, the xAPI provides extension points that allow you to modify the baseline behavior and data structures. In this article, we explore the key extension points and techniques available for customizing your projects.
 
-Note: *However, unfortunately, there is no opportunity to extend AutoMapper's profiles using AbstractTypeFactory<> type.*
+In addition to the extension points that platform provides, the xAPI project has the following main [extensions points](https://virtocommerce.com/docs/latest/fundamentals/extensibility/overview/). However, there is no opportunity to extend AutoMapper's profiles using `AbstractTypeFactory<>` type.
 
-[Sample code](https://github.com/VirtoCommerce/vc-module-experience-api/tree/dev/samples/VirtoCommerce.Exp.ExtensionSamples)
+[![Sample code](media/sample_code.png)](https://github.com/VirtoCommerce/vc-module-experience-api/tree/dev/samples/VirtoCommerce.Exp.ExtensionSamples)
 
-## Extend the root GraphQL schema
-Since  the  `graphql-dotnet` is supported the both schema definition `schema-first-approach` and `graphtype-first-approach` in the xAPI we stayed only on the `graphtype-first-approach` because it more naturally to .NET developers and  gives you access to all of the provided properties of your GraphType's and Schema also this approach is better to suit the extension model via type overrides.
+## Extend root GraphQL schema
 
-In order to register a new query or mutation you need to derive the custom schema type from `ISchemaBuilder`.  `ISchemaBuilder` – interface is intended for dynamic adding the new queries into the root GraphQL schema query, so that for register a new query you need to define a new type that implements this interface  and register  it in the DI. The multiple `ISchemaBuilder` instances will be used to add the queries into root schema in first time when application start.
+Within the xAPI, we have the flexibility to choose between the: 
 
-Here an example how to define schema types for existing domain types. On this example we define the new GraphQL schema  object type - `InventoryType` for underlying domain type `Inventory` from the  `inventory module`.
+* Schema-first approach.
+* Graphtype-first approach. 
 
-```csharp title="CustomSchema.cs"
- public class CustomSchema : ISchemaBuilder
-    {
-        public void Build(ISchema schema)
+We've opted to focus exclusively on the graphtype-first approach, for it:
+
+* Aligns more naturally with .NET development practices.
+* Provides access to all the properties of your GraphTypes and Schema. 
+* Is better suited for extending the model through type overrides.
+
+To register a new query or mutation:
+
+1. Derive a custom schema type from `ISchemaBuilder`. The `ISchemaBuilder` interface is designed to dynamically add new queries to the root GraphQL schema. Multiple `ISchemaBuilder` instances are used to add the queries to the root schema when the application starts. The example below shows how to define schema types for existing domain types. Here, we create a new GraphQL schema object type, `InventoryType`, for the underlying domain type, `Inventory`, from the inventory module.
+
+2. Define a new type that implements this interface 
+
+    ```csharp title="CustomSchema.cs" linenums="1"
+    public class CustomSchema : ISchemaBuilder
         {
-            var inventoryQueryField = new FieldType
+            public void Build(ISchema schema)
             {
-                Name = "inventory",
-                Arguments = new QueryArguments(
-                     new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id" },
-                 ),
-                Type = typeof(InventoryType),
-                Resolver = new  FieldResolver<Inventory>(context =>
+                var inventoryQueryField = new FieldType
                 {
-                    return new Inventory { ProductId = "1", FulfillmentCenterId = "center1" };
-                })
-            };
-            schema.Query.AddField(inventoryQueryField);
+                    Name = "inventory",
+                    Arguments = new QueryArguments(
+                        new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id" },
+                    ),
+                    Type = typeof(InventoryType),
+                    Resolver = new  FieldResolver<Inventory>(context =>
+                    {
+                        return new Inventory { ProductId = "1", FulfillmentCenterId = "center1" };
+                    })
+                };
+                schema.Query.AddField(inventoryQueryField);
+            }
         }
-    }
-```
+    ```
 
-```csharp title="module.cs"
- public class Module : IModule
- {
-    public void Initialize(IServiceCollection services)
-    {
-        //Register custom schema
-        services.AddSchemaBuilder<CustomSchema>();
-    }
- }
-```
+3. Register your custom schema type in the Dependency Injection (DI) container. In your `module.cs` file, initialize and register the custom schema using the `services.AddSchemaBuilder<CustomSchema>()` method:
 
-## Extend the existing schema type with new properties
-
-To extend the existing GraphQL type you need to do the following steps
-
-Derive your schema type from the existing one that you want to extend
-
-```csharp title="CartType2.cs"
-  public class CartType2 : CartType
-    {
-        public CartType2(ICartAvailMethodsService cartAvailMethods) : base(cartAvailMethods)
-        {
-            Field<StringGraphType>("myCoolScalarProperty", resolve: context => "my cool value" );
-        }
-    }
-```
-
-Register your override with the special syntax in the `module.cs`.
-
-```csharp title="module.cs"
- public class Module : IModule
- {
-    public void Initialize(IServiceCollection services)
-    {
-        //GraphQL schema overrides
-        services.AddSchemaType<CartType2>().OverrideType<CartType, CartType2>();
-    }
- }
-```
-
-## Extend validation logic / replace validators
-The system uses Platform's abstract type factory to instantiate validators. Therefore the approach of validation logic extension similar to other cases (such as domain model extension):
-- Derive your custom validator from original one:
-
-```csharp title="CartValidator2.cs"
-    public class CartValidator2 : CartValidator
-    {
-        public CartValidator2()
-        {
-            // Some additional rules (to the basic) can be provided there
-            RuleFor(x => x.CartAggregate.Cart.Id).NotEmpty(); // Just example
-        }
-    }
-```
-
-- Override original validator type with your custom in order to tell the factory CartValidator2 replaces the original validator:
-
-```csharp title="module.cs"
+    ```csharp title="module.cs" linenums="1"
     public class Module : IModule
     {
-        public void PostInitialize(IApplicationBuilder appBuilder)
+        public void Initialize(IServiceCollection services)
         {
-            ...
-            // Example: replace cart validator
-            AbstractTypeFactory<CartValidator>.OverrideType<CartValidator, CartValidator2>();
-            ...
+            //Register custom schema
+            services.AddSchemaBuilder<CustomSchema>();
         }
     }
-```
+    ```
 
-## Generic behavior pipelines
-xAPI extension points are not limited to data structure extensions. You can also change behavior and business logic outside from  the your custom module without touching the original source code.
+## Extend existing schema type with new properties
 
-*Generic behavior pipelines* - is primarily intended to split the complex logic into multiple lousily coupled stages (middleware) that can be define on the different places and  that are combined into one logical pipeline that can executed for some system events of requests.
+To extend the existing GraphQL type:
 
-![image](media/x-api-extensions-1.png){: width="380"}
+1. Create a new schema type that derives from the existing type you want to extend. This allows you to build upon the existing structure:
 
-You can extend the existing generic pipelines with you own middlewares or even replace an existing to your custom version.
+    ```csharp title="CartType2.cs" linenums="1"
+    public class CartType2 : CartType
+        {
+            public CartType2(ICartAvailMethodsService cartAvailMethods) : base(cartAvailMethods)
+            {
+                Field<StringGraphType>("myCoolScalarProperty", resolve: context => "my cool value" );
+            }
+        }
+    ```
 
-Consider the example when you want to replace the existing generic pipeline that is called to enrich the `ProductSearchResult` with the data for pricing and availability from different data sources.
+1. Register your type override using the appropriate syntax in the `module.cs` file. This step is crucial to ensure that your extension is recognized and integrated into the GraphQL schema:
 
-```csharp
+    ```csharp title="module.cs" linenums="1"
+    public class Module : IModule
+    {
+        public void Initialize(IServiceCollection services)
+        {
+            //GraphQL schema overrides
+            services.AddSchemaType<CartType2>().OverrideType<CartType, CartType2>();
+        }
+    }
+    ```
+
+## Extend validation logic/ replace validators
+
+In the system, the Platform's abstract type factory is employed to create instances of validators. Consequently, the approach for extending validation logic is similar to other cases, such as extending domain models:
+
+1. Create your custom validator by deriving it from the original one. This allows you to build upon the existing validation logic:
+
+    ```csharp title="CartValidator2.cs" linenums="1"
+        public class CartValidator2 : CartValidator
+        {
+            public CartValidator2()
+            {
+                // Some additional rules (to the basic) can be provided there
+                RuleFor(x => x.CartAggregate.Cart.Id).NotEmpty(); // Just example
+            }
+        }
+    ```
+
+1. Override the original validator type with your custom validator. This step is crucial to inform the factory that CartValidator2 should replace the original validator, ensuring that your custom logic is used:
+
+    ```csharp title="module.cs" linenums="1"
+        public class Module : IModule
+        {
+            public void PostInitialize(IApplicationBuilder appBuilder)
+            {
+                ...
+                // Example: replace cart validator
+                AbstractTypeFactory<CartValidator>.OverrideType<CartValidator, CartValidator2>();
+                ...
+            }
+        }
+    ```
+
+## Extend generic behavior pipelines
+
+xAPI extension points extend beyond data structure modifications. You can also modify behavior and business logic without altering the original source code.
+
+**Generic behavior pipelines** are primarily designed to break down complex logic into loosely coupled stages (middleware). These middleware stages can be defined in various locations and combined into a single logical pipeline that can be executed in response to specific system events or requests.
+
+![image](media/x-api-extensions-1.png){: width="900"}
+
+You can extend the existing generic pipelines with you custom middlewares or even replace the existing middleware with your custom version.
+
+In the example below, you will replace the existing generic pipeline responsible for enriching the `ProductSearchResult` with pricing and availability data from different sources.
+
+```csharp linenums="1"
  //the generic pipeline that is used  for on-the-fly additional data evaluation (prices, inventories, discounts and taxes) for resulting products
 services.AddPipeline<SearchProductResponse>(builder =>
 {
@@ -128,65 +144,67 @@ services.AddPipeline<SearchProductResponse>(builder =>
 });
 ```
 
-First we need to define the new middleware
+1. Define the new middleware:
 
-```csharp title="MyCoolMiddleware.cs"
-public class MyCoolMiddleware : IAsyncMiddleware<SearchProductResponse>
-{
-    //code skipped for better clarity
-}
-```
-
-The last step is register it for the generic behavior pipeline
-
-```csharp title="module.cs"
- public class Module : IModule
- {
-    public void Initialize(IServiceCollection services)
+    ```csharp title="MyCoolMiddleware.cs" linenums="1"
+    public class MyCoolMiddleware : IAsyncMiddleware<SearchProductResponse>
     {
-           services.AddPipeline<SearchProductResponse>(builder =>
-           {
-                builder.AddMiddleware(typeof(MyCoolMiddleware));
-           });
+        //code skipped for better clarity
     }
- }
-```
+    ```
 
-To replace the existing middleware to new one need to use the following syntax
+1. Register it for the generic behavior pipeline:
 
- ```csharp
-  services.AddPipeline<SearchProductResponse>(builder =>
+    ```csharp title="module.cs" linenums="1"
+    public class Module : IModule
+    {
+        public void Initialize(IServiceCollection services)
+        {
+            services.AddPipeline<SearchProductResponse>(builder =>
             {
-                builder.ReplaceMiddleware(typeof(EvalProductsTaxMiddleware), typeof(MyCoolMiddleware));
-                //this line replaced the EvalProductsTaxMiddleware with the MyCoolMiddleware for GenericPipeline<SearchProductResponse>
+                    builder.AddMiddleware(typeof(MyCoolMiddleware));
             });
- ```
+        }
+    }
+    ```
 
-## Command/Query handlers replacement
+1. To replace the existing middleware with the new one, use the following syntax:
 
-xAPI is built with using the clean architecture based on CQRS and DDD principles, where each command and query has it's own handler that is responsible for handling and processing incoming actions, you can easy override and substitute any existing handler with your own implementation thereby changing the default behavior.
+    ```csharp linenums="1"
+    services.AddPipeline<SearchProductResponse>(builder =>
+                {
+                    builder.ReplaceMiddleware(typeof(EvalProductsTaxMiddleware), typeof(MyCoolMiddleware));
+                    //this line replaced the EvalProductsTaxMiddleware with the MyCoolMiddleware for GenericPipeline<SearchProductResponse>
+                });
+    ```
 
-To do this, it is just enough to replace the required handler in the DI container with your own implementation.
+## Replace command/ query handlers
 
-```csharp
- public class Module : IModule
- {
+xAPI is built using the clean architecture based on CQRS and DDD principles, where each command and query has its own handler responsible for processing incoming actions. You can easily override and substitute any existing handler with your implementation, thereby changing the default behavior.
+
+It is just enough to replace the required handler in the DI container with your own implementation:
+
+```csharp linenums="1"
+public class Module : IModule
+{
     public void Initialize(IServiceCollection services)
     {
         //use such lines to override exists query or command handler
         services.AddTransient<IRequestHandler<GetCartQuery, CartAggregate>, CustomGetCartQueryHandler>();
     }
- }
+}
 ```
 
-To replace an existing command with your own implementation first register and override of your Input type
+To replace an existing command with your implementation:
 
-```csharp title="module.cs"
-services.AddSchemaType<InputRemoveCartType2>().OverrideType<InputRemoveCartType, InputRemoveCartType2>();
-```
+1. Register and override your input type:
 
-And then regiser your implementations of Command and Handler like this
+    ```csharp title="module.cs" linenums="1"
+    services.AddSchemaType<InputRemoveCartType2>().OverrideType<InputRemoveCartType, InputRemoveCartType2>();
+    ```
 
-```csharp title="module.cs"
-services.OverrideCommandType<RemoveCartCommand, RemoveCartCommandExtended>().WithCommandHandler<RemoveCartCommandHandlerExtended>();
-```
+1. Register your implementations of the command and handler:
+
+    ```csharp title="module.cs" linenums="1"
+    services.OverrideCommandType<RemoveCartCommand, RemoveCartCommandExtended>().WithCommandHandler<RemoveCartCommandHandlerExtended>();
+    ```

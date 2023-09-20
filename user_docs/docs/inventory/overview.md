@@ -3,9 +3,9 @@ The Virto's Inventory module enables tracking the stock level and managing fulfi
 
 In the ecommerce sector, day-to-day inventory management helps increase business intelligence and visibility. Ecommerce business owners have better ongoing control when they constantly keep an eye on their inventory.
 
-[View the source code of the Inventory module](https://github.com/VirtoCommerce/vc-module-inventory){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-inventory)
 
-[Download latest Inventory module release](https://github.com/VirtoCommerce/vc-module-inventory/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-inventory/releases)
 
 ## Key Features
 

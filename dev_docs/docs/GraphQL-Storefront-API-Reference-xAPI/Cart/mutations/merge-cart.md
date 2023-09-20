@@ -1,4 +1,4 @@
-# MergeCart ==~mutation~==
+# mergeCart ==~mutation~==
 
 This mutation merges two carts. You can use it to merge an anonymous cart with a user cart after user authentication.
 
@@ -6,16 +6,16 @@ This mutation merges two carts. You can use it to merge an anonymous cart with a
 
 The `InputMergeCartType` represents the input object type used for merging two carts into one. 
 
-| Field                  | Description                                                         |
-|------------------------|---------------------------------------------------------------------|
-| `cartId` {==String==}              | The ID of the primary cart that will receive the merged data.            |
-| `storeId` {==String!==}           | The ID of the store associated with the carts.                           |
-| `cartName` {==String==}            | The name of the primary cart.                                           |
-| `userId` {==String==}              | The ID of the user who owns the primary cart.                            |
-| `currencyCode` {==String==}        | The currency code for the primary cart.                                 |
+| Field                              | Description                                                              |
+|----------------------------------- |--------------------------------------------------------------------------|
+| `cartId` {==String==}              | The Id of the primary cart that will receive the merged data.            |
+| `storeId` {==String!==}            | The Id of the store associated with the carts.                           |
+| `cartName` {==String==}            | The name of the primary cart.                                            |
+| `userId` {==String==}              | The Id of the user who owns the primary cart.                            |
+| `currencyCode` {==String==}        | The currency code for the primary cart.                                  |
 | `cultureName` {==String==}         | The culture or language associated with the primary cart.                |
-| `cartType` {==String==}            | The type of the primary cart.                                           |
-| `secondCartId` {==String==}        | The ID of the secondary cart that will be merged into the primary cart.  |
+| `cartType` {==String==}            | The type of the primary cart.                                            |
+| `secondCartId` {==String==}        | The Id of the secondary cart that will be merged into the primary cart.  |
 
 ## Possible returns
 
@@ -26,22 +26,27 @@ The `InputMergeCartType` represents the input object type used for merging two c
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputMergeCartType!)
-    {
-        (command: $command)
-        {
-            id
-            isAnonymous
+    mutation mergeCart($command: InputMergeCartType!) {
+      mergeCart(command: $command) {
+        id
+        items {
+          id
+          name
+          quantity
         }
+        total {
+          amount
+        }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
+        "storeId": "B2B-Store",
         "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
+        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
         "cultureName": "en-US",
         "currencyCode": "USD",
         "cartType": "cart",

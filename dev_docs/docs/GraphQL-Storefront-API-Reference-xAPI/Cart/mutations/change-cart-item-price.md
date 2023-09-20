@@ -1,4 +1,4 @@
-# ChangeCartItemPrice ==~mutation~==
+# changeCartItemPrice ==~mutation~==
 
 This mutation changes the cart item price.
 
@@ -6,17 +6,17 @@ This mutation changes the cart item price.
 
 The `InputChangeCartItemPriceType` represents the input object type used for changing the price of a specific item within a cart. 
 
-| Field                  | Description                                                                                      |
-|---------------------------|--------------------------------------------------------------------------------------------------|
-| `cartId` {==String==}     | The identifier of the cart to which the item belongs.                                             |
-| `storeId` {==String!==}   | The identifier of the store to which the cart belongs.                                           |
-| `cartName` {==String==}   | The name of the cart.                                                             |
-| `userId` {==String==}     | The identifier of the user associated with the cart.                                             |
-| `currencyCode` {==String==}| The currency code for the cart.                                                             |
-| `cultureName` {==String==}| The culture or locale name for the cart.                                                    |
-| `cartType` {==String==}   | The type or category of the cart.                                                              |
-| `lineItemId` {==String==} | The identifier of the specific item within the cart for which the price is being changed.      |
-| `price` {==Decimal!==}    | The new price value to be set for the item.                                                    |
+| Field                  | Description                                                                        |
+|---------------------------|---------------------------------------------------------------------------------|
+| `cartId` {==String==}     | The Id of the cart to which the item belongs.                                   |
+| `storeId` {==String!==}   | The Id of the store to which the cart belongs.                                  |
+| `cartName` {==String==}   | The name of the cart.                                                           |
+| `userId` {==String==}     | The Id of the user associated with the cart.                                    |
+| `currencyCode` {==String==}| The currency code for the cart.                                                |
+| `cultureName` {==String==}| The culture or locale name for the cart.                                        |
+| `cartType` {==String==}   | The type or category of the cart.                                               |
+| `lineItemId` {==String==} | The Id of the specific item within the cart for which the price is being changed.|
+| `price` {==Decimal!==}    | The new price value to be set for the item.                                     |
 
 ## Possible returns
 
@@ -27,34 +27,32 @@ The `InputChangeCartItemPriceType` represents the input object type used for cha
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputChangeCartItemPriceType!)
-    {
-        (command: $command)
-        {
-            id
-            items
-            {
-                sku
-                productId
-                listPrice
-                listPriceWithTax
-                salePrice
-                salePriceWithTax
-            }
+    mutation($command: InputChangeCartItemPriceType!) {
+      changeCartItemPrice(command: $command) {
+        id
+        items {
+          sku
+          productId
+          listPrice
+          listPriceWithTax
+          salePrice
+          salePriceWithTax
         }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
+        "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05"
+        "storeId": "B2B-store",
         "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
+        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
         "cultureName": "en-US",
         "currencyCode": "USD",
         "cartType": "cart",
-        "productId": "9cbd8f316e254a679ba34a900fccb076",
+        "lineItemId": "127fffb3-9840-454e-a879-c0e621d7f128"
         "price": 777
     }
     ```

@@ -4,9 +4,9 @@ Online stores are likely to need images, not only full-size product images (whic
 
 With the Virto Commerce Thumbnail module you do not need to generate thumbnails manually, which is challenging, especially when you have hundreds or thousands of various products. You can generate any reasonable number of small images with predefined sizes quickly and efficiently. Additionally, this generation runs as a job, which means you can schedule it to run every specific period of time to cover the recently added images as well.
 
-[View the source code of Virto Commerce Thumbnails module](https://github.com/VirtoCommerce/vc-module-image-tools){ .md-button }
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-image-tools)
 
-[Download latest Thumbnails module release](https://github.com/VirtoCommerce/vc-module-image-tools/releases){ .md-button }
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-image-tools/releases)
 
 ## Key Features
 

@@ -6,6 +6,10 @@ Web crawlers primarily discover web pages through internal and external links. S
 
 In essence, sitemaps contribute to a more seamless interaction between website owners and search engines, facilitating the optimal visibility of web pages within search engine results.
 
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-sitemaps)
+
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-sitemaps/releases)
+
 ## Key Features
 
 * [Generating sitemap files on-the-fly by an API call, or manually](configuring-sitemaps.md#add-new-sitemap-to-store)
@@ -13,6 +17,3 @@ In essence, sitemaps contribute to a more seamless interaction between website o
 * [Scheduling and configuring a recurring job to generate sitemap files](settings.md)
 * [Downloading sitemap ZIP packages with XML files](configuring-sitemaps.md#download-sitemaps)
 
-[View the source code of Virto Commerce Sitemaps module](https://github.com/VirtoCommerce/vc-module-sitemaps){ .md-button }
-
-[Download latest Sitemaps module release](https://github.com/VirtoCommerce/vc-module-sitemaps/releases){ .md-button }

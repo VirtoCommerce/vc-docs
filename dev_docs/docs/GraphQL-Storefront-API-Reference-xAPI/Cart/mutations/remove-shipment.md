@@ -1,4 +1,4 @@
-# RemoveShipment ==~mutation~==
+# removeShipment ==~mutation~==
 
 This mutation removes shipping methods from the cart.
 
@@ -6,16 +6,16 @@ This mutation removes shipping methods from the cart.
 
 The `InputRemoveShipmentType` represents the input object type used for removing a shipment from a cart. 
 
-| Field               | Description                                                        |
-|---------------------|--------------------------------------------------------------------|
-| `cartId` {==String==}             | The ID of the cart from which the shipment is to be removed.          |
-| `storeId` {==String!==}          | The ID of the store associated with the cart.                         |
-| `cartName` {==String==}           | The name of the cart.                                                |
-| `userId` {==String==}             | The ID of the user who owns the cart.                                 |
-| `currencyCode` {==String==}       | The currency code for the cart.                                      |
+| Field                             | Description                                                           |
+|-----------------------------------|-----------------------------------------------------------------------|
+| `cartId` {==String==}             | The Id of the cart from which the shipment is to be removed.          |
+| `storeId` {==String!==}           | The Id of the store associated with the cart.                         |
+| `cartName` {==String==}           | The name of the cart.                                                 |
+| `userId` {==String==}             | The Id of the user who owns the cart.                                 |
+| `currencyCode` {==String==}       | The currency code for the cart.                                       |
 | `cultureName` {==String==}        | The culture or language associated with the cart.                     |
-| `cartType` {==String==}           | The type of the cart.                                                |
-| `shipmentId` {==String==}       | The ID of the shipment to be removed from the cart.                   |
+| `cartType` {==String==}           | The type of the cart.                                                 |
+| `shipmentId` {==String==}         | The Id of the shipment to be removed from the cart.                   |
 
 ## Possible returns
 
@@ -26,30 +26,33 @@ The `InputRemoveShipmentType` represents the input object type used for removing
 
 === "Mutation"
     ```json linenums="1"
-    mutation ($command:InputRemoveShipmentType!)
-    {
-        (command: $command)
-        {
-            name
-            availableShippingMethods
-            {
-            code
-            optionName
-            optionDescription
-            }
+    mutation removeShipment($command: InputRemoveShipmentType!) {
+      removeShipment(command: $command) {
+        id
+        shipments {
+          id
+          shipmentMethodCode
+          shipmentMethodOption
+          deliveryAddress {
+            id
+            line1
+            line2
+          }
         }
+      }
     }
     ```
 
 === "Variables"
     ```json linenums="1"
     "command": {
-        "storeId": "Electronics",
-        "cartName": "default",
-        "userId": "b57d06db-1638-4d37-9734-fd01a9bc59aa",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "shipmentId": "7777-7777-7777-7777",
+      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+      "storeId": "B2B-Store",
+      "cartName": "default",
+      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+      "currencyCode": "USD",
+      "cultureName":"en-US",
+      "cartType": "null",
+      "shipmentId": "80e594ba-23ae-4da3-8981-d48c0c2f1141"
     }
     ```

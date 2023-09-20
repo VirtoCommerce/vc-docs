@@ -115,7 +115,8 @@ This query is used to view all orders from your organization. The user can view 
               "discountTotal": {
                 "amount": 20.01
               }
-            },
+            }
+          ]
         }
       }
     }
