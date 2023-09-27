@@ -223,7 +223,7 @@ nav:
     - Hotjar:
       - Overview: integrations/hotjar/overview.md
       - Getting started: integrations/hotjar/getting-started.md
-  - Marketplace: 
+  - Marketplace <br>[Under construction]: 
     - Overview: marketplace_user_docs/overview.md
     - Vendor portal:
       - Overview: marketplace_user_docs/Vendor-portal/overview.md
@@ -240,20 +240,33 @@ nav:
         - Vendor onboarding: marketplace_user_docs/Operator-portal/Vendors-management/vendor-onboarding.md
         - Vendor management: marketplace_user_docs/Operator-portal/Vendors-management/vendor-management.md
       - Products management: marketplace_user_docs/Operator-portal/products-management.md
-  - Storefront and Theme <br>[In progress]:
+  - Storefront and Theme <br>[Under construction]:
     - Overview: storefront/overview.md
     - Navigation:
-      - Overview: storefront/navigation/overview.md
-    - Registration and signing in:
-      - Overview: storefront/registration_and_signing_in/overview.md
-    - Managing account:
-      - Overview: storefront/managing_account/overview.md
+      - Homepage layout: storefront/navigation/homepage-layout.md
+      - Product page layout: storefront/navigation/product-page-layout.md
+    - Register and sign in:
+      - Create account: storefront/registration_and_signing_in/create-account.md
+      - Sign in: storefront/registration_and_signing_in/sign-in.md
+      - Password management: storefront/registration_and_signing_in/password-management.md
+    - Account:
+      - Personal and corporate accounts: storefront/account/overview.md
+      - Profile: storefront/account/profile.md
+      - Addresses: storefront/account/addresses.md
+      - Orders: storefront/account/orders.md
+      - Lists: storefront/account/lists.md
+      - Checkout defaults: storefront/account/checkout-defaults.md
+      - Quote requests: storefront/account/quote-requests.md
+      - Company info: storefront/account/company-info.md
+      - Company members: storefront/account/company-members.md
     - Shopping: 
-      - Overview: storefront/shopping/overview.md
-    - Returns and refunds: 
-      - Overview: storefront/returns_and_refunds/overview.md
-    - Themes and customization:
-      - Overview: storefront/themes_and_customization/overview.md
+      - Search options: storefront/shopping/searching-for-products.md
+      - Compare products: storefront/shopping/compare-products.md
+      - Products lists: storefront/shopping/lists.md
+      - Submit quotes: storefront/shopping/submit-quotes.md
+      - Bulk orders: storefront/shopping/bulk-orders.md
+      - Checkout: storefront/shopping/checkout-process.md
+
 extra:
     social:
       - icon: fontawesome/brands/github
