@@ -8,7 +8,11 @@ To install it and assign Google Analytics Measurement Id for you store:
 
     ![Demo](../media/demo.gif)
     
-1. Go to **Store Settings** > **Settings** to activate **Google Analytics 4** and enter your **Measurement Id**.
+1. In the main menu, click **Stores** to open the **Stores** blade.
+1. Select the required store.
+1. In the **Store details** blade, click on the **Settings** widget.
+1. Enable Google Analytics 4.
+1. Enter your measurement Id. 
 
     ![Enable Google Analytics](../media/enable-google-analytics.png)
 

@@ -9,7 +9,7 @@ To add a product to the compare list:
     !!! Note
         Only 5 products can be compared at a time.
 
-1. Click **Compare** in the popup notification or in top menu to open the compare list.
+1. Click **Compare** in the popup notification or in the top menu to open the compare list.
 
     ![compare](../media/compare-button.png)
 

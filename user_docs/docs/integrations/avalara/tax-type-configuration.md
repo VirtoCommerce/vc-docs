@@ -1,7 +1,8 @@
+# Tax type configuration
 
-Assign cart/order items to tax categories for correct tax calculation by applying tax codes to the catalog items. In VirtoCommerce platform, tax code is also called **Tax type**. 
+Assign cart/order items to tax categories for correct tax calculation by applying tax codes to the catalog items. In the Virto Commerce platform, tax code is also called **Tax type**. 
 
-**Tax code (text type)** is a system of regulations that governs the collection and administration of taxes in a particular jurisdiction. Tax codes define the types of taxes that are collected, the rates at which they are levied, and the criteria used to determine tax liability.
+**Tax code (tax type)** is a system of regulations that governs the collection and administration of taxes in a particular jurisdiction. Tax codes define the types of taxes that are collected, the rates at which they are levied, and the criteria used to determine tax liability.
 
 Define the available tax types in the general settings of the VirtoCommerce platform and apply them to the items. 
 
@@ -19,10 +20,10 @@ The tax type can be selected in the following locations:
 | **Shipping method** | Stores > (your store) > Shipping methods > (your shipping method) > Tax type |
 
 !!! note
-    * The available tax types can be configured in the VC Platform settings:
-     Settings > Commerce > General > Tax types.
+    * The available tax types can be configured in the VC Platform settings:<br>
+     **Settings > Commerce > General > Tax types**
 
-## Tax Exemptions
+## Tax exemptions
 
 To provide the exemption number for selected customers to the Avalara Tax API:
 

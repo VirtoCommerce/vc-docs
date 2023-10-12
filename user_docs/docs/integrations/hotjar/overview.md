@@ -11,7 +11,7 @@ Hotjar module allows you to assign Hotjar Site Id for your Store. It get insight
 1. Ready for integration with other sales channels.
 1. Application menu.
 
-[Download latest Hotjar module version](https://github.com/VirtoCommerce/vc-module-hotjar/releases){ .md-button }
+[![Download latest Hotjar module version](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-hotjar/releases)
 
 ## References
 

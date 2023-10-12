@@ -14,7 +14,11 @@ Virto Commerce offers a range of pre-configured notifications right out of the b
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-notification/releases)
 
-## Key Features
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Notifications module:
+
+![Notifications key entities](media/key-entities.png)
 
 With the Notifications module, you can:
 

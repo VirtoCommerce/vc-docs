@@ -6,11 +6,9 @@ The module is officially [certified by Avalara](https://www.avalara.com/integrat
 
 AvaTax automatically calculates sales and use tax for transactions, invoices, and other activity powered by Virto Commerce.
 
-## Related Components¶
+[![Source code](../media/source_code.png)](https://github.com/VirtoCommerce/vc-module-avatax)
 
-To view the source code of Virto Commerce AvaTax module, check out our [GitHub repository](https://github.com/VirtoCommerce/vc-module-avatax).
-
-To download the latest AvaTax module release, click [here](https://github.com/VirtoCommerce/vc-module-avatax/releases).
+[![Release](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-avatax/releases)
 
 ## Key Features¶
 

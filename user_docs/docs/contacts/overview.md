@@ -6,11 +6,14 @@ The Contacts module allows you to manage various profiles within Virto Commerce,
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-customer/releases)
 
-The illustration below shows core entities of the Contacts module and how they relate to each other:
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/pGv8uF0iiyc?si=dyhOu5MuUfKVqfB0)
+
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Contacts module:
 
 ![Contacts module entity chart](media/entity-chart.png)
 
-## Key Features
 The Contacts module features are:
 
 * **Many-to-many company entity hierarchy:** Each company entity can contain multiple companies, along with individual users.
@@ -22,4 +25,3 @@ The Contacts module features are:
 
 * **Connection to Storefront:** You can link all your contacts and their hierarchy to the Storefront application.
 
-[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/pGv8uF0iiyc?si=dyhOu5MuUfKVqfB0)

@@ -6,21 +6,20 @@ Catalog is a module within Virto that facilitates the addition of items to your 
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-catalog/releases)
 
-The catalog module includes the following entities:
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/E3JX9xgLAZo?si=tq_CaZ5J1JXqNs1R)
+
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Catalog module:
+
+![Catalog Logical Overview](media/catalog-categories-products.png)
+
+With the Catalog module, you can manage:
 
 * [Physical catalogs](add-new-catalog.md#physical-catalogs)
 * [Virtual catalogs](add-new-catalog.md#virtual-catalogs)
 * [Categories](managing-categories.md)
 * [Products](managing-products.md)
-* [Properties](managing-properties.md)
-* [Search](catalog-search.md)
-
-It's possible to have one or multiple stores, each of which can be associated with both physical and virtual catalogs. The diagram below illustrates the interconnections among various key entities within the Virto Platform.
-
-![Catalog Logical Overview](./media/overview/01_catalog_logical_overview_chart.png){: width="700" height="700"}
-
-
-[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/E3JX9xgLAZo?si=tq_CaZ5J1JXqNs1R)
-
-
+* [Product availability](setting-product-availability.md)
+* [Search index](managing-search-index.md)
 

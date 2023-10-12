@@ -10,10 +10,16 @@ In essence, sitemaps contribute to a more seamless interaction between website o
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-sitemaps/releases)
 
-## Key Features
+## Key features
 
-* [Generating sitemap files on-the-fly by an API call, or manually](configuring-sitemaps.md#add-new-sitemap-to-store)
-* [Creating sitemaps based on catalog items, vendor items, custom or static content items](configuring-sitemaps.md#add-sitemap-items)
-* [Scheduling and configuring a recurring job to generate sitemap files](settings.md)
-* [Downloading sitemap ZIP packages with XML files](configuring-sitemaps.md#download-sitemaps)
+The diagram below illustrates the Sitemaps module functionality:
+
+![Sitemaps Logical Overview](media/key-entities.png)
+
+With the Sitemaps module, you can:
+
+* [Generate sitemap files on-the-fly by an API call, or manually](configuring-sitemaps.md#add-new-sitemap-to-store)
+* [Create sitemaps based on catalog items, vendor items, custom or static content items](configuring-sitemaps.md#add-sitemap-items)
+* [Schedule and configure a recurring job to generate sitemap files](settings.md)
+* [Download sitemap ZIP packages with XML files](configuring-sitemaps.md#download-sitemaps)
 

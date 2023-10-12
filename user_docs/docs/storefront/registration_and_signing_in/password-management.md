@@ -29,7 +29,13 @@ You should change your password:
 
 * At any time you consider it is necessary.
 * At the request of administrators if they believe your password is compromised. 
-* At regular intervals set by the system.
+* At regular intervals set by the system. In this case, users are notified of the impending expiration:
+
+    ![Password expiration](../media/password-about-to-expire.png){: width="500"}
+
+    If the password has expired, the user will be prompted to set a new password when logging in:
+
+    ![Change expired password](../media/set-new-password.png){: width="900"}
 
 To change the password:
 
