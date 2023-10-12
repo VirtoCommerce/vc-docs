@@ -1,3 +1,5 @@
+# Orders synchronization
+
 The AvalaraTax module creates AvaTax transactions for orders and enables scheduled synchronization of VC Platform orders with AvaTax. 
 
 It creates a **SalesInvoice** transaction for orders, where:
@@ -14,24 +16,31 @@ You can send the order to AvaTax:
     * Wait for the job to complete.
 * Manually:
     * For a single order: 
-        * Go to **Order details**.
-        * Click the AvaTax widget.
-        * Click **Send to AvaTax**.
+        1. In the main menu, click **Orders** to open the **Order details** blade.
+        1. Click the required order.
+        1. In the **Edit order details** blade, click the **AvaTax** widget.
+        1. Click **Send to AvaTax** in the **Details of AvaTax transaction** blade.
+        1. The report of the process results appears in the next blade.
+        
         ![image](../media/single-order.png)
+
     * For multiple orders: 
-        * Go to the orders list blade.
-        * Select the required orders.
-        * Click **Send to AvaTax**.
-        ![image](../media/multiple-orders.png)
+        1. In the main menu, click **Orders** to open the **Order details** blade.
+        1. Check the required orders.
+        1. Click **Send to AvaTax** in the top menu.
+        1. The report of the process results appears in the next blade. The orders are sent to Avalara only for the stores that use AvaTax as their tax provider.
+
+        ![image](../media/multiple-orders.png){: width="700"}
 
 !!! note
     * Set **AvaTax** as a tax provider for your store to send transactions to AvaTax.
 
-To review the AvaTax transaction details for the order, click the AvaTax widget on the order details blade. 
+To review the AvaTax transaction details for the order, click the **AvaTax** widget in the order details blade. 
+
 It displays:
 
 * The date the order was sent to AvaTax.
 * The link to the AvaTax transaction corresponding to the order.
 * Raw AvaTax transaction representation.
 
-![AvaTax transaction details blade](../media/avatax-widget.png)
+![AvaTax transaction details blade](../media/avatax-widget.png){: width="700"}

@@ -8,7 +8,11 @@ With the Virto Commerce Thumbnail module you do not need to generate thumbnails 
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-image-tools/releases)
 
-## Key Features
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Thumbnails module:
+
+![Thumbnails](media/key-entities.png)
 
 With the Thumbnails module, you can:
 

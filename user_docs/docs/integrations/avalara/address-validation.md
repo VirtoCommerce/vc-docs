@@ -1,4 +1,4 @@
-# Address Validation
+# Address validation
 
 Address validation is used in storefront theme to prevent creation of orders with invalid (not acceptable by AvaTax) addresses.
 

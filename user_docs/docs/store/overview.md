@@ -8,14 +8,19 @@ A store in Virto Commerce is a collection of settings for your web page or websi
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-store/releases)
 
-## Key Features
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/BJ9EKH2OCzQ?si=2XEGzzKv0liXnVhT)
+
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Stores module:
+
+![Pricing key entities](media/key-entities.png)
 
 With the Store module, you can:
 
-* Create any number of stores.
-* [Manage SEO settings](configuring-store.md#SEO). 
-* [Set individual payment and shipping methods](configuring-store.md).
-* [Manage tax providers](configuring-store.md).
-* [Linking customer accounts across stores](configuring-store.md).
+* [Create any number of stores](adding-new-store.md)
+* [Manage SEO settings](configuring-store.md#SEO)
+* [Set individual payment and shipping methods](configuring-store.md)
+* [Manage tax providers](configuring-store.md)
+* [Linking customer accounts across stores](configuring-store.md)
 
-[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/BJ9EKH2OCzQ?si=2XEGzzKv0liXnVhT)

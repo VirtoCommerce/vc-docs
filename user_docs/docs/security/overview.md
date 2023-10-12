@@ -7,7 +7,13 @@ Virto Commerce Security module provides various options to manage security and a
 * **Permissions**: Fundamental security units that grant particular rights to perform actions, such as viewing customer details or changing order data.
 * **Scopes**: Restrictions of permissions to specific objects or actions.
 
-## Key Features
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H-yFuT_EP8A?si=P1Ha4dM7pQ7naIuN)
+
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Security module:
+
+![Order key entities](media/key-entities.png)
 
 With the Security module, you can:
 
@@ -16,4 +22,3 @@ With the Security module, you can:
 * [Generate API keys](api-key.md) for specific users.
 * [Log in to Storefront on behalf](login-on-behalf.md) of any user.
 
-[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H-yFuT_EP8A?si=P1Ha4dM7pQ7naIuN)

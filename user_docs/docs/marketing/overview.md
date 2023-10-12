@@ -6,10 +6,15 @@ The Virto Commerce Marketing module is dedicated to managing the various marketi
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-marketing/releases)
 
-## Key Features
-Virto's Marketing module provides the following key features:
- 
-* Managing [dynamic content](#dynamic-content) for Storefront.
-* Creating and running [promotions](#promotions).
-
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/fNskiyNBbj0?si=WJlYu3rUvHLPsmK1)
+
+## Key features
+The diagram below illustrates the interconnections among various key entities within the Order module:
+
+![Marketing key entities](media/key-entities-chart.png)
+
+With the Marketing module, you can:
+ 
+* Manage [dynamic content](#dynamic-content) for the Storefront.
+* Create and run [promotions](#promotions).
+

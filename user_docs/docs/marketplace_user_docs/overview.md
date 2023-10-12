@@ -2,9 +2,9 @@
 
 Marketplace product introduces a list of predefined features to fulfill common and complex tasks related to the B2B marketplace management. It uses the Virto Atomic architecture principles to bring extensibility to the product to adjust it to the specific project needs.
 
-[View Virto Marketplace source code on GitHub](https://github.com/VirtoCommerce/vc-module-marketplace-vendor){ .md-button }
+[![Code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-marketplace-vendor)
 
-[Download the latest Marketplace module release](https://github.com/VirtoCommerce/vc-module-marketplace-vendor/releases/latest){ .md-button }
+[![Release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-marketplace-vendor/releases/latest)
 
 ## Key features
 

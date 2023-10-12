@@ -8,8 +8,13 @@ The Virto Commerce Generic Export module provides the ability to export data fro
 
 ## Key features
 
+The diagram below illustrates the interconnections among various key entities within the Generic Export module:
+
+![GE key entities](media/key-entities.png)
+
 With the Generic Export Module, you can:
 
 * [Assign permissions](assigning-permissions.md). Only users with the Export reader role and permissions have access to Generic Export function.
 * Apply [advanced filters](advanced-filtering.md) application before starting the export.
 * [Export data](managing.md) in Json and CSV format.
+

@@ -17,13 +17,19 @@ The order itself contains minimum details.  You will find payment, shipment, and
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-order/releases)
 
-## Key Features
-
-Virto Commerce Orders Module supports the following functionalities:
-
-* [Managing shipment, payment, and refund documents](managing-documents.md)
-* [Managing returns](managing-returns.md)
-* [Sending order information to Avalara](sending-order-information-to-avatax.md)
-* [Tracking order changes](tracking-order-changes.md)
-
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/qENWENyS0H0?si=jFpI5N7uNIn2U0LQ)
+
+## Key features
+
+The diagram below illustrates the interconnections among various key entities within the Orders module:
+
+![Order key entities](media/key-entities.png)
+<br>
+
+With the Orders module, you can:
+
+* [Manage shipment, payment, and refund documents](managing-documents.md)
+* [Manage returns](managing-returns.md)
+* [Send order information to Avalara](sending-order-information-to-avatax.md)
+* [Track order changes](tracking-order-changes.md)
+

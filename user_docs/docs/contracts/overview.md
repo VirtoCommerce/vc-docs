@@ -1,12 +1,12 @@
 # Overview
 
-Virto's Contracts module allows you to create and manage customer contracts. Each contract defines the prices the customer receives during the contract period. The feature is designed with B2B companies in mind.
+The Contracts module allows you to create and manage customer contracts. Each contract defines the prices the customer receives during the contract period. The feature is designed with B2B companies in mind.
 
-The Contracts feature is based on Virto Commerce's native personalization engine to provide a convenient experience for users managing B2B customer personalization.
+The Contracts feature is based on the Virto Commerce native personalization engine to provide a convenient experience for users managing B2B customer personalization.
 
-The diagram below illustrates how different high-level entities are related in the Virto platform:
+The diagram below illustrates the interconnections among various key entities within the Contracts module:
 
-![Chart depicting contract entities](media/contract-entity-chart.png){: width="400" height="400"}
+![Contracts Logical Overview](media/key-entities.png)
 
 By creating a contract, you link the buyer's company or contact with the price list that will apply to the company during the contract period in the selected store.
 
@@ -18,8 +18,10 @@ You can also use the same contract for multiple organizations, which is especial
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-contract/releases)
 
-## Key Features
-Virto's Contract module contains the following key features:
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H6vlkDRPrrs?si=xlte--NF63dg3BBB)
+
+## Key features
+The Virto's Contracts module contains the following key features:
 
 * [Managing contracts](creating-and-terminating-contracts.md)
 * [Managing contract prices](managing-contract-prices.md)
@@ -42,5 +44,3 @@ in terms of existing Virto objects. Once you create a contract, the system will 
     
 All these changes can be recorded to the appropriate entities (companies, price lists and price list assignments) if required, while the user who manages contracts can easily work with the module without being aware of all these details.
 
-
-[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H6vlkDRPrrs?si=xlte--NF63dg3BBB)

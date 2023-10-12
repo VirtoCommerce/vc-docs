@@ -9,9 +9,9 @@ The Tasks application in Virto Commerce is a powerful tool that enables users to
 
 The tasks application is fully integrated with the Virto Commerce platform, which means that users can manage tasks within the same interface they use for managing products and orders. Use VC Shell to view the installed applications.
 
-[Install Tasks application](https://github.com/VirtoCommerce/vc-module-task-management/releases){ .md-button }
+[![Install Tasks application](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-task-management/releases)
 
-[Install VC Shell](https://github.com/VirtoCommerce/vc-shell){ .md-button }
+[![Install VC Shell](media/install_vc_shell.png)](https://github.com/VirtoCommerce/vc-shell)
 
 
 

@@ -50,3 +50,15 @@ Each product card displays:
 * Discounts applied, etc. 
 
 ![product card](../media/product-card.png)
+
+## Mobile version
+
+In the Storefront mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.
+
+### Homepage
+
+![Mobile homepage](../media/storefront-mobile-homepage.png){: width="900"}
+
+### Menu
+
+![Catalog](../media/storefront-mobile-catalog.png){: width="500"}

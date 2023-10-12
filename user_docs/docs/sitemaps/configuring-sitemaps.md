@@ -22,7 +22,7 @@ To add a new sitemap:
 1. Click **Add** in the toolbar.
 1. Fill in the following fields:
 
-  ![New sitemap](media/new-sitemap.png)
+    ![New sitemap](media/new-sitemap.png)
 
 1. Click **Create** to save the changes.
 

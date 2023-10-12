@@ -16,3 +16,10 @@ To sign in into the account:
 1. Click **Log in**.
 
 You can now use the Storefront as a registered user. 
+
+!!! note
+    In some cases, users may see the following screen when trying to log in. 
+
+    ![Blocked](../media/blocked-page.png){: width="500"}
+
+    If this happens, contact the site administrator.
