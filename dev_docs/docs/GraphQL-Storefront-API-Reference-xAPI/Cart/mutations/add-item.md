@@ -17,7 +17,7 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 | `cartName` {==String==}          | The name or description of the cart.                                                         |
 | `userId` {==String!==}           | The Id of the user.                                                                          |
 | `currencyCode` {==String==}      | The currency code for the cart.                                                              |
-| `cultureName` {==String==}       | The culture or locale name for the cart.                                                     |
+| `cultureName` {==String==}       | A language to retrieve data in.                                                              |
 | `cartType` {==String==}          | The type of the cart.                                                                        |
 | `productId` {==String!==}        | The Id of the product to add to the cart.                                                    |
 | `quantity` {==Int!==}            | The quantity of the product to add to the cart.                                              |

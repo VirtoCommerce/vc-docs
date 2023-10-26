@@ -15,6 +15,7 @@ The `InputRegisterByInvitationType!` represents the input object for registering
 | `phone` {==String==}        | The phone number of the user being registered.                                     |
 | `username` {==String!==}    | The username chosen by the user being registered.                                  |
 | `password` {==String!==}    | The password chosen by the user being registered.                                  |
+| `customerOrderId` {==String==} | The customer order Id to be associated with this user. <br> It triggers the `transferOrder` command and associates the order with the provided `userId`. |
 
 ## Possible returns
 

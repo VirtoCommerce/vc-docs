@@ -1,29 +1,26 @@
 ﻿# Store module settings
 
-To configure the store-specific settings, use the **Settings** widget in the **Store details blade**.
+You can configure Store module settings through:
 
-To configure global settings:
+* Settings widget in the **Store details blade** (**Stores -->Your store -->Settings**).
+* Settings module in the main menu (**Settings-->Store**).
 
-1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Store** to find the settings related to the module.
-1. Select: 
-    * [General settings](settings.md#general-settings)
-    * [Product reviews settings](settings.md#product-reviews-settings)
-    * [SEO settings](settings.md#seo-settings)
+In both the widget and the settings module, you will find the following global settings:
 
-## General settings
+* General settings:
 
-Configure the following settings:
+    ![widget](media/widget-general-settings.png)
 
-![General settings](media/general-settings-global.png)
+* SEO settings:
 
-## Product reviews settings
+    ![SEO settings](media/seo-settings.png)
 
-Configure the following settings:
+* Product reviews settings:
 
-![Product reviews settings](media/product-reviews-settings.png)
+    ![Product reviews settings](media/product-reviews-settings.png)
 
-## SEO settings
-In this section, you can configure the URL slug length for SEO purposes:
+Additionally, within the widget, there are other store-specific settings:
 
-![SEO settings](media/seo-settings.png)
+* [Orders templates settings](../order-management/settings.md#orders-templates-settings).
+* Subscriptions settings.
+* Hotjar and Google Analytics settings.

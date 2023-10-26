@@ -4,6 +4,32 @@ The main function of the Experience API (xAPI) project is to serve as a middle l
 
 It is closely associated with a particular user or touchpoint experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
 
+
+# GraphQL core ideas
+
+GraphQL is a new API standard that provides a more efficient, powerful and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last couple of years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
+
+![graphQL-Rest](media/rest-graphQL.png)
+
+With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Client customize the endpoints using schema, which provides a description of how the data is structured and contains. Here is an part from Virto Commerce schema:
+
+![schema](media/schema.png)
+
+!!! info
+    Another concept to know is a **Variable**. Is is placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
+
+Our insrtuction provides Virto Commerce related guidelines. For more information about GraphQL, refer to the extensive [GraphQL guide](https://graphql.org/learn/).   
+
+??? "Sample queries"
+
+    | Query                              	| Sample query                         	                        | Sample return                 	                        |
+    |------------------------------------	|--------------------------------------------------------------	|--------------------------------------------------------	|
+    | Total amount of items in B2B-store 	| ![total count query](media/total-count-query.png) 	          | ![total count return](media/total-count-return.png) 	  |
+    | Names of all products in B2B-store 	| ![names query](media/names-products-query.png) 	              | ![names return](media/names-products-return.png) 	      |
+    | Names, codes, ids of products in B2B-store | ![codes-ids-query](media/codes-ids-query.png)          | ![codes-ids-return](media/codes-ids-return.png)         | 
+    | Show first 2 products from the list | ![first-products](media/first-products-query.png)             | ![first-products](media/first-products-return.png) |
+
+
 ## Key сoncepts
 
 * Utilize GraphQL protocol for precise and flexible data retrieval control from the API.
@@ -25,47 +51,4 @@ The xAPI project provides the following major features:
 - [Profile](Profile/overview.md)
 - [Marketing](Quote/overview.md)
 - [Quote](Quote/overview.md)
-
-## How to use
-
-You can explore the GraphQL API via:
-
-* [Playground IDE](index.md#playground-ide)
-* [Curl commands](index.md#curl)
-
-### Playground IDE
-To use an interactive [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment, open `ui/playground` in the platform manager application.
-
-```
-http://localhost:10645/ui/playground
-```
-
-### Curl
-To interact with the GraphQL API, use Curl commands: 
-
-```curl
-POST https://{platform-url}/graphql
-```
-
-By sending POST requests to the specified endpoint and including the necessary fields in the JSON body, you can retrieve the desired data. Here's an example of how to structure your Curl command to query the API.
-
-| Field           	| Description                                                    	|
-|-----------------	|----------------------------------------------------------------	|
-| `query`         	| GraphQL query as a string.                                     	|
-| `variables`     	| JSON object that defines variables for your query.             	|
-| `operationName` 	| The name of the operation, if there are over one in the query. 	|
-
-**Sample query**
-
-```curl linenums="1"
-$ curl -X POST http://localhost:10645/graphql \
-  -H "Content-Type:application/json" \
-  -H "Authorization:Bearer ..." \
-  -d '{"operationName":null,"variables":{},"query":"{ product(id: \"019e93d973cd4adab99b6f9cbb4ca97a\") { name }}"}'
-```
-
-## Next steps
-
-* [Getting started with xAPI](getting-started.md)
-* [Extending xAPI](x-api-extensions.md)
 

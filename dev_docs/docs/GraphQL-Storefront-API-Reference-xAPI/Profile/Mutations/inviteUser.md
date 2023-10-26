@@ -9,11 +9,12 @@ The `InputInviteUserType!` represents the input for inviting users.
 | Field                                     | Description                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
 | `storeId` {==String!==}                   | The Id of the store for which the user is being invited.                          |
-| `organizationId` {==String!==}            | The Id of the organization to which the invited user will be associated.          |
+| `organizationId` {==String==}             | The Id of the organization to which the invited user will be associated.          |
 | `urlSuffix` {==String==}                  | The URL suffix to be appended to the invitation URL.                              |
 | `emails` [{==String!==}]                  | An array of email addresses of the users to be invited.                           |
 | `message` {==String==}                    | A message to include in the invitation email.                                     |
 | `roleIds` [{==String!==}]                 | An array of role Ids to assign to the invited users.                              |
+| `customerOrderId` {==String==}            | The customer order Id to be associated with this user. <br> It is added to the invite url link in the notification​. |
 
 
 ## Possible returns

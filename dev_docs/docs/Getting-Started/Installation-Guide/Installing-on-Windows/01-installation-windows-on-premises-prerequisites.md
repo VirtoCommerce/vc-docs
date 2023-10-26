@@ -1,4 +1,5 @@
 ﻿# Prerequisites
+
 To run Virto Commerce, install:
 
 1. Required software components:
@@ -7,9 +8,8 @@ To run Virto Commerce, install:
     * [MS SQL Server 2017 or higher](https://www.microsoft.com/en-us/sql-server/sql-server-downloads "Installing MS SQL Server")
 
     !!! note
-        * After installing MS SQL server, please switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
-
-    ![Selecting server authentication mode](media/01-selecting-server-authentication.png)
+        After installing MS SQL server, switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
+        ![Selecting server authentication mode](media/01-selecting-server-authentication.png)
 
     - [Virto Commerce CLI](https://github.com/VirtoCommerce/vc-build), our proprietary command line interface that enables automating the installation process and updating the dependencies.
 
@@ -20,4 +20,4 @@ To run Virto Commerce, install:
     * For better search capabilities, install [Elastic search 7.15](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-0). 
 
         !!! note
-            * By default, VirtoCommerce uses [Lucene .NET](https://lucenenet.apache.org/). However, it cannot be used in production due to its limited functionality.
+            By default, VirtoCommerce uses [Lucene .NET](https://lucenenet.apache.org/). However, it cannot be used in production due to its limited functionality.

@@ -114,10 +114,9 @@ nav:
   - Getting Started:
     - System Requirements: Getting-Started/system-requirements.md
     - Installation Guide:
-      - Windows:
-        - Prerequisites: Getting-Started/Installation-Guide/Installing-on-Windows/01-installation-windows-on-premises-prerequisites.md
-        - Installing with Precompiled Binaries: Getting-Started/Installation-Guide/Installing-on-Windows/02-installation-windows-on-premises-precompiled-binaries.md
-        - Installing with CLI: Getting-Started/Installation-Guide/Installing-on-Windows/03-installation-windows-on-premises-CLI.md
+      - Windows: Getting-Started/Installation-Guide/windows.md
+      - Linux: Getting-Started/Installation-Guide/linux.md
+      - MacOS: Getting-Started/Installation-Guide/macOS.md
       - Post Installation Steps:
         - Setting Up Self Signed SSL Certificate: Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
         - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
@@ -221,6 +220,10 @@ nav:
   - GraphQL Storefront API Reference (xAPI):
     - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
     - Getting Started: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
+    - Tools to Explore GraphQL: 
+      - Playground: GraphQL-Storefront-API-Reference-xAPI/playground.md    
+      - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
+      - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md    
     - Catalog:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
       - Queries:
@@ -529,6 +532,7 @@ nav:
     - How-tos:
       - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
       - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
+      - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
   - Updating Virto Commerce Based Projects:
     - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
     - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
