@@ -33,7 +33,7 @@ This configuration node defines the system settings of the VC Platform.
 | AllowInsecureHttp         | `false`                                                           | Manages how the OpenID Connect server (ASOS) handles <br>the incoming requests: whether those arriving to non-HTTPS endpoints<br>should be rejected or not. By default, this property is set to false<br>to help mitigate the man-in-the-middle attacks.                                                                                  |
 | Hangfire                  |                                                                   | Background processing library (Hangfire) configuration.<br><br> `JobStorageType`: Current job storage. Supported values: `Memory`, `SqlServer`.<br> `UseHangfireServer`: Enables or disables Hangfire for this app instance.<br> `AutomaticRetryCount`: Maximum number of automatic retry attempts. <br>`SqlServerStorageOptions`: Hangfire.SqlServer.SqlServerStorageOptions.<br>Read more about [Hangfire's SQL Server Configuration](https://docs.hangfire.io/en/latest/configuration/using-sql-server.html#configuration).|
 | Swagger                   |                                                                   | Allows you to disable Swagger initialization upon platform<br>startup to prevent access to Swagger UI and documents.
-| GraphQL Playground        |                                                                   | Allows you to disable the initialization of the GraphQL Playground<br>at platform startup to prevent access to the GraphQL Playground UI and schemas.|
+| GraphQL Playground        |                                                                   | Allows you to disable the initialization of the GraphQL Playground<br>at platform startup to prevent access to the GraphQL Playground UI and schemas. By default, the playground is enabled.|
 | FileExtensionsBlackList   |                                                                   | This setting is used together with the<br>`VirtoCommerce.Platform.Security.FileExtensionsBlackList` setting (admin UI)<br>to set the extensions of the files the platform does not permit<br>to upload to the server.<br>The `FileExtensionsBlackList` is not accessible from the admin UI.<br>An administrator may provide an additional list of extensions<br>through the UI that may be used with `FileExtensionsBlackList`. |
 
 #### Examples
@@ -121,6 +121,20 @@ This configuration node defines the system settings of the VC Platform.
     "Enrich": [
       "FromLogContext"
     ]
+}
+```
+
+### FrontendSecurity
+
+|Node                       | Default or sample value  | Description                                                     |
+|---------------------------|--------------------------|-----------------------------------------------------------------|
+|OrganizationMaintainerRole | Organization maintainer  | The role that defines permissions for organization maintainers. |
+
+#### Example
+
+```json
+"FrontendSecurity": {
+    "OrganizationMaintainerRole": "Organization maintainer"
 }
 ```
 
@@ -292,15 +306,15 @@ This enables notification configuration for the `VirtoCommerce.Notifications` mo
 
 This configures full text search for the `VirtoCommerce.Search` module.
 
-| Node      | Default or sample value   | Description                                                                                                                                   |
-| ----------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Provider  | E.g., `"Lucene"`          | This **required** setting specifies the current search provider. The supported values are  `Lucene`, `AzureSearch`, and `ElasticSearch`.      |
-| Scope     | E.g., `"default"`         | This setting determines the scope to use and is **required**.                                                                                 |
-| Lucene    |                           | Lucene provider configuration for the **VirtoCommerce.LuceneSearch** module. Used when the `Provider` setting has the `Lucene` vaue.            |
-| AzureSearch |                         | AzureSearch provider configuration for the **VirtoCommerce.AzureSearch** module. Used when the `Provider` setting has the `AzureSearch` value.  |
-| ElasticSearch |                       | Elasticsearch  provider configuration for the **VirtoCommerce.ElasticSearch** module. Used when the `Provider` setting has the `ElasticSearch` value.|
-|OrderFullTextSearchEnabled| E.g., `true`| This boolean setting enables full-text search for orders.<br>If true, full-text search for orders is enabled,<br>and it allows searching for orders based on their content.|
-|ContentFullTextSearchEnabled|E.g., `true`|This boolean setting enables full-text search for content.<br>If true, full-text search for content is enabled,<br>and it allows searching for content items based on their textual content.|
+| Node                        | Default or sample value   | Description                                                                                                                                   |
+| ----------------------------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Provider                    | E.g., `"Lucene"`          | This **required** setting specifies the current search provider. The supported values are  `Lucene`, `AzureSearch`, and `ElasticSearch`.      |
+| Scope                       | E.g., `"default"`         | This setting determines the scope to use and is **required**.                                                                                 |
+| Lucene                      |                           | Lucene provider configuration for the **VirtoCommerce.LuceneSearch** module.<br>Used when the `Provider` setting has the `Lucene` vaue.            |
+| AzureSearch                 |                           | AzureSearch provider configuration for the **VirtoCommerce.AzureSearch** module.<br>Used when the `Provider` setting has the `AzureSearch` value.  |
+| ElasticSearch               |                           | Elasticsearch  provider configuration for the **VirtoCommerce.ElasticSearch** module.<br>Used when the `Provider` setting has the `ElasticSearch` value.|
+|OrderFullTextSearchEnabled   | `true`                    | This boolean setting enables full-text search for orders.<br>If true (by default), full-text search for orders is enabled,<br>and it allows searching for orders based on their content. |
+|ContentFullTextSearchEnabled | `true`                    | This boolean setting enables full-text search for content.<br>If true (by default), full-text search for content is enabled,<br>and it allows searching for content items based on their textual content.|
 
 #### Examples
 
@@ -387,12 +401,12 @@ There are options to configure the ASP.NET Core Identity system. For more inform
 
 | Node                                  | Default or sample value                      | Description                                                                                                                   |
 | ------------------------------------- | ---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------ |
-| Password.PasswordHistory              |  E.g., `"PasswordHistory": 4`                |The number of recent user passwords to check<br>during password validation. An old password<br>cannot be reused for this number of cycles.<br>If the value is set to `0` or not defined,<br>the password history will be disabled. |
-| Password.RepeatedResetPasswordTimeLimit |`"RepeatedResetPasswordTimeLimit": "0:01:0"`| The time limit after which a user can request<br>a password reset.                                                 |
+| Password.PasswordHistory              |  E.g., `4`                |The number of recent user passwords to check<br>during password validation. An old password<br>cannot be reused for this number of cycles.<br>If the value is set to `0` or not defined,<br>the password history will be disabled. |
+| Password.RepeatedResetPasswordTimeLimit |`0:01:0`| The time limit after which a user can request a password reset.                                                 |
 | Password.PasswordChangeByAdminEnabled | `true`                                       |Application setting to disable administrators from setting<br>passwords for users in the system.<br>If you set `PasswordChangeByAdminEnabled` to false,<br>admin UI and API will limit changing the password for administrators. |
-| User.MaxPasswordAge                   | `"MaxPasswordAge": "0"`                      |The time span defining the maximum user password age<br>until it expires. The user is forced to change<br>the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled. |
+| User.MaxPasswordAge                   | `90`                      |The time span defining the maximum user password age<br>until it expires. The user is forced to change<br>the expired password upon login to the Platform Manager UI.<br>If the value is set to `0` or not defined, password expiration will be disabled. |
 | User.RequireUniqueEmail                |                                             | A boolean setting that enforces unique email addresses for user accounts, when enabled.<br>When this setting is enabled, users will not be able to register or use an email address<br>that is already associated with another user account.|
-| User.RemindPasswordExpiryInDays       |`"RemindPasswordExpiryInDays": 7`             | Number of days to start showing a password<br>expiry warning in the Platform Manager UI.<br>Used only when password expiration is enabled. |
+| User.RemindPasswordExpiryInDays       | `7`                                          | Number of days to start showing a password<br>expiry warning in the Platform Manager UI.<br>Used only when password expiration is enabled. |
 | Lockout.AutoAccountsLockoutJobEnabled |`false`                                       | A boolean value indicating whether<br>the automatic accounts lockout job is enabled.                            |
 | Lockout.LockoutMaximumDaysFromLastLogin| `365`                                       | An integer value representing the maximum number of days<br>since the last login before an account is locked out. |
 | Lockout.AutoAccountsLockoutJob        | `default: "0 0 * * *"`                       | A string defining the cron expression<br>for the automatic accounts lockout job.                         |

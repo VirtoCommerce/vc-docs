@@ -21,6 +21,7 @@ The `productType` field represents the type or category of the product. It is us
 | `category` [{==Category==}](category/CategoryType.md)                     | The category to which the product is associated.                                             	|
 | `imgSrc` {==String==}                                                    	| The URL or path to the main image of the product.                                            	|
 | `outerId` {==String==}                                                  	| The external Id of the category to which the product belongs.                           	    |
+| `gtin`{==String==}                                                        | Global Trade Item Number.                                                                     |
 | `brandName` {==String==}                                                 	| The brand name associated with the product.                                                  	|
 | `masterVariation` [{==VariationType==}](VariationType.md)                	| The main variation of the product.                                                           	|
 | `variations` [{==VariationType==}](VariationType.md)                     	| A list of variations available for the product.                                              	|
