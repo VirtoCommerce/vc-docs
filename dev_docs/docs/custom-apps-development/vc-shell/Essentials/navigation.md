@@ -13,29 +13,29 @@ The main navigation elements in the application are blades. Each blade is a sepa
 
 The working space consists of blades. Each new blade is added to the right, hiding the first ones so that only two are available at a time. You can open and close new blades, and work with different data at the same time. The blade is a fully customizable entity that follows application design patterns.
 
-![Blades](../media/blades.png)
+![Blades](../../media/blades.png)
 
 The main blades elements are:
 
 * **Header**. The blade header contains the title of the blade, various actions such as the Expand and Collapse Blade buttons, and an area where you can place data as you see fit, such as product type or blade status.
 
-    ![Header](../media/header.png)
+    ![Header](../../media/header.png)
 
 * **Toolbar**. The blade toolbar is a place where you can place any combination of actions with this blade. It could be actions like refresh, delete, etc.
 
-    ![Toolbar](../media/toolbar.png)
+    ![Toolbar](../../media/toolbar.png)
 
 * **Content**. The blade content is a place, where all the content of the blade is located. It can be tables, forms, and any other data that needs to be displayed in it.
 
-    ![Content](../media/content.png)
+    ![Content](../../media/content.png)
 
 * **Top bar**. The blade top bar is an application component that can contain various data and components. It is fully customizable, but by default it contains the language selection component, notification component, and user information. It is also responsible for displaying the blade name in the mobile version.
 
-    ![Top bar](../media/top-bar.png)
+    ![Top bar](../../media/top-bar.png)
 
 * **Navigation menu**.
 
-    ![Nav-menu](../media/nav-menu.png)
+    ![Nav-menu](../../media/nav-menu.png)
 
 
 ## Creating navigation menu
@@ -170,7 +170,6 @@ export default createAppModule(pages, locales);
 
 ### Usage examples
 
-<hr />
 === "App.vue"
 
     ```html linenums="1"

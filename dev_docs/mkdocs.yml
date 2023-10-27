@@ -541,12 +541,16 @@ nav:
     - VC Shell:
       - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
       - Getting Started:
-        - Start using VC shell: custom-apps-development/vc-shell/getting-started.md
-        - Creating First Custom App: custom-apps-development/vc-shell/creating-first-custom-app.md
+        - Start using VC shell: custom-apps-development/vc-shell/Getting-started/getting-started.md
+        - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
       - Essentials:
-        - Navigation: custom-apps-development/vc-shell/navigation.md
-        - Notifications: custom-apps-development/vc-shell/notifications.md
+        - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
+        - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
+      - Extensibility: 
+        - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
       - API reference: custom-apps-development/vc-shell/api-reference.md
+      - How-tos:
+        - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md
 
 extra:
     social:

@@ -39,7 +39,7 @@ To create and install custom app:
 
 You first application is ready to run!
 
-![New app](../media/new-app.png)
+![New app](../../media/new-app.png)
 
 !!! info "Note"
 
