@@ -220,10 +220,10 @@ nav:
   - GraphQL Storefront API Reference (xAPI):
     - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
     - Getting Started: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
-    - Tools to Explore GraphQL: 
-      - Playground: GraphQL-Storefront-API-Reference-xAPI/playground.md    
+    - Tools to Explore GraphQL:
+      - Playground: GraphQL-Storefront-API-Reference-xAPI/playground.md
       - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
-      - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md    
+      - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
     - Catalog:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
       - Queries:
@@ -267,7 +267,7 @@ nav:
         - PageInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo.md
         - InventoryInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo.md
         - SeoInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo.md
-        - OutlineType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType.md 
+        - OutlineType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType.md
         - OutlineItemType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineItemType.md
         - Breadcrumb: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb.md
         - CommonVendor: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor.md
@@ -298,7 +298,7 @@ nav:
         - CartEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-edge.md
         - CartShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-shipment-item-type.md
         - CartAddressType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-address-type.md
-        - MoneyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type.md        
+        - MoneyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type.md
         - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/currency-type.md
         - TaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/tax-detail-type.md
         - ShipmentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipment-type.md
@@ -387,7 +387,7 @@ nav:
           - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
     - Content:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
-      - Queries: 
+      - Queries:
         - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
         - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
         - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
@@ -407,7 +407,7 @@ nav:
         - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/user.md
         - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/role.md
         - requestPasswordReset: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/requestPasswordReset.md
-        - validatePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/validatePassword.md        
+        - validatePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/validatePassword.md
       - Objects:
         - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationType.md
         - OrganizationConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationConnection.md
@@ -469,14 +469,14 @@ nav:
         - updateMemberDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberDynamicProperties.md
         - requestRegistration: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/requestRegistration.md
         - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
-        - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md     
-        - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md   
+        - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
+        - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
     - Marketing:
       - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
       - Queries:
         - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
-      - Objects: 
-        - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md 
+      - Objects:
+        - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
         - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
     - Quote:
         - Overview:  GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md
@@ -545,12 +545,11 @@ nav:
     - VC Shell:
       - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
       - Getting Started:
-        - Start using VC shell: custom-apps-development/vc-shell/Getting-started/getting-started.md
         - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
       - Essentials:
         - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
         - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
-      - Extensibility: 
+      - Extensibility:
         - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
       - API reference: custom-apps-development/vc-shell/api-reference.md
       - How-tos:
