@@ -551,6 +551,11 @@ nav:
         - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
       - Extensibility:
         - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
+        - Dynamic Views:
+          - API Generation: custom-apps-development/vc-shell/Extensibility/api-generation.md
+          - API Overriding: custom-apps-development/vc-shell/Extensibility/api-overriding.md
+          - Composable Overriding: custom-apps-development/vc-shell/Extensibility/composable-overriding.md
+          - Extending Views: custom-apps-development/vc-shell/Extensibility/extending-views.md
       - API reference: custom-apps-development/vc-shell/api-reference.md
       - How-tos:
         - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md

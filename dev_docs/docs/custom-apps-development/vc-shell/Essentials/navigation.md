@@ -204,7 +204,7 @@ export default createAppModule(pages, locales);
 
 ## Usage Examples
 
-=== App.vue
+=== "App.vue"
 
     ```html linenums="1"
     <template>
@@ -228,7 +228,6 @@ export default createAppModule(pages, locales);
         </VcApp>
     </template>
     ```
-
     ```typescript linenums="1"
     import { watch, ref, reactive } from "vue";
     import { useBladeNavigation, navigationMenuComposer } from "@vc-shell/framework";
@@ -263,7 +262,7 @@ export default createAppModule(pages, locales);
     );
     ```
 
-=== Vue Router Config
+=== "Vue Router Config"
 
     ```typescript linenums="1"
     import Blade from "../modules/my-blade";
@@ -298,7 +297,7 @@ export default createAppModule(pages, locales);
     });
     ```
 
-=== Blade
+=== "Blade"
 
     ```html linenums="1"
     <template>
@@ -315,7 +314,6 @@ export default createAppModule(pages, locales);
     </VcBlade>
     </template>
     ```
-
     ```typescript linenums="1"
     <script lang="ts" setup>
     export interface Props {
@@ -348,7 +346,7 @@ export default createAppModule(pages, locales);
 
 ## Navigation Actions
 
-=== Open Blade
+=== "Open Blade"
 
     To open a new workspace, you can use the `router.push()` method from `Vue Router`. However, a more convenient method is to use the `openBlade` function from the `useBladeNavigation` composable. It offers the advantage of setting initial data when opening the blade. When using imported blade components with `openBlade`, remember to use Vue's `markRaw` method to prevent conversion to a proxy, thereby optimizing performance.
 
@@ -366,7 +364,7 @@ export default createAppModule(pages, locales);
     })
     ```
 
-=== Close Blade
+=== "Close Blade"
 
     To close a blade, you should emit a `close:blade` event from your blade component. The `VcBlade` component, which is used to construct blades, emits this event when the close button is clicked.
 
@@ -379,7 +377,7 @@ export default createAppModule(pages, locales);
     </VcBlade>
     ```
 
-=== Execute Methods in the Previous Blade
+=== "Execute Methods in the Previous Blade"
 
     Each blade can emit a `parent:call` event to invoke a method in its parent blade. To execute a method in the parent blade, you must expose it using `defineExpose`.
 
@@ -406,3 +404,21 @@ export default createAppModule(pages, locales);
     });
     }
     ```
+
+## Overview of All Registered Blades in the Application
+You can see all `blades` registered in the application with and without paths. To do this, you can use a browser extension called `Vue Devtools`.
+
+!!! note
+    For more information about the `Vue Devtools` extension, visit the official website [Vue Devtools](https://devtools.vuejs.org/).
+
+1) To discover the blade's name, open `Vue Devtools` and locate `App` in the components tree. Clicking on it will reveal the component's state:
+
+![App in components tree](../../media/app-components-tree.png)
+
+2) Identify the `provided` option within this state, which contains an array of `internalRoutes`. This array encompasses all registered blades from each module, whether they have their own URL or not:
+
+![Provided in App](../../media/app-provided-option.png)
+
+3) As an example, let's expand two objects of the `internalRoutes` array and see an example of registered blades that belong to the `Offers` module:
+
+![Provided Offers](../../media/app-provided-offers.png)

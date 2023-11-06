@@ -72,6 +72,7 @@ Opens a blade with the specified configuration.
 Closes an opened blade or all opened blades.
 
 * Type
+
     **closeBlade**: ```(index: number) => Promise<boolean>```
 
 * Parameters
@@ -88,6 +89,7 @@ Closes an opened blade or all opened blades.
 Calls any function on the parent blade, if it has been exposed there.
 
 * Type
+
     **onParentCall**: ```(index: number, args: IParentCallArgs) => void```
 
 * Parameters
@@ -105,9 +107,11 @@ Calls any function on the parent blade, if it has been exposed there.
 Resolves blades from vue-router's navigation guard `to` param. Used to display blades after page reload or accessing via direct link. Returns a string containing the URL of the latest opened workspace.
 
 * Type:
+
     **resolveBlades**: ```(to: RouteLocationNormalized) => string```
 
 * Parameters
+
     | Name                             | Description               |
     |----------------------------------|---------------------------|
     | `to` {==RouteLocationNormalized==} | Vue router's route record |
@@ -119,9 +123,11 @@ Resolves blades from vue-router's navigation guard `to` param. Used to display b
 Resolves erroneous and unknown navigation routes. Used as a navigation hook for a Vue router.
 
 * Type:
+
     **resolveUnknownRoutes**: ```(to: RouteLocationNormalized) => string```
 
 * Parameters
+
     | Name                             | Description               |
     |----------------------------------|---------------------------|
     | `to` {==RouteLocationNormalized==} | Vue router's route record |
@@ -133,9 +139,11 @@ Resolves erroneous and unknown navigation routes. Used as a navigation hook for 
 Resolves last opened blade on page reload or accessing via a direct link.
 
 * Type:
+
     **resolveLastBlade**: ```(pages: BladePageComponent[]) => void```
 
 * Parameters
+
     | Name                             | Description     |
     |----------------------------------|-----------------|
     | `pages` {==BladePageComponent[]==} | Array of blades |
@@ -147,9 +155,11 @@ Resolves last opened blade on page reload or accessing via a direct link.
 Allows you to resolve a blade component using its registered name. Supports both runtime and regular blade components.
 
 * Type:
+
     **resolveBladeByName**: ```(name: string) => BladeConstructor```
 
 * Parameters
+
     | Name              | Description                                 |
     |-------------------|---------------------------------------------|
     | `name` {==String==} | Blade component name or ID in dynamic views |
@@ -201,6 +211,7 @@ Method signatures are as follows:
 Loads the saved history of notifications from the backend.
 
 * Type
+
     **loadFromHistory**: `(take?: number): Promise<void>`
 
 * Parameters
@@ -216,6 +227,7 @@ Loads the saved history of notifications from the backend.
 An internal method used in an embedded `signalR` plugin that adds a received notification to the notifications array.
 
 * Type
+
     **addNotification**: `(message: PushNotification): void`
 
 * Properties
@@ -231,6 +243,7 @@ An internal method used in an embedded `signalR` plugin that adds a received not
 Marks a particular notification as read.
 
 * Type
+
     **markAsRead**: `(message: PushNotification): void`
 
 * Properties
@@ -251,6 +264,7 @@ Marks a particular notification as read.
 Marks all notifications as read.
 
 * Type
+
     **markAllAsRead**: `(): void`
 
 * Returns: `void`

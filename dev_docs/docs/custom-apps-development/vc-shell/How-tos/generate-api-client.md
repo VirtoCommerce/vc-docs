@@ -1,8 +1,8 @@
 # Generate API client
 
-This guide describes the process of generating an API client to access the VC Platform API from your custom application. 
+This guide describes the process of generating an API client to access the VC Platform API from your custom application.
 
-!!! note 
+!!! note
     Platform Manager REST Client offers generated REST API methods that make it easy to interact with the existing VirtoCommerce Platform API.
 
 ## Prerequisites
@@ -17,25 +17,25 @@ To enable TypeScript API client generation in your project:
 
     === "Using command"
 
-        ```
+        ```bash
         yarn add @vc-shell/api-client-generator cross-env
         ```
         <br>
-        `cross-env` runs scripts that set and use environment variables across platforms. 
+        `cross-env` runs scripts that set and use environment variables across platforms.
 
-        [Read more about cross-env](https://github.com/kentcdodds/cross-env){ .md-button } 
+        [Read more about cross-env](https://github.com/kentcdodds/cross-env){ .md-button }
 
     === "Manually"
-    
+
         Add the dependencies to your project's **package.json**:
 
-        ```title="vc-app/package.json" linenums="1"
+        ```json title="vc-app/package.json" linenums="1"
         {
             ...
             "devDependencies": {
                 ...
-                "@vc-shell/api-client-generator": "^1.0.112",
-                "cross-env": "^7.0.3",
+                "@vc-shell/api-client-generator": "latest",
+                "cross-env": "latest",
                 ...
             }
         }
@@ -47,18 +47,18 @@ To enable TypeScript API client generation in your project:
     {
         "scripts": {
         ...
-        "generate-api-client": cross-env api-client-generator --color -- APP_PLATFORM_MODULES='[MarketplaceVendor, Catalog, Orders]' APP_API_CLIENT_DIRECTORY=./src/api_client/
+        "generate-api-client": cross-env api-client-generator --APP_PLATFORM_MODULES='[MarketplaceVendor,Catalog,Orders]' --APP_API_CLIENT_DIRECTORY=./src/api_client/
         }
     }
     ```
-    
+
     The options are listed in the table below:
 
     |          Options           	|                        Description                            	|                          Example                          	|
     |-----------------------------	|----------------------------------------------------------------	|------------------------------------------------------------	|
-    | `APP_PLATFORM_MODULES`     	| Platform modules to generate API client.<br>{==string[]==} <br> Customize the `APP_PLATFORM_MODULES` list<br>to match your project's requirements.	| `APP_PLATFORM_MODULES='[MarketplaceVendor,Orders,Catalog]'` 	|
-    | `APP_API_CLIENT_DIRECTORY` 	| Output directory for generated API clients. <br>{==string==} 	| `APP_API_CLIENT_DIRECTORY=./src/api_client/`                	|
-    | `APP_PLATFORM_URL`         	| Platform URL to obtain client API configs. <br>{==string==} 	    | `APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/`       	|
+    | `--APP_PLATFORM_MODULES`     	| Platform modules to generate API client.<br>{==string[]==} <br> Customize the `--APP_PLATFORM_MODULES` list<br>to match your project's requirements.	| `--APP_PLATFORM_MODULES='[MarketplaceVendor,Orders,Catalog]'` 	|
+    | `--APP_API_CLIENT_DIRECTORY` 	| Output directory for generated API clients. <br>{==string==} 	| `--APP_API_CLIENT_DIRECTORY=./src/api_client/`                	|
+    | `--APP_PLATFORM_URL`         	| Platform URL to obtain client API configs. <br>{==string==} 	    | `--APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/`       	|
 
 3. Configure Platform URL to ensure your project can access the platform's API configurations. Add the platform URL to your project's **.env** file:
 
