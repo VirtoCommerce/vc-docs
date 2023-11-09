@@ -2,10 +2,10 @@
 
 The user groups within a Catalog module can be assigned to:
 
-* [Categories](user-groups.md#assign-user-groups-to-category) 
-* [Products](user-groups.md#assign-user-groups-to-product)
+* [Categories.](user-groups.md#assign-user-groups-to-category) 
+* [Products.](user-groups.md#assign-user-groups-to-product)
 
-[Read more about assigning user groups to price lists](../pricing/adding-new-assignment.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Assigning user groups to price lists](../pricing/adding-new-assignment.md)
 
 !!! note
 	All category products inherit the user group if the [DownTree propagation](settings.md) is enabled.
@@ -33,10 +33,10 @@ The user group has been assigned to the category.
 
 To add a new user group:
 
-1. In the **Category** blade (see step 5 above), click ![pencil](media/pencil.png){: width="30" height="30"} next to the **Available User Groups** field to open the **Member group dictionary** blade.
+1. In the **Category** blade (see step 5 above), click ![pencil](media/pencil.png){: width="20"} next to the **Available User Groups** field to open the **Member group dictionary** blade.
 1. Click **Add** in the toolbar.
 1. Type the name of the new user group type.
-1. Click ![Save](media/save.png){: width="30" height="30"}. 
+1. Click ![Save](media/save.png){: width="20"}. 
 1. Click **Save** in the toolbar to save the changes.
 
 ![Path](media/new-user-group-path.png){: width="550"}

@@ -1,10 +1,10 @@
 ﻿
-# Managing contracts
+# Manage contracts
 
 Managing contracts includes:
 
-* [Creating a new contract](creating-and-terminating-contracts.md#create-new-contract)
-* [Deleting an existing contract](creating-and-terminating-contracts.md#delete-contract)
+* [Creating a new contract.](creating-and-terminating-contracts.md#create-new-contract)
+* [Deleting an existing contract.](creating-and-terminating-contracts.md#delete-contract)
 
 ## Create new contract
 

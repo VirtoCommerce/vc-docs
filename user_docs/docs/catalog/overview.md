@@ -16,10 +16,10 @@ The diagram below illustrates the interconnections among various key entities wi
 
 With the Catalog module, you can manage:
 
-* [Physical catalogs](add-new-catalog.md#physical-catalogs)
-* [Virtual catalogs](add-new-catalog.md#virtual-catalogs)
-* [Categories](managing-categories.md)
-* [Products](managing-products.md)
-* [Product availability](setting-product-availability.md)
-* [Search index](managing-search-index.md)
+* [Physical catalogs.](add-new-catalog.md#physical-catalogs)
+* [Virtual catalogs.](add-new-catalog.md#virtual-catalogs)
+* [Categories.](managing-categories.md)
+* [Products.](managing-products.md)
+* [Product availability.](setting-product-availability.md)
+* [Search index.](managing-search-index.md)
 

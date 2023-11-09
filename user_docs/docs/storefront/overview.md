@@ -10,3 +10,4 @@ This guide is designed to help you navigate and make the most of your shopping e
 [![Install](media/install-storefront.png)](https://github.com/VirtoCommerce/vc-theme-b2b-vue)
 
 
+[![Video tutorial](media/video-tutorial-button.png)](https://youtu.be/8LaCWtkVdAk?si=SbBl6_4DO-HWPKw7)

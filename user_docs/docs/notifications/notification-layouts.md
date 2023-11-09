@@ -12,4 +12,4 @@ To create a new notification layout:
 
 ![Notification layout](media/notification-layouts-path.png)
 
-Your new layout has been added to the layouts list within the [Notification template](notification-templates.md) screen.
+Your new layout has been added to the layouts list within the [Notification template](notification-templates.md) blade.

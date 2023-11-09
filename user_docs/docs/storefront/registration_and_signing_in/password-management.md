@@ -2,8 +2,8 @@
 
 Managing password includes:
 
-* [Resetting password](password-management.md#restore-password)
-* [Changing password](password-management.md#update-password)
+* [Resetting password.](password-management.md#restore-password)
+* [Changing password.](password-management.md#update-password)
 
 ## Reset password
 

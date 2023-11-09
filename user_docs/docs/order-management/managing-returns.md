@@ -1,9 +1,9 @@
-# Managing returns
+# Manage returns
 
 Managing returns includes:
 
-* [Creating returns](managing-returns.md#create-return)
-* [Processing returns](managing-returns.md#process-return)
+* [Creating returns.](managing-returns.md#create-return)
+* [Processing returns.](managing-returns.md#process-return)
 
 # Create return
 

@@ -4,7 +4,7 @@ In case your customers have any shippable products to choose from, they can also
 
 In order to define a new shipping method, you need to:
 
-+ Create a new module by following [this guide](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md))
++ Create a new module by following [this guide](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
 + Create a class derived from the `ShippingMethod` abstract class and override all abstract methods; each of them will be called on the appropriate stage of the payment processing workflow: 
 
 ```cs

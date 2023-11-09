@@ -1,4 +1,4 @@
-# Viewing prices in Catalog
+# View prices in Catalog
 
 In addition to the dedicated Pricing module, you can also manage prices and price lists by navigating to them through the Catalog module. This can be useful if you want to manage prices or price lists for specific categories or products.
 
@@ -13,3 +13,5 @@ To manage prices via Catalog:
     ![Price screen](media/prices-from-catalog.png)
 
 1. Click **Save** in the toolbar to save the changes.
+
+The modifications have been saved.

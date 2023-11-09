@@ -1,10 +1,10 @@
-﻿# Managing contacts
+﻿# Manage contacts
 
 Managing contact entities (companies, employees, customers, and vendors) includes:
 
-* [Adding contacts](managing-contacts.md#adding-contacts)
-* [Editing contacts](managing-contacts.md#editing-contacts)
-* [Deleting contacts](managing-contacts.md#deleting-contacts)
+* [Adding contacts.](managing-contacts.md#adding-contacts)
+* [Editing contacts.](managing-contacts.md#editing-contacts)
+* [Deleting contacts.](managing-contacts.md#deleting-contacts)
 
 ## Add contacts
 
@@ -20,9 +20,9 @@ To add a contact:
 
 	Assigning organizations or users to particular user groups enables showing personal offers to them.
 
-	[Read more about assigning user groups to products and categories](../catalog-personalization/user-groups.md){ .md-button }
+	![Readmore](media/readmore.png){: width="25"} [Assigning user groups to products and categories](../catalog-personalization/user-groups.md)
 	
-	[Read more about managing personal prices](../pricing/managing-personal-prices.md){ .md-button }
+	![Readmore](media/readmore.png){: width="25"} [Managing personal prices](../pricing/managing-personal-prices.md)
 
 1. Click **Create** to save the changes.
 
@@ -40,6 +40,9 @@ To edit any previously added contact:
 
 ![Edit contact](media/edit-contact.png){: width="650"}
 
+!!! note
+	Editing the **Company details** blade allows you to upload and assign assets (images, documents, etc.) to this company. Use the **Assets** widget that appears when editing the company details. 
+
 The contact has been edited.
 
 ## Delete contacts
@@ -53,3 +56,5 @@ To delete a contract:
 1. Click **Delete** in the toolbar.
 
 1. Confirm your action.
+
+The contact has been deleted.

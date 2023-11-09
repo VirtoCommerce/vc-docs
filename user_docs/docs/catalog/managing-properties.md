@@ -64,7 +64,7 @@ The new attribute has been added to the property attributes list.
 To edit a property:
 
 1. Follow steps 1-4 from the instruction above. 
-1. Click ![Pencil](media/pencil.png){: width="30" height="30"} next to the property you need to edit.
+1. Click ![Pencil](media/pencil.png){: width="20"} next to the property you need to edit.
 1. Edit a property.
 1. Click **Save** in the toolbar to save changes.
 
@@ -75,7 +75,7 @@ The property has been edited.
 To delete a property:
 
 1. Follow steps 1-4 from the instruction above.
-1. Click ![Pencil](media/pencil.png){: width="30" height="30"} to select a property you need to delete.
+1. Click ![Pencil](media/pencil.png){: width="20"} to select a property you need to delete.
 1. Click **Delete** in the toolbar and select the appropriate deletion option:
      * Remove only Property metadata and keep the values in the related objects.
      * Delete completely with all related values.

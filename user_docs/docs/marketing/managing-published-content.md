@@ -23,7 +23,7 @@ To add a published content item:
 
 The published content has been added.
 
-[Read more about publish conditions](publish-conditions.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Publish conditions](publish-conditions.md)
 
 ## Edit published content
 

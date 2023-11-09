@@ -1,4 +1,4 @@
-# Managing product variations
+# Manage product variations
 
 In Virto Commerce, we define products as SKUs. Adding variations links a product and its variation(s) together. A product with variations is essentially a collection, with one variation as the title product (master product), while also being a variation itself. Linked products inherit property values from the master product, with the option to override if needed.
 

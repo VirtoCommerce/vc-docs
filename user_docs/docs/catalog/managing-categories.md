@@ -1,4 +1,4 @@
-# Managing categories
+# Manage categories
 
 A category is basically a container for other categories, subcategories, or products.
 
@@ -34,9 +34,9 @@ Your new category appears in the **Categories** list.
 
 To add a tax type:
 
-1. In the **Category details blade**, click ![pencil](media/pencil.png){: width="30" height="30"} next to the **Tax type** field to open the **Tax types** blade.
+1. In the **Category details blade**, click ![pencil](media/pencil.png){: width="20"} next to the **Tax type** field to open the **Tax types** blade.
 1. Click **Add** in the toolbar.
-1. Type the name of the tax type and click ![Save](media/save.png){: width="30" height="30"}. 
+1. Type the name of the tax type and click ![Save](media/save.png){: width="20"}. 
 1. Click **Save** in the toolbar to save the changes.
 
 Your new tax type is displayed in the **Tax type** dropdown list.
@@ -81,6 +81,6 @@ To link categories to the catalog items:
 
 The links to the current category within the selected virtual catalogs and categories have been created.
 
-[Read more about the Properties widget](managing-properties.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Properties widget](managing-properties.md)
 
-[Read more about the User Groups widget](../catalog-personalization/user-groups.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [User Groups widget](../catalog-personalization/user-groups.md)

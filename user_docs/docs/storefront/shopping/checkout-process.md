@@ -50,4 +50,4 @@ To complete your order:
 
 You can view your orders at **Account -> Orders**.
 
-Read more about [Viewing orders.](../account/orders.md)
+![Readmore](../media/readmore.png){: width="25"} [Viewing orders](../account/orders.md)

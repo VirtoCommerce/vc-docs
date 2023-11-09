@@ -11,7 +11,7 @@ To view or download our sample code, click [here](https://github.com/VirtoCommer
 
 This chart shows how the off-site payment method works:
 
-![Offside payment method](media/01-offsite-payment-method-chart.png)
+![Offside payment method](media/01-offsite-payment-method-chart.png){: width="700"}
 
 ## Defining New Payment Method
 

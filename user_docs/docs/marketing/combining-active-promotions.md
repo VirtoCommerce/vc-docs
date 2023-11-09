@@ -18,4 +18,4 @@ With this policy, any promotion can be combined with any other promotion in an o
 !!! note
 	The stackable policy has the following limitation: if the total order amount or any item price is less than zero after the promotion is applied, this reward will be skipped and the next one will be applied, in line with the priority settings.
 
-[Read more about configuring combination policies](settings.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Configuring combination policies](settings.md)

@@ -1,4 +1,9 @@
-# Sending order information to AvaTax
+# Send order information to AvaTax
+
+The order information can be sent to AvaTax:
+
+* [Manually.](sending-order-information-to-avatax.md)
+* [Automatically.](../integrations/avalara/taxes-calculation.md)
 
 To send the order information to AvaTax manually:
 
@@ -16,5 +21,3 @@ To send the order information to AvaTax manually:
 1. Click on the Avatax widget to see the updated information:
 
     ![General order information](media/send-to-avalara1.png)
-
-To set automatic tax calculation, see [AvaTax module](../integrations/avalara/taxes-calculation.md). 

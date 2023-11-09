@@ -2,9 +2,9 @@
 
 The homepage can be visually divided into 3 parts:
 
-* [Top menu](homepage-layout.md#top-menu)
-* [Catalogs, subcatalogs, and facets](homepage-layout.md#catalogs-subcatalogs-facets)
-* [Catalog items details](homepage-layout.md#catalog-items-details)
+* [Top menu.](homepage-layout.md#top-menu)
+* [Catalogs, subcatalogs, and facets.](homepage-layout.md#catalogs-subcatalogs-facets)
+* [Catalog items details.](homepage-layout.md#catalog-items-details)
 
 ![homepage](../media/navigation-homepage.png)
 
@@ -18,9 +18,9 @@ From the top menu, you can:
 
 ![top menu](../media/top-menu.png)
 
-Read more about [Bulk orders.](../shopping/bulk-orders.md)
+![Readmore](../media/readmore.png){: width="25"} [Bulk orders](../shopping/bulk-orders.md)
 
-Read more about [Comparing products.](../shopping/compare-products.md)
+![Readmore](../media/readmore.png){: width="25"} [Comparing products](../shopping/compare-products.md)
 
 ## Catalogs, subcatalogs, facets
 
@@ -29,7 +29,7 @@ From the left side menu, you can:
 * Quickly navigate to the required subcatalog.
 * Narrow down the number of items displayed by specifying the required product characteristics in the facets.
 
-Read more about [Search options](../shopping/searching-for-products.md).
+![Readmore](../media/readmore.png){: width="25"} [Search options](../shopping/searching-for-products.md)
 
 ## Catalog items details
 

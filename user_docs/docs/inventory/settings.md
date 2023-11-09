@@ -2,8 +2,8 @@
 
 The Inventory module settings include:
 
-* [General settings](settings.md#general-settings)
-* [Search settings](settings.md#search)
+* [General settings.](settings.md#general-settings)
+* [Search settings.](settings.md#search)
 
 ## General settings
 

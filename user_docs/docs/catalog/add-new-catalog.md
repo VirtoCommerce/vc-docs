@@ -1,13 +1,13 @@
-# Managing catalogs
+# Manage catalogs
 
 Virto Commerce supports managing two types of catalogs:
 
-* [Physical catalogs](add-new-catalog.md#physical-catalogs)
-* [Virtual catalogs](add-new-catalog.md#virtual-catalogs)
+* [Physical catalogs.](add-new-catalog.md#physical-catalogs)
+* [Virtual catalogs.](add-new-catalog.md#virtual-catalogs)
 
 You can readily differentiate physical catalogs from virtual ones through their respective folder or cloud icons. Additionally, virtual catalogs will include the **Virtual** suffix in their names.
 
-![Physical vs. Virtual catalogs](media/physical-virtual-catalogs.png)
+![Readmore](media/readmore.png){: width="25"} ![Physical vs. Virtual catalogs](media/physical-virtual-catalogs.png)
 
 !!! note
 	Fulfillment centers are relevant to physical products only. If a store markets digital content, such as software or music, it will not require any such centers.
@@ -28,7 +28,7 @@ Basically, a virtual catalog is a method to visually present products. All items
 
 To add a new catalog:
 
-1. Click **Catalog** module in the main menu.
+1. Click on the **Catalog** module in the main menu.
 1. In the next **Manage catalogs** blade, click **Add** in the toolbar.  
 1. In the **New catalog** blade, choose the catalog type: physical or virtual.
 1. In the next blade, enter the catalog's name and specify the language.

@@ -1,12 +1,12 @@
-﻿# Managing contract prices 
+﻿# Manage contract prices 
 
 Managing contract prices includes:
 
-* [Adding default price list to the contract](managing-contract-prices.md#adding-default-price-list-to-contract)
-* [Updating contract prices](managing-contract-prices.md#updating-contract-prices)
-* [Restoring default contract prices](managing-contract-prices.md#restoring-default-prices-in-the-contract)
+* [Adding default price list to the contract.](managing-contract-prices.md#adding-default-price-list-to-contract)
+* [Updating contract prices.](managing-contract-prices.md#updating-contract-prices)
+* [Restoring default contract prices.](managing-contract-prices.md#restoring-default-prices-in-the-contract)
 
-## Adding default price list to contract
+## Add default price list to contract
 
 The newly created contract is not assigned a price list by default.
 
@@ -28,7 +28,7 @@ To add a price list to the contract:
 
 The appropriate prices will be displayed in the **Contract prices** blade.
 
-## Updating contract prices
+## Update contract prices
 
 To update the prices after adding a default price list:
 
@@ -84,7 +84,7 @@ To make the default price and the contract price updates applicable for the cust
 !!! note
 	The assignment having the `-Priority` suffix logically has a higher priority, and its prices overlap the default prices.
 
-## Restoring default prices in the contract
+## Restore default prices in the contract
 
 To restore the initial price:
 

@@ -2,10 +2,10 @@
 
 Managing promotions includes:
 
-* [Creating new promotions](managing-promotions.md#creating-new-promotion)
-* [Creating coupons and gift cards](managing-promotions.md#create-coupons-and-gift-cards)
-* [Editing promotions](managing-promotions.md#edit-promotion)
-* [Deleting promotions](managing-promotions.md#delete-promotion)
+* [Creating new promotions.](managing-promotions.md#creating-new-promotion)
+* [Creating coupons and gift cards.](managing-promotions.md#create-coupons-and-gift-cards)
+* [Editing promotions.](managing-promotions.md#edit-promotion)
+* [Deleting promotions.](managing-promotions.md#delete-promotion)
 
 ## Create new promotion
 
@@ -26,7 +26,7 @@ Managing promotions includes:
 
 Your newly created promotion appears in the promotions list.
 
-[Read more about promotion conditions](promotion-rules.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Promotion conditions](promotion-rules.md)
 
 ## Create coupons and gift cards
 

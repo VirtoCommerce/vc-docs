@@ -11,4 +11,4 @@ To add a product to a list:
 
 The notification of successful addition to the selected list appears. 
 
-Read more about [Managing product lists.](../account/lists.md)
+![Readmore](../media/readmore.png){: width="25"}  [Managing product lists](../account/lists.md)

@@ -20,19 +20,11 @@ Virto Commerce supports declarative extensions through the admin interface and A
 
 In particular, Virto Commerce supports:
 
-+ **Dynamic properties:** Extend entities, such as Cart, Order, Company, etc., with new properties.
++ [Dynamic properties](../../../user_docs/docs/order-management/main-objects.md#general-order-information): Extend entities, such as Cart, Order, Company, etc., with new properties.
 
-+ **Statuses:** Enable implementing any workflow.
++ [Statuses](../../../user_docs/docs/contacts/settings.md#statuses): Enable implementing any workflow.
 
-+ **Role-based security and permissions:** Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the *Search products* API, you can achieve that. In a similar way, you can allow a user to have access to the *Orders* API for a specific store, only.
-
-Below, you can see how dynamic properties, statuses, and role-based permissions look in the Virto Commerce UI:
-
-![Dynamic properties](media/02-dynamic-properties.png)
-
-![Statuses](media/03-statuses.png)
-
-![Role-based security and permissions](media/04-role-based-permissions.png)
++ [Role-based security and permissions](../../../user_docs/docs/security/roles-and-permissions.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
 
 ## API-based Extensions
 
@@ -42,7 +34,7 @@ Virto Commerce currently provides two types of API:
 
 + **REST:** Enables access to module business functionality, i.e. all CRUD operations and business logic are accessible via Rest API.
 
-+ **GraphQL:** A new generation of Business API for client applications, it provides you with additional capabilities. 
++ [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md#graphql-core-ideas): A new generation of Business API for client applications, it provides you with additional capabilities. 
 
 We also support two types of event providers:
 
@@ -77,7 +69,7 @@ For example, on the chart below, the Price module extension extends the default 
 
 ### Why Is It Important Not to Modify Code You Do Not Own?
 
-Despite the fact Virto platform is an open-source project, you should at all times avoid direct modification into the source code of modules developed by third parties or VC team. You also should always follow the *Open-Closed Principle* (open for extensions and closed for modifications).
+Despite the fact Virto platform is an open-source project, you should at all times avoid direct modification into the source code of modules developed by third parties or VC team. You also should always follow the **Open-Closed Principle** (open for extensions and closed for modifications).
 
 ![Changing directly vs extending](media/06-changing-source-code-vs-extending.png) 
 
@@ -112,13 +104,19 @@ This strategy allows you to receive updates and extend the default implementatio
 ## Customization Type Comparison
 The table below will help you understand the differences between various customization types, as well as the advantages and disadvantages of each:
 
-![Customization type comparison table](media/08-customization-type-comparison.png)
+| Type   	| Name             	| Purpose                                 	| When to use                                 	| Advantages                                     	| Disadvantages                     |
+|--------	|------------------	|-----------------------------------------	|---------------------------------------------	|------------------------------------------------	|--------------------------------	|
+| Native 	| Events           	| Customization                           	| React to status changes                     	| Synchronous<br>Performance                     	| Base module is required           |
+| Native 	| Extension points 	| Extend/ override default implementation 	| Extend default behavior                     	| Reuse VC features<br>Painless update           	| Base module is required<br> Only extension   |
+| Native 	| Custom points    	| Custom implementation                   	| Custom business logic                         |                                                	|                                   |
+| API    	| Webhooks         	| Integration                             	| Trigger for another applications            	| Ready to use trigger for the 3rd party service 	| Performance                       |
+| API    	| Events           	| Reactive programming                    	| React to status changes                     	| Asynchronous<br> Performance<br> Scalability   	| Network latency                   |
+| API    	| Messages         	| Integration                             	| Order processing and financial transactions 	| Transactions<br> Ready for price applications  	| Cost<br> Network latency          |
 
 ## Summary
 + Virto Commerce provides the best opportunities for customization. 
 + You as a developer can choose the best approach and balance between inside and outside integrations.
 + The Native approach simplifies the DevOps processes and optimizes performance, allowing you to reuse and improve Virto Commerce modules.
-+ The API approach helps you to *glue* Virto Commerce's platform into your ecommerce ecosystem. 
++ The API approach helps you to **glue** Virto Commerce's platform into your ecommerce ecosystem. 
 + The open source principle enables developers to learn the code and fix issues.
-+ We are fully open to your contribution.
 
