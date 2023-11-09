@@ -552,10 +552,12 @@ nav:
       - Extensibility:
         - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
         - Dynamic Views:
-          - API Generation: custom-apps-development/vc-shell/Extensibility/api-generation.md
-          - API Overriding: custom-apps-development/vc-shell/Extensibility/api-overriding.md
-          - Composable Overriding: custom-apps-development/vc-shell/Extensibility/composable-overriding.md
-          - Extending Views: custom-apps-development/vc-shell/Extensibility/extending-views.md
+          - API Overriding: custom-apps-development/vc-shell/Essentials/Dynamic-Views/api-overriding.md
+          - Composable Overriding: custom-apps-development/vc-shell/Essentials/Dynamic-Views/composable-overriding.md
+          - Extending Views: custom-apps-development/vc-shell/Essentials/Dynamic-Views/extending-views.md
+          - Controls: custom-apps-development/vc-shell/Essentials/Dynamic-Views/controls.md
+          - How To Create Page Schema: custom-apps-development/vc-shell/Essentials/Dynamic-Views/how-to-create-page-schema.md
+          - Include And Setup Other Custom App: custom-apps-development/vc-shell/Essentials/Dynamic-Views/include-and-setup-other-custom-app.md
       - API reference: custom-apps-development/vc-shell/api-reference.md
       - How-tos:
         - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md
