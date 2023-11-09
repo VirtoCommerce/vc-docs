@@ -12,6 +12,6 @@ Promotions can be store-specific or shared across multiple stores.
 
 Managing promotions includes:
 
-* [Creating promotions](managing-promotions.md#creating-new-promotion)
-* [Configuring promotion rules](promotion-rules.md)
-* [Setting promotion combination policies](combining-active-promotions.md)
+* [Creating promotions.](managing-promotions.md#creating-new-promotion)
+* [Configuring promotion rules.](promotion-rules.md)
+* [Setting promotion combination policies.](combining-active-promotions.md)

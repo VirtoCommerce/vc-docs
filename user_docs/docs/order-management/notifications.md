@@ -8,10 +8,10 @@ The customer is notified of any changes from the time the order is placed to the
 
 The users can:
 
-* [View order notifications](notifications.md#view-order-notifications)
-* [Assign Store order notifications](notifications.md#store-specific-notifications)
-* [Create new notifications](../notifications/notification-templates.md)
-* [Enable/ disable notifications](../notifications/notification-list.md#enablingdisabling-notifications)
+* [View order notifications.](notifications.md#view-order-notifications)
+* [Assign Store order notifications.](notifications.md#store-specific-notifications)
+* [Create new notifications.](../notifications/notification-templates.md)
+* [Enable/ disable notifications.](../notifications/notification-list.md#enablingdisabling-notifications)
 
 ## View order notifications
 

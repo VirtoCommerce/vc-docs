@@ -21,11 +21,12 @@ You can also use the same contract for multiple organizations, which is especial
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/H6vlkDRPrrs?si=xlte--NF63dg3BBB)
 
 ## Key features
-The Virto's Contracts module contains the following key features:
 
-* [Managing contracts](creating-and-terminating-contracts.md)
-* [Managing contract prices](managing-contract-prices.md)
-* [Managing contract customers](managing-contract-customers.md)
+With the Contracts module, you can:
+
+* [Manage contracts.](creating-and-terminating-contracts.md)
+* [Manage contract prices.](managing-contract-prices.md)
+* [Manage contract customers.](managing-contract-customers.md)
 
 ## Understanding how contracts work
 

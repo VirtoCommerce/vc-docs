@@ -19,4 +19,4 @@ To start exporting your pricing data:
 
 The export process is initiated.
 
-<!---add note and link to the Export module--->
+![Readmore](media/readmore.png){: width="25"} [Generic Export](../generic-export/overview.md)

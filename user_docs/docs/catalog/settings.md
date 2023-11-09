@@ -2,8 +2,8 @@
 
 The Catalog module settings include:
 
-* [General settings](settings.md#general-settings)
-* [Search settings](settings.md#search-settings)
+* [General settings.](settings.md#general-settings)
+* [Search settings.](settings.md#search-settings)
 
 ## General settings
 

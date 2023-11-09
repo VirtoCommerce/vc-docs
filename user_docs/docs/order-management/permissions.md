@@ -28,7 +28,6 @@ To assign order procession to specific users:
 
 Now only the assigned user can process the order.
 
-## Related links
+![Readmore](media/readmore.png){: width="25"} [Creating new role](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#creating-new-role) 
 
-* [Creating new role](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#creating-new-role) 
-* [Editing roles](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#editing-roles)
+![Readmore](media/readmore.png){: width="25"} [Editing roles](https://docs.virtocommerce.org/new/user_docs/security/roles-and-permissions/#editing-roles)

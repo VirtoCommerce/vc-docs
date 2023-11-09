@@ -22,6 +22,6 @@ The diagram below illustrates the interconnections among various key entities wi
 
 With the Notifications module, you can:
 
-1. [Manage email and text notifications](notification-list.md)
-2. [Create new notification layouts](notification-layouts.md)
-3. [View the notifications logs](notification-log.md)
+1. [Manage email and text notifications.](notification-list.md)
+2. [Create new notification layouts.](notification-layouts.md)
+3. [View the notifications logs.](notification-log.md)

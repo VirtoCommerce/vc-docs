@@ -19,7 +19,7 @@ Implementing your entire custom solution into a single module will be a good cho
     
 - You do not have any strict scale requirement that causes your solution to run some modules independently as standalone services.
     
-![Chart: Module structure for custom solution](media/05-module-best-practices.png)
+![Chart: Module structure for custom solution](media/05-module-best-practices.png){: width="600"}
 
 One can draw parallels between how your code can spread among Virto modules and how the same code can be arranged in poly or mono repositories.
 

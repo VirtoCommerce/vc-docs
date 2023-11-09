@@ -1,4 +1,4 @@
-# Managing product availability
+# Manage product availability
 
 Product inventories are shown in Storefront:
 
@@ -43,6 +43,8 @@ To set product's availability:
 
 1. Enter or edit the amount in stock by clicking it in the new blade. 
 1. Click **Save** to save changes.   
+
+The product's availability has been set.
 
 ## Check availability
 

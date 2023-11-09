@@ -2,9 +2,9 @@
 
 Managing synamic content items includes:
 
-* [Creating contact items](managing-content-items.md#creating-content-items)
-* [Editing contact items](managing-content-items.md#editing-and-deleting-content-items)
-* [Deleting contact items](managing-content-items.md#delete-content-items)
+* [Creating contact items.](managing-content-items.md#creating-content-items)
+* [Editing contact items.](managing-content-items.md#editing-and-deleting-content-items)
+* [Deleting contact items.](managing-content-items.md#delete-content-items)
 
 ## Create content items
 

@@ -6,6 +6,8 @@ Marketplace product introduces a list of predefined features to fulfill common a
 
 [![Release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-marketplace-vendor/releases/latest)
 
+[![Video tutorial](media/video-tutorial-button.png)](https://youtu.be/PeXX-V-dwpA)
+
 ## Key features
 
 * [Marketplace operator portal](Operator-portal/overview.md)

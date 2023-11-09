@@ -1,4 +1,4 @@
-# Managing products
+# Manage products
 
 A product is a basic entity that represents an item that can be purchased in an online store. The Catalog module allows you to work with the following types of products 
 
@@ -11,9 +11,9 @@ A product is a basic entity that represents an item that can be purchased in an 
 Variations are individual product entities linked to their master product. For instance, a master product like a mobile phone can have variations like black, white, or red versions, or 5’’ and 6’’ models (or both).
 Variations inherit property values from the master product, including descriptions and assets, while also allowing overrides when necessary.
 
-[Read more about Managing Product Variations](managing-product-variations.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Managing product variations](managing-product-variations.md)
 
-[Read more about assigning User Groups to products](../catalog-personalization/user-groups.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Assigning user groups to products](../catalog-personalization/user-groups.md)
 
 ## Add product
 

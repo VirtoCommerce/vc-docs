@@ -32,5 +32,5 @@ To add a new notification template:
 You template has been added to the templates list.
 
 ??? Example
-	![preview](media/notification-template-preview.png)
+	![preview](media/notification-template-preview.png){: width="550"}
 

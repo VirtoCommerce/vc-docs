@@ -31,5 +31,5 @@ Now, if anyone who is not included into the **VIP** group visits our store, they
 
 ![Prices for targeted user](media/price-list-for-targeted-user.png){: width="1100"}
 
-[Read how to show catalog items for specific users](../catalog-personalization/example.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [How to show catalog items for specific users](../catalog-personalization/example.md)
 

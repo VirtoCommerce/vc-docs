@@ -1,12 +1,13 @@
-# Managing price lists
+# Manage price lists
 
 Price lists are containers for different product prices. They can be useful when you want to store prices for items in a particular category in a single place.
 
 Managing price lists includes:
 
-* [Creating new price list](creating-new-price-list.md#create-new-price-list)
-* [Deleting price lists](creating-new-price-list.md#delete-price-lists)
-* [Adding products to price list](creating-new-price-list.md#add-products-to-price-list)
+* [Creating new price list.](creating-new-price-list.md#create-new-price-list)
+* [Deleting price lists.](creating-new-price-list.md#delete-price-list)
+* [Adding products to price list.](creating-new-price-list.md#add-products-to-price-list)
+* [Adding and editing product prices.](creating-new-price-list.md#add-and-edit-product-prices)
 
 ## Create new price list
 
@@ -22,7 +23,7 @@ To create a new price list:
 
 1. Click **Create**.
 
-Your new price list will appear in the list.
+Your new price list appears in the list.
 
 ## Delete price list
 
@@ -36,9 +37,9 @@ To delete a price list:
 
 1. Confirm the deletion.
 
-The price list is deleted.
+The price list has been deleted.
 
-## Add prices to price list
+## Add products to price list
 
 To add prices:
 
@@ -73,3 +74,5 @@ To start editing or adding a price:
 1. Click **Save** to save the changes.
 
 	![Path](media/price-list-path.png)
+
+The modifications have been saved.

@@ -20,7 +20,7 @@ The process of loading modules into the Virto platform application process inclu
 
 The chart below shows the module loading process:
 
-![Module loading process](media/04-module-loading-process.png)
+![Module loading process](media/04-module-loading-process.png){: width="600"}
 
 !!! note
     * The Virto platform's modularity engine supports only eager loading from local disk for modules.

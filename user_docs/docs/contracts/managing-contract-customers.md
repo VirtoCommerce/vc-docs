@@ -1,9 +1,9 @@
-﻿# Managing сontract сustomers
+﻿# Manage сontract сustomers
 
 Managing contract customers includes:
 
-* [Adding companies to the contract](managing-contract-customers.md#add-companies-to-contract)
-* [Removing companies from the contract](managing-contract-customers.md#remove-companies-from-contract)
+* [Adding companies to the contract.](managing-contract-customers.md#add-companies-to-contract)
+* [Removing companies from the contract.](managing-contract-customers.md#remove-companies-from-contract)
 
 ## Add companies to contract
 
@@ -40,3 +40,5 @@ To remove a company from your contract:
     ![Delete companies](media/delete-customers.png)
 
 1. Confirm your action.
+
+The company has been removed.

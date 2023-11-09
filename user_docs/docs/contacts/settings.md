@@ -2,8 +2,8 @@
 
 The Contact module settings include:
 
-* [General settings](settings.md#general-settings)
-* [Settings for contact entities statuses](settings.md#statuses)
+* [General settings.](settings.md#general-settings)
+* [Settings for contact entities statuses.](settings.md#statuses)
 
 ## General settings
 

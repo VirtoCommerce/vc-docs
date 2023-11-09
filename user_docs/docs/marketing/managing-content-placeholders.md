@@ -2,9 +2,9 @@
 
 Managing content placeholders includes:
 
-* [Creating placeholders](managing-content-placeholders.md#creating-new-placeholder)
-* [Editing placeholders](managing-content-placeholders.md#edit-placeholder)
-* [Deleting placeholders](managing-content-placeholders.md#delete-placeholder)
+* [Creating placeholders.](managing-content-placeholders.md#creating-new-placeholder)
+* [Editing placeholders.](managing-content-placeholders.md#edit-placeholder)
+* [Deleting placeholders.](managing-content-placeholders.md#delete-placeholder)
 
 ## Create placeholder
 

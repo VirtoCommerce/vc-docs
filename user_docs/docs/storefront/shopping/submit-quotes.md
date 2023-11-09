@@ -18,4 +18,4 @@ To request personalized pricing (submit a quote):
     !!! note
         If you want to submit your quote later, click **Save changes** to save the provided information.<br>The request receives the status **Draft**.
 
-Read more about [Quote requests.](../account/quote-requests.md)
+![Readmore](../media/readmore.png){: width="25"} [Quote requests](../account/quote-requests.md)

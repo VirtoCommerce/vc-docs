@@ -1,4 +1,4 @@
-# Managing search index
+# Manage search index
 
 Virto Commerce uses custom analyzer to extract tokens from the text when building search index. The following token filters are supported:
 

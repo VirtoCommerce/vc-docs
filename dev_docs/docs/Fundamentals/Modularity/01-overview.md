@@ -13,7 +13,7 @@ Modules are independent of one another but can communicate with each other in a 
 
 The following chart shows the overall design concept of the platform application:
 
-![Overall platform design chart](media/01-overall-design-chart.png)
+![Overall platform design chart](media/01-overall-design-chart.png){: width="600"}
 
 Notes to the chart:
 
@@ -59,7 +59,7 @@ Virto uses modular architecture since it provides our solutions with various ben
 
 Each Virto module breaks down into multiple layers and encapsulates and groups all aspects, from front end to back end, that are in charge of proving the necessary features. Such layers are in line with the _Vertical Slices_ design principle, which, at a high level, may be depicted like this:
 
-![Module layer chart](media/02-vertical-slice-module-design.png)
+![Module layer chart](media/02-vertical-slice-module-design.png){: width="600"}
 
 Instead of being coupled across a layer, a module is coupled vertically along a slice, while minimizing coupling between slices and maximizing it within a slice. This architecture is very convenient, as, when it comes to adding or changing a feature in an module, logically, e.g., changing the user interface, adding fields to models, modifying validation, and so on, you can do it all on each layer and then couple it vertically along a slice.
 
@@ -79,7 +79,7 @@ A particular module can have the following types of relationships with another m
 
 The chart below shows all possible types of relationships between modules and the platform:
 
-![Module relationships](media/03-module-relationships.png)
+![Module relationships](media/03-module-relationships.png){: width="600"}
 
 Apart from the above, there are several loosely coupled communication patterns, each with their own strong points. Typically, combinations of such patterns (see below) are used to create the resulting solution:
 

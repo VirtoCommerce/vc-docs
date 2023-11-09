@@ -7,4 +7,4 @@ In the **Profile** section, you can:
 
 ![Profile](../media/profile.png)
 
-Read more about [Password management](../registration_and_signing_in/password-management.md)
+![Readmore](../media/readmore.png){: width="25"} [Password management](../registration_and_signing_in/password-management.md)
