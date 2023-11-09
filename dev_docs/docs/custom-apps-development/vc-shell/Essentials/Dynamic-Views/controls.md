@@ -146,41 +146,41 @@ Card example with action button and fieldset component containing several inputs
                 },
                 fields: [
                     {
-                    id: "listPrice",
-                    component: "vc-input-currency",
-                    label: "List price",
-                    property: "listPrice",
-                    placeholder: "Set list price",
-                    optionProperty: "currency",
-                    optionValue: "value",
-                    optionLabel: "title",
-                    rules: {
-                        required: true,
-                        min_value: 0,
-                    },
-                    },
-                    {
-                    id: "salePrice",
-                    component: "vc-input-currency",
-                    label: "Sales price",
-                    property: "salePrice",
-                    placeholder: "Set product sales price",
-                    optionProperty: "currency",
-                    optionValue: "value",
-                    optionLabel: "title",
+                        id: "listPrice",
+                        component: "vc-input-currency",
+                        label: "List price",
+                        property: "listPrice",
+                        placeholder: "Set list price",
+                        optionProperty: "currency",
+                        optionValue: "value",
+                        optionLabel: "title",
+                        rules: {
+                            required: true,
+                            min_value: 0,
+                        },
                     },
                     {
-                    id: "minQuantity",
-                    component: "vc-input",
-                    label: "Minimum quantity",
-                    property: "minQuantity",
-                    placeholder: "Enter product minimal quantity in order",
-                    clearable: true,
-                    rules: {
-                        required: true,
-                        min_value: 0,
+                        id: "salePrice",
+                        component: "vc-input-currency",
+                        label: "Sales price",
+                        property: "salePrice",
+                        placeholder: "Set product sales price",
+                        optionProperty: "currency",
+                        optionValue: "value",
+                        optionLabel: "title",
                     },
-                    variant: "number",
+                    {
+                        id: "minQuantity",
+                        component: "vc-input",
+                        label: "Minimum quantity",
+                        property: "minQuantity",
+                        placeholder: "Enter product minimal quantity in order",
+                        clearable: true,
+                        rules: {
+                            required: true,
+                            min_value: 0,
+                        },
+                        variant: "number",
                     },
                 ],
                 },
@@ -285,6 +285,7 @@ interface DynamicPropertiesSchema {
     };
 }
 ```
+
 | Property | Type | Description |
 | --- | --- | --- |
 | `id` | `string` | Unique identifier for `vc-dynamic-properties` component. |
@@ -371,6 +372,7 @@ Base usage looks like this:
     ],
 }
 ```
+
 As fieldset has the ability of deep nesting, you can add other fieldsets or controls to it and create complex UI interfaces.
 
 #### API
@@ -406,81 +408,83 @@ interface FieldsetSchema {
 
 
 #### Guide
-Fieldset allows you to create different display options for controls. For example, you can create a fieldset with two columns, each of which will have two inputs. To do this, you need to create a fieldset with two inputs and specify the value `2` in the `columns` parameter. You can also specify the `aspectRatio` parameter and set the aspect ratio of the column width. For example, if you specify `[1, 1]`, the columns will be the same width. If you specify `[1, 2]`, the first column will be twice as wide as the second.
+Fieldset allows you to create different display options for controls. For example, you can create a fieldset with two columns, each of which will have two inputs. To do this, you need to create a fieldset with two inputs and specify the value `2` in the `columns` parameter. You can also specify the `aspectRatio` parameter and set the aspect ratio of the column width. For example, if you specify `[1, 1]`, the columns will be the same width. If you specify `[1, 2]`, the second column will be twice as wide as the first.
 
 Let's look at a few examples of use cases.
 
 1) A regular fieldset with two fields in one column:
 
-   ```typescript
-   {
-         id: "fieldsetId",
-         component: "vc-fieldset",
-         fields: [
-              {
+```typescript
+{
+        id: "fieldsetId",
+        component: "vc-fieldset",
+        fields: [
+            {
                 id: "input1",
                 component: "vc-input",
                 label: "Input 1",
                 property: "input1",
-              },
-              {
+            },
+            {
                 id: "input2",
                 component: "vc-input",
                 label: "Input 2",
                 property: "input2",
-              },
-         ],
-    }
-    ```
+            },
+        ],
+}
+```
+
 2) If we specify, for example, the number of columns as 2, then we will get a Fieldset with two fields in two columns:
 
-   ```typescript
-   {
-         id: "fieldsetId",
-         component: "vc-fieldset",
-         columns: 2,
-         fields: [
-              {
+```typescript
+{
+        id: "fieldsetId",
+        component: "vc-fieldset",
+        columns: 2,
+        fields: [
+            {
                 id: "input1",
                 component: "vc-input",
                 label: "Input 1",
                 property: "input1",
-              },
-              {
+            },
+            {
                 id: "input2",
                 component: "vc-input",
                 label: "Input 2",
                 property: "input2",
-              },
-         ],
-    }
-    ```
+            },
+        ],
+}
+```
+
 3) If we have an array of data from which we want to build a fieldset, we can use the `property` parameter. In this case, each element of the array will be displayed in a separate fieldset. Also, if we want to add a delete button, we can specify a method that will be called when the delete button is clicked. In this method, we can remove an element from the data array that we specified in the `property` parameter.
 
-   ```typescript
-   {
-         id: "fieldsetId",
-         component: "vc-fieldset",
-         property: "fieldsetProperty",
-         remove: {
-              method: "removeFieldsetElement",
-         },
-         fields: [
-              {
+```typescript
+{
+        id: "fieldsetId",
+        component: "vc-fieldset",
+        property: "fieldsetProperty",
+        remove: {
+            method: "removeFieldsetElement",
+        },
+        fields: [
+            {
                 id: "input1",
                 component: "vc-input",
                 label: "Input 1",
                 property: "input1",
-              },
-              {
+            },
+            {
                 id: "input2",
                 component: "vc-input",
                 label: "Input 2",
                 property: "input2",
-              },
-         ],
-    }
-    ```
+            },
+        ],
+}
+```
 
 If we want each field to have a label that is not manually set, but obtained when building from an array, we can use **interpolation**.
 For example, if we want each field to have a label that we get from an object in the array, we can specify the following in the label parameter: `label: "{label}"`. In this case, when building the fieldset, each field will be set a label that will be obtained from the data array.
@@ -520,54 +524,54 @@ Then, if we specify the following fieldset:
 
 Then, when building the fieldset, each field will be set a label that will be obtained from the data array.
 
-4) Also, we can specify the number of columns and `aspectRatio` for the fieldset, which will be displayed inside the fieldset. In this case, we will get a fieldset with two columns, each of which will have a fieldset with two fields.
+4) Also, we can specify the number of columns and `aspectRatio` for the fieldset, which will be displayed inside the fieldset. In this case, we will get a fieldset with two columns, each of which will have a fieldset with two fields and second fieldset will be twice as wide as the first.
 
-   ```typescript
-   {
-         id: "fieldsetId",
-         component: "vc-fieldset",
-         columns: 2,
-         aspectRatio: [1, 1],
-         fields: [
-              {
+```typescript
+{
+        id: "fieldsetId",
+        component: "vc-fieldset",
+        columns: 2,
+        aspectRatio: [1, 2],
+        fields: [
+            {
                 id: "fieldsetId",
                 component: "vc-fieldset",
                 fields: [
-                     {
+                    {
                         id: "input1",
                         component: "vc-input",
                         label: "Input 1",
                         property: "input1",
-                     },
-                     {
+                    },
+                    {
                         id: "input2",
                         component: "vc-input",
                         label: "Input 2",
                         property: "input2",
-                     },
+                    },
                 ],
-              },
-              {
+            },
+            {
                 id: "fieldsetId",
                 component: "vc-fieldset",
                 fields: [
-                     {
+                    {
                         id: "input1",
                         component: "vc-input",
                         label: "Input 1",
                         property: "input1",
-                     },
-                     {
+                    },
+                    {
                         id: "input2",
                         component: "vc-input",
                         label: "Input 2",
                         property: "input2",
-                     },
+                    },
                 ],
-              },
-         ],
-    }
-    ```
+            },
+        ],
+}
+```
 
 
 
