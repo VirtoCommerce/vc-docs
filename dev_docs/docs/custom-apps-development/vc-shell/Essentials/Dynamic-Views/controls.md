@@ -86,7 +86,7 @@ Base usage looks like this:
 As card has the ability of deep nesting, you can add other cards or controls to it and create complex UI interfaces.
 
 #### API
-Shema interface for card looks like this:
+Schema interface for card looks like this:
 
 ```typescript
 interface CardSchema {
