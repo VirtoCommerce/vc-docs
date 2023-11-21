@@ -23,7 +23,7 @@ To enable TypeScript API client generation in your project:
         <br>
         `cross-env` runs scripts that set and use environment variables across platforms. 
 
-        [Read more about cross-env](https://github.com/kentcdodds/cross-env){ .md-button } 
+        ![Readmore](../../media/readmore.png){: width="25"} [Cross-env](https://github.com/kentcdodds/cross-env) 
 
     === "Manually"
     
