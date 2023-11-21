@@ -133,6 +133,7 @@ nav:
     - Data Import:
       - Main Concept: Fundamentals/Data-Import/01-main-concept.md
       - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
+      - Import App: Fundamentals/Data-Import/import-app.md
     - Indexed Search:
       - Overview: Fundamentals/Indexed-Search/overview.md
       - Search Query Syntax: Fundamentals/Indexed-Search/search-query-syntax-reference.md
@@ -519,6 +520,8 @@ nav:
       - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
     - Vue.js Starter Theme:
       - Overview: storefront-development/vue-js-starter-theme/overview.md
+    - Integrations:
+      - Enhancing SEO with Prerender.io: storefront-development/integrations/prerender_io.md
   - Extensibility:
     - Overview: Extensibility/overview.md
     - Key Extensibility Points: Extensibility/key-extensibility-points.md
@@ -533,6 +536,7 @@ nav:
       - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
       - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
       - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
+      - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
   - Updating Virto Commerce Based Projects:
     - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
     - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md

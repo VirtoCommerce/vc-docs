@@ -1,11 +1,11 @@
-# Creating first VC-Shell application
+# Create first VC-Shell application
 
 In this section we will show you how to scaffold a VC Shell application on your local machine. The created project will use Vue 3 and Vite as the build setup.
 
-!!! info "Prerequisites"
+## Prerequisites
 
-    1. You have an up-to-date Node.js version installed.
-    1. Your current working directory is the one where you want to create the application.
+1. You have an up-to-date Node.js version installed.
+1. Your current working directory is the one where you want to create the application.
 
 To create and install custom app:
 
@@ -49,9 +49,9 @@ You first application is ready to run!
 !!! info "Tip"
     The recommended IDE setup is [Visual Studio Code](https://code.visualstudio.com/) + [Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 
-[Read more about the underlying build tool Vite docs](https://vitejs.dev/){ .md-button }
+![Readmore](../../media/readmore.png){: width="25"} [Underlying build tool Vite docs](https://vitejs.dev/)
 
-[Read more about Vue Composition API](https://vuejs.org/guide/introduction.html#composition-api){ .md-button }
+![Readmore](../../media/readmore.png){: width="25"} [Vue Composition API](https://vuejs.org/guide/introduction.html#composition-api)
 
 ## Application folder structure
 
@@ -97,10 +97,10 @@ Let's take a look at the modules directory as it represents the key concept in t
 | **Blade**             | A separate page with its own functionality and template.<br>Blades is not connected to each other, but can be used together using special methods.                                                                                                                                                                                   	|
 | **Components folder**  	| The collection of components specific to this module. If you want to create a component for your module,<br>the components folder is the best place to do it. A component placed in a module should only be used in it,<br>otherwise it is better to place them in thecomponents folder in the application root folder.              	|
 | **Composables folder** 	| The collection of shared logic written using Composable API pattern.<br>It may include, for example, logic for loading data from the backend which is used by blade.                                                                                                                                                                 	|
-| **Locales folder**     	| Locale files used to provide translated content specific to module.<br>If you need to translate your blades into several languages, you can store all the translations in json format in this folder,<br>which is then processed using vue-i18n library.<br> [Read more about the syntax of localization files](https://kazupon.github.io/vue-i18n/){ .md-button } 	|
+| **Locales folder**     	| Locale files used to provide translated content specific to module.<br>If you need to translate your blades into several languages, you can store all the translations in json format in this folder,<br>which is then processed using vue-i18n library.<br> ![Readmore](../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) 	|
 | **Pages folder**   	| A set of [Blades](../../Platform-Manager/Extensibility-Points/blades-and-navigation.md) used within application router.                 	|
 
-### Creating a new module
+### Create a new module
 To create your own modules within the scaffolded application folder structure:
 
 1. Create a new folder for your module inside the **src/modules** directory. You can give it a descriptive name that reflects its functionality. You can create multiple modules within the **src/modules** directory, each responsible for its own functionality and set of pages.
@@ -110,7 +110,7 @@ To create your own modules within the scaffolded application folder structure:
 1. In addition to these directories, you can also have an **index.ts** file as the entry point for your module. This file can provide the necessary exports and configurations for your module.
 
 
-### Initializing a new module in the application
+### Initialize a new module in the application
 
 To be able to use the module in the application, it must be initialized.
 
@@ -134,6 +134,4 @@ export * from "./components";
 
 Now you are ready to use your module!
 
-## Related links
-
-[Adding new module to the navigation menu](navigation.md)
+![Readmore](../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](navigation.md)

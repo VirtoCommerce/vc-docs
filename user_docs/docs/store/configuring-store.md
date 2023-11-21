@@ -4,7 +4,17 @@ To configure your store, select it in the **Stores** blade and modify the follow
 
 ![Store settings screen](media/all-store-settings.png)
 
-Below is additional information on some widgets.
+![Readmore](media/readmore.png){: width="25"} [Settings](settings.md)
+
+![Readmore](media/readmore.png){: width="25"} [Notifications](../notifications/overview.md)
+
+![Readmore](media/readmore.png){: width="25"} [Notifications log](../notifications/notification-log.md)
+
+![Readmore](media/readmore.png){: width="25"} [Taxes](../integrations/avalara/overview.md)
+
+![Readmore](media/readmore.png){: width="25"} [Sitemaps](../sitemaps/overview.md)
+
+Below is additional information on some more widgets.
 
 ## SEO
 You can have multiple SEO sets for your store pages. Each set includes meta title, meta description, keywords, URL slug, and more:
@@ -12,11 +22,11 @@ You can have multiple SEO sets for your store pages. Each set includes meta titl
 ![SEO settings](media/SEO.png)
 
 ## Fulfillment centers
-You can choose a fulfillment center from a drop-down list or add a new one. For the new one, fill in the following fields:
+
+Clicking on the **Fulfillment Centers** widget opens the list of the store's fulfillment centers. 
+
+![Manage fulfillment centers](media/fulfillment-centers-management.png)
+
+To add a new fulfillment center, click **Add** in the toolbar and fill in the following fields:
+
 ![Fulfillment-center](media/fulfillment-center-new.png){: width="600"}
-
-[Read more about store settings](settings.md){ .md-button }
-
-[Read more about notifications](../notifications/overview.md){ .md-button }
-
-[Read more about sitemaps](../sitemaps/overview.md){ .md-button }

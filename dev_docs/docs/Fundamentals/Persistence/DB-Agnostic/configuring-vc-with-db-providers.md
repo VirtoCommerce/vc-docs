@@ -44,7 +44,16 @@ Select the tab with the required provider setup information.
         ```json
         "DatabaseProvider": "MySql",
         "ConnectionStrings": {
-        "VirtoCommerce": "server=localhost;user=root;password=virto;database=VirtoCommerce3;"
+        "VirtoCommerce": "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;"
+        },
+        ```
+
+        or
+        
+        ```json
+        "DatabaseProvider": "MySql",
+        "ConnectionStrings": {
+        "VirtoCommerce": "Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;"
         },
         ```
 

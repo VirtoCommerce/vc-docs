@@ -118,6 +118,15 @@ nav:
         - Managing User Groups: catalog-personalization/user-groups.md
         - Example: catalog-personalization/example.md
         - Settings: catalog-personalization/settings.md
+    - Cart: 
+      - Settings: cart/settings.md
+    - Content [In progress]:
+      - Overview: content/overview.md
+      - Managing Themes: content/managing-themes.md
+      - Managing Pages: content/managing-pages.md
+      - Managing Link Lists: content/managing-linklists.md
+      - Managing Blogs: content/managing-blogs.md
+      - Settings: content/settings.md
     - Contacts:
       - Overview: contacts/overview.md
       - Managing Companies and Contacts: contacts/managing-contacts.md

@@ -28,7 +28,7 @@ This connection allows you to search for products.
 
 ## Examples
 
-=== "Query"
+=== "Query 1"
     ```json linenums="1"
     {
       products(
@@ -51,7 +51,7 @@ This connection allows you to search for products.
     }
     ```
 
-=== "Return"
+=== "Return 1"
     ```json linenums="1"
     {
       "data": {
@@ -78,6 +78,54 @@ This connection allows you to search for products.
             "hasNextPage": true,
             "startCursor": "10"
           }
+        }
+      }
+    }
+    ```
+
+=== "Query 2"
+    ```json linenums="1"
+    {
+      products(
+        storeId: "B2B-store"
+        filter: "productfamilyid:baa4931161214690ad51c50787b1ed94 status:hidden,visible"
+        query: "Stainless Steel Carriage Bolt"
+        first: 23
+        after: "0"
+      ) {
+        totalCount
+        items {
+          id
+          code
+        }
+      }
+    }
+    ```
+
+=== "Return 2"
+    ```json linenums="1"
+    {
+      "data": {
+        "products": {
+          "totalCount": 4,
+          "items": [
+            {
+              "id": "330e7e41055b4781a9f4d3868557c093",
+              "code": "53MF89"
+            },
+            {
+              "id": "72c69a42-4c24-40c9-baa8-6922106be6bf",
+              "code": "OBV-20813041"
+            },
+            {
+              "id": "baa4931161214690ad51c50787b1ed94",
+              "code": "53MF87"
+            },
+            {
+              "id": "6ba8b1a9b2a54298a1ec1aea6a4bb3b2",
+              "code": "53MF88"
+            }
+          ]
         }
       }
     }
