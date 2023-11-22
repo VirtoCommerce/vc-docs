@@ -552,12 +552,20 @@ nav:
       - Extensibility:
         - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
         - Dynamic Views:
+          - View Types:
+            - Overview: custom-apps-development/vc-shell/Essentials/Dynamic-Views/views/views.md
+            - DynamicBladeForm: custom-apps-development/vc-shell/Essentials/Dynamic-Views/views/DynamicBladeForm.md
+            - DynamicBladeList: custom-apps-development/vc-shell/Essentials/Dynamic-Views/views/DynamicBladeList.md
+            - Common Schema Settings: custom-apps-development/vc-shell/Essentials/Dynamic-Views/views/schema-settings.md
           - API Overriding: custom-apps-development/vc-shell/Essentials/Dynamic-Views/api-overriding.md
           - Composable Overriding: custom-apps-development/vc-shell/Essentials/Dynamic-Views/composable-overriding.md
           - Extending Views: custom-apps-development/vc-shell/Essentials/Dynamic-Views/extending-views.md
           - Controls: custom-apps-development/vc-shell/Essentials/Dynamic-Views/controls.md
           - How To Create Page Schema: custom-apps-development/vc-shell/Essentials/Dynamic-Views/how-to-create-page-schema.md
           - Include And Setup Other Custom App: custom-apps-development/vc-shell/Essentials/Dynamic-Views/include-and-setup-other-custom-app.md
+          - How To Create Custom Templates: custom-apps-development/vc-shell/Essentials/Dynamic-Views/custom-templates.md
+          - How To Create Widgets: custom-apps-development/vc-shell/Essentials/Dynamic-Views/widgets.md
+          - Toolbar: custom-apps-development/vc-shell/Essentials/Dynamic-Views/toolbar.md
       - API reference: custom-apps-development/vc-shell/api-reference.md
       - How-tos:
         - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md

@@ -28,7 +28,7 @@ Base usage looks like this:
 ```
 
 #### API
-Shema interface for button looks like this:
+Sсhema interface for button looks like this:
 
 ```typescript
 interface ButtonSchema {
@@ -190,7 +190,7 @@ Card example with action button and fieldset component containing several inputs
     ```
 
 ### Checkbox
-Based on the `vc-checkbox` component, allows you to create a checkbox that can be checked or unchecked. The component has disabled and visibility state settings. Also has customizable label, content, and many other settings.
+Based on the `vc-checkbox` component, allows you to create a checkbox that can be checked or unchecked. The component has disabled and visibility state settings. Also has customizable label, content, and other settings.
 
 #### Usage
 To start using all the available checkbox properties, specify the `vc-checkbox` component when creating the schema.
@@ -244,14 +244,14 @@ interface CheckboxSchema {
 | `label` | `string` | Checkbox label that is displayed above the checkbox. Also available interpolation `{}` syntax based on current element context. |
 | `rules` | `IValidationRules` | Checkbox validation rules. Could be used to validate checkbox value. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `tooltip` | `string` | Checkbox tooltip that is displayed when hovering over the checkbox label tooltip icon. |
-| `property` | `string` | Property name that is used for binding checkbox value to blade data. |
+| `property` | `string` | Property name that is used for binding checkbox value to blade data. <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function. |
 | `content` | `string` | Text content that is displayed on the right side of the checkbox. |
 | `update` | `{method: string}` | Update method that is called when checkbox value is changed. Method should be defined in the blade `scope`. |
 | `disabled` | `{method: string}` | Disabled state for component, could be used to disable checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` | `{method: string}` | Visibility state for component, could be used to hide checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 
 ### Dynamic Property
-Based on the `vc-dynamic-property` component, allows you to display a dynamic properties controls. Has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and many other settings.
+Based on the `vc-dynamic-property` component, allows you to display a dynamic properties controls. Has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and other settings.
 
 #### Usage
 To start using all the available dynamic property properties, specify the `vc-dynamic-properties` component when creating the schema.
@@ -291,7 +291,7 @@ interface DynamicPropertiesSchema {
 | --- | --- | --- |
 | `id` | `string` | Unique identifier for `vc-dynamic-properties` component. |
 | `component` | `vc-dynamic-properties` | Component used in schema. |
-| `property` | `string` | Property name that is used for binding dynamic properties value to blade data. |
+| `property` | `string` | Property name that is used for binding dynamic properties value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `exclude` | `string[]` | An array of property names to exclude from the dynamic properties schema. |
 | `include` | `string[]` | An array of property names to include in the dynamic properties schema. |
 | `disabled` | `{method: string}` | Disabled state for component, could be used to disable dynamic properties based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
@@ -299,7 +299,7 @@ interface DynamicPropertiesSchema {
 
 
 ### Editor
-Based on the `vc-editor` component, allows you to display a Rich Text Editor, based on Vue-wrapped [Quill](https://vueup.github.io/vue-quill/). The component has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and many other settings.
+Based on the `vc-editor` component, allows you to display a Rich Text Editor, based on Vue-wrapped [Quill](https://vueup.github.io/vue-quill/). The component has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and other settings.
 
 #### Usage
 To start using all the available editor properties, specify the `vc-editor` component when creating the schema.
@@ -346,7 +346,7 @@ interface EditorSchema {
 | `id` | `string` | Unique identifier for the `vc-editor` component. |
 | `component` | `vc-editor` | Component used in schema. |
 | `label` | `string` | Label for the editor. Also available interpolation `{}` syntax based on current element context. |
-| `property` | `string` | Property name that is used for binding editor value to blade data. |
+| `property` | `string` | Property name that is used for binding editor value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `rules` | `IValidationRules` | Validation rules for the editor. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` | `string` | Placeholder text for the editor.  |
 | `tooltip` | `string` | Tooltip text for the editor label. |
@@ -402,7 +402,7 @@ interface FieldsetSchema {
 | `component` | `vc-fieldset` | Component used in schema. |
 | `fields` | `ControlSchema[]` | Array of control schemas to be displayed in the fieldset. |
 | `columns` | `number` | Number of columns to display the fields in. |
-| `property` | `string` | Property name that is used for binding fieldset value to blade data. |
+| `property` | `string` | Property name that is used for binding fieldset value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `aspectRatio` | `number[]` | Array of numbers that define the aspect ratio of each column. Uses CSS flex-grow property. <br> Example: set to [1, 1] to make all columns equal width |
 | `remove` | `{method: string}` | Method to call to remove field from the fieldset. When set - activates remove button. Used for property-based fieldsets. Method should be defined in the blade `scope`. |
 | `visibility` | `{method: string}` | Visibility state for component, could be used to hide fieldset based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
@@ -577,7 +577,7 @@ Then, when building the fieldset, each field will be set a label that will be ob
 
 
 ### Gallery
-Based on the `vc-gallery` component, allows you to display a gallery of images. The component has disabled and visibility state settings. Also has customizable upload folder, label, tooltip, and many other settings.
+Based on the `vc-gallery` component, allows you to display a gallery of images. The component has disabled and visibility state settings. Also has customizable label, tooltip, and other settings.
 
 #### Usage
 To start using all the available gallery properties, specify the `vc-gallery` component when creating the schema.
@@ -599,11 +599,16 @@ Schema interface for gallery looks like this:
 interface GallerySchema {
     id: string;
     component: "vc-gallery";
-    uploadFolder: string;
     label?: string;
     property: string;
     rules?: IValidationRules;
     tooltip?: string;
+    hideAfterUpload?: boolean;
+    actions?: {
+        preview: boolean;
+        edit: boolean;
+        remove: boolean;
+    };
     disabled?: {
         method: string;
     };
@@ -620,41 +625,73 @@ interface GallerySchema {
 | --- | --- | --- |
 | `id` | `string` | Unique identifier for the `vc-gallery` component. |
 | `component` | `vc-gallery` | Component used in schema. |
-| `uploadFolder` | `string` | Folder name for files upload. |
 | `label` | `string` | Label for the gallery. Also available interpolation `{}` syntax based on current element context. |
-| `property` | `string` | Property name that is used for binding gallery value to blade data. |
+| `property` | `string` | Property name that is used for binding gallery value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `rules` | `IValidationRules` | Validation rules for the gallery. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `tooltip` | `string` | Tooltip text for the gallery label. |
+| `hideAfterUpload` | `boolean` | Whether to hide the upload overlay after uploading files or not. <br> Default: `false` |
+| `actions` | `{preview: boolean, edit: boolean, remove: boolean}` | Actions to be displayed on hover for each image in the gallery. <br> Default: `{preview: true, edit: true, remove: true}` |
 | `disabled` | `{method: string}` | Disabled state for component, could be used to disable gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` | `{method: string}` | Visibility state for component, could be used to hide gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `update` | `{method: string}` | Method to call when the gallery value is updated. Method should be defined in the blade `scope`. |
 
 
 #### Guide
-Gallery allows you to upload files to the specified folder. To do this, you need to specify the `uploadFolder` parameter. The folder name must be specified in the `upload` section of the blade.
+The gallery allows displaying images from an array of images, as well as uploading, previewing, editing, and deleting them. It has customizable actions for images, such as viewing, editing, and deleting.
 
-To enable file uploads, you should also specify the `assetsHandler` within the composable blade's scope, which uses the gallery. The `assetsHandler` requires the passing of a composing blade responsible for image processing.
+To upload images, use the `assetsHandler` key in the details composables scope. `assetsHandler` has an interface for both images and assets, but in this case, we need the image interface. It includes a loading state, upload, remove, and edit methods. You can either use custom methods or the `useAssets` composable provided in the `@vc-shell/framework`.
 
-In the vc-shell/framework, there exists a generic interface, `AssetsHandler`, which accepts a class type of the asset, for instance, `Image`.
+##### useAssets composable
+The `useAssets` composable includes asset processing methods - upload, edit, remove - as well as a loading state. The interface of the `useAssets` composable looks like this:
 
-A basic example of a composable for image processing can be found in the `vc-app` sample folder in VirtoCommerce/vc-shell repository: [useAssets](https://github.com/VirtoCommerce/vc-shell/blob/main/sample/vc-app/src/modules/common/composables/useAssets/index.ts). Since dynamic views default to using this composable interface, it's essential to adhere to this specific writing style.
+```typescript
+interface IUseAssets {
+  upload: (files: FileList, uploadPath: string, startingSortOrder?: number) => Promise<ICommonAsset[]>;
+  remove: (filesToDelete: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[];
+  edit: (updatedFiles: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[];
+  loading: ComputedRef<boolean>;
+}
+```
 
-Here's an example of connecting a ready-to-use composable for image processing from the `vc-app` project:
+| Property | Type | Description |
+| --- | --- | --- |
+| `upload` | `(files: FileList, uploadPath: string, startingSortOrder?: number) => Promise<ICommonAsset[]>` | Method for uploading files. Accepts a `FileList` object, an upload path, and an optional starting sort order. Returns a promise that resolves to an array of `ICommonAsset` objects. |
+| `remove` | `(filesToDelete: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[]` | Method for removing files. Accepts an array of `ICommonAsset` objects to delete and the initial array of `ICommonAsset` objects. Returns an array of `ICommonAsset` objects after removing the specified files. |
+| `edit` | `(updatedFiles: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[]` | Method for editing files. Accepts an array of `ICommonAsset` objects to update and the initial array of `ICommonAsset` objects. Returns an array of `ICommonAsset` objects after updating the specified files. |
+| `loading` | `ComputedRef<boolean>` | Computed property that returns a boolean indicating whether the assets are currently being loaded. |
 
-```typescript title="vc-app/src/modules/offers/pages/details.ts" linenums="1"
+Now let's look at an example of connecting gallery actions in the details composable of a sample `vc-app`:
+
+```typescript title="vc-app/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
 import { Image } from "@vc-app/api";
+
+const { upload: imageUpload, remove: imageRemove, edit: imageEdit, loading: imageLoading } = useAssets();
 
 const scope = ref<OfferDetailsScope>({
     ...,
     assetsHandler: {
-      images: useAssets(Image),
+      images: {
+        loading: imageLoading,
+        async upload(files: FileList, startingSortOrder: number) {
+          return (await imageUpload(files, `offers/${item.value.id}`, startingSortOrder)).map((x) => new Image(x));
+        },
+        remove(files: ICommonAsset[]) {
+          return imageRemove(files, item.value.images);
+        },
+        edit(files: ICommonAsset[]) {
+          return imageEdit(files, item.value.images).map((x) => new Image(x));
+        },
     },
     ...,
 })
 ```
 
+As you can see, in the `upload` and `edit` methods, we need to transform `ICommonAsset` objects into `Image` class objects from the client's API to use them in the gallery. This is necessary because `ICommonAsset` lacks some fields present in the `Image` class. Since images in the gallery often have their sortOrder, we can obtain the sortOrder of the last existing element in the array of images and pass it to the `upload` method so that the uploaded images have a sortOrder following the last existing one.
+
+A basic example of a composable for image processing can be found in the `vc-app` sample folder in VirtoCommerce/.vc-shell repository: [useAssets](https://github.com/VirtoCommerce/vc-shell/blob/main/sample/vc-app/src/modules/common/composables/useAssets/index.ts). Since dynamic views default to using this interface, it's essential to adhere to this specific writing style.
+
 ### Input Currency
-Based on the `vc-input-currency` component, allows you to display an input with a currency selector. The component has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and many other settings.
+Based on the `vc-input-currency` component, allows you to display an input with a currency selector. The component has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and other settings.
 
 #### Usage
 To start using all the available input currency properties, specify the `vc-input-currency` component when creating the schema.
@@ -720,7 +757,7 @@ interface InputCurrencySchema {
 | `id` | `string` | Unique identifier for the `vc-input-currency` component. |
 | `component` | `vc-input-currency` | Component used in schema. |
 | `label` | `string` | Label for the input currency. Also available interpolation `{}` syntax based on current element context. |
-| `property` | `string` | Property name that is used for binding input currency value to blade data. |
+| `property` | `string` | Property name that is used for binding input currency value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `rules` | `IValidationRules` | Validation rules for the input currency. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` | `string` | Placeholder text for the input currency.  |
 | `tooltip` | `string` | Tooltip text for the input currency label. |
@@ -732,7 +769,7 @@ interface InputCurrencySchema {
 | `update` | `{method: string}` | Method to call when the input currency value is updated. Method should be defined in the blade `scope`. |
 
 ### Input
-Based on the `vc-input` component, allows you to display an input. The component has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and many other settings.
+Based on the `vc-input` component, allows you to display an input. The component has disabled and visibility state settings. Also has customizable label, placeholder, tooltip, and other settings.
 Also component has customizable slots to show any other component like Button - `append`, `appendInner`, `prepend`, `prependInner`.
 
 #### Usage
@@ -785,7 +822,7 @@ interface InputSchema {
 | `id` | `string` | Unique identifier for the `vc-input` component. |
 | `component` | `vc-input` | Component used in schema. |
 | `label` | `string` | Label for the input. Also available interpolation `{}` syntax based on current element context. |
-| `property` | `string` | Property name that is used for binding input value to blade data. |
+| `property` | `string` | Property name that is used for binding input value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `rules` | `IValidationRules` | Validation rules for the input. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` | `string` | Placeholder text for the input.  |
 | `tooltip` | `string` | Tooltip text for the input label. |
@@ -801,7 +838,7 @@ interface InputSchema {
 
 
 ### Select
-Based on the `vc-select` component, allows you to display a select. The component has disabled and visibility state settings, customizable template for displayed items. Also has customizable label, placeholder, tooltip, and many other settings.
+Based on the `vc-select` component, allows you to display a select. The component has disabled and visibility state settings, customizable template for displayed items. Also has customizable label, placeholder, tooltip, and other settings.
 Supports connecting a method for loading options directly from the server with automatic loading of items when scrolling.
 
 #### Usage
@@ -862,7 +899,7 @@ interface SelectSchema {
 | `id` | `string` | Unique identifier for the `vc-select` component. |
 | `component` | `vc-select` | Component used in schema. |
 | `label` | `string` | Label for the select. Also available interpolation `{}` syntax based on current element context. |
-| `property` | `string` | Property name that is used for binding select value to blade data. |
+| `property` | `string` | Property name that is used for binding select value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `rules` | `IValidationRules` | Validation rules for the select. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` | `string` | Placeholder text for the select.  |
 | `tooltip` | `string` | Tooltip text for the select label. |
@@ -906,6 +943,23 @@ For example, if you have option like this:
     ```
 
 Then you should specify `optionLabel: "title"` and `optionValue: "id"`. What is under `optionValue` will be written in the `property` of the select.
+
+#### Custom template
+Also you can specify custom template for select options. To do this, you need to specify the `customTemplate` parameter. The parameter should contain the name of the component that will be used as a template for select options. The component should be registered globally by `moduleComponents` option in  `createDynamicAppModule` method.
+
+The created component with the custom template has default props:
+
+```typescript
+defineProps<{
+  context: {
+    opt: Record<string, any>;
+  };
+  slotName: string;
+}>();
+```
+
+Where `context` is the object that holds `opt` property that contains the option data, `slotName` is the name of the slot, that can display custom template.
+`slotName` could be `selected-item` and `option`.
 
 ### Status
 Based on the `vc-status` component, allows you to display a status. The component has visibility state settings. Used to show the status badge with customizable view, icon and its size, title and badge content text.
@@ -1011,14 +1065,14 @@ interface FieldSchema {
 | `component` | `vc-field` | Component used in schema. |
 | `label` | `string` | Label for the field. Also available interpolation `{}` syntax based on current element context. |
 | `tooltip` | `string` | Tooltip text for the field label. |
-| `property` | `string` | Property name that is used for binding field value to blade data. |
+| `property` | `string` | Property name that is used for binding field value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `variant` | `string` | Field variant. Default: `text` |
 | `copyable` | `boolean` | Whether the field is copyable or not. |
 | `visibility` | `{method: string}` | Visibility state for component, could be used to hide field based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 
 
 ### Image
-Based on the `vc-image` component, allows you to display an image. The component has visibility state settings. Also has customizable size options, aspect ratio, and many other settings.
+Based on the `vc-image` component, allows you to display an image. The component has visibility state settings. Also has customizable size options, aspect ratio, and other settings.
 
 #### Usage
 To start using all the available image properties, specify the `vc-image` component when creating the schema.
@@ -1064,7 +1118,7 @@ interface ImageSchema {
 | --- | --- | --- |
 | `id` | `string` | Unique identifier for the `vc-image` component. |
 | `component` | `vc-image` | Component used in schema. |
-| `property` | `string` | Property name that is used for binding image url value to blade data. |
+| `property` | `string` | Property name that is used for binding image url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `aspect` | `string` | Image aspect ratio. Default: `1x1`|
 | `background` | `string` | Size of the element's background image. Accepts auto, cover, contain CSS background-size value. Default: `cover` |
 | `size` | `string` | Image size. Default: `auto` |
@@ -1075,7 +1129,7 @@ interface ImageSchema {
 | `update` | `{method: string}` | Method to call when the image url value is updated. Method should be defined in the blade `scope`. |
 
 ### Video
-Based on the `vc-video` component, allows you to display a YouTube video in iframe. The component has visibility state settings. Also has customizable size options, and many other settings.
+Based on the `vc-video` component, allows you to display a YouTube video in iframe. The component has visibility state settings. Also has customizable size options, and other settings.
 
 #### Usage
 To start using all the available video properties, specify the `vc-video` component when creating the schema.
@@ -1117,7 +1171,7 @@ interface VideoSchema {
 | --- | --- | --- |
 | `id` | `string` | Unique identifier for the `vc-video` component. |
 | `component` | `vc-video` | Component used in schema. |
-| `property` | `string` | Property name that is used for binding video url value to blade data. |
+| `property` | `string` | Property name that is used for binding video url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `label` | `string` | Label for the video. Also available interpolation `{}` syntax based on current element context. |
 | `size` | `string` | Video size. Default: `auto` |
 | `tooltip` | `string` | Tooltip text for the video label. |
