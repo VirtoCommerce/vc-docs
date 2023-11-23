@@ -101,6 +101,7 @@ copyright: Copyright &copy; 2023. All rights reserved.
 nav:
   - Platform:
     - Overview: platform-overview.md
+    - Modules Installation: modules-installation.md
     - Catalog:
       - Catalog:
         - Overview: catalog/overview.md
@@ -120,12 +121,12 @@ nav:
         - Settings: catalog-personalization/settings.md
     - Cart: 
       - Settings: cart/settings.md
-    - Content [In progress]:
+    - Content:
       - Overview: content/overview.md
-      - Managing Themes: content/managing-themes.md
-      - Managing Pages: content/managing-pages.md
-      - Managing Link Lists: content/managing-linklists.md
-      - Managing Blogs: content/managing-blogs.md
+      - Themes: content/managing-themes.md
+      - Pages: content/managing-pages.md
+      - Link Lists: content/managing-linklists.md
+      - Blogs: content/managing-blogs.md
       - Settings: content/settings.md
     - Contacts:
       - Overview: contacts/overview.md
