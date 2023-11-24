@@ -1,11 +1,15 @@
 # Overview
 
-The Content module is designed to manage and display content on your e-commerce site. With the Content module, you can manage:
+The Content module is designed to manage and display content on your e-commerce site. 
+
+With the Content module, you can manage:
 
 * [Themes.](managing-themes.md)
 * [Pages.](managing-pages.md)
-* [Blogs.](managing-blogs.md)
 * [Link lists.](managing-linklists.md)
+* [Blogs.](managing-blogs.md)
+
+![overview](media/overview.png)
 
 ## Installation
 

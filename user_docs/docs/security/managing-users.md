@@ -2,9 +2,9 @@
 
 Managing user accounts includes:
 
-* [Creating new users](managing-users.md#create-new-user)
-* [Editing user accounts](managing-users.md#edit-user-account)
-* [Assigning roles to the users](managing-users.md#assign-roles-to-users)
+* [Creating new users.](managing-users.md#create-new-user)
+* [Editing user accounts.](managing-users.md#edit-user-account)
+* [Assigning roles to the users.](managing-users.md#assign-roles-to-users)
 
 ## Create new users and assign roles to them
 
@@ -39,9 +39,9 @@ To edit a user:
 
 The modifications have been saved.
 
-[Read more about Login on behalf](login-on-behalf.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Login on behalf](login-on-behalf.md)
 
-[Read more about API keys](api-key.md){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [API keys](api-key.md)
 
 ## Assign roles to users
 

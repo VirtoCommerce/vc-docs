@@ -194,9 +194,12 @@ Follow the intructions below to build your own data importer of a specific type.
         
     **Line 8** registers `CsvProductImageImporter` in the global importer registry, so that the new importer may become available for import profile creation and for running the import process.
 
-1. Run data importer. There are two options for using the import library:
+1. Run data importer:
 
-    1. From the user interface as `ImportProfile` that has an assigned `CsvProductImageImporter`:
+    === "From the interface"
+        
+        To run data importer from the user interface as `ImportProfile` that has an assigned `CsvProductImageImporter`:
+
         1. Manually select a profile on the blade.
         1. Specify the file for import. The preview is availabe. 
         1. Manually start the import process and observe the progress. 
@@ -205,7 +208,10 @@ Follow the intructions below to build your own data importer of a specific type.
         
         The user gets all the information on the current import process and can control it.
 
-    1. Calling API methods from third-party code, for example, for integrations through LogicApps:
+    === "Using API methods"
+
+        To run data importer using API methods from the third-party code, for example, for integrations through LogicApps:
+            
         1. Specifiy the profile to be used.
         1. Configure the path to the file. 
         1. Trigger the import on a schedule (with the set parameters). 
