@@ -18,7 +18,7 @@ You can extend a composable by appending new methods, variables, or computed val
 
 Initiate the process by creating overrides for the external module. For more information, please refer to the [Extending Views](./extending-views.md) guide. In this illustration, we'll introduce a new button to the toolbar:
 
-```json title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
+```typescript title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
 import { OverridesSchema } from "@vc-shell/framework";
 
 export const overrides: OverridesSchema = {
@@ -44,7 +44,7 @@ export const overrides: OverridesSchema = {
 
 Inside the `src/modules/composables` directory, create a folder named `useOfferDetails` with an `index.ts` file, which will serve as the file for our composable. Initially, this composable will be empty:
 
-```json title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
+```typescript title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
 export const useOfferDetails = () => {
     return {}
 }
@@ -54,9 +54,15 @@ export const useOfferDetails = () => {
 
 Since we need to extend a composable from an external application, we must import it into our composable file. Import the required modules from the `vc-app` application and destructure the composable method to access its return values:
 
-```json title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
+```typescript title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
+import { DynamicBladeForm } from "@vc-shell/framework"
 import modules from "@vc-app/modules";
-export const useOfferDetails = () => {
+
+export const useOfferDetails = (args: {
+    props: InstanceType<typeof DynamicBladeForm>["$props"];
+    emit: InstanceType<typeof DynamicBladeForm>["$emit"];
+    mounted: Ref<boolean>;
+}) => {
     const { load, saveChanges, remove, loading, item, validationState, scope, bladeTitle } =
         modules.Offers.composables.useOfferDetails(args);
 
@@ -79,8 +85,14 @@ At this point, we've established a proxy for the `useOfferDetails` composable lo
 
 Create a new method named `clickMe` that will be invoked by the newly added toolbar button:
 
-```json title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
-export const useOfferDetails = () => {
+```typescript title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
+import { DynamicBladeForm } from "@vc-shell/framework"
+
+export const useOfferDetails = (args: {
+    props: InstanceType<typeof DynamicBladeForm>["$props"];
+    emit: InstanceType<typeof DynamicBladeForm>["$emit"];
+    mounted: Ref<boolean>;
+}) => {
     const { load, saveChanges, remove, loading, item, validationState, scope, bladeTitle } =
         modules.Offers.composables.useOfferDetails(args);
 
@@ -106,8 +118,8 @@ export const useOfferDetails = () => {
 
 As all new methods need to be exposed within the `scope`, create an `extendedScope` that extends the base `scope`. Since `scope` is reactive, it's convenient to use lodash's `merge` method to maintain reactivity while adding new objects to the `scope`, such as `toolbarOverrides` where we introduce our new method, `clickMe`. Utilize the `UnwrapRef` type from Vue to handle reactivity correctly:
 
-```json title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
-import { IBladeToolbar } from "@vc-shell/framework";
+```typescript title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
+import { IBladeToolbar, DynamicBladeForm } from "@vc-shell/framework";
 import modules from "@vc-app/modules";
 import { Ref, UnwrapRef, ref } from "vue";
 import * as _ from "lodash-es";
@@ -120,7 +132,11 @@ export type ExtendedOfferDetailsScope = UnwrapRef<
     };
 };
 
-export const useOfferDetails = () => {
+export const useOfferDetails = (args: {
+    props: InstanceType<typeof DynamicBladeForm>["$props"];
+    emit: InstanceType<typeof DynamicBladeForm>["$emit"];
+    mounted: Ref<boolean>;
+}) => {
     const { load, saveChanges, remove, loading, item, validationState, scope, bladeTitle } =
         modules.Offers.composables.useOfferDetails(args);
 
@@ -162,7 +178,7 @@ export const useOfferDetails = () => {
 
 Incorporate the extended composable into the module's initialization. Create a file with module initialization in `vc-app-extend/src/modules/offers`, and utilize the `createDynamicAppModule` method for dynamic module initialization. Import your overrides with the new toolbar button and the extended composable. In `createDynamicAppModule`, replace one of the composables from the external module with your extended composable and include your overrides:
 
-```json title="vc-app-extend/src/modules/offers/index.ts" linenums="1"
+```typescript title="vc-app-extend/src/modules/offers/index.ts" linenums="1"
 import { createDynamicAppModule } from "@vc-shell/framework";
 import modules from "@vc-app/modules";
 // Import overrides with the new toolbar button
@@ -188,7 +204,7 @@ export default createDynamicAppModule({
 
 To include the module in the application, in the `main.ts` file, import the module initializer from the previous step and install it using the Vue `use` method:
 
-```json title="vc-app-extend/src/main.ts" linenums="1"
+```typescript title="vc-app-extend/src/main.ts" linenums="1"
 ...
 import { Offers } from "./modules";
 
