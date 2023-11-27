@@ -121,7 +121,7 @@ As all new methods need to be exposed within the `scope`, create an `extendedSco
 ```typescript title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
 import { IBladeToolbar, DynamicBladeForm } from "@vc-shell/framework";
 import modules from "@vc-app/modules";
-import { Ref, UnwrapRef, ref } from "vue";
+import { Ref, UnwrapRef, ref, computed } from "vue";
 import * as _ from "lodash-es";
 
 export type ExtendedOfferDetailsScope = UnwrapRef<
@@ -168,7 +168,7 @@ export const useOfferDetails = (args: {
         loading,
         item,
         validationState,
-        scope: extendedScope,
+        scope: computed(() => extendedScope.value),
         bladeTitle,
     }
 }
