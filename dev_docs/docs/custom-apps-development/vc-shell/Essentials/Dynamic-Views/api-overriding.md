@@ -21,9 +21,11 @@ The process of generating the API is explained in detail in another one of our a
 After generating the API, you need to integrate it into your application. Since you will eventually need to replace these APIs with external ones, it is advisable to create an npm package from the generated API. To accomplish this, follow these steps:
 
 1. Ensure you are in the root folder of your project and confirm the path to your generated API. By default, this path is `src/api_client`. In the command line, execute the following command:
+2.
    ```bash
    cd src/api_client && yarn init
    ```
+
    This command will generate a `package.json` file with the following content:
 
    ```json title="vc-app-extend/src/api_client/package.json" linenums="1"
@@ -32,7 +34,7 @@ After generating the API, you need to integrate it into your application. Since 
    }
    ```
 
-2. In the generated file, lets change package name to `@vc-app-extend/api`, and include the `version`, `type`, and `exports` keys as illustrated below:
+3. In the generated file, lets change package name to `@vc-app-extend/api`, and include the `version`, `type`, and `exports` keys as illustrated below:
 
    ```json title="vc-app-extend/src/api_client/package.json" linenums="1"
    {
@@ -47,7 +49,50 @@ After generating the API, you need to integrate it into your application. Since 
 
    Please note that `marketplacevendor.ts` serves as an example of a generated API; in your project, the file name may differ.
 
-3. Locate the primary `package.json` file of your project and append the path to your API within the `workspaces` section:
+4. Also you need to add `types` key and script to generate API client declaration files:
+
+    ```json title="vc-app-extend/src/api_client/tsconfig.json" linenums="1"
+    {
+       "name": "@vc-app-extend/api",
+       "version": "1.0.113",
+       "type": "module",
+       "types": "./dist/types/marketplacevendor.d.ts",
+       "exports": {
+           ".": "./marketplacevendor.ts"
+       },
+       "scripts": {
+            "generate-types": "tsc --emitDeclarationOnly --declaration"
+       },
+       "devDependencies": {
+            "typescript": "^5.3.2"
+       },
+    }
+   ```
+
+5. Also you need to create `tsconfig.json` file for your API client, that is extended from `@vc-shell/ts-config` package with following content:
+
+    ```json title="vc-app-extend/src/api_client/tsconfig.json" linenums="1"
+    {
+        "extends": "@vc-shell/ts-config/tsconfig.json",
+        "compilerOptions": {
+            "baseUrl": ".",
+            "declarationDir": "dist/types",
+            "rootDir": "."
+        },
+        "files": [
+            "package.json",
+        ],
+        "include": [
+            "*.ts",
+        ]
+    }
+   ```
+
+   This `tsconfig.json` will generate declaration files for the API client in its `dist/types` folder, the path to which we specified in the `types` field of the `package.json` file.
+
+6. Run the `generate-types` script from `package.json` to generate API client declaration files.
+
+7. Locate the primary `package.json` file of your project and append the path to your API within the `workspaces` section:
 
    ```json title="vc-app-extend/package.json" linenums="1"
    {
@@ -64,7 +109,7 @@ After generating the API, you need to integrate it into your application. Since 
    yarn add @vc-app-extend/api
    ```
 
-4. Finally, install the dependencies by executing the following command:
+8. Finally, install the dependencies by executing the following command:
    ```bash
    yarn install
    ```
