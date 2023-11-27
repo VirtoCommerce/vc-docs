@@ -853,9 +853,9 @@ Base usage looks like this:
     label: "Select label",
     property: "selectProperty",
     placeholder: "Select placeholder",
-    optionProperty: "optionProperty",
-    optionValue: "optionValue",
-    optionLabel: "optionLabel",
+    optionsMethod: "fetchMethod",
+    optionValue: "value",
+    optionLabel: "label",
 }
 ```
 
