@@ -56,7 +56,7 @@ After generating the API, you need to integrate it into your application. Since 
        "name": "@vc-app-extend/api",
        "version": "1.0.113",
        "type": "module",
-       "types": "marketplacevendor.d.ts",
+       "types": "./marketplacevendor.d.ts",
        "exports": {
            ".": "./marketplacevendor.ts"
        },
