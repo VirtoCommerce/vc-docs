@@ -51,12 +51,12 @@ After generating the API, you need to integrate it into your application. Since 
 
 4. Also you need to add `types` key and script to generate API client declaration files:
 
-    ```json title="vc-app-extend/src/api_client/tsconfig.json" linenums="1"
+    ```json title="vc-app-extend/src/api_client/package.json" linenums="1"
     {
        "name": "@vc-app-extend/api",
        "version": "1.0.113",
        "type": "module",
-       "types": "./dist/types/marketplacevendor.d.ts",
+       "types": "marketplacevendor.d.ts",
        "exports": {
            ".": "./marketplacevendor.ts"
        },
@@ -76,7 +76,7 @@ After generating the API, you need to integrate it into your application. Since 
         "extends": "@vc-shell/ts-config/tsconfig.json",
         "compilerOptions": {
             "baseUrl": ".",
-            "declarationDir": "dist/types",
+            "declarationDir": ".",
             "rootDir": "."
         },
         "files": [
@@ -88,7 +88,7 @@ After generating the API, you need to integrate it into your application. Since 
     }
    ```
 
-   This `tsconfig.json` will generate declaration files for the API client in its `dist/types` folder, the path to which we specified in the `types` field of the `package.json` file.
+   This `tsconfig.json` will generate declaration files for the API client in its folder, the path to which we specified in the `types` field of the `package.json` file.
 
 6. Run the `generate-types` script from `package.json` to generate API client declaration files.
 
