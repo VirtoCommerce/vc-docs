@@ -19,8 +19,9 @@ To start managing fulfillment centers:
 
 Now you can:
 
-* [Add and edit fulfillment centers](managing-fulfillment-centers.md#add-and-edit-fulfillment-center)
-* [Delete fulfillment centers](managing-fulfillment-centers.md#delete-fullfillment-center)
+* [Edit inventory in each fulfillment center.](managing-inventory.md)
+* [Add and edit fulfillment centers.](managing-fulfillment-centers.md#add-and-edit-fulfillment-center)
+* [Delete fulfillment centers.](managing-fulfillment-centers.md#delete-fullfillment-center)
 
 ## Add and edit fulfillment center
 
