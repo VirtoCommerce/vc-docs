@@ -8,6 +8,7 @@ From the **Pages list**, you can:
 * Upload new pages.
 * Delete pages.
 * Organize your pages into folders.
+* Search pages by keyword. You can even search for pages containing images by their alternative text.
 
 Pages can have the following extensions:
 

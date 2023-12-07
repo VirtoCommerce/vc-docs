@@ -1,4 +1,4 @@
-﻿# Add inventory amount
+﻿# Edit inventory
 
 To edit the product's inventory:
 
@@ -14,6 +14,6 @@ To edit the product's inventory:
 1. Click **Save** in the toolbar to save the changes.
 
 
-![Read more](media/readmore.png) [Managing product's availability and tracking inventory for digital and physical products](../catalog/setting-product-availability.md)
+![Read more](media/readmore.png){: width="20"} [Managing product's availability and tracking inventory for digital and physical products](../catalog/setting-product-availability.md)
 
 

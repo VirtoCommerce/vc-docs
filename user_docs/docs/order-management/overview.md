@@ -4,6 +4,7 @@ The Orders module is designed to:
 
 * Store order details.
 * Manage orders created by users on client side. 
+* Search for orders by keywords.
 
 !!! info
     * This module is not designed to be a full order processing system like ERP. It serves as storage for customer orders details and can be synchronized with different external processing systems.

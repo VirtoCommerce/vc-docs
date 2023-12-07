@@ -6,7 +6,7 @@ This query allows you to retrieve information about shopping carts and wishlists
 
 | Argument                        | Description                                                                                     |
 |---------------------------------|-------------------------------------------------------------------------------------------------|
-| `after` {==String==}            | Specifies the starting point for fetching the next set of results.                              |
+| `after` {==String==}            | The starting point for fetching the next set of results.                              |
 | `first` {==Int==}               | The maximum number of carts to retrieve.                                                        |
 | `storeId` {==String==}          | The ID of the store to retrieve carts from.                                                     |
 | `userId` {==String==}           | The ID of the user associated with the carts.                                                   |

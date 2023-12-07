@@ -41,7 +41,10 @@ To set product's availability:
 
     ![add-inventory](media/inventory-path.png)
 
-1. Enter or edit the amount in stock by clicking it in the new blade. 
+1. Fill in the following fields:
+
+    ![Edit inventory](../inventory/media/edit-inventory.png)
+
 1. Click **Save** to save changes.   
 
 The product's availability has been set.

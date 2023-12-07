@@ -293,6 +293,8 @@ nav:
       - Queries:
         - Cart: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
         - Carts: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts.md
+        - Wishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlist.md
+        - Wishlists: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlists.md
       - Objects:
         - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
         - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
@@ -316,6 +318,14 @@ nav:
         - DictionaryItemConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-connection.md
         - ValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type.md
         - ErrorParameterType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type.md
+        - WishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-type.md
+        - WishListEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-edge.md
+        - WishlistConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-connection.md
+        - WishlistScopeType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-scope-type.md
+        - InputNewWishlistItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputNewWishlistItemType.md
+        - InputUpdateWishlistLineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistLineItemType.md
+        - InputUpdateWishlistItemsType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistItemsType.md
+        - BulkWishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/bulk-wishlist-type.md
       - Mutations:
         - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
         - clearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
@@ -343,6 +353,15 @@ nav:
         - updateCartShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-shipment-dynamic-properties.md
         - updateCartPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties.md
         - addCartAddress: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address.md
+        - createWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createWishlist.md
+        - changeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeWishlist.md
+        - renameWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/renameWishlist.md
+        - removeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlist.md
+        - addWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItem.md
+        - updateWishListItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateWishListItems.md
+        - addWishlistItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItems.md
+        - removeWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem.md
+        - moveWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem.md
         - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
     - Order:
         - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
