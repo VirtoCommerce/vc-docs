@@ -134,4 +134,4 @@ export * from "./components";
 
 Now you are ready to use your module!
 
-![Readmore](../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](navigation.md)
+![Readmore](../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](../Essentials/navigation.md)
