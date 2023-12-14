@@ -30,4 +30,5 @@ The primary advantage of utilizing Prerender.io for custom Virto Commerce fronte
 
 By avoiding server-side logic, Prerender.io enables a streamlined frontend solution, eliminating concerns related to caching, scaling, server error handling, and logging – elements typically unnecessary for pure SPA applications. Prerender.io offers a simplified and effective solution to enhance search engine visibility and performance without requiring extensive modifications to existing code.
 
-![Readmore](media/readmore.png){: width="25"} [SPA JavaScript SEO Challenges and Solutions - Prerender.io](https://prerender.io/blog/spa-javascript-seo-challenges-and-solutions/).
+![Readmore](media/readmore.png){: width="25"} [SPA JavaScript SEO Challenges and Solutions - Prerender.io](https://prerender.io/blog/spa-javascript-seo-challenges-and-solutions/)
+![Readmore](media/readmore.png){: width="25"} [Setting Up Prerender.io with Azure Application Gateway](../../Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md)

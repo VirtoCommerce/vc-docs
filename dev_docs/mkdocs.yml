@@ -556,6 +556,7 @@ nav:
       - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
       - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
       - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
+      - Setting Up Prerender.io with Azure Application Gateway: Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md
   - Updating Virto Commerce Based Projects:
     - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
     - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
