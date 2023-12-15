@@ -95,8 +95,6 @@ Manage **Configuration** to connect the frontend and backend pool you created us
 1. For the **Backend Settings**, click **Add new**. The **Backend settings** determine the behavior of the routing rule. In the **Add Backend setting** window that opens, enter *https_backend_setting* for the **Backend settings name** and  select **Https** as **backend protocol**. Use **443** for the **Backend port**.  
     Then select **Yes** for the **Override with new host name** option and select **Pick host name from backend target** radio button. Select **No option** for **Create custom probes**:
 
-    Fill in the fields as follows, then click **Save**:
-
     ![Backend settings](media/backend-settings.png) 
 
 1. Click **Save** to return to the **Add a routing rule** window.
