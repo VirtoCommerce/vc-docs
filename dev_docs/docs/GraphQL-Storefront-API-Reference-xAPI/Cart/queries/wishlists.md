@@ -12,6 +12,7 @@ This query allows you to retrieve information about wishlists.
 | `userId`  {==String==}         | The ID of the user to retrieve pages from.                                 |
 | `currencyCode` {==String==}    | A standardized code of a specific currency.                                |
 | `cultureName` {==String==}     | The language to retrieve data in.                                          |
+| `scope` {==String==}           | The wishlist accessibility: `Private` or `Organization`                    |
 | `sort` {==String==}            | The sorting order of the returned wishlists.                               |
 
 ## Possible returns

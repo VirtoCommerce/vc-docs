@@ -14,6 +14,7 @@ The `WishlistType` represents the details and properties of a wishlist.
 | `currency` [{==CurrencyType==}](currency-type.md)             | The currency associated with the wishlist.                  |
 | `items` [{==LineItemType==}](line-item-type.md)               | A list of line items (products) in the wishlist.            |
 | `itemsCount` {==Int==}                                        | The total number of items in the wishlist.                  |
-| `wishlistScopeType` [{==String==}](wishlist-scope-type.md)    | The type of the wishlist.                                   |
+| `scope` [{==WishlistScopeType==}](wishlist-scope-type.md)     | The accessibility of the wishlist.                          |
 | `description` {==String==}                                    | A description of the wishlist.                              |
+| `modifiedDate` {==DateTime==}                                 | The date the wishlist was modified.                         |
 
