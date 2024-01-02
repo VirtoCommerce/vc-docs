@@ -368,6 +368,7 @@ nav:
         - Queries:
           - Order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
           - Orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders.md
+          - OrderStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderStatuses.md
           - OrganizationOrders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders.md
         - Objects:
           - CustomerOrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-type.md
@@ -389,10 +390,11 @@ nav:
           - OrderTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-tax-detail-type.md
           - OrderDiscountType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-discount-type.md
           - OrderPaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-payment-method-type.md
+          - LocalizedSettingResponseType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/LocalizedSettingResponseType.md
           - CustomerOrderEdge: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-edge.md
           - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type.md
-          - KeyValuetype: GraphQL-Storefront-API-Reference-xAPI/Order/key-value-type.md
-          - InputKeyValuetype: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type.md
+          - KeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/key-value-type.md
+          - InputKeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type.md
         - Mutations:
           - ChangePurchaseOrderNumber: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-purchase-order-number.md
           - CreateOrderFromCart: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/create-order-from-cart.md
@@ -557,6 +559,8 @@ nav:
       - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
       - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
       - Setting Up Prerender.io with Azure Application Gateway: Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md
+      - Extending Cart Query With a Custom Parameter: Tutorials-and-How-tos/How-tos/extending-cart-query-with-custom-parameter.md
+      - Customizing Cart Validation Policies: Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies.md
   - Updating Virto Commerce Based Projects:
     - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
     - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
