@@ -118,9 +118,9 @@ import { useBladeNavigation } from "@vc-shell/framework";
 const { openBlade, resolveBladeByName } = useBladeNavigation();
 const widgetOpened = ref(false);
 
-function clickHandler() {
+async function clickHandler() {
   if (!widgetOpened.value) {
-    openBlade({
+    await openBlade({
       blade: resolveBladeByName("BladeName"),
       onOpen() {
         widgetOpened.value = true;
@@ -191,9 +191,9 @@ Since any logic can be implemented in the widget, let's consider its basic versi
     await client).searchItems(query).then((res) => res.totalCount);
     });
 
-    function clickHandler() {
+    async function clickHandler() {
         if (!widgetOpened.value) {
-            openBlade({
+            await openBlade({
                 blade: resolveBladeByName("BladeName"),
                 onOpen() {
                     widgetOpened.value = true;

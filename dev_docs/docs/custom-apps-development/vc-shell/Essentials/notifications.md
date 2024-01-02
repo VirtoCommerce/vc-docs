@@ -139,37 +139,7 @@ watch(
 
 ### Notification Dropdown List
 
-To display your templates in a dropdown list, you need to pass all global templates to the `VcNotificationDropdown` component in the `App.vue` file. The `VcNotificationDropdown` component should be located in the toolbar, so you should pass an array of toolbar components to the `VcApp` component as props.
-
-The most basic usage looks like this:
-
-```typescript title="App.vue" linenums="1"
-
-import { markRaw, computed } from 'vue';
-import { toolbarComposer, notificationTemplatesSymbol, useNotifications, VcNotificationDropdown } from '@vc-shell/framework';
-
-const { notifications, markAllAsRead } = useNotifications();
-const pages = inject('pages'); // Globally available module pages of the application
-const notificationTemplates = inject('notificationTemplates'); // Globally available templates
-
-const toolbarItems = computed(() => toolbarComposer([
-  {
-      isAccent: notifications.value.some((item) => item.isNew), // Indicator of new unread notifications
-      component: markRaw(VcNotificationDropdown), // VcNotificationDropdown component
-      options: {
-        title: "Notifications", // Dropdown button title
-        notifications: notifications.value, // Notifications array
-        templates: notificationTemplates, // Injected notification templates
-        onOpen() {
-          // When the dropdown is opened, all notifications are marked as read
-          if (notifications.value.some((x) => x.isNew)) {
-            markAllAsRead();
-          }
-        },
-      },
-    },
-])
-```
+All globally registered notification templates are displayed in the notification dropdown list. To register a notification template, you need to create a component that will be used as a template and register it in the module initialization file.
 
 #### Creating Custom Notification Templates
 
@@ -182,6 +152,8 @@ Each module can have a notification template that will be displayed in the notif
       :color="notificationStyle.color"
       :title="notification.title"
       :icon="notificationStyle.icon"
+      :notification="notification"
+      @click="onClick"
     >
       <!-- any content -->
     </VcNotificationTemplate>
@@ -194,6 +166,13 @@ Each module can have a notification template that will be displayed in the notif
       notification: PushNotification;
     }
 
+    /**
+     * Required to emit `notificationClick` event.
+     */
+    export interface Emits {
+        (event: "notificationClick"): void;
+    }
+
     defineProps<Props>();
 
     defineOptions({
@@ -201,12 +180,35 @@ Each module can have a notification template that will be displayed in the notif
       notifyType: "MyPushNotificationDomainEvent",
     });
 
+    const emit = defineEmits<Emits>();
+
+    const { openBlade, resolveBladeByName } = useBladeNavigation();
+
     const notificationStyle = {
       color: "#87b563",
       icon: "fas fa-percentage",
     };
+
+    /**
+     * Handles click on notification. Usually used to open a blade.
+     */
+    async function onClick() {
+        if (props.notification.notifyType === "MyPushNotificationDomainEvent") {
+            emit("notificationClick");
+            await openBlade(
+                {
+                    blade: resolveBladeByName("ListBlade"),
+                    param: props.notification.id,
+                },
+                true,
+            );
+        }
+    }
     </script>
     ```
+
+!!! note
+    Here, as you can see, we have a `notificationClick` event that is emitted when the notification is clicked. This event is required. If you don't emit it, the notification list will not be closed when the notification is clicked.
 
 2. Make your template globally available. To do this, add it to the module initialization file when initializing the module:
 
@@ -221,60 +223,3 @@ Each module can have a notification template that will be displayed in the notif
     export * from "./pages";
     export * from "./composables";
     ```
-
-#### Performing Actions on Click
-
-You have the ability to perform actions by clicking on these notifications. For example, you can open the blade to which the notification belongs. To do this:
-
-1. Create a click handler in the module itself:
-
-```typescript title="my-module-name/pages/<blade>.vue" linenums="1"
-<script lang="ts" setup>
-defineOptions({
-  url: "/my-blade",
-  scope: {
-    notificationClick(notification: PushNotification) {
-      if (notification.notifyType !== "MyPushNotificationDomainEvent") return;
-      return {
-        // Here, return the props that your blade accepts, like param or options object
-        param: 'my-order-id',
-      };
-    },
-  },
-});
-</script>
-```
-
-2. Add an async `onClick` method in the dropdown component initialization object in the `App.vue` file to handle this click:
-
-```typescript title="App.vue" linenums="1"
-const { openBlade } = useBladeNavigation();
-
-const toolbarItems = computed(() => toolbarComposer([
-  {
-      // ...
-      options: {
-        // ...
-        async onClick(notification: PushNotification) {
-          if (notification) {
-            for (const page of pages) {
-              const notificationClickFn = page.scope?.notificationClick;
-              if (notificationClickFn && typeof notificationClickFn === "function") {
-                const bladeData = notificationClickFn(notification);
-
-                if (bladeData) {
-                  openBlade({
-                    ...bladeData,
-                    blade: page,
-                  });
-
-                      break;
-                    }
-                  }
-                }
-              }
-            },
-          },
-        },
-])
-```

@@ -1,10 +1,152 @@
 # Overview
 
+![DynamicBladeForm](./../../../../media/DynamicBladeForm.png)
+
 This type of view allows you to create blades containing a form. Here is a list of features for this view:
 1) Built-in validation
 2) Ability to create complex UI forms
 3) Customizable component in the blade header
 4) Ability to connect widgets
+
+=== "Usage sample"
+
+    ```typescript
+    import { DynamicDetailsSchema } from "@vc-shell/framework";
+
+    export const details: DynamicDetailsSchema = {
+        settings: {
+            url: "/dynamic-module-details",
+            id: "DynamicItem",
+            localizationPrefix: "DynamicModule",
+            titleTemplate: "Dynamic module details",
+            composable: "useDetails",
+            component: "DynamicBladeForm",
+            toolbar: [
+                {
+                    id: "refresh",
+                    icon: "fas fa-sync-alt",
+                    title: "Refresh",
+                    method: "refresh",
+                },
+            ],
+        },
+        content: [
+            {
+            id: "dynamicItemForm",
+            component: "vc-form",
+            children: [
+                {
+                    id: "itemName",
+                    component: "vc-input",
+                    label: "Name",
+                    property: "name",
+                },
+                {
+                    id: "itemCreatedDate",
+                    component: "vc-input",
+                    label: "Created date",
+                    property: "createdDate",
+                },
+            ],
+            },
+        ],
+    };
+    ```
+
+# View programming structure
+
+## View declaration
+
+To create a view, you need to create a schema and pass it to the dynamic view. The schema must contain the following properties - `settings` and `content`:
+
+```typescript
+interface DynamicDetailsSchema {
+    settings: SettingsDetails;
+    content: [FormContentSchema, WidgetsSchema?];
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `settings` | `SettingsDetails` | The settings of the view.  |
+| `content` | `[FormContentSchema, WidgetsSchema?]` | The content of the view. |
+
+### Schema Settings API
+`SettingsDetails` is an extension of `SettingsBase` with additional settings for `DynamicBladeForm`:
+
+```typescript
+interface SettingsDetails extends SettingsBase {
+    component: "DynamicBladeForm";
+    status?: {
+        component: string;
+    };
+}
+```
+
+Every newly created view must have settings that describe its behavior and appearance. Depending on the type of view used, the settings may vary slightly. The settings are represented by an object built using the following SettingsBase interface:
+
+```typescript
+interface SettingsBase {
+    url?: string;
+    localizationPrefix: string;
+    id: string;
+    titleTemplate: string;
+    composable: string;
+    toolbar: {
+        id: string;
+        title: string;
+        icon: string;
+        method: string;
+    }[];
+    component: "DynamicBladeForm";
+    permissions?: string | string[];
+    pushNotificationType?: string | string[];
+    isWorkspace?: boolean;
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `url` | `string` | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
+| `id` | `string` | The unique ID of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities. |
+| `localizationPrefix` | `string` | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `titleTemplate` | `string` | The title of the view that is shown in the blade header by default. This option is required. |
+| `component` | `"DynamicBladeForm" | "DynamicBladeList"` | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br> - `DynamicBladeList` <br> - `DynamicBladeForm` |
+| `composable` | `string` | The name of the composable used by the view. This option is required. |
+| `isWorkspace` | `boolean` | Indicates whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false` |
+| `toolbar` | `object[]` | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](./toolbar.md) section. |
+| `permissions` | `string | string[]` | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
+| `pushNotificationType` | `string | string[]` | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
+
+### Schema Content API
+
+#### FormContentSchema
+`FormContentSchema` is an interface that contains settings for the form:
+
+```typescript
+interface FormContentSchema {
+  id: string;
+  component: "vc-form";
+  children: ControlSchema[];
+}
+```
+Where `ControlSchema` is an interface that represents array of form controls. More information about each control can be found in the [Features of Dynamic Views](./../overview.md#features-of-dynamic-views) documentation section.
+
+#### WidgetsSchema
+`WidgetsSchema` is an interface that contains settings for widgets:
+
+```typescript
+interface WidgetsSchema {
+  id: "string";
+  component: "vc-widgets";
+  children: string[];
+}
+```
+
+`children` property is an array of widget component names. Widget components must be registered globally. More information about creating widgets can be found in the [Creating widgets](./../widgets.md) documentation section.
+
+
+
 
 ## Creating a composable for DynamicBladeForm
 To create a composable for `DynamicBladeForm`, you need to use the built-in composable factory function named `useDetailsFactory`. This factory returns a composable method that provides you with all the necessary methods and properties to work with the form.
@@ -26,9 +168,7 @@ This function accepts an object with callback methods `load`, `saveChanges`, `re
 !!! note
     The `load`, `saveChanges` and `remove` methods must return a promise.
 
-### Composable Anatomy
-
-#### Implementing composable from `useDetailsFactory`
+### Implementing composable from `useDetailsFactory`
 
 Let's create a file named `useDetails.ts` in the `composables` folder of your module and add the following code:
 
@@ -115,7 +255,7 @@ UseDetails<IOffer, OfferDetailsScope>
 
 This allows you to get proper typing of your composable and data.
 
-#### Access to Blade Component Props and Events
+### Access to Blade Component Props and Events
 All composables created for dynamic views have incoming parameters by default, which are passed from the dynamic views component:
 
 1. `props` - the `props` object of the dynamic views component, which includes all blade parameters.
@@ -139,7 +279,7 @@ const useDetails = (args: {
 
 Thanks to this, you always have access to all incoming blade parameters and can use events `emit` directly from your composable.
 
-#### Blade Scope
+### Blade Scope
 Each composable created for dynamic views can have a special variable - `scope`, which can contain all additional methods, computed values, reactive variables, toolbar overrides that you want to use in your blade.
 
 To use `scope`, you need to return it from your composable:
@@ -167,7 +307,7 @@ interface DetailsScope extends DetailsBaseBladeScope {
 }
 ```
 
-#### `toolbarOverrides` object
+### `toolbarOverrides` object
 
 When you define toolbar object in schema, you probably want to add some custom actions to it or change its visibility or disabled state. To do this, you can use `toolbarOverrides` object in your `scope`:
 
@@ -185,7 +325,7 @@ const useDetails = (args: // ...): UseList => {
 !!! note
     More information about toolbar creation can be found in the [Toolbar schema creation](./../toolbar.md#toolbar-schema-creation) section.
 
-#### Default toolbar buttons
+### Default toolbar buttons
 
 `DynamicBladeForm` has a built-in toolbar buttons, which you can use. All this toolbar button objects has methods, visibility and disabled state already implemented, so you just need to add in in your view schema. Also you can override this methods in `toolbarOverrides` object by its names.
 
@@ -225,63 +365,6 @@ interface IValidationState<Item> {
 | `resetModified` | `(data: MaybeRef<Item>, updateInitial?: MaybeRef<boolean>) => void` | The method used to reset the modified state and, if needed, override the initial `item` value. |
 | `validate` | `FormContext["validate"]` | The Vee-Validate method used to validate the form.  More info could be found in [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default) docs. |
 
-## DynamicBladeForm Blade Context
+### DynamicBladeForm Blade Context
 `DynamicBladeForm` blade context is an object that contains all methods and properties, returned from composable and settings from view schema.
 
-## DynamicBladeForm API
-This view is implemented using the `DynamicDetailsSchema` interface, which includes `settings` and `content`:
-
-```typescript
-interface DynamicDetailsSchema {
-    settings: SettingsDetails;
-    content: [FormContentSchema, WidgetsSchema?];
-}
-```
-
-| Property | Type | Description |
-| --- | --- | --- |
-| `settings` | `SettingsDetails` | The settings of the view.  |
-| `content` | `[FormContentSchema, WidgetsSchema?]` | The content of the view. |
-
-### SettingsDetails
-`SettingsDetails` is an extension of `SettingsBase` with additional settings for `DynamicBladeForm`:
-
-```typescript
-interface SettingsDetails extends SettingsBase {
-    component: "DynamicBladeForm";
-    status?: {
-        component: string;
-    };
-}
-```
-
-!!! note
-    More information about `SettingsBase` can be found in the [Schema Settings API](./schema-settings.md) section.
-
-`Status` option allows you to specify a custom component in the blade header. The component must be registered globally. More information about creating custom components can be found in the [Creating custom templates](./../custom-templates.md) documentation section.
-
-
-### FormContentSchema
-`FormContentSchema` is an interface that contains settings for the form:
-
-```typescript
-interface FormContentSchema {
-  id: string;
-  component: "vc-form";
-  children: ControlSchema[];
-}
-```
-Where `ControlSchema` is an interface that represents array of form controls. More information about each control can be found in the [controls](../controls.md) documentation section.
-
-### WidgetsSchema
-`WidgetsSchema` is an interface that contains settings for widgets:
-
-```typescript
-interface WidgetsSchema {
-  id: "string";
-  component: "vc-widgets";
-  children: string[];
-}
-```
-
-`children` property is an array of widget component names. Widget components must be registered globally. More information about creating widgets can be found in the [Creating widgets](./../widgets.md) documentation section.

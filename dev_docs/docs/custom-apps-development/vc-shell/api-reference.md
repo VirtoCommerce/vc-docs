@@ -38,13 +38,8 @@ The VcBlade API reference offers detailed information about the props, events, a
 
 | Name                   | Description                                                             |
 | -------------------------- | ----------------------------------------------------------------------- |
-| `blades` {==IBladeContainer[]==} | An array containing opened blades with their index number.        |
-| `workspaceOptions` {==Object==} | An object containing key-value pairs used as options for the workspace blade. |
-| `workspaceParam` {==String==}  | A string containing the blade parameter used by the `param` prop in the workspace blade. |
-| `bladesRefs` {==IBladeRef[]==} | Blade refs used to store opened blades. |
-| `lastBladeData` {==BladeData==} | Last opened blade data storage. |
-| `activeBlade` {==IBladeContainer==} | Blade on which the user is focused. |
-| `bladesRefs` {==IBladeRef[]==} | Blade refs used to store opened blades. |
+| `blades` {==ComputedRef<BladeRouteRecordLocationNormalized \| undefined>==} | An array containing active blade components on given route.        |
+| `currentBladeNavigationData` {==ComputedRef<BladeVNode["props"]["navigation"]>==} | An object containing the current blade navigation data. |
 
 ### Methods
 
@@ -53,7 +48,10 @@ The VcBlade API reference offers detailed information about the props, events, a
 Opens a blade with the specified configuration.
 
 * Type
-    **openBlade**: ```<Blade extends ComponentPublicInstance = ComponentPublicInstance>({ blade, param, options, onOpen, onClose }: IBladeEvent<Blade>, isWorkspace = false) => void```
+    **openBlade**: ```<Blade extends Component>(
+    { blade, param, options, onOpen, onClose }: IBladeEvent<Blade>,
+    isWorkspace?: boolean,
+  ) => Promise<void | NavigationFailure>```
 
 * Parameters
 
@@ -65,7 +63,7 @@ Opens a blade with the specified configuration.
     | `onOpen` (optional)   {==() => void==}                                                                        | Method called when the blade is opened.                            |
     | `onClose` (optional)  {==() => void==}                                                                        | Method called when the blade is closed.                            |
 
-* Returns: `void`
+* Returns: `Promise<void | NavigationFailure>`
 
 #### `closeBlade`
 
@@ -73,16 +71,17 @@ Closes an opened blade or all opened blades.
 
 * Type
 
-    **closeBlade**: ```(index: number) => Promise<boolean>```
+    **closeBlade**: ```(index: number, changeLocation?: boolean) => Promise<false | void | NavigationFailure>```
 
 * Parameters
 
     | Name               | Description                                                  |
     | ---------------------- | ------------------------------------------------------------ |
     | `index` {==Number==}   | Id of the opened blade.                                      |
+    | `changeLocation` (optional) {==Boolean==} | Determines whether to change the URL. |
 
 
-* Returns: `Promise<boolean>`. Returns `false` if closing the blade was prevented by the `onBeforeClose` method in the blade component.
+* Returns: `Promise<false | void | NavigationFailure>`
 
 #### `onParentCall`
 
@@ -90,25 +89,39 @@ Calls any function on the parent blade, if it has been exposed there.
 
 * Type
 
-    **onParentCall**: ```(index: number, args: IParentCallArgs) => void```
+    **onParentCall**: ```(parentExposedMethods: Record<string, any>, args: IParentCallArgs) => void```
 
 * Parameters
 
     | Name                       | Description                                                            |
     |---------------------------------|------------------------------------------------------------------------|
-    | `index` {==number==}            | Index of the parent blade.                                             |
+    | `parentExposedMethods` {==Record<string, any>==} | Object containing the parent blade's exposed methods. |
     | `args`  {==IParentCallArgs==}   | Object containing the method name, arguments, and an optional callback.|
 
 
 * Returns: `void`
 
-#### `resolveBlades`
+#### `routeResolver`
 
-Resolves blades from vue-router's navigation guard `to` param. Used to display blades after page reload or accessing via direct link. Returns a string containing the URL of the latest opened workspace.
+Resolves and generates routes after page reload or accessing via direct link. Used only in Vue router configuration:
+
+```typescript
+const routes = [
+ ...,
+ {
+    path: "/:pathMatch(.*)*",
+    component: App,
+    beforeEnter: async (to) => {
+      const { routeResolver } = useBladeNavigation();
+      return routeResolver(to);
+    },
+  },
+]
+```
 
 * Type:
 
-    **resolveBlades**: ```(to: RouteLocationNormalized) => string```
+    **routeResolver**: ```(to: RouteLocationNormalized) => Promise<void | NavigationFailure | undefined> | undefined```
 
 * Parameters
 
@@ -116,39 +129,7 @@ Resolves blades from vue-router's navigation guard `to` param. Used to display b
     |----------------------------------|---------------------------|
     | `to` {==RouteLocationNormalized==} | Vue router's route record |
 
-* Returns: `string`
-
-#### `resolveUnknownRoutes`
-
-Resolves erroneous and unknown navigation routes. Used as a navigation hook for a Vue router.
-
-* Type:
-
-    **resolveUnknownRoutes**: ```(to: RouteLocationNormalized) => string```
-
-* Parameters
-
-    | Name                             | Description               |
-    |----------------------------------|---------------------------|
-    | `to` {==RouteLocationNormalized==} | Vue router's route record |
-
-* Returns: `string`
-
-#### `resolveLastBlade`
-
-Resolves last opened blade on page reload or accessing via a direct link.
-
-* Type:
-
-    **resolveLastBlade**: ```(pages: BladePageComponent[]) => void```
-
-* Parameters
-
-    | Name                             | Description     |
-    |----------------------------------|-----------------|
-    | `pages` {==BladePageComponent[]==} | Array of blades |
-
-* Returns: `void`
+* Returns: `Promise<void | NavigationFailure | undefined> | undefined`
 
 #### `resolveBladeByName`
 
@@ -156,7 +137,7 @@ Allows you to resolve a blade component using its registered name. Supports both
 
 * Type:
 
-    **resolveBladeByName**: ```(name: string) => BladeConstructor```
+    **resolveBladeByName**: ```(name: string) => BladeInstanceConstructor```
 
 * Parameters
 
@@ -164,7 +145,17 @@ Allows you to resolve a blade component using its registered name. Supports both
     |-------------------|---------------------------------------------|
     | `name` {==String==} | Blade component name or ID in dynamic views |
 
-* Returns: `BladeConstructor`
+* Returns: `BladeInstanceConstructor`
+
+#### `getCurrentBlade`
+
+Returns the current blade VNode.
+
+* Type:
+
+    **getCurrentBlade**: ```() => BladeVNode```
+
+* Returns: `BladeVNode`
 
 ## Notifications
 

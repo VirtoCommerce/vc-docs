@@ -44,7 +44,7 @@ To include and set up custom applications:
 
 2. Initialize the module in the navigation menu:
 
-    ```json title="vc-app-extend/src/pages/App.vue" linenums="1"
+    ```typescript title="vc-app-extend/src/pages/App.vue" linenums="1"
     // Initialize module in navigation menu
     const menuItems = reactive(
         navigationMenuComposer([
@@ -104,7 +104,7 @@ To replace the original API types used by `@vc-app` with updated ones, generate 
 
 1. Set the `APP_PLATFORM_URL` in your project's **.env** file.
 
-    ```json title="vc-app-extend/.env" linenums="1"
+    ```yml title="vc-app-extend/.env" linenums="1"
     # Set your Platform URL here
     APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/
     ```
@@ -152,7 +152,7 @@ For more information, refer to the [Generate API Client](../How-tos/generate-api
 
 To customize your applications to specific requirements, you can customize the command processing logic. This involves overriding default behaviors. The modules underlying your application rely on API client packages as peerDependencies. To replace the API they use, add an alias to your main application's Vite configuration file, `vite.config.ts`:
 
-```json title="vc-app-extend/vite.config.ts" linenums="1"
+```typescript title="vc-app-extend/vite.config.ts" linenums="1"
 export default getApplicationConfiguration({
   resolve: {
     alias: {

@@ -40,36 +40,6 @@ The primary elements of a blade include:
 
     ![Nav-menu](../../media/nav-menu.png)
 
-## Creating a Navigation Menu
-
-The navigation menu is created in the App.vue file and displays links to the modules you've created. It can also contain links to other pages that are not modules, offering full flexibility to cater to your specific needs.
-
-To create a navigation menu, you can utilize the `navigationMenuComposer`, a specialized function. It processes the components provided to it and can directly access any option props set in those components. Additionally, you can create nested menu items using the children key:
-
-```typescript title="App.vue" linenums="1"
-const menuItems = reactive(
-  navigationMenuComposer([
-    {
-      title: "Blade",
-      icon: "fas fa-file-alt",
-      isVisible: true,
-      // To use a component without nesting, use the 'component' key
-      component: BladeComponent,
-      // To nest, use the 'children' key
-      children: [
-        {
-          title: 'Nested 1',
-          component: NestedFirst,
-        },
-        {
-          title: 'Nested 2',
-          component: NestedSecond,
-        },
-      ],
-    },
-  ])
-```
-
 ## Quick Start for Navigation
 
 To get started with the VC Shell application's navigation system, import the `useBladeNavigation` composable from the `@vc-shell/framework` package:
@@ -128,6 +98,20 @@ defineOptions({
 });
 ```
 
+* If you want your blade to have its own navigation menu item, you can use the defineOptions macro:
+
+```typescript linenums="1"
+defineOptions({
+    ...,
+    menuItem: {
+        title: "My blade",
+        icon: "fas fa-file-alt",
+        priority: 1,
+        group: 'My group', // Optional
+    },
+});
+```
+
 * To create a blade toolbar, make use of the IBladeToolbar interface:
 
 ```typescript linenums="1"
@@ -142,18 +126,6 @@ const bladeToolbar = ref<IBladeToolbar>([
     });
 ```
 
-* To implement actions upon closing the blade, create a function and expose it. This function should be named onBeforeClose:
-
-```typescript linenums="1"
-async function onBeforeClose() {
-    return await showConfirmation("Are you sure you want to close the blade?");
-}
-
-defineExpose({
-    onBeforeClose,
-})
-```
-
 ## Routing
 
 The application's routing can be handled using the `openBlade` method from the `useBladeNavigation` composable:
@@ -164,7 +136,7 @@ import { useBladeNavigation } from '@vc-shell/framework';
 const { openBlade } = useBladeNavigation();
 ```
 
-To navigate to a module or open a new blade, utilize the `openBlade` method. Pass the blade component you wish to navigate to as an argument.
+To navigate to a module or open a new blade, utilize the async `openBlade` method. Pass the blade component you wish to navigate to as an argument.
 
 Additionally, you can provide parameters, options, and two types of callbacks, namely `onOpen` and `onClose`, which execute when the blade is opened or closed, respectively:
 
@@ -175,7 +147,7 @@ import Blade from './blade-component.vue'
 
 const { openBlade } = useBladeNavigation();
 
-openBlade({
+await openBlade({
     blade: markRaw(Blade),
     param: ...,
     options: {
@@ -203,99 +175,6 @@ export default createAppModule(pages, locales);
 ```
 
 ## Usage Examples
-
-=== "App.vue"
-
-    ```html linenums="1"
-    <template>
-        <VcApp
-            :menu-items="menuItems" // Navigation menu items
-            :pages="pages" // Array of all blades with their paths
-            :blades-refs="bladesRefs" // Refs to update navigation
-            @backlink:click="closeBlade($event)" // Back button click action in mobile view
-        >
-            <template #bladeNavigation>
-            <VcBladeNavigation
-                ref="bladeNavigationRefs" // Refs to update navigation
-                :blades="blades" // Blades array
-                :workspace-options="workspaceOptions" // Workspace options prop
-                :workspace-param="workspaceParam" // Workspace param prop
-                @on-close="closeBlade($event)" // Event triggered on blade close
-                @on-parent-call="(e) => onParentCall(e.id, e.args)" // Event triggered by a blade to the previous blade
-                @vue:mounted="resolveLastBlade(pages)" // Event triggered by the VcBladeNavigation 'onMounted' hook to determine the last blade from its path
-            ></VcBladeNavigation>
-            </template>
-        </VcApp>
-    </template>
-    ```
-    ```typescript linenums="1"
-    import { watch, ref, reactive } from "vue";
-    import { useBladeNavigation, navigationMenuComposer } from "@vc-shell/framework";
-    import Blade from "../modules/my-blade";
-
-    const { blades, bladesRefs, parentBladeOptions, parentBladeParam, closeBlade, onParentCall } = useBladeNavigation();
-    const bladeNavigationRefs = ref();
-
-    /**
-    * Blade navigation refs handler
-    */
-    watch(
-    () => bladeNavigationRefs.value?.bladesRefs,
-    (newVal) => {
-        bladesRefs.value = newVal;
-    },
-    { deep: true }
-    );
-
-    /**
-    * Create navigation menu
-    */
-    const menuItems = reactive(
-    navigationMenuComposer([
-        {
-        title: "My blade",
-        icon: "fas fa-file-alt",
-        isVisible: true,
-        component: Blade,
-        },
-    ])
-    );
-    ```
-
-=== "Vue Router Config"
-
-    ```typescript linenums="1"
-    import Blade from "../modules/my-blade";
-
-    const routes: RouteRecordRaw[] = [
-    {
-        path: "/",
-        component: App,
-        name: "App",
-        meta: {
-        root: true,
-        }
-        children: [],
-    },
-    {
-        path: "/:pathMatch(.*)*",
-        component: App,
-        beforeEnter: (to) => {
-        /**
-         * Unknown and error routes resolve method
-         */
-        const { resolveUnknownRoutes } = `useBladeNavigation`();
-
-        return resolveUnknownRoutes(to);
-        },
-    },
-    ];
-
-    export const router = createRouter({
-    history: createWebHashHistory(import.meta.env.APP_BASE_PATH as string),
-    routes,
-    });
-    ```
 
 === "Blade"
 
@@ -332,7 +211,13 @@ export default createAppModule(pages, locales);
     * Define your path
     */
     defineOptions({
-        url: '/my-first-blade'
+        url: '/my-first-blade',
+        menuItem: {
+            title: "My blade",
+            icon: "fas fa-file-alt",
+            priority: 1,
+            group: 'My group',
+        },
     })
 
     withDefaults(defineProps<Props>(), {
@@ -348,10 +233,11 @@ export default createAppModule(pages, locales);
 
 === "Open Blade"
 
-    To open a new workspace, you can use the `router.push()` method from `Vue Router`. However, a more convenient method is to use the `openBlade` function from the `useBladeNavigation` composable. It offers the advantage of setting initial data when opening the blade. When using imported blade components with `openBlade`, remember to use Vue's `markRaw` method to prevent conversion to a proxy, thereby optimizing performance.
+    To open a new workspace, you can use the `openBlade` function from the `useBladeNavigation` composable with second argument `isWorkspace === true` . It offers the advantage of setting initial data when opening the blade. When using imported blade components with `openBlade`, remember to use Vue's `markRaw` method to prevent conversion to a proxy, thereby optimizing performance.
+
 
     ```typescript linenums="1"
-    openBlade({
+    await openBlade({
         blade: markRaw(MyImportedNewBlade),
         options: {}, // Typed options specific to MyImportedNewBlade, if any
         param: 'my-any-string-param'
@@ -361,7 +247,31 @@ export default createAppModule(pages, locales);
         onClose() {
             // Define actions when the blade is closed
         }
-    })
+    }, true)
+    ```
+
+    Or you can use `resolveBladeByName` method to get blade component by its name.
+
+    ```typescript linenums="1"
+    await openBlade({
+        blade: resolveBladeByName(MyImportedNewBlade),
+        options: {}, // Typed options specific to MyImportedNewBlade, if any
+        param: 'my-any-string-param'
+        onOpen() {
+            // Define actions when the blade is opened
+        },
+        onClose() {
+            // Define actions when the blade is closed
+        }
+    }, true)
+    ```
+
+    If you want to open the blade in the same workspace, you can use the `openBlade` function from the `useBladeNavigation` composable with second argument `isWorkspace === false` or without it:
+
+    ```typescript linenums="1"
+     await openBlade({...})
+     // or
+     await openBlade({...}, false)
     ```
 
 === "Close Blade"
@@ -377,6 +287,12 @@ export default createAppModule(pages, locales);
     </VcBlade>
     ```
 
+    Or if you know the index of the blade you want to close, you can use the `closeBlade` function from the `useBladeNavigation` composable:
+
+    ```typescript linenums="1"
+    closeBlade(indexNumber)
+    ```
+
 === "Execute Methods in the Previous Blade"
 
     Each blade can emit a `parent:call` event to invoke a method in its parent blade. To execute a method in the parent blade, you must expose it using `defineExpose`.
@@ -388,20 +304,20 @@ export default createAppModule(pages, locales);
     }
 
     defineExpose({
-    reload,
+        reload,
     })
 
     // Child blade
     interface Emits {
-    (event: 'parent:call', args: IParentCallArgs): void;
+        (event: 'parent:call', args: IParentCallArgs): void;
     }
 
     const emit = defineEmits<Emits>();
 
     function anyFunction() {
-    emit("parent:call", {
-        method: "reload", // Exposed method in the parent blade
-    });
+        emit("parent:call", {
+            method: "reload", // Exposed method in the parent blade
+        });
     }
     ```
 

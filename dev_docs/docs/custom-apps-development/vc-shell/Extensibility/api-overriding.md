@@ -2,7 +2,7 @@
 
 This guide provides a comprehensive overview of the process of replacing APIs in custom VC-Shell applications using TypeScript strongly typed API clients. It specifically addresses situations where you need to access new fields or functionalities when extending the Virtocommerce REST API used by another application. The primary objective is to enable the incorporation of additional features without the need to modify the source code of the external application. To demonstrate this process, we will focus on the `vc-app-extend` project, an extension of the `vc-app` project located in the `sample` folder.
 
-[![View the source code of the sample project](../../media/source_code.png)](https://github.com/VirtoCommerce/vc-shell/tree/main/sample/vc-app-extend)
+[![View the source code of the sample project](../media/source_code.png)](https://github.com/VirtoCommerce/vc-shell/tree/main/sample/vc-app-extend)
 
 ## Replacing APIs in Custom Modules of Other Applications
 
@@ -14,7 +14,7 @@ When developing custom applications, there may be situations where you need to u
 
 ### Generating an API
 
-The process of generating the API is explained in detail in another one of our articles. Before proceeding with this guide, it is advisable to follow the link provided to gain a comprehensive understanding of the process. [How To Generate API client](./../../How-tos/generate-api-client.md)
+The process of generating the API is explained in detail in another one of our articles. Before proceeding with this guide, it is advisable to follow the link provided to gain a comprehensive understanding of the process. [How To Generate API client](../How-tos/generate-api-client.md)
 
 ### Using the Generated API
 

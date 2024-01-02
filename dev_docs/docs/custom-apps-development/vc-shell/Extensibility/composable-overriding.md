@@ -16,7 +16,7 @@ You can extend a composable by appending new methods, variables, or computed val
 
 **Step 1: Create Overrides**
 
-Initiate the process by creating overrides for the external module. For more information, please refer to the [Extending Views](./extending-views.md) guide. In this illustration, we'll introduce a new button to the toolbar:
+Initiate the process by creating overrides for the external module. For more information, please refer to the [Extending Views](../Essentials/Dynamic-Views/extending-views.md) guide. In this illustration, we'll introduce a new button to the toolbar:
 
 ```typescript title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
 import { OverridesSchema } from "@vc-shell/framework";
@@ -224,4 +224,4 @@ startApp()
 
 After following these steps, you will have extended a composable by adding a new method and a toolbar button to your application.
 
-![result3](../../../media/result3.png)
+![result3](../../media/result3.png)
