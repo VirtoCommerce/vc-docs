@@ -25,7 +25,7 @@ To create and install custom app:
     yarn create @vc-shell/vc-app
     ```
 
-1. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
+2. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
 
     ```bash
     ✔ Project name: … <your-app-name>
@@ -39,10 +39,22 @@ To create and install custom app:
     Done.
     ```
 
-1. Once the application is created, follow these instructions to install the dependencies and start the development server:
+3. Once the application is created, follow to the application folder and add Platform URL to the `.env` file under the `APP_PLATFORM_URL` variable:
 
     ```bash
     $ cd `<your-app-name>`
+    $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env
+    ```
+
+    Also, after adding the Platform URL, you should follow this steps:
+    1) follow to the `vite.config.mts` and remove `define` key from the config, because it is not needed anymore. This action should activate API calls to the Platform.
+    2) follow to the `src/main.ts` and remove commented code with `loadUser`, which is said to be removed after adding `APP_PLATFORM_URL` variable.
+    3) Now you can proceed to the next step.
+
+
+4. Follow these instructions to install the dependencies and start the development server:
+
+    ```bash
     $ yarn
     $ yarn serve
     ```

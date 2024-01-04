@@ -476,7 +476,7 @@ const useList = (args: // ...): UseList => {
 ```
 
 !!! note
-    More information about toolbar creation can be found in the [Toolbar schema creation](./../toolbar.md#toolbar-schema-creation) section.
+    More information about toolbar creation can be found in the [Toolbar schema creation](../../Controls/toolbar.md#toolbar-schema-creation) section.
 
 ### Default toolbar buttons
 
@@ -485,8 +485,9 @@ const useList = (args: // ...): UseList => {
 This method names are: `openAddBlade`, `refresh`, `removeItems`, `save`
 
 !!! note
-    More information about toolbar overriding can be found in the [Overriding default toolbar methods and properties](./../toolbar.md#overriding-default-toolbar-methods-and-properties) section.
+    More information about toolbar overriding can be found in the [Overriding default toolbar methods and properties](../../Controls/toolbar.md#overriding-default-toolbar-methods-and-properties) section.
 
 ### DynamicBladeList Blade Context
+
 `DynamicBladeList` blade context is an object that contains all methods and properties, returned from composable and settings from view schema.
 

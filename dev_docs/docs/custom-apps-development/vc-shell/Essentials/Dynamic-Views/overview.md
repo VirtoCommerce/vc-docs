@@ -17,37 +17,44 @@ Due to the absence of the need to create blade templates and composable with all
 ## Features of Dynamic Views
 
 Dynamic views come equipped with the following built-in features:
--   **Pagination**
--   **Validation**
--   **Permissions**
--   **Push notifications**
--   **Localization**
--   **Customizable toolbar**
--   **Customizable control templates**
+
+- **Pagination**
+- **Validation**
+- **Permissions**
+- **Push notifications**
+- **Localization**
+- **Customizable toolbar**
+- **Customizable control templates**
 
 and more.
 
 Also it has a bunch of built-in controls from VC-Shell UI-kit and components for creating UIs:
 
 Atoms:
--   **[VcButton](./../Controls/Atoms/VcButton.md)**
--   **[VcImage](./../Controls/Atoms/VcImage.md)**
--   **[VcStatus](../Controls/Atoms/VcStatus.md)**
--   **[VcVideo](../Controls/Atoms/VcVideo.md)**
--   **[VcCheckbox](../Controls/Atoms/VcCheckbox.md)**
--   **[VcCard](../Controls/Atoms/VcCard.md)**
+
+- **[VcButton](./../Controls/Atoms/VcButton.md)**
+- **[VcImage](./../Controls/Atoms/VcImage.md)**
+- **[VcStatus](../Controls/Atoms/VcStatus.md)**
+- **[VcVideo](../Controls/Atoms/VcVideo.md)**
+- **[VcCheckbox](../Controls/Atoms/VcCheckbox.md)**
+- **[VcCard](../Controls/Atoms/VcCard.md)**
 
 Molecules:
--   **[VcField](../Controls/Molecules/VcField.md)**
--   **[VcEditor](../Controls/Molecules/VcEditor.md)**
--   **[VcInput](../Controls/Molecules/VcInput.md)**
--   **[VcSelect](../Controls/Molecules/VcSelect.md)**
--   **[VcInputCurrency](../Controls/Molecules/VcInputCurrency.md)**
+
+- **[VcField](../Controls/Molecules/VcField.md)**
+- **[VcEditor](../Controls/Molecules/VcEditor.md)**
+- **[VcInput](../Controls/Molecules/VcInput.md)**
+- **[VcSelect](../Controls/Molecules/VcSelect.md)**
+- **[VcInputCurrency](../Controls/Molecules/VcInputCurrency.md)**
 
 Organisms:
--   **[VcGallery](../Controls/Organisms/VcGallery.md)**
--   **[VcDynamicProperty](../Controls/Organisms/VcDynamicProperty.md)**
--   **[VcFieldset](../Controls/Organisms/VcFieldset.md)**
+
+- **[VcGallery](../Controls/Organisms/VcGallery.md)**
+- **[VcDynamicProperty](../Controls/Organisms/VcDynamicProperty.md)**
+- **[VcFieldset](../Controls/Organisms/VcFieldset.md)**
+
+- **[Widgets](../Controls/widgets.md)**
+- **[Toolbar](../Controls/toolbar.md)**
 
 ## How to Create a Dynamic View?
 

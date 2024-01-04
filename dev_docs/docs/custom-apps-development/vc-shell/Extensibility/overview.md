@@ -42,25 +42,7 @@ To include and set up custom applications:
     startApp()
     ```
 
-2. Initialize the module in the navigation menu:
-
-    ```typescript title="vc-app-extend/src/pages/App.vue" linenums="1"
-    // Initialize module in navigation menu
-    const menuItems = reactive(
-        navigationMenuComposer([
-          ...
-            {
-              title: "Offers",
-              icon: "fas fa-file-invoice",
-              isVisible: true,
-              component: resolveBladeByName("Offers"),
-            },
-          ...
-        ])
-    );
-    ```
-
-3. Verify the result:
+2. Verify the result:
 
     ![Result](../../media/result.png)
 

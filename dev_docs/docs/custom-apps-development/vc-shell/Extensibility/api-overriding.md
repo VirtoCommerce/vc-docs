@@ -22,6 +22,7 @@ After generating the API, you need to integrate it into your application. Since 
 
 1. Ensure you are in the root folder of your project and confirm the path to your generated API. By default, this path is `src/api_client`. In the command line, execute the following command:
 2.
+
    ```bash
    cd src/api_client && yarn init
    ```
@@ -105,11 +106,13 @@ After generating the API, you need to integrate it into your application. Since 
    ```
 
    Subsequently, include the newly added dependency from the previous step into your project using the following command:
+
    ```bash
    yarn add @vc-app-extend/api
    ```
 
 8. Finally, install the dependencies by executing the following command:
+
    ```bash
    yarn install
    ```

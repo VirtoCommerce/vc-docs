@@ -1,4 +1,5 @@
 # Gallery
+
 Gallery is a image gallery component with upload and preview.
 
 ## Usage

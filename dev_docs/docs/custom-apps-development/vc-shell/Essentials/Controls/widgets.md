@@ -1,8 +1,14 @@
-# Creating Widgets
+# Widgets
 
-To create a widget, you need to generate a new file within the `components/widgets` folder of your module. For instance, if you named it `MyWidget` in the schema, the exported component should share the same name. Essentially, widgets are standard Vue components capable of utilizing other components and markup.
+A widget is a stand-alone component that allows you to display information and perform actions when clicked. Widgets can be used in dynamic views as well as templates.
 
-## Widget Component Creation
+## Usage
+
+![widget](./../../../media/widget.png)
+
+To create a widget, you need to generate a new file within the `components/widgets` folder of your module. For instance, if you named it `MyWidget` in the schema or template, the exported component should share the same name. Essentially, widgets are standard Vue components capable of utilizing other components and markup.
+
+## Component Creation
 
 The widget component is constructed using the `VcWidget` component from the UI kit `@vc-shell/framework`. This component accepts the following parameters as props:
 
@@ -28,7 +34,7 @@ const emit = defineEmits<{
 ```
 
 !!! note
-    More information about context can be found in the [DynamicBladeForm](./views/DynamicBladeForm.md#dynamicbladeform-blade-context) section.
+    More information about context can be found in the [DynamicBladeForm](../Dynamic-Views/views/DynamicBladeForm.md#dynamicbladeform-blade-context) section.
 
 ## Counter Setup
 
@@ -186,9 +192,7 @@ Since any logic can be implemented in the widget, let's consider its basic versi
     );
 
     const { loading, action: getCount } = useAsync<QueryFromApi, number | undefined>(async (query) => {
-        return (
-
-    await client).searchItems(query).then((res) => res.totalCount);
+        return (await client).searchItems(query).then((res) => res.totalCount);
     });
 
     async function clickHandler() {
@@ -223,5 +227,4 @@ Since any logic can be implemented in the widget, let's consider its basic versi
 To register a widget, add its export to the main `index.ts` file located in the `components` folder of your module. For example, if you specified the name `MyWidget` in the schema, the component export should have the same name. Afterward, by adding all your components to the `createDynamicAppModule` method in the `moduleComponents` option, you will be able to use them in dynamic views.
 
 !!! note
-    An example of using this method can be found in the [Registering Custom Templates](#registering-custom-templates) section.
-
+    An example of using this method can be found in the [Registering Custom Templates](./../Dynamic-Views/custom-templates.md#registering-custom-templates) section.
