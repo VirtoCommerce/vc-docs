@@ -131,7 +131,7 @@ To access the Platform and perform initial sign-in:
 1. If you encounter the **Your connection is not private** error, click **Advanced --> Proceed to...**. This option allows you to proceed to the website even though the browser has detected an issue with the SSL certificate.
    
     !!! note
-        For additional details on addressing this error and using a self-signed certificate, refer to [Trust the ASP.NET Core HTTPS development certificate](link-to-guide).
+        For additional details on addressing this error and using a self-signed certificate, refer to [Trust the ASP.NET Core HTTPS development certificate](https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-8.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos).
 
 1. Upon the first request, the application will create and initialize the database.
 1. Once completed, you will be redirected to the sign-in page. Use the following credentials to sign in:
