@@ -576,14 +576,40 @@ nav:
         - Start using VC shell: custom-apps-development/vc-shell/Getting-started/getting-started.md
         - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
       - Essentials:
+        - Controls: 
+          - VcButton: custom-apps-development/vc-shell/Essentials/controls/VcButton.md
+          - VcCard: custom-apps-development/vc-shell/Essentials/controls/VcCard.md
+          - VcCheckbox: custom-apps-development/vc-shell/Essentials/controls/VcCheckbox.md
+          - VcImage: custom-apps-development/vc-shell/Essentials/controls/VcImage.md
+          - VcStatus: custom-apps-development/vc-shell/Essentials/controls/VcStatus.md
+          - VcVideo: custom-apps-development/vc-shell/Essentials/controls/VcVideo.md
+          - VcEditor: custom-apps-development/vc-shell/Essentials/controls/VcEditor.md
+          - VcField: custom-apps-development/vc-shell/Essentials/controls/VcField.md
+          - VcInput: custom-apps-development/vc-shell/Essentials/controls/VcInput.md
+          - VcInputCurrency: custom-apps-development/vc-shell/Essentials/controls/VcInputCurrency.md
+          - VcSelect: custom-apps-development/vc-shell/Essentials/controls/VcSelect.md
+          - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/controls/VcDynamicProperty.md
+          - VcFieldset: custom-apps-development/vc-shell/Essentials/controls/VcFieldset.md
+          - Toolbar: custom-apps-development/vc-shell/Essentials/controls/Toolbar.md
+          - Widgets: custom-apps-development/vc-shell/Essentials/controls/Widgets.md
+        - Dynamic views:
+          - Overview: custom-apps-development/vc-shell/Essentials/dynamic-views/overview.md
+          - DynamicBladeForm: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-Form.md
+          - DynamicBladeList: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-List.md
+          - Custom Templates: custom-apps-development/vc-shell/Essentials/dynamic-views/Custom-Templates.md
+          - Extending Views: custom-apps-development/vc-shell/Essentials/dynamic-views/Extending-Views.md
+          - Creating Page Schema: custom-apps-development/vc-shell/Essentials/dynamic-views/Creating-Page-Schema.md
+          - Using Modules from Other Applications: custom-apps-development/vc-shell/Essentials/dynamic-views/Using-Modules-from-Other-Applications.md
         - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
         - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
       - Extensibility: 
         - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
+        - Overriding API: custom-apps-development/vc-shell/Extensibility/Overriding-API.md
+        - Overriding Composables: custom-apps-development/vc-shell/Extensibility/Overriding-Composables.md
       - API reference: custom-apps-development/vc-shell/api-reference.md
       - How-tos:
+        - Connecting to Platform: custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md
         - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md
-
 extra:
     social:
       - icon: fontawesome/brands/github
