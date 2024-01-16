@@ -280,6 +280,7 @@ app_data/
 
 /src/VirtoCommerce.Platform.Web/modules
 # mkdocs output
+site/
 /site
 /src/VirtoCommerce.Platform.Caching/VirtoCommerce.Platform.Caching.xml
 /src/VirtoCommerce.Platform.Data/VirtoCommerce.Platform.Data.xml

@@ -1,5 +1,5 @@
-﻿# Developer Documentation
-Welcome to Virto Commerce Developer Documentation Center. From here, you can learn how to set up, build, develop, and maintain your Virto solutions.
+﻿# Platform Developer Documentation
+Welcome to Virto Commerce Platform Developer Documentation Center. From here, you can learn how to set up, build, develop, and maintain your Virto solutions.
 
 Here are some basic topics we cover here:
 

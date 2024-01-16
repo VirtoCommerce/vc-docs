@@ -1,21 +1,21 @@
 theme:
     name: material
-    custom_dir: overrides
+    custom_dir: ../overrides
     language: en
-#    features:
-#        - instant # (still experimental) feature fails to load images when folder changes
+    #    features:
+    #        - instant # (still experimental) feature fails to load images when folder changes
     favicon: legacy/media/favicon.ico
     logo: assets/icons/logo.svg
     logobw: assets/icons/logo-bw.svg
     palette:
-        -   scheme: default
-            toggle:
-                icon: assets/icons/dark-mode.svg
-                name: Night mode
-        -   scheme: slate
-            toggle:
-                icon: assets/icons/light-mode.svg
-                name: Light mode
+        - scheme: default
+          toggle:
+              icon: assets/icons/dark-mode.svg
+              name: Night mode
+        - scheme: slate
+          toggle:
+              icon: assets/icons/light-mode.svg
+              name: Light mode
     font:
         text: Circular Std
         code: Ubuntu Mono
@@ -33,30 +33,30 @@ markdown_extensions:
     - pymdownx.magiclink
     - attr_list
     - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
     - search # necessary for search to work
- #   - autolinks
+    #   - autolinks
     - awesome-pages:
- #       strict: false
+    #       strict: false
     - git-revision-date-localized
- #   - minify:
- #       minify_html: true
+    #   - minify:
+    #       minify_html: true
     - redirects:
-        redirect_maps:
-            'redir.md': 'index.md'
+          redirect_maps:
+              "redir.md": "index.md"
 
 # Project information
-site_name: Documentation
-site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
+site_name: Storefront documentation
+site_description: Storefront documentation center
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
 
 # Repository
-repo_name: VirtoCommerce/vc-platform
-repo_url: https://github.com/VirtoCommerce/vc-platform
+repo_name: VirtoCommerce/vc-theme-b2b-vue
+repo_url: https://github.com/VirtoCommerce/vc-theme-b2b-vue
 edit_uri: edit/dev/docs/
 
 # Copyright
@@ -64,18 +64,18 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 extra:
     social:
-      - icon: fontawesome/brands/github
-        link: https://github.com/VirtoCommerce
-      - icon: fontawesome/brands/facebook
-        link: https://facebook.com/VirtoCommerce
-      - icon: fontawesome/brands/twitter
-        link: https://twitter.com/virtocommerce?lang=en
-      - icon: fontawesome/brands/instagram
-        link: google.com
-      - icon: fontawesome/brands/linkedin
-        link: https://www.linkedin.com/company/virto-commerce/
-      - icon: fontawesome/brands/youtube
-        link: https://www.youtube.com/c/Virtocommerce/videos
+        - icon: fontawesome/brands/github
+          link: https://github.com/VirtoCommerce
+        - icon: fontawesome/brands/facebook
+          link: https://facebook.com/VirtoCommerce
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/virtocommerce?lang=en
+        - icon: fontawesome/brands/instagram
+          link: google.com
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.com/company/virto-commerce/
+        - icon: fontawesome/brands/youtube
+          link: https://www.youtube.com/c/Virtocommerce/videos
     search:
         icon: assets/icons/search.svg
     rss:
@@ -95,18 +95,14 @@ extra:
             #     icon: assets/icons/package.svg
             #     description: I need to build the platform's architecture or learn how I can do that.
             #     link: https://docs.virtocommerce.org/architecture-center/B2B-multiregional/
-            -   title: Storefront
-                icon: assets/icons/person.svg
-                description: Build and personalize your online store for engaging shopping experiences
-                link: storefront_docs
-            -   title: Platform
-                icon: assets/icons/code-square.svg
-                description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e commerce ecosystem
-                link: platform_docs
-            -   title: Marketplace
-                icon: assets/icons/code-square.svg
-                description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
-                link: marketplace_docs
+            - title: User Guide
+              icon: assets/icons/person.svg
+              description: --TBD--
+              link: user_docs
+            - title: Developer Guide
+              icon: assets/icons/code-square.svg
+              description: --TBD--
+              link: dev_docs
             # -   title: Business Analyst
             #     icon: assets/icons/briefcase.svg
             #     description: I need to know how to implement Virto solutions across my team or externally.
@@ -128,23 +124,23 @@ extra:
         #         icon: marketplace.svg
         #         description: Virto Commerce allows you to build your very own unique online marketplace. See how!
         #         link: under-construction
-        #education:
-            # - title: Videos
-            #   description: Explore our video tutorials
-            #   image: assets/icons/videos.png
-            #   link: https://www.youtube.com/c/Virtocommerce
-            # - title: Tech Blog
-            #   description: Hints, tips, and so much more!
-            #   image: assets/icons/articles.png
-            #   link: https://www.virtocommerce.org/
-            # - title: Case Studies
-            #   description: Best case studies provided by our dev team
-            #   image: assets/icons/videos-second.png
-            #   link: https://virtocommerce.com/case-studies
-            # - title: Code samples
-            #   description: Most used code samples
-            #   image: assets/icons/stories.png
-            #   link: https://github.com/VirtoCommerce/vc-samples
+        education:
+            - title: Videos
+              description: Explore our video tutorials
+              image: assets/icons/videos.png
+              link: https://www.youtube.com/c/Virtocommerce
+            - title: Tech Blog
+              description: Hints, tips, and so much more!
+              image: assets/icons/articles.png
+              link: https://www.virtocommerce.org/
+            - title: Case Studies
+              description: Best case studies provided by our dev team
+              image: assets/icons/videos-second.png
+              link: https://virtocommerce.com/case-studies
+            - title: Code samples
+              description: Most used code samples
+              image: assets/icons/stories.png
+              link: https://github.com/VirtoCommerce/vc-samples
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js

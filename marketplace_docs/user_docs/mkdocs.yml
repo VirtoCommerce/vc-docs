@@ -1,0 +1,160 @@
+theme:
+    name: material
+    custom_dir: ../../overrides
+    language: en
+#    features:
+#        - instant # (still experimental) feature fails to load images when folder changes
+    favicon: assets/icons/favicon.ico
+    logo: assets/icons/logo.svg
+    logobw: assets/icons/logo-bw.svg
+    palette:
+        -   scheme: default
+            toggle:
+                icon: assets/icons/dark-mode.svg
+                name: Night mode
+        -   scheme: slate
+            toggle:
+                icon: assets/icons/light-mode.svg
+                name: Light mode
+    font:
+        text: Circular Std
+        code: Ubuntu Mono
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - toc.follow
+
+markdown_extensions:
+     - abbr
+     - admonition
+     - attr_list
+     - def_list
+     - footnotes
+     - md_in_html
+     - toc:
+         permalink: true
+     - pymdownx.arithmatex:
+         generic: true
+     - pymdownx.betterem:
+         smart_enable: all
+     - pymdownx.caret
+     - pymdownx.details
+     - pymdownx.emoji:
+         emoji_generator: !!python/name:materialx.emoji.to_svg
+         emoji_index: !!python/name:materialx.emoji.twemoji
+     - pymdownx.highlight:
+         anchor_linenums: true
+     - pymdownx.inlinehilite
+     - pymdownx.keys
+     - pymdownx.magiclink:
+         repo_url_shorthand: true
+         user: squidfunk
+         repo: mkdocs-material
+     - pymdownx.mark
+     - pymdownx.smartsymbols
+     - pymdownx.superfences:
+         custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+     - pymdownx.tabbed:
+         alternate_style: true
+     - pymdownx.tasklist:
+         custom_checkbox: true
+     - pymdownx.tilde
+     - pymdownx.snippets
+
+plugins:
+    - search # necessary for search to work
+    - git-revision-date-localized
+    - include-markdown
+ #   - autolinks
+    - awesome-pages:
+ #       strict: false
+    - git-revision-date-localized
+ #   - minify:
+ #       minify_html: true
+    - redirects:
+        redirect_maps:
+            'redir.md': 'index.md'
+#    - monorepo
+
+# Project information
+site_name: VirtoCommerce Marketplace User Guides
+site_description: --TBD--
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/new
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024. All rights reserved.
+
+# Page tree
+nav:
+    - Vendor portal:
+      - Overview: Vendor-portal/overview.md
+      - Offers management by vendor: Vendor-portal/offers-management-by-vendor.md
+      - Products management by vendor: Vendor-portal/products-management-by-vendor.md
+    - Operator portal:
+      - Overview: Operator-portal/overview.md
+      - Master catalog taxonomy management: Operator-portal/master-catalog-taxonomy-management.md
+      - Commission fees setup:
+        - Overview: Operator-portal/Commission-fees-setup/overview.md
+        - Static commission fees: Operator-portal/Commission-fees-setup/static-commission-fees.md
+        - Dynamic commission fees: Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
+      - Vendors management:
+        - Vendor onboarding: Operator-portal/Vendors-management/vendor-onboarding.md
+        - Vendor management: Operator-portal/Vendors-management/vendor-management.md
+      - Products management: Operator-portal/products-management.md
+
+extra:
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/VirtoCommerce
+      - icon: fontawesome/brands/facebook
+        link: https://facebook.com/VirtoCommerce
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/virtocommerce?lang=en
+      - icon: fontawesome/brands/instagram
+        link: google.com
+      - icon: fontawesome/brands/linkedin
+        link: https://www.linkedin.com/company/virto-commerce/
+      - icon: fontawesome/brands/youtube
+        link: https://www.youtube.com/c/Virtocommerce/videos
+    search:
+        icon: assets/icons/search.svg
+    rss:
+        icon: assets/icons/rss.svg
+    tabs_links:
+      - title: Home
+        url: /new
+      - title: Developer Docs
+        url: /new/dev_docs
+      - title: User Docs
+        url: /new/user_docs
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
+
+extra_javascript:
+    - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
+
+
+extra_css:
+    - assets/stylesheets/main.css
+    - assets/stylesheets/fonts.css

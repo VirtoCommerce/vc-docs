@@ -1,0 +1,297 @@
+theme:
+    name: material
+    custom_dir: ../../overrides
+    language: en
+    #    features:
+    #        - instant # (still experimental) feature fails to load images when folder changes
+    favicon: assets/icons/favicon.ico
+    logo: assets/icons/logo.svg
+    logobw: assets/icons/logo-bw.svg
+    palette:
+        - scheme: default
+          toggle:
+              icon: assets/icons/dark-mode.svg
+              name: Night mode
+        - scheme: slate
+          toggle:
+              icon: assets/icons/light-mode.svg
+              name: Light mode
+    font:
+        text: Circular Std
+        code: Ubuntu Mono
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - toc.follow
+
+markdown_extensions:
+    - abbr
+    - admonition
+    - attr_list
+    - def_list
+    - footnotes
+    - md_in_html
+    - toc:
+          permalink: true
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+          emoji_index: !!python/name:materialx.emoji.twemoji
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          repo_url_shorthand: true
+          user: squidfunk
+          repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+    - pymdownx.snippets
+
+plugins:
+    - search # necessary for search to work
+    - git-revision-date-localized
+    - include-markdown
+    #   - autolinks
+    - awesome-pages:
+    #       strict: false
+    - git-revision-date-localized
+    #   - minify:
+    #       minify_html: true
+    - redirects:
+          redirect_maps:
+              "redir.md": "index.md"
+#    - monorepo
+
+# Project information
+site_name: User Guides
+site_description: Documentation portal for Virto Commerce, an enterprise-level Microsoft .NET ecommerce platform.
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/new
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024. All rights reserved.
+
+# Page tree
+nav:
+    - Platform:
+          - Overview: platform-overview.md
+          - Modules Installation: modules-installation.md
+          - Catalog:
+                - Catalog:
+                      - Overview: catalog/overview.md
+                      - Managing Catalogs: catalog/add-new-catalog.md
+                      - Managing Categories: catalog/managing-categories.md
+                      - Managing Products: catalog/managing-products.md
+                      - Managing Product Variations: catalog/managing-product-variations.md
+                      - Managing Product Availability: catalog/setting-product-availability.md
+                      - Managing Properties: catalog/managing-properties.md
+                      - Managing Search Index: catalog/managing-search-index.md
+                      - Product Indexing: catalog/product-indexing.md
+                      - Settings: catalog/settings.md
+                - Catalog Personalization:
+                      - Overview: catalog-personalization/overview.md
+                      - Managing User Groups: catalog-personalization/user-groups.md
+                      - Example: catalog-personalization/example.md
+                      - Settings: catalog-personalization/settings.md
+          - Cart:
+                - Settings: cart/settings.md
+          - Content:
+                - Overview: content/overview.md
+                - Themes: content/managing-themes.md
+                - Pages: content/managing-pages.md
+                - Link Lists: content/managing-linklists.md
+                - Blogs: content/managing-blogs.md
+                - Settings: content/settings.md
+          - Contacts:
+                - Overview: contacts/overview.md
+                - Managing Companies and Contacts: contacts/managing-contacts.md
+                - Settings: contacts/settings.md
+          - Contracts:
+                - Overview: contracts/overview.md
+                - Managing contracts: contracts/creating-and-terminating-contracts.md
+                - Managing contract prices: contracts/managing-contract-prices.md
+                - Managing contract customers: contracts/managing-contract-customers.md
+          - Generic Export:
+                - Overview: generic-export/overview.md
+                - Assigning Permissions: generic-export/assigning-permissions.md
+                - Data Export: generic-export/exporting-data.md
+                - Advanced Filtering: generic-export/advanced-filtering.md
+                - Settings: generic-export/settings.md
+          - Inventory:
+                - Overview: inventory/overview.md
+                - Managing Inventory: inventory/managing-inventory.md
+                - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
+                - Settings: inventory/settings.md
+          - Marketing:
+                - Overview: marketing/overview.md
+                - Dynamic Content:
+                      - Overview: marketing/dynamic-content-overview.md
+                      - Managing Content Items: marketing/managing-content-items.md
+                      - Managing Content Placeholders: marketing/managing-content-placeholders.md
+                      - Managing Published Content: marketing/managing-published-content.md
+                      - Publish Conditions: marketing/publish-conditions.md
+                      - Adding Advertising Spot: marketing/advertising-spot.md
+                - Promotions:
+                      - Overview: marketing/promotions-overview.md
+                      - Managing Promotions: marketing/managing-promotions.md
+                      - Promotion Combination Policies: marketing/combining-active-promotions.md
+                      - Promotion Rules: marketing/promotion-rules.md
+                      - Settings: marketing/settings.md
+          - Notifications:
+                - Overview: notifications/overview.md
+                - Notification List: notifications/notification-list.md
+                - Notification Layouts: notifications/notification-layouts.md
+                - Notification Log: notifications/notification-log.md
+                - Notification Templates: notifications/notification-templates.md
+                - Settings: notifications/settings.md
+          - Orders:
+                - Overview: order-management/overview.md
+                - Order Information: order-management/main-objects.md
+                - Order Processing Scenarios:
+                      - Managing documents: order-management/managing-documents.md
+                      - Tracking Order Changes: order-management/tracking-order-changes.md
+                      - Managing returns: order-management/managing-returns.md
+                      - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
+                      - Indexation: order-management/indexation.md
+                - Notifications: order-management/notifications.md
+                - Permissions: order-management/permissions.md
+                - Settings: order-management/settings.md
+          - Pricing:
+                - Overview: pricing/overview.md
+                - Managing Price Lists: pricing/creating-new-price-list.md
+                - Managing Price List Assignments: pricing/adding-new-assignment.md
+                - Pricing Data Export: pricing/export-functionality.md
+                - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
+                - Settings: pricing/managing-pricing-module-settings.md
+                - Troubleshooting: pricing/troubleshooting-guide.md
+                - Example: pricing/example.md
+          - Security:
+                - Overview: security/overview.md
+                - Managing User Accounts: security/managing-users.md
+                - Managing Roles and Permissions: security/roles-and-permissions.md
+                - Generating API Key: security/api-key.md
+                - Login on Behalf Feature: security/login-on-behalf.md
+          - Sitemaps:
+                - Overview: sitemaps/overview.md
+                - Managing sitemaps: sitemaps/configuring-sitemaps.md
+                - Settings: sitemaps/settings.md
+          - Stores:
+                - Overview: store/overview.md
+                - Adding New Store: store/adding-new-store.md
+                - Configuring Store: store/configuring-store.md
+                - Settings: store/settings.md
+          - Tasks:
+                - Overview: tasks/overview.md
+                - Using Tasks application: tasks/using-application.md
+                - Settings: tasks/settings.md
+                - Roles and permissions: tasks/roles-permissions.md
+          - Thumbnails:
+                - Overview: thumbnails/overview.md
+                - Generating Thumbnails: thumbnails/generating-thumbnails.md
+                - Managing Thumbnail Settings: thumbnails/thumbnail-options.md
+                - Using Thumbnails: thumbnails/using-thumbnails.md
+                - Settings: thumbnails/settings.md
+          - Search options: search.md
+          - Glossary: glossary.md
+    - Integrations:
+          - Overview: integrations/overview.md
+          - Avalara Tax:
+                - Overview: integrations/avalara/overview.md
+                - Orders Synchronization: integrations/avalara/orders-synchronization.md
+                - Taxes Calculation: integrations/avalara/taxes-calculation.md
+                - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
+                - Address Validation: integrations/avalara/address-validation.md
+                - Settings: integrations/avalara/settings.md
+          - Google Analytics:
+                - Overview: integrations/google-analytics/overview.md
+                - Integration: integrations/google-analytics/integration.md
+                - Settings: integrations/google-analytics/settings.md
+          - Hotjar:
+                - Overview: integrations/hotjar/overview.md
+                - Getting started: integrations/hotjar/getting-started.md
+    - Marketplace <br>[Under construction]:
+          - Overview: marketplace_user_docs/overview.md
+          - Vendor portal:
+                - Overview: marketplace_user_docs/Vendor-portal/overview.md
+                - Offers management by vendor: marketplace_user_docs/Vendor-portal/offers-management-by-vendor.md
+                - Products management by vendor: marketplace_user_docs/Vendor-portal/products-management-by-vendor.md
+          - Operator portal:
+                - Overview: marketplace_user_docs/Operator-portal/overview.md
+                - Master catalog taxonomy management: marketplace_user_docs/Operator-portal/master-catalog-taxonomy-management.md
+                - Commission fees setup:
+                      - Overview: marketplace_user_docs/Operator-portal/Commission-fees-setup/overview.md
+                      - Static commission fees: marketplace_user_docs/Operator-portal/Commission-fees-setup/static-commission-fees.md
+                      - Dynamic commission fees: marketplace_user_docs/Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
+                - Vendors management:
+                      - Vendor onboarding: marketplace_user_docs/Operator-portal/Vendors-management/vendor-onboarding.md
+                      - Vendor management: marketplace_user_docs/Operator-portal/Vendors-management/vendor-management.md
+                - Products management: marketplace_user_docs/Operator-portal/products-management.md
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/VirtoCommerce
+        - icon: fontawesome/brands/facebook
+          link: https://facebook.com/VirtoCommerce
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/virtocommerce?lang=en
+        - icon: fontawesome/brands/instagram
+          link: google.com
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.com/company/virto-commerce/
+        - icon: fontawesome/brands/youtube
+          link: https://www.youtube.com/c/Virtocommerce/videos
+    search:
+        icon: assets/icons/search.svg
+    rss:
+        icon: assets/icons/rss.svg
+    tabs_links:
+        - title: Home
+          url: /new
+        - title: Developer Docs
+          url: /new/dev_docs
+        - title: User Docs
+          url: /new/user_docs
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
+
+extra_javascript:
+    - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
+
+extra_css:
+    - assets/stylesheets/main.css
+    - assets/stylesheets/fonts.css

@@ -1,0 +1,653 @@
+theme:
+    name: material
+    custom_dir: ../../overrides
+    language: en
+    #    features:
+    #        - instant # (still experimental) feature fails to load images when folder changes
+    favicon: assets/icons/favicon.ico
+    logo: assets/icons/logo.svg
+    logobw: assets/icons/logo-bw.svg
+    palette:
+        - scheme: default
+          toggle:
+              icon: assets/icons/dark-mode.svg
+              name: Night mode
+        - scheme: slate
+          toggle:
+              icon: assets/icons/light-mode.svg
+              name: Light mode
+    font:
+        text: Circular Std
+        code: Ubuntu Mono
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - toc.follow
+
+markdown_extensions:
+    - abbr
+    - admonition
+    - attr_list
+    - def_list
+    - footnotes
+    - md_in_html
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+
+    - toc:
+          permalink: true
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+          emoji_index: !!python/name:materialx.emoji.twemoji
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          repo_url_shorthand: true
+          user: squidfunk
+          repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+    - pymdownx.snippets
+
+plugins:
+    - search:
+          lang: en
+    - git-revision-date-localized
+    - include-markdown
+    #   - autolinks
+    - awesome-pages:
+    #       strict: false
+    - git-revision-date-localized
+    #   - minify:
+    #       minify_html: true
+    - redirects:
+          redirect_maps:
+              "redir.md": "index.md"
+#    - monorepo
+
+# Project information
+site_name: Developer Center
+site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/new
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024. All rights reserved.
+
+# Page tree
+nav:
+    - Home: index.md
+    - Getting Started:
+          - System Requirements: Getting-Started/system-requirements.md
+          - Installation Guide:
+                - Windows: Getting-Started/Installation-Guide/windows.md
+                - Linux: Getting-Started/Installation-Guide/linux.md
+                - MacOS: Getting-Started/Installation-Guide/macOS.md
+                - Post Installation Steps:
+                      - Setting Up Self Signed SSL Certificate: Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
+                      - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
+                      - Configuring Asset Blob Storage: Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage.md
+                      - Importing Sample Data: Getting-Started/Post-Installation-Steps/04-importing-sample-data.md
+    - Back End Architecture:
+          - Tech Stack: Back-End-Architecture/01-tech-stack.md
+          - Conceptual Overview: Back-End-Architecture/02-conceptual-overview-in-progress.md
+    - Fundamentals:
+          - Caching:
+                - Overview: Fundamentals/Caching/01-overview.md
+                - Cache Configuration: Fundamentals/Caching/02-cache-configuration.md
+                - Setting Up Redis Backplane for Scaling Out: Fundamentals/Caching/03-setting-up-Redis.md
+          - Data Import:
+                - Main Concept: Fundamentals/Data-Import/01-main-concept.md
+                - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
+                - Import App: Fundamentals/Data-Import/import-app.md
+          - Indexed Search:
+                - Overview: Fundamentals/Indexed-Search/overview.md
+                - Search Query Syntax: Fundamentals/Indexed-Search/search-query-syntax-reference.md
+                - Indexing:
+                      - Overview: Fundamentals/Indexed-Search/indexing/overview.md
+                      - Indexing in Platform Manager: Fundamentals/Indexed-Search/indexing/indexing-in-platform-manager.md
+                      - Blue-Green Indexing: Fundamentals/Indexed-Search/indexing/blue-green-indexing.md
+                - Search:
+                      - Overview: Fundamentals/Indexed-Search/search/overview.md
+                      - Faceted Search Overview and Configuration: Fundamentals/Indexed-Search/search/faceted-search.md
+                - Integration:
+                      - Configuring Elasticsearch: Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md
+                      - Configuring Azure Cognitive Search: Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
+                      - Elastic App Search Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
+                      - Configuring Elastic App Search: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
+                - Configuration: Fundamentals/Indexed-Search/configuration.md
+          - Persistence:
+                - DB Agnostic Architecture:
+                      - Overview: Fundamentals/Persistence/DB-Agnostic/overview.md
+                      - Configuring VC with DB Providers: Fundamentals/Persistence/DB-Agnostic/configuring-vc-with-db-providers.md
+                      - Creating Custom Module with DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/creating-custom-module.md
+                      - Transforming Custom Module to Support DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/transforming-custom-module.md
+                - Concurrency Handling: Fundamentals/Persistence/Concurrency-handling/concurrency-handling.md
+          - Modularity:
+                - Overview: Fundamentals/Modularity/01-overview.md
+                - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
+                - Versioning and Dependencies: Fundamentals/Modularity/03-versioning-and-dependencies.md
+                - Loading Modules into App Process: Fundamentals/Modularity/04-loading-modules-into-app-process.md
+                - Best Practices: Fundamentals/Modularity/05-best-practices.md
+                - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
+                - Configuration: Fundamentals/Modularity/configuration.md
+          - Event Driven Development:
+                - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
+          - Payments:
+                - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
+                - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
+          - Fulfillment:
+                - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
+          - Taxes:
+                - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
+          - Dynamic Properties:
+                - Overview: Fundamentals/Dynamic-Properties/overview.md
+          - Notifications:
+                - Overview: Fundamentals/Notifications/overview.md
+                - Registering New Notification Type: Fundamentals/Notifications/registering-new-notification-type.md
+                - Notification Templates: Fundamentals/Notifications/notification-templates.md
+                - Extending Notification Types: Fundamentals/Notifications/extending-notification-types.md
+                - Configuration: Fundamentals/Notifications/configuration.md
+          - Security:
+                - Overview: Fundamentals/Security/overview.md
+                - Authentication:
+                      - Issuing and Using Access Token: Fundamentals/Security/authentication/issuing-and-using-access-token.md
+                      - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
+                      - API Key Authentication: Fundamentals/Security/authentication/api-key-authentication.md
+                - Authorization:
+                      - Overview: Fundamentals/Security/authorization/overview.md
+                      - Global Permissions: Fundamentals/Security/authorization/global-permissions.md
+                      - Scope Based Permissions: Fundamentals/Security/authorization/scope-based-permissions.md
+                - Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
+                - Encryption and Signing Credentials: Fundamentals/Security/encryption-and-signing-credentials.md
+                - Extensions:
+                      - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
+                      - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
+                      - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
+                - Security in Depth: Fundamentals/Security/security-in-depth.md
+                - Configuration: Fundamentals/Security/configuration.md
+          - Logging:
+                - Overview: Fundamentals/Logging/overview.md
+                - How to update to Serilog integrated version: Fundamentals/Logging/how-to-update.md
+                - AppInsights: Fundamentals/Logging/application-insights.md
+                - Extending logging: Fundamentals/Logging/extended-logging.md
+                - Seq log module: Fundamentals/Logging/seq-module.md
+    - Configuration Reference:
+          - Appsettings.json: Configuration-Reference/appsettingsjson.md
+    - Platform Manager:
+          - Style Guide: Platform-Manager/style-guide.md
+          - UI Scroll Directive: Platform-Manager/ui-scroll-directive.md
+          - Extensibility Points:
+                - Extending Main Menu: Platform-Manager/Extensibility-Points/extending-main-menu.md
+                - Blades and Navigation: Platform-Manager/Extensibility-Points/blades-and-navigation.md
+                - Metaform: Platform-Manager/Extensibility-Points/metaform.md
+                - Widgets: Platform-Manager/Extensibility-Points/widgets.md
+                - Extending Grid Columns: Platform-Manager/Extensibility-Points/extending-grid-columns.md
+                - Blade Toolbar: Platform-Manager/Extensibility-Points/blade-toolbar.md
+    - GraphQL Storefront API Reference (xAPI):
+          - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
+          - Getting Started: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
+          - Tools to Explore GraphQL:
+                - Playground: GraphQL-Storefront-API-Reference-xAPI/playground.md
+                - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
+                - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
+          - Catalog:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
+                - Queries:
+                      - Product: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/product.md
+                      - Products: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products.md
+                      - Category: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/category.md
+                      - Categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/categories.md
+                      - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/property.md
+                      - Properties: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/properties.md
+                      - Fulfillment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-center.md
+                      - Fulfillment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-centers.md
+                      - childCategories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/child-categories.md
+                - Objects:
+                      - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType.md
+                      - ProductConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection.md
+                      - ProductEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductEdge.md
+                      - ProductAssociationConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationConnection.md
+                      - ProductAssociationEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationEdge.md
+                      - ProductAssociation: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociation.md
+                      - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryType.md
+                      - CategoryConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryConnection.md
+                      - CategoryEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryEdge.md
+                      - CategoryDescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType.md
+                      - DescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType.md
+                      - FulfillmentCenterType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterType.md
+                      - FulfillmentCenterConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterConnection.md
+                      - FulfillmentCenterEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterEdge.md
+                      - VariationType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType.md
+                      - AvailabilityData: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/AvailabilityData.md
+                      - ImageType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ImageType.md
+                      - PriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/PriceType.md
+                      - TierPriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/TierPriceType.md
+                      - CatalogDiscountType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/CatalogDiscountType.md
+                      - PropertyType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/Property.md
+                      - PropertyConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyConnection.md
+                      - PropertyEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyEdge.md
+                      - PropertyDictItemConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemConnection.md
+                      - PropertyDictItemEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemEdge.md
+                      - PropertyDictItem: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItem.md
+                      - Asset: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Asset.md
+                      - PageInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo.md
+                      - InventoryInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo.md
+                      - SeoInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo.md
+                      - OutlineType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType.md
+                      - OutlineItemType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineItemType.md
+                      - Breadcrumb: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb.md
+                      - CommonVendor: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor.md
+                      - Rating: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Rating.md
+                      - VideoConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection.md
+                      - VideoEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge.md
+                      - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
+                      - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet.md
+                      - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet.md
+                      - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
+                      - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
+                      - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
+                - Examples:
+                      - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search.md
+                      - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search.md
+                      - Filter Syntax: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filter-syntax.md
+                      - Filtering: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering.md
+                      - Facets: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets.md
+                      - Multi Select Faceting Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search.md
+          - Cart:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md
+                - Queries:
+                      - Cart: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
+                      - Carts: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts.md
+                      - Wishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlist.md
+                      - Wishlists: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlists.md
+                - Objects:
+                      - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
+                      - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
+                      - CartEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-edge.md
+                      - CartShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-shipment-item-type.md
+                      - CartAddressType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-address-type.md
+                      - MoneyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type.md
+                      - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/currency-type.md
+                      - TaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/tax-detail-type.md
+                      - ShipmentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipment-type.md
+                      - ShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipping-method-type.md
+                      - PaymentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-type.md
+                      - PaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-method-type.md
+                      - DiscountType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/discount-type.md
+                      - GiftItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/gift-item-type.md
+                      - CouponType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/coupon-type.md
+                      - DynamicPropertyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-type.md
+                      - DynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type.md
+                      - LineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/line-item-type.md
+                      - DictionaryItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-type.md
+                      - DictionaryItemConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-connection.md
+                      - ValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type.md
+                      - ErrorParameterType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type.md
+                      - WishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-type.md
+                      - WishListEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-edge.md
+                      - WishlistConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-connection.md
+                      - WishlistScopeType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-scope-type.md
+                      - InputNewWishlistItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputNewWishlistItemType.md
+                      - InputUpdateWishlistLineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistLineItemType.md
+                      - InputUpdateWishlistItemsType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistItemsType.md
+                      - BulkWishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/bulk-wishlist-type.md
+                - Mutations:
+                      - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
+                      - clearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
+                      - selectCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartItems.md
+                      - unselectCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectCartItems.md
+                      - selectAllCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartItems.md
+                      - unselectAllCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectAllCartItems.md
+                      - changeComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-comment.md
+                      - changeCartItemPrice: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-price.md
+                      - changeCartItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-quantity.md
+                      - changeCartItemComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-comment.md
+                      - removeCartItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart-item.md
+                      - addCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-coupon.md
+                      - removeCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-coupon.md
+                      - removeShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-shipment.md
+                      - addOrUpdateCartShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-shipment.md
+                      - addOrUpdateCartPayment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-payment.md
+                      - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/validate-coupon.md
+                      - mergeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart.md
+                      - removeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart.md
+                      - clearShipments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-shipments.md
+                      - clearPayments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-payments.md
+                      - updateCartDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-dynamic-properties.md
+                      - updateCartItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-item-dynamic-properties.md
+                      - updateCartShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-shipment-dynamic-properties.md
+                      - updateCartPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties.md
+                      - addCartAddress: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address.md
+                      - createWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createWishlist.md
+                      - changeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeWishlist.md
+                      - renameWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/renameWishlist.md
+                      - removeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlist.md
+                      - addWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItem.md
+                      - updateWishListItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateWishListItems.md
+                      - addWishlistItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItems.md
+                      - removeWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem.md
+                      - moveWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem.md
+                      - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
+          - Order:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
+                - Queries:
+                      - Order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
+                      - Orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders.md
+                      - OrderStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderStatuses.md
+                      - OrganizationOrders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders.md
+                - Objects:
+                      - CustomerOrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-type.md
+                      - CustomerOrderConnection: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-connection.md
+                      - OrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-address-type.md
+                      - OrderLineItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-line-item-type.md
+                      - PaymentInType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-in-type.md
+                      - ProcessPaymentRequestResultType: GraphQL-Storefront-API-Reference-xAPI/Order/process-payment-request-result-type.md
+                      - InputOrderBankCardInfoType: GraphQL-Storefront-API-Reference-xAPI/Order/input-order-bank-card-info-type.md
+                      - InputOrderPaymentType: GraphQL-Storefront-API-Reference-xAPI/Order/input-order-payment-type.md
+                      - PaymentTransactionType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-transaction-type.md
+                      - AuthorizePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/authorize-payment-result-type.md
+                      - InitializePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/initialize-payment-result-type.md
+                      - OrderShipmentType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-type.md
+                      - OrderShippingMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipping-method-type.md
+                      - OrderShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-item-type.md
+                      - OrderShipmentPackageType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-package-type.md
+                      - InputOrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-address-type.md
+                      - OrderTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-tax-detail-type.md
+                      - OrderDiscountType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-discount-type.md
+                      - OrderPaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-payment-method-type.md
+                      - LocalizedSettingResponseType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/LocalizedSettingResponseType.md
+                      - CustomerOrderEdge: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-edge.md
+                      - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type.md
+                      - KeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/key-value-type.md
+                      - InputKeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type.md
+                - Mutations:
+                      - ChangePurchaseOrderNumber: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-purchase-order-number.md
+                      - CreateOrderFromCart: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/create-order-from-cart.md
+                      - ChangeOrderStatus: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-order-status.md
+                      - ProcessOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/process-order-payment.md
+                      - UpdateOrderDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-dynamic-properties.md
+                      - UpdateOrderItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-item-dynamic-properties.md
+                      - UpdateOrderShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-shipment-dynamic-properties.md
+                      - UpdateOrderPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-payment-dynamic-properties.md
+                      - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment.md
+                      - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment.md
+                      - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
+          - Content:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
+                - Queries:
+                      - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
+                      - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
+                      - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
+                - Objects:
+                      - PageConnection: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageConnection.md
+                      - PageEdge: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageEdge.md
+                      - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
+                      - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
+                      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
+          - Profile:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
+                - Queries:
+                      - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organization.md
+                      - Organizations: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organizations.md
+                      - Contact: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contact.md
+                      - Contacts: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contacts.md
+                      - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/user.md
+                      - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/role.md
+                      - requestPasswordReset: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/requestPasswordReset.md
+                      - validatePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/validatePassword.md
+                - Objects:
+                      - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationType.md
+                      - OrganizationConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationConnection.md
+                      - OrganizationEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationEdge.md
+                      - Contact: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactType.md
+                      - ContactConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactConnection.md
+                      - ContactEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactEdge.md
+                      - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/UserType.md
+                      - InputCreateUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateUserType.md
+                      - InputCreateApplicationUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateApplicationUserType.md
+                      - InputUpdateApplicationUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateApplicationUserType.md
+                      - InputApplicationUserLoginType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputApplicationUserLoginType.md
+                      - CustomIdentityResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/CustomIdentityResultType.md
+                      - IdentityResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityResultType.md
+                      - IdentityErrorType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorType.md
+                      - IdentityErrorInfoType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorInfoType.md
+                      - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RoleType.md
+                      - InputAssignRoleType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignRoleType.md
+                      - InputUpdateRoleInnerType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateRoleInnerType.md
+                      - InputAssignPermissionType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionType.md
+                      - InputAssignPermissionScopeType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionScopeType.md
+                      - Member: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberType.md
+                      - MemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressType.md
+                      - MemberAddressConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressConnection.md
+                      - MemberAddressEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressEdge.md
+                      - InputMemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputMemberAddressType.md
+                      - InputDynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType.md
+                      - RequestRegistrationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RequestRegistrationType.md
+                      - RegisterOrganizationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterOrganizationType.md
+                      - RegisterContactType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterContactType.md
+                      - RegisterAccountType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterAccountType.md
+                      - AccountCreationResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/AccountCreationResultType.md
+                      - InputRegisterOrganizationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterOrganizationType.md
+                      - InputRegisterContactType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterContactType.md
+                      - InputRegisterAccountType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterAccountType.md
+                      - RegistrationErrorType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegistrationErrorType.md
+                      - InputRegisterByInvitationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterByInvitationType.md
+                      - InputResetPasswordByTokenType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputResetPasswordByTokenType.md
+                      - InputChangePasswordType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputChangePasswordType.md
+                - Mutations:
+                      - createContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createContact.md
+                      - updateContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateContact.md
+                      - deleteContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteContact.md
+                      - confirmEmail: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/confirmEmail.md
+                      - sendVerifyEmail: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/sendVerifyEmail.md
+                      - createUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createUser.md
+                      - updateUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateUser.md
+                      - inviteUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/inviteUser.md
+                      - deleteUsers: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteUsers.md
+                      - createOrganization: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createOrganization.md
+                      - updateOrganization: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateOrganization.md
+                      - lockOrganizationContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/lockOrganizationContact.md
+                      - unlockOrganizationContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/unlockOrganizationContact.md
+                      - changeOrganizationContactRole: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changeOrganizationContactRole.md
+                      - removeMemberFromOrganization: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/removeMemberFromOrganization.md
+                      - updateRole: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateRole.md
+                      - updateMemberAddresses: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberAddresses.md
+                      - deleteMemberAddresses: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteMemberAddresses.md
+                      - updateMemberDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberDynamicProperties.md
+                      - requestRegistration: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/requestRegistration.md
+                      - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
+                      - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
+                      - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
+          - Marketing:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+                - Queries:
+                      - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
+                - Objects:
+                      - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
+                      - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
+          - Quote:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md
+                - Queries:
+                      - Quote: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quote.md
+                      - Quotes: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quotes.md
+                - Objects:
+                      - QuoteType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteType.md
+                      - QuoteConnection: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteConnection.md
+                      - QuoteTotalsType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTotalsType.md
+                      - QuoteItemType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteItemtype.md
+                      - QuoteTierPriceType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTierPriceType.md
+                      - QuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAddressType.md
+                      - QuoteAttachmentType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAttachmentType.md
+                      - QuoteShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteShipmentMethodType.md
+                      - QuoteTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTaxDetailType.md
+                      - QuoteEdge: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteEdge.md
+                      - CancelQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CancelQuoteCommandType.md
+                      - ChangeQuoteCommentCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteCommentCommandType.md
+                      - ChangeQuoteItemQuantityCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteItemQuantityCommandType.md
+                      - CreateQuoteFromCartCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CreateQuoteFromCartCommandType.md
+                      - RemoveQuoteItemCommandtype: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/RemoveQuoteItemCommandtype.md
+                      - SubmitQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/SubmitQuoteCommandType.md
+                      - UpdateQuoteAddressCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteAddressCommandType.md
+                      - InputQuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/InputQuoteAddressType.md
+                - Mutations:
+                      - createQuoteFromCart: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart.md
+                      - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
+                      - changeQuoteItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-item-quantity.md
+                      - removeQuoteItem: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/remove-quote-item.md
+                      - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
+                      - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
+          - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
+          - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
+    - Storefront Development:
+          - Overview: storefront-development/overview.md
+          - Getting Started:
+                - Quick Start (Windows): storefront-development/getting-started/quickstart-on-windows.md
+          - ASP.NET Core Storefront Runtime:
+                - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
+          - Vue.js Starter Theme:
+                - Overview: storefront-development/vue-js-starter-theme/overview.md
+          - Integrations:
+                - Enhancing SEO with Prerender.io: storefront-development/integrations/prerender_io.md
+    - Extensibility:
+          - Overview: Extensibility/overview.md
+          - Key Extensibility Points: Extensibility/key-extensibility-points.md
+          - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
+    - Operations:
+          - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
+    - Tutorials and How-tos:
+          - Tutorials:
+                - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
+                - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
+          - How-tos:
+                - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
+                - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
+                - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
+                - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
+                - Setting Up Prerender.io with Azure Application Gateway: Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md
+                - Extending Cart Query With a Custom Parameter: Tutorials-and-How-tos/How-tos/extending-cart-query-with-custom-parameter.md
+                - Customizing Cart Validation Policies: Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies.md
+    - Updating Virto Commerce Based Projects:
+          - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
+          - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
+          - Edge Releases: Updating-Virto-Commerce-Based-Project/edge-releases.md
+          - Installing Specific Version: Updating-Virto-Commerce-Based-Project/installing-specific-version.md
+          - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
+    - Custom Apps Development:
+          - Overview: custom-apps-development/overview.md
+          - How to Register a New App: custom-apps-development/how-to-register-new-app.md
+          - VC Shell:
+                - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
+                - Getting Started:
+                      - Start using VC shell: custom-apps-development/vc-shell/Getting-started/getting-started.md
+                      - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
+                - Essentials:
+                      - Controls:
+                            - VcButton: custom-apps-development/vc-shell/Essentials/controls/VcButton.md
+                            - VcCard: custom-apps-development/vc-shell/Essentials/controls/VcCard.md
+                            - VcCheckbox: custom-apps-development/vc-shell/Essentials/controls/VcCheckbox.md
+                            - VcImage: custom-apps-development/vc-shell/Essentials/controls/VcImage.md
+                            - VcStatus: custom-apps-development/vc-shell/Essentials/controls/VcStatus.md
+                            - VcVideo: custom-apps-development/vc-shell/Essentials/controls/VcVideo.md
+                            - VcEditor: custom-apps-development/vc-shell/Essentials/controls/VcEditor.md
+                            - VcField: custom-apps-development/vc-shell/Essentials/controls/VcField.md
+                            - VcInput: custom-apps-development/vc-shell/Essentials/controls/VcInput.md
+                            - VcInputCurrency: custom-apps-development/vc-shell/Essentials/controls/VcInputCurrency.md
+                            - VcSelect: custom-apps-development/vc-shell/Essentials/controls/VcSelect.md
+                            - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/controls/VcDynamicProperty.md
+                            - VcFieldset: custom-apps-development/vc-shell/Essentials/controls/VcFieldset.md
+                            - VcGallery: custom-apps-development/vc-shell/Essentials/controls/VcGallery.md
+                            - Toolbar: custom-apps-development/vc-shell/Essentials/controls/Toolbar.md
+                            - Widgets: custom-apps-development/vc-shell/Essentials/controls/Widgets.md
+                      - Dynamic views:
+                            - Overview: custom-apps-development/vc-shell/Essentials/dynamic-views/overview.md
+                            - DynamicBladeForm: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-Form.md
+                            - DynamicBladeList: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-List.md
+                            - Custom Templates: custom-apps-development/vc-shell/Essentials/dynamic-views/Custom-Templates.md
+                            - Extending Views: custom-apps-development/vc-shell/Essentials/dynamic-views/Extending-Views.md
+                            - Creating Page Schema: custom-apps-development/vc-shell/Essentials/dynamic-views/Creating-Page-Schema.md
+                            - Using Modules from Other Applications: custom-apps-development/vc-shell/Essentials/dynamic-views/Using-Modules-from-Other-Applications.md
+                      - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
+                      - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
+                - Extensibility:
+                      - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
+                      - Overriding API: custom-apps-development/vc-shell/Extensibility/Overriding-API.md
+                      - Overriding Composables: custom-apps-development/vc-shell/Extensibility/Overriding-Composables.md
+                - API reference: custom-apps-development/vc-shell/api-reference.md
+                - How-tos:
+                      - Connecting to Platform: custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md
+                      - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/VirtoCommerce
+        - icon: fontawesome/brands/facebook
+          link: https://facebook.com/VirtoCommerce
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/virtocommerce?lang=en
+        - icon: fontawesome/brands/instagram
+          link: google.com
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.com/company/virto-commerce/
+        - icon: fontawesome/brands/youtube
+          link: https://www.youtube.com/c/Virtocommerce/videos
+    search:
+        icon: assets/icons/search.svg
+    rss:
+        icon: assets/icons/rss.svg
+    tabs_links:
+        - title: Home
+          url: /new
+        - title: Developer docs
+          url: /new/dev_docs
+        - title: User docs
+          url: /new/user_docs
+    footer_links:
+        - title: Support
+          url: https://help.virtocommerce.com/support/home
+        - title: Community
+          url: https://www.virtocommerce.org/
+        - title: FAQ
+          url: https://www.virtocommerce.org/faq
+        - title: Release Notes
+          url: https://www.virtocommerce.org/c/news-digest/15
+
+extra_javascript:
+    - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
+
+extra_css:
+    - assets/stylesheets/main.css
+    - assets/stylesheets/fonts.css
