@@ -1,5 +1,5 @@
 ---
-title: Title
-template: home.html
+title: Storefront Documentation
+template: storefront-home.html
 ---
 

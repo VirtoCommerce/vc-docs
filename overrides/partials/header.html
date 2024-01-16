@@ -7,7 +7,7 @@
 <!-- Header -->
 <header class="{{ class }}" data-md-component="header">
     <nav class="md-header__inner md-grid"
-         aria-label="{{ lang.t('header.title') }}">
+        aria-label="{{ lang.t('header') }}">
         <!-- Button to open drawer -->
         <label class="md-header__button md-icon" for="__drawer">
             {% include "assets/icons/menu.svg" %}
@@ -33,6 +33,18 @@
             </div>
         </div>
 
+        {% include "partials/megamenu.html" %}
+
+        <!-- Button to open search modal -->
+        {% if "material/search" in config["plugins"] %}
+        <label class="md-header__button md-icon" for="__search">
+            {% include config.extra.search.icon %}
+        </label>
+
+        <!-- Search interface -->
+        {% include "partials/search.html" %}
+        {% endif %}
+
         {% if config.repo_url %}
         <div class="md-header__source">
             {% include "partials/source.html" %}
@@ -45,15 +57,7 @@
         {% include "partials/palette.html" %}
         {% endif %}
 
-        <!-- Button to open search modal -->
-        {% if "search" in config["plugins"] %}
-        <label class="md-header__button md-icon" for="__search">
-            {% include config.extra.search.icon %}
-        </label>
 
-        <!-- Search interface -->
-        {% include "partials/search.html" %}
-        {% endif %}
     </nav>
 
     <!-- Navigation tabs (sticky) -->

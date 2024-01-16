@@ -291,3 +291,4 @@ site/
 /src/VirtoCommerce.Platform.Security/VirtoCommerce.Platform.Security.xml
 
 .history
+.DS_Store

@@ -1,0 +1,393 @@
+<style>
+    .mega-menu {
+        margin-right: 20px;
+        position: relative;
+        margin-left: 2rem;
+    }
+
+    .mega-menu__menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0px 16px 32px 4px #00000026;
+        z-index: 1;
+        flex-direction: row;
+        color: black;
+        padding: 20px;
+        border-radius: 8px;
+        row-gap: 32px;
+        left: -200px;
+        top: 40px;
+        flex-direction: column;
+    }
+
+    /* .mega-menu__menu:after {
+        border: 16px solid transparent;
+        border-bottom-color: #fff;
+        content: "";
+        margin-left: -1em;
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        width: 0;
+        height: 0;
+    } */
+
+    .mega-menu__container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 36px;
+    }
+
+    .mega-menu__button {
+        font-family: "Circular Std", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .mega-menu__menu-item {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mega-menu__menu-button {
+        border-radius: 6px;
+        padding: 8px, 10px, 8px, 10px;
+        padding: 10px;
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 237, 223, 0.5);
+        }
+    }
+
+    .mega-menu__menu-button-icon {
+        width: 18px;
+        height: 18px;
+        background-position: center;
+        background-size: contain;
+        margin-right: 13px;
+        flex-shrink: 0;
+
+    }
+
+    .mega-menu__menu-item-arrow {
+        width: 12px;
+        height: 12px;
+        background-position: center;
+        background-size: contain;
+        margin-left: auto;
+        -webkit-mask-image: url("assets/icons/menu-arrow.svg");
+        mask-image: url("assets/icons/menu-arrow.svg");
+        background-color: #475469;
+        margin-left: 5px;
+        mask-repeat: no-repeat;
+        margin-left: auto;
+    }
+
+    .opened {
+        background-color: #ffeddf;
+        border-radius: 6px;
+    }
+
+    .opened .mega-menu__menu-item-arrow {
+        background-color: #b34400;
+    }
+
+    .mega-menu__menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 250px;
+        flex-grow: 1;
+    }
+
+    .mega-menu__content-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 250px;
+        flex-grow: 1;
+    }
+
+    .content-item-title {
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .content-item-list-item {
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 14px;
+        font-weight: 450;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        list-style-type: none;
+        padding-left: 10px;
+    }
+
+    .content-item-list-item a:hover {
+        text-decoration: underline;
+    }
+
+    .menu-footer {
+        width: 100%;
+        height: 52px;
+        padding: 6px, 12px, 6px, 12px;
+        background-color: #f6f6f6;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 24px;
+        padding: 6px 12px;
+    }
+
+    .menu-footer-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    .menu-footer-button:hover {
+        cursor: pointer;
+    }
+
+    .menu-footer-button:hover a {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1050px) {
+        .mega-menu__menu {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 65px;
+        }
+
+        .mega-menu {
+            position: static;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .mega-menu__container {
+            column-gap: 10px;
+        }
+        .mega-menu__menu-wrapper {
+            width: auto;
+        }
+
+        .mega-menu__content-wrap {
+            width: auto;
+        }
+    }
+</style>
+
+<div class="mega-menu">
+    <button id="menuButton" class="mega-menu__button">
+        All topics
+        <span style="margin-left: 10px; display: flex"
+            ><svg
+                width="12"
+                height="7"
+                viewBox="0 0 12 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M11.6244 1.19045C11.62 1.34466 11.5868 1.49668 11.5263 1.63862C11.4592 1.77854 11.3693 1.90633 11.2602 2.01676L6.61049 6.66651C6.38861 6.88045 6.0924 7 5.78418 7C5.47595 7 5.17975 6.88045 4.95787 6.66651L0.308116 2.01676C0.111319 1.7917 0.0019667 1.50341 0 1.20445C0.000244508 1.05574 0.0300913 0.908567 0.0878001 0.771508C0.145509 0.63445 0.229925 0.510251 0.336127 0.406153C0.542586 0.168746 0.834632 0.0227232 1.14843 0C1.44739 0.0019667 1.73568 0.111319 1.96074 0.308116L5.81219 4.20158L9.63563 0.378143C9.74606 0.269105 9.87385 0.179178 10.0138 0.112042C10.1601 0.049864 10.317 0.0165739 10.4759 0.0140056C10.6293 0.0135648 10.7813 0.0420737 10.9241 0.0980365C11.0715 0.152728 11.2054 0.238602 11.3166 0.349789C11.4278 0.460975 11.5137 0.594855 11.5684 0.742279C11.6145 0.886942 11.6335 1.03888 11.6244 1.19045Z"
+                    fill="#FF7E13"
+                /></svg
+        ></span>
+    </button>
+    <div id="menu" class="mega-menu__menu">
+        <div class="mega-menu__container"></div>
+        <div class="menu-footer">
+            {% for option in config.extra.all_topics.footer %}
+            <div class="menu-footer-button">
+                <div
+                    class="mega-menu__menu-button-icon"
+                    style="background-image: url('{{ option.iconSrc }}')"
+                ></div>
+                <a href="{{ option.url }}">{{ option.title }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menuButton");
+        const menu = document.getElementById("menu");
+        const menuWrapper = document.querySelector(".mega-menu__container");
+
+        menuButton.addEventListener("click", async function () {
+            if (menuWrapper.innerHTML === "") {
+                const data = await fetchMenuData("mainMenu.json");
+                buildMenu(data, menuWrapper);
+            }
+
+            menu.style.display =
+                menu.style.display === "flex" ? "none" : "flex";
+        });
+
+        async function fetchMenuData(menuFile) {
+            const response = await fetch(menuFile);
+            const data = await response.json();
+            return data;
+        }
+
+        function buildMenu(menuData, container, depth = 1) {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("mega-menu__menu-wrapper");
+            wrapper.attributes.setNamedItem(
+                document.createAttribute("data-depth")
+            );
+            wrapper.attributes.getNamedItem("data-depth").value = depth;
+
+            container.appendChild(wrapper);
+
+            menuData.forEach((item, index) => {
+                const menuItem = document.createElement("div");
+                menuItem.classList.add("mega-menu__menu-item");
+
+                menuItem.innerHTML =
+                    `<button class="mega-menu__menu-button">` +
+                    (item.iconSrc
+                        ? `<div class="mega-menu__menu-button-icon" style="background-image: url(${item.iconSrc})"></div>`
+                        : "") +
+                    item.title +
+                    `<div class="mega-menu__menu-item-arrow"></div>` +
+                    `</button>`;
+                const menuButton = menuItem.querySelector(
+                    ".mega-menu__menu-button"
+                );
+
+                if (index === 0 && item.subMenu && depth === 1) {
+                    menuItem.classList.add("opened");
+
+                    buildMenu(item.subMenu, container, depth + 1);
+                }
+
+                menuButton.addEventListener("click", function () {
+                    const isOpened = wrapper.querySelectorAll(".opened");
+
+                    if (isOpened) {
+                        isOpened.forEach((item) => {
+                            item.classList.remove("opened");
+                        });
+                    }
+
+                    removeNodesByDepth(container, depth + 1);
+
+                    if (item.subMenu) {
+                        if (!menuItem.classList.contains("opened")) {
+                            buildMenu(item.subMenu, container, depth + 1);
+                            menuItem.classList.add("opened");
+                        } else {
+                            menuItem.classList.remove("opened");
+                        }
+                    }
+
+                    if (item.content) {
+                        if (!menuItem.classList.contains("opened")) {
+                            buildContent(item.content, container, depth + 1);
+                            menuItem.classList.add("opened");
+                        } else {
+                            menuItem.classList.remove("opened");
+                        }
+                    }
+                });
+
+                wrapper.appendChild(menuItem);
+            });
+        }
+
+        function buildContent(contentData, container, depth) {
+            const contentWrap = document.createElement("div");
+            contentWrap.classList.add("mega-menu__content-wrap");
+            contentWrap.attributes.setNamedItem(
+                document.createAttribute("data-depth")
+            );
+            contentWrap.attributes.getNamedItem("data-depth").value = depth;
+
+            container.appendChild(contentWrap);
+
+            contentData.forEach((item) => {
+                const contentItem = document.createElement("div");
+                contentItem.classList.add("content-item");
+
+                contentItem.innerHTML =
+                    `<ul class="content-item-title">${item.title}` +
+                    (item.links
+                        ? item.links
+                              .map(
+                                  (link) =>
+                                      `<li class="content-item-list-item"><a href="${link.url}">${link.title}</a></li>`
+                              )
+                              .join("")
+                        : "") +
+                    `</ul>`;
+
+                contentWrap.appendChild(contentItem);
+            });
+        }
+
+        function removeNodesByDepth(rootNode, depthToRemove) {
+            // Select all nodes with data-depth attribute
+            const nodes = rootNode.querySelectorAll("[data-depth]");
+
+            // Iterate over the nodes and delete nodes with depth > specified value
+            nodes.forEach((node) => {
+                const nodeDepth = parseInt(node.getAttribute("data-depth"), 10);
+
+                if (nodeDepth >= depthToRemove) {
+                    node.parentNode.removeChild(node);
+                }
+            });
+        }
+    });
+
+    window.addEventListener("click", function (e) {
+        const menu = document.getElementById("menu");
+        const button = document.getElementById("menuButton");
+        const menuWrapper = document.querySelector("mega-menu__container");
+        if (!menu.contains(e.target) && !button.contains(e.target)) {
+            menu.style.display = "none";
+            menuWrapper.innerHTML = "";
+        }
+    });
+</script>

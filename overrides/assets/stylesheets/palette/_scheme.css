@@ -4,6 +4,11 @@
         --md-primary-bg-color: #E7E7E7;
         --text-color: #E7E7E7;
         --md-default-bg-color: #171717;
+        --search-bg-color: #fff;
+        --search-border-color: #CCCCCC;
+        --search-icon-color: #BFBFBF;
+        --footer-icon-color: #ACACAC;
+        --header-footer-primary-color: #ffffff;
         --palette-button-nav: var(--header-button-primary-color);
         --md-default-fg-color--light: #383838;
         --md-source-primary-color: rgba(255, 255, 255, 0.5);

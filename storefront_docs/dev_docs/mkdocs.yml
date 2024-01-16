@@ -27,6 +27,9 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - toc.follow
+        - search.highlight
+        - search.share
+        - search.suggest
 
 markdown_extensions:
     - abbr
@@ -53,7 +56,7 @@ markdown_extensions:
     - pymdownx.details
     - pymdownx.emoji:
           emoji_generator: !!python/name:materialx.emoji.to_svg
-          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
     - pymdownx.highlight:
           anchor_linenums: true
     - pymdownx.inlinehilite
@@ -152,6 +155,34 @@ extra:
           url: https://www.virtocommerce.org/faq
         - title: Release Notes
           url: https://www.virtocommerce.org/c/news-digest/15
+    link_cards:
+            - title: Contact support
+              icon: assets/icons/contact-support.svg
+              link: #
+              outlineColor: '#EA534A'
+            - title: Community
+              icon: assets/icons/community.svg
+              link: #
+              outlineColor: '#EA534A'
+            - title: GitHub
+              icon: assets/icons/github-outline.svg
+              link: #
+              outlineColor: '#FF9162'
+            - title: Blog
+              icon: assets/icons/blog.svg
+              link: #
+              outlineColor: '#FF9162'
+    all_topics:
+        footer:
+            - iconSrc: "./assets/icons/release-notes.svg"
+              title: "Release Notes"
+              url: "#"
+            - iconSrc: "./assets/icons/support.svg"
+              title: "Support"
+              url: "#"
+            - iconSrc: "./assets/icons/github.svg"
+              title: "GitHub"
+              url: "#"
 
 extra_javascript:
     - assets/scripts/scripts-loader.js

@@ -10,6 +10,9 @@
 @import "main/_layout/_home.css";
 @import "main/_layout/_nav.css";
 @import "main/_layout/_source.css";
+@import "main/_layout/_link-card.css";
+@import "main/_layout/_doc-card.css";
+@import "main/_layout/_zebra-table.css";
 @import "main/_icons.css";
 @import "main/_typeset.css";
 @import "main/_colors.css";
@@ -79,6 +82,12 @@
     }
 }
 
+@media screen and (min-width: 60em) {
+    .md-header__button[for=__search] {
+        display: none;
+    }
+}
+
 .md-clipboard {
     visibility: hidden;
 }
@@ -86,4 +95,10 @@
 pre[id^="__code"]:hover > .md-clipboard {
     visibility: visible !important;
     color: var(--md-default-fg-color--lightest) !important;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

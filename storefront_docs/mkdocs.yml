@@ -24,6 +24,9 @@ theme:
     features:
         - navigation.tabs
         - --md-code-bg-color
+        - search.highlight
+        - search.share
+        - search.suggest
 markdown_extensions:
     - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
     - codehilite
@@ -33,7 +36,7 @@ markdown_extensions:
     - pymdownx.magiclink
     - attr_list
     - pymdownx.emoji:
-          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
           emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
@@ -49,7 +52,7 @@ plugins:
               "redir.md": "index.md"
 
 # Project information
-site_name: Storefront documentation
+site_name: Documentation
 site_description: Storefront documentation center
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -90,19 +93,72 @@ extra:
         - title: Release Notes
           url: https://www.virtocommerce.org/c/news-digest/15
     main_page:
-        top_cards:
+        documentation:
+            - title: User Guide
+              image: assets/images/storefront-userquide.png
+              description:
+                - title: Registration
+                  link: #
+                - title: Navigation
+                  link: #
+                - title: Shopping
+                  link: #
+            - title: Developer guide
+              image: assets/images/storefront-devguide.png
+              description:
+                - title: Getting Started
+                  link: #
+                - title: ASP.NET Core Storefront Runtime
+                  link: #
+                - title: Vue.js Starter Theme
+                  link: #
+                - title: Integrations
+                  link: #
+            - title: Other resources
+              image: assets/images/storefront-other.png
+              description:
+                - title: Release notes
+                  link: #
+                - title: Github
+                  link: #
+        release_notes:
+            - title: News Digest
+              link: #
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest 2
+              link: #
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest 3
+              link: #
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest 4
+              link: #
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest 5
+              link: #
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest 6
+              link: #
+              type: Digest
+              date: 5 December 2023
+        # top_cards:
             # -   title: Architect
             #     icon: assets/icons/package.svg
             #     description: I need to build the platform's architecture or learn how I can do that.
             #     link: https://docs.virtocommerce.org/architecture-center/B2B-multiregional/
-            - title: User Guide
-              icon: assets/icons/person.svg
-              description: --TBD--
-              link: user_docs
-            - title: Developer Guide
-              icon: assets/icons/code-square.svg
-              description: --TBD--
-              link: dev_docs
+            # - title: User Guide
+            #   icon: assets/icons/person.svg
+            #   description: --TBD--
+            #   link: user_docs
+            # - title: Developer Guide
+            #   icon: assets/icons/code-square.svg
+            #   description: --TBD--
+            #   link: dev_docs
             # -   title: Business Analyst
             #     icon: assets/icons/briefcase.svg
             #     description: I need to know how to implement Virto solutions across my team or externally.
@@ -124,23 +180,51 @@ extra:
         #         icon: marketplace.svg
         #         description: Virto Commerce allows you to build your very own unique online marketplace. See how!
         #         link: under-construction
-        education:
-            - title: Videos
-              description: Explore our video tutorials
-              image: assets/icons/videos.png
-              link: https://www.youtube.com/c/Virtocommerce
-            - title: Tech Blog
-              description: Hints, tips, and so much more!
-              image: assets/icons/articles.png
-              link: https://www.virtocommerce.org/
-            - title: Case Studies
-              description: Best case studies provided by our dev team
-              image: assets/icons/videos-second.png
-              link: https://virtocommerce.com/case-studies
-            - title: Code samples
-              description: Most used code samples
-              image: assets/icons/stories.png
-              link: https://github.com/VirtoCommerce/vc-samples
+        # education:
+        #     - title: Videos
+        #       description: Explore our video tutorials
+        #       image: assets/icons/videos.png
+        #       link: https://www.youtube.com/c/Virtocommerce
+        #     - title: Tech Blog
+        #       description: Hints, tips, and so much more!
+        #       image: assets/icons/articles.png
+        #       link: https://www.virtocommerce.org/
+        #     - title: Case Studies
+        #       description: Best case studies provided by our dev team
+        #       image: assets/icons/videos-second.png
+        #       link: https://virtocommerce.com/case-studies
+        #     - title: Code samples
+        #       description: Most used code samples
+        #       image: assets/icons/stories.png
+        #       link: https://github.com/VirtoCommerce/vc-sample
+        link_cards:
+                - title: Contact support
+                  icon: assets/icons/contact-support.svg
+                  link: #
+                  outlineColor: '#EA534A'
+                - title: Community
+                  icon: assets/icons/community.svg
+                  link: #
+                  outlineColor: '#EA534A'
+                - title: GitHub
+                  icon: assets/icons/github-outline.svg
+                  link: #
+                  outlineColor: '#FF9162'
+                - title: Blog
+                  icon: assets/icons/blog.svg
+                  link: #
+                  outlineColor: '#FF9162'
+    all_topics:
+        footer:
+            - iconSrc: "./assets/icons/release-notes.svg"
+              title: "Release Notes"
+              url: "#"
+            - iconSrc: "./assets/icons/support.svg"
+              title: "Support"
+              url: "#"
+            - iconSrc: "./assets/icons/github.svg"
+              title: "GitHub"
+              url: "#"
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js

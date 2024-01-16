@@ -7,7 +7,7 @@ page.meta.revision_date
 {% endif %}
 
 <!-- Tags -->
-{% if "tags" in config.plugins %}
+{% if "material/tags" in config.plugins %}
 {% include "partials/tags.html" %}
 {% endif %}
 
@@ -16,7 +16,7 @@ page.meta.revision_date
   doesn't, the page title (or respectively site name) is used
   as the main headline.
 -->
-{% if not "\x3ch1" in page.content %}
+{% if "\x3ch1" not in page.content %}
 <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}
 

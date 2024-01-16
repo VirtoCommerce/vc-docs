@@ -1,0 +1,71 @@
+[
+    {
+        "iconSrc": "./assets/icons/all-products.svg",
+        "title": "All products",
+        "subMenu": [
+            {
+                "title": "Platform",
+                "content": [
+                    {
+                        "title": "User Guide",
+                        "links": [
+                            {
+                                "title": "What are modules",
+                                "url": "#"
+                            },
+                            {
+                                "title": "How to install modules",
+                                "url": "#"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Developer Guide",
+                        "links": [
+                            {
+                                "title": "Backend Architecture",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Caching",
+                                "url": "#"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "iconSrc": "./assets/icons/getting-started.svg",
+        "title": "Getting started",
+        "content": [
+            {
+                "title": "User Guide",
+                "links": [
+                    {
+                        "title": "What are modules",
+                        "url": "#"
+                    },
+                    {
+                        "title": "How to install modules",
+                        "url": "#"
+                    }
+                ]
+            },
+            {
+                "title": "Developer Guide",
+                "links": [
+                    {
+                        "title": "Backend Architecture",
+                        "url": "#"
+                    },
+                    {
+                        "title": "Caching",
+                        "url": "#"
+                    }
+                ]
+            }
+        ]
+    }
+]

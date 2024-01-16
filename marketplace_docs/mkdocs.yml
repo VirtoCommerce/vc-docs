@@ -24,6 +24,9 @@ theme:
     features:
         - navigation.tabs
         - --md-code-bg-color
+        - search.highlight
+        - search.share
+        - search.suggest
 markdown_extensions:
     - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
     - codehilite
@@ -33,7 +36,7 @@ markdown_extensions:
     - pymdownx.magiclink
     - attr_list
     - pymdownx.emoji:
-          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
           emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
@@ -137,6 +140,34 @@ extra:
               description: Most used code samples
               image: assets/icons/stories.png
               link: https://github.com/VirtoCommerce/vc-samples
+    link_cards:
+            - title: Contact support
+              icon: assets/icons/contact-support.svg
+              link: #
+              outlineColor: '#EA534A'
+            - title: Community
+              icon: assets/icons/community.svg
+              link: #
+              outlineColor: '#EA534A'
+            - title: GitHub
+              icon: assets/icons/github-outline.svg
+              link: #
+              outlineColor: '#FF9162'
+            - title: Blog
+              icon: assets/icons/blog.svg
+              link: #
+              outlineColor: '#FF9162'
+    all_topics:
+        footer:
+            - iconSrc: "./assets/icons/release-notes.svg"
+              title: "Release Notes"
+              url: "#"
+            - iconSrc: "./assets/icons/support.svg"
+              title: "Support"
+              url: "#"
+            - iconSrc: "./assets/icons/github.svg"
+              title: "GitHub"
+              url: "#"
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
