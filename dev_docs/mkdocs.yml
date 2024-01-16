@@ -106,7 +106,7 @@ edit_uri: edit/dev/docs/
 
 
 # Copyright
-copyright: Copyright &copy; 2023. All rights reserved.
+copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
@@ -590,6 +590,7 @@ nav:
           - VcSelect: custom-apps-development/vc-shell/Essentials/controls/VcSelect.md
           - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/controls/VcDynamicProperty.md
           - VcFieldset: custom-apps-development/vc-shell/Essentials/controls/VcFieldset.md
+          - VcGallery: custom-apps-development/vc-shell/Essentials/controls/VcGallery.md
           - Toolbar: custom-apps-development/vc-shell/Essentials/controls/Toolbar.md
           - Widgets: custom-apps-development/vc-shell/Essentials/controls/Widgets.md
         - Dynamic views:
