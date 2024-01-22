@@ -71,9 +71,9 @@ To customize the appearance and behavior of your component, use the following pr
 | `clearable` {==boolean==}             | Appends clearable icon when a value is set; When clicked, model becomes null. |
 | `disabled` {==boolean==}              | Put component in disabled mode. |
 | `multiple` {==boolean==}              | Allow multiple selection. Model must be Array. |
-| `options` {==((keyword?: string, skip?: number, ids?: string[]) => Promise<P>) \| T[]==} | Available options that the user can select from. Default value: `[]` |
-| `optionValue` | `OptionProp<Option>`  | Property of option which holds the 'value'. Default value: `id`. |
-| `optionLabel` | `OptionProp<Option>`  | Property of option which holds the 'label' Default value: `title`. |
+| `options` {==((keyword?: string, skip?: number, ids?: string[]) => Promise<P>)==}, {==T[]==} | Available options that the user can select from. Default value: `[]` |
+| `optionValue` {==OptionProp<Option>==}  | Property of option which holds the 'value'. Default value: `id`. |
+| `optionLabel` {==OptionProp<Option>==}  | Property of option which holds the 'label' Default value: `title`. |
 | `emitValue` {==boolean==}             | Update model with the value of the selected option instead of the whole option |
 | `debounce` {==number==}, {==string==} | Debounce the search input update with an amount of milliseconds. Default value: `500`. |
 | `placeholder` {==string==}            | Input placeholder text. |
@@ -114,7 +114,7 @@ To effectively interact with the component, use the emitted events. The `update:
 
 ### Dynamic Views
 
-To dynamically integrate the `vc-select` component into your views, use the schema interface:
+To dynamically integrate the `select` component into your views, use the schema interface:
 
 ```typescript
 interface SelectSchema {
@@ -161,58 +161,10 @@ To incorporate the component into your dynamic applications, define the followin
 | `optionsMethod` {==string==}  | Method to call to get select options. Method should be defined in the blade `scope`. |
 | `optionValue` {==string==}    | Property that holds the value of the option. Default: `id` |
 | `optionLabel` {==string==}    | Property that holds the label of the option. Default: `title` |
-| `searchable` {==boolean==}    | Whether the select is searchable. |
-| `clearable` {==boolean==}     | Whether the select has a clear button. |
+| `searchable` {==boolean==}    | Specification whether the select is searchable. |
+| `clearable` {==boolean==}     | Specification whether the select has a clear button. |
 | `emitValue` {==boolean==}     | Update model with the value of the selected option instead of the whole option. If true - emits only selected value, if false - emits whole selected object. |
 | `customTemplate`              | `{component: string}` | Custom template for select options. Component should be registered globally. |
 | `disabled` {=={method: string}==} | Disabled state for component, could be used to disable select based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==} | Visibility state for component, could be used to hide select based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `update` {=={method: string}==} | Method to call when the select value is updated. Method should be defined in the blade `scope`. |
-
-## Example
-
-Select allows you to display a list of options. To do this, you need to specify the `optionsMethod` parameter. The method should return an array of objects.
-
-This method should follow the following signature:
-
-```typescript
-async function fetchSelectOptions(keyword?: string, skip = 0, ids?: string[]) {
-    return await optionsFetchMethod({
-        objectIds: ids,
-        keyword,
-        skip,
-        take: 20 // Number of items to load per request
-        })
-    );
-  }
-```
-
-To specify what you want to display you should use `optionLabel` as label property and `optionValue` as selected value property.
-For example, if you have option like this:
-
-    ```typescript
-    {
-        id: "optionId",
-        title: "Option title",
-    }
-    ```
-
-Then you should specify `optionLabel: "title"` and `optionValue: "id"`. What is under `optionValue` will be written in the `property` of the select.
-
-## Custom template
-
-You can specify custom template for select options. To do so, you need to specify the `customTemplate` parameter. The parameter should contain the name of the component that will be used as a template for select options. The component should be registered globally by `moduleComponents` option in  `createDynamicAppModule` method.
-
-The created component has default props with the custom template:
-
-```typescript
-defineProps<{
-  context: {
-    opt: Record<string, any>;
-  };
-  slotName: string;
-}>();
-```
-
-Where `context` is the object that holds `opt` property that contains the option data, `slotName` is the name of the slot, that can display custom template.
-`slotName` could be `selected-item` and `option`.

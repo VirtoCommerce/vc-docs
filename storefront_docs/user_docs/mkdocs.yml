@@ -87,7 +87,7 @@ plugins:
 #    - monorepo
 
 # Project information
-site_name: Storefront User Guides
+site_name: Storefront User Docs
 site_description: --TDB--
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -102,33 +102,31 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
-    - Storefront and Theme:
-          - Overview: overview.md
-          - Navigation:
-                - Homepage layout: navigation/homepage-layout.md
-                - Product page layout: navigation/product-page-layout.md
-          - Register and sign in:
-                - Create account: registration_and_signing_in/create-account.md
-                - Sign in: registration_and_signing_in/sign-in.md
-                - Password management: registration_and_signing_in/password-management.md
-          - Account:
-                - Personal and corporate accounts: account/overview.md
-                - Dashboard: account/dashboard.md
-                - Profile: account/profile.md
-                - Addresses: account/addresses.md
-                - Orders: account/orders.md
-                - Lists: account/lists.md
-                - Checkout defaults: account/checkout-defaults.md
-                - Quote requests: account/quote-requests.md
-                - Company info: account/company-info.md
-                - Company members: account/company-members.md
-          - Shopping:
-                - Search options: shopping/searching-for-products.md
-                - Compare products: shopping/compare-products.md
-                - Products lists: shopping/lists.md
-                - Submit quotes: shopping/submit-quotes.md
-                - Bulk orders: shopping/bulk-orders.md
-                - Checkout: shopping/checkout-process.md
+    - Register and Sign In:
+          - Create Account: registration_and_signing_in/create-account.md
+          - Sign In: registration_and_signing_in/sign-in.md
+          - Password Management: registration_and_signing_in/password-management.md
+    - Navigation:
+          - Homepage Layout: navigation/homepage-layout.md
+          - Product Page Layout: navigation/product-page-layout.md
+    - Account:
+          - Personal and Corporate Accounts: account/overview.md
+          - Dashboard: account/dashboard.md
+          - Profile: account/profile.md
+          - Addresses: account/addresses.md
+          - Orders: account/orders.md
+          - Lists: account/lists.md
+          - Checkout Defaults: account/checkout-defaults.md
+          - Quote Requests: account/quote-requests.md
+          - Company Info: account/company-info.md
+          - Company Members: account/company-members.md
+    - Shopping:
+          - Search Options: shopping/searching-for-products.md
+          - Compare Products: shopping/compare-products.md
+          - Products Lists: shopping/lists.md
+          - Submit Quotes: shopping/submit-quotes.md
+          - Bulk Orders: shopping/bulk-orders.md
+          - Checkout: shopping/checkout-process.md
 
 extra:
     social:

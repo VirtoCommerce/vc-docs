@@ -115,7 +115,7 @@ To incorporate the editor into your dynamic applications, define the following p
 | `rules` {==IValidationRules==}            | Validation rules for the editor. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` {==string==}                | Placeholder text for the editor.  |
 | `tooltip` {==string==}                    | Tooltip text for the editor label. |
-| `multilanguage` {==boolean==}             | Whether the editor supports multiple languages. |
+| `multilanguage` {==boolean==}             | Specification whether the editor supports multiple languages. |
 | `disabled` {=={method: string}==}         | Disabled state for component, could be used to disable editor based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==}       | Visibility state for component, could be used to hide editor based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `update` {=={method: string}==}           | Method to call when the editor value is updated. Method should be defined in the blade `scope`. |

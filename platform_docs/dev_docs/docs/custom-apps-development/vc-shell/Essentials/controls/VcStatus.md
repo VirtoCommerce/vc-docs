@@ -88,14 +88,14 @@ To incorporate the status into your dynamic applications, define the following p
 
 | Property                              | Description                                                           |
 | ------------------------------------- | --------------------------------------------------------------------  |
-| `id` {==string==}                     | The unique Id for the `vc-status` component.                          |
-| `component` {==vc-status==}           | Component used in schema.                                             |
-| `variant` {==string==}                | Status variant.                                                       |
-| `icon` {==string==}                   | Icon to show in status badge. Uses [AwesomeIcons](https://fontawesome.com/) package  |
-| `iconVariant` {==string==}            | Icon variant.                                                         |
-| `iconSize` {==string==}               | Icon size.                                                            |
-| `title` {==string==}                  | Status title.                                                         |
-| `outline` {==boolean==}               | Whether the status is outlined or not.                                |
-| `extend` {==boolean==}                | Whether the status is extendable or not.                              |
-| `content` {=={method: string}==}      | Method to call to get status content. Method should be defined in the blade `scope` and should return string value. |
-| `visibility` {=={method: string}==}   | Visibility state for component, could be used to hide status based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `id` {==string==}                     | Identifier for the `vc-status` component.                             |
+| `component` {==vc-status==}           | Utilized component in the schema.                                     |
+| `variant` {==string==}                | Type of status variant.                                              |
+| `icon` {==string==}                   | Icon featured in the status badge, utilizing [AwesomeIcons](https://fontawesome.com/) package. |
+| `iconVariant` {==string==}            | Variant of the displayed icon.                                       |
+| `iconSize` {==string==}               | Size of the icon.                                                     |
+| `title` {==string==}                  | Title associated with the status.                                    |
+| `outline` {==boolean==}               | Specification of whether the status is outlined.                     |
+| `extend` {==boolean==}                | Specification of whether the status is extendable.                   |
+| `content` {=={method: string}==}      | Method for retrieving the status content. Method should be defined in the blade `scope` and should return a string value. |
+| `visibility` {=={method: string}==}   | State of visibility for the component, allowing you to hide the status based on certain conditions. The method or variable should be defined in the blade `scope` and should return a boolean value. |

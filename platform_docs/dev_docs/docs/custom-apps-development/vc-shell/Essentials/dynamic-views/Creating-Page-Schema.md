@@ -1,4 +1,4 @@
-# Creating Page Schema
+# Create Page Schema
 
 Dynamic views enable the creation of new blades using a new style called `schemas`. This approach allows the creation of blades without a template. The built-in view types, such as `DynamicBladeList` and `DynamicBladeForm`, come with built-in templates and basic logic, including pagination, validation, etc. Creating a new module involves generating view schemas, composing logic used by these views, and creating additional custom templates if the built-in ones don't meet your requirements. New modules must adhere to a specific folder structure, which we will explore further in this guide.
 
@@ -23,7 +23,7 @@ The typical folder structure of modules looks as follows:
 
 An example folder structure for the Offers module can be found in the `sample/vc-app` folder in the [@vc-shell](https://github.com/VirtoCommerce/vc-shell) repository.
 
-## Creating a Schema
+## Create Schema
 
 Dynamic views are built according to these principles:
 
@@ -37,7 +37,7 @@ Dynamic views are built according to these principles:
 
 To create a new view, create a new file in the `pages` folder of your module. In this example, we will create a schema for a `DynamicBladeList` view with its own URL. We want to include this view in the navigation menu, add a search bar and multiselect functionality, and have columns for `Name`, `Price`, `Status`, and `Created date`. Additionally, we want to enable sorting on all columns and include a `Create` button in the toolbar.
 
-### Providing view settings
+### Provide view settings
 
 Let's create a file named `list.ts` and add the following view settings:
 
@@ -68,7 +68,7 @@ const schema: DynamicDetailsSchema = {
 ![Readmore](../../../media/readmore.png){: width="25"} [Schema Settings API](./views/schema-settings.md)
 
 
-### Providing view content
+### Provide view content
 
 Now, let's create the `content` for the view. In our case, since we are creating a `DynamicBladeList` view, we need to add `vc-table` as the `content` of the view. For this example, add the following code to the view schema:
 

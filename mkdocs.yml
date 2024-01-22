@@ -91,7 +91,7 @@ extra:
         - title: FAQ
           url: https://www.virtocommerce.org/faq
         - title: Release Notes
-          url: https://www.virtocommerce.org/c/news-digest/15
+          url: https://www.virtocommerce.org/c/news-digest/
     main_page:
         top_cards:
             # -   title: Architect
@@ -101,15 +101,15 @@ extra:
             -   title: Storefront
                 icon: assets/icons/person.svg
                 description: Build and personalize your online store for engaging shopping experiences
-                link: storefront_docs
+                link: storefront_docs/mkdocs.yml
             -   title: Platform
                 icon: assets/icons/code-square.svg
-                description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e commerce ecosystem
-                link: platform_docs
+                description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e-commerce ecosystem
+                link: platform_docs/mkdocs.yml
             -   title: Marketplace
                 icon: assets/icons/code-square.svg
                 description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
-                link: marketplace_docs
+                link: marketplace_docs/mkdocs.yml
             # -   title: Business Analyst
             #     icon: assets/icons/briefcase.svg
             #     description: I need to know how to implement Virto solutions across my team or externally.
@@ -152,47 +152,47 @@ extra:
             - title: Storefront
               description: Build and personalize your online store for engaging shopping experiences
               image: assets/images/storefront.png
-              link: https://www.youtube.com/c/Virtocommerce
+              link: storefront_docs/mkdocs.yml
             - title: Platform
-              description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e commerce ecosystem
+              description: Explore the Virto Commerce Platform, a solution designed to efficiently manage<br>and scale your entire e-commerce ecosystem
               image: assets/images/platform.png
-              link: https://www.virtocommerce.org/
+              link: platform_docs/mkdocs.yml
             - title: Marketplace
               description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
               image: assets/images/marketplace.png
-              link: https://virtocommerce.com/case-studies
+              link: marketplace_docs/mkdocs.yml
             - title: Custom Apps
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
-              link: https://github.com/VirtoCommerce/vc-samples
+              link: platform_docs/dev_docs/docs/custom-apps-development/overview.md
         link_cards:
             - title: Contact support
               icon: assets/icons/contact-support.svg
-              link: #
+              link: https://help.virtocommerce.com/support/home
               outlineColor: '#EA534A'
             - title: Community
               icon: assets/icons/community.svg
-              link: #
+              link: https://www.virtocommerce.org/
               outlineColor: '#EA534A'
             - title: GitHub
               icon: assets/icons/github-outline.svg
-              link: #
+              link: https://github.com/VirtoCommerce
               outlineColor: '#FF9162'
             - title: Blog
               icon: assets/icons/blog.svg
-              link: #
+              link: https://virtocommerce.com/blog
               outlineColor: '#FF9162'
     all_topics:
         footer:
             - iconSrc: "./assets/icons/release-notes.svg"
               title: "Release Notes"
-              url: "#"
+              url: "https://www.virtocommerce.org/c/news-digest/"
             - iconSrc: "./assets/icons/support.svg"
               title: "Support"
-              url: "#"
+              url: "https://help.virtocommerce.com/support/home"
             - iconSrc: "./assets/icons/github.svg"
               title: "GitHub"
-              url: "#"
+              url: "https://github.com/VirtoCommerce"
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js

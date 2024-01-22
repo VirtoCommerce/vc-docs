@@ -125,7 +125,7 @@ nav:
                       - Importing Sample Data: Getting-Started/Post-Installation-Steps/04-importing-sample-data.md
     - Back End Architecture:
           - Tech Stack: Back-End-Architecture/01-tech-stack.md
-          - Conceptual Overview: Back-End-Architecture/02-conceptual-overview-in-progress.md
+          - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
     - Fundamentals:
           - Caching:
                 - Overview: Fundamentals/Caching/01-overview.md

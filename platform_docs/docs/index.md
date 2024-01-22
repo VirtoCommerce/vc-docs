@@ -1,5 +1,5 @@
 ---
-title: Title
-template: home.html
+title: Platform Documentation
+template: platform-home.html
 ---
 

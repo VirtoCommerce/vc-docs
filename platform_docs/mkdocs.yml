@@ -63,7 +63,7 @@ repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
 # Copyright
-copyright: Copyright &copy; 2023. All rights reserved.
+copyright: Copyright &copy; 2024. All rights reserved.
 
 extra:
     social:
@@ -93,19 +93,74 @@ extra:
         - title: Release Notes
           url: https://www.virtocommerce.org/c/news-digest/15
     main_page:
-        top_cards:
+        documentation:
+            - title: User Guide
+              image: assets/images/storefront-userquide.png
+              description:
+                - title: Installing Modules
+                  link: #
+                - title: Managing Catalogs
+                  link: #
+                - title: Managing Orders
+                  link: #
+                - title: Managing Inventory
+                  link: #
+            - title: Developer Guide
+              image: assets/images/storefront-devguide.png
+              description:
+                - title: Getting Started
+                  link: #
+                - title: Modularity
+                  link: #
+                - title: Extensibiliity Points
+                  link: #
+                - title: GraphQL API
+                  link: #
+            - title: Other Resources
+              image: assets/images/storefront-other.png
+              description:
+                - title: Release Notes
+                  link: https://github.com/VirtoCommerce/vc-platform/releases
+                - title: Github
+                  link: https://github.com/VirtoCommerce/vc-platform/
+        release_notes:
+            - title: News Digest January 2024
+              link: https://www.virtocommerce.org/t/news-digest-january-2024/663
+              type: Digest
+              date: 8 January 2024
+            - title: News Digest December 2023
+              link: https://www.virtocommerce.org/t/news-digest-december-2023/651
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest November 2023
+              link: https://www.virtocommerce.org/t/news-digest-november-2023/644
+              type: Digest
+              date: 1 November 2023
+            - title: News Digest October 2023
+              link: https://www.virtocommerce.org/t/news-digest-october-2023/631
+              type: Digest
+              date: 3 October 2023
+            - title: News Digest September 2023
+              link: https://www.virtocommerce.org/t/news-digest-september-2023/613
+              type: Digest
+              date: 5 September 2023
+            - title: News Digest August 2023
+              link: https://www.virtocommerce.org/t/news-digest-august-2023/602
+              type: Digest
+              date: 1 August 2023
+        # top_cards:
             # -   title: Architect
             #     icon: assets/icons/package.svg
             #     description: I need to build the platform's architecture or learn how I can do that.
             #     link: https://docs.virtocommerce.org/architecture-center/B2B-multiregional/
-            - title: User Guide
-              icon: assets/icons/person.svg
-              description: I use or am going to use Virto solutions on a regular basis.
-              link: user_docs
-            - title: Developer Guide
-              icon: assets/icons/code-square.svg
-              description: I need to know how the Virto platform works so that I may customize it best for my team or customers.
-              link: dev_docs
+            # - title: User Guide
+            #   icon: assets/icons/person.svg
+            #   description: --TBD--
+            #   link: user_docs
+            # - title: Developer Guide
+            #   icon: assets/icons/code-square.svg
+            #   description: --TBD--
+            #   link: dev_docs
             # -   title: Business Analyst
             #     icon: assets/icons/briefcase.svg
             #     description: I need to know how to implement Virto solutions across my team or externally.
@@ -127,40 +182,40 @@ extra:
         #         icon: marketplace.svg
         #         description: Virto Commerce allows you to build your very own unique online marketplace. See how!
         #         link: under-construction
-        education:
-            - title: Videos
-              description: Explore our video tutorials
-              image: assets/icons/videos.png
-              link: https://www.youtube.com/c/Virtocommerce
-            - title: Tech Blog
-              description: Hints, tips, and so much more!
-              image: assets/icons/articles.png
-              link: https://www.virtocommerce.org/
-            - title: Case Studies
-              description: Best case studies provided by our dev team
-              image: assets/icons/videos-second.png
-              link: https://virtocommerce.com/case-studies
-            - title: Code samples
-              description: Most used code samples
-              image: assets/icons/stories.png
-              link: https://github.com/VirtoCommerce/vc-samples
-    link_cards:
-            - title: Contact support
-              icon: assets/icons/contact-support.svg
-              link: #
-              outlineColor: '#EA534A'
-            - title: Community
-              icon: assets/icons/community.svg
-              link: #
-              outlineColor: '#EA534A'
-            - title: GitHub
-              icon: assets/icons/github-outline.svg
-              link: #
-              outlineColor: '#FF9162'
-            - title: Blog
-              icon: assets/icons/blog.svg
-              link: #
-              outlineColor: '#FF9162'
+        # education:
+        #     - title: Videos
+        #       description: Explore our video tutorials
+        #       image: assets/icons/videos.png
+        #       link: https://www.youtube.com/c/Virtocommerce
+        #     - title: Tech Blog
+        #       description: Hints, tips, and so much more!
+        #       image: assets/icons/articles.png
+        #       link: https://www.virtocommerce.org/
+        #     - title: Case Studies
+        #       description: Best case studies provided by our dev team
+        #       image: assets/icons/videos-second.png
+        #       link: https://virtocommerce.com/case-studies
+        #     - title: Code samples
+        #       description: Most used code samples
+        #       image: assets/icons/stories.png
+        #       link: https://github.com/VirtoCommerce/vc-sample
+        link_cards:
+                - title: Contact support
+                  icon: assets/icons/contact-support.svg
+                  link: https://help.virtocommerce.com/support/home
+                  outlineColor: '#EA534A'
+                - title: Community
+                  icon: assets/icons/community.svg
+                  link: https://www.virtocommerce.org/
+                  outlineColor: '#EA534A'
+                - title: GitHub
+                  icon: assets/icons/github-outline.svg
+                  link: https://github.com/VirtoCommerce
+                  outlineColor: '#FF9162'
+                - title: Blog
+                  icon: assets/icons/blog.svg
+                  link: https://virtocommerce.com/blog
+                  outlineColor: '#FF9162'
     all_topics:
         footer:
             - iconSrc: "./assets/icons/release-notes.svg"

@@ -96,7 +96,7 @@ plugins:
 #    - monorepo
 
 # Project information
-site_name: Developer Center
+site_name: Storefront Dev Docs
 site_description: --TBD--
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -111,7 +111,6 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
-    - Overview: overview.md
     - Getting Started:
           - Quick Start (Windows): getting-started/quickstart-on-windows.md
     - ASP.NET Core Storefront Runtime:

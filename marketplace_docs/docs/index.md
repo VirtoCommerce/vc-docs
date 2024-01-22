@@ -1,5 +1,5 @@
 ---
-title: Title
-template: home.html
+title: Marketplace Documentation
+template: marketplace-home.html
 ---
 

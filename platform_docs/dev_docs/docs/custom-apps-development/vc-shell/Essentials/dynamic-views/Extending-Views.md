@@ -1,14 +1,14 @@
-# Extending Views
+# Extend Views
 
 You can significantly improve the interactivity and functionality of your applications by introducing new buttons and controls to your forms, thereby extending the user interface. When dealing with applications that rely on blades built with dynamic views, you can augment these views with fresh UI elements such as fields, forms, lists, and more. The best part is that you can achieve this without the need to make direct modifications to the source code of the application you're extending.
 
 In this guide, we will explore the `Offers` module, and specifically, the `useOffersList` and `useOfferDetails` composables that we are extending.
 
-## Extending Views in Other Applications Using Dynamic Views
+## Extend Views in Other Applications Using Dynamic Views
 
 Expanding the views of external applications is accomplished through the creation of a new override schema. In this schema, you specify the unique `id` of the `blade` you intend to extend, the path to the element schema, the index, and the value you intend to add or replace.
 
-### Structure of the Override Schema
+### Override Schema Structure 
 
 The override schema is an object that can contain two values: `upsert` and `remove`. Both of these values share a common characteristic, which is the requirement for you to specify the path to the schema `value` and the `id` of the blade you intend to modify.
 
@@ -55,7 +55,7 @@ The possible interactions with `upsert` are:
 * [Replacing the existing control in the schema.](Extending-Views.md#replacing-an-existing-control-in-the-schema)
 
 
-##### Adding new control to the schema
+##### Add new control to schema
 
 To incorporate a new control into the schema using upsert, you need to know the ID of the blade where you intend to add the control and determine how to navigate the path of the control in the base schema. For instance, if you want to add a new input to the `Offer` form, you can find a simplified base schema in the VirtoCommerce/vc-shell repository, located in the `sample` folder, within the 'vc-app' project at this [link](https://github.com/VirtoCommerce/vc-shell/blob/main/sample/vc-app/src/modules/offers/pages/details.ts#L38-L228).
 
@@ -138,7 +138,7 @@ upsert: [
 };
 ```
 
-##### Replacing existing control in the schema
+##### Replace existing control in the schema
 
 The process of replacing a control in the schema is similar to adding a new one but with some differences:
 
@@ -167,6 +167,7 @@ upsert: [
 ```
 
 #### Removal
+
 Removal follows the same schema as upsert, but for removal, you only need to specify the blade ID and the path where you want to delete the element. For example, if you want to remove the element with `id: "sku"` from the base schema, the simplified schema path would look like this:
 
 ```typescript

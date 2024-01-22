@@ -83,7 +83,7 @@ To incorporate the data field into your dynamic applications, define the followi
 | `tooltip` {==string==}                | Tooltip text for the field label. |
 | `property` {==string==}               | Property name that is used for binding field value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `variant` {==string==}                | Field variant. Default: `text` |
-| `copyable` {==boolean==}              | Whether the field is copyable or not. |
+| `copyable` {==boolean==}              | Specification whether the field is copyable or not. |
 | `visibility` {=={method: string}==}   | Visibility state for component, could be used to hide field based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 
 

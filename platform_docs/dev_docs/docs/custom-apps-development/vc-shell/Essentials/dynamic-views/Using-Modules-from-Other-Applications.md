@@ -1,10 +1,10 @@
-# Using Modules from Other Applications
+# Use Modules from Other Applications
 
 This guide explains how to use modules from another custom application in your own project. It provides detailed instructions on initializing external modules, adding them to the navigation menu, and integrating them into your project.
 
 In this guide, we'll use the example of the `vc-app-extend` project, which extends the functionality of the `vc-app` project located in the `sample` folder.
 
-## Adding Custom Application
+## Add Custom Application
 
 To incorporate another custom application into your project: 
 
@@ -12,7 +12,7 @@ To incorporate another custom application into your project:
 1. [Configure the external application as a plugin.](Using-Modules-from-Other-Applications.md#initializing-external-modules)
 1. [Create a link in the navigation menu.](Using-Modules-from-Other-Applications.md#adding-a-module-to-the-navigation-menu)
 
-### Installing Dependencies
+### Install Dependencies
 
 Let's assume you want to include modules from the `vc-app` application into your custom application, `vc-app-extend`. The package that contains these modules from `vc-app` is named `@vc-app/modules`. To add this dependency to your project, use the following command:
 
@@ -20,7 +20,7 @@ Let's assume you want to include modules from the `vc-app` application into your
 yarn add @vc-app/modules
 ```
 
-### Initializing External Modules
+### Initialize External Modules
 
 After installing the dependency, you must initialize the `Offers` module from the `@vc-app/modules` package. To do this, navigate to `vc-app-extend/src` and import the package in the `main.ts` file as follows:
 
@@ -81,11 +81,11 @@ startApp()
     Notice that when initializing modules, we always pass the `router` as the second argument to the `use` method. This is necessary for the automatic registration of modules in the Vue routing system.
 
 
-### Adding a Module to the Navigation Menu
+### Add Module to Navigation Menu
 
 After installing your module, you can add a link to the navigation menu based on your project's requirements. To do this, navigate to `vc-app-extend/src/pages` and locate the `menuItems` variable in the `App.vue` file. This variable serves as a storage for all navigation menu items and has its method, `navigationMenuComposer`, which defines the properties of menu items.
 
-#### Finding the Appropriate Blade for the Navigation Menu
+#### Find Appropriate Blade for Navigation Menu
 
 To determine which blade to use for the navigation menu, we'll refer to the schema in the source code of the external application, `vc-app`. In this case, as we intend to add `Offers` to the menu, we'll locate the file containing the blade schema, `grid.ts`, within the `vc-app/src/modules/offers/pages` path. This particular file functions as the `workspace blade` for the module. Crucially, the `settings` object within this schema must have the value `isWorkspace: true`.
 
@@ -130,7 +130,7 @@ export const grid: DynamicGridSchema = {
 !!! note
     `isWorkspace` is a special attribute that designates the primary blade of the module, from which all interactions with the module begin.
 
-#### Expanding the Navigation Menu
+#### Expand Navigation Menu
 
 Since dynamic blade components operate at runtime and lack an importable component for the `openBlade` method, you can utilize an additional composable method called `useBladeNavigation`. This method returns the component of the registered blade, `resolveBladeByName`. To obtain the desired blade using this method, you need to pass the unique blade ID obtained in the [Finding the Appropriate Blade for the Navigation Menu](./include-and-setup-other-custom-app.md#finding-the-appropriate-blade-for-the-navigation-menu) step.
 

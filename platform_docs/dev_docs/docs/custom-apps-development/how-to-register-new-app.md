@@ -1,8 +1,8 @@
-# How to Register a New App 
+# How to register new App 
 
 Using the Reports application as an example, let's look at the application installation process.
 
-!!! note
+!!! note "Prerequisites"
     * Before adding a new web app, make sure the following prerequisites have been installed:
         * [Virto Commerce Platform 3.264+](https://github.com/VirtoCommerce/vc-platform)
         * [Virto Commerce CLI (VC-BUILD) 3.12+](https://github.com/VirtoCommerce/vc-build)

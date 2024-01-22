@@ -164,7 +164,7 @@ await openBlade({
 })
 ```
 
-## Adding Module to Application
+## Add Module to Application
 
 Once you've created your `blade` template, it needs to be initialized. In the module's `index.ts` file, register it within the application using the `createAppModule` method. With this setup, you're ready to go:
 

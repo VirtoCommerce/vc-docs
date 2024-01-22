@@ -75,7 +75,7 @@ notification("My notification text!", {
 });
 ```
 
-### Toast Removing
+### Toast Removal
 
 You can remove all visible toasts or a specific toast:
 
@@ -141,7 +141,7 @@ watch(
 
 All globally registered notification templates are displayed in the notification dropdown list. To register a notification template, you need to create a component that will be used as a template and register it in the module initialization file.
 
-#### Creating Custom Notification Templates
+#### Create Custom Notification Templates
 
 Each module can have a notification template that will be displayed in the notification dropdown. If no template is provided, the default template will be used.
 

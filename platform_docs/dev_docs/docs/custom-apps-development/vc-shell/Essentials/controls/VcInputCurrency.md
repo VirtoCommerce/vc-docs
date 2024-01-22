@@ -136,7 +136,7 @@ To incorporate the input into your dynamic applications, define the following pr
 | Property and Type                         | Description                                           |
 | ----------------------------------------- | ----------------------------------------------------- |
 | `id` {==string==}                         | The unique Id for the `vc-input-currency` component.  |
-| `component` {==`vc-input-currency`==}     | Component used in schema.                             |
+| `component` {==vc-input-currency==}       | Component used in schema.                             |
 | `label` {==string==}                      | Label for the input currency. Also available interpolation `{}` syntax based on current element context. |
 | `property` {==string==}                   | Property name that is used for binding input currency value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
 | `rules` {==`IValidationRules`==}          | Validation rules for the input currency. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |

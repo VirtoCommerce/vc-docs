@@ -64,7 +64,7 @@ const schema: DynamicDetailsSchema = {
 This schema creates a toolbar with one button  featuring `refresh` id, `Refresh` title, `fas fa-sync-alt` icon, and `refresh` method. However, the button remains invisible until you add a create method to the `toolbarOverrides` object in the view composable scope. See instruction below to learn how to do this.
 
 
-#### Binding properties and methods
+#### Bind properties and methods
 
 To add interactivity to your toolbar button, add the `refresh` method to your `toolbarOverrides` object:
 

@@ -10,11 +10,96 @@
                         "title": "User Guide",
                         "links": [
                             {
-                                "title": "What are modules",
+                                "title": "Installing Modules",
+                                "url": "../platform_docs/user_docs/docs/modules-installation.md"
+                            },
+                            {
+                                "title": "Available Modules",
+                                "url": "../platform_docs/user_docs/docs/platform-overview.md"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Developer Guide",
+                        "links": [
+                            {
+                                "title": "Installation Guide",
+                                "url": "../platform_docs/dev_docs/docs/Getting-Started/Installation-Guide/windows.md"
+                            },
+                            {
+                                "title": "Backend Architecture",
+                                "url": "../platform_docs/dev_docs/docs/Back-End-Architecture/02-conceptual-overview.md"
+                            },
+                            {
+                                "title": "GraphQL API",
+                                "url": "../platform_docs/dev_docs/docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md"
+                            },
+                            {
+                                "title": "Module.manifest File",
+                                "url": "../platform_docs/dev_docs/docs/Fundamentals/Modularity/06-module-manifest-file.md"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Storefront",
+                "content": [
+                    {
+                        "title": "User Guide",
+                        "links": [
+                            {
+                                "title": "Personal and Corporate Accounts",
                                 "url": "#"
                             },
                             {
-                                "title": "How to install modules",
+                                "title": "Shopping Process",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Comparing Products",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Submitting Quotes"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Developer Guide",
+                        "links": [
+                            {
+                                "title": "Getting Started",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Vue.js Starter Theme",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Integrations",
+                                "url": "#"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Marketplace",
+                "content": [
+                    {
+                        "title": "User Guide",
+                        "links": [
+                            {
+                                "title": "Product Management",
+                                "url": "#"
+                            },
+                            {
+                                "title":"Offers Management",
+                                "url": "#"
+                            },
+                            {
+                                "title":"Commission Fees Setup",
                                 "url": "#"
                             }
                         ]
@@ -23,11 +108,46 @@
                         "title": "Developer Guide",
                         "links": [
                             {
-                                "title": "Backend Architecture",
+                                "title": "In Progress",
                                 "url": "#"
                             },
                             {
-                                "title": "Caching",
+                                "title": "In Progress",
+                                "url": "#"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "VC Shell",
+                "content": [
+                    {
+                        "title": "User Guide",
+                        "links": [
+                            {
+                                "title": "In Progress",
+                                "url": "#"
+                            },
+                            {
+                                "title": "In Progress",
+                                "url": "#"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Developer Guide",
+                        "links": [
+                            {
+                                "title": "Create First Custom App",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Dynamic Views",
+                                "url": "#"
+                            },
+                            {
+                                "title": "Extends VC Apps Functionality",
                                 "url": "#"
                             }
                         ]
@@ -44,11 +164,11 @@
                 "title": "User Guide",
                 "links": [
                     {
-                        "title": "What are modules",
+                        "title": "Available Modules",
                         "url": "#"
                     },
                     {
-                        "title": "How to install modules",
+                        "title": "Installing Modules",
                         "url": "#"
                     }
                 ]
@@ -57,15 +177,77 @@
                 "title": "Developer Guide",
                 "links": [
                     {
+                        "title": "Getting Started",
+                        "url": "#"
+                    },
+                    {
                         "title": "Backend Architecture",
                         "url": "#"
                     },
                     {
-                        "title": "Caching",
+                        "title": "Configuration Reference",
                         "url": "#"
                     }
                 ]
             }
         ]
+    },
+    {
+        "iconSrc": "./assets/icons/graphql.svg",
+        "title": "GraphQL API",
+        "content": [
+            {
+                "title":"General Information",
+                "links": [
+                    {
+                        "title": "GraphQL Core Ideas",
+                        "url": "#"
+                    },
+                    {
+                        "title": "Getting Started",
+                        "url": "#" 
+                    }
+                ]
+            },
+            {
+                "title": "Tools to Explore GraphQL",
+                "links": [
+                    {
+                        "title": "Playground",
+                        "url": "#"
+                    },
+                    {
+                        "title": "Postman",
+                        "url": "#"
+                    },
+                    {
+                        "title": "Curl",
+                        "url": "#"
+                    }
+                ]
+            },
+            {
+                "title": "Basic Operations",
+                "links": [
+                    {
+                        "title": "Cart",
+                        "url": "#"
+                    },
+                    {
+                        "title": "Order",
+                        "url": "#"
+                    },
+                    {
+                        "title": "Marketing",
+                        "url": "#"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "iconSrc": "./assets/icons/video-tutorials.svg",
+        "title": "Video Tutorials",
+        "url": "https://www.youtube.com/c/VirtoCommerce"
     }
 ]

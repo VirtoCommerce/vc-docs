@@ -133,7 +133,7 @@ To incorporate the input into your dynamic applications, define the following pr
 | `rules` {==IValidationRules==}        | Validation rules for the input. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` {==string==}            | Placeholder text for the input.  |
 | `tooltip` {==string==}                | Tooltip text for the input label. |
-| `clearable` {==boolean==}             | Whether the input has a clear button. |
+| `clearable` {==boolean==}             | Specification whether the input has a clear button. |
 | `variant` {==string==}                | Input variant. |
 | `disabled` {=={method: string}==}     | Disabled state for component, could be used to disable input based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==}   | Visibility state for component, could be used to hide input based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |

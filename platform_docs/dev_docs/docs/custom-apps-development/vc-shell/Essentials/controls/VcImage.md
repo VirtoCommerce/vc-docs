@@ -35,7 +35,7 @@ Image is created with `src` property.
 
 ## Image API
 
-API empowers you to create dynamic and interactive image components to customize its appearance and behavior.
+API empowers you to create dynamic and interactive card components to customize its appearance and behavior.
 
 ## Basic Vue
 
@@ -89,17 +89,17 @@ interface ImageSchema {
 
 To incorporate the image into your dynamic applications, define the following properties:
 
-
 | Property and Type                                 | Description |
 | ------------------------------------------------- | ----------- |
 | `id` {==string==}                                 | The unique Id for the `vc-image` component. |
-| `component` {==vc-image==}                        | Component used in schema. |
-| `property` {==string==}                           | Property name that is used for binding image url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
-| `aspect` {==string==}                             | Image aspect ratio. Default: `1x1`|
-| `background` {==string==}                         | Size of the element's background image. Accepts auto, cover, contain CSS background-size value. Default: `cover` |
-| `size` {==string==}                               | Image size. Default: `auto` |
-| `rounded` {==boolean==}                           | Whether the image is rounded or not. |
-| `bordered` {==boolean==}                          | Whether the image is bordered or not. |
-| `clickable` {==boolean==}                         | Whether the image has preview on click or not. Default: `false` |
-| `visibility` {=={method: string}==}               | Visibility state for component, could be used to hide image based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}                   | Method to call when the image url value is updated. Method should be defined in the blade `scope`. |
+| `component` {==vc-image==}                        | Component utilized in the schema. |
+| `property` {==string==}                           | Name of the property used for binding the image URL value to blade data. Supports deep nested properties, such as `property[1].myProperty`. Additionally, you can bind any function or computed property that returns a value, and retrieve the changed value as an argument for the function. |
+| `aspect` {==string==}                             | Image aspect ratio. Default: `1x1`. |
+| `background` {==string==}                         | Size of the element's background image. Accepts CSS background-size values like auto, cover, or contain. Default: `cover`. |
+| `size` {==string==}                               | Image size. Default: `auto`. |
+| `rounded` {==boolean==}                           | Specification of whether the image should have rounded corners. |
+| `bordered` {==boolean==}                          | Specification of whether the image should have a border. |
+| `clickable` {==boolean==}                         | Specification of whether the image has a preview on click. Default: `false`. |
+| `visibility` {=={method: string}==}               | Definition of the visibility state for the component, allowing you to hide the image based on certain conditions. The method or variable should be defined in the blade `scope` and return a boolean value. |
+| `update` {=={method: string}==}                   | Specification of the method to call when the image URL value is updated. The method should be defined in the blade `scope`. |
+

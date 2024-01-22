@@ -266,9 +266,7 @@ Our Vue.js Starter Theme has an adaptive design that allows it to look smooth an
 
 As a developer, you will be using `vc-theme-b2b-vue` as your ultimate starting point for a new theme. It contains numerous out-of-the-box features that are typical for B2B and B2C ecommerce projects. Along with ready made theme architecture and huge set of reusable components, it can significantly speed up your development process. To start developing a new theme, you just need to clone (fork) the theme project, and then you will be able to do [any customization according to your needs](../../under-construction/under-construction.md).<!---Link to custom theme development-->
 
-## References
-Use these references to start using `vc-theme-b2b-vue`:
 
-- [Public Demo](https://virtostart-demo-store.govirto.com)
+[![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
     
-- [GitHub repository](https://github.com/VirtoCommerce/vc-theme-b2b-vue)
+[![Install](media/install-storefront.png)](https://github.com/VirtoCommerce/vc-theme-b2b-vue)

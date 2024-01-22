@@ -1,4 +1,4 @@
-# Creating Custom Templates
+# Create Custom Templates
 
 Custom templates are used to customize the appearance of the dynamic views to your needs. You can create custom templates for the mobile view, empty list, and not found list. To do so, specify the name of the custom template in the schema of the dynamic view.
 
@@ -91,7 +91,7 @@ export const details: DynamicDetailsSchema = {
 
 ![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm](Dynamic-Blade-Form.md)
 
-## Registering Custom Templates
+## Register Custom Templates
 
 To use custom templates and components in dynamic views, you need to register them in the global component registry. Import them into the `index.ts` file of your module and register them in the global component registry in the initialization method of the dynamic module using the `moduleComponents` option in the `createDynamicAppModule` function:
 

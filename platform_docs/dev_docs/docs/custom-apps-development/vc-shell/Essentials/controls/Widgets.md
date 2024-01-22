@@ -85,7 +85,7 @@ onMounted(async () => {
 });
 ```
 
-## Counter Updating
+## Counter Update
 
 Since the widget component loads data only when mounted, you also need to add a watcher from the `vueUse` library - `watchDebounced`, which allows reloading data when the `item` from the blade context changes. This `item` is passed to the widget in `modelValue`.
 
@@ -104,7 +104,7 @@ watchDebounced(
 !!! note
     Updating the `item` usually occurs when data is updated in the blade. Therefore, when saving data, it is important to remember that the widget is updated twice - once when saving and once when loading data into the blade.
 
-## Creating a Click Action for the Widget
+## Create Click Action for the Widget
 
 To add an action when clicking the widget, include a `clickHandler` method in the widget component. This method is called when clicking the widget and should be bound to the `click` event on the `VcWidget` component used as the template. In this method, you can implement any logic executed when clicking the widget. More often than not, this involves opening a new blade, which can be accomplished using the `openBlade` method from the `useBladeNavigation` composable:
 
@@ -139,7 +139,7 @@ async function clickHandler() {
 </script>
 ```
 
-## Basic Example of the Widget Component
+## Widget Component Basic Example 
 
 Since any logic can be implemented in the widget, let's consider its basic version based on this guide. This version opens a new blade when clicking on the widget and also fetches and updates the widget counter using API requests.
 
@@ -221,7 +221,7 @@ Since any logic can be implemented in the widget, let's consider its basic versi
     });
     ```
 
-## Registering Widgets
+## Register Widgets
 
 To register a widget, add its export to the main `index.ts` file located in the `components` folder of your module. For example, if you specified the name `MyWidget` in the schema, the component export should have the same name. Afterward, by adding all your components to the `createDynamicAppModule` method in the `moduleComponents` option, you will be able to use them in dynamic views.
 

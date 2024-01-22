@@ -48,14 +48,14 @@ Integrate the `vc-card` component into your Vue applications using a simple temp
 
 To customize the appearance and behavior of cards, use the following props:
 
-| Name              | Type                                         | Description                                  |
-|-------------------|----------------------------------------------|----------------------------------------------|
-| `header`          | `string`                                     | The header of the component.                 |
-| `icon`            | `string`                                     | The icon associated with the component.      |
-| `isCollapsable`   | `boolean`                                    | Indicates whether the component is collapsible. |
-| `isCollapsed`     | `boolean`                                    | Indicates whether the component is initially collapsed. |
-| `fill`            | `boolean`                                    | Indicates whether the content of the card should fill available space. |
-| `variant`         | `"default" \| "success" \| "danger"`          | The variant of the component.                |
+| Name and Type                                         | Description                                  |
+|-------------------------------------------------------|----------------------------------------------|
+| `header` {==string==}                                 | The header of the component.                 |
+| `icon` {==string==}                                   | The icon associated with the component.      |
+| `isCollapsable` {==boolean==}                         | Specification whether the component is collapsible. |
+| `isCollapsed` {==boolean==}                           | Specification whether the component is initially collapsed. |
+| `fill` {==boolean==}                                  | Specification whether the content of the card should fill available space. |
+| `variant` {=="default"==}, {=="success"==}, {=="danger"==}  | The variant of the component.                |
 
 #### Slots
 
@@ -73,7 +73,7 @@ To interact with the `vc-card` component, use the emitted events. The `click` ev
 | Name      | Parameters        | ReturnType | Description                                                     |
 | --------- | ----------------- | ---------- | --------------------------------------------------------------- |
 | `header:click` | `void` | `void` | Emitted when the header is clicked.                           |
-| `state:collapsed` | isCollapsedState: `boolean` | `void` | Emitted when the card is collapsed or expanded.                           |
+| `state:collapsed` | isCollapsedSta{==boolean==} | `void` | Emitted when the card is collapsed or expanded.                           |
 
 ### Dynamic Views
 
@@ -104,7 +104,7 @@ To incorporate the card into your dynamic applications, define the following pro
 | `label` {==string==}                              | Card label that is displayed in the header. Also available interpolation `{}` syntax based on current element context.                        |
 | `fields` {==ControlSchema[]==}                    | Array of schemas for components that will be displayed inside the card.                                                                       |
 | `action` {==ButtonSchema & {method: string}==}    | Action button that is displayed in the top right corner of the card. Could be used to trigger some actions.                                   |
-| `collapsible` {==boolean==}                       | Makes the card collapsible.                                                                                                                   |
+| `collapsible` {==boolean==}                       | Specification whether the card should be collapsed.                                                                                           |
 | `visibility`  {=={method: string}==}              | Visibility state for the component, could be used to hide the card based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 
 

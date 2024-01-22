@@ -47,7 +47,7 @@ It also has a bunch of built-in controls from VC-Shell UI-kit and components for
 - [Widgets](../controls/Widgets.md)
 - [Toolbar](../controls/Toolbar.md)
 
-## How to Create a Dynamic View?
+## How to Create Dynamic View?
 
 Creating a dynamic view involves developing a new composable based on the built-in composable factory and adding all the necessary methods and other logic required for your dynamic view. You then create a new schema and pass it the name of the newly created composable. The schema contains important information about the dynamic view, including its name, blade template, composable name, and other details.
 

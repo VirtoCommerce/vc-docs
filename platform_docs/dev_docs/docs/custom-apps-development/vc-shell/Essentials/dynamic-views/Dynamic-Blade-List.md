@@ -132,7 +132,7 @@ interface SettingsBase {
 | `titleTemplate` | `string` | The title of the view that is shown in the blade header by default. This option is required. |
 | `component` | `"DynamicBladeForm" | "DynamicBladeList"` | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br> - `DynamicBladeList` <br> - `DynamicBladeForm` |
 | `composable` | `string` | The name of the composable used by the view. This option is required. |
-| `isWorkspace` | `boolean` | Indicates whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false` |
+| `isWorkspace` | `boolean` | Indication whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false` |
 | `toolbar` | `object[]` | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](./toolbar.md) section. |
 | `permissions` | `string`, `string[]` | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
 | `pushNotificationType` | `string`, `string[]` | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
@@ -175,10 +175,10 @@ interface ListContentSchema {
 | `id`              | `string`                                                                                               | The unique ID of the view.                            |
 | `component`       | `"vc-table"`                                                                                           | The name of the Vue component used by the view.        |
 | `filter`          | `FilterSchema`                                                                                        | The filter settings.                                  |
-| `multiselect`     | `boolean`                                                                                              | Indicates whether multiselect is enabled.             |
-| `header`          | `boolean`                                                                                              | Indicates whether the header of `vc-table` is enabled. When `true` - enables the search bar and provides the possibility to use `Filter`. |
+| `multiselect`     | `boolean`                                                                                              | Indication whether multiselect is enabled.             |
+| `header`          | `boolean`                                                                                              | Indication whether the header of `vc-table` is enabled. When `true` - enables the search bar and provides the possibility to use `Filter`. |
 | `columns`         | `(ITableColumns & { id: string; title: string; sortable?: boolean; alwaysVisible?: boolean; type?: string; customTemplate?: GridTemplateOverride; })[]` | The columns settings.                             |
-| `reorderableRows` | `boolean`                                                                                              | Indicates whether reorderable rows are enabled.        |
+| `reorderableRows` | `boolean`                                                                                              | Indication whether reorderable rows are enabled.        |
 | `mobileTemplate`  | `{ component: string; }`                                                                              | The mobile template settings. The component must be registered globally. |
 | `notFoundTemplate`| `{ component: string; }`                                                                              | The not found template settings. The component must be registered globally.|
 | `emptyTemplate`   | `{ component: string; }`                                                                              | The empty template settings. The component must be registered globally.|
@@ -280,7 +280,7 @@ Since filters represent columns with their own title and controls, they can be m
 
 
 
-### Creating a composable for DynamicBladeList
+### Create composable for DynamicBladeList
 
 To create a composable for `DynamicBladeList`, use the built-in composable factory function named `useListFactory`. This factory returns a composable method that provides you with all the necessary methods and properties to work with the list.
 
@@ -302,7 +302,7 @@ This function accepts an object with `load` and `remove` callback methods to imp
 !!! note
     The `load` and `remove` methods must return a promise.
 
-#### Implementing composable from `useListFactory`
+#### Implement composable from `useListFactory`
 
 Let's create a file named `useList.ts` in the `composables` folder of your module and add the following code:
 
