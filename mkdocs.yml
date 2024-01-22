@@ -101,15 +101,15 @@ extra:
             -   title: Storefront
                 icon: assets/icons/person.svg
                 description: Build and personalize your online store for engaging shopping experiences
-                link: storefront_docs/mkdocs.yml
+                link: storefront_docs
             -   title: Platform
                 icon: assets/icons/code-square.svg
                 description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e-commerce ecosystem
-                link: platform_docs/mkdocs.yml
+                link: platform_docs
             -   title: Marketplace
                 icon: assets/icons/code-square.svg
                 description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
-                link: marketplace_docs/mkdocs.yml
+                link: marketplace_docs
             # -   title: Business Analyst
             #     icon: assets/icons/briefcase.svg
             #     description: I need to know how to implement Virto solutions across my team or externally.
@@ -152,19 +152,19 @@ extra:
             - title: Storefront
               description: Build and personalize your online store for engaging shopping experiences
               image: assets/images/storefront.png
-              link: storefront_docs/mkdocs.yml
+              link: storefront_docs
             - title: Platform
               description: Explore the Virto Commerce Platform, a solution designed to efficiently manage<br>and scale your entire e-commerce ecosystem
               image: assets/images/platform.png
-              link: platform_docs/mkdocs.yml
+              link: platform_docs
             - title: Marketplace
               description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
               image: assets/images/marketplace.png
-              link: marketplace_docs/mkdocs.yml
+              link: marketplace_docs
             - title: Custom Apps
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
-              link: platform_docs/dev_docs/docs/custom-apps-development/overview.md
+              link: platform_docs/dev_docs/custom-apps-development/overview
         link_cards:
             - title: Contact support
               icon: assets/icons/contact-support.svg

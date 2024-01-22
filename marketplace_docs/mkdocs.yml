@@ -98,17 +98,17 @@ extra:
               image: assets/images/storefront-userquide.png
               description:
                 - title: Offers Management by Vendor
-                  link: #
+                  link: user_docs/Vendor-portal/offers-management-by-vendor
                 - title: Products Management by Vendor
-                  link: #
+                  link: user_docs/Vendor-portal/products-management-by-vendor
                 - title: Master Catalog Taxonomy Management
-                  link: #
+                  link: user_docs/Operator-portal/master-catalog-taxonomy-management
                 - title: Commission Fees Setup
-                  link: #
-            - title: Developer Guide
+                  link: user_docs/Operator-portal/Commission-fees-setup/overview
+            - title: Developer Guide [In Progress]
               image: assets/images/storefront-devguide.png
               description:
-                - title: Getting Started
+                - title: #
                   link: #
             - title: Other Resources
               image: assets/images/storefront-other.png

@@ -18,7 +18,7 @@ The `CategoryType` is used to differentiate or group different types of categori
 | `seoInfo` [{==SeoInfo==}](../SeoInfo.md)                                      	| Request related SEO info.                                                       	|
 | `descriptions`(...) [{==CategoryDescriptionType==}](CategoryDescriptionType.md)	| Additional descriptions for the category.               	                        |
 | `description`(...) [{==CategoryDescriptionType==}](CategoryDescriptionType.md)	| The description of the category.                         	                        |
-| `parent` [{==Category==}](/CategoryType.md)                                    	| The parent category of the current category.                                    	|
+| `parent` [{==Category==}](CategoryType.md)                                    	| The parent category of the current category.                                    	|
 | `hasParent` {==Boolean==}                                                     	| Indicates whether the category has a parent category.                           	|
 | `outlines` [{==OutlineType==}](../OutlineType.md)                              	| A list of category outlines.                    	                                |
 | `images` [{==ImageType==}](../ImageType.md)                                    	| The images associated with the category.                                        	|

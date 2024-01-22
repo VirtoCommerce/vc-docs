@@ -98,22 +98,22 @@ extra:
               image: assets/images/storefront-userquide.png
               description:
                 - title: Registration
-                  link: user_docs/docs/registration_and_signing_in/create-account.md
+                  link: user_docs/registration_and_signing_in/create-account
                 - title: Navigation
-                  link: storefront_docs/user_docs/docs/navigation/homepage-layout.md
+                  link: user_docs/navigation/homepage-layout
                 - title: Shopping
-                  link: storefront_docs/user_docs/docs/shopping/searching-for-products.md
+                  link: user_docs/shopping/searching-for-products
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
               description:
                 - title: Getting Started
-                  link: #
+                  link: dev_docs/getting-started/quickstart-on-windows
                 - title: ASP.NET Core Storefront Runtime
-                  link: #
+                  link: dev_docs/asp-net-core-storefront-runtime/overview
                 - title: Vue.js Starter Theme
-                  link: #
+                  link: dev_docs/vue-js-starter-theme/overview
                 - title: Integrations
-                  link: #
+                  link: dev_docs/integration/prerender_io
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:

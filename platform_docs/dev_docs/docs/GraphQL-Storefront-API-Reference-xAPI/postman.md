@@ -197,7 +197,7 @@ You can use Postman to build queries and mutations:
 
 
 ??? Example "Example mutation"
-    Let's build a [requestRegistration](/Profile/Mutations/requestRegistration.md) mutation to register **test_organization_name** company and its user named **Test First Name Test Last Name**. 
+    Let's build a [requestRegistration](Profile/Mutations/requestRegistration.md) mutation to register **test_organization_name** company and its user named **Test First Name Test Last Name**. 
 
     1. Click **requestRegistration** and fill in the following fields:
 

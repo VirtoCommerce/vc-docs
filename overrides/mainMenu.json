@@ -11,11 +11,11 @@
                         "links": [
                             {
                                 "title": "Installing Modules",
-                                "url": "../platform_docs/user_docs/docs/modules-installation.md"
+                                "url": "../platform_docs/user_docs/modules-installation"
                             },
                             {
                                 "title": "Available Modules",
-                                "url": "../platform_docs/user_docs/docs/platform-overview.md"
+                                "url": "../platform_docs/user_docs/platform-overview"
                             }
                         ]
                     },
@@ -24,19 +24,19 @@
                         "links": [
                             {
                                 "title": "Installation Guide",
-                                "url": "../platform_docs/dev_docs/docs/Getting-Started/Installation-Guide/windows.md"
+                                "url": "../platform_docs/dev_docs/Getting-Started/Installation-Guide/windows"
                             },
                             {
                                 "title": "Backend Architecture",
-                                "url": "../platform_docs/dev_docs/docs/Back-End-Architecture/02-conceptual-overview.md"
+                                "url": "../platform_docs/dev_docs/Back-End-Architecture/02-conceptual-overview"
                             },
                             {
                                 "title": "GraphQL API",
-                                "url": "../platform_docs/dev_docs/docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md"
+                                "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
                             },
                             {
                                 "title": "Module.manifest File",
-                                "url": "../platform_docs/dev_docs/docs/Fundamentals/Modularity/06-module-manifest-file.md"
+                                "url": "../platform_docs/dev_docs/Fundamentals/Modularity/06-module-manifest-file"
                             }
                         ]
                     }
@@ -50,18 +50,19 @@
                         "links": [
                             {
                                 "title": "Personal and Corporate Accounts",
-                                "url": "#"
+                                "url": "../storefront_docs/user_docs/account/overview"
                             },
                             {
                                 "title": "Shopping Process",
-                                "url": "#"
+                                "url": "../storefront_docs/user_docs/shopping/searching-for-products"
                             },
                             {
                                 "title": "Comparing Products",
-                                "url": "#"
+                                "url": "../storefront_docs/user_docs/shopping/compare-products"
                             },
                             {
-                                "title": "Submitting Quotes"
+                                "title": "Submitting Quotes",
+                                "url": "../storefront_docs/user_docs/shopping/submit-quotes"
                             }
                         ]
                     },
@@ -70,15 +71,15 @@
                         "links": [
                             {
                                 "title": "Getting Started",
-                                "url": "#"
+                                "url": "../storefront_docs/dev_docs/getting-started/quickstart-on-windows"
                             },
                             {
                                 "title": "Vue.js Starter Theme",
-                                "url": "#"
+                                "url": "../storefront_docs/dev_docs/vue-js-starter-theme/overview"
                             },
                             {
                                 "title": "Integrations",
-                                "url": "#"
+                                "url": "../storefront_docs/dev_docs/integrations/prerender_io"
                             }
                         ]
                     }
@@ -92,25 +93,21 @@
                         "links": [
                             {
                                 "title": "Product Management",
-                                "url": "#"
+                                "url": "../marketplace_portal/user_docs/Vendor-portal/products-management-by-vendor"
                             },
                             {
                                 "title":"Offers Management",
-                                "url": "#"
+                                "url": "../marketplace_portal/user_docs/Vendor-portal/offers-management-by-vendor"
                             },
                             {
                                 "title":"Commission Fees Setup",
-                                "url": "#"
+                                "url": "../marketplace_portal/user_docs/Operator-portal/Commission-fees-setup/overview"
                             }
                         ]
                     },
                     {
                         "title": "Developer Guide",
                         "links": [
-                            {
-                                "title": "In Progress",
-                                "url": "#"
-                            },
                             {
                                 "title": "In Progress",
                                 "url": "#"
@@ -128,10 +125,6 @@
                             {
                                 "title": "In Progress",
                                 "url": "#"
-                            },
-                            {
-                                "title": "In Progress",
-                                "url": "#"
                             }
                         ]
                     },
@@ -139,16 +132,16 @@
                         "title": "Developer Guide",
                         "links": [
                             {
-                                "title": "Create First Custom App",
-                                "url": "#"
+                                "title": "Creating First Custom App",
+                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app"
                             },
                             {
                                 "title": "Dynamic Views",
-                                "url": "#"
+                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Essentials/dynamic-views/overview"
                             },
                             {
-                                "title": "Extends VC Apps Functionality",
-                                "url": "#"
+                                "title": "Extending VC Apps Functionality",
+                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Extensibility/overview"
                             }
                         ]
                     }
@@ -165,11 +158,11 @@
                 "links": [
                     {
                         "title": "Available Modules",
-                        "url": "#"
+                        "url": "../platform_docs/user_docs/platform-overview"
                     },
                     {
                         "title": "Installing Modules",
-                        "url": "#"
+                        "url": "../platform_docs/user_docs/modules-installation"
                     }
                 ]
             },
@@ -178,15 +171,15 @@
                 "links": [
                     {
                         "title": "Getting Started",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/Getting-Started/Installation-Guide/windows"
                     },
                     {
                         "title": "Backend Architecture",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/Back-End-Architecture/02-conceptual-overview"
                     },
                     {
                         "title": "Configuration Reference",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/Configuration-Reference/appsettingsjson"
                     }
                 ]
             }
@@ -201,11 +194,11 @@
                 "links": [
                     {
                         "title": "GraphQL Core Ideas",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/index"
                     },
                     {
                         "title": "Getting Started",
-                        "url": "#" 
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started" 
                     }
                 ]
             },
@@ -214,15 +207,15 @@
                 "links": [
                     {
                         "title": "Playground",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground"
                     },
                     {
                         "title": "Postman",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/postman"
                     },
                     {
                         "title": "Curl",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/curl"
                     }
                 ]
             },
@@ -231,15 +224,15 @@
                 "links": [
                     {
                         "title": "Cart",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground/Cart/overview"
                     },
                     {
                         "title": "Order",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground/Order/overview"
                     },
                     {
                         "title": "Marketing",
-                        "url": "#"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground/Marketing/overview"
                     }
                 ]
             }

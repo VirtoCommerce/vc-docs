@@ -118,7 +118,7 @@ The **Runtime** mode is used to update and install modules on a working system o
 
 When using Virto Commerce in your production environment, you will rather have to deal with a list of your custom modules that have dependencies to the Virto modules that are not upgraded to the latest version. If this is the case, it is better to define your own version of the `modules.json` file that will contain a list of your custom and Virto modules with specific versions for your solution. Having your own `modules.json` file is basically the same as having `package.json` for NPM dependencies; the difference lies in the shared nature and the option to use it globally.
 
-The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a special CLI tool for this that, more info on which can be found [here](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md "https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md").
+The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a special CLI tool for this that, more info on which can be found [here](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md).
 
 Here are a few examples of interface commands you can use to perform various operations:
 

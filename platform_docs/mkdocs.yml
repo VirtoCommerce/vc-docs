@@ -98,24 +98,24 @@ extra:
               image: assets/images/storefront-userquide.png
               description:
                 - title: Installing Modules
-                  link: #
+                  link: user_docs/modules-installation
                 - title: Managing Catalogs
-                  link: #
+                  link: user_docs/catalog/add-new-catalog
                 - title: Managing Orders
-                  link: #
+                  link: user_docs/order-management/overview
                 - title: Managing Inventory
-                  link: #
+                  link: user_docs/inventory/managing-inventory
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
               description:
                 - title: Getting Started
-                  link: #
+                  link: dev_docs/Getting-Started/Installation-Guide/windows
                 - title: Modularity
-                  link: #
+                  link: dev_docs/Fundamentals/Modularity/overview
                 - title: Extensibiliity Points
-                  link: #
+                  link: dev_docs/Extensibility/key-extensibility-points
                 - title: GraphQL API
-                  link: #
+                  link: dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
