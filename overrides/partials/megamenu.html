@@ -85,7 +85,6 @@
         background-size: contain;
         margin-right: 13px;
         flex-shrink: 0;
-
     }
 
     .mega-menu__menu-item-arrow {
@@ -283,14 +282,17 @@
             menuData.forEach((item, index) => {
                 const menuItem = document.createElement("div");
                 menuItem.classList.add("mega-menu__menu-item");
-
+                console.log(item);
                 menuItem.innerHTML =
                     `<button class="mega-menu__menu-button">` +
                     (item.iconSrc
                         ? `<div class="mega-menu__menu-button-icon" style="background-image: url(${item.iconSrc})"></div>`
                         : "") +
                     item.title +
-                    `<div class="mega-menu__menu-item-arrow"></div>` +
+                    ((item.subMenu && item.subMenu.length) ||
+                    (item.content && item.content.length)
+                        ? `<div class="mega-menu__menu-item-arrow"></div>`
+                        : "") +
                     `</button>`;
                 const menuButton = menuItem.querySelector(
                     ".mega-menu__menu-button"
@@ -305,30 +307,41 @@
                 menuButton.addEventListener("click", function () {
                     const isOpened = wrapper.querySelectorAll(".opened");
 
-                    if (isOpened) {
-                        isOpened.forEach((item) => {
-                            item.classList.remove("opened");
-                        });
-                    }
-
-                    removeNodesByDepth(container, depth + 1);
-
-                    if (item.subMenu) {
-                        if (!menuItem.classList.contains("opened")) {
-                            buildMenu(item.subMenu, container, depth + 1);
-                            menuItem.classList.add("opened");
-                        } else {
-                            menuItem.classList.remove("opened");
+                    if (
+                        (item.subMenu && item.subMenu.length) ||
+                        (item.content && item.content.length)
+                    ) {
+                        if (isOpened) {
+                            isOpened.forEach((item) => {
+                                item.classList.remove("opened");
+                            });
                         }
-                    }
 
-                    if (item.content) {
-                        if (!menuItem.classList.contains("opened")) {
-                            buildContent(item.content, container, depth + 1);
-                            menuItem.classList.add("opened");
-                        } else {
-                            menuItem.classList.remove("opened");
+                        removeNodesByDepth(container, depth + 1);
+
+                        if (item.subMenu) {
+                            if (!menuItem.classList.contains("opened")) {
+                                buildMenu(item.subMenu, container, depth + 1);
+                                menuItem.classList.add("opened");
+                            } else {
+                                menuItem.classList.remove("opened");
+                            }
                         }
+
+                        if (item.content) {
+                            if (!menuItem.classList.contains("opened")) {
+                                buildContent(
+                                    item.content,
+                                    container,
+                                    depth + 1
+                                );
+                                menuItem.classList.add("opened");
+                            } else {
+                                menuItem.classList.remove("opened");
+                            }
+                        }
+                    } else if (item.url) {
+                        window.open(item.url, "_blank");
                     }
                 });
 
