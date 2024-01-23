@@ -5,11 +5,11 @@ This guide describes how to reference other custom VC-Shell applications to inco
 This guide covers the following key steps:
 
 1. [Incorporating and setting up custom application.](overview.md#incorporate-and-set-up-custom-applications)
-1. [Replacing API clients used by other custom applications.](overview.md#override-api-client-used-by-other-custom-applications) 
+1. [Replacing API clients used by other custom applications.](overview.md#replace-api-clients-used-by-other-custom-applications) 
 1. [Extending other apps views using dynamic views.](overview.md#extend-other-apps-views-using-dynamic-views)
 1. [Extending composables.](overview.md#extend-composables) 
 
-In this guide, we'll use the example of the `vc-app-extend` project, which extends the functionality of the `vc-app` project from the sample folder.
+In this guide, we'll use the example of the `vc-app-extend` project, which extends the functionality of the `vc-app` project from the `sample` folder.
 
 [![The source code of sample project](../../media/source_code.png)](https://github.com/VirtoCommerce/vc-shell/tree/main/sample/vc-app-extend)
 
@@ -24,7 +24,7 @@ To include and set up custom applications:
     * Reference to the `vc-app`, representing the application to extend.
     * `Offers`, representing the module.
 
-    ```json title="vc-app-extend/src/main.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/main.ts" linenums="1"
     import modules from "@vc-app/modules";
 
         async function startApp() {
@@ -42,32 +42,13 @@ To include and set up custom applications:
     startApp()
     ```
 
-2. Initialize the module in the navigation menu:
-
-    ```json title="vc-app-extend/src/pages/App.vue" linenums="1"
-    // Initialize module in navigation menu
-    const menuItems = reactive(
-        navigationMenuComposer([
-          ...
-            {
-              title: "Offers",
-              icon: "fas fa-file-invoice",
-              isVisible: true,
-              component: resolveBladeByName("Offers"),
-            },
-          ...
-        ])
-    );
-    ```
-
-3. Verify the result:
+1. Verify the result:
 
     ![Result](../../media/result.png)
 
 Now you have successfully incorporated and set up the custom application. Your custom app can now leverage the modules and functionalities of the `vc-app`, providing you with the flexibility to extend and customize your application as needed.
 
-<!-- For detailed guidance on referencing and using other custom apps, please refer to our article on this topic.
- Link to Include and reuse other custom app (the article how to reference and use other custom app) -->
+![Readmore](../../../media/readmore.png){: width="25"} [Using modules from other applications](../Essentials/dynamic-views/Using-Modules-from-Other-Applications.md)
 
 ## Replace API Clients used by other custom applications
 
@@ -97,14 +78,14 @@ To replace the original API types used by `@vc-app` with updated ones, generate 
         ...
         "scripts": {
             ...
-            "generate-api-client": cross-env api-client-generator --color -- APP_PLATFORM_MODULES='[MarketplaceVendor]' APP_API_CLIENT_DIRECTORY=./src/api_client/
+            "generate-api-client": cross-env api-client-generator --APP_PLATFORM_MODULES='[MarketplaceVendor]' --APP_API_CLIENT_DIRECTORY=./src/api_client/
         }
     }
     ```
 
 1. Set the `APP_PLATFORM_URL` in your project's **.env** file.
 
-    ```json title="vc-app-extend/.env" linenums="1"
+    ```yml title="vc-app-extend/.env" linenums="1"
     # Set your Platform URL here
     APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/
     ```
@@ -124,7 +105,7 @@ After generating the API client for your `@vc-app-extend` application, you can s
 
 * Original `@vc-app` application Offer class:
 
-    ```json title="vc-app/src/api_client/marketplacevendor.ts" linenums="1"
+    ```typescript title="vc-app/src/api_client/marketplacevendor.ts" linenums="1"
     export class Offer implements IOffer {
         isSuspended?: boolean;
         isActive?: boolean;
@@ -134,7 +115,7 @@ After generating the API client for your `@vc-app-extend` application, you can s
 
 * Generated API client Offer class for `vc-app-extend` application:
 
-    ```json title="vc-app-extend/src/api_client/marketplacevendor.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/api_client/marketplacevendor.ts" linenums="1"
     export class Offer implements IOffer {
         isSuspended?: boolean;
         isActive?: boolean;
@@ -146,13 +127,13 @@ After generating the API client for your `@vc-app-extend` application, you can s
 
 This demonstrates that the Offer class in the `@vc-app-extend` application now includes an additional field `newField`, which was not present in the original `@vc-app application`'s Offer class.
 
-For more information, refer to the [Generate API Client](../How-tos/generate-api-client.md) section.
+![Readmore](../../../media/readmore.png){: width="25"} [Generate API Client](../How-tos/generate-api-client.md)
 
 ### Override command processing logic
 
 To customize your applications to specific requirements, you can customize the command processing logic. This involves overriding default behaviors. The modules underlying your application rely on API client packages as peerDependencies. To replace the API they use, add an alias to your main application's Vite configuration file, `vite.config.ts`:
 
-```json title="vc-app-extend/vite.config.ts" linenums="1"
+```typescript title="vc-app-extend/vite.config.ts" linenums="1"
 export default getApplicationConfiguration({
   resolve: {
     alias: {
@@ -174,7 +155,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
 
 1. Define overrides:
 
-    ```json title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
     import { OverridesSchema } from "@vc-shell/framework";
 
     export const overrides: OverridesSchema = {
@@ -196,7 +177,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
 
 1. Add overrides to `createDynamicAppModule`:
 
-    ```json title="vc-app-extend/src/modules/offers/index.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/modules/offers/index.ts" linenums="1"
     import { createDynamicAppModule } from "@vc-shell/framework";
     import modules from "@vc-app/modules";
     // Import the previously defined overrides
@@ -213,7 +194,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
 
 1. Initialize the extended module:
     
-    ```json title="vc-app-extend/src/main.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/main.ts" linenums="1"
     import { Offers } from "./modules";
 
     async function startApp() {
@@ -236,7 +217,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
 
 This process allows you to seamlessly extend views from the referenced application without the need to directly modify the source code, providing flexibility in customizing your application.
 
-<!-- TODO: Link: Using dynamic view for extending  views from the other  apps -->
+![Readmore](../../../media/readmore.png){: width="25"} [Using dynamic view for extending views from the other apps](../Essentials/dynamic-views/Extending-Views.md)
 
 ## Extend composables 
 
@@ -252,7 +233,7 @@ To illustrate composable extension, let's add a button to the toolbar:
 
 1. Define overrides:
 
-    ```json title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/modules/offers/schemaOverride/overrides.ts" linenums="1"
     import { OverridesSchema } from "@vc-shell/framework";
 
     export const overrides: OverridesSchema = {
@@ -287,7 +268,7 @@ To illustrate composable extension, let's add a button to the toolbar:
 
 1. Extend the composable:
 
-    ```json title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
     import { IBladeToolbar } from "@vc-shell/framework";
     import modules from "@vc-app/modules";
     import { Ref, UnwrapRef, computed, ref } from "vue";
@@ -341,7 +322,7 @@ To illustrate composable extension, let's add a button to the toolbar:
 
 1. Integrate the extended composable:
 
-    ```json title="vc-app-extend/src/modules/offers/index.ts" linenums="1"
+    ```typescript title="vc-app-extend/src/modules/offers/index.ts" linenums="1"
     import { createDynamicAppModule } from "@vc-shell/framework";
     import modules from "@vc-app/modules";
     import overrides from "./schemaOverride";

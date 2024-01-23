@@ -3,54 +3,76 @@
 In this section we will show you how to scaffold a VC Shell application on your local machine. The created project will use Vue 3 and Vite as the build setup.
 
 !!! note "Prerequisites"
-    * You have an up-to-date Node.js version installed.
-    * Your current working directory is the one where you want to create the application.
+    * You have an up-to-date installation of Node.js.
+    * Your current working directory is set to the location where you want to create the application.
 
 To create and install custom app:
 
-1. Install and execute create-vc-app scaffolding tool:
+1. Install and run the `create-vc-app` scaffolding tool using one of the following commands:
+
+    === "With NPM"
+
+        ```bash
+        npm create @vc-shell/vc-app@latest
+        ```
+
+    === "With NPX"
+
+        ```bash
+        npx @vc-shell/create-vc-app@latest
+        ```
+
+    === "With Yarn"
+
+        ```bash
+        yarn create @vc-shell/vc-app
+        ```
+
+1. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>::
 
     ```bash
-    npm init @vc-shell/vc-app@latest
-    ```
-
-1. Configure options from the list. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
-
-    ```bash
-    ✔ App name: … <your-app-name>
-    ✔ Add Dashboard page? … No / Yes
-    ✔ Add Login/Invite/Reset password pages? … No / Yes
-    ✔ Add module starter? … No / Yes
-    ✔ Module starter name: … <your-first-module-name>
+    ✔ Project name: … <your-app-name>
+    ? Select module variant: › - Use arrow-keys. Return to submit.
+        Classic modules boilerplate
+        Dynamic modules boilerplate
+        Classic modules + Dynamic modules boilerplate
 
     Scaffolding app in ./<your-app-name>...
 
     Done.
     ```
 
-1. Once application is created, follow instructions to install dependencies and start the dev server:
+1. Once the application is created, go to the application folder and add Platform URL to the `.env` file under the `APP_PLATFORM_URL` variable:
 
     ```bash
-    $ cd <your-app-name>
-    $ yarn
-    $ yarn serve
+    $ cd `<your-app-name>`
+    $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env
     ```
 
-You first application is ready to run!
+    1. Go to the `vite.config.mts` and remove `define` key from the config to activate API calls to the Platform.
 
+    1. Go to the `src/main.ts` and remove commented code with `loadUser`, which is said to be removed after adding `APP_PLATFORM_URL` variable.
+
+1. Install the dependencies and start the development server:
+
+Your first VC-Shell application is now ready to run!
+
+An example application with classic and dynamic views, created using `@vc-shell/create-vc-app` package, can be found in the `sample/vc-app` folder in the @VirtoCommerce/vc-shell github repo. 
 ![New app](../../media/new-app.png)
+
+![Readmore](../../../media/readmore.png){: width="25"} [Dynamic Views Extensibility](../Extensibility/overview.md)
 
 !!! info "Note"
 
     The example components in the generated application are written using the Vue Composition API and `<script setup>`.
 
 
-!!! info "Tip"
-    The recommended IDE setup is [Visual Studio Code](https://code.visualstudio.com/) + [Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
+!!! tip
+    For an optimal development experience, we recommend using [Visual Studio Code](https://code.visualstudio.com/) with the [Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 
-![Readmore](../../media/readmore.png){: width="25"} [Underlying build tool Vite docs](https://vitejs.dev/)
+![Readmore](../../../media/readmore.png){: width="25"} [Vite tools](https://vitejs.dev/)
 
-![Readmore](../../media/readmore.png){: width="25"} [Vue Composition API](https://vuejs.org/guide/introduction.html#composition-api)
+![Readmore](../../../media/readmore.png){: width="25"} [Vue Composition API](https://vuejs.org/guide/introduction.html#composition-api)
 
 ## Application folder structure
 
@@ -90,37 +112,38 @@ Let's take a look at the modules directory as it represents the key concept in t
 
 ### Modules directory structure
 
-| Item               	| Description                                                                                                 	|
+A **module** is a collection of composables, locales, components, and pages. Each module is responsible for its own functionality and can contain the number of **blades** you need to serve your specific requirements, which are stored in the "pages" folder. A **blade** is a standalone page with its own functionality and template. <br>Blades are not interconnected, but they can be used together using special methods.
+
+| Folder               	| Description                                                                                                 	|
 |--------------------	|--------------------------------------------------------------------------------------------------------------	|
-| **Module**             	| A set of composables, locales, components and pages. Each module is responsible for its own functionality<br>and can contain the number of blades you need that serves your needs, which are stored in the pages folder.                                                                                                             	|
-| **Blade**             | A separate page with its own functionality and template.<br>Blades is not connected to each other, but can be used together using special methods.                                                                                                                                                                                   	|
-| **Components folder**  	| The collection of components specific to this module. If you want to create a component for your module,<br>the components folder is the best place to do it. A component placed in a module should only be used in it,<br>otherwise it is better to place them in thecomponents folder in the application root folder.              	|
-| **Composables folder** 	| The collection of shared logic written using Composable API pattern.<br>It may include, for example, logic for loading data from the backend which is used by blade.                                                                                                                                                                 	|
-| **Locales folder**     	| Locale files used to provide translated content specific to module.<br>If you need to translate your blades into several languages, you can store all the translations in json format in this folder,<br>which is then processed using vue-i18n library.<br> ![Readmore](../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) 	|
-| **Pages folder**   	| A set of [Blades](../../Platform-Manager/Extensibility-Points/blades-and-navigation.md) used within application router.                 	|
+| Components  	        | This directory contains components that are specific to this module. If you want to create a component for your module, the **components** folder is the ideal place to do so. Components placed within a module should only be used within that module. If a component needs to be used globally, it's better to place it in the **components** folder at the root of the application.the application root folder. |
+| Composables        	| The collection of shared logic written using Composable API pattern.<br>It may include, for example, logic for loading data from the backend which is used by blade.                                                                                                                                                                 	|
+| Locales      	        | The folder stores locale files used to provide translated content specific to the module. If you need to translate your blades into multiple languages, you can store all the translations in JSON format in this folder. These translations can then be processed using the vue-i18n library. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) |
+| Pages                 | A set of Blades used within application router.  
 
 ### Create a new module
+
 To create your own modules within the scaffolded application folder structure:
 
-1. Create a new folder for your module inside the **src/modules** directory. You can give it a descriptive name that reflects its functionality. You can create multiple modules within the **src/modules** directory, each responsible for its own functionality and set of pages.
+1. Create a new folder for your module inside the **src/modules** directory. Choose a descriptive name that reflects its functionality. You can create multiple modules within the **src/modules** directory, with each module responsible for a specific set of features or pages.
 
-1. Within your module folder, organize your module-specific code into different directories.
+1. Inside your module folder, organize your module-specific code into different directories as needed.
 
-1. In addition to these directories, you can also have an **index.ts** file as the entry point for your module. This file can provide the necessary exports and configurations for your module.
+1. Additionally, you can include an **index.ts** file as the entry point for your module. This file can provide the necessary exports and configurations for your module.
 
 
 ### Initialize a new module in the application
 
-To be able to use the module in the application, it must be initialized.
+Initialize your module to make it usable within the application.
 
-All modules are created as a Vue plugin. For convenience, module installation is initialized using a special method `createAppModule` that takes `pages`, `locales` and, if necessary, `notificationTemplates` as arguments:
+All modules are created as Vue plugins. To simplify the module installation process, you can initialize it using the `createAppModule method`. This method takes `pages`, `locales`, and, if necessary, `notificationTemplates` as arguments:
 
 ```typescript title="index.ts" linenums="1"
-// your blade pages
+// Import your blade pages
 import * as pages from "./pages";
-// its locale files if any
+// Include your locale files if applicable
 import * as locales from "./locales";
-// import createAppModule to initialize your module in application
+// Import createAppModule to initialize your module in the application
 import { createAppModule } from "@vc-shell/framework";
 
 export default createAppModule(pages, locales);
@@ -131,6 +154,6 @@ export * from "./composables";
 export * from "./components";
 ```
 
-Now you are ready to use your module!
+With these steps, your module is now ready for use within your application!
 
-![Readmore](../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](../Essentials/navigation.md)
+![Readmore](../../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](../Essentials/navigation.md)

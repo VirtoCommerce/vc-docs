@@ -17,37 +17,37 @@ To enable TypeScript API client generation in your project:
 
     === "Using command"
 
-        ```
+        ```bash
         yarn add @vc-shell/api-client-generator cross-env
         ```
         <br>
         `cross-env` runs scripts that set and use environment variables across platforms. 
 
-        ![Readmore](../../media/readmore.png){: width="25"} [Cross-env](https://github.com/kentcdodds/cross-env) 
+        ![Readmore](../../../media/readmore.png){: width="25"} [Cross Env](https://github.com/kentcdodds/cross-env) 
 
     === "Manually"
     
         Add the dependencies to your project's **package.json**:
 
-        ```title="vc-app/package.json" linenums="1"
+        ```json title="vc-app/package.json" linenums="1"
         {
             ...
             "devDependencies": {
                 ...
-                "@vc-shell/api-client-generator": "^1.0.112",
-                "cross-env": "^7.0.3",
+                "@vc-shell/api-client-generator": "latest",
+                "cross-env": "latest",
                 ...
             }
         }
         ```
 
-2. Configure client generation in your project. Inside your project's **package.json** file, add a `"generate-api-client"` command to the list of scripts:
+1. Configure client generation in your project. Inside your project's **package.json** file, add a `"generate-api-client"` command to the list of scripts:
 
     ```title="vc-app-extend/package.json" linenums="1"
     {
         "scripts": {
         ...
-        "generate-api-client": cross-env api-client-generator --color -- APP_PLATFORM_MODULES='[MarketplaceVendor, Catalog, Orders]' APP_API_CLIENT_DIRECTORY=./src/api_client/
+        "generate-api-client": cross-env api-client-generator --APP_PLATFORM_MODULES='[MarketplaceVendor,Catalog,Orders]' --APP_API_CLIENT_DIRECTORY=./src/api_client/
         }
     }
     ```
@@ -56,11 +56,11 @@ To enable TypeScript API client generation in your project:
 
     |          Options           	|                        Description                            	|                          Example                          	|
     |-----------------------------	|----------------------------------------------------------------	|------------------------------------------------------------	|
-    | `APP_PLATFORM_MODULES`     	| Platform modules to generate API client.<br>{==string[]==} <br> Customize the `APP_PLATFORM_MODULES` list<br>to match your project's requirements.	| `APP_PLATFORM_MODULES='[MarketplaceVendor,Orders,Catalog]'` 	|
-    | `APP_API_CLIENT_DIRECTORY` 	| Output directory for generated API clients. <br>{==string==} 	| `APP_API_CLIENT_DIRECTORY=./src/api_client/`                	|
-    | `APP_PLATFORM_URL`         	| Platform URL to obtain client API configs. <br>{==string==} 	    | `APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/`       	|
+    | `--APP_PLATFORM_MODULES`     	| Platform modules to generate API client.<br>{==string[]==} <br> Customize the `--APP_PLATFORM_MODULES` list<br>to match your project's requirements.	| `--APP_PLATFORM_MODULES='[MarketplaceVendor,Orders,Catalog]'` 	|
+    | `--APP_API_CLIENT_DIRECTORY` 	| Output directory for generated API clients. <br>{==string==} 	| `--APP_API_CLIENT_DIRECTORY=./src/api_client/`                	|
+    | `--APP_PLATFORM_URL`         	| Platform URL to obtain client API configs. <br>{==string==} 	    | `--APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/`       	|
 
-3. Configure Platform URL to ensure your project can access the platform's API configurations. Add the platform URL to your project's **.env** file:
+1. Configure Platform URL to ensure your project can access the platform's API configurations. Add the platform URL to your project's **.env** file:
 
     ```title="vc-app-extend/.env"
     APP_PLATFORM_URL=https://vcmp-dev.paas.govirto.com/
@@ -69,7 +69,7 @@ To enable TypeScript API client generation in your project:
     !!! note
         Alternatively, you can specify the Platform URL as a command option in the previous step when running the `"generate-api-client"` command.
 
-4. Generate the API clients using the following command:
+1. Generate the API clients using the following command:
 
     ```
     yarn generate-api-client

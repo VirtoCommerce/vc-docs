@@ -114,7 +114,7 @@ To effectively interact with the component, use the emitted events. The `update:
 
 ### Dynamic Views
 
-To dynamically integrate the `select` component into your views, use the schema interface:
+To dynamically integrate the `vc-select` component into your views, use the schema interface:
 
 ```typescript
 interface SelectSchema {
@@ -158,13 +158,13 @@ To incorporate the component into your dynamic applications, define the followin
 | `rules` {==IValidationRules==}| Validation rules for the select. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
 | `placeholder` {==string==}    | Placeholder text for the select.  |
 | `tooltip` {==string==}        | Tooltip text for the select label. |
-| `optionsMethod` {==string==}  | Method to call to get select options. Method should be defined in the blade `scope`. |
+| `optionsMethod` {==string==}  | Method to call to get select options. Method should be defined in the `scope` blade. |
 | `optionValue` {==string==}    | Property that holds the value of the option. Default: `id` |
 | `optionLabel` {==string==}    | Property that holds the label of the option. Default: `title` |
 | `searchable` {==boolean==}    | Specification whether the select is searchable. |
 | `clearable` {==boolean==}     | Specification whether the select has a clear button. |
 | `emitValue` {==boolean==}     | Update model with the value of the selected option instead of the whole option. If true - emits only selected value, if false - emits whole selected object. |
 | `customTemplate`              | `{component: string}` | Custom template for select options. Component should be registered globally. |
-| `disabled` {=={method: string}==} | Disabled state for component, could be used to disable select based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `visibility` {=={method: string}==} | Visibility state for component, could be used to hide select based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==} | Method to call when the select value is updated. Method should be defined in the blade `scope`. |
+| `disabled` {=={method: string}==} | Disabled state for component, could be used to disable select based on some conditions. Method or variable should be defined in the `scope` blade and should return a boolean value. |
+| `visibility` {=={method: string}==} | Visibility state for component, could be used to hide select based on some conditions. Method or variable should be defined in the `scope` blade and should return a boolean value. |
+| `update` {=={method: string}==} | Method to call when the select value is updated. Method should be defined in the `scope` blade. |

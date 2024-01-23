@@ -35,7 +35,7 @@ Image is created with `src` property.
 
 ## Image API
 
-API empowers you to create dynamic and interactive card components to customize its appearance and behavior.
+API empowers you to create dynamic and interactive image components to customize its appearance and behavior.
 
 ## Basic Vue
 
