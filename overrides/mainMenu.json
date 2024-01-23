@@ -109,8 +109,7 @@
                         "title": "Developer Guide",
                         "links": [
                             {
-                                "title": "In Progress",
-                                "url": "#"
+                                "title": "In Progress"
                             }
                         ]
                     }
@@ -194,7 +193,7 @@
                 "links": [
                     {
                         "title": "GraphQL Core Ideas",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/index"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI"
                     },
                     {
                         "title": "Getting Started",
@@ -224,15 +223,15 @@
                 "links": [
                     {
                         "title": "Cart",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground/Cart/overview"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/overview"
                     },
                     {
                         "title": "Order",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground/Order/overview"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/overview"
                     },
                     {
                         "title": "Marketing",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground/Marketing/overview"
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview"
                     }
                 ]
             }

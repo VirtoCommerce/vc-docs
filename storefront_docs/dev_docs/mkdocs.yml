@@ -140,11 +140,11 @@ extra:
         icon: assets/icons/rss.svg
     tabs_links:
         - title: Home
-          url: /new
+          url: /storefront_docs
         - title: Developer docs
-          url: /new/dev_docs
+          url: /storefront_docs/dev_docs
         - title: User docs
-          url: /new/user_docs
+          url: /storefront_docs/user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home

@@ -107,9 +107,6 @@ extra:
                   link: user_docs/Operator-portal/Commission-fees-setup/overview
             - title: Developer Guide [In Progress]
               image: assets/images/storefront-devguide.png
-              description:
-                - title: #
-                  link: #
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:

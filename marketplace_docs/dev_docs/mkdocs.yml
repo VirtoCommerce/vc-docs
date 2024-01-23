@@ -96,7 +96,7 @@ plugins:
 #    - monorepo
 
 # Project information
-site_name: VirtoCommerce Marketplace Developer Center
+site_name: Marketplace Dev Docs
 site_description: --TBD--
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -131,12 +131,12 @@ extra:
     rss:
         icon: assets/icons/rss.svg
     tabs_links:
-        - title: Home
-          url: /new
-        - title: Developer docs
-          url: /new/dev_docs
-        - title: User docs
-          url: /new/user_docs
+      - title: Home
+        url: /marketplace_docs
+      - title: Developer Docs
+        url: /marketplace_docs/dev_docs
+      - title: User Docs
+        url: /marketplace_docs/user_docs
     footer_links:
         - title: Support
           url: https://help.virtocommerce.com/support/home
