@@ -6,7 +6,7 @@ For your convenience, you can find the source code of the sample project [here](
 
 ## Prerequisites
 
-Prior to registering your notifications, you need to configure the notification gateway, which we explain [here](../Getting-Started/Post-Installation-Steps/02-configuring-email-notifications).
+Prior to registering your notifications, you need to configure the notification gateway, which we explain [here](../../Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md).
 
 ## Defining Custom Email Notification Type
 

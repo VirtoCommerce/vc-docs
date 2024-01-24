@@ -133,7 +133,7 @@ interface SettingsBase {
 | `component` | `"DynamicBladeForm" | "DynamicBladeList"` | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br> - `DynamicBladeList` <br> - `DynamicBladeForm` |
 | `composable` | `string` | The name of the composable used by the view. This option is required. |
 | `isWorkspace` | `boolean` | Indication whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false` |
-| `toolbar` | `object[]` | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](./toolbar.md) section. |
+| `toolbar` | `object[]` | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
 | `permissions` | `string`, `string[]` | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
 | `pushNotificationType` | `string`, `string[]` | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
 

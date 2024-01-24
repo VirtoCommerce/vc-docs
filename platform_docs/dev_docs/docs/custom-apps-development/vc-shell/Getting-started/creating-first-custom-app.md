@@ -60,7 +60,7 @@ Your first VC-Shell application is now ready to run!
 An example application with classic and dynamic views, created using `@vc-shell/create-vc-app` package, can be found in the `sample/vc-app` folder in the @VirtoCommerce/vc-shell github repo. 
 ![New app](../../media/new-app.png)
 
-![Readmore](../../../media/readmore.png){: width="25"} [Dynamic Views Extensibility](../Extensibility/overview.md)
+![Readmore](../../media/readmore.png){: width="25"} [Dynamic Views Extensibility](../Extensibility/overview.md)
 
 !!! info "Note"
 
@@ -70,9 +70,9 @@ An example application with classic and dynamic views, created using `@vc-shell/
 !!! tip
     For an optimal development experience, we recommend using [Visual Studio Code](https://code.visualstudio.com/) with the [Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 
-![Readmore](../../../media/readmore.png){: width="25"} [Vite tools](https://vitejs.dev/)
+![Readmore](../../media/readmore.png){: width="25"} [Vite tools](https://vitejs.dev/)
 
-![Readmore](../../../media/readmore.png){: width="25"} [Vue Composition API](https://vuejs.org/guide/introduction.html#composition-api)
+![Readmore](../../media/readmore.png){: width="25"} [Vue Composition API](https://vuejs.org/guide/introduction.html#composition-api)
 
 ## Application folder structure
 
@@ -118,7 +118,7 @@ A **module** is a collection of composables, locales, components, and pages. Eac
 |--------------------	|--------------------------------------------------------------------------------------------------------------	|
 | Components  	        | This directory contains components that are specific to this module. If you want to create a component for your module, the **components** folder is the ideal place to do so. Components placed within a module should only be used within that module. If a component needs to be used globally, it's better to place it in the **components** folder at the root of the application.the application root folder. |
 | Composables        	| The collection of shared logic written using Composable API pattern.<br>It may include, for example, logic for loading data from the backend which is used by blade.                                                                                                                                                                 	|
-| Locales      	        | The folder stores locale files used to provide translated content specific to the module. If you need to translate your blades into multiple languages, you can store all the translations in JSON format in this folder. These translations can then be processed using the vue-i18n library. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) |
+| Locales      	        | The folder stores locale files used to provide translated content specific to the module. If you need to translate your blades into multiple languages, you can store all the translations in JSON format in this folder. These translations can then be processed using the vue-i18n library. <br> ![Readmore](../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) |
 | Pages                 | A set of Blades used within application router.  
 
 ### Create a new module
@@ -156,4 +156,4 @@ export * from "./components";
 
 With these steps, your module is now ready for use within your application!
 
-![Readmore](../../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](../Essentials/navigation.md)
+![Readmore](../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](../Essentials/navigation.md)

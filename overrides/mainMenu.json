@@ -10,11 +10,11 @@
                         "title": "User Guide",
                         "links": [
                             {
-                                "title": "Installing Modules",
-                                "url": "../platform_docs/user_docs/modules-installation"
+                                "title": "Getting Started",
+                                "url": "../platform_docs/user_docs/getting-started"
                             },
                             {
-                                "title": "Available Modules",
+                                "title": "User Documentation",
                                 "url": "../platform_docs/user_docs/platform-overview"
                             }
                         ]
@@ -27,16 +27,28 @@
                                 "url": "../platform_docs/dev_docs/Getting-Started/Installation-Guide/windows"
                             },
                             {
-                                "title": "Backend Architecture",
+                                "title": "Architecture Overview",
                                 "url": "../platform_docs/dev_docs/Back-End-Architecture/02-conceptual-overview"
+                            },
+                            {
+                                "title": "Extensibility",
+                                "url": "../platform_docs/dev_docs/Extensibility/overview"
+                            },
+                            {
+                                "title": "REST API Reference",
+                                "url": "https://virtostart-demo-admin.govirto.com/docs/index.html"
                             },
                             {
                                 "title": "GraphQL API",
                                 "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
                             },
                             {
-                                "title": "Module.manifest File",
-                                "url": "../platform_docs/dev_docs/Fundamentals/Modularity/06-module-manifest-file"
+                                "title": "Configuration Reference",
+                                "url": "../platform_docs/dev_docs/Configuration-Reference/appsettingsjson"
+                            },
+                            {
+                                "title": "Tutorials and How-tos",
+                                "url": "../platform_docs/dev_docs/Tutorials-and-How-tos/Tutorials/creating-custom-module"
                             }
                         ]
                     }
@@ -49,20 +61,16 @@
                         "title": "User Guide",
                         "links": [
                             {
-                                "title": "Personal and Corporate Accounts",
-                                "url": "../storefront_docs/user_docs/account/overview"
+                                "title": "Getting Started",
+                                "url": "https://www.youtube.com/watch?v=8LaCWtkVdAk"
                             },
                             {
-                                "title": "Shopping Process",
-                                "url": "../storefront_docs/user_docs/shopping/searching-for-products"
+                                "title": "User Documentation",
+                                "url": "../storefront_docs/user_docs/"
                             },
                             {
-                                "title": "Comparing Products",
-                                "url": "../storefront_docs/user_docs/shopping/compare-products"
-                            },
-                            {
-                                "title": "Submitting Quotes",
-                                "url": "../storefront_docs/user_docs/shopping/submit-quotes"
+                                "title": "Public Demo",
+                                "url": "https://virtostart-demo-store.govirto.com/"
                             }
                         ]
                     },
@@ -74,12 +82,16 @@
                                 "url": "../storefront_docs/dev_docs/getting-started/quickstart-on-windows"
                             },
                             {
-                                "title": "Vue.js Starter Theme",
+                                "title": "Architecture Overview",
+                                "url": "../storefront_docs/dev_docs/"
+                            },
+                            {
+                                "title": "B2B Theme Overview",
                                 "url": "../storefront_docs/dev_docs/vue-js-starter-theme/overview"
                             },
                             {
                                 "title": "Integrations",
-                                "url": "../storefront_docs/dev_docs/integrations/prerender_io"
+                                "url": "../storefront_docs/dev_docs/integrations/prerender_io/"
                             }
                         ]
                     }
@@ -92,16 +104,12 @@
                         "title": "User Guide",
                         "links": [
                             {
-                                "title": "Product Management",
-                                "url": "../marketplace_portal/user_docs/Vendor-portal/products-management-by-vendor"
+                                "title": "Vendor Portal",
+                                "url": "../marketplace_docs/user_docs/Vendor-portal/overview"
                             },
                             {
-                                "title":"Offers Management",
-                                "url": "../marketplace_portal/user_docs/Vendor-portal/offers-management-by-vendor"
-                            },
-                            {
-                                "title":"Commission Fees Setup",
-                                "url": "../marketplace_portal/user_docs/Operator-portal/Commission-fees-setup/overview"
+                                "title":"Operator Portal",
+                                "url": "../marketplace_docs/user_docs/Operator-portal/overview"
                             }
                         ]
                     },
@@ -119,28 +127,19 @@
                 "title": "VC Shell",
                 "content": [
                     {
-                        "title": "User Guide",
-                        "links": [
-                            {
-                                "title": "In Progress",
-                                "url": "#"
-                            }
-                        ]
-                    },
-                    {
                         "title": "Developer Guide",
                         "links": [
                             {
-                                "title": "Creating First Custom App",
-                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app"
+                                "title": "Overview",
+                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/vc-shell-overview"
                             },
                             {
-                                "title": "Dynamic Views",
+                                "title": "Getting Started",
                                 "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Essentials/dynamic-views/overview"
                             },
                             {
                                 "title": "Extending VC Apps Functionality",
-                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Extensibility/overview"
+                                "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started"
                             }
                         ]
                     }
@@ -153,32 +152,33 @@
         "title": "Getting started",
         "content": [
             {
-                "title": "User Guide",
+                "title": "Platform",
                 "links": [
                     {
-                        "title": "Available Modules",
-                        "url": "../platform_docs/user_docs/platform-overview"
+                        "title": "Manager Getting Started",
+                        "url": "../platform_docs/user_docs/getting-started"
                     },
                     {
-                        "title": "Installing Modules",
-                        "url": "../platform_docs/user_docs/modules-installation"
+                        "title": "Developer Getting Started",
+                        "url": "../platform_docs/dev_docs/Getting-Started/Installation-Guide/windows"
                     }
                 ]
             },
             {
-                "title": "Developer Guide",
+                "title": "Storefront",
                 "links": [
                     {
-                        "title": "Getting Started",
-                        "url": "../platform_docs/dev_docs/Getting-Started/Installation-Guide/windows"
-                    },
+                        "title": "Developer Getting Started",
+                        "url": "../storefront_docs/dev_docs/getting-started/quickstart-on-windows/"
+                    }
+                ]
+            },
+            {
+                "title": "VC-Shell",
+                "links": [
                     {
-                        "title": "Backend Architecture",
-                        "url": "../platform_docs/dev_docs/Back-End-Architecture/02-conceptual-overview"
-                    },
-                    {
-                        "title": "Configuration Reference",
-                        "url": "../platform_docs/dev_docs/Configuration-Reference/appsettingsjson"
+                        "title": "Developer Getting Started",
+                        "url": "../platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started"
                     }
                 ]
             }
@@ -186,52 +186,23 @@
     },
     {
         "iconSrc": "./assets/icons/graphql.svg",
-        "title": "GraphQL API",
+        "title": "APIs",
         "content": [
             {
-                "title":"General Information",
+                "title":"REST API",
                 "links": [
                     {
-                        "title": "GraphQL Core Ideas",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI"
-                    },
-                    {
-                        "title": "Getting Started",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started" 
+                        "title": "REST API Reference",
+                        "url": "https://virtostart-demo-admin.govirto.com/docs/index.html"
                     }
                 ]
             },
             {
-                "title": "Tools to Explore GraphQL",
+                "title": "GraphQL API",
                 "links": [
                     {
-                        "title": "Playground",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/playground"
-                    },
-                    {
-                        "title": "Postman",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/postman"
-                    },
-                    {
-                        "title": "Curl",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/curl"
-                    }
-                ]
-            },
-            {
-                "title": "Basic Operations",
-                "links": [
-                    {
-                        "title": "Cart",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Cart/overview"
-                    },
-                    {
-                        "title": "Order",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Order/overview"
-                    },
-                    {
-                        "title": "Marketing",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview"
+                        "title": "GraphQL API Reference",
+                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
                     }
                 ]
             }

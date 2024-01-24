@@ -3,16 +3,9 @@
 
 This theme represents the VC Team's opinionated starting point for new projects. It strives to include up-to-date best practices and solutions that we have deemed needed for the majority of projects we build. It is a reflection of what is possible when building a theme.
 
-## How It Looks Like
 Our Vue.js Starter Theme has an adaptive design that allows it to look smooth and natural on both desktop and mobile:
 
 ![vc-theme-b2b-vue on desktop](media/desktop.png)
-
-*`vc-theme-b2b-vue` on desktop*
-
-![vc-theme-b2b-vue on mobile](media/mobile.png) 
-
-*`vc-theme-b2b-vue` on mobile*
 
 ## Technologies and Frameworks Used
 
@@ -56,7 +49,7 @@ Our Vue.js Starter Theme has an adaptive design that allows it to look smooth an
 
 ### Security
 
-- Sing In/Out/Up
+- Sign In/Out/Up
     
 - Reset password
     
@@ -262,9 +255,9 @@ Our Vue.js Starter Theme has an adaptive design that allows it to look smooth an
 
 - Cookie consent *  
 
-## How to Work with `vc-theme-b2b-vue`
+## Working with `vc-theme-b2b-vue`
 
-As a developer, you will be using `vc-theme-b2b-vue` as your ultimate starting point for a new theme. It contains numerous out-of-the-box features that are typical for B2B and B2C ecommerce projects. Along with ready made theme architecture and huge set of reusable components, it can significantly speed up your development process. To start developing a new theme, you just need to clone (fork) the theme project, and then you will be able to do [any customization according to your needs](../../under-construction/under-construction.md).<!---Link to custom theme development-->
+As a developer, you will be using `vc-theme-b2b-vue` as your ultimate starting point for a new theme. It contains numerous out-of-the-box features that are typical for B2B and B2C ecommerce projects. Along with ready made theme architecture and huge set of reusable components, it can significantly speed up your development process. To start developing a new theme, you just need to clone (fork) the theme project, and then you will be able to do any customization according to your needs.<!---Link to custom theme development-->
 
 
 [![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)

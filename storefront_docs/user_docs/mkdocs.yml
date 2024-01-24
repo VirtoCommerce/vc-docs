@@ -102,6 +102,7 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
+    - Overview: index.md
     - Register and Sign In:
           - Create Account: registration_and_signing_in/create-account.md
           - Sign In: registration_and_signing_in/sign-in.md

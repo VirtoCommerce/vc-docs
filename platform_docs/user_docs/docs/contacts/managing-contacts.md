@@ -22,7 +22,7 @@ To add a contact:
 
 	![Readmore](media/readmore.png){: width="25"} [Assigning user groups to products and categories](../catalog-personalization/user-groups.md)
 	
-	![Readmore](media/readmore.png){: width="25"} [Managing personal prices](../pricing/managing-personal-prices.md)
+	![Readmore](media/readmore.png){: width="25"} [Managing personal prices](../pricing/adding-new-assignment.md)
 
 1. Click **Create** to save the changes.
 

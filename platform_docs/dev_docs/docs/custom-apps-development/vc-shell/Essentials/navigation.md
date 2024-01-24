@@ -326,7 +326,7 @@ export default createAppModule(pages, locales);
 
 You can see all `blades` registered in the application with and without paths. To do so, use a browser extension called `Vue Devtools`.
 
-![Readmore](../../../media/readmore.png){: width="25"} [Vue Devtools](https://devtools.vuejs.org/)
+![Readmore](../../media/readmore.png){: width="25"} [Vue Devtools](https://devtools.vuejs.org/)
 
 1. To discover the blade's name, open `Vue Devtools` and locate `App` in the components tree. Clicking on it will reveal the component's state:
 

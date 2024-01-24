@@ -2,15 +2,13 @@
 
 Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
 
-There are types of vendor-made extensions that guarantee 'seamless delivery'.  Virto Commerce, however, guarantees that these ways of extensibility are sufficient to build an ecommerce solution of any complexity on top of it.
+There are types of vendor-made extensions that guarantee 'seamless delivery'.  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
 
-Those three types of extensions are:
+* No-code extensions.
  
-1. **No-code extensions** 
+* API-based extensions. 
  
-2. **API-based extensions** 
- 
-3. **Native extensions** 
+* Native extensions. 
 
 ![Extensibility Overview](media/01-extensibility-overview.png)
 
@@ -20,11 +18,11 @@ Virto Commerce supports declarative extensions through the admin interface and A
 
 In particular, Virto Commerce supports:
 
-+ [Dynamic properties](../../../user_docs/docs/order-management/main-objects.md#general-order-information): Extend entities, such as Cart, Order, Company, etc., with new properties.
++ [Dynamic properties](../../../user_docs/order-management/main-objects.md): Extend entities, such as Cart, Order, Company, etc., with new properties.
 
-+ [Statuses](../../../user_docs/docs/contacts/settings.md#statuses): Enable implementing any workflow.
++ [Statuses](../../../user_docs/contacts/settings.md): Enable implementing any workflow.
 
-+ [Role-based security and permissions](../../../user_docs/docs/security/roles-and-permissions.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
++ [Role-based security and permissions](../../../user_docs/tasks/roles-permissions.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
 
 ## API-based Extensions
 
@@ -32,14 +30,14 @@ These are traditional cloud-based extensions based on API calls and events (hook
 
 Virto Commerce currently provides two types of API:
 
-+ **REST:** Enables access to module business functionality, i.e. all CRUD operations and business logic are accessible via Rest API.
+* [REST](https://virtostart-demo-admin.govirto.com/docs/index.html): Enables access to module business functionality, i.e. all CRUD operations and business logic are accessible via Rest API.
 
-+ [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md#graphql-core-ideas): A new generation of Business API for client applications, it provides you with additional capabilities. 
+* [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md#graphql-core-ideas): A new generation of Business API for client applications, it provides you with additional capabilities. 
 
 We also support two types of event providers:
 
-+ **Webhooks:** Good point for no development integration.
-+ **Eventbus:** Read for reactive programming and enterprise integrations.
+* Webhooks: A good point for no development integration.
+* Eventbus: Read for reactive programming and enterprise integrations.
 
 ## Native Extensions
 
@@ -54,10 +52,10 @@ Moreover, it simplifies DevOps processes and optimizes performance.
 
 With a custom module, you can extend every layer:
 
-+ **Admin UI**
-+ **API**
-+ **Business Logic**
-+ **Database**
+* Admin UI.
+* API.
+* Business Logic.
+* Database.
 
 !!! tip
     You can revert back to the original state by uninstalling the extension. 
@@ -67,7 +65,7 @@ For example, on the chart below, the Price module extension extends the default 
 ![Price module extension](media/05-price-extension-module.png)
 
 
-### Why Is It Important Not to Modify Code You Do Not Own?
+### Why It Is Important Not to Modify Code You Do Not Own
 
 Despite the fact Virto platform is an open-source project, you should at all times avoid direct modification into the source code of modules developed by third parties or VC team. You also should always follow the **Open-Closed Principle** (open for extensions and closed for modifications).
 
@@ -115,7 +113,7 @@ The table below will help you understand the differences between various customi
 
 ## Summary
 + Virto Commerce provides the best opportunities for customization. 
-+ You as a developer can choose the best approach and balance between inside and outside integrations.
++ As a developer you can choose the best approach and balance between inside and outside integrations.
 + The Native approach simplifies the DevOps processes and optimizes performance, allowing you to reuse and improve Virto Commerce modules.
 + The API approach helps you to **glue** Virto Commerce's platform into your ecommerce ecosystem. 
 + The open source principle enables developers to learn the code and fix issues.

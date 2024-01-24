@@ -20,7 +20,7 @@ This query allows getting a specified number of quotes from a particular user.
 
 | Possible return                                          	              | Description                                             |
 |-----------------------------------------------------------------------	|-------------------------------------------------------	|
-| [`QuoteConnection`](../objects/-----------------------------)           |  A list of quotes that match the specified criteria.   	|
+| [`QuoteConnection`](../objects/QuoteConnection.md)                      |  A list of quotes that match the specified criteria.   	|
 
 ## Example
 

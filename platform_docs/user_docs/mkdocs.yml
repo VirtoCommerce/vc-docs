@@ -102,8 +102,10 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
+    - Overview: index.md
     - Platform:
           - Overview: platform-overview.md
+          - Getting Started: getting-started.md
           - Modules Installation: modules-installation.md
           - Catalog:
                 - Catalog:
@@ -238,24 +240,6 @@ nav:
           - Hotjar:
                 - Overview: integrations/hotjar/overview.md
                 - Getting started: integrations/hotjar/getting-started.md
-    - Marketplace <br>[Under construction]:
-          - Overview: marketplace_user_docs/overview.md
-          - Vendor portal:
-                - Overview: marketplace_user_docs/Vendor-portal/overview.md
-                - Offers management by vendor: marketplace_user_docs/Vendor-portal/offers-management-by-vendor.md
-                - Products management by vendor: marketplace_user_docs/Vendor-portal/products-management-by-vendor.md
-          - Operator portal:
-                - Overview: marketplace_user_docs/Operator-portal/overview.md
-                - Master catalog taxonomy management: marketplace_user_docs/Operator-portal/master-catalog-taxonomy-management.md
-                - Commission fees setup:
-                      - Overview: marketplace_user_docs/Operator-portal/Commission-fees-setup/overview.md
-                      - Static commission fees: marketplace_user_docs/Operator-portal/Commission-fees-setup/static-commission-fees.md
-                      - Dynamic commission fees: marketplace_user_docs/Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
-                - Vendors management:
-                      - Vendor onboarding: marketplace_user_docs/Operator-portal/Vendors-management/vendor-onboarding.md
-                      - Vendor management: marketplace_user_docs/Operator-portal/Vendors-management/vendor-management.md
-                - Products management: marketplace_user_docs/Operator-portal/products-management.md
-
 extra:
     social:
         - icon: fontawesome/brands/github

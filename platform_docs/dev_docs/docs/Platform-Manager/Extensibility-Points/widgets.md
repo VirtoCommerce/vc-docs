@@ -64,7 +64,7 @@ Widget options:
 |controller|An Angular.js controller for the widget. Instantiated only on widget rendering, which means parent blade is accessible in the *$scope.blade* variable.|
 |size|Widget dimensions: [number of columns, number of rows]. An optional parameter with the default value at [1,1].|
 |isVisible|Toggles widget visibility (a widget get invisible if this option is set to *false*). Set to *true* by default.|
-|template|Template URL for the widget. Check our [Style Guide](../style-guide) for details.|
+|template|Template URL for the widget. Check our [Style Guide](../style-guide.md) for details.|
 
 ## Widget Visibility and Permissions
 

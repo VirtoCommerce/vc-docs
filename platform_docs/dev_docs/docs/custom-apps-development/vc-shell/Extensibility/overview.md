@@ -48,7 +48,7 @@ To include and set up custom applications:
 
 Now you have successfully incorporated and set up the custom application. Your custom app can now leverage the modules and functionalities of the `vc-app`, providing you with the flexibility to extend and customize your application as needed.
 
-![Readmore](../../../media/readmore.png){: width="25"} [Using modules from other applications](../Essentials/dynamic-views/Using-Modules-from-Other-Applications.md)
+![Readmore](../../media/readmore.png){: width="25"} [Using modules from other applications](../Essentials/dynamic-views/Using-Modules-from-Other-Applications.md)
 
 ## Replace API Clients used by other custom applications
 
@@ -127,7 +127,7 @@ After generating the API client for your `@vc-app-extend` application, you can s
 
 This demonstrates that the Offer class in the `@vc-app-extend` application now includes an additional field `newField`, which was not present in the original `@vc-app application`'s Offer class.
 
-![Readmore](../../../media/readmore.png){: width="25"} [Generate API Client](../How-tos/generate-api-client.md)
+![Readmore](../../media/readmore.png){: width="25"} [Generate API Client](../How-tos/generate-api-client.md)
 
 ### Override command processing logic
 
@@ -217,7 +217,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
 
 This process allows you to seamlessly extend views from the referenced application without the need to directly modify the source code, providing flexibility in customizing your application.
 
-![Readmore](../../../media/readmore.png){: width="25"} [Using dynamic view for extending views from the other apps](../Essentials/dynamic-views/Extending-Views.md)
+![Readmore](../../media/readmore.png){: width="25"} [Using dynamic view for extending views from the other apps](../Essentials/dynamic-views/Extending-Views.md)
 
 ## Extend composables 
 

@@ -46,7 +46,7 @@ VC Data Import is based on three main objects:
 
 To create a Custom Importer, the developer needs to define their own DataReader and DataWriter, and define Settings and Validation rules, if necessary. Currently, the Module provides the ability to use the CSV Reader as part of the [VirtoCommerce.ImportModule.CsvHelper](https://www.nuget.org/packages/VirtoCommerce.ImportModule.CsvHelper) package as a help, but does not restrict the developer from writing their own Readers for any data sources.
 
-The following Module services are also available for developers to use in the [UI](03-import-app.md#user-interface-and-work-scenarios):
+The following Module services are also available for developers to use in the [UI](import-app.md#user-interface-and-work-scenarios):
 
 * `IImportRunService` is the main service for managing the execution of the import process. The service provides access to methods for previewing `PreviewAsync``, launching an import `RunImportAsync`, and creating a similar import task in the form of a background job `RunImportBackgroundJob`.
 

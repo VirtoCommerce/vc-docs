@@ -25,5 +25,5 @@ The **xStorefront** framework provides you with the following advantages:
 -  The flexible customization model based on the direct code modification enables changing everything without any complex extension layers. There are absolutely no limitations in terms of UI customization. As mentioned above, it is a starting point for building storefronts, a boilerplate for custom solutions, the code of which may be easily changed.
     
 - Modern web development stack, including the [Vue.js 3.0](https://vuejs.org/) design principles, separation of logical concerns via [composition API](https://v3.vuejs.org/api/composition-api.html), eCommerce semantic component design system, and [GraphQL](https://graphql.org/) to retrieve data without under or over fetching.
-    
-[![Storefront demo site](/media/)](https://virtostart-demo-store.govirto.com/)
+
+![Storefront demo site](media/public-demo-site.png) 

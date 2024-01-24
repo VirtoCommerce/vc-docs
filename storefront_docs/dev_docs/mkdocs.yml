@@ -111,12 +111,14 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
+    - Overview: index.md
     - Getting Started:
           - Quick Start (Windows): getting-started/quickstart-on-windows.md
     - ASP.NET Core Storefront Runtime:
           - Overview: asp-net-core-storefront-runtime/overview.md
     - Vue.js Starter Theme:
           - Overview: vue-js-starter-theme/overview.md
+          - Getting Started: vue-js-starter-theme/getting-started.md
     - Integrations:
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md
 

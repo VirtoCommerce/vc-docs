@@ -15,7 +15,7 @@ To enable the special prices:
 
 1. [Create a new price list](creating-new-price-list.md). In this example, we create the **Loyal customers only** price list.
 
-1. [Provide special prices](adding-products-to-new-price-list.md) for the products in question. In our example, we want to offer printers at $50 per item:
+1. [Provide special prices](creating-new-price-list.md#add-products-to-price-list) for the products in question. In our example, we want to offer printers at $50 per item:
 
     ![Adding prices](media/adding-prices1.png)
 

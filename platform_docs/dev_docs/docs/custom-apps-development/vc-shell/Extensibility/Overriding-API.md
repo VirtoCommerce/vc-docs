@@ -14,7 +14,7 @@ When developing custom applications, there may be situations where you need to u
 
 ### Generating API
 
-![Readmore](../../../media/readmore.png){: width="25"} [How To Generate API client](../How-tos/generate-api-client.md)
+![Readmore](../../media/readmore.png){: width="25"} [How To Generate API client](../How-tos/generate-api-client.md)
 
 ### Using the Generated API
 

@@ -2,8 +2,7 @@
 
 You can use Virto Commerce CLI (***vc-build***) to automate all installation and update processes.
 
-!!! tip
-	To learn how to install and use Virto Commerce CLI, refer to [this guide](../Getting-Started/Installation-Guide/Installing-on-Windows/03-installation-windows-on-premises-CLI.md).
+![Readmore](media/readmore.png){: width="25"} [Install and use Virto Commerce CLI](../Getting-Started/Installation-Guide/windows.md)
 
 To install the latest edge release:
 

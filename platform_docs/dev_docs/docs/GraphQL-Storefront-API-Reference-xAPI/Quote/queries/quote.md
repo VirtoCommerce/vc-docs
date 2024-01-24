@@ -15,9 +15,9 @@ This query is used to get a quote by its Id.​
 
 ## Possible returns
 
-| Possible return                                         | Description           |
-|---------------------------------------------------------|----------------------	|
-| [`QuoteType`](../objects/----------------------)        | The structured data for quote information.   	|
+| Possible return                                         | Description                                   |
+|---------------------------------------------------------|----------------------------------------------	|
+| [`QuoteType`](../objects/QuoteType.md)                  | The structured data for quote information.   	|
 
 ## Examples
 

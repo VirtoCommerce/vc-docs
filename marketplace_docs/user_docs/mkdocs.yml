@@ -102,6 +102,7 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
+    - Overview: index.md
     - Vendor portal:
       - Overview: Vendor-portal/overview.md
       - Offers management by vendor: Vendor-portal/offers-management-by-vendor.md

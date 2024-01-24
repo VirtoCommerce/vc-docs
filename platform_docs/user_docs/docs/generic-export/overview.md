@@ -16,5 +16,5 @@ With the Generic Export Module, you can:
 
 * [Assign permissions](assigning-permissions.md). Only users with the Export reader role and permissions have access to Generic Export function.
 * Apply [advanced filters](advanced-filtering.md) application before starting the export.
-* [Export data](managing.md) in Json and CSV format.
+* [Export data](exporting-data.md) in Json and CSV format.
 

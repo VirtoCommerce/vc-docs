@@ -111,7 +111,7 @@ copyright: Copyright &copy; 2024. All rights reserved.
 
 # Page tree
 nav:
-    - Home: index.md
+    - Overview: index.md
     - Getting Started:
           - System Requirements: Getting-Started/system-requirements.md
           - Installation Guide:
@@ -251,6 +251,7 @@ nav:
                       - CategoryDescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType.md
                       - DescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType.md
                       - FulfillmentCenterType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterType.md
+                      - FulfillmentCenterAddressType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterAddressType.md
                       - FulfillmentCenterConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterConnection.md
                       - FulfillmentCenterEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterEdge.md
                       - VariationType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType.md
@@ -377,9 +378,9 @@ nav:
                       - OrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-address-type.md
                       - OrderLineItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-line-item-type.md
                       - PaymentInType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-in-type.md
-                      - ProcessPaymentRequestResultType: GraphQL-Storefront-API-Reference-xAPI/Order/process-payment-request-result-type.md
-                      - InputOrderBankCardInfoType: GraphQL-Storefront-API-Reference-xAPI/Order/input-order-bank-card-info-type.md
-                      - InputOrderPaymentType: GraphQL-Storefront-API-Reference-xAPI/Order/input-order-payment-type.md
+                      - ProcessPaymentRequestResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/process-payment-request-result-type.md
+                      - InputOrderBankCardInfoType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-bank-card-info-type.md
+                      - InputOrderPaymentType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-payment-type.md
                       - PaymentTransactionType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-transaction-type.md
                       - AuthorizePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/authorize-payment-result-type.md
                       - InitializePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/initialize-payment-result-type.md
@@ -530,20 +531,11 @@ nav:
                       - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
                       - changeQuoteItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-item-quantity.md
                       - removeQuoteItem: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/remove-quote-item.md
+                      - changeQuoteComment: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment.md
                       - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
                       - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
           - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
           - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
-    - Storefront Development:
-          - Overview: storefront-development/overview.md
-          - Getting Started:
-                - Quick Start (Windows): storefront-development/getting-started/quickstart-on-windows.md
-          - ASP.NET Core Storefront Runtime:
-                - Overview: storefront-development/asp-net-core-storefront-runtime/overview.md
-          - Vue.js Starter Theme:
-                - Overview: storefront-development/vue-js-starter-theme/overview.md
-          - Integrations:
-                - Enhancing SEO with Prerender.io: storefront-development/integrations/prerender_io.md
     - Extensibility:
           - Overview: Extensibility/overview.md
           - Key Extensibility Points: Extensibility/key-extensibility-points.md

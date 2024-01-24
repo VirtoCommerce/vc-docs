@@ -38,7 +38,7 @@ The `CartType` defines the properties and fields associated with a shopping cart
 | `shippingTotal` [{==MoneyType==}](money-type.md)                            | The total amount of shipping charges for the cart.                                                         	|
 | `shippingTotalWithTax` [{==MoneyType==}](money-type.md)                     | The total amount of shipping charges for the cart, including taxes.                                        	|
 | `shipments` [{==ShipmentType==}](shipment-type.md)                          | A list of shipments associated with the cart.                                                              	|
-| `availableShippingMethods` [{==ShippingMethodType==}](shipment-method-type.md) | A list of available shipping methods for the cart.                                                     	|
+| `availableShippingMethods` [{==ShippingMethodType==}](shipping-method-type.md) | A list of available shipping methods for the cart.                                                     	|
 | `paymentPrice` [{==MoneyType==}](money-type.md)                        	  | The price of payment for the cart.                                                                         	|
 | `paymentPriceWithTax` [{==MoneyType==}](money-type.md)                   	  | The price of payment for the cart, including taxes.                                                        	|
 | `paymentTotal` [{==MoneyType==}](money-type.md)                         	  | The total amount of payment charges for the cart.                                                          	|

@@ -132,7 +132,7 @@ export const grid: DynamicGridSchema = {
 
 #### Expand Navigation Menu
 
-Since dynamic blade components operate at runtime and lack an importable component for the `openBlade` method, you can utilize an additional composable method called `useBladeNavigation`. This method returns the component of the registered blade, `resolveBladeByName`. To obtain the desired blade using this method, you need to pass the unique blade ID obtained in the [Finding the Appropriate Blade for the Navigation Menu](./include-and-setup-other-custom-app.md#finding-the-appropriate-blade-for-the-navigation-menu) step.
+Since dynamic blade components operate at runtime and lack an importable component for the `openBlade` method, you can utilize an additional composable method called `useBladeNavigation`. This method returns the component of the registered blade, `resolveBladeByName`. To obtain the desired blade using this method, you need to pass the unique blade ID obtained in the [Finding the Appropriate Blade for the Navigation Menu](Using-Modules-from-Other-Applications.md#find-appropriate-blade-for-navigation-menu) step.
 
 ```typescript title="vc-app-extend/src/pages/App.vue" linenums="1"
 // Initialize the module in the navigation menu

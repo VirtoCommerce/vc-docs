@@ -22,7 +22,7 @@ The diagram below illustrates the interconnections among various key entities wi
 With the Pricing module, you can:
 
 * [Create new price lists.](creating-new-price-list.md)
-* [Add products to new price list.](adding-products-to-new-price-list.md)    
+* [Add products to new price list.](creating-new-price-list.md#add-products-to-price-list)    
 * [View price list via the Catalog module.](viewing-price-list-in-catalog.md)
 * [Add new price list assignment.](adding-new-assignment.md)
 * [Configure the Pricing module.](managing-pricing-module-settings.md)

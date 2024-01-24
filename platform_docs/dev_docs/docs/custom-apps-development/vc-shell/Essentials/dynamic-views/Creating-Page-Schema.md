@@ -65,7 +65,9 @@ const schema: DynamicDetailsSchema = {
 };
 ```
 
-![Readmore](../../../media/readmore.png){: width="25"} [Schema Settings API](./views/schema-settings.md)
+![Readmore](../../../media/readmore.png){: width="25"} [Schema Settings API. Dynamic Blade List](../dynamic-views/Dynamic-Blade-List.md#schema-settings-api)
+
+![Readmore](../../../media/readmore.png){: width="25"} [Schema Settings API. Dynamic Blade Form](../dynamic-views/Dynamic-Blade-Form.md#schema-settings-api)
 
 
 ### Provide view content
@@ -165,7 +167,7 @@ content: [
 ```
 
 !!! note
-    Since we specified that we want to use custom templates for the mobile view, empty list, and not found list, we need to create these templates. More details on creating these templates can be found in the [Custom Templates](./custom-templates.md) section.
+    Since we specified that we want to use custom templates for the mobile view, empty list, and not found list, we need to create these templates. More details on creating these templates can be found in the [Custom Templates](Custom-Templates.md) section.
 
 As a result, we will have a table with columns `Name`, `Price`, `Status`, and `Created date`, as well as the ability for multiselect, search, and custom templates for different table states.
 
@@ -191,4 +193,6 @@ export default createDynamicAppModule({
 
 Now, if you go to the URL `/my-list`, you will see the table we created earlier.
 
-After creating the schema, create a composable used in the view schema. More details on creating composables can be found in the [Dynamic Views](./Dynamic-Views/views.md) guide.
+After creating the schema, create a composable used in the view schema. 
+
+![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm] [Creating composables](../../Extensibility/Overriding-Composables.md) guide.

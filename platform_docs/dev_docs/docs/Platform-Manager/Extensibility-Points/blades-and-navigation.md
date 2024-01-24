@@ -1,9 +1,9 @@
-## Overview
+# Overview
 
 Virto Commerce Platform's UI is organized and divided into multiple screens called blades. Blades are ordered left to right and share parent-child hierarchy. Any parent blade has one or more child ones, while every child has a reference to its parent. The hierarchy depth is virtually unlimited.
 
 ![Blade hierarchy example](media/01-blades-and-navigation.png)
-*Example of unlimited parent-child blade hierarchy*
+
 
 ## Blade Structure and Properties
 
@@ -18,7 +18,7 @@ Any blade object has the following properties that Virto Commerce platform respe
 |headIcon|string|An icon to show on the blade header. A [Font Awesome](http://fontawesome.io/icon/github/) icon identifier. If undefined, the default *fa-folder* icon is displayed.|
 |title|string|Blade title|
 |subtitle|string|Blade subtitle|
-|toolbarCommands|object []|Toolbar controls (read more [here](../blade-toolbar/)).|
+|toolbarCommands|object []|Toolbar controls. <br> ![Readmore](media/readmore.png){: width="25"} [Blade Toolbars](blade-toolbar.md)|
 |controller|string|Angular.js controller ID. This property is required.|
 |template|string|Angular.js template path. This property is required.|
 |parentBlade|object|Reference to parent blade. Platform sets this value automatically.|
