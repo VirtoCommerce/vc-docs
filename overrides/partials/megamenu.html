@@ -93,8 +93,8 @@
         background-position: center;
         background-size: contain;
         margin-left: auto;
-        -webkit-mask-image: url("assets/icons/menu-arrow.svg");
-        mask-image: url("assets/icons/menu-arrow.svg");
+        -webkit-mask-image: url("/new/assets/icons/menu-arrow.svg");
+        mask-image: url("/new/assets/icons/menu-arrow.svg");
         background-color: #475469;
         margin-left: 5px;
         mask-repeat: no-repeat;
@@ -149,6 +149,10 @@
         text-align: left;
         list-style-type: none;
         padding-left: 10px;
+    }
+
+    .content-item-list-item_hover:hover {
+        text-decoration: underline;
     }
 
     .content-item-list-item a:hover {
@@ -215,7 +219,7 @@
 </style>
 
 <div class="mega-menu">
-    <button id="menuButton" class="mega-menu__button">
+    <button id="megamenuButton" class="mega-menu__button">
         All topics
         <span style="margin-left: 10px; display: flex"
             ><svg
@@ -231,14 +235,14 @@
                 /></svg
         ></span>
     </button>
-    <div id="menu" class="mega-menu__menu">
+    <div id="megamenu" class="mega-menu__menu">
         <div class="mega-menu__container"></div>
         <div class="menu-footer">
             {% for option in config.extra.all_topics.footer %}
             <div class="menu-footer-button">
                 <div
                     class="mega-menu__menu-button-icon"
-                    style="background-image: url('{{ option.iconSrc }}')"
+                    style="background-image: url('/new/{{ option.iconSrc }}')"
                 ></div>
                 <a href="{{ option.url }}">{{ option.title }}</a>
             </div>
@@ -249,16 +253,17 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.getElementById("menuButton");
-        const menu = document.getElementById("menu");
+        const menuButton = document.getElementById("megamenuButton");
+        const menu = document.getElementById("megamenu");
         const menuWrapper = document.querySelector(".mega-menu__container");
 
         menuButton.addEventListener("click", async function () {
             if (menuWrapper.innerHTML === "") {
-                const data = await fetchMenuData("mainMenu.json");
+                const data = await fetchMenuData("/new/mainMenu.json");
                 buildMenu(data, menuWrapper);
             }
 
+            console.log(menu);
             menu.style.display =
                 menu.style.display === "flex" ? "none" : "flex";
         });
@@ -286,7 +291,9 @@
                 menuItem.innerHTML =
                     `<button class="mega-menu__menu-button">` +
                     (item.iconSrc
-                        ? `<div class="mega-menu__menu-button-icon" style="background-image: url(${item.iconSrc})"></div>`
+                        ? `<div class="mega-menu__menu-button-icon" style="background-image: url(/new${item.iconSrc.substring(
+                              1
+                          )})"></div>`
                         : "") +
                     item.title +
                     ((item.subMenu && item.subMenu.length) ||
@@ -363,17 +370,18 @@
                 const contentItem = document.createElement("div");
                 contentItem.classList.add("content-item");
 
-                contentItem.innerHTML =
-                    `<ul class="content-item-title">${item.title}` +
-                    (item.links
-                        ? item.links
-                              .map(
-                                  (link) =>
-                                      `<li class="content-item-list-item"><a href="${link.url}">${link.title}</a></li>`
-                              )
-                              .join("")
-                        : "") +
-                    `</ul>`;
+                contentItem.innerHTML = item.url
+                    ? `<a class="content-item-list-item content-item-list-item_hover" href="${item.url}">${item.title}</a>`
+                    : `<ul class="content-item-title">${item.title}` +
+                      (item.links
+                          ? item.links
+                                .map(
+                                    (link) =>
+                                        `<li class="content-item-list-item"><a href="${link.url}">${link.title}</a></li>`
+                                )
+                                .join("")
+                          : "") +
+                      `</ul>`;
 
                 contentWrap.appendChild(contentItem);
             });
@@ -394,13 +402,18 @@
         }
     });
 
-    window.addEventListener("click", function (e) {
-        const menu = document.getElementById("menu");
-        const button = document.getElementById("menuButton");
-        const menuWrapper = document.querySelector("mega-menu__container");
-        if (!menu.contains(e.target) && !button.contains(e.target)) {
-            menu.style.display = "none";
-            menuWrapper.innerHTML = "";
-        }
-    });
+    window.addEventListener(
+        "click",
+        function (e) {
+            const menu = document.getElementById("megamenu");
+            const button = document.getElementById("megamenuButton");
+            const menuWrapper = document.querySelector(".mega-menu__container");
+            console.log(menuWrapper);
+            if (!menu.contains(e.target) && !button.contains(e.target)) {
+                menu.style.display = "none";
+                menuWrapper.innerHTML = "";
+            }
+        },
+        0
+    );
 </script>
