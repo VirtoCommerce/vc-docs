@@ -97,20 +97,20 @@ extra:
             - title: User Guide
               image: assets/images/storefront-userquide.png
               description:
-                - title: Registration
-                  link: user_docs/registration_and_signing_in/create-account
-                - title: Navigation
-                  link: user_docs/navigation/homepage-layout
-                - title: Shopping
-                  link: user_docs/shopping/searching-for-products
+                - title: Getting started
+                  link: https://www.youtube.com/watch?v=8LaCWtkVdAk
+                - title: User Documentation
+                  link: user_docs/
+                - title: Public Demo
+                  link: https://virtostart-demo-store.govirto.com/
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
               description:
                 - title: Getting Started
                   link: dev_docs/getting-started/quickstart-on-windows
-                - title: ASP.NET Core Storefront Runtime
-                  link: dev_docs/asp-net-core-storefront-runtime/overview
-                - title: Vue.js Starter Theme
+                - title: Architecture Overview
+                  link: dev_docs/
+                - title: B2B Theme Overview
                   link: dev_docs/vue-js-starter-theme/overview
                 - title: Integrations
                   link: dev_docs/integrations/prerender_io

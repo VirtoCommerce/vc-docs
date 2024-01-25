@@ -97,24 +97,26 @@ extra:
             - title: User Guide
               image: assets/images/storefront-userquide.png
               description:
-                - title: Installing Modules
-                  link: user_docs/modules-installation
-                - title: Managing Catalogs
-                  link: user_docs/catalog/add-new-catalog
-                - title: Managing Orders
-                  link: user_docs/order-management/overview
-                - title: Managing Inventory
-                  link: user_docs/inventory/managing-inventory
+                - title: Getting Started
+                  link: user_docs/getting-started
+                - title: User Documentation
+                  link: user_docs/
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
               description:
-                - title: Getting Started
+                - title: Installation Guide
                   link: dev_docs/Getting-Started/Installation-Guide/windows
-                - title: Modularity
-                  link: dev_docs/Fundamentals/Modularity/01-overview
-                - title: Extensibiliity Points
-                  link: dev_docs/Extensibility/key-extensibility-points
-                - title: GraphQL API
+                - title: Architecture Overview
+                  link: dev_docs/Back-End-Architecture/02-conceptual-overview
+                - title: Extensibiliity
+                  link: dev_docs/Extensibility/overview
+                - title: Configuration reference
+                  link: dev_docs/Configuration-Reference/appsettingsjson
+                - title: Tutorials and How-tos
+                  link: dev_docs/Tutorials-and-How-tos/Tutorials/creating-custom-module
+                - title: REST API Reference
+                  link: https://virtostart-demo-admin.govirto.com/docs/index.html
+                - title: GraphQL API Reference
                   link: dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started
             - title: Other Resources
               image: assets/images/storefront-other.png
