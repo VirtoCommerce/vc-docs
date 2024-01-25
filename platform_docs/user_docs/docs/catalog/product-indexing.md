@@ -4,7 +4,7 @@ Product indexing is used to improve search performance and speed.
 
 The Index widget compares the date of product indexing in the search engine with the current indexing date.
 
-Virto Commerce reindexes automatically whenever one or more items change (e.g., price changes, catalog or shopping cart price rules are created, new categories are added, etc.). Reindexing is performed as a background process. However, indexing can also be done manually using the 'Build index' functionality.
+Virto Commerce reindexes automatically whenever one or more items change (e.g., price changes, catalog or shopping cart price rules are created, new categories are added, etc.). Reindexing is performed as a background process. However, indexing can also be done manually using the **Build index** functionality.
 
 To start indexation:
 

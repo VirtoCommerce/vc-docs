@@ -26,4 +26,4 @@ The **xStorefront** framework provides you with the following advantages:
     
 - Modern web development stack, including the [Vue.js 3.0](https://vuejs.org/) design principles, separation of logical concerns via [composition API](https://v3.vuejs.org/api/composition-api.html), eCommerce semantic component design system, and [GraphQL](https://graphql.org/) to retrieve data without under or over fetching.
 
-![Storefront demo site](media/public-demo-site.png) 
+[![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)

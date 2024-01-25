@@ -35,20 +35,25 @@
                                 "url": "../platform_docs/dev_docs/Extensibility/overview"
                             },
                             {
-                                "title": "REST API Reference",
-                                "url": "https://virtostart-demo-admin.govirto.com/docs/index.html"
-                            },
-                            {
-                                "title": "GraphQL API",
-                                "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
-                            },
-                            {
                                 "title": "Configuration Reference",
                                 "url": "../platform_docs/dev_docs/Configuration-Reference/appsettingsjson"
                             },
                             {
                                 "title": "Tutorials and How-tos",
                                 "url": "../platform_docs/dev_docs/Tutorials-and-How-tos/Tutorials/creating-custom-module"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "API Reference",
+                        "links": [
+                            {
+                                "title": "REST API Reference",
+                                "url": "https://virtostart-demo-admin.govirto.com/docs/index.html"
+                            },
+                            {
+                                "title": "GraphQL API Reference",
+                                "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
                             }
                         ]
                     }

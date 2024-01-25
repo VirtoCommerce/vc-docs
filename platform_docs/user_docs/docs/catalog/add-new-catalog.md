@@ -38,3 +38,14 @@ To add a new catalog:
 
 Your catalog is ready to use!
 
+### View catalogs
+
+To view a catalog:
+
+1. Click on the **Catalog** module in the main menu.
+1. In the next **Manage catalogs** blade, select the desired catalog.
+1. In the next **Categories and Items** blade, select a desired category, or search for the desired product by keyword.
+
+	![View catalogs](media/view-catalogs.png)
+
+Now you can see the list of products in the catalog!
