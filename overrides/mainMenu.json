@@ -117,7 +117,8 @@
                         "title": "Developer Guide",
                         "links": [
                             {
-                                "title": "In Progress"
+                                "title": "In Progress",
+                                "url": "../marketplace_docs/under-construction"
                             }
                         ]
                     }

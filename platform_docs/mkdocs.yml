@@ -111,7 +111,7 @@ extra:
                 - title: Getting Started
                   link: dev_docs/Getting-Started/Installation-Guide/windows
                 - title: Modularity
-                  link: dev_docs/Fundamentals/Modularity/overview
+                  link: dev_docs/Fundamentals/Modularity/01-overview
                 - title: Extensibiliity Points
                   link: dev_docs/Extensibility/key-extensibility-points
                 - title: GraphQL API
