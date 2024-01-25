@@ -1,14 +1,16 @@
-# Getting started
+# Getting Started
+
+In this guide, we will explore the necessary steps to get started with the Virto Commerce platform.
 
 ## Prerequisites
 
 - Install latest version of `vc-platform` 3.x. 
     
     - [On Windows](../../../../platform_docs/dev_docs/Getting-Started/Installation-Guide/windows)
-    - [On MacOS](../../../../platform_docs/dev_docs/Getting-Started/Installation-Guide/macOS)
+    - [On macOS](../../../../platform_docs/dev_docs/Getting-Started/Installation-Guide/macOS)
     - [On Linux](../../../../platform_docs/dev_docs/Getting-Started/Installation-Guide/linux)
 
-- [Install `vc-module-experience-api` module.](../../../../platform_docs/dev_docs/docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md)
+- [Install `vc-module-experience-api` module.](../../../../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started)
 - Install [vc-module-profile-experience-api](https://github.com/VirtoCommerce/vc-module-profile-experience-api) module.
 - Install [Node](https://nodejs.org/en/download/) v.16.X
 - Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) package manager.
@@ -18,6 +20,8 @@
   ```
 
 ## Install `vc-storefront`
+
+To install `vc-storefront`:
 
 1. Clone [vc-storefront](https://github.com/VirtoCommerce/vc-storefront) to a local folder.
 1. Open the **appsettings.json** file in a text editor.
@@ -34,6 +38,8 @@
 
 ## Run `vc-storefront` 
 
+To run the vc-storefront application, execute the following commands:
+
 ```bash
 # change the current directory
 cd C:\vc-storefront\VirtoCommerce.Storefront
@@ -44,6 +50,8 @@ dotnet run --no-build
 ```
 
 ## Setup Сurrent Theme
+
+To set up the current theme for your storefront, execute the following commands:
 
 ```bash
 # Clone repo into the folder where storefront is installed
@@ -57,10 +65,14 @@ yarn install
 
 ### For Visual Studio Code Users
 
-1. Setup recommended extensions
-2. Configure [Volar Takeover mode](https://vuejs.org/guide/typescript/overview#volar-takeover-mode)
+If you're using Visual Studio Code:
+
+1. Setup recommended extensions.
+1. Configure [Volar Takeover mode](https://vuejs.org/guide/typescript/overview#volar-takeover-mode).
 
 ### Development Workflow
+
+Let's explore the development workflow and various commands you can use during development.
 
 #### Compile and Hot-Reload for Development
 

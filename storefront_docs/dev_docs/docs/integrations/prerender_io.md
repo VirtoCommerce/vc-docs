@@ -32,4 +32,4 @@ By avoiding server-side logic, Prerender.io enables a streamlined frontend solut
 
 ![Readmore](media/readmore.png){: width="25"} [SPA JavaScript SEO Challenges and Solutions - Prerender.io](https://prerender.io/blog/spa-javascript-seo-challenges-and-solutions/)
 
-![Readmore](media/readmore.png){: width="25"} [Setting Up Prerender.io with Azure Application Gateway](../../Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md)
+![Readmore](media/readmore.png){: width="25"} [Setting Up Prerender.io with Azure Application Gateway](../../../../platform_docs/dev_docs/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway)

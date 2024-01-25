@@ -2,7 +2,7 @@
 
 [Prerender.io](http://Prerender.io)  is a valuable tool for optimizing your website's SEO performance by rendering JavaScript content for search engine crawlers.
 
-![Readmore](media/readmore.png){: width="25"} [Enhancing SEO with Prerender.io](../../../../../storefront_docs/dev_docs/integrations/prerender_io.md)
+![Readmore](media/readmore.png){: width="25"} [Enhancing SEO with Prerender.io](../../../../../storefront_docs/dev_docs/integrations/prerender_io)
 
 In this guide, we will walk you through the process of setting up **Prerender.io** with **Azure Application Gateway** for our https://virtostart-demo-store.govirto.com single page application using the **Azure Portal**.
 

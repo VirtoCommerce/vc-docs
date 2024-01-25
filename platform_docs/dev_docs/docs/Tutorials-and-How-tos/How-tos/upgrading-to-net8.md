@@ -14,7 +14,9 @@ The release has undergone extensive testing, including unit, end-to-end, regress
 
 
 ![Readmore](media/readmore.png){: width="25"} [What's new in NET8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8)
+
 ![Readmore](media/readmore.png){: width="25"} [What's new in EF8 Core](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-8.0/whatsnew)
+
 ![Readmore](media/readmore.png){: width="25"} [What's new in ASP.NET Core 8](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-8.0?view=aspnetcore-8.0)
 
 ## Known Limitations and Breaking Changes

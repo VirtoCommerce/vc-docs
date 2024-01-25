@@ -18,11 +18,11 @@ Virto Commerce supports declarative extensions through the admin interface and A
 
 In particular, Virto Commerce supports:
 
-+ [Dynamic properties](../../../user_docs/order-management/main-objects.md): Extend entities, such as Cart, Order, Company, etc., with new properties.
+* [Dynamic properties](../Fundamentals/Dynamic-Properties/overview.md): Extend entities, such as Cart, Order, Company, etc., with new properties.
 
-+ [Statuses](../../../user_docs/contacts/settings.md): Enable implementing any workflow.
+* Statuses: Enable implementing any workflow.
 
-+ [Role-based security and permissions](../../../user_docs/tasks/roles-permissions.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
+* [Role-based security and permissions](../Fundamentals/Security/overview.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
 
 ## API-based Extensions
 

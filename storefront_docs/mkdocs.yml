@@ -113,7 +113,7 @@ extra:
                 - title: Vue.js Starter Theme
                   link: dev_docs/vue-js-starter-theme/overview
                 - title: Integrations
-                  link: dev_docs/integration/prerender_io
+                  link: dev_docs/integrations/prerender_io
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
