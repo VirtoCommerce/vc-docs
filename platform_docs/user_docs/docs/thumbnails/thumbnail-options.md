@@ -16,4 +16,4 @@ Before generating your thumbnails, you can edit various settings to adjust the i
 
 Your new setting appears in the list.
 
-[Define color code](https://htmlcolorcodes.com/){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Define color code](https://htmlcolorcodes.com/)

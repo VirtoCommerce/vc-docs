@@ -51,11 +51,11 @@ To configure prices:
 
 By default, the platform provides basic payment, shipment, and tax options, enabling a smooth checkout process.
 
-To configure the above options:
+To set up the above features, configure:
 
 1. [Available payments methods.](order-management/managing-documents.md#create-payment-documents) 
 2. [Available shipments methods.](order-management/managing-documents.md#create-shipment-documents) 
-3. [Configure taxes.](catalog/managing-categories.md#tax-type)
+3. [Taxes.](catalog/managing-categories.md#tax-type)
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/p64d8vmBzJo)
 

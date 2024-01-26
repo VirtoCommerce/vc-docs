@@ -13,5 +13,5 @@ To configure Thumbnail settings:
 
 The settings have been configured.
 
-[Free cron expression generator](https://www.freeformatter.com/cron-expression-generator-quartz.html){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Free cron expression generator](https://www.freeformatter.com/cron-expression-generator-quartz.html)
 

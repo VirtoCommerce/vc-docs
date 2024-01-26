@@ -206,6 +206,10 @@ extra:
                   icon: assets/icons/contact-support.svg
                   link: https://help.virtocommerce.com/support/home
                   outlineColor: '#EA534A'
+                - title: Release Notes
+                  icon: assets/icons/file-box.svg
+                  link: https://www.virtocommerce.org/c/news-digest/
+                  outlineColor: '#EA534A'
                 - title: Community
                   icon: assets/icons/community.svg
                   link: https://www.virtocommerce.org/
