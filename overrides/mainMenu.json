@@ -113,7 +113,7 @@
                                 "url": "../marketplace_docs/user_docs/Vendor-portal/overview"
                             },
                             {
-                                "title":"Operator Portal",
+                                "title": "Operator Portal",
                                 "url": "../marketplace_docs/user_docs/Operator-portal/overview"
                             }
                         ]
@@ -195,22 +195,12 @@
         "title": "APIs",
         "content": [
             {
-                "title":"REST API",
-                "links": [
-                    {
-                        "title": "REST API Reference",
-                        "url": "https://virtostart-demo-admin.govirto.com/docs/index.html"
-                    }
-                ]
+                "title": "REST API",
+                "url": "https://virtostart-demo-admin.govirto.com/docs/index.html"
             },
             {
                 "title": "GraphQL API",
-                "links": [
-                    {
-                        "title": "GraphQL API Reference",
-                        "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
-                    }
-                ]
+                "url": "../platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started"
             }
         ]
     },

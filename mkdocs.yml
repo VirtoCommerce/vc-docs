@@ -188,18 +188,19 @@ extra:
               outlineColor: '#FF9162'
     all_topics:
         footer:
-            - iconSrc: "./assets/icons/release-notes.svg"
+            - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"
               url: "https://www.virtocommerce.org/c/news-digest/"
-            - iconSrc: "./assets/icons/support.svg"
+            - iconSrc: "assets/icons/support.svg"
               title: "Support"
               url: "https://help.virtocommerce.com/support/home"
-            - iconSrc: "./assets/icons/github.svg"
+            - iconSrc: "assets/icons/github.svg"
               title: "GitHub"
               url: "https://github.com/VirtoCommerce"
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
+
 
 extra_css:
     - assets/stylesheets/main.css
