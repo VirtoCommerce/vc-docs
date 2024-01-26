@@ -181,6 +181,109 @@ extra:
               link: #
               outlineColor: '#FF9162'
     all_topics:
+        megamenu:
+            - iconSrc: assets/icons/all-products.svg
+              title: All Products
+              opened: true
+              subMenu:
+                - title: Platform
+                  content:
+                    - title: User Guide
+                      links:
+                        - title: Getting Started
+                          url: platform_docs/user_docs/getting-started
+                        - title: User Documentation
+                          url: platform_docs/user_docs/platform-overview
+                    - title: Developer Guide
+                      links:
+                        - title: Installation Guide
+                          url: platform_docs/dev_docs/Getting-Started/Installation-Guide/windows
+                        - title: Architecture Overview
+                          url: platform_docs/dev_docs/Back-End-Architecture/02-conceptual-overview
+                        - title: Extensibility
+                          url: platform_docs/dev_docs/Extensibility/overview
+                        - title: Configuration Reference
+                          url: platform_docs/dev_docs/Configuration-Reference/appsettingsjson
+                        - title: Tutorials and How-tos
+                          url: platform_docs/dev_docs/Tutorials-and-How-tos/Tutorials/creating-custom-module
+                    - title: API Reference
+                      links:
+                        - title: REST API Reference
+                          url: https://virtostart-demo-admin.govirto.com/docs/index.html
+                        - title: GraphQL API Reference
+                          url: platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                - title: Storefront
+                  content:
+                    - title: User Guide
+                      links:
+                        - title: Getting Started
+                          url: https://www.youtube.com/watch?v=8LaCWtkVdAk
+                        - title: User Documentation
+                          url: storefront_docs/user_docs
+                        - title: Public Demo
+                          url: https://virtostart-demo-store.govirto.com/
+                    - title: Developer Guide
+                      links:
+                        - title: Getting Started
+                          url: storefront_docs/dev_docs/getting-started/quickstart-on-windows
+                        - title: Architecture Overview
+                          url: storefront_docs/dev_docs
+                        - title: B2B Theme Overview
+                          url: storefront_docs/dev_docs/vue-js-starter-theme/overview
+                        - title: Integrations
+                          url: storefront_docs/dev_docs/integrations/prerender_io
+                - title: Marketplace
+                  content:
+                    - title: User Guide
+                      links:
+                        - title: Vendor Portal
+                          url: marketplace_docs/user_docs/Vendor-portal/overview
+                        - title: Operator Portal
+                          url: marketplace_docs/user_docs/Operator-portal/overview
+                    - title: Developer Guide
+                      links:
+                        - title: In Progress
+                          url: marketplace_docs/under-construction
+                - title: VC Shell
+                  content:
+                    - title: Developer Guide
+                      links:
+                        - title: Overview
+                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/vc-shell-overview
+                        - title: Getting Started
+                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
+                        - title: Extending VC Apps Functionality
+                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started
+            - iconSrc: assets/icons/getting-started.svg
+              title: Getting started
+              content:
+                - title: Platform
+                  links:
+                    - title: Manager Getting Started
+                      url: platform_docs/user_docs/getting-started
+                    - title: Developer Getting Started
+                      url: platform_docs/dev_docs/Getting-Started/Installation-Guide/windows
+                - title: Storefront
+                  links:
+                    - title: Developer Getting Started
+                      url: storefront_docs/dev_docs/getting-started/quickstart-on-windows
+                - title: VC-Shell
+                  links:
+                    - title: Developer Getting Started
+                      url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started
+            - iconSrc: assets/icons/graphql.svg
+              title: APIs
+              content:
+                - title: REST API
+                  url: https://virtostart-demo-admin.govirto.com/docs/index.html
+                - title: GraphQL API
+                  url: platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started
+            - iconSrc: assets/icons/graphql.svg
+              title: Video Tutorials
+              url: https://www.youtube.com/c/VirtoCommerce
+              external: true
+
+
         footer:
             - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"
