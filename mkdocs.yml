@@ -302,7 +302,6 @@ extra:
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
-    - assets/scripts/megamenu.js
 
 
 extra_css:
