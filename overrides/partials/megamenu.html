@@ -410,29 +410,18 @@
 
                     // Toggle visibility for current wrapper
                     if (!parentTitle) {
-
                         const wrapper = container.querySelector(
                             `.mega-menu__menu-wrapper[data-parent-title='${title}'][data-depth='${
                                 +depth + 1
                             }']`
                         );
-                        const otherWrappers = container.querySelectorAll(
-                            `.mega-menu__menu-wrapper[data-parent-title='${title}']:not([data-depth='${
-                                +depth + 1
-                            }'])`
-                        );
 
                         if (wrapper) {
-                            wrapper.style.display =
-                                wrapper.style.display === "none" ||
-                                wrapper.style.display === ""
-                                    ? "flex"
-                                    : "none";
+                            wrapper.style.display = "flex"
                         }
                     }
 
                     if (!parentTitle) {
-
                         // Toggle visibility for current content
                         const content = document.querySelector(
                             `.mega-menu__content-wrap[data-parent-title='${title}'][data-depth='${
@@ -453,17 +442,17 @@
                         const openedWrappers = document.querySelectorAll(
                             `.mega-menu__menu-wrapper[style*='flex']:not([data-parent-title='${title}']):not([data-depth='1']):not([data-depth='${+depth}'])`
                         );
-                        console.log(openedWrappers);
+
                         openedWrappers.forEach(function (openedWrapper) {
                             openedWrapper.style.display = "none";
                         });
 
-                        buttons.forEach(function (button) {
-                            console.log(button)
-                            if (button.dataset.title !== title) {
-                                button.classList.remove('opened')
-                            }
+                        const selectedButtons = document.querySelectorAll(
+                            `.mega-menu__menu-button.opened:not([data-title='${title}']):not([data-depth='${+depth-1}'])`
+                        );
 
+                        selectedButtons.forEach(function (button) {
+                            button.classList.remove('opened')
                         })
 
                 });
