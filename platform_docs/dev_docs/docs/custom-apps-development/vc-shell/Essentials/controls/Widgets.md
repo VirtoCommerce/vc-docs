@@ -12,12 +12,12 @@ To create a widget, you need to generate a new file within the `components/widge
 
 The widget component is constructed using the `VcWidget` component from the UI kit `@vc-shell/framework`. This component accepts the following parameters as props:
 
-| Property and Type                     | Description                   |
-| ------------------------------------- | ----------------------------- |
-| `title`  {==string==}                 | The title of the widget.      |
-| `value`  {==string==}, {==number==}   | Count to display.             |
-| `icon`   {==string==}                 | The widget's icon, using FontAwesome icons set. |
-| `disabled` {==string==}               | Disabled state.               |
+| Property and Type                  | Description                                     |
+| ---------------------------------- | ----------------------------------------------- |
+| `title` {==string==}               | The title of the widget.                        |
+| `value` {==string==}, {==number==} | Count to display.                               |
+| `icon` {==string==}                | The widget's icon, using FontAwesome icons set. |
+| `disabled` {==string==}            | Disabled state.                                 |
 
 The widget component, by default, includes the incoming prop `modelValue`, containing the blade context. This context holds the `item` object, which contains data about the current item displayed in the blade, along with other data useful for the widget. The component also features an `update:modelValue` event that facilitates updating the blade context when necessary.
 
@@ -25,11 +25,11 @@ The default `Props` and `Events` of the widget component are as follows:
 
 ```typescript
 const props = defineProps<{
-  modelValue: T;
+    modelValue: T;
 }>();
 
 const emit = defineEmits<{
-  (event: "update:modelValue", context: T);
+    (event: "update:modelValue", context: T);
 }>();
 ```
 
@@ -46,7 +46,7 @@ import { useAsync, useApiClient } from "@vc-shell/framework";
 /**
  * Import your API client
  */
-import { VcmpClient, QueryFromApi } from "{ path to your API client }"
+import { VcmpClient, QueryFromApi } from "{ path to your API client }";
 
 /**
  * Use the imported API client
@@ -62,47 +62,52 @@ const count = ref(0);
 /**
  * Use the useAsync wrapper to get `totalCount` from the API
  */
-const { loading, action: getCount } = useAsync<QueryFromApi, number | undefined>(async (query) => {
-  return (await client).searchItems(query).then((res) => res.totalCount);
+const { loading, action: getCount } = useAsync<
+    QueryFromApi,
+    number | undefined
+>(async (query) => {
+    return (await client).searchItems(query).then((res) => res.totalCount);
 });
 
 /**
  * Call the `getCount` method
  */
 async function populateCounter() {
-  count.value = await getCount({
-    take: 0,
-  });
+    count.value = await getCount({
+        take: 0,
+    });
 }
 
 /**
  * Call the `populateCounter` method on component mounted
  */
 onMounted(async () => {
-  if (props.modelValue?.item?.id) {
-    await populateCounter();
-  }
+    if (props.modelValue?.item?.id) {
+        await populateCounter();
+    }
 });
 ```
 
 ## Counter Update
 
-Since the widget component loads data only when mounted, you also need to add a watcher from the `vueUse` library - `watchDebounced`, which allows reloading data when the `item` from the blade context changes. This `item` is passed to the widget in `modelValue`.
+Since the widget component loads data only when mounted, you also may need to update the counter when the blade context changes. To achieve this, you should expose your `populateCounter` method using the `defineExpose` method:
 
 ```typescript
-import { watchDebounced } from "@vueuse/core";
-
-watchDebounced(
-  () => props.modelValue?.item,
-  async () => {
-    await populateCounter();
-  },
-  { debounce: 500, maxWait: 1000 }
-);
+defineExpose({
+    updateActiveWidgetCount: populateCounter,
+});
 ```
 
+As you can see, the method name should be `updateActiveWidgetCount`, as it is used by the `DynamicBladeForm` and `DynamicBladeList` components under the hoot to update the widget counter.
+
 !!! note
-    Updating the `item` usually occurs when data is updated in the blade. Therefore, when saving data, it is important to remember that the widget is updated twice - once when saving and once when loading data into the blade.
+    To update the widget counter manually from your composable, you can use the emit method `parent:call` with `updateActiveWidgetCount` args:
+
+    ```typescript
+    args.emit("parent:call", {
+        method: "updateActiveWidgetCount",
+    });
+    ```
 
 ## Create Click Action for the Widget
 
@@ -139,7 +144,7 @@ async function clickHandler() {
 </script>
 ```
 
-## Widget Component Basic Example 
+## Widget Component Basic Example
 
 Since any logic can be implemented in the widget, let's consider its basic version based on this guide. This version opens a new blade when clicking on the widget and also fetches and updates the widget counter using API requests.
 
@@ -162,7 +167,6 @@ Since any logic can be implemented in the widget, let's consider its basic versi
 
     ```typescript
     import { useAsync, useApiClient, useBladeNavigation } from "@vc-shell/framework";
-    import { watchDebounced } from "@vueuse/core";
 
     const props = defineProps<{
         modelValue: {
@@ -181,14 +185,6 @@ Since any logic can be implemented in the widget, let's consider its basic versi
 
     const widgetOpened = ref(false);
     const count = ref(0);
-
-    watchDebounced(
-        () => props.modelValue?.item,
-        async () => {
-            await populateCounter();
-        },
-        { debounce: 500, maxWait: 1000 }
-    );
 
     const { loading, action: getCount } = useAsync<QueryFromApi, number | undefined>(async (query) => {
         return (await client).searchItems(query).then((res) => res.totalCount);
@@ -219,6 +215,10 @@ Since any logic can be implemented in the widget, let's consider its basic versi
             await populateCounter();
         }
     });
+
+    defineExpose({
+        updateActiveWidgetCount: populateCounter,
+    })
     ```
 
 ## Register Widgets

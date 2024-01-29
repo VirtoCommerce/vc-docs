@@ -5,9 +5,9 @@ This guide describes how to reference other custom VC-Shell applications to inco
 This guide covers the following key steps:
 
 1. [Incorporating and setting up custom application.](overview.md#incorporate-and-set-up-custom-applications)
-1. [Replacing API clients used by other custom applications.](overview.md#replace-api-clients-used-by-other-custom-applications) 
+1. [Replacing API clients used by other custom applications.](overview.md#replace-api-clients-used-by-other-custom-applications)
 1. [Extending other apps views using dynamic views.](overview.md#extend-other-apps-views-using-dynamic-views)
-1. [Extending composables.](overview.md#extend-composables) 
+1. [Extending composables.](overview.md#extend-composables)
 
 In this guide, we'll use the example of the `vc-app-extend` project, which extends the functionality of the `vc-app` project from the `sample` folder.
 
@@ -31,10 +31,10 @@ To include and set up custom applications:
           ...
           const app = createApp(RouterView);
           app.use(VirtoShellFramework);
-    
+
           // Import and initialize Offers module from @vc-app applicaiton
           app.use(modules.Offers.default, { router })
-    
+
           app.use(router);
           ...
         }
@@ -71,14 +71,14 @@ To replace the original API types used by `@vc-app` with updated ones, generate 
 
     [cross-env](https://github.com/kentcdodds/cross-env) is a tool that sets and uses environment variables across platforms.
 
-1. Add a script to the `scripts` section of your application's **package.json** file: 
+1. Add a script to the `scripts` section of your application's **package.json** file:
 
     ```json title="vc-app-extend/package.json" linenums="1"
     {
         ...
         "scripts": {
             ...
-            "generate-api-client": cross-env api-client-generator --APP_PLATFORM_MODULES='[MarketplaceVendor]' --APP_API_CLIENT_DIRECTORY=./src/api_client/
+            "generate-api-client": cross-env api-client-generator --APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor]' --APP_API_CLIENT_DIRECTORY=./src/api_client/
         }
     }
     ```
@@ -119,7 +119,7 @@ After generating the API client for your `@vc-app-extend` application, you can s
     export class Offer implements IOffer {
         isSuspended?: boolean;
         isActive?: boolean;
-        //New field 
+        //New field
         newField?: string;
         ...
         }
@@ -148,7 +148,7 @@ Now other custom application modules use your generated API.
 
 ## Extend other apps views using dynamic views
 
-You can enhance the interactivity and functionality of your applications by adding new buttons and controls to forms, extending the user interface. 
+You can enhance the interactivity and functionality of your applications by adding new buttons and controls to forms, extending the user interface.
 If the referenced application uses blades built on dynamic views <!-- (refer to our [VC-Shell dynamic view guide](TODO: link to vc-shell dynamic view)) -->, you can extend these views with new UI elements, including fields, forms, lists, and more, without the need to directly modify the source code of the application you are extending.
 
 In the example below, we focus on the `Offers` module, along with the `useOffersList` and `useOfferDetails` composables that we are extending. Let's add a control that will display data from a new field of the generated API client.
@@ -193,7 +193,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
     ```
 
 1. Initialize the extended module:
-    
+
     ```typescript title="vc-app-extend/src/main.ts" linenums="1"
     import { Offers } from "./modules";
 
@@ -201,7 +201,7 @@ In the example below, we focus on the `Offers` module, along with the `useOffers
       ...
       const app = createApp(RouterView);
       app.use(VirtoShellFramework);
-    
+
       // Install the extended Offers module
       app.use(Offers, { router });
       app.use(router);
@@ -219,7 +219,7 @@ This process allows you to seamlessly extend views from the referenced applicati
 
 ![Readmore](../../media/readmore.png){: width="25"} [Using dynamic view for extending views from the other apps](../Essentials/dynamic-views/Extending-Views.md)
 
-## Extend composables 
+## Extend composables
 
 Composables are functions with an internal state that changes over time and methods that modify this state. You cannot directly modify the state. The only way to change the state is by calling one of the composable's methods. However, because the state is reactive, thanks to Vue's Composition API, you can watch and react to these changes when necessary to update the UI or perform other operations.
 

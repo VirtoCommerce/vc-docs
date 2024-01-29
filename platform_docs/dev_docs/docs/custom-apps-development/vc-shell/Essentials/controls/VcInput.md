@@ -8,7 +8,6 @@ Include the `vc-input` component in your Vue application, providing theming and 
 
 ![vc-input](../../../media/vc-input.png)
 
-### Usage
 
 === "Basic Vue"
 
@@ -16,7 +15,7 @@ Include the `vc-input` component in your Vue application, providing theming and 
 
     ```html
     <template>
-        <vc-card header="Card label"></vc-card>
+        <vc-input v-model="inputProperty" :placeholder="Input placeholder" :label="Input label"></vc-input>
     </template>
     ```
 
@@ -40,7 +39,7 @@ API empowers you to create dynamic and interactive input component to customize 
 
 ### Basic Vue
 
-You can easily incorporate the `vc-input` component into your Vue applications using simple templates. 
+You can easily incorporate the `vc-input` component into your Vue applications using simple templates.
 
 #### Props
 
@@ -115,6 +114,7 @@ interface InputSchema {
     update?: {
         method: string;
     };
+    multilanguage?: boolean;
     prepend?: ControlSchema;
     prependInner?: ControlSchema;
     append?: ControlSchema;

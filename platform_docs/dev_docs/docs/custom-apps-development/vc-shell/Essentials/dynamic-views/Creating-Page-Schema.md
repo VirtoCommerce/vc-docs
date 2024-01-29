@@ -33,7 +33,7 @@ Dynamic views are built according to these principles:
 
 ![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm](Dynamic-Blade-Form.md)
 
-![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeList](Dynamic-Blade-List.md) 
+![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeList](Dynamic-Blade-List.md)
 
 To create a new view, create a new file in the `pages` folder of your module. In this example, we will create a schema for a `DynamicBladeList` view with its own URL. We want to include this view in the navigation menu, add a search bar and multiselect functionality, and have columns for `Name`, `Price`, `Status`, and `Created date`. Additionally, we want to enable sorting on all columns and include a `Create` button in the toolbar.
 
@@ -61,6 +61,11 @@ const schema: DynamicDetailsSchema = {
         method: "create",
       },
     ],
+    menuItem: {
+      title: "My List",
+      icon: "fas fa-file-invoice",
+      priority: 1,
+    },
   },
 };
 ```
@@ -193,6 +198,6 @@ export default createDynamicAppModule({
 
 Now, if you go to the URL `/my-list`, you will see the table we created earlier.
 
-After creating the schema, create a composable used in the view schema. 
+After creating the schema, create a composable used in the view schema.
 
 ![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm] [Creating composables](../../Extensibility/Overriding-Composables.md) guide.

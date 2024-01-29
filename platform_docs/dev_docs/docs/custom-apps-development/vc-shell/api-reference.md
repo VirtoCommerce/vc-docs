@@ -38,8 +38,15 @@ The VcBlade API reference provides detailed information about the props, events,
 
 | Name                                           | Description                                                                                     |
 | ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `blades` {==ComputedRef<BladeRouteRecordLocationNormalized \| undefined>==} | An array containing active blade components on given route.        |
-| `currentBladeNavigationData` {==ComputedRef<BladeVNode["props"]["navigation"]>==} | An object containing the current blade navigation data. |
+| `blades` {==ComputedRef<BladeVNode[]>==} | An array containing active blade components.        |
+| `currentBladeNavigationData` {==ComputedRef<{
+    onOpen?: (() => void) | undefined;
+    onClose?: (() => void) | undefined;
+    onBeforeClose?: (() => Promise<boolean | undefined>) | undefined;
+    instance: Ref<CoreBladeExposed | null | undefined>;
+    fullPath: string;
+    idx: number;
+}>==} | An object containing the current blade navigation data. |
 
 ### Methods
 
@@ -47,8 +54,8 @@ The VcBlade API reference provides detailed information about the props, events,
 
 Opens a blade with the specified configuration.
 
-* Type 
-    
+* Type
+
     ```**openBlade**: ```<Blade extends Component>( { blade, param, options, onOpen, onClose }: IBladeEvent<Blade>,
     isWorkspace?: boolean, ) => Promise<void | NavigationFailure>```
 
@@ -61,7 +68,7 @@ Opens a blade with the specified configuration.
     | `param` (optional) {==String==}                  	| String with blade parameter.                                      	|
     | `onOpen` (optional) {==() => void==}             	| Method called when the blade is opened.                           	|
     | `onClose` (optional) {==() => void==}            	| Method called when the blade is closed.                           	|
-    
+
 * Returns: Promise<void | NavigationFailure>
 
 #### `closeBlade`
@@ -69,17 +76,32 @@ Opens a blade with the specified configuration.
 Closes an opened blade or all opened blades.
 
 * Type
-    
-    ```**closeBlade**: ```(index: number, changeLocation?: boolean) => Promise<false | void | NavigationFailure>```
+
+    ```**closeBlade**: ```(index: number) => Promise<boolean>```
 
 * Parameters
 
     | Name                                    	| Description                           	|
     |-----------------------------------------	|---------------------------------------	|
     | `index` {==Number==}                      	| Id of the opened blade.               	|
-    | `changeLocation` (optional) {==Boolean==} 	| Determines whether to change the URL. 	|
 
-* Returns: ```Promise<false | void | NavigationFailure>```
+* Returns: ```Promise<boolean>```
+
+#### `onBeforeClose`
+
+Allows you to perform actions before closing a blade. If the method returns `false`, the blade will not be closed.
+
+* Type
+
+    ```**onBeforeClose**: ```(callback: () => Promise<boolean | undefined>) => void```
+
+* Parameters
+
+    | Name                                    	| Description                           	|
+    |-----------------------------------------	|---------------------------------------	|
+    | `callback` {==() => Promise<boolean | undefined>==}                      	| Callback function.               	|
+
+* Returns: `void`
 
 #### `onParentCall`
 
@@ -201,7 +223,7 @@ Method signatures are as follows:
 Loads the saved notifications history from the backend.
 
 * Type
-    
+
     `loadFromHistory(take?: number): Promise<void>`
 
 * Parameters
