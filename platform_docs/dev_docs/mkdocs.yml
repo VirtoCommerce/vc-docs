@@ -567,7 +567,6 @@ nav:
           - VC Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
-                      - Start using VC shell: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                 - Essentials:
                       - Controls:
