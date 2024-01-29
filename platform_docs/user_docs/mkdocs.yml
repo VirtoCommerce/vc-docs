@@ -103,7 +103,7 @@ copyright: Copyright &copy; 2024. All rights reserved.
 # Page tree
 nav:
     - Overview: index.md
-    - Platform:
+    - Modules:
           - Overview: platform-overview.md
           - Getting Started: getting-started.md
           - Modules Installation: modules-installation.md
