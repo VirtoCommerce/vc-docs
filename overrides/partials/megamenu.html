@@ -93,8 +93,8 @@
         background-position: center;
         background-size: contain;
         margin-left: auto;
-        -webkit-mask-image: url("/new/assets/icons/menu-arrow.svg");
-        mask-image: url("/new/assets/icons/menu-arrow.svg");
+        -webkit-mask-image: url("data:image/svg+xml;utf8,<svg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.25217 11.6482C1.02693 11.4229 0.900391 11.1173 0.900391 10.7988C0.900391 10.4802 1.02693 10.1746 1.25217 9.94929L5.20872 5.99275L1.25217 2.0362C1.03331 1.80959 0.912206 1.50609 0.914943 1.19106C0.917681 0.876032 1.04404 0.57468 1.26681 0.351912C1.48958 0.129144 1.79093 0.00278295 2.10596 4.54197e-05C2.42099 -0.00269211 2.72449 0.118413 2.9511 0.337276L7.75711 5.14328C7.98235 5.3686 8.10889 5.67415 8.10889 5.99275C8.10889 6.31134 7.98235 6.61689 7.75711 6.84221L2.9511 11.6482C2.72578 11.8735 2.42023 12 2.10164 12C1.78304 12 1.47749 11.8735 1.25217 11.6482Z' fill='%23475469'/></svg>");
+        mask-image: url("data:image/svg+xml;utf8,<svg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.25217 11.6482C1.02693 11.4229 0.900391 11.1173 0.900391 10.7988C0.900391 10.4802 1.02693 10.1746 1.25217 9.94929L5.20872 5.99275L1.25217 2.0362C1.03331 1.80959 0.912206 1.50609 0.914943 1.19106C0.917681 0.876032 1.04404 0.57468 1.26681 0.351912C1.48958 0.129144 1.79093 0.00278295 2.10596 4.54197e-05C2.42099 -0.00269211 2.72449 0.118413 2.9511 0.337276L7.75711 5.14328C7.98235 5.3686 8.10889 5.67415 8.10889 5.99275C8.10889 6.31134 7.98235 6.61689 7.75711 6.84221L2.9511 11.6482C2.72578 11.8735 2.42023 12 2.10164 12C1.78304 12 1.47749 11.8735 1.25217 11.6482Z' fill='%23475469'/></svg>");
         background-color: #475469;
         margin-left: 5px;
         mask-repeat: no-repeat;
@@ -111,7 +111,7 @@
     }
 
     .mega-menu__menu-wrapper {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 4px;
         width: 250px;
@@ -218,11 +218,134 @@
     }
 </style>
 
+{% macro render_menu(menu_items, depth, parentOpened, parentTitle) %}
+    {% set subMenu = [] %}
+    {% set content = [] %}
+    {% set opened = false %}
+    <div
+        class="mega-menu__menu-wrapper"
+        data-depth="{{ depth }}"
+        {% if parentTitle %}
+            data-parent-title="{{ parentTitle }}"
+        {% endif %}
+        style="{{ 'display: flex;' if depth == 1 or parentOpened else 'display: none;' }}"
+    >
+        {% for item in menu_items %}
+            <div class="mega-menu__menu-item" data-depth="{{ depth }}">
+                {% if item.url %}
+                    <a
+                        class="mega-menu__menu-button {{"mega-menu__menu-button_link" if item.external}}"
+                        href="{{ item.url }}"
+                        {% if item.external %}
+                            target="_blank"
+                        {% endif %}
+                    >
+                        {% if item.iconSrc %}
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('{{ item.iconSrc }}')"
+                            ></div>
+                        {% endif %}
+                        {{ item.title }}
+                    </a>
+
+                {% else %}
+                    <button
+                        class="mega-menu__menu-button {{'opened' if item.opened}}"
+                        data-depth="{{ depth }}"
+                        data-title="{{ item.title }}"
+                        {%
+                            if parentTitle
+                        %}
+                        data-parent-title="{{ parentTitle }}"
+                        {%
+                            endif
+                        %}
+                    >
+                        {% if item.iconSrc %}
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('{{ item.iconSrc }}')"
+                            ></div>
+                        {% endif %}
+                        {{ item.title }}
+                        {% if item.subMenu or item.content %}
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        {% endif %}
+
+
+                    </button>
+                {% endif %}
+
+                {% if item.subMenu %}
+                    {% set _ = subMenu.append(item) %}
+                    {% set opened = item.opened %}
+                {% endif %}
+                {% if item.content %}
+                    {% set _ = content.append(item) %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if subMenu %}
+        {% for item in subMenu %}
+            {% set filteredSubMenu = item.subMenu|selectattr('parent', 'in', menu_items|map(attribute='id'))|list %}
+
+            {% if filteredSubMenu %}
+                {{ render_menu(filteredSubMenu, depth + 1, item.opened|default(false), item.title) }}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% if content %}
+        {% for item in content %}
+            {% set filteredContent = item.content|selectattr('parent', 'in', menu_items|map(attribute='id'))|list %}
+
+            {% if filteredContent %}
+                {{ render_content(filteredContent, depth + 1, item.title) }}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+
+{% macro render_content(content_items, depth, parentTitle) %}
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="{{ depth }}"
+        data-parent-title="{{ parentTitle }}"
+        style="display: none"
+    >
+        {% for item in content_items %}
+            <div class="content-item">
+                {% if item.url %}
+                    <a
+                        class="content-item-list-item content-item-list-item_hover"
+                        href="{{ item.url }}"
+                    >{{ item.title }}</a
+                    >
+                {% else %}
+                    <ul class="content-item-title">
+                        {{ item.title }}
+                        {% if item.links %}
+                            {% for link in item.links %}
+                                <li class="content-item-list-item">
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+
 <div class="mega-menu">
     <button id="megamenuButton" class="mega-menu__button">
         All topics
-        <span style="margin-left: 10px; display: flex"
-            ><svg
+        <span style="margin-left: 10px; display: flex">
+            <svg
                 width="12"
                 height="7"
                 viewBox="0 0 12 7"
@@ -232,177 +355,111 @@
                 <path
                     d="M11.6244 1.19045C11.62 1.34466 11.5868 1.49668 11.5263 1.63862C11.4592 1.77854 11.3693 1.90633 11.2602 2.01676L6.61049 6.66651C6.38861 6.88045 6.0924 7 5.78418 7C5.47595 7 5.17975 6.88045 4.95787 6.66651L0.308116 2.01676C0.111319 1.7917 0.0019667 1.50341 0 1.20445C0.000244508 1.05574 0.0300913 0.908567 0.0878001 0.771508C0.145509 0.63445 0.229925 0.510251 0.336127 0.406153C0.542586 0.168746 0.834632 0.0227232 1.14843 0C1.44739 0.0019667 1.73568 0.111319 1.96074 0.308116L5.81219 4.20158L9.63563 0.378143C9.74606 0.269105 9.87385 0.179178 10.0138 0.112042C10.1601 0.049864 10.317 0.0165739 10.4759 0.0140056C10.6293 0.0135648 10.7813 0.0420737 10.9241 0.0980365C11.0715 0.152728 11.2054 0.238602 11.3166 0.349789C11.4278 0.460975 11.5137 0.594855 11.5684 0.742279C11.6145 0.886942 11.6335 1.03888 11.6244 1.19045Z"
                     fill="#FF7E13"
-                /></svg
-        ></span>
+                />
+            </svg>
+        </span>
     </button>
     <div id="megamenu" class="mega-menu__menu">
-        <div class="mega-menu__container"></div>
+        <div class="mega-menu__container">
+            {{ render_menu(config.extra.all_topics.megamenu, 1, false) }}
+        </div>
         <div class="menu-footer">
             {% for option in config.extra.all_topics.footer %}
             <div class="menu-footer-button">
                 <div
                     class="mega-menu__menu-button-icon"
-                    style="background-image: url('/new/{{ option.iconSrc }}')"
+                    style="background-image: url('{{ option.iconSrc }}')"
                 ></div>
                 <a href="{{ option.url }}">{{ option.title }}</a>
             </div>
             {% endfor %}
         </div>
     </div>
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.getElementById("megamenuButton");
-        const menu = document.getElementById("megamenu");
-        const menuWrapper = document.querySelector(".mega-menu__container");
-
-        menuButton.addEventListener("click", async function () {
-            if (menuWrapper.innerHTML === "") {
-                const data = await fetchMenuData("/new/mainMenu.json");
-                buildMenu(data, menuWrapper);
-            }
-
-            console.log(menu);
-            menu.style.display =
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.getElementById("megamenuButton");
+            const menu = document.getElementById("megamenu");
+            menuButton.addEventListener("click", async function () {
+                menu.style.display =
                 menu.style.display === "flex" ? "none" : "flex";
+            })
+
+
+
+            const buttons = document.querySelectorAll(
+                ".mega-menu__menu-button:not(.mega-menu__menu-button_link)"
+            );
+            const container = document.querySelector(".mega-menu__container");
+
+            buttons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const parentTitle = button.parentNode.dataset.parentTitle;
+                    const depth = button.dataset.depth;
+                    const title = button.dataset.title;
+
+                    button.classList.add('opened')
+
+                    const openedContent = document.querySelector(
+                        `.mega-menu__content-wrap[style*='flex']:not([data-depth='${+depth}'])`
+                    );
+                    if (openedContent) {
+                        openedContent.style.display = "none";
+                    }
+
+
+                    // Toggle visibility for current wrapper
+                    if (!parentTitle) {
+                        const wrapper = container.querySelector(
+                            `.mega-menu__menu-wrapper[data-parent-title='${title}'][data-depth='${
+                                +depth + 1
+                            }']`
+                        );
+
+                        if (wrapper) {
+                            wrapper.style.display = "flex"
+                        }
+                    }
+
+                    if (!parentTitle) {
+                        // Toggle visibility for current content
+                        const content = document.querySelector(
+                            `.mega-menu__content-wrap[data-parent-title='${title}'][data-depth='${
+                                +depth + 1
+                            }']`
+                        );
+
+                        if (content) {
+                            content.style.display =
+                                content.style.display === "none" ||
+                                content.style.display === ""
+                                    ? "flex"
+                                    : "none";
+                        }
+                    }
+
+                    // Close other open wrappers
+                        const openedWrappers = document.querySelectorAll(
+                            `.mega-menu__menu-wrapper[style*='flex']:not([data-parent-title='${title}']):not([data-depth='1']):not([data-depth='${+depth}'])`
+                        );
+
+                        openedWrappers.forEach(function (openedWrapper) {
+                            openedWrapper.style.display = "none";
+                        });
+
+                        const selectedButtons = document.querySelectorAll(
+                            `.mega-menu__menu-button.opened:not([data-title='${title}']):not([data-depth='${+depth-1}'])`
+                        );
+
+                        selectedButtons.forEach(function (button) {
+                            button.classList.remove('opened')
+                        })
+
+                });
+            });
         });
 
-        async function fetchMenuData(menuFile) {
-            const response = await fetch(menuFile);
-            const data = await response.json();
-            return data;
-        }
-
-        function buildMenu(menuData, container, depth = 1) {
-            const wrapper = document.createElement("div");
-            wrapper.classList.add("mega-menu__menu-wrapper");
-            wrapper.attributes.setNamedItem(
-                document.createAttribute("data-depth")
-            );
-            wrapper.attributes.getNamedItem("data-depth").value = depth;
-
-            container.appendChild(wrapper);
-
-            menuData.forEach((item, index) => {
-                const menuItem = document.createElement("div");
-                menuItem.classList.add("mega-menu__menu-item");
-                console.log(item);
-                menuItem.innerHTML =
-                    `<button class="mega-menu__menu-button">` +
-                    (item.iconSrc
-                        ? `<div class="mega-menu__menu-button-icon" style="background-image: url(/new${item.iconSrc.substring(
-                              1
-                          )})"></div>`
-                        : "") +
-                    item.title +
-                    ((item.subMenu && item.subMenu.length) ||
-                    (item.content && item.content.length)
-                        ? `<div class="mega-menu__menu-item-arrow"></div>`
-                        : "") +
-                    `</button>`;
-                const menuButton = menuItem.querySelector(
-                    ".mega-menu__menu-button"
-                );
-
-                if (index === 0 && item.subMenu && depth === 1) {
-                    menuItem.classList.add("opened");
-
-                    buildMenu(item.subMenu, container, depth + 1);
-                }
-
-                menuButton.addEventListener("click", function () {
-                    const isOpened = wrapper.querySelectorAll(".opened");
-
-                    if (
-                        (item.subMenu && item.subMenu.length) ||
-                        (item.content && item.content.length)
-                    ) {
-                        if (isOpened) {
-                            isOpened.forEach((item) => {
-                                item.classList.remove("opened");
-                            });
-                        }
-
-                        removeNodesByDepth(container, depth + 1);
-
-                        if (item.subMenu) {
-                            if (!menuItem.classList.contains("opened")) {
-                                buildMenu(item.subMenu, container, depth + 1);
-                                menuItem.classList.add("opened");
-                            } else {
-                                menuItem.classList.remove("opened");
-                            }
-                        }
-
-                        if (item.content) {
-                            if (!menuItem.classList.contains("opened")) {
-                                buildContent(
-                                    item.content,
-                                    container,
-                                    depth + 1
-                                );
-                                menuItem.classList.add("opened");
-                            } else {
-                                menuItem.classList.remove("opened");
-                            }
-                        }
-                    } else if (item.url) {
-                        window.open(item.url, "_blank");
-                    }
-                });
-
-                wrapper.appendChild(menuItem);
-            });
-        }
-
-        function buildContent(contentData, container, depth) {
-            const contentWrap = document.createElement("div");
-            contentWrap.classList.add("mega-menu__content-wrap");
-            contentWrap.attributes.setNamedItem(
-                document.createAttribute("data-depth")
-            );
-            contentWrap.attributes.getNamedItem("data-depth").value = depth;
-
-            container.appendChild(contentWrap);
-
-            contentData.forEach((item) => {
-                const contentItem = document.createElement("div");
-                contentItem.classList.add("content-item");
-
-                contentItem.innerHTML = item.url
-                    ? `<a class="content-item-list-item content-item-list-item_hover" href="${item.url}">${item.title}</a>`
-                    : `<ul class="content-item-title">${item.title}` +
-                      (item.links
-                          ? item.links
-                                .map(
-                                    (link) =>
-                                        `<li class="content-item-list-item"><a href="${link.url}">${link.title}</a></li>`
-                                )
-                                .join("")
-                          : "") +
-                      `</ul>`;
-
-                contentWrap.appendChild(contentItem);
-            });
-        }
-
-        function removeNodesByDepth(rootNode, depthToRemove) {
-            // Select all nodes with data-depth attribute
-            const nodes = rootNode.querySelectorAll("[data-depth]");
-
-            // Iterate over the nodes and delete nodes with depth > specified value
-            nodes.forEach((node) => {
-                const nodeDepth = parseInt(node.getAttribute("data-depth"), 10);
-
-                if (nodeDepth >= depthToRemove) {
-                    node.parentNode.removeChild(node);
-                }
-            });
-        }
-    });
-
-    window.addEventListener(
+        window.addEventListener(
         "click",
         function (e) {
             const menu = document.getElementById("megamenu");
@@ -411,9 +468,9 @@
             console.log(menuWrapper);
             if (!menu.contains(e.target) && !button.contains(e.target)) {
                 menu.style.display = "none";
-                menuWrapper.innerHTML = "";
             }
         },
         0
     );
-</script>
+    </script>
+</div>
