@@ -1,6 +1,6 @@
 # Overview
 
-This type of view allows you to create blades containing a form. 
+This type of view allows you to create blades containing a form.
 
 ![DynamicBladeForm](../../../media/DynamicBladeForm.png)
 
@@ -21,7 +21,6 @@ export const details: DynamicDetailsSchema = {
         url: "/dynamic-module-details",
         id: "DynamicItem",
         localizationPrefix: "DynamicModule",
-        titleTemplate: "Dynamic module details",
         composable: "useDetails",
         component: "DynamicBladeForm",
         toolbar: [
@@ -35,22 +34,22 @@ export const details: DynamicDetailsSchema = {
     },
     content: [
         {
-        id: "dynamicItemForm",
-        component: "vc-form",
-        children: [
-            {
-                id: "itemName",
-                component: "vc-input",
-                label: "Name",
-                property: "name",
-            },
-            {
-                id: "itemCreatedDate",
-                component: "vc-input",
-                label: "Created date",
-                property: "createdDate",
-            },
-        ],
+            id: "dynamicItemForm",
+            component: "vc-form",
+            children: [
+                {
+                    id: "itemName",
+                    component: "vc-input",
+                    label: "Name",
+                    property: "name",
+                },
+                {
+                    id: "itemCreatedDate",
+                    component: "vc-input",
+                    label: "Created date",
+                    property: "createdDate",
+                },
+            ],
         },
     ],
 };
@@ -58,7 +57,7 @@ export const details: DynamicDetailsSchema = {
 
 ## View programming structure
 
-The View Programming Structure section provides a comprehensive guide to understanding and utilizing the various components and interfaces involved in creating dynamic views using the `DynamicBladeForm` component. 
+The View Programming Structure section provides a comprehensive guide to understanding and utilizing the various components and interfaces involved in creating dynamic views using the `DynamicBladeForm` component.
 
 ### View declaration
 
@@ -96,7 +95,6 @@ interface SettingsBase {
     url?: string;
     localizationPrefix: string;
     id: string;
-    titleTemplate: string;
     composable: string;
     toolbar: {
         id: string;
@@ -112,21 +110,20 @@ interface SettingsBase {
 ```
 
 | Property and Type                                                 | Description                                                                                                    |
-| ----------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------                         |
-| `url` {==string==}                                                | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
-| `id` {==string==}                                                 | The unique Id of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities.   |
-| `localizationPrefix` {==`string==}                                | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.       |
-| `titleTemplate` {==string==}                                      | The title of the view that is shown in the blade header by default. This option is required.                   |
-| `component`  {=="DynamicBladeForm"==}, {=="DynamicBladeList"`==}  | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br> - `DynamicBladeList` <br> - `DynamicBladeForm`|
-| `composable` {==string==}                                         | The name of the composable used by the view. This option is required. |
-| `isWorkspace` {==boolean==}                                       | Specification whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false`             |
-| `toolbar` {==object[]==}                                          | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
-| `permissions` {==string==}, {==string[]==}                        | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
-| `pushNotificationType` {==string==}, {==string[]==}               | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
+| ----------------------------------------------------------------- | --------------------------------------------------- |
+| `url`{==string==}                                                 | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
+| `id`{==string==}                                                  | The unique Id of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities.   |
+| `localizationPrefix`{==string==}                                  | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.       |
+| `component` {=="DynamicBladeForm"==}, {=="DynamicBladeList"==}    | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br>- `DynamicBladeList` <br>- `DynamicBladeForm`|
+| `composable`{==string==}                                          | The name of the composable used by the view. This option is required. |
+| `isWorkspace`{==boolean==}                                        | Specification whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false`             |
+| `toolbar`{==object[]==}                                           | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
+| `permissions`{==string==}, {==string[]==}                         | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
+| `pushNotificationType`{==string==}, {==string[]==}                | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
 
 #### Schema Content API
 
-The Schema Content API provides two key interfaces for defining dynamic views: 
+The Schema Content API provides two key interfaces for defining dynamic views:
 
 * [FormContentSchema](Dynamic-Blade-Form.md#formcontentschema).
 * [WidgetsSchema](Dynamic-Blade-Form.md#widgetsschema).
@@ -143,7 +140,7 @@ interface FormContentSchema {
 }
 ```
 
-Where `ControlSchema` is an interface that represents an array of form controls. 
+Where `ControlSchema` is an interface that represents an array of form controls.
 
 ![Readmore](../../../media/readmore.png){: width="25"} [Features of Dynamic Views](../dynamic-views/overview.md#features-of-dynamic-views) documentation section.
 
@@ -248,10 +245,10 @@ const useDetails = (): UseDetails => {
 ```
 
 !!!note
-    As you can see, these callback methods have arguments. 
-    
-    * The `load` method gets an `id`, that is passed to blade as a `param` prop. 
-    * The `saveChanges` method gets a `details` object, that contains the current details item. 
+    As you can see, these callback methods have arguments.
+
+    * The `load` method gets an `id`, that is passed to blade as a `param` prop.
+    * The `saveChanges` method gets a `details` object, that contains the current details item.
     * The `remove` method gets an `id`, that is passed to blade as a `param` prop.
 
 With the use of `useDetailsFactory`, you get a ready-to-use composable, which already has all the necessary methods and properties to work with the form. All you need to do is just to implement the `load`, `remove` and `saveChanges` methods. Also you can add your own logic, methods and properties to the composable, as in other composable functions.
@@ -371,6 +368,8 @@ interface IValidationState<Item> {
     cachedValue: Item | undefined;
     setFieldError: FormContext["setFieldError"];
     setErrors: FormContext["setErrors"];
+    setFieldValue: FormContext["setFieldValue"];
+    setValues: FormContext["setValues"];
     resetModified: (
         data: MaybeRef<Item>,
         updateInitial?: MaybeRef<boolean>
@@ -389,6 +388,8 @@ interface IValidationState<Item> {
 | `cachedValue`   | `Item`                                | The cached value of the form.                         |
 | `setFieldError` | `FormContext["setFieldError"]`        | The Vee-Validate method used to set the field error. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default) |
 | `setErrors`     | `FormContext["setErrors"]`            | The Vee-Validate method used to set the errors. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default)    |
+| `setFieldValue` | `FormContext["setFieldValue"]`        | The Vee-Validate method used to set the field value. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default) |
+| `setValues`     | `FormContext["setValues"]`            | The Vee-Validate method used to set the values. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default)     |
 | `resetModified` | `(data: MaybeRef<Item>, updateInitial?: MaybeRef<boolean>) => void` | The method used to reset the modified state and, if needed, override the initial `item` value.         |
 | `validate`      | `FormContext["validate"]`                                           | The Vee-Validate method used to validate the form. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default) |
 

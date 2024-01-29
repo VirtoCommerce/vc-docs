@@ -50,7 +50,7 @@ API empowers you to create a dynamic and interactive component to customize its 
 
 ### Basic Vue
 
-You can easily incorporate the `vc-select` component into your Vue applications using simple templates. 
+You can easily incorporate the `vc-select` component into your Vue applications using simple templates.
 
 #### Props
 
@@ -73,7 +73,7 @@ To customize the appearance and behavior of your component, use the following pr
 | `multiple` {==boolean==}              | Allow multiple selection. Model must be Array. |
 | `options` {==((keyword?: string, skip?: number, ids?: string[]) => Promise<P>)==}, {==T[]==} | Available options that the user can select from. Default value: `[]` |
 | `optionValue` {==OptionProp<Option>==}  | Property of option which holds the 'value'. Default value: `id`. |
-| `optionLabel` {==OptionProp<Option>==}  | Property of option which holds the 'label' Default value: `title`. |
+| `optionLabel` {==OptionProp<Option>==}  | Property of option which holds the 'label'. Default value: `title`. |
 | `emitValue` {==boolean==}             | Update model with the value of the selected option instead of the whole option |
 | `debounce` {==number==}, {==string==} | Debounce the search input update with an amount of milliseconds. Default value: `500`. |
 | `placeholder` {==string==}            | Input placeholder text. |
@@ -103,7 +103,7 @@ To enhance the content of the `vc-select` component, use the slot system:
 
 #### Emits
 
-To effectively interact with the component, use the emitted events. The `update:modelValue` event is triggered with `inputValue` as a parameter and is emitted when the component needs to change the model. The `search` event is triggered when the user intends to filter a value and is emitted with `inputValue` as a parameter. The `close` event is emitted when the select options list is hidden. 
+To effectively interact with the component, use the emitted events. The `update:modelValue` event is triggered with `inputValue` as a parameter and is emitted when the component needs to change the model. The `search` event is triggered when the user intends to filter a value and is emitted with `inputValue` as a parameter. The `close` event is emitted when the select options list is hidden.
 
 | Event                 | Parameters            | Description   |
 | ---                   | ---                   | ---           |

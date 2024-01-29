@@ -567,7 +567,7 @@ nav:
           - VC Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
-                      - Start using VC shell: custom-apps-development/vc-shell/Getting-started/getting-started.md
+                      - Start using VC shell: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                 - Essentials:
                       - Controls:
@@ -580,6 +580,8 @@ nav:
                             - VcEditor: custom-apps-development/vc-shell/Essentials/controls/VcEditor.md
                             - VcField: custom-apps-development/vc-shell/Essentials/controls/VcField.md
                             - VcInput: custom-apps-development/vc-shell/Essentials/controls/VcInput.md
+                            - VcTextarea: custom-apps-development/vc-shell/Essentials/controls/VcTextarea.md
+                            - VcMultivalue: custom-apps-development/vc-shell/Essentials/controls/VcMultivalue.md
                             - VcInputCurrency: custom-apps-development/vc-shell/Essentials/controls/VcInputCurrency.md
                             - VcSelect: custom-apps-development/vc-shell/Essentials/controls/VcSelect.md
                             - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/controls/VcDynamicProperty.md
@@ -729,7 +731,7 @@ extra:
                         - title: Getting Started
                           url: platform_docs/dev_docs/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
                         - title: Extending VC Apps Functionality
-                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started
+                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/getting-started.svg
               title: Getting started
               content:
@@ -746,7 +748,7 @@ extra:
                 - title: VC-Shell
                   links:
                     - title: Developer Getting Started
-                      url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started
+                      url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/graphql.svg
               title: APIs
               content:

@@ -1,6 +1,6 @@
 # Overview
 
-In this article, we will explore the Dynamic Views, which revolutionize the process of creating modules and blades in VC-Shell. Using a declarative style called **schema**, dynamic views simplify the creation of extensible modules with standardized structures. 
+In this article, we will explore the Dynamic Views, which revolutionize the process of creating modules and blades in VC-Shell. Using a declarative style called **schema**, dynamic views simplify the creation of extensible modules with standardized structures.
 
 ## What are Dynamic Views?
 
@@ -39,6 +39,8 @@ It also has a bunch of built-in controls from VC-Shell UI-kit and components for
 - [VcField](../controls/VcField.md)
 - [VcEditor](../controls/VcEditor.md)
 - [VcInput](../controls/VcInput.md)
+- [VcTextarea](../controls/VcTextarea.md)
+- [VcMultivalue](../controls/VcMultivalue.md)
 - [VcSelect](../controls/VcSelect.md)
 - [VcInputCurrency](../controls/VcInputCurrency.md)
 - [VcGallery](../controls/VcGallery.md)

@@ -287,7 +287,7 @@ extra:
                         - title: Getting Started
                           url: platform_docs/dev_docs/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
                         - title: Extending VC Apps Functionality
-                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started
+                          url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/getting-started.svg
               title: Getting started
               content:
@@ -304,7 +304,7 @@ extra:
                 - title: VC-Shell
                   links:
                     - title: Developer Getting Started
-                      url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/getting-started
+                      url: platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/graphql.svg
               title: APIs
               content:
