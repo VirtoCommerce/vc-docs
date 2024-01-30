@@ -195,6 +195,31 @@ extra:
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
               link: platform_docs/dev_docs/custom-apps-development/overview
+        release_notes:
+            - title: News Digest January 2024
+              link: https://www.virtocommerce.org/t/news-digest-january-2024/663
+              type: Digest
+              date: 8 January 2024
+            - title: News Digest December 2023
+              link: https://www.virtocommerce.org/t/news-digest-december-2023/651
+              type: Digest
+              date: 5 December 2023
+            - title: News Digest November 2023
+              link: https://www.virtocommerce.org/t/news-digest-november-2023/644
+              type: Digest
+              date: 1 November 2023
+            - title: News Digest October 2023
+              link: https://www.virtocommerce.org/t/news-digest-october-2023/631
+              type: Digest
+              date: 3 October 2023
+            - title: News Digest September 2023
+              link: https://www.virtocommerce.org/t/news-digest-september-2023/613
+              type: Digest
+              date: 5 September 2023
+            - title: News Digest August 2023
+              link: https://www.virtocommerce.org/t/news-digest-august-2023/602
+              type: Digest
+              date: 1 August 2023
         link_cards:
             - title: Contact support
               icon: assets/icons/contact-support.svg
