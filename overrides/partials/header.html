@@ -9,7 +9,7 @@
     <nav class="md-header__inner md-grid"
         aria-label="{{ lang.t('header') }}">
         <!-- Button to open drawer -->
-        <label class="md-header__button md-icon" for="__drawer">
+        <label class="md-header__button md-icon" for="__drawer" {% if config.theme.hide  %} {% for toHide in config.theme.hide %} {% if toHide == 'navigation' %} {{'hidden'}} {% endif %}{% endfor %}{% endif %}>
             {% include "assets/icons/menu.svg" %}
         </label>
 
