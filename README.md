@@ -25,13 +25,13 @@ pip install mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugi
 
 ## Preview User docs
 ```
-cd user_docs
+cd user-guide
 mkdocs serve
 ```
 - Open http://127.0.0.1:8000
 ## Preview Dev docs
 ```
-cd dev_docs
+cd developer-guide
 mkdocs serve
 ```
 - Open http://127.0.0.1:8000

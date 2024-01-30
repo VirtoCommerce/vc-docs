@@ -1,13 +1,13 @@
 mkdocs build  -d ./site
 
-mkdocs build  -f storefront_docs/mkdocs.yml -d ../site/storefront_docs
-mkdocs build  -f storefront_docs/user_docs/mkdocs.yml -d ../../site/storefront_docs/user_docs
-mkdocs build  -f storefront_docs/dev_docs/mkdocs.yml -d ../../site/storefront_docs/dev_docs
+mkdocs build  -f storefront/mkdocs.yml -d ../site/storefront_docs
+mkdocs build  -f storefront/user-guide/mkdocs.yml -d ../../site/storefront/user-guide
+mkdocs build  -f storefront/developer-guide/mkdocs.yml -d ../../site/storefront/developer-guide
 
-mkdocs build  -f platform_docs/mkdocs.yml -d ../site/platform_docs
-mkdocs build  -f platform_docs/user_docs/mkdocs.yml -d ../../site/platform_docs/user_docs
-mkdocs build  -f platform_docs/dev_docs/mkdocs.yml -d ../../site/platform_docs/dev_docs
+mkdocs build  -f platform/mkdocs.yml -d ../site/platform_docs
+mkdocs build  -f platform/user-guide/mkdocs.yml -d ../../site/platform/user-guide
+mkdocs build  -f platform/developer-guide/mkdocs.yml -d ../../site/platform/developer-guide
 
-mkdocs build  -f marketplace_docs/mkdocs.yml -d ../site/marketplace_docs
-mkdocs build  -f marketplace_docs/user_docs/mkdocs.yml -d ../../site/marketplace_docs/user_docs
-mkdocs build  -f marketplace_docs/dev_docs/mkdocs.yml -d ../../site/marketplace_docs/dev_docs
+mkdocs build  -f marketplace/mkdocs.yml -d ../site/marketplace
+mkdocs build  -f marketplace/user-guide/mkdocs.yml -d ../../site/marketplace/user-guide
+mkdocs build  -f marketplace/developer-guide/mkdocs.yml -d ../../site/marketplace/developer-guide

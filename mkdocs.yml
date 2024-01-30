@@ -176,7 +176,7 @@ extra:
             -   title: Marketplace
                 icon: assets/icons/code-square.svg
                 description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
-                link: marketplace_docs
+                link: marketplace
        
         documentation:
             - title: Storefront
@@ -190,11 +190,11 @@ extra:
             - title: Marketplace
               description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
               image: assets/images/marketplace.png
-              link: marketplace_docs
+              link: marketplace
             - title: Custom Apps
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
-              link: platform_docs/dev_docs/custom-apps-development/overview
+              link: platform/developer-guide/custom-apps-development/overview
     
         link_cards:
             - title: Contact support
@@ -224,27 +224,27 @@ extra:
                     - title: User Guide
                       links:
                         - title: Getting Started
-                          url: /platform_docs/user_docs/getting-started
+                          url: /platform/user-guide/getting-started
                         - title: User Documentation
-                          url: /platform_docs/user_docs/platform-overview
+                          url: /platform/user-guide/platform-overview
                     - title: Developer Guide
                       links:
                         - title: Installation Guide
-                          url: /platform_docs/dev_docs/Getting-Started/Installation-Guide/windows
+                          url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
                         - title: Architecture Overview
-                          url: /platform_docs/dev_docs/Back-End-Architecture/02-conceptual-overview
+                          url: /platform/developer-guide/Back-End-Architecture/02-conceptual-overview
                         - title: Extensibility
-                          url: /platform_docs/dev_docs/Extensibility/overview
+                          url: /platform/developer-guide/Extensibility/overview
                         - title: Configuration Reference
-                          url: /platform_docs/dev_docs/Configuration-Reference/appsettingsjson
+                          url: /platform/developer-guide/Configuration-Reference/appsettingsjson
                         - title: Tutorials and How-tos
-                          url: /platform_docs/dev_docs/Tutorials-and-How-tos/Tutorials/creating-custom-module
+                          url: /platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module
                     - title: API Reference
                       links:
                         - title: REST API Reference
                           url: https://virtostart-demo-admin.govirto.com/docs/index.html
                         - title: GraphQL API Reference
-                          url: /platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                          url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
                 - title: Storefront
                   content:
                     - title: User Guide
@@ -252,65 +252,65 @@ extra:
                         - title: Getting Started
                           url: https://www.youtube.com/watch?v=8LaCWtkVdAk
                         - title: User Documentation
-                          url: /storefront_docs/user_docs
+                          url: /storefront/user-guide
                         - title: Public Demo
                           url: https://virtostart-demo-store.govirto.com/
                     - title: Developer Guide
                       links:
                         - title: Getting Started
-                          url: /storefront_docs/dev_docs/getting-started/quickstart-on-windows
+                          url: /storefront/developer-guide/getting-started/quickstart-on-windows
                         - title: Architecture Overview
-                          url: /storefront_docs/dev_docs
+                          url: /storefront/developer-guide
                         - title: B2B Theme Overview
-                          url: /storefront_docs/dev_docs/vue-js-starter-theme/overview
+                          url: /storefront/developer-guide/vue-js-starter-theme/overview
                         - title: Integrations
-                          url: /storefront_docs/dev_docs/integrations/prerender_io
+                          url: /storefront/developer-guide/integrations/prerender_io
                 - title: Marketplace
                   content:
                     - title: User Guide
                       links:
                         - title: Vendor Portal
-                          url: /marketplace_docs/user_docs/Vendor-portal/overview
+                          url: /marketplace/user-guide/Vendor-portal/overview
                         - title: Operator Portal
-                          url: /marketplace_docs/user_docs/Operator-portal/overview
+                          url: /marketplace/user-guide/Operator-portal/overview
                     - title: Developer Guide
                       links:
                         - title: In Progress
-                          url: /marketplace_docs/under-construction
+                          url: /marketplace/under-construction
                 - title: VC Shell
                   content:
                     - title: Developer Guide
                       links:
                         - title: Overview
-                          url: /platform_docs/dev_docs/custom-apps-development/vc-shell/vc-shell-overview
+                          url: /platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview
                         - title: Getting Started
-                          url: /platform_docs/dev_docs/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
+                          url: /platform/developer-guide/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
                         - title: Extending VC Apps Functionality
-                          url: /platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                          url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/getting-started.svg
               title: Getting started
               content:
                 - title: Platform
                   links:
                     - title: Manager Getting Started
-                      url: /platform_docs/user_docs/getting-started
+                      url: /platform/user-guide/getting-started
                     - title: Developer Getting Started
-                      url: /platform_docs/dev_docs/Getting-Started/Installation-Guide/windows
+                      url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
                 - title: Storefront
                   links:
                     - title: Developer Getting Started
-                      url: /storefront_docs/dev_docs/getting-started/quickstart-on-windows
+                      url: /storefront/developer-guide/getting-started/quickstart-on-windows
                 - title: VC-Shell
                   links:
                     - title: Developer Getting Started
-                      url: /platform_docs/dev_docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                      url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/graphql.svg
               title: APIs
               content:
                 - title: REST API
                   url: https://virtostart-demo-admin.govirto.com/docs/index.html
                 - title: GraphQL API
-                  url: /platform_docs/dev_docs/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                  url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
             - iconSrc: assets/icons/graphql.svg
               title: Video Tutorials
               url: https://www.youtube.com/c/VirtoCommerce
