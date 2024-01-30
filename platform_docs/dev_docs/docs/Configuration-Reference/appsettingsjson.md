@@ -410,6 +410,8 @@ This node configures frontend security settings.
 }
 ```
 
+<!--security-start-->
+
 ### IdentityOptions
 
 This configuration node configures the ASP.NET Core Identity system. 
@@ -450,6 +452,7 @@ This configuration node configures the ASP.NET Core Identity system.
       "DefaultLockoutTimeSpan": "0:15:0"
     }
 ```
+<!--security-end-->
 
 ### LoginPageUI
 
