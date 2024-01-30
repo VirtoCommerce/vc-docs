@@ -1,6 +1,3 @@
-# extends:
-#     - ../megamenu.yml
-
 theme:
     name: material
     custom_dir: overrides
@@ -27,9 +24,15 @@ theme:
     features:
         - navigation.tabs
         - --md-code-bg-color
-        - search.highlight
         - search.share
         - search.suggest
+        - navigation.tracking
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - toc.follow
+        - search.highlight
+
     hide:
         - navigation
 markdown_extensions:
@@ -43,6 +46,39 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
+    - abbr  
+    - def_list
+    - footnotes
+    - md_in_html
+    - toc:
+          permalink: true
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.details   
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          repo_url_shorthand: true
+          user: squidfunk
+          repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+    - pymdownx.snippets
 
 plugins:
     - search # necessary for search to work
@@ -71,6 +107,7 @@ edit_uri: edit/dev/docs/
 copyright: Copyright &copy; 2024. All rights reserved.
 
 extra:
+    homepage: /
     social:
       - icon: fontawesome/brands/github
         link: https://github.com/VirtoCommerce
@@ -140,44 +177,7 @@ extra:
                 icon: assets/icons/code-square.svg
                 description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
                 link: marketplace_docs
-            # -   title: Business Analyst
-            #     icon: assets/icons/briefcase.svg
-            #     description: I need to know how to implement Virto solutions across my team or externally.
-            #     link: https://docs.virtocommerce.org/BA%20docs/
-        # wide_cards:
-        #     -   title: B2C solution
-        #         icon: b2b-second.svg
-        #         description: Learn how to build an online store your customers will buy goods and services from.
-        #         link: under-construction
-        #     -   title: E-commerce platform
-        #         icon: platform.svg
-        #         description: Explore Virto's e-commerce opportunities and learn how to leverage them.
-        #         link: under-construction
-        #     -   title: VirtoCloud
-        #         icon: cloud.svg
-        #         description: Cloud techs are currently in the forefront of the IT industry. Learn how to them with Virto.
-        #         link: under-construction
-        #     -   title: Marketplace
-        #         icon: marketplace.svg
-        #         description: Virto Commerce allows you to build your very own unique online marketplace. See how!
-        #         link: under-construction
-        #education:
-            # - title: Videos
-            #   description: Explore our video tutorials
-            #   image: assets/icons/videos.png
-            #   link: https://www.youtube.com/c/Virtocommerce
-            # - title: Tech Blog
-            #   description: Hints, tips, and so much more!
-            #   image: assets/icons/articles.png
-            #   link: https://www.virtocommerce.org/
-            # - title: Case Studies
-            #   description: Best case studies provided by our dev team
-            #   image: assets/icons/videos-second.png
-            #   link: https://virtocommerce.com/case-studies
-            # - title: Code samples
-            #   description: Most used code samples
-            #   image: assets/icons/stories.png
-            #   link: https://github.com/VirtoCommerce/vc-samples
+       
         documentation:
             - title: Storefront
               description: Build and personalize your online store for engaging shopping experiences
@@ -195,31 +195,7 @@ extra:
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
               link: platform_docs/dev_docs/custom-apps-development/overview
-        release_notes:
-            - title: News Digest January 2024
-              link: https://www.virtocommerce.org/t/news-digest-january-2024/663
-              type: Digest
-              date: 8 January 2024
-            - title: News Digest December 2023
-              link: https://www.virtocommerce.org/t/news-digest-december-2023/651
-              type: Digest
-              date: 5 December 2023
-            - title: News Digest November 2023
-              link: https://www.virtocommerce.org/t/news-digest-november-2023/644
-              type: Digest
-              date: 1 November 2023
-            - title: News Digest October 2023
-              link: https://www.virtocommerce.org/t/news-digest-october-2023/631
-              type: Digest
-              date: 3 October 2023
-            - title: News Digest September 2023
-              link: https://www.virtocommerce.org/t/news-digest-september-2023/613
-              type: Digest
-              date: 5 September 2023
-            - title: News Digest August 2023
-              link: https://www.virtocommerce.org/t/news-digest-august-2023/602
-              type: Digest
-              date: 1 August 2023
+    
         link_cards:
             - title: Contact support
               icon: assets/icons/contact-support.svg
