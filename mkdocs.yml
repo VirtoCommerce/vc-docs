@@ -168,11 +168,11 @@ extra:
             -   title: Storefront
                 icon: assets/icons/person.svg
                 description: Build and personalize your online store for engaging shopping experiences
-                link: storefront_docs
+                link: storefront
             -   title: Platform
                 icon: assets/icons/code-square.svg
                 description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e-commerce ecosystem
-                link: platform_docs
+                link: platform
             -   title: Marketplace
                 icon: assets/icons/code-square.svg
                 description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
@@ -182,11 +182,11 @@ extra:
             - title: Storefront
               description: Build and personalize your online store for engaging shopping experiences
               image: assets/images/storefront.png
-              link: storefront_docs
+              link: storefront
             - title: Platform
               description: Explore the Virto Commerce Platform, a solution designed to efficiently manage<br>and scale your entire e-commerce ecosystem
               image: assets/images/platform.png
-              link: platform_docs
+              link: platform
             - title: Marketplace
               description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
               image: assets/images/marketplace.png

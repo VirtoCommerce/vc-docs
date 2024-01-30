@@ -1,10 +1,10 @@
 mkdocs build  -d ./site
 
-mkdocs build  -f storefront/mkdocs.yml -d ../site/storefront_docs
+mkdocs build  -f storefront/mkdocs.yml -d ../site/storefront
 mkdocs build  -f storefront/user-guide/mkdocs.yml -d ../../site/storefront/user-guide
 mkdocs build  -f storefront/developer-guide/mkdocs.yml -d ../../site/storefront/developer-guide
 
-mkdocs build  -f platform/mkdocs.yml -d ../site/platform_docs
+mkdocs build  -f platform/mkdocs.yml -d ../site/platform
 mkdocs build  -f platform/user-guide/mkdocs.yml -d ../../site/platform/user-guide
 mkdocs build  -f platform/developer-guide/mkdocs.yml -d ../../site/platform/developer-guide
 
