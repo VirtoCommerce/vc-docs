@@ -9,13 +9,7 @@ theme:
     logobw: assets/icons/logo-bw.svg
     palette:
         -   scheme: default
-            toggle:
-                icon: assets/icons/dark-mode.svg
-                name: Night mode
-        -   scheme: slate
-            toggle:
-                icon: assets/icons/light-mode.svg
-                name: Light mode
+
     font:
         text: Circular Std
         code: Ubuntu Mono
@@ -35,6 +29,7 @@ theme:
 
     hide:
         - navigation
+
 markdown_extensions:
     - admonition # https://squidfunk.github.io/mkdocs-material/extensions/admonition/ (in material theme)
     - codehilite
@@ -46,7 +41,7 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
-    - abbr  
+    - abbr
     - def_list
     - footnotes
     - md_in_html
@@ -57,7 +52,7 @@ markdown_extensions:
     - pymdownx.betterem:
           smart_enable: all
     - pymdownx.caret
-    - pymdownx.details   
+    - pymdownx.details
     - pymdownx.highlight:
           anchor_linenums: true
     - pymdownx.inlinehilite
@@ -81,22 +76,25 @@ markdown_extensions:
     - pymdownx.snippets
 
 plugins:
-    - search # necessary for search to work
+    - monorepo
+    - search: # necessary for search to work
  #   - autolinks
     - awesome-pages:
  #       strict: false
-    - git-revision-date-localized
- #   - minify:
+    # - git-revision-date-localized
+    - minify
  #       minify_html: true
     - redirects:
         redirect_maps:
             'redir.md': 'index.md'
 
 # Project information
-site_name: Documentation
+extra_site_name: Documentation
+site_name: docs
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
+
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
@@ -105,6 +103,20 @@ edit_uri: edit/dev/docs/
 
 # Copyright
 copyright: Copyright &copy; 2024. All rights reserved.
+
+nav:
+    - Marketplace:
+        - Home: '!include ./marketplace/mkdocs.yml'
+        - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
+        - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
+    - Storefront:
+        - Home: '!include ./storefront/mkdocs.yml'
+        - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
+        - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
+    - Platform:
+        - Home: '!include ./platform/mkdocs.yml'
+        - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
+        - User Guide: '!include ./platform/user-guide/mkdocs.yml'
 
 extra:
     homepage: /
@@ -177,7 +189,7 @@ extra:
                 icon: assets/icons/code-square.svg
                 description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
                 link: marketplace
-       
+
         documentation:
             - title: Storefront
               description: Build and personalize your online store for engaging shopping experiences
@@ -195,7 +207,7 @@ extra:
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
               link: platform/developer-guide/custom-apps-development/overview
-    
+
         link_cards:
             - title: Contact support
               icon: assets/icons/contact-support.svg

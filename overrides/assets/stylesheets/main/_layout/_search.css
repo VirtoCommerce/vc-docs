@@ -23,6 +23,16 @@
     margin-right: 5rem;
 }
 
+.md-search__options {
+    right: 1.8rem !important;
+}
+
+@media screen and (max-width: 59.984375em) {
+    [dir="ltr"] .md-search__options {
+        right: 1.8rem !important;
+    }
+}
+
 @media screen and (min-width: 60em) {
     .md-search__input + .md-search__icon {
         color: var(--search-icon-color);
@@ -43,7 +53,6 @@
     }
 }
 
-
 @media screen and (max-width: 1265px) {
     .md-search__inner {
         width: 15rem;
@@ -55,12 +64,12 @@
 }
 
 @media screen and (max-width: 1050px) {
-    [dir=ltr] .md-search__overlay {
-        left:-2.2rem
+    [dir="ltr"] .md-search__overlay {
+        left: -2.2rem;
     }
 
-    [dir=rtl] .md-search__overlay {
-        right: -2.2rem
+    [dir="rtl"] .md-search__overlay {
+        right: -2.2rem;
     }
 
     .md-search__overlay {
@@ -72,23 +81,23 @@
         position: absolute;
         top: -1rem;
         transform-origin: center;
-        transition: transform .3s .1s,opacity .2s .2s;
-        width: 2rem
+        transition: transform 0.3s 0.1s, opacity 0.2s 0.2s;
+        width: 2rem;
     }
 
-    [data-md-toggle=search]:checked~.md-header .md-search__overlay {
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
         opacity: 1;
-        transition: transform .4s,opacity .1s
+        transition: transform 0.4s, opacity 0.1s;
     }
 }
 
 @media screen and (max-width: 1050px) {
-    [dir=ltr] .md-search__inner {
-        left:0
+    [dir="ltr"] .md-search__inner {
+        left: 0;
     }
 
-    [dir=rtl] .md-search__inner {
-        right: 0
+    [dir="rtl"] .md-search__inner {
+        right: 0;
     }
 
     .md-search__inner {
@@ -98,24 +107,28 @@
         position: fixed;
         top: 0;
         transform: translateX(5%);
-        transition: width 0ms .3s,height 0ms .3s,transform .15s cubic-bezier(.4,0,.2,1) .15s,opacity .15s .15s;
+        transition: width 0ms 0.3s, height 0ms 0.3s,
+            transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+            opacity 0.15s 0.15s;
         width: 0;
-        z-index: 2
+        z-index: 2;
     }
 
-    [dir=rtl] .md-search__inner {
-        transform: translateX(-5%)
+    [dir="rtl"] .md-search__inner {
+        transform: translateX(-5%);
     }
 
-    [data-md-toggle=search]:checked~.md-header .md-search__inner {
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__inner {
         height: 100%;
         opacity: 1;
         transform: translateX(0);
-        transition: width 0ms 0ms,height 0ms 0ms,transform .15s cubic-bezier(.1,.7,.1,1) .15s,opacity .15s .15s;
-        width: 100%
+        transition: width 0ms 0ms, height 0ms 0ms,
+            transform 0.15s cubic-bezier(0.1, 0.7, 0.1, 1) 0.15s,
+            opacity 0.15s 0.15s;
+        width: 100%;
     }
 
-    .md-header__button[for=__search] {
+    .md-header__button[for="__search"] {
         display: block !important;
     }
 }

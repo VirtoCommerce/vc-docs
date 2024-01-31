@@ -1,9 +1,11 @@
 INHERIT: ../mkdocs.yml
-theme:   
+theme:
     custom_dir: ../../overrides
+    hide: false
 
 # Project information
-site_name: Storefront Dev Docs
+extra_site_name: Storefront Dev Docs
+site_name: storefront/developer-guide
 site_description: --TBD--
 
 

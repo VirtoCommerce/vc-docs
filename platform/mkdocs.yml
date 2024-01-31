@@ -4,7 +4,8 @@ theme:
 
 
 # Project information
-site_name: Platform docs
+extra_site_name: Platform docs
+site_name: platform
 site_description: Platform documentation center
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -14,7 +15,7 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
-extra: 
+extra:
     main_page:
         documentation:
             - title: User Guide
@@ -72,7 +73,7 @@ extra:
             - title: News Digest August 2023
               link: https://www.virtocommerce.org/t/news-digest-august-2023/602
               type: Digest
-              date: 1 August 2023      
+              date: 1 August 2023
         link_cards:
                 - title: Contact support
                   icon: assets/icons/contact-support.svg
@@ -88,5 +89,9 @@ extra:
                   outlineColor: '#FF9162'
                 - title: Blog
                   icon: assets/icons/blog.svg
-                  link: https://virtocommerce.com/blog
+                  link: https://vrtocommerce.com/blog
                   outlineColor: '#FF9162'
+
+nav:
+    - Home: index.md
+

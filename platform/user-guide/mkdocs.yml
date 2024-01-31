@@ -1,9 +1,11 @@
 INHERIT: ../../mkdocs.yml
-theme:   
+theme:
     custom_dir: ../../overrides
-  
+    hide: false
+
 # Project information
-site_name: Platform User Docs
+extra_site_name: Platform User Docs
+site_name: platform/user-guide
 site_description: Documentation portal for Virto Commerce, an enterprise-level Microsoft .NET ecommerce platform.
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new

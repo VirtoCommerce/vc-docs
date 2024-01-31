@@ -9,9 +9,9 @@
             <!-- Link to home -->
             <a
                 href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-                title="{{ config.site_name | e }}"
+                title="{{ config.extra_site_name | e }}"
                 class="md-footer__button md-logo"
-                aria-label="{{ config.site_name }}"
+                aria-label="{{ config.extra_site_name }}"
                 data-md-component="logo"
             >
                 {% if config.theme.logo %}
@@ -24,7 +24,7 @@
                 <div class="md-footer__ellipsis">
                     <div class="md-footer__topic">
                   <span class="md-ellipsis">
-                    {{ config.site_name }}
+                    {{ config.extra_site_name }}
                   </span>
                     </div>
                 </div>

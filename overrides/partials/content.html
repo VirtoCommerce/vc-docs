@@ -17,7 +17,7 @@ page.meta.revision_date
   as the main headline.
 -->
 {% if "\x3ch1" not in page.content %}
-<h1>{{ page.title | d(config.site_name, true)}}</h1>
+<h1>{{ page.title | d(config.extra_site_name, true)}}</h1>
 {% endif %}
 
 <!-- Markdown content -->

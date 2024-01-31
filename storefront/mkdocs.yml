@@ -4,7 +4,8 @@ theme:
     custom_dir: ../overrides
 
 # Project information
-site_name: Storefront docs
+extra_site_name: Storefront docs
+site_name: storefront
 site_description: Storefront documentation center
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -69,4 +70,7 @@ extra:
               link: https://www.virtocommerce.org/t/news-digest-august-2023/602
               type: Digest
               date: 1 August 2023
-   
+
+
+nav:
+    - Home: index.md

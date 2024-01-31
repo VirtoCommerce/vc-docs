@@ -1,9 +1,11 @@
 INHERIT: ../../mkdocs.yml
-theme:   
+theme:
     custom_dir: ../../overrides
+    hide: false
 
 # Project information
-site_name: Marketplace User Docs
+extra_site_name: Marketplace User Docs
+site_name: marketplace/user-guide
 site_description: --TBD--
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
