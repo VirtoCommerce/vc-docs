@@ -296,7 +296,9 @@ Example settings for the `AzureAD` section:
 
 ### Caching
 This node manages caching configuration.
+
 <!--caching-start-->
+
 | Node                      | Default or sample value                   | Description  |
 | ------------------------- | ----------------------------------------- | ------------ |
 | Redis                     |                                           | Redis configuration. Includes the message channel to use and the number of retries.
@@ -520,11 +522,11 @@ This node configures external sources, from which modules are being installed an
 <!--modularity-end-->
 
 
-<!--notifications-start-->
 
 ### Notifications
+<!--notifications-start-->
 
-This enables notification configuration for the `VirtoCommerce.Notifications` module.
+This node enables notification configuration for the `VirtoCommerce.Notifications` module.
 
 | Node                              | Default or Sample Value         | Description                                                                                                               |
 | --------------------------------- | ------------------------------  | ------------------------------------------------------------------------------------------------------------------------- |
