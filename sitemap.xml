@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/platform/developer-guide/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/platform/user-guide/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/storefront/user-guide/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/storefront/developer-guide/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/marketplace/developer-guide/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/marketplace/user-guide/sitemap.xml</loc>
+    </sitemap>
+</urlset>

@@ -11,3 +11,5 @@ mkdocs build  -f platform/developer-guide/mkdocs.yml -d ../../site/platform/deve
 mkdocs build  -f marketplace/mkdocs.yml -d ../site/marketplace
 mkdocs build  -f marketplace/user-guide/mkdocs.yml -d ../../site/marketplace/user-guide
 mkdocs build  -f marketplace/developer-guide/mkdocs.yml -d ../../site/marketplace/developer-guide
+
+copy sitemap.xml site/
