@@ -81,7 +81,7 @@ plugins:
  #   - autolinks
     - awesome-pages:
  #       strict: false
-    # - git-revision-date-localized
+    - git-revision-date-localized
     - minify
  #       minify_html: true
     - redirects:
