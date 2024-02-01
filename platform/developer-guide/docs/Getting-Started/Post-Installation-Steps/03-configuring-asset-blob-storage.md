@@ -4,9 +4,9 @@ Blob is an abstraction that works as a single point of access to all media files
 
 By default, the platform allows you to configure one of the following blob storage providers:
 
--   FileSystem.
+* [FileSystem.](03-configuring-asset-blob-storage.md#setting-up-filesystem-asset-storage-in-development-mode)
     
--   Azure Blob Storage.
+* [Azure Blob Storage.](03-configuring-asset-blob-storage.md#setting-up-azure-blob-storage-in-production-mode)
 
 ## Setting Up FileSystem Asset Storage in Development Mode
 
@@ -37,7 +37,7 @@ To switch platform to using this provider, edit the `Assets` section of the **ap
 !!! note
     This mode is good for local development purposes and not recommended for production due to lack of scalability.
 
-### Setting up Azure Blob Storage in Production Mode
+## Setting up Azure Blob Storage in Production Mode
 
 To set up Azure blob storage:
 

@@ -33,9 +33,9 @@ Virto Search is a search component that gives developers infrastructure, APIs, a
     ??? Example "Index Example"
         ![Index document example](media/04-index-document-example.png)
 
-* **[Indexing](indexing/overview.md):** A process for data indexing that extracts searchable content from various data sources and populates a search index within the specific search provider with instances of  index documents created from the source data by index document builders.
+* [Indexing](indexing/overview.md): A process for data indexing that extracts searchable content from various data sources and populates a search index within the specific search provider with instances of  index documents created from the source data by index document builders.
 
-* **[Search query](search-query-syntax-reference.md):** A string consisting of keywords and terms that is processed by custom query syntax parser, which transforms it to a common search request. In other words, it is a complete specification of what should be returned as a result.
+* [Search query](search-query-syntax-reference.md): A string consisting of keywords and terms that is processed by custom query syntax parser, which transforms it to a common search request. In other words, it is a complete specification of what should be returned as a result.
 
     ??? Example "Search Query Example"
         ```

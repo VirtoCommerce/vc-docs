@@ -142,7 +142,7 @@ By default, the platform caches null values. If you choose to use negative cachi
 
 ## Cache Settings
 
-To learn how to configure cache settings, see [Cache Configuration](02-cache-configuration.md).
+![Readmore](media/readmore.png){: width="25"} [Cache Configuration](02-cache-configuration.md)
 
 ## Scaling
 
@@ -150,11 +150,8 @@ Running multiple platform instances, each with its own local cache, and which in
 
 Read [this article by Virto Commerce](https://docs.virtocommerce.org/techniques/how-scale-out-platform-on-azure/) to learn how to configure the Redis service as a cache backplane to synchronize the local cache for multiple platform instances.
 
-## Additional Resources
-For more information, read:
-
-+ [Caching in ASP.NET by Microsoft](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-6.0)
+![Readmore](media/readmore.png){: width="25"} [Caching in ASP.NET by Microsoft](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-6.0)
     
-+ [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
+![Readmore](media/readmore.png){: width="25"} [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
     
-+ [Cache Configuration by Virto Commerce](02-cache-configuration.md)<!-- Update link if required -->
+![Readmore](media/readmore.png){: width="25"} [Cache Configuration by Virto Commerce](02-cache-configuration.md)

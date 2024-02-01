@@ -57,15 +57,15 @@ The `Module.Core` project consists of the followng folders and files:
 |	└── ModuleConstants.cs
 ```
 
-***Notes:***
+**Notes:**
 
-+ **Events**: A folder containing all domain and integration events the module in question can trigger within the application.
+* **Events**: A folder containing all domain and integration events the module in question can trigger within the application.
 
-+ **Services:** Contains all abstractions and interfaces of all services that represent a programming API to the entire functionality of the module domain.
+* **Services:** Contains all abstractions and interfaces of all services that represent a programming API to the entire functionality of the module domain.
 
-+ **Model:** Contains domain model classes.
+* **Model:** Contains domain model classes.
 
-+ **ModuleConstants.cs:** Houses all module constants, such as permissions, settings, and string literals.
+* **ModuleConstants.cs:** Houses all module constants, such as permissions, settings, and string literals.
 
 ## Module.Data
 This project is comprised of business layers and may include repositories and domain service implementations. It is also of the class library type and can be packaged and distributed as a **NuGet** package and used as a reference from other modules.
@@ -83,19 +83,19 @@ The `Module.Data` project consists of the followng folders:
 |	└── Services
 ```
 
-***Notes:***
+**Notes:**
 
-+ **Caching**: Contains strongly typed cache regions used in the module.
+* **Caching**: Contains strongly typed cache regions used in the module.
     
-+ **Handlers**: Houses domain and integration event handlers.
+* **Handlers**: Houses domain and integration event handlers.
     
-+ **Migrations**: Contains database migrations.
+* **Migrations**: Contains database migrations.
     
-+ **Model**: Virto uses the **Data Mapping** pattern to isolate the domain model from the persistence specific one (**Persistence Ignorance** principle). This folder contains classes that get directly mapped to database tables with using EF fluent API.
+* **Model**: Virto uses the **Data Mapping** pattern to isolate the domain model from the persistence specific one (**Persistence Ignorance** principle). This folder contains classes that get directly mapped to database tables with using EF fluent API.
     
-+ **Repositories**: An implementation of repositories that provides a set of methods to access the database. These methods hide the code needed to implement various database features you need.
+* **Repositories**: An implementation of repositories that provides a set of methods to access the database. These methods hide the code needed to implement various database features you need.
     
-+ **Services**: Contains the domain CRUD services and other business logic implementations.
+* **Services**: Contains the domain CRUD services and other business logic implementations.
 
 ## Module.Web
 
@@ -115,18 +115,18 @@ The `Module.Core` project consists of the followng folders and files:
 |	└── module.manifest
 ```
 
-***Notes:***
+**Notes:**
 
-+ **Content**: Has **CSS** styles for the module user interface.
+* **Content**: Has **CSS** styles for the module user interface.
     
-+ **Scripts**: Contains Angular.js JavaScript files and templates used for module presentation in Platform Manager.
+* **Scripts**: Contains Angular.js JavaScript files and templates used for module presentation in Platform Manager.
     
-+ **dist**: Contains the resulting JavaScript and style bundles as the output of the WebPack bundling process.
+* **dist**: Contains the resulting JavaScript and style bundles as the output of the WebPack bundling process.
     
-+ **Controllers**: Has all [ASP.NET](http://asp.net/) MVC Core REST API controllers.
+* **Controllers**: Has all [ASP.NET](http://asp.net/) MVC Core REST API controllers.
     
-+ **Localizations**: Contains resource files that are used for UI localization.
+* **Localizations**: Contains resource files that are used for UI localization.
     
-+ **Module.cs**: Core module entry point.
+* **Module.cs**: Core module entry point.
     
- + **module.manifest**: A required file that contains meta information describing your module with its dependencies and versions.
+* **module.manifest**: A required file that contains meta information describing your module with its dependencies and versions.

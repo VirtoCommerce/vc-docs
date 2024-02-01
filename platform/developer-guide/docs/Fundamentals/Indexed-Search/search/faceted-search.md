@@ -13,7 +13,9 @@ both in the category facet with the shirt category ID and in the color facet wit
 
 This policy allows you to select multiple values of the same facet (e.g using a checkbox).
 
-You can read more on how muti-select faceting search works in [this article ](https://blog.griddynamics.com/multi-select-faceting-for-nested-documents-in-solr) telling you how to implement multi-select faceting for nested documents in Solr. You may also want to check out [Elastic search post filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter).
+![Readmore](media/readmore.png){: width="25"} [How to implement multi-select faceting for nested documents in Solr](https://blog.griddynamics.com/multi-select-faceting-for-nested-documents-in-solr)
+
+![Readmore](media/readmore.png){: width="25"} [Elastic search post filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter)
 
 The muti-select faceting search policy is enabled by default and you do not need any extra parameters or setting to activate it.
 
@@ -27,6 +29,6 @@ Open **Stores**, select an appropriate store, click the **Aggregation Properties
 
 There are two facet types (aggregation types) that are supported for configuration:
 
-+ Attribute facet: Displays and enables using all or selected values of the selected property for facet filters, e.g `color: Red(1), Blue(22)`, etc.
+* **Attribute facet**: Displays and enables using all or selected values of the selected property for facet filters, e.g `color: Red(1), Blue(22)`, etc.
     
-+ Range facet: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.
+* **Range facet**: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.

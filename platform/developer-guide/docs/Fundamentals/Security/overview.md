@@ -9,10 +9,9 @@ There are many aspects of security in Virto Platform and Web API. We will, howev
 
 	+ **Authorization** refers to what you can do, e.g., access, edit, or delete permissions for documents; you can get authorized to do something only once the authentication is complete.
 
-## Next steps
 
-+ Learn how the [Virto authentication](authentication/issuing-and-using-access-token.md) works
+![Readmore](media/readmore.png){: width="25"} [Virto authentication](authentication/issuing-and-using-access-token.md)
 
-+ Learn how Virto [authorizes](authorization/overview.md) API calls
+![Readmore](media/readmore.png){: width="25"} [Virto authorization](authorization/overview.md) API calls
 
-+ Explore how to [extend authorization](extensions/extending-authorization-policies.md)
+![Readmore](media/readmore.png){: width="25"} [Extending authorization](extensions/extending-authorization-policies.md)
