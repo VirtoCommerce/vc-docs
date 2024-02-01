@@ -9,7 +9,10 @@ The Import App is an application integrated into the work environment, offering 
 * Initiate an import job with detailed information available during execution, allowing users to interrupt the job.
 * Re-run import jobs without changing parameters in case of issues.
 * View import history for each profile.
-* Download a template for the import file. See [Instructions on developing your own Importers](02-building-custom-importer.md).
+* Download a template for the import file. 
+
+    ![Readmore](media/readmore.png){: width="25"} [Instructions on developing your own Importers](02-building-custom-importer.md)
+
 * Access statistics on completed imports, including the count of records in the source, imported records, and errors.
 * View detailed information about errors, with the option to download a file containing a list of errors for each record when using large data sources (if provided by the Importer developer).
 

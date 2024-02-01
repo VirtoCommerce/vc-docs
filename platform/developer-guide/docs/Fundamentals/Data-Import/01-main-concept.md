@@ -8,11 +8,11 @@ VC Data Import allows you to define what kind of data you want to import into yo
 
 Using VC Data Import, you can benefit from:
 
-+ Managing user defined import profiles directly from the platform manager UI.
+* Managing user defined import profiles directly from the platform manager UI.
     
-+ Seeing the import history with detailed logs.
+* Seeing the import history with detailed logs.
     
-+ Working with an extensibility model that enables extending the existing built-in importers with new data types and sources.
+* Working with an extensibility model that enables extending the existing built-in importers with new data types and sources.
 
 ## Core Structure
 The chart below shows VC Data Import's high level logical structure:
@@ -48,7 +48,10 @@ To create a Custom Importer, the developer needs to define their own DataReader 
 
 The following Module services are also available for developers to use in the [UI](import-app.md#user-interface-and-work-scenarios):
 
-* `IImportRunService` is the main service for managing the execution of the import process. The service provides access to methods for previewing `PreviewAsync``, launching an import `RunImportAsync`, and creating a similar import task in the form of a background job `RunImportBackgroundJob`.
+* `IImportRunService` is the main service for managing the execution of the import process. The service provides access to the following methods:
+    * `PreviewAsync` for previewing.
+    * `RunImportAsync` for launching import.
+    * `RunImportBackgroundJob` for creating a similar import task as a background job.
 
 * `IImportProfilesSearchService` and `IImportRunHistorySearchService` provide search capabilities for `ImportProfiles` and `ImportRunHistory` respectively.
 

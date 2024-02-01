@@ -1,9 +1,11 @@
-#Using Domain Events
-As its name suggests, a domain event is something that happened in a particular domain, and something you want other parts of the same domain to be aware of and potentially react to (the in-process principle).
+# Using Domain Events
+
+A domain event is something that happened in a particular domain, and something you want other parts of the same domain to be aware of and potentially react to (the in-process principle).
 
 An important benefit of domain events is that any side effects of something happening in a domain can be expressed explicitly and not implicitly. Those side effects must be consistent, i.e. either all operations related to the task happen, or none. In addition, domain events enable a better separation of concerns among classes within the same domain.
 
-## How to Define Domain Events
+## Define Domain Events
+
 A domain event is just a simple POCO type that represents an interesting occurence in the domain:
 
 ```csharp
@@ -13,8 +15,9 @@ public class CustomDomainEvent : DomainEvent
 }
 ```
 
-## How to Define New Event Handler 
-Defining a new event handler works in the following way:
+## Define New Event Handler 
+
+Define a new event handler as follows:
 
 ```csharp
 public class CutomDomainEventHandler : IEventHandler<CustomDomainEvent>
@@ -26,8 +29,9 @@ public class CutomDomainEventHandler : IEventHandler<CustomDomainEvent>
 }
 ```
 
-## How to Register Event Handler and Subscribe to Domain Event
-To register an event handler or subscribe to a domain event, use the following code:
+## Register Event Handler and Subscribe to Domain Event
+
+Register an event handler or subscribe to a domain event as follows:
 
 ```csharp
 void  Initialize(IServiceCollection serviceCollection)
@@ -46,16 +50,18 @@ eventHandlerRegistrar.RegisterHandler<CustomDomainEvent>((message, token) => app
 }
 ```
 
-## How to Raise Domain Events
-In your domain entities, when any significant status change happens, you may want to raise your domain events like this:
+## Raise Domain Events
+
+In your domain entities, when any significant status change happens, you can raise your domain events as follows:
 
 ```
 var eventPublisher = _container.Resolve<IEventPublisher>();
 eventPublisher.Publish(new CustomDomainEvent()));
 ```
 
-## How to Override Existing Event Handler with New Derived Type
-This option may be also of use in some cases, and it is done this way:
+## Override Existing Event Handler with New Derived Type
+
+This might be a useful option in some cases:
 
 ```csharp
 //Derive a new handler from an overrided handler class

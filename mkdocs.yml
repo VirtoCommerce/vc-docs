@@ -76,7 +76,7 @@ markdown_extensions:
     - pymdownx.snippets
 
 plugins:
-    - monorepo
+ #  - monorepo
     - search: # necessary for search to work
  #   - autolinks
     - awesome-pages:
@@ -104,19 +104,19 @@ edit_uri: edit/dev/docs/
 # Copyright
 copyright: Copyright &copy; 2024. All rights reserved.
 
-nav:
-    - Marketplace:
-        - Home: '!include ./marketplace/mkdocs.yml'
-        - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
-        - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
-    - Storefront:
-        - Home: '!include ./storefront/mkdocs.yml'
-        - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
-        - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
-    - Platform:
-        - Home: '!include ./platform/mkdocs.yml'
-        - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
-        - User Guide: '!include ./platform/user-guide/mkdocs.yml'
+# nav:
+  #  - Marketplace:
+  #      - Home: '!include ./marketplace/mkdocs.yml'
+  #      - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
+  #      - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
+  #  - Storefront:
+  #      - Home: '!include ./storefront/mkdocs.yml'
+  #      - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
+  #      - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
+  #  - Platform:
+  #      - Home: '!include ./platform/mkdocs.yml'
+  #      - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
+  #      - User Guide: '!include ./platform/user-guide/mkdocs.yml'
 
 extra:
     homepage: /

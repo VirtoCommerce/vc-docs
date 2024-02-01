@@ -2,7 +2,8 @@
 Virto Commerce Platform enables sending email notifications for various system events, such as restoring passwords, customer order processing, etc. To send such notifications, use a third-party email service provider by setting up an mail gateway so that the platform may start sending emails. Currently, there are two gateways options: SMTP and SendGrid.
 
 ## Prerequisites
-To enable sending and receiving notifications, you must have the [Notification module](https://github.com/VirtoCommerce/vc-module-notification ) installed.
+
+* You must have the [Notification module](https://github.com/VirtoCommerce/vc-module-notification) installed.
 
 ## Configuring SMTP Email Settings
 To enable sending notifications through Gmail:
@@ -27,7 +28,7 @@ To enable sending notifications through Gmail:
     ```
 
 !!! warning
-    * After modifying the **appsettings.json** file, restart the application to apply the changes.
+    After modifying the **appsettings.json** file, restart the application to apply the changes.
 
 ## Configuring SendGrid Email Settings
 To work with the SendGrid settings:

@@ -103,7 +103,7 @@ nav:
                 - Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
                 - Encryption and Signing Credentials: Fundamentals/Security/encryption-and-signing-credentials.md
                 - Extensions:
-                      - Extending Authorizarion Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
+                      - Extending Authorization Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
                       - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
                       - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
                 - Security in Depth: Fundamentals/Security/security-in-depth.md
@@ -462,6 +462,8 @@ nav:
                 - Extending Cart Query With a Custom Parameter: Tutorials-and-How-tos/How-tos/extending-cart-query-with-custom-parameter.md
                 - Customizing Cart Validation Policies: Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies.md
                 - Upgrading to Virto Commerce on .Net8: Tutorials-and-How-tos/How-tos/upgrading-to-net8.md
+                - Deploying VC Platform to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-platform-on-azure.md
+                - Deploying VC Storefront to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-storefront-on-azure.md
     - Updating Virto Commerce Based Projects:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
