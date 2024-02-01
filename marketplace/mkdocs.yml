@@ -1,10 +1,10 @@
 INHERIT: ../mkdocs.yml
-theme:   
+theme:
     custom_dir: ../overrides
-  
 
 # Project information
-site_name: Marketplace Docs
+extra_site_name: Marketplace Docs
+site_name: marketplace
 site_description: Marketplace documentation center
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/new
@@ -20,19 +20,19 @@ extra:
             - title: User Guide
               image: assets/images/storefront-userquide.png
               description:
-                - title: Vendor Portal
-                  link: user-guide/Vendor-portal/overview
-                - title: Operator Portal
-                  link: user-guide/Operator-portal/overview
+                  - title: Vendor Portal
+                    link: user-guide/Vendor-portal/overview
+                  - title: Operator Portal
+                    link: user-guide/Operator-portal/overview
             - title: Developer Guide [In Progress]
               image: assets/images/storefront-devguide.png
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
-                - title: Release Notes
-                  link: https://github.com/VirtoCommerce/vc-deploy-marketplace/releases
-                - title: Github
-                  link: https://github.com/VirtoCommerce/vc-deploy-marketplace
+                  - title: Release Notes
+                    link: https://github.com/VirtoCommerce/vc-deploy-marketplace/releases
+                  - title: Github
+                    link: https://github.com/VirtoCommerce/vc-deploy-marketplace
         release_notes:
             - title: News Digest January 2024
               link: https://www.virtocommerce.org/t/news-digest-january-2024/663
@@ -58,3 +58,8 @@ extra:
               link: https://www.virtocommerce.org/t/news-digest-august-2023/602
               type: Digest
               date: 1 August 2023
+
+nav:
+    - Home: index.md
+    - Developer Guide: "!include ./developer-guide/mkdocs.yml"
+    - User Guide: "!include ./user-guide/mkdocs.yml"
