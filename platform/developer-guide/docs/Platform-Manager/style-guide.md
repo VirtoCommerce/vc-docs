@@ -1,8 +1,6 @@
 ## Introduction
 
-This Virto Commerce Platform Style Guide will help you develop consistent modules for the platform. You can use the existing styles described in our online [Style Guide](https://virtocommerce.com/guides/style-guide) or, alternatively, create your own styles using the rules below.
-
-Apart from our [Style Guide](https://virtocommerce.com/guides/style-guide) that refers to correctly using HTML and CSS when platform UI, we also have [Blade Constructor](https://virtocommerce.com/guides/blade-constructor) that you can use to create your custom blades.
+This Virto Commerce Platform Style Guide will help you develop consistent modules for the platform. You can create your own styles using the rules below.
 
 ## Rules
 

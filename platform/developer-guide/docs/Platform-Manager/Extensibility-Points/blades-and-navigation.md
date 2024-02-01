@@ -7,7 +7,7 @@ Virto Commerce Platform's UI is organized and divided into multiple screens call
 
 ## Blade Structure and Properties
 
-Every blade is instantiated from a highly customizable template. The template has a few basic parts, such as the maximize area, top and title bottons, toolbar, main content placeholders, etc. We have a dedicated *Blade constructor* page showing all customization options and allowing you to build your own blade on the fly. Our *Blade constructor* is also a useful resource for quick reference. You can check it out [here](https://virtocommerce.com/guides/blade-constructor).
+Every blade is instantiated from a highly customizable template. The template has a few basic parts, such as the maximize area, top and title bottons, toolbar, main content placeholders, etc.
 
 Any blade object has the following properties that Virto Commerce platform respects:
 

@@ -89,7 +89,7 @@ The Virto platform supports:
 * MySql Server 5.7 and higher.
 * PostgreSQL 12 and higher.
 
-![Readmore](media/readmore.png){: width="25"} [Configuring Platform with Database Providers](../Fundamentals/Persistence/DB-Agnostic/overview.md) section
+![Readmore](media/readmore.png){: width="25"} [Configuring Platform with Database Providers](../Fundamentals/Persistence/DB-Agnostic/overview.md)
 
 ## Supported Browsers
 The Virto platform supports:

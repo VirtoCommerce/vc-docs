@@ -304,7 +304,7 @@ This node manages caching configuration.
 | Redis                     |                                           | Redis configuration. Includes the message channel to use and the number of retries.
 | CacheEnabled              | <ul><li>`true`</li><li>`false`</li></ul>  | <ul><li>Cache entries are retained based on the expiration settings.</li><li>Disables caching of application data for the entire application.</li></ul> Used when `ConnectionStrings:RedisConnectionString` is not specified.
 | CacheSlidingExpiration    | `"0:15:00"`                               | The cache entry will expire if it is not accessed for a specified amount of time.<br>Used when `CacheAbsoluteExpiration` is not defined.
-| CacheAbsoluteExpiration   | `"0:5:00"`                                | The Cache entry will expire after a specified amount of time. <br>Used when `RedisConnectionString` is not specified.
+| CacheAbsoluteExpiration   | `"0:5:00"`                                | The cache entry will expire after a specified amount of time. <br>Used when `RedisConnectionString` is not specified.
 
 
 **Examples**
@@ -519,6 +519,7 @@ This node configures external sources, from which modules are being installed an
     ]
   }
 ```
+
 <!--modularity-end-->
 
 
@@ -613,7 +614,7 @@ This node configures full text search for the `VirtoCommerce.Search` module.
 | ----------------------------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Provider                    | `"Lucene"`                | This **required** setting specifies the current search provider. The supported values are  `Lucene`, `AzureSearch`, and `ElasticSearch`.      |
 | Scope                       | `"default"`               | This setting determines the scope to use and is **required**.                                                                                 |
-| Lucene                      |                           | Lucene provider configuration for the **VirtoCommerce.LuceneSearch** module.<br>Used when the `Provider` setting has the `Lucene` vaue.            |
+| Lucene                      |                           | Lucene provider configuration for the **VirtoCommerce.LuceneSearch** module.<br>Used when the `Provider` setting has the `Lucene` value.            |
 | AzureSearch                 |                           | AzureSearch provider configuration for the **VirtoCommerce.AzureSearch** module.<br>Used when the `Provider` setting has the `AzureSearch` value.  |
 | ElasticSearch               |                           | Elasticsearch  provider configuration for the **VirtoCommerce.ElasticSearch** module.<br>Used when the `Provider` setting has the `ElasticSearch` value.|
 |OrderFullTextSearchEnabled   | `true`<br> `false`        | This boolean setting enables full-text search for orders.<br>If true (by default), full-text search for orders is enabled,<br>and it allows searching for orders based on their content. |

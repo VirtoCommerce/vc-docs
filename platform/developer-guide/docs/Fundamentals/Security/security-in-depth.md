@@ -14,7 +14,7 @@ Using [ASP.NET](http://asp.net/) Core Identity enables several scenarios:
 
 To enable token authentication, ASP.NET Core supports multiple options for using **OAuth 2.0** and **OpenID Connect**. We take advantage of a good third-party library and use **OpenIddict** to provide a simple and easy-to-use solution to implement an OpenID Connect server within the platform application.
 
-**OpenIddict** is based on `AspNet.Security.OpenIdConnect.Server` (ASOS) to control the **OpenID Connect** authentication flow and can be used with any membership stack, including ASP.NET Core Identity. Also, it supports [various token formats] (https://openiddict.github.io/openiddict-documentation/guide/token-formats.html), although in Virto platform, we use only JWT token for authorization because of the following advantages:
+**OpenIddict** is based on `AspNet.Security.OpenIdConnect.Server` (ASOS) to control the **OpenID Connect** authentication flow and can be used with any membership stack, including ASP.NET Core Identity. Also, it supports various token formats, although in Virto platform, we use only JWT token for authorization because of the following advantages:
 
 + **Stateless:** The token contains all information to identify the user, eliminating the need for session state.
 
@@ -28,23 +28,18 @@ Adding an **OpenID Connect** server to the platform allows you to support token 
 
 ![OpenID Connect chart](media/openid-chart.png)
 
-Virto platform uses JWT token authentication and OAuth2 Password, Client Credentials and Refresh token flows to issue and consume authorization token for clients (see [here](https://openiddict.github.io/openiddict-documentation/guide/token-formats.html) for details).
+Virto platform uses JWT token authentication and OAuth2 Password, Client Credentials and Refresh token flows to issue and consume authorization token for clients.
 
-You can read more  about how **OpenIddict** is integrated into Virto Commerce [here](https://virtocommerce.com/blog/how-to-secure-aspnet-core-applications-with-openiddict-using-virto-commerce-platform).
+![Readmore](media/readmore.png){: width="25"} [OpenIddict integration to Virto Commerce](https://virtocommerce.com/blog/how-to-secure-aspnet-core-applications-with-openiddict-using-virto-commerce-platform)
 
+![Readmore](media/readmore.png){: width="25"} [Understanding OAuth2](http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/)
 
+![Readmore](media/readmore.png){: width="25"} [ASP.NET Core Authentication](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
-## Additional Resources
-For more information, feel free to check out these useful resources:
+![Readmore](media/readmore.png){: width="25"} [Resource-Based Authentication](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-3.0)
 
-+ [Understanding OAuth2](http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/)
+![Readmore](media/readmore.png){: width="25"} [ASP.NET Core Authorization](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
-+ [ASP.NET Core Authentication](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
+![Readmore](media/readmore.png){: width="25"} [Role-based Authorization](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
-+ [Resource-Based Authentication](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-3.0)
-
-+ [ASP.NET Core Authorization](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
-
-+ [Role-based Authorization](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
-
-+ [Custom Policy-Based Authorization](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
+![Readmore](media/readmore.png){: width="25"} [Custom Policy-Based Authorization](https://docs.microsoft.com/aspnet/core/security/authorization/policies)

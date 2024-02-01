@@ -4,11 +4,11 @@ VC Platform supports two logging libraries out of the box:
 
 * Serilog (built-in in the platform). 
 
-    [Read more](https://serilog.net/){ .md-button }
+    ![Readmore](media/readmore.png){: width="25"} [Serilog overview](https://serilog.net/)
 
 * MS Azure Application Insights (as separated module). 
 
-    [Read more](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview){ .md-button }
+    ![Readmore](media/readmore.png){: width="25"} [App Insights overview](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
 
 !!! NOTE
 
@@ -20,7 +20,7 @@ Here are basic usage scenarios how to use platform logging.
 
 ### Configuring logging
 
-Logging configuration is provided by the `Serilog` section of appsettings.{ENVIRONMENT}.json files, where the `{ENVIRONMENT}` placeholder is the [environment](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-7.0). 
+Logging configuration is provided by the `Serilog` section of **appsettings.{ENVIRONMENT}.json files**, where the `{ENVIRONMENT}` placeholder is the [environment](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-7.0). 
 
 Here is an example of Serilog configuration. In this file we use two sinks (Console and Debug) for writing logs, and also define default severity level for lg.
 
@@ -52,7 +52,7 @@ In this example:
 * The `Microsoft.AspNetCore` category applies to all categories that start with `Microsoft.AspNetCore`. For example, this setting applies to the `Microsoft.AspNetCore.Routing.EndpointMiddleware` category. 
 * The `Microsoft.AspNetCore` category logs at log level `Information` and higher.
 
-[See more configuration examples](https://github.com/serilog/serilog-settings-configuration){ .md-button }
+[See more configuration examples](https://github.com/serilog/serilog-settings-configuration)
 
 ### Writing Log Events
 
