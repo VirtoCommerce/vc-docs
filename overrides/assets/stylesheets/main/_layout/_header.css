@@ -16,6 +16,8 @@
 .md-header__button.md-logo {
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 10px;
 }
 
 .md-header__inner .md-grid {
