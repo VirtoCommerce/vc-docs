@@ -7,7 +7,7 @@ theme:
 extra_site_name: Storefront User Docs
 site_name: storefront/user-guide
 site_description: --TDB--
-
+site_url: https://docs.virtocommerce.org/storefront/user-guide
 
 # Repository
 repo_name: VirtoCommerce/vc-platform

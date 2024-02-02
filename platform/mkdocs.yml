@@ -8,7 +8,7 @@ extra_site_name: Platform docs
 site_name: platform
 site_description: Platform documentation center
 site_author: Virto Commerce
-site_url: https://docs.virtocommerce.org/new
+site_url: https://docs.virtocommerce.org/platform
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
@@ -20,6 +20,7 @@ extra:
         documentation:
             - title: User Guide
               image: assets/images/storefront-userquide.png
+              link: user-guide
               description:
                 - title: Getting Started
                   link: user-guide/getting-started
@@ -27,6 +28,7 @@ extra:
                   link: user-guide/
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
+              link: developer-guide
               description:
                 - title: Installation Guide
                   link: developer-guide/Getting-Started/Installation-Guide/windows
@@ -94,6 +96,6 @@ extra:
 
 nav:
     - Home: index.md
-    # - Developer Guide: "!include ./developer-guide/mkdocs.yml"
-    # - User Guide: "!include ./user-guide/mkdocs.yml"
+    - Developer Guide: "!include ./developer-guide/mkdocs.yml"
+    - User Guide: "!include ./user-guide/mkdocs.yml"
 
