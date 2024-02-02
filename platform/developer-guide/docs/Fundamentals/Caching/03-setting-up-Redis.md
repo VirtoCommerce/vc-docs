@@ -8,7 +8,7 @@ Running multiple instances of your application, all accessing the same distribut
 3. The backplane knows all connected clients and which servers they are on.
 4. The backplane sends a message to all clients via their respective servers.
 
-For more information on why we do not use distributed cache to solve this problem, read the [article](https://virtocommerce.medium.com/how-we-improved-the-performance-of-b2b-ecommerce-platform-by-data-caching-in-azure-cloud-71b27995066c).
+![Readmore](media/readmore.png){: width="25"} [Why we do not use distributed cache to solve the problem](https://virtocommerce.medium.com/how-we-improved-the-performance-of-b2b-ecommerce-platform-by-data-caching-in-azure-cloud-71b27995066c)
 
 ## Implementing Cache Backplane Using Redis Pub/Sub Channel
 
@@ -36,7 +36,7 @@ To add a Redis cache backplane to the Virto platform at the configuration stage,
    * For Azure based instance, save the connection string in App Service Configuration or another secure storage.
 
 !!!warning
-	* Use the same `RedisConnectionString` for all platform instances. Their local cache instances must be synchronized as well.
+	Use the same `RedisConnectionString` for all platform instances. Their local cache instances must be synchronized as well.
 
 ### How It Works
 
@@ -52,9 +52,6 @@ Note that:
 * The performance of the cache will be slightly degraded due to the network traffic and overhead involved.
 * Synchronization will not occur on all clients at the same time, which may result in some minor delays.
 
-## Additional Resources
-For more information, refer to:
-
--   [Redis Overview](https://redis.io/)
+![Readmore](media/readmore.png){: width="25"} [Redis overview](https://redis.io/)
     
--   [How to Scale out Platform Based on Azure ](https://docs.virtocommerce.org/techniques/how-scale-out-platform-on-azure/)
+![Readmore](media/readmore.png){: width="25"} [How to scale out platform based on Azure ](https://docs.virtocommerce.org/techniques/how-scale-out-platform-on-azure/)

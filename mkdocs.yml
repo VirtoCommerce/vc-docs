@@ -76,7 +76,7 @@ markdown_extensions:
     - pymdownx.snippets
 
 plugins:
-    - monorepo
+ #  - monorepo
     - search: # necessary for search to work
  #   - autolinks
     - awesome-pages:
@@ -115,6 +115,7 @@ nav:
     - Platform:
         - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
         - User Guide: '!include ./platform/user-guide/mkdocs.yml'
+
 
 extra:
     homepage: /

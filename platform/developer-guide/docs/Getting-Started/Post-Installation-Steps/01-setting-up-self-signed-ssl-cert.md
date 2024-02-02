@@ -1,5 +1,8 @@
 ﻿# Setting up Self-signed SSL Certificate
-Running Virto Commerce Platform with HTTPS requires using an SSL certificate. When it comes to non-production applications or development and testing scenarios, you can use a self-signed certificate. For more information, see [Installing Self Signed SSL Certificate](https://github.com/VirtoCommerce/vc-platform/blob/new_docs/docs/v2.0/developer-guide/Getting-Started/Installation-Guide/Installing-on-Windows/02-installation-windows-on-premises-precompiled-binaries.md#installing-self-signed-ssl-certificate) and [First Time Launch](https://github.com/VirtoCommerce/vc-platform/blob/new_docs/docs/v2.0/developer-guide/Getting-Started/Installation-Guide/Installing-on-Windows/02-installation-windows-on-premises-precompiled-binaries.md#first-time-launch). 
+
+Running Virto Commerce Platform with HTTPS requires using an SSL certificate. When it comes to non-production applications or development and testing scenarios, you can use a self-signed certificate. 
+
+![Readmore](media/readmore.png){: width="25"} [First Time Launch](../Installation-Guide/windows.md#perform-initial-sign-in) 
 
 Although such a certificate implements full encryption, the visitors of your website will see a browser warning saying the certificate should not be trusted.
 
@@ -23,5 +26,5 @@ If this warning appears:
 
     ![Secure connection badge](media/04-secure-badge-in-browser.png)
 
-For more information about self-signed certificates, read [Microsoft .NET guide](https://docs.microsoft.com/en-us/dotnet/core/additional-tools/self-signed-certificates-guide).
+![Readmore](media/readmore.png){: width="25"} [Microsoft .NET guide on self-signed certificates](https://docs.microsoft.com/en-us/dotnet/core/additional-tools/self-signed-certificates-guide)
 

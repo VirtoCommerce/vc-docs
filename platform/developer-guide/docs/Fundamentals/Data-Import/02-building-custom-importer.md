@@ -221,4 +221,4 @@ Follow the intructions below to build your own data importer of a specific type.
 !!! note 
     VC supports CSV for out-of-the-box import. You can create your own file reader to use a different format.
 
-For more information, see [ImportSampleModule](https://github.com/VirtoCommerce/vc-module-import/tree/dev/samples/VirtoCommerce.ImportSampleModule.Web).
+![Readmore](media/readmore.png){: width="25"} [ImportSampleModule](https://github.com/VirtoCommerce/vc-module-import/tree/dev/samples/VirtoCommerce.ImportSampleModule.Web)

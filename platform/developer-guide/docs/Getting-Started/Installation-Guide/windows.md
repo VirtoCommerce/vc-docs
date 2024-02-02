@@ -32,7 +32,7 @@ The platform can be installed:
 * [Manually by downloading the precompiled binaries](windows.md#download-precompiled-binaries).
 * [Using Virto Commerce CLI (vc-build)](windows.md#use-virto-commerce-cli).
 
-### Download precomplied binaries
+### Download Precomplied Binaries
 
 1. Open the [Releases section of the Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform/releases) in GitHub.
 
@@ -64,7 +64,7 @@ To use Virto Commerce CLI (vc-build):
     vc-build install -version 3.293.0
     ```
 
-For more information, refer to [vc-build for packages management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md).
+![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)
 
 ## Setup Platform
 
@@ -127,10 +127,10 @@ You can run the Platform:
 
 === "Run on HTTPS schema (Prefered)"
 
-    1. Install and trust HTTPS certificate. Run steps described in [this article](https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos-1) to trust the .NET Core SDK HTTPS development certificate on Windows.
+    1. Install and trust HTTPS certificate. [Trust the .NET Core SDK HTTPS development certificate on Windows](https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos-1).
 
 
-        Read more about [enforcing HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio#trust)
+        ![Readmore](media/readmore.png){: width="25"} [Enforcing HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio#trust)
 
     1. Run the Platform using the following command:
 
