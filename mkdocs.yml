@@ -4,7 +4,7 @@ theme:
     language: en
 #    features:
 #        - instant # (still experimental) feature fails to load images when folder changes
-    favicon: legacy/media/favicon.ico
+    favicon: assets/icons/favicon.ico
     logo: assets/icons/logo.svg
     logobw: assets/icons/logo-bw.svg
     palette:
