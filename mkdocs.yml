@@ -225,6 +225,10 @@ extra:
               icon: assets/icons/blog.svg
               link: https://virtocommerce.com/blog
               outlineColor: '#FF9162'
+            - title: Versions
+              icon: assets/icons/version-icon.svg
+              link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
+              outlineColor: '#FF9162'
     all_topics:
         megamenu:
             - iconSrc: assets/icons/all-products.svg
@@ -323,12 +327,13 @@ extra:
                   url: https://virtostart-demo-admin.govirto.com/docs/index.html
                 - title: GraphQL API
                   url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
-            - iconSrc: assets/icons/graphql.svg
+            - iconSrc: assets/icons/video-tutorials.svg
               title: Video Tutorials
               url: https://www.youtube.com/c/VirtoCommerce
               external: true
-
-
+            - iconSrc: assets/icons/fire.svg
+              title: How to Upgrade to .NET 8
+              url: /platform/developer-guide/Tutorials-and-How-tos/How-tos/upgrading-to-net8
         footer:
             - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"
