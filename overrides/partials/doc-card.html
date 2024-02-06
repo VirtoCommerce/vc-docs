@@ -3,10 +3,12 @@
 <div class="doc-card">
     {% if "image" in card %}
     <div class="doc-card__icon-wrap">
-        <div
+        <a href="{{card.link}}">
+            <div
             class="doc-card__icon"
             style="background-image: url('{{card.image}}')"
         ></div>
+        </a>
     </div>
     {% endif %}
     <div class="doc-card__wrapper">

@@ -7,7 +7,7 @@ extra_site_name: Marketplace Docs
 site_name: marketplace
 site_description: Marketplace documentation center
 site_author: Virto Commerce
-site_url: https://docs.virtocommerce.org/new
+site_url: https://docs.virtocommerce.org/marketplace
 
 # Repository
 repo_name: VirtoCommerce/vc-deploy-marketplace
@@ -19,12 +19,14 @@ extra:
         documentation:
             - title: User Guide
               image: assets/images/storefront-userquide.png
+              link: user-guide
               description:
                   - title: Vendor Portal
                     link: user-guide/Vendor-portal/overview
                   - title: Operator Portal
                     link: user-guide/Operator-portal/overview
             - title: Developer Guide [In Progress]
+              link: developer-guide
               image: assets/images/storefront-devguide.png
             - title: Other Resources
               image: assets/images/storefront-other.png

@@ -4,7 +4,7 @@ theme:
     language: en
 #    features:
 #        - instant # (still experimental) feature fails to load images when folder changes
-    favicon: legacy/media/favicon.ico
+    favicon: assets/icons/favicon.ico
     logo: assets/icons/logo.svg
     logobw: assets/icons/logo-bw.svg
     palette:
@@ -76,7 +76,7 @@ markdown_extensions:
     - pymdownx.snippets
 
 plugins:
- #  - monorepo
+    - monorepo
     - search: # necessary for search to work
  #   - autolinks
     - awesome-pages:
@@ -93,7 +93,7 @@ extra_site_name: Documentation
 site_name: docs
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
-site_url: https://docs.virtocommerce.org/new
+site_url: https://docs.virtocommerce.org
 
 
 # Repository
@@ -104,19 +104,18 @@ edit_uri: edit/dev/docs/
 # Copyright
 copyright: Copyright &copy; 2024. All rights reserved.
 
-# nav:
-  #  - Marketplace:
-  #      - Home: '!include ./marketplace/mkdocs.yml'
-  #      - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
-  #      - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
-  #  - Storefront:
-  #      - Home: '!include ./storefront/mkdocs.yml'
-  #      - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
-  #      - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
-  #  - Platform:
-  #      - Home: '!include ./platform/mkdocs.yml'
-  #      - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
-  #      - User Guide: '!include ./platform/user-guide/mkdocs.yml'
+nav:
+    - Home: index.md
+    - Marketplace:
+        - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
+        - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
+    - Storefront:
+        - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
+        - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
+    - Platform:
+        - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
+        - User Guide: '!include ./platform/user-guide/mkdocs.yml'
+
 
 extra:
     homepage: /
