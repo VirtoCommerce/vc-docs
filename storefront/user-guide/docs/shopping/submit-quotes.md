@@ -8,10 +8,15 @@ To request personalized pricing (submit a quote):
 
     ![add to quote](../media/create-quote-request.png){: width="600"}
 
-1. Your newly created quote request appears. Here, you can:
-    1. Add your remarks to the quote, if any.
-    1. Review the products list: edit quantities or delete items.
-    1. Select shipping and billing addresses from the list or create new ones.
+1. Your newly created quote request opens. It currently holds the **Draft** status. Here, you can:
+    * Add your remarks to the quote, if any.
+    * Drag and drop or browse additional files. 
+
+        !!! note
+            SCV, DOCX, JPG, PDF, PNG, TXT, XLSX formats are admissible. Each file should not exceed 10MB. Maximum 5 files are allowed. 
+
+    * Review the products list: edit quantities or delete items.
+    * Select shipping and billing addresses from the list or create new ones.
 
 1. Click **Submit** to submit the quote to the vendor. The request receives the status **Processing**.
 

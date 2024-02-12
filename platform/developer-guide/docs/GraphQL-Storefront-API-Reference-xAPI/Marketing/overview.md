@@ -8,4 +8,4 @@ One of its prominent functionalities is the ability to evaluate dynamic content 
 |----------------------------------------------------------------	|-------------------------------------------------------------------------------	|
 | [EvaluateDynamicContent](queries/evaluate-dynamic-content.md) 	| [DynamicContentItemType](objects/DynamicContentItemType.md)<br> [EvaluateDynamicContentResultType](objects/EvaluateDynamicContentResultType.md) 	|
 
-[Download Marketing module](https://github.com/VirtoCommerce/vc-module-marketing/releases){ .md-button }
+[![Download module](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-marketing/releases)

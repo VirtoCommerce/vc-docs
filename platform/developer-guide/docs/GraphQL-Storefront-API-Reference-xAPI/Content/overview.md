@@ -6,4 +6,4 @@ The `Content` module serves as a component for managing and delivering dynamic c
 |-------------------------------------------------------------------------------	|-------------------------------------------------	|
 | [Pages](Queries/pages.md)<br> [Menu](Queries/menu.md)<br>[Menus](Queries/menus.md)| [PageConnection](Objects/PageConnection.md)<br> [PageEdge](Objects/PageEdge.md)<br> [PageType](Objects/PageType.md)<br> [MenuLinkListType](Objects/MenuLinkListType.md) <br>[MenuLinkType](Objects/MenuLinkType.md) |
 
-[Download Content module](https://github.com/VirtoCommerce/vc-module-content/releases){ .md-button }
+[![Download module](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-content/releases)
