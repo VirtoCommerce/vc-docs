@@ -1,13 +1,13 @@
 # Appsettings.json
 As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
-
+<!--caching-start-->
 ## Configuration settings
 
 The configuration keys are hierarchical, and the most convenient way to manage them is to work with the **appsettings.json** file. The following sections, organized by configuration node and alphabetically, show the general structure of the file, provide defaults, and explain what each key is.
 
 !!! note
     All settings listed below are optional unless marked **Required**.
-
+<!--caching-end-->
 ### ConnectionStrings
 
 These **required** settings represent connection strings for VC Platform and modules.
@@ -395,6 +395,36 @@ Example settings for the `DataProtection` section:
 		"TokenLifespan": "24:00:00",		
 	},
 ```
+
+### File Upload
+
+This node configures file upload settings for your application:
+
+| Node                      |Default or sample value            | Description                                               |
+|---------------------------|-----------------------------------|-----------------------------------------------------------|
+| RootPath                  |                                   | The root directory where uploaded files will be stored.   |
+| Scopes.Scope              |                                   | The scope or category of the uploaded files.              |
+| Scopes.MaxFileSize        | 123                               | The maximum size in bytes allowed for each uploaded file. |
+| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | The list of allowed extensions for uploads.               |   
+
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "FileUpload": {
+    "RootPath": "attachments",
+    "Scopes": [
+      {
+        "Scope": "quote-attachments",
+        "MaxFileSize": 123,
+        "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
+      }
+    ]
+  }
+}
+```
+
 
 ### FrontendSecurity
 

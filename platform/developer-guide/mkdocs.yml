@@ -33,6 +33,13 @@ nav:
     - Back End Architecture:
           - Tech Stack: Back-End-Architecture/01-tech-stack.md
           - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
+    - CLI tools:
+          - Overview: CLI-tools/overview.md
+          - Getting started: CLI-tools/getting-started.md
+          - Build Automation: CLI-tools/build-automation.md
+          - Package Management: CLI-tools/package-management.md
+          - Cold Start and Data Migration: CLI-tools/cold-start-data-migration.md
+          - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
     - Fundamentals:
           - Caching:
                 - Overview: Fundamentals/Caching/01-overview.md
@@ -328,6 +335,15 @@ nav:
                       - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
                       - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
+          - File: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
+                - Getting started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
+                - Queries:
+                      - fileUploadOptions: GraphQL-Storefront-API-Reference-xAPI/File/Queries/fileUploadOptions.md
+                - Objects:
+                      - FileUploadScopeOptionsType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/FileUploadScopeOptionsType.md
+                - Mutations: 
+                      - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
           - Profile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
                 - Queries:

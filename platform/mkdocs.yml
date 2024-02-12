@@ -26,6 +26,8 @@ extra:
                   link: user-guide/getting-started
                 - title: User Documentation
                   link: user-guide/
+                - title: Versions
+                  link: user-guide/versions/virto3-products-versions
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
               link: developer-guide
@@ -52,6 +54,10 @@ extra:
                 - title: Github
                   link: https://github.com/VirtoCommerce/vc-platform/
         release_notes:
+            - title: News Digest February 2024
+              link: https://www.virtocommerce.org/t/february-2024-news-digest/673
+              type: Digest
+              date: 7 February 2024
             - title: News Digest January 2024
               link: https://www.virtocommerce.org/t/news-digest-january-2024/663
               type: Digest
@@ -92,6 +98,10 @@ extra:
                 - title: Blog
                   icon: assets/icons/blog.svg
                   link: https://vrtocommerce.com/blog
+                  outlineColor: '#FF9162'
+                - title: Versions
+                  icon: assets/icons/version-icon.svg
+                  link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
                   outlineColor: '#FF9162'
 
 nav:
