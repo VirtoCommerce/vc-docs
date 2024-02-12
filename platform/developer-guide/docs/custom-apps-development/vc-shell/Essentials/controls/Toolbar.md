@@ -63,6 +63,9 @@ const schema: DynamicDetailsSchema = {
 
 This schema creates a toolbar with one button  featuring `refresh` id, `Refresh` title, `fas fa-sync-alt` icon, and `refresh` method. However, the button remains invisible until you add a create method to the `toolbarOverrides` object in the view composable scope. See instruction below to learn how to do this.
 
+!!! note
+    You can specify the localization key for the `title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.
+
 
 #### Bind properties and methods
 
@@ -104,9 +107,47 @@ The `visible` and `disabled` properties can be a boolean, a function, or even a 
 
 The`clickHandler` method also has an argument with the provided `bladeContext` object.
 
-![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeList Blade Context](../dynamic-views/Dynamic-Blade-List.md#dynamicbladelist-blade-context) 
+![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeList Blade Context](../dynamic-views/Dynamic-Blade-List.md#dynamicbladelist-blade-context)
 
 ![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm Blade Context](../dynamic-views/Dynamic-Blade-Form.md#dynamicbladeform-blade-context)
+
+#### Creating toolbar without schema
+
+If you want to create a toolbar without a schema, for example if you want to generate it dynamically, you can use this approach. A dynamically generated toolbar can be an array of objects, an object with key-toolbar object pairs, or a function that returns an array of objects. When creating a toolbar using a function, it receives the blade context as an argument. In this example, we will look at how to create a toolbar using an array of objects:
+
+```typescript
+const useList = (args: // ...): UseList => {
+    const toolbar = ref([]) as Ref<IBladeToolbar[]>;
+    // ...
+    const scope = ref<ListScope>({
+        // ...
+        toolbarOverrides: computed(() => toolbar.value)
+    });
+
+    // Here we executes createToolbar on blade mount
+    watch(
+        () => args?.mounted.value,
+            async () => {
+                createToolbar();
+            },
+    );
+
+    // Here we want create toolbar with single refresh button
+    const createToolbar = () => {
+        toolbar.value.push({
+            title: 'Refresh',
+            icon: "fas fa-refresh",
+            async clickHandler() {
+                // your custom logic here
+            },
+            disabled: !args.props.param,
+        });
+    };
+}
+```
+
+!!! note
+    You should use this approach only if you unable to create toolbar using schema, for example if you want to generate it dynamically from retrieved data from API.
 
 ## Toolbar API
 

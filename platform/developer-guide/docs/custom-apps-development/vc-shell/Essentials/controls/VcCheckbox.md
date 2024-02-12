@@ -34,7 +34,7 @@ Include the `vc-checkbox` component in your Vue application, providing theming a
 
 ## Checkbox API
 
-API empowers you to create dynamic and interactive card components to customize its appearance and behavior.
+API empowers you to create dynamic and interactive checkbox components to customize its appearance and behavior.
 
 ## Basic Vue
 
@@ -58,7 +58,7 @@ To customize the appearance and behavior of checkboxes, use the following props:
 
 ### Slots
 
-To enhance the content of the `vc-chekbox` component, use the slot system:
+To enhance the content of the `vc-checkbox` component, use the slot system:
 
 | Name      | Description                                      |
 | --------- | -------------------------------------------------|
@@ -67,7 +67,7 @@ To enhance the content of the `vc-chekbox` component, use the slot system:
 
 ### Emits
 
-To interact with the `vc-checkbox` component, use the emitted events. The `click` event, triggered when the button is clicked, allows you to implement dynamic behaviors and responses within your application:
+To interact with the `vc-checkbox` component, use the emitted events. The `update:modelValue` event is triggered when the value of the component changes:
 
 | Name                | Parameters          | ReturnType | Description                                                     |
 | ------------------- | -----------------   | ---------- | --------------------------------------------------------------- |
@@ -97,6 +97,7 @@ interface CheckboxSchema {
     visibility?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -108,11 +109,12 @@ To incorporate the checkbox into your dynamic applications, define the following
 | `component` {==string==}  | `vc-checkbox`                                                                                                                                             |
 | `trueValue` {==boolean==} | Set value for checked state.                                                                                                                              |
 | `falseValue` {==boolean==}| Set value for unchecked state.                                                                                                                            |
-| `label` {==string==}      | Checkbox label that is displayed above the checkbox. Also available interpolation `{}` syntax based on current element context.                       |
+| `label` {==string==}      | Checkbox label that is displayed above the checkbox. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                      |
 | `rules` {==IValidationRules==} | Checkbox validation rules. Could be used to validate checkbox value. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules.     |
-| `tooltip` {==string==}    | Checkbox tooltip that is displayed when hovering over the checkbox label tooltip icon.                                                                    |
-| `property` {==string==}   | Property name that is used for binding checkbox value to blade data. <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.                                                                 |
-| `content` {==string==}    | Text content that is displayed on the right side of the checkbox.                                                                                         |
-| `update` {=={method: string}==} | Update method that is called when checkbox value is changed. Method should be defined in the blade `scope`.                                         |
+| `tooltip` {==string==}    | Checkbox tooltip that is displayed when hovering over the checkbox label tooltip icon. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                                                   |
+| `property` {==string==}   | Property name that is used for binding checkbox value to blade data. <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.                                                               |
+| `content` {==string==}    | Text content that is displayed on the right side of the checkbox. You can specify the localization key for the `content`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                                                                         |
+| `update` {=={method: string}==} | Update method that is called when checkbox value is changed. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`.                                        |
 | `disabled` {=={method: string}==} | Disabled state for component, could be used to disable checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==} | Visibility state for component, could be used to hide checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |

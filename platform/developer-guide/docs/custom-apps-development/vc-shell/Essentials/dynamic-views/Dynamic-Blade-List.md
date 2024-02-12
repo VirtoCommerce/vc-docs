@@ -121,6 +121,15 @@ interface SettingsBase {
     permissions?: string | string[];
     pushNotificationType?: string | string[];
     isWorkspace?: boolean;
+    menuItem?: {
+        id?: string;
+        title: string;
+        icon: string;
+        group?: string;
+        priority: number;
+        inGroupPriority?: number;
+    };
+    width?: `${number}%`;
 }
 ```
 
@@ -136,6 +145,8 @@ interface SettingsBase {
 | `toolbar` | `object[]` | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
 | `permissions` | `string`, `string[]` | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
 | `pushNotificationType` | `string`, `string[]` | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
+| `menuItem` | `{ id?: string; title: string; icon: string; group?: string; priority: number; inGroupPriority?: number; }` | The settings for the navigation menu item. This option is optional. If you do not specify the `menuItem` object, the view will not be added to the navigation menu. More info about menu item creation can be found in the [Navigation/Creating Navigation Menu Items](../navigation.md#creating-navigation-menu-items) section. |
+| `width` | `${number}%` | The width of the collapsed blade. This option is optional. If you do not specify the width, the view will be displayed in 50% width. |
 
 #### Schema Content API
 
@@ -187,7 +198,13 @@ interface ListContentSchema {
 `FilterSchema` is an interface that contains settings for filters:
 
 ```typescript
-type FilterSchema = FilterCheckbox | FilterDateInput
+type FilterSchema = {
+    columns: {
+    title: string;
+    id: string;
+    controls: (FilterCheckbox | FilterDateInput)[];
+  }[];
+}
 ```
 
 At the moment, two types of filters are supported: `FilterCheckbox` and `FilterDateInput`. Learn more about them in the instructions below.
@@ -197,14 +214,13 @@ At the moment, two types of filters are supported: `FilterCheckbox` and `FilterD
 
 ```typescript
 type FilterCheckbox = {
-  columns: {
-    title: string;
-    controls: {
-        field: string;
-        component: "vc-checkbox";
-        data?: { value: string; displayName: string }[];
-    }[];
-  }[];
+  id: string;
+  field: string;
+  multiple?: boolean;
+  data: string;
+  optionValue: string;
+  optionLabel: string;
+  component: "vc-checkbox";
 };
 ```
 
@@ -214,44 +230,79 @@ Since filters represent columns with their own title and controls, they can be m
 | -------------- | ------------------------------------------------ | ---------------------------------------------------------------- |
 | `field`        | `string`                                           | Name of the property that we want to pass for filtering          |
 | `component`    | `"vc-checkbox"`                                    | Component used in the schema                                     |
-| `data`         | `{ value: string; displayName: string }[]` | Array of objects that represent data for checkbox. `value` - value of the checkbox, `displayName` - text that will be displayed near the checkbox |
+| `data`         | `string` | Name of the computed property from `scope` object, that returns array of filter data. |
+| `multiple`     | `boolean`                                          | Indication whether multiple values can be selected. Default: `true` |
+| `optionValue`  | `string`                                           | The name of the property that will be used as a value for the checkbox. |
+| `optionLabel`  | `string`                                           | The name of the property that will be used as a label for the checkbox. |
 
 Let's consider an example of using the `FilterCheckbox` filter. To do this, create a `filter` object in the `vc-table` component schema:
 
 ```typescript
 filter: {
-        columns: [
-          {
+    columns: [
+        {
             id: "statusFilter",
             title: "Status filter",
             controls: [
-              {
-                id: "statusCheckbox",
-                field: "status",
-                component: "vc-checkbox",
-                data: [
-                  {
-                    value: "None",
-                    displayName: "None",
-                  },
-                  { value: "Published", displayName: "Published" },
-                  { value: "HasStagedChanges", displayName: "Has staged changes" },
-                  { value: "WaitForApproval", displayName: "Wait for approval" },
-                  { value: "RequiresChanges", displayName: "Requires changes" },
-                  { value: "Rejected", displayName: "Rejected" },
-                ],
-              },
+                {
+                    id: "statusCheckbox",
+                    field: "status",
+                    component: "vc-checkbox",
+                    data: 'filterData',
+                    optionValue: "value",
+                    optionLabel: "label",
+                },
             ],
-          },
-        ],
-      },
+        },
+    ],
+},
+```
+
+In next step you need to create a computed property `filterData` in the `scope` object of your blade. This property should return an array of objects with the specified `optionValue` and `optionLabel` properties. For example:
+
+```typescript
+
+enum SellerProductStatus {
+    None = "None",
+    Published = "Published",
+    HasStagedChanges = "HasStagedChanges",
+    WaitForApproval = "WaitForApproval",
+    RequiresChanges = "RequiresChanges",
+    Rejected = "Rejected",
+    Approved = "Approved"
+}
+
+const useList = (args: // ...): UseList => {
+    const scope = ref<ListScope>({
+        filterData: computed(() => {
+            return Object.entries(SellerProductStatus).reduce(
+                (acc, [value, displayValue]) => {
+                    if (value.includes(SellerProductStatus.Approved)) return acc;
+
+                    acc.push({
+                        value,
+                        displayValue,
+                    });
+
+                    return acc;
+                },
+                [] as Record<string, string>[],
+            );
+        }),
+    });
+
+    return {
+        // ...,
+        scope: computed(() => scope.value),
+    }
+}
 ```
 
 As a result, you will get the following result:
 
 ![FilterCheckbox](../../../media/filter-checkbox.png)
 
-When one or more values of the filter are selected, their `value` will be recorded in the `status` field, which will be passed to the `query` when requesting data.
+When one or more values of the filter are selected, their value will be recorded in the `status` field, which will be passed to the `query` when requesting data.
 
 ##### FilterDateInput
 
@@ -259,14 +310,10 @@ When one or more values of the filter are selected, their `value` will be record
 
 ```typescript
 type FilterDateInput = {
-  columns: {
-    title: string;
-    controls: {
-      field: string;
-      component: "vc-input";
-      label?: string;
-    }[];
-  }[];
+    id: string;
+    field: string;
+    label?: string;
+    component: 'vc-input';
 };
 ```
 
@@ -278,7 +325,38 @@ Since filters represent columns with their own title and controls, they can be m
 | `component`    | `"vc-input"`       | Component used in the schema             |
 | `label`        | `string`           | Text that will be displayed as input label. |
 
+Let's consider an example of using the `FilterDateInput` filter. To do this, create a `filter` object in the `vc-table` component schema:
 
+```typescript
+filter: {
+    columns: [
+        {
+            id: "orderDateFilter",
+            title: "orderDate",
+            controls: [
+                {
+                    id: "startDateInput",
+                    field: "startDate",
+                    label: "Start date",
+                    component: "vc-input",
+                },
+                {
+                    id: "endDateInput",
+                    field: "endDate",
+                    label: "End date",
+                    component: "vc-input",
+                },
+            ],
+        },
+    ],
+},
+```
+
+As a result, you will get the following result:
+
+![FilterDateInput](../../../media/filter-date-input.png)
+
+When one or more date values of the filter are selected, their values will be recorded in the `startDate` and `endDate` fields, respectively. These values will be passed to the `query` when requesting data.
 
 ### Create composable for DynamicBladeList
 

@@ -46,6 +46,10 @@ It also has a bunch of built-in controls from VC-Shell UI-kit and components for
 - [VcGallery](../controls/VcGallery.md)
 - [VcDynamicProperty](../controls/VcDynamicProperty.md)
 - [VcFieldset](../controls/VcFieldset.md)
+- [VcSwitch](../controls/VcSwitch.md)
+- [VcTable](../controls/VcTable.md)
+- [VcRating](../controls/VcRating.md)
+- [VcCustom](../controls/VcCustom.md)
 - [Widgets](../controls/Widgets.md)
 - [Toolbar](../controls/Toolbar.md)
 

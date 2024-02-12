@@ -496,6 +496,10 @@ nav:
                             - VcFieldset: custom-apps-development/vc-shell/Essentials/controls/VcFieldset.md
                             - VcGallery: custom-apps-development/vc-shell/Essentials/controls/VcGallery.md
                             - Toolbar: custom-apps-development/vc-shell/Essentials/controls/Toolbar.md
+                            - VcSwitch: custom-apps-development/vc-shell/Essentials/controls/VcSwitch.md
+                            - VcTable: custom-apps-development/vc-shell/Essentials/controls/VcTable.md
+                            - VcRating: custom-apps-development/vc-shell/Essentials/controls/VcRating.md
+                            - VcCustom: custom-apps-development/vc-shell/Essentials/controls/VcCustom.md
                             - Widgets: custom-apps-development/vc-shell/Essentials/controls/Widgets.md
                       - Dynamic views:
                             - Overview: custom-apps-development/vc-shell/Essentials/dynamic-views/overview.md

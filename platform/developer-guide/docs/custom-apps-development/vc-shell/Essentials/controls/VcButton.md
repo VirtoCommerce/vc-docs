@@ -4,7 +4,7 @@ The `vc-button` component is an extension of a standard input element with themi
 
 ## Button types
 
-Let's explore various styles and functionalities of the `vc-button` component to suit your design needs. 
+Let's explore various styles and functionalities of the `vc-button` component to suit your design needs.
 
 ### Basic
 
@@ -196,6 +196,7 @@ interface ButtonSchema {
     visibility?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -205,7 +206,7 @@ To incorporate the button into your dynamic applications, define the following p
 | --------------------------------- | ----------------------------------------------------------------- |
 | `id` {==string==}                 | The unique Id for the `vc-button` component.                      |
 | `component` {==vc-button==}       | Component used in schema.                                         |
-| `content` {==string==}            | Button inner text.                                                |
+| `content` {==string==}            | Button inner text. You can specify the localization key for the `content`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                                 |
 | `small` {==boolean==}             | Makes button small sized.                                         |
 | `icon` {==string==}               | Button icon. Uses [AwesomeIcons](https://fontawesome.com/) package.|
 | `iconSize` {==string==}           | Size of the button icon.                                          |
@@ -213,3 +214,4 @@ To incorporate the button into your dynamic applications, define the following p
 | `method` {==string==}             | Method to be called when the button is clicked. Method should be defined in the blade `scope`. |
 | `disabled` {=={method: string}==} | Disabled state for component, could be used to disable button based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value.|
 | `visibility` {=={method: string}==}| Visibility state for component, could be used to hide button based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value.|
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |

@@ -113,6 +113,7 @@ interface MultivalueSchema {
     customTemplate?: {
         component: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -122,10 +123,10 @@ To incorporate the multivalue into your dynamic applications, define the followi
 | ------------------------------------- | -----------------------------------------------   |
 | `id` {==string==}                     | The unique Id for the `vc-multivalue` component.       |
 | `component` {==vc-multivalue==}       | The `vc-multivalue` component.       |
-| `label?` {==string==}                 | Multivalue label text.                                |
-| `tooltip?` {==string==}               | Multivalue tooltip information.                       |
-| `property` {==string==}               | The property of the model that the component is bound to. |
-| `placeholder?` {==string==}           | Multivalue placeholder text.                          |
+| `label?` {==string==}                 | Multivalue label text. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                               |
+| `tooltip?` {==string==}               | Multivalue tooltip information. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                      |
+| `property` {==string==}               | The property of the model that the component is bound to. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`. |
+| `placeholder?` {==string==}           | Multivalue placeholder text. You can specify the localization key for the `placeholder`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                         |
 | `required?` {==boolean==}             | Multivalue required state.                            |
 | `disabled?` {==boolean==}             | Put component in disabled mode.                  |
 | `variant?` {==text==}, {==number==}   | Multivalue type.                                |
@@ -140,3 +141,4 @@ To incorporate the multivalue into your dynamic applications, define the followi
 | `currentLanguage?` {==string==}       | Current language. |
 | `visibility?` {=={ method: string }==} | Visibility settings. |
 | `customTemplate?` {=={ component: string }==} | Custom template settings. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |

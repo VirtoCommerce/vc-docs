@@ -56,7 +56,7 @@ API empowers you to create dynamic and interactive currency input component to c
 
 ### Basic Vue
 
-You can easily incorporate the `vc-input-currency` component into your Vue applications using simple templates. 
+You can easily incorporate the `vc-input-currency` component into your Vue applications using simple templates.
 
 #### Props
 
@@ -128,6 +128,7 @@ interface InputCurrencySchema {
     update?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -137,14 +138,15 @@ To incorporate the input into your dynamic applications, define the following pr
 | ----------------------------------------- | ----------------------------------------------------- |
 | `id` {==string==}                         | The unique Id for the `vc-input-currency` component.  |
 | `component` {==vc-input-currency==}       | Component used in schema.                             |
-| `label` {==string==}                      | Label for the input currency. Also available interpolation `{}` syntax based on current element context. |
-| `property` {==string==}                   | Property name that is used for binding input currency value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
+| `label` {==string==}                      | Label for the input currency. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `property` {==string==}                   | Property name that is used for binding input currency value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
 | `rules` {==`IValidationRules`==}          | Validation rules for the input currency. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
-| `placeholder` {==string==}                | Placeholder text for the input currency.  |
-| `tooltip` {==string==}                    | Tooltip text for the input currency label. |
+| `placeholder` {==string==}                | Placeholder text for the input currency. You can specify the localization key for the `placeholder`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.  |
+| `tooltip` {==string==}                    | Tooltip text for the input currency label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
 | `optionProperty` {==string==}             | Property that holds available currency options. |
 | `optionValue` {==string==}                | Property that holds the value of the currency. Default: `id` |
 | `optionLabel` {==string==}                | Property that holds the label of the currency. Default: `title` |
 | `disabled` {=={method: string}==}         | Disabled state for component, could be used to disable input currency based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==}       | Visibility state for component, could be used to hide input currency based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}           | Method to call when the input currency value is updated. Method should be defined in the blade `scope`. |
+| `update` {=={method: string}==}           | Method to call when the input currency value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |

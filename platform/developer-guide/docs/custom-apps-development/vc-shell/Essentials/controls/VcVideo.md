@@ -40,7 +40,7 @@ API empowers you to create dynamic and interactive video components to customize
 
 ## Basic Vue
 
-You can easily incorporate the `vc-video` component into your Vue applications using simple templates. 
+You can easily incorporate the `vc-video` component into your Vue applications using simple templates.
 
 ### Props
 
@@ -71,6 +71,7 @@ interface VideoSchema {
     update?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -80,10 +81,11 @@ To incorporate the status into your dynamic applications, define the following p
 | ----------------------------------------- | ------------------------------------------- |
 | `id` {==string==}                         | The unique Id for the `vc-video` component. |
 | `component` {==vc-video==}                | Component used in schema.                   |
-| `property` {==string==}                   | Property name that is used for binding video url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
-| `label` {==string==}                      | Label for the video. Also available interpolation `{}` syntax based on current element context. |
+| `property` {==string==}                   | Property name that is used for binding video url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
+| `label` {==string==}                      | Label for the video. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.|
 | `size` {==string==}                       | Video size. Default: `auto` |
-| `tooltip` {==string==}                    | Tooltip text for the video label. |
+| `tooltip` {==string==}                    | Tooltip text for the video label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
 | `visibility` {=={method: string}==}           | Visibility state for component, could be used to hide video based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}               | Method to call when the video url value is updated. Method should be defined in the blade `scope`. |
+| `update` {=={method: string}==}               | Method to call when the video url value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
 

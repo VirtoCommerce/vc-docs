@@ -37,7 +37,7 @@ API empowers you to create a dynamic and interactive dynamic component to custom
 
 ## Basic Vue
 
-You can easily incorporate the `vc-gallery` component into your Vue applications using simple templates. 
+You can easily incorporate the `vc-gallery` component into your Vue applications using simple templates.
 
 ### Props
 
@@ -99,6 +99,7 @@ interface GallerySchema {
     update?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -109,15 +110,16 @@ To incorporate the component into your dynamic applications, define the followin
 | --------------------------------  | -----------------------------------------------   |
 | `id` {==string==}                 | The unique Id for the `vc-gallery` component.     |
 | `component` {==vc-gallery==}      | Component used in schema. |
-| `label` {==string==}              | Label for the gallery. Also available interpolation `{}` syntax based on current element context. |
-| `property` {==string==}           | Property name that is used for binding gallery value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
+| `label` {==string==}              | Label for the gallery. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `property` {==string==}           | Property name that is used for binding gallery value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
 | `rules` {==IValidationRules==}    | Validation rules for the gallery. It uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
-| `tooltip` {==string==}            | Tooltip text for the gallery label. |
+| `tooltip` {==string==}            | Tooltip text for the gallery label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
 | `hideAfterUpload` {==boolean==}   | Indicates if the upload overlay should be hidden after uploading files. <br> Default: `false` |
 | `actions` {=={preview: boolean, edit: boolean, remove: boolean}==} | Actions to be displayed on hover for each image in the gallery. <br> Default: `{preview: true, edit: true, remove: true}` |
 | `disabled` {=={method: string}==} | Disabled state for component, could be used to disable gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==} | Visibility state for component, could be used to hide gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}   | Method to call when the gallery value is updated. Method should be defined in the blade `scope`. |
+| `update` {=={method: string}==}   | Method to call when the gallery value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
 
 
 #### Example
