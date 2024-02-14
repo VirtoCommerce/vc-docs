@@ -6,12 +6,12 @@ This query allows you to retrieve information about a shopping cart.
 
 | Argument                       | Description                                                                                     |
 |--------------------------------|-------------------------------------------------------------------------------------------------|
-| `storeId` {==String!==}        | The Id of the store to retrieve carts from.                                                     |
-| `userId`  {==String==}         | The Id of the user.                                                                             |
-| `currencyCode` {==String!==}   | A standardized code of a specific currency.                                                     |
-| `cultureName` {==String==}     | The language to retrieve data in.                                                               |
-| `cartName` {==String==}        | The name or the identifier of the cart.                                                         |
-| `cartType` {==String==}        | The type of cart being queried.                                                                 |
+| `storeId` ==String!==          | The Id of the store to retrieve carts from.                                                     |
+| `userId`  ==String==           | The Id of the user.                                                                             |
+| `currencyCode` ==String!==     | A standardized code of a specific currency.                                                     |
+| `cultureName` ==String==       | The language to retrieve data in.                                                               |
+| `cartName` ==String==          | The name or the identifier of the cart.                                                         |
+| `cartType` ==String==          | The type of cart being queried.                                                                 |
 
 ## Possible returns
 

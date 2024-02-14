@@ -194,6 +194,7 @@ nav:
                       - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
                       - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet.md
                       - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet.md
+                      - FacetTypes: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facet-types.md
                       - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
                       - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
                       - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
@@ -211,6 +212,7 @@ nav:
                       - Carts: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts.md
                       - Wishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlist.md
                       - Wishlists: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlists.md
+                      - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/validate-coupon.md
                 - Objects:
                       - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
                       - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
@@ -259,7 +261,6 @@ nav:
                       - removeShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-shipment.md
                       - addOrUpdateCartShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-shipment.md
                       - addOrUpdateCartPayment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-payment.md
-                      - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/validate-coupon.md
                       - mergeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart.md
                       - removeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart.md
                       - clearShipments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-shipments.md
@@ -279,6 +280,14 @@ nav:
                       - removeWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem.md
                       - moveWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem.md
                       - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
+          - Store:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
+                - Queries:
+                      - Store: GraphQL-Storefront-API-Reference-xAPI/Store/queries/store.md
+                - Objects: 
+                      - StoreResponseType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType.md
+                      - LanguageType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType.md
+                      - StoreSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType.md
           - Order:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
                 - Queries:
@@ -311,6 +320,11 @@ nav:
                       - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type.md
                       - KeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/key-value-type.md
                       - InputKeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type.md
+                      - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Order/objects/filter-facet.md
+                      - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Order/objects/range-facet.md
+                      - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Order/objects/term-facet.md
+                      - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/facet-term-type.md
+                      - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/facet-range-type.md
                 - Mutations:
                       - ChangePurchaseOrderNumber: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-purchase-order-number.md
                       - CreateOrderFromCart: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/create-order-from-cart.md

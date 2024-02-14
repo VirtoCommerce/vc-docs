@@ -6,5 +6,5 @@ The `BulkWishlistType` represents a connection to bulk adding items to a wishlis
 
 | Field                                                 | Description                                                     |
 | ------------------------------------------------------| --------------------------------------------------------------- |
-| `WishlistType` [{==WishlistType==}](wishlist-type.md) | The associated `WishlistType` object representing the wishlist. |
+| `WishlistType` [==WishlistType==](wishlist-type.md) | The associated `WishlistType` object representing the wishlist. |
 

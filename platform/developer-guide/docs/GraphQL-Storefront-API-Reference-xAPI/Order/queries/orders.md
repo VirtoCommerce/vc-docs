@@ -6,12 +6,13 @@ This query is used to retrieve a list of customer orders based on various criter
 
 | Argument                  | Description                                             |
 |---------------------------|---------------------------------------------------------|
-| `filter` {==String==}     | Filters query results.                                  |
-| `sort` {==String==}       | The sorting order for the retrieved orders.             |
-| `cultureName` {==String==}| A language to retrieve data in.                         |
-| `userId` {==String==}     | The Id of the user.                                     |
-| `after` {==String==}      | A cursor value to paginate through the results.         |
-| `first` {==Int==}         | The number of pages in a single query.                  |
+| `filter` ==String==       | Filters query results.                                  |
+| `sort` ==String==         | The sorting order for the retrieved orders.             |
+| `facet` ==String==        | Facets to apply to the query results, allowing for categorization or grouping based on specific attributes. |
+| `cultureName` ==String==  | A language to retrieve data in.                         |
+| `userId` ==String==       | The Id of the user.                                     |
+| `after` ==String==        | A cursor value to paginate through the results.         |
+| `first` ==Int==           | The number of pages in a single query.                  |
 
 
 ## Possible returns

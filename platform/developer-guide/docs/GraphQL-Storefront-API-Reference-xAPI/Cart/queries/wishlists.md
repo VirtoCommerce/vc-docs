@@ -6,14 +6,14 @@ This query allows you to retrieve information about wishlists.
 
 | Argument                       | Description                                                                |
 |--------------------------------|----------------------------------------------------------------------------|
-| `after` {==String==}           | The starting point for fetching the next set of results.                   |
-| `first` {==Int==}              | The maximum number of carts to retrieve.                                   |
-| `storeId` {==String!==}        | The ID of the store.                                                       |
-| `userId`  {==String==}         | The ID of the user to retrieve pages from.                                 |
-| `currencyCode` {==String==}    | A standardized code of a specific currency.                                |
-| `cultureName` {==String==}     | The language to retrieve data in.                                          |
-| `scope` {==String==}           | The wishlist accessibility: `Private` or `Organization`                    |
-| `sort` {==String==}            | The sorting order of the returned wishlists.                               |
+| `after` ==String==           | The starting point for fetching the next set of results.                   |
+| `first` ==Int==              | The maximum number of carts to retrieve.                                   |
+| `storeId` ==String!==        | The ID of the store.                                                       |
+| `userId`  ==String==         | The ID of the user to retrieve pages from.                                 |
+| `currencyCode` ==String==    | A standardized code of a specific currency.                                |
+| `cultureName` ==String==     | The language to retrieve data in.                                          |
+| `scope` ==String==           | The wishlist accessibility: `Private` or `Organization`                    |
+| `sort` ==String==            | The sorting order of the returned wishlists.                               |
 
 ## Possible returns
 

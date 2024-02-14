@@ -46,17 +46,17 @@ Our Vue.js Starter Theme has an adaptive design that allows it to look smooth an
 
 The key functionalities include:
 
-* [Registration and signing in.](../../../user_docs/registration_and_signing_in/create-account)
-* [Password management.](../../../user_docs/registration_and_signing_in/password-management)
-* [Managing personal and corporate accounts.](../../../user_docs/account/overview)
-* [Managing quote requests.](../../../user_docs/shopping/submit-quotes)
-* [Managing lists.](../../../user_docs/shopping/lists)
-* [Access assignment.](../../../user_docs/account/company-members)
-* [Product comparison.](../../../user_docs/shopping/compare-products)
-* [Bulk orders.](../../../user_docs/shopping/bulk-orders)
-* [Intuitive navigation.](../../../user_docs/navigation/homepage-layout)
-* [Buying digital and physical products.](../../../user_docs/shopping/checkout-process) 
-* [Searching and filtering products.](../../../user_docs/shopping/searching-for-products)
+* [Registration and signing in.](../../../user-guide/registration_and_signing_in/create-account)
+* [Password management.](../../../user-guide/registration_and_signing_in/password-management)
+* [Managing personal and corporate accounts.](../../../user-guide/account/overview)
+* [Managing quote requests.](../../../user-guide/shopping/submit-quotes)
+* [Managing lists.](../../../user-guide/shopping/lists)
+* [Access assignment.](../../../user-guide/account/company-members)
+* [Product comparison.](../../../user-guide/shopping/compare-products)
+* [Bulk orders.](../../../user-guide/shopping/bulk-orders)
+* [Intuitive navigation.](../../../user-guide/navigation/homepage-layout)
+* [Buying digital and physical products.](../../../user-guide/shopping/checkout-process) 
+* [Searching and filtering products.](../../../user-guide/shopping/searching-for-products)
 
 
 ## Working with `vc-theme-b2b-vue`

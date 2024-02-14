@@ -4,10 +4,10 @@ This query allows you to retrieve information about a product list.
 
 ## Arguments
 
-| Argument                       | Description                                                             |
-|--------------------------------|-------------------------------------------------------------------------|
-| `listId` {==String!==}         | The Id of the product list.                                             |
-| `cultureName` {==String==}     | The language to retrieve data in.                                       |
+| Argument                     | Description                                                             |
+|------------------------------|-------------------------------------------------------------------------|
+| `listId` ==String!==         | The Id of the product list.                                             |
+| `cultureName` ==String==     | The language to retrieve data in.                                       |
 
 ## Possible returns
 

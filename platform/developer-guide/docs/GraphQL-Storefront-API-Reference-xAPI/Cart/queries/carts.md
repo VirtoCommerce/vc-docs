@@ -6,16 +6,16 @@ This query allows you to retrieve information about shopping carts and wishlists
 
 | Argument                        | Description                                                                                     |
 |---------------------------------|-------------------------------------------------------------------------------------------------|
-| `after` {==String==}            | The starting point for fetching the next set of results.                              |
-| `first` {==Int==}               | The maximum number of carts to retrieve.                                                        |
-| `storeId` {==String==}          | The ID of the store to retrieve carts from.                                                     |
-| `userId` {==String==}           | The ID of the user associated with the carts.                                                   |
-| `currencyCode` {==String==}     | A standardized code of the currency of the carts.                                               |
-| `cultureName` {==String==}      | The language to retrieve data in.                                                               |
-| `cartName` {==String==}         | The name or the identifier of the cart.                                                         |
-| `cartType` {==String==}         | The type of carts being queried, allowing differentiation between different cart variations.    |
-| `filter` {==String==}           | A filter condition to narrow down the carts based on specific criteria.                         |
-| `sort` {==String==}             | The sorting order for the retrieved carts.                                                      |
+| `after` ==String==              | The starting point for fetching the next set of results.                              |
+| `first` ==Int==                 | The maximum number of carts to retrieve.                                                        |
+| `storeId` ==String==            | The ID of the store to retrieve carts from.                                                     |
+| `userId` ==String==             | The ID of the user associated with the carts.                                                   |
+| `currencyCode` ==String==       | A standardized code of the currency of the carts.                                               |
+| `cultureName` ==String==        | The language to retrieve data in.                                                               |
+| `cartName` ==String==           | The name or the identifier of the cart.                                                         |
+| `cartType` ==String==           | The type of carts being queried, allowing differentiation between different cart variations.    |
+| `filter` ==String==             | A filter condition to narrow down the carts based on specific criteria.                         |
+| `sort` ==String==               | The sorting order for the retrieved carts.                                                      |
 
 ## Possible returns
 
