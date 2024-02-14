@@ -119,6 +119,7 @@ interface InputSchema {
     prependInner?: ControlSchema;
     append?: ControlSchema;
     appendInner?: ControlSchema;
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -128,17 +129,18 @@ To incorporate the input into your dynamic applications, define the following pr
 | ------------------------------------- | ------------------------------------------------- |
 | `id` {==string==}                     | The unique Id for the `vc-input` component.       |
 | `component` {==vc-input==}            | Component used in schema.                         |
-| `label` {==string==}                  | Label for the input. Also available interpolation `{}` syntax based on current element context. |
-| `property` {==string==}               | Property name that is used for binding input value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
+| `label` {==string==}                  | Label for the input. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `property` {==string==}               | Property name that is used for binding input value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
 | `rules` {==IValidationRules==}        | Validation rules for the input. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
-| `placeholder` {==string==}            | Placeholder text for the input.  |
-| `tooltip` {==string==}                | Tooltip text for the input label. |
+| `placeholder` {==string==}            | Placeholder text for the input. You can specify the localization key for the `placeholder`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.  |
+| `tooltip` {==string==}                | Tooltip text for the input label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
 | `clearable` {==boolean==}             | Specification whether the input has a clear button. |
 | `variant` {==string==}                | Input variant. |
 | `disabled` {=={method: string}==}     | Disabled state for component, could be used to disable input based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==}   | Visibility state for component, could be used to hide input based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}       | Method to call when the input value is updated. Method should be defined in the blade `scope`. |
+| `update` {=={method: string}==}       | Method to call when the input value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
 | `prepend` {==ControlSchema==}         | Schema of component to be displayed before the input. |
 | `prependInner` {==ControlSchema==}    | Schema of component to be displayed inside the input before the value. |
 | `append` {==ControlSchema==}          | Schema of component to be displayed after the input. |
 | `appendInner` {==ControlSchema==}     | Schema of component to be displayed inside the input after the value. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |

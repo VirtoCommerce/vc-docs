@@ -40,6 +40,7 @@ interface FieldsetSchema {
     visibility?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -52,10 +53,11 @@ To incorporate the component into your dynamic applications, define the followin
 | `component` {==vc-fieldset==}     | Component used in schema.         |
 | `fields` {==ControlSchema[]==}    | Array of control schemas to be displayed in the fieldset. |
 | `columns` {==number==}            | Number of columns to display the fields in. |
-| `property` {==string==}           | Property name that is used for binding fieldset value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
+| `property` {==string==}           | Property name that is used for binding fieldset value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
 | `aspectRatio` {==number[]==}      | Array of numbers that define the aspect ratio of each column. Uses CSS flex-grow property. <br> Example: set to [1, 1] to make all columns equal width |
 | `remove` {=={method: string}==}   | Method to call to remove field from the fieldset. When set - activates remove button. Used for property-based fieldsets. Method should be defined in the blade `scope`. |
 | `visibility` {=={method: string}==} | Visibility state for component, could be used to hide fieldset based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
 
 
 ## Examples
@@ -178,7 +180,7 @@ Now let's specify the following fieldset:
 
 Now each field will be set a label that will be obtained from the data array.
 
-### Customizing fieldset layout 
+### Customizing fieldset layout
 
 We can specify the number of columns and `aspectRatio` for the fieldset, which will be displayed inside the fieldset. In this case, we will get a fieldset with two columns, each of which will have a fieldset with two fields and second fieldset will be twice as wide as the first.
 

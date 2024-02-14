@@ -109,6 +109,7 @@ import { useBladeNavigation } from "@vc-shell/framework";
           icon: "fas fa-file-alt",
           priority: 1,
           group: 'My group', // Optional
+          inGroupPriority: 1, // Optional
       },
   });
   ```
@@ -127,6 +128,40 @@ import { useBladeNavigation } from "@vc-shell/framework";
       });
   ```
 
+## Creating Navigation Menu Items
+
+To create a menu item, use the `defineOptions` macro in the blade component. This macro allows you to define the blade's URL and menu item. The menu item is an object with the following interface:
+
+```typescript linenums="1"
+interface MenuItemConfig {
+  title: string;
+  icon: string;
+  group?: string;
+  priority: number;
+  inGroupPriority?: number;
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `title` | `string` | Menu item title. You can specify the localization key for the title. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.  |
+| `icon` | `string` | Menu item icon. |
+| `group` | `string` | Menu item group. Is used to group menu items with its provided name. If the path is not specified, the menu item is added to the root of the menu. You can specify the localization key for the group. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `priority` | `number` | Position priority. |
+| `inGroupPriority` | `number` | Position priority in group. |
+
+```typescript linenums="1"
+defineOptions({
+    url: "/<blade-url>",
+    menuItem: {
+        title: "My blade",
+        icon: "fas fa-file-alt",
+        priority: 1,
+        group: 'My group',
+        inGroupPriority: 1,
+    },
+});
+```
 
 ## Routing
 
@@ -217,6 +252,7 @@ export default createAppModule(pages, locales);
             icon: "fas fa-file-alt",
             priority: 1,
             group: 'My group',
+            inGroupPriority: 1,
         },
     })
 
@@ -237,6 +273,8 @@ export default createAppModule(pages, locales);
     To open a new workspace, you can use the `openBlade` function from the `useBladeNavigation` composable with second argument `isWorkspace === true` . It offers the advantage of setting initial data when opening the blade. When using imported blade components with `openBlade`, remember to use Vue's `markRaw` method to prevent conversion to a proxy, thereby optimizing performance.
 
     ```typescript linenums="1"
+    import MyImportedNewBlade from './MyImportedNewBlade.vue'
+
     await openBlade({
         blade: markRaw(MyImportedNewBlade),
         options: {}, // Typed options specific to MyImportedNewBlade, if any

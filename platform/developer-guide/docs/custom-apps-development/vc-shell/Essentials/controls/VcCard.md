@@ -92,6 +92,7 @@ interface CardSchema {
     visibility?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -101,11 +102,12 @@ To incorporate the card into your dynamic applications, define the following pro
 | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id` {==string==}                                 | The unique Id for `vc-card` component.                                                                                                        |
 | `component` {==vc-card==}                         | Component used in schema.                                                                                                                     |
-| `label` {==string==}                              | Card label that is displayed in the header. Also available interpolation `{}` syntax based on current element context.                        |
+| `label` {==string==}                              | Card label that is displayed in the header. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                        |
 | `fields` {==ControlSchema[]==}                    | Array of schemas for components that will be displayed inside the card.                                                                       |
 | `action` {==ButtonSchema & {method: string}==}    | Action button that is displayed in the top right corner of the card. Could be used to trigger some actions.                                   |
 | `collapsible` {==boolean==}                       | Specification whether the card should be collapsed.                                                                                           |
 | `visibility`  {=={method: string}==}              | Visibility state for the component, could be used to hide the card based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
 
 
 ### Example

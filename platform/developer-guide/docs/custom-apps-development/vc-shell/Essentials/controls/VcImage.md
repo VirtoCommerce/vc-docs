@@ -39,7 +39,7 @@ API empowers you to create dynamic and interactive image components to customize
 
 ## Basic Vue
 
-You can easily incorporate the `vc-image` component into your Vue applications using simple templates. 
+You can easily incorporate the `vc-image` component into your Vue applications using simple templates.
 
 ### Props
 
@@ -84,6 +84,7 @@ interface ImageSchema {
     update?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -93,7 +94,7 @@ To incorporate the image into your dynamic applications, define the following pr
 | ------------------------------------------------- | ----------- |
 | `id` {==string==}                                 | The unique Id for the `vc-image` component. |
 | `component` {==vc-image==}                        | Component utilized in the schema. |
-| `property` {==string==}                           | Name of the property used for binding the image URL value to blade data. Supports deep nested properties, such as `property[1].myProperty`. Additionally, you can bind any function or computed property that returns a value, and retrieve the changed value as an argument for the function. |
+| `property` {==string==}                           | Name of the property used for binding the image URL value to blade data. Supports deep nested properties, such as `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`. |
 | `aspect` {==string==}                             | Image aspect ratio. Default: `1x1`. |
 | `background` {==string==}                         | Size of the element's background image. Accepts CSS background-size values like auto, cover, or contain. Default: `cover`. |
 | `size` {==string==}                               | Image size. Default: `auto`. |
@@ -101,5 +102,6 @@ To incorporate the image into your dynamic applications, define the following pr
 | `bordered` {==boolean==}                          | Specification of whether the image should have a border. |
 | `clickable` {==boolean==}                         | Specification of whether the image has a preview on click. Default: `false`. |
 | `visibility` {=={method: string}==}               | Definition of the visibility state for the component, allowing you to hide the image based on certain conditions. The method or variable should be defined in the blade `scope` and return a boolean value. |
-| `update` {=={method: string}==}                   | Specification of the method to call when the image URL value is updated. The method should be defined in the blade `scope`. |
+| `update` {=={method: string}==}                   | Specification of the method to call when the image URL value is updated. It gets changed value, schema property name and field internal context as arguments. The method should be defined in the blade `scope`. |
+| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
 

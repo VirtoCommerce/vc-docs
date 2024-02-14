@@ -119,7 +119,7 @@ After generating the API client for your `@vc-app-extend` application, you can s
     export class Offer implements IOffer {
         isSuspended?: boolean;
         isActive?: boolean;
-        //New field
+        // New field
         newField?: string;
         ...
         }

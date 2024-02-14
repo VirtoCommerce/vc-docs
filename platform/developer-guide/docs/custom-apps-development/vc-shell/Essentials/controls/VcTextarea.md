@@ -100,6 +100,7 @@ interface TextareaSchema {
     update?: {
         method: string;
     };
+    horizontalSeparator?: boolean;
 }
 ```
 
@@ -109,12 +110,13 @@ To incorporate the textarea into your dynamic applications, define the following
 | ------------------------------------- | ------------------------------------------------- |
 | `id` {==string==}                     | The unique Id for the `vc-textarea` component.       |
 | `component` {==vc-textarea==}            | Component used in schema.                         |
-| `label` {==string==}                  | Label for the textarea. Also available interpolation `{}` syntax based on current element context. |
-| `property` {==string==}               | Property name that is used for binding textarea value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind any function or computed property that returns a value and retrieve changed value as an argument for the function.|
+| `label` {==string==}                  | Label for the textarea. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `property` {==string==}               | Property name that is used for binding textarea value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
 | `rules` {==IValidationRules==}        | Validation rules for the textarea. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
-| `placeholder` {==string==}            | Placeholder text for the textarea.  |
-| `tooltip` {==string==}                | Tooltip text for the textarea label. |
+| `placeholder` {==string==}            | Placeholder text for the textarea. You can specify the localization key for the `placeholder`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `tooltip` {==string==}                | Tooltip text for the textarea label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
 | `clearable` {==boolean==}             | Specification whether the textarea has a clear button. |
 | `disabled` {=={method: string}==}     | Disabled state for component, could be used to disable textarea based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `visibility` {=={method: string}==}   | Visibility state for component, could be used to hide textarea based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}       | Method to call when the textarea value is updated. Method should be defined in the blade `scope`. |
+| `update` {=={method: string}==}       | Method to call when the textarea value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
+| `horizontalSeparator` {==boolean==}  | Adds a horizontal separator line after the component. |
