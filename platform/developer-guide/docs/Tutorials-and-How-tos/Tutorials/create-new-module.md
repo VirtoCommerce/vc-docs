@@ -88,37 +88,34 @@ To populate the **DummyModule.Data** project with necessary components:
    - Ensure that each class under this folder corresponds to a class in **DummyModule.Core/Models**.
    - These classes should define the database table structure and any restrictions, along with the ability to convert to/from corresponding Core model classes.
 
-1. Include Repositories Folder:
+1. Include **Repositories** folder:
    1. Within **DummyModule.Data**, add a **Repositories** folder.
-   - \Under the **Repositories** folder:
-     - Add a class named **DummyDbContext**, deriving from **DbContextWithTriggers**.
-       - Check and copy the contents of the class from a sample **DummyDbContext.cs**.
-     - Add a class named **DesignTimeDbContextFactory**.
-       - Check and copy the contents of the class from a sample **DesignTimeDbContextFactory.cs**.
-       - Ensure that the connection to your development SQL server is accurate.
-     - Introduce a data repository abstraction (interface) that derives from **IRepository** for the defined persistence model.
-     - Implement the repository with a class that derives from **DbContextRepositoryBase<DummyDbContext>**.
+   1. Under the **Repositories** folder:
+     1. Add a class named **DummyDbContext**, deriving from **DbContextWithTriggers**. Check and copy the contents of the class from a sample **DummyDbContext.cs**.
+     1. Add a class named **DesignTimeDbContextFactory**. Check and copy the contents of the class from a sample **DesignTimeDbContextFactory.cs**. Ensure that the connection to your development SQL server is accurate.
+    1. Introduce a data repository abstraction (interface) that derives from **IRepository** for the defined persistence model.
+    1. Implement the repository with a class that derives from **DbContextRepositoryBase<DummyDbContext>**.
 
-1. **Generate Code-First Migration:**
-   - To generate a code-first migration:
-     - Set the **DummyModule.Data** project as the startup project in Solution Explorer.
-     - Open the NuGet Package Manager Console.
-     - Set the "Default project" to **src\DummyModule.Data**.
-     - Execute the command:
+1. Generate code-first migration as follows:
+    1. Set the **DummyModule.Data** project as the startup project in Solution Explorer.
+    1. Open the NuGet Package Manager Console.
+    1. Set the "Default project" to **src\DummyModule.Data**.
+    1. Execute the command:
+
        ```
        Add-Migration Initial -Verbose
        ```
+
      A new EF migration will be generated, facilitating the extension of an existing module's model.
 
-1. **Include Additional Folders if Necessary:**
-   - **Caching Folder:** If data caching is required, add a folder for cache region classes.
-     - Typically, each model should have its own region.
-     - Derive the cache region from the generic **CancellableCacheRegion<T>** class.
-   - **Services Folder:** Implement interfaces defined in the **.Core** project within this folder.
-   - **ExportImport Folder:** Add a class for data export/import, which should be called from **Module.cs** and contain the implementation for module data export and import.
-   - **Handlers Folder:** Include handlers for domain events defined under **.Core/Events**. These handlers facilitate reacting to and managing domain events within the module.
+1. Include Additional folders if necessary:
 
-## 4. Filling DummyModule.Web Project
+   - **Caching folder:** If data caching is required, add a folder for cache region classes. Typically, each model should have its own region. Derive the cache region from the generic **CancellableCacheRegion<T>** class.
+   - **Services folder:** Implement interfaces defined in the **.Core** project within this folder.
+   - **ExportImport folder:** Add a class for data export/import, which should be called from **Module.cs** and contain the implementation for module data export and import.
+   - **Handlers folder:** Include handlers for domain events defined under **.Core/Events**. These handlers facilitate reacting to and managing domain events within the module.
+
+## Fill DummyModule.Web Project
 
 1. Add the required folders and files such as Controllers/Api, Localizations, Scripts, and module.manifest.
 2. Implement the module manifest, controllers for API endpoints, JavaScript files, stylesheets, and localizations.

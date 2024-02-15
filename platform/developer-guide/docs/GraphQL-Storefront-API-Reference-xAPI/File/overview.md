@@ -2,9 +2,9 @@ Virto Commerce now offers an enhanced file upload solution, which prioritizes se
 
 This function is now used in our Storefront to [attach files to the created quotes](../../../../../storefront/user-guide/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
 
-| Queries               	                            | Objects                                                      	                                                                        | Mutations      	|
-|----------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------	|----------------	|
-| [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)<br> [DeleteFileCommandType](Objects/DeleteFileCommandType.md) 	| [deleteFile](Mutations/deleteFile.md) 	|
+| Queries               	                            | Objects                                                      	            | Mutations                                 |
+|----------------------------------------------------	|-------------------------------------------------------------------------	|----------------	                        |
+| [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)<br>  	| [deleteFile](Mutations/deleteFile.md) 	|
 
 ??? "Architecture"
 

@@ -21,6 +21,7 @@ nav:
     - Overview: index.md
     - Modules:
           - Overview: platform-overview.md
+          - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
           - Getting Started: getting-started.md
           - Modules Installation: modules-installation.md
           - Catalog:

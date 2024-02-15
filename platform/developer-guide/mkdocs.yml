@@ -194,7 +194,6 @@ nav:
                       - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
                       - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet.md
                       - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet.md
-                      - FacetTypes: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facet-types.md
                       - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
                       - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
                       - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
@@ -484,6 +483,7 @@ nav:
                 - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
           - How-tos:
+                - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md 
                 - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
                 - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
                 - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
@@ -494,6 +494,7 @@ nav:
                 - Upgrading to Virto Commerce on .Net8: Tutorials-and-How-tos/How-tos/upgrading-to-net8.md
                 - Deploying VC Platform to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-platform-on-azure.md
                 - Deploying VC Storefront to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-storefront-on-azure.md
+                - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
     - Updating Virto Commerce Based Projects:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
