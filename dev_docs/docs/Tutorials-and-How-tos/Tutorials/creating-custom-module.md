@@ -1,19 +1,19 @@
-﻿# Creating New Module
+# Creating New Module
 The Virto Commerce ecosystem allows you to create your own custom module according to your business or technical needs. In this tutorial, you will learn how you can do so.
 
 ## Creating Solution from Template
-To run your own Virto Commerce module, you can create it from scratch. However, it is recommendable you do it based on a predefined template. For that, you need to: 
+To run your own Virto Commerce module, you can create it from scratch. However, it is recommendable you do it based on a predefined template. For that, you need to:
 
 + Create a source directory or, if you already have it, navigate to it
 + Open Windows CMD or PowerShell
 + Run these commands:
 
 ```console
-	dotnet new --install VirtoCommerce.Module.Template
-    dotnet new vc-module --ModuleName MyCoolModule --Author "Jon Doe" --CompanyName MyCoolCompany
+dotnet new --install VirtoCommerce.Module.Template
+dotnet new vc-module --ModuleName MyCoolModule --Author "Jon Doe" --CompanyName MyCoolCompany
 ```
 
-Once you are done, you will get your `vc-module-MyCoolModule` solution with the following structure, which you will be able to see as you open your newly created module with Visual Studio:
+Once you are done, you will get your `vc-module-my-cool-module` solution with the following structure, which you will be able to see as you open your newly created module with Visual Studio:
 
 ![Solution Explorer](media/01-solution-explorer.png)
 
@@ -21,7 +21,7 @@ Once you are done, you will get your `vc-module-MyCoolModule` solution with the 
 
 Your next step is connecting your module to a database. Namely, you need to define a model, entity, and repository classes that would make up the persistent layer.
 
-In the *Data Project Models* directory, add a file called `Blog.cs` with the following code:
+In the *Core Project Models* directory, add a file named `Blog.cs` with the following code:
 
 ```csharp
 using System;
@@ -37,7 +37,7 @@ public class Blog : AuditableEntity, ICloneable
 }
 ```
 
-and another one called `BlogEntity.cs` with the following code:
+In the *Data Project Models* directory, add a file named `BlogEntity.cs` with the following code:
 
 ```csharp
 using MyCoolCompany.MyCoolModule.Core.Models;
@@ -78,7 +78,6 @@ public class BlogEntity : AuditableEntity, IDataEntity<BlogEntity, Blog>
 In the *Data Project Repositories* directory, add `BlogRepository.cs` with the following code:
 
 ```csharp
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -98,7 +97,7 @@ public class BlogRepository : DbContextRepositoryBase<MyCoolModuleDbContext>
 
     public IQueryable<BlogEntity> Blogs => DbContext.Set<BlogEntity>();
 
-    public virtual async Task<ICollection<BlogEntity>> GetBlogsByIdsAsync(IEnumerable<string> ids)
+    public virtual async Task<IList<BlogEntity>> GetBlogsByIdsAsync(IList<string> ids)
     {
         var result = await Blogs.Where(x => ids.Contains(x.Id)).ToListAsync();
 
@@ -130,59 +129,63 @@ public class MyCoolModuleDbContext : DbContextWithTriggers
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<BlogEntity>().ToTable("Blogs").HasKey(x => x.Id);
         modelBuilder.Entity<BlogEntity>().Property(x => x.Id).HasMaxLength(128).ValueGeneratedOnAdd();
         modelBuilder.Entity<BlogEntity>().Property(x => x.Name).HasMaxLength(128);
-
-        base.OnModelCreating(modelBuilder);
     }
 }
 ```
 
 Create the initial migration file in Visual Studio:
-+ Navigate to *Tools > NuGet Package Manager > Package Manager Console*
-+ Run the following command:
++ Open Windows CMD or PowerShell in the *Data Project* directory (vc-module-my-cool-module\src\MyCoolCompany.MyCoolModule.Data)
++ Run the following commands:
 
-	```console
-	Add-Migration InitialMigration -Context MyCoolCompany.MyCoolModule.Data.Repositories.MyCoolModuleDbContext -Verbose -OutputDir Migrations -Project MyCoolCompany.MyCoolModule.Data -StartupProject MyCoolCompany.MyCoolModule.Data -Debug
-	```
+```console
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialMigration
+```
 This will bring the `InitialMigration.cs` file to the *Data Project Migrations* directory.
 
 ## Adding New API
 
 Next, you need to define services and an API layer to access the model.
 
-In the *Data Project Services* directory, add the `BlogService.cs` file with the following code:
+In the *Core Project Services* directory, add the `IBlogService.cs` file with the following code:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using MyCoolCompany.MyCoolModule.Core.Models;
-using MyCoolCompany.MyCoolModule.Data.Models;
-using MyCoolCompany.MyCoolModule.Data.Repositories;
-using VirtoCommerce.Platform.Core.Caching;
-using VirtoCommerce.Platform.Core.Common;
-using VirtoCommerce.Platform.Core.Events;
-using VirtoCommerce.Platform.Data.GenericCrud;
+using VirtoCommerce.Platform.Core.GenericCrud;
 
-namespace MyCoolCompany.MyCoolModule.Data.Services;
+namespace MyCoolCompany.MyCoolModule.Core.Services;
 
-public class BlogService : CrudService<Blog, BlogEntity, BlogChangingEvent, BlogChangedEvent>
+public interface IBlogService : ICrudService<Blog>
 {
-    public BlogService(
-        Func<BlogRepository> repositoryFactory,
-        IPlatformMemoryCache platformMemoryCache,
-        IEventPublisher eventPublisher) : base(repositoryFactory, platformMemoryCache, eventPublisher)
-    {
-    }
-
-    protected override async Task<IEnumerable<BlogEntity>> LoadEntities(IRepository repository, IEnumerable<string> ids, string responseGroup)
-    {
-        var blogRepository = repository as BlogRepository;
-        return await blogRepository.GetBlogsByIdsAsync(ids);
-    }
 }
+```
+
+and another file, `IBlogSearchService.cs`, with the following code:
+
+```csharp
+using MyCoolCompany.MyCoolModule.Core.Models;
+using VirtoCommerce.Platform.Core.GenericCrud;
+
+namespace MyCoolCompany.MyCoolModule.Core.Services;
+
+public interface IBlogSearchService : ISearchService<BlogSearchCriteria, BlogSearchResult, Blog>
+{
+}
+```
+
+In the *Core Project Events* directory, add the `BlogChangedEvent.cs` file with the following code:
+
+```csharp
+using System.Collections.Generic;
+using MyCoolCompany.MyCoolModule.Core.Models;
+using VirtoCommerce.Platform.Core.Events;
+
+namespace MyCoolCompany.MyCoolModule.Core.Events;
 
 public class BlogChangedEvent : GenericChangedEntryEvent<Blog>
 {
@@ -191,6 +194,16 @@ public class BlogChangedEvent : GenericChangedEntryEvent<Blog>
     {
     }
 }
+```
+
+and another file, `BlogChangingEvent.cs`, with the following code:
+
+```csharp
+using System.Collections.Generic;
+using MyCoolCompany.MyCoolModule.Core.Models;
+using VirtoCommerce.Platform.Core.Events;
+
+namespace MyCoolCompany.MyCoolModule.Core.Events;
 
 public class BlogChangingEvent : GenericChangedEntryEvent<Blog>
 {
@@ -201,13 +214,73 @@ public class BlogChangingEvent : GenericChangedEntryEvent<Blog>
 }
 ```
 
+In the *Core Project Models* directory, add the `BlogSearchCriteria.cs` file with the following code:
+
+```csharp
+using VirtoCommerce.Platform.Core.Common;
+
+namespace MyCoolCompany.MyCoolModule.Core.Models;
+
+public class BlogSearchCriteria : SearchCriteriaBase
+{
+}
+```
+
+and another file, `BlogSearchResult.cs`, with the following code:
+
+```csharp
+using VirtoCommerce.Platform.Core.Common;
+
+namespace MyCoolCompany.MyCoolModule.Core.Models;
+
+public class BlogSearchResult : GenericSearchResult<Blog>
+{
+}
+```
+
+In the *Data Project Services* directory, add the `BlogService.cs` file with the following code:
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using MyCoolCompany.MyCoolModule.Core.Events;
+using MyCoolCompany.MyCoolModule.Core.Models;
+using MyCoolCompany.MyCoolModule.Core.Services;
+using MyCoolCompany.MyCoolModule.Data.Models;
+using MyCoolCompany.MyCoolModule.Data.Repositories;
+using VirtoCommerce.Platform.Core.Caching;
+using VirtoCommerce.Platform.Core.Common;
+using VirtoCommerce.Platform.Core.Events;
+using VirtoCommerce.Platform.Data.GenericCrud;
+
+namespace MyCoolCompany.MyCoolModule.Data.Services;
+
+public class BlogService : CrudService<Blog, BlogEntity, BlogChangingEvent, BlogChangedEvent>, IBlogService
+{
+    public BlogService(
+        Func<BlogRepository> repositoryFactory,
+        IPlatformMemoryCache platformMemoryCache,
+        IEventPublisher eventPublisher) : base(repositoryFactory, platformMemoryCache, eventPublisher)
+    {
+    }
+
+    protected override Task<IList<BlogEntity>> LoadEntities(IRepository repository, IList<string> ids, string responseGroup)
+    {
+        return ((BlogRepository)repository).GetBlogsByIdsAsync(ids);
+    }
+}
+```
+
 and another file, `BlogSearchService.cs`, with the following code:
 
 ```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Options;
 using MyCoolCompany.MyCoolModule.Core.Models;
+using MyCoolCompany.MyCoolModule.Core.Services;
 using MyCoolCompany.MyCoolModule.Data.Models;
 using MyCoolCompany.MyCoolModule.Data.Repositories;
 using VirtoCommerce.Platform.Core.Caching;
@@ -217,13 +290,14 @@ using VirtoCommerce.Platform.Data.GenericCrud;
 
 namespace MyCoolCompany.MyCoolModule.Data.Services;
 
-public class BlogSearchService : SearchService<BlogSearchCriteria, BlogSearchResult, Blog, BlogEntity>
+public class BlogSearchService : SearchService<BlogSearchCriteria, BlogSearchResult, Blog, BlogEntity>, IBlogSearchService
 {
     public BlogSearchService(
         Func<BlogRepository> repositoryFactory,
         IPlatformMemoryCache platformMemoryCache,
-        ICrudService<Blog> crudService)
-         : base(repositoryFactory, platformMemoryCache, crudService)
+        IBlogService crudService,
+        IOptions<CrudOptions> crudOptions)
+        : base(repositoryFactory, platformMemoryCache, crudService, crudOptions)
 
     {
     }
@@ -240,41 +314,36 @@ public class BlogSearchService : SearchService<BlogSearchCriteria, BlogSearchRes
 
         if (sortInfos.IsNullOrEmpty())
         {
-            sortInfos = new[]
-            {
-                    new SortInfo { SortColumn = nameof(BlogEntity.Id) }
-                };
+            sortInfos =
+            [
+                new SortInfo { SortColumn = nameof(BlogEntity.Id) },
+            ];
         }
 
         return sortInfos;
     }
 }
-
-public class BlogSearchCriteria : SearchCriteriaBase { }
-public class BlogSearchResult : GenericSearchResult<Blog> { }
 ```
 
-In the *Web project Controllers/Api* directory, change `MyCoolModuleController.cs` as follows: 
+In the *Web project Controllers/Api* directory, change `MyCoolModuleController.cs` as follows:
 
 ```csharp
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyCoolCompany.MyCoolModule.Core.Models;
-using MyCoolCompany.MyCoolModule.Data.Services;
-using VirtoCommerce.Platform.Core.GenericCrud;
+using MyCoolCompany.MyCoolModule.Core.Services;
 
 namespace MyCoolCompany.MyCoolModule.Web.Controllers.Api
 {
-    [Route("api/MyCoolModule")]
+    [Route("api/my-cool-module")]
     public class MyCoolModuleController : Controller
     {
-        private readonly ICrudService<Blog> _blogService;
-        private readonly ISearchService<BlogSearchCriteria, BlogSearchResult, Blog> _blogSearchService;
+        private readonly IBlogService _blogService;
+        private readonly IBlogSearchService _blogSearchService;
 
         public MyCoolModuleController(
-            ICrudService<Blog> blogService,
-            ISearchService<BlogSearchCriteria, BlogSearchResult, Blog> blogSearchService)
+            IBlogService blogService,
+            IBlogSearchService blogSearchService)
         {
             _blogService = blogService;
             _blogSearchService = blogSearchService;
@@ -286,7 +355,7 @@ namespace MyCoolCompany.MyCoolModule.Web.Controllers.Api
         {
             var blog = new Blog { Name = name };
 
-            await _blogService.SaveChangesAsync(new List<Blog> { blog });
+            await _blogService.SaveChangesAsync([blog]);
 
             return Ok(blog);
         }
@@ -306,22 +375,20 @@ namespace MyCoolCompany.MyCoolModule.Web.Controllers.Api
 Register all created services by changing the **Initialize** method in `Module.cs` as follows:
 
 ```csharp
-	public void Initialize(IServiceCollection serviceCollection)
-	{
-		// database initialization
-		serviceCollection.AddDbContext<MyCoolModuleDbContext>((provider, options) =>
-		{
-			var configuration = provider.GetRequiredService<IConfiguration>();
-			options.UseSqlServer(configuration.GetConnectionString(ModuleInfo.Id) ?? configuration.GetConnectionString("VirtoCommerce"));
-		});
+    public void Initialize(IServiceCollection serviceCollection)
+    {
+        // Initialize database
+        var connectionString = Configuration.GetConnectionString(ModuleInfo.Id) ??
+                               Configuration.GetConnectionString("VirtoCommerce");
 
-		serviceCollection.AddTransient<BlogRepository>();
-		serviceCollection.AddTransient<Func<BlogRepository>>(provider => () => provider.CreateScope().ServiceProvider.GetRequiredService<BlogRepository>());
+        serviceCollection.AddDbContext<MyCoolModuleDbContext>(options => options.UseSqlServer(connectionString));
 
-		serviceCollection.AddTransient<ICrudService<Blog>, BlogService>();
-		serviceCollection.AddTransient<ISearchService<BlogSearchCriteria, BlogSearchResult, Blog>, BlogSearchService>();
-	}
-}
+        serviceCollection.AddTransient<BlogRepository>();
+        serviceCollection.AddTransient<Func<BlogRepository>>(provider => () => provider.CreateScope().ServiceProvider.GetRequiredService<BlogRepository>());
+
+        serviceCollection.AddTransient<IBlogService, BlogService>();
+        serviceCollection.AddTransient<IBlogSearchService, BlogSearchService>();
+    }
 ```
 
 ## Testing and Debugging API
@@ -331,11 +398,11 @@ After you are done creating your module, you need then to install it from your s
 + Link the *Module Web* directory to the *Platform/modules* directory:
 
 ```console
-	mklink /d c:\source\vc-platform\src\VirtoCommerce.Platform.Web\modules\my-cool-module\ c:\source\vc-module-MyCoolModule\src\MyCoolCompany.MyCoolModule.Web\
+mklink /d C:\source\vc-platform\src\VirtoCommerce.Platform.Web\modules\my-cool-module\ C:\source\vc-module-my-cool-module\src\MyCoolCompany.MyCoolModule.Web
 ```
 
 !!! note
-    In the above example, `c:\source\` means the path to your repository.
+    In the above example, `C:\source\` is the path to the directory, where your code is located.
 
 + Restart the platform
 
@@ -349,11 +416,11 @@ This will create a new blog record.
 
 ![debug](media/03-debugging.png)
 
-## Extending VC Manager with New UI 
+## Extending VC Manager with New UI
 
 Our module template provides scripts that will help you extend the Platform Manager UI. You can find these scripts in the *Web Scripts* directory:
 
-+ `module.js`: contains UI module registration code 
++ `module.js`: contains UI module registration code
 + `resources/my-cool-module-api.js`: contains the web API service
 + `blades/hello-world.js`: houses the basic blade template
 
@@ -362,93 +429,87 @@ To start extending the Platform Manager UI, do the following:
 + Change **blades/hello-world.js** as follows:
 
 ```js
-	angular.module('MyCoolModule')
-		.controller('MyCoolModule.helloWorldController', ['$scope', 'MyCoolModule.webApi', function ($scope, api) {
-			var blade = $scope.blade;
-			blade.title = 'MyCoolModule';
+angular.module('MyCoolModule')
+    .controller('MyCoolModule.helloWorldController', ['$scope', 'MyCoolModule.webApi', function ($scope, api) {
+        var blade = $scope.blade;
+        blade.title = 'MyCoolModule';
 
-			blade.refresh = function () {
-				api.get(function (data) {
-					blade.title = 'MyCoolModule.blades.hello-world.title';
-					blade.data = data.results;
-					blade.isLoading = false;
-				});
-			};
+        blade.refresh = function () {
+            api.get(function (data) {
+                blade.title = 'MyCoolModule.blades.hello-world.title';
+                blade.data = data.results;
+                blade.isLoading = false;
+            });
+        };
 
-			blade.refresh();
-		}]);
+        blade.refresh();
+    }]);
 ```
 
 + Change **blades/hello-world.html** as follows:
 
 ```html
 <div class="blade-content">
-    <div class="blade-inner">
-        <div class="inner-block">
-            <div class="table-wrapper">
-                <table class="table __normal">
-                    <tbody ng-model="blade.data">
-                        <tr class="table-item" ng-repeat="data in blade.data track by data.name">
-                            <td class="table-col">
-                                <div class="table-t">
-                                    {{ data.name }}
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <div class="blade-inner">
+    <div class="inner-block">
+      <div class="table-wrapper">
+        <table class="table __normal">
+          <tbody ng-model="blade.data">
+            <tr class="table-item" ng-repeat="data in blade.data track by data.name">
+              <td class="table-col">
+                <div class="table-t">
+                  {{ data.name }}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 </div>
 ```
 
 + Build script artifacts:
-	+ Navigate to the module *Web project* directory
-	+ Open Windows CMD or PowerShell and run the following commands:
+  + Navigate to the module *Web project* directory
+  + Open Windows CMD or PowerShell and run the following commands:
 
-	```console
-	npm install
-	npm run webpack:build
-	```
+  ```console
+  npm install
+  npm run webpack:build
+  ```
 
-+ Verify that the platform UI was extended with your module scripts: by opening the platform UI and navigating to the `MyCoolModule` menu, you should see all created *Blogs* records.
++ Verify that the platform UI was extended with your module scripts: by opening the platform UI and navigating to the `MyCoolModule` menu, you should see all created *Blog* records.
 
 ## Adding Authentication Options
 Our module template also provides you with out of the box default authentication permissions, which are located in the `ModuleConstants.cs` file:
- 
+
 ```csharp
-	public static class Permissions
-	{
-		public const string Access = "MyCoolModule:access";
-		public const string Create = "MyCoolModule:create";
-		public const string Read = "MyCoolModule:read";
-		public const string Update = "MyCoolModule:update";
-		public const string Delete = "MyCoolModule:delete";
-	}
+public static class Permissions
+{
+  public const string Access = "MyCoolModule:access";
+  public const string Create = "MyCoolModule:create";
+  public const string Read = "MyCoolModule:read";
+  public const string Update = "MyCoolModule:update";
+  public const string Delete = "MyCoolModule:delete";
+}
 ```
 
 You can find the registration code inside the `Module.cs` *PostInitialize* method:
 
 ```csharp
-	// register permissions
-	var permissionsProvider = appBuilder.ApplicationServices.GetRequiredService<IPermissionsRegistrar>();
-	permissionsProvider.RegisterPermissions(ModuleConstants.Security.Permissions.AllPermissions.Select(x =>
-		new Permission()
-		{
-			GroupName = "MyCoolModule",
-			ModuleId = ModuleInfo.Id,
-			Name = x
-		}).ToArray());
+// Register permissions
+var permissionsRegistrar = serviceProvider.GetRequiredService<IPermissionsRegistrar>();
+permissionsRegistrar.RegisterPermissions(ModuleInfo.Id, "MyCoolModule", ModuleConstants.Security.Permissions.AllPermissions);
 ```
 
 To restrict access to an endpoint with a permission, add the **Authorize** attribute to it:
 
 ```csharp
-	[HttpGet]
-	[Route("")]
-	[Authorize(ModuleConstants.Security.Permissions.Read)]
-	public async Task<ActionResult<BlogSearchResult>> GetAll()
+[HttpGet]
+[Route("")]
+[Authorize(ModuleConstants.Security.Permissions.Read)]
+public async Task<ActionResult<BlogSearchResult>> GetAll()
 ```
 
 ## Packing Your Module
@@ -460,8 +521,8 @@ To build your custom module for distribution, use our Virto Commerce CLI tool:
 + Run the following commands:
 
 ```console
-	dotnet tool install VirtoCommerce.GlobalTool -g
-	vc-build compress
+dotnet tool install VirtoCommerce.GlobalTool -g
+vc-build compress
 ```
 
 This is what you will get:
@@ -469,7 +530,7 @@ This is what you will get:
 ![Build tools](media/04-build-tools.png)
 
 !!! note
-    The new module package will be created in the *Artifacts* folder. 
+    The new module package will be created in the *Artifacts* directory.
 
 ## Distribution and Installation
 
