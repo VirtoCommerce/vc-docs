@@ -28,3 +28,10 @@ nav:
           - Getting Started: vue-js-starter-theme/getting-started.md
     - Integrations:
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md
+          - Storyblok CMS Integration:
+                - Overview: integrations/storyblok/overview.md
+                - Catalog Menu Integration: integrations/storyblok/catalog-menu-integration.md
+                - Footer Integration: integrations/storyblok/footer-integration.md
+                - Category Page Integration: integrations/storyblok/category-page-integration.md
+                - Index Page Integration: integrations/storyblok/index-page-integration.md
+                - Registering Custom Components: integrations/storyblok/registering-custom-components.md
