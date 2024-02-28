@@ -24,7 +24,7 @@ nav:
           - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
           - Getting Started: getting-started.md
           - Modules Installation: modules-installation.md
-          - Catalog:
+          - <b>Catalog</b>:
                 - Catalog:
                       - Overview: catalog/overview.md
                       - Managing Catalogs: catalog/add-new-catalog.md
@@ -41,36 +41,18 @@ nav:
                       - Managing User Groups: catalog-personalization/user-groups.md
                       - Example: catalog-personalization/example.md
                       - Settings: catalog-personalization/settings.md
-          - Cart:
-                - Settings: cart/settings.md
-          - Content:
-                - Overview: content/overview.md
-                - Themes: content/managing-themes.md
-                - Pages: content/managing-pages.md
-                - Link Lists: content/managing-linklists.md
-                - Blogs: content/managing-blogs.md
-                - Settings: content/settings.md
-          - Contacts:
+          - <b>Cart</b>:
+                - Settings: cart/settings.md          
+          - <b>Contacts</b>:
                 - Overview: contacts/overview.md
                 - Managing Companies and Contacts: contacts/managing-contacts.md
                 - Settings: contacts/settings.md
-          - Contracts:
-                - Overview: contracts/overview.md
-                - Managing contracts: contracts/creating-and-terminating-contracts.md
-                - Managing contract prices: contracts/managing-contract-prices.md
-                - Managing contract customers: contracts/managing-contract-customers.md
-          - Generic Export:
-                - Overview: generic-export/overview.md
-                - Assigning Permissions: generic-export/assigning-permissions.md
-                - Data Export: generic-export/exporting-data.md
-                - Advanced Filtering: generic-export/advanced-filtering.md
-                - Settings: generic-export/settings.md
-          - Inventory:
+          - <b>Inventory</b>:
                 - Overview: inventory/overview.md
                 - Managing Inventory: inventory/managing-inventory.md
                 - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
                 - Settings: inventory/settings.md
-          - Marketing:
+          - <b>Marketing</b>:
                 - Overview: marketing/overview.md
                 - Dynamic Content:
                       - Overview: marketing/dynamic-content-overview.md
@@ -85,14 +67,7 @@ nav:
                       - Promotion Combination Policies: marketing/combining-active-promotions.md
                       - Promotion Rules: marketing/promotion-rules.md
                       - Settings: marketing/settings.md
-          - Notifications:
-                - Overview: notifications/overview.md
-                - Notification List: notifications/notification-list.md
-                - Notification Layouts: notifications/notification-layouts.md
-                - Notification Log: notifications/notification-log.md
-                - Notification Templates: notifications/notification-templates.md
-                - Settings: notifications/settings.md
-          - Orders:
+          - <b>Orders</b>:
                 - Overview: order-management/overview.md
                 - Order Information: order-management/main-objects.md
                 - Order Processing Scenarios:
@@ -104,7 +79,7 @@ nav:
                 - Notifications: order-management/notifications.md
                 - Permissions: order-management/permissions.md
                 - Settings: order-management/settings.md
-          - Pricing:
+          - <b>Pricing</b>:
                 - Overview: pricing/overview.md
                 - Managing Price Lists: pricing/creating-new-price-list.md
                 - Managing Price List Assignments: pricing/adding-new-assignment.md
@@ -113,10 +88,38 @@ nav:
                 - Settings: pricing/managing-pricing-module-settings.md
                 - Troubleshooting: pricing/troubleshooting-guide.md
                 - Example: pricing/example.md
-          - Quotes: 
+          - <b>Quotes</b>: 
                 - Overview: quotes/overview.md
                 - Managing Quotes: quotes/manage-quotes.md
                 - Settings: quotes/settings.md
+          - Assets: 
+            - Overview: assets/overview.md
+            - Managing Assets: assets/managing-assets.md
+          - Content:
+                - Overview: content/overview.md
+                - Themes: content/managing-themes.md
+                - Pages: content/managing-pages.md
+                - Link Lists: content/managing-linklists.md
+                - Blogs: content/managing-blogs.md
+                - Settings: content/settings.md
+          - Contracts:
+                - Overview: contracts/overview.md
+                - Managing contracts: contracts/creating-and-terminating-contracts.md
+                - Managing contract prices: contracts/managing-contract-prices.md
+                - Managing contract customers: contracts/managing-contract-customers.md
+          - Generic Export:
+                - Overview: generic-export/overview.md
+                - Assigning Permissions: generic-export/assigning-permissions.md
+                - Data Export: generic-export/exporting-data.md
+                - Advanced Filtering: generic-export/advanced-filtering.md
+                - Settings: generic-export/settings.md
+          - Notifications:
+                - Overview: notifications/overview.md
+                - Notification List: notifications/notification-list.md
+                - Notification Layouts: notifications/notification-layouts.md
+                - Notification Log: notifications/notification-log.md
+                - Notification Templates: notifications/notification-templates.md
+                - Settings: notifications/settings.md
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md

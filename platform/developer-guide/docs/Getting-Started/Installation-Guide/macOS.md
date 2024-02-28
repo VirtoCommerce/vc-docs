@@ -4,7 +4,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 ## Prerequisites
 
-* [.NET6 SDK on Mac OS.](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
+* [.NET8 SDK on Mac OS.](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
 
     1. [Download .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core).
     1. Install the LTS version, it will include components for build and launch runtime application.
