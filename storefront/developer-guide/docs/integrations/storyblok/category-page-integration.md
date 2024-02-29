@@ -4,8 +4,8 @@ In this article, we will integrate `Storyblok CMS` into the category page of the
 
 To use `Storyblok CMS` with the page you need to follow these steps:
 
-1. **Create page model**: First, you need to create a page model in the `Storyblok CMS` for the category page. The page model should define the properties of the catalog page and how it should be rendered in the `Storyblok CMS`.
-2. **Add Storyblok to the page component**: After creating a page model, you need to add `Storyblok` to the page component in the `Virto Commerce vue-b2b-theme`. This will allow you to fetch content from `Storyblok` and display it in the catalog page.
+1. **Create page model**: First, you need to create a page model in the `Storyblok CMS` for the category page. The page model should define the properties of the category page and how it should be rendered in the `Storyblok CMS`.
+2. **Add Storyblok to the page component**: After creating a page model, you need to add `Storyblok` to the page component in the `Virto Commerce vue-b2b-theme`. This will allow you to fetch content from `Storyblok` and display it in the category page.
 3. **Create content**: After creating a page model, you can start creating content in the `Storyblok CMS`. You can create content by adding components to your page model and filling them with content.
 
 ## Create Page Model in Storyblok
@@ -14,7 +14,7 @@ First, navigate to the `Block Library` menu and click on `New Block` in the top 
 
 ![Catalog Page Block](../media/catalog-page-block.png)
 
-Now we can use this block to create the content for our catalog page, so we can proceed to create the page content. We will navigate to the `Content` menu and click on the `Create new` to create new `Story` with previously created `Catalog` block:
+Now we can use this block to create the content for our category page, so we can proceed to create the page content. We will navigate to the `Content` menu and click on the `Create new` to create new `Story` with previously created `Catalog` block:
 
 ![Create New Story](../media/create-new-story-catalog.png)
 
