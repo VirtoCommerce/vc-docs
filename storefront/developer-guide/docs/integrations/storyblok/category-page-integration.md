@@ -39,13 +39,11 @@ To integrate 'Storyblok' with the category page, you need to follow these steps:
 
     ```typescript title="client-app/shared/landing-page.vue"
     import { useStoryblok } from "@storyblok/vue";
-    import { useRouter } from "vue-router";
-
-    const router = useRouter();
+    import { onBeforeRouteUpdate } from "vue-router";
 
     let story = await tryLoadContent(window.location.pathname);
 
-    router.beforeEach(async (to) => {
+    onBeforeRouteUpdate(async (to) => {
         story = await tryLoadContent(to.fullPath);
     });
 
