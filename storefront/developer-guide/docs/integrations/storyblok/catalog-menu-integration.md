@@ -1,11 +1,11 @@
 # Overview
 
-In this article, we will integrate `Catalog Menu` with the `Storyblok CMS`. The integration will allow you to create and manage catalog navigation links in the `Storyblok CMS` and display them in the `Virto Commerce Storefront`.
+In this article, we will integrate `Catalog Menu` with the `Storyblok CMS`. The integration will allow you to create and manage catalog navigation links in the `Storyblok CMS` and display them in the `Virto Commerce vue-b2b-theme`.
 
 This guide will cover the following topics:
 
 1. **Create of global component**: We will create a new space in `Storyblok` and add `Catalog Menu` to the space.
-2. **Fetch Content from Storyblok**: We will fetch catalog navigation links from `Storyblok` and display them in the `Storefront`.
+2. **Fetch Content from Storyblok**: We will fetch catalog navigation links from `Storyblok` and display them in the `vue-b2b-theme`.
 
 ## Setting Up Global Component
 
@@ -66,9 +66,9 @@ After creating the blocks, we can proceed to create the content for our `Catalog
 
 Next we will add the `Megamenu-item` block and then the `Megamenu-link-item` block. We will then fill in the necessary fields for each block and hit `Save`.
 
-## Fetch Content from Storyblok and Display in Storefront
+## Fetch Content from Storyblok and Display in vue-b2b-theme
 
-To fetch content from Storyblok and display it in the Storefront, we will go to the Storefront and edit the `useNavigations` composable. We will change the `fetchCatalogMenu` method to fetch the `Catalog Menu` from `Storyblok`. Specifically, we need to replace the `getMenu` method call with the `useStoryblok` method call and pass the path to our menu.
+To fetch content from Storyblok and display it in the vue-b2b-theme, we will go to the vue-b2b-theme and edit the `useNavigations` composable. We will change the `fetchCatalogMenu` method to fetch the `Catalog Menu` from `Storyblok`. Specifically, we need to replace the `getMenu` method call with the `useStoryblok` method call and pass the path to our menu.
 
 ```typescript title="client-app/core/composables/useNavigations.ts" linenums="1"
 export function useNavigations() {
@@ -99,8 +99,8 @@ export function useNavigations() {
 }
 ```
 
-After making the changes, the `Catalog Menu` will now be fetched from `Storyblok` and displayed in the `Storefront`:
+After making the changes, the `Catalog Menu` will now be fetched from `Storyblok` and displayed in the `vue-b2b-theme`:
 
 ![Catalog Menu](../media/catalog-menu.png)
 
-Now you can publish the changes and see the `Catalog Menu` in the `Storefront`.
+Now you can publish the changes and see the `Catalog Menu` in the `vue-b2b-theme`.

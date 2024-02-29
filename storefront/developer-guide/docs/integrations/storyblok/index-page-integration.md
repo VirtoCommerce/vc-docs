@@ -1,11 +1,11 @@
 # Overview
 
-In this article, we will integrate `Storyblok CMS` into the index page of the `Virto Commerce Storefront`. The integration will allow you to create and manage content in `Storyblok CMS` and display it in the `Virto Commerce Storefront`.
+In this article, we will integrate `Storyblok CMS` into the index page of the `Virto Commerce vue-b2b-theme`. The integration will allow you to create and manage content in `Storyblok CMS` and display it in the `Virto Commerce vue-b2b-theme`.
 
 To use `Storyblok CMS` with the page you need to follow these steps:
 
 1. **Create page model**: First, you need to create a page model in the `Storyblok CMS` for the index page. The page model should define the properties of the index page and how it should be rendered in the `Storyblok CMS`.
-2. **Add Storyblok to the page component**: After creating a page model, you need to add `Storyblok` to the page component in the `Virto Commerce Storefront`. This will allow you to fetch content from `Storyblok` and display it in the index page.
+2. **Add Storyblok to the page component**: After creating a page model, you need to add `Storyblok` to the page component in the `Virto Commerce vue-b2b-theme`. This will allow you to fetch content from `Storyblok` and display it in the index page.
 3. **Create content**: After creating a page model, you can start creating content in the `Storyblok CMS`. You can create content by adding components to your page model and filling them with content.
 
 ## Create Page Model in Storyblok
@@ -68,6 +68,6 @@ After adding `Storyblok` to the page component, you can start creating content i
 
 If you have already added custom components to `Storyblok`, you can use them to create content for the page. For more details on how to add custom components to Storyblok, you can read the article [Registering Custom Components](./registering-custom-components.md).
 
-As a result, you will get integration of `Storyblok CMS` with the index page of `Virto Commerce Storefront`:
+As a result, you will get integration of `Storyblok CMS` with the index page of `Virto Commerce vue-b2b-theme`:
 
 ![Storyblok Integration](../media/storyblok-integration-index-page.png)

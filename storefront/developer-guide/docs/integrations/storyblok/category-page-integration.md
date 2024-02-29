@@ -1,11 +1,11 @@
 # Overview
 
-In this article, we will integrate `Storyblok CMS` into the category page of the `Virto Commerce Storefront`. The integration will allow you to create and manage content in `Storyblok CMS` and display it in the `Virto Commerce Storefront`.
+In this article, we will integrate `Storyblok CMS` into the category page of the `Virto Commerce vue-b2b-theme`. The integration will allow you to create and manage content in `Storyblok CMS` and display it in the `Virto Commerce vue-b2b-theme`.
 
 To use `Storyblok CMS` with the page you need to follow these steps:
 
 1. **Create page model**: First, you need to create a page model in the `Storyblok CMS` for the category page. The page model should define the properties of the catalog page and how it should be rendered in the `Storyblok CMS`.
-2. **Add Storyblok to the page component**: After creating a page model, you need to add `Storyblok` to the page component in the `Virto Commerce Storefront`. This will allow you to fetch content from `Storyblok` and display it in the catalog page.
+2. **Add Storyblok to the page component**: After creating a page model, you need to add `Storyblok` to the page component in the `Virto Commerce vue-b2b-theme`. This will allow you to fetch content from `Storyblok` and display it in the catalog page.
 3. **Create content**: After creating a page model, you can start creating content in the `Storyblok CMS`. You can create content by adding components to your page model and filling them with content.
 
 ## Create Page Model in Storyblok
@@ -82,7 +82,7 @@ To integrate 'Storyblok' with the category page, you need to follow these steps:
 
 3) As we want to use `showSidebar` property to control sidebar visibility - we should change the `category.vue` component to use props from `matcher.vue` and add `v-if` condition on `sidebar` section.
 
-```html title="client-app/pages/category.vue"
+```html title="client-app/shared/catalog/components/category.vue" linenums="1"
 <template>
      <!-- Sidebar -->
       <div class="flex items-stretch lg:gap-6">
@@ -95,7 +95,7 @@ To integrate 'Storyblok' with the category page, you need to follow these steps:
 </template>
 ```
 
-```typescript title="client-app/pages/category.vue"
+```typescript title="client-app/shared/catalog/components/category.vue" linenums="1"
 interface IProps {
   categoryId?: string;
   isSearchPage?: boolean;
@@ -115,6 +115,6 @@ After adding `Storyblok` to the category page component, you can start creating 
 
 If you have already added custom components to `Storyblok`, you can use them to create content for the page. For more details on how to add custom components to Storyblok, you can read the article [Registering Custom Components](./registering-custom-components.md).
 
-As a result, you will get integration of `Storyblok CMS` with the category page of `Virto Commerce Storefront`:
+As a result, you will get integration of `Storyblok CMS` with the category page of `Virto Commerce vue-b2b-theme`:
 
 ![Storyblok Integration](../media/storyblok-integration-category-page.png)

@@ -1,11 +1,11 @@
 # Overview
 
-In this article, we will integrate `Footer` with the `Storyblok CMS`. The integration will allow you to create and manage footer sections and navigation links in the `Storyblok CMS` and display them in the `Virto Commerce Storefront`.
+In this article, we will integrate `Footer` with the `Storyblok CMS`. The integration will allow you to create and manage footer sections and navigation links in the `Storyblok CMS` and display them in the `Virto Commerce vue-b2b-theme`.
 
 This guide will cover the following topics:
 
 1. **Create of global component**: We will create a new space in `Storyblok` and add `Footer` to the space.
-2. **Fetch Content from Storyblok**: We will fetch footer sections and navigation links from `Storyblok` and display them in the `Storefront`.
+2. **Fetch Content from Storyblok**: We will fetch footer sections and navigation links from `Storyblok` and display them in the `vue-b2b-theme`.
 
 ## Setting Up Global Component
 
@@ -66,9 +66,9 @@ After creating the blocks, we can proceed to create the content for our `Footer`
 
 Next we will add the `footer_item` block and then the `footer_item_link` block. We will then fill in the necessary fields for each block and hit `Save`.
 
-## Fetch Content from Storyblok and Display in Storefront
+## Fetch Content from Storyblok and Display in vue-b2b-theme
 
-To fetch content from Storyblok and display it in the Storefront, we will go to the `Storefront` and edit the `vc-footer` component. We will remove hard-coded columns and change it to the fetched ones.
+To fetch content from Storyblok and display it in the vue-b2b-theme, we will go to the `vue-b2b-theme` and edit the `vc-footer` component. We will remove hard-coded columns and change it to the fetched ones.
 
 The final `vc-footer` component will look like this:
 
@@ -111,7 +111,6 @@ The final `vc-footer` component will look like this:
 === "Script Section"
 
     ```typescript title="client-app/shared/layout/components/footer/vc-footer.vue" linenums="1"
-    <script setup lang="ts">
     import { useStoryblok } from "@storyblok/vue";
     import pkg from "../../../../../package.json";
     import FooterLink from "./_internal/footer-link.vue";
@@ -128,16 +127,15 @@ The final `vc-footer` component will look like this:
     const columns = ref([]);
 
     onMounted(async () => {
-    columns.value =
-        (await useStoryblok("global/footer", { version: "draft" })).value.content.global.find(
-        (x: any) => x.component === "Footer",
-        )?.items ?? [];
+        columns.value =
+            (await useStoryblok("global/footer", { version: "draft" })).value.content.global.find(
+            (x: any) => x.component === "Footer",
+            )?.items ?? [];
     });
-    </script>
     ```
 
-After making the changes, the `Footer` will now be fetched from `Storyblok` and displayed in the `Storefront`:
+After making the changes, the `Footer` will now be fetched from `Storyblok` and displayed in the `vue-b2b-theme`:
 
 ![Footer](../media/footer.png)
 
-Now you can publish the changes in `Storyblok` and see the updated `Footer` in the `Storefront`.
+Now you can publish the changes in `Storyblok` and see the updated `Footer` in the `vue-b2b-theme`.
