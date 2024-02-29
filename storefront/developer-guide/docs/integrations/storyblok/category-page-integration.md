@@ -50,7 +50,7 @@ To integrate 'Storyblok' with the category page, you need to follow these steps:
     });
 
     async function tryLoadContent(urlPath: string) {
-        return await useStoryblok(urlPath, { version: "draft" });
+        return useStoryblok(urlPath, { version: "draft" });
     }
     ```
 
