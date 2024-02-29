@@ -19,7 +19,7 @@ Let's consider an example of how to register a `Slider` component in the `Storyb
 ```typescript title="StorySlider.vue" linenums="1"
 <template>
   <template v-if="blok">
-    <Slider v-editable="blok" :id="blok._uid" :slides="blok.slides ?? []"></Slider>
+     <Slider :id="blok?.id" v-editable="blok" :slides="blok?.slides ?? []"></Slider>
   </template>
 </template>
 
