@@ -4,8 +4,8 @@ In this article, we will integrate `Builder.io CMS` into the category page of th
 
 To use `Builder.io CMS` with the page you need to follow these steps:
 
-1. **Create page model**: First, you need to create a page model in the `Builder.io CMS` for the category page. The page model should define the properties of the catalog page and how it should be rendered in the `Builder.io CMS`.
-2. **Add Builder.io to the page component**: After creating a page model, you need to add `Builder.io` to the page component in the `Virto Commerce vue-b2b-theme`. This will allow you to fetch content from `Builder.io` and display it in the catalog page.
+1. **Create page model**: First, you need to create a page model in the `Builder.io CMS` for the category page. The page model should define the properties of the category page and how it should be rendered in the `Builder.io CMS`.
+2. **Add Builder.io to the page component**: After creating a page model, you need to add `Builder.io` to the page component in the `Virto Commerce vue-b2b-theme`. This will allow you to fetch content from `Builder.io` and display it in the category page.
 3. **Create content**: After creating a page model, you can start creating content in the `Builder.io CMS`. You can create content by adding components to your page model and filling them with content.
 
 ## Create Page Model in Builder.io
@@ -13,6 +13,10 @@ To use `Builder.io CMS` with the page you need to follow these steps:
 First we will navigate to the `Models` menu where we will hit `Create Model` on the top right corner. You will be prompted with an dropdown to select the model type, we will select `Page`. After selecting the model type, we will be prompted with an input field to name the component, we will use `Category page`, and description. After confirming the name, we will be redirected to the model editor where we should change preview URL to `http://localhost:YOUR_PORT` where `YOUR_PORT` is the port of your `Virto Commerce vue-b2b-theme` application.
 
 ![Catalog Page Block](../media/catalog-page-block-builder.png)
+
+Also we want to add a new field called `showSidebar` of the type `Boolean`. This will allow you to hide the sidebar if needed. Finally, click on `Save`.
+
+![Catalog Page Block Fields](../media/catalog-page-block-fields-builder.png)
 
 Now we can use this model to create the content for our category page, so we can proceed to create the page content. We will navigate to the `Content` menu and click on the `Category page` in `Page models` section. Now click `New Entry` and select `Category page` model from dropdown to create new page:
 
