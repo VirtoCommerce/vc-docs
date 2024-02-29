@@ -87,7 +87,7 @@ export function useNavigations() {
         // Get catalog menu from Storyblok
         catalogMenuItems.value = (
           await useStoryblok("global/megamenu", { version: "draft" })
-        ).value.content.global.find((x: any) => x.component === "Megamenu").items;
+        ).value.content.global.find((x: any) => x.component === "Megamenu")?.items;
 
       } else {
         // ...

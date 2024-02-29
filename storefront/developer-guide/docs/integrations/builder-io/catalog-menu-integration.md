@@ -68,7 +68,7 @@ export function useNavigations() {
             model: "megamenu-items",
             apiKey: themeContext.value.settings.builderIoKey,
           })
-        )?.data.items
+        )?.data?.items
 
       } else {
         // ...
