@@ -11,7 +11,9 @@ Azure App Configuration is a service that enables centralized management of appl
 * **Enhanced security through Azure-managed identities​**: Benefit from enhanced security using Azure-managed identities to control access.
 * **Encryption of sensitive information at rest and in transit​**: Sensitive information is encrypted when stored and during transmission, ensuring data security.
 
-For more information, refer to the [Microsoft guide](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview).
+![Readmore](media/readmore.png){: width="25"} [Microsoft Guide on Azure App configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview)
+
+![Readmore](media/readmore.png){: width="25"} [Configuring and Managing Azure AD Authentication in Virto Commerce Platform](../../Fundamentals/Security/configuring-and-managing-azure-auth.md)
 
 To add Azure App Configuration:
 

@@ -6,9 +6,9 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 === "Required software components"
 
-    * [ASP.NET Core Runtime 6.0.2](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing ASP.NET Core Runtime")
+    * [ASP.NET Core Runtime 8.0.0.](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
     * [Virto Commerce CLI](https://github.com/VirtoCommerce/vc-build), our proprietary command line interface that enables automating the installation process and updating the dependencies.
-    * [MS SQL Server 2017 or higher](https://www.microsoft.com/en-us/sql-server/sql-server-downloads "Installing MS SQL Server")
+    * [MS SQL Server 2019 or higher.](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
     !!! note
         After installing MS SQL server, switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
@@ -17,9 +17,9 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 === "Optional software components"
 
-    * For VirtoCommerce 3.200 or higher, install MS Visual Studio 2022 (version 17.0 or higher). 
-    * To edit the source code, install [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing .NET 6 SDK").
-    * For better search capabilities, install [Elastic search 7.15](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-0). 
+    * For VirtoCommerce 3.800 or higher, install MS Visual Studio 2022 (version 17.8 or higher). 
+    * To edit the source code, install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing .NET 6 SDK").
+    * For better search capabilities, install [Elastic search 8.12](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-0). 
 
         !!! note
             By default, VirtoCommerce uses [Lucene .NET](https://lucenenet.apache.org/). However, it cannot be used in production due to its limited functionality.
@@ -61,7 +61,7 @@ To use Virto Commerce CLI (vc-build):
 1. Specify the platform version (if required) using the command:
 
     ```console
-    vc-build install -version 3.293.0
+    vc-build install -version 3.800.0
     ```
 
 ![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)

@@ -85,6 +85,7 @@ nav:
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
+                - Skyflow: Fundamentals/Payments/skyflow.md
           - Fulfillment:
                 - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
           - Taxes:
@@ -480,7 +481,8 @@ nav:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:
           - Tutorials:
-                - Creating Custom Module: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
+                - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
+                - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
           - How-tos:
                 - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md 

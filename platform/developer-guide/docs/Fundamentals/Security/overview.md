@@ -12,6 +12,6 @@ There are many aspects of security in Virto Platform and Web API. We will, howev
 
 ![Readmore](media/readmore.png){: width="25"} [Virto authentication](authentication/issuing-and-using-access-token.md)
 
-![Readmore](media/readmore.png){: width="25"} [Virto authorization](authorization/overview.md) API calls
+![Readmore](media/readmore.png){: width="25"} [Virto authorization](authorization/overview.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Extending authorization](extensions/extending-authorization-policies.md)

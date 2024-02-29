@@ -182,19 +182,25 @@ This **required** node determines how VC Platform will be working with assets, i
 === "FileSystem"
 
     ```json title="appsettings.json"
-    "FileSystem": {
-    "RootPath": "~/assets",
-    "PublicUrl": "http://localhost:5001/assets/"
-    }
+     "Assets": {
+        "Provider": "FileSystem",
+        "FileSystem": {
+          "RootPath": "~/assets",
+          "PublicUrl": "http://localhost:5001/assets/"
+        }
+     }
     ```
 
 === "AzureBlobStorage"
 
     ```json title="appsettings.json"
-    "AzureBlobStorage": {
-    "ConnectionString": "",
-    "CdnUrl": ""
-    }  
+     "Assets": {
+        "Provider": "AzureBlobStorage",
+        "AzureBlobStorage": {
+            "ConnectionString": "",
+            "CdnUrl": ""
+        }
+     }  
     ```
 
 
@@ -714,6 +720,55 @@ This node configures the Serilog logging library, allowing customization of logg
     ]
 }
 ```
+
+### Skyflow
+
+This node configures the Skyflow payment processing module, facilitating secure handling of payment data and integration with various payment service providers.
+
+| Node                        | Default or Sample Value                                                   | Description                                                                             |
+| --------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------|
+| `tokenURI`                  | `"https://manage.skyflowapis.com/v1/auth/sa/oauth/token"`                 | The URI for obtaining authentication tokens from the Skyflow API.                       |
+| `clientSDK:clientID`        | `"b7eeb4df0007492cbef5bd1000000000"`                                      | The client ID for authentication with the Skyflow client SDK.                           |
+| `clientSDK:keyID`           | `"i24bb5b53c114f1c9531db69000000000"`                                     | The key ID for authentication with the Skyflow client SDK.                              |
+| `clientSDK:privateKey`      |                                                                           | The private key for authentication with the Skyflow client SDK.                         |
+| `Connections`               | `"Default"`                                                               | Configuration details for establishing connections with payment service providers.      |
+| `DefaultConnection:clientID`| `"ca2836c68afa4546b6e09b000000000"`                                       | The client ID for the default connection to Skyflow APIs.                               |
+| `DefaultConnection:keyID`   | `"hd75811c6f4b4ed4835eda00000000"`                                        | The key ID for the default connection to Skyflow APIs.                                  |
+| `DefaultConnection:privateKey` |                                                                        | The private key for the default connection to Skyflow APIs.                             |
+| `DefaultConnection:connectionUrl` |                                                                     | The connection URL for the default connection to Skyflow APIs.                          |
+| `DefaultConnection:name`    |                                                                           | The name of the default connection.                                                     |
+| `DefaultConnection:transactionKey` |                                                                    | The transaction key for the default connection to Skyflow APIs.                         |
+
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "Payments": {
+    "Skyflow": {
+      "tokenURI": "https://manage.skyflowapis.com/v1/auth/sa/oauth/token",
+      "clientSDK": {
+        "clientID": "b7eeb4df0007492cbef5bd1000000000",
+        "keyID": "i24bb5b53c114f1c9531db69000000000",
+        "privateKey": "-----BEGIN PRIVATE KEY---TODO---END PRIVATE KEY-----"
+      },
+      "Connections": {
+        "Default": {
+          "clientID": "ca2836c68afa4546b6e09b000000000",
+          "keyID": "hd75811c6f4b4ed4835eda00000000",
+          "privateKey": "-----BEGIN PRIVATE KEY---TODO---END PRIVATE KEY-----"
+        }
+      },
+      "DefaultConnection": {
+        "connectionUrl": "https://ebfc00000000.gateway.skyflowapis.com/v1/gateway/outboundRoutes/gfb5ce07e91340efac348a2df00000000/xml/v1/request.api",
+        "name": "TODO:YOURID",
+        "transactionKey": "TODO:YOUR_TRANSACTION_KEY"
+      }
+    }
+  }
+}
+```
+
 
 ### Tax
 

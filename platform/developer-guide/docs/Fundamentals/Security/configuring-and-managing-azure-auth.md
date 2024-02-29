@@ -1,139 +1,147 @@
-# Configuring and Managing Azure AD Authentication
-This article will guide you through the single sign-on (SSO) options that are available to you, and provide you with an introduction to planning a single sign-on deployment when using Azure Active Directory (Azure AD).
+# Azure AD (MS Entra) Authentication Management
 
-## Introduction
-By default, Virto Commerce Platform Manager authenticates users with login and password. This method does have some downsides:
-
-+ Each Virto Commerce Platform account has to be created manually by an administrator.
-+ Each user has to memorize their login and password and enter it every single time they want to sign in to Virto Commerce Platform Manager.
-
-These issues can be solved by enabling sign-in with Azure Active Directory. This way, Virto Commerce Platform will allow users of a certain company to sign in or sign up using their Azure Active Directory account.
-
-Azure Active Directory authentication provides the following advantages:
-
-+ Virto Commerce Platform Manager will create a new Virto Commerce Platform account automatically when the owner of that account signs in for the first time, so that the Virto Commerce Platform administrator does not have to create it themselves.
-+ Users will not have to memorize yet another password, as they will use their existing Azure Active Directory account.
-+ Azure Active Directory uses the [single sign-on](https://en.wikipedia.org/wiki/Single_sign-on) flow, which means, if a user already uses any Microsoft services, such as Office 365 or Outlook.com, they will not have to enter their password to sign in to Virto Commerce Platform Manager.
-
-To implement single sign-on, Virto Commerce Platform uses the [OpenID Connect](https://openid.net/connect/) protocol implemented by the [Microsoft.AspNetCore.Authentication.OpenIdConnect](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.OpenIdConnect) library.
-
-
-## Prerequisites
-To enable Azure Active Directory authentication, make sure that:
-
-+ Your company has a valid Azure Active Directory tenant. If it does not, follow this [quickstart guide](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) to create one.
-+ You have an Azure account that belongs to your company's Azure Active Directory tenant. If you do not have an Azure account yet, you can [start a free Azure subscription](https://azure.microsoft.com/free/).
-+ You have a Virto Commerce Platform instance running, either locally or with Azure. You will need to modify its configuration, so make sure you have privileges to do that.
-+ You have administrator access to Virto Commerce Platform Manager if you want to manage roles and privileges for the users signed up with Azure AD.
-+ You have installed the [Azure module](https://github.com/VirtoCommerce/vc-module-azure-ad).
-
-## Setup
-To set up the Azure Active Directory based authentication in Virto Commerce Platform Manager, go through these three simple steps:
-
-1. Add registration for Virto Commerce Platform in Azure Active Directory.
-2. Configure Virto Commerce Platform to use Azure AD authentication.
-3. Run testing.
-
-### Adding Registration for Virto Commerce Platform in Azure Active Directory
-1. Sign in to the [Azure Portal](https://portal.azure.com/) using your Azure account.
-2. Select **Azure Active Directory**, which will open a screen with the overview of your company's Azure AD tenant.
-3. Select **App registrations**.
-4. Click the **New registration** button on the **App registrations** screen:
-
-	![Azure portal, New App Registration button](media/azure-sso01-aad-app-registration.png)
-
-5. Provide the following information on the **Register an application** screen:
-
-	- **Name**: Application name for your Virto Commerce Platform instance. Note that Virto Commerce Platform users will see that name on the Azure Active Directory sign-in page.
-	- **Supported account types**: Leave the default value.
-	- **Redirect URI**: Select **Web** in the first dropdown and enter the external sign-in URL of your Virto Commerce Platform (*<Platform URL>/signin-oidc*), e.g., *http://localhost:10645/signin-oidc*.
-  
-	![Azure portal, new app registration details](media/azure-sso02-aad-app-registration2.png)
-	
-!!! warning
-	If your URL is not localhost, **https** will be required.
-
-Once you have filled these fields and registered your application, you will see its details:
-
-![Azure portal, app registration details](media/azure-sso03-aad-app-registration-overview.png)
-
-Copy the values from the **Application (client) ID** and **Directory (tenant) ID** fields, as you will need them in the next step.
-
-In **Authentication**, check **ID tokens** and hit **Save**:
-
-	![Azure portal, app registration Authentication](media/azure-sso04-aad-app-registration-auth.png)
-
-### Configuring Virto Commerce Platform to Use Azure AD Authentication
-Open **appsettings.json** for the Virto Commerce Platform instance and navigate to the **AzureAd** node:
-    
-```json title="appsettings.json"
-	"AzureAd": {
-		"Enabled": false,
-		"AuthenticationType": "AzureAD",
-		"AuthenticationCaption": "Azure Active Directory",
-		"ApplicationId": "(Replace this with Application (client) ID, e.g. 01234567-89ab-cdef-0123-456789abcdef)",
-		"TenantId": "(Replace this with Directory (tenant) ID, e.g. abcdef01-2345-6789-abcd-ef0123456789)",
-		"AzureAdInstance": "https://login.microsoftonline.com/",
-		"DefaultUserType": "Manager",
-		"UsePreferredUsername": false
-	},
-```
-    
-Modify the following settings:
-
-+ Set **Enabled** to **true**
-+ Paste the value of **Application (client) ID** from app registration in Azure to **ApplicationId**
-+ Paste the value of **Directory (tenant) ID** to **TenantId**
-	
-The updated configuration should look like this:
-
-```json title="appsettings.json"
-	"AzureAd": {
-		"Enabled": true,
-		"AuthenticationType": "AzureAD",
-		"AuthenticationCaption": "Azure Active Directory",
-		"ApplicationId": "b6d8dc6a-6ddd-4497-ad55-d65f91ca7f50",
-		"TenantId": "fe353e8f-5f08-43b4-89d1-f4acec93df33",
-		"AzureAdInstance": "https://login.microsoftonline.com/",
-		"DefaultUserType": "Manager",
-		"UsePreferredUsername": false,
-		"Priority": 0
-	},
-```
-
-After that, restart your Virto Commerce Platform instance, so that it could read and apply the updated settings.
-
-### Testing
-
-Navigate to the login page of your Virto Commerce Platform Manager and locate the **Sign in with Azure Active Directory** link:
-
-![Virto Commerce Platform Manager login page with SSO](media/azure-sso05-vc-platform-login.png)
-	
-Once you click that link, you will be redirected to the Microsoft sign in page. You might be asked to sign in with your Microsoft account if you did not sign in with it before:
-
-![Azure Active Directory sign-in page](media/azure-sso06-ad-signin-page.png)
-    
-Provide the credentials of your Azure account. Make sure this account belongs to the same domain where you registered the application.
-
-When signing in for the first time, you will also be asked to grant your application a permission to sign you in and read your account information. Just accept it:
-
-![Azure Active Directory requesting user to grant sign-in permission](media/azure-sso07-ad-signin-permissions.png)
-	
-If everything went fine, you will be redirected back to the Virto Commerce Platform, where you will be already signed in:
-
-![Virto Commerce Platform Manager, after successful sign-in](media/azure-sso08-vc-platform-signedin.png)
+This guide provides information about the single sign-on (SSO) options available and introduces the process of planning a single sign-on deployment when using Azure Active Directory (Azure AD) with Virto Commerce.
 
 !!! note
-	The account created by signing in using Azure Active Directory is just a regular Virto Commerce Platform account. By default, it has no roles and almost no permissions. You will have to ask your Virto Commerce Platform administrator to adjust permissions and roles for this account:
-	
-	![Virto Commerce Platform Manager, details of the user signed in with Azure AD](media/azure-sso09-vc-platform-user-details.png)
+    **Azure Active Directory (Azure AD)** has been renamed to **Microsoft Entra ID**. For the remainder of this guide, these terms are considered synonymous.
+
+![Readmore](media/readmore.png){: width="25"} [Azure App Configuration](../../Tutorials-and-How-tos/How-tos/azure-app-configuration.md)
+
+By default, the Virto Commerce Platform Manager authenticates users with a login and password. However, this method has its drawbacks:
+
+* Each Virto Commerce Platform account must be manually created by an administrator.
+* Users are required to remember their login and password and input them each time they sign in to Virto Commerce Platform Manager.
+
+These issues can be solved by enabling sign-in with Azure Active Directory, allowing users of a certain company to sign in or sign up using their Azure AD account.
+
+Azure Active Directory authentication offers several advantages:
+
+* Virto Commerce Platform Manager automatically creates a new account the first time a user signs in, eliminating the need for manual creation by administrators.
+* Users do not need to remember another password, as they can use their existing Azure AD account.
+* Azure Active Directory employs the single sign-on flow, meaning users who already utilize Microsoft services such as Office 365 or Outlook.com do not need to enter their password to sign in to Virto Commerce Platform Manager.
+
+To implement single sign-on, Virto Commerce Platform utilizes the OpenID Connect protocol provided by the **Microsoft.AspNetCore.Authentication.OpenIdConnect** library.
+
+## Prerequisites
+
+Before enabling Azure Active Directory authentication, ensure the following:
+
+1. Your company has a valid Azure Active Directory tenant. If not, follow the [quickstart guide](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) to create one.
+1. You have an Azure account associated with your company's Azure Active Directory tenant. If you do not have an Azure account yet, [start a free Azure subscription](https://azure.microsoft.com/free/).
+1. A Virto Commerce Platform instance is running, either locally or on Azure. Ensure you have privileges to modify its configuration.
+1. If managing roles and privileges for users signed up with Azure AD is required, ensure you have administrator access to Virto Commerce Platform Manager.
+
+## Setup
+
+To set up the Azure Active Directory based authentication in Virto Commerce Platform Manager:
+
+1. [Add registration for Virto Commerce Platform in Azure Active Directory.](azure-ad.md#add-registration-for-virto-commerce-platform-in-azure-active-directory)
+1. [Configure Virto Commerce Platform to use Azure AD Authentication.](azure-ad.md#configure-virto-commerce-platform-to-use-azure-ad-authentication)
+1. [Test.](azure-ad.md#test)
+
+### Add Registration for Virto Commerce Platform in Azure Active Directory
+
+1. Sign in to the [Azure Portal](https://portal.azure.com/) using your Azure account.
+
+1. Select Azure Active Directory to access the overview of your company's Azure AD tenant.
+
+1. Navigate to App registrations and click the New registration button to register a new application.
+
+    ![New app registration](media/azure-ad-app-registration.png)
+
+1. Provide the necessary information on the **Register an application** screen:
+
+    * **Name**: Application name for your Virto Commerce Platform instance (visible to users on the Azure AD sign-in page).
+    * **Supported account types**: Leave the default value.
+    * **Redirect URI**: Select Web and enter the external sign-in URL of your Virto Commerce Platform (/signin-oidc), e.g., http://localhost:10645/signin-oidc.
+
+    !!! note
+        If your URL is not localhost, HTTPS is required.
+
+    ![Register app](media/register-app.png)
+
+1. After registration, copy the values from the Application (client) ID and Directory (tenant) ID fields for use in the next step:
+
+    ![Copy values](media/copy-values.png)
+
+1. In **Authentication**, enable ID tokens and save the changes:
+
+    ![Enable-token](media/enable-token.png)
+
+### Configure Virto Commerce Platform to Use Azure AD Authentication
+
+To configure Virto Commerce Platform to use Azure AD authentication:
+
+1. Open **appsettings.json** for the Virto Commerce Platform instance.
+1. Navigate and find the AzureAd node:
+
+    ```json title="appsettings.json"
+    "AzureAd": {
+        "Enabled": false,
+        "AuthenticationType": "AzureAD",
+        "AuthenticationCaption": "Azure Active Directory",
+        "ApplicationId": "(Replace this with Application (client) ID, e.g. 01234567-89ab-cdef-0123-456789abcdef)",
+        "TenantId": "(Replace this with Directory (tenant) ID, e.g. abcdef01-2345-6789-abcd-ef0123456789)",
+        "AzureAdInstance": "https://login.microsoftonline.com/",
+        "DefaultUserType": "Manager",
+        "UsePreferredUsername": false
+    }
+	```
+
+1. Modify the following settings:
+    1. Set `Enabled` to `true`.
+    1. Paste the value of Application (client) ID from app registration in Azure to `ApplicationId`.
+    1. Paste the value of Directory (tenant) ID to `TenantId`.
+
+    The updated configuration should look as follows:
+
+    ```json title="appsettings.json"
+    "AzureAd": {
+        "Enabled": true,
+        "AuthenticationType": "AzureAD",
+        "AuthenticationCaption": "Azure Active Directory",
+        "ApplicationId": "b6d8dc6a-6ddd-4497-ad55-d65f91ca7f50",
+        "TenantId": "fe353e8f-5f08-43b4-89d1-f4acec93df33",
+        "AzureAdInstance": "https://login.microsoftonline.com/",
+        "DefaultUserType": "Manager",
+        "UsePreferredUsername": false,
+        "Priority": 0
+    }
+	```
+
+1. Restart your Virto Commerce Platform instance to apply the updated settings.
+
+
+### Test
+
+1. Navigate to the login page of Virto Commerce Platform Manager and locate the **Sign in with Azure Active Directory** link:
+
+    ![Sign in](media/sign-in-page.png)
+
+1. Click the link to be redirected to the Microsoft sign-in page. You might be asked to sign in with your Microsoft account if you did not sign in with it earlier. Sign in with your Azure account credentials. Make sure this account belongs to the same domain where you registered the application.
+
+    ![Sign in with MS account](media/sign-in-with-ms-account.png)
+
+1. If prompted, grant permission for the application to sign you in and read your account information.
+
+    ![Grant permissions](media/grant-permissions.png)
+
+1. Upon successful sign-in, you will be redirected back to Virto Commerce Platform Manager, where you will be authenticated:
+
+    ![Signed in platform](media/signed-in-platform.png)
+
+
+    !!! note
+        The account created via Azure AD sign-in is a regular Virto Commerce Platform account with default roles and permissions. Adjustments may be required by the administrator.
+
 
 ## Multitenant Azure AD
-If you use the Azure AD authentication and want to allow users from any tenant to connect to your Virto Commerce application, you need to configure the Azure AD app as multi-tenant and use a *wildcard* tenant ID, such as `organizations` or `common` in the authority URL.
 
-Also, you need to switch *Validate Issuer* from *Default* to *MultitenantAzureAD* mode.
+If you use the Azure AD authentication and want to allow users from any tenant to connect to your Virto Commerce application, you need to configure the Azure AD app as multi-tenant and use a **wildcard** tenant ID, such as `organizations` or `common` in the authority URL.
 
-```json
+You also need to switch **Validate Issuer** from **Default** to **MultitenantAzureAD** mode.
+
+```json title="appsettings.json"
 	"AzureAd": {
 		"TenantId": "common",
 		"ValidateIssuer" : "MultitenantAzureAD",
@@ -142,7 +150,7 @@ Also, you need to switch *Validate Issuer* from *Default* to *MultitenantAzureAD
 
 The updated configuration might look like this:
     
-```json
+```json title="appsettings.json"
 	"AzureAd": {
 		"Enabled": true,
 		"AuthenticationType": "AzureAD",
@@ -157,47 +165,22 @@ The updated configuration might look like this:
 	},
 ```
 
-## Configuring Login Scheme Priority
-
-By default, the username/password login is enabled and shown first on the login page:
-
-![Sign-in pages](media/azure-sso10-vc-platform-login.gif)
-
-You can change the order of login popups or disable the password login completely. To disable the username/password login, add the following configuration options:
-    
-```json
-	"PasswordLogin": {
-		"Enabled": false
-	},
-```
-
-If both Azure AD login and username/password login types are enabled, you can set up which is shown before the other using the *Priority* option (the lower the number, the higher the priority):
-    
-```json
-	"PasswordLogin": {
-		"Enabled": true,
-		"Priority": 0
-	},
-	"AzureAd": {
-		"Enabled": true,
-		"Priority": 1
-	  },
-```
-
 ## Advanced Details
-As mentioned above, if a user signs in with Azure Active Directory for the first time, Virto Commerce Platform will create a new account for them. The question is: what will happen if the Virto Commerce Platform account with the same login already exists?
 
-To answer this question, let's dive deeper into the Azure Active Directory authentication in Virto Commerce Platform. Here is what Virto Commerce Platform does when someone attempts to sign in using Azure Active Directory:
+As mentioned above, when a user signs in with Azure Active Directory for the first time, Virto Commerce Platform automatically creates a new account for them. But what happens if the Virto Commerce Platform account with the same login already exists?
 
-1. VC Platform forces *Microsoft.AspNetCore.Authentication.OpenIdConnect* to check the user's identity. This action starts a typical OpenID Connect flow and causes redirection to the Azure Active Directory sign-in page and back to the Virto Commerce Platform.
-2. When this flow is over, Virto Commerce Platform receives Azure Active Directory account information for the current user and extracts the *upn* claim value from it.
-3. Virto Commerce Platform then attempts to find an existing Virto Commerce Platform account with a login that matches that *upn* claim value. This may yield three possible outcomes:
-	+ The account already exists and is linked to the Azure Active Directory account of the signed in user. In this case, no further actions will be performed, and Virto Commerce Platform will just authenticate that user using the existing account.
-	+ The account already exists, but is missing the Azure Active Directory external sign in information. In this case, Virto Commerce Platform will modify that account to add external login information for the Azure Active Directory account. All other account information, including roles, permissions, and personal information, will remain untouched.
-	+ Finally, if such account does not exist yet, VC Platform will create it and link it with Azure Active Directory account.
-4. In case the *upn* claim is not being transferred, e.g., if you see the **Received external login info does not have an UPN claim or DefaultUserName** error message, the system can be configured to use the **preferred_username** or **emailaddress** claims instead using the following setting:
+To answer this question, let's explore the Azure Active Directory authentication in Virto Commerce Platform deeper.
+
+1. VC Platform trigegrs **Microsoft.AspNetCore.Authentication.OpenIdConnect** to verify the user's identity. This initiates a standard OpenID Connect flow, redirecting the user to the Azure Active Directory sign-in page and then back to the Virto Commerce Platform.
+1. When this flow is over, Virto Commerce Platform receives Azure Active Directory account information for the current user and extracts the **upn** claim value from it.
+1. Virto Commerce Platform then attempts to find an existing Virto Commerce Platform account with a login that matches that **upn** claim value. This search can lead to three possible outcomes:
+	1. If the account already exists and is associated with the Azure Active Directory account of the signed-in user, no further action is taken, and Virto Commerce Platform authenticates the user using the existing account.
+	1. If the account exists but lacks external sign-in information for Azure Active Directory, Virto Commerce Platform updates the account to include this information. All other account details, such as roles, permissions, and personal information, remain unchanged.
+	1. If no such account exists yet, Virto Commerce Platform creates a new one and links it to the Azure Active Directory account.
+
+1. If the upn claim is not transferred, resulting in an error message like **Received external login info does not have an UPN claim or DefaultUserName**, you can configure the system to use either the **preferred username** or **email address** claims instead. Use the following settings in the **appsettings.json** file:
  
-    ```json
+    ```json title="appsettings.json"
 	    {
 		    "UsePreferredUsername": true
 	    }
@@ -205,7 +188,7 @@ To answer this question, let's dive deeper into the Azure Active Directory authe
 
 	or:
     
-    ```json
+    ```json title="appsettings.json"
 	    {
 		    "UseEmail": true
 	    }
@@ -216,19 +199,19 @@ To answer this question, let's dive deeper into the Azure Active Directory authe
 
 ## Configuration with Custom Azure AD App Signing Keys
 
-If your app has custom signing keys, you can receive this error upon the `POST https://localhost:5001/signin-oidc` request:
+If your app has custom signing keys, you can receive the following error upon the `POST https://localhost:5001/signin-oidc` request:
 
-```json
+```json title="appsettings.json"
 Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match key
 ```
-    
-https://github.com/Azure/azure-sdk-for-net/issues/17695
 
-If your app has custom signing keys as a result of using the claim mapping feature, you have to append an appid query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information. For example, https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e contains a `jwks_uri` of https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e.
+If your app uses custom signing keys due to the claim mapping feature, you need to append an appid query parameter containing the app ID. This ensures you receive a **jwks_uri** pointing to your app's signing key information. 
+
+For instance, the URL https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e contains a **jwks_uri** of https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e.
 
 Here is an example of the updated configuration that resolves the above issue:
     
-```json
+```json title="appsettings.json"
 	"AzureAd": {
 		"Enabled": true,
 		"AuthenticationType": "AzureAD",
@@ -239,5 +222,5 @@ Here is an example of the updated configuration that resolves the above issue:
 		"MetadataAddress": "https://login.microsoftonline.com/fe353e8f-5f08-43b4-89d1-f4acec93df33/v2.0/.well-known/openid-configuration?appid=b6d8dc6a-6ddd-4497-ad55-d65f91ca7f50",
 		"DefaultUserType": "Manager",
 		"UsePreferredUsername": false
-	},
+	}
 ```
