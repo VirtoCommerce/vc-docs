@@ -52,15 +52,15 @@ To integrate 'Builder.io' with the category page, you need to follow these steps
     import { Category } from "@/shared/catalog";
     import { getContent, RenderContent, isPreviewing } from "@builder.io/sdk-vue/vue3";
     import { onMounted, shallowRef } from "vue";
-    import { useRouter } from "vue-router";
     import { useBuilder } from "@/shared/builder-io/composables/useBuilder";
+    import { onBeforeRouteUpdate } from "vue-router";
 
     interface IProps {
         categoryId: string;
     }
 
     defineProps<IProps>();
-    const router = useRouter();
+
     const { registeredComponents } = useBuilder();
 
     const canShowContent = shallowRef(true);
@@ -71,7 +71,7 @@ To integrate 'Builder.io' with the category page, you need to follow these steps
         await tryLoadContent(window.location.pathname);
     });
 
-    router.beforeEach(async (to) => {
+    onBeforeRouteUpdate(async (to) => {
         await tryLoadContent(to.fullPath);
     });
 
