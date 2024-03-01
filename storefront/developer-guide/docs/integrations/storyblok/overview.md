@@ -50,31 +50,6 @@ export default async () => {
 }
 ```
 
-Also you need to add Vue 3 `Suspense` component to your `client-app/App.vue` like in this example:
-
-```html title="client-app/App.vue"
-<template>
-  <Head>
-    <link rel="icon" :href="$cfg.favicon_image" />
-  </Head>
-
-  <component :is="layout">
-    <Suspense>
-      <template #default>
-        <RouterView />
-      </template>
-
-      <template #fallback>
-         <VcLoaderOverlay />
-      </template>
-    </Suspense>
-  </component>
-
-  <ModalHost />
-  <NotificationsHost />
-</template>
-```
-
 !!! note
     For more information about connecting Storyblok with Vue apps, see the [Add a headless CMS to VueJS in 5 minutes](https://www.storyblok.com/tp/add-a-headless-CMS-to-vuejs-in-5-minutes#connecting-vue-to-storyblok).
 

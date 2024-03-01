@@ -29,6 +29,9 @@ To add `Storyblok` to the page component you need to add `StoryblokComponent` in
         <div v-if="story">
             <StoryblokComponent v-for="(blok, index) in story?.content?.body" :blok="blok" :key="blok._uid" />
         </div>
+        <div v-else-if="loading" class="min-h-[80vh]">
+            <VcLoaderOverlay />
+        </div>
     </template>
     ```
 
@@ -37,7 +40,7 @@ To add `Storyblok` to the page component you need to add `StoryblokComponent` in
     As you can see we are using `main-page` as a content ID to fetch the content from Storyblok.
 
     ```typescript title="client-app/pages/index.vue"
-    import { ref } from "vue";
+    import { ref, toValue } from "vue";
     import { useI18n } from "vue-i18n";
     import { usePageHead } from "@/core/composables";
     import { useStoryblok } from "@storyblok/vue";
@@ -52,7 +55,16 @@ To add `Storyblok` to the page component you need to add `StoryblokComponent` in
         },
     });
 
-    const story = await useStoryblok("main-page", { version: "draft" });
+    const story = ref({});
+
+    onBeforeMount(async () => {
+    try {
+        loading.value = true;
+        story.value = toValue(await useStoryblok("main-page", { version: "draft" }));
+    } finally {
+        loading.value = false;
+    }
+    });
     ```
 
 Now you can preview the index page in the `Storyblok` and start creating content for it.

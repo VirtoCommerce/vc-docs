@@ -28,9 +28,11 @@ To integrate 'Storyblok' with the category page, you need to follow these steps:
 
     ```html title="client-app/shared/landing-page.vue"
     <template>
-        <div v-if="story">
-            <StoryblokComponent v-for="blok in story?.content?.body" :key="blok._uid" :blok="blok" />
-            <slot v-bind="story?.content"></slot>
+        <div>
+            <template v-if="story">
+                <StoryblokComponent v-for="blok in story?.content?.body" :key="blok._uid" :blok="blok" />
+            </template>
+            <slot v-bind="story?.content" key="catalog"></slot>
         </div>
     </template>
     ```
@@ -39,16 +41,21 @@ To integrate 'Storyblok' with the category page, you need to follow these steps:
 
     ```typescript title="client-app/shared/landing-page.vue"
     import { useStoryblok } from "@storyblok/vue";
+    import { onBeforeMount, ref, toValue } from "vue";
     import { onBeforeRouteUpdate } from "vue-router";
 
-    let story = await tryLoadContent(window.location.pathname);
+    const story = ref({});
+
+    onBeforeMount(async () => {
+        await tryLoadContent(window.location.pathname);
+    });
 
     onBeforeRouteUpdate(async (to) => {
-        story = await tryLoadContent(to.fullPath);
+        await tryLoadContent(to.fullPath);
     });
 
     async function tryLoadContent(urlPath: string) {
-        return useStoryblok(urlPath, { version: "draft" });
+        story.value = toValue(await useStoryblok(urlPath, { version: "draft" }));
     }
     ```
 
