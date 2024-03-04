@@ -6,7 +6,7 @@ In this article, we will explore how to register any custom component in the Bui
 
 To register a custom component in the Builder.io CMS:
 
-1. Create a reference for the custom component you want to register. The wrapper component should be a ***.ts** file. It describes the inputs—or the props—that should be editable in the **Visual Editor**.
+1. Create a reference for the custom component you want to register. The wrapper component should be a **.ts** file. It describes the inputs—or the props—that should be editable in the **Visual Editor**.
 1. Register the reference using the `useBuilder` composable which we created [here](overview.md#connect-builderio-with-virto-commerce-vue-b2b-theme). This will make the custom component available for use in the Builder.io CMS.
 1. Provide a list of components to the `RenderContent` component. This allows you to use the custom components in the Builder.io CMS.
 
@@ -71,6 +71,6 @@ In this example, we will show how to register a `Slider` component in the Builde
     const { registeredComponents } = useBuilder();
     ```
 
-The `Slider` component is now registered and available for use in the Builder.io CMS. You can now use the `Slider` component when creating content in the Builder.io CMS:
+The **Slider** component is now registered and available for use in the Builder.io CMS. You can now use the **Slider** component when creating content in the Builder.io CMS:
 
 ![Slider Component in Builder.io CMS](./../media//slider-component-builder.png)

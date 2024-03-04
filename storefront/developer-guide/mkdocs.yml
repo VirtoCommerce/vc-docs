@@ -35,3 +35,10 @@ nav:
               - Footer Integration: integrations/builder-io/footer-integration.md
               - Index Page Intergration: integrations/builder-io/index-page-integration.md
               - Registering Custom Components: integrations/builder-io/registering-custom-components.md
+          - Storyblok:
+              - Overview: integrations/storyblok/overview.md
+              - Catalog Menu Integration: integrations/storyblok/catalog-menu-integration.md
+              - Category Page Integration: integrations/storyblok/category-page-integration.md
+              - Footer Integration: integrations/storyblok/footer-integration.md
+              - Index Page Integration: integrations/storyblok/index-page-integration.md
+              - Registering Custom Components: integrations/storyblok/registering-custom-components.md
