@@ -28,3 +28,10 @@ nav:
           - Getting Started: vue-js-starter-theme/getting-started.md
     - Integrations:
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md
+          - Builder.io:
+              - Overview: integrations/builder-io/overview.md
+              - Catalog Menu Intergration: integrations/builder-io/catalog-menu-intergration.md
+              - Category Page Integration: integrations/builder-io/category-page-integration.md
+              - Footer Integration: integrations/builder-io/footer-integration.md
+              - Index Page Intergration: integrations/builder-io/index-page-integration.md
+              - Registering Custom Components: integrations/builder-io/registering-custom-components.md

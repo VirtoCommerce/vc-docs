@@ -157,7 +157,7 @@ The final record for adding a new element would look like this:
 
 ```typescript
 export const overrides: OverridesSchema = {
-upsert: [
+  upsert: [
     // Adding a new input control that will display data from the 'newField' property
     {
         id: "Offer",
@@ -168,10 +168,10 @@ upsert: [
             component: "vc-input",
             label: "New Field",
             property: "newField",
-        },
+            },
     },
     ...
-],
+  ],
 };
 ```
 
@@ -186,7 +186,7 @@ For example, in the base schema available at this [link](https://github.com/Virt
 
 ```typescript
 export const overrides: OverridesSchema = {
-upsert: [
+  upsert: [
     // Replacing the SKU input control with a new input control that will display data from the 'newField' property
     {
         id: "Offer",
@@ -199,7 +199,7 @@ upsert: [
         },
     },
     ...
-],
+  ],
 };
 ```
 

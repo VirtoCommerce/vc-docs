@@ -109,7 +109,7 @@ To run the platform only at HTTP schema in production mode, it's enough to pass 
     ![Readmore](media/readmore.png){: width="25"} [Enforcing HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio#trust)
 
 
-1. un the following command to start VirtoCommerce Storefront with HTTPS:
+1. Run the following command to start VirtoCommerce Storefront with HTTPS:
 
     ```console
         dotnet VirtoCommerce.Storefront.dll --urls=https://localhost:4302/
