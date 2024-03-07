@@ -6,12 +6,13 @@ This mutation modifies specific wishlist details.
 
 The `InputChangeWishlistType!` represents the input for modifying a wishlist.
 
-| Field                                                                     | Description                                             |
-|--------------------------------------------------- -----------------------|---------------------------------------------------------|
-| `listId` {==String!==}                                                    | The Id of the wishlist to be modified.                  |
-| `listName` {==String==}                                                   | The new name for the wishlist.                          |
-| `scope` [{==WishlistScopeType==}](../objects/wishlist-scope-type.md)      | The accessibility of the wishlist.                      |
-| `description` {==String==}                                                | The description of the wishlist.                        |
+| Field                                                                   | Description                                             |
+|--------------------------------------------------- ---------------------|---------------------------------------------------------|
+| `listId` ==String!==                                                    | The Id of the wishlist to be modified.                  |
+| `listName` ==String==                                                   | The new name for the wishlist.                          |
+| `scope` [==WishlistScopeType==](../objects/wishlist-scope-type.md)      | The accessibility of the wishlist.                      |
+| `description` ==String==                                                | The description of the wishlist.                        |
+| `cultureName` ==String==                                                | The language to retrieve data in.                       |
 
 ## Possible returns
 

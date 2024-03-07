@@ -35,9 +35,9 @@ Before enabling Azure Active Directory authentication, ensure the following:
 
 To set up the Azure Active Directory based authentication in Virto Commerce Platform Manager:
 
-1. [Add registration for Virto Commerce Platform in Azure Active Directory.](azure-ad.md#add-registration-for-virto-commerce-platform-in-azure-active-directory)
-1. [Configure Virto Commerce Platform to use Azure AD Authentication.](azure-ad.md#configure-virto-commerce-platform-to-use-azure-ad-authentication)
-1. [Test.](azure-ad.md#test)
+1. [Add registration for Virto Commerce Platform in Azure Active Directory.](configuring-and-managing-azure-auth.md#add-registration-for-virto-commerce-platform-in-azure-active-directory)
+1. [Configure Virto Commerce Platform to use Azure AD Authentication.](configuring-and-managing-azure-auth.md#configure-virto-commerce-platform-to-use-azure-ad-authentication)
+1. [Test.](configuring-and-managing-azure-auth.md#test)
 
 ### Add Registration for Virto Commerce Platform in Azure Active Directory
 

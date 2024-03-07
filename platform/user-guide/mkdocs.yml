@@ -123,7 +123,10 @@ nav:
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md
-                - Managing Roles and Permissions: security/roles-and-permissions.md
+                - Roles and Permissions: 
+                      - Managing Roles and Permissions: security/roles-and-permissions.md
+                      - Marketer:  security/marketer.md
+                      - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
                 - Login on Behalf Feature: security/login-on-behalf.md
           - Sitemaps:

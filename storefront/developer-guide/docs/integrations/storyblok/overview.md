@@ -1,6 +1,9 @@
 # Storyblok Integration
 
 Storyblok is a headless CMS that provides a visual editor for creating and managing content. The integration with Storyblok allows you to create and manage content in Storyblok and display it in the **Virto Commerce vue-b2b-theme**.
+
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/W_-n8GQM9CA)
+
 The integration is achieved through the use of the Storyblok API, which allows you to fetch content from Storyblok and display it in the **vue-b2b-theme**. The integration also provides a way to manage content in Storyblok and update it in the **vue-b2b-theme**. This guide explores how to integrate Storyblok with the **Virto Commerce vue-b2b-theme** and provides a practical example of the integration.
 
 ## Integrate with Virto Commerce vue-b2b-theme

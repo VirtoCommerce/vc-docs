@@ -1,0 +1,51 @@
+name: "virtocommerce.com docs"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 19 * * *'
+
+jobs:
+  publish:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+           # Number of commits to fetch. 0 indicates all history.
+           # Default: 1
+           fetch-depth: 0
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.8.x'
+
+      - name: Install Dependencies
+        run: |
+           pip install mkdocs
+           pip install mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin==0.5 mkdocs-material mkdocs-minify-plugin mkdocs-redirects pymdown-extensions jinja2 mkdocs-monorepo-plugin
+
+      - name: Setup Git Credentials
+        uses: VirtoCommerce/vc-github-actions/setup-git-credentials-github@master
+        with:
+          githubToken: ${{ secrets.REPO_TOKEN }}
+
+      - name: Update docs
+        uses: VirtoCommerce/vc-github-actions/update-virtocommerce-docs@master
+        with:
+          azureSubscriptionId: ${{ secrets.AZURESUBSCRIPTIONID }}
+          azureResourceGroupName: ${{ secrets.AZURERESOURCEGROUPNAME }}
+          azureWebAppName: ${{ secrets.AZUREWEBAPPNAME }}
+          azureApiKey: ${{ secrets.AZUREAPIKEY }}
+          azureTenantId: ${{ secrets.AZURETENANTID }}
+          azureAppId: ${{ secrets.AZUREAPPID }}
+          dockerRegistry: ${{ secrets.MAIN_DOCKER_REGISTRY }}
+          dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
+          dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
+
+      - name: Deploy docs
+        uses: VirtoCommerce/vc-github-actions/vc-argocd-cli@master # Uses an action in the root directory
+        id: argocd-cli
+        with:
+          server: argocd.govirto.com
+          username: ${{ secrets.MASTER_ARGOCD_LOGIN }}
+          password: ${{ secrets.MASTER_ARGOCD_PASSWORD }}
+          command: 'app set vcpt-docs --helm-set custom.app1.image.tag=${{ github.run_number }}'

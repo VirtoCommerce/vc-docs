@@ -16,7 +16,9 @@ Click on the desired quote request from the list to view its details, including:
 Click on a draft quote request to:
 
 * Add remarks.
-* Drag and drop files or browse additional files. 
+* Drag and drop files or browse additional files. The progress bar indicates when the upload is complete. 
+
+    ![Progress bar](../media/progress_bar.gif)
 
     !!! note
         SCV, DOCX, JPG, PDF, PNG, TXT, XLSX formats are admissible. Each file should not exceed 10MB. Maximum 5 files are allowed. 
