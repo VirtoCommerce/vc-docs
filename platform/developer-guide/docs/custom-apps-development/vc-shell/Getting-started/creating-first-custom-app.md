@@ -28,7 +28,7 @@ To create and install custom app:
         yarn create @vc-shell/vc-app
         ```
 
-1. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>::
+1. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
 
     ```bash
     ✔ Project name: … <your-app-name>
@@ -49,11 +49,7 @@ To create and install custom app:
     $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env
     ```
 
-    1. Go to the `vite.config.mts` and remove `define` key from the config to activate API calls to the Platform.
-
-    1. Go to the `src/main.ts` and uncomment commented code with `loadUser` method, which is said to be removed after adding `APP_PLATFORM_URL` variable.
-
-1. Install the dependencies and start the development server:
+2. Install the dependencies and start the development server:
 
 Your first VC-Shell application is now ready to run!
 
