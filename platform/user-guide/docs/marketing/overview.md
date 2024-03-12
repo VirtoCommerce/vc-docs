@@ -9,7 +9,7 @@ The Virto Commerce Marketing module is dedicated to managing the various marketi
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/fNskiyNBbj0?si=WJlYu3rUvHLPsmK1)
 
 ## Key features
-The diagram below illustrates the interconnections among various key entities within the Order module:
+The diagram below illustrates the interconnections among various key entities within the Marketing module:
 
 ![Marketing key entities](media/key-entities-chart.png)
 

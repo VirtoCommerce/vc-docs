@@ -54,6 +54,12 @@ nav:
                 - Settings: inventory/settings.md
           - <b>Marketing</b>:
                 - Overview: marketing/overview.md
+                - Promotions:
+                      - Overview: marketing/promotions-overview.md
+                      - Managing Promotions: marketing/managing-promotions.md
+                      - Promotion Combination Policies: marketing/combining-active-promotions.md
+                      - Promotion Rules: marketing/promotion-rules.md
+                      - Settings: marketing/settings.md
                 - Dynamic Content:
                       - Overview: marketing/dynamic-content-overview.md
                       - Managing Content Items: marketing/managing-content-items.md
@@ -61,12 +67,10 @@ nav:
                       - Managing Published Content: marketing/managing-published-content.md
                       - Publish Conditions: marketing/publish-conditions.md
                       - Adding Advertising Spot: marketing/advertising-spot.md
-                - Promotions:
-                      - Overview: marketing/promotions-overview.md
-                      - Managing Promotions: marketing/managing-promotions.md
-                      - Promotion Combination Policies: marketing/combining-active-promotions.md
-                      - Promotion Rules: marketing/promotion-rules.md
-                      - Settings: marketing/settings.md
+                - Dynamic Product Associations: 
+                      - Overview: marketing/dynamic-associations-overview.md
+                      - Managing dynamic product associations: marketing/managing-dynamic-associations.md
+                      - Rest API Testing: marketing/dynamic-associations-restapi.md
           - <b>Orders</b>:
                 - Overview: order-management/overview.md
                 - Order Information: order-management/main-objects.md
@@ -107,6 +111,8 @@ nav:
                 - Managing contracts: contracts/creating-and-terminating-contracts.md
                 - Managing contract prices: contracts/managing-contract-prices.md
                 - Managing contract customers: contracts/managing-contract-customers.md
+          - Dynamic Associations: 
+                - Overview: dynamic-associations/overview.md 
           - Generic Export:
                 - Overview: generic-export/overview.md
                 - Assigning Permissions: generic-export/assigning-permissions.md
