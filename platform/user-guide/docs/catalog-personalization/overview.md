@@ -2,6 +2,10 @@
 
 The Virto Commerce Catalog Personalization is designed to personalize the online shopping experience for customers by showing them tailored product recommendations, content, or offers via the user groups feature.
 
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-catalog-personalization)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-catalog-personalization/releases)
+
 The **User groups** feature allows you to associate specific user groups with a product or category. This association can determine which user groups have access to view or interact with the products within that category.
 
 [![Part1](media/video-tutorial1.png)](https://www.youtube.com/watch?v=kujqWb0HDEc)

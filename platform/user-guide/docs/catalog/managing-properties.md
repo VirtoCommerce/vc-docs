@@ -1,6 +1,6 @@
 # Managing properties
 
-Custom properties are additional parameters for catalog entities at the follwing levels:
+Custom properties are additional parameters for catalog entities at the following levels:
 
 * Catalog level.
 * Category level.

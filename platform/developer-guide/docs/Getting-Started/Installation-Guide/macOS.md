@@ -100,6 +100,7 @@ To configure application strings:
 
 1. Save the **appsettings.json** file to apply the configurations.
 
+
 ### Run the Platform by CLI "dotnet"
 
 To run the Platform by CLI:
@@ -107,6 +108,14 @@ To run the Platform by CLI:
 1. Install and trust HTTPS certificate. Run steps described in [this article](https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos-1) to trust the .NET Core SDK HTTPS development certificate on Linux.
 
     Read more about [enforcing HTTPS in ASP.NET Core.](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio#trust)
+
+1. Ensure the Connection String includes **;TrustServerCertificate=True;** as shown below:
+
+    ```json title="appsettings.json"
+    "ConnectionStrings": {
+        "VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3.net8;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30;TrustServerCertificate=True;"
+    },
+    ```
 
 1. Run the Platform using the following command:
 
@@ -116,7 +125,10 @@ To run the Platform by CLI:
     dotnet VirtoCommerce.Platform.Web.dll
     ```
 
-1. The output in the console will say something like:
+    !!! note
+        If ports 5000 or 5001 are occupied on your Mac, you can change the port numbers, for example, use 5002 or any other unoccupied port instead of 5000. 
+
+1. The output in the console will be similar to the following:
 
     ```console
     Now listening on: http://[::]:5000

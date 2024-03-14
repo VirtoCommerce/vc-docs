@@ -80,6 +80,7 @@ nav:
                 - Best Practices: Fundamentals/Modularity/05-best-practices.md
                 - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
                 - Configuration: Fundamentals/Modularity/configuration.md
+          - Scalability:  Fundamentals/Scalability/overview.md
           - Event Driven Development:
                 - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
           - Payments:
@@ -477,6 +478,7 @@ nav:
           - Overview: Extensibility/overview.md
           - Key Extensibility Points: Extensibility/key-extensibility-points.md
           - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
+          - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:
@@ -484,6 +486,7 @@ nav:
                 - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
+                - Import Products to Catalog: Tutorials-and-How-tos/Tutorials/import-products-to-catalog.md
           - How-tos:
                 - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md 
                 - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
@@ -497,6 +500,8 @@ nav:
                 - Deploying VC Platform to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-platform-on-azure.md
                 - Deploying VC Storefront to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-storefront-on-azure.md
                 - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
+                - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
+                - Using Feature Flags with Virto Commerce and Storefront: Tutorials-and-How-tos/How-tos/feature-flags.md
     - Updating Virto Commerce Based Projects:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md

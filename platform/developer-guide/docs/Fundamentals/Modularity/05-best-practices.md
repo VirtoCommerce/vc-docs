@@ -23,6 +23,4 @@ Implementing your entire custom solution into a single module will be a good cho
 
 One can draw parallels between how your code can be distributed among Virto modules and how the same code can be arranged in poly or mono repositories.
 
-![Readmore](media/readmore.png){: width="25"} [Mono repository advantages](https://blog.upcoding.fr/microservices-in-a-monorepo/) 
-
 ![Readmore](media/readmore.png){: width="25"} [Modular Monolith architecture](https://www.kamilgrzybek.com/design/modular-monolith-primer)

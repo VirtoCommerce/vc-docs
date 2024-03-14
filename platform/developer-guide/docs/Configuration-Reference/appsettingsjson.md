@@ -14,7 +14,7 @@ These **required** settings represent connection strings for VC Platform and mod
 
 | Node          | Sample value           | Description  |
 | ------------- | --------------------------------- | ------------ |
-| VirtoCommerce | `Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30` | This required setting is used to provide the VC Platform system connection string to the SQL Server database. VC modules would revert to this connection string if no specific connection string is defined. |
+| VirtoCommerce | `Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30;TrustServerCertificate=True;` | This required setting is used to provide the VC Platform system connection string to the SQL Server database. VC modules would revert to this connection string if no specific connection string is defined. |
 | E.g., VirtoCommerce.Catalog  | `Data Source=(local);Initial Catalog=VirtoCommerceCatalog;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30` | Other module-specific connection string(s). E.g., Virto Commerce Catalog module will use the `VirtoCommerce.Catalog` connection string if it is defined. |                           |
 | RedisConnectionString | `"localhost"` | StackExchange.Redis Configuration string.<br>![Readmore](media/readmore.png){: width="25"} [Redis Configuration](https://stackexchange.github.io/StackExchange.Redis/Configuration) |
 

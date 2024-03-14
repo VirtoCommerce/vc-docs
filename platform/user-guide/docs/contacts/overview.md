@@ -21,7 +21,7 @@ The Contacts module features are:
 * **Easy contact management:** You can create, link, edit, or remove your contacts with just a few clicks.
 * **User groups:** You can create groups that include specific users. This can be useful for targeting promotions, offering special prices to specific customers, etc. 
     
-    ![Readmore](media/readmore.png){: width="25"} [User groups](https://docs.virtocommerce.org/new/user-guide/catalog-personalization/user-groups/)
+    ![Readmore](media/readmore.png){: width="25"} [User groups](../catalog-personalization/user-groups.md)
 
 * **Connection to Storefront:** You can link all your contacts and their hierarchy to the Storefront application.
 
