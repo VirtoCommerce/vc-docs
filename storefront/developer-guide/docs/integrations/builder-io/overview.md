@@ -14,7 +14,7 @@ To integrate with the **Virto Commerce vue-b2b-theme**:
 4. Create content in Builder.io by adding components to your space and filling them with content.
 5. Fetch content in the **vue-b2b-theme** using the Builder.io API. The Builder.io API provides a way to fetch content from Builder.io and display it in the **vue-b2b-theme**. You can fetch content using Builder.io composable, where you should pass content ID. The Builder.io API returns the content as JSON, which you can then display in the **vue-b2b-theme**.
 
-![Readmore](media/readmore.png){: width="25"} [Builder.io documentation](https://www.builder.io/c/docs/developers)
+![Readmore](media/readmore.png){: width="25"} [Builder.io Documentation](https://www.builder.io/c/docs/developers)
 
 ## Connect Builder.io with Virto Commerce vue-b2b-theme
 

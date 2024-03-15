@@ -34,7 +34,7 @@ In our case, the list of basic permissions to be assigned to your marketer can b
     * Opening marketing menu.
     * Creating or deleting marketing data.
     * Viewing marketing data. The scope of this permission can be limited to one or more stores.
-    * 
+
 * **Platform related permissions**:
     * Uploading platform assets.
     * Reading platform settings.
@@ -69,4 +69,4 @@ Let's say we have a marketer who is only responsible for B2B-store promotions, w
 
 With this feature, top marketers prevent unwanted modifications of created promotions.   
 
-![Readmore](media/readmore.png){: width="25"} [Managing promotions](../marketing/managing-promotions.md)
+![Readmore](media/readmore.png){: width="25"} [Managing Promotions](../marketing/managing-promotions.md)
