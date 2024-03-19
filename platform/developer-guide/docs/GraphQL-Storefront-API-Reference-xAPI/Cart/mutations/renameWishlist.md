@@ -8,8 +8,8 @@ The `InputRenameWishlistType!` represents the input for renaming a wishlist.
 
 | Field                                                   | Description                                             |
 |---------------------------------------------------------|---------------------------------------------------------|
-| `listId` {==String!==}                                  | The Id of the wishlist to be renamed.                   |
-| `listName` {==String==}                                 | The new name for the wishlist.                          |
+| `listId` ==String!==                                   | The Id of the wishlist to be renamed.                   |
+| `listName` ==String==                                  | The new name for the wishlist.                          |
 
 ## Possible returns
 

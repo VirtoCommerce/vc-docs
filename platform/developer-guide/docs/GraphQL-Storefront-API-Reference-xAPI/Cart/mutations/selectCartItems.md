@@ -8,14 +8,14 @@ The `InputChangeCartItemsSelectedType` represents a set of input parameters for 
 
 | Field                            | Description                                                          |
 |----------------------------------|----------------------------------------------------------------------|
-| `cartId` {==String==}            | The Id of the cart.                                                  |
-| `storeId` {==String!==}          | The Id of the store.                                                 |
-| `cartName` {==String==}          | The name or description of the cart.                                 |
-| `userId` {==String!==}           | The Id of the user.                                                  |
-| `currencyCode` {==String==}      | The currency code for the cart.                                      |
-| `cultureName` {==String==}       | The culture or locale name for the cart.                             |
-| `cartType` {==String==}          | The type of the cart.                                                |
-| `lineItemIds` {==[String]==}     | The list of line items Ids.                                          |
+| `cartId`  ==String==             | The Id of the cart.                                                  |
+| `storeId`  ==String!==           | The Id of the store.                                                 |
+| `cartName`  ==String==           | The name or description of the cart.                                 |
+| `userId`  ==String!==            | The Id of the user.                                                  |
+| `currencyCode`  ==String==       | The currency code for the cart.                                      |
+| `cultureName`  ==String==        | The culture or locale name for the cart.                             |
+| `cartType`  ==String==           | The type of the cart.                                                |
+| `lineItemIds`  ==[String]==      | The list of line items Ids.                                          |
 
 ## Possible returns
 

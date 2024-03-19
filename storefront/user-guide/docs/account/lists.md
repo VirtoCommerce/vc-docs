@@ -10,6 +10,11 @@ In the **Lists** section, you can:
 
 ![Lists](../media/lists.png){: width="850"}
 
+!!! note
+    If you attempt to save a new list with a name that already exists, the system automatically appends a number to differentiate it, indicating how many lists share that name.
+
+    ![Lists names](../media/lists-names.png)
+
 Click on the desired list to view its details. Here you can:
 
 * Add all the listed items to cart with a single click.

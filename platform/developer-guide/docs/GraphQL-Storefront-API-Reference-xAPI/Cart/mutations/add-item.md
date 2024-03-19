@@ -10,20 +10,20 @@ This mutation:
 
 The `InputAddItemType` represents the arguments for the ClearCart operation. 
 
-| Field                            | Description                                                                                  |
-|----------------------------------|----------------------------------------------------------------------------------------------|
-| `cartId` {==String==}            | The Id of the cart.                                                                          |
-| `storeId` {==String!==}          | The Id of the store.                                                                         |
-| `cartName` {==String==}          | The name or description of the cart.                                                         |
-| `userId` {==String!==}           | The Id of the user.                                                                          |
-| `currencyCode` {==String==}      | The currency code for the cart.                                                              |
-| `cultureName` {==String==}       | A language to retrieve data in.                                                              |
-| `cartType` {==String==}          | The type of the cart.                                                                        |
-| `productId` {==String!==}        | The Id of the product to add to the cart.                                                    |
-| `quantity` {==Int!==}            | The quantity of the product to add to the cart.                                              |
-| `price` {==Decimal==}            | The price of the product.                                                                    |
-| `comment` {==String==}           | A comment associated with the added item.                                                    |
-| `dynamicProperties` [{==[InputDynamicPropertyValueType]==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic properties associated with the added item.  |
+| Field                          | Description                                                                                  |
+|--------------------------------|----------------------------------------------------------------------------------------------|
+| `cartId` ==String==            | The Id of the cart.                                                                          |
+| `storeId` ==String!==          | The Id of the store.                                                                         |
+| `cartName` ==String==          | The name or description of the cart.                                                         |
+| `userId` ==String!==           | The Id of the user.                                                                          |
+| `currencyCode` ==String==      | The currency code for the cart.                                                              |
+| `cultureName` ==String==       | A language to retrieve data in.                                                              |
+| `cartType` ==String==          | The type of the cart.                                                                        |
+| `productId` ==String!==        | The Id of the product to add to the cart.                                                    |
+| `quantity` ==Int!==            | The quantity of the product to add to the cart.                                              |
+| `price` ==Decimal==            | The price of the product.                                                                    |
+| `comment` ==String==           | A comment associated with the added item.                                                    |
+| `dynamicProperties` [==[InputDynamicPropertyValueType]==](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic properties associated with the added item.  |
 
 ## Possible returns
 

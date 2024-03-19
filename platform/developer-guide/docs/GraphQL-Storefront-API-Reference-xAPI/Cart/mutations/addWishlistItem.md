@@ -6,11 +6,11 @@ This mutation adds an item to a wishlist.
 
 The `InputAddWishlistItemType!` represents the input for adding an item to a wishlist.
 
-| Field                                                 | Description                                              |
-|-------------------------------------------------------|----------------------------------------------------------|
-| `listId` {==String!==}                                | The Id of the wishlist to which the item will be added.  |
-| `productId` {==String!==}                             | The Id of the product to add to the wishlist.            |
-| `quantity` {==Int==}                                  | The product quantity to add to the wishlist.             |
+| Field                                               | Description                                              |
+|-----------------------------------------------------|----------------------------------------------------------|
+| `listId` ==String!==                                | The Id of the wishlist to which the item will be added.  |
+| `productId` ==String!==                             | The Id of the product to add to the wishlist.            |
+| `quantity` ==Int==                                  | The product quantity to add to the wishlist.             |
 
 ## Possible returns
 

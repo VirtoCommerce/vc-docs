@@ -4,11 +4,11 @@ This query is used to retrieve a collection of menus based on the provided crite
 
 ## Arguments
 
-| Arguments                   | Description                                                                     |
-|-----------------------------|---------------------------------------------------------------------------------|
-| `storeId` {==String!==}     | The Id of the store for which to retrieve menus.                                |
-| `cultureName` {==String==}  | A language to retrieve data in.                                                 |
-| `keyword` {==String==}      | A keyword used to filter menus based on their content.                          |
+| Arguments                 | Description                                                                     |
+|---------------------------|---------------------------------------------------------------------------------|
+| `storeId` ==String!==     | The Id of the store for which to retrieve menus.                                |
+| `cultureName` ==String==  | A language to retrieve data in.                                                 |
+| `keyword` ==String==      | A keyword used to filter menus based on their content.                          |
 
 ## Possible returns
 

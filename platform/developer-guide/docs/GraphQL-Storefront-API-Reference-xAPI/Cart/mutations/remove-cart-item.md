@@ -8,14 +8,14 @@ The `InputRemoveItemType` represents the input object type used for removing a s
 
 | Field                           | Description                                                        |
 |---------------------------------|--------------------------------------------------------------------|
-| `cartId` {==String==}           | The ID of the cart from which the item is to be removed.           |
-| `storeId` {==String!==}         | The ID of the store associated with the cart.                      |
-| `cartName` {==String==}         | The name of the cart.                                              |
-| `userId` {==String==}           | The ID of the user who owns the cart.                              |
-| `currencyCode` {==String==}     | The currency code for the cart.                                    |
-| `cultureName` {==String==}      | The culture or language associated with the cart.                  |
-| `cartType` {==String==}         | The type of the cart.                                              |
-| `lineItemId` {==String==}       | The ID of the line item to be removed from the cart.               |
+| `cartId`  ==String==            | The ID of the cart from which the item is to be removed.           |
+| `storeId`  ==String!==          | The ID of the store associated with the cart.                      |
+| `cartName`  ==String==          | The name of the cart.                                              |
+| `userId`  ==String==            | The ID of the user who owns the cart.                              |
+| `currencyCode`  ==String==      | The currency code for the cart.                                    |
+| `cultureName`  ==String==       | The culture or language associated with the cart.                  |
+| `cartType`  ==String==          | The type of the cart.                                              |
+| `lineItemId`  ==String==        | The ID of the line item to be removed from the cart.               |
 
 ## Possible returns
 

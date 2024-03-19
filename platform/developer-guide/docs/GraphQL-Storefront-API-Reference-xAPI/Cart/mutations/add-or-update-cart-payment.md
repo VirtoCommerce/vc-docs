@@ -9,16 +9,16 @@ This mutation:
 
 The `InputAddOrUpdateCartPaymentType` represents the input object type used for adding or updating a payment for a cart.
 
-| Field                   | Description                                                      |
-|-------------------------|------------------------------------------------------------------|
-| `cartId` {==String==}                 | The Id of the cart to which the payment will be added or updated.   |
-| `storeId` {==String!==}              | The Id of the store associated with the cart.                       |
-| `cartName` {==String==}               | The name of the cart.                                              |
-| `userId` {==String==}                 | The Id of the user who owns the cart.                               |
-| `currencyCode` {==String==}           | The currency code for the cart.                                    |
-| `cultureName` {==String==}            | The culture or language associated with the cart.                   |
-| `cartType` {==String==}               | The type of the cart.                                              |
-| `payment` {==InputPaymentType!==} | The payment details to be added or updated for the cart.           |
+| Field                               | Description                                                      |
+|-------------------------------------|------------------------------------------------------------------|
+| `cartId` ==String==                 | The Id of the cart to which the payment will be added or updated.   |
+| `storeId` ==String!==               | The Id of the store associated with the cart.                       |
+| `cartName` ==String==               | The name of the cart.                                              |
+| `userId` ==String==                 | The Id of the user who owns the cart.                               |
+| `currencyCode` ==String==           | The currency code for the cart.                                    |
+| `cultureName` ==String==            | The culture or language associated with the cart.                   |
+| `cartType` ==String==               | The type of the cart.                                              |
+| `payment` ==InputPaymentType!==     | The payment details to be added or updated for the cart.           |
 
 ## Possible returns
 
@@ -30,7 +30,7 @@ The `InputAddOrUpdateCartPaymentType` represents the input object type used for 
 === "Mutation"
     ```json linenums="1"
     mutation addOrUpdateCartPayment($command: InputAddOrUpdateCartPaymentType!) {
-      addOrUpdateCartPayment(command: $command) {
+      addOrUpdateCartPayment(command: s$command) {
         id
         payments {
           id

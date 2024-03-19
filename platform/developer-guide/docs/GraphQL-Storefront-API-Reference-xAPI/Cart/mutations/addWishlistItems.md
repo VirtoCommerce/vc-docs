@@ -6,10 +6,10 @@ This mutation adds multiple items to a wishlist.
 
 The `InputAddWishlistItemsType!` represents the input for adding items to a wishlist.
 
-| Field                                                                                   | Description                                              |
-|-----------------------------------------------------------------------------------------|----------------------------------------------------------|
-| `listId` {==String!==}                                                                  | The Id of the wishlist to which the item will be added.  |
-| `listItems` [{==InputNewWishlistItemType!==}](../objects/InputNewWishlistItemType.md)   | The list of items to be added to the wishlist.           |
+| Field                                                                                 | Description                                              |
+|---------------------------------------------------------------------------------------|----------------------------------------------------------|
+| `listId` ==String!==                                                                  | The Id of the wishlist to which the item will be added.  |
+| `listItems` [==InputNewWishlistItemType!==](../objects/InputNewWishlistItemType.md)   | The list of items to be added to the wishlist.           |
 
 
 ## Possible returns

@@ -8,14 +8,14 @@ The `InputRemoveCouponType` represents the input object type used for removing a
 
 | Field                            | Description                                                        |
 |----------------------------------|--------------------------------------------------------------------|
-| `cartId` {==String==}            | The Id of the cart from which the coupon is to be removed.         |
-| `storeId` {==String!==}          | The Id of the store associated with the cart.                      |
-| `cartName` {==String==}          | The name of the cart.                                              |
-| `userId` {==String==}            | The Id of the user who owns the cart.                              |
-| `currencyCode` {==String==}      | The currency code for the cart.                                    |
-| `cultureName` {==String==}       | The culture or language associated with the cart.                  |
-| `cartType` {==String==}          | The type of the cart.                                              |
-| `couponCode` {==String==}        | The coupon code to be removed from the cart.                       |
+| `cartId`  ==String==             | The Id of the cart from which the coupon is to be removed.         |
+| `storeId`  ==String!==           | The Id of the store associated with the cart.                      |
+| `cartName`  ==String==           | The name of the cart.                                              |
+| `userId`  ==String==             | The Id of the user who owns the cart.                              |
+| `currencyCode`  ==String==       | The currency code for the cart.                                    |
+| `cultureName`  ==String==        | The culture or language associated with the cart.                  |
+| `cartType`  ==String==           | The type of the cart.                                              |
+| `couponCode`  ==String==         | The coupon code to be removed from the cart.                       |
 
 ## Possible returns
 

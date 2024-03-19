@@ -8,8 +8,8 @@ The `InputRemoveWishlistItemType!` represents the input for removing an item fro
 
 | Field                                                                     | Description                                             |
 |---------------------------------------------------------------------------|---------------------------------------------------------|
-| `listId` {==String!==}                                                    | The Id of the wishlist to remove an item from.          |
-| `lineItemId` {==String!==}                                                | The Id of the line item to remove.                      |
+| `listId` ==String!==                                                     | The Id of the wishlist to remove an item from.          |
+| `lineItemId` ==String!==                                                 | The Id of the line item to remove.                      |
 
 
 ## Possible returns

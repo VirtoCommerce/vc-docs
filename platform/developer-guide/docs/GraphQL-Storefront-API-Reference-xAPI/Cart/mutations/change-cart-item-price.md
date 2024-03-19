@@ -8,15 +8,15 @@ The `InputChangeCartItemPriceType` represents the input object type used for cha
 
 | Field                  | Description                                                                        |
 |---------------------------|---------------------------------------------------------------------------------|
-| `cartId` {==String==}     | The Id of the cart to which the item belongs.                                   |
-| `storeId` {==String!==}   | The Id of the store to which the cart belongs.                                  |
-| `cartName` {==String==}   | The name of the cart.                                                           |
-| `userId` {==String==}     | The Id of the user associated with the cart.                                    |
-| `currencyCode` {==String==}| The currency code for the cart.                                                |
-| `cultureName` {==String==}| The culture or locale name for the cart.                                        |
-| `cartType` {==String==}   | The type or category of the cart.                                               |
-| `lineItemId` {==String==} | The Id of the specific item within the cart for which the price is being changed.|
-| `price` {==Decimal!==}    | The new price value to be set for the item.                                     |
+| `cartId` ==String==     | The Id of the cart to which the item belongs.                                   |
+| `storeId` ==String!==   | The Id of the store to which the cart belongs.                                  |
+| `cartName` ==String==   | The name of the cart.                                                           |
+| `userId` ==String==     | The Id of the user associated with the cart.                                    |
+| `currencyCode` ==String==| The currency code for the cart.                                                |
+| `cultureName` ==String==| The culture or locale name for the cart.                                        |
+| `cartType` ==String==   | The type or category of the cart.                                               |
+| `lineItemId` ==String== | The Id of the specific item within the cart for which the price is being changed.|
+| `price` ==Decimal!==    | The new price value to be set for the item.                                     |
 
 ## Possible returns
 

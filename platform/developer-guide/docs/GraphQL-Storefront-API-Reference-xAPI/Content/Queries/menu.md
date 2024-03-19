@@ -4,11 +4,11 @@ This query is used to retrieve a specific menu based on the provided criteria.
 
 ## Arguments
 
-| Argument                  | Description                                                 |
-|---------------------------|-------------------------------------------------------------|
-| `storeId` {==String!==}   | The Id of the store for which to retrieve the menu.         |
-| `cultureName` {==String==}| A language to retrieve data in.                             |
-| `name` {==String!==}      | The name of the menu to retrieve.                           |
+| Argument                | Description                                                 |
+|-------------------------|-------------------------------------------------------------|
+| `storeId` ==String!==   | The Id of the store for which to retrieve the menu.         |
+| `cultureName` ==String==| A language to retrieve data in.                             |
+| `name` ==String!==      | The name of the menu to retrieve.                           |
 
 
 ## Possible returns

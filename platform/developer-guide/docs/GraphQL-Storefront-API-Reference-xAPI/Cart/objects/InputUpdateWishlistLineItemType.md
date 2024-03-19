@@ -6,5 +6,5 @@ The `InputUpdateWishlistLineitemType` represents the input for updating a line i
 
 | Field                                      | Description                                                     |
 | ------------------------------------------ | --------------------------------------------------------------- |
-| `lineItemId` {==String!==}                 | The Id of the line item to be updated.                          |
-| `quantity` {==Int!==}                      | The new quantity for the line item in the wishlist.             |
+| `lineItemId`  ==String!==                  | The Id of the line item to be updated.                          |
+| `quantity`  ==Int!==}                      | The new quantity for the line item in the wishlist.             |

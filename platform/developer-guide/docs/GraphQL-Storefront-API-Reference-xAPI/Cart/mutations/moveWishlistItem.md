@@ -8,9 +8,9 @@ The `InputMoveWishlistItemType!` represents the input for moving a wishlist item
 
 | Field                             | Description                                                       |
 |-----------------------------------|-------------------------------------------------------------------|
-| `listId` {==String!==}            | The Id of the source wishlist from which to move the item.        |
-| `destinationListId` {==String!==} | The Id of the destination wishlist to which the item will be moved.|
-| `lineItemId` {==String!==}        | The Id of the wishlist item to be moved.                          |
+| `listId`  ==String!==             | The Id of the source wishlist from which to move the item.        |
+| `destinationListId`  ==String!==  | The Id of the destination wishlist to which the item will be moved.|
+| `lineItemId`  ==String!==         | The Id of the wishlist item to be moved.                          |
 
 
 ## Possible returns

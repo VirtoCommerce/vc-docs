@@ -342,6 +342,7 @@ nav:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
                 - Queries:
                       - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
+                      - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
                       - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
                       - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
                 - Objects:

@@ -6,6 +6,6 @@ The `DictionaryItemType` represents a dictionary item, which is a key-value pair
 
 | Field                 | Description                                                                 |
 |-----------------------|-----------------------------------------------------------------------------|
-| `id` {==String!==}    | The unique identifier of the dictionary item.                               |
-| `name` {==String==}   | The name or title of the dictionary item.                                   |
-| `label` {==String==}  | The label or display name of the dictionary item, if applicable.            |
+| `id` ==String!==     | The unique identifier of the dictionary item.                               |
+| `name` ==String==    | The name or title of the dictionary item.                                   |
+| `label` ==String==   | The label or display name of the dictionary item, if applicable.            |

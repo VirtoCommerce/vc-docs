@@ -8,15 +8,15 @@ The `InputUpdateCartPaymentDynamicPropertiesType` represents the input object ty
 
 | Field                                  | Description                                                                |
 |----------------------------------------|----------------------------------------------------------------------------|
-| `cartId` {==String==}                  | The Id of the cart containing the payment to update the dynamic properties.|
-| `storeId` {==String!==}                | The Id of the store associated with the cart.                              |
-| `cartName` {==String==}                | The name of the cart.                                                      |
-| `userId` {==String==}                  | The Id of the user who owns the cart.                                      |
-| `currencyCode` {==String==}            | The currency code for the cart.                                            |
-| `cultureName` {==String==}             | The culture or language associated with the cart.                          |
-| `cartType` {==String==}                | The type of the cart.                                                      |
-| `paymentId` {==String==}               | The Id of the cart payment to update the dynamic properties.               |
-| `dynamicProperties` {==[InputDynamicPropertyValueType]!==} | The updated dynamic properties of the cart payment.    |
+| `cartId`  ==String==                   | The Id of the cart containing the payment to update the dynamic properties.|
+| `storeId`  ==String!==                 | The Id of the store associated with the cart.                              |
+| `cartName`  ==String==                 | The name of the cart.                                                      |
+| `userId`  ==String==                   | The Id of the user who owns the cart.                                      |
+| `currencyCode`  ==String==             | The currency code for the cart.                                            |
+| `cultureName`  ==String==              | The culture or language associated with the cart.                          |
+| `cartType`  ==String==                 | The type of the cart.                                                      |
+| `paymentId`  ==String==                | The Id of the cart payment to update the dynamic properties.               |
+| `dynamicProperties`  ==[InputDynamicPropertyValueType]!==  | The updated dynamic properties of the cart payment.    |
 
 ## Possible returns
 

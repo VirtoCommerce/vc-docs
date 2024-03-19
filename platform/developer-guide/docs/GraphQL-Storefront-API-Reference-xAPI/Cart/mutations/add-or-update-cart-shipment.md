@@ -11,14 +11,14 @@ The `InputAddOrUpdateCartShipmentType` represents the input object type used for
 
 | Field                                 | Description                                                        |
 |---------------------------------------|--------------------------------------------------------------------|
-| `cartId` {==String==}                 | The Id of the cart to which the shipment will be added or updated. |
-| `storeId` {==String!==}               | The Id of the store associated with the cart.                      |
-| `cartName` {==String==}               | The name of the cart.                                              |
-| `userId` {==String==}                 | The Id of the user who owns the cart.                              |
-| `currencyCode` {==String==}           | The currency code for the cart.                                    |
-| `cultureName` {==String==}            | The culture or language associated with the cart.                  |
-| `cartType` {==String==}               | The type of the cart.                                              |
-| `shipment` {==InputShipmentType!==}   | The shipment details to be added or updated for the cart.          |
+| `cartId` ==String==                 | The Id of the cart to which the shipment will be added or updated. |
+| `storeId` ==String!==               | The Id of the store associated with the cart.                      |
+| `cartName` ==String==               | The name of the cart.                                              |
+| `userId` ==String==                 | The Id of the user who owns the cart.                              |
+| `currencyCode` ==String==           | The currency code for the cart.                                    |
+| `cultureName` ==String==            | The culture or language associated with the cart.                  |
+| `cartType` ==String==               | The type of the cart.                                              |
+| `shipment` ==InputShipmentType!==   | The shipment details to be added or updated for the cart.          |
 
 ## Possible returns
 

@@ -4,8 +4,8 @@ The `PageEdge` is utilized in combination with other types, such as `PageConnect
 
 ## Fields
 
-| Field                                 | Description                                |
-|---------------------------------------|--------------------------------------------|
-| `cursor` {==String==}                 | The cursor associated with the page edge.  |
-| `node` [{==PageType==}](PageType.md)  | The page node associated with the edge.    |
+| Field                               | Description                                |
+|-------------------------------------|--------------------------------------------|
+| `cursor` ==String==                 | The cursor associated with the page edge.  |
+| `node` [==PageType==](PageType.md)  | The page node associated with the edge.    |
 

@@ -8,13 +8,13 @@ The `InputCreateWishlistType` represents the input for creating a wishlist.
 
 | Field                                     | Description                                             |
 |-------------------------------------------|---------------------------------------------------------|
-| `storeId` {==String!==}                   | The Id of the store.                                    |
-| `userId` {==String!==}                    | The Id of the user associated with the wishlist.        |
-| `listName` {==String==}                   | The name of the wishlist.                               |
-| `cultureName` {==String==}                | The culture or language associated with the wishlist.   |
-| `currencyCode` {==String==}               | The currency code for the wishlist.                     |
-| `scope` {==String==}                      | The accessibility of the wishlist.                      |
-| `description` {==String==}                | The description of the wishlist.                        |
+| `storeId`  ==String!==                    | The Id of the store.                                    |
+| `userId`  ==String!==                     | The Id of the user associated with the wishlist.        |
+| `listName`  ==String==                    | The name of the wishlist.                               |
+| `cultureName`  ==String==                 | The culture or language associated with the wishlist.   |
+| `currencyCode`  ==String==                | The currency code for the wishlist.                     |
+| `scope`  ==String==                       | The accessibility of the wishlist.                      |
+| `description`  ==String==                 | The description of the wishlist.                        |
 
 ## Possible returns
 

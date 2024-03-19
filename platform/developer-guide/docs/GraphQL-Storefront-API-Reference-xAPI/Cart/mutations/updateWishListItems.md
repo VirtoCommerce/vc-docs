@@ -8,8 +8,8 @@ The `InputUpdateWishlistItemsType!` represents the input for updating items in a
 
 | Field                                                                                              | Description                                   |
 |----------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| `listId` {==String!==}                                                                             | The Id of the wishlist to be updated.         |
-| `items` [{==InputUpdateWishlistLineItem.md!==}](../objects/InputUpdateWishlistItemsType.md)        | The list of items to be updated in the wishlist.|
+| `listId`  ==String!==                                                                              | The Id of the wishlist to be updated.         |
+| `items` [ ==InputUpdateWishlistLineItem.md!== ](../objects/InputUpdateWishlistItemsType.md)        | The list of items to be updated in the wishlist.|
 
 
 ## Possible returns

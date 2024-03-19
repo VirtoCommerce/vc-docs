@@ -136,6 +136,7 @@ nav:
                 - Roles and Permissions: 
                       - Managing Roles and Permissions: security/roles-and-permissions.md
                       - Marketer:  security/marketer.md
+                      - Order Manager: security/order-manager.md
                       - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
                 - Login on Behalf Feature: security/login-on-behalf.md

@@ -8,9 +8,9 @@ The `InputAddWishlistBulkItemType` is an input object type used for adding multi
 
 | Field                       | Description                                                                                       |
 |-----------------------------|---------------------------------------------------------------------------------------------------|
-| `listIds` {==[String]==}    | An array of wishlist Ids to which the items will be added.                                        |
-| `productId` {==String==}    | The Id of the product to be added to the wishlists.                                               |
-| `quantity` {==Int==}        | The quantity of the product to be added. This field is optional and can be omitted if not needed. |
+| `listIds` ==[String]==    | An array of wishlist Ids to which the items will be added.                                        |
+| `productId` ==String==    | The Id of the product to be added to the wishlists.                                               |
+| `quantity` ==Int==        | The quantity of the product to be added. This field is optional and can be omitted if not needed. |
 
 
 ## Possible returns

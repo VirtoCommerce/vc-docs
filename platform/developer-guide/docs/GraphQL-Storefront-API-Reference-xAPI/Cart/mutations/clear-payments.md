@@ -8,13 +8,13 @@ The `InputClearPaymentsType` represents the input object type used for clearing 
 
 | Field              | Description                                                    |
 |--------------------|----------------------------------------------------------------|
-| `cartId` {==String==}            | The Id of the cart from which all payments will be cleared.          |
-| `storeId` {==String!==}         | The Id of the store associated with the cart.                         |
-| `cartName` {==String==}          | The name of the cart.                                                |
-| `userId` {==String==}            | The Id of the user who owns the cart.                                 |
-| `currencyCode` {==String==}      | The currency code for the cart.                                      |
-| `cultureName` {==String==}       | The culture or language associated with the cart.                     |
-| `cartType` {==String==}          | The type of the cart.                                                |
+| `cartId`  ==String==             | The Id of the cart from which all payments will be cleared.          |
+| `storeId`  ==String!==          | The Id of the store associated with the cart.                         |
+| `cartName`  ==String==           | The name of the cart.                                                |
+| `userId`  ==String==             | The Id of the user who owns the cart.                                 |
+| `currencyCode`  ==String==       | The currency code for the cart.                                      |
+| `cultureName`  ==String==        | The culture or language associated with the cart.                     |
+| `cartType`  ==String==           | The type of the cart.                                                |
 
 ## Possible returns
 

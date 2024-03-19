@@ -8,14 +8,14 @@ The `InputUpdateCartDynamicPropertiesType` represents the input object type used
 
 | Field                                 | Description                                                       |
 |---------------------------------------|-------------------------------------------------------------------|
-| `cartId` {==String==}                 | The Id of the cart to update the dynamic properties.              |
-| `storeId` {==String!==}               | The Id of the store associated with the cart.                     |
-| `cartName` {==String==}               | The name of the cart.                                             |
-| `userId` {==String==}                 | The Id of the user who owns the cart.                             |
-| `currencyCode` {==String==}           | The currency code for the cart.                                   |
-| `cultureName` {==String==}            | The culture or language associated with the cart.                 |
-| `cartType` {==String==}               | The type of the cart.                                             |
-| `dynamicProperties` {==[InputDynamicPropertyValueType]!==} | The updated dynamic properties of the cart.  |
+| `cartId`  ==String==                  | The Id of the cart to update the dynamic properties.              |
+| `storeId`  ==String!==                | The Id of the store associated with the cart.                     |
+| `cartName`  ==String==                | The name of the cart.                                             |
+| `userId`  ==String==                  | The Id of the user who owns the cart.                             |
+| `currencyCode`  ==String==            | The currency code for the cart.                                   |
+| `cultureName`  ==String==             | The culture or language associated with the cart.                 |
+| `cartType`  ==String==                | The type of the cart.                                             |
+| `dynamicProperties`  ==[InputDynamicPropertyValueType]!==  | The updated dynamic properties of the cart.  |
 
 ## Possible returns
 

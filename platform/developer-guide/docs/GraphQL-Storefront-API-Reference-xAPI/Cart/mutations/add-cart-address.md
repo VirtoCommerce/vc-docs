@@ -6,16 +6,16 @@ This mutation adds a new address to the cart or updates an existing one through 
 
 The `InputAddOrUpdateCartAddressType` represents the input object type used for adding or updating an address for a cart.
 
-| Field                           | Description                                                       |
-|---------------------------------|-------------------------------------------------------------------|
-| `cartId` {==String==}           | The Id of the cart to which the address will be added or updated. |
-| `storeId` {==String!==}         | The Id of the store associated with the cart.                     |
-| `cartName` {==String==}         | The name of the cart.                                             |
-| `userId` {==String==}           | The Id of the user who owns the cart.                             |
-| `currencyCode` {==String==}     | The currency code for the cart.                                   |
-| `cultureName` {==String==}      | The culture or language associated with the cart.                 |
-| `cartType` {==String==}         | The type of the cart.                                             |
-| `address` {==InputAddressType!==} | The address object containing the details of the address to add or update. |
+| Field                         | Description                                                       |
+|-------------------------------|-------------------------------------------------------------------|
+| `cartId` ==String==           | The Id of the cart to which the address will be added or updated. |
+| `storeId` ==String!==         | The Id of the store associated with the cart.                     |
+| `cartName` ==String==         | The name of the cart.                                             |
+| `userId` ==String==           | The Id of the user who owns the cart.                             |
+| `currencyCode` ==String==     | The currency code for the cart.                                   |
+| `cultureName` ==String==      | The culture or language associated with the cart.                 |
+| `cartType` ==String==         | The type of the cart.                                             |
+| `address` ==InputAddressType!== | The address object containing the details of the address to add or update. |
 
 ## Possible returns
 

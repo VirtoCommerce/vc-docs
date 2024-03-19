@@ -6,6 +6,6 @@ The `WishlistEdge` is an edge in a connection from an object to another object o
 
 | Field                                         | Description                                                     |
 | ----------------------------------------------| --------------------------------------------------------------- |
-| `cursor` {==String!==}                        | The Id representing the edge.                                   |
-| `node` [{==WishlistType==}](wishlist-type.md) | The associated `WishlistType` object representing the wishlist. |
+| `cursor`  ==String!==                         | The Id representing the edge.                                   |
+| `node` [ ==WishlistType== ](wishlist-type.md) | The associated `WishlistType` object representing the wishlist. |
 

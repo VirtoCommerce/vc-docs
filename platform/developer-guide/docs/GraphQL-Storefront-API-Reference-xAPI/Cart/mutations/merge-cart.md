@@ -8,14 +8,14 @@ The `InputMergeCartType` represents the input object type used for merging two c
 
 | Field                              | Description                                                              |
 |----------------------------------- |--------------------------------------------------------------------------|
-| `cartId` {==String==}              | The Id of the primary cart that will receive the merged data.            |
-| `storeId` {==String!==}            | The Id of the store associated with the carts.                           |
-| `cartName` {==String==}            | The name of the primary cart.                                            |
-| `userId` {==String==}              | The Id of the user who owns the primary cart.                            |
-| `currencyCode` {==String==}        | The currency code for the primary cart.                                  |
-| `cultureName` {==String==}         | The culture or language associated with the primary cart.                |
-| `cartType` {==String==}            | The type of the primary cart.                                            |
-| `secondCartId` {==String==}        | The Id of the secondary cart that will be merged into the primary cart.  |
+| `cartId`  ==String==               | The Id of the primary cart that will receive the merged data.            |
+| `storeId`  ==String!==             | The Id of the store associated with the carts.                           |
+| `cartName`  ==String==             | The name of the primary cart.                                            |
+| `userId`  ==String==               | The Id of the user who owns the primary cart.                            |
+| `currencyCode`  ==String==         | The currency code for the primary cart.                                  |
+| `cultureName`  ==String==          | The culture or language associated with the primary cart.                |
+| `cartType`  ==String==             | The type of the primary cart.                                            |
+| `secondCartId`  ==String==         | The Id of the secondary cart that will be merged into the primary cart.  |
 
 ## Possible returns
 

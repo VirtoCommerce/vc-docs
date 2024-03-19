@@ -6,17 +6,17 @@ This mutation changes cart item comments.
 
 The `InputChangeCartItemCommentType` represents the input object type used for changing the comment of a specific item in a cart. 
 
-| Field                         | Description                                                               |
-|-------------------------------|---------------------------------------------------------------------------|
-| `cartId` {==String==}         | The Id of the cart to which the item belongs.                             |
-| `storeId` {==String!==}       | The Id of the store associated with the cart.                             |
-| `cartName` {==String==}       | The name of the cart.                                                     |
-| `userId` {==String==}         | The Id of the user who owns the cart.                                     |
-| `currencyCode` {==String==}   | The currency code associated with the cart.                               |
-| `cultureName` {==String==}    | The culture or language name associated with the cart.                    |
-| `cartType` {==String==}       | The type of the cart.                                                     |
-| `lineItemId` {==String!==}    | The Id of the line item for which the comment is being changed.           |
-| `comment` {==String!==}       | The new comment to be assigned to the line item.                          |
+| Field                       | Description                                                               |
+|-----------------------------|---------------------------------------------------------------------------|
+| `cartId` ==String==         | The Id of the cart to which the item belongs.                             |
+| `storeId` ==String!==       | The Id of the store associated with the cart.                             |
+| `cartName` ==String==       | The name of the cart.                                                     |
+| `userId` ==String==         | The Id of the user who owns the cart.                                     |
+| `currencyCode` ==String==   | The currency code associated with the cart.                               |
+| `cultureName` ==String==    | The culture or language name associated with the cart.                    |
+| `cartType` ==String==       | The type of the cart.                                                     |
+| `lineItemId` ==String!==    | The Id of the line item for which the comment is being changed.           |
+| `comment` ==String!==       | The new comment to be assigned to the line item.                          |
 
 ## Possible returns
 

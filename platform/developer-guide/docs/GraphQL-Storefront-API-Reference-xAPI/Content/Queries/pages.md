@@ -4,13 +4,13 @@ This query is used to retrieve a collection of pages based on specified criteria
 
 ## Arguments
 
-| Argument                  | Description                                                           |
-|---------------------------|-----------------------------------------------------------------------|
-| `after` {==String==}      | A cursor value to paginate through the results.                       |
-| `first` {==Int==}         | The number of pages in a single query.                                |
-| `storeId` {==String!==}   | The Id of the store for which to retrieve pages.                      |
-| `keyword` {==String!==}   | A keyword or search term used to filter pages based on their content. |
-| `cultureName` {==String==}| A language to retrieve data in.                                       |
+| Argument                | Description                                                           |
+|-------------------------|-----------------------------------------------------------------------|
+| `after` ==String==      | A cursor value to paginate through the results.                       |
+| `first` ==Int==         | The number of pages in a single query.                                |
+| `storeId` ==String!==   | The Id of the store for which to retrieve pages.                      |
+| `keyword` ==String!==   | A keyword or search term used to filter pages based on their content. |
+| `cultureName` ==String==| A language to retrieve data in.                                       |
 
 
 ## Possible returns

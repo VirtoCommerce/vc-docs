@@ -68,5 +68,3 @@ Let's say we have a marketer who is only responsible for B2B-store promotions, w
 ![Limitations](media/marketer-limitations.png)
 
 With this feature, top marketers prevent unwanted modifications of created promotions.   
-
-![Readmore](media/readmore.png){: width="25"} [Managing Promotions](../marketing/managing-promotions.md)

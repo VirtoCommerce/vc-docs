@@ -25,7 +25,7 @@ To complete your order:
 
 1. Specify shipping details:
     * Select a shipping address from the list or add a new one.
-    * Select a delivery method from a drop-down list: Ground or Air. The shipping cost appears in the order summary.
+    * Select a delivery method from the dropdown list: Ground or Air. The shipping cost appears in the order summary.
     * Enter your comments, if any.
 
     ![Shipping step](../media/shipping-step.png)
@@ -34,20 +34,32 @@ To complete your order:
 
 1. Specify payment details:
     * Select a shipping address from the list, add new one, or check **Same as shipping address**. 
-    * Select a payment method from the drop-down list. Selecting payment by bank card adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. Manual payment allows you to pay for the order later.
+    * Select a payment method from the dropdown list:
+        * **Bank card (Authorize.Net)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually.
+        * **Bank card (Skyflow)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. Allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
+        * **Manual** payment allows you to pay for the order later.
 
     ![Billing step](../media/billing-step.png)
 
-1. Click **Review order** to review your order details. You can not edit your information here, but you can always return to any of the previous steps by clicking them in the navigation path menu.
+1. Click **Review order** to review your order details. You can not edit your information here, but you can return to any of the previous steps by clicking them in the navigation path menu.
 
     ![Path](../media/navigation-path-menu.png){: width="400"}
 
     This step allows you to print your order.
 
-1. Click **Place order**. You will see a notification that your order has been successfully placed:
+1. Click **Place order**. Depending on your choice in step 5, you will either be notified that the order has been successfully placed (manual payment. Last step of this instruction) or you will be offered to pay for the order (bank card payment). Fill in the bank card details, then click **Pay now**. 
+
+    !!! note 
+        In case of the Skyflow option, you can save card for future payments, and then select a previously saved card from the dropdown list. You can view your saved cards at **Account --> Saved Credit Cards**.
+
+        ![Readmore](../media/readmore.png){: width="25"} [Saved Creadit Cards](../account/saved-credit-cards.md) 
+
+    ![payment](../media/payment-step.png)
+
+1. Your order has been successfully placed:
 
     ![Notification](../media/order-completed-notification.png){: width="400"}
 
-You can view your orders at **Account -> Orders**.
+You can view your orders at **Account --> Orders**.
 
-![Readmore](../media/readmore.png){: width="25"} [Viewing orders](../account/orders.md)
+![Readmore](../media/readmore.png){: width="25"} [Viewing Orders](../account/orders.md)
