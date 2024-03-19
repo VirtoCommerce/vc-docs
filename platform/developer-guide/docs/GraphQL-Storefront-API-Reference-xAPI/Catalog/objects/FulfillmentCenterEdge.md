@@ -6,5 +6,5 @@ The `FulfillmentCenterEdge` type represents an edge that connects a fulfillment 
 
 |Field                                                          |Description                                                                       |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------|
-|`cursor` {==String!==}                                         |A cursor that represents the position of the fulfillment center in the connection.|
-|`node` [{==FulfillmentCenterType==}](FulfillmentCenterType.md) |The fulfillment center node associated with the edge.                             |
+|`cursor`  ==String!==                                          |A cursor that represents the position of the fulfillment center in the connection.|
+|`node` [ ==FulfillmentCenterType== ](FulfillmentCenterType.md) |The fulfillment center node associated with the edge.                             |

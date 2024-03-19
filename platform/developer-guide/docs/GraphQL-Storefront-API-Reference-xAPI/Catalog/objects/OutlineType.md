@@ -6,5 +6,5 @@ The `outlineType` object refers to a hierarchical structure or organization of d
 
 | Fields                        	                                | Description                                                         	|
 |----------------------------------------------------------------	|---------------------------------------------------------------------	|
-| `items` [{==OutlineItemType==}](OutlineItemType.md) 	| The collection of outline items that define the hierarchical structure or path. 	|
+| `items` [ ==OutlineItemType== ](OutlineItemType.md) 	| The collection of outline items that define the hierarchical structure or path. 	|
 

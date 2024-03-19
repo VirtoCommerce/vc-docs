@@ -6,6 +6,6 @@ The `CategoryEdge` represents a connection between a node (a category) and its a
 
 | Field                  	| Description                                   	|
 |------------------------	|-----------------------------------------------	|
-| `cursor` {==String!==} 	| The cursor associated with the category node. 	|
-| `node` {==Category==}  	| The category associated with the edge.        	|
+| `cursor`  ==String!==  	| The cursor associated with the category node. 	|
+| `node`  ==Category==   	| The category associated with the edge.        	|
 

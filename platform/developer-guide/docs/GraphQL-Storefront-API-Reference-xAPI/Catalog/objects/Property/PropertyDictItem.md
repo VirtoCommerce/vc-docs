@@ -6,6 +6,6 @@ The `PropertyDictionaryItem` represents an individual item within a property dic
 
 | Field                  	| Description                                                     	|
 |------------------------	|-----------------------------------------------------------------	|
-| `id` {==String!==}     	| The Id of the property dictionary item.          	                |
-| `value` {==String==}   	| The value or content of the property dictionary item.           	|
-| `sortOrder` {==Int!==} 	| The order of the property dictionary item in a list. 	            |
+| `id`  ==String!==      	| The Id of the property dictionary item.          	                |
+| `value`  ==String==    	| The value or content of the property dictionary item.           	|
+| `sortOrder`  ==Int!==  	| The order of the property dictionary item in a list. 	            |

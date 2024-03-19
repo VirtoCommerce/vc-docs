@@ -6,7 +6,7 @@ The `CategoryConnection` represents a connection to a list of categories.
 
 | Field                                           	| Description                                                                 	|
 |------------------------------------------------	|-----------------------------------------------------------------------------	|
-| `totalCount` {==Int==}                           	| The total number of categories in the connection, regardless of pagination. 	|
-| `pageInfo` [{==PageInfo!==}](../PageInfo.md)     	| The information about the current page.                                         	|
-| `edges` [{==CategoryEdge==}](CategoryEdge.md) 	| A connection between a category and the cursor associated with it.          	|
-| `items` [{==Category==}](CategoryType.md)     	| The actual categories returned in the connection.                           	|
+| `totalCount`  ==Int==                            	| The total number of categories in the connection, regardless of pagination. 	|
+| `pageInfo` [ ==PageInfo!== ](../PageInfo.md)     	| The information about the current page.                                         	|
+| `edges` [ ==CategoryEdge== ](CategoryEdge.md) 	| A connection between a category and the cursor associated with it.          	|
+| `items` [ ==Category== ](CategoryType.md)     	| The actual categories returned in the connection.                           	|

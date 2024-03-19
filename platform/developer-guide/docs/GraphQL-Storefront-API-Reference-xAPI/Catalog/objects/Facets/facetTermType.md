@@ -6,7 +6,7 @@ The `FacetTermType` represents a specific term or value within a term facet, all
 
 | Field                      	| Description                                                        	|
 |-----------------------------	|--------------------------------------------------------------------	|
-| `term` {==String==}        	| The specific term within the facet.                                	|
-| `count` {==Long==}         	| The count or number of products associated with the specific term. 	|
-| `isSelected` {==Boolean==} 	| Indicates whether the term is currently selected as a filter.      	|
-| `label` {==String!==}      	| A label of the term.                                                 	|
+| `term`  ==String==         	| The specific term within the facet.                                	|
+| `count`  ==Long==          	| The count or number of products associated with the specific term. 	|
+| `isSelected`  ==Boolean==  	| Indicates whether the term is currently selected as a filter.      	|
+| `label`  ==String!==       	| A label of the term.                                                 	|

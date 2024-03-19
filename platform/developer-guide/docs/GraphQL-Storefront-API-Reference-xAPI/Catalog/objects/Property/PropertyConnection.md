@@ -6,7 +6,7 @@ The `PropertyConnection` type and its associated fields are used to retrieve and
 
 | Field                  	                        | Description                                                     	|
 |-------------------------------------------------	|-----------------------------------------------------------------	|
-| `totalCount` {==Int==}                            | The total number of properties in the connection.             	|
-| `pageInfo` [{==PageInfo!==}](../PageInfo.md)   	| The information about the current page.                          	|
-| `edges` [{==PropertyEdge==}](PropertyEdge.md) 	| A connection between a property and the `PropertyConnection`.    	|
-| `items` [{==Property==}](Property.md)          	| All the properties included in the current query result.      	|
+| `totalCount`  ==Int==                             | The total number of properties in the connection.             	|
+| `pageInfo` [ ==PageInfo!== ](../PageInfo.md)   	| The information about the current page.                          	|
+| `edges` [ ==PropertyEdge== ](PropertyEdge.md) 	| A connection between a property and the `PropertyConnection`.    	|
+| `items` [ ==Property== ](Property.md)          	| All the properties included in the current query result.      	|

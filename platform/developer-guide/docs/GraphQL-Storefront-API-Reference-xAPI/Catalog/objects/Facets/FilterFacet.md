@@ -6,8 +6,8 @@ The `FilterFacet` represents a facet for filtering products based on specific at
 
 | Field                          	            | Description                                                          	|
 |----------------------------------------------	|----------------------------------------------------------------------	|
-| `name` {==String!==}                         	| The name of the filter facet.                                        	|
-| `label` {==String!==}                        	| The label of the filter facet.                                     	|
-| `facetType` {==FacetTypes==}                	| The type of the filter facet, such as checkbox, slider, or dropdown. 	|
-| `count` {==Int!==}               	            | The number of products associated with the filter facet.          	|
+| `name`  ==String!==                          	| The name of the filter facet.                                        	|
+| `label`  ==String!==                         	| The label of the filter facet.                                     	|
+| `facetType`  ==FacetTypes==                 	| The type of the filter facet, such as checkbox, slider, or dropdown. 	|
+| `count`  ==Int!==                	            | The number of products associated with the filter facet.          	|
 
