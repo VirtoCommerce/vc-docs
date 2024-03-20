@@ -1,52 +1,60 @@
+# Stable Releases
 
-## Installing Stable Release
-To install a stable release:
+In this guide, we will explore the process of installing and updating to the latest stable release of Virto Commerce. 
 
-+ Create a clean folder for Virto Commerce, e.g., `C:\vc-platform-stable`
+## Install Stable Release
 
-+ Open the [vc-modules/bundles](https://github.com/VirtoCommerce/vc-modules/tree/master/bundles) repository and select the stable release folder (currently, it is v3)
+To install a stable release
 
-+ Download the `package.json` file
+1. Create a clean folder for Virto Commerce, for example, `C:\vc-platform-stable`.
 
-+ Rename the `vc-package.json` file and copy it to your `C:\vc-platform-stable` folder
+1. Open the [vc-modules/bundles](https://github.com/VirtoCommerce/vc-modules/tree/master/bundles) repository and select the stable release folder (currently it is v3).
 
-!!! note
-	The `vc-package.json` file is used to maintain the list of installed modules with their versions. This allows `vc-build` to easily restore the platform with the modules when on a different machine, such as a build server, without all those packages.
-	
-	When you install `vc-build`, it creates the default `vc-package.json` file in the folder automatically. You can customize the `vc-package.json` file with your set of modules, both by Virto Commerce or third party ones.
+1. Download the `package.json` file
 
-+ In the command prompt, navigate to your `vc-platform` folder:
+1. Rename the `vc-package.json` file and copy it to your `C:\vc-platform-stable` folder.
 
-```console
-cd C:\vc-platform-stable
-```
+	!!! note
+		The `vc-package.json` file is used to maintain the list of installed modules and their versions. This allows `vc-build` to easily restore the platform with the modules when it is on a different machine, such as a build server, without all these packages.
+		
+		When you install `vc-build`, it automatically creates the default `vc-package.json` file in the folder. You can customize the `vc-package.json` file with your set of modules, both Virto Commerce and third party.
 
-+ Install the latest stable release for the platform and modules:
+1. In the command prompt, navigate to your `vc-platform' folder:
 
-```console
-vc-build install
-```
+	```console
+	cd C:\vc-platform-stable
+	```
 
-## Updating to Latest Stable Release
+1. Install the latest stable release for the platform and modules:
+
+	```console
+	vc-build install
+	```
+
+The latest stable release has been installed.
+
+## Update to Latest Stable Release
+
 To update to the latest stable release:
  
-+ Open the [vc-modules/bundles](https://github.com/VirtoCommerce/vc-modules/tree/master/bundles) repository and select the appropriate stable release folder
+1. Open the [vc-modules/bundles](https://github.com/VirtoCommerce/vc-modules/tree/master/bundles) repository and select the appropriate stable release folder.
 
-+ Download the `package.json` file.
+1. Download the `package.json` file.
 
-+ Open `C:\vc-platform-stable\vc-package.json` in any text editor and update Virto Commerce based on versions listed in `package.json`
+1. Open `C:\vc-platform-stable\vc-package.json` in any text editor and update Virto Commerce based on the versions listed in `package.json`.
 
-+ Save the `vc-package.json` file
+1. Save the `vc-package.json` file
 
+1. In the command prompt, navigate to your `vc-platform' folder:
 
-+ In the command prompt, navigate to your `vc-platform` folder:
+	```console
+	cd C:\vc-platform-stable
+	```
 
-```console
-cd C:\vc-platform-stable
-```
+1. Install the latest stable release for both platform and modules from the `vc-package.json' file:
 
-Install the latest stable release for both platform and modules from the `vc-package.json` file:
+	```console
+	vc-build install
+	```
 
-```console
-vc-build install
-```
+The stable release has been updated.

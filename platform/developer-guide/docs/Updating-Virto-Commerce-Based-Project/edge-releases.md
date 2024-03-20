@@ -38,4 +38,4 @@ To update to the latest edge release:
 
     `vc-build update`
 
-The latest edge release has been updated.
+The edge release has been updated.
