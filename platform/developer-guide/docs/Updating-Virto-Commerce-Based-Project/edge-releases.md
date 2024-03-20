@@ -30,7 +30,7 @@ The latest edge release has been installed.
 
 To update to the latest edge release:
 
-1. In the command line, go to the vc-platform folder:
+1. In the command line, go to the `vc-platform` folder:
 
     `cd C:\vc-platform-edge`
 

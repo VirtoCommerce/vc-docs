@@ -45,7 +45,6 @@ Virto Commerce ensures a smooth user migration while improving the quality of th
 public void Method1()
 {
 }
-
 ```
 
 Our approach also ensures a controlled transition period. The `Obsolete` attribute typically remains active for the next two stable releases, giving our partners ample time to adapt their code to the newer alternatives. This approach is in line with our commitment to provide a smooth migration process, giving developers the necessary timeframe to adjust their implementations. 
