@@ -27,7 +27,10 @@ nav:
           - <b>Catalog</b>:
                 - Catalog:
                       - Overview: catalog/overview.md
-                      - Managing Catalogs: catalog/add-new-catalog.md
+                      - Managing Catalogs: 
+                          - Creating New Catalog: catalog/add-new-catalog.md
+                          - Exporting Catalogs: catalog/export-catalog.md
+                          - Importing Products to Catalog: catalog/import-products-to-catalog.md  
                       - Managing Categories: catalog/managing-categories.md
                       - Managing Products: catalog/managing-products.md
                       - Managing Product Variations: catalog/managing-product-variations.md
@@ -116,7 +119,10 @@ nav:
                 - Managing contract prices: contracts/managing-contract-prices.md
                 - Managing contract customers: contracts/managing-contract-customers.md
           - Dynamic Associations: 
-                - Overview: dynamic-associations/overview.md 
+                - Overview: dynamic-associations/overview.md
+          - Import and Export:
+                - Overview: customer-export-import/overview.md
+                - Managing Contacts Export and Import: customer-export-import/managing-contacts-export-import.md 
           - Generic Export:
                 - Overview: generic-export/overview.md
                 - Assigning Permissions: generic-export/assigning-permissions.md

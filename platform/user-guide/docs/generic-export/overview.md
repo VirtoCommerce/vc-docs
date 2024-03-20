@@ -8,7 +8,7 @@ The Virto Commerce Generic Export module provides the ability to export data fro
 
 ## Key features
 
-The diagram below illustrates the interconnections among various key entities within the Generic Export module:
+The diagram below illustrates the functionality of the **Generic Export** module:
 
 ![GE key entities](media/key-entities.png)
 

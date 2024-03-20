@@ -341,8 +341,8 @@ nav:
           - Content:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
                 - Queries:
-                      - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
                       - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
+                      - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
                       - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
                       - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
                 - Objects:
@@ -487,7 +487,6 @@ nav:
                 - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
-                - Import Products to Catalog: Tutorials-and-How-tos/Tutorials/import-products-to-catalog.md
           - How-tos:
                 - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md 
                 - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md

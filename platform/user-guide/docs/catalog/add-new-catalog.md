@@ -1,6 +1,6 @@
 # Manage catalogs
 
-Virto Commerce supports managing two types of catalogs:
+Virto Commerce supports two types of catalogs:
 
 * [Physical catalogs.](add-new-catalog.md#physical-catalogs)
 * [Virtual catalogs.](add-new-catalog.md#virtual-catalogs)

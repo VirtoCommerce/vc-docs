@@ -7,7 +7,8 @@ Learn how to import new products into the Virto Commerce Platform (backend) cata
 Before starting the import process:
 
 * [Install Virto Commerce Platform (backend) and Virto Commerce Storefront (frontend)](../../Getting-Started/Installation-Guide/windows.md).
-* Download the [electronics-new-products-example.csv](electronics-new-products-example.csv) file with new products or export a csv-file from the Catalog module to use as a sample.
+* Install [Catalog CSV Import module](https://github.com/VirtoCommerce/vc-module-catalog-csv-import).
+* Download the [electronics-new-products-example.csv](electronics-new-products-example.csv) file of new products or [export a file from the Catalog module of Virto Commerce Platform](export-catalog.md) to use as a template.
 * Download the [images-example.zip](images-example.zip) file and extract its contents, which include 15 images of new products.
 * Install Microsoft Excel or any other .csv file editor.
 
