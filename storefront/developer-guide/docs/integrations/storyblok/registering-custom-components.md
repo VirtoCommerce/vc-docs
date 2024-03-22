@@ -65,7 +65,7 @@ To create component model in Storyblok:
 
 1. Since components in Storyblok have a block structure, we need to create blocks for each single slide the same way. For this, we will create the **slide** block of the **Nestable block** type. The **slide** block structure can be as follows:
 
-    ![Slide Block](../media/slide-block.png)
+    ![Slide Block](media/slide-block.png)
 
 
 
@@ -81,6 +81,6 @@ To create component model in Storyblok:
 
         **StorySlider** block configuration can be as follows:
 
-        ![StorySlider Settings](../media/story-slider-settings.png)
+        ![StorySlider Settings](media/story-slider-settings.png)
 
 Now you can add it to the Content page to create a new StorySlider block!

@@ -93,4 +93,4 @@ If you have already added custom components to Builder.io, you can use them to c
 
 As a result, you will get integration of Builder.io CMS with the index page of **Virto Commerce vue-b2b-theme**:
 
-![Builder.io Integration](../media/builderio-integration-index-page.png)
+![Builder.io Integration](media/builderio-integration-index-page.png)

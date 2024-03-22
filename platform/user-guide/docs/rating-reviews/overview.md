@@ -1,10 +1,8 @@
 # Overview [In Progress]
 
-The Rating and Reviews module allows your users to add reviews and ratings for almost any type of object in the system, such as Products, Vendors, Delivery Services, Orders, you can even create reviews for objects such as Managers, Customers, Price Lists, anything that may require rating when building your business applications.
+The **Ratings and Reviews** module empowers users to contribute reviews and ratings for entities within the system.
 
-To manage user ratings and reviews, moderate content, and collect information before publishing it, you can use Admin Portal.
-
-One can leverage rating information for sorting and filtering review objects. Ratings and reviews can be displayed for users on demand.
+You can use rating information for sorting and filtering review objects. Ratings and reviews can be displayed for users upon request.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-customer-review)
 
@@ -12,16 +10,16 @@ One can leverage rating information for sorting and filtering review objects. Ra
 
 ## Key Features
 
-The Rating and Reviews module enables:
+The Ratings and Reviews module facilitates:
 
-* Moderating and checking reviews
-* Approving or rejecting reviews
-* Updating the existing reviews
-* Getting ratings
-* Multi-store and none-store capability with every store having its own review
-* Configurable rating calculator, both average and Wilson
-* Email review reminder for customers who purchased products prompting them to come back and leave a review
+* Moderation and validation of reviews.
+* Approval or rejection of reviews.
+* Updating existing reviews.
+* Retrieving ratings.
+* Multi-store and single-store capability, with each store having its own reviews.
+* Configurable rating calculator, including both average and [Wilson](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html).
+* Email review reminders for customers who have purchased products, encouraging them to return and leave a review.
 
-The diagram below illustrates the interconnections among various key entities within the Catalog module:
+The diagram below illustrates the interconnections among various key entities within the Rating and Reviews module:
 
-![Key entities](media/)
+![Key entities](media/key-entities.png)

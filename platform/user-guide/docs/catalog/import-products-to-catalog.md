@@ -6,7 +6,7 @@ Learn how to import new products into the Virto Commerce Platform (backend) cata
 
 Before starting the import process:
 
-* [Install Virto Commerce Platform (backend) and Virto Commerce Storefront (frontend)](../../Getting-Started/Installation-Guide/windows.md).
+* [Install Virto Commerce Platform (backend) and Virto Commerce Storefront (frontend)](../../../developer-guide/Getting-Started/Installation-Guide/windows).
 * Install [Catalog CSV Import module](https://github.com/VirtoCommerce/vc-module-catalog-csv-import).
 * Download the [electronics-new-products-example.csv](electronics-new-products-example.csv) file of new products or [export a file from the Catalog module of Virto Commerce Platform](export-catalog.md) to use as a template.
 * Download the [images-example.zip](images-example.zip) file and extract its contents, which include 15 images of new products.
@@ -28,8 +28,6 @@ Open Virto Commerce Platform and decide whether you want to add new products to:
 
 === "New catalog"
 
-    To create a new category in the catalog, for example **Electronics**:
-
     1. In the main menu of Virto Commerce Platform, click **Catalog**.
     1. In the next blade, select the **Electronics** catalog.
     1. In the **Categories and Items** blade, click **Add** in the top toolbar. 
@@ -45,8 +43,6 @@ Open Virto Commerce Platform and decide whether you want to add new products to:
         ![Category id](media/category-id.png)
 
 === "Existing catalog"
-
-    To use the existing catalog:
 
     1. In the main menu of Virto Commerce Platform, click **Catalog**.
     1. In the next blade, select the required catalog, for example **Electronics**.

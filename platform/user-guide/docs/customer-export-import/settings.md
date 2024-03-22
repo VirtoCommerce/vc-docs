@@ -4,7 +4,7 @@ The **Customer Export and Import** module facilitates the seamless transfer of s
 
 The primary goal of this module is to empower non-technical users, such as customer managers. These individuals, who regularly interact with customers and may not understand the intricacies of database structures, can now effortlessly navigate customer export and import functions. This ensures a convenient and efficient customer data management experience.
 
-With the **Customer Export and Import** module, you can:
+With the Customer Export and Import Module, you can:
 
 * Export contacts and organizations for editing and updating.
 * Migrate contacts and organizations from another system.

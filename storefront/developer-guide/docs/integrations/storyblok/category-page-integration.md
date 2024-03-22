@@ -125,8 +125,8 @@ After adding Storyblok to the category page component, start creating content in
 
 If you have already added custom components to Storyblok, use them to create content for the page. 
 
-![Readmore](media/readmore.png){: width="25"}  [Registering Custom Components](./registering-custom-components.md)
+![Readmore](media/readmore.png){: width="25"}  [Registering Custom Components](registering-custom-components.md)
 
 As a result, you will get integration of Storyblok CMS with the category page of **Virto Commerce vue-b2b-theme**:
 
-![Storyblok Integration](../media/storyblok-integration-category-page.png)
+![Storyblok Integration](media/storyblok-integration-category-page.png)

@@ -17,7 +17,7 @@ To create data model in Builder.io:
 1. Enter the name of the component and its description. We will enter **Megamenu items**. 
 1. Change preview URL to **http://localhost:YOUR_PORT** where **YOUR_PORT** is the port of your **Virto Commerce vue-b2b-theme** application.
 
-    ![Create Megamenu](../media/create-megamenu-builder.png)
+    ![Create Megamenu](media/create-megamenu-builder.png)
 
 1. Set up the actual field in the entry that holds our component. In our example, we click **Fields** and add a new field called **items** of the type **List**. This field will hold the items of the catalog menu. Similarly, we add new fields **id**, **title**, **icon**, **route**, **priority**, **isCatalogItem**, **children**. The **children** field will be of the type **List** and will hold the same fields as its parent. The nesting will be as follows:
 
@@ -38,7 +38,7 @@ To create data model in Builder.io:
             └── isCatalogItem
     ```
 
-    ![Add Megamenu Items](../media/add-megamenu-items-builder.png)
+    ![Add Megamenu Items](media/add-megamenu-items-builder.png)
 
 ## Create Catalog Menu Content
 
@@ -50,7 +50,7 @@ To create catalog menu content:
 1. Click **+ Item** to add items to the catalog menu. 
 1. Click **+ Child** to add children links to the selected item.
 
-    ![Add Megamenu Block](../media/add-megamenu-block-builder.png)
+    ![Add Megamenu Block](media/add-megamenu-block-builder.png)
 
 
 ## Fetch Content from Builder.io and Display in vue-b2b-theme

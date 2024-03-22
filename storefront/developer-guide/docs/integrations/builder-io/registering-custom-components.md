@@ -73,4 +73,4 @@ In this example, we will show how to register a `Slider` component in the Builde
 
 The **Slider** component is now registered and available for use in the Builder.io CMS. You can now use the **Slider** component when creating content in the Builder.io CMS:
 
-![Slider Component in Builder.io CMS](./../media//slider-component-builder.png)
+![Slider Component in Builder.io CMS](media/slider-component-builder.png)

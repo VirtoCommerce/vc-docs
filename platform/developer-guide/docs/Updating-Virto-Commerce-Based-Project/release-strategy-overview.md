@@ -51,7 +51,10 @@ Our approach also ensures a controlled transition period. The `Obsolete` attribu
 
 ## Read More
 
-* ![Readmore](media/readmore.png){: width="25"} [Install Stable Releases](stable-releases.md)
-* ![Readmore](media/readmore.png){: width="25"} [Install Edge Releases](edge-releases.md)
-* ![Readmore](media/readmore.png){: width="25"} [Install Specific Platform or Module Version](installing-specific-version.md)
-* ![Readmore](media/readmore.png){: width="25"} [Useful Tips](tips.md)
+![Readmore](media/readmore.png){: width="25"} [Install Stable Releases](stable-releases.md)
+
+![Readmore](media/readmore.png){: width="25"} [Install Edge Releases](edge-releases.md)
+
+![Readmore](media/readmore.png){: width="25"} [Install Specific Platform or Module Version](installing-specific-version.md)
+
+![Readmore](media/readmore.png){: width="25"} [Useful Tips](tips.md)

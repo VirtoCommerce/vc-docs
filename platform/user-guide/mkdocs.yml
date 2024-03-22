@@ -25,28 +25,20 @@ nav:
           - Getting Started: getting-started.md
           - Modules Installation: modules-installation.md
           - <b>Catalog</b>:
-                - Catalog:
-                      - Overview: catalog/overview.md
-                      - Managing Catalogs: 
-                          - Creating New Catalog: catalog/add-new-catalog.md
-                          - Exporting Catalogs: catalog/export-catalog.md
-                          - Importing Products to Catalog: catalog/import-products-to-catalog.md  
-                      - Managing Categories: catalog/managing-categories.md
-                      - Managing Products: catalog/managing-products.md
-                      - Managing Product Variations: catalog/managing-product-variations.md
-                      - Managing Product Availability: catalog/setting-product-availability.md
-                      - Managing Properties: catalog/managing-properties.md
-                      - Managing Search Index: catalog/managing-search-index.md
-                      - Product Indexing: catalog/product-indexing.md
-                      - Settings: catalog/settings.md
-                - Catalog Personalization:
-                      - Overview: catalog-personalization/overview.md
-                      - Managing User Groups: catalog-personalization/user-groups.md
-                      - Example: catalog-personalization/example.md
-                      - Settings: catalog-personalization/settings.md
-                - Catalog Publishing:
-                      - Overview: catalog-publishing/overview.md
-                      - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
+                - Overview: catalog/overview.md
+                - Managing Catalogs: 
+                      - Creating New Catalog: catalog/add-new-catalog.md
+                      - Exporting Catalogs: catalog/export-catalog.md
+                      - Importing Catalogs: catalog/import-catalog.md
+                      - Importing Products to Catalog: catalog/import-products-to-catalog.md  
+                - Managing Categories: catalog/managing-categories.md
+                - Managing Products: catalog/managing-products.md
+                - Managing Product Variations: catalog/managing-product-variations.md
+                - Managing Product Availability: catalog/setting-product-availability.md
+                - Managing Properties: catalog/managing-properties.md
+                - Managing Search Index: catalog/managing-search-index.md
+                - Product Indexing: catalog/product-indexing.md
+                - Settings: catalog/settings.md
           - <b>Cart</b>:
                 - Settings: cart/settings.md          
           - <b>Contacts</b>:
@@ -106,6 +98,18 @@ nav:
           - Assets: 
             - Overview: assets/overview.md
             - Managing Assets: assets/managing-assets.md
+          - Catalog Related Modules:
+                - Catalog Personalization:
+                      - Overview: catalog-personalization/overview.md
+                      - Managing User Groups: catalog-personalization/user-groups.md
+                      - Example: catalog-personalization/example.md
+                      - Settings: catalog-personalization/settings.md
+                - Catalog Publishing:
+                      - Overview: catalog-publishing/overview.md
+                      - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
+                - Catalog CSV Import:
+                      - Overview: catalog-csv-import/overview.md
+                      - Settings: catalog-csv-import/settings.md
           - Content:
                 - Overview: content/overview.md
                 - Themes: content/managing-themes.md
@@ -120,9 +124,8 @@ nav:
                 - Managing contract customers: contracts/managing-contract-customers.md
           - Dynamic Associations: 
                 - Overview: dynamic-associations/overview.md
-          - Import and Export:
+          - Export and Import:
                 - Overview: customer-export-import/overview.md
-                - Managing Contacts Export and Import: customer-export-import/managing-contacts-export-import.md 
           - Generic Export:
                 - Overview: generic-export/overview.md
                 - Assigning Permissions: generic-export/assigning-permissions.md
@@ -140,6 +143,7 @@ nav:
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
                 - Rest API Testing: rating-reviews/rest-api-testing.md
+                - Settings: rating-reviews/settings.md
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md

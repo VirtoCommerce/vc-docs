@@ -38,7 +38,7 @@ To create footer content:
 1. Click **+ Column** to add columns to the footer. 
 1. Click **+ Link** to add links to the footer.
 
-    ![Footer Block](../media/footer-block-builder.png)
+    ![Footer Block](media/footer-block-builder.png)
 
 ## Fetch Content from Builder.io and Display in vue-b2b-theme
 
