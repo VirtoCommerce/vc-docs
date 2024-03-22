@@ -14,7 +14,7 @@ To test the created rule, use REST API testing as follows:
 
     ![Dropdown](media/api-testing-1.png)
 
-1. Go to **/api/dynamicassociations/evaluate**, paste the Id of the product from clipboard, and complete the request as follows:
+1. Select **POST /api/dynamicassociations/evaluate**, paste the Id of the product from clipboard, and complete the request as follows:
 
     ![Request](media/api-testing-2.png)
 

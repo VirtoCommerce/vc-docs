@@ -142,7 +142,7 @@ nav:
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
-                - Rest API Testing: rating-reviews/rest-api-testing.md
+                - Rest API: rating-reviews/rest-api.md
                 - Settings: rating-reviews/settings.md
           - Security:
                 - Overview: security/overview.md

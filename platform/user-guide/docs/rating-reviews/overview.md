@@ -1,8 +1,8 @@
 # Overview [In Progress]
 
-The **Ratings and Reviews** module empowers users to contribute reviews and ratings for entities within the system.
+The **Customer Review** module (called **Ratings and Reviews** in the main menu) manages ratings and reviews for entities within the system.
 
-You can use rating information for sorting and filtering review objects. Ratings and reviews can be displayed for users upon request.
+You can use rating information for sorting and filtering review objects. Ratings and reviews can be displayed to users upon request.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-customer-review)
 
@@ -10,7 +10,7 @@ You can use rating information for sorting and filtering review objects. Ratings
 
 ## Key Features
 
-The Ratings and Reviews module facilitates:
+The **Ratings and Reviews** module facilitates:
 
 * Moderation and validation of reviews.
 * Approval or rejection of reviews.
@@ -20,6 +20,6 @@ The Ratings and Reviews module facilitates:
 * Configurable rating calculator, including both average and [Wilson](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html).
 * Email review reminders for customers who have purchased products, encouraging them to return and leave a review.
 
-The diagram below illustrates the interconnections among various key entities within the Rating and Reviews module:
+The diagram below illustrates the interconnections among various key entities within the **Rating and Reviews** module:
 
 ![Key entities](media/key-entities.png)

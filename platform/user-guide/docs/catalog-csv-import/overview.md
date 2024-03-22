@@ -11,3 +11,5 @@ The Catalog CSV Import Module is required to import catalogs in CSV format.
 The diagram below illustrates the interconnections between the Catalog CSV Import module and the Catalog module:
 
 ![Key entities](media/key-entities.png)
+
+![Readmore](media/readmore.png){: width="25"} [Importing Catalog](../catalog/import-catalog.md)
