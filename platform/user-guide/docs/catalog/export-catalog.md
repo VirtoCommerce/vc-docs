@@ -1,12 +1,12 @@
 # Export Catalog
 
-With the Virto Commerce export feature, users can efficiently extract and save catalog data for:
+With the Virto Commerce export feature, users can efficiently extract and save catalog data for the following purposes:
 
-* **Backup and recovery**: Users can export their entire catalog or specific sections of it as a precautionary measure.
-* **Data Sharing**: Exporting catalogs allows users to share their product data with partners.
-* **Offline Analysis**: Exported catalog data can be analyzed offline using various tools or software. 
-* **Migration and Integration**: Exporting catalog data in a compatible format ensures a smooth transition without data loss or compatibility issues.
-* **Customization and Localization**: Users can export catalog data to customize product information, such as descriptions, pricing, or attributes, and then re-import the modified data back into the system.
+* Backup and recovery.
+* Data sharing.
+* Offline analysis. 
+* Migration and integration.
+* Customization and localization.
 
 !!! note
     Exporting catalogs requires preinstalled [Generic Export module](../generic-export/overview.md).

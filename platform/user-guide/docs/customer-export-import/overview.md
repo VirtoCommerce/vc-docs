@@ -20,4 +20,6 @@ The diagram below illustrates the functionality of the **Customer Export and Imp
 
 ![Key entities](media/key-entities.png)
 
-![Readmore](media/readmore.png){: width="25"} [Managing Contacts](../contacts/managing-contacts.md)
+![Readmore](media/readmore.png){: width="25"} [Exporting Contacts](../contacts/managing-contacts.md#export-contacts)
+
+![Readmore](media/readmore.png){: width="25"} [Importing Contacts](../contacts/managing-contacts.md#import-contacts)
