@@ -33,13 +33,13 @@ To update to the latest edge release:
 1. In the command line, go to the **vc-platform** folder:
 
     ```console
-    `cd C:\vc-platform-edge`
+    cd C:\vc-platform-edge
     ```
 
 1. Install the latest edge release for the platform and modules from the commerce bundle:
 
     ```console
-    `vc-build update -edge`
+    vc-build update -edge
     ```
 
 The edge release has been updated.
