@@ -126,6 +126,9 @@ nav:
                 - Overview: dynamic-associations/overview.md
           - Export and Import:
                 - Overview: customer-export-import/overview.md
+          - GDPR: 
+                - Overview: gdpr/overview.md
+                - Managing Personal Data: gdpr/manage-personal-data.md
           - Generic Export:
                 - Overview: generic-export/overview.md
                 - Assigning Permissions: generic-export/assigning-permissions.md

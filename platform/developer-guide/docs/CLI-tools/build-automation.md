@@ -2,7 +2,6 @@ The `vc-build` tool streamlines various build scenarios for solutions based on V
 <br>
 <br>
 <br>
-<br>
 ![vc-build CLI](media/build-automation.png)
 
 ## Compile
@@ -13,10 +12,30 @@ To compile .NET Core solution, run:
 vc-build compile -configuration <Debug|Release>
 ```
 
-**Parameters**:
+**Parameters:**
 
-* `-configuration <Debug|Release|CONFIGURATION>`: Defines the build configuration. The default configuration for build on build server is `Release`, on the local machine is `Debug`, but you can override the build configuration settings in your project.
+`-configuration <Debug|Release|CONFIGURATION>`: Defines the build configuration. The default configuration for build on build server is `Release`, on the local machine is `Debug`, but you can override the build configuration settings in your project.
   
+## Clean
+
+To clean your bin, objects, and artifacts directories, run:
+
+```console
+vc-build clean
+```
+
+## Restore
+
+To restore nuget dependencies, run:
+
+```console
+vc-build restore
+vc-build restore -NugetConfig <path to nuget config>
+```
+
+**Parameters:**
+
+`-NugetConfig`: Specifies the path to the NuGet configuration file.
 
 ## Test
 
@@ -24,6 +43,14 @@ To compile the solution and execute all unit tests discovered from the projects 
 
 ```console
 vc-build test (with no args)
+```
+
+**Parameters:**
+
+`-TestsFilter` (optional): Allows filtering of tests based on criteria.
+
+```console
+vc-build Test -TestsFilter "Category!=IntegrationTest"
 ```
 
 This command also generates a test coverage and overall stats report.
@@ -87,19 +114,17 @@ To push discovered NuGet packages to a server and publish them, run:
 vc-build publishPackages -source <SOURCE> -apiKey <API_KEY>
 ```
 
-It pushes the NuGet packages discovered in the `artifacts` folder to the server specified by the `-source` parameter and publishes them.
-
-### Example
+It pushes the NuGet packages discovered in the `artifacts` folder to the server specified by the `-source` parameter and publishes them:
 
 ```console
 vc-build publishPackages -source C:\local-nuget 
 ```
 
-**Parameters**
+**Parameters:**
 
-* `-source <SOURCE>` - Specifies the server URL. NuGet identifies a UNC or local folder source and simply copies the file there instead of pushing it using HTTP. If `-source` is not set the default NuGet server `https://api.nuget.org/v3/index.json` will be used.
-* `-apiKey <API_KEY>` - The API key for the server.
+`-source <SOURCE>`: Specifies the server URL. NuGet identifies a UNC or local folder source and simply copies the file there instead of pushing it using HTTP. If `-source` is not set the default NuGet server `https://api.nuget.org/v3/index.json` will be used.
 
+`-apiKey <API_KEY>`: The API key for the server.
 
 ## Compress 
 
@@ -111,32 +136,73 @@ vc-build compress -configuration <Debug|Release>
 
 This command puts the resulting zip into the artifact folder in the module root. 
 
-
 This target normally checks and excludes from the resulting zip all files which names are enumerated in these multiple sources:
 
-* [global module.ignore](https://raw.githubusercontent.com/VirtoCommerce/vc-platform/dev/module.ignore) file that is managed by the VirtoCommerce team.
-* local `module.ignore` file that is taken from the root folder of the module.
+* global [module.ignore](https://raw.githubusercontent.com/VirtoCommerce/vc-platform/dev/module.ignore) file that is managed by the VirtoCommerce team.
+* local **module.ignore** file that is taken from the root folder of the module.
   
-??? Example
+```console
+vc-build compress -configuration Release
+```
 
-    ```console
-    vc-build compress -configuration Release
-    ```
+Console output:
 
-    Console output:
+```console
+═══════════════════════════════════════
+Target             Status      Duration
+───────────────────────────────────────
+Clean              Executed        0:00
+Restore            Executed        0:07
+Compile            Executed        0:06
+WebPackBuild       Executed        0:00
+Test               Executed        0:05
+Publish            Executed        0:01
+Compress           Executed        0:01
+───────────────────────────────────────
+Total                              0:23
+═══════════════════════════════════════
+```
 
-    ```console
-    ═══════════════════════════════════════
-    Target             Status      Duration
-    ───────────────────────────────────────
-    Clean              Executed        0:00
-    Restore            Executed        0:07
-    Compile            Executed        0:06
-    WebPackBuild       Executed        0:00
-    Test               Executed        0:05
-    Publish            Executed        0:01
-    Compress           Executed        0:01
-    ───────────────────────────────────────
-    Total                              0:23
-    ═══════════════════════════════════════
-    ```
+
+**Parameters:**
+
+`-NugetConfig`: Specifies custom path to nuget config files.
+
+```console
+vc-build Compress -NugetConfig <path to nuget config>
+```
+
+## DockerLogin
+
+To execute docker login, run:
+
+```console
+vc-build dockerlogin -DockerRegistryUrl <registry url> -DockerUsername <username> -DockerPassword <password>
+```
+
+## BuildImage
+
+To build docker image, run:
+
+```console
+vc-build BuildImage -DockerfilePath ./dockerfile -DockerImageFullName myimage:tag
+```
+
+## PushImage
+
+To push docker image to the remote registry, run:
+
+```console
+vc-build PushImage -DockerImageFullName myimage:tag
+```
+
+## BuildAndPush
+
+To build and push docker image, run: 
+
+```console
+vc-build BuildAndPush -DockerRegistryUrl <registry url> -DockerUsername <username> -DockerPassword <password> -DockerfilePath ./dockerfile -DockerImageFullName myimage:tag
+```
+
+!!! note
+    If the password was not passed, the `DockerLogin` step will be skipped.

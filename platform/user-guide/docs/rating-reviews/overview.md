@@ -1,4 +1,4 @@
-# Overview [In Progress]
+# Overview
 
 The **Customer Review** module (called **Ratings and Reviews** in the main menu) manages ratings and reviews for entities within the system.
 
