@@ -4,17 +4,6 @@ The `vc-build` tool streamlines various build scenarios for solutions based on V
 <br>
 ![vc-build CLI](media/build-automation.png)
 
-## Compile
-
-To compile .NET Core solution, run:
-
-```console
-vc-build compile -configuration <Debug|Release>
-```
-
-**Parameters:**
-
-`-configuration <Debug|Release|CONFIGURATION>`: Defines the build configuration. The default configuration for build on build server is `Release`, on the local machine is `Debug`, but you can override the build configuration settings in your project.
   
 ## Clean
 
@@ -35,7 +24,20 @@ vc-build restore -NugetConfig <path to nuget config>
 
 **Parameters:**
 
-`-NugetConfig`: Specifies the path to the NuGet configuration file.
+* `-NugetConfig`: Specifies the path to the NuGet configuration file.
+
+## Compile
+
+To compile .NET Core solution, run:
+
+```console
+vc-build compile -configuration <Debug|Release>
+```
+
+**Parameters:**
+
+* `-configuration <Debug|Release|CONFIGURATION>`: Defines the build configuration. The default configuration for build on build server is `Release`, on the local machine is `Debug`, but you can override the build configuration settings in your project.
+
 
 ## Test
 
@@ -47,11 +49,11 @@ vc-build test (with no args)
 
 **Parameters:**
 
-`-TestsFilter` (optional): Allows filtering of tests based on criteria.
+* `-TestsFilter` (optional): Allows filtering of tests based on criteria.
 
-```console
-vc-build Test -TestsFilter "Category!=IntegrationTest"
-```
+    ```console
+    vc-build Test -TestsFilter "Category!=IntegrationTest"
+    ```
 
 This command also generates a test coverage and overall stats report.
 
@@ -122,9 +124,9 @@ vc-build publishPackages -source C:\local-nuget
 
 **Parameters:**
 
-`-source <SOURCE>`: Specifies the server URL. NuGet identifies a UNC or local folder source and simply copies the file there instead of pushing it using HTTP. If `-source` is not set the default NuGet server `https://api.nuget.org/v3/index.json` will be used.
+* `-source <SOURCE>`: Specifies the server URL. NuGet identifies a UNC or local folder source and simply copies the file there instead of pushing it using HTTP. If `-source` is not set the default NuGet server `https://api.nuget.org/v3/index.json` will be used.
 
-`-apiKey <API_KEY>`: The API key for the server.
+* `-apiKey <API_KEY>`: The API key for the server.
 
 ## Compress 
 
@@ -166,11 +168,11 @@ Total                              0:23
 
 **Parameters:**
 
-`-NugetConfig`: Specifies custom path to nuget config files.
+* `-NugetConfig`: Specifies custom path to nuget config files.
 
-```console
-vc-build Compress -NugetConfig <path to nuget config>
-```
+    ```console
+    vc-build Compress -NugetConfig <path to nuget config>
+    ```
 
 ## DockerLogin
 
@@ -205,4 +207,4 @@ vc-build BuildAndPush -DockerRegistryUrl <registry url> -DockerUsername <usernam
 ```
 
 !!! note
-    If the password was not passed, the `DockerLogin` step will be skipped.
+    If you are already signed in to Docker CLI, you do not need to pass the `DockerPassword` parameter.

@@ -152,5 +152,13 @@ vc-build uninstall -module VirtoCommerce.Cart
 The configure command checks and updates connection strings in the **appsettings.json** file.
 
 ```console
-vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string> [-appsettingsPath ./appsettings.json]
+vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
 ```
+
+**Parameters:**
+
+* **-AppsettingsPath** (optional): Specifies a path to the **appsettings.json** file:
+
+    ```console
+    vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string> -appsettingsPath ./appsettings.json
+    ```

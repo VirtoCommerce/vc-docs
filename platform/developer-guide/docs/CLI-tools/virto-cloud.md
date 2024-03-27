@@ -15,8 +15,8 @@ vc-build CloudAuth
 This target creates a new environment. It additionally accepts the `ServicePlan` parameter to specify the service plan (default value is `F1`).  
    
 ```
-CloudInit -EnvironmentName <EnvName>
-CloudInit -EnvironmentName <EnvName> -ServicePlan F1
+vc-build CloudInit -EnvironmentName <EnvName>
+vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
 ```
 
 ## List Environments with Statuses  
@@ -34,7 +34,7 @@ vc-build CloudEnvRestart -EnvironmentName <EnvName>
 ## Show Environment’s Logs  
 
 ```
-vc-build CloudEnvLogs -EnvironmentName
+vc-build CloudEnvLogs -EnvironmentName <EnvName>
 ```
 
 ## Update Environment from Manifest
@@ -57,7 +57,12 @@ vc-build CloudDown -EnvironmentName <EnvName>
 
 ## Wait for Expected Status of Environment  
 
-Additional parameter `AttemptsNumber` (default value) determines the number of attempts, while `Delay` (default 10) specifies the delay between attempts.  
+
+```
+vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing
+```
+
+Additional parameter `AttemptsNumber` (default value 100) determines the number of attempts, while `Delay` (default value 10) specifies the delay between attempts.  
 
 ```
 vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber <number of attempts> -Delay <num of sec>

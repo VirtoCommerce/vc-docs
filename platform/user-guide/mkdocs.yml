@@ -135,6 +135,10 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
+          - Non-integrative Payment Methods: 
+                - Overview: native-payment-methods/overview.md
+                - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
+                - Settings: native-payment-methods/settings.md
           - Notifications:
                 - Overview: notifications/overview.md
                 - Notification List: notifications/notification-list.md
