@@ -68,10 +68,12 @@ Additional parameter `AttemptsNumber` (default value 100) determines the number 
 vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber <number of attempts> -Delay <num of sec>
 ```
 
-## Deploy Docker Images to VirtoCloud
+## Deploy Custom Image to Cloud
+
+You can quickly deploy a local environment and see how it performs in the cloud.
 
 !!! note
-    To run the following targets, you need docker installed to build the docker image. If authorization is not performed in the docker client, the `DockerPassword` parameter must be passed in addition to the `DockerUsername` parameter.<br>
+    To run the following targets, you must have Docker installed to build the docker image. If authorization is not performed in the Docker client, the `DockerPassword` parameter must be passed in addition to the `DockerUsername` parameter.<br>
     The `DockerfileUrl` parameter can be used to pass the url of a customized docker file.
 
 

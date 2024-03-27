@@ -21,9 +21,14 @@ vc-build install (with no args)
 vc-build install -GitLabToken $GITLAB_TOKEN -githubtoken $GITHUB_TOKEN -AzureToken $AZURE_TOKEN
 vc-build install -platform -version <version>
 vc-build install -platform -PlatformAssetUrl https://github.com/VirtoCommerce/vc-platform/releases/download/3.216.13/VirtoCommerce.Platform.3.216.13.zip
-vc-build install -module <module> -version <version>
-vc-build install -module <module>:<version>
 vc-build install -PackageManifestPath some_directory/vc-package.json -DiscoveryPath ../modules -ProbingPath platform_dir/app_data/modules -SkipDependencySolving
+```
+
+For Virto Commerce modules, you can specify their versions:
+
+```console
+vc-build install -module <moduleId> -version <version>
+vc-build install -module <moduleId>:<version>
 ```
 
 
@@ -116,6 +121,9 @@ vc-build install -PackageManifestPath some_directory/vc-package.json -DiscoveryP
     }
     ```
 
+
+!!! note
+    You can skip the backup step by using the `-skip backup' parameter, but you should be aware of all the risks involved. 
 
 ## Update
 
