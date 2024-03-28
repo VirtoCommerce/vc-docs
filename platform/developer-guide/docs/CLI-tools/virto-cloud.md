@@ -22,7 +22,7 @@ vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
 ## List Environments with Statuses  
 
 ```
-vc-build CloudEnvList
+vc-build CloudEnvList <EnvName>
 ```
 
 ## Restart Environment

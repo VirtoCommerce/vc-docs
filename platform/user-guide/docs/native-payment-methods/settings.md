@@ -11,3 +11,5 @@ To configure native payment methods settings:
 ![Settings](media/settings.png)
 
 The settings have been configured.
+
+![Readmore](media/readmore.png){: width="25"} [Payment Methods Settings](../payment/managing-payment-methods.md)

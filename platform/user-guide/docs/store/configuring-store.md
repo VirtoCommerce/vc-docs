@@ -1,4 +1,4 @@
-﻿# Configure store
+﻿# Configure Store
 
 To configure your store, select it in the **Stores** blade and modify the following fields:
 
@@ -8,11 +8,13 @@ To configure your store, select it in the **Stores** blade and modify the follow
 
 ![Readmore](media/readmore.png){: width="25"} [Notifications](../notifications/overview.md)
 
-![Readmore](media/readmore.png){: width="25"} [Notifications log](../notifications/notification-log.md)
+![Readmore](media/readmore.png){: width="25"} [Notifications Log](../notifications/notification-log.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Taxes](../integrations/avalara/overview.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Sitemaps](../sitemaps/overview.md)
+
+![Readmore](media/readmore.png){: width="25"} [Payment Methods](../payment/managing-payment-methods.md)
 
 Below is additional information on some more widgets.
 
@@ -21,7 +23,7 @@ You can have multiple SEO sets for your store pages. Each set includes meta titl
 
 ![SEO settings](media/SEO.png)
 
-## Fulfillment centers
+## Fulfillment Centers
 
 Clicking on the **Fulfillment Centers** widget opens the list of the store's fulfillment centers. 
 
