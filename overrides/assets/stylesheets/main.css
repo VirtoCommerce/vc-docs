@@ -20,24 +20,6 @@
 @import "../fonts/Inter/index.css";
 @import "../fonts/CircularStd/index.css";
 
-*::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-*::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-track-color);
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-thumb-color);
-    border-radius: 12px;
-}
-
-* {
-    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
-}
-
 .md-grid {
     max-width: 74rem;
 }
@@ -72,9 +54,6 @@
 .js .md-typeset .tabbed-labels:before {
     background: var(--md-accent-fg-color);
 }
-
-
-
 
 @media screen and (min-width: 60em) {
     .md-nav--secondary .md-nav__title {

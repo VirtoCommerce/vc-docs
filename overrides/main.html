@@ -3,7 +3,7 @@
 {% set _title = config.extra_site_name %}
 {% set _page = page %}
 
-<!-- {% if _page and _page.meta and _page.meta.title %}
+{% if _page and _page.meta and _page.meta.title %}
 	{% set _title = _title %}
 {% elif _page and _page.title and not _page.is_home_page %}
 	{% set _title = _page.title | striptags ~ " - " ~ _title %}
@@ -15,7 +15,7 @@
 	{% set _title = _title %}
 {% elif _page and _page.title and not _page.is_home_page %}
 	{% set _title = _page.title | striptags ~ " - " ~ _title %}
-{% endif %} -->
+{% endif %}
 
 {% block htmltitle %}
 <title>{{ _title }}</title>
