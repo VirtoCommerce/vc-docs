@@ -12,3 +12,4 @@ The diagram below illustrates the functionality of the Native payment methods mo
 
 ![Key entities](media/key-entities.png)
 
+![Readmore](media/readmore.png){: width="25"} [Managing Payment Methods](../payment/managing-payment-methods.md)

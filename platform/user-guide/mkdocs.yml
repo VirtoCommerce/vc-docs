@@ -149,6 +149,7 @@ nav:
           - Payment:
                 - Overview: payment/overview.md
                 - Managing Payment methods: payment/managing-payment-methods.md
+                - Settings: payment/settings.md
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
