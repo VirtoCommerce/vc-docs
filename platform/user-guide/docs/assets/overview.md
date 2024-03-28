@@ -16,7 +16,7 @@ Virto Commerce includes the following out-of-the-box providers:
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-assets)
 
-[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-assets/releases/tag/3.803.0)
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-assets/releases/)
 
 
 ## Key Features

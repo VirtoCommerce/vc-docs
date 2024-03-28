@@ -2,7 +2,7 @@ In this guide, we will explore how to start using `VirtoCommerce.GlobalTool`.
 
 ## Prerequisites
 
-* .NET SDK 5.x
+* .NET SDK 8.x
 * Node.js 12.x
 * Git SCM
 
@@ -27,7 +27,7 @@ dotnet tool update VirtoCommerce.GlobalTool -g
 * To use `VirtoCommerce.GlobalTool`, run:
 
     ```console
-    `vc-build`
+    vc-build
     ```
 
 * To get the list of all targets, run:
@@ -39,46 +39,38 @@ dotnet tool update VirtoCommerce.GlobalTool -g
     Command output
 
     ```console
-    NUKE Execution Engine version 5.0.2 (Windows,.NETCoreApp,Version=v2.1)
 
-    Target with name 'help' does not exist. Available targets are:
-        - ChangeVersion
-        - Clean
-        - ClearTemp
-        - Compile
-        - CompleteHotfix
-        - CompleteRelease
-        - Compress
-        - GetManifestGit
-        - GrabMigrator
-        - IncrementMinor
-        - IncrementPatch
-        - Init
-        - InitPlatform
-        - Install
-        - InstallModules
-        - InstallPlatform
-        - MassPullAndBuild
-        - Pack
-        - Publish
-        - PublishManifestGit
-        - PublishModuleManifest
-        - PublishPackages
-        - QuickRelease
-        - Release
-        - Restore
-        - SonarQubeEnd
-        - SonarQubeStart
-        - StartAnalyzer
-        - StartHotfix
-        - StartRelease
-        - SwaggerValidation
-        - Test
-        - Uninstall
-        - Update
-        - UpdateManifest
-        - ValidateSwaggerSchema
-        - WebPackBuild
+    There is a help for targets:
+    - Init
+    - Install
+    - Update
+    - InstallModules
+    - InstallPlatform
+    - Uninstall
+    - Clean
+    - Restore
+    - Compile
+    - Pack
+    - Test
+    - PublishPackages
+    - QuickRelease
+    - Publish
+    - WebPackBuild
+    - Compress
+    - PublishModuleManifest
+    - SonarQubeStart
+    - SonarQubeEnd
+    - Release
+    - ClearTemp
+    - DockerLogin
+    - BuildImage
+    - PushImage
+    - BuildAndPush
+    - ArgoUpdateApplication
+    - Configure
+    - UpdateCloudEnvironment
+    - SetEnvParameter
+    - WaitForStatus
     ```
 
 * To get help for the specific target, run:
@@ -93,8 +85,8 @@ Below are the examples of using specific targets.
 
 * **Compress**
 
-    The target is used to create a redistributed zip archive for a module or platform. After executing, the resulting zip is placed in the `artifacts` folder.
-    To execute this target, run this command in the root module folder of the cloned from GitHub repository.
+    The target is used to create a redistributable zip archive for a module or platform. After executing, the resulting zip is placed in the **artifacts** folder.
+    To execute this target, run the following command in the root module folder of the cloned GitHub repository:
 
     ```console
     vc-build compress
@@ -122,17 +114,17 @@ Below are the examples of using specific targets.
 
 * **StartRelease**, **CompleteRelease**, **QuickRelease**, **StartHotfix**, **CompleteHotfix** are used to automate routine operations with release branches.
 
-* **StartRelease** creates and pushes the new branch release/*version* from dev.
+* **StartRelease** creates and pushes the new branch release/version from dev.
 
 * **CompleteRelease**:
-    * Merges release/*version* into master and pushes.
+    * Merges release/version into master and pushes.
     * Merges into dev branch, increments version's minor and pushes.
 
 * **QuickRelease** triggers **StartRelease** and then **CompleteRelease**.
 * **StartHotfix**:
-    * increments version's patch in master.
-    * creates and pushes the new branch hotfix/*version*
+    * Increments version's patch in master.
+    * Creates and pushes the new branch hotfix/version.
 
 * **CompleteHotfix**:
-    * merges hotfix branch into master.
-    * adds tag and pushes.
+    * Merges hotfix branch into master.
+    * Adds tag and pushes.

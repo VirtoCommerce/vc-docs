@@ -1,15 +1,36 @@
-The `vc-build` tool provides a set of targets that allow you to easily install, uninstall, and update platform dependencies through running simple CLI commands.
+# Package Management
+
+The `vc-build` tool provides a set of targets that allow you to easily install, uninstall, update, and configure platform dependencies via simple CLI commands.
 
 ## Install
 
-The `install` command fetches and installs the platform or modules into the relevant folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows `vc-build` to easily restore the platform with modules on a different machine, such as a build server, without all those packages.
+The `install` command fetches the platform or modules and installs them in the appropriate folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows `vc-build` to easily restore the platform with modules on a different machine, such as a build server, without all these packages.
 
+If the command parameters have not been specified and **vc-package.json** is not found in the local folder, the command installs the latest stable release by default. If you need the latest available versions, use the `-edge` parameter.
+
+By default, the `install` command installs all modules listed as dependencies in **vc-package.json**. 
+
+The path to **vc-package.json**, discovery, and probing paths can be overridden with the `PackageManifestPath`, `DiscoveryPath`, `ProbingPath` parameters. We can also skip dependency solving with `SkipDependencySolving` parameter.
+
+This target installs stable versions of modules by default. If you need the latest available versions, use the `-edge` parameter.
+
+If you use a source that requires authorization, you can pass tokens using the `GithubToken`, `AzureToken`, `GitLabToken` parameters.
+ 
 ```console
 vc-build install (with no args)
+vc-build install -GitLabToken $GITLAB_TOKEN -githubtoken $GITHUB_TOKEN -AzureToken $AZURE_TOKEN
 vc-build install -platform -version <version>
-vc-build install -module <module> -version <version>
-vc-build install -module <module>:<version>
+vc-build install -platform -PlatformAssetUrl https://github.com/VirtoCommerce/vc-platform/releases/download/3.216.13/VirtoCommerce.Platform.3.216.13.zip
+vc-build install -PackageManifestPath some_directory/vc-package.json -DiscoveryPath ../modules -ProbingPath platform_dir/app_data/modules -SkipDependencySolving
 ```
+
+For Virto Commerce modules, you can specify their versions:
+
+```console
+vc-build install -module <moduleId> -version <version>
+vc-build install -module <moduleId>:<version>
+```
+
 
 ??? "vc-package.json file example"
     ```console
@@ -68,7 +89,7 @@ vc-build install -module <module>:<version>
             {
               "BlobName": "CustomCompany.CustomModule1_3.200.0.zip"
             }
-        ],
+          ],
           "Container": "modules",
           "ServiceUri": "https://vcpsblob.blob.core.windows.net"
         },
@@ -81,6 +102,18 @@ vc-build install -module <module>:<version>
               "Id": "42920184"
             }
           ]
+        },
+        {
+          "Name": "Local",
+          "Modules": [
+            {
+              "Path": "C:/projects/vc/vc-module-saas/artifacts/VirtoCommerce.SaaS_3.214.0.zip",
+              "Id": "OptionalForThisSource"
+            },
+            {
+              "Path": "C:\\projects\\vc\\vc-module-catalog\\artifacts\\VirtoCommerce.Catalog"
+            }
+          ]
         }
       ],
       "ManifestVersion": "2.0",
@@ -89,53 +122,8 @@ vc-build install -module <module>:<version>
     ```
 
 
-### vc-build install (with no args)
-
-This target downloads and installs the platform and modules into a relevant folder with the versions described in `vc-package.json`.
-If `vc-package.json` is not found in the local folder, the command installs the latest stable bundle by default. If `-Edge` parameter has been used then this target will download the latest available platform and modules marked as `commerce`.
-
-By default, the `install` target installs all modules listed as dependencies in **vc-package.json**.
-
-**Example**
-
-```console
-vc-build install
-```
-
-### vc-build install -platform -version <version>
-
-This command fetches and installs the platform with the specific version. If the platform with the specified version does not exist in the registry, the request fails. If no version is specified, the latest platform version is installed.
-
-**Example**
-
-```console
-vc-build install -platform
-vc-build install -platform -version 3.55.0
-```
-
-### vc-build install -module -version <version>
-
-This command installs the specified module version. The request fails in case the version has not been published to the registry. If no version is specified, the latest module version is installed. You can also install multiple modules with a single command by specifying multiple modules with their versions as arguments. If the module to be installed has dependencies, their latest versions is installed along with it. This command also modifies the **vc-package.json** file with the installed dependencies after a successful run.
-
-**Example**
-
-```console
-vc-build install -module VirtoCommerce.Cart
-vc-build install -module VirtoCommerce.Cart -version 3.12.0
-vc-build install -module VirtoCommerce.Cart:3.12.0 VirtoCommerce.Core:3.20.0
-```
-
-### vc-build install -stable [-v <bundle name> -BundlesUrl <custom url to bundles json>]
-
-This command supports working with bundles. A bundle file is a JSON object with key-value pairs that contains names of bundles and URLs to their manifests.
-
-**Example**
-
-```console
-vc-build install -stable # will install modules from the latest bundle
-vc-build install -stable -v "2" # will install modules from the bundle named 2
-vc-build install -stable -bundlesUrl https://somedomain.com/bundles.json # will use a custom URL for bundle search
-```
+!!! note
+    You can skip the backup step by using the `-skip backup' parameter, but you should be aware of all the risks involved. 
 
 ## Update
 
@@ -143,31 +131,20 @@ This command updates the platform and all modules linked to the version specifie
 If `<version>` is not specified, the component will be updated to the latest version.
 If no args are specified, the platform and all modules in the specified location will be updated.
 
-This command also updates the installed dependency versions in the `vc-package.json` file.
-Since the version 3.15.0 this target updates to stable bundles by default. If you want to update to the latest available versions you can add -Edge parameter.
+This command also updates the installed dependency versions in the **vc-package.json** file.
+Since the version 3.15.0 this target updates to stable bundles by default. If you want to update to the latest available versions you can add `-edge` parameter.
 You can specify the bundle to update your environment to specific versions using -v <bundle name> parameter.
 
 ```console
 vc-build update (with no args)
 vc-build update -edge
 vc-build update -v 5
-vc-build update -platform -version <version>
-vc-build update -module <module> -version <version>
-```
-
-**Example**
-
-```console
-vc-build update
 vc-build update -platform
-vc-build update -platform -version 3.14.0
-vc-build update -module VirtoCommerce.Cart
-vc-build update -module VirtoCommerce.Cart -version 3.30.0
 ```
 
 ## Uninstall
 
-The uninstall command removes the specified module and its dependencies. It also removes uninstalled modules from your `vc-package.json`.
+The uninstall command removes the specified module and its dependencies. It also removes uninstalled modules from your **vc-package.json**.
 
 ```console
 vc-build uninstall -module <module>
@@ -183,5 +160,13 @@ vc-build uninstall -module VirtoCommerce.Cart
 The configure command checks and updates connection strings in the **appsettings.json** file.
 
 ```console
-vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string> [-appsettingsPath ./appsettings.json]
+vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
 ```
+
+**Parameters:**
+
+* **-AppsettingsPath** (optional): Specifies a path to the **appsettings.json** file:
+
+    ```console
+    vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string> -appsettingsPath ./appsettings.json
+    ```

@@ -126,12 +126,19 @@ nav:
                 - Overview: dynamic-associations/overview.md
           - Export and Import:
                 - Overview: customer-export-import/overview.md
+          - GDPR: 
+                - Overview: gdpr/overview.md
+                - Managing Personal Data: gdpr/manage-personal-data.md
           - Generic Export:
                 - Overview: generic-export/overview.md
                 - Assigning Permissions: generic-export/assigning-permissions.md
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
+          - Non-integrative Payment Methods: 
+                - Overview: native-payment-methods/overview.md
+                - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
+                - Settings: native-payment-methods/settings.md
           - Notifications:
                 - Overview: notifications/overview.md
                 - Notification List: notifications/notification-list.md
@@ -139,6 +146,9 @@ nav:
                 - Notification Log: notifications/notification-log.md
                 - Notification Templates: notifications/notification-templates.md
                 - Settings: notifications/settings.md
+          - Payment:
+                - Overview: payment/overview.md
+                - Managing Payment methods: payment/managing-payment-methods.md
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md

@@ -1,8 +1,12 @@
 # Overview
 
-The main function of the Experience API (xAPI) project is to serve as a middle layer connecting clients and enterprise services using the GraphQL protocol. 
+The main function of the **Experience API (xAPI)** module is to serve as a middle layer connecting clients and enterprise services using the GraphQL protocol. 
 
 It is closely associated with a particular user or touchpoint experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
+
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-experience-api)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-experience-api/releases/)
 
 
 # GraphQL core ideas
@@ -18,7 +22,9 @@ With GraphQL, clients can optimize their data queries, reducing network load, im
 !!! info
     Another concept to know is a **Variable**. Is is placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
 
-Our insrtuction provides Virto Commerce related guidelines. For more information about GraphQL, refer to the extensive [GraphQL guide](https://graphql.org/learn/).   
+Our insrtuction provides Virto Commerce related guidelines. 
+
+![Readmore](media/readmore.png){: width="25"} [Extensive GraphQL guide](https://graphql.org/learn/)
 
 ??? "Sample queries"
 
