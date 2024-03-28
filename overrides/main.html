@@ -6,7 +6,7 @@
 {% if _page and _page.meta and _page.meta.title %}
 	{% set _title = _title %}
 {% elif _page and _page.title and not _page.is_home_page %}
-	{% set _title = _page.title | striptags ~ " - " ~ _title %}
+	{% set _title = _page.title | _title %}
 {% endif %}
 
 {% set _page = _page.parent %}
@@ -14,7 +14,7 @@
 {% if _page and _page.meta and _page.meta.title %}
 	{% set _title = _title %}
 {% elif _page and _page.title and not _page.is_home_page %}
-	{% set _title = _page.title | striptags ~ " - " ~ _title %}
+	{% set _title = _page.title | _title %}
 {% endif %}
 
 {% block htmltitle %}
