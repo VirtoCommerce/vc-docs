@@ -10,6 +10,13 @@ This target saves a token for accessing the VirtoCloud portal, eliminating the n
 vc-build CloudAuth
 ```
 
+!!! note 
+    By default, authorization is done using a Github account. There is an optional `-AzureAD` parameter that allows you to authorize using an Azure AD account:
+
+    ```
+    vc-build CloudAuth -AzureAD
+    ```
+
 ## Initialize New Environment  
 
 This target creates a new environment. It additionally accepts the `ServicePlan` parameter to specify the service plan (default value is `F1`).  
@@ -22,7 +29,7 @@ vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
 ## List Environments with Statuses  
 
 ```
-vc-build CloudEnvList <EnvName>
+vc-build CloudEnvList 
 ```
 
 ## Restart Environment
@@ -40,7 +47,7 @@ vc-build CloudEnvLogs -EnvironmentName <EnvName>
 ## Update Environment from Manifest
 
 ```
-vc-build CloudEnvUpdate -ArgoConfigFile <path to the manifest>
+vc-build CloudEnvUpdate -Manifest <path to the manifest>
 ```
 
 ## Set Parameters for Environment  

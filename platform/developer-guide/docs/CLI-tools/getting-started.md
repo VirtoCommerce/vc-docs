@@ -66,11 +66,19 @@ dotnet tool update VirtoCommerce.GlobalTool -g
     - BuildImage
     - PushImage
     - BuildAndPush
-    - ArgoUpdateApplication
     - Configure
-    - UpdateCloudEnvironment
-    - SetEnvParameter
-    - WaitForStatus
+    - CloudEnvUpdate
+    - CloudEnvSetParameter
+    - CloudEnvStatus
+    - CloudAuth
+    - CloudInit
+    - CloudEnvList
+    - CloudEnvRestart
+    - CloudEnvStatus
+    - CloudEnvLogs
+    - CloudDown
+    - CloudDeploy
+    - CloudUp
     ```
 
 * To get help for the specific target, run:
