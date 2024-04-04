@@ -151,6 +151,10 @@ nav:
                       - Overview: native-payment-methods/overview.md
                       - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
                       - Settings: native-payment-methods/settings.md
+          - Push Messages: 
+                - Overview: push-messages/overview.md
+                - Managing Push Messages: push-messages/manage-push-messages.md
+                - Settings: push-messages/settings.md
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md

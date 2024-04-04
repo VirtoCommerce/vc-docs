@@ -39,6 +39,7 @@ nav:
           - Build Automation: CLI-tools/build-automation.md
           - Package Management: CLI-tools/package-management.md
           - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
+          - Cold Start Optimization and Data Migration: CLI-tools/cold-start-data-migration.md
           - VirtoCloud: CLI-tools/virto-cloud.md
     - Fundamentals:
           - Caching:
@@ -142,70 +143,6 @@ nav:
                 - Playground: GraphQL-Storefront-API-Reference-xAPI/playground.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
-          - Catalog:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
-                - Queries:
-                      - Product: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/product.md
-                      - Products: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products.md
-                      - Category: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/category.md
-                      - Categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/categories.md
-                      - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/property.md
-                      - Properties: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/properties.md
-                      - Fulfillment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-center.md
-                      - Fulfillment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-centers.md
-                      - childCategories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/child-categories.md
-                - Objects:
-                      - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType.md
-                      - ProductConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection.md
-                      - ProductEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductEdge.md
-                      - ProductAssociationConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationConnection.md
-                      - ProductAssociationEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationEdge.md
-                      - ProductAssociation: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociation.md
-                      - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryType.md
-                      - CategoryConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryConnection.md
-                      - CategoryEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryEdge.md
-                      - CategoryDescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType.md
-                      - DescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType.md
-                      - FulfillmentCenterType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterType.md
-                      - FulfillmentCenterAddressType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterAddressType.md
-                      - FulfillmentCenterConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterConnection.md
-                      - FulfillmentCenterEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterEdge.md
-                      - VariationType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType.md
-                      - AvailabilityData: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/AvailabilityData.md
-                      - ImageType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ImageType.md
-                      - PriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/PriceType.md
-                      - TierPriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/TierPriceType.md
-                      - CatalogDiscountType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/CatalogDiscountType.md
-                      - PropertyType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/Property.md
-                      - PropertyConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyConnection.md
-                      - PropertyEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyEdge.md
-                      - PropertyDictItemConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemConnection.md
-                      - PropertyDictItemEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemEdge.md
-                      - PropertyDictItem: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItem.md
-                      - Asset: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Asset.md
-                      - PageInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo.md
-                      - InventoryInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo.md
-                      - SeoInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo.md
-                      - OutlineType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType.md
-                      - OutlineItemType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineItemType.md
-                      - Breadcrumb: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb.md
-                      - CommonVendor: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor.md
-                      - Rating: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Rating.md
-                      - VideoConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection.md
-                      - VideoEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge.md
-                      - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
-                      - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet.md
-                      - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet.md
-                      - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
-                      - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
-                      - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
-                - Examples:
-                      - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search.md
-                      - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search.md
-                      - Filter Syntax: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filter-syntax.md
-                      - Filtering: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering.md
-                      - Facets: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets.md
-                      - Multi Select Faceting Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search.md
           - Cart:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md
                 - Queries:
@@ -281,14 +218,100 @@ nav:
                       - removeWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem.md
                       - moveWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem.md
                       - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
-          - Store:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
+          - Catalog:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:
-                      - Store: GraphQL-Storefront-API-Reference-xAPI/Store/queries/store.md
-                - Objects: 
-                      - StoreResponseType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType.md
-                      - LanguageType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType.md
-                      - StoreSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType.md
+                      - Product: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/product.md
+                      - Products: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products.md
+                      - Category: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/category.md
+                      - Categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/categories.md
+                      - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/property.md
+                      - Properties: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/properties.md
+                      - Fulfillment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-center.md
+                      - Fulfillment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-centers.md
+                      - childCategories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/child-categories.md
+                - Objects:
+                      - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType.md
+                      - ProductConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection.md
+                      - ProductEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductEdge.md
+                      - ProductAssociationConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationConnection.md
+                      - ProductAssociationEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationEdge.md
+                      - ProductAssociation: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociation.md
+                      - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryType.md
+                      - CategoryConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryConnection.md
+                      - CategoryEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryEdge.md
+                      - CategoryDescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType.md
+                      - DescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType.md
+                      - FulfillmentCenterType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterType.md
+                      - FulfillmentCenterAddressType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterAddressType.md
+                      - FulfillmentCenterConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterConnection.md
+                      - FulfillmentCenterEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterEdge.md
+                      - VariationType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType.md
+                      - AvailabilityData: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/AvailabilityData.md
+                      - ImageType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ImageType.md
+                      - PriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/PriceType.md
+                      - TierPriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/TierPriceType.md
+                      - CatalogDiscountType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/CatalogDiscountType.md
+                      - PropertyType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/Property.md
+                      - PropertyConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyConnection.md
+                      - PropertyEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyEdge.md
+                      - PropertyDictItemConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemConnection.md
+                      - PropertyDictItemEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemEdge.md
+                      - PropertyDictItem: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItem.md
+                      - Asset: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Asset.md
+                      - PageInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo.md
+                      - InventoryInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo.md
+                      - SeoInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo.md
+                      - OutlineType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType.md
+                      - OutlineItemType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineItemType.md
+                      - Breadcrumb: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb.md
+                      - CommonVendor: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor.md
+                      - Rating: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Rating.md
+                      - VideoConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection.md
+                      - VideoEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge.md
+                      - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
+                      - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet.md
+                      - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet.md
+                      - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
+                      - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
+                      - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
+                - Examples:
+                      - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search.md
+                      - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search.md
+                      - Filter Syntax: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filter-syntax.md
+                      - Filtering: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering.md
+                      - Facets: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets.md
+                      - Multi Select Faceting Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search.md
+          - Content:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
+                - Queries:
+                      - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
+                      - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
+                      - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
+                      - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
+                - Objects:
+                      - PageConnection: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageConnection.md
+                      - PageEdge: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageEdge.md
+                      - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
+                      - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
+                      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
+          - File: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
+                - Getting started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
+                - Queries:
+                      - fileUploadOptions: GraphQL-Storefront-API-Reference-xAPI/File/Queries/fileUploadOptions.md
+                - Objects:
+                      - FileUploadScopeOptionsType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/FileUploadScopeOptionsType.md
+                      - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
+                - Mutations: 
+                      - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+          - Marketing:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+                - Queries:
+                      - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
+                - Objects:
+                      - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
+                      - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
           - Order:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
                 - Queries:
@@ -338,28 +361,6 @@ nav:
                       - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment.md
                       - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment.md
                       - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
-          - Content:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
-                - Queries:
-                      - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
-                      - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
-                      - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
-                      - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
-                - Objects:
-                      - PageConnection: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageConnection.md
-                      - PageEdge: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageEdge.md
-                      - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
-                      - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
-                      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
-          - File: 
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
-                - Getting started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
-                - Queries:
-                      - fileUploadOptions: GraphQL-Storefront-API-Reference-xAPI/File/Queries/fileUploadOptions.md
-                - Objects:
-                      - FileUploadScopeOptionsType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/FileUploadScopeOptionsType.md
-                - Mutations: 
-                      - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
           - Profile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
                 - Queries:
@@ -434,13 +435,23 @@ nav:
                       - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
                       - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
                       - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
-          - Marketing:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+          - Push Messages: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview.md
                 - Queries:
-                      - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
+                      - Push messages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/pushMessages.md
                 - Objects:
-                      - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
-                      - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
+                      - PushMessageType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageType.md
+                      - PushMessageResponseType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageResponseType.md
+                      - InputMarkPushMessageReadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageReadType.md
+                      - InputMarkPushMessageUnreadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageUnreadType.md
+                - Mutations:
+                      - markPushMessageRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageRead.md
+                      - markPushMessageUnrea: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageUnread.md
+                      - markAllPushMessagesRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesRead.md
+                      - markAllPushMessagesUnread: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesUnread.md
+                      - clearAllPushMessages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/clearAllPushMessages.md
+                - Subscriptions:
+                      - pushMessageCreated: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Subscriptions/pushMessageCreated.md
           - Quote:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md
                 - Queries:
@@ -473,6 +484,14 @@ nav:
                       - changeQuoteComment: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment.md
                       - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
                       - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
+          - Store:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
+                - Queries:
+                      - Store: GraphQL-Storefront-API-Reference-xAPI/Store/queries/store.md
+                - Objects: 
+                      - StoreResponseType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType.md
+                      - LanguageType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType.md
+                      - StoreSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType.md
           - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
           - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
     - Extensibility:

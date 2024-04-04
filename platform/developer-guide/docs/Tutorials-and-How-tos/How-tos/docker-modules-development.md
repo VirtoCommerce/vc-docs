@@ -128,9 +128,9 @@ Don't forget to delete the newly created module from the `Modules` and `Modules\
 
 If you need to recreate the platform database for the next debug session, remove the `db-volume` by running:
 
-    ```cmd
-    docker volume rm db-volume
-    ```
+```cmd
+docker volume rm db-volume
+```
 
 ![Readmore](media/readmore.png){: width="25"} [Diagnose Docker problems](https://docs.docker.com/docker-for-windows/troubleshoot)
 

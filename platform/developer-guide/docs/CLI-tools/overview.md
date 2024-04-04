@@ -1,3 +1,5 @@
+# Overview
+
 The VirtoCommerce Global Tool (vc-build) is the official CLI [.NET Core GlobalTool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools) that helps you:
 
 * Build, test and deploy releases.
@@ -10,7 +12,7 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
 
 ![vc-build CLI](media/global-tools.png)
 
-## Key features
+## Key Features
 
 * [Build automation:](build-automation.md) 
 
@@ -27,7 +29,10 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
   
 * [Platform cold start optimization and data migration (WIP):](cold-start-data-migration.md)
 
-    * platform start optimization (slow run on Azure case).
-    * get idempotent SQL scripts for all modules EF migrations with the ability to apply them in a specific order without installed platform and source code (helpful for migration from VirtoCommerce platform version 2 (latest) to version 3).
+    * Platform start optimization (slow run on Azure case).
+
+* [Grab migrator utility quickstart:](grab-migrator.md)
+
+    * Get idempotent SQL scripts for all modules EF migrations with the ability to apply them in a specific order without installed platform and source code.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-build)

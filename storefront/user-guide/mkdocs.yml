@@ -38,8 +38,9 @@ nav:
           - Company Members: account/company-members.md
     - Shopping:
           - Search Options: shopping/searching-for-products.md
+          - Bulk Orders: shopping/bulk-orders.md
           - Compare Products: shopping/compare-products.md
           - Products Lists: shopping/lists.md
           - Submit Quotes: shopping/submit-quotes.md
-          - Bulk Orders: shopping/bulk-orders.md
+          - Notifications: shopping/notifications.md
           - Checkout: shopping/checkout-process.md

@@ -1,6 +1,13 @@
 # Quote request
 
-To request personalized pricing or align bulk orders with negotiated agreements, users can [create quote requests](../shopping/submit-quotes.md). The **Quote request** section lists all the quote requests created by the user:
+To request personalized pricing or align bulk orders with negotiated agreements, users can create quote requests:
+
+* [From the cart page.](../shopping/submit-quotes.md)
+* From the **Quote requests** section by clicking **Request quote** in the top right corner:
+
+    ![Create quote request](../media/create-quote-request-from-account.png)
+
+The **Quote request** section lists all the quote requests created by the user:
 
 ![Quote requests](../media/quote-requests.png)
 

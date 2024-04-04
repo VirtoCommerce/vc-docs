@@ -4,7 +4,7 @@ This mutation allows deleting a file.
 
 ## Arguments
 
-The `DeleteFileCommandType!` represents the command to delete a file.
+The [DeleteFileCommandType!](../Objects/DeleteFileCommandType.md) represents the command to delete a file.
 
 | Field                             | Description                                                 |
 |-----------------------------------|-------------------------------------------------------------|

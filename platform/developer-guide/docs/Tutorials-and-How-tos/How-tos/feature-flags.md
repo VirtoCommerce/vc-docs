@@ -16,6 +16,7 @@ Integrating feature flags into Virto Commerce and Virto Storefront offers severa
 * Virto Commerce extended `SettingDescriptor` with the `IsPublic` property, indicating that a setting is accessible for client applications via the XAPI. 
 * Virto Commerce XAPI extended store query with modules that grant access to Public Store Settings per module. 
 
+[Hub for Feature Flag Driven Development](https://featureflags.io/)
 
 ## Example. Create Public Property Based on Google Analytics Module
 
