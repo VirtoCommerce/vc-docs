@@ -1,5 +1,13 @@
 # Playground
 
+By default, Playground is disabled. To enable it, configure the following setting in the **appsettings.json** file:
+
+```json title="appsettings.json"
+"GraphQLPlayground": {
+  "Enable": true
+}
+```
+
 1. To access the interactive [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment:
 
     1. Open the platform manager application.
@@ -19,7 +27,7 @@
 1. If necessary, specify variables in the **QUERY VARIABLES** tab. 
 
     !!! info
-        Some variables can be obtained from other queries. For exmplae, you can retrieve the user ID by executing the `createUser` mutation, and to obtain the cart ID, you can use the `cart` query.
+        Some variables can be obtained from other queries. For example, you can retrieve the user ID by executing the `createUser` mutation, and to obtain the cart ID, you can use the `cart` query.
 
 
 1. To provide a token:

@@ -33,7 +33,7 @@ This configuration node defines the system settings of the VC Platform.
 | AllowInsecureHttp         | `true`<br>`false`                                                 | Manages how the OpenID Connect server (ASOS) handles <br>the incoming requests: whether those arriving to non-HTTPS endpoints<br>should be rejected or not. By default, this property is set to false<br>to help mitigate the man-in-the-middle attacks.                                                                                  |
 | Hangfire                  |                                                                   | Background processing library (Hangfire) configuration.<br><br> `JobStorageType`: Current job storage.<br>Supported values: `Memory`, `SqlServer`.<br> `UseHangfireServer`: Enables or disables Hangfire for this app instance.<br> `AutomaticRetryCount`: Maximum number of automatic retry attempts. <br>`SqlServerStorageOptions`: Hangfire.SqlServer.SqlServerStorageOptions.<br>![Readmore](media/readmore.png){: width="25"} [Hangfire's SQL Server Configuration](https://docs.hangfire.io/en/latest/configuration/using-sql-server.html#configuration)|
 | Swagger                   |                                                                   | Allows you to disable Swagger initialization upon platform<br>startup to prevent access to Swagger UI and documents.
-| GraphQL Playground        |                                                                   | Allows you to disable the initialization of the<br>GraphQL Playground at platform startup to prevent access<br>to the GraphQL Playground UI and schemas.<br> By default, the playground is enabled.|
+| GraphQL Playground        |                                                                   | Allows you to disable the initialization of the<br>GraphQL Playground at platform startup to prevent access<br>to the GraphQL Playground UI and schemas.<br> By default, the playground is disabled.|
 | FileExtensionsBlackList   |                                                                   | This setting is used in conjunction with the <br>`VirtoCommerce.Platform.Security.FileExtensionsBlackList`<br>setting in the admin UI to define the file extensions that<br>the platform does not permit to be uploaded to the server.<br>The `FileExtensionsBlackList` is not accessible from the admin UI.<br>An administrator may provide an additional list of extensions<br>through the UI that may be used with `FileExtensionsBlackList`. |
 
 **Examples**
@@ -86,7 +86,7 @@ This configuration node defines the system settings of the VC Platform.
 
     ```json title="appsettings.json"
     "GraphQLPlayground": {
-      "Enable": true
+      "Enable": false
     }
     ```
 

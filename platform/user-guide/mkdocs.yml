@@ -160,6 +160,10 @@ nav:
                 - Managing Reviews: rating-reviews/managing-reviews.md
                 - Rest API: rating-reviews/rest-api.md
                 - Settings: rating-reviews/settings.md
+          - Search Index:
+                - Overview: search/overview.md
+                - Managing Search Index: search/managing-search.md
+                - Settings: search/settings.md
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md
