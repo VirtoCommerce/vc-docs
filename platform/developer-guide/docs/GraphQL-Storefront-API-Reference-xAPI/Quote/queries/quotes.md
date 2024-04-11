@@ -6,15 +6,15 @@ This query allows getting a specified number of quotes from a particular user.
 
 | Argument                    | Description                                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------------|
-| `after` {==String==}        | The cursor value to paginate through the results.                                                     |
-| `first` {==Int==}           | The number of pages in a single query.                                                                |
-| `keyword` {==String==}      | The keyword that will be used to filter the quotes.                                                   |
-| `sort` {==String==}         | The sorting order of the returned quotes.                                                             |
-| `storeId` {==String==}      | The Id of the store.                                                                                  |
-| `userId` {==String==}       | The Id of the user.                                                                                   |
-| `currencyCode` {==String==} | A standardized code of a specific currency.                                                           |
-| `cultureName` {==String==}  | A language to retrieve data in.                                                                       |
-| `filter` {==String==}       | The query result filter.                                                                              |
+| `after`  ==String==         | The cursor value to paginate through the results.                                                     |
+| `first`  ==Int==            | The number of pages in a single query.                                                                |
+| `keyword`  ==String==       | The keyword that will be used to filter the quotes.                                                   |
+| `sort`  ==String==          | The sorting order of the returned quotes.                                                             |
+| `storeId`  ==String==       | The Id of the store.                                                                                  |
+| `userId`  ==String==        | The Id of the user.                                                                                   |
+| `currencyCode`  ==String==  | A standardized code of a specific currency.                                                           |
+| `cultureName`  ==String==   | A language to retrieve data in.                                                                       |
+| `filter`  ==String==        | The query result filter.                                                                              |
 
 ## Possible returns
 

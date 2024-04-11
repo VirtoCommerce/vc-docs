@@ -8,7 +8,7 @@ The `InputCreateUserType!` represents the input object for creating a user.
 
 | Field                                                  | Description                                                                                                         |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `applicationUser` [{==InputCreateApplicationUserType==}](../Objects/InputCreateApplicationUserType.md) | The input data for creating an application user, which includes the user's details. |
+| `applicationUser` [ ==InputCreateApplicationUserType== ](../Objects/InputCreateApplicationUserType.md) | The input data for creating an application user, which includes the user's details. |
 
 ## Possible returns
 

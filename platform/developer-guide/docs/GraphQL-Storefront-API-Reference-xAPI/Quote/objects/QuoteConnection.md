@@ -6,7 +6,7 @@ The `QuoteConnection` is an object used to manage and retrieve quotes.
 
 | Field                     | Description               |
 | ------------------------- | ------------------------- |
-| `totalCount` {==Int==}    | The total number of quotes.|
-| `pageInfo` [{==PageInfo!==}](../../Catalog/objects/PageInfo.md)| Pagination information.   |
-| `edges` [{==[QuoteEdge]==}](QuoteEdge.md) | Connections to quotes.    |
-| `items` [{==[QuoteType]==}](QuoteType.md) | Individual quotes .       |
+| `totalCount`  ==Int==     | The total number of quotes.|
+| `pageInfo` [ ==PageInfo!== ](../../Catalog/objects/PageInfo.md)| Pagination information.   |
+| `edges` [ ==[QuoteEdge]== ](QuoteEdge.md) | Connections to quotes.    |
+| `items` [ ==[QuoteType]== ](QuoteType.md) | Individual quotes .       |

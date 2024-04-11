@@ -6,7 +6,7 @@ This connection is used to check the validity of a password.
 
 | Field                   | Description                    |
 |-------------------------|--------------------------------|
-| `password` {==String==} | The password to be validated.  |
+| `password` ==String==   | The password to be validated.  |
 
 
 ## Possible returns

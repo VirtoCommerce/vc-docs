@@ -8,7 +8,7 @@ The `InputUpdateRoleType!` represents the input data required to update a role.
 
 | Field                                                                           | Description                                           |
 |---------------------------------------------------------------------------------|-------------------------------------------------------|
-| `role` [{==InputUpdateRoleInnerType==}](../Objects/InputUpdateRoleInnerType.md) | The updated role information.                         |
+| `role` [==InputUpdateRoleInnerType==](../Objects/InputUpdateRoleInnerType.md) | The updated role information.                         |
 
 
 ## Possible returns

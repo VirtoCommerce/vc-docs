@@ -6,12 +6,12 @@ This connection allows you to search for catalog property metadata.
 
 | Argument                   	| Description                                                	|
 |----------------------------	|------------------------------------------------------------	|
-| `after` {==String==}      	| A cursor value to paginate through the results.           	|
-| `first` {==Int==}          	| The number of pages in a single query.                    	|
-| `storeId` {==String!==}    	| The ID of the store to retrieve pages from.   	            |
-| `types` {==PropertyType==} 	| The type of property to retrieve.                          	|
-| `filter` {==String==}      	| Filters query results.                                    	|
-| `cultureName` {==String==} 	| A language to retrieve data in.                            	|
+| `after`  ==String==       	| A cursor value to paginate through the results.           	|
+| `first`  ==Int==           	| The number of pages in a single query.                    	|
+| `storeId`  ==String!==     	| The ID of the store to retrieve pages from.   	            |
+| `types`  ==PropertyType==  	| The type of property to retrieve.                          	|
+| `filter`  ==String==       	| Filters query results.                                    	|
+| `cultureName`  ==String==  	| A language to retrieve data in.                            	|
 
 ## Possible returns
 
@@ -24,12 +24,12 @@ This connection allows you to search for catalog property metadata.
 
 === "Query 1"
     ```json linenums="1"
-    {
+    { 
       properties(
         storeId: "B2B-Store"
         cultureName: "en-EN"
         types: [PRODUCT, VARIATION]
-      ) {
+      )  
         items {
           name
           type
@@ -43,7 +43,6 @@ This connection allows you to search for catalog property metadata.
           }
         }
       }
-    }
     ```
 
 === "Return 1"

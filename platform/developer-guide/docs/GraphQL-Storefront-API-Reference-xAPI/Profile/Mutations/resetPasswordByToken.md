@@ -8,9 +8,9 @@ The `InputResetPasswordByTokenType!` represents the input object for resetting a
 
 | Field                   | Description                                                                                                                         |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| `token` {==String!==}   | The reset token used to verify the authenticity of the password reset request.                                                      |
-| `userId` {==String!==}  | The Id of the user for whom the password reset is being performed.                                                                   |
-| `newPassword` {==String!==} | The new password to set for the user.                                                                                            |
+| `token`  ==String!==    | The reset token used to verify the authenticity of the password reset request.                                                      |
+| `userId`  ==String!==   | The Id of the user for whom the password reset is being performed.                                                                   |
+| `newPassword`  ==String!==  | The new password to set for the user.                                                                                            |
 
 
 ## Possible returns

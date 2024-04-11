@@ -6,11 +6,11 @@ This query allows you to get a product by its Id and calculate all fields based 
 
 | Argument                  	| Description                     	                    |
 |---------------------------	|-----------------------------------------------------	|
-| `id` {==String!==}          	| The product Id.                                     	|
-| `storeId` {==String!==}     	| The Id of the store to retrieve pages from.         	|
-| `userId` {==String==}       	| The current user Id.                	                |
-| `currencyCode` {==String==} 	| A standardized code of a specific currency.           |
-| `cultureName` {==String==}  	| A language to retrieve data in. 	                |
+| `id`  ==String!==           	| The product Id.                                     	|
+| `storeId`  ==String!==      	| The Id of the store to retrieve pages from.         	|
+| `userId`  ==String==        	| The current user Id.                	                |
+| `currencyCode`  ==String==  	| A standardized code of a specific currency.           |
+| `cultureName`  ==String==   	| A language to retrieve data in. 	                |
 
 ## Possible returns
 

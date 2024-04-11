@@ -8,8 +8,8 @@ The `InputChangeOrderStatusType!` represents the input object for changing the s
 
 | Field                  | Description                                              |
 |------------------------|----------------------------------------------------------|
-| `orderId` {==String==} | The Id of the order for which the status will be changed.|
-| `status` {==String==}  | The new status to be assigned to the order.              |
+| `orderId`  ==String==  | The Id of the order for which the status will be changed.|
+| `status`  ==String==   | The new status to be assigned to the order.              |
 
 
 ## Possible returns

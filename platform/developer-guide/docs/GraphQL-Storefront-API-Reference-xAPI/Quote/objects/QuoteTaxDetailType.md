@@ -6,6 +6,6 @@ The `QuoteTaxDetailType` is an object that contains information about a tax deta
 
 | Field                                                      | Description                                     |
 | ---------------------------------------------------------- | ----------------------------------------------- |
-| `rate` [{==MoneyType==}](../../Cart/objects/money-type.md) | The tax rate applied.                           |
-| `amount` [{==MoneyType==}](../../Cart/objects/money-type.md)| The tax amount calculated based on the rate.   |
-| `name` {==String==}                                        | The name of the tax detail.                     |
+| `rate` [ ==MoneyType== ](../../Cart/objects/money-type.md) | The tax rate applied.                           |
+| `amount` [ ==MoneyType== ](../../Cart/objects/money-type.md)| The tax amount calculated based on the rate.   |
+| `name`  ==String==                                         | The name of the tax detail.                     |

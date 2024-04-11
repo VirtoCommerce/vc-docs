@@ -6,5 +6,5 @@ The `UpdateQuoteAddressesCommandType` used to update the addresses associated wi
 
 | Field                                                                  | Description                                                        |
 | -----------------------------------------------------------------------| ------------------------------------------------------------------ |
-| `quoteId` {==String!==}                                                | The Id of the quote for which addresses are being updated.         |
-| `addresses` [{==[InputQuoteAddressType]!==}](InputQuoteAddressType.md) | A list of updated addresses for the quote.                         |
+| `quoteId`  ==String!==                                                 | The Id of the quote for which addresses are being updated.         |
+| `addresses` [ ==[InputQuoteAddressType]!== ](InputQuoteAddressType.md) | A list of updated addresses for the quote.                         |

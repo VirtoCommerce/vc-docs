@@ -6,10 +6,10 @@ This connection allows you to retrieve the desired list of contacts.
 
 | Argument                           	| Description                                                                                                                                              	|
 |------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `after` {==String==}              	| A cursor value to paginate through the results.                                                                                                         	|
-| `first` {==Int==}                 	| The number of pages in a single query.                                                                                                                  	|
-| `searchPhrase` {==String==}           | A search phrase to filter the organizations based on their names or other relevant attributes.                                                            |
-| `sort` {==String==}               	| Specifies the sorting order of the returned organizations.                                                                                               	|
+| `after`  ==String==               	| A cursor value to paginate through the results.                                                                                                         	|
+| `first`  ==Int==                  	| The number of pages in a single query.                                                                                                                  	|
+| `searchPhrase`  ==String==            | A search phrase to filter the organizations based on their names or other relevant attributes.                                                            |
+| `sort`  ==String==                	| Specifies the sorting order of the returned organizations.                                                                                               	|
 
 ## Possible returns
 

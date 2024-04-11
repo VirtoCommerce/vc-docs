@@ -8,9 +8,9 @@ The `InputProcessOrderPaymentType!` represents the input object for processing a
 
 | Field                                                                                            | Description                                                                               |
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| `orderId` {==String==}                                                                           | The Id of the order for which the payment is being processed.                             |
-| `paymentId` {==String==}                                                                         | The Id of the payment that needs to be processed.                                         |
-| `bankCardInfo` [{==InputOrderBankCardInfoType==}](../objects/input-order-bank-card-info-type.md) | An input object containing the bank card information required for processing the payment. |
+| `orderId`  ==String==                                                                            | The Id of the order for which the payment is being processed.                             |
+| `paymentId`  ==String==                                                                          | The Id of the payment that needs to be processed.                                         |
+| `bankCardInfo` [ ==InputOrderBankCardInfoType== ](../objects/input-order-bank-card-info-type.md) | An input object containing the bank card information required for processing the payment. |
 
 ## Possible returns
 

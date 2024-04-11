@@ -6,11 +6,11 @@ This connection allows you to get the user by several arguments.
 
 | Argument                           	| Description                                                      	|
 |------------------------------------	|-----------------------------------------------------------------	|
-| `id` {==String==}              	    | The Id of the user.                                              	|
-| `userName` {==String==}             | The nsme of the user.                                            	|
-| `email` {==String==}            	  | The email of the user.                                           	|
-| `loginProvider` {==String==}        | The login provider associated with the user.                    	|
-| `providerKey` {==String==}          | The provider key associated with the user's login provider.      	|
+| `id`  ==String==               	    | The Id of the user.                                              	|
+| `userName`  ==String==              | The nsme of the user.                                            	|
+| `email`  ==String==             	  | The email of the user.                                           	|
+| `loginProvider`  ==String==         | The login provider associated with the user.                    	|
+| `providerKey`  ==String==           | The provider key associated with the user's login provider.      	|
 
 
 ## Possible returns

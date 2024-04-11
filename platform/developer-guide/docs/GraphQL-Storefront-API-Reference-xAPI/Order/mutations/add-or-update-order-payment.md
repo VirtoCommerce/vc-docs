@@ -8,8 +8,8 @@ The `InputAddOrUpdateOrderPaymentType` is a type that represents the input objec
 
 | Field                                                                             | Description                                                       |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| `orderId` {==String!==}                                                           | The Id of the order to which the payment will be added or updated.|
-| `payment` [{==InputOrderPaymentType!==}](../objects/input-order-payment-type.md)  | The payment details to be added or updated for the order.         |
+| `orderId`  ==String!==                                                            | The Id of the order to which the payment will be added or updated.|
+| `payment` [ ==InputOrderPaymentType!== ](../objects/input-order-payment-type.md)  | The payment details to be added or updated for the order.         |
 
 ## Possible returns
 

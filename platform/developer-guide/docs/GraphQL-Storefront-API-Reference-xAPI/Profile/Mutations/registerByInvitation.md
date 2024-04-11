@@ -8,14 +8,14 @@ The `InputRegisterByInvitationType!` represents the input object for registering
 
 | Field          | Description                                                                                     |
 |----------------|-------------------------------------------------------------------------------------------------|
-| `userId` {==String!==}      | The Id of the user receiving the invitation.                                       |
-| `token` {==String!==}       | The invitation token used to validate and authorize the registration process.      |
-| `firstName` {==String!==}   | The first name of the user being registered.                                       |
-| `lastName` {==String!==}    | The last name of the user being registered.                                        |
-| `phone` {==String==}        | The phone number of the user being registered.                                     |
-| `username` {==String!==}    | The username chosen by the user being registered.                                  |
-| `password` {==String!==}    | The password chosen by the user being registered.                                  |
-| `customerOrderId` {==String==} | The customer order Id to be associated with this user. <br> It triggers the `transferOrder` command and associates the order with the provided `userId`. |
+| `userId`  ==String!==       | The Id of the user receiving the invitation.                                       |
+| `token`  ==String!==        | The invitation token used to validate and authorize the registration process.      |
+| `firstName`  ==String!==    | The first name of the user being registered.                                       |
+| `lastName`  ==String!==     | The last name of the user being registered.                                        |
+| `phone`  ==String==         | The phone number of the user being registered.                                     |
+| `username`  ==String!==     | The username chosen by the user being registered.                                  |
+| `password`  ==String!==     | The password chosen by the user being registered.                                  |
+| `customerOrderId`  ==String==  | The customer order Id to be associated with this user. <br> It triggers the `transferOrder` command and associates the order with the provided `userId`. |
 
 ## Possible returns
 

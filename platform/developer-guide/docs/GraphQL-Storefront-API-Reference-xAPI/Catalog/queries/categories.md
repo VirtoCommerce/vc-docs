@@ -6,19 +6,19 @@ This connection allows you to search for categories.
 
 | Argument                           	| Description                                                                                                                                              	|
 |------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `after` {==String==}              	| A cursor value to paginate through the results.                                                                                                         	|
-| `first` {==Int==}                 	| The number of pages in a single query.                                                                                                                  	|
-| `storeId` {==String==}            	| The ID of the store to retrieve pages from.                                                                                                              	|
-| `cultureName` {==String==}        	| A language to retrieve data in.                                                                                                                          	|
-| `userId` {==String==}             	| The current user Id.                                                                                                                                    	|
-| `currencyCode` {==String==}       	| A standardized code of a specific currency.                                                                                                   	|
-| `query` {==String==}              	| Performs the full-text search.                                                                                                                          	|
-| `filter` {==String==}             	| Filters query results.                                                                                                                  	|
-| `fuzzy` {==Boolean==}             	| If true, includes slight variations<br>of the search text in the returned products.                                                                      	|
-| `fuzzyLevel` {==Int==}            	| The fuzziness level is measured by the <br>Damerau-Levenshtein distance. It calculates the number of operations<br> required to transform one word into another. 	|
-| `facet` {==String==}              	| Calculates statistical counts to aid in faceted navigation.                                                                                             	|
-| `sort` {==String==}               	| Specifies the sorting order of the returned products.                                                                                                   	|
-| `productIds` {==String==}         	| Identifies specific products within a given store.                                                                                                      	|
+| `after`  ==String==               	| A cursor value to paginate through the results.                                                                                                         	|
+| `first`  ==Int==                  	| The number of pages in a single query.                                                                                                                  	|
+| `storeId`  ==String==             	| The ID of the store to retrieve pages from.                                                                                                              	|
+| `cultureName`  ==String==         	| A language to retrieve data in.                                                                                                                          	|
+| `userId`  ==String==              	| The current user Id.                                                                                                                                    	|
+| `currencyCode`  ==String==        	| A standardized code of a specific currency.                                                                                                   	|
+| `query`  ==String==               	| Performs the full-text search.                                                                                                                          	|
+| `filter`  ==String==              	| Filters query results.                                                                                                                  	|
+| `fuzzy`  ==Boolean==              	| If true, includes slight variations<br>of the search text in the returned products.                                                                      	|
+| `fuzzyLevel`  ==Int==             	| The fuzziness level is measured by the <br>Damerau-Levenshtein distance. It calculates the number of operations<br> required to transform one word into another. 	|
+| `facet`  ==String==               	| Calculates statistical counts to aid in faceted navigation.                                                                                             	|
+| `sort`  ==String==                	| Specifies the sorting order of the returned products.                                                                                                   	|
+| `productIds`  ==String==          	| Identifies specific products within a given store.                                                                                                      	|
 
 ## Possible returns
 

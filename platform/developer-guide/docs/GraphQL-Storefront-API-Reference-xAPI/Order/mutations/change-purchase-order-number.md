@@ -8,14 +8,14 @@ The `InputChangePurchaseOrderNumber` represents the input object for changing th
 
 | Field                      | Description                                                                                  |
 |----------------------------|----------------------------------------------------------------------------------------------|
-| `cartId` {==String==}      | The Id of the cart where the purchase order number needs to be changed.                      |
-| `storeId` {==String!==}    | The Id of the store associated with the cart.                                                |
-| `cartName` {==String==}    | The name of the cart.                                                                        |
-| `userId` {==String!==}     | The Id of the user who owns the cart.                                                        |
-| `currencyCode` {==String==}| The currency code associated with the cart.                                                  |
-| `cultureName` {==String==} | The language to retrieve data in.                                                            |
-| `cartType` {==String==}    | The type of the cart (optional).                                                             |
-| `purchaseOrderNumber` {==String==} | The new purchase order number to be set for the cart.                                |
+| `cartId`  ==String==       | The Id of the cart where the purchase order number needs to be changed.                      |
+| `storeId`  ==String!==     | The Id of the store associated with the cart.                                                |
+| `cartName`  ==String==     | The name of the cart.                                                                        |
+| `userId`  ==String!==      | The Id of the user who owns the cart.                                                        |
+| `currencyCode`  ==String== | The currency code associated with the cart.                                                  |
+| `cultureName`  ==String==  | The language to retrieve data in.                                                            |
+| `cartType`  ==String==     | The type of the cart (optional).                                                             |
+| `purchaseOrderNumber`  ==String==  | The new purchase order number to be set for the cart.                                |
 
 
 ## Possible returns

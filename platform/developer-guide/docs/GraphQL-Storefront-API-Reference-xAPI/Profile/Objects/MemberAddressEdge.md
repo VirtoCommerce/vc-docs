@@ -6,6 +6,6 @@ The `MemberAddressEdge` represents an edge in a connection of member addresses.
 
 | Field                            | Description                                             |
 |----------------------------------|---------------------------------------------------------|
-| `cursor` {==String!==}            | The cursor associated with the member address.          |
-| `node` [{==MemberAddressType==}](MemberAddressType.md)   | The actual member address node. |
+| `cursor`  ==String!==             | The cursor associated with the member address.          |
+| `node` [ ==MemberAddressType== ](MemberAddressType.md)   | The actual member address node. |
 

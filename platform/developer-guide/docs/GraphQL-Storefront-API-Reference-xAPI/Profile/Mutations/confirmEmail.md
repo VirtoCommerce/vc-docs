@@ -8,8 +8,8 @@ The `InputConfirmEmailType` represents the input for the `confirmEmail` mutation
 
 | Field                                     | Description                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
-| `userId` {==String!==}                    | The Id of the user undergoing email confirmation.                                 |
-| `token` {==String!==}                     | The verification token associated with the email confirmation process.            |
+| `userId`  ==String!==                     | The Id of the user undergoing email confirmation.                                 |
+| `token`  ==String!==                      | The verification token associated with the email confirmation process.            |
 
 
 ## Possible returns

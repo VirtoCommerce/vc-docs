@@ -6,12 +6,12 @@ This query is used to view all orders from your organization. The user can view 
 
 | Argument                      | Description                                                     |
 |-------------------------------|-----------------------------------------------------------------|
-| `filter` {==String==}         | Refines the search results for organization orders.             |
-| `sort` {==String==}           | Specifies the order of the results based on certain criteria.   |
-| `cultureName` {==String==}    | A language to retrieve data in.                                 |
-| `organizationId` {==String!==}| The Id of the organization for which the orders are retrieved.  |
-| `after` {==String==}          | A cursor value to paginate through the results.                 |
-| `first` {==Int==}             | The number of pages in a single query.                          |
+| `filter`  ==String==          | Refines the search results for organization orders.             |
+| `sort`  ==String==            | Specifies the order of the results based on certain criteria.   |
+| `cultureName`  ==String==     | A language to retrieve data in.                                 |
+| `organizationId`  ==String!== | The Id of the organization for which the orders are retrieved.  |
+| `after`  ==String==           | A cursor value to paginate through the results.                 |
+| `first`  ==Int==              | The number of pages in a single query.                          |
 
 ## Possible returns
 

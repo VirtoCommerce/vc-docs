@@ -6,6 +6,6 @@ The `InputApplicationUserLoginType` represents the fields required to specify a 
 
 | Field                         | Description                      |
 |-------------------------------|----------------------------------|
-| `loginProvider` {==String!==} | The provider name for the login. |
-| `providerKey` {==String!==}   | The provider key for the login.  |
+| `loginProvider`  ==String!==  | The provider name for the login. |
+| `providerKey`  ==String!==    | The provider key for the login.  |
 

@@ -8,8 +8,8 @@ The `InputRemoveMemberFromOrganizationType!` represents the input object used to
 
 | Field                          | Description                           |
 |--------------------------------|---------------------------------------|
-| `contactId` {==String==}       | The Id of the contact.                |
-| `organizationId` {==String==}  | The Id of the organization.           |
+| `contactId`  ==String==        | The Id of the contact.                |
+| `organizationId`  ==String==   | The Id of the organization.           |
 
 
 ## Possible returns

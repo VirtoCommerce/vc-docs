@@ -8,7 +8,7 @@ The `InputCreateOrderFromCartType!` represents the input object for creating an 
 
 | Field                  | Description                                                |
 |------------------------|----------------------------------------------------------  |
-| `cartId` {==String==}   | The Id of the cart from which the order will be created . |
+| `cartId` ==String==    | The Id of the cart from which the order will be created . |
 
 ## Possible returns
 

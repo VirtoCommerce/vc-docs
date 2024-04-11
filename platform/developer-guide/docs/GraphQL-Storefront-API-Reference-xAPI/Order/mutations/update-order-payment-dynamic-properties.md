@@ -10,9 +10,9 @@ The `InputUpdateOrderPaymentDynamicPropertiesType` is a type that represents the
 
 | Field                                     | Description                                                                                                   |
 |-------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| `orderId` {==String==}                    | An optional identifier of the order for which the order payment's dynamic properties will be updated.        |
-| `paymentId` {==String==}                  | An optional identifier of the order payment for which the dynamic properties will be updated.                |
-| `dynamicProperties` [{==[InputDynamicPropertyValueType]!==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | Dynamic property value types representing the updated dynamic properties of the order payment.|
+| `orderId`  ==String==                     | An optional identifier of the order for which the order payment's dynamic properties will be updated.        |
+| `paymentId`  ==String==                   | An optional identifier of the order payment for which the dynamic properties will be updated.                |
+| `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](../../Profile/Objects/InputDynamicPropertyValueType.md) | Dynamic property value types representing the updated dynamic properties of the order payment.|
 
 ## Possible returns
 
@@ -24,16 +24,18 @@ The `InputUpdateOrderPaymentDynamicPropertiesType` is a type that represents the
 === "Mutation"
     ```json linenums="1"
     mutation updateOrderPaymentDynamicProperties ($command: InputUpdateOrderPaymentDynamicPropertiesType!) {
-    updateOrderPaymentDynamicProperties (command: $command)
-    {
-    id
-    inPayments{
-    dynamicProperties
-    {
-        value
-        name
-    }}
-    }}
+        updateOrderPaymentDynamicProperties (command: $command)
+        {
+            id
+            inPayments{
+                dynamicProperties
+                {
+                    value
+                    name
+                }
+            }
+        }
+    }
     ```
 
 === "Variables"

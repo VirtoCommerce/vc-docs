@@ -6,7 +6,7 @@ This connection allows you to get role by its name.
 
 | Argument                           	| Description                                                                                              	|
 |------------------------------------	|----------------------------------------------------------------------------------------------------------	|
-| `roleName` {==String!==}           	| The name of the role                                                                                     	|
+| `roleName` ==String!==           	  | The name of the role                                                                                     	|
 
 ## Possible returns
 

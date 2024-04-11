@@ -8,9 +8,9 @@ The `InputAuthorizePaymentType!` is a type that represents the input object for 
 
 | Field                                                                       | Description                                                               |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| `orderId` {==String==}                                                      | The Id of the order for which the payment is being authorized.            |
-| `paymentId` {==String==}                                                    | The Id of the payment for which the authorization is being performed.     |
-| `parameters` [{==[InputKeyValueType]==}](../objects/input-key-value-type.md)| Additional parameters required for the authorization process.             |
+| `orderId`  ==String==                                                       | The Id of the order for which the payment is being authorized.            |
+| `paymentId`  ==String==                                                     | The Id of the payment for which the authorization is being performed.     |
+| `parameters` [ ==[InputKeyValueType]== ](../objects/input-key-value-type.md)| Additional parameters required for the authorization process.             |
 
 ## Possible returns
 

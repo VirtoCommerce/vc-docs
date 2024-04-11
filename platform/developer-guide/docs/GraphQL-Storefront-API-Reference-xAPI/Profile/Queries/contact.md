@@ -6,8 +6,8 @@ This connection allows you to get the contact by its Id.
 
 | Argument                           	| Description                                                                   	|
 |------------------------------------	|--------------------------------------------------------------------------------	|
-| `Id` {==String!==}        	        | The Id of the contact.                                                        	|
-| `userId` {==String==}             	| The current user Id.                                                          	|
+| `Id`  ==String!==         	        | The Id of the contact.                                                        	|
+| `userId`  ==String==              	| The current user Id.                                                          	|
 
 
 ## Possible returns

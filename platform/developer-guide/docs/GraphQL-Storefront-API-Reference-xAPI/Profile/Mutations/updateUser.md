@@ -8,7 +8,7 @@ The `InputUpdateUserType!` represents the input object for creating a contact.
 
 | Field                                                                                                  | Description                                                                             |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| `applicationUser` [{==InputUpdateApplicationUserType==}](../Objects/InputUpdateApplicationUserType.md) | The input data for updating an application user, which includes the user's details.     |
+| `applicationUser` [==InputUpdateApplicationUserType==](../Objects/InputUpdateApplicationUserType.md) | The input data for updating an application user, which includes the user's details.     |
 
 ## Possible returns
 

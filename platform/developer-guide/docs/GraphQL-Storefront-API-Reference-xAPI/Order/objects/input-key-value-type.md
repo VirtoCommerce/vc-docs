@@ -6,6 +6,6 @@ The `InputKeyValueType` type represents key-value pairs used for passing additio
 
 | Field                 | Description                           |
 |-----------------------|---------------------------------------|
-| `key` {==String!==}   | The key of the parameter.             |
-| `value` {==String==}  | The value associated with the key.    |
+| `key`  ==String!==    | The key of the parameter.             |
+| `value`  ==String==   | The value associated with the key.    |
 

@@ -6,5 +6,5 @@ The `KeyValueType` type stores data or parameters that may be required for speci
 
 | Field                 | Description                           |
 |-----------------------|---------------------------------------|
-| `key` {==String!==}   | The key of the parameter.             |
-| `value` {==String==}  | The value associated with the key.    |
+| `key`  ==String!==    | The key of the parameter.             |
+| `value`  ==String==   | The value associated with the key.    |

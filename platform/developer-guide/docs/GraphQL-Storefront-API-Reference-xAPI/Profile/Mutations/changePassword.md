@@ -8,9 +8,9 @@ The `InputChangePasswordType!` represents the input object for changing a user's
 
 | Field                     | Description                                                                                                                  |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| `userId` {==String!==}    | The Id of the user for whom the password change is being performed.                                                            |
-| `oldPassword` {==String!==} | The current or old password associated with the user account.                                                                 |
-| `newPassword` {==String!==} | The new password to set for the user.                                                                                        |
+| `userId`  ==String!==     | The Id of the user for whom the password change is being performed.                                                            |
+| `oldPassword`  ==String!==  | The current or old password associated with the user account.                                                                 |
+| `newPassword`  ==String!==  | The new password to set for the user.                                                                                        |
 
 
 ## Possible returns
@@ -22,7 +22,7 @@ The `InputChangePasswordType!` represents the input object for changing a user's
 
 === "Mutation"
     ```json linenums="1"
-    mutation changePassword($command: InputChangePasswordType!) {
+    mutation changePassword($command: InputChangePasswordType!)  
     changePassword(command: $command) {
     succeeded
         errors
@@ -31,7 +31,7 @@ The `InputChangePasswordType!` represents the input object for changing a user's
         description
         }
     }
-    }
+
     ```
 
 === "Variables"

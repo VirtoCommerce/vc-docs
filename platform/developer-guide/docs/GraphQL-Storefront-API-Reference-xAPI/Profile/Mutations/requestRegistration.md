@@ -13,11 +13,11 @@ The `InputRequestRegistrationType!` represents the input object for requesting r
 
 | Field                                                                                             | Description                                                                                                |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| `storeId` {==String!==}                                                                           | The Id of the store where the registration is being requested.                                             |
-| `languageCode` {==String==}                                                                       | The language code used for localization during the registration process.                                   |
-| `organization` [{==InputRegisterOrganizationType==}](../Objects/InputRegisterOrganizationType.md) | The input object containing the details of the organization associated with the registration.              |
-| `contact` [{==InputRegisterContactType==}](../Objects/InputRegisterContactType.md)                | The input object containing the details of the contact person for the registration.                        |
-| `account` [{==InputRegisterAccountType==}](../Objects/InputRegisterAccountType.md)                | The input object containing the details of the user account to be created during the registration.         |
+| `storeId`  ==String!==                                                                            | The Id of the store where the registration is being requested.                                             |
+| `languageCode`  ==String==                                                                        | The language code used for localization during the registration process.                                   |
+| `organization` [ ==InputRegisterOrganizationType== ](../Objects/InputRegisterOrganizationType.md) | The input object containing the details of the organization associated with the registration.              |
+| `contact` [ ==InputRegisterContactType== ](../Objects/InputRegisterContactType.md)                | The input object containing the details of the contact person for the registration.                        |
+| `account` [ ==InputRegisterAccountType== ](../Objects/InputRegisterAccountType.md)                | The input object containing the details of the user account to be created during the registration.         |
 
 ## Possible returns
 

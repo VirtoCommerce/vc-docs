@@ -6,7 +6,7 @@ This query allows you to get a fulfillment center by its Id.
 
 | Argument           	| Description                         	|
 |--------------------	|-------------------------------------	|
-| `id` {==String!==} 	| The Id of the fullfillment center. 	  |
+| `id`  ==String!==  	| The Id of the fullfillment center. 	  |
 
 ## Possible returns
 

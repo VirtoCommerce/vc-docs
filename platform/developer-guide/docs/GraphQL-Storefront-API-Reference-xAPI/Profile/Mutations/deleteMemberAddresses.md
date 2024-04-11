@@ -8,8 +8,8 @@ The `InputDeleteMemberAddressType!` represents the input fields required to dele
 
 | Field                                                                                | Description                                             |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------|
-| `memberId` {==String!==}                                                             | The Id of the member whose addresses are to be deleted. |
-| `addresses` [{==[InputMemberAddressType]!==}](../Objects/InputMemberAddressType.md)  | An array of addresses to be deleted.                    |
+| `memberId`  ==String!==                                                              | The Id of the member whose addresses are to be deleted. |
+| `addresses` [ ==[InputMemberAddressType]!== ](../Objects/InputMemberAddressType.md)  | An array of addresses to be deleted.                    |
 
 
 ## Possible returns

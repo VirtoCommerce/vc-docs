@@ -6,7 +6,7 @@ The `InputRegisterAccountType` represents the input object for registering an ac
 
 | Field                   | Description                        |
 |-------------------------|------------------------------------|
-| `username` {==String!==} | The username for the account.     |
-| `email` {==String!==}    | The email address for the account.|
-| `password` {==String!==} | The password for the account.     |
+| `username`  ==String!==  | The username for the account.     |
+| `email`  ==String!==     | The email address for the account.|
+| `password`  ==String!==  | The password for the account.     |
 

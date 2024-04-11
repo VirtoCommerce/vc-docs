@@ -6,6 +6,6 @@ The `LocalizedSettingResponseType` represents a response type containing localiz
 
 | Field                                             | Description                                                                         |
 |---------------------------------------------------|-------------------------------------------------------------------------------------|
-| `items` [{==[KeyValueType]==}](key-value-type.md) | An array of key-value pairs containing information about the localized settings.    |
+| `items` [ ==[KeyValueType]== ](key-value-type.md) | An array of key-value pairs containing information about the localized settings.    |
 
 

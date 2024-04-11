@@ -8,8 +8,8 @@ The `InputInitializePaymentType!` is a type used as an input for initializing a 
 
 | Field                     | Description                                                                  |
 |---------------------------|------------------------------------------------------------------------------|
-| `orderId` {==String==}    | The Id of the order for which the payment initialization is requested.       |
-| `paymentId` {==String==}  | The Id of the payment for which the initialization is requested.             |
+| `orderId` ==String==    | The Id of the order for which the payment initialization is requested.       |
+| `paymentId` ==String==  | The Id of the payment for which the initialization is requested.             |
 
 ## Possible returns
 

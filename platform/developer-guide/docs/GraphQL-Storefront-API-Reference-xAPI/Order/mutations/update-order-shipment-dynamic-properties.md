@@ -10,9 +10,9 @@ The `InputUpdateOrderShipmentDynamicPropertiesType` is a type that represents th
 
 | Field                                                                                                                | Description                                                                                   |
 |----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| `orderId` {==String==}                                                                                               | The Id of the order for which the order shipment's dynamic properties will be updated.        |
-| `shipmentId` {==String==}                                                                                            | The Id of the order shipment for which the dynamic properties will be updated.                |
-| `dynamicProperties` [{==[InputDynamicPropertyValueType]!==}](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic property value types representing the updated dynamic properties of the order shipment.|
+| `orderId`  ==String==                                                                                                | The Id of the order for which the order shipment's dynamic properties will be updated.        |
+| `shipmentId`  ==String==                                                                                             | The Id of the order shipment for which the dynamic properties will be updated.                |
+| `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic property value types representing the updated dynamic properties of the order shipment.|
 
 
 ## Possible returns
@@ -24,17 +24,18 @@ The `InputUpdateOrderShipmentDynamicPropertiesType` is a type that represents th
 
 === "Mutation"
     ```json linenums="1"
-    mutation updateOrderShipmentDynamicProperties ($command: InputUpdateOrderShipmentDynamicPropertiesType!) {
+    mutation updateOrderShipmentDynamicProperties ($command: InputUpdateOrderShipmentDynamicPropertiesType!)  
     updateOrderShipmentDynamicProperties (command: $command)
     {
-    id
-    shipments{
-    dynamicProperties
-    {
-        value
-        name
-    }}
-    }}
+        id
+        shipments{
+            dynamicProperties
+            {
+                value
+                name
+            }
+        }
+    }
     ```
 
 === "Variables"

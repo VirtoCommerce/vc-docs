@@ -8,8 +8,8 @@ The `InputUpdateMemberDynamicPropertiesType!` represents the input for updating 
 
 | Field                                                                                                  | Description                                                                                       |
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| `memberId` {==String!==}                                                                               | The Id of the member for which the dynamic properties are being updated.  |
-| `dynamicProperties` [{==InputDynamicPropertyValueType==}](../Objects/InputDynamicPropertyValueType.md) | An array of input dynamic property values containing the updated values for the member's dynamic properties. |
+| `memberId`  ==String!==                                                                                | The Id of the member for which the dynamic properties are being updated.  |
+| `dynamicProperties` [ ==InputDynamicPropertyValueType== ](../Objects/InputDynamicPropertyValueType.md) | An array of input dynamic property values containing the updated values for the member's dynamic properties. |
 
 ## Possible returns
 

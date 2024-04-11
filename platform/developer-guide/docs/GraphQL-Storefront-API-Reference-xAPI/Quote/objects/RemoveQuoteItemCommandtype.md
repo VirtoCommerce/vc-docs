@@ -6,5 +6,5 @@ The `RemoveQuoteItemCommandType ` is used to remove a specific item from a quote
 
 | Field                     | Description                                       |
 | ------------------------- | ------------------------------------------------- |
-| `quoteId` {==String!==}   | The Id of the quote from which to remove the item.|
-| `lineItemId` {==String!==}| The Id of the item to be removed from the quote.  |
+| `quoteId`  ==String!==    | The Id of the quote from which to remove the item.|
+| `lineItemId`  ==String!== | The Id of the item to be removed from the quote.  |

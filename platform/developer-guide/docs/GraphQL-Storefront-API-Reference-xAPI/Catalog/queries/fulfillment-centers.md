@@ -6,12 +6,12 @@ This connection allows you to search for fulfillment centers.
 
 | Argument                          	    | Description                                                                                            	|
 |----------------------------------------	|--------------------------------------------------------------------------------------------------------	|
-| `after` {==String==}                   	| A cursor value to paginate through the results.                                                	        |
-| `first` {==Int==}                      	| The number of pages in a single query.                                                       	          |
-| `storeId` {==String==}                 	| The Id of the store to retrieve pages from.                                                  	          |
-| `query` {==String==}                   	| Performs the full-text search.                                                                         	|
-| `sort` {==String==}                   	| Specifies the sorting order of the returned products.                                                  	|
-| `fullfillmentCentersIds` {==String==} 	| Identifies fullfillment centers. This argument is exclusive! If set, it overrides all other arguments. 	|
+| `after`  ==String==                    	| A cursor value to paginate through the results.                                                	        |
+| `first`  ==Int==                       	| The number of pages in a single query.                                                       	          |
+| `storeId`  ==String==                  	| The Id of the store to retrieve pages from.                                                  	          |
+| `query`  ==String==                    	| Performs the full-text search.                                                                         	|
+| `sort`  ==String==                    	| Specifies the sorting order of the returned products.                                                  	|
+| `fullfillmentCentersIds`  ==String==  	| Identifies fullfillment centers. This argument is exclusive! If set, it overrides all other arguments. 	|
 
 ## Possible returns
 

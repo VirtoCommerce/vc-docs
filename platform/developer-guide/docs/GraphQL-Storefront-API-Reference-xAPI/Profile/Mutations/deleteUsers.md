@@ -8,7 +8,7 @@ The `InputDeleteUserType!` represents the input structure for deleting user data
 
 | Field                       | Description                                                    |
 |-----------------------------|----------------------------------------------------------------|
-| `userNames` {==[String]!==} | An array of strings representing the user names to be deleted. |
+| `userNames`  ==[String]!==  | An array of strings representing the user names to be deleted. |
 
 ## Possible returns
 

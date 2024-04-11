@@ -8,8 +8,8 @@ The `InputUpdateMemberAddressType!` represents the input values for updating mem
 
 | Field                                                                              | Description                                                    |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| `memberId` {==String!==}                                                           | The Id of the member for whom the addresses are being updated. |
-| `addresses` [{==[InputMemberAddressType]==}](../Objects/InputMemberAddressType.md) | An array of updated member addresses.                          |
+| `memberId`  ==String!==                                                            | The Id of the member for whom the addresses are being updated. |
+| `addresses` [ ==[InputMemberAddressType]== ](../Objects/InputMemberAddressType.md) | An array of updated member addresses.                          |
 
 
 ## Possible returns

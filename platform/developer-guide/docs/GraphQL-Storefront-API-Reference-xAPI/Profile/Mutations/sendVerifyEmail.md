@@ -8,10 +8,10 @@ The `InputSendVerifyEmailType` represents the input for sending a verification e
 
 | Field                     | Description                                                     |
 |---------------------------|-----------------------------------------------------------------|
-| `storeId` {==String!==}   | The Id of the store for which the verification email is sent.   |
-| `languageCode` {==String==}| The language code for the email content.                       |
-| `email` {==String==}      | The email address to which the verification email is sent.      |
-| `userId` {==String==}     | The Id of the user.                                             |
+| `storeId`  ==String!==    | The Id of the store for which the verification email is sent.   |
+| `languageCode`  ==String== | The language code for the email content.                       |
+| `email`  ==String==       | The email address to which the verification email is sent.      |
+| `userId`  ==String==      | The Id of the user.                                             |
 
 
 ## Possible returns

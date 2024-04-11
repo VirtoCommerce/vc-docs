@@ -8,7 +8,7 @@ The `InputDeleteContactType!` represents the input object for deleting a contact
 
 | Field                                                                                 | Description                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------|
-| `contactId` {==String!==}                                                             | The Id of the contact.                                  |
+| `contactId`  ==String!==                                                             | The Id of the contact.                                  |
 
 
 ## Possible returns

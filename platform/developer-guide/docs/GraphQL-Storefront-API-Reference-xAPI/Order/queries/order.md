@@ -6,9 +6,9 @@ This query is used to retrieve specific order details.​
 
 | Argument                  | Description                     |
 |---------------------------|---------------------------------|
-| `id` {==String==}         | The Id of the order.            |
-| `number` {==String==}     | The order number.               |
-| `cultureName` {==String==}| A language to retrieve data in. |
+| `id`  ==String==          | The Id of the order.            |
+| `number`  ==String==      | The order number.               |
+| `cultureName`  ==String== | A language to retrieve data in. |
 
 ## Possible returns
 

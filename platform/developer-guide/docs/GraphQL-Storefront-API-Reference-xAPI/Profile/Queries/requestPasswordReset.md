@@ -6,8 +6,8 @@ This connection is used to initiate a password reset process for a user.
 
 | Field                        | Description                                                                 |
 |------------------------------|-----------------------------------------------------------------------------|
-| `loginOrEmail` {==String!==} | The login or email of the user for whom the password reset is requested.    |
-| `urlSuffix` {==String==}     | An optional URL suffix that can be appended to the password reset URL.      |
+| `loginOrEmail`  ==String!==  | The login or email of the user for whom the password reset is requested.    |
+| `urlSuffix`  ==String==      | An optional URL suffix that can be appended to the password reset URL.      |
 
 
 ## Possible returns

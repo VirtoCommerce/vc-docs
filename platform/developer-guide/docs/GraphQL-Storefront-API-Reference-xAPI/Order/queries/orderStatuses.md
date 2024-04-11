@@ -6,7 +6,7 @@ This query allows you to retrieve information about the available order statuses
 
 | Argument                       | Description                                                                |
 |--------------------------------|----------------------------------------------------------------------------|
-| `cultureName` {==String==}     | The language to retrieve data in.                                          |
+| `cultureName`  ==String==      | The language to retrieve data in.                                          |
 
 ## Possible returns
 

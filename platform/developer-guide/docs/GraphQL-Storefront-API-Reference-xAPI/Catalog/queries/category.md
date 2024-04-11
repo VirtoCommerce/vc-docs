@@ -6,11 +6,11 @@ This connection allows you to search for a specific category.
 
 | Argument                     	| Description                                             	|
 |------------------------------	|-------------------------------------------------------	|
-| `id` {==String!==}           	| The category Id.                                        	|
-| `storeId` {==String!==}      	| The ID of the store to retrieve pages from.            	|
-| `userId` {==String==}        	| The current user Id.                                  	|
-| `currencyCode` {==String!==} 	| A standardized code of a specific currency.           	|
-| `cultureName` {==String!==}  	| A language to retrieve data in.                         	|
+| `id`  ==String!==            	| The category Id.                                        	|
+| `storeId`  ==String!==       	| The ID of the store to retrieve pages from.            	|
+| `userId`  ==String==         	| The current user Id.                                  	|
+| `currencyCode`  ==String!==  	| A standardized code of a specific currency.           	|
+| `cultureName`  ==String!==   	| A language to retrieve data in.                         	|
 
 ## Possible returns
 

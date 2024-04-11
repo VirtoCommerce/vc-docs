@@ -6,8 +6,8 @@ This connection allows you to get metadata for a specific catalog property.
 
 | Argument                   	| Description              	        |
 |----------------------------	|---------------------------------	|
-| `id` {==String!==}        	| The property Id.         	        |
-| `cultureName` {==String==} 	| A language to retrieve data in.  	|
+| `id`  ==String!==         	| The property Id.         	        |
+| `cultureName`  ==String==  	| A language to retrieve data in.  	|
 
 ## Possible returns
 

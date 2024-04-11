@@ -8,8 +8,8 @@ The `InputChangeOrganizationContactRoleType!` provides the necessary input value
 
 | Argument                  | Description                                                              |
 |---------------------------|--------------------------------------------------------------------------|
-| `userId` {==String==}     | The Id of the organization contact whose role is being modified.         |
-| `roleIds` {==[String!]==} | An array of role Ids representing the new roles assigned to the contact. |
+| `userId`  ==String==      | The Id of the organization contact whose role is being modified.         |
+| `roleIds`  ==[String!]==  | An array of role Ids representing the new roles assigned to the contact. |
 
 
 ## Possible returns

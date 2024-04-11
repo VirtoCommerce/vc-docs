@@ -8,7 +8,7 @@ The `InputLockUnlockOrganizationContactType!` provides the necessary input value
 
 | Field                                                                                 | Description                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------|
-| `userId` {==String==}                                                                 | The Id of the user.                                     |
+| `userId` ==String==                                                                 | The Id of the user.                                     |
 
 ## Possible returns
 

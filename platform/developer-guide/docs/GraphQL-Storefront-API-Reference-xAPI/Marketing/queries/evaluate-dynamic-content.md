@@ -6,14 +6,14 @@ This query allows you to evaluate dynamic content.
 
 | Argument                   	| Description              	                                 |
 |----------------------------	|----------------------------------------------------------	 |
-| `storeId` {==String==}     	| The Id of the store.     	                                 |
-| `placeName` {==String==}    | The name of the place where the content is evaluated.      |
-| `categoryId` {==String==}   | The Id of the category to which the content belongs.       |
-| `productId` {==String==}    | The Id of the product for which the content is evaluated.  |
-| `cultureName` {==String==} 	| A language to retrieve data in.  	                         |
-| `toDate` {==DateTime==}     | The date up to which the content is evaluated.             |
-| `tags` {==[String]==}       | An array of tags associated with the dynamic content.      |
-| `userGroups` {==[String]==} | An array of user groups used to filter the content.        |
+| `storeId`  ==String==      	| The Id of the store.     	                                 |
+| `placeName`  ==String==     | The name of the place where the content is evaluated.      |
+| `categoryId`  ==String==    | The Id of the category to which the content belongs.       |
+| `productId`  ==String==     | The Id of the product for which the content is evaluated.  |
+| `cultureName`  ==String==  	| A language to retrieve data in.  	                         |
+| `toDate`  ==DateTime==      | The date up to which the content is evaluated.             |
+| `tags`  ==[String]==        | An array of tags associated with the dynamic content.      |
+| `userGroups`  ==[String]==  | An array of user groups used to filter the content.        |
 
 ## Possible returns
 

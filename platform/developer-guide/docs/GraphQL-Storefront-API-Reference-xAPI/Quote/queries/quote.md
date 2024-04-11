@@ -7,11 +7,11 @@ This query is used to get a quote by its Id.​
 
 | Argument                  | Description                     |
 |---------------------------|---------------------------------|
-| `id` {==String==}         | The Id of the query.            |
-| `storeId` {==String==}    | The Id of the store.            |
-| `userId` {==String==}     | The Id of the user.             |
-| `currency code` {==String==}     | The code of the currency related to the query.|
-| `cultureName` {==String==}| A language to retrieve data in. |
+| `id`  ==String==          | The Id of the query.            |
+| `storeId`  ==String==     | The Id of the store.            |
+| `userId`  ==String==      | The Id of the user.             |
+| `currency code`  ==String==      | The code of the currency related to the query.|
+| `cultureName`  ==String== | A language to retrieve data in. |
 
 ## Possible returns
 

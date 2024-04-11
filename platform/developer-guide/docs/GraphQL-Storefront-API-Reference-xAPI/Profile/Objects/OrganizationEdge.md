@@ -6,5 +6,5 @@ The `OrganizationEdge` represents an edge in the connection of organizations.
 
 | Field               	                                        | Description                                                    	|
 |-------------------------------------------------------------	|----------------------------------------------------------------	|
-| `cursor` {==String==}      	                                | A string value representing the cursor for the organization.      |
-| `node`[{==Organization==}](OrganizationType.md)               | The organization associated with the edge.                      	|
+| `cursor`  ==String==       	                                | A string value representing the cursor for the organization.      |
+| `node`[ ==Organization== ](OrganizationType.md)               | The organization associated with the edge.                      	|
