@@ -1,40 +1,74 @@
-﻿# Indexing in Platform Manager
-You can work with various indexing features through Platform Manager.
+﻿# Indexing via Platform Manager
 
-## Manual Indexing
+To initiate the indexing process:
 
-You can initiate the indexing process manually by following these steps:
+1. Click **Search Index** in the main menu.
+1. The next blade displays:
+    * The managed record types:
+        * **Members**: Users or entities that have access to the platform.
+        * **Content files**: Any type of digital content stored within the platform.
+        * **Product**: The goods or services offered for sale within the Virto Commerce platform.
+        * **Category**: Similar characteristics used to organize and classify products within the platform.
+        * **Customer order**: Transactions where customers purchase products or services from the platform.
 
-1. Go to **Search Index**, select the required document type, click the **Build** button to start indexing. At this point, you will need to choose one of the two options:
+    * The search provider for each record type:
+        * Elastic App Search.
+        * Elasticsearch 8.
+        * Lucene.
+        * Elasticsearch.
+        * Azure Cognitive Search.
+        * Algolia.
 
-* Build: Index all data without recreating
+        !!! note
+            You can [tailor the search provider per document type](https://docs.virtocommerce.org/platform/developer-guide/Configuration-Reference/appsettingsjson/#search) to optimize search performance and functionality.
 
-* Delete and Build: The current search index will be deleted and built from scratch
+    * Last indexed date, record count, and scope if specified by the user:
 
-2. Wait for the indexing process to complete. The time it may take depends on the number of entities.
+    ![Search index](media/open-search-index-module.png)
 
-![Manual indexing](media/02-manual-indexing.png)
+1. Check the required record types from the list.
+1. Click **Build index** in the top toolbar.
+1. In the popup window, choose how you want to update the search index. There are two options available:
+    * **Build**: Index all data without recreating.
+    * **Delete and build**: Delete the existing search index and build a new one from scratch. 
 
-### Viewing Index Document
+    ![Readmore](media/readmore.png){: width="25"} [Blue-Green Indexing](blue-green-indexing.md)
+    
+    !!! Note
+        No search results will be available until the build process is over.
 
-Platform Manager allows you to preview the index document data without having to write any code. You can use a special widget that will take you to previewing raw JSON data being used for the document that is stored in the index storage. To do so, open the **Product** blade and click the **Search Index** widget:
+The next blade displays the result of indexation:
 
-![Locating index document](media/03-locating-index-document.png)
+![Indexation result](media/indexation-result.png)
+
+## Viewing Index Document
+
+The Platform Manager allows you to preview index document data without writing any code:
+
+1. Click **Catalog** in the main menu.
+1. In the next blade, select the required store, then select the required product.
+1. In the product blade, click on the index widget.
+1. In the next blade you can preview a raw JSON data being used for the document that is stored in the index storage.
 
 ![Viewing index document](media/04-viewing-index-document.png)
 
-### Incremental Index Updates
+## Incremental Index Updates
 
-Virto commerce can update search indexes incrementally in the background by tracking entity changes and injecting changed entities into the index.
+Virto Commerce can update search indexes incrementally in the background by tracking entity changes and injecting changed entities into the index.
 
-Various modules have their own jobs and settings.
+Various modules have their own jobs and settings. For example, the Catalog module has two types for incremental indexing:
 
-For example, the Catalog module has two types for incremental indexing:
+* **Event-based**: Indexing is triggered when a product gets changed.
+* **Time-based**: A background job checks and re-indexes modified objects every X minutes (5 by default). This type is disabled by default.
 
-+ **Event-based**: Indexing is triggered when a product gets changed.
-    
-+ **Time-based**: A background job checks and re-indexes modified objects every X minutes (5 by default). This type is disabled by default.
-    
-You can change behavior by going to **Settings** > **Catalog** >**Search**:
+To disable/ enable event-based indexing:
 
-![Enabling event-based indexing](media/05-enabling-event-based-indexing.png)
+1. Click **Settings** in the main menu.
+1. In the next blade, type **Search** to find settings related to the module.
+1. Select **Enable event-based indexing** for the required module.
+1. In the next blade, switch the option to off or on.
+1. Click **Save** in the top toolbar to save the changes.
+
+![Enabling event-based indexing](media/event-based-indexing.png)
+
+Your settings have been saved.

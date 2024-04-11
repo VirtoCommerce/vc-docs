@@ -1,115 +1,106 @@
-# Elastic Search App Overview
+# Elastic App Search Overview
 
-Search powers the way people shop and helps them find exactly what they are looking for, instantly. Virto Commerce can bring unparalleled relevance and personalized suggestions, optimize product discovery, turning browsers into buyers with seamless transactions that inspire repeat purchases.
+The Virto Commerce **Elastic App Search** module enables integrating  [Azure Cognitive Search](https://azure.microsoft.com/en-us/services/search/) as a [search engine](https://doc.oroinc.com/backend/architecture/tech-stack/search-index/#search-index-overview).
 
-Virto Commerce and Elastic App Search bring the next level of ecommerce administration experience. You can use analytics to improve ecommerce search relevance without any development effort.
+Elastic App Search provides search, aggregation, and analytic capabilities as a service, on top of ElasticSearch. It also supplies tools that can help you tune search result sets without development:
 
-## Prerequisites
+* [Relevance Tuning](https://www.elastic.co/guide/en/app-search/current/precision-tuning.html)
+* [Synonyms](https://www.elastic.co/guide/en/app-search/current/synonyms-guide.html)
+* [Curations](https://www.elastic.co/guide/en/app-search/current/curations-guide.html)
 
-To start using Elastic App Search, you will need to install and configure the following:
+![Readmore](media/readmore.png){: width="25"} [Deploying Elastic App Search](https://www.elastic.co/guide/en/app-search/current/installation.html)
 
-1.  [Elastic App Search 8.x](https://www.elastic.co/enterprise-search)
-2.  [Virto Commerce 3.2xx](https://github.com/VirtoCommerce/)
-3.  [Elastic App Search Virto Commerce Module 3.2xx](https://docs.virtocommerce.org/modules/elastic-app-search/eas-setup-guide/)
-4.  [Virto Storefront 6.x](https://github.com/VirtoCommerce/)
-5.  [Vue B2B Theme 1.x](https://github.com/VirtoCommerce/)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-app-search/)
 
-!!! note
-	After completing the above steps, you will also need to rebuild the index in Virto Commerce.
+## Key Features
 
-!!! note
-	If you are already using Virto Commerce, we recommend you testing it by using the Elastic App Search module.
+The Elastic App Search module offers:
 
-## Using Analytics
+* Full-text search provider compatibility with Elastic App Search version 8.12 and higher.
+* Boosting profile functionality.
+* Dynamic boosting concatenation, combining dynamic boosting with query and static boosting from the Search Relevance Tuning panel.
 
-Every time a customer searches for something on your website, they provide your business with valuable information about what they are looking for.
+## Configuration
 
-To view this info, you can use Kibana and Open:  **Enterprise Search**  →  **App Search**  →  **Engines**:
+Configures the Elastic App Search using the following schema:
 
-![Kibana Engines](media/kibana-engines.png)
-
-By default, Virto Commerce adds four engines: ***Product***, ***Category***, ***CustomerOrder***, and ***Member***.
-
-Choose the ***Product*** engine and review the `Overview`  section, where you can find basic information on product queries and API requests per day:
-
-![Overview Section](media/overview-section.png)
-
-Choose ***Analytics*** to dive into customer experience and query data. Out-of-the-box data collection, metrics, and visualizations on search keywords give you all you need to glean insights from the user behavior:
-
-![Analytics](media/analytics.png)
-
-![Query Analytics](media/query-analytics.png)
-
-## Improving Search Relevance
-
-With Elastic App Search, you can make relevance and tune adjustments, or promote/demote results based on your findings in a few clicks, right from the management interface.
-
-Below, you can find out how to improve the search relevance with:
-
-+  Synonyms
-+  Curations
-+  Relevance Tuning
-
-### Using Synonyms
-
-Sometimes, users will use different terminology than your context might expect.
-
-In  the ***Top queries with no results***  section, you can find query results. For example, your customers might have searched for  `duplicator`, but when you go to Storefront and try searching  `duplicator`, you didn’t find any product for it:
-
-![Searching for a product with no result](media/searching-for-duplicator.png)
-
-It is a common mistake that may lead to poor search relevance: you are selling movies, but they want  _films_.
-
-The Synonym feature builds  ***synonym sets***. A synonym set contains two or more queries that have similar meanings. Each synonym set can contain up to 32 words.
-
-To manage synonyms through the App Search dashboard, choose  ***Synonyms***, choose  ***Create a synonym set***, and add a synonym set.
-
-Once you click ***Save***, the synonym set will be applied:
-
-![Synonym set](media/synonym-set.png)
-
-Now, if your customer searches  for `duplicator`, they will see the appropriate product set:
-
-![Duplicator product set displayed](media/duplicator-product-set.jpeg)
-
-Configuring  ***Synonyms***  is a useful way to guide your users to the most relevant content. It is most useful when you know the precise terms they are searching for. For that, you should explore ***Analytics***, so that you might be aware of your insightful capabilities.
-
-If you are looking to provide even more precise and curated results, venture to the ***Curations*** section.
-
-### Curations
-
-Curations allow search operators to customize search results for specific queries.
-
-For instance, you can use promoted products to ensure that the specified products always match a query and receive the highest relevance scores. Imagine an ecommerce store with featured product results.
-
-Similarly, use  `hidden documents`  to exclude particular products from the results.
-
-Here is how you can boost product search score for, e.g., `office printer`  search query.
-
-Manage curations using Kibana:
-
-1.  Open  ***Enterprise Search***  →  ***App Search***  →  ***Engines***  →  ***product_  engine*** →  ***Curations***
-2.  Add a curation for  `office printer`
-3.  In our example, we promote two products: ***565507636 - HP OfficeJet Pro 6978 All-in-One Multifunction*** and ***551879675 - HP LaserJet Pro MFP M521dn - multifunction printer (B/W)***:
-
-![Manage Curation screen](media/manage-curation-screen.png)
-
-Once you click ***Save***, the curation will be applied:
-
-![Curation applied](media/curation-applied.jpeg)
+| Node                                       | Default or Sample Value                    | Description                                                                    |
+| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
+| Search.Provider                            | `"ElasticAppSearch"`                       | Name of the search provider, which must be set to `ElasticAppSearch`           |
+| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. Its default value is set to `default`.|
+| Search.ElasticAppSearch.Endpoint           |                                            | Network address and port of the ElasticAppSearch server. |
+| Search.ElasticAppSearch.PrivateApiKey      |                                            | API access key that can read and write against all available API endpoints. Prefixed with `private-`.|
+| Search.ElasticAppSearch.KibanaBaseUrl      |                                            | Kibana base URL for accessing the Kibana Dashboard from the application menu.|
+| Search.ElasticAppSearch.KibanaPath         |                                            | Path to the App Search engine in the Kibana Dashboard. Default value is `/app/enterprise_search/app_search/engines/`.
 
 !!! note
-	Currently, Elastic App Search offers an upgrade to the ***Platinum*** subscription to harness the power of machine learning. By analyzing your engine’s analytics, App Search is able to suggest new or updated curations. This way, you can effortlessly help your users find exactly what they are looking for.
+    Endpoint and API key can be managed in the Credential menu within the App Search Dashboard panel.
 
-If you are looking for advanced results, continue reading to the ***Relevance Tuning*** section.
+**Examples**
 
-### Relevance Tuning
+```json title="appsettings.json"
+	"Search": {
+		"Provider": "ElasticAppSearch",
+		"Scope": "default",
+		"ElasticAppSearch": {
+				"Endpoint": "https://localhost:3002",
+			"PrivateApiKey": "private-key",
+		  "KibanaBaseUrl": "https://localhost:5601"
+		}
+	}
+```
+### Dynamic Boosting
 
-Out of the box, App Search provides quality search relevance.
+The Elastic App Search provider combines static boosting from the Search Relevance Tuning panel with dynamic boosting that can be passed at runtime.
 
-Built on top of Elasticsearch, App Search is a managed, the expertly crafted distillation of its finest points. It provides tools to help you further tune the search experience to optimize for your own needs.
+Dynamic Boosting supports both Value Boost and Functional Boosting.
 
-We recommend you reviewing [this step by step guide](https://www.elastic.co/guide/en/app-search/8.3/relevance-tuning-guide.html).
+Define Boost Presets as follows:
+
+```json title="appsettings.json"
+	"Search": {
+		"Provider": "ElasticAppSearch",
+		"Scope": "default",
+		"ElasticAppSearch": {
+		  "Endpoint": "https://localhost:3002",
+		  "PrivateApiKey": "private-key",
+		  "KibanaBaseUrl": "https://localhost:5601",
+
+		  "BoostPresets": [
+			{
+			  "Name": "High",
+			  "Type": "value",
+			  "Operation": "add",
+			  "Factor": 5,
+			  "IsDefault": true
+			},
+			{
+			  "Name": "Medium",
+			  "Type": "value",
+			  "Operation": "add",
+			  "Factor": 3
+			},
+			{
+			  "Name": "LOw",
+			  "Type": "value",
+			  "Operation": "add",
+			  "Factor": 3
+			}
+		  ]
+		}
+	  }
+```    
+
+Pass SearchBoost with Search Request:
+
+```json title="appsettings.json"
+searchRequest.Boosts = [new SearchBoost
+	  {
+				FieldName = "brand",
+				Value = "Apple",
+				Preset = "Medium",
+		}];
+```
 
 ## Performance
 
@@ -117,4 +108,4 @@ After running load tests and comparing Elasticsearch Vs Elastic App Search, we c
 
 ## Limitations
 
-For performance and historical reasons, App Search has default limitations on some objects and API calls. You can review the current limitations [here](https://www.elastic.co/guide/en/app-search/8.3/limits.html).
+![Readmore](media/readmore.png){: width="25"} [App Search Limitations](https://www.elastic.co/guide/en/app-search/8.3/limits.html)

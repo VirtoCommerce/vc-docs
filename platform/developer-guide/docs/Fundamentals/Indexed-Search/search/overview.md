@@ -1,4 +1,4 @@
-# Indexed Search Overview
+# Overview
 
 The common search component is an entry point in Virto commerce application that is used to perform search request. 
 
@@ -6,23 +6,25 @@ The chart below shows the components used to process a search request:
 
 ![Common indexing process structure](media/01-common-indexing-process-structure.png)
 
-A specific search service (e.g `ProductIndexedSearchService`) is designed to handle search requests for particular domain entities, such as catalog products or customers. A specific search service processes a search query starts with parsing the query text to convert it to the object of the search request by calling `ISearchRequestBuilder`. Then search request is sent to the specific search engine through the `ISearchProvider` abstraction that uses an index to retrieve documents with matching terms.  
+The search process involves a specific search service, like `ProductIndexedSearchService`, which is tailored to handle search requests for particular domain entities such as catalog products or customers. It includes the following steps:
 
-At the next stage, all specific search services are materialized in all found documents via fetching the entities by their identifiers from the data source (e.g., database) and return the resulting entities to the requester. 
+1. **Parsing the Query**: The search service begins by parsing the query text to convert it into a search request object. This conversion is facilitated by calling `ISearchRequestBuilder`.
+1. **Sending the Search Request**: Once the search request object is constructed, it is sent to the specific search engine through the `ISearchProvider` abstraction. The search engine utilizes an index to retrieve documents that match the specified terms.
+1. **Materialization of Search Services**: Following the search execution, the specific search service materializes all located documents by fetching the entities based on their identifiers from the data source (e.g., database). Subsequently, the resulting entities are returned to the requester.
+
 
 !!! note
 	In Virto search, we use an additional roundtrip call to the data source to get the actual entity data for the resulting documents the index engine returns.
 
-Restated, query execution has three stages:
+Restated, query execution includes three stages:
 
-1. Query parsing
-
-2. Index document retrieval
-
-3. Resulting documented enrichment with entities are taken from data source 
+1. Query parsing.
+1. Index document retrieval.
+1. Resulting documented enrichment with entities are taken from data source. 
 
 ## Anatomy of Search Request and Query Parsing
-A search request is a complete specification of what should be returned in the result set. It has search engine agnostic nature; this generic form enables easily switching between different search engines without any business logic changes. In simplest form, it is an empty query with no criteria of any kind.
+
+A search request is a complete specification of what should be returned in the result set. It has search engine agnostic nature. This generic form enables easily switching between different search engines without any business logic changes. At its simplest, it is an empty query with no criteria.
 
 The following example shows how a query string saying `black brand:Asus` will be converted into the search request: 
 

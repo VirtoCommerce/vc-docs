@@ -40,6 +40,7 @@ nav:
                 - Product Indexing: catalog/product-indexing.md
                 - Settings: catalog/settings.md
           - <b>Cart</b>:
+                - Overview: cart/overview.md
                 - Settings: cart/settings.md          
           - <b>Contacts</b>:
                 - Overview: contacts/overview.md
@@ -160,10 +161,21 @@ nav:
                 - Managing Reviews: rating-reviews/managing-reviews.md
                 - Rest API: rating-reviews/rest-api.md
                 - Settings: rating-reviews/settings.md
-          - Search Index:
-                - Overview: search/overview.md
-                - Managing Search Index: search/managing-search.md
-                - Settings: search/settings.md
+          - Search Related Modules:
+                - Search Index:
+                      - Overview: search/overview.md
+                      - Managing Search Index: search/managing-search.md
+                      - Settings: search/settings.md
+                - Elastic Search 8: 
+                      - Overview: elastic-search-8/overview.md
+                      - Settings: elastic-search-8/settings.md
+                - Elastic App Search: elastic-app-search/overview.md
+                - Elastic Search:
+                      - Overview: elastic-search/overview.md
+                      - Settings: elastic-search/settings.md
+                - Algolia: algolia/overview.md
+                - Lucene: lucene/overview.md
+                - Azure Search: azure-search/overview.md
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md

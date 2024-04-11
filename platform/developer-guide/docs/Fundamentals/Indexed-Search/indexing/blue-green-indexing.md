@@ -1,26 +1,34 @@
 ﻿# Blue-Green Indexing
 
-## Overview
+!!! note
+    The blue-green indexing is only supported by the ElasticSearch module.<br>
+    ![Readmore](media/readmore.png){: width="25"} [Elastic Search module](../../../../../user-guide/elastic-search/overview)
 
-Starting version 3.201.0, Elasticsearch supports blue-green indexing. This means that, after running full index *Rebuild and Delete*:
+After you choose **Delete and build** when building search index:
 
-+ A new backup index will be created for the selected document type.
-+ The indexing process will be run against this backup index.
-+ During the full indexation process, the current index will remain intact and one will be able to perform all search operations against it.
-+ After re-indexing is complete, the index will get swapped: the backup index will now become active, while the current one's role will switch to backup.
-+ To roll back to using the previous index, use the *Swap Index* feature: click *Show Backup Indices*, right click the row for the selected document type you want to switch to, and click *Swap Indices*; this will cause the backup and active indexes to swap their roles again.
+1. A new backup index is generated for the chosen document type.
+1. The indexing operations are carried out on this backup index.
+1. Throughout the full indexing process, the existing index remains unaffected, allowing uninterrupted search operations.
+1. Once the reindexing is complete, a swap occurs: the backup index becomes active, while the previous index transitions to a backup role.
 
-![Show Backup Indexes](media/06-blue-green-show-backup.png)
+To revert to the previous index, use the **Swap indices** feature:
 
-![Swap Indexes](media/07-blue-green-swap-indices.png)
+1. Click **Show backup indices** in the top toolbar.
 
-+ If you start the re-indexing process again, the previous backup index will be lost and all indexing jobs will run against the new backup index instead.
+    ![Backup indices](media/show-backup-indices.png)
 
+1. Click on the three dots to the left of the required document type.
+1. Select **Swap indices** in the popup menu.
+1. Click **Hide backup indices** in the top toolbar.
 
-## Implementation Details
+    ![Three dots](media/three-dots.png)
 
-Elasticsearch implements blue-green indexing using Elasticsearch [aliases](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html). The search provider implementations use two aliases to tell one index role from the other: *active* and *backup*. Full index alias is built as *scope name + document type name + alias name*; e.g., an active index alias for the *Members* index using `default` scope will look like this: `default-member-active`.
+The roles of the backup and active indices have been exchanged.
 
-Each time you start the *Rebuild and Delete* process, the Elasticsearch index provider looks for an existing backup index by backup alias, e.g., `default-member-backup`, and deletes it in case it is found. After that, when the re-indexing process starts, a new backup index gets created with the `backup` alias. An actual index name is created dynamically, however: this is a special alphanumeric token suffix that is added to the end of the index name. The only way to tell which index is active is to look at its alias. After the indexing process is complete, the active and backup indices swap aliases, meaning that the active index becomes the backup one, and vice versa.
+### Implementation Details
 
-![Kibana index alias](media/08-blue-green-kibana-index-alias.png)
+Elasticsearch implements blue-green indexing using Elasticsearch [aliases](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html). Search provider implementations use two aliases to distinguish one index role from the other: **active** and **backup**. The full index alias is built as **scope name + document type name + alias name**; for example, an active index alias for the **Members** index using the `default` scope will be `default-member-active`.
+
+Each time you start the **Delete and build** process, the Elasticsearch index provider looks for an existing backup index by the backup alias, for example, `default-member-backup`, and deletes it if it is found. After that, when the reidnexing process starts, a new backup index is created with the `backup' alias. However, an actual index name is created dynamically: this is a special alphanumeric token suffix added to the end of the index name. The only way to tell which index is active is to look at its alias. After the indexing process is complete, the active and backup indices swap aliases, i.e. the active index becomes the backup index, and vice versa.
+
+![Kibana index alias](media/implementation.png)

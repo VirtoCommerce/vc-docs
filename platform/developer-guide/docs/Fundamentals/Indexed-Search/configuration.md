@@ -1,44 +1,45 @@
 # Configuration
+
 This section explains the basic configuration for the indexed search logic via the [appsettings.json file](../../Configuration-Reference/appsettingsjson.md#search).
+
+## Search
+
+This node configures full text search for the `VirtoCommerce.Search` module.
 
 | Node                        | Default or sample value   | Description                                                                                                                                   |
 | ----------------------------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Provider                    | `"Lucene"`                | This **required** setting specifies the current search provider. The supported values are  `Lucene`, `AzureSearch`, and `ElasticSearch`.      |
+| Provider                    | `"Lucene"`                | This **required** setting specifies the current search provider. The supported values are:<ul> <li>`ElasticSearch`</li> <li>`ElasticAppSearch`</li> <li>`ElasticSearch8`</li> <li>`Lucene`</li> <li>`AzureSearch`</li> <li>`AlgoliaSearch`</li> </ul>      |
 | Scope                       | `"default"`               | This setting determines the scope to use and is **required**.                                                                                 |
-| Lucene                      |                           | Lucene provider configuration for the **VirtoCommerce.LuceneSearch** module.<br>Used when the `Provider` setting has the `Lucene` value.            |
-| AzureSearch                 |                           | AzureSearch provider configuration for the **VirtoCommerce.AzureSearch** module.<br>Used when the `Provider` setting has the `AzureSearch` value.  |
-| ElasticSearch               |                           | Elasticsearch  provider configuration for the **VirtoCommerce.ElasticSearch** module.<br>Used when the `Provider` setting has the `ElasticSearch` value.|
-|OrderFullTextSearchEnabled   | `true`<br> `false`        | This boolean setting enables full-text search for orders.<br>If true (by default), full-text search for orders is enabled,<br>and it allows searching for orders based on their content. |
-|ContentFullTextSearchEnabled | `true` <br> `false`       | This boolean setting enables full-text search for content.<br>If true (by default), full-text search for content is enabled,<br>and it allows searching for content items based on their textual content.|
+
 
 **Examples**
 
-=== "Lucene"
+Configure the search provider modules and activate them in the `Search.Provider` section, providing connection parameters as specified in the module documentation:
 
-    ```json title="appsettings.json"
-    "Lucene": {
-    "Path": "App_Data/Lucene"
-    } 
-    ```
+```json title="appsettings.json"
+"Search": {
+		"Provider": "ElasticAppSearch",
+		"Scope": "default",
+		"ElasticAppSearch": {
+      "Endpoint": "https://localhost:3002",
+			"PrivateApiKey": "private-key",
+		  "KibanaBaseUrl": "https://localhost:5601"
+		}
+	}
+```
 
-=== "AzureSearch"
+Tailor the search provider per document type to optimize search performance and functionality. Configure the provider for each document type as needed:
 
-    ```json title="appsettings.json"
-    "AzureSearch": {
-    "SearchServiceName": "my-ServiceName",
-    "Key": "my-AccessKey"
-    } 
-    ```
-
-=== "ElasticSearch"
-
-    ```json title="appsettings.json"
-    "ElasticSearch": {
-    "Server": "localhost:9200",
-    "User": "elastic",
-    "Key": "",
-    "EnableHttpCompression": ""
-    <!-- For ES 8.0 and higher must be set to True -->
-    "EnableCompatibilityMode": true 
-    } 
-    ```
+```json title="appsettings.json"
+{
+  "Search": {
+    "Provider": "ElasticAppSearch",
+    "DocumentScopes": [
+      {
+        "DocumentType": "Category",
+        "Provider": "ElasticSearch8"
+      }
+    ]
+  }
+}
+```

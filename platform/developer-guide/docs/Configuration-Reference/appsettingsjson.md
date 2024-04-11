@@ -1,7 +1,7 @@
 # Appsettings.json
 As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
 <!--caching-start-->
-## Configuration settings
+## Configuration Settings
 
 The configuration keys are hierarchical, and the most convenient way to manage them is to work with the **appsettings.json** file. The following sections, organized by configuration node and alphabetically, show the general structure of the file, provide defaults, and explain what each key is.
 
@@ -14,7 +14,7 @@ These **required** settings represent connection strings for VC Platform and mod
 
 | Node          | Sample value           | Description  |
 | ------------- | --------------------------------- | ------------ |
-| VirtoCommerce | `Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30;TrustServerCertificate=True;` | This required setting is used to provide the VC Platform system connection string to the SQL Server database. VC modules would revert to this connection string if no specific connection string is defined. |
+| VirtoCommerce | ```Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30;TrustServerCertificate=True;``` | This required setting is used to provide the VC Platform system connection string to the SQL Server database. VC modules would revert to this connection string if no specific connection string is defined. |
 | E.g., VirtoCommerce.Catalog  | `Data Source=(local);Initial Catalog=VirtoCommerceCatalog;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30` | Other module-specific connection string(s). E.g., Virto Commerce Catalog module will use the `VirtoCommerce.Catalog` connection string if it is defined. |                           |
 | RedisConnectionString | `"localhost"` | StackExchange.Redis Configuration string.<br>![Readmore](media/readmore.png){: width="25"} [Redis Configuration](https://stackexchange.github.io/StackExchange.Redis/Configuration) |
 
@@ -648,46 +648,363 @@ This node configures full text search for the `VirtoCommerce.Search` module.
 
 | Node                        | Default or sample value   | Description                                                                                                                                   |
 | ----------------------------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Provider                    | `"Lucene"`                | This **required** setting specifies the current search provider. The supported values are  `Lucene`, `AzureSearch`, and `ElasticSearch`.      |
+| Provider                    | `"Lucene"`                | This **required** setting specifies the current search provider. The supported values are:<ul> <li>`ElasticSearch`</li> <li>`ElasticAppSearch`</li> <li>`ElasticSearch8`</li> <li>`Lucene`</li> <li>`AzureSearch`</li> <li>`AlgoliaSearch`</li> </ul>      |
 | Scope                       | `"default"`               | This setting determines the scope to use and is **required**.                                                                                 |
-| Lucene                      |                           | Lucene provider configuration for the **VirtoCommerce.LuceneSearch** module.<br>Used when the `Provider` setting has the `Lucene` value.            |
-| AzureSearch                 |                           | AzureSearch provider configuration for the **VirtoCommerce.AzureSearch** module.<br>Used when the `Provider` setting has the `AzureSearch` value.  |
-| ElasticSearch               |                           | Elasticsearch  provider configuration for the **VirtoCommerce.ElasticSearch** module.<br>Used when the `Provider` setting has the `ElasticSearch` value.|
-|OrderFullTextSearchEnabled   | `true`<br> `false`        | This boolean setting enables full-text search for orders.<br>If true (by default), full-text search for orders is enabled,<br>and it allows searching for orders based on their content. |
-|ContentFullTextSearchEnabled | `true` <br> `false`       | This boolean setting enables full-text search for content.<br>If true (by default), full-text search for content is enabled,<br>and it allows searching for content items based on their textual content.|
+
 
 **Examples**
 
-=== "Lucene"
+Configure the search provider modules and activate them in the `Search.Provider` section, providing connection parameters as specified in the module documentation:
+
+```json title="appsettings.json"
+"Search": {
+		"Provider": "ElasticAppSearch",
+		"Scope": "default",
+		"ElasticAppSearch": {
+      "Endpoint": "https://localhost:3002",
+			"PrivateApiKey": "private-key",
+		  "KibanaBaseUrl": "https://localhost:5601"
+		}
+	}
+```
+
+Tailor the search provider per document type to optimize search performance and functionality:
+
+```json title="appsettings.json"
+{
+  "Search": {
+    "Provider": "ElasticAppSearch",
+    "DocumentScopes": [
+      {
+        "DocumentType": "Category",
+        "Provider": "ElasticSearch8"
+      }
+    ]
+  }
+}
+```
+
+#### ElasticSearch
+
+This node configures the Elastic Search provider:
+
+| Node                                       | Default or Sample Value                    | Description                                                                     |
+| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
+| Search.Provider                            | `"ElasticSearch"`                           | Specifies the search provider name, which must be set to "ElasticSearch".       |
+| Search.Scope                               | `"default"`                                 | Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. The key is optional. Its default value is `default`.|
+| Search.ElasticSearch.Server                |                                             | Specifies the network address and port of the Elasticsearch server.               |
+| Search.ElasticSearch.User                  | `"elastic"`                                 | Specifies the username for either the Elastic Cloud cluster or private Elasticsearch server. |
+| Search.ElasticSearch.Key                   |                                             | (Optional) Specifies the password for either the Elastic Cloud cluster or private Elasticsearch server. |
+| Search.ElasticSearch.EnableCompatibilityMode | `false`                                   | (Optional) Set this to "true" to use Elasticsearch v8.x or "false" (default) for earlier versions. |
+| Search.ElasticSearch.EnableHttpCompression | `false`                                     | (Optional) Set this to "true" to enable gzip compressed requests and responses or "false" (default) to disable compression. |
+| Search.ElasticSearch.CertificateFingerprint |                                            | During development, you can provide the server certificate fingerprint. When present, it is used to validate the certificate sent by the server. The fingerprint is expected to be the hex string representing the SHA256 public key fingerprint.  |
+
+**Examples**
+
+=== "Elastic Cloud v8.x"
+
+    !!! note
+        Virto Commerce has its native [Elasticsearch 8.x module](https://github.com/VirtoCommerce/vc-module-elastic-search-8). The current module works with Elasticsearch 8.x in compatibility mode.
+
+    Enable the compatibility mode for Elastic Cloud v8.x:
 
     ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "EnableCompatibilityMode": "true",
+            "Server": "https://4fe3ad462de203c52b358ff2cc6fe9cc.europe-west1.gcp.cloud.es.io:9243",
+            "User": "elastic",
+            "Key": "{SECRET_KEY}"
+        }
+    }
+    ```
+
+=== "Elasticsearch v8.x"
+
+    Configure Elasticsearch v8.x without security features enabled:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "EnableCompatibilityMode": "true",
+            "Server": "https://localhost:9200"
+        }
+    }
+    ```
+
+    Configure Elasticsearch v8.x with ApiKey authorization:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "EnableCompatibilityMode": "true",
+            "Server": "https://localhost:9200",
+            "User": "{USER_NAME}",
+            "Key": "{SECRET_KEY}"
+        }
+    }
+    ```
+
+=== "Elastic Cloud v7.x"
+
+    Configure Elastic Cloud v7.x as follows:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "Server": "https://4fe3ad462de203c52b358ff2cc6fe9cc.europe-west1.gcp.cloud.es.io:9243",
+            "User": "elastic",
+            "Key": "{SECRET_KEY}"
+        }
+    }
+    ```
+
+=== "Elasticsearch v7.x"
+
+    Configure Elasticsearch v7.x without security features enabled:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "Server": "https://localhost:9200"
+        }
+    }
+    ```
+
+    Configure Elasticsearch v7.x with ApiKey authorization:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "Server": "https://localhost:9200",
+            "User": "{USER_NAME}",
+            "Key": "{SECRET_KEY}"
+        }
+    }
+    ```
+
+=== "Amazon OpenSearch Service"
+
+    Configure Amazon OpenSearch Service:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch",
+        "Scope": "default",
+        "ElasticSearch": {
+            "Server": "https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com"
+        }
+    }
+    ```
+
+#### Elastic App Search
+
+This node configures the Elastic App Search provider:
+
+| Node                                       | Default or Sample Value                    | Description                                                                    |
+| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
+| Search.Provider                            | `"ElasticAppSearch"`                       | Name of the search provider, which must be set to `ElasticAppSearch`           |
+| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. Its default value is set to `default`.|
+| Search.ElasticAppSearch.Endpoint           |                                            | Network address and port of the ElasticAppSearch server. |
+| Search.ElasticAppSearch.PrivateApiKey      |                                            | API access key that can read and write against all available API endpoints. Prefixed with `private-`.|
+| Search.ElasticAppSearch.KibanaBaseUrl      |                                            | Kibana base URL for accessing the Kibana Dashboard from the application menu.|
+| Search.ElasticAppSearch.KibanaPath         |                                            | Path to the App Search engine in the Kibana Dashboard. Default value is `/app/enterprise_search/app_search/engines/`.
+
+!!! note
+    Endpoint and API key can be managed in the Credential menu within the App Search Dashboard panel.
+
+**Examples**
+
+```json title="appsettings.json"
+	"Search": {
+		"Provider": "ElasticAppSearch",
+		"Scope": "default",
+		"ElasticAppSearch": {
+				"Endpoint": "https://localhost:3002",
+			"PrivateApiKey": "private-key",
+		  "KibanaBaseUrl": "https://localhost:5601"
+		}
+	}
+```
+##### Dynamic Boosting
+
+The Elastic App Search provider combines static boosting from the Search Relevance Tuning panel with dynamic boosting that can be passed at runtime.
+
+Dynamic Boosting supports both Value Boost and Functional Boosting.
+
+Define Boost Presets as follows:
+
+```json title="appsettings.json"
+	"Search": {
+		"Provider": "ElasticAppSearch",
+		"Scope": "default",
+		"ElasticAppSearch": {
+		  "Endpoint": "https://localhost:3002",
+		  "PrivateApiKey": "private-key",
+		  "KibanaBaseUrl": "https://localhost:5601",
+
+		  "BoostPresets": [
+			{
+			  "Name": "High",
+			  "Type": "value",
+			  "Operation": "add",
+			  "Factor": 5,
+			  "IsDefault": true
+			},
+			{
+			  "Name": "Medium",
+			  "Type": "value",
+			  "Operation": "add",
+			  "Factor": 3
+			},
+			{
+			  "Name": "LOw",
+			  "Type": "value",
+			  "Operation": "add",
+			  "Factor": 3
+			}
+		  ]
+		}
+	  }
+```    
+
+Pass SearchBoost with Search Request:
+
+```json title="appsettings.json"
+searchRequest.Boosts = [new SearchBoost
+	  {
+				FieldName = "brand",
+				Value = "Apple",
+				Preset = "Medium",
+		}];
+```
+
+#### Elastic Search 8
+
+This node configures the Elastic Search 8 provider:
+
+| Node                                       | Default or Sample Value                    | Description                                                                      |
+| -------------------------------------------| -------------------------------------------| ---------------------------------------------------------------------------------|
+| Search.Provider                            | `"ElasticSearch8"`                         | Specifies the search provider name, which must be set to "ElasticSearch8".       |
+| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. Its default value is `default`.                                           |
+| Search.ElasticSearch8.Server                |                                           | Specifies the network address and the port of the Elasticsearch8 server.         |
+| Search.ElasticSearch8.User                  | `"elastic"`                               | Specifies the username for the Elasticsearch8 server.                            |
+| Search.ElasticSearch8.Key                   |                                           | (Optional) Specifies the password for the Elasticsearch8 server.                 |
+| Search.ElasticSearch8.CertificateFingerprint |                                          | (Optional) During development, you can provide the server certificate fingerprint. When present, it is used to validate the certificate sent by the server. The fingerprint is expected to be the hex string representing the SHA256 public key fingerprint.                                         |
+
+**Examples**
+
+Configure local v8.x server:
+
+```json title="appsettings.json"
+"Search": {
+    "Provider": "ElasticSearch8",
+    "Scope": "default",
+    "ElasticSearch8": {
+        "Server": "https://localhost:9200",
+        "User": "elastic",
+        "Key": "{PASSWORD}"
+    }
+}
+```
+
+Configure Elastic Cloud v8.x:
+
+```json title="appsettings.json"
+"Search": {
+    "Provider": "ElasticSearch8",
+    "Scope": "default",
+    "ElasticSearch8": {
+        "Server": "https://vcdemo.es.eastus2.azure.elastic-cloud.com",
+        "User": "elastic",
+        "Key": "{SECRET_KEY}"
+    }
+}
+```
+
+#### Lucene
+
+This node configures the Lucene search provider:
+
+| Node                                       | Default or Sample Value                    | Description                                                                    |
+| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
+| Search.Provider                            | `"Lucene"`                                 | Name of the search provider, which must be set to `Lucene`.                    |
+| Search.Lucene.Path                         |                                            | A virtual or physical path to the root directory where indexed documents are stored.
+| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. |
+
+**Example**
+
+```json title="appsettings.json"
+"Search": {
+    "Provider": "Lucene",
+    "Scope": "default",
     "Lucene": {
-    "Path": "App_Data/Lucene"
-    } 
-    ```
+        "Path": "/path/to/lucene/indexes"
+    }
+}
+```
 
-=== "AzureSearch"
+#### Azure Search
 
-    ```json title="appsettings.json"
+This node configures the Azure Search provider:
+
+| Node                                       | Default or Sample Value                    | Description                                                                    |
+| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
+| Search.Provider                            | `"AzureSearch"`                            | Name of the search provider, which must be set to `AzureSearch`.               |
+| Search.AzureSearch.SearchServiceName       |                                            | The name of the search service instance in your Azure account. Example: SERVICENAME.search.windows.net.|
+| Search.AzureSearch.AccessKey               |                                            | The primary or secondary admin key for this search service.                    |
+| Search.AzureSearch.QueryParserType         | <ul><li>`Simple`</li> <li>`Full`</li></ul> | Type of Query Languages. `Simple` (default) or `Full`.                         |                
+| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. |
+
+
+**Example**
+
+```json title="appsettings.json"
+"Search": {
+    "Provider": "AzureSearch",
+    "Scope": "default",
     "AzureSearch": {
-    "SearchServiceName": "my-ServiceName",
-    "Key": "my-AccessKey"
-    } 
-    ```
+        "SearchServiceName": "YOUR_SEARCH_SERVICE_NAME.search.windows.net",
+        "AccessKey": "YOUR_SEARCH_SERVICE_ACCESS_KEY",
+        "QueryParserType": "Simple"
+    }
+}
+```
 
-=== "ElasticSearch"
+#### Algolia
 
-    ```json title="appsettings.json"
-    "ElasticSearch": {
-    "Server": "localhost:9200",
-    "User": "elastic",
-    "Key": "",
-    "EnableHttpCompression": ""
-    <!-- For ES 8.0 and higher must be set to True -->
-    "EnableCompatibilityMode": true 
-    } 
-    ```
+This node configures the Algolia search provider:
+
+| Node                                       | Default or Sample Value                    | Description                                                                    |
+| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
+| Search.Provider                            | `"AlgoliaSearch"`                          | Name of the search provider, which must be set to `AlgoliaSearch`.             |
+| Search.AlgoliaSearch.ApiId                 |                                            | The API id for Algolia server.                                                 |
+| Search.AlgoliaSearch.ApiKey                |                                            | The API key for either Algolia server.                                         |
+
+
+**Example**
+
+```json title="appsettings.json"
+"AlgoliaSearch": {
+    "AppId": "API_ID",
+    "ApiKey": "API_KEY"
+}
+```
+
 <!--search-end-->
+
 
 ### Serilog
 

@@ -1,4 +1,4 @@
-# Scalability [In Progress]
+# Scalability
 
 Virto Commerce is a powerful e-commerce solution designed to handle projects of various sizes and complexities. Whether for B2B, B2C, or B2B2C enterprises, marketplaces, or SaaS commerce platforms, Virto Commerce satisfies diverse business needs.
 
@@ -63,8 +63,8 @@ This data based on best practices and feedback from multiple custom e-commerce s
 |**S**|10|1|200|
 |**M**|100|5|1500|
 |**L**|300|50|15000|
-|**XL**||||
 
+For XL size, [request a demo.](https://virtocommerce.com/request-demo)
 
 ### Azure Price Calculator
 

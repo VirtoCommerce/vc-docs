@@ -25,7 +25,7 @@ The Search module defines common abstractions for indexed search functionality a
     You have two installation options for search providers:
 
     1. Begin by installing the **Search** module, then add the required search provider module.
-    2. Alternatively, install the required search provider module, and the **Search** module will be automatically installed alongside it.
+    1. Alternatively, install the required search provider module, and the **Search** module will be automatically installed alongside it.
 
 ## Key Features
 
@@ -41,3 +41,5 @@ With the **Search** module:
 The diagram below illustrates the functionality of the Search module:
 
 ![Key entities](media/key-entities.png)
+
+![Readmore](media/readmore.png){: width="25"} [Configuring Search Settings](../../../developer-guide/Configuration-Reference/appsettingsjson)

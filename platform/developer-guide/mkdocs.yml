@@ -61,10 +61,17 @@ nav:
                       - Overview: Fundamentals/Indexed-Search/search/overview.md
                       - Faceted Search Overview and Configuration: Fundamentals/Indexed-Search/search/faceted-search.md
                 - Integration:
-                      - Configuring Elasticsearch: Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md
-                      - Configuring Azure Cognitive Search: Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
-                      - Elastic App Search Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
-                      - Configuring Elastic App Search: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
+                      - Elastic Search 8:
+                          - Overview: Fundamentals/Indexed-Search/integration/elastic-search-8.md
+                          - Semantic Search: Fundamentals/Indexed-Search/integration/semantic-search.md
+                      - Elastic App Search:
+                          - Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
+                          - Configuration: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
+                          - Using Analytics: Fundamentals/Indexed-Search/integration/using-analytics.md
+                      - Elasticsearch: Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md
+                      - Azure Cognitive Search: Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
+                      - Algolia: Fundamentals/Indexed-Search/integration/algolia.md
+                      - Lucene: Fundamentals/Indexed-Search/integration/lucene.md
                 - Configuration: Fundamentals/Indexed-Search/configuration.md
           - Persistence:
                 - DB Agnostic Architecture:

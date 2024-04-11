@@ -43,16 +43,18 @@ The `searchPhrase` parameter accepts strings as input. These strings can contain
 
 The search supports any language and allows the use of boolean operators, precedence operators, wildcard or prefix characters for starts with queries, escape characters, and URL encoding characters within the `searchPhrase` parameter.
 
-* `term phrase` is a query consisting of one or more terms, where any of the terms are considered a match, such as single words like *test* or *hello*.
+* `term phrase` is a query consisting of one or more terms, where any of the terms are considered a match, such as single words like **test** or **hello**.
 * `phrase` is an exact phrase in quotation marks. 
 * `filter phrase` is used to apply additional criteria to a search query apart from the full text search terms.
 
-??? Example
-    `Red wine` searches for documents containing `Red` and/or `wine` anywhere in any order.
 
-    `"Red wine"` only matches the documents that contain the entire phrase in the appropriate order (lexical analysis applies).
+**Example**
 
-    `"\"Red wine\""` search request syntax is used to escape the quotation marks in a phrase search, for example, in Postman, in a POST request.
+| Query            | Description                                                                                                                |
+|------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `Red wine`       | Searches for documents containing `Red` and/or `wine` anywhere in any order.                                               |
+| `"Red wine"`     | Matches only the documents that contain the entire phrase in the appropriate order (lexical analysis applies).             |
+| `"\"Red wine\""` | search request syntax is used to escape the quotation marks in a phrase search, for example, in Postman, in a POST request.|
 
 
 ## Full Text Search
@@ -79,9 +81,9 @@ Below is an example of the product document in the index:
 With an example request `asus`, you will get the search to find all documents where the `__content` field contains the `asus` value as an entire phrase or a part of it.
 
 ## Filters
-`filter` provides value-based criteria for selecting which documents to include in the search results. A filter can be a single value or an expression. Unlike the full text search, a filter succeeds only if an exact match is achieved.
+`filter` provides value-based criteria for selecting which documents to include in the search results. A filter can be a single value or an expression. Unlike full text search, a filter succeeds only if an exact match is obtained.
 
-Filters are specified in individual fields. A field definition must be attributed as **filterable** if you want to use it in filter expressions.
+Filters are specified in individual fields. A field definition must be set as **filterable** if you want to use it in filter expressions.
 
 ## Fields
 When performing a search, you can:
@@ -100,12 +102,13 @@ When performing a search, you can:
 Range filtration helps you find products that have field values within a specified range. This range is defined by a range expression, which can be set to include or exclude the upper and lower bounds. Inclusive range queries use square brackets `[ ]`, while exclusive queries use round brackets `( )`.
 
 
-??? Example
-    | Query                	| Description                                                            	|
-    |----------------------	|------------------------------------------------------------------------	|
-    | `price:[100 TO 200]` 	| Finds products with prices between 100 and 200, inclusive.             	|
-    | `price:(100 TO 200]` 	| Finds products with prices between 100, exclusive, and 200, inclusive. 	|
-    | `price:(TO 100]`     	| The price must be less than or equal to 100.                           	|
+**Example**
+
+| Query                	| Description                                                            	|
+|----------------------	|------------------------------------------------------------------------	|
+| `price:[100 TO 200]` 	| Finds products with prices between 100 and 200, inclusive.             	|
+| `price:(100 TO 200]` 	| Finds products with prices between 100, exclusive, and 200, inclusive. 	|
+| `price:(TO 100]`     	| The price must be less than or equal to 100.                           	|
 
 ## Boolean Operators
 Having multiple field terms separated by a space delimiter in a single filter expression will combine them with an `AND` operator.
@@ -125,7 +128,7 @@ Within a single phrase or phrase terms, you can use:
 | Character 	| Function                                                                        	| Example                                                                        	|
 |-----------	|---------------------------------------------------------------------------------	|--------------------------------------------------------------------------------	|
 | `?`       	| Single character wildcard search.                                               	| `b?ll` finds ball, bell, or bill.                                              	|
-| `*`       	| Multiple character wildcard search.<br> You can use `*` anywhere in the string. 	| `test*` finds test, tests, or tester.<br> `hea*one` finds headphone, , healthone, or heartstone. |
+| `*`       	| Multiple character wildcard search.<br> You can use `*` anywhere in the string. 	| `test*` finds test, tests, or tester.<br> `hea*one` finds headphone, healthone, or heartstone. |
 
 !!! info
     Inside the double quotes block, you may use any unsafe characters.
@@ -135,14 +138,15 @@ Within a single phrase or phrase terms, you can use:
         `\"my cool property\":\"&~!'\"`
         ```
 
-??? Examples
-    | Query                            	| Description                                                               	|
-    |----------------------------------	|---------------------------------------------------------------------------	|
-    | `color:Black,White`              	| The color is either black or white.                                       	|
-    | `color:Black color:White`        	| The color is both black and white.                                        	|
-    | `price_usd:[100 TO 200]`         	| The price is between $100 and $200, inclusive.                            	|
-    | `price:(100 TO 200)`             	| The price in any currency is between 100 and 200, exclusive.              	|
-    | `price:(0 TO)`                   	| The price is greater than zero.                                           	|
-    | `price:(TO 100]`                 	| The price is less than or equal to 100.                                   	|
-    | `Da?? Red*`                      	| `?` replaces a single character.<br>`*` replaces zero or more characters. 	|
-    | `color:Black price:[100 TO 200)` 	| Combine keywords and filters.                                             	|
+**Example**
+
+| Query                            	| Description                                                               	|
+|----------------------------------	|---------------------------------------------------------------------------	|
+| `color:Black,White`              	| The color is either black or white.                                       	|
+| `color:Black color:White`        	| The color is both black and white.                                        	|
+| `price_usd:[100 TO 200]`         	| The price is between $100 and $200, inclusive.                            	|
+| `price:(100 TO 200)`             	| The price in any currency is between 100 and 200, exclusive.              	|
+| `price:(0 TO)`                   	| The price is greater than zero.                                           	|
+| `price:(TO 100]`                 	| The price is less than or equal to 100.                                   	|
+| `Da?? Red*`                      	| `?` replaces a single character.<br>`*` replaces zero or more characters. 	|
+| `color:Black price:[100 TO 200)` 	| Combine keywords and filters.                                             	|

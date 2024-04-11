@@ -1,34 +1,45 @@
-﻿# Faceted Search Overview and Configuration
+﻿# Faceted Search
 
 Faceted search (sometimes also called faceted navigation) allows users to navigate through a website by applying filters for categories, attributes, price ranges, and so on. The main idea behind faceted search is to present the attributes of the documents of the previous search result as filters, which can be used by the user to narrow down search results, along with calculating statistical counts to aid.
 
-For example, let's assume we need to query for all blue shirts. The search engine has a facet configured 
-on the category category level, and another one on the color attribute level. This way, the search query 
-will be executed using these two facets. The search result will return the entries that are aggregated 
-both in the category facet with the shirt category ID and in the color facet with the value *blue*.
+For example, let's search for all the lemon-lime drinks available:
 
-![Faceted search example](media/02-faceted-search.png)
+1. Check **Soft Drinks** in the **Category** facet: 
 
-## Muti-select Faceting Search
+    ![Soft drinks](media/soft-drinks-facet.png)
 
-This policy allows you to select multiple values of the same facet (e.g using a checkbox).
+1. Check **Lemon-Lime** in the **Flavor** facet:
 
-![Readmore](media/readmore.png){: width="25"} [How to implement multi-select faceting for nested documents in Solr](https://blog.griddynamics.com/multi-select-faceting-for-nested-documents-in-solr)
+    ![Flavor](media/flavor-facet.png)
 
-![Readmore](media/readmore.png){: width="25"} [Elastic search post filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter)
+1. The search query is executed using these two facets. The search result returns the entries that are aggregated both in the Category facet and in the Flavor facet:
 
-The muti-select faceting search policy is enabled by default and you do not need any extra parameters or setting to activate it.
+    ![Faceted search result](media/faceted-search-result.png)
+
+## Muti-Select Faceting Search
+
+This policy allows you to select multiple values of the same facet, for example, using a checkbox.
+
+![Readmore](media/readmore.png){: width="25"} [How to Implement Multi-Select Faceting for Nested Documents in Solr](https://blog.griddynamics.com/multi-select-faceting-for-nested-documents-in-solr)
+
+![Readmore](media/readmore.png){: width="25"} [Elastic Search Post Filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter)
+
+The muti-select faceting search policy is enabled by default and you do not need to activate it.
 
 ## Faceted Search Configuration
 
-This section is based on example of catalog entities, where the properties available for faceted search are configured at the **Store** level in Platform Manager.
+To configure properties available for faceted search via Platform Manager:
 
-Open **Stores**, select an appropriate store, click the **Aggregation Properties** widget, and pick catalog properties eligible for filtering in this store:
+1. Click **Stores** in the main menu.
+1. In the next blade, select the required store.
+1. In the next blade, click on the **Aggregation properties** widget.
+1. Click on the available properties to be applied to filtering. There are two types of properties:
+    * **Attributes**: Displays and enables using all or selected values of the selected property for facet filters.
+    * **Range**: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.
+1. Click **Save** in the top toolbar to save the changes.
 
-![Configuring Faceted Search](media/03-configuring-faceted-search.png)
+![Filtering properties](media/filtering-properties.png)
 
-There are two facet types (aggregation types) that are supported for configuration:
+To edit a selecte property, click on it and configure the following fields:
 
-* **Attribute facet**: Displays and enables using all or selected values of the selected property for facet filters, e.g `color: Red(1), Blue(22)`, etc.
-    
-* **Range facet**: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.
+![Edit property](media/edit-property.png)
