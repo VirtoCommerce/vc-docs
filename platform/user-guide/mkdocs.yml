@@ -156,6 +156,11 @@ nav:
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md
                 - Settings: push-messages/settings.md
+          - Return: 
+                - Overview: return/overview.md
+                - Managing Returns: return/managing-returns.md
+                - Settings: return/settings.md
+                - Rest API: return/rest-api.md
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
@@ -186,6 +191,11 @@ nav:
                       - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
                 - Login on Behalf Feature: security/login-on-behalf.md
+          - ShipStation: shipstation/overview.md
+          - Shipping: 
+                - Overview: shipping/overview.md
+                - Managing Shipping Methods: shipping/managing-shipping-methods.md
+                - Settings: shipping/settings.md
           - Sitemaps:
                 - Overview: sitemaps/overview.md
                 - Managing sitemaps: sitemaps/configuring-sitemaps.md

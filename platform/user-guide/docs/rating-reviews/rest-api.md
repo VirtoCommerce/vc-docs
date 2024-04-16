@@ -1,6 +1,6 @@
 # REST API
 
-Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.CustomerReviews** from the drodown list.
+Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.CustomerReviews** from the dropdown list.
 
 ![Select Customer Reviews](media/customer-reviews-api.png)
 

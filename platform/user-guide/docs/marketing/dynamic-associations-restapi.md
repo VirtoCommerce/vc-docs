@@ -2,7 +2,7 @@
 
 To test the created rule, use REST API testing as follows:
 
-1. Let's say that according to the created rule you have 6 products to promote (products to diplay) as related products to 6 items (matching products).
+1. Let's say that according to the created rule you have 6 products to promote (products to display) as related products to 6 items (matching products).
 
     ![Number of matching products](media/products-to-match-total.png)
 
@@ -22,4 +22,4 @@ To test the created rule, use REST API testing as follows:
 
     ![Response](media/api-testing-3.png)
 
-You can see, the rule is correct returning 6 relatde items that will be displayed with the specified item. 
+You can see, the rule is correct returning 6 related items that will be displayed with the specified item. 

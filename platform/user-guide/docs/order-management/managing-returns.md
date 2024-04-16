@@ -3,7 +3,7 @@
 Managing returns includes:
 
 * [Creating returns.](managing-returns.md#create-return)
-* [Processing returns.](managing-returns.md#process-return)
+* [Processing returns.](managing-returns.md#viewing-and-processing-returns)
 
 # Create return
 
@@ -17,7 +17,7 @@ To create a return for a particular order:
 
     ![Creating a return](media/make-return-1.png)
 
-1. In the **Return** blade, fill in the following fields:
+1. In the **Return** blade, edit the fields with the description typed in green:
 
     ![Return specification](media/make-return-2.png)
 
@@ -25,7 +25,7 @@ To create a return for a particular order:
 
 The return has been created.
 
-# Process return
+# Viewing and Processing Returns
 
 To process the returns:
 
