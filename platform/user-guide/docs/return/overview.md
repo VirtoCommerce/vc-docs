@@ -18,7 +18,7 @@ With the Return module, you can:
 * Edit return statuses.
 * Filter returns and search for the required return using keywords. 
 
-The diagram below illustrates the interconnections among various key entities within the Return module:
+The diagram below illustrates the functionality of the Return module:
 
 ![Key entities](media/key-entities.png)
 

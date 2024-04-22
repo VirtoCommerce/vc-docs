@@ -11,7 +11,7 @@ The Virto Commerce **Elastic Search 8** module serves as a search engine for the
 With the Elastic Search 8 module, you can perform:
 
 * Full-text search with new .NET client for Elasticsearch.
-* [Semantic search](../../../developer-guide/docs/Fundamentals/Indexed-Search/integration/semantic-search.md).
+* [Semantic search](../../../developer-guide/Fundamentals/Indexed-Search/integration/semantic-search).
 * Hybrid mode search.
 * Third party ML models support.
 

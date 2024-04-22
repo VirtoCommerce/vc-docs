@@ -14,7 +14,7 @@ To send the order information to AvaTax manually:
 
     ![Path](media/avatax_path.png)
 
-1. The result of the operation is diplayed in the next blade.
+1. The result of the operation is displayed in the next blade.
 
     ![Result](media/result.png)
 

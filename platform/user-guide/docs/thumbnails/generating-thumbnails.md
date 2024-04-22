@@ -38,7 +38,7 @@ To run the job manually:
 	!!! note
 		If you are running this job for the first time, the **Process Changes** option will be grayed out.
 
-1. The result is diplayed in the next **Process images** blade:
+1. The result is displayed in the next **Process images** blade:
 
 	![result](media/result.png)
 

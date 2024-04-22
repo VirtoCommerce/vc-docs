@@ -10,7 +10,7 @@ To test the created rule, use REST API testing as follows:
 
     ![Matching product id](media/any-matching-product-id.png)
 
-1. Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.DynamicAssociationsModule** from the drodown list.
+1. Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.DynamicAssociationsModule** from the dropdown list.
 
     ![Dropdown](media/api-testing-1.png)
 

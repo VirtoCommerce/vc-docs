@@ -17,7 +17,7 @@ To select a shiping method:
 
 ![Shipping methods list](media/fixed-rate-shipping-method.png)
 
-## Editing Shipping Methods
+## Edit Shipping Methods
 
 To edit a shipping method:
 

@@ -3,8 +3,6 @@ Blade toolbar represents a dedicated area inside a **blade**, where one can add
 
 ![Blade toolbar](media/02-blade-toobar.png)
 
-*Four toolbar items nested in the blade toolbar*
-
 Toolbar items can be added to a **blade instance** directly or using Virto Commerce platform toolbar extensibility service.
 
 ## Adding Toolbar Items Directly to Blade Instance

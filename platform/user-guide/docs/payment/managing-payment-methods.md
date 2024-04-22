@@ -12,7 +12,7 @@ To view the availble payment methods:
 1. Click **Stores** in the main menu.
 1. In the next blade, select the required store.
 1. In the next **Store details** blade, click on the **Payment methods** widget.
-1. The next blade diplays the list of available payment methods.
+1. The next blade displays the list of available payment methods.
 
 ![View payment methods](media/view-payment-methods.png)
 

@@ -31,8 +31,11 @@ Below are some examples of using REST API functionality to:
       }
     ]
     ```
+
 1. Click **Execute**.
+
 1. In the platform, select **Rating and Reviews** from the main menu.
+
 1. In the next blade, click on the newly created review: 
 
     ![Created review](media/review-created-api.png)

@@ -23,6 +23,7 @@ nav:
           - Overview: platform-overview.md
           - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
           - Getting Started: getting-started.md
+          - User Profile: user-profile.md
           - Modules Installation: modules-installation.md
           - <b>Catalog</b>:
                 - Overview: catalog/overview.md
@@ -125,6 +126,9 @@ nav:
                 - Managing contract customers: contracts/managing-contract-customers.md
           - Dynamic Associations: 
                 - Overview: dynamic-associations/overview.md
+          - Event Bus: 
+                - Overview: event-bus/overview.md
+                - Configurations: event-bus/configuration.md
           - Export and Import:
                 - Overview: customer-export-import/overview.md
           - GDPR: 
@@ -205,17 +209,26 @@ nav:
                 - Adding New Store: store/adding-new-store.md
                 - Configuring Store: store/configuring-store.md
                 - Settings: store/settings.md
+          - Subscription: subscription/overview.md
           - Tasks:
                 - Overview: tasks/overview.md
                 - Using Tasks application: tasks/using-application.md
                 - Settings: tasks/settings.md
                 - Roles and permissions: tasks/roles-permissions.md
+          - Tax: 
+                - Overview: tax/overview.md
+                - Managing Taxes: tax/managing-taxes.md
+                - Settings: tax/settings.md
           - Thumbnails:
                 - Overview: thumbnails/overview.md
                 - Generating Thumbnails: thumbnails/generating-thumbnails.md
                 - Managing Thumbnail Settings: thumbnails/thumbnail-options.md
                 - Using Thumbnails: thumbnails/using-thumbnails.md
                 - Settings: thumbnails/settings.md
+          - Webhooks: 
+                - Overview: webhooks/overview.md
+                - Managing Webhooks: webhooks/managing-webhooks.md
+                - Settings: webhooks/settings.md
           - Search options: search.md
           - Glossary: glossary.md
     - Integrations:

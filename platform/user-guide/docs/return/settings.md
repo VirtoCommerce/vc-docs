@@ -1,6 +1,6 @@
 # Settings
 
-To open the **Return** module settings:
+To configure the **Return** module settings:
 
 1. Click **Settings** in the main menu.
 1. In the search field of the next blade, type **Return** to find the settings related to the module.
