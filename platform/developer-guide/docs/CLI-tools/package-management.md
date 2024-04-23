@@ -1,6 +1,6 @@
 # Package Management
 
-The `vc-build` tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) platform dependencies using simple CLI commands (applies to module and platform releases). These commands also allow you to [configure connection strings](package-management.md#configure).
+The `vc-build` tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) platform dependencies using simple CLI commands (applies to module and platform releases). There is also a Configure target that allows to [configure the platform's connection strings](package-management.md#configure).
 
 ## Install
 
