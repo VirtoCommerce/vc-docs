@@ -537,7 +537,9 @@ nav:
                 - Using Feature Flags with Virto Commerce and Storefront: Tutorials-and-How-tos/How-tos/feature-flags.md
                 - Generating PDFs: Tutorials-and-How-tos/How-tos/generating-pdfs.md
                 - Performing Health Checks: Tutorials-and-How-tos/How-tos/health-checks.md
-                - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md 
+                - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md
+                - Sharing Bearer Tokens Across Multiple Instances: Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md
+                - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
     - Updating Virto Commerce Based Projects:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md

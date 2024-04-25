@@ -160,16 +160,16 @@ nav:
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md
                 - Settings: push-messages/settings.md
-          - Return: 
-                - Overview: return/overview.md
-                - Managing Returns: return/managing-returns.md
-                - Settings: return/settings.md
-                - Rest API: return/rest-api.md
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
                 - Rest API: rating-reviews/rest-api.md
                 - Settings: rating-reviews/settings.md
+          - Return: 
+                - Overview: return/overview.md
+                - Managing Returns: return/managing-returns.md
+                - Settings: return/settings.md
+                - Rest API: return/rest-api.md
           - Search Related Modules:
                 - Search Index:
                       - Overview: search/overview.md
