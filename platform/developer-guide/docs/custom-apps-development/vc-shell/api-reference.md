@@ -44,7 +44,6 @@ The VcBlade API reference provides detailed information about the props, events,
     onClose?: (() => void) | undefined;
     onBeforeClose?: (() => Promise<boolean | undefined>) | undefined;
     instance: Ref<CoreBladeExposed | null | undefined>;
-    fullPath: string;
     idx: number;
 }>==} | An object containing the current blade navigation data. |
 
@@ -57,7 +56,7 @@ Opens a blade with the specified configuration.
 * Type
 
     ```**openBlade**: ```<Blade extends Component>( { blade, param, options, onOpen, onClose }: IBladeEvent<Blade>,
-    isWorkspace?: boolean, ) => Promise<void | NavigationFailure>```
+    isWorkspace?: boolean ) => Promise<void | NavigationFailure>```
 
 * Parameters
 
@@ -141,7 +140,10 @@ const routes = [
 
 * Type:
 
-    **routeResolver**: ```(to: RouteLocationNormalized) => Promise<void | NavigationFailure | undefined> | undefined```
+    **routeResolver**: ```(to: RouteLocationNormalized) => Promise<{
+    name: RouteRecordName | undefined;
+    params: RouteParams;
+} | undefined> | undefined```
 
 * Parameters
 
@@ -149,7 +151,10 @@ const routes = [
     |----------------------------------|---------------------------|
     | `to` {==RouteLocationNormalized==} | Vue router's route record |
 
-* Returns: `Promise<void | NavigationFailure | undefined> | undefined`
+* Returns: `Promise<{
+    name: RouteRecordName | undefined;
+    params: RouteParams;
+} | undefined> | undefined`
 
 #### `resolveBladeByName`
 
@@ -167,15 +172,25 @@ Allows you to resolve a blade component using its registered name. Supports both
 
 * Returns: `BladeInstanceConstructor`
 
-#### `getCurrentBlade`
+#### `getNavigationQuery`
 
-Returns the current blade VNode.
+Returns the URL query for selected blade.
 
 * Type:
 
-    **getCurrentBlade**: ```() => BladeVNode```
+    **getNavigationQuery**: ```() => Record<string, string | number> | undefined```
 
-* Returns: `BladeVNode`
+* Returns: `Record<string, string | number> | undefined`
+
+#### `setNavigationQuery`
+
+Sets the URL query for selected blade.
+
+* Type:
+
+    **setNavigationQuery**: ```(query: Record<string, string | number>) => void```
+
+* Returns: `void`
 
 ## Notifications
 
