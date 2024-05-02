@@ -31,21 +31,27 @@ To create and install custom app:
 1. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
 
     ```bash
-    ✔ Project name: … <your-app-name>
+    ✔ Project name: … *your-app-name*
+    ✔ Base path: … /apps/*your-app-name*/
     ? Select module variant: › - Use arrow-keys. Return to submit.
-        Classic modules boilerplate
-        Dynamic modules boilerplate
-        Classic modules + Dynamic modules boilerplate
+    ❯   Dynamic view modules boilerplate
+        Classic view modules boilerplate
+    Module name: › *your-module-name*
+    ? Do you want to include additional module with sample data? › (y/N)
 
-    Scaffolding app in ./<your-app-name>...
+    Scaffolding app in /*your-app-name*...
 
-    Done.
+    Done. You can now run application:
+
+    cd vc-app
+    yarn
+    yarn serve
     ```
 
 1. Once the application is created, go to the application folder and add Platform URL to the `.env` file under the `APP_PLATFORM_URL` variable:
 
     ```bash
-    $ cd `<your-app-name>`
+    $ cd `*your-app-name*`
     $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env
     ```
 
