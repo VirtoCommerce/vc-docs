@@ -15,15 +15,16 @@ To manage push messages:
 
     Here you can:
     
-    * [Create new messages.](manage-push-messages.md#create-push-message)
+    * [Create and schedule new messages.](manage-push-messages.md#create-and-schedule-push-message)
     * [View message details.](manage-push-messages.md#view-push-message-details)
 
-## Create Push Message
+## Create and Schedule Push Message
 
 To create a new push message:
 
 1. Click ![Plus](media/plus.png){: width="20"} in the top toolbar.
-1. In the next **Push message details** blade, type the message and select its recipients from the dropdown list. 
+1. In the next **Push message details** blade, type the message, select its recipients from the dropdown list, specify the topic. 
+1. If necessary, schedule the date and time to send the message to the recipients.
 1. Click **Save** in the top toolbar to save the changes. 
 
 ![Create message](media/create-message.png)
@@ -31,6 +32,7 @@ To create a new push message:
 Your message has been sent to the selected recipients:
 
 ![Message sent](media/sent-message.png)
+
 
 ## View Push Message Details
 

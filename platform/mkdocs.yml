@@ -54,6 +54,10 @@ extra:
                 - title: Github
                   link: https://github.com/VirtoCommerce/vc-platform/
         release_notes:
+            - title: News Digest May 2024
+              link: https://www.virtocommerce.org/t/may-2024-news-digest/699
+              type: Digest
+              date: 2 May 2024
             - title: News Digest April 2024
               link: https://www.virtocommerce.org/t/april-2024-news-digest/689
               type: Digest

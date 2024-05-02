@@ -8,10 +8,12 @@ Here you can:
 
 * Search for orders by keyword.
 * Navigate to the order details page.
-* Filter orders by status or date of creation. 
+* Filter orders by status, date of creation, and date range:
 
-!!! note 
-    In the menu on the left, you can immediately see all orders sorted by status, without having to apply any filters.  
+    ![Filters](../media/filters.png)
+
+    !!! note 
+        In the left menu, you can immediately see all orders sorted by status, without having to apply any filters.  
 
 To view the order details, click on the desired order in the orders list. The order details open in a new window:
 

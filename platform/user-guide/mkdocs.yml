@@ -229,6 +229,9 @@ nav:
                 - Overview: webhooks/overview.md
                 - Managing Webhooks: webhooks/managing-webhooks.md
                 - Settings: webhooks/settings.md
+          - White Labeling: 
+                - Overview: white-labeling/overview.md
+                - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
           - Search options: search.md
           - Glossary: glossary.md
     - Integrations:

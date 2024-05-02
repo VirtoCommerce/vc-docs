@@ -29,9 +29,8 @@ This guide explores how to create a new module from scratch using Visual Studio,
 To populate the **DummyModule.Core** project with essential components:
 
 1. Add **ModuleConstants.cs** for Module Constants:
-
-   1. Create a class named **ModuleConstants.cs** to store module constants such as security permissions and settings.
-   1. In the **ModuleConstants** class, define sub-classes for **Security** and **Permissions**. These classes contain constants representing various permissions within the module, structured as follows:
+    1. Create a class named **ModuleConstants.cs** to store module constants such as security permissions and settings.
+    1. In the **ModuleConstants** class, define sub-classes for **Security** and **Permissions**. These classes contain constants representing various permissions within the module, structured as follows:
 
         ```csharp
         public static class Security
@@ -119,12 +118,12 @@ To populate the **DummyModule.Data** project with necessary components:
 1. Configure webpack for JavaScript and stylesheet bundling.
 1. If required, add unit tests and integration tests.
 
-## Filling DummyModule.Tests Project
+## Fill DummyModule.Tests Project
 
 1. Add unit tests and integration tests as needed.
 1. Ensure integration tests are marked appropriately with the **Trait** attribute.
 
-## Creating Module Package
+## Create Module Package
 
 Create the module package following [this article](../../CLI-tools/overview.md).
 
