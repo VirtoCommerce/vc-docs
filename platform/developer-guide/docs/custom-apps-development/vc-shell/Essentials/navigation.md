@@ -288,7 +288,7 @@ export default createAppModule(pages, locales);
     }, true)
     ```
 
-    Alternatibely, you can use `resolveBladeByName` method to get blade component by its name.
+    Alternatively, you can use `resolveBladeByName` method to get blade component by its name.
 
     ```typescript linenums="1"
     await openBlade({
