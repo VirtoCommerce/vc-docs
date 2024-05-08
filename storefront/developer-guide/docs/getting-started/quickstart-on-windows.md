@@ -29,11 +29,11 @@ Prior to installing Storefront, install:
 To install Storefront:
 
 1. Download [Storefront latest release](https://github.com/VirtoCommerce/vc-storefront/releases/latest).
-1. Unpack it to a local folder, e.g., `c:\vc-storefront`. After thatm you will have the directory with Storefront precompiled files
-1. Open the `appsettings.json` file in a text editor.    
+1. Unpack it to a local folder, e.g., **c:\vc-storefront**. After thatm you will have the directory with Storefront precompiled files
+1. Open the **appsettings.json** file in a text editor.    
 1. In the `Endpoint` section, supply the correct path and credentials for the Virto Commerce Platform in the `Url`, `UserName`, and `Password` fields:
     
-    ```json
+    ```json title="appsettings.json"
     ...
     "Endpoint": {
         "Url": "https://localhost:5001",
@@ -43,7 +43,7 @@ To install Storefront:
 
 1. In the `VirtoCommerce` section, change `DefaultStore` to `B2B-Store`:
 
-    ```json
+    ```json title="appsettings.json"
     ...
     "VirtoCommerce": {
         "DefaultStore": "B2B-Store",
@@ -54,7 +54,7 @@ To install Storefront:
 To install the B2B Vue theme:
 
 1. Download [latest theme release](https://github.com/VirtoCommerce/vc-theme-b2b-vue/releases/latest).
-1. Unpack the `vc-theme-b2b-vue-x.xx.x.zip` package containing the theme to `{storefront path}\wwwroot\cms-content\themes\{store-name}`, e.g.:
+1. Unpack the **vc-theme-b2b-vue-x.xx.x.zip** package containing the theme to **{storefront path}\wwwroot\cms-content\themes\{store-name}**, for example:
 
     ![Storefront path](media/storefront-path.png)
 
@@ -117,7 +117,7 @@ To run the platform only at HTTP schema in production mode, it's enough to pass 
 
 1. Trust the .Net Core Development Self-Signed Certificate. 
 
-![Readmore](media/readmore.png){: width="25"} [Trusting self-signed certificate](https://blogs.msdn.microsoft.com/robert_mcmurray/2013/11/15/how-to-trust-the-iis-express-self-signed-certificate/)
+![Readmore](media/readmore.png){: width="25"} [Trusting Self-Signed Certificate](https://blogs.msdn.microsoft.com/robert_mcmurray/2013/11/15/how-to-trust-the-iis-express-self-signed-certificate/)
 
 
 
@@ -137,4 +137,4 @@ Apps that call `UseHttpsRedirection` and `UseHsts` put a site into an infinite l
 
 To forward the scheme from the proxy in non-IIS scenarios, set the `ASPNETCORE_FORWARDEDHEADERS_ENABLED` environment variable to true.
 
-![Readmore](media/readmore.png){: width="25"} [Configure ASP.NET Core to work with proxy servers and load balancers](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/proxy-load-balancer?view=aspnetcore-5.0#forward-the-scheme-for-linux-and-non-iis-reverse-proxies)
+![Readmore](media/readmore.png){: width="25"} [Configure ASP.NET Core to Work with Proxy Servers and Load Balancers](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/proxy-load-balancer?view=aspnetcore-5.0#forward-the-scheme-for-linux-and-non-iis-reverse-proxies)

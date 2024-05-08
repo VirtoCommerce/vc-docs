@@ -1,4 +1,4 @@
-# Configuring Elasticsearch
+# Elasticsearch
 
 The Virto Commerce **Elastic Search** module enables integrating [Elasticsearch](https://www.elastic.co/products/elasticsearch) as a [search engine](https://doc.oroinc.com/backend/architecture/tech-stack/search-index/#search-index-overview).
 

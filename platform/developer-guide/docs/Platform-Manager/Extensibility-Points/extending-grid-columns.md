@@ -1,5 +1,3 @@
-## Extending Grid Columns
-
 To extend grid columns, get `platformWebApp.ui-grid.extension` in the module run function, and then register the extension function to add a custom column permanently (data-independent) into the list.
 
 ```js title="order2.js"

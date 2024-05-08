@@ -93,7 +93,7 @@ Apart from the above, there are several loosely coupled communication patterns, 
     
 * **Shared services:** A shared service is a class that can be accessed through a common interface. Typically, shared services are located in shared assemblies and provide system-wide services, such as authentication, logging, or configuration.
 
-![Readmore](media/readmore.png){: width="25"} [Versioning and dependencies](03-versioning-and-dependencies.md)
+![Readmore](media/readmore.png){: width="25"} [Versioning and Dependencies](03-versioning-and-dependencies.md)
 
 ## Module Installation, Update, and Deployment Processes
 

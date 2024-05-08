@@ -14,7 +14,7 @@ To create credentials for your project:
     1. Skip **Test users**.
     1. Review the **OAuth consent screen** and go back to the app dashboard.
     1. In the **Credentials** tab of the app dashboard, select **CREATE CREDENTIALS > OAuth client ID**.
-1.   Select **Application type > Web application** and choose a name.
+1.   Select **Application type --> Web application** and choose a name.
     
 1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the platform using the https scheme. Otherwise, the SSO won't work.
 

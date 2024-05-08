@@ -46,7 +46,7 @@ The Virto dependency version resolving logic always interprets all versions as *
 !!! note
     ^1.2.3 is equivalent to >=1.2.3 <2.0.0 as none of the releases until 2.0 should break backwards compatibility.
 
-## Managing Third Party Dependencies for Modules
+## Manage Third Party Dependencies for Modules
 
 As all module assemblies are copied into the *probing* folder before being loaded into the platform application process, except the assemblies of the module in question, the platform module manager copies all third party dependency assemblies and applies the same version conflict resolution policy:
 

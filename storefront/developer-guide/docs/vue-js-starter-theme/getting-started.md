@@ -19,6 +19,27 @@ In this guide, we will explore the necessary steps to get started with the Virto
   npm install --global yarn
   ```
 
+!!! warning
+    Node.js and Yarn have been recently updated. If you wish to upgrade:
+
+    1. Install [Node.js v20](https://nodejs.org/en/download/).
+    1. Enable [corepack](https://yarnpkg.com/corepack) (run from administrator on Windows):
+
+        ```bash
+        corepack enable
+        ```
+
+    If you have installed `yarn` globally, uninstall it:
+
+    1. Using npm:
+
+        ```bash
+        npm uninstall --global yarn
+        ```
+
+    1. Or using your native Operation System installation tools.
+
+
 ## Install vc-storefront
 
 To install **vc-storefront**:

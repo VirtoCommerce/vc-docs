@@ -1,13 +1,10 @@
 ﻿
 The Virto Commerce OAuth 2.0 service provides the following authentication flows:
 
--   [**Client credentials**](https://oauth.net/2/grant-types/client-credentials/): Creates a token for an API client
+*   [Client credentials](https://oauth.net/2/grant-types/client-credentials/): Creates a token for an API client.
+*   [Password flow](https://oauth.net/2/grant-types/password): Creates a token through the user login credentials; used by operations scoped to a specific user session.
+*   [Refresh token flow](https://oauth.net/2/grant-types/refresh-token/): Refreshes an access token.
     
--   [**Password flow**](https://oauth.net/2/grant-types/password): Creates a token through the user login credentials; used by operations scoped to a specific user session
-    
--   [**Refresh token flow**](https://oauth.net/2/grant-types/refresh-token/): Refreshes an access token
-    
-
 ## Resource Owner Password Credential Flow
 
 To obtain an access token through the password flow, you need to provide the username and unencrypted password of the existing user. The returned access token can be used for consuming API resources on behalf of the user with all applied permissions to this user account.
@@ -91,7 +88,7 @@ grant_type=refresh_token&refresh_token={token}&scope=offline_access
 
 The issued access refresh token life time is controlled by the `Authorization:RefreshTokenLifeTime` setting with the default value of 14 days.<!---Add link to auth settings-->
 
-### Using an access token
+### Use Access Token
 
 Upon successful completion of an authorization flow, the OAuth 2.0 service will return an access token.
 

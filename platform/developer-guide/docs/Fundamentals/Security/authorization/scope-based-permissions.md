@@ -1,48 +1,48 @@
-﻿# Scope-based, Imperative, or Resource-based Authorization
+﻿Certainly! Here's the revised version incorporating the suggested improvements:
 
-Imperative permissions are permissions that depend on the resource being accessed. Consider an order that has a store property. You need the user to be able to view only the orders belonging to a particular store. Consequently, the order must be retrieved from the data store before the authorization evaluation can occur.
+---
 
-Permission check based on the `[Authorize]` attribute evaluation occurs before data binding and before the execution of the API action that loads the order. For these reasons, declarative authorization with an `[Authorize]` attribute does not suffice. Instead, you can invoke a custom authorization method, a style known as *imperative authorization*.
+# Scope-based Authorization
 
-## Defining New Permission Scope
+Scope-based permissions, also known as imperative or resource-based permissions, depend on the resource being accessed. Consider an order that includes a store property. You may want users to view only the orders belonging to a specific store. Consequently, authorization evaluation must occur after retrieving the order from the data store.
 
-Let's see how the resource-based authorization works using the following example.
+The `[Authorize]` attribute evaluates permission checks before data binding and executing the API action that loads the order. Due to this, declarative authorization with an `[Authorize]` attribute alone may not suffice. Instead, you can utilize a custom authorization method, known as imperative authorization.
 
-Suppose we need to restrict user access to only the orders created in a particular store. To enable this authorization check-in code and allow it to assign this permission for end authorization role, we should do the following:
+## Define New Permission Scope
 
-Define the new `OrderSelectedStoreScope` class derived from `PermissionScope`. The object of this type will be used in the role management UI and hold the store identifier selected by the user. It can then be used for future authorization check.
+Let's explore how resource-based authorization works through the following example:
 
-```csharp title="VirtoCommerce.OrdersModule.Web/Authorization/OrderSelectedStoreScope.cs"
- /// <summary>
-    /// Restricts access rights to orders that belong to a particular store
-    /// </summary>
+Suppose we want to restrict user access to orders created in a specific store. To enable this authorization check in the code and assign this permission for end-user roles, follow these steps:
+
+1. Create a new class named `OrderSelectedStoreScope`, derived from `PermissionScope`. This class will hold the store identifier selected by the user in the role management UI.
+
+    ```csharp title="VirtoCommerce.OrdersModule.Web/Authorization/OrderSelectedStoreScope.cs"
     public sealed class OrderSelectedStoreScope : PermissionScope
     {
         public string StoreId => Scope;
     }
-```
+    ```
 
-The **StoreId** property will contain the ID of the store selected by the user in the role management UI.
+1. To register the scope and make the global permission scope-based, add the following code to your **Module.cs** file:
 
-To register the scope and make the **global** permission **scope-based**, you need to add the following code to your **Module.cs** file:
-
-```csharp title="VirtoCommerce.OrdersModule.Web/Scripts/module.cs"
-public void PostInitialize(IApplicationBuilder appBuilder)
+    ```csharp title="VirtoCommerce.OrdersModule.Web/Scripts/module.cs"
+    public void PostInitialize(IApplicationBuilder appBuilder)
     {
-        ...
+        // Other configurations...
+
         var permissionsProvider = appBuilder.ApplicationServices.GetRequiredService<IPermissionsRegistrar>();
         permissionsProvider.WithAvailabeScopesForPermissions(new[] {
                                                                         "order:read",
                                                                     }, new OrderSelectedStoreScope());
-        ...
-```
 
-With this code, you register the `order:read` permission in the system and associate it with the `OrderSelectedStoreScope` scope. The next step is to register the presentation template for `OrderSelectedStoreScope`, which allows to user configure permission scope setting in the role manager:
+        // Other configurations...
+    }
+    ```
 
-```js title="VirtoCommerce.OrdersModule.Web/Scripts/order.js"
-//A large part of the code is removed for clarity reasons
-angular.module(moduleName, []).run( ['platformWebApp.permissionScopeResolver', 'platformWebApp.bladeNavigationService', function(scopeResolver, bladeNavigationService) {
- //Registering permission scope templates used for scope bounded definition in the role management UI
+1. Register the presentation template for `OrderSelectedStoreScope` to allow users to configure permission scope settings in the role manager:
+
+    ```js title="VirtoCommerce.OrdersModule.Web/Scripts/order.js"
+    angular.module(moduleName, []).run( ['platformWebApp.permissionScopeResolver', 'platformWebApp.bladeNavigationService', function(scopeResolver, bladeNavigationService) {
         var orderStoreScope = {
             type: 'OrderSelectedStoreScope',
             title: 'Only for orders in selected stores',
@@ -61,16 +61,15 @@ angular.module(moduleName, []).run( ['platformWebApp.permissionScopeResolver', '
             }
         };
         scopeResolver.register(orderStoreScope);
-}] );
-```
+    }] );
+    ```
 
-After these steps, the global `order:read` permission can be additionally restricted to work only for the selected stores in the role assignment.
+After these steps, the global `order:read` permission can be further restricted to work only for selected stores in role assignments.
 
-This step shows you how to declare scope-based permissions in the code and how to define UI templates to configure the additional parameters for these scopes in the manager. In the next section, we will show how to use these permissions in authorization checks within the API controllers.
 
-### Writing Scope-based Authorization Handler
+### Write Scope-based Authorization Handler
 
-Writing a handler for scope-based authorization is not much different from writing a plain requirement handler. You need to create a custom requirement class and implement a requirement handler class derived from `PermissionAuthorizationHandlerBase`:
+Writing a handler for a scope-based authorization is not much different from writing a plain requirement handler. You need to create a custom requirement class and implement a requirement handler class derived from `PermissionAuthorizationHandlerBase`:
 
 ```csharp title="VirtoCommerce.OrdersModule.Web/Authorization/OrderAuthorizationHandler.cs"
 public sealed class OrderAuthorizationHandler : PermissionAuthorizationHandlerBase<OrderAuthorizationRequirement>
@@ -106,7 +105,7 @@ public sealed class OrderAuthorizationHandler : PermissionAuthorizationHandlerBa
 
 In this implementation, we load all `StoreSelectedScope` objects assigned to the `order:read` permission in the role definition, and then use the store identifiers retrieved from these scopes to change `CustomerOrderSearchCriteria` for enforcing the policy to return only orders for the stores defined in the permission scopes.
 
-### Checking Scope-based Permissions
+### Check Scope-based Permissions
 
 Since Virto security is based on the default [ASP.NET](http://ASP.NET) Core security mechanics, we can use [IAuthorizationService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationservice) and custom authorization policy handlers for any imperative authorization check.
 
@@ -134,8 +133,8 @@ Since Virto security is based on the default [ASP.NET](http://ASP.NET) Core secu
 
 In this example, `CustomerOrderSearchCriteria` to be secured with `AuthorizeAsync` overload is invoked to determine whether the current user is allowed to query the orders by the provided search criteria. `AuthorizeAsync` gets the following tree parameters:
 
-+   **User**: Currently authenticated user with claims
-+   **Criteria**: Object that is secured and probably changed inside the authorization handler in accordance with the user restrictions 
-+ The new instance of the `OrderAuthorizationRequirement` type with the permission that needs to be checked
+* **User**: Currently authenticated user with claims.
+* **Criteria**: Object that is secured and probably changed inside the authorization handler in accordance with the user restrictions. 
+* The new instance of the `OrderAuthorizationRequirement` type with the permission that needs to be checked.
 
 As a result, the authorization handler will check and change the criteria to return only the orders with the stores the current users can view.

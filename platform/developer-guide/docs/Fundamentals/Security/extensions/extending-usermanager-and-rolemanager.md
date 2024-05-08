@@ -1,8 +1,10 @@
-﻿Virto Commerce has a custom implementation of default `UserManager` and `RoleManager`, which is [**VirtoCommerce.Platform.Web.Security.CustomUserManager**](https://github.com/VirtoCommerce/vc-platform/blob/dev/src/VirtoCommerce.Platform.Security/CustomUserManager.cs) and [**VirtoCommerce.Platform.Web.Security.CustomRoleManager**](https://github.com/VirtoCommerce/vc-platform/blob/dev/src/VirtoCommerce.Platform.Security/CustomRoleManager.cs), respectively.
+﻿# ASP.NET Identity UserManager and RoleManager Extension
 
-## Overriding UserManager with Custom Implementation
+Virto Commerce has a custom implementation of default `UserManager` and `RoleManager`, which is [VirtoCommerce.Platform.Web.Security.CustomUserManager](https://github.com/VirtoCommerce/vc-platform/blob/dev/src/VirtoCommerce.Platform.Security/CustomUserManager.cs) and [VirtoCommerce.Platform.Web.Security.CustomRoleManager](https://github.com/VirtoCommerce/vc-platform/blob/dev/src/VirtoCommerce.Platform.Security/CustomRoleManager.cs), respectively.
 
-Virto's custom User Manager is registered in the DI as the `UserManager` type and a factory method, which allows using UserManager within the scoped requests.
+## Override UserManager with Custom Implementation
+
+The Virto Commerce custom User Manager is registered in the DI as the `UserManager` type and a factory method, which allows using UserManager within the scoped requests.
 
 ```csharp title="module.cs"
 public void Initialize(IServiceCollection serviceCollection) 
@@ -13,7 +15,7 @@ public void Initialize(IServiceCollection serviceCollection)
 }
 ```
 
-Custom `RoleManager` is registered in the same way.
+Custom `RoleManager` is registered similarly.
 
 ## Usage
 
@@ -43,12 +45,8 @@ You can get both user and role managers by adding the respective factory to your
 !!! note
 	In common cases, you do not need to get User or Role Manager directly by type. You can use factories instead.
 
-## References
-
-Check out these articles for more information on the user and role management:
-
-+ [UserManager TUser Class in ASP.NET Core Identity](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.usermanager-1?view=aspnetcore-6.0)
+![Readmore](../media/readmore.png){: width="25"} [UserManager TUser Class in ASP.NET Core Identity](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.usermanager-1?view=aspnetcore-6.0)
     
-+ [RoleManager TRole Class in ASP.NET Core Identity](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.rolemanager-1?view=aspnetcore-6.0)
+![Readmore](../media/readmore.png){: width="25"} [RoleManager TRole Class in ASP.NET Core Identity](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.rolemanager-1?view=aspnetcore-6.0)
     
-+ [Custom User Management in ASP.NET Core MVC with Identity](https://codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/)
+![Readmore](../media/readmore.png){: width="25"} [Custom User Management in ASP.NET Core MVC with Identity](https://codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/)

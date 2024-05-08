@@ -4,9 +4,9 @@ At Virto Commerce, we provide frequent releases for various modules, packed with
 
 Generally, we have three release channels: 
 
-* [Stable](release-strategy-overview.md#stable-releases)
-* [Edge](release-strategy-overview.md#edge-releases)
-* [Preview](release-strategy-overview.md#preview-releases)
+* [Stable.](release-strategy-overview.md#stable-releases)
+* [Edge.](release-strategy-overview.md#edge-releases)
+* [Preview.](release-strategy-overview.md#preview-releases)
 
 Depending on your needs and development cycle, you can choose a release strategy that suits you best.
 
@@ -36,7 +36,7 @@ Releases in the **Preview** channel show what we are currently working on. These
 
 We usually create a preview release for either PR or Contribution so that we can review and adjust the implementation process early on.
 
-## Outdated strategy
+## Outdated Strategy
 
 Virto Commerce ensures a smooth user migration while improving the quality of the platform. This includes necessary updates that occasionally cause disruption. We manage this by using the Obsolete attribute for deprecated methods and assigning unique DiagnosticIds to track changes and provide clear references for developers.
 

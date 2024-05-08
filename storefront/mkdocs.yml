@@ -22,11 +22,11 @@ extra:
               link: user-guide
               image: assets/images/storefront-userquide.png
               description:
-                - title: Getting started
+                - title: Getting Started
                   link: https://www.youtube.com/watch?v=8LaCWtkVdAk
                 - title: User Documentation
                   link: user-guide/
-                - title: Public Demo
+                - title: Public Demo Environment
                   link: https://virtostart-demo-store.govirto.com/
             - title: Developer Guide
               link: developer-guide
@@ -80,15 +80,6 @@ extra:
               link: https://www.virtocommerce.org/t/news-digest-october-2023/631
               type: Digest
               date: 3 October 2023
-            - title: News Digest September 2023
-              link: https://www.virtocommerce.org/t/news-digest-september-2023/613
-              type: Digest
-              date: 5 September 2023
-            - title: News Digest August 2023
-              link: https://www.virtocommerce.org/t/news-digest-august-2023/602
-              type: Digest
-              date: 1 August 2023
-
 
 nav:
     - Home: index.md

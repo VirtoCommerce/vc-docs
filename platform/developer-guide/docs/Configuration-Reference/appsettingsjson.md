@@ -12,10 +12,10 @@ The configuration keys are hierarchical, and the most convenient way to manage t
 
 These **required** settings represent connection strings for VC Platform and modules.
 
-| Node          | Sample value           | Description  |
+| Node          | Sample value                      | Description  |
 | ------------- | --------------------------------- | ------------ |
 | VirtoCommerce | ```Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30;TrustServerCertificate=True;``` | This required setting is used to provide the VC Platform system connection string to the SQL Server database. VC modules would revert to this connection string if no specific connection string is defined. |
-| E.g., VirtoCommerce.Catalog  | `Data Source=(local);Initial Catalog=VirtoCommerceCatalog;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30` | Other module-specific connection string(s). E.g., Virto Commerce Catalog module will use the `VirtoCommerce.Catalog` connection string if it is defined. |                           |
+| VirtoCommerce.Catalog  | `Data Source=(local);Initial Catalog=VirtoCommerceCatalog;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30` | Other module-specific connection string(s). E.g., Virto Commerce Catalog module will use the `VirtoCommerce.Catalog` connection string if it is defined. |                           |
 | RedisConnectionString | `"localhost"` | StackExchange.Redis Configuration string.<br>![Readmore](media/readmore.png){: width="25"} [Redis Configuration](https://stackexchange.github.io/StackExchange.Redis/Configuration) |
 
 ###  VirtoCommerce
@@ -99,8 +99,9 @@ This configuration node defines the system settings of the VC Platform.
 
 ### Application Insights
 
-<!--AppInsights-start-->
 This node adds and customizes the Application Insight section.
+
+<!--AppInsights-start-->
 
 | Node                              	    | Default or sample value   	| Description                                                                                                	|
 |---------------------------------------	|---------------------------	|--------------------------------------------------------------------------------------------------------------	|
@@ -262,9 +263,9 @@ This node is used for authentication with Azure Active Directory.
 
 | Node                  | Default or Sample Value                                   | Description                                                                                                       |
 | --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Enabled               | `false`                                                   | Enables authentication with Azure Active Directory. By default, this value is `false`, i.e. authentication is disabled.|
-| UsePreferredUsername  | `false`                                                   | If set to `true`, the system will check the `preferred_username` in case the `upn` claim returns empty.             |
-| Priority              | `0`                                                       | Configures the priority of the Azure Active Directory login popup on the _Login_ page. The lowest value means the highest priority. |
+| Enabled               | `false`<br> `true`                                        | Enables authentication with Azure Active Directory. By default, this value is `false`, i.e. authentication is disabled.|
+| UsePreferredUsername  | `false` <br> `true`                                       | If set to `true`, the system will check the `preferred_username` in case the `upn` claim returns empty.             |
+| Priority              | `0` <br> `1`...                                                     | Configures the priority of the Azure Active Directory login popup on the Login page. The lowest value means the highest priority. |
 | AuthenticationType    | `"AzureAD"`                                               | Provides the authentication scheme. Must always have the `AzureAD` value set.                                      |
 | AuthenticationCaption | `"Azure Active Directory"`                                | Sets a human-readable caption for the Azure AD authentication provider. Visible on the **Sign In** page.            |
 | ApplicationId         | `01234567-89ab-cdef-0123-456789abcdef`                    | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
@@ -333,6 +334,7 @@ This node manages caching configuration.
 <!--caching-end-->
 
 ### Content
+
 This **required** setting is used for static content configuration (including themes) for the `VirtoCommerce.Content` module.
 
 | Node                                | Default or Sample Value   | Description                                                                                               |
@@ -386,6 +388,7 @@ This configuration node defines settings for the CRUD operations within the syst
 
 
 ### DataProtection
+
 This configuration node configures lifetimes for security tokens that are issued by platform like password reset.
 
 | Node                         | Default value                    | Description                                         |
@@ -431,7 +434,6 @@ This node configures file upload settings for your application:
 }
 ```
 
-
 ### FrontendSecurity
 
 This node configures frontend security settings.
@@ -448,11 +450,11 @@ This node configures frontend security settings.
 }
 ```
 
-<!--security-start-->
-
 ### IdentityOptions
 
 This configuration node configures the ASP.NET Core Identity system. 
+
+<!--security-start-->
 
 ![Readmore](media/readmore.png){: width="25"}  [Identity Configuration](https://github.com/dotnet/AspNetCore.Docs/blob/master/aspnetcore/security/authentication/identity-configuration.md#configure-aspnet-core-identity)
 
@@ -530,10 +532,12 @@ This node configures background screen and background pattern of the Login page.
 ```
 
 
-<!--modularity-start-->
 ### Modularity
 
 This node configures external sources, from which modules are being installed and discovered.
+
+<!--modularity-start-->
+
 
 | Node                      | Default or sample value                         | Description                                                                                                   |
 | ------------------------- | ----------------------------------------------  | ------------------------------------------------------------------------------------------------------------- |
@@ -561,9 +565,10 @@ This node configures external sources, from which modules are being installed an
 
 
 ### Notifications
-<!--notifications-start-->
 
 This node enables notification configuration for the `VirtoCommerce.Notifications` module.
+
+<!--notifications-start-->
 
 | Node                              | Default or Sample Value         | Description                                                                                                               |
 | --------------------------------- | ------------------------------  | ------------------------------------------------------------------------------------------------------------------------- |
@@ -639,12 +644,11 @@ This node is used for Used for platform settings overriding.
 }
 ```
 
-
-<!--search-start-->
-
 ### Search
 
 This node configures full text search for the `VirtoCommerce.Search` module.
+
+<!--search-start-->
 
 | Node                        | Default or sample value   | Description                                                                                                                                   |
 | ----------------------------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -683,10 +687,14 @@ Tailor the search provider per document type to optimize search performance and 
   }
 }
 ```
+<!--search-end-->
+
 
 #### ElasticSearch
 
 This node configures the Elastic Search provider:
+
+<!--elasticsearch-start-->
 
 | Node                                       | Default or Sample Value                    | Description                                                                     |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
@@ -809,9 +817,15 @@ This node configures the Elastic Search provider:
     }
     ```
 
+<!--elasticsearch-end-->
+
+
 #### Elastic App Search
 
 This node configures the Elastic App Search provider:
+
+<!--elasticappsearch-start-->
+
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
@@ -891,9 +905,15 @@ searchRequest.Boosts = [new SearchBoost
 		}];
 ```
 
+<!--elasticappsearch-end-->
+
+
 #### Elastic Search 8
 
 This node configures the Elastic Search 8 provider:
+
+<!--elasticsearch8-start-->
+
 
 | Node                                       | Default or Sample Value                    | Description                                                                      |
 | -------------------------------------------| -------------------------------------------| ---------------------------------------------------------------------------------|
@@ -934,9 +954,14 @@ Configure Elastic Cloud v8.x:
 }
 ```
 
+<!--elasticsearch8-end-->
+
+
 #### Lucene
 
 This node configures the Lucene search provider:
+
+<!--lucene-start-->
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
@@ -956,16 +981,20 @@ This node configures the Lucene search provider:
 }
 ```
 
+<!--lucene-end-->
+
 #### Azure Search
 
 This node configures the Azure Search provider:
+
+<!--azuresearch-start-->
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
 | Search.Provider                            | `"AzureSearch"`                            | Name of the search provider, which must be set to `AzureSearch`.               |
 | Search.AzureSearch.SearchServiceName       |                                            | The name of the search service instance in your Azure account. Example: SERVICENAME.search.windows.net.|
 | Search.AzureSearch.AccessKey               |                                            | The primary or secondary admin key for this search service.                    |
-| Search.AzureSearch.QueryParserType         | <ul><li>`Simple`</li> <li>`Full`</li></ul> | Type of Query Languages. `Simple` (default) or `Full`.                         |                
+| Search.AzureSearch.QueryParserType         | `Simple`<br>`Full`                         | Type of Query Languages. `Simple` (default) or `Full`.                         |                
 | Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. |
 
 
@@ -983,9 +1012,14 @@ This node configures the Azure Search provider:
 }
 ```
 
+<!--azuresearch-end-->
+
+
 #### Algolia
 
 This node configures the Algolia search provider:
+
+<!--algolia-start-->
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
@@ -1003,8 +1037,7 @@ This node configures the Algolia search provider:
 }
 ```
 
-<!--search-end-->
-
+<!--algolia-end-->
 
 ### Serilog
 

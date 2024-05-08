@@ -1,4 +1,4 @@
-# Configuring Elastic App Search
+# Elastic App Search Configuration
 
 This guide will explain how to configure and run Elastic App Search for your environment.
 
@@ -319,7 +319,7 @@ To install Elastic App Search on Virto Commerce Platform:
 
     ![Indexes](media/kibana-engines.png)
 
-## Running Virto Commerce Application
+## Run Virto Commerce Application
 
 1. Navigate to the Storefront root directory:
 

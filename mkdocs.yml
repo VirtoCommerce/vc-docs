@@ -87,6 +87,7 @@ plugins:
     - redirects:
         redirect_maps:
             'redir.md': 'index.md'
+    - include-markdown
 
 # Project information
 extra_site_name: Documentation
@@ -179,14 +180,6 @@ extra:
               link: https://www.virtocommerce.org/t/news-digest-october-2023/631
               type: Digest
               date: 3 October 2023
-            - title: News Digest September 2023
-              link: https://www.virtocommerce.org/t/news-digest-september-2023/613
-              type: Digest
-              date: 5 September 2023
-            - title: News Digest August 2023
-              link: https://www.virtocommerce.org/t/news-digest-august-2023/602
-              type: Digest
-              date: 1 August 2023
         top_cards:
             # -   title: Architect
             #     icon: assets/icons/package.svg

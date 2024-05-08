@@ -1,34 +1,29 @@
 VirtoCommerce Platform enables adding new properties to entities at runtime. 
 
-## Adding New Dynamic Property for Existing Type from UI
+## Add New Dynamic Property for Existing Type from UI
 
-In the left toolbar menu, click *More > Dynamic Properties* and select one of the available objects:
+To add a new dynamic property:
 
-![List of dynamic properties](media/01-selecting-dynamic-properties.png)
+1. Open Platform and click **Dynamic properties** in the main menu. 
+1. In the next blade, select the desired object type.
+1. In the next blade, click **Add new property** in the toolbar.
+1. Fill in the property name, its value type, display order, etc. Then enable the switches as follows:
 
-Select the required object:
+    ![Dynamic properties](media/dynamic-property.png)
 
-![Choosing dynamic property](media/02-choosing-dynamic-property.png)
+1. Click **Create** to save the changes.
 
-Click the *Create* button:
 
-![Create button](media/03-create-button.png)
+## Edit Object Values
 
-Enter the new property name, select value type and other options.
+The dynamic properties are edited via the **Dynamic properties** widget. For example, to edit dynamic properties of a specific order:
 
-You can also define the property name for each of the registered languages:
+1. Open Platform and click **Orders** in the main menu.
+1. In the next blade, select the desired order.
+1. In the next blade, click on the dynamic properties widget.
+1. The next blade lists the available properties to edit:
 
-+ **Required:** Does not allow any empty property values when editing object values.
-+ **Multivalue:** Allows to enter more than one value for the property when editing object values.
-+ **Multilingual:** Allows to define different values for each registered language when editing object values.
-+ **Dictionary:** Allows to select one of the predefined values when editing object values. The value type for dictionaries can be short text only. You can add dictionary items after creating the property.
+    ![Dynamic Properties widget](media/04-dynamic-properties-widget.png)
 
-## Editing Object Values
+1. Click **OK** in the toolbar to save the changes.
 
-Open the object details and click the *Dynamic Properties* widget:
-
-![Dynamic Properties widget](media/04-dynamic-properties-widget.png)
-
-In the new blade, you will see the list of available properties with input controls for entering values:
-
-![Controls for entering values](media/05-controls-for-entering-values.png)

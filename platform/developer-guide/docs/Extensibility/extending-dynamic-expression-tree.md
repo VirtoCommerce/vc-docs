@@ -1,25 +1,27 @@
-﻿# How to Extend Dynamic Expression Tree
+﻿# Extend Dynamic Expression Tree
 
 This article will show you how to extend the existing promotion expression tree of the Marketing module with these new elements:
 
-+ New expression block:
+* New expression block:
 
-![New expression block](media/09-new-expression-block.png)
+  ![New expression block](media/09-new-expression-block.png)
 
-+ New block element:
+* New block element:
 
-![New block element](media/10-new-block-element.png)
+  ![New block element](media/10-new-block-element.png)
 
-To view or download our sample code, click [here](https://github.com/VirtoCommerce/vc-module-marketing/tree/dev/samples/VirtoCommerce.MarketingSampleModule.Web).
+[![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-marketing/tree/dev/samples/VirtoCommerce.MarketingSampleModule.Web)
 
 ## Prerequisites
+
 Prior to extending your dynamic expression tree, you need to:
 
-+ Create an empty custom module, as described [here](https://docs.virtocommerce.org/new/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/).
+* [Create an empty custom module](../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
     
--   Add the [VirtoCommerce.MarketingModule.Core](https://www.nuget.org/packages/VirtoCommerce.MarketingModule.Core) NuGet dependency to your project.
+* Add the [VirtoCommerce.MarketingModule.Core](https://www.nuget.org/packages/VirtoCommerce.MarketingModule.Core) NuGet dependency to your project.
 
-## Defining New Class for Expression Tree Prototype
+## Define New Class for Expression Tree Prototype
+
 The following example creates a new derived prototype from [PromotionConditionAndRewardTreePrototype](https://github.com/VirtoCommerce/vc-module-marketing/blob/dev/src/VirtoCommerce.MarketingModule.Core/Model/Promotions/PromotionConditionAndRewardTreePrototype.cs) that represents the original expression tree used for marketing promotion. Here, we register a new `BlockSampleConditionroot` block and extend the existing `BlockCatalogCondition` with a new element, `SampleCondition`:
 
 ``` csharp title="SamplePromotionConditionAndRewardTreePrototype.cs"
@@ -39,36 +41,41 @@ public sealed class SamplePromotionConditionAndRewardTreePrototype : PromotionCo
     }
 ```
 
-## Registering Your Extension in module.cs
-The next step includes overriding the original `PromotionConditionAndRewardTreePrototype` type with the newly created one in the `module.cs` file:
+## Register Your Extension in module.cs
 
-``` csharp title="module.cs"
-public void Initialize(IServiceCollection serviceCollection)
-        {
-            // Override the original expression prototype tree with new type
-            AbstractTypeFactory<PromotionConditionAndRewardTreePrototype>.OverrideType<PromotionConditionAndRewardTreePrototype, SamplePromotionConditionAndRewardTreePrototype>();
-        }
-```
+To register your extension in the **module.cs** file: 
 
-After that, you need to add a dependency to the Marketing module into the `module.manifest` file:
+1. Override the original `PromotionConditionAndRewardTreePrototype` type with the newly created one in the `module.cs` file:
 
-``` html title="module.manifest"
-...
- <dependencies>
-        <dependency id="VirtoCommerce.Marketing" version="3.0.0" />
-    </dependencies>
-...
-```
+    ``` csharp title="module.cs"
+    public void Initialize(IServiceCollection serviceCollection)
+            {
+                // Override the original expression prototype tree with new type
+                AbstractTypeFactory<PromotionConditionAndRewardTreePrototype>.OverrideType<PromotionConditionAndRewardTreePrototype, SamplePromotionConditionAndRewardTreePrototype>();
+            }
+    ```
+
+1. Add a dependency to the Marketing module into the **module.manifest** file:
+
+    ``` html title="module.manifest"
+    ...
+    <dependencies>
+            <dependency id="VirtoCommerce.Marketing" version="3.0.0" />
+        </dependencies>
+    ...
+    ```
 
 !!! note
-	This line is important for correct module initialization order. You can read more about module initialization [here](https://docs.virtocommerce.org/new/developer-guide/Fundamentals/Modularity/04-loading-modules-into-app-process/#creating-solution-from-template).
+	This line is important for correct module initialization order. 
+    
+    ![Readmore](media/readmore.png){: width="25"} [Module Initialization](../Fundamentals/Modularity/04-loading-modules-into-app-process.md)
 
-## Defining HTML Templates for New Elements
+## Define HTML Templates for New Elements
 
-It is a best practice to define all HTML templates for new elements within an individual file, where the templates will be loaded dynamically as resources.
+It is a best practice to define all HTML templates for new elements within a single file, where the templates are dynamically loaded as resources.
 
-!!! warning
-	Make sure to use the following schema as a template ID: `expression-{C# element class name}.html`.
+!!! tip
+	Use the following schema as a template ID: `expression-{C# element class name}.html`.
 
 ``` html title="Scripts/all-templates.js"
 <script type="text/ng-template" id="expression-BlockSampleCondition.html">
@@ -89,8 +96,9 @@ It is a best practice to define all HTML templates for new elements within an in
 </script>
 ```
 
-## Registering New Elements in Main module.js File
-The next steps include registering newly created expression elements in `dynamicExpressionService` that is used as a registry for all known tree elements:
+## Register New Elements in Main module.js File
+
+Register your newly created expression elements in `dynamicExpressionService` that is used as a registry for all known tree elements:
 
 ``` js title="Script/module.js"
 angular.module(moduleName, [])
@@ -117,14 +125,14 @@ angular.module(moduleName, [])
     ]);
 ```
 
-## Building Your Module and Restarting Platform
+## Build Own Module and Restart Platform
 
-You can now build your solution and pack the module scripts with the following command:
+1. Build your solution and pack the module scripts with the following command:
 
-``` console
-npm run webpack:build
-```
+    ``` console
+    npm run webpack:build
+    ```
 
-After that, you need to restart the platform instance to apply your changes.
+1. Restart the platform instance to apply your changes.
 
-Finally, open Platform Manager, go to ***Marketing>Promotions***, and click ***New promotion***. The new `For condition evaluator with any of these sample values` block with its single `Sample condition is met: no/yes` line should be there.
+1. Open Platform Manager, go to **Marketing --> Promotions --> New promotion**. The new `For condition evaluator with any of these sample values` block with its single `Sample condition is met: no/yes` line appears.

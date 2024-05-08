@@ -51,7 +51,7 @@ After:
 }
 ```
 
-[Read more  about Serilog settings configuration](https://github.com/serilog/serilog-settings-configuration){ .md-button }
+![Readmore](media/readmore.png){: width="25"} [Serilog Settings Configuration](https://github.com/serilog/serilog-settings-configuration)
 
 ## Option 2. Use Application Insights 
 

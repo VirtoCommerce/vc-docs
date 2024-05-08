@@ -15,7 +15,7 @@ This chart shows how the off-site payment method works:
 
 ![Offside payment method](media/01-offsite-payment-method-chart.png){: width="700"}
 
-## Defining New Payment Method
+## Define New Payment Method
 
 In order to define a new payment method:
 

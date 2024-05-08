@@ -59,7 +59,7 @@ To start index defragmentation and rebuilding:
     DEALLOCATE TableCursor
     ```
 
-## Finding and Creating Missing Index
+## Find and Create Missing Index
 
 SQL Server keeps up with index statistics behind the scenes. When you use Entity Framework, very easy to skip the required index and decrease the performance of the solution.
 
@@ -110,7 +110,7 @@ SELECT CONVERT (varchar, getdate(), 126) AS runtime,
          (migs.user_seeks + migs.user_scans) DESC
 ```
 
-## Control and Elimination of Long-Running Queries
+## Control and Eliminate Long-Running Queries
 
 To find slow and long-running queries, run the script:
 
@@ -147,7 +147,7 @@ ORDER BY  (total_worker_time/execution_count) DESC
 
 ```
 
-## Prune of PlatformOperationLog and NotificationMessage tables
+## Prune PlatformOperationLog and NotificationMessage Tables
 
 The recommended retention period for PlatformOperationLog and NotificationMessage is 45 days. This is usually enough to find the reason for the issues. Create a task and run it either nightly or weekly.
 
@@ -182,7 +182,7 @@ DELETE FROM [dbo].[$tableName] WHERE Id = '$($records[$c].Id)'
 }
 ```
 
-## Table Size Control
+## Control Table Size 
 
 It is very important to control the size of tables. It takes more time to apply any operation to a larger table. If you have temporary or log tables, don't forget to clean up the expired data.
 
@@ -199,11 +199,12 @@ group by sys.objects.name
 ORDER BY 2 DESC
 ```
 
-## Using Azure SQL Elastic Pool and Several Satabases Instead of the Big One
+## Use Azure SQL Elastic Pool and Multiple Databases Instead of Single One
 
 Azure SQL pools are well suited for Virto Commerce solutions. Virto Commerce allows you to create a unique connection string for each module. The more databases you can add to a Pool, the more you're going to save. Depending on your application usage patterns, it's possible to see savings with as few as two S3 databases.
 
-To set own connection string for every module, use Module Id as a name of a connection string. You can find Module Id in the [module.manifest](https://docs.virtocommerce.org/new/developer-guide/Fundamentals/Modularity/06-module-manifest-file/) file. For example, Module Id for the Order module is as follows:
+To set own connection string for every module, use Module Id as a name of a connection string. You can find Module Id in the [module.manifest](../Fundamentals/Modularity/06-module-manifest-file.md) file. For example, Module Id for the Order module is as follows:
+
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <module>
@@ -230,7 +231,7 @@ Set your own connection strings for:
 
 It decreases database size and cost, increases performance and simplifies maintenance tasks.
 
-## Using Azure Tools
+## Use Azure Tools
 
 Azure supports a big list of the service to improve Maintenance Tasks for SQL Server.
 
@@ -247,9 +248,10 @@ Here is the automatic tuning list:
 
 For more information, read [Automatic tuning in Azure SQL Database and Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/automatic-tuning-overview?view=azuresql).
 
-## Find blocking queries in SQL Azure
+## Find Blocking Queries in SQL Azure
 
 To finding blocking queries in SQL Azure, run:
+
 ```sql
 SELECT TOP 10 r.session_id, 
 r.plan_handle,      
@@ -284,9 +286,10 @@ ORDER BY r.total_elapsed_time desc
 
 ```
 
-# Setting Maximum Number of Concurrent Requests and Sessions
+## Set Maximum Number of Concurrent Requests and Sessions
 
 To set max concurrent request and sessions, run:
+
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests] FROM sys.dm_exec_requests R
 SELECT COUNT(*) AS [Sessions] FROM sys.dm_exec_connections

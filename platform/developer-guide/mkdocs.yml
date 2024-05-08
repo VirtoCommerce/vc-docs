@@ -509,6 +509,7 @@ nav:
           - Key Extensibility Points: Extensibility/key-extensibility-points.md
           - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
           - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
+          - Extending Application User: Extensibility/extending-application-user.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:
@@ -548,7 +549,7 @@ nav:
           - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
     - Custom Apps Development:
           - Overview: custom-apps-development/overview.md
-          - How to Register a New App: custom-apps-development/how-to-register-new-app.md
+          - How to Register New App: custom-apps-development/how-to-register-new-app.md
           - VC Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:

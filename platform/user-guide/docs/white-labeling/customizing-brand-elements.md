@@ -22,7 +22,7 @@ You can start using white labeling.
 To enable white labeling via the **Contacts** module:
 
 1. Click **Contacts** in the main menu.
-1. In the next blade, select the desired company.
+1. In the next blade, click on the three dots to the left of the desired company.
 1. In the next blade, click on the **White labeling** widget.
 1. In the **White Labeling** blade, enable white labeling.
 

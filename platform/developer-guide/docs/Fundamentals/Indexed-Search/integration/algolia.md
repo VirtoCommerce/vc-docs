@@ -8,18 +8,8 @@ The Virto Commerce **Algolia Search** module implements `ISearchProvider` define
 
 Configure the Algolia search provider using the following schema:
 
-| Node                                       | Default or Sample Value                    | Description                                                                    |
-| -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
-| Search.Provider                            | `"AlgoliaSearch"`                          | Name of the search provider, which must be set to `AlgoliaSearch`.             |
-| Search.AlgoliaSearch.ApiId                 |                                            | The API id for Algolia server.                                                 |
-| Search.AlgoliaSearch.ApiKey                |                                            | The API key for either Algolia server.                                         |
-
-
-**Example**
-
-```json title="appsettings.json"
-"AlgoliaSearch": {
-    "AppId": "API_ID",
-    "ApiKey": "API_KEY"
-}
-```
+{%
+   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
+   start="<!--algolia-start-->"
+   end="<!--algolia-end-->"
+%}

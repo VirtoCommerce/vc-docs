@@ -1,12 +1,18 @@
-# How to register new App 
+# How to Register New App 
 
 Using the Reports application as an example, let's look at the application installation process.
 
-!!! note "Prerequisites"
-    * Before adding a new web app, make sure the following prerequisites have been installed:
-        * [Virto Commerce Platform 3.264+](https://github.com/VirtoCommerce/vc-platform)
-        * [Virto Commerce CLI (VC-BUILD) 3.12+](https://github.com/VirtoCommerce/vc-build)
-        * [Virto Shell VueJS Framework](https://github.com/VirtoCommerce/vc-shell)
+## Prerequisites
+
+Before adding a new web app, make sure the following prerequisites have been installed:
+
+* [Virto Commerce Platform 3.264+](https://github.com/VirtoCommerce/vc-platform)
+* [Virto Commerce CLI (VC-BUILD) 3.12+](https://github.com/VirtoCommerce/vc-build)
+* [Virto Shell VueJS Framework](https://github.com/VirtoCommerce/vc-shell)
+
+## Registration Process
+
+To register a new app:
 
 1. Add a web app in the [module.manifest](../Fundamentals/Modularity/06-module-manifest-file.md):
 
@@ -37,14 +43,11 @@ Using the Reports application as an example, let's look at the application insta
 
         </details>
         
-    1. Go to the Apps Menu.
-
-        ![image](media/app-menu-1.png)
-
+    1. Open Platform.
+    1. Click ![Dots](media/nine-dots-icon1.png){: width="25"} in the top left corner.
     1. Find the added app.
     
         ![image](media/app-menu-2.png)
-
 
 1. Create Content/[app_id] folder in the web project. Virto Commerce reads the manifest and adds binding to this folder. You can put any web content here. It can be a Virto Shell or any other HTML application.
 

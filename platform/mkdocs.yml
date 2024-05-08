@@ -26,6 +26,8 @@ extra:
                   link: user-guide/getting-started
                 - title: User Documentation
                   link: user-guide/
+                - title: Public Demo Environment
+                  link: https://vcptcore-demo.govirto.com/ 
                 - title: Versions
                   link: user-guide/versions/virto3-products-versions
             - title: Developer Guide
@@ -86,14 +88,6 @@ extra:
               link: https://www.virtocommerce.org/t/news-digest-october-2023/631
               type: Digest
               date: 3 October 2023
-            - title: News Digest September 2023
-              link: https://www.virtocommerce.org/t/news-digest-september-2023/613
-              type: Digest
-              date: 5 September 2023
-            - title: News Digest August 2023
-              link: https://www.virtocommerce.org/t/news-digest-august-2023/602
-              type: Digest
-              date: 1 August 2023
         link_cards:
                 - title: Contact support
                   icon: assets/icons/contact-support.svg

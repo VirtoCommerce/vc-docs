@@ -1,5 +1,5 @@
 ﻿
-`vc-theme-b2b-vue` is a fresh look in the field of ecommerce solutions. This is a place where common B2B and B2C scenarios are combined with the most bleeding edge technologies to deliver blazing fast and fully functional solutions.
+**vc-theme-b2b-vue** is a fresh look in the field of ecommerce solutions. This is a place where common B2B and B2C scenarios are combined with the most bleeding edge technologies to deliver blazing fast and fully functional solutions.
 
 This theme represents the VC Team's opinionated starting point for new projects. It strives to include up-to-date best practices and solutions that we have deemed needed for the majority of projects we build. It is a reflection of what is possible when building a theme.
 
@@ -59,9 +59,9 @@ The key functionalities include:
 * [Searching and filtering products.](../../../user-guide/shopping/searching-for-products)
 
 
-## Working with `vc-theme-b2b-vue`
+## Working with vc-theme-b2b-vue
 
-As a developer, you will be using `vc-theme-b2b-vue` as your ultimate starting point for a new theme. It contains numerous out-of-the-box features that are typical for B2B and B2C ecommerce projects. Along with ready made theme architecture and huge set of reusable components, it can significantly speed up your development process. To start developing a new theme, you just need to clone (fork) the theme project, and then you will be able to do any customization according to your needs.<!---Link to custom theme development-->
+As a developer, you will be using **vc-theme-b2b-vue** as your ultimate starting point for a new theme. It contains numerous out-of-the-box features that are typical for B2B and B2C ecommerce projects. Along with ready made theme architecture and huge set of reusable components, it can significantly speed up your development process. To start developing a new theme, you just need to clone (fork) the theme project, and then you will be able to do any customization according to your needs.<!---Link to custom theme development-->
 
 
 [![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
