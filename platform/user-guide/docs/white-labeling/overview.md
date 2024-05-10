@@ -14,7 +14,7 @@ The White Labeling module enables organizations to enhance the enterprise user e
 * **Custom Domain**: Assign a custom domain with the organization to allow branding activation on the first visit.
 * **Automated Favicon Generation**: The module uses Virto Commerce Image Tools module for favicon generation.
 
-The diagram below illustrates the functionality of the GDPR module:
+The diagram below illustrates the functionality of the White Labeling module:
 
 ![Key entitites](media/key-entities.png)
 
