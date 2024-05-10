@@ -4,6 +4,10 @@ The `vc-build` tool provides a set of targets that allow you to easily [install]
 
 ## Install
 
+!!! note
+    **Install** and **Update** support scenarios where a developer has the platform in the source code, and modules are already installed in it. In such cases, these targets can install and update modules as well.
+    This means that if you have the platform in your source code repository and modules already installed within it, you can still use the `install` and `update` targets to manage those modules. 
+
 The `install` command fetches the platform or modules and installs them in the appropriate folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows `vc-build` to easily restore the platform with modules on a different machine, such as a build server, without all these packages.
 
 If the command parameters have not been specified and **vc-package.json** is not found in the local folder, the command installs the latest stable release by default. If you need the latest available versions, use the `-edge` parameter.

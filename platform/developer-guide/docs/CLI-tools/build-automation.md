@@ -165,6 +165,8 @@ Total                              0:23
 ═══════════════════════════════════════
 ```
 
+!!! info
+    The `compress` target now includes support for building CustomApps.
 
 **Parameters:**
 
@@ -203,8 +205,12 @@ vc-build PushImage -DockerImageFullName myimage:tag
 To build and push docker image, run: 
 
 ```console
-vc-build BuildAndPush -DockerRegistryUrl <registry url> -DockerUsername <username> -DockerPassword <password> -DockerfilePath ./dockerfile -DockerImageFullName myimage:tag
+vc-build BuildAndPush -DockerRegistryUrl <registry url> -DockerUsername <username> -DockerPassword <password> -DockerfilePath ./dockerfile -DockerImageName myimage -DockerImageTag tag1 tag2 tagN
 ```
+
+**Parameters**:
+
+* `-DockerImageTag`: Receives an array of tags. 
 
 !!! note
     If you are already signed in to Docker CLI, you do not need to pass the `DockerPassword` parameter.
