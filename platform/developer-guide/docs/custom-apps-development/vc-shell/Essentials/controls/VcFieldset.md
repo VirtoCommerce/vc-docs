@@ -1,6 +1,6 @@
 # Fieldset
 
-Fieldset allows displaying sets of any available controls of any nested depth. It allows arranging elements in a grid with a customizable number of columns and aspect ratio that allows to control columns width, the ability to build a grid with multiple rows based on an array of data bound to the fieldset using the `property` option. It also has visibility state settings and ability to remove elements from the fieldset.
+Fieldset allows displaying sets of any available controls of any nested depth. It allows arranging elements in a grid with a customizable number of columns and aspect ratio that allows to control columns width, the ability to build a grid with multiple rows based on an array of data bound to the fieldset using the `property` option. It also has visibility state settings.
 
 ## Usage
 
@@ -34,9 +34,6 @@ interface FieldsetSchema {
     columns?: number;
     property?: string;
     aspectRatio?: number[];
-    remove?: {
-        method: string;
-    };
     visibility?: {
         method: string;
     };
@@ -55,7 +52,6 @@ To incorporate the component into your dynamic applications, define the followin
 | `columns` {==number==}            | Number of columns to display the fields in. |
 | `property` {==string==}           | Property name that is used for binding fieldset value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
 | `aspectRatio` {==number[]==}      | Array of numbers that define the aspect ratio of each column. Uses CSS flex-grow property. <br> Example: set to [1, 1] to make all columns equal width |
-| `remove` {=={method: string}==}   | Method to call to remove field from the fieldset. When set - activates remove button. Used for property-based fieldsets. Method should be defined in the blade `scope`. |
 | `visibility` {=={method: string}==} | Visibility state for component, could be used to hide fieldset based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
 | `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
 
@@ -115,16 +111,13 @@ Let's look at a few examples of use cases.
 
 ### Building a fieldset from an array of data
 
-Use the `property` parameter. In this case, each element of the array will be displayed in a separate fieldset. Also, if we want to add a delete button, we can specify a method that will be called when the delete button is clicked. In this method, we can remove an element from the data array that we specified in the `property` parameter.
+Use the `property` parameter. In this case, each element of the array will be displayed in a separate fieldset.
 
 ```typescript
 {
         id: "fieldsetId",
         component: "vc-fieldset",
         property: "fieldsetProperty",
-        remove: {
-            method: "removeFieldsetElement",
-        },
         fields: [
             {
                 id: "input1",
