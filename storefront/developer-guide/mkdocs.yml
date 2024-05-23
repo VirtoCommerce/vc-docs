@@ -27,6 +27,7 @@ nav:
           - Overview: vue-js-starter-theme/overview.md
           - Getting Started: vue-js-starter-theme/getting-started.md
     - Integrations:
+          - Google Analytics Events: integrations/google-analytics/ga-events.md
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md
           - Builder.io:
               - Overview: integrations/builder-io/overview.md

@@ -7,9 +7,9 @@ This section will quickly guide you through simple Storefront setup based on Win
 
 ## Prerequisites
 
-Prior to installing Storefront, install:
+Prior to installing Storefront:
 
-- And launch [Platform latest version](https://github.com/VirtoCommerce/vc-platform/releases/latest). Deploy it:
+- Install and launch [Platform latest version](https://github.com/VirtoCommerce/vc-platform/releases/latest). Deploy it:
 
     - [On Windows.](../../../../platform/developer-guide/Getting-Started/Installation-Guide/windows)
     - [On Linux.](../../../../platform/developer-guide/Getting-Started/Installation-Guide/linux)

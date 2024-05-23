@@ -15,7 +15,7 @@ In this section, you can:
 
     It will automatically appear at the top of the address list in the Company Info section and during checkout.
 
-    ![Favorite address](../media/favorite-address.gif)
+    ![Favorite address](../media/favorite-shipping-address.png)
 
 When editing or adding a new address, fill in the following fields:
 

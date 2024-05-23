@@ -84,6 +84,7 @@ nav:
                 - Overview: Fundamentals/Modularity/01-overview.md
                 - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
                 - Versioning and Dependencies: Fundamentals/Modularity/03-versioning-and-dependencies.md
+                - Optional Dependency between Modules: Fundamentals/Modularity/optional-dependency.md
                 - Loading Modules into App Process: Fundamentals/Modularity/04-loading-modules-into-app-process.md
                 - Best Practices: Fundamentals/Modularity/05-best-practices.md
                 - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md

@@ -29,7 +29,7 @@ With the Tax module, you can:
 * Register new tax providers programmatically by implementing the ITaxProvider interface.
 * Access the list of available tax providers and their settings via the public API.
 
-The diagram below illustrates the functionality of the Return module:
+The diagram below illustrates the functionality of the Tax module:
 
 ![Key entities](media/key-entities.png)
 
