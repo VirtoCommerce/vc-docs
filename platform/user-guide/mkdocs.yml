@@ -19,6 +19,7 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
+    - Docs: vc-docs-guide.md
     - Modules:
           - Overview: platform-overview.md
           - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md

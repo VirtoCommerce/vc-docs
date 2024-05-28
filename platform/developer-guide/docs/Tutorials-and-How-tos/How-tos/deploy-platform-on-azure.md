@@ -1,6 +1,8 @@
 # Deploy VC Platform to Azure Cloud
 
-You can [deploy Virto Commerce Platform to Azure Cloud](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployWebAppForContainer.json).
+You can deploy Virto Commerce Platform to Azure Cloud by simply clicking the button:
+
+[![Deploy to Azure](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployWebAppForContainer.json)
 
 The following resources will be created during deployment:
  

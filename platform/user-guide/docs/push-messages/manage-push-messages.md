@@ -19,7 +19,7 @@ To manage push messages:
         * Drafts.
         * Scheduled messages.
         * Messages that are tracking new recipients.
-    * [Create new messages,](manage-push-messages.md#create-and-schedule-push-message), schedule messages, and track mew recipients.
+    * [Create new messages](manage-push-messages.md#create-and-schedule-push-message), schedule messages, and track new recipients.
     * [View message status.](manage-push-messages.md#view-message-status)
 
 ## Create and Schedule Push Message
