@@ -48,11 +48,11 @@ To create and install custom app:
     yarn serve
     ```
 
-1. Once the application is created, go to the application folder and add Platform URL to the `.env` file under the `APP_PLATFORM_URL` variable:
+1. Once the application is created, go to the application folder and add Platform URL to the `.env.local` file under the `APP_PLATFORM_URL` variable:
 
     ```bash
     $ cd `*your-app-name*`
-    $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env
+    $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env.local
     ```
 
 2. Install the dependencies and start the development server:
