@@ -149,6 +149,11 @@ nav:
                 - Notification Log: notifications/notification-log.md
                 - Notification Templates: notifications/notification-templates.md
                 - Settings: notifications/settings.md
+          - Price Export Import: 
+                - Overview: price-export-import/overview.md
+                - Mapping CSV files: price-export-import/mapping-csv-files.md
+                - Exporting pricelists: price-export-import/exporting-price-lists.md
+                - Importing pricelists: price-export-import/importing-price-lists.md
           - Payment Related Modules:
                 - Payment:
                       - Overview: payment/overview.md

@@ -76,7 +76,7 @@ markdown_extensions:
     - pymdownx.snippets
 
 plugins:
-    - monorepo
+   - monorepo
     - search: # necessary for search to work
  #   - autolinks
     - awesome-pages:
@@ -148,6 +148,10 @@ extra:
           url: https://www.virtocommerce.org/c/news-digest/
     main_page:
         release_notes:
+            - title: News Digest June 2024
+              link: https://www.virtocommerce.org/t/june-2024-news-digest/702
+              type: Digest
+              date: 1 June 2024
             - title: News Digest May 2024
               link: https://www.virtocommerce.org/t/may-2024-news-digest/699
               type: Digest
@@ -215,6 +219,10 @@ extra:
               description: Create tailored solutions within the VC-Shell
               image: assets/images/custom-apps.png
               link: platform/developer-guide/custom-apps-development/overview
+            - title: CLI Tools
+              description: Streamline development with command-line interface tools tailored for efficient development workflows
+              image: assets/images/cli-tools.png
+              link: platform/developer-guide/CLI-tools/overview/
 
         link_cards:
             - title: Contact support

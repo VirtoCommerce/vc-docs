@@ -44,7 +44,7 @@ The price list has been deleted.
 To add prices:
 
 1. Select your new price list.
-1. In the next blade, click the **Prices** widget.
+1. In the next blade, click on the **Prices** widget.
 1. In the next blade, click **Add** to select items for pricing.
 
 	![Path](media/price-list-path1.png)
@@ -53,6 +53,9 @@ To add prices:
 
 1. In the **Select catalog items...** blade, check the products you need.
 	
+	!!! note
+		For more information on importing price lists, refer to the [Import price list](../price-export-import/importing-price-lists.md) article.
+
 1. Click **Add selected** to add the prices of the selected products to your price list.
 
 	![Selecting items](media/price-list-path2.png)

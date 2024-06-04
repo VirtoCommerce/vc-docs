@@ -19,6 +19,7 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
+    - Skills Required for VC Developers: skills-required-for-VC-developers.md
     - Getting Started:
           - System Requirements: Getting-Started/system-requirements.md
           - Installation Guide:
