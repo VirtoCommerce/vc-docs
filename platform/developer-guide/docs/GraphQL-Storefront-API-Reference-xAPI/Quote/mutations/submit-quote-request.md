@@ -8,8 +8,8 @@ The `SubmitQuoteCommandType!` represents .
 
 | Field                        | Description                                |
 | ---------------------------- | -------------------------------------------|
-| `quoteId` {==String!==}      | The Id of the quote request to be updated. |
-| `comment` {==String!==}      | A comment associated with the submission.  |
+| `quoteId` ==String!==      | The Id of the quote request to be updated. |
+| `comment` ==String!==      | A comment associated with the submission.  |
 
 ## Possible returns
 

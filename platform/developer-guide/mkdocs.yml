@@ -490,6 +490,7 @@ nav:
                       - SubmitQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/SubmitQuoteCommandType.md
                       - UpdateQuoteAddressCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteAddressCommandType.md
                       - InputQuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/InputQuoteAddressType.md
+                      - ApproveQuoteResultType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ApproveQuoteResultType.md
                 - Mutations:
                       - createQuoteFromCart: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart.md
                       - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
@@ -498,6 +499,12 @@ nav:
                       - changeQuoteComment: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment.md
                       - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
                       - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
+                      - addQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/addQuoteAttachments.md
+                      - approveQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/approveQuoteRequest.md
+                      - createQuote: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/createQuote.md
+                      - declineQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/declineQuoteRequest.md
+                      - deleteQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/deleteQuoteAttachments.md
+                      - updateQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments.md
           - Store:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
                 - Queries:

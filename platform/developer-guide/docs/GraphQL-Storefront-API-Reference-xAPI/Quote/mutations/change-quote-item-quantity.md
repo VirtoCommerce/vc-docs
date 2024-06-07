@@ -8,9 +8,9 @@ The `ChangeQuoteItemQuantityCommandType!` represents a command for adjusting ite
 
 | Field                        | Description                                              |
 | ---------------------------- | -------------------------------------------------------- |
-| `quoteId` {==String!==}      | The Id of the quote request to be updated.               |
-| `lineItemId` {==String!==}   | The Id of the specific line item to be modified.         |
-| `quantity` {==Int!==}        | The new quantity for the line item.                      |
+| `quoteId` ==String!==      | The Id of the quote request to be updated.               |
+| `lineItemId` ==String!==   | The Id of the specific line item to be modified.         |
+| `quantity` ==Int!==        | The new quantity for the line item.                      |
 
 ## Possible returns
 

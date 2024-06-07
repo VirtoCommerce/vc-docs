@@ -6,6 +6,6 @@ The `CreateQuoteFromCartCommandType` used to create a new quote based on the con
 
 | Field                     | Description                                        |
 | ------------------------- | -------------------------------------------------- |
-| `cartId`  ==String!==}    | The Id of the cart from which to create the quote. |
-| `comment`  ==String!==}   | A comment for the newly created quote.             |
+| `cartId`  ==String!==    | The Id of the cart from which to create the quote. |
+| `comment`  ==String!==   | A comment for the newly created quote.             |
 

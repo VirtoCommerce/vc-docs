@@ -8,8 +8,8 @@ The `CreateQuoteFromCartCommandType!` represents the arguments for `CreateQuoteF
 
 | Field                     | Description                                              |
 | ------------------------- | -------------------------------------------------------- |
-| `cartId` {==String!==}    | The Id of the cart from which the quote will be created. |
-| `comment` {==String!==}   | A comment for the newly created quote.                   |
+| `cartId` ==String!==    | The Id of the cart from which the quote will be created. |
+| `comment` ==String!==   | A comment for the newly created quote.                   |
 
 
 ## Possible returns

@@ -8,8 +8,8 @@ The `UpdateQuoteAddressesCommandType!` is a type that represents a command for u
 
 | Field                                                                             | Description                                                   |
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------|
-| `quoteId` {==String!==}                                                           | The Id of the quote to be updated.                            |
-| `addresses` [{==InputQuoteAddressType!==}](../objects/InputQuoteAddressType.md)   | An array of updated address information for the quote request.|
+| `quoteId` ==String!==                                                           | The Id of the quote to be updated.                            |
+| `addresses` [==InputQuoteAddressType!==](../objects/InputQuoteAddressType.md)   | An array of updated address information for the quote request.|
 
 ## Possible returns
 

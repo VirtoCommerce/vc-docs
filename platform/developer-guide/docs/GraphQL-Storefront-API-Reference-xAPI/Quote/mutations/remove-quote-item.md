@@ -8,8 +8,8 @@ The `RemoveQuoteItemCommandType!` represents a command for removing a product it
 
 | Field                        | Description                                              |
 | ---------------------------- | -------------------------------------------------------- |
-| `quoteId` {==String!==}      | The Id of the quote request to be updated.               |
-| `lineItemId` {==String!==}   | The Id of the specific line item to be modified.         |
+| `quoteId` ==String!==      | The Id of the quote request to be updated.               |
+| `lineItemId` ==String!==   | The Id of the specific line item to be modified.         |
 
 ## Possible returns
 

@@ -8,8 +8,8 @@ The `ChangeQuoteCommentCommandType!` represents a command for modifying quote co
 
 | Field                        | Description                                              |
 | ---------------------------- | -------------------------------------------------------- |
-| `quoteId` {==String!==}      | The Id of the quote to be modified.                      |
-| `comment` {==String!==}      | The new comment to be associated with the quote.         |
+| `quoteId` ==String!==      | The Id of the quote to be modified.                      |
+| `comment` ==String!==      | The new comment to be associated with the quote.         |
 
 ## Possible returns
 
