@@ -15,8 +15,12 @@ Click on the desired quote request from the list to view its details, including:
 
 * The list of requested products.
 * Product properties, price per item, and requested quantities.
-* Shipping address.
+* Shipping and billing addresses.
 * Date of quote creation.
+* Comments you have provided with a quote.
+* Files you have attached to a quote.
+
+You can also decline or approve the quote proposal sent to you.
 
 ![Quote details](../media/quote-request-details.png)
 

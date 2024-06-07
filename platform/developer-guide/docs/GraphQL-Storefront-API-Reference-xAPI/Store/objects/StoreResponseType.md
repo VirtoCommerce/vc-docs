@@ -15,3 +15,4 @@ The `StoreResponseType` represents the response data for a store, including its 
 | `defaultCurrency` [==CurrencyType!==](../../Order/objects/currency-type.md)           | The default currency used in the store.                     |
 | `availableCurrencies` [==[CurrencyType!]!==](../../Order/objects/currency-type.md)    | An array of available currencies for the store.             |
 | `settings` [==StoreSettingsType!==](StoreSettingsType.md)                             | The settings configuration for the store.                   |
+| `graphQLSettings` [==GraphQLSettingsType!==](GraphQLSettingsType.md)                  | The GraphQL settings configuration for the store.           |

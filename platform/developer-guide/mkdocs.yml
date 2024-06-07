@@ -230,6 +230,8 @@ nav:
                       - removeWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem.md
                       - moveWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem.md
                       - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
+                      - addGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addGiftItems.md
+                      - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
           - Catalog:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:
@@ -504,6 +506,10 @@ nav:
                       - StoreResponseType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType.md
                       - LanguageType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType.md
                       - StoreSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType.md
+                      - GraphQLSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/GraphQLSettingsType.md
+                      - ModuleSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingsType.md
+                      - ModuleSettingType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingType.md
+                      - PasswordOptionsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/PasswordOptionsType.md
           - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
           - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
     - Extensibility:

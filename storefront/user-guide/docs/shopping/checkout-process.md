@@ -10,10 +10,14 @@ To complete your order:
 
     Here you can:
     
-    * View the items you have ordered grouped by user.
+    * View the items you have ordered grouped by vendor.
     * Change the quantity of items ordered.
     * Delete items in bulk or individually.
+    * Check items in bulk and indivudually.
+    * Request for a quote.
     * Clear the cart.
+    * View the gifts you can receive as part of a loyalty program. The gifts appear automatically and are preselected.
+    * Apply a promotion code.
     * Proceed to checkout.
 
     ![Cart details](../media/cart-details.png)

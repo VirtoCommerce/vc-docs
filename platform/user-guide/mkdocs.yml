@@ -30,9 +30,9 @@ nav:
                 - Overview: catalog/overview.md
                 - Managing Catalogs: 
                       - Creating New Catalog: catalog/add-new-catalog.md
-                      - Exporting Catalogs: catalog/export-catalog.md
                       - Importing Catalogs: catalog/import-catalog.md
-                      - Importing Products to Catalog: catalog/import-products-to-catalog.md  
+                      - Importing Products, Prices, and Stock to Catalog: catalog/import-products-to-catalog.md  
+                      - Exporting Catalogs: catalog/export-catalog.md
                 - Managing Categories: catalog/managing-categories.md
                 - Managing Products: catalog/managing-products.md
                 - Managing Product Variations: catalog/managing-product-variations.md

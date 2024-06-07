@@ -26,6 +26,6 @@ To import your catalog in CSV format:
 1. In the next blade, customize the mapping of your product properties to the default properties defined in the application, ensuring they are appropriately stored in the database. Click **OK**.
 1. In the **Import catalog from csv** blade, click **Start import**.
 
-![CSV upload](media/add-csv1.png)
+![CSV upload](media/add-csv1.png){: width="600"}
 
 The catalog has been imported.

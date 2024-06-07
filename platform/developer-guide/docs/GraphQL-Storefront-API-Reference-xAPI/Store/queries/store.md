@@ -8,6 +8,7 @@ This query allows you to retrieve information about a store.
 |-----------------------------------|---------------------------------------------------------------|
 | `storeId` ==String!==             | The Id of the store to retrieve information from.             |
 | `cultureName` ==String==          | The language to retrieve data in.                             |
+| `domain` ==String==               | The domain or region to retrieve store information from.      |
 
 ## Possible Returns
 
