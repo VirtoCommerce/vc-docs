@@ -26,8 +26,6 @@ extra:
                   link: user-guide/getting-started
                 - title: User Documentation
                   link: user-guide/
-                - title: Public Demo Environment
-                  link: https://vcptcore-demo.govirto.com/ 
                 - title: Versions
                   link: user-guide/versions/virto3-products-versions
             - title: Developer Guide
