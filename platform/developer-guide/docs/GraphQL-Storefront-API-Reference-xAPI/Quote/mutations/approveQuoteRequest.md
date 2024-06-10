@@ -8,10 +8,10 @@ The `ApproveQuoteCommandType!` represents the input required to approve a quote 
 
 | Field                        | Description                                    |
 | ---------------------------- | -----------------------------------------------|
-| `quoteId` {==String!==}      | The Id of the quote request to be approved.    |
+| `quoteId` ==String!==      | The Id of the quote request to be approved.    |
 
 ## Possible returns
 
 | Possible return                                          	| Description                                 	|
 |---------------------------------------------------------	|---------------------------------------------	|
-| [`ApproveQuoteResultType`](../objects/ApproveQuoteResultType.md |  Information about the approval result.      	|
+| [`ApproveQuoteResultType`](../objects/ApproveQuoteResultType.md) |  Information about the approval result.      	|

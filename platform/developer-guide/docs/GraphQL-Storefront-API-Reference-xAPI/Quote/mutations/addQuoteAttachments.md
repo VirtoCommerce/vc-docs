@@ -8,8 +8,8 @@ The `AddQuoteAttachmentsCommandType!` represents the input required to add attac
 
 | Field                        | Description                                    |
 | ---------------------------- | -----------------------------------------------|
-| `quoteId` {==String!==}      | The Id of the quote to which attachments will be added.|
-| `urls` {==[String]!==}       | A list of URLs representing the new attachments. |
+| `quoteId` ==String!==      | The Id of the quote to which attachments will be added.|
+| `urls` ==[String]!==       | A list of URLs representing the new attachments. |
 
 ## Possible returns
 
