@@ -25,7 +25,7 @@ extra:
                 - title: Getting Started
                   link: user-guide/getting-started
                 - title: User Documentation
-                  link: user-guide/
+                  link: user-guide/overview
                 - title: Versions
                   link: user-guide/versions/virto3-products-versions
             - title: Developer Guide

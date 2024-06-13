@@ -1,4 +1,4 @@
-# Storefront User Documentation
+# Overview
 
 This guide is designed to help you navigate and make the most of your shopping experience on our platform. You will find valuable information on how to browse products, manage your account, place orders, and much more.
 

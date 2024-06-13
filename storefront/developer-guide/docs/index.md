@@ -1,4 +1,4 @@
-# Storefront Dev Documentation
+# Overview
 
 **xStorerfont** is Virto Commerce’s proprietary framework that enables building custom storefronts (customer facing online stores) for the solutions based on the VC platform. Basically, it is your ultimate starting point for new projects. It strives to include up-to-date best practices and solutions that we consider ESSENTIAL for most projects we build, and also showcases the opportunities and features when building storefronts.
 
