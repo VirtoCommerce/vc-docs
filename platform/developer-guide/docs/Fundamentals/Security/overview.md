@@ -1,6 +1,6 @@
 # Virto Commerce Security
 
-There are many aspects of security in Virto Platform and Web API. We will, however, be focusing on the core topics, sich as authentication, authorization, and some best practices you might want to follow.
+There are many aspects of security in Virto Platform and Web API. We will, however, be focusing on the core topics, such as authentication, authorization, and some best practices you might want to follow.
 
 !!! note
 	There has been much confusion in what the difference between authentication and authorization is. In fact, this is very simple:

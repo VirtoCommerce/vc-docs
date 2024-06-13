@@ -18,14 +18,15 @@ edit_uri: edit/dev/docs/
 
 # Page tree
 nav:
-    - Overview: index.md
-    - Docs: vc-docs-guide.md
-    - Modules:
-          - Overview: platform-overview.md
-          - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
-          - Getting Started: getting-started.md
+    - Overview: overview.md
+    - User Manual: 
+          - General Guidelines: general-guidelines.md
           - User Profile: user-profile.md
           - Modules Installation: modules-installation.md
+          - Getting Started: getting-started.md
+          - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
+    - Modules:
+          - Overview: platform-overview.md
           - <b>Catalog</b>:
                 - Overview: catalog/overview.md
                 - Managing Catalogs: 
@@ -42,19 +43,45 @@ nav:
                 - Managing Search Index: catalog/managing-search-index.md
                 - Product Indexing: catalog/product-indexing.md
                 - Settings: catalog/settings.md
-          - <b>Cart</b>:
-                - Overview: cart/overview.md
-                - Settings: cart/settings.md          
-          - <b>Contacts</b>:
-                - Overview: contacts/overview.md
-                - Managing Companies and Contacts: contacts/managing-contacts.md
-                - Filtering Options: contacts/filtering-options.md
-                - Settings: contacts/settings.md
+          - <b>Stores</b>:
+                - Overview: store/overview.md
+                - Adding New Store: store/adding-new-store.md
+                - Configuring Store: store/configuring-store.md
+                - Settings: store/settings.md
+          - <b>Pricing</b>:
+                - Overview: pricing/overview.md
+                - Managing Price Lists: pricing/creating-new-price-list.md
+                - Managing Price List Assignments: pricing/adding-new-assignment.md
+                - Pricing Data Export: pricing/export-functionality.md
+                - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
+                - Settings: pricing/managing-pricing-module-settings.md
+                - Troubleshooting: pricing/troubleshooting-guide.md
+                - Example: pricing/example.md
           - <b>Inventory</b>:
                 - Overview: inventory/overview.md
                 - Managing Inventory: inventory/managing-inventory.md
                 - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
                 - Settings: inventory/settings.md
+          - <b>Orders</b>:
+                - Overview: order-management/overview.md
+                - Order Information: order-management/main-objects.md
+                - Order Processing Scenarios:
+                      - Managing documents: order-management/managing-documents.md
+                      - Tracking Order Changes: order-management/tracking-order-changes.md
+                      - Managing returns: order-management/managing-returns.md
+                      - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
+                      - Indexation: order-management/indexation.md
+                - Notifications: order-management/notifications.md
+                - Permissions: order-management/permissions.md
+                - Settings: order-management/settings.md
+          - <b>Contacts</b>:
+                - Overview: contacts/overview.md
+                - Managing Companies and Contacts: contacts/managing-contacts.md
+                - Filtering Options: contacts/filtering-options.md
+                - Settings: contacts/settings.md
+          - <b>Cart</b>:
+                - Overview: cart/overview.md
+                - Settings: cart/settings.md          
           - <b>Marketing</b>:
                 - Overview: marketing/overview.md
                 - Promotions:
@@ -74,34 +101,20 @@ nav:
                       - Overview: marketing/dynamic-associations-overview.md
                       - Managing dynamic product associations: marketing/managing-dynamic-associations.md
                       - Rest API Testing: marketing/dynamic-associations-restapi.md
-          - <b>Orders</b>:
-                - Overview: order-management/overview.md
-                - Order Information: order-management/main-objects.md
-                - Order Processing Scenarios:
-                      - Managing documents: order-management/managing-documents.md
-                      - Tracking Order Changes: order-management/tracking-order-changes.md
-                      - Managing returns: order-management/managing-returns.md
-                      - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
-                      - Indexation: order-management/indexation.md
-                - Notifications: order-management/notifications.md
-                - Permissions: order-management/permissions.md
-                - Settings: order-management/settings.md
-          - <b>Pricing</b>:
-                - Overview: pricing/overview.md
-                - Managing Price Lists: pricing/creating-new-price-list.md
-                - Managing Price List Assignments: pricing/adding-new-assignment.md
-                - Pricing Data Export: pricing/export-functionality.md
-                - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
-                - Settings: pricing/managing-pricing-module-settings.md
-                - Troubleshooting: pricing/troubleshooting-guide.md
-                - Example: pricing/example.md
           - <b>Quotes</b>: 
                 - Overview: quotes/overview.md
                 - Managing Quotes: quotes/manage-quotes.md
                 - Settings: quotes/settings.md
-          - Assets: 
+          - <b>Assets</b>: 
             - Overview: assets/overview.md
             - Managing Assets: assets/managing-assets.md
+          - <b>Content</b>:
+                - Overview: content/overview.md
+                - Themes: content/managing-themes.md
+                - Pages: content/managing-pages.md
+                - Link Lists: content/managing-linklists.md
+                - Blogs: content/managing-blogs.md
+                - Settings: content/settings.md
           - Catalog Related Modules:
                 - Catalog Personalization:
                       - Overview: catalog-personalization/overview.md
@@ -114,13 +127,6 @@ nav:
                 - Catalog CSV Import:
                       - Overview: catalog-csv-import/overview.md
                       - Settings: catalog-csv-import/settings.md
-          - Content:
-                - Overview: content/overview.md
-                - Themes: content/managing-themes.md
-                - Pages: content/managing-pages.md
-                - Link Lists: content/managing-linklists.md
-                - Blogs: content/managing-blogs.md
-                - Settings: content/settings.md
           - Contracts:
                 - Overview: contracts/overview.md
                 - Managing contracts: contracts/creating-and-terminating-contracts.md
@@ -211,11 +217,6 @@ nav:
                 - Overview: sitemaps/overview.md
                 - Managing sitemaps: sitemaps/configuring-sitemaps.md
                 - Settings: sitemaps/settings.md
-          - Stores:
-                - Overview: store/overview.md
-                - Adding New Store: store/adding-new-store.md
-                - Configuring Store: store/configuring-store.md
-                - Settings: store/settings.md
           - Subscription: subscription/overview.md
           - Tasks:
                 - Overview: tasks/overview.md

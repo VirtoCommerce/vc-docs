@@ -25,11 +25,11 @@ You now can view and edit the quote details.
 
 The quote details blade contains:
 
-* Top menu.
+* Top toolbar.
 * General information segment.
 * Widgets segment.
 
-In the top menu, you can:
+With the top toolbar, you can:
 
 * View the current quote status.
 * Reset changes in the quote.

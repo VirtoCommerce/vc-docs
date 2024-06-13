@@ -1,47 +1,18 @@
 # Overview
 
-Learn more about Virto Commerce modules, their installation, and configuration.
+Learn more about the features of Virto Commerce modules. Below is a list of core modules that represent the basic functionality of the Platform:
 
-| Module         	                        | Key features                                                                                                                                     	|
-|------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------	|
-| [Catalog](catalog/overview.md)        	| <ul> <li>[Managing catalogs](catalog/add-new-catalog.md), [categories](catalog/managing-categories.md), [products](catalog/managing-products.md), [product variations](catalog/managing-product-variations.md)</li> <li>[Product indexing](catalog/product-indexing.md)</li> </ul>      	    |
-| [Cart](cart/settings.md)                  | <ul> <li>[Cart settings](cart/settings.md)</li> </ul>                                                                                             |     
-| [Contacts](contacts/overview.md)       	| <ul> <li>[Managing companies](contacts/managing-contacts.md)</li> <li>[Configuring contacts](contacts/settings.md)</li> </ul>                     |
-| [Inventory](inventory/overview.md)      	| <ul> <li>[Managing inventory](inventory/managing-inventory.md)</li> <li>[Managing fulfillment centers](inventory/managing-fulfillment-centers.md)</li> </ul>  |
-| [Marketing](marketing/overview.md)      	| <ul> <li>[Managing content items and published content](marketing/managing-content-items.md)</li> <li>[Managing content placeholders](marketing/managing-content-placeholders.md)</li> <li>[Managing promotions](marketing/managing-promotions.md)</li> <li>[Managing dynamic associations](marketing/managing-dynamic-associations.md)</li> </ul>            	|
-| [Orders](order-management/overview.md)  	| <ul> <li>[Tracking order changes](order-management/tracking-order-changes.md)</li> <li>[Managing returns](order-management/managing-returns.md)</li> <li>[Sending order information to Avatax](order-management/sending-order-information-to-avatax.md)</li> <li>[Assigning permissions](order-management/permissions.md)</li> </ul> 	|
-| [Pricing](pricing/overview.md)        	| <ul> <li>[Managing price lists](pricing/creating-new-price-list.md)</li> <li>[Managing price list assignments](pricing/adding-new-assignment.md)</li> <li>[Exporting pricing data](pricing/export-functionality.md)</li> </ul>                                	|
-| [Quotes](quotes/overview.md)              | <ul> <li>[Managing quotes](quotes/manage-quotes.md)</li> <li>[Configuring quotes](quotes/settings.md)</li> </ul>  |
-| [Algolia](algolia/overview.md)            | <ul> <li>[Module overview](algolia/overview.md)</li> </ul>         |
-| [Assets](assets/overview.md)              | <ul> <li>[Managing assets](assets/managing-assets.md) </li> </ul> |
-| [Azure search](azure-search/overview.md)  | <ul> <li>[Module overview](azure-search/overview.md)</li> </ul>         |
-| [Catalog CSV Import](catalog-csv-import/overview.md) | <ul><li>[Importing catalogs in CSV format](catalog-csv-import/overview.md)</li> </ul>|
-| [Catalog Personalization](catalog-personalization/overview.md) | <ul><li>[Catalog personalization](catalog-personalization/overview.md)</li></ul> |
-| [Catalog Publishing](catalog-publishing/overview.md) | <ul><li>[Catalog completeness evaluation](catalog-publishing/overview.md)</li> </ul>|
-| [Content](content/overview.md)           | <ul> <li>[Managing themes](content/managing-themes.md)</li> <li>[Managing pages](content/managing-pages.md)</li> <li>[Managing link lists](content/managing-linklists.md)</li> <li>[Managing blogs](content/managing-blogs.md)</li>  </ul> |
-| [Contracts](contracts/overview.md)      	| <ul> <li>[Managing contracts](contracts/creating-and-terminating-contracts.md)</li> <li>[Managing contract prices](contracts/managing-contract-prices.md)</li> <li>[Managing customers](contracts/managing-contract-customers.md)</li> </ul>  |
-| [Dynamic Asssociations](dynamic-associations/overview.md) | <ul> <li>[Managing dynamic associations](marketing/managing-dynamic-associations.md)</li> </ul> |
-| [Elastic App Search](elastic-app-search/overview.md)  | <ul> <li>[Module overview](elastic-app-search/overview.md)</li> </ul>         |
-| [Elastic Search](elastic-search/overview.md)  | <ul> <li>[Module overview](elastic-search/overview.md)</li> <li>[Module settings](elastic-search/overview.md)</li> </ul>         |
-| [Elastic Search 8](elastic-search-8/overview.md)  | <ul> <li>[Module overview](elastic-search-8/overview.md)</li> <li>[Module settings](elastic-search-8/settings.md)</li> </ul>         |
-| [Event Bus](event-bus/overview.md) | <ul> <li>[Configuring event translation](event-bus/configuration.md)</li> </ul> |
-| [Export and Import](customer-export-import/overview.md)| <ul> <li>[Export contacts](customer-export-import/overview.md)</li>  <li>[Import contacts](customer-export-import/overview.md)</li> </ul> |
-| [GDPR](gdpr/overview.md) | <ul> <li>[Anonymizing personal data](gdpr/manage-personal-data.md#anonymize-personal-data)</li> <li>[Downloading personal data](gdpr/manage-personal-data.md#download-personal-data)</li> </ul> |
-| [Generic Export](generic-export/overview.md)| <ul> <li>[Assigning permissions](generic-export/assigning-permissions.md) </li> <li>[Data export](generic-export/exporting-data.md)</li> <li>[Advanced filtering](generic-export/advanced-filtering.md)</li>  </ul>                                                     |
-| [Native Payment Methods](native-payment-methods/overview.md)| <ul> <li>[Managing non-integrative payment methods](native-payment-methods/managing-native-payment-methods.md)</li> </ul> |
-| [Notifications](notifications/overview.md)| <ul> <li>[Managing notification layouts](notifications/notification-layouts.md)</li> <li>[Managing notification log](notifications/notification-log.md)</li> </ul> |
-| [Payment](payment/overview.md)| <ul> <li>[Managing payment methods](payment/managing-payment-methods.md)</li> <li>[Payment settings](payment/settings.md)</li> </ul>|
-| [Push messages](push-messages/overview.md)| <ul> <li>[Managing push messages](push-messages/manage-push-messages.md)</li> <li>[Settings](push-messages/settings.md)</li> </ul>|
-| [Rating and Reviews](rating-reviews/overview.md) | <ul> <li>[Managing reviews](rating-reviews/managing-reviews.md)</li> <li>[Rest API](rating-reviews/rest-api.md)</li> <li>[Settings](rating-reviews/settings.md)</li> </ul>| 
-| [Return](return/overview.md)| <ul> <li>[Managing returns](return/managing-returns.md)</li> <li>[Rest API](return/rest-api.md)</li> <li>[Settings](return/settings.md)</li></ul>|
-| [Search modules](search/overview.md) | <ul><li>[Elastic Search 8](elastic-search-8/overview.md)</li> <li>[Elastic App Search](elastic-app-search/overview.md)</li> <li>[Elastic Search](elastic-search/overview.md)</li> <li>[Algolia](algolia/overview.md)</li> <li>[Lucene](lucene/overview.md)</li> <li>[Azure Search](azure-search/overview.md)</li></ul>|
-| [Security](security/overview.md)       	| <ul> <li>[Managing user accounts](security/managing-users.md)</li> <li>[Managing roles and permissions](security/roles-and-permissions.md)</li> <li>[Generating API key](security/api-key.md)</li>  </ul>  |
-| [Shipping](shipping/overview.md)| <ul><li>[Module overview](shipping/overview.md)</li> <li>[Settings](shipping/settings.md)</li></ul>|
-| [Shipstation](shipstation/overview.md)| <ul><li>[Module overview](shipstation/overview.md)</li></ul>|
-| [Sitemaps](sitemaps/overview.md)       	| <ul> <li>[Managing sitemaps](sitemaps/configuring-sitemaps.md)</li> <li>[Configuring sitemaps](sitemaps/settings.md)</li> </ul>                   |
-| [Stores](store/overview.md)            	| <ul> <li>[Managing stores](store/adding-new-store.md)</li> <li>[Configuring stores](store/configuring-store.md)</li> </ul>                        |
-| [Subscription](subscription/overview.md)  | <ul> <li>[Module overview](subscription/overview.md)</li></ul>|
-| [Tasks](tasks/overview.md)          	    | <ul> <li>[Using tasks application](tasks/using-application.md)</li> <li>[Roles and permissions](tasks/roles-permissions.md)</li> </ul>            |
-| [Tax](tax/overview.md) |  <ul> <li>[Module overview](tax/overview.md)</li> <li>[Module settings](tax/settings.md)</li> </ul>         |
-| [Thumbnails](thumbnails/overview.md)     	| <ul> <li>[Generating thumbnails](thumbnails/generating-thumbnails.md)</li> <li>[Managing thumbnails](thumbnails/thumbnail-options.md)</li> <li>[Using thumbnails](thumbnails/using-thumbnails.md)</li> </ul>                                                	|
-| [Webhooks](webhooks/overview.md)| <ul> <li>[Managing webhooks](webhooks/managing-webhooks.md)</li> <li>[Settings](webhooks/settings.md)</li></ul>|
+
+|Item|Description|
+|---|---|
+| ![Catalog](media/catalog-overview.png) |<br><ul><li> [Create catalogs](catalog/add-new-catalog.md) and [import products, prices, and stock to them](catalog/import-products-to-catalog.md)</li><li> [Manage product variations](catalog/managing-product-variations.md) and [availability ](catalog/setting-product-availability.md) </li> <li>[Index catalogs](catalog/managing-search-index.md)</li></ul>|
+| ![Stores](media/stores-overview.png) | <ul><li> [Add new store](store/adding-new-store.md)</li><li> [Set SEO for your store](store/configuring-store.md#seo) </li> <li>[Manage fulfillment centers](store/configuring-store.md#fulfillment-centers)</li> <li>[Manage products reviews and other settings](store/settings.md)</li></ul>|
+| ![Pricing](media/pricing-overview.png) | <br><ul><li> [Create price lists](pricing/creating-new-price-list.md)</li><li> [Edit product prices](pricing/creating-new-price-list.md#add-and-edit-product-prices) </li> <li>[Link price lists to catalogs and stores](pricing/adding-new-assignment.md)</li></ul>|
+| ![Inventory](media/inventory-overview.png) | <br><ul><li> [Track and manage product's inventory](inventory/managing-inventory.md)</li><li> [Add and edit fulfillments centers](inventory/managing-fulfillment-centers.md#add-and-edit-fulfillment-center) </li> <li>[Enable event-based indexing for inventory entities](inventory/settings.md#search-settings)</li></ul>|
+| ![Orders](media/orders-overview.png) | <ul><li> [View order information](order-management/main-objects.md)</li><li> [Track order changes](order-management/tracking-order-changes.md) </li> <li>[Manage returns](order-management/managing-returns.md)</li> <li>[Send order information to AvaTax](order-management/sending-order-information-to-avatax.md)</li></ul>|
+| ![Contacts](media/contacts-overview.png) | <br><ul><li> [Add and edit contacts](contacts/managing-contacts.md)</li><li> [Export and import contacts](contacts/managing-contacts.md#export-contacts) </li> <li>[Filter and search contacts](contacts/filtering-options.md)</li></ul>|
+| ![Cart](media/cart-overview.png) | <br><ul><li> [Discover cart key features](cart/overview.md#key-features)</li><li> [Track and remove obsolete carts](cart/settings.md) </li> </ul>|
+| ![Marketing](media/marketing-overview.png) | <ul><li> [Launch a promotion](marketing/managing-promotions.md#create-new-promotion)</li><li> [Create coupons and gift cards](marketing/managing-promotions.md#create-coupons-and-gift-cards) </li> <li>[Choose between best reward and stackable policies](modules-installation.md)</li> <li>[Customize your campaign to target specific customers](marketing/promotion-rules.md)</li></ul>|
+| ![Quotes](media/quotes-overview.png) | <br><ul><li> [View requested quotes](quotes/manage-quotes.md#view-quotes-list-and-quote-details)</li> <li> [Edit quote details](quotes/manage-quotes.md#edit-quote-details)</li> <li> [Submit your proposal](quotes/manage-quotes.md#edit-quote-details) </li> </ul>|
+| ![Assets](media/assets-overview.png) | <br><ul><li> [Upload files](assets/managing-assets.md#upload-files)</li><li> [Organize files](assets/managing-assets.md#organize-files) </li> <li>[Search files](assets/managing-assets.md#search-files)</li> </ul>|
+| ![Content](media/content-overview.png) | <ul><li> [Activate various themes](content/managing-themes.md)</li><li> [Create and edit pages](content/managing-pages.md) </li> <li>[Create link lists](content/managing-linklists.md)</li> <li>[Create blogs with unlimited number of posts](content/managing-blogs.md)</li></ul>|

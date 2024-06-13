@@ -18,8 +18,15 @@ The path to **vc-package.json**, discovery, and probing paths can be overridden 
 
 This target installs stable versions of modules by default. If you need the latest available versions, use the `-edge` parameter.
 
-If you use a source that requires authorization, you can pass tokens using the `GithubToken`, `AzureToken`, `GitLabToken` parameters.
- 
+If you use a source that requires authorization, you can pass tokens using the following parameters:
+
+* `GithubToken`: This token is used to authenticate and authorize access to GitHub resources.
+* `GitLabToken`: This token is used to authenticate and authorize access to GitLab resources.
+* `AzureToken`: This parameter represents the Azure Personal Access Token (PAT). Azure PAT is a security token that allows you to authenticate and access Azure resources.
+*	`AzureUniversalPackagesPat`: This parameter represents the Azure PAT specifically used for Universal Packages. Universal Packages are a type of package feed in Azure DevOps that allows you to store and distribute packages. 
+*	`AzureSasToken`: This parameter represents the Azure Shared Access Signature (SAS) Token for Azure Blob storage. Azure Blob storage is a service for storing large amounts of unstructured data, such as images, videos, and documents.
+
+
 ```console
 vc-build install (with no args)
 vc-build install -GitLabToken $GITLAB_TOKEN -githubtoken $GITHUB_TOKEN -AzureToken $AZURE_TOKEN
