@@ -203,26 +203,26 @@ extra:
                 link: marketplace
 
         documentation:
-            - title: Storefront
-              description: Build and personalize your online store for engaging shopping experiences
+            - title: Frontend
+            #   description: Build and personalize your online store for engaging shopping experiences
               image: assets/images/storefront.png
-              link: storefront
-            - title: Platform
-              description: Explore the Virto Commerce Platform, a solution designed to efficiently manage<br>and scale your entire e-commerce ecosystem
+              link: frontend
+            - title: Composable commerce
+            #   description: Explore the Virto Commerce Platform, a solution designed to efficiently manage<br>and scale your entire e-commerce ecosystem
               image: assets/images/platform.png
-              link: platform
-            - title: Marketplace
-              description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
-              image: assets/images/marketplace.png
-              link: marketplace
-            - title: Custom Apps
-              description: Create tailored solutions within the VC-Shell
-              image: assets/images/custom-apps.png
-              link: platform/developer-guide/custom-apps-development/overview
-            - title: CLI Tools
-              description: Streamline development with command-line interface tools tailored for efficient development workflows
-              image: assets/images/cli-tools.png
-              link: platform/developer-guide/CLI-tools/overview/
+              link: composable-commerce
+            # - title: Marketplace
+            #   description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
+            #   image: assets/images/marketplace.png
+            #   link: marketplace
+            # - title: Custom Apps
+            #   description: Create tailored solutions within the VC-Shell
+            #   image: assets/images/custom-apps.png
+            #   link: platform/developer-guide/custom-apps-development/overview
+            # - title: CLI Tools
+            #   description: Streamline development with command-line interface tools tailored for efficient development workflows
+            #   image: assets/images/cli-tools.png
+            #   link: platform/developer-guide/CLI-tools/overview/
 
         link_cards:
             - title: Contact support

@@ -1,5 +1,8 @@
 mkdocs build  -d ./site
 
+mkdocs build  -f frontend/mkdocs.yml -d ../site/frontend
+mkdocs build  -f composable-commerce/mkdocs.yml -d ../site/composable-commerce
+
 mkdocs build  -f storefront/mkdocs.yml -d ../site/storefront
 mkdocs build  -f storefront/user-guide/mkdocs.yml -d ../../site/storefront/user-guide
 mkdocs build  -f storefront/developer-guide/mkdocs.yml -d ../../site/storefront/developer-guide

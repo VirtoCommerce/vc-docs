@@ -1,0 +1,62 @@
+INHERIT: ../mkdocs.yml
+theme:
+    custom_dir: ../overrides
+
+
+# Project information
+extra_site_name: Composable commerce
+site_name: composable-commerce
+site_description: Platform documentation center
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/composable-commerce
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+extra:
+    main_page:
+        documentation:
+            - title: Platform
+              image: assets/images/storefront-userquide.png
+              link: ../platform
+              description:
+                - title: Getting Started
+                  link: user-guide/getting-started
+                - title: User Documentation
+                  link: user-guide/overview
+                - title: Versions
+                  link: user-guide/versions/virto3-products-versions
+            - title: Marketplace
+              image: assets/images/storefront-devguide.png
+              link: ../marketplace
+              description:
+                - title: Installation Guide
+                  link: developer-guide/Getting-Started/Installation-Guide/windows
+                - title: Architecture Overview
+                  link: developer-guide/Back-End-Architecture/02-conceptual-overview
+                - title: Extensibiliity
+                  link: developer-guide/Extensibility/overview
+                - title: Configuration reference
+                  link: developer-guide/Configuration-Reference/appsettingsjson
+                - title: Tutorials and How-tos
+                  link: developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module
+                - title: REST API Reference
+                  link: https://virtostart-demo-admin.govirto.com/docs/index.html
+                - title: GraphQL API Reference
+                  link: developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+            - title: CLI
+              image: assets/images/storefront-other.png
+              description:
+                - title: Release Notes
+                  link: https://github.com/VirtoCommerce/vc-platform/releases
+                - title: Github
+                  link: https://github.com/VirtoCommerce/vc-platform/
+
+
+nav:
+    - Home: index.md
+  # - Developer Guide: "!include ./developer-guide/mkdocs.yml"
+  # - User Guide: "!include ./user-guide/mkdocs.yml"
+
