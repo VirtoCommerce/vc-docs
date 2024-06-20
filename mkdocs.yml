@@ -215,7 +215,7 @@ extra:
                 - title: CLI tools
                   link: platform/developer-guide/CLI-tools/overview
             - title: Frontend
-              image: assets/images/storefront-userquide.png
+              image: assets/images/storefront.png
               link: storefront
               topdescription: Tools and workflows designed to enhance customer-facing experiences
               description: 
