@@ -4,7 +4,7 @@ theme:
     custom_dir: ../overrides
 
 # Project information
-extra_site_name: Storefront docs
+extra_site_name: Documentation
 site_name: storefront
 site_description: Storefront documentation center
 site_author: Virto Commerce

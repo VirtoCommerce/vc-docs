@@ -7,8 +7,8 @@
 <section class="main-container md-grid">
     <div class="md-typeset main-container__wrapper">
         <div class="main-container__head">
-            <h1 class="main-container__title">Welcome to Virto Documentation</h1>
-            <p class="main-container__desc">Select a solution you want to explore!</p>
+            <h1 class="main-container__title">Welcome to Virto Commerce Documentation</h1>
+            <p class="main-container__desc">Select a solution you want to explore or use our <a href="../platform/user-guide/vc-docs-guide">roadmap</a> to navigate through our documentation!</p>
         </div>
     </div>
 </section>
@@ -19,7 +19,7 @@
         <div class="main-container__cards-row">
             {% for card in config.extra.main_page.documentation %}
             <div class="main-container__cards-col main-container__cards-col_wide">
-                {% include "partials/card.html" %}
+                {% include "partials/doc-card.html" %}
             </div>
             {% endfor %}
 

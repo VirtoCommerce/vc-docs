@@ -25,6 +25,8 @@ The `ContactType` represents a contact and includes various fields to describe t
 | `middleName`  ==String==      	                                            | The middle name of the contact.                                 	|
 | `fullName`  ==String==        	                                            | The full name of the contact.                                   	|
 | `about`  ==String==           	                                            | Information about the contact.                                  	|
+| `defaultLanguage`  ==String==                                                 | The default language of the contact.                              |
+| `currencyCode`  ==String==                                                    | The preferred currency code of the contact.                       |
 | `birthDate`  ==Date==         	                                            | The birth date of the contact.                                  	|
 | `securityAccounts` [ ==UserType== ](UserType.md)                              | The security accounts associated with the contact.               	|
 | `organizationId`  ==String==  	                                            | The Id of the organization associated with the contact.          	|

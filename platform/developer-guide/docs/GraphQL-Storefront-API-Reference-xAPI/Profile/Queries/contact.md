@@ -14,7 +14,7 @@ This connection allows you to get the contact by its Id.
 
 | Possible return                                    	| Description                             	|
 |---------------------------------------------------	|------------------------------------------	|
-| [`Contact`](../Objects/ContactType.md)              | The contact's information and attributes.	|
+| [`ContactType`](../Objects/ContactType.md)              | The contact's information and attributes.	|
 
 ## Examples
 

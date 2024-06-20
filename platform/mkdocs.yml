@@ -4,7 +4,7 @@ theme:
 
 
 # Project information
-extra_site_name: Platform docs
+extra_site_name: Documentation
 site_name: platform
 site_description: Platform documentation center
 site_author: Virto Commerce
@@ -25,7 +25,7 @@ extra:
                 - title: Getting Started
                   link: user-guide/getting-started
                 - title: User Documentation
-                  link: user-guide/overview
+                  link: user-guide
                 - title: Versions
                   link: user-guide/versions/virto3-products-versions
             - title: Developer Guide

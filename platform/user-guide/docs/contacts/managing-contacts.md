@@ -25,6 +25,12 @@ To add a contact:
 	
 	![Readmore](media/readmore.png){: width="25"} [Managing personal prices](../pricing/adding-new-assignment.md)
 
+
+	!!! note
+		When adding store customers (**Contacts**), you can set the default language and default currency for their accounts:
+
+		![Default language](media/default-language.png)
+
 1. Click **Create** to save the changes.
 
 The company appears in the **Companies and Contacts** list.

@@ -28,6 +28,7 @@ nav:
           - Personal and Corporate Accounts: account/overview.md
           - Dashboard: account/dashboard.md
           - Profile: account/profile.md
+          - Change Password: account/change-password.md 
           - Addresses: account/addresses.md
           - Orders: account/orders.md
           - Lists: account/lists.md

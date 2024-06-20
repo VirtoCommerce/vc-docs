@@ -4,16 +4,22 @@ This query is used to retrieve push messages, including the unread count and the
 
 ## Arguments
 
-| Argument                 | Description                                                |
-|--------------------------|------------------------------------------------------------|
-| `unreadOnly` ==Boolean== | Flag indicating whether to retrieve only unread messages.  |
-| `cultureName` ==String== | A language to retrieve data in.                            |
+| Argument              | Description                                                                        |
+|-----------------------|------------------------------------------------------------------------------------|
+| `after` ==String==    | The cursor to fetch messages after a specific point.                               |
+| `first` ==Int==       | The number of messages to retrieve.                                                |
+| `keyword` ==String==  | A keyword to filter the messages.                                                  |
+| `sort` ==String==        | The sorting criteria for the messages.                                          |
+| `unreadOnly` ==Boolean== | Flag indicating whether to retrieve only unread messages.                       |
+| `withHidden` ==Boolean== | Flag indicating whether to include hidden messages.                             |
+| `cultureName` ==String== | A language to retrieve data in.                                                 |
 
 ## Possible returns
 
 | Possible return                                                       | Description                                             |
 |-----------------------------------------------------------------------|---------------------------------------------------------|
-| [`PushMessagesResponseType`](../Objects/PushMessageResponseType.md)   | The structured data for push messages response.         |
+| [`PushMessageConnection`](../Objects/PushMessageConnection.md)      | The structured data for push messages response.         |
+
 
 ## Examples
 

@@ -1,10 +1,14 @@
 # Profile
 
+![Profile](../media/profile.png)
+
 In the **Profile** section, you can:
 
 * Edit your name, last name, email.
 * Change your password.
+* Set a default language from the dropdown list. The interface language will be automatically changed to the chosen one:
 
-![Profile](../media/profile.png)
+    ![Set default language](../media/set-default-language.gif)
 
-![Readmore](../media/readmore.png){: width="25"} [Password management](../registration_and_signing_in/password-management.md)
+* Set a default currency from the dropdown list. The selected currency will be automatically applied to all the prices. 
+

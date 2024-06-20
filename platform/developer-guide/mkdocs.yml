@@ -453,17 +453,24 @@ nav:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview.md
                 - Queries:
                       - Push messages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/pushMessages.md
+                      - FcmSettings: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/FcmSettings.md
                 - Objects:
                       - PushMessageType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageType.md
-                      - PushMessageResponseType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageResponseType.md
+                      - PushMessageConnection: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageConnection.md
+                      - PushMessageEdge: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageEdge.md
                       - InputMarkPushMessageReadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageReadType.md
                       - InputMarkPushMessageUnreadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageUnreadType.md
+                      - FcmSettingsType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/FcmSettingsType.md
+                      - InputAddFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputAddFcmTokenType.md
+                      - InputDeleteFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputDeleteFcmTokenType.md 
                 - Mutations:
                       - markPushMessageRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageRead.md
                       - markPushMessageUnrea: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageUnread.md
                       - markAllPushMessagesRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesRead.md
                       - markAllPushMessagesUnread: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesUnread.md
                       - clearAllPushMessages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/clearAllPushMessages.md
+                      - addFcmToken: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/addFcmToken.md
+                      - deleteFcmToken: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/deleteFcmToken.md
                 - Subscriptions:
                       - pushMessageCreated: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Subscriptions/pushMessageCreated.md
           - Quote:

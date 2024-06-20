@@ -15,7 +15,10 @@
         <div class="doc-card__header">
             <h2 class="doc-card__title">{{ card.title }}</h2>
         </div>
-        <div class="doc-card__content">
+        <div class="card__content">
+            <p>{{ card.topdescription }}</p>
+        </div>
+	<div class="doc-card__content">
             <div class="doc-card__nav">
                 {% for option in card.description %}
                 <div class="doc-card__content-item truncate">

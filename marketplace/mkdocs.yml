@@ -3,7 +3,7 @@ theme:
     custom_dir: ../overrides
 
 # Project information
-extra_site_name: Marketplace Docs
+extra_site_name: Documentation
 site_name: marketplace
 site_description: Marketplace documentation center
 site_author: Virto Commerce

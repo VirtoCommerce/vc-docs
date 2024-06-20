@@ -644,6 +644,67 @@ This node is used for Used for platform settings overriding.
 }
 ```
 
+### Push messages
+
+This node configures the push notification settings for the Virto Commerce Push Messages` module using Firebase Cloud Messaging (FCM).
+
+| Node                        | Sample value                                                      | Description                                                                 |
+|-----------------------------|------------------------------------------------------------------ |-----------------------------------------------------------------------------|
+| UseFirebaseCloudMessaging   | `true`<br> `false`                                                | This **required** setting enables/disables Firebase Cloud Messaging.        |
+| FcmSenderOptions            |                                                                   | Configuration settings for the FCM sender account.                          |
+|    Type                     | `"service_account"`                                               | The type of the FCM sender account.                                         |
+|    ProjectId                | `"vc-push-86046"`                                                 | The project ID of the FCM project.                                          |
+|    PrivateKeyId             | `"956335b2eeccd3b37ef8f6871b406a6a31e1b29a"`                      | The private key ID for the FCM service account.                             |
+|    PrivateKey               | `"-----BEGIN PRIVATE KEY-----\n…-----END PRIVATE KEY-----\n"`     | The private key for the FCM service account.                                |
+|    ClientEmail              | `"firebase-adminsdk-5gw7s@vc-push-86046.iam.gserviceaccount.com"` | The client email for the FCM service account.                               |
+|    ClientId                 | `"117271734888260111772"`                                         | The client ID for the FCM service account.                                  |
+|    AuthUri                  | `"https://accounts.google.com/o/oauth2/auth"`                     | The authentication URI for the FCM service account.                         |
+|    TokenUri                 | `"https://oauth2.googleapis.com/token"`                           | The token URI for the FCM service account.                                  |
+|    AuthProviderX509CertUrl  | `"https://www.googleapis.com/oauth2/v1/certs"`                    | The URL for the X509 certificate provider.                                  |
+|    ClientX509CertUrl        | `"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5gw7s%40vc-push-86046.iam.gserviceaccount.com"` | The URL for the client X509 certificate.  |
+|    UniverseDomain           | `"googleapis.com"`                                                | The domain used by the FCM service account.                                 |
+| FcmReceiverOptions          |                                                                   | Configuration settings for the FCM receiver account.                        |
+|    ApiKey                   | `"AIzaSyCy9gsvKM1e77GRYw6M9rKRRSekZNAgRnI"`                       | The API key for the FCM receiver.                                           |
+|    AuthDomain               | `"vc-push-86046.firebaseapp.com"`                                 | The authentication domain for the FCM receiver.                             |
+|    ProjectId                | `"vc-push-86046"`                                                 | The project ID for the FCM receiver.                                        |
+|    StorageBucket            | `"vc-push-86046.appspot.com"`                                     | The storage bucket for the FCM receiver.                                    |
+|    MessagingSenderId        | `"647691501458"`                                                  | The messaging sender ID for the FCM receiver.                               |
+|    AppId                    | `"1:647691501458:web:2b18fc3a864469ac378b4b"`                     | The application ID for the FCM receiver.                                    |
+|    VapidKey                 | `"BJyVagnZqcHI6_vwxILEfxpbVAq0F-ASE5k3WwX_F72WaQr_ysHKqhH5-8yWfUhNs9oecGcOy8kJ_m4b-OXrNFs"` | The VAPID key for the FCM receiver.               |
+
+**Examples**
+
+```json title="appsettings.json"
+{
+  "PushMessages": {
+    "UseFirebaseCloudMessaging": true,
+    "FcmSenderOptions": {
+      "Type": "service_account",
+      "ProjectId": "vc-push-86046",
+      "PrivateKeyId": "956335b2eeccd3b37ef8f6871b406a6a31e1b29a",
+      "PrivateKey": "-----BEGIN PRIVATE KEY-----\n…-----END PRIVATE KEY-----\n",
+      "ClientEmail": "firebase-adminsdk-5gw7s@vc-push-86046.iam.gserviceaccount.com",
+      "ClientId": "117271734888260111772",
+      "AuthUri": "https://accounts.google.com/o/oauth2/auth",
+      "TokenUri": "https://oauth2.googleapis.com/token",
+      "AuthProviderX509CertUrl": "https://www.googleapis.com/oauth2/v1/certs",
+      "ClientX509CertUrl": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5gw7s%40vc-push-86046.iam.gserviceaccount.com",
+      "UniverseDomain": "googleapis.com"
+    },
+    "FcmReceiverOptions": {
+      "ApiKey": "AIzaSyCy9gsvKM1e77GRYw6M9rKRRSekZNAgRnI",
+      "AuthDomain": "vc-push-86046.firebaseapp.com",
+      "ProjectId": "vc-push-86046",
+      "StorageBucket": "vc-push-86046.appspot.com",
+      "MessagingSenderId": "647691501458",
+      "AppId": "1:647691501458:web:2b18fc3a864469ac378b4b",
+      "VapidKey": "BJyVagnZqcHI6_vwxILEfxpbVAq0F-ASE5k3WwX_F72WaQr_ysHKqhH5-8yWfUhNs9oecGcOy8kJ_m4b-OXrNFs"
+    }
+  }
+}
+```
+
+
 ### Search
 
 This node configures full text search for the `VirtoCommerce.Search` module.

@@ -2,76 +2,11 @@
 
 Learn how to use Virto Commerce solutions with our installation, configuration, and development guides.
 
-## Understand Virto Commerce
-
-Gain a clear understanding of Virto Commerce's Atomic Architecture, including its principles, roles, release processes, and other fundamental aspects. 
-
-* [Atomic architecture.](https://virtocommerce.com/atomic-architecture)
-* [Headless solution.](https://virtocommerce.com/b2b-headless-ecommerce-solution)
-* [Scalability.](https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Scalability/scalability-options/)
-* [Modularity.](https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Modularity/01-overview/)
-* [Security.](https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/overview/)
-* [Release strategy.](https://docs.virtocommerce.org/platform/developer-guide/Updating-Virto-Commerce-Based-Project/release-strategy-overview/)
-
-## Assess your skills
-
-Understand the required third-party .NET libraries and identify the learning paths necessary for developers working with Virto Commerce.
-
-* [Skills required for VC developers](https://www.virtocommerce.org/t/what-are-the-skills-required-for-virto-commerce-developer/90)
-
-## Install
-
-Follow step-by-step instructions to install Virto Commerce on different platforms.
-
-* Platform:
-    * [on Virto cloud.](https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows/#use-virto-commerce-cli)
-    * [on Azure cloud.](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure/)
-    * [On premises.](https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows/#download-precompiled-binaries)
-* [Theme:](http://localhost/storefront/developer-guide/getting-started/quickstart-on-windows/#install-vc-theme-b2b-vue-from-bundle)
-
-## Configure
-
-Learn how to set up and manage different aspects of your Virto Commerce store.
-
-* [Create new store.](https://docs.virtocommerce.org/platform/user-guide/store/adding-new-store/)
-* [Manage catalogs.](https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/)
-* [Manage products.](https://docs.virtocommerce.org/platform/user-guide/catalog/managing-products/)
-* [Manage price-lists.](https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/)
-* [Manage inventory.](https://docs.virtocommerce.org/platform/user-guide/inventory/managing-inventory/)
-* [Manage promotions.](https://docs.virtocommerce.org/platform/user-guide/marketing/managing-promotions/)
-* [Manage permissions.](https://docs.virtocommerce.org/platform/user-guide/order-management/permissions/)
-* Settings.
-* View result on frontend environment.
-
-## Develop
-
-Access tutorials and guides on developing custom modules and features for Virto Commerce.
-
-* [Create module from template:](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/)
-	* [Build and run](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#create-solution-from-template)
-    * [Work with database](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#work-with-database)
-    * [Add new API endpoints](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#adding-new-api)
-    * [Extend UI](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#extend-vc-manager-with-new-ui)
-    * [Debug](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#test-and-debug-api)
-    * [Pack and deploy](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#pack-your-module)
-
-* [Create module from scratch](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch/)
-
-## Extend
-
-Learn how to extend existing modules and develop custom themes to enhance the functionality and appearance of your Virto Commerce store.
-
-* Extend existing modules:
-    * Add dependencies:
-        * [Extend domain types.](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/extending-domain-models/)
-        * [Extend database.](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/extending-database-model/)
-	* Extend UI:
-        * [Menu.](https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/extending-main-menu/)
-        * [Widgets.](https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/widgets/)
-        * [Blades.](https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/blades-and-navigation/)
-* Develop theme:
-    * [Fork and build](https://www.virtocommerce.org/t/how-to-contribute-to-virto-commerce/459)
-    * [Configure.](https://docs.virtocommerce.org/platform/user-guide/content/managing-themes/)
-    * [Customize.](https://docs.virtocommerce.org/platform/user-guide/content/managing-pages/)
-    * Receive updates (merge).
-* [How to contribute to VC](https://www.virtocommerce.org/t/how-to-contribute-to-virto-commerce/459)
+|Step|Description|
+|---|---|
+| ![Understand](media/get-start-1.png) | <ul><li> [Atomic architecture](https://virtocommerce.com/atomic-architecture)</li><li> [Headless solution](https://virtocommerce.com/b2b-headless-ecommerce-solution) </li> <li>[Scalability](../../developer-guide/Fundamentals/Scalability/scalability-options)</li> <li>[Modularity](../../developer-guide/Fundamentals/Modularity/01-overview)</li><li> [Security](../../developer-guide/Fundamentals/Security/overview)</li><li> [Release strategy](../../developer-guide/Updating-Virto-Commerce-Based-Project/release-strategy-overview)</li></ul>|
+| ![Assess](media/get-start-2.png) | <ul><li> [Common skills](../../developer-guide/skills-required-for-VC-developers/#common-skills)</li><li> [Ecommerce common skills](../../developer-guide/skills-required-for-VC-developers/#e-commerce-common-skills)</li><li> [Backend developer skills](../../developer-guide/skills-required-for-VC-developers/#backend-developer-skills)</li><li> [Frontend developer skills](../../developer-guide/skills-required-for-VC-developers/#frontend-developer-skills)</li></ul>|
+| ![Install](media/get-start-3.png) | Platform:<br><ul><li> [On Virto cloud](../../developer-guide/Getting-Started/Installation-Guide/windows/#use-virto-commerce-cli)</li><li> [On Azure cloud](../../developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure)</li> <li>[On Premises](../../developer-guide/Getting-Started/Installation-Guide/windows/#download-precomplied-binaries)</li></ul> Theme:<br><ul><li>[From bundle](../../../storefront/developer-guide/getting-started/quickstart-on-windows)</li></ul>|
+| ![Configure](media/get-start-4.png) | <ul><li> [Create, export, import catalogs](catalog/add-new-catalog.md)</li><li> [Create and configure new store](store/adding-new-store.md)</li><li> [Add products](catalog/managing-products.md)</li><li> [Create price-lists and add products to them](pricing/creating-new-price-list.md)</li><li>[Manage inventory](inventory/managing-inventory.md)</li><li>[Manage promotions](marketing/managing-promotions.md)</li><li>[Manage permissions](security/roles-and-permissions.md)</li><li>[Settings](general-guidelines.md/#settings)</li><li>[View results on frontend environment](view-results-on-frontend.md)</li></ul>|
+| ![Develop](media/get-start-5.png) | Create module: <br> <ul><li> [From template:](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module)</li> <ul><li> [Build and run](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#create-solution-from-template)</li><li> [Work with database](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#work-with-database) </li><li> [Add new API endpoints](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#adding-new-api) </li> <li> [Extend UI](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#extend-vc-manager-with-new-ui)</li> <li> [Debug](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#test-and-debug-api)</li><li> [Pack and deploy](../../developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module/#pack-your-module)</li></ul></li> <li> [From scratch](../../developer-guide/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch)</li></ul>|
+| ![Extend](media/get-start-6.png) | Extend existing modules:<br><ul><li>Add dependencies:</li> <ul><li>[Extend domain types](../../developer-guide/Tutorials-and-How-tos/Tutorials/extending-domain-models) </li><li>[Extend database](../../developer-guide/Tutorials-and-How-tos/Tutorials/extending-database-model)</li></ul></li><li>Extend UI:<ul><li>[Main menu](../../developer-guide/Platform-Manager/Extensibility-Points/extending-main-menu)</li><li>[Widgets](../../developer-guide/Platform-Manager/Extensibility-Points/widgets)</li><li>[Blades](../../developer-guide/Platform-Manager/Extensibility-Points/blades-and-navigation)</li></ul></li></ul></li><li>Develop theme:<ul><li>[Fork and build](https://www.virtocommerce.org/t/how-to-contribute-to-virto-commerce/459)</li><li>[Configure](content/managing-themes.md)</li><li>[Customize](content/managing-pages.md)</li><li>[Receive updates (merge)[In progress] ]()</li></ul></li><li>[How to contribute to VC](https://www.virtocommerce.org/t/how-to-contribute-to-virto-commerce/459)</li></ul>|

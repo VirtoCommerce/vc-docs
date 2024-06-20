@@ -18,13 +18,14 @@ edit_uri: edit/dev/docs/
 
 # Page tree
 nav:
-    - Overview: overview.md
+    - Overview: index.md
     - User Manual: 
           - General Guidelines: general-guidelines.md
           - User Profile: user-profile.md
           - Modules Installation: modules-installation.md
           - Getting Started: getting-started.md
           - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
+          - View Results on Frontend Environment: view-results-on-frontend.md
     - Modules:
           - Overview: platform-overview.md
           - <b>Catalog</b>:
@@ -172,6 +173,7 @@ nav:
           - Push Messages: 
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md
+                - Messaging via Firebase Cloud: push-messages/firebase-cloud-messaging.md
                 - Settings: push-messages/settings.md
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
