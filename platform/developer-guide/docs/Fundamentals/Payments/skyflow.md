@@ -13,7 +13,7 @@ The Skyflow module facilitates seamless integration with [SkyFlow](https://www.s
 * **Integration with Virto Storefront:** Seamlessly integrate with [Virto Storefront](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive e-commerce experience.
 * **Flexible Customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and SkyFlow to tailor integrations with a variety of payment providers to meet your specific requirements.
 * **Optimized for Marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
-* **Saved Credit Card (coming soon):** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions (upcoming feature).
+* **Saved Credit Card:** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions.
 
 ## Prerequisites
 

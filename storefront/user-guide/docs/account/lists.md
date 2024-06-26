@@ -5,6 +5,8 @@ The lists help users save items they are interested in for future consideration.
 In the **Lists** section, you can:
 
 * Create new lists.
+* Configure lists privacy.
+* View number of items in the list.
 * Edit lists names.
 * Delete lists.
 
