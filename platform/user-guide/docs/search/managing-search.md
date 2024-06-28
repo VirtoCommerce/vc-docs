@@ -46,7 +46,9 @@ The next blade displays the result of indexation:
 ## Blue-Green Indexing
 
 !!! note
-    The blue-green indexing is supported by the ElasticSearch  and the Elastic Search 8 modules.<br>
+    The blue-green indexing is supported by the ElasticSearch, Azure Search,  and the Elastic Search 8 modules.<br>
+    ![Readmore](media/readmore.png){: width="25"} [Azure Search module](../azure-search/overview.md)
+
     ![Readmore](media/readmore.png){: width="25"} [Elastic Search module](../elastic-search/overview.md)
     
     ![Readmore](media/readmore.png){: width="25"} [Elastic Search 8 module](../elastic-search-8/overview.md)

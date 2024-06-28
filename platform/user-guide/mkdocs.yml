@@ -26,6 +26,7 @@ nav:
           - Getting Started: getting-started.md
           - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
           - View Results on Frontend Environment: view-results-on-frontend.md
+          - ADA Compliance: ada-compliance.md
     - Modules:
           - Overview: platform-overview.md
           - <b>Catalog</b>:

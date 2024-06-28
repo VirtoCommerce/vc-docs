@@ -7,6 +7,7 @@ Product pages display:
 * Discounts and price per item.
 * Images and videos.
 * Related products.
+* Product variations.
 
 From the product page, you can:
 
@@ -18,4 +19,6 @@ From the product page, you can:
 
 ![Physical product page layout](../media/product-page.png)
 
+If a product has variations, they will be displayed in a separate widget as a list or as a table:
 
+![Products variations](../media/product-variations.png){: width="750"}
