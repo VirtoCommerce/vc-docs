@@ -6,7 +6,7 @@ theme:
 # Project information
 extra_site_name: Storefront Dev Docs
 site_name: storefront/developer-guide
-site_description: --TBD--
+site_description: Build and personalize your online store for engaging shopping experiences
 site_url: https://docs.virtocommerce.org/storefront/developer-guide
 
 
@@ -29,13 +29,7 @@ nav:
     - Integrations:
           - Google Analytics Events: integrations/google-analytics/ga-events.md
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md
-          - Builder.io:
-              - Overview: integrations/builder-io/overview.md
-              - Catalog Menu Integration: integrations/builder-io/catalog-menu-intergration.md
-              - Category Page Integration: integrations/builder-io/category-page-integration.md
-              - Footer Integration: integrations/builder-io/footer-integration.md
-              - Index Page Integration: integrations/builder-io/index-page-integration.md
-              - Registering Custom Components: integrations/builder-io/registering-custom-components.md
+          - Builder.io: integrations/builder-io/overview.md
           - Storyblok:
               - Overview: integrations/storyblok/overview.md
               - Catalog Menu Integration: integrations/storyblok/catalog-menu-integration.md

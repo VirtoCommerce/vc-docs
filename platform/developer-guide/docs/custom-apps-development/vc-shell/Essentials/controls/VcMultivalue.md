@@ -46,22 +46,22 @@ To customize the appearance and behavior of your multivalue, use the following p
 
 |Property and Type       | Description                                      |
 | --------------------- | ------------------------------------------------ |
-| `placeholder` {==string==}        | Multivalue placeholder text.                          |
-| `modelValue` {==T[]==}        | Model of the component.                          |
-| `required` {==boolean==}         | Multivalue required state.                            |
-| `disabled` {==boolean==}         | Put component in disabled mode.                  |
-| `type` {==text==}, {==number==}             | Multivalue type.                                |
-| `label` {==string==}             | Multivalue label text.                                |
-| `tooltip` {==string==}           | Multivalue tooltip information.                       |
-| `name` {==string==}            | Used to specify the name of the control.         |
-| `options` {==T[]==}             | Multivalue options list                                |
-| `optionValue` {==string==}             | Property of option which holds the 'value'. Default value: `id`.                                |
-| `optionLabel` {==string==}  | Property of option which holds the 'label'. Default value: `title`. |
-| `multivalue` {==boolean==}  | Ability to add values with Add button. |
-| `error` {==boolean==}                 | Shows, if the field has validation errors. |
-| `errorMessage` {==string==}           | Validation error message (gets displayed only if 'error' is set to 'true'). |
-| `multilanguage` {==boolean==}         | Multilanguage support. |
-| `currentLanguage` {==string==}        | Current language. |
+| `placeholder` ==string==        | Multivalue placeholder text.                          |
+| `modelValue` ==T[]==        | Model of the component.                          |
+| `required` ==boolean==         | Multivalue required state.                            |
+| `disabled` ==boolean==         | Put component in disabled mode.                  |
+| `type` ==text==, ==number==             | Multivalue type.                                |
+| `label` ==string==             | Multivalue label text.                                |
+| `tooltip` ==string==           | Multivalue tooltip information.                       |
+| `name` ==string==            | Used to specify the name of the control.         |
+| `options` ==T[]==             | Multivalue options list                                |
+| `optionValue` ==string==             | Property of option which holds the 'value'. Default value: `id`.                                |
+| `optionLabel` ==string==  | Property of option which holds the 'label'. Default value: `title`. |
+| `multivalue` ==boolean==  | Ability to add values with Add button. |
+| `error` ==boolean==                 | Shows, if the field has validation errors. |
+| `errorMessage` ==string==           | Validation error message (gets displayed only if 'error' is set to 'true'). |
+| `multilanguage` ==boolean==         | Multilanguage support. |
+| `currentLanguage` ==string==        | Current language. |
 
 #### Slots
 
@@ -121,24 +121,24 @@ To incorporate the multivalue into your dynamic applications, define the followi
 
 | Property and Type                     | Description                                       |
 | ------------------------------------- | -----------------------------------------------   |
-| `id` {==string==}                     | The unique Id for the `vc-multivalue` component.       |
-| `component` {==vc-multivalue==}       | The `vc-multivalue` component.       |
-| `label?` {==string==}                 | Multivalue label text. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                               |
-| `tooltip?` {==string==}               | Multivalue tooltip information. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                      |
-| `property` {==string==}               | The property of the model that the component is bound to. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`. |
-| `placeholder?` {==string==}           | Multivalue placeholder text. You can specify the localization key for the `placeholder`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                         |
-| `required?` {==boolean==}             | Multivalue required state.                            |
-| `disabled?` {==boolean==}             | Put component in disabled mode.                  |
-| `variant?` {==text==}, {==number==}   | Multivalue type.                                |
-| `rules` {==IValidationRules==}        | Validation rules for the multivalue. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
-| `options?` {==string==}                  | Method to get multivalue options array. Method should be defined in the `scope` blade.                                |
-| `optionValue?` {==string==}           | Property of option which holds the 'value'. Default value: `id`.                                |
-| `optionLabel?` {==string==}           | Property of option which holds the 'label'. Default value: `title`. |
-| `multivalue?` {==boolean==}           | Ability to add values with Add button. |
-| `error?` {==boolean==}                | Shows, if the field has validation errors. |
-| `errorMessage?` {==string==}          | Validation error message (gets displayed only if 'error' is set to 'true'). |
-| `multilanguage?` {==boolean==}        | Multilanguage support. |
-| `currentLanguage?` {==string==}       | Current language. |
-| `visibility?` {=={ method: string }==} | Visibility settings. |
-| `customTemplate?` {=={ component: string }==} | Custom template settings. |
-| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
+| `id` ==string==                     | The unique Id for the `vc-multivalue` component.       |
+| `component` ==vc-multivalue==       | The `vc-multivalue` component.       |
+| `label?` ==string==                 | Multivalue label text. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                               |
+| `tooltip?` ==string==               | Multivalue tooltip information. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                      |
+| `property` ==string==               | The property of the model that the component is bound to. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`. |
+| `placeholder?` ==string==           | Multivalue placeholder text. You can specify the localization key for the `placeholder`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                         |
+| `required?` ==boolean==             | Multivalue required state.                            |
+| `disabled?` ==boolean==             | Put component in disabled mode.                  |
+| `variant?` ==text==, ==number==   | Multivalue type.                                |
+| `rules` ==IValidationRules==        | Validation rules for the multivalue. Uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
+| `options?` ==string==                  | Method to get multivalue options array. Method should be defined in the `scope` blade.                                |
+| `optionValue?` ==string==           | Property of option which holds the 'value'. Default value: `id`.                                |
+| `optionLabel?` ==string==           | Property of option which holds the 'label'. Default value: `title`. |
+| `multivalue?` ==boolean==           | Ability to add values with Add button. |
+| `error?` ==boolean==                | Shows, if the field has validation errors. |
+| `errorMessage?` ==string==          | Validation error message (gets displayed only if 'error' is set to 'true'). |
+| `multilanguage?` ==boolean==        | Multilanguage support. |
+| `currentLanguage?` ==string==       | Current language. |
+| `visibility?` =={ method: string }== | Visibility settings. |
+| `customTemplate?` =={ component: string }== | Custom template settings. |
+| `horizontalSeparator` ==boolean==       | Adds a horizontal separator line after the component. |

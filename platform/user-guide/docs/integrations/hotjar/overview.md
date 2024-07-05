@@ -1,4 +1,6 @@
-Hotjar module allows you to assign Hotjar Site Id for your Store. It get insights about the shopping behaviour of your customers from:
+# Overview
+
+The Hotjar module allows you to assign Hotjar Site Id for your Store. It gets insights about the shopping behaviour of your customers from:
 
 * Heatmaps. 
 * Recordings.
@@ -13,7 +15,10 @@ With the Hotjar tool, you can benefit from:
 - Readiness for integration with various other sales channels.
 - Convenient access through the application menu.
 
-[![Download latest Hotjar module version](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-hotjar/releases)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-hotjar)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-hotjar/releases)
+
 
 ## References
 

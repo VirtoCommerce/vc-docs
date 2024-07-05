@@ -48,10 +48,10 @@ To customize the appearance and behavior of videos, use the following props:
 
 | Property and Type             | Description                       |
 | ----------------------------- | --------------------------------- |
-| `label` {==string==}          | Label for the video. Also available interpolation `{}` syntax based on current element context. |
-| `tooltip` {==string==}        | Tooltip text for the video label. |
-| `source` {==string==}         | The source URL of the video.      |
-| `size` {=="auto"==}, {=="xs"==}, {=="s"==}, {=="m"==}, {=="l"==}, {=="xl"==}, {=="xxl"==} | Video size. Default: `auto` |
+| `label` ==string==          | Label for the video. Also available interpolation `{}` syntax based on current element context. |
+| `tooltip` ==string==        | Tooltip text for the video label. |
+| `source` ==string==         | The source URL of the video.      |
+| `size` =="auto"==, =="xs"==, =="s"==, =="m"==, =="l"==, =="xl"==, =="xxl"== | Video size. Default: `auto` |
 
 ## Dynamic Views
 
@@ -79,13 +79,13 @@ To incorporate the status into your dynamic applications, define the following p
 
 | Property and Type                         | Description                                 |
 | ----------------------------------------- | ------------------------------------------- |
-| `id` {==string==}                         | The unique Id for the `vc-video` component. |
-| `component` {==vc-video==}                | Component used in schema.                   |
-| `property` {==string==}                   | Property name that is used for binding video url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
-| `label` {==string==}                      | Label for the video. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.|
-| `size` {==string==}                       | Video size. Default: `auto` |
-| `tooltip` {==string==}                    | Tooltip text for the video label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
-| `visibility` {=={method: string}==}           | Visibility state for component, could be used to hide video based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` {=={method: string}==}               | Method to call when the video url value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
-| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
+| `id` ==string==                         | The unique Id for the `vc-video` component. |
+| `component` ==vc-video==                | Component used in schema.                   |
+| `property` ==string==                   | Property name that is used for binding video url value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
+| `label` ==string==                      | Label for the video. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.|
+| `size` ==string==                       | Video size. Default: `auto` |
+| `tooltip` ==string==                    | Tooltip text for the video label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `visibility` =={method: string}==           | Visibility state for component, could be used to hide video based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `update` =={method: string}==               | Method to call when the video url value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
+| `horizontalSeparator` ==boolean==       | Adds a horizontal separator line after the component. |
 

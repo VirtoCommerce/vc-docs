@@ -6,7 +6,7 @@ theme:
 # Project information
 extra_site_name: Storefront User Docs
 site_name: storefront/user-guide
-site_description: --TDB--
+site_description: Build and personalize your online store for engaging shopping experiences
 site_url: https://docs.virtocommerce.org/storefront/user-guide
 
 # Repository

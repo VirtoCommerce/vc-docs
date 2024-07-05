@@ -8,7 +8,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
     * [ASP.NET Core Runtime 8.0.0.](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
     * [Virto Commerce CLI](https://github.com/VirtoCommerce/vc-build), our proprietary command line interface that enables automating the installation process and updating the dependencies.
-    * [MS SQL Server 2019 or higher.](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+    * [MS SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) / [MySQL](https://dev.mysql.com/downloads/installer/) / [PostgreSQL.](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
     !!! note
         After installing MS SQL server, switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
@@ -74,7 +74,7 @@ To set up the Platform:
 2. [Run the Platform.](windows.md#run-platform)
 3. [Perform initial sign in.](windows.md#perform-initial-sign-in)
 
-### Configure application strings
+### Configure Application Strings
 
 To configure application strings:
 
@@ -87,6 +87,9 @@ To configure application strings:
         },
 
     ```
+
+    !!! info
+        You can either replace the username and password with your own in the **ConnectionStrings**, or add **virto** as the username and **virto** as the password in the database ([SQL](https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/create-a-login?view=sql-server-ver16), [PostgreSQL](https://www.postgresql.org/docs/8.0/sql-createuser.html), [MySQL](https://dev.mysql.com/doc/refman/8.4/en/create-user.html)).
 
     !!! note
         Make sure the user has permission to create new databases.
@@ -154,7 +157,7 @@ You can run the Platform:
     dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
     ```
 
-### Perform initial sign-in
+### Perform Initial Sign-in
 
 To access the Platform and perform initial sign-in:
 

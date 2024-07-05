@@ -55,7 +55,7 @@ To incorporate the checkbox into your dynamic applications, define the following
 
 | Property                  | Description                                                                                                                                               |
 | ------------------------- |  -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id` {==string==}         | The unique Id for `vc-checkbox` component.                                                                                                                |
-| `component` {==string==}  | `vc-checkbox`                                                                                                                                             |
-| `name` {==string==} | Name of the component to show as custom component. Should be globally registered in your application.                                                                                                                               |
-| `visibility` {=={method: string}==} | Visibility state for component, could be used to hide checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `id` ==string==         | The unique Id for `vc-checkbox` component.                                                                                                                |
+| `component` ==string==  | `vc-checkbox`                                                                                                                                             |
+| `name` ==string== | Name of the component to show as custom component. Should be globally registered in your application.                                                                                                                               |
+| `visibility` =={method: string}== | Visibility state for component, could be used to hide checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |

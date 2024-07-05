@@ -148,16 +148,16 @@ To customize the behavior and the appearance of the `vc-button` component, use t
 
 | Name and Type                 | Description                                                                           |
 | ----------------------------- | ------------------------------------------------------------------------------------- |
-| `variant` {==string==}        | Variant defines the color of the button. It could be `primary`, `danger`, `warning`.  |
-| `icon` {==string==}           | Icon of a button. Uses [AwesomeIcons](https://fontawesome.com/) package.              |
-| `iconSize` {==string==}       | Icon size. Could be `xs`, `s`, `m`, `l`, `xl`, `xxl`, `xxxl`. Default is `s`.         |
-| `small` {==boolean==}         | Makes button small sized.                                                             |
-| `outline` {==boolean==}       | Outlined buttons display a border without a background initially.                     |
-| `text` {==boolean==}          | Text buttons are displayed as textual elements. They don't have background and border.|
-| `raised` {==boolean==}        | Raised buttons display a shadow to indicate elevation.                                |
-| `selected` {==boolean==}      | Selected button state is used to indicate that the button is selected.                |
-| `disabled` {==boolean==}      | When disabled is present, the element cannot be edited and focused.                   |
-| `iconClass` {==string==}      | Custom class for icon.                                                                |
+| `variant` ==string==        | Variant defines the color of the button. It could be `primary`, `danger`, `warning`.  |
+| `icon` ==string==           | Icon of a button. Uses [AwesomeIcons](https://fontawesome.com/) package.              |
+| `iconSize` ==string==       | Icon size. Could be `xs`, `s`, `m`, `l`, `xl`, `xxl`, `xxxl`. Default is `s`.         |
+| `small` ==boolean==         | Makes button small sized.                                                             |
+| `outline` ==boolean==       | Outlined buttons display a border without a background initially.                     |
+| `text` ==boolean==          | Text buttons are displayed as textual elements. They don't have background and border.|
+| `raised` ==boolean==        | Raised buttons display a shadow to indicate elevation.                                |
+| `selected` ==boolean==      | Selected button state is used to indicate that the button is selected.                |
+| `disabled` ==boolean==      | When disabled is present, the element cannot be edited and focused.                   |
+| `iconClass` ==string==      | Custom class for icon.                                                                |
 
 #### Slots
 
@@ -204,14 +204,14 @@ To incorporate the button into your dynamic applications, define the following p
 
 | Property and Type                 | Description                                                       |
 | --------------------------------- | ----------------------------------------------------------------- |
-| `id` {==string==}                 | The unique Id for the `vc-button` component.                      |
-| `component` {==vc-button==}       | Component used in schema.                                         |
-| `content` {==string==}            | Button inner text. You can specify the localization key for the `content`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                                 |
-| `small` {==boolean==}             | Makes button small sized.                                         |
-| `icon` {==string==}               | Button icon. Uses [AwesomeIcons](https://fontawesome.com/) package.|
-| `iconSize` {==string==}           | Size of the button icon.                                          |
-| `text` {==string==}               | Button as text without overlay.                                   |
-| `method` {==string==}             | Method to be called when the button is clicked. Method should be defined in the blade `scope`. |
-| `disabled` {=={method: string}==} | Disabled state for component, could be used to disable button based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value.|
-| `visibility` {=={method: string}==}| Visibility state for component, could be used to hide button based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value.|
-| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
+| `id` ==string==                 | The unique Id for the `vc-button` component.                      |
+| `component` ==vc-button==       | Component used in schema.                                         |
+| `content` ==string==            | Button inner text. You can specify the localization key for the `content`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                                 |
+| `small` ==boolean==             | Makes button small sized.                                         |
+| `icon` ==string==               | Button icon. Uses [AwesomeIcons](https://fontawesome.com/) package.|
+| `iconSize` ==string==           | Size of the button icon.                                          |
+| `text` ==string==               | Button as text without overlay.                                   |
+| `method` ==string==             | Method to be called when the button is clicked. Method should be defined in the blade `scope`. |
+| `disabled` =={method: string}== | Disabled state for component, could be used to disable button based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value.|
+| `visibility` =={method: string}==| Visibility state for component, could be used to hide button based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value.|
+| `horizontalSeparator` ==boolean==       | Adds a horizontal separator line after the component. |

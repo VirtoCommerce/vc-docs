@@ -56,9 +56,9 @@ To enable TypeScript API client generation in your project:
 
     |          Options           	|                        Description                            	|                          Example                          	|
     |-----------------------------	|----------------------------------------------------------------	|------------------------------------------------------------	|
-    | `--APP_PLATFORM_MODULES`     	| Platform modules with namespaces to generate API client.<br>{==string[]==} <br> Customize the `--APP_PLATFORM_MODULES` list<br>to match your project's requirements.	| `--APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor,Virtocommerce.Orders,Virtocommerce.Catalog]'` 	|
-    | `--APP_API_CLIENT_DIRECTORY` 	| Output directory for generated API clients. <br>{==string==} 	| `--APP_API_CLIENT_DIRECTORY=./src/api_client/`                	|
-    | `--APP_PLATFORM_URL`         	| Platform URL to obtain client API configs. <br>{==string==} 	    | `--APP_PLATFORM_URL=https://vcmp-dev.govirto.com/`       	|
+    | `--APP_PLATFORM_MODULES`     	| Platform modules with namespaces to generate API client.<br>==string[]== <br> Customize the `--APP_PLATFORM_MODULES` list<br>to match your project's requirements.	| `--APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor,Virtocommerce.Orders,Virtocommerce.Catalog]'` 	|
+    | `--APP_API_CLIENT_DIRECTORY` 	| Output directory for generated API clients. <br>==string== 	| `--APP_API_CLIENT_DIRECTORY=./src/api_client/`                	|
+    | `--APP_PLATFORM_URL`         	| Platform URL to obtain client API configs. <br>==string== 	    | `--APP_PLATFORM_URL=https://vcmp-dev.govirto.com/`       	|
 
 2. Configure Platform URL to ensure your project can access the platform's API configurations. Add the platform URL to your project's **.env** file:
 

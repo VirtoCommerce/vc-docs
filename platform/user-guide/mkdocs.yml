@@ -254,6 +254,11 @@ nav:
                 - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
                 - Address Validation: integrations/avalara/address-validation.md
                 - Settings: integrations/avalara/settings.md
+          - Builder.io:
+                - Overview: integrations/builder-io/overview.md
+                - Getting Started: integrations/builder-io/getting-started.md
+                - Using Builder.io: integrations/builder-io/use-builder-io.md
+                - Settings: integrations/builder-io/settings.md
           - Google Analytics:
                 - Overview: integrations/google-analytics/overview.md
                 - Integration: integrations/google-analytics/integration.md

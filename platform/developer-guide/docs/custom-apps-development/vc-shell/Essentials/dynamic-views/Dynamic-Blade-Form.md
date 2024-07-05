@@ -72,8 +72,8 @@ interface DynamicDetailsSchema {
 
 | Property and Type                                  | Description               |
 | -------------------------------------------------- | ------------------------- |
-| `settings` {==SettingsDetails==}                   | The settings of the view. |
-| `content` {==[FormContentSchema, WidgetsSchema?]==}| The content of the view.  |
+| `settings` ==SettingsDetails==                   | The settings of the view. |
+| `content` ==[FormContentSchema, WidgetsSchema?]==| The content of the view.  |
 
 #### Schema Settings API
 
@@ -111,15 +111,15 @@ interface SettingsBase {
 
 | Property and Type                                                 | Description                                                                                                    |
 | ----------------------------------------------------------------- | --------------------------------------------------- |
-| `url`{==string==}                                                 | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
-| `id`{==string==}                                                  | The unique Id of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities.   |
-| `localizationPrefix`{==string==}                                  | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.       |
-| `component` {=="DynamicBladeForm"==}, {=="DynamicBladeList"==}    | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br>- `DynamicBladeList` <br>- `DynamicBladeForm`|
-| `composable`{==string==}                                          | The name of the composable used by the view. This option is required. |
-| `isWorkspace`{==boolean==}                                        | Specification whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false`             |
-| `toolbar`{==object[]==}                                           | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
-| `permissions`{==string==}, {==string[]==}                         | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
-| `pushNotificationType`{==string==}, {==string[]==}                | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
+| `url`==string==                                                 | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
+| `id`==string==                                                  | The unique Id of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities.   |
+| `localizationPrefix`==string==                                  | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.       |
+| `component` =="DynamicBladeForm"==, =="DynamicBladeList"==    | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br>- `DynamicBladeList` <br>- `DynamicBladeForm`|
+| `composable`==string==                                          | The name of the composable used by the view. This option is required. |
+| `isWorkspace`==boolean==                                        | Specification whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false`             |
+| `toolbar`==object[]==                                           | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
+| `permissions`==string==, ==string[]==                         | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
+| `pushNotificationType`==string==, ==string[]==                | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
 
 #### Schema Content API
 

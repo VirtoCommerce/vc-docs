@@ -118,3 +118,6 @@ In our example:
 * We have set the shipping rate to 10 USD. This is the **Shipping** line in the calculation section. 
 
 
+!!! note
+    In case you forgot to fill the quote with items or you have offered an item with a zero price, you will see the following notification:<br>
+    ![Incomplete quote](media/incomplete-quote-proposal.png)

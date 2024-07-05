@@ -6,7 +6,7 @@ Catalog is a module within Virto that facilitates the addition of items to your 
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-catalog/releases)
 
-[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/E3JX9xgLAZo?si=tq_CaZ5J1JXqNs1R)
+[![Video tutorial](media/video-tutorial-button.png)](https://youtu.be/E3JX9xgLAZo?si=tq_CaZ5J1JXqNs1R)
 
 ## Key features
 

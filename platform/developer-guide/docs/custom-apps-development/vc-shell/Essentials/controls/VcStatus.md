@@ -47,9 +47,9 @@ To customize the appearance and behavior of statuses, use the following props:
 
 | Property and Type                                                                             | Description                                                |
 | ----------------------------------------------------------------------------------------------| ---------------------------------------------------------- |
-| `variant` {=="info"==}, {=="warning"==}, {=="danger"==}, {=="success"==}, {=="light-danger"==}| Status variant.                                            |
-| `outline` {==boolean==}                                                                       | Whether the status is outlined or not.                     |
-| `extend` {==boolean==}                                                                        | Whether the status is extendable or not.                   |
+| `variant` =="info"==, =="warning"==, =="danger"==, =="success"==, =="light-danger"==| Status variant.                                            |
+| `outline` ==boolean==                                                                       | Whether the status is outlined or not.                     |
+| `extend` ==boolean==                                                                        | Whether the status is extendable or not.                   |
 
 ### Slots
 
@@ -89,18 +89,18 @@ To incorporate the status into your dynamic applications, define the following p
 
 | Property                              | Description                                                           |
 | ------------------------------------- | --------------------------------------------------------------------  |
-| `id` {==string==}                     | Identifier for the `vc-status` component.                             |
-| `component` {==vc-status==}           | Utilized component in the schema.                                     |
-| `variant` {==string==}                | Type of status variant.                                              |
-| `icon` {==string==}                   | Icon featured in the status badge, utilizing [AwesomeIcons](https://fontawesome.com/) package. |
-| `iconVariant` {==string==}            | Variant of the displayed icon.                                       |
-| `iconSize` {==string==}               | Size of the icon.                                                     |
-| `title` {==string==}                  | Title associated with the status. You can specify the localization key for the `title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                    |
-| `outline` {==boolean==}               | Specification of whether the status is outlined.                     |
-| `extend` {==boolean==}                | This setting allows to create status with header and content text. See the example below. |
-| `content` {=={method: string}==}      | Method for retrieving the status content. Method should be defined in the blade `scope` and should return a string value. |
-| `visibility` {=={method: string}==}   | State of visibility for the component, allowing you to hide the status based on certain conditions. The method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `horizontalSeparator` {==boolean==}       | Adds a horizontal separator line after the component. |
+| `id` ==string==                     | Identifier for the `vc-status` component.                             |
+| `component` ==vc-status==           | Utilized component in the schema.                                     |
+| `variant` ==string==                | Type of status variant.                                              |
+| `icon` ==string==                   | Icon featured in the status badge, utilizing [AwesomeIcons](https://fontawesome.com/) package. |
+| `iconVariant` ==string==            | Variant of the displayed icon.                                       |
+| `iconSize` ==string==               | Size of the icon.                                                     |
+| `title` ==string==                  | Title associated with the status. You can specify the localization key for the `title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                                    |
+| `outline` ==boolean==               | Specification of whether the status is outlined.                     |
+| `extend` ==boolean==                | This setting allows to create status with header and content text. See the example below. |
+| `content` =={method: string}==      | Method for retrieving the status content. Method should be defined in the blade `scope` and should return a string value. |
+| `visibility` =={method: string}==   | State of visibility for the component, allowing you to hide the status based on certain conditions. The method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `horizontalSeparator` ==boolean==       | Adds a horizontal separator line after the component. |
 
 ### Example
 
