@@ -1,6 +1,6 @@
 # Key Extension Points
 
-Our platform is based around a collection of various modules and components that form the backbone of the Virto value proposition, which is to make each part of our system extendable and usable.
+Our Platform is based on a collection of various modules and components that form the backbone of the Virto value proposition, which is to make each part of our system extensible and usable.
 
 In order to provide solutions for many different use cases, we decided it was important to ensure that these core concepts were as flexible and extensible as possible.
 
@@ -9,7 +9,7 @@ The Virto platform encompasses the **extension concept** based on various techni
 !!! info
 	The extension concept is the backbone of the Virto platform value proposition and has four main extensible point types.
 
-To address crucial extension requirements, the platform contains various **extensions points** for all three main parts: the Platform application, Modules, and Storefront. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:
+To address crucial extension requirements, the platform contains various **extensions points** for all three main parts: the Platform application, Modules, and Frontend Application. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:
 
 * Domain and business logic extension:
     * [Extending domain models](../Tutorials-and-How-tos/Tutorials/extending-domain-models.md)

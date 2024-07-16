@@ -23,5 +23,5 @@ The Contacts module features are:
     
     ![Readmore](media/readmore.png){: width="25"} [User groups](../catalog-personalization/user-groups.md)
 
-* **Connection to Storefront:** You can link all your contacts and their hierarchy to the Storefront application.
+* **Connection to Frontend Application:** You can link all your contacts and their hierarchy to the Frontend Application.
 

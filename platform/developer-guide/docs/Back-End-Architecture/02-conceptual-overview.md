@@ -30,4 +30,4 @@ The Virto Commerce platform's core components are:
 
 * **Caching**: Virto Commerce integrates Redis for efficient caching to improve performance and scalability.
 
-* **REST and GraphQL API**: A set of APIs used to manage resources. [REST API](https://virtostart-demo-admin.govirto.com/docs/index.html) is mainly used to build integration and interact with Virto resources, while [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md) represents an implementation of the Back End for Front End design pattern and provides a lightweight access to ecommerce capabilities for various storefront applications.
+* **REST and GraphQL API**: A set of APIs used to manage resources. [REST API](https://virtostart-demo-admin.govirto.com/docs/index.html) is mainly used to build integration and interact with Virto resources, while [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md) represents an implementation of the Back End for Front End design pattern and provides a lightweight access to ecommerce capabilities for various Frontend applications.

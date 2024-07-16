@@ -21,7 +21,7 @@ To view the available tax providers:
 
 1. Complete steps 1-4 from the instruction above.
 1. In the next blade, click on the required tax provider.
-1. In the next blade. turn the switch to on/ off.
+1. In the next blade, turn the switch to on/ off.
 1. Click **Save** in the toolbar to save the changes.
 
 ![Enable tax provider](media/enable-tax-provider.png)

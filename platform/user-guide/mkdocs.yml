@@ -27,6 +27,7 @@ nav:
           - B2B Multi-Regional Ecommerce Architecture: multiregional-ecommerce.md
           - View Results on Frontend Environment: view-results-on-frontend.md
           - ADA Compliance: ada-compliance.md
+          - Managing Frontend Content: managing-content.md 
     - Modules:
           - Overview: platform-overview.md
           - <b>Catalog</b>:
@@ -157,12 +158,10 @@ nav:
                 - Notification Log: notifications/notification-log.md
                 - Notification Templates: notifications/notification-templates.md
                 - Settings: notifications/settings.md
-          - Price Export Import: 
-                - Overview: price-export-import/overview.md
-                - Mapping CSV files: price-export-import/mapping-csv-files.md
-                - Exporting pricelists: price-export-import/exporting-price-lists.md
-                - Importing pricelists: price-export-import/importing-price-lists.md
-          - Payment Related Modules:
+          - Page Builder:
+                - Overview: page-builder/overview.md
+                - Managing Pages in PageBuilder: page-builder/manage-pages.md
+          - Payment Related Modules: 
                 - Payment:
                       - Overview: payment/overview.md
                       - Managing Payment methods: payment/managing-payment-methods.md
@@ -171,6 +170,17 @@ nav:
                       - Overview: native-payment-methods/overview.md
                       - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
                       - Settings: native-payment-methods/settings.md
+                - Skyflow:
+                      - Overview: skyflow/overview.md
+                      - Managing Skyflow: skyflow/manage-skyflow-module.md
+                - Authorize.net:
+                      - Overview: authorize-net/overview.md
+                      - Managing Authorize.net: authorize-net/manage-authorize-net-module.md
+          - Price Export Import: 
+                - Overview: price-export-import/overview.md
+                - Mapping CSV files: price-export-import/mapping-csv-files.md
+                - Exporting pricelists: price-export-import/exporting-price-lists.md
+                - Importing pricelists: price-export-import/importing-price-lists.md
           - Push Messages: 
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md
@@ -259,9 +269,9 @@ nav:
                 - Getting Started: integrations/builder-io/getting-started.md
                 - Using Builder.io: integrations/builder-io/use-builder-io.md
                 - Settings: integrations/builder-io/settings.md
-          - Google Analytics:
+          - Google Analytics 4:
                 - Overview: integrations/google-analytics/overview.md
-                - Integration: integrations/google-analytics/integration.md
+                - Using Google Analytics 4: integrations/google-analytics/integration.md
                 - Settings: integrations/google-analytics/settings.md
           - Hotjar:
                 - Overview: integrations/hotjar/overview.md

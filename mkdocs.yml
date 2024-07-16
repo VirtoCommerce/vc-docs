@@ -223,7 +223,7 @@ extra:
               link: storefront
               topdescription: Tools and workflows designed to enhance customer-facing experiences
               description: 
-                - title: Theme and Storefront
+                - title: Frontend Application
                   link: storefront
                 - title: VC Shell
                   link: platform/developer-guide/custom-apps-development/overview
@@ -294,7 +294,7 @@ extra:
                           url: https://virtostart-demo-admin.govirto.com/docs/index.html
                         - title: GraphQL API Reference
                           url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
-                - title: Storefront
+                - title: Frontend Application
                   content:
                     - title: User Guide
                       links:
@@ -307,11 +307,11 @@ extra:
                     - title: Developer Guide
                       links:
                         - title: Getting Started
-                          url: /storefront/developer-guide/getting-started/quickstart-on-windows
-                        - title: Architecture Overview
                           url: /storefront/developer-guide
-                        - title: B2B Theme Overview
-                          url: /storefront/developer-guide/vue-js-starter-theme/overview
+                        - title: Architecture
+                          url: /storefront/developer-guide/architecture
+                        - title: Deployment
+                          url: /storefront/developer-guide/deployment
                         - title: Integrations
                           url: /storefront/developer-guide/integrations/prerender_io
                 - title: Marketplace

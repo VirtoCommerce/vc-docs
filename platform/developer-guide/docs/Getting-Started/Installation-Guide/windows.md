@@ -38,7 +38,7 @@ The platform can be installed:
 
 1. Find **VirtoCommerce.Platform.3.x.x.zip** file. This file contains the prebuilt site and can be executed without additional compilation. The source code is not included. 
 
-1. Unpack the downloaded file to the local directory **/vc-platform-3** using the following command: 
+1. Unpack the downloaded file to the local directory **/vc-platform-3**. After that you will have the directory with Platform precompiled files. 
 
 Now you have the directory with the precompiled files of the Virto Commerce Platform.
 

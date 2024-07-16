@@ -11,7 +11,7 @@ To configure the **Shippping** module settings:
 
     ![Settings](media/settings.png)
 
-The modifications become available in the Storefront:
+The modifications become available in the Frontend Application:
 
-![Storefront shipping methods](media/storefront-shipping-methods.png)
+![Frontend Application shipping methods](media/storefront-shipping-methods.png)
 

@@ -1,10 +1,10 @@
 # Overview
 
-The Google Analytics 4 module allows you to:
+Your Virto Commerce store can be seamlessly integrated with Google Analytics 4 using the Google Ecommerce Analytics module. With this module, you can:
 
-* Assign Google Analytics Measurement Id for your store.
+* Assign Google Analytics measurement Id for your store.
 * Measure traffic. 
-* Measure the following ecommerce events with Vue B2B Theme and Virto Storefront:
+* Measure the following ecommerce events with Virto Commerce Frontend Application:
     * Selecting an item from a category.
     * Viewing product details.
     * Adding/removing a product from a shopping cart.

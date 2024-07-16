@@ -25,12 +25,12 @@ Managing theme includes:
 * [Activating theme.](managing-themes.md#activate-theme)
 * [Managing theme assets.](managing-themes.md#manage-theme-assets)
 
-## Add new theme
+## Add New Theme
 
 To add a new theme:
 
 1. Click **Content** in the main menu.
-1. Select the store from the list t=in the next blade.
+1. In the nest blade, select the store from the list.
 1. Click on the **Themes** widget.
 1. In the **Themes list** blade, click **Add** in the toolbar. 
 1. Enter the name of the new theme. 
@@ -40,7 +40,7 @@ To add a new theme:
 
 The new theme appears it in the themes list.
 
-## Upload new theme
+## Upload New Theme
 
 To upload a theme zip file:
 
@@ -56,7 +56,7 @@ Once the zip file has been uploaded, it will be unzipped and added to the Themes
 
 If a new theme has been created by the developer, it can be uploaded to a new environment using a zip file.
 
-## Activate theme
+## Activate Theme
 
 To activate the theme:
 
@@ -69,7 +69,7 @@ To activate the theme:
 
 The theme is now active.
 
-## Manage theme assets
+## Manage Theme Assets
 
 To manage the theme assets:
 

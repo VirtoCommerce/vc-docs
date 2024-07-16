@@ -15,6 +15,6 @@ The diagram below illustrates the interconnections among various key entities wi
 
 With the Marketing module, you can:
  
-* Manage [dynamic content](#dynamic-content) for the Storefront.
+* Manage [dynamic content](#dynamic-content) for the Frontend Application.
 * Create and run [promotions](#promotions).
 

@@ -13,63 +13,16 @@ This guide will explain how to configure and run Elastic App Search for your env
 * Install [Node.js v.16.X.](https://nodejs.org/en/download/)
 * Install [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) Package Manager by running `npm install --global yarn`.
 
-## Install Virto Commerce Storefront
+## Set up Frontend Application 
 
-To install Virto Comemrce Storefront:
-
-1. Clone [Storefront repository](https://github.com/VirtoCommerce/vc-storefront) in to a local folder.
-1. Open the **appsettings.json** file in a text editor.
-1. In the `Endpoint` section, change `Url`, `UserName`, and `Password` with the correct path and credentials for Virto Commerce Platform:
-
-```json title="appsettings.json"
- "Endpoint": {
-     "Url": "https://localhost:5001",
-     "UserName": "admin",
-     "Password": "store"
- }
-```
-
-## Set up Vue B2B Theme
-
-To set up **Vue B2B Theme**:
-
-1. Clone the repo into the folder with the previously installed Storefront as follows:
-
-    ```bash
-        git clone https://github.com/VirtoCommerce/vue-starter-theme.git "C:\vc-storefront\VirtoCommerce.Storefront\wwwroot\cms-content\themes\{store-name}\default"
-    ```
-
-1. Change the current directory to the default theme directory (change `{store-name}` to the store you want to use, e.g., `B2B-store`):
-
-    ```bash
-        cd C:\vc-storefront\VirtoCommerce.Storefront\VirtoCommerce.Storefront\wwwroot\cms-content\themes\{store-name}\default
-    ```
-
-1. Install the dependencies:
-
-    ```bash
-        npm install
-        yarn
-    ```
-
-1. Start the theme in the development mode with hot reload support:
-
-    ```bash
-    yarn dev
-    ```
-
-    Or build the theme to get an installable artifact:
-
-    ```bash
-    yarn compress
-    ```
+Set up Virto Commerce Frontend Application as described [in this instruction](../../../../../../storefront/developer-guide/deployment)
 
 ## Set up Elastic App Search
 
 This guide explores the process of setting up Elastic App Search, including:
 
 * [Deploying it using Docker.](configuring-elastic-app-search.md#deploy-elastic-app-search-using-docker)
-* [Configuring it within the Virto Platform.]()
+* [Configuring it within the Virto Platform.](configuring-elastic-app-search.md#set-up-elastic-app-search-on-platform)
 
 ### Deploy Elastic App Search Using Docker
 
@@ -321,13 +274,9 @@ To install Elastic App Search on Virto Commerce Platform:
 
 ## Run Virto Commerce Application
 
-1. Navigate to the Storefront root directory:
+1. Navigate to the Frontend Application root directory:
 
-    ```bash
-    cd C:\vc-storefront\VirtoCommerce.Storefront
-    ```
-
-1. Build and run the Storefront application:
+1. Build and run the Frontend Application application:
 
     ```bash
     dotnet run

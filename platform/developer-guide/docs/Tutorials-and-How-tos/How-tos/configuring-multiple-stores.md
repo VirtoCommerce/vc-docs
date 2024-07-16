@@ -11,8 +11,8 @@ For demo purposes, we will use [B2B Theme](https://github.com/VirtoCommerce/vc-t
 
 ## Prerequisites 
 
-1. Deploy the Virto Commerce Platform and Storefront using the [Virto Commerce documentation](https://docs.virtocommerce.org/new/developer-guide/Getting-Started/Installation-Guide/windows/). 
-1. Configure the shared **cms-content** folder between the Storefront and Platform components.
+1. Deploy the [Virto Commerce Platform](../../Getting-Started/Installation-Guide/windows.md) and [Frontend Application](../../../../../storefront/developer-guide/deployment). 
+1. Configure the shared **cms-content** folder between the Frontend Application and Platform components.
 1. [Set up and configure](https://docs.virtocommerce.org/new/user-guide/platform-overview/) languages, currencies, and other relevant settings.
 1. Configure or import the necessary catalog(s) for your stores.
 1. Configure [price lists](https://docs.virtocommerce.org/new/user-guide/pricing/creating-new-price-list/) and [price list assignments](https://docs.virtocommerce.org/new/user-guide/pricing/adding-new-assignment/) based on your pricing strategy.
@@ -60,6 +60,6 @@ To configure multiple stores with their own domains in Virto Commerce:
 
 ## Share Theme Across Multiple Stores
 
-It is possible to share the same theme across multiple stores by using the `LiquidThemeEngine:BaseThemePath` setting in the storefront's **appsettings.json** file.
+It is possible to share the same theme across multiple stores by using the `LiquidThemeEngine:BaseThemePath` setting in the Frontend Application **appsettings.json** file.
 
 This approach allows each store's specific **CMS-CONTENT** folder to contain unique store customizations.

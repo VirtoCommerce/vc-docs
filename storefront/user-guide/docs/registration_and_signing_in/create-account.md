@@ -1,8 +1,8 @@
 # Create account
 
-To work with the Storefront, you need to create a new account:
+To work with the Frontend Application, you need to create a new account:
 
-1. Open the Storefront and click **Sign up now** in the top right corner.
+1. Open the Frontend Application and click **Sign up now** in the top right corner.
 
     ![Sign-up](../media/sign-up.png)
 

@@ -98,6 +98,7 @@ nav:
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
+                - Authorize.net: Fundamentals/Payments/authorize-net.md 
                 - Skyflow: Fundamentals/Payments/skyflow.md
           - Fulfillment:
                 - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
@@ -549,7 +550,6 @@ nav:
                 - Type Inheritance Support in Swagger API: Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger.md
                 - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
                 - Deploying VC Platform to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-platform-on-azure.md
-                - Deploying VC Storefront to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-storefront-on-azure.md
                 - Setting Up Prerender.io with Azure Application Gateway: Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md
                 - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
                 - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
@@ -557,7 +557,7 @@ nav:
                 - Customizing Cart Validation Policies: Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies.md
                 - Upgrading to Virto Commerce on .Net8: Tutorials-and-How-tos/How-tos/upgrading-to-net8.md
                 - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
-                - Using Feature Flags with Virto Commerce and Storefront: Tutorials-and-How-tos/How-tos/feature-flags.md
+                - Using Feature Flags with Virto Commerce Platform and Frontend Application: Tutorials-and-How-tos/How-tos/feature-flags.md
                 - Generating PDFs: Tutorials-and-How-tos/How-tos/generating-pdfs.md
                 - Performing Health Checks: Tutorials-and-How-tos/How-tos/health-checks.md
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md

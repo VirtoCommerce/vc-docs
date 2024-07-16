@@ -2,7 +2,7 @@
 
 In Virto Commerce, we define products as SKUs. Adding variations links a product and its variation(s) together. A product with variations is essentially a collection, with one variation as the title product (master product), while also being a variation itself. Linked products inherit property values from the master product, with the option to override if needed.
 
-To display a product with variations in Storefront, we use the master product, along with its variations. The product description also draws from the master product's properties. Variation properties build the SKU selector for such products.
+To display a product with variations in Frontend Application, we use the master product, along with its variations. The product description also draws from the master product's properties. Variation properties build the SKU selector for such products.
 
 Variations are individual product entities linked to their master product. For instance, a master product like a mobile phone can have variations like black, white, or red versions, or 5’’ and 6’’ models (or both).
 Variations inherit property values from the master product, including descriptions and assets, while also allowing overrides when necessary.

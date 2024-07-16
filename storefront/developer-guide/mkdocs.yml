@@ -4,7 +4,7 @@ theme:
     hide: false
 
 # Project information
-extra_site_name: Storefront Dev Docs
+extra_site_name: Frontend App Dev Docs
 site_name: storefront/developer-guide
 site_description: Build and personalize your online store for engaging shopping experiences
 site_url: https://docs.virtocommerce.org/storefront/developer-guide
@@ -19,13 +19,9 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
-    - Getting Started:
-          - Quick Start (Windows): getting-started/quickstart-on-windows.md
-    - ASP.NET Core Storefront Runtime:
-          - Overview: asp-net-core-storefront-runtime/overview.md
-    - Vue.js Starter Theme:
-          - Overview: vue-js-starter-theme/overview.md
-          - Getting Started: vue-js-starter-theme/getting-started.md
+    - Architecture: architecture.md 
+    - Deployment: deployment.md
+    - Migration: migration.md
     - Integrations:
           - Google Analytics Events: integrations/google-analytics/ga-events.md
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md

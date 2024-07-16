@@ -43,6 +43,6 @@ To log in on behalf of another user, sign into Virto Commerce portal as an admin
 		![Loging via Contacts](media/login-on-behalf-path2.png){: width="800"}
 
 
-The Storefront front page will open in a new window and prompt you to re-enter your credentials for security purposes:
+The Frontend Application will open in a new window and prompt you to re-enter your credentials for security purposes:
 
 ![Redirection to Storefront](media/redirection-to-storefront.png){: width="750"}

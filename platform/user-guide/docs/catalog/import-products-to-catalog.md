@@ -5,7 +5,7 @@ To efficiently bulk add new products, along with their prices and stock quantiti
 !!! note
     Importing products to catalogs requires the preinstalled [Catalog CSV Import module](https://github.com/VirtoCommerce/vc-module-catalog-csv-import).
 
-Follow this step-by-step guide to learn how to import new products into the Virto Commerce Platform catalog (backend) and display them on the Virto Commerce Storefront (frontend):
+Follow this step-by-step guide to learn how to import new products into the Virto Commerce Platform catalog (backend) and display them on the Virto Commerce Frontend Application:
 
 
 1. [Create a new price list](../pricing/creating-new-price-list.md). **New-price-list** in our example.
@@ -51,7 +51,7 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 
     ![Result](media/result.png)
 
-1. Create a price list assignment to connect to the price list (**New-price-list** in our example) to the catalog displayed in the Storefront (**B2B-mixed** in our example):
+1. Create a price list assignment to connect to the price list (**New-price-list** in our example) to the catalog displayed in the Frontend Application (**B2B-mixed** in our example):
 
     1. In the main menu, click **Pricing**.
     1. In the next blade, click **Price Lists**.
@@ -97,6 +97,6 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 
         ![View result](media/result-in-frontend-2.png){: width="750"}
 
-    The frontend environment opens in a new window with the **/new-category** URL slug:
+    The frontend environment opens in a new window with the **/new-category** URL slug. The image below shows what it looks like and how it correlates to the columns in the CSV file:
 
-    ![Result](media/result-in-frontend.png){: width="650"}
+    ![Result](media/result-in-frontend.png)

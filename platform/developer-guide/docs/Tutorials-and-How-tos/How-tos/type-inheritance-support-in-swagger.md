@@ -42,7 +42,7 @@ public ActionResult<IList<BaseObject>> GetObjects()
 
 ## Solution
 
-Since the creation of VC Platform v3, polymorphism support in Swashbuckle has been [significantly improved](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/pull/1792). Now we can actually use it in action, and the resulting document will be suitable for AutoRest (for example, to generate API clients for the storefront). An example mentioned above can be reworked like this to expose derived models:
+Since the creation of VC Platform v3, polymorphism support in Swashbuckle has been [significantly improved](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/pull/1792). Now we can actually use it in action, and the resulting document will be suitable for AutoRest (for example, to generate API clients for the Frontend Application). An example mentioned above can be reworked like this to expose derived models:
 
 ```csharp
 using Swashbuckle.AspNetCore.Annotations;

@@ -45,7 +45,7 @@ The following resources will be created during deployment:
     
     ![Deploy to azure](media/sign-in-page.png)
 
-1. After the database initialization is complete, Virto Commerce offers you to install sample data. Select this if required. The sample data can be a good starting point to launch a demo storefront and play around with the platform:
+1. After the database initialization is complete, Virto Commerce offers you to install sample data. Select this if required. The sample data can be a good starting point to launch a demo Frontend Application and play around with the platform:
 
     ![Choose sample data type](media/choose-sample-data-type.png)
 

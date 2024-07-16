@@ -10,7 +10,7 @@ The Skyflow module facilitates seamless integration with [SkyFlow](https://www.s
 
 * **Unified Credit Card User Experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
 * **PCI Compliance:** Ensure PCI compliance with SkyFlow, simplifying adherence to industry standards for secure payment data handling.
-* **Integration with Virto Storefront:** Seamlessly integrate with [Virto Storefront](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive e-commerce experience.
+* **Integration with Virto Commerce Frontend Application:** Seamlessly integrate with [Virto Frontend Application](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive e-commerce experience.
 * **Flexible Customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and SkyFlow to tailor integrations with a variety of payment providers to meet your specific requirements.
 * **Optimized for Marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
 * **Saved Credit Card:** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions.
@@ -98,39 +98,13 @@ Configuring Virto Commerce includes:
 
 #### Configure Appsettings.json
 
-1. Configure Skyflow Settings:
-    * Update the `appsettings.json` file with Skyflow configuration under `Payments:Skyflow` section:
-      * `tokenURI`: Ensure it is always set to `https://manage.skyflowapis.com/v1/auth/sa/oauth/token`.
-      * `ClientSDK`: Provide SkyflowCredentials including `clientID`, `keyID`, and `privateKey` from the loaded credentials file.
-      * `Connections`: Register any number of Connections with their respective SkyflowCredentials.
-1. Default settings are configured in the `appsettings.json` under `Payments/Skyflow/DefaultConnection`. In our case, Authorize.NET.
+Configure the **appsettings.json** file as follows:
 
-```json title="appsettings.json"
-{
-  "Payments": {
-    "Skyflow": {
-      "tokenURI": "https://manage.skyflowapis.com/v1/auth/sa/oauth/token",
-      "clientSDK": {
-        "clientID": "b7eeb4df0007492cbef5bd1000000000",
-        "keyID": "i24bb5b53c114f1c9531db69000000000",
-        "privateKey": "-----BEGIN PRIVATE KEY---TODO---END PRIVATE KEY-----"
-      },
-      "Connections": {
-        "Default": {
-          "clientID": "ca2836c68afa4546b6e09b000000000",
-          "keyID": "hd75811c6f4b4ed4835eda00000000",
-          "privateKey": "-----BEGIN PRIVATE KEY---TODO---END PRIVATE KEY-----"
-        }
-      },
-      "DefaultConnection": {
-        "connectionUrl": "https://ebfc00000000.gateway.skyflowapis.com/v1/gateway/outboundRoutes/gfb5ce07e91340efac348a2df00000000/xml/v1/request.api",
-        "name": "TODO:YOURID",
-        "transactionKey": "TODO:YOUR_TRANSACTION_KEY"
-      }
-    }
-  }
-}
-```
+{%
+   include-markdown "../../Configuration-Reference/appsettingsjson.md"
+   start="<!--skyflow-start-->"
+   end="<!--skyflow-end-->"
+%}
 
 #### Setup Virto Commerce Back Office 
 

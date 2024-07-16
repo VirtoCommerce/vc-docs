@@ -13,7 +13,7 @@ The VC Platform Manager web app has been containerized into multiple services, i
 ![Developing inside a Container](media/developing-inside-container.png)
 
 !!! note
-    The solution does not include the Storefront and Theme components.
+    The solution does not include the Frontend Application components.
 
 The web service container is based on the **virtocommerce/platform** latest Linux image.
 

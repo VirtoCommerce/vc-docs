@@ -618,6 +618,142 @@ This node enables authentication with username and password.
 | Priority  | 0                         | Configures the priority of the password login popup on the _Login_ page. The lowest value means the highest priority.
 
 
+### Payments
+
+The Payments node configures various payment gateway integrations for the Virto Commerce platform. This section includes settings for modules such as Authorize.Net and Skyflow, enabling secure payment processing and integration with different payment service providers.
+
+| Node            | Default or Sample Value               | Description                                                         |
+| --------------- | ------------------------------------- | ------------------------------------------------------------------- |
+| `AuthorizeNet`  |                                       | Configuration settings for the Authorize.Net payment gateway.       |
+| `Skyflow`       |                                       | Configuration settings for the Skyflow payment processing module.   |
+
+
+#### Authorize.Net
+
+This node configures the Authorize.Net payment gateway integration, enabling secure payment processing using Accept.js and the Authorize.Net API. Confidential Authorize.Net account settings should be configured in appsetting.json.
+
+![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](../../../user-guide/authorize-net/manage-authorize-net-module#configure-settings)
+
+
+<!--authorize-net-start-->
+
+| Node            | Default or Sample Value               | Description                                                      |
+| --------------- | ------------------------------------- | ---------------------------------------------------------------- |
+| `IsActive`      | `true`                                | Toggle to enable or disable the Authorize.Net payment module.     |
+| `ApiLogin`      | `"YourApiLogin"`                      | The API login ID provided by Authorize.Net.                       |
+| `TxnKey`        | `"YourTransactionKey"`                | The transaction key provided by Authorize.Net.                    |
+
+
+**Example**
+
+```json title="appsettings.json"
+"Payments": {
+    "AuthorizeNet": {
+        "IsActive": true,
+        "ApiLogin": "YourApiLogin",
+        "TxnKey": "YourTransactionKey",
+    }
+}
+```
+
+<!--authorize-net-end-->
+
+#### Skyflow
+
+This node configures the Skyflow payment processing module, facilitating secure handling of payment data and integration with various payment service providers.
+
+<!--skyflow-start-->
+
+| Node                               | Default or Sample Value                                                       | Description                                                                        |
+| ---------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `tokenURI`                         | `"https://manage.skyflowapis-preview.com/v1/auth/sa/oauth/token"`             | The URI for obtaining authentication tokens from the Skyflow API. Can be taken from credentials.json file downloaded from Skyflow dashboard. |
+| `vaultURI`                         | `"https://a370a9658141.vault.skyflowapis-preview.com"`                        | The URI for the Skyflow vault. Can be taken from Skyflow studio by clicking three dots on the vault and selecting **View details** action.  |
+| `gatewayURI`                       | `"https://a370a9658141.gateway.skyflowapis-preview.com"`                      | The URI for invoking outbound connection rules. Replace `vault` with `gateway` in the `vaultURI`. |
+| `vaultId`                          | `"ff9fc275bec848318361cc8928e094d1"`                                          | The identifier for the Skyflow vault.                                              |
+| `tableName`                        | `"credit_cards"`                                                              | The table name for storing credit card data.                                       |
+| `PaymentFormAccount`               |                                                                               | Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps. |
+| `PaymentFormAccount:clientID`      | `"j873500104e6439bbbeb8cec63a6d21"`                                           | The client ID for authentication with the Skyflow Payment Form account.            |
+| `PaymentFormAccount:keyID`         | `"a70d977de5f24532810df376585031aa"`                                          | The key ID for authentication with the Skyflow Payment Form account.               |
+| `PaymentFormAccount:privateKey`    |                                                                               | The private key for authentication with the Skyflow Payment Form account.          |
+| `IntegrationsAccount`              |                                                                               | Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps. | 
+| `IntegrationsAccount:clientID`     | `"b47bea9c61c74cf4aac3b26d09aaf825"`                                          | The client ID for authentication with the Skyflow Integrations account.            |
+| `IntegrationsAccount:keyID`        | `"c950c459157548f0817500288ec8ac96"`                                          | The key ID for authentication with the Skyflow Integrations account.               |
+| `IntegrationsAccount:privateKey`   |                                                                               | The private key for authentication with the Skyflow Integrations account.          |
+| `TargetPaymentMethod`              | `"AuthorizeNetPaymentMethod"`                                                 | The payment method used for authorizing payments via Skyflow. To outbound Payment Service Provider API through the Skyflow connection, create an HttpClient instance IHttpServiceFactory.CreateClient("Skyflow") and execute the request to the Payment Service API with the tokenized card data.                       |
+| `TargetConnectionRoute`            | `"b47bea9c61c74cf4aac3b26d09aaf825/xml/v1/request.api"`                       | The connection route for the target payment method.                                |
+
+
+!!! note
+    To execute the outbound Payment Service Provider API through Skyflow connection, create an HttpClient instance IHttpServiceFactory.CreateClient("Skyflow") and execute the request to the Payment Service API with the tokenized card data. 
+    
+    ??? "See code example"
+        ```
+        public override PostProcessPaymentRequestResult PostProcessPayment(PostProcessPaymentRequest request)
+            {
+        ....
+              if (request.Parameters["CreditCard"] != null)
+              {
+                  var tokenizedCard = JsonConvert.DeserializeObject<dynamic>(request.Parameters["CreditCard"]);
+                  creditCard = new AuthorizeNetCreditCard
+                  {
+                      CardCode = tokenizedCard.Cvv,
+                      CardNumber = tokenizedCard.CardNumber,
+                      ExpirationDate = tokenizedCard.CardExpiration,
+                      ProxyEndpointUrl = request.Parameters["ProxyEndpointUrl"],
+                      ProxyHttpClientName = request.Parameters["ProxyHttpClientName"]
+                  };
+
+                  using var stream = new MemoryStream();
+                  var proxyHttpClient = _httpClientFactory.CreateClient(request.CreditCard.ProxyHttpClientName);
+                  var xmlSerializer = new XmlSerializer(typeof(AuthorizeNetCreateTransactionRequest));
+                  using var xmlWriter = XmlWriter.Create(stream, new XmlWriterSettings
+                  {
+                      Encoding = new UTF8Encoding(false, true), //Exclude BOM
+                      Indent = true,
+                  });
+                  xmlSerializer.Serialize(xmlWriter, this);
+                  using var content = new StreamContent(stream);
+                  content.Headers.ContentType = new MediaTypeHeaderValue(MediaTypeNames.Application.Xml);
+                  var proxyRequest = new HttpRequestMessage(HttpMethod.Post, new Uri(request.CreditCard.ProxyEndpointUrl))
+                  {
+                      Content = content
+                  };
+                  var response = proxyHttpClient.Send(proxyRequest);
+              }
+        ```
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "Payments": {
+    "Skyflow": {
+      "tokenURI": "https://manage.skyflowapis-preview.com/v1/auth/sa/oauth/token",
+      "vaultURI": "https://a370a9658141.vault.skyflowapis-preview.com",
+      "gatewayURI": "https://a370a9658141.gateway.skyflowapis-preview.com",
+      "vaultId": "ff9fc275bec848318361cc8928e094d1",
+      "tableName": "credit_cards",
+      "PaymentFormAccount": {
+        "clientID": "j873500104e6439bbbeb8cec63a6d21",
+        "keyID": "a70d977de5f24532810df376585031aa",
+        "privateKey": "-----BEGIN PRIVATE KEY-----Base64-----END PRIVATE KEY-----"
+      },
+      "IntegrationsAccount": {
+        "clientID": "b47bea9c61c74cf4aac3b26d09aaf825",
+        "keyID": "c950c459157548f0817500288ec8ac96",
+        "privateKey": "-----BEGIN PRIVATE KEY-----Base64-----END PRIVATE KEY-----"
+      },
+      "TargetPaymentMethod": "AuthorizeNetPaymentMethod",
+      "TargetConnectionRoute": "b47bea9c61c74cf4aac3b26d09aaf825/xml/v1/request.api"
+
+    }
+  }
+}
+```
+
+<!--skyflow-end-->
+
+
 ### PlatformSettings
 
 This node is used for Used for platform settings overriding.
@@ -1129,54 +1265,6 @@ This node configures the Serilog logging library, allowing customization of logg
     "Enrich": [
       "FromLogContext"
     ]
-}
-```
-
-### Skyflow
-
-This node configures the Skyflow payment processing module, facilitating secure handling of payment data and integration with various payment service providers.
-
-| Node                        | Default or Sample Value                                                   | Description                                                                             |
-| --------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------|
-| `tokenURI`                  | `"https://manage.skyflowapis.com/v1/auth/sa/oauth/token"`                 | The URI for obtaining authentication tokens from the Skyflow API.                       |
-| `clientSDK:clientID`        | `"b7eeb4df0007492cbef5bd1000000000"`                                      | The client ID for authentication with the Skyflow client SDK.                           |
-| `clientSDK:keyID`           | `"i24bb5b53c114f1c9531db69000000000"`                                     | The key ID for authentication with the Skyflow client SDK.                              |
-| `clientSDK:privateKey`      |                                                                           | The private key for authentication with the Skyflow client SDK.                         |
-| `Connections`               | `"Default"`                                                               | Configuration details for establishing connections with payment service providers.      |
-| `DefaultConnection:clientID`| `"ca2836c68afa4546b6e09b000000000"`                                       | The client ID for the default connection to Skyflow APIs.                               |
-| `DefaultConnection:keyID`   | `"hd75811c6f4b4ed4835eda00000000"`                                        | The key ID for the default connection to Skyflow APIs.                                  |
-| `DefaultConnection:privateKey` |                                                                        | The private key for the default connection to Skyflow APIs.                             |
-| `DefaultConnection:connectionUrl` |                                                                     | The connection URL for the default connection to Skyflow APIs.                          |
-| `DefaultConnection:name`    |                                                                           | The name of the default connection.                                                     |
-| `DefaultConnection:transactionKey` |                                                                    | The transaction key for the default connection to Skyflow APIs.                         |
-
-
-**Example**
-
-```json title="appsettings.json"
-{
-  "Payments": {
-    "Skyflow": {
-      "tokenURI": "https://manage.skyflowapis.com/v1/auth/sa/oauth/token",
-      "clientSDK": {
-        "clientID": "b7eeb4df0007492cbef5bd1000000000",
-        "keyID": "i24bb5b53c114f1c9531db69000000000",
-        "privateKey": "-----BEGIN PRIVATE KEY---TODO---END PRIVATE KEY-----"
-      },
-      "Connections": {
-        "Default": {
-          "clientID": "ca2836c68afa4546b6e09b000000000",
-          "keyID": "hd75811c6f4b4ed4835eda00000000",
-          "privateKey": "-----BEGIN PRIVATE KEY---TODO---END PRIVATE KEY-----"
-        }
-      },
-      "DefaultConnection": {
-        "connectionUrl": "https://ebfc00000000.gateway.skyflowapis.com/v1/gateway/outboundRoutes/gfb5ce07e91340efac348a2df00000000/xml/v1/request.api",
-        "name": "TODO:YOURID",
-        "transactionKey": "TODO:YOUR_TRANSACTION_KEY"
-      }
-    }
-  }
 }
 ```
 

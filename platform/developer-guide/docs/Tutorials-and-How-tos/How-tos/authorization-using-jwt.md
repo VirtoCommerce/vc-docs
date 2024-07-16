@@ -60,7 +60,7 @@ To create self-signed certificates for signature and validate tokens:
 
 ## OAuth2 Authorization using Client credential flow
 
-To authorize client applications (for example, Storefront), use the **Client credential flow** mechanism of OAuth2 protocol:
+To authorize client applications (for example, Frontend Application), use the **Client credential flow** mechanism of OAuth2 protocol:
 
 1. In the main menu, click **Security**. 
 1. In the next blade, select **OAuth applications**.
@@ -79,4 +79,4 @@ To authorize client applications (for example, Storefront), use the **Client cre
 
 New OAuth2 client has been created. Now the client application is able to authorize requests to the API using the previously created **Client Id** and **Client secret**.
 
-In Storefront, all you need to do is specify the **Client Id**, **Client secret** created earlier, and the **authorization server** in the **Endpoint** section of the **appsettings.json** file.
+In the Frontend Application, all you need to do is specify the **Client Id**, **Client secret** created earlier, and the **authorization server** in the **Endpoint** section of the **appsettings.json** file.

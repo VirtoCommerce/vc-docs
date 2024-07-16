@@ -53,7 +53,7 @@ Each product card displays:
 
 ## Mobile version
 
-In the Storefront mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.
+In the Frontend Application mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.
 
 ### Homepage
 

@@ -1,16 +1,16 @@
 # Enhancing SEO with Prerender.io
 
-The current Virto Commerce theme, vc-theme-b2b-vue, uses the power of Single Page Applications (SPAs) to provide a unique, interactive, and fast user experience. However, while SPAs excel in user experience, they often pose challenges for search engines due to their dynamic nature. This dynamic behavior, which is a strength for user engagement, can become a hurdle in attracting organic traffic.
+The current Virto Commerce Frontend Application uses the power of Single Page Applications (SPAs) to provide a unique, interactive, and fast user experience. However, while SPAs excel in user experience, they often pose challenges for search engines due to their dynamic nature. This dynamic behavior, which is a strength for user engagement, can become a hurdle in attracting organic traffic.
 
 To overcome these challenges and strike a balance between an engaging user experience and search engine optimization (SEO), [Prerender.io](http://prerender.io/) represents as a valuable solution. Prerender.io generates pre-rendered HTML snapshots for SPAs, significantly improving SEO-friendliness and Web Vitals metrics. This integration doesn't require the adoption of complex Server-Side Rendering (SSR) frameworks like Next or Nuxt, preserving the simplicity of the presentation application. This guide explores how Prerender.io provides a straightforward yet highly effective solution to boost the visibility, performance, and overall experience of Vue.js SPAs.
 
-## Integration with vc-theme-b2b-vue
+## Integration with Virto Commerce Frontend Application
 
-In this guide, we describe the results of Prerender.io  integration with the vc-theme-b2b-vue. A practical example is our site, [https://vcmp-dev-storefront.paas.govirto.com](https://vcmp-dev-storefront.paas.govirto.com), which is built on vc-theme-b2b-vue and uses the Prerender.io service.
+In this guide, we describe the results of Prerender.io  integration with the vc-theme-b2b-vue. A practical example is our [site](https://virtostart-demo-store.govirto.com/), which is built on vc-theme-b2b-vue and uses the Prerender.io service.
 
 ### Configuration Details
 
-The integration involved setting up a reverse proxy using Nginx in front of the VC storefront. Additionally, the vc-theme-b2b-vue and Prerender's cloud service were installed. The Nginx reverse proxy was configured based on the [example](https://docs.prerender.io/docs/nginx-1).
+The integration involved setting up a reverse proxy using Nginx in front of the VC Frontend Application. Additionally, the vc-theme-b2b-vue and Prerender's cloud service were installed. The Nginx reverse proxy was configured based on the [example](https://docs.prerender.io/docs/nginx-1).
 
 ![diagram](media/prerender-io.png)
 

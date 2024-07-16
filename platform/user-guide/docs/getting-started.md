@@ -83,17 +83,14 @@ By default, the Stock Quantity will be automatically reduced with each new order
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/3xRfa0_LUZY)
 
-## Create Frontend User and Add Theme
+## Create Frontend User
 
-Virto Commerce is a headless platform and multiple client apps can be connected to it. At this step:
-
-1. [Create a frontend user for Virto Commerce Storefront (default storefront web application).](security/managing-users.md#create-new-users-and-assign-roles-to-them)
-1. [Add a theme.](content/managing-themes.md#add-new-theme)
+Virto Commerce is a headless platform and multiple client apps can be connected to it. At this step [create a frontend user for Virto Commerce Frontend application.](security/managing-users.md#create-new-users-and-assign-roles-to-them)
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/Xc8zl0wllmk)
 
 ## Check Store Configuration and Launch your MVP store
 
-Now you are ready to connect a storefront and launch your MVP store.
+Now you are ready to connect a Frontend Application and launch your MVP store.
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/5LWMgwzss7k)

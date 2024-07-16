@@ -10,11 +10,6 @@ From the **Pages list**, you can:
 * Organize your pages into folders.
 * Search pages by keyword. You can even search for pages containing images by their alternative text.
 
-Pages can have the following extensions:
-
-* **.page** - for pages that have been created in Page Builder and published.
-* **.page-draft** - for pages that have been created in Page Builder, but have not yet been published.
-* **.md** - for pages that have been created using markdown or html.
 
 Click on the three dots to left of the page name to:
 
@@ -29,8 +24,10 @@ Click on the three dots to left of the page name to:
 To create new pages:
 
 * Use the upload feature (see image above).
-* Use Virto Commerce Page Builder to build pages from individual blocks by clicking **Design Page** in the blade below. <!-- ADD LINK TO PAGE BUILDER GUIDE -->
 * Use markdown or html by clicking **Html Page** in the blade below.
+
+    !!! note
+        If you have the Page Builder module installed, you can build pages from individual blocks by clicking **Design Page** in the blade below. <!-- ADD LINK TO PAGE BUILDER GUIDE -->
 
 ![designer or html](media/designer-or-html.png)
 
@@ -48,6 +45,9 @@ To create a new page using markdown or html, fill in the following fields in the
 
 ## Edit pages with .page and .page-draft extensions
 
+!!! note
+    This is an option for Page Builder users only.
+
 In the **Pages list** blade, select the desired page and edit the following fields:
 
 ![Edit page](media/edit-page.png)
@@ -57,3 +57,5 @@ In the **Pages list** blade, select the desired page and edit the following fiel
 In the **Pages list** blade, select the desired page and edit it as markdown or html:
 
 ![edit md page](media/edit-md-page.png)
+
+Click **Save** in the toolbar to save the changes.

@@ -1,6 +1,6 @@
 # Search options
 
-Within the Storefront, there are two ways to search for products:
+Within the Frontend Application, there are two ways to search for products:
 
 * **Keyword search**: Use the search box to find products based on keywords, SKU numbers, or other product attributes.
 * **Faceted search**: Use facets to further refine your search results.

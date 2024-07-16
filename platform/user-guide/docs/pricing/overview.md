@@ -27,4 +27,4 @@ With the Pricing module, you can:
 * [Add new price list assignment.](adding-new-assignment.md)
 * [Configure the Pricing module.](managing-pricing-module-settings.md)
 * [Export prices and price list assignments.](export-functionality.md)
-* [Troubleshoot problems with incorrect prices in the Storefront.](troubleshooting-guide.md)
+* [Troubleshoot problems with incorrect prices in the Frontend Application.](troubleshooting-guide.md)

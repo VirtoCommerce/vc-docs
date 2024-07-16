@@ -1,6 +1,6 @@
 # Manage product availability
 
-Product inventories are shown in Storefront:
+Product inventories are shown in Frontend Application:
 
 * Under each product card in the catalog. You can apply **Show in stock** filter to see only products in stock.
 * In the cart after adding the products. 
@@ -8,7 +8,7 @@ Product inventories are shown in Storefront:
 
 ![Product availability](media/storefront-stock.png)
 
-The product's availability displayed in the Storefront is determined by the information configured in:
+The product's availability displayed in the Frontend Application is determined by the information configured in:
 
 * The **Catalog** module, where availability settings are established using switches.
 * The **Inventory** module, storing the actual quantity of the product in stock. 

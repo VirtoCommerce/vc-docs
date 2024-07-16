@@ -143,7 +143,7 @@ Browser notifications appear in the lower right corner of your screen:
 
 ![Browser notifications](media/browser-notifications.png)
 
-If you block messages in your browser, you will still be able to see them in the Storefront.
+If you block messages in your browser, you will still be able to see them in the Frontend Application.
 
 You can change your decision at any time:
 

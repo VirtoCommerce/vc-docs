@@ -20,5 +20,5 @@ With the Security module, you can:
 * [Create user accounts](managing-users.md#create-new-user).
 * [Assign various roles to users](managing-users.md). Each role includes specific granular permissions that give or restrict access to specific features within the platform. This is useful when you want to restrict access to a specific store or do not want regular platform users to edit sensitive data.
 * [Generate API keys](api-key.md) for specific users.
-* [Log in to Storefront on behalf](login-on-behalf.md) of any user.
+* [Log in to the Frontend Application on behalf](login-on-behalf.md) of any user.
 

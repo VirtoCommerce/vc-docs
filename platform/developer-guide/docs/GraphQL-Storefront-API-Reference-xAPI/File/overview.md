@@ -1,6 +1,6 @@
 Virto Commerce now offers an enhanced file upload solution, which prioritizes security and extensibility principles to elevate the developer experience. This architecture is designed to support different file providers and offer an intuitive developer experience.
 
-This function is now used in our Storefront to [attach files to the created quotes](../../../../../storefront/user-guide/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
+This function is now used in our Frontend Application to [attach files to the created quotes](../../../../../storefront/user-guide/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
 
 | Queries               	                            | Objects                                                      	            | Mutations                                 |
 |----------------------------------------------------	|-------------------------------------------------------------------------	|----------------	                        |

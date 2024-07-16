@@ -1,4 +1,4 @@
-Virto Storefront and Vue B2B Theme has native integration with Hotjar module.
+Virto Commerce Frontend Application has native integration with Hotjar module.
 
 To start using Hotjar:
 

@@ -3,7 +3,7 @@
 
 **Bill of materials:** A special type of Product that is actually a list of materials required for a specific item purchased by the customer that can be created for internal purposes.
  
-**Catalog:** A module offered by the Virto Commerce platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations. The catalog module consists of the storefront (the e-commerce website facing the customer) and the admin console or back office, which is used to configure your catalog according to the user's needs.
+**Catalog:** A module offered by the Virto Commerce platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations. 
 
 **Category:** Each category acts as a container, or folder, that houses various products of a particular type; these can be both physical and digital products. For example, a consumer electronics site might have categories such as laptops, tablets, smartphones, cameras, etc.
 

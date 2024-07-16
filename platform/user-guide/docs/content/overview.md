@@ -11,6 +11,9 @@ With the Content module, you can manage:
 
 ![overview](media/overview.png)
 
+!!! note
+    The Content module supports creating and editing pages using Markdown and HTML. Therefore, you may be interested in installing the [Page Builder module](../page-builder/overview.md) to create ecommerce pages from blocks and edit them using a visual editor. However, the Content module should be installed first.
+
 ## Installation
 
 You can install the Content module:

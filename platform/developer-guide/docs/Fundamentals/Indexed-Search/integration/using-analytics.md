@@ -36,7 +36,7 @@ Sometimes, users use different terminology than your context might expect. In th
 
 ![Top queries with no results](media/top-queries-no-results.png)
 
-For example, your customers might search for a **duplicator** in the Storefront, but don't find any matching product:
+For example, your customers might search for a **duplicator** in the Frontend Application, but don't find any matching product:
 
 ![Searching for a product with no result](media/searching-for-duplicator.png)
 

@@ -9,6 +9,15 @@ To view the list of orders:
 
     ![Filters](media/time-range-filter.png)
 
+    Click on the three dots to the left of any order to open a dropdown menu and:
+
+    - Start managing the order.
+    - Copy order id.
+    - Copy order number.
+    - Delete the order.
+
+    ![Three dots menu](media/managing-orders.png)
+
 1. Select an order from the list to view its details. 
 
 ## General Order Information

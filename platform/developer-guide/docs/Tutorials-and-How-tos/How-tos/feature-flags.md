@@ -2,7 +2,7 @@ Feature flags, also known as feature toggles or feature switches, are a powerful
 
 ## Benefits of Using Feature Flags
 
-Integrating feature flags into Virto Commerce and Virto Storefront offers several significant benefits:
+Integrating feature flags into Virto Commerce Platform and Frontend Application offers several significant benefits:
 
 * **Modularity**: Feature flags enable safe and controlled feature releases by allowing developers to enable or disable features remotely by installing/uninstalling Virto Commerce module. 
 * **A/B Testing**: Feature flags facilitate A/B testing and experimentation by enabling developers to test new features with a subset of users before rolling them out to the entire user base.
@@ -11,7 +11,7 @@ Integrating feature flags into Virto Commerce and Virto Storefront offers severa
 
 ## Architecture 
 
-[Virto Commerce Platform 3.813+](https://github.com/VirtoCommerce/vc-platform) and [Virto Commerce XAPI 3.812+](https://github.com/VirtoCommerce/vc-module-experience-api) introduce Public Store Settings. This architecture enables seamless integration of feature flags into Virto Commerce and Virto Storefront.
+[Virto Commerce Platform 3.813+](https://github.com/VirtoCommerce/vc-platform) and [Virto Commerce XAPI 3.812+](https://github.com/VirtoCommerce/vc-module-experience-api) introduce Public Store Settings. This architecture enables seamless integration of feature flags into Virto Commerce Platform and Frontend Application.
 
 * Virto Commerce extended `SettingDescriptor` with the `IsPublic` property, indicating that a setting is accessible for client applications via the XAPI. 
 * Virto Commerce XAPI extended store query with modules that grant access to Public Store Settings per module. 
@@ -85,9 +85,9 @@ To retrieve store settings and module settings via GraphQL queries, you can use 
     }
     ``` 
 
-## How to Do GraphQL Call in Virto Storefront
+## How to Do GraphQL Call in Virto Commerce Frontend Application
 
-In Virto Storefront, you can use GraphQL queries to request modules with public settings. Here's an example of how to check if the Google Analytics module is installed and retrieve its settings.
+In Virto Commerce Frontend Application, you can use GraphQL queries to request modules with public settings. Here's an example of how to check if the Google Analytics module is installed and retrieve its settings.
 
 In this utility class, we define methods to check if a feature is enabled and to get the value of a feature based on the provided `moduleId` and `featureName`. This approach encapsulates feature flag logic and promotes reusability and maintainability in your VueJS application.
 
@@ -144,8 +144,8 @@ const measurementId = featureFlags.getValue("VirtoCommerce.GoogleEcommerceAnalyt
 
 ```
 
-Integrating feature flags with Virto Commerce and Virto Storefront using public store settings and GraphQL queries provides developers with a flexible and efficient way to manage feature variations and configurations in their applications.
+Integrating feature flags with Virto Commerce Platform and Frontend Application using public store settings and GraphQL queries provides developers with a flexible and efficient way to manage feature variations and configurations in their applications.
 
 ## Summary
 
-Implementing feature flags with Virto Commerce and Virto Storefront provides developers with a flexible and efficient way to manage feature variations and configurations in their applications. By leveraging public store settings and GraphQL queries, developers can easily control feature activation and visibility at runtime, enabling safer experimentation, gradual rollouts, and targeted releases.
+Implementing feature flags with Virto Commerce Platform and Frontend Application  provides developers with a flexible and efficient way to manage feature variations and configurations in their applications. By leveraging public store settings and GraphQL queries, developers can easily control feature activation and visibility at runtime, enabling safer experimentation, gradual rollouts, and targeted releases.

@@ -8,6 +8,7 @@ Managing contact entities (companies, employees, customers, and vendors) include
 * [Exporting contacts.](managing-contacts.md#export-contacts)
 * [Importing contacts.](managing-contacts.md#import-contacts)
 * [Updating contacts.](managing-contacts.md#import-contacts)
+* [Assigning multiple organizations to contacts and employees.](managing-contacts.md#assign-multiple-organizations-to-contacts-and-employees)
 
 ## Add Contacts
 
@@ -109,3 +110,18 @@ Your contacts have been uploaded.
 ## Update Contacts
 
 The procedure for updating contacts is similar to the one for [importing contacts](managing-contacts.md#import-contacts). The system finds organizations by Id or outer Id and updates them. 
+
+## Assign Multiple Organizations to Contacts and Employees
+
+For corporate accounts in the Frontend Application, you can assign multiple organizations to any contact or employee:
+
+1. Click **Contacts** in the main menu.
+1. In the **Companies and Contacts** blade, select the required contact. 
+1. In the next blade, add as many companies to the **Member of company (ies)** segment as needed from the dropdown list.
+1. Click **Save** in the top toolbar to save the changes.
+
+	![Assign multiple organizations](media/assign-multiple-organizatopns.png)
+
+The contact can now switch between the assigned organizations in the Frontend Application:
+
+![Storefront multiple organizations](media/storefront-multiple-organizations.png)

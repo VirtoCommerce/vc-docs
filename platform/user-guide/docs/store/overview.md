@@ -2,7 +2,7 @@
 
 The Virto Commerce Store module is a way to efficiently manage your online stores from a single point.
 
-A store in Virto Commerce is a collection of settings for your web page or website that converts it into the appropriate online store you need. For each store, you can configure an item catalog to display, available currencies, languages, payment methods, even UI themes, pages, and much more. The Virto Commerce team supplies default storefront settings, as well as some sample stores to help you better understand how it works once you decide to build your own store with Virto.
+A store in Virto Commerce is a collection of settings for your web page or website that converts it into the appropriate online store you need. For each store, you can configure an item catalog to display, available currencies, languages, payment methods, even UI themes, pages, and much more. The Virto Commerce team supplies default Frontend Application settings, as well as some sample stores to help you better understand how it works once you decide to build your own store with Virto.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-store)
 

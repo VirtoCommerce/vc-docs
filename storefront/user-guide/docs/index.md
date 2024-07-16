@@ -10,8 +10,6 @@ This guide is designed to help you navigate and make the most of your shopping e
 | ![Shopping](media/shopping-overview.png) | <ul><li> [Find a product](shopping/searching-for-products.md/)</li><li> [Create bulk orders](shopping/bulk-orders.md) </li> <li>[Compare products](shopping/compare-products.md)</li> <li>[Check out](shopping/checkout-process.md)</li></ul>|
 
 
-[![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
-
-[![Install](media/install-storefront.png)](https://github.com/VirtoCommerce/vc-theme-b2b-vue)
+[![Public demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
 
 [![Video tutorial](media/video-tutorial-button.png)](https://youtu.be/8LaCWtkVdAk?si=SbB6_4DO-HWPKw7)

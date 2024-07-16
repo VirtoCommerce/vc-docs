@@ -1,6 +1,6 @@
 # Skills Required for VC Developers
 
-Virto Commerce Developers design, build, test, and maintain E-commerce solutions, such as Virto Commerce Storefront applications and Virto Commerce Platform modules, partnering with solution architects, administrators, and clients to implement and integrate these solutions as part of the client e-commerce ecosystem.
+Virto Commerce Developers design, build, test, and maintain E-commerce solutions, such as Virto Commerce Frontend Applications and Virto Commerce Platform modules, partnering with solution architects, administrators, and clients to implement and integrate these solutions as part of the client e-commerce ecosystem.
 
 The following skills are important for working with Virto Commerce:
 

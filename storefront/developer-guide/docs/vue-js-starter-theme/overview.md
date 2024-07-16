@@ -39,8 +39,6 @@ Our Vue.js Starter Theme has an adaptive design that allows it to look smooth an
     
 - Ultimate **starting point** for all new themes
     
-- **SEO friendly** thanks to **SSR** (Server Side Rendering) running on the VC Storefront [ASP.NET](http://ASP.NET) Core and Liquid pages.
-    
 
 ## Key Functionalities
 
@@ -66,4 +64,3 @@ As a developer, you will be using **vc-theme-b2b-vue** as your ultimate starting
 
 [![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
     
-[![Install](media/install-storefront.png)](https://github.com/VirtoCommerce/vc-theme-b2b-vue)

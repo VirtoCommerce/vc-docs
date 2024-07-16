@@ -2,7 +2,7 @@
 
 To sign in into the account:
 
-1. Open the Storefront and click **Sign in** in the top right corner.
+1. Open the Frontend Application and click **Sign in** in the top right corner.
 
     ![Sign in](../media/sign-in.png)
 
@@ -15,7 +15,7 @@ To sign in into the account:
 
 1. Click **Log in**.
 
-You can now use the Storefront as a registered user. 
+You can now use the Frontend Application as a registered user. 
 
 !!! note
     In some cases, users may see the following screen when trying to log in. 

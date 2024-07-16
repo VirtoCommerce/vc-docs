@@ -10,7 +10,7 @@ The White Labeling module enables organizations to enhance the enterprise user e
 
 * **Branding Configuration**: Display organization-specific logos, favicons, colors, and footer links post-login.
 * **White labeling**: Resolve branding based on the organization context after user authentication.
-* **Integration with Virto Frontend**: Seamlessly integrate customized branding elements into Virto Commerce Storefront.
+* **Integration with Virto Frontend**: Seamlessly integrate customized branding elements into Virto Commerce Frontend Application.
 * **Custom Domain**: Assign a custom domain with the organization to allow branding activation on the first visit.
 * **Automated Favicon Generation**: The module uses Virto Commerce Image Tools module for favicon generation.
 

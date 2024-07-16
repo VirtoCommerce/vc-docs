@@ -11,7 +11,7 @@ The Hotjar module allows you to assign Hotjar Site Id for your Store. It gets in
 With the Hotjar tool, you can benefit from:
 
 - Seamless store configuration.
-- Integration compatibility with Vue B2B Theme and Virto Storefront.
+- Integration compatibility with Virto Commerce Frontend Application.
 - Readiness for integration with various other sales channels.
 - Convenient access through the application menu.
 

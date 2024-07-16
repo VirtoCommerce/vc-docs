@@ -1,6 +1,6 @@
 # Google Analytics Events
 
-Google Analytics is used in the Virto Commerce Storefront to track user interactions and provide insights into user behavior. To make it easier for marketers, we have added several events that can be tracked by Google Analytics. This section details these events and how to implement them. You can track the results of these events in Google Tag Manager.
+Google Analytics is used in the Virto Commerce Frontend Application to track user interactions and provide insights into user behavior. To make it easier for marketers, we have added several events that can be tracked by Google Analytics. This section details these events and how to implement them. You can track the results of these events in Google Tag Manager.
 
 ## Tracked Sales Funnel Events
 
