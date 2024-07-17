@@ -12,4 +12,4 @@ This guide is designed to help you navigate and make the most of your shopping e
 
 [![Public demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
 
-[![Video tutorial](media/video-tutorial-button.png)](https://youtu.be/8LaCWtkVdAk?si=SbB6_4DO-HWPKw7)
+[![Video tutorial](media/video-tutorial-button.png)](https://youtu.be/xsnds1QYuC0)
