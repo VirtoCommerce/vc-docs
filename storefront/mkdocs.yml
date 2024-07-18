@@ -23,7 +23,7 @@ extra:
               image: assets/images/storefront-userquide.png
               description:
                 - title: Getting Started
-                  link: https://www.youtube.com/watch?v=8LaCWtkVdAk
+                  link: https://youtu.be/xsnds1QYuC0
                 - title: User Documentation
                   link: user-guide/
                 - title: Public Demo Environment
