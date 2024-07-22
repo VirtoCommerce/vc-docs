@@ -1,6 +1,6 @@
 # validateCoupon ==~query~==
 
-`validateCoupon` queries whether the provided coupon is valid or not.
+This is to query whether the provided coupon is valid or not.
 
 ## Arguments
 

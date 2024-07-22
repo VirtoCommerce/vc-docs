@@ -1,6 +1,6 @@
 # CartEdge ==~object~==
 
-The `CartEdge` type represents an edge in a connection of carts.
+This type represents an edge in a connection of carts.
 
 ## Fields
 

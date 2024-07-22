@@ -14,9 +14,9 @@ The order itself contains minimum details.  You will find payment, shipment, and
 !!! note
     * The order management process in Virto Commerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
 
-[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-order)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-order)
 
-[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-order/releases)
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-order/releases)
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/qENWENyS0H0?si=jFpI5N7uNIn2U0LQ)
 

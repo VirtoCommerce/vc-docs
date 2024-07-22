@@ -7,9 +7,9 @@ The Cart module:
 * Manages customers' list of items.
 * Calculates order total, including shipping/ handling charges and associated taxes.
 
-[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-cart)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-cart)
 
-[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-cart/releases)
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-cart/releases)
 
 ## Key Features
 

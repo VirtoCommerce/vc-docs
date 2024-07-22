@@ -111,7 +111,7 @@ nav:
           - <b>Assets</b>: 
             - Overview: assets/overview.md
             - Managing Assets: assets/managing-assets.md
-          - <b>Content</b>:
+          - <b>Content, or xCMS</b>:
                 - Overview: content/overview.md
                 - Themes: content/managing-themes.md
                 - Pages: content/managing-pages.md

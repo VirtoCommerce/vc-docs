@@ -1,6 +1,6 @@
 # Overview
 
-The Content module is designed to manage and display content on your e-commerce site. 
+The xCMS module, or Content module, is designed to manage and display content on your ecommerce site. 
 
 With the Content module, you can manage:
 
@@ -32,9 +32,9 @@ You can install the Content module:
     1. Upload module package.
     1. Click **Install**.
 
-[![source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-content/)
+[![source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-cms/)
 
-[![latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-content/releases/latest)
+[![latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-cms/releases/latest)
 
 ## Getting started
 

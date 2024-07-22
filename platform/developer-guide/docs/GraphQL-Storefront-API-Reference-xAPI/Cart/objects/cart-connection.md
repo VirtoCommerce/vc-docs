@@ -1,6 +1,6 @@
 # CartConnection ==~object~==
 
-The `CartConnection` type is used to represent a connection of carts and provides metadata and pagination information for the retrieved carts. 
+This type is used to represent a connection of carts and provides metadata and pagination information for the retrieved carts. 
 
 ## Field
 

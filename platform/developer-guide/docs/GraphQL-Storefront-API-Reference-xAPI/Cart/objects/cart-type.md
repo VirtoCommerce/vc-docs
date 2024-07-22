@@ -1,6 +1,6 @@
 # CartType ==~object~==
 
-The `CartType` defines the properties and fields associated with a shopping cart. 
+This type defines the properties and fields associated with a shopping cart. 
 
 ## Fields
 

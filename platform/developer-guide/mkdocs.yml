@@ -563,6 +563,7 @@ nav:
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md
                 - Sharing Bearer Tokens Across Multiple Instances: Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md
                 - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
+                - Migration to New XAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
     - Updating Virto Commerce Based Projects:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md

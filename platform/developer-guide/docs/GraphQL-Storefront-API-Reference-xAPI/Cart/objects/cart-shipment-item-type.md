@@ -1,6 +1,6 @@
 # CartShipmentItemType ==~object~==
 
-The `CartShipmentItemType` is used to define the properties of an item within a cart shipment.
+This type is used to define the properties of an item within a cart shipment.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # CouponType ==~object~==
 
-The `CouponType` represents a coupon or discount code that can be applied to a shopping cart or order.
+This type represents a coupon or discount code that can be applied to a shopping cart or order.
 
 ## Fields
 

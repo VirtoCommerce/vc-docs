@@ -1,6 +1,6 @@
 # BulkWishlistType ==~object~==
 
-The `BulkWishlistType` represents a connection to bulk adding items to a wishlist.
+This type represents a connection to bulk adding items to a wishlist.
 
 ## Fields
 

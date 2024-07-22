@@ -1,6 +1,6 @@
 # CartAddressType ==~object~==
 
-The `CartAddressType` represents an address associated with a shopping cart or order. 
+This type represents an address associated with a shopping cart or order. 
 
 ## Fields
 
