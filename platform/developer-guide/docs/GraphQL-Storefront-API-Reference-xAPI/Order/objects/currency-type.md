@@ -1,6 +1,6 @@
 # CurrencyType ==~object~==
 
-The `CurrencyType` is utilized to store information about a specific currency.
+This type is utilized to store information about a specific currency.
 
 ## Fields
 

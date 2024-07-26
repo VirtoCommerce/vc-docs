@@ -1,6 +1,6 @@
 # RegisterAccountType
 
-The `RegisterAccountType` represents the details of a user account during the registration process. 
+This type represents the details of a user account during the registration process. 
 
 ## Fields
 

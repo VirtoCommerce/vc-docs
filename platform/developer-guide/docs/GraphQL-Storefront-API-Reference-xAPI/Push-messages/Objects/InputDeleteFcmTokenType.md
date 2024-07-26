@@ -1,6 +1,6 @@
 # InputDeleteFcmTokenType ==~object~==
 
-The `InputDeleteFcmTokenType` defines the structure for deleting a Firebase Cloud Messaging (FCM) token from the system.
+This type defines the structure for deleting a Firebase Cloud Messaging (FCM) token from the system.
 
 ## Fields
 

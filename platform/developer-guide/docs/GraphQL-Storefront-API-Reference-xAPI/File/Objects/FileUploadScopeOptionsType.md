@@ -1,6 +1,6 @@
 # FileUploadScopeOptionsType ==~object~==
 
-The `FileUploadScopeOptionsType` represents the options for file upload within a specific scope.
+This type represents the options for file upload within a specific scope.
 
 ## Fields
 

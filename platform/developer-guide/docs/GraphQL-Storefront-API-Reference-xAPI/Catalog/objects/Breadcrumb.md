@@ -1,6 +1,6 @@
 # Breadcrumb ==~object~==
 
-The `breadcrumbType` refers to an object that represents a breadcrumb navigation element.
+This type refers to an object that represents a breadcrumb navigation element.
 
 ## Fields
 

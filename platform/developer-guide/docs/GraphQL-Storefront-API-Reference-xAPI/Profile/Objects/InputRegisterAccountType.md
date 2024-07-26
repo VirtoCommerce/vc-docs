@@ -1,6 +1,6 @@
 # InputRegisterAccountType ==~object~==
 
-The `InputRegisterAccountType` represents the input object for registering an account. 
+This type represents the input object for registering an account. 
 
 ## Fields
 

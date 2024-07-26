@@ -1,6 +1,6 @@
 # InputUpdateRoleInnerType ==~object~==
 
-The `InputUpdateRoleInnerType` represents the input data required to update the details of a role.  
+This type represents the input data required to update the details of a role.  
 
 ## Fields
 

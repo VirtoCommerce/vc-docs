@@ -1,6 +1,6 @@
 # PageEdge ==~object~==
 
-The `PageEdge` is utilized in combination with other types, such as `PageConnection`, to create paginated lists or connections of pages. It provides the necessary fields to identify and retrieve specific pages within the connection.
+This type is utilized in combination with other types, such as `PageConnection`, to create paginated lists or connections of pages. It provides the necessary fields to identify and retrieve specific pages within the connection.
 
 ## Fields
 

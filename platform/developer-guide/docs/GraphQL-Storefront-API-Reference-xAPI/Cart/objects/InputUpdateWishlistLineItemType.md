@@ -1,6 +1,6 @@
 # InputUpdateWishlistLineitemType ==~object~==
 
-The `InputUpdateWishlistLineitemType` represents the input for updating a line item in a wishlist.
+This type represents the input for updating a line item in a wishlist.
 
 ## Fields
 

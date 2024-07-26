@@ -1,6 +1,6 @@
 # OrganizationConnection ==~object~==
 
-The `OrganizationConnection` provides information about the connection to a list of organizations.
+This type provides information about the connection to a list of organizations.
 
 ## Fields
 

@@ -11,6 +11,10 @@ To start managing documents:
 
 1. In the main menu, click **Orders**.
 1. In the next **Customer orders** blade, select the required order.
+
+    !!! tip
+        In this step, you can copy the current URL and paste it into a new window to open the desired order immediately.  
+
 1. In the **Edit order details and related documents** blade, click **New document**.
 
 ![New document](media/new-documents-path.png){: width="700"}

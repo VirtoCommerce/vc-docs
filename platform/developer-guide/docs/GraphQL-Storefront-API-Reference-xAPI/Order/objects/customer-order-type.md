@@ -1,6 +1,6 @@
 # CustomerOrderType ==~object~==
 
-The `CustomerOrderType` represents a customer order. 
+This type represents a customer order. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # InputAssignPermissionType ==~object~==
 
-The `InputAssignPermissionType` represents the assignment of a permission. 
+This type represents the assignment of a permission. 
 
 ## Fields
 

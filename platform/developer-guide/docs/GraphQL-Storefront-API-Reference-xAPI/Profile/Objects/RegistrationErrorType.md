@@ -1,6 +1,6 @@
 # RegistrationErrorType
 
-The `RegistrationErrorType` represents an error that can occur during the registration process. 
+This type represents an error that can occur during the registration process. 
 
 ## Fields
 

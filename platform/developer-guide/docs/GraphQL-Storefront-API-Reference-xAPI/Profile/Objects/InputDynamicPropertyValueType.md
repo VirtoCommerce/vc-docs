@@ -1,6 +1,6 @@
 # InputDynamicPropertyValueType ==~object~==
 
-The `InputDynamicPropertyValueType` represents the input object for dynamic property values.
+This type represents the input object for dynamic property values.
 
 ## Fields
 

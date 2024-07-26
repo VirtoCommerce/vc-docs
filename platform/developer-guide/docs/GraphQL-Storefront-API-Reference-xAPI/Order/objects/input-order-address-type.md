@@ -1,6 +1,6 @@
 # InputOrderAddressType ==~object~==
 
-The `InputOrderAddressType` is a type that represents the input object for creating or updating an order address.
+This type represents the input object for creating or updating an order address.
 
 ## Fields
 

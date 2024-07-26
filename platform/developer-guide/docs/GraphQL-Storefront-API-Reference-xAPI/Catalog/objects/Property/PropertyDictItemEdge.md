@@ -1,6 +1,6 @@
 # PropertyDictionaryItemEdge ==~object~==
 
-The `PropertyDictionaryItemEdge` is an edge in a connection from an object to another object of type `PropertyDictionaryItem`.
+This type is an edge in a connection from an object to another object of type `PropertyDictionaryItem`.
 
 ## Fields
 

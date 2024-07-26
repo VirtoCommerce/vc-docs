@@ -1,6 +1,6 @@
 # CreateQuoteFromCartCommandType ==~object~==
 
-The `CreateQuoteFromCartCommandType` used to create a new quote based on the contents of an existing shopping cart. 
+This type is used to create a new quote based on the contents of an existing shopping cart. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # QuoteShipmentMethodType ==~object~==
 
-The `QuoteShipmentMethodType` is an object that contains information about a shipment method associated with a quote.
+This type is an object that contains information about a shipment method associated with a quote.
 
 ## Fields
 

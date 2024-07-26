@@ -1,6 +1,6 @@
 # DiscountType ==~object~==
 
-The `DiscountType` represents a discount applied to a shopping cart or order.
+This type represents a discount applied to a shopping cart or order.
 
 ## Fields
 

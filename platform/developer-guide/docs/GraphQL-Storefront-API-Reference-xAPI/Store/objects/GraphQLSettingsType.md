@@ -1,6 +1,6 @@
 # GraphQLSettingsType ==~object~==
 
-The `GraphQLSettingsType` represents the settings configuration for GraphQL, including parameters to manage its operation and performance.
+This type represents the settings configuration for GraphQL, including parameters to manage its operation and performance.
 
 ## Fields
 

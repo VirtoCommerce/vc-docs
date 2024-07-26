@@ -1,6 +1,6 @@
 # FacetTermtype ==~object~==
 
-The `FacetTermType` represents a specific term or value within a term facet, allowing users to filter products based on discrete values associated with a particular attribute or property. 
+This type represents a specific term or value within a term facet, allowing users to filter products based on discrete values associated with a particular attribute or property. 
 
 ## Fields
 

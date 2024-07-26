@@ -1,6 +1,6 @@
 # OderShipmentPackageType ==~object~==
 
-The `OrderShipmentPackageType` represents a package used for shipping items in an order.
+This type represents a package used for shipping items in an order.
 
 ## Fields
 

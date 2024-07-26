@@ -1,6 +1,6 @@
 # InputOrderBankCardInfoType ==~object~==
 
-The `InputOrderBankCardInfoType` is a type that represents the input object for providing bank card information during a payment processing operation.
+This type represents the input object for providing bank card information during a payment processing operation.
 
 ## Fields
 

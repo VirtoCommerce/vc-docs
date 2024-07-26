@@ -1,6 +1,6 @@
 # OrganizationEdge ==~object~==
 
-The `OrganizationEdge` represents an edge in the connection of organizations.
+This type represents an edge in the connection of organizations.
 
 ## Fields
 

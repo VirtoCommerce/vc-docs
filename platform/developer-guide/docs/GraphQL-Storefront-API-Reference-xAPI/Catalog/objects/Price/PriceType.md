@@ -1,6 +1,6 @@
 # PriceType ==~object~==
 
-The `priceType` object represents the pricing information for a product or variation.
+This type object represents the pricing information for a product or variation.
 
 ## Fields
 

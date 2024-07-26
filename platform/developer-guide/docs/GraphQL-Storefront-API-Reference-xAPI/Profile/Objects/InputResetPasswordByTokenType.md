@@ -1,6 +1,6 @@
 # InputResetPasswordByTokenType ==~object~==
 
-The `InputResetPasswordByTokenType` represents the input for resetting a user's password.  
+This type represents the input for resetting a user's password.  
 
 ## Fields
 

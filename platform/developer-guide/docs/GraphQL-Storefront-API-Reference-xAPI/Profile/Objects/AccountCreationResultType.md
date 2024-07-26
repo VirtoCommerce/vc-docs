@@ -1,6 +1,6 @@
 # AccountCreationResultType
 
-The `AccountCreationResultType` represents the result of an account creation operation. 
+This type represents the result of an account creation operation. 
 
 ## Fields
 

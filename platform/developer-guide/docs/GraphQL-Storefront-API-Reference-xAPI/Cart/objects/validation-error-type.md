@@ -1,6 +1,6 @@
 # ValidationErrorType ==~object~==
 
-The `ValidationErrorType` represents a validation error encountered during a specific operation or process. 
+This type represents a validation error encountered during a specific operation or process. 
 
 ## Fields
 

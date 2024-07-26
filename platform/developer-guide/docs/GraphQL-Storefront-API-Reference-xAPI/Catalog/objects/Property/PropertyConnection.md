@@ -1,6 +1,6 @@
 # PropertyConnection ==~object~==
 
-The `PropertyConnection` type and its associated fields are used to retrieve and manage properties within the platform. 
+This type and its associated fields are used to retrieve and manage properties within the platform. 
 
 **Fields**
 

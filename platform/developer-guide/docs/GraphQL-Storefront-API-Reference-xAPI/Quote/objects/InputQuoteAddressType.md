@@ -1,6 +1,6 @@
 # InputQuoteAddressType ==~object~==
 
-The `InputQuoteAddressType`defines the format and fields used to provide input for updating or creating address information within a quote. 
+This type defines the format and fields used to provide input for updating or creating address information within a quote. 
 
 ## Fields
 

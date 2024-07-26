@@ -1,6 +1,6 @@
 # WishlistScopeType ==~object~==
 
-The `WishlistScopeType` specifies the wishlist accessibility.
+This type specifies the wishlist accessibility.
 
 ## Fields
 

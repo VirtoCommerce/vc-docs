@@ -1,6 +1,6 @@
 # PropertyDictionaryItem ==~object~==
 
-The `PropertyDictionaryItem` represents an individual item within a property dictionary.
+This type represents an individual item within a property dictionary.
 
 **Fields**
 

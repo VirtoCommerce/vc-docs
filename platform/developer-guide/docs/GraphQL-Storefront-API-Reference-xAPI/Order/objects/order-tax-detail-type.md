@@ -1,6 +1,6 @@
 # OrderTaxDetailType ==~object~==
 
-The `OrderTaxDetailType` a detailed breakdown of taxes applied to a shipment or order.
+This type is a detailed breakdown of taxes applied to a shipment or order.
 
 ## Fields
 

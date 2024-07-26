@@ -1,6 +1,6 @@
 # TermFacet ==~object~==
 
-The `TermFacet` type represents a facet used for filtering search results based on terms or categories.
+This type represents a facet used for filtering search results based on terms or categories.
 
 ## Fields
 

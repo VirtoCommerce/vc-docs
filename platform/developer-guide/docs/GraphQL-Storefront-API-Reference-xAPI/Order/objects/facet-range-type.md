@@ -1,6 +1,6 @@
 # FacetRangeType ==~object~==
 
-The `FacetRangeType` represents a range within a facet used for filtering search results based on numerical or range-based attributes.
+This type represents a range within a facet used for filtering search results based on numerical or range-based attributes.
 
 ## Fields
 

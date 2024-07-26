@@ -1,6 +1,6 @@
 # Property ==~object~==
 
-The `propertyType` represents a type or category of properties. Properties are used to provide additional information or attributes for products and variations.
+This type represents a type or category of properties. Properties are used to provide additional information or attributes for products and variations.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # FulfillmentCenterConnection  ==~object~==
 
-The `FulfillmentCenterConnection` type represents a connection to a list of fulfillment centers. 
+This type represents a connection to a list of fulfillment centers. 
 
 ## Fields
 

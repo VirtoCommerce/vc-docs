@@ -1,6 +1,6 @@
 # MenuLinkListType ==~object~==
 
-The `MenuLinkListType` represents a list of menu links. It defines the structure and properties of a menu.
+This type represents a list of menu links. It defines the structure and properties of a menu.
 
 ## Fields
 

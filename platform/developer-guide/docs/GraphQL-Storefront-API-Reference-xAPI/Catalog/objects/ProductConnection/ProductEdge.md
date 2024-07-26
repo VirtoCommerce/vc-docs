@@ -1,6 +1,6 @@
 # ProductEdge ==~object~==
 
-The `ProductEdge` represents a connection between a product and its associated cursor.  
+This type represents a connection between a product and its associated cursor.  
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # DictionaryItemType ==~object~==
 
-The `DictionaryItemType` represents a dictionary item, which is a key-value pair used to store and organize data in a dictionary.. 
+This type represents a dictionary item, which is a key-value pair used to store and organize data in a dictionary.. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # InventoryInfo ==~object~==
 
-The `InventoryInfo` provides essential data for tracking and managing inventory levels and ensuring accurate stock availability for customers.
+This type provides essential data for tracking and managing inventory levels and ensuring accurate stock availability for customers.
 
 ## Fields
 

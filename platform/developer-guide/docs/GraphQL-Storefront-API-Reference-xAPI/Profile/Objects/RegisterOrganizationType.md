@@ -1,6 +1,6 @@
 # RegisterOrganizationType
 
-The `RegisterOrganizationType` represents the details of an organization during the registration process.
+This type represents the details of an organization during the registration process.
 
 ## Fields
 

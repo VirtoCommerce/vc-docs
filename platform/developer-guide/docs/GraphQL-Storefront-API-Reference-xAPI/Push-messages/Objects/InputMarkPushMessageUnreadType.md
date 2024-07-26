@@ -1,6 +1,6 @@
 # InputMarkPushMessageUnreadType ==~object~==
 
-The `InputMarkPushMessageUnreadType` defines the input structure for marking a push message as unread.
+This type defines the input structure for marking a push message as unread.
 
 ## Fields
 

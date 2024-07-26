@@ -1,6 +1,6 @@
 # VariationType ==~object~==
 
-The `VariationType` is used to differentiate or group different types of product variations.
+This type is used to differentiate or group different types of product variations.
 
 ## Fields
 

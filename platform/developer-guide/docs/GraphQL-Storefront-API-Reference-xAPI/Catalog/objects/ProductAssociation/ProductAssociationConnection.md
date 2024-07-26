@@ -1,6 +1,6 @@
 # ProductAssociationConnection ==~object~==
 
-The `ProductAssociationConnection` represents a connection from an object to a list of objects of the `ProductAssociation` type. 
+This type represents a connection from an object to a list of objects of the `ProductAssociation` type. 
 
 ## Fields
 

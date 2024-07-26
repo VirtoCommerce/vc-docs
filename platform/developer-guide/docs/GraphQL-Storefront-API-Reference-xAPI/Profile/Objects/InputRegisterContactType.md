@@ -1,6 +1,6 @@
 # InputRegisterContactType ==~object~==
 
-The `InputRegisterContactType` represents the input object for registering a contact. 
+This type represents the input object for registering a contact. 
 
 ## Fields
 

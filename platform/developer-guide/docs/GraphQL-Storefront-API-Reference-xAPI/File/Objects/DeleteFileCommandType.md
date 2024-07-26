@@ -1,6 +1,6 @@
 # DeleteFileCommandType ==~object~==
 
-The `DeleteFileCommandType` defines the input structure for deleting a file.
+This type defines the input structure for deleting a file.
 
 ## Fields
 

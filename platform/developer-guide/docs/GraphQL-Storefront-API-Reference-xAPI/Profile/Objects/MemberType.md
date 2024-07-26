@@ -1,6 +1,6 @@
 # MemberType ==~object~==
 
-The `MemberType` represents a member entity.
+This type represents a member entity.
 
 ## Fields
 

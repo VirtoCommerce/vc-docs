@@ -1,6 +1,6 @@
 # CurrencyType ==~object~==
 
-The `CurrencyType` represents a currency and its associated properties. 
+This type represents a currency and its associated properties. 
 
 ## Fields
 

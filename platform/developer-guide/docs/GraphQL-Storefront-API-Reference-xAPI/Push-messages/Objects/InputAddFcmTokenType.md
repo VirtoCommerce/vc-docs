@@ -1,6 +1,6 @@
 # InputAddFcmTokenType ==~object~==
 
-The `InputAddFcmTokenType` defines the structure for adding a Firebase Cloud Messaging (FCM) token to the system.
+This type defines the structure for adding a Firebase Cloud Messaging (FCM) token to the system.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # ProductAssociationEdge ==~object~==
 
-The `ProductAssociationEdge` represents an edge in a connection between a vendor and associated products.
+This type represents an edge in a connection between a vendor and associated products.
 
 ## Fields
 

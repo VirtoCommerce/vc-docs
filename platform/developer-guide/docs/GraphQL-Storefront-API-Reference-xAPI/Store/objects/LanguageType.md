@@ -1,6 +1,6 @@
 # LanguageType ==~object~==
 
-The `LanguageType` represents information about a language.
+This type represents information about a language.
 
 ## Fields
 

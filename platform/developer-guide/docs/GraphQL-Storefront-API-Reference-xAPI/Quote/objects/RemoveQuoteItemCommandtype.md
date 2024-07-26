@@ -1,6 +1,6 @@
 # RemoveQuoteItemCommandType  ==~object~==
 
-The `RemoveQuoteItemCommandType ` is used to remove a specific item from a quote.
+This type is used to remove a specific item from a quote.
 
 ## Fields
 

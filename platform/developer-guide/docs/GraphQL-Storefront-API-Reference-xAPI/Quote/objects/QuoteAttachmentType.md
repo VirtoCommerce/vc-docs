@@ -1,6 +1,6 @@
 # QuoteAttachmentType ==~object~==
 
-The `QuoteAttachmentType` is an object that contains information about an attachment associated with a quote. 
+This type is an object that contains information about an attachment associated with a quote. 
 
 ## Fields
 

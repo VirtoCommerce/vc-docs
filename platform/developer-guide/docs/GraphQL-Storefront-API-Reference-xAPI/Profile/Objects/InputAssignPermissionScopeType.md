@@ -1,6 +1,6 @@
 # InputAssignmentPermissionScopeType ==~object~==
 
-The `InputAssignmentPermissionScopeType` defines the scope of a permission assignment. 
+This type defines the scope of a permission assignment. 
 
 ## Fields
 

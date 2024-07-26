@@ -1,6 +1,6 @@
 # OrderAddressType ==~object~==
 
-The `OrderAddressType` object represents an address associated with a customer order.
+This type represents an address associated with a customer order.
 
 ## Fields
 

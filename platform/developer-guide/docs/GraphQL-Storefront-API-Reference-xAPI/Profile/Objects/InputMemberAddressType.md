@@ -1,6 +1,6 @@
 # InputMemberAddressType ==~object~==
 
-The `InputMemberAddressType` represents the input object for member addresses. 
+This type represents the input object for member addresses. 
 
 ## Fields
 

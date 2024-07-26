@@ -1,6 +1,6 @@
 # LocalizedSettingResponseType ==~object~==
 
-The `LocalizedSettingResponseType` represents a response type containing localized settings.
+This type represents a response type containing localized settings.
 
 ## Fields
 

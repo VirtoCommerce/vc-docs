@@ -1,6 +1,6 @@
 # InputCreateApplicationUserType
 
-The `InputCreateApplicationUserType` represents the fields and their types for creating an application user.
+This type represents the fields and their types for creating an application user.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # QuoteTaxDetailType ==~object~==
 
-The `QuoteTaxDetailType` is an object that contains information about a tax detail associated with a quote. 
+This type is an object that contains information about a tax detail associated with a quote. 
 
 ## Fields
 

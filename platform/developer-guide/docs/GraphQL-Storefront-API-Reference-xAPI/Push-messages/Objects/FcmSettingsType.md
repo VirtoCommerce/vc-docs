@@ -1,6 +1,6 @@
 # FcmSettingsType ==~object~==
 
-The `FcmSettingsType` defines the structure of Firebase Cloud Messaging (FCM) settings.
+This type defines the structure of Firebase Cloud Messaging (FCM) settings.
 
 ## Fields
 

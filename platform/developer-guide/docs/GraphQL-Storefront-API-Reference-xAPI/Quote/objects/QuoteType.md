@@ -1,6 +1,6 @@
 # QuoteType ==~object~==
 
-The `QuoteType` contains various fields or attributes that provide information about the order. 
+This type contains various fields or attributes that provide information about the order. 
 
 ## Fields
 

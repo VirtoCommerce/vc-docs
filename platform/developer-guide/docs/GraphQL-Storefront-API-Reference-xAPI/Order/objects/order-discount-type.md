@@ -1,6 +1,6 @@
 # OrderDiscountType ==~object~==
 
-The `OrderDiscountType` represents a discount applied to an order or shipment. 
+This type represents a discount applied to an order or shipment. 
 
 ## Fields
 

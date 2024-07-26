@@ -1,6 +1,6 @@
 # OrderShipmentItemType ==~object~==
 
-The `OrderShipmentItemType` represents a specific item included in a shipment for an order.
+This type represents a specific item included in a shipment for an order.
 
 ## Field
 

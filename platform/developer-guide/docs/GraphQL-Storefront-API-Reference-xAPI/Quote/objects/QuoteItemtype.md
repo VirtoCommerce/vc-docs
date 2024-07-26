@@ -1,6 +1,6 @@
 # QuoteItemType ==~object~==
 
-The `QuoteItemType` is an object that provides information about a specific item within a quote.
+This type is an object that provides information about a specific item within a quote.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # InputKeyValueType ==~object~==
 
-The `InputKeyValueType` type represents key-value pairs used for passing additional parameters or data in various input objects.
+This type represents key-value pairs used for passing additional parameters or data in various input objects.
 
 ## Fields
 

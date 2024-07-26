@@ -1,6 +1,6 @@
 # CategoryConnection ==~object~==
 
-The `CategoryConnection` represents a connection to a list of categories. 
+This type represents a connection to a list of categories. 
 
 ## Fields
 

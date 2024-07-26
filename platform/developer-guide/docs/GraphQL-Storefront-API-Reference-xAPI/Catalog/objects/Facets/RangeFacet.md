@@ -1,6 +1,6 @@
 # RangeFacet ==~object~==
 
-The `RangeFacet` represents a facet for filtering products based on a range of values.  
+This type represents a facet for filtering products based on a range of values.  
 
 ## Fields
 

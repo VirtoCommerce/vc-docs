@@ -1,6 +1,6 @@
 # ModuleSettingType ==~object~==
 
-The `ModuleSettingType` represents the configuration of a specific setting within a module.
+This type represents the configuration of a specific setting within a module.
 
 ## Fields
 

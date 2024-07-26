@@ -1,6 +1,6 @@
 # PaymentInType ==~object~==
 
-The `PaymentInType` represents the received incoming payment. Each `PaymentInType` instance represents a specific payment made by a customer to complete a purchase or settle an order. 
+This type represents the received incoming payment. Each `PaymentInType` instance represents a specific payment made by a customer to complete a purchase or settle an order. 
 
 ## Fields
 

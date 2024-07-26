@@ -1,6 +1,6 @@
 # RegisterContactType
 
-The `RegisterContactType` represents the details of a contact person during the registration process. 
+This type represents the details of a contact person during the registration process. 
 
 ## Fields
 

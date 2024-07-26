@@ -1,6 +1,6 @@
 # InputMarkPushMessageReadType ==~object~==
 
-The `InputMarkPushMessageReadType` defines the input structure for marking a push message as read.
+This type defines the input structure for marking a push message as read.
 
 ## Fields
 

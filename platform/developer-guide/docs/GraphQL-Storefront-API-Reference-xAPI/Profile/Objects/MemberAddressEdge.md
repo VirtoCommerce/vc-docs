@@ -1,6 +1,6 @@
 # MemberAddressEdge ==~object~==
 
-The `MemberAddressEdge` represents an edge in a connection of member addresses.
+This type represents an edge in a connection of member addresses.
 
 ## Fields
 

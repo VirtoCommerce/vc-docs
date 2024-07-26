@@ -1,6 +1,6 @@
 # QuoteEdge ==~object~==
 
-The `QuoteEdge` is an object that is used to represent an edge within a list of quotes. 
+This type is an object that is used to represent an edge within a list of quotes. 
 
 ## Fields
 

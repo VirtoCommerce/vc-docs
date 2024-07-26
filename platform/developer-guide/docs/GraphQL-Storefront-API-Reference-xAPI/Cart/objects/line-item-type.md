@@ -1,6 +1,6 @@
 # LineItemType ==~object~==
 
-The `LineItemType` represents the data structure that holds information about a line item, which is a specific product added to a cart or order. 
+This type represents the data structure that holds information about a line item, which is a specific product added to a cart or order. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # InputNewWishlistItemType ==~object~==
 
-The `InputNewWishlistItemType` represents the input for creating a new wishlist item.
+This type represents the input for creating a new wishlist item.
 
 ## Fields
 

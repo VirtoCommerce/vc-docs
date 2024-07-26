@@ -1,6 +1,6 @@
 # InputUpdateApplicationUserType ==~object~==
 
-The `InputUpdateApplicationUserType` represents the input for updating an application user. 
+This type represents the input for updating an application user. 
 
 ## Fields
 

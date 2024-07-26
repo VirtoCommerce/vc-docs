@@ -1,6 +1,6 @@
 # Asset ==~object~==
 
-The `assetType` object represents an asset. It can be an image, video, document, or any other type of file associated with products, variations, categories, or other entities. 
+This type represents an asset. It can be an image, video, document, or any other type of file associated with products, variations, categories, or other entities. 
 
 ## Fields
 

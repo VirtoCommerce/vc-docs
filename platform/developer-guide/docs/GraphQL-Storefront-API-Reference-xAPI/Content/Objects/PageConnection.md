@@ -1,6 +1,6 @@
 # PageConnection ==~object~==
 
-The `PageConnection` represents a connection to a collection of pages. It provides structured information and pagination controls for retrieving and managing pages within the system. 
+This type represents a connection to a collection of pages. It provides structured information and pagination controls for retrieving and managing pages within the system. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # FilterFacet ==~object~==
 
-The `FilterFacet` type represents a facet used for filtering search results.
+This type represents a facet used for filtering search results.
 
 ## Fields
 

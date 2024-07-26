@@ -1,6 +1,6 @@
 # ChangeQuoteItemQuantityCommandType ==~object~==
 
-The `ChangeQuoteItemQuantityCommandType` is used to change the quantity of a specific item within a quote. 
+This type is used to change the quantity of a specific item within a quote. 
 
 ## Fields
 

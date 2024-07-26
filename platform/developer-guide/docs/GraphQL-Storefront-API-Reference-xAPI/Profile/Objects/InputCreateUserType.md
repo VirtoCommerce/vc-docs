@@ -1,6 +1,6 @@
 # InputCreateUserType
 
-The `InputCreateUserType` represents the input field required to create a user.
+This type represents the input field required to create a user.
 
 ## Fields
 

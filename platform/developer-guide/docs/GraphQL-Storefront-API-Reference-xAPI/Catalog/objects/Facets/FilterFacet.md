@@ -1,6 +1,6 @@
 # FilterFacet ==~object~==
 
-The `FilterFacet` represents a facet for filtering products based on specific attributes or properties. 
+This type represents a facet for filtering products based on specific attributes or properties. 
 
 ## Fields
 

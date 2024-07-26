@@ -1,6 +1,6 @@
 # CustomerOrderEdge ==~object~==
 
-The `CustomerOrderEdge` represents an edge in a connection of customer orders.
+This type represents an edge in a connection of customer orders.
 
 ## Fields
 

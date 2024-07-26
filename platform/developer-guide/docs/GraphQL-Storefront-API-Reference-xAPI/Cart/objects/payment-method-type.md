@@ -1,6 +1,6 @@
 # PaymentMethodType
 
-The `PaymentMethodType` represents a specific payment method available for use in a shopping cart or order. 
+This type represents a specific payment method available for use in a shopping cart or order. 
 
 ## Fields
 

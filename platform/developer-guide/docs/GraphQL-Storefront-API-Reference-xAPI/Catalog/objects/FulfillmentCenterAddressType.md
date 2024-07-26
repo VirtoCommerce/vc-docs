@@ -1,6 +1,6 @@
 # FulfillmentCenterAddressType
 
-The `FulfillmentCenterAddressType` represents a data type that describes the address of a fulfillment center. It contains various fields to provide detailed information about the address. 
+This type represents a data type that describes the address of a fulfillment center. It contains various fields to provide detailed information about the address. 
 
 ## Fields
 

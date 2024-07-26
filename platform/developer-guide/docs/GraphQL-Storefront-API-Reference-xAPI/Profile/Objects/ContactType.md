@@ -1,6 +1,6 @@
 # ContactType ==~object~==
 
-The `ContactType` represents a contact and includes various fields to describe the contact's information.
+This type represents a contact and includes various fields to describe the contact's information.
 
 ## Fields
 

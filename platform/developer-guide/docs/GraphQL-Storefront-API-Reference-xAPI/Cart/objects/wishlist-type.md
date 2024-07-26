@@ -1,6 +1,6 @@
 # WishlistType ==~object~==
 
-The `WishlistType` represents the details and properties of a wishlist.
+This type represents the details and properties of a wishlist.
 
 ## Fields
 

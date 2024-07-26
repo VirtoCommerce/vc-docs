@@ -1,6 +1,6 @@
 # TaxDetailType ==~object~==
 
-The `TaxDetailType` type represents a tax detail with its associated properties. 
+This type represents a tax detail with its associated properties. 
 
 ## Fields
 

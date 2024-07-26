@@ -1,6 +1,6 @@
 # PaymentTransactionType ==~object~==
 
-The `PaymentTransactionType` represents a specific transaction attempt associated with a payment. 
+This type represents a specific transaction attempt associated with a payment. 
 
 ## Fields
 

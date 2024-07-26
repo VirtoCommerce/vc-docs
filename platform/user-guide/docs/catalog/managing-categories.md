@@ -13,7 +13,11 @@ To add a new category to the catalog:
 1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
 1. In the next **Categories and Items** blade, click **Add** in the toolbar.
-1. In the **New category item** blade, select **Category**.  
+1. In the **New category item** blade, select **Category**.
+
+    !!! tip
+        In this step, you can copy the current URL and paste it into a new window to open the desired category immediately.  
+
 1. Fill in the category name. The code is generated automatically.
 
     ![New Category Item](media/add-new-category-path.png)

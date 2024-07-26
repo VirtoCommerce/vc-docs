@@ -1,6 +1,6 @@
 # DictionaryItemConnection ==~object~==
 
-The `DictionaryItemConnection` provides a standardized way of fetching and navigating through a large collection of dictionary items. 
+This type provides a standardized way of fetching and navigating through a large collection of dictionary items. 
 
 ## Fields
 

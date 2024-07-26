@@ -1,6 +1,6 @@
 # OrganizationType ==~object~==
 
-The `OrganizationType` contains various fields providing information about the organization.
+This type contains various fields providing information about the organization.
 
 ## Fields
 

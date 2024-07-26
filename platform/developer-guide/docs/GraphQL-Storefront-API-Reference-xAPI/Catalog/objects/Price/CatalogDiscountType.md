@@ -1,6 +1,6 @@
 # CatalogDiscountType ==~object~==
 
-The `CatalogDiscountType` represents a discount applied to a catalog or specific items within a catalog.
+This type represents a discount applied to a catalog or specific items within a catalog.
 
 ## Fields
 

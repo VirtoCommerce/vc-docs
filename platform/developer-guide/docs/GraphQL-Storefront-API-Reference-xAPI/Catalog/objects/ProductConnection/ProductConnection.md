@@ -1,6 +1,6 @@
 # ProductConnection ==~object~==
 
-The `ProductConnection` represents a connection to a list of products. 
+This type represents a connection to a list of products. 
 
 ## Fields
 

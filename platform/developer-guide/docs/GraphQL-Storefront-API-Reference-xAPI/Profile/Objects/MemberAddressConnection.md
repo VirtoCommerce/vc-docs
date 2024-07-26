@@ -1,6 +1,6 @@
 # MemberAddressConnection ==~object~==
 
-The `MemberAddressConnection` represents a connection to a list of member addresses.
+This type represents a connection to a list of member addresses.
 
 ## Fields
 

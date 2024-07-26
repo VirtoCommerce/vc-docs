@@ -1,6 +1,6 @@
 # InputRegisterByInvitationType ==~object~==
 
-The `InputRegisterByInvitationType` represents the input object for registering a user by invitation. 
+This type represents the input object for registering a user by invitation. 
 
 ## Fields 
 

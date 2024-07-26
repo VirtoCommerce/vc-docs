@@ -1,6 +1,6 @@
 # StoreResponseType ==~object~==
 
-The `StoreResponseType` represents the response data for a store, including its basic information and configuration.
+This type represents the response data for a store, including its basic information and configuration.
 
 ## Fields
 

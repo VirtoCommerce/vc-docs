@@ -1,6 +1,6 @@
 # InputApplicationUserLoginType
 
-The `InputApplicationUserLoginType` represents the fields required to specify a user login in the application.
+This type represents the fields required to specify a user login in the application.
 
 ## Fields
 

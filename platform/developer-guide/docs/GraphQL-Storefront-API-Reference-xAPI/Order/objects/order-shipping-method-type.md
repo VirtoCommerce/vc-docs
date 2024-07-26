@@ -1,6 +1,6 @@
 # OrderShippingMethodType ==~object~==
 
-The `OrderShippingMethodType` represents a shipping method available for orders.
+This type represents a shipping method available for orders.
 
 | Field                   | Description                                                    |
 |-------------------------|----------------------------------------------------------------|

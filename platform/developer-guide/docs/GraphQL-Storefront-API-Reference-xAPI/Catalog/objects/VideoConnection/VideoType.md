@@ -1,6 +1,6 @@
 # VideoType ==~object~==
 
-The `VideoType` represents a video entity with its associated metadata and properties.
+This type represents a video entity with its associated metadata and properties.
 
 ## Fields
 

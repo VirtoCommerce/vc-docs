@@ -40,6 +40,10 @@ To view the product details of the added product:
 
 1. Follow steps 1-3 from the instruction above.
 1. In the **Categories and items** blade, click the required product.
+
+    !!! tip
+        In this step, you can copy the current URL and paste it into a new window to open the desired product immediately.  
+
 1. The product details may be logically divided into two parts:
 
 	* Fields and toggles:

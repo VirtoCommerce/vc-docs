@@ -1,6 +1,6 @@
 # InputChangePasswordType ==~object~==
 
-The `InputChangePasswordType` represents the input for changing a user's password.  
+This type represents the input for changing a user's password.  
 
 ## Fields
 

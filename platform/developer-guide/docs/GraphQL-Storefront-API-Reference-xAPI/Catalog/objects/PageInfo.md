@@ -1,6 +1,6 @@
 # PageInfo ==~object~==
 
-The `PageInfo` provides information about pagination in a connection.
+This type provides information about pagination in a connection.
 
 ## Fields
 

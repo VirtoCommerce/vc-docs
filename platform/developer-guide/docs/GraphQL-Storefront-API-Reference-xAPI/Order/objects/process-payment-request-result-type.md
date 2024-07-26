@@ -1,6 +1,6 @@
 # ProcessPaymentRequestResultType ==~object~==
 
-The `ProcessPaymentRequestResultType` is a type that represents the result of a payment processing request. 
+This type represents the result of a payment processing request. 
 
 ## Fields
 

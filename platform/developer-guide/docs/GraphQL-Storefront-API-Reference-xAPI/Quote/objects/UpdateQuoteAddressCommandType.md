@@ -1,6 +1,6 @@
 # UpdateQuoteAddressesCommandType  ==~object~==
 
-The `UpdateQuoteAddressesCommandType` used to update the addresses associated with a specific quote.
+This type is used to update the addresses associated with a specific quote.
 
 ## Fields
 

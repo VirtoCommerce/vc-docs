@@ -1,6 +1,6 @@
 # InputAssignRoleType ==~object~==
 
-The `InputAssignRoleType` represents the input fields required for assigning a role to a user.
+This type represents the input fields required for assigning a role to a user.
 
 ## Fields
 

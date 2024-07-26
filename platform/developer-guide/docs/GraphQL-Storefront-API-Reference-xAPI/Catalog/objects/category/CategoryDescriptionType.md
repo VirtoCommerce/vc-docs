@@ -1,6 +1,6 @@
 # CategoryDescriptionType ==~object~==
 
-The `CategoryDescriptionType`represents the description of a category.
+This type represents the description of a category.
 
 ## Fields
 

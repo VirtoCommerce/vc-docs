@@ -1,6 +1,6 @@
 # AvailabilityData ==~object~==
 
-The `AvailabilityData` refers to the information related to the availability and inventory status of a product or variation. 
+This type refers to the information related to the availability and inventory status of a product or variation. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # QuoteConnection ==~object~==
 
-The `QuoteConnection` is an object used to manage and retrieve quotes. 
+This type is an object used to manage and retrieve quotes. 
 
 ## Fields
 

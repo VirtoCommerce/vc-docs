@@ -1,6 +1,6 @@
 # ContactEdge ==~object~==
 
-The `ContactEdge` represents an edge in the connection between contacts.
+This type represents an edge in the connection between contacts.
 
 ## Fields
 

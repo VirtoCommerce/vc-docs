@@ -1,6 +1,6 @@
 # PasswordOptionsType ==~object~==
 
-The `PasswordOptionsType` represents the configuration for password requirements in a store.
+This type represents the configuration for password requirements in a store.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # CategoryEdge ==~object~==
 
-The `CategoryEdge` represents a connection between a node (a category) and its associated cursor. 
+This type represents a connection between a node (a category) and its associated cursor. 
 
 ## Fields
 

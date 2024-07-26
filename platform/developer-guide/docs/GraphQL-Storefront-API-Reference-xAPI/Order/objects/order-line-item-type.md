@@ -1,6 +1,6 @@
 # OrderLineItemType ==~object~==
 
-The `OrderLineItemType` type represents a line item within a customer order.
+This type represents a line item within a customer order.
 
 ## Fields
 

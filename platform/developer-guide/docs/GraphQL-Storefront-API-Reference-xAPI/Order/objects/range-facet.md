@@ -1,6 +1,6 @@
 # RangeFacet ==~object~==
 
-The `RangeFacet` type represents a facet used for filtering search results based on numerical or range-based attributes.
+This type represents a facet used for filtering search results based on numerical or range-based attributes.
 
 ## Fields
 

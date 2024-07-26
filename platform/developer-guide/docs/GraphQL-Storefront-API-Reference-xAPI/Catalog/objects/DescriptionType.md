@@ -1,6 +1,6 @@
 # DescriptionType ==~object~==
 
-The `descriptionType` object is used to provide textual information or details about a product, category, or other relevant entities.
+This type is used to provide textual information or details about a product, category, or other relevant entities.
 
 ## Fields
 

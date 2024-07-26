@@ -318,10 +318,10 @@ extra:
                   content:
                     - title: User Guide
                       links:
-                        - title: Vendor Portal
-                          url: /marketplace/user-guide/Vendor-portal/overview
                         - title: Operator Portal
                           url: /marketplace/user-guide/Operator-portal/overview
+                        - title: Vendor Portal
+                          url: /marketplace/user-guide/Vendor-portal/overview
                     - title: Developer Guide
                       links:
                         - title: In Progress
@@ -337,7 +337,7 @@ extra:
                         - title: Extending VC Apps Functionality
                           url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/getting-started.svg
-              title: Getting started
+              title: Getting Started
               content:
                 - title: Platform
                   links:

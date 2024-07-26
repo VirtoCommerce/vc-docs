@@ -1,6 +1,6 @@
 # CustomerOrderConnection ==~object~==
 
-The `CustomerOrderConnection` represents a connection of customer orders.
+This type represents a connection of customer orders.
 
 ## Fields
 

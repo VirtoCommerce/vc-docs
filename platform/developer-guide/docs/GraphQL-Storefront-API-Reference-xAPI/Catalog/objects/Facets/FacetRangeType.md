@@ -1,6 +1,6 @@
 # FacetRangeType ==~object~==
 
-The `FacetRangeType` represents a specific range within a range facet, allowing users to filter products based on the specified range of values. 
+This type represents a specific range within a range facet, allowing users to filter products based on the specified range of values. 
 
 ## Fields
 

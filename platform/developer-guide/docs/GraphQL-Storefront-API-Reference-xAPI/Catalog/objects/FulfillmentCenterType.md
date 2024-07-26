@@ -1,6 +1,6 @@
 # FulfillmentCenterType
 
-The `FulfillmentCenterType` describes a fulfillment center. It provides information about various attributes of a fulfillment center. 
+This type describes a fulfillment center. It provides information about various attributes of a fulfillment center. 
 
 ## Fields
 

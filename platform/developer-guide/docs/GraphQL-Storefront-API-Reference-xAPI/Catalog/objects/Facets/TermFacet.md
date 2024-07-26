@@ -1,6 +1,6 @@
 # TermFacet ==~object~==
 
-The `TermFacet` represents a facet for filtering products based on discrete values or terms. 
+This type represents a facet for filtering products based on discrete values or terms. 
 
 ## Fields
 

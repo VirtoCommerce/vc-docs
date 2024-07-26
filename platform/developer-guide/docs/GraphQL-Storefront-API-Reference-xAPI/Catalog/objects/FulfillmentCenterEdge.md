@@ -1,6 +1,6 @@
 # FulfillmentCenterEdge  ==~object~==
 
-The `FulfillmentCenterEdge` type represents an edge that connects a fulfillment center to a connection.  
+This type represents an edge that connects a fulfillment center to a connection.  
 
 ## Fields
 

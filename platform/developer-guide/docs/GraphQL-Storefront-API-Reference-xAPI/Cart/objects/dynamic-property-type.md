@@ -1,6 +1,6 @@
 # DynamicPropertyType ==~object~==
 
-The `DynamicPropertyType` represents a value assigned to a dynamic property. 
+This type represents a value assigned to a dynamic property. 
 
 ## Fields
 

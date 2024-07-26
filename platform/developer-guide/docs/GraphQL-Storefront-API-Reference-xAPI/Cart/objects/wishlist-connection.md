@@ -1,6 +1,6 @@
 # WishlistConnection ==~object~==
 
-The `WishlistConnection` represents a connection to a list of wishlists.
+This type represents a connection to a list of wishlists.
 
 ## Fields
 

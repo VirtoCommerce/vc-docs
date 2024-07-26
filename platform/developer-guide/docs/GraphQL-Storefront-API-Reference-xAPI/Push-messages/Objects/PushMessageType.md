@@ -1,6 +1,6 @@
 # PushMessageType ==~object~==
 
-The `PushMessageType` defines the properties and characteristics of an individual push message.
+This type defines the properties and characteristics of an individual push message.
 
 ## Fields
 

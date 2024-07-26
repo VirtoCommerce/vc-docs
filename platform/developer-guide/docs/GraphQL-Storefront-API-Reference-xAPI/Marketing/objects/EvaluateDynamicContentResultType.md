@@ -1,6 +1,6 @@
 # EvaluateDynamicContentResultType ==~object~==
 
-The `EvaluateDynamicContentResultType` represents the result type for the evaluation of dynamic content. 
+This type represents the result type for the evaluation of dynamic content. 
 
 ## Fields
 

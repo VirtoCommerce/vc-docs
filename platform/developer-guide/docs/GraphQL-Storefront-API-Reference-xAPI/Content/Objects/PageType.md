@@ -1,6 +1,6 @@
 # PageType ==~object~==
 
-The `PageType` defines the properties and characteristics of an individual page.
+This type defines the properties and characteristics of an individual page.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # InputRegisterOrganizationType ==~object~==
 
-The `InputRegisterOrganizationType` represents the input object for registering an organization. 
+This type represents the input object for registering an organization. 
 
 | Field                                                                                         | Description                                                                                                       |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|

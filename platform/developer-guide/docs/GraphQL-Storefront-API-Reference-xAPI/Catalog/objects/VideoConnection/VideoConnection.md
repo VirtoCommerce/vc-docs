@@ -1,6 +1,6 @@
 # VideoConnection ==~object~==
 
-The `VideoConnection` is a connection from an object to a list of objects of `VideoType`.
+This type is a connection from an object to a list of objects of `VideoType`.
 
 ## Fields
 

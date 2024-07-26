@@ -1,6 +1,6 @@
 # OutlineItemType ==~object~==
 
-The `outlineItemType`represents the type of an outline item. 
+This type represents the type of an outline item. 
 
 ## Fields
 

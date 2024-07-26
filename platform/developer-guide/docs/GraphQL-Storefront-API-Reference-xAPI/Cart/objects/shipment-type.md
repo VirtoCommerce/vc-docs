@@ -1,6 +1,6 @@
 # ShipmentType ==~object~==
 
-The `ShipmentType` represents a shipment within a shopping cart or order. 
+This type represents a shipment within a shopping cart or order. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # MoneyType ==~object~==
 
-The `MoneyType` type represents a monetary value with associated currency information. 
+This type represents a monetary value with associated currency information. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # MenuLinkType ==~object~==
 
-The `MenuLinkType` represents a menu link within a menu. It defines the properties and characteristics of a single menu link.
+This type represents a menu link within a menu. It defines the properties and characteristics of a single menu link.
 
 ## Fields
 

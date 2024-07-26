@@ -1,6 +1,6 @@
 # DynamicContentItemType ==~object~==
 
-The `DynamicContentItemType` represents a type or category of dynamic content items. 
+This type represents a type or category of dynamic content items. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # IdentityResultType ==~object~==
 
-The `IdentityResultType` represents the result of an identity-related operation. 
+This type represents the result of an identity-related operation. 
 
 ## Fields
 

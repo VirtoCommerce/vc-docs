@@ -1,6 +1,6 @@
 # QuoteTotalsType ==~object~==
 
-The `QuoteTotalsType` is an object used to store and manage various financial or pricing-related totals associated with a quote.  
+This type is an object used to store and manage various financial or pricing-related totals associated with a quote.  
 
 ## Fields
 

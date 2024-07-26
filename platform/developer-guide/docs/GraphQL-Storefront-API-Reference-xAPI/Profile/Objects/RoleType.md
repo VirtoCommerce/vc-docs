@@ -1,6 +1,6 @@
 # RoleType ==~object~==
 
-The `RoleType` representsa a role with its corresponding information.
+This type represents a a role with its corresponding information.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # InitizalizePaymentResultType ==~object~==
 
-The `InitializePaymentResultType` is a type that represents the result of initializing a payment. 
+This type represents the result of initializing a payment. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # PaymentType ==~object~==
 
-The `PaymentType` represents a payment made within a shopping cart or order. 
+This type represents a payment made within a shopping cart or order. 
 
 ## Fields
 

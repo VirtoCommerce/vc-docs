@@ -1,6 +1,6 @@
 # FacetTermType ==~object~==
 
-The `FacetTermType` represents a term within a facet used for filtering search results.
+This type represents a term within a facet used for filtering search results.
 
 ## Fields
 

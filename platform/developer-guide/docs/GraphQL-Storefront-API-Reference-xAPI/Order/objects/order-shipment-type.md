@@ -1,6 +1,6 @@
 # OrderShipmentType ==~object~==
 
-The `OrderShipmentType` contains information about a shipment within a customer order.
+This type contains information about a shipment within a customer order.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # SubmitQuoteCommandType  ==~object~==
 
-The `SubmitQuoteCommandType` used to submit a quote for processing within the system.
+This type is used to submit a quote for processing within the system.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # WishlistEdge ==~object~==
 
-The `WishlistEdge` is an edge in a connection from an object to another object of type `Wishlist`.
+This type is an edge in a connection from an object to another object of type `Wishlist`.
 
 ## Fields
 

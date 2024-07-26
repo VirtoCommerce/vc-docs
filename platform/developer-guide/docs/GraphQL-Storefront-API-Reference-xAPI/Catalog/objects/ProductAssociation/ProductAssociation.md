@@ -1,6 +1,6 @@
 # ProductAssociation ==~object~==
 
-The `ProductAssociation` represents the association between products in queries.
+This type represents the association between products in queries.
 
 ## Fields
 

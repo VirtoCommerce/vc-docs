@@ -1,6 +1,6 @@
 # QuoteTierPriceType ==~object~==
 
-The `QuoteTierPriceType` is an object that contains information about tiered pricing associated with a quote item. 
+This type is an object that contains information about tiered pricing associated with a quote item. 
 
 ## Fields
 

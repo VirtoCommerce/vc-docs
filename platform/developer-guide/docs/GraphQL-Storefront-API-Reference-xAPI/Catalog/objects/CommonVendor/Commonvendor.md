@@ -1,6 +1,6 @@
 # CommonVendor ==~object~==
 
-The `CommonVendor` refers to a common representation or type of a vendor. 
+This type refers to a common representation or type of a vendor. 
 
 ## Fields
 

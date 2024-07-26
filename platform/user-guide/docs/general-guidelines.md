@@ -1,6 +1,6 @@
 # General Guidelines
 
-Although the Platform interface is user firendly and intuitive, read this article to understand general techniques of working with the Platform. 
+Although the Platform interface is user friendly and intuitive, read this article to understand general techniques of working with the Platform. 
 
 
 ## Home Page
@@ -38,3 +38,8 @@ There some ways to open a module's settings in the Platform:
 
     ![Settings](media/settings-widget.png){: width="650"}
 
+## Items URLs
+
+When you open the desired order, product, or product category, you can copy its URL and paste it into a new window to open the desired item immediately:
+
+![Copy and paste order URL](media/order-url.gif)

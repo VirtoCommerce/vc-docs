@@ -1,6 +1,6 @@
 # RequestRegistrationType
 
-The `RequestRegistrationType` represents a registration request.
+This type represents a registration request.
 
 ## Fields
 

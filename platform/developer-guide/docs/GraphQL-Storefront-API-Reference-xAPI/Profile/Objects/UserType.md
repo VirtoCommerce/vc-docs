@@ -1,6 +1,6 @@
 # UserType ==~object~==
 
-The `UserType` represents a user with its corresponding information.
+This type represents a user with its corresponding information.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # IdentityErrorType ==~object~==
 
-The `IdentityErrorType` represents an error that occurs during an identity-related operation.
+This type represents an error that occurs during an identity-related operation.
 
 ## Fields
 

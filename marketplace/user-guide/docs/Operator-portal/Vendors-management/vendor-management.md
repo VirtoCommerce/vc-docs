@@ -1,110 +1,49 @@
-# Vendor management
+# Vendor Management
 
-In this article, we will go through the step-by-step process of editing vendor information and optimizing product management, as well as learning how to assign categories and subcategories to vendors for seamless product uploads. 
+In this article, we will see which vendor features can be edited from the Operator portal. 
 
-## Edit vendor
+Operators can manage vendor information from:
 
-To edit a vendor:
+* [Operator portal.](vendor-management.md#manage-vendor-from-operator-portal)
+* [Vendor portal.](vendor-management.md#log-in-to-vendor-portal-on-vendor-behalf)
+
+
+## Manage Vendor from Operator Portal
+
+To manage a vendor from the Operator portal:
 
 1. Click **Vendor** in the main menu.
-1. Select the vendor you need to edit.
-1. In the next blade, edit the desired fields.
+1. In the next blade, select a vendor you need to edit.
+1. In the next blade, edit the desired information.
+
+    ![Vendor info](media/vendor-fields.png)
+    
+    !!! note
+        When configuring the approval policy, select:
+        
+        * **By operator** if you want to manually review and approve vendors registration to ensure they meet specific standards. 
+        * **Auto** if you trust the vendor's compliance and quality and want to reduce the administrative burden on operators.
+    
+    
+    <br><br>
+    In the widget section, you can:
+
+    ![Widgets](media/vendor-widgets.png)
+
 1. Click **Save** in the toolbar to save changes.
 
-## Vendor tasks and entities
+Your modifications have been saved.
 
-When you go to the vendor details blade, you see a list of widgets that are shortcuts to specific entities related to the vendor, such as vendor uploaded products, offers, vendor orders, and more. 
+## Log in to Vendor Portal on Vendor Behalf
 
-![Widgets](../../media/widgets.png)
+Operators can access the Vendor зortal on behalf of any registered vendor, allowing them to manage vendor-specific settings, troubleshoot issues, and provide direct support without needing the vendor's login credentials. This feature ensures seamless administrative assistance and enhances the overall efficiency of vendor management.
 
-### Products
+To log in to the Vendor portal on Vendor behalf:
 
-The **Products** widget displays a list of products uploaded by the vendor. From here, you can view, edit, approve, or decline the vendor's products. 
+1. Click **Vendor** in the main menu.
+1. In the next blade, select a vendor you need to edit.
+1. In the next blade, click **Open Vendor portal** in the toolbar.
 
-For more information, refer to the [Catalog management](../../Vendor-portal/products-management-by-vendor.md) page.
+![Login on behalf](media/login-on-behalf.gif)
 
-### Categories
-
-The **Categories** widget allows you to manage the categories to which a vendor can upload products. Vendors can only upload products to categories and subcategories that are assigned to them.
-
-To assign a category or a set of categories to the vendor:
-
-1. Click the **Categories** widget.
-1. In the next blade, click **Add** in the toolbar.
-1. Check categories to assign to the vendor.
-1. Click **Map** in the toolbar.
-
-To remove categories assigned to the vendor:
-
-1. Click the **Categories** widget.
-1. In the next blade, check categories to remove from the Vendor.
-1. Click **Delete** in the toolbar.
-1. Type **Yes** to confirm the deletion, and then click **Confirm**.
-
-### Users. Employees management
-
-
-
-The **Users** widget allows you to view and manage the vendor's employees. Here you can add employees, edit existing employee details, change the role for the employee, re-send the invitation email, or delete unused employee accounts.
-
-#### Add new employee
-
-To invite a new employee to the vendor:
-
-1. Click the **Users** widget.
-1. In the **Vendor users** blade, click **Add** in the toolbar.
-1. In the new blade, fill in the following fields:
-
-    ![New user](../../media/create-new-user.png)
-
-1. Click **Invite**.
-
-#### Edit employee
-
-To edit an employee:
-
-1. Click the **Users** widget.
-1. In the **Vendor users** blade, select the employee you need to edit.
-1. Edit the desired fields.
-1. Click **Save** in the toolbar.
-
-#### Re-send invitation
-
-This feature can be useful if an employee did not receive the initial invitation email for various reasons, or if the invitation activation link has expired. 
-
-To resend an invitation email with the new activation link:
-
-1. Click the **Users** widget.
-1. In the **Vendor users** blade, select the employee you need to resend the invitation to.
-1. Click **Resend invite** in the toolbar.
-
-#### Delete employee
-
-To delete an employee:
-
-1. Click the **Users** widget.
-1. In the **Vendor users** blade, check the employee(s) you need to delete.
-1. Click **Delete** in the toolbar.
-1. Confirm the deletion.
-
-### Orders
-
-Although there is a separate **Operator orders** menu where an operator can view customer orders, there is an option to view supplier-related orders after the original customer order has been split: 
-
-1. Click the **Orders** widget to view supplier orders. 
-1. Click an order to view its details: customer details, delivery details, items ordered, quantities and prices, status, and more.
-
-    ![Orders widget](../../media/orders-widget.png)
-
-### Reviews
-
-The **Reviews** widget provides customer feedback on the service level of the vendor. The widget shows the average rank of the vendor and a number of customer reviews for the Vendor.
-
-[Read more about Rating and reviews](){ .md-button }
-
-To view, approve, or reject customer reviews:
-
-1. Click the **Reviews** widget to open a list of reviews left for the vendor by the customers.
-1. Click the review item in the list to see its details.
-    ![Review](../../media/customer-review.png)
-
+The Vendor portal opens in a new window. 

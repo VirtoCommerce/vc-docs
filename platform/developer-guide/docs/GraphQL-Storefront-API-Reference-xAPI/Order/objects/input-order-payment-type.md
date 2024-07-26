@@ -1,6 +1,6 @@
 # InputOrderPaymentType ==~object~==
 
-The `InputOrderPaymentType` is a type that represents the input object for creating or updating an order payment. 
+This type represents the input object for creating or updating an order payment. 
 
 ## Fields
 

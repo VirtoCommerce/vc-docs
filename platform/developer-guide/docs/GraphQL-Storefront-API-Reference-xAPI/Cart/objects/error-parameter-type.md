@@ -1,6 +1,6 @@
 # ErrorParameterType ==~object~==
 
-The `ErrorParameterType` represents a key-value pair that provides additional information or context about an error. 
+This type represents a key-value pair that provides additional information or context about an error. 
 
 ## Fields
 

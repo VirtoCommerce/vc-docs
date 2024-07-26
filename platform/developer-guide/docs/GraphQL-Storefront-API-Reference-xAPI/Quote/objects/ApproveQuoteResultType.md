@@ -1,6 +1,6 @@
 # ApproveQuoteResultType ==~object~==
 
-The `ApproveQuoteResultType` represents the result of approving a quote.
+This type represents the result of approving a quote.
 
 ## Fields
 

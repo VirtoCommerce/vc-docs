@@ -1,6 +1,6 @@
 # GiftItemType ==~object~==
 
-The `GiftItemType` represents a gift item associated with a shopping cart or order.
+This type represents a gift item associated with a shopping cart or order.
 
 ## Fields
 

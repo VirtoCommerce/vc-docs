@@ -1,6 +1,6 @@
 # CancelQuoteCommandType ==~object~==
 
-The `CancelQuoteCommandType` is used to cancel a quote. 
+This type is used to cancel a quote. 
 
 ## Fields
 

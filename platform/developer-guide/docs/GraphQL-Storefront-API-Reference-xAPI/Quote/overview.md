@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce Quote Module is a quote management system. It allows shop owners to easily manage customer quotes and send out accurate quotes without having to create them manually.
+The Quote module is a quote management system. It allows shop owners to easily manage customer quotes and send out accurate quotes without having to create them manually.
 
 The module offers the following key features:
 

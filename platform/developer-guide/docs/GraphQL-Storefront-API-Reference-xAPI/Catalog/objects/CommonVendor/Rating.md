@@ -1,6 +1,6 @@
 # Rating ==~object~==
 
-The `rating` refers to the evaluation or assessment of a vendor based on customer reviews.
+This type refers to the evaluation or assessment of a vendor based on customer reviews.
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # PushMessageEdge ==~object~==
 
-The `PushMessageEdge` represents an edge in a connection that contains a cursor and a node.
+This type represents an edge in a connection that contains a cursor and a node.
 
 ## Fields
 

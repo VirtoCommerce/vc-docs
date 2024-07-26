@@ -1,6 +1,6 @@
 # PushMessageConnection ==~object~==
 
-The `PushMessageConnection` defines the structure of the response containing push messages.
+This type defines the structure of the response containing push messages.
 
 ## Fields
 

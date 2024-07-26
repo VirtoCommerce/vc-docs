@@ -1,6 +1,6 @@
 # SeoInfo ==~object~==
 
-The `SeoInfo` represents the SEO information associated with an asset or webpage.
+This type represents the SEO information associated with an asset or webpage.
 
 ## Fields
 

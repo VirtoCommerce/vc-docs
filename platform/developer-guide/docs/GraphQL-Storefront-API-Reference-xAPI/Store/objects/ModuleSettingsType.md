@@ -1,6 +1,6 @@
 # ModuleSettingsType ==~object~==
 
-The `ModuleSettingsType` represents the configuration settings for a module in a store.
+This type represents the configuration settings for a module in a store.
 
 ## Fields
 

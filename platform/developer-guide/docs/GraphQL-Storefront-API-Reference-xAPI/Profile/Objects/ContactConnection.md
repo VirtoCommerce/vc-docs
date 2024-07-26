@@ -1,6 +1,6 @@
 # ContactConnection ==~object~==
 
-The `ContactConnection` represents a connection to a list of contacts.
+This type represents a connection to a list of contacts.
 
 ## Fields
 

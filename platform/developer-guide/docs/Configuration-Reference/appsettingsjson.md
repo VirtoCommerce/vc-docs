@@ -414,7 +414,8 @@ This node configures file upload settings for your application:
 | RootPath                  |                                   | The root directory where uploaded files will be stored.   |
 | Scopes.Scope              |                                   | The scope or category of the uploaded files.              |
 | Scopes.MaxFileSize        | 123                               | The maximum size in bytes allowed for each uploaded file. |
-| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | The list of allowed extensions for uploads.               |   
+| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | The list of allowed extensions for uploads.               |
+| Scopes.AllowAnonymousUpload | true <br> false                 | Indicates whether anonymous uploads are permitted.        |
 
 
 **Example**
@@ -428,6 +429,7 @@ This node configures file upload settings for your application:
         "Scope": "quote-attachments",
         "MaxFileSize": 123,
         "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
+        "AllowAnonymousUpload": true
       }
     ]
   }

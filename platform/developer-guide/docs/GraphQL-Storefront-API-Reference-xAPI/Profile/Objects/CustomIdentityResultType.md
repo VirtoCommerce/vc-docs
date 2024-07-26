@@ -1,6 +1,6 @@
 # CustomIdentityResultType ==~object~==
 
-The `CustomIdentityResultType` provides feedback on the outcome of identity-related operations. 
+This type provides feedback on the outcome of identity-related operations. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # ImageType ==~object~==
 
-The `ImageType` represents an image file or resource.
+This type represents an image file or resource.
 
 ## Fields
 

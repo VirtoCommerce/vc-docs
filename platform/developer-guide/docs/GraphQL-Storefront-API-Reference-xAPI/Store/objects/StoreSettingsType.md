@@ -1,6 +1,6 @@
 # StoreSettingsType ==~object~==
 
-The `StoreSettingsType` represents the settings configuration for a store.
+This type represents the settings configuration for a store.
 
 ## Fields
 

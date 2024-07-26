@@ -1,6 +1,6 @@
 # OrderPaymentMethodType ==~object~==
 
-The `OrderPaymentMethodType` represents a payment method available for orders.
+This type represents a payment method available for orders.
 
 ## Fields
 

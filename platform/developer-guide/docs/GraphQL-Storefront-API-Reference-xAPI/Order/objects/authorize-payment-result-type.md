@@ -1,6 +1,6 @@
 # AuthorizePaymentResultType ==~object~==
 
-The `AuthorizePaymentResultType` is a type that represents the result of authorizing a payment for an order. 
+This type represents the result of authorizing a payment for an order. 
 
 ## Fields
 

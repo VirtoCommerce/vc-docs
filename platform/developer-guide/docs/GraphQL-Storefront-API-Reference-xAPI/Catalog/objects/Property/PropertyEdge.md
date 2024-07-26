@@ -1,6 +1,6 @@
 # PropertyEdge ==~object~==
 
-The `PropertyEdgeType` is a type that represents an edge in a graph database, specifically for properties. 
+This type represents an edge in a graph database, specifically for properties. 
 
 ## Fields
 

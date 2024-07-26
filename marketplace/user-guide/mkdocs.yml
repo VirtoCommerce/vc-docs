@@ -6,7 +6,7 @@ theme:
 # Project information
 extra_site_name: Marketplace User Docs
 site_name: marketplace/user-guide
-site_description: --TBD--
+site_description: Self-service portals to manage tasks for marketplace operators and vendors
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org/marketplace/user-guide
 
@@ -18,18 +18,22 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
+    - Operator portal:
+      - Overview: Operator-portal/overview.md
+      - Master Catalog: Operator-portal/master-catalog.md
+      - Commissions:
+        - Overview: Operator-portal/Commission-fees-setup/overview.md
+        - Static Commission Fees: Operator-portal/Commission-fees-setup/static-commission-fees.md
+        - Dynamic Commission Fees: Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
+      - Vendors:
+        - Vendor Onboarding: Operator-portal/Vendors-management/vendor-onboarding.md
+        - Vendor Management: Operator-portal/Vendors-management/vendor-management.md
+      - Marketplace Products: Operator-portal/marketplace-products.md
+      - Offers: Operator-portal/offers.md
+      - Operator Orders: Operator-portal/operator-orders.md
+      - State Machines: Operator-portal/state-machines.md
     - Vendor portal:
       - Overview: Vendor-portal/overview.md
       - Offers management by vendor: Vendor-portal/offers-management-by-vendor.md
       - Products management by vendor: Vendor-portal/products-management-by-vendor.md
-    - Operator portal:
-      - Overview: Operator-portal/overview.md
-      - Master catalog taxonomy management: Operator-portal/master-catalog-taxonomy-management.md
-      - Commission fees setup:
-        - Overview: Operator-portal/Commission-fees-setup/overview.md
-        - Static commission fees: Operator-portal/Commission-fees-setup/static-commission-fees.md
-        - Dynamic commission fees: Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
-      - Vendors management:
-        - Vendor onboarding: Operator-portal/Vendors-management/vendor-onboarding.md
-        - Vendor management: Operator-portal/Vendors-management/vendor-management.md
-      - Products management: Operator-portal/products-management.md
+

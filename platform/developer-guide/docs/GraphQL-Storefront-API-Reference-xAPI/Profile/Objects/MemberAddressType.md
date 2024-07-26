@@ -1,6 +1,6 @@
 # MemberAddressType ==~object~==
 
-The `MemberAddressType` represents a member address with its corresponding information. 
+This type represents a member address with its corresponding information. 
 
 ## Fields
 

@@ -1,6 +1,6 @@
 # PropertyDictionaryItemConnection ==~object~==
 
-The `PropertyDictionaryItemConnection` is a connection type that facilitates pagination and retrieval of `PropertyDictionaryItem` objects.
+This type is a connection type that facilitates pagination and retrieval of `PropertyDictionaryItem` objects.
 
 ## Fields
 

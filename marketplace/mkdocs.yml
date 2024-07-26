@@ -21,10 +21,10 @@ extra:
               image: assets/images/storefront-userquide.png
               link: user-guide
               description:
-                  - title: Vendor Portal
-                    link: user-guide/Vendor-portal/overview
                   - title: Operator Portal
                     link: user-guide/Operator-portal/overview
+                  - title: Vendor Portal
+                    link: user-guide/Vendor-portal/overview
             - title: Developer Guide [In Progress]
               link: developer-guide
               image: assets/images/storefront-devguide.png

@@ -1,6 +1,6 @@
 # InputUpdateWishlistItemsType ==~object~==
 
-The `InputUpdateWishlistItemsType` represents the input for updating items in a wishlist.
+This type represents the input for updating items in a wishlist.
 
 ## Fields
 

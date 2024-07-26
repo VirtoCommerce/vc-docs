@@ -1,6 +1,6 @@
 # ShipmentMethodType ==~object~==
 
-The `ShippingMethodType` represents a shipping method available for selection within a shopping cart or order. 
+This type represents a shipping method available for selection within a shopping cart or order. 
 
 ## Fields
 

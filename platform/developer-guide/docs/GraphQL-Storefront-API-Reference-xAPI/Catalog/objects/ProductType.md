@@ -1,6 +1,6 @@
 # ProductType ==~object~==
 
-The `productType` field represents the type or category of the product. It is used to classify products into different categories or types, allowing for easier organization and filtering within the catalog.
+This type represents the type or category of the product. It is used to classify products into different categories or types, allowing for easier organization and filtering within the catalog.
 
 ## Fields
 

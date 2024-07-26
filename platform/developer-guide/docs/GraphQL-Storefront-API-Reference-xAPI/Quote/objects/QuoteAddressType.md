@@ -1,6 +1,6 @@
 # QuoteAddressType ==~object~==
 
-The `QuoteAddressType` is an object that contains information about an address associated with a quote. 
+This type is an object that contains information about an address associated with a quote. 
 
 | Field                         | Description                                       |
 | ----------------------------- | ------------------------------------------------  |

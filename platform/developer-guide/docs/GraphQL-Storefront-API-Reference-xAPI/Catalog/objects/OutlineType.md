@@ -1,6 +1,6 @@
 # OutlineType ==~object~==
 
-The `outlineType` object refers to a hierarchical structure or organization of data, where each level represents a category, section, or segment. 
+This type refers to a hierarchical structure or organization of data, where each level represents a category, section, or segment. 
 
 ## Fields
 

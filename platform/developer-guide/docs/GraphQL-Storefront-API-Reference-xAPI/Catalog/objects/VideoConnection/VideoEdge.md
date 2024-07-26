@@ -1,6 +1,6 @@
 # VideoEdge ==~object~==
 
-The `VideoEdge` represents an edge in queries, specifically related to videos.
+This type represents an edge in queries, specifically related to videos.
 
 ## Fields
 
