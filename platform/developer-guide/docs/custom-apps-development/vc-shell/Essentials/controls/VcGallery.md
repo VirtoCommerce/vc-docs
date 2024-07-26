@@ -2,6 +2,12 @@
 
 Gallery represents an image gallery component with upload and preview.
 
+## Storybook
+
+Explore the `vc-gallery` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/organisms-vcgallery--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcgallery--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-gallery` component in your Vue application, providing theming and enhanced functionality to your image inputs.

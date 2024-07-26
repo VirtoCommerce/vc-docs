@@ -2,6 +2,12 @@
 
 Checkbox is an extension to a standard checkbox element with theming.
 
+## Storybook
+
+Explore the `vc-checkbox` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vccheckbox--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vccheckbox--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-checkbox` component in your Vue application, providing theming and enhanced functionality to your checkbox inputs.

@@ -2,6 +2,12 @@
 
 The status component is used to display a status badge with customizable view and icon as well as its size, title, and badge content text.
 
+## Storybook
+
+Explore the `vc-status` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/atoms-vcstatus--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcstatus--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-status` component in your Vue application, providing theming and enhanced functionality to your status inputs.

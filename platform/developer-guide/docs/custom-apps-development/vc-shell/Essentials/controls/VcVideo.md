@@ -2,6 +2,12 @@
 
 The video component displays a YouTube video in an iframe.
 
+## Storybook
+
+Explore the `vc-video` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/atoms-vcvideo--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-atoms-vcvideo--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-video` component in your Vue application, providing theming and enhanced functionality to your video inputs.

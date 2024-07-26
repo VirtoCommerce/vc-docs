@@ -90,7 +90,7 @@ nav:
                 - Best Practices: Fundamentals/Modularity/05-best-practices.md
                 - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
                 - Configuration: Fundamentals/Modularity/configuration.md
-          - Scalability:  
+          - Scalability:
                 - Scalability Options: Fundamentals/Scalability/scalability-options.md
                 - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md
           - Event Driven Development:
@@ -98,7 +98,7 @@ nav:
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
-                - Authorize.net: Fundamentals/Payments/authorize-net.md 
+                - Authorize.net: Fundamentals/Payments/authorize-net.md
                 - Skyflow: Fundamentals/Payments/skyflow.md
           - Fulfillment:
                 - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
@@ -310,7 +310,7 @@ nav:
                       - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
                       - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
-          - File: 
+          - File:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
                 - Getting started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
                 - Queries:
@@ -318,7 +318,7 @@ nav:
                 - Objects:
                       - FileUploadScopeOptionsType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/FileUploadScopeOptionsType.md
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
-                - Mutations: 
+                - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
           - Marketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
@@ -450,7 +450,7 @@ nav:
                       - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
                       - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
                       - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
-          - Push Messages: 
+          - Push Messages:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview.md
                 - Queries:
                       - Push messages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/pushMessages.md
@@ -463,7 +463,7 @@ nav:
                       - InputMarkPushMessageUnreadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageUnreadType.md
                       - FcmSettingsType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/FcmSettingsType.md
                       - InputAddFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputAddFcmTokenType.md
-                      - InputDeleteFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputDeleteFcmTokenType.md 
+                      - InputDeleteFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputDeleteFcmTokenType.md
                 - Mutations:
                       - markPushMessageRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageRead.md
                       - markPushMessageUnrea: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageUnread.md
@@ -517,7 +517,7 @@ nav:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
                 - Queries:
                       - Store: GraphQL-Storefront-API-Reference-xAPI/Store/queries/store.md
-                - Objects: 
+                - Objects:
                       - StoreResponseType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType.md
                       - LanguageType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType.md
                       - StoreSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType.md
@@ -537,7 +537,7 @@ nav:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:
           - Overview: Tutorials-and-How-tos/overview.md
-          - Tutorials: 
+          - Tutorials:
                 - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
@@ -545,7 +545,7 @@ nav:
                 - Building and Customizing Platform Manager UI: Tutorials-and-How-tos/Tutorials/build-platform-manager-ui.md
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
           - How-tos:
-                - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md 
+                - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md
                 - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
                 - Type Inheritance Support in Swagger API: Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger.md
                 - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
@@ -575,6 +575,7 @@ nav:
           - How to Register New App: custom-apps-development/how-to-register-new-app.md
           - VC Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
+                - Storybook: custom-apps-development/vc-shell/storybook.md
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                 - Essentials:
