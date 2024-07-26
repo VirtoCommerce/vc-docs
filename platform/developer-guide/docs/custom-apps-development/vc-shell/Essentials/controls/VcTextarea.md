@@ -2,6 +2,12 @@
 
 Textarea is a component that allows the user to enter text over multiple rows. It is a wrapper around the native `<textarea>` element.
 
+## Storybook
+
+Explore the `vc-textarea` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vctextarea--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vctextarea--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-textarea` component in your Vue application.

@@ -2,6 +2,12 @@
 
 Editor is a component that allows you to display a Rich Text Editor, based on Vue-wrapped [Quill](https://vueup.github.io/vue-quill/).
 
+## Storybook
+
+Explore the `vc-editor` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vceditor--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vceditor--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-editor` component in your Vue application, providing theming and enhanced functionality to your editor inputs.

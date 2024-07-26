@@ -2,6 +2,12 @@
 
 Card is a flexible and collapsible container component. The examples below illustrate how you can use the `vc-card` component to enhance your user interface.
 
+## Storybook
+
+Explore the `vc-card` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/atoms-vccard--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-atoms-vccard--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-card` component in your Vue application, providing theming and enhanced functionality to your card inputs.

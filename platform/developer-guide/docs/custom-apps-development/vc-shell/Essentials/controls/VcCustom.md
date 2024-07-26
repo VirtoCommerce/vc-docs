@@ -2,6 +2,7 @@
 
 The custom component allows you to add any component to your Dynamic View blade. It can be a custom Vue component or a third-party component in your custom wrapper.
 
+
 ## Usage
 
 Include the `vc-custom` component in your Vue application:

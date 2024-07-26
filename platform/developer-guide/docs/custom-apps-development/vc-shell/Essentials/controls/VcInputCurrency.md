@@ -2,6 +2,12 @@
 
 Input currency is an input component with a currency selector.
 
+## Storybook
+
+Explore the `vc-input-currency` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vcinputcurrency--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcinputcurrency--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-input-currency` component in your Vue application, providing theming and enhanced functionality to your currency input.

@@ -2,6 +2,12 @@
 
 Input is an extension of a standard input element.
 
+## Storybook
+
+Explore the `vc-input` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vcinput--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcinput--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-input` component in your Vue application, providing theming and enhanced functionality to your inputs.

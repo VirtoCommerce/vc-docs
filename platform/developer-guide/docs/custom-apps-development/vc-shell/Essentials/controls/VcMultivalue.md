@@ -2,6 +2,12 @@
 
 Multivalue is a control that allows you to select multiple values from a list of values. Also supports the ability to add new values.
 
+## Storybook
+
+Explore the `vc-multivalue` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vcmultivalue--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcmultivalue--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-multivalue` component in your Vue application.

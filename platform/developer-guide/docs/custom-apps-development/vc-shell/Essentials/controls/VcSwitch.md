@@ -2,6 +2,12 @@
 
 Switch is a component that allows users to toggle between two states, such as on and off. It is a simple and effective way to enable or disable a feature or setting.
 
+## Storybook
+
+Explore the `vc-switch` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/atoms-vcswitch--docs).
+
+Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcswitch--docs) for a better understanding of the component usage.
+
 ## Usage
 
 Include the `vc-switch` component in your Vue application, providing theming and enhanced functionality to your switch inputs.
