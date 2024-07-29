@@ -4,9 +4,12 @@ This query allows retrieving the file upload options for the specified scope.
 
 ## Arguments
 
-| Argument                          | Description                                                   |
-|-----------------------------------|---------------------------------------------------------------|
-| `scope` ==String==               | Specifies the scope for which to retrieve file upload options.|
+| Argument                           | Description                                                    |
+|------------------------------------|----------------------------------------------------------------|
+| `scope` ==String!==                | Specifies the scope for which to retrieve file upload options. |
+| `maxFileSize` ==Long!==            | The maximum size, in bytes, allowed for each uploaded file.    |
+| `allowedExtensions` ==[String]!==  | A list of file extensions that are permitted for uploads.      |
+| `allowAnonymousUpload` ==Boolean!==| Indicates whether anonymous users are allowed to upload files. |
 
 ## Possible returns
 

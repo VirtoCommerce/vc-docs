@@ -22,6 +22,7 @@ Update **appsettings.json** with file upload scope settings:
         "Scope": "quote-attachments",
         "MaxFileSize": 123,
         "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
+        "AllowAnonymousUpload": true
       }
     ]
   }
@@ -38,6 +39,7 @@ query {
     scope
     maxFileSize
     allowedExtensions
+    allowAnonymousUpload
   }
 }
 ```
