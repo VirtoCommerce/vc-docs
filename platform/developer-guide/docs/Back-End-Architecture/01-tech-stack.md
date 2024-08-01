@@ -3,9 +3,9 @@ Virto Commerce is a .NET-based e-commerce platform that promotes SOLID principle
 
 Virto Commerce uses a set of well known components and libraries:
 
--   **[ASP.NET](http://asp.net/ "http://ASP.NET") Core 6:** A cross-platform high performance [open-source](https://github.com/dotnet/aspnetcore "https://github.com/dotnet/aspnetcore") framework for building modern cloud-enabled Internet-connected apps.
+-   **[ASP.NET](http://asp.net/ "http://ASP.NET") Core 8:** A cross-platform high performance [open-source](https://github.com/dotnet/aspnetcore "https://github.com/dotnet/aspnetcore") framework for building modern cloud-enabled Internet-connected apps.
     
--   **EF Core 6:** An object-relational mapper (O/RM) for working with databases using .NET objects.
+-   **EF Core 8:** An object-relational mapper (O/RM) for working with databases using .NET objects.
     
 -   **[ASP.NET](http://asp.net/ "http://ASP.NET") Core Identity:** A framework for authentication and managing users, passwords, profile data, roles, claims, tokens, email confirmation, and more.
     
@@ -13,7 +13,7 @@ Virto Commerce uses a set of well known components and libraries:
     
 -   **WebPack:** Primary design/runtime bundler and minifier.
     
--   **Swashbuckle.AspNetCore tooling for APIs built with [ASP.NET](http://asp.net/ "http://ASP.NET") Core:** Enables generating neat API documentation, including a UI to explore and test operations directly from your routes, controllers, and models.
+-   **Swashbuckle.AspNetCore tooling for APIs built with [ASP.NET](http://asp.net/ "http://ASP.NET") Core 8:** Enables generating neat API documentation, including a UI to explore and test operations directly from your routes, controllers, and models.
     
 -   **SignalR Core:** Used for push notifications based on web sockets.
     
