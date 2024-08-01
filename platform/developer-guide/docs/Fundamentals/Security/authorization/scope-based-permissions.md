@@ -1,7 +1,4 @@
-﻿Certainly! Here's the revised version incorporating the suggested improvements:
-
----
-
+﻿
 # Scope-based Authorization
 
 Scope-based permissions, also known as imperative or resource-based permissions, depend on the resource being accessed. Consider an order that includes a store property. You may want users to view only the orders belonging to a specific store. Consequently, authorization evaluation must occur after retrieving the order from the data store.
