@@ -118,16 +118,19 @@ nav:
                       - Issuing and Using Access Token: Fundamentals/Security/authentication/issuing-and-using-access-token.md
                       - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
                       - API Key Authentication: Fundamentals/Security/authentication/api-key-authentication.md
+                      - Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
                 - Authorization:
                       - Overview: Fundamentals/Security/authorization/overview.md
                       - Global Permissions: Fundamentals/Security/authorization/global-permissions.md
                       - Scope Based Permissions: Fundamentals/Security/authorization/scope-based-permissions.md
-                - Azure AD Authentication: Fundamentals/Security/configuring-and-managing-azure-auth.md
                 - Encryption and Signing Credentials: Fundamentals/Security/encryption-and-signing-credentials.md
                 - Extensions:
                       - Extending Authorization Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
                       - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
-                      - Adding New SSO Provider: Fundamentals/Security/extensions/adding-new-sso-provider.md
+                      - Adding New SSO Provider: 
+                          - Overview: Fundamentals/Security/extensions/overview.md
+                          - Azure AD: Fundamentals/Security/extensions/azure-ad.md
+                          - Google: Fundamentals/Security/extensions/google.md
                 - Security in Depth: Fundamentals/Security/security-in-depth.md
                 - Configuration: Fundamentals/Security/configuration.md
           - Logging:
