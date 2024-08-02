@@ -1,6 +1,6 @@
-# Add Azure AD as SSO provider
+# Add Azure AD as SSO provider [In Progress]
 
-To integrate Azure AD as SSO provider:
+<!--To integrate Azure AD as SSO provider:
 
 1. [Manage backend settings.](azure-ad.md#backend-settings)
 1. [Manage Platform settings.](azure-ad.md#platform-settings)
@@ -39,5 +39,5 @@ The GraphQL query confirms that authentication via Azure AD is enabled:
 
 The Azure AD authentication button appears on the login page of the Frontend Application:
 
-![Azure AD button](media/azure-ad-button.png){: width="700"}
+![Azure AD button](media/azure-ad-button.png){: width="700"}-->
 
