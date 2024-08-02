@@ -1,6 +1,14 @@
-Using Google as an example, this tutorial will show you how to implement a new single sign-on (SSO) provider for an extension module.
+# Add Google as SSO Provider
+
+To integrate Google as SSO provider:
+
+1. [Create Google OAuth 2.0 Client.](google.md#create-google-oauth-20-client)
+1. [Configure Google Sign-in.](google.md#configure-google-sign-in)
+1. [Add Module Extensions.](google.md#add-module-extensions)
+
 
 ## Create Google OAuth 2.0 Client
+
 To use Google APIs in an application with OAuth 2.0, you need authorization credentials that identify the app for Google's OAuth 2.0 server. Your applications will use such credentials to access APIs that you have enabled for that project. 
 
 To create credentials for your project:
@@ -8,7 +16,7 @@ To create credentials for your project:
 1. Go to  [Google API & Services](https://console.cloud.google.com/apis).
 1. Create a new project and open the dashboard.
 1.   In the **OAuth consent screen** of the dashboard:
-    1. Select **User Type > External** and click **CREATE**.
+    1. Select **User Type --> External** and click **CREATE**.
     1. In the **App Information** dialog, type the app name, user support email, and developer contact information.
     1. Skip **Scopes**.
     1. Skip **Test users**.
@@ -19,7 +27,7 @@ To create credentials for your project:
 1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the platform using the https scheme. Otherwise, the SSO won't work.
 
     !!! Note
-        * If your platform is running on a local machine, put `https://localhost:10645/signin-google`.
+        If your platform is running on a local machine, put `https://localhost:10645/signin-google`.
 
 1.  Click **CREATE**.
 1.   Save **Client ID** and **Client Secret** to use them in the module.

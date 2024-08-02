@@ -6,7 +6,7 @@ Managing static commission fees includes:
 
 * [Adding a new static commission.](static-commission-fees.md#add-static-commission)
 * [Editing a static commission.](static-commission-fees.md#edit-static-commission)
-* [Deleting a existing static commission.](static-commission-fees.md#delete-static-commission)
+* [Deleting a static commission.](static-commission-fees.md#delete-static-commission)
 * [Assigning a static commission to a vendor.](static-commission-fees.md#assign-static-commission)
 
 ## Add Static Commission

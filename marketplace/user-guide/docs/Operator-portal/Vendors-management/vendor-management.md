@@ -1,7 +1,5 @@
 # Vendor Management
 
-In this article, we will see which vendor features can be edited from the Operator portal. 
-
 Operators can manage vendor information from:
 
 * [Operator portal.](vendor-management.md#manage-vendor-from-operator-portal)
