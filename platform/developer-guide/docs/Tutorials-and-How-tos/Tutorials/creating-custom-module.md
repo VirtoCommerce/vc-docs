@@ -9,7 +9,7 @@ To run your own Virto Commerce module, you can [create it from scratch](create-n
 1. Run the following commands:
 
     ```console
-    dotnet new --install VirtoCommerce.Module.Template
+    dotnet new install VirtoCommerce.Module.Template
     dotnet new vc-module --ModuleName MyCoolModule --Author "Jon Doe" --CompanyName MyCoolCompany
     ```
 
