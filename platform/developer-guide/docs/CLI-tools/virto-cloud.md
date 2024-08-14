@@ -32,6 +32,19 @@ vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
 vc-build CloudEnvList 
 ```
 
+## Download Environment Manifest
+
+```
+vc-build CloudDownloadManifest -EnvironmentName <name> -Manifest <path>
+```
+
+This command downloads the manifest for the specified environment:
+ 
+`-EnvironmentName <name>`: Specifies the environment from which the manifest will be downloaded.
+
+`-Manifest <path>` *(optional)*: Defines the path where the manifest will be saved. If not provided, the manifest will be saved in the current directory with a filename matching the environment name.
+
+
 ## Restart Environment
 
 ```

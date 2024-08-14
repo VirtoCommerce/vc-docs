@@ -22,3 +22,10 @@ From the product page, you can:
 If a product has variations, they will be displayed in a separate widget as a list or as a table:
 
 ![Products variations](../media/product-variations.png){: width="750"}
+
+Click **Filters** to narrow down the selection of variations:
+
+![Variations filter](../media/variations-filter.png){: width="750"}
+
+
+

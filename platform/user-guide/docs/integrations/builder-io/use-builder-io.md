@@ -32,3 +32,22 @@ Thanks to the Builder.io Figma plugin, any user can copy components designed in 
 
 The selected component has been pasted to your Builder.io edited page.
 
+## Customize Background Color
+
+With Builder.io, you can customize both component and section color:
+
+![Component or section color](media/section-component-background.png)
+
+For a solid color throughout, edit the section color: 
+
+1. Disable **Components-only-mode** switch:
+
+    ![Disable switch](media/disable-switch.gif)
+
+1. Create new page.
+1. Add a section to your new page.
+1. In the right sidebar, click on the **layout** tab.
+1. Click **Background** and set a color you need.
+1. Add the required components to your newly created section.
+
+![Edit background](media/edit-background-color.gif)

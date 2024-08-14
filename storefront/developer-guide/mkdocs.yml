@@ -22,6 +22,9 @@ nav:
     - Architecture: architecture.md 
     - Deployment: deployment.md
     - Migration: migration.md
+    - Authentication: 
+        - Authentication Types: authentication/authentication-types.md
+        - Adding SSO Provider: authentication/adding-sso-provider.md
     - Integrations:
           - Google Analytics Events: integrations/google-analytics/ga-events.md
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md

@@ -143,6 +143,8 @@ Browser notifications appear in the lower right corner of your screen:
 
 ![Browser notifications](media/browser-notifications.png)
 
+Clicking on it redirects user to the frontend application.
+
 If you block messages in your browser, you will still be able to see them in the Frontend Application.
 
 You can change your decision at any time:

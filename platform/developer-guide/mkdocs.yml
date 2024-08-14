@@ -25,6 +25,7 @@ nav:
                 - Windows: Getting-Started/Installation-Guide/windows.md
                 - Linux: Getting-Started/Installation-Guide/linux.md
                 - MacOS: Getting-Started/Installation-Guide/macOS.md
+                - Packaged Business Capabilities: Getting-Started/Installation-Guide/pbcs.md
                 - Post Installation Steps:
                       - Setting Up Self Signed SSL Certificate: Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
                       - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
