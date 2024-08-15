@@ -2,9 +2,9 @@
 
 To integrate Google as SSO provider:
 
-1. [Create Google OAuth 2.0 Client.](google.md#create-google-oauth-20-client)
-1. [Configure Google Sign-in.](google.md#configure-google-sign-in)
-1. [Add Module Extensions.](google.md#add-module-extensions)
+1. [Create Google OAuth 2.0 Client.](adding-google-as-sso-provider.md#create-google-oauth-20-client)
+1. [Configure Google Sign-in.](adding-google-as-sso-provider.md#configure-google-sign-in)
+1. [Add Module Extensions.](adding-google-as-sso-provider.md#add-module-extensions)
 
 
 ## Create Google OAuth 2.0 Client

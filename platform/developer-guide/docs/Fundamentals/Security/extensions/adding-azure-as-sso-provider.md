@@ -1,11 +1,11 @@
 # Azure AD (MS Entra) Authentication Management
 
-This guide provides information about the single sign-on (SSO) options available and introduces the process of planning a single sign-on deployment when using Azure Active Directory (Azure AD) with Virto Commerce.
+This guide provides information about using Azure AD as a single sign-on (SSO) provider.
 
 !!! note
     **Azure Active Directory (Azure AD)** has been renamed to **Microsoft Entra ID**. For the remainder of this guide, these terms are considered synonymous.
 
-![Readmore](media/readmore.png){: width="25"} [Azure App Configuration](../../Tutorials-and-How-tos/How-tos/azure-app-configuration.md)
+![Readmore](media/readmore.png){: width="25"} [Azure App Configuration](../../../Tutorials-and-How-tos/How-tos/azure-app-configuration.md)
 
 By default, the Virto Commerce Platform Manager authenticates users with a login and password. However, this method has its drawbacks:
 
@@ -35,9 +35,9 @@ Before enabling Azure Active Directory authentication, ensure the following:
 
 To set up the Azure Active Directory based authentication in Virto Commerce Platform Manager:
 
-1. [Add registration for Virto Commerce Platform in Azure Active Directory.](configuring-and-managing-azure-auth.md#add-registration-for-virto-commerce-platform-in-azure-active-directory)
-1. [Configure Virto Commerce Platform to use Azure AD Authentication.](configuring-and-managing-azure-auth.md#configure-virto-commerce-platform-to-use-azure-ad-authentication)
-1. [Test.](configuring-and-managing-azure-auth.md#test)
+1. [Add registration for Virto Commerce Platform in Azure Active Directory.](adding-azure-as-sso-provider.md#add-registration-for-virto-commerce-platform-in-azure-active-directory)
+1. [Configure Virto Commerce Platform to use Azure AD Authentication.](adding-azure-as-sso-provider.md#configure-virto-commerce-platform-to-use-azure-ad-authentication)
+1. [Test.](adding-azure-as-sso-provider.md#test)
 
 ### Add Registration for Virto Commerce Platform in Azure Active Directory
 

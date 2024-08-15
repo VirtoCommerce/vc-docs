@@ -13,7 +13,7 @@ Azure App Configuration is a service that enables centralized management of appl
 
 ![Readmore](media/readmore.png){: width="25"} [Microsoft Guide on Azure App configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview)
 
-![Readmore](media/readmore.png){: width="25"} [Configuring and Managing Azure AD Authentication in Virto Commerce Platform](../../Fundamentals/Security/configuring-and-managing-azure-auth.md)
+![Readmore](media/readmore.png){: width="25"} [Configuring and Managing Azure AD Authentication in Virto Commerce Platform](../../Fundamentals/Security/extensions/adding-azure-as-sso-provider.md)
 
 To add Azure App Configuration:
 

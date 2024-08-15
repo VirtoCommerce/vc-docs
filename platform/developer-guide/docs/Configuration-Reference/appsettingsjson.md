@@ -1,4 +1,5 @@
 # Appsettings.json
+
 As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
 <!--caching-start-->
 ## Configuration Settings
@@ -8,33 +9,46 @@ The configuration keys are hierarchical, and the most convenient way to manage t
 !!! note
     All settings listed below are optional unless marked **Required**.
 <!--caching-end-->
+
 ### ConnectionStrings
 
 These **required** settings represent connection strings for VC Platform and modules.
 
-| Node          | Sample value                      | Description  |
-| ------------- | --------------------------------- | ------------ |
-| VirtoCommerce | ```Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30;TrustServerCertificate=True;``` | This required setting is used to provide the VC Platform system connection string to the SQL Server database. VC modules would revert to this connection string if no specific connection string is defined. |
-| VirtoCommerce.Catalog  | `Data Source=(local);Initial Catalog=VirtoCommerceCatalog;Persist Security Info=True;User ID=virto;Password=virto; MultipleActiveResultSets=True;Connect Timeout=30` | Other module-specific connection string(s). E.g., Virto Commerce Catalog module will use the `VirtoCommerce.Catalog` connection string if it is defined. |                           |
-| RedisConnectionString | `"localhost"` | StackExchange.Redis Configuration string.<br>![Readmore](media/readmore.png){: width="25"} [Redis Configuration](https://stackexchange.github.io/StackExchange.Redis/Configuration) |
+| Node                                    | Default or Sample Value                      | Description                                                                          |
+| --------------------------------------- | ---------------------------------------------| --------------------------------------------------------------------------------------|
+| ConnectionStrings.VirtoCommerce         | Data Source=(local)                          | The server name or network address of the SQL Server instance hosting the Virto Commerce database. This can be **(local)** for a local SQL Server instance or a specific server name/IP address. |
+| ConnectionStrings.VirtoCommerce.InitialCatalog | VirtoCommerce3.net8                   | The name of the SQL Server database where the Virto Commerce Platform data is stored. This database contains all the necessary tables and data for the platform to operate. |
+| ConnectionStrings.VirtoCommerce.PersistSecurityInfo | true<br>false                    | When set to **true**, this option allows security-sensitive information, such as the password, to be retained after the connection is made. |
+| ConnectionStrings.VirtoCommerce.UserID  | virto                                        | The username used to authenticate the connection to the SQL Server database. This user must have sufficient permissions to access and manage the database. |
+| ConnectionStrings.VirtoCommerce.Password | virto                                       | The password associated with the specified **UserID** for authenticating the connection to the SQL Server database. |
+| ConnectionStrings.VirtoCommerce.ConnectTimeout | 30                                    | Specifies the number of seconds to wait before timing out when trying to establish a connection to the SQL Server. A value of 30 seconds is commonly used. |
+| ConnectionStrings.VirtoCommerce.TrustServerCertificate | true                          | When set to **true**, this option allows the connection to proceed without validating the SQL Server's SSL certificate. This is often used in development environments where a trusted certificate might not be available. |
+
+
+**Example**
+
+```json title="appsettings.json"
+"ConnectionStrings": {
+    "VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3.net8;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30;TrustServerCertificate=True;"
+```
 
 ###  VirtoCommerce
 
 This configuration node defines the system settings of the VC Platform.
 
-| Node                      | Default or sample value                                           | Description                                                                                                   |
-| ------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| CountriesFilePath         |`"localization/common/countries.json"`                             | Local path for the country list, which, by default,<br>includes all countries of the world.                      |
-| CountryRegionsFilePath    |`"localization/common/countriesRegions.json"`                      | Local path for state/province list. <br>By default, includes the US states and Canada's provinces.                |
-| LicenseActivationUrl      |`"https://virtocommerce.com/admin/api/licenses/activate/"`         | VC Platform license activation service URL.                                                                   |
-| LicenseFilePath           |      `"App_Data/VirtoCommerce.lic"`                               | VC Platform license file location.                                                                            |
-| LocalUploadFolderPath     | `"App_Data/Uploads"`                                              | The **Uploads** folder location.                                                                                |
-| SampleDataUrl             | `"http://virtocommerce.azureedge.net/sample-data"`                | URL to download sample data upon the initial Platform setup.                                                  |
-| AllowInsecureHttp         | `true`<br>`false`                                                 | Manages how the OpenID Connect server (ASOS) handles <br>the incoming requests: whether those arriving to non-HTTPS endpoints<br>should be rejected or not. By default, this property is set to false<br>to help mitigate the man-in-the-middle attacks.                                                                                  |
-| Hangfire                  |                                                                   | Background processing library (Hangfire) configuration.<br><br> `JobStorageType`: Current job storage.<br>Supported values: `Memory`, `SqlServer`.<br> `UseHangfireServer`: Enables or disables Hangfire for this app instance.<br> `AutomaticRetryCount`: Maximum number of automatic retry attempts. <br>`SqlServerStorageOptions`: Hangfire.SqlServer.SqlServerStorageOptions.<br>![Readmore](media/readmore.png){: width="25"} [Hangfire's SQL Server Configuration](https://docs.hangfire.io/en/latest/configuration/using-sql-server.html#configuration)|
-| Swagger                   |                                                                   | Allows you to disable Swagger initialization upon platform<br>startup to prevent access to Swagger UI and documents.
-| GraphQL Playground        |                                                                   | Allows you to disable the initialization of the<br>GraphQL Playground at platform startup to prevent access<br>to the GraphQL Playground UI and schemas.<br> By default, the playground is disabled.|
-| FileExtensionsBlackList   |                                                                   | This setting is used in conjunction with the <br>`VirtoCommerce.Platform.Security.FileExtensionsBlackList`<br>setting in the admin UI to define the file extensions that<br>the platform does not permit to be uploaded to the server.<br>The `FileExtensionsBlackList` is not accessible from the admin UI.<br>An administrator may provide an additional list of extensions<br>through the UI that may be used with `FileExtensionsBlackList`. |
+| Node                          | Default or Sample Value                                   | Description                                                                                             |
+|-------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| LicenseActivationUrl          | https://license.virtocommerce.org/api/licenses/activate/  | The URL used to activate the Virto Commerce Platform license.                                           |
+| SampleDataUrl                 | https://virtocommerce.azureedge.net/sample-data           | URL for downloading sample data during the initial setup of the Virto Commerce Platform.                |
+| DiscoveryPath                 | ./modules                                                 | The relative or absolute file system path where the platform will discover installed modules.           |
+| AllowInsecureHttp             | false                                                     | Controls how the OpenID Connect server (ASOS) handles requests arriving on non-HTTPS endpoints. When set to **false**, it helps mitigate man-in-the-middle attacks. |
+| UseResponseCompression        | false                                                     | Enables or disables response compression to improve performance.                                        |
+| Hangfire                      | [Read more](appsettingsjson.md#hangfire)                  | Configures background processing settings, including job storage options and retry mechanisms.          |
+| ApplicationInsights           | [Read more](appsettingsjson.md#application-insights)      | Manages telemetry settings and sampling options for Application Insights.                               |
+| Swagger.Enable                | true                                                      | Controls whether Swagger is enabled, allowing access to the Swagger UI and API documentation.           |
+| GraphQLPlayground.Enable      | true                                                      | Controls whether the GraphQL Playground is enabled, allowing access to the GraphQL UI and schemas.      |
+| PlatformUI.Enable             | true                                                      | Determines whether the Platform's user interface is enabled.                                            |
+
 
 **Examples**
 
@@ -42,35 +56,38 @@ This configuration node defines the system settings of the VC Platform.
 
     ```json title="appsettings.json"
     "Hangfire": {
-    "JobStorageType": "Database",
-    "UseHangfireServer": true,
-    "AutomaticRetryCount": 1,
-    "WorkerCount": 11,
-    "Queues": [
-    "alpha",
-    "default"
-    ],
-      "SqlServerStorageOptions": {
-        "CommandBatchMaxTimeout": "00:05:00",
-        "SlidingInvisibilityTimeout": "00:05:00",
-        "QueuePollInterval": "00:00:00",
-        "UseRecommendedIsolationLevel": true,
-        "UsePageLocksOnDequeue": true,
-        "DisableGlobalLocks": true,
-        "EnableHeavyMigrations": true
-      },
-      "MySqlStorageOptions": {
-        "InvisibilityTimeout": "00:05:00",
-        "QueuePollInterval": "00:00:05"
-      },
-      "PostgreSqlStorageOptions": {
-        "InvisibilityTimeout": "00:05:00",
-        "QueuePollInterval": "00:00:05",
-        "UseRecommendedIsolationLevel": true,
-        "UsePageLocksOnDequeue": true,
-        "DisableGlobalLocks": true
-      }
-    }
+        "JobStorageType": "Database",
+        //Set value to false to stop processing the background jobs.
+        "UseHangfireServer": true,
+        "AutomaticRetryCount": 2,
+        //"WorkerCount": 11,
+        //"Queues": [
+        //    "alpha", "beta", "default"
+        //],
+        "SqlServerStorageOptions": {
+            "CommandBatchMaxTimeout": "00:05:00",
+            "SlidingInvisibilityTimeout": "00:05:00",
+            "QueuePollInterval": "00:00:00",
+            "UseRecommendedIsolationLevel": true,
+            "UseIgnoreDupKeyOption": true,
+            "UsePageLocksOnDequeue": true,
+            "DisableGlobalLocks": true,
+            "EnableHeavyMigrations": true,
+            "TryAutoDetectSchemaDependentOptions": false,
+            "InactiveStateExpirationTimeout": "7.00:00:00"
+          },
+          "MySqlStorageOptions": {
+            "InvisibilityTimeout": "00:05:00",
+            "QueuePollInterval": "00:00:05"
+          },
+          "PostgreSqlStorageOptions": {
+            "InvisibilityTimeout": "00:05:00",
+            "QueuePollInterval": "00:00:05",
+            "UseRecommendedIsolationLevel": true,
+            "UsePageLocksOnDequeue": true,
+            "DisableGlobalLocks": true
+          }
+        },
     ```
 
 === "Swagger"
@@ -97,19 +114,28 @@ This configuration node defines the system settings of the VC Platform.
     ```
 
 
-### Application Insights
+#### Application Insights
 
 This node adds and customizes the Application Insight section.
 
 <!--AppInsights-start-->
 
-| Node                              	    | Default or sample value   	| Description                                                                                                	|
-|---------------------------------------	|---------------------------	|--------------------------------------------------------------------------------------------------------------	|
-| `SamplingOptions.Processor`           	| `Adaptive`<br>`Fixed`      	| Lets you choose between two sampling methods: <ul> <li>**Adaptive sampling**: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions.<br>![Readmore](media/readmore.png){: width="25"} [Sampling in Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications) </li> <li>**Fixed-rate sampling**: reduces the volume of telemetry sent from both applications. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by `SamplingPercentage` setting. </li> </ul> 	|
-| `IncludedTypes`                       	| `Dependency`<br>`Event`<br>`Exception`<br>`PageView`<br>`Request`<br>`Trace`  	| A semi-colon delimited list of types to be sampled. The specified types will be sampled. All telemetry of other types will always be transmitted. All types are included by default.                                                                                        |
-| `ExcludedTypes`                       	| `Dependency`<br>`Event`<br>`Exception`<br>`PageView`<br>`Request`<br>`Trace` | A semi-colon delimited list of types not to be sampled. All telemetry of the specified types is transmitted. The types that aren't specified will be sampled. Empty by default.                                                                                                    |
-| `EnableSqlCommandTextInstrumentation` 	| `true`<br>`false`          	| For SQL calls, the name of the server and database is always collected and stored as the name of the collected Dependency Telemetry. Another field, called data, can contain the full SQL query text. To opt in to SQL Text collection, set this setting to `true`.                                                              |
-| `IgnoreSqlTelemetryOptions`           	|                            	| Controls the Application Insights telemetry processor that excludes SQL queries related to dependencies. Any SQL command name or statement that contains a string from the `QueryIgnoreSubstrings` options will be ignored.                           	|
+| Node                                         | Default or Sample Value                                   | Description                                                                                        |
+| ---------------------------------------------| ----------------------------------------------------------| -------------------------------------------------------------------------------------------------- |
+| SamplingOptions.Processor                                 | adaptive                 | Specifies the sampling processor type for Application Insights telemetry. |
+| SamplingOptions.Adaptive.MaxTelemetryItemsPerSecond       | 5                        | Maximum telemetry items per second allowed in adaptive sampling. |
+| SamplingOptions.Adaptive.InitialSamplingPercentage        | 100                      | Initial sampling percentage in adaptive sampling.|
+| SamplingOptions.Adaptive.MinSamplingPercentage            | 0.1                      | Minimum sampling percentage in adaptive sampling.|
+| SamplingOptions.Adaptive.MaxSamplingPercentage            | 100                      | Maximum sampling percentage in adaptive sampling.|
+| SamplingOptions.Adaptive.EvaluationInterval               | 00:00:15                 | Interval between sampling evaluations in adaptive sampling.|
+| SamplingOptions.Adaptive.SamplingPercentageDecreaseTimeout | 00:02:00                | Timeout before decreasing sampling percentage in adaptive sampling.|
+| SamplingOptions.Adaptive.SamplingPercentageIncreaseTimeout | 00:15:00                | Timeout before increasing sampling percentage in adaptive sampling.|
+| SamplingOptions.Adaptive.MovingAverageRatio               | 0.25                     | Ratio used for moving average calculations in adaptive sampling.|
+| SamplingOptions.Fixed.SamplingPercentage                  | 100                      | Fixed sampling percentage used for telemetry in Application Insights.|
+| SamplingOptions.IncludedTypes                             | Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace     | Specifies which telemetry types are included in sampling for Application Insights.|
+| SamplingOptions.ExcludedTypes                             | (Empty by default)       | Specifies which telemetry types are excluded from sampling in Application Insights.|
+| EnableSqlCommandTextInstrumentation                       | true                     | Enables the collection of SQL command text in Application Insights telemetry.|
+| IgnoreSqlTelemetryOptions.QueryIgnoreSubstrings           | [HangFire]., sp_getapplock, sp_releaseapplock | Specifies substrings to ignore in SQL telemetry to avoid collecting irrelevant data, particularly related to Hangfire's internal operations.     |
 
 **Example**
 
@@ -163,17 +189,86 @@ To configure `ApplicationInsights`:
 <!--AppInsights-end-->
 
 
+#### Hangfire
+
+This node configures the background processing settings for Hangfire in the Virto Commerce platform. 
+
+|Node                                                                  | Default or sample value  | Description                                                                                        |
+|----------------------------------------------------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
+| JobStorageType                                                       | Database                 | Specifies the storage type for Hangfire jobs.                     |
+| UseHangfireServer                                                    | true                     | Controls whether the Hangfire server is enabled for processing background jobs.  |
+| AutomaticRetryCount                                                  | 2                        | Sets the maximum number of retry attempts for failed background jobs. |
+| SqlServerStorageOptions.CommandBatchMaxTimeout                       | 00:05:00                 | The maximum timeout for batching commands in Hangfire's SQL Server storage.                        |
+| SqlServerStorageOptions.SlidingInvisibilityTimeout                   | 00:05:00                 | Time after which a job is marked as invisible if not processed.                                    |
+| SqlServerStorageOptions.QueuePollInterval                            | 00:00:00                 | Interval between polls for new jobs in the queue.                                                  |
+| SqlServerStorageOptions.UseRecommendedIsolationLevel                 | true                     | Whether to use the recommended isolation level for transactions.                                   |
+| SqlServerStorageOptions.UseIgnoreDupKeyOption                        | true                     | Option to ignore duplicate keys in the database.                                                   |
+| SqlServerStorageOptions.UsePageLocksOnDequeue                        | true                     | Enables page locks when dequeuing jobs to improve performance.                                     |
+| SqlServerStorageOptions.DisableGlobalLocks                           | true                     | Disables global locks to optimize performance in multi-node environments.                          |
+| SqlServerStorageOptions.EnableHeavyMigrations                        | true                     | Enables heavy migrations, which may be necessary for certain schema updates.                       |
+| SqlServerStorageOptions.TryAutoDetectSchemaDependentOptions          | false                    | Option to automatically detect schema-dependent options.                                           |
+| SqlServerStorageOptions.InactiveStateExpirationTimeout               | 7.00:00:00               | Time after which inactive jobs are removed from storage.                                           |
+| MySqlStorageOptions.InvisibilityTimeout                              | 00:05:00                 | Time after which a job is marked as invisible in MySQL storage.                                    |
+| MySqlStorageOptions.QueuePollInterval                                | 00:00:05                 | Interval between polls for new jobs in the MySQL queue.                                            |
+| PostgreSqlStorageOptions.InvisibilityTimeout                         | 00:05:00                 | Time after which a job is marked as invisible in PostgreSQL storage.                               |
+| PostgreSqlStorageOptions.QueuePollInterval                           | 00:00:05                 | Interval between polls for new jobs in the PostgreSQL queue.                                       |
+| PostgreSqlStorageOptions.UseRecommendedIsolationLevel                | true                     | Whether to use the recommended isolation level for PostgreSQL transactions.|
+| PostgreSqlStorageOptions.UsePageLocksOnDequeue                       | true                     | Enables page locks when dequeuing jobs in PostgreSQL to improve performance.|
+| PostgreSqlStorageOptions.DisableGlobalLocks                          | true                     | Disables global locks in PostgreSQL to optimize performance in multi-node environments. |
+
+
+**Example**
+
+```json title="appsettings.json"
+    {
+    "VirtoCommerce": {
+      "Hangfire": {
+          "JobStorageType": "Database",
+          //Set value to false to stop processing the background jobs.
+          "UseHangfireServer": true,
+          "AutomaticRetryCount": 2,
+          //"WorkerCount": 11,
+          //"Queues": [
+          //    "alpha", "beta", "default"
+          //],
+        "SqlServerStorageOptions": {
+          "CommandBatchMaxTimeout": "00:05:00",
+          "SlidingInvisibilityTimeout": "00:05:00",
+          "QueuePollInterval": "00:00:00",
+          "UseRecommendedIsolationLevel": true,
+          "UseIgnoreDupKeyOption": true,
+          "UsePageLocksOnDequeue": true,
+          "DisableGlobalLocks": true,
+          "EnableHeavyMigrations": true,
+          "TryAutoDetectSchemaDependentOptions": false,
+          "InactiveStateExpirationTimeout": "7.00:00:00"
+        },
+        "MySqlStorageOptions": {
+          "InvisibilityTimeout": "00:05:00",
+          "QueuePollInterval": "00:00:05"
+        },
+        "PostgreSqlStorageOptions": {
+          "InvisibilityTimeout": "00:05:00",
+          "QueuePollInterval": "00:00:05",
+          "UseRecommendedIsolationLevel": true,
+          "UsePageLocksOnDequeue": true,
+          "DisableGlobalLocks": true
+        }
+      },
+```
+
+
 ### Assets
 
 This **required** node determines how VC Platform will be working with assets, i.e. files.
 
 | Node                              | Default or Sample Value             | Description                                                                                                                   |
 | --------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------  |
-| Provider                          | `"FileSystem"`                      | Current asset provider. Supported values: `FileSystem`, `AzureBlobStorage`.                                                   |
-| FileSystem                        |                                     | File system-based asset provider configuration. Used when the `Provider` setting has the value `"FileSystem"`.                |
-| FileSystem:RootPath               | `"~/assets"`                        | The root path where assets are stored in the file system.                                                                     |
-| FileSystem:PublicUrl              | `"https://localhost:5001/assets/"`  | The public Url used to access assets stored in the file system.                                                               |
-| AzureBlobStorage                  |                                     | Azure Blob Storage-based asset provider configuration. Used when the `Provider` setting has the value `"AzureBlobStorage"`.   |
+| Provider                          | "FileSystem"<br>"AzureBlobStorage"  | Current asset provider.                                                                                                       |
+| FileSystem                        |                                     | File system-based asset provider configuration. Used when the **Provider** setting has the value **"FileSystem"**.            |
+| FileSystem:RootPath               | "~/assets"                          | The root path where assets are stored in the file system.                                                                     |
+| FileSystem:PublicUrl              | "https://localhost:5001/assets/"    | The public Url used to access assets stored in the file system.                                                               |
+| AzureBlobStorage                  |                                     | Azure Blob Storage-based asset provider configuration. Used when the **Provider** setting has the value **"AzureBlobStorage"**.   |
 | AzureBlobStorage:ConnectionString |                                     | The connection string for Azure Blob Storage.                                                                                 |
 | AzureBlobStorage:CdnUrl           |                                     | The optional CDN Url for serving assets from Azure Blob Storage.                                                              |
 
@@ -207,15 +302,15 @@ This **required** node determines how VC Platform will be working with assets, i
 
 ### Auth
 
-This setting determines platfom authencification parameters.
+This setting determines platfom authentication parameters.
 
 | Node                   | Default or Sample Value              | Description                                                                                                                           |
 | ---------------------- | ---------------------------------    | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Authority              | `https://localhost:5051/ <br> https://auth.example.com/` | The Url of the authentication server.<br>Leave empty for the mode when authorization and resource server are the same application.       |
-| Audience               | `"resource_server"`                  | The audience for which the token is intended.                                                                                         |
-| PublicCertPath         | `"./certificates/virtocommerce.crt"` | The file path to the public certificate used for token validation.                                                                    |
-| PrivateKeyPath         | `"./certificates/virtocommerce.pfx"` | The file path to the private key used for token signing.                                                                              |
-| PrivateKeyPassword     | `"virto"`                            | The password for accessing the private key (if protected by a password).                                                              |
+| Authority              | https://localhost:5051/ <br> https://auth.example.com/ | The Url of the authentication server.<br>Leave empty for the mode when authorization and resource server are the same application.       |
+| Audience               | "resource_server"                    | The audience for which the token is intended.                                                                                         |
+| PublicCertPath         | "./certificates/virtocommerce.crt"   | The file path to the public certificate used for token validation.                                                                    |
+| PrivateKeyPath         | "./certificates/virtocommerce.pfx"   | The file path to the private key used for token signing.                                                                              |
+| PrivateKeyPassword     | "virto"                              | The password for accessing the private key (if protected by a password).                                                              |
 
 
 **Example**
@@ -236,11 +331,11 @@ This configuration node defines authorization settings for the system.
 
 | Node                      | Default or Sample Value   | Description                                                                                               |
 | ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| ReturnPasswordHash        | `true`<br> `false`        | A boolean setting that determines whether to return the password hash during user authentication.<br>If set to `true`, the password hash is returned; if set to `false`, it's not returned. |
-| RefreshTokenLifeTime     | `"30.00:00:00"`            | The time span specifying the lifetime of a refresh token.<br>A refresh token is used to obtain a new access token without re-entering<br>the user's credentials. The default is 30 days. |
-| AccessTokenLifeTime      | `"00:30:00"`               | The time span specifying the lifetime of an access token.<br>An access token is used to access protected resources.<br>The default is 30 minutes. |
-| LimitedCookiePermissions | `"platform:asset:read;platform:export;<br>content:read;platform:asset:create;<br>licensing:issue;export:download"` | A semicolon-separated list of permissions that define the limited cookie permissions for the user. These permissions determine what actions the user can perform when using cookies for authentication. |
-| AllowApiAccessForCustomers| `true`<br>`false`         | A boolean setting that controls whether API access is allowed for customers.<br>If set to `false`, customers are not allowed to access the API; if set to `true`, they are granted API access. |
+| ReturnPasswordHash        | true<br> false        | A boolean setting that determines whether to return the password hash during user authentication.<br>If set to **true**, the password hash is returned; if set to **false**, it's not returned. |
+| RefreshTokenLifeTime     | "30.00:00:00"            | The time span specifying the lifetime of a refresh token.<br>A refresh token is used to obtain a new access token without re-entering<br>the user's credentials. The default is 30 days. |
+| AccessTokenLifeTime      | "00:30:00"               | The time span specifying the lifetime of an access token.<br>An access token is used to access protected resources.<br>The default is 30 minutes. |
+| LimitedCookiePermissions | "platform:asset:read;platform:export;..." | A semicolon-separated list of permissions that define the limited cookie permissions for the user. These permissions determine what actions the user can perform when using cookies for authentication. |
+| AllowApiAccessForCustomers| true<br>false         | A boolean setting that controls whether API access is allowed for customers.<br>If set to **false**, customers are not allowed to access the API; if set to **true**, they are granted API access. |
 
 **Example**
 
@@ -259,28 +354,22 @@ This configuration node defines authorization settings for the system.
 
 This node is used for authentication with Azure Active Directory. 
 
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Azure Active Directory](../Fundamentals/Security/configuring-and-managing-azure-auth.md)
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Azure Active Directory](../Fundamentals/Security/extensions/adding-azure-as-sso-provider.md)
 
 | Node                  | Default or Sample Value                                   | Description                                                                                                       |
 | --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Enabled               | `false`<br> `true`                                        | Enables authentication with Azure Active Directory. By default, this value is `false`, i.e. authentication is disabled.|
-| UsePreferredUsername  | `false` <br> `true`                                       | If set to `true`, the system will check the `preferred_username` in case the `upn` claim returns empty.             |
-| Priority              | `0` <br> `1`...                                                     | Configures the priority of the Azure Active Directory login popup on the Login page. The lowest value means the highest priority. |
-| AuthenticationType    | `"AzureAD"`                                               | Provides the authentication scheme. Must always have the `AzureAD` value set.                                      |
-| AuthenticationCaption | `"Azure Active Directory"`                                | Sets a human-readable caption for the Azure AD authentication provider. Visible on the **Sign In** page.            |
-| ApplicationId         | `01234567-89ab-cdef-0123-456789abcdef`                    | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
-| TenantId              | `abcdef01-2345-6789-abcd-ef0123456789`                    | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory --> Properties --> Directory ID**.  |
-| AzureAdInstance       | `https://login.microsoftonline.com/`                      | Url of the Azure AD endpoint used for authentication.                                                             |
-| DefaultUserType       | `"Manager"`<br>`"Customer"`                               | Default user type for new users created upon first sign-in by Azure AD accounts.                                   |
-| DefaultUserRoles      | `"Order manager"`<br>`"Store manager"`                    | Default user roles assigned to new users created upon first sign-in by Azure AD accounts.                           |
-| MetadataAddress       |                                                 | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys. |
-| UsePreferredUsername  | `true`<br>`false`                               | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting the username. |
-
-
-!!! note "Note to the `MetadataAddress` node"
-	
-	If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information.
-    For example, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e).
+| Enabled               | false<br> true                                            | Enables authentication with Azure Active Directory. By default, this value is **false**, i.e. authentication is disabled.|
+| UsePreferredUsername  | false <br> true                                           | If set to **true**, the system will check the **preferred_username** in case the **upn** claim returns empty.             |
+| Priority              | 0 <br> 1...                                               | Configures the priority of the Azure Active Directory login popup on the Login page. The lowest value means the highest priority. |
+| AuthenticationType    | "AzureAD"                                                 | Provides the authentication scheme. Must always have the **AzureAD** value set.                                      |
+| AuthenticationCaption | "Azure Active Directory"                                  | Sets a human-readable caption for the Azure AD authentication provider. Visible on the **Sign In** page.            |
+| ApplicationId         |                                                           | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
+| TenantId              |                                                           | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory --> Properties --> Directory ID**.  |
+| AzureAdInstance       | https://login.microsoftonline.com/                        | Url of the Azure AD endpoint used for authentication.                                                             |
+| DefaultUserType       | "Manager"<br>"Customer"                                   | Default user type for new users created upon first sign-in by Azure AD accounts.                                   |
+| DefaultUserRoles      | "Order manager"<br>"Store manager"                        | Default user roles assigned to new users created upon first sign-in by Azure AD accounts.                           |
+| MetadataAddress       |                                                           | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys.<br> If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information.<br> For example, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e). |
+| UsePreferredUsername  | true<br>false                                             | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting the username. |
 
 **Example**
 
@@ -308,10 +397,10 @@ This node manages caching configuration.
 
 | Node                      | Default or sample value                   | Description  |
 | ------------------------- | ----------------------------------------- | ------------ |
-| Redis                     |                                           | Redis configuration. Includes the message channel to use and the number of retries.
-| CacheEnabled              | <ul><li>`true`</li><li>`false`</li></ul>  | <ul><li>Cache entries are retained based on the expiration settings.</li><li>Disables caching of application data for the entire application.</li></ul> Used when `ConnectionStrings:RedisConnectionString` is not specified.
-| CacheSlidingExpiration    | `"0:15:00"`                               | The cache entry will expire if it is not accessed for a specified amount of time.<br>Used when `CacheAbsoluteExpiration` is not defined.
-| CacheAbsoluteExpiration   | `"0:5:00"`                                | The cache entry will expire after a specified amount of time. <br>Used when `RedisConnectionString` is not specified.
+| Redis                     |                                           | Redis configuration. Includes the message channel to use and the number of retries. |
+| CacheEnabled              | true<br>false                             | Cache entries are retained based on the expiration settingsб if **true**.<br>Disables caching of application data for the entire application, if **false**.<br> Used when **ConnectionStrings:RedisConnectionString** is not specified. |
+| CacheSlidingExpiration    | "0:15:00"                                 | The cache entry will expire if it is not accessed for a specified amount of time.<br>Used when **CacheAbsoluteExpiration** is not defined.|
+| CacheAbsoluteExpiration   | "0:5:00"                                  | The cache entry will expire after a specified amount of time. <br>Used when **RedisConnectionString** is not specified.|
 
 
 **Examples**
@@ -339,14 +428,14 @@ This **required** setting is used for static content configuration (including th
 
 | Node                                | Default or Sample Value   | Description                                                                                               |
 | ----------------------------------- | ------------------------  | --------------------------------------------------------------------------------------------------------- |
-| Provider                            | `"FileSystem"`            | Current content (file) provider. The supported values are `FileSystem` and `AzureBlobStorage`.           |
-| FileSystem                          |                           | File system-based content provider configuration. This is the default provider used unless `AzureBlobStorage` is set as the current provider. |
-| FileSystem:RootPath                 | `"~/cms-content"`         | The root path where content files are stored in the file system.                                          |
-| FileSystem:PublicUrl                | `"https://localhost:5001/cms-content/"` | The public URL used to access content files stored in the file system.                      |
-| AzureBlobStorage                    |                           | Azure Blob Storage-based content provider configuration. Used when the `Provider` setting has `AzureBlobStorage` as the value. |
+| Provider                            | "FileSystem"           | Current content (file) provider. The supported values are **FileSystem** and **AzureBlobStorage**.           |
+| FileSystem                          |                           | File system-based content provider configuration. This is the default provider used unless **AzureBlobStorage** is set as the current provider. |
+| FileSystem:RootPath                 | "~/cms-content"        | The root path where content files are stored in the file system.                                          |
+| FileSystem:PublicUrl                | "https://localhost:5001/cms-content/" | The public URL used to access content files stored in the file system.                      |
+| AzureBlobStorage                    |                           | Azure Blob Storage-based content provider configuration. Used when the **Provider** setting has **AzureBlobStorage** as the value. |
 | AzureBlobStorage:ConnectionString   |                           | The connection string for Azure Blob Storage.                                                            |
 | AzureBlobStorage:CdnUrl             |                           | The optional CDN (Content Delivery Network) URL for serving content from Azure Blob Storage.             |
-| AzureBlobStorage:RootPath           | `"cms"`                   | The root path within the Azure Blob Storage container where content files are stored.                     |
+| AzureBlobStorage:RootPath           | "cms"                   | The root path within the Azure Blob Storage container where content files are stored.                     |
 
 
 **Examples**
@@ -376,7 +465,7 @@ This configuration node defines settings for the CRUD operations within the syst
 
 | Node            | Default or sample value | Description                                                                                                   |
 | --------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------- |
-| MaxResultWindow | 2147483647              | The maximum value for the combination of `skip` and `take` parameters in search requests. By setting this value to `2147483647`, there are no specific limits on the number of records that can be retrieved in a single search request. This effectively allows retrieving a large number of records in a single query. |
+| MaxResultWindow | 2147483647              | The maximum value for the combination of **skip** and **take** parameters in search requests. By setting this value to **2147483647**, there are no specific limits on the number of records that can be retrieved in a single search request. This effectively allows retrieving a large number of records in a single query. |
 
 **Example**
 
@@ -397,12 +486,25 @@ This configuration node configures lifetimes for security tokens that are issued
 
 **Example**
 
-Example settings for the `DataProtection` section:
-
 ```json title="appsettings.json"
 "DataProtection": {
 		"TokenLifespan": "24:00:00",		
 	},
+```
+
+### DatabaseProvider
+
+The DatabaseProvider node specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage its data. 
+
+| Node               | Supported Values                                  | Description                                                                                                            |
+| ------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| DatabaseProvider   | SqlServer (default)<br>MySql<br>PostgreSql       | Specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage data.    |
+
+
+**Example**
+
+```json title="appsettings.json"
+"DatabaseProvider": "SqlServer"
 ```
 
 ### File Upload
@@ -442,7 +544,7 @@ This node configures frontend security settings.
 
 |Node                       | Default or sample value  | Description                                                     |
 |---------------------------|--------------------------|-----------------------------------------------------------------|
-|OrganizationMaintainerRole | `Organization maintainer`| The role that defines permissions for organization maintainers. |
+|OrganizationMaintainerRole | Organization maintainer | The role that defines permissions for organization maintainers. |
 
 **Example**
 
@@ -451,6 +553,8 @@ This node configures frontend security settings.
     "OrganizationMaintainerRole": "Organization maintainer"
 }
 ```
+
+
 
 ### IdentityOptions
 
@@ -463,16 +567,16 @@ This configuration node configures the ASP.NET Core Identity system.
 | Node                                      | Default or Sample Value   | Description                                                                                                            |
 | ----------------------------------------- | ------------------------  | ---------------------------------------------------------------------------------------------------------------------- |
 | Password                                  |                           | Configuration settings related to user password requirements.                                                          |
-| Password:RequiredLength                   | `8`                       | The minimum required length for user passwords.                                                                        |
-| Password:RequireDigit                     | `false`                   | Indicates whether a digit is required in user passwords.                                                               |
-| Password:RequireNonAlphanumeric           | `false`                   | Indicates whether a non-alphanumeric character is required in user passwords.                                          |
-| Password:RepeatedResetPasswordTimeLimit   | `"0:01:0"`                | The time span within which a user cannot repeatedly reset their password.                                              |
+| Password:RequiredLength                   | 8                       | The minimum required length for user passwords.                                                                        |
+| Password:RequireDigit                     | false                   | Indicates whether a digit is required in user passwords.                                                               |
+| Password:RequireNonAlphanumeric           | false                   | Indicates whether a non-alphanumeric character is required in user passwords.                                          |
+| Password:RepeatedResetPasswordTimeLimit   | "0:01:0"                | The time span within which a user cannot repeatedly reset their password.                                              |
 | User                                      |                           | Configuration settings related to user accounts.                                                                       |
-| User:MaxPasswordAge                       | `90`                      | The maximum age (in days) a user can keep the same password before being required to change it.                        |
-| User:RequireUniqueEmail                   | `true`                    | Indicates whether each user must have a unique email address.                                                          |
-| User:RemindPasswordExpiryInDay            | `7`                       | The number of days before the password expiration date when the system will start reminding users to change their password. |
+| User:MaxPasswordAge                       | 90                      | The maximum age (in days) a user can keep the same password before being required to change it.                        |
+| User:RequireUniqueEmail                   | true                    | Indicates whether each user must have a unique email address.                                                          |
+| User:RemindPasswordExpiryInDay            | 7                       | The number of days before the password expiration date when the system will start reminding users to change their password. |
 | Lockout                                   |                           | Configuration settings related to account lockout.                                                                      |
-| Lockout:DefaultLockoutTimeSpan            | `"0:15:0"`                | The default duration for which an account is locked out after the specified number of unsuccessful login attempts.      |
+| Lockout:DefaultLockoutTimeSpan            | "0:15:0"                 | The default duration for which an account is locked out after the specified number of unsuccessful login attempts.      |
 
 
 **Example**
@@ -506,9 +610,9 @@ This node configures background screen and background pattern of the Login page.
 | PatternUrl                |                           | Url for the pattern image of the login page. If empty, no pattern image is displayed.                   |
 | Preset                    |                           | The currently selected preset for the login page. If empty, no preset is applied.                         |
 | Presets                   |                           | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
-| Presets:Name              | `"demo"`, `"prod"`, etc.  | The name of the preset. Used for identification and selection of the preset.                              |
-| Presets:BackgroundUrl     |                            | Url for the background image specific to the preset. If empty, the default background is used.          |
-| Presets:PatternUrl        | `"/images/pattern-demo.svg"`, `"/images/pattern-live.svg"`, etc. | Url for the pattern image specific to the preset. If empty, the default pattern is used.          |
+| Presets:Name              | "demo", "prod"...         | The name of the preset. Used for identification and selection of the preset.                              |
+| Presets:BackgroundUrl     |                           | Url for the background image specific to the preset. If empty, the default background is used.          |
+| Presets:PatternUrl        |                           | Url for the pattern image specific to the preset. If empty, the default pattern is used.          |
 
 
 **Example**
@@ -543,11 +647,11 @@ This node configures external sources, from which modules are being installed an
 
 | Node                      | Default or sample value                         | Description                                                                                                   |
 | ------------------------- | ----------------------------------------------  | ------------------------------------------------------------------------------------------------------------- |
-| IncludePrerelease         | `true`<br>`false`                               | Shows module versions marked<br>as **Prerelease** if value is `true`.                                         |
-| DiscoveryPath             | `"./Modules"`                                   | Relative or absolute folder location where the platform will discover the installed modules from.             |
-| ModulesManifestUrl        | `"https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json"` | Url to the **.json file** that contains module manifests.           |
-| AuthorizationToken        |                                                 | The authorization token to access `ModulesManifestUrl`, added to the `Authorization` header, if specified.    |
-| AutoInstallModuleBundles  | `"commerce"`                                  | Group(s) of modules to install automatically during the initial Platform setup.<br>If you do not need to install anything here, provide an empty array. |
+| IncludePrerelease         | true<br>false                                   | Shows module versions marked as **Prerelease** if value is **true**.                                       |
+| DiscoveryPath             | "./Modules"                                     | Relative or absolute folder location where the platform will discover the installed modules from.             |
+| ModulesManifestUrl        |                                                 | Url to the **.json file** that contains module manifests.                 |
+| AuthorizationToken        |                                                 | The authorization token to access **ModulesManifestUrl**, added to the **Authorization** header, if specified.|
+| AutoInstallModuleBundles  | "commerce"                                      | Group(s) of modules to install automatically during the initial Platform setup.<br>If you do not need to install anything here, provide an empty array. |
 
 **Example**
 
@@ -574,18 +678,18 @@ This node enables notification configuration for the `VirtoCommerce.Notification
 
 | Node                              | Default or Sample Value         | Description                                                                                                               |
 | --------------------------------- | ------------------------------  | ------------------------------------------------------------------------------------------------------------------------- |
-| Gateway                           | `"Smtp"`<br>`"SendGrid"`        | The current notification sending gateway.<br>The out-of-the-box implemented and<br>supported values are `Smtp`, `SendGrid`.  |
-| DefaultSender                     | `"noreply@gmail.com"`           | This **required** setting provides sender<br>identification used by the current notification sending gateway.           |
-| Smtp                              |                                | SMTP gateway configuration.<br>Used if the `Gateway` setting has the `Smtp` value.                                        |
-| Smtp:SmtpServer                   | `"smtp.gmail.com"`              | The SMTP server address for sending emails.                                                                               |
-| Smtp:Port                         | `587`                          | The port number to use when connecting to the SMTP server.                                                                |
-| Smtp:Login                        |                                | The login (username) for authenticating to the SMTP server.                                                               |
-| Smtp:Password                     |                                | The password for authenticating to the SMTP server.                                                                       |
-| Smtp:ForceSslTls                  | `false`                        | If set to `true`, forces the usage of SSL/TLS when connecting to the SMTP server.                                         |
-| SendGrid                          |                                | SendGrid gateway configuration.<br>Used when the `Gateway` setting has the `SendGrid` value.                              |
-| SendGrid:ApiKey                   |                                | The API key for authenticating to the SendGrid service.                                                                   |
-| Notifications:DiscoveryPath       | `Templates`                    | Relative folder path in the local file system<br>that will be used to discover notification template files<br>during notification rendering. |
-| Notifications:FallbackDiscoveryPath|                                | Alternative relative folder path in the local file<br>system that will be used to discover alternative template<br>files during notification rendering.<br>Templates found through this path will be used as a backup,<br>in case the templates defined in the<br>`Notifications:DiscoveryPath` setting are not found. |
+| Gateway                           | "Smtp"<br>"SendGrid"            | The current notification sending gateway. The out-of-the-box implemented and supported values are **Smtp**, **SendGrid**.  |
+| DefaultSender                     |                                 | This **required** setting provides sender<br>identification used by the current notification sending gateway.           |
+| Smtp                              |                                 | SMTP gateway configuration.<br>Used if the **Gateway** setting has the **Smtp** value.                                        |
+| Smtp:SmtpServer                   |                                 | The SMTP server address for sending emails.                                                                               |
+| Smtp:Port                         |                                 | The port number to use when connecting to the SMTP server.                                                                |
+| Smtp:Login                        |                                 | The login (username) for authenticating to the SMTP server.                                                               |
+| Smtp:Password                     |                                 | The password for authenticating to the SMTP server.                                                                       |
+| Smtp:ForceSslTls                  | true<br>false                   | If **true**, forces the usage of SSL/TLS when connecting to the SMTP server.                                         |
+| SendGrid                          |                                 | SendGrid gateway configuration.<br>Used when the **Gateway** setting has the **SendGrid** value.                              |
+| SendGrid:ApiKey                   |                                 | The API key for authenticating to the SendGrid service.                                                                   |
+| Notifications:DiscoveryPath       |                                 | Relative folder path in the local file system<br>that will be used to discover notification template files<br>during notification rendering. |
+| Notifications:FallbackDiscoveryPath|                                | Alternative relative folder path in the local file<br>system that will be used to discover alternative template<br>files during notification rendering.<br>Templates found through this path will be used as a backup,<br>in case the templates defined in the<br>**Notifications:DiscoveryPath** setting are not found. |
 
 **Example**
 
@@ -616,7 +720,7 @@ This node enables authentication with username and password.
 
 | Node      | Default or sample value   | Description  |
 | ----------| ------------------------  | ------------ |
-| Enabled   | `true`<br> `falsee`       | Always enabled by default. Setting to `false` will disable logging in with username and password.
+| Enabled   | true<br> false            | Always enabled by default. Setting to **false** will disable logging in with username and password.
 | Priority  | 0                         | Configures the priority of the password login popup on the _Login_ page. The lowest value means the highest priority.
 
 
@@ -626,8 +730,8 @@ The Payments node configures various payment gateway integrations for the Virto 
 
 | Node            | Default or Sample Value               | Description                                                         |
 | --------------- | ------------------------------------- | ------------------------------------------------------------------- |
-| `AuthorizeNet`  |                                       | Configuration settings for the Authorize.Net payment gateway.       |
-| `Skyflow`       |                                       | Configuration settings for the Skyflow payment processing module.   |
+| AuthorizeNet    |                                       | Configuration settings for the Authorize.Net payment gateway.       |
+| Skyflow         |                                       | Configuration settings for the Skyflow payment processing module.   |
 
 
 #### Authorize.Net
@@ -639,11 +743,11 @@ This node configures the Authorize.Net payment gateway integration, enabling sec
 
 <!--authorize-net-start-->
 
-| Node            | Default or Sample Value               | Description                                                      |
-| --------------- | ------------------------------------- | ---------------------------------------------------------------- |
-| `IsActive`      | `true`                                | Toggle to enable or disable the Authorize.Net payment module.     |
-| `ApiLogin`      | `"YourApiLogin"`                      | The API login ID provided by Authorize.Net.                       |
-| `TxnKey`        | `"YourTransactionKey"`                | The transaction key provided by Authorize.Net.                    |
+| Node            | Default or Sample Value           | Description                                                      |
+| --------------- | ----------------------------------| ---------------------------------------------------------------- |
+| IsActive      | true<br>false                       | Toggle to enable or disable the Authorize.Net payment module.     |
+| ApiLogin      | "YourApiLogin"                      | The API login ID provided by Authorize.Net.                       |
+| TxnKey        | "YourTransactionKey"                | The transaction key provided by Authorize.Net.                    |
 
 
 **Example**
@@ -666,23 +770,23 @@ This node configures the Skyflow payment processing module, facilitating secure 
 
 <!--skyflow-start-->
 
-| Node                               | Default or Sample Value                                                       | Description                                                                        |
-| ---------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `tokenURI`                         | `"https://manage.skyflowapis-preview.com/v1/auth/sa/oauth/token"`             | The URI for obtaining authentication tokens from the Skyflow API. Can be taken from credentials.json file downloaded from Skyflow dashboard. |
-| `vaultURI`                         | `"https://a370a9658141.vault.skyflowapis-preview.com"`                        | The URI for the Skyflow vault. Can be taken from Skyflow studio by clicking three dots on the vault and selecting **View details** action.  |
-| `gatewayURI`                       | `"https://a370a9658141.gateway.skyflowapis-preview.com"`                      | The URI for invoking outbound connection rules. Replace `vault` with `gateway` in the `vaultURI`. |
-| `vaultId`                          | `"ff9fc275bec848318361cc8928e094d1"`                                          | The identifier for the Skyflow vault.                                              |
-| `tableName`                        | `"credit_cards"`                                                              | The table name for storing credit card data.                                       |
-| `PaymentFormAccount`               |                                                                               | Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps. |
-| `PaymentFormAccount:clientID`      | `"j873500104e6439bbbeb8cec63a6d21"`                                           | The client ID for authentication with the Skyflow Payment Form account.            |
-| `PaymentFormAccount:keyID`         | `"a70d977de5f24532810df376585031aa"`                                          | The key ID for authentication with the Skyflow Payment Form account.               |
-| `PaymentFormAccount:privateKey`    |                                                                               | The private key for authentication with the Skyflow Payment Form account.          |
-| `IntegrationsAccount`              |                                                                               | Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps. | 
-| `IntegrationsAccount:clientID`     | `"b47bea9c61c74cf4aac3b26d09aaf825"`                                          | The client ID for authentication with the Skyflow Integrations account.            |
-| `IntegrationsAccount:keyID`        | `"c950c459157548f0817500288ec8ac96"`                                          | The key ID for authentication with the Skyflow Integrations account.               |
-| `IntegrationsAccount:privateKey`   |                                                                               | The private key for authentication with the Skyflow Integrations account.          |
-| `TargetPaymentMethod`              | `"AuthorizeNetPaymentMethod"`                                                 | The payment method used for authorizing payments via Skyflow. To outbound Payment Service Provider API through the Skyflow connection, create an HttpClient instance IHttpServiceFactory.CreateClient("Skyflow") and execute the request to the Payment Service API with the tokenized card data.                       |
-| `TargetConnectionRoute`            | `"b47bea9c61c74cf4aac3b26d09aaf825/xml/v1/request.api"`                       | The connection route for the target payment method.                                |
+| Node                             | Default or Sample Value    | Description                                                                        |
+| -------------------------------- |--------------------------- | ---------------------------------------------------------------------------------- |
+| tokenURI                         |                            | The URI for obtaining authentication tokens from the Skyflow API. Can be taken from credentials.json file downloaded from Skyflow dashboard. |
+| vaultURI                         |                            | The URI for the Skyflow vault. Can be taken from Skyflow studio by clicking three dots on the vault and selecting **View details** action.  |
+| gatewayURI                       |                            | The URI for invoking outbound connection rules. Replace **vault** with **gateway** in the **vaultURI**. |
+| vaultId                          |                            | The identifier for the Skyflow vault.                                              |
+| tableName                        |                            | The table name for storing credit card data.                                       |
+| PaymentFormAccount               |                            | Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps. |
+| PaymentFormAccount:clientID      |                            | The client ID for authentication with the Skyflow Payment Form account.            |
+| PaymentFormAccount:keyID         |                            | The key ID for authentication with the Skyflow Payment Form account.               |
+| PaymentFormAccount:privateKey    |                            | The private key for authentication with the Skyflow Payment Form account.          |
+| IntegrationsAccount              |                            | Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps. | 
+| IntegrationsAccount:clientID     |                            | The client ID for authentication with the Skyflow Integrations account.            |
+| IntegrationsAccount:keyID        |                            | The key ID for authentication with the Skyflow Integrations account.               |
+| IntegrationsAccount:privateKey   |                            | The private key for authentication with the Skyflow Integrations account.          |
+| TargetPaymentMethod              | "AuthorizeNetPaymentMethod"| The payment method used for authorizing payments via Skyflow. To outbound Payment Service Provider API through the Skyflow connection, create an HttpClient instance IHttpServiceFactory.CreateClient("Skyflow") and execute the request to the Payment Service API with the tokenized card data.                       |
+| TargetConnectionRoute            |                            | The connection route for the target payment method.                                |
 
 
 !!! note
@@ -788,27 +892,27 @@ This node configures the push notification settings for the Virto Commerce Push 
 
 | Node                        | Sample value                                                      | Description                                                                 |
 |-----------------------------|------------------------------------------------------------------ |-----------------------------------------------------------------------------|
-| UseFirebaseCloudMessaging   | `true`<br> `false`                                                | This **required** setting enables/disables Firebase Cloud Messaging.        |
+| UseFirebaseCloudMessaging   | true<br> false                                                    | This **required** setting enables/disables Firebase Cloud Messaging.        |
 | FcmSenderOptions            |                                                                   | Configuration settings for the FCM sender account.                          |
-|    Type                     | `"service_account"`                                               | The type of the FCM sender account.                                         |
-|    ProjectId                | `"vc-push-86046"`                                                 | The project ID of the FCM project.                                          |
-|    PrivateKeyId             | `"956335b2eeccd3b37ef8f6871b406a6a31e1b29a"`                      | The private key ID for the FCM service account.                             |
-|    PrivateKey               | `"-----BEGIN PRIVATE KEY-----\n…-----END PRIVATE KEY-----\n"`     | The private key for the FCM service account.                                |
-|    ClientEmail              | `"firebase-adminsdk-5gw7s@vc-push-86046.iam.gserviceaccount.com"` | The client email for the FCM service account.                               |
-|    ClientId                 | `"117271734888260111772"`                                         | The client ID for the FCM service account.                                  |
-|    AuthUri                  | `"https://accounts.google.com/o/oauth2/auth"`                     | The authentication URI for the FCM service account.                         |
-|    TokenUri                 | `"https://oauth2.googleapis.com/token"`                           | The token URI for the FCM service account.                                  |
-|    AuthProviderX509CertUrl  | `"https://www.googleapis.com/oauth2/v1/certs"`                    | The URL for the X509 certificate provider.                                  |
-|    ClientX509CertUrl        | `"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5gw7s%40vc-push-86046.iam.gserviceaccount.com"` | The URL for the client X509 certificate.  |
-|    UniverseDomain           | `"googleapis.com"`                                                | The domain used by the FCM service account.                                 |
+|    Type                     | "service_account"                                                 | The type of the FCM sender account.                                         |
+|    ProjectId                |                                                                   | The project ID of the FCM project.                                          |
+|    PrivateKeyId             |                                                                   | The private key ID for the FCM service account.                             |
+|    PrivateKey               |                                                                   | The private key for the FCM service account.                                |
+|    ClientEmail              |                                                                   | The client email for the FCM service account.                               |
+|    ClientId                 |                                                                   | The client ID for the FCM service account.                                  |
+|    AuthUri                  | "https://accounts.google.com/o/oauth2/auth"                       | The authentication URI for the FCM service account.                         |
+|    TokenUri                 | "https://oauth2.googleapis.com/token"                             | The token URI for the FCM service account.                                  |
+|    AuthProviderX509CertUrl  | "https://www.googleapis.com/oauth2/v1/certs"                      | The URL for the X509 certificate provider.                                  |
+|    ClientX509CertUrl        |                                                                   | The URL for the client X509 certificate.  |
+|    UniverseDomain           |                                                                   | The domain used by the FCM service account.                                 |
 | FcmReceiverOptions          |                                                                   | Configuration settings for the FCM receiver account.                        |
-|    ApiKey                   | `"AIzaSyCy9gsvKM1e77GRYw6M9rKRRSekZNAgRnI"`                       | The API key for the FCM receiver.                                           |
-|    AuthDomain               | `"vc-push-86046.firebaseapp.com"`                                 | The authentication domain for the FCM receiver.                             |
-|    ProjectId                | `"vc-push-86046"`                                                 | The project ID for the FCM receiver.                                        |
-|    StorageBucket            | `"vc-push-86046.appspot.com"`                                     | The storage bucket for the FCM receiver.                                    |
-|    MessagingSenderId        | `"647691501458"`                                                  | The messaging sender ID for the FCM receiver.                               |
-|    AppId                    | `"1:647691501458:web:2b18fc3a864469ac378b4b"`                     | The application ID for the FCM receiver.                                    |
-|    VapidKey                 | `"BJyVagnZqcHI6_vwxILEfxpbVAq0F-ASE5k3WwX_F72WaQr_ysHKqhH5-8yWfUhNs9oecGcOy8kJ_m4b-OXrNFs"` | The VAPID key for the FCM receiver.               |
+|    ApiKey                   |                                                                   | The API key for the FCM receiver.                                           |
+|    AuthDomain               |                                                                   | The authentication domain for the FCM receiver.                             |
+|    ProjectId                |                                                                   | The project ID for the FCM receiver.                                        |
+|    StorageBucket            |                                                                   | The storage bucket for the FCM receiver.                                    |
+|    MessagingSenderId        |                                                                   | The messaging sender ID for the FCM receiver.                               |
+|    AppId                    |                                                                   | The application ID for the FCM receiver.                                    |
+|    VapidKey                 |                                                                   | The VAPID key for the FCM receiver.               |
 
 **Examples**
 
@@ -849,10 +953,10 @@ This node configures full text search for the `VirtoCommerce.Search` module.
 
 <!--search-start-->
 
-| Node                        | Default or sample value   | Description                                                                                                                                   |
-| ----------------------------| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Provider                    | `"Lucene"`                | This **required** setting specifies the current search provider. The supported values are:<ul> <li>`ElasticSearch`</li> <li>`ElasticAppSearch`</li> <li>`ElasticSearch8`</li> <li>`Lucene`</li> <li>`AzureSearch`</li> <li>`AlgoliaSearch`</li> </ul>      |
-| Scope                       | `"default"`               | This setting determines the scope to use and is **required**.                                                                                 |
+| Node                        | Default or sample value   | Descript                                                                                          |
+| ----------------------------| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| Provider                    | "Lucene"<br>"ElasticSearch"<br>"ElasticAppSearch"<br>"ElasticSearch8"<br>"AzureSearch"<br>"AlgoliaSearch"                     | This **required** setting specifies the current search provider.  |
+| Scope                       | "default"               | This setting determines the scope to use and is **required**.                                                                                 |
 
 
 **Examples**
@@ -897,13 +1001,13 @@ This node configures the Elastic Search provider:
 
 | Node                                       | Default or Sample Value                    | Description                                                                     |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
-| Search.Provider                            | `"ElasticSearch"`                           | Specifies the search provider name, which must be set to "ElasticSearch".       |
-| Search.Scope                               | `"default"`                                 | Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. The key is optional. Its default value is `default`.|
+| Search.Provider                            | "ElasticSearch"                             | Specifies the search provider name.       |
+| Search.Scope                               | "default"                                   | Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. The key is optional. Its default value is **default**.|
 | Search.ElasticSearch.Server                |                                             | Specifies the network address and port of the Elasticsearch server.               |
-| Search.ElasticSearch.User                  | `"elastic"`                                 | Specifies the username for either the Elastic Cloud cluster or private Elasticsearch server. |
+| Search.ElasticSearch.User                  | "elastic"                                   | Specifies the username for either the Elastic Cloud cluster or private Elasticsearch server. |
 | Search.ElasticSearch.Key                   |                                             | (Optional) Specifies the password for either the Elastic Cloud cluster or private Elasticsearch server. |
-| Search.ElasticSearch.EnableCompatibilityMode | `false`                                   | (Optional) Set this to "true" to use Elasticsearch v8.x or "false" (default) for earlier versions. |
-| Search.ElasticSearch.EnableHttpCompression | `false`                                     | (Optional) Set this to "true" to enable gzip compressed requests and responses or "false" (default) to disable compression. |
+| Search.ElasticSearch.EnableCompatibilityMode | true<br>false                             | (Optional) Set this to **true** to use Elasticsearch v8.x or **false** (default) for earlier versions. |
+| Search.ElasticSearch.EnableHttpCompression | true<br>false                               | (Optional) Set this to **true** to enable gzip compressed requests and responses or **false** (default) to disable compression. |
 | Search.ElasticSearch.CertificateFingerprint |                                            | During development, you can provide the server certificate fingerprint. When present, it is used to validate the certificate sent by the server. The fingerprint is expected to be the hex string representing the SHA256 public key fingerprint.  |
 
 **Examples**
@@ -1028,12 +1132,12 @@ This node configures the Elastic App Search provider:
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
-| Search.Provider                            | `"ElasticAppSearch"`                       | Name of the search provider, which must be set to `ElasticAppSearch`           |
-| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. Its default value is set to `default`.|
+| Search.Provider                            | "ElasticAppSearch"                       | Name of the search provider.           |
+| Search.Scope                               | "default"                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. Its default value is set to **default**.|
 | Search.ElasticAppSearch.Endpoint           |                                            | Network address and port of the ElasticAppSearch server. |
-| Search.ElasticAppSearch.PrivateApiKey      |                                            | API access key that can read and write against all available API endpoints. Prefixed with `private-`.|
+| Search.ElasticAppSearch.PrivateApiKey      |                                            | API access key that can read and write against all available API endpoints. Prefixed with **private-**.|
 | Search.ElasticAppSearch.KibanaBaseUrl      |                                            | Kibana base URL for accessing the Kibana Dashboard from the application menu.|
-| Search.ElasticAppSearch.KibanaPath         |                                            | Path to the App Search engine in the Kibana Dashboard. Default value is `/app/enterprise_search/app_search/engines/`.
+| Search.ElasticAppSearch.KibanaPath         |                                            | Path to the App Search engine in the Kibana Dashboard. Default value is **/app/enterprise_search/app_search/engines/**.
 
 !!! note
     Endpoint and API key can be managed in the Credential menu within the App Search Dashboard panel.
@@ -1116,10 +1220,10 @@ This node configures the Elastic Search 8 provider:
 
 | Node                                       | Default or Sample Value                    | Description                                                                      |
 | -------------------------------------------| -------------------------------------------| ---------------------------------------------------------------------------------|
-| Search.Provider                            | `"ElasticSearch8"`                         | Specifies the search provider name, which must be set to "ElasticSearch8".       |
-| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. Its default value is `default`.                                           |
+| Search.Provider                            | "ElasticSearch8"                         | Specifies the search provider name.       |
+| Search.Scope                               | "default"                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. Its default value is **default**.                                         |
 | Search.ElasticSearch8.Server                |                                           | Specifies the network address and the port of the Elasticsearch8 server.         |
-| Search.ElasticSearch8.User                  | `"elastic"`                               | Specifies the username for the Elasticsearch8 server.                            |
+| Search.ElasticSearch8.User                  | "elastic"                                 | Specifies the username for the Elasticsearch8 server.                            |
 | Search.ElasticSearch8.Key                   |                                           | (Optional) Specifies the password for the Elasticsearch8 server.                 |
 | Search.ElasticSearch8.CertificateFingerprint |                                          | (Optional) During development, you can provide the server certificate fingerprint. When present, it is used to validate the certificate sent by the server. The fingerprint is expected to be the hex string representing the SHA256 public key fingerprint.                                         |
 
@@ -1164,9 +1268,9 @@ This node configures the Lucene search provider:
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
-| Search.Provider                            | `"Lucene"`                                 | Name of the search provider, which must be set to `Lucene`.                    |
+| Search.Provider                            | "Lucene"                                   | Name of the search provider.                    |
 | Search.Lucene.Path                         |                                            | A virtual or physical path to the root directory where indexed documents are stored.
-| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. |
+| Search.Scope                               | "default"                                  | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. |
 
 **Example**
 
@@ -1190,11 +1294,11 @@ This node configures the Azure Search provider:
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
-| Search.Provider                            | `"AzureSearch"`                            | Name of the search provider, which must be set to `AzureSearch`.               |
+| Search.Provider                            | "AzureSearch"                              | Name of the search provider.               |
 | Search.AzureSearch.SearchServiceName       |                                            | The name of the search service instance in your Azure account. Example: SERVICENAME.search.windows.net.|
 | Search.AzureSearch.AccessKey               |                                            | The primary or secondary admin key for this search service.                    |
-| Search.AzureSearch.QueryParserType         | `Simple`<br>`Full`                         | Type of Query Languages. `Simple` (default) or `Full`.                         |                
-| Search.Scope                               | `"default"`                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is `scope-{documenttype}`. This allows one search service to serve multiple indexes. |
+| Search.AzureSearch.QueryParserType         | Simple<br>Full                         | Type of Query Languages. **Simple** (default) or **Full**.                         |                
+| Search.Scope                               | "default"                                  | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. |
 
 
 **Example**
@@ -1222,7 +1326,7 @@ This node configures the Algolia search provider:
 
 | Node                                       | Default or Sample Value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
-| Search.Provider                            | `"AlgoliaSearch"`                          | Name of the search provider, which must be set to `AlgoliaSearch`.             |
+| Search.Provider                            | "AlgoliaSearch"                            | Name of the search provider.             |
 | Search.AlgoliaSearch.ApiId                 |                                            | The API id for Algolia server.                                                 |
 | Search.AlgoliaSearch.ApiKey                |                                            | The API key for either Algolia server.                                         |
 
@@ -1244,10 +1348,10 @@ This node configures the Serilog logging library, allowing customization of logg
 
 | Node          | Default or sample value                                             | Description                                                                      |
 | ------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Using         |  `"Serilog.Sinks.Console"` <br> `"Serilog.Sinks.Debug"`             | List of assemblies for logging providers in which<br>configuration methods reside.  |
-| MinimumLevel  | `Information`<br> `Warning` <br> `Error` <br> `Debug` <br> `Trace`  | Minimum severity level of log messages.                                          |
-| WriteTo       | `"Console"` <br> `"Debug"`                                          | Specifies the sinks to which log events will be written.                           |
-| Enrich        | `"FromLogContext"`                                                  | List of enrichers that will add additional properties to log events.               |
+| Using         | "Serilog.Sinks.Console"<br>"Serilog.Sinks.Debug"                    | List of assemblies for logging providers in which<br>configuration methods reside.  |
+| MinimumLevel  | Information<br> Warning <br> Error <br> Debug <br> Trace            | Minimum severity level of log messages.                                          |
+| WriteTo       | "Console" <br> "Debug"                                              | Specifies the sinks to which log events will be written.                           |
+| Enrich        | "FromLogContext"                                                    | List of enrichers that will add additional properties to log events.               |
 
 **Example**
 
@@ -1277,7 +1381,7 @@ This setting is used to configure tax providers.
 
 | Node                    | Default value             | Description                                                                                           |
 |-------------------------|---------------------------|-------------------------------------------------------------------------------------------------------|
-| `FixedRateTaxProvider`  | `true`<br>`false`         | Determines whether the `FixedRateTaxProvider` is enabled or disabled. When set to `false`, the `FixedRateTaxProvider` is not active, and tax calculations will not be performed using this provider. When set to `true` the `FixedRateTaxProvider` will be enabled, allowing the platform to use fixed-rate tax calculations. |
+| FixedRateTaxProvider  | true<br>false         | Determines whether the **FixedRateTaxProvider** is enabled or disabled. When set to **false**, the **FixedRateTaxProvider** is not active, and tax calculations will not be performed using this provider. When set to **true** the **FixedRateTaxProvider** will be enabled, allowing the platform to use fixed-rate tax calculations. |
 
 **Example**
 
@@ -1288,7 +1392,7 @@ This setting is used to configure tax providers.
 ```
 
 
-## Hierarchic keys and separators
+## Hierarchic Keys and Separators
 
 When working with keys, one should follow these rules:
 
