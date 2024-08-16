@@ -35,15 +35,15 @@ Follow the intructions below to build your own data importer of a specific type.
 
     Define `ClassMap` by creating a new file CsvProductImageClassMap.cs with the following content:
 
-    ```cs title="CsvProductImageClassMap.cs"
-    1 public class CsvProductImageClassMap : ClassMap<ProductImage>
-    2    {
-    3        public CsvProductImageClassMap()
-    4        {
-    5            Map(m => m.ProductId);
-    6            Map(m => m.ImageUrl);
-    7        }
-    8    }
+    ```cs title="CsvProductImageClassMap.cs" linenums="1"
+    public class CsvProductImageClassMap : ClassMap<ProductImage>
+      {
+        public CsvProductImageClassMap()
+          {
+            Map(m => m.ProductId);
+            Map(m => m.ImageUrl);
+          }
+      }
     ```
 
     This will map the class properties to the column headers of the CSV file. This example is identical to not using any class mapping at all when the headers match the property names.
@@ -51,25 +51,25 @@ Follow the intructions below to build your own data importer of a specific type.
 
 1. Define settings for custom importer. For any given import profile instance, each importer can provide settings that can be modified by the user. Define the settings that will be used by our importer in the ProductImageImporterSettings.cs file:
 
-    ```cs title="ProductImageImporterSettings.cs"
-    1 public class ProductImageImporterSettings
-    2    {
-    3        public static SettingDescriptor DebugSetting { get; } = new SettingDescriptor
-    4        {
-    5            Name = "Vcmp.Import.ProductImage.Debug",
-    6            ValueType = SettingValueType.Boolean,
-    7            GroupName = "Import",
-    8            DefaultValue = false
-    9        };
-    10
-    11        public static IEnumerable<SettingDescriptor> AllSettings
-    12        {
-    13            get
-    14            {
-    15                yield return DebugSetting;
-    16            }
-    17        }
-    18    }
+    ```cs title="ProductImageImporterSettings.cs" linenums="1"
+    public class ProductImageImporterSettings
+       {
+         public static SettingDescriptor DebugSetting { get; } = new SettingDescriptor
+          {
+            Name = "Vcmp.Import.ProductImage.Debug",
+            ValueType = SettingValueType.Boolean,
+            GroupName = "Import",
+            DefaultValue = false
+          };
+    
+         public static IEnumerable<SettingDescriptor> AllSettings
+          {
+            get
+              {
+                yield return DebugSetting;
+              }
+          }
+        }
     ```
 
 1. Create DataWriter in the new CsvProductImageWriter.cs file:
