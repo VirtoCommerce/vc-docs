@@ -4,16 +4,16 @@ Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's m
 
 Each Virto PBC includes:
 
-* **Business End-to-End Scenarios:** Each PBC includes complete business scenarios that guide the implementation of the capability.
-* **Set of Compatible Modules:** PBCs come with a curated set of modules that work seamlessly together to deliver the desired functionality.
-* **Package.json for Fast Installation:** Installation is simplified with a pre-configured **package.json** file, making it quick to get started.
+* **Business end-to-end scenarios:** Each PBC includes complete business scenarios that guide the implementation of the capability.
+* **Set of compatible modules:** PBCs come with a curated set of modules that work seamlessly together to deliver the desired functionality.
+* **Package.json for fast installation:** Installation is simplified with a pre-configured **package.json** file, making it quick to get started.
 
-Key Benefits of PBCs:
+Key benefits of PBCs:
 
-* **Faster Time to Market:** PBCs streamline the deployment process, enabling businesses to launch new features and services quickly.
-* **Lower Cost of Ownership:** By leveraging pre-packaged capabilities, companies can reduce development costs and maintenance efforts.
-* **Higher Flexibility and Scalability:** PBCs are designed to be adaptable, allowing businesses to scale operations and customize solutions as needed.
-* **Greater Innovation and Differentiation:** With PBCs, businesses can innovate rapidly, differentiating themselves in the marketplace with unique offerings.
+* **Faster time to market:** PBCs streamline the deployment process, enabling businesses to launch new features and services quickly.
+* **Lower cost of ownership:** By leveraging pre-packaged capabilities, companies can reduce development costs and maintenance efforts.
+* **Higher flexibility and scalability:** PBCs are designed to be adaptable, allowing businesses to scale operations and customize solutions as needed.
+* **Greater innovation and differentiation:** With PBCs, businesses can innovate rapidly, differentiating themselves in the marketplace with unique offerings.
 
 Virto Commerce currently offers three PBCs:
 
