@@ -1,6 +1,6 @@
 # Add SSO Provider
 
-To integrate a new SSO provider (for example, Azure AD):
+To integrate a new SSO provider (for example, Azure AD (Entra ID)):
 
 1. [Manage backend settings.](azure-ad.md#backend-settings)
 1. [Manage Platform settings.](azure-ad.md#platform-settings)
@@ -44,3 +44,6 @@ The GraphQL query confirms that authentication via Azure AD is enabled:
 The Azure AD authentication button appears on the login page of the Frontend Application:
 
 ![Azure AD button](media/azure-ad-button.png){: width="700"}
+
+!!! note
+    If an account does not exist, clicking on the Azure Active Directory button will automatically create a new account.

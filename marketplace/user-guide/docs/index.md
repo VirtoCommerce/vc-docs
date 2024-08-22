@@ -26,8 +26,13 @@ Our Marketplace solution provides separate self-service portals to manage a rang
     | ![Operator orders](media/operator-orders-overview.png) | <br><ul><li> [View submitted orders](Operator-portal/operator-orders.md#view-orders)</li> <li> [Manage submitted orders](Operator-portal/operator-orders.md#manage-orders)</li></ul> |
     | ![State machines](media/state-machines-overview.png) | <br><ul><li> [View, add, or configure order processing workflows](Operator-portal/state-machines.md)</li></ul>|
 
-=== "Vendor portal [In progress]"
+=== "Vendor portal"
 
     |Item|Description|
     |---|---|
-    | ![Master catalog](media/master-catalog-overview.png) | <ul><li> [Add new category to master catalog](Operator-portal/master-catalog.md#add-new-category)</li><li> [Add properties to category](Operator-portal/master-catalog.md#add-properties-to-category) </li></ul>|
+    | ![Orders](media/orders-overview.png) | <ul><li> [Edit orders received from buyers](Vendor-portal/orders.md#edit-order)</li><li> [Confirm, cancel, pack, and ship orders](Vendor-portal/orders.md#process-order) </li><li> [Create shipment documents](Vendor-portal/orders.md#create-shipment) </li></ul>|
+    | ![Products](media/products-overview.png) | <ul><li> [Add products to catalog](Vendor-portal/products-management.md#add-own-product)</li><li> [Add offers to own products](Vendor-portal/products-management.md#add-offer-to-own-product) </li><li> [Add offers to another vendor's products](Vendor-portal/products-management.md#add-offer-to-another-vendors-product) </li></ul>|
+    | ![Offers and price tags](media/offers-overview-vendor.png) | <ul><li> [Add offers to your products](Vendor-portal/offers.md#add-offers-to-product)</li><li> [Add price tags to offers](Vendor-portal/offers.md#add-price-tags-to-offer) </li></ul>|
+    | ![Import](media/import-overview.png) | <ul><li> [Import products and offers in bulk using CSV files](Vendor-portal/import.md)</li></ul>|
+    | ![Rating and reviews](media/rating-reviews-overview.png) | <ul><li> [Monitor feedback submitted by buyers](Vendor-portal/rating-and-reviews.md)</li></ul>|
+    | ![My store](media/my-store-overview.png) | <ul><li> [Manage your company's basic information](Vendor-portal/my-store.md#profile)</li><li> [Manage your team members](Vendor-portal/my-store.md#people) </li><li> [Manage the inventory aspects and fulfillment centers](Vendor-portal/my-store.md#fulfillment-centers) </li></ul>|    

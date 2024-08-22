@@ -34,6 +34,9 @@ nav:
       - State Machines: Operator-portal/state-machines.md
     - Vendor portal:
       - Overview: Vendor-portal/overview.md
-      - Offers management by vendor: Vendor-portal/offers-management-by-vendor.md
-      - Products management by vendor: Vendor-portal/products-management-by-vendor.md
-
+      - Orders: Vendor-portal/orders.md
+      - Products: Vendor-portal/products-management.md
+      - Offers and Price Tags: Vendor-portal/offers.md
+      - Import: Vendor-portal/import.md
+      - Rating and Reviews: Vendor-portal/rating-and-reviews.md
+      - My Store: Vendor-portal/my-store.md

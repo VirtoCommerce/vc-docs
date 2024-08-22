@@ -16,4 +16,9 @@ To place a bulk order:
 
 1. Click **Add to cart**.
 
+!!! note
+    Similar product SKUs might belong to different products from different catalogs. If duplicate SKUs are detected, you will receive a notification and be prompted to select the intended product from a dropdown list.
+    ![Similar SKUs](../media/duplicated-skus.png){: width="600"}
+
+
 Now you can proceed to [Checkout.](checkout-process.md)
