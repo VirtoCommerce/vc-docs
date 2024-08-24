@@ -7,12 +7,11 @@ Although users can [modify or define notification templates through Platform Man
 
 There are two ways to declare and distribute predefined notification templates through code:
 
-* As content files in `.csproj` of a custom module (preferred).
-    
+* As content files in **.csproj** of a custom module (preferred).
 * As inline definition in the source code.
     
 
-## Content Files in `.csproj`
+## Content files in .csproj
 
 Create the **Templates** folder in the module solution:
 
@@ -25,7 +24,7 @@ ModuleWeb
     
 ```
 
-### Notification Naming Convention
+### Notification naming convention
 
 Notification template files have the following naming convention: `[NotificationTypeName]_[subject|body|sample][.lang?].[html|json]`: 
 
@@ -34,9 +33,9 @@ Notification template files have the following naming convention: `[Notification
 * `_sample.json`: Contains the default JSON data that will be used for notification preview.
 * `lang`: A two-letter language code; it is not required, and in case it is not provided, the template will be used by default for all requested languages, as long as the file for the required language is not found.
 
-### Work with `.Web.csproj` File
+### Work with .Web.csproj file
 
-Next, you need to edit the `.Web.csproj` file to allow all files from the **Templates** folder to be copied upon publishing. Technically, you need to add the following lines into `{Your module}.Web.csproj`:
+Next, you need to edit the **.Web.csproj** file to allow all files from the **Templates** folder to be copied upon publishing. Technically, you need to add the following lines into `{Your module}.Web.csproj`:
 
 ```csharp title="{Your module}.Web.csproj"
  <ItemGroup>

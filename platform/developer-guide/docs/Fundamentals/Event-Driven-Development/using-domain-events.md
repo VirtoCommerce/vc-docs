@@ -4,7 +4,7 @@ A domain event is something that happened in a particular domain, and something 
 
 An important benefit of domain events is that any side effects of something happening in a domain can be expressed explicitly and not implicitly. Those side effects must be consistent, i.e. either all operations related to the task happen, or none. In addition, domain events enable a better separation of concerns among classes within the same domain.
 
-## Define Domain Events
+## Define domain events
 
 A domain event is just a simple POCO type that represents an interesting occurence in the domain:
 
@@ -15,7 +15,7 @@ public class CustomDomainEvent : DomainEvent
 }
 ```
 
-## Define New Event Handler 
+## Define new event handler 
 
 Define a new event handler as follows:
 
@@ -29,7 +29,7 @@ public class CutomDomainEventHandler : IEventHandler<CustomDomainEvent>
 }
 ```
 
-## Register Event Handler and Subscribe to Domain Event
+## Register event handler and subscribe to domain event
 
 Register an event handler or subscribe to a domain event as follows:
 
@@ -50,7 +50,7 @@ eventHandlerRegistrar.RegisterHandler<CustomDomainEvent>((message, token) => app
 }
 ```
 
-## Raise Domain Events
+## Raise domain events
 
 In your domain entities, when any significant status change happens, you can raise your domain events as follows:
 
@@ -59,7 +59,7 @@ var eventPublisher = _container.Resolve<IEventPublisher>();
 eventPublisher.Publish(new CustomDomainEvent()));
 ```
 
-## Override Existing Event Handler with New Derived Type
+## Override existing event handler with new derived type
 
 This might be a useful option in some cases:
 

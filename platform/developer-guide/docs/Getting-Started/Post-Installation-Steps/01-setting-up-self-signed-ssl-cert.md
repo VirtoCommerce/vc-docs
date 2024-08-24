@@ -1,8 +1,8 @@
-﻿# Setting up Self-signed SSL Certificate
+﻿# Set up Self-signed SSL Certificate
 
 Running Virto Commerce Platform with HTTPS requires using an SSL certificate. When it comes to non-production applications or development and testing scenarios, you can use a self-signed certificate. 
 
-![Readmore](media/readmore.png){: width="25"} [First Time Launch](../Installation-Guide/windows.md#perform-initial-sign-in) 
+![Readmore](media/readmore.png){: width="25"} [First time launch](../Installation-Guide/windows.md#perform-initial-sign-in) 
 
 Although such a certificate implements full encryption, the visitors of your website will see a browser warning saying the certificate should not be trusted.
 

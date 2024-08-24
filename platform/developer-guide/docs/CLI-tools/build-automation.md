@@ -1,3 +1,5 @@
+# Build Automation
+
 The `vc-build` tool streamlines various build scenarios for solutions based on VirtoCommerce. Its builder-server agnostic nature and cross-platform support make it adaptable to any CI/CD pipeline or local development setup.
 <br>
 <br>

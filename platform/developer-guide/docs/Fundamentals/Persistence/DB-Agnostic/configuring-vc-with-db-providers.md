@@ -1,4 +1,4 @@
-# Configuring VC with DB Providers
+# Configure VC with DB Providers
 
 Virto Commerce is built on a DB agnostic architecture. The following databases are supported out of the box:
 

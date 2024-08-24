@@ -24,8 +24,6 @@ To implement single sign-on, Virto Commerce Platform utilizes the OpenID Connect
 
 ## Prerequisites
 
-Before enabling Azure Active Directory authentication, ensure the following:
-
 1. Your company has a valid Azure Active Directory tenant. If not, follow the [quickstart guide](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) to create one.
 1. You have an Azure account associated with your company's Azure Active Directory tenant. If you do not have an Azure account yet, [start a free Azure subscription](https://azure.microsoft.com/free/).
 1. A Virto Commerce Platform instance is running, either locally or on Azure. Ensure you have privileges to modify its configuration.
@@ -39,7 +37,7 @@ To set up the Azure Active Directory based authentication in Virto Commerce Plat
 1. [Configure Virto Commerce Platform to use Azure AD Authentication.](adding-azure-as-sso-provider.md#configure-virto-commerce-platform-to-use-azure-ad-authentication)
 1. [Test.](adding-azure-as-sso-provider.md#test)
 
-### Add Registration for Virto Commerce Platform in Azure Active Directory
+### Add registration for Virto Commerce Platform in Azure Active Directory
 
 1. Sign in to the [Azure Portal](https://portal.azure.com/) using your Azure account.
 
@@ -68,7 +66,7 @@ To set up the Azure Active Directory based authentication in Virto Commerce Plat
 
     ![Enable-token](media/enable-token.png)
 
-### Configure Virto Commerce Platform to Use Azure AD Authentication
+### Configure Virto Commerce Platform to use Azure AD Authentication
 
 To configure Virto Commerce Platform to use Azure AD authentication:
 
@@ -165,7 +163,7 @@ The updated configuration might look like this:
 	},
 ```
 
-## Advanced Details
+## Advanced details
 
 As mentioned above, when a user signs in with Azure Active Directory for the first time, Virto Commerce Platform automatically creates a new account for them. But what happens if the Virto Commerce Platform account with the same login already exists?
 
@@ -197,7 +195,7 @@ To answer this question, let's explore the Azure Active Directory authentication
 !!! warning
 	If you see the **IDX10205: Issuer validation failed** error, this means you forgot to switch `ValidateIssuer` to `MultitenantAzureAD`.
 
-## Configuration with Custom Azure AD App Signing Keys
+## Configuration with custom Azure AD app signing keys
 
 If your app has custom signing keys, you can receive the following error upon the `POST https://localhost:5001/signin-oidc` request:
 

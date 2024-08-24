@@ -32,7 +32,7 @@ The platform can be installed:
 * [Manually by downloading the precompiled binaries](windows.md#download-precompiled-binaries).
 * [Using Virto Commerce CLI (vc-build)](windows.md#use-virto-commerce-cli).
 
-### Download Precomplied Binaries
+### Download precomplied binaries
 
 1. Open the [Releases section of the Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform/releases) in GitHub.
 
@@ -74,7 +74,7 @@ To set up the Platform:
 2. [Run the Platform.](windows.md#run-platform)
 3. [Perform initial sign in.](windows.md#perform-initial-sign-in)
 
-### Configure Application Strings
+### Configure application strings
 
 To configure application strings:
 
@@ -157,7 +157,7 @@ You can run the Platform:
     dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
     ```
 
-### Perform Initial Sign-in
+### Perform initial sign-in
 
 To access the Platform and perform initial sign-in:
 
@@ -170,8 +170,8 @@ To access the Platform and perform initial sign-in:
 1. Upon the first request, the application will create and initialize the database.
 1. Once completed, you will be redirected to the sign-in page. Use the following credentials to sign in:
 
-    * Login: `admin`
-    * Password: `store`
+    * Login: admin
+    * Password: store
 
 1. The installation wizard starts downloading default modules and sample data:
 

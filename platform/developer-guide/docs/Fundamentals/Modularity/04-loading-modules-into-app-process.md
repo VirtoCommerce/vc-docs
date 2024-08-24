@@ -13,11 +13,11 @@ The process of loading modules into the Virto platform application process inclu
         
         * In multi-instance platform configurations, only one instance checks or copies assemblies into the probing folder. This is achieved by distributed locking between instances through Redis: the instance that was started first copies the files, while other instances skip this process.
 
-- **Loading modules**: The assemblies that contain the modules are loaded into the `AssemblyLoadContex.Default` default context of the application process. This phase requires the module assemblies to be retrieved from the probing folder.
+* **Loading modules**: The assemblies that contain the modules are loaded into the `AssemblyLoadContex.Default` default context of the application process. This phase requires the module assemblies to be retrieved from the probing folder.
     
-- **Ordering by dependency graph**: All loaded modules are stored in the order of their dependencies for proper initialization order.
+* **Ordering by dependency graph**: All loaded modules are stored in the order of their dependencies for proper initialization order.
     
-- **Initializing modules**: Finally, the modules get initialized, which means creating instances of the module class and calling the *Initialize* method against them via the `IModule` interface.
+* **Initializing modules**: Finally, the modules get initialized, which means creating instances of the module class and calling the *Initialize* method against them via the `IModule` interface.
 
 The chart below shows the module loading process:
 

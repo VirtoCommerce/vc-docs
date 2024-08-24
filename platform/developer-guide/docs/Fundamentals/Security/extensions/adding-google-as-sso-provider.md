@@ -32,7 +32,7 @@ To create credentials for your project:
 1.  Click **CREATE**.
 1.   Save **Client ID** and **Client Secret** to use them in the module.
 
-## Configure Google Sign-in
+## Configure Google sign-in
 
 Store Google Client ID, secret values and other sensitive settings in **KeyVault Storage**. In our example, we use the `appsettings.json` configuration file. Add the following section to the configuration:
 
@@ -48,7 +48,7 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
 }
 ```
 
-## Add Module Extensions
+## Add module extensions
 
 1. Add the Microsoft.AspNetCore.Authentication.Google v6.0 and the latest version of VirtoCommerce.Platform.Security packages to .web project of the custom extension module.
 1. Add the basic **GoogleOptions.cs** class.

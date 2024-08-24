@@ -1,7 +1,7 @@
 ﻿# System Requirements
 This sections lists the basic hardware and software requirements to installing the Virto Commerce platform.
 
-## Minimum Hardware Requirements
+## Minimum hardware requirements
 Before installing, make sure your computer meets these minimum requirements:
 
 | Parameter         | Value         |
@@ -12,11 +12,11 @@ Before installing, make sure your computer meets these minimum requirements:
 | Number of cores   | Dual core     |
 | Processor type    | x64-compatible only |
 
-## Supported Operation Systems for .NET 8
+## Supported operation systems for .NET 8
 
 The Virto Platform runs on .NET 8. [.NET 8](https://github.com/dotnet/core/blob/main/release-notes/8.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
 
-For issues with .NET on operating systems not listed here, please open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community . 
+For issues with .NET on operating systems not listed here, open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community . 
 
 ![Readmore](media/readmore.png){: width="25"} [List of repositories](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md)
 
@@ -82,17 +82,19 @@ For issues with .NET on operating systems not listed here, please open a GitHub 
     The following versions [are no longer supported by .NET 8.0](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md).
 
 
-## Supported Databases
-The Virto platform supports:
+## Supported databases
+
+The Virto Commerce Platform supports:
 
 * MS SQL Server 2019 and higher.
 * MySql Server 5.7 and higher.
 * PostgreSQL 12 and higher.
 
-![Readmore](media/readmore.png){: width="25"} [Configuring Platform with Database Providers](../Fundamentals/Persistence/DB-Agnostic/overview.md)
+![Readmore](media/readmore.png){: width="25"} [Configuring Platform with database providers](../Fundamentals/Persistence/DB-Agnostic/overview.md)
 
-## Supported Browsers
-The Virto platform supports:
+## Supported browsers
+
+The Virto Commerce Platform supports:
 
 -   Microsoft Internet Explorer 9 and higher.
 

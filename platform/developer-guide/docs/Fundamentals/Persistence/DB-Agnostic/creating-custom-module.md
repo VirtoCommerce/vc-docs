@@ -1,4 +1,4 @@
-# Creating Custom Module with DB Agnostic Approach
+# Create Custom Module with DB Agnostic Approach
 
 Use this technique if you want to develop a module that can work with different database systems without having to rewrite your code for each one.
 
@@ -14,7 +14,7 @@ To create a new module with a database agnostic approach:
 
 1. Open the solution in Visual Studio.
 
-## Module Template Features
+## Module template features
 
 The template key features  are:
 

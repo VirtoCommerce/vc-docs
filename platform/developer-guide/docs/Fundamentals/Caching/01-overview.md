@@ -2,7 +2,7 @@
 
 Caching is one of the most effective ways to improve website performance. At Virto Commerce, we have used a number of different ways to cache application data to reduce the load on external services and the database, and to minimize application latency when processing API requests. This article describes the technical details and the best caching practices we use in our platform.
 
-## Cache-Aside Pattern Overview
+## Cache-aside pattern overview
 
 We chose [Cache-Aside](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside) as the main pattern for all caching logic because it is very simple and straightforward to implement and test.  
 
@@ -41,7 +41,7 @@ The code with a our extension looks as follows:
  }
 ```
 
-### Cache Key Generation
+### Cache key generation
 `CacheKey` (line 4 in the above code), a special static class, provides a method for generating:
 
 * Unique string cache keys according to the arguments, type, and method of the information being transferred:
@@ -64,7 +64,7 @@ The code with a our extension looks as follows:
     //cacheKey will take the "Prop1Value-Prop2Value" value
     ```
 
-### Thread-safe Caching and Avoiding Race Conditions
+### Thread-safe caching and avoiding race conditions
 The `MemoryCache.GetOrCreateExclusive()` method (line 5 in the above code) calls a thread-safe caching extension. It guarantees that the cacheable delegate (cache miss) should run only once in a multiple thread race:
 
 ``` csharp 
@@ -92,7 +92,7 @@ This will output the following:
 
 An asynchronous version of this extension method, `MemoryCache.GetOrCreateExclusiveAsync()`, is also available.
 
-### Cache Expiration and Eviction
+### Cache expiration and eviction
 
 The `CancellationTokenSource` object (line 7 in the above code) is associated with the cache data and a strongly typed cache region. It allows multiple cache entries to be cleared as a group (see [ASP.NET Core Memory Cache Dependencies](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-3.1#cache-dependencies)).
 
@@ -103,7 +103,7 @@ We avoid manual control of the cached data lifetime in our code. The platform ha
 
 We can always keep the cache updated and evict modified data from it explicitly thanks to the _Clean Architecture_ and the _Bounded_ contexts. Each boundary controls all read and change operations for the data belonging to the domain.
 
-## Strongly Typed Cache Regions
+## Strongly typed cache regions
 
 The platform supports the strongly typed cache regions construct. It is used:
 
@@ -132,7 +132,7 @@ A special `GlobalCacheRegion` can be used to expire all cached data of the entir
  GlobalCacheRegion.ExpireRegion();
 ```
 
-## Caching Null Values
+## Caching null values
 
 By default, the platform caches null values. If you choose to use negative caching, change this default behavior by passing the value `false` to `cacheNullValue` in the `GetOrCreateExclusive` method:
 
@@ -140,9 +140,9 @@ By default, the platform caches null values. If you choose to use negative cachi
  var data = _memoryCache.GetOrCreateExclusive(cacheKey, cacheEntry => {}, cacheNullValue: false);
 ```
 
-## Cache Settings
+## Cache settings
 
-![Readmore](media/readmore.png){: width="25"} [Cache Configuration](02-cache-configuration.md)
+![Readmore](media/readmore.png){: width="25"} [Cache configuration](02-cache-configuration.md)
 
 ## Scaling
 
@@ -154,4 +154,4 @@ Read [this article by Virto Commerce](https://docs.virtocommerce.org/techniques/
     
 ![Readmore](media/readmore.png){: width="25"} [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
     
-![Readmore](media/readmore.png){: width="25"} [Cache Configuration by Virto Commerce](02-cache-configuration.md)
+![Readmore](media/readmore.png){: width="25"} [Cache configuration by Virto Commerce](02-cache-configuration.md)

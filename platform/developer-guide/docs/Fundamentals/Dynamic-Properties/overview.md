@@ -1,4 +1,6 @@
-VirtoCommerce Platform enables adding new properties to entities at runtime. 
+# Managing Dynamic Properties
+
+Virto Commerce Platform enables adding new properties to entities at runtime. 
 
 ## Add New Dynamic Property for Existing Type from UI
 
@@ -13,6 +15,7 @@ To add a new dynamic property:
 
 1. Click **Create** to save the changes.
 
+A new dynamic property has been added.
 
 ## Edit Object Values
 
@@ -27,3 +30,4 @@ The dynamic properties are edited via the **Dynamic properties** widget. For exa
 
 1. Click **OK** in the toolbar to save the changes.
 
+The modifications have been saved.

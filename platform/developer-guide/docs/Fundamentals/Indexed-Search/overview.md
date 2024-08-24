@@ -10,7 +10,7 @@ A search service is an intermediary between:
 
 ![Search architecture](media/01-search-architecture.png){: width="800" }
 
-## Main Concepts
+## Main concepts
 
 Virto Search is a search component that gives developers infrastructure, APIs, and tools for building a rich search experience over heterogeneous platform entities. The main Virto Commerce Indexed Search concepts are: 
 

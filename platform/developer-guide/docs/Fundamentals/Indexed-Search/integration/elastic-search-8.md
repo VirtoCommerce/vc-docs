@@ -16,7 +16,7 @@ The module supports the following deployment options:
 * Hybrid mode search.
 * [Third party ML models support](semantic-search.md#semantic-search-and-third-party-ml-model-setup).
 
-## Known Limitations
+## Known limitations
 
 The known limitations are: 
 
@@ -35,5 +35,5 @@ Configure the Elastic Search 8 provider using the following schema:
 %}
 
 
-## Full-Text Search 
+## Full-text search 
 The provider performs full-text keyword searches on a documents, optionally with filters and aggregations.

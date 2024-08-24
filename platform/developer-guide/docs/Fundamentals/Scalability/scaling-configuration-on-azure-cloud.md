@@ -14,7 +14,7 @@ The diagram below shows proven practices for improving scalability and performan
 * **Authoring (backend)**: Processes background jobs, integrates with third-party services, and manages commerce data through the platform’s SPA manager, operating independently to prevent performance and resource consumption issues in platform Web Apps handling commercial services.
 * **Hangfire server**: Configured on one or multiple platform instances to efficiently process Hangfire background jobs.
 
-## Memory Cache. Using Redis Server Backplane
+## Memory cache. Using Redis server backplane
 
 Maintaining consistent cached data is straightforward for single-instance applications with local cache storage, allowing easy control over cache lifecycle and invalidation. However, in scaled-out multiple instances applications, ensuring cache consistency becomes challenging.
 
@@ -38,7 +38,7 @@ Use the Redis backplane for memory cache in **appsettings.json** for setting up 
     },
 ```
 
-##  Scaling Push Notifications
+##  Scaling push notifications
 
 The push notification that is used in the manager is built on the [SignalR](https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-6.0) library.
 
@@ -76,7 +76,7 @@ The following example shows how to configure scaling for push notifications usin
 ...
 ```
 
-## Configure Hangfire Server to Process Background Jobs in Another Process
+## Configure hangfire server to process background jobs in another process
 
 To ensure overall application reliability, it is important to process all background tasks on a separate platform instance (process). This separation prevents background processing from consuming excessive CPU or other resources, which could otherwise degrade the main application's performance. We strongly recommend using a dedicated platform instance for processing background jobs.
 
@@ -96,7 +96,7 @@ To configure this setup, set up one platform instance (**Commerce services** on 
 }
 ```
 
-## Configuration Examples
+## Configuration examples
 
 To illustrate configuration setups, here are examples for different components:
 
@@ -104,7 +104,7 @@ To illustrate configuration setups, here are examples for different components:
 * [Commerce Service App.](scaling-configuration-on-azure-cloud.md#commerce-service-app)
 * [Frontend App.](scaling-configuration-on-azure-cloud.md#frotend-app)
 
-### Authoring App
+### Authoring app
 
 To configure the Authoring App:
 
@@ -142,7 +142,7 @@ To configure the Authoring App:
 
     ```
 
-### Commerce Service App
+### Commerce service app
 
 To configure the Commerce Service App:
 
@@ -179,7 +179,7 @@ To configure the Commerce Service App:
 
     ```
 
-### Frotend App
+### Frotend app
 
 To configure the Frontend App:
 
@@ -201,4 +201,4 @@ To configure the Frontend App:
         ...
     ```
 
-![Readmore](media/readmore.png){: width="25"} [Scalability Options](scalability-options.md)
+![Readmore](media/readmore.png){: width="25"} [Scalability options](scalability-options.md)

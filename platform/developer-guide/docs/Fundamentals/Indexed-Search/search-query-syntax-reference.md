@@ -1,6 +1,6 @@
 ﻿# Search Query Syntax
 
-Virto's unified search has a special query syntax. It is processed by our proprietary query syntax parser. The parser interprets it into the Virto query object model. Then, an appropriate search adapter translates it into specific search engine syntax. This makes the query syntax search engine agnostic.
+Virto unified search has a special query syntax. It is processed by our proprietary query syntax parser. The parser interprets it into the Virto query object model. Then, an appropriate search adapter translates it into specific search engine syntax. This makes the query syntax search engine agnostic.
 
 The syntax defines the grammar for the `searchPhrase` expression as follows:
 
@@ -57,10 +57,10 @@ The search supports any language and allows the use of boolean operators, preced
 | `"\"Red wine\""` | search request syntax is used to escape the quotation marks in a phrase search, for example, in Postman, in a POST request.|
 
 
-## Full Text Search
+## Full-text search
 The parameter that performs full text search (term and phrase search) against the document index is `query`. Provide a full text search phrase to make it work.
 
-## Searchable Fields
+## Searchable fields
 
 The full text search runs over data in the index. All searchable text data are stored in a single `__content` field in the resulting index document, with the full text search being performed only for this field.
 
@@ -98,7 +98,7 @@ When performing a search, you can:
     `color:Black,Gey,Blue`
     ```
 
-## Range Filtration
+## Range filtration
 Range filtration helps you find products that have field values within a specified range. This range is defined by a range expression, which can be set to include or exclude the upper and lower bounds. Inclusive range queries use square brackets `[ ]`, while exclusive queries use round brackets `( )`.
 
 
@@ -110,7 +110,7 @@ Range filtration helps you find products that have field values within a specifi
 | `price:(100 TO 200]` 	| Finds products with prices between 100, exclusive, and 200, inclusive. 	|
 | `price:(TO 100]`     	| The price must be less than or equal to 100.                           	|
 
-## Boolean Operators
+## Boolean operators
 Having multiple field terms separated by a space delimiter in a single filter expression will combine them with an `AND` operator.
 
 The following search request filters products of a certain brand, Onkyo, and a certain color, black:
@@ -122,7 +122,7 @@ The following search request filters products of a certain brand, Onkyo, and a c
 !!! warning
     At the moment, we support logical `AND` operators for filter expressions.
 
-## Wildcard Search
+## Wildcard search
 Within a single phrase or phrase terms, you can use:
 
 | Character 	| Function                                                                        	| Example                                                                        	|

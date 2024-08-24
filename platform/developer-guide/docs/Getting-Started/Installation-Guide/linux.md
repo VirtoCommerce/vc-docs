@@ -122,7 +122,7 @@ To configure application strings:
 1. Save the **appsettings.json** file to apply the configurations.
 
 
-### Run the Platform by CLI "dotnet"
+### Run Platform by CLI "dotnet"
 
 To run the Platform by CLI:
 
@@ -158,7 +158,7 @@ To access the Platform and perform initial sign-in:
 1. Upon the first request, the application will create and initialize the database.
 1. Once completed, you will be redirected to the sign-in page. Use the following credentials to sign in:
 
-    * Login: `admin`
-    * Password: `store`
+    * Login: admin
+    * Password: store
 
 Your Platform is ready to go.

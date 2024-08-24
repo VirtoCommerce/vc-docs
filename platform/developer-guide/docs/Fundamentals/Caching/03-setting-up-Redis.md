@@ -1,4 +1,4 @@
-# Setting up Redis Backplane for Scaling out
+# Set up Redis Backplane for Scaling out
 Running multiple instances of your application, all accessing the same distributed cache, can be challenging: the instances should find out when the data was changed and the local cache data becomes irrelevant.  One way to solve this problem is by connecting all application instances to a service that sends messages whenever cache data becomes invalid. Redis, an in-memory key-value storage, supports a messaging system with the publish/subscribe (Pub/Sub) model as follows:
 
 ![Multi-level caching](media/02-multi-level-caching.png){: width="450"}
@@ -10,7 +10,7 @@ Running multiple instances of your application, all accessing the same distribut
 
 ![Readmore](media/readmore.png){: width="25"} [Why we do not use distributed cache to solve the problem](https://virtocommerce.medium.com/how-we-improved-the-performance-of-b2b-ecommerce-platform-by-data-caching-in-azure-cloud-71b27995066c)
 
-## Implementing Cache Backplane Using Redis Pub/Sub Channel
+## Implement cache backplane using Redis Pub/Sub channel
 
 Redis Pub/Sub is used to send messages to the Redis server on any key change:
    
@@ -38,7 +38,7 @@ To add a Redis cache backplane to the Virto platform at the configuration stage,
 !!!warning
 	Use the same `RedisConnectionString` for all platform instances. Their local cache instances must be synchronized as well.
 
-### How It Works
+### How it works
 
 Every time an item is removed or updated, the platform sends a message to the backplane, which stores the information needed to update other clients. All other clients receive these messages asynchronously and respond accordingly.
 

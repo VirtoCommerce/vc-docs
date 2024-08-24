@@ -1,11 +1,11 @@
-# Configuring Email Notifications
+# Configure Email Notifications
 Virto Commerce Platform enables sending email notifications for various system events, such as restoring passwords, customer order processing, etc. To send such notifications, use a third-party email service provider by setting up an mail gateway so that the platform may start sending emails. Currently, there are two gateways options: SMTP and SendGrid.
 
 ## Prerequisites
 
-* You must have the [Notification module](https://github.com/VirtoCommerce/vc-module-notification) installed.
+* [Notification module](https://github.com/VirtoCommerce/vc-module-notification)
 
-## Configuring SMTP Email Settings
+## Configure SMTP email settings
 To enable sending notifications through Gmail:
 
 1. Turn on the  **Allow less secure apps** option in [Google Security Settings](https://www.google.com/settings/security/lesssecureapps "https://www.google.com/settings/security/lesssecureapps"). 
@@ -13,24 +13,24 @@ To enable sending notifications through Gmail:
 1. Edit the **Notifications** section in the **appsettings.json** file:
 
     ```json title="appsettings.json"
-    1 ...
-    2 "Notifications": {
-    3        "Gateway": "Smtp",
-    4        "DefaultSender": "noreply@gmail.com", //the default sender address
-    5        "Smtp": {
-    6            "SmtpServer": "http://smtp.gmail.com",
-    7            "Port": 587, //TLS port
-    8            "Login": "", //Your full Gmail address (e.g. you@gmail.com)
-    9            "Password": "" //The password that you use to log in to Gmail
-    10        },
-    11    },
-    12 ....
+    ...
+    "Notifications": {
+        "Gateway": "Smtp",
+        "DefaultSender": "noreply@gmail.com", //the default sender address
+        "Smtp": {
+            "SmtpServer": "http://smtp.gmail.com",
+            "Port": 587, //TLS port
+            "Login": "", //Your full Gmail address (e.g. you@gmail.com)
+            "Password": "" //The password that you use to log in to Gmail
+        },
+    },
+    ....
     ```
 
 !!! warning
     After modifying the **appsettings.json** file, restart the application to apply the changes.
 
-## Configuring SendGrid Email Settings
+## Configure SendGrid email settings
 To work with the SendGrid settings:
 
 1. Register a SendGrid account according to [this SendGrid article](https://docs.sendgrid.com/for-developers/partners/microsoft-azure-2021).
@@ -38,18 +38,18 @@ To work with the SendGrid settings:
 1. Edit the **Notifications** section in the **appsettings.json** file:
 
     ```json title="appsettings.json"
-    1 ...
-    2 "Notifications": {
-    3         "Gateway": "SendGrid",
-    4        "DefaultSender": "noreply@gmail.com", //the default sender address
-    5        "SendGrid": {
-    6            "ApiKey": "your API key", //SendGrid API key
-    7        },
-    8    },
-    9....
+    ...
+    "Notifications": {
+        "Gateway": "SendGrid",
+        "DefaultSender": "noreply@gmail.com", //the default sender address
+        "SendGrid": {
+            "ApiKey": "your API key", //SendGrid API key
+        },
+    },
+    ....
     ```
 
-## Testing Notification Sending Process
+## Test notification sending process
 
 To test your notifications, use REST Admin API queries that require a valid access token.
 

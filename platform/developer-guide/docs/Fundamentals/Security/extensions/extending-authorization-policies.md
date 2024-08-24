@@ -4,11 +4,11 @@ Virto Commerce supports extendng the existing authorization policies that are de
 
 [![Sample code](../media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-order/tree/dev/samples/VirtoCommerce.OrdersModule2.Web/Authorization)
 
-## Extend Existing Authorization Policies
+## Extend existing authorization policies
 
 Suppose you have authorization checks in the **Order Module**, and you want to enhance the default `OrderAuthorizationHandler` associated with the `OrderAuthorizationRequirement`. This extension aims to introduce a new policy that restricts orders based on their statuses, allowing certain users to view orders only with specific status(es).
 
-![Readmore](../media/readmore.png){: width="25"} [Authorization Policies](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/policies?view=aspnetcore-5.0)
+![Readmore](../media/readmore.png){: width="25"} [Authorization policies](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/policies?view=aspnetcore-5.0)
 
 ```cs title="OrderModuleController.cs"
 [HttpPost]
@@ -55,4 +55,4 @@ To implement this extension:
 
 Following these steps enables you to extend the existing authorization policies within the **Order Module**, allowing for more fine-grained control over order access based on their statuses.
 
-![Readmore](../media/readmore.png){: width="25"} [Handling Secure Web API](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/fundamentals/make-secure-webapi.md)
+![Readmore](../media/readmore.png){: width="25"} [Handling secure web API](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/fundamentals/make-secure-webapi.md)

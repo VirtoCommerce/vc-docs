@@ -1,4 +1,4 @@
-﻿# Extending Notification Types
+﻿# Extend Notification Types
 
 Sometimes you might need to extend the existing notification type with new properties, or override the existing default template with some new ones.
 

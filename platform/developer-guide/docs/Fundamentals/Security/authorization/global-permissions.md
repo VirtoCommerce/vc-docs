@@ -2,7 +2,7 @@
 
 Global Permissions serve as the foundational framework for managing access to various features and actions within Virto Commerce.
 
-## Define Global Permissions
+## Define global permissions
 
 In Virto Commerce, all permissions are defined through the design time (from the code) for each action grouped by a feature area. In this example, we will be defining two feature areas with CRUD permissions. We are using constants because we will need attributes that require constant expressions:
 
@@ -43,7 +43,7 @@ public void PostInitialize(IApplicationBuilder appBuilder)
  }
 ```
 
-##  Localize Permission
+##  Localize permission
 
 Virto Platform Manager supports localization resources for text, captions, tips, etc. This is also true for permission names. This is achieved by adding resources with a special key names into the module localization resource file:
 
@@ -70,7 +70,7 @@ Here is how it looks in the UI:
 
 ![Permission localization](media/permission-localization.png)
 
-## Check Global Permissions
+## Check global permissions
 
 Global permissions are permissions that do not require any context resources for authorization check. To use such permissions for authorization of your controller methods, you can use the `Authorize` attribute to check a particular permission:
 

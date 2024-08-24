@@ -276,7 +276,7 @@ This **required** node determines how VC Platform will be working with assets, i
 **Examples**
 
 === "FileSystem"
-
+    <!--filesystem-start-->
     ```json title="appsettings.json"
      "Assets": {
         "Provider": "FileSystem",
@@ -286,9 +286,10 @@ This **required** node determines how VC Platform will be working with assets, i
         }
      }
     ```
+    <!--filesystem-end-->
 
 === "AzureBlobStorage"
-
+    <!--azureblobstorage-start-->
     ```json title="appsettings.json"
      "Assets": {
         "Provider": "AzureBlobStorage",
@@ -298,7 +299,7 @@ This **required** node determines how VC Platform will be working with assets, i
         }
      }  
     ```
-
+    <!--azureblobstorage-end-->
 
 ### Auth
 

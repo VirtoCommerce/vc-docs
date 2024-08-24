@@ -22,7 +22,7 @@ Restated, query execution includes three stages:
 1. Index document retrieval.
 1. Resulting documented enrichment with entities are taken from data source. 
 
-## Anatomy of Search Request and Query Parsing
+## Anatomy of search request and query parsing
 
 A search request is a complete specification of what should be returned in the result set. It has search engine agnostic nature. This generic form enables easily switching between different search engines without any business logic changes. At its simplest, it is an empty query with no criteria.
 

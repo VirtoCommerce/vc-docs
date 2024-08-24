@@ -86,15 +86,10 @@ The `Module.Data` project consists of the followng folders:
 **Notes:**
 
 * **Caching**: Contains strongly typed cache regions used in the module.
-    
 * **Handlers**: Houses domain and integration event handlers.
-    
 * **Migrations**: Contains database migrations.
-    
 * **Model**: Virto uses the **Data Mapping** pattern to isolate the domain model from the persistence specific one (**Persistence Ignorance** principle). This folder contains classes that get directly mapped to database tables with using EF fluent API.
-    
 * **Repositories**: An implementation of repositories that provides a set of methods to access the database. These methods hide the code needed to implement various database features you need.
-    
 * **Services**: Contains the domain CRUD services and other business logic implementations.
 
 ## Module.Web
@@ -118,15 +113,9 @@ The `Module.Core` project consists of the followng folders and files:
 **Notes:**
 
 * **Content**: Has **CSS** styles for the module user interface.
-    
 * **Scripts**: Contains Angular.js JavaScript files and templates used for module presentation in Platform Manager.
-    
 * **dist**: Contains the resulting JavaScript and style bundles as the output of the WebPack bundling process.
-    
 * **Controllers**: Has all [ASP.NET](http://asp.net/) MVC Core REST API controllers.
-    
 * **Localizations**: Contains resource files that are used for UI localization.
-    
 * **Module.cs**: Core module entry point.
-    
 * **module.manifest**: A required file that contains meta information describing your module with its dependencies and versions.

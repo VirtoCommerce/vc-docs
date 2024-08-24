@@ -38,7 +38,7 @@ If the same data gets modified at the same time EF Core's `SaveChanges()` throws
 ```
 </details>  
 
-## Cart, Order, and xAPI Modules
+## Cart, Order, and xAPI modules
 
 Cart, Order, and xAPI modules have been updated to prevent multiple users from making conflicting changes to the same cart item simultaneously.
 

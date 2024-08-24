@@ -48,10 +48,10 @@ This code shows how Serilog is being initialized in the Platform:
 
 ## References
 
-* [Serilog Library](http://serilog.net/)
+* [Serilog library](http://serilog.net/)
 
 * [Serilog ASP .NET Core](https://github.com/serilog/serilog-aspnetcore)
 
-* [Settings Configuration](https://github.com/serilog/serilog-settings-configuration)
+* [Settings configuration](https://github.com/serilog/serilog-settings-configuration)
 
-* [Provided Sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)
+* [Provided sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)

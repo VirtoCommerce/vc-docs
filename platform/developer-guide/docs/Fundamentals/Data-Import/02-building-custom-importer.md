@@ -1,4 +1,4 @@
-﻿# Building Custom Data Importer
+﻿# Build Custom Data Importer
 
 Follow the intructions below to build your own data importer of a specific type. They describe importing product images from a CSV file.
 

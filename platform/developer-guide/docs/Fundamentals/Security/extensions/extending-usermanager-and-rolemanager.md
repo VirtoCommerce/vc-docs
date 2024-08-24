@@ -2,7 +2,7 @@
 
 Virto Commerce has a custom implementation of default `UserManager` and `RoleManager`, which is [VirtoCommerce.Platform.Web.Security.CustomUserManager](https://github.com/VirtoCommerce/vc-platform/blob/dev/src/VirtoCommerce.Platform.Security/CustomUserManager.cs) and [VirtoCommerce.Platform.Web.Security.CustomRoleManager](https://github.com/VirtoCommerce/vc-platform/blob/dev/src/VirtoCommerce.Platform.Security/CustomRoleManager.cs), respectively.
 
-## Override UserManager with Custom Implementation
+## Override UserManager with custom implementation
 
 The Virto Commerce custom User Manager is registered in the DI as the `UserManager` type and a factory method, which allows using UserManager within the scoped requests.
 

@@ -1,6 +1,6 @@
 # Overview
 
-The VirtoCommerce Global Tool (vc-build) is the official CLI [.NET Core GlobalTool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools) that helps you:
+The Virto Commerce Global Tool (vc-build) is the official CLI [.NET Core GlobalTool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools) that helps you:
 
 * Build, test and deploy releases.
 * Create and push NuGet packages.
@@ -12,7 +12,7 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
 
 ![vc-build CLI](media/global-tools.png)
 
-## Key Features
+## Key features
 
 * [Build automation:](build-automation.md) 
 

@@ -1,4 +1,4 @@
-﻿# Importing Sample Data
+﻿# Import Sample Data
 
 To help you explore Virto Commerce's capabilities, we provide a sample dataset that you can import to automatically populate various entities. On the first launch, the platform displays a wizard that will prompt you to choose and import sample data. Currently, we offer the **Clothing and Electronics** sample dataset, which includes products, categories, customers, and other demo data that help developers and platform managers learn how Virto Commerce works.
 
@@ -6,7 +6,7 @@ To help you explore Virto Commerce's capabilities, we provide a sample dataset t
 
 Sometimes you might not want to import sample data right away and can skip this step. If so, you will have to manually import it later.
 
-## Importing Sample Data Manually
+## Import Sample Data Manually
 
 To import sample data manually:
 

@@ -1,3 +1,4 @@
+# Cold Start Optimization and Data Migration
 
 In the context of the VirtoCommerce platform, during startup, a significant amount of work is traditionally performed, including tasks such as verifying module versions, inspecting files in the probing path, and copying module files to the probing path if they are either missing or possess incompatible versions. All this takes time, especially on slower computers, and can sometimes lead to a startup error called `HTTP Error 500.30 - ANCM In-Process Start Failure`.
 

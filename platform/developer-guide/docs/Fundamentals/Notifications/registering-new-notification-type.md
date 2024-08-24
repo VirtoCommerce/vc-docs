@@ -1,4 +1,4 @@
-﻿# Registering New Notification Type
+﻿# Register New Notification Type
 
 This guide describes the basic steps to define a new e-mail notification type, including its registration in the notification registry.
 
@@ -6,11 +6,9 @@ This guide describes the basic steps to define a new e-mail notification type, i
 
 ## Prerequisites
 
-Prior to registering your notifications:
-
 * [Configure the notification gateway](../../Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md)
 
-## Define Custom Email Notification Type
+## Define custom email notification type
 
 Create a notification and give it a name, for example, `SampleEmailNotification`, basing it on the `EmailNotification` class (as opposed to another standard class, `SmsNotification`):
 
@@ -22,7 +20,7 @@ public class SampleEmailNotification : EmailNotification
 }
 ```
 
-## Registration in Notification Registry
+## Registration in notification registry
 
 Register your `SampleEmailNotification` in the notification registry:
 
@@ -50,7 +48,7 @@ public void PostInitialize(IApplicationBuilder appBuilder)
 !!! tip
 	  You can [register your notification templates as files being part of your solution](notification-templates.md).
 
-## Localize Notifications
+## Localize notifications
 
 Virto Platform Manager supports localization resources for notification types. This is achieved by adding a JSON object to the `notificationTypes` section, the key having the same name as the notification type:
 
@@ -65,7 +63,7 @@ Virto Platform Manager supports localization resources for notification types. T
   }
 ```
 
-## Send Notifications
+## Send notifications
 
 To send a notification from your code, use two interfaces: `INotificationSearchService` and `INotificationSender`.
 

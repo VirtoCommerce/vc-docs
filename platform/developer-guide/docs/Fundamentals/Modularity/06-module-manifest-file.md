@@ -7,11 +7,11 @@ The **module.manifest** file is always included into a module package to:
 * Provide information to the platform runtime when a module is loading.
 * Build the module package. 
 
-## File Settings
+## File settings
 
 The **module.manifest** file can be configured using a number of required and optional settings.
 
-### Required Settings
+### Required settings
 
 * `<id>`: A case-insensitive module identifier. It must be unique across the set of modules in which the module 6 resides. IDs cannot contain spaces or characters that are not valid for a URL. In general, they follow the .NET namespace rules.
 
@@ -43,7 +43,7 @@ The **module.manifest** file can be configured using a number of required and op
     <moduleType>VirtoCommerce.CartModule.Web.Module, VirtoCommerce.CartModule.Web</moduleType>
     ```
 
-### Optional Settings
+### Optional settings
 
 * `<version-tag>`: A pre-release suffix of the version. 
     
@@ -113,7 +113,7 @@ The **module.manifest** file can be configured using a number of required and op
   ```
 </details>  
 
-## Adding a New App
+## Adding new app
 
 To add a new web, add the app section into the **module.manifest** file:
 

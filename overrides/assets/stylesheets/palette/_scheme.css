@@ -78,6 +78,11 @@
         --admonition-tip-title: var(--success-40);
         --admonition-tip-text: var(--success-40);
 
+        --admonition-example-bg: rgb(238, 238, 250);
+        --admonition-example-border: rgb(45, 2, 109);
+        --admonition-example-title: rgb(62, 3, 151);
+        --admonition-example-text: rgb(3, 3, 3);
+
         --admonition-note-bg: #0F2F53;
         --admonition-note-border: #5CA6FF;
         --admonition-note-title: #5CA6FF;

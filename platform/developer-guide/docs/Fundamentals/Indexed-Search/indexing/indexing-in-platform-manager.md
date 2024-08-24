@@ -1,4 +1,4 @@
-﻿# Indexing via Platform Manager
+﻿# Indexation via Platform Manager
 
 To initiate the indexing process:
 
@@ -41,7 +41,7 @@ The next blade displays the result of indexation:
 
 ![Indexation result](media/indexation-result.png)
 
-## Viewing Index Document
+## Index document view
 
 The Platform Manager allows you to preview index document data without writing any code:
 
@@ -52,7 +52,7 @@ The Platform Manager allows you to preview index document data without writing a
 
 ![Viewing index document](media/04-viewing-index-document.png)
 
-## Incremental Index Updates
+## Incremental index updates
 
 Virto Commerce can update search indexes incrementally in the background by tracking entity changes and injecting changed entities into the index.
 

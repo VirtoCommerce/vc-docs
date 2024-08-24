@@ -6,7 +6,7 @@ Authorize.Net payment module provides integration with Authorize.Net using [Acce
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-authorize-net/releases)
 
-### Configure Authorize.net
+## Configure Authorize.net
 
 Confidential Authorize.Net account settings should be configured in the **appsetting.json** file as follows:
 

@@ -54,7 +54,7 @@ In this example:
 
 [See more configuration examples](https://github.com/serilog/serilog-settings-configuration)
 
-### Writing Log Events
+### Writing log events
 
 Log events are written to sinks using the `Log` static class, or the methods on an `ILogger`:
 

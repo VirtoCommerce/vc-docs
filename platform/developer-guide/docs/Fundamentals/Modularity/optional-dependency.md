@@ -6,25 +6,21 @@ By implementing optional dependencies, developers can establish relationships be
 
 Virto Commerce provides a complete development kit for resolving optional dependencies in C# and AngularJS code. 
 
-## Key Features 
+## Key features 
 
 Optional dependencies are particularly beneficial in the following scenarios within the Virto Commerce ecosystem: 
 
 * **Customized solution configurations**: When creating customized e-commerce solutions, certain modules may enhance specific functionalities based on business requirements. Optional dependencies enable developers to tailor solutions by adding or omitting modules as needed. 
-
 * **Modular system architecture**: Virto Commerce employs a modular architecture where different modules interact to deliver comprehensive functionalities. Optional dependencies facilitate a modular approach by defining relationships between modules, ensuring that the system remains flexible and scalable. 
-
 * **Resource optimization**: In resource-constrained environments, installing unnecessary modules can lead to inefficient resource allocation. Optional dependencies allow for resource optimization by enabling administrators to install only the essential modules required for desired functionalities. 
-
 * **Feature expansion**: As new features and capabilities are added to Virto Commerce, optional dependencies offer a way to integrate these features seamlessly without imposing unnecessary dependencies on existing modules. 
-
 * **Selective module installation**: Administrators may prefer to install a core set of modules initially and then add additional functionalities as needed. Optional dependencies empower administrators to manage module installations efficiently. 
 
 For example, you can now install **Catalog** module without **Export** or **BulkActionsModule** if they are not required for your deployment.  
 
 ![Optional Catalog module dependencies](media/optional-dependencies.png)
 
-## Add Optional Dependency 
+## Add optional dependency 
 
 In this guide, we will configure a module within Virto Commerce Platform to have optional dependencies. This setup will allow the module to function properly even if these optional dependencies are not installed, while enabling additional features when the dependencies are present. 
 
@@ -37,7 +33,7 @@ To add an optional dependency:
 1. [Configure Virto Commerce CLI package.](optional-dependency.md#configurу-virto-commerce-cli-package)
 
 
-### Register Optional Dependency Configuration in **module.manifest**
+### Register optional dependency configuration in **module.manifest**
 
 1. Open the **module.config** configuration file. 
 1. Find the `<dependencies>` section.  
@@ -55,7 +51,7 @@ To add an optional dependency:
     </dependencies> 
     ```
 
-### Resolve Optional Dependency in C# code
+### Resolve optional dependency in C# code
 
 !!! info 
     Virto Commerce offers a set of optional dependencies extensions: 
@@ -75,7 +71,7 @@ To add an optional dependency:
     1. Alternatively, you can add default null value to the parameter in the constructor `ctor(ISomeService someService = null)` to mark this service as optional in DI. Note that all optional parameters must appear after all required parameters 
 
  
-### Resolve Optional Dependency in AngularJS code
+### Resolve optional dependency in AngularJS code
 
 There are 2 common ways a dependent module can use AngularJS services, factories, or controllers in an optional module: 
 
@@ -93,12 +89,11 @@ You can resolve these dependencies as follows:
 
 1. In case of button/widgets/etc. which use controllers from the optional module, you can declare them after the `$injector.modules['angularModuleName']`check. 
 
-### Resolve Optional Dependency in vc-shell Code
+### Resolve optional dependency in vc-shell code
 
-### Configure Virto Commerce CLI Package 
+### Configure Virto Commerce CLI package 
 
 To keep optional NuGet references as a part of the package, add a **.keep** file into the solution with a reference to optional dll, usually Core.  
-
 
 By following these steps, you can configure optional dependencies between modules in the Virto Commerce Platform, providing flexibility and modular functionality to meet varying business requirements.
 

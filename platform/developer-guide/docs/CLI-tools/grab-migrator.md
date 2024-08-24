@@ -10,7 +10,7 @@ To execute the Grab Migrator utility, run the following command:
 vc-build GrabMigrator --grab-migrator-config <configfile>
 ```
 
-## Grab Migrations from Platform and Modules
+## Grab migrations from Platform and modules
 
 This section outlines the process of extracting EF-migrations from both the platform and its modules:
 
@@ -41,7 +41,7 @@ This section outlines the process of extracting EF-migrations from both the plat
 1. Check the config file: the `ConnectionStringsRefs` node should appear.
 
 
-## Apply Migrations to Different Databases
+## Apply migrations to different databases
 
 To apply the extracted migrations to different databases:
 

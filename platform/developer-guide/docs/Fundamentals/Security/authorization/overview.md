@@ -22,7 +22,7 @@ To further restrict an API to be available for only users with specific permissi
 [Authorize("{permission}")]
 ```
 
-## Permission-based Authorization
+## Permission-based authorization
 
 Typically, applications require more than just authenticated users. You would want to have users with different sets of permissions. The easiest way to achieve this is with the **role-based** authorization, where you can allow users to perform certain actions depending on their membership in a role.
 

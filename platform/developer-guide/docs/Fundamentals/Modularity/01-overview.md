@@ -25,7 +25,7 @@ Notes to the chart:
     
 * **Cross-cutting functionality:** Common or shared logic that can be reused from any program level or component. e.g., caching, security, logging, etc.
 
-## Virto Architecture: Plugins or Modules?
+## Virto architecture: plugins or modules?
 
 Traditionally, **module** and **plugin** are defined as follows:
 
@@ -39,7 +39,7 @@ A well known design pattern, **Modular Monolith**, does also apply to Virto, wit
 
 At the same time, the Virto platform cannot be considered as a pure **Modular Monolith** based entity, since the Virto modules are not parts of a single platform solution. Each module is an isolated project that can be developed, deployed, and installed into a running platform instance independently.
 
-## Modular Architecture Benefits
+## Modular architecture benefits
 
 Virto uses modular architecture since it provides our solutions with various benefits, such as:
 
@@ -53,7 +53,7 @@ Virto uses modular architecture since it provides our solutions with various ben
     
 * **Scaling the development process up to multiple teams**: You can have independent development and release cycles for each module implemented by different dev teams.
 
-## Module Structure
+## Module structure
 
 Each Virto module breaks down into multiple layers and encapsulates and groups all aspects, from front end to back end, that are in charge of proving the necessary features. Such layers are in line with the **Vertical Slices** design principle, which, at a high level, may be depicted as follows:
 
@@ -63,7 +63,7 @@ Instead of being coupled across a layer, a module is coupled vertically along a 
 
 ![Readmore](media/readmore.png){: width="25"} [Folder structure](02-folder-structure.md)
 
-## Modules Relationships
+## Modules relationships
 
 Even though the modules should not have much coupling between each other, it is common for them to communicate with one another, and since all modules are loaded into the platform application process, they also have access to the platform functionality.
 
@@ -95,14 +95,14 @@ Apart from the above, there are several loosely coupled communication patterns, 
 
 ![Readmore](media/readmore.png){: width="25"} [Versioning and Dependencies](03-versioning-and-dependencies.md)
 
-## Module Installation, Update, and Deployment Processes
+## Module installation, update, and deployment processes
 
 Virto offers two different ways to install and update modules: 
 
 * [Runtime mode.](01-overview.md#runtime-mode)
 * [Design-time mode.](01-overview.md#design-time-mode)
 
-### Runtime Mode
+### Runtime mode
 
 The **Runtime** mode is used to update and install modules on a working system or at the first time setup. This process is based on requesting the `modules.json` file, a registry that can be either public or internal and contains information on all modules and their latest major versions (minor and patch versions history is not stored). You can set the path to this file with the `module.manifest` setting in the `appsettings.json` file (see string 7):
 
@@ -121,7 +121,7 @@ The **Runtime** mode is used to update and install modules on a working system o
 
 When using Virto Commerce in your production environment, you will rather have to deal with a list of your custom modules that have dependencies to the Virto modules that are not upgraded to the latest version. If this is the case, it is better to define your own version of the `modules.json` file that will contain a list of your custom and Virto modules with specific versions for your solution. Having your own `modules.json` file is basically the same as having `package.json` for NPM dependencies; the difference lies in the shared nature and the option to use it globally.
 
-### Design-time Mode
+### Design-time mode
 
 The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a special CLI tool for this that, more info on which can be found [here](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md).
 
@@ -143,14 +143,14 @@ For the **module deployment process**, use our  [**VirtoCommerce.GlobalTool**](h
 
 ![Readmore](media/readmore.png){: width="25"} [Build automation](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/build-automation.md)
 
-![Readmore](media/readmore.png){: width="25"} [How to Create New Module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md) 
+![Readmore](media/readmore.png){: width="25"} [How to create new module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md) 
 
-![Readmore](media/readmore.png){: width="25"} [Modular Monolith by Kamil Grzybek](https://www.kamilgrzybek.com/design/modular-monolith-primer/ "https://www.kamilgrzybek.com/design/modular-monolith-primer/")
+![Readmore](media/readmore.png){: width="25"} [Modular monolith by Kamil Grzybek](https://www.kamilgrzybek.com/design/modular-monolith-primer/ "https://www.kamilgrzybek.com/design/modular-monolith-primer/")
     
-![Readmore](media/readmore.png){: width="25"} [Vertical Slice Architecture by Jimmy Bogard](https://jimmybogard.com/vertical-slice-architecture/ "https://jimmybogard.com/vertical-slice-architecture/")
+![Readmore](media/readmore.png){: width="25"} [Vertical slice architecture by Jimmy Bogard](https://jimmybogard.com/vertical-slice-architecture/ "https://jimmybogard.com/vertical-slice-architecture/")
     
-![Readmore](media/readmore.png){: width="25"} [Software Architecture Patterns by Mark Richards (Microkernel Architecture)](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html "https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html")
+![Readmore](media/readmore.png){: width="25"} [Software architecture patterns by Mark Richards (Microkernel Architecture)](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html "https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html")
     
-![Readmore](media/readmore.png){: width="25"} [Bounded Context by Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html "https://martinfowler.com/bliki/BoundedContext.html")
+![Readmore](media/readmore.png){: width="25"} [Bounded context by Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html "https://martinfowler.com/bliki/BoundedContext.html")
     
-![Readmore](media/readmore.png){: width="25"} [Context Mapping Pattern](https://www.infoq.com/articles/ddd-contextmapping/ "https://www.infoq.com/articles/ddd-contextmapping/")
+![Readmore](media/readmore.png){: width="25"} [Context mapping pattern](https://www.infoq.com/articles/ddd-contextmapping/ "https://www.infoq.com/articles/ddd-contextmapping/")

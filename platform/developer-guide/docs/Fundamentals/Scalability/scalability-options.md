@@ -54,7 +54,7 @@ This guide explores its scalability options, ranging from Small to Extra Large c
     2. VC backend environment for Content Managers (excludes Background Jobs)
     3. VC backend environment for Background Jobs (emphasis on high CPU utilization)
 
-## Sizing Model
+## Sizing model
 
 This data based on best practices and feedback from multiple custom e-commerce solutions. The actual result can depend on custom implementation, data and configuration.
 
@@ -66,6 +66,6 @@ This data based on best practices and feedback from multiple custom e-commerce s
 
 For XL size, [request a demo.](https://virtocommerce.com/request-demo)
 
-### Azure Price Calculator
+### Azure price calculator
 
 Сonfigure and estimate the costs of Azure products with [Azure Price Calculator](https://azure.microsoft.com/en-us/pricing/calculator/).

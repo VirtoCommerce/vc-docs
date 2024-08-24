@@ -1,7 +1,7 @@
 ﻿
 To protect the tokens it issues, Virto Commerce uses the **encryption credentials to ensure the content of tokens cannot read by malicious parties**. They can be either asymmetric (e.g, an RSA key) or symmetric.
 
-## Use Self-signed Certificate
+## Use self-signed certificate
 
 Self-signed certificate is generated and stored in the database at the first platform startup.
   
@@ -11,7 +11,7 @@ To regenerate the certificate:
 1. Clear the `ServerCertificate` table in the database.
 1. Run the platform again.
 
-## Register Certificate (Recommended for Production-ready Scenarios)
+## Register certificate (recommended for production-ready scenarios)
 
 To register a custom certificate, do the following:
 

@@ -1,6 +1,8 @@
+# New Tax Provider Registration
+
 In order to calculate taxes in Virto Commerce, register at least one `TaxProvider` implementation.
 
-## Defining New Tax Provider
+## Define new tax provider
 
 To define a new tax provider, you need to:
 
@@ -41,7 +43,7 @@ All settings may have default values that can be used for default methods if not
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-tax/blob/master/src/VirtoCommerce.TaxModule.Data/Provider/FixedRateTaxProvider.cs)
 
-## Enable and Configure Tax Provider for Store
+## Enable and configure tax provider for store
 
 After your module is installed in your target system, all tax providers should appear and be available for configuration in every store in your system (**Store --> Tax providers --> widget**). You can configure tax provider for each store individually:
 
@@ -51,9 +53,9 @@ After your module is installed in your target system, all tax providers should a
 
 After you complete the configuration, your tax provider will be used for tax calculation of orders in the store.
 
-## UI Customization
+## UI customization
 
 If our standard user interface is not enough, you may consider implementing your own UI for managing tax providers through the standard UI extension point (widget container with the `taxProviderDetail` group). 
 
-![Readmore](media/readmore.png){: width="25"} [Extending Existing UI with Widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
+![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
 

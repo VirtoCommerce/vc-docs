@@ -22,7 +22,7 @@ To view analytics:
 
 	![Query Analytics](media/query-analytics.png)
 
-## Improve Search Relevance
+## Improve search relevance
 
 With Elastic App Search, you can make relevance and tune adjustments, or promote/demote results based on your findings in a few clicks, right from the management interface using:
 
@@ -86,10 +86,10 @@ To manage curations using Kibana:
 
 For even more advanced results, refer to the **Relevance Tuning** section.
 
-### Relevance Tuning
+### Relevance tuning
 
 Out of the box, App Search provides quality search relevance.
 
 Built on top of Elasticsearch, App Search is a managed, the expertly crafted distillation of its finest points. It provides tools to help you further tune the search experience to optimize for your own needs.
 
-![Readmore](media/readmore.png){: width="25"} [Relevance Tuning Guide](https://www.elastic.co/guide/en/app-search/8.3/relevance-tuning-guide.html)
+![Readmore](media/readmore.png){: width="25"} [Relevance tuning guide](https://www.elastic.co/guide/en/app-search/8.3/relevance-tuning-guide.html)

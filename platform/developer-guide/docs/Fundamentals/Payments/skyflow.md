@@ -6,7 +6,7 @@ The Skyflow module facilitates seamless integration with [SkyFlow](https://www.s
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-skyflow/releases)
 
-## Key Features
+## Key features
 
 * **Unified Credit Card User Experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
 * **PCI Compliance:** Ensure PCI compliance with SkyFlow, simplifying adherence to industry standards for secure payment data handling.
@@ -71,7 +71,7 @@ Skyflow configuration includes creating:
 1. [Roles.](skyflow.md#create-roles)
 1. [Authorize .NET connectors](skyflow.md#create-authorizenet-connectors)
 
-#### Create Roles
+#### Create roles
 
 To create a role:
 
@@ -79,7 +79,7 @@ To create a role:
 1. Create a system role named **Vault Editor** for frontend operations. This role will be responsible for sending card data to Skyflow.
 1. When creating a connection, the second system role is automatically generated and associated with the connection.
 
-#### Create Authorize.NET Connectors
+#### Create Authorize.NET connectors
 
 To create Authorize.NET connectors:
 
@@ -96,7 +96,7 @@ Configuring Virto Commerce includes:
 1. [Appsettings.json configuration.](skyflow.md#configure-appsettingsjson)
 1. [Virto Commerce back office setup.](skyflow.md#setup-virto-commerce-back-office)
 
-#### Configure Appsettings.json
+#### Configure appsettings.json
 
 Configure the **appsettings.json** file as follows:
 
@@ -106,7 +106,7 @@ Configure the **appsettings.json** file as follows:
    end="<!--skyflow-end-->"
 %}
 
-#### Setup Virto Commerce Back Office 
+#### Setup Virto Commerce back office 
 
 To setup Virto Commerce back office:
 

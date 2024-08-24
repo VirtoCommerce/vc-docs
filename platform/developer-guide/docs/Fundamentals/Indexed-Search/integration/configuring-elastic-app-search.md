@@ -24,7 +24,7 @@ This guide explores the process of setting up Elastic App Search, including:
 * [Deploying it using Docker.](configuring-elastic-app-search.md#deploy-elastic-app-search-using-docker)
 * [Configuring it within the Virto Platform.](configuring-elastic-app-search.md#set-up-elastic-app-search-on-platform)
 
-### Deploy Elastic App Search Using Docker
+### Deploy Elastic App Search using Docker
 
 To deploy Elastic App Search using Docker: 
 
@@ -272,7 +272,7 @@ To install Elastic App Search on Virto Commerce Platform:
 
     ![Indexes](media/kibana-engines.png)
 
-## Run Virto Commerce Application
+## Run Virto Commerce application
 
 1. Navigate to the Frontend Application root directory:
 

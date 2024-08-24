@@ -106,7 +106,7 @@ nav:
           - Taxes:
                 - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
           - Dynamic Properties:
-                - Overview: Fundamentals/Dynamic-Properties/overview.md
+                - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
           - Notifications:
                 - Overview: Fundamentals/Notifications/overview.md
                 - Registering New Notification Type: Fundamentals/Notifications/registering-new-notification-type.md

@@ -5,7 +5,7 @@ Scope-based permissions, also known as imperative or resource-based permissions,
 
 The `[Authorize]` attribute evaluates permission checks before data binding and executing the API action that loads the order. Due to this, declarative authorization with an `[Authorize]` attribute alone may not suffice. Instead, you can utilize a custom authorization method, known as imperative authorization.
 
-## Define New Permission Scope
+## Define new permission scope
 
 Let's explore how resource-based authorization works through the following example:
 
@@ -64,7 +64,7 @@ Suppose we want to restrict user access to orders created in a specific store. T
 After these steps, the global `order:read` permission can be further restricted to work only for selected stores in role assignments.
 
 
-### Write Scope-based Authorization Handler
+### Write scope-based authorization handler
 
 Writing a handler for a scope-based authorization is not much different from writing a plain requirement handler. You need to create a custom requirement class and implement a requirement handler class derived from `PermissionAuthorizationHandlerBase`:
 
@@ -102,7 +102,7 @@ public sealed class OrderAuthorizationHandler : PermissionAuthorizationHandlerBa
 
 In this implementation, we load all `StoreSelectedScope` objects assigned to the `order:read` permission in the role definition, and then use the store identifiers retrieved from these scopes to change `CustomerOrderSearchCriteria` for enforcing the policy to return only orders for the stores defined in the permission scopes.
 
-### Check Scope-based Permissions
+### Check scope-based permissions
 
 Since Virto security is based on the default [ASP.NET](http://ASP.NET) Core security mechanics, we can use [IAuthorizationService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationservice) and custom authorization policy handlers for any imperative authorization check.
 

@@ -12,7 +12,7 @@ Elastic App Search provides search, aggregation, and analytic capabilities as a 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-app-search/)
 
-## Key Features
+## Key features
 
 The Elastic App Search module offers:
 
@@ -36,4 +36,4 @@ After running load tests and comparing Elasticsearch Vs Elastic App Search, we c
 
 ## Limitations
 
-![Readmore](media/readmore.png){: width="25"} [App Search Limitations](https://www.elastic.co/guide/en/app-search/8.3/limits.html)
+![Readmore](media/readmore.png){: width="25"} [App search limitations](https://www.elastic.co/guide/en/app-search/8.3/limits.html)

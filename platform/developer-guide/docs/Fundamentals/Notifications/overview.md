@@ -1,6 +1,8 @@
+# Overview
+
 Virto Commerce provides a customizable logic for managing and sending end user notifications via different channels, such as email or text messages. This guide will explain technical details of the notifications logic data model and outline some basic development scenarios.
 
-## Notification Data Model
+## Notification data model
 
 The chart below shows how notification data is sent:
 ![Notification data model](media/data-model.png)
@@ -20,7 +22,7 @@ For data modeling purposes, the notification data model contains the following e
 
 **Notification message:** The resulting text or email message scheduled or sent by a specific sender and stored in the notification feed within the system.
 
-## Next Steps
+## Next steps
 Check out these guides to continue working with notifications:
 
 [Registering a new notification type](registering-new-notification-type.md)
@@ -31,9 +33,9 @@ Check out these guides to continue working with notifications:
 
 [Configuration](configuration.md)
 
-## Recommended Content
+## Recommended content
 Here are some more references for you to consider:
 
-+ [Notification Module Overview](https://docs.virtocommerce.org/new/user-guide/notifications/overview)
+* [Notification Module Overview](https://docs.virtocommerce.org/new/user-guide/notifications/overview)
 
-+ [Scriban Liquid Reference](https://github.com/scriban/scriban/blob/master/doc/liquid-support.md)
+* [Scriban Liquid Reference](https://github.com/scriban/scriban/blob/master/doc/liquid-support.md)

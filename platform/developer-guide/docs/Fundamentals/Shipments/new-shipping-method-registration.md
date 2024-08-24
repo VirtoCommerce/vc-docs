@@ -1,6 +1,8 @@
+# Register New Shipping Method
+
 In case your customers have any shippable products to choose from, they can also choose a shipping option during checkout.
 
-## Define New Shipping Method
+## Define new shipping method
 
 To define a new shipping method:
 
@@ -41,7 +43,7 @@ All settings may have default values that can be used for default methods if not
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-shipping/blob/master/src/VirtoCommerce.ShippingModule.Data/FixedRateShippingMethod.cs)
 
-## Enable and Configure Shipping Method for Store
+## Enable and configure shipping method for store
 
 After your module is installed in your target system, all your shipping methods should appear and be available for configuration in every store in your system under the `Store->Shipping methods` widget. You can also configure shipping methods for each store individually:
 
@@ -52,8 +54,8 @@ After your module is installed in your target system, all your shipping methods 
 
 After you are done configuring, your shipping method will appear in the front end checkout page, and the customer will be able to select it as an option.
 
-## UI Customization
+## UI customization
 
 If our standard user interface is not enough, you may consider implementing your own UI for managing shipping methods through the standard UI extension point (widget container with the `shippingMethodDetail` group).
 
-![Readmore](media/readmore.png){: width="25"} [Extending Existing UI with Widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
+![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md)

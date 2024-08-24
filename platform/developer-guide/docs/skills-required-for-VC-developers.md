@@ -5,10 +5,10 @@ Virto Commerce Developers design, build, test, and maintain E-commerce solutions
 The following skills are important for working with Virto Commerce:
 
 * [Common skills](skills-required-for-VC-developers.md#common-skills)
-* [E-commerce common skills](skills-required-for-VC-developers.md#e-commerce-common-skills)
+* [Ecommerce common skills](skills-required-for-VC-developers.md#ecommerce-common-skills)
 * [Virto Commerce developer skills](skills-required-for-VC-developers.md#virto-commerce-developers-skills)
 
-## Common Skills
+## Common skills
 
 * Monitoring, troubleshooting, and optimizing solutions with Visual Studio 2022 (Visual Studio Code)
 * Unit testing
@@ -20,14 +20,14 @@ The following skills are important for working with Virto Commerce:
 * Design Patterns (as used by Virto Commerce Platform)
 * SOLID principles (as used by Virto Commerce Platform)
 
-## E-Commerce Common Skills
+## Ecommerce common skills
 
 * E-Commerce principles, UX/UI and best practices 
 * Catalog browsing process 
 * Checkout flow 
 * SEO principles (Shema.org, JSON-LD)
 
-## Virto Commerce Developers Skills
+## Virto Commerce developers skills
 
 Virto Commerce developer skills include: 
 
@@ -36,7 +36,7 @@ Virto Commerce developer skills include:
 * Fullstack developer skills, i.e. a senior backend developer who can also build and maintain frontend applications
 
 
-### Backend Developer Skills
+### Backend developer skills
 
 #### Microsoft .NET 8
 * [.NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8)
@@ -52,7 +52,7 @@ Virto Commerce developer skills include:
 !!! note
     At least one database provider is required. Microsoft SQL Server is preferred. 
 
-#### Search Engines
+#### Search engines
 * Lucene 
 * Elasticsearch (Elastic Cloud)
 * Azure Search
@@ -63,7 +63,7 @@ Virto Commerce developer skills include:
 !!! note
     At least one search provider is required. Elastic App Search is preferred. Lucene is used for local development only.
 
-#### Azure Developer
+#### Azure developer
 * [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/)
 * [Azure Logic Apps (Primary integration middleware)](https://azure.microsoft.com/en-us/services/logic-apps/)
 * Redis Cache
@@ -71,7 +71,7 @@ Virto Commerce developer skills include:
 * [Azure Application Insights / Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
 
 
-#### Virto Commerce Developer
+#### Virto Commerce developer
 * Virto Commerce Architecture Principles, Data Flow and Lifecycle
 * [Virto Commerce Style Guides](https://github.com/VirtoCommerce/styleguide)
 * Create custom modules
@@ -88,9 +88,9 @@ Virto Commerce developer skills include:
 * [Liquid templates](https://community.virtocommerce.com/t/liquid-as-primary-template-language/78) for email notifications
 * Sonar Qube for Clean Code
 
-### Frontend Developer Skills
+### Frontend developer skills
 
-#### Mobile Web Specialist
+#### Mobile web specialist
 * [Web Fubdamentals](https://developers.google.com/web/fundamentals)
 * Website layout and styling
 * Front-end networking
@@ -103,7 +103,7 @@ Virto Commerce developer skills include:
 * ES2015 concepts and syntax
 * Mobile web forms
 
-#### Languages & Frameworks
+#### Languages & frameworks
 * Vue3  
 * Typescript
 * TailwindCSS
@@ -111,18 +111,18 @@ Virto Commerce developer skills include:
 * Vite
 * GraphQL
 
-#### Progressive Web Applications
+#### Progressive web applications
 * [What's Progressive Web Apps](https://www.virtocommerce.org/t/progressive-web-apps/426)
 * ServiceWorkers/webmanifest, ng-workers
 * Web-Push
 * Offline mode
 
-#### E-Commerce Tools
+#### Ecommerce tools
 * Google Analytics, Yandex Metrics, Hotjar
 * [Azure Application Insights / Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
-## Recommend Training & Certifications
+## Recommended training & certifications
 * [Microsoft Certified: Azure Developer Associate](https://docs.microsoft.com/en-us/learn/certifications/azure-developer?wt.mc_id=learningredirect_certs-web-wwl&tab=tab-learning-paths)
 * [Mobile Web Specialist](https://developers.google.com/training/certification/mobile-web-specialist#content)
 * [HTML & CSS](https://www.codecademy.com/catalog/language/html-css)

@@ -15,7 +15,7 @@ This chart shows how the off-site payment method works:
 
 ![Offside payment method](media/01-offsite-payment-method-chart.png){: width="700"}
 
-## Define New Payment Method
+## Define new payment method
 
 In order to define a new payment method:
 
@@ -61,21 +61,21 @@ In order to define a new payment method:
 
 A very important property belonging to the payment method is `PaymentMethodType`, which defines the actions run by the front end to get the transaction registration result. Currently, there are two types of actions defined, with more being implemented in future:
 
-*Redirection*: Use this type of action if the payment method redirects the user to an outside URL. In order to do so, point the link to the `RedirectUrl` property in the `ProcessPaymentResult`. The front end will use it to redirect the customer (for example, this will happen with the Paypal Express Checkout payment method). 
+**Redirection**: Use this type of action if the payment method redirects the user to an outside URL. In order to do so, point the link to the `RedirectUrl` property in the `ProcessPaymentResult`. The front end will use it to redirect the customer (for example, this will happen with the Paypal Express Checkout payment method). 
 
-*PreparedForm*: Use this type of action in case the payment method provides an HTML form for filling in the credentials. Namely, you need to set the `HtmlForm` property in the `ProcessPaymentResult` with an HTML form the outside payment system returns or with the generated form in our payment system. An example of such behavior would be the Klarna Checkout payment method.
+**PreparedForm**: Use this type of action in case the payment method provides an HTML form for filling in the credentials. Namely, you need to set the `HtmlForm` property in the `ProcessPaymentResult` with an HTML form the outside payment system returns or with the generated form in our payment system. An example of such behavior would be the Klarna Checkout payment method.
 
-## Enable and Configure Payment Method for Store
+## Enable and configure payment method for store
 
 After your module is installed in your target system, all your payment methods should appear and be available for configuration in every store in your system under the `Store->Payment` method widget. You can configure payment methods for each store individually:
 
-+ Enable or disable a method for the current store
-+ Change priority to determine the order in which the payment methods will be displayed at checkout
-+ Edit all settings and what you define for the payment method
-+ Use a custom UI for more detailed payment method configuration
+* Enable or disable a method for the current store
+* Change priority to determine the order in which the payment methods will be displayed at checkout
+* Edit all settings and what you define for the payment method
+* Use a custom UI for more detailed payment method configuration
 
 After you are done configuring, your payment method will appear in the front end checkout page, and the customer will be able to select it as an option.
 
-## UI Customization
+## UI customization
 
 If our standard user interface is not enough, you may consider implementing your own UI for managing payment methods through the standard UI extension point (widget container with the `paymentMethodDetail` group). You can read more about extending the existing UI with widgets [here](../../Platform-Manager/Extensibility-Points/widgets.md).

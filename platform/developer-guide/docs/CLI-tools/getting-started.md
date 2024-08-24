@@ -1,3 +1,5 @@
+# Getting Started
+
 In this guide, we will explore how to start using `VirtoCommerce.GlobalTool`.
 
 ## Prerequisites

@@ -16,17 +16,17 @@ For example, let's search for all the lemon-lime drinks available:
 
     ![Faceted search result](media/faceted-search-result.png)
 
-## Muti-Select Faceting Search
+## Muti-select faceting search
 
 This policy allows you to select multiple values of the same facet, for example, using a checkbox.
 
-![Readmore](media/readmore.png){: width="25"} [How to Implement Multi-Select Faceting for Nested Documents in Solr](https://blog.griddynamics.com/multi-select-faceting-for-nested-documents-in-solr)
+![Readmore](media/readmore.png){: width="25"} [How to implement multi-select faceting for nested documents in Solr](https://blog.griddynamics.com/multi-select-faceting-for-nested-documents-in-solr)
 
-![Readmore](media/readmore.png){: width="25"} [Elastic Search Post Filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter)
+![Readmore](media/readmore.png){: width="25"} [Elastic Search post filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter)
 
 The muti-select faceting search policy is enabled by default and you do not need to activate it.
 
-## Faceted Search Configuration
+## Faceted search configuration
 
 To configure properties available for faceted search via Platform Manager:
 

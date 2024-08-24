@@ -13,7 +13,7 @@ You can still use MS Azure Application Insights by installing it separately as a
 
 [![Install Latest Release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-app-insights/releases)
 
-## Application Insights Module Configuration
+## Application Insights Module сonfiguration
 
 This node in the [appsettings.json file](../../Configuration-Reference/appsettingsjson.md#application-insights) adds and customizes the Application Insight section.
 
