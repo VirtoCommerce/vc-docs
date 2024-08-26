@@ -85,13 +85,13 @@ After the containers are started, open VC Platform Manager. This will launch the
 
 ![Choose sample data](media/screen-sample-data.png)
 
-## Copy Built Module to Modules Folder
+## Copy built module to modules folder
 
 1. Navigate to the `Modules` folder on the local host.
 1. Create a folder for the newly created module.
 1. Copy the `your_module_project.Web` folder to the created folder.
 
-## Debug Module
+## Debug module
 
 1. Build the solution locally (press F6 in Visual Studio).
 1. Within Visual Studio, select the **Attach to Process** action in the Debug window:
@@ -116,7 +116,7 @@ If the new module has been rebuilt:
 
     ![Restart platform](media/screen-restart-platform.png)
 
-## Clean Up Environment after Debugging
+## Clean up environment after debugging
 
 When the debugging process is complete, stop `docker-compose` by running:
 

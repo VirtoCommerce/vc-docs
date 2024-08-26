@@ -10,9 +10,9 @@ When the user is authorized in the platform, the system intersects all user perm
 You can configure which permissions can be stored in `limited_permissions` cookies by changing the `Authorization: LimitedCookiePermissions` setting:
 
 ```json title="appsettings.json"
- "Authorization": {
-        ...
-        "LimitedCookiePermissions": "platform:asset:read;platform:export;content:read;platform:asset:create;licensing:issue;export:download"
-        ...
+"Authorization": {
+    ...
+    "LimitedCookiePermissions": "platform:asset:read;platform:export;content:read;platform:asset:create;licensing:issue;export:download"
+    ...
     },
 ```

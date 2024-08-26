@@ -10,7 +10,7 @@ Before adding a new web app, make sure the following prerequisites have been ins
 * [Virto Commerce CLI (VC-BUILD) 3.12+](https://github.com/VirtoCommerce/vc-build)
 * [Virto Shell VueJS Framework](https://github.com/VirtoCommerce/vc-shell)
 
-## Registration Process
+## Registration process
 
 To register a new app:
 

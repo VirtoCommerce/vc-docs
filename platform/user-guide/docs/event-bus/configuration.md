@@ -11,7 +11,7 @@ Both methods utilize the same data structures for options.
     Accessing API endpoints requires [creating an API Key and granting permissions beforehand](https://virtocommerce.com/docs/latest/user-guide/security/#generate-api-key).
 
 
-## Provider Connections
+## Provider connections
 
 Provider connections define links between provider types and connection options, enabling connections to various destinations:
 
@@ -31,13 +31,13 @@ This setting uses the following parameters:
 | ProviderName       | "AzureEventGrid"                 | The name of the authentication provider.                                                           |
 | ConnectionOptionsSerialized |                         | Serialized connection options containing the URL and access key for the Azure Event Grid provider. |
 
-### Management Via Configuration
+### Management via configuration
 
 To manage provider connections via configuration, add a connections array under the `EventBus:Connections` key. Connections configured in this way cannot be removed or updated via REST API.
 
 If you have connections with the same name in the DB and in the configuration options, the one specified in the configuration options is preferred.
 
-### Management Via REST API
+### Management via REST API
 
 Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.EventBus** from the dropdown list.
 
@@ -83,13 +83,13 @@ This setting uses the following parameters:
 | EventSettingsSerialized        |                                                                 | Serialized metadata for the subscription, such as priority or additional settings specific to the provider.       |
 | Events                         | Array of event full names (`"EventId"`) the subscription should catch | An array of event full names specifying the events the subscription will forward to the provider connection.     |
 
-### Management via Configuration
+### Management via configuration
 
 To manage subscriptions via configuration, add the subscription settings under the `EventBus:Subscriptions` key in the configuration file.
 
 If there are conflicting subscriptions with the same name in both the database and configuration options, the configuration option is preferred.
 
-### Management Via REST API
+### Management via REST API
 
 Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and choose **VirtoCommerce.EventBus** from the dropdown list.
 
@@ -103,7 +103,7 @@ Use the REST API to perform the following actions:
 * Register new subscription: **POST /api/eventbus/subscriptions**
 * Update existing subscription: **PUT /api/eventbus/subscriptions**
 
-## Health Status. Fail Logs
+## Health status. Fail logs
 
 To view the fail log:
 
@@ -138,7 +138,7 @@ To view the fail log:
 
 Response records are always sorted by date of occurrence in descending order.
 
-## Current List of Events
+## Current list of events
 
 To see the full list of the existing events to properly create a subscription:
 
@@ -155,7 +155,7 @@ To see the full list of the existing events to properly create a subscription:
     ]
     ```
 
-## Destination Providers. Azure Event Grid
+## Destination providers. Azure Event grid
 
 Destination Providers are integral components of the Event Bus module, enabling seamless communication and event delivery to various endpoints. Among these providers, the Azure Event Grid is a robust solution for real-time event processing and distribution. In this section, we explore the capabilities and configuration requirements of Azure Event Grid Provider.
 
@@ -179,7 +179,7 @@ This setting uses the following parameters:
 | `connectionString`             |  String that defines the URI of the topic.        |
 | `accessKey`                    |  String that is partially hidden on retrieval.    |
 
-### Set up Subscription to Azure Event Grid
+### Set up subscription to Azure Event Grid
 
 To set up a subscription with Azure Event Grid:
 
@@ -190,13 +190,13 @@ To set up a subscription with Azure Event Grid:
 
 The subscription has been set.
 
-### Handle Errors
+### Handle errors
 
 Event Grid ensures reliable delivery of messages by employing a durable delivery mechanism. Each message is guaranteed to be delivered at least once for every subscription. Events are promptly dispatched to the registered endpoint of each subscription. In case an endpoint fails to acknowledge the receipt of an event, Event Grid initiates retries to ensure successful delivery.
 
 ![Readmore](media/readmore.png){: width="25"} [Event Grid. Delivery and Retry](https://docs.microsoft.com/en-us/azure/event-grid/delivery-and-retry)
 
-### Default Event Data Model for Azure Event Grid
+### Default event data model for Azure Event Grid
 
 You can specify the payload transformation via the Scriban-template with the `payloadTransformationTemplate` option. If you skip this option, the Event Grid provider will apply the following structure as a payload in the `CloudEvents` format:
 
@@ -218,7 +218,7 @@ This setting uses the following parameters:
 
 The Event Grid provider discovers all objects related to the event being transferred and generates payloads for each of them.
 
-#### Sample Event in `CloudEvents` 1.0 JSON Format
+#### Sample event in `CloudEvents` 1.0 JSON Format
 
 ```json
 {​​​​​
@@ -236,17 +236,17 @@ The Event Grid provider discovers all objects related to the event being transfe
 }​​​​​
 ```
 
-## Send Custom Event from Virto Commerce
+## Send custom event from Virto Commerce
 
 The module reads the list of the events from installed modules. If you want to send a new event, you need to create a new module and [raise a Virto Commerce event](https://virtocommerce.com/docs/latest/fundamentals/extensibility/extending-using-events/). After this, the event will be accessible via API, and you will be able to create a subscription.  
 
-## Custom Destination Providers 
+## Custom destination providers 
 
 [Contact us if you need a new destination.](https://virtocommerce.com/contact-us)
 
 ## Examples
 
-### Additional Event Filtering
+### Additional event filtering
 
 Consider the subscription example below, forwarding the order changed event only if the state changed to specified:
 
@@ -271,7 +271,7 @@ For example, any order transitioning to status `Processing` from any other non-p
 
 You can construct more sophisticated expressions for event filtering. For learning JsonPath, refer to [Newtonsoft JsonNet documentation: Querying JSON with JSON Path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
 
-### Payload Transformation Template
+### Payload transformation template
 
 The transformation template allows you to customize the event data payload for your specific requirements. It is also useful for reducing the amount of transferred data.
 

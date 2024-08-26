@@ -1,4 +1,4 @@
-﻿# Contact module settings
+﻿# Contact Module Settings
 
 The Contact module settings include:
 

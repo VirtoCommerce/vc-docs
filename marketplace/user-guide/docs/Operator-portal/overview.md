@@ -6,7 +6,7 @@ Open the Operator portal homepage to see its structure and main features:
 
 ![Dashboard](media/operator-portal-dashboard.png)
 
-## Key Features
+## Key features
 
 While the Operator portal shares a part of the Platform functionality, the following features make it uniquely suited for marketplace management:
 

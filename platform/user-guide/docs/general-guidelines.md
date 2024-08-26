@@ -3,7 +3,7 @@
 Although the Platform interface is user friendly and intuitive, read this article to understand general techniques of working with the Platform. 
 
 
-## Home Page
+## Home page
 
 The Platform's home page shows:
 

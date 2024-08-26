@@ -12,7 +12,7 @@ With the **Payment** module, you can:
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-payment/releases)
 
-## Key Features
+## Key features
 
 Although the **Payment** module does not have its own user interface, you need to have it installed to manage payment methods via the **Store** module. Installing **Payment** module adds the **Payment methods** widget to the **Stores** module.
 

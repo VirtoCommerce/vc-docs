@@ -1,4 +1,4 @@
-# Virto Commerce security
+# Virto Commerce Security
 
 There are many aspects of security in Virto Platform and Web API. We will, however, be focusing on the core topics, such as authentication, authorization, and some best practices you might want to follow.
 

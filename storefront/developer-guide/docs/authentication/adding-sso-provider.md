@@ -6,7 +6,7 @@ To integrate a new SSO provider (for example, Azure AD (Entra ID)):
 1. [Manage Platform settings.](azure-ad.md#platform-settings)
 
 
-## Backend Settings
+## Backend settings
 
 Set up the necessary environment variables for the Frontend Application to authenticate users via Azure AD authentication provider:
 
@@ -21,7 +21,7 @@ set "AzureAd…ValidateIssuer=MultitenantAzureAD"
     If a module does not exist yet, create it according to the [guide](../../../../platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module).
 
 
-## Platform Settings
+## Platform settings
 
 Configure store settings:
 

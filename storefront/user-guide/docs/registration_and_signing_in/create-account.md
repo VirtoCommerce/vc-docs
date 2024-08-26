@@ -1,4 +1,4 @@
-# Create account
+# Create Account
 
 To work with the Frontend Application, you need to create a new account:
 

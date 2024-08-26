@@ -6,7 +6,7 @@ The Hotjar module allows you to assign Hotjar Site Id for your Store. It gets in
 * Recordings.
 * Feedback, etc.
 
-## Key Features
+## Key features
 
 With the Hotjar tool, you can benefit from:
 

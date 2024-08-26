@@ -4,7 +4,7 @@ The **Push Messages** module enables marketers to send custom notifications to s
 
 The Push Messages module provides a seamless solution for Marketers to customize and send notifications to fronted applications for specific customers or organizations. With options to tailor the message of the notification, marketers can effectively communicate with targeted groups. Additionally, the module offers features for displaying delivery status for notifications.
 
-## Key Features
+## Key features
 
 With the Push Messages module, you can:
 

@@ -15,7 +15,7 @@ In this guide, we will walk you through the process of setting up **Prerender.io
 
     ![Token](media/token.png)
 
-## Create Application Gateway
+## Create application gateway
 
 Create the application gateway using the tabs on the **Create application gateway** page:
 

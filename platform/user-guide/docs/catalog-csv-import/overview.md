@@ -6,7 +6,7 @@ The Catalog CSV Import Module is required to import catalogs in CSV format.
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-catalog-csv-import/releases)
 
-## Key Features
+## Key features
 
 The diagram below illustrates the interconnections between the Catalog CSV Import module and the Catalog module:
 

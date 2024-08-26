@@ -1,4 +1,4 @@
-# Tax type configuration
+# Tax Type Configuration
 
 Assign cart/order items to tax categories for correct tax calculation by applying tax codes to the catalog items. In the Virto Commerce platform, tax code is also called **Tax type**. 
 

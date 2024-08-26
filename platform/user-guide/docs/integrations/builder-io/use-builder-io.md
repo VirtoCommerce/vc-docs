@@ -17,7 +17,7 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
 ![Readmore](media/readmore.png){: width="25"} [Builder.io user guide](https://www.builder.io/c/docs/start-building)
 
-## Copy Components from Figma
+## Copy components from Figma
 
 Thanks to the Builder.io Figma plugin, any user can copy components designed in Figma and paste them into a page edited in Builder.io:
 
@@ -32,7 +32,7 @@ Thanks to the Builder.io Figma plugin, any user can copy components designed in 
 
 The selected component has been pasted to your Builder.io edited page.
 
-## Customize Background Color
+## Customize background color
 
 With Builder.io, you can customize both component and section color:
 

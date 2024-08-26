@@ -1,4 +1,4 @@
-# Manage categories
+# Manage Categories
 
 A category is basically a container for other categories, subcategories, or products.
 

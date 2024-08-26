@@ -1,4 +1,4 @@
-﻿# Roles and permissions
+﻿# Roles and Permissions
 
 In Virto Commerce Platform, each user must have at least one role assigned. Virto Commerce offers pre-defined roles by default, which you can customize or create new ones according to your needs.
 

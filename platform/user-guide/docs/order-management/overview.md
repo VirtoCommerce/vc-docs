@@ -1,3 +1,5 @@
+# Overview
+
 The Orders module in Virto Commerce is a document based flexible orders management system with possibility to add unlimited number of documents related to customer order.
 
 The Orders module is designed to:
@@ -7,12 +9,12 @@ The Orders module is designed to:
 * Search for orders by keywords.
 
 !!! info
-    * This module is not designed to be a full order processing system like ERP. It serves as storage for customer orders details and can be synchronized with different external processing systems.
+    This module is not designed to be a full order processing system like ERP. It serves as storage for customer orders details and can be synchronized with different external processing systems.
 
 The order itself contains minimum details.  You will find payment, shipment, and other order details on the documents.
 
 !!! note
-    * The order management process in Virto Commerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
+    The order management process in Virto Commerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-order)
 

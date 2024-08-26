@@ -5,7 +5,7 @@ Managing payment methods includes:
 * [Viewing available payment methods.](managing-payment-methods.md#view-available-payment-methods)
 * [Editing payment methods.](managing-payment-methods.md#edit-payment-methods)
 
-## View Available Payment Methods
+## View available payment methods
 
 To view the availble payment methods:
 
@@ -16,7 +16,7 @@ To view the availble payment methods:
 
 ![View payment methods](media/view-payment-methods.png)
 
-## Edit Payment Methods
+## Edit payment methods
 
 To edit a payment method:
 

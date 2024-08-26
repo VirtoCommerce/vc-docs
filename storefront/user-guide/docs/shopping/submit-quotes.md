@@ -1,4 +1,4 @@
-# Submit quotes
+# Submit Quotes
 
 To request personalized pricing (submit a quote):
 

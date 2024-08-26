@@ -123,7 +123,7 @@ A **module** is a collection of composables, locales, components, and pages. Eac
 | Locales      	        | The folder stores locale files used to provide translated content specific to the module. If you need to translate your blades into multiple languages, you can store all the translations in JSON format in this folder. These translations can then be processed using the vue-i18n library. <br> ![Readmore](../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) |
 | Pages                 | A set of Blades used within application router.
 
-### Create a new module
+### Create new module
 
 To create your own modules within the scaffolded application folder structure:
 
@@ -134,7 +134,7 @@ To create your own modules within the scaffolded application folder structure:
 1. Additionally, you can include an **index.ts** file as the entry point for your module. This file can provide the necessary exports and configurations for your module.
 
 
-### Initialize a new module in the application
+### Initialize new module in application
 
 Initialize your module to make it usable within the application.
 

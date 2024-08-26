@@ -10,7 +10,7 @@ The **Return** module gives you an opportunity to view and manage all return ope
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-return/releases)
 
 
-## Key Features
+## Key features
 
 With the Return module, you can:
 

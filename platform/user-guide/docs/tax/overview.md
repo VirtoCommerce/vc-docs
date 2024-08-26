@@ -13,12 +13,12 @@ The module provides an API to work with the tax provider list and allows you to 
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-tax/releases)
 
-## Default Providers
+## Default providers
 
 * FixedRateTaxProvider is a built-in tax provider included into the Virto Commerce Tax module. It calculates taxes based on fixed rates.
 * [Avalara.Tax](../integrations/avalara/overview.md) is a real time integration with Avalara Tax automation. This module is officially certified by Avalara to be compatible with Avalara API.
 
-## Key Features
+## Key features
 
 With the Tax module, you can:
 

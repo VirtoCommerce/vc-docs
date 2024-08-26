@@ -1,4 +1,4 @@
-# Authenticating with ASP.NET Core Identity
+# Authenticate with ASP.NET Core Identity
 
 Virto platform uses [ASP.NET](http://asp.net/) Core Identity as a membership system.
 
@@ -8,7 +8,7 @@ Using [ASP.NET](http://asp.net/) Core Identity enables several scenarios:
 * Authenticating users through the `SignInManager` type. You can use `signInManager.SignInAsync` to sign in directly, or `signInManager.PasswordSignInAsync` to confirm the user’s password is correct and then sign them in.
 * Identifying a user based on information stored in a cookie or barrier token so that requests from a browser could include the signed-in user’s identity and claims
 
-## Issuing JWT tokens with OpenIddict
+## Issue JWT tokens with OpenIddict
 
 To enable token authentication, ASP.NET Core supports multiple options for using **OAuth 2.0** and **OpenID Connect**. We take advantage of a good third-party library and use **OpenIddict** to provide a simple and easy-to-use solution to implement an OpenID Connect server within the platform application.
 

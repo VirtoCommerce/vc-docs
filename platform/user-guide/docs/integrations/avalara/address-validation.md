@@ -1,4 +1,4 @@
-# Address validation
+# Address Validation
 
 Address validation is used in the Frontend Application to prevent creation of orders with invalid (not acceptable by AvaTax) addresses.
 

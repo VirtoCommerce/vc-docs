@@ -5,7 +5,7 @@ The Operator orders section in the main menu displays all the orders as they are
 * [View submitted orders.](operator-orders.md#view-orders)
 * [Manage submitted orders.](operator-orders.md#manage-orders)
 
-## View Orders 
+## View orders 
 
 A common scenario is as follows:
 
@@ -26,7 +26,7 @@ A common scenario is as follows:
         ![Order as seen by Vendor 2](media/order-vendor2.png)
 
 
-## Manage Orders
+## Manage orders
 
 To manage the orders:
 

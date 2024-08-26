@@ -1,4 +1,4 @@
-# Manage thumbnail settings
+# Manage Thumbnail Settings
 Before generating your thumbnails, you can edit various settings to adjust the images you get as a result:
 
 1. Click **Thumbnails** in the main menu.

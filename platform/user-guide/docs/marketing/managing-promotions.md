@@ -1,4 +1,4 @@
-# Managing promotions
+# Manage Promotions
 
 Managing promotions includes:
 

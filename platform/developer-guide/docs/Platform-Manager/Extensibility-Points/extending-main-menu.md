@@ -1,6 +1,6 @@
-### Adding New Items to Application Menu
+# Extend Main Menu
 
-Use this code to add new menu items:
+As part of extending the main menu, you can add new items to the application menu to enhance functionality and user access. Use this code to add new menu items:
 
 ```JS
 .run(

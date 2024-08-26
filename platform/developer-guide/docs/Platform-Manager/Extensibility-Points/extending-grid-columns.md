@@ -12,4 +12,4 @@ gridOptionExtension.registerExtension("customerOrder-list-grid", function (gridO
 ...
 ```
 
-This will allow you to add a column that will be always available.
+This allows you to add a column that will always be available.

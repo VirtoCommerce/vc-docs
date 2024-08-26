@@ -1,4 +1,4 @@
-# Password management
+# Password Management
 
 Managing password includes:
 

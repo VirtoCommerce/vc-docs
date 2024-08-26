@@ -24,7 +24,7 @@ To build and customize platform manager UI:
 * Basic JavaScript (AngularJS) knowledge.
 * [Created custom module.](creating-custom-module.md)
 
-## Platform Manager UI Elements
+## Platform manager UI elements
 
 The most common extension points for Platform Manager UI are:
 
@@ -56,7 +56,7 @@ The most common extension points for Platform Manager UI are:
     ![Readmore](media/readmore.png){: width="25"} [Widget](../../Platform-Manager/Extensibility-Points/widgets.md)
 
 
-## Debug Scripts
+## Debug scripts
 
 To enable JS debugging in the Platform:
 
@@ -70,7 +70,7 @@ To enable JS debugging in the Platform:
 
 ![Readmore](media/readmore.png){: width="25"} [Debugging in Chrome](https://javascript.info/debugging-chrome) 
 
-## Build Customer Reviews Module Web UI
+## Build customer reviews module web UI
 
 To build the module WEB UI:
 
@@ -97,7 +97,7 @@ To build the module WEB UI:
 
 ![Readmore](media/readmore.png){: width="25"} [Localization Implementation](../../Platform-Manager/localization.md)
 
-### Create Localization
+### Create localization
 
 1. Define the following names for blade and widget:
 
@@ -131,7 +131,7 @@ To build the module WEB UI:
 
 These translations will be used in the blade and in the widget to label titles and field names in Platform Manager UI.
 
-### Define API Controller
+### Define API controller
 
 To get data from backend, define `search` API controller method in the **\CustomerReviewsModule.Web\Scripts\resources**\\**customer-reviews-module-api.js** file:
 
@@ -146,7 +146,7 @@ angular.module('customerReviewsModule')
 
 ![Readmore](media/readmore.png){: width="25"} [AngularJS Resource Article](https://docs.angularjs.org/api/ngResource/service/$resource)
 
-### Define Blade
+### Define blade
 
 1. Create a new **reviews-list.js** blade JS file in the **\Scripts\blades** folder and define **customerReviewsModule.reviewsListController** by adding code to the file:
 
@@ -285,7 +285,7 @@ You will see the existing Customer reviews list:
 
 ![Reviews list blade](media/reviews-list.png)
 
-### Define Widget
+### Define widget
 
 1. Add new **widgets** subfolder inside the **Scripts** folder.
 

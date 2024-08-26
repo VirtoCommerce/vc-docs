@@ -1,4 +1,4 @@
-# Manage price lists
+# Manage Price Lists
 
 Price lists are containers for different product prices. They can be useful when you want to store prices for items in a particular category in a single place.
 

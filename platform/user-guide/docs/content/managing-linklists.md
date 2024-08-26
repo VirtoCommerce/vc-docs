@@ -1,4 +1,4 @@
-# Link lists
+# Manage Link Lists
 
 In the Virto Commerce Content module, link lists are collections of hyperlinks organized to facilitate efficient navigation through the catalog and provide quick access to its items. 
 

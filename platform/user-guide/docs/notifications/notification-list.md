@@ -1,4 +1,4 @@
-# Notification list
+# Notification List
 
 The notification list shows all existing notifications that are currently configured for your store. This includes all our out-of-the-box notifications, as well as your custom ones, if any, including
 

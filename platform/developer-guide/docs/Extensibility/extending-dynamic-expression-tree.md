@@ -20,7 +20,7 @@ Prior to extending your dynamic expression tree, you need to:
     
 * Add the [VirtoCommerce.MarketingModule.Core](https://www.nuget.org/packages/VirtoCommerce.MarketingModule.Core) NuGet dependency to your project.
 
-## Define New Class for Expression Tree Prototype
+## Define new class for expression tree prototype
 
 The following example creates a new derived prototype from [PromotionConditionAndRewardTreePrototype](https://github.com/VirtoCommerce/vc-module-marketing/blob/dev/src/VirtoCommerce.MarketingModule.Core/Model/Promotions/PromotionConditionAndRewardTreePrototype.cs) that represents the original expression tree used for marketing promotion. Here, we register a new `BlockSampleConditionroot` block and extend the existing `BlockCatalogCondition` with a new element, `SampleCondition`:
 
@@ -41,7 +41,7 @@ public sealed class SamplePromotionConditionAndRewardTreePrototype : PromotionCo
     }
 ```
 
-## Register Your Extension in module.cs
+## Register your extension in module.cs
 
 To register your extension in the **module.cs** file: 
 
@@ -70,7 +70,7 @@ To register your extension in the **module.cs** file:
     
     ![Readmore](media/readmore.png){: width="25"} [Module Initialization](../Fundamentals/Modularity/04-loading-modules-into-app-process.md)
 
-## Define HTML Templates for New Elements
+## Define HTML templates for new elements
 
 It is a best practice to define all HTML templates for new elements within a single file, where the templates are dynamically loaded as resources.
 
@@ -96,7 +96,7 @@ It is a best practice to define all HTML templates for new elements within a sin
 </script>
 ```
 
-## Register New Elements in Main module.js File
+## Register new elements in main module.js file
 
 Register your newly created expression elements in `dynamicExpressionService` that is used as a registry for all known tree elements:
 
@@ -125,7 +125,7 @@ angular.module(moduleName, [])
     ]);
 ```
 
-## Build Own Module and Restart Platform
+## Build own module and restart platform
 
 1. Build your solution and pack the module scripts with the following command:
 

@@ -8,7 +8,7 @@ Let's explore most common scenarios and:
 * [Decline vendor's product.](marketplace-products.md#decline-product)
 * [Manage product from the Vendor portal.](marketplace-products.md#manage-product-from-vendor-portal)
 
-## Approve Product
+## Approve product
 
 To approve a product uploaded by a vendor in the Vendor portal:
 
@@ -23,7 +23,7 @@ The product status in the list of products changes for **Published** in both Ope
 ![New statuses](media/approve-statuses.png)
 
 
-## Decline Product
+## Decline product
 
 To decline a product uploaded by a vendor in the Vendor portal:
 
@@ -39,7 +39,7 @@ The product status in the list of products changes for **Rejected** in both Oper
 ![New statuses](media/decline-statuses.png)
 
 
-## Manage Product from Vendor Portal
+## Manage product from Vendor portal
 
 To manage products directly from the Vendor portal:
 

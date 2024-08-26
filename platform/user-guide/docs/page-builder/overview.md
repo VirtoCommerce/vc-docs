@@ -14,7 +14,7 @@ The Virto Commerce Page Builder module offers:
 * Support for a streamlined publishing process.
 
 
-## Key Features
+## Key features
 
 With the PageBuilder module, you can
 

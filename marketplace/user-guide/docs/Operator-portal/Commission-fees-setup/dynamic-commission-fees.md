@@ -15,7 +15,7 @@ Managing dynamic commission fees includes:
 * [Editing a dynamic commission.](dynamic-commission-fees.md#edit-dynamic-commission)
 * [Deleting a dynamic commission.](dynamic-commission-fees.md#delete-dynamic-commission)
 
-## Add Dynamic Commission
+## Add dynamic commission
 
 To add a new dynamic commission assigned to a vendor or a product:
 
@@ -38,7 +38,7 @@ To add a new dynamic commission assigned to a vendor or a product:
 The commission has been added and assigned to a vendor or a product.
 
 
-## Edit Dynamic Commission
+## Edit dynamic commission
 
 To edit a dynamic commission:
 
@@ -50,7 +50,7 @@ To edit a dynamic commission:
 
 The modifications have been saved.
 
-## Delete Dynamic Commission
+## Delete dynamic commission
 
 To delete a dynamic commission:
 

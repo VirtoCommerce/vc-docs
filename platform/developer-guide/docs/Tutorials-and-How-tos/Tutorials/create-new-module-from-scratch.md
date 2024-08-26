@@ -2,7 +2,7 @@
 
 This guide explores how to create a new module from scratch using Visual Studio, following the example of the Dummy module.
 
-## Create Solution and Projects
+## Create solution and projects
 
 1. Create an empty solution named **DummyModule** [using Visual Studio](https://learn.microsoft.com/en-us/visualstudio/get-started/tutorial-projects-solutions?view=vs-2022##create-a-solution).
 1. Add **src** and **tests** Solution Folders using Visual Studio.
@@ -24,7 +24,7 @@ This guide explores how to create a new module from scratch using Visual Studio,
         * **DummyModule.Data:** Add a reference to the latest version of the **VirtoCommerce.Platform.Data** package for data management capabilities.
     1. **Compile the Solution:** Ensure successful build completion without any warnings or errors.
 
-## Fill DummyModule.Core Project
+## Fill DummyModule.Core project
 
 To populate the **DummyModule.Core** project with essential components:
 
@@ -73,7 +73,7 @@ To populate the **DummyModule.Core** project with essential components:
 
 These steps ensure the **DummyModule.Core** project contains essential components for module functionality and management.
 
-## Fill DummyModule.Data Project
+## Fill DummyModule.Data project
 
 To populate the **DummyModule.Data** project with necessary components:
 
@@ -111,19 +111,19 @@ To populate the **DummyModule.Data** project with necessary components:
    * **ExportImport folder:** Add a class for data export/import, which should be called from **Module.cs** and contain the implementation for module data export and import.
    * **Handlers folder:** Include handlers for domain events defined under **.Core/Events**. These handlers facilitate reacting to and managing domain events within the module.
 
-## Fill DummyModule.Web Project
+## Fill DummyModule.Web project
 
 1. Add the required folders and files such as **Controllers/Api**, **Localizations**, **Scripts**, and **module.manifest**.
 1. Implement the module manifest, controllers for API endpoints, JavaScript files, stylesheets, and localizations.
 1. Configure webpack for JavaScript and stylesheet bundling.
 1. If required, add unit tests and integration tests.
 
-## Fill DummyModule.Tests Project
+## Fill DummyModule.Tests project
 
 1. Add unit tests and integration tests as needed.
 1. Ensure integration tests are marked appropriately with the **Trait** attribute.
 
-## Create Module Package
+## Create module package
 
 Create the module package following [this article](../../CLI-tools/overview.md).
 

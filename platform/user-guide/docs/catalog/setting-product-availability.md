@@ -1,4 +1,4 @@
-# Manage product availability
+# Manage Product Availability
 
 Product inventories are shown in Frontend Application:
 

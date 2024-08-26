@@ -1,4 +1,4 @@
-# Manage price list assignments
+# Manage Price List Assignments
 
 Price list assignments associate specific price lists with the appropriate catalogs and stores, i.e. they handle all the necessary linking, ensuring that prices are accurately assigned to the respective items. You can also use a price list assignment to target specific customers who are eligible for the relevant prices.
 

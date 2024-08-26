@@ -1,4 +1,4 @@
-﻿# Manage сontract сustomers
+﻿# Manage Contract Customers
 
 Managing contract customers includes:
 

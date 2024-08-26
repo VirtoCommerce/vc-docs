@@ -5,7 +5,7 @@ VirtoCommerce platform supports health checks through ASP.NET Core middlewares. 
 * [Module health checks.](health-checks.md#module-health-checks)
 * [Docker integration.](health-checks.md#docker-integration)
 
-## Module Health Checks
+## Module health checks
 
 To add health checks to your modules:
 
@@ -53,7 +53,7 @@ Now you can check your platform by getting a response from `/health` endpoint:
 
 ![Health check](media/health-checks.png)
 
-## Docker Integration
+## Docker integration
 
 For Docker environments, you can use the built-in `HEALTHCHECK` directive to monitor the status of your application. For example:
 

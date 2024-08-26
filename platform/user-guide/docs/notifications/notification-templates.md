@@ -1,4 +1,4 @@
-# Notification templates
+# Notification Templates
 
 Templates are containers that hold all the content for your notification, i.e. the message you send to your customer. 
 

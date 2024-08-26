@@ -1,15 +1,17 @@
-## Getting started
+# Getting started
 
-### Prerequisites
+This guide will show how to set up and configure the Virto Commerce Page Builder, including content setup, and theme customization.
+
+## Prerequisites
 1. [Virto Commerce 3.800 and higher.](https://github.com/VirtoCommerce/vc-platform/releases)
 1. Virto Storefront 6.7+ (`vc-storefront`).  [Deploy Storefront](https://docs.virtocommerce.org/getting-started/connect-storefront-to-platform-v3/)
 1. Vue B2B Theme 1.10+ (`vc-theme-b2b-vue`). 
 1. Page Builder Module 3.201+. [Download and Install](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases). 
 
-### Setup Content 
+## Setup content 
 Check that Virto Commerce Platform and Storefront use same Shared Content folder.
 
-### Setup Content Module
+## Setup content module
 Content configuration should be extended with `PathMappings` section.
 
 ```json title="appsettings.json"
@@ -41,7 +43,7 @@ Environment Variables
       Content__PathMappings__themes__1: "_storeId"
 ```
 
-### Setup Store
+## Setup store
 
 Public Store URL should be configured.
 
@@ -53,7 +55,7 @@ Public Store URL should be configured.
 1. Setup Store URL if it's empty
 1. Click Save button to apply. 
 
-### Purge Cache
+## Purge cache
 
 You can purge static page from storefront cache by event. Otherwise, you will need to wait for cache expiration.
 
@@ -76,7 +78,7 @@ We recommend using Webhooks module.
 ![image](docs/media/screen-webhook-settings.png)
 
 
-## Page Builder Theme Structure
+## Page Builder theme structure
 Page Builder reads meta-data from theme. Developers can extend or customize page builder behaviour by theme repository.
 
 ```text
@@ -100,4 +102,3 @@ Page Builder reads meta-data from theme. Developers can extend or customize page
 |   └── settings_schema.json      // Theme settings schema file. Page Builder uses it for Theme and Preset editor.
 |   └── settings_data.json        // Theme config file.
 ```
-

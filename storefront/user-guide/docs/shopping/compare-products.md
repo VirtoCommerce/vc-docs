@@ -1,4 +1,4 @@
-# Compare products
+# Compare Products
 
 To make informed purchasing decisions, you can directly compare multiple products or items side by side. Customers can select multiple products they are interested in and see a detailed, side-by-side comparison of their specifications, features, and attributes. 
 

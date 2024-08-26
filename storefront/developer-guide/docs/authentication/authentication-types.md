@@ -1,4 +1,4 @@
-# Authentication Types
+# Authentication types
 
 At the heart of Virto Commerce Frontend’s security is token-based authentication. This approach offers a streamlined way to verify users while maintaining a high level of security. There are two primary methods for obtaining these tokens in Virto Commerce Frontend:
 

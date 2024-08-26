@@ -26,7 +26,7 @@ Managing theme includes:
 * [Managing theme assets.](managing-themes.md#manage-theme-assets)
 * [Managing theme color configurations.](managing-themes.md#manage-theme-color-configurations)
 
-## Add New Theme
+## Add new theme
 
 To add a new theme:
 
@@ -41,7 +41,7 @@ To add a new theme:
 
 The new theme appears it in the themes list.
 
-## Upload New Theme
+## Upload new theme
 
 To upload a theme zip file:
 
@@ -57,7 +57,7 @@ Once the zip file has been uploaded, it will be unzipped and added to the Themes
 
 If a new theme has been created by the developer, it can be uploaded to a new environment using a zip file.
 
-## Activate Theme
+## Activate theme
 
 To activate the theme:
 
@@ -70,7 +70,7 @@ To activate the theme:
 
 The theme is now active.
 
-## Manage Theme Assets
+## Manage theme assets
 
 To manage the theme assets:
 
@@ -80,7 +80,7 @@ To manage the theme assets:
 
 ![assets](media/manage-assets.png)
 
-## Manage Theme Color Configurations
+## Manage theme color configurations
 
 You can use ready-made color configurations that can be applied to the theme, or you can create your own color scheme using chat.gpt:
 

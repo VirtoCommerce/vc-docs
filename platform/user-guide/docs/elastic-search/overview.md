@@ -13,7 +13,7 @@ The module supports the following Elasticsearch deployment options:
 * [OpenSearch](https://opensearch.org/)
 * [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service/)
 
-## Key Features
+## Key features
 
 The diagram below illustrates the functionality of the Elastic Search module:
 

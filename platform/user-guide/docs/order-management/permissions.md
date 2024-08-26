@@ -1,3 +1,4 @@
+# Permissions
 
 To maintain data security and privacy, specify what actions, such as reading, writing, deleting, or modifying data, a user can perform.
 

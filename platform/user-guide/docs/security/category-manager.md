@@ -2,7 +2,7 @@
 
 In this guide, we are going to explore the role of a category manager and permissions that can be assigned to them. The category manager is responsible for organizing and optimizing the presentation of products to enhance the shopping experience and drive sales. 
 
-## Assign Permissions to Category Manager
+## Assign permissions to category manager
 
 To assign permissions to category manager:
 
@@ -43,7 +43,7 @@ In our case, the list of basic permissions to be assigned to your category manag
 
 * **Store related permissions** to view store data. The scope of this permission can be limited to one or more stores.
 
-### Limit Permission Scope
+### Limit permission scope
 
 With the Virto Commerce Platform, you can limit scopes of specific permissions to specific catalogs, organizations, or stores. Let's explore how to limit permissions of a category manager to view catalog related data to specific catalogs:
 

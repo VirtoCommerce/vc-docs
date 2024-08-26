@@ -1,4 +1,4 @@
-﻿# Managing sitemaps
+﻿# Manage Sitemaps
 
 Managing sitemaps includes:
 

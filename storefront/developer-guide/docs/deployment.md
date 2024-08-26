@@ -13,7 +13,7 @@ Virto Cloud natively supports the new architecture. Use the following methods to
 * [Through configuration files.](deployment.md#through-configuration-file)
 * [Through Virto Cloud portal.](deployment.md#through-virto-cloud-portal)
 
-### Through Configuration File
+### Through configuration file
 
 To deploy through configuration files:
 
@@ -79,7 +79,7 @@ protectedParameters:
     #- custom.app1.image.tag
 ```
 
-### Through Virto Cloud Portal [In Progress]
+### Through Virto Cloud portal [In Progress]
 
 The detailed instructions will be provided soon.
 
@@ -105,7 +105,7 @@ To deploy the Frontend Application on Azure:
 
 Your Frontend App has now been successfully deployed on Azure.
 
-### Common Deployment Issues
+### Common deployment issues
 
 During the deployment process, various issues can arise that require attention, including:
 
@@ -113,7 +113,7 @@ During the deployment process, various issues can arise that require attention, 
 * [Password issue.](deployment.md#password-issue)
 * [Azure infrastructure issue.](deployment.md#azure-infrastructure-issue)
 
-#### Azure Template Validation Issue 
+#### Azure template validation issue 
 
 An Azure template validation error may occur if a resource with the selected name already exists. The error message typically indicates that the name must be modified before proceeding. 
 
@@ -121,7 +121,7 @@ An Azure template validation error may occur if a resource with the selected nam
 
 This issue can arise because the template uses the `App Service Name` parameter as a name for other Azure resources, potentially leading to conflicts.
 
-#### Password Issue
+#### Password issue
 
 Errors may occur if the password entered in the `Sql Administrator Password` field does not meet complexity requirements. 
 
@@ -129,7 +129,7 @@ Errors may occur if the password entered in the `Sql Administrator Password` fie
 
 To resolve this, the template must be redeployed with a new, compliant password.
 
-#### Azure Infrastructure Issue 
+#### Azure infrastructure issue 
 
 The error occurs during the deployment process and has a self-explanatory description. 
 
@@ -137,7 +137,7 @@ The error occurs during the deployment process and has a self-explanatory descri
 
 The problem is usually temporary and cannot be solved by the user. The workaround is to use a new resource group for the deployment.
 
-## Deployment on Local Machine
+## Deployment on local machine
 
 Deploying on a local machine includes:
 
@@ -170,7 +170,7 @@ If you have installed `yarn` globally, uninstall it:
     - **Launchpad**, **Finder**, **Homebrew**, or **MacPorts** on macOS.
     - Native package manager such as **apt** on Linux.
 
-### Frontend Application Deployment
+### Frontend Application deployment
 
 To deploy the Frontend Application on a local machine:
 
@@ -211,7 +211,7 @@ Your Frontend Application is now running successfully.
 
 ![Frontend Application running](media/frontend-running.png)
 
-### Build Options
+### Build options
 
 Choose the appropriate build command based on your needs:
 

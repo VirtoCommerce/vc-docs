@@ -11,7 +11,7 @@ Below are some examples of using REST API functionality to:
 * [Request ratings](rest-api.md#request-rating)
 * [Moderate reviews](rest-api.md#moderate-reviews)
 
-## Submit Reviews
+## Submit reviews
 
 1. Select **POST /api/customer reviews** from the menu.
 1. Fill in the request body as follows: 
@@ -41,7 +41,7 @@ Below are some examples of using REST API functionality to:
     ![Created review](media/review-created-api.png)
 
 
-## View Reviews
+## View reviews
 
 1. Select **POST /api/customer reviews/reviewList** from the menu.
 1. Fill in the request body as follows: 
@@ -80,7 +80,7 @@ Below are some examples of using REST API functionality to:
     }
     ```
 
-## Request Rating
+## Request rating
 
 1. Select **POST /api/rating/entityRating** from the menu.
 1. Fill in the request body as follows: 
@@ -109,7 +109,7 @@ Below are some examples of using REST API functionality to:
     ]
     ```
 
-## Moderate Reviews
+## Moderate reviews
 
 === "Approve"
 

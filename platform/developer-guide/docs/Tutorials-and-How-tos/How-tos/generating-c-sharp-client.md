@@ -1,4 +1,4 @@
-# Generating C# Client from VC Swagger with NSwag
+# Generate C# Client from VC Swagger with NSwag
 
 To simplify your API integration process and enhance your development workflow, direct your attention to NSwag—an influential tool designed to generate C# client code from your Virto Commerce Swagger JSON file.
 

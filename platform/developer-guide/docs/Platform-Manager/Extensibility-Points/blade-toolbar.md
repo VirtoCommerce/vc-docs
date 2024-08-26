@@ -1,11 +1,13 @@
 # Blade Toolbar
+
 Blade toolbar represents a dedicated area inside a **blade**, where one can add **controls**, which we will call, for convenience, **toolbar items**.
 
 ![Blade toolbar](media/02-blade-toobar.png)
 
 Toolbar items can be added to a **blade instance** directly or using Virto Commerce platform toolbar extensibility service.
 
-## Add Toolbar Items Directly to Blade Instance
+## Add toolbar items directly to blade instance
+
 Toolbar items are usually defined and added in the Angular.js controller, which is bound to a specific blade in the UI. Adding an item to the toolbar is pretty straightforward: you just need to define the **$scope.blade.toolbarCommands** array with the items in question:
 
 ```JS
@@ -58,7 +60,8 @@ $scope.blade.toolbarCommands = [
 ];
 ```
 
-## Add Toolbar Items from External Code
+## Add toolbar items from external code
+
 A dedicated service is used for adding toolbar items externally, without having any reference to the blade instance. The preferred place for registering a toolbar item is the **module run** block in Angular.js. What you need is reference `platformWebApp.toolbarService` as `toolbarService`, create item option, and call `register` against the service:
 
 ```JS
@@ -75,18 +78,18 @@ toolbarService.register({
 
 `toolbarService.register` parameters:
 
-|Parameter|Description|
-|---------|-----------|
-|toolbarItem|Toolbar item definition.|
-|toolbarController|Full toolbar controller name.|
+|Parameter          |Description|
+|-------------------|-----------|
+|toolbarItem        |Toolbar item definition.|
+|toolbarController  |Full toolbar controller name.|
 
 Toolbar item definition structure:
 
-|Member|Description|
-|------|-----------|
-|name|Display name for the item.|
-|icon|Icon for toobar item.|
-|title|Tooltip message for the button.|
-|executeMethod|Function to run when the item is activated.|
-|canExecuteMethod|Function to determine whether the item could be executed. The item is disabled in the toolbar if the *false* value is returned.|
-|index|The 0-based position to insert the item in the toolbar.|
+|Member       |Description                                  |
+|-------------|---------------------------------------------|
+|name         |Display name for the item.                   |
+|icon         |Icon for toobar item.                        |
+|title        |Tooltip message for the button.              |
+|executeMethod|Function to run when the item is activated.  |
+|canExecuteMethod|Function to determine whether the item could be executed. The item is disabled in the toolbar if the **false** value is returned.|
+|index        |The 0-based position to insert the item in the toolbar.|

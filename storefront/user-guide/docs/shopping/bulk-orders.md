@@ -1,4 +1,4 @@
-# Bulk orders
+# Bulk Orders
 
 The **Bulk orders** function allows users to place orders for a large quantity of products or multiple items at once.
 

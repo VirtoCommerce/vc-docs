@@ -1,5 +1,6 @@
+# Overview
 
-You can view the list of [submitted quotes](../../../../storefront/user-guide/shopping/submit-quotes) via the `Quotes` module.
+You can view the list of [submitted quotes](../../../../storefront/user-guide/shopping/submit-quotes) via the Quotes module.
 
 ## Key Features
 

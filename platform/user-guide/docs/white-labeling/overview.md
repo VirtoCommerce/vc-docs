@@ -6,7 +6,7 @@ The White Labeling module enables organizations to enhance the enterprise user e
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-white-labeling/releases/)
 
-## Key Features
+## Key features
 
 * **Branding Configuration**: Display organization-specific logos, favicons, colors, and footer links post-login.
 * **White labeling**: Resolve branding based on the organization context after user authentication.

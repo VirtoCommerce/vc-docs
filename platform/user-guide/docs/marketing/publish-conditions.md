@@ -1,4 +1,4 @@
-# Publish conditions 
+# Publish Conditions 
 
 The Virto's Marketing module allows you to customize the publishing conditions for your marketing content. With a variety of expressions and operators, you can tailor your content behavior to virtually any situation in your promotions and marketing campaigns.
 

@@ -1,4 +1,4 @@
-# Company info
+# Company Info
 
 The **Company Info** section contains:
 

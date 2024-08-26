@@ -1,17 +1,19 @@
-## Introduction
+# UI Scroll Diretive
+
 Generic UI scroll directive helps developers add dropdown lists to the UI and bind them to a custom data source. 
 
-## Using Directive
+## Use Directive
 
 UI scroll is implemented as the `uiScrollDropDown` Angular.js directive and has the following features:
 
-+ Bound to a search resource function allowing pagination and filtering 
-+ Enables single select drop down list or multiple select
-+ Allows binding to a custom data source
-+ Can define data filter expression
-+ Supports events
+* Bound to a search resource function allowing pagination and filtering.
+* Enables single select drop down list or multiple select.
+* Allows binding to a custom data source.
+* Can define data filter expression.
+* Supports events.
 
-### Basic Usage Example
+### Basic usage example
+
 This is how UI scroll directive would work in an HTML template:
 
 ```HTML
@@ -75,7 +77,8 @@ $scope.getData = function () {
 }
 ```
 
-### Multiple Select Mode
+### Multiple select mode
+
 To enable multi select mode, run the following code:
 
 ```HTML
@@ -92,7 +95,8 @@ Model value must be an array type if you use `multiple`:
 $scope.currentEntity = ['ID2', 'ID3'];
 ```
 
-### Filter Expression
+### Filter expression
+
 If set, this function is called after each new page of data is fetched. This does not work with predefined array data function.
 
 ```HTML
@@ -113,6 +117,7 @@ $scope.entitiesToHideFnc = function (items) {
 ```
 
 ### Events
+
 The directive provides on-select and on-delete events:
 
 ```HTML

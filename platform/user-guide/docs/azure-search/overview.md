@@ -6,7 +6,7 @@ The **Azure Search** module serves as a search engine within the Search module. 
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-azure-search/releases)
 
-## Key Features
+## Key features
 
 The diagram below illustrates the functionality of the Azure Search module:
 

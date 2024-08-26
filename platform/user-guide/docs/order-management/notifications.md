@@ -1,3 +1,5 @@
+# Notifications
+
 The customer is notified of any changes from the time the order is placed to the time the order is shipped:
 
 | Processing step 	| Notification                             	| Description                                                                                                                                         |

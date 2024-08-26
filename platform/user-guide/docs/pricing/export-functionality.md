@@ -1,4 +1,4 @@
-# Pricing data export
+# Pricing Data Export
 
 Virto's Pricing module provides the Export feature out-of-the-box, enabling you to export various data, including prices, price lists, and price list assignments.
 

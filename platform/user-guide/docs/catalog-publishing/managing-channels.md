@@ -5,7 +5,7 @@ With the Catalog Publishing module you can:
 * [Create channels to view the product description completeness.](managing-channels.md#create-channel)
 * [View missing description segments for each product.](managing-channels.md#view-missing-descriptions)
 
-## Create Channel
+## Create channel
 
 To evaluate the completeness of a catalog description create a **channel** as follows:
 
@@ -39,7 +39,7 @@ In our case, the completeness of the **Bolts** catalog equals 75%.
 
 ![Catalog completeness](media/bolts-catalog-completeness.png)
 
-## View Missing Descriptions
+## View missing descriptions
 
 To see what is missing in the product descriptions:
 

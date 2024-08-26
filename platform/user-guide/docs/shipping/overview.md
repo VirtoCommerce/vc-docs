@@ -6,7 +6,7 @@ The **Shipping** module provides the ability to extend shipping provider list wi
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-shipping/releases)
 
-## Key Features
+## Key features
 
 With the Shipping module, you can:
 

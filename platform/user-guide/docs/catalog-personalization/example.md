@@ -1,4 +1,4 @@
-# How to show catalog items for specific users
+# Show Catalog Items for Specific Users
 
 In this example, we will configure Virto Platform to make an item available for viewing and purchase exclusively to selected customers. Let's assume you have an item you want to sell only to your loyal customers as a reward for their loyalty.
 

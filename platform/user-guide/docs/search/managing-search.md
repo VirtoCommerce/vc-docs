@@ -26,7 +26,7 @@ To open search index details:
 
     ![Search index](media/open-search-index-module.png)
 
-## Build Search Index
+## Build search index
 
 To build search index:
 
@@ -43,7 +43,7 @@ The next blade displays the result of indexation:
 
 ![Indexation result](media/indexation-result.png)
 
-## Blue-Green Indexing
+## Blue-Green indexing
 
 !!! note
     The blue-green indexing is supported by the ElasticSearch, Azure Search,  and the Elastic Search 8 modules.<br>
@@ -74,7 +74,7 @@ To revert to the previous index, use the **Swap indices** feature:
 
 The roles of the backup and active indices have been exchanged.
 
-### Implementation Details
+### Implementation details
 
 Elasticsearch implements blue-green indexing using Elasticsearch [aliases](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html). Search provider implementations use two aliases to distinguish one index role from the other: **active** and **backup**. The full index alias is built as **scope name + document type name + alias name**; for example, an active index alias for the **Members** index using the `default` scope will be `default-member-active`.
 

@@ -1,3 +1,4 @@
+# Settings
 
 1. In the main menu, click **Stores** to open the **Stores** blade.
 1. Select the required store.

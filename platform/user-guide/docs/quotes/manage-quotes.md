@@ -7,7 +7,7 @@ Managing quotes includes:
 
 ![Readmore](media/readmore.png){: width="25"} [Creating quotes](../../../../storefront/user-guide/shopping/submit-quotes)
 
-## View Quotes List and Quote Details
+## View quotes list and quote details
 
 To view the list of submitted quotes and details of a specific quote:
 
@@ -21,7 +21,7 @@ To view the list of submitted quotes and details of a specific quote:
 
 You now can view and edit the quote details.
 
-## Edit Quote Details
+## Edit quote details
 
 The quote details blade contains:
 
@@ -69,7 +69,7 @@ In the widgets section, you can view:
 
 ![Widgets](media/widgets.png)
 
-### Edit Shipping/ Billing Addresses
+### Edit shipping/ billing addresses
 
 In the widgets section of the **Quote details** blade, you can add or edit shipment/ billing addresses of the quote requester:
 
@@ -81,7 +81,7 @@ In the widgets section of the **Quote details** blade, you can add or edit shipm
 
 ![Edit address](media/edit-address.png)
 
-### Attach Files
+### Attach files
 
 Attaching files facilitates the quoting process and ensures that quotes are accurate, relevant, and tailored to the requester's specifications.
 
@@ -95,7 +95,7 @@ To attach files to quotes:
 
 The attached files appear in the list below.
 
-### Manage Quote Totals
+### Manage quote totals
 
 To manage quote totals, click on the **Totals** widget. In the next **Edit line items** blade, you can:
 

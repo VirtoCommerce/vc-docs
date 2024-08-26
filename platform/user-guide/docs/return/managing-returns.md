@@ -8,7 +8,7 @@ Managing returns includes:
 * [Viewing and processing returns via the Orders module.](../order-management/managing-returns.md#viewing-and-processing-returns)
 
 
-## Create Return via Return Module
+## Create return via Return module
 
 To create a return via the Return module:
 
@@ -34,7 +34,7 @@ The created return appears in the **Return list** blade.
 ![Readmore](media/readmore.png){: width="25"} [Creating Returns via the Orders Module](../order-management/managing-returns.md#create-return)
 
 
-## Processing Returns
+## Processing returns
 
 To process the created return:
 

@@ -9,7 +9,7 @@ Below are some examples of using REST API functionality to:
 * [Query returns.](rest-api.md#query-returns)
 * [Query available quantities.](rest-api.md#query-available-quantities)
 
-## Query Returns
+## Query returns
 
 To query detailed information about each return request:
 
@@ -81,7 +81,7 @@ To query detailed information about each return request:
     }
     ```
 
-## Query Available Quantities
+## Query available quantities
 
 To query data detailing the available quantities for returnable items associated with that particular order:
 

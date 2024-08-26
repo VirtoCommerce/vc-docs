@@ -1,4 +1,4 @@
-# Customizing cart validation policies
+# Customize cart validation policies
 
 When it comes to adapting cart validation policies, flexibility is key. In this article, we explore two ways to tailor these policies to your specific needs:
 

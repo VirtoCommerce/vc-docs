@@ -1,9 +1,9 @@
-# Extending Domain Models
+# Extend Domain Models
 VirtoCommerce supports extension of managed code domain types. This article will show you how to use various techniques to extend an existing domain type without direct code modification.
 
 To view or download our sample code, click [here](https://github.com/VirtoCommerce/vc-module-order/tree/dev/samples/VirtoCommerce.OrdersModule2.Web).
 
-## Extending through Type Inheritance
+## Extend through type inheritance
 
 Common domain classes have a fixed structure and are defined in modules. This means you cannot simply add any additional properties to the existing domain types without direct code modification. In order  to fix this, you can extend an entity class and add properties to the subclass.
 
@@ -50,7 +50,7 @@ When you need to override any base type with another derived type, you must call
 
 This is how the type extension magic works.
 
-## Persistent Layer Extension Schema
+## Persistent layer extension schema
 
 We just extended the existing `CustomerOrder` class with a new `CustomerOrder2` class housing new  properties. The questions now is: how can you actually change the current DB schema and persist these new types into the database through Entity Framework (EF) Core? To solve this task, we can also use the inheritance techniques and define and derive new `Order2DbContext` from original `OrderDbContext`, along with `OrderRepository2` derived from `OrderRepository`.
 
@@ -155,7 +155,7 @@ It is also important to register our new persistent schema representation, `Cust
     }
 ```
 
-## How API Understands and Deserializes Derived Domain Types 
+## How API understands and deserializes derived domain types 
 
 Up to now, we talked about extending domain types and persistent layers. In some cases, however, this is not enough. This is especially true when your domain types are used as DTOs (Data Transfer Objects) in public API contracts and can be leveraged as a result or parameter in the API endpoints. 
 
@@ -165,4 +165,4 @@ There are two ways to force ASP.NET Core API JSON serializer to understand our d
 
 1. Use platform-defined `PolymorphJsonConverter`, which is preferable in most cases. `PolymorphJsonConverter` transparently deserializes extended domain types with no developer effort.
 
-2. Transfer custom JSON converter to `MvcNewtonsoftJsonOptions`. Consider using it only in case `PolymorphJsonConverter` is not suitable for your specific case.
+1. Transfer custom JSON converter to `MvcNewtonsoftJsonOptions`. Consider using it only in case `PolymorphJsonConverter` is not suitable for your specific case.

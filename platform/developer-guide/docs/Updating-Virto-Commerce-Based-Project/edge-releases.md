@@ -4,7 +4,7 @@ In this guide, we will explore how to automate the installation and update proce
 
 ![Readmore](media/readmore.png){: width="25"} [Install and use Virto Commerce CLI](../Getting-Started/Installation-Guide/windows.md)
 
-## Install Latest Edge Release
+## Install latest edge release
 
 To install the latest edge release:
 
@@ -26,7 +26,7 @@ To install the latest edge release:
 
 The latest edge release has been installed.
 
-## Update to Latest Edge Release
+## Update to latest edge release
 
 To update to the latest edge release:
 

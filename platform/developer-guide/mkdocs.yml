@@ -550,7 +550,6 @@ nav:
                 - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
                 - Type Inheritance Support in Swagger API: Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger.md
                 - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
-                - Deploying VC Platform to Azure Cloud: Tutorials-and-How-tos/How-tos/deploy-platform-on-azure.md
                 - Setting Up Prerender.io with Azure Application Gateway: Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md
                 - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
                 - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md

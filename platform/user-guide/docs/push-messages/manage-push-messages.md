@@ -23,7 +23,7 @@ To manage push messages:
     * [Create new messages](manage-push-messages.md#create-and-schedule-push-message), schedule messages, and track new recipients.
     * [View message status](manage-push-messages.md#view-message-status), the number of recipients, and percent read.
 
-## Create and Schedule Push Message
+## Create and schedule push message
 
 To create a new push message:
 
@@ -43,7 +43,7 @@ Your message has been sent to the selected recipients:
 
 ![Message sent](media/sent-message.png)
 
-## Clone Message
+## Clone message
 
 To create and send multiple copies of the same message without having to manually recreate the content each time, use the clone message feature:
 
@@ -55,7 +55,7 @@ To create and send multiple copies of the same message without having to manuall
 
 1. After all necessary modifications are made, click **Save** in the top toolbar to save the message as a draft, or **Send** to send the messages. The scheduled messages will be sent according to the schedule. 
 
-## View Message Status
+## View message status
 
 To view the details of the sent push messages:
 

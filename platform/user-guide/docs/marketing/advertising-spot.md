@@ -1,4 +1,4 @@
-# Adding advertising spot
+# Add Advertising Spot
 
 Adding advertising spot to your website or online store is your last step to bringing your marketing content online:
 

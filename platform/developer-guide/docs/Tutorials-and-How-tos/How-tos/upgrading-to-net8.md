@@ -19,12 +19,12 @@ The release has undergone extensive testing, including unit, end-to-end, regress
 
 ![Readmore](media/readmore.png){: width="25"} [What's new in ASP.NET Core 8](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-8.0?view=aspnetcore-8.0)
 
-## Known Limitations and Breaking Changes
+## Known limitations and breaking changes
 
 1. **Entity Framework Packages Update:** To prevent "System.MissingMethodException: Method not found errors" when call MigrationBuilder.CreateIndex, it is essential to update Entity Framework packages from version 6 to version 8.
 1. **Kestrel HTTPS Binding:** The default HTTPS binding has been removed. Refer to [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/7.0/https-binding-kestrel) for more details.
 
-## Update Process
+## Update process
 
 The process of updating to .NET 8 includes:
 
@@ -32,7 +32,7 @@ The process of updating to .NET 8 includes:
 1. [Updating Virto Commerce Platform and modules](upgrading-to-net8.md#update-virto-commerce-platform-and-modules).
 1. [Updating custom modules](upgrading-to-net8.md#update-custom-modules).
 
-### Update Virto Commerce Platform and Modules
+### Update Virto Commerce Platform and modules
 
 === "Using 'vc-build Update' command"
 
@@ -50,7 +50,7 @@ The process of updating to .NET 8 includes:
 
 Download platform and modules updates to version 3.800+. This method provides more control over the update process, allowing for a step-by-step transition.
 
-### Update Custom Modules
+### Update custom modules
 
 If you develop a custom module, update can be required prior to update .NET dependencies.
 
@@ -83,14 +83,14 @@ This script automates several tasks, including:
 !!! note
     You can perfrom the above updates manually.
 
-### Build Solution
+### Build solution
 
 1. Build the solution and meticulously address any compilation errors and warnings if required. This step ensures that the solution is compatible with the updated framework.
 1. Verify Tests for Issues Perform a thorough verification of tests to identify and address any issues introduced by the update. This step guarantees that the updated solution maintains the expected functionality and performance.
 
 ![step3 build solution](media/updatenet8-step4-build.png)
 
-### Create Module Package
+### Create module package
 
 Generate a module package by running `vc-build Compress`. This step finalizes the update process, creating a package that encapsulates the updated modules for deployment.
 

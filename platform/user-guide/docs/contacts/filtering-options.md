@@ -6,7 +6,7 @@ To find the required contacts, you can:
 * [Add your own filter.](filtering-options.md#new-filter)
 * [Search items by keyword.](filtering-options.md#keyword-search)
 
-## Default Filters
+## Default filters
 
 The default filter allows users to filter the contact list by:
 
@@ -16,7 +16,7 @@ The default filter allows users to filter the contact list by:
 
 ![Advanced filter](media/filtering1.png)
 
-## New Filter
+## New filter
 
 To add a new filter:
 
@@ -31,7 +31,7 @@ To add a new filter:
 
 ![Filter added](media/filtering-result.png)
 
-## Keyword Search
+## Keyword search
 
 Keyword search operates based on:
 

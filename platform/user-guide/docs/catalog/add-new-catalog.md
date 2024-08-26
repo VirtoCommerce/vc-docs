@@ -12,14 +12,14 @@ You can readily differentiate physical catalogs from virtual ones through their 
 !!! note
 	Fulfillment centers are relevant to physical products only. If a store sells digital content, such as software or music, it does not need such centers.
 
-## Physical Catalogs
+## Physical catalogs
 
 A physical catalog is an online inventory of products or services that a company presents. These products can be categorized, where each product may belong to a single category or can directly belong to a catalog without being associated with any specific category.
 
 !!! note
 	You can assign only one physical catalog to a store.
 
-## Virtual Catalogs
+## Virtual catalogs
 
 Virtual catalogs are created on the basis of one or more physical catalogs. A virtual catalog serves as a platform to showcase goods, technically representing a collection of diverse items selected from various physical catalogs.
 
@@ -27,7 +27,7 @@ Every virtual catalog requires a unique name not shared by other virtual or phys
 
 Basically, a virtual catalog is a method to visually present products. All items are situated in physical catalogs, which is why they are referred to as such. This also implies that any changes made to an item in a physical catalog will be immediately reflected in the associated virtual catalogs.
 
-### View Catalogs
+### View catalogs
 
 To view a catalog:
 
@@ -39,7 +39,7 @@ To view a catalog:
 
 Now you see the list of products in the catalog.
 
-### Add New Catalog
+### Add new catalog
 
 To add a new catalog:
 
@@ -52,5 +52,3 @@ To add a new catalog:
 	![New catalog](media/add-new-catalog.png)
 
 Your catalog is ready to use!
-
-

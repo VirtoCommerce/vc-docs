@@ -1,4 +1,4 @@
-# Manage products
+# Manage Products
 
 A product is a basic entity that represents an item that can be purchased in an online store. The Catalog module allows you to work with the following types of products 
 

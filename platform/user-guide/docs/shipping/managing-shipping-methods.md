@@ -3,10 +3,10 @@
 Managing shipping methods includes:
 
 * [Selecting available shipping methods from the list.](managing-shipping-methods.md#select-shipping-method)
-* [Editing shipping method.](managing-shipping-methods.md#editing-shipping-methods)
+* [Editing shipping method.](managing-shipping-methods.md#editing-shipping-method)
 * [Selecting tax providers.](managing-shipping-methods.md#configure-tax-provider)
 
-## Select Shipping Method
+## Select shipping method
 
 To select a shiping method:
 
@@ -17,7 +17,7 @@ To select a shiping method:
 
 ![Shipping methods list](media/fixed-rate-shipping-method.png)
 
-## Edit Shipping Methods
+## Edit shipping method
 
 To edit a shipping method:
 
@@ -34,7 +34,7 @@ To edit a shipping method:
 
 Your changes have been applied to the shipment method.
 
-## Configure Tax Provider
+## Configure tax provider
 
 To configure a tax provider:
 

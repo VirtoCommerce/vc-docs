@@ -19,7 +19,7 @@ Virto Commerce includes the following out-of-the-box providers:
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-assets/releases/)
 
 
-## Key Features
+## Key features
 
 The diagram below illustrates the Assets module functionality:
 

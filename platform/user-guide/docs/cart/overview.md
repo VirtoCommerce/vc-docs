@@ -11,7 +11,7 @@ The Cart module:
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-cart/releases)
 
-## Key Features
+## Key features
 
 The Cart module offers:
 

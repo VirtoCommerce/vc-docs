@@ -1,5 +1,6 @@
-﻿
-To protect the tokens it issues, Virto Commerce uses the **encryption credentials to ensure the content of tokens cannot read by malicious parties**. They can be either asymmetric (e.g, an RSA key) or symmetric.
+﻿# Encryption and Signing Credentials
+
+To protect the tokens it issues, Virto Commerce uses the **encryption credentials** to ensure the content of tokens cannot read by malicious parties. They can be either asymmetric (e.g, an RSA key) or symmetric.
 
 ## Use self-signed certificate
 

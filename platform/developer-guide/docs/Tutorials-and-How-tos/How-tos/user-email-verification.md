@@ -9,7 +9,7 @@ Users can verify their email address by clicking a verification link sent to the
 * New user is created in xAPI.
 * New user registers in the Frontend Application UI.
 
-## Email Verification in Platform API
+## Email verification in Platform API
 
 ![Email verification in Platform](media/email-verification.png)
 
@@ -20,7 +20,7 @@ Users can verify their email address by clicking a verification link sent to the
 1. `ConfirmationEmailNotification` notification template is retrieved and filled.
 1. Notification is passed to `INotificationSender.SendNotificationAsync()` for dispatching.
 
-## Email Verification in xAPI
+## Email verification in xAPI
 
 ![Email verification in xAPI](media/email-verification-1.png)
 
@@ -29,7 +29,7 @@ Users can verify their email address by clicking a verification link sent to the
 1. The associated `ApplicationUser` is retrieved and passed to `IStoreNotificationSender.SendUserEmailVerificationAsync()`.
 1. The processing is requested in `SendUserEmailVerificationAsync()` as described in the scenario above.
 
-### Alternative Scenario
+### Alternative scenario
 
 1. A **createUser** mutation is activated. It creates and publishes `CreateUserCommand` via `IMediator.Send()`.
 1. `CreateUserCommand` command is received in `SendVerifyEmailCommandHandler`.
@@ -37,9 +37,9 @@ Users can verify their email address by clicking a verification link sent to the
 1. The processing is requested in `SendUserEmailVerificationAsync()` as described in the scenario above.
 
 
-## Email Verification in Storefront Kit
+## Email verification in Frontend Application Kit
 
-The Storefront kit is an example of Platform API clients.
+The Frontend Application kit is an example of Platform API clients.
 
 ![Email verification in Storefront](media/email-verification-2.png)
 

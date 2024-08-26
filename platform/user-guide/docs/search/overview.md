@@ -27,7 +27,7 @@ The Search module defines common abstractions for indexed search functionality a
     1. Begin by installing the **Search** module, then add the required search provider module.
     1. Alternatively, install the required search provider module, and the **Search** module will be automatically installed alongside it.
 
-## Key Features
+## Key features
 
 With the **Search** module:
 

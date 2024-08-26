@@ -1,4 +1,4 @@
-# Product indexing
+# Product Indexing
 
 Product indexing is used to improve search performance and speed.
 

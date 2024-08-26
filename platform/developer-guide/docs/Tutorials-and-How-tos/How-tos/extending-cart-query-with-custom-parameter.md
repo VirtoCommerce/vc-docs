@@ -1,4 +1,4 @@
-# Extending cart query with custom parameter
+# Extend cart query with custom parameter
 
 
 To extend cart queries and incorporate a custom parameter, such as a contract ID:

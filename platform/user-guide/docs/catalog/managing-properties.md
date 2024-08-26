@@ -1,4 +1,4 @@
-# Managing properties
+# Manage Properties
 
 Custom properties are additional parameters for catalog entities at the following levels:
 
@@ -88,5 +88,3 @@ The property has been deleted.
 To view the list of properties, follow steps 1-4 from the instruction above.
 
 ![Catalog Properties](media/view-properties.png){: width="550" height="550"}
-
-

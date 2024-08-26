@@ -1,4 +1,4 @@
-# Advanced filtering
+# Advanced Filtering
 
 The advanced filter enables users to apply various filter criteria when selecting data for export:
 

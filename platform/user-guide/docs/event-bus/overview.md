@@ -9,7 +9,7 @@ The event description is based on the **CloudEvents** specification, which provi
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-event-bus/releases)
 
 
-## Key Features
+## Key features
 
 The Event Bus module provides:
 
@@ -27,7 +27,7 @@ The diagram below illustrates the functionality of the Event Bus module:
 
 ![Key entities](media/key-entities.png)
 
-## Example Uses for Event Bus
+## Example uses for Event Bus
 
 * **Serverless Application Architectures:** Use Azure Event Grid to trigger serverless functions instantly for tasks like currency exchange when a new price is added to a price list.
 

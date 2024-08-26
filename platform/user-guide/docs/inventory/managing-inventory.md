@@ -1,4 +1,4 @@
-﻿# Edit inventory
+﻿# Edit Inventory
 
 To edit the product's inventory:
 

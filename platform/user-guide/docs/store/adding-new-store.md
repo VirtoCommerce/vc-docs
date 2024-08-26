@@ -1,4 +1,4 @@
-﻿# Add new store
+﻿# Add New Store
 
 To add a new store to your Virto Commerce system:
 

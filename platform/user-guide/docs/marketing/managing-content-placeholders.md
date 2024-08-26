@@ -1,4 +1,4 @@
-# Managing content placeholders
+# Manage Content Placeholders
 
 Managing content placeholders includes:
 

@@ -10,7 +10,7 @@ AvaTax automatically calculates sales and use tax for transactions, invoices, an
 
 [![Release](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-avatax/releases)
 
-## Key Features
+## Key features
 
 The AvaTax Virto's Store module comes with the following features:
 

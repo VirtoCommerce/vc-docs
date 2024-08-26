@@ -1,4 +1,4 @@
-﻿# Inventory module settings
+﻿# Inventory Module Settings
 
 The Inventory module settings include:
 

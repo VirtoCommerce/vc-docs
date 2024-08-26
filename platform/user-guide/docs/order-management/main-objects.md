@@ -20,11 +20,11 @@ To view the list of orders:
 
 1. Select an order from the list to view its details. 
 
-## General Order Information
+## General order information
 
 ![General order information](media/order-fields-1.png)
 
-## Shipment, Payment, AvaTax Information
+## Shipment, payment, AvaTax information
 
 ![Other order information](media/other-order-information.png)
 

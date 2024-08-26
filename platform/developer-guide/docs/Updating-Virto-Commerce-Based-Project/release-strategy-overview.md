@@ -10,7 +10,7 @@ Generally, we have three release channels:
 
 Depending on your needs and development cycle, you can choose a release strategy that suits you best.
 
-## Stable Releases
+## Stable releases
 
 Releases in the **Stable** channel have passed our full regression, E2E and load testing and are recommended for all users to avoid issues and maximize functionality.
 
@@ -22,7 +22,7 @@ When we fix a bug, we release a hotfix for the two latest stable releases.
 
 We recommend using it for maintenance updates and new solution development.
 
-## Edge Releases
+## Edge releases
 
 The **Edge** channel gives you the opportunity to be among the first to try the latest updates, performance enhancements, and new features with minimal risk.
 
@@ -30,13 +30,13 @@ We publish edge releases for various modules on a daily basis. You can find more
 
 We recommend using these releases if you want to stay up to date and get access to some features faster.
 
-## Preview Releases
+## Preview releases
 
 Releases in the **Preview** channel show what we are currently working on. These releases may still have some bugs, as we want to get our new features out to you as quickly as possible.
 
 We usually create a preview release for either PR or Contribution so that we can review and adjust the implementation process early on.
 
-## Outdated Strategy
+## Outdated strategy
 
 Virto Commerce ensures a smooth user migration while improving the quality of the platform. This includes necessary updates that occasionally cause disruption. We manage this by using the Obsolete attribute for deprecated methods and assigning unique DiagnosticIds to track changes and provide clear references for developers.
 
@@ -48,8 +48,6 @@ public void Method1()
 ```
 
 Our approach also ensures a controlled transition period. The `Obsolete` attribute typically remains active for the next two stable releases, giving our partners ample time to adapt their code to the newer alternatives. This approach is in line with our commitment to provide a smooth migration process, giving developers the necessary timeframe to adjust their implementations. 
-
-## Read More
 
 ![Readmore](media/readmore.png){: width="25"} [Install Stable Releases](stable-releases.md)
 

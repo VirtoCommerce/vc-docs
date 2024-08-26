@@ -1,7 +1,7 @@
 ﻿# Create New Module from Template
 In this guide, we will learn how to create your own custom module according to your business or technical needs using the Virto Commerce ecosystem.
 
-## Create Solution from Template
+## Create solution from template
 To run your own Virto Commerce module, you can [create it from scratch](create-new-module-from-scratch.md). However, it is recommended that you do it based on a predefined template. To do this: 
 
 1. Create a source directory or, if you already have one, navigate to it.
@@ -17,7 +17,7 @@ When you are done, you will have your `vc-module-my-cool-module` solution with t
 
 ![Solution Explorer](media/01-solution-explorer.png)
 
-## Work with Database
+## Work with database
 
 Your next step is to connect your module to a database. Specifically, you need to define a model, entity, and repository classes that will constitute the persistent layer.
 
@@ -147,7 +147,7 @@ Your next step is to connect your module to a database. Specifically, you need t
 
 This brings the **InitialMigration.cs** file to the **Data Project Migrations** directory.
 
-## Adding New API
+## Add new API
 
 To define services and an API layer to access the model:
 
@@ -390,7 +390,7 @@ To define services and an API layer to access the model:
         }
     ```
 
-## Test and Debug API
+## Test and debug API
 
 After creating your module, install it from your source and debug it as follows:
 
@@ -415,7 +415,7 @@ After creating your module, install it from your source and debug it as follows:
 
     ![debug](media/03-debugging.png)
 
-## Extend VC Manager with New UI 
+## Extend VC manager with new UI 
 
 Our module template provides scripts to help you extend the Platform Manager UI. You can find these scripts in the **Web Scripts** directory:
 
@@ -515,7 +515,7 @@ To restrict access to an endpoint with a permission, add the **Authorize** attri
 	public async Task<ActionResult<BlogSearchResult>> GetAll()
 ```
 
-## Pack Your Module
+## Pack your module
 
 To build your custom module for distribution, use our Virto Commerce CLI tool:
 
@@ -535,7 +535,7 @@ The result will be as follows:
 !!! note
     The new module package will be created in the **Artifacts** directory. 
 
-## Distribution and Installation
+## Distribution and installation
 
 The module package can be uploaded and installed to the Virto Commerce Platform. To do this:
 

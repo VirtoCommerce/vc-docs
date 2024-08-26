@@ -1,4 +1,4 @@
-# Company members
+# Company Members
 
 The **Company members** section contains a list of the invited company members.
 

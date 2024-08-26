@@ -1,4 +1,4 @@
-# Search options
+# Search Options
 
 Within the Frontend Application, there are two ways to search for products:
 

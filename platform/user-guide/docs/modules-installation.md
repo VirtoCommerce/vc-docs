@@ -7,7 +7,7 @@ Clicking the **Modules** in the main menu opens the **Modules** blade:
 
 ![Modules](media/modules.png)
 
-## Update Modules
+## Update modules
 
 To update modules:
 
@@ -19,7 +19,7 @@ To update modules:
 
 Your modules have been successfully updated.
 
-## Install Modules
+## Install modules
 
 To install modules automatically:
 
@@ -31,7 +31,7 @@ To install modules automatically:
 
 Your modules have been successfully installed.
 
-## Uninstall Modules
+## Uninstall modules
 
 !!! info
     All the Virto Commerce modules are marked with ![tick](media/tick.png){: width="25"}.
@@ -47,7 +47,7 @@ To uninstall the list of the installed modules:
 
 The selected modules have been uninstalled.
 
-## View Modules Info
+## View modules info
 
 To view the module info:
 
@@ -59,7 +59,7 @@ To view the module info:
 
 ![Uninstall](media/modules-view.png)
 
-## Install/ Update Module from File
+## Install/ update module from file
 
 To install/ update module from file:
 

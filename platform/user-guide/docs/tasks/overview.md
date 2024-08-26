@@ -12,7 +12,3 @@ The tasks application is fully integrated with the Virto Commerce platform, whic
 [![Install Tasks application](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-task-management/releases)
 
 [![Install VC Shell](media/install_vc_shell.png)](https://github.com/VirtoCommerce/vc-shell)
-
-
-
-

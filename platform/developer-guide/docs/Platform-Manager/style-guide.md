@@ -22,24 +22,22 @@ Inner module classes should be implemented only as part of the module:
 
 `.element-module {}`
 
-### Style Tiers
+### Style tiers
 
 There are four module style tiers:
 
-* *Reset.css*: The basis of all styles with the default styles reset, fonts set, and base sizes defined. 
-* *Base modules.css*: This tier has base elements, forms, and buttons defined.
-* *Project modules.css*: Module style isolation tier with specific module styles defined.
-* *Cosmetic.css*: Houses minor modifications of colors, as well as links.
+* **Reset.css**: The basis of all styles with the default styles reset, fonts set, and base sizes defined. 
+* **Base modules.css**: This tier has base elements, forms, and buttons defined.
+* **Project modules.css**: Module style isolation tier with specific module styles defined.
+* **Cosmetic.css**: Houses minor modifications of colors, as well as links.
 
 ## Naming conventions
 
-+ Use **-** (hyphen) as a word separator, e.g. `input-field`.
+* Use **-** (hyphen) as a word separator, e.g. `input-field`.
+* Use **_** (underscore) as a logic part separator, e.g., `toolbar_logo`.
+* Use **__** (double underscore) as a modifier separator, e.g., `module_list.__modifier`.
 
-+ Use **_** (underscore) as a logic part separator, e.g., `toolbar_logo`.
-
-+ Use **__** (double underscore) as a modifier separator, e.g., `module_list.__modifier`.
-
-## Module Modifier Example
+## Module modifier example
 
 Let's assume you have the following module defined:
 
@@ -56,5 +54,3 @@ Once you need the module to get the red color theme, you have to add `__red` as 
 ```
 .module.__red {}
 ```
-  
-In order to use the styling properly, you should also become familiar with the [Multilayer CSS organization methodology](http://operatino.github.io/MCSS/en/).

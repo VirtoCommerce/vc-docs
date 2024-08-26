@@ -1,4 +1,4 @@
-# Configuring Multiple Stores with Multiple Domains
+# Configure Multiple Stores with Multiple Domains
 
 With Virto Commerce, you can configure multiple stores with multiple domains in the same environment. This means you can build and manage different websites for various brands or business entities using a single platform and codebase. 
 Configuring multiple stores with multiple domains provides great flexibility and convenience for managing distinct web experiences on the same platform. You can easily set up and configure multiple stores with their own domain names, assign catalogs and price lists, and upload custom themes. 
@@ -21,6 +21,7 @@ For demo purposes, we will use [B2B Theme](https://github.com/VirtoCommerce/vc-t
 1. Configure the DNS settings for each domain associated with the stores. Make sure to update the DNS records to point the domain names (e.g., store1-domain.com, store2-domain.com) to the appropriate IP address or hostname where your Virto Commerce instance is hosted. 
 
 ## Configure Multiple Stores
+
 To configure multiple stores with their own domains in Virto Commerce:
 
 1. Create and configure **Store1**:
@@ -58,7 +59,7 @@ To configure multiple stores with their own domains in Virto Commerce:
     !!! note
         Each store should have its own domain name, such as https://store2-domain.com.
 
-## Share Theme Across Multiple Stores
+## Share theme across multiple stores
 
 It is possible to share the same theme across multiple stores by using the `LiquidThemeEngine:BaseThemePath` setting in the Frontend Application **appsettings.json** file.
 

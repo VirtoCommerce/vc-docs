@@ -14,7 +14,6 @@ Click ![Pencil](media/pencil.png){: width="30" height="30"} to open the list of 
 
 There are following options to process task types:
 
-<hr />
 === "Add"
     To create a new task type:
 

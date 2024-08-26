@@ -1,4 +1,4 @@
-# Notification log
+# Notification Log
 
 You can view a log of:
 

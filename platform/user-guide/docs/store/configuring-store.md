@@ -23,7 +23,7 @@ You can have multiple SEO sets for your store pages. Each set includes meta titl
 
 ![SEO settings](media/SEO.png)
 
-## Fulfillment Centers
+## Fulfillment centers
 
 Clicking on the **Fulfillment Centers** widget opens the list of the store's fulfillment centers. 
 

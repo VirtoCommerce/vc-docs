@@ -1,4 +1,4 @@
-# Manage dynamic content items
+# Manage Dynamic Content Items
 
 Managing synamic content items includes:
 

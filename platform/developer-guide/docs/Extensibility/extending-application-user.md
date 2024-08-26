@@ -1,4 +1,4 @@
-# Extending ApplicationUser
+# Extend ApplicationUser
 
 Extending the `ApplicationUser` entity in the Virto Commerce Platform allows you to add custom fields and behaviors to user profiles. This guide outlines the steps to extend `ApplicationUser` by creating a new class, `ExtendedApplicationUser`, and updating the database context accordingly.
 

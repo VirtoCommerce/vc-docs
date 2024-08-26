@@ -10,7 +10,7 @@ Managing contact entities (companies, employees, customers, and vendors) include
 * [Updating contacts.](managing-contacts.md#import-contacts)
 * [Assigning multiple organizations to contacts and employees.](managing-contacts.md#assign-multiple-organizations-to-contacts-and-employees)
 
-## Add Contacts
+## Add contacts
 
 To add a contact:
 
@@ -36,7 +36,7 @@ To add a contact:
 
 The company appears in the **Companies and Contacts** list.
 
-## Edit Contacts
+## Edit contacts
 
 To edit any previously added contact:
 
@@ -51,7 +51,7 @@ To edit any previously added contact:
 
 The contact has been edited.
 
-## Delete Contacts
+## Delete contacts
 
 To delete a contact:
 
@@ -62,7 +62,7 @@ To delete a contact:
 
 The contact has been deleted.
 
-## Export Contacts
+## Export contacts
 
 !!! note
 	Exporting contacts requires the preinstalled [Customer Export and Import module](../customer-export-import/overview.md). 
@@ -82,7 +82,7 @@ To export contacts into a CSV file:
 
 The contacts have been saved as a CSV file.
 
-## Import Contacts
+## Import contacts
 
 !!! note
 	Importing contacts requires the preinstalled [Customer Export and Import module](../customer-export-import/overview.md). 
@@ -107,11 +107,11 @@ To import contacts into the Contacts module:
 
 Your contacts have been uploaded.
 
-## Update Contacts
+## Update contacts
 
 The procedure for updating contacts is similar to the one for [importing contacts](managing-contacts.md#import-contacts). The system finds organizations by Id or outer Id and updates them. 
 
-## Assign Multiple Organizations to Contacts and Employees
+## Assign multiple organizations to contacts and employees
 
 For corporate accounts in the Frontend Application, you can assign multiple organizations to any contact or employee:
 

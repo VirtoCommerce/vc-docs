@@ -9,7 +9,7 @@ Managing static commission fees includes:
 * [Deleting a static commission.](static-commission-fees.md#delete-static-commission)
 * [Assigning a static commission to a vendor.](static-commission-fees.md#assign-static-commission)
 
-## Add Static Commission
+## Add static commission
 
 To add a new static commission:
 
@@ -27,7 +27,7 @@ To add a new static commission:
 
 The commission has been added.
 
-## Edit Static Commission
+## Edit static commission
 
 To edit a static commission:
 
@@ -39,7 +39,7 @@ To edit a static commission:
 
 The modifications have been saved.
 
-## Delete Static Commission
+## Delete static commission
 
 !!! Note
     Default commission fee can not be deleted.
@@ -54,7 +54,7 @@ To delete a static commission:
 
 The commission has been deleted.
 
-## Assign Static Commission
+## Assign static commission
 
 To assign a static commission fee to a Vendor:
 

@@ -1,4 +1,4 @@
-# Using thumbnails
+# Using Thumbnails
 
 After successfully generating thumbnails for your images, you can access them simply by adding the desired resolution suffix (defined by the options suffix) to the original image URL.
 

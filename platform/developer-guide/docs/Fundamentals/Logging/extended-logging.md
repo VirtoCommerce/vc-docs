@@ -1,6 +1,6 @@
+# Extend Logging
 
-
-The Platform reads Serilog configuration from the appsettings.json and can also be configured from the code. To achieve this, Platform provides `ILoggerConfigurationService` interface that allows users writing and adding their own sinks or making customizations. 
+The Platform reads Serilog configuration from the **appsettings.json** file and can also be configured from the code. To achieve this, Platform provides `ILoggerConfigurationService` interface that allows users writing and adding their own sinks or making customizations. 
 
 ```json title="appsettings.json"
 UseSerilog((context, services, loggerConfiguration) =>

@@ -1,4 +1,4 @@
-# Products lists
+# Products Lists
 
 To add a product to a list:
 

@@ -1,4 +1,4 @@
-# Dynamic content
+# Dynamic Content
 
 With the Dynamic Content feature you can create personalized shopping experiences for your customers. You can deliver customized elements of the shopping journey based on specific conditions or context.
 

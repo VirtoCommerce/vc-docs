@@ -2,7 +2,7 @@
 
 Vendors are the key entities in every marketplace. That’s why it is crucial for the operator to have an extensive and user-friendly way of managing them. To onboard (add) a new vendor, the marketplace operator must collect all the necessary vendor information. After that, the operator can start adding new vendor to a marketplace.
 
-## Add New Vendor
+## Add new vendor
 
 To add a new vendor:
 

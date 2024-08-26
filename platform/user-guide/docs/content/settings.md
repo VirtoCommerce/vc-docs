@@ -1,3 +1,5 @@
+# Settings
+
 To open the Content module settings:
 
 1. Click **Settings** in the main menu.

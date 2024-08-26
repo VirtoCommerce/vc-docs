@@ -6,7 +6,7 @@ The Virto Commerce **Elastic Search 8** module serves as a search engine for the
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-elastic-search-8/releases)
 
-## Key Features
+## Key features
 
 With the Elastic Search 8 module, you can perform:
 

@@ -1,4 +1,4 @@
-# Managing published content
+# Manage Published Content
 
 The published content management feature determines the conditions under which your content is published or displayed on your website or online store.
 

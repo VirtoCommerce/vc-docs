@@ -1,4 +1,4 @@
-# Quote request
+# Quote Request
 
 To request personalized pricing or align bulk orders with negotiated agreements, users can create quote requests:
 

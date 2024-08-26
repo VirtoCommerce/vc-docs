@@ -14,7 +14,7 @@ It supports extended no-code scenarios and category manager settings to enhance 
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-elastic-app-search/releases)
 
-## Key Features
+## Key features
 
 The Elastic App Search module offers:
 

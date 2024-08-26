@@ -6,7 +6,7 @@ The Authorize.Net module provides seamless integration with Authorize.Net using 
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-authorize-net/releases)
 
-## Key Features
+## Key features
 
 The Authorize.net module enables:
 

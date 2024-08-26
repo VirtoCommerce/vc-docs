@@ -1,10 +1,8 @@
 # Maintenance Tasks for SQL
-Virto Commerce uses MS SQL as master data storage. However, modern object-database mappers such as Entity Framework hide all maintenance tasks from developers. 
-While the system operates successfully in development, quality assurance, and acceptance environments, production environments may experience performance degradation due to the regular maintenance requirements of SQL Server databases. This is particularly crucial for e-commerce solutions.
 
 Below are common SQL Server maintenance tasks that you should perform regularly to avoid performance degradation.
 
-## Index Defragmentation and Rebuilding
+## Defragment and rebuild index
 
 Index fragmentation happens when logical order based on the key value doesn't match physical order within pages. Database Engine automatically modifies indexes when inserting, updating or deleting data.  For example, the addition of rows in a table may cause existing pages in rowstore indexes to split to make room for the insertion of new key values. Modifications over time lead to scattered information and fragmented indexes in the database. Heavily fragmented indexes can degrade query performance due to additional I/O required to locate data to which the index points. More I/O slows down the application, particularly during scan operations.
 
@@ -59,7 +57,7 @@ To start index defragmentation and rebuilding:
     DEALLOCATE TableCursor
     ```
 
-## Find and Create Missing Index
+## Find and create missing index
 
 SQL Server keeps up with index statistics behind the scenes. When you use Entity Framework, very easy to skip the required index and decrease the performance of the solution.
 
@@ -110,7 +108,7 @@ SELECT CONVERT (varchar, getdate(), 126) AS runtime,
          (migs.user_seeks + migs.user_scans) DESC
 ```
 
-## Control and Eliminate Long-Running Queries
+## Control and eliminate long-running queries
 
 To find slow and long-running queries, run the script:
 
@@ -147,7 +145,7 @@ ORDER BY  (total_worker_time/execution_count) DESC
 
 ```
 
-## Prune PlatformOperationLog and NotificationMessage Tables
+## Prune PlatformOperationLog and NotificationMessage tables
 
 The recommended retention period for PlatformOperationLog and NotificationMessage is 45 days. This is usually enough to find the reason for the issues. Create a task and run it either nightly or weekly.
 
@@ -182,7 +180,7 @@ DELETE FROM [dbo].[$tableName] WHERE Id = '$($records[$c].Id)'
 }
 ```
 
-## Control Table Size 
+## Control table size 
 
 It is very important to control the size of tables. It takes more time to apply any operation to a larger table. If you have temporary or log tables, don't forget to clean up the expired data.
 
@@ -199,7 +197,7 @@ group by sys.objects.name
 ORDER BY 2 DESC
 ```
 
-## Use Azure SQL Elastic Pool and Multiple Databases Instead of Single One
+## Use Azure SQL Elastic Pool and multiple databases instead of single one
 
 Azure SQL pools are well suited for Virto Commerce solutions. Virto Commerce allows you to create a unique connection string for each module. The more databases you can add to a Pool, the more you're going to save. Depending on your application usage patterns, it's possible to see savings with as few as two S3 databases.
 
@@ -231,7 +229,7 @@ Set your own connection strings for:
 
 It decreases database size and cost, increases performance and simplifies maintenance tasks.
 
-## Use Azure Tools
+## Use Azure tools
 
 Azure supports a big list of the service to improve Maintenance Tasks for SQL Server.
 
@@ -248,7 +246,7 @@ Here is the automatic tuning list:
 
 For more information, read [Automatic tuning in Azure SQL Database and Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/automatic-tuning-overview?view=azuresql).
 
-## Find Blocking Queries in SQL Azure
+## Find blocking queries in SQL Azure
 
 To finding blocking queries in SQL Azure, run:
 
@@ -286,7 +284,7 @@ ORDER BY r.total_elapsed_time desc
 
 ```
 
-## Set Maximum Number of Concurrent Requests and Sessions
+## Set maximum number of concurrent requests and sessions
 
 To set max concurrent request and sessions, run:
 

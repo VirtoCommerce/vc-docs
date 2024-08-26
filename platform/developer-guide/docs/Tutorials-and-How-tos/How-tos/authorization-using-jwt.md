@@ -7,7 +7,7 @@ The guide includes the following steps:
 1. [Creation of self-signed certificates for signature and validation of tokens using OpenSSL.](authorization-using-jwt.md#create-self-signed-certificates-for-signature-and-validate-tokens-using-openssl)
 1. [OAuth2 authorization using client credential flow.](authorization-using-jwt.md#oauth2-authorization-using-client-credential-flow)
 
-## Create Self-signed Certificates for Signature and Validate Tokens Using OpenSSL
+## Create self-signed certificates for signature and validate tokens using openSSL
 
 To create self-signed certificates for signature and validate tokens:
 
@@ -58,7 +58,7 @@ To create self-signed certificates for signature and validate tokens:
     !!! note
         The system does not accept private keys smaller than 2048 Bits.
 
-## OAuth2 Authorization using Client credential flow
+## OAuth2 authorization using client credential flow
 
 To authorize client applications (for example, Frontend Application), use the **Client credential flow** mechanism of OAuth2 protocol:
 

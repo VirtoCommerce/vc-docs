@@ -10,7 +10,7 @@ Managing units of measure includes:
 * [Setting measure unit as default.](managing-units-of-measure.md#set-unit-as-default)
 * [Deleting units.](managing-units-of-measure.md#set-unit-as-default)
 
-## Add New Unit of Measure
+## Add new unit of measure
 
 To add a new unit of measure:
 
@@ -22,7 +22,7 @@ To add a new unit of measure:
 
 Your new unit of measure appears in the list.
 
-## Add Measure Unit to Specific Unit 
+## Add measure unit to specific unit 
 
 To extend a unit from the list with new measure units:
 
@@ -38,7 +38,7 @@ To extend a unit from the list with new measure units:
 
 Your new measure unit has been added.
 
-## Set Unit as Default
+## Set unit as default
 
 The first added measure unit is automatically set as the default. To set another unit as the default:
 

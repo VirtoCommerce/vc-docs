@@ -7,7 +7,7 @@ Let's explore a standard scenario and:
 * [Add new category to the master catalog.](master-catalog.md#add-new-category)
 * [Adding properties to the newly created category.](master-catalog.md#add-new-category)
 
-## Add New Category
+## Add new category
 
 To add a new category to the master catalog (for example, a **robotic lawnmower**):
 
@@ -23,7 +23,7 @@ To add a new category to the master catalog (for example, a **robotic lawnmower*
 
 Your category has been added to the categories and items of master catalog.
 
-## Add Properties to Category
+## Add properties to category
 
 To add properties to the newly created category:
 

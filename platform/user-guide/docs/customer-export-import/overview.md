@@ -14,7 +14,7 @@ With the **Customer Export and Import** module, you can:
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-customer-export-import/releases)
 
-## Key Features
+## Key features
 
 The diagram below illustrates the functionality of the **Customer Export and Import** module:
 

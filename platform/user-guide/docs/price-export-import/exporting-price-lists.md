@@ -17,7 +17,7 @@ To start exporting:
 ![Export pricelists](media/export-pricelists.png)
 
 
-## Export All Prices from Price List
+## Export all prices from price list
 
 To export all prices from a price list:
 
@@ -34,7 +34,7 @@ To export all prices from a price list:
 All prices from the price list have been successfully exported to a CSV file. 
 
 
-## Export Selected Prices from Price List
+## Export selected prices from price list
 
 To export selected prices from a price list:
 
@@ -50,7 +50,7 @@ To export selected prices from a price list:
 The selected prices have been exported to a CSV file.
 
 
-## Export All Prices from Filtered Price List
+## Export all prices from filtered price list
 
 To export all prices from a filtered price list:
 
@@ -73,7 +73,7 @@ To export all prices from a filtered price list:
 
 The prices from a filtered price list have been exported to a CSV file.
 
-## Use Advanced Export
+## Use advanced export
 
 To customize exported information to your needs, use **advanced export**:
 

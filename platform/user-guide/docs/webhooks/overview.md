@@ -8,7 +8,7 @@ You can also configure which fields or parameters to include in the report you r
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-webhooks/releases)
 
-## Key Features
+## Key features
 
 With the Webhooks module:
 

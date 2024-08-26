@@ -1,4 +1,4 @@
-# Managing Webhooks
+# Manage Webhooks
 
 Managing Webhooks includes:
 
@@ -7,7 +7,7 @@ Managing Webhooks includes:
 * [Deleting webhooks from the list.](managing-webhooks.md#delete-webhook)
 
 
-## Create Webhook
+## Create webhook
 
 To create a new webhook:
 
@@ -25,7 +25,7 @@ Your new webhook appears in the webhook list.
 !!! note
     You can create any reasonable number of webhooks you need to track all kinds of events.
 
-## Edit Webhook
+## Edit webhook
 
 To edit a webhook:
 
@@ -36,7 +36,7 @@ To edit a webhook:
 
 The modifications have been applied.
 
-## Delete Webhook
+## Delete webhook
 
 To delete a webhook:
 

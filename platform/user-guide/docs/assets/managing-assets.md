@@ -6,7 +6,7 @@ Managing assets includes:
 * [Organizing files.](managing-assets.md#organize-files)
 * [Searching files.](managing-assets.md#search-files)
 
-## Upload Files
+## Upload files
 
 To upload a file:
 
@@ -26,11 +26,11 @@ To upload a file:
 
 The uploading starts automatically.
 
-## Organize Files
+## Organize files
 
 For your convenience, the files are stored in folders. Choose either the existing folder, or create a new one by clicking **New folder** in the toolbar.
 
-## Search Files
+## Search files
 
 To find a file, type its name in the search field and click <kbd>Enter</kbd>.
 

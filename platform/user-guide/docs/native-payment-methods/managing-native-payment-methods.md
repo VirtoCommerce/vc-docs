@@ -6,7 +6,7 @@ Managing non-integrative payment methods includes:
 * [Viewing and editing methods details.](managing-native-payment-methods.md#view-and-edit-non-integrative-payment-methods-details)
 * [Deleting methods.](managing-native-payment-methods.md#delete-non-integrative-payment-method)
 
-## Create Non-Integrative Payment Method
+## Create non-integrative payment method
 
 To create a new non-integrative payment method: 
 
@@ -28,7 +28,7 @@ To create a new non-integrative payment method:
 
 Your new method has been added to the list.
 
-## View and Edit Non-Integrative Payment Methods Details
+## View and edit non-integrative payment methods details
 
 To view the details of the existing non-integrative payment methods:
 
@@ -43,7 +43,7 @@ To view the details of the existing non-integrative payment methods:
 
 The changes have been saved.
 
-## Delete Non-Integrative Payment Method
+## Delete non-integrative payment method
 
 To delete a non-integrative method:
 
@@ -52,5 +52,3 @@ To delete a non-integrative method:
 1. Click **Delete** in the top toolbar.
 
 The selected method has been deleted.
-
-

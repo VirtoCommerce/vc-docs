@@ -1,4 +1,4 @@
-# Promotion combination policies
+# Promotion Combination Policies
 
 The Virto Commerce Marketing module provides two basic promotion combination policies:  
 

@@ -2,7 +2,7 @@
 
 Expansion into new regions poses significant challenges for B2B ecommerce businesses, particularly concerning associated costs before local market sales commence. Virto Commerce offers a solution to mitigate redundant costs associated with duplicating platforms for each regional market. This article delineates an architectural blueprint for multi-regional stores leveraging the Virto Commerce platform.
 
-## Potential Use Cases
+## Potential use cases
 
 This solution targets multi-regional support with a unified master catalog and centralized management across multiple regions, facilitating scenarios such as:
 
@@ -11,7 +11,7 @@ This solution targets multi-regional support with a unified master catalog and c
 - Multi-country stores with comparable assortments but divergent localized content, such as item names and descriptions.
 - Hybrid configurations combining the above scenarios.
 
-## Architecture Diagram
+## Architecture diagram
 
 ![B2B Multiregional Architecture](media/multiregional-ecommerce.png)
 
@@ -23,7 +23,7 @@ The Virto Commerce backend comprises essential modules (Catalog and Pricelist mo
 
 The Catalog module supports master catalogs, which are physical catalogs that store the master data of product items. These catalogs can be directly assigned to one or multiple regions. However, if the structure and contents of the master catalog do not meet the region's requirements, the Virto Commerce catalog module supports a virtual catalog model. A virtual catalog can be created for a specific region, such as the EU, and contain a subset of items from the master catalog.
 
-## Components Overview
+## Components overview
 
 The following modules are included to discuss a multi-regional ecommerce solution.
 

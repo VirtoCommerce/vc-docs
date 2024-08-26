@@ -1,4 +1,4 @@
-﻿# Managing user accounts
+﻿# Managing User Accounts
 
 Managing user accounts includes:
 

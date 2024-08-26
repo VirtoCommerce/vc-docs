@@ -1,6 +1,8 @@
+# Feature Flags
+
 Feature flags, also known as feature toggles or feature switches, are a powerful technique used in software development to enable or disable features in an application or service. They provide developers with the ability to dynamically control the activation and visibility of features at runtime without deploying new code. This allows for safer experimentation, gradual feature rollouts, and targeted feature releases.
 
-## Benefits of Using Feature Flags
+## Benefits of using feature flags
 
 Integrating feature flags into Virto Commerce Platform and Frontend Application offers several significant benefits:
 
@@ -18,7 +20,7 @@ Integrating feature flags into Virto Commerce Platform and Frontend Application 
 
 [Hub for Feature Flag Driven Development](https://featureflags.io/)
 
-## Example. Create Public Property Based on Google Analytics Module
+## Example. Create public property based on Google Analytics module
 
 The following code snippet demonstrates how to create public properties for the Google Analytics module using the extended `SettingDescriptor`:
 
@@ -40,7 +42,7 @@ public static SettingDescriptor MeasurementId { get; } = new SettingDescriptor
 };
 ```
 
-### XAPI/GraphQL Schema
+### xAPI/GraphQL Schema
 
 To retrieve store settings and module settings via GraphQL queries, you can use the following schema examples:
 
@@ -85,7 +87,7 @@ To retrieve store settings and module settings via GraphQL queries, you can use 
     }
     ``` 
 
-## How to Do GraphQL Call in Virto Commerce Frontend Application
+## How to do GraphQL call in Virto Commerce Frontend Application
 
 In Virto Commerce Frontend Application, you can use GraphQL queries to request modules with public settings. Here's an example of how to check if the Google Analytics module is installed and retrieve its settings.
 

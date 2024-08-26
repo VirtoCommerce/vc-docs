@@ -2,7 +2,7 @@
 
 In this guide, we will explore the process of installing and updating to the latest stable release of Virto Commerce. 
 
-## Install Stable Release
+## Install stable release
 
 To install a stable release
 
@@ -25,7 +25,7 @@ To install a stable release
 
 The latest stable release has been installed.
 
-## Update to Latest Stable Release
+## Update to latest stable release
 
 To update to the latest stable release:
  

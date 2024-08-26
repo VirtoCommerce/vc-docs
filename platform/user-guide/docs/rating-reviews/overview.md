@@ -8,7 +8,7 @@ You can use rating information for sorting and filtering review objects. Ratings
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-customer-review/releases)
 
-## Key Features
+## Key features
 
 The **Ratings and Reviews** module facilitates:
 

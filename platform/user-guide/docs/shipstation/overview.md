@@ -6,7 +6,7 @@ The **ShipStation** module enables synchronizing customer orders with [ShipStati
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-shipstation/releases)
 
-## Key Features
+## Key features
 
 With the ShipStation module, you can:
 

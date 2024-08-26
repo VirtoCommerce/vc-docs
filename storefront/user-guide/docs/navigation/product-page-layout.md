@@ -1,4 +1,4 @@
-# Product page layout
+# Product Page Layout
 
 Product pages display:
 

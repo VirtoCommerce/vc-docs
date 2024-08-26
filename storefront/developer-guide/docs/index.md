@@ -29,7 +29,7 @@
 [![Storefront demo site](media/public-demo-site.png)](https://virtostart-demo-store.govirto.com/)
 
 
-## Technologies Used
+## Technologies used
 
 - **[Vue3](https://vuejs.org/):** Progressive frontend framework with its key features allowing one to build fast applications.
     
@@ -43,7 +43,7 @@
     
 - [**GraphQL**](https://graphql.org/) **:** Use flexible GraphQL queries and mutations to safely work with back end.
 
-## Key Non-functional Features
+## Key non-functional features
 
 - **Development Performance**: Achieve rapid development using the most effective solution. Deploy the SPA in seconds and start modifying code with [HMR features](https://vitejs.dev/guide/api-hmr).
 
@@ -57,7 +57,7 @@
 
 - **Fully Aligned with Virto Commerce Platform**: Integrate the SPA with the [Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform) to support all common B2B and B2C scenarios.
 
-## Key Functionalities
+## Key functionalities
 
 The key functionalities include:
 

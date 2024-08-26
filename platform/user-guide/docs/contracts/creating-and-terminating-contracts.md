@@ -1,5 +1,5 @@
 ﻿
-# Manage contracts
+# Manage Contracts
 
 Managing contracts includes:
 

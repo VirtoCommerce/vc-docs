@@ -1,4 +1,4 @@
-# Manage documents
+# Manage Documents
 
 Managing documents in the Orders module includes:
 

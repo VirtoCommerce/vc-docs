@@ -1,8 +1,8 @@
-# Roles and permissions
+# Roles and Permissions
 
 Proper assignment of roles and permissions ensures that employees have the appropriate access levels to complete their tasks. This article describes assigning roles and permissions to help maintain security and productivity within your organization. 
 
-## Creating roles
+## Create roles
 
 To create a role:
 
@@ -29,7 +29,7 @@ To create a role:
 1. Click **Create** to save changes.
 
 
-## Defining scopes of the roles
+## Define role scopes
 
 To define the scope of the role:
 

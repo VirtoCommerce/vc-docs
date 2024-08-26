@@ -6,7 +6,7 @@ Managing GDPR includes:
 * [Anonymizing personal data.](manage-personal-data.md#anonymize-personal-data)
 * [Downloading personal data.](manage-personal-data.md#download-personal-data)
 
-## Anonymize Personal Data
+## Anonymize personal data
 
 To anonymize personal data according to the customer's request:
 
@@ -25,7 +25,7 @@ The personal data have been anonymized to comply with the customer's request in 
 !!! note 
 	While the customer's login and email will appear as a GUID once anonymized, their address and other personal data will only appear as **Anonymized**. This is because both login and email must still have valid values to store order data, even after anonymization.
 
-## Download Personal Data
+## Download personal data
 
 To download the personal data for demonstration to the customer:
 

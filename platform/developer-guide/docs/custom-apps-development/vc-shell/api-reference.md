@@ -2,7 +2,7 @@
 
 The VcBlade API reference provides detailed information about the props, events, and slots available for the VcBlade component. The following sections outline the different aspects of the VcBlade API:
 
-## VcBlade Component
+## VcBlade component
 
 ### Props
 
@@ -32,20 +32,14 @@ The VcBlade API reference provides detailed information about the props, events,
 | `default`   | Blade content.                                              |
 | `action`    | Any component or data to display in blade header.           |
 
-## useBladeNavigation Composable
+## useBladeNavigation composable
 
 ### Properties
 
-| Name                                           | Description                                                                                     |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `blades` ==ComputedRef<BladeVNode[]>== | An array containing active blade components.        |
-| `currentBladeNavigationData` ==ComputedRef<{
-    onOpen?: (() => void) | undefined;
-    onClose?: (() => void) | undefined;
-    onBeforeClose?: (() => Promise<boolean | undefined>) | undefined;
-    instance: Ref<CoreBladeExposed | null | undefined>;
-    idx: number;
-}>== | An object containing the current blade navigation data. |
+| Name                                                                              | Description                                                                                     |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `blades` `ComputedRef<BladeRouteRecordLocationNormalized \| undefined>`         |  An array containing active blade components on given route.                                    |
+| `currentBladeNavigationData` `ComputedRef<BladeVNode["props"]["navigation"]>`   |  An object containing the current blade navigation data.                                        |
 
 ### Methods
 

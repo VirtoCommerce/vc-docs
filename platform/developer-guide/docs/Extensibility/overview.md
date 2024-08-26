@@ -24,7 +24,7 @@ In particular, Virto Commerce supports:
 
 * [Role-based security and permissions](../Fundamentals/Security/overview.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
 
-## API-based Extensions
+## API-based extensions
 
 These are traditional cloud-based extensions based on API calls and events (hooks). With such extensions, you can use any language or framework for integration and reactive programming. 
 
@@ -39,7 +39,7 @@ We also support two types of event providers:
 * Webhooks: A good point for no development integration.
 * Eventbus: Read for reactive programming and enterprise integrations.
 
-## Native Extensions
+## Native extensions
 
 This is an advanced mode of modular extensions. It is called native because it is a way how Virto Commerce is built internally. 
 
@@ -65,7 +65,7 @@ For example, on the chart below, the Price module extension extends the default 
 ![Price module extension](media/05-price-extension-module.png)
 
 
-### Why It Is Important Not to Modify Code You Do Not Own
+### Do not modify code you do not own
 
 Despite the fact Virto platform is an open-source project, you should at all times avoid direct modification into the source code of modules developed by third parties or VC team. You also should always follow the **Open-Closed Principle** (open for extensions and closed for modifications).
 
@@ -73,11 +73,11 @@ Despite the fact Virto platform is an open-source project, you should at all tim
 
 Here are some benefits you get by following our **Extension concept** and using **Extensible points** our platform provides for customizing your solution:
 
-+ **Seamless delivery:** If you don't have any modifications in the code you do not own, you will avoid merging hell during updates and be able to timely receive new fixes for bugs and security vulnerabilities, along with new functionality even for major updates. The platform team makes every effort to simplify the updating process and not to introduce any breaking changes in new releases. This is a huge advantage, but it is only advantageous to you if you take action on the updates.
+* **Seamless delivery:** If you don't have any modifications in the code you do not own, you will avoid merging hell during updates and be able to timely receive new fixes for bugs and security vulnerabilities, along with new functionality even for major updates. The platform team makes every effort to simplify the updating process and not to introduce any breaking changes in new releases. This is a huge advantage, but it is only advantageous to you if you take action on the updates.
 
-+ **Easier support provision.** Virto's support team can easily reproduce your issues and quickly provide you with the right solutions and answers.
+* **Easier support provision.** Virto's support team can easily reproduce your issues and quickly provide you with the right solutions and answers.
 
-### Seamless Delivery 
+### Seamless delivery 
 
 Usually, customization or extensibility means a complex update process. If you customize the default implementation, you need to support it by yourself. Getting updates from the vendor and redeveloping them to extend the functionality for the customers' needs becomes a time consuming task.
 
@@ -99,7 +99,7 @@ This strategy allows you to receive updates and extend the default implementatio
 !!! warning
     Seamless delivery works properly for all vendor updates, except for the cases when both you and your vendor use the same property name. Our recommendation for such cases is adding a custom prefix or suffix for your custom properties, e.g., `xxxStatus`, where `xxx` is the abbreviation for your solution. 
   
-## Customization Type Comparison
+## Customization type comparison
 The table below will help you understand the differences between various customization types, as well as the advantages and disadvantages of each:
 
 | Type   	| Name             	| Purpose                                 	| When to use                                 	| Advantages                                     	| Disadvantages                     |

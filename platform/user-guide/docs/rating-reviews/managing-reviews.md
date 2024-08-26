@@ -7,13 +7,13 @@ Managing reviews includes:
 * [Moderating reviews.](managing-reviews.md#moderate-reviews)
 * [Email review reminders.](managing-reviews.md#email-review-reminders)
 
-## View Reviews
+## View reviews
 
 To view the list of submitted reviews, click **Rating and Reviews** in the main menu:
 
 ![Review list](media/view-reviews-list.png)
 
-## View Average Rating
+## View average rating
 
 To view the products' average rating:
 
@@ -26,7 +26,7 @@ To view the products' average rating:
 
 In our case, the product has received 2 reviews with an average rating of 3.5 out of 5.
 
-## Moderate Reviews
+## Moderate reviews
 
 Moderating reviews is crucial because it allows you to remove unwanted content and protect your store from spam. To moderate reviews:
 
@@ -40,14 +40,14 @@ Moderating reviews is crucial because it allows you to remove unwanted content a
 
 ![Moderating reviews](media/moderating-ratings.png)
 
-## Email Review Reminders
+## Email review reminders
 
 To remind a customer to leave a feedback about the purchased order:
 
 1. [Configure Order request review notification.](managing-reviews.md#configure-order-request-review-notifications)
 1. [Enable Email Review Reminder option.](managing-reviews.md#email-review-reminders)
 
-### Configure Order Request Review Notifications
+### Configure order request review notifications
 
 To configure order request review notifications:
 
@@ -61,7 +61,7 @@ To configure order request review notifications:
 !!! note
     You can [customize your notifications for a specific store](../store/settings.md).
 
-### Enable Email Review Reminder
+### Enable email review reminder
 
 To enable email review reminder:
 

@@ -25,7 +25,7 @@ The rule to manage dynamic associations has been created.
     Related products can also be set manually using the **Associations** widget of the [Catalog module](../catalog/managing-products.md).
 
 
-## Set Main Parameters for Rule
+## Set main parameters for rule
 
 To set the applicability of the rule:
 
@@ -43,7 +43,7 @@ To set the applicability of the rule:
 The rule's applicability has been set.
 
 
-## Manage Products to Match
+## Manage products to match
 
 To set the products with which the promoted item will appear:
 
@@ -65,7 +65,7 @@ To set the products with which the promoted item will appear:
 
 The products with which the promoted item will appear has been set.
 
-## Manage Products to Display
+## Manage products to display
 
 To set a product for promotion:
 
@@ -87,7 +87,7 @@ To set a product for promotion:
  
 The product to promote has been selected.
 
-## Tune Output
+## Tune output
 
 To narrow down the output of associated products:
 

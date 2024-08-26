@@ -1,6 +1,6 @@
 # Localization
 
-In this article, we'll explore how to configure countries and regions within Virto Commerce. These configurations are vital for tailoring the platform to specific geographic regions and localizations. We will explore how to customize the countries list, update regions, and manage localization for both country and region names.
+This article demonstrates how to configure countries and regions within Virto Commerce. These configurations are vital for tailoring the platform to specific geographic regions and localizations. We will explore how to customize the countries list, update regions, and manage localization for both country and region names.
 
 ## Configuration
 
@@ -13,7 +13,7 @@ Virto Commerce provides countries and regions as configurable lists. The data is
 
 ![Readmore](media/readmore.png){: width="25"} [Configuration settings](../Configuration-Reference/appsettingsjson.md)
 
-### Countries List
+### Countries list
 
 Update the **countries.json** file as needed to customize the countries list. Retain only the countries maintained by your Platform instance and remove all others. For example:
 
@@ -26,7 +26,7 @@ Update the **countries.json** file as needed to customize the countries list. Re
 
 ![Readmore](media/readmore.png){: width="25"} [Current countries.json file](https://github.com/VirtoCommerce/vc-platform/blob/master/src/VirtoCommerce.Platform.Web/localization/common/countries.json)
 
-### Regions List
+### Regions list
 
 Update the **countriesRegions.json** file to add regions for the maintained countries if they're missing. For example:
 

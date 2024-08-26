@@ -1,3 +1,5 @@
+# Settings
+
 To configure the **Webhooks** module settings:
 
 1. Click **Settings** in the main menu.

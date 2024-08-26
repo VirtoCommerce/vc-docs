@@ -6,7 +6,7 @@ The Skyflow module facilitates seamless integration with [SkyFlow](https://www.s
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-skyflow/releases)
 
-## Key Features
+## Key features
 
 * **Unified Credit Card User Experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
 * **PCI Compliance:** Ensure PCI compliance with SkyFlow, simplifying adherence to industry standards for secure payment data handling.

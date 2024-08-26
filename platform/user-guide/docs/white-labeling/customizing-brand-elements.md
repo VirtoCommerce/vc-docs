@@ -1,10 +1,12 @@
+# Customize Brand Elements
+
 To start customizing brand elements:
 
 1. [Enable white labeling feature via the Stores](customizing-brand-elements.md#enable-white-labeling-via-stores) or [the Contacts module.](customizing-brand-elements.md#enable-white-labeling-via-contacts)
 1. [Customize logo and favicon.](customizing-brand-elements.md#customize-logo-and-favicon)
 1. [Customize footer.](customizing-brand-elements.md#customize-footer)
 
-## Enable White Labeling via Stores
+## Enable white labeling via Stores
 
 To enable white labeling via the **Stores** module:
 
@@ -17,7 +19,7 @@ To enable white labeling via the **Stores** module:
 
 You can start using white labeling.
 
-## Enable White Labeling via Contacts
+## Enable white labeling via Contacts
 
 To enable white labeling via the **Contacts** module:
 
@@ -30,7 +32,7 @@ To enable white labeling via the **Contacts** module:
 
 White labeling has been enabled.
 
-## Customize Logo and Favicon
+## Customize logo and favicon
 
 To start using white labeling:
 
@@ -43,7 +45,7 @@ Your changes have been applied.
 
 ![Before and after white labeling](media/before-after.png)
 
-## Customize Footer
+## Customize footer
 
 To enable personalized footer content for your organization by white labeling, follow these steps:
 

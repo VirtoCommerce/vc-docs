@@ -2,7 +2,7 @@
 
 In this guide, we are going to explore the marketer's role and permissions that can be assigned to them. The marketer's role in online commerce primarily revolves around crafting strategies to attract and engage customers. They focus on creating dynamic associations between products and running promotions to optimize sales and enhance the shopping experience.
 
-## Assign Permissions to Marketer
+## Assign permissions to marketer
 
 To assign permissions to your marketer:
 
@@ -41,7 +41,7 @@ In our case, the list of basic permissions to be assigned to your marketer can b
 
 * **Store related permissions** to view store data. The scope of this permission can be limited to one or more stores.
 
-### Limit Permission Scope
+### Limit permission scope
 
 With the Virto Commerce Platform, you can limit scopes of specific permissions to specific catalogs, organizations, or stores. Let's explore how to limit marketer's permissions to specific catalogs:
 

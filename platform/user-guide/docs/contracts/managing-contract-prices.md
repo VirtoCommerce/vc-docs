@@ -1,4 +1,4 @@
-﻿# Manage contract prices 
+﻿# Manage Contract Prices 
 
 Managing contract prices includes:
 

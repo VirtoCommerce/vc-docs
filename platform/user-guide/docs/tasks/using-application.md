@@ -1,4 +1,4 @@
-# Using the Tasks application
+# Use Tasks Application
 
 To start using the Tasks application, сlick  ![Apps-menu](media/app-menu.png){: width="25" height="25"}  to open the applications menu.
 
@@ -12,7 +12,7 @@ All tasks can be filtered by:
 * Priority.
 * Due date.
 
-## Creating tasks
+## Create tasks
 
 To create a new task:
 
@@ -37,7 +37,7 @@ The assignee recieves an email notification of the assigned task.
 
 ![Notification](media/notification.png)
 
-## Processing tasks
+## Process tasks
 
 To process the assigned task:
 
@@ -53,8 +53,3 @@ To process the assigned task:
     * Click ![Restore](media/restore.png){: width="25" height="25"} to restore the original version of the task.
     * Click ![Save](media/save.png){: width="30" height="30"} to save changes.
     * Click ![Delete](media/delete.png){: width="25" height="25"} to delete the task.
-
-
-
-
-

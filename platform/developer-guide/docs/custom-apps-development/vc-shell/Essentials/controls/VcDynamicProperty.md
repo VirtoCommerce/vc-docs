@@ -67,7 +67,7 @@ To effectively interact with the component, use the emitted events.
 
 | Event | Parameters | Description |
 | --- | --- | --- |
-| `update:modelValue` | data: { readonly property: T; readonly value: any; readonly dictionary?: any[]; readonly locale?: string } | Emitted when the value of the model changes. |
+| `update:modelValue` | `data: { readonly property: T; readonly value: any; readonly dictionary?: any[]; readonly locale?: string }` | Emitted when the value of the model changes. |
 
 ## Dynamic Views
 
@@ -94,7 +94,7 @@ To incorporate the component into your dynamic applications, define the followin
 | Property and Type                             | Description |
 | --------------------------------------------- | --- |
 | `id` ==string==                             | The unique Id for `vc-dynamic-properties` component. |
-| `component` ==vc-dynamic-properties`==      | Component used in schema. |
+| `component` ==vc-dynamic-properties==      | Component used in schema. |
 | `property` ==string==                       | Property name that is used for binding dynamic properties value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`. |
 | `exclude` ==string[]==                      | An array of property names to exclude from the dynamic properties schema. |
 | `include` ==string[]==                      | An array of property names to include in the dynamic properties schema. |

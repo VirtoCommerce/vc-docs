@@ -11,7 +11,7 @@ The goal of this module is to provide a convenient way for non-technical busines
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-price-export-import/releases)
 
-## Key Features
+## Key features
 
 * Exporting two price lists for comparing.
 * Changing multiple prices in the price list of few hundreds of records in the price list.

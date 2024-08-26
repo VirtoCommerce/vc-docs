@@ -1,4 +1,4 @@
-# Homepage layout
+# Homepage Layout
 
 The homepage can be visually divided into 3 parts:
 

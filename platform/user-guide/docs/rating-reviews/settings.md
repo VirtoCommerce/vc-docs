@@ -6,7 +6,7 @@ The **Rating and reviews** module settings include:
 * [Email review reminder](managing-reviews.md#enable-email-review-reminder).
 * [General settings](settings.md#general-settings).
 
-## General Settings
+## General settings
 
 To configure general settings:
 

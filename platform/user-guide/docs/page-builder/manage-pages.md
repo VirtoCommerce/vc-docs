@@ -6,7 +6,7 @@ Managing pages in Page Builder includes:
 * [Adding content to pages.](manage-pages.md#add-content-to-page)
 * [Publishing and unpublishing pages.](manage-pages.md#publish-or-unpublish-pages)
 
-## Create New Page
+## Create new page
 
 To create a new page using Page Builder:
 
@@ -31,7 +31,7 @@ The page appears in the list of pages with the **.page-draft** extension. After 
 
 You can open it in the browser using the specified permalink.
 
-## Add Content to Page
+## Add content to page
 
 To add content to your page:
 
@@ -49,7 +49,7 @@ To add content to your page:
 
 The added content is saved. Continue adding content until your page is ready for publishing. 
 
-## Publish or Unpublish Pages
+## Publish or unpublish pages
 
 When your page is ready for publishing, click **Publish** in the upper right corner. The page will have the extension **.page**. It will be added to your store website. 
 

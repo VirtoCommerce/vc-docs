@@ -1,4 +1,4 @@
-# Send order information to AvaTax
+# Send Order Information to AvaTax
 
 The order information can be sent to AvaTax:
 

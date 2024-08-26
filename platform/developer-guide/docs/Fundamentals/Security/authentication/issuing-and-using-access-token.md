@@ -1,4 +1,5 @@
-﻿
+﻿# Issue and Use Access Token
+
 The Virto Commerce OAuth 2.0 service provides the following authentication flows:
 
 *   [Client credentials](https://oauth.net/2/grant-types/client-credentials/): Creates a token for an API client.

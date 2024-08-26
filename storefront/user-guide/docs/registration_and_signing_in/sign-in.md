@@ -1,4 +1,4 @@
-# Sign in
+# Sign In
 
 To sign in into the account:
 

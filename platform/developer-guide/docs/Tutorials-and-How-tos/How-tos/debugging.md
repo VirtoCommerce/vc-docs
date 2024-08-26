@@ -1,4 +1,4 @@
-# Debugging VC Code without Source Code
+# Debug VC Code without Source Code
 
 Debugging VC source code is sometimes necessary, since the preferred mode of operation is to work with VC as precompiled binary components when the source is not available.
 
@@ -9,7 +9,7 @@ This section describes the techniques related to debugging that enhance developm
 
 The example below demostrates debugging a third party NuGet package without having acceess to the source code of the library and the local project that references it as a package.
 
-## Debugging with Source Link
+## Debug with Source Link
 
 !!! note
     Source Link technology facilitates .NET assembly debugging of NuGet packages by embedding source control metadata inside the assemblies and package during their creation. This enables developers to debug the package's source code by stepping into it using Visual Studio, provided they have enabled Source Link.
@@ -55,7 +55,7 @@ To start using Source Link for debugging:
 
 Now you can continue debugging the third-party module as it is included into your solution as source code.
 
-## Loading PDB from Public Symbol Servers
+## Load PDB from Public Symbol Servers
 If the third-party component doesn't support Source Link and you haven't loaded the PDB file for the library:
 
 1. Go to **Debug** > **Window** > **Modules** and load symbols of Newtonsoft.Json library manually.

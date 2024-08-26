@@ -6,7 +6,7 @@ The Virto Commerce Builder.io module adds link to Builder.io to the application 
 
 ![Readmore](media/readmore.png){: width="25"} [Integrating custom components with Builder.io](https://www.builder.io/c/docs/custom-components-intro)
 
-## Key Features
+## Key features
 
 With the Builder.io module, you can:
 

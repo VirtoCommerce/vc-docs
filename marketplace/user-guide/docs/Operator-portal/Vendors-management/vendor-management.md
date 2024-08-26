@@ -6,7 +6,7 @@ Operators can manage vendor information from:
 * [Vendor portal.](vendor-management.md#log-in-to-vendor-portal-on-vendor-behalf)
 
 
-## Manage Vendor from Operator Portal
+## Manage vendor from Operator portal
 
 To manage a vendor from the Operator portal:
 
@@ -32,7 +32,7 @@ To manage a vendor from the Operator portal:
 
 Your modifications have been saved.
 
-## Log in to Vendor Portal on Vendor Behalf
+## Log in to Vendor portal on vendor behalf
 
 Operators can access the Vendor зortal on behalf of any registered vendor, allowing them to manage vendor-specific settings, troubleshoot issues, and provide direct support without needing the vendor's login credentials. This feature ensures seamless administrative assistance and enhances the overall efficiency of vendor management.
 

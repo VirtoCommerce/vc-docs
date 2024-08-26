@@ -5,7 +5,7 @@ Managing Authorize.net module includes:
 * [Editing payment method.](manage-authorize-net-module.md#edit-payment-method)
 * [Configuring module settings.](manage-authorize-net-module.md#configure-settings)
 
-## Edit Payment Method 
+## Edit payment method 
 
 To edit Authorize.net payment method:
 
@@ -28,7 +28,7 @@ To edit Authorize.net payment method:
 
 Your modifications have been saved.
 
-## Configure Settings
+## Configure settings
 
 To configure non-confidential module settings:
 

@@ -14,7 +14,7 @@ Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets 
     ![White labeled notification](media/white-labeling-icon.gif)
 
 
-## Send Messages
+## Send messages
 
 To start sending push messages via FCM:
 
@@ -24,7 +24,7 @@ To start sending push messages via FCM:
 1. [Configure the **appsettings.json** file.](firebase-cloud-messaging.md#configure-appsettingsjson)
 1. [Configure the **environments.yml** file.](firebase-cloud-messaging.md#configure-environmentsyml)
 
-### Create Project in Firebase Console
+### Create project in Firebase console
 
 To begin setting up FCM for Virto Commerce:
 
@@ -35,7 +35,7 @@ To begin setting up FCM for Virto Commerce:
 1. Click **Create project**.
 1. Click **Continue** once the project is created.
 
-### Configure Sender Settings
+### Configure sender settings
 
 To configure the sender settings:
 
@@ -54,7 +54,7 @@ To configure the sender settings:
     ![Delete /n characters](media/delete-n-characters.png)
 
 
-### Configure Receiver Settings
+### Configure receiver settings
 
 To configure the receiver settings:
 
@@ -133,7 +133,7 @@ To ensure proper configuration across different environments, update the **envir
       PushMessages__FcmSenderOptions__PrivateKey: fcm-private-key
 ```
 
-## Receive Messages
+## Receive messages
 
 You will start receiving push messages as soon as you approve them:
 

@@ -1,12 +1,11 @@
-# Manage Skyflow Module
+# Manage Skyflow module
 
 Managing Skyflow module includes:
 
 * [Editing payment method.](manage-skyflow-module.md#edit-payment-method)
 * [Configuring module settings.](manage-skyflow-module.md#configure-settings)
 
-
-## Edit Payment Method 
+## Edit payment method 
 
 To edit Skyflow payment method:
 
@@ -29,7 +28,7 @@ To edit Skyflow payment method:
 
 Your modifications have been saved.
 
-## Configure Settings
+## Configure settings
 
 To configure the Skyflow module settings:
 

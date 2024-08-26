@@ -1,4 +1,4 @@
-# Manage returns
+# Manage Returns
 
 Managing returns includes:
 
@@ -25,7 +25,7 @@ To create a return for a particular order:
 
 The return has been created.
 
-# Viewing and Processing Returns
+# View and Process Returns
 
 To process the returns:
 

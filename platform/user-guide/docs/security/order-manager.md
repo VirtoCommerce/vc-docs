@@ -2,7 +2,7 @@
 
 In this guide, we are going to explore the role of an order manager and permissions that can be assigned to them. The order manager is responsible for overseeing and managing orders within the system. 
 
-## Assign Permissions to Order Manager
+## Assign permissions to order manager
 
 To assign permissions to your order manager:
 
@@ -19,7 +19,7 @@ To assign permissions to your order manager:
     ![Add order manager](media/add-order-manager.png)
 
 
-### Limit Permission Scope
+### Limit permission scope
 
 With Virto Commerce Platform, you can limit certain permissions to be assigned only to those responsible for orders or to orders in specific stores. Let's explore how to limit the order manager's permission to update order related data to B2B-store:
 

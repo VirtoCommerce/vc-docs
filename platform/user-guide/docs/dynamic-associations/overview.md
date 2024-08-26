@@ -10,7 +10,7 @@ The evaluation mechanism retrieves associated products by prioritizing the most 
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-dynamic-associations/releases/latest)
 
-## Key Features
+## Key features
 
 With the Dynamic Associations module, you can:
 

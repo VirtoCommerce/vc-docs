@@ -1,4 +1,4 @@
-# Taxes calculation
+# Taxes Calculation
 
 AvaTax automatically calculates sales and use tax for transactions, invoices, and other activity powered by Virto Commerce. Virto Commerce sends transaction data to AvaTax, and AvaTax sends back the tax total. Customers, salespeople, and others can see the tax owed in real time.
 
