@@ -52,7 +52,7 @@ $scope.searchFulfillmentCenters = function (criteria) {
 
 ## Examples
 
-### Data Function 
+### Data function 
 The data function should either return a resource call result (`$promise`) or an array of predefined objects:
 
 ```HTML

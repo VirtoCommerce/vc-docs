@@ -56,33 +56,33 @@ You can easily incorporate the `vc-table` component into your Vue applications u
 
 To customize the appearance and behavior of table, use the following props:
 
-| Property and Type                  | Description                                           |
-| ---------------------------------- |  ---------------------------------------------------- |
-| `columns` ==ITableColumns[]==     | Array of table columns. Required.                               |
-| `items` ==T[]==                   | Array of table items. Default: `[]`. Required.                                 |
-| `itemActionBuilder` ==((item: T) => IActionBuilderResult[])== | Function to build item actions.          |
-| `sort` ==string==                 | Sort key for the table.                               |
-| `multiselect` ==boolean==         | Enable multiselect for the table.                      |
-| `expanded` ==boolean==            | Prop to pass from `expanded` blade prop. Default: `true`                    |
-| `totalLabel` ==string==           | Label for the total count of items.                    |
-| `totalCount` ==number==           | Total count of items. Default: `0`                                  |
-| `pages` ==number==                | Number of pages in the table. Default: `0`                          |
-| `currentPage` ==number==          | Current page in the table. Default: `0`                             |
-| `searchPlaceholder` ==string==    | Placeholder text for the search input.                 |
-| `searchValue` ==string==          | Value of the search input.                             |
-| `loading` ==MaybeRef<boolean>==   | Loading state of the table.                            |
-| `empty` ==StatusImage==           | Image, text and action to display when the table is empty.              |
-| `notfound` ==StatusImage==        | Image, text and action to display when no items are found.              |
-| `header` ==boolean==              | Enable table header. Default: `true`                                   |
-| `footer` ==boolean==              | Enable table footer. Default: `true`                                   |
-| `activeFilterCount` ==number==    | Count of active filters. Default: `0`                               |
-| `selectedItemId` ==string==       | ID of the selected item.                               |
-| `pullToReload` ==boolean==        | Enable pull-to-reload functionality.                   |
-| `resizableColumns` ==boolean==    | Enable resizable columns. Default: `true`                              |
-| `reorderableColumns` ==boolean==  | Enable reorderable columns. Default: `false`                            |
-| `reorderableRows` ==boolean==     | Enable reorderable rows. Default: `false`                              |
-| `stateKey` ==string==             | Key to store the table state. Required.                          |
-| `selectAll` ==boolean==           | Enable select all functionality.                       |
+| Property          | Type                  | Description                                           |
+| ------------------|---------------------- |  ---------------------------------------------------- |
+| `columns`         | `ITableColumns[]`     | Array of table columns. Required.                               |
+| `items`           | `T[]`                 | Array of table items. Default: `[]`. Required.                                 |
+| `itemActionBuilder` | `((item: T) => IActionBuilderResult[])` | Function to build item actions.          |
+| `sort`            | `string`               | Sort key for the table.                               |
+| `multiselect`     | `boolean`             | Enable multiselect for the table.                      |
+| `expanded`        | `boolean`             | Prop to pass from `expanded` blade prop. Default: `true`                    |
+| `totalLabel`      | `string`              | Label for the total count of items.                    |
+| `totalCount`      | `number`              | Total count of items. Default: `0`                                  |
+| `pages`           | `number`              | Number of pages in the table. Default: `0`                          |
+| `currentPage`     | `number`              | Current page in the table. Default: `0`                             |
+| `searchPlaceholder` | `string`            | Placeholder text for the search input.                 |
+| `searchValue`     | `string`              | Value of the search input.                             |
+| `loading`         | `MaybeRef<boolean>`   | Loading state of the table.                            |
+| `empty`           | `StatusImage`         | Image, text and action to display when the table is empty.              |
+| `notfound`        | `StatusImage`         | Image, text and action to display when no items are found.              |
+| `header`          | `boolean`             | Enable table header. Default: `true`                                   |
+| `footer`          | `boolean`             | Enable table footer. Default: `true`                                   |
+| `activeFilterCount` | `number`            | Count of active filters. Default: `0`                               |
+| `selectedItemId` | `string`               | ID of the selected item.                               |
+| `pullToReload`    | `boolean`             | Enable pull-to-reload functionality.                   |
+| `resizableColumns`| `boolean`             | Enable resizable columns. Default: `true`                              |
+| `reorderableColumns` | `boolean`          | Enable reorderable columns. Default: `false`                            |
+| `reorderableRows` | `boolean`             | Enable reorderable rows. Default: `false`                              |
+| `stateKey`        | `string`              | Key to store the table state. Required.                          |
+| `selectAll`       | `boolean`             | Enable select all functionality.                       |
 
 
 ### Emits
@@ -166,17 +166,17 @@ interface ITableColumns {
 
 To incorporate the table into your dynamic applications, define the following properties:
 
-| Property                  | Description                                                                                                                                               |
-| ------------------------- |  -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id` ==string==         | The unique Id for `vc-table` component.                                                                                                                |
-| `component` ==string==  | `vc-table`                                                                                                                                             |
-| `property` ==string==   | Property name that is used for binding table value to blade data. <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.                                                                 |
-| `multiselect` ==boolean== | Enable multiselect for the table.                      |
-| `header` ==boolean==              | Enable table header. Default: `true`                                   |
-| `footer` ==boolean==              | Enable table footer. Default: `true`                                   |
-| `columns` ==ITableColumns[]==              | Array of table columns. Each column has properties like `id`, `title`, `sortable`, `alwaysVisible`, `type`, `customTemplate`, `visible`.                                   |
-| `reorderableRows` ==boolean==     | Enable reorderable rows. Default: `false`                              |
-| `mobileTemplate` =={component: string}==      | Mobile template for the table.                                   |
-| `notFoundTemplate` =={component: string}==        | Not found template for the table.              |
-| `emptyTemplate` =={component: string}==           | Empty template for the table.                    |
-| `visibility` =={component: string}==             | Visibility state for the table.                          |
+| Property          | Type              | Description                                                                                                                                               |
+| ------------------|-------            |  -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`              | `string`          | The unique Id for `vc-table` component.                                                                                                                |
+| `component`       | `string`          | `vc-table`                                                                                                                                             |
+| `property`        | `string`          | Property name that is used for binding table value to blade data. <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.                                                                 |
+| `multiselect`     | `boolean`         | Enable multiselect for the table.                     |
+| `header`          | `boolean`              | Enable table header. Default: `true`             |
+| `footer`          | `boolean`              | Enable table footer. Default: `true`             |
+| `columns`         | `ITableColumns[]`      | Array of table columns. Each column has properties like `id`, `title`, `sortable`, `alwaysVisible`, `type`, `customTemplate`, `visible`.                                   |
+| `reorderableRows` | `boolean`     | Enable reorderable rows. Default: `false`                 |
+| `mobileTemplate`  | `{component: string}`  | Mobile template for the table.                   |
+| `notFoundTemplate` | `{component: string}` | Not found template for the table.                |
+| `emptyTemplate`   | `{component: string}`  | Empty template for the table.                    |
+| `visibility`      | `{component: string}`  | Visibility state for the table.                  |

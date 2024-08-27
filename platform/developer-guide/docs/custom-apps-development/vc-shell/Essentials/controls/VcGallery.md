@@ -49,33 +49,33 @@ You can easily incorporate the `vc-gallery` component into your Vue applications
 
 To customize the appearance and behavior of your component, use the following props:
 
-| Property and Type             | Description                                       |
-| ----------------------------- | ------------------------------------------------- |
-| `images` ==ICommonAsset[]== | Array of images for the gallery.                  |
-| `disabled` ==boolean==      | Indicates if the gallery is disabled.             |
-| `required` ==boolean==      | Indicates if the gallery is required.             |
-| `label` ==string==          | Label for the gallery.                            |
-| `tooltip` ==string==        | Tooltip text for the gallery.                     |
-| `tooltipIcon` ==string==    | Icon for the tooltip. Default: `fas fa-info`      |
-| `uploadIcon` ==string==     | Icon for the upload button. Default: `fas fa-upload` |
-| `multiple` ==boolean==      | Indicates if multiple images can be uploaded.     |
-| `variant` =="gallery"==, =="file-upload"== | Variant of the gallery component. Default: `gallery` |
-| `itemActions` =={preview: boolean, edit: boolean, remove: boolean}== | Actions to be displayed for each image in the gallery. Default: `() => ({ preview: true, edit: true, remove: true })` |
-| `hideAfterUpload` ==boolean== | Indicates if to hide the upload overlay after uploading files. |
-| `rules` ==string==, ==Record<string, unknown>== | Validation rules for the gallery. |
-| `name` ==string==           | Name of the gallery. Default: `Gallery`           |
-| `loading` ==boolean==       | Indicates if the gallery is in a loading state.   |
+| Property          |Type                   | Description                                       |
+| ------------------|-----------------------| ------------------------------------------------- |
+| `images`          |`ICommonAsset[]`       | Array of images for the gallery.                  |
+| `disabled`        |`boolean`              | Indicates if the gallery is disabled.             |
+| `required`        |`boolean`              | Indicates if the gallery is required.             |
+| `label`           |`string`               | Label for the gallery.                            |
+| `tooltip`         |`string`               | Tooltip text for the gallery.                     |
+| `tooltipIcon`     |`string`               | Icon for the tooltip. Default: `fas fa-info`      |
+| `uploadIcon`      |`string`               | Icon for the upload button. Default: `fas fa-upload` |
+| `multiple`        |`boolean`              | Indicates if multiple images can be uploaded.     |
+| `variant`         |`"gallery"`, `"file-upload"` | Variant of the gallery component. Default: `gallery` |
+| `itemActions`     |`{preview: boolean, edit: boolean, remove: boolean}` | Actions to be displayed for each image in the gallery. Default: `() => ({ preview: true, edit: true, remove: true })` |
+| `hideAfterUpload` |`boolean`              | Indicates if to hide the upload overlay after uploading files. |
+| `rules`           |`string`, `Record<string, unknown>` | Validation rules for the gallery. |
+| `name`            |`string`               | Name of the gallery. Default: `Gallery`           |
+| `loading`         |`boolean`              | Indicates if the gallery is in a loading state.   |
 
 ### Emits
 
 To effectively interact with the component, use the emitted events:
 
-| Name               | Parameters                                  | ReturnType | Description                                                                                     |
-| ------------------ | ------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------- |
-| `upload`  | files: `FileList`, startingSortOrder?: `number` | `void`      | Emits files to upload with initial sortOrder. |
-| `sort`    | sorted: `ICommonAsset[]`       | `void`      | Emits an sorted array.               |
-| `edit`    | image: `ICommonAsset`          | `void`      | Emits image to edit.                             |
-| `remove`  | image: `ICommonAsset`        | `void`      | Emits image to remove.                           |
+| Name                  | Parameters                                      | ReturnType  | Description                                   |
+| --------------------- | ----------------------------------------------- | ----------- | ----------------------------------------------|
+| `upload`              | files: `FileList`, startingSortOrder?: `number` | `void`      | Emits files to upload with initial sortOrder. |
+| `sort`                | sorted: `ICommonAsset[]`                        | `void`      | Emits an sorted array.                        |
+| `edit`                | image: `ICommonAsset`                           | `void`      | Emits image to edit.                          |
+| `remove`              | image: `ICommonAsset`                           | `void`      | Emits image to remove.                        |
 
 
 ## Dynamic Views
@@ -112,20 +112,20 @@ interface GallerySchema {
 To incorporate the component into your dynamic applications, define the following properties:
 
 
-| Property and Type                 | Description                                       |
-| --------------------------------  | -----------------------------------------------   |
-| `id` ==string==                 | The unique Id for the `vc-gallery` component.     |
-| `component` ==vc-gallery==      | Component used in schema. |
-| `label` ==string==              | Label for the gallery. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
-| `property` ==string==           | Property name that is used for binding gallery value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
-| `rules` ==IValidationRules==    | Validation rules for the gallery. It uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
-| `tooltip` ==string==            | Tooltip text for the gallery label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
-| `hideAfterUpload` ==boolean==   | Indicates if the upload overlay should be hidden after uploading files. <br> Default: `false` |
-| `actions` =={preview: boolean, edit: boolean, remove: boolean}== | Actions to be displayed on hover for each image in the gallery. <br> Default: `{preview: true, edit: true, remove: true}` |
-| `disabled` =={method: string}== | Disabled state for component, could be used to disable gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `visibility` =={method: string}== | Visibility state for component, could be used to hide gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `update` =={method: string}==   | Method to call when the gallery value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
-| `horizontalSeparator` ==boolean==       | Adds a horizontal separator line after the component. |
+| Property          | Type                      | Description                                       |
+| ------------------|-------------------------- | -----------------------------------------------   |
+| `id`              |`string`                   | The unique Id for the `vc-gallery` component.     |
+| `component`       |`vc-gallery`               | Component used in schema. |
+| `label`           |`string`                   | Label for the gallery. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `property`        |`string`                   | Property name that is used for binding gallery value to blade data.  <br> Supports deep nested properties like `property[1].myProperty`. <br> Additionally, you have the flexibility to bind computed property that returns a value. Computed property should be defined in the blade `scope`.|
+| `rules`           |`IValidationRules`         | Validation rules for the gallery. It uses [VeeValidate](https://vee-validate.logaretm.com/v4/) validation rules. |
+| `tooltip`         |`string`                   | Tooltip text for the gallery label. You can specify the localization key for the `tooltip`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
+| `hideAfterUpload` |`boolean`                  | Indicates if the upload overlay should be hidden after uploading files. <br> Default: `false` |
+| `actions`         |`{preview: boolean, edit: boolean, remove: boolean}` | Actions to be displayed on hover for each image in the gallery. <br> Default: `{preview: true, edit: true, remove: true}` |
+| `disabled`        |`{method: string}`         | Disabled state for component, could be used to disable gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `visibility`      |`{method: string}`         | Visibility state for component, could be used to hide gallery based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `update`          |`{method: string}`         | Method to call when the gallery value is updated. It gets changed value, schema property name and field internal context as arguments. Method should be defined in the blade `scope`. |
+| `horizontalSeparator` |`boolean`              | Adds a horizontal separator line after the component. |
 
 
 #### Example
@@ -147,14 +147,14 @@ interface IUseAssets {
 }
 ```
 
-| Property and Type                                                                                             | Description                                           |
-| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| `upload` ==(files: FileList, uploadPath: string, startingSortOrder?: number) => Promise<ICommonAsset[]>==   | Method for uploading files. Accepts a `FileList` object, an upload path, and an optional starting sort order. Returns a promise that resolves to an array of `ICommonAsset` objects. |
-| `remove` ==(filesToDelete: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[]==             | Method for removing files. Accepts an array of `ICommonAsset` objects to delete and the initial array of `ICommonAsset` objects. Returns an array of `ICommonAsset` objects after removing the specified files. |
-| `edit` ==(updatedFiles: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[]==                | Method for editing files. Accepts an array of `ICommonAsset` objects to update and the initial array of `ICommonAsset` objects. Returns an array of `ICommonAsset` objects after updating the specified files. |
-| `loading` ==ComputedRef<boolean>==                                                                          | Computed property that returns a boolean indicating whether the assets are currently being loaded. |
+| Property              | Type                                                                                             | Description                                           |
+| ----------------------|------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| `upload`              |`(files: FileList, uploadPath: string, startingSortOrder?: number) => Promise<ICommonAsset[]>`    | Method for uploading files. Accepts a `FileList` object, an upload path, and an optional starting sort order. Returns a promise that resolves to an array of `ICommonAsset` objects. |
+| `remove`              |`(filesToDelete: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[]`               | Method for removing files. Accepts an array of `ICommonAsset` objects to delete and the initial array of `ICommonAsset` objects. Returns an array of `ICommonAsset` objects after removing the specified files. |
+| `edit`                |`(updatedFiles: ICommonAsset[], initialAssetArr: ICommonAsset[]) => ICommonAsset[]`                | Method for editing files. Accepts an array of `ICommonAsset` objects to update and the initial array of `ICommonAsset` objects. Returns an array of `ICommonAsset` objects after updating the specified files. |
+| `loading`             |`ComputedRef<boolean>`                                                                             | Computed property that returns a boolean indicating whether the assets are currently being loaded. |
 
-Now let's look at an example of connecting gallery actions in the details composable of a sample `vc-app`:
+Now let's look at the example of connecting gallery actions in the details composable of a sample `vc-app`:
 
 ```typescript title="vc-app/src/modules/offers/composables/useOfferDetails/index.ts" linenums="1"
 import { Image } from "@vc-app/api";

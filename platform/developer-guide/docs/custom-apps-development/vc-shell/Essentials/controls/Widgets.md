@@ -12,12 +12,12 @@ To create a widget, you need to generate a new file within the `components/widge
 
 The widget component is constructed using the `VcWidget` component from the UI kit `@vc-shell/framework`. This component accepts the following parameters as props:
 
-| Property and Type                  | Description                                     |
-| ---------------------------------- | ----------------------------------------------- |
-| `title` ==string==               | The title of the widget.                        |
-| `value` ==string==, ==number== | Count to display.                               |
-| `icon` ==string==                | The widget's icon, using FontAwesome icons set. |
-| `disabled` ==string==            | Disabled state.                                 |
+| Property      |Type                   | Description                                     |
+| --------------|---------------------- | ----------------------------------------------- |
+| `title`       | `string`              | The title of the widget.                        |
+| `value`       | `string`, `number`    | Count to display.                               |
+| `icon`        | `string`              | The widget's icon, using FontAwesome icons set. |
+| `disabled`    | `string`              | Disabled state.                                 |
 
 The widget component, by default, includes the incoming prop `modelValue`, containing the blade context. This context holds the `item` object, which contains data about the current item displayed in the blade, along with other data useful for the widget. The component also features an `update:modelValue` event that facilitates updating the blade context when necessary.
 
@@ -148,7 +148,7 @@ async function clickHandler() {
 
 Since any logic can be implemented in the widget, let's consider its basic version based on this guide. This version opens a new blade when clicking on the widget and also fetches and updates the widget counter using API requests.
 
-=== "Template"
+`= "Template"
 
     ```html
     <template>
@@ -163,7 +163,7 @@ Since any logic can be implemented in the widget, let's consider its basic versi
     </template>
     ```
 
-=== "Script"
+`= "Script"
 
     ```typescript
     import { useAsync, useApiClient, useBladeNavigation } from "@vc-shell/framework";

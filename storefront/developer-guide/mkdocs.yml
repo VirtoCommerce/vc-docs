@@ -21,7 +21,9 @@ nav:
     - Overview: index.md
     - Architecture: architecture.md 
     - Deployment: deployment.md
-    - Migration: migration.md
+    - Migration: 
+        - Overview: migration.md
+        - Migration to Storefrontless Architecture on Azure Cloud: migration-on-azure.md
     - Authentication: 
         - Authentication Types: authentication/authentication-types.md
         - Adding SSO Provider: authentication/adding-sso-provider.md

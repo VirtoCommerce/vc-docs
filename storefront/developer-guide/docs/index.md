@@ -16,7 +16,7 @@
     !!! note
         Current users now have the following options:
 
-        1. Migrate to the new storefrontless architecture [on your own](migration.md) or with our [assistance](https://help.virtocommerce.com/support/home).
+        1. Migrate to the new storefrontless architecture [on your own](migration-on-azure.md) or with our [assistance](https://help.virtocommerce.com/support/home).
         1. Continue using the Storefront with the [1.62 version](https://github.com/VirtoCommerce/vc-theme-b2b-vue/tree/support/1.62), which will receive updates until the end of 2024. After that, while it will still be possible to use the Storefront, no further updates will be provided.
     
     The primary objective of the new Virto Commerce Frontend Architecture is to simplify and expedite the development of ecommerce solutions based on the Virto Commerce Platform. This architecture replaces the custom **vc-storefront** with a standard load balancer, such as **nginx** or **Azure Load Balancer**. All business logic previously handled by **vc-storefront** is now integrated into the Platform through XAPI modules. This change ensures that developing business logic for client applications is now consistent with platform development.

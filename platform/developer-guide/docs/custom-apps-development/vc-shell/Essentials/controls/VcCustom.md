@@ -2,7 +2,6 @@
 
 The custom component allows you to add any component to your Dynamic View blade. It can be a custom Vue component or a third-party component in your custom wrapper.
 
-
 ## Usage
 
 Include the `vc-custom` component in your Vue application:
@@ -54,9 +53,9 @@ interface CustomComponentSchema {
 
 To incorporate the checkbox into your dynamic applications, define the following properties:
 
-| Property                  | Description                                                                                                                                               |
-| ------------------------- |  -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id` ==string==         | The unique Id for `vc-checkbox` component.                                                                                                                |
-| `component` ==string==  | `vc-checkbox`                                                                                                                                             |
-| `name` ==string== | Name of the component to show as custom component. Should be globally registered in your application.                                                                                                                               |
-| `visibility` =={method: string}== | Visibility state for component, could be used to hide checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| Property      | Type                  | Description                                                                                                                                               |
+| --------------|---------------------- |  -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`          |`string`               | The unique Id for `vc-checkbox` component.                                                                                                                |
+| `component`   |`string`               | `vc-checkbox`                                                                                                                                             |
+| `name`        |`string`               | Name of the component to show as custom component. Should be globally registered in your application.                                                                                                                               |
+| `visibility`  |`{method: string}`       | Visibility state for component, could be used to hide checkbox based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |

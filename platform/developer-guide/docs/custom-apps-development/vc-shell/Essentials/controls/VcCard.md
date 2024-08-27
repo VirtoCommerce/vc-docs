@@ -54,14 +54,14 @@ Integrate the `vc-card` component into your Vue applications using a simple temp
 
 To customize the appearance and behavior of cards, use the following props:
 
-| Name and Type                                         | Description                                  |
-|-------------------------------------------------------|----------------------------------------------|
-| `header` ==string==                                 | The header of the component.                 |
-| `icon` ==string==                                   | The icon associated with the component.      |
-| `isCollapsable` ==boolean==                         | Specification whether the component is collapsible. |
-| `isCollapsed` ==boolean==                           | Specification whether the component is initially collapsed. |
-| `fill` ==boolean==                                  | Specification whether the content of the card should fill available space. |
-| `variant` =="default"==, =="success"==, =="danger"==  | The variant of the component.                |
+| Name      | Type                                         | Description                                            |
+|-----------|----------------------------------------------|--------------------------------------------------------|
+| `header`  | `string`                                     | The header of the component.                           |
+| `icon`    | `string`                                     | The icon associated with the component.                |
+| `isCollapsable`| `boolean`                               | Specification whether the component is collapsible.    |
+| `isCollapsed`  | `boolean`                               | Specification whether the component is initially collapsed. |
+| `fill`         | `boolean`                               | Specification whether the content of the card should fill available space. |
+| `variant`      | `"default"`, `"success"`, `"danger"`    | The variant of the component.                |
 
 #### Slots
 
@@ -76,10 +76,10 @@ To enhance the content of the `vc-card` component, use the slot system:
 
 To interact with the `vc-card` component, use the emitted events. The `click` event, triggered when the button is clicked, allows you to implement dynamic behaviors and responses within your application:
 
-| Name      | Parameters        | ReturnType | Description                                                     |
-| --------- | ----------------- | ---------- | --------------------------------------------------------------- |
-| `header:click` | `void` | `void` | Emitted when the header is clicked.                           |
-| `state:collapsed` | isCollapsedSta==boolean== | `void` | Emitted when the card is collapsed or expanded.                           |
+| Name              | Parameters                    | ReturnType | Description                                                   |
+| ----------------- | ----------------------------- | ---------- | --------------------------------------------------------------|
+| `header:click`    | `void`                        | `void`     | Emitted when the header is clicked.                           |
+| `state:collapsed` | `isCollapsedState: boolean`   | `void`     | Emitted when the card is collapsed or expanded.               |
 
 ### Dynamic Views
 
@@ -104,16 +104,16 @@ interface CardSchema {
 
 To incorporate the card into your dynamic applications, define the following properties:
 
-| Property and Type                                 | Description                                                                                                                                   |
-| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id` ==string==                                 | The unique Id for `vc-card` component.                                                                                                        |
-| `component` ==vc-card==                         | Component used in schema.                                                                                                                     |
-| `label` ==string==                              | Card label that is displayed in the header. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                        |
-| `fields` ==ControlSchema[]==                    | Array of schemas for components that will be displayed inside the card.                                                                       |
-| `action` ==ButtonSchema & {method: string}==    | Action button that is displayed in the top right corner of the card. Could be used to trigger some actions.                                   |
-| `collapsible` ==boolean==                       | Specification whether the card should be collapsed.                                                                                           |
-| `visibility`  =={method: string}==              | Visibility state for the component, could be used to hide the card based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
-| `horizontalSeparator` ==boolean==       | Adds a horizontal separator line after the component. |
+| Property              | Type                                 | Description                                                                                                                                   |
+| ----------------------|------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                  | `string`                             | The unique Id for `vc-card` component.                                                                                                        |
+| `component`           | `vc-card`                            | Component used in schema.                                                                                                                     |
+| `label`               | `string`                             | Card label that is displayed in the header. Also available interpolation `{}` syntax based on current element context. You can specify the localization key for the `label`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.                        |
+| `fields`              | `ControlSchema[]`                    | Array of schemas for components that will be displayed inside the card.                                                                       |
+| `action`              | `ButtonSchema & {method: string}`    | Action button that is displayed in the top right corner of the card. Could be used to trigger some actions.                                   |
+| `collapsible`         | `boolean`                            | Specification whether the card should be collapsed.                                                                                           |
+| `visibility`          | `{method: string}`                   | Visibility state for the component, could be used to hide the card based on some conditions. Method or variable should be defined in the blade `scope` and should return a boolean value. |
+| `horizontalSeparator` | `boolean`                            | Adds a horizontal separator line after the component. |
 
 
 ### Example

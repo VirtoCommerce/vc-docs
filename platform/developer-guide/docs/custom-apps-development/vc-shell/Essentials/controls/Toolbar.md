@@ -157,12 +157,12 @@ The Toolbar API provides a structured set of tools for creating dynamic and cust
 
 The `IBladeToolbar` interface defines the properties available for configuring individual toolbar items. Use this interface to customize the appearance and behavior of each toolbar item within your application.
 
-| Property  | Type                                              | Description                                                                                                           |
-|-----------| ----------------------------------------------    |-----------------------------------------------------------------------------------------------------------------------|
-| id        | `string`                                            | The Id of the toolbar item.                                                                                           |
-| icon      | `string` \| `(() => string)`                          | The icon of the toolbar item. It can be a string or a function that returns a string.                                 |
-| disabled    | `boolean` \| `ComputedRef<boolean \| undefined>`    | Whether the toolbar item is disabled.                                                                                 |
-| dropdownItems | `IBladeDropdownItem[]`                          | An array of dropdown items for the toolbar item.                                                                      |
-| title       | `string` \| `Ref<string>`                           | The title of the toolbar item. It can be a string or a ref to a string.                                               |
-| isVisible   | `boolean` \| `Ref<boolean \| undefined>` \| `ComputedRef<boolean \| undefined>`              | Shows if the toolbar item is visible.                                           |
-| clickHandler | `((app?: Record<string, any> \| CoreBladeExposed \| null) => void) \| undefined`       | The click handler function for the toolbar item. It takes an optional app object as a parameter.|
+| Property      | Type                                                                              | Description                                                                                     |
+|---------------| ----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| id            | `string`                                                                          | The Id of the toolbar item.                                                                     |
+| icon          | `string \| (() => string)`                                                        | The icon of the toolbar item. It can be a string or a function that returns a string.           |
+| disabled      | `boolean \| ComputedRef<boolean \| undefined>`                                    | Whether the toolbar item is disabled.                                                           |
+| dropdownItems | `IBladeDropdownItem[]`                                                            | An array of dropdown items for the toolbar item.                                                |
+| title         | `string \| Ref<string>`                                                           | The title of the toolbar item. It can be a string or a ref to a string.                         |
+| isVisible     | `boolean \| Ref<boolean \| undefined> \| ComputedRef<boolean \| undefined>`       | Shows if the toolbar item is visible.                                                           |
+| clickHandler  | `((app?: Record<string, any> \| CoreBladeExposed \| null) => void) \| undefined`  | The click handler function for the toolbar item. It takes an optional app object as a parameter.|
