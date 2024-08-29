@@ -38,7 +38,7 @@ To display notifications as toasts, you can use the `notification` method import
     notification.warning("My warning notification text!");
     ```
 
-### Update Toast
+### Update toast
 
 To update a toast, update its content, type, and timeout. The basic usage looks like this:
 
@@ -63,7 +63,7 @@ function updateToast() {
 }
 ```
 
-### Duplicate Prevention
+### Duplicate prevention
 
 To prevent duplicate toasts, set a `notificationId`:
 
@@ -75,7 +75,7 @@ notification("My notification text!", {
 });
 ```
 
-### Toast Removal
+### Toast removal
 
 You can remove all visible toasts or a specific toast:
 
@@ -137,11 +137,11 @@ watch(
 );
 ```
 
-### Notification Dropdown List
+### Notification dropdown list
 
 All globally registered notification templates are displayed in the notification dropdown list. To register a notification template, you need to create a component that will be used as a template and register it in the module initialization file.
 
-#### Create Custom Notification Templates
+#### Create custom notification templates
 
 Each module can have a notification template that will be displayed in the notification dropdown. If no template is provided, the default template will be used.
 
@@ -208,7 +208,7 @@ Each module can have a notification template that will be displayed in the notif
     ```
 
     !!! note
-        Here, as you can see, we have a `notificationClick` event that is emitted when the notification is clicked. This event is required. If you don't emit it, the notification list will not be closed when the notification is clicked.
+        Here we have a `notificationClick` event that is emitted when the notification is clicked. This event is required. If you don't emit it, the notification list will not be closed when the notification is clicked.
 
 1. Make your template globally available. To do this, add it to the module initialization file when initializing the module:
 

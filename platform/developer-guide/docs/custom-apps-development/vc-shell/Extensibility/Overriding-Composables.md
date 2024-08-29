@@ -10,11 +10,11 @@ With this guide, you will explore how you can substitute, enhance, or add new me
 
 In this guide, we'll employ the example of the `vc-app-extend` project, which augments the functionality of the `vc-app` project located in the `sample` folder.
 
-## Extending Composable
+## Extend composable
 
 You can extend a composable by appending new methods, variables, or computed values. For our example, let's incorporate a new button into the toolbar and establish a new method in the extensible module.
 
-### Creating Overrides
+### Create overrides
 
 Initiate the process by creating overrides for the external module. For more information, please refer to the [Extending Views](../Essentials/dynamic-views/Extending-Views.md) guide. In this illustration, we'll introduce a new button to the toolbar:
 
@@ -40,7 +40,7 @@ export const overrides: OverridesSchema = {
 };
 ```
 
-### Creating Extension Composable
+### Create extension composable
 
 Inside the `src/modules/composables` directory, create a folder named `useOfferDetails` with an `index.ts` file, which will serve as the file for our composable. Initially, this composable will be empty:
 
@@ -50,7 +50,7 @@ export const useOfferDetails = () => {
 }
 ```
 
-### Importing and Extending Composable
+### Import and extend composable
 
 Since we need to extend a composable from an external application, we must import it into our composable file. Import the required modules from the `vc-app` application and destructure the composable method to access its return values:
 
@@ -81,7 +81,7 @@ export const useOfferDetails = (args: {
 
 At this point, we've established a proxy for the `useOfferDetails` composable located in the `Offers` module of the `vc-app` application.
 
-### Adding New Method
+### Add new method
 
 Create a new method named `clickMe` that will be invoked by the newly added toolbar button:
 
@@ -114,7 +114,7 @@ export const useOfferDetails = (args: {
 }
 ```
 
-### Extending the Scope
+### Extend scope
 
 As all new methods need to be exposed within the `scope`, create an `extendedScope` that extends the base `scope`. Since `scope` is reactive, it's convenient to use lodash's `merge` method to maintain reactivity while adding new objects to the `scope`, such as `toolbarOverrides` where we introduce our new method, `clickMe`. Utilize the `UnwrapRef` type from Vue to handle reactivity correctly:
 
@@ -174,7 +174,7 @@ export const useOfferDetails = (args: {
 }
 ```
 
-### Adding the Composable to the Module
+### Add composable to module
 
 Incorporate the extended composable into the module's initialization. Create a file with module initialization in `vc-app-extend/src/modules/offers`, and utilize the `createDynamicAppModule` method for dynamic module initialization. Import your overrides with the new toolbar button and the extended composable. In `createDynamicAppModule`, replace one of the composables from the external module with your extended composable and include your overrides:
 
@@ -200,7 +200,7 @@ export default createDynamicAppModule({
 });
 ```
 
-### Adding Module to Application
+### Add module to application
 
 To include the module in the application, in the `main.ts` file, import the module initializer from the previous step and install it using the Vue `use` method:
 
@@ -220,7 +220,7 @@ async function startApp() {
 startApp()
 ```
 
-### Verifying Result
+### Verify result
 
 After following these steps, you will have extended a composable by adding a new method and a toolbar button to your application.
 

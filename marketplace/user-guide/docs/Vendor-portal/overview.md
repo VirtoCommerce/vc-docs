@@ -6,7 +6,7 @@ Open the Vendor portal homepage to see its structure and main features:
 
 ![Dashboard](media/vendor-portal-dashboard.png)
 
-## Key Features
+## Key features
 
 The key features the Vendor portal suggests for a Vendor are:
 

@@ -70,12 +70,12 @@ interface DynamicDetailsSchema {
 }
 ```
 
-| Property and Type                                  | Description               |
-| -------------------------------------------------- | ------------------------- |
-| `settings` ==SettingsDetails==                   | The settings of the view. |
-| `content` ==[FormContentSchema, WidgetsSchema?]==| The content of the view.  |
+| Property  | Type                                  | Description               |
+| ----------|---------------------------------------| ------------------------- |
+| `settings`|`SettingsDetails`                      | The settings of the view. |
+| `content` |`[FormContentSchema, WidgetsSchema?]`  | The content of the view.  |
 
-#### Schema Settings API
+#### Schema settings API
 
 `SettingsDetails` is an extension of `SettingsBase` with additional settings for `DynamicBladeForm`:
 
@@ -109,17 +109,17 @@ interface SettingsBase {
 }
 ```
 
-| Property and Type                                                 | Description                                                                                                    |
-| ----------------------------------------------------------------- | --------------------------------------------------- |
-| `url`==string==                                                 | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
-| `id`==string==                                                  | The unique Id of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities.   |
-| `localizationPrefix`==string==                                  | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.       |
-| `component` =="DynamicBladeForm"==, =="DynamicBladeList"==    | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br>- `DynamicBladeList` <br>- `DynamicBladeForm`|
-| `composable`==string==                                          | The name of the composable used by the view. This option is required. |
-| `isWorkspace`==boolean==                                        | Specification whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false`             |
-| `toolbar`==object[]==                                           | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
-| `permissions`==string==, ==string[]==                         | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
-| `pushNotificationType`==string==, ==string[]==                | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
+| Property                  | Type                            | Description                                                                                                    |
+| --------------------------|---------------------------------| -------------------------------------------------------------------------------------------------------------- |
+| `url`                     |`string`                         | The URL of the view. This option is required if you want to add the view to the navigation menu or want to access it directly by URL. If you do not specify a URL, the view will be available only as a child view of another view. |
+| `id`                      |`string`                         | The unique Id of the view. This option is required. The ID is used to identify the view in the navigation system and provides scheme overriding capabilities.   |
+| `localizationPrefix`      |`string`                         | The prefix used for localization keys. This option is required. The prefix is used to provide localized content for the view. For example, if you specify the prefix `MyList`, the localization key for the title of the view will be `MyList.Title`. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.       |
+| `component`               |`"DynamicBladeForm"`, `"DynamicBladeList"`    | The name of the Vue component used by the view. This option is required. It could be one of the following values: <br>- `DynamicBladeList` <br>- `DynamicBladeForm`|
+| `composable`              |`string`                         | The name of the composable used by the view. This option is required. |
+| `isWorkspace`             |`boolean`                        | Specification whether the view is a workspace. This option is used to determine which view should be the default view. Default: `false`             |
+| `toolbar`                 |`object[]`                       | An array of objects representing the toolbar buttons. This option is optional. If you do not specify any buttons, the toolbar will not be displayed. Each object in the array must have the following properties: id, title, icon, and method. More info about toolbar creation can be found in the [Toolbar](../controls/Toolbar.md) section. |
+| `permissions`             |`string`, `string[]`             | The permissions required to access the view. This option is optional. If you do not specify any permissions, the view will be available to all users. |
+| `pushNotificationType`    |`string`, `string[]`             | The push notification types associated with the view. This option is optional. If you do not specify any push notification types, the view will not receive any push notifications. |
 
 #### Schema Content API
 
@@ -140,9 +140,9 @@ interface FormContentSchema {
 }
 ```
 
-Where `ControlSchema` is an interface that represents an array of form controls.
+`ControlSchema` is an interface that represents an array of form controls.
 
-![Readmore](../../../media/readmore.png){: width="25"} [Features of Dynamic Views](../dynamic-views/overview.md#features-of-dynamic-views) documentation section.
+![Readmore](../../../media/readmore.png){: width="25"} [Features of Dynamic Views](../dynamic-views/overview.md#features-of-dynamic-views)
 
 ##### WidgetsSchema
 
@@ -170,7 +170,7 @@ The `useDetailsFactory` function return an object with the following properly ty
 
 | Property          | Type                                  | Description                                                                                                       |
 | ----------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `item`            | `Ref<Item` `|` `undefined>`           | The current loaded details item.                                                                                  |
+| `item`            | `Ref<Item | undefined>`               | The current loaded details item.                                                                                  |
 | `loading`         | `Ref<boolean>`                        | Indication whether the data is loading.                                                                            |
 | `validationState` | `ComputedRef<IValidationState<Item>>` | Validation state and methods of the form. <br> More information about [validationState](#validationState) section |
 | `load`            | `AsyncAction<ItemId>`                 | The method used to load the details item.                                                                         |
@@ -180,9 +180,9 @@ The `useDetailsFactory` function return an object with the following properly ty
 This function accepts an object with callback methods `load`, `saveChanges`, `remove`, which you should implement. The `load` method is used for loading the details item. The `saveChanges` method is used for creating or saving the details item. The `remove` method is used for removing the details item.
 
 !!! note
-    The `load`, `saveChanges` and `remove` methods must return a promise.
+    The `load`, `saveChanges`, and `remove` methods must return a promise.
 
-#### Implement composable from `useDetailsFactory`
+#### Implement composable from useDetailsFactory
 
 Let's create a file named `useDetails.ts` in the `composables` folder of your module and add the following code:
 
@@ -269,10 +269,10 @@ UseDetails<IOffer, OfferDetailsScope>;
 This allows you to get proper typing of your composable and data.
 
 
-![Readmore](../../../media/readmore.png){: width="25"} [Blade Scope](#blade-scope)
+![Readmore](../../../media/readmore.png){: width="25"} [Blade scope](#blade-scope)
 
 
-#### Access to Blade Component Props and Events
+#### Access to blade component props and events
 
 All composables created for dynamic views have incoming parameters by default, which are passed from the dynamic views component:
 
@@ -300,7 +300,7 @@ const useDetails = (args: {
 
 Thanks to this, you always have access to all incoming blade parameters and can use `emit` events directly from your composable.
 
-#### Blade Scope
+#### Blade scope
 
 Each composable created for dynamic views can have a `scope`, a special variable which can contain all additional methods, computed values, reactive variables, toolbar overrides that you want to use in your blade.
 
@@ -329,7 +329,7 @@ interface DetailsScope extends DetailsBaseBladeScope {
 }
 ```
 
-#### The `toolbarOverrides` object
+#### toolbarOverrides object
 
 After you define toolbar object in schema, you can add some custom actions to it or change its visibility or disabled state. To do so, use `toolbarOverrides` object in your `scope`:
 
@@ -346,7 +346,7 @@ const useDetails = (args: // ...): UseList => {
 
 ![Readmore](../../../media/readmore.png){: width="25"} [Toolbar schema creation](../../Essentials/controls/Toolbar.md#usage)
 
-#### Default Toolbar Buttons
+#### Default toolbar buttons
 
 `DynamicBladeForm` comes with built-in toolbar buttons that you can utilize. All these toolbar button objects have pre-implemented methods, visibility settings, and disabled states. You just need to add them to your view schema. Additionally, you can override these methods in the `toolbarOverrides` object using their respective names.
 
@@ -354,7 +354,7 @@ The available methods are named `saveChanges` and `remove`.
 
 ![Readmore](../../../media/readmore.png){: width="25"} [Overriding default toolbar methods and properties](../../Essentials/controls/Toolbar.md#binding-properties-and-methods)
 
-#### `validationState` API
+#### validationState API
 
 The `validationState` property is a computed property presented by the `IValidationState` interface:
 
@@ -393,6 +393,6 @@ interface IValidationState<Item> {
 | `resetModified` | `(data: MaybeRef<Item>, updateInitial?: MaybeRef<boolean>) => void` | The method used to reset the modified state and, if needed, override the initial `item` value.         |
 | `validate`      | `FormContext["validate"]`                                           | The Vee-Validate method used to validate the form. <br> ![Readmore](../../../media/readmore.png){: width="25"} [Vee-Validate](https://vee-validate.logaretm.com/v4/api/form#default) |
 
-#### DynamicBladeForm Blade Context
+#### DynamicBladeForm blade context
 
 The `DynamicBladeForm` blade context is an object that contains all methods and properties, returned from composable and settings from view schema.

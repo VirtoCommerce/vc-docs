@@ -4,11 +4,11 @@ You can significantly improve the interactivity and functionality of your applic
 
 In this guide, we will explore the `Offers` module, and specifically, the `useOffersList` and `useOfferDetails` composables that we are extending.
 
-## Extend Views in Other Applications Using Dynamic Views
+## Extend views in other applications using dynamic views
 
 Expanding the views of external applications is accomplished through the creation of a new override schema. In this schema, you specify the unique `id` of the `blade` you intend to extend, the path to the element schema, the index, and the value you intend to add or replace.
 
-### Override Schema Structure
+### Override schema structure
 
 The override schema is an object that can contain two values: `upsert` and `remove`. Both of these values share a common characteristic, which is the requirement for you to specify the path to the schema `value` and the `id` of the blade you intend to modify.
 
@@ -18,7 +18,7 @@ The override schema is an object that can contain two values: `upsert` and `remo
 
 Let's consider these two types of paths:
 
-#### JSONPath Style
+#### JSONPath style
 
 * The path operates similarly to JSONPath and involves obtaining a value based on a specified path within the object. A basic representation of a path looks like this:
 
@@ -28,12 +28,11 @@ Let's consider these two types of paths:
     const path = "a[0].b.c";
     ```
 
-!!! note
-    More info about JSONPath can be found [here](https://goessner.net/articles/JsonPath/).
+![Readmore](media/readmore.png){: width="25"} [JSONPath - XPath for JSON](https://goessner.net/articles/JsonPath/).
 
-#### ID Style
+#### ID style
 
-* The ID style is a more convenient way to specify the `path` to the element you want to modify. This style is based on the unique `id` of the control you want to modify. A basic representation of a path looks like this:
+The ID style is a more convenient way to specify the `path` to the element you want to modify. This style is based on the unique `id` of the control you want to modify. A basic representation of a path looks like this:
 
     ```typescript
     const schema = { a: [{ id: "b", children: [{id: 'c'}] } }];
@@ -175,7 +174,7 @@ export const overrides: OverridesSchema = {
 };
 ```
 
-##### Replace existing control in the schema
+##### Replace existing control in schema
 
 The process of replacing a control in the schema is similar to adding a new one but with some differences:
 

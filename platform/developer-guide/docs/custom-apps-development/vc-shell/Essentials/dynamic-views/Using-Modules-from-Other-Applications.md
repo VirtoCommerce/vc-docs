@@ -4,7 +4,7 @@ This guide explains how to use modules from another custom application in your o
 
 In this guide, we'll use the example of the `vc-app-extend` project, which extends the functionality of the `vc-app` project located in the `sample` folder.
 
-## Add Custom Application
+## Add custom application
 
 To incorporate another custom application into your project:
 
@@ -12,7 +12,7 @@ To incorporate another custom application into your project:
 1. [Configure the external application as a plugin.](Using-Modules-from-Other-Applications.md#initializing-external-modules)
 1. [Create a link in the navigation menu.](Using-Modules-from-Other-Applications.md#adding-a-module-to-the-navigation-menu)
 
-### Install Dependencies
+### Install dependencies
 
 Let's assume you want to include modules from the `vc-app` application into your custom application, `vc-app-extend`. The package that contains these modules from `vc-app` is named `@vc-app/modules`. To add this dependency to your project, use the following command:
 
@@ -20,7 +20,7 @@ Let's assume you want to include modules from the `vc-app` application into your
 yarn add @vc-app/modules
 ```
 
-### Initialize External Modules
+### Initialize external modules
 
 After installing the dependency, you must initialize the `Offers` module from the `@vc-app/modules` package. To do this, navigate to `vc-app-extend/src` and import the package in the `main.ts` file as follows:
 

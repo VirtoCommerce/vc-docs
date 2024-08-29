@@ -2,7 +2,7 @@
 
 Dynamic views enable the creation of new blades using a new style called `schemas`. This approach allows the creation of blades without a template. The built-in view types, such as `DynamicBladeList` and `DynamicBladeForm`, come with built-in templates and basic logic, including pagination, validation, etc. Creating a new module involves generating view schemas, composing logic used by these views, and creating additional custom templates if the built-in ones don't meet your requirements. New modules must adhere to a specific folder structure, which we will explore further in this guide.
 
-## Folder Structure
+## Folder structure
 
 The typical folder structure of modules looks as follows:
 
@@ -23,7 +23,7 @@ The typical folder structure of modules looks as follows:
 
 An example folder structure for the Offers module can be found in the `sample/vc-app` folder in the [@vc-shell](https://github.com/VirtoCommerce/vc-shell) repository.
 
-## Create Schema
+## Create schema
 
 Dynamic views are built according to these principles:
 
@@ -178,7 +178,7 @@ As a result, we will have a table with columns `Name`, `Price`, `Status`, and `C
 
 ### Register view schema
 
-After creating the view schema, you need to register it in the module. To do this, import the view schema into the `index.ts` file of your module and add it to the `schemas` array:
+After creating the view schema, you need to register it in the module. To do this, import the view schema into the **index.ts** file of your module and add it to the `schemas` array:
 
 ```typescript
 /**
@@ -200,4 +200,4 @@ Now, if you go to the URL `/my-list`, you will see the table we created earlier.
 
 After creating the schema, create a composable used in the view schema.
 
-![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm] [Creating composables](../../Extensibility/Overriding-Composables.md) guide.
+![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm. Creating composables](../../Extensibility/Overriding-Composables.md)

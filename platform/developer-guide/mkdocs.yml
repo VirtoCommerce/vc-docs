@@ -579,6 +579,14 @@ nav:
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                 - Essentials:
+                      - Dynamic views:
+                            - Overview: custom-apps-development/vc-shell/Essentials/dynamic-views/overview.md
+                            - DynamicBladeForm: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-Form.md
+                            - DynamicBladeList: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-List.md
+                            - Custom Templates: custom-apps-development/vc-shell/Essentials/dynamic-views/Custom-Templates.md
+                            - Extending Views: custom-apps-development/vc-shell/Essentials/dynamic-views/Extending-Views.md
+                            - Creating Page Schema: custom-apps-development/vc-shell/Essentials/dynamic-views/Creating-Page-Schema.md
+                            - Using Modules from Other Applications: custom-apps-development/vc-shell/Essentials/dynamic-views/Using-Modules-from-Other-Applications.md
                       - Controls:
                             - VcButton: custom-apps-development/vc-shell/Essentials/controls/VcButton.md
                             - VcCard: custom-apps-development/vc-shell/Essentials/controls/VcCard.md
@@ -602,14 +610,6 @@ nav:
                             - VcRating: custom-apps-development/vc-shell/Essentials/controls/VcRating.md
                             - VcCustom: custom-apps-development/vc-shell/Essentials/controls/VcCustom.md
                             - Widgets: custom-apps-development/vc-shell/Essentials/controls/Widgets.md
-                      - Dynamic views:
-                            - Overview: custom-apps-development/vc-shell/Essentials/dynamic-views/overview.md
-                            - DynamicBladeForm: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-Form.md
-                            - DynamicBladeList: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-List.md
-                            - Custom Templates: custom-apps-development/vc-shell/Essentials/dynamic-views/Custom-Templates.md
-                            - Extending Views: custom-apps-development/vc-shell/Essentials/dynamic-views/Extending-Views.md
-                            - Creating Page Schema: custom-apps-development/vc-shell/Essentials/dynamic-views/Creating-Page-Schema.md
-                            - Using Modules from Other Applications: custom-apps-development/vc-shell/Essentials/dynamic-views/Using-Modules-from-Other-Applications.md
                       - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
                       - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
                 - Extensibility:

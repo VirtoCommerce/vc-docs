@@ -30,7 +30,7 @@ This subsection allows you to manage your team members:
 
 ![People](media/people.png)
 
-## Fulfillment Centers
+## Fulfillment centers
 
 This subsection is designed for managing the inventory aspects of your store:
 

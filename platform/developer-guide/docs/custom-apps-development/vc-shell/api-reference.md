@@ -6,16 +6,16 @@ The VcBlade API reference provides detailed information about the props, events,
 
 ### Props
 
-| Prop                                      | Default    | Description                                                                                                                    |
-| ----------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `icon` ==String==                       | undefined  | Font Awesome icon to display in the blade header.                                                                              |
-| `title` ==String==                      | undefined  | Title to display in the blade header.                                                                                          |
-| `subtitle` ==String==                   | undefined  | Subtitle to display in the blade header.                                                                                       |
-| `width` ==Number== ==String==         | "30%"      | The minimum width of the blade in pixels or as a percentage.                                                                   |
-| `expanded` ==Boolean==                  | true       | Handled by the VcVladeNavigation component, the state depends<br>on the number of active blades. You can watch this value<br>to perform actions, such as changing the table layout when two blades are active.|
-| `expandable` ==String==                 | true       | Activates the ability to expand and collapse the component by default.                                                         |
-| `closable` ==String==                   | true       | Determines whether the blade has a close button.                                                                               |
-| `toolbarItems`  ==IBladeToolbar[]==     | () => []   | An array of items to be displayed in the toolbar                                                                               |
+| Prop      | Type                       | Default    | Description                                                                                                                    |
+| ----------|----------------------------| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `icon`    | `String`                   | undefined  | Font Awesome icon to display in the blade header.                                                                              |
+| `title`   | `String`                   | undefined  | Title to display in the blade header.                                                                                          |
+| `subtitle`| `String`                   | undefined  | Subtitle to display in the blade header.                                                                                       |
+| `width`   | `Number`, `String`         | "30%"      | The minimum width of the blade in pixels or as a percentage.                                                                   |
+| `expanded`| `Boolean`                  | true       | Handled by the VcVladeNavigation component, the state depends<br>on the number of active blades. You can watch this value<br>to perform actions, such as changing the table layout when two blades are active.|
+| `expandable` | `String`                | true       | Activates the ability to expand and collapse the component by default.                                                         |
+| `closable` | `String`                  | true       | Determines whether the blade has a close button.                                                                               |
+| `toolbarItems` | `IBladeToolbar[]`     | () => []   | An array of items to be displayed in the toolbar.                                                                               |
 
 ### Events
 
@@ -36,14 +36,14 @@ The VcBlade API reference provides detailed information about the props, events,
 
 ### Properties
 
-| Name                                                                              | Description                                                                                     |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `blades` `ComputedRef<BladeRouteRecordLocationNormalized \| undefined>`         |  An array containing active blade components on given route.                                    |
-| `currentBladeNavigationData` `ComputedRef<BladeVNode["props"]["navigation"]>`   |  An object containing the current blade navigation data.                                        |
+| Name                         | Type                                             | Description                                                                                     |
+| -----------------------------|------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `blades` |`ComputedRef<BladeRouteRecordLocationNormalized \| undefined>`         |  An array containing active blade components on given route.                                    |
+| `currentBladeNavigationData` |`ComputedRef<BladeVNode["props"]["navigation"]>`   |  An object containing the current blade navigation data.                                        |
 
 ### Methods
 
-#### `openBlade`
+#### openBlade
 
 Opens a blade with the specified configuration.
 
@@ -56,15 +56,15 @@ Opens a blade with the specified configuration.
 
     | Name                                           	| Description                                                       	|
     |------------------------------------------------	|-------------------------------------------------------------------	|
-    | `blade` ==BladeConstructor==                   	| Blade component.                                                  	|
-    | `options` (optional) ==ExtractedBladeOptions== 	| Key-value pairs with blade options, extracted from the component. 	|
-    | `param` (optional) ==String==                  	| String with blade parameter.                                      	|
-    | `onOpen` (optional) ==() => void==             	| Method called when the blade is opened.                           	|
-    | `onClose` (optional) ==() => void==            	| Method called when the blade is closed.                           	|
+    | `blade` | `BladeConstructor`                   	| Blade component.                                                  	|
+    | `options` (optional) | `ExtractedBladeOptions` 	| Key-value pairs with blade options, extracted from the component. 	|
+    | `param` (optional) | `String`                  	| String with blade parameter.                                      	|
+    | `onOpen` (optional) | `() => void`             	| Method called when the blade is opened.                           	|
+    | `onClose` (optional) | `() => void`            	| Method called when the blade is closed.                           	|
 
 * Returns: Promise<void | NavigationFailure>
 
-#### `closeBlade`
+#### closeBlade
 
 Closes an opened blade or all opened blades.
 
@@ -76,11 +76,11 @@ Closes an opened blade or all opened blades.
 
     | Name                                    	| Description                           	|
     |-----------------------------------------	|---------------------------------------	|
-    | `index` ==Number==                      	| Id of the opened blade.               	|
+    | `index` | `Number`                      	| Id of the opened blade.               	|
 
 * Returns: ```Promise<boolean>```
 
-#### `onBeforeClose`
+#### onBeforeClose
 
 Allows you to perform actions before closing a blade. If the method returns `false`, the blade will not be closed.
 
@@ -92,11 +92,11 @@ Allows you to perform actions before closing a blade. If the method returns `fal
 
     | Name                                    	| Description                           	|
     |-----------------------------------------	|---------------------------------------	|
-    | `callback` ==() => Promise<boolean | undefined>==                      	| Callback function.               	|
+    | `callback` | `() => Promise<boolean | undefined>`                      	| Callback function.               	|
 
 * Returns: `void`
 
-#### `onParentCall`
+#### onParentCall
 
 Calls any function on the parent blade, if it has been exposed there.
 
@@ -108,13 +108,13 @@ Calls any function on the parent blade, if it has been exposed there.
 
     | Name                       | Description                                                            |
     |---------------------------------|------------------------------------------------------------------------|
-    | `parentExposedMethods` ==Record<string, any>== | Object containing the parent blade's exposed methods. |
-    | `args`  ==IParentCallArgs==   | Object containing the method name, arguments, and an optional callback.|
+    | `parentExposedMethods` | `Record<string, any>` | Object containing the parent blade's exposed methods. |
+    | `args`  | `IParentCallArgs`   | Object containing the method name, arguments, and an optional callback.|
 
 
 * Returns: `void`
 
-#### `routeResolver`
+#### routeResolver
 
 Resolves and generates routes after page reload or accessing via direct link. Used only in Vue router configuration:
 
@@ -143,14 +143,14 @@ const routes = [
 
     | Name                             | Description               |
     |----------------------------------|---------------------------|
-    | `to` ==RouteLocationNormalized== | Vue router's route record |
+    | `to` | `RouteLocationNormalized` | Vue router's route record |
 
 * Returns: `Promise<{
     name: RouteRecordName | undefined;
     params: RouteParams;
 } | undefined> | undefined`
 
-#### `resolveBladeByName`
+#### resolveBladeByName
 
 Allows you to resolve a blade component using its registered name. Supports both runtime and regular blade components.
 
@@ -162,11 +162,11 @@ Allows you to resolve a blade component using its registered name. Supports both
 
     | Name              | Description                                 |
     |-------------------|---------------------------------------------|
-    | `name` ==String== | Blade component name or ID in dynamic views |
+    | `name` | `String` | Blade component name or ID in dynamic views |
 
 * Returns: `BladeInstanceConstructor`
 
-#### `getNavigationQuery`
+#### getNavigationQuery
 
 Returns the URL query for selected blade.
 
@@ -176,7 +176,7 @@ Returns the URL query for selected blade.
 
 * Returns: `Record<string, string | number> | undefined`
 
-#### `setNavigationQuery`
+#### setNavigationQuery
 
 Sets the URL query for selected blade.
 
@@ -200,34 +200,34 @@ Method signatures are as follows:
 * `remove(notificationId?: number | string): void;`
 * `update(notificationId: string | number, options: NotificationOptions): void;`
 
-### NotificationOptions Interface
+### NotificationOptions interface
 
 | Property                              | Description                                        |
 | ------------------------------------- | -------------------------------------------------- |
-| `limit` ==Number==                  | Limit the number of toasts displayed (default 3).  |
-| `pauseOnHover` ==Boolean==          | Pause timeout on hover.                             |
-| `timeout` ==Number== ==Boolean==  | Accept a duration in ms or false (default 3000). |
-| `content` ==String==                | Text to be displayed in toast.                      |
-| `notificationId` ==Number== ==String== | ID of toast notification.                 |
-| `type` ==NotificationType==         | Default value - 'default'.                      |
-| `onOpen` ==<T>(payload: T) => void==| Method called when the toast is opened.   |
-| `onClose` ==<T>(payload: T) => void==| Method called when the toast closes.     |
-| `payload` ==String====Record<string,any>== | Any string or object data used as an argument to the `onOpen` and `onClose` method. |
-| `updateId` ==String== ==Number==  | ID of updated toast notification, used during an update. |
+| `limit` | `Number`                  | Limit the number of toasts displayed (default 3).  |
+| `pauseOnHover` | `Boolean`          | Pause timeout on hover.                             |
+| `timeout` | `Number` | `Boolean`  | Accept a duration in ms or false (default 3000). |
+| `content` | `String`                | Text to be displayed in toast.                      |
+| `notificationId` | `Number` | `String` | ID of toast notification.                 |
+| `type` | `NotificationType`         | Default value - 'default'.                      |
+| `onOpen` | `<T>(payload: T) => void`| Method called when the toast is opened.   |
+| `onClose` | `<T>(payload: T) => void`| Method called when the toast closes.     |
+| `payload` | `String`Record<string,any>` | Any string or object data used as an argument to the `onOpen` and `onClose` method. |
+| `updateId` | `String` | `Number`  | ID of updated toast notification, used during an update. |
 
-## useNotifications Composable
+## useNotifications composable
 
 ### Properties
 
 | Property                                                    | Description                                                               |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `notifications` ==ComputedRef<PushNotification[]>==       | An array containing push notification objects received from the backend.  |
-| `moduleNotifications` ==ComputedRef<PushNotification[]>== | A computed array of notifications that belong to a particular module,<br>specified when initializing the useNotifications function with the notifyType argument. |
+| `notifications` | `ComputedRef<PushNotification[]>`       | An array containing push notification objects received from the backend.  |
+| `moduleNotifications` | `ComputedRef<PushNotification[]>` | A computed array of notifications that belong to a particular module,<br>specified when initializing the useNotifications function with the notifyType argument. |
 
 
 ### Methods
 
-#### `loadFromHistory`
+#### loadFromHistory
 
 Loads the saved notifications history from the backend.
 
@@ -239,12 +239,12 @@ Loads the saved notifications history from the backend.
 
     | Property                                                    | Description                                                               |
     | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
-    | `take` (optional) ==Number==                              | Number of notifications to load.                                          |
+    | `take` (optional) | `Number`                              | Number of notifications to load.                                          |
 
 
 * Returns: `Promise<void>`
 
-#### `addNotification`
+#### addNotification
 
 An internal method used in an embedded `signalR` plugin that adds a received notification to the notifications array.
 
@@ -256,11 +256,11 @@ An internal method used in an embedded `signalR` plugin that adds a received not
 
     | Property                                                    | Description                                                               |
     | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
-    | `message` ==PushNotification==                            | Notification message.                                                     |
+    | `message` | `PushNotification`                            | Notification message.                                                     |
 
 * Returns: `void`
 
-#### `markAsRead`
+#### markAsRead
 
 Marks a particular notification as read.
 
@@ -272,12 +272,12 @@ Marks a particular notification as read.
 
     | Property                                                    | Description                                                               |
     | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
-    | `message` ==PushNotification==                            | Notification message.                                                     |
+    | `message` | `PushNotification`                            | Notification message.                                                     |
 
 
 * Returns: `void`
 
-#### `markAllAsRead`
+#### markAllAsRead
 
 Marks all notifications as read.
 
@@ -287,7 +287,7 @@ Marks all notifications as read.
 
 * Returns: `void`
 
-## VcNotificationTemplate Component
+## VcNotificationTemplate component
 
 | Prop    | Description                  |
 | ------- | ---------------------------- |

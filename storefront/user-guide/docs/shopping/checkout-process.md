@@ -66,4 +66,4 @@ To complete your order:
 
 You can view your orders at **Account --> Orders**.
 
-![Readmore](../media/readmore.png){: width="25"} [Viewing Orders](../account/orders.md)
+![Readmore](../media/readmore.png){: width="25"} [Viewing orders](../account/orders.md)

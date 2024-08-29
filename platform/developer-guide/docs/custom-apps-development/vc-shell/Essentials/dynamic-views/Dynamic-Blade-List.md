@@ -148,7 +148,7 @@ interface SettingsBase {
 | `menuItem` | `{ id?: string; title: string; icon: string; group?: string; priority: number; inGroupPriority?: number; }` | The settings for the navigation menu item. This option is optional. If you do not specify the `menuItem` object, the view will not be added to the navigation menu. More info about menu item creation can be found in the [Navigation/Creating Navigation Menu Items](../navigation.md#creating-navigation-menu-items) section. |
 | `width` | `${number}%` | The width of the collapsed blade. This option is optional. If you do not specify the width, the view will be displayed in 50% width. |
 
-#### Schema Content API
+#### Schema content API
 
 ##### ListContentSchema
 `ListContentSchema` is an interface that contains settings for the tabular list:
@@ -298,7 +298,7 @@ const useList = (args: // ...): UseList => {
 }
 ```
 
-As a result, you will get the following result:
+As a result, you will get the following:
 
 ![FilterCheckbox](../../../media/filter-checkbox.png)
 
@@ -455,7 +455,7 @@ This allows you to get proper typing of your composable and data.
 ![Readmore](../../../media/readmore.png){: width="25"} [Blade Scope](#blade-scope)
 
 
-#### Access to Blade Component Props and Events
+#### Access to blade component props and events
 
 All composables created for dynamic views have incoming parameters by default, which are passed from the dynamic views component:
 
@@ -482,7 +482,7 @@ const useList = (args: {
 
 Thanks to this, you always have access to all incoming blade parameters and can use events `emit` directly from your composable.
 
-#### Blade Scope
+#### Blade scope
 
 Each composable created for dynamic views can have a `scope`, a special variable containing all additional methods, computed values, reactive variables, toolbar overrides that you want to use in your blade.
 
@@ -514,7 +514,7 @@ interface ListScope extends ListBaseBladeScope {
 !!! note
     The `ListBaseBladeScope` interface has an `openDetailsBlade` method to implement. This method is used to open the details blade for the selected item.
 
-#### `openDetailsBlade` Method
+#### openDetailsBlade Method
 
 To open the details blade for a selected item, implement the `openDetailsBlade` method and add it to your `scope` object. With the use of the `openDetailsBlade` method, you can pass additional options to the details blade.
 
@@ -545,7 +545,7 @@ const useList = (args: // ...): UseList => {
 }
 ```
 
-#### The `toolbarOverrides` object
+#### toolbarOverrides object
 
 After you define toolbar object in schema, you can add some custom actions to it or change its visibility or disabled state. To do so, you can use `toolbarOverrides` object in your `scope`:
 
@@ -570,6 +570,6 @@ This method names are: `openAddBlade`, `refresh`, `removeItems`, `save`
 
 ![Readmore](../../../media/readmore.png){: width="25"} [Overriding default toolbar methods and properties](../../Essentials/controls/Toolbar.md#binding-properties-and-methods)
 
-#### DynamicBladeList Blade Context
+#### DynamicBladeList blade context
 
 `DynamicBladeList` blade context is an object that contains all methods and properties, returned from composable and settings from view schema.

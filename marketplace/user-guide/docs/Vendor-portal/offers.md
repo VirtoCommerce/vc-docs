@@ -7,7 +7,7 @@ To complete the product description:
 1. [Add offers to the product.](offers.md#add-offers-to-product)
 1. [Add price tags to the offers.](offers.md#add-price-tags-to-offer)
 
-## Add Offers to Product
+## Add offers to product
 
 You can add offers from the Products sections [to your own](products-management.md#add-offer-to-own-product) or [to another vendor's product](products-management.md#add-offer-to-another-vendors-product). Here is another way to add offers to your own product:
 
@@ -20,7 +20,7 @@ You can add offers from the Products sections [to your own](products-management.
 
 Your offer has been added to the product. Now you can add price tags to the offer.
 
-## Add Price Tags to Offer
+## Add price tags to offer
 
 For various pricing strategies a vendor might set different price tags for a single product:
 

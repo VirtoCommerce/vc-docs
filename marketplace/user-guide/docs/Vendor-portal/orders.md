@@ -6,7 +6,7 @@ The Order segment contains all orders created by the buyers. Here vendors can:
 * [Process orders.](orders.md#process-order) 
 * [Create shipments.](orders.md#create-shipment)
 
-## Edit Order
+## Edit order
 
 To edit the order:
 
@@ -22,7 +22,7 @@ To edit the order:
 
 Your modifications have been applied. 
 
-## Process Order
+## Process order
 
 The newly created orders can be processed as follows:
 
@@ -38,7 +38,7 @@ The newly created orders can be processed as follows:
 ![Readmore](media/readmore.png){: width="25"} [Setting order states and order flows](../Operator-portal/state-machines.md)
 
 
-## Create Shipment
+## Create shipment
 
 To create an order order shipment:
 

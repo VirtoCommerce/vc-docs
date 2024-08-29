@@ -4,7 +4,7 @@ This guide provides a comprehensive overview of the process of replacing APIs in
 
 [![View the source code of the sample project](../../media/source_code.png)](https://github.com/VirtoCommerce/vc-shell/tree/main/sample/vc-app-extend)
 
-## Replacing APIs in Custom Modules of Other Applications
+## Replacing APIs in custom modules of other applications
 
 When developing custom applications, there may be situations where you need to use modules from other applications while ensuring compatibility with your own API. With dynamic views, you have the capability to substitute external APIs with your own without the need to modify the source code of the external application. The fundamental steps to achieve this are as follows:
 
@@ -120,7 +120,7 @@ After generating the API, you need to integrate it into your application. Since 
 
 With these steps completed, your generated API is now ready for use within your project.
 
-### Replacing APIs Used in External Applications
+### Replacing APIs used in external applications
 
 This step guides you on how to replace the API utilized by external applications with the generated API named `@vc-app-extend/api`.
 

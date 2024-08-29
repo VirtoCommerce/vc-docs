@@ -180,7 +180,7 @@ To deploy the Frontend Application on a local machine:
     git clone https://github.com/VirtoCommerce/vc-theme-b2b-vue.git "C:\vc-theme-b2b-vue\"
     ```
 
-1. Check `yarn` version. It should **4.1.0** or higher (not 1.XX.):
+1. Check `yarn` version. It should be **4.1.0** or higher (not 1.XX.):
 
     ```bash
     yarn -v
@@ -211,7 +211,7 @@ Your Frontend Application is now running successfully.
 
 ![Frontend Application running](media/frontend-running.png)
 
-### Build options
+## Build options
 
 Choose the appropriate build command based on your needs:
 
@@ -238,3 +238,54 @@ Choose the appropriate build command based on your needs:
     ```bash
     yarn compress
     ```
+
+
+## Types generation
+
+To keep your project aligned with the GraphQL server, you need to generate the necessary types by running the following command:
+
+```
+yarn generate:graphql
+```
+
+This command performs two key steps:
+
+1. It downloads the **schema.json** file from the GraphQL server located at the `APP_BACKEND_URL`.
+1. It generates the **types.ts** file for both general and independent modules.
+
+Even if independent modules are not installed on the platform, the types can still be generated safely.
+
+## Dependency analysis
+
+The following sections guide you through analyzing bundle sizes and visualizing the dependency graph.
+
+### Bundle size analysis
+
+To optimize your application, it’s important to understand the size of various JavaScript chunks like **vendor.js** and **index.js**. Run the following command to analyze bundle sizes:
+
+```
+yarn generate:bundle-map
+```
+
+The results will be saved in the **artifacts** folder, providing you with a clear overview of your bundle sizes.
+
+### Visualize dependency graph
+
+Use the command below to generate a dependency graph:
+
+```
+yarn generate:dependency-graph
+```
+
+!!! note
+    This command requires specific parameters to run successfully. For example:
+
+    ```
+    yarn generate:dependency-graph client-app/main.ts client-app/shared/account/components/checkout-default-success-modal.vue
+    ```
+
+The generated graph will be saved in the **artifacts** folder for your review.
+
+### Troubleshooting
+
+If you encounter an error such as `dot command not found` on Windows, it's likely due to a missing Graphviz installation. Ensure that [Graphviz](https://graphviz.gitlab.io/download/) is installed on your system to resolve this issue.

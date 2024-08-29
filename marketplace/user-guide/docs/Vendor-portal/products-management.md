@@ -20,7 +20,7 @@ A product can be associated with multiple offers, each of which provides a speci
 |                     |                                       | Clearance Price          | $799.99         | Clearance sale                    |
 |                     |                                       | Flash Sale Price         | $749.99         | Limited-time offer                |
 
-## Add Offer to Another Vendor's Product
+## Add offer to another vendor's product
 
 If you want to add your own offer for a product listed by another vendor:
 
@@ -36,7 +36,7 @@ If you want to add your own offer for a product listed by another vendor:
 
 Your offer has been added to the list of offers for the product. Complete your offer by [adding price tags](offers.md#add-price-tags-to-offer). 
 
-## Add Own Product 
+## Add own product 
 
 To add your own product to the marketplace:
 
@@ -58,7 +58,7 @@ To add your own product to the marketplace:
 Now you can add offer to your product.
 
 
-### Add Offer to Own Product
+### Add offer to own product
 
 After your product has been approved by an Operator portal manager it appears in the list of vendor's products with the **Is published** status. Now you can add your offers (variations) to the published product:
 

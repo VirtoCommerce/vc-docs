@@ -5,7 +5,7 @@ Custom templates are used to customize the appearance of the dynamic views to yo
 !!! note
     To create any custom template mentioned in the schema, you need to create a new file in the `components` folder of your module. For example, if you specified the name `MobileGridView` in the schema, the component export should have the same name. Essentially, custom templates are regular Vue components that can use other components and markup.
 
-## Mobile View Template
+## Mobile view template
 
 The component used as the mobile view template always has incoming parameters - `context`, which is passed from the dynamic view's table.
 
@@ -27,7 +27,7 @@ defineProps<Props>();
 
 You can find an example markup for the mobile view template in the `sample/vc-app` repository in the [@vc-shell](https://github.com/VirtoCommerce/vc-shell/blob/main/sample/vc-app/src/modules/offers/components/OffersMobileGridView.vue) directory.
 
-## Not Found Grid Template
+## NotFoundGridTemplate
 
 The component used as the not found list template serves as a placeholder displayed when nothing is found using the search. It has a `reset` event that can be triggered when the `Reset` button in the dynamic view's table is clicked.
 
@@ -45,7 +45,7 @@ defineEmits<Emits>();
 
 You can find an example markup for the not found list template in the `sample/vc-app` repository in the [@vc-shell](https://github.com/VirtoCommerce/vc-shell/blob/main/sample/vc-app/src/modules/offers/components/OffersNotFoundGridTemplate.vue) directory.
 
-## Empty Grid Template
+## EmptyGridTemplate
 
 The component used as the empty list template serves as a placeholder displayed when the list is empty. It has an `add` event that triggers the creation of a new item in the `DynamicBladeForm` view.
 
@@ -91,7 +91,7 @@ export const details: DynamicDetailsSchema = {
 
 ![Readmore](../../../media/readmore.png){: width="25"} [DynamicBladeForm](Dynamic-Blade-Form.md)
 
-## Register Custom Templates
+## Register custom templates
 
 To use custom templates and components in dynamic views, you need to register them in the global component registry. Import them into the `index.ts` file of your module and register them in the global component registry in the initialization method of the dynamic module using the `moduleComponents` option in the `createDynamicAppModule` function:
 

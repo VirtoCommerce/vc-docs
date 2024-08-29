@@ -41,7 +41,7 @@ The main blades elements are:
 
 
 
-## Quick Start for Navigation
+## Quick start for navigation
 
 To get started with the VC Shell application's navigation system, import the `useBladeNavigation` composable from the `@vc-shell/framework` package:
 
@@ -51,7 +51,7 @@ import { useBladeNavigation } from "@vc-shell/framework";
 
 `useBladeNavigation` is a custom composition API function designed for working with blade navigation. It works hand in hand with the `VcBladeNavigation` component from `@vc-shell/framework`. This component manages the workspace blade of the module and other blades, which may or may not have their paths defined.
 
-### Blade Components Structure
+### Blade components structure
 
 * Each blade comprises a template with a `VcBlade` component serving as the root. The `VcBlade` component is central to creating a blade:
 
@@ -128,7 +128,7 @@ import { useBladeNavigation } from "@vc-shell/framework";
       });
   ```
 
-## Creating Navigation Menu Items
+## Creating navigation menu items
 
 To create a menu item, use the `defineOptions` macro in the blade component. This macro allows you to define the blade's URL and menu item. The menu item is an object with the following interface:
 
@@ -199,7 +199,7 @@ await openBlade({
 })
 ```
 
-## Add Module to Application
+## Add module to application
 
 Once you've created your `blade` template, it needs to be initialized. In the module's `index.ts` file, register it within the application using the `createAppModule` method. With this setup, you're ready to go:
 
@@ -266,7 +266,7 @@ export default createAppModule(pages, locales);
     ```
 
 
-## Navigation Actions
+## Navigation actions
 
 === "Open Blade"
 
@@ -360,9 +360,9 @@ export default createAppModule(pages, locales);
     ```
 
 
-## Overview of All Registered Blades in the Application
+## Overview of all registered blades in application
 
-You can see all `blades` registered in the application with and without paths. To do so, use a browser extension called `Vue Devtools`.
+You can see all blades registered in the application with and without paths. To do so, use a browser extension called `Vue Devtools`.
 
 ![Readmore](../../media/readmore.png){: width="25"} [Vue Devtools](https://devtools.vuejs.org/)
 
