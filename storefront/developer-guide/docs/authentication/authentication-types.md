@@ -1,4 +1,4 @@
-# Authentication types
+# Authentication Types
 
 At the heart of Virto Commerce Frontend’s security is token-based authentication. This approach offers a streamlined way to verify users while maintaining a high level of security. There are two primary methods for obtaining these tokens in Virto Commerce Frontend:
 
@@ -6,6 +6,10 @@ At the heart of Virto Commerce Frontend’s security is token-based authenticati
 
     ![Login-password authentication](media/login-password-authentication.png)
 
-* **Single Sign-On (SSO) via Providers like Azure AD**: For businesses that use Single Sign-On (SSO), Virto Commerce Frontend supports integration with SSO providers such as Azure Active Directory (Azure AD). This method allows users to authenticate using their existing credentials from another trusted provider. Once authenticated through Azure AD or another SSO provider, the platform issues a token that the user can use to access Virto Commerce’s features without needing to log in separately.
+* **Single Sign-On (SSO) via Providers like Azure AD or Google**: For businesses that use Single Sign-On (SSO), Virto Commerce Frontend supports integration with SSO providers such as Azure Active Directory (Azure AD or Entra ID) or Google. This method allows users to authenticate using their existing credentials from another trusted provider. Once authenticated through SSO provider, the platform issues a token that the user can use to access Virto Commerce’s features without needing to log in separately.
 
     ![SSO](media/sso-flow-illustration.png)
+
+![Readmore](media/readmore.png){: width="25"} [Adding Azure AD as SSO provider](adding-sso-provider.md)
+
+![Readmore](media/readmore.png){: width="25"} [Adding Google as SSO provider](adding-google-as-sso-provider.md)

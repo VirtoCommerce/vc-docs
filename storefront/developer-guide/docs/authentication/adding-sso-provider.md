@@ -1,6 +1,6 @@
-# Add SSO Provider
+# Add Azure AD (Entra ID) as SSO Provider
 
-To integrate a new SSO provider (for example, Azure AD (Entra ID)):
+To integrate Azure AD (Entra ID) as a new SSO provider, install the [Azure AD module](https://github.com/VirtoCommerce/vc-module-azure-ad/releases). After that:
 
 1. [Manage backend settings.](azure-ad.md#backend-settings)
 1. [Manage Platform settings.](azure-ad.md#platform-settings)
@@ -16,10 +16,6 @@ set "AzureAd_ApplicationId=86d04c35-143d-4d3c-aca2-8608e2186282"
 set "Azurend…TenantId=bc03e660-5e3a-45c4-bf5c-b75489f78923"
 set "AzureAd…ValidateIssuer=MultitenantAzureAD"
 ```
-
-!!! note
-    If a module does not exist yet, create it according to the [guide](../../../../platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module).
-
 
 ## Platform settings
 

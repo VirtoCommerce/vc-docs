@@ -22,6 +22,10 @@ To edit the order:
 
 Your modifications have been applied. 
 
+!!! note
+    The order image tells you how many items are in the order:
+    ![Number of items in order](media/marketplace-items.png)
+
 ## Process order
 
 The newly created orders can be processed as follows:

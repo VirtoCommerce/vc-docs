@@ -555,7 +555,40 @@ This node configures frontend security settings.
 }
 ```
 
+### Google
 
+This node is used for authentication with Google OAuth 2.0.
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
+
+
+| Node                   | Default or Sample Value   | Description                                                                                                       |
+| ---------------------- | --------------------------| ----------------------------------------------------------------------------------------------------------------- |
+| Enabled                | false<br> true            | Enables authentication with Google OAuth 2.0. By default, this value is **false**, i.e., authentication is disabled. |
+| AuthenticationType     | "Google"                  | Provides the authentication scheme. Must always have the **Google** value set.                                    |
+| AuthenticationCaption  | "Google"                  | Sets a human-readable caption for the Google authentication provider. Visible on the **Sign In** page.            |
+| ClientId               |                           | The Client ID of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
+| ClientSecret           |                           | The Client Secret of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
+| DefaultUserType        | "Manager"                 | Default user type for new users created upon first sign-in by Google accounts.                                    |
+
+**Example**
+
+<!--google-start-->
+
+```json title="appsettings.json"
+
+"Google": {
+	"Enabled": true,
+	"AuthenticationType": "Google",
+	"AuthenticationCaption": "Google",
+	"ClientId": "<your Client ID>",
+	"ClientSecret": "<your Client Secret>",
+	"DefaultUserType": "Manager"
+},
+```
+<!--google-end-->
 
 ### IdentityOptions
 

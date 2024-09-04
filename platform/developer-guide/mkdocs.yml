@@ -514,6 +514,10 @@ nav:
                       - declineQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/declineQuoteRequest.md
                       - deleteQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/deleteQuoteAttachments.md
                       - updateQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments.md
+          - xRecommend:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Recommend/overview.md
+                - Query: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations.md
+                - Object: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType.md
           - Store:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
                 - Queries:

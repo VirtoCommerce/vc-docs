@@ -191,6 +191,8 @@ nav:
                 - Managing Reviews: rating-reviews/managing-reviews.md
                 - Rest API: rating-reviews/rest-api.md
                 - Settings: rating-reviews/settings.md
+          - xRecommend: 
+                - Overview: recommend/overview.md
           - Return: 
                 - Overview: return/overview.md
                 - Managing Returns: return/managing-returns.md

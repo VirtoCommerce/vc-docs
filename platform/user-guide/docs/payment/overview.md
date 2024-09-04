@@ -21,4 +21,4 @@ The diagram below illustrates the interconnections among the Payment and Stores 
 <br>
 ![Key entities](media/key-entities.png)
 
-![Readmore](media/readmore.png){: width="25"} [Native Payment Methods](../native-payment-methods/overview.md)
+![Readmore](media/readmore.png){: width="25"} [Native payment methods](../native-payment-methods/overview.md)

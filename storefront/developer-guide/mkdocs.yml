@@ -26,7 +26,8 @@ nav:
         - Migration to Storefrontless Architecture on Azure Cloud: migration-on-azure.md
     - Authentication: 
         - Authentication Types: authentication/authentication-types.md
-        - Adding SSO Provider: authentication/adding-sso-provider.md
+        - Adding Azure AD (Entra ID) as SSO Provider: authentication/adding-sso-provider.md
+        - Adding Google as SSO Provider: authentication/adding-google-as-sso-provider.md
     - Integrations:
           - Google Analytics Events: integrations/google-analytics/ga-events.md
           - Enhancing SEO with Prerender.io: integrations/prerender_io.md
