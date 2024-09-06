@@ -3,7 +3,7 @@
 The **Products** menu item includes:
 
 - **Marketplace Products**: Products uploaded by all vendors in the marketplace. Use this section to [add your own offer to another vendor's products](products-management.md#add-offer-to-another-vendors-product). 
-- **My Products**: Products uploaded by the current vendor in their marketplace. Use this section to [add your own products](products-management.md#add-own-product) and [offers](products-management.md#add-offer-to-own-product).
+- **My Products**: Products uploaded by the current vendor in their marketplace. Use this section to [add your own products](products-management.md#add-own-product) and [offers](products-management.md#add-offer-to-own-product) or [manage product associations](products-management.md#manage-product-associations). 
 
 A product can be associated with multiple offers, each of which provides a specific product variation, its price, and its inventory. Each offer can contain multiple price tags, reflecting various pricing strategies or conditions. In the example below,  the product ("Laptop Model A") is associated with different offers, each offer has multiple price tags:
 
@@ -74,3 +74,19 @@ After your product has been approved by an Operator portal manager it appears in
 Your offer has been added to the product. Another way to add offers to your products is described [here](offers.md#add-offers-to-product).
 
 Complete your offer by [adding price tags](offers.md#add-price-tags-to-offer).
+
+## Manage product associations
+
+To increase sales and improve product discovery, Vendors can manage product associations:
+
+1. Click **My Products** in the main menu to open the list of your products.
+1. In the next blade, select the desired product.
+1. In the next blade, click on the **Associations** widget.
+
+    ![Product associations](media/product-associations.png)
+
+1. In the next blade, add associations to the product:
+
+    ![Associations blade](media/associations-blade.png)
+
+The associations have been added.

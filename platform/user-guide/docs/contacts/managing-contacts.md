@@ -8,6 +8,8 @@ Managing contact entities (companies, employees, customers, and vendors) include
 * [Exporting contacts.](managing-contacts.md#export-contacts)
 * [Importing contacts.](managing-contacts.md#import-contacts)
 * [Updating contacts.](managing-contacts.md#import-contacts)
+* [Sharing contacts.](managing-contacts.md#share-contacts)
+* [Setting default company.](managing-contacts.md#set-default-company)
 * [Assigning multiple organizations to contacts and employees.](managing-contacts.md#assign-multiple-organizations-to-contacts-and-employees)
 
 ## Add contacts
@@ -110,6 +112,29 @@ Your contacts have been uploaded.
 ## Update contacts
 
 The procedure for updating contacts is similar to the one for [importing contacts](managing-contacts.md#import-contacts). The system finds organizations by Id or outer Id and updates them. 
+
+
+## Share contacts
+
+Contact URLs now include the member ID slug, allowing for easy sharing with colleagues or partners:
+
+![Contact URLs](media/contact-urls.png)
+
+You can also share company name and company ID by copying them from the dropdown menu:
+
+![Contact ID](media/contact-id-name.png)
+
+## Set default company
+
+Administrators can now set a default company for an employee, so that they can log in to that company by default upon first login or after changing the default company:
+
+1. Click **Contacts** in the main menu.
+1. In the next blade, select an employee.
+1. In the next blade, set a default company for them.
+
+	![Default company](media/default-company.png)
+
+1. Click **Save** in the toolbar to save the changes. 
 
 ## Assign multiple organizations to contacts and employees
 

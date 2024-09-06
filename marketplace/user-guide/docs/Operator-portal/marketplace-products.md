@@ -38,6 +38,11 @@ The product status in the list of products changes for **Rejected** in both Oper
 
 ![New statuses](media/decline-statuses.png)
 
+!!! note
+    Operators can now unpublish and republish products. This feature allows operators to quickly remove products that do not meet the marketplace’s standards, have become outdated, or are no longer aligned with the marketplace’s goals.
+
+    ![Unpublish product](media/unpublish-products.png)
+
 
 ## Manage product from Vendor portal
 

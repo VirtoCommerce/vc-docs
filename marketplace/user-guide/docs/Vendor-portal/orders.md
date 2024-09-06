@@ -23,7 +23,7 @@ To edit the order:
 Your modifications have been applied. 
 
 !!! note
-    The order image tells you how many items are in the order:
+    The order image tells you how many items are there in the order:
     ![Number of items in order](media/marketplace-items.png)
 
 ## Process order
@@ -64,3 +64,8 @@ A new shipment has been created.
 !!! note
     Users can also [create shipment documents in the Platform](../../../../platform/user-guide/order-management/managing-documents#create-shipment-documents).
 
+### Add items to shipment
+
+When creating or editing a shipment, users can add items to the shipment by clicking **Add item** at the bottom of the blade. In the new blade, users can edit the quantity of items:
+
+![Add items to shipment](media/edit-shipment-items.png)

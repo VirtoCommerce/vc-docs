@@ -32,18 +32,30 @@ To enable white labeling via the **Contacts** module:
 
 White labeling has been enabled.
 
-## Customize logo and favicon
+## Customize logo and favicon via Contacts
 
 To start using white labeling:
 
-1. Complete steps 1-4 from the instruction above.
+1. Complete steps 1-4 from the instruction [above](customizing-brand-elements.md#customize-logo-and-favicon-via-contacts).
 1. In the **White Labeling** blade, click on the **Logo** widget to upload your company's logo.
-1. Click on the favicon logo to upload favicon.
+1. Click on the **Favicon** widget to upload your favicon.
 1. Click **Save** in the toolbar to save the changes.
 
 Your changes have been applied.
 
 ![Before and after white labeling](media/before-after.png)
+
+## Customize logo and favicon via Stores
+
+To start using white labeling:
+
+1. Complete steps 1-2 from the instruction [above](customizing-brand-elements.md#customize-logo-and-favicon-via-stores).
+1. In the next blade, click on the **White labeling** widget.
+1. In the **White labeling** blade, click on the **Logo** widget to upload your company's logo.
+1. Click on the **Favicon** widget to upload your favicon.
+1. Click **Save** in the toolbar to save the changes.
+
+Your changes have been applied.
 
 ## Customize footer
 

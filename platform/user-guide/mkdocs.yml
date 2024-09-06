@@ -118,6 +118,9 @@ nav:
                 - Link Lists: content/managing-linklists.md
                 - Blogs: content/managing-blogs.md
                 - Settings: content/settings.md
+          - Authentication Related Modules:
+                - Google SSO: google-sso/overview.md
+                - Azure AD: azure-ad/overview.md
           - Catalog Related Modules:
                 - Catalog Personalization:
                       - Overview: catalog-personalization/overview.md
