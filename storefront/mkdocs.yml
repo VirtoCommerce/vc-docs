@@ -48,6 +48,10 @@ extra:
                 - title: Github
                   link: https://github.com/VirtoCommerce/vc-storefront/
         release_notes:
+            - title: News Digest September 2024
+              link: https://www.virtocommerce.org/t/september-2024-news-digest/730
+              type: Digest
+              date: 9 September 2024
             - title: News Digest August 2024
               link: https://www.virtocommerce.org/t/august-2024-new-digest/719
               type: Digest
