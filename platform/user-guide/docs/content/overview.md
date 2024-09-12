@@ -36,7 +36,7 @@ You can install the Content module:
 
 [![latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-cms/releases/latest)
 
-## Getting started
+## Get started
 
 You can access the Content module via:
 

@@ -118,11 +118,11 @@ This configuration node defines the system settings of the VC Platform.
 
 This node adds and customizes the Application Insight section.
 
-<!--AppInsights-start-->
+<!--AppInsights1-start-->
 
 | Node                                         | Default or Sample Value                                   | Description                                                                                        |
 | ---------------------------------------------| ----------------------------------------------------------| -------------------------------------------------------------------------------------------------- |
-| SamplingOptions.Processor                                 | adaptive                 | Specifies the sampling processor type for Application Insights telemetry. |
+| SamplingOptions.Processor                                 | adaptive <br> fixed-rate | This setting lets you chose between two sampling methods:<br>**Adaptive sampling**: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about [configuring this option](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications).<br>**Fixed-rate sampling**: reduces the volume of telemetry sent from both the application. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting. |
 | SamplingOptions.Adaptive.MaxTelemetryItemsPerSecond       | 5                        | Maximum telemetry items per second allowed in adaptive sampling. |
 | SamplingOptions.Adaptive.InitialSamplingPercentage        | 100                      | Initial sampling percentage in adaptive sampling.|
 | SamplingOptions.Adaptive.MinSamplingPercentage            | 0.1                      | Minimum sampling percentage in adaptive sampling.|
@@ -132,14 +132,20 @@ This node adds and customizes the Application Insight section.
 | SamplingOptions.Adaptive.SamplingPercentageIncreaseTimeout | 00:15:00                | Timeout before increasing sampling percentage in adaptive sampling.|
 | SamplingOptions.Adaptive.MovingAverageRatio               | 0.25                     | Ratio used for moving average calculations in adaptive sampling.|
 | SamplingOptions.Fixed.SamplingPercentage                  | 100                      | Fixed sampling percentage used for telemetry in Application Insights.|
-| SamplingOptions.IncludedTypes                             | Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace     | Specifies which telemetry types are included in sampling for Application Insights.|
-| SamplingOptions.ExcludedTypes                             | (Empty by default)       | Specifies which telemetry types are excluded from sampling in Application Insights.|
-| EnableSqlCommandTextInstrumentation                       | true                     | Enables the collection of SQL command text in Application Insights telemetry.|
+| SamplingOptions.IncludedTypes                             | Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace     | A semi-colon delimited list of types that you do want to subject to sampling. The specified types will be sampled. All telemetry of the other types will always be transmitted. All types are included by default.|
+| SamplingOptions.ExcludedTypes                             | Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace       | A semi-colon delimited list of types that you do not want to be sampled. All telemetry of the specified types is transmitted. The types that aren't specified will be sampled. Empty by default |
+| EnableSqlCommandTextInstrumentation                       | true                     | Controls Application Insight telemetry processor thats excludes dependency SQL queries. Any SQL command name or statement that contains a string from **QueryIgnoreSubstrings** options will be ignored.|
 | IgnoreSqlTelemetryOptions.QueryIgnoreSubstrings           | [HangFire]., sp_getapplock, sp_releaseapplock | Specifies substrings to ignore in SQL telemetry to avoid collecting irrelevant data, particularly related to Hangfire's internal operations.     |
+
+<!--AppInsights1-end-->
+
 
 **Example**
 
-To configure `ApplicationInsights`: 
+To configure telemetry: 
+
+<!--AppInsights2-start-->
+
 
 1. Use current active telemetry configuration which is already initialized in most application types like ASP.NET Core:
     ```json title="appsettings.json"
@@ -186,8 +192,37 @@ To configure `ApplicationInsights`:
     }
     ```
 
-<!--AppInsights-end-->
+<!--AppInsights2-end-->
 
+
+You can enable AI logging by updating the following `Serilog` configuration sections (the module comes with a [sink](https://github.com/serilog-contrib/serilog-sinks-applicationinsights) for Serilog that writes events to Microsoft Application Insights. To enable AI logging update the following `Serilog` configuration sections):
+
+<!--AppInsights3-start-->
+
+
+```json title="appsettings.json"
+{
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.ApplicationInsights"
+    ],
+    "WriteTo": [
+      {
+        "Name": "ApplicationInsights",
+        "Args": {
+          "connectionString": "<Copy connection string from Application Insights Resource Overview>",
+          "telemetryConverter": "Serilog.Sinks.ApplicationInsights.TelemetryConverters.TraceTelemetryConverter, Serilog.Sinks.ApplicationInsights",
+          "restrictedToMinimumLevel": "Error"
+        }
+      }
+    ]
+  }
+}
+```
+
+<!--AppInsights3-end-->
+
+The **telemetryConverter** has to be specified with the full type name and the assembly name. A **connectionString** can be omitted if it's supplied in the **APPLICATIONINSIGHTS_CONNECTION_STRING** environment variable.
 
 #### Hangfire
 

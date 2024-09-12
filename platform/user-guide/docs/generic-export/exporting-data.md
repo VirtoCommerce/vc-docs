@@ -1,4 +1,4 @@
-# Data export 
+# Data Export 
 
 Once the user gets access to the data export functionality, they can use the **Generic Export** module for exporting data.
 

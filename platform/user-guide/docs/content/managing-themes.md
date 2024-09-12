@@ -82,7 +82,7 @@ To manage the theme assets:
 
 ## Manage theme color configurations
 
-You can use ready-made color configurations that can be applied to the theme, or you can create your own color scheme using chat.gpt:
+You can use ready-made color configurations that can be applied to the theme, or you can create your own color scheme using ChatGPT:
 
 ![Color schemas](media/color-scheme.gif)
 
@@ -96,3 +96,13 @@ To add a new color configuration:
 1. Click **Add** in the toolbar to enter or copy&paste your new color configuration file. Or click **Upload** to upload color configuration file.
 
 New color configuration has been applied.
+
+
+### Create theme colors via ChatGPT
+
+1. Copy any existing color scheme.
+1. Paste it into ChatGPT with the following prompt: "Generate colors for an electronic shop. Answer in JSON format."
+1. Copy the generated color scheme and paste it into the **presets** folder as described [above](managing-themes.md#manage-theme-color-configurations).
+
+Your ChatGPT-generated colors have been added.
+

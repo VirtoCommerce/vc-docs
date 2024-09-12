@@ -1,6 +1,6 @@
 # Overview 
 
-The **Algolia Search** module serves as a search engine within the Search module. It is renowned for its robust marketing capabilities and extensive personalization features, making it a valuable tool for enhancing user experience and driving engagement.
+The Algolia Search module serves as a search engine within the Search module. It is renowned for its robust marketing capabilities and extensive personalization features, making it a valuable tool for enhancing user experience and driving engagement.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-algolia-search)
 

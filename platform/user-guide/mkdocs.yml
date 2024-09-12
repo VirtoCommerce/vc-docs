@@ -118,6 +118,9 @@ nav:
                 - Link Lists: content/managing-linklists.md
                 - Blogs: content/managing-blogs.md
                 - Settings: content/settings.md
+          - Application Insights: 
+                - Overview: application-insights/overview.md
+                - Enabling Application Insights: application-insights/enable-app-insights.md
           - Authentication Related Modules:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md

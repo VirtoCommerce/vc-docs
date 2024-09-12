@@ -1,4 +1,4 @@
-# Assigning Permissions
+# Assign Permissions
 
 To assign access to export functionality to users, the administrator should:
 

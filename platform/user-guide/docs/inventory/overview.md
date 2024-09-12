@@ -1,6 +1,6 @@
 ﻿# Overview
 
-The Virto's Inventory module enables tracking the stock level and managing fulfillment centers.
+The Inventory module enables tracking the stock level and managing fulfillment centers.
 
 In the ecommerce sector, day-to-day inventory management helps increase business intelligence and visibility. Ecommerce business owners have better ongoing control when they constantly keep an eye on their inventory.
 

@@ -25,7 +25,8 @@ nav:
         - Overview: migration.md
         - Migration to Storefrontless Architecture on Azure Cloud: migration-on-azure.md
     - Authentication: 
-        - Authentication Types: authentication/authentication-types.md
+        - Token-based Authentication: authentication/authentication-types.md
+        - Anonymous Authentication: authentication/anonymous-authentication.md
         - Adding Azure AD (Entra ID) as SSO Provider: authentication/adding-sso-provider.md
         - Adding Google as SSO Provider: authentication/adding-google-as-sso-provider.md
     - Integrations:

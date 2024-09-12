@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce Pricing module is designed for storing, managing, and calculating product prices.
+The Pricing module is designed for storing, managing, and calculating product prices.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pricing)
 
