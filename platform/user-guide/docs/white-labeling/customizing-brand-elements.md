@@ -3,7 +3,7 @@
 To start customizing brand elements:
 
 1. [Enable white labeling feature via the Stores](customizing-brand-elements.md#enable-white-labeling-via-stores) or [the Contacts module.](customizing-brand-elements.md#enable-white-labeling-via-contacts)
-1. [Customize logo and favicon.](customizing-brand-elements.md#customize-logo-and-favicon)
+1. [Customize logo and favicon via the Stores](customizing-brand-elements.md#customize-logo-and-favicon-via-stores) or [the Contacts module.](customizing-brand-elements.md#customize-logo-and-favicon-via-contacts)
 1. [Customize footer.](customizing-brand-elements.md#customize-footer)
 
 ## Enable white labeling via Stores
