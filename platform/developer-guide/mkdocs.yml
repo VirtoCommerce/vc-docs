@@ -516,8 +516,15 @@ nav:
                       - updateQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments.md
           - xRecommend:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Recommend/overview.md
-                - Query: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations.md
-                - Object: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType.md
+                - Queries: 
+                      - recommendations: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations.md
+                      - recentlyBrowsed: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recentlyBrowsed.md
+                - Objects: 
+                      - GetRecommendationsResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType.md
+                      - GetRecentlyBrowsedResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecentlyBrowsedResponseType.md
+                      - InputPushHistoricalEventType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/InputPushHistoricalEventType.md
+                - Mutations: 
+                      - pushHistoricalEvent: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent.md
           - Store:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
                 - Queries:

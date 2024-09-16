@@ -15,7 +15,7 @@ This query allows you to retrieve product recommendations based on various crite
 | `fallbackProductsFilter` ==String== | A filter to apply when no recommendations are found.                                    |
 | `maxRecommendations` ==String== | The maximum number of recommendations to return.                                                |
 
-## Possible returns
+## Possible return
 
 | Possible return                                         	| Description                                                              	|
 |---------------------------------------------------------	|------------------------------------------------------------------------	|

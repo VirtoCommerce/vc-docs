@@ -87,6 +87,7 @@ plugins:
     - redirects:
         redirect_maps:
             'redir.md': 'index.md'
+            'CLI-tools/cold-start-data-migration.md': 'CLI-tools/cold-start-and-data-migration.md'
     - include-markdown
 
 # Project information

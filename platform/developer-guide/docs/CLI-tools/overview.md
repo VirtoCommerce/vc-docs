@@ -27,7 +27,7 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
     * Install and update platform application.
     * Prepare backend package with specific versions of the platform and modules from the manifest file.
   
-* [Platform cold start optimization and data migration (WIP):](cold-start-data-migration.md)
+* [Platform cold start optimization and data migration (WIP):](cold-start-and-data-migration.md)
 
     * Platform start optimization (slow run on Azure case).
 

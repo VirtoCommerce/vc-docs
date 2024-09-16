@@ -1,6 +1,9 @@
-# Add Azure AD (Entra ID) as SSO Provider
+# Add Entra ID (Azure AD) as SSO Provider
 
-To integrate Azure AD (Entra ID) as a new SSO provider, install the [Azure AD module](https://github.com/VirtoCommerce/vc-module-azure-ad/releases). After that:
+!!! note
+    Azure Active Directory (Azure AD) has been renamed to Microsoft Entra ID. For the remainder of this guide, these terms are considered synonymous.
+
+To integrate Entra ID (Azure AD) as a new SSO provider, install the [Azure AD module](https://github.com/VirtoCommerce/vc-module-azure-ad/releases). After that:
 
 1. [Manage backend settings.](azure-ad.md#backend-settings)
 1. [Manage Platform settings.](azure-ad.md#platform-settings)
@@ -8,7 +11,7 @@ To integrate Azure AD (Entra ID) as a new SSO provider, install the [Azure AD mo
 
 ## Backend settings
 
-Set up the necessary environment variables for the Frontend Application to authenticate users via Azure AD authentication provider:
+Set up the necessary environment variables for the Frontend Application to authenticate users via Entra ID (Azure AD) authentication provider:
 
 ```json title="environment.yml"
 set "Azuread…Enabled=true"
@@ -33,7 +36,7 @@ Configure store settings:
 
 1. Click **Save** to save the changes.
 
-The GraphQL query confirms that authentication via Azure AD is enabled:
+The GraphQL query confirms that authentication via Entra ID (Azure AD) is enabled:
 
 ![Query](media/graphql-authentication-types.png){: width="650"}
 
