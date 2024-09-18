@@ -27,5 +27,3 @@ Click **Filters** to narrow down the selection of variations:
 
 ![Variations filter](../media/variations-filter.png){: width="750"}
 
-
-

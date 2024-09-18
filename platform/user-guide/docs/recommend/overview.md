@@ -5,6 +5,10 @@ The xRecommend module displays recommendations to the current product. These rec
 
 ![Recommendations](media/recommendations.png)
 
+In the cart, it also shows recently browsed products:
+
+![Recently browsed products](media/recently-browsed-products.png){: width="750"}
+
 Although the xRecommend module does not have its own user interface, you need to have it installed to manage recommendations. 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-recommend)

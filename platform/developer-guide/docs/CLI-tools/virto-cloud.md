@@ -1,23 +1,23 @@
-# VirtoCloud
+# Virto Cloud
 
-In this guide, we will explore how to interact with VirtoCloud, including logging in, initializing environments, managing environments, deploying to VirtoCloud, and additional operations, all with detailed commands and parameters.
+In this guide, we will explore how to interact with Virto Cloud, including logging in, initializing environments, managing environments, deploying to Virto Cloud, and additional operations, all with detailed commands and parameters.
 
 ## Log in via GitHub account  
    
-This target saves a token for accessing the VirtoCloud portal, eliminating the need to use the `CloudToken` parameter with every call to targets in the Cloud group.  
+This target saves a token for accessing the Virto Cloud portal, eliminating the need to use the `CloudToken` parameter with every call to targets in the Cloud group.  
    
 ```
 vc-build CloudAuth
 ```
 
 !!! note 
-    By default, authorization is done using a Github account. There is an optional `-AzureAD` parameter that allows you to authorize using an Azure AD account:
+    By default, authorization uses a Github account. There is an optional `-AzureAD` parameter that allows you to authorize using an Azure AD (Entra ID) account:
 
     ```
     vc-build CloudAuth -AzureAD
     ```
 
-## Initialize New Environment  
+## Initialize new environment  
 
 This target creates a new environment. It additionally accepts the `ServicePlan` parameter to specify the service plan (default value is `F1`).  
    
@@ -26,13 +26,13 @@ vc-build CloudInit -EnvironmentName <EnvName>
 vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
 ```
 
-## List Environments with Statuses  
+## List environments with statuses  
 
 ```
 vc-build CloudEnvList 
 ```
 
-## Download Environment Manifest
+## Download environment manifest
 
 ```
 vc-build CloudDownloadManifest -EnvironmentName <name> -Manifest <path>
@@ -45,37 +45,37 @@ This command downloads the manifest for the specified environment:
 `-Manifest <path>` *(optional)*: Defines the path where the manifest will be saved. If not provided, the manifest will be saved in the current directory with a filename matching the environment name.
 
 
-## Restart Environment
+## Restart environment
 
 ```
 vc-build CloudEnvRestart -EnvironmentName <EnvName>
 ```
 
-## Show Environment’s Logs  
+## Show environment’s logs  
 
 ```
 vc-build CloudEnvLogs -EnvironmentName <EnvName>
 ```
 
-## Update Environment from Manifest
+## Update environment from manifest
 
 ```
 vc-build CloudEnvUpdate -Manifest <path to the manifest>
 ```
 
-## Set Parameters for Environment  
+## Set parameters for environment  
 
 ```
 vc-build CloudEnvSetParameter -EnvironmentName <EnvName> -HelmParameters <PARAMETER_NAME>=<PARAMETER_VALUE> <PARAMETER_NAME2>=<PARAMETER_VALUE2>
 ```
 
-## Delete Environment
+## Delete environment
    
 ```
 vc-build CloudDown -EnvironmentName <EnvName>
 ```
 
-## Wait for Expected Status of Environment  
+## Wait for expected status of environment  
 
 
 ```
@@ -88,7 +88,7 @@ Additional parameter `AttemptsNumber` (default value 100) determines the number 
 vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber <number of attempts> -Delay <num of sec>
 ```
 
-## Deploy Custom Image to Cloud
+## Deploy custom image to cloud
 
 You can quickly deploy a local environment and see how it performs in the cloud.
 

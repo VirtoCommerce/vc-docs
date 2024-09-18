@@ -1,4 +1,6 @@
-Virto Commerce Frontend Application has native integration with Hotjar module.
+# Get Started
+
+Virto Commerce Frontend Application has native integration with the Hotjar module.
 
 To start using Hotjar:
 

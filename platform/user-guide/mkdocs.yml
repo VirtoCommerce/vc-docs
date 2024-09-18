@@ -236,14 +236,14 @@ nav:
                 - Settings: shipping/settings.md
           - Sitemaps:
                 - Overview: sitemaps/overview.md
-                - Managing sitemaps: sitemaps/configuring-sitemaps.md
+                - Managing Sitemaps: sitemaps/configuring-sitemaps.md
                 - Settings: sitemaps/settings.md
           - Subscription: subscription/overview.md
           - Tasks:
                 - Overview: tasks/overview.md
-                - Using Tasks application: tasks/using-application.md
+                - Using Tasks Application: tasks/using-application.md
                 - Settings: tasks/settings.md
-                - Roles and permissions: tasks/roles-permissions.md
+                - Roles and Permissions: tasks/roles-permissions.md
           - Tax: 
                 - Overview: tax/overview.md
                 - Managing Taxes: tax/managing-taxes.md
@@ -283,7 +283,7 @@ nav:
                 - Settings: integrations/google-analytics/settings.md
           - Hotjar:
                 - Overview: integrations/hotjar/overview.md
-                - Getting started: integrations/hotjar/getting-started.md
+                - Getting Started: integrations/hotjar/getting-started.md
     - Versions:
           - Virto 3. Products versions: versions/virto3-products-versions.md
           - v3 2020 Q3: versions/v3-2020-Q3.md

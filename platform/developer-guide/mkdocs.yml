@@ -37,12 +37,12 @@ nav:
           - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
     - CLI tools:
           - Overview: CLI-tools/overview.md
-          - Getting started: CLI-tools/getting-started.md
+          - Getting Started: CLI-tools/getting-started.md
           - Build Automation: CLI-tools/build-automation.md
           - Package Management: CLI-tools/package-management.md
           - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
           - Cold Start Optimization and Data Migration: CLI-tools/cold-start-and-data-migration.md
-          - VirtoCloud: CLI-tools/virto-cloud.md
+          - Virto Cloud: CLI-tools/virto-cloud.md
     - Fundamentals:
           - Caching:
                 - Overview: Fundamentals/Caching/01-overview.md
@@ -313,7 +313,7 @@ nav:
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
           - File:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
-                - Getting started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
+                - Getting Started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
                 - Queries:
                       - fileUploadOptions: GraphQL-Storefront-API-Reference-xAPI/File/Queries/fileUploadOptions.md
                 - Objects:

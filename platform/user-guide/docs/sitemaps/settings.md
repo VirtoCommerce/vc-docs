@@ -10,9 +10,7 @@ The Sitemaps module settings include:
 To configure general settings:
 
 1. Click **Settings**.
-
 1. Type **Sitemap** to find the settings related to the module.
-
 1. Select **General** to configure the page size for export or import and enable/ disable logging of inventory changes
 
 	![General settings](media/general-settings.png)
@@ -24,9 +22,7 @@ To configure general settings:
 To configure search settings: 
 
 1. Click **Settings**.
-
-1. Type **Inventory** to find the settings related to the module.
-
+1. Type **Sitemaps** to find the settings related to the module.
 1. Select **Search** to enable or disable event-based indexing.
 
 	![Search settings](media/sitemaps-settings.png)

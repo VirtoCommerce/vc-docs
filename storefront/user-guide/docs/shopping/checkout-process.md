@@ -22,6 +22,11 @@ To complete your order:
 
     ![Cart details](../media/cart-details.png)
 
+    The cart page may also show recently browsed products if this [feature is enabled](../../../../platform/user-guide/recommend/overview#get-started).
+
+    ![Recently browsed products](../media/recently-browsed-products.png){: width="650"}
+
+
 1. Click **Proceed to checkout**.
 
     !!! note

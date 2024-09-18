@@ -1,4 +1,4 @@
-# Getting started
+# Get Started
 
 This section explains how to prepare your environment for testing xAPI.
 

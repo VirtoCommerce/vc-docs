@@ -23,10 +23,10 @@ This query allows you to retrieve a list of products recently browsed by the use
     ```json linenums="1"
     {
       recentlyBrowsed(
-        storeId: "Electronics"
+        storeId: "B2B-Store"
         cultureName: "en-US"
         currencyCode: "USD"
-        maxProducts: 5
+        maxProducts: 6
       ) {
         products {
           id
@@ -45,16 +45,38 @@ This query allows you to retrieve a list of products recently browsed by the use
           "products": [
             {
               "id": "product-1",
-              "name": "Laptop Pro",
-              "code": "LP123"
+              "name": "VIZIO E-Series E43-C2 43\" Class Full-HD TV",
+              "code": "VIZIO-E43-C2"
             },
             {
               "id": "product-2",
-              "name": "Headphones XYZ",
-              "code": "HP456"
+              "name": "FINLEY GINGER ALE CRATE",
+              "code": "FINLEY-GINGER"
+            },
+            {
+              "id": "product-3",
+              "name": "14K Rhodium-Plated White Gold Ring with Emerald",
+              "code": "RING-14K-WHITE"
+            },
+            {
+              "id": "product-4",
+              "name": "8K Yellow Gold Pendant with Cubic Zirconia",
+              "code": "PENDANT-8K-GOLD"
+            },
+            {
+              "id": "product-5",
+              "name": "LAYS CHIPS PAPRIKA BOX",
+              "code": "LAYS-PAPRIKA"
+            },
+            {
+              "id": "product-6",
+              "name": "MAMMOET SHOT GLASS BOSTON",
+              "code": "MAMMOET-SHOT-GLASS"
             }
           ]
         }
       }
     }
     ```
+
+    ![Recently browsed items](../media/recently-browsed-products.png)

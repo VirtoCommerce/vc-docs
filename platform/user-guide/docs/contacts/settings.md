@@ -18,7 +18,7 @@ To configure general settings:
 
 1. Click **Save** in the toolbar to save the changes.
 
-Your modiciations have been saved.
+Your modifications have been saved.
 
 ## Statuses
 
@@ -33,4 +33,4 @@ To add and edit statuses for various contact entities:
 
 1. Click **Save** in the toolbar to save the changes.
 
-Your modiciations have been saved.
+Your modifications have been saved.

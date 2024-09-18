@@ -20,6 +20,13 @@ A product can be associated with multiple offers, each of which provides a speci
 |                     |                                       | Clearance Price          | $799.99         | Clearance sale                    |
 |                     |                                       | Flash Sale Price         | $749.99         | Limited-time offer                |
 
+!!! note
+    You can view products either as a list or organized by category:
+
+    ![View products and categories](media/product-category-view.gif)
+
+
+
 ## Add offer to another vendor's product
 
 If you want to add your own offer for a product listed by another vendor:
