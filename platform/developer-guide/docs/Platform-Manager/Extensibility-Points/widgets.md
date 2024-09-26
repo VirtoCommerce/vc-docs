@@ -19,9 +19,9 @@ Here is how we use widgets out of the box in our Catalog module:
 
 ![Widget sample](media/04-widget-sample.png)
 
-## Widget container
+## Widget container (va-widget-container)
 
-You can implement widget containes as the **vaWidgetContainer** Angular.js directive. We use [angular-gridster](http://manifestwebdesign.github.io/angular-gridster/) under the hood, which means our containers support and accept angular-gridster options. 
+You can implement widget containers as the **vaWidgetContainer** Angular.js directive. We use [angular-gridster](http://manifestwebdesign.github.io/angular-gridster/) under the hood, which means our containers support and accept angular-gridster options. 
 
 ```
 <va-widget-container group="itemDetail" blade="blade" gridster-opts="{columns: 6, minRows: 4}"></va-widget-container>
@@ -33,7 +33,7 @@ You can implement widget containes as the **vaWidgetContainer** Angular.js direc
 |blade        |Reference to parent blade. Sent to each widget inside the container.|
 |gridster-opts|Angular-gridster options (optional value).|
 
-## Widget registration
+## Widget registration (registerWidget)
 
 You can register widgets through the Platform-level factory, which means **any module can register new widgets to any widget container**:
 

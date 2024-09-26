@@ -21,9 +21,10 @@ nav:
     - Overview: index.md
     - Architecture: architecture.md 
     - Deployment: deployment.md
-    - Migration: 
+    - Migration to Storefrontless Architecture: 
         - Overview: migration.md
-        - Migration to Storefrontless Architecture on Azure Cloud: migration-on-azure.md
+        - Migration on Azure Cloud: migration-on-azure.md
+        - Migration on Local Machine: migration-on-local-machine.md
     - Authentication: 
         - Token-based Authentication: authentication/authentication-types.md
         - Anonymous Authentication: authentication/anonymous-authentication.md

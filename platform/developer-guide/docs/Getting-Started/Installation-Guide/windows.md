@@ -18,8 +18,8 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 === "Optional software components"
 
     * For VirtoCommerce 3.800 or higher, install MS Visual Studio 2022 (version 17.8 or higher). 
-    * To edit the source code, install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0 "Installing .NET 6 SDK").
-    * For better search capabilities, install [Elastic search 8.12](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-0). 
+    * To edit the source code, install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0 "Installing .NET 6 SDK").
+    * For better search capabilities, install [Elastic search 8.12](https://www.elastic.co/downloads/past-releases/elasticsearch-8-12-0). 
 
         !!! note
             By default, VirtoCommerce uses [Lucene .NET](https://lucenenet.apache.org/). However, it cannot be used in production due to its limited functionality.
@@ -32,7 +32,7 @@ The platform can be installed:
 * [Manually by downloading the precompiled binaries](windows.md#download-precompiled-binaries).
 * [Using Virto Commerce CLI (vc-build)](windows.md#use-virto-commerce-cli).
 
-### Download precomplied binaries
+### Download precompiled binaries
 
 1. Open the [Releases section of the Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform/releases) in GitHub.
 

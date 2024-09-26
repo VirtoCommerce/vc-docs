@@ -1,5 +1,9 @@
 ﻿# Create New Module from Template
+
 In this guide, we will learn how to create your own custom module according to your business or technical needs using the Virto Commerce ecosystem.
+
+!!! note
+    To develop a module that can work with different database systems without having to rewrite your code for each one, follow [this guide](../../Fundamentals/Persistence/DB-Agnostic/creating-custom-module.md).
 
 ## Create solution from template
 To run your own Virto Commerce module, you can [create it from scratch](create-new-module-from-scratch.md). However, it is recommended that you do it based on a predefined template. To do this: 
@@ -405,7 +409,7 @@ After creating your module, install it from your source and debug it as follows:
 
 1. Restart the platform.
 
-1. Open Swagger API at http://localhost:10645/docs/index.html, find `MyCoolModule extension module`, and run the POST method to verify that everything is working properly:
+1. Open Swagger API at http://localhost:5000/docs/index.html, find `MyCoolModule extension module`, and run the POST method to verify that everything is working properly:
 
     ![Running POST method in Swagger](media/02-swagger-post.png)
 
@@ -540,7 +544,8 @@ The result will be as follows:
 The module package can be uploaded and installed to the Virto Commerce Platform. To do this:
 
 1. Open the Virto Commerce Admin Portal and sign into it.
-1. Select the `Modules` menu and navigate to the `Advanced` section.
+1. In the main menu, click **Modules**. 
+1. Click **Advanced** in the next blade.
 1. Install or update the module from a file.
 1. Restart the platform.
 

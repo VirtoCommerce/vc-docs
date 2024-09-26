@@ -1,26 +1,27 @@
-﻿# Store module settings
+﻿# Settings
 
-You can configure Store module settings through:
+You can configure the module settings through:
 
 * Settings widget in the **Store details blade** (**Stores -->Your store -->Settings**).
-* Settings module in the main menu (**Settings-->Store**).
+* Settings section in the main menu (**Settings-->Store**).
 
-In both the widget and the settings module, you will find the following global settings:
+In both the widget and the settings section, you will find fully or partly similar settings.
 
-* General settings:
+## General settings
 
-    ![widget](media/widget-general-settings.png)
+![widget](media/widget-general-settings.png)
 
-* SEO settings:
+## SEO settings
 
-    ![SEO settings](media/seo-settings.png)
+![SEO settings](media/seo-settings.png)
 
-* Product reviews settings:
+## Other settings
 
-    ![Product reviews settings](media/product-reviews-settings.png)
-
-Additionally, within the widget, there are other store-specific settings:
+Other store-specific settings are:
 
 * [Orders templates settings](../order-management/settings.md#orders-templates-settings).
-* Subscriptions settings.
-* Hotjar and Google Analytics settings.
+* [Statuses](../contacts/settings.md#statuses).
+* [Return settings](../return/settings.md).
+* [Google Analytics 4 settings](../integrations/google-analytics/settings.md).
+* [Application Insights settings](../application-insights/enable-app-insights.md).
+* [Sitemap settings](../sitemaps/settings.md), etc.

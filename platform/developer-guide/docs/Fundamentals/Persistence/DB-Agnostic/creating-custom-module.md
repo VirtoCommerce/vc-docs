@@ -4,12 +4,15 @@ Use this technique if you want to develop a module that can work with different 
 
 [Virto Commerce Module Templates](https://github.com/VirtoCommerce/vc-cli-module-template) for Dotnet is a tool that helps you generate the basic structure and files for a new module based on some parameters. 
 
+!!! note
+    To create your own custom module from template, follow [this guide](../../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
+
 To create a new module with a database agnostic approach:
 
 1. Run the following command to create a CustomerReviews folder containing all the required projects and files for your module:
 
     ```cmd
-    dotnet new vc-module-dba-template --ModuleName CustomerReviews --Author "Jon Doe" --CompanyName VirtoCommerce
+    dotnet new vc-module-dba --ModuleName CustomerReviews --Author "Jon Doe" --CompanyName VirtoCommerce
     ``` 
 
 1. Open the solution in Visual Studio.
@@ -29,7 +32,7 @@ The template key features  are:
 * The Data.[Provider] projects have a specific structure and configuration for each database system: MySql, PostgreSql, and SqlServer:
     * Migrations folder contains the migration files for the database system.
     * DbContextOptionsBuilderExtensions class contains the helper method for configuring the DbContextOptionsBuilder for specific database provider.
-    * [Provider]DbContextFactory class contains implementation of IDesignTimeDbContextFactory for  for specific database provider. 
+    * [Provider]DbContextFactory class contains implementation of IDesignTimeDbContextFactory for a specific database provider. 
     * Readme.md file contains the instructions for configuring and migration creation the specific database provider.
     
     ![Data provider project](media/data-provider-project.png)
