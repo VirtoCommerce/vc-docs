@@ -52,9 +52,14 @@ The xAPI project provides the following major features:
 
 - [Catalog](Catalog/overview.md)
 - [Cart](Cart/overview.md)
-- [Order](Order/overview.md)
 - [Content](Content/overview.md)
+- [File](File/overview.md)
+- [Marketing](Marketing/overview.md)
+- [Order](Order/overview.md)
 - [Profile](Profile/overview.md)
-- [Marketing](Quote/overview.md)
+- [Push messages](Push-messages/overview.md)
+- [Recommend](Recommend/overview.md)
+- [Store](Store/overview.md)
 - [Quote](Quote/overview.md)
+
 

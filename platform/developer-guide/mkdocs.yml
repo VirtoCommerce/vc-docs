@@ -552,6 +552,7 @@ nav:
           - Tutorials:
                 - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
+                - Deploy Module from Source Code: Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md
                 - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
                 - Extending Database Model: Tutorials-and-How-tos/Tutorials/extending-database-model.md
                 - Building and Customizing Platform Manager UI: Tutorials-and-How-tos/Tutorials/build-platform-manager-ui.md

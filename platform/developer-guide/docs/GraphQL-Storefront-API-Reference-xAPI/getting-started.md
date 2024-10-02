@@ -35,52 +35,113 @@ To start using xAPI:
 
 ## Test environment
 
-To set up the test environment:
+!!! note
+    If the xAPI module is not installed out-of-the-box, you can [install it](https://github.com/VirtoCommerce/vc-module-x-api) on the platform version 3.0 or higher by following [this guide](../Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md). Then restart the Platform.
 
-1. Install `vc-module-experience-api` on the platform version 3.0 or higher, using [this guide](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/developer-guide/deploy-module-from-source-code.md).
-1. Restart the platform instance.
-1. Open GraphQL UI playground in the browser: **http://{platform url}/ui/playground**
+Open GraphQL UI playground in the browser by navigating to **http://{platform url}/ui/playground**, and run some sample queries.
 
-??? "View sample request"
+=== "Sample query 1"
     ```json
-    {
-      product(id: "0f7a77cc1b9a46a29f6a159e5cd49ad1")
-      {
+    query {
+      product(
+        storeId: "B2B-store"
+        id: "cc81104c-8528-490b-a7a8-d1fb53ca164b"
+        cultureName: "en-US"
+        currencyCode: "USD"
+      ) {
         id
         name
-
-        properties {
-          name
-          type
-          values
+        descriptions {
+          content
         }
       }
+    }
+    ```
 
-      products(query: "sony" fuzzy: true filter: "price.USD:(400 TO 1000]")
-      {
-        totalCount
+=== "Sample response 1"
+    ```json
+    {
+      "data": {
+        "product": {
+          "id": "cc81104c-8528-490b-a7a8-d1fb53ca164b",
+          "name": "Affligem Blond 6x75cl Bottle",
+          "descriptions": [
+            {
+              "content": "qwetest123"
+            }
+          ]
+        }
+      }
+    }
+    ```
+
+=== "Sample query 2"
+    ```json
+    query {
+      products(
+        query: "test"
+        storeId: "B2B-store"
+        currencyCode: "USD"
+        cultureName: "en-US"
+      ) {
         items {
-          name
           id
-          prices (currency: "USD") {
-            list
-            currency
+          name
+          seoInfo {
+            metaDescription
           }
         }
       }
     }
     ```
 
+=== "Sample response 2"
+    ```json
+    {
+      "data": {
+        "products": {
+          "items": [
+            {
+              "id": "05a51f40-c26d-47d4-a0c5-c13ab8f644d9",
+              "name": "TEST stock < min",
+              "seoInfo": {
+                "metaDescription": ""
+              }
+            },
+            {
+              "id": "cb05e425-ced1-41bb-a28a-a1d592551bbf",
+              "name": "TEST min  < max < stock",
+              "seoInfo": {
+                "metaDescription": ""
+              }
+            },
+            {
+              "id": "b0be673b-61bc-4912-b207-f4c3336f86e7",
+              "name": "TEST min < stock < max",
+              "seoInfo": {
+                "metaDescription": ""
+              }
+            },
+            // more items...
+              }
+            }
+          ]
+        }
+      }
+    }
+    ```
+
+
 ## Authorization and token usage
 
-Some GraphQL queries and mutations require addition authorization. To test the query or mutation without authorization errors:
+Some GraphQL queries and mutations require additional authorization. To test the query or mutation without authorization errors:
 
 1. Open the [Virto Commerce API Docs (v1)](https://virtostart-demo-admin.govirto.com/docs/index.html) in your browser.
 1. **Authorize** as an administrator or manager.
 
     ![Auth](media/authorization.png)
 
-1. Expand `POST/connect/token` section to fill in the required fields with appropriate credentials, then click **Execute**.
+1. Expand **VirtoCommerce platform/POST/connect/token** section to fill in the required fields with appropriate credentials, then click **Execute**.
 
     ![token](media/token-field.png)
 
