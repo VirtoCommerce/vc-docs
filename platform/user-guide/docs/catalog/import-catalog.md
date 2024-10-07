@@ -20,7 +20,7 @@ To import your catalog in CSV format:
     ![Add CSV](media/add-csv0.png)
 
 1. In the next blade: 
-    1. Select **Semicolon** as a delimeter from the dropdown list.
+    1. Select **Comma** as a delimeter from the dropdown list.
     1. Upload your CSV file.
     1. Click **Map columns**.
 1. In the next blade, customize the mapping of your product properties to the default properties defined in the application, ensuring they are appropriately stored in the database. Click **OK**.

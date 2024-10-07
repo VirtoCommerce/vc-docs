@@ -42,7 +42,7 @@ You can build the backend either using the command line or through Visual Studio
     1. Open the **VirtoCommerce.{module-name}.sln** file in Visual Studio.
     1. Build the solution using the **Build Solution** option.
 
-### Build Frontend
+### Build frontend
 
 When building the module for the first time in Visual Studio, npm references will be installed, and Webpack will be executed automatically. This is managed by the **VirtoCommerce.BuildWebpack** NuGet package, which adds Webpack build targets to the project.
 

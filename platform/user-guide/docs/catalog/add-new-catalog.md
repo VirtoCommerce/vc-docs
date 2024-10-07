@@ -44,7 +44,7 @@ Now you see the list of products in the catalog.
 To add a new catalog:
 
 1. Click on the **Catalog** module in the main menu.
-1. In the next **Manage catalogs** blade, click **Add** in the toolbar.  
+1. In the next **Catalog** blade, click **Add** in the toolbar.  
 1. In the **New catalog** blade, choose the catalog type: physical or virtual.
 1. In the next blade, enter the catalog's name and specify the language.
 1. Click **Create** to save the changes.

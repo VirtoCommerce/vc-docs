@@ -7,7 +7,7 @@ The module includes a **FixedRateTaxProvider** as a built-in tax provider.
 The module provides an API to work with the tax provider list and allows you to connect the tax providers to a selected store. The list of available tax providers can be viewed and edited in the UI.
 
 !!! note
-    The Tax module required preinstalled Store module.
+    The Tax module requires preinstalled Store module.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-tax)
 

@@ -51,7 +51,7 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 
     ![Result](media/result.png)
 
-1. Create a price list assignment to connect to the price list (**New-price-list** in our example) to the catalog displayed in the Frontend Application (**B2B-mixed** in our example):
+1. Create a price list assignment to connect the price list (**New-price-list** in our example) to the catalog displayed in the Frontend Application (**B2B-mixed** in our example):
 
     1. In the main menu, click **Pricing**.
     1. In the next blade, click **Price Lists**.

@@ -12,8 +12,8 @@ All properties defined at a higher level are automatically inherited at all lowe
 To start managing properties:
 
 1. Click **Catalog** in the main menu and find the required catalog from the list. 
-1. Click on the three dots located on the left side of the catalog name and select **Manage**.  
-1. In the next **Catalog details** blade, click on the **Properties** widget. 
+1. In the next blade, click on the three dots to the left of the catalog name and select **Manage** from the dropdown list.  
+1. In the next blade, click on the **Properties** widget. 
 1. The **Property list** blade appears. 
 
 ![Property path](media/property-path.png)     

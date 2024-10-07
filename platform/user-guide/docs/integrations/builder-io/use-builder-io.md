@@ -7,11 +7,15 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 1. Click **Builder.io**. The Builder.io dashboard opens in a new window. 
 1. If required, select a space from the list.
 1. Click **New entry** to [create a new page](https://www.builder.io/c/docs/create-page#creating-a-page). 
+
+    !!! note
+        At this step, you may need to add site URL. Go to **Settings** --> **Space** tab --> **Site URL** --> **Edit**
+
 1. The newly created page already contains a header and a footer that maintain the UI and design of the Virto Frontend Application:
 
     ![Header and footer](media/header-footer.png)
 
-    The left sidebar contains custom components. If necessary, users can [add their own custom components](https://www.builder.io/c/docs/custom-components-intro) or edit the existing ones:
+    The left sidebar contains builder.io components and Virto Commerce custom components. If necessary, users can [add their own custom components](https://www.builder.io/c/docs/custom-components-intro) or edit the existing ones:
 
     ![Custom components](media/custom-components.png)
 
