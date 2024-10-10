@@ -6,6 +6,7 @@ Managing reviews includes:
 * [Getting current average rating.](managing-reviews.md#view-average-rating)
 * [Moderating reviews.](managing-reviews.md#moderate-reviews)
 * [Email review reminders.](managing-reviews.md#email-review-reminders)
+* [Enabling/ disabling product reviews.](managing-reviews.md#enable-product-reviews)
 
 ## View reviews
 
@@ -74,4 +75,10 @@ To enable email review reminder:
 
 1. Click **Save** in the toolbar to save the changes.
 
-The customer will be reminded to review the product he bought.
+The customer will be reminded to review the product they bought.
+
+## Enable product reviews
+
+The implementation partners can now control the visibility of the reviews functionality in a theme based on the installation of the Quote module. When the Quote module is installed, the reviews feature in the theme is automatically activated. By uninstalling or removing the module, the reviews are deactivated:
+
+![Reviews on](media/reviews-on.png)

@@ -10,12 +10,17 @@ This target saves a token for accessing the Virto Cloud portal, eliminating the 
 vc-build CloudAuth
 ```
 
-!!! note 
-    By default, authorization uses a Github account. There is an optional `-AzureAD` parameter that allows you to authorize using an Azure AD (Entra ID) account:
+By default, authorization uses a Github account. There is an optional `-AzureAD` parameter that allows you to authorize using an Azure AD (Entra ID) account:
 
-    ```
-    vc-build CloudAuth -AzureAD
-    ```
+```
+vc-build CloudAuth -AzureAD
+```
+
+You can also authenticate by directly providing a cloud token using the `-CloudToken` parameter. This eliminates the need for a Github or Azure AD account when accessing the VirtoCloud portal:
+
+```console
+vc-build CloudAuth -CloudToken <token>
+```
 
 ## Initialize new environment  
 
@@ -57,30 +62,33 @@ vc-build CloudEnvRestart -EnvironmentName <EnvName>
 vc-build CloudEnvLogs -EnvironmentName <EnvName>
 ```
 
-## Update environment from manifest
+## Update environment
 
-```
-vc-build CloudEnvUpdate -Manifest <path to the manifest>
+```console
+vc-build CloudEnvUpdate -CloudToken <your token> -Manifest <path to application manifest>
 ```
 
 ## Set parameters for environment  
 
+```console
+vc-build CloudEnvSetParameter -CloudToken <your token> -EnvironmentName <environment name> -HelmParameters platform.config.paramname=somevalue123
 ```
-vc-build CloudEnvSetParameter -EnvironmentName <EnvName> -HelmParameters <PARAMETER_NAME>=<PARAMETER_VALUE> <PARAMETER_NAME2>=<PARAMETER_VALUE2>
-```
+
 
 ## Delete environment
    
-```
+```console
 vc-build CloudDown -EnvironmentName <EnvName>
+vc-build CloudDown -Organization <OrgName> -EnvironmentName <EnvName>
 ```
+
 
 ## Wait for expected status of environment  
 
+```console
+vc-build CloudEnvStatus -CloudToken <your token> -EnvironmentName <environment name> -HealthStatus Healthy -SyncStatus Progressing
+```
 
-```
-vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing
-```
 
 Additional parameter `AttemptsNumber` (default value 100) determines the number of attempts, while `Delay` (default value 10) specifies the delay between attempts.  
 

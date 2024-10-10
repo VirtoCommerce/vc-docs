@@ -19,6 +19,10 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
     ![Custom components](media/custom-components.png)
 
+    For example, you can add an **N-pinned products** component to a custom category page. You can create fully customized category pages that include not only standard products but also specifically curated products that remain pinned:
+
+    ![N-pinned-products](media/n-pinned-products.png)
+
 ![Readmore](media/readmore.png){: width="25"} [Builder.io user guide](https://www.builder.io/c/docs/start-building)
 
 ## Copy components from Figma

@@ -70,21 +70,21 @@ This command also generates a test coverage and overall stats report.
 
     Calculating coverage result...
     Generating report 'c:\Projects\VirtoCommerce\V3\Modules\vc-module-catalog-csv-import\.tmp\coverage.xml'
-    +-------------------------------------------+--------+--------+--------+
+    ++++
     | Module                                    | Line   | Branch | Method |
-    +-------------------------------------------+--------+--------+--------+
+    ++++
     | VirtoCommerce.CatalogCsvImportModule.Core | 77,17% | 73,38% | 72,83% |
-    +-------------------------------------------+--------+--------+--------+
+    ++++
     | VirtoCommerce.CatalogCsvImportModule.Data | 56,47% | 52,15% | 56,86% |
-    +-------------------------------------------+--------+--------+--------+
+    ++++
 
-    +---------+--------+--------+--------+
+    ++++
     |         | Line   | Branch | Method |
-    +---------+--------+--------+--------+
+    ++++
     | Total   | 65,23% | 60,64% | 66,66% |
-    +---------+--------+--------+--------+
+    ++++
     | Average | 66,81% | 62,76% | 64,84% |
-    +---------+--------+--------+--------+
+    ++++
 
 
     ═══════════════════════════════════════
@@ -100,11 +100,19 @@ This command also generates a test coverage and overall stats report.
 
 ## Pack
 
-To build the module solution and create NuGet packages, run:
+The `Pack` command compiles the solution and creates NuGet packages from the projects located in the solution folder. By default, packages are built using the Release configuration, but you can specify a different configuration, such as Debug, with the `-configuration` parameter.
 
 ```console
-vc-build pack -configuration <Debug|Release> 
+vc-build pack
 ```
+
+**Parameters:**
+
+* `-configuration` (optional): Specifies the build configuration to use, either `Debug` or `Release`.
+
+    ```console
+    vc-build pack -configuration <Debug|Release>
+    ```
 
 This command generates NuGet packages for projects with `<IsPackable>` set to `True` in the **.csproj** file.
 
@@ -132,58 +140,33 @@ vc-build publishPackages -source C:\local-nuget
 
 ## Compress 
 
-To pack build artifacts into a distribution bundle zip, ready for transfer or publication, run:
+The `Compress` command creates an archive of the artifacts, including only necessary files and filtering out excess. By default, it uses the Release configuration, but you can specify a different one using the `-configuration` parameter. Additionally, you can provide a custom NuGet configuration file using `-NugetConfig`.
 
 ```console
-vc-build compress -configuration <Debug|Release>
+vc-build compress
 ```
-
-This command puts the resulting zip into the artifact folder in the module root. 
-
-This target normally checks and excludes from the resulting zip all files which names are enumerated in these multiple sources:
-
-* global [module.ignore](https://raw.githubusercontent.com/VirtoCommerce/vc-platform/dev/module.ignore) file that is managed by the VirtoCommerce team.
-* local **module.ignore** file that is taken from the root folder of the module.
-  
-```console
-vc-build compress -configuration Release
-```
-
-Console output:
-
-```console
-═══════════════════════════════════════
-Target             Status      Duration
-───────────────────────────────────────
-Clean              Executed        0:00
-Restore            Executed        0:07
-Compile            Executed        0:06
-WebPackBuild       Executed        0:00
-Test               Executed        0:05
-Publish            Executed        0:01
-Compress           Executed        0:01
-───────────────────────────────────────
-Total                              0:23
-═══════════════════════════════════════
-```
-
-!!! info
-    The `compress` target now includes support for building CustomApps.
 
 **Parameters:**
 
-* `-NugetConfig`: Specifies custom path to nuget config files.
+* `-configuration` (optional): Defines the build configuration, such as `Release` or `Debug`.
 
     ```console
-    vc-build Compress -NugetConfig <path to nuget config>
+    vc-build compress -configuration <Release|Debug>
     ```
 
-## DockerLogin
+* `-NugetConfig` (optional): Specifies the path to a custom NuGet configuration file.
 
-To execute docker login, run:
+    ```console
+    vc-build compress -NugetConfig <path to nuget config>
+    ```
+
+
+## DockerLogin  
+
+The `DockerLogin` command logs you into Docker. You can specify registry URL, username, and password as parameters.
 
 ```console
-vc-build dockerlogin -DockerRegistryUrl <registry url> -DockerUsername <username> -DockerPassword <password>
+vc-build dockerlogin -DockerRegistryUrl https://myregistry.com -DockerUsername user -DockerPassword 12345
 ```
 
 ## BuildImage
@@ -216,3 +199,82 @@ vc-build BuildAndPush -DockerRegistryUrl <registry url> -DockerUsername <usernam
 
 !!! note
     If you are already signed in to Docker CLI, you do not need to pass the `DockerPassword` parameter.
+
+
+## QuickRelease
+
+The `QuickRelease` command automates the release process by creating a release branch from `dev`, merging it into `master`, incrementing the version in `dev`, and then deleting the `release/*` branch.
+
+```console
+vc-build QuickRelease
+```
+
+**Parameters:**
+
+* `-Force` (optional): Forces the quick release process even if conflicts or issues arise.
+
+    ```console
+    vc-build QuickRelease -Force
+    ```
+
+This command streamlines the release cycle, quickly preparing the latest version for production.
+
+## Publish
+
+The `Publish` command prepares the application for deployment by running `dotnet publish`, packaging the application and its dependencies into a publishable format.
+
+```console
+vc-build publish
+```
+
+This command readies the application for deployment, compiling and organizing the necessary files.
+
+## WebPackBuild
+
+The `WebPackBuild` command builds the frontend assets by first installing npm dependencies and then running Webpack to compile JavaScript and other static resources.
+
+```console
+vc-build WebPackBuild
+```
+
+This command compiles all frontend assets, ensuring they are optimized and ready for deployment.
+
+## PublishModuleManifest
+
+The `PublishModuleManifest` command updates the `modules_v3.json` file with the current artifact’s `module.manifest` information, ensuring module metadata is accurate and up-to-date.
+
+```console
+vc-build PublishModuleManifest
+```
+
+This command keeps the module registry current, providing accurate module information for the platform.
+
+## SonarQubeStart
+
+The `SonarQubeStart` command initiates a SonarQube analysis session with `dotnet sonarscanner begin`, accepting various parameters to configure the scanning environment.
+
+```console
+vc-build SonarQubeStart -SonarBranchName dev -SonarAuthToken *** -RepoName vc-module-marketing
+```
+
+This command sets up SonarQube for code quality analysis, preparing it to scan the codebase.
+
+## SonarQubeEnd
+
+The `SonarQubeEnd` command finalizes the SonarQube analysis session with `dotnet sonarscanner end`, completing the scanning process.
+
+```console
+vc-build SonarQubeEnd -SonarAuthToken %SonarToken%
+```
+
+This command completes the code quality scan and submits the results to SonarQube.
+
+## Release
+
+The `Release` command facilitates the creation of a GitHub release, with parameters such as `GitHubUser`, `GitHubToken`, and `ReleaseBranch` to specify the release details.
+
+```console
+vc-build release -GitHubUser VirtoCommerce -GitHubToken %token%
+```
+
+This command automates the GitHub release process, packaging and publishing the latest version.

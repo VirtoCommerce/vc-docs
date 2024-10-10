@@ -177,7 +177,7 @@ To deploy the Frontend Application on a local machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/VirtoCommerce/vc-theme-b2b-vue.git "C:\vc-theme-b2b-vue\"
+    git clone https://github.com/VirtoCommerce/vc-frontend.git "C:\vc-frontend\"
     ```
 
 1. Check `yarn` version. It should be **4.1.0** or higher (not 1.XX.):

@@ -28,12 +28,15 @@ If you use a source that requires authorization, you can pass tokens using the f
 
 
 ```console
-vc-build install (with no args)
-vc-build install -GitLabToken $GITLAB_TOKEN -githubtoken $GITHUB_TOKEN -AzureToken $AZURE_TOKEN
+vc-build install
+vc-build install -GitLabToken $GITLAB_TOKEN
 vc-build install -platform -version <version>
 vc-build install -platform -PlatformAssetUrl https://github.com/VirtoCommerce/vc-platform/releases/download/3.216.13/VirtoCommerce.Platform.3.216.13.zip
+vc-build install -module <module> -version <version>
+vc-build install -module <module>:<version>
 vc-build install -PackageManifestPath some_directory/vc-package.json -DiscoveryPath ../modules -ProbingPath platform_dir/app_data/modules -SkipDependencySolving
 ```
+
 
 You can install any required Virto Commerce module by specifying its Id and version:
 
@@ -163,8 +166,9 @@ vc-build uninstall -module <module>
 
 **Example**
 ```console
-vc-build uninstall -module VirtoCommerce.Cart
+vc-build uninstall -Module VirtoCommerce.Cart VirtoCommerce.Catalog
 ```
+
 
 ## Configure
 

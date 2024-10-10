@@ -51,3 +51,18 @@ To view the product details of the added product:
 	* Widgets:
 		![Products details widgets](media/product-properties-widgets.png)
 
+## Setup product pack size
+
+To ensure that orders are placed in the correct quantities, set a pack size for a product:
+
+1. In the main menu, click **Catalog**.
+1. In the next blade, select the required catalog.
+1. In the next blade, select the required product.
+1. In the next blade, set pack size.
+1. Click **Save** in the toolbar.
+
+![Add pack size](media/add-pack-size.png)
+
+This helps suppliers fulfill orders smoothly without needing to cancel or unexpectedly adjust quantities:
+
+![Pack size on frontend](media/pack-size-frontend.png)

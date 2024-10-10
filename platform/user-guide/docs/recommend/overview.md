@@ -1,4 +1,3 @@
-
 # Overview
 
 The xRecommend module displays recommendations to the current product. These recommendations help users expand their search and explore more broadly by suggesting similar or complementary items. This allows users to discover alternatives even if they don’t find an exact match:
@@ -8,6 +7,10 @@ The xRecommend module displays recommendations to the current product. These rec
 In the cart, it also shows recently browsed products:
 
 ![Recently browsed products](media/recently-browsed-products.png){: width="750"}
+
+In the product page after **Products related to this item** block, you can also display items that other customers frequently bought together with those the current user is purchasing:
+
+![Other customers bought](media/other-customers-bought.png)
 
 Although the xRecommend module does not have its own user interface, you need to have it installed to manage recommendations. 
 

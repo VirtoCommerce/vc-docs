@@ -42,6 +42,7 @@ nav:
           - Package Management: CLI-tools/package-management.md
           - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
           - Cold Start Optimization and Data Migration: CLI-tools/cold-start-and-data-migration.md
+          - More Targets: CLI-tools/more-targets.md
           - Virto Cloud: CLI-tools/virto-cloud.md
     - Fundamentals:
           - Caching:
