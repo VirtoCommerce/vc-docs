@@ -34,6 +34,10 @@ To complete your order:
 
 1. Specify shipping details:
     * Select a shipping address from the list or add a new one.
+
+        !!! note
+            If **Shipping address policy** is enabled, you will see a prefilled shipping address on the Shipping page.
+
     * Select a delivery method from the dropdown list: Ground or Air. The shipping cost appears in the order summary.
     * Enter your comments, if any.
 

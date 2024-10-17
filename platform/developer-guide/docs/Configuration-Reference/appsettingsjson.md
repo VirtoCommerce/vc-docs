@@ -290,8 +290,33 @@ This node configures the background processing settings for Hangfire in the Virt
           "DisableGlobalLocks": true
         }
       },
+    }
+    }
 ```
 
+#### Stores
+
+This node configures default store settings and domain assignments in the Virto Commerce platform.
+
+| Node               | Default or sample value | Description                                                                                         |
+|--------------------|-------------------------|-----------------------------------------------------------------------------------------------------|
+| DefaultStore       | B2B-store               | Specifies the default store identifier to be used by the platform.                                  |
+| Domains            |                         | Allows assigning domain names to specific stores, with the option to map local domains for testing. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "Stores": {
+      "DefaultStore": "B2B-store",
+      "Domains": {
+        "localhost": "B2B-store"
+      }
+    }
+  }
+}
+```
 
 ### Assets
 
@@ -543,7 +568,103 @@ The DatabaseProvider node specifies the type of database management system (DBMS
 "DatabaseProvider": "SqlServer"
 ```
 
-### File Upload
+### DefaultMainMenuState
+
+This node configures the default state of the main menu in the Virto Commerce platform. It specifies which menu items are shown, their order, and if they are marked as favorites.
+
+| Node            | Default or sample value | Description                                                                                           |
+|-----------------|-------------------------|-------------------------------------------------------------------------------------------------------|
+| items[].path    | "browse/store"          | The path for a specific menu item. Each path corresponds to a different module or area in the platform.|
+| items[].isFavorite | true                 | Indicates whether the menu item is marked as a favorite, making it easily accessible.                  |
+| items[].order   | 0                       | Specifies the order in which the menu item appears. Lower numbers appear earlier in the menu list.     |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "DefaultMainMenuState": {
+      "items": [
+        {
+          "path": "browse/store",
+          "isFavorite": true,
+          "order": 0
+        },
+        {
+          "path": "browse/catalog",
+          "isFavorite": true,
+          "order": 1
+        },
+        {
+          "path": "browse/pricing",
+          "isFavorite": true,
+          "order": 2
+        },
+        {
+          "path": "browse/Inventory",
+          "isFavorite": true,
+          "order": 3
+        },
+        {
+          "path": "browse/orders",
+          "isFavorite": true,
+          "order": 4
+        },
+        {
+          "path": "browse/member",
+          "isFavorite": true,
+          "order": 5
+        },
+        {
+          "path": "browse/marketing",
+          "isFavorite": true,
+          "order": 6
+        },
+        {
+          "path": "browse/assets",
+          "isFavorite": true,
+          "order": 7
+        },
+        {
+          "path": "browse/content",
+          "isFavorite": true,
+          "order": 8
+        }
+      ]
+    }
+  }
+}
+```
+
+### ExternalModules
+
+This node configures the settings for external modules in the Virto Commerce platform.
+
+| Node                  | Default or sample value  | Description                                                                                   |
+|-----------------------|--------------------------|-----------------------------------------------------------------------------------------------|
+| IncludePrerelease     | false                    | Determines whether to include prerelease versions of modules during updates and installations. |
+| ModulesManifestUrl    | "https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json" | Specifies the URL where the module manifest is located.     |
+| AuthorizationToken    |                          | Token used for authorization to access module sources, if needed.                             |
+| AutoInstallModuleBundles | ["commerce"]          | Lists the module bundles that will be automatically installed upon platform setup.            |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "ExternalModules": {
+      "IncludePrerelease": false,
+      "ModulesManifestUrl": "https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json",
+      "AuthorizationToken": "",
+      "AutoInstallModuleBundles": [
+        "commerce"
+      ]
+    }
+  }
+}
+```
+
+### FileUpload
 
 This node configures file upload settings for your application:
 
@@ -955,7 +1076,7 @@ This node is used for Used for platform settings overriding.
 }
 ```
 
-### Push messages
+### PushMessages
 
 This node configures the push notification settings for the Virto Commerce Push Messages` module using Firebase Cloud Messaging (FCM).
 
@@ -1015,6 +1136,37 @@ This node configures the push notification settings for the Virto Commerce Push 
 }
 ```
 
+### PushNotifications
+
+This node configures the push notification service settings for scalability in the Virto Commerce platform.
+
+| Node               | Default or sample value                                   | Description                                                                                                               |
+|--------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| ScalabilityMode    | "None"                                                    | Specifies the scalability mode for notifications. Possible values are `RedisBackplane`, `AzureSignalRService`, or `None`. |
+| HubUrl             | "https://localhost:5001/pushNotificationHub"              | The URL for connecting to the platform's SignalR `/pushNotificationHub` as a client. This is used for syncing local notifications with other platform instances.  |
+| ForceWebSockets    | false                                                     | Forces the use of WebSockets for notification exchange. The host environment must support WebSockets.                     |
+| AzureSignalRService.ConnectionString | "Endpoint=https://{app name}.service.signalr.net;AccessKey={access key};Version=1.0;" | The connection string for Azure SignalR Service, specifying the endpoint and access key. |
+| RedisBackplane.ChannelName          | "VirtoCommerceChannel"                              | The name of the channel for Redis backplane, used for scaling notifications across instances.                  |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "PushNotifications": {
+      "ScalabilityMode": "None",
+      "HubUrl": "https://localhost:5001/pushNotificationHub",
+      "ForceWebSockets": false,
+      "AzureSignalRService": {
+        "ConnectionString": "Endpoint=https://{app name}.service.signalr.net;AccessKey={access key};Version=1.0;"
+      },
+      "RedisBackplane": {
+        "ChannelName": "VirtoCommerceChannel"
+      }
+    }
+  }
+}
+```
 
 ### Search
 
@@ -1410,6 +1562,29 @@ This node configures the Algolia search provider:
 ```
 
 <!--algolia-end-->
+
+
+#### SecurityHeaders
+
+This node configures security-related HTTP headers in the Virto Commerce platform.
+
+| Node           | Default or sample value | Description                                                                                                       |
+|----------------|-------------------------|-------------------------------------------------------------------------------------------------------------------|
+| FrameOptions   | "Deny"                  | Specifies the `X-Frame-Options` header configuration. Allowed values are `Deny` (default), `SameOrigin`, or a custom URI.|
+| FrameAncestors | "None"                  | Configures the `FrameAncestors` directive within the `Content-Security-Policy` header. Allowed values are `None` (default), `Self`, or a custom URI. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "SecurityHeaders": {
+      "FrameOptions": "Deny",
+      "FrameAncestors": "None"
+    }
+  }
+}
+```
 
 ### Serilog
 
