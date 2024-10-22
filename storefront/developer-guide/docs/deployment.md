@@ -89,7 +89,7 @@ To deploy the Frontend Application on Azure:
 
 1. Create all Azure resources using the Azure button:
 
-    [![Azure button](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployWebAppForContainer.json)
+    [![Azure button](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployPlatformAndFrontend.json)
 
 1. Fill in the required values on the **Custom deployment** page and create Azure resources:
 
