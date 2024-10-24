@@ -32,9 +32,11 @@ nav:
                       - Configuring Asset Blob Storage: Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage.md
                       - Importing Sample Data: Getting-Started/Post-Installation-Steps/04-importing-sample-data.md
           - Skills Required for VC Developers: skills-required-for-VC-developers.md
-    - Back End Architecture:
-          - Tech Stack: Back-End-Architecture/01-tech-stack.md
-          - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
+    - Architecture:
+          - Virto Atomic Architecture: Back-End-Architecture/atomic-architecture.md
+          - Back End Architecture:
+                - Tech Stack: Back-End-Architecture/01-tech-stack.md
+                - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
     - CLI tools:
           - Overview: CLI-tools/overview.md
           - Getting Started: CLI-tools/getting-started.md

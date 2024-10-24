@@ -6,7 +6,21 @@ The `vc-build` tool streamlines various build scenarios for solutions based on V
 <br>
 ![vc-build CLI](media/build-automation.png)
 
-  
+
+!!! note
+    You can adjust the verbosity (level of details) of the output with the `-verbosity` parameter, which can be applied to any target. It accepts one of four values:
+
+      * `Verbose`: Shows all messages.
+      * `Normal`: Shows information (INF) and above.
+      * `Minimal`: Shows warnings (WRN) and above.
+      * `Quiet`: Shows only errors (ERR).
+
+    **Example** 
+
+    ```console
+    vc-build compress -verbosity <Verbose|Normal|Minimal|Quiet>
+    ```
+
 ## Clean
 
 To clean your bin, objects, and artifacts directories, run:
