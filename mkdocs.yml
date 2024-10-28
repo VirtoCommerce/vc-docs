@@ -354,15 +354,17 @@ extra:
               content:
                 - title: Platform
                   links:
-                    - title: Manager Getting Started
-                      url: /platform/user-guide/getting-started
                     - title: Developer Getting Started
                       url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
-                - title: Storefront
+                    - title: Manager Getting Started
+                      url: /platform/user-guide/getting-started
+                - title: Frontend Application
                   links:
                     - title: Developer Getting Started
-                      url: /storefront/developer-guide/getting-started/quickstart-on-windows
-                - title: VC-Shell
+                      url: /storefront/developer-guide/
+                    - title: User Getting Started
+                      url: /storefront/user-guide/
+                - title: VC Shell
                   links:
                     - title: Developer Getting Started
                       url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
