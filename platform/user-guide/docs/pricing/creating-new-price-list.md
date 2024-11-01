@@ -14,12 +14,19 @@ Managing price lists includes:
 To create a new price list:
 
 1. Click **Pricing** in the main menu.
-
-1. Click **Add** in the toolbar to open the **New Price List** blade.
-
-1. Fill in the following fields:
+1. In the next blade, click **Price lists**.
+1. In the next blade, click **Add** in the toolbar to open the **New Price List** blade.
+1. The following blade appears:
 
 	![New Price List screen](media/new-price-list-screen.png)
+
+	Add:
+
+	* Name.
+	* Currency.
+	* Short description (optional).
+
+	You will need the Assignments widget later when [configuring price list assignments](adding-new-assignment.md), if any.   
 
 1. Click **Create**.
 
@@ -30,11 +37,8 @@ Your new price list appears in the list.
 To delete a price list:
 
 1. Click **Pricing** in the main menu.
-
 1. Check the price list(s) you want to delete.
-
 1. Click **Delete** in the toolbar.
-
 1. Confirm the deletion.
 
 The price list has been deleted.
@@ -50,7 +54,6 @@ To add prices:
 	![Path](media/price-list-path1.png)
 
 1. In the next blade, select the category you want to add the product prices from.
-
 1. In the **Select catalog items...** blade, check the products you need.
 	
 	!!! note
@@ -69,11 +72,8 @@ If some products either do not have assigned prices when you add them to your pr
 To start editing or adding a price:
 
 1. Click the product in your price list to open the price editing blade:
-
 1. Click the existing price or add a new one by clicking **Add** in the toolbar.
-
 1. Edit the **List price**, **Sale price**, and **Minimum quantity**, which cannot be less than 1 by default.
-
 1. Click **Save** to save the changes.
 
 	![Path](media/price-list-path.png)

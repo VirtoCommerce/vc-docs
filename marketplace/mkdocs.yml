@@ -36,6 +36,10 @@ extra:
                   - title: Github
                     link: https://github.com/VirtoCommerce/vc-deploy-marketplace
         release_notes:
+            - title: News Digest November 2024
+              link: https://www.virtocommerce.org/t/november-2024-news-digest/743
+              type: Digest
+              date: 1 November 2024
             - title: News Digest October 2024
               link: https://www.virtocommerce.org/t/october-2024-news-digest/734
               type: Digest
