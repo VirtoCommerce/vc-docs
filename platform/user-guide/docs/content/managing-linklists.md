@@ -8,7 +8,7 @@ Click on the **Link lists** widget:
 * To add new links.
 * To delete links. 
 
-Let's see how to create the catalog as in the [Virto Commerce Storefront demo version](https://virtostart-demo-store.govirto.com/). 
+Let's see how to create the catalog as in the [Virto Commerce Frontend Application demo version](https://virtostart-demo-store.govirto.com/). 
 
 ![Example](media/catalog-example.png){: width="600"}
 
