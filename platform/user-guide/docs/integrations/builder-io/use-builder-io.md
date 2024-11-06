@@ -6,12 +6,12 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 1. Click ![Dots](media/nine-dots-icon1.png){: width="25"} to open applications menu.
 1. Click **Builder.io**. The Builder.io dashboard opens in a new window. 
 1. If required, select a space from the list.
+1. Add site URL. Go to **Settings** --> **Space** tab --> **Site URL** --> **Edit**. Paste your site URL, then click **Submit**.
+1. Add preview URL. Go to **Content models** --> **Page**. Paste your **Preview URL**, then click **Save**. 
+
 1. Click **New entry** to [create a new page](https://www.builder.io/c/docs/create-page#creating-a-page). 
 
-    !!! note
-        At this step, you may need to add site URL. Go to **Settings** --> **Space** tab --> **Site URL** --> **Edit**
-
-1. The newly created page already contains a header and a footer that maintain the UI and design of the Virto Frontend Application:
+1. Open your newly created page. It already contains a header and a footer that maintain the UI and design of the Virto Frontend Application:
 
     ![Header and footer](media/header-footer.png)
 

@@ -4,8 +4,8 @@ This guide demonstrates how to enable Builder.io in the Platform and assign an A
 
 ## Prerequisites
 
-* Create a [Builder.io account](https://www.builder.io/).
-* [Create a space in Builder.io](https://www.builder.io/c/docs/ui-tour#selecting-and-creating-organizations-and-spaces). 
+* Create your [Builder.io account](https://www.builder.io/).
+* [Create a space in Builder.io](https://www.builder.io/c/docs/ui-tour#selecting-and-creating-organizations-and-spaces). For demonstration purposes, we will choose **Publish** space type.
 
 ## Enable Builder.io and assign API key to store
 
@@ -28,6 +28,6 @@ To start using the Builder.io solution for a specific store:
 
 1. Click **OK**.
 
-The link to Builder.io appears in the applications menu:
+Click on the link to start using Builder.io:
 
 ![Builder.io link](media/builder-io-link.png)

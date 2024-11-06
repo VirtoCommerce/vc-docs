@@ -76,7 +76,7 @@ Add themes, logos, icons, configure the catalog and categories, setup the main m
 
     ![Open frontend locally](media/localhost-url.png)
 
-Your application runs correctly with all customisations applied:
+Your application runs correctly with all customizations applied:
 
 ![Application running correctly](media/frontend-run-locally.png)
 

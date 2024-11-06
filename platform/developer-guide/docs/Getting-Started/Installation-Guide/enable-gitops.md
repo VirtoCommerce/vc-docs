@@ -6,6 +6,10 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
 
 ![Old version](media/old-version.png)
 
+!!! warning
+    When upgrading to a version significantly beyond the current one, it is recommended to first test it on a local machine to check module compatibility with the new version.  If a module version is incompatible with the Platform, the system may show a **Degraded** status during the update. Refer to the [Troubleshooting](enable-gitops.md#troubleshooting) section to learn how to identify the causes of errors.
+
+
 ## Set up Virto Cloud Portal
 
 1. Open the Virto Cloud Portal and select **Environments** in the main menu.
@@ -26,7 +30,8 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
     It contains the minimal setup required for Virto Cloud and GitHub.
 
 1. Create a new repository to store your configuration. Go to your personal or organization account in GitHub, open the **Repositories** tab, then click **New**. Give it a descriptive name (**vc-deploy-dental** in our case).
-1. Open the newly created repository locally, unzip, and copy the downloaded template structure into it.
+1. Clone the repository, open it locally.
+1. Unzip and copy the downloaded template structure into the cloned repository.
 1. Make the first commit and open the template. Adjust the files from the template to link it to your environment:
 
     ![Adjust files](media/template-description.png)
@@ -36,12 +41,13 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
 ### Manage secrets
 
 1. In your repository, go to **Settings** --> **Secrets and variables** --> **Actions** --> **New repository secret**.
-1. Add the following secrets, that are required for the automation workflows to access Virto Cloud and deploy changes:
+1. Add the secrets (VIRTOSTART_ACR_DOCKER_PASSWORD and VIRTOSTART_PLATFORM_TOKEN), that are required for the automation workflows to access Virto Cloud and deploy changes:
 
     ![Secrets](media/add-secrets.png)
 
+
     !!! note
-        The secret can be edited. However, you will not see previously saved values when editing. 
+        The secrets can be edited. However, you will not see previously saved values when editing. 
 
 ## Run workflows
 
@@ -57,14 +63,10 @@ Let's check how the following workflows work:
 
     ![Manual run](media/infra-deployment-manual-run.png)
 
-1. You can monitor the update process in different views:
-
-    === "In the Portal"
-        ![Portal update](media/update-in-portal.png)
+1. Monitor the update process:
     
-    === "In Argo"
-        ![Argo update](media/update-in-argo.png)
-
+    ![Portal update](media/update-in-portal.png)
+    
 The **Synced** and **Healthy** statuses indicate that the process is complete.
 
 ### Cloud platform deployment
@@ -74,16 +76,21 @@ The **Synced** and **Healthy** statuses indicate that the process is complete.
 
     ![Manual run](media/platform-deployment-manual-run.png)
 
-1. You can monitor the update process in different views:
+1. Monitor the update process:
 
-    === "In the Portal"
-        ![Portal update](media/platform-update-in-portal.png)
+    ![Portal update](media/platform-update-in-portal.png)
     
-    === "In Argo"
-        ![Argo update](media/platform-update-in-argo.png)
-
 The **Synced** and **Healthy** statuses indicate that the process is complete.
 
 The Platform version has been successfully updated:
 
 ![Updated Platform version](media/updated-platform-version.png)
+
+## Troubleshooting
+
+If you encounter issues, such as a **Degraded** status, you can identify the cause as follows:
+
+1. Go to **Environments** --> Your environment --> **Applications** --> **Platform**
+1. Click **Logs** in the toolbar.
+1. The Plaform logs open in the next blade. Find the degradation reason. 
+1. If you need any assistance resolving the error, please [contact our support team](http://help.virtocommerce.com).

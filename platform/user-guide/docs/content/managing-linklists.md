@@ -18,7 +18,7 @@ Let's see how to create the catalog as in the [Virto Commerce Frontend Applicati
     ![Example](media/link-lists-example.png)
 
 1. Click **Save** in the toolbar to save the changes.
-1. Now let's fill in the **Juice** category with products. Click **Add** in the toolbar.
+1. Now let's fill in the **Juice** category with products. Click **Add link** in the toolbar.
 1. We want to add multi-fruit juice and syrup to the **Juice** category. Therefore, the URLs are **/juice/multi-fruit-juice** and **/juice/syrup**:
 
     ![Add products](media/add-products.png)
