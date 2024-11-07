@@ -1,6 +1,6 @@
 ﻿# Generate Thumbnails
 
-If your asset folders contain any images, you have the option to create a new thumbnail generation job. You can then choose to execute it manually or schedule it to run at specific intervals, such as every X hours, days, and so on.
+If your asset folders contain any images, you have the option to create a new thumbnail generation job. You can then choose to execute it manually or schedule it to run at specific intervals, such as every X hours, days, and so on. The module supports the following image formats: BMP, GIF, JPEG, PBM, PNG, TIFF, TGA, WebP.
 
 ## Create new job
 

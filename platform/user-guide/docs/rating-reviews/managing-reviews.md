@@ -2,11 +2,31 @@
 
 Managing reviews includes:
 
+* [Enabling/ disabling product reviews.](managing-reviews.md#enable-product-reviews)
 * [Viewing reviews.](managing-reviews.md#view-reviews)
 * [Getting current average rating.](managing-reviews.md#view-average-rating)
 * [Moderating reviews.](managing-reviews.md#moderate-reviews)
 * [Email review reminders.](managing-reviews.md#email-review-reminders)
-* [Enabling/ disabling product reviews.](managing-reviews.md#enable-product-reviews)
+
+## Enable product reviews
+
+To see product reviews right after the product description in the Frontend Application, enable **Product reviews** as follows:
+
+1. Open **Settings**.
+1. Type **Review** to find the settings related to the module.
+1. Select **Product reviews enabled**.
+
+    ![Enable reviews](media/enable-reviews.png)
+
+1. In the next blade, switch the **Product reviews enabled** option to on. You can also configure the following options:
+
+    ![Review options](media/general-settings.png)
+
+1. Click **Save** in the toolbar.
+
+The reviews are now displayed after product description in the Frontend Application:
+
+![Reviews displayed](media/reviews-on-frontend.png)
 
 ## View reviews
 
@@ -76,9 +96,3 @@ To enable email review reminder:
 1. Click **Save** in the toolbar to save the changes.
 
 The customer will be reminded to review the product they bought.
-
-## Enable product reviews
-
-The implementation partners can now control the visibility of the reviews functionality in a theme based on the installation of the Quote module. When the Quote module is installed, the reviews feature in the theme is automatically activated. By uninstalling or removing the module, the reviews are deactivated:
-
-![Reviews on](media/reviews-on.png)

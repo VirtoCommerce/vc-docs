@@ -12,18 +12,16 @@ To edit the order:
 
 1. Click **Orders** in the main menu to open the list of the received orders.
 1. In the next blade, select the desired order. The order details will open in the next blade.
-1. Click **Edit** in the toolbar.
-1. Edit the item quantity.
-1. Edit unit price.
+1. Offer details are displayed in the bottom right corner. Click on any item to view and edit its details: 
 
-    ![Edit order](media/edit-order.png)
+    ![Edit order](media/edit-order.gif)
 
-1. Click ![Floppy](media/floppy.png){: width="25"} in the toolbar to save the changes. Or click ![Cancel](media/cancel-changes.png){: width="25"} to cancel the changes.
+1. Click ![Floppy](media/floppy.png){: width="25"} in the toolbar to save the changes.
 
 Your modifications have been applied. 
 
 !!! note
-    The order image tells you how many items are there in the order:
+    The order image shows the number of items in the order:
     ![Number of items in order](media/marketplace-items.png)
 
 ## Process order

@@ -19,7 +19,7 @@ From the product page, you can:
 
 ![Physical product page layout](../media/product-page.png)
 
-If a product has variations, they will be displayed in a separate widget as a list or as a table:
+If a product has variations, they are displayed in a separate widget as a list or as a table:
 
 ![Products variations](../media/product-variations.png){: width="750"}
 
@@ -27,3 +27,6 @@ Click **Filters** to narrow down the selection of variations:
 
 ![Variations filter](../media/variations-filter.png){: width="750"}
 
+If a [reviews option is enabled](../../../../platform/user-guide/rating-reviews/managing-reviews#enable-product-reviews) for the Frontend Application, the reviews are displayed below the product description:
+
+![Product reviews](../media/reviews-on-frontend.png)
