@@ -15,7 +15,7 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
     ![Header and footer](media/header-footer.png)
 
-    The left sidebar contains builder.io components and Virto Commerce custom components. If necessary, users can [add their own custom components](https://www.builder.io/c/docs/custom-components-intro) or edit the existing ones:
+    The left sidebar contains builder.io components and [Virto Commerce custom components](use-builder-io.md#virto-commerce-custom-components). If necessary, users can [add their own custom components](https://www.builder.io/c/docs/custom-components-intro) or edit the existing ones:
 
     ![Custom components](media/custom-components.png)
 
@@ -24,6 +24,48 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
     ![N-pinned-products](media/n-pinned-products.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Builder.io user guide](https://www.builder.io/c/docs/start-building)
+
+### Virto Commerce custom components
+
+The custom components by Virto include:
+
+* **Category**:
+
+    ![Category](media/custom-category.png)
+
+* **Products**:
+
+    ![Products](media/custom-products.png)
+
+* **Slider**:
+
+    ![Slider](media/custom-slider.png)
+
+* **Favourite products**:
+
+    ![Favourite products](media/custom-favorite-products.png)
+
+* **VC-container** that allows images to be uploaded in a format fully supported by the Frontend Application. It eliminates the need for further resizing to fit other elements:
+
+    ![VC-container](media/vc-container.png)
+
+* **Breadcrumbs**.
+
+## Add category block with subcategory filters
+
+1. Add the **Category** custom component to your field.
+1. Click **Edit**.
+1. Find the **Filter** field and follow the instruction how to fill it in.
+1. On your website, open Developer Tools (right-click a page and select **Inspect**). 
+1. Filter products that are needed in your catalog. 
+1. Go to **Network** --> **graphql** --> **operationName: "SearchProducts"** --> **variables** --> copy filter
+1. Paste it to the **Filter** field.
+
+Now you can see your category with the required results.
+
+??? Demo
+    ![Demonstration](media/builder_io.add_custom_filter.gif)
+
 
 ## Copy components from Figma
 
@@ -59,3 +101,12 @@ For a solid color throughout, edit the section color:
 1. Add the required components to your newly created section.
 
 ![Edit background](media/edit-background-color.gif)
+
+
+
+## Troubleshooting
+
+If you are trying to change the formatting of the header and it does not react, try to refresh your preview.
+
+??? Demo
+    ![Demonstration](media/builder.io_set_background.gif)
