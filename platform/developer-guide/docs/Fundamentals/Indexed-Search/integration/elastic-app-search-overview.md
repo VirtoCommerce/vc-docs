@@ -4,9 +4,9 @@ The Virto Commerce **Elastic App Search** module enables integrating  [Azure Cog
 
 Elastic App Search provides search, aggregation, and analytic capabilities as a service, on top of ElasticSearch. It also supplies tools that can help you tune search result sets without development:
 
-* [Relevance Tuning](https://www.elastic.co/guide/en/app-search/current/precision-tuning.html)
-* [Synonyms](https://www.elastic.co/guide/en/app-search/current/synonyms-guide.html)
-* [Curations](https://www.elastic.co/guide/en/app-search/current/curations-guide.html)
+* [Relevance tuning.](https://www.elastic.co/guide/en/app-search/current/precision-tuning.html)
+* [Synonyms.](https://www.elastic.co/guide/en/app-search/current/synonyms-guide.html)
+* [Curations.](https://www.elastic.co/guide/en/app-search/current/curations-guide.html)
 
 ![Readmore](media/readmore.png){: width="25"} [Deploying Elastic App Search](https://www.elastic.co/guide/en/app-search/current/installation.html)
 
