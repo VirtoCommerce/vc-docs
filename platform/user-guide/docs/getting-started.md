@@ -7,9 +7,9 @@ If you're new to Virto Commerce, the following steps will guide you through the 
 1. [Configure payments, shipments, and taxes.](getting-started.md#configure-payments-shipments-and-taxes)
 1. [Launch marketing and promotional tools.](getting-started.md#launch-marketing-and-promotional-tools)
 1. [Configure inventory.](getting-started.md#configure-inventory)
-1. [Create Frontend User and Add Theme.](getting-started.md#create-frontend-user-and-add-theme)
+1. [Create frontend user and add theme.](getting-started.md#create-frontend-user-and-add-theme)
 
-## Create Catalog
+## Create catalog
 
 The catalog is what your customers are constantly working with. It is very important that the catalog is easy to browse and find the right products.
 
@@ -23,7 +23,7 @@ To start working with the new catalog:
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/6mAkBz1VynM)
 
 
-## Configure Store and Prices
+## Configure store and prices
 
 Virto Commerce platform is multi-language, multi-currency, multi-theme, and multi-store. This design allows users to operate multiple stores seamlessly within the same system.
 
@@ -47,7 +47,7 @@ To configure prices:
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/osK5iX2uYPM)
 
-## Configure Payments, Shipments, and Taxes
+## Configure payments, shipments, and taxes
 
 By default, the platform provides basic payment, shipment, and tax options, enabling a smooth checkout process.
 
@@ -59,7 +59,7 @@ To set up the above features, configure:
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/p64d8vmBzJo)
 
-## Launch Marketing and Promotional Tools
+## Launch marketing and promotional tools
 
 There are several marketing tools in Virto Commerce: 
 
@@ -69,7 +69,7 @@ There are several marketing tools in Virto Commerce:
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/9tpdl84xfm4)
 
-## Configure Inventory
+## Configure inventory
 
 Virto Commerce provides support for multiple fulfillment centers, enabling efficient management of product availability across various warehouses. Thus, inventory configuring includes: 
 
@@ -83,13 +83,13 @@ By default, the Stock Quantity will be automatically reduced with each new order
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/3xRfa0_LUZY)
 
-## Create Frontend User
+## Create frontend user
 
 Virto Commerce is a headless platform and multiple client apps can be connected to it. At this step [create a frontend user for Virto Commerce Frontend application.](security/managing-users.md#create-new-users-and-assign-roles-to-them)
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/Xc8zl0wllmk)
 
-## Check Store Configuration and Launch your MVP store
+## Check store configuration and launch your MVP store
 
 Now you are ready to connect a Frontend Application and launch your MVP store.
 

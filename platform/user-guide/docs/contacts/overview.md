@@ -1,6 +1,6 @@
 ﻿# Overview
 
-The Contacts module allows you to manage various profiles within Virto Commerce, which includes companies, vendors, and individual customers.
+The Contacts (or Customer) module allows you to manage various profiles within Virto Commerce, which includes companies, vendors, and individual customers.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-customer)
 

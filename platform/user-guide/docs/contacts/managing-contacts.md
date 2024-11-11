@@ -44,7 +44,7 @@ To edit any previously added contact:
 
 1. Click **Contacts** in the main menu.
 1. In the **Companies and Contacts** blade, click the three dots to the left of the required contact's name and click **Manage** in the popup menu. 
-1. In the next blade, update the contact and click **Save** in the toolbar to save the changes.
+1. In the next blade, update the contact, for example, change the email account by clicking on the **Accounts** widget, then click **Save** in the toolbar to save the changes.
 
 ![Edit contact](media/edit-contact.png){: width="650"}
 

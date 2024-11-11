@@ -2,7 +2,6 @@
 
 Although the Platform interface is user friendly and intuitive, read this article to understand general techniques of working with the Platform. 
 
-
 ## Home page
 
 The Platform's home page shows:
@@ -27,16 +26,26 @@ To access a module, click on it in the main menu. Its content will appear in the
 
 ## Settings
 
-There some ways to open a module's settings in the Platform:
+There are several ways to open a module's settings in the Platform:
 
-* **Settings** in the main menu.
-* Settings button in the top toolabar:
+* **Settings** in the main menu:
+
+    ![Settings in the main menu](media/settings-in-main-menu.png)
+
+* The **Settings** button in the top toolbar:
 
     ![Settings](media/settings.png){: width="650"}
 
-* **Settings** widget inside the specific module.
+* The **Settings** widget inside the specific module:
 
     ![Settings](media/settings-widget.png){: width="650"}
+
+In the **Settings** toolbar, you can:
+
+* Restart the application to apply new settings.
+* Clear all cached data.
+
+![Restart and reset](media/restart-reset.png)
 
 ## Items URLs
 
