@@ -97,3 +97,13 @@ To increase sales and improve product discovery, Vendors can manage product asso
     ![Associations blade](media/associations-blade.png)
 
 The associations have been added.
+
+## Communicate with Operator
+
+When an Operator has a question about a Vendor's product, the Vendor will see it in the **Communication** widget:
+
+![Communication widget](media/communication-widget.png)
+
+Clicking on the widget, opens a communication blade, where the Vendor can send instant replies to the Operator:
+
+![Communication blade](media/communication-blade.png){: width="600"}

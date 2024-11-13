@@ -41,7 +41,7 @@ The product status in the list of products changes for **Rejected** in both Oper
 !!! note
     Operators can now unpublish and republish products. This feature allows operators to quickly remove products that do not meet the marketplace’s standards, have become outdated, or are no longer aligned with the marketplace’s goals.
 
-    ![Unpublish product](media/unpublish-products.png)
+    ![Unpublish product](media/unpublish-products.png) ![Republish product](media/publish-products.png)
 
 
 ## Manage product from Vendor portal
@@ -54,3 +54,14 @@ To manage products directly from the Vendor portal:
 1. The Vendor portal opens in a new window:
 
 ![Open in Vendor portal](media/manage-product-in-vendor-portal.gif)
+
+## Communicate with Vendor
+
+To contact a Vendor directly:
+
+1. Click **Marketplace products** in the main menu to open the list of all products from all marketplace vendors.
+1. In the next blade, find the product your want to discuss with the Vendor.
+1. In the next blade, click on the **Communication** widget.
+1. In the next blade, you can start or continue a conversation. The dialog will appear the same way in the Vendor portal:
+
+![Communication](media/communication.png)
