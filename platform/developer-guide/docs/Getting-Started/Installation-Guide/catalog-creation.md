@@ -119,17 +119,40 @@ The product has been added to the selected category and subcategory of the catal
 
 ## Add prices
 
+First, you need to create a pricelist:
+
+1. Go to **Pricing** --> **Price lists**.
+1. In the next blade, click **Add** in the toolbar.
+1. In the next blade, fill in the fields as follows:
+
+    ![Create price list](media/create-price-list.png)
+
+1. Click **Create**.
+
 To add prices to each product:
 
+1. Go to **Catalog** --> Your catalog.
 1. Click on a product from your catalog (in our example, Alpen FG surgical carbide burs).
 1. In the next blade, click on the **Price** widget.
-1. In the next blade, make sure your price list is selected as a source price list, then click **Add new price**.
-1. Enter list price, (optionally) sale price, and (optionally) minimum quantity.
+1. In the next blade, select your price list as a source price list, then click **Add new price**.
+1. Enter list price, sale price (optionally), and minimum quantity (optionally).
 1. Click **Save** in the toolbar.
 
 ![Adding prices](media/add-prices.png)
 
-The price has been added to the product. Repeat these steps to add more prices.
+Repeat these steps to add more prices.
+
+Now, we need to add a price list assignment:
+
+1. Go to **Pricing** --> **Price list assignment**.
+1. In the next blade, click **Add** in the toolbar.
+1. In the next blade, fill in the fields as follows:
+
+    ![Proce list assignment](media/add-price-list-assignment.png)
+
+1. Click **Save** in the toolbar.
+
+The prices have been configured. 
 
 ## Add fulfillment centers
 
@@ -156,6 +179,20 @@ Now you need to add product stock in the fulfillment center.
 
 The specified stock appears next to the fulfillment center.
 
+## Add semantic URL for your catalog
+
+1. Open **Catalog**.
+1. In the next blade, click on the three dots next to the name of your catalog.
+1. Select **Manage** from the popup menu.
+1. In the next blade, click on the **SEO** widget.
+1. In the next blade, click **Add** in the toolbar.
+1. In the next blade, fill in the fields as follows:
+
+    ![Add slug URL](media/add-catalog-slug.png)
+
+1. Click **OK**
+
+The URL has been added for your catalog.
 
 ## View results on frontend
 
@@ -183,10 +220,10 @@ For enhanced product filtering and search, let's configure properties within our
 
 Properties can be set for:
 
-* **Catalog**: Assign properties that apply universally across multiple categories or to all products in the catalog. 
-* **Category**: Use category-level properties for attributes specific to products within a particular category.
-* **Product**: Define properties directly on the product level when they’re unique to individual items and not used frequently for filtering (e.g., a specific product model).
-* **Variation**: Assign variation-level properties for attributes specific to different versions of a product, like color, or pack size.
+* **Catalog**. The properties apply universally across multiple categories or to all products in the catalog. 
+* **Category**. The properties apply to attributes specific to products within a particular category.
+* **Product**. The properties are unique to individual items and not used frequently for filtering (e.g., a specific product model).
+* **Variation**. The properties apply to different versions of a product, like color, or pack size.
 
 In our example, we are going to add the following properties:
 
@@ -341,7 +378,7 @@ The property appears in the list. Continue to add properties according to the ta
 
 ### Add properties to products
 
-Now we will add properties to the products:
+Now, we will add properties to the products:
 
 1. In your catalog, select the product you want to add properties to (**OraVerse** in our example).
 1. In the product details blade, click on the **Properties** widget.

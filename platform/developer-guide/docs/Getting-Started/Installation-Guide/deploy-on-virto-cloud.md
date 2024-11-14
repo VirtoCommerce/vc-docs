@@ -162,9 +162,9 @@ The Frontend Application URL has been added.
 
 To start using your applications, you need to configure the paths and routes corresponding to various services and endpoints that your environment will interact with:
 
-1. In the Cloud Portal, go to **Environments** --> **Your environment** --> **Network settings**.
+1. In the Cloud Portal, go to **Environments** --> Your environment --> **Network settings**.
 1. Select your network.
-1. In the next blade, add the following paths and routes. 
+1. In the next blade, click **Add path** in the toolbar to add the following paths and routes: 
 
     | Path          | Route     |
     |---------------|-----------|

@@ -4,16 +4,26 @@ Let's create the following footer:
 
 ![Footer example](media/footer-example.png)
 
-Use [this guide](https://docs.virtocommerce.org/platform/user-guide/content/managing-linklists/) to add links:
+1. Go to **Content** --> Your store --> **Link lists**.
+1. In the **Link lists** blade, click **Add** in the toolbar.
+1. To create root categories, fill in the fields as follows:
 
-1. Add root categories:
+    ![Footer links](media/footer-links.png)
 
-    ![Root categories](media/root-footer-categories.png)
+    !!! note
+        Name your footer link list **footer-links** so the Platform recognizes it as a part of the footer structure.
 
-1. Add subcategories to each root category:
+1. Click **Create**. The current result in the Frontend Application is as follows:
 
-    ![Link lists](media/footer-link-lists.png)
+    ![Footer result](media/footer-example1.png)
 
-1. Click **Save** in the toolbar.
+1. Now let's add subcategories to the footer root categories. In the **Link lists** blade, click **Add** in the toolbar.
+1. For the **My account** category, fill in the fields as follows:
+
+    ![Root categories](media/footer-subcategories.png)
+
+1. Click **Create**.
+
+Continue adding subcategories to the root categories according to the example above.
 
 The footer appears in the Frontend Application.
