@@ -4,76 +4,44 @@ Once your store is created, you can customize its branding by:
 
 * Replacing the default Virto Commerce logo and favicon with your own.
 * Updating the native theme colors to reflect your corporate brand.
-* Changing the default Virto Commerce sliders to your company sliders.
-* Adding a custom background (banner) to enhance the store’s visual appeal.
 
-To brand your store, complete the following steps:
+## Prepare logos and favicon
 
-1. [Upload your logos and background.](store-branding.md#upload-logos-and-homepage-background)
-1. [Specify the paths to the images.](store-branding.md#specify-paths-to-images)
-1. [Upload favicons.](store-branding.md#upload-favicons)
-1. [Add theme presets.](store-branding.md#add-presets)
-1. [Reboot your environment to apply the changes.](store-branding.md#reboot-environment)
+For test purposes, you can use any PNG, GIF, or SVG image (for logo) or PNG, JPEG, or WEBP image (for favicon).   
 
-Prepare the following images in advance:
+For finalized branding, you can prepare logo and favicon images according to the requirements in our [figma project](https://www.figma.com/design/tSeAtWkt4DOj0khZ8Fi8wY/%F0%9F%90%B3-OCEAN-BLUE-%E2%80%A2-Storefront-screens?node-id=4142-36381&t=hwbdIQc7jxZ4YJPZ-4) or use it as a sample as follows:
 
-![Images in advance](media/images-explanation.png)
+1. Clone the project.
+1. Replace logos and favicon with your own images.
+1. Use the preview feature to evaluate the result.
+1. Export the final version of your images.
 
-## Upload logos and homepage background
+Now, you can use the images to replace default logos and favicon.
 
-!!! note
-    Acceptable image formats are SVG and PNG. 
+## Enable white labeling
 
-To add your company's branded images:
+To enable white labeling:
 
-1. Click **Content** in the main menu.
-1. In the next blade, select your store, then click **Themes**.
-1. Choose **default** in the next blade.
-1. Go to **static** → **images**.
-1. In the **images** blade, click **Add** in the toolbar to create a folder for your company images, enter a folder name, and click **Create**:
+1. Click **Stores** in the main menu.
+1. In the next blade, select the desired store.
+1. In the next blade, click on the **White labeling** widget.
+1. In the next blade, turn the white labeling option to on.
 
-    ![Create folder](media/create-images-folder.png)
+![Enabling white labeling Stores](media/enabling-via-stores.png)
 
-1. Select the newly created folder. For better organization, create two subfolders: **home** for banners and sliders, and **logos** for logos:
+White labeling has been enabled.
 
-    ![Subfolders](media/home-logos-folders.png)
+## Customize logo and favicon
 
-1. In the **Logos** folder, click **Upload** to upload your company logos.
-1. Copy and save the links to your logos to use in the next step:
+To replace default logos and favicons with your own images:
 
-    ![Copy link](media/copy-link-to-favicon.png)
+1. In the **White Labeling** blade, click on the **Logo** widget to upload your company's logo.
+1. Click on the **Favicon** widget to upload your favicon.
+1. Click **Save** in the toolbar, then click **Save** in the previous blade.
 
-1. Similarly, upload background and sliders to the **home** folder. Copy and save the links to your slider and banner to use in the next step.
+Your changes have been applied.
 
-Your branded images are now uploaded.
-
-
-## Specify paths to images
-
-To specify the paths for the uploaded images:
-
-1. Go to **Content** → **Your store** → **Theme** → **default** → **config** → **settings_data.json**.
-1. In the settings file, add the links to your logo and homepage background from the previous step:
-
-    ![Add data to settings](media/add-data-to-settings.png)
-
-1. Click **Save** in the toolbar to apply the changes.
-
-The paths to your images have been saved.
-
-## Upload favicons
-
-1. Go to **Content** → **Your store** → **Theme** → **default** → **static** → **icons**.
-1. In the **icons** blade, click **Add** to create a folder for your company icons, name the folder, and click **Create**.
-1. Select the new folder, and click **Upload** to add your company icons/favicons.
-1. Copy the favicon link and paste it into **Content** → **Your store** → **Theme** → **default** → **config** → **settings_data.json** as you did before with the logos and the background. 
-1. Paste the favicon link into **Content** → **Your store** → **Theme** → **default** → **static** → **manifest.json** and specify the favicon size.
-
-    ![Manifest](media/add-favicons-to-manifest.png)
-
-1. Click **Save** in the toolbar to confirm your changes.
-
-Your favicons are now set up for use in your store.
+![Before and after white labeling](media/before-after.png)
 
 ## Add presets
 
@@ -92,38 +60,17 @@ To configure a custom color scheme:
         You can [create your own color scheme using ChatGPT](../../../../user-guide/content/managing-themes#create-theme-colors-via-chatgpt).
 
 1. Click **Create** to add the color scheme to the list.
-1. Copy the filename of your color scheme and paste it into the config file to set it as the default:
+1. Copy the filename of your color scheme.
+1. Go to **Stores** --> Your store --> **White labeling**.
+1. In the **White labeling** blade, click ![Pencil](media/pencil.png){: width="25"} next to the **Theme preset name**.
+1. In the next blade, click **Add** in the toolbar.
+1. Paste the filename to the new field and click ![Floppy](media/floppy.png){: width="25"} to save the changes.
+1. Click **Save** in the toolbar.
+1. In the previous blade, select the newly added theme from the dropdown list. 
+1. Click **Save** in the toolbar. 
 
-    ![Paste link to scheme](media/add-scheme-name-to-config.png)
+Your new color scheme has been applied.
 
-1. Click **Save** in the toolbar to save the changes. 
-
-Your new color scheme has been added.
-
-
-
-## Reboot environment
-
-!!! tip
-    If you need assistance at this or any other step, feel free to [contact our support](https://help.virtocommerce.com/support/home).
-
-To apply all branding modifications, reboot your environment:
-
-1. In the Virto Cloud Portal, click **Environments** in the main menu.
-1. Select the environment to be branded.
-1. In the next blade, click on the **Applications** widget.
-1. In the next blade, click ![Paper sheet](media/paper-sheet.png){: width="20"} next to **Platform**.
-1. Specify the number of reboot attempts:
-
-    ![Reboot attempts](media/reboot-attempts.png)
-
-1. Click **Save** in the current blade, and then again in the previous blade.
-
-    !!! note
-        If the changes are not applied after the first reboot, change the number of reboot attempts and save the changes again. You may need multiple reboots for your modifications to take effect.
-
-1. In the **Environments** blade, click **Refresh**.
-
-Wait for the environment to update: The **Progressing** status changes to **Synced**. Your store's branding changes will now be applied:
+Your store's branding changes have been applied:
 
 ![Branded store](media/branded-shop.png)
