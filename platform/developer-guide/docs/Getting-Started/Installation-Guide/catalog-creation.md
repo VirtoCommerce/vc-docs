@@ -211,6 +211,8 @@ Click on any category or subcategory to view the products within:
 
 ![Catalog](media/store-frontend.png)
 
+!!! note
+    By default, catalog menu is automatically generated based on the existing categories. You can createn your own catalog menu using [this guide](main-menu-setup.md).
 
 ## Configure properties
 
