@@ -19,6 +19,9 @@ For demonstration purposes, we are going to:
 
 Compile the module and connect it to the platform's modules folder for real-time operation. This ensures the platform can reference the necessary artifacts from the order module
 
+Add links to documentation - deploy on Windows, Create custom module
+
+
 ## Verify module functionality
 
 To confirm that the module is working as intended, let's check that the modifications made to the Order module have been applied. For example, a new document type can be added in the extended module:
