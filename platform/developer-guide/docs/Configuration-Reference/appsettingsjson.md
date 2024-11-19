@@ -14,7 +14,7 @@ The configuration keys are hierarchical, and the most convenient way to manage t
 
 These **required** settings represent connection strings for VC Platform and modules.
 
-| Node                                    | Default or Sample Value                      | Description                                                                          |
+| Node                                    | Default or sample value                      | Description                                                                          |
 | --------------------------------------- | ---------------------------------------------| --------------------------------------------------------------------------------------|
 | ConnectionStrings.VirtoCommerce         | Data Source=(local)                          | The server name or network address of the SQL Server instance hosting the Virto Commerce database. This can be **(local)** for a local SQL Server instance or a specific server name/IP address. |
 | ConnectionStrings.VirtoCommerce.InitialCatalog | VirtoCommerce3.net8                   | The name of the SQL Server database where the Virto Commerce Platform data is stored. This database contains all the necessary tables and data for the platform to operate. |
@@ -36,7 +36,7 @@ These **required** settings represent connection strings for VC Platform and mod
 
 This configuration node defines the system settings of the VC Platform.
 
-| Node                          | Default or Sample Value                                   | Description                                                                                             |
+| Node                          | Default or sample value                                   | Description                                                                                             |
 |-------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | LicenseActivationUrl          | https://license.virtocommerce.org/api/licenses/activate/  | The URL used to activate the Virto Commerce Platform license.                                           |
 | SampleDataUrl                 | https://virtocommerce.azureedge.net/sample-data           | URL for downloading sample data during the initial setup of the Virto Commerce Platform.                |
@@ -120,7 +120,7 @@ This node adds and customizes the Application Insight section.
 
 <!--AppInsights1-start-->
 
-| Node                                         | Default or Sample Value                                   | Description                                                                                        |
+| Node                                         | Default or sample value                                   | Description                                                                                        |
 | ---------------------------------------------| ----------------------------------------------------------| -------------------------------------------------------------------------------------------------- |
 | SamplingOptions.Processor                                 | adaptive <br> fixed-rate | This setting lets you chose between two sampling methods:<br>**Adaptive sampling**: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about [configuring this option](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications).<br>**Fixed-rate sampling**: reduces the volume of telemetry sent from both the application. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting. |
 | SamplingOptions.Adaptive.MaxTelemetryItemsPerSecond       | 5                        | Maximum telemetry items per second allowed in adaptive sampling. |
@@ -322,7 +322,7 @@ This node configures default store settings and domain assignments in the Virto 
 
 This **required** node determines how VC Platform will be working with assets, i.e. files.
 
-| Node                              | Default or Sample Value             | Description                                                                                                                   |
+| Node                              | Default or sample value             | Description                                                                                                                   |
 | --------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------  |
 | Provider                          | "FileSystem"<br>"AzureBlobStorage"  | Current asset provider.                                                                                                       |
 | FileSystem                        |                                     | File system-based asset provider configuration. Used when the **Provider** setting has the value **"FileSystem"**.            |
@@ -365,7 +365,7 @@ This **required** node determines how VC Platform will be working with assets, i
 
 This setting determines platfom authentication parameters.
 
-| Node                   | Default or Sample Value              | Description                                                                                                                           |
+| Node                   | Default or sample value              | Description                                                                                                                           |
 | ---------------------- | ---------------------------------    | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Authority              | https://localhost:5051/ <br> https://auth.example.com/ | The Url of the authentication server.<br>Leave empty for the mode when authorization and resource server are the same application.       |
 | Audience               | "resource_server"                    | The audience for which the token is intended.                                                                                         |
@@ -386,11 +386,159 @@ This setting determines platfom authentication parameters.
 }
 ```
 
+### Authentication
+
+The Virto Commerce Platform supports the following authentication methods:  
+
+* [Username and password](#passwordlogin): Users can authenticate using their credentials to obtain access tokens. This approach is straightforward and suitable for simple scenarios where no external identity provider is required.  
+
+* [OpenID connect](#oidc): Clients can authenticate end-users via an authorization server. It adheres to the OpenID Connect standard, enabling integration with external identity providers like Entra ID (formerly Azure AD) for more robust identity management.  
+
+
+#### PasswordLogin
+
+This node enables authentication with username and password.
+
+| Node      | Default or sample value   | Description  |
+| ----------| ------------------------  | ------------ |
+| Enabled   | true<br> false            | Always enabled by default. Setting to **false** will disable logging in with username and password.
+| Priority  | 0                         | Configures the priority of the password login popup on the _Login_ page. The lowest value means the highest priority.
+
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "PasswordLogin": {
+    "Enabled": true
+  }
+}
+```
+
+#### OIDC
+
+This node defines the settings for OpenID Connect authentication in Virto Commerce. This configuration enables integration with OIDC providers, allowing users to authenticate via external identity systems:  
+
+<!--OIDC-start-->
+
+
+| Node                             | Default value                                       | Description                                                                                     |
+|----------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Enabled                          | false                                               | Enables or disables the OIDC authentication.                                                    |
+| AuthenticationType               | "oidc"                                              | A unique identifier for the authentication method.                                              |
+| AuthenticationCaption            | "OpenID Connect"                                    | A user-friendly name for the authentication method.                                             |
+| AllowCreateNewUser               | true                                                | Allows creating new users upon successful authentication.                                       |
+| DefaultUserType                  | "Manager"                                           | Specifies the user type of newly created users.                                                |
+| DefaultUserRoles                 | []                                                  | List of roles assigned to newly created users.                                                 |
+| UserNameClaimType                | "name"                                              | Claim type used to retrieve the username.                                                      |
+| EmailClaimType                   | "email"                                             | Claim type used to retrieve the email address.                                                 |
+| HasLoginForm                     | true                                                | Displays a dedicated login form for this authentication method.                                |
+| Priority                         | 1                                                   | Specifies the sorting order of the authentication method.                                      |
+| LogoUrl                          | null                                                | URL of the logo for the OpenID Connect authentication provider.                                |
+| Authority                        | "https://localhost:5001"                            | Base URL of the OIDC provider (identity server).                                               |
+| ClientId                         | "your-client-id"                                    | Client identifier issued by the OIDC provider.                                                 |
+| ClientSecret                     | "your-client-secret"                                | Confidential client secret issued by the OIDC provider.                                        |
+| Scope                            | ["openid", "profile", "email"]                      | List of scopes requested from the OIDC provider.                                               |
+| ResponseMode                     | "form_post"                                         | Determines how the authorization response is returned.                                         |
+| ResponseType                     | "id_token"                                          | Specifies the type of response expected from the OIDC provider.                                |
+| GetClaimsFromUserInfoEndpoint    | false                                               | Enables retrieval of additional claims from the user info endpoint.                            |
+| CallbackPath                     | "/signin-oidc"                                      | Path for redirection after successful authentication.                                          |
+| SignedOutCallbackPath            | "/signout-callback-oidc"                            | Path for redirection after successful logout.                                                  |
+
+
+=== "Virto Commerce"  
+
+    ```json title="appsettings.json"
+    "oidc": {
+        "Enabled": true,
+        "AuthenticationType": "virto",
+        "AuthenticationCaption": "Virto Commerce",
+        "Authority": "https://localhost:5001",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "ResponseMode": "query",
+        "ResponseType": "code",
+        "GetClaimsFromUserInfoEndpoint": true
+    }
+    ```
+
+=== "Google"  
+
+    ```json title="appsettings.json"
+    "oidc": {
+        "Enabled": true,
+        "AuthenticationType": "google",
+        "AuthenticationCaption": "Google",
+        "Authority": "https://accounts.google.com",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "UserNameClaimType": "email"
+    }
+    ```
+
+=== "Microsoft"  
+
+    ```json title="appsettings.json"
+    "oidc": {
+        "Enabled": true,
+        "AuthenticationType": "microsoft",
+        "AuthenticationCaption": "Microsoft",
+        "Authority": "https://login.microsoftonline.com/your-tenant-id/v2.0",
+        "ClientId": "your-application-id",
+        "UserNameClaimType": "preferred_username"
+    }
+    ```
+
+=== "Multiple providers"  
+
+    ```json title="appsettings.json"
+    "oidc": [
+      {
+        "Enabled": true,
+        "AuthenticationType": "virto",
+        "AuthenticationCaption": "Virto Commerce",
+        "Authority": "https://localhost:5001",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "CallbackPath": "/signin-virto",
+        "SignedOutCallbackPath": "/signout-virto"
+      },
+      {
+        "Enabled": true,
+        "AuthenticationType": "google",
+        "AuthenticationCaption": "Google",
+        "Authority": "https://accounts.google.com",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "UserNameClaimType": "email",
+        "CallbackPath": "/signin-google",
+        "SignedOutCallbackPath": "/signout-google"
+      },
+      {
+        "Enabled": true,
+        "AuthenticationType": "microsoft",
+        "AuthenticationCaption": "Microsoft",
+        "Authority": "https://login.microsoftonline.com/your-tenant-id/v2.0",
+        "ClientId": "your-application-id",
+        "UserNameClaimType": "preferred_username",
+        "CallbackPath": "/signin-microsoft",
+        "SignedOutCallbackPath": "/signout-microsoft"
+      }
+    ]
+    ```
+
+!!! note
+    If you have other external sign-in providers installed (Microsoft Entra ID or Google SSO) you need to make sure to use unique authentication types and callback paths for each provider.
+
+<!--OIDC-end-->
+
+
+
 ### Authorization
 
 This configuration node defines authorization settings for the system.
 
-| Node                      | Default or Sample Value   | Description                                                                                               |
+| Node                      | Default or sample value   | Description                                                                                               |
 | ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
 | ReturnPasswordHash        | true<br> false        | A boolean setting that determines whether to return the password hash during user authentication.<br>If set to **true**, the password hash is returned; if set to **false**, it's not returned. |
 | RefreshTokenLifeTime     | "30.00:00:00"            | The time span specifying the lifetime of a refresh token.<br>A refresh token is used to obtain a new access token without re-entering<br>the user's credentials. The default is 30 days. |
@@ -417,7 +565,7 @@ This node is used for authentication with Azure Active Directory.
 
 ![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Azure Active Directory](../Fundamentals/Security/extensions/adding-azure-as-sso-provider.md)
 
-| Node                  | Default or Sample Value                                   | Description                                                                                                       |
+| Node                  | Default or sample value                                   | Description                                                                                                       |
 | --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Enabled               | false<br> true                                            | Enables authentication with Azure Active Directory. By default, this value is **false**, i.e. authentication is disabled.|
 | UsePreferredUsername  | false <br> true                                           | If set to **true**, the system will check the **preferred_username** in case the **upn** claim returns empty.             |
@@ -487,7 +635,7 @@ This node manages caching configuration.
 
 This **required** setting is used for static content configuration (including themes) for the `VirtoCommerce.Content` module.
 
-| Node                                | Default or Sample Value   | Description                                                                                               |
+| Node                                | Default or sample value   | Description                                                                                               |
 | ----------------------------------- | ------------------------  | --------------------------------------------------------------------------------------------------------- |
 | Provider                            | "FileSystem"           | Current content (file) provider. The supported values are **FileSystem** and **AzureBlobStorage**.           |
 | FileSystem                          |                           | File system-based content provider configuration. This is the default provider used unless **AzureBlobStorage** is set as the current provider. |
@@ -557,7 +705,7 @@ This configuration node configures lifetimes for security tokens that are issued
 
 The DatabaseProvider node specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage its data. 
 
-| Node               | Supported Values                                  | Description                                                                                                            |
+| Node               | Supported values                                  | Description                                                                                                            |
 | ------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | DatabaseProvider   | SqlServer (default)<br>MySql<br>PostgreSql       | Specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage data.    |
 
@@ -720,7 +868,7 @@ This node is used for authentication with Google OAuth 2.0.
 ![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
 
 
-| Node                   | Default or Sample Value   | Description                                                                                                       |
+| Node                   | Default or sample value   | Description                                                                                                       |
 | ---------------------- | --------------------------| ----------------------------------------------------------------------------------------------------------------- |
 | Enabled                | false<br> true            | Enables authentication with Google OAuth 2.0. By default, this value is **false**, i.e., authentication is disabled. |
 | AuthenticationType     | "Google"                  | Provides the authentication scheme. Must always have the **Google** value set.                                    |
@@ -754,7 +902,7 @@ This configuration node configures the ASP.NET Core Identity system.
 
 ![Readmore](media/readmore.png){: width="25"}  [Identity Configuration](https://github.com/dotnet/AspNetCore.Docs/blob/master/aspnetcore/security/authentication/identity-configuration.md#configure-aspnet-core-identity)
 
-| Node                                      | Default or Sample Value   | Description                                                                                                            |
+| Node                                      | Default or sample value   | Description                                                                                                            |
 | ----------------------------------------- | ------------------------  | ---------------------------------------------------------------------------------------------------------------------- |
 | Password                                  |                           | Configuration settings related to user password requirements.                                                          |
 | Password:RequiredLength                   | 8                       | The minimum required length for user passwords.                                                                        |
@@ -794,7 +942,7 @@ This configuration node configures the ASP.NET Core Identity system.
 
 This node configures background screen and background pattern of the Login page.
 
-| Node                      | Default or Sample Value   | Description                                                                                              |
+| Node                      | Default or sample value   | Description                                                                                              |
 | ------------------------- | ------------------------  | -------------------------------------------------------------------------------------------------------- |
 | BackgroundUrl             |                           | Url for the background image of the login page. If empty, no background image is displayed.             |
 | PatternUrl                |                           | Url for the pattern image of the login page. If empty, no pattern image is displayed.                   |
@@ -866,7 +1014,7 @@ This node enables notification configuration for the `VirtoCommerce.Notification
 
 <!--notifications-start-->
 
-| Node                              | Default or Sample Value         | Description                                                                                                               |
+| Node                              | Default or sample value         | Description                                                                                                               |
 | --------------------------------- | ------------------------------  | ------------------------------------------------------------------------------------------------------------------------- |
 | Gateway                           | "Smtp"<br>"SendGrid"            | The current notification sending gateway. The out-of-the-box implemented and supported values are **Smtp**, **SendGrid**.  |
 | DefaultSender                     |                                 | This **required** setting provides sender<br>identification used by the current notification sending gateway.           |
@@ -904,21 +1052,12 @@ This node enables notification configuration for the `VirtoCommerce.Notification
 
 <!--notifications-end-->
 
-### PasswordLogin
-
-This node enables authentication with username and password.
-
-| Node      | Default or sample value   | Description  |
-| ----------| ------------------------  | ------------ |
-| Enabled   | true<br> false            | Always enabled by default. Setting to **false** will disable logging in with username and password.
-| Priority  | 0                         | Configures the priority of the password login popup on the _Login_ page. The lowest value means the highest priority.
-
 
 ### Payments
 
 The Payments node configures various payment gateway integrations for the Virto Commerce platform. This section includes settings for modules such as Authorize.Net and Skyflow, enabling secure payment processing and integration with different payment service providers.
 
-| Node            | Default or Sample Value               | Description                                                         |
+| Node            | Default or sample value               | Description                                                         |
 | --------------- | ------------------------------------- | ------------------------------------------------------------------- |
 | AuthorizeNet    |                                       | Configuration settings for the Authorize.Net payment gateway.       |
 | Skyflow         |                                       | Configuration settings for the Skyflow payment processing module.   |
@@ -933,7 +1072,7 @@ This node configures the Authorize.Net payment gateway integration, enabling sec
 
 <!--authorize-net-start-->
 
-| Node            | Default or Sample Value           | Description                                                      |
+| Node            | Default or sample value           | Description                                                      |
 | --------------- | ----------------------------------| ---------------------------------------------------------------- |
 | IsActive      | true<br>false                       | Toggle to enable or disable the Authorize.Net payment module.     |
 | ApiLogin      | "YourApiLogin"                      | The API login ID provided by Authorize.Net.                       |
@@ -960,7 +1099,7 @@ This node configures the Skyflow payment processing module, facilitating secure 
 
 <!--skyflow-start-->
 
-| Node                             | Default or Sample Value    | Description                                                                        |
+| Node                             | Default or sample value    | Description                                                                        |
 | -------------------------------- |--------------------------- | ---------------------------------------------------------------------------------- |
 | tokenURI                         |                            | The URI for obtaining authentication tokens from the Skyflow API. Can be taken from credentials.json file downloaded from Skyflow dashboard. |
 | vaultURI                         |                            | The URI for the Skyflow vault. Can be taken from Skyflow studio by clicking three dots on the vault and selecting **View details** action.  |
@@ -1220,7 +1359,7 @@ This node configures the Elastic Search provider:
 
 <!--elasticsearch-start-->
 
-| Node                                       | Default or Sample Value                    | Description                                                                     |
+| Node                                       | Default or sample value                    | Description                                                                     |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
 | Search.Provider                            | "ElasticSearch"                             | Specifies the search provider name.       |
 | Search.Scope                               | "default"                                   | Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. The key is optional. Its default value is **default**.|
@@ -1351,7 +1490,7 @@ This node configures the Elastic App Search provider:
 <!--elasticappsearch-start-->
 
 
-| Node                                       | Default or Sample Value                    | Description                                                                    |
+| Node                                       | Default or sample value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
 | Search.Provider                            | "ElasticAppSearch"                       | Name of the search provider.           |
 | Search.Scope                               | "default"                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. Its default value is set to **default**.|
@@ -1439,7 +1578,7 @@ This node configures the Elastic Search 8 provider:
 <!--elasticsearch8-start-->
 
 
-| Node                                       | Default or Sample Value                    | Description                                                                      |
+| Node                                       | Default or sample value                    | Description                                                                      |
 | -------------------------------------------| -------------------------------------------| ---------------------------------------------------------------------------------|
 | Search.Provider                            | "ElasticSearch8"                         | Specifies the search provider name.       |
 | Search.Scope                               | "default"                                | (Optional) Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. Its default value is **default**.                                         |
@@ -1487,7 +1626,7 @@ This node configures the Lucene search provider:
 
 <!--lucene-start-->
 
-| Node                                       | Default or Sample Value                    | Description                                                                    |
+| Node                                       | Default or sample value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
 | Search.Provider                            | "Lucene"                                   | Name of the search provider.                    |
 | Search.Lucene.Path                         |                                            | A virtual or physical path to the root directory where indexed documents are stored.
@@ -1513,7 +1652,7 @@ This node configures the Azure Search provider:
 
 <!--azuresearch-start-->
 
-| Node                                       | Default or Sample Value                    | Description                                                                    |
+| Node                                       | Default or sample value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
 | Search.Provider                            | "AzureSearch"                              | Name of the search provider.               |
 | Search.AzureSearch.SearchServiceName       |                                            | The name of the search service instance in your Azure account. Example: SERVICENAME.search.windows.net.|
@@ -1545,7 +1684,7 @@ This node configures the Algolia search provider:
 
 <!--algolia-start-->
 
-| Node                                       | Default or Sample Value                    | Description                                                                    |
+| Node                                       | Default or sample value                    | Description                                                                    |
 | -------------------------------------------| -------------------------------------------| -------------------------------------------------------------------------------|
 | Search.Provider                            | "AlgoliaSearch"                            | Name of the search provider.             |
 | Search.AlgoliaSearch.ApiId                 |                                            | The API id for Algolia server.                                                 |

@@ -119,9 +119,12 @@ nav:
           - Security:
                 - Overview: Fundamentals/Security/overview.md
                 - Authentication:
-                      - Issuing and Using Access Token: Fundamentals/Security/authentication/issuing-and-using-access-token.md
-                      - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
-                      - API Key Authentication: Fundamentals/Security/authentication/api-key-authentication.md
+                      - Overview: Fundamentals/Security/authentication/overview.md
+                      - Username and Password:
+                            - Issuing and Using Access Token: Fundamentals/Security/authentication/issuing-and-using-access-token.md
+                            - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
+                            - API Key Authentication: Fundamentals/Security/authentication/api-key-authentication.md
+                      - OpenId Connect: Fundamentals/Security/authentication/oidc.md
                 - Authorization:
                       - Overview: Fundamentals/Security/authorization/overview.md
                       - Global Permissions: Fundamentals/Security/authorization/global-permissions.md
