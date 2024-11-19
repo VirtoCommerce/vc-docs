@@ -5,8 +5,8 @@
 
 To integrate Entra ID (Azure AD) as a new SSO provider, install the [Azure AD module](https://github.com/VirtoCommerce/vc-module-azure-ad/releases). After that:
 
-1. [Manage backend settings.](azure-ad.md#backend-settings)
-1. [Manage Platform settings.](azure-ad.md#platform-settings)
+1. [Manage backend settings.](#backend-settings)
+1. [Manage Platform settings.](#platform-settings)
 
 
 ## Backend settings

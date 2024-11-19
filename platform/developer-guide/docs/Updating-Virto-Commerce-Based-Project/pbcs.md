@@ -1,7 +1,5 @@
 # Packaged Business Capabilities (PBCs)
 
-Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's modular and flexible approach, known as the Virto Atomic Architecture. These PBCs are designed to encapsulate specific business functionalities, making them an ideal choice for decision-makers across various business entities.
-
 Each Virto PBC includes:
 
 * **Business end-to-end scenarios:** Each PBC includes complete business scenarios that guide the implementation of the capability.
@@ -27,8 +25,5 @@ Virto Commerce offers the following PBCs:
 Install a PBC by running:
 
 ```console
-vc-build install -PackageManifestPath path to package.json
+vc-build install -PackageManifestPath <path to package.json>
 ```
-
-![Readmore](media/readmore.png){: width="25"} [Release strategy](../../Updating-Virto-Commerce-Based-Project/release-strategy-overview.md)
-

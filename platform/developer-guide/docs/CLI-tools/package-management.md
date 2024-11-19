@@ -137,7 +137,7 @@ vc-build install -module <moduleId>:<version>
 
 
 !!! note
-    You can skip the backup step by using the `-skip backup' parameter, but you should be aware of all the risks involved. 
+    You can skip the backup step by using the `-skip backup` parameter, but you should be aware of all the risks involved. 
 
 ## Update
 

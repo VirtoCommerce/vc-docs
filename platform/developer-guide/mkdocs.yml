@@ -25,7 +25,6 @@ nav:
                 - Windows: Getting-Started/Installation-Guide/windows.md
                 - Linux: Getting-Started/Installation-Guide/linux.md
                 - MacOS: Getting-Started/Installation-Guide/macOS.md
-                - Packaged Business Capabilities: Getting-Started/Installation-Guide/pbcs.md
                 - Post Installation Steps:
                       - Setting Up Self Signed SSL Certificate: Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
                       - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
@@ -580,11 +579,12 @@ nav:
                 - Sharing Bearer Tokens Across Multiple Instances: Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md
                 - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
                 - Migration to New XAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
-    - Updating Virto Commerce Based Projects:
+    - Releases, Bundles, PBCs. Installation and Updates:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
           - Edge Releases: Updating-Virto-Commerce-Based-Project/edge-releases.md
           - Installing Specific Version: Updating-Virto-Commerce-Based-Project/installing-specific-version.md
+          - Packaged Business Capabilities (PBCs): Updating-Virto-Commerce-Based-Project/pbcs.md
           - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
     - Custom Apps Development:
           - Overview: custom-apps-development/overview.md
