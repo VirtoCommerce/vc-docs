@@ -32,15 +32,3 @@ Although the xRecommend module does not have its own user interface, you need to
 * **Extensibility**: Support for extending the **related-products model** or adding custom algorithms.
 * **Integration Simplicity**: Toggle setting for enabling or disabling recommendations in your store.
 
-## Get started
-
-To enable recommendations display:
-
-1. Click **Stores** in the main menu.
-1. In the next blade, select the desired store.
-1. In the next blade, click on the **Settings** widget.
-1. In the next blade, switch **Recommendations Enabled** to on.
-
-    ![Recommendations on](media/enable-recommendations.png)
-
-The recommendations are displayed in the Frontend Application.

@@ -1,6 +1,6 @@
 # Themes
 
-The Virto Commerce Theme is a frontend application for your ecommerce websites. The default Theme is included in the VC Content module and is provided out of the box. The default theme consists of the following folders with files that define the Storefront UI:
+The Virto Commerce Theme is a frontend application for your ecommerce websites. The default Theme is included in the VC Content module and is provided out of the box. The default theme consists of the following folders with files that define the Frontend Application UI:
 
 | Folder        	| Content                                                                                                    	|
 |---------------	|------------------------------------------------------------------------------------------------------------	|
@@ -13,49 +13,37 @@ The Virto Commerce Theme is a frontend application for your ecommerce websites. 
 
 The theme structure should be predefined in advance and is created by a developer.
 
-The Virto Commenrce Content module allows you to:
+The Virto Commerce Content module allows you to:
 
 * Add as many themes as needed.
-* Set an active theme to be displayed on the Storefront.
+* Set an active theme to be displayed in the Frontend Application.
 
 Managing theme includes:
 
-* [Adding new theme.](managing-themes.md#add-new-theme)
 * [Uploading new theme.](managing-themes.md#upload-new-theme)
 * [Activating theme.](managing-themes.md#activate-theme)
 * [Managing theme assets.](managing-themes.md#manage-theme-assets)
+* [Adding new theme.](managing-themes.md#add-new-theme)
 * [Managing theme color configurations.](managing-themes.md#manage-theme-color-configurations)
 
-## Add new theme
-
-To add a new theme:
-
-1. Click **Content** in the main menu.
-1. In the nest blade, select the store from the list.
-1. Click on the **Themes** widget.
-1. In the **Themes list** blade, click **Add** in the toolbar. 
-1. Enter the name of the new theme. 
-1. Click **Create** to create your new theme. 
-
-![add new theme](media/add-new-theme.png)
-
-The new theme appears it in the themes list.
 
 ## Upload new theme
 
-To upload a theme zip file:
+To upload a theme ZIP file:
 
 1. Click **Content** in the main menu.
 1. Select the store from the list in the next blade.
 1. Click on the **Themes** widget.
 1. In the **Themes list** blade, click **Upload** in the toolbar. 
-1. Drag and drop or browse the zip file. 
+1. Drag and drop or browse the ZIP file. 
 
-![upload new theme](media/upload-new-theme.png)
+![Upload new theme](media/upload-new-theme.png)
 
 Once the zip file has been uploaded, it will be unzipped and added to the Themes list.
 
-If a new theme has been created by the developer, it can be uploaded to a new environment using a zip file.
+If a new theme has been created by the developer, it can be uploaded to a new environment using a ZIP file.
+
+You can use the themes designed by Virto Commerce. Each Frontend Application release contains a :!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ## Activate theme
 
@@ -80,13 +68,38 @@ To manage the theme assets:
 
 ![assets](media/manage-assets.png)
 
-## Manage theme color configurations
+## Add new theme
 
-You can use ready-made color configurations that can be applied to the theme, or you can create your own color scheme using ChatGPT:
+To add a new theme:
 
-![Color schemas](media/color-scheme.gif)
+1. Click **Content** in the main menu.
+1. In the nest blade, select the store from the list.
+1. Click on the **Themes** widget.
+1. In the **Themes list** blade, click **Add** in the toolbar. 
+1. Enter the name of the new theme. 
+1. Click **Create** to create your new theme. 
 
-To add a new color configuration:
+![add new theme](media/add-new-theme.png)
+
+The new theme appears in the themes list. Now it needs to filled in.
+
+## Manage theme colors
+
+Users can personalize their store by applying a custom theme or choosing from the ready-to-use color schemes designed by Virto Commerce. Each release includes a set of default color presets, with new ones added several times a year. To access the latest default color presets, users can simply download the updated theme. Currently, the following out-of-the-box color schemes can be applied to your store:
+
+=== "purple-pink"
+
+    ![purple-pink](media/purple.png)
+
+=== "black-gold"
+
+    ![Black](media/black.png)
+
+=== "watermelon"
+
+    ![Watermelon](media/watermelon.png)
+
+Alternatively, you can [create your own color scheme using ChatGPT](#create-theme-colors-using-chatgpt) and add it to the themes presets as follows:
 
 1. Click **Content** in the main menu.
 1. Select the store from the list in the next blade.
@@ -95,14 +108,26 @@ To add a new color configuration:
 1. In the next blade, click **config** --> **presets**.
 1. Click **Add** in the toolbar to enter or copy&paste your new color configuration file. Or click **Upload** to upload color configuration file.
 
-New color configuration has been applied.
+New color scheme has been added to the presets.
 
+To apply a new color scheme to your store:
 
-### Create theme colors via ChatGPT
+1. Select one of the out-of-the-box color schemes or your custom scheme and copy its name without extension to the clipboard (for example, **watermelon**):
+1. Go to **Stores** --> Your store --> **White labeling**.
+1. In the **White labeling** blade, click ![Pencil](media/pencil.png){: width="25"} next to the **Theme preset name**.
+1. In the next blade, click **Add** in the toolbar.
+1. Paste the filename to the new field and click ![Floppy](media/floppy.png){: width="25"} to save the changes.
+1. Click **Save** in the toolbar.
+1. In the previous blade, select the newly added theme from the dropdown list. 
+1. Click **Save** in the toolbar. 
+
+Your new color scheme has been applied.
+
+### Create theme colors using ChatGPT
 
 1. Copy any existing color scheme.
 1. Paste it into ChatGPT with the following prompt: "Generate colors for an electronic shop. Answer in JSON format."
-1. Copy the generated color scheme and paste it into the **presets** folder as described [above](managing-themes.md#manage-theme-color-configurations).
+1. Copy the generated color scheme and paste it into the **presets** folder as described [above](#manage-theme-colors).
 
-Your ChatGPT-generated colors have been added.
+Your ChatGPT-generated colors have been added to the presets.
 

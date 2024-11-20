@@ -60,7 +60,7 @@ To configure a custom color scheme:
         You can [create your own color scheme using ChatGPT](../../../../user-guide/content/managing-themes#create-theme-colors-via-chatgpt).
 
 1. Click **Create** to add the color scheme to the list.
-1. Copy the filename of your color scheme.
+1. Copy the filename of your color scheme without extension.
 1. Go to **Stores** --> Your store --> **White labeling**.
 1. In the **White labeling** blade, click ![Pencil](media/pencil.png){: width="25"} next to the **Theme preset name**.
 1. In the next blade, click **Add** in the toolbar.

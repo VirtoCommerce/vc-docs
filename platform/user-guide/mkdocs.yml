@@ -200,6 +200,8 @@ nav:
                 - Settings: rating-reviews/settings.md
           - xRecommend: 
                 - Overview: recommend/overview.md
+                - Enabling Recommendations: recommend/enable-recommendations.md
+                - Settings: recommend/settings.md
           - Return: 
                 - Overview: return/overview.md
                 - Managing Returns: return/managing-returns.md
