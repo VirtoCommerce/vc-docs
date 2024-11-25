@@ -2,9 +2,9 @@
 
 In this guide, we will explore the process of installing and updating to the latest stable release of Virto Commerce. 
 
-## Install stable release
+## Install Platform stable release
 
-To install a stable release
+To install a Platform stable release:
 
 1. Create a clean folder for Virto Commerce, for example, `C:\vc-platform-stable`.
 
@@ -24,6 +24,14 @@ To install a stable release
 		To install a specific version of a stable release, use a `-v` parameter.<br>For example, to install version 7, run `vc-build install -v 7`
 
 The latest stable release has been installed.
+
+## Install module stable release
+
+To install a module stable release, run:
+
+```console
+vc-build install -module <moduleId>
+```
 
 ## Update to latest stable release
 

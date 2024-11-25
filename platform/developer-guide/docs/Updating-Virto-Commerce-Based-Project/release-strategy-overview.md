@@ -9,7 +9,7 @@ Virto Commerce follows a structured release strategy designed to provide flexibi
 
 ## Releases
 
-At Virto Commerce, we provide frequent releases for various modules, packed with new features, enhancements, and fixes. 
+At Virto Commerce, we provide frequent releases for various modules and platform, packed with new features, enhancements, and fixes. Releases are a foundation for all [bundles](#bundles) and [PBCs](#packaged-business-capabilities-pbcs).
 
 Generally, we have three release channels: 
 
@@ -58,29 +58,20 @@ Virto Commerce also offers private modules that are not included in the public r
 
 The release types can be combined into the following bundles to meet different needs:  
 
-* **Alfa bundle**: Includes the latest experimental features and updates. Designed for testing and feedback, it provides early access to innovations still in development.  
-* **Edge bundle**: Contains modules that are more stable than those in the Alfa Bundle but may still undergo adjustments. Ideal for early adopters seeking access to new features before full stabilization.  
-* **Stable bundle**: Comprises thoroughly tested and finalized modules. These modules are considered production-ready and are recommended for use in live environments.
+| Bundle                                     | Included releases             | Description                                                                                      |
+|--------------------------------------------|-------------------------------|------------------------------------------------------------------------------------------------------|
+| Alfa                                       | Preview releases              | Includes experimental features and updates for testing and feedback; provides early access to innovations in development. |
+| Edge                                       | Edge releases                 | Contains more stable modules than the Alfa Bundle but may include adjustments and breaking changes; suited for early adopters. |
+| [Stable](https://github.com/VirtoCommerce/vc-modules/tree/master/bundles/latest)     | Stable releases  | Comprises thoroughly tested and finalized modules; production-ready and recommended for live environments. |
+
 
 ## Packaged Business Capabilities (PBCs)
+
+PBCs are a combination of modules releases, grouped by functionality to address specific business needs, such as Catalog, or Logging in.
 
 Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's modular and flexible approach, known as the Virto Atomic Architecture. These PBCs are designed to encapsulate specific business functionalities, making them an ideal choice for decision-makers across various business entities.
 
 ![Readmore](media/readmore.png){: width="25"} [Available PBCs and their installation](pbcs.md)
-
-## Outdated strategy
-
-Virto Commerce ensures a smooth user migration while improving the quality of the platform. This includes necessary updates that occasionally cause disruption. We manage this by using the Obsolete attribute for deprecated methods and assigning unique DiagnosticIds to track changes and provide clear references for developers.
-
-```cs
-[Obsolete("Method1 is deprecated, please use Method2 instead.", DiagnosticId = "VC0005", UrlFormat = "https://docs.virtocommerce.org/platform/user-guide/versions/virto3-products-versions/")]
-public void Method1()
-{
-}
-```
-
-Our approach also ensures a controlled transition period. The `Obsolete` attribute typically remains active for the next two stable releases, giving our partners ample time to adapt their code to the newer alternatives. This approach is in line with our commitment to provide a smooth migration process, giving developers the necessary timeframe to adjust their implementations. 
-
 
 ![Readmore](media/readmore.png){: width="25"} [Install specific platform or module version](installing-specific-version.md)
 

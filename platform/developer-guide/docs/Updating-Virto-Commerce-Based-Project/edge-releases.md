@@ -4,7 +4,7 @@ In this guide, we will explore how to automate the installation and update proce
 
 ![Readmore](media/readmore.png){: width="25"} [Install and use Virto Commerce CLI](../Getting-Started/Installation-Guide/windows.md)
 
-## Install latest edge release
+## Install Platform latest edge release
 
 To install the latest edge release:
 
@@ -25,6 +25,14 @@ To install the latest edge release:
         Running `vc-build install` installs latest stable release.
 
 The latest edge release has been installed.
+
+## Install module latest edge release
+
+To install the module latest edge release, run:
+
+```
+vc-build install -module <moduleId> -edge
+```
 
 ## Update to latest edge release
 
