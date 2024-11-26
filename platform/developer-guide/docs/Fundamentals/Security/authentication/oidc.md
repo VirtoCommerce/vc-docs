@@ -2,6 +2,8 @@
 
 OpenID Connect (OIDC) is an identity module on top of the OAuth 2.0 protocol, allowing clients to verify the identity of end-users based on the authentication performed by an authorization server. It also provides basic user profile information.
 
+OIDC is closely tied to identity providers, as it acts as a standardized framework for connecting applications to identity providers like Virto Commerce, Google, or Microsoft. These identity providers authenticate users and share identity details securely using OIDC protocols.
+
 ## Key features
 
 * **Authentication**: Ensures secure user authentication and authorization.
@@ -10,7 +12,28 @@ OpenID Connect (OIDC) is an identity module on top of the OAuth 2.0 protocol, al
 * **Interoperability**: Works with various identity providers like Google, Microsoft, and others.
 * **Security**: Implements robust security measures to protect user data.
 
-## OIDC configuration  
+<br>
+To start using an identity provider via the OpenID module:
+
+1. [Register your identity provider in the Platform.](#register-your-identity-provider-in-the-platform)
+1. [Configure the appsettings.json file.](#configuration-appsettingsjson)
+
+## Register your identity provider in the Platform
+
+To register new identity provider in the Platform:
+
+1. In the main menu, click **Security**.
+1. In the next blade, click **OAuth applications**. 
+1. In the next blade, click **Add** in the toolbar.
+1. Configure the following fields:
+
+    ![Adding OAuth application](media/OAuth-settings.png)
+
+1. Click **OK** to save the changes.
+
+Your new app appears in the OAuth applications list.
+
+## Configuration appsettings.json  
 
 The `oidc` node in the **appsettings.json** file defines the settings for OpenID Connect authentication in Virto Commerce. This configuration enables integration with OIDC providers, allowing users to authenticate via external identity systems:  
 
@@ -19,6 +42,8 @@ The `oidc` node in the **appsettings.json** file defines the settings for OpenID
    start="<!--OIDC-start-->"
    end="<!--OIDC-end-->"
 %}
+
+You can now use the registered identity provider.
 
 ## First-time login with Virto
 
