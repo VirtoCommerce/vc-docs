@@ -77,3 +77,53 @@ Each sitemap item file includes the corresponding URL with a specific language c
   </url>
 </urlset>
 ```
+
+## Export sitemaps to store assets
+
+You can export sitemaps: 
+
+* [Manually.](#manual-export)
+* [Automatically via a scheduled job.](#automated-export)
+
+### Manual export
+
+To export sitemaps to store assets manually:
+
+1. Click **Stores** in the main menu.
+1. In the next blade, select your store.
+1. In the next blade, click on the **Sitemaps** widget.
+1. In the next blade, click **Export to store assets** in the toolbar.
+1. Confirm your action.
+1. Monitor the export progress in the next blade.
+1. Once complete, click on the **Assets** widget in your store details blade to verify the sitemaps.
+
+![Manual export](media/manual-export.gif)
+
+You can see that the sitemaps have been added to the store assets. Now, you can download them or send links to them to other users.
+
+### Automated export
+
+Automated export simplifies the process by using a scheduled job. By default, it is disabled and requires activation at both the global and store levels:
+
+1. Enable in the Store module:
+
+    1. Click **Stores** in the main menu.
+    1. In the next blade, select your store.
+    1. In the next blade, click on the settings widget.
+    1. In the next blade, find the "Export to assets" feature and enable it.
+    1. Click **OK** to save the changes.
+
+    ![Enable via stores](media/enable-via-stores.gif) 
+
+1. Enable via the settings and configure export schedule:
+
+    1. Click **Settings** in the main menu.
+    1. In the next blade, type **Sitemaps** to find the settings related to the module.
+    1. Click **Enable export sitemap files by job**.
+    1. In the next blade, switch the **Export sitemap files by job** option to on.
+    1. Set the cron expression to "0 0 * * *" to export sitemaps to store assets daily at 00:00.
+    1. Click **Save** in the toolbar to save the changes.
+
+  ![Enable sitemaps export](media/enable-sitemaps-export-in-settings.gif)
+
+With automated export enabled, sitemaps will be regularly updated and saved to store assets, ensuring they're always up-to-date and accessible.
