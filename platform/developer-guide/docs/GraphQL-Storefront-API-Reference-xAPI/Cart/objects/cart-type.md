@@ -20,6 +20,7 @@ This type defines the properties and fields associated with a shopping cart.
 | `isRecuring` ==Boolean==                                                                      | Indicates whether the cart is for a recurring order.                        |
 | `comment` ==String==                                                                          | Any comments associated with the cart.                                      |
 | `purchaseOrderNumber` ==String==                                                              | The purchase order number associated with the cart.                         |
+| `checkoutId` ==String!==                                                                      | The Id for the checkout process, refreshed after order creation.            |
 | `volumetricWeight` ==Decimal==                                                                | The volumetric weight of the items in the cart.                             |
 | `weightUnit` ==String==                                                                       | The unit of weight measurement used.                                        |
 | `weight` ==Decimal==                                                                          | The total weight of the items in the cart.                                  |

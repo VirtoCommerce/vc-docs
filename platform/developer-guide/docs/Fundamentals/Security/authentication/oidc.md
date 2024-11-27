@@ -1,8 +1,19 @@
-# OpenID Connect 
+# OpenID Connect  
 
-OpenID Connect (OIDC) is an identity module on top of the OAuth 2.0 protocol, allowing clients to verify the identity of end-users based on the authentication performed by an authorization server. It also provides basic user profile information.
+[OpenID Connect](https://openid.net/developers/how-connect-works/) (OIDC) is a standardized authentication protocol built on the OAuth 2.0 framework. It enables clients to verify end-user identities through an authorization server and provides access to basic user profile information.  
 
-OIDC is closely tied to identity providers, as it acts as a standardized framework for connecting applications to identity providers like Virto Commerce, Google, or Microsoft. These identity providers authenticate users and share identity details securely using OIDC protocols.
+OIDC serves as a bridge to identity providers, offering a unified framework to connect applications with providers like Virto Commerce, Google, or Microsoft. These providers securely authenticate users and share identity details using OIDC protocols.  
+
+In the Virto Commerce Platform, you can:  
+
+* Use our individual identity modules for specific providers.  
+    
+    ![Readmore](media/readmore.png){: width="25"} [Using Azure AD (MS Entra) as identity provider](../extensions/adding-azure-as-sso-provider.md)
+    
+    ![Readmore](media/readmore.png){: width="25"} [Using Google as identity provider](../extensions/adding-google-as-sso-provider.md)
+    
+
+* [Use our OIDC module](#use-oidc-module-for-identity-providers-setup) to support any or multiple providers simultaneously.
 
 ## Key features
 
@@ -13,27 +24,13 @@ OIDC is closely tied to identity providers, as it acts as a standardized framewo
 * **Security**: Implements robust security measures to protect user data.
 
 <br>
-To start using an identity provider via the OpenID module:
 
-1. [Register your identity provider in the Platform.](#register-your-identity-provider-in-the-platform)
-1. [Configure the appsettings.json file.](#configuration-appsettingsjson)
+## Use OIDC module for identity providers setup
 
-## Register your identity provider in the Platform
+Our OpenID module allows using any, all, or a combination of the existing providers. To start using our OpenID module:
 
-To register new identity provider in the Platform:
-
-1. In the main menu, click **Security**.
-1. In the next blade, click **OAuth applications**. 
-1. In the next blade, click **Add** in the toolbar.
-1. Configure the following fields:
-
-    ![Adding OAuth application](media/OAuth-settings.png)
-
-1. Click **OK** to save the changes.
-
-Your new app appears in the OAuth applications list.
-
-## Configuration appsettings.json  
+1. [Download](https://github.com/VirtoCommerce/vc-module-openid-connect/releases) and install it.
+1. Configure the **appsettings.json** file.
 
 The `oidc` node in the **appsettings.json** file defines the settings for OpenID Connect authentication in Virto Commerce. This configuration enables integration with OIDC providers, allowing users to authenticate via external identity systems:  
 
@@ -44,23 +41,3 @@ The `oidc` node in the **appsettings.json** file defines the settings for OpenID
 %}
 
 You can now use the registered identity provider.
-
-## First-time login with Virto
-
-To log in using the Virto authentication provider for the first time:
-
-1. Click **Virto** on the login page.
-
-    ![Virto login](media/click-virto.png)
-
-1. Consent to providing access to the following information:
-
-    * **OpenID**: A unique identifier associated with your identity, used to confirm who you are.
-    * **Profile**: Basic personal information such as your name and username, used to personalize your experience.
-    * **Email**: Your email address, often used for communication and account recovery.
-
-1. You will see an **Access denied** notification:
-
-    ![Access denied](media/access-denied.png){: width="600"}
-
-This message means that you will not be able to log in until an administrator assigns you the required roles. Once the required roles are assigned, you will be able to successfully log in to the Platform.

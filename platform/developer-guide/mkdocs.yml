@@ -125,6 +125,7 @@ nav:
                             - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
                             - API Key Authentication: Fundamentals/Security/authentication/api-key-authentication.md
                       - OpenId Connect: Fundamentals/Security/authentication/oidc.md
+                      - Virto as Identity Provider: Fundamentals/Security/authentication/virto-as-identity-provider.md
                 - Authorization:
                       - Overview: Fundamentals/Security/authorization/overview.md
                       - Global Permissions: Fundamentals/Security/authorization/global-permissions.md

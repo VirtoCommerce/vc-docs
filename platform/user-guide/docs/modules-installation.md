@@ -6,7 +6,7 @@ Clicking the **Modules** in the main menu opens the **Modules** blade. The blade
 
 ![Modules](media/modules.png)
 
-Within the **Browse** section, you can organize and display modules more clearly according to their purpose:
+Within the **Browse** section, you can organize and display modules as bundles:
 
 ![Bundles](media/modules-as-bundles.png)
 

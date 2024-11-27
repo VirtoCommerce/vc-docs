@@ -446,6 +446,41 @@ This node defines the settings for OpenID Connect authentication in Virto Commer
 | SignedOutCallbackPath            | "/signout-callback-oidc"                            | Path for redirection after successful logout.                                                  |
 
 
+=== "Google"  
+
+    ```json title="appsettings.json"
+    "oidc": {
+        "Enabled": true,
+        "AuthenticationType": "google",
+        "AuthenticationCaption": "Google",
+        "Authority": "https://accounts.google.com",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "UserNameClaimType": "email"
+    }
+    ```
+
+    !!! note
+        If you are using a single provider, you may not enter values for the callback paths. The system will use the default values.
+
+
+
+=== "Microsoft"  
+
+    ```json title="appsettings.json"
+    "oidc": {
+        "Enabled": true,
+        "AuthenticationType": "microsoft",
+        "AuthenticationCaption": "Microsoft",
+        "Authority": "https://login.microsoftonline.com/your-tenant-id/v2.0",
+        "ClientId": "your-application-id",
+        "UserNameClaimType": "preferred_username"
+    }
+    ```
+
+    !!! note
+        If you are using a single provider, you may not enter values for the callback paths. The system will use the default values.
+
 === "Virto Commerce"  
 
     ```json title="appsettings.json"
@@ -462,32 +497,9 @@ This node defines the settings for OpenID Connect authentication in Virto Commer
     }
     ```
 
-=== "Google"  
+    !!! note
+        If you are using a single provider, you may not enter values for the callback paths. The system will use the default values.
 
-    ```json title="appsettings.json"
-    "oidc": {
-        "Enabled": true,
-        "AuthenticationType": "google",
-        "AuthenticationCaption": "Google",
-        "Authority": "https://accounts.google.com",
-        "ClientId": "your-client-id",
-        "ClientSecret": "your-client-secret",
-        "UserNameClaimType": "email"
-    }
-    ```
-
-=== "Microsoft"  
-
-    ```json title="appsettings.json"
-    "oidc": {
-        "Enabled": true,
-        "AuthenticationType": "microsoft",
-        "AuthenticationCaption": "Microsoft",
-        "Authority": "https://login.microsoftonline.com/your-tenant-id/v2.0",
-        "ClientId": "your-application-id",
-        "UserNameClaimType": "preferred_username"
-    }
-    ```
 
 === "Multiple providers"  
 
@@ -527,8 +539,8 @@ This node defines the settings for OpenID Connect authentication in Virto Commer
     ]
     ```
 
-!!! note
-    If you have other external sign-in providers installed (Microsoft Entra ID or Google SSO) you need to make sure to use unique authentication types and callback paths for each provider.
+    !!! note
+        If using multiple providers, make sure you use unique authentication types and callback paths for each.
 
 <!--OIDC-end-->
 
