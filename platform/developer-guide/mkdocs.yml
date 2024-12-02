@@ -318,6 +318,20 @@ nav:
                       - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
                       - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
+          - Customer Review:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Reviews/overview.md
+                - Queries: 
+                      - customerReviews: GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/customerReviews.md
+                      - canLeaveFeedback: GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/canLeaveFeedback.md
+                - Objects: 
+                      - CustomerReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReview.md
+                      - CustomerReviewConnection: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewConnection.md
+                      - createReviewResult: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/createReviewResult.md
+                      - CustomerReviewEdge: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewEdge.md
+                      - ReviewValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/ReviewValidationErrorType.md
+                - Mutations:
+                      - createCustomerReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createCustomerReview.md
+                      - createReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createReview.md
           - File:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
                 - Getting Started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
@@ -384,6 +398,17 @@ nav:
                       - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment.md
                       - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment.md
                       - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
+          - Pages: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Pages/overview.md
+                - Queries:
+                      - pageDocument: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocument.md
+                      - pageDocuments: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocuments.md
+                      - slugInfo: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/slugInfo.md
+                - Objects: 
+                      - PageDocumentConnection: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentConnection.md
+                      - PageDocumentEdge: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge.md
+                      - PageDocumentType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType.md
+                      - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/SlugInfoResponseType.md
           - Profile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
                 - Queries:

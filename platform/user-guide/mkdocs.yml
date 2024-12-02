@@ -168,6 +168,9 @@ nav:
           - Page Builder:
                 - Overview: page-builder/overview.md
                 - Managing Pages in PageBuilder: page-builder/manage-pages.md
+          - Pages:
+                - Overview: pages/overview.md
+                - Enabling Virto Pages: pages/enabling-pages.md
           - Payment Related Modules: 
                 - Payment:
                       - Overview: payment/overview.md

@@ -6,6 +6,7 @@ This query allows you to retrieve information about a shopping cart.
 
 | Argument                       | Description                                                                                     |
 |--------------------------------|-------------------------------------------------------------------------------------------------|
+| `cartId` ==String==            | The Id of the cart.                                                                             |
 | `storeId` ==String!==          | The Id of the store to retrieve carts from.                                                     |
 | `userId`  ==String==           | The Id of the user.                                                                             |
 | `currencyCode` ==String!==     | A standardized code of a specific currency.                                                     |
