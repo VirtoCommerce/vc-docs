@@ -1,13 +1,6 @@
 # Manage Skyflow module
 
-Managing Skyflow module includes:
-
-* [Editing payment method.](manage-skyflow-module.md#edit-payment-method)
-* [Configuring module settings.](manage-skyflow-module.md#configure-settings)
-
-## Edit payment method 
-
-To edit Skyflow payment method:
+To manage the Skyflow payment method:
 
 1. Click **Stores** in the main menu. 
 1. In the next blade, select a store.
@@ -28,16 +21,3 @@ To edit Skyflow payment method:
 
 Your modifications have been saved.
 
-## Configure settings
-
-To configure the Skyflow module settings:
-
-1. Complete steps 1-4 from the instruction above.
-1. In the **Edit payment methods** blade, click on the **Settings** widget.
-1. In the next blade, configure the following settings:
-
-    ![Settings](media/settings.png)
-
-1. Click **OK** to save the changes.
-
-Your modifications have been saved.

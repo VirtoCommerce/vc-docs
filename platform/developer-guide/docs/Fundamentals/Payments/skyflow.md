@@ -118,14 +118,10 @@ To setup Virto Commerce back office:
 
 1. In the **Payment methods** blade, select **SkyFlow**.
 1. In the **Edit payment method** blade, activate the Skyflow payment method.
-1. In the same blade, click on the **Settings** widget.
-1. In the next blade, fill in the following properties:
-    * `VaultId` and `VaultUrl`: Retrieve from the settings in Skyflow.
-    * `TableName`: Specify the name of the table for storing Credit Card data.
-
-1. Click **OK** to save the changes.
 
     ![Back office 2](media/configure-backoffice-2.png)
+
+1. Click **Save** in the toolbar to save the changes.
 
 The SkyFlow payment method has been activated for the Store.
 

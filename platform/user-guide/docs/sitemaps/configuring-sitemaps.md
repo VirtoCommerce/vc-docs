@@ -2,9 +2,10 @@
 
 Managing sitemaps includes:
 
-* [Adding new sitemaps to stores](configuring-sitemaps.md#add-new-sitemap-to-store)
-* [Adding sitemaps items](configuring-sitemaps.md#add-sitemap-items)
-* [Downloading sitemaps](configuring-sitemaps.md#download-sitemaps)
+* [Adding new sitemaps to stores](#add-new-sitemap-to-store)
+* [Adding sitemaps items](#add-sitemap-items)
+* [Downloading sitemaps](#download-sitemaps)
+* [Exporting sitemaps to the store assets](#export-sitemaps-to-store-assets)
 
 To manage the store sitemaps:
 
