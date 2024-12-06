@@ -1,4 +1,4 @@
-# Use Virto Commerce as identity provider
+# Use Virto Commerce as Identity Provider
 
 You can register Virto Commerce as an identity provider as follows:
 

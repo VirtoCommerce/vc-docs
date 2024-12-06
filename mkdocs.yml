@@ -149,6 +149,10 @@ extra:
           url: https://www.virtocommerce.org/c/news-digest/
     main_page:
         release_notes:
+            - title: News Digest December 2024
+              link: https://www.virtocommerce.org/t/virtos-release-notes-december-2024/747
+              type: Digest
+              date: 1 December 2024
             - title: News Digest November 2024
               link: https://www.virtocommerce.org/t/november-2024-news-digest/743
               type: Digest
