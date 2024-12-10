@@ -20,7 +20,7 @@ With GraphQL, clients can optimize their data queries, reducing network load, im
 ![schema](media/schema.png)
 
 !!! info
-    Another concept to know is a **Variable**. Is is placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
+    Another concept to know is a **Variable**. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
 
 Our insrtuction provides Virto Commerce related guidelines. 
 

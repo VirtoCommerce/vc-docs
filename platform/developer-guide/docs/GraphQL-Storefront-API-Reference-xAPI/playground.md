@@ -1,4 +1,8 @@
-# Playground
+# Overview
+
+GraphQL Playground is an interactive IDE for exploring and testing GraphQL APIs. It allows developers to inspect schemas, execute queries and mutations, and receive immediate feedback. Virto Commerce gives developers the flexibility to work with fully integrated API for the entire platform or with tailored APIs for specific modules. 
+
+## Playground
 
 By default, Playground is disabled. To enable it, configure the following setting in the **appsettings.json** file:
 
@@ -8,16 +12,7 @@ By default, Playground is disabled. To enable it, configure the following settin
 }
 ```
 
-1. To access the interactive [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment:
-
-    1. Open the platform manager application.
-    1. Navigate to `ui/playground` within the application.
-
-    You can also access it directly at:
-
-    ```
-    http://localhost:10645/ui/playground
-    ```
+1. Access the interactive [graphql-playground](https://github.com/prisma-labs/graphql-playground) environment at the following URL: http://localhost:10645/ui/playground
 
     Once in the GraphQL playground, you can send GraphQL queries or mutations. The interface is as follows:
 
@@ -51,3 +46,43 @@ By default, Playground is disabled. To enable it, configure the following settin
         ```
 
 1. Execute your query or mutation by clicking the **Play** button.
+
+
+## Partial GraphQL schema
+
+A **partial GraphQL schema** refers to a modular and self-contained subset of the overall GraphQL schema that is specific to a particular module. Instead of a single schema for the entire platform, modules like Cart, Catalog, or Quotes have their own schema that defines only the queries, mutations, types, and subscriptions relevant to that module.
+
+Partial schema allows to:
+
+* **Request schema by module**: Focus only on the API definitions related to a specific module, reducing unnecessary complexity.
+* **Generate client-by-demand**: Create tailored GraphQL clients based on the module's schema, making the development process faster and more modular.
+
+### Use partial GraphQL schema
+
+1. Install [Virto Commerce xApi, version 3.814+](https://github.com/VirtoCommerce/vc-module-x-api/releases/tag/3.814.0)
+1. Add a `ScopedSchemaFactory` instance to the service collection:
+
+    ```csharp
+    serviceCollection.AddSingleton<ScopedSchemaFactory<AssemblyMarker>>();
+    ```
+
+1. Enable `UseSchemaGraphQL` in `PostInitialize` specifying the name of the parted module (**quote** in this example):
+
+    ```csharp
+    var playgroundOptions = appBuilder.ApplicationServices.GetService<IOptions<GraphQLPlaygroundOptions>>(); 
+    appBuilder.UseSchemaGraphQL<ScopedSchemaFactory<AssemblyMarker>>(playgroundOptions?.Value?.Enable ?? true, "quote");
+    ```
+
+Now, you can access partial GrqphQL schema for the Quote module at the following URL:
+
+http://localhost:10645/ui/playground/quote
+
+Similarly, you can access other partial schemas by adding the appropriate slugs to the URL:
+
+| Module          | Slug              |
+|-----------------|-------------------|
+| Push Messages   | /pushmessages     |
+| Customer review | /customerreviews  |
+| Catalog         | /catalog          |
+| Cart            | /cart             |
+| Order           | /order            |
