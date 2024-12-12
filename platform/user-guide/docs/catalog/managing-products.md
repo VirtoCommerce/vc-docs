@@ -8,10 +8,9 @@ A product is a basic entity that represents an item that can be purchased in an 
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/1Q6mbML7XtM?si=vQzWF4hzsVubyUWH)
 
-Variations are individual product entities linked to their master product. For instance, a master product like a mobile phone can have variations like black, white, or red versions, or 5’’ and 6’’ models (or both).
-Variations inherit property values from the master product, including descriptions and assets, while also allowing overrides when necessary.
-
 ![Readmore](media/readmore.png){: width="25"} [Managing product variations](managing-product-variations.md)
+
+![Readmore](media/readmore.png){: width="25"} [Managing product configurations](managing-product-configurations.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Assigning user groups to products](../catalog-personalization/user-groups.md)
 

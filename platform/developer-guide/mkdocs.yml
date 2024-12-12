@@ -172,6 +172,8 @@ nav:
                       - Wishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlist.md
                       - Wishlists: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlists.md
                       - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/validate-coupon.md
+                      - productConfiguration: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/productConfiguration.md
+                      - configurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/configurationItems.md
                 - Objects:
                       - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
                       - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
@@ -203,6 +205,13 @@ nav:
                       - InputUpdateWishlistLineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistLineItemType.md
                       - InputUpdateWishlistItemsType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistItemsType.md
                       - BulkWishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/bulk-wishlist-type.md
+                      - ConfigurationSectionType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionType.md
+                      - CartConfigurationItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/CartConfigurationItemType.md
+                      - ConfigurationLineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationLineItemType.md
+                      - ConfigurationQueryResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationQueryResponseType.md
+                      - ConfigurationItemsResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationItemsResponseType.md
+                      - ConfigurationSectionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionInput.md
+                      - ConfigurableProductOptionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionInput.md
                 - Mutations:
                       - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
                       - clearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
@@ -241,6 +250,8 @@ nav:
                       - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
                       - addGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addGiftItems.md
                       - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
+                      - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
+                      - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
           - Catalog:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:

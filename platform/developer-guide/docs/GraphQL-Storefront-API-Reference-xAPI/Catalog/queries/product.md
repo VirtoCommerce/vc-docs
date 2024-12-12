@@ -12,7 +12,7 @@ This query allows you to get a product by its Id and calculate all fields based 
 | `currencyCode`  ==String==  	| A standardized code of a specific currency.           |
 | `cultureName`  ==String==   	| A language to retrieve data in. 	                |
 
-## Possible returns
+## Possible return
 
 | Possible return                                          	| Description                           	|
 |---------------------------------------------------------	|---------------------------------------	|

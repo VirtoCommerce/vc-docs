@@ -57,7 +57,7 @@ Partial schema allows to:
 * **Request schema by module**: Focus only on the API definitions related to a specific module, reducing unnecessary complexity.
 * **Generate client-by-demand**: Create tailored GraphQL clients based on the module's schema, making the development process faster and more modular.
 
-### Use partial GraphQL schema
+### Enable partial GraphQL schema
 
 1. Install [Virto Commerce xApi, version 3.814+](https://github.com/VirtoCommerce/vc-module-x-api/releases/tag/3.814.0)
 1. Add a `ScopedSchemaFactory` instance to the service collection:
