@@ -318,6 +318,53 @@ This node configures default store settings and domain assignments in the Virto 
 }
 ```
 
+### AI Document Processing  
+
+This node configures AI-based document processing services and file upload settings in the application.  
+
+| Node                                  | Default or sample value                      | Description                                                                                   |
+| ------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| AI:Service                            | "OpenAI"                                     | The AI service provider. Currently, the only supported option is **"OpenAI"**.                |
+| AI:OpenAI                             |                                              | OpenAI-specific configuration.                                                               |
+| AI:OpenAI:ModelId                     | "gpt-4o"<br>"gpt-4o-mini"                   | Specifies the OpenAI model to use.                                                           |
+| AI:OpenAI:ApiKey                      | "your-api-key"                               | The API key used for authentication with OpenAI.                                              |
+| FileUpload                            |                                              | Configuration for file uploads.                                                              |
+| FileUpload:Scopes                     |                                              | Array of upload scopes, each defining settings for specific file categories.                  |
+| FileUpload:Scopes[n]:Scope            | "purchase-request-sources"                  | Name of the file upload scope.                                                               |
+| FileUpload:Scopes[n]:MaxFileSize      | 20971520                                     | Maximum file size in bytes. The sample value is **20 MB**.                                    |
+| FileUpload:Scopes[n]:AllowedExtensions| [".gif", ".jpeg", ".jpg", ".png", ".webp"]  | Array of allowed file extensions for the specified upload scope.                              |
+
+
+**Example**  
+
+```json title="appsettings.json"
+{
+  "AI": {
+    "Service": "OpenAI",
+    "OpenAI": {
+      "ModelId": "gpt-4o",
+      "ApiKey": "your-api-key"
+    }
+  },
+  "FileUpload": {
+    "Scopes": [
+      {
+        "Scope": "purchase-request-sources",
+        "MaxFileSize": 20971520,
+        "AllowedExtensions": [
+          ".gif",
+          ".jpeg",
+          ".jpg",
+          ".png",
+          ".webp"
+        ]
+      }
+    ]
+  }
+}
+```
+
+
 ### Assets
 
 This **required** node determines how VC Platform will be working with assets, i.e. files.

@@ -494,6 +494,23 @@ nav:
                       - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
                       - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
                       - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
+          - Purchase Request: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/overview.md
+                - Queries:
+                      - purchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequest.md
+                      - purchaseRequests: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequests.md
+                - Objects:
+                      - PurchaseRequestType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestType.md
+                      - PurchaseRequestSourceType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestSourceType.md
+                      - PurchaseRequestConnection: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestConnection.md
+                      - PurchaseRequestEdge: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestEdge.md
+                - Mutations: 
+                      - addPurchaseRequestSource: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/addPurchaseRequestSource.md
+                      - createPurchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequest.md
+                      - createPurchaseRequestFromDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequestFromDocuments.md
+                      - extractPurchaseRequestSourcesData: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/extractPurchaseRequestSourcesData.md
+                      - postProcessPurchaseRequestSources: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/postProcessPurchaseRequestSources.md
+                      - updatePurchaseRequestByDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/updatePurchaseRequestByDocuments.md
           - Push Messages:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview.md
                 - Queries:
