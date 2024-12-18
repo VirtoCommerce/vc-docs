@@ -1,4 +1,4 @@
-# Manage product configurations  
+# Manage Product Configurations  
 
 With the new configurable product feature, you can offer products that adapt to your customers' unique needs by allowing them to choose from available options. In Virto Commerce, we call customizable parts of the product **sections**, and the choices for each part of the product **options**. To make a product configurable:  
 
