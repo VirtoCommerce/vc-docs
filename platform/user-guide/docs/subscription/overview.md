@@ -7,7 +7,7 @@ The **Subscription** module enables retailers to sell subscription-based offerin
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-subscription/releases)
 
 
-This functionality can be enabled at the customer's request. In this case, the subscriptions will be displayed:
+When [enabled](enabling-subscriptions.md), the subscriptions will be displayed:
 
 * [In the Subscriptions module.](overview.md#view-subscriptions-in-subscriptions-module)
 * [In the Order module.](overview.md#view-subscriptions-in-order-module)

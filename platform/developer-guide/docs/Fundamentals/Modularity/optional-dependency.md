@@ -89,10 +89,6 @@ You can resolve these dependencies as follows:
 
 1. In case of button/widgets/etc. which use controllers from the optional module, you can declare them after the `$injector.modules['angularModuleName']`check. 
 
-### Resolve optional dependency in vc-shell code
-
-In progress... 
-
 ### Configure Virto Commerce CLI package 
 
 To keep optional NuGet references as a part of the package, add a **.keep** file into the solution with a reference to optional dll, usually Core.  

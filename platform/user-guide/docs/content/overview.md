@@ -1,6 +1,6 @@
 # Overview
 
-The xCMS module, or Content module, is designed to manage and display content on your ecommerce site. 
+The Content module is designed to manage and display content on your ecommerce site. 
 
 With the Content module, you can manage:
 

@@ -3,6 +3,9 @@ Click the hyperlink with the version name to see what versions of modules are in
 
 | Product                                | Version                      | GA<br>(Mainstream Support Phase)  | End of support <br> (Extended Support Phase)   | End of life <br>(Sustaining Support Phase) | 
 |---------                               |---------                     |----                               | -------                                   | ----        |
+|Virto Commerce platform core pack       |[v3-2024-S10](v3-2024-S10.md)   |2024-11-01                         |2025-09-01                                 |2025-11-01   |
+|Virto Commerce platform integration pack|[v3-2024-S10](v3-2024-S10.md)   |2024-11-01                         |2025-09-01                                 |2025-11-01   |
+|Virto Commerce platform enterprise pack |[v3-2024-S10](v3-2024-S10.md)   |2024-11-01                         |2025-09-01                                 |2025-11-01   |
 |Virto Commerce platform core pack       |[v3-2024-S9](v3-2024-S9.md)   |2024-01-01                         |2024-10-01                                 |2025-01-01   |
 |Virto Commerce platform integration pack|[v3-2024-S9](v3-2024-S9.md)   |2024-01-01                         |2024-10-01                                 |2025-01-01   |
 |Virto Commerce platform enterprise pack |[v3-2024-S9](v3-2024-S9.md)   |2024-01-01                         |2024-10-01                                 |2025-01-01   |

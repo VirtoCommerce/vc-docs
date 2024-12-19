@@ -115,7 +115,7 @@ nav:
           - <b>Assets</b>: 
             - Overview: assets/overview.md
             - Managing Assets: assets/managing-assets.md
-          - <b>Content, or xCMS</b>:
+          - <b>Content</b>:
                 - Overview: content/overview.md
                 - Themes: content/managing-themes.md
                 - Pages: content/managing-pages.md
@@ -251,7 +251,10 @@ nav:
                 - Overview: sitemaps/overview.md
                 - Managing Sitemaps: sitemaps/configuring-sitemaps.md
                 - Settings: sitemaps/settings.md
-          - Subscription: subscription/overview.md
+          - Subscription: 
+                - Overview: subscription/overview.md
+                - Enabling Subscriptions: subscription/enabling-subscriptions.md 
+                - Settings: subscription/settings.md
           - Tasks:
                 - Overview: tasks/overview.md
                 - Using Tasks Application: tasks/using-application.md
