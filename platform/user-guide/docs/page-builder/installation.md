@@ -79,7 +79,7 @@ We recommend using Webhooks module.
 
 
 ## Page Builder theme structure
-Page Builder reads meta-data from theme. Developers can extend or customize page builder behaviour by theme repository.
+Page Builder reads meta-data from theme. Developers can extend or customize page builder behavior by theme repository.
 
 ```text
 ├── client-app                    // The main folder for the application.

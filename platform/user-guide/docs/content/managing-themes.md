@@ -43,7 +43,9 @@ Once the zip file has been uploaded, it will be unzipped and added to the Themes
 
 If a new theme has been created by the developer, it can be uploaded to a new environment using a ZIP file.
 
-You can use the themes designed by Virto Commerce. Each Frontend Application release contains a :!!!!!!!!!!!!!!!!!!!!!!!!!
+You can use the themes designed by Virto Commerce. Each Frontend Application release contains a ZIP file with themes:
+
+![ZIP themes](media/zip-themes.gif)
 
 ## Activate theme
 
