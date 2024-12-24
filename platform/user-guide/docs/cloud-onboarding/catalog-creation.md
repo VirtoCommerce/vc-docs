@@ -119,7 +119,7 @@ The product has been added to the selected category and subcategory of the catal
 
 ## Add prices
 
-First, you need to create a pricelist:
+First, you need to create a price list:
 
 1. Go to **Pricing** --> **Price lists**.
 1. In the next blade, click **Add** in the toolbar.
@@ -148,7 +148,7 @@ Now, we need to add a price list assignment:
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the fields as follows:
 
-    ![Proce list assignment](media/add-price-list-assignment.png)
+    ![Price list assignment](media/add-price-list-assignment.png)
 
 1. Click **Save** in the toolbar.
 
@@ -212,7 +212,7 @@ Click on any category or subcategory to view the products within:
 ![Catalog](media/store-frontend.png)
 
 !!! note
-    By default, catalog menu is automatically generated based on the existing categories. You can createn your own catalog menu using [this guide](main-menu-setup.md).
+    By default, catalog menu is automatically generated based on the existing categories. You can create your own catalog menu using [this guide](main-menu-setup.md).
 
 ## Configure properties
 

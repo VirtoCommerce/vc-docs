@@ -20,7 +20,7 @@ By default, catalog menu is automatically generated based on the existing catego
 
     Continue adding subcategories to the root categories according to the example above.
 
-1. Copy the name of your root link list (dental-store in our example).
+1. Copy the name of your root link list (**dental-store** in our example).
 1. Go to **Stores** --> Your store --> **Settings**.
 1. In the **Settings** blade, find **Virto Commerce Frontend** settings and paste the name of the root link list into the **Top level catalog linked list** field:
 

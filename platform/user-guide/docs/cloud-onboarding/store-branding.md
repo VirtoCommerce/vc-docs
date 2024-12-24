@@ -57,7 +57,7 @@ To configure a custom color scheme:
 1. Paste your custom color scheme.
 
     !!! note
-        You can [create your own color scheme using ChatGPT](../../../../user-guide/content/managing-themes#create-theme-colors-via-chatgpt).
+        You can [create your own color scheme using ChatGPT](../content/managing-themes.md#create-theme-colors-using-chatgpt).
 
 1. Click **Create** to add the color scheme to the list.
 1. Copy the filename of your color scheme without extension.

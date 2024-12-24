@@ -67,11 +67,11 @@ Your environment has been created. You can see it in the Virto Cloud Portal:
 
 You can also:
 
-* [Wait for an expected environment status.](../../CLI-tools/virto-cloud.md#wait-for-expected-status-of-environment) 
-* [Restart the environment.](../../CLI-tools/virto-cloud.md#restart-environment)
-* [Delete the environment.](../../CLI-tools/virto-cloud.md#delete-environment)
+* [Wait for an expected environment status.](../../../developer-guide/CLI-tools/virto-cloud#wait-for-expected-status-of-environment) 
+* [Restart the environment.](../../../developer-guide/CLI-tools/virto-cloud#restart-environment)
+* [Delete the environment.](../../../developer-guide/CLI-tools/virto-cloud#delete-environment)
 
 
-![Readmore](media/readmore.png){: width="25"} [Other available commands](../../CLI-tools/virto-cloud.md)
+![Readmore](media/readmore.png){: width="25"} [Other available commands](../../../developer-guide/CLI-tools/virto-cloud)
 
 Now you can [sign in to the created environment](deploy-on-virto-cloud.md#sign-in-to-backend).
