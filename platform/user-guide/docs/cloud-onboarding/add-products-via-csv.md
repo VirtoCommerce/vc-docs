@@ -1,4 +1,4 @@
-# Import products, prices and stock quantities from CSV
+# Import Products, Prices and Stock Quantities from CSV
 
 To bulk add new products, along with their prices and stock quantities at each fulfillment center, you can use the CSV file import option.
 

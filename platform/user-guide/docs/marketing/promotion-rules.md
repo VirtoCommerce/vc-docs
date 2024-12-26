@@ -1,4 +1,4 @@
-# Promotion rules
+# Promotion Rules
 
 Promotion rules, or conditions, define the behavior and effects of your promotions. Similar to the [publish conditions](publish-conditions.md) that you use to customize the display of your content, promotion rules allow you to customize your campaign to target specific customers, match different catalog and cart conditions, and offer specific rewards.
 The following conditions can be configured:
@@ -22,15 +22,24 @@ The conditions below are configured as follows:
 
 ![Promotion conditions example](media/promotion-rules/promotion-conditions-example.png)
 
+## Rounding policy
 
+For the following types of discounts, the option to round or not round reward values has been added:
 
+* A fixed $… off for specific product items.
+* A percentage discount (…%) for a product, capped at no more than $…
+* A percentage discount (…%) for specific product items, capped at no more than $…
+* A percentage discount (…%) applied to every … specific product items.
 
+This new feature provides:
 
+* **Flexibility in reward calculation**: Users can now choose whether to round the calculated rewards to the nearest whole number or leave them with decimal precision, offering better control over discount applications.
+* **Improved accuracy**: The **don’t round** option allows for more precise discount values, ensuring compliance with business rules and pricing strategies.
 
+=== "Rounded price"
 
+    ![Rounded price](media/rounded-price.png)
 
+=== "Not rounded price"
 
-
-
-
-
+    ![Not rounded price](media/not-rounded-price.png)
