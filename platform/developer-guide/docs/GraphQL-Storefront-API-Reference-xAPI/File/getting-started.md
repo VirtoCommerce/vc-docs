@@ -9,7 +9,9 @@ To start uploading files from clients applications:
 1. [Download files.](getting-started.md#download-files)
 1. [Delete files.](getting-started.md#delete-files)
 
-## Register Upload Scope
+For demonstration purposes, let's use the **Quotes** module and the Frontend Application as examples of how to use **File xAPI** module.
+
+## Register upload scope
 
 Update **appsettings.json** with file upload scope settings:
 
@@ -29,7 +31,7 @@ Update **appsettings.json** with file upload scope settings:
 }
 ```
 
-## Query Settings
+## Query settings
 
 Use GraphQL to query file upload options for the desired scope from client application:
 
@@ -77,11 +79,11 @@ mutation {
 ```
 
 
-## Implement Security
+## Implement security
 
-Implement security callback to control access to files based on your application's requirements with impementation of IFileAuthorizationRequirementFactory
+Implement security callback to control access to files based on your application's requirements with implementation of `IFileAuthorizationRequirementFactory`.
 
-## Download Files
+## Download files
 
 Use the provided API endpoint to download files using the safe file ID obtained during upload:
 
@@ -89,9 +91,9 @@ Use the provided API endpoint to download files using the safe file ID obtained 
 GET https://<YOUR-DOMAIN>/api/files/<safe-file-id>
 ```
 
-## Delete Files
+## Delete files
 
-Use deleteFile mutation to remove file from storage:
+Use `deleteFile` mutation to remove file from storage:
 
 ```graphql
 mutation {

@@ -18,19 +18,19 @@ Please migrate from the legacy **VirtoCommerce.ExperienceApi** module to the new
 
 ### Frontend
 
-* **GraphQL Schema Compatibility**: All GraphQL schemas remain compatible, so no frontend modifications are required directly due to schema changes.
+* **GraphQL schema compatibility**: All GraphQL schemas remain compatible, so no frontend modifications are required directly due to schema changes.
 
     !!! note
         Deprecated **validateCoupon** mutation was removed. Use **validateCoupon** query instead.
 
-* **API Endpoint Changes**: If your frontend directly calls endpoints provided by **VirtoCommerce.ExperienceApi**, verify and update the endpoint URLs to match the new module structure if necessary.
+* **API endpoint changes**: If your frontend directly calls endpoints provided by **VirtoCommerce.ExperienceApi**, verify and update the endpoint URLs to match the new module structure if necessary.
 * **Testing**: Thoroughly test frontend interactions to ensure smooth functionality with the new backend modules.
 
 ### Custom modules
 
-* **Dependency Changes**: Custom modules that depended on **VirtoCommerce.ExperienceApi** will need to be updated to depend on the appropriate new modules (**VirtoCommerce.Xapi**, **VirtoCommerce.XCart**, **VirtoCommerce.XCatalog**, **VirtoCommerce.XCMS**, **VirtoCommerce.XOrder**).
-* **Uninstall Old Packages**: Ensure to uninstall the NuGet packages from **VirtoCommerce.ExperienceApi** and replace them with the new packages.
-* **Code Adjustments**: Review and adjust your code to align with the new module structures and namespaces.
+* **Dependency changes**: Custom modules that depended on **VirtoCommerce.ExperienceApi** will need to be updated to depend on the appropriate new modules (**VirtoCommerce.Xapi**, **VirtoCommerce.XCart**, **VirtoCommerce.XCatalog**, **VirtoCommerce.XCMS**, **VirtoCommerce.XOrder**).
+* **Uninstall old packages**: Ensure to uninstall the NuGet packages from **VirtoCommerce.ExperienceApi** and replace them with the new packages.
+* **Code adjustments**: Review and adjust your code to align with the new module structures and namespaces.
 
 ## Update path
 
