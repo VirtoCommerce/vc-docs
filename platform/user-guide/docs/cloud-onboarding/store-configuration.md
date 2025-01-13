@@ -2,9 +2,9 @@
 
 After you have assigned a price list and a catalog to your store, configure:
 
-1. [Tax providers.](configure-store.md#set-up-tax-providers)
-1. [Payment methods.](configure-store.md#set-up-payment-methods)
-1. [Shipping methods.](configure-store.md#set-up-shipping-methods)
+1. [Tax providers.](store-configuration.md#set-up-tax-providers)
+1. [Payment methods.](store-configuration.md#set-up-payment-methods)
+1. [Shipping methods.](store-configuration.md#set-up-shipping-methods)
 
 For the remainder of this guide, all the settings are configured via the Store module (Stores--> Your store (Dental Demo Store in our case)).
 
