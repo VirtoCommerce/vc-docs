@@ -133,10 +133,10 @@ nav:
                 - Link Lists: content/managing-linklists.md
                 - Blogs: content/managing-blogs.md
                 - Settings: content/settings.md
-          - AI Document Processing module: 
+          - AI Smart Capture: 
                 - Overview: ai-doc-processing/overview.md
-                - Enabling AI Document Processing Feature: ai-doc-processing/enabling-ai-doc-processing.md
-                - Settings: ai-doc-processing/settings.md 
+                - Enabling AI Smart Capture: ai-doc-processing/enabling-ai-doc-processing.md
+                - Settings: ai-doc-processing/settings.md
           - Application Insights: 
                 - Overview: application-insights/overview.md
                 - Enabling Application Insights: application-insights/enable-app-insights.md

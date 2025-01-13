@@ -1,6 +1,6 @@
-# Enable AI Document Processing
+# Enable AI Smart Capture
 
-To enable AI document processing:
+To enable AI Smart Capture:
 
 1. Click **Settings** in the main menu.
 1. In the next blade, select settings related to the **AI Document Processing** module.

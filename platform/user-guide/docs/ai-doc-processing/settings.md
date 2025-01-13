@@ -1,6 +1,6 @@
 # Settings
 
-To configure AI document processing settings:
+To configure AI smart capture settings:
 
 1. Click **Settings** in the main menu.
 1. Select settings related to the **AI Document Processing** module.
