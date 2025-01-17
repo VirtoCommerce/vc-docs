@@ -4,25 +4,29 @@ The main function of the **Experience API (xAPI)** module is to serve as a middl
 
 It is closely associated with a particular user or touchpoint experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
 
-[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-experience-api)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-api/)
 
-[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-experience-api/releases/)
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-api/releases)
 
+!!! note
+    We have migrated to a new xAPI architecture to better support the evolving needs of our business API with GraphQL. The previously used [Experience API module](https://github.com/VirtoCommerce/vc-module-experience-api) has been replaced with a suite of new, more specialized modules. This change is part of our effort to simplify business API development and streamline our release cycle. The **ExperienceAPI module** will be archived and supported in Stable 8 and Stable 9 releases. Future developments will focus on the new xAPI module and related modules. 
+
+    ![Readmore](media/readmore.png){: width="25"} [Migration to new xAPI modules](../Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md)
 
 # GraphQL core ideas
 
-GraphQL is a new API standard that provides a more efficient, powerful and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last couple of years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
+GraphQL is a new API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last couple of years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
 
 ![graphQL-Rest](media/rest-graphQL.png)
 
-With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Client customize the endpoints using schema, which provides a description of how the data is structured and contains. Here is an part from Virto Commerce schema:
+With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Client customize the endpoints using schema, which provides a description of how the data is structured and contains. Here is a part from Virto Commerce schema:
 
 ![schema](media/schema.png)
 
 !!! info
     Another concept to know is a **Variable**. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
 
-Our insrtuction provides Virto Commerce related guidelines. 
+Our instruction provides Virto Commerce related guidelines. 
 
 ![Readmore](media/readmore.png){: width="25"} [Extensive GraphQL guide](https://graphql.org/learn/)
 
