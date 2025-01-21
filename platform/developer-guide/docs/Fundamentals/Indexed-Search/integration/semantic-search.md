@@ -95,7 +95,7 @@ To implement the ELSER v2 model:
     }
     ```
 
-1. To configure diffent field for a different document type, create a pipeline for each index with if condition inside it:
+1. To configure different field for a different document type, create a pipeline for each index with if condition inside it:
 
     ```json
     PUT _ingest/pipeline/elser-v2-pipeline

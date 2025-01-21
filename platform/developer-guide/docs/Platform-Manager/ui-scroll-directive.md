@@ -47,8 +47,8 @@ $scope.searchFulfillmentCenters = function (criteria) {
 |onRemove|Function that is triggered when the selected value is cleared or removed.|
 |pageSize|Manages page size on a single scroll (default at 20).|
 |placeholder|Defines the text that is displayed when the dropdown value is not selected.|
-|isRequired|The *required* flag value of the underlying `ui-select` directive (*false* by default).|
-|isReadOnly|The *disabled* flag value oof the underlying `ui-select` directive (*false* by default).|
+|isRequired|The **required** flag value of the underlying `ui-select` directive (*false* by default).|
+|isReadOnly|The **disabled** flag value oof the underlying `ui-select` directive (*false* by default).|
 
 ## Examples
 

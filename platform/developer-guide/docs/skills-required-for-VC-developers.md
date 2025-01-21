@@ -5,7 +5,7 @@ Virto Commerce Developers design, build, test, and maintain E-commerce solutions
 The following skills are important for working with Virto Commerce:
 
 * [Common skills](skills-required-for-VC-developers.md#common-skills)
-* [Ecommerce common skills](skills-required-for-VC-developers.md#ecommerce-common-skills)
+* [eCommerce common skills](skills-required-for-VC-developers.md#ecommerce-common-skills)
 * [Virto Commerce developer skills](skills-required-for-VC-developers.md#virto-commerce-developers-skills)
 
 ## Common skills
@@ -20,7 +20,7 @@ The following skills are important for working with Virto Commerce:
 * Design Patterns (as used by Virto Commerce Platform)
 * SOLID principles (as used by Virto Commerce Platform)
 
-## Ecommerce common skills
+## eCommerce common skills
 
 * E-Commerce principles, UX/UI and best practices 
 * Catalog browsing process 
@@ -91,7 +91,7 @@ Virto Commerce developer skills include:
 ### Frontend developer skills
 
 #### Mobile web specialist
-* [Web Fubdamentals](https://developers.google.com/web/fundamentals)
+* [Web Fundamentals](https://developers.google.com/web/fundamentals)
 * Website layout and styling
 * Front-end networking
 * Accessibility
@@ -117,7 +117,7 @@ Virto Commerce developer skills include:
 * Web-Push
 * Offline mode
 
-#### Ecommerce tools
+#### eCommerce tools
 * Google Analytics, Yandex Metrics, Hotjar
 * [Azure Application Insights / Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse)

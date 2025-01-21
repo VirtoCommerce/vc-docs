@@ -12,7 +12,7 @@ This guide explores its scalability options, ranging from Small to Extra Large c
 
     Key elements:
     
-    1.	1x Frontend Applicaton Instance
+    1.	1x Frontend Application Instance
     2.	1x Backend Instance
 
 === "M: Medium"
@@ -23,7 +23,7 @@ This guide explores its scalability options, ranging from Small to Extra Large c
 
     Key elements:
 
-    1.	Multiple Frontend Applicaton Instances
+    1.	Multiple Frontend Application Instances
     2.	Multiple Backend Instances
     3.	Redis Cache for Distributed Cache Storage
 
@@ -41,7 +41,7 @@ This guide explores its scalability options, ranging from Small to Extra Large c
 
 === "XL: Extra Large"
 
-    Perfect to optimize resource utilization and costs by segmenting administrative tasks into functional elements. Minimize performance degradation risks across various processes (e.g., Background Jobs for Frontend Applicaton and Content Managers). 
+    Perfect to optimize resource utilization and costs by segmenting administrative tasks into functional elements. Minimize performance degradation risks across various processes (e.g., Background Jobs for Frontend Application and Content Managers). 
 
     !!! note
         This environment closely resembles multi-region setups, facilitating high availability and superior performance. 
@@ -50,7 +50,7 @@ This guide explores its scalability options, ranging from Small to Extra Large c
 
     Key Components:
 
-    1. VC backend environment for Frontend Applicaton (excludes Background Jobs)
+    1. VC backend environment for Frontend Application (excludes Background Jobs)
     2. VC backend environment for Content Managers (excludes Background Jobs)
     3. VC backend environment for Background Jobs (emphasis on high CPU utilization)
 

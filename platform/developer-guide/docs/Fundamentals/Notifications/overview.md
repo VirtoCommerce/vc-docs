@@ -9,7 +9,7 @@ The chart below shows how notification data is sent:
 
 Each notification sent by the system is represented with an individual notification type. Each Notification type, in its turn, can contain multiple notification templates, each being individual per language.
 
-At the time of sending, the system converts the object belonging to a specific notificaction type and having a notification template into a notification message, and then forwards it through one of the channels, e.g. email or text.
+At the time of sending, the system converts the object belonging to a specific notification type and having a notification template into a notification message, and then forwards it through one of the channels, e.g. email or text.
 
 For data modeling purposes, the notification data model contains the following elements:
 

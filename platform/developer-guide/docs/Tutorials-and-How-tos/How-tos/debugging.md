@@ -7,7 +7,7 @@ This section describes the techniques related to debugging that enhance developm
 * Debugging VC components with using [Source Link](https://github.com/dotnet/sourcelink/blob/main/README.md) technology.
 * Loading a PDB directly from public symbol servers.
 
-The example below demostrates debugging a third party NuGet package without having acceess to the source code of the library and the local project that references it as a package.
+The example below demonstrates debugging a third party NuGet package without having acceess to the source code of the library and the local project that references it as a package.
 
 ## Debug with Source Link
 
@@ -58,7 +58,7 @@ Now you can continue debugging the third-party module as it is included into you
 ## Load PDB from Public Symbol Servers
 If the third-party component doesn't support Source Link and you haven't loaded the PDB file for the library:
 
-1. Go to **Debug** > **Window** > **Modules** and load symbols of Newtonsoft.Json library manually.
+1. Go to **Debug** > **Window** > **Modules** and load symbols of **Newtonsoft.Json** library manually.
 
     ![Manual loading](media/manual-loading.png)
 

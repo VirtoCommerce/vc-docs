@@ -149,7 +149,7 @@ Some GraphQL queries and mutations require additional authorization. To test the
 
     ![token](media/token-code.png)
 
-Providing token in Playground is decribed in the [Playground](playground.md) section. 
+Providing token in Playground is described in the [Playground](playground.md) section. 
 
 Providing token in Postman is described in [Postman](postman.md#authorization-and-token-usage) section.
 

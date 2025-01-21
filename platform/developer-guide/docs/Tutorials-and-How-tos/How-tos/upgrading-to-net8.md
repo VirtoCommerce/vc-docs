@@ -81,7 +81,7 @@ This script automates several tasks, including:
 ![step3 review modified files](media/updatenet8-step3-modified-files.png)
 
 !!! note
-    You can perfrom the above updates manually.
+    You can perform the above updates manually.
 
 ### Build solution
 

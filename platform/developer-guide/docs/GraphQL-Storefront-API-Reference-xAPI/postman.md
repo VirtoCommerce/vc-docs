@@ -276,7 +276,7 @@ You can use Postman to build queries and mutations:
         ```
     1. Click **Query** to execute the mutation.
     1. To check the result, open Platform and click **Contacts** in the main menu.
-    1. The **Test organization name** company has been succesfully created with the user **Test first name Test last name**.
+    1. The **Test organization name** company has been successfully created with the user **Test first name Test last name**.
 
     ![requestRegistration](media/requestRegistration.gif)
 

@@ -62,7 +62,7 @@ $scope.blade.toolbarCommands = [
 
 ## Add toolbar items from external code
 
-A dedicated service is used for adding toolbar items externally, without having any reference to the blade instance. The preferred place for registering a toolbar item is the **module run** block in Angular.js. What you need is reference `platformWebApp.toolbarService` as `toolbarService`, create item option, and call `register` against the service:
+A dedicated service is used for adding toolbar items externally, without having any reference to the blade instance. The preferred place for registering a toolbar item is the **module run** block in **Angular.js**. What you need is reference `platformWebApp.toolbarService` as `toolbarService`, create item option, and call `register` against the service:
 
 ```JS
 toolbarService.register({
@@ -88,7 +88,7 @@ Toolbar item definition structure:
 |Member       |Description                                  |
 |-------------|---------------------------------------------|
 |name         |Display name for the item.                   |
-|icon         |Icon for toobar item.                        |
+|icon         |Icon for toolbar item.                        |
 |title        |Tooltip message for the button.              |
 |executeMethod|Function to run when the item is activated.  |
 |canExecuteMethod|Function to determine whether the item could be executed. The item is disabled in the toolbar if the **false** value is returned.|

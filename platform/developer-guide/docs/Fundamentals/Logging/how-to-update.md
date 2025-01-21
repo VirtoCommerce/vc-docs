@@ -7,7 +7,7 @@ To update your platform version to [3.304.0 and higher](https://github.com/Virto
 
 ## Option 1. Migrate existing configuration to Serilog format
 
-If you commited changes to logging configuration:
+If you committed changes to logging configuration:
 
 1. Map existing configuration into Serilog format in the appsettings.{ENVIRONMENT}.json Logging section.
 1. Replace the original configuration with the Serilog configuration. 
@@ -57,7 +57,7 @@ After:
 
 Since Application Insights integration was moved to a separate module:
 
-1. [Download it manually](https://github.com/VirtoCommerce/vc-module-app-insights/releases)  or  install it via vc-build CLI <!--- TODO: Add link how to install module via vc-build CLI -->.
+1. [Download it manually](https://github.com/VirtoCommerce/vc-module-app-insights/releases)  or  [install it via vc-build CLI](../../CLI-tools/more-targets.md#installmodules).
 
 1. Add the following changes to the appsettings.{ENVIRONMENT}.json file.  
 

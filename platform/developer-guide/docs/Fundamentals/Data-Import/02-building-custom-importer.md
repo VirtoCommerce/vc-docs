@@ -1,6 +1,6 @@
 ﻿# Build Custom Data Importer
 
-Follow the intructions below to build your own data importer of a specific type. They describe importing product images from a CSV file.
+Follow the instructions below to build your own data importer of a specific type. They describe importing product images from a CSV file.
 
 1. Сheck which components need to be implemented into a new importer:
 
@@ -197,7 +197,7 @@ Follow the intructions below to build your own data importer of a specific type.
 1. Run data importer from the user interface as `ImportProfile` that has an assigned `CsvProductImageImporter`:
 
     1. Manually select a profile on the blade.
-    1. Specify the file for import. The preview is availabe. 
+    1. Specify the file for import. The preview is available. 
     1. Manually start the import process and observe the progress. 
     1. Interrupt the import, if needed. 
     1. See the summary information at the end. 

@@ -52,7 +52,7 @@ The following Module services are also available for developers to use in the [U
 * `IImportProfilesSearchService` and `IImportRunHistorySearchService` provide search capabilities for `ImportProfiles` and `ImportRunHistory` respectively.
 * `IImportProfileCrudService` and `IImportRunHistoryCrudService` provide facilities for CRUD operations on `ImportProfiles` and `ImportRunHistory` respectively.
 
-Developers can extend authorizations for newly created Importers. The `DataImporterBuilder` has `WithAuthorizationReqirement` and `WithAuthorizationPermission` methods to set custom permissions if necessary.
+Developers can extend authorizations for newly created Importers. The `DataImporterBuilder` has `WithAuthorizationRequirement` and `WithAuthorizationPermission` methods to set custom permissions if necessary.
 
 ![Readmore](media/readmore.png){: width="25"} [Building custom importer](02-building-custom-importer.md)
 

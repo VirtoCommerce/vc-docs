@@ -1,6 +1,6 @@
 # Swagger/OpenAPI Integration in Virto Commerce
 
-The Swagger UI allows both your development team and end users to seamlessly visualise and interact with the Virto Commerce REST API resources without any implementation complexity.
+The Swagger UI allows both your development team and end users to seamlessly visualize and interact with the Virto Commerce REST API resources without any implementation complexity.
 
 Automatically generated from Virto Commerce modules, Swagger UI's visual documentation streamlines backend implementation and client-side consumption processes.
 

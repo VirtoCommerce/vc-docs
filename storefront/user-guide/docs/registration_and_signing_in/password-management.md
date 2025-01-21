@@ -17,7 +17,7 @@ If you forgot your password, you can reset it as follows:
 
     ![Password reset](../media/resetting-password-1.png){: width="400"}
 
-1. Click on the link in the email and follow further insctructions.
+1. Click on the link in the email and follow further instructions.
 
 You new password has been created.
 

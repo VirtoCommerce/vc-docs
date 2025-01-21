@@ -39,7 +39,7 @@ Virto Commerce platform authenticates and authorizes the app rather than a user.
 
 Instead, Virto Commerce apps use the Client Credentials Flow (defined in [OAuth 2.0 RFC 6749, section 4.4](https://tools.ietf.org/html/rfc6749#section-4.4)), which enables passing along their Client ID and Client Secret for authentication to get a token.
 
-To create a new OAuth app, you can use Platform Manager. Navigate to ***More > Security > OAuth Application*** and click ***Add*** in the screen toolbar.
+To create a new OAuth app, you can use Platform Manager. Navigate to **More --> Security --> OAuth Application** and click **Add** in the screen toolbar.
 
 !!! warning
 	In the current version, all OAuth clients will have admin permissions, with no permissions or scope assignments supported. To create API apps that have limited permissions or scopes to resources, use Password Flow instead (see below). Moving forward, we intend to use roles and permissions as custom scopes to limit access to resources according to the permissions (scopes) granted to an application.

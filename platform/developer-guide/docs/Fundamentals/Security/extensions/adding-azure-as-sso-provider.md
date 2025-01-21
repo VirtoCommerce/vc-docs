@@ -169,7 +169,7 @@ As mentioned above, when a user signs in with Azure Active Directory for the fir
 
 To answer this question, let's explore the Azure Active Directory authentication in Virto Commerce Platform deeper.
 
-1. VC Platform trigegrs **Microsoft.AspNetCore.Authentication.OpenIdConnect** to verify the user's identity. This initiates a standard OpenID Connect flow, redirecting the user to the Azure Active Directory sign-in page and then back to the Virto Commerce Platform.
+1. VC Platform triggers **Microsoft.AspNetCore.Authentication.OpenIdConnect** to verify the user's identity. This initiates a standard OpenID Connect flow, redirecting the user to the Azure Active Directory sign-in page and then back to the Virto Commerce Platform.
 1. When this flow is over, Virto Commerce Platform receives Azure Active Directory account information for the current user and extracts the **upn** claim value from it.
 1. Virto Commerce Platform then attempts to find an existing Virto Commerce Platform account with a login that matches that **upn** claim value. This search can lead to three possible outcomes:
 	1. If the account already exists and is associated with the Azure Active Directory account of the signed-in user, no further action is taken, and Virto Commerce Platform authenticates the user using the existing account.

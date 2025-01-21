@@ -4,7 +4,7 @@ Concurrency conflicts refer to situations where multiple processes or threads at
 
 ![Readmore](media/readmore.png){: width="25"} [Handling Concurrency Conflicts](https://learn.microsoft.com/en-us/ef/core/saving/concurrency?tabs=data-annotations)
 
-If the same data gets modified at the same time EF Core's `SaveChanges()` throws a `DbUpdateConcurrencyException`. In cases when you need to handle such situations you can overrdie the `CommitAsync` method and handle `DbUpdateConcurrencyException`. 
+If the same data gets modified at the same time EF Core's `SaveChanges()` throws a `DbUpdateConcurrencyException`. In cases when you need to handle such situations you can override the `CommitAsync` method and handle `DbUpdateConcurrencyException`. 
 
 <details><summary>`client-wins` scenario example</summary>
 

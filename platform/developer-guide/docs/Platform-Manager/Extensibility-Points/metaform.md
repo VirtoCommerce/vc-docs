@@ -8,10 +8,10 @@ This strategy comes with the following drawbacks:
 * You cannot update the existing UI without changing the source code.
 * Most content is produced through copying and pasting HTML code, which may lead to maintenance problems in the future, as data entry forms may potentially lose their common *look and feel*.
 
-In order to eliminate the issues above, we developed a new Angular.js component called *Metaform*:
+In order to eliminate the issues above, we developed a new Angular.js component called **Metaform**:
 
 * **Metaform** is a placeholder (container) control that renders UI content based on the provided metadata.
-* **Meta-field** is a JavaScript object defining metadata for a single logical element inside the *metaform* being rendered.
+* **Meta-field** is a JavaScript object defining metadata for a single logical element inside the **metaform** being rendered.
 
 Here is how we use Metaform out of the box in our Catalog module:
 

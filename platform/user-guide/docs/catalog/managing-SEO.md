@@ -1,6 +1,6 @@
 # Manage SEO
 
-Users can now configure SEO information for the root catalog. It can be applied to catalog, category, subcategpry and product levels on the website to enhance search engine optimization. Additionally, users have the option to disable access to the catalog if needed.
+Users can now configure SEO information for the root catalog. It can be applied to catalog, category, subcategory and product levels on the website to enhance search engine optimization. Additionally, users have the option to disable access to the catalog if needed.
 
 As an example, let's enable SEO for the **Bolts** category within the **B2B-mixed** catalog:
 

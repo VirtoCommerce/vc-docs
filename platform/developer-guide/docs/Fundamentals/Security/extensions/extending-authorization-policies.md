@@ -1,6 +1,6 @@
 # Authorization Policies Extension
 
-Virto Commerce supports extendng the existing authorization policies that are defined and checked in the API controllers and other locations. This article will tell you how to use various techniques to extend the authorization policy type without direct code modification.
+Virto Commerce supports extending the existing authorization policies that are defined and checked in the API controllers and other locations. This article will tell you how to use various techniques to extend the authorization policy type without direct code modification.
 
 [![Sample code](../media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-order/tree/dev/samples/VirtoCommerce.OrdersModule2.Web/Authorization)
 

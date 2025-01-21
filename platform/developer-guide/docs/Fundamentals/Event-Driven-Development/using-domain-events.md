@@ -6,7 +6,7 @@ An important benefit of domain events is that any side effects of something happ
 
 ## Define domain events
 
-A domain event is just a simple POCO type that represents an interesting occurence in the domain:
+A domain event is just a simple POCO type that represents an interesting occurrence in the domain:
 
 ```csharp
 public class CustomDomainEvent : DomainEvent
@@ -64,7 +64,7 @@ eventPublisher.Publish(new CustomDomainEvent()));
 This might be a useful option in some cases:
 
 ```csharp
-//Derive a new handler from an overrided handler class
+//Derive a new handler from an overridden handler class
 public class CustomDomainEventHandler2 : CustomDomainEventHandler
 { .... }
 //Override in DI container

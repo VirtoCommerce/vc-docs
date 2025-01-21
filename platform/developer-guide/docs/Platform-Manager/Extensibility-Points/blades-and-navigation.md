@@ -6,7 +6,7 @@ The Virto Commerce Platform UI is organized and divided into multiple screens ca
 
 ## Blade structure and properties
 
-Every blade is instantiated from a highly customizable template. The template has a few basic parts, such as the maximize area, top and title bottons, toolbar, main content placeholders, etc.
+Every blade is instantiated from a highly customizable template. The template has a few basic parts, such as the maximize area, top and title buttons, toolbar, main content placeholders, etc.
 
 Any blade object has the following properties that Virto Commerce platform respects:
 
@@ -22,7 +22,7 @@ Any blade object has the following properties that Virto Commerce platform respe
 | template ==string==      | Angular.js template path. This property is required.|
 | parentBlade ==object==   |Reference to parent blade. Platform sets this value automatically.|
 | childrenBlades ==object []== |Child blades. Platform sets and manages this value automatically.|
-| isClosingDisabled ==boolean== |Shows whether the close botton (**x**) should be grayed out. A blade with such button grayed out can be closed only using a script.|
+| isClosingDisabled ==boolean== |Shows whether the close button (**x**) should be grayed out. A blade with such button grayed out can be closed only using a script.|
 | onClose(callback) ==function==|Action to call **before** closing the blade. This can prevent a blade from closing if the provided callback action is not run. The **onClose** property is usually used to show confirmation dialog.|
 |isExpandable ==boolean== |Causes the blade to open maximized and then shrink when a child blade is opened.|
 |onExpand() ==function==  |Action to call on maximizing the blade; most often used to expand inner controls of the blade.|

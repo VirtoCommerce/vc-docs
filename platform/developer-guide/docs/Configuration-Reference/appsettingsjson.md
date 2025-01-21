@@ -1254,7 +1254,7 @@ This node is used for Used for platform settings overriding.
 
 |Node           | Default or sample value   | Description  |
 | ------------- | ------------------------  | ------------ |
-| Settings      |                           | Array of settings to be overriden. These settings will be read only in the admin panel.|
+| Settings      |                           | Array of settings to be overridden. These settings will be read only in the admin panel.|
 
 **Example**
 
@@ -1372,7 +1372,7 @@ This node configures full text search for the `VirtoCommerce.Search` module.
 
 <!--search-start-->
 
-| Node                        | Default or sample value   | Descript                                                                                          |
+| Node                        | Default or sample value   | Description                                                                                       |
 | ----------------------------| ------------------------- | ------------------------------------------------------------------------------------------------- |
 | Provider                    | "Lucene"<br>"ElasticSearch"<br>"ElasticAppSearch"<br>"ElasticSearch8"<br>"AzureSearch"<br>"AlgoliaSearch"                     | This **required** setting specifies the current search provider.  |
 | Scope                       | "default"               | This setting determines the scope to use and is **required**.                                                                                 |

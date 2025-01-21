@@ -13,7 +13,7 @@ To complete your order:
     * View the items you have ordered grouped by vendor.
     * Change the quantity of items ordered.
     * Delete items in bulk or individually.
-    * Check items in bulk and indivudually.
+    * Check items in bulk and individually.
     * Request for a quote.
     * Clear the cart.
     * View the gifts you can receive as part of a loyalty program. The gifts appear automatically and are preselected.
@@ -65,7 +65,7 @@ To complete your order:
     !!! note 
         In case of the Skyflow option, you can save card for future payments, and then select a previously saved card from the dropdown list. You can view your saved cards at **Account --> Saved Credit Cards**.
 
-        ![Readmore](../media/readmore.png){: width="25"} [Saved Creadit Cards](../account/saved-credit-cards.md) 
+        ![Readmore](../media/readmore.png){: width="25"} [Saved Credit Cards](../account/saved-credit-cards.md) 
 
     ![payment](../media/payment-step.png)
 

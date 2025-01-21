@@ -17,7 +17,7 @@ The process of loading modules into the Virto platform application process inclu
     
 * **Ordering by dependency graph**: All loaded modules are stored in the order of their dependencies for proper initialization order.
     
-* **Initializing modules**: Finally, the modules get initialized, which means creating instances of the module class and calling the *Initialize* method against them via the `IModule` interface.
+* **Initializing modules**: Finally, the modules get initialized, which means creating instances of the module class and calling the **Initialize** method against them via the `IModule` interface.
 
 The chart below shows the module loading process:
 

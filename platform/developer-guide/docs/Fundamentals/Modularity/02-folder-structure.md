@@ -46,7 +46,7 @@ The sections below break down the core folder structure and clarify which folder
 ## Module.Core
 This project contains all abstractions and domain model definitions and serves as an API to access all module functionality and enable interaction between other modules. This project has a class library project type and can be packaged and distributed as a **NuGet** package.
 
-The `Module.Core` project consists of the followng folders and files:
+The `Module.Core` project consists of the following folders and files:
 
 ```
 ├── Module.Core
@@ -70,7 +70,7 @@ The `Module.Core` project consists of the followng folders and files:
 ## Module.Data
 This project is comprised of business layers and may include repositories and domain service implementations. It is also of the class library type and can be packaged and distributed as a **NuGet** package and used as a reference from other modules.
 
-The `Module.Data` project consists of the followng folders:
+The `Module.Data` project consists of the following folders:
 
 ```
 ├── Module.Data
@@ -96,7 +96,7 @@ The `Module.Data` project consists of the followng folders:
 
 The [**Module.Web**](http://module.web/) project represents an application level of module domain. This project uses all services and domain types in order to implement business scenarios. Initialization, public API, and user interface are also implemented on this level. This project cannot be used directly from other modules and is not distributed as a **NuGet** package.
 
-The `Module.Core` project consists of the followng folders and files:
+The `Module.Core` project consists of the following folders and files:
 
 ```
 ├── Module.Web
