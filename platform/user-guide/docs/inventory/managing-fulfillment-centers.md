@@ -42,7 +42,7 @@ The modifications have been saved.
 In the list of fulfillment centers:
 
 1. Click:
-	* Three dots to the left of each item in the fullfillment center list and click **Delete** from the popup menu.
+	* Three dots to the left of each item in the fulfillment center list and click **Delete** from the popup menu.
 	* The fulfillment center you need to delete and then click **Delete** in the new blade.
 
 1. Confirm the deletion. 

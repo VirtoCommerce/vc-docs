@@ -16,7 +16,7 @@ After [creating a price list](../pricing/creating-new-price-list.md), you can fi
         The **SKU**, **Min quantity**, **List price**, and **Sale price** fields are required. 
 
     !!! note
-        Use semicolon as a delimeter in your CSV file.
+        Use semicolon as a delimiter in your CSV file.
 
 1. After your file has been uploaded, click **Preview**.
 1. In the **Preview** blade you will see the list of uploaded items. Select your further action:

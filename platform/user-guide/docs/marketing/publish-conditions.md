@@ -9,7 +9,7 @@ The following conditions can be configured:
 | Condition        	| Description                                                  	| Options                                                                 	|
 |------------------	|--------------------------------------------------------------	|-------------------------------------------------------------------------	|
 | Location         	| Defines the location of your website visitors.               	| Time zone<br> Zip/ postal code<br> City<br> Country<br> State/ province 	|
-| Browse behaviour 	| Defines the shopper's behavior.                              	| Shopper searched for ... in the store<br> User language is set to       	|
+| Browse behavior 	| Defines the shopper's behavior.                              	| Shopper searched for ... in the store<br> User language is set to       	|
 | Shopper profile  	| Targets the shoppers according to their profile information. 	| Shopper age is...<br> Shopper gender is...<br> User group contains...   	|
 | Catalog          	| Specifies products or categories the content will apply to.  	| Specific category<br> Specific product                                  	|
 

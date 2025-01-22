@@ -27,7 +27,7 @@ To create new pages:
 * Use markdown or html by clicking **Html Page** in the blade below.
 
     !!! note
-        If you have the Page Builder module installed, you can build pages from individual blocks by clicking **Design Page** in the blade below. <!-- ADD LINK TO PAGE BUILDER GUIDE -->
+        If you have the [Page Builder](../page-builder/overview.md) module installed, you can build pages from individual blocks by clicking **Design Page** in the blade below.
 
 ![designer or html](media/designer-or-html.png)
 

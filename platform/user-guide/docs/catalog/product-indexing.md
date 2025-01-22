@@ -10,7 +10,7 @@ To start indexation:
 
 1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
-1. In the next **Categories and itens** blade, click on the required product.
+1. In the next **Categories and items** blade, click on the required product.
 1. In the next **Physical items details** blade, scroll down and click the index widget.  
 
     ![Path](media/index-path.png)

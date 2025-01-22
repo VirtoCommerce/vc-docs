@@ -6,7 +6,7 @@ When presenting Dynamic Content to your customers, consider the following:
 
 * The type of content you intend to display.
 * The target audience that will view this content.
-* The timeframe during which the content will be visible.
+* The time frame during which the content will be visible.
 * The content's location, indicating which part of the webpage will house the content in question.
 
 Dynamic Content is configurable via the Virto Commerce Platform Manager, enabling your marketing team to set it up without the need for developers or system administrators. For assets like images or Flash animations, a graphic designer may be required to create and upload the files. However, once this step is completed, your marketing team can configure rules for content display without any technical assistance.

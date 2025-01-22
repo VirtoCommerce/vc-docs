@@ -63,7 +63,7 @@ For marketers, the Platform will show only one module in the main menu:
 
 ## Example
 
-Let's say we have a marketer who is only responsible for B2B-store promotions, while a top-level marketer can create promotions for multiple stores, inluding the B2B-store. As long as the marketer's permission is limited to the B2B-store, they can only view the promotions created by the top marketer and that are active for multiple stores. They will receive notifications if they try to edit these promotions. The store names other than B2b-store will be hidden.
+Let's say we have a marketer who is only responsible for B2B-store promotions, while a top-level marketer can create promotions for multiple stores, including the B2B-store. As long as the marketer's permission is limited to the B2B-store, they can only view the promotions created by the top marketer and that are active for multiple stores. They will receive notifications if they try to edit these promotions. The store names other than B2b-store will be hidden.
 
 ![Limitations](media/marketer-limitations.png)
 

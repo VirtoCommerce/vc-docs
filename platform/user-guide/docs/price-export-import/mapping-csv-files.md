@@ -9,4 +9,4 @@ Get a sample CSV file to use as a template for proper mapping:
         The **SKU**, **Min quantity**, **List price**, and **Sale price** fields are required for price list import. 
 
     !!! note
-        Use semicolon as a delimeter in your CSV file.
+        Use semicolon as a delimiter in your CSV file.

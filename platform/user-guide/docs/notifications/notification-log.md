@@ -3,7 +3,7 @@
 You can view a log of:
 
 * A specific notification via the [Notification log](notification-log.md#notification-log) widget.
-* All the notififcations sent via the [Notification activity feed](notification-log.md#notification-activity-feed).
+* All the notifications sent via the [Notification activity feed](notification-log.md#notification-activity-feed).
 
 ## Notification log
 
@@ -19,7 +19,7 @@ To view the log of a specific notification:
 
 ## Notification activity feed
 
-To view the log of all the notififcations sent:
+To view the log of all the notifications sent:
 
 1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification activity feed**.

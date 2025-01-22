@@ -37,7 +37,7 @@ To set product's availability:
     !!! info 
         Track inventory switch can be applied to both digital and physical products. By default, the switch is off for digital products, on for physical ones. 
 
-1. In the same blade, click on the **Fullfillment Centers** widget.
+1. In the same blade, click on the **Fulfillment Centers** widget.
 
     ![add-inventory](media/inventory-path.png)
 

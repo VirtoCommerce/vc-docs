@@ -39,7 +39,7 @@ New blogs can be:
 To create new post in your blog:
 
 * Use the upload feature (see image above).
-* Use Virto Commerce Page Builder to build posts from individual blocks by clicking **Design Page** in the blade below. <!-- ADD LINK TO PAGE BUILDER GUIDE -->
+* [Use Virto Commerce Page Builder](../page-builder/overview.md) to build posts from individual blocks by clicking **Design Page** in the blade below.
 * Use markdown or html by clicking **Html Page** in the blade below.
 
 ![designer or html](media/designer-or-html.png)

@@ -7,7 +7,7 @@ To create a new notification layout:
 1. In the main menu, click **Notifications**.
 1. In the next **Notifications** blade, click **Notification layouts**.
 1. In the next blade, click **Add** in the toolbar.  
-1. In the **Create notififcation layout** blade, paste or write your layout.
+1. In the **Create notification layout** blade, paste or write your layout.
 5. Click **Save** in the toolbar to save the changes. 
 
 ![Notification layout](media/notification-layouts-path.png)

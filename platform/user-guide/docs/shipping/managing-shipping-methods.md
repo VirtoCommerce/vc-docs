@@ -8,12 +8,12 @@ Managing shipping methods includes:
 
 ## Select shipping method
 
-To select a shiping method:
+To select a shipping method:
 
 1. In the main menu, click **Stores**.
 1. In the next blade, select the required store.
 1. In the next blade, click on the **Shipping methods** widget.
-1. The next blade displays the available shipping methods. Curently, we offer a fixed rate shipping method. 
+1. The next blade displays the available shipping methods. Currently, we offer a fixed rate shipping method. 
 
 ![Shipping methods list](media/fixed-rate-shipping-method.png)
 
@@ -30,7 +30,7 @@ To edit a shipping method:
 
     ![Edit shipping method](media/edit-shipping-method.png)
 
-1. Click **Save** in the toolbat to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 Your changes have been applied to the shipment method.
 

@@ -1,6 +1,6 @@
 # Manage Taxes
 
-Managing taxes inludes:
+Managing taxes includes:
 
 * [Viewing the list of available tax providers.](managing-taxes.md#view-tax-providers)
 * [Enabling/disabling tax providers.](managing-taxes.md#enabledisable-tax-provider)

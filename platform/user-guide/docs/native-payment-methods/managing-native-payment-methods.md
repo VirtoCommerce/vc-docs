@@ -37,7 +37,7 @@ To view the details of the existing non-integrative payment methods:
 1. The next blade displays the details of the selected method. Here you can:
     * Edit its code, name, and description.
     * Enable/ disable it.
-    * Add or edit its logo by borwsing your files to the next blade.
+    * Add or edit its logo by browsing your files to the next blade.
 
 1. Click **Save** in the top toolbar to save the changes, if any.
 

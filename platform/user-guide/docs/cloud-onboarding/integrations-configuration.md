@@ -1,7 +1,7 @@
 # Integrations Configuration 
 
-* [Avalara]
-* [Builder.io]
+* [Avalara](#avalara)
+* [Builder.io](#builderio-integration)
 
 
 ## Avalara
@@ -33,7 +33,7 @@ To start using AvaTax:
 1. Set up Platform according to [this guide](https://docs.virtocommerce.org/platform/user-guide/integrations/avalara/taxes-calculation/#send-orders-automatically).
 
 
-## Builder.io Integration
+## Builder.io integration
 
 Builder.io is an intuitive solution that allows anyone on your team to manage Frontend Application pages without having to rely on developers. As long as Virto Frontend Application has native integration with Builder.io, you can start using it right away:
 

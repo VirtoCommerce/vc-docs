@@ -1,6 +1,6 @@
 # Virto Commerce Frontend Customization and Deployment on Virto Cloud
 
-This guide provides detailed instructions to help you customize the Virto Commerce Frontend application and deploy it to the Virto Cloud environment. Complete the followng steps:
+This guide provides detailed instructions to help you customize the Virto Commerce Frontend application and deploy it to the Virto Cloud environment. Complete the following steps:
 
 1. [Ensuring local machine connectivity.](frontend-customization.md#ensure-local-machine-connectivity)
 1. [Forking the frontend repository.](frontend-customization.md#fork-frontend-repository)
@@ -91,7 +91,7 @@ Your application runs correctly with all customizations applied:
 
 ## Prepare artifact for release
 
-For demonstartion purposes, let's release the artifact manually. A typical Virto Commerce Frontend Application release contains a ZIP file with the following structure:
+For demonstration purposes, let's release the artifact manually. A typical Virto Commerce Frontend Application release contains a ZIP file with the following structure:
 
 ```text
 ├── vc-theme-b2b-vue-....zip  
@@ -110,7 +110,7 @@ For demonstartion purposes, let's release the artifact manually. A typical Virto
 ```
 
 
-The **default** folder contains the artificats similar to those created in the previous step. 
+The **default** folder contains the artifacts similar to those created in the previous step. 
 
 Let's create a ZIP archive with the artifacts generated in the previous step:
 

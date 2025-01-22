@@ -7,7 +7,7 @@ Managing payment methods includes:
 
 ## View available payment methods
 
-To view the availble payment methods:
+To view the available payment methods:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the required store.

@@ -92,5 +92,5 @@ If you encounter issues, such as a **Degraded** status, you can identify the cau
 
 1. Go to **Environments** --> Your environment --> **Applications** --> **Platform**
 1. Click **Logs** in the toolbar.
-1. The Plaform logs open in the next blade. Find the degradation reason. 
+1. The Platform logs open in the next blade. Find the degradation reason. 
 1. If you need any assistance resolving the error, please [contact our support team](http://help.virtocommerce.com).

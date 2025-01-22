@@ -1,6 +1,6 @@
 # Overview
 
-Your Virto Commerce store can be seamlessly integrated with Google Analytics 4 using the Google Ecommerce Analytics module. With this module, you can:
+Your Virto Commerce store can be seamlessly integrated with Google Analytics 4 using the Google eCommerce Analytics module. With this module, you can:
 
 * Assign Google Analytics measurement Id for your store.
 * Measure traffic. 

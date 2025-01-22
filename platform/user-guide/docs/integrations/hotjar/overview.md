@@ -1,6 +1,6 @@
 # Overview
 
-The Hotjar module allows you to assign Hotjar Site Id for your Store. It gets insights about the shopping behaviour of your customers from:
+The Hotjar module allows you to assign Hotjar Site Id for your Store. It gets insights about the shopping behavior of your customers from:
 
 * Heatmaps. 
 * Recordings.

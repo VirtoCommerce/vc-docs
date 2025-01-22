@@ -1,6 +1,6 @@
 # Manage Dynamic Content Items
 
-Managing synamic content items includes:
+Managing dynamic content items includes:
 
 * [Creating contact items.](managing-content-items.md#creating-content-items)
 * [Editing contact items.](managing-content-items.md#editing-and-deleting-content-items)

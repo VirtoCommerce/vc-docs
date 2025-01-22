@@ -1,6 +1,6 @@
 # Settings
 
-To configure the **Shippping** module settings:
+To configure the **Shipping** module settings:
 
 1. In the main menu, click **Stores**.
 1. In the next blade, select the required store.

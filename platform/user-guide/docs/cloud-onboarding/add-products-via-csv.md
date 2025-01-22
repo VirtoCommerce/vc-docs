@@ -71,7 +71,7 @@ To import your CSV to your catalog:
 1. Click **Import** in the top toolbar.
 1. In the next blade, click **VirtoCommerce CSV import**.
 1. In the next blade: 
-    1. Select **Comma** as a delimeter from the dropdown list.
+    1. Select **Comma** as a delimiter from the dropdown list.
     1. Upload your CSV file.
     1. Click **Map columns**.
 1. In the next blade, check that the product properties are correctly mapped to the CSV columns. Click **OK**.

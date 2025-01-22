@@ -16,5 +16,5 @@ The White Labeling module enables organizations to enhance the enterprise user e
 
 The diagram below illustrates the functionality of the White Labeling module:
 
-![Key entitites](media/key-entities.png)
+![Key entities](media/key-entities.png)
 

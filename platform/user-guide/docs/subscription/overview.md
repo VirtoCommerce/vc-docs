@@ -27,9 +27,9 @@ Click on the required subscription to edit it:
 To view the created subscriptions by the order for which they were created:
 
 1. Click **Orders** in the main menu.
-1. In the next blade, select the requried order.
+1. In the next blade, select the required order.
 1. In the next blade, the subscriptions widget displays the subscriptions available for this order.
 
-    ![Subscrptions widget](media/subscriptions-widget.png)
+    ![Subscriptions widget](media/subscriptions-widget.png)
 
 1. Click on the widget to edit the subscription.

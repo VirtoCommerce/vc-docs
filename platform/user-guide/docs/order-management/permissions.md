@@ -4,7 +4,7 @@ To maintain data security and privacy, specify what actions, such as reading, wr
 
 The pre-defined order-related permissions are:
 
-| Permission               	| Descrpiption               	|
+| Permission               	| Description               	|
 |------------------------	|----------------------------	|
 | order:read             	| View order related data.   	|
 | order:create           	| Create order related data. 	|

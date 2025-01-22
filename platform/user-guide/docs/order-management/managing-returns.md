@@ -21,7 +21,7 @@ To create a return for a particular order:
 
     ![Return specification](media/make-return-2.png)
 
-1. Сlick **Save** in the toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 The return has been created.
 

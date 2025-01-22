@@ -1,6 +1,6 @@
 # Use Tasks Application
 
-To start using the Tasks application, сlick  ![Apps-menu](media/app-menu.png){: width="25" height="25"}  to open the applications menu.
+To start using the Tasks application, click  ![Apps-menu](media/app-menu.png){: width="25" height="25"}  to open the applications menu.
 
 * **My tasks** opens the user's active and completed tasks.
 * **All tasks** opens all currently active tasks.
@@ -33,7 +33,7 @@ To create a new task:
 
 1. Click ![Save](media/save.png){: width="30" height="30"} to save changes.
 
-The assignee recieves an email notification of the assigned task.
+The assignee receives an email notification of the assigned task.
 
 ![Notification](media/notification.png)
 

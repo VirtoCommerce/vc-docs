@@ -47,7 +47,7 @@ Your message has been sent to the selected recipients:
 
 To create and send multiple copies of the same message without having to manually recreate the content each time, use the clone message feature:
 
-1. Complete steps 1-4 of the menaging push messages instruction above.
+1. Complete steps 1-4 of the managing push messages instruction above.
 1. In the **Push messages** blade, select the message you want to clone from the messages list. In will open in the next blade.
 1. In the **Push message details** blade, click **Clone** in the top toolbar. The cloned message opens in the same blade.
 

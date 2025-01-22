@@ -23,7 +23,7 @@ The personal data have been anonymized to comply with the customer's request in 
 ![Anonymized data](media/anonymized-data.png)
 
 !!! note 
-	While the customer's login and email will appear as a GUID once anonymized, their address and other personal data will only appear as **Anonymized**. This is because both login and email must still have valid values to store order data, even after anonymization.
+	While the customer's login and email will appear as a GUID once anonymized, their address and other personal data will only appear as **Anonymized**. This is because both login and email must still have valid values to store order data, even after anonymizing.
 
 ## Download personal data
 
