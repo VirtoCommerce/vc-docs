@@ -1,25 +1,6 @@
 # Import Catalog
 
-With the Virto Commerce Import Catalog module, users can import their catalogs in CSV format.
-
 !!! note
-    Importing catalogs requires preinstalled [Catalog CSV Import module](../../../user-guide/catalog-csv-import/overview).
+    Importing catalogs requires preinstalled [Catalog CSV Export and Import module](https://github.com/VirtoCommerce/vc-module-catalog-csv-export-import/releases).
 
-To import your catalog in CSV format:
-
-1. Go to **Catalog** --> Your catalog.
-1. Click **Import** in the top toolbar.
-1. In the next blade, click **VirtoCommerce CSV import**.
-
-    ![Add CSV](media/add-csv0.png)
-
-1. In the next blade: 
-    1. Select **Comma** as a delimiter from the dropdown list.
-    1. Upload your CSV file.
-    1. Click **Map columns**.
-1. In the next blade, customize the mapping of your product properties to the default properties defined in the application, ensuring they are appropriately stored in the database. Click **OK**.
-1. In the **Import catalog from csv** blade, click **Start import**.
-
-![CSV upload](media/add-csv1.png){: width="600"}
-
-The catalog has been imported.
+![Readmore](media/readmore.png){: width="25"} [Importing catalogs](../catalog-csv-export-import/import-catalog.md)

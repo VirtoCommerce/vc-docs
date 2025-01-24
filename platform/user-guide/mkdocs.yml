@@ -152,9 +152,11 @@ nav:
                 - Catalog Publishing:
                       - Overview: catalog-publishing/overview.md
                       - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
-                - Catalog CSV Import:
-                      - Overview: catalog-csv-import/overview.md
-                      - Settings: catalog-csv-import/settings.md
+                - Catalog CSV Export and Import:
+                      - Overview: catalog-csv-export-import/overview.md
+                      - Importing catalog: catalog-csv-export-import/import-catalog.md
+                      - Exporting catalog: catalog-csv-export-import/export-catalog.md
+                      - Settings: catalog-csv-export-import/settings.md
           - Contracts:
                 - Overview: contracts/overview.md
                 - Managing contracts: contracts/creating-and-terminating-contracts.md

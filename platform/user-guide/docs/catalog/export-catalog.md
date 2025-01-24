@@ -9,21 +9,9 @@ With the Virto Commerce export feature, users can efficiently extract and save c
 * Customization and localization.
 
 !!! note
-    Exporting catalogs requires preinstalled [Generic Export module](../generic-export/overview.md).
+    Exporting catalogs requires preinstalled [Catalog CSV Export and Import module](../catalog-csv-export-import/overview.md) or [Export](../generic-export/overview.md) module.
 
-To export catalog:
+![Readmore](media/readmore.png){: width="25"} [Exporting catalogs via CSV module](../catalog-csv-export-import/export-catalog.md)
 
-1. Click **Catalog** in the main menu.
-1. In the next blade, select the required catalog.
-1. In the next blade, check the categories and items to export.
-1. Click **Export** in the top toolbar.
-1. In the next blade, select:
-    * **Generic Export** to [export products filtered by catalogs or categories to JSON or CSV](../generic-export/exporting-data.md).
-    * **VirtoCommerce CSV Export** to export data to CSV using native VirtoCommerce feature.
+![Readmore](media/readmore.png){: width="25"} [Exporting catalogs via Export module](../generic-export/overview.md)
 
-    ![Export catalog](media/export-catalog.png)
-
-1. Fill in the required fields according to the instructions.
-1. Click the download URL after the export is complete.
-
-The exported catalog has been downloaded.
