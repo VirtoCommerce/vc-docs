@@ -318,6 +318,28 @@ This node configures default store settings and domain assignments in the Virto 
 }
 ```
 
+#### Videos
+
+This node configures the integration settings for accessing video-related services via the Google API.
+
+| Node         | Default or sample value | Description                                                                 |
+|--------------|--------------------------|-----------------------------------------------------------------------------|
+| GoogleApiKey | YOUR_GOOGLE_API_KEY      | Specifies the API key required to authenticate requests to Google video services. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "Videos": {
+      "GoogleApiKey": "YOUR_GOOGLE_API_KEY"
+    }
+  }
+}
+```
+
+![Readmore](media/readmore.png){: width="25"}  [YouTube Data API Overview](https://developers.google.com/youtube/v3/getting-started)
+
 ### AI Document Processing  
 
 This node configures AI-based document processing services and file upload settings in the application.  
@@ -410,7 +432,7 @@ This **required** node determines how VC Platform will be working with assets, i
 
 ### Auth
 
-This setting determines platfom authentication parameters.
+This setting determines platform authentication parameters.
 
 | Node                   | Default or sample value              | Description                                                                                                                           |
 | ---------------------- | ---------------------------------    | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -666,7 +688,7 @@ This node manages caching configuration.
 | Node                      | Default or sample value                   | Description  |
 | ------------------------- | ----------------------------------------- | ------------ |
 | Redis                     |                                           | Redis configuration. Includes the message channel to use and the number of retries. |
-| CacheEnabled              | true<br>false                             | Cache entries are retained based on the expiration settingsб if **true**.<br>Disables caching of application data for the entire application, if **false**.<br> Used when **ConnectionStrings:RedisConnectionString** is not specified. |
+| CacheEnabled              | true<br>false                             | Cache entries are retained based on the expiration settings, if **true**.<br>Disables caching of application data for the entire application, if **false**.<br> Used when **ConnectionStrings:RedisConnectionString** is not specified. |
 | CacheSlidingExpiration    | "0:15:00"                                 | The cache entry will expire if it is not accessed for a specified amount of time.<br>Used when **CacheAbsoluteExpiration** is not defined.|
 | CacheAbsoluteExpiration   | "0:5:00"                                  | The cache entry will expire after a specified amount of time. <br>Used when **RedisConnectionString** is not specified.|
 
