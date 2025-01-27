@@ -36,7 +36,7 @@ extra:
                   link: developer-guide/Getting-Started/Installation-Guide/windows
                 - title: Architecture Overview
                   link: developer-guide/Back-End-Architecture/02-conceptual-overview
-                - title: Extensibiliity
+                - title: Extensibility
                   link: developer-guide/Extensibility/overview
                 - title: Configuration reference
                   link: developer-guide/Configuration-Reference/appsettingsjson

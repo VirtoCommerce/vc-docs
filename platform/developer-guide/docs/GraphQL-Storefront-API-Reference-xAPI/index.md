@@ -2,7 +2,7 @@
 
 The main function of the **Experience API (xAPI)** module is to serve as a middle layer connecting clients and enterprise services using the GraphQL protocol. 
 
-It is closely associated with a particular user or touchpoint experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
+It is closely associated with a particular user or touch point experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-api/)
 
@@ -40,7 +40,7 @@ Our instruction provides Virto Commerce related guidelines.
     | Show first 2 products from the list | ![first-products](media/first-products-query.png)             | ![first-products](media/first-products-return.png) |
 
 
-## Key сoncepts
+## Key concepts
 
 * Utilize GraphQL protocol for precise and flexible data retrieval control from the API.
 * Achieve fast and dependable indexed search through integration with:

@@ -148,9 +148,19 @@ Deploying on a local machine includes:
 
 Before installing the Frontend Application:
 
-1. Install [Node.js v20 (20.11.0 or higher).](https://nodejs.org/en/download/)
-1. [Install Platform latest version](../../../platform/developer-guide/Getting-Started/Installation-Guide/windows) or connect to an instance of the platform that is already set up and running on a cloud service.  
-1. Enable [corepack](https://yarnpkg.com/corepack)  and run as administrator on Windows:
+1. [Install Platform latest version](../../../platform/developer-guide/Getting-Started/Installation-Guide/windows) or connect to an instance of the platform that is already set up and running on a cloud service.
+1. Install [Experience API/xAPI modules](../../../platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/index):
+    * [xAPI](https://github.com/VirtoCommerce/vc-module-x-api)
+    * [Profile Experience API](https://github.com/VirtoCommerce/vc-module-profile-experience-api)
+1. Install the following modules for development (but not in production. This will be changed soon):
+
+    * [File experience API](https://github.com/VirtoCommerce/vc-module-file-experience-api)
+    * [Push messages](https://github.com/VirtoCommerce/vc-module-push-messages)
+    * [Skyflow](https://github.com/VirtoCommerce/vc-module-skyflow)
+    * [xRecommend](https://github.com/VirtoCommerce/vc-module-x-recommend)
+
+1. Install [Node.js v22 (22.10.0 or higher).](https://nodejs.org/en/download/)
+1. Enable [corepack](https://yarnpkg.com/corepack) (run as administrator on Windows):
 
    ```bash
    corepack enable
@@ -233,12 +243,6 @@ Choose the appropriate build command based on your needs:
     yarn build:watch
     ```
 
-* Create an artifact to install from the built code:
-
-    ```bash
-    yarn compress
-    ```
-
 
 ## Types generation
 
@@ -248,12 +252,7 @@ To keep your project aligned with the GraphQL server, you need to generate the n
 yarn generate:graphql
 ```
 
-This command performs two key steps:
-
-1. It downloads the **schema.json** file from the GraphQL server located at the `APP_BACKEND_URL`.
-1. It generates the **types.ts** file for both general and independent modules.
-
-Even if independent modules are not installed on the platform, the types can still be generated safely.
+This command generates the **types.ts** file for the **Core App** and independent modules. Even if independent modules are not installed on the platform, the types can still be generated safely.
 
 ## Dependency analysis
 
@@ -285,6 +284,39 @@ yarn generate:dependency-graph
     ```
 
 The generated graph will be saved in the **artifacts** folder for your review.
+
+
+## Localization
+
+Below are the steps to check and fix missing locale keys.
+
+### Check for missing locale keys
+
+To ensure that all locale files have consistent keys across different languages and avoid missing translations, run:
+
+
+```bash
+yarn check-locales -- path/to/locales_folder path/to/**/locales
+```
+
+The script outputs warnings for any missing keys in the locale files. Review these warnings to ensure all necessary translations are present. This check is also integrated into the CI pipeline to automate the validation process.
+
+### Fix missing locales
+
+To automatically fix missing translations in the locale files using AI translation, run.
+
+```bash
+yarn fix-locales -- path/to/locales_folder path/to/**/locales
+```
+
+This command analyzes all locale files, identifies missing keys, translates the missing content from the source language to the target language, and updates the locale files accordingly.
+
+!!! note
+    This command requires the `APP_GEMINI_API_KEY` environment variable to be set. You can obtain this API key from the [Google AI Studio](https://aistudio.google.com/app/apikey) website.
+
+!!! warning
+    This is an experimental feature and may not work as expected.
+
 
 ### Troubleshooting
 

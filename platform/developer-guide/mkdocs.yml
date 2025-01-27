@@ -160,8 +160,9 @@ nav:
     - GraphQL Storefront API Reference (xAPI):
           - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
           - Getting Started: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
+          - Update xAPI Modules Guide: GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules.md
           - Tools to Explore GraphQL:
-                - Playground: GraphQL-Storefront-API-Reference-xAPI/playground.md
+                - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
           - Cart:
