@@ -30,3 +30,6 @@ Here you can:
 
 * Print your order information.
 * Pay for the order in case of **Payment required** status.
+* Re-order all items from the completed orders:
+
+    ![Reorder all](../media/reorder-all.gif)
