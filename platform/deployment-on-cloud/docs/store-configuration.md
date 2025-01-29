@@ -56,7 +56,7 @@ The fixed tax rate has been saved.
 
 ## Set up payment methods
 
-You can configure payment methods as described in [this guide](../payment/managing-payment-methods.md#edit-payment-methods).
+You can configure payment methods as described in [this guide](../../user-guide/payment/managing-payment-methods#edit-payment-methods).
 
 !!! note
     You can specify the payment method logo URL (**Payment methods widget** --> The required payment method) in the following format **/static/icons/payment-methods/credit-card.svg**.

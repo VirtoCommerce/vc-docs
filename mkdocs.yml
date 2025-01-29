@@ -305,7 +305,7 @@ nav:
     - Platform:
         - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
         - User Guide: '!include ./platform/user-guide/mkdocs.yml'
-
+        - Deployment on Cloud: '!include ./platform/deployment-on-cloud/mkdocs.yml'
 
 extra:
     homepage: /

@@ -19,17 +19,6 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
-    - Virto Cloud Onboarding:
-          - Deploy Platform and Frontend on Virto Cloud: cloud-onboarding/deploy-on-virto-cloud.md
-          - Create Environment via CLI and VC Build: cloud-onboarding/create-environment-via-cli-and-vc-build.md
-          - Create Catalog: cloud-onboarding/catalog-creation.md
-          - Create Catalog via CSV: cloud-onboarding/add-products-via-csv.md
-          - Configure Store: cloud-onboarding/store-configuration.md
-          - Set up Main Menu: cloud-onboarding/main-menu-setup.md
-          - Set up Footer: cloud-onboarding/footer-creation.md
-          - Brand Store: cloud-onboarding/store-branding.md
-          - Create Pages in Builder.io: cloud-onboarding/create-page-in-builder-io.md
-          - Enable GitOps: cloud-onboarding/enable-gitops.md
     - User Manual: 
           - General Guidelines: general-guidelines.md
           - User Profile: user-profile.md

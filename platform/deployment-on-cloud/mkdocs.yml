@@ -1,0 +1,31 @@
+INHERIT: ../../mkdocs.yml
+theme:
+    custom_dir: ../../overrides
+    hide: false
+
+# Project information
+extra_site_name: Deployment on Virto Cloud
+site_name: platform/deployment-on-cloud
+site_description: Documentation portal for Virto Commerce, an enterprise-level Microsoft .NET ecommerce platform.
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/platform/deployment-on-cloud
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+
+# Page tree
+nav:
+    - Overview: index.md
+    - Deploy Platform and Frontend on Virto Cloud: deploy-on-virto-cloud.md
+    - Create Environment via CLI and VC Build: create-environment-via-cli-and-vc-build.md
+    - Create Catalog: catalog-creation.md
+    - Create Catalog via CSV: add-products-via-csv.md
+    - Configure Store: store-configuration.md
+    - Set up Main Menu: main-menu-setup.md
+    - Set up Footer: footer-creation.md
+    - Brand Store: store-branding.md
+    - Create Pages in Builder.io: create-page-in-builder-io.md
+    - Enable GitOps: enable-gitops.md

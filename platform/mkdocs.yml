@@ -28,6 +28,8 @@ extra:
                   link: user-guide
                 - title: Versions
                   link: user-guide/versions/virto3-products-versions
+                - title: Deployment of Environments on Virto Cloud
+                  link: deployment-on-cloud/deploy-on-virto-cloud
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
               link: developer-guide
