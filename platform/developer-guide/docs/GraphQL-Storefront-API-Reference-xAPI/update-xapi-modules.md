@@ -40,9 +40,8 @@ The script scans all `.csproj` files in the solution directory, identifies packa
 ```powershell
 # Define the hashtable with package partial names and new versions
 $hash = @{
-    'VirtoCommerce.Xapi' = '3.900.0'
+    'VirtoCommerce.Xapi' = '3.901.0'
     'VirtoCommerce.XCatalog' = '3.900.0'
-    'VirtoCommerce.XCore' = '3.900.0'
     'VirtoCommerce.XCart' = '3.900.0'
     'VirtoCommerce.XOrder' = '3.900.0'
     'VirtoCommerce.XCMS' = '3.900.0'

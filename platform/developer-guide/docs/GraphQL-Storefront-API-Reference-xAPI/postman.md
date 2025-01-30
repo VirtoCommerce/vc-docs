@@ -1,4 +1,4 @@
-# GraphQL API call from Postman
+# GraphQL API call from Postman [In Progress]
 Many developers use both Postman and GraphiQL to work with GraphQL based on the specific tasks they need to accomplish. Postman provides a wide range of tools for creating, sending, and tracking requests to APIs. Postman allows you to create collections of requests, automate API testing, set up environments, work with variables, create scripts for more complex tests. This guide explains how to make GraphQL API calls using Postman. 
 
 Our instruction contains fundamental guidelines. For more information, refer to the extensive [Postman guide](https://learning.postman.com/docs/introduction/overview/). 
@@ -12,12 +12,81 @@ To explore GraphQL via Postman:
 1. [Build queries and mutations.](#build-queries-and-mutations)
 1. [Use variables.](#use-variables)
 
-## Import GraphQL schemas from GraphiQL
+## Import GraphQL schemas from GraphiQL [In progress]
 
 Importing schemas is the crucial initial step to begin working with Postman for GraphQL. To import schemas:
 
-1. Open [GraphiQL](graphiql.md) and run [IntrospectionQuery](https://gist.github.com/martinheld/9fe32b7e2c8fd932599d36e921a2a825).
-1. Copy the returned content from the left panel to clipboard.
+1. Open [GraphiQL](graphiql.md) and run the IntrospectionQuery:
+
+    ??? IntrospectionQuery
+        
+        ```
+        {
+        __schema {
+            queryType {
+              name
+              fields {
+                name
+                description
+                args {
+                  name
+                  description
+                  type {
+                    name
+                    kind
+                  }
+                }
+                type {
+                  name
+                  kind
+                  }
+                }
+            }
+            mutationType {
+              name
+              fields {
+                name
+                description
+                args {
+                  name
+                  description
+                  type {
+                    name
+                    kind
+                  }
+                }
+                type {
+                  name
+                  kind
+                }
+              }
+            }
+            types {
+              name
+              kind
+              description
+              fields {
+                name
+                description
+                type {
+                  name
+                  kind
+                }
+                args {
+                  name
+                  description
+                  type {
+                    name
+                    kind
+                  }
+                }
+              }
+            }
+          }
+        }
+        ```
+
+1. Copy the returned content from the right panel to clipboard.
 1. Open Postman, either using the desktop application or the web version. 
 1. In Postman, go to the **APIs** tab in the sidebar. Click **Create an API** or ![plus](media/plus.png){: width="20"} to add a new API. If necessary, rename your API.
 1. In the API setup, look for the **Definition** segment and click ![plus](media/plus.png){: width="20"}.
@@ -25,8 +94,6 @@ Importing schemas is the crucial initial step to begin working with Postman for 
 1. In the subsequent dropdown lists, set **GraphQL** as the **Definition type** and **GraphQL SDL** as the **Definition format**.
 1. Click **Create definition**.
 1. Paste the content you copied from GraphiQL into the main field and click **Save**.
-
-    ![schema](media/Import-Schema-to-Postman.gif)
 
 !!! note
     Postman cannot update your schema automatically. You have to update it manually on a regular basis.
