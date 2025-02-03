@@ -1,4 +1,4 @@
-# GraphQL API call from Postman [In Progress]
+# GraphQL API call from Postman
 Many developers use both Postman and GraphiQL to work with GraphQL based on the specific tasks they need to accomplish. Postman provides a wide range of tools for creating, sending, and tracking requests to APIs. Postman allows you to create collections of requests, automate API testing, set up environments, work with variables, create scripts for more complex tests. This guide explains how to make GraphQL API calls using Postman. 
 
 Our instruction contains fundamental guidelines. For more information, refer to the extensive [Postman guide](https://learning.postman.com/docs/introduction/overview/). 
@@ -12,88 +12,16 @@ To explore GraphQL via Postman:
 1. [Build queries and mutations.](#build-queries-and-mutations)
 1. [Use variables.](#use-variables)
 
-## Import GraphQL schemas from GraphiQL [In progress]
+## Import GraphQL schemas from GraphiQL
 
 Importing schemas is the crucial initial step to begin working with Postman for GraphQL. To import schemas:
 
-1. Open [GraphiQL](graphiql.md) and run the IntrospectionQuery:
+1. Open Postman and create a new **Graphql Request**.
+1. Enter URL to import GraphQL schema from. 
 
-    ??? IntrospectionQuery
-        
-        ```
-        {
-        __schema {
-            queryType {
-              name
-              fields {
-                name
-                description
-                args {
-                  name
-                  description
-                  type {
-                    name
-                    kind
-                  }
-                }
-                type {
-                  name
-                  kind
-                  }
-                }
-            }
-            mutationType {
-              name
-              fields {
-                name
-                description
-                args {
-                  name
-                  description
-                  type {
-                    name
-                    kind
-                  }
-                }
-                type {
-                  name
-                  kind
-                }
-              }
-            }
-            types {
-              name
-              kind
-              description
-              fields {
-                name
-                description
-                type {
-                  name
-                  kind
-                }
-                args {
-                  name
-                  description
-                  type {
-                    name
-                    kind
-                  }
-                }
-              }
-            }
-          }
-        }
-        ```
+The schema will be imported in a couple of seconds. In the **Schema** tab, you can refresh your schema at any time.
 
-1. Copy the returned content from the right panel to clipboard.
-1. Open Postman, either using the desktop application or the web version. 
-1. In Postman, go to the **APIs** tab in the sidebar. Click **Create an API** or ![plus](media/plus.png){: width="20"} to add a new API. If necessary, rename your API.
-1. In the API setup, look for the **Definition** segment and click ![plus](media/plus.png){: width="20"}.
-1. From the dropdown list that appears, select **Author from scratch**.
-1. In the subsequent dropdown lists, set **GraphQL** as the **Definition type** and **GraphQL SDL** as the **Definition format**.
-1. Click **Create definition**.
-1. Paste the content you copied from GraphiQL into the main field and click **Save**.
+![Import schema](media/import-schema-from-graphiql.gif)
 
 !!! note
     Postman cannot update your schema automatically. You have to update it manually on a regular basis.
@@ -107,10 +35,8 @@ Collections are sets of requests grouped together for organized and streamlined 
 1. From the dropdown list, select **Add new collection**.
 1. Name your collection in the provided field.
 1. Click **Generate Collection**.
-
-![collection](media/Create-collection.gif)    
-
-The list of available queries and mutations appeares in the menu.
+ 
+The list of available queries and mutations appears in the menu.
 
 ## Create environment
 
@@ -122,7 +48,7 @@ Environments are predefined sets of variables that allow you to configure and sw
 1. Copy address from GraphiQL and paste it as initial value.
 1. In the APIs tab, select your newly created environment from the dropdown list.
 
-![environment](media/create-environment.gif)
+![environment](media/create-new-environment.gif)
 
 **Example**
 
@@ -237,115 +163,56 @@ Now all the queries and mutations can use this token.
     In the **Authorization** tab, check that the variables are inherited from parent.
 
 
-## Build queries and mutations
+## Build queries
 
-You can use Postman to build queries and mutations:
+In the **Query** tab, let's build a query asking for the total number of products from the **B2B-store** that contain the word **bolt** in their names or descriptions.
 
-1. In the top toolbar, click **New** to create a new request.
-1. Select **GraphQL** in the next window.
-1. Click **Use a GraphQL API** in the query tab. Then select your API from the dropdown list.
-1. Enter **{{url}}** in the URL bar.
-1. Now you can build queries and mutations in the **Query** tab.
+1. Check **Products** query in the list of queries and mutations. 
+1. Fill in the required fields that are checked automatically (i.e. **B2B-Store**).
+1. Add **query** field to narrow down the results. Fill it in with **bolt**.
+1. Click **Query** in the top right corner.
 
-    ![build-queries](media/build-query.gif)
+There are 26 products in B2B-store that contain the term "bolt" in their names or descriptions.
 
+![query bolts](media/query-bolts.gif)
 
-??? Example "Example query"
-    Let's build a query asking for the total number of products and categories from the "B2B-store" that contain the word "bolt" in their names or descriptions.
+## Build mutations
 
-    1. Check **Products** and **Categories** queries in the list of queries and mutations. 
-    1. Fill in the required fields that are checked automatically (i.e. **B2B-Store**).
-    1. Add **query** field to narrow the results. Fill it in with **bolt**.
-    1. Click **Query**.
+In the **Query** tab, let's build a [requestRegistration](Profile/Mutations/requestRegistration.md) mutation to register a **test_organization_name** company and its user named **Test First Name Test Last Name**. 
 
-    There are 93 products and 32 categories in B2B-store that contain the term "bolt" in their names or descriptions.
+1. Click **requestRegistration** and fill in the following fields:
 
-    ![query bolts](media/query-bolts.gif)
+    ![mutation](media/requestRegistration.png)
 
+1. The resulting mutation looks as follows:
 
-??? Example "Example mutation"
-    Let's build a [requestRegistration](Profile/Mutations/requestRegistration.md) mutation to register **test_organization_name** company and its user named **Test First Name Test Last Name**. 
-
-    1. Click **requestRegistration** and fill in the following fields:
-
-        ![mutation](media/requestRegistration.png)
-
-    1. The resulting query looks as follows:
-
-        ```json
-        mutation RequestRegistration {
-            requestRegistration(
-                command: {
-                    organization: { name: "test_organization_name" }
-                    contact: { firstName: "Test First Name", lastName: "Test Last Name" }
-                    account: {
-                        username: "test@test.com"
-                        email: "test@test.com"
-                        password: "testPasword"
-                    }
-                    storeId: "B2B-store"
+    ```json
+    mutation RequestRegistration {
+        requestRegistration(
+            command: {
+                organization: { name: "test_organization_name" }
+                contact: { firstName: "Test First Name", lastName: "Test Last Name" }
+                account: {
+                    username: "test@test.com"
+                    email: "test@test.com"
+                    password: "testPassword"
                 }
-            ) {
-                organization {
-                    id
-                    name
-                    description
-                    status
-                    createdBy
-                    ownerId
-                }
-                contact {
-                    id
-                    firstName
-                    lastName
-                    middleName
-                    phoneNumber
-                    birthdate
-                    status
-                    createdBy
-                    about
-                    address {
-                        id
-                        key
-                        isDefault
-                        city
-                        countryCode
-                        countryName
-                        email
-                        firstName
-                        middleName
-                        lastName
-                        line1
-                        line2
-                        name
-                        organization
-                        phone
-                        postalCode
-                        regionId
-                        regionName
-                        zip
-                        outerId
-                        description
-                        addressType
-                    }
-                }
-                result {
-                    succeeded
-                    requireEmailVerification
-                    errors {
-                        code
-                        description
-                        parameter
-                    }
-                }
+                storeId: "B2B-Store"
+            }
+        ) {
+            result {
+                succeeded
+                requireEmailVerification
             }
         }
-        ```
-    1. Click **Query** to execute the mutation.
-    1. To check the result, open Platform and click **Contacts** in the main menu.
-    1. The **Test organization name** company has been successfully created with the user **Test first name Test last name**.
+    }
+    ```
 
-    ![requestRegistration](media/requestRegistration.gif)
+1. Click **Query** to execute the mutation.
+1. To check the result, open the Platform and click **Contacts** in the main menu.
+1. The **Test organization name** company has been successfully created with the user **Test first name Test last name**.
+
+    ![requestRegistration](media/requestRegistration_mutation.png)
 
 ## Preset variables
 
