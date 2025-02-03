@@ -337,70 +337,63 @@ extra:
           url: https://www.virtocommerce.org/c/news-digest/
     main_page:
         release_notes:
-            - title: News Digest January 2025
+            - title: February 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-february-2025/760
+              type: Release Notes
+              date: 3 February 2025
+            - title: January 2025
               link: https://www.virtocommerce.org/t/virto-s-release-notes-january-2025/755
-              type: Digest
+              type: Release Notes
               date: 1 January 2025
-            - title: News Digest December 2024
+            - title: December 2024
               link: https://www.virtocommerce.org/t/virtos-release-notes-december-2024/747
-              type: Digest
+              type: Release Notes
               date: 3 December 2024
-            - title: News Digest November 2024
+            - title: November 2024
               link: https://www.virtocommerce.org/t/november-2024-news-digest/743
-              type: Digest
+              type: Release Notes
               date: 1 November 2024
-            - title: News Digest October 2024
+            - title: October 2024
               link: https://www.virtocommerce.org/t/october-2024-news-digest/734
-              type: Digest
+              type: Release Notes
               date: 1 October 2024
-            - title: News Digest September 2024
+            - title: September 2024
               link: https://www.virtocommerce.org/t/september-2024-news-digest/730
-              type: Digest
+              type: Release Notes
               date: 9 September 2024
-            - title: News Digest August 2024
+            - title: August 2024
               link: https://www.virtocommerce.org/t/august-2024-new-digest/719
-              type: Digest
+              type: Release Notes
               date: 1 August 2024
-            - title: News Digest July 2024
+            - title: July 2024
               link: https://www.virtocommerce.org/t/july-2024-news-digest/713
-              type: Digest
+              type: Release Notes
               date: 1 July 2024
-            - title: News Digest June 2024
+            - title: June 2024
               link: https://www.virtocommerce.org/t/june-2024-news-digest/702
-              type: Digest
+              type: Release Notes
               date: 1 June 2024
-            - title: News Digest May 2024
+            - title: May 2024
               link: https://www.virtocommerce.org/t/may-2024-news-digest/699
-              type: Digest
+              type: Release Notes
               date: 2 May 2024
-            - title: News Digest April 2024
+            - title: April 2024
               link: https://www.virtocommerce.org/t/april-2024-news-digest/689
-              type: Digest
+              type: Release Notes
               date: 3 April 2024
-            - title: News Digest March 2024
+            - title: March 2024
               link: https://www.virtocommerce.org/t/march-2024-news-digest/681
-              type: Digest
+              type: Release Notes
               date: 5 March 2024
-            - title: News Digest February 2024
+            - title: February 2024
               link: https://www.virtocommerce.org/t/february-2024-news-digest/673
-              type: Digest
+              type: Release Notes
               date: 7 February 2024
-            - title: News Digest January 2024
+            - title: January 2024
               link: https://www.virtocommerce.org/t/news-digest-january-2024/663
-              type: Digest
+              type: Release Notes
               date: 8 January 2024
-            - title: News Digest December 2023
-              link: https://www.virtocommerce.org/t/news-digest-december-2023/651
-              type: Digest
-              date: 5 December 2023
-            - title: News Digest November 2023
-              link: https://www.virtocommerce.org/t/news-digest-november-2023/644
-              type: Digest
-              date: 1 November 2023
-            - title: News Digest October 2023
-              link: https://www.virtocommerce.org/t/news-digest-october-2023/631
-              type: Digest
-              date: 3 October 2023
+
         top_cards:
             # -   title: Architect
             #     icon: assets/icons/package.svg
