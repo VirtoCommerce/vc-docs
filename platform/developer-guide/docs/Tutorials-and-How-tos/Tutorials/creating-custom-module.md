@@ -552,3 +552,6 @@ The module package can be uploaded and installed to the Virto Commerce Platform.
 If the module is installed properly, you will see the new module in the list of the installed modules, in the Admin UI, and in the Swagger API:
 
 ![Admin UI module view](media/05-admin-ui.png)
+
+![Readmore](media/readmore.png){: width="25"} [Custom modules templates to create pre-configured entities](module-templates-for-dotnet-new.md)
+

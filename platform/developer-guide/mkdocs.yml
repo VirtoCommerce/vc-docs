@@ -36,6 +36,7 @@ nav:
           - Back End Architecture:
                 - Tech Stack: Back-End-Architecture/01-tech-stack.md
                 - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
+          - Modules architecture: Back-End-Architecture/modules-architecture.md
     - CLI tools:
           - Overview: CLI-tools/overview.md
           - Getting Started: CLI-tools/getting-started.md
@@ -611,7 +612,9 @@ nav:
     - Tutorials and How-tos:
           - Overview: Tutorials-and-How-tos/overview.md
           - Tutorials:
-                - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
+                - Creating Custom Module from Template:
+                      - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
+                      - Custom Modules Templates to Create Pre-Configured Entities: Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md 
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Deploy Module from Source Code: Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md
                 - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
@@ -636,7 +639,7 @@ nav:
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md
                 - Sharing Bearer Tokens Across Multiple Instances: Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md
                 - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
-                - Migration to New XAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
+                - Migration to New xAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
     - Releases, Bundles, PBCs. Installation and Updates:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md

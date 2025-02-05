@@ -3,14 +3,13 @@ Many developers use both Postman and GraphiQL to work with GraphQL based on the 
 
 Our instruction contains fundamental guidelines. For more information, refer to the extensive [Postman guide](https://learning.postman.com/docs/introduction/overview/). 
 
-To explore GraphQL via Postman:
+Exploring GraphQL via Postman includes:
 
-1. [Import GraphQL schemas from GraphiQL.](#import-graphql-schemas-from-graphiql)
-1. [Generate collections.](#generate-collection)
-1. [Create environments.](#create-environment)
-1. [Use tokens.](#authorization-and-token-usage)
-1. [Build queries and mutations.](#build-queries-and-mutations)
-1. [Use variables.](#use-variables)
+* [Importing GraphQL schemas from GraphiQL.](#import-graphql-schemas-from-graphiql)
+* [Creating environments.](#create-environment)
+* [Using tokens.](#authorization-and-token-usage)
+* [Building queries](#build-queries) and [mutations.](#build-mutations)
+* [Use variables.](#use-variables)
 
 ## Import GraphQL schemas from GraphiQL
 
@@ -26,17 +25,6 @@ The schema will be imported in a couple of seconds. In the **Schema** tab, you c
 !!! note
     Postman cannot update your schema automatically. You have to update it manually on a regular basis.
 
-## Generate collection
-
-Collections are sets of requests grouped together for organized and streamlined testing and documentation. To generate a collection:
-
-1. Open Postman and navigate to your newly created API.
-1. Look for the **Collections** segment and click ![plus](media/plus.png){: width="20"}. This will open a dropdown list.
-1. From the dropdown list, select **Add new collection**.
-1. Name your collection in the provided field.
-1. Click **Generate Collection**.
- 
-The list of available queries and mutations appears in the menu.
 
 ## Create environment
 

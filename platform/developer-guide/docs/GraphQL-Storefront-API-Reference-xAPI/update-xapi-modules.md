@@ -35,75 +35,165 @@ The script scans all `.csproj` files in the solution directory, identifies packa
 * Run the script in the root directory of the solution.  
 * Have the necessary permissions to modify `.csproj` files.  
 
-#### Script
+#### Scripts
 
-```powershell
-# Define the hashtable with package partial names and new versions
-$hash = @{
-    'VirtoCommerce.Xapi' = '3.901.0'
-    'VirtoCommerce.XCatalog' = '3.900.0'
-    'VirtoCommerce.XCart' = '3.900.0'
-    'VirtoCommerce.XOrder' = '3.900.0'
-    'VirtoCommerce.XCMS' = '3.900.0'
-    'VirtoCommerce.ProfileExperienceApi' = '3.900.0'
-    'VirtoCommerce.FileExperienceApi' = '3.900.0'
-    'VirtoCommerce.MarketingExperienceApi' = '3.900.0'
-    'VirtoCommerce.QuoteModule' = '3.900.0'
-    'VirtoCommerce.PushMessages' = '3.900.0'
-    'VirtoCommerce.TaskManagement' = '3.900.0'
-    'VirtoCommerce.Skyflow' = '3.900.0'
-    'VirtoCommerce.Contracts' = '3.900.0'
-    'VirtoCommerce.CustomerReviews' = '3.900.0'
-    'VirtoCommerce.WhiteLabeling' = '3.900.0'
-    'VirtoCommerce.Recommendations' = '3.900.0'
-}
+=== "Script for Windows"
 
-# Get all .csproj files in the solution root directory and subdirectories
-$solutionRoot = Get-Location
-$csprojFiles = Get-ChildItem -Path $solutionRoot -Recurse -Filter "*.csproj"
-
-foreach ($csprojPath in $csprojFiles) {
-    Write-Host "Processing file: $csprojPath"
-
-    # Load the .csproj file into an XML document
-    [xml]$csprojXml = Get-Content -Path $csprojPath.FullName
-
-    # Namespace manager to handle XML namespaces (if any)
-    $namespaceManager = New-Object System.Xml.XmlNamespaceManager($csprojXml.NameTable)
-    $namespaceManager.AddNamespace("ns", $csprojXml.Project.NamespaceURI)
-
-    # Iterate through each package in the hashtable
-    foreach ($partialName in $hash.Keys) {
-        $newVersion = $hash[$partialName]
-
-        # Find PackageReference elements that match the partial name
-        $packageReferences = $csprojXml.SelectNodes("//ns:PackageReference[contains(@Include, '$partialName')]", $namespaceManager)
-
-        foreach ($packageReference in $packageReferences) {
-            # Update the Version attribute
-            $packageReference.Version = $newVersion
-            Write-Host "Updated $($packageReference.Include) to version $newVersion in file $csprojPath"
-        }
+    ```powershell
+    # Define the hashtable with package partial names and new versions
+    $hash = @{
+        'VirtoCommerce.Xapi' = '3.901.0'
+        'VirtoCommerce.XCatalog' = '3.900.0'
+        'VirtoCommerce.XCart' = '3.900.0'
+        'VirtoCommerce.XOrder' = '3.900.0'
+        'VirtoCommerce.XCMS' = '3.900.0'
+        'VirtoCommerce.ProfileExperienceApi' = '3.900.0'
+        'VirtoCommerce.FileExperienceApi' = '3.900.0'
+        'VirtoCommerce.MarketingExperienceApi' = '3.900.0'
+        'VirtoCommerce.QuoteModule' = '3.900.0'
+        'VirtoCommerce.PushMessages' = '3.900.0'
+        'VirtoCommerce.TaskManagement' = '3.900.0'
+        'VirtoCommerce.Skyflow' = '3.900.0'
+        'VirtoCommerce.Contracts' = '3.900.0'
+        'VirtoCommerce.CustomerReviews' = '3.900.0'
+        'VirtoCommerce.WhiteLabeling' = '3.900.0'
+        'VirtoCommerce.xRecommend' = '3.900.0'
     }
 
-    # Save the modified XML back to the .csproj file
-    $csprojXml.Save($csprojPath.FullName)
-    Write-Host "Updated .csproj file saved at $csprojPath"
-}
-```
+    # Get all .csproj files in the solution root directory and subdirectories
+    $solutionRoot = Get-Location
+    $csprojFiles = Get-ChildItem -Path $solutionRoot -Recurse -Filter "*.csproj"
 
-#### Execution steps  
+    foreach ($csprojPath in $csprojFiles) {
+        Write-Host "Processing file: $csprojPath"
 
-1. Copy the script to a `.ps1` file (e.g., `UpdateXapiModules.ps1`).  
-1. Open PowerShell in the root directory of your solution.  
-1. Execute the script:  
-   ```powershell
-   ./UpdateXapiModules.ps1
-   ```  
-1. Verify that `.csproj` files were updated successfully by checking the updated versions in `PackageReference` entries.  
+        # Load the .csproj file into an XML document
+        [xml]$csprojXml = Get-Content -Path $csprojPath.FullName
+
+        # Namespace manager to handle XML namespaces (if any)
+        $namespaceManager = New-Object System.Xml.XmlNamespaceManager($csprojXml.NameTable)
+        $namespaceManager.AddNamespace("ns", $csprojXml.Project.NamespaceURI)
+
+        # Iterate through each package in the hashtable
+        foreach ($partialName in $hash.Keys) {
+            $newVersion = $hash[$partialName]
+
+            # Find PackageReference elements that match the partial name
+            $packageReferences = $csprojXml.SelectNodes("//ns:PackageReference[contains(@Include, '$partialName')]", $namespaceManager)
+
+            foreach ($packageReference in $packageReferences) {
+                # Update the Version attribute
+                $packageReference.Version = $newVersion
+                Write-Host "Updated $($packageReference.Include) to version $newVersion in file $csprojPath"
+            }
+        }
+
+        # Save the modified XML back to the .csproj file
+        $csprojXml.Save($csprojPath.FullName)
+        Write-Host "Updated .csproj file saved at $csprojPath"
+    }
+    ```
+
+    **Execution steps**  
+
+    1. Copy the script to a `.ps1` file (e.g., `UpdateXapiModules.ps1`).  
+    1. Open PowerShell in the root directory of your solution.  
+    1. Execute the script:  
+    ```powershell
+    ./UpdateXapiModules.ps1
+    ```  
+    1. Verify that `.csproj` files were updated successfully by checking the updated versions in `PackageReference` entries.  
+
+=== "Cross-platform script"
+
+    ```csharp
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Xml;
+
+    // Define dictionary with package partial names and new versions
+    var packageVersions = new Dictionary<string, string>
+    {
+        { "VirtoCommerce.Xapi", "3.901.0" },
+        { "VirtoCommerce.XCatalog", "3.900.0" },
+        { "VirtoCommerce.XCart", "3.900.0" },
+        { "VirtoCommerce.XOrder", "3.900.0" },
+        { "VirtoCommerce.XCMS", "3.900.0" },
+        { "VirtoCommerce.ProfileExperienceApi", "3.900.0" },
+        { "VirtoCommerce.FileExperienceApi", "3.900.0" },
+        { "VirtoCommerce.MarketingExperienceApi", "3.900.0" },
+        { "VirtoCommerce.QuoteModule", "3.900.0" },
+        { "VirtoCommerce.PushMessages", "3.900.0" },
+        { "VirtoCommerce.TaskManagement", "3.900.0" },
+        { "VirtoCommerce.Skyflow", "3.900.0" },
+        { "VirtoCommerce.Contracts", "3.900.0" },
+        { "VirtoCommerce.CustomerReviews", "3.900.0" },
+        { "VirtoCommerce.WhiteLabeling", "3.900.0" },
+        { "VirtoCommerce.xRecommend", "3.900.0" }
+    };
+
+    // Get all .csproj files in the solution root directory and subdirectories
+    var solutionRoot = Directory.GetCurrentDirectory();
+    var csprojFiles = Directory.GetFiles(solutionRoot, "*.csproj", SearchOption.AllDirectories);
+
+    foreach (string csprojPath in csprojFiles)
+    {
+        Console.WriteLine($"Processing file: {csprojPath}");
+
+        // Load the .csproj file into an XML document
+        var csprojXml = new XmlDocument();
+        csprojXml.Load(csprojPath);
+
+        // Namespace manager to handle XML namespaces (if any)
+        var namespaceManager = new XmlNamespaceManager(csprojXml.NameTable);
+        if (csprojXml.DocumentElement?.NamespaceURI != null)
+            namespaceManager.AddNamespace("ns", csprojXml.DocumentElement.NamespaceURI);
+
+        // Iterate through each package in the dictionary
+        foreach (var package in packageVersions)
+        {
+            string partialName = package.Key;
+            string newVersion = package.Value;
+
+            // Find PackageReference elements that match the partial name
+            var packageReferences = csprojXml.SelectNodes($"//ns:PackageReference[contains(@Include, '{partialName}')]", namespaceManager);
+
+            if (packageReferences != null)
+                foreach (XmlNode packageReference in packageReferences)
+                {
+                    // Update the Version attribute
+                    packageReference.Attributes["Version"].Value = newVersion;
+                    Console.WriteLine($"Updated {packageReference["Include"]} to version {newVersion} in file {csprojPath}");
+                }
+        }
+
+        // Save the modified XML back to the .csproj file
+        csprojXml.Save(csprojPath);
+        Console.WriteLine($"Updated .csproj file saved at {csprojPath}");
+    }
+    ```
+
+
+    **Execution Steps**  
+
+    1. Install `dotnet-script` if not already installed:  
+
+    ```sh
+    dotnet tool install -g dotnet-script
+    ```  
+    
+    1. Copy the script to a `.csx` file (e.g., `UpdateXapiModules.csx`).  
+    1. Open a terminal (**Windows**, **macOS**, or **Linux**) in the root directory of your solution.  
+    1. Execute the script:  
+    ```sh
+    dotnet script UpdateXapiModules.csx
+    ```  
+    1. Verify that `.csproj` files were updated successfully by checking the updated versions in `PackageReference` entries.  
 
 
 Now you can proceed with the code-level updates described.
+
 
 ## Initialization changes
 
