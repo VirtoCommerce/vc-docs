@@ -57,7 +57,7 @@ The script scans all `.csproj` files in the solution directory, identifies packa
         'VirtoCommerce.Contracts' = '3.900.0'
         'VirtoCommerce.CustomerReviews' = '3.900.0'
         'VirtoCommerce.WhiteLabeling' = '3.900.0'
-        'VirtoCommerce.xRecommend' = '3.900.0'
+        'VirtoCommerce.XRecommend' = '3.900.0'
     }
 
     # Get all .csproj files in the solution root directory and subdirectories
@@ -130,7 +130,7 @@ The script scans all `.csproj` files in the solution directory, identifies packa
         { "VirtoCommerce.Contracts", "3.900.0" },
         { "VirtoCommerce.CustomerReviews", "3.900.0" },
         { "VirtoCommerce.WhiteLabeling", "3.900.0" },
-        { "VirtoCommerce.xRecommend", "3.900.0" }
+        { "VirtoCommerce.XRecommend", "3.900.0" }
     };
 
     // Get all .csproj files in the solution root directory and subdirectories

@@ -1,4 +1,4 @@
-﻿# Custom Modules Templates to Create Pre-Configured Entities
+﻿# Custom Modules Templates for Dotnet New
 
 In this guide, we will learn how to create own custom module using `dotnet new` templates for Virto Commerce modules. This feature allows you to create a Virto Commerce module with a pre-configured entity, simplifying the development and integration of new components.
 
@@ -11,9 +11,8 @@ In this guide, we will learn how to create own custom module using `dotnet new` 
 
 Using `dotnet new` templates has the following advantages:  
 
-* The generator automatically creates modules with ready-to-use entities, including all necessary methods and properties, reducing the time spent on repetitive tasks.  
+* The generator automatically creates modules structure (vc-module-dba-xapi, vc-module-dba, vc-module-xapi), or creates entities (vc-crud).  
 * `dotnet new` uses predefined templates that generate file structures following Virto Commerce standards. These files can be easily integrated into an existing project.  
-* The generator modifies only the necessary parts of the files, adding new methods and properties. This reduces the risk of errors, simplifies change tracking, and makes integration easier.  
 
 ## Install
 

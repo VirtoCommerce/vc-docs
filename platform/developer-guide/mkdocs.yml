@@ -36,7 +36,7 @@ nav:
           - Back End Architecture:
                 - Tech Stack: Back-End-Architecture/01-tech-stack.md
                 - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
-          - Modules architecture: Back-End-Architecture/modules-architecture.md
+          - Modules architecture: Frontend-architecture/modules-architecture.md
     - CLI tools:
           - Overview: CLI-tools/overview.md
           - Getting Started: CLI-tools/getting-started.md
@@ -614,7 +614,7 @@ nav:
           - Tutorials:
                 - Creating Custom Module from Template:
                       - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
-                      - Custom Modules Templates to Create Pre-Configured Entities: Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md 
+                      - Custom Modules Templates for Dotnet New: Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md 
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Deploy Module from Source Code: Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md
                 - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md

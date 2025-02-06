@@ -1,6 +1,6 @@
 # Modules Architecture
 
-This document provides an overview of the Virto Commerce modules architecture. The modular approach enhances scalability, maintainability, and flexibility, allowing seamless integration of new functionalities.
+This document provides an overview of the Virto Commerce frontend modules architecture. The modular approach enhances scalability, maintainability, and flexibility, allowing seamless integration of new functionalities.
 
 
 ## Key concepts
@@ -98,9 +98,11 @@ your-module/
 Modules can:
 
 * [Introduce their own pages.](#add-pages)
-* [Extend application routing.](#register-routes)
+* [Extend application routing configuration.](#register-routes)
 
 #### Add pages
+
+Place module-specific pages in the **pages/** directory.
 
 ```
 your-module/
@@ -111,19 +113,68 @@ your-module/
 
 #### Register routes
 
-Modules register their routes through an `init` function, typically in **app-runner.ts**.
+Modules register their routes through the **init** function within the module. This function is called during the application's initialization phase, typically in the **app-runner.ts**.
 
-**Example init function**:
+Each module should export an **init** function that accepts the router and other necessary dependencies (e.g., i18n).
 
-```typescript
+```csharp
+// modules/your-module/index.ts
+import { Router } from "vue-router";
+import { I18n } from "@/i18n";
+
+// Define your components
+const YourModulePage = () => import("./pages/YourModulePage.vue");
+// By using () => import('./pages/YourModulePage.vue'), you ensure that Vue Router can handle the component as a lazy-loaded route, which is the intended usage pattern.
+
 export async function init(router: Router, i18n: I18n): Promise<void> {
   const route = {
     path: "/your-module",
     name: "YourModule",
-    component: defineAsyncComponent(() => import("./pages/YourModulePage.vue")),
+    component: YourModulePage,
+    beforeEnter(to: any, from: any, next: Function) {
+      // Add any route guards or logic here
+      next();
+    },
   };
+
   router.addRoute(route);
 }
+```
+
+### Module initialization interface
+
+Each module is initialized and integrated into the main application through an init function. This function is responsible for:
+
+* Adding new routes to the router.
+* Adding new menu items to the navigation.
+* Registering custom components or links to extension points.
+* Loading the locale messages for the module.
+* Configure GraphQL caching policies, etc.
+
+#### Initialization function structure
+
+Each module should export the `init` function with the following signature (additional parameters can be added as needed):
+
+```csharp
+export async function init(router: Router, i18n: I18n): Promise<void> {
+  // Initialization logic here
+}
+```
+
+**Example**
+
+To integrate a module into the main application, you need to import the module's init function and call it within the app's runner. Below is an example of how to do this:
+
+
+```csharp
+// client-app/app-runner.ts
+
+// Import the module's init function
+import { init as initYourModule } from "@/modules/your-module";
+
+...
+
+initYourModule(router, i18n);
 ```
 
 ## Modularity
