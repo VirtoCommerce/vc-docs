@@ -5,7 +5,7 @@ This document provides an overview of the Virto Commerce frontend modules archit
 
 ## Key concepts
 
-The key concept of modules architecture are as follows:
+The key concepts of modules architecture are as follows:
 
 | Concept                   | Description                                                                                       | Role and Dependencies                                                |
 |---------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
