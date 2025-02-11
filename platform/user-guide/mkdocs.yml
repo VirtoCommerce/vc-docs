@@ -133,6 +133,10 @@ nav:
           - Authentication Related Modules:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md
+          - Back in Stock:
+                  - Overview: back-in-stock/overview.md
+                  - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
+                  - Settings: back-in-stock/settings.md
           - Catalog Related Modules:
                 - Catalog Personalization:
                       - Overview: catalog-personalization/overview.md

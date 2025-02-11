@@ -166,6 +166,17 @@ nav:
                 - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
+          - Back-in-Stock: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview.md
+                - Queries:
+                      - backInStockSubscriptions: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Queries/backInStockSubscriptions.md
+                - Objects: 
+                      - BackInStockSubscriptionType: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionType.md
+                      - BackInStockSubscriptionEdge: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionEdge.md
+                      - BackInStockSubscriptionConnection: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionConnection.md
+                - Mutations:
+                      - activateBackInStockSubscription: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/activateBackInStockSubscription.md
+                      - deactivateBackInStockSubscription: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/deactivateBackInStockSubscription.md
           - Cart:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md
                 - Queries:

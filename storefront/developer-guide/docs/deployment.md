@@ -2,16 +2,16 @@
 
 This section provides detailed instructions on how to deploy the new Virto Commerce Frontend Application across various environments. The deployment options available are:
 
-* [Virto Cloud.](deployment.md#deployment-in-virto-cloud)
-* [Azure.](deployment.md#deployment-in-azure-in-progress)
-* [Local Machine.](deployment.md#deployment-on-local-machine)
+* [Virto Cloud.](#deployment-on-virto-cloud)
+* [Azure.](#deployment-on-azure)
+* [Local machine.](#deployment-on-local-machine)
 
 ## Deployment on Virto Cloud
 
 Virto Cloud natively supports the new architecture. Use the following methods to deploy in Virto Cloud:
 
-* [Through configuration files.](deployment.md#through-configuration-file)
-* [Through Virto Cloud portal.](deployment.md#through-virto-cloud-portal)
+* [Through configuration files.](#through-configuration-file)
+* [Through Virto Cloud portal.](#through-virto-cloud-portal)
 
 ### Through configuration file
 
@@ -79,9 +79,9 @@ protectedParameters:
     #- custom.app1.image.tag
 ```
 
-### Through Virto Cloud portal [In Progress]
+### Through Virto Cloud portal 
 
-The detailed instructions will be provided soon.
+You can find detailed instructions [here](../../../platform/deployment-on-cloud/deploy-on-virto-cloud).
 
 ## Deployment on Azure
 

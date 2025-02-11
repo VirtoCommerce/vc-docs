@@ -9,10 +9,9 @@ In this guide, we will learn how to create own custom module using `dotnet new` 
 | [vc-module-xapi](https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-module-xapi-template)         | Creates a new Virto Commerce module with xAPI support. |
 | [vc-crud](https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-crud-template)                       | Creates all the classes needed for CRUD operations. |
 
-Using `dotnet new` templates has the following advantages:  
 
-* The generator automatically creates modules structure (vc-module-dba-xapi, vc-module-dba, vc-module-xapi), or creates entities (vc-crud).  
-* `dotnet new` uses predefined templates that generate file structures following Virto Commerce standards. These files can be easily integrated into an existing project.  
+[![video tutorial](media/video-tutorial-button.png)](https://youtu.be/C77kBhl1At4)
+
 
 ## Install
 
