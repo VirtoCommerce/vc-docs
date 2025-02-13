@@ -105,6 +105,7 @@ nav:
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
                 - Authorize.net: Fundamentals/Payments/authorize-net.md
                 - Skyflow: Fundamentals/Payments/skyflow.md
+                - CyberSource: Fundamentals/Payments/cybersource.md
           - Fulfillment:
                 - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
           - Taxes:

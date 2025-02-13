@@ -24,7 +24,7 @@ To complete your order:
 
     The cart page may also show recently browsed products if this [feature is enabled](../../../../platform/user-guide/recommend/overview#get-started).
 
-    ![Recently browsed products](../media/recently-browsed-products.png){: width="650"}
+    ![Recently browsed products](../media/recently-browsed-products.png){: width="850"}
 
 
 1. Click **Proceed to checkout**.
@@ -50,6 +50,7 @@ To complete your order:
     * Select a payment method from the dropdown list:
         * **Bank card (Authorize.Net)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually.
         * **Bank card (Skyflow)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. Allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
+        * **Bank card (CyberSource)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. Allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
         * **Manual** payment allows you to pay for the order later.
 
     ![Billing step](../media/billing-step.png)
@@ -63,7 +64,7 @@ To complete your order:
 1. Click **Place order**. Depending on your choice in step 5, you will either be notified that the order has been successfully placed (manual payment. Last step of this instruction) or you will be offered to pay for the order (bank card payment). Fill in the bank card details, then click **Pay now**. 
 
     !!! note 
-        In case of the Skyflow option, you can save card for future payments, and then select a previously saved card from the dropdown list. You can view your saved cards at **Account --> Saved Credit Cards**.
+        In case of the Skyflow or CyberSource option, you can save card for future payments, and then select a previously saved card from the dropdown list. You can view your saved cards at **Account --> Saved credit cards**.
 
         ![Readmore](../media/readmore.png){: width="25"} [Saved Credit Cards](../account/saved-credit-cards.md) 
 

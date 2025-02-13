@@ -1138,10 +1138,11 @@ This node enables notification configuration for the `VirtoCommerce.Notification
 
 The Payments node configures various payment gateway integrations for the Virto Commerce platform. This section includes settings for modules such as Authorize.Net and Skyflow, enabling secure payment processing and integration with different payment service providers.
 
-| Node            | Default or sample value               | Description                                                         |
-| --------------- | ------------------------------------- | ------------------------------------------------------------------- |
-| AuthorizeNet    |                                       | Configuration settings for the Authorize.Net payment gateway.       |
-| Skyflow         |                                       | Configuration settings for the Skyflow payment processing module.   |
+| Node            | Default or sample value               | Description                                                           |
+| --------------- | ------------------------------------- | --------------------------------------------------------------------- |
+| AuthorizeNet    |                                       | Configuration settings for the Authorize.Net payment gateway.         |
+| Skyflow         |                                       | Configuration settings for the Skyflow payment processing module.     |
+| CyberSource     |                                       | Configuration settings for the CyberSource payment processing module. |
 
 
 #### Authorize.Net
@@ -1268,6 +1269,32 @@ This node configures the Skyflow payment processing module, facilitating secure 
 ```
 
 <!--skyflow-end-->
+
+#### CyberSource  
+
+This node configures the CyberSource payment gateway integration, enabling secure payment processing using CyberSource APIs.  
+
+<!--cybersource-start-->  
+
+| Node               | Sample value                           | Description                                 |  
+|--------------------|----------------------------------------|---------------------------------------------|  
+| MerchantId         | "demo_1729579220"                      | Your CyberSource merchant ID.               |  
+| MerchantKeyId      | "2eb27f6a-0000-0000-8f24-455a4d406e8a" | Your CyberSource key ID.                    |  
+| MerchantSecretKey  | "8fCe4aZDNCcxjkJDGvmJS/LibE="          | Your CyberSource secret key.                |  
+
+**Example**  
+
+```json title="appsettings.json"
+"Payments": {
+    "CyberSource": {
+        "MerchantId": "demo_1729579220",
+        "MerchantKeyId": "2eb27f6a-0000-0000-8f24-455a4d406e8a",
+        "MerchantSecretKey": "8fCe4aZDNCcxjkJDGvmJS/LibE="
+    }
+}
+```
+
+<!--cybersource-end-->  
 
 
 ### PlatformSettings

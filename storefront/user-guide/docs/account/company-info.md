@@ -1,23 +1,18 @@
 # Company Info
 
-The **Company Info** section contains:
+The **Company Info** section contains the following widgets:
 
-* Company name.
-* Company addresses, including billing and delivery addresses.
+* **Company name** to edit and save company name:
 
-In this section, you can:
+    ![Company name widget](../media/company-name-widget.png)
 
-* Edit company name.
-* Add, edit, and delete company addresses.
-* Mark an address as a favorite. 
+* **Company logo** (for admins) to upload company logo in JPG and PNG format not exceeding 4.8 MB:
 
-    ![Addresses](../media/company-info.png)
+    ![Upload company logo](../media/upload-company-logo.gif)
 
-    It will automatically appear at the top of the address list in the Company Info section and during checkout.
+* **Addresses** to add, delete, or add company addresses to favorites, including billing and delivery addresses:
 
-    ![Favorite address](../media/favorite-shipping-address.png)
+    ![Addresses widget](../media/addresses-widget.png)
 
-When editing or adding a new address, fill in the following fields:
-
-![new-address](../media/company-address.png)
-
+    !!! info
+        The favorite address will automatically appear at the top of the address list in the Company Info section and during checkout.

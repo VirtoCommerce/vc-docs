@@ -104,7 +104,7 @@ To create a store, you must first create a catalog (more specifically, **master 
 1. In the next **Catalog** blade, click **Add** in the toolbar.  
 1. In the **New catalog** blade, choose the catalog type: physical or virtual. In our example, we are creating a physical catalog.
 
-    ![Read more](media/readmore.png){: width="25"} [Learn more about physical and virtual catalogs](../catalog/add-new-catalog.md)
+    ![Read more](media/readmore.png){: width="25"} [Learn more about physical and virtual catalogs](../../user-guide/catalog/add-new-catalog)
 
 1. In the next blade, enter the catalog's name (Dental Demo in our case).
 1. (Optional) Click on the **Languages** widget to select the required languages in the next blade.

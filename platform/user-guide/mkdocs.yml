@@ -197,6 +197,10 @@ nav:
                 - Skyflow:
                       - Overview: skyflow/overview.md
                       - Managing Skyflow: skyflow/manage-skyflow-module.md
+                - CyberSource:
+                      - Overview: cybersource/overview.md
+                      - Managing CyberSource: cybersource/manage-cybersource.md
+                      - Settings: cybersource/settings.md
                 - Authorize.net:
                       - Overview: authorize-net/overview.md
                       - Managing Authorize.net: authorize-net/manage-authorize-net-module.md
