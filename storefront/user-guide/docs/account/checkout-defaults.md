@@ -1,6 +1,6 @@
-# Checkout defaults
+# Checkout Defaults
 
-To simplify the checkout process, the users can preset the checkout defaults. This way, users do not have to specify them every time they check out. 
+To simplify the checkout process, users can preset their checkout defaults. This way, users do not have to specify them every time they check out. 
 
 These include:
 
@@ -10,3 +10,11 @@ These include:
 
 ![Checkout defaults](../media/checkout-defaults.png)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../lists">← Lists</a>
+    <a href="../quote-requests">Quote requests →</a>
+</div>

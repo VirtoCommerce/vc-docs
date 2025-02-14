@@ -51,3 +51,12 @@ The **Bulk order** pad opens. You will see the following placement options:
         ![Similar SKUs](../media/duplicated-skus.png){: width="600"}
 
 Now you can [add products to cart](products-purchase-options.md) or [request a quote](submit-quotes.md).
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../back-in-stock-notifications">← Back-in-stock notifications</a>
+    <a href="../compare-products">Product comparison →</a>
+</div>

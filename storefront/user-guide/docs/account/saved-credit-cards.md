@@ -6,3 +6,12 @@ In the **Saved Credit Cards** section, you can:
 * Delete cards from the list.
 
 ![Saved cards](../media/saved-credit-card.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../quote-requests">← Quote requests</a>
+    <a href="../notifications">Notifications →</a>
+</div>

@@ -33,3 +33,13 @@ Here you can:
 * Re-order all items from the completed orders:
 
     ![Reorder all](../media/reorder-all.gif)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../addresses">← Addresses</a>
+    <a href="../review-products">Product reviews →</a>
+</div>

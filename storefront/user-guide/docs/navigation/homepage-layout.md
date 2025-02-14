@@ -62,3 +62,12 @@ In the Frontend Application mobile version, the core principles and functionalit
 ### Menu
 
 ![Catalog](../media/storefront-mobile-catalog.png){: width="500"}
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../registration_and_signing_in/create-account">← Registration and signing in</a>
+    <a href="../product-page-layout">Product page layout →</a>
+</div>

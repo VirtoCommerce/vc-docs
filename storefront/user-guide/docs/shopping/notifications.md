@@ -6,3 +6,11 @@ You can view all the received notifications in the top menu:
 
 ![Notifications](../media/notifications.png)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../submit-quotes">← Quotes submission</a>
+    <a href="../checkout-process">Checkout →</a>
+</div>

@@ -21,3 +21,13 @@ In our Frontend Application, buyers have the following options to purchase produ
     A **None** option allows users to skip selecting an option for that section when configuring their product:
 
     ![Optional options](../media/optional-options.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../account/company-members">← Company members</a>
+    <a href="../searching-for-products">Search options →</a>
+</div>

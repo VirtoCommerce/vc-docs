@@ -8,3 +8,12 @@ This section contains the list of all products for which the user will receive [
 Once the product is back in stock, users can add it to their cart from the list:
 
 ![Buyable products](../media/back-in-stock-buyable.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notifications">← Notifications</a>
+    <a href="../company-info">Company info →</a>
+</div>

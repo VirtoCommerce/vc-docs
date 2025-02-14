@@ -24,3 +24,13 @@ To request personalized pricing (submit a quote):
         If you want to submit your quote later, click **Save changes** to save the provided information.<br>The request receives the status **Draft**.
 
 ![Readmore](../media/readmore.png){: width="25"} [Quote requests](../account/quote-requests.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../lists">← Products lists</a>
+    <a href="../notifications">Notifications →</a>
+</div>

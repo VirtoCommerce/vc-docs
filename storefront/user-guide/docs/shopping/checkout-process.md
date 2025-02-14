@@ -77,3 +77,11 @@ To complete your order:
 You can view your orders at **Account --> Orders**.
 
 ![Readmore](../media/readmore.png){: width="25"} [Viewing orders](../account/orders.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notifications">← Notifications</a>
+</div>

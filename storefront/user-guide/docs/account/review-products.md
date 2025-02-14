@@ -8,3 +8,12 @@ Users can review products from the completed orders:
 1. Your review will appear on the product page once approved by the seller:
 
 ![Reviewing products](../media/product-review.gif)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../orders">← Orders</a>
+    <a href="../lists">Lists →</a>
+</div>

@@ -16,3 +16,13 @@ The **Company Info** section contains the following widgets:
 
     !!! info
         The favorite address will automatically appear at the top of the address list in the Company Info section and during checkout.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../back-in-stock-list">← Back-in-stock list</a>
+    <a href="../company-members">Company members →</a>
+</div>

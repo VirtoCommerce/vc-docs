@@ -21,4 +21,11 @@ To add a product to the compare list:
 
     ![compare list](../media/compare-list.png)
 
- 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../bulk-orders">← Bulk orders</a>
+    <a href="../lists">Products lists →</a>
+</div>

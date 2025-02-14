@@ -19,4 +19,11 @@ To work with the Frontend Application, you need to create a new account:
 
 Your account has been registered.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../sign-in">Sign in →</a>
+</div>
 

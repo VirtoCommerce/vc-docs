@@ -40,3 +40,13 @@ To edit a list:
 1. Click **Save** to save the changes.
 
 You modifications have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../review-products">← Product reviews</a>
+    <a href="../checkout-defaults">Checkout defaults →</a>
+</div>

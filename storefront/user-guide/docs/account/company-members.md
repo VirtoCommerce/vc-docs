@@ -32,7 +32,7 @@ To block/ unblock/ delete company members from the list:
 1. Click **Block**, **Unblock**, **Delete** from the drop-down menu.
 1. Confirm your action.
 
-The user has been succesfully blocked/ unblocked/ deleted from the list.
+The user has been successfully blocked/ unblocked/ deleted from the list.
 
 ## Edit user role
 
@@ -47,3 +47,12 @@ To edit user role:
 1. Click **SAVE** to save the changes.
 
 The role has been successfully modified.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../company-info">← Company info</a>
+    <a href="../../shopping/products-purchase-options">Shopping process →</a>
+</div>

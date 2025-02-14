@@ -18,3 +18,12 @@ As soon as the product is available again, the user gets the following email not
 Users can also add the restocked product to cart directly from the back-in-stock list:
 
 ![Buyable products](../media/back-in-stock-buyable.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../searching-for-products">← Search options</a>
+    <a href="../bulk-orders">Bulk orders →</a>
+</div>

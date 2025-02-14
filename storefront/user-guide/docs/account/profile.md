@@ -12,3 +12,11 @@ In the **Profile** section, you can:
 
 * Set a default currency from the dropdown list. The selected currency will be automatically applied to all the prices. 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../dashboard">← Dashboard</a>
+    <a href="../change-password">Change password →</a>
+</div>

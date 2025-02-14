@@ -1,4 +1,4 @@
-# Quote Request
+# Quote Requests
 
 To request personalized pricing or align bulk orders with negotiated agreements, users can create quote requests:
 
@@ -40,3 +40,12 @@ Click on a draft quote request to:
 * Submit the quote to the vendor.
 
 ![Edit draft quote](../media/edit-draft-quote.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../checkout-defaults">← Checkout defaults</a>
+    <a href="../saved-credit-cards">Saved credit cards →</a>
+</div>

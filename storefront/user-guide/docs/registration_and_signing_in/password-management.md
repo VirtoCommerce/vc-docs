@@ -50,3 +50,12 @@ To change the password:
     ![](../media/profile-path-2.png){: width="500"}
 
 You password has been successfully changed.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../sign-in">← Sign in</a>
+    <a href="../../navigation/homepage-layout">Navigation →</a>
+</div>

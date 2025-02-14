@@ -23,3 +23,12 @@ You can now use the Frontend Application as a registered user.
     ![Blocked](../media/blocked-page.png){: width="500"}
 
     If this happens, contact the site administrator.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../create-account">← Create account</a>
+    <a href="../password-management">Password management →</a>
+</div>

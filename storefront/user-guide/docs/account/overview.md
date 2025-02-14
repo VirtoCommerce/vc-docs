@@ -13,3 +13,11 @@ The illustration below contrasts these two account types:
 ![accounts](../media/personal-corporate-accounts.png)
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../navigation/product-page-layout">← Product page layout</a>
+    <a href="../dashboard">Dashboard →</a>
+</div>

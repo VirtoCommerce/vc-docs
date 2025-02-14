@@ -31,7 +31,7 @@ nav:
           - Change Password: account/change-password.md 
           - Addresses: account/addresses.md
           - Orders: account/orders.md
-          - Review Products: account/review-products.md 
+          - Product Reviews: account/review-products.md 
           - Lists: account/lists.md
           - Checkout Defaults: account/checkout-defaults.md
           - Quote Requests: account/quote-requests.md

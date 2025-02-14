@@ -30,3 +30,13 @@ Click **Filters** to narrow down the selection of variations:
 If a [reviews option is enabled](../../../../platform/user-guide/rating-reviews/managing-reviews#enable-product-reviews) for the Frontend Application, the reviews are displayed below the product description:
 
 ![Product reviews](../media/reviews-on-frontend.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../homepage-layout">← Homepage layout</a>
+    <a href="../../account/overview">Personal and corporate accounts →</a>
+</div>

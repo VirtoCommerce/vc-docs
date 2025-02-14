@@ -12,3 +12,12 @@ To add a product to a list:
 The notification of successful addition to the selected list appears. 
 
 ![Readmore](../media/readmore.png){: width="25"}  [Managing product lists](../account/lists.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../compare-products">← Products comparison</a>
+    <a href="../submit-quotes">Quotes submission →</a>
+</div>
