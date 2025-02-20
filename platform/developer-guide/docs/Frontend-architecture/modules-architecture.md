@@ -1,22 +1,27 @@
 # Modules Architecture
 
-This document provides an overview of the Virto Commerce frontend modules architecture. The modular approach enhances scalability, maintainability, and flexibility, allowing seamless integration of new functionalities.
+This document provides an overview of the Virto Commerce frontend modules architecture. The modular approach provides:
+
+* **Scalability:** Easily add new features without affecting existing ones.  
+* **Maintainability:** Isolated codebases simplify management and debugging.  
+* **Modularity:** Modules in the **/modules** folder can be removed without affecting the Core.  
+* **Control:** Decision-makers have clear oversight.  
 
 
 ## Key concepts
 
 The key concepts of modules architecture are as follows:
 
-| Concept                   | Description                                                                                       | Role and Dependencies                                                |
-|---------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| Core                      | The foundation of the application, including API, router, and other essential components.         | It provides:<br> - API extensions for modules.<br> - A wrapper for module management system. <br> - A structure independent of type generation. |
-| Module                    | An independent feature unit extending functionality with minimal Core impact. It encapsulates its own components, services, APIs, and configurations. | - Interacts with the Core by injecting custom components through predefined extension points. <br> - Interacts with its own settings from the module management system.<br> - Supplies GraphQL documents to the type generation system.  |
-| Extensions                | Expansion points provided by the Core, acting as APIs or "branches."      | - Used by modules to seamlessly integrate functionality without modifying the Core.<br> - Used within the Core. <br> - Bridge the gap between application memory and modules. <br> - Do not interact with the module management system or type generation system. <br> **Existing extensions**: <br> - client-app/shared/common/composables/useCustomProductComponents.ts <br> - client-app/shared/layout/composables/useCustomAccountLinkComponents.ts <br> - client-app/shared/layout/composables/useCustomMobileMenuLinkComponents.ts <br> - client-app/shared/layout/composables/useCustomHeaderLinkComponents.ts <br> - client-app/shared/layout/composables/useCustomMobileHeaderComponents.ts |
-| Module management system  | A decision-making point and business logic handler within the Core.  | - Manages components by being imported into Core and Modules. <br> - Does not interact with extensions or type Generation system. |
-| Type generation system    | Facilitates the creation of types and constants for GraphQL API.         | - Ensures clean separation between Core and modules.<br> - Has no dependencies on the module management system or extensions. |
+| Concept                   | Description                                                                                       |
+|---------------------------|---------------------------------------------------------------------------------------------------|
+| Core                      | The main application that includes the API, router, builder, and other systems.                  |
+| Module                    | An additional functionality developed with minimal impact on the Core. It is a self-contained feature area within the application. Each module encapsulates its own components, services, APIs, and other related code. |
+| Extensions                | Extension points that belong to the Core, also called **holes** or **sockets**. <br> **Existing extensions**: <br> - client-app/shared/common/composables/useCustomProductComponents.ts <br> - client-app/shared/layout/composables/useCustomAccountLinkComponents.ts <br> - client-app/shared/layout/composables/useCustomMobileMenuLinkComponents.ts <br> - client-app/shared/layout/composables/useCustomHeaderLinkComponents.ts <br> - client-app/shared/layout/composables/useCustomMobileHeaderComponents.ts                  |
+| Module management system  | A decision-making point and business logic handler. It is represented as [settings_data.json](https://github.com/VirtoCommerce/vc-frontend/blob/ce852a790b0cc8b0ba9b01e3fde3187c3d1bf2bd/client-app/config/settings_data.json) at the bundle level and as an array of modules in the **getStore** request at the store level. It can be considered a form of **Feature flags**.  |
+| Type generation system    | Handles the generation of types and constants for GraphQL API.                                   |
 
 
-![Key concepts](media/platform-acrhitecture.png){ align=center }
+![Key concepts](media/platform-acrhitecture.png)
 
 ## Module folder structure
 
@@ -43,75 +48,27 @@ your-module/
 ```
 
 
-### API
+## Type generation system
 
-Modules interact with the backend through GraphQL. Each module should define its own GraphQL schemas in the **api/graphql/** directory.
-
-**Example query**:
-
-```graphql
-    query GetData($after: String, $first: Int, $storeId: String) {
-      getData(after: $after, first: $first, storeId: $storeId) {
-        items {
-          id
-          isActive
-        }
-        totalCount
-      }
-    }
-```
-
-#### Generate GraphQL types
-
-Each module includes its own GraphQL types, often generated via the **scripts/graphql-codegen/generator.ts** file.
+Each module typically includes its own GraphQL types, often defined in a **types.ts** file within an **api/graphql** folder. These types are generated using the following npm command:
 
 ```bash
 yarn generate:graphql-types
 ```
 
-### Localization
+This command triggers the execution of the generator.ts script, which is responsible for generating the types.ts files for both the core application and the independent modules.
 
-Supporting multiple languages enhances user experience. Each module manages its own localization files.
+The **scripts/graphql-codegen/generator.ts** file also plays a crucial role in handling standalone GraphQL schemas. It includes an array called **independentModules**, where each object represents a separate GraphQL schema that needs to be generated independently:
 
-**Example structure**:
-
-```
-your-module/
-└── localization/
-    ├── en.json
-    └── es.json
-```
-
-**Example localization file (en.json)**:
-
-```json
+```csharp
 {
-  "your_module": {
-    "title": "Your Module",
-    "description": "Description of your module."
-  }
-}
+    name: "YourModule",
+    apiPath: "client-app/modules/your-module/api/graphql",
+    schemaPath: `${process.env.APP_BACKEND_URL}/graphql/your-module`,
+},
 ```
 
-### Pages and routing
-
-Modules can:
-
-* [Introduce their own pages.](#add-pages)
-* [Extend application routing configuration.](#register-routes)
-
-#### Add pages
-
-Place module-specific pages in the **pages/** directory.
-
-```
-your-module/
-└── pages/
-    ├── YourModulePage.vue
-    └── AnotherModulePage.vue
-```
-
-#### Register routes
+### Routes registration
 
 Modules register their routes through the **init** function within the module. This function is called during the application's initialization phase, typically in the **app-runner.ts**.
 
@@ -141,57 +98,20 @@ export async function init(router: Router, i18n: I18n): Promise<void> {
 }
 ```
 
-### Module initialization interface
-
-Each module is initialized and integrated into the main application through an init function. This function is responsible for:
-
-* Adding new routes to the router.
-* Adding new menu items to the navigation.
-* Registering custom components or links to extension points.
-* Loading the locale messages for the module.
-* Configure GraphQL caching policies, etc.
-
-#### Initialization function structure
-
-Each module should export the `init` function with the following signature (additional parameters can be added as needed):
-
-```csharp
-export async function init(router: Router, i18n: I18n): Promise<void> {
-  // Initialization logic here
-}
-```
-
-**Example**
-
-To integrate a module into the main application, you need to import the module's init function and call it within the app's runner. Below is an example of how to do this:
+??? "Example of initialization function usage"
+    To integrate a module into the main application, you need to import the module's **init** function and call it within the app's runner. Below is an example of how to do this:
 
 
-```csharp
-// client-app/app-runner.ts
+    ```csharp
+    // client-app/app-runner.ts
 
-// Import the module's init function
-import { init as initYourModule } from "@/modules/your-module";
+    // Import the module's init function
+    import { init as initYourModule } from "@/modules/your-module";
 
-...
+    ...
 
-initYourModule(router, i18n);
-```
-
-## Modularity
-
-Our application architecture embraces **modularity** to foster a clean, organized, and scalable codebase.
-
-Its core ideas are:
-
-- **Separation of Concerns:** Each module handles a specific feature or domain.
-- **Encapsulation:** Modules encapsulate their own logic, reducing dependencies.
-- **Scalability:** Easily add or remove modules without impacting the entire system.
-
-Its aims are:
-
-- **Maintainability:** Simplify updates and bug fixes by isolating changes.
-- **Collaboration:** Enable multiple developers to work on different modules simultaneously.
-- **Consistency:** Adhere to standardized patterns and structures across modules.
+    initYourModule(router, i18n);
+    ```
 
 
 ## Best practices
@@ -219,11 +139,8 @@ To ensure consistency and high quality across all modules, follow these best pra
     * Follow the project's naming guidelines.
 
 * Testing:
-   * Write unit and integration tests for module functionalities.
-   * Ensure tests are located alongside the code they test.
+    * Write unit and integration tests for module functionalities.
+    * Ensure tests are located alongside the code they test.
 
-## Conclusion
-
-Virto Commerce's modular architecture allows developers to build, extend, and maintain functionalities with minimal dependencies on the **Core**. By following best practices and leveraging extension points, developers can ensure a scalable and maintainable application.
 
 Happy coding! 🚀

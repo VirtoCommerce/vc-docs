@@ -19,9 +19,9 @@
         1. Migrate to the new storefrontless architecture [on your own](migration-on-azure.md) or with our [assistance](https://help.virtocommerce.com/support/home).
         1. Continue using the Storefront with the [1.62 version](https://github.com/VirtoCommerce/vc-theme-b2b-vue/tree/support/1.62), which will receive updates until the end of 2024. After that, while it will still be possible to use the Storefront, no further updates will be provided.
     
-    The primary objective of the new Virto Commerce Frontend Architecture is to simplify and expedite the development of ecommerce solutions based on the Virto Commerce Platform. This architecture replaces the custom **vc-storefront** with a standard load balancer, such as **nginx** or **Azure Load Balancer**. All business logic previously handled by **vc-storefront** is now integrated into the Platform through XAPI modules. This change ensures that developing business logic for client applications is now consistent with platform development.
+    The primary objective of the new Virto Commerce Frontend Architecture is to simplify and expedite the development of ecommerce solutions based on the Virto Commerce Platform. This architecture replaces the custom **vc-storefront** with a standard load balancer, such as **nginx** or **Azure Load Balancer**. All business logic previously handled by **vc-storefront** is now integrated into the Platform through xAPI modules. This change ensures that developing business logic for client applications is now consistent with platform development.
 
-    Virto Commerce Frontend (B2B-Theme 2.x) is now a Single Page Application (SPA) stored in static resources. The load balancer is configured to route requests from the client machine to both static content and XAPI endpoints. Additionally, this architecture supports the integration and utilization of third-party SPA applications.
+    Virto Commerce Frontend (B2B-Theme 2.x) is now a Single Page Application (SPA) stored in static resources. The load balancer is configured to route requests from the client machine to both static content and xAPI endpoints. Additionally, this architecture supports the integration and utilization of third-party SPA applications.
 
 
 ![Frontend application](media/desktop.png)
@@ -45,17 +45,128 @@
 
 ## Key non-functional features
 
-- **Development Performance**: Achieve rapid development using the most effective solution. Deploy the SPA in seconds and start modifying code with [HMR features](https://vitejs.dev/guide/api-hmr).
+- **Development performance**: Achieve rapid development using the most effective solution. Deploy the SPA in seconds and start modifying code with [HMR features](https://vitejs.dev/guide/api-hmr).
 
-- **Client Performance**: Reach and maintain high performance metrics as provided by Google PageSpeed Insights.
+- **Client performance**: Reach and maintain high performance metrics as provided by Google PageSpeed Insights.
 
-- **[Atomic Design Pattern](https://virtocommerce.com/atomic-architecture)**: Base the UI on Atoms, Molecules, and Organisms, combined within Pages and shared Components for high code reusability.
+- **[Atomic design pattern](../../../platform/developer-guide/Back-End-Architecture/atomic-architecture)**: Base the UI on Atoms, Molecules, and Organisms, combined within Pages and shared Components for high code reusability.
 
-- **Fully Responsive**: Ensure the application works seamlessly on multiple devices, from desktops to mobile phones, providing an excellent UI and UX.
+- **Fully responsive**: Ensure the application works seamlessly on multiple devices, from desktops to mobile phones, providing an excellent UI and UX.
 
-- **Simple Styling and Customization**: Use TailwindCSS for straightforward and convenient CSS usage, minimizing code and leveraging a highly customizable framework.
+- **Simple styling and customization**: Use TailwindCSS for straightforward and convenient CSS usage, minimizing code and leveraging a highly customizable framework.
 
-- **Fully Aligned with Virto Commerce Platform**: Integrate the SPA with the [Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform) to support all common B2B and B2C scenarios.
+- **Fully aligned with Virto Commerce Platform**: Integrate the SPA with the [Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform) to support all common B2B and B2C scenarios.
+
+## Application structure
+
+```json
+├── assets                           // Scripts, styles and other assets compiled and minified for production.
+|
+├── client-app                       // The main folder for the application.
+|   ├── assets                       // Assets needed to be precompiled during building.
+|   |   └──...
+|   |
+|   ├── core                         // Common utilities and shared logic that can be used by any pages and libraries.
+|   |   ├── api/graphql              // GraphQL Models aligned with the Virto Backoffice.
+|   |   |   └──...
+|   |   ├── composables              // Core composables (app-level shared logic).
+|   |   |   └──...
+|   |   ├── directives               // Core Vue directives.
+|   |   |   └──...
+|   |   ├── plugins                  // Core Vue plugins.
+|   |   |   └──...
+|   |   ├── enums                    // Core enums.
+|   |   |   └──...
+|   |   ├── types                    // Core types.
+|   |   |   └──...
+|   |   ├── utilities                // Some miscellaneous utils.
+|   |   |   └──...
+|   |   └── constants.ts             // Global-available constants (DO NOT USE, will be removed later).
+|   |
+|   ├── pages                        // Set of application pages used within Application router.
+|   |   └──...
+|   |
+|   ├── public                       // Statically served files
+|   |   └── static
+|   |       ├── icons                // Icons used for favicons, PWA, etc.
+|   |       └── images               // Static images used inside the application.
+|   |
+|   ├── router                       // SPA routing configuration.
+|   |   └──...
+|   |
+|   ├── shared                       // A set of shared files grouped by their domain context.
+|   |   ├── catalog                  // Grouping context (ex.: catalog browsing).
+|   |   |   ├── components           // The collection of components specific for this domain context.
+|   |   |   |   └──...
+|   |   |   ├── composables          // The collection of shared logic written using Composable API pattern.
+|   |   |   |   └──...
+|   |   |   ├── types                // Types used in this context.
+|   |   |   |   └──...
+|   |   |   ├── utils                // Utilities and helpers specific for this context.
+|   |   |   |   └──...
+|   |   |   └── index.ts             // Entry point for this context used as library.
+|   |   |
+|   |   └──...
+|   |
+|   ├── ui-kit                       // Atoms, Molecules, Organisms and their types, used within the whole application.
+|   |   └──...
+|   |
+|   ├── App.vue                      // Main Application component. Use it as a wrapper for routable pages.
+|   ├── env.d.ts                     // Definition file to provide IDE IntelliSense support.
+|   ├── main.ts                      // Application entry point. Main initialization script.
+|   ├── shims-acceptjs.d.ts          // Definition file to provide IDE IntelliSense support for Accept.js (Authorize.net).
+|   ├── shims-graphql.d.ts           // Definition file to provide IDE IntelliSense support for importing *.graphql files.
+|   ├── shims-vue.d.ts               // Definition file to provide IDE IntelliSense support for importing *.vue files.
+|   ├── vue.d.ts                     // Definition file to provide IDE IntelliSense support for additional global Vue properties.
+|   └── vue-router.d.ts              // Definition file to provide IDE IntelliSense support for additional global Vue Router properties.
+|
+├── config
+|   ├── menu.json
+|   └── settings_data.json
+|   
+├── locales                          // Locale files used to provide translated content.
+|   └──...
+|
+├── modules                          // Auxiliary build files that run in the Node environment.
+|   └──...                           // Modules with their own components, APIs, and logic.
+|
+├── scripts                          // Auxiliary build files that run in the Node environment.
+|   └──...
+|
+├── .babelrc                         // Babel configuration for storybook
+├── .browserslistrc                  // Browserslist config file to support actual versions of browsers.
+├── .commitlintrc.json               // Config for Conventional commit hook.
+├── .dependency-cruiser.cjs
+├── .dependency-graph.cjs
+├── .editorconfig                    // Common editor settings to sync codestyle.
+├── .env                             // Envfile to define different Environment Variables.
+├── .env.local                       // Local envfile to override Environment Variables.
+├── .eslintignore                    // Ignore some files from ESlint.
+├── .eslintrc.cjs                    // ESlint configuration file.
+├── .gitattributes                   // Set attributes to specified path in Git.
+├── .gitignore                       // Ignore some files from Git.
+├── .npmrc                           // Node.js package manager settings and Node.js restrictions
+├── .prettierignore                  // Ignore some files from Prettier.
+├── .prettierrc.json                 // Config for Prettier.
+├── .yarnrc.yml                      // Yarn package manager configuration
+├── graphql-codegen
+|   └── generator.ts                 // Generate GraphQL types 
+├── index.html                       // Vite Development entry point.
+├── LICENSE.txt
+├── package.json                     // NPM Package description.
+├── postcss.config.cjs               // PostCSS configuration for Tailwind.
+├── README.md                        // This file.
+├── sonar-project.properties
+├── tailwind.config.ts               // TailwindCSS configuration file.
+├── tsconfig.app.json                // Typescript configuration for application.
+├── tsconfig.json                    // Main TypeScript configuration file.
+├── tsconfig.node.json               // Typescript configuration for Node.js.
+├── tsconfig.vitest.json
+├── vite.config.ts                   // Vite configuration file.
+├── vitest.config.ts
+└── yarn.lock                        // Yarn dependencies lock file.
+
+```
 
 ## Key functionalities
 
@@ -72,4 +183,5 @@ The key functionalities include:
 * [Intuitive navigation.](../../../storefront/user-guide/navigation/homepage-layout)
 * [Buying digital and physical products.](../../../storefront/user-guide/shopping/checkout-process) 
 * [Searching and filtering products.](../../../storefront/user-guide/shopping/searching-for-products)
-* [Managing push messages](../../../storefront/user-guide/account/notifications)
+* [Managing push messages.](../../../storefront/user-guide/account/notifications)
+* [Reviewing products.](../../../storefront/user-guide/account/review-products)
