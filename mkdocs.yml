@@ -86,6 +86,11 @@ plugins:
  #       minify_html: true
     - redirects:
         redirect_maps:
+            'CLI-tools/build-automation.md': 'https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/build-automation'
+            'CLI-tools/cold-start-data-migration.md': 'https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/cold-start-and-data-migration'
+            'CLI-tools/grab-migrator.md': 'https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/grab-migrator'
+            'CLI-tools/introduction.md': 'https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/overview'
+            'CLI-tools/package-management.md': 'https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/package-management'
             'products/products-virto3-versions.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/virto3-products-versions'
             'license.md': 'https://virtocommerce.com/open-source-license'
             'support.md': 'https://help.virtocommerce.com/support/home'
