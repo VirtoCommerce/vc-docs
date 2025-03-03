@@ -28,6 +28,7 @@ nav:
       - Vendors:
         - Vendor Onboarding: Operator-portal/Vendors-management/vendor-onboarding.md
         - Vendor Management: Operator-portal/Vendors-management/vendor-management.md
+      - Registration Requests: Operator-portal/registration-requests.md
       - Marketplace Products: Operator-portal/marketplace-products.md
       - Offers: Operator-portal/offers.md
       - Operator Orders: Operator-portal/operator-orders.md

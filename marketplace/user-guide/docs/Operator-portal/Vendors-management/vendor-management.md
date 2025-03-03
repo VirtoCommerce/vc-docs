@@ -34,7 +34,7 @@ Your modifications have been saved.
 
 ## Log in to Vendor portal on vendor behalf
 
-Operators can access the Vendor зortal on behalf of any registered vendor, allowing them to manage vendor-specific settings, troubleshoot issues, and provide direct support without needing the vendor's login credentials. This feature ensures seamless administrative assistance and enhances the overall efficiency of vendor management.
+Operators can access the Vendor portal on behalf of any registered vendor, allowing them to manage vendor-specific settings, troubleshoot issues, and provide direct support without needing the vendor's login credentials. This feature ensures seamless administrative assistance and enhances the overall efficiency of vendor management.
 
 To log in to the Vendor portal on Vendor behalf:
 
@@ -42,6 +42,6 @@ To log in to the Vendor portal on Vendor behalf:
 1. In the next blade, select a vendor you need to edit.
 1. In the next blade, click **Open Vendor portal** in the toolbar.
 
-![Login on behalf](media/login-on-behalf.gif)
+The Vendor portal opens in a new window. Here you can also switch between Vendors without having to return to the Operator portal:
 
-The Vendor portal opens in a new window. 
+![Login on behalf](media/switch-between-vendors.gif)

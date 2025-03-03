@@ -15,6 +15,10 @@ Here you can:
     !!! note 
         In the left menu, you can immediately see all orders sorted by status, without having to apply any filters.  
 
+By switching between **Agency** and **Personal** tabs, organization maintainers can view all company orders placed by any user or agency. This allows them to track what was ordered, in what quantities, when, and by whom:
+
+![Personal orders](../media/personal-orders.png)
+
 To view the order details, click on the desired order in the orders list. The order details open in a new window:
 
 ![Order details](../media/order-details.png)

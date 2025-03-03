@@ -22,6 +22,9 @@ In our Frontend Application, buyers have the following options to purchase produ
 
     ![Optional options](../media/optional-options.png)
 
+    In the text message widget, customers can enter custom text while personalizing their products. This can be used for messages on postcards, engravings on rings, greetings on cakes, and more:
+
+    ![Text message widget](../media/configurable-text.png)
 
 <br>
 <br>

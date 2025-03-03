@@ -2,7 +2,7 @@
 
 Vendors are the key entities in every marketplace. That’s why it is crucial for the operator to have an extensive and user-friendly way of managing them. To onboard (add) a new vendor, the marketplace operator must collect all the necessary vendor information. After that, the operator can start adding new vendor to a marketplace.
 
-## Add new vendor
+## Invite vendor
 
 To add a new vendor:
 
@@ -15,3 +15,12 @@ To add a new vendor:
 1. Click **Invite** to send an invitation.
 
 As a result, a new Vendor entity will be added to the list. The vendor owner will receive an email with an account activation link. Once the account is activated, the owner can start using the Vendor portal and work with the Marketplace.
+
+
+## Add vendor from registration request
+
+Vendors can send registration requests themselves to initiate the onboarding process. The registration form opens for unregistered users:
+
+![Registration form](media/registration-form.png)
+
+![Readmore](media/readmore.png){: width="25"} [Registration requests](../registration-requests.md)

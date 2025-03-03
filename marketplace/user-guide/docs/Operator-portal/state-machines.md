@@ -1,8 +1,8 @@
 # State Machines
 
-The State machines segment manages and automates the various states and transitions of orders within the marketplace. 
+The State machines section manages and automates the various states and their transitions within the marketplace. 
 
-To add or configure order flows:
+To add or configure a flow:
 
 1. Click **State machines** in the main menu.
 1. The next blade lists all the available order state flows. Select the flow you need to edit or click **Add** in the toolbar to add a new flow.

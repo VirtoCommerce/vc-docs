@@ -2,10 +2,12 @@
 
 Managing documents in the Orders module includes:
 
-* [Creating payment documents.](managing-documents.md#create-payment-documents)
-* [Creating shipment documents.](managing-documents.md#create-shipment-documents)
-* [Creating refund documents.](managing-documents.md#create-refund-documents)
-* [Getting invoice PDF.](managing-documents.md#gett-invoice-pdf)
+
+* [Creating shipment documents.](#create-shipment-documents)
+* [Creating payment documents.](#create-payment-documents)
+    * [Capturing payment.](#capture-payment)
+    * [Creating refund documents.](#create-refund-documents)
+* [Getting invoice PDF.](#get-invoice-pdf)
 
 To start managing documents:
 
@@ -31,7 +33,7 @@ To create a new shipment document:
 
 1. Click **OK** to save the changes.
 
-All the shipment documents for the selected order are displayed in the **Edit order details and related documents**:
+All the shipment documents for the selected order can be found by clicking on the **Shipment** widget:
 
 ![New shipment document](media/shipment-documents-stored.png){: width="400" height="400"}
 
@@ -47,9 +49,49 @@ To create a new payment document:
 
 1. Click **OK** to save the changes.
 
-All the payment documents for the selected order are displayed in the **Edit order details and related documents** blade:
+All the payment documents for the selected order can be found by clicking on the **PaymentIn** widget:
 
 ![Payment document stored](media/payment-document-stored.png){: width="400"}
+
+### Capture payment
+
+To capture payment:
+
+1. Click on the **PaymentIn** widget where all the payment documents for the selected order are stored.
+1. In the next blade, click **Capture payment** in the toolbar.
+1. In the next blade, fill in the following fields:
+
+    ![Payment capture](media/payment-capture.png)
+
+1. Click **OK**. 
+
+1. The new capture widget appears in the shipment and payment documents section:
+
+    ![Capture widget](media/capture-widget.png){: width="400"}
+
+1. Click on it to view the details:
+
+    ![Capture details](media/capture-details.png){: width="400"}
+
+### Create refund documents
+
+To create a new refund document:
+
+1. Click on the **PaymentIn** widget where all the payment documents for the selected order are stored.
+1. In the next blade, check the payment status. Refunding is possible for the orders with the **Paid** status. 
+1. Click **Refund payment** in the toolbar.
+1. In the next blade, enter the refund amount, the refund message, and select the refund reason from the drop-down list. Click **OK** to save the changes.
+
+    ![Refund blade](media/create-refund-blade.png){: width="400"}
+
+1. The new refund widget appears in the shipment and payment documents section.
+
+    ![Refund widget](media/new-refund-document.png){: width="400"}
+
+1. Click on it to see the details.
+
+    ![Refund details](media/refund-document.png){: width="400"}
+
 
 ## Get invoice PDF
 
@@ -59,29 +101,4 @@ To get an invoice in PDF format:
 1. In the **Edit order details and related documents** blade, click **Get invoices PDF** in the toolbar. 
 
 The invoice PDF opens in a new window.
-
-## Create refund documents
-
-To create a new refund document:
-
-1. In the main menu, click **Orders**.
-1. In the next **Customer orders** blade, select the required order.
-1. Scroll down to the shipment and payment documents section and click **PaymentIn**.
-1. In the next blade, check the payment status. Refunding is possible for the orders with the **Paid** status. 
-1. Click **Refund payment** in the toolbar.
-
-    ![Refund payment](media/new-refund-document-path.png)
-
-1. In the next blade, enter the refund amount, the refund message, and select the refund reason from the drop-down list. Click **OK** to save the changes.
-
-    ![Refund blade](media/create-refund-blade.png){: width="400"}
-
-1. The new refund document appears in the shipment and payment documents section.
-
-    ![Ne3w refund document](media/new-refund-document.png){: width="400"}
-
-1. Click on it to see the details.
-
-    ![Refund document](media/refund-document.png){: width="400"}
-
 
