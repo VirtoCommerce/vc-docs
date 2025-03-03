@@ -3,14 +3,14 @@
 In this guide, we are going to configure catalog as follows: 
 
 * Structure and fill catalog with products:
-    * [Create categories and subcategories.](catalog-creation.md#create-categories-and-subcategories)
-    * [Add products to our catalog.](catalog-creation.md#add-products)
-    * [Add prices.](catalog-creation.md#add-prices)
-    * [Add fulfillment centers.](catalog-creation.md#add-fulfillment-centers)
+    * [Create categories and subcategories.](#create-categories-and-subcategories)
+    * [Add products to our catalog.](#add-products)
+    * [Add prices.](#add-prices)
+    * [Add fulfillment centers.](#add-fulfillment-centers)
 
 * Configure product properties and filtering facets:
-    * Configure properties for [catalog](catalog-creation.md#configure-properties-for-catalog), [categories](catalog-creation.md#configure-properties-for-category), and [products.](catalog-creation.md#bulk-add-properties-to-products)
-    * [Configure facets.](catalog-creation.md#configure-facets)
+    * Configure properties for [catalog](#configure-properties-for-catalog), [categories](#configure-properties-for-category), and [products.](#bulk-add-properties-to-products)
+    * [Configure facets.](#configure-facets)
 
 
 ## Create categories and subcategories
