@@ -6,17 +6,17 @@ This mutation creates a new customer review for a specific entity, such as a pro
 
 The `CreateCustomerReviewCommandType` represents the input data required to create a new customer review.  
 
-| Field              | Description                                                                                     |
-|--------------------|-------------------------------------------------------------------------------------------------|
-| `storeId` ==String!== | The unique identifier of the store where the review is being created.                         |
-| `userId` ==String!==  | The unique identifier of the user submitting the review.                                      |
-| `userName` ==String!== | The name of the user submitting the review.                                                  |
-| `entityId` ==String!== | The unique identifier of the entity being reviewed.                |
-| `entityType` ==String!== | The type of the entity being reviewed.                         |
-| `entityName` ==String!== | The name of the entity being reviewed.                                                     |
-| `title` ==String!==    | The title of the review, summarizing the user's feedback.                                    |
-| `review` ==String!==   | The main content of the review, describing the user's experience.                            |
-| `rating` ==Int!==      | The numerical rating given by the user, typically ranging from 1 to 5.                       |  
+| Field                    | Description                                                            |
+|--------------------------|------------------------------------------------------------------------|
+| `storeId` ==String!==    | The Id of the store where the review is being created.                 |
+| `userId` ==String!==     | The Id of the user submitting the review.                              |
+| `userName` ==String!==   | The name of the user submitting the review.                            |
+| `entityId` ==String!==   | The Id of the entity being reviewed.                                   |
+| `entityType` ==String!== | The type of the entity being reviewed.                                 |
+| `entityName` ==String!== | The name of the entity being reviewed.                                 |
+| `title` ==String!==      | The title of the review, summarizing the user's feedback.              |
+| `review` ==String!==     | The main content of the review, describing the user's experience.      |
+| `rating` ==Int!==        | The numerical rating given by the user, typically ranging from 1 to 5. |
 
 ## Possible Returns  
 

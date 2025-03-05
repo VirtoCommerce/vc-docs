@@ -895,34 +895,53 @@ This node configures the settings for external modules in the Virto Commerce pla
 
 ### FileUpload
 
-This node configures file upload settings for your application:
+This node is used to configure file uploads, including quotes and organization logo uploads.
 
 | Node                      |Default or sample value            | Description                                               |
 |---------------------------|-----------------------------------|-----------------------------------------------------------|
 | RootPath                  |                                   | The root directory where uploaded files will be stored.   |
-| Scopes.Scope              |                                   | The scope or category of the uploaded files.              |
-| Scopes.MaxFileSize        | 123                               | The maximum size in bytes allowed for each uploaded file. |
-| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | The list of allowed extensions for uploads.               |
+| Scopes                    |                                   | Specifies different upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions.              |
+| Scopes.Scope              |                                   | Identifies the upload scope.              |
+| Scopes.MaxFileSize        | 123                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
+| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | Defines the allowed file types for uploads.               |
 | Scopes.AllowAnonymousUpload | true <br> false                 | Indicates whether anonymous uploads are permitted.        |
 
 
 **Example**
 
-```json title="appsettings.json"
-{
-  "FileUpload": {
-    "RootPath": "attachments",
-    "Scopes": [
-      {
-        "Scope": "quote-attachments",
-        "MaxFileSize": 123,
-        "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
-        "AllowAnonymousUpload": true
+=== "Quote upload"
+    ```json title="appsettings.json"
+    {
+      "FileUpload": {
+        "RootPath": "attachments",
+        "Scopes": [
+          {
+            "Scope": "quote-attachments",
+            "MaxFileSize": 123,
+            "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
+            "AllowAnonymousUpload": true
+          }
+        ]
       }
-    ]
-  }
-}
-```
+    }
+    ```
+
+=== "Organization logo upload"
+    ```json title="appsettings.json"
+    {
+      "FileUpload": {
+        "RootPath": "attachments",
+        "Scopes": [
+          {
+            "Scope": "organization-logos",
+            "MaxFileSize": 5000000,
+            "AllowedExtensions": [ ".jpg", ".png" ],
+            "AllowAnonymousUpload": false
+          }
+        ]
+      }
+    }
+    ```
 
 ### FrontendSecurity
 
@@ -1881,7 +1900,6 @@ This setting is used to configure tax providers.
 "FixedRateTaxProvider": {"Enabled": false}
 }
 ```
-
 
 ## Hierarchic Keys and Separators
 
