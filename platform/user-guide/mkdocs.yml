@@ -74,9 +74,9 @@ nav:
                 - Overview: order-management/overview.md
                 - Order Information: order-management/main-objects.md
                 - Order Processing Scenarios:
-                      - Managing documents: order-management/managing-documents.md
+                      - Managing Documents: order-management/managing-documents.md
                       - Tracking Order Changes: order-management/tracking-order-changes.md
-                      - Managing returns: order-management/managing-returns.md
+                      - Managing Returns: order-management/managing-returns.md
                       - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
                       - Indexation: order-management/indexation.md
                 - Notifications: order-management/notifications.md
@@ -107,7 +107,7 @@ nav:
                       - Adding Advertising Spot: marketing/advertising-spot.md
                 - Dynamic Product Associations: 
                       - Overview: marketing/dynamic-associations-overview.md
-                      - Managing dynamic product associations: marketing/managing-dynamic-associations.md
+                      - Managing Dynamic Product Associations: marketing/managing-dynamic-associations.md
                       - Rest API Testing: marketing/dynamic-associations-restapi.md
           - <b>Quotes</b>: 
                 - Overview: quotes/overview.md
@@ -148,14 +148,14 @@ nav:
                       - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
                 - Catalog CSV Export and Import:
                       - Overview: catalog-csv-export-import/overview.md
-                      - Importing catalog: catalog-csv-export-import/import-catalog.md
-                      - Exporting catalog: catalog-csv-export-import/export-catalog.md
+                      - Importing Catalog: catalog-csv-export-import/import-catalog.md
+                      - Exporting Catalog: catalog-csv-export-import/export-catalog.md
                       - Settings: catalog-csv-export-import/settings.md
           - Contracts:
                 - Overview: contracts/overview.md
-                - Managing contracts: contracts/creating-and-terminating-contracts.md
-                - Managing contract prices: contracts/managing-contract-prices.md
-                - Managing contract customers: contracts/managing-contract-customers.md
+                - Managing Contracts: contracts/creating-and-terminating-contracts.md
+                - Managing Contract prices: contracts/managing-contract-prices.md
+                - Managing Contract customers: contracts/managing-contract-customers.md
           - Dynamic Associations: 
                 - Overview: dynamic-associations/overview.md
           - Event Bus: 
@@ -207,8 +207,8 @@ nav:
           - Price Export Import: 
                 - Overview: price-export-import/overview.md
                 - Mapping CSV files: price-export-import/mapping-csv-files.md
-                - Exporting pricelists: price-export-import/exporting-price-lists.md
-                - Importing pricelists: price-export-import/importing-price-lists.md
+                - Exporting Price Lists: price-export-import/exporting-price-lists.md
+                - Importing Price Lists: price-export-import/importing-price-lists.md
           - Push Messages: 
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md

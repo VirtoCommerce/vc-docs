@@ -102,3 +102,4 @@ To get an invoice in PDF format:
 
 The invoice PDF opens in a new window.
 
+![Readmore](media/readmore.png){: width="25"} [Managing PDF invoice template](../notifications/notification-templates.md)
