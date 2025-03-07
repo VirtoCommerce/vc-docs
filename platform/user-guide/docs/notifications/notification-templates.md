@@ -32,7 +32,7 @@ To add a new notification template:
 You template has been added to the templates list.
 
 !!! tip
-	The PDF invoices templates can also be managed through the notification template widget. We recommend using embedded images instead of external image links. The reason for this is that using embedded images leads to faster rendering times when generating the PDF.
+	The PDF invoices templates can also be managed through the notification template widget. For Linux users, we recommend using embedded images instead of external image links. The reason for this is that using embedded images leads to faster rendering times when generating the PDF.
 
 
 ??? Example
