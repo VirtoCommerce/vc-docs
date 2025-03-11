@@ -400,6 +400,8 @@ This **required** node determines how VC Platform will be working with assets, i
 | AzureBlobStorage                  |                                     | Azure Blob Storage-based asset provider configuration. Used when the **Provider** setting has the value **"AzureBlobStorage"**.   |
 | AzureBlobStorage:ConnectionString |                                     | The connection string for Azure Blob Storage.                                                                                 |
 | AzureBlobStorage:CdnUrl           |                                     | The optional CDN Url for serving assets from Azure Blob Storage.                                                              |
+| AzureBlobStorage:AllowBlobPublicAccess	| true <br> false               | Determines whether public access to blobs is allowed in Azure Blob Storage. Set to true to enable public access.|
+
 
 
 **Examples**
@@ -425,6 +427,7 @@ This **required** node determines how VC Platform will be working with assets, i
         "AzureBlobStorage": {
             "ConnectionString": "",
             "CdnUrl": ""
+            "AllowBlobPublicAccess": true
         }
      }  
     ```
