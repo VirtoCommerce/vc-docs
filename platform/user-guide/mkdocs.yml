@@ -113,9 +113,12 @@ nav:
                 - Overview: quotes/overview.md
                 - Managing Quotes: quotes/manage-quotes.md
                 - Settings: quotes/settings.md
-          - <b>Assets</b>: 
-            - Overview: assets/overview.md
-            - Managing Assets: assets/managing-assets.md
+          - <b>Assets-related modules</b>: 
+                - Assets:
+                      - Overview: assets/overview.md
+                      - Managing Assets: assets/managing-assets.md
+                - Azure Blob Storage: azure-blob-storage/overview.md
+                - File System Assets: file-system/overview.md
           - <b>Content</b>:
                 - Overview: content/overview.md
                 - Themes: content/managing-themes.md
