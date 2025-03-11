@@ -1889,17 +1889,37 @@ This node configures the Serilog logging library, allowing customization of logg
 
 This setting is used to configure tax providers.
 
+<!--tax-start-->
+
+
 | Node                    | Default value             | Description                                                                                           |
 |-------------------------|---------------------------|-------------------------------------------------------------------------------------------------------|
-| FixedRateTaxProvider  | true<br>false         | Determines whether the **FixedRateTaxProvider** is enabled or disabled. When set to **false**, the **FixedRateTaxProvider** is not active, and tax calculations will not be performed using this provider. When set to **true** the **FixedRateTaxProvider** will be enabled, allowing the platform to use fixed-rate tax calculations. |
+| FixedRateTaxProvider  | true<br>false         | Determines whether the **FixedRateTaxProvider** is enabled or disabled. When set to **false**, the **FixedRateTaxProvider** is not active, and tax calculations will not be performed using this provider. When set to **true**, the **FixedRateTaxProvider** will be enabled, allowing the platform to use fixed-rate tax calculations. |
+| Avalara.AccountNumber  | required           | The account number provided by Avalara during registration. This is required for authentication. |
+| Avalara.LicenseKey     | required           | The license key provided by Avalara. This key is used for secure communication with Avalara’s tax calculation service. |
+
 
 **Example**
 
-```json title="appsettings.json"
-{
-"FixedRateTaxProvider": {"Enabled": false}
-}
-```
+=== "Fixed rate tax provider"
+    ```json title="appsettings.json"
+    "Tax": {
+        "FixedRateTaxProvider": {"Enabled": false}
+    }
+    ```
+
+=== "Avalara tax provider"
+    ```json title="appsettings.json"
+    "Tax": {
+        "Avalara": {
+            "AccountNumber": "********",
+            "LicenseKey": "**************"
+        }
+    }
+    ```
+
+<!--tax-end-->
+
 
 ## Hierarchic Keys and Separators
 

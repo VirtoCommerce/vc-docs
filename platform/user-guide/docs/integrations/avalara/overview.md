@@ -1,6 +1,6 @@
 # Overview
 
-Avalara Tax (AvaTax) module provides real time integration with Avalara Tax automation. 
+The Avalara Tax (AvaTax) module provides real time integration with Avalara Tax automation. 
 
 The module is officially [certified by Avalara](https://www.avalara.com/integrations/virto-commerce) to be compatible with Avalara API.
 
@@ -12,9 +12,13 @@ AvaTax automatically calculates sales and use tax for transactions, invoices, an
 
 ## Key features
 
-The AvaTax Virto's Store module comes with the following features:
+The diagram below illustrates the functionality of the AvaTax module:
 
-* [Scheduled synchronization of VC Platform orders with AvaTax](orders-synchronization.md).
-* [Automatic taxes calculation](taxes-calculation.md).
-* [Configuring tax types and setting up tax exemption rules](tax-type-configuration.md).
-* [Validating addresses](address-validation.md).
+![AvaTax](../media/key-entities.png)
+
+With the AvaTax Store module, users can:
+
+* [Schedule synchronization of VC Platform orders with AvaTax](orders-synchronization.md).
+* [Automate taxes calculation](taxes-calculation.md).
+* [Configure tax types and setting up tax exemption rules](tax-type-configuration.md).
+* [Validate addresses](address-validation.md).

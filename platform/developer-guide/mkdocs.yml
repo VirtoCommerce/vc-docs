@@ -109,6 +109,7 @@ nav:
           - Fulfillment:
                 - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
           - Taxes:
+                - Configuring Tax Providers: Fundamentals/Taxes/tax-providers-configuration.md
                 - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
           - Dynamic Properties:
                 - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
