@@ -1,10 +1,13 @@
-Virto Commerce now offers an enhanced file upload solution, which prioritizes security and extensibility principles to elevate the developer experience. This architecture is designed to support different file providers and offer an intuitive developer experience.
+# Overview
 
-This function is now used in our Frontend Application to [attach files to the created quotes](../../../../../storefront/user-guide/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
+The File Experience API (xFiles) module manages all file-related operations for various client applications. 
 
-| Queries               	                            | Objects                                                      	            | Mutations                                 |
-|----------------------------------------------------	|-------------------------------------------------------------------------	|----------------	                        |
-| [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)<br>  	| [deleteFile](Mutations/deleteFile.md) 	|
+Its architecture is designed to:
+
+* Support different file providers.
+* Offer an intuitive developer experience.
+* Facilitate extensible post-processing.
+* Seamlessly integrate with xAPI (GraphQL).
 
 ??? "Architecture"
 
@@ -19,4 +22,21 @@ This function is now used in our Frontend Application to [attach files to the cr
     5. The quote page then stores these links.
 
 
+This function is now used in our Frontend Application to [attach files to the created quotes](../../../../../storefront/user-guide/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
+
+## Key features
+
+The xFiles modules provides the following features:
+
+* **Isolation**: File upload operations are scoped, allowing for defined settings and isolation from mutations. The process involves uploading files to blob storage and then manipulating them via xAPI, creating the Xapi.FileUpload module.
+* **Intuitive developer experience**: The file upload process supports different upload processes with customizable validation rules, such as file extensions, count, size limits, and antivirus scanning. Developers can access core validation settings by scope for client-side validation.
+* **Extensible post processing**: File upload process supports post-processing actions like AI integration, leveraging a pipelines architecture for extensibility.
+* **Ready to use with client applications**: xAPI supports file usage with mutations and queries, enabling seamless integration with client applications.
+* **Security**: Anonymous file uploads are disabled by default, ensuring a security-first approach. Clean answers are provided for security inquiries.
+
 [![Download module](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases)
+
+
+| Queries               	                            | Objects                                                      	            | Mutations                                 |
+|----------------------------------------------------	|-------------------------------------------------------------------------	|----------------	                        |
+| [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)<br>  	| [deleteFile](Mutations/deleteFile.md) 	|

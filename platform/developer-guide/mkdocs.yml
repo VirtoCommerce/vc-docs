@@ -179,7 +179,7 @@ nav:
                 - Mutations:
                       - activateBackInStockSubscription: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/activateBackInStockSubscription.md
                       - deactivateBackInStockSubscription: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/deactivateBackInStockSubscription.md
-          - Cart:
+          - xCart:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md
                 - Queries:
                       - Cart: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
@@ -267,7 +267,7 @@ nav:
                       - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
                       - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
                       - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
-          - Catalog:
+          - xCatalog:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:
                       - Product: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/product.md
@@ -331,7 +331,7 @@ nav:
                       - Filtering: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering.md
                       - Facets: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets.md
                       - Multi Select Faceting Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search.md
-          - Content:
+          - xCMS (Content):
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
                 - Queries:
                       - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
@@ -358,7 +358,7 @@ nav:
                 - Mutations:
                       - createCustomerReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createCustomerReview.md
                       - createReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createReview.md
-          - File:
+          - xFile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
                 - Getting Started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
                 - Queries:
@@ -368,14 +368,14 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
-          - Marketing:
+          - xMarketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
                 - Queries:
                       - Evaluate Dynamic Content: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
                 - Objects:
                       - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
                       - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
-          - Order:
+          - xOrder:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
                 - Queries:
                       - Order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
@@ -435,7 +435,7 @@ nav:
                       - PageDocumentEdge: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge.md
                       - PageDocumentType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType.md
                       - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/SlugInfoResponseType.md
-          - Profile:
+          - xProfile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
                 - Queries:
                       - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organization.md

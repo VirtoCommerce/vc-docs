@@ -12,6 +12,10 @@ With the Quote module, users get:
 * Attachments, dynamic properties support.
 * Regular orders creation once the quote is confirmed by a customer.
 
+The diagram below illustrates the Quote module functionality:
+
+![Key entities](media/key-entities.png) 
+
 [![Download module](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-quote/releases)
 
 [![Download module](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-quote/releases/latest)

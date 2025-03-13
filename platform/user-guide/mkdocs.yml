@@ -314,6 +314,9 @@ nav:
           - Hotjar:
                 - Overview: integrations/hotjar/overview.md
                 - Getting Started: integrations/hotjar/getting-started.md
+          - Power BI Reports:
+                - Overview: integrations/power-bi/overview.md
+                - Getting Started: integrations/power-bi/getting-started.md
     - Versions:
           - Virto 3. Products versions: versions/virto3-products-versions.md
           - v3 2020 Q3: versions/v3-2020-Q3.md
