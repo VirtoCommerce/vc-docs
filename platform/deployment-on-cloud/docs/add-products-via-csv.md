@@ -1,4 +1,4 @@
-# Import Products, Prices and Stock Quantities from CSV
+# Create Catalog via CSV
 
 To bulk add new products, along with their prices and stock quantities at each fulfillment center, you can use the CSV file import option.
 
@@ -92,3 +92,14 @@ The catalog import begins. When the import is finished, you can see that your ca
 The CSV file columns are displayed as follows:
 
 ![CSV file and frontend correspondence](media/catalog-csv.png)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../catalog-creation">← Create and configure catalog </a>
+    <a href="../store-configuration">Configure store →</a>
+</div>

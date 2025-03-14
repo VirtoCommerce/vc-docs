@@ -30,7 +30,7 @@ To decline a product uploaded by a vendor in the Vendor portal:
 1. Click **Marketplace products** in the main menu to open the list of all products from all marketplace vendors.
 1. In the next blade, find products with **Wait for approval** status. Click on the one you need to review.
 1. In the next blade, check the correctness of products properties. Click **Decline** in the toolbar if the products information does not meet the marketplace requirements.
-1. In the popup window, specify the reason for declinement and confirm the action:
+1. In the popup window, specify the reason for decline and confirm the action:
 
     ![Decline reason](media/decline-reason.png)
 
@@ -65,3 +65,15 @@ To contact a Vendor directly:
 1. In the next blade, you can start or continue a conversation. The dialog will appear the same way in the Vendor portal:
 
 ![Communication](media/communication.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../registration-requests">← Registration requests</a>
+    <a href="../offers">Offers →</a>
+</div>
+
+

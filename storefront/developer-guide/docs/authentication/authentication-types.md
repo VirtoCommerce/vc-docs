@@ -13,3 +13,13 @@ At the heart of Virto Commerce Frontend’s security is token-based authenticati
 ![Readmore](media/readmore.png){: width="25"} [Adding Entra ID [Azure AD] as SSO provider](adding-sso-provider.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Adding Google as SSO provider](adding-google-as-sso-provider.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../migration">← Migration to Storefrontless architecture</a>
+    <a href="../anonymous-authentication">Anonymous authentication →</a>
+</div>

@@ -84,3 +84,12 @@ To create component model in Storyblok:
         ![StorySlider Settings](media/story-slider-settings.png)
 
 Now you can add it to the Content page to create a new StorySlider block!
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../index-page-integration">← Index page integration </a>
+</div>

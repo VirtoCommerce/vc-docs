@@ -1,4 +1,4 @@
-# Overview
+# Integrate Index Page
 
 In this article, we will integrate Storyblok CMS into the index page of the **Virto Commerce vue-b2b-theme**. The integration will allow you to create and manage content in Storyblok CMS and display it in the **Virto Commerce vue-b2b-theme**.
 
@@ -90,3 +90,13 @@ If you have already added custom components to **Storyblok**, use them to create
 As a result, you will get integration of Storyblok CMS with the index page of **Virto Commerce vue-b2b-theme**:
 
 ![Storyblok Integration](media/storyblok-integration-index-page.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../footer-integration">← Footer integration </a>
+    <a href="../registering-custom-components">Registering custom components  →</a>
+</div>

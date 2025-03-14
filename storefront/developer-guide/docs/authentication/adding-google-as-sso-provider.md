@@ -68,3 +68,14 @@ The GraphQL query confirms that authentication via Google AD is enabled:
 The Google authentication button appears on the login page of the Frontend Application:
 
 ![Google button](media/google-button.png){: width="700"}
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../adding-sso-provider">← Adding Azure AD (Entra ID) as SSO provider </a>
+    <a href="../../integrations/google-analytics/ga-events">Google Analytics events  →</a>
+</div>

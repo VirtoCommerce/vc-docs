@@ -1,4 +1,4 @@
-# Overview
+# Integrate Catalog Menu
 
 In this article, we will integrate **Catalog Menu** with the Storyblok CMS. The integration will allow you to create and manage catalog navigation links in the Storyblok CMS and display them in the `Virto Commerce vue-b2b-theme`.
 
@@ -122,3 +122,12 @@ The **Catalog Menu** is now fetched from Storyblok and displayed in the **vue-b2
 ![Catalog Menu](media/catalog-menu.png)
 
 You can publish the changes and see the **Catalog Menu** in the **vue-b2b-theme**.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Storyblok overview </a>
+    <a href="../category-page-integration">Category page integration  →</a>
+</div>

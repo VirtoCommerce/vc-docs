@@ -185,3 +185,13 @@ The key functionalities include:
 * [Searching and filtering products.](../../../storefront/user-guide/shopping/searching-for-products)
 * [Managing push messages.](../../../storefront/user-guide/account/notifications)
 * [Reviewing products.](../../../storefront/user-guide/account/review-products)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="architecture">Architecture →</a>
+</div>
+

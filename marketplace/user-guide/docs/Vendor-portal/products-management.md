@@ -107,3 +107,14 @@ When an Operator has a question about a Vendor's product, the Vendor will see it
 Clicking on the widget, opens a communication blade, where the Vendor can send instant replies to the Operator:
 
 ![Communication blade](media/communication-blade.png){: width="600"}
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../orders">← Orders</a>
+    <a href="../offers">Offers and price tags →</a>
+</div>
+
+

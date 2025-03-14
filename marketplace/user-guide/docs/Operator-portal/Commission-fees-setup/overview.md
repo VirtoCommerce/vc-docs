@@ -13,3 +13,13 @@ In Virto Commerce Marketplace, you can setup:
 
 * [Static commission fees](static-commission-fees.md), which are fixed-rate fees applied to transactions irrespective of any varying factors. 
 * [Dynamic commission fees](dynamic-commission-fees.md), which are variable rates that can apply to product, product category, or a vendor.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../master-catalog">← Master catalog</a>
+    <a href="../static-commission-fees">Static commission fees →</a>
+</div>

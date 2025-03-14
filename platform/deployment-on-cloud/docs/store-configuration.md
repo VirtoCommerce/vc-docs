@@ -77,3 +77,12 @@ As an example, let't set the ground fixed shipping rate to 20% and air shipping 
 
 The shipping rates have been saved.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../add-products-via-csv">← Create catalog via CSV </a>
+    <a href="../main-menu-setup">Set up main menu →</a>
+</div>

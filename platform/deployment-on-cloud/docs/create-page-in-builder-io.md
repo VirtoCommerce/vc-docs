@@ -44,3 +44,13 @@ Let's create the Shipping Policy page in Builder.io using the following example:
 Now, you can preview your page or view it at your store URL (dentalstoredemo.govirto.com/shipping-policy):
 
 ![Page preview](media/page-preview.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../store-branding">← Brand store </a>
+    <a href="../enable-gitops">Enable GitOps →</a>
+</div>
+

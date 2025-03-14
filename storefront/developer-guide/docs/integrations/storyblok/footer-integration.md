@@ -154,3 +154,12 @@ After making the changes, the footer will now be fetched from Storyblok and disp
 ![Footer](media/footer.png)
 
 Now you can publish the changes in Storyblok and see the updated footer in the **vue-b2b-theme**.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../category-page-integration">← Category page integration </a>
+    <a href="../index-page-integration">Index page integration  →</a>
+</div>

@@ -8,3 +8,11 @@ If you are currently running a local deployment of Virto Commerce with the Platf
 
 You have successfully migrated to new architecture.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../migration-on-azure">← Migration on Azure Cloud</a>
+    <a href="../authentication/authentication-types">Authentication types →</a>
+</div>

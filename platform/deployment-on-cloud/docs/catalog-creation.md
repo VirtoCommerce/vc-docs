@@ -1,4 +1,4 @@
-# Catalog Configuration
+# Create and Configure Catalog
 
 In this guide, we are going to configure catalog as follows: 
 
@@ -443,3 +443,14 @@ The properties are displayed as facets:
 The product properties are also displayed in the product cards:
 
 ![Product properties](media/product-properties.png)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../create-environment-via-cli-and-vc-build">← Create environment via CLI and VC Build </a>
+    <a href="../add-products-via-csv">Create catalog via CSV →</a>
+</div>

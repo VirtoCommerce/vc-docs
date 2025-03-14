@@ -201,3 +201,14 @@ All added records have been indexed.
 You can start using your environments!
 
 ![App](media/first-app-opening.png)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../">← Overview </a>
+    <a href="../create-environment-via-cli-and-vc-build">Create environment via CLI and VC Build →</a>
+</div>

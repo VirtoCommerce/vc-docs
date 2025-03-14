@@ -45,3 +45,16 @@ To manage the orders:
     ![Order documents](media/order-documents-management.png)
 
 1. Use the toolbar to save, reset changes, delete order, cancel document, or get invoice PDF.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../offers">← Offers</a>
+    <a href="../state-machines">State machines →</a>
+</div>
+
+

@@ -16,3 +16,12 @@ Anonymous authentication can be used for:
 
 * **Guest checkout**: Users can shop without logging in and still have their carts preserved across browsing sessions.
 * **Abandoned cart recovery**: If a user adds items to their cart and leaves without logging in, their cart can be retained when they return, potentially leading to higher conversion rates.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../authentication-types">← Token-based authentication</a>
+    <a href="../adding-sso-provider">Adding Azure AD (Entra ID) as SSO provider  →</a>
+</div>

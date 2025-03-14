@@ -15,3 +15,13 @@ While the Operator portal shares a part of the Platform functionality, the follo
 * [Setting static and dynamic commissions for vendors.](Commission-fees-setup/overview.md)
 * [Reviewing, approving, and declining products submitted by vendors.](marketplace-products.md)
 * [Managing offers submitted by vendors.](offers.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../master-catalog">Master catalog →</a>
+</div>
+

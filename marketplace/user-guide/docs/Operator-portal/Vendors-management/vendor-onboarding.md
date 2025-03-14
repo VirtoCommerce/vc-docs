@@ -24,3 +24,12 @@ Vendors can send registration requests themselves to initiate the onboarding pro
 ![Registration form](media/registration-form.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Registration requests](../registration-requests.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../commission-fees-setup/dynamic-commission-fees">← Dynamic commission fees</a>
+    <a href="../vendor-management">Vendor management →</a>
+</div>

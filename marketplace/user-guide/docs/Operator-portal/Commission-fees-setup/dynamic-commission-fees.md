@@ -61,3 +61,13 @@ To delete a dynamic commission:
 1. Confirm deletion.
 
 The commission has been deleted.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../static-commission-fees">← Static commission fees</a>
+    <a href="../../vendors-management/vendor-onboarding">Vendor onboarding →</a>
+</div>

@@ -29,22 +29,22 @@ A well-structured module ensures clarity and ease of maintenance. Below is the r
 
 ```json
 your-module/
-├── api/ // All API-related code, including GraphQL schemas and generated types. 
+├── api/                    // All API-related code, including GraphQL schemas and generated types. 
 │   ├── graphql/
 │   │   └── types.ts
-├── components/ // Vue components specific to the module.
+├── components/             // Vue components specific to the module.
 │   └── YourComponent.vue
-├── composables/ // Vue composables (hooks) for shared logic within the module
+├── composables/            // Vue composables (hooks) for shared logic within the module
 │   └── useYourFeature.ts
-├── pages/ // Module-specific pages that integrate with the application's routing.
+├── pages/                  // Module-specific pages that integrate with the application's routing.
 │   ├── YourModulePage.vue
 │   └── index.ts
-├── localization/ // Localization files for supporting multiple languages.
+├── localization/           // Localization files for supporting multiple languages.
 │   ├── en.json
 │   └── de.json
-├── types/ // TypeScript interfaces and types for the module.
+├── types/                  // TypeScript interfaces and types for the module.
 │   └── index.ts
-└── index.ts // Entry point exporting public APIs (mainly init function).
+└── index.ts                // Entry point exporting public APIs (mainly init function).
 ```
 
 

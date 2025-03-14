@@ -38,3 +38,12 @@ Other tracked actions are as follows:
 | add_to_wishlist                                       |Add product to wishlist.                           | The product is added to list.                         | Category page/ Product page                   |
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../../authentication/authentication-types">← Authentication types </a>
+    <a href="../../prerender_io/">Enhancing SEO with Prerender.io  →</a>
+</div>

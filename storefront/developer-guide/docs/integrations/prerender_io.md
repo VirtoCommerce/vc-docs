@@ -8,7 +8,7 @@ To overcome these challenges and strike a balance between an engaging user exper
 
 In this guide, we describe the results of Prerender.io  integration with the vc-theme-b2b-vue. A practical example is our [site](https://virtostart-demo-store.govirto.com/), which is built on vc-theme-b2b-vue and uses the Prerender.io service.
 
-### Configuration Details
+### Configuration details
 
 The integration involved setting up a reverse proxy using Nginx in front of the VC Frontend Application. Additionally, the vc-theme-b2b-vue and Prerender's cloud service were installed. The Nginx reverse proxy was configured based on the [example](https://docs.prerender.io/docs/nginx-1).
 
@@ -18,7 +18,7 @@ A notable configuration adjustment was made to ensure proper image loading on Se
 
 ![dashboard](media/dashboard.png)
 
-## Performance Evaluation
+## Performance evaluation
 
 To measure the impact of Prerender.io on performance, a PageSpeed analysis was conducted for a category listing page. The comparison involved assessing the performance with and without SSR page rendering through Prerender.io.
 
@@ -33,3 +33,14 @@ By avoiding server-side logic, Prerender.io enables a streamlined frontend solut
 ![Readmore](media/readmore.png){: width="25"} [SPA JavaScript SEO Challenges and Solutions - Prerender.io](https://prerender.io/blog/spa-javascript-seo-challenges-and-solutions/)
 
 ![Readmore](media/readmore.png){: width="25"} [Setting Up Prerender.io with Azure Application Gateway](../../../../platform/developer-guide/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../google-analytics/ga-events">← Google Analytics events </a>
+    <a href="../builder-io/overview">Builder.io  →</a>
+</div>

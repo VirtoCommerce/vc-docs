@@ -74,3 +74,13 @@ Your new color scheme has been applied.
 Your store's branding changes have been applied:
 
 ![Branded store](media/branded-shop.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../footer-creation">← Set up footer </a>
+    <a href="../create-page-in-builder-io">Create page in Builder.io →</a>
+</div>
+

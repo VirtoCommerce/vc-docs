@@ -321,3 +321,12 @@ This command analyzes all locale files, identifies missing keys, translates the 
 ### Troubleshooting
 
 If you encounter an error such as `dot command not found` on Windows, it's likely due to a missing Graphviz installation. Ensure that [Graphviz](https://graphviz.gitlab.io/download/) is installed on your system to resolve this issue.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../architecture">← Architecture</a>
+    <a href="../migration">Migration to Storefrontless architecture →</a>
+</div>

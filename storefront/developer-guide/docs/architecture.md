@@ -42,3 +42,13 @@ The workflow ensures a seamless and efficient operation of the Virto Commerce Fr
         - **CDN Integration**: Integrate with a Content Delivery Network (CDN) to serve static content faster and reduce server load.
         - **Firewall and DDoS Protection**: Implement firewall rules and Distributed Denial of Service (DDoS) protection to secure the application.
         - **Server-Side Rendering (SSR)**: Configure SSR to improve SEO and initial load times by rendering pages on the server before sending them to the client.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../">← Overview</a>
+    <a href="../deployment">Deployment →</a>
+</div>

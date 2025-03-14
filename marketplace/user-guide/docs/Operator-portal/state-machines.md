@@ -103,3 +103,16 @@ Expand the example below to see an order processing workflow algorithm and its J
     }
     ]
     ```
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../operator-orders">← Operator orders</a>
+    <a href="../../Vendor-portal/overview">Vendor portal overview→</a>
+</div>
+
+

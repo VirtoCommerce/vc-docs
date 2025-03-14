@@ -45,3 +45,12 @@ To log in to the Vendor portal on Vendor behalf:
 The Vendor portal opens in a new window. Here you can also switch between Vendors without having to return to the Operator portal:
 
 ![Login on behalf](media/switch-between-vendors.gif)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../vendor-onboarding">← Vendor onboarding</a>
+    <a href="../../registration-requests">Registration requests →</a>
+</div>

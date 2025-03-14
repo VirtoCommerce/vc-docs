@@ -27,3 +27,14 @@ By default, catalog menu is automatically generated based on the existing catego
     ![Top catalog level](media/top-catalog-level-settings.png)
 
 Your new dropdown menu appears in the Frontend Application.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../store-configuration">← Configure store </a>
+    <a href="../footer-creation">Set up footer →</a>
+</div>
+

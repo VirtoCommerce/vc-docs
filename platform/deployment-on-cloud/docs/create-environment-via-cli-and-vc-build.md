@@ -75,3 +75,13 @@ You can also:
 ![Readmore](media/readmore.png){: width="25"} [Other available commands](../../../developer-guide/CLI-tools/virto-cloud)
 
 Now you can [sign in to the created environment](deploy-on-virto-cloud.md#sign-in-to-backend).
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../deploy-on-virto-cloud">← Deploy Platform and Frontend on Virto Cloud </a>
+    <a href="../catalog-creation">Create catalog →</a>
+</div>

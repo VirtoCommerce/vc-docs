@@ -67,3 +67,15 @@ A new shipment has been created.
 When creating or editing a shipment, users can add items to the shipment by clicking **Add item** at the bottom of the blade. In the new blade, users can edit the quantity of items:
 
 ![Add items to shipment](media/edit-shipment-items.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Vendor portal overview</a>
+    <a href="../products-management">Products →</a>
+</div>
+
+

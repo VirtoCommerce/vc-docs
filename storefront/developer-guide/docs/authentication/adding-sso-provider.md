@@ -46,3 +46,13 @@ The Azure AD authentication button appears on the login page of the Frontend App
 
 !!! note
     If an account does not exist, clicking on the Azure Active Directory button will automatically create a new account.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../anonymous-authentication">← Anonymous authentication </a>
+    <a href="../adding-google-as-sso-provider">Adding Google as SSO provider  →</a>
+</div>

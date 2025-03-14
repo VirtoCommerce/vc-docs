@@ -21,7 +21,7 @@ nav:
     - Overview: index.md
     - Deploy Platform and Frontend on Virto Cloud: deploy-on-virto-cloud.md
     - Create Environment via CLI and VC Build: create-environment-via-cli-and-vc-build.md
-    - Create Catalog: catalog-creation.md
+    - Create and Configure Catalog: catalog-creation.md
     - Create Catalog via CSV: add-products-via-csv.md
     - Configure Store: store-configuration.md
     - Set up Main Menu: main-menu-setup.md

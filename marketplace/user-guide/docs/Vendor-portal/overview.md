@@ -17,3 +17,16 @@ The key features the Vendor portal suggests for a Vendor are:
 * [Employees management.](my-store.md#people)
 * [Fulfillment centers management.](my-store.md#fulfillment-centers)
 * [Organization details editing.](my-store.md#profile)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Operator-portal/state-machines">← State machines</a>
+    <a href="../orders">Orders →</a>
+</div>
+
+

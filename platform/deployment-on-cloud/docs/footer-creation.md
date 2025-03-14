@@ -27,3 +27,14 @@ Let's create the following footer:
 Continue adding subcategories to the root categories according to the example above.
 
 The footer appears in the Frontend Application.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../main-menu-setup">← Set up main menu </a>
+    <a href="../store-branding">Brand store →</a>
+</div>
+

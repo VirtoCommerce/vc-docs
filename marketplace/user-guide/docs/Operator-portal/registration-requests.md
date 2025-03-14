@@ -23,3 +23,13 @@ The Operator can:
     
      A new Vendor entity will be added to the list of vendors. The Vendor will receive an account activation link at the submitted email address. Once the account is activated, the owner can start using the Vendor portal and work with the Marketplace. 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../Vendors-management/vendor-management">← Vendor management</a>
+    <a href="../marketplace-products">Marketplace products →</a>
+</div>
+

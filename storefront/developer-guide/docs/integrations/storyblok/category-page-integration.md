@@ -1,4 +1,4 @@
-# Overview
+# Integrate Category Page
 
 In this article, we will integrate Storyblok CMS into the category page of the **Virto Commerce vue-b2b-theme**. The integration will allow you to create and manage content in Storyblok CMS and display it in the **Virto Commerce vue-b2b-theme**.
 
@@ -130,3 +130,13 @@ If you have already added custom components to Storyblok, use them to create con
 As a result, you will get integration of Storyblok CMS with the category page of **Virto Commerce vue-b2b-theme**:
 
 ![Storyblok Integration](media/storyblok-integration-category-page.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../catalog-menu-integration">← Catalog menu integration </a>
+    <a href="../footer-integration">Footer integration  →</a>
+</div>

@@ -15,3 +15,15 @@ To manage the offers:
     ![Offers management](media/offers-management.png)
 
 1. Use the toolbar to save, reset changes, delete offer, or set it as default.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../marketplace-products">← Marketplace products</a>
+    <a href="../operator-orders">Operator orders →</a>
+</div>
+
+

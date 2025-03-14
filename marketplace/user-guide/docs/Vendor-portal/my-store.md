@@ -39,3 +39,11 @@ This subsection is designed for managing the inventory aspects of your store:
 * Assign external IDs to fulfillment centers for synchronization purposes, such as synchronizing inventory across different systems.
 
 ![Fulfillment centers](media/fulfillment-centers.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../rating-and-reviews">← Rating and reviews</a>
+</div>

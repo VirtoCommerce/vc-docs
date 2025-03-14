@@ -34,3 +34,11 @@ The result of initial deployment is as follows:
 
     ![Remove Storefront](media/delete-storefront.png)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../migration">← Migration options overview</a>
+    <a href="../migration-on-local-machine">Migration on local machine →</a>
+</div>

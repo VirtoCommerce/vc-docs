@@ -50,9 +50,12 @@ To integrate with Virto Commerce Frontend Application:
 
 ![Readmore](media/readmore.png){: width="25"} [Add a headless CMS to VueJS in 5 minutes](https://www.storyblok.com/tp/add-a-headless-CMS-to-vuejs-in-5-minutes#connecting-vue-to-storyblok)
 
-## Next Steps
 
-* [Catalog Menu Integration](catalog-menu-integration.md)
-* [Category Page Integration](category-page-integration.md)
-* [Footer Integration](footer-integration.md)
-* [Index Page Integration](index-page-integration.md)
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../builder-io/overview">← Builder.io </a>
+    <a href="../catalog-menu-integration">Catalog menu integration  →</a>
+</div>

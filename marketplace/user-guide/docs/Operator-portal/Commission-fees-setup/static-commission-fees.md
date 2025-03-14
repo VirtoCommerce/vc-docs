@@ -68,3 +68,13 @@ To assign a static commission fee to a Vendor:
     It is common to define Vendor tiers in the marketplace and configure commissions based on the defined vendor levels (e.g. Bronze, Silver, Gold).
 
 The commission has been assigned to a vendor.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Overview</a>
+    <a href="../dynamic-commission-fees">Dynamic commission fees →</a>
+</div>

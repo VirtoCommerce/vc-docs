@@ -40,3 +40,14 @@ For various pricing strategies a vendor might set different price tags for a sin
 Your price tag has been added to the offer:
 
 ![Added price tags](media/price-tags-added.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../products-management">← Products</a>
+    <a href="../import">Import →</a>
+</div>
+
+

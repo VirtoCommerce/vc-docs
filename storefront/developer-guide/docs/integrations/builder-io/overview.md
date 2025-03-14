@@ -7,3 +7,14 @@ As long as Virto Frontend Application has native integration with Builder.io, yo
 ![Readmore](media/readmore.png){: width="25"} [Enabling Builder.io](../../../../../platform/user-guide/integrations/builder-io/getting-started#enable-builderio-and-assign-api-key-to-store)
 
 ![Readmore](media/readmore.png){: width="25"} [Integrating custom components with Builder.io](https://www.builder.io/c/docs/custom-components-intro)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../prerender_io">← Enhancing SEO with Prerender.io </a>
+    <a href="../../storyblok/overview">Storyblok  →</a>
+</div>

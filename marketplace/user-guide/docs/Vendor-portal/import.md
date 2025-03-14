@@ -19,3 +19,12 @@ To upload large volumes of products and offers simultaneously, vendors can use t
 1. Click **Start import**. You can monitor the upload status below.
 
 When you see the **Completed** status, your products have been successfully uploaded.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../offers">← Offers</a>
+    <a href="../rating-and-reviews">Rating and reviews →</a>
+</div>
