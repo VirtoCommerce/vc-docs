@@ -124,7 +124,7 @@ plugins:
             'fundamentals/extensibility/ui-scroll-directive.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/ui-scroll-directive'
             'fundamentals/extensibility/using-dynamic-properties.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Dynamic-Properties/overview'
             'fundamentals/extensibility/widgets.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/widgets'
-            'getting-started/connect-storefront-to-platform-v3.md': 'https://docs.virtocommerce.org/storefront/developer-guide/getting-started/quickstart-on-windows'
+            'getting-started/connect-storefront-to-platform-v3.md': 'https://docs.virtocommerce.org/storefront/developer-guide/deployment'
             'getting-started/deploy-from-precompiled-binaries-MacOS.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/macOS'
             'getting-started/deploy-from-precompiled-binaries-azure.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure'
             'getting-started/deploy-from-precompiled-binaries-linux.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/linux'

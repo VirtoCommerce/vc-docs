@@ -1,6 +1,6 @@
-# Content
+# xCMS
 
-The xCMS module, or Content module, serves as a component for managing and delivering dynamic content within the system. It provides capabilities for creating, organizing, and presenting various types of content.
+The xCMS module serves as a component for managing and delivering dynamic content within the system. It provides capabilities for creating, organizing, and presenting various types of content.
 
 | Queries                                                                        	| Objects                                        	| 
 |-------------------------------------------------------------------------------	|-------------------------------------------------	|

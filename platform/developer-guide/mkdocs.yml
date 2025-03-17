@@ -331,7 +331,7 @@ nav:
                       - Filtering: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering.md
                       - Facets: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets.md
                       - Multi Select Faceting Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search.md
-          - xCMS (Content):
+          - xCMS:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
                 - Queries:
                       - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
