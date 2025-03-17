@@ -16,6 +16,10 @@ The Virto Commerce Page Builder module offers:
 
 ## Key features
 
+The diagram below illustrates the relationships within the Virto Commerce Content Management System:
+
+![Key entities](media/key-entities.png)
+
 With the PageBuilder module, you can
 
 * Visually build a new landing page without a developer.
@@ -29,7 +33,3 @@ With the PageBuilder module, you can
 * Seamlessly integrate with Virto Frontend Application.
 * Leverage the native extensibility framework.
 * Set permissions to control access and editing capabilities.
-
-The diagram below illustrates the interconnections among various key entities within the Page Builder module:
-
-![Key entities](media/key-entities.png)

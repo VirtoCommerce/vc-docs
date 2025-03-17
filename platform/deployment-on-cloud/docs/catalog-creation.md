@@ -215,6 +215,7 @@ Click on any category or subcategory to view the products within:
     By default, catalog menu is automatically generated based on the existing categories. You can create your own catalog menu using [this guide](main-menu-setup.md).
 
 ## Configure properties
+<!--properties-start-->
 
 For enhanced product filtering and search, let's configure properties within our catalog. They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
 
@@ -320,7 +321,7 @@ Let's add a **Brand** property at the catalog level:
 
     ![Add product property](media/add-property.png)
 
-1. In the next blade, enter property name, switch the **Dictionary** option to on, and select **Short text**  [value type](catalog-creation.md#value-type-selection):
+1. In the next blade, enter property name, switch the **Dictionary** option to on, and select **Short text**  [value type](#value-type-selection):
 
     ![Manage product property](media/manage-product-property.png)
 
@@ -333,7 +334,7 @@ Let's add a **Brand** property at the catalog level:
 
     ![Dictionary items](media/dictionary-items.png)
 
-The property appears in the list. On the frontend, the **Brand** facets becomes collapsible and the properties are displayed as follows:
+The property appears in the list. On the frontend, the **Brand** facet becomes collapsible and the properties are displayed as follows:
 
 ![Brand on frontend](media/brand-property-on-frontend.png)
 
@@ -444,7 +445,7 @@ The product properties are also displayed in the product cards:
 
 ![Product properties](media/product-properties.png)
 
-
+<!--properties-end-->
 
 <br>
 <br>

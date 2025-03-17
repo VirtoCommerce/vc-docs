@@ -51,6 +51,12 @@ Each product card displays:
 
 ![product card](../media/product-card.png)
 
+!!! tip
+    After a new page opens, click **Tab** to open a new line of navigation. This will give you quick access to the main content or footer:
+
+    ![Tab navigation](../media/tab-navigation.gif)
+
+
 ## Mobile version
 
 In the Frontend Application mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.

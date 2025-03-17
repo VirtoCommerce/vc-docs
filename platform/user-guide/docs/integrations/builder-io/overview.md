@@ -8,7 +8,7 @@ The Virto Commerce Builder.io module adds link to Builder.io to the application 
 
 Virto Commerce and Builder.io integrate seamlessly via API. Once connected, Builder.io pulls in content components like text, images, videos, and carousels, which are then displayed in your online storefront alongside commerce modules from Virto Commerce — such as stock availability, pricing, customer reviews, and shipping information.
 
-Your ecommerce team can efficiently use existing code components and the design system from the Virto Commerce frontend as building blocks, enabling faster development while maintaining brand consistency. In addition, they can utilize Builder’s pre-built blocks to create customized experiences 
+Your e-commerce team can efficiently use existing code components and the design system from the Virto Commerce frontend as building blocks, enabling faster development while maintaining brand consistency. In addition, they can utilize Builder’s pre-built blocks to create customized experiences 
 
 ![Overview](media/overview.png){: width="650"}
 
@@ -18,6 +18,10 @@ Once the content is complete in the Builder's visual editor, Virto's prerenderin
 
 
 ## Key features
+
+The diagram below illustrates the relationships within the Virto Commerce Content Management System:
+
+![Key entities](media/key-entities.png)
 
 With the Builder.io module, you can:
 
