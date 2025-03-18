@@ -8,6 +8,9 @@ After the vendor submits the form, the Operator sees it in the **Registration re
 
 ![Registration request](media/registration-request.png)
 
+!!! note
+    An operator can fill out the form on behalf of a vendor by clicking **New request** in the toolbar.
+
 The Operator can:
 
 * **Process** the registration if additional steps are required. It receives **Processing** status in the list of registration requests.
@@ -22,6 +25,13 @@ The Operator can:
         The statuses can be edited in the [State machines](state-machines.md) section.
     
      A new Vendor entity will be added to the list of vendors. The Vendor will receive an account activation link at the submitted email address. Once the account is activated, the owner can start using the Vendor portal and work with the Marketplace. 
+
+!!! note
+    After successful registration of a new vendor, operator can open their vendor portal directly from the registration form:
+
+    ![Open vendor](media/open-vendor-from-registration-form.gif)
+
+    Operators can open Vendor portal on behalf of a vendor [from the Vendors section](Vendors-management/vendor-management.md#log-in-to-vendor-portal-on-vendor-behalf).
 
 
 <br>

@@ -2,18 +2,49 @@
 
 The State machines section manages and automates the various states and their transitions within the marketplace. 
 
-To add or configure a flow:
+To add a flow:
 
 1. Click **State machines** in the main menu.
-1. The next blade lists all the available order state flows. Select the flow you need to edit or click **Add** in the toolbar to add a new flow.
-1. In the next blade, configure the following fields:
+1. The next blade lists all the available order state flows. Click **Add** in the toolbar to add a new flow.
+1. In the next blade, click **Open Visual Editor**:
 
     ![Edit states](media/add-view-state.png)
 
+1. In the next blade, you can create a flow:
+
+    === "in Visual Editor"
+        1. Click **Visual editor** to create a flow:
+
+            1. Click **Add new state** to create a block specifying a state of the flow, for example, **New**:
+
+                ![First state](media/order-created.gif)
+
+            1. Create the second block, such as **Confirmed**, and connect it to the **New** block by extending a line between them. Then, specify the trigger.
+
+                ![Second state](media/order-confirmed.gif)
+            
+            1. Create a third block, such as **Canceled**, and connect it to the **New** block by extending a line between them. Then, specify the trigger.
+
+                ![Third state](media/order-canceled.gif)
+
+        1. Switch to JSON mode to view the flow automatically converted into a JSON file.
+        1. Click the checkbox once to mark a status as **Fail**, twice for **Success**, and three times to leave it unmarked:
+
+            ![Statuses marks](media/order-statuses.gif)
+
+
+
+    === "in JSON mode"
+        1. Switch to JSON mode in the toolbar.
+        1. Type or paste a new flow in the JSON format.
+
+1. Click **Create** in the previous toolbar. 
 1. Click **Save** in the toolbar to save the changes.
 
-Expand the example below to see an order processing workflow algorithm and its JSON representation.
+You new states flow has been added to the list.
 
+
+Expand the example below to see an order processing workflow algorithm and its JSON representation.
 
 ??? Example
 
@@ -23,84 +54,63 @@ Expand the example below to see an order processing workflow algorithm and its J
 
     ```json
     [
-    {
+      {
+        "id": "New",
         "name": "New",
-        "type": "StateMachineState",
-        "description": "Just created order",
+        "description": "Order created",
         "isInitial": true,
         "isFinal": false,
-        "stateData": {},
+        "isSuccess": false,
+        "isFailed": false,
+        "position": {
+          "x": 233,
+          "y": 44
+        },
         "transitions": [
         {
-            "trigger": "Confirm",
-            "description": "If you want to confirm order",
-            "toState": "Confirmed",
-            "icon": "far fa-check-circle"
+            "id": "transition_uaif3spvc",
+            "trigger": "Order confirmed",
+            "icon": "",
+            "description": "",
+            "toState": "Confirmed"
         },
         {
-            "trigger": "Cancel",
-            "description": "If you want cancel order",
-            "toState": "Cancelled",
-            "icon": "fas fa-times-circle"
+            "id": "transition_xjpksf9n1",
+            "trigger": "Order canceled",
+            "icon": "",
+            "description": "",
+            "toState": "Canceled"
         }
         ]
-    },
-    {
+      },
+      {
+        "id": "Confirmed",
         "name": "Confirmed",
-        "type": "StateMachineState",
-        "description": "Confirmed by a vendor order",
+        "description": "Order confirmed",
         "isInitial": false,
-        "isFinal": false,
-        "stateData": {},
-        "transitions": [
-        {
-            "trigger": "Pack",
-            "description": "Packed & Ready to Ship order",
-            "toState": "Packaged",
-            "icon": "fas fa-box"
+        "isFinal": true,
+        "isSuccess": false,
+        "isFailed": true,
+        "position": {
+          "x": 56,
+          "y": 194
         },
-        {
-            "trigger": "Cancel",
-            "description": "If you want cancel order",
-            "toState": "Cancelled",
-            "icon": "fas fa-times-circle"
-        }
-        ]
-    },
-    {
-        "name": "Packaged",
-        "type": "StateMachineState",
-        "description": "Packed & Ready to be shipped by a Vendor",
-        "isInitial": false,
-        "isFinal": false,
-        "stateData": {},
-        "transitions": [
-        {
-            "trigger": "Ship",
-            "description": "Ready to Ship the order",
-            "toState": "Shipped",
-            "icon": "fas fa-shipping-fast"
-        }
-        ]
-    },
-    {
-        "name": "Shipped",
-        "type": "StateMachineState",
-        "description": "Already shipped order",
+        "transitions": []
+      },
+      {
+        "id": "Canceled",
+        "name": "Canceled",
+        "description": "Order canceled",
         "isInitial": false,
         "isFinal": true,
-        "stateData": {},
+        "isSuccess": false,
+        "isFailed": false,
+        "position": {
+          "x": 432,
+          "y": 194
+        },
         "transitions": []
-    },
-    {
-        "name": "Cancelled",
-        "type": "StateMachineState",
-        "description": "Cancelled order",
-        "isInitial": false,
-        "isFinal": true,
-        "stateData": {},
-        "transitions": []
-    }
+      }
     ]
     ```
 
