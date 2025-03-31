@@ -2,20 +2,36 @@
 
 In this guide, we will learn how to create your own custom module according to your business or technical needs using the Virto Commerce ecosystem.
 
-!!! note
-    To develop a module that can work with different database systems without having to rewrite your code for each one, follow [this guide](../../Fundamentals/Persistence/DB-Agnostic/creating-custom-module.md).
-
 ## Create solution from template
 To run your own Virto Commerce module, you can [create it from scratch](create-new-module-from-scratch.md). However, it is recommended that you do it based on a predefined template. To do this: 
 
 1. Create a source directory or, if you already have one, navigate to it.
 1. Open Windows CMD or PowerShell.
-1. Run the following commands:
+1. Run the following command to install the Virto Commerce module template:
 
     ```console
     dotnet new install VirtoCommerce.Module.Template
-    dotnet new vc-module --ModuleName MyCoolModule --Author "Jon Doe" --CompanyName MyCoolCompany
     ```
+
+1. Run the following command to create a new module based on that template with the specified name, author, and company:
+
+    * For a module with DB Agnostic and xAPI support:
+
+        ```console
+        dotnet new vc-module-dba-xapi --ModuleName CustomerReviews --Author "Jon Doe" --CompanyName VirtoCommerce
+        ```
+
+    * For a module with DB Agnostic support only:
+        ```console    
+        dotnet new vc-module-dba --ModuleName CustomerReviews --Author "Jon Doe" --CompanyName VirtoCommerce
+        ```
+
+    * For a module with xAPI support only:
+        ```console
+        dotnet new vc-module-xapi --ModuleName CustomerReviews --Author "Jon Doe" --CompanyName VirtoCommerce
+        ```
+
+![Readmore](media/readmore.png){: width="25"} [Custom Modules Templates for Dotnet New](module-templates-for-dotnet-new.md)
 
 When you are done, you will have your `vc-module-my-cool-module` solution with the following structure, which you can see when you open your newly created module with Visual Studio:
 

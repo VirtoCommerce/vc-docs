@@ -2,10 +2,8 @@
 
 Use this technique if you want to develop a module that can work with different database systems without having to rewrite your code for each one.
 
-[Virto Commerce Module Templates](https://github.com/VirtoCommerce/vc-cli-module-template) for Dotnet is a tool that helps you generate the basic structure and files for a new module based on some parameters. 
-
-!!! note
-    To create your own custom module from template, follow [this guide](../../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
+!!! info
+    [Custom modules templates for Dotnet New](../../../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md) help you generate the basic structure and files for a new module based on some parameters. 
 
 To create a new module with a database agnostic approach:
 
