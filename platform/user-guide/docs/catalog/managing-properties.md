@@ -139,6 +139,7 @@ When adding product properties, you can select the following value types from th
 | Boolean          | True/false value, suitable for binary attributes.              | Requires assembly: false                      |
 | Integer          | Whole number, ideal for quantities or counts.                  | Pack size: 10                                 |
 | Geo Point        | Geographical coordinates (latitude and longitude) for location-based data.| Store location: 40.7128° N, 74.0060° W  |
+| HTML             | Property description in HTML format                            | Platform: ![Html property](media/html-property-platform.png)<br> Frontend: ![Html property](media/html-property-frontend.png)|
 
 ### Configure properties for category
 

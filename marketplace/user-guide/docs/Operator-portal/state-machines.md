@@ -27,11 +27,14 @@ To add a flow:
 
                 ![Third state](media/order-canceled.gif)
 
+            !!! note
+                Hovering over transition lines or states highlights the connected units.
+
         1. Switch to JSON mode to view the flow automatically converted into a JSON file.
         1. Click the checkbox once to mark a status as **Fail**, twice for **Success**, and three times to leave it unmarked:
 
             ![Statuses marks](media/order-statuses.gif)
-
+        
 
 
     === "in JSON mode"

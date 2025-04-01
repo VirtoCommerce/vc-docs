@@ -26,3 +26,7 @@ To view the log of all the notifications sent:
 1. The next blade shows the notifications log.
 
 ![Notification activity feed](media/notification-activity-feed-path.png){: width="800"}
+
+To review email messages sent to clients you can preview the email notifications: 
+
+![Preview](media/notifications-preview.gif)

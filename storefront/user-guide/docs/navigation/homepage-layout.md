@@ -51,10 +51,20 @@ Each product card displays:
 
 ![product card](../media/product-card.png)
 
-!!! tip
-    After a new page opens, click **Tab** to open a new line of navigation. This will give you quick access to the main content or footer:
+## Keyboard navigation
 
-    ![Tab navigation](../media/tab-navigation.gif)
+You can use the keyboard to navigate through the store:
+
+| Key                  | Description                                                                   |
+|----------------------|-------------------------------------------------------------------------------|
+| **Tab**              | Open a new line of navigation for quick access to the main content or footer. |
+| **Tab** (repeatedly) | Move focus forward.                                                           |
+| **Shift + Tab**      | Move focus backward.                                                          |
+| **Enter**            | Activate buttons or open links.                                               |
+| **Space**            | Select or deselect checkboxes and radio buttons.                              |
+| **Esc**              | Close dropdowns and modals.                                                   |
+
+![Tab navigation](../media/keyboard-interaction.gif)
 
 
 ## Mobile version

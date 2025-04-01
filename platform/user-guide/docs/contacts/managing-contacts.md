@@ -33,6 +33,11 @@ To add a contact:
 		When adding store customers (**Contacts**), you can set the default language and default currency for their accounts:
 
 		![Default language](media/default-language.png)
+	
+	!!! note
+		If a user is listed in the Contacts, they can now upload their personal photos to customize and brand their workspace:
+
+		![User photo](media/user-photo.png)
 
 1. Click **Create** to save the changes.
 

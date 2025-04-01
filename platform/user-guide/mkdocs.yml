@@ -25,7 +25,7 @@ nav:
           - Modules Installation: modules-installation.md
           - Getting Started: getting-started.md
           - B2B Multi-Regional eCommerce Architecture: multiregional-ecommerce.md
-          - View Results on Frontend Environment: view-results-on-frontend.md
+          - Viewing Results on Frontend Environment: view-results-on-frontend.md
           - ADA Compliance: ada-compliance.md
           - Managing Frontend Content: managing-content.md 
     - Modules:
@@ -159,13 +159,13 @@ nav:
                 - Managing Contracts: contracts/creating-and-terminating-contracts.md
                 - Managing Contract prices: contracts/managing-contract-prices.md
                 - Managing Contract customers: contracts/managing-contract-customers.md
+          - Customer Export and Import:
+                - Overview: customer-export-import/overview.md
           - Dynamic Associations: 
                 - Overview: dynamic-associations/overview.md
           - Event Bus: 
                 - Overview: event-bus/overview.md
                 - Configurations: event-bus/configuration.md
-          - Export and Import:
-                - Overview: customer-export-import/overview.md
           - GDPR: 
                 - Overview: gdpr/overview.md
                 - Managing Personal Data: gdpr/manage-personal-data.md

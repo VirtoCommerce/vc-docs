@@ -631,6 +631,7 @@ nav:
           - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
           - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
           - Extending Application User: Extensibility/extending-application-user.md
+          - Adding New Blocks to Page Builder: Extensibility/page-builder-extension.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:
