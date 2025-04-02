@@ -1,15 +1,14 @@
-
 # Manage Units of Measure
 
 The Catalog module allows you to sell products in different units of measure. 
 
 Managing units of measure includes:
 
-* [Adding default units of measure]
-* [Adding new units.](managing-units-of-measure.md#add-new-unit-of-measure)
-* [Adding measure units to a specific unit of measure.](managing-units-of-measure.md#add-measure-unit-to-specific-unit)
-* [Setting measure unit as default.](managing-units-of-measure.md#set-unit-as-default)
-* [Deleting units.](managing-units-of-measure.md#set-unit-as-default)
+* [Adding default units of measure.](#add-default-units-of-measure)
+* [Adding new dimension.](#add-new-dimension)
+* [Adding measure units to a specific dimension.](#add-unit-of-measure-to-dimension)
+* [Setting measure unit as default.](#set-unit-as-default)
+* [Deleting units.](#delete-unit)
 
 ## Add default units of measure
 
@@ -128,3 +127,5 @@ To delete a unit:
 1. Confirm your action.
 
 The unit has been deleted from the list.
+
+
