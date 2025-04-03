@@ -37,7 +37,7 @@ In the list of fulfillment centers:
 
 The modifications have been saved.
 
-## Delete fullfillment center
+## Delete fulfillment center
 
 In the list of fulfillment centers:
 
@@ -47,4 +47,4 @@ In the list of fulfillment centers:
 
 1. Confirm the deletion. 
 
-The fulfillment center have been permanently removed.
+The fulfillment center has been permanently removed.

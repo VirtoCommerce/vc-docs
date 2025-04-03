@@ -104,7 +104,7 @@ To import contacts into the Contacts module:
 		In this step, you can specify an organization to import your contacts into. 
 
 1. In the next blade, select the data type from the dropdown list (Contacts or Organizations).
-1. Browse your file or drag and drop it to the specififed field.
+1. Browse your file or drag and drop it to the specified field.
 
 	![Import Contacts](media/import-contacts.png)
 
@@ -155,3 +155,4 @@ For corporate accounts in the Frontend Application, you can assign multiple orga
 The contact can now switch between the assigned organizations in the Frontend Application:
 
 ![Storefront multiple organizations](media/storefront-multiple-organizations.png)
+

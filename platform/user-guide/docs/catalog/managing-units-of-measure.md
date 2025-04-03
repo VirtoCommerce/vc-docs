@@ -15,44 +15,44 @@ Managing units of measure includes:
 To simplify initial configuration, we have added default dimensions and their measure units to the Catalog:
 
 === "Weight"
-    | Name     | Code | Conversion Rate (to Base) | Base Unit | Is Default |
-    |----------|------|--------------------------|-----------|------------|
-    | Kilogram | KG   | 1                        | KG        | ✅ Yes      |
-    | Gram     | G    | 0.001                    | KG        | ❌ No       |
-    | Pound    | LB   | 0.453592                 | KG        | ❌ No       |
-    | Ounce    | OZ   | 0.0283495                | KG        | ❌ No       |
+    | Name     | Code | Conversion rate (to base) | Base unit | Default |
+    |----------|------|---------------------------|-----------|---------|
+    | Kilogram | KG   | 1                         | KG        | ✔       |
+    | Gram     | G    | 0.001                     | KG        | x       |
+    | Pound    | LB   | 0.453592                  | KG        | x       |
+    | Ounce    | OZ   | 0.0283495                 | KG        | x       |
 
 === "Volume"
-    | Name         | Code  | Conversion Rate (to Base) | Base Unit | Is Default |
-    |-------------|-------|--------------------------|-----------|------------|
-    | Liter       | L     | 1                        | L         | ✅ Yes      |
-    | Milliliter  | ML    | 0.001                    | L         | ❌ No       |
-    | Gallon      | GAL   | 0.264172                 | L         | ❌ No       |
-    | Fluid Ounce | FL OZ | 33.814                   | L         | ❌ No       |
+    | Name        | Code  | Conversion rate (to base) | Base unit | Default |
+    |-------------|-------|---------------------------|-----------|---------|
+    | Liter       | L     | 1                         | L         | ✔       |
+    | Milliliter  | ML    | 0.001                     | L         | x       |
+    | Gallon      | GAL   | 0.264172                  | L         | x       |
+    | Fluid Ounce | FL OZ | 33.814                    | L         | x       |
 
 === "Length"
-    | Name       | Code | Conversion Rate (to Base) | Base Unit | Is Default |
-    |-----------|------|--------------------------|-----------|------------|
-    | Meter     | M    | 1                        | M         | ✅ Yes      |
-    | Centimeter| CM   | 0.01                     | M         | ❌ No       |
-    | Inch      | IN   | 39.3701                  | M         | ❌ No       |
-    | Foot      | FT   | 3.28084                  | M         | ❌ No       |
+    | Name       | Code | Conversion rate (to base) | Base unit | Default |
+    |------------|------|---------------------------|-----------|---------|
+    | Meter      | M    | 1                         | M         | ✔       |
+    | Centimeter | CM   | 0.01                      | M         | x       |
+    | Inch       | IN   | 39.3701                   | M         | x       |
+    | Foot       | FT   | 3.28084                   | M         | x       |
 
 === "Quantity"
-    | Name   | Code  | Conversion Rate (to Base) | Base Unit | Is Default |
-    |--------|-------|--------------------------|-----------|------------|
-    | Piece  | PCS   | 1                        | PCS       | ✅ Yes      |
-    | Dozen  | DOZ   | 12                       | PCS       | ❌ No       |
-    | Pack   | PACK  | 1                        | PCS       | ❌ No       |
-    | Case   | CASE  | 24                       | PCS       | ❌ No       |
+    | Name  | Code | Conversion rate (to base) | Base unit | Default |
+    |-------|------|---------------------------|-----------|---------|
+    | Piece | PCS  | 1                         | PCS       | ✔       |
+    | Dozen | DOZ  | 12                        | PCS       | x       |
+    | Pack  | PACK | 1                         | PCS       | x       |
+    | Case  | CASE | 24                        | PCS       | x       |
 
 === "Time"
-    | Name  | Code | Conversion Rate (to Base) | Base Unit | Is Default |
-    |-------|------|--------------------------|-----------|------------|
-    | Hour  | HR   | 1                        | HR        | ✅ Yes      |
-    | Day   | DAY  | 24                       | HR        | ❌ No       |
-    | Week  | WK   | 168                      | HR        | ❌ No       |
-    | Month | MO   | 730                      | HR        | ❌ No       |
+    | Name  | Code | Conversion rate (to base) | Base unit | Default |
+    |-------|------|---------------------------|-----------|---------|
+    | Hour  | HR   | 1                         | HR        | ✔       |
+    | Day   | DAY  | 24                        | HR        | x       |
+    | Week  | WK   | 168                       | HR        | x       |
+    | Month | MO   | 730                       | HR        | x       |
 
 
 To add the pre-filled dimensions and their measure units to your initial configuration:
@@ -127,5 +127,4 @@ To delete a unit:
 1. Confirm your action.
 
 The unit has been deleted from the list.
-
 

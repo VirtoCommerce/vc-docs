@@ -1,6 +1,6 @@
 # Overview
 
-The Orders module in Virto Commerce is a document based flexible orders management system with possibility to add unlimited number of documents related to customer order.
+The Order (Orders) module in Virto Commerce is a document based flexible orders management system with possibility to add unlimited number of documents related to customer order.
 
 The Orders module is designed to:
 

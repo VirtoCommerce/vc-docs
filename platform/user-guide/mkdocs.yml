@@ -64,7 +64,7 @@ nav:
                 - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
                 - Settings: pricing/managing-pricing-module-settings.md
                 - Troubleshooting: pricing/troubleshooting-guide.md
-                - Example: pricing/example.md
+                - Enabling Special Prices for Specific Users: pricing/example.md
           - <b>Inventory</b>:
                 - Overview: inventory/overview.md
                 - Managing Inventory: inventory/managing-inventory.md
@@ -103,7 +103,7 @@ nav:
                       - Managing Content Items: marketing/managing-content-items.md
                       - Managing Content Placeholders: marketing/managing-content-placeholders.md
                       - Managing Published Content: marketing/managing-published-content.md
-                      - Publish Conditions: marketing/publish-conditions.md
+                      - Publishing Conditions: marketing/publish-conditions.md
                       - Adding Advertising Spot: marketing/advertising-spot.md
                 - Dynamic Product Associations: 
                       - Overview: marketing/dynamic-associations-overview.md

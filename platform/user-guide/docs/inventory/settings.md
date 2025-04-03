@@ -1,4 +1,4 @@
-﻿# Inventory Module Settings
+﻿# Settings
 
 The Inventory module settings include:
 
@@ -11,7 +11,7 @@ To configure general settings:
 
 1. Click **Settings** in the main menu.
 1. Type **Inventory** to find the settings related to the module.
-1. Select **General** to configure the page size for export or import and enable/ disable logging of inventory changes
+1. Select **General** to configure the page size for export or import and enable/ disable logging of inventory changes:
 
 	![General settings](media/general-settings.png)
 
@@ -32,3 +32,5 @@ To configure search settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The modifications have been saved.
+
+
