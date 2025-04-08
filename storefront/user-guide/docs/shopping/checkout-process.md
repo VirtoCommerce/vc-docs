@@ -32,26 +32,49 @@ To complete your order:
     !!! note
         The checkout process for carts containing only digital products does not include the **Shipping** step since digital products do not require shipping.
 
-1. Specify shipping details:
-    * Select a shipping address from the list or add a new one.
+1. Select a delivery option:
 
-        !!! note
-            If **Shipping address policy** is enabled, you will see a prefilled shipping address on the Shipping page.
+    === "Pickup"
 
-    * Select a delivery method from the dropdown list: Ground or Air. The shipping cost appears in the order summary.
-    * Enter your comments, if any.
+        Select a pickup point from the list if you do not require delivery and provide your comments, if any.
 
-    ![Shipping step](../media/shipping-step.png)
+        ![Readmore](../media/readmore.png){: width="25"} [Managing pickup locations](../../../../platform/user-guide/shipping/managing-shipping-methods#add-or-edit-pickup-location)
+
+        ![Pickup step](../media/pickup-step.png)
+
+    === "Shipping"
+
+        * Select a shipping address if you need you order to be delivered to your address.
+
+            !!! note
+                If [Shipping address policy](../../../../platform/user-guide/store/settings#general-settings) is enabled in the Platform, you will see a prefilled shipping address on the Shipping page.
+
+        * Select a delivery method from the dropdown list: **Ground** or **Air**. The shipping cost appears in the order summary.
+        * Enter your comments, if any.
+
+        ![Shipping step](../media/shipping-step.png)
 
 1. Click **Proceed to billing** to proceed to the next step.
 
 1. Specify payment details:
     * Select a shipping address from the list, add new one, or check **Same as shipping address**. 
     * Select a payment method from the dropdown list:
-        * **Bank card (Authorize.Net)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually.
-        * **Bank card (Skyflow)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. Allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
-        * **Bank card (CyberSource)** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. Allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
-        * **Manual** payment allows you to pay for the order later.
+
+        === "Bank card (Authorize.Net)"
+        
+            **Authorize.net** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually.
+
+        === "Bank card (Skyflow)" 
+        
+            **SkyFlow** adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. It allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
+
+        === "Bank card (CyberSource)"
+
+            **CyberSource**  adds the **Payment** step to the checkout process. It does not appear if you choose to pay manually. It allows you to save credit cards for further payments and select previously saved cards from the dropdown list.
+
+        === "Manual"
+        
+            **Manual payment** allows you to pay for the order later.
 
     ![Billing step](../media/billing-step.png)
 
