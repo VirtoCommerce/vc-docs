@@ -40,7 +40,7 @@ extra:
                   link: developer-guide/Back-End-Architecture/02-conceptual-overview
                 - title: Extensibility
                   link: developer-guide/Extensibility/overview
-                - title: Configuration reference
+                - title: Configuration Reference
                   link: developer-guide/Configuration-Reference/appsettingsjson
                 - title: Tutorials and How-tos
                   link: developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module
