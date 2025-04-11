@@ -2,22 +2,19 @@
 
 The **Orders** section lists all the user's orders, including order number, invoice number, order date, current status, and total order amount.
 
-![Orders](../media/orders.png)
-
 Here you can:
 
+* Switch between the **All orders** and **My orders** tabs to view all orders placed by a user or company (as an organization maintainer).
 * Search for orders by keyword.
-* Navigate to the order details page.
-* Filter orders by status, date of creation, and date range:
-
-    ![Filters](../media/filters.png)
+* Filter orders by status, date of creation, and date range.
 
     !!! note 
         In the left menu, you can immediately see all orders sorted by status, without having to apply any filters.  
 
-By switching between **Agency** and **Personal** tabs, organization maintainers can view all company orders placed by any user or agency. This allows them to track what was ordered, in what quantities, when, and by whom:
+* Sort orders by date, status, or total in ascending or descending order:
 
-![Personal orders](../media/personal-orders.png)
+    ![Order management](../media/managing-orders.gif)
+
 
 To view the order details, click on the desired order in the orders list. The order details open in a new window:
 
@@ -37,6 +34,7 @@ Here you can:
 * Re-order all items from the completed orders:
 
     ![Reorder all](../media/reorder-all.gif)
+
 
 
 <br>

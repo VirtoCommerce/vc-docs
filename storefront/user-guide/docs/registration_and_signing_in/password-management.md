@@ -35,19 +35,19 @@ You should change your password:
 
     If the password has expired, the user will be prompted to set a new password when logging in:
 
-    ![Change expired password](../media/set-new-password.png){: width="900"}
+    ![Change expired password](../media/set-new-password.png){: width="600"}
 
 To change the password:
 
 1. Click on the user name in the top right corner. In the dropdown, click on the user name again.
 
-    ![](../media/profile-path-1.png)
+    ![Path](../media/profile-path-1.png)
 
 1. In the left side of the account profile, click **Profile**.
 1. Change the password.
 1. Click **UPDATE**.
 
-    ![](../media/profile-path-2.png){: width="500"}
+    ![Path](../media/profile-path-2.png){: width="500"}
 
 You password has been successfully changed.
 

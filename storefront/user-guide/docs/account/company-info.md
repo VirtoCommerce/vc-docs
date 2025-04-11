@@ -1,6 +1,6 @@
 # Company Info
 
-The **Company Info** section contains the following widgets:
+The **Company info** section contains the following widgets:
 
 * **Company name** to edit and save company name:
 
