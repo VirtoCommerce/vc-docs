@@ -19,5 +19,5 @@ The notification of successful addition to the selected list appears.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../compare-products">← Products comparison</a>
-    <a href="../submit-quotes">Quotes submission →</a>
+    <a href="../notifications">Notifications →</a>
 </div>

@@ -1,45 +1,52 @@
 # Quote Requests
 
-To request personalized pricing or align bulk orders with negotiated agreements, users can create quote requests:
+Users can request personalized pricing or align bulk orders with negotiated agreements by submitting quote requests. The standard scenario includes the following steps:
 
-* [From the cart page.](../shopping/submit-quotes.md)
-* From the **Quote requests** section by clicking **Request quote** in the top right corner:
+1. [Creating a quote request.](#create-quote-request)
+1. [Completing and submitting quote request.](#complete-and-submit-quote-request)
+1. [Approving or declining quote request.](#approve-or-decline-quote-request)
 
-    ![Create quote request](../media/create-quote-request-from-account.png)
+## Create quote request
 
-The **Quote request** section lists all the quote requests created by the user:
+Quote requests can be created:
 
-![Quote requests](../media/quote-requests.png)
+=== "From the cart page"
 
-Click on the desired quote request from the list to view its details, including:
+    ![Create quotes from shopping cart](../media/quote-from-shopping-cart.gif)
+    
+=== "From the "Quote requests" section in your account"
 
-* The list of requested products.
-* Product properties, price per item, and requested quantities.
-* Shipping and billing addresses.
-* Date of quote creation.
-* Comments you have provided with a quote.
-* Files you have attached to a quote.
+    ![Create quote request](../media/quote-from-account.gif)
 
-You can also decline or approve the quote proposal sent to you.
 
-![Quote details](../media/quote-request-details.png)
+## Complete and submit quote request
 
-Click on a draft quote request to:
+Once your quote is created, complete the required details and click **Submit**:
 
-* Add remarks.
-* Drag and drop files or browse additional files. The progress bar indicates when the upload is complete. 
+![Fill in the quote](../media/fill-in-request.gif)
 
-    ![Progress bar](../media/progress_bar.gif)
+!!! note
+    SCV, DOCX, JPG, PDF, PNG, TXT, XLSX formats are admissible. Each file should not exceed 10MB. Maximum 5 files are allowed. 
 
-    !!! note
-        SCV, DOCX, JPG, PDF, PNG, TXT, XLSX formats are admissible. Each file should not exceed 10MB. Maximum 5 files are allowed. 
+Your quote appears in the list of quotes with the status **Processing**.
 
-* Review the products list: edit quantities or delete items.
-* Select shipping and billing addresses from the list or create new ones.
-* Save changes for further editing.
-* Submit the quote to the vendor.
+Other statuses are:
 
-![Edit draft quote](../media/edit-draft-quote.png)
+| Status        | Description                                                                                   |
+|---------------|-----------------------------------------------------------------------------------------------|
+| Draft         | The quote has been created but not submitted. It remains editable.                            |
+| Proposal sent | The seller has sent you a proposal.                                                           |
+| Ordered       | You have accepted the seller's proposal, ordering the goods at the proposed prices.           |
+| Declined      | The quote request has been declined by the seller or you have declined the seller's proposal. |
+| On hold       | The seller has put the proposal on hold.                                                      |
+
+## Approve or decline quote request
+
+Once the status of the quote request changes into **Proposal sent**, you can approve or decline it.
+
+![Quote details](../media/approve-decline.gif)
+
+
 
 <br>
 <br>

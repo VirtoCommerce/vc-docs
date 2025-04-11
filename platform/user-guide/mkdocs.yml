@@ -26,6 +26,7 @@ nav:
           - Getting Started: getting-started.md
           - B2B Multi-Regional eCommerce Architecture: multiregional-ecommerce.md
           - Viewing Results on Frontend Environment: view-results-on-frontend.md
+          - Backup and Restore: backup-and-restore.md
           - ADA Compliance: ada-compliance.md
           - Managing Frontend Content: managing-content.md 
     - Modules:

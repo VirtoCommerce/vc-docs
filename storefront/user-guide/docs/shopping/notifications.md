@@ -11,6 +11,6 @@ You can view all the received notifications in the top menu:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../submit-quotes">← Quotes submission</a>
+    <a href="../lists">← Product lists</a>
     <a href="../checkout-process">Checkout →</a>
 </div>

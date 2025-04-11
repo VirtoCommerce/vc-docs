@@ -37,10 +37,12 @@ To complete your order:
     === "Pickup"
 
         Select a pickup point from the list if you do not require delivery and provide your comments, if any.
-
+        <br>
+        <br>
         ![Readmore](../media/readmore.png){: width="25"} [Managing pickup locations](../../../../platform/user-guide/shipping/managing-shipping-methods#add-or-edit-pickup-location)
-
-        ![Pickup step](../media/pickup-step.png)
+        <br>
+        <br>
+        ![Pickup step](../media/pickup-step.gif)
 
     === "Shipping"
 
@@ -52,7 +54,7 @@ To complete your order:
         * Select a delivery method from the dropdown list: **Ground** or **Air**. The shipping cost appears in the order summary.
         * Enter your comments, if any.
 
-        ![Shipping step](../media/shipping-step.png)
+        ![Shipping step](../media/shipping-step.gif)
 
 1. Click **Proceed to billing** to proceed to the next step.
 

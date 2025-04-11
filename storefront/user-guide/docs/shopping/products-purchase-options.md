@@ -2,15 +2,15 @@
 
 In our Frontend Application, buyers have the following options to purchase products:  
 
-1. **Quick purchase from the product list**: Users add products to their carts directly from the catalog by clicking on the **Add to cart** button:
+* **Quick purchase from the product list**: Users add products to their carts directly from the catalog by clicking on the **Add to cart** button:
 
     ![Quick purchase](../media/single-item-purchase.gif)
 
-1. **Choose from product variations**: Users select the specific variation of a product that best fits their requirements, such as size or color, by clicking on the **Variations** button: 
+* **Choose from product variations**: Users select the specific variation of a product that best fits their requirements, such as size or color, by clicking on the **Variations** button: 
 
     ![Product variations](../media/product-variation-purchase.gif)
 
-1. **Customize products to your needs**: Users adapt products to their preferences by configuring available options, such as selecting decorations for a cake or features for a bike, by clicking on the **Customize** button:
+* **Customize products to your needs**: Users adapt products to their preferences by configuring available options, such as selecting decorations for a cake or features for a bike, by clicking on the **Customize** button:
 
     ![Product configurations](../media/purchase-product-configurations.gif)
 
@@ -22,9 +22,18 @@ In our Frontend Application, buyers have the following options to purchase produ
 
     ![Optional options](../media/optional-options.png)
 
-    In the text message widget, customers can enter custom text while personalizing their products. This can be used for messages on postcards, engravings on rings, greetings on cakes, and more:
+    In the text message widget, users can enter custom text while personalizing their products. This can be used for messages on postcards, engravings on rings, greetings on cakes, and more:
 
     ![Text message widget](../media/configurable-text.png)
+
+    Users can also upload files for further customization. This feature can be used to print a logo on the ordered product:
+
+    ![Upload files](../media/sample-logo-upload.png)
+
+    After the product is added to cart, it remains editable:
+
+    ![Editable product](../media/edit-from-cart.png)
+
 
 <br>
 <br>
