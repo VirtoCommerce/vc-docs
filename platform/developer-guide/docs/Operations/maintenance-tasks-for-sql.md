@@ -151,33 +151,19 @@ The recommended retention period for PlatformOperationLog and NotificationMessag
 
 ```sql
 
-SELECT TOP $processRowsCount Id FROM [dbo].[$tableName] WHERE CreatedDate < '$thresholdDate' ORDER BY CreatedDate
-"@
-    Write-Output "Parameters set to remove $processRowsCount rows from $tableName table in $Database database with created date < $thresholdDate"
-    $records = @()
-    try {
-        $records = Invoke-Sqlcmd -ServerInstance $SqlServer -Database $Database -Username $SqlUsername -Password $SqlPass -Query $sqlQuery -ConnectionTimeout $ConnectionTimeout
-    } catch {
-        Write-Error "$error"
-        throw "$error"
-    }
-    if ($records.count -eq 0) { Write-Output "No records found fitting the parameters"}
-    $c = 0
-    foreach ($entry in $records) {
-        if ($VerboseOutput -eq 1){Write-Output "Removing record with Id $($records[$c].Id)"}
-        $sqlQuery2 = @"
-DELETE FROM [dbo].[$tableName] WHERE Id = '$($records[$c].Id)'
-"@
-        try {
-            Invoke-Sqlcmd -ServerInstance $SqlServer -Database $Database -Username $SqlUsername -Password $SqlPass -Query $sqlQuery2 -ConnectionTimeout $ConnectionTimeout
-        } catch {
-            Write-Error "$error"
-            throw "$error"
-        }
-        $c = $c + 1
-    }
-    Write-Output "Removed $c rows"
-}
+/* First check what will be deleted */
+SELECT count(Id) FROM [dbo].[AuditLogRecord] WHERE CreatedDate < DATEADD(DAY, -45, GETDATE())
+
+/* Delete all old entries with one command */
+DELETE FROM [dbo].[AuditLogRecord] WHERE CreatedDate < DATEADD(DAY, -45, GETDATE())
+
+/* If deleting many rows, consider batching to avoid transaction log overload */
+WHILE 1=1
+BEGIN
+    DELETE TOP (10000) FROM [dbo].[AuditLogRecord]
+    WHERE CreatedDate < DATEADD(DAY, -45, GETDATE())
+    IF @@ROWCOUNT = 0 BREAK;
+END
 ```
 
 ## Control table size 

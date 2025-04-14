@@ -33,13 +33,13 @@ You should change your password:
 
     ![Password expiration](../media/password-about-to-expire.png){: width="500"}
 
-    If the password has expired, the user will be prompted to set a new password when logging in:
+If the password has expired, the user will be prompted to set a new password when logging in:
 
-    ![Change expired password](../media/set-new-password.png){: width="600"}
+![Change expired password](../media/set-new-password.png){: width="600"}
 
 To change the password:
 
-1. Click on the user name in the top right corner. In the dropdown, click on the user name again.
+1. Click on the user name in the top right corner. In the dropdown list, click on the user name again.
 
     ![Path](../media/profile-path-1.png)
 
@@ -49,7 +49,7 @@ To change the password:
 
     ![Path](../media/profile-path-2.png){: width="500"}
 
-You password has been successfully changed.
+Your password has been successfully changed.
 
 <br>
 <br>
