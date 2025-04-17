@@ -12,7 +12,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
     !!! note
         After installing MS SQL server, switch its authentication to mixed mode, as described [here](https://www.top-password.com/knowledge/sql-server-authentication-mode.html).
-        ![Selecting server authentication mode](media/01-selecting-server-authentication.png)
+        ![Selecting server authentication mode](media/01-selecting-server-authentication.png){: style="display: block; margin: 0 auto;" }
 
 
 === "Optional software components"
@@ -175,11 +175,11 @@ To access the Platform and perform initial sign-in:
 
 1. The installation wizard starts downloading default modules and sample data:
 
-	![Installation wizard screen](media/02-module-auto-installation-screen.png)
+	![Installation wizard screen](media/02-module-auto-installation-screen.png){: style="display: block; margin: 0 auto;" }
 	
 1. After installation, reset the default credentials:
 
-	![Resetting default credentials](media/03-resetting-default-credentials.png)
+	![Resetting default credentials](media/03-resetting-default-credentials.png){: style="display: block; margin: 0 auto;" }
 
 Your platform is ready to go.
 
