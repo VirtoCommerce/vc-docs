@@ -178,18 +178,5 @@ The `configure` command checks and updates connection strings in the **appsettin
 vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
 ```
 
-## Configure
-
-The `configure` command checks and updates connection strings in the **appsettings.json** file.
-
-```console
-vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
-```
-
-| Parameter      | Description                                               | Example |
-|---------------------|---------------------------------------------------------------|----------------------|
-| `-AppsettingsPath`  | (Optional) Specifies a custom path to the **appsettings.json** file. | `vc-build configure -sql "..." -redis "..." -AzureBlob "..." -AppsettingsPath ./appsettings.json` |
-
-
 This command ensures all required connection strings are properly configured in your environment.
-  
+

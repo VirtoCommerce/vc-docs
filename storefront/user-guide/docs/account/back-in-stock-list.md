@@ -15,5 +15,5 @@ Once the product is back in stock, users can add it to their cart from the list:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../notifications">← Notifications</a>
-    <a href="../company-info">Company info →</a>
+    <a href="../purchase-requests">Purchase requests →</a>
 </div>

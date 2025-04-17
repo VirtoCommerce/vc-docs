@@ -23,6 +23,6 @@ The **Company info** section contains the following widgets:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../back-in-stock-list">← Back-in-stock list</a>
+    <a href="../purchase-requests">← Purchase requests</a>
     <a href="../company-members">Company members →</a>
 </div>
