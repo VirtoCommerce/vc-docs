@@ -8,9 +8,9 @@ The chart below shows the components used to process a search request:
 
 The search process involves a specific search service, like `ProductIndexedSearchService`, which is tailored to handle search requests for particular domain entities such as catalog products or customers. It includes the following steps:
 
-1. **Parsing the Query**: The search service begins by parsing the query text to convert it into a search request object. This conversion is facilitated by calling `ISearchRequestBuilder`.
-1. **Sending the Search Request**: Once the search request object is constructed, it is sent to the specific search engine through the `ISearchProvider` abstraction. The search engine utilizes an index to retrieve documents that match the specified terms.
-1. **Materialization of Search Services**: Following the search execution, the specific search service materializes all located documents by fetching the entities based on their identifiers from the data source (e.g., database). Subsequently, the resulting entities are returned to the requester.
+1. **Parsing the query**: The search service begins by parsing the query text to convert it into a search request object. This conversion is facilitated by calling `ISearchRequestBuilder`.
+1. **Sending the search request**: Once the search request object is constructed, it is sent to the specific search engine through the `ISearchProvider` abstraction. The search engine utilizes an index to retrieve documents that match the specified terms.
+1. **Materialization of search services**: Following the search execution, the specific search service materializes all located documents by fetching the entities based on their identifiers from the data source (e.g., database). Subsequently, the resulting entities are returned to the requester.
 
 
 !!! note
@@ -38,3 +38,4 @@ new SearchRequest
                 Take = 20
              };
 ```
+
