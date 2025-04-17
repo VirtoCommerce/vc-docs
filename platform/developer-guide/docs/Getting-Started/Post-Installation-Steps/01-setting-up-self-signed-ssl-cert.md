@@ -18,7 +18,7 @@ If this warning appears:
 
 1. Run `dotnet dev-certs https --trust`
 
-1. Click **Yes** in a popup dialog asking to install this localhost certificate:
+1. Click **Yes** on a local host certificate installation popup.:
 
     ![Trust certificate security warning](media/03-trust-cert-security-warning.png)
 

@@ -1,14 +1,13 @@
 # Appsettings.json
 
 As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
-<!--caching-start-->
-## Configuration Settings
+
+## Configuration settings
 
 The configuration keys are hierarchical, and the most convenient way to manage them is to work with the **appsettings.json** file. The following sections, organized by configuration node and alphabetically, show the general structure of the file, provide defaults, and explain what each key is.
 
 !!! note
     All settings listed below are optional unless marked **Required**.
-<!--caching-end-->
 
 ### ConnectionStrings
 

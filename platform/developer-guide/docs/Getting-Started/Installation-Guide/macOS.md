@@ -15,7 +15,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 To install LibSass:
 
-1. Download the nuget package [LibSass Host Native for for OS X (x64)](https://www.nuget.org/packages/LibSassHost.Native.osx-x64).
+1. Download the NuGet package [LibSass Host Native for for OS X (x64)](https://www.nuget.org/packages/LibSassHost.Native.osx-x64).
 1. Unzip the package.
 
     ```console
@@ -28,7 +28,7 @@ To install LibSass:
     sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/6.x.x/
     ```
 
-## Download precomplied binaries
+## Download precompiled binaries
 
 1. Open the [Releases section of the Virto Commerce Platform](https://github.com/VirtoCommerce/vc-platform/releases) in GitHub.
 

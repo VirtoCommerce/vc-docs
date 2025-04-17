@@ -1,4 +1,4 @@
-# Indexed Search Overview
+# Indexed Search
 
 This article provides an overview of indexed search that is one of the key features of any e-commerce solution. Search is fundamental to any e-commerce application that presents textual content to users, with common scenarios including catalog or entity search or data exploration.
 
@@ -8,7 +8,7 @@ A search service is an intermediary between:
 * **Client application** to sends query requests to a search index and handles the response.
 * **External search engines**, which manage all index and search requests.
 
-![Search architecture](media/01-search-architecture.png){: width="800" }
+![Search architecture](media/01-search-architecture.png){: style="display: block; margin: 0 auto;"}
 
 ## Main concepts
 
@@ -22,15 +22,15 @@ Virto Search is a search component that gives developers infrastructure, APIs, a
     * **Category:** Searches for catalog category.
     * **CustomerOrder:** Searches for order.
 
-    ![Search index types](media/02-search-index-types.png)
+    ![Search index types](media/02-search-index-types.png){: style="display: block; margin: 0 auto;" }
 
 * **Index document:** A single unit of searchable data in your index. There can be one document for each product in the catalog. Mapping these concepts to more familiar database equivalents, we can say that a search index is equivalent to a table, while documents are roughly equivalent to rows in the table. The document structure is determined by the index schema. Fields are typically the largest part of an index, where each field is named, assigned a value type, and attributed with allowable behaviors that determine how it is used.
 
-    ![Index document structure](media/03-index-document-structure.png)
+    ![Index document structure](media/03-index-document-structure.png){: style="display: block; margin: 0 auto;" }
 
     The index document can look as follows:
     
-    ![Index document example](media/04-index-document-example.png)
+    ![Index document example](media/04-index-document-example.png){: style="display: block; margin: 0 auto;" }
 
 * [Indexing](indexing/overview.md): A process for data indexing that extracts searchable content from various data sources and populates a search index within the specific search provider with instances of  index documents created from the source data by index document builders.
 
@@ -65,3 +65,4 @@ Virto Search is a search component that gives developers infrastructure, APIs, a
 
         1. Begin by installing the **Search** module, then add the required search provider module.
         1. Alternatively, install the required search provider module, and the **Search** module will be automatically installed alongside it.
+

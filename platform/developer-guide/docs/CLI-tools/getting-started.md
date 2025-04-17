@@ -1,6 +1,6 @@
 # Get Started
 
-In this guide, we will explore how to start using `VirtoCommerce.GlobalTool`.
+In this guide, we will explore how to start using **VirtoCommerce.GlobalTool**.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ In this guide, we will explore how to start using `VirtoCommerce.GlobalTool`.
 
 ## Install
 
-To install `VirtoCommerce.GlobalTool` on your machine, run:
+To install **VirtoCommerce.GlobalTool** on your machine, run:
 
 ```console
 dotnet tool install VirtoCommerce.GlobalTool  -g
@@ -18,7 +18,7 @@ dotnet tool install VirtoCommerce.GlobalTool  -g
 
 ## Update
 
-To update `VirtoCommerce.GlobalTool` to the latest version, run:
+To update **VirtoCommerce.GlobalTool** to the latest version, run:
 
 ```console
 dotnet tool update VirtoCommerce.GlobalTool -g
@@ -26,7 +26,7 @@ dotnet tool update VirtoCommerce.GlobalTool -g
 
 ## Use
 
-* To use `VirtoCommerce.GlobalTool`, run:
+* To use **VirtoCommerce.GlobalTool**, run:
 
     ```console
     vc-build
@@ -89,52 +89,61 @@ dotnet tool update VirtoCommerce.GlobalTool -g
     vc-build help NameOfTheTarget
     ```
 
+
 ## Usage Examples
 
-Below are the examples of using specific targets.
+Below are examples of using specific `vc-build` targets to automate development and release tasks.
 
-* **Compress**
+### Compress
 
-    The target is used to create a redistributable zip archive for a module or platform. After executing, the resulting zip is placed in the **artifacts** folder.
-    To execute this target, run the following command in the root module folder of the cloned GitHub repository:
+Creates a redistributable zip archive for a module or platform. The output zip file is placed in the **artifacts** folder.
 
-    ```console
-    vc-build compress
-    ```
+To run the target, execute the following command from the root module folder of your cloned GitHub repository:
 
-    Console output:
+```console
+vc-build Compress
+```
 
-    ```console
+**Example output:**
 
-    ═══════════════════════════════════════
-    Target             Status      Duration
-    ───────────────────────────────────────
-    Clean              Executed        0:00
-    Restore            Executed        0:07
-    Compile            Executed        0:06
-    WebPackBuild       Executed        0:00
-    Test               Executed        0:05
-    Publish            Executed        0:01
-    Compress           Executed        0:01
-    ───────────────────────────────────────
-    Total                              0:23
-    ═══════════════════════════════════════
+```console
+═══════════════════════════════════════
+Target             Status      Duration
+───────────────────────────────────────
+Clean              Executed        0:00
+Restore            Executed        0:07
+Compile            Executed        0:06
+WebPackBuild       Executed        0:00
+Test               Executed        0:05
+Publish            Executed        0:01
+Compress           Executed        0:01
+───────────────────────────────────────
+Total                              0:23
+═══════════════════════════════════════
+```
 
-    ```
 
-* **StartRelease**, **CompleteRelease**, **QuickRelease**, **StartHotfix**, **CompleteHotfix** are used to automate routine operations with release branches.
+### Release automation targets
 
-* **StartRelease** creates and pushes the new branch release/version from dev.
+These targets are used to automate routine operations with **release** and **hotfix** branches:
 
-* **CompleteRelease**:
-    * Merges release/version into master and pushes.
-    * Merges into dev branch, increments version's minor and pushes.
+| Target            | Description                                                                                                                      |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| `StartRelease`    | Creates and pushes a new `release/version` branch from `dev`.                                                                    |
+| `CompleteRelease` | - Merges `release/version` into `master` and pushes. <br> - Merges changes into `dev`, increments the minor version, and pushes. |
+| `QuickRelease`    | Runs both `StartRelease` and `CompleteRelease` in sequence.                                                                      |
+| `StartHotfix`     | - Increments the patch version in `master`. <br> - Creates and pushes a new `hotfix/version` branch.                             |
+| `CompleteHotfix`  | - Merges the hotfix branch into `master`. <br> - Adds a tag and pushes the changes.                                              |
 
-* **QuickRelease** triggers **StartRelease** and then **CompleteRelease**.
-* **StartHotfix**:
-    * Increments version's patch in master.
-    * Creates and pushes the new branch hotfix/version.
 
-* **CompleteHotfix**:
-    * Merges hotfix branch into master.
-    * Adds tag and pushes.
+Each of these targets can be executed using:
+
+```console
+vc-build TargetName
+```
+
+For example:
+
+```console
+vc-build QuickRelease
+```

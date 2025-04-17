@@ -1,6 +1,6 @@
 # Overview
 
-Caching is one of the most effective ways to improve website performance. At Virto Commerce, we have used a number of different ways to cache application data to reduce the load on external services and the database, and to minimize application latency when processing API requests. This article describes the technical details and the best caching practices we use in our platform.
+Caching is one of the most effective ways to improve website performance. At Virto Commerce, we have used a number of different ways to cache application data to reduce the load on external services and the database, and to minimize application latency when processing API requests. This article describes the technical details and the best caching practices we use in our Platform.
 
 ## Cache-aside pattern overview
 
@@ -12,7 +12,7 @@ The pattern enables applications to load data on demand:
 1. If the data is not in the cache, we get it from the source. 
 1. Then the data is added to the cache. Next time, this data will be returned from the cache.
 
-![Cache Aside pattern chart](media/01-cache-aside-pattern.png)
+![Cache Aside pattern chart](media/01-cache-aside-pattern.png){: style="display: block; margin: 0 auto;" }
 
 This pattern improves performance and also helps maintain consistency between the data held in the cache and data in the underlying storage.
 
@@ -101,7 +101,7 @@ The `CancellationTokenSource` object (line 7 in the above code) is associated wi
 
 We avoid manual control of the cached data lifetime in our code. The platform has a special `CachingOptions` object that contains the settings for **Absolute** or **Sliding** lifetimes for all cached data (see below).
 
-We can always keep the cache updated and evict modified data from it explicitly thanks to the _Clean Architecture_ and the _Bounded_ contexts. Each boundary controls all read and change operations for the data belonging to the domain.
+We can always keep the cache updated and evict modified data from it explicitly thanks to the **Clean architecture** and the **Bounded** contexts. Each boundary controls all read and change operations for the data belonging to the domain.
 
 ## Strongly typed cache regions
 
@@ -148,10 +148,15 @@ By default, the platform caches null values. If you choose to use negative cachi
 
 Running multiple platform instances, each with its own local cache, and which in turn must be consistent with the cache of other instances, can be challenging. Without solving this problem, each instance of the application will have inconsistent data, which will definitely frustrate Virto Commerce customers.
 
-Read [this article by Virto Commerce](https://docs.virtocommerce.org/techniques/how-scale-out-platform-on-azure/) to learn how to configure the Redis service as a cache backplane to synchronize the local cache for multiple platform instances.
+<br>
+<br>
+<br>
+
+
+![Readmore](media/readmore.png){: width="25"} [Setting up Redis Backplane for Scaling out](03-setting-up-Redis.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Caching in ASP.NET by Microsoft](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-6.0)
     
 ![Readmore](media/readmore.png){: width="25"} [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
     
-![Readmore](media/readmore.png){: width="25"} [Cache configuration by Virto Commerce](02-cache-configuration.md)
+

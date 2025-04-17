@@ -15,7 +15,7 @@ vc-build GrabMigrator --grab-migrator-config <configfile>
 This section outlines the process of extracting EF-migrations from both the platform and its modules:
 
 1. Checkout platform/modules source codes.
-1. Ensure the `dotnet-ef` tool is installed. If not, reference to the [Installation guide](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet).
+1. Ensure the **dotnet-ef** tool is installed. If not, reference to the [Installation guide](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet).
 1. Prepare the grab config file as follows:
 
     ``` json
@@ -37,7 +37,7 @@ This section outlines the process of extracting EF-migrations from both the plat
     | `StatementsDirectory`     | There the tool stores grabbed SQL statements. One file per module. Default is 'Statements'.               |
     | Mode                      | 'V2V3' or 'All'. Upgrade platform v2 to v3 scripts or all scripts should be grabbed. Default is 'V2V3'.   |
 
-1. Run the tool, wait for the sql files to appear in `StatementsDirectory`.
+1. Run the tool, wait for the sql files to appear in **Statements** directory.
 1. Check the config file: the `ConnectionStringsRefs` node should appear.
 
 
@@ -91,8 +91,9 @@ To apply the extracted migrations to different databases:
     | `PlatformConfigFile`  | Platform config location used to discover connection strings for each module.               |
     | `StatementsDirectory` | Directory containing previously grabbed SQL statements.                                     |
     | `CommandTimeout`      | Command timeout in seconds.                                                                 |
-    | `Grab`                | Switches the tool to grab mode (if `true`).                                                   |
-    | `Apply`               | Switches the tool to apply mode (if `true`).                                                  |
+    | `Grab`                | Switches the tool to grab mode (if **true**).                                                   |
+    | `Apply`               | Switches the tool to apply mode (if **true**).                                                  |
 
-1. Copy the `ConnectionStringsRefs` node from the grab config file to apply config file.
+1. Copy the `ConnectionStringsRefs` node from the grab config file to apply the config file.
 1. Run the tool to apply the migrations to the databases.
+

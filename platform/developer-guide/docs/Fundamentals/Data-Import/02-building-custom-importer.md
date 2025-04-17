@@ -10,8 +10,8 @@ Follow the instructions below to build your own data importer of a specific type
 
     Let's say you have a CSV file to import your data from with two columns:
 
-    * `productId`
-    * `img_url`
+    * productId
+    * img_url
 
     In order to import multiple images for a single product, you need to use multiple rows with the same product ID.
 
@@ -206,5 +206,8 @@ Follow the instructions below to build your own data importer of a specific type
     
 !!! note 
     VC supports CSV for out-of-the-box import. You can create your own file reader to use a different format.
-
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [ImportSampleModule](https://github.com/VirtoCommerce/vc-module-import/tree/dev/samples/VirtoCommerce.ImportSampleModule.Web)
+<br>
+

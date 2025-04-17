@@ -2,10 +2,6 @@
 
 Table is a component that displays data in a tabular format. It is used to display large amounts of data in a structured format.
 
-## Storybook
-
-Explore the `vc-table` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/organisms-vctable--docs).
-
 ## Usage
 
 Include the `vc-table` component in your Vue application:

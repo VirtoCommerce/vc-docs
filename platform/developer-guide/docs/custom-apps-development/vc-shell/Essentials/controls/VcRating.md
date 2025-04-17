@@ -2,12 +2,6 @@
 
 Rating is a control that can display a rating with various representations.
 
-## Storybook
-
-Explore the `vc-rating` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vcrating--docs).
-
-Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcrating--docs) for a better understanding of the component usage.
-
 ## Usage
 
 Include the `vc-rating` component in your Vue application:

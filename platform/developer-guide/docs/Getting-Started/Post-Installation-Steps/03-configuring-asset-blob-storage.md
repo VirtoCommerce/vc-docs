@@ -1,17 +1,17 @@
 ﻿# Configure Asset Blob Storage
 
-Blob is an abstraction that works as a single point of access to all media files in your online store. Such files could be product images or attachments, PDF specs, etc., regardless of their location or protocol.
+Blob is an abstraction that acts as a single point of access for all media files in your online store. Such files can be product images or attachments, PDF specifications, etc., regardless of their location or protocol.
 
-By default, the platform allows you to configure one of the following blob storage providers:
+By default, the Platform allows you to configure one of the following blob storage providers:
 
 * [FileSystem.](03-configuring-asset-blob-storage.md#setting-up-filesystem-asset-storage-in-development-mode)
 * [Azure Blob Storage.](03-configuring-asset-blob-storage.md#setting-up-azure-blob-storage-in-production-mode)
 
 ## Set up FileSystem asset storage in development mode
 
-The FileSystem provider uses the local file system to store and provide public access to all media files. This mode implements [Static files in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-6.0) with all files stored within the app local directory. The FileSystem storage provides public access to the files via relative URIs. 
+The FileSystem provider uses the local file system to store media files and make them publicly accessible. This mode implements [Static files in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-6.0) with all files stored within the app local directory. The FileSystem storage provides public access to the files via relative URIs. 
 
-To switch platform to using this provider, edit the `Assets` section of the **appsetting.json** file:
+To switch the Platform to using this provider, edit the `Assets` section of the **appsettings.json** file:
 
 1. Specify `FileSystem` as your default asset provider in the line 2.
 1. For `RootPath`, provide the base path to the `wwwroot` directory inside app folder in the line 4.
@@ -38,9 +38,9 @@ To switch platform to using this provider, edit the `Assets` section of the **ap
 
 ## Set up Azure Blob Storage in production mode
 
-To set up Azure blob storage:
+To set up Azure Blob Storage:
 
-1. Create Azure blob storage according to this [quick start guide by Microsoft](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal).
+1. Create Azure Blob Storage according to this [quick start guide by Microsoft](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal).
 
 1. Open **appsettings.json**.
 
@@ -62,4 +62,5 @@ To set up Azure blob storage:
     You can get your connection string from your Azure Portal under the Access Keys section.
 
 !!! note
-    This mode is recommended for using in production environment since it enables sharing the asset storage across multiple platform instances.
+    This mode is recommended for use in a production environment, since it enables sharing the asset storage across multiple platform instances.
+

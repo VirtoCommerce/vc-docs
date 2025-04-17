@@ -4,7 +4,7 @@ The architecture and behavior of Virto Commerce Import Framework allows to easil
 ## Overview
 VC Data Import allows you to define what kind of data you want to import into your application. It uses custom configurable import profiles, where you can specify what kind of data to import and from which data sources.
 
-![Data types and sources for import](media/01-import-data-chart.png){: width="650" }
+![Data types and sources for import](media/01-import-data-chart.png){: style="display: block; margin: 0 auto;" }
 
 Using VC Data Import, you can benefit from:
 
@@ -14,9 +14,11 @@ Using VC Data Import, you can benefit from:
 
 ## Core structure
 The chart below shows VC Data Import's high level logical structure:
-
-![VC Data Import structure](media/02-vc-data-import-structure-chart.png)
-
+<br>
+<br>
+![VC Data Import structure](media/02-vc-data-import-structure-chart.png){: style="display: block; margin: 0 auto;" }
+<br>
+<br>
 VC Data Import is based on three main objects:
 
 * **Import job:** An object for a task that imports data according to ImportProfile. You can run it:
@@ -53,16 +55,18 @@ The following Module services are also available for developers to use in the [U
 * `IImportProfileCrudService` and `IImportRunHistoryCrudService` provide facilities for CRUD operations on `ImportProfiles` and `ImportRunHistory` respectively.
 
 Developers can extend authorizations for newly created Importers. The `DataImporterBuilder` has `WithAuthorizationRequirement` and `WithAuthorizationPermission` methods to set custom permissions if necessary.
-
+<br>
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [Building custom importer](02-building-custom-importer.md)
 
 ## Import app
 
-Import App is the new user interface, based on [Virto Custom App Development](https://docs.virtocommerce.org/new/developer-guide/custom-apps-development/overview/).
+Import App is the new user interface, based on [Virto Custom App Development](../../custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md).
 
 ### Key features
 
-* Expandable with [VC Shell](https://github.com/VirtoCommerce/vc-shell). 
+* Expandable with [VC Shell](../../custom-apps-development/vc-shell/vc-shell-overview.md). 
 * Import-on-demand for Operator user.
 
 ### Folder structure
@@ -104,5 +108,8 @@ $ yarn serve
 ```bash
 $ yarn bump patch/minor/major
 ```
-
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [Import app](import-app.md)
+
+

@@ -1,6 +1,6 @@
 # Package Management
 
-The `vc-build` tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) platform dependencies using simple CLI commands (applies to module and platform releases). There is also a Configure target that allows to [configure the platform's connection strings](package-management.md#configure).
+The **vc-build** tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) platform dependencies using simple CLI commands (applies to module and platform releases). There is also a Configure target that allows to [configure the platform's connection strings](package-management.md#configure).
 
 ## Install
 
@@ -8,7 +8,7 @@ The `vc-build` tool provides a set of targets that allow you to easily [install]
     **Install** and **Update** support scenarios where a developer has the platform in the source code, and modules are already installed in it. In such cases, these targets can install and update modules as well.
     This means that if you have the platform in your source code repository and modules already installed within it, you can still use the `install` and `update` targets to manage those modules. 
 
-The `install` command fetches the platform or modules and installs them in the appropriate folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows `vc-build` to easily restore the platform with modules on a different machine, such as a build server, without all these packages.
+The `install` command fetches the platform or modules and installs them in the appropriate folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows **vc-build** to easily restore the platform with modules on a different machine, such as a build server, without all these packages.
 
 If the command parameters have not been specified and **vc-package.json** is not found in the local folder, the command installs the latest stable release by default. If you need the latest available versions, use the `-edge` parameter.
 
@@ -147,7 +147,7 @@ If no args are specified, the platform and all modules in the specified location
 
 This command also updates the installed dependency versions in the **vc-package.json** file.
 Since the version 3.15.0 this target updates to stable bundles by default. If you want to update to the latest available versions you can add `-edge` parameter.
-You can specify the bundle to update your environment to specific versions using -v <bundle name> parameter.
+You can specify the bundle to update your environment to specific versions using `-v <bundle name>` parameter.
 
 ```console
 vc-build update (with no args)
@@ -172,16 +172,24 @@ vc-build uninstall -Module VirtoCommerce.Cart VirtoCommerce.Catalog
 
 ## Configure
 
-The configure command checks and updates connection strings in the **appsettings.json** file.
+The `configure` command checks and updates connection strings in the **appsettings.json** file.
 
 ```console
 vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
 ```
 
-**Parameters:**
+## Configure
 
-* **-AppsettingsPath** (optional): Specifies a path to the **appsettings.json** file:
+The `configure` command checks and updates connection strings in the **appsettings.json** file.
 
-    ```console
-    vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string> -appsettingsPath ./appsettings.json
-    ```
+```console
+vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
+```
+
+| Parameter      | Description                                               | Example |
+|---------------------|---------------------------------------------------------------|----------------------|
+| `-AppsettingsPath`  | (Optional) Specifies a custom path to the **appsettings.json** file. | `vc-build configure -sql "..." -redis "..." -AzureBlob "..." -AppsettingsPath ./appsettings.json` |
+
+
+This command ensures all required connection strings are properly configured in your environment.
+  

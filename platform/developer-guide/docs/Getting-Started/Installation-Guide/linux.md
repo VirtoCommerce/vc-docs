@@ -18,7 +18,7 @@ Virto Commerce is built with DB agnostic architecture and supports the following
 
 ## Install Platform
 
-The platform can be installed:
+The Platform can be installed:
 
 * [Manually by downloading the precompiled binaries](linux.md#download-precompiled-binaries).
 * [Using Virto Commerce CLI (vc-build)](linux.md#use-virto-commerce-cli).
@@ -31,7 +31,7 @@ To download precompiled binaries:
 
 1. Find **VirtoCommerce.Platform.3.x.x.zip** file. This file contains the prebuilt site and can be executed without additional compilation. The source code is not included. 
 
-* Unpack this zip to a local directory **/vc-platform-3**. After that you will have the directory with Platform precompiled files.
+* Unpack this ZIP to a local directory **/vc-platform-3**. After that you will have the directory with Platform precompiled files.
 
     ```console
     wget "https://github.com/VirtoCommerce/vc-platform/releases/download/3.x.x/VirtoCommerce.Platform.3.x.x.zip"
@@ -138,7 +138,7 @@ To run the Platform by CLI:
     dotnet VirtoCommerce.Platform.Web.dll
     ```
 
-1. The output in the console will say something like:
+1. The console output will display messages similar to the following:
 
     ```console
     Now listening on: http://[::]:5000
@@ -162,3 +162,4 @@ To access the Platform and perform initial sign-in:
     * Password: store
 
 Your Platform is ready to go.
+

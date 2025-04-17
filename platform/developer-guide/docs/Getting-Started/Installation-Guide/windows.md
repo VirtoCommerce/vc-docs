@@ -177,8 +177,9 @@ To access the Platform and perform initial sign-in:
 
 	![Installation wizard screen](media/02-module-auto-installation-screen.png)
 	
-1. After installation, reset default credentials:
+1. After installation, reset the default credentials:
 
 	![Resetting default credentials](media/03-resetting-default-credentials.png)
 
 Your platform is ready to go.
+

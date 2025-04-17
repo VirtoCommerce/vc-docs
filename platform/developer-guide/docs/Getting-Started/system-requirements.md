@@ -1,5 +1,5 @@
 ﻿# System Requirements
-This sections lists the basic hardware and software requirements to installing the Virto Commerce platform.
+This sections lists the basic hardware and software requirements to installing the Virto Commerce Platform.
 
 ## Minimum hardware requirements
 Before installing, make sure your computer meets these minimum requirements:
@@ -106,3 +106,4 @@ The Virto Commerce Platform supports:
 -   Google Chrome 1.x.
     
 -   Apple Safari 2.x.
+

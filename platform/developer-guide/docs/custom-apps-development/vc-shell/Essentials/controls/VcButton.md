@@ -2,12 +2,6 @@
 
 The `vc-button` component is an extension of a standard input element with theming and icons.
 
-## Storybook
-
-Explore the `vc-button` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/atoms-vcbutton--docs).
-
-Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-atoms-vcbutton--docs) for a better understanding of the component usage.
-
 ## Button types
 
 Let's explore various styles and functionalities of the `vc-button` component to suit your design needs.

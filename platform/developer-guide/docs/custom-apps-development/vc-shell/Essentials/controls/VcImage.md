@@ -2,12 +2,6 @@
 
 The image component displays a single image.
 
-## Storybook
-
-Explore the `vc-image` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/atoms-vcimage--docs).
-
-Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-atoms-vcimage--docs) for a better understanding of the component usage.
-
 ## Usage
 
 Include the `vc-image` component in your Vue application, providing theming and enhanced functionality to your image inputs.

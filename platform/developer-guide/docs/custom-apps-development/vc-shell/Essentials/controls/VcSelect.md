@@ -2,12 +2,6 @@
 
 Select is used to choose an item from a collection of options. It supports the combination of a method for loading options directly from the server with automatic loading of items on scrolling.
 
-## Storybook
-
-Explore the `vc-select` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vcselect--docs).
-
-Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcselect--docs) for a better understanding of the component usage.
-
 ## Usage
 
 Include the `vc-input-currency` component in your Vue application, providing theming and enhanced functionality to your currency input.

@@ -53,15 +53,16 @@ To start importing:
 
 1. After uploading the file, click **Start import**.
 
-![step 3](media/step-3.png)
+    ![step 3](media/step-3.png)
 
 Statistics and information on task completion are displayed in the blade or as Notifications in the application:
 
-![results](media/import-results.png)
+![results](media/import-results.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Extend app
 
 Import App is based on VC Shell and can be extended as a usual custom app. 
-
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [VC Shell extensibility](../../custom-apps-development/vc-shell/Extensibility/overview.md)

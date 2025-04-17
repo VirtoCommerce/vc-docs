@@ -1,12 +1,6 @@
-# Data field
+# Data Field
 
 Data field is used to display a field label and some static data. It can be used to display text, date, date-ago and links. It also has ability to copy displayed value.
-
-## Storybook
-
-Explore the `vc-field` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/molecules-vcfield--docs).
-
-Dynamic Views examples are also available in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-molecules-vcfield--docs) for a better understanding of the component usage.
 
 ## Usage
 

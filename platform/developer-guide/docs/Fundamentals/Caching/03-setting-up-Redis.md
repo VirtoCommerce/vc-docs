@@ -1,13 +1,15 @@
 # Set up Redis Backplane for Scaling out
 Running multiple instances of your application, all accessing the same distributed cache, can be challenging: the instances should find out when the data was changed and the local cache data becomes irrelevant.  One way to solve this problem is by connecting all application instances to a service that sends messages whenever cache data becomes invalid. Redis, an in-memory key-value storage, supports a messaging system with the publish/subscribe (Pub/Sub) model as follows:
 
-![Multi-level caching](media/02-multi-level-caching.png){: width="450"}
+![Multi-level caching](media/02-multi-level-caching.png){: style="display: block; margin: 0 auto;" }
 
 1. One platform instance evicts some data from cache.
-2. The message for this event is sent to the backplane. 
-3. The backplane knows all connected clients and which servers they are on.
-4. The backplane sends a message to all clients via their respective servers.
+1. The message for this event is sent to the backplane. 
+1. The backplane knows all connected clients and which servers they are on.
+1. The backplane sends a message to all clients via their respective servers.
 
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [Why we do not use distributed cache to solve the problem](https://virtocommerce.medium.com/how-we-improved-the-performance-of-b2b-ecommerce-platform-by-data-caching-in-azure-cloud-71b27995066c)
 
 ## Implement cache backplane using Redis Pub/Sub channel
@@ -52,6 +54,10 @@ Note that:
 * The performance of the cache will be slightly degraded due to the network traffic and overhead involved.
 * Synchronization will not occur on all clients at the same time, which may result in some minor delays.
 
+<br>
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [Redis overview](https://redis.io/)
     
-![Readmore](media/readmore.png){: width="25"} [How to scale out platform based on Azure ](https://docs.virtocommerce.org/techniques/how-scale-out-platform-on-azure/)
+![Readmore](media/readmore.png){: width="25"} [How to scale out platform based on Azure ](../Scalability/scaling-configuration-on-azure-cloud.md)
+

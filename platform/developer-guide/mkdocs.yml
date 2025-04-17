@@ -44,7 +44,7 @@ nav:
           - Package Management: CLI-tools/package-management.md
           - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
           - Cold Start Optimization and Data Migration: CLI-tools/cold-start-and-data-migration.md
-          - More Targets: CLI-tools/more-targets.md
+          - Managing Platform and Modules with CLI: CLI-tools/more-targets.md
           - Virto Cloud: CLI-tools/virto-cloud.md
     - Fundamentals:
           - Caching:
@@ -678,7 +678,6 @@ nav:
           - How to Register New App: custom-apps-development/how-to-register-new-app.md
           - VC Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
-                - Storybook: custom-apps-development/vc-shell/storybook.md
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
                 - Essentials:

@@ -24,11 +24,11 @@ vc-build CloudAuth -CloudToken <token>
 
 ## Initialize new environment  
 
-This target creates a new environment. It additionally accepts the `ServicePlan` parameter to specify the service plan (default value is `F1`).  
+This target creates a new environment. It additionally accepts the `ServicePlan` parameter to specify the service plan (the default value is **F1**).  
    
 ```
 vc-build CloudInit -EnvironmentName <EnvName>
-vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
+vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan **F1**
 ```
 
 ## List environments with statuses  
@@ -45,9 +45,8 @@ vc-build CloudDownloadManifest -EnvironmentName <name> -Manifest <path>
 
 This command downloads the manifest for the specified environment:
  
-`-EnvironmentName <name>`: Specifies the environment from which the manifest will be downloaded.
-
-`-Manifest <path>` *(optional)*: Defines the path where the manifest will be saved. If not provided, the manifest will be saved in the current directory with a filename matching the environment name.
+* `-EnvironmentName <name>`: Specifies the environment from which the manifest will be downloaded.
+* `-Manifest <path>` (optional): Defines the path where the manifest will be saved. If not provided, the manifest will be saved in the current directory with a filename matching the environment name.
 
 
 ## Restart environment
@@ -90,7 +89,7 @@ vc-build CloudEnvStatus -CloudToken <your token> -EnvironmentName <environment n
 ```
 
 
-Additional parameter `AttemptsNumber` (default value 100) determines the number of attempts, while `Delay` (default value 10) specifies the delay between attempts.  
+Additional parameter `AttemptsNumber` (default value **100**) determines the number of attempts, while `Delay` (default value **10**) specifies the delay between attempts.  
 
 ```
 vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber <number of attempts> -Delay <num of sec>
@@ -113,7 +112,7 @@ You can build and deploy docker images to:
     vc-build CloudDeploy -EnvironmentName <EnvName> -DockerUsername <username of docker hub>
     ```
 
-* New environment  
+* New environment:
     
     ```
     vc-build CloudUp -EnvironmentName <EnvName> -DockerUsername <username of docker hub>

@@ -2,10 +2,6 @@
 
 Fieldset allows displaying sets of any available controls of any nested depth. It allows arranging elements in a grid with a customizable number of columns and aspect ratio that allows to control columns width, the ability to build a grid with multiple rows based on an array of data bound to the fieldset using the `property` option. It also has visibility state settings.
 
-## Storybook
-
-Explore the `vc-fieldset` component in the [VC Shell Storybook](https://vc-shell-storybook.govirto.com/?path=/docs/dynamicviews-special-fieldset--docs).
-
 ## Usage
 
 Include the `vc-fieldset` component in your Vue application, providing theming and enhanced functionality to your image inputs.
