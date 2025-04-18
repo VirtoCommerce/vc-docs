@@ -36,7 +36,6 @@ nav:
           - Back End Architecture:
                 - Tech Stack: Back-End-Architecture/01-tech-stack.md
                 - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
-          - Modules Architecture: Frontend-architecture/modules-architecture.md
     - CLI tools:
           - Overview: CLI-tools/overview.md
           - Getting Started: CLI-tools/getting-started.md

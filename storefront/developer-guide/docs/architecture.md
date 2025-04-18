@@ -16,28 +16,28 @@ It includes:
 
 The workflow ensures a seamless and efficient operation of the Virto Commerce Frontend Application:
 
-1. **Client Request**:
+1. **Client request**:
     - The client opens the frontend application in their browser.
     - The browser sends a request to the load balancer to retrieve the **index.html** file.
 
-1. **Load Balancer Routing**:
+1. **Load balancer routing**:
     - The load balancer is configured with specific routing rules to handle different types of requests efficiently:
-        - **API Requests**: If the path matches an XAPI request or a token retrieval request, the load balancer routes the request to the Virto Commerce Platform API.
+        - **API Requests**: If the path matches an xAPI request or a token retrieval request, the load balancer routes the request to the Virto Commerce Platform API.
         - **Static Content Requests**: If the request is for a file, the load balancer serves the static content directly. If the file is not found, a 404 error is returned.
         - **Folder Requests**: If the request is for a folder, the load balancer serves the **index.html** file with a 200 response.
 
-1. **Single Page Application (SPA) Loading**:
+1. **Single Page Application (SPA) loading**:
     - The Single Page Application (SPA) loads in the client’s browser.
     - The SPA handles both static and dynamic routing within the application.
 
-1. **API Interaction and Content Rendering**:
+1. **API interaction and content rendering**:
     - The SPA makes API requests to fetch necessary data.
     - The page content is rendered based on the data received from the API.
 
-1. **User Interaction**:
+1. **User interaction**:
     - Further interactions occur within the SPA context.
 
-1. **Enhanced Functionalities (Optional)**:
+1. **Enhanced functionalities (optional)**:
     - Additional functionalities can be configured through the IT infrastructure to enhance performance and security:
         - **CDN Integration**: Integrate with a Content Delivery Network (CDN) to serve static content faster and reduce server load.
         - **Firewall and DDoS Protection**: Implement firewall rules and Distributed Denial of Service (DDoS) protection to secure the application.
@@ -50,5 +50,5 @@ The workflow ensures a seamless and efficient operation of the Virto Commerce Fr
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../">← Overview</a>
-    <a href="../deployment">Deployment →</a>
+    <a href="../modules-architecture/modules-architecture">Modules architecture →</a>
 </div>

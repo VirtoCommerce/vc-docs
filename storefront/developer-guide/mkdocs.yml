@@ -19,7 +19,9 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
-    - Architecture: architecture.md 
+    - Architecture:
+        - Frontend Application Architecture: architecture.md
+        - Modules Architecture: modules-architecture/modules-architecture.md 
     - Deployment: deployment.md
     - Migration to Storefrontless Architecture: 
         - Overview: migration.md

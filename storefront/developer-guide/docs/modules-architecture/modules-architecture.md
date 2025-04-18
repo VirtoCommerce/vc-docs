@@ -144,3 +144,12 @@ To ensure consistency and high quality across all modules, follow these best pra
 
 
 Happy coding! 🚀
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../architecture">← Frontend application architecture</a>
+    <a href="../../deployment">Deployment →</a>
+</div>
