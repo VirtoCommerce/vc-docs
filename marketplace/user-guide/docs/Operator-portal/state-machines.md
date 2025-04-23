@@ -17,15 +17,15 @@ To add a flow:
 
             1. Click **Add new state** to create a block specifying a state of the flow, for example, **New**:
 
-                ![First state](media/order-created.gif)
+                ![First state](media/order-created.gif){: style="display: block; margin: 0 auto;" width="450"}
 
             1. Create the second block, such as **Confirmed**, and connect it to the **New** block by extending a line between them. Then, specify the trigger.
 
-                ![Second state](media/order-confirmed.gif)
+                ![Second state](media/order-confirmed.gif){: style="display: block; margin: 0 auto;" width="450"}
             
             1. Create a third block, such as **Canceled**, and connect it to the **New** block by extending a line between them. Then, specify the trigger.
 
-                ![Third state](media/order-canceled.gif)
+                ![Third state](media/order-canceled.gif){: style="display: block; margin: 0 auto;" width="450"}
 
             !!! note
                 Hovering over transition lines or states highlights the connected units.
@@ -33,7 +33,7 @@ To add a flow:
         1. Switch to JSON mode to view the flow automatically converted into a JSON file.
         1. Click the checkbox once to mark a status as **Fail**, twice for **Success**, and three times to leave it unmarked:
 
-            ![Statuses marks](media/order-statuses.gif)
+            ![Statuses marks](media/order-statuses.gif){: style="display: block; margin: 0 auto;" }
         
 
 
@@ -116,6 +116,44 @@ Expand the example below to see an order processing workflow algorithm and its J
       }
     ]
     ```
+
+
+
+## Edit states in Visual Editor
+
+To edit states in Visual Editor:
+
+1. Open a states flow in Visual Editor.
+1. Right-click the state to edit.
+1. Select **Edit state** from the popup menu.
+1. Edit the following fields:
+
+    ![Edit states](media/edit-state.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **OK** to save the changes.
+
+The state has been modified.
+
+## Add states localizations in Visual Editor
+
+To add states localization in Visual Editor:
+
+1. Open a states flow in Visual Editor.
+1. Right-click the state to edit.
+1. Select **Edit localization** from the popup menu.
+1. Edit the fields as needed:
+
+    ![Edit localizations](media/edit-localizations.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **Save**.
+
+Localizations are displayed in the toolbar of the relevant flow according to your profile language settings:
+
+![Localized toolbar](media/english-french-toolbar.gif){: style="display: block; margin: 0 auto;" }
+
+
+
+
 
 
 

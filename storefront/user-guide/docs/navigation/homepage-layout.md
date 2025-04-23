@@ -73,11 +73,11 @@ In the Frontend Application mobile version, the core principles and functionalit
 
 ### Homepage
 
-![Mobile homepage](../media/storefront-mobile-homepage.png){: width="900"}
+![Mobile homepage](../media/storefront-mobile-homepage.png){: style="display: block; margin: 0 auto;" width="800"}
 
 ### Menu
 
-![Catalog](../media/storefront-mobile-catalog.png){: width="500"}
+![Catalog](../media/storefront-mobile-catalog.png){: style="display: block; margin: 0 auto;" width="500"}
 
 <br>
 <br>

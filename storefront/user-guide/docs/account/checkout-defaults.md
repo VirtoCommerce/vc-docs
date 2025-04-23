@@ -8,7 +8,7 @@ These include:
 * Preferred payment method (bank card or manual).
 * Preferred shipping method (air or ground).
 
-![Checkout defaults](../media/checkout-defaults.png)
+![Checkout defaults](../media/checkout-defaults.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

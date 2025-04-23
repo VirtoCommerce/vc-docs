@@ -2,7 +2,7 @@
 
 If a product is out of stock, users can subscribe to be notified when it's available again. Instead of the **Add to Cart** button, they'll see a **Notify me when in stock** button. After clicking on it, a popup confirmation appears:  
 
-![Back-in-stock subscription](../media/back-in-stock-subscription.gif)  
+![Back-in-stock subscription](../media/back-in-stock-subscription.gif){: style="display: block; margin: 0 auto;" width="600"}
 
 !!! note
     Uncheck the **Show in stock** option to see the out-of-stock products.
@@ -13,11 +13,11 @@ Click **You'll be notified** to unsubscribe from the notifications.
 
 As soon as the product is available again, the user gets the following email notification:
 
-![Back-in-stock notification](../media/back-in-stock-notification.png)
+![Back-in-stock notification](../media/back-in-stock-notification.png){: style="display: block; margin: 0 auto;" width="600"}
 
 Users can also add the restocked product to cart directly from the back-in-stock list:
 
-![Buyable products](../media/back-in-stock-buyable.png)
+![Buyable products](../media/back-in-stock-buyable.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

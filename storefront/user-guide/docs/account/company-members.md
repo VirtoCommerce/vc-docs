@@ -9,7 +9,7 @@ In this section, you can:
 * Edit roles. 
 * Filter company members by their role and status.
 
-![Company members](../media/company-members.png)
+![Company members](../media/company-members.png){: style="display: block; margin: 0 auto;" }
 
 ## Invite company members
 
@@ -18,7 +18,7 @@ To send invitations to company members:
 1. Click **Invite members**.
 1. Fill in the following fields:
 
-    ![invitation](../media/invite-member.png)
+    ![invitation](../media/invite-member.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **SEND** to invite new members.
 
@@ -42,7 +42,7 @@ To edit user role:
 1. Click **Edit role** from the drop-down menu.
 1. Select the role from the list:
 
-    ![role](../media/change-role.png)
+    ![role](../media/change-role.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **SAVE** to save the changes.
 

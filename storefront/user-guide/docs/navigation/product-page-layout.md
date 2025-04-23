@@ -21,15 +21,15 @@ From the product page, you can:
 
 If a product has variations, they are displayed in a separate widget as a list or as a table:
 
-![Products variations](../media/product-variations.png){: width="750"}
+![Products variations](../media/product-variations.png){: style="display: block; margin: 0 auto;" width="750"}
 
 Click **Filters** to narrow down the selection of variations:
 
-![Variations filter](../media/variations-filter.png){: width="750"}
+![Variations filter](../media/variations-filter.png){: style="display: block; margin: 0 auto;" width="750"}
 
 If a [reviews option is enabled](../../../../platform/user-guide/rating-reviews/managing-reviews#enable-product-reviews) for the Frontend Application, the reviews are displayed below the product description:
 
-![Product reviews](../media/reviews-on-frontend.png)
+![Product reviews](../media/reviews-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

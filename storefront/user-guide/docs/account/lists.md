@@ -10,7 +10,7 @@ In the **Lists** section, you can:
 * Edit lists names.
 * Delete lists.
 
-![Lists](../media/lists.png){: width="850"}
+![Lists](../media/lists.png){: style="display: block; margin: 0 auto;" width="800"}
 
 !!! note
     If you attempt to save a new list with a name that already exists, the system automatically appends a number to differentiate it, indicating how many lists share that name.
@@ -35,7 +35,7 @@ To edit a list:
 1. In the popup menu, click **Edit** to open the list settings.
 1. Update the list name, its description, or check the **Private list** setting to make the list invisible for other company members.
 
-    ![List settings](../media/list-settings.png)
+    ![List settings](../media/list-settings.png){: style="display: block; margin: 0 auto;" width="500"}
 
 1. Click **Save** to save the changes.
 

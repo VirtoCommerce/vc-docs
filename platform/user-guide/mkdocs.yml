@@ -185,7 +185,8 @@ nav:
                 - Settings: notifications/settings.md
           - Page Builder:
                 - Overview: page-builder/overview.md
-                - Managing Pages in PageBuilder: page-builder/manage-pages.md
+                - Managing Pages via Content Module: page-builder/manage-pages.md
+                - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
           - Pages:
                 - Overview: pages/overview.md
                 - Enabling Virto Pages: pages/enabling-pages.md

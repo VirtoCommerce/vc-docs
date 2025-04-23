@@ -11,7 +11,7 @@ In this section, you can:
 
 The following fields should be filled in when editing or adding new address:
 
-![new-address](../media/new-address.png)
+![new-address](../media/new-address.png){: style="display: block; margin: 0 auto;" width="850"}
 
 ![Readmore](../media/readmore.png){: width="25"} [Managing company addresses](company-info.md)
 

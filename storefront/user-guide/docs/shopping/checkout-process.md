@@ -77,30 +77,37 @@ To complete your order:
         === "Manual"
         
             **Manual payment** allows you to pay for the order later.
+<br>
+<br>
+    ![Billing step](../media/billing-step.png){: style="display: block; margin: 0 auto;" width="700"}
 
-    ![Billing step](../media/billing-step.png)
-
-1. Click **Review order** to review your order details. You can not edit your information here, but you can return to any of the previous steps by clicking them in the navigation path menu.
-
-    ![Path](../media/navigation-path-menu.png){: width="400"}
-
-    This step allows you to print your order.
+1. Click **Review order** to review your order details. You can not edit your information here, but you can return to any of the previous steps by clicking them in the navigation path menu:
+<br>
+<br>
+    ![Path](../media/navigation-path-menu.png){: style="display: block; margin: 0 auto;" width="400"}
+<br>
+<br>
+    This step activates the **Print order** button:
+<br>
+<br>
+    ![Print order](../media/print-order.png){: style="display: block; margin: 0 auto;" width="700"}
 
 1. Click **Place order**. Depending on your choice in step 5, you will either be notified that the order has been successfully placed (manual payment. Last step of this instruction) or you will be offered to pay for the order (bank card payment). Fill in the bank card details, then click **Pay now**. 
 
     !!! note 
         In case of the Skyflow or CyberSource option, you can save card for future payments, and then select a previously saved card from the dropdown list. You can view your saved cards at **Account --> Saved credit cards**.
 
-        ![Readmore](../media/readmore.png){: width="25"} [Saved Credit Cards](../account/saved-credit-cards.md) 
+        ![Readmore](../media/readmore.png){: width="25"} [Saved credit cards](../account/saved-credit-cards.md) 
 
     ![payment](../media/payment-step.png)
 
 1. Your order has been successfully placed:
 
-    ![Notification](../media/order-completed-notification.png){: width="400"}
+    ![Notification](../media/order-completed-notification.png){: style="display: block; margin: 0 auto;" width="400"}
 
 You can view your orders at **Account --> Orders**.
-
+<br>
+<br>
 ![Readmore](../media/readmore.png){: width="25"} [Viewing orders](../account/orders.md)
 
 <br>

@@ -26,29 +26,45 @@ To access a module, click on it in the main menu. Its content will appear in the
 
 ## Settings
 
-There are several ways to open a module's settings in the Platform:
+There are several options to open a module's settings in the Platform:
 
-* **Settings** in the main menu:
+=== "**Settings** in the main menu"
 
-    ![Settings in the main menu](media/settings-in-main-menu.png)
+    ![Settings in the main menu](media/settings-in-main-menu.png){: style="display: block; margin: 0 auto;" }
 
-* The **Settings** button in the top toolbar:
+=== "**Settings** button in the toolbar"
 
-    ![Settings](media/settings.png){: width="650"}
+    ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-* The **Settings** widget inside the specific module:
+=== "**Settings** widget inside the specific module"
 
-    ![Settings](media/settings-widget.png){: width="650"}
+    ![Settings](media/settings-widget.png){: style="display: block; margin: 0 auto;" }
 
 In the **Settings** toolbar, you can:
 
 * Restart the application to apply new settings.
 * Clear all cached data.
 
-![Restart and reset](media/restart-reset.png)
+![Restart and reset](media/restart-reset.png){: style="display: block; margin: 0 auto;" }
 
 ## Items URLs
 
 When you open the desired order, product, or product category, you can copy its URL and paste it into a new window to open the desired item immediately:
 
 ![Copy and paste order URL](media/order-url.gif)
+
+
+## Developer tools
+
+This section gives developers access to useful diagnostics and integration tools:
+
+* **Health**: Shows the health status of the Virto Commerce Platform and its dependencies (e.g., database, search engine, blob storage).
+* **Hangfire**: Provides a dashboard for managing and monitoring background jobs.
+* **Swagger**: Interactive API documentation for the Virto Commerce Platform.
+* **GraphQL**: An IDE for exploring and executing GraphQL queries against the platform.
+
+![Developer tools](media/developer-tools.gif)
+
+
+The **Developer tools** blade is available to users with the **platform:developer-tools:access** permission. Access to **Hangfire** also requires the same permission.
+

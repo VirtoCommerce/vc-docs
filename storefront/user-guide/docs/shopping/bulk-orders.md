@@ -12,7 +12,7 @@ The **Bulk order** pad opens. You will see the following placement options:
 * By copy-pasting.
 * Manually.
 
-![Bulk order options](../media/bulk-order-options.png)
+![Bulk order options](../media/bulk-order-options.png){: style="display: block; margin: 0 auto;" width="550"}
 
 
 === "From file"

@@ -16,23 +16,23 @@ In our Frontend Application, buyers have the following options to purchase produ
 
     Some options are required, i.e. users must select one of the available options when configuring the product:
 
-    ![Required options](../media/required-options.png)
+    ![Required options](../media/required-options.png){: style="display: block; margin: 0 auto;" }
 
     A **None** option allows users to skip selecting an option for that section when configuring their product:
 
-    ![Optional options](../media/optional-options.png)
+    ![Optional options](../media/optional-options.png){: style="display: block; margin: 0 auto;" }
 
     In the text message widget, users can enter custom text while personalizing their products. This can be used for messages on postcards, engravings on rings, greetings on cakes, and more:
 
-    ![Text message widget](../media/configurable-text.png)
+    ![Text message widget](../media/configurable-text.png){: style="display: block; margin: 0 auto;" }
 
     Users can also upload files for further customization. This feature can be used to print a logo on the ordered product:
 
-    ![Upload files](../media/sample-logo-upload.png)
+    ![Upload files](../media/sample-logo-upload.png){: style="display: block; margin: 0 auto;" }
 
     After the product is added to cart, it remains editable:
 
-    ![Editable product](../media/edit-from-cart.png)
+    ![Editable product](../media/edit-from-cart.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

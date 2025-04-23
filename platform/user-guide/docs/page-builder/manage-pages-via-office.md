@@ -1,4 +1,4 @@
-# Manage Pages via Content module
+# Manage Pages via Page Builder Office
 
 Managing pages includes:
 
@@ -8,28 +8,22 @@ Managing pages includes:
 
 ## Create new page
 
-To create a new page using Page Builder via the Catalog module:
+To create a new page:
 
-1. Click **Content** in the main menu.
-1. In the next blade, find the required store and click on the **Pages** widget.
-1. In the next blade, click **Add** in the toolbar. 
-1. In the next blade, select **Design page**.
+1. Click **Catalog** in the main menu.
+1. In the next blade, select the required store.
+1. In the next blade, click on the **Page Builder** widget to open the Page Builder Office:
 
-    ![New page](media/new-page.png){: style="display: block; margin: 0 auto;" }
+    ![Office](media/page-builder-office.png){: style="display: block; margin: 0 auto;" }
 
+1. Click **Add** in the toolbar.
 1. In the next blade, fill in the following fields:
 
-    ![Fill in the fields](media/create-page-fields.png){: style="display: block; margin: 0 auto;" width="600"}
+    ![Fill in the fields](media/new-page-office.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Create**. The Page Builder opens the newly created page in a new window. It contains uneditable header and footer by default.  
+1. Click **Save** in the toolbar. 
 
-    ![New page in Page Builder](media/new-page-opens.png){: style="display: block; margin: 0 auto;" }
-
-1. Click **Save** in the top right corner. 
-
-The page appears in the list of pages with the **.page-draft** extension. After you [publish](#publish-or-unpublish-pages) your page, it will receive the **.page** extension. 
-
-You can open it in the browser using the specified permalink.
+Your new page appears in the list of pages with the **Draft** status.
 
 
 ## Add content to page
@@ -37,7 +31,7 @@ You can open it in the browser using the specified permalink.
 To add content to your page:
 
 1. Select your page from the list.
-1. In the next blade, click **Design** to open your page in Page Builder.
+1. In the next blade, click **Open designer** to open your page in Page Builder.
 1. In Page Builder, click **Add block** in the left menu to open the block library. The available blocks are as follows:
 
     ![Available blocks](media/available-blocks.png){: style="display: block; margin: 0 auto;" }
@@ -58,6 +52,6 @@ If your page is outdated, click **Unpublish** in the upper right corner. The pag
 
 ![Publish-unpublish](media/publish-unpublish.png){: style="display: block; margin: 0 auto;" }
 
-Alternatively, you can publish or unpublish your page later in from the Content module:
+Alternatively, you can publish your page from Page Builder Office later:
 
-![Publish or unpublish new page](media/publish-unpublish.gif){: style="display: block; margin: 0 auto;" }
+![Publish or unpublish](media/publish-unpublish-office.gif){: style="display: block; margin: 0 auto;" width="500"}
