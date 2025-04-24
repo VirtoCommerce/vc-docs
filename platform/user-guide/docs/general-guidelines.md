@@ -68,3 +68,11 @@ This section gives developers access to useful diagnostics and integration tools
 
 The **Developer tools** blade is available to users with the **platform:developer-tools:access** permission. Access to **Hangfire** also requires the same permission.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../user-profile">User profile →</a>
+</div>
+

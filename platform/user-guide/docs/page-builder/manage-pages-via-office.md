@@ -10,7 +10,7 @@ Managing pages includes:
 
 To create a new page:
 
-1. Click **Catalog** in the main menu.
+1. Click **Stores** in the main menu.
 1. In the next blade, select the required store.
 1. In the next blade, click on the **Page Builder** widget to open the Page Builder Office:
 
