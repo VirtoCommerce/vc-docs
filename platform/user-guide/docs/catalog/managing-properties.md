@@ -139,6 +139,7 @@ When adding product properties, you can select the following value types from th
 | Boolean          | True/false value, suitable for binary attributes.              | Requires assembly: false                      |
 | Integer          | Whole number, ideal for quantities or counts.                  | Pack size: 10                                 |
 | Geo Point        | Geographical coordinates (latitude and longitude) for location-based data.| Store location: 40.7128° N, 74.0060° W  |
+| Measure          | Preset [units of measure](managing-units-of-measure.md).       | Weight: 100 g                                 |
 | HTML             | Property description in HTML format                            | Platform: ![Html property](media/html-property-platform.png)<br> Frontend: ![Html property](media/html-property-frontend.png)|
 
 ### Configure properties for category
@@ -275,3 +276,5 @@ To improve product filtering, users can merge multiple values into one:
 Now, the **Country of origin** facet shows only **USA**, which includes all the other synonym options:
 
 ![Normalized facets](media/normalized-facets.png)
+
+
