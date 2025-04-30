@@ -717,9 +717,9 @@ This node manages caching configuration.
 
 ### Content
 
-The `Content` node in `appsettings.json` is a **required** setting for configuring static content management (such as themes) used by the `VirtoCommerce.Content` module.
+The node is a **required** setting for configuring static content management.
 
-It defines the content provider, storage settings, public URLs, and path mappings for static resources.
+It defines the content provider, storage settings, and public URLs for static resources.
 
 | Node                                | Default or sample value            | Description                                                                                               |
 | ----------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -731,9 +731,7 @@ It defines the content provider, storage settings, public URLs, and path mapping
 | AzureBlobStorage:ConnectionString   |                                     | The connection string for connecting to Azure Blob Storage.                                               |
 | AzureBlobStorage:CdnUrl             |                                     | An optional CDN (Content Delivery Network) URL for serving content from Azure Blob Storage.               |
 | AzureBlobStorage:RootPath           | "cms"                               | The root path within the Azure Blob Storage container where content files are stored.                     |
-| PathMappings                        |                                     | Defines the mapping of virtual content folders (like pages and themes) to their storage structure.         |
-| PathMappings:pages                  | ["Themes", "_storeId", "_theme", "content/pages"] | The folder structure for locating page content files.                                                  |
-| PathMappings:themes                 | ["Themes", "_storeId"]              | The folder structure for locating theme files.                                                           |
+
 
 **Examples**
 
@@ -746,18 +744,6 @@ It defines the content provider, storage settings, public URLs, and path mapping
         "RootPath": "~/cms-content",
         "PublicUrl": "http://localhost:10645/cms-content/"
       },
-      "PathMappings": {
-        "pages": [
-          "Themes",
-          "_storeId",
-          "_theme",
-          "content/pages"
-        ],
-        "themes": [
-          "Themes",
-          "_storeId"
-        ]
-      }
     }
     ```
 
@@ -770,18 +756,6 @@ It defines the content provider, storage settings, public URLs, and path mapping
         "ConnectionString": "",
         "CdnUrl": ""
       },
-      "PathMappings": {
-        "pages": [
-          "Themes",
-          "_storeId",
-          "_theme",
-          "content/pages"
-        ],
-        "themes": [
-          "Themes",
-          "_storeId"
-        ]
-      }
     }
     ```
 
