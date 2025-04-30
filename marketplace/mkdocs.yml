@@ -36,6 +36,10 @@ extra:
                   - title: Github
                     link: https://github.com/VirtoCommerce/vc-deploy-marketplace
         release_notes:
+            - title: May 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-may-2025/778
+              type: Release Notes
+              date: 1 May 2025
             - title: April 2025
               link: https://www.virtocommerce.org/t/virto-s-release-notes-april-2025/769
               type: Release Notes

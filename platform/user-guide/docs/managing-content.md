@@ -4,5 +4,4 @@ Maintaining and updating your frontend application content is critical to ensuri
 
 * [Builder.io module](integrations/builder-io/overview.md): A Virto Commerce integration with the renowned toolkit for transforming frontend application page designs into optimized web and mobile experiences. Builder.io offers advanced features such as A/B testing, real-time collaboration, advanced analytics, and other analytics tools to improve user engagement and content performance.
 
-* [Page Builder](page-builder/overview.md): A Virto Commerce solution for creating ecommerce pages from blocks and editing them using a visual editor. Hosted on the Virto Commerce Platform, Page Builder is favored by companies that prefer not to submit requests through third-party services. It also provides a seamless, integrated experience within the Virto Commerce ecosystem.
-
+* [Page Builder](page-builder/overview.md): A Virto Commerce solution for creating e-commerce pages from blocks and editing them using a visual editor. Hosted on the Virto Commerce Platform, Page Builder is favored by companies that prefer not to submit requests through third-party services. It also provides a seamless, integrated experience within the Virto Commerce ecosystem.

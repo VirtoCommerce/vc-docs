@@ -4,7 +4,7 @@ theme:
     hide: false
 
 # Project information
-extra_site_name: Frontend App User Docs
+extra_site_name: Frontend User Docs
 site_name: storefront/user-guide
 site_description: Build and personalize your online store for engaging shopping experiences
 site_url: https://docs.virtocommerce.org/storefront/user-guide

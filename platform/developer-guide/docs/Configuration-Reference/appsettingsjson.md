@@ -714,39 +714,74 @@ This node manages caching configuration.
 
 <!--caching-end-->
 
+
 ### Content
 
-This **required** setting is used for static content configuration (including themes) for the `VirtoCommerce.Content` module.
+The `Content` node in `appsettings.json` is a **required** setting for configuring static content management (such as themes) used by the `VirtoCommerce.Content` module.
 
-| Node                                | Default or sample value   | Description                                                                                               |
-| ----------------------------------- | ------------------------  | --------------------------------------------------------------------------------------------------------- |
-| Provider                            | "FileSystem"           | Current content (file) provider. The supported values are **FileSystem** and **AzureBlobStorage**.           |
-| FileSystem                          |                           | File system-based content provider configuration. This is the default provider used unless **AzureBlobStorage** is set as the current provider. |
-| FileSystem:RootPath                 | "~/cms-content"        | The root path where content files are stored in the file system.                                          |
-| FileSystem:PublicUrl                | "https://localhost:5001/cms-content/" | The public URL used to access content files stored in the file system.                      |
-| AzureBlobStorage                    |                           | Azure Blob Storage-based content provider configuration. Used when the **Provider** setting has **AzureBlobStorage** as the value. |
-| AzureBlobStorage:ConnectionString   |                           | The connection string for Azure Blob Storage.                                                            |
-| AzureBlobStorage:CdnUrl             |                           | The optional CDN (Content Delivery Network) URL for serving content from Azure Blob Storage.             |
-| AzureBlobStorage:RootPath           | "cms"                   | The root path within the Azure Blob Storage container where content files are stored.                     |
+It defines the content provider, storage settings, public URLs, and path mappings for static resources.
 
+| Node                                | Default or sample value            | Description                                                                                               |
+| ----------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Provider                            | "FileSystem"                        | The current content (file) provider. Supported values are **FileSystem** and **AzureBlobStorage**.         |
+| FileSystem                          |                                     | Configuration for the file system-based content provider. This provider is used by default unless **AzureBlobStorage** is specified. |
+| FileSystem:RootPath                 | "~/cms-content"                     | The root path where content files are stored in the file system.                                          |
+| FileSystem:PublicUrl                | "https://localhost:5001/cms-content/" | The public URL for accessing content files stored in the file system.                                    |
+| AzureBlobStorage                    |                                     | Configuration for the Azure Blob Storage content provider, activated when the **Provider** is set to **AzureBlobStorage**. |
+| AzureBlobStorage:ConnectionString   |                                     | The connection string for connecting to Azure Blob Storage.                                               |
+| AzureBlobStorage:CdnUrl             |                                     | An optional CDN (Content Delivery Network) URL for serving content from Azure Blob Storage.               |
+| AzureBlobStorage:RootPath           | "cms"                               | The root path within the Azure Blob Storage container where content files are stored.                     |
+| PathMappings                        |                                     | Defines the mapping of virtual content folders (like pages and themes) to their storage structure.         |
+| PathMappings:pages                  | ["Themes", "_storeId", "_theme", "content/pages"] | The folder structure for locating page content files.                                                  |
+| PathMappings:themes                 | ["Themes", "_storeId"]              | The folder structure for locating theme files.                                                           |
 
 **Examples**
 
 === "FileSystem"
 
     ```json title="appsettings.json"
-    "FileSystem": {
-    "RootPath": "~/cms-content",
-    "PublicUrl": "http://localhost:10645/cms-content/"
-    }  
+    "Content": {
+      "Provider": "FileSystem",
+      "FileSystem": {
+        "RootPath": "~/cms-content",
+        "PublicUrl": "http://localhost:10645/cms-content/"
+      },
+      "PathMappings": {
+        "pages": [
+          "Themes",
+          "_storeId",
+          "_theme",
+          "content/pages"
+        ],
+        "themes": [
+          "Themes",
+          "_storeId"
+        ]
+      }
+    }
     ```
 
 === "AzureBlobStorage"
 
     ```json title="appsettings.json"
-    "AzureBlobStorage": {
-    "ConnectionString": "",
-    "CdnUrl": ""
+    "Content": {
+      "Provider": "AzureBlobStorage",
+      "AzureBlobStorage": {
+        "ConnectionString": "",
+        "CdnUrl": ""
+      },
+      "PathMappings": {
+        "pages": [
+          "Themes",
+          "_storeId",
+          "_theme",
+          "content/pages"
+        ],
+        "themes": [
+          "Themes",
+          "_storeId"
+        ]
+      }
     }
     ```
 
