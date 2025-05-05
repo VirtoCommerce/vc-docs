@@ -21,7 +21,7 @@ Page Builder offers the following benefits:
     * DevOps and publishing workflow readiness.
 
 
-# Key features
+## Key features
 - Visual landing page creation without developer involvement.
 - Theme editor for easy styling adjustments.
 - eCommerce-focused page customization with real-time previews.
@@ -36,6 +36,7 @@ Page Builder offers the following benefits:
 ## Architecture
 
 The Page Builder consists of two primary subsystems:
+
 - **Creation logic script:** Handles page and theme editing within the administrative interface. It connects with the Virto Commerce Platform to fetch and save page data.
 - **Preview visualization script:** Runs on the Frontend, where it renders pages based on templates and ensures accurate visual representation for customers.
 

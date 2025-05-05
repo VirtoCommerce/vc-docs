@@ -41,7 +41,7 @@ At this stage, we’ve added two settings fields. Additional properties will be 
 Since frontend can include multiple templates, we need to specify which templates our block can be used with.
 
 In this case, we’ll add the block to the page template descriptor. To do this, open the file located at
-**/vc-frontend/blob/dev/client-app/builder-preview/schemas/templates/product.json**, and include our block in the sections array: **sections**:
+**/vc-frontend/blob/dev/client-app/builder-preview/schemas/templates/product.json**, and include our block in the **sections** array:
 
 ```json title="product.json"
 {

@@ -18,38 +18,6 @@ Before you begin, ensure that the following components are installed:
 
 Verify that the Virto Commerce Platform and Frontend are using the same **Shared content** folder for proper page synchronization.
 
-## Setup Content module
-
-Extend your content configuration by adding a `PathMappings` section to your **appsettings.json** file.
-
-```json title="appsettings.json"
-"Content": {
-  "PathMappings": {
-    "pages": [
-      "Themes",
-      "_storeId",
-      "_theme",
-      "content/pages"
-    ],
-    "themes": [
-      "Themes",
-      "_storeId"
-    ]
-  }
-}
-```
-
-If you manage settings via environment variables, use the following:
-
-```yaml title="environments.yml"
-Content__PathMappings__pages__0: "Themes"
-Content__PathMappings__pages__1: "_storeId"
-Content__PathMappings__pages__2: "_theme"
-Content__PathMappings__pages__3: "content/pages"
-Content__PathMappings__themes__0: "Themes"
-Content__PathMappings__themes__1: "_storeId"
-```
-
 ## Setup store
 
 Configure the public store URL to ensure pages are accessible correctly.
@@ -61,27 +29,6 @@ Configure the public store URL to ensure pages are accessible correctly.
 1. Click **Save** in the toolbar to save the changes.
 
 You store URL has been set.
-
-## Purge cache
-
-To see updates immediately, configure automatic cache clearing after content changes. We recommend setting up the Webhooks module to trigger cache reset automatically.
-
-1. [Install](../../../../user-guide/modules-installation) the [Webhooks module](https://github.com/VirtoCommerce/vc-module-webhooks/).
-1. Open Platform.
-1. In the main menu, select **Webhooks**.
-1. In the next blade, click **Add** in the toolbar to create a new subscription.
-1. Fill in the following fields:
-
-    1. Enter a subscription name.
-    1. In the **Events** dropdown list, select **Page Builder Content Changed Event**.
-    1. Add **Path** and **Type** fields.
-    1. Switch the webhook toggle to on.
-    1. Set the URL to your frontend endpoint.
-    1. Click **Save** in the toolbar to save the changes.
-
-![Webhook settings](media/webhook-settings.png){: style="display: block; margin: 0 auto;" }
-
-New webhook has been added.
 
 ## Run
 
@@ -105,8 +52,6 @@ Now you are ready to create and manage content pages:
         ![New page in Page Builder](media/new-page-opens.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **Save** in the top right corner. 
-
-    The page appears in the list of pages with the **.page-draft** extension. After you [publish](#publish-or-unpublish-pages) your page, it will receive the **.page** extension. 
 
     You can open it in the browser using the specified permalink.
 
