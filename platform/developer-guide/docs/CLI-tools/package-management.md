@@ -1,14 +1,14 @@
 # Package Management
 
-The **vc-build** tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) platform dependencies using simple CLI commands (applies to module and platform releases). There is also a Configure target that allows to [configure the platform's connection strings](package-management.md#configure).
+The **vc-build** tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) Platform dependencies using simple CLI commands (applies to module and Platform releases). There is also a `configure` target that allows to [configure the Platform's connection strings](package-management.md#configure).
 
 ## Install
 
 !!! note
-    **Install** and **Update** support scenarios where a developer has the platform in the source code, and modules are already installed in it. In such cases, these targets can install and update modules as well.
-    This means that if you have the platform in your source code repository and modules already installed within it, you can still use the `install` and `update` targets to manage those modules. 
+    `install` and `update` support scenarios where a developer has the Platform in the source code, and modules are already installed in it. In such cases, these targets can install and update modules as well.
+    This means that if you have the Platform in your source code repository and modules already installed within it, you can still use the `install` and `update` targets to manage those modules. 
 
-The `install` command fetches the platform or modules and installs them in the appropriate folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows **vc-build** to easily restore the platform with modules on a different machine, such as a build server, without all these packages.
+The `install` command fetches the Platform or modules and installs them in the appropriate folder. Versions can be specified in command parameters or defined in **vc-package.json**. This allows **vc-build** to easily restore the Platform with modules on a different machine, such as a build server, without all these packages.
 
 If the command parameters have not been specified and **vc-package.json** is not found in the local folder, the command installs the latest stable release by default. If you need the latest available versions, use the `-edge` parameter.
 
@@ -20,12 +20,16 @@ This target installs stable versions of modules by default. If you need the late
 
 If you use a source that requires authorization, you can pass tokens using the following parameters:
 
-* `GithubToken`: This token is used to authenticate and authorize access to GitHub resources.
-* `GitLabToken`: This token is used to authenticate and authorize access to GitLab resources.
-* `AzureToken`: This parameter represents the Azure Personal Access Token (PAT). Azure PAT is a security token that allows you to authenticate and access Azure resources.
-*	`AzureUniversalPackagesPat`: This parameter represents the Azure PAT specifically used for Universal Packages. Universal Packages are a type of package feed in Azure DevOps that allows you to store and distribute packages. 
-*	`AzureSasToken`: This parameter represents the Azure Shared Access Signature (SAS) Token for Azure Blob storage. Azure Blob storage is a service for storing large amounts of unstructured data, such as images, videos, and documents.
+| Parameter                   | Description                                                                                                                                                |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `GithubToken`               | This token is used to authenticate and authorize access to GitHub resources.                                                                               |
+| `GitLabToken`               | This token is used to authenticate and authorize access to GitLab resources.                                                                               |
+| `AzureToken`                | This parameter represents the Azure Personal Access Token (PAT). <br>Azure PAT is a security token that allows you to authenticate and access Azure resources. |
+| `AzureUniversalPackagesPat` | This parameter represents the Azure PAT specifically used for Universal Packages. <br>Universal Packages are a type of package feed in Azure DevOps.           |
+| `AzureSasToken`             | This parameter represents the Azure Shared Access Signature (SAS) Token for Azure Blob storage,<br> used to store unstructured data like images or documents.  |
 
+
+**Examples**
 
 ```console
 vc-build install
@@ -36,7 +40,6 @@ vc-build install -module <module> -version <version>
 vc-build install -module <module>:<version>
 vc-build install -PackageManifestPath some_directory/vc-package.json -DiscoveryPath ../modules -ProbingPath platform_dir/app_data/modules -SkipDependencySolving
 ```
-
 
 You can install any required Virto Commerce module by specifying its Id and version:
 
@@ -141,11 +144,11 @@ vc-build install -module <moduleId>:<version>
 
 ## Update
 
-This command updates the platform and all modules linked to the version specified by `<version>`, respecting semver.
+This target updates the Platform and all modules linked to the version specified by `<version>`, respecting semver.
 If `<version>` is not specified, the component will be updated to the latest version.
-If no args are specified, the platform and all modules in the specified location will be updated.
+If no args are specified, the Platform and all modules in the specified location will be updated.
 
-This command also updates the installed dependency versions in the **vc-package.json** file.
+This target also updates the installed dependency versions in the **vc-package.json** file.
 Since the version 3.15.0 this target updates to stable bundles by default. If you want to update to the latest available versions you can add `-edge` parameter.
 You can specify the bundle to update your environment to specific versions using `-v <bundle name>` parameter.
 
@@ -158,7 +161,7 @@ vc-build update -platform
 
 ## Uninstall
 
-The uninstall command removes the specified module and its dependencies. It also removes uninstalled modules from your **vc-package.json**.
+The uninstall target removes the specified module and its dependencies. It also removes uninstalled modules from your **vc-package.json**.
 
 ```console
 vc-build uninstall -module <module>
@@ -172,11 +175,40 @@ vc-build uninstall -Module VirtoCommerce.Cart VirtoCommerce.Catalog
 
 ## Configure
 
-The `configure` command checks and updates connection strings in the **appsettings.json** file.
+The `configure` target checks and updates connection strings in the **appsettings.json** file.
 
 ```console
 vc-build configure -sql <sql connection string> -redis <redis connection string> -AzureBlob <container connection string>
 ```
 
-This command ensures all required connection strings are properly configured in your environment.
+This target ensures all required connection strings are properly configured in your environment.
+
+
+## ShowDiff
+
+The `ShowDiff` target shows the differences between the current and the target versions of the Platform and the modules. This target is automatically triggered before the `update` target and requires user confirmation to proceed.
+
+**Examples**
+
+```console
+vc-build ShowDiff
+vc-build ShowDiff -v 3
+vc-build ShowDiff -edge
+```
+
+## ValidateDependencies
+
+The `ValidateDependencies` target validates module dependencies against the installed Platform version and other modules. It checks for version conflicts and missing dependencies. This target is automatically triggered by the `install` and `update` targets.
+
+**Examples**
+
+```console
+vc-build ValidateDependencies
+vc-build ValidateDependencies -DiscoveryPath ../modules
+```
+
+
+
+
+
 
