@@ -99,6 +99,10 @@ nav:
                 - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md
           - Event Driven Development:
                 - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
+          - Page Builder:
+                - Overview: Fundamentals/PageBuilder/overview.md
+                - Getting Started: Fundamentals/PageBuilder/getting-started.md
+                - Create New Block: Fundamentals/PageBuilder/create-new-block.md
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
