@@ -42,7 +42,7 @@ The Page Builder consists of two primary subsystems:
 
 The two subsystems communicate via `window.postMessage()` to synchronize edits and previews across the Admin and Frontend environments.
 
-![Architecture](media/architecture.png)
+![Architecture](media/architecture.png){: style="display: block; margin: 0 auto;" width="600"}
 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder/)

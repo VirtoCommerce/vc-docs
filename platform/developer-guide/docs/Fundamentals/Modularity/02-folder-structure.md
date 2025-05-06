@@ -96,7 +96,7 @@ The `Module.Data` project consists of the following folders:
 
 The [**Module.Web**](http://module.web/) project represents an application level of module domain. This project uses all services and domain types in order to implement business scenarios. Initialization, public API, and user interface are also implemented on this level. This project cannot be used directly from other modules and is not distributed as a **NuGet** package.
 
-The `Module.Core` project consists of the following folders and files:
+The `Module.Web` project consists of the following folders and files:
 
 ```
 ├── Module.Web

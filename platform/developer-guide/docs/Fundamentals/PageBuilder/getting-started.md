@@ -71,5 +71,8 @@ Now you are ready to create and manage content pages:
 
     1. Click **Save** in the toolbar. 
 
-    Your new page appears in the list of pages with the **Draft** status.
+    Your new page appears in the list of pages.
 
+![Readmore](media/readmore.png){: width="25"} [Adding content to page](../../../../user-guide/page-builder/manage-pages#add-content-to-page)
+
+![Readmore](media/readmore.png){: width="25"} [Publishing and unpublishing pages](../../../../user-guide/page-builder/manage-pages#publish-or-unpublish-pages)
