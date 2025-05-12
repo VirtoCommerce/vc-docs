@@ -3,7 +3,7 @@
 Each Virto PBC Max includes:
 
 * **Business end-to-end scenarios:** Each PBC Max includes complete business scenarios that guide the implementation of the capability.
-* **Set of compatible modules:** PBCs Max come with a curated set of modules that work seamlessly together to deliver the desired functionality.
+* **Set of compatible modules:** PBCs Max come with a curated set of modules (regular PBCs) that work seamlessly together to deliver the desired functionality.
 * **Package.json for fast installation:** Installation is simplified with a pre-configured **package.json** file, making it quick to get started.
 
 Key benefits of PBCs Max:
@@ -16,7 +16,7 @@ Key benefits of PBCs Max:
 Virto Commerce offers the following PBCs Max:
 
 
-| **PBC MAx** | **Description** | **Benefits** |
+| **PBC Max** | **Description** | **Benefits** |
 |-------------|-----------------|--------------|
 | [Virto Start](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/virto-start-packages.json) | Foundational package for starting your e-commerce journey.<br>Provides B2B and B2C configurations with native <br> Virto Commerce Frontend integration. | - Quick setup for B2B/B2C stores. <br>- Pre-built tools and templates. <br>- Scalable and cost-effective. |
 | [Identity Provider (IdP)](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/idp-packages.json) | Authenticates and authorizes user access to applications. <br> Enables quick customer authorization and authentication. | - Secure customer login. <br>- Role-based access control. <br>- Centralized authentication. |
