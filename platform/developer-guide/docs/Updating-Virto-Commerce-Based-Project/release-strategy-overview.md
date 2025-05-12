@@ -75,7 +75,7 @@ Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's m
     !!! note
         Virto Commerce offers [6 preset PBCs Max](pbcs.md). However, you can create any number of custom PBCs Max to address specific business tasks.
 
-![Readmore](media/readmore.png){: width="25"} [Available PBCs Max Size and their installation](pbcs.md)
+![Readmore](media/readmore.png){: width="25"} [Available PBCs Max and their installation](pbcs.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Install specific platform or module version](installing-specific-version.md)
 
