@@ -5,7 +5,7 @@ Virto Commerce follows a structured release strategy designed to provide flexibi
 * [Releases.](#releases)
 * [Private modules.](#private-modules)
 * [Bundles.](#bundles)
-* [Packaged business capabilities.](#packaged-business-capabilities-pbcs)
+* [Packaged business capabilities and PBCs Max](#packaged-business-capabilities-pbcs-and-pbcs-max)
 
 ## Releases
 
@@ -65,13 +65,17 @@ The release types can be combined into the following bundles to meet different n
 | [Stable](https://github.com/VirtoCommerce/vc-modules/tree/master/bundles/latest)     | Stable releases  | Comprises thoroughly tested and finalized modules; production-ready and recommended for live environments. |
 
 
-## Packaged Business Capabilities (PBCs)
+## Packaged Business Capabilities (PBCs) and PBCs Max
 
-PBCs are a combination of modules releases, grouped by functionality to address specific business needs, such as Catalog, or Logging in.
+Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's modular and flexible approach, known as the Virto Atomic Architecture:
 
-Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's modular and flexible approach, known as the Virto Atomic Architecture. These PBCs are designed to encapsulate specific business functionalities, making them an ideal choice for decision-makers across various business entities.
+* **PBC** is a module or a group of modules (in some cases) that solves an individual business problem, such as Catalog, or logging in. 
+* **PBC Max** is a combination of modules, grouped by functionality to address specific business needs, such as setting up and customizing product catalogs. The PBCs Max are designed to encapsulate specific business functionalities, making them an ideal choice for decision-makers across various business entities.
 
-![Readmore](media/readmore.png){: width="25"} [Available PBCs and their installation](pbcs.md)
+    !!! note
+        Virto Commerce offers [6 preset PBCs Max](pbcs.md). However, you can create any number of custom PBCs Max to address specific business tasks.
+
+![Readmore](media/readmore.png){: width="25"} [Available PBCs Max Size and their installation](pbcs.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Install specific platform or module version](installing-specific-version.md)
 
