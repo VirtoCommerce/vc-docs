@@ -65,11 +65,11 @@ The `ServerResponseDescriptor` interface describes how the Page Builder should e
   "url": "https://api.example.com/config",
   "method": "GET",
   "init": true,
-  "response": {
+  "response": {                           //The response part
     "result": "$.defaults.language",
     "isArray": false,
     "value": "$"
-  },
+  },                                      
   "fallbackValue": "en"
 }
 ```
