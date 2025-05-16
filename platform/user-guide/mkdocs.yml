@@ -248,6 +248,7 @@ nav:
                 - Algolia: algolia/overview.md
                 - Lucene: lucene/overview.md
                 - Azure Search: azure-search/overview.md
+                - Search options: search.md
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md
@@ -293,7 +294,6 @@ nav:
           - White Labeling: 
                 - Overview: white-labeling/overview.md
                 - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
-          - Search options: search.md
           - Glossary: glossary.md
     - Integrations:
           - Overview: integrations/overview.md

@@ -2,7 +2,7 @@
 
 For enhanced product filtering and search, let's configure properties within our catalog. They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
 
-![Facets](media/properties-configuration.png)
+![Facets](media/properties-configuration.png){: style="display: block; margin: 0 auto;" }
 
 Properties can be set for:
 
@@ -102,28 +102,28 @@ Let's add a **Brand** property at the catalog level:
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Product property**.
 
-    ![Add product property](media/add-property.png)
+    ![Add product property](media/add-property.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, enter property name, switch the **Dictionary** option to on, and select **Short text**  [value type](#value-type-selection):
 
-    ![Manage product property](media/manage-product-property.png)
+    ![Manage product property](media/manage-product-property.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 1. Click **Dictionary**, then click **Add** in the next blade toolbar to add brand options:
 
-    ![Manage dictionary](media/manage-dictionary.png)
+    ![Manage dictionary](media/manage-dictionary.png){: style="display: block; margin: 0 auto;" }
 
     Click **Save** in the toolbar to add the dictionary entry to the list. Continue to add options as required:
 
-    ![Dictionary items](media/dictionary-items.png)
+    ![Dictionary items](media/dictionary-items.png){: style="display: block; margin: 0 auto;" }
 
 The property appears in the list. On the frontend, the **Brand** facet becomes collapsible and the properties are displayed as follows:
 
-![Brand on frontend](media/brand-property-on-frontend.png)
+![Brand on frontend](media/brand-property-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
 Continue to add properties and their values according to the table above.
 
-![Catalog properties](media/catalog-properties-added.png)
+![Catalog properties](media/catalog-properties-added.png){: style="display: block; margin: 0 auto;" }
 
 
 #### Value type selection
@@ -153,11 +153,11 @@ Let's add a **Date of preparation** property to the **Anesthetics** category:
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Category property**.
 
-    ![Add category property](media/add-category-property.png)
+    ![Add category property](media/add-category-property.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, enter property name and select **Date time** value type from the dropdown list:
 
-    ![Manage category property](media/manage-category-property.png)
+    ![Manage category property](media/manage-category-property.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 
@@ -172,7 +172,7 @@ Now, we will add properties to the products:
 1. In the product details blade, click on the **Properties** widget.
 1. In the next blade, you fill in the properties you have added in the previous steps. From the dropdown lists, select the product's brand and its physical state. Enter date of preparation by clicking ![Calendar](media/calendar.png){: width="25"}:
 
-    ![Adding properties to products](media/add-properties-to-product.png)
+    ![Adding properties to products](media/add-properties-to-product.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 
@@ -192,11 +192,11 @@ To add similar properties and property to a group of products:
 1. In the next blade, add all or some previously added product properties.
 1. Click **OK** to add the properties to the group of products.
 
-    ![Bulk add properties](media/bulk-add-properties.png)
+    ![Bulk add properties](media/bulk-add-properties.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, specify values for the selected properties, then click **OK**.
 
-    ![Add property values](media/bulk-add-properties-to-product.png)
+    ![Add property values](media/bulk-add-properties-to-product.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Execute** in the previous blade.
 
@@ -209,7 +209,7 @@ To set the visibility of facets:
 1. Go to **Stores** --> **Your store (Dental Demo Store)** --> **Aggregation properties** widget.
 1. In the next blade, click on the properties in the left column (available properties) to move them to the right column (properties visible on the frontend):
 
-    ![Facets visibility](media/facets-visibility.png)
+    ![Facets visibility](media/facets-visibility.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -224,17 +224,17 @@ The selected facets are now displayed in the Frontend Application.
 
 The properties are displayed as facets:
 
-![Facets](media/facets-frontend-view.png)
+![Facets](media/facets-frontend-view.png){: style="display: block; margin: 0 auto;" }
 
 The product properties are also displayed in the product cards:
 
-![Product properties](media/product-properties.png)
+![Product properties](media/product-properties.png){: style="display: block; margin: 0 auto;" }
 
 ## Normalize facets
 
 Sometimes, different properties represent the same information but are written in various ways. For example, a product's country of origin might be listed as US, USA, or Made in USA:
 
-![Multiple options](media/pre-normalized-facets.png)
+![Multiple options](media/pre-normalized-facets.png){: style="display: block; margin: 0 auto;" }
 
 To improve product filtering, users can merge multiple values into one:
 
@@ -247,11 +247,11 @@ To improve product filtering, users can merge multiple values into one:
     1. In the next blade, click **Value mapping** in the toolbar. 
     1. In the next blade, click **Add** in the toolbar.
 
-        ![Start normalization](media/start-normalization.png)
+        ![Start normalization](media/start-normalization.png){: style="display: block; margin: 0 auto;" }
 
     1. In the next blade, add all the available synonyms to the **USA** by clicking **Add** in the toolbar:
 
-        ![Add synonyms](media/adding-synonyms.png)
+        ![Add synonyms](media/adding-synonyms.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **OK**, then **Save** in the previous blade to save the changes.
     1. [Rebuild index](../search/managing-search.md#build-search-index).
@@ -264,17 +264,60 @@ To improve product filtering, users can merge multiple values into one:
     1. In the next blade, select the item to map values for (**Country of origin** in our case). 
     1. In the next blade, click **Add** in the toolbar.
 
-        ![Start normalization in Search Index](media/start-normalization-search-index.png)
+        ![Start normalization in Search Index](media/start-normalization-search-index.png){: style="display: block; margin: 0 auto;" }
 
     1. In the next blade, add all the available synonyms to the **USA** by clicking **Add** in the toolbar:
 
-        ![Add synonyms](media/adding-synonyms.png)
+        ![Add synonyms](media/adding-synonyms.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **OK**, then **Save** in the previous blade to save the changes.
     1. [Rebuild index](../search/managing-search.md#build-search-index).
 
 Now, the **Country of origin** facet shows only **USA**, which includes all the other synonym options:
 
-![Normalized facets](media/normalized-facets.png)
+![Normalized facets](media/normalized-facets.png){: style="display: block; margin: 0 auto;" }
+
+## Group properties
+
+Numerous properties can be organized into groups for enhanced readability.
+
+![Grouped properties](media/property-groups.png){: style="display: block; margin: 0 auto;" }
+
+Organizing properties into groups includes the following steps:
+
+1. [Creating property group.](#creating-property-groups)
+1. [Assigning groups to properties.](#assign-property-group-to-properties)
+
+### Creating property groups
+
+To create a property group:
+
+1. Open **Catalog** in the main menu.
+1. In the next blade find the required catalog and click on the three dots to the left of its name to open the dropdown menu.
+1. In the dropdown, select **Manage**.
+1. In the next blade, click on the **Property groups** widget.
+1. In the next blade, click **Add** in the toolbar, then fill in the following fields:
+
+    ![Add new property group](media/add-property-group.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **Save** in the toolbar to save the changes.
+
+The new property group has been added.
 
 
+### Assign property group to properties
+
+To assign a new property group to the product properties:
+
+1. Open **Catalog** in the main menu.
+1. In the next blade, select the required catalog.
+1. In the next blade(s), select the required product.
+1. In the next blade, click on the **Properties** widget.
+1. In the next blade, select the property to assign property group to, then click ![Pencil](media/pencil.png){: width="25"}.
+1. In the next blade, select a group from the dropdown:
+
+    ![Select a property group](media/select-property-group.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **Save** in the toolbar to save the changes.
+
+The grouped properties appear on the frontend. The ungrouped properties are added to the **Other** group. 

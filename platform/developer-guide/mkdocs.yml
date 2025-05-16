@@ -103,6 +103,9 @@ nav:
                 - Overview: Fundamentals/PageBuilder/overview.md
                 - Getting Started: Fundamentals/PageBuilder/getting-started.md
                 - Create New Block: Fundamentals/PageBuilder/create-new-block.md
+                - Server Descriptors: Fundamentals/PageBuilder/server-descriptors.md
+                - Settings: Fundamentals/PageBuilder/settings.md
+                - Schemas: Fundamentals/PageBuilder/schemas.md
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
@@ -662,6 +665,8 @@ nav:
                 - Upgrading to Virto Commerce on .Net8: Tutorials-and-How-tos/How-tos/upgrading-to-net8.md
                 - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
                 - Using Feature Flags with Virto Commerce Platform and Frontend Application: Tutorials-and-How-tos/How-tos/feature-flags.md
+                - Using responseGroup in Virto Commerce REST APIs: Tutorials-and-How-tos/How-tos/using-responseGroups-in-rest-api.md
+                - Member Entities Partial Update Using PATCH-Endpoint: Tutorials-and-How-tos/How-tos/update-members-using-patch.md 
                 - Generating PDFs: Tutorials-and-How-tos/How-tos/generating-pdfs.md
                 - Performing Health Checks: Tutorials-and-How-tos/How-tos/health-checks.md
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md

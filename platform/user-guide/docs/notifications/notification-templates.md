@@ -12,7 +12,7 @@ To add a new notification template:
 	!!! info
 		The **predefined** label means that this notification template is supplied out of the box. If you make changes to it and then save it, it will be replaced with your modified version, but the system will warn you:
 		
-		![Predefined notification warning](media/warning-for-predefined-template.png){: width="600"}
+		![Predefined notification warning](media/warning-for-predefined-template.png){: style="display: block; margin: 0 auto;" width="600"}
 		
 		The defaults can be restored any time by clicking **Restore** in the toolbar.
 
@@ -26,6 +26,10 @@ To add a new notification template:
 
 	!!! warning
 		The only way to create a new template for the notification you are working with is to create one for a different language. If you create a new template with the same language as the current template, such as Default or EN-US, it will override the current template.
+
+1. Click **Preview** in the toolbar. The notification preview opens in the next blade. In case of errors, you will see a detailed report on them:
+
+	![Error message](media/template-error-message.png){: style="display: block; margin: 0 auto;" width="600"}
 
 1. Click **OK** to save the changes.
 

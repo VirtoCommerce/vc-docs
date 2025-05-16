@@ -8,15 +8,15 @@ Integrating feature flags into Virto Commerce Platform and Frontend Application 
 
 * **Modularity**: Feature flags enable safe and controlled feature releases by allowing developers to enable or disable features remotely by installing/uninstalling Virto Commerce module. 
 * **A/B Testing**: Feature flags facilitate A/B testing and experimentation by enabling developers to test new features with a subset of users before rolling them out to the entire user base.
-* **Rollback Control**: In case of issues or unexpected behaviour, feature flags provide the ability to quickly roll back changes by disabling the problematic feature.
+* **Rollback Control**: In case of issues or unexpected behavior, feature flags provide the ability to quickly roll back changes by disabling the problematic feature.
 * **Configuration Management**: Feature flags provide a centralized mechanism for managing feature configurations, making it easier to manage feature variations across different environments.
 
 ## Architecture 
 
-[Virto Commerce Platform 3.813+](https://github.com/VirtoCommerce/vc-platform) and [Virto Commerce XAPI 3.812+](https://github.com/VirtoCommerce/vc-module-experience-api) introduce Public Store Settings. This architecture enables seamless integration of feature flags into Virto Commerce Platform and Frontend Application.
+[Virto Commerce Platform 3.813+](https://github.com/VirtoCommerce/vc-platform) and [Virto Commerce xAPI 3.812+](https://github.com/VirtoCommerce/vc-module-experience-api) introduce Public Store Settings. This architecture enables seamless integration of feature flags into Virto Commerce Platform and Frontend Application.
 
 * Virto Commerce extended `SettingDescriptor` with the `IsPublic` property, indicating that a setting is accessible for client applications via the XAPI. 
-* Virto Commerce XAPI extended store query with modules that grant access to Public Store Settings per module. 
+* Virto Commerce xAPI extended store query with modules that grant access to Public Store Settings per module. 
 
 [Hub for Feature Flag Driven Development](https://featureflags.io/)
 

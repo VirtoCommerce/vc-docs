@@ -4,7 +4,7 @@ This guide explains how to configure external data requests using the `ServerReq
 
 ## ServerRequestDescriptor
 
-The `ServerRequestDescriptor` interface defines how the Page Builder fetches external data from a server. It is used in [builder settings](./builder-settings.md) and in dynamic controls like [search](./controls/search.md) and [select](./controls/select.md).
+The `ServerRequestDescriptor` interface defines how the Page Builder fetches external data from a server. It is used in [Page Builder settings](settings.md) and in dynamic controls like **search** and **select**.
 
 This descriptor allows you to configure all aspects of the HTTP request: the target URL, HTTP method, request payload, headers, and more. It also supports caching and request initialization logic, making it flexible for use in various data-driven builder scenarios.
 
@@ -60,12 +60,12 @@ The `ServerResponseDescriptor` interface describes how the Page Builder should e
 
 **Example**
 
-```json
+```json hl_lines="5 6 7 8 9"
 {
   "url": "https://api.example.com/config",
   "method": "GET",
   "init": true,
-  "response": {                           //The response part
+  "response": {                           
     "result": "$.defaults.language",
     "isArray": false,
     "value": "$"

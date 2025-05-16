@@ -70,30 +70,30 @@ To add sections and options:
 1. In the **Product configuration** blade, click **Add section** in the toolbar.
 1. Fill in the following fields:
 
-    ![Add sections](media/add-section.png)
+    ![Add sections](media/add-section.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Add options** in the toolbar.
 1. In the **Select catalog items** blade, check the items to be added as options from the existing catalog:
 
-    ![Check options](media/check-options.png)
+    ![Check options](media/check-options.png){: style="display: block; margin: 0 auto;" }
 
     * To make an option required, switch this option to on in the section description blade:
     
-        ![Required option on](media/required-option-on.png)
+        ![Required option on](media/required-option-on.png){: style="display: block; margin: 0 auto;" }
     
         This ensures that users must select one of the available options when configuring the product on the Frontend:
 
-        ![Required option on Frontend](media/required-option-on-frontend.png)
+        ![Required option on Frontend](media/required-option-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
     * If you switch this option to off, a **None** option automatically appears in the list on the Frontend. This allows users to skip selecting an option for that section when configuring their product:
 
-        ![Non-required option](media/none-option.png)
+        ![Non-required option](media/none-option.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Confirm** in the toolbar.
 1. Your options appear in the options list of the previous blade. Click **OK** to save the changes.
 1. Repeat these steps to add all the required sections and options. The sections appear in the **Product configuration** blade:
 
-    ![Added sections](media/added-sections.png)
+    ![Added sections](media/added-sections.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         Drag and drop the sections to configure the order of their appearance in the Frontend Application.
@@ -102,8 +102,9 @@ To add sections and options:
 
 In the Frontend Application, you can identify configurable products by the **Customize** button instead of the **Add to cart** button:
 
-![Customize button](media/customize-button.png)
+![Customize button](media/customize-button.png){: style="display: block; margin: 0 auto;" }
 
 The added sections appear under the product description:
 
-![Sections on frontend](media/configurable-products-on-frontend.png)
+![Sections on frontend](media/configurable-products-on-frontend.png){: style="display: block; margin: 0 auto;" }
+
