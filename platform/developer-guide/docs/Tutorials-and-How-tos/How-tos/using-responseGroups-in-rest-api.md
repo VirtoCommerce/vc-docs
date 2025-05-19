@@ -45,12 +45,12 @@ File names often follow this pattern:
 
 These flags define which parts of the object graph will be included in the response. Choose based on what you need:
 
-| Example Need                   | Add This Flag                      |
-| ------------------------------ | ---------------------------------- |
-| I want product prices          | `WithPrices`                       |
-| I need customer addresses      | `WithAddresses`                    |
-| I want cart with payments info | `WithPayments`                     |
-| I want full object             | `Full` or combine multiple flags   |
+| Example need                    | Add this flag                      |
+| ------------------------------- | ---------------------------------- |
+| I want product prices.          | `WithPrices`                       |
+| I need customer addresses.      | `WithAddresses`                    |
+| I want cart with payments info. | `WithPayments`                     |
+| I want full object.             | `Full` or combine multiple flags   |
 
 You can use bitwise-style combinations:
 
