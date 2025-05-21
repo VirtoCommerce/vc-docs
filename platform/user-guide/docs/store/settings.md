@@ -15,6 +15,22 @@ In both the widget and the settings section, you will find fully or partly simil
 
 ![SEO settings](media/seo-settings.png)
 
+## Products settings
+
+![Products settings](media/products-settings.png)
+
+Turn this option to on to display the **Purchased before** filter for products on the frontend:
+
+![Purchased before](media/filter-by-purchased-before-status.gif)
+
+This setting activates the logic to enrich the product index with customer purchase history. It also extends the product index schema with a new field: `__purchase_by_user_<StoreId>`, containing user IDs of customers who have previously purchased the product:
+
+![Index](media/purchased-before-index.png)
+
+[Rebuild the product index](../catalog/product-indexing.md) to populate the `__purchase_by_user_<StoreId>` fields with historical data.
+
+To update the index with the corresponding user IDs upon new order creation, [trigger an update via the event](../order-management/settings.md#products-settings) after the order has been successfully created.
+
 ## Other settings
 
 Other store-specific settings are:
@@ -25,3 +41,4 @@ Other store-specific settings are:
 * [Google Analytics 4 settings](../integrations/google-analytics/settings.md).
 * [Application Insights settings](../application-insights/enable-app-insights.md).
 * [Sitemap settings](../sitemaps/settings.md), etc.
+

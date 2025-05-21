@@ -130,3 +130,68 @@ This connection allows you to search for products.
       }
     }
     ```
+
+=== "Query 3"
+    ```json linenums="1"
+    {
+    products(
+      first: 20
+      storeId: "B2B-store" 
+      currencyCode: "USD" 
+      cultureName: "en-US"
+      userId: "465b2572-755d-4d5f-b804-626dfe73535"
+      filter: "isPurchased: true is:product, variation"
+    ){
+      totalCount 
+      items {
+        price {
+          actual {
+            amount
+            formattedAmount
+          }
+        }
+        isPurchased code
+        id
+        name
+      }
+    }
+    }
+    ```
+
+=== "Return 3"
+    ```json linenums="1"
+    {
+      "data": {
+        "products": {
+          "totalCount": 217,
+          "items": [
+            {
+              "price": {
+                "actual": {
+                  "amount": 10.9,
+                  "formattedAmount": "$10.9"
+                }
+              },
+              "isPurchased": true,
+              "code": "5ZMR1",
+              "id": "ec235043d51848249e90ef170c371a1c",
+              "name": "1\" Steel Carriage Bolt, Grade 5, Zinc Plated Finish, 1/4\"-20 Dia/Thread Size, 100 PK"
+            },
+            {
+              "price": {
+                "actual": {
+                  "amount": 75.3,
+                  "formattedAmount": "$75.3"
+                }
+              },
+              "isPurchased": false,
+              "code": "21A915",
+              "id": "c827222f6d87496183728413e7203256",
+              "name": "Main 2\" Steel Carriage Bolt, Grade 8, Plain Finish, 5/8-11 Dia/Thread Size, 25 PK"
+            },
+          // More products
+          ]
+        }
+      }
+    }
+    ```
