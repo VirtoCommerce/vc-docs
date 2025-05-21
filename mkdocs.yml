@@ -507,7 +507,7 @@ extra:
                           url: https://virtostart-demo-admin.govirto.com/docs/index.html
                         - title: GraphQL API Reference
                           url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
-                - title: Frontend Application
+                - title: Frontend
                   content:
                     - title: User Guide
                       links:
@@ -549,6 +549,17 @@ extra:
                           url: /platform/developer-guide/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
                         - title: Extending VC Apps Functionality
                           url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                - title: Deployment on Virto Cloud
+                  content:
+                    - links: 
+                      - title: Deploy Platform and Frontend on Virto Cloud 
+                        url: /platform/deployment-on-cloud/deploy-on-virto-cloud/
+                      - title: Create Environment via CLI and VC Build
+                        url: /platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
+                      - title: Create and Configure Catalog
+                        url: /platform/deployment-on-cloud/catalog-creation/
+                      - title: Create and Configure Store
+                        url: /platform/deployment-on-cloud/store-configuration/
             - iconSrc: assets/icons/getting-started.svg
               title: Getting Started
               content:
