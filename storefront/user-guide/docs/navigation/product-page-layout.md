@@ -38,5 +38,5 @@ If a [reviews option is enabled](../../../../platform/user-guide/rating-reviews/
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../homepage-layout">← Homepage layout</a>
-    <a href="../../account/overview">Personal and corporate accounts →</a>
+    <a href="../brands-page">Brands page →</a>
 </div>

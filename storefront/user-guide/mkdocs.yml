@@ -24,6 +24,7 @@ nav:
     - Navigation:
           - Homepage Layout: navigation/homepage-layout.md
           - Product Page Layout: navigation/product-page-layout.md
+          - Brands Page: navigation/brands-page.md
     - Account:
           - Personal and Corporate Accounts: account/overview.md
           - Dashboard: account/dashboard.md

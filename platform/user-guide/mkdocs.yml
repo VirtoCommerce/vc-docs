@@ -39,6 +39,7 @@ nav:
                       - Importing Products, Prices, and Stock to Catalog: catalog/import-products-to-catalog.md  
                       - Exporting Catalogs: catalog/export-catalog.md
                 - Managing Categories: catalog/managing-categories.md
+                - Managing Brands Page: catalog/managing-brands-page.md
                 - Products Management Options:
                       - Overview: catalog/product-management-overview.md
                       - Managing Products: catalog/managing-products.md
