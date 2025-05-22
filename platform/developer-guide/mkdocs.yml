@@ -286,6 +286,9 @@ nav:
                       - Fulfillment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-center.md
                       - Fulfillment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-centers.md
                       - childCategories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/child-categories.md
+                      - Brand: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brand.md
+                      - Brands: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brands.md
+                      - SlugInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/SlugInfo.md
                 - Objects:
                       - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType.md
                       - ProductConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection.md
@@ -331,6 +334,10 @@ nav:
                       - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
                       - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
                       - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
+                      - BrandType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandType.md
+                      - BrandConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandConnection.md
+                      - BrandEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandEdge.md
+                      - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SlugInfoResponseType.md
                 - Examples:
                       - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search.md
                       - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search.md
