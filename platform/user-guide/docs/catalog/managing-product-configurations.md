@@ -72,12 +72,33 @@ To add sections and options:
 
     ![Add sections](media/add-section.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Add options** in the toolbar.
-1. In the **Select catalog items** blade, check the items to be added as options from the existing catalog:
+    1. Select **Type of section**:
 
-    ![Check options](media/check-options.png){: style="display: block; margin: 0 auto;" }
+        * **Product**: Add another product as part of the configuration by clicking **Add options** in the toolbar.
 
-    * To make an option required, switch this option to on in the section description blade:
+            ![Product type](media/adding-product-type-option.gif)
+
+            The product options appear on the frontend:
+
+            ![Product options](media/product-options.png)
+
+        * **Text**: Enter custom or predefined text.
+
+            ![Text type](media/adding-text-type-option.gif)
+
+            The predefined text appears on the frontend:
+
+            ![Predefined text](media/predefined-text.png)
+
+        * **File**: Upload a file.
+
+            ![File type](media/adding-text-type-option.gif)
+
+            The file upload section appears on the frontend:
+
+            ![Logo upload](media/logo-upload.png)
+
+    1. To make an option required, switch this option to on in the section description blade:
     
         ![Required option on](media/required-option-on.png){: style="display: block; margin: 0 auto;" }
     
@@ -85,7 +106,7 @@ To add sections and options:
 
         ![Required option on Frontend](media/required-option-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
-    * If you switch this option to off, a **None** option automatically appears in the list on the Frontend. This allows users to skip selecting an option for that section when configuring their product:
+      If you switch this option to off, a **None** option automatically appears in the list on the Frontend. This allows users to skip selecting an option for that section when configuring their product:
 
         ![Non-required option](media/none-option.png){: style="display: block; margin: 0 auto;" }
 
