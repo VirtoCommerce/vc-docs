@@ -42,7 +42,7 @@ Other statuses are:
 
 ## Approve or decline quote request
 
-Once the status of the quote request changes into **Proposal sent**, you can approve or decline it.
+For corporate accounts, you can approve or decline a quote request once its status changes to **Proposal sent**:
 
 ![Quote details](../media/approve-decline.gif)
 

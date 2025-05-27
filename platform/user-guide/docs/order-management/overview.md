@@ -1,8 +1,8 @@
 # Overview
 
-The Order (Orders) module in Virto Commerce is a document based flexible orders management system with possibility to add unlimited number of documents related to customer order.
+In Virto Commerce Platform, Orders are managed via the **Orders** module and the **Order management** module representing a document-based flexible orders management system with possibility to add unlimited number of documents related to customer order. Install both modules to ensure full functionality and optimal performance in order management.
 
-The Orders module is designed to:
+The **Order** module is designed to:
 
 * Store order details.
 * Manage orders created by users on client side. 
@@ -13,12 +13,26 @@ The Orders module is designed to:
 
 The order itself contains minimum details.  You will find payment, shipment, and other order details on the documents.
 
-!!! note
-    The order management process in Virto Commerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
-
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-order)
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-order/releases)
+
+
+The **Order management** modules is designed to:
+
+* Add or remove line items from the order.
+* Ensure accurate price calculations based on the Frontend Application logic, applying relevant discounts, store settings, and customer-specific pricing. 
+
+
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-order-management)
+
+[![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-order-management/releases)
+
+
+
+!!! note
+    The order management process in Virto Commerce OMS is not coded and not pre-determined. This system is designed as an Order Details Editor with no validation logics available. The system is implied to be an additional storage for customer orders details.
+
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/qENWENyS0H0?si=jFpI5N7uNIn2U0LQ)
 
@@ -36,3 +50,12 @@ With the Orders module, you can:
 * [Send order information to Avalara](sending-order-information-to-avatax.md)
 * [Track order changes](tracking-order-changes.md)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../inventory/settings">← Inventory module settings</a>
+    <a href="../main-objects">Order information →</a>
+</div>

@@ -129,3 +129,12 @@ The added sections appear under the product description:
 
 ![Sections on frontend](media/configurable-products-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-product-variations">← Managing product variations</a>
+    <a href="../setting-product-availability">Managing product availability →</a>
+</div>

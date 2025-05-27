@@ -2,13 +2,13 @@
 
 The **Products** menu item includes:
 
-- **Marketplace Products**: Products uploaded by all vendors in the marketplace. Use this section to [add your own offer to another vendor's products](products-management.md#add-offer-to-another-vendors-product). 
-- **My Products**: Products uploaded by the current vendor in their marketplace. Use this section to [add your own products](products-management.md#add-own-product) and [offers](products-management.md#add-offer-to-own-product) or [manage product associations](products-management.md#manage-product-associations). 
+- **Marketplace Products**: Products uploaded by all vendors in the marketplace. Use this section to [add your own offer to another vendor's products](#add-offer-to-another-vendors-product). 
+- **My Products**: Products uploaded by the current vendor in their marketplace. Use this section to [add your own products](#add-own-product) and [offers](#add-offer-to-own-product) or [manage product associations](#manage-product-associations). 
 
 A product can be associated with multiple offers, each of which provides a specific product variation, its price, and its inventory. Each offer can contain multiple price tags, reflecting various pricing strategies or conditions. In the example below,  the product ("Laptop Model A") is associated with different offers, each offer has multiple price tags:
 
 
-| **Product**         | **Offer**                             | **Price Tag**            | **Price**       | **Condition/Note**                |
+| **Product**         | **Offer**                             | **Price tag**            | **Price**       | **Condition/Note**                |
 |---------------------|---------------------------------------|--------------------------|-----------------|-----------------------------------|
 |   Laptop Model A    |   8GB RAM, 256GB SSD                  | Standard Price           | $799.99         | Regular price                     |
 |                     |                                       | Bulk Purchase Price      | $749.99         | When buying 5 or more             |
