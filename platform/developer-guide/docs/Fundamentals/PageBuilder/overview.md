@@ -30,7 +30,7 @@ Page Builder offers the following benefits:
 - Comprehensive block library.
 - Drag-and-drop block management, including copy, paste, hide, and reorder actions.
 - Native integration with the Virto Frontend.
-- Extensible architecture through the Native Extendability Framework.
+- Native extendability framework.
 - Fine-grained permissions and role management.
 
 ## Architecture

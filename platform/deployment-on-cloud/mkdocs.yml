@@ -4,7 +4,7 @@ theme:
     hide: false
 
 # Project information
-extra_site_name: Deployment on Virto Cloud
+extra_site_name: Deployment on Cloud
 site_name: platform/deployment-on-cloud
 site_description: Documentation portal for Virto Commerce, an enterprise-level Microsoft .NET ecommerce platform.
 site_author: Virto Commerce

@@ -106,7 +106,7 @@ Each file defines a section that can be added to a page. The section editor in t
 |-----------------|-------------------------------|-------------------------------------------------------------------------------------------------------------|
 | `icon`          | string                        | Icon in section list.                                                                                        |
 | `name`          | string                        | Section name in list of new elements.                                                                        |
-| `static`        | boolean <br> string           | Indicates that block is static. These blocks cannot be added or removed. Actually it is a section settings. |
+| `static`        | boolean <br> string           | Indicates that block is static. These blocks cannot be added or removed. <br>Actually it is a section settings. |
 | `displayField`  | string                        | Property name, that used for indicate section in section list.                                              |
 | `sort`          | number                        | Order section in list of new elements.                                                                      |
 | `settings`      | `SectionPropertyDescriptor[]` | List of descriptors for section properties.                                                                  |
@@ -115,7 +115,7 @@ Each file defines a section that can be added to a page. The section editor in t
 | `groupIcon`     | string                        | Group icon.                                                                                                  |
 | `groupSort`     | number                        | Group sort.                                                                                                  |
 | `includeShared` | string[]                      | List of names to add settings from Shared.                                                                   |
-| `excludeShared` | string[] <br> true            | `true` - not use shared settings, `string[]` - list of settings id to exclude from result shared list.       |
+| `excludeShared` | string[] <br> true            | `true` - not use shared settings, <br>`string[]` - list of settings id to exclude from result shared list.       |
 
 <!-- blocks?: string[]; -->
 <!-- inline?: boolean; // used for settings groups, when false, group displayed as a overlap panel -->
