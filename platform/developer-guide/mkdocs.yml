@@ -103,10 +103,27 @@ nav:
           - Page Builder:
                 - Overview: Fundamentals/PageBuilder/overview.md
                 - Getting Started: Fundamentals/PageBuilder/getting-started.md
-                - Create New Block: Fundamentals/PageBuilder/create-new-block.md
+                - Creating New Block: Fundamentals/PageBuilder/create-new-block.md
                 - Server Descriptors: Fundamentals/PageBuilder/server-descriptors.md
                 - Settings: Fundamentals/PageBuilder/settings.md
                 - Schemas: Fundamentals/PageBuilder/schemas.md
+                - Component Context: Fundamentals/PageBuilder/component-context.md
+                - Controls: 
+                      - Search: Fundamentals/PageBuilder/search.md
+                      - Select: Fundamentals/PageBuilder/select.md
+                      - Calendar: Fundamentals/PageBuilder/calendar.md
+                      - Checkbox: Fundamentals/PageBuilder/checkbox.md
+                      - Color: Fundamentals/PageBuilder/color.md
+                      - Files: Fundamentals/PageBuilder/files.md
+                      - Images: Fundamentals/PageBuilder/images.md
+                      - Header: Fundamentals/PageBuilder/header.md
+                      - Collection: Fundamentals/PageBuilder/collection.md
+                      - Markdown: Fundamentals/PageBuilder/markdown.md
+                      - Number: Fundamentals/PageBuilder/number.md
+                      - Object: Fundamentals/PageBuilder/object.md
+                      - Paragraph: Fundamentals/PageBuilder/paragraph.md
+                      - String: Fundamentals/PageBuilder/string.md
+                      - Text: Fundamentals/PageBuilder/text.md
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
@@ -274,6 +291,7 @@ nav:
                       - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
                       - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
                       - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
+                      - cloneWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/cloneWishlist.md
           - xCatalog:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:
@@ -289,6 +307,7 @@ nav:
                       - Brand: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brand.md
                       - Brands: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brands.md
                       - SlugInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/SlugInfo.md
+                      - productSuggestions: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/productSuggestions.md
                 - Objects:
                       - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType.md
                       - ProductConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection.md
@@ -338,6 +357,7 @@ nav:
                       - BrandConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandConnection.md
                       - BrandEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandEdge.md
                       - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SlugInfoResponseType.md
+                      - ProductSuggestionsQueryResponseType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductSuggestionsQueryResponseType.md
                 - Examples:
                       - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search.md
                       - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search.md
@@ -589,6 +609,7 @@ nav:
                       - UpdateQuoteAddressCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteAddressCommandType.md
                       - InputQuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/InputQuoteAddressType.md
                       - ApproveQuoteResultType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ApproveQuoteResultType.md
+                      - UpdateQuoteDynamicPropertiesCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteDynamicPropertiesCommandType.md
                 - Mutations:
                       - createQuoteFromCart: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart.md
                       - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
@@ -603,6 +624,7 @@ nav:
                       - declineQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/declineQuoteRequest.md
                       - deleteQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/deleteQuoteAttachments.md
                       - updateQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments.md
+                      - updateQuoteDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteDynamicProperties.md
           - White Labeling:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/White-labeling/overview.md
                 - Queries: 
