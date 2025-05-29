@@ -38,7 +38,7 @@ To start using xAPI:
 !!! note
     If the xAPI module is not installed out-of-the-box, you can [install it](https://github.com/VirtoCommerce/vc-module-x-api) on the platform version 3.0 or higher by following [this guide](../Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md). Then restart the Platform.
 
-Open GraphQL UI playground in the browser by navigating to **http://{platform url}/ui/playground**, and run some sample queries.
+Open GraphQL UI playground in the browser by navigating to **http://{platform url}/ui/graphiql**, and run some sample queries.
 
 === "Sample query 1"
     ```json
