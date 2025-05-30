@@ -9,23 +9,23 @@ Use this context in custom controls, dynamic sections, or when building interact
 
 | Property        | Type                                    | Description                                                             |
 | --------------- | --------------------------------------- | ----------------------------------------------------------------------- |
-| `model`         | `any`                                   | The item currently being edited — can be a block, section, or settings. |
-| `block`         | `SectionModel` <br> `null`                | The current block (if available).                                       |
-| `section`       | `SectionModel` <br> `null`                | The current section. Useful when working with child blocks.             |
-| `template`      | `TemplateModel` <br> `null`               | The template currently in use.                                          |
+| `model`         | any                                     | The item currently being edited — can be a block, section, or settings. |
+| `block`         | `SectionModel` <br> null                | The current block (if available).                                       |
+| `section`       | `SectionModel` <br> null                | The current section. Useful when working with child blocks.             |
+| `template`      | `TemplateModel` <br> null               | The template currently in use.                                          |
 | `page`          | `SectionModel[]`                        | The full page structure — an array of sections.                         |
 | `settings`      | `SectionModel`                          | Global settings for the current template.                               |
 | `schema`        | `SectionPropertyDescriptor[]`           | Schema of the currently selected block or section.                      |
-| `blockSchema`   | `SectionPropertyDescriptor[]` <br> `null` | Schema of the current block.                                            |
+| `blockSchema`   | `SectionPropertyDescriptor[]` <br> null | Schema of the current block.                                            |
 | `sectionSchema` | `SectionPropertyDescriptor[]`           | Schema of the current section (or the parent section if in a block).    |
 | `objects`       | `ObjectsSchemasList`                    | A list of object schemas available for the component.                   |
-| `index`         | `number`                                | Index of the current item (for list-like sections).                     |
-| `item`          | `any`                                   | Current item’s value.                                                   |
+| `index`         | number                                  | Index of the current item (for list-like sections).                     |
+| `item`          | any                                     | Current item’s value.                                                   |
 | `parent`        | `ControlContext`                        | The parent context (used in nested lists or structures).                |
 | `file`          | `AssetFile`                             | The file or image associated with the current control.                  |
-| `element`       | `any`                                   | The current item in a list-like control.                                |
-| `utils`         | `object` (helper functions)             | A set of utility functions (see below).                                 |
-| `__searchQuery` | `string`                                | The current search query (used in `search` and `select` controls).      |
+| `element`       | any                                     | The current item in a list-like control.                                |
+| `utils`         | object (helper functions)               | A set of utility functions (see below).                                 |
+| `__searchQuery` | string                                  | The current search query (used in [search](search.md) and [select](select.md) controls).      |
 
 
 ## Utility functions (`utils`)

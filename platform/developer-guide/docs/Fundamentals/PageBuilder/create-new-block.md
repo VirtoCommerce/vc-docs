@@ -187,6 +187,6 @@ To visually display the selected products, we need to update the block layout wi
 </div>
 ```
 
-And here’s the final result:
+The result is as follows:
 
 ![result](media/result.png)
