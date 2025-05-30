@@ -58,7 +58,7 @@ This guide explores its scalability options, ranging from Small to Extra Large c
 
 This data based on best practices and feedback from multiple custom e-commerce solutions. The actual result can depend on custom implementation, data and configuration.
 
-|**Size**|**Frontend Requests/sec**|**Cart Changes peak/sec**|**Orders per day**|
+|**Size**|**Frontend requests/sec**|**Cart changes peak/sec**|**Orders per day**|
 | --- | --- | --- | --- |
 |**S**|10|1|200|
 |**M**|100|5|1500|
@@ -69,3 +69,5 @@ For XL size, [request a demo.](https://virtocommerce.com/request-demo)
 ### Azure price calculator
 
 Сonfigure and estimate the costs of Azure products with [Azure Price Calculator](https://azure.microsoft.com/en-us/pricing/calculator/).
+
+

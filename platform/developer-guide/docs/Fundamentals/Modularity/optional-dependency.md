@@ -18,7 +18,7 @@ Optional dependencies are particularly beneficial in the following scenarios wit
 
 For example, you can now install **Catalog** module without **Export** or **BulkActionsModule** if they are not required for your deployment.  
 
-![Optional Catalog module dependencies](media/optional-dependencies.png)
+![Optional Catalog module dependencies](media/optional-dependencies.png){: style="display: block; margin: 0 auto;" }
 
 ## Add optional dependency 
 
@@ -96,3 +96,5 @@ To keep optional NuGet references as a part of the package, add a **.keep** file
 By following these steps, you can configure optional dependencies between modules in the Virto Commerce Platform, providing flexibility and modular functionality to meet varying business requirements.
 
 Optional dependencies enhance the scalability and customization of Virto Commerce modules, allowing developers and administrators to tailor solutions based on specific needs.
+
+

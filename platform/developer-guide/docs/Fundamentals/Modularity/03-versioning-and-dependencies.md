@@ -1,6 +1,6 @@
 # Module Versioning and Dependencies
 
-Virto modules and platform use the [SemVer](https://semver.org/ "https://semver.org/") pattern. Short for Semantic Versioning, SemVer, in its latest incarnation (v2.0.0), describes the versioning scheme as **MAJOR.MINOR.PATCH**, where:
+Virto modules and Platform use the [SemVer](https://semver.org/ "https://semver.org/") pattern. Short for Semantic Versioning, SemVer, in its latest incarnation (v2.0.0), describes the versioning scheme as **MAJOR.MINOR.PATCH**, where:
 
 * You increment **MAJOR** version when you make incompatible API changes.
 * You increment **MINOR** version when you add functionality in a backwards-compatible manner.
@@ -20,9 +20,9 @@ When it comes to module pre-release tags, we generally follow the recognized nam
 
 Each Virto module has a version both as a project assembly version and the one contained in the `module.manifest` file. Thus, to change the version, you will have to change both the assembly version manually in `Directory.Build.Props` (going forward, it will be automatically calculated from current Git branches and tags tanks in the [GitVersion](https://gitversion.readthedocs.io/en/latest/) utility) and the module version is the `module.manifest` file.
 
-A module can depend on other modules and cannot function without the modules it depends on; along with this, each module has a dependency to a specific platform version.
+A module can depend on other modules and cannot function without the modules it depends on; along with this, each module has a dependency to a specific Platform version.
 
-All module and platform dependencies must be described in the `module.manifest` file, namely, in the `dependencies` section:
+All module and Platform dependencies must be described in the `module.manifest` file, namely, in the `dependencies` section:
 
 ```xml title="module.manifest"
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,12 +44,14 @@ The Virto dependency version resolving logic always interprets all versions as *
 
 ## Manage third party dependencies for modules
 
-As all module assemblies are copied into the *probing* folder before being loaded into the platform application process, except the assemblies of the module in question, the platform module manager copies all third party dependency assemblies and applies the same version conflict resolution policy:
+As all module assemblies are copied into the *probing* folder before being loaded into the Platform application process, except the assemblies of the module in question, the Platform module manager copies all third party dependency assemblies and applies the same version conflict resolution policy:
 
 !!! note
     The assembly with the highest version or the one that was modified last, wins.
 
-This fact may lead to an unexpected update of third party dependencies for other modules and the platform application itself when resolving an assembly at runtime. You should always consider this fact when updating dependencies for your custom modules.
+This fact may lead to an unexpected update of third party dependencies for other modules and the Platform application itself when resolving an assembly at runtime. You should always consider this fact when updating dependencies for your custom modules.
 
 
 ![Readmore](media/readmore.png){: width="25"} [Virto Commerce release strategy overview](../../Updating-Virto-Commerce-Based-Project/release-strategy-overview.md)
+
+

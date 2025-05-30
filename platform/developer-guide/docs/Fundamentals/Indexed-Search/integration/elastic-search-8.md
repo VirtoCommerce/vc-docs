@@ -1,6 +1,6 @@
-# Elastic Search 8
+# Elasticsearch 8
 
-The Virto Commerce **Elastic Search 8** module implements the `ISearchProvider` defined in the Virto Commerce Search module. It leverages the Elasticsearch engine to store indexed documents.
+The Virto Commerce **Elasticsearch 8** module implements the `ISearchProvider` defined in the Virto Commerce Search module. It leverages the Elasticsearch engine to store indexed documents.
 
 The module supports the following deployment options:
 
@@ -20,13 +20,13 @@ The module supports the following deployment options:
 
 The known limitations are: 
 
-* The Catalog object serialization via **Store serialized catalog objects in the index** platform settings is not implemented. Document field `__object` will not be indexed.
+* The Catalog object serialization via **Store serialized catalog objects in the index** Platform settings is not implemented. Document field `__object` will not be indexed.
 * Blue-Green indexation is not implemented.
 * Partial indexation is not implemented.
 
 ## Configuration
 
-Configure the Elastic Search 8 provider using the following schema:
+Configure the Elasticsearch 8 provider using the following schema:
 
 {%
    include-markdown "../../../Configuration-Reference/appsettingsjson.md"
@@ -37,3 +37,5 @@ Configure the Elastic Search 8 provider using the following schema:
 
 ## Full-text search 
 The provider performs full-text keyword searches on a documents, optionally with filters and aggregations.
+
+

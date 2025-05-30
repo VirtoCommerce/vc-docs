@@ -16,7 +16,7 @@ For example, let's search for all the lemon-lime drinks available:
 
     ![Faceted search result](media/faceted-search-result.png){: style="display: block; margin: 0 auto;" }
 
-## Muti-select faceted search
+## Multi-select faceted search
 
 This policy allows you to select multiple values of the same facet, for example, using a checkbox.
 

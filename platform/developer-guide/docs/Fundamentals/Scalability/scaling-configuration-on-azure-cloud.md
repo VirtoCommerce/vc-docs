@@ -1,5 +1,4 @@
-
-# Scaling Configuration on Azure cloud
+# Scaling Configuration on Azure Cloud
 
 This article explains aspects of setting up the Virto Commerce platform to use for scaling out an Azure cloud environment. Using scale-out for the platform allows you to build a more reliable service, and also divides the entire solution into layers and removes the single point of failure.
 
@@ -38,7 +37,7 @@ Use the Redis backplane for memory cache in **appsettings.json** for setting up 
     },
 ```
 
-##  Scaling push notifications
+##  Scale push notifications
 
 The push notification that is used in the manager is built on the [SignalR](https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-6.0) library.
 
@@ -179,7 +178,7 @@ To configure the Commerce Service App:
 
     ```
 
-### Frotend app
+### Frontend app
 
 To configure the Frontend App:
 
@@ -202,3 +201,6 @@ To configure the Frontend App:
     ```
 
 ![Readmore](media/readmore.png){: width="25"} [Scalability options](scalability-options.md)
+
+
+

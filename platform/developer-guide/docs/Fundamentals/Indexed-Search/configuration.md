@@ -4,7 +4,7 @@ This section explains the basic configuration for the indexed search logic via t
 
 ## Search
 
-This node configures full text search for the `VirtoCommerce.Search` module.
+This node configures full text search for the Virto Commerce Search module.
 
 {%
    include-markdown "../../Configuration-Reference/appsettingsjson.md"

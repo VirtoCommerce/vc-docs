@@ -1,6 +1,4 @@
-﻿# Best Practices
-
-## Identifying domain model boundaries for each module and best number of modules for custom solution
+﻿# Identifying domain model boundaries for each module and best number of modules for custom solution
 
 When it comes to identifying model boundaries and size for each module, the goal is not to get to the most granular separation possible, although you should tend towards having smaller modules, when possible. Instead, however, your goal is to get to the most meaningful separation guided by your domain knowledge.
 
@@ -17,8 +15,10 @@ Implementing your entire custom solution into a single module will be a good cho
 * Most of your business logic is based on the core Virto modules and simply extends them.
 * You do not have any strict scale requirement that causes your solution to run some modules independently as standalone services.
     
-![Chart: Module structure for custom solution](media/05-module-best-practices.png){: width="600"}
+![Chart: Module structure for custom solution](media/05-module-best-practices.png){: style="display: block; margin: 0 auto;" width="600"}
 
 One can draw parallels between how your code can be distributed among Virto modules and how the same code can be arranged in poly or mono repositories.
 
 ![Readmore](media/readmore.png){: width="25"} [Modular monolith architecture](https://www.kamilgrzybek.com/design/modular-monolith-primer)
+
+

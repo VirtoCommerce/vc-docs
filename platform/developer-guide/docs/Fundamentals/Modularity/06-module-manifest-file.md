@@ -4,7 +4,7 @@
 
 The **module.manifest** file is always included into a module package to:
 
-* Provide information to the platform runtime when a module is loading.
+* Provide information to the Platform runtime when a module is loading.
 * Build the module package. 
 
 ## File settings
@@ -25,7 +25,7 @@ The **module.manifest** file can be configured using a number of required and op
     <version>3.27.0</version>
     ```
 
-* `<platformVersion>`: The minimum platform version the current module is compatible with.
+* `<platformVersion>`: The minimum Platform version the current module is compatible with.
 
     ``` xml  
     <platformVersion>3.62.0</platformVersion>
@@ -138,3 +138,14 @@ You can use the following attributes:
 * `iconUrl`: The URL or path to the app's icon or logo used to identify the app in the system.
 * `permission`: The permissions or access rights required to use the app, which are used to control who can access the app and its features.
 *  `contentPath`: The default path to the app's content  specifying where the app's files are stored. If the ContentPath is set to `[VcModuleWeb]/Content/[Id]`, the app's content is stored in the **Content** folder of the **VcModuleWeb** module, with the app's Id appended to the end of the path.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../05-best-practices">← Best practices </a>
+    <a href="../configuration">Configuration →</a>
+</div>

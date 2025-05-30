@@ -20,7 +20,7 @@ For demo purposes, we will use [B2B Theme](https://github.com/VirtoCommerce/vc-t
 1. Download [Default B2B Theme](https://github.com/VirtoCommerce/vc-theme-b2b-vue/) or Build a custom one.
 1. Configure the DNS settings for each domain associated with the stores. Make sure to update the DNS records to point the domain names (e.g., store1-domain.com, store2-domain.com) to the appropriate IP address or hostname where your Virto Commerce instance is hosted. 
 
-## Configure Multiple Stores
+## Configure multiple stores
 
 To configure multiple stores with their own domains in Virto Commerce:
 

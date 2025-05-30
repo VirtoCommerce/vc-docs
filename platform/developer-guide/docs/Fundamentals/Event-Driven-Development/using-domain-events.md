@@ -20,7 +20,7 @@ public class CustomDomainEvent : DomainEvent
 Define a new event handler as follows:
 
 ```csharp
-public class CutomDomainEventHandler : IEventHandler<CustomDomainEvent>
+public class CustomDomainEventHandler : IEventHandler<CustomDomainEvent>
 {
   public async Task Handle(CustomDomainEventmessage)
   {
@@ -75,3 +75,4 @@ void Initialize(IServiceCollection serviceCollection)
   ...
 }
 ```
+

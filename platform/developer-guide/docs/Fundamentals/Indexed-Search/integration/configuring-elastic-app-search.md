@@ -30,7 +30,7 @@ To deploy Elastic App Search using Docker:
 
 1. Install `Docker` for [Windows](https://docs.docker.com/desktop/install/windows-install/) or [Linux](https://www.docker.com/get-started/).
 
-1. Install `Elastic App Search` container using `Docker-Compose` as follows:
+1. Install Elastic App Search container using **Docker-Compose** as follows:
 
     1. Create a directory and with a file named `.env` inside:
 
@@ -49,7 +49,7 @@ To deploy Elastic App Search using Docker:
 
     1. Create a strong password and place it instead of `!!!changeme!!!`.
 
-    1. Create a file named `docker-compose.yml` and place it with the `.env` file:
+    1. Create a file named **docker-compose.yml** and place it with the **.env file**:
 
     ??? "View code"
         ``` yaml
@@ -228,14 +228,14 @@ To deploy Elastic App Search using Docker:
         app_search.engine.total_fields.limit=128
         ```
   
-1. Bring up the Elastic cluster with the following command (run it from the directory where the `.yml` file is):
+1. Bring up the Elastic cluster with the following command (run it from the directory containing the **.yml file**):
   
     ```
     docker-compose up
     ``` 
     
 1. Access Kibana at http://localhost:5601. 
-1. Log in as `elastic` for username, your password being the value you provided for ELASTIC_PASSWORD in your `.env` file. 
+1. Log in as `elastic` for username, your password being the value you provided for ELASTIC_PASSWORD in your **.env file**. 
 1. Access Elasticsearch at http://localhost:9200.
 
 ![Readmore](media/readmore.png){: width="25"} [Deploying Elastic App Search with Docker](https://www.elastic.co/guide/en/enterprise-search/8.3/docker.html)
@@ -272,7 +272,7 @@ To install Elastic App Search on Virto Commerce Platform:
 
     ![Indexes](media/kibana-engines.png)
 
-## Run Virto Commerce application
+## Run Virto Commerce Frontend Application
 
 1. Navigate to the Frontend Application root directory:
 
@@ -281,3 +281,5 @@ To install Elastic App Search on Virto Commerce Platform:
     ```bash
     dotnet run
     ```
+
+

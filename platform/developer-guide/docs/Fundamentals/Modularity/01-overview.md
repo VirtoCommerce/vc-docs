@@ -2,7 +2,7 @@
 
 This article provides an overview of modular architecture, a core principle of any Virto Commerce solution.
 
-Virto Commerce is a modular platform that consists of various loosely coupled components that are loaded into the platform application. It is a good way of tackling complexity for large applications by breaking it up into separate conceptual modules.
+Virto Commerce is a modular Platform that consists of various loosely coupled components that are loaded into the Platform. It is a good way of tackling complexity for large applications by breaking it up into separate conceptual modules.
 
 A module encapsulates a portion of the application's overall functionality and typically contains a set of related components, such as domain features, including user interface and business logic, or pieces of application infrastructure and REST API methods.
 
@@ -11,9 +11,9 @@ Modules are independent of one another but can communicate with each other in a 
 !!! note
     When designing your modules, you have to stick to the the loosely coupled and shared-nothing infrastructure principles.
 
-The following chart shows the overall design concept of the platform application:
+The following chart shows the overall design concept of the Platform application:
 
-![Overall platform design chart](media/01-overall-design-chart.png){: width="600"}
+![Overall Platform design chart](media/01-overall-design-chart.png){: style="display: block; margin: 0 auto;" width="600"}
 
 Notes to the chart:
 
@@ -21,7 +21,7 @@ Notes to the chart:
     
 * **Modularity engine:** A software component that is responsible for module discovery, initialization, and loading into the main [ASP.NET](http://asp.net/) app process.
     
-* **Module:** A piece of functionality that can be added into the platform app at runtime.
+* **Module:** A piece of functionality that can be added into the Platform app at runtime.
     
 * **Cross-cutting functionality:** Common or shared logic that can be reused from any program level or component. e.g., caching, security, logging, etc.
 
@@ -37,7 +37,7 @@ As a module, any Virto component can have dependencies to other modules, while, 
 
 A well known design pattern, **Modular Monolith**, does also apply to Virto, with monolith referring to the hosting or runtime model. This means that all services and parts exist in the same solution (not in the same project), are running in the same process, and are therefore deployed at the same time. However, each service or part is located in its own module (.NET project) and is thus decoupled from other modules.
 
-At the same time, the Virto platform cannot be considered as a pure **Modular Monolith** based entity, since the Virto modules are not parts of a single platform solution. Each module is an isolated project that can be developed, deployed, and installed into a running platform instance independently.
+At the same time, the Platform cannot be considered as a pure **Modular Monolith** based entity, since the Virto modules are not parts of a single Platform solution. Each module is an isolated project that can be developed, deployed, and installed into a running Platform instance independently.
 
 ## Modular architecture benefits
 
@@ -57,7 +57,7 @@ Virto uses modular architecture since it provides our solutions with various ben
 
 Each Virto module breaks down into multiple layers and encapsulates and groups all aspects, from front end to back end, that are in charge of proving the necessary features. Such layers are in line with the **Vertical Slices** design principle, which, at a high level, may be depicted as follows:
 
-![Module layer chart](media/02-vertical-slice-module-design.png){: width="600"}
+![Module layer chart](media/02-vertical-slice-module-design.png){: style="display: block; margin: 0 auto;" width="600"}
 
 Instead of being coupled across a layer, a module is coupled vertically along a slice, while minimizing coupling between slices and maximizing it within a slice. This architecture is very convenient, as, when it comes to adding or changing a feature in an module, logically, e.g., changing the user interface, adding fields to models, modifying validation, and so on, you can do it all on each layer and then couple it vertically along a slice.
 
@@ -65,9 +65,9 @@ Instead of being coupled across a layer, a module is coupled vertically along a 
 
 ## Modules relationships
 
-Even though the modules should not have much coupling between each other, it is common for them to communicate with one another, and since all modules are loaded into the platform application process, they also have access to the platform functionality.
+Even though the modules should not have much coupling between each other, it is common for them to communicate with one another, and since all modules are loaded into the Platform application process, they also have access to the Platform functionality.
 
-A particular module can have the following types of relationships with another module and the platform:
+A particular module can have the following types of relationships with another module and the Platform:
 
 * **Use:** Module A uses module B.
     
@@ -75,9 +75,9 @@ A particular module can have the following types of relationships with another m
 
 * **React:** Module A reacts to module B when its behavior is triggered by an integration event in module B without module B being aware of module A.
 
-The chart below shows all possible types of relationships between modules and the platform:
+The chart below shows all possible types of relationships between modules and the Platform:
 
-![Module relationships](media/03-module-relationships.png){: width="600"}
+![Module relationships](media/03-module-relationships.png){: style="display: block; margin: 0 auto;" width="600"}
 
 Apart from the above, there are several loosely coupled communication patterns, each with their own strong points. Typically, combinations of such patterns (see below) are used to create the resulting solution:
 
@@ -123,7 +123,7 @@ When using Virto Commerce in your production environment, you will rather have t
 
 ### Design-time mode
 
-The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a special CLI tool for this that, more info on which can be found [here](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md).
+The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a [special CLI tool](../../CLI-tools/package-management.md) for this that.
 
 Here are some examples of interface commands you can use to perform various operations:
 
@@ -133,15 +133,15 @@ Here are some examples of interface commands you can use to perform various oper
 vc-build install -Module VirtoCommerce.Store
 ``` 
 
-* Updating the platform and all installed modules to the latest version:
+* Updating the Platform and all installed modules to the latest version:
 
 ```
 vc-build update
 ``` 
 
-For the **module deployment process**, use our  [**VirtoCommerce.GlobalTool**](https://github.com/VirtoCommerce/vc-build "https://github.com/VirtoCommerce/vc-build"), which helps bundle your module solution to the deployment package.![Readmore](media/readmore.png){: width="25"} 
+For the **module deployment process**, use our  [Virto Commerce Global Tool](../../CLI-tools/overview.md), which helps bundle your module solution to the deployment package. 
 
-![Readmore](media/readmore.png){: width="25"} [Build automation](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/build-automation.md)
+![Readmore](media/readmore.png){: width="25"} [Build automation](../../CLI-tools/build-automation.md)
 
 ![Readmore](media/readmore.png){: width="25"} [How to create new module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md) 
 
@@ -154,3 +154,4 @@ For the **module deployment process**, use our  [**VirtoCommerce.GlobalTool**](h
 ![Readmore](media/readmore.png){: width="25"} [Bounded context by Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html "https://martinfowler.com/bliki/BoundedContext.html")
     
 ![Readmore](media/readmore.png){: width="25"} [Context mapping pattern](https://www.infoq.com/articles/ddd-contextmapping/ "https://www.infoq.com/articles/ddd-contextmapping/")
+
