@@ -4,7 +4,7 @@ In this guide, we are going to explore more `vc-build` commands. Each section pr
 
 ## Init
 
-The `Init` command creates a **vc-package.json** file with initial content, including the latest version of the platform.
+The `Init` command creates a **vc-package.json** file with initial content, including the latest version of the Platform.
 
 ```console
 vc-build Init
@@ -13,9 +13,9 @@ vc-build Init
 
 | **Parameter**       | **Description**                      | **Example**                                |
 |---------------------|--------------------------------------|--------------------------------------------|
-| `-PlatformVersion`  | Specifies a custom platform version. | `vc-build Init -PlatformVersion 3.52.0`    |
+| `-PlatformVersion`  | Specifies a custom Platform version. | `vc-build Init -PlatformVersion 3.52.0`    |
 
-This setup file serves as the foundation for managing platform and module versions in your environment.
+This setup file serves as the foundation for managing Platform and module versions in your environment.
 
 
 
@@ -37,13 +37,13 @@ This command ensures that all required modules are installed and their dependenc
 
 ## InstallPlatform
 
-The `InstallPlatform` command installs the platform as defined in **vc-package.json**, providing the necessary components for the platform’s operation.
+The `InstallPlatform` command installs the platform as defined in **vc-package.json**, providing the necessary components for the Platform’s operation.
 
 ```console
 vc-build InstallPlatform
 ```
 
-This command sets up the platform, readying it for module integration and configuration.
+This command sets up the Platform, readying it for module integration and configuration.
 
 
 ## ClearTemp

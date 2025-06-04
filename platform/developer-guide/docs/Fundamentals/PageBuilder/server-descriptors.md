@@ -4,7 +4,7 @@ This guide explains how to configure external data requests using the `ServerReq
 
 ## ServerRequestDescriptor
 
-The `ServerRequestDescriptor` interface defines how the Page Builder fetches external data from a server. It is used in [Page Builder settings](settings.md) and in dynamic controls like **search** and **select**.
+The `ServerRequestDescriptor` interface defines how the Page Builder fetches external data from a server. It is used in [Page Builder settings](settings.md) and in dynamic controls like [search](search.md) and [select](select.md).
 
 This descriptor allows you to configure all aspects of the HTTP request: the target URL, HTTP method, request payload, headers, and more. It also supports caching and request initialization logic, making it flexible for use in various data-driven builder scenarios.
 
