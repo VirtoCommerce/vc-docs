@@ -15,12 +15,20 @@ From the top menu, you can:
 * Access your account profile.
 * Select language and currency to display prices in.
 * Search for products by their name or SKU, and more.
+* Quickly access comparison and shopping lists.
+* View the list of orders.
+* Read notifications.
+* Quickly navigate through the catalog via the mega menu.
 
 ![top menu](../media/top-menu.png)
 
 ![Readmore](../media/readmore.png){: width="25"} [Bulk orders](../shopping/bulk-orders.md)
 
 ![Readmore](../media/readmore.png){: width="25"} [Comparing products](../shopping/compare-products.md)
+
+![Raedmore](../media/readmore.png){: width="25"} [Managing mega menu](../../../../platform/user-guide/content/managing-linklists#manage-mega-menu)
+
+
 
 ## Catalogs, subcatalogs, facets
 
