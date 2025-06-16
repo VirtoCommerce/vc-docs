@@ -63,9 +63,64 @@ vc-build CloudEnvLogs -EnvironmentName <EnvName>
 
 ## Update environment
 
-```console
-vc-build CloudEnvUpdate -CloudToken <your token> -Manifest <path to application manifest>
+This target updates an existing environment with a new application manifest. You can update the environment configuration, application version, or other settings defined in the manifest.
+
+
 ```
+vc-build CloudEnvUpdate -EnvironmentName <EnvName> -Manifest <path>
+```
+
+It accepts the following parameters: 
+
+* `-EnvironmentName <EnvName>`: Specifies the name of the environment to update.
+* `-CloudToken <token>`: Authentication token for the cloud environment (optional if already authenticated via `CloudAuth`).
+* `-Manifest <path>`: Path to the application manifest file containing the updated configuration.
+* `-RoutesFile <path>`: Path to the routes file (optional).
+
+### Alternative syntax with CloudToken
+
+If you haven't authenticated using `CloudAuth`, you can provide the cloud token directly:
+
+```
+vc-build CloudEnvUpdate -CloudToken <your token> -EnvironmentName <EnvName> -Manifest <path>
+```
+
+
+### Usage with routes file
+
+This optional configuration allows you to include a routes file by specifying the `-RoutesFile` parameter:
+
+```
+vc-build CloudEnvUpdate -EnvironmentName <EnvName> -Manifest <path> -RoutesFile <routes-path>
+```
+
+**Example**:
+
+```
+vc-build CloudEnvUpdate -EnvironmentName myapp-prod -Manifest ./manifests/production-manifest.json -RoutesFile ./config/routes.yml
+```
+
+**Routes file example (routes.yml)**:
+
+```
+- name: my-environment
+  routes:
+  - host: example.com
+    root: main-app
+    paths:
+    - path: /api
+      route: backend-service
+    - path: /files
+      route: file-service
+    redirects:
+    - path: /old-path
+      target: main-app
+      regex: false
+    - path: ^/legacy/(.*)$
+      target: main-app
+      regex: true
+```
+
 
 ## Set parameters for environment  
 

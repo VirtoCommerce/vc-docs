@@ -1021,7 +1021,7 @@ This configuration node configures the ASP.NET Core Identity system.
 | Password:RequireNonAlphanumeric           | false                   | Indicates whether a non-alphanumeric character is required in user passwords.                                          |
 | Password:RepeatedResetPasswordTimeLimit   | "0:01:0"                | The time span within which a user cannot repeatedly reset their password.                                              |
 | User                                      |                           | Configuration settings related to user accounts.                                                                       |
-| User:MaxPasswordAge                       | 90                      | The maximum age (in days) a user can keep the same password before being required to change it.                        |
+| User:MaxPasswordAge                       | 90                      | Defines the maximum number of days a user can use the same password before being required to change it.<br> Set to 0 to disable the password expiration policy.                       |
 | User:RequireUniqueEmail                   | true                    | Indicates whether each user must have a unique email address.                                                          |
 | User:RemindPasswordExpiryInDay            | 7                       | The number of days before the password expiration date when the system will start reminding users to change their password. |
 | Lockout                                   |                           | Configuration settings related to account lockout.                                                                      |
