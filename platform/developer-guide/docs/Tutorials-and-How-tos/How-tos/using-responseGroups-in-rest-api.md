@@ -93,3 +93,14 @@ ResponseGroup = "Full"
     ```
 
 [View the list of ResponseGroup setting](https://github.com/search?q=org%3AVirtoCommerce+ResponseGroup&type=code&p=1)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../feature-flags">← Using feature flags </a>
+    <a href="../update-using-patch">Partial updates using PATCH endpoints  →</a>
+</div>

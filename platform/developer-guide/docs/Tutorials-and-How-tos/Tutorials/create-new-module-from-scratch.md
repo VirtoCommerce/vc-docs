@@ -136,5 +136,5 @@ By following these steps, you can create a new module in a structured and organi
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../module-templates-for-dotnet-new">← Custom modules templates for Dotnet New </a>
-    <a href="../deploy-module-from-source-code">Deploy module from source code  →</a>
+    <a href="../deploy-module-from-source-code">Deploying module from source code  →</a>
 </div>

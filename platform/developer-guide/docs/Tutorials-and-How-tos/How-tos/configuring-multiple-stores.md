@@ -64,3 +64,14 @@ To configure multiple stores with their own domains in Virto Commerce:
 It is possible to share the same theme across multiple stores by using the `LiquidThemeEngine:BaseThemePath` setting in the Frontend Application **appsettings.json** file.
 
 This approach allows each store's specific **CMS-CONTENT** folder to contain unique store customizations.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../debugging">← Debugging VC code without source code </a>
+    <a href="../configuring-multiple-stores-on-virto-cloud">Configuring multiple stores on Virto Cloud  →</a>
+</div>

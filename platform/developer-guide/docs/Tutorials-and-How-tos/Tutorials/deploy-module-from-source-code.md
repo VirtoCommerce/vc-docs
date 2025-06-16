@@ -108,6 +108,6 @@ You can run tests for the module locally. The test suites are located in the **t
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../create-new-module-from-scratch">← Create new module from scratch </a>
-    <a href="../../how-tos/docker-modules-development">Modules development via Docker  →</a>
+    <a href="../create-new-module-from-scratch">← Creating new module from scratch </a>
+    <a href="../../How-tos/docker-modules-development">Modules development via Docker  →</a>
 </div>

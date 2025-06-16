@@ -69,3 +69,14 @@ To add Azure App Configuration:
 
 !!! info
     To use current values of the configuration, inject `IOptionsMonitor<T>` instead of `IOptions<T>` and access `CurrentValue` property.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../type-inheritance-support-in-swagger">← Type inheritance support in Swagger </a>
+    <a href="../setting-up-prerender-io-with-azure-app-gateway">Setting up Prerender.io with Azure App gateway  →</a>
+</div>

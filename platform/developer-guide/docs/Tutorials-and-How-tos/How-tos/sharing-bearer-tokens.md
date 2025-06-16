@@ -33,3 +33,14 @@ The Virto Commerce platform has some settings that can be used to configure the 
     }
  ...
 ```
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../authorization-using-jwt">← Authorization using JSON Web Token </a>
+    <a href="../user-email-verification">User email verification  →</a>
+</div>

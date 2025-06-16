@@ -34,3 +34,13 @@ Install a PBC by running:
 vc-build install -PackageManifestPath <path to package.json>
 ```
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../installing-specific-version">← Installing specific version </a>
+    <a href="../outdated-strategy">Outdated strategy  →</a>
+</div>

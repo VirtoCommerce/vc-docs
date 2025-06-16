@@ -173,3 +173,12 @@ The following table outlines the supported `PATCH` endpoints across Virto Commer
 
 ![Readmore](media/readmore.png){: width="25"} [JSON Patch Builder Online](https://json-patch-builder-online.github.io/)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../using-responseGroups-in-rest-api">← Using responseGroups in Rest API </a>
+    <a href="../generating-pdfs">Generating PDFs  →</a>
+</div>

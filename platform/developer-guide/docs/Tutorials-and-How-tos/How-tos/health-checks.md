@@ -63,3 +63,12 @@ HEALTHCHECK CMD curl --fail http://localhost:5000/health || exit
 
 ![Readmore](media/readmore.png){: width="25"} [Microsoft ASP.NET Core Health Checks Documentation](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-5.0)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../generating-pdfs">← Generating PDFs </a>
+    <a href="../authorization-using-jwt">Authorization using JSON Web Token  →</a>
+</div>

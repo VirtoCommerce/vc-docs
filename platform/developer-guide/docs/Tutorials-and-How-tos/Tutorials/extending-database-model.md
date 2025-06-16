@@ -4,13 +4,13 @@ This tutorial provides specific steps to extend the model and persistence layer 
 
 We recommend following a 3-tier architecture (Core, Data, and Web) for both custom modules and the Virto Commerce platform.
 
-## Changes in ".Core" Project
+## Changes in ".Core" project
 
 1. Add a reference to the ".Core" NuGet package containing the base models, for example, `VirtoCommerce.OrdersModule.Core`.
 1. Define a new model class by extending the base model in the **Models** folder, for example: `CustomerOrder2 : CustomerOrder`.
 1. Add additional properties required for the new model.
 
-## Changes in ".Data" Project
+## Changes in ".Data" project
 
 1. Add a reference to ".Data" NuGet package containing the base models, for example, `VirtoCommerce.OrdersModule.Data`.
 1. Define a new model class by extending the base model in the **Models** folder, for example: `CustomerOrder2Entity : CustomerOrderEntity`. 
@@ -131,4 +131,15 @@ We recommend following a 3-tier architecture (Core, Data, and Web) for both cust
 1. Test your changes in the Solution REST API documentation (Swagger) and in the database.
 
 
-![Readmore](media/readmore.png){: width="25"} [Creating a New Module](creating-custom-module.md)
+![Readmore](media/readmore.png){: width="25"} [Creating new module](creating-custom-module.md)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../How-tos/docker-modules-development">← Modules development via Docker </a>
+    <a href="../build-platform-manager-ui">Building Platform manager UI  →</a>
+</div>

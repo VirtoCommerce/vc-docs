@@ -166,3 +166,14 @@ There are two ways to force ASP.NET Core API JSON serializer to understand our d
 1. Use platform-defined `PolymorphJsonConverter`, which is preferable in most cases. `PolymorphJsonConverter` transparently deserializes extended domain types with no developer effort.
 
 1. Transfer custom JSON converter to `MvcNewtonsoftJsonOptions`. Consider using it only in case `PolymorphJsonConverter` is not suitable for your specific case.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../build-platform-manager-ui">← Building Platform manager UI </a>
+    <a href="../../How-tos/swagger-api">Swagger/API integration  →</a>
+</div>

@@ -101,3 +101,14 @@ vc-build Compress
 ## Run Virto Commerce on .NET 8
 
 With the update process completed, you can now run and enjoy the enhanced capabilities of Virto Commerce on the .NET 8 platform. Explore the platform new features and optimizations to leverage its full potential for an efficient e-commerce solution.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../customizing-cart-validation-policies">← Customizing cart validation policies </a>
+    <a href="../overriding-rounding-policy">Overriding rounding policy  →</a>
+</div>

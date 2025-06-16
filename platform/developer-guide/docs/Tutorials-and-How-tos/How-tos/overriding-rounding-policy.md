@@ -27,3 +27,13 @@ To customize the rounding behavior in your application:
     ```
 
 1. Ensure to replace the placeholder with your actual rounding logic in the `RoundMoney` method.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../upgrading-to-net8">← Upgrading to .NET 8 </a>
+    <a href="../feature-flags">Using feature flags  →</a>
+</div>

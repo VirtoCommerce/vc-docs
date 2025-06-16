@@ -80,3 +80,13 @@ Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's m
 ![Readmore](media/readmore.png){: width="25"} [Install specific platform or module version](installing-specific-version.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Useful tips](tips.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Tutorials-and-How-tos/overview">← Tutorials and how-tos </a>
+    <a href="../stable-releases">Stable releases  →</a>
+</div>

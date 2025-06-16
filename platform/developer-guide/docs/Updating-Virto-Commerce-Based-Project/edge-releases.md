@@ -51,3 +51,13 @@ To update to the latest edge release:
     ```
 
 The edge release has been updated.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../stable-releases">← Stable releases </a>
+    <a href="../installing-specific-version">Installing specific version  →</a>
+</div>

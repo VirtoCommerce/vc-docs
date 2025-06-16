@@ -22,3 +22,13 @@ Example URL: `https://{admin-portal-domain-url}/docs/VirtoCommerce.Orders/swagge
 
 ## Disable Swagger UI
 The Swagger UI is active by default. It can be disabled via [application settings](../../Configuration-Reference/appsettingsjson.md#virtocommerce) within the VirtoCommerce:Swagger node.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Tutorials and how-tos </a>
+    <a href="../generating-c-sharp-client">Generating C# client  →</a>
+</div>

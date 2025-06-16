@@ -1,4 +1,4 @@
-# Extend cart query with custom parameter
+# Extend Cart Query with Custom Parameter
 
 
 To extend cart queries and incorporate a custom parameter, such as a contract ID:
@@ -69,3 +69,13 @@ To extend cart queries and incorporate a custom parameter, such as a contract ID
     ```
 
 This implementation extends the original `GetCartQuery` by introducing a `GetCartQueryExtended` class that includes the additional `ContractId` parameter. The custom query handler, `CustomGetCartQueryHandler`, is responsible for handling this extended query and updating the search criteria accordingly.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-multiple-stores-on-virto-cloud">← Configuring multiple stores on Virto Cloud </a>
+    <a href="../customizing-cart-validation-policies">Customizing cart validation policies  →</a>
+</div>

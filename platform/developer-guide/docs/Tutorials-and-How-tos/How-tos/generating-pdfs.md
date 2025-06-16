@@ -16,3 +16,14 @@ To add support for PDF file generation:
 
 
 ![Readmore](media/readmore.png){: width="25"} [WkHtmlToPdf manual](https://wkhtmltopdf.org/index.html)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-using-patch">← Partial updates using PATCH endpoints </a>
+    <a href="../health-checks">Health checks  →</a>
+</div>

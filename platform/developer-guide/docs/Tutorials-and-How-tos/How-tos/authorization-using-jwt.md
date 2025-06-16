@@ -80,3 +80,14 @@ To authorize client applications (for example, Frontend Application), use the **
 New OAuth2 client has been created. Now the client application is able to authorize requests to the API using the previously created **Client Id** and **Client secret**.
 
 In the Frontend Application, all you need to do is specify the **Client Id**, **Client secret** created earlier, and the **authorization server** in the **Endpoint** section of the **appsettings.json** file.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../health-checks">← Health checks </a>
+    <a href="../sharing-bearer-tokens">Sharing bearer tokens  →</a>
+</div>

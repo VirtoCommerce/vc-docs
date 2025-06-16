@@ -370,3 +370,13 @@ You will see the existing Customer reviews list:
 The new widget appears in the widget container and shows actual number of existing reviews for the product. Click on the widget to display the list of Customer reviews for the product.
 
 ![Customer review widget](media/reviews-widget.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-database-model">← Extending database model </a>
+    <a href="../extending-domain-models">Extending domain models  →</a>
+</div>

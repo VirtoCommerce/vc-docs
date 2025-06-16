@@ -1,4 +1,4 @@
-# Customize cart validation policies
+# Customize Cart Validation Policies
 
 When it comes to adapting cart validation policies, flexibility is key. In this article, we explore two ways to tailor these policies to your specific needs:
 
@@ -126,3 +126,14 @@ To allow the addition of products with custom prices:
 6. Override `CartAggregate` in `Module.Initialize` to use `CustomCartAggregate`.
 
 These steps enable the customization of cart validation policies to accommodate products with custom prices. The provided code snippets demonstrate the creation of custom classes (`CustomNewCartItemValidator` and `CustomCartAggregate`) that inherit from the respective base classes and override relevant methods to implement the desired custom logic. The `Module.Initialize` method is then configured to use these custom classes, ensuring the application follows the updated cart validation policies.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-cart-query-with-custom-parameter">← Extending Cart query with custom parameter </a>
+    <a href="../upgrading-to-net8">Upgrading to .NET 8  →</a>
+</div>

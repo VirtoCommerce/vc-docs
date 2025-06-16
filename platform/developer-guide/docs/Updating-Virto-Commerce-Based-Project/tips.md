@@ -20,3 +20,13 @@ Follow these tips when installing and updating our releases:
 
 * You can find the preview version of the modules in our pull requests and [modules_v3.json on github](https://github.com/VirtoCommerce/vc-modules/blob/master/modules_v3.json).
 * If you notice any problem, please report it [here](https://github.com/VirtoCommerce/vc-build/issues/new).
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../outdated-strategy">← Outdated strategy </a>
+</div>

@@ -151,3 +151,14 @@ Integrating feature flags with Virto Commerce Platform and Frontend Application 
 ## Summary
 
 Implementing feature flags with Virto Commerce Platform and Frontend Application  provides developers with a flexible and efficient way to manage feature variations and configurations in their applications. By leveraging public store settings and GraphQL queries, developers can easily control feature activation and visibility at runtime, enabling safer experimentation, gradual rollouts, and targeted releases.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overriding-rounding-policy">← Overriding rounding policy </a>
+    <a href="../using-responseGroups-in-rest-api">Using responseGroups in Rest API  →</a>
+</div>

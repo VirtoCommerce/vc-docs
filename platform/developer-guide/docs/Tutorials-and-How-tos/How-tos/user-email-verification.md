@@ -44,7 +44,18 @@ The Frontend Application kit is an example of Platform API clients.
 ![Email verification in Storefront](media/email-verification-2.png)
 
 1. A **Register** endpoint activated in `AccountController`. A new user is created (via Virto Platform API).
-1. If e-mail verification is not enabled for the particular store, stop processing and exit.
+1. If email verification is not enabled for the particular store, stop processing and exit.
 1. `EmailConfirmationNotification` notification is created and filled.
 1. The notification is dispatched via `SendNotificationByRequest` endpoint (Notifications module).
 
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../sharing-bearer-tokens">← Sharing bearer tokens </a>
+    <a href="../migration-to-new-xapi-modules">Migration to new xAPI modules  →</a>
+</div>

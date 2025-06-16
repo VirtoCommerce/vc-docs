@@ -193,6 +193,16 @@ To pre-render site for crawlers only:
 
     ![Postman](media/postman-token.png)
 
-## Wrapping up
+## Summary
 
-This tutorial provides an overview of the steps involved in creating a reverse proxy using Azure Application Gateway to make your single-page application SEO-friendly by using Prerender Seamlessly Renders JavaScript for Faster Indexing for efficient rendering. Following these steps, we will deploy a public proxy, accessible by the URL **https://vc-prerender.westeurope.cloudapp.azure.com**, that will forward requests to virtostart-demo-store.govirto.com using the prerendering capabilities provided by the Prerender.io service.
+This tutorial provides an overview of the steps involved in creating a reverse proxy using Azure Application Gateway to make your single-page application SEO-friendly by using Prerender Seamlessly Renders JavaScript for Faster Indexing for efficient rendering. Following these steps, we will deploy a public proxy, accessible by the URL **https://vc-prerender.westeurope.cloudapp.azure.com**, that will forward requests to **virtostart-demo-store.govirto.com** using the prerendering capabilities provided by the Prerender.io service.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../azure-app-configuration">← Adding Azure App configuration </a>
+    <a href="../debugging">Debugging VC code without source code  →</a>
+</div>

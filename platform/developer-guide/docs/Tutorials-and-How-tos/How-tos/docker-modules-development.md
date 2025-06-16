@@ -135,3 +135,13 @@ docker volume rm db-volume
 ![Readmore](media/readmore.png){: width="25"} [Diagnose Docker problems](https://docs.docker.com/docker-for-windows/troubleshoot)
 
 ![Readmore](media/readmore.png){: width="25"} [Visual Studio Docker development](https://docs.microsoft.com/en-us/visualstudio/containers/troubleshooting-docker-errors?view=vs-2022)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Tutorials/deploy-module-from-source-code">← Deploying module from source code </a>
+    <a href="../../Tutorials/extending-database-model">Extending database model  →</a>
+</div>

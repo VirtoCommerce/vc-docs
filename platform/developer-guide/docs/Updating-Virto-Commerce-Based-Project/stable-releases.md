@@ -50,3 +50,13 @@ To update to the latest stable release:
 	```
 
 The stable release has been updated.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../release-strategy-overview">← Release strategy </a>
+    <a href="../edge-releases">Edge releases  →</a>
+</div>

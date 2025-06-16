@@ -64,3 +64,13 @@ If the third-party component doesn't support Source Link and you haven't loaded 
 
 1. Step into this library and continue debugging process.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../setting-up-prerender-io-with-azure-app-gateway">← Setting up Prerender.io with Azure App gateway </a>
+    <a href="../configuring-multiple-stores">Configuring multiple stores  →</a>
+</div>
