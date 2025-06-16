@@ -33,3 +33,14 @@ To register a custom certificate, do the following:
 
 !!! note
 	You can delete certificate files and remove keys from the configuration for safety reason.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Security overview </a>
+    <a href="../../Security/extensions/extending-authorization-policies">Extending authorization policies →</a>
+</div>

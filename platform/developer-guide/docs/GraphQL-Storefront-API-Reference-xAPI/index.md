@@ -2,7 +2,7 @@
 
 The main function of the **Experience API (xAPI)** module is to serve as a middle layer connecting clients and enterprise services using the GraphQL protocol. 
 
-It is closely associated with a particular user or touch point experience and ensures quick and dependable access. Additionally, it serves as an implementation of the back end for front end (BFF) design pattern.
+It is closely associated with a particular user or touch point experience and ensures quick and dependable access. Additionally, it serves as an implementation of the backend for frontend (BFF) design pattern.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-api/)
 
@@ -15,7 +15,7 @@ It is closely associated with a particular user or touch point experience and en
 
 # GraphQL core ideas
 
-GraphQL is a new API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last couple of years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
+GraphQL is a an API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
 
 ![graphQL-Rest](media/rest-graphQL.png)
 
@@ -46,7 +46,7 @@ Our instruction provides Virto Commerce related guidelines.
 * Achieve fast and dependable indexed search through integration with:
     * [Elasticsearch 8.x](https://www.elastic.co/downloads/elasticsearch)
     * [Elastic App Search](https://www.elastic.co/downloads/app-search)
-    * [Azure Search]()
+    * [Azure Search](https://learn.microsoft.com/en-us/shows/azure/azure-search)
 * Maintain autonomy by exclusively relying on the index data source, separate from the rest of the VC data infrastructure.
 * Capture tracing and performance metrics for request monitoring.
 
@@ -54,16 +54,29 @@ Our instruction provides Virto Commerce related guidelines.
 
 The xAPI project provides the following major features:
 
-- [Catalog](Catalog/overview.md)
+- [Back-in-stock](Back-in-stock/overview.md)
 - [Cart](Cart/overview.md)
+- [Catalog](Catalog/overview.md)
 - [Content](Content/overview.md)
 - [File](File/overview.md)
 - [Marketing](Marketing/overview.md)
 - [Order](Order/overview.md)
+- [Pages](Pages/overview.md)
 - [Profile](Profile/overview.md)
+- [Purchase request](PurchaseRequest/overview.md)
 - [Push messages](Push-messages/overview.md)
-- [Recommend](Recommend/overview.md)
-- [Store](Store/overview.md)
 - [Quote](Quote/overview.md)
+- [Recommend](Recommend/overview.md)
+- [Reviews](Reviews/overview.md)
+- [Store](Store/overview.md)
+- [White labeling](White-labeling/overview.md)
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Platform-Manager/style-guide">← Platform manager </a>
+    <a href="../GraphQL-Storefront-API-Reference-xAPI/getting-started">Getting started  →</a>
+</div>

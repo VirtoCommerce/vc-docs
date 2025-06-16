@@ -39,3 +39,11 @@ new SearchRequest
              };
 ```
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../../indexed-search/overview">← Indexed search overview</a>
+    <a href="../faceted-search">Faceted search →</a>
+</div>

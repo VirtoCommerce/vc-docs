@@ -17,3 +17,13 @@ Virto Commerce uses a set of well known components and libraries:
 
 !!! note
     The full list of third-party components used can be found on our [GitHub repository](https://github.com/VirtoCommerce/vc-platform/blob/dev/3rd-party-components.md).
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../atomic-architecture">← Atomic architecture</a>
+    <a href="../02-conceptual-overview">Conceptual overview →</a>
+</div>

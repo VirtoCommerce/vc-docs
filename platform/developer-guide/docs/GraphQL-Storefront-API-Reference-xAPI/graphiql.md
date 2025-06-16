@@ -83,3 +83,14 @@ Similarly, you can access other partial schemas by adding the appropriate slugs 
 | Catalog         | /catalog          |
 | Cart            | /cart             |
 | Order           | /order            |
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-xapi-modules">← Updating xAPI modules </a>
+    <a href="../postman">Postman  →</a>
+</div>

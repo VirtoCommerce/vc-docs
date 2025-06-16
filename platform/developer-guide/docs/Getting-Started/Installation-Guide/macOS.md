@@ -152,3 +152,13 @@ To access the Platform and perform initial sign-in:
     * Password: store
 
 Your Platform is ready to go.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../linux">← Installation on Linux</a>
+    <a href="../../post-installation-steps/01-setting-up-self-signed-ssl-cert">Setting up self-signed SSL certificate →</a>
+</div>

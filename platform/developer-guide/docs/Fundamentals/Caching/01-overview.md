@@ -160,3 +160,12 @@ Running multiple platform instances, each with its own local cache, and which in
 ![Readmore](media/readmore.png){: width="25"} [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
     
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../../CLI-tools/overview">← CLI tools overview</a>
+    <a href="../02-cache-configuration">Cache configuration →</a>
+</div>

@@ -36,7 +36,7 @@ In order to define a new payment method:
 			public override VoidPaymentRequestResult VoidProcessPayment(VoidPaymentRequest request) { ... }
 			public override CapturePaymentRequestResult CaptureProcessPayment(CapturePaymentRequest request) { ... }
 			public override RefundPaymentRequestResult RefundProcessPayment(RefundPaymentRequest request) { ... }
-			//has to impelement querystring request processing. The request comes to `push url` from outside payment system or frontend. The `push url` is set in account settings of most payment systems or during
+			//has to implement querystring request processing. The request comes to `push url` from outside payment system or frontend. The `push url` is set in account settings of most payment systems or during
 			//payment transaction processing in outside payment system (ProcessPayment method).
 			//as a result of successfully checked (valid) payment the OuterId property of ValidatePostProcessRequestResult has to be set. It identifies payment in VirtoCommerce with the transaction in outside payment system.
 			public override ValidatePostProcessRequestResult ValidatePostProcessRequest(System.Collections.Specialized.NameValueCollection queryString) { ... }
@@ -78,4 +78,14 @@ After you are done configuring, your payment method will appear in the front end
 
 ## UI customization
 
-If our standard user interface is not enough, you may consider implementing your own UI for managing payment methods through the standard UI extension point (widget container with the `paymentMethodDetail` group). You can read more about extending the existing UI with widgets [here](../../Platform-Manager/Extensibility-Points/widgets.md).
+If our standard user interface is not enough, you may consider implementing your own UI for managing payment methods through the standard UI extension point (widget container with the `paymentMethodDetail` group). You can read more about [extending the existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md).
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../PageBuilder/overview">← Page Builder overview </a>
+    <a href="../simplified-integration">Simplified integration via CSV files →</a>
+</div>

@@ -18,3 +18,15 @@ To transform your custom module to support DB agnostic approach:
 1. Copy Migrations from Data to SqlServer.
 1. Create new Migrations.
 1. Compile, compress, and test.
+
+
+
+<br>
+<br>
+********
+
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../creating-custom-module">← Creating custom modules</a>
+    <a href="../../Concurrency-handling/concurrency-handling">Concurrency handling →</a>
+</div>

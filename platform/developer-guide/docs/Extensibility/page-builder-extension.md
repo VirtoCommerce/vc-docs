@@ -28,3 +28,13 @@ To add these blocks:
 The existing **Image** block is replaced with the new one. The new **Image2** block is added to the list of blocks:
 
 ![New blocks](media/new-blocks.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-application-user">← Extending application user </a>
+    <a href="../../Operations/maintenance-tasks-for-sql">Maintenance tasks for SQL  →</a>
+</div>

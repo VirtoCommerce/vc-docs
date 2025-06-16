@@ -47,3 +47,12 @@ For example, the following error notification appears if multiple users try to u
 ![Error notification](media/conflict-notification.png){: style="display: block; margin: 0 auto;" width="500"}
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../DB-Agnostic/overview">← Database agnostic architecture </a>
+    <a href="../../../Modularity/01-overview">Modular architecture overview →</a>
+</div>

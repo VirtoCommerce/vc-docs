@@ -211,3 +211,12 @@ Follow the instructions below to build your own data importer of a specific type
 ![Readmore](media/readmore.png){: width="25"} [ImportSampleModule](https://github.com/VirtoCommerce/vc-module-import/tree/dev/samples/VirtoCommerce.ImportSampleModule.Web)
 <br>
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../01-main-concept">← Data import main concept</a>
+    <a href="../import-app">Import app →</a>
+</div>

@@ -75,3 +75,12 @@ Below is a snippet from the German translation file demonstrating the structure:
     }
 }
 ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ui-scroll-directive">← UI scroll directive</a>
+    <a href="../extensibility-points/extending-main-menu">Extensibility points →</a>
+</div>

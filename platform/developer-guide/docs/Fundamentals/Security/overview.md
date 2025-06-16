@@ -15,3 +15,12 @@ There are many aspects of security in Virto Platform and Web API. We will, howev
 ![Readmore](media/readmore.png){: width="25"} [Virto authorization](authorization/overview.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Extending authorization](extensions/extending-authorization-policies.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Notifications/overview">← Managing notifications </a>
+    <a href="../authentication/overview">Authentication →</a>
+</div>

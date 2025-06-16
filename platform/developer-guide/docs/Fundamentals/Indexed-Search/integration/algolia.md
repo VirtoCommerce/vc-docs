@@ -13,3 +13,13 @@ Configure the Algolia search provider using the following schema:
    start="<!--algolia-start-->"
    end="<!--algolia-end-->"
 %}
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-azure-cognitive-search">← Azure cognitive search</a>
+    <a href="../lucene">Lucene →</a>
+</div>

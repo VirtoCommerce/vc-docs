@@ -105,3 +105,12 @@ A meta-field has the following structure:
 |templateUrl          |A URL for custom content template. If specified, this template is rendered instead of the auto-generated content.                                |
 |isVisibleFn          |Function to control meta-field visibility. The meta-field gets rendered only if this function returns **true** or is undefined.                  |
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../blades-and-navigation">← Blades and navigation </a>
+    <a href="../widgets">Widgets  →</a>
+</div>

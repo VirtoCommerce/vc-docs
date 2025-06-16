@@ -44,5 +44,16 @@ The Virto Commerce platform supports two main authorization strategy types for p
 	* [**Global permissions:**](global-permissions.md) Permissions that are checked without taking the requested resources into account. To check this sort of permissions, you need to operate permission names only, for example, `Authorize("{permission}")`.
 	* [**Scoped**, **Imperative**, or **Resource-based permissions:**](scope-based-permissions.md) Whether the permissions are checked depends upon the resource being accessed. Consider a document that has an author property. Only the author is allowed to update the document. Consequently, the document must be retrieved from the data store before the authorization evaluation can occur. 
      
-     ![Readmore](media/readmore.png){: width="25"} [Resource-based Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-3.1).
+        ![Readmore](media/readmore.png){: width="25"} [Resource-based Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-3.1).
+
 * **Role:** A collection of permissions that could be assigned to roles (in their turn, roles  are assigned to users). Rather than assigning individual permissions directly to each user, permissions are grouped into roles. You can define one or more roles on your site, and then grant permissions to each role.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../authentication/overview">← Authentication overview </a>
+    <a href="../global-permissions">Global permissions →</a>
+</div>
+

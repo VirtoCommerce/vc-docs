@@ -183,3 +183,12 @@ To access the Platform and perform initial sign-in:
 
 Your platform is ready to go.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../system-requirements">← System requirements</a>
+    <a href="../linux">Installation on Linux →</a>
+</div>

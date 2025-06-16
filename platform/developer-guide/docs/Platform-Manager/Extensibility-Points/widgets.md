@@ -76,3 +76,13 @@ Widget visibility is controlled by defining the `isVisible` method in widget re
 ```
 isVisible: function (blade) { return authService.checkPermission('pricing:query'); },
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../metaform">← Metaform </a>
+    <a href="../extending-grid-columns">Extending grid columns  →</a>
+</div>

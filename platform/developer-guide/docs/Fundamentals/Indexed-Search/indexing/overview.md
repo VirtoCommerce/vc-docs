@@ -24,4 +24,14 @@ The indexing features of Virto Commerce include:
 
 * [Manual and incremental index updates](indexing-in-platform-manager.md#incremental-index-updates): Enable users to run indexers on demand or on a recurring basis. Virto Commerce updates search indexes periodically by adding or removing data entities that have changed in the Commerce Engine. Thanks to incremental index updates, the search engine updates the indexes with index documents based on new, changed, or deleted items in the data sources.<!---TODO: Link Incremental index updates-->
 
-* [Blue/Green indexing](blue-green-indexing.md): allows users to perform zero downtime upgrades of their index. This feature enables users to run full index rebuilds or long-time indexing tasks on other index instances and switch them to the published index that the production environment is connected to when these tasks are complete.
+* [Blue-green indexing](blue-green-indexing.md): allows users to perform zero downtime upgrades of their index. This feature enables users to run full index rebuilds or long-time indexing tasks on other index instances and switch them to the published index that the production environment is connected to when these tasks are complete.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../search-query-syntax-reference">← Search query syntax</a>
+    <a href="../indexing-in-platform-manager">Indexing in Platform manager →</a>
+</div>

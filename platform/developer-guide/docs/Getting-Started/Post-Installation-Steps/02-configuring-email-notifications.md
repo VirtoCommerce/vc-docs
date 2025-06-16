@@ -64,3 +64,14 @@ To test whether an email has been sent successfully:
 1. In case of success, you will receive an test email on your email account. Otherwise, go to **Notifications** → **Notification activity feed** to see which error(s) led to a failure:
 
 ![Notification activity feed](media/05-notification-activity-feed.png)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../01-setting-up-self-signed-ssl-cert">← Setting  up self-signed SSL certificate</a>
+    <a href="../03-configuring-asset-blob-storage">Configuring asset blob storage →</a>
+</div>

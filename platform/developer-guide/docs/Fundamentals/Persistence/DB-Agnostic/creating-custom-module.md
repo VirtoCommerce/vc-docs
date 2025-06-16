@@ -55,3 +55,14 @@ The template key features  are:
                 builder.Property(x => x.ExchangeRate).HasColumnType("decimal").HasPrecision(18, 4);
             }
         }
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-vc-with-db-providers">← Configure VC with DB Providers</a>
+    <a href="../transforming-custom-module">Transforming custom modules →</a>
+</div>

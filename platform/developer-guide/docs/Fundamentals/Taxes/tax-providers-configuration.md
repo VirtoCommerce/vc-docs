@@ -10,3 +10,12 @@ Use the configuration file to configure tax providers:
    start="<!--tax-start-->"
    end="<!--tax-end-->"
 %}
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Shipments/new-shipping-method-registration">← Registering new shipping method </a>
+    <a href="../new-tax-provider-registration">Registering new tax provider →</a>
+</div>

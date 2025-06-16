@@ -76,15 +76,17 @@ logger.LogWarning("Disk quota {Quota} MB exceeded by {User}", quota, user);
 
 * [Serilog ASP .NET Core](https://github.com/serilog/serilog-aspnetcore)
 
-* [Settings Configuration](https://github.com/serilog/serilog-settings-configuration)
+* [Settings configuration](https://github.com/serilog/serilog-settings-configuration)
 
-* [Provided Sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)
+* [Provided sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)
 
 
-**Next steps**:
 
-* [How to update your custom logging configuration to platform 3.304 and above](how-to-update.md)
+<br>
+<br>
+********
 
-* [Application insight module](application-insights.md)
-
-* [Extending logging](extended-logging.md)
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Security/overview">← Security overview </a>
+    <a href="../how-to-update">Updating to Serilog integrated version →</a>
+</div>

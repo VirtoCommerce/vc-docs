@@ -66,3 +66,12 @@ Virto Search is a search component that gives developers infrastructure, APIs, a
         1. Begin by installing the **Search** module, then add the required search provider module.
         1. Alternatively, install the required search provider module, and the **Search** module will be automatically installed alongside it.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../data-import/01-main-concept">← Data import</a>
+    <a href="../search-query-syntax-reference">Search query syntax →</a>
+</div>

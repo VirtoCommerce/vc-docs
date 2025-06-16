@@ -6,7 +6,7 @@ The Catalog Publishing Module allows to evaluate the completeness of products fo
 
 In this guide, we will show how to extend the product completeness evaluation process to allow full customization. Below are potential user scenarios along with solutions.
 
-## Add New Detail to Default Evaluation Process
+## Add new detail to default evaluation process
 
 To integrate additional details into the default evaluation process:
 
@@ -30,7 +30,7 @@ To integrate additional details into the default evaluation process:
 
 The default product completeness evaluator includes your detail evaluator in evaluation process.
 
-## Define Own Product Completeness Evaluator
+## Define own product completeness evaluator
 
 To create your own product completeness evaluator, you can:
 
@@ -66,7 +66,7 @@ _container.RegisterType<ICompletenessEvaluator, CustomCompletenessEvaluator>(nam
 Now your product completeness evaluator is available in module's REST API and UI.
 
 
-## Define Own Product Completeness Evaluator
+## Define own product completeness evaluator
 
 If you want to define your own product completeness evaluation process, you can implement the same extensibility logic as ours:
 
@@ -99,7 +99,7 @@ If you prefer not to define your own product completeness evaluation process fro
 * [Combining default and custom detail evaluators](product-completeness-evaluator.md#combining-default-and-custom-detail-evaluators): Mix default and custom detail evaluators to suit your needs.
 * [Mixing default and all custom detail evaluators](product-completeness-evaluator.md#mixing-default-and-all-custom-detail-evaluators): Utilize some default evaluators alongside entirely custom ones.
 
-### Default Detail Evaluators
+### Default detail evaluators
 
 To use the default detail evaluators provided:
 
@@ -117,7 +117,7 @@ To use the default detail evaluators provided:
     }
     ```
 
-### Custom Detail Evaluators
+### Custom detail evaluators
 
 To implement your own custom detail evaluators:
 
@@ -164,7 +164,7 @@ To implement your own custom detail evaluators:
     _container.RegisterType<CustomCompletenessEvaluator, CustomCompletenessEvaluator2>(nameof(CustomCompletenessEvaluator2));
     ```
 
-### Combine Default and Custom Detail Evaluators
+### Combine default and custom detail evaluators
 
 To combine both default and custom detail evaluators:
 
@@ -183,7 +183,7 @@ To combine both default and custom detail evaluators:
     }
     ```
 
-### Mix Default and All Custom Detail Evaluators
+### Mix default and all custom detail evaluators
 
 To mix default and all custom detail evaluators:
 
@@ -203,3 +203,13 @@ To mix default and all custom detail evaluators:
         }
     }
     ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-dynamic-expression-tree">← Extending dynamic expression tree </a>
+    <a href="../extending-application-user">Extending application user  →</a>
+</div>

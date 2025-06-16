@@ -57,3 +57,14 @@ angular.module('sampleApp')
 ```
 
 The blade instance can be accessed in the associated controller by the **$scope.blade** property.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-main-menu">← Extending main menu </a>
+    <a href="../metaform">Metaform  →</a>
+</div>

@@ -279,3 +279,13 @@ SELECT COUNT(*) AS [Concurrent_Requests] FROM sys.dm_exec_requests R
 SELECT COUNT(*) AS [Sessions] FROM sys.dm_exec_connections
 
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Extensibility/overview">← Extensibility overview </a>
+    <a href="../../Tutorials-and-How-tos/overview">Tutorials and how-tos  →</a>
+</div>

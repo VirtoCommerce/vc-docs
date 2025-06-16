@@ -37,4 +37,13 @@ To address crucial extension requirements, the platform contains various **exten
 * Page Builder extension:
     * [Adding and editing blocks](page-builder-extension.md)
 
- 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Extensibility overview </a>
+    <a href="../extending-dynamic-expression-tree">Extending dynamic expression tree  →</a>
+</div>

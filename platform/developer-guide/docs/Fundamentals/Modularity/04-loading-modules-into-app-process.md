@@ -27,4 +27,11 @@ The chart below shows the module loading process:
     The Virto Platform's modularity engine supports only eager loading from local disk for modules.
 
 
+<br>
+<br>
+********
 
+<div style="display: flex; justify-content: space-between;">
+    <a href="../optional-dependency">← Optional dependency between modules </a>
+    <a href="../05-best-practices">Best practices →</a>
+</div>

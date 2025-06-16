@@ -56,3 +56,12 @@ vc-build ClearTemp
 
 This command helps keep your workspace clean by removing temporary build files.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../install-and-update-platform-and-modules">← Install and update Platform and modules</a>
+    <a href="../virto-cloud">Virto Cloud →</a>
+</div>

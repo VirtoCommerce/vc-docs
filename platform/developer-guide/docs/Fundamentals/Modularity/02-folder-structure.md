@@ -119,3 +119,12 @@ The `Module.Web` project consists of the following folders and files:
 * **Localizations**: Contains resource files that are used for UI localization.
 * **Module.cs**: Core module entry point.
 * **module.manifest**: A required file that contains meta information describing your module with its dependencies and versions.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../01-overview">← Modular architecture overview </a>
+    <a href="../03-versioning-and-dependencies">Versioning and dependencies →</a>
+</div>

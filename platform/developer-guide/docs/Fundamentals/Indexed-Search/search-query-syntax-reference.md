@@ -150,3 +150,13 @@ Within a single phrase or phrase terms, you can use:
 | `price:(TO 100]`                 	| The price is less than or equal to 100.                                   	|
 | `Da?? Red*`                      	| `?` replaces a single character.<br>`*` replaces zero or more characters. 	|
 | `color:Black price:[100 TO 200)` 	| Combine keywords and filters.                                             	|
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Indexed search overview</a>
+    <a href="../indexing/overview">Indexing overview →</a>
+</div>

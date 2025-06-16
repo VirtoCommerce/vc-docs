@@ -37,3 +37,13 @@ To enable logging:
 
 
 ![Readmore](media/readmore.png){: width="25"} [Comparison of Seq and Application Insights solutions](https://datalust.co/app-insights)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extended-logging">← Extended logging </a>
+    <a href="../../../Configuration-Reference/appsettingsjson">Appsettings.json →</a>
+</div>

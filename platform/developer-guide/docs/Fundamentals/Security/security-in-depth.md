@@ -38,3 +38,14 @@ Virto platform uses JWT token authentication and OAuth2 Password, Client Credent
 ![Readmore](media/readmore.png){: width="25"} [Role-based authorization](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
 ![Readmore](media/readmore.png){: width="25"} [Custom policy-based authorization](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Security overview </a>
+    <a href="../configuration">Configuration →</a>
+</div>

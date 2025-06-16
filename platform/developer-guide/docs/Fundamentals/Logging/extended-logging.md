@@ -55,3 +55,14 @@ This code shows how Serilog is being initialized in the Platform:
 * [Settings configuration](https://github.com/serilog/serilog-settings-configuration)
 
 * [Provided sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../application-insights">← Application Insights </a>
+    <a href="../seq-module">Seq log module →</a>
+</div>

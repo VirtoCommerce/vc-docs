@@ -102,3 +102,12 @@ Frontend debugging can be done in Chrome Developer Tools:
 ## Test
 
 You can run tests for the module locally. The test suites are located in the **tests** folder, where you can execute them as needed.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../create-new-module-from-scratch">← Create new module from scratch </a>
+    <a href="../../how-tos/docker-modules-development">Modules development via Docker  →</a>
+</div>

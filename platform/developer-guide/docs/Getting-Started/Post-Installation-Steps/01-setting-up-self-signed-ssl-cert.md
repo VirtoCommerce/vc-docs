@@ -30,3 +30,13 @@ If this warning appears:
     <br>
 
 ![Readmore](media/readmore.png){: width="25"} [Microsoft .NET guide on self-signed certificates](https://docs.microsoft.com/en-us/dotnet/core/additional-tools/self-signed-certificates-guide)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../installation-guide/macOS">← Installation on MacOS</a>
+    <a href="../02-configuring-email-notifications">Configuring email notifications →</a>
+</div>

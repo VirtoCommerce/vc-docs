@@ -97,3 +97,12 @@ To apply the extracted migrations to different databases:
 1. Copy the `ConnectionStringsRefs` node from the grab config file to apply the config file.
 1. Run the tool to apply the migrations to the databases.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../package-management">← Package management</a>
+    <a href="../cold-start-and-data-migration">Cold start and data migration →</a>
+</div>

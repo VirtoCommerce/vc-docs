@@ -135,3 +135,14 @@ In this example, `CustomerOrderSearchCriteria` to be secured with `AuthorizeAsyn
 * The new instance of the `OrderAuthorizationRequirement` type with the permission that needs to be checked.
 
 As a result, the authorization handler will check and change the criteria to return only the orders with the stores the current users can view.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../authorization/global-permissions">← Global permissions </a>
+    <a href="../../encryption-and-signing-credentials ">Encryption and signing credentials →</a>
+</div>
+

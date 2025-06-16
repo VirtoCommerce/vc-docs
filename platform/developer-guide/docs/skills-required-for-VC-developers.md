@@ -126,3 +126,15 @@ Virto Commerce developer skills include:
 * [Microsoft Certified: Azure Developer Associate](https://docs.microsoft.com/en-us/learn/certifications/azure-developer?wt.mc_id=learningredirect_certs-web-wwl&tab=tab-learning-paths)
 * [Mobile Web Specialist](https://developers.google.com/training/certification/mobile-web-specialist#content)
 * [HTML & CSS](https://www.codecademy.com/catalog/language/html-css)
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../getting-started/installation-guide/windows">← Installation guide</a>
+    <a href="../../../../back-end-architecture/atomic-architecture">Virto Atomic Architecture →</a>
+</div>

@@ -1932,7 +1932,7 @@ This setting is used to configure tax providers.
 <!--tax-end-->
 
 
-## Hierarchic Keys and Separators
+## Hierarchic keys and separators
 
 When working with keys, one should follow these rules:
 
@@ -1951,4 +1951,15 @@ When working with keys, one should follow these rules:
     ![Application settings in Azure](media/03-app-settings-azure.png)
 
 ![Readmore](media/readmore.png){: width="25"} [ASP.NET configuration guide](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1#configuration-keys-and-values)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Fundamentals/Caching/01-overview">← Fundamentals </a>
+    <a href="../../Platform-Manager/style-guide">Platform Manager  →</a>
+</div>
+
 

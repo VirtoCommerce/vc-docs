@@ -33,3 +33,13 @@ Alternatively, you can use the `api_key` header to provide your key:
 GET http://{platform_host}/api/some_resource 
 api_key: API_KEY
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../access-token-and-cookie-mixed-auth">← Access token and cookie mixed authentication </a>
+    <a href="../oidc">OpenID connect →</a>
+</div>

@@ -138,3 +138,14 @@ To customize the module:
 2. Use `SkyflowPaymentMethod` class for:
     * `initializePayment` (in GraphQL): Returns a token for frontend operations.
     * `authorizePayment`: Invokes `IPaymentClientFactory` to obtain an instance of `IPaymentClient` for processing transactions using the required Connection.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../authorize-net">← Authorize.net </a>
+    <a href="../cybersource">CyberSource →</a>
+</div>

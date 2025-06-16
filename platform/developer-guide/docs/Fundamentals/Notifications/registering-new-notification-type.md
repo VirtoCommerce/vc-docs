@@ -6,7 +6,7 @@ This guide describes the basic steps to define a new e-mail notification type, i
 
 ## Prerequisites
 
-* [Configure the notification gateway](../../Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md)
+* [Configure the notification gateway.](../../Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md)
 
 ## Define custom email notification type
 
@@ -69,7 +69,7 @@ To send a notification from your code, use two interfaces: `INotificationSearchS
 
 You can send a notification based on this code sample as follows:
 
-```csharp linenums="1"
+```csharp linenums="1" hl_lines="15 16 17 18 19"
 public class SampleSenderService 
 {
     private readonly INotificationSearchService _notificationSearchService;
@@ -101,3 +101,14 @@ public class SampleSenderService
 **Line 15:** Constructing a new instance of the `SampleEmailNotification` type by calling the `INotificationSearchService.GetNotificationAsync<>` extension method.
 	
 **Lines 16 to 19:** Populating the required email notification properties, such as `From` and `To`, and setting a value for our custom `Greeting` property; this value will be eventually interpolated in the email subject, for example, **Hi { greeting } → Hi John**.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Notifications overview </a>
+    <a href="../notification-templates">Notification templates →</a>
+</div>
+

@@ -39,3 +39,11 @@ Configure the Elasticsearch 8 provider using the following schema:
 The provider performs full-text keyword searches on a documents, optionally with filters and aggregations.
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../search/faceted-search">← Faceted search</a>
+    <a href="../semantic-search">Semantic search →</a>
+</div>

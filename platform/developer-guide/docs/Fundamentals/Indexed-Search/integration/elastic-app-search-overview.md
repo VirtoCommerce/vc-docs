@@ -37,3 +37,14 @@ After running load tests and comparing Elasticsearch Vs Elastic App Search, we c
 ## Limitations
 
 ![Readmore](media/readmore.png){: width="25"} [App search limitations](https://www.elastic.co/guide/en/app-search/8.3/limits.html)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../elastic-search-8">← Elasticsearch 8</a>
+    <a href="../configuring-elastic-app-search">Elastic App Search Configuration →</a>
+</div>

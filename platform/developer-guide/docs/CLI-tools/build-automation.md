@@ -293,3 +293,13 @@ vc-build release -GitHubUser VirtoCommerce -GitHubToken %token%
 | `GitHubToken`        | Personal access token for GitHub authentication.                      |
 | `ReleaseBranch`      | (Optional) Branch to release from. Default is the current branch.     |
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../getting-started">← Getting started</a>
+    <a href="../package-management">Package management →</a>
+</div>

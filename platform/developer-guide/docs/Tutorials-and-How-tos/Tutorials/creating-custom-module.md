@@ -503,7 +503,7 @@ To extend the Platform Manager UI:
     1. Go to the `MyCoolModule` menu. You will see all created **Blogs** records.
 
 
-## Add Authentication Options
+## Add authentication options
 Our module template also provides you with out-of-the-box default authentication permissions, which are located in the `ModuleConstants.cs` file:
  
 ```csharp
@@ -571,3 +571,12 @@ If the module is installed properly, you will see the new module in the list of 
 
 ![Readmore](media/readmore.png){: width="25"} [Custom modules templates to create pre-configured entities](module-templates-for-dotnet-new.md)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Tutorials and how-tos </a>
+    <a href="../module-templates-for-dotnet-new">Custom modules templates for Dotnet New  →</a>
+</div>

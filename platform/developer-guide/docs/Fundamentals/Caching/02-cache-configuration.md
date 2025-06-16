@@ -18,3 +18,12 @@ Cache is commonly configured in the **Caching** section of the [appsettings.json
 
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../01-overview">← Overview</a>
+    <a href="../03-setting-up-redis">Setting up Redis →</a>
+</div>

@@ -50,7 +50,7 @@ The **Notification** module performs discovery for template files through the pa
 
 In addition, if you want to use a different discovery path for individual notification types, you can add the following code into `Module.cs`:
 
-```csharp title="module.cs" linenums="1"
+```csharp title="module.cs" linenums="1" hl_lines="4 5"
 
 public void PostInitialize(IApplicationBuilder appBuilder)
 	{
@@ -65,7 +65,7 @@ public void PostInitialize(IApplicationBuilder appBuilder)
 !!! note
 	Lines 4 and 5 tell the notification system to discover template files in the **/Templates2** relative path for a notification with the `SampleEmailNotification` type.
 
-## Inline Definition in Source Code
+## Inline definition in source code
 
 There is a less useful but still feasible way to define templates directly from the code:
 
@@ -87,3 +87,14 @@ registrar.RegisterNotification<SampleEmailNotification>().WithTemplates(new Emai
             Body = assembly.GetManifestResourceStream("VirtoCommerce.NotificationsSampleModule.Web.Templates.SampleEmailNotification_body.html").ReadToString()
         });
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../registering-new-notification-type">← Registering new notification type </a>
+    <a href="../extending-notification-types">Extending notification types →</a>
+</div>
+

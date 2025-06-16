@@ -16,3 +16,13 @@ You can configure which permissions can be stored in `limited_permissions` cooki
     ...
     },
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../issuing-and-using-access-token">← Issuing and using access token </a>
+    <a href="../api-key-authentication">API key authentication →</a>
+</div>

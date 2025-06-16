@@ -61,3 +61,12 @@ Note that:
     
 ![Readmore](media/readmore.png){: width="25"} [How to scale out platform based on Azure ](../Scalability/scaling-configuration-on-azure-cloud.md)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../02-cache-configuration">← Cache configuration</a>
+    <a href="../../data-import/01-main-concept">Data import. Main concept →</a>
+</div>

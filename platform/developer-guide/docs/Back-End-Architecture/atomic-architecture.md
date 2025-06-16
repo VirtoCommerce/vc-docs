@@ -38,3 +38,13 @@ Organisms are business applications that consist of multiple cells working colla
 A B2B marketplace solution needs different parts like digital catalogs, order processing, and user profiles to work together smoothly for a good customer experience. These parts make up a system that can grow and adapt as the business changes, allowing it to stay flexible and meet new demands.
 
 The flexibility of these systems in VAA allows them to evolve to fit specific business goals.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../getting-started/installation-guide/windows">← Installation guide</a>
+    <a href="../01-tech-stack">Technology stack →</a>
+</div>

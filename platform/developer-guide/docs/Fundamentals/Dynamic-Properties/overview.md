@@ -1,4 +1,4 @@
-# Managing Dynamic Properties
+# Manage Dynamic Properties
 
 Virto Commerce Platform enables adding new properties to entities at runtime. 
 
@@ -31,3 +31,11 @@ The dynamic properties are edited via the **Dynamic properties** widget. For exa
 1. Click **OK** in the toolbar to save the changes.
 
 The modifications have been saved.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Taxes/tax-providers-configuration">← Configuring tax providers </a>
+    <a href="../../Notifications/overview">Managing notifications  →</a>

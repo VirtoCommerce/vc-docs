@@ -74,3 +74,11 @@ To disable/ enable event-based indexing:
 
 Your settings have been saved.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Indexing overview</a>
+    <a href="../blue-green-indexing">Blue-green indexing →</a>
+</div>

@@ -22,3 +22,15 @@ $ curl -X POST http://localhost:10645/graphql \
   -H "Authorization:Bearer ..." \
   -d '{"operationName":null,"variables":{},"query":"{ product(id: \"019e93d973cd4adab99b6f9cbb4ca97a\") { name }}"}'
 ```
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../postman">← Postman </a>
+    <a href="../Back-in-stock/overview">Back in stock  →</a>
+</div>

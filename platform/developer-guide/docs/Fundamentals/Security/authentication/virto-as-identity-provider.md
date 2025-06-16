@@ -32,3 +32,13 @@ To log in using the Virto authentication provider for the first time:
     ![Access denied](media/access-denied.png){: width="600"}
 
 This message means that you are logged in, but you will not be able to perform until an administrator assigns you the required roles. 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../oidc">← OpenID Connect </a>
+    <a href="../../authorization/overview">Authorization overview →</a>
+</div>

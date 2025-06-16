@@ -84,3 +84,12 @@ To extend an application user:
     ```
 
 By following these steps, you can seamlessly extend the `ApplicationUser` entity in the Virto Commerce Platform to accommodate your specific requirements.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../product-completeness-evaluator">← Extending product completeness evaluator </a>
+    <a href="../page-builder-extension">Adding new blocks to Page Builder  →</a>
+</div>

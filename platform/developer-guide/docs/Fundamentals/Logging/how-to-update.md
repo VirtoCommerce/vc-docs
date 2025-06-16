@@ -1,4 +1,4 @@
-# How to update platform to Serilog integrated version
+# Update Platform to Serilog Integrated Version
 
 !!! note
     Along with updating platform to 3.304.0 version you have to update xAPI module to [version 3.314.0](https://github.com/VirtoCommerce/vc-module-experience-api/releases/tag/3.314.0) or higher.
@@ -12,7 +12,7 @@ If you committed changes to logging configuration:
 1. Map existing configuration into Serilog format in the appsettings.{ENVIRONMENT}.json Logging section.
 1. Replace the original configuration with the Serilog configuration. 
 
-Below are examples of the appsettings.{ENVIRONMENT}.json file before and after migration:
+Below are examples of the **appsettings.{ENVIRONMENT}.json** file before and after migration:
 
 Before:
 
@@ -80,3 +80,13 @@ Since Application Insights integration was moved to a separate module:
     }
   }
   ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Logging overview </a>
+    <a href="../application-insights">Application Insights →</a>
+</div>

@@ -283,3 +283,12 @@ To install Elastic App Search on Virto Commerce Platform:
     ```
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../elastic-app-search-overview">← Elastic App Search overview</a>
+    <a href="../using-analytics">Using analytics →</a>
+</div>

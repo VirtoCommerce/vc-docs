@@ -15,3 +15,14 @@ This refers to:
 * Payment refunding.
 
 Integration via the Payment or Refund Capturing API is also possible. Once integrated, the ability to capture and refund payments appears in the Virto Commerce Back Office.​
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../new-payment-method-registration">← Registering new payment method </a>
+    <a href="../authorize-net">Authorize.net →</a>
+</div>

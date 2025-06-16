@@ -93,3 +93,15 @@ Toolbar item definition structure:
 |executeMethod|Function to run when the item is activated.  |
 |canExecuteMethod|Function to determine whether the item could be executed. The item is disabled in the toolbar if the **false** value is returned.|
 |index        |The 0-based position to insert the item in the toolbar.|
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-grid-columns">← Extending grid columns </a>
+    <a href="../../../GraphQL-Storefront-API-Reference-xAPI">GraphQL API  →</a>
+</div>

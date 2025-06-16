@@ -121,3 +121,14 @@ To uninstall locally installed templates, run:
 ```powershell
 dotnet new uninstall <full or relative path to the templates directory>
 ```
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../creating-custom-module">← Creating custom module from template </a>
+    <a href="../create-new-module-from-scratch">Create new module from scratch  →</a>
+</div>

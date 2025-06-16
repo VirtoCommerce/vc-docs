@@ -2,7 +2,7 @@
 
 Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
 
-There are types of vendor-made extensions that guarantee 'seamless delivery'.  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
+There are types of vendor-made extensions that guarantee 'seamless delivery'.  Virto Commerce, however, guarantees that these extensions are sufficient to build an e-commerce solution of any complexity on top of it:
 
 * No-code extensions.
  
@@ -115,6 +115,16 @@ The table below will help you understand the differences between various customi
 + Virto Commerce provides the best opportunities for customization. 
 + As a developer you can choose the best approach and balance between inside and outside integrations.
 + The Native approach simplifies the DevOps processes and optimizes performance, allowing you to reuse and improve Virto Commerce modules.
-+ The API approach helps you to **glue** Virto Commerce's platform into your ecommerce ecosystem. 
++ The API approach helps you to **glue** Virto Commerce's platform into your e-commerce ecosystem. 
 + The open source principle enables developers to learn the code and fix issues.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../GraphQL-Storefront-API-Reference-xAPI">← GraphQL API overview </a>
+    <a href="../key-extensibility-points">Key extensibility points  →</a>
+</div>

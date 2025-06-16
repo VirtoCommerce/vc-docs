@@ -45,3 +45,11 @@ To edit the selected property, click on it and configure the following fields:
 ![Edit property](media/edit-property.png){: style="display: block; margin: 0 auto;" }
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Search. Overview</a>
+    <a href="../../integration/elastic-search-8">Search providers integration. Elastic Search 8 →</a>
+</div>

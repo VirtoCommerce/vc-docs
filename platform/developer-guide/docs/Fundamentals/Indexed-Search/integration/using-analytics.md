@@ -26,3 +26,14 @@ To view analytics:
 	Out-of-the-box data collection, metrics, and visualizations on search keywords give you all you need to glean insights from the user behavior:
 
 	![Query Analytics](media/query-analytics.png)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-elastic-app-search">← Elastic App Search configuration</a>
+    <a href="../search_relevance_tuning">Improve search relevance →</a>
+</div>

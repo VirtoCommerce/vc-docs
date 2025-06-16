@@ -59,3 +59,13 @@ After you are done configuring, your shipping method will appear in the front en
 If our standard user interface is not enough, you may consider implementing your own UI for managing shipping methods through the standard UI extension point (widget container with the `shippingMethodDetail` group).
 
 ![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Payments/new-payment-method-registration">← Registering new payment method </a>
+    <a href="../../Taxes/tax-providers-configuration">Configuring tax providers  →</a>
+</div>

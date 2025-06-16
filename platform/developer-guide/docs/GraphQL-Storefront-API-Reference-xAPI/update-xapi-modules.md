@@ -1,6 +1,6 @@
-# XAPI Modules Update Guide
+# xAPI Modules Update Guide
 
-This guide explains how to update XAPI modules in the Virto Commerce Platform after upgrading GraphQL.NET libraries from v4 to v8. Follow these steps to update references, initialize modules, and handle breaking changes. Be sure to thoroughly test your implementations after making these updates.
+This guide explains how to update xAPI modules in the Virto Commerce Platform after upgrading GraphQL.NET libraries from v4 to v8. Follow these steps to update references, initialize modules, and handle breaking changes. Be sure to thoroughly test your implementations after making these updates.
 
 ## Affected libraries and modules
 
@@ -27,13 +27,13 @@ Use the PowerShell script below to update references in your projects.
 
 ### PowerShell script for updating xAPI module references
 
-This PowerShell script automates the process of updating XAPI module references in `.csproj` files to specific new versions. Run this script before applying the code-level changes described in this guide. 
+This PowerShell script automates the process of updating xAPI module references in **CSPROJ** files to specific new versions. Run this script before applying the code-level changes described in this guide. 
 
-The script scans all `.csproj` files in the solution directory, identifies package references for specified XAPI modules, and updates them to the desired versions as defined in a hashtable.
+The script scans all **CSPROJ** files in the solution directory, identifies package references for specified xAPI modules, and updates them to the desired versions as defined in a hashtable.
 
 #### Prerequisites
 * Run the script in the root directory of the solution.  
-* Have the necessary permissions to modify `.csproj` files.  
+* Have the necessary permissions to modify **CSPROJ** files.  
 
 #### Scripts
 
@@ -102,7 +102,7 @@ The script scans all `.csproj` files in the solution directory, identifies packa
     ```powershell
     ./UpdateXapiModules.ps1
     ```  
-    1. Verify that `.csproj` files were updated successfully by checking the updated versions in `PackageReference` entries.  
+    1. Verify that **CSPROJ** files were updated successfully by checking the updated versions in `PackageReference` entries.  
 
 === "Cross-platform script"
 
@@ -189,7 +189,7 @@ The script scans all `.csproj` files in the solution directory, identifies packa
     ```sh
     dotnet script UpdateXapiModules.csx
     ```  
-    1. Verify that `.csproj` files were updated successfully by checking the updated versions in `PackageReference` entries.  
+    1. Verify that **CSPROJ** files were updated successfully by checking the updated versions in `PackageReference` entries.  
 
 
 Now you can proceed with the code-level updates described.
@@ -362,7 +362,7 @@ Some settings were moved to their corresponding X-modules and made public:
 
 Deprecated fields and mutations were removed to reduce redundancy and ensure schema clarity. Use the suggested alternatives:
 
-### Fields:
+### Fields
 
 - `DynamicPropertyType.valueType` —> Use `dynamicPropertyValueType` instead
 - `InputDynamicPropertyValueType.locale` —> Use `cultureName` field
@@ -373,7 +373,16 @@ Deprecated fields and mutations were removed to reduce redundancy and ensure sch
 - `PropertyType.valueType` —> Use `propertyValueType` field
 - `PropertyType.propertyDictItems` —> Use `propertyDictionaryItems` field
 
-### Mutations:
+### Mutations
 
 - `renameWishlist` —> Use `changeWishlist` mutation
 - `processOrderPayment` —> Use `initializePayment` mutation
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../getting-started">← Getting started </a>
+    <a href="../graphiql">GraphiQL  →</a>
+</div>

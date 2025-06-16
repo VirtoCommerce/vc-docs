@@ -39,3 +39,12 @@ Each time you start the **Delete and build** process, the Elasticsearch index pr
 
 ![Kibana index alias](media/implementation.png){: style="display: block; margin: 0 auto;" }
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../indexing-in-platform-manager">← Indexing in Platform manager</a>
+    <a href="../../search/overview">Search overview →</a>
+</div>

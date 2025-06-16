@@ -55,3 +55,12 @@ This fact may lead to an unexpected update of third party dependencies for other
 ![Readmore](media/readmore.png){: width="25"} [Virto Commerce release strategy overview](../../Updating-Virto-Commerce-Based-Project/release-strategy-overview.md)
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../02-folder-structure">← Folder structure </a>
+    <a href="../optional-dependency">Optional dependency between modules →</a>
+</div>

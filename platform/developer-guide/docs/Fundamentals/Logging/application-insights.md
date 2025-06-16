@@ -86,3 +86,13 @@ To configure Serilog's Application Insights sink in code:
       }
       ```
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../how-to-update">← Updating to Serilog integrated version </a>
+    <a href="../extended-logging">Extended logging →</a>
+</div>

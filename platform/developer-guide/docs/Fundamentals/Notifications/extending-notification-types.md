@@ -33,4 +33,17 @@ To extend the existing notification, for example, `SampleEmailNotification`:
     ```
 
 !!! note
-	Running the `.WithTemplates(new EmailNotificationTemplate()` extension method is optional and can be used in case you want to override the default templates.
+	Running the `.WithTemplates(new EmailNotificationTemplate())` extension method is optional and can be used in case you want to override the default templates.
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notification-templates">← Notification templates </a>
+    <a href="../configuration">Configuration →</a>
+</div>
+

@@ -113,3 +113,11 @@ $ yarn bump patch/minor/major
 ![Readmore](media/readmore.png){: width="25"} [Import app](import-app.md)
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../caching/01-overview">← Caching</a>
+    <a href="../02-building-custom-importer">Building custom importer →</a>
+</div>

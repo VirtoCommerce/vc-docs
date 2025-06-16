@@ -24,3 +24,12 @@ To import sample data manually:
 Now you have a complete sample dataset that is ready to use.
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../03-configuring-asset-blob-storage">← Configuring asset blob storage</a>
+    <a href="../../../skills-required-for-vc-developers">Skills required for VC developers →</a>
+</div>

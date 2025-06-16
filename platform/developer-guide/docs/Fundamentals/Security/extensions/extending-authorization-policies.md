@@ -56,3 +56,14 @@ To implement this extension:
 Following these steps enables you to extend the existing authorization policies within the **Order Module**, allowing for more fine-grained control over order access based on their statuses.
 
 ![Readmore](../media/readmore.png){: width="25"} [Handling secure web API](https://github.com/VirtoCommerce/vc-platform/blob/master/docs/fundamentals/make-secure-webapi.md)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../encryption-and-signing-credentials">← Encryption and signing credentials </a>
+    <a href="../extending-usermanager-and-rolemanager">Extending UserManager and RoleManager →</a>
+</div>

@@ -64,3 +64,12 @@ To set up Azure Blob Storage:
 !!! note
     This mode is recommended for use in a production environment, since it enables sharing the asset storage across multiple platform instances.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../02-configuring-email-notifications">← Configuring email notifications</a>
+    <a href="../04-importing-sample-data">Importing sample data →</a>
+</div>

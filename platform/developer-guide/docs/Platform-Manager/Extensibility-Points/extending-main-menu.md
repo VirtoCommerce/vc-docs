@@ -21,3 +21,11 @@ As part of extending the main menu, you can add new items to the application men
 !!! note
 	The `priority` property defines the menu position relative to the other menu options. **A smaller number means a higher priority**, and such a menu item will be displayed first.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../localization">← Countries management and localization</a>
+    <a href="../blades-and-navigation">Blades and navigation →</a>
+</div>

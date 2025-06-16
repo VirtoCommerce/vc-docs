@@ -133,7 +133,7 @@ To configure Virto Commerce Platform to use Azure AD authentication:
         The account created via Azure AD sign-in is a regular Virto Commerce Platform account with default roles and permissions. Adjustments may be required by the administrator.
 
 
-## Multitenant Azure AD
+## Multi-tenant Azure AD
 
 If you use the Azure AD authentication and want to allow users from any tenant to connect to your Virto Commerce application, you need to configure the Azure AD app as multi-tenant and use a **wildcard** tenant ID, such as `organizations` or `common` in the authority URL.
 
@@ -222,3 +222,13 @@ Here is an example of the updated configuration that resolves the above issue:
 		"UsePreferredUsername": false
 	}
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-usermanager-and-rolemanager">← Extending UserManager and RoleManager </a>
+    <a href="../adding-google-as-sso-provider">Google as SSO provider →</a>
+</div>

@@ -75,3 +75,13 @@ Select the tab with the required provider setup information.
         "VirtoCommerce": "User ID=postgres;Password=password;Host=localhost;Port=5432;Database=virtocommerce3;"
         },
         ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← DB agnostic architecture overview</a>
+    <a href="../creating-custom-module">Creating custom module →</a>
+</div>

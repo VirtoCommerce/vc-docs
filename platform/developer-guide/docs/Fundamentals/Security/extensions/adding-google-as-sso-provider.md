@@ -133,3 +133,15 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
 1. Enter your Google credentials. You will be redirected back to the platform:
 ![Platform login](../media/google-sso-login.png)
 1. Click **Sign in with Google.**
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../adding-azure-as-sso-provider">← Azure AD as SSO provider </a>
+    <a href="../../security-in-depth ">Security in Depth →</a>
+</div>
+

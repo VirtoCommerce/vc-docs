@@ -18,3 +18,11 @@ To configure the Azure Search provider, use the following schema:
 
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-elasticsearch">← Elasticsearch</a>
+    <a href="../algolia">Algolia →</a>
+</div>

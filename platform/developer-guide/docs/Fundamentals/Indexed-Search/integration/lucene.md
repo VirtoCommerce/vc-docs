@@ -13,3 +13,15 @@ Configure the Lucene search provider using the following schema:
    start="<!--lucene-start-->"
    end="<!--lucene-end-->"
 %}
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../algolia">← Algolia</a>
+    <a href="../../configuration">Search module configuration →</a>
+</div>

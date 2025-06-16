@@ -99,3 +99,13 @@ Use the access token in the Authorization header of all requests to Virto API as
 POST http://{platform_host}/api/{some_resource}
 Authorization: Bearer {accesstoken}
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../authentication/overview">← Authentication overview </a>
+    <a href="../access-token-and-cookie-mixed-auth">Access token and cookie mixed authentication →</a>
+</div>

@@ -107,3 +107,11 @@ The Virto Commerce Platform supports:
     
 -   Apple Safari 2.x.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../../Getting-Started/Installation-Guide/windows">Installation guide →</a>
+</div>

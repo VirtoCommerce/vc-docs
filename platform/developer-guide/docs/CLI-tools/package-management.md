@@ -212,3 +212,12 @@ vc-build ValidateDependencies -DiscoveryPath ../modules
 
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../build-automation">← Build automation</a>
+    <a href="../grab-migrator">Grab migrator utility quickstart →</a>
+</div>

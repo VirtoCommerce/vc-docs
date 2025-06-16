@@ -41,3 +41,13 @@ The `oidc` node in the **appsettings.json** file defines the settings for OpenID
 %}
 
 You can now use the registered identity provider.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../api-key-authentication">← API key authentication </a>
+    <a href="../virto-as-identity-provider">Virto as identity provider →</a>
+</div>

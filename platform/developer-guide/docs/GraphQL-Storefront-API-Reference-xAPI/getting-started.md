@@ -154,3 +154,11 @@ Providing token in GraphiQL is described in the [GraphiQL](graphiql.md) section.
 Providing token in Postman is described in the [Postman](postman.md#authorization-and-token-usage) section.
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../">← GraphQL overview </a>
+    <a href="../update-xapi-modules">Updating xAPI modules  →</a>
+</div>

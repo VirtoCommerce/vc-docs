@@ -56,6 +56,18 @@ After you complete the configuration, your tax provider will be used for tax cal
 ## UI customization
 
 If our standard user interface is not enough, you may consider implementing your own UI for managing tax providers through the standard UI extension point (widget container with the `taxProviderDetail` group). 
-
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
 
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../tax-providers-configuration">← Configuring tax providers </a>
+    <a href="../../Dynamic-Properties/overview">Managing dynamic properties →</a>
+</div>

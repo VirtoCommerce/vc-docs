@@ -49,4 +49,14 @@ You can get both user and role managers by adding the respective factory to your
     
 ![Readmore](../media/readmore.png){: width="25"} [RoleManager TRole Class in ASP.NET Core Identity](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.rolemanager-1?view=aspnetcore-6.0)
     
-![Readmore](../media/readmore.png){: width="25"} [Custom User Management in ASP.NET Core MVC with Identity](https://codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/)
+![Readmore](../media/readmore.png){: width="25"} [Custom user management in ASP.NET Core MVC with Identity](https://codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-authorization-policies">← Extending authorization policies </a>
+    <a href="../adding-azure-as-sso-provider">Azure AD as SSO provider →</a>
+</div>

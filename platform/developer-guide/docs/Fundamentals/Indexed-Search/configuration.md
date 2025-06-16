@@ -11,3 +11,13 @@ This node configures full text search for the Virto Commerce Search module.
    start="<!--search-start-->"
    end="<!--search-end-->"
 %}
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../integration/elastic-search-8">← Search providers integration</a>
+    <a href="../../Persistence/DB-Agnostic/overview">Database agnostic architecture →</a>
+</div>

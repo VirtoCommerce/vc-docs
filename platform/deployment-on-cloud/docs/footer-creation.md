@@ -29,6 +29,7 @@ Continue adding subcategories to the root categories according to the example ab
 The footer appears in the Frontend Application.
 
 
+
 <br>
 <br>
 ********

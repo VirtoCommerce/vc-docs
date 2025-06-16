@@ -50,3 +50,13 @@ To setup Virto Commerce Platform:
 1. Click **Save** in the toolbar to save the changes.
 
 The CyberSource payment method has been enabled for your Store.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../skyflow">← Skyflow </a>
+    <a href="../../Shipments/new-shipping-method-registration">Registering new shipping method →</a>
+</div>

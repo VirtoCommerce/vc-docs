@@ -117,3 +117,12 @@ You can build and deploy docker images to:
     ```
     vc-build CloudUp -EnvironmentName <EnvName> -DockerUsername <username of docker hub>
     ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../more-targets">← Managing Platform and modules</a>
+    <a href="../../fundamentals/caching/01-overview">Fundamentals. Caching →</a>
+</div>

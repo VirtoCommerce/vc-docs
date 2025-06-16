@@ -13,3 +13,13 @@ gridOptionExtension.registerExtension("customerOrder-list-grid", function (gridO
 ```
 
 This allows you to add a column that will always be available.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../widgets">← Widgets </a>
+    <a href="../blade-toolbar">Blade toolbar  →</a>
+</div>

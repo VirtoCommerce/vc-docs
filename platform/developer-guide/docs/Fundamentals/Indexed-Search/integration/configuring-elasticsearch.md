@@ -138,3 +138,12 @@ To configure Elasticsearch as a search provider, use the following schema:
 
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../search_relevance_tuning">← Improving search relevance</a>
+    <a href="../configuring-azure-cognitive-search">Azure cognitive search →</a>
+</div>

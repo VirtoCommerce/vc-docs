@@ -13,3 +13,11 @@ Our architecture follows key principles to ensure stability, flexibility, and ma
 * **Database provider isolation**: DB-specific code is isolated per project to avoid affecting the core.
 * **Customization support**: Designed to support solution customization.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../../Indexed-Search/overview">← Indexed search overview</a>
+    <a href="../configuring-vc-with-db-providers">Configuring VC with DB providers →</a>
+</div>

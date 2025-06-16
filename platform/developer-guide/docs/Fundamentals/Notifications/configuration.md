@@ -8,3 +8,15 @@ This section explains the basic configuration for the Notifications module via t
    start="<!--notifications-start-->"
    end="<!--notifications-end-->"
 %}
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../extending-notification-types">← Extending notification types </a>
+    <a href="../../Security/overview">Security →</a>
+</div>

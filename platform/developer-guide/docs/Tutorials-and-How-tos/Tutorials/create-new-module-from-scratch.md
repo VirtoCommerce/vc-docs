@@ -127,4 +127,14 @@ To populate the **DummyModule.Data** project with necessary components:
 
 Create the module package following [this article](../../CLI-tools/overview.md).
 
-By following these steps, you can create a new module in a structured and organized manner, ensuring compatibility with the VirtoCommerce platform.
+By following these steps, you can create a new module in a structured and organized manner, ensuring compatibility with the Virto Commerce Platform.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../module-templates-for-dotnet-new">← Custom modules templates for Dotnet New </a>
+    <a href="../deploy-module-from-source-code">Deploy module from source code  →</a>
+</div>

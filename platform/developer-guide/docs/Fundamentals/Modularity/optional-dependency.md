@@ -98,3 +98,11 @@ By following these steps, you can configure optional dependencies between module
 Optional dependencies enhance the scalability and customization of Virto Commerce modules, allowing developers and administrators to tailor solutions based on specific needs.
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../03-versioning-and-dependencies">← Versioning and dependencies </a>
+    <a href="../04-loading-modules-into-app-process">Loading modules into application process →</a>
+</div>

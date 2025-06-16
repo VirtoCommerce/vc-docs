@@ -1,4 +1,4 @@
-## Introduction
+# Virto Commerce Platform Style Guide
 
 This Virto Commerce Platform Style Guide will help you develop consistent modules for the platform. You can create your own styles using the rules below.
 
@@ -54,3 +54,12 @@ Once you need the module to get the red color theme, you have to add `__red` as 
 ```
 .module.__red {}
 ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Configuration-Reference/appsettingsjson">← Appsettings.json </a>
+    <a href="../ui-scroll-directive">UI scroll directive  →</a>
+</div>

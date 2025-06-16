@@ -71,3 +71,12 @@ For XL size, [request a demo.](https://virtocommerce.com/request-demo)
 Сonfigure and estimate the costs of Azure products with [Azure Price Calculator](https://azure.microsoft.com/en-us/pricing/calculator/).
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Modularity/01-overview">← Modularity overview </a>
+    <a href="../scaling-configuration-on-azure-cloud">Scaling configuration on Azure cloud →</a>
+</div>

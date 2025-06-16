@@ -163,3 +163,12 @@ To access the Platform and perform initial sign-in:
 
 Your Platform is ready to go.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../windows">← Installation on Windows</a>
+    <a href="../macOS">Installation on MacOS →</a>
+</div>

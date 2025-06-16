@@ -66,3 +66,12 @@ Import App is based on VC Shell and can be extended as a usual custom app.
 <br>
 <br>
 ![Readmore](media/readmore.png){: width="25"} [VC Shell extensibility](../../custom-apps-development/vc-shell/Extensibility/overview.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../02-building-custom-importer">← Building custom importer</a>
+    <a href="../../indexed-search/overview">Indexed search overview →</a>
+</div>

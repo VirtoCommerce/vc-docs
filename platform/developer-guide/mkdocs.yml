@@ -114,7 +114,7 @@ nav:
                 - Authorize.net: Fundamentals/Payments/authorize-net.md
                 - Skyflow: Fundamentals/Payments/skyflow.md
                 - CyberSource: Fundamentals/Payments/cybersource.md
-          - Fulfillment:
+          - Shipments:
                 - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
           - Taxes:
                 - Configuring Tax Providers: Fundamentals/Taxes/tax-providers-configuration.md
@@ -151,10 +151,10 @@ nav:
                 - Configuration: Fundamentals/Security/configuration.md
           - Logging:
                 - Overview: Fundamentals/Logging/overview.md
-                - How to update to Serilog integrated version: Fundamentals/Logging/how-to-update.md
+                - Updating to Serilog Integrated Version: Fundamentals/Logging/how-to-update.md
                 - AppInsights: Fundamentals/Logging/application-insights.md
-                - Extending logging: Fundamentals/Logging/extended-logging.md
-                - Seq log module: Fundamentals/Logging/seq-module.md
+                - Extending Logging: Fundamentals/Logging/extended-logging.md
+                - Seq Log Module: Fundamentals/Logging/seq-module.md
     - Configuration Reference:
           - Appsettings.json: Configuration-Reference/appsettingsjson.md
     - Platform Manager:
@@ -168,7 +168,7 @@ nav:
                 - Widgets: Platform-Manager/Extensibility-Points/widgets.md
                 - Extending Grid Columns: Platform-Manager/Extensibility-Points/extending-grid-columns.md
                 - Blade Toolbar: Platform-Manager/Extensibility-Points/blade-toolbar.md
-    - GraphQL Storefront API Reference (xAPI):
+    - GraphQL API Reference (xAPI):
           - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
           - Getting Started: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
           - Update xAPI Modules Guide: GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules.md
@@ -681,7 +681,7 @@ nav:
                 - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
                 - Using Feature Flags with Virto Commerce Platform and Frontend Application: Tutorials-and-How-tos/How-tos/feature-flags.md
                 - Using responseGroup in Virto Commerce REST APIs: Tutorials-and-How-tos/How-tos/using-responseGroups-in-rest-api.md
-                - Member Entities Partial Update Using PATCH-Endpoint: Tutorials-and-How-tos/How-tos/update-members-using-patch.md 
+                - Partial Updates for Entities Using PATCH-Endpoint: Tutorials-and-How-tos/How-tos/update-using-patch.md 
                 - Generating PDFs: Tutorials-and-How-tos/How-tos/generating-pdfs.md
                 - Performing Health Checks: Tutorials-and-How-tos/How-tos/health-checks.md
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md

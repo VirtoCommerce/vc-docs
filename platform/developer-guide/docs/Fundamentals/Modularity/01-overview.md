@@ -155,3 +155,12 @@ For the **module deployment process**, use our  [Virto Commerce Global Tool](../
     
 ![Readmore](media/readmore.png){: width="25"} [Context mapping pattern](https://www.infoq.com/articles/ddd-contextmapping/ "https://www.infoq.com/articles/ddd-contextmapping/")
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Persistence/DB-Agnostic/overview">← Database agnostic architecture </a>
+    <a href="../02-folder-structure">Folder structure →</a>
+</div>

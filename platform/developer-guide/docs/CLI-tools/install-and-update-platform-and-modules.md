@@ -225,3 +225,13 @@ If `vc-build install` or `vc-build update` is executed in a directory that alrea
 ```bash
 vc-build install -skip backup
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../cold-start-and-data-migration">← Cold start and data migration</a>
+    <a href="../more-targets">Managing Platform and modules →</a>
+</div>

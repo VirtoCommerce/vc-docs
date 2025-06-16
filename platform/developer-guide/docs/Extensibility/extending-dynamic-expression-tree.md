@@ -125,7 +125,7 @@ angular.module(moduleName, [])
     ]);
 ```
 
-## Build own module and restart platform
+## Build own module and restart Platform
 
 1. Build your solution and pack the module scripts with the following command:
 
@@ -136,3 +136,14 @@ angular.module(moduleName, [])
 1. Restart the platform instance to apply your changes.
 
 1. Open Platform Manager, go to **Marketing --> Promotions --> New promotion**. The new `For condition evaluator with any of these sample values` block with its single `Sample condition is met: no/yes` line appears.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../key-extensibility-points">← Key extensibility points </a>
+    <a href="../product-completeness-evaluator">Extending product completeness evaluator  →</a>
+</div>

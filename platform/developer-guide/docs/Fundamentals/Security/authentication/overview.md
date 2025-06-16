@@ -11,3 +11,13 @@ The Virto Commerce Platform supports the following authentication methods:
     ![Oidc](media/oidc-based-authentication.png){: width="600"}
 
 These options provide flexibility, catering to both standalone authentication setups and modern, federated identity solutions.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Security overview </a>
+    <a href="../../authentication/issuing-and-using-access-token">Issuing and using access token →</a>
+</div>

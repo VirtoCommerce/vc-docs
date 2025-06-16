@@ -147,3 +147,17 @@ For example:
 ```console
 vc-build QuickRelease
 ```
+
+
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← CLI tools overview</a>
+    <a href="../build-automation">Build automation →</a>
+</div>

@@ -76,3 +76,13 @@ void Initialize(IServiceCollection serviceCollection)
 }
 ```
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Scalability/scalability-options">← Scalability options </a>
+    <a href="../../PageBuilder/overview">Page Builder →</a>
+</div>

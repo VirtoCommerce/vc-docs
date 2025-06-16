@@ -1,4 +1,4 @@
-# UI Scroll Diretive
+# UI Scroll Directive
 
 Generic UI scroll directive helps developers add dropdown lists to the UI and bind them to a custom data source. 
 
@@ -137,3 +137,13 @@ $scope.onRemove = function (item, model) {
     console.log(item);
 }
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../style-guide">← Style guide </a>
+    <a href="../localization">Countries management and localization  →</a>
+</div>

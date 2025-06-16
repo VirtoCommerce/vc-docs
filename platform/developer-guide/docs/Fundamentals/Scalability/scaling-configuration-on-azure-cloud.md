@@ -204,3 +204,12 @@ To configure the Frontend App:
 
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../scalability-options">← Scalability options </a>
+    <a href="../../Event-Driven-Development/scaling-configuration-on-azure-cloud">Using domain events →</a>
+</div>

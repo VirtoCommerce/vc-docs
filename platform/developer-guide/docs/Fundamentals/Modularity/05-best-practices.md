@@ -22,3 +22,13 @@ One can draw parallels between how your code can be distributed among Virto modu
 ![Readmore](media/readmore.png){: width="25"} [Modular monolith architecture](https://www.kamilgrzybek.com/design/modular-monolith-primer)
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../04-loading-modules-into-app-process">← Loading modules into application process </a>
+    <a href="../06-module-manifest-file">Module.manifest file →</a>
+</div>
+

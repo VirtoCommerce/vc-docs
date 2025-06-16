@@ -233,3 +233,14 @@ You can set variables programmatically in your request scripts. For more informa
     ![AdminToken](media/AdminToken.png)
 
 Now you can use your token as a variable.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../graphiql">← GraphiQL </a>
+    <a href="../curl">Curl  →</a>
+</div>

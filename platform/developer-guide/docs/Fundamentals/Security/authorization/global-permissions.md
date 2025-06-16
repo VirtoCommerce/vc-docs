@@ -83,3 +83,14 @@ Global permissions are permissions that do not require any context resources for
             ...
         }
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../authorization/overview">← Authorization overview </a>
+    <a href="../scope-based-permissions">Scope-based permissions →</a>
+</div>
+
