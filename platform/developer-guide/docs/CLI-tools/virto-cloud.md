@@ -97,7 +97,7 @@ vc-build CloudEnvUpdate -EnvironmentName <EnvName> -Manifest <path> -RoutesFile 
 **Example**:
 
 ```
-vc-build CloudEnvUpdate -EnvironmentName myapp-prod -Manifest ./manifests/production-manifest.json -RoutesFile ./config/routes.yml
+vc-build CloudEnvUpdate -EnvironmentName myapp-prod -Manifest ./manifests/production-manifest.yml -RoutesFile ./config/routes.yml
 ```
 
 **Routes file example (routes.yml)**:
