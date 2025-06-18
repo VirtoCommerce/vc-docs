@@ -76,3 +76,13 @@ Now you are ready to create and manage content pages:
 ![Readmore](media/readmore.png){: width="25"} [Adding content to page](../../../../user-guide/page-builder/manage-pages#add-content-to-page)
 
 ![Readmore](media/readmore.png){: width="25"} [Publishing and unpublishing pages](../../../../user-guide/page-builder/manage-pages#publish-or-unpublish-pages)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Page Builder overview </a>
+    <a href="../create-new-block">Creating new block →</a>
+</div>

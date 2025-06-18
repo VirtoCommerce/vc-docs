@@ -190,3 +190,12 @@ To visually display the selected products, we need to update the block layout wi
 The result is as follows:
 
 ![result](media/result.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../getting-started">← Getting started </a>
+    <a href="../server-descriptors">Server descriptors →</a>
+</div>

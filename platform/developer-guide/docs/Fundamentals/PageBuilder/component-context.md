@@ -50,3 +50,11 @@ The `utils` object provides a collection of helper methods for working with data
 | `arrayCastByConfig(item, isArray)`                             | Ensures a value is treated as an array if configured.              |
 | `cutString(value, length)`                                     | Truncates a string to a specified length (default: 50 characters). |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../schemas">← Schemas </a>
+    <a href="../calendar">Controls →</a>
+</div>

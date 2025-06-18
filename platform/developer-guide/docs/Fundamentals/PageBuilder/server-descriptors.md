@@ -73,3 +73,13 @@ The `ServerResponseDescriptor` interface describes how the Page Builder should e
   "fallbackValue": "en"
 }
 ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../create-new-block">← Creating new block </a>
+    <a href="../settings">Settings →</a>
+</div>

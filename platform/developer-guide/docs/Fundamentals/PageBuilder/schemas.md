@@ -230,3 +230,12 @@ Section property can be object. In this case, it is necessary to describe the st
     ]
     }
     ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../settings">← Settings </a>
+    <a href="../component-context">Component context →</a>
+</div>

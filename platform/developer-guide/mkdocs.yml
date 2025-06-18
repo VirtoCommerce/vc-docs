@@ -108,6 +108,22 @@ nav:
                 - Settings: Fundamentals/PageBuilder/settings.md
                 - Schemas: Fundamentals/PageBuilder/schemas.md
                 - Component Context: Fundamentals/PageBuilder/component-context.md
+                - Controls:
+                      - Calendar: Fundamentals/PageBuilder/calendar.md
+                      - Checkbox: Fundamentals/PageBuilder/checkbox.md
+                      - Collection: Fundamentals/PageBuilder/collection.md
+                      - Color: Fundamentals/PageBuilder/color.md
+                      - Files: Fundamentals/PageBuilder/files.md
+                      - Header: Fundamentals/PageBuilder/header.md
+                      - Images: Fundamentals/PageBuilder/images.md
+                      - Markdown: Fundamentals/PageBuilder/markdown.md
+                      - Number: Fundamentals/PageBuilder/number.md
+                      - Object: Fundamentals/PageBuilder/object.md
+                      - Paragraph: Fundamentals/PageBuilder/paragraph.md
+                      - Search: Fundamentals/PageBuilder/search.md
+                      - Select: Fundamentals/PageBuilder/select.md
+                      - String: Fundamentals/PageBuilder/string.md
+                      - Text: Fundamentals/PageBuilder/text.md
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
@@ -698,7 +714,7 @@ nav:
           - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
     - Custom Apps Development:
           - Overview: custom-apps-development/overview.md
-          - How to Register New App: custom-apps-development/how-to-register-new-app.md
+          - Registering New App: custom-apps-development/how-to-register-new-app.md
           - VC Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:

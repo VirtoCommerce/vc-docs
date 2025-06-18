@@ -178,3 +178,13 @@ These values can be combined to form URLs, populate request bodies, or define co
         }
     }
     ```
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../server-descriptors">← Server descriptors </a>
+    <a href="../schemas">Schemas →</a>
+</div>

@@ -48,3 +48,13 @@ The two subsystems communicate via `window.postMessage()` to synchronize edits a
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder/)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Event-Driven-Development/using-domain-events">← Event-driven development </a>
+    <a href="../getting-started">Getting started →</a>
+</div>
