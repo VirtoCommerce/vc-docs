@@ -17,7 +17,7 @@ This descriptor allows you to configure all aspects of the HTTP request: the tar
 | `body`          | any                      | Optional request payload (typically used with `POST` or `PUT`).                                                                                       |
 | `form`          | any                      | Optional form data to send in the request.                                                                                                            |
 | `options`       | any                      | Additional fetch options like custom headers, credentials, etc.                                                                                       |
-| `response`      | `ServerResponseDescriptor` | Describes how the response should be interpreted.                                                                                                     |
+| `response`      | ServerResponseDescriptor | Describes how the response should be interpreted.                                                                                                     |
 | `cacheable`     | boolean                  | If true, the request result will be cached to improve performance.                                                                                    |
 | `init`          | boolean <br> string        | If true, the request runs when the settings are loaded.<br>If a string, it references a property in the settings<br> where the descriptor is defined. |
 | `fallbackValue` | any                      | A default value used if the request fails (e.g., network error).                                                                                      |
@@ -56,7 +56,7 @@ The `ServerResponseDescriptor` interface describes how the Page Builder should e
 | `selector` | string  | JavaScript expression to evaluate on the response. Useful for extracting or transforming data. |
 | `result`   | string  | JSONPath expression that points to the desired result field within the response.               |
 | `isArray`  | boolean | If true, the result is treated as a list (e.g., for dropdown options).                       |
-| `value`    | string <br> (string \| `SelectValueDescriptor`)[] | Resulting value(s). Can be a primitive or an array of values or objects <br>(for `select` control options). |
+| `value`    | string <br> (string \| SelectValueDescriptor)[] | Resulting value(s). Can be a primitive or an array of values or objects <br>(for `select` control options). |
 
 **Example**
 

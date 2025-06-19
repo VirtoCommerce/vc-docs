@@ -14,8 +14,8 @@ This control uses the [file-upload](https://pivan.github.io/file-upload/) compon
 | `removeMessage`          | string              | Message shown in the remove confirmation dialog.                                                                                 |
 | `urlField`               | string              | Field name containing the file URL (if value is an object).                                                                      |
 | `filenameField`          | string              | Field name containing the filename (if value is an object).                                                                      |
-| `element`                | `ControlDescriptor[]` | Additional descriptors for custom fields in the file object.                                                                     |
-| `UploadAcceptRequest`    | <br> `AssetsRequest`<br> string <br> inline       | Custom request descriptor used to upload assets.                                                     |
+| `element`                | ControlDescriptor[] | Additional descriptors for custom fields in the file object.                                                                     |
+| `UploadAcceptRequest`    | <br> AssetsRequest<br> string <br> inline       | Custom request descriptor used to upload assets.                                                     |
 
 The value of this control is an array of URLs by default, or an array of objects if the `element` property is defined.
 

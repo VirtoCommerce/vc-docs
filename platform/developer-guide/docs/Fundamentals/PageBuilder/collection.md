@@ -6,10 +6,10 @@ This control allows the user to manage a list of repeatable items, each defined 
 | ------------------------ | --------------------- | -------------------------------------------------------------------- |
 | `addText`                | string                | Text for the “Add item” button. Default is `Add item`.               |
 | `displayField`           | string                | Property name used to display a collection item in the list.         |
-| `skipRemoveConfirmation` | boolean             | If `true`, skips the confirmation dialog when removing an item.      |
+| `skipRemoveConfirmation` | boolean               | If **true**, skips the confirmation dialog when removing an item.      |
 | `removeMessage`          | string                | Custom message for the item removal confirmation dialog.             |
 | `elementDescriptor`      | string                | Name of the object in the `objects` folder to be used as a template. |
-| `element`                | `ControlDescriptor[]` | Describes the structure of each collection item.                     |
+| `element`                | ControlDescriptor[] | Describes the structure of each collection item.                     |
 
 ## Example
 

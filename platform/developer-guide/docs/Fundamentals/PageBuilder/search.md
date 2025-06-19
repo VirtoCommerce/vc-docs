@@ -8,15 +8,15 @@ It performs one or more backend requests and stores the result in a block's valu
 
 | Property      | Type                                         | Description                                                                                       |
 | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`     | `ServerRequestDescriptor`                    | A single [server request](server-descriptors.md#serverrequestdescriptor) to be executed.          |
-| `requests`    | `{ [key: string]: ServerRequestDescriptor }` | Use this to define **multiple requests**, executed sequentially.<br>Ignored if `request` is present. |
-| `displayInfo` | `DisplaySearchResult[]`                      | Defines how the response data is displayed inside the control.                                    |
+| `request`     | ServerRequestDescriptor                    | A single [server request](server-descriptors.md#serverrequestdescriptor) to be executed.          |
+| `requests`    | { [key: string]: ServerRequestDescriptor } | Use this to define **multiple requests**, executed sequentially.<br>Ignored if **request** is present. |
+| `displayInfo` | DisplaySearchResult[]                      | Defines how the response data is displayed inside the control.                                    |
 | `nodataText`  | string                                       | Text shown if the request returns no data.                                                        |
-| `button`      | boolean <br> string                          | Button text to manually trigger the search.<br>If `false`, the search is triggered on input change.  |
+| `button`      | boolean <br> string                          | Button text to manually trigger the search.<br>If **false**, the search is triggered on input change.  |
 
 
 !!! info
-    * When a `button` is present, the input field and button are shown together. When `button` is `false`, the request is triggered as the user types.<br>
+    * When a `button` is present, the input field and button are shown together. When `button` is **false**, the request is triggered as the user types.<br>
     * The result of a single `request` is saved to the `value` property of the control.<br>
     * When using `requests`, each request's result is stored under a named key.<br>
     * Sequential execution of `requests` allows one result to be used in the next request (e.g., pass product ID from the first to the second request).

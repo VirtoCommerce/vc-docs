@@ -37,13 +37,13 @@ Each file is a descriptor for a particular page, template, or group of pages. Dr
 | `previewUrl`     | string                                                                           | true   | url for preview this page in preview area.                                              |
 | `path`           | string                                                                           | false  | Path to file with page content relative to storage root.                                |
 | `type`           | string                                                                           | false  | ContentType for template (`pages`, `theme`, etc.)                                      |
-| `request`        | `ServerRequestDescriptor` <br> `ServerRequestDescriptor[]` <br> string <br> string[]   | false  | Descriptor for loading children elements.                                               |
+| `request`        | ServerRequestDescriptor <br> ServerRequestDescriptor[] <br> string <br> string[]   | false  | Descriptor for loading children elements.                                               |
 | `sort`           | number                                                                           | false  | Ability to sort items in dropdown.                                                      |
 | `isDefault`      | boolean                                                                          | false  | Default template.                                                                       |
 | `sections`       | string[]                                                                         | false  | List of available sections for current template.<br>If array is empty, every section will be available. |
-| `settings`       | `SectionPropertyDescriptor[]`                                                    | false` | Template settings.                                                                     |
-| `children`       | `TemplateEntryList`                                                              | false` | Children templates.                                                                    |
-| `previewMessage` | any                                                                              | false` | Additional data, that sends to preview area.                                            |
+| `settings`       | SectionPropertyDescriptor[]                                                    | false | Template settings.                                                                     |
+| `children`       | TemplateEntryList                                                              | false | Children templates.                                                                    |
+| `previewMessage` | any                                                                              | false | Additional data, that sends to preview area.                                            |
 
 === "Basic template example"
     ```json
@@ -109,8 +109,8 @@ Each file defines a section that can be added to a page. The section editor in t
 | `static`        | boolean <br> string           | Indicates that block is static. These blocks cannot be added or removed. <br>Actually it is a section settings. |
 | `displayField`  | string                        | Property name, that used for indicate section in section list.                                              |
 | `sort`          | number                        | Order section in list of new elements.                                                                      |
-| `settings`      | `SectionPropertyDescriptor[]` | List of descriptors for section properties.                                                                  |
-| `default`       | `SectionModel`                | Default section model. Used for creation of new section.                                                    |
+| `settings`      | SectionPropertyDescriptor[] | List of descriptors for section properties.                                                                  |
+| `default`       | SectionModel                | Default section model. Used for creation of new section.                                                    |
 | `group`         | string                        | Sections can be grouped in add new element panel.                                                            |
 | `groupIcon`     | string                        | Group icon.                                                                                                  |
 | `groupSort`     | number                        | Group sort.                                                                                                  |
@@ -177,7 +177,7 @@ You can also organize reusable setting groups in separate files and include them
 
 | Property   | Type                          | Description                |
 |------------|-------------------------------|----------------------------|
-| `settings` | `SectionPropertyDescriptor[]` | Property descriptors array |
+| `settings` | SectionPropertyDescriptor[] | Property descriptors array |
 
 ### Objects
 
@@ -185,7 +185,7 @@ Section property can be object. In this case, it is necessary to describe the st
 
 | property   | type                          | description                |
 |------------|-------------------------------|----------------------------|
-| `settings` | `SectionPropertyDescriptor[]` | Property descriptors array |
+| `settings` | SectionPropertyDescriptor[] | Property descriptors array |
 
 
 === "Button object editor (**button.json** file)"

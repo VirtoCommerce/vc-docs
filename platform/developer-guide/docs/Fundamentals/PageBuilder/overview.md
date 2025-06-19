@@ -30,6 +30,7 @@ Page Builder offers the following benefits:
 - Comprehensive block library.
 - Drag-and-drop block management, including copy, paste, hide, and reorder actions.
 - Native integration with the Virto Frontend.
+- Flexible API integration with both Virto Commerce and third-party systems.
 - Native extendability framework.
 - Fine-grained permissions and role management.
 

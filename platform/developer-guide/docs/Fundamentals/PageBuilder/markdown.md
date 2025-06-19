@@ -6,7 +6,7 @@ This control provides a Markdown editor. The content can be saved as Markdown, H
 | ------------------- | ------------------------------- | ----------------------------------------------------------------------------------- |
 | `resultType`          | markdown <br>html <br> mixed    | Determines the output format.                                                       |
 | `styles`              | string[] <br> string            | Links to CSS files for styling the preview pane.<br>Be careful with CORS restrictions. |
-| `uploadAssetsRequest` | `AssetsRequest`                 | Descriptor used to upload images pasted from the clipboard.                         |
+| `uploadAssetsRequest` | AssetsRequest                 | Descriptor used to upload images pasted from the clipboard.                         |
 | `urlField`            | string                          | Field name used for the image URL.                                                  |
 | `filenameField`       | string                          | Field name used for the alt text of pasted images.                                  |
 
