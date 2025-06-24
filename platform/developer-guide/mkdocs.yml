@@ -719,45 +719,125 @@ nav:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
+                - Guides:
+                      - Application Architecture and Best Practices: custom-apps-development/vc-shell/Guides/application-architecture-best-practices.md
+                      - Building, Deployment and Advanced Topics: custom-apps-development/vc-shell/Guides/building-deployment-advanced-topics.md
+                      - Creating Custom VC-Shell Applications: custom-apps-development/vc-shell/Guides/creating-custom-applications.md
+                      - Core Concepts for VC-Shell Applications: custom-apps-development/vc-shell/Guides/custom-application-core-concepts.md
+                      - Developing Custom VC-Shell Modules: custom-apps-development/vc-shell/Guides/developing-custom-modules.md
+                      - Integrating Framework Features: custom-apps-development/vc-shell/Guides/integrating-framework-features.md
+                      - Internationalization: custom-apps-development/vc-shell/Guides/internationalization.md
+                      - Routing Configuration: custom-apps-development/vc-shell/Guides/routing-configuration.md
                 - Essentials:
-                      - Dynamic views:
-                            - Overview: custom-apps-development/vc-shell/Essentials/dynamic-views/overview.md
-                            - DynamicBladeForm: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-Form.md
-                            - DynamicBladeList: custom-apps-development/vc-shell/Essentials/dynamic-views/Dynamic-Blade-List.md
-                            - Custom Templates: custom-apps-development/vc-shell/Essentials/dynamic-views/Custom-Templates.md
-                            - Extending Views: custom-apps-development/vc-shell/Essentials/dynamic-views/Extending-Views.md
-                            - Creating Page Schema: custom-apps-development/vc-shell/Essentials/dynamic-views/Creating-Page-Schema.md
-                            - Using Modules from Other Applications: custom-apps-development/vc-shell/Essentials/dynamic-views/Using-Modules-from-Other-Applications.md
-                      - Controls:
-                            - VcButton: custom-apps-development/vc-shell/Essentials/controls/VcButton.md
-                            - VcCard: custom-apps-development/vc-shell/Essentials/controls/VcCard.md
-                            - VcCheckbox: custom-apps-development/vc-shell/Essentials/controls/VcCheckbox.md
-                            - VcImage: custom-apps-development/vc-shell/Essentials/controls/VcImage.md
-                            - VcStatus: custom-apps-development/vc-shell/Essentials/controls/VcStatus.md
-                            - VcVideo: custom-apps-development/vc-shell/Essentials/controls/VcVideo.md
-                            - VcEditor: custom-apps-development/vc-shell/Essentials/controls/VcEditor.md
-                            - VcField: custom-apps-development/vc-shell/Essentials/controls/VcField.md
-                            - VcInput: custom-apps-development/vc-shell/Essentials/controls/VcInput.md
-                            - VcTextarea: custom-apps-development/vc-shell/Essentials/controls/VcTextarea.md
-                            - VcMultivalue: custom-apps-development/vc-shell/Essentials/controls/VcMultivalue.md
-                            - VcInputCurrency: custom-apps-development/vc-shell/Essentials/controls/VcInputCurrency.md
-                            - VcSelect: custom-apps-development/vc-shell/Essentials/controls/VcSelect.md
-                            - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/controls/VcDynamicProperty.md
-                            - VcFieldset: custom-apps-development/vc-shell/Essentials/controls/VcFieldset.md
-                            - VcGallery: custom-apps-development/vc-shell/Essentials/controls/VcGallery.md
-                            - Toolbar: custom-apps-development/vc-shell/Essentials/controls/Toolbar.md
-                            - VcSwitch: custom-apps-development/vc-shell/Essentials/controls/VcSwitch.md
-                            - VcTable: custom-apps-development/vc-shell/Essentials/controls/VcTable.md
-                            - VcRating: custom-apps-development/vc-shell/Essentials/controls/VcRating.md
-                            - VcCustom: custom-apps-development/vc-shell/Essentials/controls/VcCustom.md
-                            - Widgets: custom-apps-development/vc-shell/Essentials/controls/Widgets.md
                       - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
-                      - Notifications: custom-apps-development/vc-shell/Essentials/notifications.md
+                      - Understanding Application Layout: custom-apps-development/vc-shell/Essentials/understanding-application-layout.md
+                      - API Client Integration: custom-apps-development/vc-shell/Essentials/API-Integration/api-client-integration.md
+                      - Composables:
+                            - useApiClient: custom-apps-development/vc-shell/Essentials/composables/useApiClient.md
+                            - useAppBarWidget: custom-apps-development/vc-shell/Essentials/composables/useAppBarWidget.md
+                            - useAppInsights: custom-apps-development/vc-shell/Essentials/composables/useAppInsights.md
+                            - useAsync: custom-apps-development/vc-shell/Essentials/composables/useAsync.md
+                            - useBeforeUnload: custom-apps-development/vc-shell/Essentials/composables/useBeforeUnload.md
+                            - useBreadcrumbs: custom-apps-development/vc-shell/Essentials/composables/useBreadcrumbs.md
+                            - useDashboard: custom-apps-development/vc-shell/Essentials/composables/useDashboard.md
+                            - useDynamicProperties: custom-apps-development/vc-shell/Essentials/composables/useDynamicProperties.md
+                            - useLanguages: custom-apps-development/vc-shell/Essentials/composables/useLanguages.md
+                            - useLoading: custom-apps-development/vc-shell/Essentials/composables/useLoading.md
+                            - useMenuService: custom-apps-development/vc-shell/Essentials/composables/useMenuService.md
+                            - useNotifications: custom-apps-development/vc-shell/Essentials/composables/useNotifications.md
+                            - usePermissions: custom-apps-development/vc-shell/Essentials/composables/usePermissions.md
+                            - useSettings: custom-apps-development/vc-shell/Essentials/composables/useSettings.md
+                            - useSettingsMenu: custom-apps-development/vc-shell/Essentials/composables/useSettingsMenu.md
+                            - useTheme: custom-apps-development/vc-shell/Essentials/composables/useTheme.md
+                            - useToolbar: custom-apps-development/vc-shell/Essentials/composables/useToolbar.md
+                            - useUser: custom-apps-development/vc-shell/Essentials/composables/useUser.md
+                            - useWidgets: custom-apps-development/vc-shell/Essentials/composables/useWidgets.md
+                      - Usage Guides: 
+                            - Overview: custom-apps-development/vc-shell/Essentials/Usage-Guides/overview.md
+                            - Adding App Bar Widgets with useappbarwidget: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md
+                            - Adding New Languages: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-new-languages.md
+                            - Building Navigation Menus with usemenuservice: custom-apps-development/vc-shell/Essentials/Usage-Guides/building-navigation-menus-with-usemenuservice.md
+                            - Creating and Registering Widgets with usewidgets: custom-apps-development/vc-shell/Essentials/Usage-Guides/creating-and-registering-widgets-with-usewidgets.md
+                            - Creating Interactive Dashboards with usedashboard: custom-apps-development/vc-shell/Essentials/Usage-Guides/creating-interactive-dashboards-with-usedashboard.md
+                            - Customizing Application UI with usesettings: custom-apps-development/vc-shell/Essentials/Usage-Guides/customizing-application-ui-with-usesettings.md
+                            - Customizing Notifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/customizing-notifications.md
+                            - Displaying Toast Notifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/displaying-toast-notifications.md
+                            - Error Handling in VC-Shell: custom-apps-development/vc-shell/Essentials/Usage-Guides/error-handling-in-vc-shell.md
+                            - Implementing form Validation in Blades: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-form-validation-in-blades.md
+                            - Implementing Navigational Breadcrumbs with usebreadcrumbs: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-navigational-breadcrumbs-with-usebreadcrumbs.md
+                            - Implementing Role-Based Access Control with usepermissions: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-role-based-access-control-with-usepermissions.md
+                            - Implementing Telemetry with useappinsights: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-telemetry-with-useappinsights.md
+                            - Integrating Shared Authentication Pages: custom-apps-development/vc-shell/Essentials/Usage-Guides/integrating-shared-authentication-pages.md
+                            - Managing Async Operations with useasync: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-async-operations-with-useasync.md
+                            - Managing Blade Toolbars with usetoolbar: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-blade-toolbars-with-usetoolbar.md
+                            - Managing Dynamic Properties with usedynamicproperties: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-dynamic-properties-with-usedynamicproperties.md
+                            - Managing Loading States with useloading: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-loading-states-with-useloading.md
+                            - Managing Popups with usepopup and vcpopup: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-popups-with-usepopup-and-vcpopup.md
+                            - Managing Settings Menu with usesettingsmenu: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-settings-menu-with-usesettingsmenu.md
+                            - Managing Themes with usetheme: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-themes-with-usetheme.md
+                            - Preventing Data Loss with usebeforeunload: custom-apps-development/vc-shell/Essentials/Usage-Guides/preventing-data-loss-with-usebeforeunload.md
+                            - Understanding Blade Anatomy: custom-apps-development/vc-shell/Essentials/Usage-Guides/understanding-blade-anatomy.md
+                            - Using API Clients with useapiclient: custom-apps-development/vc-shell/Essentials/Usage-Guides/using-api-clients-with-useapiclient.md
+                            - Working with Blade Navigation in VC-Shell: custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-blade-navigation.md
+                            - Working with Push Notifications Using usenotifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-push-notifications-using-usenotifications.md
+                      - Plugins: 
+                            - i18n: custom-apps-development/vc-shell/Essentials/plugins/i18n.md
+                            - Modularity: custom-apps-development/vc-shell/Essentials/plugins/modularity.md
+                            - Permissions: custom-apps-development/vc-shell/Essentials/plugins/permissions.md
+                            - SignalR: custom-apps-development/vc-shell/Essentials/plugins/signalr.md
+                            - Validation: custom-apps-development/vc-shell/Essentials/plugins/validation.md
+                      - Shared:
+                            - Components:
+                                  - Blade Navigation: custom-apps-development/vc-shell/Essentials/shared/components/blade-navigation.md
+                                  - Dashboard Widget Card: custom-apps-development/vc-shell/Essentials/shared/components/dashboard-widget-card.md
+                                  - Draggable Dashboard: custom-apps-development/vc-shell/Essentials/shared/components/draggable-dashboard.md
+                                  - Generic Dropdown: custom-apps-development/vc-shell/Essentials/shared/components/generic-dropdown.md
+                                  - Notifications: custom-apps-development/vc-shell/Essentials/shared/components/notifications.md
+                                  - Popup Handler: custom-apps-development/vc-shell/Essentials/shared/components/popup-handler.md
+                                  - Settings Menu Item: custom-apps-development/vc-shell/Essentials/shared/components/settings-menu-item.md
+                                  - Sidebar: custom-apps-development/vc-shell/Essentials/shared/components/sidebar.md
+                      - UI Components:
+                            - VcApp: custom-apps-development/vc-shell/Essentials/ui-components/vc-app.md      
+                            - VcBadge: custom-apps-development/vc-shell/Essentials/ui-components/vc-badge.md      
+                            - VcBlade: custom-apps-development/vc-shell/Essentials/ui-components/vc-blade.md     
+                            - VcBreadcrumbs: custom-apps-development/vc-shell/Essentials/ui-components/vc-breadcrumbs.md      
+                            - VcButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-button.md      
+                            - VcCheckbox: custom-apps-development/vc-shell/Essentials/ui-components/vc-checkbox.md    
+                            - VcContainer: custom-apps-development/vc-shell/Essentials/ui-components/vc-container.md  
+                            - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/ui-components/vc-dynamic-property.md      
+                            - VcEditor: custom-apps-development/vc-shell/Essentials/ui-components/vc-editor.md      
+                            - VcField: custom-apps-development/vc-shell/Essentials/ui-components/vc-field.md      
+                            - VcFileUpload: custom-apps-development/vc-shell/Essentials/ui-components/vc-file-upload.md
+                            - VcForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-form.md    
+                            - VcGallery: custom-apps-development/vc-shell/Essentials/ui-components/vc-gallery.md
+                            - VcGrid: custom-apps-development/vc-shell/Essentials/ui-components/vc-grid.md
+                            - VcHint: custom-apps-development/vc-shell/Essentials/ui-components/vc-hint.md      
+                            - VcIcon: custom-apps-development/vc-shell/Essentials/ui-components/vc-icon.md
+                            - VcImage: custom-apps-development/vc-shell/Essentials/ui-components/vc-image.md 
+                            - VcInput: custom-apps-development/vc-shell/Essentials/ui-components/vc-input.md 
+                            - VcInputCurrency: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-currency.md      
+                            - VcInputDropdown: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-dropdown.md
+                            - VcLabel: custom-apps-development/vc-shell/Essentials/ui-components/vc-label.md      
+                            - VcLink: custom-apps-development/vc-shell/Essentials/ui-components/vc-link.md
+                            - VcLoginForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-login-form.md
+                            - VcMultivalue: custom-apps-development/vc-shell/Essentials/ui-components/vc-multivalue.md
+                            - VcPagination: custom-apps-development/vc-shell/Essentials/ui-components/vc-pagination.md     
+                            - VcPopup: custom-apps-development/vc-shell/Essentials/ui-components/vc-popup.md      
+                            - VcProgress: custom-apps-development/vc-shell/Essentials/ui-components/vc-progress.md
+                            - VcRadioButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-radio-button.md      
+                            - VcRating: custom-apps-development/vc-shell/Essentials/ui-components/vc-rating.md
+                            - VcSelect: custom-apps-development/vc-shell/Essentials/ui-components/vc-select.md      
+                            - VcSkeleton: custom-apps-development/vc-shell/Essentials/ui-components/vc-skeleton.md
+                            - VcSlider: custom-apps-development/vc-shell/Essentials/ui-components/vc-slider.md      
+                            - VcStatus: custom-apps-development/vc-shell/Essentials/ui-components/vc-status.md
+                            - VcStatusIcon: custom-apps-development/vc-shell/Essentials/ui-components/vc-status-icon.md
+                            - VcSwitch: custom-apps-development/vc-shell/Essentials/ui-components/vc-switch.md 
+                            - VcTable: custom-apps-development/vc-shell/Essentials/ui-components/vc-table.md      
+                            - VcTextarea: custom-apps-development/vc-shell/Essentials/ui-components/vc-textarea.md
+                            - VcToast: custom-apps-development/vc-shell/Essentials/ui-components/vc-toast.md  
+                            - VcVideo: custom-apps-development/vc-shell/Essentials/ui-components/vc-video.md      
+                            - VcWidget: custom-apps-development/vc-shell/Essentials/ui-components/vc-widget.md
                 - Extensibility:
-                      - Overview: custom-apps-development/vc-shell/Extensibility/overview.md
-                      - Overriding API: custom-apps-development/vc-shell/Extensibility/Overriding-API.md
-                      - Overriding Composables: custom-apps-development/vc-shell/Extensibility/Overriding-Composables.md
-                - API reference: custom-apps-development/vc-shell/api-reference.md
+                      - Modularity: custom-apps-development/vc-shell/Extensibility/modularity.md
                 - How-tos:
                       - Connecting to Platform: custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md
-                      - Generate API client: custom-apps-development/vc-shell/How-tos/generate-api-client.md

@@ -1,10 +1,11 @@
-# Create first VC-Shell application
+# Create First VC-Shell Application
 
-In this section we will show you how to scaffold a VC Shell application on your local machine. The created project will use Vue 3 and Vite as the build setup.
+In this section we will show you how to scaffold a VC-Shell application on your local machine. The created project will use Vue 3 and Vite as the build setup.
 
-!!! note "Prerequisites"
-    * You have an up-to-date installation of Node.js.
-    * Your current working directory is set to the location where you want to create the application.
+**Prerequisites**:
+
+* You have an up-to-date installation of Node.js.
+* Your current working directory is set to the location where you want to create the application.
 
 To create and install custom app:
 
@@ -28,14 +29,13 @@ To create and install custom app:
         yarn create @vc-shell/vc-app
         ```
 
-1. Configure the options based on your requirements. If you are unsure about an option, simply choose `No` by hitting <kbd>Enter</kbd>:
+1. Configure the options based on your requirements. If you are unsure about an option, simply choose **No** by clicking **Enter**:
 
     ```bash
     ✔ Project name: … *your-app-name*
     ✔ Base path: … /apps/*your-app-name*/
     ? Select module variant: › - Use arrow-keys. Return to submit.
-    ❯   Dynamic view modules boilerplate
-        Classic view modules boilerplate
+    ❯   Classic view modules boilerplate
     Module name: › *your-module-name*
     ? Do you want to include additional module with sample data? › (y/N)
 
@@ -48,24 +48,20 @@ To create and install custom app:
     yarn serve
     ```
 
-1. Once the application is created, go to the application folder and add Platform URL to the `.env.local` file under the `APP_PLATFORM_URL` variable:
+1. Once the application is created, go to the application folder and add Platform URL to the **.env.local** file under the **APP_PLATFORM_URL** variable:
 
     ```bash
     $ cd `*your-app-name*`
     $ echo "APP_PLATFORM_URL=https://your_platform_url_here" >> .env.local
     ```
 
-2. Install the dependencies and start the development server:
+1. Install the dependencies and start the development server:
 
 Your first VC-Shell application is now ready to run!
 
-An example application with classic and dynamic views, created using `@vc-shell/create-vc-app` package, can be found in the `sample/vc-app` folder in the @VirtoCommerce/vc-shell github repo.
 ![New app](../../media/new-app.png)
 
-![Readmore](../../media/readmore.png){: width="25"} [Dynamic Views Extensibility](../Extensibility/overview.md)
-
-!!! info "Note"
-
+!!! note
     The example components in the generated application are written using the Vue Composition API and `<script setup>`.
 
 
@@ -78,84 +74,135 @@ An example application with classic and dynamic views, created using `@vc-shell/
 
 ## Application folder structure
 
-After the application is scaffolded, the folder structure will look as follows:
+After the application is scaffolded, the folder structure will look as follows. This structure is designed to promote modularity and maintainability. 
 
-```css hl_lines="12 13 14 15 16 17 18 19 20"
-├─ public                         // Static assets
-│  ├─ assets                      // Static images used inside the application.
+![Readmore](../../media/readmore.png){: width="25"} [Application architecture](../Guides/application-architecture-best-practices.md)
+
+![Readmore](../../media/readmore.png){: width="25"} [Creating custom applications](../Guides/creating-custom-applications.md)
+
+```css 
+├─ public                         // Static assets (images, fonts, etc.) that are served directly by the web server.
+│  ├─ assets                      // Static images, fonts, etc., used inside the application.
 │  └─ img
-│     └─ icons                    // Icons used for favicons, PWA, etc.
-├─ src
-│  ├─ api_client                  // Generated API clients folder
+│     └─ icons                    // Icons used for favicons, PWA manifests, etc.
+├─ src                            // Main application source code.
+│  ├─ api_client                  // Auto-generated API client (e.g., from OpenAPI/Swagger).
 │  │  └─...
-│  ├─ composables                 // Application composables
+│  ├─ composables                 // Application-wide Vue composables (reusable stateful logic).
 │  │  └─...
-│  ├─ locales                     // Locale files used to provide translated content
+│  ├─ locales                     // Localization files (e.g., en.json, es.json) for application-level translations.
 │  │  └─ en.json
-│  ├─ modules                     // The collection of custom modules
-│  │  └─ ...                      // Modules folder
-│  │     ├─ components            // The collection of components specific for this module
-│  │     │   ├─ notifications     // Dropdown notifications templates
-│  │     │   └─ ...
-│  │     ├─ composables           // The collection of shared logic written using Composable API pattern.
-│  │     ├─ locales               // Locale files used to provide translated content specific for this module
-│  │     ├─ pages                 // Set of module pages used within Application router
-│  │     └─ index.ts              // Module entry point
-│  ├─ pages                       // Set of application pages used within Application router.
+│  ├─ modules                     // The collection of custom business modules. This is where most of your application's features will reside.
+│  │  └─ your-module-name/        // Example module folder.
+│  │     ├─ components            // Components specific to this module.
+│  │     │  ├─ notifications      // Dropdown notification templates for this module.
+│  │     │  └─ ...
+│  │     ├─ composables           // Composables specific to this module.
+│  │     ├─ locales               // Locale files specific to this module.
+│  │     ├─ pages                 // Blade components (pages) for this module.
+│  │     └─ index.ts              // Module entry point, registers the module with the framework.
+│  ├─ pages                       // Application-level pages (e.g., NotFound, Login - though login is often part of the framework).
 │  │  └─...
-│  ├─ router                      // SPA routing configuration
-│  │  └─...
-│  ├─ styles                      // Extras application style files
-│  │  └─ index.scss               // Tailwind initialization file
-│  └─ types                       // Typescript .d.ts files
+│  ├─ router                      // Vue Router configuration (routes, guards).
+│  │  └─ index.ts
+│  ├─ styles                      // Global styles, TailwindCSS setup, custom themes.
+│  │  ├─ index.scss               // Main SCSS file, imports Tailwind and custom styles.
+│  │  └─ custom.scss              // (Optional) Your custom SCSS overrides and theme definitions.
+│  ├─ types                       // Global TypeScript type definitions (.d.ts files).
+│  │  └─ ...
+│  ├─ App.vue                     // Root Vue component.
+│  └─ main.ts                     // Main application entry point (initializes Vue, router, plugins, modules).
 ```
+
+### Core concepts
+
+It is helpful to understand some core concepts of the VC-Shell framework. These are covered extensively in the [Custom application core concepts guide](../Guides/custom-application-core-concepts.md). In brief:
+
+*   **VC-Shell framework** (`@vc-shell/framework`): Provides the foundational UI, services (like navigation, notifications, API client integration), and architectural patterns for building administrative UIs.
+*   **Modularity**: Applications are built as a collection of independent modules. Each module encapsulates a specific business domain or feature set. This is detailed in the [Developing custom modules guide](../Guides/developing-custom-modules.md).
+*   **Blade navigation**: The primary UI paradigm. Blades are individual panels or pages that can be opened, closed, and stacked, providing a focused user experience for specific tasks.
+*   **Routing**: Managed by Vue Router, integrated with the blade system.
+*   **State management**: While VC-Shell doesn't enforce a specific global state management library like Pinia or Vuex out-of-the-box for custom apps, it provides patterns for managing local state within composables and communication between blades. Shared services and composables are common for cross-cutting concerns.
+*   **API client integration**: Uses `useApiClient()` composable for easy integration with generated API clients.
 
 Let's take a look at the modules directory as it represents the key concept in the application's architecture.
 
 ### Modules directory structure
 
-A **module** is a collection of composables, locales, components, and pages. Each module is responsible for its own functionality and can contain the number of **blades** you need to serve your specific requirements, which are stored in the "pages" folder. A **blade** is a standalone page with its own functionality and template. <br>Blades are not interconnected, but they can be used together using special methods.
+A **module** is a self-contained unit that groups related functionality. It typically includes its own components, composables, localization files, and pages (blades). This structure ensures separation of concerns and makes the application easier to scale and maintain. 
 
-| Folder               	| Description                                                                                                 	|
-|--------------------	|--------------------------------------------------------------------------------------------------------------	|
-| Components  	        | This directory contains components that are specific to this module. If you want to create a component for your module, the **components** folder is the ideal place to do so. Components placed within a module should only be used within that module. If a component needs to be used globally, it's better to place it in the **components** folder at the root of the application.the application root folder. |
-| Composables        	| The collection of shared logic written using Composable API pattern.<br>It may include, for example, logic for loading data from the backend which is used by blade.                                                                                                                                                                 	|
-| Locales      	        | The folder stores locale files used to provide translated content specific to the module. If you need to translate your blades into multiple languages, you can store all the translations in JSON format in this folder. These translations can then be processed using the vue-i18n library. <br> ![Readmore](../../media/readmore.png){: width="25"} [Syntax of localization files](https://kazupon.github.io/vue-i18n/) |
-| Pages                 | A set of Blades used within application router.
+![Readmore](../../media/readmore.png){: width="25"} [Developing custom VC-Shell modules](../Guides/developing-custom-modules.md)
+
+| Folder               	| Description                                                                                                                                            |
+|--------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| components  	        | Contains Vue components that are specific to this module. These components are typically used within the module's blades or other module components. If a component needs to be used across multiple modules or globally, consider placing it in `src/components` or a shared UI library. |
+| composables        	| Vue Composition API functions specific to this module. They encapsulate reactive logic, state management, or business rules relevant to the module's domain (e.g., fetching and managing data for a specific entity).                  	|
+| locales      	        | Module-specific translation files (e.g., **en.json**, **es.json**). These are merged with application-level locales to provide localized content for the module's UI.<br> ![Readmore](../../media/readmore.png){: width="25"} [Internationalization](../Guides/internationalization.md) |
+| pages                 | Contains the module's **blade** components. Blades are essentially Vue components that represent a distinct view or screen within the module, often corresponding to a specific route or a step in a workflow. They are registered with the framework to participate in navigation. |
+| index.ts              | The entry point for the module. This file typically uses the `createAppModule` function from `@vc-shell/framework` to register the module's pages, locales, notification templates, and other components with the main application.     |
+
 
 ### Create new module
 
 To create your own modules within the scaffolded application folder structure:
 
-1. Create a new folder for your module inside the **src/modules** directory. Choose a descriptive name that reflects its functionality. You can create multiple modules within the **src/modules** directory, with each module responsible for a specific set of features or pages.
-
-1. Inside your module folder, organize your module-specific code into different directories as needed.
-
-1. Additionally, you can include an **index.ts** file as the entry point for your module. This file can provide the necessary exports and configurations for your module.
-
+1.  Create a new folder for your module inside the **src/modules** directory. Choose a descriptive name that reflects its functionality (e.g., **products**, **orders**, **reviews**).
+1.  Inside your module folder, create the standard subdirectories: **components**, **composables**, **locales**, and **pages**.
+1.  Create an **index.ts** file in the root of your module folder. This will be the entry point for registering your module.
 
 ### Initialize new module in application
 
-Initialize your module to make it usable within the application.
+All modules are created as Vue plugins. The `@vc-shell/framework` provides a helper function, `createAppModule`, to simplify their creation and registration. This function takes the module's pages, locales, notification templates, and other module-specific components as arguments.
 
-All modules are created as Vue plugins. To simplify the module installation process, you can initialize it using the `createAppModule method`. This method takes `pages`, `locales`, and, if necessary, `notificationTemplates` as arguments:
+Here's an example of a typical module **index.ts**:
 
-```typescript title="index.ts" linenums="1"
-// Import your blade pages
+```typescript title="src/modules/your-module-name/index.ts" linenums="1"
+// Import all blade components from the 'pages' directory
 import * as pages from "./pages";
-// Include your locale files if applicable
+// Import all locale files from the 'locales' directory
 import * as locales from "./locales";
-// Import createAppModule to initialize your module in the application
+// (Optional) Import notification templates if your module uses them
+// import * as notificationTemplates from "./components/notifications";
+// (Optional) Import any other components that need to be globally registered by this module
+// import * as moduleComponents from "./components"; // e.g., components to be used in this module
+
+// Import createAppModule from the VC-Shell framework
 import { createAppModule } from "@vc-shell/framework";
 
-export default createAppModule(pages, locales);
+// Define the module.
+// The first argument is an object mapping page names to their constructors.
+// The second argument is an object mapping locale names to their content.
+// The third (optional) argument is for notification templates.
+// The fourth (optional) argument is for other module-specific components.
+export default createAppModule(
+  pages,
+  locales
+  // notificationTemplates, // Uncomment if you have notification templates
+  // moduleComponents       // Uncomment if you have other components to register
+);
 
-// Required exports
-export * from "./pages";
-export * from "./composables";
-export * from "./components";
+// It's good practice to also export key parts of your module for potential direct import elsewhere,
+// though direct inter-module dependencies should be minimized.
+export * from "./pages"; // Typically, blades are what other parts of the system might want to navigate to.
+export * from "./composables"; // If you have composables that might be useful outside the module (use with caution).
+// export * from "./components"; // Only if certain components are designed for external use.
+export * from "./types"; // Exporting module-specific types is often necessary.
 ```
 
-With these steps, your module is now ready for use within your application!
+**Explanation of `createAppModule` arguments:**
 
-![Readmore](../../media/readmore.png){: width="25"} [Adding new module to the navigation menu](../Essentials/navigation.md)
+| Argument                  | Description |
+|---------------------------|-------------|
+| `pages`                   | An object where keys are page (blade) names and values are the corresponding Vue component constructors (e.g., `Record<string, BladeInstanceConstructor>`).<br>These pages will be registered with the blade navigation system. |
+| `locales`                 | An object where keys are locale codes (e.g., `"en"`, `"es"`) and values are objects containing the translation strings for that locale (e.g., `Record<string, Record<string, string>>`). <br>These will be merged with the application's global i18n instance. |
+| `notificationTemplates` (optional) | An object mapping notification template names to their Vue component constructors.<br>Used for custom notification rendering. |
+| `moduleComponents` (optional)      | An object mapping component names to their Vue component constructors. <br> These components will be registered globally. |
+
+
+After creating your module's **index.ts**, you need to import and register it in your main application file (**src/main.ts**). 
+
+![Readmore](../../media/readmore.png){: width="25"} [Loading modules into main application](../Guides/developing-custom-modules.md#how-modules-are-loaded-into-the-main-application)
+
+Your module is now ready for use within your application.
+
+![Readmore](../../media/readmore.png){: width="25"} [Adding new module to navigation menu](../Essentials/Usage-Guides/building-navigation-menus-with-usemenuservice.md)

@@ -1,380 +1,102 @@
-# Navigation
+# Navigating Your VC-Shell Application: A Comprehensive Overview
 
-In the VC Shell application, navigation is a fundamental aspect of managing modules and interacting with different blades. This guide explores the various elements of navigation and how to efficiently work with them.
+VC-Shell employs a flexible and multi-layered navigation system designed to provide a seamless user experience, especially in complex applications. This guide serves as a high-level map to the various navigation mechanisms available, directing you to more detailed documentation for each specific feature. Understanding these concepts will help you build intuitive and efficient workflows for your users.
 
-The application has its own routing, which is based on the `vue router` and provided by the ``useBladeNavigation`` composable.
-``useBladeNavigation`` is a custom composite responsible for navigating between modules, opening and closing new blades, and their interaction with each other.
+## Core Navigation Systems
 
-The `Vue router` is responsible for navigation within the application, handling clicks in the application menu, and also supporting opening pages via direct links and saving page state after page refresh.
+VC-Shell applications utilize several primary systems for navigation:
 
-The scaffolded application already has all the initial settings for working with navigation, but let's have a look at the details.
+### Page-Based Routing (Vue Router)
 
-## Navigation elements
+At its foundation, VC-Shell uses Vue Router for traditional page-based navigation. This system is configured in the `src/router/routes.ts` file and is used for:
 
-The main navigation elements in the application are **blades**. Each blade is a separate page with its own functionality and template. Blades are not connected to each other, but can be used together by means of special methods.
+- Defining the main application layout.
+- Registering primary pages, like a main dashboard, that render within the application.
+- Handling standalone pages, such as login or password reset pages.
 
-The **workspace** consists of blades. Each new blade is added to the right, hiding the first ones so that only two are available at a time. You can open and close new blades, and work with different data at the same time. The blade is a fully customizable entity that follows application design patterns.
+This is the primary mechanism for assigning a persistent URL to a view.
 
-![Blades](../../media/blades.png)
+For a complete guide on setting up **routes.ts**, adding pages, and understanding critical options like `meta: { root: true }`, see [Routing configuration](./../Guides/routing-configuration.md)
 
-The main blades elements are:
+### Blade Navigation System
 
-* **Header**. The blade header contains the title of the blade, various actions such as the Expand and Collapse Blade buttons, and an area where you can place data as you see fit, such as product type or blade status.
+The "blade" system is a hallmark of VC-Shell, offering a powerful way to manage contextual, slide-in panels. Blades allow users to drill down into details or access related tasks without losing their place in the main workflow.
 
-    ![Header](../../media/header.png)
+While blades are components managed by `useBladeNavigation`, they can also be accessed via direct URLs. This is made possible by a "catch-all" route in **routes.ts** that uses a resolver to find and display the correct blade.
 
-* **Toolbar**. The blade toolbar is a place where you can place any combination of actions with this blade. It could be actions like refresh, delete, etc.
+![Readmore](../../media/readmore.png){: width="25"} [Primary composable. UseBladeNavigation](./shared/components/blade-navigation.md)
 
-    ![Toolbar](../../media/toolbar.png)
+![Readmore](../../media/readmore.png){: width="25"} [Working with blade navigation](./Usage-Guides/working-with-blade-navigation.md)
 
-* **Content**. The blade content is a place, where all the content of the blade is located. It can be tables, forms, and any other data that needs to be displayed in it.
+![Readmore](../../media/readmore.png){: width="25"} [UI components. VC-blade](./ui-components/vc-blade.md)
 
-    ![Content](../../media/content.png)
+![Readmore](../../media/readmore.png){: width="25"} [Router integration details](./../Guides/routing-configuration.md)
 
-* **Top bar**. The blade top bar is an application component that can contain various data and components. It is fully customizable, but by default it contains the language selection component, notification component, and user information. It is also responsible for displaying the blade name in the mobile version.
+### Main Application Menu (Sidebar/App Menu)
 
-    ![Top bar](../../media/top-bar.png)
+The primary navigation menu provides top-level entry points into your application's modules and key features. Menu items can be registered for both router pages and blades.
 
-* **Navigation menu**. This element is a part of the application menu system.
+![Readmore](../../media/readmore.png){: width="25"} [Building navigation menus with usemenuservice](./Usage-Guides/building-navigation-menus-with-usemenuservice.md)
 
-    ![Nav-menu](../../media/nav-menu.png)
+![Readmore](../../media/readmore.png){: width="25"} [Adding custom pages and menu items](./Usage-Guides/adding-custom-pages-and-menu-items.md)
 
+## Choosing the Right Navigation System
 
+VC-Shell offers multiple navigation tools, and choosing the right one depends on the context:
 
-## Quick start for navigation
+-   **Vue Router**: Use for primary application pages that represent distinct sections or when a unique browser URL is essential for direct access, bookmarking, or sharing (e.g., main dashboard, settings sections, login page).
+-   **Blade Navigation (`useBladeNavigation`)**: Ideal for contextual tasks, detail views, or multi-step workflows that slide in over the current view without a full page reload. Blades excel at master-detail patterns and keeping users within a specific workflow.
+-   **Main Application Menu (`useMenuService`)**: For top-level navigation, providing users with access to major modules and workspaces.
 
-To get started with the VC Shell application's navigation system, import the `useBladeNavigation` composable from the `@vc-shell/framework` package:
+These systems work together. For example, a menu item registered via `useMenuService` might link to a standard page route (like `/dashboard`). Another menu item, often registered automatically from a blade's `defineOptions`, will navigate to a URL (e.g., `/products`) that is then resolved by the router's "catch-all" mechanism to open the corresponding blade.
 
-```typescript linenums="1"
-import { useBladeNavigation } from "@vc-shell/framework";
-```
+## Key Navigational UI Components & Features
 
-`useBladeNavigation` is a custom composition API function designed for working with blade navigation. It works hand in hand with the `VcBladeNavigation` component from `@vc-shell/framework`. This component manages the workspace blade of the module and other blades, which may or may not have their paths defined.
+Beyond the core systems, VC-Shell offers several UI components and composables that enhance navigation and user orientation:
 
-### Blade components structure
+### Breadcrumbs
 
-* Each blade comprises a template with a `VcBlade` component serving as the root. The `VcBlade` component is central to creating a blade:
+Breadcrumbs provide users with a clear trail of their navigation path, allowing them to easily understand their current location within the application's hierarchy and navigate back to previous levels.
 
-  ```html linenums="1"
-  <VcBlade
-      title="My first blade"
-      :expanded="expanded"
-      :closable="closable"
-      width="50%"
-      @close="$emit('close:blade')"
-      @expand="$emit('expand:blade')"
-      @collapse="$emit('collapse:blade')"
-  >
-      <!-- Blade content -->
-  </VcBlade>
-  ```
+![Readmore](../../media/readmore.png){: width="25"} [Implementing navigational breadcrumbs with usebreadcrumbs](./Usage-Guides/implementing-navigational-breadcrumbs-with-usebreadcrumbs.md)
 
-* Every blade comes with its default props interface:
+![Readmore](../../media/readmore.png){: width="25"} [UI component. VC breadcrumbs](./ui-components/vc-breadcrumbs.md)
 
-  ```typescript linenums="1"
-  export interface Props {
-      expanded: boolean; // Required prop for VcBlade component
-      closable: boolean; // Required prop for VcBlade component
-      param?: string; // Additional blade parameter, e.g., for data retrieval
-      options?: {}; // Any extra options to pass to the blade
-  }
-  ```
+### App Bar Widgets
 
-* Each blade also emits its events based on your requirements:
+The application's top bar can be extended with custom widgets. These widgets can serve as quick access points to features, display status information, or trigger actions, contributing to the overall navigation and interaction flow.
 
-  ```typescript linenums="1"
-  export interface Emits {
-      (event: "parent:call", args: IParentCallArgs): void; // Optional
-      (event: "close:blade"): void; // Required
-      (event: "collapse:blade"): void; // Required
-      (event: "expand:blade"): void; // Required
-  }
-  ```
+![Readmore](../../media/readmore.png){: width="25"} [Adding app bar widgets with useappbarwidget](./Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md)
 
-* If you want your blade to have its path, you can use the `defineOptions` macro:
+### Settings Menu
 
-  ```typescript linenums="1"
-  defineOptions({
-      url: "/<blade-url>",
-  });
-  ```
+VC-Shell applications often feature a dedicated settings area. The framework provides tools to manage and extend this settings menu, allowing modules to register their own settings pages.
 
-* If you want your blade to have its own navigation menu item, you can use the `defineOptions` macro:
+![Readmore](../../media/readmore.png){: width="25"} [Managing settings menu with usesettingsmenu](./Usage-Guides/managing-settings-menu-with-usesettingsmenu.md)
 
-  ```typescript linenums="1"
-  defineOptions({
-      ...,
-      menuItem: {
-          title: "My blade",
-          icon: "fas fa-file-alt",
-          priority: 1,
-          group: 'My group', // Optional
-          inGroupPriority: 1, // Optional
-      },
-  });
-  ```
+### Blade Toolbar Items
 
-* To create a blade toolbar, make use of the IBladeToolbar interface:
+Toolbars within blades provide contextual actions relevant to the blade's content. These are crucial for in-blade navigation and task execution.
 
-  ```typescript linenums="1"
-  const bladeToolbar = ref<IBladeToolbar>([
-      {
-          id: "item", // Any unique identifier
-          title: "My action", // Title of the toolbar button
-          icon: "fas fa-save", // Icon for display
-          clickHandler() {
-              // Define actions to perform on click
-          },
-      });
-  ```
+![Readmore](../../media/readmore.png){: width="25"} [Managing blade toolbars with usetoolbar](./Usage-Guides/managing-blade-toolbars-with-usetoolbar.md)
 
-## Creating navigation menu items
+## Programmatic Navigation
 
-To create a menu item, use the `defineOptions` macro in the blade component. This macro allows you to define the blade's URL and menu item. The menu item is an object with the following interface:
+In addition to user-initiated navigation through UI elements, you will often need to navigate programmatically:
 
-```typescript linenums="1"
-interface MenuItemConfig {
-  title: string;
-  icon: string;
-  group?: string;
-  priority: number;
-  inGroupPriority?: number;
-}
-```
-
-| Property | Type | Description |
-| --- | --- | --- |
-| `title` | `string` | Menu item title. You can specify the localization key for the title. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used.  |
-| `icon` | `string` | Menu item icon. |
-| `group` | `string` | Menu item group. Is used to group menu items with its provided name. If the path is not specified, the menu item is added to the root of the menu. You can specify the localization key for the group. Under the hood, [vue-i18n](https://kazupon.github.io/vue-i18n/) is used. |
-| `priority` | `number` | Position priority. |
-| `inGroupPriority` | `number` | Position priority in group. |
-
-```typescript linenums="1"
-defineOptions({
-    url: "/<blade-url>",
-    menuItem: {
-        title: "My blade",
-        icon: "fas fa-file-alt",
-        priority: 1,
-        group: 'My group',
-        inGroupPriority: 1,
-    },
-});
-```
-
-## Routing
-
-The application's routing can be handled using the `openBlade` method from the `useBladeNavigation` composable:
-
-```typescript linenums="1"
-import { useBladeNavigation } from '@vc-shell/framework';
-
-const { openBlade } = useBladeNavigation();
-```
-
-To navigate to a module or open a new blade, use the async `openBlade` method. Pass the blade component you wish to navigate to as an argument.
-
-Additionally, you can provide parameters, options, and two types of callbacks, namely `onOpen` and `onClose`, which execute when the blade is opened or closed, respectively:
-
-```typescript linenums="1"
-import { useBladeNavigation } from '@vc-shell/framework';
-// Your imported blade component
-import Blade from './blade-component.vue'
-
-const { openBlade } = useBladeNavigation();
-
-await openBlade({
-    blade: markRaw(Blade),
-    param: ...,
-    options: {
-        ...
-    },
-    onOpen() {
-        // Define actions to perform on blade open
-    },
-    onClose() {
-        // Define actions to perform on blade close
-    }
-})
-```
-
-## Add module to application
-
-Once you've created your `blade` template, it needs to be initialized. In the module's `index.ts` file, register it within the application using the `createAppModule` method. With this setup, you're ready to go:
-
-```typescript linenums="1"
-// Your blade pages
-import * as pages from "./pages";
-import { createAppModule } from "@vc-shell/framework";
-
-export default createAppModule(pages, locales);
-```
-
-??? Example
-
-    ```html linenums="1"
-    <template>
-    <VcBlade
-        title="My first blade"
-        :expanded="expanded"
-        :closable="closable"
-        width="50%"
-        @close="$emit('close:blade')"
-        @expand="$emit('expand:blade')"
-        @collapse="$emit('collapse:blade')"
-    >
-        <!-- Blade content -->
-    </VcBlade>
-    </template>
-    ```
-    ```typescript linenums="1"
-    <script lang="ts" setup>
-    export interface Props {
-        expanded?: boolean;
-        closable?: boolean;
-        param?: string;
-    }
-
-    export interface Emits {
-        (event: "collapse:blade"): void;
-        (event: "expand:blade"): void;
-        (event: "close:blade"): void;
-    }
-
-    /**
-    * Define your path
-    */
-    defineOptions({
-        url: '/my-first-blade',
-        menuItem: {
-            title: "My blade",
-            icon: "fas fa-file-alt",
-            priority: 1,
-            group: 'My group',
-            inGroupPriority: 1,
-        },
-    })
-
-    withDefaults(defineProps<Props>(), {
-        expanded: true,
-        closable: true,
-    });
-
-    defineEmits<Emits>();
-    </script>
+- **Vue Router**: Use `router.push()` or `router.replace()` for navigating to standard page routes.
+    ```typescript
+        import { useRouter } from 'vue-router';
+        const router = useRouter();
+        router.push({ name: 'MyPageRouteName' });
     ```
 
-
-## Navigation actions
-
-=== "Open Blade"
-
-    To open a new workspace, you can use the `openBlade` function from the `useBladeNavigation` composable with second argument `isWorkspace === true` . It offers the advantage of setting initial data when opening the blade. When using imported blade components with `openBlade`, remember to use Vue's `markRaw` method to prevent conversion to a proxy, thereby optimizing performance.
-
-    ```typescript linenums="1"
-    import MyImportedNewBlade from './MyImportedNewBlade.vue'
-
-    await openBlade({
-        blade: markRaw(MyImportedNewBlade),
-        options: {}, // Typed options specific to MyImportedNewBlade, if any
-        param: 'my-any-string-param'
-        onOpen() {
-            // Define actions when the blade is opened
-        },
-        onClose() {
-            // Define actions when the blade is closed
-        }
-    }, true)
+- **Blade Navigation**: Use the `openBlade` method from `useBladeNavigation` to programmatically open, control, and pass parameters to blades.
+    ```typescript
+        import { useBladeNavigation } from '@vc-shell/framework';
+        const { openBlade } = useBladeNavigation();
+        openBlade({ blade: { name: 'MyTargetBlade' }, param: 'someId' });
     ```
 
-    Alternatively, you can use `resolveBladeByName` method to get blade component by its name.
-
-    ```typescript linenums="1"
-    await openBlade({
-        blade: resolveBladeByName(MyImportedNewBlade),
-        options: {}, // Typed options specific to MyImportedNewBlade, if any
-        param: 'my-any-string-param'
-        onOpen() {
-            // Define actions when the blade is opened
-        },
-        onClose() {
-            // Define actions when the blade is closed
-        }
-    }, true)
-    ```
-
-    To open the blade in the same workspace, use the `openBlade` function from the `useBladeNavigation` composable with second argument `isWorkspace === false` or without it:
-
-    ```typescript linenums="1"
-     await openBlade({...})
-     // or
-     await openBlade({...}, false)
-    ```
-
-=== "Close Blade"
-
-    To close a blade, emit a `close:blade` event from your blade component. The `VcBlade` component, which is used to construct blades, emits this event when the close button is clicked.
-
-    ```html linenums="1"
-    <VcBlade
-        @close="$emit('close:blade')"
-        ...
-    >
-        <!-- Blade contents -->
-    </VcBlade>
-    ```
-
-    Alternatively, use the `closeBlade` function from the `useBladeNavigation` composable if you know the index of the blade you want to close:
-
-    ```typescript linenums="1"
-    closeBlade(indexNumber)
-    ```
-
-=== "Execute Methods in the Previous Blade"
-
-    Each blade can emit a `parent:call` event to invoke a method in its parent blade. To execute a method in the parent blade, expose it using `defineExpose`:
-
-    ```typescript linenums="1"
-    // Parent blade
-    function reload() {
-    // Implement reloading logic
-    }
-
-    defineExpose({
-        reload,
-    })
-
-    // Child blade
-    interface Emits {
-        (event: 'parent:call', args: IParentCallArgs): void;
-    }
-
-    const emit = defineEmits<Emits>();
-
-    function anyFunction() {
-        emit("parent:call", {
-            method: "reload", // Exposed method in the parent blade
-        });
-    }
-    ```
-
-
-## Overview of all registered blades in application
-
-You can see all blades registered in the application with and without paths. To do so, use a browser extension called `Vue Devtools`.
-
-![Readmore](../../media/readmore.png){: width="25"} [Vue Devtools](https://devtools.vuejs.org/)
-
-1. To discover the blade's name, open `Vue Devtools` and locate `App` in the components tree. Clicking on it will reveal the component's state:
-
-    ![App in components tree](../../media/app-components-tree.png)
-
-1. Identify the `provided` option within this state, which contains an array of `internalRoutes`. This array encompasses all registered blades from each module, whether they have their own URL or not:
-
-    ![Provided in App](../../media/app-provided-option.png)
-
-1. As an example, let's expand two objects of the `internalRoutes` array and see an example of registered blades that belong to the `Offers` module:
-
-    ![Provided Offers](../../media/app-provided-offers.png)
+Refer to the specific guides linked above for more details on programmatic control within each system.
 
