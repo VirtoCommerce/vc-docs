@@ -135,6 +135,9 @@ nav:
           - Taxes:
                 - Configuring Tax Providers: Fundamentals/Taxes/tax-providers-configuration.md
                 - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
+          - SEO:
+                - Overview: Fundamentals/SEO/overview.md
+                - Configuration: Fundamentals/SEO/configuration.md
           - Dynamic Properties:
                 - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
           - Notifications:

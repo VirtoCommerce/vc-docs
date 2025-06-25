@@ -1,4 +1,4 @@
-﻿# Search options
+﻿# Search Options
 
 When dealing with numerous records, you will require searching and filtering options to efficiently locate the specific items you're looking for. Virto Commerce provides two searching options:
 
@@ -24,6 +24,18 @@ To enable broader and more powerful search capabilities across indexed fields, o
     The **brand:FABORY AND fastener_finish:"Zinc Plated"** query returns the following:
 
     ![AND](media/AND-expression.png){: style="display: block; margin: 0 auto;" }
+
+
+
+### Combined AND/OR expressions
+
+More complex queries combining **AND** and **OR** operators are also supported and can be used to target multiple conditions across different fields: 
+
+* **keyword: "gtin:44 AND (code:ZQL-92511859 OR itemLineNOM:99)"** returns products with **gtin:44** and either a matching **code** or **itemLineNOM**.
+
+* **keyword: "(gtin:44 AND code:ZQL-92511859) OR (gtin:44 AND itemLineNOM:99)"** ensures that **gtin:44** is included in both branches of the query, and either condition can satisfy the match.
+
+
 
 ## Filtering
 

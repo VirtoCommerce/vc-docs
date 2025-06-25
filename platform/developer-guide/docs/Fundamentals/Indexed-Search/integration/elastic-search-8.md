@@ -5,11 +5,29 @@ The Virto Commerce **Elasticsearch 8** module implements the `ISearchProvider` d
 The module supports the following deployment options:
 
 * Elastic Cloud 8.x
-* Standalone Elasticsearch 8.x
+* Elasticsearch 8.x and 9.x
 
-[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search-8/)
+!!! info
 
-## Features
+    As of version [3.815.0](https://github.com/VirtoCommerce/vc-module-elastic-search-8/releases/tag/3.815.0), the Virto Commerce Elasticsearch module supports Elasticsearch 8 and 9.
+
+    Virto Commerce follows the official Elasticsearch language client compatibility guidelines: language clients are **forward compatible** across minor versions within the same or next major Elasticsearch version.
+
+    | Client Version | Compatible with Elasticsearch 8.x | Compatible with Elasticsearch 9.x | Compatible with Elasticsearch 10.x |
+    | -------------- | --------------------------------- | --------------------------------- | ---------------------------------- |
+    | 9.x            | ❌ no                              | ✅ yes                             | ✅ yes                              |
+    | 8.x            | ✅ yes                             | ✅ yes                             | ❌ no                               |
+
+    Language clients are also **backward compatible** within the same major version (e.g., a client built for 8.12 works with 8.13), though **feature parity is not guaranteed**.
+
+    Compatibility does not ensure access to new features introduced in later Elasticsearch minor versions. A client built for 8.12 will work with 8.13, but won't expose features unique to 8.13.
+
+    This update enables users to adopt newer Elasticsearch platforms while maintaining seamless integration with Virto Commerce.
+
+
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search-8/releases)
+
+## Key features
 
 * Full-text search with new .NET client for Elasticsearch.
 * [Semantic search](semantic-search.md).

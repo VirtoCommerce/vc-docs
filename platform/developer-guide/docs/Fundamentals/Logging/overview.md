@@ -2,11 +2,11 @@
 
 VC Platform supports two logging libraries out of the box:
 
-* Serilog (built-in in the platform). 
+* Serilog (built-in in the Platform). 
 
     ![Readmore](media/readmore.png){: width="25"} [Serilog overview](https://serilog.net/)
 
-* MS Azure Application Insights (as separated module). 
+* MS Azure Application Insights (as a separated module). 
 
     ![Readmore](media/readmore.png){: width="25"} [App Insights overview](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
 

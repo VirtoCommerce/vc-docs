@@ -1863,6 +1863,39 @@ This node configures security-related HTTP headers in the Virto Commerce platfor
 }
 ```
 
+### SEO
+
+This node configures SEO entry resolution for the Virto Commerce SEO module.
+
+<!--seo-start-->
+
+| Node                                     | Default value  | Description                                                                                                         |
+| ---------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------- |
+| SeoInfoResolver:ObjectTypePriority | "Pages", "ContentFile", "Catalog", "Category", "CatalogProduct" | This setting defines the **priority order** for resolving SEO entries when multiple types match the same permalink. |
+
+**Example**
+
+Configure the priority order for resolving SEO entries using the `Seo.SeoInfoResolver.ObjectTypePriority` key. The system will use this order to determine which entity to associate with a given permalink when multiple matches exist.
+
+```json title="appsettings.json"
+"Seo": {
+  "SeoInfoResolver": {
+    "ObjectTypePriority": [
+      "Pages",
+      "ContentFile",
+      "Catalog",
+      "Category",
+      "CatalogProduct"
+    ]
+  }
+}
+```
+
+In the above example, if both a `Page` and a `Category` are associated with the same permalink, the system will resolve it to the `Page` because it has higher priority in the list.
+
+<!--seo-end-->
+
+
 ### Serilog
 
 This node configures the Serilog logging library, allowing customization of logging providers, minimum severity levels, and other logging-related settings.

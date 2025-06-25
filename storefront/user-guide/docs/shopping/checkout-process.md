@@ -42,7 +42,12 @@ To complete your order:
         ![Readmore](../media/readmore.png){: width="25"} [Managing pickup locations](../../../../platform/user-guide/shipping/managing-shipping-methods#add-or-edit-pickup-location)
         <br>
         <br>
-        ![Pickup step](../media/pickup-step.gif)
+        <div>
+        <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+        <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+            <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/hew6iatxsqeq?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+        </div>
+        </div>
 
     === "Shipping"
 
@@ -54,7 +59,12 @@ To complete your order:
         * Select a delivery method from the dropdown list: **Ground** or **Air**. The shipping cost appears in the order summary.
         * Enter your comments, if any.
 
-        ![Shipping step](../media/shipping-step.gif)
+        <div>
+        <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+        <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+            <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/junscvx20sez?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+        </div>
+        </div>
 
 1. Click **Proceed to billing** to proceed to the next step.
 

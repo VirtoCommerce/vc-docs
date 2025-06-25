@@ -59,6 +59,18 @@ Each product card displays:
 
 ![product card](../media/product-card.png)
 
+!!! info
+    By default, the **Add to cart** interface looks like this:
+    
+    ![Add to cart](../media/add-to-cart.png)
+
+    In some cases, you may want to switch to a simplified **+ / −** interface. If a product has a minimum purchase quantity, clicking the **+** button will add that quantity to the cart. Clicking the **-** button will remove that quantity from the cart.
+
+    ![Plus-minus](../media/plus-minus.gif)
+
+    The product cart and checkout interfaces will have the same design.  
+
+
 ## Keyboard navigation
 
 You can use the keyboard to navigate through the store:

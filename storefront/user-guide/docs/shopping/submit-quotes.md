@@ -2,7 +2,7 @@
 
 To request personalized pricing (submit a quote):
 
-1. Add the desired products to cart.
+1. Add the desired products, including configurable products, to your cart.
 1. Click **Cart** in the top menu.
 1. In the cart details window, click **Add cart items to quote**. 
 
