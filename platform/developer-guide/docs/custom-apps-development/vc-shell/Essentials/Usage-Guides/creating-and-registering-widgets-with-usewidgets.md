@@ -36,16 +36,34 @@ This widget displays stock information for a product and could be used within a 
 
 <script setup lang="ts">
 import { VcWidget } from '@vc-shell/framework'; // Adjust import path if necessary
-import { ref, computed, defineProps, defineExpose, onMounted } from 'vue';
+import { ref, computed, defineProps, defineEmits, defineExpose, onMounted, watch } from 'vue';
 
 const props = defineProps<{
   productId: string;
   initialStock?: number;
+  modelValue?: any; // For two-way binding
+}>();
+
+const emit = defineEmits<{
+  'update:modelValue': [value: any];
+  'stock-updated': [stock: number];
 }>();
 
 const stockLevel = ref(props.initialStock || 0);
 const widgetTitle = computed(() => `Stock: ${props.productId}`);
 const stockIcon = computed(() => stockLevel.value > 0 ? 'material-inventory_2' : 'material-production_quantity_limits');
+
+// Watch for stock changes and emit custom events
+watch(stockLevel, (newStock) => {
+  emit('stock-updated', newStock);
+
+  // Update model value with stock information
+  emit('update:modelValue', {
+    productId: props.productId,
+    stock: newStock,
+    timestamp: Date.now()
+  });
+});
 
 async function fetchStock() {
   // Simulate API call to fetch stock
@@ -96,10 +114,20 @@ onMounted(() => {
       productId: currentProductId.value,
       initialStock: 10, // Example initial prop
     },
+    events: {
+      "update:modelValue": (val: unknown) => {
+        // Handle model value updates from the widget
+        console.log("Widget model updated:", val);
+      },
+      "stock-updated": (newStock: number) => {
+        // Handle custom events emitted by the widget
+        console.log("Stock updated to:", newStock);
+      }
+    },
     isVisible: computed(() => currentProductId.value !== 'PROD_ARCHIVED'), // Conditional visibility
     updateFunctionName: 'refreshStock' // Matches the function exposed by ProductStockWidget
   };
-  
+
   registerWidget(stockWidgetConfig, currentBlade.value.id);
 });
 
@@ -112,11 +140,85 @@ onUnmounted(() => {
 - `id`: Must be unique for each widget instance within a blade.
 - `component`: Use `markRaw()` for performance.
 - `props`: Pass any necessary reactive or static data to your widget component.
+- `events`: Define event handlers for events emitted by the widget (e.g., `update:modelValue`, custom events).
 - `bladeId`: Specifies which blade the widget belongs to.
 - `updateFunctionName`: Allows the widget to be updated via `updateActiveWidget()`.
 
 
-## Step 3: Updating Widget State or Props
+## Step 3: Handling Widget Events
+
+Widgets can emit events that can be handled by their parent components. This is particularly useful for two-way data binding and custom widget interactions.
+
+**Setting up Event Handlers:**
+
+When registering a widget, you can define event handlers in the `events` property:
+
+```typescript
+// Example: Widget with blade context binding
+const bladeContext = ref<DetailsBladeContext>({
+  scope: { canEdit: true },
+  data: null
+});
+
+const contextAwareWidgetConfig: IWidget = {
+  id: 'context-aware-widget',
+  component: markRaw(MyContextWidget),
+  props: {
+    modelValue: bladeContext, // Pass reactive context
+  },
+  events: {
+    // Handle two-way binding with modelValue
+    "update:modelValue": (val: unknown) => {
+      bladeContext.value = val as DetailsBladeContext;
+      console.log("Blade context updated:", val);
+    },
+    // Handle custom widget events
+    "widget-action": (actionType: string, payload: any) => {
+      console.log(`Widget action: ${actionType}`, payload);
+      // Handle widget-specific actions
+    }
+  },
+  isVisible: computed(() => bladeContext.value.scope?.canEdit),
+  updateFunctionName: "refresh"
+};
+```
+
+**Real-world Example: Product Details Widget with Context Binding**
+
+```typescript
+// In ProductDetailsBlade.vue
+const productContext = ref({
+  productId: 'PROD123',
+  isEditable: true,
+  lastModified: null
+});
+
+const productWidgetConfig: IWidget = {
+  id: 'product-details-widget',
+  component: markRaw(ProductDetailsWidget),
+  props: {
+    modelValue: productContext,
+  },
+  events: {
+    "update:modelValue": (val: unknown) => {
+      productContext.value = val as typeof productContext.value;
+      // Auto-save changes or trigger validation
+      saveProductContext(productContext.value);
+    },
+    "product-saved": (productData: any) => {
+      // Handle successful product save
+      showSuccessNotification('Product saved successfully');
+    },
+    "validation-error": (errors: string[]) => {
+      // Handle validation errors
+      showErrorNotification(errors.join(', '));
+    }
+  },
+  isVisible: computed(() => productContext.value.isEditable)
+};
+```
+
+## Step 4: Updating Widget State or Props
 
 **Updating Widget Props:**
 Use `updateWidget` to change a widget's properties like `isVisible` or `props` after registration.
@@ -208,9 +310,10 @@ globalRegisterWidget(systemWidget, 'app-dashboard-main');
 2.  **`markRaw`**: Use `markRaw` for `IWidget.component` for better performance.
 3.  **Cleanup**: Always use `unregisterWidget` or `clearBladeWidgets` in `onUnmounted`.
 4.  **Reactivity**: Pass reactive data to widgets via their `props` for dynamic updates.
-5.  **`VcWidget` Base**: Utilize `VcWidget` as the base for blade widgets for consistency.
-6.  **`updateFunctionName`**: Define for widgets that need external refresh/update triggers.
-7.  **Blade Context**: Manage `bladeId` carefully for correct widget association.
+5.  **Event Handling**: Use the `events` property to handle widget events, especially for two-way data binding with `update:modelValue`.
+6.  **`VcWidget` Base**: Utilize `VcWidget` as the base for blade widgets for consistency.
+7.  **`updateFunctionName`**: Define for widgets that need external refresh/update triggers.
+8.  **Blade Context**: Manage `bladeId` carefully for correct widget association.
 
 This guide equips you to build and manage dynamic, modular widgets within your VC-Shell application's blades, enhancing user experience and information display.
 
