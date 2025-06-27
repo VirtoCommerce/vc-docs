@@ -30,14 +30,16 @@ The following product properties are stored in the `__content` field and are sea
 
 === "Sample query"
     ```json linenums="1"
-    {
-      products(query: "bolt" storeId: "B2B-Store" first:10) {
-          totalCount
-          items
-          {
-            name
-            imgSrc
-          }
+    query {
+      products(
+        query: "shirt",
+        cultureName: "en-US"
+      ) {
+        items {
+          id
+          name
+          ...
+        }
       }
     }
     ```
