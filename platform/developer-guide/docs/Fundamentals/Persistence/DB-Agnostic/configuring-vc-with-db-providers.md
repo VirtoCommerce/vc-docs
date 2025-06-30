@@ -76,6 +76,9 @@ Select the tab with the required provider setup information.
         },
         ```
 
+!!! note  
+    Migrations must be created and applied **separately** for each supported database provider. Each provider may generate slightly different SQL and behaviors, so a single migration run is not sufficient.
+
 
 <br>
 <br>
