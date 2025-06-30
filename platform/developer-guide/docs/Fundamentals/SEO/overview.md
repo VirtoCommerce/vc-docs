@@ -29,7 +29,7 @@ All SEO-related logic and components have been extracted into a dedicated SEO mo
 * [Pages​](https://github.com/VirtoCommerce/vc-module-pages/releases/tag/3.808.0)
 * [Catalog personalization​](https://github.com/VirtoCommerce/vc-module-catalog-personalization/releases/tag/3.804.0)
 * [Catalog publishing​](https://github.com/VirtoCommerce/vc-module-catalog-publishing/releases/tag/3.806.0)
-* [Dynamic associations]​(https://github.com/VirtoCommerce/vc-module-dynamic-associations/releases/tag/3.807.0)
+* [Dynamic associations](https://github.com/VirtoCommerce/vc-module-dynamic-associations/releases/tag/3.807.0)
 * [xCart​](https://github.com/VirtoCommerce/vc-module-x-cart/releases/tag/3.918.0)
 
 All SEO-related services and models in the core module have been marked as **Obsolete**. Update your custom extensions to use the new SEO module.​
