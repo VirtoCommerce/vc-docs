@@ -57,6 +57,10 @@ Your next step is to connect your module to a database. Specifically, you need t
     }
     ```
 
+    !!! note
+        Implementing **ICloneable** is required because Core Project Services (CRUDService, SearchService) are designed to return cloned objects to prevent cache data corruption.
+
+
 1. In the **Data Project Models** directory, add another file named `BlogEntity.cs` with the following code:
 
     ```csharp
@@ -94,6 +98,9 @@ Your next step is to connect your module to a database. Specifically, you need t
         }
     }
     ```
+
+    !!! note
+        Put **[Required]** and **[StringLength]** attributes to the Entity class. For string length, avoid magic numbers and use constants defined in DbContextBase class.
 
 1. In the **Data Project Repositories** directory, add a file named `BlogRepository.cs` with the following code:
 
@@ -150,11 +157,14 @@ Your next step is to connect your module to a database. Specifically, you need t
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BlogEntity>().ToTable("Blogs").HasKey(x => x.Id);
-            modelBuilder.Entity<BlogEntity>().Property(x => x.Id).HasMaxLength(128).ValueGeneratedOnAdd();
-            modelBuilder.Entity<BlogEntity>().Property(x => x.Name).HasMaxLength(128);
+            modelBuilder.Entity<BlogEntity>().Property(x => x.Id).HasMaxLength(DbContext.IdLength).ValueGeneratedOnAdd();
+            modelBuilder.Entity<BlogEntity>().Property(x => x.Name).HasMaxLength(DbContext.Length128);
         }
     }
     ```
+
+    !!! note
+        Define foreign keys, indexes, OnDelete rules in the `DbContext` class. Use `ToAuditableEntityTable()` and `ToEntityTable()` for entities inherited from **VirtoCommerce.Platform.Core.Common.AuditableEntity** and **VirtoCommerce.Platform.Core.Common.Entity**.
 
 1. Create the initial migration file in Visual Studio:
     1. Open Windows CMD or PowerShell in the **Data Project** directory (vc-module-my-cool-module\src\MyCoolCompany.MyCoolModule.Data)
