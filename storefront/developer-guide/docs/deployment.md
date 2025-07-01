@@ -149,7 +149,7 @@ Deploying on a local machine includes:
 Before installing the Frontend Application:
 
 1. [Install Platform latest version](../../../platform/developer-guide/Getting-Started/Installation-Guide/windows) or connect to an instance of the platform that is already set up and running on a cloud service.
-1. Install [Experience API/xAPI modules](../../../platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/index):
+1. Install [Experience API/xAPI modules](../../../platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI):
     * [xAPI](https://github.com/VirtoCommerce/vc-module-x-api)
     * [Profile Experience API](https://github.com/VirtoCommerce/vc-module-profile-experience-api)
 1. Install the following modules for development (but not in production. This will be changed soon):

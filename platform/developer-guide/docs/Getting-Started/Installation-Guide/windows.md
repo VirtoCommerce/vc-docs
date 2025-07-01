@@ -110,7 +110,7 @@ To configure application strings:
 1. To configure CMS content storage, specify the public url for content for content by updating `Content:FileSystem:PublicUrl` in the Content section: 
 
     ```json
-    "Content*": {
+    "Content": {
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/cms-content",
@@ -139,7 +139,7 @@ You can run the Platform:
 
         ```console
         cd C:\vc-platform-3\
-        dotnet.exe VirtoCommerce.Platform.Web.dll
+        dotnet VirtoCommerce.Platform.Web.dll --urls "https://localhost:5001;http://localhost:5000"
         ```
 
     1. When the process is complete, you will see an output in the console similar to this:
@@ -181,7 +181,7 @@ To access the Platform and perform initial sign-in:
 
 	![Resetting default credentials](media/03-resetting-default-credentials.png){: style="display: block; margin: 0 auto;" }
 
-Your platform is ready to go.
+Your Platform is ready to go.
 
 
 <br>
