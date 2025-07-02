@@ -57,6 +57,7 @@ nav:
                 - Overview: store/overview.md
                 - Adding New Store: store/adding-new-store.md
                 - Configuring Store: store/configuring-store.md
+                - Custom robot.txt: store/custom-robot-txt.md
                 - Settings: store/settings.md
           - <b>Pricing</b>:
                 - Overview: pricing/overview.md
