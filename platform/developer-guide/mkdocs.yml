@@ -756,6 +756,7 @@ nav:
                             - useUser: custom-apps-development/vc-shell/Essentials/composables/useUser.md
                             - useWidgets: custom-apps-development/vc-shell/Essentials/composables/useWidgets.md
                             - useTableSort: custom-apps-development/vc-shell/Essentials/composables/useTableSort.md
+                            - useModificationTracker: custom-apps-development/vc-shell/Essentials/composables/useModificationTracker.md
                       - Usage Guides:
                             - Overview: custom-apps-development/vc-shell/Essentials/Usage-Guides/overview.md
                             - Adding App Bar Widgets with useappbarwidget: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md

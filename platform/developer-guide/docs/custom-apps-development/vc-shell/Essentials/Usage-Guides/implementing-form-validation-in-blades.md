@@ -49,9 +49,9 @@ Let's consider a blade for creating or editing a "Product" entity.
           label="Product Name"
           required
           :error-message="errors[0]"
-          @update:model-value="(value) => { 
-            formData.name = String(value); 
-            handleChange(value); 
+          @update:model-value="(value) => {
+            formData.name = String(value);
+            handleChange(value);
           }"
         />
       </Field>
@@ -68,9 +68,9 @@ Let's consider a blade for creating or editing a "Product" entity.
           label="SKU"
           required
           :error-message="errors[0]"
-          @update:model-value="(value) => { 
-            formData.sku = String(value); 
-            handleChange(value); 
+          @update:model-value="(value) => {
+            formData.sku = String(value);
+            handleChange(value);
           }"
         />
       </Field>
@@ -88,27 +88,27 @@ Let's consider a blade for creating or editing a "Product" entity.
           label="Price"
           required
           :error-message="errors[0]"
-          @update:model-value="(value) => { 
+          @update:model-value="(value) => {
             const numValue = value === null || value === '' ? null : Number(value);
-            formData.price = numValue; 
+            formData.price = numValue;
             handleChange(numValue === null ? undefined : numValue); // Pass undefined for VeeValidate if null to clear, or the number
           }"
         />
       </Field>
 
       <!-- isActive Checkbox -->
-      <Field 
-        name="isActive" 
+      <Field
+        name="isActive"
         v-slot="{ handleChange }" // Errors not typically shown for a standalone checkbox this way
-        :model-value="formData.isActive" 
+        :model-value="formData.isActive"
         rules="boolean" // Optional: ensure it's a boolean if needed by backend
       >
         <VcCheckbox
-          :model-value="formData.isActive" 
+          :model-value="formData.isActive"
           label="Product is Active"
-          @update:model-value="(value: boolean) => { 
-            formData.isActive = value; 
-            handleChange(value); 
+          @update:model-value="(value: boolean) => {
+            formData.isActive = value;
+            handleChange(value);
           }"
         />
       </Field>
@@ -119,8 +119,14 @@ Let's consider a blade for creating or editing a "Product" entity.
 <script setup lang="ts">
 import { ref, computed, reactive, watch } from "vue";
 import { Field, useForm, defineRule } from "vee-validate"; // defineRule for custom inline or setup rules
-import { VcInput, VcCheckbox, VcBlade, VcForm } from "@vc-shell/framework"; 
-import type { IBladeToolbarItem } from "@vc-shell/framework";
+import {
+  VcInput,
+  VcCheckbox,
+  VcBlade,
+  VcForm,
+  useModificationTracker,
+  type IBladeToolbarItem,
+} from "@vc-shell/framework";
 
 // Example of defining a custom rule locally or in a setup script if not global
 // For global rules, this would be in a plugin or rules.ts
@@ -129,7 +135,7 @@ import type { IBladeToolbarItem } from "@vc-shell/framework";
 //   if (!/^[A-Z0-9-]+$/.test(value)) return "SKU can only contain uppercase letters, numbers, and hyphens.";
 //   return true;
 // });
-// Note: 'skuFormat' rule used in the template is assumed to be globally registered 
+// Note: 'skuFormat' rule used in the template is assumed to be globally registered
 // (e.g. in @vc-shell/framework) or defined as above for local use.
 // For this example, we assume 'skuFormat' is available globally for cleaner template.
 
@@ -149,7 +155,7 @@ export interface Emits {
 }
 
 const props = defineProps<{
-  productData?: ProductForm; 
+  productData?: ProductForm;
 }>();
 
 const emit = defineEmits<Emits>();
@@ -166,41 +172,59 @@ const defaultFormValues: ProductForm = {
   isActive: true,
 };
 
+// formData is now the source of truth for the modification tracker
 const formData = reactive<ProductForm>({
   ...defaultFormValues,
   id: props.productData?.id,
   ...(props.productData || {}),
 });
 
+// VeeValidate for validation state
 const { handleSubmit, setValues, setFieldError, resetForm, meta } = useForm<ProductForm>({
-  initialValues: { ...formData }, 
+  initialValues: { ...formData },
   validateOnMount: false,
 });
 
-watch(() => props.productData, (newData) => {
-  if (newData) {
-    const newValues = { ...defaultFormValues, ...newData };
-    Object.assign(formData, newValues);
-    setValues(newValues, false);
-  }
-}, { immediate: true, deep: true });
+// useModificationTracker for deep change detection
+const {
+  currentValue: form,
+  isModified,
+  resetModificationState,
+} = useModificationTracker(formData);
+
+watch(
+  () => props.productData,
+  (newData) => {
+    if (newData) {
+      const newValues = { ...defaultFormValues, ...newData };
+      Object.assign(formData, newValues);
+      // Synchronize both VeeValidate and useModificationTracker
+      setValues(newValues, false);
+      resetModificationState(newValues);
+    }
+  },
+  { immediate: true, deep: true },
+);
 
 const isFormValid = computed(() => meta.value.valid);
-const isFormDirty = computed(() => meta.value.dirty);
- 
+// VeeValidate's `dirty` flag is also useful, but `isModified` from useModificationTracker
+// provides more robust deep checking, especially for asynchronously loaded initial data.
+// See the useModificationTracker documentation for more details.
+
 const bladeToolbar = computed<IBladeToolbarItem[]>(() => [
   {
     id: "save",
     title: "Save",
     icon: "material-save",
     variant: "primary",
-    disabled: !isFormValid.value || !isFormDirty.value || isSubmitting.value,
+    // Button is enabled only if the form is valid AND data has been modified.
+    disabled: !isFormValid.value || !isModified.value || isSubmitting.value,
     loading: isSubmitting.value,
     onClick: () => onSubmitForm(),
   },
   {
     id: "cancel",
-    title: "Cancel", 
+    title: "Cancel",
     icon: "material-close",
     onClick: () => onCloseBlade(),
   },
@@ -209,11 +233,14 @@ const bladeToolbar = computed<IBladeToolbarItem[]>(() => [
 const onSubmitForm = handleSubmit(async (validatedValues) => {
   isSubmitting.value = true;
   try {
-    const payload: ProductForm = { ...formData, id: props.productData?.id };
-    await new Promise(resolve => setTimeout(resolve, 1000)); 
+    const payload: ProductForm = { ...form.value, id: props.productData?.id };
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Form submitted successfully with payload:", payload);
 
-    resetForm({ values: { ...defaultFormValues, id: payload.id } }); 
+    // After successful submission, reset both the form and the modification state.
+    resetForm({ values: { ...defaultFormValues, ...payload } });
+    resetModificationState({ ...defaultFormValues, ...payload });
+
     bladeRef.value?.close();
   } catch (error) {
     console.error("Form submission error:", error);
@@ -227,9 +254,9 @@ const onCloseBlade = () => {
 };
 
 const handleReset = () => {
-  const resetValues = { ...defaultFormValues, ...props.productData }; 
-  Object.assign(formData, resetValues);
-  resetForm({ values: resetValues }); 
+  const resetValues = { ...defaultFormValues, ...props.productData };
+  resetForm({ values: resetValues });
+  resetModificationState(resetValues);
 };
 
 defineExpose({
@@ -262,34 +289,16 @@ defineExpose({
     ```html
     // <Field name="complexField" :rules="validateComplexField" ... />
     ```
-*   Other concepts like `useForm` initialization, state management (`meta.valid`, `meta.dirty`), toolbar integration, and submission handling remain largely the same.
-
-### 3. Using `rules` Prop Directly on VC-Shell Components
-
-(This section remains valid for components that directly support the `rules` and `name` props for VeeValidate integration, offering a simpler template for basic cases.)
-
-```html
-<VcInput
-  v-model="formData.email"
-  name="email" 
-  label="Email Address"
-  rules="required|email"
-/>
-```
-Ensure `useForm` is called in `setup` to provide the context.
-
-## Best Practices for Blade Validation
-
-*   **Prefer Globally Defined Rules**: For maintainability and reusability, define custom validation rules globally (e.g., in `framework/core/plugins/validation/rules.ts` or a dedicated app-level rules file) and reference them by name (e.g., `"skuFormat"`).
-*   **Clear Feedback**: Pass `errors[0]` from `Field` slot to `VcInput`'s `error-message` prop.
-*   **Toolbar Button State**: Control `disabled` state of save buttons using `isFormValid`, `isFormDirty`, and `isSubmitting`.
-*   **Data Flow**: UI component updates local `formData` -> `handleChange` updates VeeValidate -> VeeValidate updates `meta`.
+*   **Controlling UI State with `useModificationTracker`**: While VeeValidate provides a `meta.dirty` flag, the `useModificationTracker` composable offers more robust deep-checking for complex objects and handles asynchronously loaded initial data more predictably. It is the recommended way to track if data has actually changed. You can then combine its `isModified` flag with VeeValidate's `meta.valid` to control the state of save buttons, as shown in the example.
+*   **Toolbar Button State**: Control `disabled` state of save buttons using `isFormValid`, `isModified` (from `useModificationTracker`), and `isSubmitting`.
+*   **Data Flow**: UI component updates local state -> `handleChange` updates VeeValidate for validation -> `useModificationTracker` independently tracks deep changes against the original state.
 *   **Server-Side Validation**: Always re-validate on the server.
-*   **Form Reset**: Update local `formData` and call `resetForm({ values: ... })`.
+*   **Form Reset**: To fully reset the state, you must reset both VeeValidate (`resetForm`) and the modification tracker (`resetModificationState`).
 
 This revised guide now emphasizes the primary use of string-based and object-based rules with `Field` components, aligning more closely with common VeeValidate practices and the existing VC-Shell validation infrastructure, while still allowing for function-based rules for custom scenarios.
 
 ## Related Resources
 
+-   [Usage Guide: Tracking Data Changes with `useModificationTracker`](../composables/useModificationTracker.md)
 -   [Validation Plugin Documentation](../plugins/validation.md) (Lists available rules and setup)
 -   [VeeValidate v4 Documentation](https://vee-validate.logaretm.com/v4/)
