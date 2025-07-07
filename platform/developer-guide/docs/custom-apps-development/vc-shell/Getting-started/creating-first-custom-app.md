@@ -29,6 +29,8 @@ To create and install custom app:
         yarn create @vc-shell/vc-app
         ```
 
+## Interactive Mode (Default)
+
 1. Configure the options based on your requirements. If you are unsure about an option, simply choose **No** by clicking **Enter**:
 
     ```bash
@@ -48,6 +50,61 @@ To create and install custom app:
     yarn serve
     ```
 
+## Non-Interactive Mode
+
+For automation, or when you want to skip prompts, you can use command line arguments:
+
+```bash
+npx @vc-shell/create-vc-app@latest my-app --variant classic --module-name "My Module" --mocks
+```
+
+### Available Options
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `--name`, `--app-name` | Name of the application | Directory name |
+| `--package-name` | Package name | App name (validated) |
+| `--variant` | Module variant (classic\|dynamic) | `classic` |
+| `--module-name` | Module name | App name in title case |
+| `--base-path` | Base path for the application | `/apps/<app-name>/` |
+| `--mocks` | Include additional module with sample data | `false` |
+| `--overwrite` | Overwrite existing files without confirmation | `false` |
+| `--help`, `-h` | Show help message | - |
+| `--version`, `-v` | Show version | - |
+
+### Examples
+
+**Basic usage:**
+```bash
+npx @vc-shell/create-vc-app@latest my-app --variant classic
+```
+
+**With custom options:**
+```bash
+npx @vc-shell/create-vc-app@latest my-app --variant classic --module-name "My Module" --mocks
+```
+
+**Full non-interactive example:**
+```bash
+npx @vc-shell/create-vc-app@latest my-ecommerce-app \
+  --variant classic \
+  --module-name "Product Catalog" \
+  --base-path "/apps/ecommerce/" \
+  --package-name "@mycompany/ecommerce-app" \
+  --mocks \
+  --overwrite
+```
+
+**For CI/CD automation:**
+```bash
+npx @vc-shell/create-vc-app@latest $PROJECT_NAME \
+  --variant classic \
+  --module-name "$MODULE_NAME" \
+  --overwrite
+```
+
+## Configuration
+
 1. Once the application is created, go to the application folder and add Platform URL to the **.env.local** file under the **APP_PLATFORM_URL** variable:
 
     ```bash
@@ -64,9 +121,14 @@ Your first VC-Shell application is now ready to run!
 !!! note
     The example components in the generated application are written using the Vue Composition API and `<script setup>`.
 
-
 !!! tip
     For an optimal development experience, we recommend using [Visual Studio Code](https://code.visualstudio.com/) with the [Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
+
+!!! info "Getting Help"
+    You can always get help for the scaffolding tool by running:
+    ```bash
+    npx @vc-shell/create-vc-app@latest --help
+    ```
 
 ![Readmore](../../media/readmore.png){: width="25"} [Vite tools](https://vitejs.dev/)
 
@@ -74,13 +136,13 @@ Your first VC-Shell application is now ready to run!
 
 ## Application folder structure
 
-After the application is scaffolded, the folder structure will look as follows. This structure is designed to promote modularity and maintainability. 
+After the application is scaffolded, the folder structure will look as follows. This structure is designed to promote modularity and maintainability.
 
 ![Readmore](../../media/readmore.png){: width="25"} [Application architecture](../Guides/application-architecture-best-practices.md)
 
 ![Readmore](../../media/readmore.png){: width="25"} [Creating custom applications](../Guides/creating-custom-applications.md)
 
-```css 
+```css
 ├─ public                         // Static assets (images, fonts, etc.) that are served directly by the web server.
 │  ├─ assets                      // Static images, fonts, etc., used inside the application.
 │  └─ img
@@ -129,7 +191,7 @@ Let's take a look at the modules directory as it represents the key concept in t
 
 ### Modules directory structure
 
-A **module** is a self-contained unit that groups related functionality. It typically includes its own components, composables, localization files, and pages (blades). This structure ensures separation of concerns and makes the application easier to scale and maintain. 
+A **module** is a self-contained unit that groups related functionality. It typically includes its own components, composables, localization files, and pages (blades). This structure ensures separation of concerns and makes the application easier to scale and maintain.
 
 ![Readmore](../../media/readmore.png){: width="25"} [Developing custom VC-Shell modules](../Guides/developing-custom-modules.md)
 
@@ -199,7 +261,7 @@ export * from "./types"; // Exporting module-specific types is often necessary.
 | `moduleComponents` (optional)      | An object mapping component names to their Vue component constructors. <br> These components will be registered globally. |
 
 
-After creating your module's **index.ts**, you need to import and register it in your main application file (**src/main.ts**). 
+After creating your module's **index.ts**, you need to import and register it in your main application file (**src/main.ts**).
 
 ![Readmore](../../media/readmore.png){: width="25"} [Loading modules into main application](../Guides/developing-custom-modules.md#how-modules-are-loaded-into-the-main-application)
 
