@@ -1493,7 +1493,7 @@ Tailor the search provider per document type to optimize search performance and 
 
 #### ElasticSearch
 
-This node configures the Elastic Search provider:
+This node configures the Elasticsearch provider:
 
 <!--elasticsearch-start-->
 
@@ -1709,9 +1709,63 @@ searchRequest.Boosts = [new SearchBoost
 <!--elasticappsearch-end-->
 
 
-#### Elastic Search 8
+#### Elasticsearch 9
 
-This node configures the Elastic Search 8 provider:
+This node configures the **Elasticsearch 9** provider:
+
+<!--elasticsearch9-start-->
+
+| Node                                         | Default or sample value | Description                                                                                                                                |
+| -------------------------------------------- | ----------------------- |------------------------------------------------------------------------------------------------------------------------------------------- |
+| Search.Provider                              |"ElasticSearch9"      | Specifies the search provider name.<br> Must be set to `"ElasticSearch9"`.                                                                    |
+| Search.Scope                                 | "default"            | Specifies the common name (prefix) for all indexes.<br>Each document type is stored in a separate index, with the full name **scope-{documenttype}**.<br>Allows one search service to handle multiple indexes. Optional. Default: "default".                                                                                                             |
+| Search.ElasticSearch9.Server                 |                         | Specifies the network address and port of the Elasticsearch 9 server.                                                                      |
+| Search.ElasticSearch9.User                   | "elastic"             | Specifies the username for the Elasticsearch 9 or Elastic Cloud instance.                                                                  |
+| Search.ElasticSearch9.Key                    |                         | Specifies the password or API key.                                                                                                         |
+| Search.ElasticSearch9.CertificateFingerprint |                         | (Optional) Used in development.<br>Validates the server certificate using the SHA256 fingerprint.                                 |
+| Search.ElasticSearch9.EnableDebugMode        | true<br>false           | (Optional) Set to **true** to enable detailed request/response logging<br> and full stack traces on errors. Default: **false**.          |
+
+**Examples**
+
+=== "Elasticsearch v9.x (local server)"
+
+    Configure a local Elasticsearch 9.x server:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch9",
+        "Scope": "default",
+        "ElasticSearch9": {
+            "Server": "https://localhost:9200",
+            "User": "elastic",
+            "Key": "{PASSWORD}"
+        }
+    }
+    ```
+
+=== "Elastic Cloud v9.x"
+
+    Configure connection to Elastic Cloud v9.x:
+
+    ```json title="appsettings.json"
+    "Search": {
+        "Provider": "ElasticSearch9",
+        "Scope": "default",
+        "ElasticSearch9": {
+            "Server": "https://vcdemo.es.eastus2.azure.elastic-cloud.com",
+            "User": "elastic",
+            "Key": "{SECRET_KEY}"
+        }
+    }
+    ```
+
+<!--elasticsearch9-end-->
+
+
+
+#### Elasticsearch 8
+
+This node configures the Elasticsearch 8 provider:
 
 <!--elasticsearch8-start-->
 

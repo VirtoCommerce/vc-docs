@@ -13,6 +13,7 @@ From the product page, you can:
 
 * Add the desired amount of products to your cart.
 * Add products to the comparison or user's list.
+* Navigate to [Brands page](brands-page.md) by clicking the product brand specified as the product property.   
 * Download attached files.
 * Print the product description.
 * Share product information via social networks or email. 

@@ -2,7 +2,7 @@
 
 You can upload a custom **robots.txt** file via the Virto Commerce Platform, which will override the system-generated one.
 
-??? "About Robots.txt files"
+??? "About robots.txt file"
 
     The **robots.txt** file is a plain text file that tells search engine crawlers which pages they are allowed or disallowed to crawl and index. It helps prevent technical or sensitive sections of your site from appearing in search results.
 
@@ -17,9 +17,9 @@ You can upload a custom **robots.txt** file via the Virto Commerce Platform, whi
     ```
 
 
-## Upload robot.txt via Platform
+## Upload robots.txt via Platform
 
-To upload your custom **robot.txt**:
+To upload your custom **robots.txt**:
 
 1. Open **Stores** in the main menu.
 1. In the next blade, select your store.
@@ -29,3 +29,6 @@ To upload your custom **robot.txt**:
 ![Upload robots.txt](media/adding-robot-txt.png)
 
 Your file has been uploaded and overrides the system-generated one.
+
+!!! note
+    To serve different **robots.txt** files based on domain or language, we recommend creating separate stores for each domain and uploading a distinct **robots.txt** file to the **Assets** of each store. This approach allows each store to manage its own file.

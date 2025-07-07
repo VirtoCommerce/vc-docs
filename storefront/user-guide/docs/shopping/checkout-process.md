@@ -54,7 +54,7 @@ To complete your order:
         * Select a shipping address if you need you order to be delivered to your address.
 
             !!! note
-                If [Shipping address policy](../../../../platform/user-guide/store/settings#general-settings) is enabled in the Platform, you will see a prefilled shipping address on the Shipping page.
+                If [Shipping address policy](../../../../platform/user-guide/store/settings#general-settings) is enabled in the Platform, the shipping address on the Shipping page will be prefilled with the most recently used address.
 
         * Select a delivery method from the dropdown list: **Ground** or **Air**. The shipping cost appears in the order summary.
         * Enter your comments, if any.
@@ -90,6 +90,11 @@ To complete your order:
 <br>
 <br>
     ![Billing step](../media/billing-step.png){: style="display: block; margin: 0 auto;" width="700"}
+
+    !!! note
+        The names of payment methods can be localized:
+
+        ![Localized payment methods](../media/localized-payment-methods.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Review order** to review your order details. You can not edit your information here, but you can return to any of the previous steps by clicking them in the navigation path menu:
 <br>

@@ -2,7 +2,7 @@
 
 The Frontend Application provides the following ways to find products:
 
-* [Text-based search.](#text-based-search)
+* [Text-based search](#text-based-search), including [scoped search.](#scoped-hierarchical-search) 
 * [Barcode scanning.](#barcode-scanner)
 
 
@@ -17,6 +17,18 @@ For example, when searching for books, you can narrow your selection by author, 
 * By date.
     
 ![facet search](../media/faceted-search.png)
+
+### Scoped (hierarchical) search
+
+Users can perform scoped searches within specific product categories. This narrows their search to a selected category, improving result relevance. A category chip appears in the search bar to indicate the current scope, and users can easily reset the search to span the entire catalog:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/uecgdp1azrrv?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
 
 ## Barcode scanner
 

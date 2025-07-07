@@ -66,7 +66,10 @@ nav:
                       - Overview: Fundamentals/Indexed-Search/search/overview.md
                       - Faceted Search Overview and Configuration: Fundamentals/Indexed-Search/search/faceted-search.md
                 - Integration:
-                      - Elastic Search 8:
+                      - Elasticsearch 9: 
+                          - Overview: Fundamentals/Indexed-Search/integration/elastic-search-9.md
+                          - Semantic Search: Fundamentals/Indexed-Search/integration/semantic-search-es9.md
+                      - Elasticsearch 8:
                           - Overview: Fundamentals/Indexed-Search/integration/elastic-search-8.md
                           - Semantic Search: Fundamentals/Indexed-Search/integration/semantic-search.md
                       - Elastic App Search:

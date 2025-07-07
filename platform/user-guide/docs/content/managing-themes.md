@@ -101,6 +101,18 @@ Users can personalize their store by applying a custom theme or choosing from th
 
     ![Watermelon](media/watermelon.png)
 
+=== "coffee"
+
+    ![Coffee](media/coffee.png)
+
+=== "ocean"
+
+    ![Ocean](media/ocean.png)
+
+=== "peach"
+
+    ![Peach](media/peach.png)
+
 Alternatively, you can [create your own color scheme using ChatGPT](#create-theme-colors-using-chatgpt) and add it to the themes presets as follows:
 
 1. Click **Content** in the main menu.

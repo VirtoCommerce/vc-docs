@@ -29,7 +29,7 @@ Setting up semantic search and ELSER model includes the following steps:
 
 ### Prerequisites
 
-* **Elastic Cloud 8.9** or higher should be deployed and configured
+* **Elastic Cloud 9** or higher should be deployed and configured
 
 ### Enable machine learning instances
 
@@ -141,7 +141,7 @@ To implement the ELSER v2 model:
 To reindex data, open Platform:
 
 1. Click **Settings** in the main menu.
-1. In the next blade, type **ElasticSearch8** to find settings related to the module.
+1. In the next blade, type **ElasticSearch9** to find settings related to the module.
 1. Click **Semantic**.
 1. In the next blade, fill in the fields. Make sure that semantic model ID, semantic field name, and pipeline name are the same as above.
 1. Click **Save** in the top toolbar to save the settings.
@@ -197,7 +197,8 @@ To deploy a trained model:
 
 ### Configure pipeline ingester
 
-To create the pipeline similar to ELSER model (`__ml` property is predefined in the Elastic8 provider now):
+To create the pipeline similar to ELSER model:
+
 
   ```
   PUT _ingest/pipeline/my-text-embeddings-pipeline
@@ -220,7 +221,6 @@ To create the pipeline similar to ELSER model (`__ml` property is predefined in 
 ### Reindex
 
 To reindex data, open Platform:
-
 1. Click **Settings** in the main menu.
 1. In the next blade, type **ElasticSearch8** to find settings related to the module.
 1. Click **Semantic**.
@@ -241,9 +241,9 @@ After the indexation is finished, you can use semantic search.
 
 The Elastic provides an explain API that computes a score explanation for a query and a specific document. This can give useful feedback whether a document matches a specific query or not.
 
-This provided script serves as a versatile tool for testing and exploring the capabilities of Elasticsearch, specifically tailored for a Virto Commerce Elastic Search 8 release. It combines several features to demonstrate querying and scoring mechanisms.
+This provided script serves as a versatile tool for testing and exploring the capabilities of Elasticsearch, specifically tailored for a Virto Commerce Elasticsearch 9 release. It combines several features to demonstrate querying and scoring mechanisms.
 
-| Query Parameter | Description                                                                                                                                                         |
+| Query parameter | Description                                                                                                                                                         |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `explain`       | This parameter instructs Elasticsearch to compute a score explanation for each document,<br>providing insight into how well each document matches the query.           |
 | `track_total_hits` | Ensures that the total number of hits for the query is accurately tracked.                                                                                       |

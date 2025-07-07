@@ -12,7 +12,7 @@ The Virto Commerce **SEO** module provides a flexible infrastructure for managin
 - **SEO info lookup**: Efficient retrieval of SEO records matching given criteria such as `permalink`, `storeId`, `language`, and others.
 - **Best match resolution**: Logic to determine the most relevant SEO entry when multiple matches are found.
 - **Duplicate detection**: Extensible interface `ISeoDuplicatesDetector` for identifying and resolving conflicting SEO entries.
-- **Broken links detection and management** *(coming soon)*: Identify and report dead or misconfigured SEO links.
+- **Broken links detection and management**: Identify and report dead or misconfigured SEO links.
 
 ## For users of previous SEO functionality
 

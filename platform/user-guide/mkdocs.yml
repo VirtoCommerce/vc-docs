@@ -195,7 +195,7 @@ nav:
           - Payment Related Modules: 
                 - Payment:
                       - Overview: payment/overview.md
-                      - Managing Payment methods: payment/managing-payment-methods.md
+                      - Managing Payment Methods: payment/managing-payment-methods.md
                       - Settings: payment/settings.md
                 - Non-Integrative Payment Methods: 
                       - Overview: native-payment-methods/overview.md
@@ -261,6 +261,10 @@ nav:
                       - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
                 - Login on Behalf Feature: security/login-on-behalf.md
+          - SEO: 
+                - Overview: seo/overview.md
+                - Managing SEO: catalog/managing-SEO.md
+                - Managing Broken Links: seo/managing-broken-links.md
           - ShipStation: shipstation/overview.md
           - Shipping: 
                 - Overview: shipping/overview.md

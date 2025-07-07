@@ -26,6 +26,6 @@ To edit a payment method:
 
     ![Edit payment method](media/edit-payment-method.png)
 
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been applied.

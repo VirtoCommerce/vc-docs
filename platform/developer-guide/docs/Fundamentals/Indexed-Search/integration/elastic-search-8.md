@@ -1,5 +1,8 @@
 # Elasticsearch 8
 
+!!! note
+    As confirmed in Elastic's official resources ([Enterprise Search FAQ](https://www.elastic.co/resources/search/enterprise-search-faq) and [9.x Upgrade Guide](https://www.elastic.co/guide/en/enterprise-search/8.18/upgrading-to-9-x.html)) Standalone App Search is deprecated (fully removed in 9.x). For Elastic customers who currently use Elastic App Search product line with its included features and functionalities, these products remain available in the latest 8.x versions and will be maintained until January 15, 2027 and supported until July 15, 2027 after the official EOL announcement, according to the EOL policies. Virto Commerce will discontinue support for legacy App Search and transition all development efforts to the new **Elasticsearch 9** module.
+
 The Virto Commerce **Elasticsearch 8** module implements the `ISearchProvider` defined in the Virto Commerce Search module. It leverages the Elasticsearch engine to store indexed documents.
 
 The module supports the following deployment options:
@@ -54,7 +57,7 @@ Configure the Elasticsearch 8 provider using the following schema:
 
 
 ## Full-text search 
-The provider performs full-text keyword searches on a documents, optionally with filters and aggregations.
+The provider performs full-text keyword searches on documents, optionally with filters and aggregations.
 
 
 <br>
