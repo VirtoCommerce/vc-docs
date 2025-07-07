@@ -17,8 +17,6 @@ You can upload a custom **robots.txt** file via the Virto Commerce Platform, whi
     ```
 
 
-## Upload robots.txt via Platform
-
 To upload your custom **robots.txt**:
 
 1. Open **Stores** in the main menu.
