@@ -54,7 +54,7 @@ function onHeaderClick(column: ITableColumns) {
   if (column.sortable) {
     const field = column.id;
     const currentSort = sort.value.split(':');
-    
+
     if (currentSort[0] === field) {
       sort.value = currentSort[1] === 'ASC' ? `${field}:DESC` : `${field}:ASC`;
     } else {
@@ -153,6 +153,76 @@ The `columns` prop accepts an array of `ITableColumns` objects with the followin
 | `required` | `boolean` | Indicates if the column is required (shows an indicator) |
 | `type` | `string` | Predefined cell type ('date', 'date-ago', 'money', 'number', 'status-icon', 'image', etc.) |
 
+## Handling Sorting with `useTableSort`
+
+While you can manage sorting state manually by building a sort string, the recommended approach for handling sorting logic for `VcTable` is to use the `useTableSort` composable. It simplifies state management and integrates directly with the table's events and props.
+
+The basic pattern is:
+1.  Initialize `useTableSort` to get a reactive `sortExpression` and a `handleSortChange` function.
+2.  Bind the `:sort` prop on `VcTable` to your `sortExpression` ref.
+3.  Listen for the `@header-click` event on `VcTable` and call your `handleSortChange` function.
+4.  `watch` the `sortExpression` to trigger your API calls when the sort order changes.
+
+For detailed information on the composable's API and options, see the [**`useTableSort` documentation**](../composables/useTableSort.md).
+
+### Example
+
+This example shows how to wire up the `useTableSort` composable.
+
+```vue
+<template>
+  <VcTable
+    :columns="columns"
+    :items="items"
+    :loading="loading"
+    :sort="sortExpression"
+    @header-click="onHeaderClick"
+  />
+</template>
+
+<script lang="ts" setup>
+import { ref, watch } from 'vue';
+import { useTableSort, VcTable, ITableColumns } from '@vc-shell/framework';
+
+// 1. Setup the composable with an initial sort order
+const { sortExpression, handleSortChange } = useTableSort({
+  initialProperty: 'name',
+  initialDirection: 'ASC',
+});
+
+const loading = ref(false);
+const items = ref([]); // Data from API
+
+const columns = ref<ITableColumns[]>([
+  { id: 'name', title: 'Name', sortable: true, alwaysVisible: true },
+  { id: 'modifiedDate', title: 'Last Modified', sortable: true, type: 'date-ago' },
+  { id: 'status', title: 'Status', sortable: true },
+]);
+
+// 2. Link the table's header click event to the sort handler
+function onHeaderClick(column: ITableColumns) {
+  if (column.sortable) {
+    handleSortChange(column.id);
+  }
+}
+
+// 3. Watch for sort changes and reload data
+watch(sortExpression, async (newSortValue) => {
+  await fetchData({ sort: newSortValue });
+});
+
+async function fetchData(params) {
+  loading.value = true;
+  console.log('Fetching data with params:', params);
+  // items.value = await myApi.get(params);
+  loading.value = false;
+}
+
+// Initial data load
+fetchData({ sort: sortExpression.value });
+</script>
+```
+
 ## Status Images
 
 The `empty` and `notfound` props accept a `StatusImage` object with the following properties:
@@ -184,14 +254,14 @@ The table component uses CSS variables for theming, which can be customized:
   --table-resizer-color: var(--neutrals-200);           /* Color for column resizer */
   --table-reorder-color: var(--primary-400);            /* Color for reorder indicator */
   --table-select-all-bg: var(--primary-100);            /* Background for select all section */
-  
+
   /* Row styling */
   --table-row-bg-hover: var(--primary-100);             /* Background color for row hover */
   --table-row-bg-odd: var(--additional-50);             /* Background color for odd rows */
   --table-row-bg-even: var(--neutrals-50);              /* Background color for even rows */
   --table-row-hover: var(--primary-100);                /* Background color for row hover */
   --table-row-bg-selected: var(--primary-100);          /* Background color for selected rows */
-  
+
   /* Actions styling */
   --table-actions-bg: var(--primary-100);               /* Background color for action buttons */
   --table-actions-bg-hover: var(--primary-100);         /* Background color for action buttons on hover */
@@ -202,7 +272,7 @@ The table component uses CSS variables for theming, which can be customized:
   --table-actions-icon-color-hover: var(--primary-600); /* Icon color for actions on hover */
   --table-actions-color-danger: var(--danger-500);      /* Color for danger actions */
   --table-actions-color-success: var(--success-500);    /* Color for success actions */
-  
+
   /* Footer and other components */
   --table-footer-bg: var(--neutrals-50);                /* Footer background color */
   --table-footer-border-color: var(--neutrals-200);     /* Footer border color */
@@ -211,12 +281,12 @@ The table component uses CSS variables for theming, which can be customized:
   --table-mobile-border-color: var(--secondary-200);    /* Border color for mobile items */
   --table-text-color: var(--neutrals-950);              /* Text color for table cells */
   --table-sort-icon-color: var(--neutrals-400);         /* Color for sort icons */
-  
+
   /* Cell specific variables */
   --table-cell-error-color: var(--danger-500);          /* Color for cell error state */
   --table-cell-text-color: var(--neutrals-400);         /* Secondary text color in cells */
   --table-cell-text-base-color: var(--additional-950);  /* Primary text color in cells */
-  
+
   /* Filter component variables */
   --table-filter-counter-bg: var(--additional-50);      /* Background for filter counter */
   --table-filter-counter-text-color: var(--info-500);   /* Text color for filter counter */
@@ -227,16 +297,16 @@ The table component uses CSS variables for theming, which can be customized:
   --table-filter-close-icon-color: var(--neutrals-500); /* Color for filter close icon */
   --table-filter-panel-border-color: var(--neutrals-200); /* Border color for filter panel */
   --table-filter-panel-header-title-color: var(--neutrals-600); /* Title color for filter panel */
-  
+
   /* Counter component variables */
   --table-counter-label-color: var(--secondary-950);    /* Label color for counter in footer */
   --table-counter-value-color: var(--primary-500);      /* Value color for counter in footer */
   --table-counter-value-border-color: var(--neutrals-500); /* Border color for counter in footer */
-  
+
   /* Base header variables */
   --table-base-header-border-color: var(--neutrals-200); /* Border color for base header */
   --table-base-header-input-icon-color: var(--neutrals-400); /* Icon color for search input */
-  
+
   /* Mobile view variables */
   --table-mobile-background-color: var(--additional-50); /* Background color for mobile items */
   --table-mobile-action-bg: var(--secondary-400);       /* Background color for mobile actions */
@@ -253,13 +323,13 @@ The table component uses CSS variables for theming, which can be customized:
   --table-mobile-action-danger: var(--danger-500);      /* Danger action color for mobile */
   --table-mobile-action-selected: var(--primary-100);   /* Selected item color for mobile */
   --table-mobile-action-more: var(--neutrals-400);      /* More actions color for mobile */
-  
+
   /* Column switcher variables */
   --table-column-switcher-dropdown-bg: var(--additional-50); /* Background for column switcher dropdown */
   --table-column-switcher-dropdown-border: var(--neutrals-200); /* Border for column switcher dropdown */
   --table-column-switcher-dropdown-item-hover: var(--primary-50); /* Hover color for dropdown items */
   --table-column-switcher-text-color: var(--neutrals-950); /* Text color for column switcher */
-  
+
   /* Add new row button variables */
   --table-add-new-icon-color: var(--primary-400);       /* Icon color for add new row button */
 }
@@ -296,7 +366,7 @@ You can customize the content of specific columns using the `item_{columnId}` sl
         {{ item.isActive ? 'Active' : 'Inactive' }}
       </VcBadge>
     </template>
-    
+
     <!-- Custom render for the "actions" column -->
     <template #item_actions="{ item }">
       <div class="tw-flex tw-gap-2">
@@ -412,7 +482,7 @@ function itemActionBuilder(item: { id: string, name: string, isActive: boolean }
     type: 'danger',
     clickHandler: () => deleteProduct(item.id),
   });
-  
+
   return actions;
 }
 
@@ -476,7 +546,7 @@ function onHeaderClick(column: ITableColumns) {
   if (column.sortable) {
     const field = column.id;
     const currentSort = sort.value.split(':');
-    
+
     if (currentSort[0] === field) {
       sort.value = currentSort[1] === 'ASC' ? `${field}:DESC` : `${field}:ASC`;
     } else {
@@ -597,8 +667,8 @@ const itemsPerPage = 10;
 // Filtered items based on search
 const filteredItems = computed(() => {
   if (!searchValue.value) return allUsers.value;
-  
-  return allUsers.value.filter(user => 
+
+  return allUsers.value.filter(user =>
     user.name.toLowerCase().includes(searchValue.value.toLowerCase()) ||
     user.email.toLowerCase().includes(searchValue.value.toLowerCase())
   );
@@ -761,4 +831,4 @@ onMounted(() => {
   loadItems();
 });
 </script>
-``` 
+```

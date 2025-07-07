@@ -198,11 +198,11 @@ nav:
                 - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
-          - Back-in-Stock: 
+          - Back-in-Stock:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview.md
                 - Queries:
                       - backInStockSubscriptions: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Queries/backInStockSubscriptions.md
-                - Objects: 
+                - Objects:
                       - BackInStockSubscriptionType: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionType.md
                       - BackInStockSubscriptionEdge: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionEdge.md
                       - BackInStockSubscriptionConnection: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionConnection.md
@@ -386,10 +386,10 @@ nav:
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
           - Customer Review:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Reviews/overview.md
-                - Queries: 
+                - Queries:
                       - customerReviews: GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/customerReviews.md
                       - canLeaveFeedback: GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/canLeaveFeedback.md
-                - Objects: 
+                - Objects:
                       - CustomerReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReview.md
                       - CustomerReviewConnection: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewConnection.md
                       - createReviewResult: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/createReviewResult.md
@@ -464,13 +464,13 @@ nav:
                       - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment.md
                       - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment.md
                       - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
-          - Pages: 
+          - Pages:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Pages/overview.md
                 - Queries:
                       - pageDocument: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocument.md
                       - pageDocuments: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocuments.md
                       - slugInfo: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/slugInfo.md
-                - Objects: 
+                - Objects:
                       - PageDocumentConnection: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentConnection.md
                       - PageDocumentEdge: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge.md
                       - PageDocumentType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType.md
@@ -549,7 +549,7 @@ nav:
                       - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
                       - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
                       - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
-          - Purchase Request: 
+          - Purchase Request:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/overview.md
                 - Queries:
                       - purchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequest.md
@@ -559,7 +559,7 @@ nav:
                       - PurchaseRequestSourceType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestSourceType.md
                       - PurchaseRequestConnection: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestConnection.md
                       - PurchaseRequestEdge: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestEdge.md
-                - Mutations: 
+                - Mutations:
                       - addPurchaseRequestSource: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/addPurchaseRequestSource.md
                       - createPurchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequest.md
                       - createPurchaseRequestFromDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequestFromDocuments.md
@@ -633,25 +633,25 @@ nav:
                       - updateQuoteDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteDynamicProperties.md
           - White Labeling:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/White-labeling/overview.md
-                - Queries: 
+                - Queries:
                       - whiteLabelingSettings: GraphQL-Storefront-API-Reference-xAPI/White-labeling/queries/whiteLabelingSettings.md
-                - Objects: 
+                - Objects:
                       - ChangeOrganizationLogoResultType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/ChangeOrganizationLogoResultType.md
                       - WhiteLabelingSettingsType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/WhiteLabelingSettingsType.md
                       - FaviconType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/FaviconType.md
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/MenuLinkType.md
-                - Mutations: 
+                - Mutations:
                       - ChangeOrganizationLogo: GraphQL-Storefront-API-Reference-xAPI/White-labeling/mutations/ChangeOrganizationLogo.md
           - xRecommend:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Recommend/overview.md
-                - Queries: 
+                - Queries:
                       - recommendations: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations.md
                       - recentlyBrowsed: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recentlyBrowsed.md
-                - Objects: 
+                - Objects:
                       - GetRecommendationsResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType.md
                       - GetRecentlyBrowsedResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecentlyBrowsedResponseType.md
                       - InputPushHistoricalEventType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/InputPushHistoricalEventType.md
-                - Mutations: 
+                - Mutations:
                       - pushHistoricalEvent: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent.md
           - Store:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
@@ -681,7 +681,7 @@ nav:
           - Tutorials:
                 - Creating Custom Module from Template:
                       - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
-                      - Custom Modules Templates for Dotnet New: Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md 
+                      - Custom Modules Templates for Dotnet New: Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md
                 - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
                 - Deploying Module from Source Code: Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md
                 - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
@@ -703,7 +703,7 @@ nav:
                 - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
                 - Using Feature Flags with VC Platform and Frontend: Tutorials-and-How-tos/How-tos/feature-flags.md
                 - Using responseGroup in Virto Commerce REST APIs: Tutorials-and-How-tos/How-tos/using-responseGroups-in-rest-api.md
-                - Partial Updates for Entities Using PATCH-Endpoint: Tutorials-and-How-tos/How-tos/update-using-patch.md 
+                - Partial Updates for Entities Using PATCH-Endpoint: Tutorials-and-How-tos/How-tos/update-using-patch.md
                 - Generating PDFs: Tutorials-and-How-tos/How-tos/generating-pdfs.md
                 - Health Checks: Tutorials-and-How-tos/How-tos/health-checks.md
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md
@@ -758,7 +758,9 @@ nav:
                             - useToolbar: custom-apps-development/vc-shell/Essentials/composables/useToolbar.md
                             - useUser: custom-apps-development/vc-shell/Essentials/composables/useUser.md
                             - useWidgets: custom-apps-development/vc-shell/Essentials/composables/useWidgets.md
-                      - Usage Guides: 
+                            - useTableSort: custom-apps-development/vc-shell/Essentials/composables/useTableSort.md
+                            - useModificationTracker: custom-apps-development/vc-shell/Essentials/composables/useModificationTracker.md
+                      - Usage Guides:
                             - Overview: custom-apps-development/vc-shell/Essentials/Usage-Guides/overview.md
                             - Adding App Bar Widgets with useappbarwidget: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md
                             - Adding New Languages: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-new-languages.md
@@ -786,7 +788,7 @@ nav:
                             - Using API Clients with useapiclient: custom-apps-development/vc-shell/Essentials/Usage-Guides/using-api-clients-with-useapiclient.md
                             - Working with Blade Navigation in VC-Shell: custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-blade-navigation.md
                             - Working with Push Notifications Using usenotifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-push-notifications-using-usenotifications.md
-                      - Plugins: 
+                      - Plugins:
                             - i18n: custom-apps-development/vc-shell/Essentials/plugins/i18n.md
                             - Modularity: custom-apps-development/vc-shell/Essentials/plugins/modularity.md
                             - Permissions: custom-apps-development/vc-shell/Essentials/plugins/permissions.md
@@ -803,45 +805,45 @@ nav:
                                   - Settings Menu Item: custom-apps-development/vc-shell/Essentials/shared/components/settings-menu-item.md
                                   - Sidebar: custom-apps-development/vc-shell/Essentials/shared/components/sidebar.md
                       - UI Components:
-                            - VcApp: custom-apps-development/vc-shell/Essentials/ui-components/vc-app.md      
-                            - VcBadge: custom-apps-development/vc-shell/Essentials/ui-components/vc-badge.md      
-                            - VcBlade: custom-apps-development/vc-shell/Essentials/ui-components/vc-blade.md     
-                            - VcBreadcrumbs: custom-apps-development/vc-shell/Essentials/ui-components/vc-breadcrumbs.md      
-                            - VcButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-button.md      
-                            - VcCheckbox: custom-apps-development/vc-shell/Essentials/ui-components/vc-checkbox.md    
-                            - VcContainer: custom-apps-development/vc-shell/Essentials/ui-components/vc-container.md  
-                            - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/ui-components/vc-dynamic-property.md      
-                            - VcEditor: custom-apps-development/vc-shell/Essentials/ui-components/vc-editor.md      
-                            - VcField: custom-apps-development/vc-shell/Essentials/ui-components/vc-field.md      
+                            - VcApp: custom-apps-development/vc-shell/Essentials/ui-components/vc-app.md
+                            - VcBadge: custom-apps-development/vc-shell/Essentials/ui-components/vc-badge.md
+                            - VcBlade: custom-apps-development/vc-shell/Essentials/ui-components/vc-blade.md
+                            - VcBreadcrumbs: custom-apps-development/vc-shell/Essentials/ui-components/vc-breadcrumbs.md
+                            - VcButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-button.md
+                            - VcCheckbox: custom-apps-development/vc-shell/Essentials/ui-components/vc-checkbox.md
+                            - VcContainer: custom-apps-development/vc-shell/Essentials/ui-components/vc-container.md
+                            - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/ui-components/vc-dynamic-property.md
+                            - VcEditor: custom-apps-development/vc-shell/Essentials/ui-components/vc-editor.md
+                            - VcField: custom-apps-development/vc-shell/Essentials/ui-components/vc-field.md
                             - VcFileUpload: custom-apps-development/vc-shell/Essentials/ui-components/vc-file-upload.md
-                            - VcForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-form.md    
+                            - VcForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-form.md
                             - VcGallery: custom-apps-development/vc-shell/Essentials/ui-components/vc-gallery.md
                             - VcGrid: custom-apps-development/vc-shell/Essentials/ui-components/vc-grid.md
-                            - VcHint: custom-apps-development/vc-shell/Essentials/ui-components/vc-hint.md      
+                            - VcHint: custom-apps-development/vc-shell/Essentials/ui-components/vc-hint.md
                             - VcIcon: custom-apps-development/vc-shell/Essentials/ui-components/vc-icon.md
-                            - VcImage: custom-apps-development/vc-shell/Essentials/ui-components/vc-image.md 
-                            - VcInput: custom-apps-development/vc-shell/Essentials/ui-components/vc-input.md 
-                            - VcInputCurrency: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-currency.md      
+                            - VcImage: custom-apps-development/vc-shell/Essentials/ui-components/vc-image.md
+                            - VcInput: custom-apps-development/vc-shell/Essentials/ui-components/vc-input.md
+                            - VcInputCurrency: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-currency.md
                             - VcInputDropdown: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-dropdown.md
-                            - VcLabel: custom-apps-development/vc-shell/Essentials/ui-components/vc-label.md      
+                            - VcLabel: custom-apps-development/vc-shell/Essentials/ui-components/vc-label.md
                             - VcLink: custom-apps-development/vc-shell/Essentials/ui-components/vc-link.md
                             - VcLoginForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-login-form.md
                             - VcMultivalue: custom-apps-development/vc-shell/Essentials/ui-components/vc-multivalue.md
-                            - VcPagination: custom-apps-development/vc-shell/Essentials/ui-components/vc-pagination.md     
-                            - VcPopup: custom-apps-development/vc-shell/Essentials/ui-components/vc-popup.md      
+                            - VcPagination: custom-apps-development/vc-shell/Essentials/ui-components/vc-pagination.md
+                            - VcPopup: custom-apps-development/vc-shell/Essentials/ui-components/vc-popup.md
                             - VcProgress: custom-apps-development/vc-shell/Essentials/ui-components/vc-progress.md
-                            - VcRadioButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-radio-button.md      
+                            - VcRadioButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-radio-button.md
                             - VcRating: custom-apps-development/vc-shell/Essentials/ui-components/vc-rating.md
-                            - VcSelect: custom-apps-development/vc-shell/Essentials/ui-components/vc-select.md      
+                            - VcSelect: custom-apps-development/vc-shell/Essentials/ui-components/vc-select.md
                             - VcSkeleton: custom-apps-development/vc-shell/Essentials/ui-components/vc-skeleton.md
-                            - VcSlider: custom-apps-development/vc-shell/Essentials/ui-components/vc-slider.md      
+                            - VcSlider: custom-apps-development/vc-shell/Essentials/ui-components/vc-slider.md
                             - VcStatus: custom-apps-development/vc-shell/Essentials/ui-components/vc-status.md
                             - VcStatusIcon: custom-apps-development/vc-shell/Essentials/ui-components/vc-status-icon.md
-                            - VcSwitch: custom-apps-development/vc-shell/Essentials/ui-components/vc-switch.md 
-                            - VcTable: custom-apps-development/vc-shell/Essentials/ui-components/vc-table.md      
+                            - VcSwitch: custom-apps-development/vc-shell/Essentials/ui-components/vc-switch.md
+                            - VcTable: custom-apps-development/vc-shell/Essentials/ui-components/vc-table.md
                             - VcTextarea: custom-apps-development/vc-shell/Essentials/ui-components/vc-textarea.md
-                            - VcToast: custom-apps-development/vc-shell/Essentials/ui-components/vc-toast.md  
-                            - VcVideo: custom-apps-development/vc-shell/Essentials/ui-components/vc-video.md      
+                            - VcToast: custom-apps-development/vc-shell/Essentials/ui-components/vc-toast.md
+                            - VcVideo: custom-apps-development/vc-shell/Essentials/ui-components/vc-video.md
                             - VcWidget: custom-apps-development/vc-shell/Essentials/ui-components/vc-widget.md
                 - Extensibility:
                       - Modularity: custom-apps-development/vc-shell/Extensibility/modularity.md
