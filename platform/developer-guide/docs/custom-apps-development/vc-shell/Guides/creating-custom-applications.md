@@ -50,7 +50,7 @@ yarn create @vc-shell/vc-app
 ```
 Using `@latest` ensures you are always using the most recent version of the generator.
 
-#### Generator options
+#### Interactive mode
 
 The generator will ask you a series of questions:
 
@@ -86,6 +86,66 @@ Done. You can now run application:
   yarn
   yarn serve
 ```
+
+#### Non-interactive mode
+
+For automation, or when you want to skip prompts, you can use command line arguments. This mode requires the `--variant` option to be specified.
+
+```bash
+npx @vc-shell/create-vc-app@latest my-app --variant classic --module-name "My Module" --mocks
+```
+
+**Available options:**
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `--name`, `--app-name` | Name of the application | Directory name |
+| `--package-name` | Package name | App name (validated) |
+| `--variant` | Module variant (classic\|dynamic) | `classic` |
+| `--module-name` | Module name | App name in title case |
+| `--base-path` | Base path for the application | `/apps/<app-name>/` |
+| `--mocks` | Include additional module with sample data | `false` |
+| `--overwrite` | Overwrite existing files without confirmation | `false` |
+| `--help`, `-h` | Show help message | - |
+| `--version`, `-v` | Show version | - |
+
+**Examples:**
+
+**Basic usage:**
+```bash
+npx @vc-shell/create-vc-app@latest my-app --variant classic
+```
+
+**With custom options:**
+```bash
+npx @vc-shell/create-vc-app@latest my-ecommerce-app \
+  --variant classic \
+  --module-name "Product Catalog" \
+  --base-path "/apps/ecommerce/" \
+  --package-name "@mycompany/ecommerce-app" \
+  --mocks
+```
+
+**Create in existing directory:**
+```bash
+npx @vc-shell/create-vc-app@latest . --name my-existing-project --variant classic --overwrite
+```
+
+**Getting help:**
+```bash
+npx @vc-shell/create-vc-app@latest --help
+```
+
+**Check version:**
+```bash
+npx @vc-shell/create-vc-app@latest --version
+```
+
+!!! tip "Non-interactive mode requirements"
+    For non-interactive mode to work, you must specify the `--variant` option. If you don't provide this option, the tool will fallback to interactive mode.
+
+!!! warning "Overwrite protection"
+    By default, the tool will refuse to create an application in a non-empty directory. Use the `--overwrite` flag to force overwriting existing files.
 
 ### Understanding Generated Application Structure
 
@@ -140,7 +200,7 @@ my-custom-storefront/
         ![Readmore](../../media/readmore.png){: width="25"} [API client integration guide](../Essentials/API-Integration/api-client-integration.md)
 
 *   **composables/**: Contains application-wide Vue composables. These are reusable functions that encapsulate stateful logic, making it easy to share functionality across different components and modules. An example **useLogin.ts** might be generated here.
-*   **locales/**: Stores JSON files for internationalization (i18n). Each file (e.g., **en.json**, **es.json**) contains key-value pairs for translations in a specific language. 
+*   **locales/**: Stores JSON files for internationalization (i18n). Each file (e.g., **en.json**, **es.json**) contains key-value pairs for translations in a specific language.
 
     ![Readmore](../../media/readmore.png){: width="25"} [Adding new languages](../Essentials/Usage-Guides/adding-new-languages.md)
 
