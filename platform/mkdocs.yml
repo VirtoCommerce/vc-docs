@@ -56,6 +56,10 @@ extra:
                 - title: Github
                   link: https://github.com/VirtoCommerce/vc-platform/
         release_notes:
+            - title: July 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-july-2025/798
+              type: Release Notes
+              date: 7 July 2025
             - title: June 2025
               link: https://www.virtocommerce.org/t/virto-s-release-notes-june-2025/796
               type: Release Notes

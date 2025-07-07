@@ -111,6 +111,7 @@ nav:
                 - Settings: Fundamentals/PageBuilder/settings.md
                 - Schemas: Fundamentals/PageBuilder/schemas.md
                 - Component Context: Fundamentals/PageBuilder/component-context.md
+                - Asset File: Fundamentals/PageBuilder/asset.md
                 - Controls:
                       - Calendar: Fundamentals/PageBuilder/calendar.md
                       - Checkbox: Fundamentals/PageBuilder/checkbox.md
