@@ -550,9 +550,9 @@ extra:
                         - title: Overview
                           url: /platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview
                         - title: Getting Started
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/Essentials/dynamic-views/overview
-                        - title: Extending VC Apps Functionality
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                          url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
+                        - title: Connecting to Platform
+                          url: /platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
                 - title: Deployment on Virto Cloud
                   content:
                     - links: 
