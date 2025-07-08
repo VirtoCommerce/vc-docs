@@ -20,3 +20,7 @@ To add a new price list assignment:
 	
 	Read more about it in the [Publish conditions guide](../marketing/publish-conditions.md).
 
+!!! note
+	Contract managers and merchandisers can control price list assignment validity through contract dates. The start and end dates of a contract automatically define the active period of the associated price list assignment. This ensures that pricing is applied only during the contract’s validity and is deactivated when the contract expires
+
+

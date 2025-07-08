@@ -12,7 +12,18 @@ The **AssetFile** object serves as the **data model** for file upload requests a
 
 When uploading assets, each file is converted to an **AssetFile** and passed to the upload service, which is configured via the **settings.json** file.
 
-**Example:** 
+## Interface
+
+```ts
+export interface AssetFile extends File {
+    data?: any;                // Optional metadata from the component's descriptor
+    url?: string;              // Full URL where the file is stored
+    previewUrl: string | null; // URL for previewing the file (e.g., image thumbnail)
+    assetName: string;         // Original or assigned name of the file
+}
+```
+
+## Example 
 
 ```json title="settings.json"
 {
@@ -51,3 +62,13 @@ This response is then mapped to:
 ```
 
 which is assigned to the `url` field of the **AssetFile**.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../component-context">← Component context </a>
+    <a href="../calendar">Controls →</a>
+</div>

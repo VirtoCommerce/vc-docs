@@ -1,9 +1,9 @@
 # Settings
 
-To open the **Elasticsearch 8** module settings:
+To open the **Elasticsearch 9** module settings:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Elasticsearch8** to find the settings related to the module.
+1. In the search field of the next blade, type **Elasticsearch9** to find the settings related to the module.
 1. Click **General** to configure the following settings in the next blade:
 
     ![General settings](media/general-settings.png)

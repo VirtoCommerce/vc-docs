@@ -240,6 +240,9 @@ nav:
                       - Overview: search/overview.md
                       - Managing Search Index: search/managing-search.md
                       - Settings: search/settings.md
+                - Elastic Search 9:
+                      - Overview: elastic-search-9/overview.md
+                      - Settings: elastic-search-9/settings.md
                 - Elastic Search 8: 
                       - Overview: elastic-search-8/overview.md
                       - Settings: elastic-search-8/settings.md

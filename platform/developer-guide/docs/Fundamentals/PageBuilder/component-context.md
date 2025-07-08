@@ -56,5 +56,5 @@ The `utils` object provides a collection of helper methods for working with data
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../schemas">← Schemas </a>
-    <a href="../calendar">Controls →</a>
+    <a href="../asset">Asset file →</a>
 </div>

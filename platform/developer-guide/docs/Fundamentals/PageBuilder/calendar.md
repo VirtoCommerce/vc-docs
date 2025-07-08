@@ -38,6 +38,6 @@ Some of the available calendar modes are as follows:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../component-context">← Component context </a>
+    <a href="../asset">← Asset file </a>
     <a href="../checkbox">Checkbox →</a>
 </div>

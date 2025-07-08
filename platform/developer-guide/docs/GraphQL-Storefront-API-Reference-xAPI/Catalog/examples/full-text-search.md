@@ -84,3 +84,6 @@ The following product properties are stored in the `__content` field and are sea
       }
     }
     ```
+
+!!! note
+    The `cultureName` parameter is required for retrieving localized fields such as name, description, etc. If it is not passed, the request will return an error like **Cannot resolve field `name`**.

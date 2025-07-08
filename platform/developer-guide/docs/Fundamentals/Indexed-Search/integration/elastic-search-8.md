@@ -12,7 +12,7 @@ The module supports the following deployment options:
 
 !!! info
 
-    As of version [3.815.0](https://github.com/VirtoCommerce/vc-module-elastic-search-8/releases/tag/3.815.0), the Virto Commerce Elasticsearch module supports Elasticsearch 8 and 9.
+    As of version [3.815.0](https://github.com/VirtoCommerce/vc-module-elastic-search-8/releases/tag/3.815.0), the Virto Commerce Elasticsearch 8 module supports Elasticsearch 8 and 9.
 
     Virto Commerce follows the official Elasticsearch language client compatibility guidelines: language clients are **forward compatible** across minor versions within the same or next major Elasticsearch version.
 
@@ -65,6 +65,6 @@ The provider performs full-text keyword searches on documents, optionally with f
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../search/faceted-search">← Faceted search</a>
+    <a href="../elastic-search-9">← Elasticsearch 9 overview</a>
     <a href="../semantic-search">Semantic search →</a>
 </div>

@@ -364,6 +364,6 @@ Debug mode increases log verbosity and may expose sensitive data. Use it only du
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../elastic-search-8">← Elasticsearch 8 overview</a>
-    <a href="../elastic-app-search-overview">Elastic App Search →</a>
+    <a href="../elastic-search-9">← Elasticsearch 9 overview</a>
+    <a href="../elastic-search-8">Elasticsearch 8 overview →</a>
 </div>

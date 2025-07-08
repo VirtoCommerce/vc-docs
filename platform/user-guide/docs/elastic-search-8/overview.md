@@ -1,6 +1,6 @@
-# Elastic Search 8
+# Elasticsearch 8
 
-The Virto Commerce **Elastic Search 8** module serves as a search engine for the Search module. It is the most commonly used search engine among Virto Commerce users.
+The Virto Commerce **Elasticsearch 8** module serves as a search engine for the Search module. It is the most commonly used search engine among Virto Commerce users.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search-8/)
 
@@ -8,13 +8,13 @@ The Virto Commerce **Elastic Search 8** module serves as a search engine for the
 
 ## Key features
 
-With the Elastic Search 8 module, you can perform:
+With the Elasticsearch 8 module, you can perform:
 
 * Full-text search with new .NET client for Elasticsearch.
 * [Semantic search](../../../developer-guide/Fundamentals/Indexed-Search/integration/semantic-search).
 * Hybrid mode search.
 * Third party ML models support.
 
-The diagram below illustrates the functionality of the Elastic Search 8 module:
+The diagram below illustrates the functionality of the Elasticsearch 9 module:
 
 ![Key entities](media/key-entities.png)

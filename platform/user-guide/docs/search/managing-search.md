@@ -13,6 +13,7 @@ To open search index details:
 
     * The search provider for each record type:
         * Elastic App Search.
+        * Elasticsearch 9.
         * Elasticsearch 8.
         * Lucene.
         * Elasticsearch.

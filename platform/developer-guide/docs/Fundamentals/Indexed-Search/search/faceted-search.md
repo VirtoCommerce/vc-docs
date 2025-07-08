@@ -51,5 +51,5 @@ To edit the selected property, click on it and configure the following fields:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Search. Overview</a>
-    <a href="../../integration/elastic-search-8">Search providers integration. Elastic Search 8 →</a>
+    <a href="../../integration/elastic-search-9">Search providers integration. Elastic Search 9 →</a>
 </div>
