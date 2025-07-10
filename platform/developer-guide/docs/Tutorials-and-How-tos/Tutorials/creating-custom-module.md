@@ -431,19 +431,26 @@ After creating your module, install it from your source and debug it as follows:
     ```
 
     !!! note
-        In the above example, `c:\source\` is a path to the directory with your code.
+        In the above example, `C:\source\` is a path to the directory with your code.
 
-1. Restart the platform.
+1. Restart the Platform.
 
-1. Open Swagger API at http://localhost:5000/docs/index.html, find `MyCoolModule extension module`, and run the POST method to verify that everything is working properly:
+1. Open Swagger API at http://localhost:5000/docs/index.html, find **MyCoolModule extension module**, and run the POST method to verify that everything is working properly:
 
     ![Running POST method in Swagger](media/02-swagger-post.png)
 
     This creates a new blog record.
 
-1. To debug your module, attach the platform process to the Visual Studio module solution by navigating to **Tools --> Attach to Process --> [Find the platform process] --> Attach**:
+1. To debug your module, attach the Platform process to the Visual Studio module solution:
 
-    ![debug](media/03-debugging.png)
+    * If you run the Platform from source (built and launched via **VirtoCommerce.Platform.Web.exe**), attach to the **VirtoCommerce.Platform.Web.exe** process.
+
+        ![debug](media/03-debugging.png)
+
+    * If you run the Platform using prebuilt binaries (as described in this guide), the executable process will be **dotnet.exe**. In that case, attach to the appropriate **dotnet.exe** process instead:
+
+        ![dotnet](media/attach-dotnet.png)
+
 
 ## Extend VC manager with new UI 
 
