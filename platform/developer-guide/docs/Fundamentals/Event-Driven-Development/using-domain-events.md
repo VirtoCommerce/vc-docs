@@ -34,21 +34,24 @@ public class CustomDomainEventHandler : IEventHandler<CustomDomainEvent>
 Register an event handler or subscribe to a domain event as follows:
 
 ```csharp
-void  Initialize(IServiceCollection serviceCollection)
+void Initialize(IServiceCollection serviceCollection)
 {
-  ...
-   serviceCollection.AddTransient<CustomDomainEventHandler>();
-  ...
+    // Register your event handler
+    serviceCollection.AddTransient<CustomDomainEventHandler>();
 }
 
 void PostInitialize(IApplicationBuilder appBuilder)
 {
-  ...
-var eventHandlerRegistrar = appBuilder.ApplicationServices.GetService<IHandlerRegistrar>();
-eventHandlerRegistrar.RegisterHandler<CustomDomainEvent>((message, token) => appBuilder.ApplicationServices.GetService<CustomDomainEventHandler>().Handle(message));
-  ...
+    // Register the handler for a specific event type
+    appBuilder.RegisterEventHandler<CustomDomainEvent, CustomDomainEventHandler>();
+    
+    // Or register a handler for all domain events
+    appBuilder.RegisterEventHandler<DomainEvent, AllEventsHandler>();
 }
+
 ```
+!!! note
+    If you register a handler for a specific event type (e.g., `UserChangedEvent`), the handler will also receive all events derived from that event type.
 
 ## Raise domain events
 
