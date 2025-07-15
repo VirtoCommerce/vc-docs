@@ -30,3 +30,13 @@ To open Search settings:
     ![Search catalog settings](media/catalog-search-settings.png)
 
 1. Click **Save** in the toolbar to save the changes.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../product-indexing">← Product indexing</a>
+    <a href="../../store/overview">Stores module overview →</a>
+</div>

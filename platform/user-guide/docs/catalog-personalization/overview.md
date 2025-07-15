@@ -17,3 +17,14 @@ The **User groups** feature allows you to associate specific user groups with a 
 * [Assigning user groups to products.](user-groups.md#assign-user-groups-to-product)
 * [Assigning user groups to categories.](user-groups.md#assign-user-groups-to-category)
 * [Managing personal prices.](../pricing/adding-new-assignment.md)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../back-in-stock/overview">← Back-in-Stock module overview</a>
+    <a href="../user-groups">Managing user groups →</a>
+</div>

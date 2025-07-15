@@ -12,3 +12,14 @@ Here are steps to help you determine why the correct price isn't showing up:
     * The assignment references the correct **Catalog**. For instance, if your Frontend Application is set up to work with a virtual catalog, but the assignment points to a physical one (where the product is actually located), the price won't be displayed. To avoid confusion, consider using the **Store** assignment instead of **Catalog**.
     * If there are any specific conditions for the assignment, ensure they apply. For example, if the assignment relies on the **User group contains** condition, make sure the customer is added to the appropriate user group.
     * Rebuild the product index and recheck the Frontend Application price.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-pricing-module-settings">← Pricing module settings</a>
+    <a href="../example">Enabling special prices for specific users →</a>
+</div>
+

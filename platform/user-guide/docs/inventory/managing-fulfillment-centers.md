@@ -48,3 +48,14 @@ In the list of fulfillment centers:
 1. Confirm the deletion. 
 
 The fulfillment center has been permanently removed.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-inventory">← Managing inventory</a>
+    <a href="../settings">Inventory module settings →</a>
+</div>
+
+

@@ -30,3 +30,14 @@ With the Assets module, you can:
 * [Upload files.](managing-assets.md#upload-files)
 * [Search files.](managing-assets.md#search-files)
 * [Organize files.](managing-assets.md#organize-files)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../quotes/overview">← Quotes module overview</a>
+    <a href="../managing-assets">Managing assets →</a>
+</div>

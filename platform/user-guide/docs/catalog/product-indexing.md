@@ -21,3 +21,14 @@ To start indexation:
     ![Fig. Indexing completed](media/index-details.png){: width="550"}
 
 The indexation has been completed.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-search-index">← Managing search index</a>
+    <a href="../settings">Catalog module settings →</a>
+</div>
+

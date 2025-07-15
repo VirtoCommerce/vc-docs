@@ -28,3 +28,12 @@ The diagram below illustrates the Cart module functionality:
 
 ![Key entities](media/key-entities.png)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../contacts/overview">← Contacts module overview</a>
+    <a href="../settings">Cart module settings →</a>
+</div>

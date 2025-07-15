@@ -41,3 +41,12 @@ In the **Products** blade, you can:
 
 ![Product settings](media/product-settings.png)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../permissions">← Managing permissions</a>
+    <a href="../../contacts/overview">Contacts module overview →</a>
+</div>

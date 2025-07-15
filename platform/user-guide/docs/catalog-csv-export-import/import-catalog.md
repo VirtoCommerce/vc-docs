@@ -19,3 +19,13 @@ To import your catalog in a CSV format:
 Your catalog has been successfully imported.
 
 ![Readmore](media/readmore.png){: width="25"} [Importing CSV catalog example](../../../deployment-on-cloud/add-products-via-csv)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Catalog CSV Export and Import module overview</a>
+    <a href="../export-catalog">Exporting catalog →</a>
+</div>

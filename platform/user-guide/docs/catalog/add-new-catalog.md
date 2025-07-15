@@ -52,3 +52,12 @@ To add a new catalog:
 	![New catalog](media/add-new-catalog.png)
 
 Your catalog is ready to use!
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+	<a href="../overview">← Catalog module overview</a>
+	<a href="../import-catalog">Importing catalogs →</a>
+</div>

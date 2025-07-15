@@ -42,3 +42,13 @@ To remove a company from your contract:
 1. Confirm your action.
 
 The company has been removed.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-contract-prices">← Managing contract prices</a>
+    <a href="../../customer-export-import/overview">Customer Export and Import module overview→</a>
+</div>

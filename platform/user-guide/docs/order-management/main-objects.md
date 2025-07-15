@@ -28,3 +28,13 @@ To view the list of orders:
 
 ![Other order information](media/other-order-information.png)
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Order module overview</a>
+    <a href="../managing-documents">Managing documents →</a>
+</div>

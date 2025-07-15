@@ -15,3 +15,12 @@ To manage prices via Catalog:
 1. Click **Save** in the toolbar to save the changes.
 
 The modifications have been saved.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../export-functionality">← Pricing data export</a>
+    <a href="../managing-pricing-module-settings">Pricing module settings →</a>
+</div>

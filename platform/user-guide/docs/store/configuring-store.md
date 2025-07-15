@@ -32,3 +32,13 @@ Clicking on the **Fulfillment Centers** widget opens the list of the store's ful
 To add a new fulfillment center, click **Add** in the toolbar and fill in the following fields:
 
 ![Fulfillment-center](media/fulfillment-center-new.png){: width="600"}
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../adding-new-store">← Adding new store</a>
+    <a href="../settings">Store module settings →</a>
+</div>

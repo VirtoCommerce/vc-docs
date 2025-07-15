@@ -35,3 +35,12 @@ For your convenience, the files are stored in folders. Choose either the existin
 To find a file, type its name in the search field and click <kbd>Enter</kbd>.
 
 ![Search](media/search-files.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Assets module overview</a>
+    <a href="../../azure-blob-storage/overview">Azure Blob Storage module overview→</a>
+</div>

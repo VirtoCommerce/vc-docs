@@ -44,3 +44,14 @@ Your modifications have been saved.
 1. Confirm the deletion.
 
 The content element has been deleted.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-content-placeholders">← Managing content placeholders</a>
+    <a href="../publish-conditions">Publishing conditions →</a>
+</div>
+
+

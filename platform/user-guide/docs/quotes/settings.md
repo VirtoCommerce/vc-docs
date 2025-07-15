@@ -12,3 +12,13 @@ To open the Quotes module general settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The settings have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../manage-quotes">← Managing quotes</a>
+    <a href="../../assets/overview">Assets module overview →</a>
+</div>

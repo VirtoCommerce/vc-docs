@@ -23,10 +23,6 @@ The **Event Bus** module provides:
 * Predefined destination provider: [Azure Event Grid](https://azure.microsoft.com/en-us/services/event-grid) with CloudEvents-based data format.
 
 
-The diagram below illustrates the functionality of the Event Bus module:
-
-![Key entities](media/key-entities.png)
-
 ## Example uses for Event Bus
 
 * **Serverless application architectures:** Use Azure Event Grid to trigger serverless functions instantly for tasks like currency exchange when a new price is added to a price list.
@@ -41,6 +37,6 @@ The diagram below illustrates the functionality of the Event Bus module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../dynamic-associations/overview">← Dynamic Associations module overview</a>
-    <a href="../import-catalog">Importing catalog →</a>
+    <a href="../webhooks">← Webhooks</a>
+    <a href="../event-bus-configuration">Configuration →</a>
 </div>

@@ -156,3 +156,13 @@ The contact can now switch between the assigned organizations in the Frontend Ap
 
 ![Storefront multiple organizations](media/storefront-multiple-organizations.png)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Contacts module overview</a>
+    <a href="../filtering-options">Filtering options →</a>
+</div>
+
+

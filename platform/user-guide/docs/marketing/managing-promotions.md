@@ -81,3 +81,14 @@ To delete a promotion:
 1. Confirm the deletion. 
 
 The promotion has been removed from the promotions list.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../promotions-overview">← Promotions overview</a>
+    <a href="../combining-active-promotions">Promotion combination policies →</a>
+</div>
+
+

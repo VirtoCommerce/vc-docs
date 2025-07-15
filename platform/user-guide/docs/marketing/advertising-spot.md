@@ -17,3 +17,16 @@ To add the dynamic content to your website:
 ```
 
 Your marketing content has been brought online.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../publish-conditions">← Publishing conditions</a>
+    <a href="../dynamic-associations-overview">Dynamic associations overview →</a>
+</div>
+
+

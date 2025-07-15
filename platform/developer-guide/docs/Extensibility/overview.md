@@ -36,8 +36,8 @@ Virto Commerce currently provides two types of API:
 
 We also support two types of event providers:
 
-* Webhooks: A good point for no development integration.
-* Eventbus: Read for reactive programming and enterprise integrations.
+* [Webhooks](../Fundamentals/Event-Driven-Development/webhooks.md): A good point for no development integration.
+* [Event Bus](../Fundamentals/Event-Driven-Development/event-bus.md): Read for reactive programming and enterprise integrations.
 
 ## Native extensions
 

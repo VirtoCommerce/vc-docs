@@ -30,3 +30,14 @@ Managing dynamic content includes:
 * [Managing content placeholders](managing-content-placeholders.md) to set content items locations on your website.
 * [Managing content publishing](managing-published-content.md) to configure published content so that your banners or sliders could go online.
 * [Adding advertising spots](advertising-spot.md) to publish your content and make it visible for your customers.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../settings">← Marketing module settings</a>
+    <a href="../managing-content-items">Managing content items →</a>
+</div>
+
+

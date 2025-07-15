@@ -24,3 +24,13 @@ To manage search index:
      ![Result](media/indexation-result.png)
 
 The search results will become available once the build process is finished.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-units-of-measure">← Managing units of measure</a>
+    <a href="../product-indexing">Product indexing →</a>
+</div>

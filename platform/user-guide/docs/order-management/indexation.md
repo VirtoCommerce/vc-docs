@@ -12,3 +12,15 @@ To start indexation:
 1. The result of indexing is displayed in the next blade.
 
     ![Indexation completed](media/indexation-completed.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../sending-order-information-to-avatax">← Sending order information to AvaTax</a>
+    <a href="../notifications">Managing notifications →</a>
+</div>
+
+

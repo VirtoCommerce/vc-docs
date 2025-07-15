@@ -24,3 +24,12 @@ With the Store module, you can:
 * [Manage tax providers](configuring-store.md)
 * [Linking customer accounts across stores](configuring-store.md)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../catalog/overview">← Catalog module overview</a>
+    <a href="../adding-new-store">Adding new store →</a>
+</div>

@@ -40,3 +40,13 @@ To view  product variations:
 ## Asset inheritance
 
 A created product variation automatically inherits all assets and their properties from a parent product. Any subsequent updates to the parent product assets are reflected in the variation assets. After the user edits or adds a new asset to the variation product, inheritance stops automatically, the system makes a copy of the parent assets and adds them to the variation so that changes to the parent assets are no longer reflected in the **Variations**.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-products">← Managing products</a>
+    <a href="../managing-product-configurations">Managing product configurations →</a>
+</div>

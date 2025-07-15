@@ -24,3 +24,12 @@ However, once Alex Starberg, our loyal customer, logs into the store, he will im
 ![Targeted view](media/targeted-product-view.png){: width="600"}
 
 ![Readmore](media/readmore.png){: width="25"} [Enabling special prices for specific users](../pricing/example.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../user-groups">← Managing user groups</a>
+    <a href="../settings">Settings →</a>
+</div>

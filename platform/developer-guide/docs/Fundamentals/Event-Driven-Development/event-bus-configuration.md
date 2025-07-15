@@ -326,3 +326,13 @@ Only this selected payload will be sent to the provider, allowing for efficient 
 ![Readmore](media/readmore.png){: width="25"} [Scriban syntax](https://github.com/scriban/scriban/tree/master/doc)
 
 ![Readmore](media/readmore.png){: width="25"} [Test your Scriban-template](https://scribanonline.azurewebsites.net)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../event-bus">← Event Bus overview </a>
+    <a href="../../PageBuilder/overview">Page Builder →</a>
+</div>

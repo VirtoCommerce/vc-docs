@@ -10,3 +10,13 @@ To enable the Application Insights feature:
 ![Enabling App Insights](media/enable-app-insights.png)
 
 The Application Insights feature is now enabled, and metrics, application telemetry, and trace logging data will be collected in Microsoft Azure Application Insights.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Application Insights module overview</a>
+    <a href="../../google-sso/overview">Google SSO module overview →</a>
+</div>

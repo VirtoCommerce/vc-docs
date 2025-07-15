@@ -15,3 +15,13 @@ To configure AI smart capture settings:
         ![Purchase request settings](media/purchase-request-settings.png)
 
 1. Click **Save** in the toolbar to save the changes.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../enabling-ai-doc-processing">← Enabling AI doc processing</a>
+    <a href="../../application-insights/overview">Application Insights module overview →</a>
+</div>

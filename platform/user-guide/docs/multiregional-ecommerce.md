@@ -41,3 +41,11 @@ The following modules are included to discuss a multi-regional e-commerce soluti
 Virto Commerce architecture enables companies to quickly and affordably expand their regional presence. They can launch stores in different regions with different languages and currencies while maintaining a single ecosystem of applications and a unified process for order processing and customer service. One of the significant advantages of Virto Commerce architecture is the ability to scale e-commerce to regions without multiple platform installations for regional markets. This approach saves on IT infrastructure and personnel costs. The IT team can serve the platform for all markets, adding only staff with language skills as needed to support local customers. In contrast, other competing platforms require duplicating the e-commerce platform for each new region, resulting in unnecessary duplication of IT resources and team costs. The Virto Commerce architecture naturally avoids cost duplication. When launching a new e-commerce business in different regions, the infrastructure that serves it remains the same or grows insignificantly. To scale the Virto Commerce e-commerce platform to new regional markets, it is recommended to install it at a cloud provider such as Microsoft Azure, AWS, Google Cloud, or Alibaba Cloud.
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../getting-started">← Getting started </a>
+    <a href="../view-results-on-frontend">Viewing results on frontend →</a>
+</div>

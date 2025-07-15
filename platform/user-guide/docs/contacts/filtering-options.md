@@ -43,3 +43,14 @@ Keyword search operates based on:
 Let's search for all the contacts from the United States of America. Enter **United States of America** to the keyword search field and click <kbd>Enter</kbd>. You will see all the contacts with the United States of America specified in the index content:
 
 ![Contacts from the USA](media/USA.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-contacts">← Managing companies and contacts</a>
+    <a href="../settings">Contacts module settings →</a>
+</div>
+
+

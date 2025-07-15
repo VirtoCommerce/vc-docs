@@ -64,3 +64,13 @@ To check product's availability:
     * **SoldOut**.
 
     ![Availability status](media/availability-status.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-product-configurations">← Managing product configurations</a>
+    <a href="../managing-properties">Managing properties →</a>
+</div>

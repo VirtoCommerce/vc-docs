@@ -25,3 +25,12 @@ The Contacts module features are:
 
 * **Connection to Frontend Application:** You can link all your contacts and their hierarchy to the Frontend Application.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../order-management/overview">← Order module overview</a>
+    <a href="../managing-contacts">Managing companies and contacts →</a>
+</div>

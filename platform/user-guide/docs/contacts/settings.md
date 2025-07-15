@@ -57,3 +57,12 @@ To add and edit statuses for various contact entities:
 1. Click ![Floppy](media/floppy.png){: width="25"} to save the changes.
 
 Your modifications have been saved.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../filtering-options">← Filtering options</a>
+    <a href="../../cart/overview">Cart module overview →</a>
+</div>

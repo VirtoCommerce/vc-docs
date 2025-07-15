@@ -28,3 +28,13 @@ With the Pricing module, you can:
 * [Configure the Pricing module.](managing-pricing-module-settings.md)
 * [Export prices and price list assignments.](export-functionality.md)
 * [Troubleshoot problems with incorrect prices in the Frontend Application.](troubleshooting-guide.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../store/overview">← Store module overview</a>
+    <a href="../creating-new-price-list">Managing price lists →</a>
+</div>

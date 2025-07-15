@@ -160,15 +160,14 @@ nav:
           - Contracts:
                 - Overview: contracts/overview.md
                 - Managing Contracts: contracts/creating-and-terminating-contracts.md
-                - Managing Contract prices: contracts/managing-contract-prices.md
-                - Managing Contract customers: contracts/managing-contract-customers.md
+                - Managing Contract Prices: contracts/managing-contract-prices.md
+                - Managing Contract Customers: contracts/managing-contract-customers.md
           - Customer Export and Import:
                 - Overview: customer-export-import/overview.md
           - Dynamic Associations: 
                 - Overview: dynamic-associations/overview.md
           - Event Bus: 
                 - Overview: event-bus/overview.md
-                - Configurations: event-bus/configuration.md
           - GDPR: 
                 - Overview: gdpr/overview.md
                 - Managing Personal Data: gdpr/manage-personal-data.md

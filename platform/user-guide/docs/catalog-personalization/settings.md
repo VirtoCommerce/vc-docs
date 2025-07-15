@@ -12,3 +12,13 @@ To manage personalization settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The settings have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../example">← Showing catalog items for specific users</a>
+    <a href="../../catalog-publishing/overview">Catalog Publishing module overview→</a>
+</div>

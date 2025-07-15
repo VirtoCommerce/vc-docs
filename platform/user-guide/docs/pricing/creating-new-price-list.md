@@ -79,3 +79,14 @@ To start editing or adding a price:
 	![Path](media/price-list-path.png)
 
 The modifications have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Pricing module overview</a>
+    <a href="../adding-new-assignment">Managing price list assignments →</a>
+</div>
+

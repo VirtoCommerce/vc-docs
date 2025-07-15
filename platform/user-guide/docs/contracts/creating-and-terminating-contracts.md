@@ -46,3 +46,14 @@ To delete a contract:
 1. Confirm the deletion.
 
 The contract has been deleted.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Contracts module overview</a>
+    <a href="../managing-contract-prices">Managing contract prices →</a>
+</div>

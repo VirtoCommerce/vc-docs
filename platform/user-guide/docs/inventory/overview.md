@@ -18,7 +18,18 @@ The diagram below illustrates the Inventory module functionality:
 
 With the Inventory module, you can:
 
-* [Track inventory and stock](managing-inventory.md)
-* [Manage fulfillment centers](managing-fulfillment-centers.md)
-* [Manage product availability](../catalog/setting-product-availability.md)
-* [Customize your inventory module](settings.md)
+* [Track inventory and stock](managing-inventory.md).
+* [Manage fulfillment centers](managing-fulfillment-centers.md).
+* [Manage product availability](../catalog/setting-product-availability.md).
+* [Customize your inventory module](settings.md).
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../pricing/overview">← Pricing module overview</a>
+    <a href="../managing-inventory">Managing inventory →</a>
+</div>

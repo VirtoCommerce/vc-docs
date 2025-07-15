@@ -26,3 +26,13 @@ Please [contact us](https://virtocommerce.com/request-demo) to start using our *
 * [VirtoCommerce.xApi version 3.814.0 or higher](https://github.com/VirtoCommerce/vc-module-x-api)
 * [VirtoCommerce.xCart version 3.817.0 or higher](https://github.com/VirtoCommerce/vc-module-x-cart/releases/tag/3.817.0)
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../content/overview">← Content module overview</a>
+    <a href="../enabling-ai-doc-processing">Enabling AI doc processing →</a>
+</div>

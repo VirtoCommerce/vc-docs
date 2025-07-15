@@ -11,3 +11,14 @@ To view the order changes history, including payment, shipment, and other modifi
 1. Information about order placement, payment, shipment, etc. appears in the new blade. Select additional information fields from the drop-down list in the upper right corner.
 
     ![New payment document](media/order-changes.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-documents">← Managing documents</a>
+    <a href="../managing-returns">Managing returns →</a>
+</div>
+
+

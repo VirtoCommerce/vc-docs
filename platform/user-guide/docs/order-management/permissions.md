@@ -32,3 +32,14 @@ Now only the assigned user can process the order.
 ![Readmore](media/readmore.png){: width="25"} [Creating new role](https://docs.virtocommerce.org/new/user-guide/security/roles-and-permissions/#creating-new-role) 
 
 ![Readmore](media/readmore.png){: width="25"} [Editing roles](https://docs.virtocommerce.org/new/user-guide/security/roles-and-permissions/#editing-roles)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notifications">← Managing notifications</a>
+    <a href="../settings">Order module settings →</a>
+</div>
+
+

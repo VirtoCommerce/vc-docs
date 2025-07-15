@@ -99,3 +99,13 @@ To restore the initial price:
 1. Confirm your action.
 
 This works both at the product and price level. After you restore the prices, the **New** label that marked them will disappear.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../creating-and-terminating-contracts">← Managing contracts</a>
+    <a href="../managing-contract-customers">Managing contract customers →</a>
+</div>

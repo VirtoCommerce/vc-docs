@@ -56,3 +56,13 @@ To see what is missing in the product descriptions:
     ![Missing descriptions](media/view-items-details.png)
 
 Click on the reddish widgets to complete the descriptions from the current location. 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Catalog Publishing module overview</a>
+    <a href="../../catalog-csv-export-import/overview">Catalog CSV Export and Import module overview →</a>
+</div>

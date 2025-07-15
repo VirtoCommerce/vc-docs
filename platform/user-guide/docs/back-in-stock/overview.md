@@ -22,3 +22,12 @@ The Back-in-stock module provides:
 - **Back office subscription management**: Allows administrators to view and manage customer subscriptions from the admin panel.  
 - **Export & analysis support**: Enables businesses to export subscription data for further analysis and reporting.  
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../google-sso/overview">← Authentication-related modules</a>
+    <a href="../stock-and-notifications-management">Inventory and notifications management →</a>
+</div>

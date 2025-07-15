@@ -12,3 +12,14 @@ In the Marketing module settings, you can configure promotion policies:
 1. **Restart** the application for the new settings to come into effect.
 
 The modifications have been saved.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../promotion-rules">← Promotion rules</a>
+    <a href="../dynamic-content-overview">Dynamic content overview →</a>
+</div>
+
+

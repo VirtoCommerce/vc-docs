@@ -11,3 +11,12 @@ The diagram below illustrates the functionality of the File System Assets module
 
 [![Release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-filesystem-assets/releases)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../azure-blob-storage/overview">← Azure Blob Storage module overview</a>
+    <a href="../../content/overview">Content module overview→</a>
+</div>

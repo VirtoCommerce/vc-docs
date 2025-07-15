@@ -23,3 +23,16 @@ To test the created rule, use REST API testing as follows:
     ![Response](media/api-testing-3.png)
 
 You can see, the rule is correct returning 6 related items that will be displayed with the specified item. 
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-dynamic-associations">← Managing dynamic associations</a>
+    <a href="../../quotes/overview">Quotes module overview →</a>
+</div>
+
+

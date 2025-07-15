@@ -23,3 +23,11 @@ With the Catalog module, you can manage:
 * [Product availability.](setting-product-availability.md)
 * [Search index.](managing-search-index.md)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../platform-overview">← Modules overview </a>
+    <a href="../add-new-catalog">Managing catalogs →</a>
+</div>

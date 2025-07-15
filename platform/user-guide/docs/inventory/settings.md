@@ -33,4 +33,12 @@ To configure search settings:
 
 The modifications have been saved.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-fulfillment-centers">← Managing fulfillment centers</a>
+    <a href="../../order-management/overview">Order module overview →</a>
+</div>
 

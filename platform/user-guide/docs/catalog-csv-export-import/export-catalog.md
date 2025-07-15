@@ -24,3 +24,13 @@ To export your catalog in a CSV format:
 ![Catalog export](media/catalog-export.gif)
 
 Your catalog has been downloaded.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../import-catalog">← Importing catalog</a>
+    <a href="../settings">Settings →</a>
+</div>

@@ -14,3 +14,14 @@ To add a new store to your Virto Commerce system:
 ![New Store screen](media/add-store-screen.png){: width="800"}
 
 Your new store has been added to the list.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Store module overview</a>
+    <a href="../configuring-store">Configuring store →</a>
+</div>
+

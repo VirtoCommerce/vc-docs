@@ -103,6 +103,11 @@ nav:
                 - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md
           - Event Driven Development:
                 - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
+                - Event Providers: 
+                      - Webhooks: Fundamentals/Event-Driven-Development/webhooks.md
+                      - Event Bus: 
+                            - Overview: Fundamentals/Event-Driven-Development/event-bus.md
+                            - Configuration: Fundamentals/Event-Driven-Development/event-bus-configuration.md
           - Page Builder:
                 - Overview: Fundamentals/PageBuilder/overview.md
                 - Getting Started: Fundamentals/PageBuilder/getting-started.md

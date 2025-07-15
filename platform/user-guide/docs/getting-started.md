@@ -94,3 +94,13 @@ Virto Commerce is a headless platform and multiple client apps can be connected 
 Now you are ready to connect a Frontend Application and launch your MVP store.
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/5LWMgwzss7k)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../modules-installation">← Modules installation </a>
+    <a href="../multiregional-ecommerce">B2B Multi-regional e-commerce architecture →</a>
+</div>

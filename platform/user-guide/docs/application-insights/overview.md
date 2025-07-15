@@ -15,3 +15,13 @@ The Azure Application Insights module enables the collection of key metrics, app
 * Collects application trace logging data.
 * Offers flexible configuration through settings or code.
 * Allows configuration of Application Insights settings, including specifying the **Instrumentation Key** for each store.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../ai-doc-processing/overview">← AI Doc Processing module overview</a>
+    <a href="../enable-app-insights">Enabling Application Insights →</a>
+</div>

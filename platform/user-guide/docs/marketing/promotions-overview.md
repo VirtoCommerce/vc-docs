@@ -15,3 +15,13 @@ Managing promotions includes:
 * [Creating promotions.](managing-promotions.md#creating-new-promotion)
 * [Configuring promotion rules.](promotion-rules.md)
 * [Setting promotion combination policies.](combining-active-promotions.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Marketing module overview</a>
+    <a href="../managing-promotions">Managing promotions →</a>
+</div>

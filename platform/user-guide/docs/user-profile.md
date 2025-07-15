@@ -18,3 +18,12 @@ To configure the admin profile:
 
 Your settings are saved automatically.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../general-guidelines">← General guidelines </a>
+    <a href="../modules-installation">Modules installation →</a>
+</div>

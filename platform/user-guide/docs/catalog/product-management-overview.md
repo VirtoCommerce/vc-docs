@@ -20,3 +20,11 @@ Virto Commerce offers flexible ways to purchase products tailored to various cus
 
     ![Readmore](media/readmore.png){: width="25"} [Product configurations management](managing-product-configurations.md)  
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../product-management-overview">← Product management overview</a>
+    <a href="../managing-product-variations">Managing product variations →</a>
+</div>

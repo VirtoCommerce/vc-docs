@@ -53,3 +53,15 @@ Your modifications have been saved.
 1. Confirm the deletion.
 
 The placeholder has been deleted.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-content-items">← Managing content items</a>
+    <a href="../managing-published-content">Managing published content →</a>
+</div>
+
+

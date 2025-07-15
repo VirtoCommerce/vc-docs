@@ -1,6 +1,6 @@
 # Themes
 
-The Virto Commerce Theme is a frontend application for your ecommerce websites. The default Theme is included in the VC Content module and is provided out of the box. The default theme consists of the following folders with files that define the Frontend Application UI:
+The Virto Commerce Theme is a frontend application for your e-commerce websites. The default Theme is included in the VC Content module and is provided out of the box. The default theme consists of the following folders with files that define the Frontend Application UI:
 
 | Folder        	| Content                                                                                                    	|
 |---------------	|------------------------------------------------------------------------------------------------------------	|
@@ -145,3 +145,12 @@ Your new color scheme has been applied.
 
 Your ChatGPT-generated colors have been added to the presets.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Content module overview</a>
+    <a href="../managing-pages">Managing pages →</a>
+</div>

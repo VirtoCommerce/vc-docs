@@ -87,5 +87,5 @@ void Initialize(IServiceCollection serviceCollection)
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../Scalability/scalability-options">← Scalability options </a>
-    <a href="../../PageBuilder/overview">Page Builder →</a>
+    <a href="../webhooks">Webhooks →</a>
 </div>

@@ -20,3 +20,12 @@ As an example, let's enable SEO for the **Bolts** category within the **B2B-mixe
 
 SEO has been enabled for the **Bolts** category.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-properties">← Managing properties</a>
+    <a href="../add-videos">Adding videos →</a>
+</div>

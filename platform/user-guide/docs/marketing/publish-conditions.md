@@ -28,3 +28,16 @@ The conditions below are configured to display content only to:
 
 ![Condition configuration example](media/publish-conditions/condition-set-example.png)
  
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-published-content">← Managing published content</a>
+    <a href="../advertising-spot">Adding advertising spot →</a>
+</div>
+
+

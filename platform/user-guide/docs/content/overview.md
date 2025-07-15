@@ -36,7 +36,16 @@ You can access the Content module via:
 
 
 
-[![source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-content/)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-content/)
 
 [![latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-content/releases/latest)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../assets/overview">← Assets module overview</a>
+    <a href="../managing-themes">Managing themes →</a>
+</div>

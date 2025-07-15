@@ -12,3 +12,13 @@ To open general settings:
 1. Click **Save** in the toolbar to save the changes.
 
 Your settings have been applied.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../stock-and-notifications-management">← Inventory and notifications management</a>
+    <a href="../../catalog-personalization/overview">Catalog personalization module overview →</a>
+</div>

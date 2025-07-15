@@ -43,3 +43,14 @@ This new feature provides:
 === "Not rounded price"
 
     ![Not rounded price](media/not-rounded-price.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../combining-active-promotions">← Promotion combination policies</a>
+    <a href="../settings">Marketing module settings →</a>
+</div>
+
+

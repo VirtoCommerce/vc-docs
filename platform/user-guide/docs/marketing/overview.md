@@ -18,3 +18,12 @@ With the Marketing module, you can:
 * Manage [dynamic content](#dynamic-content) for the Frontend Application.
 * Create and run [promotions](#promotions).
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../cart/overview">← Cart module overview</a>
+    <a href="../promotions-overview">Promotions overview →</a>
+</div>

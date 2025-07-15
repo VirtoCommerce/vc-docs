@@ -11,3 +11,13 @@ Within the **Browse** section, you can organize and display modules as bundles:
 ![Bundles](media/modules-as-bundles.png)
 
 All the Virto Commerce modules are marked with ![tick](media/tick.png){: width="25"}.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../user-profile">← User profile </a>
+    <a href="../getting-started">Getting started →</a>
+</div>

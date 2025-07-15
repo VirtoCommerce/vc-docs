@@ -33,3 +33,14 @@ Now, if anyone who is not included into the **VIP** group visits our store, they
 ![Prices for targeted user](media/price-list-for-targeted-user.png){: width="1100"}
 
 ![Readmore](media/readmore.png){: width="25"} [How to show catalog items for specific users](../catalog-personalization/example.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../troubleshooting-guide">← Troubleshooting</a>
+    <a href="../../inventory/overview">Inventory module overview →</a>
+</div>
+

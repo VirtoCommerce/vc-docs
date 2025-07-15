@@ -15,3 +15,11 @@ With the Virto Commerce export feature, users can efficiently extract and save c
 
 ![Readmore](media/readmore.png){: width="25"} [Exporting catalogs via Export module](../generic-export/overview.md)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../import-products-to-catalog">← Importing products, prices, and stock to catalog via CSV</a>
+    <a href="../managing-categories">Managing categories →</a>
+</div>

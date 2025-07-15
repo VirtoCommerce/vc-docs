@@ -128,3 +128,13 @@ To delete a unit:
 
 The unit has been deleted from the list.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../add-videos">← Adding videos</a>
+    <a href="../managing-search-index">Managing search index →</a>
+</div>
+

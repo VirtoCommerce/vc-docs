@@ -321,3 +321,14 @@ To assign a new property group to the product properties:
 1. Click **Save** in the toolbar to save the changes.
 
 The grouped properties appear on the frontend. The ungrouped properties are added to the **Other** group. 
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../setting-product-availability">← Managing product availability</a>
+    <a href="../managing-SEO">Managing SEO →</a>
+</div>

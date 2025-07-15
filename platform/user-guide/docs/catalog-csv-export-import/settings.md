@@ -14,3 +14,14 @@ To configure the settings of the **Catalog CSV Import** module:
 1. Click **Save** in the top toolbar to save the changes.
 
 The settings have been saved.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../export-catalog">← Exporting catalog</a>
+    <a href="../../contracts/overview">Contracts module overview→</a>
+</div>

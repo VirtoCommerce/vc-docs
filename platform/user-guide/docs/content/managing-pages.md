@@ -59,3 +59,13 @@ In the **Pages list** blade, select the desired page and edit it as markdown or 
 ![edit md page](media/edit-md-page.png)
 
 Click **Save** in the toolbar to save the changes.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-themes">← Managing themes</a>
+    <a href="../managing-linklists">Managing link lists →</a>
+</div>

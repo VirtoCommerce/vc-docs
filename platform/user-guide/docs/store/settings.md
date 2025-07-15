@@ -42,3 +42,12 @@ Other store-specific settings are:
 * [Application Insights settings](../application-insights/enable-app-insights.md).
 * [Sitemap settings](../sitemaps/settings.md), etc.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-store">← Configuring store</a>
+    <a href="../../pricing/overview">Pricing module overview →</a>
+</div>

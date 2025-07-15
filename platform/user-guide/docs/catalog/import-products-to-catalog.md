@@ -100,3 +100,12 @@ Follow this step-by-step guide to learn how to import new products into the Virt
     The frontend environment opens in a new window with the **/new-category** URL slug. The image below shows what it looks like and how it correlates to the columns in the CSV file:
 
     ![Result](media/result-in-frontend.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../import-catalog">← Importing catalogs</a>
+    <a href="../export-catalog">Exporting catalogs →</a>
+</div>

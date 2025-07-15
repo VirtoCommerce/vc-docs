@@ -13,3 +13,13 @@ Now, users can download various types of bulk orders.
 ![AI enabling](media/enabling-doc-processing.gif)
 
 You can [configure other settings](settings.md).
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← AI Smart Capture module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

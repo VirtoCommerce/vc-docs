@@ -12,3 +12,12 @@ To open the Content module settings:
 1. Click **Save** to save the changes.
 
 The settings have been saved.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-blogs">← Managing blogs</a>
+    <a href="../../ai-doc-processing/overview">AI Doc Processing module →</a>
+</div>

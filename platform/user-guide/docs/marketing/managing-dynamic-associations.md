@@ -102,3 +102,16 @@ To narrow down the output of associated products:
 1. Click **OK** to save the changes.
 
 The output range has been set.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../dynamic-associations-overview">← Dynamic associations overview</a>
+    <a href="../dynamic-associations-restapi">REST API testing →</a>
+</div>
+
+

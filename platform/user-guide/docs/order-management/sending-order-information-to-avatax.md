@@ -21,3 +21,14 @@ To send the order information to AvaTax manually:
 1. Click on the Avatax widget to see the updated information:
 
     ![General order information](media/send-to-avalara1.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-returns">← Managing returns</a>
+    <a href="../indexation">Indexation →</a>
+</div>
+
+

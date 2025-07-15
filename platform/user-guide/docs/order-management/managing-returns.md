@@ -40,3 +40,14 @@ To process the returns:
 1. Click **Save** in the toolbar to save the changes.
 
 The modifications have been saved.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../tracking-order-changes">← Tracking order changes</a>
+    <a href="../sending-order-information-to-avatax">Sending order information to AvaTax →</a>
+</div>
+
+

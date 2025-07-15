@@ -58,3 +58,14 @@ The modifications have been saved.
 	You can delete only those dynamic content items that do not belong to published content; otherwise, the system displays a message that the associated published content should be deleted first.
 
 The item has been deleted.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../dynamic-content-overview">← Dynamic content overview</a>
+    <a href="../managing-content-placeholders">Managing content placeholders →</a>
+</div>
+
+

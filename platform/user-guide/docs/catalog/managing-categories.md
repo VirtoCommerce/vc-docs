@@ -88,3 +88,12 @@ The links to the current category within the selected virtual catalogs and categ
 ![Readmore](media/readmore.png){: width="25"} [Properties widget](managing-properties.md)
 
 ![Readmore](media/readmore.png){: width="25"} [User Groups widget](../catalog-personalization/user-groups.md)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../export-catalog">← Exporting catalogs</a>
+    <a href="../product-management-overview">Products management options →</a>
+</div>

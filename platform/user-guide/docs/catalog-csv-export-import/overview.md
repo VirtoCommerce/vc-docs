@@ -30,3 +30,13 @@ The key features of the module include:
 The diagram below illustrates the interconnection between the **Catalog CSV Export and Import** module and the **Catalog** module:
 
 ![Key entities](media/key-entities.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../catalog-publishing/overview">← Catalog Publishing module overview</a>
+    <a href="../import-catalog">Importing catalog →</a>
+</div>

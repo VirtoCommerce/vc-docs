@@ -14,3 +14,17 @@ With the dynamic product associations feature, you can:
 * Select a product to promote as a related product or an accessory.
 * Select products with which the promoted items will appear.
 * Control the display of promoted products and determine their sorting order.
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../advertising-spot">← Adding advertising spot</a>
+    <a href="../managing-dynamic-associations">Managing dynamic associations →</a>
+</div>
+
+

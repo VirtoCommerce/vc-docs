@@ -56,6 +56,6 @@ With the Orders module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../inventory/settings">← Inventory module settings</a>
+    <a href="../../inventory/overview">← Inventory module overview</a>
     <a href="../main-objects">Order information →</a>
 </div>

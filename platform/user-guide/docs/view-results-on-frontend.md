@@ -13,3 +13,12 @@ The Frontend Application opens in a new blade.
 !!! tip
     You can simply refresh your Frontend Application site to view the modifications made.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../multiregional-ecommerce">← B2B multi-regional e-commerce architecture </a>
+    <a href="../ada-compliance">ADA compliance →</a>
+</div>

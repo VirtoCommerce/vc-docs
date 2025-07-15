@@ -1,4 +1,4 @@
-# User Groups
+# Manage User Groups
 
 The user groups within a Catalog module can be assigned to:
 
@@ -67,3 +67,14 @@ The user group has been assigned to the product.
 	Rebuild the search indexes for categories and products after assigning user groups:
 
 	![Rebuilding index](https://user-images.githubusercontent.com/7536694/31497248-d12a5efe-af5e-11e7-8938-b39d2b03ad1e.gif){: width="550"}
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Catalog personalization module overview</a>
+    <a href="../example">Showing catalog items for specific users →</a>
+</div>

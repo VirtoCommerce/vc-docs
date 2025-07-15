@@ -59,3 +59,14 @@ To assign store specific notifications:
     ![Default template](media/default-template.png){: width="550"}
 
 Your notification has been added to the list.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../indexation">← Indexation</a>
+    <a href="../permissions">Managing permissions →</a>
+</div>
+
+

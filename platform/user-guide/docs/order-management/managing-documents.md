@@ -103,3 +103,15 @@ To get an invoice in PDF format:
 The invoice PDF opens in a new window.
 
 ![Readmore](media/readmore.png){: width="25"} [Managing PDF invoice template](../notifications/notification-templates.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../main-objects">← Order information</a>
+    <a href="../tracking-order-changes">Tracking order changes →</a>
+</div>
+
+

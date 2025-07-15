@@ -39,3 +39,13 @@ To configure search settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The search settings have been modified.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../viewing-price-list-in-catalog">← Viewing prices in catalog</a>
+    <a href="../troubleshooting-guide">Troubleshooting →</a>
+</div>
+

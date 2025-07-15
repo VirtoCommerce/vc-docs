@@ -45,3 +45,13 @@ in terms of existing Virto objects. Once you create a contract, the system will 
     
 All these changes can be recorded to the appropriate entities (companies, price lists and price list assignments) if required, while the user who manages contracts can easily work with the module without being aware of all these details.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../catalog-personalization/overview">← Catalog-related modules overview</a>
+    <a href="../creating-and-terminating-contracts">Managing contracts →</a>
+</div>

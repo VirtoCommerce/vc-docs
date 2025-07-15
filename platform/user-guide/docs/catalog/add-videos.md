@@ -17,3 +17,13 @@ To add a YouTube video to a product page:
 ![Add video](media/add-video.gif)
 
 Your product video is displayed in the videos blade. You can search, remove, or add a new one. 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-SEO">← Managing SEO</a>
+    <a href="../managing-units-of-measure">Managing units of measure →</a>
+</div>

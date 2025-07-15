@@ -14,7 +14,7 @@ Click on the three dots to left of the blog name to:
 * Copy its link.
 * Delete it.
 
-![blogs list](media/blogs-list.png){: width="450"}
+![Blogs list](media/blogs-list.png){: width="450"}
 
 Each blog contains an unlimited number of posts. The posts can have the following extensions:
 
@@ -42,13 +42,13 @@ To create new post in your blog:
 * [Use Virto Commerce Page Builder](../page-builder/overview.md) to build posts from individual blocks by clicking **Design Page** in the blade below.
 * Use markdown or html by clicking **Html Page** in the blade below.
 
-![designer or html](media/designer-or-html.png)
+![Designer or html](media/designer-or-html.png)
 
 ### Code-based creation
 
 To create a new post using markdown or html, fill in the following fields in the **Markdown** tab: 
 
-![markdown](media/new-md-blog.png)
+![Markdown](media/new-md-blog.png)
 
 ## Edit posts with .page and .page-draft extensions
 
@@ -60,4 +60,13 @@ In the **Blogs list** blade, select the desired post and edit the following fiel
 
 In the **Blogs List** blade, select the desired page and edit it as markdown or html:
 
-![edit md blog](media/edit-md-blog.png)
+![Edit md blog](media/edit-md-blog.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-linklists">← Managing link lists</a>
+    <a href="../settings">Settings →</a>
+</div>

@@ -22,3 +22,13 @@ The diagram below illustrates the function of the Dynamic Associations module:
 ![key entities diagram](media/key-entities-diagram.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Dynamic Associations](../marketing/managing-dynamic-associations.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../customer-export-import/overview">← Customer Export and Import module overview</a>
+    <a href="../../event-bus/overview">Event Bus module overview →</a>
+</div>

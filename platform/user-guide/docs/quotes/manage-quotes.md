@@ -121,3 +121,13 @@ In our example:
 !!! note
     In case you forgot to fill the quote with items or you have offered an item with a zero price, you will see the following notification:<br>
     ![Incomplete quote](media/incomplete-quote-proposal.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Quotes module overview</a>
+    <a href="../settings">Quotes module settings →</a>
+</div>

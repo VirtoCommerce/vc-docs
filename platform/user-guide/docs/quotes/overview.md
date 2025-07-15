@@ -20,3 +20,12 @@ The diagram below illustrates the Quote module functionality:
 
 ![Key entities](media/key-entities.png) 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../marketing/overview">← Marketing module overview</a>
+    <a href="../manage-quotes">Managing quotes →</a>
+</div>

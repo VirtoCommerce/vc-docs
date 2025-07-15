@@ -16,4 +16,12 @@ To edit the product's inventory:
 
 ![Read more](media/readmore.png){: width="20"} [Managing product's availability and tracking inventory for digital and physical products](../catalog/setting-product-availability.md)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Inventory module overview</a>
+    <a href="../managing-fulfillment-centers">Managing fulfillment centers →</a>
+</div>
 
