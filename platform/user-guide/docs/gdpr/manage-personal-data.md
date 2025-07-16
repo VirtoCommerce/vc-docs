@@ -92,3 +92,13 @@ The personal data have been downloaded as a JSON file.
 !!! tip
 	You can convert the JSON file into TXT or CSV before sending it to your customer.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← GDPR module overview</a>
+    <a href="../../generic-export/overview">Generic Export module overview→</a>
+</div>

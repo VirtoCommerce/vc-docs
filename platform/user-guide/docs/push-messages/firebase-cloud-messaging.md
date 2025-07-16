@@ -151,3 +151,11 @@ You can change your decision at any time:
 
 ![Change decision](media/change-decision.png){: width="400"}
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../manage-push-messages">← Managing push messages</a>
+    <a href="../settings">Settings →</a>
+</div>

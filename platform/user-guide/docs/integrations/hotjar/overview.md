@@ -1,6 +1,6 @@
 # Overview
 
-The Hotjar module allows you to assign Hotjar Site Id for your Store. It gets insights about the shopping behavior of your customers from:
+The **Hotjar** module allows you to assign Hotjar Site Id for your Store. It gets insights about the shopping behavior of your customers from:
 
 * Heatmaps. 
 * Recordings.
@@ -27,3 +27,11 @@ With the Hotjar tool, you can benefit from:
 * [VC module Hotjar on Github](https://github.com/VirtoCommerce/vc-module-hotjar/blob/dev/docs/index.md) 
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../google-analytics/overview">← Google Analytics module overview </a>
+    <a href="../getting-started">Getting started →</a>
+</div>

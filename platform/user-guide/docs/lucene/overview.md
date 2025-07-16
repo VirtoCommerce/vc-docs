@@ -12,3 +12,14 @@ The diagram below illustrates the functionality of the Lucene Search module:
 
 ![Key entities](media/key-entities.png)
 
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../algolia/overview">← Algolia Search module overview</a>
+    <a href="../../azure-search/overview">Azure Search module overview →</a>
+</div>

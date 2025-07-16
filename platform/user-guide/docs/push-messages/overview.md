@@ -15,3 +15,13 @@ With the Push Messages module, you can:
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-push-messages)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-push-messages/releases)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../price-export-import/overview">← Price Export-Import module overview</a>
+    <a href="../manage-push-messages">Managing push messages →</a>
+</div>

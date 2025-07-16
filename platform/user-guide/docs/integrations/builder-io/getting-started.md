@@ -31,3 +31,13 @@ To start using the Builder.io solution for a specific store:
 Click on the link to start using Builder.io:
 
 ![Builder.io link](media/builder-io-link.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Builder.io module overview </a>
+    <a href="../use-builder-io">Use Builder.io →</a>
+</div>

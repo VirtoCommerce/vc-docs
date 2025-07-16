@@ -16,4 +16,14 @@ To configure the Payment module settings:
 The payment method settings have been configured.
 
 
-![Readmore](media/readmore.png){: width="25"} [Native Payment Methods Settings](../native-payment-methods/settings.md)
+![Readmore](media/readmore.png){: width="25"} [Native payment methods settings](../native-payment-methods/settings.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-payment-methods">← Managing payment methods</a>
+    <a href="../../native-payment-methods/overview">Native Payment Methods module overview →</a>
+</div>

@@ -18,3 +18,13 @@ With the Elasticsearch 8 module, you can perform:
 The diagram below illustrates the functionality of the Elasticsearch 9 module:
 
 ![Key entities](media/key-entities.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../elastic-search-9/overview">← Elasticsearch 9 module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

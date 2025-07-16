@@ -1,4 +1,4 @@
-# Manage Skyflow module
+# Manage Skyflow Module
 
 To manage the Skyflow payment method:
 
@@ -21,3 +21,11 @@ To manage the Skyflow payment method:
 
 Your modifications have been saved.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Skyflow module overview</a>
+    <a href="../../authorize-net/overview">Authorize.net module overview →</a>
+</div>

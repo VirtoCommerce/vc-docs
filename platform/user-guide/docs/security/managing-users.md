@@ -58,3 +58,13 @@ To assign roles to users:
 
 The role has been assigned to the user.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Security module overview</a>
+    <a href="../roles-and-permissions">Managing roles and permissions →</a>
+</div>

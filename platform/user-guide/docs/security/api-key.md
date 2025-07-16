@@ -18,3 +18,13 @@ To generate an API key for API authentication of a user you have created:
 1. Click **Save** in the **User information** blade.
 
 The API key has been generated.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../category-manager">← Category manager</a>
+    <a href="../login-on-behalf">Login on behalf →</a>
+</div>

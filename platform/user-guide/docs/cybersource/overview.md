@@ -13,3 +13,13 @@ It enables secure and seamless payment processing, using CyberSource's Flex Micr
 The diagram below illustrates the dependencies of the CyberSource module:
 
 ![Key entities](media/key-entities.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../native-payment-methods/overview">← Native Payment Methods module overview</a>
+    <a href="../manage-cybersource">Managing CyberSource →</a>
+</div>

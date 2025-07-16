@@ -38,3 +38,14 @@ For order managers, the platform will only display modules for which they have p
 ![Modules for order managers](media/order-manager-limitations2.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Orders](../order-management/overview.md)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../marketer">← Marketer</a>
+    <a href="../category-manager">Category manager →</a>
+</div>

@@ -12,3 +12,14 @@ To set Google Analytics 4 module:
 1. Click **Save** in the toolbar to save the changes.
 
 ![Settings](../media/ga-settings.png){: width="800"}
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../integration">← Using Google Analytics </a>
+    <a href="../../hotjar/overview">Hotjar module overview →</a>
+</div>

@@ -19,3 +19,14 @@ To configure the **Return** module settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The settings have been saved.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-returns">← Managing returns</a>
+    <a href="../../search/overview">Search module overview →</a>
+</div>

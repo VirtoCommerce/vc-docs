@@ -1,6 +1,6 @@
 # Overview
 
-Power BI Reports module is a powerful analytics tool that allows users to gain valuable insights into their e-commerce operations. With this module, users can connect their Virto Commerce platform data to Microsoft Power BI, which enables them to create interactive and customizable reports and dashboards.
+**Power BI Reports** module is a powerful analytics tool that allows users to gain valuable insights into their e-commerce operations. With this module, users can connect their Virto Commerce platform data to Microsoft Power BI, which enables them to create interactive and customizable reports and dashboards.
 
 The module provides a range of pre-built report templates and data models, allowing users to easily extract and visualize critical data on sales, customer behavior, inventory, and more. Additionally, users can customize their reports and dashboards by adding or removing data points, adjusting visuals, and defining specific filters and criteria.
 
@@ -18,3 +18,13 @@ With the Power BI module, users can:
 [![Source code](../media/source_code.png)](https://github.com/VirtoCommerce/vc-module-power-bi-reports/releases)
 
 [![Latest release](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-power-bi-reports/releases/latest)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../hotjar/overview">← Hotjar module overview </a>
+    <a href="../getting-started">Getting started →</a>
+</div>

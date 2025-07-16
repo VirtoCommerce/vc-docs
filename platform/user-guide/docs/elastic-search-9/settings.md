@@ -15,3 +15,13 @@ To open the **Elasticsearch 9** module settings:
 1. Click **Save** in the top toolbar to save the changes.
 
 The settings have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Elasticsearch 9 module overview</a>
+    <a href="../../elastic-search-8/overview">Elastic Search 8 module overview →</a>
+</div>

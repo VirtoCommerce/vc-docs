@@ -19,3 +19,13 @@ To install it and assign Google Analytics Measurement Id for you store:
 1. Save the **Store Settings** to activate the Google Analytics tracking.
 
     ![Google Analytics Tracking](../media/google-analytics-tracking.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Google Analytics module overview </a>
+    <a href="../settings">Settings →</a>
+</div>

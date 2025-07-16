@@ -1,4 +1,4 @@
-# Manage CyberSource module
+# Manage CyberSource Module
 
 To manage the CyberSource payment method:
 
@@ -17,3 +17,13 @@ To manage the CyberSource payment method:
 1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← CyberSource module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

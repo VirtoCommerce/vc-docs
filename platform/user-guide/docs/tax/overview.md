@@ -1,6 +1,6 @@
 # Overview
 
-The Tax module provides a flexible way to evaluate taxes by using different tax providers and core abstractions for custom tax providers. It allows easy addition of custom tax calculation rules.
+The **Tax** module provides a flexible way to evaluate taxes by using different tax providers and core abstractions for custom tax providers. It allows easy addition of custom tax calculation rules.
 
 The module includes a **FixedRateTaxProvider** as a built-in tax provider.
 
@@ -33,3 +33,12 @@ The diagram below illustrates the functionality of the Tax module:
 
 ![Key entities](media/key-entities.png)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../tasks/overview">← Tasks module overview</a>
+    <a href="../managing-taxes">Managing taxes →</a>
+</div>

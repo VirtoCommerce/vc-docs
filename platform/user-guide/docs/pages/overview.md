@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Pages module is a solution designed to connect different CMS seamlessly within Virto Commerce. It offers a CMS-agnostic architecture, enabling users to manage public, private, and personalized pages effectively. Once pages are published, they are stored within Virto Pages, making the CMS optional after the design phase. This approach allows for flexibility in detaching, replacing, or using multiple CMS platforms simultaneously for scenarios like landing pages, blogs, and more.
+The **Pages** module is a solution designed to connect different CMS seamlessly within Virto Commerce. It offers a CMS-agnostic architecture, enabling users to manage public, private, and personalized pages effectively. Once pages are published, they are stored within Virto Pages, making the CMS optional after the design phase. This approach allows for flexibility in detaching, replacing, or using multiple CMS platforms simultaneously for scenarios like landing pages, blogs, and more.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pages/)
 
@@ -24,7 +24,7 @@ The Virto Pages module is a solution designed to connect different CMS seamlessl
 * **Builder.io**: Fully supported for integration.
 * **Contentful**: Coming soon.
 * **Optimizely**: Coming soon.
-* **Virto Page Builder**: Coming soon.
+* [Virto Page Builder.](../page-builder/overview.md)
 
 ## Architecture
 
@@ -44,3 +44,14 @@ The Virto Pages module supports end-to-end content workflows:
 * **Design time**: Integrate with a CMS to create and design pages, preparing them for publishing.
 * **Publishing**: Publish pages to Virto Pages, removing dependency on the CMS afterward.
 * **Rendering**: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../page-builder/overview">← Page Builder module overview</a>
+    <a href="../enabling-pages">Enabling Pages →</a>
+</div>

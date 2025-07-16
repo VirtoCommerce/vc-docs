@@ -31,3 +31,14 @@ To provide the exemption number for selected customers to the Avalara Tax API:
 1. Open **Dynamic properties** for the customer.
 1. Add `Tax exempt` dynamic property and select the `ShortText` type.
 1. Fill the exemption certificate number to the value of this property.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../taxes-calculation">← Taxes calculation </a>
+    <a href="../address-validation">Address validation →</a>
+</div>

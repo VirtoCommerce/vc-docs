@@ -12,3 +12,13 @@ The diagram below illustrates the functionality of the Azure Search module:
 
 ![Key entities](media/key-entities.png)
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../lucene/overview">← Lucene Search module overview</a>
+    <a href="../../search">Search options →</a>
+</div>

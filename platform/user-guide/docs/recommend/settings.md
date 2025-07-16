@@ -16,3 +16,11 @@ To open the settings of the Recommendations module:
 The settings have been configured.
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../enable-recommendations">← Enabling recommendations</a>
+    <a href="../../return/overview">Return module overview →</a>
+</div>

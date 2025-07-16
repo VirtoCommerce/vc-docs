@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce **SEO** module provides a flexible infrastructure for managing SEO-related data across the Platform. It supports SEO metadata (e.g., slugs, titles, meta descriptions) for various entities such as catalogs, categories, products, and custom pages.
+The **SEO** module provides a flexible infrastructure for managing SEO-related data across the Platform. It supports SEO metadata (e.g., slugs, titles, meta descriptions) for various entities such as catalogs, categories, products, and custom pages.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-seo/)
 
@@ -18,3 +18,14 @@ The Virto Commerce **SEO** module provides a flexible infrastructure for managin
 The diagram below illustrates which modules use SEO module:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../security/overview">← Security module overview</a>
+    <a href="../../catalog/managing-SEO">Managing SEO →</a>
+</div>

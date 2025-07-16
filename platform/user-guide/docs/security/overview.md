@@ -1,6 +1,6 @@
 # Overview
 
-Virto Commerce Security module provides various options to manage security and authentication for your online store or website. This includes managing:
+The **Security** module provides various options to manage security and authentication for your online store or website. This includes managing:
 
 * **Users**: Individuals with access to your platform or store.
 * **Roles**: Sets of permissions defining specific functions within the platform, such as basic user, advanced user, administrator, order manager, etc.
@@ -22,3 +22,13 @@ With the Security module, you can:
 * [Generate API keys](api-key.md) for specific users.
 * [Log in to the Frontend Application on behalf](login-on-behalf.md) of any user.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../search/overview">← Search module overview</a>
+    <a href="../managing-users">Managing user accounts →</a>
+</div>

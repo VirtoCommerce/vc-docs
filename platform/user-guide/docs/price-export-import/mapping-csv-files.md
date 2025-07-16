@@ -10,3 +10,13 @@ Get a sample CSV file to use as a template for proper mapping:
 
     !!! note
         Use semicolon as a delimiter in your CSV file.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Price Export-Import module overview</a>
+    <a href="../exporting-price-lists">Exporting price lists →</a>
+</div>

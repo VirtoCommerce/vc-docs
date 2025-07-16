@@ -13,3 +13,13 @@
     ![Settings](../media/avalara-settings.png){: width="700"}
 
 1. Click **OK** to save the changes.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../address-validation">← Address validation </a>
+    <a href="../../builder-io/overview">Builder.io module overview →</a>
+</div>

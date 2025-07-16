@@ -1,6 +1,6 @@
 # Orders Synchronization
 
-The AvalaraTax module creates AvaTax transactions for orders and enables scheduled synchronization of VC Platform orders with AvaTax. 
+The AvaTax module creates AvaTax transactions for orders and enables scheduled synchronization of VC Platform orders with AvaTax. 
 
 It creates a **SalesInvoice** transaction for orders, where:
 
@@ -44,3 +44,15 @@ It displays:
 * Raw AvaTax transaction representation.
 
 ![AvaTax transaction details blade](../media/avatax-widget.png){: width="700"}
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Avalara module overview </a>
+    <a href="../taxes-calculation">Taxes calculation →</a>
+</div>

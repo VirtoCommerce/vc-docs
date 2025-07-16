@@ -36,3 +36,13 @@ To get started with the module, complete the following steps:
 Once set up, Virto Commerce will redirect users to Power BI reports from the Apps menu:
 
 ![Redirect](../media/redirecting-to-power-bi.gif)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Power BI Reports module overview </a>
+    <a href="../../../versions/virto3-products-versions">Versions →</a>
+</div>

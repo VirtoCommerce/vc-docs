@@ -20,3 +20,13 @@ With the Thumbnails module, you can:
 * [Schedule thumbnail generation](generating-thumbnails.md#scheduled-run)
 * [Select resize options](thumbnail-options.md)
 * [Access the resulting thumbnails](using-thumbnails.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../tax/overview">← Tax module overview</a>
+    <a href="../generating-thumbnails">Generating thumbnails →</a>
+</div>

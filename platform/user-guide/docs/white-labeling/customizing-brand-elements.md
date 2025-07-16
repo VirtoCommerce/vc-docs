@@ -57,7 +57,7 @@ Let's create the following footer:
     ![Footer links](media/footer-links.png)
 
     !!! note
-        Name your footer link list **footer-links** so the Platform recognizes it as a part of the footer structure.
+        Name your footer link list **footer-links** so that the Platform recognizes it as a part of the footer structure.
 
 1. Click **Create**. The current result in the Frontend Application is as follows:
 
@@ -73,3 +73,13 @@ Let's create the following footer:
 Continue adding subcategories to the root categories according to the example above.
 
 The footer appears in the Frontend Application.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← White Labeling module overview</a>
+    <a href="../../integrations/overview">Integrations →</a>
+</div>

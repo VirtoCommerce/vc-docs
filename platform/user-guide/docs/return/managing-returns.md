@@ -50,4 +50,15 @@ To process the created return:
 
 Your changes have been saved.
 
-![Readmore](media/readmore.png){: width="25"} [Creating Refund Documents](../order-management/managing-documents.md#create-refund-documents)
+![Readmore](media/readmore.png){: width="25"} [Creating refund documents](../order-management/managing-documents.md#create-refund-documents)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Return module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

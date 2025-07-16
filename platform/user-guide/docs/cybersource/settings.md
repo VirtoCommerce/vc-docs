@@ -11,3 +11,16 @@ To manage personalization settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The settings have been saved.
+
+
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../manage-cybersource">← Managing CyberSource</a>
+    <a href="../../skyflow/overview">Skyflow module overview →</a>
+</div>

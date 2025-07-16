@@ -10,3 +10,12 @@ To configure Builder.io settings:
 
 The modifications have been saved.
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../use-builder-io">← Using Builder.io </a>
+    <a href="../../google-analytics/overview">Google Analytics module overview →</a>
+</div>

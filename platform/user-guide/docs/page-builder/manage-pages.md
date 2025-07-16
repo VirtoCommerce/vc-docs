@@ -61,3 +61,13 @@ If your page is outdated, click **Unpublish** in the upper right corner. The pag
 Alternatively, you can publish or unpublish your page later in from the Content module:
 
 ![Publish or unpublish new page](media/publish-unpublish.gif){: style="display: block; margin: 0 auto;" }
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Page Builder module overview</a>
+    <a href="../manage-pages-via-office">Managing pages via Page Builder office →</a>
+</div>

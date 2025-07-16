@@ -19,3 +19,14 @@ To open the settings of the **Push Message** module:
 1. Click **Save** in the top toolbar to save the changes.
 
 The settings have been saved.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../firebase-cloud-messaging">← Messaging via Firebase Cloud</a>
+    <a href="../../rating-reviews/overview">Rating and Reviews module overview →</a>
+</div>

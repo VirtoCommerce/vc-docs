@@ -1,4 +1,4 @@
-# Price Export Import Module
+# Price Export-Import Module
 
 To transfer large amounts of pricing information between Virto Commerce and another system, use a specially formatted spreadsheet to import or export the data. Virto Commerce uses CSV (semicolon-separated value) files for these bulk tasks.
 
@@ -18,6 +18,16 @@ The goal of this module is to provide a convenient way for non-technical busines
 * Making bulk price updates (for example, +5% for everything) for a price list.
 * Adding prices for a batch of new products added to the catalog.
 
-The diagram below illustrates the Price Export Import module functionality:
+The diagram below illustrates the Price Export-Import module functionality:
 
 ![Functionality](media/key-features.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../payment/overview">← Payment module overview</a>
+    <a href="../mapping-csv-files">Mapping CSV files →</a>
+</div>

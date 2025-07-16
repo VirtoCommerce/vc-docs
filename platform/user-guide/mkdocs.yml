@@ -223,7 +223,6 @@ nav:
           - Rating and Reviews: 
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
-                - Rest API: rating-reviews/rest-api.md
                 - Settings: rating-reviews/settings.md
           - xRecommend: 
                 - Overview: recommend/overview.md
@@ -233,20 +232,19 @@ nav:
                 - Overview: return/overview.md
                 - Managing Returns: return/managing-returns.md
                 - Settings: return/settings.md
-                - Rest API: return/rest-api.md
           - Search Related Modules:
                 - Search Index:
                       - Overview: search/overview.md
                       - Managing Search Index: search/managing-search.md
                       - Settings: search/settings.md
-                - Elastic Search 9:
+                - Elasticsearch 9:
                       - Overview: elastic-search-9/overview.md
                       - Settings: elastic-search-9/settings.md
-                - Elastic Search 8: 
+                - Elasticsearch 8: 
                       - Overview: elastic-search-8/overview.md
                       - Settings: elastic-search-8/settings.md
                 - Elastic App Search: elastic-app-search/overview.md
-                - Elastic Search:
+                - Elasticsearch:
                       - Overview: elastic-search/overview.md
                       - Settings: elastic-search/settings.md
                 - Algolia: algolia/overview.md

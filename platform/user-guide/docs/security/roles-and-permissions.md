@@ -34,3 +34,13 @@ To edit a role:
 1. Click **Save** in the toolbar to save the changes.
 
 The role has been modified.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-users">← Managing user accounts</a>
+    <a href="../marketer">Marketer →</a>
+</div>

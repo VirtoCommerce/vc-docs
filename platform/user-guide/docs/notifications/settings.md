@@ -25,3 +25,14 @@ To configure notification settings:
 1. In the **General** blade, click **Save** in the toolbar to save the changes.
 
 The notification settings have been configured.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notification-templates">← Notification templates</a>
+    <a href="../../page-builder/overview">Page Builder module overview→</a>
+</div>

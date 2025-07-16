@@ -43,3 +43,13 @@ You can also set these values [at the Store level](https://docs.virtocommerce.or
 
 !!! note
 	The priority and update frequency settings at the store level have a higher priority, which means they will override the settings specified at the module level.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-sitemaps">← Managing sitemaps</a>
+    <a href="../../subscription/overview">Subscription module overview →</a>
+</div>

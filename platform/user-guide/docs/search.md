@@ -2,8 +2,8 @@
 
 When dealing with numerous records, you will require searching and filtering options to efficiently locate the specific items you're looking for. Virto Commerce provides two searching options:
 
-* [Keyword search](search.md#keyword-search)
-* [Filtering](search.md#filtering)
+* [Keyword search.](search.md#keyword-search)
+* [Filtering.](search.md#filtering)
 
 ## Keyword search
 
@@ -59,3 +59,13 @@ More complex queries combining **AND** and **OR** operators are also supported a
 
     The filter parameters can be edited at any time.
 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../azure-search/overview">← Azure Search module overview</a>
+    <a href="../security/overview">Security module overview →</a>
+</div>

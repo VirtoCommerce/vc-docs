@@ -34,3 +34,13 @@ After [creating a price list](../pricing/creating-new-price-list.md), you can fi
     ![Import price list3](media/import-pricelist3.png)
 
 Your price list has been filled with information. 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../exporting-price-lists">← Exporting price lists</a>
+    <a href="../../push-messages/overview">Push Messages module overview →</a>
+</div>

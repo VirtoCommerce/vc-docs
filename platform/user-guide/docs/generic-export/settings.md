@@ -12,3 +12,14 @@ To configure Generic Export settings:
 1. Click **Save** in the toolbar to save the changes.
 
 Your settings have been saved.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../advanced-filtering">← Advanced filtering</a>
+    <a href="../../notifications/overview">Notifications module overview→</a>
+</div>

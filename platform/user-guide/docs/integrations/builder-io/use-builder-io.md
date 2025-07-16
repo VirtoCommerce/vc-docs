@@ -110,3 +110,13 @@ If you are trying to change the formatting of the header and it does not react, 
 
 ??? Demo
     ![Demonstration](media/builder.io_set_background.gif)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../getting-started">← Getting started </a>
+    <a href="../settings">Settings →</a>
+</div>

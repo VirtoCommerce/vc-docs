@@ -44,7 +44,7 @@ To define the scope of the role:
 1. Click **Save** in the Roles blade to save changes.
 
 
-## Assigning roles
+## Assign roles
 
 To assign a created role to a user:
 
@@ -55,3 +55,14 @@ To assign a created role to a user:
 1. In the new blade, click **Assign**.
 1. In the new blade, tick the roles to assign and click **OK**.
 1. Click **Save** in the **User information blade** to save the changes. 
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../settings">← Settings</a>
+    <a href="../../tax/overview">Tax module overview →</a>
+</div>

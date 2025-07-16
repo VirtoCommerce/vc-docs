@@ -11,3 +11,13 @@ To enable Virto Pages for your store:
 The Virto Pages feature has been enabled. Now, you can manage pages from the **Virto Pages** widget:
 
 ![Enabling Virto Pages](media/enabling-virto-pages.gif)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Pages module overview</a>
+    <a href="../../payment/overview">Payment module overview →</a>
+</div>

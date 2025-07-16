@@ -13,3 +13,14 @@ To configure native payment methods settings:
 The settings have been configured.
 
 ![Readmore](media/readmore.png){: width="25"} [Payment Methods Settings](../payment/managing-payment-methods.md)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-native-payment-methods">← Managing native payment methods</a>
+    <a href="../../cybersource/overview">CyberSource module overview →</a>
+</div>

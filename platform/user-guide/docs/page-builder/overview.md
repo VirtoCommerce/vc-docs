@@ -33,3 +33,13 @@ With the PageBuilder module, you can
 * Seamlessly integrate with Virto Frontend Application.
 * Leverage the native extensibility framework.
 * Set permissions to control access and editing capabilities.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../notifications/overview">← Notifications module overview</a>
+    <a href="../manage-pages">Managing pages via Content module →</a>
+</div>

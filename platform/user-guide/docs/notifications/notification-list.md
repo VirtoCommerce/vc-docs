@@ -36,3 +36,13 @@ To view the list of available email notifications:
 	The phone number field is for testing purposes only.
 
 ![Readmore](media/readmore.png){: width="25"} [Managing notification templates](notification-templates.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Notifications module overview</a>
+    <a href="../notification-layouts">Notification layouts →</a>
+</div>

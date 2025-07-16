@@ -24,3 +24,13 @@ With the Webhooks module:
 The diagram below illustrates the functionality of the Return module:
 
 ![Key entities](media/key-entities.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../thumbnails/overview">← Thumbnails module overview</a>
+    <a href="../managing-webhooks">Managing webhooks →</a>
+</div>

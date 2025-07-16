@@ -26,3 +26,12 @@ To view the available tax providers:
 
 ![Enable tax provider](media/enable-tax-provider.png)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Tax module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

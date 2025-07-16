@@ -13,3 +13,13 @@ To create a new notification layout:
 ![Notification layout](media/notification-layouts-path.png)
 
 Your new layout has been added to the layouts list within the [Notification template](notification-templates.md) blade.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notification-list">← Notification list</a>
+    <a href="../notification-log">Notification log →</a>
+</div>

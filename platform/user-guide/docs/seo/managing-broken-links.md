@@ -20,3 +20,12 @@ To view the list of broken links and manage them:
     ![Broken links details](media/broken-links-details.png)
 
 1. Click **Save** in the toolbar to save the changes.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../catalog/managing-SEO">← Managing SEO</a>
+    <a href="../../shipstation/overview">ShipStation module overview →</a>
+</div>

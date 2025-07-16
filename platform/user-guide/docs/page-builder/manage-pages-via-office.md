@@ -55,3 +55,14 @@ If your page is outdated, click **Unpublish** in the upper right corner. The pag
 Alternatively, you can publish your page from Page Builder Office later:
 
 ![Publish or unpublish](media/publish-unpublish-office.gif){: style="display: block; margin: 0 auto;" width="500"}
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../manage-pages">← Managing pages via Content module </a>
+    <a href="../../pages/overview">Pages module overview →</a>
+</div>

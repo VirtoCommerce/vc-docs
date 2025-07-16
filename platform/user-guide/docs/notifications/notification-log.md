@@ -5,7 +5,7 @@ You can view a log of:
 * A specific notification via the [Notification log](notification-log.md#notification-log) widget.
 * All the notifications sent via the [Notification activity feed](notification-log.md#notification-activity-feed).
 
-## Notification log
+## View notification log
 
 To view the log of a specific notification:
 
@@ -30,3 +30,13 @@ To view the log of all the notifications sent:
 To review email messages sent to clients you can preview the email notifications: 
 
 ![Preview](media/notifications-preview.gif)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notification-layouts">← Notification layouts</a>
+    <a href="../notification-templates">Notification templates →</a>
+</div>

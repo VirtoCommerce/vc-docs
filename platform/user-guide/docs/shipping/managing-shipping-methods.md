@@ -92,3 +92,13 @@ To configure a tax provider:
 ![Edit tax type](media/edit-tax-type.png)
 
 The tax provider has been configured.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Shipping module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

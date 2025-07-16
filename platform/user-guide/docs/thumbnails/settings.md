@@ -15,3 +15,11 @@ The settings have been configured.
 
 ![Readmore](media/readmore.png){: width="25"} [Free cron expression generator](https://www.freeformatter.com/cron-expression-generator-quartz.html)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../using-thumbnails">← Using thumbnails</a>
+    <a href="../../webhooks/overview">Webhooks module overview →</a>
+</div>

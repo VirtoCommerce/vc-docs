@@ -45,3 +45,12 @@ To run the job manually:
 ### Scheduled run
 
 You can schedule thumbnail generation to run in the background once in a certain period of time. Read more about it in the [Settings](settings.md) section. 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Thumbnails module overview</a>
+    <a href="../thumbnail-options">Managing thumbnail settings →</a>
+</div>

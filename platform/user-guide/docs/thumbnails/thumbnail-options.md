@@ -17,3 +17,13 @@ Before generating your thumbnails, you can edit various settings to adjust the i
 Your new setting appears in the list.
 
 ![Readmore](media/readmore.png){: width="25"} [Define color code](https://htmlcolorcodes.com/)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../generating-thumbnails">← Generating thumbnails</a>
+    <a href="../using-thumbnails">Using thumbnails →</a>
+</div>

@@ -46,3 +46,13 @@ To start notifying an employee about the assigned task:
 1. In the **Notification no-reply email** field, write the sender's email.
 1. In the **Tasks portal base url**, enter URL of tasks portal. By default, use platformUrl/apps/tasks.
 1. Restart your computer.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../using-application">← Using Tasks application</a>
+    <a href="../roles-permissions">Roles and permissions →</a>
+</div>

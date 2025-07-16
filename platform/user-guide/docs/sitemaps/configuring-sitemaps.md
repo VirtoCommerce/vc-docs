@@ -128,3 +128,13 @@ Automated export simplifies the process by using a scheduled job. By default, it
   ![Enable sitemaps export](media/enable-sitemaps-export-in-settings.gif)
 
 With automated export enabled, sitemaps will be regularly updated and saved to store assets, ensuring they're always up-to-date and accessible.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Sitemaps module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

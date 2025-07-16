@@ -36,3 +36,12 @@ The module is ready for integration with other sales channels.
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-builder-io/releases)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../avalara/overview">← Avalara module overview </a>
+    <a href="../getting-started">Getting started →</a>
+</div>

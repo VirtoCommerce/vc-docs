@@ -13,3 +13,13 @@ The recommendations are displayed in the Frontend Application.
 
 !!! note
     You can enable the recommendations display via the [Recommendations module settings](settings.md).
+
+    
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Recommendations module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

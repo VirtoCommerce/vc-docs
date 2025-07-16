@@ -15,3 +15,11 @@ The modifications become available in the Frontend Application:
 
 ![Frontend Application shipping methods](media/storefront-shipping-methods.png)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-shipping-methods">← Managing shipping methods</a>
+    <a href="../../sitemaps/overview">Sitemaps module overview →</a>
+</div>

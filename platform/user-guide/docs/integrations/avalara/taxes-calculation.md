@@ -38,3 +38,14 @@ To send the data to AvaTax manually:
 ![Send data manually](../media/send-orders-manually.png){: width="700"}
 
 Your data has been successfully sent.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../orders-synchronization">← Orders synchronization </a>
+    <a href="../tax-type-configuration">Tax type configuration →</a>
+</div>

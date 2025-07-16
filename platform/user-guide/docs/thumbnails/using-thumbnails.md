@@ -23,3 +23,13 @@ For instance:
         ```
 
 This makes it easy to retrieve the specific thumbnail you need.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../thumbnail-options">← Managing thumbnail settings</a>
+    <a href="../settings">Settings →</a>
+</div>

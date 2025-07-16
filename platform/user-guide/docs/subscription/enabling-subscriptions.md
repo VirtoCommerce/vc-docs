@@ -13,3 +13,13 @@ Now, you can sell subscription-based offerings.
 ![Enabling subscriptions](media/enable-subscriptions.gif)
 
 You can [configure other settings](settings.md).
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Subscription module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

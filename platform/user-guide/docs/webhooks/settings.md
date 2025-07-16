@@ -11,3 +11,13 @@ To configure the **Webhooks** module settings:
 1. Click **Save** in the toolbar to save the changes.
 
 The settings have been saved.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-webhooks">← Managing webhooks</a>
+    <a href="../../white-labeling/overview">Settings →</a>
+</div>

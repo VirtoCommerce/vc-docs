@@ -23,3 +23,12 @@ With the Sitemaps module, you can:
 * [Schedule and configure a recurring job to generate sitemap files](settings.md)
 * [Download sitemap ZIP packages with XML files](configuring-sitemaps.md#download-sitemaps)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../shipping/overview">← Shipping module overview</a>
+    <a href="../configuring-sitemaps">Managing sitemaps →</a>
+</div>

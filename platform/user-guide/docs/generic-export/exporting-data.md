@@ -40,3 +40,11 @@ To start the data export:
     ![Export progress](media/export-progress.png){: width="600"}
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../assigning-permissions">← Assigning permissions</a>
+    <a href="../advanced-filtering">Advanced filtering →</a>
+</div>

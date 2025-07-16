@@ -46,3 +46,14 @@ To log in on behalf of another user, sign into Virto Commerce portal as an admin
 The Frontend Application will open in a new window and prompt you to re-enter your credentials for security purposes:
 
 ![Redirection to Storefront](media/redirection-to-storefront.png){: width="750"}
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../api-key">← Generating API key</a>
+    <a href="../../seo/overview">SEO module overview →</a>
+</div>

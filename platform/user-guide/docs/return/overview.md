@@ -1,4 +1,4 @@
-# Return
+# Overview
 
 The **Return** module gives you an opportunity to view and manage all return operations. Once a customer returns an item to your store, this information appears in the list of returns.
 
@@ -23,3 +23,11 @@ The diagram below illustrates the functionality of the Return module:
 ![Key entities](media/key-entities.png)
 
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../xrecommend/overview">← Recommendations module overview</a>
+    <a href="../managing-returns">Managing returns →</a>
+</div>

@@ -43,3 +43,14 @@ To configure non-confidential module settings:
 ![Readmore](media/readmore.png){: width="25"} [Configuring confidential information](../../../developer-guide/Fundamentals/Payments/authorize-net)
 
 Your modifications have been saved.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Authorize.net module overview</a>
+    <a href="../../price-export-import/overview">Price Export Import module overview →</a>
+</div>

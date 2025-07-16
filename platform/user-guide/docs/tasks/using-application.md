@@ -53,3 +53,13 @@ To process the assigned task:
     * Click ![Restore](media/restore.png){: width="25" height="25"} to restore the original version of the task.
     * Click ![Save](media/save.png){: width="30" height="30"} to save changes.
     * Click ![Delete](media/delete.png){: width="25" height="25"} to delete the task.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Tasks module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

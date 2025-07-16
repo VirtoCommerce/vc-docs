@@ -43,3 +43,12 @@ You template has been added to the templates list.
 	![preview](media/notification-template-preview.png){: width="550"}
 
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../notification-log">← Notification log</a>
+    <a href="../settings">Settings →</a>
+</div>

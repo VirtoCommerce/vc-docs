@@ -20,6 +20,16 @@ The **Ratings and Reviews** module facilitates:
 * Configurable rating calculator, including both average and [Wilson](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html).
 * Email review reminders for customers who have purchased products, encouraging them to return and leave a review.
 
-The diagram below illustrates the interconnections among various key entities within the **Rating and Reviews** module:
+The diagram below illustrates the interconnections among various key entities within the Rating and Reviews module:
 
 ![Key entities](media/key-entities.png)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../push-messages/overview">← Push Messages module overview</a>
+    <a href="../managing-reviews">Managing reviews →</a>
+</div>

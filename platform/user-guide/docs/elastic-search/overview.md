@@ -1,6 +1,6 @@
 # Overview
 
-The **Elastic Search** module serves as a search engine for the Search module. It leverages the Elasticsearch and OpenSearch engines to store indexed documents.
+The **Elasticsearch** module serves as a search engine for the Search module. It leverages the Elasticsearch and OpenSearch engines to store indexed documents.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search/)
 
@@ -15,8 +15,19 @@ The module supports the following Elasticsearch deployment options:
 
 ## Key features
 
-The diagram below illustrates the functionality of the Elastic Search module:
+The diagram below illustrates the functionality of the Elasticsearch module:
 
 ![Key entities](media/key-entities.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Blue-Green Indexing](../search/managing-search.md#blue-green-indexing)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../elastic-app-search/overview">← Elastic App Search module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

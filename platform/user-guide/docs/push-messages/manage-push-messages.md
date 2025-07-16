@@ -65,3 +65,12 @@ To view the details of the sent push messages:
 
 ![Status](media/message-status.png)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Push Messages module overview</a>
+    <a href="../firebase-cloud-messaging">Messaging via Firebase Cloud →</a>
+</div>

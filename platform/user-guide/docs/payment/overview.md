@@ -22,3 +22,13 @@ The diagram below illustrates the interconnections among the Payment and Stores 
 ![Key entities](media/key-entities.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Native payment methods](../native-payment-methods/overview.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../pages/overview">← Pages module overview</a>
+    <a href="../managing-payment-methods">Managing payment methods →</a>
+</div>

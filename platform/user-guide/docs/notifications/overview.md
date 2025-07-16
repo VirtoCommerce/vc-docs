@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce Notifications module enables you to manage a variety of notification scenarios for your customers. You'll need to send notifications to your customers in various situations:
+The **Notifications** module enables you to manage a variety of notification scenarios for your customers. You'll need to send notifications to your customers in various situations:
 
 * When they successfully sign up.
 * When they request a password reset.
@@ -22,6 +22,16 @@ The diagram below illustrates the interconnections among various key entities wi
 
 With the Notifications module, you can:
 
-1. [Manage email and text notifications.](notification-list.md)
-2. [Create new notification layouts.](notification-layouts.md)
-3. [View the notifications logs.](notification-log.md)
+* [Manage email and text notifications.](notification-list.md)
+* [Create new notification layouts.](notification-layouts.md)
+* [View the notifications logs.](notification-log.md)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../generic-export/overview">← Generic Export module overview</a>
+    <a href="../notification-list">Notification list →</a>
+</div>

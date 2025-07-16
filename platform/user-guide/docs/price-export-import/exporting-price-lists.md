@@ -1,4 +1,4 @@
-# Export Pricelists
+# Export Price Lists
 
 There are the following options for exporting price lists:
 
@@ -92,3 +92,13 @@ To customize exported information to your needs, use **advanced export**:
     ![Advanced filter](media/use-advanced-filter-from-notification.png)
 
 The required items have been exported to a CSV file.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../mapping-csv-files">← Mapping CSV files</a>
+    <a href="../importing-price-lists">Importing price lists →</a>
+</div>

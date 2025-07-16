@@ -48,3 +48,14 @@
 **Variation:** Each product may have one or more variations; for example, a cell phone may come in different colors: blue, white, black, etc. You can create variations based on color, size, and other properties that you configure.
 
 **Vendor (Merchant):** A profile for a vendor you work with.
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../white-labeling/overview">← White Labeling module overview</a>
+    <a href="../integrations/overview">Integrations overview →</a>
+</div>

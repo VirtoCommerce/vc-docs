@@ -20,3 +20,12 @@ The diagram below illustrates the functionality of the ShipStation module:
 ![Readmore](media/readmore.png){: width="25"} [About ShipStation](https://shipstation.com/)
 
 ![Readmore](media/readmore.png){: width="25"} [Integration Guide](https://help.shipstation.com/hc/en-us/articles/360025856192-Custom-Store-Development-Guide)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../seo/overview">← SEO module overview</a>
+    <a href="../../shipping/overview">Shipping module overview →</a>
+</div>

@@ -68,3 +68,13 @@ Let's say we have a marketer who is only responsible for B2B-store promotions, w
 ![Limitations](media/marketer-limitations.png)
 
 With this feature, top marketers prevent unwanted modifications of created promotions.   
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../roles-and-permissions">← Managing roles and permissions</a>
+    <a href="../order-manager">Order manager →</a>
+</div>

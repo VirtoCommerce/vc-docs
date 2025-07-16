@@ -52,3 +52,13 @@ To delete a non-integrative method:
 1. Click **Delete** in the top toolbar.
 
 The selected method has been deleted.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Overview</a>
+    <a href="../settings">Settings →</a>
+</div>

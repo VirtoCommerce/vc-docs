@@ -42,7 +42,11 @@ The module adds Hotjar link into Applications menu. It redirects to Hotjar Dashb
     ```
 
 
+<br>
+<br>
+********
 
-
-
-
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Hotjar module overview </a>
+    <a href="../../power-bi/overview">Power BI Reports module overview →</a>
+</div>

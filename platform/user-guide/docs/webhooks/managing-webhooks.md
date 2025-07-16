@@ -54,3 +54,13 @@ Upon updating the Virto platform, users employing webhooks with multiple event s
 ![Warning message](media/warning.png)
 
 You can continue using such a webhook as before, although **you will not be able to edit it**. However, we recommend that you remove such webhooks and replace them with new ones. 
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Webhooks module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

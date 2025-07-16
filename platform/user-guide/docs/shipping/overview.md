@@ -19,3 +19,12 @@ With the Shipping module, you can:
 The diagram below illustrates the functionality of the Shipping module:
 
 ![Key entities](media/key-entities.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../shipstation/overview">← ShipStation module overview</a>
+    <a href="../managing-shipping-methods">Managing shipping methods →</a>
+</div>

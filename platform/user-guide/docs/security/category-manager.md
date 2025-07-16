@@ -63,3 +63,14 @@ For category managers, the platform will only display modules for which they hav
 ![Modules for category managers](media/category-manager-limitations2.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Managing categories](../catalog/managing-categories.md)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../order-manager">← Order manager</a>
+    <a href="../api-key">Generating API key →</a>
+</div>

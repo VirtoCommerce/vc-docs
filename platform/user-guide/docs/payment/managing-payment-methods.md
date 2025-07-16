@@ -29,3 +29,13 @@ To edit a payment method:
 1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been applied.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Payment module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

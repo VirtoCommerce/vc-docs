@@ -44,3 +44,13 @@ The diagram below illustrates the functionality of the Search module:
 ![Key entities](media/key-entities.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Configuring Search Settings](../../../developer-guide/Configuration-Reference/appsettingsjson)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../return/overview">← Return module overview</a>
+    <a href="../managing-search">Managing search index →</a>
+</div>

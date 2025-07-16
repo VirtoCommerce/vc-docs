@@ -25,3 +25,12 @@ To create a new role:
 
 ![Readmore](media/readmore.png){: width="25"} [Assigning roles to users](../security/managing-users.md#assign-roles-to-users)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Generic Export module overview</a>
+    <a href="../exporting-data">Exporting data →</a>
+</div>

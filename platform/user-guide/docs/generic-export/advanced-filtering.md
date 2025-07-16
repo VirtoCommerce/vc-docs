@@ -23,3 +23,12 @@ To apply advanced filtering:
 
 ![Path](media/advanced-filter-path.png)
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../exporting-data">← Exporting data</a>
+    <a href="../settings">Settings →</a>
+</div>
