@@ -178,6 +178,6 @@ You can build and deploy docker images to:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../more-targets">← Managing Platform and modules</a>
+    <a href="../virto-cloud-overview">← Virto Cloud overview</a>
     <a href="../../fundamentals/caching/01-overview">Fundamentals. Caching →</a>
 </div>

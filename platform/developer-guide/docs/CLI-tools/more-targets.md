@@ -63,5 +63,5 @@ This command helps keep your workspace clean by removing temporary build files.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../install-and-update-platform-and-modules">← Install and update Platform and modules</a>
-    <a href="../virto-cloud">Virto Cloud →</a>
+    <a href="../virto-cloud-overview">Virto Cloud overview →</a>
 </div>

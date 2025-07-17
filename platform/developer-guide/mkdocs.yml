@@ -18,6 +18,7 @@ edit_uri: edit/dev/docs/
 
 # Page tree
 nav:
+    - About Virto Commerce Platform: getting-to-know-platform.md
     - Overview: index.md
     - Getting Started:
           - System Requirements: Getting-Started/system-requirements.md
@@ -45,7 +46,9 @@ nav:
           - Cold Start Optimization and Data Migration: CLI-tools/cold-start-and-data-migration.md
           - Install and Update Platform and Modules: CLI-tools/install-and-update-platform-and-modules.md
           - Managing Platform and Modules with CLI: CLI-tools/more-targets.md
-          - Virto Cloud: CLI-tools/virto-cloud.md
+          - Virto Cloud:
+                - Overview: CLI-tools/virto-cloud-overview.md
+                - Using Virto Cloud: CLI-tools/virto-cloud.md
     - Fundamentals:
           - Caching:
                 - Overview: Fundamentals/Caching/01-overview.md
