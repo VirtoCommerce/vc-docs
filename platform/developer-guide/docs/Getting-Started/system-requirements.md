@@ -102,9 +102,7 @@ The Virto Commerce Platform supports:
         Virto Commerce previously supported IE6 and IE7 in versions prior to 3.60, while IE8 was supported in versions prior to 4.10.
     
 -   Mozilla Firefox 2.0 and higher.
-    
 -   Google Chrome 1.x.
-    
 -   Apple Safari 2.x.
 
 

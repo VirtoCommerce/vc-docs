@@ -6,9 +6,13 @@ This mutation logs a historical event for a user, such as product views or purch
 
 The `InputPushHistoricalEventType` is a type that represents the input object for pushing a historical event.
 
-| Field                                                                                   | Description                                                       |
-|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| `command` [ ==InputPushHistoricalEventType!== ](../object/InputPushHistoricalEventType.md)  | The details of the historical event to be recorded.               |
+| Field                     | Description                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| `storeId` ==String==      | The ID of the store where the event occurred.                               |
+| `productId` ==String==    | The ID of the product involved in the event.                               |
+| `productIds` ==[String]== | A list of product IDs associated with the event, used for multi-product actions like bulk views or purchases. |
+| `sessionId` ==String==    | The identifier of the user's session during which the event occurred.|
+| `eventType` ==String==    | The type of event.                  |
 
 ## Possible returns
 

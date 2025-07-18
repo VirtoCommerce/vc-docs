@@ -70,7 +70,7 @@ These services are shared across all modules:
 * [Localization and internationalization](Platform-Manager/localization.md).
 * Host application for administrative UI.
 
-All business-specific capabilities — like catalog, pricing, marketing, or order management — are delivered as installable modules. 
+All business-specific capabilities (like catalog, pricing, marketing, or order management) are delivered as installable modules. 
 
 
 ## Modules
@@ -90,12 +90,12 @@ While loosely coupled by design, some modules may depend on others. These depend
 
 These dependencies can be defined on different levels:
 
-* At the project level– for example, by adding a NuGet package reference to another module.
-* In the module manifest– where you can declare which other modules the current one depends on and how they should be loaded.
-* During startup, the Platform analyzes these declarations and ensures that all modules are initialized in the correct sequence. This is essential when developing or maintaining complex solutions, especially 
-those involving many interconnected components
+* **At the project level**: For example, add a NuGet package reference to another module.
+* **In the module manifest**: Declare other modules the current one depends on and how they should be loaded.
+* **During startup**: the Platform analyzes these declarations and ensures that all modules are initialized in the correct sequence. This is essential when developing or maintaining complex solutions, especially 
+those involving many interconnected components.
 
-## Versioning & update strategy
+## Versioning and update strategy
 
 Virto Commerce uses a **modular versioning** strategy. The ecosystem includes over 80 modules, but essential ones are grouped into **bundles**:
 
@@ -113,3 +113,10 @@ Virto Commerce uses a **modular versioning** strategy. The ecosystem includes ov
 
 Choose **Stable** for reliability or **Edge** for faster iteration and access to cutting-edge features.
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../">Platform documentation overview →</a>
+</div>

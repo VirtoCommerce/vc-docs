@@ -640,28 +640,19 @@ nav:
                       - deleteQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/deleteQuoteAttachments.md
                       - updateQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments.md
                       - updateQuoteDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteDynamicProperties.md
-          - White Labeling:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/White-labeling/overview.md
-                - Queries:
-                      - whiteLabelingSettings: GraphQL-Storefront-API-Reference-xAPI/White-labeling/queries/whiteLabelingSettings.md
-                - Objects:
-                      - ChangeOrganizationLogoResultType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/ChangeOrganizationLogoResultType.md
-                      - WhiteLabelingSettingsType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/WhiteLabelingSettingsType.md
-                      - FaviconType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/FaviconType.md
-                      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/MenuLinkType.md
-                - Mutations:
-                      - ChangeOrganizationLogo: GraphQL-Storefront-API-Reference-xAPI/White-labeling/mutations/ChangeOrganizationLogo.md
           - xRecommend:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Recommend/overview.md
                 - Queries:
                       - recommendations: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations.md
                       - recentlyBrowsed: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recentlyBrowsed.md
+                      - searchHistory: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/searchHistory.md
                 - Objects:
                       - GetRecommendationsResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType.md
                       - GetRecentlyBrowsedResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecentlyBrowsedResponseType.md
-                      - InputPushHistoricalEventType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/InputPushHistoricalEventType.md
+                      - SearchHistoryResultType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/SearchHistoryResultType.md
                 - Mutations:
                       - pushHistoricalEvent: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent.md
+                      - saveSearchQuery: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/saveSearchQuery.md
           - Store:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
                 - Queries:
@@ -674,6 +665,26 @@ nav:
                       - ModuleSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingsType.md
                       - ModuleSettingType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingType.md
                       - PasswordOptionsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/PasswordOptionsType.md
+          - Shipping:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Shipping/overview.md
+                - Queries:
+                      - pickupLocations: GraphQL-Storefront-API-Reference-xAPI/Shipping/queries/pickupLocations.md
+                - Objects:
+                      - PickupAddressType: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupAddressType.md
+                      - PickupLocationType: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationType.md
+                      - PickupLocationEdge: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationEdge.md
+                      - PickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationConnection.md
+          - White Labeling:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/White-labeling/overview.md
+                - Queries:
+                      - whiteLabelingSettings: GraphQL-Storefront-API-Reference-xAPI/White-labeling/queries/whiteLabelingSettings.md
+                - Objects:
+                      - ChangeOrganizationLogoResultType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/ChangeOrganizationLogoResultType.md
+                      - WhiteLabelingSettingsType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/WhiteLabelingSettingsType.md
+                      - FaviconType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/FaviconType.md
+                      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/MenuLinkType.md
+                - Mutations:
+                      - ChangeOrganizationLogo: GraphQL-Storefront-API-Reference-xAPI/White-labeling/mutations/ChangeOrganizationLogo.md
           - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
           - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
     - Extensibility:

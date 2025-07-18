@@ -18,6 +18,10 @@ For example, when searching for books, you can narrow your selection by author, 
     
 ![facet search](../media/faceted-search.png)
 
+Clicking the search input field opens a dropdown that displays the user's 5 most recent search queries:
+
+![search history](../media/search-history.png)
+
 ### Scoped (hierarchical) search
 
 Users can perform scoped searches within specific product categories. This narrows their search to a selected category, improving result relevance. A category chip appears in the search bar to indicate the current scope, and users can easily reset the search to span the entire catalog:
