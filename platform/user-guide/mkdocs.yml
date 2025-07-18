@@ -250,7 +250,8 @@ nav:
                 - Algolia: algolia/overview.md
                 - Lucene: lucene/overview.md
                 - Azure Search: azure-search/overview.md
-                - Search options: search.md
+                - Search Options: search.md
+                - Search Query Syntax: search-query-syntax.md
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md

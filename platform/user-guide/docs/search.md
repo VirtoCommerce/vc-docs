@@ -11,31 +11,7 @@ The most straightforward approach to locating an item is by utilizing the keywor
 
 ![Keyword search](contacts/media/keyword_search.png){: style="display: block; margin: 0 auto;" width="400"}
 
-To enable broader and more powerful search capabilities across indexed fields, our search supports **OR** and **AND** search expressions. 
-
-=== "**OR** expression"
-
-    The **brand:FABORY OR fastener_finish:"Zinc Plated"** query returns the following:
-
-    ![OR](media/or-expression.png){: style="display: block; margin: 0 auto;" }
-
-=== "**AND** expression"
-
-    The **brand:FABORY AND fastener_finish:"Zinc Plated"** query returns the following:
-
-    ![AND](media/AND-expression.png){: style="display: block; margin: 0 auto;" }
-
-
-
-### Combined AND/OR expressions
-
-More complex queries combining **AND** and **OR** operators are also supported and can be used to target multiple conditions across different fields: 
-
-* **keyword: "gtin:44 AND (code:ZQL-92511859 OR itemLineNOM:99)"** returns products with **gtin:44** and either a matching **code** or **itemLineNOM**.
-
-* **keyword: "(gtin:44 AND code:ZQL-92511859) OR (gtin:44 AND itemLineNOM:99)"** ensures that **gtin:44** is included in both branches of the query, and either condition can satisfy the match.
-
-
+To enable broader and more powerful search capabilities across indexed fields, our search supports [various search expressions](search-query-syntax.md). 
 
 ## Filtering
 
@@ -67,5 +43,5 @@ More complex queries combining **AND** and **OR** operators are also supported a
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../azure-search/overview">← Azure Search module overview</a>
-    <a href="../security/overview">Security module overview →</a>
+    <a href="../search-query-syntax">Search query syntax and examples →</a>
 </div>
