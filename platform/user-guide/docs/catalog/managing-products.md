@@ -23,11 +23,11 @@ To add a new product to your catalog:
 1. Click **Add** in the toolbar.
 1. In the **New category item** blade, select the type of the product to add. 
 
- 	![Adding a new product](media/add-new-product.png)
+ 	![Adding a new product](media/add-new-product.png){: style="display: block; margin: 0 auto;" }
  
 1. In the **New Product** blade, fill in the following fields:
 
-	![New product blade](media/new-product-blade.png)
+	![New product blade](media/new-product-blade.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes.
 
@@ -50,7 +50,7 @@ To view the product details of the added product:
 	* Widgets:
 		![Products details widgets](media/product-properties-widgets.png)
 
-## Setup product pack size
+## Set up product pack size
 
 To ensure that orders are placed in the correct quantities, set a pack size for a product:
 
@@ -60,7 +60,7 @@ To ensure that orders are placed in the correct quantities, set a pack size for 
 1. In the next blade, set pack size.
 1. Click **Save** in the toolbar.
 
-![Add pack size](media/add-pack-size.png)
+![Add pack size](media/add-pack-size.png){: style="display: block; margin: 0 auto;" }
 
 This helps suppliers fulfill orders smoothly without needing to cancel or unexpectedly adjust quantities:
 

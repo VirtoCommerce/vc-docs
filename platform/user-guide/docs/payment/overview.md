@@ -19,7 +19,7 @@ Although the **Payment** module does not have its own user interface, you need t
 The diagram below illustrates the interconnections among the Payment and Stores modules:
 <br>
 <br>
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Native payment methods](../native-payment-methods/overview.md)
 

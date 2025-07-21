@@ -1,6 +1,6 @@
 # Elasticsearch 8
 
-The Virto Commerce **Elasticsearch 8** module serves as a search engine for the Search module. It is the most commonly used search engine among Virto Commerce users.
+The **Elasticsearch 8** module serves as a search engine for the Search module. It is the most commonly used search engine among Virto Commerce users.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search-8/)
 
@@ -17,7 +17,7 @@ With the Elasticsearch 8 module, you can perform:
 
 The diagram below illustrates the functionality of the Elasticsearch 9 module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

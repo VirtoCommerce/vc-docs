@@ -16,11 +16,11 @@ When [enabled](enabling-subscriptions.md), the subscriptions will be displayed:
 
 To view all the created subscriptions, click **Subscriptions** in the main menu. The next blade displays the list of created subscriptions:
 
-![Subscriptions](media/subscriptions-in-subscriptions-module.png)
+![Subscriptions](media/subscriptions-in-subscriptions-module.png){: style="display: block; margin: 0 auto;" }
 
 Click on the required subscription to edit it:
 
-![Edit subscription](media/edit-subscription.png)
+![Edit subscription](media/edit-subscription.png){: style="display: block; margin: 0 auto;" }
 
 ## View subscriptions in Order module
 
@@ -30,7 +30,7 @@ To view the created subscriptions by the order for which they were created:
 1. In the next blade, select the required order.
 1. In the next blade, the subscriptions widget displays the subscriptions available for this order.
 
-    ![Subscriptions widget](media/subscriptions-widget.png)
+    ![Subscriptions widget](media/subscriptions-widget.png){: style="display: block; margin: 0 auto;" }
 
 1. Click on the widget to edit the subscription.
 

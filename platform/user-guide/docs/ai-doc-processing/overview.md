@@ -7,7 +7,7 @@ This module includes:
 * Intelligent document processor abstractions and implementations.
 * Purchase request to upload orders and order-like documents from other services (or even handwritten ones) to create a new order (shopping cart or quote) in VirtoCommerce.
 
-![Handwritten order recognition](media/handwritten_order.gif)
+![Handwritten order recognition](media/handwritten_order.gif){: style="display: block; margin: 0 auto;" }
 
 Please [contact us](https://virtocommerce.com/request-demo) to start using our **AI smart capture** feature.
 

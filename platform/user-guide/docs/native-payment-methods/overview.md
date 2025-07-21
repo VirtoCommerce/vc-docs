@@ -10,7 +10,7 @@ The **Native Payment Methods** module allows you to create **non-integrative pay
 
 The diagram below illustrates the functionality of the Native Payment Methods module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Payment Methods](../payment/managing-payment-methods.md)
 

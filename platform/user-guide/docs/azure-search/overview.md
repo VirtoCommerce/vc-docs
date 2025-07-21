@@ -10,7 +10,7 @@ The **Azure Search** module serves as a search engine within the Search module. 
 
 The diagram below illustrates the functionality of the Azure Search module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 

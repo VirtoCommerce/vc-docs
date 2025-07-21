@@ -26,7 +26,7 @@ The Cart module offers:
 
 The diagram below illustrates the Cart module functionality:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

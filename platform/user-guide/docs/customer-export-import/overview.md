@@ -18,7 +18,7 @@ With the **Customer Export and Import** module, you can:
 
 The diagram below illustrates the functionality of the **Customer Export and Import** module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Exporting Contacts](../contacts/managing-contacts.md#export-contacts)
 

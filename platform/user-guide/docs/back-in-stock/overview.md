@@ -1,6 +1,6 @@
 # Overview
 
-The Back-in-stock module helps customers stay informed when products are available again. It also helps sellers  retain potential sales for out-of-stock items. This module lets customers subscribe to real-time notifications when products are restocked. This raises customers satisfaction and reduces the abandoned purchases. Sellers have a clear view of what their customers want through a simple, centralized back office interface. This helps sellers plan their inventory with ease.
+The **Back-in-stock** module helps customers stay informed when products are available again. It also helps sellers  retain potential sales for out-of-stock items. This module lets customers subscribe to real-time notifications when products are restocked. This raises customers satisfaction and reduces the abandoned purchases. Sellers have a clear view of what their customers want through a simple, centralized back office interface. This helps sellers plan their inventory with ease.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-back-in-stock)
 
@@ -8,7 +8,7 @@ The Back-in-stock module helps customers stay informed when products are availab
 
 The diagram below illustrates the functionality of the Back-in-stock module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ## Key features
 

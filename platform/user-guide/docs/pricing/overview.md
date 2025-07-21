@@ -1,6 +1,6 @@
 # Overview
 
-The Pricing module is designed for storing, managing, and calculating product prices.
+The **Pricing** module is designed for storing, managing, and calculating product prices.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pricing)
 
@@ -17,7 +17,7 @@ The Pricing module includes the following entities:
 
 The diagram below illustrates the interconnections among various key entities within the Pricing module:
 
-![Pricing key entities](media/key-entities.png)
+![Pricing key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 With the Pricing module, you can:
 

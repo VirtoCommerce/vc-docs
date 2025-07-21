@@ -15,7 +15,7 @@ With the ShipStation module, you can:
 
 The diagram below illustrates the functionality of the ShipStation module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [About ShipStation](https://shipstation.com/)
 

@@ -23,7 +23,7 @@ The module provides an API to work with the tax provider list and allows you to 
 With the Tax module, you can:
 
 * Evaluate tax using different tax providers, including the built-in FixedRateTaxProvider, and easily add custom tax calculation rules.
-* View the list of available tax providers on the user interface and edit their settings directly from the platform.
+* View the list of available tax providers on the user interface and edit their settings directly from the Platform.
 * Connect tax providers to specific stores and configure different tax rates based on location, product type, or other parameters.
 * Implement custom tax providers by creating new modules that inherit from the abstract TaxProviderBase class.
 * Register new tax providers programmatically by implementing the ITaxProvider interface.
@@ -31,7 +31,7 @@ With the Tax module, you can:
 
 The diagram below illustrates the functionality of the Tax module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

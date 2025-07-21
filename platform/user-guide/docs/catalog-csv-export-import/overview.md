@@ -29,7 +29,7 @@ The key features of the module include:
 
 The diagram below illustrates the interconnection between the **Catalog CSV Export and Import** module and the **Catalog** module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

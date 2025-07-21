@@ -1,6 +1,6 @@
 # Overview
 
-The Catalog Publishing module is a set of tools for evaluating the completeness of products for publication according to specified criteria.
+The **Catalog Publishing** module is a set of tools for evaluating the completeness of products for publication according to specified criteria.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-catalog-personalization)
 
@@ -10,7 +10,7 @@ The Catalog Publishing module is a set of tools for evaluating the completeness 
 
 The diagram below illustrates the interconnections between the Catalog and the Catalog Publishing module:
 
-![Diagram](media/diagram.png)
+![Diagram](media/diagram.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

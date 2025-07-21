@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce Builder.io module adds link to Builder.io to the application menu. By clicking on it, users immediately access the toolkit for transforming Frontend Application page designs into optimized web and mobile experiences.
+The **Builder.io** module adds link to Builder.io to the application menu. By clicking on it, users immediately access the toolkit for transforming Frontend Application page designs into optimized web and mobile experiences.
 
 ![Readmore](media/readmore.png){: width="25"} [How builder.io works](https://www.builder.io/c/docs/how-builder-works)
 
@@ -10,7 +10,7 @@ Virto Commerce and Builder.io integrate seamlessly via API. Once connected, Buil
 
 Your e-commerce team can efficiently use existing code components and the design system from the Virto Commerce frontend as building blocks, enabling faster development while maintaining brand consistency. In addition, they can utilize Builder’s pre-built blocks to create customized experiences 
 
-![Overview](media/overview.png){: width="650"}
+![Overview](media/overview.png){: style="display: block; margin: 0 auto;" width="650"}
 
 Developers can easily register new Virto frontend components in code, allowing business team members to use the Builder’s visual editor to drag and drop these components to create content-rich experiences with no dev support. These components can be reused and built into templates, speeding the launch of new pages.
 
@@ -21,7 +21,7 @@ Once the content is complete in the Builder's visual editor, Virto's prerenderin
 
 The diagram below illustrates the relationships within the Virto Commerce Content Management System:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 With the Builder.io module, you can:
 

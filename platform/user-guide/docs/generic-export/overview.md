@@ -10,7 +10,7 @@ The **Generic Export** module provides the ability to export data from the Catal
 
 The diagram below illustrates the functionality of the **Generic Export** module:
 
-![GE key entities](media/key-entities.png)
+![GE key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 With the Generic Export Module, you can:
 

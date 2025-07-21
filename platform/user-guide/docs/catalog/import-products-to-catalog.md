@@ -11,7 +11,7 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 1. [Create a new price list](../pricing/creating-new-price-list.md). **New-price-list** in our example.
 1. Copy the Id of the created price list to clipboard. **c801f074-b9d3-4662-8978-845c8b0d75ca** in our example.
 
-    ![Copy pricelist Id](media/copy-pricelist-id.png)
+    ![Copy pricelist Id](media/copy-pricelist-id.png){: style="display: block; margin: 0 auto;" }
 
 1. Create a CSV file containing all the necessary fields, i.e., product name, Id, SKU, price, price list Id, etc. To create a new catalog, you can [export a catalog in a CSV format](export-catalog.md) or [download this sample file](price-list-sample.xlsx) to use as a template.
 
@@ -22,15 +22,15 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 
 1. Paste the copied price list Id to the **PriceListId** field.
 
-    ![Paste pricelist Id](media/paste-pricelist-id.png)
+    ![Paste pricelist Id](media/paste-pricelist-id.png){: style="display: block; margin: 0 auto;" }
 
 1. [Create a new catalog](add-new-catalog.md#add-new-catalog) (**New_catalog** in our example) and [add a new category](managing-categories.md#add-new-category) into it (**New_category** in our example).
 
-    ![Create new catalog and category](media/create-new-catalog-and-category.png)
+    ![Create new catalog and category](media/create-new-catalog-and-category.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill the catalog with information by [importing your CSV file into it](import-catalog.md).
 
-    ![Fill the catalog](media/add-info-via-csv.png)
+    ![Fill the catalog](media/add-info-via-csv.png){: style="display: block; margin: 0 auto;" }
 
 1. Link your catalog to the catalog of the store. As long as the store displays only one catalog, linking new catalogs to the one displayed is the best way to extend the displayed assortment:
 
@@ -45,11 +45,11 @@ Follow this step-by-step guide to learn how to import new products into the Virt
     1. In the next blade, check the category. **New-category** in our example.
     1. Click **Map** in the top toolbar.
 
-        ![Link catalog 2](media/link-catalog-2.png)
+        ![Link catalog 2](media/link-catalog-2.png){: style="display: block; margin: 0 auto;" }
 
     In the **Categories and Items** blade, you will see that the required category has been linked to the catalog:
 
-    ![Result](media/result.png)
+    ![Result](media/result.png){: style="display: block; margin: 0 auto;" }
 
 1. Create a price list assignment to connect the price list (**New-price-list** in our example) to the catalog displayed in the Frontend Application (**B2B-mixed** in our example):
 
@@ -68,11 +68,11 @@ Follow this step-by-step guide to learn how to import new products into the Virt
         1. Select a catalog from the dropdown list (**B2B-mixed** in our example).
         1. Click **Create**.
 
-        ![Add assignment 2](media/add-assignment-2.png)
+        ![Add assignment 2](media/add-assignment-2.png){: style="display: block; margin: 0 auto;" }
 
     Your new assignment appears:
 
-    ![New assignment](media/new-assignment.png)
+    ![New assignment](media/new-assignment.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill the price list with the items from your newly created catalog:
     1. Click on the **Prices** widget.
@@ -82,20 +82,20 @@ Follow this step-by-step guide to learn how to import new products into the Virt
     1. In the next blade, check the items to add to the price list. 
     1. Click **Add selected** in the top toolbar. You might need to repeat it several times if the items are located on more the one page.
 
-        ![Fill price list](media/fill-price-list-1.png)
+        ![Fill price list](media/fill-price-list-1.png){: style="display: block; margin: 0 auto;" }
 
 1. Check SEO Settings of your catalog (**Catalog --> Your catalog (New-catalog) --> New category --> SEO widget --> Your category (New-category)**). Make sure your catalog has a unique URL slug and is assigned to the proper store:
 
-    ![SEO settings](media/seo-settings.png)
+    ![SEO settings](media/seo-settings.png){: style="display: block; margin: 0 auto;" }
 
-1. View the results in the frontend  environment:
+1. View the results in the Frontend environment:
 
     1. In the main menu, click **Stores**.
     1. In the next blade, click on the required store (**B2B-Store** in our example).
     1. In the next blade, click **Open in browser** in the top toolbar.
 
 
-        ![View result](media/result-in-frontend-2.png){: width="750"}
+        ![View result](media/result-in-frontend-2.png){: style="display: block; margin: 0 auto;" width="750"}
 
     The frontend environment opens in a new window with the **/new-category** URL slug. The image below shows what it looks like and how it correlates to the columns in the CSV file:
 

@@ -18,7 +18,7 @@ Virto Commerce offers a range of pre-configured notifications right out of the b
 
 The diagram below illustrates the interconnections among various key entities within the Notifications module:
 
-![Notifications key entities](media/key-entities.png)
+![Notifications key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 With the Notifications module, you can:
 

@@ -1,6 +1,6 @@
 # Overview
 
-In Virto Commerce Platform, Orders are managed via the **Orders** module and the **Order management** module representing a document-based flexible orders management system with possibility to add unlimited number of documents related to customer order. Install both modules to ensure full functionality and optimal performance in order management.
+In Virto Commerce Platform, Orders are managed via the **Order (Orders)** module and the **Order management** module representing a document-based flexible orders management system with possibility to add unlimited number of documents related to customer order. Install both modules to ensure full functionality and optimal performance in order management.
 
 The **Order** module is designed to:
 
@@ -40,7 +40,7 @@ The **Order management** modules is designed to:
 
 The diagram below illustrates the interconnections among various key entities within the Orders module:
 
-![Order key entities](media/key-entities.png)
+![Order key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 <br>
 
 With the Orders module, you can:

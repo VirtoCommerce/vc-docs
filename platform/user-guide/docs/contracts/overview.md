@@ -1,12 +1,12 @@
 # Overview
 
-The Contracts module allows you to create and manage customer contracts. Each contract defines the prices the customer receives during the contract period. The feature is designed with B2B companies in mind.
+The **Contracts** module allows you to create and manage customer contracts. Each contract defines the prices the customer receives during the contract period. The feature is designed with B2B companies in mind.
 
 The Contracts feature is based on the Virto Commerce native personalization engine to provide a convenient experience for users managing B2B customer personalization.
 
 The diagram below illustrates the interconnections among various key entities within the Contracts module:
 
-![Contracts Logical Overview](media/key-entities.png)
+![Contracts Logical Overview](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 By creating a contract, you link the buyer's company or contact with the price list that will apply to the company during the contract period in the selected store.
 

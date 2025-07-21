@@ -18,7 +18,7 @@ The Authorize.net module enables:
 
 The diagram below illustrates the interconnections among various key entities within the Authorize.Net module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

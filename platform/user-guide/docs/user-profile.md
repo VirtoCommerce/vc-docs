@@ -9,12 +9,12 @@ To configure the admin profile:
 
 1. In the **User profile** blade, set up the following parameters:
 
-    ![User profile](media/user-profile.png)
+    ![User profile](media/user-profile.png){: style="display: block; margin: 0 auto;" }
 
 	!!! note
 		If a user is listed in the Contacts, they can now upload their personal photos to customize and brand their workspace:
 
-		![User photo](media/user-photo.png)
+		![User photo](media/user-photo.png){: style="display: block; margin: 0 auto;" }
 
 Your settings are saved automatically.
 

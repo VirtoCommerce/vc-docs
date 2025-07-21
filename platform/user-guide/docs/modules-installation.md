@@ -4,11 +4,11 @@ The modules can be accessed only by admin user who can view view the installed m
 
 Clicking the **Modules** in the main menu opens the **Modules** blade. The blade resembles the layout of Visual Studio and enhance the user experience:
 
-![Modules](media/modules.png)
+![Modules](media/modules.png){: style="display: block; margin: 0 auto;" }
 
 Within the **Browse** section, you can organize and display modules as bundles:
 
-![Bundles](media/modules-as-bundles.png)
+![Bundles](media/modules-as-bundles.png){: style="display: block; margin: 0 auto;" }
 
 All the Virto Commerce modules are marked with ![tick](media/tick.png){: width="25"}.
 

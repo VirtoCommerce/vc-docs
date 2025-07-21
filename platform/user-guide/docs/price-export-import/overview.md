@@ -20,7 +20,7 @@ The goal of this module is to provide a convenient way for non-technical busines
 
 The diagram below illustrates the Price Export-Import module functionality:
 
-![Functionality](media/key-features.png)
+![Functionality](media/key-features.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

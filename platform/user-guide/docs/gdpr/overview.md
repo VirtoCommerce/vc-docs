@@ -13,7 +13,7 @@ Our **GDPR** module is a tool allowing you to supply the customer with or remove
 
 The diagram below illustrates the functionality of the GDPR module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 

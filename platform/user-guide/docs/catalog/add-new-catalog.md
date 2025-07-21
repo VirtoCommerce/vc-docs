@@ -7,7 +7,7 @@ Virto Commerce supports two types of catalogs:
 
 You can readily differentiate physical catalogs from virtual ones through their respective folder or cloud icons. Additionally, virtual catalogs will include the **Virtual** suffix in their names.
 
-![Physical vs. Virtual catalogs](media/physical-virtual-catalogs.png)
+![Physical vs. Virtual catalogs](media/physical-virtual-catalogs.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
 	Fulfillment centers are relevant to physical products only. If a store sells digital content, such as software or music, it does not need such centers.

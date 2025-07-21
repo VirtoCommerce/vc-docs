@@ -1,11 +1,11 @@
 # Overview
 
-The Azure Blob Storage module provides integration with [Azure Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs).
+The **Azure Blob Storage** module provides integration with [Azure Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs).
 
 The diagram below illustrates the functionality of the Azure Blob Storage module:
 <br>
 
-![Azure blob storage](media/key-entities.png)
+![Azure blob storage](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-azureblob-assets)
 

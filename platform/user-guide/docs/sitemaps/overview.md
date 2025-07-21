@@ -1,6 +1,6 @@
 ﻿# Overview
 
-Sitemaps are an essential tool for webmasters to communicate with search engines about the pages available on their websites for crawling and indexing. In its simplest form, a sitemap is an XML file that contains a list of URLs from the website, along with accompanying metadata. This metadata includes details such as the most recent modification date, the frequency of updates, and the relative priority of each URL. These elements collectively empower search engines to navigate and comprehend the website's structure more effectively.
+The **Sitemaps** module is an essential tool for webmasters to communicate with search engines about the pages available on their websites for crawling and indexing. In its simplest form, a sitemap is an XML file that contains a list of URLs from the website, along with accompanying metadata. This metadata includes details such as the most recent modification date, the frequency of updates, and the relative priority of each URL. These elements collectively empower search engines to navigate and comprehend the website's structure more effectively.
 
 Web crawlers primarily discover web pages through internal and external links. Sitemaps complement this process by providing an organized catalog of URLs that might not be as readily discoverable through links alone. Although employing the sitemap protocol doesn't guarantee immediate inclusion of web pages in search engine results, it does provide search engine crawlers with crucial guidance. This guidance assists in optimizing the crawling process, ensuring that significant and updated pages are appropriately indexed.
 
@@ -14,7 +14,7 @@ In essence, sitemaps contribute to a more seamless interaction between website o
 
 The diagram below illustrates the Sitemaps module functionality:
 
-![Sitemaps Logical Overview](media/key-entities.png)
+![Sitemaps Logical Overview](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 With the Sitemaps module, you can:
 

@@ -17,7 +17,7 @@ The module supports the following Elasticsearch deployment options:
 
 The diagram below illustrates the functionality of the Elasticsearch module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Blue-Green Indexing](../search/managing-search.md#blue-green-indexing)
 

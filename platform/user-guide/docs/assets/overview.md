@@ -1,11 +1,11 @@
 # Overview
 
-The Virto Assets module is a base module that provides a powerful, flexible, and extensible asset management platform. With this module, you can easily search, organize, and retrieve assets stored in multiple locations, including file systems, Azure storage, and other custom asset storage solutions.
+The **Assets** module is a base module that provides a powerful, flexible, and extensible asset management platform. With this module, you can easily search, organize, and retrieve assets stored in multiple locations, including file systems, Azure storage, and other custom asset storage solutions.
 
 The module is designed to be highly configurable and extensible, allowing developers to easily add new asset storage providers or customize existing ones to meet the unique needs of their organization. It defines a set of common abstractions for searching, retrieving, and manipulating assets, making it easy for developers to work with assets regardless of their underlying storage location.
 
 !!! note
-    You cannot work directly with platform files; the only way to do so is through the Assets abstraction.
+    You cannot work directly with Platform files; the only way to do so is through the Assets abstraction.
 
 Virto Commerce includes the following out-of-the-box providers: 
 
@@ -23,7 +23,7 @@ Virto Commerce includes the following out-of-the-box providers:
 
 The diagram below illustrates the Assets module functionality:
 
-![Assets](media/scheme.png)
+![Assets](media/scheme.png){: style="display: block; margin: 0 auto;" }
 
 With the Assets module, you can:
 

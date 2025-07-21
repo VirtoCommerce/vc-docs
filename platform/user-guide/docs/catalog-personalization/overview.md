@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce Catalog Personalization is designed to personalize the online shopping experience for customers by showing them tailored product recommendations, content, or offers via the user groups feature.
+The **Catalog Personalization** module is designed to personalize the online shopping experience for customers by showing them tailored product recommendations, content, or offers via the user groups feature.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-catalog-personalization)
 

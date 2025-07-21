@@ -20,12 +20,12 @@ To add a new category to the catalog:
 
 1. Fill in the category name. The code is generated automatically.
 
-    ![New Category Item](media/add-new-category-path.png)
+    ![New Category Item](media/add-new-category-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to open the category details.
 1. Fill in the Category details. 
 
-    ![New Category Item](media/new-category-blade.png)
+    ![New Category Item](media/new-category-blade.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save**. 
 
@@ -53,7 +53,7 @@ To add images to a category:
 1. Click **Add** to open the **Upload Images** blade.
 1. Fill in the fields.
 
-    ![new image blade](media/new-image-blade.png)
+    ![new image blade](media/new-image-blade.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 
@@ -66,7 +66,7 @@ To add a new SEO block:
 1. In the **Category details** blade, click the **SEO** widget to open the **Manage SEO** blade.
 1. Click **Add** to open the **SEO details** blade.
     
-    ![New SEO](media/screen-add-new-seo.png)
+    ![New SEO](media/screen-add-new-seo.png){: style="display: block; margin: 0 auto;" }
  
 1. Fill in the fields and click **OK**. 
 
@@ -81,7 +81,7 @@ To link categories to the catalog items:
 1. Select the desired item (in the example, a virtual catalog from a list of virtual catalogs). You can not select the current category (if it is in the list), categories labelled as Marked, or category links within virtual catalogs.
 1. Click **Confirm** to save the changes.
 
-    ![Category links](media/screen-category-links.png)
+    ![Category links](media/screen-category-links.png){: style="display: block; margin: 0 auto;" }
 
 The links to the current category within the selected virtual catalogs and categories have been created.
 

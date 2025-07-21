@@ -12,7 +12,7 @@ It enables secure and seamless payment processing, using CyberSource's Flex Micr
 
 The diagram below illustrates the dependencies of the CyberSource module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

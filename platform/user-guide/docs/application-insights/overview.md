@@ -1,8 +1,8 @@
 # Overview
 
-The Azure Application Insights module enables the collection of key metrics, application telemetry, and trace logging data, providing deep insights into the performance and health of your application within Microsoft Azure.
+The **Azure Application Insights** module enables the collection of key metrics, application telemetry, and trace logging data, providing deep insights into the performance and health of your application within Microsoft Azure.
 
-![App Insights dashboard](media/dashboard.png)
+![App Insights dashboard](media/dashboard.png){: style="display: block; margin: 0 auto;" }
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-app-insights)
 

@@ -28,7 +28,7 @@ The **Pages** module is a solution designed to connect different CMS seamlessly 
 
 ## Architecture
 
-![Architecture](media/virto-pages-architecture.png)
+![Architecture](media/virto-pages-architecture.png){: style="display: block; margin: 0 auto;" }
 
 The Virto Pages module employs an event-driven architecture to ensure efficient content management and retrieval. The key components include:
 

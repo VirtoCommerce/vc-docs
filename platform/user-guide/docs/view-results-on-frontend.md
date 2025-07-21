@@ -1,10 +1,10 @@
-# View Results on Frontend Environment
+# View Results on Frontend
 
 To view the results of Platform modifications in the Frontend Application:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.
-1. In the next blade, click **Open in browser** in the top toolbar.
+1. In the next blade, click **Open in browser** in the toolbar.
 
 ![View Frontend Application](media/view-storefront.png)
 
@@ -20,5 +20,5 @@ The Frontend Application opens in a new blade.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../multiregional-ecommerce">← B2B multi-regional e-commerce architecture </a>
-    <a href="../ada-compliance">ADA compliance →</a>
+    <a href="../backup-and-restore">Backup and restore →</a>
 </div>

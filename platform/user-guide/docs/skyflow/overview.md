@@ -17,7 +17,7 @@ The **Skyflow** module facilitates seamless integration with [SkyFlow](https://w
 
 The diagram below illustrates the interconnections among various key entities within the Skyflow module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Skyflow integration with Virto Commerce](../../../developer-guide/Fundamentals/Payments/skyflow)
 

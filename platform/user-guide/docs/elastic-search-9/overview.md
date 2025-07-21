@@ -1,6 +1,6 @@
 # Elasticsearch 9
 
-The Virto Commerce **Elasticsearch 9** module serves as a search engine for the Search module. It is the latest-generation provider built on the official .NET Elasticsearch client, compatible with Elasticsearch 9.x and 10.x (including Elastic Cloud deployments).
+The **Elasticsearch 9** module serves as a search engine for the Search module. It is the latest-generation provider built on the official .NET Elasticsearch client, compatible with Elasticsearch 9.x and 10.x (including Elastic Cloud deployments).
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search-9/)
 
@@ -17,7 +17,7 @@ With the Elasticsearch 9 module, you can perform:
 
 The diagram below illustrates the functionality of the Elasticsearch 9 module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

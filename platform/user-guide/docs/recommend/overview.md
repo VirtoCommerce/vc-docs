@@ -2,15 +2,15 @@
 
 The **xRecommend** (**Recommendations**) module displays recommendations to the current product. These recommendations help users expand their search and explore more broadly by suggesting similar or complementary items. This allows users to discover alternatives even if they don’t find an exact match:
 
-![Recommendations](media/recommendations.png)
+![Recommendations](media/recommendations.png){: style="display: block; margin: 0 auto;" }
 
 In the cart, it also shows recently browsed products:
 
-![Recently browsed products](media/recently-browsed-products.png){: width="750"}
+![Recently browsed products](media/recently-browsed-products.png){: style="display: block; margin: 0 auto;" width="750" }
 
 In the product page after **Products related to this item** block, you can also display items that other customers frequently bought together with those the current user is purchasing:
 
-![Other customers bought](media/other-customers-bought.png)
+![Other customers bought](media/other-customers-bought.png){: style="display: block; margin: 0 auto;" }
 
 Although the xRecommend module does not have its own user interface, you need to have it installed to manage recommendations. 
 
@@ -27,7 +27,7 @@ Although the xRecommend module does not have its own user interface, you need to
 
 ## Key features
 
-* **Semantic similarity**: Machine learning-based product recommendations using Elastic Search.
+* **Semantic similarity**: Machine learning-based product recommendations using Elasticsearch.
 * **Customizability**: Adjustable parameters, including the number of recommendations.
 * **Extensibility**: Support for extending the **related-products model** or adding custom algorithms.
 * **Integration simplicity**: Toggle setting for enabling or disabling recommendations in your store.

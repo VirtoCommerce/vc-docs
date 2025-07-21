@@ -1,6 +1,6 @@
 # Overview
 
-This module facilitates sales growth and marketing cost reduction through its upselling and cross-selling functionalities.
+The **Dynamic Associations** module facilitates sales growth and marketing cost reduction through its upselling and cross-selling functionalities.
 
 You can easily establish product relationships to showcase to customers by setting up product association rules. These rules are dynamic, meaning they are defined by a set of criteria rather than individual products. Thus, any new product meeting the rule conditions automatically adheres to the rule without necessitating modifications.
 
@@ -19,7 +19,7 @@ With the Dynamic Associations module, you can:
 
 The diagram below illustrates the function of the Dynamic Associations module:
 
-![key entities diagram](media/key-entities-diagram.png)
+![key entities diagram](media/key-entities-diagram.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Dynamic Associations](../marketing/managing-dynamic-associations.md)
 

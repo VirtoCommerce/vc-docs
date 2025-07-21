@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce Marketing module is dedicated to managing the various marketing activities, campaigns and promotions that you can run within your online store.
+The **Marketing** module is dedicated to managing the various marketing activities, campaigns and promotions that you can run within your online store.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-marketing-experience-api/)
 
@@ -11,7 +11,7 @@ The Virto Commerce Marketing module is dedicated to managing the various marketi
 ## Key features
 The diagram below illustrates the interconnections among various key entities within the Marketing module:
 
-![Marketing key entities](media/key-entities-chart.png)
+![Marketing key entities](media/key-entities-chart.png){: style="display: block; margin: 0 auto;" }
 
 With the Marketing module, you can:
  

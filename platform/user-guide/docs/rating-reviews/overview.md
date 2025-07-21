@@ -22,7 +22,7 @@ The **Ratings and Reviews** module facilitates:
 
 The diagram below illustrates the interconnections among various key entities within the Rating and Reviews module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

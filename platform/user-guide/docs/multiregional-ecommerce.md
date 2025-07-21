@@ -1,6 +1,6 @@
 # B2B Multi-Regional eCommerce Architecture
 
-Expansion into new regions poses significant challenges for B2B e-commerce businesses, particularly concerning associated costs before local market sales commence. Virto Commerce offers a solution to mitigate redundant costs associated with duplicating platforms for each regional market. This article delineates an architectural blueprint for multi-regional stores leveraging the Virto Commerce platform.
+Expansion into new regions poses significant challenges for B2B e-commerce businesses, particularly concerning associated costs before local market sales commence. Virto Commerce offers a solution to mitigate redundant costs associated with duplicating platforms for each regional market. This article delineates an architectural blueprint for multi-regional stores leveraging the Virto Commerce Platform.
 
 ## Potential use cases
 
@@ -28,7 +28,7 @@ The Catalog module supports master catalogs, which are physical catalogs that st
 The following modules are included to discuss a multi-regional e-commerce solution.
 
 * **Web store** is a sales point for the store, which can be a website, application, or other platform.
-* **Virto Commerce** is a platform with native, extended, or new customer-specific modules.
+* **Virto Commerce** is a Platform with native, extended, or new customer-specific modules.
 * **The catalog module** is responsible for running CRUD operations to build the seller's product catalog structure.
 * **The master catalog** contains the seller's catalog assortment master data, which can be uploaded via .CSV file import or RESTful API. The master catalog can be enhanced with additional properties through the back office and can be utilized for multiple stores configured in Virto Commerce. In the scheme, the master catalog is directly used for US and CA web stores.
 * **The virtual catalog** is a tool that can be used to build a subset or combination of items from one or more master catalogs. This tool adjusts the catalog structure to meet specific regional requirements. The virtual catalog can be created and used specifically for the EU region web store in the architecture scheme.
@@ -38,7 +38,7 @@ The following modules are included to discuss a multi-regional e-commerce soluti
 
 ## Conclusion
 
-Virto Commerce architecture enables companies to quickly and affordably expand their regional presence. They can launch stores in different regions with different languages and currencies while maintaining a single ecosystem of applications and a unified process for order processing and customer service. One of the significant advantages of Virto Commerce architecture is the ability to scale e-commerce to regions without multiple platform installations for regional markets. This approach saves on IT infrastructure and personnel costs. The IT team can serve the platform for all markets, adding only staff with language skills as needed to support local customers. In contrast, other competing platforms require duplicating the e-commerce platform for each new region, resulting in unnecessary duplication of IT resources and team costs. The Virto Commerce architecture naturally avoids cost duplication. When launching a new e-commerce business in different regions, the infrastructure that serves it remains the same or grows insignificantly. To scale the Virto Commerce e-commerce platform to new regional markets, it is recommended to install it at a cloud provider such as Microsoft Azure, AWS, Google Cloud, or Alibaba Cloud.
+Virto Commerce architecture enables companies to quickly and affordably expand their regional presence. They can launch stores in different regions with different languages and currencies while maintaining a single ecosystem of applications and a unified process for order processing and customer service. One of the significant advantages of Virto Commerce architecture is the ability to scale e-commerce to regions without multiple platform installations for regional markets. This approach saves on IT infrastructure and personnel costs. The IT team can serve the Platform for all markets, adding only staff with language skills as needed to support local customers. In contrast, other competing platforms require duplicating the e-commerce platform for each new region, resulting in unnecessary duplication of IT resources and team costs. The Virto Commerce architecture naturally avoids cost duplication. When launching a new e-commerce business in different regions, the infrastructure that serves it remains the same or grows insignificantly. To scale the Virto Commerce e-commerce Platform to new regional markets, it is recommended to install it at a cloud provider such as Microsoft Azure, AWS, Google Cloud, or Alibaba Cloud.
 
 
 <br>

@@ -1,6 +1,6 @@
 # Overview
 
-**Elastic App Search** provides search, aggregation, and analytic capabilities as a service, on top of ElasticSearch. It also supplies tools that can help you tune search result sets without development:
+The **Elastic App Search** module provides search, aggregation, and analytic capabilities as a service, on top of ElasticSearch. It also supplies tools that can help you tune search result sets without development:
 
 * [Relevance tuning.](https://www.elastic.co/guide/en/app-search/current/precision-tuning.html)
 * [Synonyms.](https://www.elastic.co/guide/en/app-search/current/synonyms-guide.html)
@@ -24,7 +24,7 @@ The Elastic App Search module offers:
 
 The diagram below illustrates the functionality of the Elastic App Search module:
 
-![Key entities](media/key-entities.png)
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Configuring Elastic App Search Provider](../../../developer-guide/Configuration-Reference/appsettingsjson)
 
