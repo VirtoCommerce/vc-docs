@@ -149,6 +149,7 @@ nav:
                 - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
           - SEO:
                 - Overview: Fundamentals/SEO/overview.md
+                - Adding SEO Capabilities to Module: Fundamentals/SEO/add-seo-to-module.md 
                 - Configuration: Fundamentals/SEO/configuration.md
           - Dynamic Properties:
                 - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md

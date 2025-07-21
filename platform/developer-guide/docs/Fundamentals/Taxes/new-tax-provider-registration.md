@@ -69,5 +69,5 @@ If our standard user interface is not enough, you may consider implementing your
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../tax-providers-configuration">← Configuring tax providers </a>
-    <a href="../../Dynamic-Properties/overview">Managing dynamic properties →</a>
+    <a href="../../SEO/overview">SEO feature overview →</a>
 </div>
