@@ -79,7 +79,7 @@ In practice, you’d filter GA4 by the 404 page’s title or URL, revealing whic
 
 ### Using broken links management tool
 
-[This tool](../../../platform/user-guide/seo/managing-broken-links) logs any 404 hits and lets the team mark each one for action. For example, you can ignore harmless 404s, or set up 301/302 redirects. Virto supports internal redirects (redirecting to another page in the store) or external redirects. There’s also an option to use load balancer (or CDN) rules: for certain legacy URLs you can force a real HTTP 404 instead of letting the SPA catch it, if needed for SEO or compliance. 
+[This tool](../../../platform/user-guide/seo/managing-broken-links) logs any 404 hits and lets the team mark each one for action. For example, you can ignore harmless 404s, or set client-side redirects. Virto supports internal redirects (redirecting to another page in the store) or external redirects. There’s also an option to use load balancer (or CDN) rules: for certain legacy URLs you can force a real HTTP 404 instead of letting the SPA catch it, if needed for SEO or compliance. 
 
 In short, the workflow is: 
 
