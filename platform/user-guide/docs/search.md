@@ -11,7 +11,23 @@ The most straightforward approach to locating an item is by utilizing the keywor
 
 ![Keyword search](contacts/media/keyword_search.png){: style="display: block; margin: 0 auto;" width="400"}
 
+To enable broader and more powerful search capabilities across indexed fields, our search supports **OR** and **AND** search expressions. 
+
+=== "**OR** expression"
+
+    The **brand:FABORY OR fastener_finish:"Zinc Plated"** query returns the following:
+
+    ![OR](media/or-expression.png){: style="display: block; margin: 0 auto;" }
+
+=== "**AND** expression"
+
+    The **brand:FABORY AND fastener_finish:"Zinc Plated"** query returns the following:
+
+    ![AND](media/AND-expression.png){: style="display: block; margin: 0 auto;" }
+
 To enable broader and more powerful search capabilities across indexed fields, our search supports [various search expressions](search-query-syntax.md). 
+
+
 
 ## Filtering
 
