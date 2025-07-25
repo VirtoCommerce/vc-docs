@@ -56,7 +56,7 @@ Each module typically includes its own GraphQL types, often defined in a **types
 yarn generate:graphql-types
 ```
 
-This command triggers the execution of the generator.ts script, which is responsible for generating the types.ts files for both the core application and the independent modules.
+This command triggers the execution of the **generator.ts** script, which is responsible for generating the types.ts files for both the core application and the independent modules.
 
 The **scripts/graphql-codegen/generator.ts** file also plays a crucial role in handling standalone GraphQL schemas. It includes an array called **independentModules**, where each object represents a separate GraphQL schema that needs to be generated independently:
 
