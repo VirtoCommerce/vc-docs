@@ -29,5 +29,5 @@ The Azure AD module integrates Virto Commerce with Azure AD to provide secure au
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../google-sso/overview">← Google SSO module overview</a>
-    <a href="../../back-in-stock/overview">Back-in-Stock module overview →</a>
+    <a href="../enabling-authentication-types">Enabling authentication types →</a>
 </div>

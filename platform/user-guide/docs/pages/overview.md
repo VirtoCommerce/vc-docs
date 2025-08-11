@@ -1,6 +1,6 @@
 # Overview
 
-The **Pages** module is a solution designed to connect different CMS seamlessly within Virto Commerce. It offers a CMS-agnostic architecture, enabling users to manage public, private, and personalized pages effectively. Once pages are published, they are stored within Virto Pages, making the CMS optional after the design phase. This approach allows for flexibility in detaching, replacing, or using multiple CMS platforms simultaneously for scenarios like landing pages, blogs, and more.
+The **Pages** module is a solution designed to connect different CMSs seamlessly within Virto Commerce. It offers a CMS-agnostic architecture, enabling users to manage public, private, and personalized pages effectively. Once pages are published, they are stored within Virto Pages, making the CMS optional after the design phase. This approach allows for flexibility in detaching, replacing, or using multiple CMS platforms simultaneously for scenarios like landing pages, blogs, and more.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pages/)
 

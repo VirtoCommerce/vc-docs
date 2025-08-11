@@ -33,7 +33,7 @@ To update the index with the corresponding user IDs upon new order creation, [tr
 
 ## Other settings
 
-Other store-specific settings are:
+Other store-specific settings include:
 
 * [Orders templates settings](../order-management/settings.md#orders-templates-settings).
 * [Statuses](../contacts/settings.md#statuses).
@@ -48,6 +48,6 @@ Other store-specific settings are:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../configuring-store">← Configuring store</a>
+    <a href="../custom-robot-txt">← Custom robot.txt</a>
     <a href="../../pricing/overview">Pricing module overview →</a>
 </div>

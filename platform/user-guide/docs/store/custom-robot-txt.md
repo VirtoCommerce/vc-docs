@@ -30,3 +30,12 @@ Your file has been uploaded and overrides the system-generated one.
 
 !!! note
     To serve different **robots.txt** files based on domain or language, we recommend creating separate stores for each domain and uploading a distinct **robots.txt** file to the **Assets** of each store. This approach allows each store to manage its own file.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../configuring-store">← Configuring store</a>
+    <a href="../settings">Store settings →</a>
+</div>

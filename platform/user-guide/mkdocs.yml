@@ -139,6 +139,7 @@ nav:
           - Authentication Related Modules:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md
+                - Enabling Authentication Types: azure-ad/enabling-authentication-types.md
           - Back in Stock:
                   - Overview: back-in-stock/overview.md
                   - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
@@ -287,7 +288,7 @@ nav:
                 - Roles and Permissions: tasks/roles-permissions.md
           - Tax: 
                 - Overview: tax/overview.md
-                - Managing Taxes: tax/managing-taxes.md
+                - Managing Tax Providers: tax/managing-taxes.md
                 - Settings: tax/settings.md
           - Thumbnails:
                 - Overview: thumbnails/overview.md

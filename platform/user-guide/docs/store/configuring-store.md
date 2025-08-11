@@ -1,38 +1,14 @@
 ﻿# Configure Store
 
-To configure your store, select it in the **Stores** blade and modify the following fields:
+To configure your store, select it in the **Stores** blade. Here, you can adjust its settings using:
 
-![Store settings screen](media/all-store-settings.png)
+* Fields:
 
-![Readmore](media/readmore.png){: width="25"} [Settings](settings.md)
+    ![Store settings screen](media/all-store-settings.png)
 
-![Readmore](media/readmore.png){: width="25"} [Notifications](../notifications/overview.md)
+* Widgets:
 
-![Readmore](media/readmore.png){: width="25"} [Notifications Log](../notifications/notification-log.md)
-
-![Readmore](media/readmore.png){: width="25"} [Taxes](../integrations/avalara/overview.md)
-
-![Readmore](media/readmore.png){: width="25"} [Sitemaps](../sitemaps/overview.md)
-
-![Readmore](media/readmore.png){: width="25"} [Payment Methods](../payment/managing-payment-methods.md)
-
-Below is additional information on some more widgets.
-
-## SEO
-You can have multiple SEO sets for your store pages. Each set includes meta title, meta description, keywords, URL slug, and more:
-
-![SEO settings](media/SEO.png)
-
-## Fulfillment centers
-
-Clicking on the **Fulfillment Centers** widget opens the list of the store's fulfillment centers. 
-
-![Manage fulfillment centers](media/fulfillment-centers-management.png)
-
-To add a new fulfillment center, click **Add** in the toolbar and fill in the following fields:
-
-![Fulfillment-center](media/fulfillment-center-new.png){: width="600"}
-
+    ![Store settings widgets](media/store-settings-widgets-explained.png)
 
 <br>
 <br>
@@ -40,5 +16,5 @@ To add a new fulfillment center, click **Add** in the toolbar and fill in the fo
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../adding-new-store">← Adding new store</a>
-    <a href="../settings">Store module settings →</a>
+    <a href="../custom-robot-txt">Custom robot.txt →</a>
 </div>
