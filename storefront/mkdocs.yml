@@ -48,6 +48,10 @@ extra:
                 - title: Github
                   link: https://github.com/VirtoCommerce/vc-storefront/
         release_notes:
+            - title: August 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-august-2025/801
+              type: Release Notes
+              date: 1 August 2025
             - title: July 2025
               link: https://www.virtocommerce.org/t/virto-s-release-notes-july-2025/798
               type: Release Notes
