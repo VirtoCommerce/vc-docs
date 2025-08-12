@@ -1,4 +1,4 @@
-# White Labeling Settings ==~query~==
+# whiteLabelingSettings ==~query~==
 
 This query allows you to retrieve white labeling settings.
 

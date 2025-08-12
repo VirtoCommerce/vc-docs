@@ -1,4 +1,4 @@
-# Evaluate dynamic content ==~query~==
+# evaluateDynamicContent ==~query~==
 
 This query allows you to evaluate dynamic content.
 
