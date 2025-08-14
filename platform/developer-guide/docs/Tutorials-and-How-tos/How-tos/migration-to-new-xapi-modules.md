@@ -6,7 +6,7 @@ In July 2024, we migrated to a new xAPI architecture to better support the evolv
 
 Please migrate from the legacy **VirtoCommerce.ExperienceApi** module to the new modules listed below:
 
-* [xApi](https://github.com/VirtoCommerce/vc-module-x-api): Core business API module.
+* [xAPI](https://github.com/VirtoCommerce/vc-module-x-api): Core business API module.
 * [xCart](https://github.com/VirtoCommerce/vc-module-x-cart): Cart-related functionalities management.
 * [xCatalog](https://github.com/VirtoCommerce/vc-module-x-catalog): Catalog-related operations management.
 * [xCMS](https://github.com/VirtoCommerce/vc-module-x-cms): Content Management System integration.
@@ -37,7 +37,7 @@ To migrate to the new modules:
 
 1. Uninstall **VirtoCommerce.ExperienceApi**.
 1. Install the new modules:
-    * [xApi](https://github.com/VirtoCommerce/vc-module-x-api)
+    * [xAPI](https://github.com/VirtoCommerce/vc-module-x-api)
     * [xCart](https://github.com/VirtoCommerce/vc-module-x-cart)
     * [xCatalog](https://github.com/VirtoCommerce/vc-module-x-catalog)
     * [xCMS](https://github.com/VirtoCommerce/vc-module-x-cms)
@@ -49,7 +49,7 @@ To migrate to the new modules:
     * [CustomerReviews](https://github.com/VirtoCommerce/vc-module-customer-review/releases/latest)
     * [Skyflow](https://github.com/VirtoCommerce/vc-module-skyflow/releases/latest)
     * [TaskManagement](https://github.com/VirtoCommerce/vc-module-task-management/releases/latest)
-    * [File xApi](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases/latest)
+    * [File xAPI](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases/latest)
     * [WhiteLabeling](https://github.com/VirtoCommerce/vc-module-white-labeling/releases/latest)
 
 1. For any custom modules, uninstall the NuGet packages from **VirtoCommerce.ExperienceApi** and replace them with the new ones.
@@ -66,6 +66,6 @@ To migrate to the new modules:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../user-email-verification">← User email verification </a>
+    <a href="../enable-embedded-mode-for-vc-shell">← Enabling embedded mode for VC-Shell instances </a>
     <a href="../../../Updating-Virto-Commerce-Based-Project/release-strategy-overview">Release strategy  →</a>
 </div>

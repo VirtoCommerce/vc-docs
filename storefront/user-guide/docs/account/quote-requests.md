@@ -1,6 +1,6 @@
 # Quote Requests
 
-Users can request personalized pricing or align bulk orders with negotiated agreements by submitting quote requests. The standard scenario includes the following steps:
+Users can request personalized pricing for all types of products, including configurable ones, or align bulk orders with negotiated agreements by submitting quote requests. The standard scenario includes the following steps:
 
 1. [Creating a quote request.](#create-quote-request)
 1. [Completing and submitting quote request.](#complete-and-submit-quote-request)

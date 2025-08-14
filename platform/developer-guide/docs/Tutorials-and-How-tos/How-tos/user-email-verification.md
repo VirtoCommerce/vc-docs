@@ -11,7 +11,7 @@ Users can verify their email address by clicking a verification link sent to the
 
 ## Email verification in Platform API
 
-![Email verification in Platform](media/email-verification.png)
+![Email verification in Platform](media/email-verification.png){: style="display: block; margin: 0 auto;" }
 
 1. A **SendVerificationEmail** endpoint is activated. It publishes `UserVerificationEmailEvent` via `IEventPublisher.Publish()`.
 1. `UserVerificationEmailEvent` event is received in VirtoCommerce.StoreModule.
@@ -22,7 +22,7 @@ Users can verify their email address by clicking a verification link sent to the
 
 ## Email verification in xAPI
 
-![Email verification in xAPI](media/email-verification-1.png)
+![Email verification in xAPI](media/email-verification-1.png){: style="display: block; margin: 0 auto;" }
 
 1. A **sendVerifyEmail** mutation is activated. It creates and publishes `SendVerifyEmailCommand` via `IMediator.Send()`.
 1. `SendVerifyEmailCommand` command is received in `SendVerifyEmailCommandHandler`.
@@ -41,7 +41,7 @@ Users can verify their email address by clicking a verification link sent to the
 
 The Frontend Application kit is an example of Platform API clients.
 
-![Email verification in Storefront](media/email-verification-2.png)
+![Email verification in Storefront](media/email-verification-2.png){: style="display: block; margin: 0 auto;" }
 
 1. A **Register** endpoint activated in `AccountController`. A new user is created (via Virto Platform API).
 1. If email verification is not enabled for the particular store, stop processing and exit.
@@ -57,5 +57,5 @@ The Frontend Application kit is an example of Platform API clients.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../sharing-bearer-tokens">← Sharing bearer tokens </a>
-    <a href="../migration-to-new-xapi-modules">Migration to new xAPI modules  →</a>
+    <a href="../enable-embedded-mode-for-vc-shell">Enabling embedded mode for VC-Shell instances  →</a>
 </div>

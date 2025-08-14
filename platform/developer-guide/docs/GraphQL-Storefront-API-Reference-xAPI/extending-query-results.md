@@ -146,7 +146,7 @@ Let’s suppose that our object is mapped to a connection type schema which give
                 builder.AddSchema(serviceCollection, typeof(AssemblyMarker));
             });
 
-            AbstractTypeFactory<SearchProductResponse>.OverrideType<SearchProductResponse, SearchProductResponseExtended>(); // register extended reponse via AbstractTypeFactory
+            AbstractTypeFactory<SearchProductResponse>.OverrideType<SearchProductResponse, SearchProductResponseExtended>(); // register extended response via AbstractTypeFactory
             serviceCollection.OverrideQueryType<SearchProductQuery, SearchProductQueryExtended>().WithQueryHandler<SearchProductQueryHandlerExtended>(); // extended query handler
         }
     ```

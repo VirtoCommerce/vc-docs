@@ -208,7 +208,6 @@ nav:
                 - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
-          - Extending Query Results: GraphQL-Storefront-API-Reference-xAPI/extending-query-results.md
           - Back-in-Stock:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview.md
                 - Queries:
@@ -731,6 +730,7 @@ nav:
                 - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md
                 - Sharing Bearer Tokens Across Multiple Instances: Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md
                 - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
+                - Enabling Embedded Mode for VC-Shell Instances: Tutorials-and-How-tos/How-tos/enable-embedded-mode-for-vc-shell.md
                 - Migration to New xAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
     - Releases, Bundles, PBCs. Installation and Updates:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
