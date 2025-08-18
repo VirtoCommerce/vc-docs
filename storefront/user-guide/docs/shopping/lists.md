@@ -20,5 +20,5 @@ The notification of successful addition to the selected list appears.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../compare-products">← Products comparison</a>
-    <a href="../notifications">Notifications →</a>
+    <a href="../save-for-later">Save for later →</a>
 </div>

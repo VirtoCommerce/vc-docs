@@ -155,7 +155,7 @@ To configure telemetry:
     }
     ```
 
-1. Configure Platform AP telemetry behavior inside the `VirtoCommerce:ApplicationInsights` section: 
+1. Configure Platform Application Insights telemetry behavior inside the `VirtoCommerce:ApplicationInsights` section: 
     ```json title="appsettings.json"
     {
       "VirtoCommerce": {
