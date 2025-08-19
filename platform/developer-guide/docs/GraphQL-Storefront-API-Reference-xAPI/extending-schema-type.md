@@ -1,6 +1,32 @@
 # Extend Specific Schema Type
 
-Virto Commerce GraphQL schema types can be extended with additional fields. For example, let’s extend a field of type `InputPersonalDataType` belonging to the `InputUpdatePersonalDataType` schema type with a new `gender` field:
+Virto Commerce GraphQL schema types can be extended with additional fields. For example, let’s extend a field of type `InputPersonalDataType` belonging to the `InputUpdatePersonalDataType` schema type with a new `gender` field.
+
+The `InputUpdatePersonalDataType` schema type contains a field of type `InputPersonalDataType`. By extending `InputPersonalDataType`, we indirectly extend `InputUpdatePersonalDataType` as well, as it depends on it.
+
+    ```csharp title="Example from xAPI"
+    public class InputUpdatePersonalDataType : InputObjectGraphType
+    {
+        public InputUpdatePersonalDataType()
+        {
+            Name = "InputUpdatePersonalDataType";
+
+            Field<InputPersonalDataType>("personalData");
+        }
+    }
+
+    public class InputPersonalDataType : InputObjectGraphType
+    {
+        public InputPersonalDataType()
+        {
+            Name = "InputPersonalDataType";
+            Field<StringGraphType>("firstName");
+            Field<StringGraphType>("lastName");
+            // ...
+        }
+    }
+    ```
+
 
 1. Create a module using the Virto Commerce template as the base for your extension.
 
