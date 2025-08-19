@@ -208,6 +208,8 @@ nav:
                 - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
+          - Extending Query Results: GraphQL-Storefront-API-Reference-xAPI/extending-query-results.md
+          - Extending Schema Type: GraphQL-Storefront-API-Reference-xAPI/extending-schema-type.md
           - Back-in-Stock:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview.md
                 - Queries:
