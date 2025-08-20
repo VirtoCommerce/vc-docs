@@ -419,6 +419,15 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+          - News: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/News/overview.md
+                - Queries:
+                      - newsArticle: GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticle.md
+                      - newsArticles: GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticles.md
+                - Objects: 
+                      - NewsArticleContent: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContent.md
+                      - NewsArticleContentConnection: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentConnection.md
+                      - NewsArticleContentEdge: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentEdge.md
           - xMarketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
                 - Queries:

@@ -21,5 +21,5 @@ Your settings have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../advanced-filtering">← Advanced filtering</a>
-    <a href="../../notifications/overview">Notifications module overview→</a>
+    <a href="../../news/overview">News module overview→</a>
 </div>

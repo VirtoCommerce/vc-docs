@@ -32,6 +32,6 @@ With the Notifications module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../generic-export/overview">← Generic Export module overview</a>
+    <a href="../../news/overview">← News module overview</a>
     <a href="../notification-list">Notification list →</a>
 </div>

@@ -178,6 +178,10 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
+          - News: 
+                - Overview: news/overview.md
+                - Managing News: news/managing-news.md
+                - Settings: news/settings.md
           - Notifications:
                 - Overview: notifications/overview.md
                 - Notification List: notifications/notification-list.md
