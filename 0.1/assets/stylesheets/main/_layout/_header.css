@@ -1,0 +1,149 @@
+.md-header {
+    background: url(../../../images/header-bg.svg)
+        var(--header-footer-primary-color) no-repeat center top;
+}
+
+.md-header__inner {
+    height: 3.333rem;
+}
+
+.md-header__button.md-logo :-webkit-any(img, svg) {
+    fill: currentcolor;
+    display: block;
+    height: 1.318rem;
+    width: auto;
+}
+
+.md-header__button.md-logo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-header__button.md-logo {
+        display: flex !important;
+    }
+}
+
+.md-header__inner .md-grid {
+    height: 100%;
+    max-width: 90rem;
+}
+
+.md-header__title {
+    font-family: "Circular Std Book", sans-serif;
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--header-title-primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.md-header__logo {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.md-header__title > .md-header__ellipsis {
+    display: flex;
+    align-items: center;
+}
+
+.md-header__button[data-md-component="logo"] {
+    margin-right: 0.545rem;
+}
+
+.md-header .md-ellipsis {
+    display: flex;
+    align-items: center;
+}
+
+[dir="ltr"] .md-header__title {
+    margin-left: 0.545rem;
+}
+
+.md-header__topic:first-child {
+    font-weight: 600;
+}
+
+.md-header[data-md-state="shadow"] {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.md-header__button:not(.md-logo):not([for="__drawer"]) {
+    height: 1.6rem;
+    width: 1.6rem;
+    background: var(--header-footer-primary-color);
+    border: 1px solid var(--header-button-primary-border-color);
+    border-radius: 4px;
+    margin: 0.25rem;
+}
+
+.md-header__button.md-icon:not([for="__drawer"]) :-webkit-any(img, svg) {
+    height: 15px;
+    width: auto;
+}
+
+.md-header__button.md-icon:not([for="__drawer"]) :-webkit-any(svg) path {
+    fill: var(--md-default-fg-color--light);
+}
+
+.md-header__button.md-icon[for="__drawer"] svg {
+    width: 20px;
+    height: 14px;
+    fill: var(--primary-80);
+}
+
+.md-header__button[for="__search"] {
+    display: block;
+}
+
+@media screen and (max-width: 1599px) {
+    .md-header__button.md-icon:not([for="__drawer"]) :-webkit-any(img, svg) {
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-header__button.md-logo {
+        display: block;
+    }
+
+    .md-header[data-md-state="shadow"] {
+        box-shadow: none;
+    }
+
+    .md-header__option[data-md-component="palette"] {
+        display: none;
+    }
+
+    .md-header__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .md-header__button.md-icon:not([for="__drawer"]) :-webkit-any(img, svg) {
+        height: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .md-header .md-ellipsis {
+        display: none;
+    }
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-header__option {
+    max-width: initial;
+    opacity: 1;
+    z-index: 0;
+}
