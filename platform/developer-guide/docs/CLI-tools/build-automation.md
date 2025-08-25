@@ -17,7 +17,7 @@ The **vc-build** tool streamlines various build scenarios for solutions based on
     vc-build compress -verbosity <Verbose|Normal|Minimal|Quiet>
     ```
 
----
+
 
 ## Clean
 
@@ -144,7 +144,6 @@ vc-build publishPackages -source <SOURCE> -apiKey <API_KEY>
 | `-apiKey`         | API key for authentication.                                                    | |
 
 
-
 ## Compress
 
 The `compress` command creates an archive of the artifacts, including only necessary files and filtering out excess.
@@ -158,6 +157,24 @@ vc-build compress
 | `-configuration`  | (Optional) Build config to use for compressing artifacts.<br>`Release` (default) or `Debug`| `vc-build compress -configuration <Release|Debug>` |
 | `-NugetConfig`    | (Optional) Path to NuGet configuration file.              | `vc-build compress -NugetConfig <path to NuGet config>`|
 
+
+## MatchVersions
+
+The `MatchVersions` command validates version consistency of all Virto Commerce dependencies across all projects in the solution. The build fails if inconsistencies are found, with detailed errors logged.
+
+Running MatchVersions ensures that:
+
+* All module dependencies listed in the manifest are present in project references.
+* All VirtoCommerce.Platform.* dependencies in all projects match the version specified in the manifest.
+* All module dependencies in all projects match the version specified in the manifest.
+* All VirtoCommerce.Platform.* dependencies across all projects have the same version.
+* All module dependencies (VirtoCommerce.*Module) across all projects have the same version.
+
+This target runs automatically when `compress` is executed.
+
+```console
+vc-build MatchVersions
+```
 
 
 ## DockerLogin

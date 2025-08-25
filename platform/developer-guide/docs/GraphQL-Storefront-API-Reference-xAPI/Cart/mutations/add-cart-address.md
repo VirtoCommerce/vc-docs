@@ -4,7 +4,7 @@ This mutation adds a new address to the cart or updates an existing one through 
 
 ## Arguments
 
-The `InputAddOrUpdateCartAddressType` represents the input object type used for adding or updating an address for a cart.
+The `InputAddOrUpdateCartAddressType!` represents the input object type used for adding or updating an address for a cart.
 
 | Field                         | Description                                                       |
 |-------------------------------|-------------------------------------------------------------------|

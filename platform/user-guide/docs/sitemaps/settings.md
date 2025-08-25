@@ -51,5 +51,5 @@ You can also set these values [at the Store level](https://docs.virtocommerce.or
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../configuring-sitemaps">← Managing sitemaps</a>
-    <a href="../../subscription/overview">Subscription module overview →</a>
+    <a href="../../sql-queries/overview">SQL Queries module overview →</a>
 </div>

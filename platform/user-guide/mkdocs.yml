@@ -277,10 +277,17 @@ nav:
                 - Overview: shipping/overview.md
                 - Managing Shipping Methods: shipping/managing-shipping-methods.md
                 - Settings: shipping/settings.md
+          - Shopify Taxonomy:
+                - Overview: shopify-taxonomy/overview.md
+                - Importing Shopify Taxonomy: shopify-taxonomy/importing-shopify-taxonomy.md
+                - Settings: shopify-taxonomy/settings.md
           - Sitemaps:
                 - Overview: sitemaps/overview.md
                 - Managing Sitemaps: sitemaps/configuring-sitemaps.md
                 - Settings: sitemaps/settings.md
+          - SQL Queries:
+                - Overview: sql-queries/overview.md
+                - Running Queries: sql-queries/running-queries.md
           - Subscription: 
                 - Overview: subscription/overview.md
                 - Enabling Subscriptions: subscription/enabling-subscriptions.md 

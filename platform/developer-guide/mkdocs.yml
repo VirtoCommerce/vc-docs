@@ -230,6 +230,7 @@ nav:
                       - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/validate-coupon.md
                       - productConfiguration: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/productConfiguration.md
                       - configurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/configurationItems.md
+                      - getSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/getSavedForLater.md
                 - Objects:
                       - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
                       - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
@@ -309,6 +310,8 @@ nav:
                       - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
                       - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
                       - cloneWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/cloneWishlist.md
+                      - moveFromSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveFromSavedForLater.md
+                      - moveToSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveToSavedForLater.md
           - xCatalog:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:

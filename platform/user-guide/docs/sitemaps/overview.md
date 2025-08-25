@@ -29,6 +29,6 @@ With the Sitemaps module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../shipping/overview">← Shipping module overview</a>
+    <a href="../../shopify-taxonomy/overview">← Shopify Taxonomy module overview</a>
     <a href="../configuring-sitemaps">Managing sitemaps →</a>
 </div>

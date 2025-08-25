@@ -41,6 +41,6 @@ To view the created subscriptions by the order for which they were created:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../sitemaps/overview">← Sitemaps module overview</a>
+    <a href="../../sql-queries/overview">← SQL Queries module overview</a>
     <a href="../enabling-subscriptions">Enabling subscriptions →</a>
 </div>
