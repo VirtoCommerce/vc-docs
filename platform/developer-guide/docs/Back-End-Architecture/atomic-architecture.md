@@ -1,6 +1,6 @@
 # Virto Atomic Architecture
 
-Virto Commerce views eCommerce platforms as integrated ecosystems composed of various components, such as product catalogs, order management systems, pricing mechanisms, sellers, and customer profiles that function cohesively. We refer to this approach as **Virto Atomic Architecture™ (VAA)**. It includes four key elements: 
+Virto Commerce views e-commerce platforms as integrated ecosystems composed of various components, such as product catalogs, order management systems, pricing mechanisms, sellers, and customer profiles that function cohesively. We refer to this approach as **Virto Atomic Architecture™ (VAA)**. It includes four key elements: 
 
 * [Atoms.](atomic-architecture.md#atoms)
 * [Molecules.](atomic-architecture.md#molecules)
@@ -13,7 +13,7 @@ Virto Commerce views eCommerce platforms as integrated ecosystems composed of va
 
 Atoms are the fundamental building blocks. These core components include security protocols, modular structures, caching mechanisms, and serverless functions. Atoms are highly reusable, enabling developers to construct more complex systems (referred to as molecules) for functionalities such as pricing, inventory management, order processing, search capabilities, and notification systems.
 
-Atoms facilitate efficient operation across the platform and can be deployed in various parts of the system either in their original form, modified, or created from scratch as required.
+Atoms facilitate efficient operation across the Platform and can be deployed in various parts of the system either in their original form, modified, or created from scratch as required.
 
 ## Molecules
 
@@ -29,7 +29,7 @@ Cells represent functional units of the eCommerce ecosystem. They comprise sets 
 
 For example, a digital catalog acts as a cell, requiring the integration of molecules such as catalog management, pricing, inventory control, search functionalities, and event buses — all interconnected through APIs. Each cell operates autonomously and can be reused or repurposed as necessary.
 
-Cells are essential for the growth and evolution of the eCommerce platform. They allow for enhancements, combinations, or custom developments to meet specific business needs.
+Cells are essential for the growth and evolution of the e-commerce Platform. They allow for enhancements, combinations, or custom developments to meet specific business needs.
 
 ## Organisms
 

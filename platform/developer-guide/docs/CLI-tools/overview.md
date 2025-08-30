@@ -24,8 +24,8 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
 * [Packages management:](package-management.md) 
 
     * Install, update, and uninstall modules. 
-    * Install and update platform application.
-    * Prepare backend package with specific versions of the platform and modules from the manifest file.
+    * Install and update Platform.
+    * Prepare backend package with specific versions of the Platform and modules from the manifest file.
   
 * [Platform cold start optimization and data migration (WIP):](cold-start-and-data-migration.md)
 
@@ -33,7 +33,7 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
 
 * [Grab migrator utility quickstart:](grab-migrator.md)
 
-    * Get idempotent SQL scripts for all modules EF migrations with the ability to apply them in a specific order without installed platform and source code.
+    * Get idempotent SQL scripts for all modules EF migrations with the ability to apply them in a specific order without installed Platform and source code.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-build)
 

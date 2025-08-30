@@ -1,5 +1,5 @@
 # Configure Email Notifications
-Virto Commerce Platform enables sending email notifications for various system events, such as restoring passwords, customer order processing, etc. To send such notifications, use a third-party email service provider by setting up an mail gateway so that the platform may start sending emails. Currently, there are two gateways options: SMTP and SendGrid.
+Virto Commerce Platform enables sending email notifications for various system events, such as restoring passwords, customer order processing, etc. To send such notifications, use a third-party email service provider by setting up an mail gateway so that the Platform may start sending emails. Currently, there are two gateways options: SMTP and SendGrid.
 
 ## Prerequisites
 

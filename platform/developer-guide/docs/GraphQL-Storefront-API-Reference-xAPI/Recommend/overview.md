@@ -8,6 +8,6 @@ The xRecommend module adds the xAPI product recommendation query to the Virto Co
 |---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-------------------------------|
 | [recommendations](query/recommendations.md)<br> [recentlyBrowsed](query/recentlyBrowsed.md) <br> [searchHistory](query/searchHistory.md) | [GetRecommendationsResponseType](object/GetRecommendationsResponseType.md)  <br> [GetRecentlyBrowsedResponseType](object/GetRecentlyBrowsedResponseType.md)  <br> [SearchHistoryResultType](object/SearchHistoryResultType.md)| [pushHistoricalEvent](mutation/pushHistoricalEvent.md) <br> [saveSearchQuery](mutation/saveSearchQuery.md) |
 
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-recommend/releases)
 
-
-[![Download module](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-recommend/releases)
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-recommend/releases/latest)

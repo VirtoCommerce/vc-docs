@@ -1,6 +1,6 @@
 # Overview
 
-GraphiQL is an interactive IDE for exploring and testing GraphQL APIs. It allows developers to inspect schemas, execute queries and mutations, and receive immediate feedback. Virto Commerce provides developers the flexibility to work with a fully integrated API for the entire platform or with tailored APIs for specific modules.
+GraphiQL is an interactive IDE for exploring and testing GraphQL APIs. It allows developers to inspect schemas, execute queries and mutations, and receive immediate feedback. Virto Commerce provides developers the flexibility to work with a fully integrated API for the entire Platform or with tailored APIs for specific modules.
 
 ## GraphiQL
 
@@ -48,7 +48,7 @@ By default, GraphiQL is disabled. To enable it, configure the following setting 
 
 ## Partial GraphQL schema
 
-A **partial GraphQL schema** refers to a modular and self-contained subset of the overall GraphQL schema that is specific to a particular module. Instead of a single schema for the entire platform, modules like Cart, Catalog, or Quotes have their own schema that defines only the queries, mutations, types, and subscriptions relevant to that module.
+A **partial GraphQL schema** refers to a modular and self-contained subset of the overall GraphQL schema that is specific to a particular module. Instead of a single schema for the entire Platform, modules like Cart, Catalog, or Quotes have their own schema that defines only the queries, mutations, types, and subscriptions relevant to that module.
 
 Partial schema allows to:
 

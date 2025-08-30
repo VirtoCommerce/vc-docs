@@ -24,6 +24,7 @@ Click on the desired list to view its details. Here you can:
 * Update the amount of items in cart.
 * Delete items from the list.
 * Edit list by clicking **List settings**.
+* Purchase list items separately from cart (as of [Frontend 2.29.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.29.0)). This allows customers to manage and purchase items from a list without affecting their shopping cart.
 
 ![list management](../media/list-management.png)
 

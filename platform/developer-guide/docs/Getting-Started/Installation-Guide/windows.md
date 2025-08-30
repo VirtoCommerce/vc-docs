@@ -27,7 +27,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 ## Install Platform 
 
-The platform can be installed:
+The Platform can be installed:
 
 * [Manually by downloading the precompiled binaries](windows.md#download-precompiled-binaries).
 * [Using Virto Commerce CLI (vc-build)](windows.md#use-virto-commerce-cli).
@@ -58,7 +58,7 @@ To use Virto Commerce CLI (vc-build):
     vc-build install
     ```
 
-1. Specify the platform version (if required) using the command:
+1. Specify the Platform version (if required) using the command:
 
     ```console
     vc-build install -version 3.800.0
@@ -102,7 +102,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/assets",
-                "PublicUrl": "https://localhost:5001/assets/" <-- Set your platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/assets/" <-- Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -114,7 +114,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/cms-content",
-                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your Platform application url with port localhost:5001
             },
         },
     ```

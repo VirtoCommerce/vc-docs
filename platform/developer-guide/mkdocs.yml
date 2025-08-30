@@ -37,7 +37,7 @@ nav:
           - Back End Architecture:
                 - Tech Stack: Back-End-Architecture/01-tech-stack.md
                 - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
-    - CLI tools:
+    - CLI Tools:
           - Overview: CLI-tools/overview.md
           - Getting Started: CLI-tools/getting-started.md
           - Build Automation: CLI-tools/build-automation.md
@@ -208,7 +208,23 @@ nav:
                 - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
                 - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
-          - Extending Query Results: GraphQL-Storefront-API-Reference-xAPI/extending-query-results.md
+          - AI Document Processing:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/overview.md
+                - Queries:
+                      - purchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequest.md
+                      - purchaseRequests: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequests.md
+                - Objects:
+                      - PurchaseRequestType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestType.md
+                      - PurchaseRequestSourceType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestSourceType.md
+                      - PurchaseRequestConnection: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestConnection.md
+                      - PurchaseRequestEdge: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestEdge.md
+                - Mutations:
+                      - addPurchaseRequestSource: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/addPurchaseRequestSource.md
+                      - createPurchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequest.md
+                      - createPurchaseRequestFromDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequestFromDocuments.md
+                      - extractPurchaseRequestSourcesData: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/extractPurchaseRequestSourcesData.md
+                      - postProcessPurchaseRequestSources: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/postProcessPurchaseRequestSources.md
+                      - updatePurchaseRequestByDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/updatePurchaseRequestByDocuments.md
           - Back-in-Stock:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview.md
                 - Queries:
@@ -422,6 +438,13 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+          - xMarketing:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+                - Queries:
+                      - evaluateDynamicContent: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
+                - Objects:
+                      - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
+                      - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
           - News: 
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/News/overview.md
                 - Queries:
@@ -431,20 +454,16 @@ nav:
                       - NewsArticleContent: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContent.md
                       - NewsArticleContentConnection: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentConnection.md
                       - NewsArticleContentEdge: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentEdge.md
-          - xMarketing:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
-                - Queries:
-                      - evaluateDynamicContent: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
-                - Objects:
-                      - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
-                      - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
           - xOrder:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
                 - Queries:
-                      - Order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
-                      - Orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders.md
-                      - OrderStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderStatuses.md
-                      - OrganizationOrders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders.md
+                      - order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
+                      - orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders.md
+                      - orderStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderStatuses.md
+                      - organizationOrders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders.md
+                      - shipmentStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/shipmentStatuses.md
+                      - paymentStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/paymentStatuses.md
+                      - orderLineItemStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderLineItemStatuses.md
                 - Objects:
                       - CustomerOrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-type.md
                       - CustomerOrderConnection: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-connection.md
@@ -507,8 +526,11 @@ nav:
                       - Contacts: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contacts.md
                       - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/user.md
                       - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/role.md
+                      - Vendor: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/vendor.md
                       - requestPasswordReset: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/requestPasswordReset.md
                       - validatePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/validatePassword.md
+                      - checkUsernameUniqueness: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkUsernameUniqueness.md
+                      - checkEmailUniqueness: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkEmailUniqueness.md
                 - Objects:
                       - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationType.md
                       - OrganizationConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationConnection.md
@@ -548,6 +570,7 @@ nav:
                       - InputRegisterByInvitationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterByInvitationType.md
                       - InputResetPasswordByTokenType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputResetPasswordByTokenType.md
                       - InputChangePasswordType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputChangePasswordType.md
+                      - Rating: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/rating.md
                 - Mutations:
                       - createContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createContact.md
                       - updateContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateContact.md
@@ -572,23 +595,6 @@ nav:
                       - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
                       - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
                       - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
-          - Purchase Request:
-                - Overview: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/overview.md
-                - Queries:
-                      - purchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequest.md
-                      - purchaseRequests: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequests.md
-                - Objects:
-                      - PurchaseRequestType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestType.md
-                      - PurchaseRequestSourceType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestSourceType.md
-                      - PurchaseRequestConnection: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestConnection.md
-                      - PurchaseRequestEdge: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestEdge.md
-                - Mutations:
-                      - addPurchaseRequestSource: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/addPurchaseRequestSource.md
-                      - createPurchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequest.md
-                      - createPurchaseRequestFromDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequestFromDocuments.md
-                      - extractPurchaseRequestSourcesData: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/extractPurchaseRequestSourcesData.md
-                      - postProcessPurchaseRequestSources: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/postProcessPurchaseRequestSources.md
-                      - updatePurchaseRequestByDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/updatePurchaseRequestByDocuments.md
           - Push Messages:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview.md
                 - Queries:
@@ -667,6 +673,16 @@ nav:
                 - Mutations:
                       - pushHistoricalEvent: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent.md
                       - saveSearchQuery: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/saveSearchQuery.md
+          - Skyflow: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Skyflow/overview.md
+                - Queries:
+                      - skyflowCards: GraphQL-Storefront-API-Reference-xAPI/Skyflow/queries/skyflowCards.md
+                - Objects:
+                      - SkyflowCardType: GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/SkyflowCardType.md
+                      - SkyflowCardResponseType: GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/SkyflowCardResponseType.md
+                      - DeleteSkyflowCardCommandType: GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/DeleteSkyflowCardCommandType.md
+                - Mutations:
+                      - deleteSkyflowCard: GraphQL-Storefront-API-Reference-xAPI/Skyflow/mutations/deleteSkyflowCard.md
           - Store:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
                 - Queries:

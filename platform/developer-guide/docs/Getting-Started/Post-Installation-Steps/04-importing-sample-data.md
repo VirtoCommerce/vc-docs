@@ -1,6 +1,6 @@
 ﻿# Import Sample Data
 
-To help you explore Virto Commerce's capabilities, we provide a sample dataset that you can import to automatically populate various entities. On the first launch, the platform displays a wizard that will prompt you to choose and import sample data. Currently, we offer the **B2B Sample Store** sample dataset, which includes products, categories, customers, and other demo data that help developers and platform managers learn how Virto Commerce works.
+To help you explore Virto Commerce's capabilities, we provide a sample dataset that you can import to automatically populate various entities. On the first launch, the Platform displays a wizard that will prompt you to choose and import sample data. Currently, we offer the **B2B Sample Store** sample dataset, which includes products, categories, customers, and other demo data that help developers and Platform managers learn how Virto Commerce works.
 
 ![Import Sample Data wizard](media/06-import-sample-data-wizard.png){: style="display: block; margin: 0 auto;" }
 

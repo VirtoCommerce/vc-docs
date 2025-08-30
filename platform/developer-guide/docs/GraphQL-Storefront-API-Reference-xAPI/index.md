@@ -60,6 +60,7 @@ The xAPI project provides the following major features:
 - [Content](Content/overview.md)
 - [File](File/overview.md)
 - [Marketing](Marketing/overview.md)
+- [News](News/overview.md)
 - [Order](Order/overview.md)
 - [Pages](Pages/overview.md)
 - [Profile](Profile/overview.md)
@@ -68,7 +69,9 @@ The xAPI project provides the following major features:
 - [Quote](Quote/overview.md)
 - [Recommend](Recommend/overview.md)
 - [Reviews](Reviews/overview.md)
+- [Skyflow](Skyflow/overview.md)
 - [Store](Store/overview.md)
+- [Shipping](White-labeling/overview.md)
 - [White labeling](White-labeling/overview.md)
 
 

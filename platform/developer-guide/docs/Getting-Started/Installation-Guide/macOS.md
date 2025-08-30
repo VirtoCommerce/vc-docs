@@ -81,7 +81,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/assets",
-                "PublicUrl": "https://localhost:5001/assets/" <-- Set your platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/assets/" <-- Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -93,7 +93,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/cms-content",
-                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your Platform application url with port localhost:5001
             },
         },
     ```

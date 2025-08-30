@@ -1,6 +1,6 @@
-# Overview
+# News
 
-The News module provides functionality for creating, managing, and delivering news articles within the system. It allows you to query individual or multiple news articles and retrieve related content, metadata, and SEO information.
+The **News** module provides functionality for creating, managing, and delivering news articles within the system. It allows you to query individual or multiple news articles and retrieve related content, metadata, and SEO information.
 
 | Queries                                                                          | Objects                                                 |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------|

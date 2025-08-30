@@ -8,9 +8,9 @@ This query retrieves a list of items that a customer has saved for later, based 
 | --------------------------- | ------------------------------------------------------------------- |
 | `storeId`      ==String!==  | The Id of the store to retrieve saved-for-later items from.         |
 | `userId`       ==String!==  | The Id of the customer whose saved-for-later items are requested.   |
-| `organizationId` ==String== | The Id of the organization associated with the customer (optional). |
+| `organizationId` ==String== | The Id of the organization associated with the customer. |
 | `currencyCode` ==String==   | A standardized code for the currency.                               |
-| `cultureName`  ==String==   | The culture/language to retrieve data in.                           |
+| `cultureName`  ==String==   | The language to retrieve data in.                           |
 
 ## Possible return
 
@@ -18,7 +18,7 @@ This query retrieves a list of items that a customer has saved for later, based 
 | ----------------------------------- | ---------------------------------------------------------- |
 | [CartType](../objects/cart-type.md) | The response type containing saved-for-later cart details. |
 
-## Examples
+## Example
 
 === "Query"
 

@@ -1,14 +1,14 @@
 ﻿# Conceptual Overview
 
-The chart below shows the high level architecture of the platform:
+The chart below shows the high level architecture of the Platform:
 
 ![Back end architecture](media/01-back-end-architecture-chart.png){: style="display: block; margin: 0 auto;" }
 
-The Virto Commerce platform's core components are:
+The Virto Commerce Platform's core components are:
 
-* **Platform manager (SPA)**: A web-based user interface packed into an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for e-commerce applications. It works with all data through REST API the platform runtime provides.
+* **Platform manager (SPA)**: A web-based user interface packed into an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for e-commerce applications. It works with all data through REST API the Platform runtime provides.
 
-* **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the modules and manager GUI and acts as a host for all platform capabilities. It integrates various components to deliver a seamless e-commerce experience, including support for different databases, search engines, and caching mechanisms.
+* **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the modules and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless e-commerce experience, including support for different databases, search engines, and caching mechanisms.
 
 * **Modules**: Each module is a portion of the application's overall functionality. Multiple modules get organized into independent and interchangeable [software packages hosted by the Platform Application](../Fundamentals/Modularity/01-overview.md). All modules can be divided into three main categories depending on the tasks they are intended for:
 	- **Business modules**: Contain the implementation of business functionality.
@@ -21,9 +21,10 @@ The Virto Commerce platform's core components are:
 	- Microsoft SQL Server.
 
 * **Supported Search Engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:
-	- ElasticSearch.
-	- ElasticSearch8.
-	- ElasticApp Search.
+	- Elasticsearch.
+	- Elasticsearch 8.
+	- Elasticsearch 9.
+	- Elastic App Search.
 	- Azure Search.
 	- Algolia.
 	- Lucene.

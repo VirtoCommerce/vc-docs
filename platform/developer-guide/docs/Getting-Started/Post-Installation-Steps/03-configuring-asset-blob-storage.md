@@ -15,7 +15,7 @@ To switch the Platform to using this provider, edit the `Assets` section of the 
 
 1. Specify `FileSystem` as your default asset provider in the line 2.
 1. For `RootPath`, provide the base path to the `wwwroot` directory inside app folder in the line 4.
-1. Provide the base URL that will be used when generating a public URI [ASP.NET](http://asp.net/ "http://ASP.NET") Core app serves directly in the line 5. Make sure both host and port are up-to-date and valid for your platform instance.
+1. Provide the base URL that will be used when generating a public URI [ASP.NET](http://asp.net/ "http://ASP.NET") Core app serves directly in the line 5. Make sure both host and port are up-to-date and valid for your Platform instance.
 
 ```json title="appsettings.json"
 "Assets": {
@@ -62,7 +62,7 @@ To set up Azure Blob Storage:
     You can get your connection string from your Azure Portal under the Access Keys section.
 
 !!! note
-    This mode is recommended for use in a production environment, since it enables sharing the asset storage across multiple platform instances.
+    This mode is recommended for use in a production environment, since it enables sharing the asset storage across multiple Platform instances.
 
 
 <br>

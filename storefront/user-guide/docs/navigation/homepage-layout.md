@@ -18,7 +18,7 @@ From the top menu, you can:
 * Quickly access comparison and shopping lists.
 * View the list of orders.
 * Read notifications.
-* Quickly navigate through the catalog via the mega menu.
+* Quickly navigate through the catalog via the mega menu. You can navigate the menu using keyboard arrow keys ([as of Frontend 2.29.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.29.0)). The mega menu can be hidden from anonymous users ([as of Frontend 2.29.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.29.0)).
 
 ![top menu](../media/top-menu.png)
 

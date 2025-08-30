@@ -4,8 +4,8 @@ This section explains how to prepare your environment for testing xAPI.
 
 ## Prerequisites
 
-* VC platform 3.0 or higher.
-* The platform is configured to use ElasticSearch engine.
+* VC Platform 3.0 or higher.
+* The Platform is configured to use Elasticsearch engine.
   ```json title="appsettings.json"
   "Search": {
       "Provider": "ElasticSearch",
@@ -36,7 +36,7 @@ To start using xAPI:
 ## Test environment
 
 !!! note
-    If the xAPI module is not installed out-of-the-box, you can [install it](https://github.com/VirtoCommerce/vc-module-x-api) on the platform version 3.0 or higher by following [this guide](../Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md). Then restart the Platform.
+    If the xAPI module is not installed out-of-the-box, you can [install it](https://github.com/VirtoCommerce/vc-module-x-api) on the Platform (version 3.0) or higher by following [this guide](../Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md). Then restart the Platform.
 
 Open GraphQL UI playground in the browser by navigating to **http://{platform url}/ui/graphiql**, and run some sample queries.
 

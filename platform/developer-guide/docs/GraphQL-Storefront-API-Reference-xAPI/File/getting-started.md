@@ -1,7 +1,7 @@
 
 To start uploading files from clients applications:
 
-1. [Register the upload scope](getting-started.md#register-upload-scope)
+1. [Register the upload scope.](getting-started.md#register-upload-scope)
 1. [Query settings.](getting-started.md#register-upload-scope)
 1. [Upload files.](getting-started.md#upload-files)
 1. [Extend xAPI.](getting-started.md#extend-xapi)

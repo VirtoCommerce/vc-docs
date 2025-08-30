@@ -1,6 +1,6 @@
-# Overview
+# AI Document Processing
 
-The **AI Document processing** module provides functionality for managing purchase requests, including creation, updates, data extraction, and post-processing. 
+The **AI Document Processing** module provides functionality for managing purchase requests, including creation, updates, data extraction, and post-processing. 
 
 | Queries                                                             	| Objects                                        	| Mutations                                                                    	|
 |--------------------------------------------------------------------	|-------------------------------------------------	|----------------------------------------------------------------------------	|

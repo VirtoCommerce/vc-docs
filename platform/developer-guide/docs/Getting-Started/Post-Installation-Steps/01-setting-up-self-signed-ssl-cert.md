@@ -6,7 +6,7 @@ Running Virto Commerce Platform with HTTPS requires using an SSL certificate. Wh
 
 Although such a certificate implements full encryption, the visitors of your website will see a browser warning saying the certificate should not be trusted.
 
-When you first launch the platform with HTTPS enabled at [https://localhost:5001](https://localhost:5001/), you may also get this warning:
+When you first launch the Platform with HTTPS enabled at [https://localhost:5001](https://localhost:5001/), you may also get this warning:
 
 ![Your Connection Is Not Private screen](media/01-your-connection-is-not-private-screen.png){: style="display: block; margin: 0 auto;" }
 

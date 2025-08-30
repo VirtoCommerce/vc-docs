@@ -22,7 +22,7 @@ The following skills are important for working with Virto Commerce:
 
 ## eCommerce common skills
 
-* E-Commerce principles, UX/UI and best practices 
+* eCommerce principles, UX/UI and best practices 
 * Catalog browsing process 
 * Checkout flow 
 * SEO principles (Schema.org, JSON-LD)
@@ -55,6 +55,8 @@ Virto Commerce developer skills include:
 #### Search engines
 * Lucene 
 * Elasticsearch (Elastic Cloud)
+* Elasticsearch 8
+* Elasticsearch 9
 * Azure Search
 * Open Search
 * Elastic App Search

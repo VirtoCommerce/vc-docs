@@ -1,6 +1,6 @@
-# Overview
+# xFile
 
-The File Experience API (xFiles) module manages all file-related operations for various client applications. 
+The **xFile** module manages all file-related operations for various client applications. 
 
 Its architecture is designed to:
 
@@ -34,9 +34,12 @@ The xFiles modules provides the following features:
 * **Ready to use with client applications**: xAPI supports file usage with mutations and queries, enabling seamless integration with client applications.
 * **Security**: Anonymous file uploads are disabled by default, ensuring a security-first approach. Clean answers are provided for security inquiries.
 
-[![Download module](../media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases)
-
 
 | Queries               	                            | Objects                                                      	            | Mutations                                 |
 |----------------------------------------------------	|-------------------------------------------------------------------------	|----------------	                        |
 | [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)<br>  	| [deleteFile](Mutations/deleteFile.md) 	|
+
+
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases/latest)
