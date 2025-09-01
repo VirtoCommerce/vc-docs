@@ -12,7 +12,7 @@ There are types of vendor-made extensions that guarantee 'seamless delivery'.  V
 
 ![Extensibility Overview](media/01-extensibility-overview.png)
 
-## No-code Extensions
+## No-code extensions
 
 Virto Commerce supports declarative extensions through the admin interface and API to extend the data model, UI, and workflow processing.
 
@@ -48,7 +48,7 @@ Virto Commerce creates a unique extension framework based on .NET extension and 
 Moreover, it simplifies DevOps processes and optimizes performance.
 
 !!! warning
-    Source code is available only for transparency purposes. Virto does not recommend extending the platform through the source code, as it may breach the continuous delivery functionality.
+    Source code is available only for transparency purposes. Virto does not recommend extending the Platform through the source code, as it may breach the continuous delivery functionality.
 
 With a custom module, you can extend every layer:
 
@@ -62,18 +62,18 @@ With a custom module, you can extend every layer:
 
 For example, on the chart below, the Price module extension extends the default Virto Commerce Price module with the *Recommended price* property, with this new property being visible on every layer.
 
-![Price module extension](media/05-price-extension-module.png)
+![Price module extension](media/05-price-extension-module.png){: style="display: block; margin: 0 auto;" }
 
 
 ### Do not modify code you do not own
 
-Despite the fact Virto platform is an open-source project, you should at all times avoid direct modification into the source code of modules developed by third parties or VC team. You also should always follow the **Open-Closed Principle** (open for extensions and closed for modifications).
+Despite the fact the Virto Platform is an open-source project, you should at all times avoid direct modification into the source code of modules developed by third parties or VC team. You also should always follow the **Open-Closed Principle** (open for extensions and closed for modifications).
 
-![Changing directly vs extending](media/06-changing-source-code-vs-extending.png) 
+![Changing directly vs extending](media/06-changing-source-code-vs-extending.png){: style="display: block; margin: 0 auto;" }
 
-Here are some benefits you get by following our **Extension concept** and using **Extensible points** our platform provides for customizing your solution:
+Here are some benefits you get by following our **Extension concept** and using **Extensible points** our Platform provides for customizing your solution:
 
-* **Seamless delivery:** If you don't have any modifications in the code you do not own, you will avoid merging hell during updates and be able to timely receive new fixes for bugs and security vulnerabilities, along with new functionality even for major updates. The platform team makes every effort to simplify the updating process and not to introduce any breaking changes in new releases. This is a huge advantage, but it is only advantageous to you if you take action on the updates.
+* **Seamless delivery:** If you don't have any modifications in the code you do not own, you will avoid merging hell during updates and be able to timely receive new fixes for bugs and security vulnerabilities, along with new functionality even for major updates. The Platform team makes every effort to simplify the updating process and not to introduce any breaking changes in new releases. This is a huge advantage, but it is only advantageous to you if you take action on the updates.
 
 * **Easier support provision.** Virto's support team can easily reproduce your issues and quickly provide you with the right solutions and answers.
 
@@ -81,7 +81,7 @@ Here are some benefits you get by following our **Extension concept** and using 
 
 Usually, customization or extensibility means a complex update process. If you customize the default implementation, you need to support it by yourself. Getting updates from the vendor and redeveloping them to extend the functionality for the customers' needs becomes a time consuming task.
 
-Here at Virto Commerce, we design the platform with the **Keep up to date** and **Seamless delivery process** principles in mind:
+Here at Virto Commerce, we design the Platform with the **Keep up to date** and **Seamless delivery process** principles in mind:
 
 ![Seamless Delivery](media/07-seamless-delivery.png)
 
@@ -104,18 +104,18 @@ The table below will help you understand the differences between various customi
 
 | Type   	| Name             	| Purpose                                 	| When to use                                 	| Advantages                                     	| Disadvantages                     |
 |--------	|------------------	|-----------------------------------------	|---------------------------------------------	|------------------------------------------------	|--------------------------------	|
-| Native 	| Events           	| Customization                           	| React to status changes                     	| Synchronous<br>Performance                     	| Base module is required           |
+| Native 	| Events           	| Customization                           	| React to status changes                     	| Synchronous performance                     	    | Base module is required           |
 | Native 	| Extension points 	| Extend/ override default implementation 	| Extend default behavior                     	| Reuse VC features<br>Painless update           	| Base module is required<br> Only extension   |
 | Native 	| Custom points    	| Custom implementation                   	| Custom business logic                         |                                                	|                                   |
 | API    	| Webhooks         	| Integration                             	| Trigger for another applications            	| Ready to use trigger for the 3rd party service 	| Performance                       |
-| API    	| Events           	| Reactive programming                    	| React to status changes                     	| Asynchronous<br> Performance<br> Scalability   	| Network latency                   |
+| API    	| Events           	| Reactive programming                    	| React to status changes                     	| Asynchronous performance<br> Scalability   	    | Network latency                   |
 | API    	| Messages         	| Integration                             	| Order processing and financial transactions 	| Transactions<br> Ready for price applications  	| Cost<br> Network latency          |
 
 ## Summary
 + Virto Commerce provides the best opportunities for customization. 
 + As a developer you can choose the best approach and balance between inside and outside integrations.
 + The Native approach simplifies the DevOps processes and optimizes performance, allowing you to reuse and improve Virto Commerce modules.
-+ The API approach helps you to **glue** Virto Commerce's platform into your e-commerce ecosystem. 
++ The API approach helps you to **glue** Virto Commerce's Platform into your e-commerce ecosystem. 
 + The open source principle enables developers to learn the code and fix issues.
 
 

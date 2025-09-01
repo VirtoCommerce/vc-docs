@@ -2,7 +2,7 @@
 
 This tutorial provides specific steps to extend the model and persistence layer of an existing module. In this guide, we will use the [Virto Commerce Orders Module](https://github.com/VirtoCommerce/vc-module-order/tree/master/samples/VirtoCommerce.OrdersModule2.Web) as an example. 
 
-We recommend following a 3-tier architecture (Core, Data, and Web) for both custom modules and the Virto Commerce platform.
+We recommend following a 3-tier architecture (Core, Data, and Web) for both custom modules and the Virto Commerce Platform.
 
 ## Changes in ".Core" project
 

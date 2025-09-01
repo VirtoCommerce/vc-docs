@@ -17,7 +17,7 @@ To generate C# client code from your Virto Commerce Swagger JSON file:
     1. Launch **NSwag Studio**. 
     1. Open **Documents** section and select **Net60**.
     1. Enter the **swagger.json** file URL in the **Swagger Specification URL** text box.
-    1. Click the **Create local Copy** button to generate a JSON representation of your Swagger specification.
+    1. Click the **Create Local Copy** button to generate a JSON representation of your Swagger specification.
 
         ![open nswag studio](media/open-nswag-studio.png)
 
@@ -66,7 +66,7 @@ To generate C# client code from your Virto Commerce Swagger JSON file:
 
         ![image](media/result-example.png)
 
-1. Request Password Token 
+1. Request password token. 
 
     ??? Example
         Here's an example of how to call request password token using Snippet IdentityModel.

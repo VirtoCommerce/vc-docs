@@ -13,7 +13,7 @@ Example URL: `https://{admin-portal-domain-url}/docs`
 ![Swagger](media/swagger-ui.png)
 
 ## Platform endpoint
-Gain access to complete Swagger/OpenAPI endpoints for all modules within the platform via the `/docs/PlatformUI/swagger.json` path.
+Gain access to complete Swagger/OpenAPI endpoints for all modules within the Platform via the `/docs/PlatformUI/swagger.json` path.
 
 ## Module endpoint
 Module-specific Swagger/OpenAPI endpoints are accessible at URLs structured as `/docs/{module-id}/swagger.json`.

@@ -21,13 +21,13 @@ As an example, let's add two blocks to the configuration:
 
 To add these blocks:
 
-1. Go to **Content** --> **Theme**
-1. Create the following folder structure: **config**--> **schemas** --> **sections**
+1. Go to **Content** --> **Theme**.
+1. Create the following folder structure: **config**--> **schemas** --> **sections**.
 1. Upload **Image.json** and **Image2.json** files to this folder.
 
 The existing **Image** block is replaced with the new one. The new **Image2** block is added to the list of blocks:
 
-![New blocks](media/new-blocks.png)
+![New blocks](media/new-blocks.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

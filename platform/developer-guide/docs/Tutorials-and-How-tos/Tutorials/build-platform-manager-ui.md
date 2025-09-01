@@ -1,4 +1,3 @@
-
 # Build and Customize Platform Manager UI
 
 Use this guide to create Platform Manager UI for the Virto Commerce **Customer Reviews** module created [here](creating-custom-module.md).
@@ -8,7 +7,7 @@ After completing this lesson, a Platform Manager UI for the Virto Commerce "Cust
 * Blade with the customer reviews list for products.
 * Widget on the product page to view the number of reviews and open the new reviews blade for the product.
 
-To build and customize platform manager UI:
+To build and customize Platform manager UI:
 
 1. [Debug scripts.](build-platform-manager-ui.md#debug-scripts)
 1. [Build module UI.](build-platform-manager-ui.md#build-customer-reviews-module-web-ui)
@@ -30,19 +29,19 @@ The most common extension points for Platform Manager UI are:
 
 * **Blade**: The main UI element of the Platform Manager. Every blade has basic parts such as Maximize, Close buttons on the top and the title, toolbar, main content placeholders following down. 
 
-    ![Blade](media/blades.png)
+    ![Blade](media/blades.png){: style="display: block; margin: 0 auto;" }
 
     ![Readmore](media/readmore.png){: width="25"} [Blades and Navigation](../../Platform-Manager/Extensibility-Points/blades-and-navigation.md)
 
 * **Toolbar**:  A dedicated area inside blade for adding commands. Hereinafter, the toolbar commands shall be referenced to as toolbar items.
 
-    ![Toolbar](media/toolbar.png)
+    ![Toolbar](media/toolbar.png){: style="display: block; margin: 0 auto;" }
 
     ![Readmore](media/readmore.png){: width="25"} [Blade Toolbar](../../Platform-Manager/Extensibility-Points/blade-toolbar.md)
  
 * **Metaform**: A placeholder (container) control that renders UI content based on provided metadata.
 
-    ![Metaform](media/metaform.png)
+    ![Metaform](media/metaform.png){: style="display: block; margin: 0 auto;" }
 
     ![Readmore](media/readmore.png){: width="25"} [Metaform](../../Platform-Manager/Extensibility-Points/metaform.md)
 
@@ -51,7 +50,7 @@ The most common extension points for Platform Manager UI are:
     * Usually enables opening additional blade with extra information and functionality.
     * Is reusable and can be added to many blades (widget containers) in various places.
 
-    ![Widget container](media/widgets.png)
+    ![Widget container](media/widgets.png){: style="display: block; margin: 0 auto;" }
 
     ![Readmore](media/readmore.png){: width="25"} [Widget](../../Platform-Manager/Extensibility-Points/widgets.md)
 
@@ -60,7 +59,7 @@ The most common extension points for Platform Manager UI are:
 
 To enable JS debugging in the Platform:
 
-1. Set app `VirtoCommerce:EnableBundlesOptimizations` value to **false** in the platform's **Web.config**:
+1. Set app `VirtoCommerce:EnableBundlesOptimizations` value to **false** in the Platform's **Web.config**:
 
     ```xml
     <add key="VirtoCommerce:EnableBundlesOptimizations" value="false" />
@@ -283,7 +282,7 @@ angular.module('customerReviewsModule')
 
 You will see the existing Customer reviews list:
 
-![Reviews list blade](media/reviews-list.png)
+![Reviews list blade](media/reviews-list.png){: style="display: block; margin: 0 auto;" }
 
 ### Define widget
 

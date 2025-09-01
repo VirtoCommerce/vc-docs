@@ -69,7 +69,7 @@ To build the frontend locally:
 
 ## Perform initial configuration
 
-After building the module, configure it by linking the module directory to the platform. This allows the platform to read the module's manifest and load it:
+After building the module, configure it by linking the module directory to the Platform. This allows the Platform to read the module's manifest and load it:
 
 ```console
 mklink /d VirtoCommerce.Platform.Web\Modules\VirtoCommerce.{module-name} src\VirtoCommerce.{module-name}.Web
@@ -77,13 +77,13 @@ mklink /d VirtoCommerce.Platform.Web\Modules\VirtoCommerce.{module-name} src\Vir
 
 ## Run module
 
-Restart the Virto Commerce Platform to load the newly built module into the platform's application process.
+Restart the Virto Commerce Platform to load the newly built module into the Platform's application process.
 
 ## Debug backend
 
 To debug backend:
 
-1. Make sure the platform is installed and running.
+1. Make sure the Platform is installed and running.
 1. Open the module solution in Visual Studio.
 1. Attach the debugger to the `VirtoCommerce.Platform.Web.exe` process.
 

@@ -1,6 +1,6 @@
 # Modules Development via Docker
 
-The primary objective is to simplify the setup process for developing Virto Commerce (VC) modules by using Docker technology. This initiative aims to speed up the onboarding process for new engineers joining our team. With Docker and Visual Studio installed, developers can focus on coding without having to worry about configuring external tools or services such as the VC platform, SQL Server, Elastic Search or Redis. Development takes place in Visual Studio as usual, with changes seamlessly synchronised between the host and the Docker container.
+The primary objective is to simplify the setup process for developing Virto Commerce (VC) modules by using Docker technology. This initiative aims to speed up the onboarding process for new engineers joining our team. With Docker and Visual Studio installed, developers can focus on coding without having to worry about configuring external tools or services such as the VC Platform, SQL Server, Elastic Search or Redis. Development takes place in Visual Studio as usual, with changes seamlessly synchronised between the host and the Docker container.
 
 ![Readmore](media/readmore.png){: width="25"} [Deploying Modules from Source Code](debugging.md)
 
@@ -10,7 +10,7 @@ The Virto Commerce team has developed a [docker-compose.yml](https://github.com/
 
 The VC Platform Manager web app has been containerized into multiple services, including the web service (Platform Manager) and external services for MS SQL Server, Elastic Search, and Redis. These services are orchestrated as a multi-container application using Docker Compose.
 
-![Developing inside a Container](media/developing-inside-container.png)
+![Developing inside a Container](media/developing-inside-container.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
     The solution does not include the Frontend Application components.
@@ -58,7 +58,7 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
     APP_DATA_MODULES=c:\path\to\folder\modules
     ```
 
-    You can also parameterize the platform version and search provider in the **.env** file:
+    You can also parameterize the Platform version and search provider in the **.env** file:
 
     ```cmd
     PLATFORM_VERSION=dev-linux-latest
@@ -81,7 +81,7 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
 
 ## Run Virto Commerce Platform Manager
 
-After the containers are started, open VC Platform Manager. This will launch the application and install default modules. After the modules have been installed, restart the container with the platform to configure sample data.
+After the containers are started, open VC Platform Manager. This will launch the application and install default modules. After the modules have been installed, restart the container with the Platform to configure sample data.
 
 ![Choose sample data](media/screen-sample-data.png)
 
@@ -112,7 +112,8 @@ After the containers are started, open VC Platform Manager. This will launch the
 If the new module has been rebuilt:
 
 1. Overwrite the folder for the newly created module with `your_module_project.Web`.
-1. Restart the platform by clicking Settings -> Restart on Platform Manager UI:
+1. Click **Settings**.
+1. Restart the Platform by clicking **Restart**:
 
     ![Restart platform](media/screen-restart-platform.png)
 
@@ -126,7 +127,7 @@ docker-compose down
 
 Don't forget to delete the newly created module from the `Modules` and `Modules\AppData` folders.
 
-If you need to recreate the platform database for the next debug session, remove the `db-volume` by running:
+If you need to recreate the Platform database for the next debug session, remove the `db-volume` by running:
 
 ```cmd
 docker volume rm db-volume

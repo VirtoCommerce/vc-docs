@@ -4,11 +4,11 @@ This article will show you how to extend the existing promotion expression tree 
 
 * New expression block:
 
-  ![New expression block](media/09-new-expression-block.png)
+  ![New expression block](media/09-new-expression-block.png){: style="display: block; margin: 0 auto;" }
 
 * New block element:
 
-  ![New block element](media/10-new-block-element.png)
+  ![New block element](media/10-new-block-element.png){: style="display: block; margin: 0 auto;" }
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-marketing/tree/dev/samples/VirtoCommerce.MarketingSampleModule.Web)
 
@@ -133,7 +133,7 @@ angular.module(moduleName, [])
     npm run webpack:build
     ```
 
-1. Restart the platform instance to apply your changes.
+1. Restart the Platform instance to apply your changes.
 
 1. Open Platform Manager, go to **Marketing --> Promotions --> New promotion**. The new `For condition evaluator with any of these sample values` block with its single `Sample condition is met: no/yes` line appears.
 

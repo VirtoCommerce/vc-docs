@@ -35,7 +35,7 @@ To run your own Virto Commerce module, you can [create it from scratch](create-n
 
 When you are done, you will have your `vc-module-my-cool-module` solution with the following structure, which you can see when you open your newly created module with Visual Studio:
 
-![Solution Explorer](media/01-solution-explorer.png)
+![Solution Explorer](media/01-solution-explorer.png){: style="display: block; margin: 0 auto;" }
 
 ## Work with database
 
@@ -515,8 +515,8 @@ To extend the Platform Manager UI:
         npm run webpack:build
         ```
 
-1. Verify that the platform UI has been extended with your module scripts:
-    1. Open the platform UI.
+1. Verify that the Platform UI has been extended with your module scripts:
+    1. Open the Platform UI.
     1. Go to the `MyCoolModule` menu. You will see all created **Blogs** records.
 
 
@@ -580,11 +580,11 @@ The module package can be uploaded and installed to the Virto Commerce Platform.
 1. In the main menu, click **Modules**. 
 1. Click **Advanced** in the next blade.
 1. Install or update the module from a file.
-1. Restart the platform.
+1. Restart the Platform.
 
 If the module is installed properly, you will see the new module in the list of the installed modules, in the Admin UI, and in the Swagger API:
 
-![Admin UI module view](media/05-admin-ui.png)
+![Admin UI module view](media/05-admin-ui.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Custom modules templates to create pre-configured entities](module-templates-for-dotnet-new.md)
 
