@@ -69,7 +69,7 @@ nav:
                       - Overview: Fundamentals/Indexed-Search/search/overview.md
                       - Faceted Search Overview and Configuration: Fundamentals/Indexed-Search/search/faceted-search.md
                 - Integration:
-                      - Elasticsearch 9: 
+                      - Elasticsearch 9:
                           - Overview: Fundamentals/Indexed-Search/integration/elastic-search-9.md
                           - Semantic Search: Fundamentals/Indexed-Search/integration/semantic-search-es9.md
                       - Elasticsearch 8:
@@ -106,9 +106,9 @@ nav:
                 - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md
           - Event Driven Development:
                 - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
-                - Event Providers: 
+                - Event Providers:
                       - Webhooks: Fundamentals/Event-Driven-Development/webhooks.md
-                      - Event Bus: 
+                      - Event Bus:
                             - Overview: Fundamentals/Event-Driven-Development/event-bus.md
                             - Configuration: Fundamentals/Event-Driven-Development/event-bus-configuration.md
           - Page Builder:
@@ -149,7 +149,7 @@ nav:
                 - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
           - SEO:
                 - Overview: Fundamentals/SEO/overview.md
-                - Adding SEO Capabilities to Module: Fundamentals/SEO/add-seo-to-module.md 
+                - Adding SEO Capabilities to Module: Fundamentals/SEO/add-seo-to-module.md
                 - Configuration: Fundamentals/SEO/configuration.md
           - Dynamic Properties:
                 - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
@@ -438,6 +438,7 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+          - News:
           - xMarketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
                 - Queries:
@@ -445,12 +446,12 @@ nav:
                 - Objects:
                       - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
                       - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
-          - News: 
+          - News:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/News/overview.md
                 - Queries:
                       - newsArticle: GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticle.md
                       - newsArticles: GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticles.md
-                - Objects: 
+                - Objects:
                       - NewsArticleContent: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContent.md
                       - NewsArticleContentConnection: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentConnection.md
                       - NewsArticleContentEdge: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentEdge.md
@@ -673,7 +674,7 @@ nav:
                 - Mutations:
                       - pushHistoricalEvent: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent.md
                       - saveSearchQuery: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/saveSearchQuery.md
-          - Skyflow: 
+          - Skyflow:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Skyflow/overview.md
                 - Queries:
                       - skyflowCards: GraphQL-Storefront-API-Reference-xAPI/Skyflow/queries/skyflowCards.md
@@ -809,6 +810,7 @@ nav:
                             - useToolbar: custom-apps-development/vc-shell/Essentials/composables/useToolbar.md
                             - useUser: custom-apps-development/vc-shell/Essentials/composables/useUser.md
                             - useWidgets: custom-apps-development/vc-shell/Essentials/composables/useWidgets.md
+                            - useExternalWidgets: custom-apps-development/vc-shell/Essentials/composables/useExternalWidgets.md
                             - useTableSort: custom-apps-development/vc-shell/Essentials/composables/useTableSort.md
                             - useModificationTracker: custom-apps-development/vc-shell/Essentials/composables/useModificationTracker.md
                       - Usage Guides:
