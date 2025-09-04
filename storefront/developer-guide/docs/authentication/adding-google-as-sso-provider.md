@@ -63,11 +63,11 @@ Configure store settings:
 
 The GraphQL query confirms that authentication via Google AD is enabled:
 
-![Query](media/graphql-google-authentication.png){: width="650"}
+![Query](media/graphql-google-authentication.png){: style="display: block; margin: 0 auto;" width="650"}
 
 The Google authentication button appears on the login page of the Frontend Application:
 
-![Google button](media/google-button.png){: width="700"}
+![Google button](media/google-button.png){: style="display: block; margin: 0 auto;" width="700"}
 
 
 

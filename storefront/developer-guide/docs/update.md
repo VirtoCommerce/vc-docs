@@ -71,3 +71,12 @@ If you need a specific version instead of a branch:
     ```
     git merge tags/2.22.0
     ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../deployment">← Deployment</a>
+    <a href="../theme-customization/theme-customization">Theme customization →</a>
+</div>

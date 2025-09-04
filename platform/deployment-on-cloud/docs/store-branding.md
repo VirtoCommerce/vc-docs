@@ -43,24 +43,41 @@ Your changes have been applied.
 
 ![Before and after white labeling](media/before-after.png)
 
-## Add presets
+## Apply theme color scheme
 
-Below is the breakdown of the main colors in the color scheme:
+You can personalize your store by applying a [custom theme](../../../storefront/developer-guide/theme-customization/theme-customization) or choosing from the ready-to-use color schemes designed by Virto Commerce. Each release includes a set of default color presets, with new ones added several times a year. To access the latest default color presets, users can simply download the updated theme. Currently, the following out-of-the-box color schemes can be applied to your store:
 
-![Color scheme](media/colors-explanation.png)
+=== "purple-pink"
 
-To configure a custom color scheme:
+    ![purple-pink](media/purple.png)
 
-1. Go to **Content** → **Your store** → **Theme** → **default** → **config** → **presets**.
-1. Click **Add** in the toolbar to create a new color scheme.
-1. In the next blade, enter your color scheme name.
-1. Paste your custom color scheme.
+=== "black-gold"
 
-    !!! note
-        You can [create your own color scheme using ChatGPT](../../user-guide/content/managing-themes#create-theme-colors-using-chatgpt).
+    ![Black](media/black.png)
 
-1. Click **Create** to add the color scheme to the list.
-1. Copy the filename of your color scheme without extension.
+=== "watermelon"
+
+    ![Watermelon](media/watermelon.png)
+
+=== "coffee"
+
+    ![Coffee](media/coffee.png)
+
+=== "ocean"
+
+    ![Ocean](media/ocean.png)
+
+=== "peach"
+
+    ![Peach](media/peach.png)
+
+
+![Readmore](media/readmore.png){: width="25"} [Theme customization](../../../storefront/developer-guide/theme-customization/theme-customization)
+
+
+For the purpose of this guide, a color scheme named **safco** has been created by the developers. To apply a new color scheme to your store:
+
+1. Select one of the out-of-the-box color schemes or your custom scheme (**safco**) and copy its name without extension to clipboard:
 1. Go to **Stores** --> Your store --> **White labeling**.
 1. In the **White labeling** blade, click ![Pencil](media/pencil.png){: width="25"} next to the **Theme preset name**.
 1. In the next blade, click **Add** in the toolbar.
@@ -69,9 +86,7 @@ To configure a custom color scheme:
 1. In the previous blade, select the newly added theme from the dropdown list. 
 1. Click **Save** in the toolbar. 
 
-Your new color scheme has been applied.
-
-Your store's branding changes have been applied:
+Your new color scheme has been applied:
 
 ![Branded store](media/branded-shop.png)
 
@@ -83,4 +98,3 @@ Your store's branding changes have been applied:
     <a href="../footer-creation">← Set up footer </a>
     <a href="../create-page-in-builder-io">Create page in Builder.io →</a>
 </div>
-

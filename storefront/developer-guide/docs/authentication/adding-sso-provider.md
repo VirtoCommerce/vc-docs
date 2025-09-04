@@ -38,11 +38,11 @@ Configure store settings:
 
 The GraphQL query confirms that authentication via Entra ID (Azure AD) is enabled:
 
-![Query](media/graphql-authentication-types.png){: width="650"}
+![Query](media/graphql-authentication-types.png){: style="display: block; margin: 0 auto;" width="650"}
 
-The Azure AD authentication button appears on the login page of the Frontend Application:
+The Azure AD (Entra ID) authentication button appears on the login page of the Frontend Application:
 
-![Azure AD button](media/azure-ad-button.png){: width="700"}
+![Azure AD button](media/azure-ad-button.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
     If an account does not exist, clicking on the Azure Active Directory button will automatically create a new account.

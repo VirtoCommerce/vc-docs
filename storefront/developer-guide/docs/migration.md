@@ -14,6 +14,6 @@ Current Storefront and Theme users have the following options:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../deployment">← Deployment</a>
+    <a href="../theme-customization/theme-customization">← Theme customization</a>
     <a href="../migration-on-azure">Migration on Azure Cloud →</a>
 </div>

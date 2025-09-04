@@ -1,6 +1,6 @@
 # Modules Architecture
 
-This document provides an overview of the Virto Commerce frontend modules architecture. The modular approach provides:
+This document provides an overview of the Virto Commerce Frontend modules architecture. The modular approach provides:
 
 * **Scalability:** Easily add new features without affecting existing ones.  
 * **Maintainability:** Isolated codebases simplify management and debugging.  
@@ -151,5 +151,5 @@ Happy coding! 🚀
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../architecture">← Frontend application architecture</a>
-    <a href="../../deployment">Deployment →</a>
+    <a href="../../spa-architecture-for-seo-and-404-handling">SPA architecture for SEO and 404 handling →</a>
 </div>

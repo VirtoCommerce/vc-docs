@@ -332,6 +332,10 @@ extra:
           url: https://www.virtocommerce.org/c/news-digest/
     main_page:
         release_notes:
+            - title: September 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-september-2025/805
+              type: Release Notes
+              date: 2 September 2025
             - title: August 2025
               link: https://www.virtocommerce.org/t/virto-s-release-notes-august-2025/801
               type: Release Notes

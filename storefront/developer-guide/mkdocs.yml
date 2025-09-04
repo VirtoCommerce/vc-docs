@@ -25,6 +25,11 @@ nav:
         - SPA Architecture for SEO and 404 Handling: spa-architecture-for-seo-and-404-handling.md
     - Deployment: deployment.md
     - Update: update.md
+    - Frontend Customization:
+        - Overview: customization/overview.md
+        - Visual Theme Customization: customization/visual-theme-customization.md
+        - Functionality Customization: customization/functionality-customization.md
+        - Texts Customization: customization/texts-customization.md
     - Migration to Storefrontless Architecture: 
         - Overview: migration.md
         - Migration on Azure Cloud: migration-on-azure.md
