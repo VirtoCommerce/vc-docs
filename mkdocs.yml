@@ -621,8 +621,10 @@ extra:
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
+    - assets/javascripts/version-selector.js
 
 
 extra_css:
     - assets/stylesheets/main.css
     - assets/stylesheets/fonts.css
+    - assets/stylesheets/version-selector.css
