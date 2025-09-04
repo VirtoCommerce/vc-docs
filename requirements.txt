@@ -1,0 +1,13 @@
+mkdocs
+mkdocs-awesome-pages-plugin 
+mkdocs-git-revision-date-localized-plugin 
+mkdocs-material==9.5.4 
+mkdocs-minify-plugin 
+mkdocs-redirects 
+pymdown-extensions 
+jinja2 
+mkdocs-git-revision-date-localized-plugin==0.5 
+mkdocs-include-markdown-plugin 
+mkdocs-glightbox 
+mkdocs-monorepo-plugin 
+mike
