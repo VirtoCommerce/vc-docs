@@ -1,6 +1,6 @@
 # How-To: Creating and Registering Blade Widgets with `useWidgets`
 
-This guide provides a practical walkthrough on how to create custom widget components and register them for display within specific **blades** in your VC-Shell application using the `useWidgets` composable.
+This guide provides a practical walkthrough on how to create custom widget components and register them for display within specific **blades** in your VC-Shell application using the `useWidgets` composable and the external widget system.
 
 ## Prerequisites
 
@@ -14,8 +14,18 @@ This guide provides a practical walkthrough on how to create custom widget compo
 -   **Blade Widgets**: Self-contained Vue components designed to offer supplementary information or interactive elements within a VC-Shell blade.
 -   **`useWidgets` Composable**: The primary API for managing the registration, state, and lifecycle of these blade widgets.
 -   **`VcWidget` Component**: A standardized UI component provided by VC-Shell, ideal for building custom blade widgets with a consistent look and feel.
+-   **External Widgets**: Widgets registered by external modules that can automatically appear in compatible blades without tight coupling.
 
-## Step 1: Creating Your Blade Widget Component
+## Widget Registration Approaches
+
+VC-Shell provides two main approaches for widget registration:
+
+1. **Direct Registration**: For widgets specific to a particular blade
+2. **External Widget System**: For widgets that should be available across multiple blade types from different modules
+
+## Approach 1: Direct Widget Registration
+
+### Step 1: Creating Your Blade Widget Component
 
 When building a new widget for a blade, using `VcWidget` as its foundation is highly recommended. This ensures visual consistency with the VC-Shell framework and provides common widget functionalities.
 
@@ -90,7 +100,7 @@ defineExpose({
 </script>
 ```
 
-## Step 2: Registering the Widget for a Specific Blade
+### Step 2: Registering the Widget for a Specific Blade
 
 Widgets are registered using the `useWidgets` composable, typically within the `setup` function of the component that defines or manages the blade.
 
@@ -144,6 +154,163 @@ onUnmounted(() => {
 - `bladeId`: Specifies which blade the widget belongs to.
 - `updateFunctionName`: Allows the widget to be updated via `updateActiveWidget()`.
 
+## Approach 2: External Widget System
+
+The external widget system allows modules to register widgets that can automatically appear in compatible blades from other modules without tight coupling.
+
+### Step 1: Creating an External Widget Component
+
+External widgets are created similarly to direct widgets, but they should be more generic and configurable:
+
+```vue
+<!-- MyExternalProductWidget.vue -->
+<template>
+  <VcWidget
+    title="Product Status"
+    :value="displayValue"
+    :icon="widgetIcon"
+    @click="handleClick"
+  />
+</template>
+
+<script setup lang="ts">
+import { VcWidget } from '@vc-shell/framework';
+import { computed } from 'vue';
+
+interface Props {
+  item?: any;           // Generic item from blade
+  isModified?: boolean; // Modification state
+  currentLocale?: string; // Current language
+  readonly?: boolean;   // Read-only state
+}
+
+const props = defineProps<Props>();
+
+const displayValue = computed(() => {
+  if (!props.item) return 'No data';
+  return props.isModified ? 'Modified' : 'Saved';
+});
+
+const widgetIcon = computed(() =>
+  props.isModified
+    ? 'material-edit'
+    : 'material-check'
+);
+
+function handleClick() {
+  if (!props.readonly && props.item) {
+    console.log('External widget clicked for item:', props.item.id);
+  }
+}
+
+// Expose refresh function
+defineExpose({
+  refresh: () => {
+    console.log('External widget refreshed');
+  }
+});
+</script>
+```
+
+### Step 2: Registering the External Widget
+
+Register the external widget in your module's `index.ts` file:
+
+```typescript
+// In your module's index.ts
+import { registerExternalWidget } from '@vc-shell/framework';
+import { markRaw } from 'vue';
+import MyExternalProductWidget from './components/widgets/MyExternalProductWidget.vue';
+
+// Register external widget during module initialization
+registerExternalWidget({
+  id: 'my-module-product-widget',
+  component: markRaw(MyExternalProductWidget),
+  targetBlades: ['product-details'], // Specify compatible blade types
+  config: {
+    requiredData: ['item'], // Data that must be provided by the blade
+    optionalData: ['isModified', 'currentLocale', 'readonly'], // Optional data
+    fieldMapping: {
+      // If blade uses different field names, map them here
+      // 'widgetProp': 'bladeDataKey'
+    }
+  },
+  isVisible: (blade) => {
+    // Dynamic visibility based on blade param
+    return !!blade?.param;
+  },
+  updateFunctionName: 'refresh'
+});
+```
+
+### Step 3: Using External Widgets in Blades
+
+Blades can automatically discover and register external widgets using the `useExternalWidgets` composable:
+
+```typescript
+// In your blade component (e.g., ProductDetailsBlade.vue)
+import { useExternalWidgets } from '@vc-shell/framework';
+import { computed } from 'vue';
+
+// Define the data that external widgets might need
+const bladeData = computed(() => ({
+  item: product.value,
+  isModified: isModified.value,
+  currentLocale: currentLocale.value,
+  readonly: isReadonly.value,
+  // Add any other data that widgets might need
+  productType: product.value?.type,
+  hasPermissions: hasEditPermissions.value,
+}));
+
+// Register external widgets for this blade
+const externalWidgets = useExternalWidgets({
+  bladeId: 'product-details',
+  bladeData,
+  autoRegister: true,      // Automatically register widgets on mount
+  autoUpdateProps: true,   // Automatically update widget props when blade data changes
+});
+
+// Optional: Manual control
+onMounted(() => {
+  // Manual registration if autoRegister is false
+  // externalWidgets.registerExternalWidgets();
+});
+
+onUnmounted(() => {
+  // Clean up external widgets
+  externalWidgets.unregisterExternalWidgets();
+});
+```
+
+### Step 4: Advanced External Widget Configuration
+
+For more complex scenarios, you can use custom prop resolvers:
+
+```typescript
+registerExternalWidget({
+  id: 'advanced-product-widget',
+  component: markRaw(AdvancedProductWidget),
+  targetBlades: ['product-details'],
+  config: {
+    // Custom function to resolve props from blade data
+    propsResolver: (bladeData: Record<string, unknown>) => {
+      const item = bladeData.item as any;
+
+      return {
+        productId: item?.id,
+        productName: item?.name,
+        status: bladeData.isModified ? 'modified' : 'saved',
+        canEdit: !bladeData.readonly && bladeData.hasPermissions,
+        locale: bladeData.currentLocale || 'en',
+        // Transform or compute additional props
+        displayPrice: item?.price ? `$${item.price}` : 'N/A',
+      };
+    }
+  },
+  isVisible: (blade) => blade?.expanded !== false,
+});
+```
 
 ## Step 3: Handling Widget Events
 
@@ -284,6 +451,21 @@ onUnmounted(() => {
 });
 ```
 
+For external widgets using `useExternalWidgets`, cleanup is handled automatically:
+
+```typescript
+// External widgets are automatically cleaned up when the composable is unmounted
+// But you can also manually clean them up:
+const externalWidgets = useExternalWidgets({
+  bladeId: 'product-details',
+  bladeData,
+});
+
+onUnmounted(() => {
+  externalWidgets.unregisterExternalWidgets();
+});
+```
+
 ## Global Pre-registration for Core Widgets
 
 For widgets that are part of the core framework or foundational modules and need to be available very early, VC-Shell offers a global `registerWidget` function (distinct from the one returned by `useWidgets()`).
@@ -314,11 +496,32 @@ globalRegisterWidget(systemWidget, 'app-dashboard-main');
 6.  **`VcWidget` Base**: Utilize `VcWidget` as the base for blade widgets for consistency.
 7.  **`updateFunctionName`**: Define for widgets that need external refresh/update triggers.
 8.  **Blade Context**: Manage `bladeId` carefully for correct widget association.
+9.  **External Widget Design**:
+     - Design external widgets to be generic and configurable
+     - Clearly define required vs optional data
+     - Use appropriate prop names that make sense across different blade types
+     - Handle missing data gracefully
+10. **Error Handling**: Implement proper error handling in custom `propsResolver` functions.
+11. **Performance**: Use `autoUpdateProps: false` in `useExternalWidgets` if you need manual control over prop updates.
+12. **Documentation**: Document the data requirements and behavior of your external widgets.
 
-This guide equips you to build and manage dynamic, modular widgets within your VC-Shell application's blades, enhancing user experience and information display.
+## Comparison: Direct vs External Widgets
+
+| Aspect | Direct Registration | External Widget System |
+|--------|-------------------|----------------------|
+| **Coupling** | Tight - widget specific to blade | Loose - widget works across blades |
+| **Reusability** | Limited to specific blade | High - works across compatible blades |
+| **Configuration** | Manual prop passing | Declarative data requirements |
+| **Discovery** | Manual registration in each blade | Automatic discovery and registration |
+| **Complexity** | Simple and direct | More complex but more flexible |
+| **Use Case** | Blade-specific functionality | Cross-cutting concerns, analytics, status |
+
+This guide equips you to build and manage dynamic, modular widgets within your VC-Shell application's blades, enhancing user experience and information display while maintaining clean architecture.
 
 ## Related Resources
 
 -   [`useWidgets` API Reference](../composables/useWidgets.md)
+-   [`useExternalWidgets` API Reference](../composables/useExternalWidgets.md)
 -   [`VcWidget` Component Documentation](../ui-components/vc-widget.md)
 -   [`VcBlade` Component Documentation](../ui-components/vc-blade.md)
+-   [Modularity in VC-Shell Applications](../../Extensibility/modularity.md)

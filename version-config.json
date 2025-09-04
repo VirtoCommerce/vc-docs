@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "alias": "latest",
+  "setDefault": true,
+  "deployOnPush": true,
+  "description": "Main documentation version"
+}

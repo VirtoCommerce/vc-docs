@@ -22,6 +22,7 @@ A typical application module follows a conventional directory structure, as deta
 -   **`composables/`**: Includes Vue Composition API functions specific to the module.
 -   **`components/`**: Stores reusable Vue components used within the module.
     -   **`components/notifications/`**: (Optional) For custom notification templates.
+    -   **`components/widgets/`**: (Optional) For blade widgets.
 -   **`index.ts`**: The module's entry point. This file uses `createAppModule` to bundle the module's parts and exports the configured module.
 
 ## Module Registration with `createAppModule`
@@ -39,7 +40,34 @@ import * as notificationTemplates from "./components/notifications";
 // (Optional) Import other globally registered components from this module
 import * as moduleComponents from "./components/exports";
 
-import { createAppModule } from "@vc-shell/framework";
+import { createAppModule, registerExternalWidget } from "@vc-shell/framework";
+
+// Register external widgets that this module provides
+import MyProductWidget from "./components/widgets/MyProductWidget.vue";
+import MyOrderWidget from "./components/widgets/MyOrderWidget.vue";
+
+// Register widgets that can be used across different blades
+registerExternalWidget({
+  id: 'my-module-product-widget',
+  component: MyProductWidget,
+  targetBlades: ['product-details'],
+  config: {
+    requiredData: ['item', 'isModified'],
+    optionalData: ['currentLocale', 'readonly'],
+  },
+  title: 'My Product Widget'
+});
+
+registerExternalWidget({
+  id: 'my-module-order-widget',
+  component: MyOrderWidget,
+  targetBlades: ['order-details'],
+  config: {
+    requiredData: ['order'],
+    optionalData: ['customerInfo'],
+  },
+  title: 'My Order Widget'
+});
 
 export default createAppModule(
   pages,
@@ -249,7 +277,7 @@ function addExternalToolbarItem() {
 }
 
 // Call addExternalToolbarItem() when appropriate, e.g., on component mount, after an event, etc.
-// onMounted(() => { 
+// onMounted(() => {
 //   addExternalToolbarItem();
 // });
 
@@ -261,6 +289,68 @@ function addExternalToolbarItem() {
 ```
 This imperative approach is powerful but should be used judiciously, as defining toolbar items directly via props is generally simpler and more declarative for common use cases.
 
+### 5. External Blade Widgets
+
+VC-Shell provides a powerful system for modules to register widgets that can automatically appear in compatible blades from other modules without tight coupling.
+
+**Registering External Widgets:**
+
+External widgets are registered using the `registerExternalWidget` function, typically in the module's `index.ts` file:
+
+```typescript
+import { registerExternalWidget } from '@vc-shell/framework';
+import { markRaw } from 'vue';
+import MyProductAnalyticsWidget from './components/widgets/MyProductAnalyticsWidget.vue';
+
+// Register a widget that can appear in product detail blades
+registerExternalWidget({
+  id: 'product-analytics-widget',
+  component: markRaw(MyProductAnalyticsWidget),
+  targetBlades: ['product-details'], // Specify which blade types can use this widget
+  config: {
+    requiredData: ['item'], // What data the widget needs from the blade
+    optionalData: ['currentLocale', 'readonly'],
+    fieldMapping: {
+      'product': 'item', // Widget expects 'product' prop, blade provides 'item'
+    }
+  },
+  isVisible: (blade) => blade?.expanded !== false,
+  title: 'Product Analytics'
+});
+```
+
+**Consuming External Widgets in Blades:**
+
+Blades can automatically discover and register external widgets using the `useExternalWidgets` composable:
+
+```typescript
+// In a blade component that wants to support external widgets
+import { useExternalWidgets } from '@vc-shell/framework';
+import { computed } from 'vue';
+
+// Define the data that widgets might need
+const bladeData = computed(() => ({
+  item: product.value,
+  isModified: isModified.value,
+  currentLocale: currentLocale.value,
+  readonly: isReadonly.value,
+}));
+
+// Register external widgets for this blade
+useExternalWidgets({
+  bladeId: 'product-details',
+  bladeData,
+  autoRegister: true,      // Automatically register widgets on mount
+  autoUpdateProps: true,   // Automatically update widget props when blade data changes
+});
+```
+
+This approach provides several benefits:
+- **Loose Coupling**: Widgets don't need to know about specific blade implementations
+- **Automatic Discovery**: Compatible widgets are discovered and registered automatically
+- **Declarative Configuration**: Widgets declare their data requirements, blades provide what they can
+- **Type Safety**: Full TypeScript support for widget configuration and props
+
 ## Inter-Module Communication
 
 While modules aim for encapsulation, some level of interaction might be necessary. Key principles include:
@@ -268,6 +358,7 @@ While modules aim for encapsulation, some level of interaction might be necessar
 -   **Blade Navigation**: The primary method for transitioning between features offered by different modules is via `useBladeNavigation().openBlade()`.
 -   **Shared Services/Composables**: For genuinely global state or functionality, consider application-level composables (`src/composables/`) rather than direct cross-module imports.
 -   **Events**: For decoupled communication, Vue's provide/inject or a lightweight event bus can be used, though sparingly.
+-   **External Widgets**: Use the external widget system for UI components that need to appear in blades from other modules.
 
 A detailed discussion on inter-module communication strategies and anti-patterns can be found in the [Developing Custom VC-Shell Modules guide under "Inter-Module Communication"](../Guides/developing-custom-modules.md#inter-module-communication).
 
@@ -277,12 +368,22 @@ A detailed discussion on inter-module communication strategies and anti-patterns
 * **Minimize Inter-Module Dependencies**: Aim for loose coupling. If modules need to interact, prefer communication via shared services, events, or Vue's provide/inject, rather than direct imports of components or composables from *within* another module's specific business logic. Blade navigation (`openBlade`) is the primary way to transition between features offered by different modules.
 * **Leverage `defineOptions`**: For blades, use `defineOptions` extensively for declarative registration of routes and menu items.
 * **Use Composables for Logic**: Encapsulate business logic and state management within composables, keeping your Vue components (blades/pages) focused on presentation.
+* **External Widgets**: Use the external widget system for UI components that need to appear in blades from other modules.
+* **Widget Data Requirements**: When creating external widgets, clearly define required and optional data to maintain compatibility across different blade implementations.
 * **Localization**: Provide translations for all user-facing strings within your module's `locales` directory.
 * **Documentation**: Document the purpose of your module, its public API (if any composables/components are meant for external use), and how to configure it.
 * **Consider Performance**:
     *   Utilize code-splitting (dynamic imports for routes/blades) where appropriate, which Vite often handles automatically for route components.
     *   Be mindful of the size of assets included in your module.
-* **Error Handling**: Implement robust error handling, especially for API calls within your composables.
+    *   Use `markRaw()` for widget components to avoid unnecessary reactivity.
+* **Error Handling**: Implement robust error handling, especially for API calls within your composables and widget prop resolvers.
 * **Clear Naming**: Use consistent and descriptive naming for your modules, files, components, and composables.
 
-By following these principles and leveraging the `createAppModule` workflow, you can build robust, scalable, and maintainable applications with VC-Shell. 
+By following these principles and leveraging the `createAppModule` workflow along with the external widget system, you can build robust, scalable, and maintainable applications with VC-Shell.
+
+## Related Resources
+
+-   [Developing Custom VC-Shell Modules](../Guides/developing-custom-modules.md): Comprehensive guide to module development
+-   [useWidgets Composable](../Essentials/composables/useWidgets.md): API reference for widget management
+-   [useExternalWidgets Composable](../Essentials/composables/useExternalWidgets.md): Managing external widgets in blades
+-   [Creating and Registering Blade Widgets](../Essentials/Usage-Guides/creating-and-registering-widgets-with-usewidgets.md): Step-by-step widget creation guide
