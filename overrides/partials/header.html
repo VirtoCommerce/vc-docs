@@ -35,6 +35,22 @@
 
         {% include "partials/megamenu.html" %}
 
+        <!-- Version selector -->
+        {% if config.extra.version.provider == "mike" %}
+        <div class="md-header__option">
+            <div class="md-select" data-md-component="select" id="__versioning">
+                <button class="md-select__inner" aria-label="Select version">
+                    <span class="md-select__link">
+                        {{ config.extra.version.default }}
+                    </span>
+                </button>
+                <div class="md-select__list">
+                    <div id="version-selector"></div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
         <!-- Button to open search modal -->
         {% if "material/search" in config["plugins"] %}
         <label class="md-header__button md-icon" for="__search">

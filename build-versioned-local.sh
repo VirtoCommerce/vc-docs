@@ -20,7 +20,9 @@ get_local_version() {
 # Function to get deployment parameters
 get_deploy_params() {
     if [ -f "version-utils.py" ]; then
-        python3 version-utils.py get-deploy-params 2>/dev/null
+        python3 version-utils.py get-deploy-params 2>/dev/null || echo ""
+    else
+        echo ""
     fi
 }
 
@@ -35,10 +37,19 @@ else
     # Get deployment parameters
     DEPLOY_PARAMS=$(get_deploy_params)
     
-    if [ -n "$DEPLOY_PARAMS" ]; then
-        VERSION=$(echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('version', 'dev'))")
-        ALIAS=$(echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('alias', ''))")
-        UPDATE_EXISTING=$(echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('update_existing', False))")
+    if [ -n "$DEPLOY_PARAMS" ] && [ "$DEPLOY_PARAMS" != "" ]; then
+        # Validate JSON before parsing
+        echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; json.load(sys.stdin)" 2>/dev/null
+        if [ $? -eq 0 ]; then
+            VERSION=$(echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('version', 'dev'))")
+            ALIAS=$(echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('alias', ''))")
+            UPDATE_EXISTING=$(echo "$DEPLOY_PARAMS" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('update_existing', False))")
+        else
+            echo "Invalid JSON from get-deploy-params, falling back to basic detection"
+            VERSION=$(get_local_version)
+            ALIAS=""
+            UPDATE_EXISTING="False"
+        fi
         
         if [ "$UPDATE_EXISTING" = "True" ]; then
             echo "Will update existing version: $VERSION"
@@ -115,7 +126,7 @@ echo "All components built successfully!"
 # Deploy with mike
 echo "Deploying documentation with mike..."
 if [ -n "$ALIAS" ]; then
-    mike deploy --push --branch $BRANCH $VERSION $ALIAS
+    mike deploy --push --branch $BRANCH --update-aliases $VERSION $ALIAS
     if [ "$ALIAS" = "latest" ]; then
         mike set-default --push --branch $BRANCH latest
     fi

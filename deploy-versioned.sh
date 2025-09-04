@@ -81,7 +81,7 @@ echo "All components built successfully!"
 # Deploy with mike
 echo "Deploying with mike..."
 if [ -n "$ALIAS" ]; then
-    mike deploy --push --branch gh-pages $VERSION $ALIAS
+    mike deploy --push --branch gh-pages --update-aliases $VERSION $ALIAS
     if [ "$ALIAS" = "latest" ]; then
         mike set-default --push --branch gh-pages latest
     fi

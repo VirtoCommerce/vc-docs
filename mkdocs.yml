@@ -304,6 +304,9 @@ nav:
 
 extra:
     homepage: /
+    version:
+        provider: mike
+        default: latest
     social:
       - icon: fontawesome/brands/github
         link: https://github.com/VirtoCommerce
@@ -618,8 +621,10 @@ extra:
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
+    - assets/javascripts/version-selector.js
 
 
 extra_css:
     - assets/stylesheets/main.css
     - assets/stylesheets/fonts.css
+    - assets/stylesheets/version-selector.css
