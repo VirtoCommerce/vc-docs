@@ -11,7 +11,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/1.0.0/marketplace/</loc>
+         <lastmod>2025-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/1.0.0/marketplace/developer-guide/</loc>
+         <lastmod>2025-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/1.0.0/marketplace/docs/</loc>
          <lastmod>2025-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -117,6 +127,11 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/1.0.0/marketplace/user-guide/Vendor-portal/rating-and-reviews/</loc>
+         <lastmod>2025-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/1.0.0/platform/</loc>
          <lastmod>2025-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3981,6 +3996,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/1.0.0/platform/docs/</loc>
+         <lastmod>2025-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/1.0.0/platform/user-guide/</loc>
          <lastmod>2025-09-05</lastmod>
          <changefreq>daily</changefreq>
@@ -5296,6 +5316,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/1.0.0/storefront/</loc>
+         <lastmod>2025-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/1.0.0/storefront/developer-guide/</loc>
          <lastmod>2025-09-05</lastmod>
          <changefreq>daily</changefreq>
@@ -5462,6 +5487,11 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/1.0.0/storefront/developer-guide/vue-js-starter-theme/overview/</loc>
+         <lastmod>2025-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/1.0.0/storefront/docs/</loc>
          <lastmod>2025-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
