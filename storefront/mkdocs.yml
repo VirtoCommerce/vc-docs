@@ -3,6 +3,8 @@ INHERIT: ../mkdocs.yml
 theme:
     custom_dir: ../overrides
 
+docs_dir: docs
+
 # Project information
 extra_site_name: Documentation
 site_name: storefront
