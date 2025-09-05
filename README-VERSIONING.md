@@ -1,48 +1,104 @@
-# 📚 Documentation Versioning
-
-This repository now supports automatic versioning using `mike` with configuration-based deployment.
+# VirtoCommerce Documentation Versioning - Quick Start
 
 ## 🚀 Quick Start
 
-1. **Main Guide**: [`VERSION-MANAGEMENT.md`](./VERSION-MANAGEMENT.md) - Complete guide to the new system
-2. **Migration**: [`MIGRATION-GUIDE.md`](./MIGRATION-GUIDE.md) - How to migrate from old workflows
+### 1. Installation
+```bash
+pip install -r requirements.txt
+```
 
-## ⚡ TL;DR
+### 2. Version Setup
+Edit the `VERSION` file:
+```bash
+echo "1.0.0" > VERSION
+```
 
-### Set Version:
+Or create extended configuration `version.json`:
 ```json
-// version-config.json
 {
-  "version": "3.800",
-  "alias": "latest", 
-  "setDefault": true,
-  "deployOnPush": true,
-  "description": "Current version"
+  "version": "1.0.0",
+  "alias": "latest"
 }
 ```
 
-### Deploy:
+### 3. Local Build
 ```bash
-git push  # That's it! Automatic deployment based on config
+# Automatic version detection
+./build-versioned-local.sh
+
+# Or with explicit specification
+./build-versioned-local.sh v3.2024 latest
 ```
 
-### Result:
-- Same version → Updates existing docs
-- New version → Creates new version alongside old ones
-- All versions available simultaneously
+### 4. Preview
+```bash
+mike serve
+# Open http://localhost:8000
+```
 
-## 📖 Documentation Files
+## 📋 Version Management
 
-- **[VERSION-MANAGEMENT.md](./VERSION-MANAGEMENT.md)** - Main documentation for new system
-- **[MIGRATION-GUIDE.md](./MIGRATION-GUIDE.md)** - Migration guide from old workflows
-- **[docker-files-structure.md](./docker-files-structure.md)** - Docker integration details
+### Automatic Behavior:
+- **Version NOT changed** → updates content of existing version
+- **Version changed** → creates new version
 
-## 🛠️ Scripts
+### Examples:
+```bash
+# Update documentation without version change
+# (VERSION = 1.0.0, version already deployed)
+./build-versioned-local.sh
+# → Will update content of version 1.0.0
 
-- `./check-version-update.sh` - Check if version should be deployed
-- `./deploy-from-config.sh` - Deploy based on version-config.json
-- `./manage-versions.sh` - Manage versions (list, delete, alias)
+# Create new version
+echo "1.1.0" > VERSION
+./build-versioned-local.sh
+# → Will create new version 1.1.0
+```
 
----
+## 🔧 Utilities
 
-**Start with [`VERSION-MANAGEMENT.md`](./VERSION-MANAGEMENT.md) for complete instructions.**
+```bash
+# Check current version
+python3 version-utils.py get-version
+
+# Find out what the system will do
+python3 version-utils.py check-should-update
+
+# List deployed versions
+mike list
+```
+
+## 🚢 GitHub Actions
+
+### Automatic mode (recommended):
+1. Actions → virtocommerce.com docs
+2. Run workflow
+3. Use default parameters:
+   - version: `auto`
+   - alias: `auto`
+   - deploy_mode: `versioned`
+
+### Manual version specification:
+- version: `v3.2024`
+- alias: `latest`
+- deploy_mode: `versioned`
+
+## 📁 File Structure
+
+```
+vc-docs/
+├── VERSION                  # ← Change version here
+├── version.json            # ← Optional configuration
+├── build-versioned-local.sh # ← Run for build
+└── version-utils.py        # ← Utilities for checking
+```
+
+## 🔗 URL Structure
+
+- `/` → latest version
+- `/1.0.0/` → specific version
+- `/dev/` → development version
+
+## ❓ Help
+
+Full documentation: [VERSIONING.md](./VERSIONING.md)

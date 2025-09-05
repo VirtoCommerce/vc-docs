@@ -438,7 +438,6 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
-          - News:
           - xMarketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
                 - Queries:
