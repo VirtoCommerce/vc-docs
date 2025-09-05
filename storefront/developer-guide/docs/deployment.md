@@ -285,7 +285,6 @@ yarn generate:dependency-graph
 
 The generated graph will be saved in the **artifacts** folder for your review.
 
-
 ### Troubleshooting
 
 If you encounter an error such as `dot command not found` on Windows, it's likely due to a missing Graphviz installation. Ensure that [Graphviz](https://graphviz.gitlab.io/download/) is installed on your system to resolve this issue.

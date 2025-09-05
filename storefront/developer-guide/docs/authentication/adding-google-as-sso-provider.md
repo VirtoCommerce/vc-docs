@@ -70,7 +70,6 @@ The Google authentication button appears on the login page of the Frontend Appli
 ![Google button](media/google-button.png){: style="display: block; margin: 0 auto;" width="700"}
 
 
-
 <br>
 <br>
 ********

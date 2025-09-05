@@ -229,7 +229,6 @@ The [settings_data.json](https://github.com/VirtoCommerce/vc-frontend/blob/dev/c
 
 </div>
 
-
 <br>
 <br>
 ********

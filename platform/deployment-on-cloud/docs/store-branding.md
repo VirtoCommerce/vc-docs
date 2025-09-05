@@ -90,6 +90,7 @@ Your new color scheme has been applied:
 
 ![Branded store](media/branded-shop.png)
 
+
 <br>
 <br>
 ********

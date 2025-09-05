@@ -81,8 +81,7 @@ plugins:
  #   - autolinks
     - awesome-pages:
  #       strict: false
-    - git-revision-date-localized:
-          fallback_to_build_date: true
+    - git-revision-date-localized
     - minify
  #       minify_html: true
     - redirects:
@@ -275,6 +274,7 @@ plugins:
     - include-markdown
 
 # Project information
+extra_site_name: Documentation
 site_name: docs
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
@@ -304,9 +304,6 @@ nav:
 
 extra:
     homepage: /
-    version:
-        provider: mike
-        default: latest
     social:
       - icon: fontawesome/brands/github
         link: https://github.com/VirtoCommerce
@@ -442,8 +439,8 @@ extra:
             - title: Composable Commerce
               image: assets/images/platform.png
               link: platform
-              topdescription: Guides and tools for building, customizing, and deploying a flexible commerce solution
-              description:
+              topdescription: Guides and tools for building, customizing, and deploying a flexible commerce solution 
+              description: 
                 - title: Platform
                   link: platform
                 - title: Marketplace
@@ -454,7 +451,7 @@ extra:
               image: assets/images/storefront.png
               link: storefront
               topdescription: Tools and workflows designed to enhance customer-facing experiences
-              description:
+              description: 
                 - title: Frontend Application
                   link: storefront
                 - title: VC Shell
@@ -570,8 +567,8 @@ extra:
                           url: /platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
                 - title: Deployment on Virto Cloud
                   content:
-                    - links:
-                      - title: Deploy Platform and Frontend on Virto Cloud
+                    - links: 
+                      - title: Deploy Platform and Frontend on Virto Cloud 
                         url: /platform/deployment-on-cloud/deploy-on-virto-cloud/
                       - title: Create Environment via CLI and VC Build
                         url: /platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/

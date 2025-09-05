@@ -101,6 +101,7 @@ Virto’s frontend serves static files directly and routes all other requests th
 
 To prevent outdated **.html** templates from being served, make sure your custom module uses the updated **webpack.config.js**. The latest setup embeds Vue templates directly into **app.js**, ensuring that the SPA always renders fresh, up-to-date content—critical for both user experience and SEO rendering via services like Prerender.
 
+
 <br>
 <br>
 ********

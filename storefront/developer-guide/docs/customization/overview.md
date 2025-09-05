@@ -12,7 +12,6 @@ The following folders with files define the Frontend functionality, appearance a
 
 Some components are intuitive, while others can be clicked to view a detailed customization guide.
 
-
 <br>
 <br>
 ********

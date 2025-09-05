@@ -30,7 +30,6 @@ This command analyzes all locale files, identifies missing keys, translates the 
     This is an experimental feature and may not work as expected.
 
 
-
 <br>
 <br>
 ********
