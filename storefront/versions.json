@@ -3,5 +3,12 @@
     "version": "storefront",
     "title": "storefront",
     "aliases": []
+  },
+  {
+    "version": "1.0.0-storefront",
+    "title": "1.0.0-storefront",
+    "aliases": [
+      "storefront-stable"
+    ]
   }
 ]
