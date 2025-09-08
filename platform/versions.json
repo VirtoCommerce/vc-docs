@@ -3,5 +3,12 @@
     "version": "platform",
     "title": "platform",
     "aliases": []
+  },
+  {
+    "version": "1.0.0-platform",
+    "title": "1.0.0-platform",
+    "aliases": [
+      "platform-stable"
+    ]
   }
 ]
