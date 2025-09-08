@@ -21,7 +21,7 @@ nav:
     - Overview: index.md
     - Architecture:
         - Frontend Application Architecture: architecture.md
-        - Modules Architecture: modules-architecture/modules-architecture.md 
+        - Modules Architecture: modules-architecture/modules-architecture.md
         - SPA Architecture for SEO and 404 Handling: spa-architecture-for-seo-and-404-handling.md
     - Deployment: deployment.md
     - Update: update.md
@@ -30,11 +30,11 @@ nav:
         - Visual Theme Customization: customization/visual-theme-customization.md
         - Functionality Customization: customization/functionality-customization.md
         - Texts Customization: customization/texts-customization.md
-    - Migration to Storefrontless Architecture: 
+    - Migration to Storefrontless Architecture:
         - Overview: migration.md
         - Migration on Azure Cloud: migration-on-azure.md
         - Migration on Local Machine: migration-on-local-machine.md
-    - Authentication: 
+    - Authentication:
         - Token-based Authentication: authentication/authentication-types.md
         - Anonymous Authentication: authentication/anonymous-authentication.md
         - Adding Azure AD (Entra ID) as SSO Provider: authentication/adding-sso-provider.md

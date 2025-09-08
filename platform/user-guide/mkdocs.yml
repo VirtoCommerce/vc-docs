@@ -19,7 +19,7 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
-    - User Manual: 
+    - User Manual:
           - General Guidelines: general-guidelines.md
           - User Profile: user-profile.md
           - Modules Installation: modules-installation.md
@@ -28,15 +28,15 @@ nav:
           - Viewing Results on Frontend: view-results-on-frontend.md
           - Backup and Restore: backup-and-restore.md
           - ADA Compliance: ada-compliance.md
-          - Managing Frontend Content: managing-content.md 
+          - Managing Frontend Content: managing-content.md
     - Modules:
           - Overview: platform-overview.md
           - <b>Catalog</b>:
                 - Overview: catalog/overview.md
-                - Managing Catalogs: 
+                - Managing Catalogs:
                       - Creating New Catalog: catalog/add-new-catalog.md
                       - Importing Catalogs: catalog/import-catalog.md
-                      - Importing Products, Prices, and Stock to Catalog: catalog/import-products-to-catalog.md  
+                      - Importing Products, Prices, and Stock to Catalog: catalog/import-products-to-catalog.md
                       - Exporting Catalogs: catalog/export-catalog.md
                 - Managing Categories: catalog/managing-categories.md
                 - Managing Brands Page: catalog/managing-brands-page.md
@@ -92,7 +92,7 @@ nav:
                 - Settings: contacts/settings.md
           - <b>Cart</b>:
                 - Overview: cart/overview.md
-                - Settings: cart/settings.md          
+                - Settings: cart/settings.md
           - <b>Marketing</b>:
                 - Overview: marketing/overview.md
                 - Promotions:
@@ -108,15 +108,15 @@ nav:
                       - Managing Published Content: marketing/managing-published-content.md
                       - Publishing Conditions: marketing/publish-conditions.md
                       - Adding Advertising Spot: marketing/advertising-spot.md
-                - Dynamic Product Associations: 
+                - Dynamic Product Associations:
                       - Overview: marketing/dynamic-associations-overview.md
                       - Managing Dynamic Product Associations: marketing/managing-dynamic-associations.md
                       - Rest API Testing: marketing/dynamic-associations-restapi.md
-          - <b>Quotes</b>: 
+          - <b>Quotes</b>:
                 - Overview: quotes/overview.md
                 - Managing Quotes: quotes/manage-quotes.md
                 - Settings: quotes/settings.md
-          - <b>Assets Related Modules</b>: 
+          - <b>Assets Related Modules</b>:
                 - Assets:
                       - Overview: assets/overview.md
                       - Managing Assets: assets/managing-assets.md
@@ -129,11 +129,11 @@ nav:
                 - Link Lists: content/managing-linklists.md
                 - Blogs: content/managing-blogs.md
                 - Settings: content/settings.md
-          - AI Smart Capture: 
+          - AI Smart Capture:
                 - Overview: ai-doc-processing/overview.md
                 - Enabling AI Smart Capture: ai-doc-processing/enabling-ai-doc-processing.md
                 - Settings: ai-doc-processing/settings.md
-          - Application Insights: 
+          - Application Insights:
                 - Overview: application-insights/overview.md
                 - Enabling Application Insights: application-insights/enable-app-insights.md
           - Authentication Related Modules:
@@ -165,11 +165,11 @@ nav:
                 - Managing Contract Customers: contracts/managing-contract-customers.md
           - Customer Export and Import:
                 - Overview: customer-export-import/overview.md
-          - Dynamic Associations: 
+          - Dynamic Associations:
                 - Overview: dynamic-associations/overview.md
-          - Event Bus: 
+          - Event Bus:
                 - Overview: event-bus/overview.md
-          - GDPR: 
+          - GDPR:
                 - Overview: gdpr/overview.md
                 - Managing Personal Data: gdpr/manage-personal-data.md
           - Generic Export:
@@ -178,7 +178,7 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
-          - News: 
+          - News:
                 - Overview: news/overview.md
                 - Managing News: news/managing-news.md
                 - Settings: news/settings.md
@@ -196,12 +196,12 @@ nav:
           - Pages:
                 - Overview: pages/overview.md
                 - Enabling Virto Pages: pages/enabling-pages.md
-          - Payment Related Modules: 
+          - Payment Related Modules:
                 - Payment:
                       - Overview: payment/overview.md
                       - Managing Payment Methods: payment/managing-payment-methods.md
                       - Settings: payment/settings.md
-                - Non-Integrative Payment Methods: 
+                - Non-Integrative Payment Methods:
                       - Overview: native-payment-methods/overview.md
                       - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
                       - Settings: native-payment-methods/settings.md
@@ -215,25 +215,25 @@ nav:
                 - Authorize.net:
                       - Overview: authorize-net/overview.md
                       - Managing Authorize.net: authorize-net/manage-authorize-net-module.md
-          - Price Export Import: 
+          - Price Export Import:
                 - Overview: price-export-import/overview.md
                 - Mapping CSV files: price-export-import/mapping-csv-files.md
                 - Exporting Price Lists: price-export-import/exporting-price-lists.md
                 - Importing Price Lists: price-export-import/importing-price-lists.md
-          - Push Messages: 
+          - Push Messages:
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md
                 - Messaging via Firebase Cloud: push-messages/firebase-cloud-messaging.md
                 - Settings: push-messages/settings.md
-          - Rating and Reviews: 
+          - Rating and Reviews:
                 - Overview: rating-reviews/overview.md
                 - Managing Reviews: rating-reviews/managing-reviews.md
                 - Settings: rating-reviews/settings.md
-          - xRecommend: 
+          - xRecommend:
                 - Overview: recommend/overview.md
                 - Enabling Recommendations: recommend/enable-recommendations.md
                 - Settings: recommend/settings.md
-          - Return: 
+          - Return:
                 - Overview: return/overview.md
                 - Managing Returns: return/managing-returns.md
                 - Settings: return/settings.md
@@ -245,7 +245,7 @@ nav:
                 - Elasticsearch 9:
                       - Overview: elastic-search-9/overview.md
                       - Settings: elastic-search-9/settings.md
-                - Elasticsearch 8: 
+                - Elasticsearch 8:
                       - Overview: elastic-search-8/overview.md
                       - Settings: elastic-search-8/settings.md
                 - Elastic App Search: elastic-app-search/overview.md
@@ -260,20 +260,20 @@ nav:
           - Security:
                 - Overview: security/overview.md
                 - Managing User Accounts: security/managing-users.md
-                - Roles and Permissions: 
+                - Roles and Permissions:
                       - Managing Roles and Permissions: security/roles-and-permissions.md
                       - Marketer:  security/marketer.md
                       - Order Manager: security/order-manager.md
                       - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
                 - Login on Behalf Feature: security/login-on-behalf.md
-          - SEO: 
+          - SEO:
                 - Overview: seo/overview.md
                 - Managing SEO: catalog/managing-SEO.md
                 - Managing Broken Links: seo/managing-broken-links.md
                 - Settings: seo/settings.md
           - ShipStation: shipstation/overview.md
-          - Shipping: 
+          - Shipping:
                 - Overview: shipping/overview.md
                 - Managing Shipping Methods: shipping/managing-shipping-methods.md
                 - Settings: shipping/settings.md
@@ -288,16 +288,16 @@ nav:
           - SQL Queries:
                 - Overview: sql-queries/overview.md
                 - Running Queries: sql-queries/running-queries.md
-          - Subscription: 
+          - Subscription:
                 - Overview: subscription/overview.md
-                - Enabling Subscriptions: subscription/enabling-subscriptions.md 
+                - Enabling Subscriptions: subscription/enabling-subscriptions.md
                 - Settings: subscription/settings.md
           - Tasks:
                 - Overview: tasks/overview.md
                 - Using Tasks Application: tasks/using-application.md
                 - Settings: tasks/settings.md
                 - Roles and Permissions: tasks/roles-permissions.md
-          - Tax: 
+          - Tax:
                 - Overview: tax/overview.md
                 - Managing Tax Providers: tax/managing-taxes.md
                 - Settings: tax/settings.md
@@ -307,11 +307,11 @@ nav:
                 - Managing Thumbnail Settings: thumbnails/thumbnail-options.md
                 - Using Thumbnails: thumbnails/using-thumbnails.md
                 - Settings: thumbnails/settings.md
-          - Webhooks: 
+          - Webhooks:
                 - Overview: webhooks/overview.md
                 - Managing Webhooks: webhooks/managing-webhooks.md
                 - Settings: webhooks/settings.md
-          - White Labeling: 
+          - White Labeling:
                 - Overview: white-labeling/overview.md
                 - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
           - Glossary: glossary.md

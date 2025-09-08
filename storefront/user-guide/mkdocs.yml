@@ -29,10 +29,10 @@ nav:
           - Personal and Corporate Accounts: account/overview.md
           - Dashboard: account/dashboard.md
           - Profile: account/profile.md
-          - Change Password: account/change-password.md 
+          - Change Password: account/change-password.md
           - Addresses: account/addresses.md
           - Orders: account/orders.md
-          - Product Reviews: account/review-products.md 
+          - Product Reviews: account/review-products.md
           - Lists: account/lists.md
           - Checkout Defaults: account/checkout-defaults.md
           - Quote Requests: account/quote-requests.md
@@ -45,7 +45,7 @@ nav:
     - Shopping:
           - Options for Buying Products: shopping/products-purchase-options.md
           - Search Options: shopping/searching-for-products.md
-          - Back-in-Stock Notifications: shopping/back-in-stock-notifications.md 
+          - Back-in-Stock Notifications: shopping/back-in-stock-notifications.md
           - Bulk Orders: shopping/bulk-orders.md
           - Compare Products: shopping/compare-products.md
           - Product Lists: shopping/lists.md

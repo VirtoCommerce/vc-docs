@@ -292,12 +292,15 @@ copyright: Copyright &copy; 2025. All rights reserved.
 nav:
     - Home: index.md
     - Marketplace:
+        - Home: marketplace/index.md
         - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
         - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
     - Storefront:
+        - Home: storefront/index.md
         - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
         - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
     - Platform:
+        - Home: platform/index.md
         - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
         - User Guide: '!include ./platform/user-guide/mkdocs.yml'
         - Deployment on Cloud: '!include ./platform/deployment-on-cloud/mkdocs.yml'
@@ -439,8 +442,8 @@ extra:
             - title: Composable Commerce
               image: assets/images/platform.png
               link: platform
-              topdescription: Guides and tools for building, customizing, and deploying a flexible commerce solution 
-              description: 
+              topdescription: Guides and tools for building, customizing, and deploying a flexible commerce solution
+              description:
                 - title: Platform
                   link: platform
                 - title: Marketplace
@@ -451,7 +454,7 @@ extra:
               image: assets/images/storefront.png
               link: storefront
               topdescription: Tools and workflows designed to enhance customer-facing experiences
-              description: 
+              description:
                 - title: Frontend Application
                   link: storefront
                 - title: VC Shell
@@ -491,6 +494,7 @@ extra:
               icon: assets/icons/version-icon.svg
               link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
               outlineColor: '#FF9162'
+
     all_topics:
         megamenu:
             - iconSrc: assets/icons/all-products.svg
@@ -567,8 +571,8 @@ extra:
                           url: /platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
                 - title: Deployment on Virto Cloud
                   content:
-                    - links: 
-                      - title: Deploy Platform and Frontend on Virto Cloud 
+                    - links:
+                      - title: Deploy Platform and Frontend on Virto Cloud
                         url: /platform/deployment-on-cloud/deploy-on-virto-cloud/
                       - title: Create Environment via CLI and VC Build
                         url: /platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
