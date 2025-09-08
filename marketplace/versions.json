@@ -3,5 +3,12 @@
     "version": "marketplace",
     "title": "marketplace",
     "aliases": []
+  },
+  {
+    "version": "1.0.0-marketplace",
+    "title": "1.0.0-marketplace",
+    "aliases": [
+      "marketplace-stable"
+    ]
   }
 ]
