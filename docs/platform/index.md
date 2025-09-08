@@ -4,7 +4,7 @@ template: platform-home.html
 main_page:
     documentation:
         - title: User Guide
-          image: ../assets/images/storefront-userquide.png
+          image: assets/images/storefront-userquide.png
           link: user-guide
           description:
             - title: Getting Started
@@ -16,7 +16,7 @@ main_page:
             - title: Deployment of Environments on Virto Cloud
               link: deployment-on-cloud/deploy-on-virto-cloud
         - title: Developer Guide
-          image: ../assets/images/storefront-devguide.png
+          image: assets/images/storefront-devguide.png
           link: developer-guide
           description:
             - title: Installation Guide
@@ -34,7 +34,7 @@ main_page:
             - title: GraphQL API Reference
               link: developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
         - title: Other Resources
-          image: ../assets/images/storefront-other.png
+          image: assets/images/storefront-other.png
           description:
             - title: Release Notes
               link: https://github.com/VirtoCommerce/vc-releases
@@ -51,23 +51,23 @@ main_page:
           date: 1 August 2025
     link_cards:
         - title: Contact support
-          icon: ../assets/icons/contact-support.svg
+          icon: assets/icons/contact-support.svg
           link: https://help.virtocommerce.com/support/home
           outlineColor: '#EA534A'
         - title: Community
-          icon: ../assets/icons/community.svg
+          icon: assets/icons/community.svg
           link: https://www.virtocommerce.org/
           outlineColor: '#EA534A'
         - title: GitHub
-          icon: ../assets/icons/github-outline.svg
+          icon: assets/icons/github-outline.svg
           link: https://github.com/VirtoCommerce
           outlineColor: '#FF9162'
         - title: Blog
-          icon: ../assets/icons/blog.svg
+          icon: assets/icons/blog.svg
           link: https://virtocommerce.com/blog
           outlineColor: '#FF9162'
         - title: Versions
-          icon: ../assets/icons/version-icon.svg
+          icon: assets/icons/version-icon.svg
           link: https://github.com/VirtoCommerce/vc-tree/dev/docs/products
           outlineColor: '#FF9162'
 ---

@@ -4,7 +4,7 @@ template: marketplace-home.html
 main_page:
     documentation:
         - title: User Guide
-          image: ../assets/images/storefront-userquide.png
+          image: assets/images/storefront-userquide.png
           link: user-guide
           description:
               - title: Operator Portal
@@ -13,9 +13,9 @@ main_page:
                 link: user-guide/Vendor-portal/overview
         - title: Developer Guide [In Progress]
           link: developer-guide
-          image: ../assets/images/storefront-devguide.png
+          image: assets/images/storefront-devguide.png
         - title: Other Resources
-          image: ../assets/images/storefront-other.png
+          image: assets/images/storefront-other.png
           description:
               - title: Release Notes
                 link: https://github.com/VirtoCommerce/vc-deploy-releases

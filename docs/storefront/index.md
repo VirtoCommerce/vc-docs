@@ -5,7 +5,7 @@ main_page:
     documentation:
         - title: User Guide
           link: user-guide
-          image: ../assets/images/storefront-userquide.png
+          image: assets/images/storefront-userquide.png
           description:
             - title: Getting Started
               link: https://youtu.be/xsnds1QYuC0
@@ -15,7 +15,7 @@ main_page:
               link: https://virtostart-demo-store.govirto.com/
         - title: Developer Guide
           link: developer-guide
-          image: ../assets/images/storefront-devguide.png
+          image: assets/images/storefront-devguide.png
           description:
             - title: Overview
               link: developer-guide/
@@ -26,7 +26,7 @@ main_page:
             - title: Integrations
               link: developer-guide/integrations/prerender_io
         - title: Other Resources
-          image: ../assets/images/storefront-other.png
+          image: assets/images/storefront-other.png
           description:
             - title: Release Notes
               link: https://github.com/VirtoCommerce/vc-storefront/releases

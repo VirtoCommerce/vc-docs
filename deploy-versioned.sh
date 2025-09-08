@@ -15,11 +15,11 @@ echo "Alias: $ALIAS"
 echo "Build Mode: $BUILD_MODE"
 echo "=========================================="
 
-# If auto mode, read from local files
+# If auto mode, read from version.json
 if [ "$VERSION" = "auto" ]; then
-    if [ -f "version-utils.py" ]; then
-        VERSION=$(python3 version-utils.py get-version 2>/dev/null || echo "dev")
-        echo "Auto-detected version: $VERSION"
+    if [ -f "version.json" ]; then
+        VERSION=$(python3 -c "import json; data=json.load(open('version.json')); print(data.get('version', 'dev'))")
+        echo "Auto-detected version from version.json: $VERSION"
     elif [ -f "VERSION" ]; then
         VERSION=$(cat VERSION 2>/dev/null || echo "dev")
         echo "Version from VERSION file: $VERSION"
@@ -30,12 +30,9 @@ if [ "$VERSION" = "auto" ]; then
 fi
 
 if [ "$ALIAS" = "auto" ]; then
-    if [ -f "version-utils.py" ]; then
-        CONFIG=$(python3 version-utils.py get-config 2>/dev/null)
-        if [ -n "$CONFIG" ]; then
-            ALIAS=$(echo "$CONFIG" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('alias', ''))")
-            echo "Auto-detected alias: $ALIAS"
-        fi
+    if [ -f "version.json" ]; then
+        ALIAS=$(python3 -c "import json; data=json.load(open('version.json')); print(data.get('alias', ''))")
+        echo "Auto-detected alias from version.json: $ALIAS"
     fi
 fi
 
@@ -50,43 +47,22 @@ fi
 echo "Installing dependencies..."
 pip3 install -r requirements.txt
 
-# Build individual documentation sites
-echo "Building individual documentation components..."
+# Deploy with Mike (proper versioned deployment)
+echo "Deploying documentation with Mike..."
 
-# Build main site
-echo "Building main site..."
-mkdocs build -d ./site
+# Ensure Mike is installed
+pip3 install mike
 
-# Build storefront docs
-echo "Building storefront documentation..."
-mkdocs build -f storefront/mkdocs.yml -d ../site/storefront
-mkdocs build -f storefront/user-guide/mkdocs.yml -d ../../site/storefront/user-guide
-mkdocs build -f storefront/developer-guide/mkdocs.yml -d ../../site/storefront/developer-guide
-
-# Build platform docs
-echo "Building platform documentation..."
-mkdocs build -f platform/mkdocs.yml -d ../site/platform
-mkdocs build -f platform/user-guide/mkdocs.yml -d ../../site/platform/user-guide
-mkdocs build -f platform/developer-guide/mkdocs.yml -d ../../site/platform/developer-guide
-mkdocs build -f platform/deployment-on-cloud/mkdocs.yml -d ../../site/platform/deployment-on-cloud
-
-# Build marketplace docs
-echo "Building marketplace documentation..."
-mkdocs build -f marketplace/mkdocs.yml -d ../site/marketplace
-mkdocs build -f marketplace/user-guide/mkdocs.yml -d ../../site/marketplace/user-guide
-mkdocs build -f marketplace/developer-guide/mkdocs.yml -d ../../site/marketplace/developer-guide
-
-echo "All components built successfully!"
-
-# Deploy with mike
-echo "Deploying with mike..."
+# Deploy main documentation (unified site)
+echo "Deploying main documentation..."
 if [ -n "$ALIAS" ]; then
     mike deploy --push --branch gh-pages --update-aliases $VERSION $ALIAS
-    if [ "$ALIAS" = "latest" ]; then
-        mike set-default --push --branch gh-pages latest
-    fi
+    echo "Setting $ALIAS as default version..."
+    mike set-default --push --branch gh-pages $ALIAS
 else
     mike deploy --push --branch gh-pages $VERSION
+    echo "Setting $VERSION as default version..."
+    mike set-default --push --branch gh-pages $VERSION
 fi
 
 # List current versions
