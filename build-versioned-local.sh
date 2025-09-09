@@ -8,12 +8,23 @@ set -e  # Exit on any error
 
 # Function to get version from local files
 get_local_version() {
-    if [ -f "version-utils.py" ]; then
+    if [ -f "version.json" ]; then
+        python3 -c "import json; data=json.load(open('version.json')); print(data.get('version', 'dev'))" 2>/dev/null || echo "dev"
+    elif [ -f "version-utils.py" ]; then
         python3 version-utils.py get-version 2>/dev/null || echo "dev"
     elif [ -f "VERSION" ]; then
         cat VERSION 2>/dev/null || echo "dev"
     else
         echo "dev"
+    fi
+}
+
+# Function to get alias from local files  
+get_local_alias() {
+    if [ -f "version.json" ]; then
+        python3 -c "import json; data=json.load(open('version.json')); print(data.get('alias', ''))" 2>/dev/null || echo ""
+    else
+        echo ""
     fi
 }
 
@@ -58,8 +69,11 @@ else
         fi
     else
         VERSION=$(get_local_version)
-        ALIAS=""
+        ALIAS=$(get_local_alias)
         echo "Fallback to basic version detection: $VERSION"
+        if [ -n "$ALIAS" ]; then
+            echo "Detected alias: $ALIAS"
+        fi
     fi
 fi
 
@@ -95,43 +109,20 @@ if ! git show-ref --quiet refs/heads/$BRANCH; then
     git checkout -
 fi
 
-# Build all documentation components first
-echo "Building documentation components..."
+# Deploy with Mike (builds and deploys unified documentation)
+echo "Deploying unified documentation with Mike..."
 
-# Build main site
-echo "Building main site..."
-mkdocs build -d ./site
+# Ensure mike is installed
+pip3 install mike
 
-# Build storefront docs
-echo "Building storefront documentation..."
-mkdocs build -f storefront/mkdocs.yml -d ../site/storefront
-mkdocs build -f storefront/user-guide/mkdocs.yml -d ../../site/storefront/user-guide
-mkdocs build -f storefront/developer-guide/mkdocs.yml -d ../../site/storefront/developer-guide
-
-# Build platform docs
-echo "Building platform documentation..."
-mkdocs build -f platform/mkdocs.yml -d ../site/platform
-mkdocs build -f platform/user-guide/mkdocs.yml -d ../../site/platform/user-guide
-mkdocs build -f platform/developer-guide/mkdocs.yml -d ../../site/platform/developer-guide
-mkdocs build -f platform/deployment-on-cloud/mkdocs.yml -d ../../site/platform/deployment-on-cloud
-
-# Build marketplace docs
-echo "Building marketplace documentation..."
-mkdocs build -f marketplace/mkdocs.yml -d ../site/marketplace
-mkdocs build -f marketplace/user-guide/mkdocs.yml -d ../../site/marketplace/user-guide
-mkdocs build -f marketplace/developer-guide/mkdocs.yml -d ../../site/marketplace/developer-guide
-
-echo "All components built successfully!"
-
-# Deploy with mike
-echo "Deploying documentation with mike..."
 if [ -n "$ALIAS" ]; then
     mike deploy --push --branch $BRANCH --update-aliases $VERSION $ALIAS
-    if [ "$ALIAS" = "latest" ]; then
-        mike set-default --push --branch $BRANCH latest
-    fi
+    echo "Setting $ALIAS as default version..."
+    mike set-default --push --branch $BRANCH $ALIAS
 else
     mike deploy --push --branch $BRANCH $VERSION
+    echo "Setting $VERSION as default version..."  
+    mike set-default --push --branch $BRANCH $VERSION
 fi
 
 # List all versions
