@@ -19,10 +19,10 @@ Virto Commerce offers the following PBCs:
 
 - [Virto Start](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/virto-start-packages.json): Foundational package for starting your e-commerce journey. Provides B2B and B2C configurations with native Virto Commerce Frontend integration.  
 - [Identity Provider (IdP)](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/idp-packages.json): Authenticates and authorizes user access to applications. Enables quick customer authorization and authentication.  
-- [Digital Catalog](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/digital-product-packages.json): Facilitates creating and managing a digital product catalog. Includes PIM and rich search capabilities like semantic search and personalization.  
+- [Digital catalog](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/digital-product-packages.json): Facilitates creating and managing a digital product catalog. Includes PIM and rich search capabilities like semantic search and personalization.  
 - [PIM (Product Information Manager)](https://github.com/VirtoCommerce/vc-module-profile-experience-api/releases/tag/3.811.0): Enables setting up and customizing product catalogs to meet business needs.  
 - [Purchase](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/purchase-packages.json): Provides shopping cart and checkout functionality integrated with customer and order management.  
-- [Customer & Organizations (CRM)](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/crm-packages.json): Supports managing customers and organizations, enhancing relationship management.  
+- [Customer & organizations (CRM)](https://github.com/VirtoCommerce/vc-modules/blob/master/pbc/crm-packages.json): Supports managing customers and organizations, enhancing relationship management.  
 
 Install a PBC by running:
 

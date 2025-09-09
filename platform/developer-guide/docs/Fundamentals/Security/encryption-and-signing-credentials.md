@@ -4,19 +4,19 @@ To protect the tokens it issues, Virto Commerce uses the **encryption credential
 
 ## Use self-signed certificate
 
-Self-signed certificate is generated and stored in the database at the first platform startup.
+Self-signed certificate is generated and stored in the database at the first Platform startup.
   
 To regenerate the certificate:
 
-1. Stop all the platform instances.
+1. Stop all the Platform instances.
 1. Clear the `ServerCertificate` table in the database.
-1. Run the platform again.
+1. Run the Platform again.
 
 ## Register certificate (recommended for production-ready scenarios)
 
 To register a custom certificate, do the following:
 
-1.  Stop all platform instances, if they are running.
+1.  Stop all Platform instances, if they are running.
 1.  Provide usage flags for importing the certificate, at least `DigitalSignature` and `KeyEncipherment`.
 1.  Prepare two certificate files:
     
@@ -29,7 +29,7 @@ To register a custom certificate, do the following:
     * **Auth:PrivateKeyPath**: Path to the *.PFX file.   
 	* **Auth:PrivateKeyPassword**: Plaintext password from the private part of the PFX certificate.
         
-1.  Run the platform. The system will save the certificates in the database at startup.
+1.  Run the Platform. The system will save the certificates in the database at startup.
 
 !!! note
 	You can delete certificate files and remove keys from the configuration for safety reason.

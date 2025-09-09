@@ -3,7 +3,7 @@ Running multiple instances of your application, all accessing the same distribut
 
 ![Multi-level caching](media/02-multi-level-caching.png){: style="display: block; margin: 0 auto;" }
 
-1. One platform instance evicts some data from cache.
+1. One Platform instance evicts some data from cache.
 1. The message for this event is sent to the backplane. 
 1. The backplane knows all connected clients and which servers they are on.
 1. The backplane sends a message to all clients via their respective servers.
@@ -22,7 +22,7 @@ Redis Pub/Sub is used to send messages to the Redis server on any key change:
 
 Each cache instance with the same configuration subscribes to the same channel and can respond to these messages to keep other cache handles in sync with the master.
 
-To add a Redis cache backplane to the Virto platform at the configuration stage, copy `StackExchange.Redis`, the primary connection string, to [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0):
+To add a Redis cache backplane to the Virto Platform at the configuration stage, copy `StackExchange.Redis`, the primary connection string, to [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0):
 
    * For local deployment, save the connection string with [Secret Manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0#secret-manager) or [appsetting.json](../../Configuration-Reference/appsettingsjson.md):
       
@@ -38,16 +38,16 @@ To add a Redis cache backplane to the Virto platform at the configuration stage,
    * For Azure based instance, save the connection string in App Service Configuration or another secure storage.
 
 !!!warning
-	Use the same `RedisConnectionString` for all platform instances. Their local cache instances must be synchronized as well.
+	Use the same `RedisConnectionString` for all Platform instances. Their local cache instances must be synchronized as well.
 
 ### How it works
 
-Every time an item is removed or updated, the platform sends a message to the backplane, which stores the information needed to update other clients. All other clients receive these messages asynchronously and respond accordingly.
+Every time an item is removed or updated, the Platform sends a message to the backplane, which stores the information needed to update other clients. All other clients receive these messages asynchronously and respond accordingly.
 
 !!! Note "Example" 
 
     A cache item was updated by Client A, while Client B still has the old version in its local in-process cache. 
-    With the source set, the platform can evict the item from all of Client B's local in-process cache instances and retrieve the new version from the source on the next **Get the new version** request.
+    With the source set, the Platform can evict the item from all of Client B's local in-process cache instances and retrieve the new version from the source on the next **Get the new version** request.
 
 Note that:
 
@@ -59,7 +59,7 @@ Note that:
 <br>
 ![Readmore](media/readmore.png){: width="25"} [Redis overview](https://redis.io/)
     
-![Readmore](media/readmore.png){: width="25"} [How to scale out platform based on Azure ](../Scalability/scaling-configuration-on-azure-cloud.md)
+![Readmore](media/readmore.png){: width="25"} [How to scale out Platform based on Azure ](../Scalability/scaling-configuration-on-azure-cloud.md)
 
 
 <br>

@@ -15,7 +15,7 @@ To install the latest edge release:
     cd C:\vc-platform-edge
     ```
 
-1. Install the latest edge release for the platform and modules:
+1. Install the latest edge release for the Platform and modules:
 
     ```console
     vc-build install -edge
@@ -44,7 +44,7 @@ To update to the latest edge release:
     cd C:\vc-platform-edge
     ```
 
-1. Install the latest edge release for the platform and modules from the commerce bundle:
+1. Install the latest edge release for the Platform and modules from the commerce bundle:
 
     ```console
     vc-build update -edge

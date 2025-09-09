@@ -139,7 +139,7 @@ This section explains how to expose SEO data via GraphQL and filter it correctly
     }
     ```
 
-1. It’s recommended to return only one `“seoInfo”` item per object to avoid client-side filtration. You can implement some basic server-side filtration in the GraphQL type, but sometimes is better to put it in the **QueryHandler** or even create a separate **Service**:
+1. It is recommended to return only one `“seoInfo”` item per object to avoid client-side filtration. You can implement some basic server-side filtration in the GraphQL type, but sometimes is better to put it in the **QueryHandler** or even create a separate **Service**:
 
     ```csharp
     public class NewsArticlesQueryHandler() : IQueryHandler<NewsArticleQuery, NewsArticle>, IQueryHandler<NewsArticlesQuery, NewsArticleSearchResult>

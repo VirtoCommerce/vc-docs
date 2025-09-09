@@ -74,7 +74,7 @@ Follow the instructions below to build your own data importer of a specific type
 
 1. Create DataWriter in the new CsvProductImageWriter.cs file:
 
-    ```cs title="CsvProductImageWriter.cs" linenums="1"
+    ```cs title="CsvProductImageWriter.cs" linenums="1" hl_lines="6 13 31"
     public sealed class CsvProductImageWriter : IImportDataWriter
     {
             private readonly bool _debug;
@@ -125,7 +125,7 @@ Follow the instructions below to build your own data importer of a specific type
 
 1. Create custom importer. This is the central object in the DataImport extension system, as the object of this type is called by the system for all import operations. To define a new importer, create CsvProductImageImporter with the following content:
 
-    ```cs title="CsvProductImageImporter.cs" linenums="1"
+    ```cs title="CsvProductImageImporter.cs" linenums="1" hl_lines="23 34"
     public sealed class CsvProductImageImporter : IDataImporter
     {
         private readonly IBlobStorageProvider _blobStorageProvider;
@@ -176,7 +176,7 @@ Follow the instructions below to build your own data importer of a specific type
 
 1. Register data importer by adding the following content to the module.cs file:
 
-    ```cs title="module.cs" linenums="1"
+    ```cs title="module.cs" linenums="1" hl_lines="3 8"
     public void Initialize(IServiceCollection serviceCollection)
     {
     serviceCollection.AddTransient<CsvProductImageImporter>();

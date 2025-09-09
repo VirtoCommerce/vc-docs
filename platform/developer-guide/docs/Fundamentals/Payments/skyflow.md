@@ -1,6 +1,6 @@
-# Integration with SkyFlow
+# Integration with Skyflow
 
-The Skyflow module facilitates seamless integration with [SkyFlow](https://www.skyflow.com/), a Data Privacy Vault service, enabling secure payment processing within Virto Commerce Platform. This integration ensures compliance with industry standards for handling payment data securely while offering a unified experience for credit card transactions. 
+The **Skyflow** module facilitates seamless integration with [Skyflow](https://www.skyflow.com/), a Data Privacy Vault service, enabling secure payment processing within Virto Commerce Platform. This integration ensures compliance with industry standards for handling payment data securely while offering a unified experience for credit card transactions. 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-skyflow)
 
@@ -8,53 +8,53 @@ The Skyflow module facilitates seamless integration with [SkyFlow](https://www.s
 
 ## Key features
 
-* **Unified Credit Card User Experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
-* **PCI Compliance:** Ensure PCI compliance with SkyFlow, simplifying adherence to industry standards for secure payment data handling.
-* **Integration with Virto Commerce Frontend Application:** Seamlessly integrate with [Virto Frontend Application](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive e-commerce experience.
-* **Flexible Customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and SkyFlow to tailor integrations with a variety of payment providers to meet your specific requirements.
-* **Optimized for Marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
-* **Saved Credit Card:** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions.
+* **Unified credit card user experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
+* **PCI compliance:** Ensure PCI compliance with Skyflow, simplifying adherence to industry standards for secure payment data handling.
+* **Integration with Virto Commerce Frontend:** Seamlessly integrate with [Virto Frontend Application](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive e-commerce experience.
+* **Flexible customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and Skyflow to tailor integrations with a variety of payment providers to meet your specific requirements.
+* **Optimized for marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
+* **Saved credit card:** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions.
 
 ## Prerequisites
 
-1. **SkyFlow Account:** Create and configure your [SkyFlow Account](https://www.skyflow.com/) to take full advantage of the module.
-2. **Authorize.NET Account:** Create and configure your [Authorize.NET Account](https://www.authorize.net/) for seamless integration with the module.
-3. **Installation:** Install the SkyFlow Module to start using its powerful features and functionality.
+1. **Skyflow account:** Create and configure your [Skyflow Account](https://www.skyflow.com/) to take full advantage of the module.
+2. **Authorize.NET account:** Create and configure your [Authorize.NET Account](https://www.authorize.net/) for seamless integration with the module.
+3. **Installation:** Install the Skyflow Module to start using its powerful features and functionality.
 
 ## Architecture
 
 ![Architecture](media/architecture.png)
 
-![1](media/1.png){: width="25"} **Order Placement:**
+![1](media/1.png){: width="25"} **Order placement:**
 
 * As a customer, I add items to my cart and proceed to checkout.
-* On the payment selection page, I see a **Credit Card** option.
+* On the payment selection page, I see a **Credit card** option.
 
-![2](media/2.png){: width="25"} **Credit Card Payment Form:**
+![2](media/2.png){: width="25"} **Credit card payment form:**
 
-* I select the "Credit Card" payment method.
-* The frontend displays a Credit Card form built with PCI compliance and Skyflow integration, maintaining the current design of the platform.
-* I enter my Credit Card details securely into the form.
+* I select the **Credit card** payment method.
+* The Frontend displays a credit card form built with PCI compliance and Skyflow integration, maintaining the current design of the Platform.
+* I enter my credit card details securely into the form.
 
-![3](media/3.png){: width="25"} **Tokenization Process:**
+![3](media/3.png){: width="25"} **Tokenization process:**
 
 * I submit the form, and the payment process utilizes Skyflow for PCI-compliant Credit Card storage.
-* Skyflow tokenizes my Credit Card information securely.
+* Skyflow tokenizes my credit card information securely.
 
-![4](media/4.png){: width="25"} **Transaction Processing:**
+![4](media/4.png){: width="25"} **Transaction processing:**
 
-* The tokenized Credit Card information is seamlessly integrated with Payment processing through SkyFlow.
+* The tokenized credit card information is seamlessly integrated with Payment processing through Skyflow.
 * The transaction is created successfully via Authorize.NET.
 
-![5](media/5.png){: width="25"} **Payment Document Creation:**
+![5](media/5.png){: width="25"} **Payment document creation:**
 
-* A Payment document is automatically created within Virto Commerce Payment Processing for the Credit Card transaction.
-* This Payment document includes all necessary details for tracking and processing the transaction within the Virto Commerce platform.
+* A Payment document is automatically created within Virto Commerce Payment Processing for the credit card transaction.
+* This payment document includes all necessary details for tracking and processing the transaction within the Virto Commerce Platform.
 
-![6](media/6.png){: width="25"} **Saved Credit Card:**
+![6](media/6.png){: width="25"} **Saved credit card:**
 
-* The Skyflow-generated token for Credit Card is stored within the Virto Commerce Payment document securely.
-* Virto Commerce can save the token and use later as a Saved Credit Card.
+* The Skyflow-generated token for credit card is stored within the Virto Commerce payment document securely.
+* Virto Commerce can save the token and use later as a saved credit card.
 
 
 ## Setup
@@ -116,14 +116,14 @@ To setup Virto Commerce back office:
 
     ![Back office 1](media/configure-backoffice-1.png)
 
-1. In the **Payment methods** blade, select **SkyFlow**.
+1. In the **Payment methods** blade, select **Skyflow**.
 1. In the **Edit payment method** blade, activate the Skyflow payment method.
 
     ![Back office 2](media/configure-backoffice-2.png)
 
 1. Click **Save** in the toolbar to save the changes.
 
-The SkyFlow payment method has been activated for the Store.
+The Skyflow payment method has been activated for the Store.
 
 ## Customization
 

@@ -137,6 +137,7 @@ When adding product properties, you can select the following value types from th
 | Decimal number   | Numerical value with decimals, used for precise measurements.  | Length: 100 mm                                |
 | Date time        | Date and time entry, useful for events or production dates.    | Date of production: 2024-11-01 10:00          |
 | Boolean          | True/false value, suitable for binary attributes.              | Requires assembly: false                      |
+| Color            | Color value, selected from a color picker or entered as a code. | ![Color property](media/color-property.png)   |
 | Integer          | Whole number, ideal for quantities or counts.                  | Pack size: 10                                 |
 | Geo Point        | Geographical coordinates (latitude and longitude) for location-based data.| Store location: 40.7128° N, 74.0060° W  |
 | Measure          | Preset [units of measure](managing-units-of-measure.md).       | Weight: 100 g                                 |
@@ -229,6 +230,24 @@ The properties are displayed as facets:
 The product properties are also displayed in the product cards:
 
 ![Product properties](media/product-properties.png){: style="display: block; margin: 0 auto;" }
+
+## Set property priority
+
+The priority of properties defines the order in which they are displayed on the Frontend. For example, to set the priority of fabrics for a men’s hat:
+
+1. Open **Men's Scholarship Hat** in the Catalog.
+1. In the product description blade, click on the **Properties** widget.
+1. In the next blade, click ![Pencil](media/pencil.png){: width="25" } next to the **Fabric** property.
+1. In the next blade, click **Dictionary**.
+1. In the next blade, choose a dictionary value.
+1. In the next blade, enter its priority.
+1. Repeat steps 5-6 for the remaining values.
+1. Click **Save** in the toolbar.
+
+![Setting up priority](media/setting-property-priority.png)
+
+The priorities have been applied, and the values are displayed on the Frontend in the specified order:
+![Property priority](media/property-priority-frontend.png)
 
 ## Normalize facets
 

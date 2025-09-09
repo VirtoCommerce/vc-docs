@@ -9,7 +9,7 @@ Virto Commerce follows a structured release strategy designed to provide flexibi
 
 ## Releases
 
-At Virto Commerce, we provide frequent releases for various modules and platform, packed with new features, enhancements, and fixes. Releases are a foundation for all [bundles](#bundles) and [PBCs](#packaged-business-capabilities-pbcs).
+At Virto Commerce, we provide frequent releases for various modules and the Platform, packed with new features, enhancements, and fixes. Releases are a foundation for all [bundles](#bundles) and [PBCs](#packaged-business-capabilities-pbcs).
 
 Generally, we have three release channels: 
 
@@ -77,7 +77,7 @@ Packaged Business Capabilities (PBCs) are a core component of Virto Commerce's m
 
 ![Readmore](media/readmore.png){: width="25"} [Available PBCs Max and their installation](pbcs.md)
 
-![Readmore](media/readmore.png){: width="25"} [Install specific platform or module version](installing-specific-version.md)
+![Readmore](media/readmore.png){: width="25"} [Install specific Platform or module version](installing-specific-version.md)
 
 ![Readmore](media/readmore.png){: width="25"} [Useful tips](tips.md)
 

@@ -1,6 +1,6 @@
 # Localization
 
-This article demonstrates how to configure countries and regions within Virto Commerce. These configurations are vital for tailoring the platform to specific geographic regions and localizations. We will explore how to customize the countries list, update regions, and manage localization for both country and region names.
+This article demonstrates how to configure countries and regions within Virto Commerce. These configurations are vital for tailoring the Platform to specific geographic regions and localizations. We will explore how to customize the countries list, update regions, and manage localization for both country and region names.
 
 ## Configuration
 

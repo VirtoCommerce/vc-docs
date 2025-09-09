@@ -14,7 +14,7 @@ To install a Platform stable release:
 	cd C:\vc-platform-stable
 	```
 
-1. Install the latest stable release for the platform and modules:
+1. Install the latest stable release for the Platform and modules:
 
 	```console
 	vc-build install
@@ -43,7 +43,7 @@ To update to the latest stable release:
 	cd C:\vc-platform-stable
 	```
 
-1. Install the latest stable release for both platform and modules from the **vc-package.json** file:
+1. Install the latest stable release for both Platform and modules from the **vc-package.json** file:
 
 	```console
 	vc-build update

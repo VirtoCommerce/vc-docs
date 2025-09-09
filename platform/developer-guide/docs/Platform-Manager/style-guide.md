@@ -1,6 +1,6 @@
 # Virto Commerce Platform Style Guide
 
-This Virto Commerce Platform Style Guide will help you develop consistent modules for the platform. You can create your own styles using the rules below.
+This Virto Commerce Platform Style Guide will help you develop consistent modules for the Platform. You can create your own styles using the rules below.
 
 ## Rules
 

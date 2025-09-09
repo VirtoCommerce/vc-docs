@@ -1,4 +1,4 @@
-# Create new block
+# Create New Block
 
 This tutorial will show you how to create a new block. We are going to create a simple block that displays selected products on the frontend:
 

@@ -16,7 +16,7 @@ VC Platform supports two logging libraries out of the box:
 
 ## Basic scenarios
 
-Here are basic usage scenarios how to use platform logging.
+Here are basic usage scenarios how to use Platform logging.
 
 ### Configuring logging
 

@@ -4,7 +4,7 @@ Azure Application Insights is a monitoring and diagnostics service provided by M
 
 ## Virto Commerce Application Insights module
 
-Application Insights was integrated to the VC platform till the release of 3.314.0 version, where it was replaced with Serilog library. 
+Application Insights was integrated to the VC Platform till the release of 3.314.0 version, where it was replaced with Serilog library. 
 
 You can still use MS Azure Application Insights by installing it separately as a module:
 

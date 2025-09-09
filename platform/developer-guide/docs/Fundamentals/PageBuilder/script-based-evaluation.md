@@ -1,4 +1,4 @@
-# Script-based Evaluation
+# Script-Based Evaluation
 
 Some settings support dynamic values that are evaluated at runtime. This includes:
 

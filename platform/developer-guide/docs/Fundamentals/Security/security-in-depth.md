@@ -1,6 +1,6 @@
 # Authenticate with ASP.NET Core Identity
 
-Virto platform uses [ASP.NET](http://asp.net/) Core Identity as a membership system.
+Virto Platform uses [ASP.NET](http://asp.net/) Core Identity as a membership system.
 
 Using [ASP.NET](http://asp.net/) Core Identity enables several scenarios:
 
@@ -10,20 +10,20 @@ Using [ASP.NET](http://asp.net/) Core Identity enables several scenarios:
 
 ## Issue JWT tokens with OpenIddict
 
-To enable token authentication, ASP.NET Core supports multiple options for using **OAuth 2.0** and **OpenID Connect**. We take advantage of a good third-party library and use **OpenIddict** to provide a simple and easy-to-use solution to implement an OpenID Connect server within the platform application.
+To enable token authentication, ASP.NET Core supports multiple options for using **OAuth 2.0** and **OpenID Connect**. We take advantage of a good third-party library and use **OpenIddict** to provide a simple and easy-to-use solution to implement an OpenID Connect server within the Platform application.
 
-**OpenIddict** is based on `AspNet.Security.OpenIdConnect.Server` (ASOS) to control the **OpenID Connect** authentication flow and can be used with any membership stack, including ASP.NET Core Identity. Also, it supports various token formats, although in Virto platform, we use only JWT token for authorization because of the following advantages:
+**OpenIddict** is based on `AspNet.Security.OpenIdConnect.Server` (ASOS) to control the **OpenID Connect** authentication flow and can be used with any membership stack, including ASP.NET Core Identity. Also, it supports various token formats, although in Virto Platform, we use only JWT token for authorization because of the following advantages:
 
 * **Stateless:** The token contains all information to identify the user, eliminating the need for session state.
-* **Reusability:** A number of separate servers running on multiple platforms and domains can reuse the same token for authenticating the user. It is easy to build an application that shares permissions with other applications.
+* **Reusability:** A number of separate servers running on multiple Platforms and domains can reuse the same token for authenticating the user. It is easy to build an application that shares permissions with other applications.
 * **JWT Security:** No cookies means you have no need to protect against cross-site request forgery attacks (CSRF).
 * **Performance:** No server-side lookup to find and deserialize the session on each request; you only need to calculate the HMAC SHA-256 to validate the token and parse its content.
 
-Adding an **OpenID Connect** server to the platform allows you to support token authentication, as well as to manage all your users using a local password or an external identity provider (e.g. Azure Active Directory) for all your applications in a single place, with the power to control who can access your API and the information that is exposed to each client. 
+Adding an **OpenID Connect** server to the Platform allows you to support token authentication, as well as to manage all your users using a local password or an external identity provider (e.g. Azure Active Directory) for all your applications in a single place, with the power to control who can access your API and the information that is exposed to each client. 
 
 ![OpenID Connect chart](media/openid-chart.png)
 
-Virto platform uses JWT token authentication and OAuth2 Password, Client Credentials and Refresh token flows to issue and consume authorization token for clients.
+Virto Platform uses JWT token authentication and OAuth2 Password, Client Credentials and Refresh token flows to issue and consume authorization token for clients.
 
 ![Readmore](media/readmore.png){: width="25"} [OpenIddict integration to Virto Commerce](https://virtocommerce.com/blog/how-to-secure-aspnet-core-applications-with-openiddict-using-virto-commerce-platform)
 

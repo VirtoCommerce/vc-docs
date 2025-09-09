@@ -16,7 +16,7 @@ The pattern enables applications to load data on demand:
 
 This pattern improves performance and also helps maintain consistency between the data held in the cache and data in the underlying storage.
 
-For more information on why we do not use distributed cache and how we improved the performance of the B2B eCommerce platform in the platform code, read the [article](https://virtocommerce.medium.com/how-we-improved-the-performance-of-b2b-ecommerce-platform-by-data-caching-in-azure-cloud-71b27995066c).
+For more information on why we do not use distributed cache and how we improved the performance of the B2B eCommerce Platform in the Platform code, read the [article](https://virtocommerce.medium.com/how-we-improved-the-performance-of-b2b-ecommerce-platform-by-data-caching-in-azure-cloud-71b27995066c).
 
 ## IMemoryCacheExtensions by Virto Commerce
 
@@ -50,7 +50,7 @@ The code with a our extension looks as follows:
     CacheKey.With(GetType(), nameof(GetDataById), "123"); /* => "TypeName:GetDataById-123" */
     ```
 
-* Cache keys for complex object types. Most of the platform types are derived from the `Entity` or `ValueObject` classes. They implement the `ICacheKey` interface that contains the `GetCacheKey()` method. It can be used for cache key generation:
+* Cache keys for complex object types. Most of the Platform types are derived from the `Entity` or `ValueObject` classes. They implement the `ICacheKey` interface that contains the `GetCacheKey()` method. It can be used for cache key generation:
 
     ``` csharp
     class ComplexValueObject : ValueObject
@@ -99,13 +99,13 @@ The `CancellationTokenSource` object (line 7 in the above code) is associated wi
 !!! warning
     We intentionally disable inheritance for cached entry expiration tokens and time-based expiration settings. If a cached entry is used to create another, the child will copy the expiration settings of the parent entry and cannot expire by manually removing or updating the parent entry. This leads to unpredictable side effects, and it is difficult to maintain and debug such cache dependencies.
 
-We avoid manual control of the cached data lifetime in our code. The platform has a special `CachingOptions` object that contains the settings for **Absolute** or **Sliding** lifetimes for all cached data (see below).
+We avoid manual control of the cached data lifetime in our code. The Platform has a special `CachingOptions` object that contains the settings for **Absolute** or **Sliding** lifetimes for all cached data (see below).
 
 We can always keep the cache updated and evict modified data from it explicitly thanks to the **Clean architecture** and the **Bounded** contexts. Each boundary controls all read and change operations for the data belonging to the domain.
 
 ## Strongly typed cache regions
 
-The platform supports the strongly typed cache regions construct. It is used:
+The Platform supports the strongly typed cache regions construct. It is used:
 
 * To control a set of cache keys. 
 * To provide the tools to evict grouped or related data from the cache to keep the latter consistent. 
@@ -134,7 +134,7 @@ A special `GlobalCacheRegion` can be used to expire all cached data of the entir
 
 ## Caching null values
 
-By default, the platform caches null values. If you choose to use negative caching, change this default behavior by passing the value `false` to `cacheNullValue` in the `GetOrCreateExclusive` method:
+By default, the Platform caches null values. If you choose to use negative caching, change this default behavior by passing the value `false` to `cacheNullValue` in the `GetOrCreateExclusive` method:
 
 ``` csharp
  var data = _memoryCache.GetOrCreateExclusive(cacheKey, cacheEntry => {}, cacheNullValue: false);
@@ -146,7 +146,7 @@ By default, the platform caches null values. If you choose to use negative cachi
 
 ## Scaling
 
-Running multiple platform instances, each with its own local cache, and which in turn must be consistent with the cache of other instances, can be challenging. Without solving this problem, each instance of the application will have inconsistent data, which will definitely frustrate Virto Commerce customers.
+Running multiple Platform instances, each with its own local cache, and which in turn must be consistent with the cache of other instances, can be challenging. Without solving this problem, each instance of the application will have inconsistent data, which will definitely frustrate Virto Commerce customers.
 
 <br>
 <br>

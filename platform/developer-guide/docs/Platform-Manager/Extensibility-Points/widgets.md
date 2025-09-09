@@ -13,7 +13,7 @@ A **widget container** is a placeholder control for **widgets**, which:
 * Accepts options like size, widget column and row count, etc.
 * Allows the user to manage widget position within designated area
 
-A **widget service** is a platform level engine for registering **widgets** and distributing them to the appropriate **widget containers**.
+A **widget service** is a Platform level engine for registering **widgets** and distributing them to the appropriate **widget containers**.
 
 Here is how we use widgets out of the box in our Catalog module:
 

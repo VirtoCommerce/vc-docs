@@ -2,7 +2,7 @@
 
 Virto Commerce Platform enables adding new properties to entities at runtime. 
 
-## Add New Dynamic Property for Existing Type from UI
+## Add new dynamic property for existing type from UI
 
 To add a new dynamic property:
 
@@ -17,7 +17,7 @@ To add a new dynamic property:
 
 A new dynamic property has been added.
 
-## Edit Object Values
+## Edit object values
 
 The dynamic properties are edited via the **Dynamic properties** widget. For example, to edit dynamic properties of a specific order:
 

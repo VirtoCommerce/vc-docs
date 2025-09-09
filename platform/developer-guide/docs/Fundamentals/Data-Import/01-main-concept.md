@@ -1,5 +1,5 @@
 ﻿# Main Concept
-The architecture and behavior of Virto Commerce Import Framework allows to easily import your data, such as product information, customers, categories, and much more, into the Virto Commerce platform.
+The architecture and behavior of Virto Commerce Import Framework allows to easily import your data, such as product information, customers, categories, and much more, into the Virto Commerce Platform.
 
 ## Overview
 VC Data Import allows you to define what kind of data you want to import into your application. It uses custom configurable import profiles, where you can specify what kind of data to import and from which data sources.
@@ -8,7 +8,7 @@ VC Data Import allows you to define what kind of data you want to import into yo
 
 Using VC Data Import, you can benefit from:
 
-* Managing user defined import profiles directly from the platform manager UI.
+* Managing user defined import profiles directly from the Platform manager UI.
 * Seeing the import history with detailed logs.
 * Working with an extensibility model that enables extending the existing built-in importers with new data types and sources.
 

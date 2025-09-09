@@ -6,7 +6,7 @@ Virto Commerce is built on a DB agnostic architecture. The following databases a
 * MySql Server.
 * PostgreSQL.
 
-At the same time, Virto Commerce Architecture allows you add custom database provider on top of Entity Framework for solution as well as for a specific module.
+At the same time, Virto Commerce architecture allows you add custom database provider on top of Entity Framework for solution as well as for a specific module.
 
 Select the tab with the required provider setup information.
 

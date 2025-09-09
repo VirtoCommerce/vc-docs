@@ -8,7 +8,7 @@ The Virto Commerce Platform UI is organized and divided into multiple screens ca
 
 Every blade is instantiated from a highly customizable template. The template has a few basic parts, such as the maximize area, top and title buttons, toolbar, main content placeholders, etc.
 
-Any blade object has the following properties that Virto Commerce platform respects:
+Any blade object has the following properties that Virto Commerce Platform respects:
 
 |Property                 |Description|
 |-------------------------|-----------|

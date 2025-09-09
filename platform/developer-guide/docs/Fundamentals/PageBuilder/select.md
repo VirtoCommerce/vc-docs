@@ -27,7 +27,7 @@ If the control already has a pre-defined value, it will be matched **using the `
 
 
 
-## Supporting Types
+## Supporting types
 
 The following types define the structure of values used within the select control — including individual options, how options are loaded from a server, and how values are extracted from responses.
 

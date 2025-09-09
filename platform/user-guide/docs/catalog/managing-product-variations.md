@@ -51,7 +51,7 @@ There are two options to display product variations on the Frontend:
 
 * As a selector as a part of product description (as of Frontend version [2.27.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.27.0)). Customers click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
 
-    ![Selector](media/hat-options-selector.gif)
+    ![Selector](media/jeans-options-selector.gif)
 
 Below is the guide how to switch between these two options.
 
