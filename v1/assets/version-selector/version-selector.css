@@ -1,0 +1,57 @@
+/* Version Selector Styles */
+.version-selector-container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 9999;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.version-selector {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.version-selector:hover {
+    border-color: #999;
+}
+
+.version-selector option {
+    padding: 4px;
+}
+
+.version-label {
+    display: inline-block;
+    margin-right: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .version-selector-container {
+        top: 60px;
+        right: 10px;
+    }
+}
+
+/* Dark theme support */
+[data-md-color-scheme="slate"] .version-selector-container {
+    background: #2e303e;
+}
+
+[data-md-color-scheme="slate"] .version-selector {
+    background: #2e303e;
+    color: #f5f5f5;
+    border-color: #494b5a;
+}
+
+[data-md-color-scheme="slate"] .version-label {
+    color: #f5f5f5;
+}
