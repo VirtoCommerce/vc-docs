@@ -1,0 +1,2625 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Build and personalize your online store for engaging shopping experiences">
+      
+      
+        <meta name="author" content="Virto Commerce">
+      
+      
+        <link rel="canonical" href="https://docs.virtocommerce.org/storefront/user-guide/registration_and_signing_in/create-account/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../sign-in/">
+      
+      
+      <link rel="icon" href="../../assets/icons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+    
+    
+<title>Register and Sign In - Create Account - Frontend User Docs</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Circular+Std:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Circular Std";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/fonts.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<link rel="stylesheet" href="/assets/version-selector/version-selector.css">
+<script src="/assets/version-selector/version-selector.js"></script>
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-account" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!-- Determine class according to configuration -->
+
+
+
+
+
+<!-- Header -->
+<header class="md-header md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid"
+        aria-label="Header">
+        <!-- Button to open drawer -->
+        <label class="md-header__button md-icon" for="__drawer" >
+            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.75 12.5C0.335787 12.5 0 12.1642 0 11.75C0 11.3358 0.335786 11 0.75 11H17.25C17.6642 11 18 11.3358 18 11.75C18 12.1642 17.6642 12.5 17.25 12.5H0.75ZM0.75 7.25C0.335787 7.25 0 6.91421 0 6.5C0 6.08579 0.335786 5.75 0.75 5.75H17.25C17.6642 5.75 18 6.08579 18 6.5C18 6.91421 17.6642 7.25 17.25 7.25H0.75ZM0.75 2C0.335787 2 0 1.66421 0 1.25C0 0.835786 0.335786 0.5 0.75 0.5H17.25C17.6642 0.5 18 0.835786 18 1.25C18 1.66421 17.6642 2 17.25 2H0.75Z" fill="#BCBDC0"/>
+</svg>
+        </label>
+
+        <div class="md-header__logo">
+            <!-- Header title -->
+            <div class="md-header__title">
+                <div class="md-header__ellipsis">
+                    <div class="md-header__topic">
+                        <a href="/"
+                           title="Frontend User Docs"
+                           class="md-header__button md-logo"
+                           aria-label="Frontend User Docs"
+                           data-md-component="logo">
+                            
+  <img src="../../assets/icons/logo.svg" alt="logo">
+
+                            <span class="md-ellipsis">
+                                Frontend User Docs
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+    .mega-menu {
+        margin-right: 20px;
+        position: relative;
+        margin-left: 2rem;
+    }
+
+    .mega-menu__menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0px 16px 32px 4px #00000026;
+        z-index: 1;
+        flex-direction: row;
+        color: black;
+        padding: 20px;
+        border-radius: 8px;
+        row-gap: 32px;
+        left: -200px;
+        top: 40px;
+        flex-direction: column;
+    }
+
+    /* .mega-menu__menu:after {
+        border: 16px solid transparent;
+        border-bottom-color: #fff;
+        content: "";
+        margin-left: -1em;
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        width: 0;
+        height: 0;
+    } */
+
+    .mega-menu__container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 36px;
+    }
+
+    .mega-menu__button {
+        font-family: "Circular Std", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .mega-menu__menu-item {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mega-menu__menu-button {
+        border-radius: 6px;
+        padding: 8px, 10px, 8px, 10px;
+        padding: 10px;
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 237, 223, 0.5);
+        }
+    }
+
+    .mega-menu__menu-button-icon {
+        width: 18px;
+        height: 18px;
+        background-position: center;
+        background-size: contain;
+        margin-right: 13px;
+        flex-shrink: 0;
+    }
+
+    .mega-menu__menu-item-arrow {
+        width: 12px;
+        height: 12px;
+        background-position: center;
+        background-size: contain;
+        margin-left: auto;
+        -webkit-mask-image: url("data:image/svg+xml;utf8,<svg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.25217 11.6482C1.02693 11.4229 0.900391 11.1173 0.900391 10.7988C0.900391 10.4802 1.02693 10.1746 1.25217 9.94929L5.20872 5.99275L1.25217 2.0362C1.03331 1.80959 0.912206 1.50609 0.914943 1.19106C0.917681 0.876032 1.04404 0.57468 1.26681 0.351912C1.48958 0.129144 1.79093 0.00278295 2.10596 4.54197e-05C2.42099 -0.00269211 2.72449 0.118413 2.9511 0.337276L7.75711 5.14328C7.98235 5.3686 8.10889 5.67415 8.10889 5.99275C8.10889 6.31134 7.98235 6.61689 7.75711 6.84221L2.9511 11.6482C2.72578 11.8735 2.42023 12 2.10164 12C1.78304 12 1.47749 11.8735 1.25217 11.6482Z' fill='%23475469'/></svg>");
+        mask-image: url("data:image/svg+xml;utf8,<svg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.25217 11.6482C1.02693 11.4229 0.900391 11.1173 0.900391 10.7988C0.900391 10.4802 1.02693 10.1746 1.25217 9.94929L5.20872 5.99275L1.25217 2.0362C1.03331 1.80959 0.912206 1.50609 0.914943 1.19106C0.917681 0.876032 1.04404 0.57468 1.26681 0.351912C1.48958 0.129144 1.79093 0.00278295 2.10596 4.54197e-05C2.42099 -0.00269211 2.72449 0.118413 2.9511 0.337276L7.75711 5.14328C7.98235 5.3686 8.10889 5.67415 8.10889 5.99275C8.10889 6.31134 7.98235 6.61689 7.75711 6.84221L2.9511 11.6482C2.72578 11.8735 2.42023 12 2.10164 12C1.78304 12 1.47749 11.8735 1.25217 11.6482Z' fill='%23475469'/></svg>");
+        background-color: #475469;
+        margin-left: 5px;
+        mask-repeat: no-repeat;
+        margin-left: auto;
+    }
+
+    .opened {
+        background-color: #ffeddf;
+        border-radius: 6px;
+    }
+
+    .opened .mega-menu__menu-item-arrow {
+        background-color: #b34400;
+    }
+
+    .mega-menu__menu-wrapper {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        width: 250px;
+        flex-grow: 1;
+    }
+
+    .mega-menu__content-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 250px;
+        flex-grow: 1;
+    }
+
+    .content-item-title {
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .content-item-list-item {
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 14px;
+        font-weight: 450;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        list-style-type: none;
+        padding-left: 10px;
+    }
+
+    .content-item-list-item_hover:hover {
+        text-decoration: underline;
+    }
+
+    .content-item-list-item a:hover {
+        text-decoration: underline;
+    }
+
+    .menu-footer {
+        width: 100%;
+        height: 52px;
+        padding: 6px, 12px, 6px, 12px;
+        background-color: #f6f6f6;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 24px;
+        padding: 6px 12px;
+    }
+
+    .menu-footer-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+        font-family: "Circular Std Book", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    .menu-footer-button:hover {
+        cursor: pointer;
+    }
+
+    .menu-footer-button:hover a {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1050px) {
+        .mega-menu__menu {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 65px;
+        }
+
+        .mega-menu {
+            position: static;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .mega-menu__container {
+            column-gap: 10px;
+        }
+        .mega-menu__menu-wrapper {
+            width: auto;
+        }
+
+        .mega-menu__content-wrap {
+            width: auto;
+        }
+    }
+</style>
+
+
+
+
+
+
+<div class="mega-menu">
+    <button id="megamenuButton" class="mega-menu__button">
+        All topics
+        <span style="margin-left: 10px; display: flex">
+            <svg
+                width="12"
+                height="7"
+                viewBox="0 0 12 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M11.6244 1.19045C11.62 1.34466 11.5868 1.49668 11.5263 1.63862C11.4592 1.77854 11.3693 1.90633 11.2602 2.01676L6.61049 6.66651C6.38861 6.88045 6.0924 7 5.78418 7C5.47595 7 5.17975 6.88045 4.95787 6.66651L0.308116 2.01676C0.111319 1.7917 0.0019667 1.50341 0 1.20445C0.000244508 1.05574 0.0300913 0.908567 0.0878001 0.771508C0.145509 0.63445 0.229925 0.510251 0.336127 0.406153C0.542586 0.168746 0.834632 0.0227232 1.14843 0C1.44739 0.0019667 1.73568 0.111319 1.96074 0.308116L5.81219 4.20158L9.63563 0.378143C9.74606 0.269105 9.87385 0.179178 10.0138 0.112042C10.1601 0.049864 10.317 0.0165739 10.4759 0.0140056C10.6293 0.0135648 10.7813 0.0420737 10.9241 0.0980365C11.0715 0.152728 11.2054 0.238602 11.3166 0.349789C11.4278 0.460975 11.5137 0.594855 11.5684 0.742279C11.6145 0.886942 11.6335 1.03888 11.6244 1.19045Z"
+                    fill="#FF7E13"
+                />
+            </svg>
+        </span>
+    </button>
+    <div id="megamenu" class="mega-menu__menu">
+        <div class="mega-menu__container">
+            
+    
+    
+    
+    <div
+        class="mega-menu__menu-wrapper"
+        data-depth="1"
+        
+        style="display: flex;"
+    >
+        
+            <div class="mega-menu__menu-item" data-depth="1">
+                
+                    <button
+                        class="mega-menu__menu-button opened"
+                        data-depth="1"
+                        data-title="All Products"
+                        
+                    >
+                        
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('assets/icons/all-products.svg')"
+                            ></div>
+                        
+                        All Products
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                    
+                    
+                
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="1">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="1"
+                        data-title="Getting Started"
+                        
+                    >
+                        
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('assets/icons/getting-started.svg')"
+                            ></div>
+                        
+                        Getting Started
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="1">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="1"
+                        data-title="APIs"
+                        
+                    >
+                        
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('assets/icons/graphql.svg')"
+                            ></div>
+                        
+                        APIs
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="1">
+                
+                    <a
+                        class="mega-menu__menu-button mega-menu__menu-button_link"
+                        href="https://www.youtube.com/c/VirtoCommerce"
+                        
+                            target="_blank"
+                        
+                    >
+                        
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('assets/icons/video-tutorials.svg')"
+                            ></div>
+                        
+                        Video Tutorials
+                    </a>
+
+                
+
+                
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="1">
+                
+                    <a
+                        class="mega-menu__menu-button "
+                        href="platform/developer-guide/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules"
+                        
+                    >
+                        
+                            <div
+                                class="mega-menu__menu-button-icon"
+                                style="background-image: url('assets/icons/fire.svg')"
+                            ></div>
+                        
+                        Migration to New xAPI Modules
+                    </a>
+
+                
+
+                
+                
+            </div>
+        
+    </div>
+
+    
+        
+            
+
+            
+                
+    
+    
+    
+    <div
+        class="mega-menu__menu-wrapper"
+        data-depth="2"
+        
+            data-parent-title="All Products"
+        
+        style="display: flex;"
+    >
+        
+            <div class="mega-menu__menu-item" data-depth="2">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="2"
+                        data-title="Platform"
+                        
+                        data-parent-title="All Products"
+                        
+                    >
+                        
+                        Platform
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="2">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="2"
+                        data-title="Frontend"
+                        
+                        data-parent-title="All Products"
+                        
+                    >
+                        
+                        Frontend
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="2">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="2"
+                        data-title="Marketplace"
+                        
+                        data-parent-title="All Products"
+                        
+                    >
+                        
+                        Marketplace
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="2">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="2"
+                        data-title="VC Shell"
+                        
+                        data-parent-title="All Products"
+                        
+                    >
+                        
+                        VC Shell
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+            <div class="mega-menu__menu-item" data-depth="2">
+                
+                    <button
+                        class="mega-menu__menu-button "
+                        data-depth="2"
+                        data-title="Deployment on Virto Cloud"
+                        
+                        data-parent-title="All Products"
+                        
+                    >
+                        
+                        Deployment on Virto Cloud
+                        
+                            <div class="mega-menu__menu-item-arrow"></div>
+                        
+
+
+                    </button>
+                
+
+                
+                
+                    
+                
+            </div>
+        
+    </div>
+
+    
+    
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="3"
+        data-parent-title="Platform"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        User Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/user-guide/getting-started">Getting Started</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/user-guide">User Documentation</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        Developer Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/Getting-Started/Installation-Guide/windows">Installation Guide</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/Back-End-Architecture/02-conceptual-overview">Architecture Overview</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/Extensibility/overview">Extensibility</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/Configuration-Reference/appsettingsjson">Configuration Reference</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/Tutorials-and-How-tos/overview">Tutorials and How-tos</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        API Reference
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="https://virtostart-demo-admin.govirto.com/docs/index.html">REST API Reference</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started">GraphQL API Reference</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+    </div>
+
+            
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="3"
+        data-parent-title="Frontend"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        User Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="https://youtu.be/xsnds1QYuC0">Getting Started</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/user-guide">User Documentation</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="https://virtostart-demo-store.govirto.com/">Public Demo</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        Developer Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/developer-guide">Getting Started</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/developer-guide/architecture">Architecture</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/developer-guide/deployment">Deployment</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/developer-guide/integrations/prerender_io">Integrations</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+    </div>
+
+            
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="3"
+        data-parent-title="Marketplace"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        User Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="marketplace/user-guide/Operator-portal/overview">Operator Portal</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="marketplace/user-guide/Vendor-portal/overview">Vendor Portal</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        Developer Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="marketplace/under-construction">In Progress</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+    </div>
+
+            
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="3"
+        data-parent-title="VC Shell"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        Developer Guide
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview">Overview</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/">Getting Started</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/">Connecting to Platform</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+    </div>
+
+            
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="3"
+        data-parent-title="Deployment on Virto Cloud"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/deployment-on-cloud/deploy-on-virto-cloud/">Deploy Platform and Frontend on Virto Cloud</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/">Create Environment via CLI and VC Build</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/deployment-on-cloud/catalog-creation/">Create and Configure Catalog</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/deployment-on-cloud/store-configuration/">Create and Configure Store</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+    </div>
+
+            
+        
+    
+
+            
+        
+    
+    
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="2"
+        data-parent-title="Getting Started"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        Platform
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/Getting-Started/Installation-Guide/windows">Developer Getting Started</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/user-guide/getting-started">Manager Getting Started</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        Frontend Application
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/developer-guide/">Developer Getting Started</a>
+                                </li>
+                            
+                                <li class="content-item-list-item">
+                                    <a href="storefront/user-guide/">User Getting Started</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <ul class="content-item-title">
+                        VC Shell
+                        
+                            
+                                <li class="content-item-list-item">
+                                    <a href="platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app">Developer Getting Started</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </div>
+        
+    </div>
+
+            
+        
+            
+
+            
+                
+    <div
+        class="mega-menu__content-wrap"
+        data-depth="2"
+        data-parent-title="APIs"
+        style="display: none"
+    >
+        
+            <div class="content-item">
+                
+                    <a
+                        class="content-item-list-item content-item-list-item_hover"
+                        href="https://virtostart-demo-admin.govirto.com/docs/index.html"
+                    >REST API</a
+                    >
+                
+            </div>
+        
+            <div class="content-item">
+                
+                    <a
+                        class="content-item-list-item content-item-list-item_hover"
+                        href="platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started"
+                    >GraphQL API</a
+                    >
+                
+            </div>
+        
+    </div>
+
+            
+        
+    
+
+        </div>
+        <div class="menu-footer">
+            
+            <div class="menu-footer-button">
+                <div
+                    class="mega-menu__menu-button-icon"
+                    style="background-image: url('assets/icons/release-notes.svg')"
+                ></div>
+                <a href="https://www.virtocommerce.org/c/news-digest/">Release Notes</a>
+            </div>
+            
+            <div class="menu-footer-button">
+                <div
+                    class="mega-menu__menu-button-icon"
+                    style="background-image: url('assets/icons/support.svg')"
+                ></div>
+                <a href="https://help.virtocommerce.com/support/home">Support</a>
+            </div>
+            
+            <div class="menu-footer-button">
+                <div
+                    class="mega-menu__menu-button-icon"
+                    style="background-image: url('assets/icons/github.svg')"
+                ></div>
+                <a href="https://github.com/VirtoCommerce">GitHub</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.getElementById("megamenuButton");
+            const menu = document.getElementById("megamenu");
+            menuButton.addEventListener("click", async function () {
+                menu.style.display =
+                menu.style.display === "flex" ? "none" : "flex";
+            })
+
+
+
+            const buttons = document.querySelectorAll(
+                ".mega-menu__menu-button:not(.mega-menu__menu-button_link)"
+            );
+            const container = document.querySelector(".mega-menu__container");
+
+            buttons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const parentTitle = button.parentNode.dataset.parentTitle;
+                    const depth = button.dataset.depth;
+                    const title = button.dataset.title;
+
+                    button.classList.add('opened')
+
+                    const openedContent = document.querySelector(
+                        `.mega-menu__content-wrap[style*='flex']:not([data-depth='${+depth}'])`
+                    );
+                    if (openedContent) {
+                        openedContent.style.display = "none";
+                    }
+
+
+                    // Toggle visibility for current wrapper
+                    if (!parentTitle) {
+                        const wrapper = container.querySelector(
+                            `.mega-menu__menu-wrapper[data-parent-title='${title}'][data-depth='${
+                                +depth + 1
+                            }']`
+                        );
+
+                        if (wrapper) {
+                            wrapper.style.display = "flex"
+                        }
+                    }
+
+                    if (!parentTitle) {
+                        // Toggle visibility for current content
+                        const content = document.querySelector(
+                            `.mega-menu__content-wrap[data-parent-title='${title}'][data-depth='${
+                                +depth + 1
+                            }']`
+                        );
+
+                        if (content) {
+                            content.style.display =
+                                content.style.display === "none" ||
+                                content.style.display === ""
+                                    ? "flex"
+                                    : "none";
+                        }
+                    }
+
+                    // Close other open wrappers
+                        const openedWrappers = document.querySelectorAll(
+                            `.mega-menu__menu-wrapper[style*='flex']:not([data-parent-title='${title}']):not([data-depth='1']):not([data-depth='${+depth}'])`
+                        );
+
+                        openedWrappers.forEach(function (openedWrapper) {
+                            openedWrapper.style.display = "none";
+                        });
+
+                        const selectedButtons = document.querySelectorAll(
+                            `.mega-menu__menu-button.opened:not([data-title='${title}']):not([data-depth='${+depth-1}'])`
+                        );
+
+                        selectedButtons.forEach(function (button) {
+                            button.classList.remove('opened')
+                        })
+
+                });
+            });
+        });
+
+        window.addEventListener(
+        "click",
+        function (e) {
+            const menu = document.getElementById("megamenu");
+            const button = document.getElementById("megamenuButton");
+            const menuWrapper = document.querySelector(".mega-menu__container");
+            console.log(menuWrapper);
+            if (!menu.contains(e.target) && !button.contains(e.target)) {
+                menu.style.display = "none";
+            }
+        },
+        0
+    );
+    </script>
+</div>
+
+        <!-- Button to open search modal -->
+        
+        <label class="md-header__button md-icon" for="__search">
+            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.98218 0.333008C2.94461 0.333008 0.482178 2.79544 0.482178 5.83301C0.482178 8.87057 2.94461 11.333 5.98218 11.333C7.32093 11.333 8.54796 10.8547 9.50171 10.0596L13.2953 13.8532C13.4906 14.0485 13.8071 14.0485 14.0024 13.8532C14.1977 13.658 14.1977 13.3414 14.0024 13.1461L10.2088 9.35254C11.0039 8.39879 11.4822 7.17176 11.4822 5.83301C11.4822 2.79544 9.01974 0.333008 5.98218 0.333008ZM1.48218 5.83301C1.48218 3.34773 3.4969 1.33301 5.98218 1.33301C8.46746 1.33301 10.4822 3.34773 10.4822 5.83301C10.4822 8.31829 8.46746 10.333 5.98218 10.333C3.4969 10.333 1.48218 8.31829 1.48218 5.83301Z" fill="#4E4E4E"/>
+</svg>
+        </label>
+
+        <!-- Search interface -->
+        <!-- Search interface -->
+<div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+      <form class="md-search__form" name="search">
+
+        <!-- Search input -->
+        <input
+          type="text"
+          class="md-search__input"
+          name="query"
+          aria-label="Search"
+          placeholder="Search"
+          autocapitalize="off"
+          autocorrect="off"
+          autocomplete="off"
+          spellcheck="false"
+          data-md-component="search-query"
+          required
+        />
+
+        <!-- Button to open search -->
+        <label class="md-search__icon md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        </label>
+
+        <!-- Search options -->
+        <nav
+          class="md-search__options"
+          aria-label="Search"
+        >
+
+          <!-- Button to share search -->
+          
+            <a
+              href="javascript:void(0)"
+              class="md-search__icon md-icon"
+              title="Share"
+              aria-label="Share"
+              data-clipboard
+              data-clipboard-text=""
+              data-md-component="search-share"
+              tabindex="-1"
+            >
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+            </a>
+          
+
+          <!-- Button to reset search -->
+          <button
+            type="reset"
+            class="md-search__icon md-icon"
+            title="Clear"
+            aria-label="Clear"
+            tabindex="-1"
+          >
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+        </nav>
+
+        <!-- Search suggestions -->
+        
+          <div
+            class="md-search__suggest"
+            data-md-component="search-suggest"
+          ></div>
+        
+      </form>
+      <div class="md-search__output">
+        <div class="md-search__scrollwrap" data-md-scrollfix>
+
+          <!-- Search results -->
+          <div class="md-search-result" data-md-component="search-result">
+            <div class="md-search-result__meta">
+              Initializing search
+            </div>
+            <ol class="md-search-result__list" role="presentation"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+
+        
+        <div class="md-header__source">
+            <a href="https://github.com/VirtoCommerce/vc-platform" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    VirtoCommerce/vc-platform
+  </div>
+</a>
+        </div>
+        
+
+        <!-- Color palette -->
+        
+        
+        <form class="md-header__option" data-md-component="palette">
+    
+    <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-hidden="true"
+        
+        type="radio"
+        name="__palette"
+        id="__palette1"
+    />
+    
+    
+</form>
+        
+
+
+    </nav>
+
+    <!-- Navigation tabs (sticky) -->
+    
+     
+        
+
+<!-- Navigation tabs -->
+<nav class="md-tabs" aria-label="tabs.title" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+        
+        <ul class="md-tabs__list">
+            
+        </ul>
+        
+    </div>
+</nav>
+     
+    
+
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Determine class according to configuration -->
+
+
+
+<!-- Main navigation -->
+<nav
+    class="md-nav md-nav--primary"
+    aria-label="nav.title"
+    data-md-level="0"
+>
+
+    <!-- Site title -->
+    <label class="md-nav__title" for="__drawer">
+        <a
+            href="/"
+            title="Frontend User Docs"
+            class="md-nav__button md-logo"
+            aria-label="Frontend User Docs"
+            data-md-component="logo"
+        >
+            
+  <img src="../../assets/icons/logo.svg" alt="logo">
+
+        </a>
+        Frontend User Docs
+    </label>
+
+    <!-- Render item list -->
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_2"
+        type="checkbox"
+        id="__nav_2"
+        checked
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_2"
+          id="__nav_2_label"
+          tabindex="0"
+        >
+          Register and Sign In
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_2_label"
+        aria-expanded="true"
+          aria-label="Register and Sign In"
+      >
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Register and Sign In
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+         data-md-toggle="toc"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        Create Account
+      </a>
+
+      <!-- Show table of contents -->
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../sign-in/" class="md-nav__link">
+        Sign In
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../password-management/" class="md-nav__link">
+        Password Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_3"
+        type="checkbox"
+        id="__nav_3"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_3"
+          id="__nav_3_label"
+          tabindex="0"
+        >
+          Navigation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_3_label"
+        aria-expanded="false"
+          aria-label="Navigation"
+      >
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Navigation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../navigation/homepage-layout/" class="md-nav__link">
+        Homepage Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../navigation/product-page-layout/" class="md-nav__link">
+        Product Page Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../navigation/brands-page/" class="md-nav__link">
+        Brands Page
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_4"
+        type="checkbox"
+        id="__nav_4"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_4"
+          id="__nav_4_label"
+          tabindex="0"
+        >
+          Account
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_4_label"
+        aria-expanded="false"
+          aria-label="Account"
+      >
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Account
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/overview/" class="md-nav__link">
+        Personal and Corporate Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/dashboard/" class="md-nav__link">
+        Dashboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/profile/" class="md-nav__link">
+        Profile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/change-password/" class="md-nav__link">
+        Change Password
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/addresses/" class="md-nav__link">
+        Addresses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/orders/" class="md-nav__link">
+        Orders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/review-products/" class="md-nav__link">
+        Product Reviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/lists/" class="md-nav__link">
+        Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/checkout-defaults/" class="md-nav__link">
+        Checkout Defaults
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/quote-requests/" class="md-nav__link">
+        Quote Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/saved-credit-cards/" class="md-nav__link">
+        Saved Credit Cards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/notifications/" class="md-nav__link">
+        Notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/back-in-stock-list/" class="md-nav__link">
+        Back-in-Stock List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/purchase-requests/" class="md-nav__link">
+        Purchase Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/company-info/" class="md-nav__link">
+        Company Info
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../account/company-members/" class="md-nav__link">
+        Company Members
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_5"
+        type="checkbox"
+        id="__nav_5"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_5"
+          id="__nav_5_label"
+          tabindex="0"
+        >
+          Shopping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_5_label"
+        aria-expanded="false"
+          aria-label="Shopping"
+      >
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Shopping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/products-purchase-options/" class="md-nav__link">
+        Options for Buying Products
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/searching-for-products/" class="md-nav__link">
+        Search Options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/back-in-stock-notifications/" class="md-nav__link">
+        Back-in-Stock Notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/bulk-orders/" class="md-nav__link">
+        Bulk Orders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/compare-products/" class="md-nav__link">
+        Compare Products
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/lists/" class="md-nav__link">
+        Product Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/save-for-later/" class="md-nav__link">
+        Save for Later
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/notifications/" class="md-nav__link">
+        Notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../shopping/checkout-process/" class="md-nav__link">
+        Checkout
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+    </ul>
+    
+    <div class="md-nav__palette">
+        
+        <form class="md-header__option" data-md-component="palette">
+    
+    <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-hidden="true"
+        
+        type="radio"
+        name="__palette2"
+        id="__palette21"
+    />
+    
+    
+</form>
+        
+    </div>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Source file information -->
+
+<!-- Source file information -->
+<div class="md-source-file">
+    <small>
+
+        <!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        Last update:
+        April 23, 2025
+        
+
+        <!-- mkdocs-git-revision-date-plugin -->
+        
+    </small>
+</div>
+
+
+<!-- Tags -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+
+
+<!-- Markdown content -->
+<h1 id="create-account">Create Account<a class="headerlink" href="#create-account" title="Permanent link">&para;</a></h1>
+<p>To work with the Frontend Application, you need to create a new account:</p>
+<ol>
+<li>
+<p>Open the Frontend Application and click <strong>Sign up now</strong> in the top right corner.</p>
+<p><img alt="Sign-up" src="../../media/sign-up.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Fill in the registration form. All fields are mandatory. Follow the tips for creating a strong password.</p>
+<p><img alt="registration" src="../../media/registration-form.png" style="display: block; margin: 0 auto;" width="500" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can create a personal or company account. For a company account, you must provide your company name. More company details will be specified in the account profile after signing in.</p>
+</div>
+</li>
+<li>
+<p>Click <strong>Sign up</strong>.</p>
+</li>
+<li>
+<p>Check your email inbox for a verification link to complete the registration.</p>
+</li>
+</ol>
+<p>Your account has been registered.</p>
+<p><br>
+<br></p>
+<hr />
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../sign-in">Sign in →</a>
+</div>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <!-- Footer -->
+<footer class="md-footer">
+    <nav
+        class="md-grid md-footer-meta__inner"
+        aria-label="header.title"
+    >
+
+        <div class="md-footer__logo">
+            <!-- Link to home -->
+            <a
+                href="/"
+                title="Frontend User Docs"
+                class="md-footer__button md-logo"
+                aria-label="Frontend User Docs"
+                data-md-component="logo"
+            >
+                
+                <img src="../../assets/icons/logo-bw.svg" alt="logo">
+                
+            </a>
+
+            <!-- Footer title -->
+            <div class="md-footer__title">
+                <div class="md-footer__ellipsis">
+                    <div class="md-footer__topic">
+                  <span class="md-ellipsis">
+                    Frontend User Docs
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+
+                <div class="md-tabs">
+                    <div class="md-tabs__inner md-grid">
+                        
+                        <ul class="md-tabs__list">
+                            
+                            <li class="md-tabs__item">
+                                <a href="https://help.virtocommerce.com/support/home" class="md-tabs__link">Support</a>
+                            </li>
+                            
+                            <li class="md-tabs__item">
+                                <a href="https://www.virtocommerce.org/" class="md-tabs__link">Community</a>
+                            </li>
+                            
+                            <li class="md-tabs__item">
+                                <a href="https://www.virtocommerce.org/faq" class="md-tabs__link">FAQ</a>
+                            </li>
+                            
+                            <li class="md-tabs__item">
+                                <a href="https://www.virtocommerce.org/c/news-digest/" class="md-tabs__link">Release Notes</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+
+        <!-- Further information -->
+        <div class="md-footer-meta md-typeset">
+            <!-- Social links -->
+            
+            <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/VirtoCommerce" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/VirtoCommerce" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/virtocommerce?lang=en" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="google.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/virto-commerce/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/Virtocommerce/videos" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+            
+            <p class="md-footer__copyright">Copyright &copy; 2025. All rights reserved.</p>
+        </div>
+    </nav>
+    <!-- <div class="md-footer__bottom">
+        <p>Copyright &copy; 2025. All rights reserved.</p>
+    </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "--md-code-bg-color", "search.share", "search.suggest", "navigation.tracking", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "toc.follow", "search.highlight"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      
+        <script src="../../assets/scripts/scripts-loader.js"></script>
+      
+        <script src="../../assets/scripts/scroll-menu.js"></script>
+      
+    
+  </body>
+</html>

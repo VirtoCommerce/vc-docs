@@ -1,0 +1,131 @@
+.card {
+    background: var(--card-primary-color);
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.12);
+}
+
+.card:hover .card__icon-wrap {
+    background: var(--card-hover-color);
+}
+
+.card__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__wrapper {
+    padding: 16px;
+}
+
+.card__title {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: var(--card-text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 8px;
+}
+
+.card__icon svg {
+    height: 250px;
+    width: 100%;
+}
+
+.card__content p {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--card-desc-color);
+    margin: 0;
+}
+
+
+.card__icon {
+    height: 254px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--card-bg-color);
+    flex-shrink: 0;
+}
+
+.card__icon[src$="#only-dark"] {
+    display: none;
+}
+
+@media  screen and (max-width: 960px) {
+    .card__wrapper {
+        padding: 20px;
+    }
+
+    .card__title {
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .card__content p {
+        font-size: 13px;
+        line-height: 140%;
+    }
+}
+
+@media  screen and (max-width: 720px) {
+    .card {
+        flex-direction: row;
+        flex: 1 1 auto;
+    }
+
+    .card__icon {
+        min-height: 91px;
+        height: 100%;
+        width: 136px;
+    }
+
+    .card__wrapper {
+        padding: 23px 20px;
+    }
+}
+
+@media  screen and (max-width: 428px) {
+    .card__title {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .card__content p {
+        font-size: 12px;
+    }
+
+    .card__wrapper {
+        padding: 16px;
+    }
+}
+
+@media  screen and (max-width: 428px) {
+    .card__content p {
+        display: none;
+    }
+
+    .card__wrapper {
+        display: flex;
+    }
+}
