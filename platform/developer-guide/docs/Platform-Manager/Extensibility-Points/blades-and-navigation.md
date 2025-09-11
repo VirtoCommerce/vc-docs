@@ -59,7 +59,6 @@ angular.module('sampleApp')
 The blade instance can be accessed in the associated controller by the **$scope.blade** property.
 
 
-
 <br>
 <br>
 ********

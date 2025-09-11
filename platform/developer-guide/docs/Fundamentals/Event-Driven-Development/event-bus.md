@@ -8,7 +8,6 @@ The event description is based on the **CloudEvents** specification, which provi
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-event-bus/releases)
 
-
 ## Key features
 
 The **Event Bus** module provides:
@@ -21,7 +20,6 @@ The **Event Bus** module provides:
 * Preprocessing event data with Liquid templates for fine-tuning payload for destination providers.
 * High performance.
 * Predefined destination provider: [Azure Event Grid](https://azure.microsoft.com/en-us/services/event-grid) with CloudEvents-based data format.
-
 
 ## Example uses for Event Bus
 

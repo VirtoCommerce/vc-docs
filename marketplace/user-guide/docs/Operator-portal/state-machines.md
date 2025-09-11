@@ -10,6 +10,12 @@ To add a flow:
 
     ![Edit states](media/add-view-state.png)
 
+    !!! note
+        The flows are applicable for the following entity types:
+
+          ![Entity types](../media/entity-types.png){: style="display: block; margin: 0 auto;" }
+
+
 1. In the next blade, you can create a flow:
 
     === "in Visual Editor"
@@ -152,9 +158,11 @@ Localizations are displayed in the toolbar of the relevant flow according to you
 ![Localized toolbar](media/english-french-toolbar.gif){: style="display: block; margin: 0 auto;" }
 
 
+## View result in Vendor Portal
 
+The order states flow for orders is applied and displayed in the Vendor Portal as follows:
 
-
+![Created flow](media/states-flow-vendor-portal.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

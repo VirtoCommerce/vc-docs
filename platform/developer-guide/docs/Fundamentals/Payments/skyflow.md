@@ -135,10 +135,9 @@ To customize the module:
         * Create a new Virto Commerce Module.
         * Implement [IPaymentClient](https://github.com/VirtoCommerce/vc-module-skyflow/blob/dev/src/VirtoCommerce.Skyflow.Core/Services/IPaymentClient.cs#L6) interface.
         * Register `IPaymentClient` in `IPaymentClientFactory`.
-2. Use `SkyflowPaymentMethod` class for:
+1. Use `SkyflowPaymentMethod` class for:
     * `initializePayment` (in GraphQL): Returns a token for frontend operations.
     * `authorizePayment`: Invokes `IPaymentClientFactory` to obtain an instance of `IPaymentClient` for processing transactions using the required Connection.
-
 
 
 <br>

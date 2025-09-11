@@ -18,7 +18,7 @@ edit_uri: edit/dev/docs/
 # Page tree
 nav:
     - Overview: index.md
-    - Operator portal:
+    - Operator Portal:
       - Overview: Operator-portal/overview.md
       - Master Catalog: Operator-portal/master-catalog.md
       - Commissions:
@@ -33,7 +33,7 @@ nav:
       - Offers: Operator-portal/offers.md
       - Operator Orders: Operator-portal/operator-orders.md
       - State Machines: Operator-portal/state-machines.md
-    - Vendor portal:
+    - Vendor Portal:
       - Overview: Vendor-portal/overview.md
       - Orders: Vendor-portal/orders.md
       - Products: Vendor-portal/products-management.md

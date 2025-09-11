@@ -1,6 +1,6 @@
 # Manage Dynamic Properties
 
-Virto Commerce Platform enables adding new properties to entities at runtime. 
+The Virto Commerce Platform enables adding new properties to entities at runtime. 
 
 ## Add new dynamic property for existing type from UI
 

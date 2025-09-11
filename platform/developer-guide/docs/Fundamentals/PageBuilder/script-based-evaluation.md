@@ -19,7 +19,6 @@ Any string value in the settings can include **placeholders** in the format:
 `some text/{{some value from the current context}}/some other text/{{the other value}}`
 ```
 
-
 ## Embedded JavaScript
 
 You can also insert executable code using the `{{= ... }}` syntax. For example:

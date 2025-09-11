@@ -1,4 +1,5 @@
 ﻿# Main Concept
+
 The architecture and behavior of Virto Commerce Import Framework allows to easily import your data, such as product information, customers, categories, and much more, into the Virto Commerce Platform.
 
 ## Overview

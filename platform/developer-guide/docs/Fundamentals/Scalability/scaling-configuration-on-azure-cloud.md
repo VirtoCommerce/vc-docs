@@ -203,8 +203,6 @@ To configure the Frontend App:
 ![Readmore](media/readmore.png){: width="25"} [Scalability options](scalability-options.md)
 
 
-
-
 <br>
 <br>
 ********

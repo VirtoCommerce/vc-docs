@@ -156,7 +156,6 @@ Extracts the actual `value` for each option from a server response.
 ...
 ```
 
-
 ![Context-based select](media/select-control-context-page.png){: style="display: block; margin: 0 auto;" }
 
 </div>

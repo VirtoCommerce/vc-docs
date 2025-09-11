@@ -21,13 +21,13 @@ To create credentials for your project:
     1. Skip **Scopes**.
     1. Skip **Test users**.
     1. Review the **OAuth consent screen** and go back to the app dashboard.
-    1. In the **Credentials** tab of the app dashboard, select **CREATE CREDENTIALS > OAuth client ID**.
+    1. In the **Credentials** tab of the app dashboard, select **CREATE CREDENTIALS --> OAuth client ID**.
 1.   Select **Application type --> Web application** and choose a name.
     
 1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the platform using the https scheme. Otherwise, the SSO won't work.
 
     !!! Note
-        If your platform is running on a local machine, put `https://localhost:10645/signin-google`.
+        If your Platform is running on a local machine, put `https://localhost:10645/signin-google`.
 
 1.  Click **CREATE**.
 1.   Save **Client ID** and **Client Secret** to use them in the module.
@@ -128,9 +128,9 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
 
 ## Sign in with Google
 
-1. Run the platform and open **Log in**. 
+1. Run the Platform and open **Log in**. 
 1. Select **Google**. You will be redirected to Google for authentication. 
-1. Enter your Google credentials. You will be redirected back to the platform:
+1. Enter your Google credentials. You will be redirected back to the Platform:
 ![Platform login](../media/google-sso-login.png)
 1. Click **Sign in with Google.**
 

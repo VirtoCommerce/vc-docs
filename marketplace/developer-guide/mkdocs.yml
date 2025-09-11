@@ -17,4 +17,10 @@ edit_uri: edit/dev/docs/
 
 # Page tree
 nav:
-    - Home: index.md
+    - State Machine Module: 
+        Overview: state-machine-module/overview.md
+        Data Structure: state-machine-module/data-structure.md
+        Entity Types: state-machine-module/entity-types.md
+        Transition Conditions: state-machine-module/transition-conditions.md
+        Operator Portal Actions: state-machine-module/operator-portal-actions.md
+        Vendor Portal Actions: state-machine-module/vendor-portal-actions.md

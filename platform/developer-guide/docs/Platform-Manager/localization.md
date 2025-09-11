@@ -76,6 +76,7 @@ Below is a snippet from the German translation file demonstrating the structure:
 }
 ```
 
+
 <br>
 <br>
 ********

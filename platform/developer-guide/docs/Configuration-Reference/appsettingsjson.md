@@ -16,7 +16,7 @@ These **required** settings represent connection strings for VC Platform and mod
 | Node                                    | Default or sample value                      | Description                                                                          |
 | --------------------------------------- | ---------------------------------------------| --------------------------------------------------------------------------------------|
 | ConnectionStrings.VirtoCommerce         | Data Source=(local)                          | The server name or network address of the SQL Server instance hosting the Virto Commerce database. This can be **(local)** for a local SQL Server instance or a specific server name/IP address. |
-| ConnectionStrings.VirtoCommerce.InitialCatalog | VirtoCommerce3.net8                   | The name of the SQL Server database where the Virto Commerce Platform data is stored. This database contains all the necessary tables and data for the platform to operate. |
+| ConnectionStrings.VirtoCommerce.InitialCatalog | VirtoCommerce3.net8                   | The name of the SQL Server database where the Virto Commerce Platform data is stored. This database contains all the necessary tables and data for the Platform to operate. |
 | ConnectionStrings.VirtoCommerce.PersistSecurityInfo | true<br>false                    | When set to **true**, this option allows security-sensitive information, such as the password, to be retained after the connection is made. |
 | ConnectionStrings.VirtoCommerce.UserID  | virto                                        | The username used to authenticate the connection to the SQL Server database. This user must have sufficient permissions to access and manage the database. |
 | ConnectionStrings.VirtoCommerce.Password | virto                                       | The password associated with the specified **UserID** for authenticating the connection to the SQL Server database. |
@@ -39,7 +39,7 @@ This configuration node defines the system settings of the VC Platform.
 |-------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | LicenseActivationUrl          | https://license.virtocommerce.org/api/licenses/activate/  | The URL used to activate the Virto Commerce Platform license.                                           |
 | SampleDataUrl                 | https://virtocommerce.azureedge.net/sample-data           | URL for downloading sample data during the initial setup of the Virto Commerce Platform.                |
-| DiscoveryPath                 | ./modules                                                 | The relative or absolute file system path where the platform will discover installed modules.           |
+| DiscoveryPath                 | ./modules                                                 | The relative or absolute file system path where the Platform will discover installed modules.           |
 | AllowInsecureHttp             | false                                                     | Controls how the OpenID Connect server (ASOS) handles requests arriving on non-HTTPS endpoints. When set to **false**, it helps mitigate man-in-the-middle attacks. |
 | UseResponseCompression        | false                                                     | Enables or disables response compression to improve performance.                                        |
 | Hangfire                      | [Read more](appsettingsjson.md#hangfire)                  | Configures background processing settings, including job storage options and retry mechanisms.          |
@@ -225,7 +225,7 @@ The **telemetryConverter** has to be specified with the full type name and the a
 
 #### Hangfire
 
-This node configures the background processing settings for Hangfire in the Virto Commerce platform. 
+This node configures the background processing settings for Hangfire in the Virto Commerce Platform. 
 
 |Node                                                                  | Default or sample value  | Description                                                                                        |
 |----------------------------------------------------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
@@ -295,11 +295,11 @@ This node configures the background processing settings for Hangfire in the Virt
 
 #### Stores
 
-This node configures default store settings and domain assignments in the Virto Commerce platform.
+This node configures default store settings and domain assignments in the Virto Commerce Platform.
 
 | Node               | Default or sample value | Description                                                                                         |
 |--------------------|-------------------------|-----------------------------------------------------------------------------------------------------|
-| DefaultStore       | B2B-store               | Specifies the default store identifier to be used by the platform.                                  |
+| DefaultStore       | B2B-store               | Specifies the default store identifier to be used by the Platform.                                  |
 | Domains            |                         | Allows assigning domain names to specific stores, with the option to map local domains for testing. |
 
 **Example**
@@ -434,7 +434,7 @@ This **required** node determines how VC Platform will be working with assets, i
 
 ### Auth
 
-This setting determines platform authentication parameters.
+This setting determines Platform authentication parameters.
 
 | Node                   | Default or sample value              | Description                                                                                                                           |
 | ---------------------- | ---------------------------------    | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -617,6 +617,82 @@ This node defines the settings for OpenID Connect authentication in Virto Commer
 
 
 
+##### AzureAd
+
+This node is used for authentication with Azure Active Directory. 
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Azure Active Directory](../Fundamentals/Security/extensions/adding-azure-as-sso-provider.md)
+
+| Node                  | Default or sample value                                   | Description                                                                                                       |
+| --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Enabled               | false<br> true                                            | Enables authentication with Azure Active Directory. By default, this value is **false**, i.e. authentication is disabled.|
+| UsePreferredUsername  | false <br> true                                           | If set to **true**, the system will check the **preferred_username** in case the **upn** claim returns empty.             |
+| Priority              | 0 <br> 1...                                               | Configures the priority of the Azure Active Directory login popup on the Login page. The lowest value means the highest priority. |
+| AuthenticationType    | "AzureAD"                                                 | Provides the authentication scheme. Must always have the **AzureAD** value set.                                      |
+| AuthenticationCaption | "Azure Active Directory"                                  | Sets a human-readable caption for the Azure AD authentication provider. Visible on the **Sign In** page.            |
+| ApplicationId         |                                                           | The ID of the Virto Commerce Platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
+| TenantId              |                                                           | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory --> Properties --> Directory ID**.  |
+| AzureAdInstance       | https://login.microsoftonline.com/                        | Url of the Azure AD endpoint used for authentication.                                                             |
+| DefaultUserType       | "Manager"<br>"Customer"                                   | Default user type for new users created upon first sign-in by Azure AD accounts.                                   |
+| DefaultUserRoles      | "Order manager"<br>"Store manager"                        | Default user roles assigned to new users created upon first sign-in by Azure AD accounts.                           |
+| MetadataAddress       |                                                           | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys.<br> If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information.<br> For example, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e). |
+| UsePreferredUsername  | true<br>false                                             | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting the username. |
+
+**Example**
+
+Example settings for the `AzureAD` section:
+
+```json
+"AzureAd": {
+		"Enabled": true,
+		"AuthenticationType": "AzureAD",
+		"AuthenticationCaption": "Azure Active Directory",
+		"ApplicationId": "b6d8dc6a-6ddd-4497-ad55-d65f91ca7f50",
+		"TenantId": "fe353e8f-5f08-43b4-89d1-f4acec93df33",
+		"AzureAdInstance": "https://login.microsoftonline.com/",
+		"DefaultUserType": "Manager",
+		"UsePreferredUsername": false,
+		"Priority": 0
+	},
+```
+
+
+##### Google
+
+This node is used for authentication with Google OAuth 2.0.
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
+
+
+| Node                   | Default or sample value   | Description                                                                                                       |
+| ---------------------- | --------------------------| ----------------------------------------------------------------------------------------------------------------- |
+| Enabled                | false<br> true            | Enables authentication with Google OAuth 2.0. By default, this value is **false**, i.e., authentication is disabled. |
+| AuthenticationType     | "Google"                  | Provides the authentication scheme. Must always have the **Google** value set.                                    |
+| AuthenticationCaption  | "Google"                  | Sets a human-readable caption for the Google authentication provider. Visible on the **Sign In** page.            |
+| ClientId               |                           | The Client ID of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
+| ClientSecret           |                           | The Client Secret of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
+| DefaultUserType        | "Manager"                 | Default user type for new users created upon first sign-in by Google accounts.                                    |
+
+**Example**
+
+<!--google-start-->
+
+```json title="appsettings.json"
+
+"Google": {
+	"Enabled": true,
+	"AuthenticationType": "Google",
+	"AuthenticationCaption": "Google",
+	"ClientId": "<your Client ID>",
+	"ClientSecret": "<your Client Secret>",
+	"DefaultUserType": "Manager"
+},
+```
+<!--google-end-->
+
+
 ### Authorization
 
 This configuration node defines authorization settings for the system.
@@ -642,44 +718,6 @@ This configuration node defines authorization settings for the system.
 ```
 
 
-### AzureAd
-
-This node is used for authentication with Azure Active Directory. 
-
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Azure Active Directory](../Fundamentals/Security/extensions/adding-azure-as-sso-provider.md)
-
-| Node                  | Default or sample value                                   | Description                                                                                                       |
-| --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Enabled               | false<br> true                                            | Enables authentication with Azure Active Directory. By default, this value is **false**, i.e. authentication is disabled.|
-| UsePreferredUsername  | false <br> true                                           | If set to **true**, the system will check the **preferred_username** in case the **upn** claim returns empty.             |
-| Priority              | 0 <br> 1...                                               | Configures the priority of the Azure Active Directory login popup on the Login page. The lowest value means the highest priority. |
-| AuthenticationType    | "AzureAD"                                                 | Provides the authentication scheme. Must always have the **AzureAD** value set.                                      |
-| AuthenticationCaption | "Azure Active Directory"                                  | Sets a human-readable caption for the Azure AD authentication provider. Visible on the **Sign In** page.            |
-| ApplicationId         |                                                           | The ID of the Virto Commerce platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
-| TenantId              |                                                           | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory --> Properties --> Directory ID**.  |
-| AzureAdInstance       | https://login.microsoftonline.com/                        | Url of the Azure AD endpoint used for authentication.                                                             |
-| DefaultUserType       | "Manager"<br>"Customer"                                   | Default user type for new users created upon first sign-in by Azure AD accounts.                                   |
-| DefaultUserRoles      | "Order manager"<br>"Store manager"                        | Default user roles assigned to new users created upon first sign-in by Azure AD accounts.                           |
-| MetadataAddress       |                                                           | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys.<br> If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information.<br> For example, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e). |
-| UsePreferredUsername  | true<br>false                                             | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting the username. |
-
-**Example**
-
-Example settings for the `AzureAD` section:
-
-```json
-"AzureAd": {
-		"Enabled": true,
-		"AuthenticationType": "AzureAD",
-		"AuthenticationCaption": "Azure Active Directory",
-		"ApplicationId": "b6d8dc6a-6ddd-4497-ad55-d65f91ca7f50",
-		"TenantId": "fe353e8f-5f08-43b4-89d1-f4acec93df33",
-		"AzureAdInstance": "https://login.microsoftonline.com/",
-		"DefaultUserType": "Manager",
-		"UsePreferredUsername": false,
-		"Priority": 0
-	},
-```
 
 
 ### Caching
@@ -779,7 +817,7 @@ This configuration node defines settings for the CRUD operations within the syst
 
 ### DataProtection
 
-This configuration node configures lifetimes for security tokens that are issued by platform like password reset.
+This configuration node configures lifetimes for security tokens that are issued by the Platform like password reset.
 
 | Node                         | Default value                    | Description                                         |
 | ---------------------------- | ---------------------------------|---------------------------------------------------- |
@@ -810,11 +848,11 @@ The DatabaseProvider node specifies the type of database management system (DBMS
 
 ### DefaultMainMenuState
 
-This node configures the default state of the main menu in the Virto Commerce platform. It specifies which menu items are shown, their order, and if they are marked as favorites.
+This node configures the default state of the main menu in the Virto Commerce Platform. It specifies which menu items are shown, their order, and if they are marked as favorites.
 
 | Node            | Default or sample value | Description                                                                                           |
 |-----------------|-------------------------|-------------------------------------------------------------------------------------------------------|
-| items[].path    | "browse/store"          | The path for a specific menu item. Each path corresponds to a different module or area in the platform.|
+| items[].path    | "browse/store"          | The path for a specific menu item. Each path corresponds to a different module or area in the Platform.|
 | items[].isFavorite | true                 | Indicates whether the menu item is marked as a favorite, making it easily accessible.                  |
 | items[].order   | 0                       | Specifies the order in which the menu item appears. Lower numbers appear earlier in the menu list.     |
 
@@ -878,14 +916,14 @@ This node configures the default state of the main menu in the Virto Commerce pl
 
 ### ExternalModules
 
-This node configures the settings for external modules in the Virto Commerce platform.
+This node configures the settings for external modules in the Virto Commerce Platform.
 
 | Node                  | Default or sample value  | Description                                                                                   |
 |-----------------------|--------------------------|-----------------------------------------------------------------------------------------------|
 | IncludePrerelease     | false                    | Determines whether to include prerelease versions of modules during updates and installations. |
 | ModulesManifestUrl    | "https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json" | Specifies the URL where the module manifest is located.     |
 | AuthorizationToken    |                          | Token used for authorization to access module sources, if needed.                             |
-| AutoInstallModuleBundles | ["commerce"]          | Lists the module bundles that will be automatically installed upon platform setup.            |
+| AutoInstallModuleBundles | ["commerce"]          | Lists the module bundles that will be automatically installed upon Platform setup.            |
 
 **Example**
 
@@ -970,40 +1008,7 @@ This node configures frontend security settings.
 }
 ```
 
-### Google
 
-This node is used for authentication with Google OAuth 2.0.
-
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
-
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
-
-
-| Node                   | Default or sample value   | Description                                                                                                       |
-| ---------------------- | --------------------------| ----------------------------------------------------------------------------------------------------------------- |
-| Enabled                | false<br> true            | Enables authentication with Google OAuth 2.0. By default, this value is **false**, i.e., authentication is disabled. |
-| AuthenticationType     | "Google"                  | Provides the authentication scheme. Must always have the **Google** value set.                                    |
-| AuthenticationCaption  | "Google"                  | Sets a human-readable caption for the Google authentication provider. Visible on the **Sign In** page.            |
-| ClientId               |                           | The Client ID of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
-| ClientSecret           |                           | The Client Secret of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
-| DefaultUserType        | "Manager"                 | Default user type for new users created upon first sign-in by Google accounts.                                    |
-
-**Example**
-
-<!--google-start-->
-
-```json title="appsettings.json"
-
-"Google": {
-	"Enabled": true,
-	"AuthenticationType": "Google",
-	"AuthenticationCaption": "Google",
-	"ClientId": "<your Client ID>",
-	"ClientSecret": "<your Client Secret>",
-	"DefaultUserType": "Manager"
-},
-```
-<!--google-end-->
 
 ### IdentityOptions
 
@@ -1097,7 +1102,7 @@ This node configures external sources, from which modules are being installed an
 | Node                      | Default or sample value                         | Description                                                                                                   |
 | ------------------------- | ----------------------------------------------  | ------------------------------------------------------------------------------------------------------------- |
 | IncludePrerelease         | true<br>false                                   | Shows module versions marked as **Prerelease** if value is **true**.                                       |
-| DiscoveryPath             | "./Modules"                                     | Relative or absolute folder location where the platform will discover the installed modules from.             |
+| DiscoveryPath             | "./Modules"                                     | Relative or absolute folder location where the Platform will discover the installed modules from.             |
 | ModulesManifestUrl        |                                                 | Url to the **.json file** that contains module manifests.                 |
 | AuthorizationToken        |                                                 | The authorization token to access **ModulesManifestUrl**, added to the **Authorization** header, if specified.|
 | AutoInstallModuleBundles  | "commerce"                                      | Group(s) of modules to install automatically during the initial Platform setup.<br>If you do not need to install anything here, provide an empty array. |
@@ -1166,7 +1171,7 @@ This node enables notification configuration for the `VirtoCommerce.Notification
 
 ### Payments
 
-The Payments node configures various payment gateway integrations for the Virto Commerce platform. This section includes settings for modules such as Authorize.Net and Skyflow, enabling secure payment processing and integration with different payment service providers.
+The Payments node configures various payment gateway integrations for the Virto Commerce Platform. This section includes settings for modules such as Authorize.Net and Skyflow, enabling secure payment processing and integration with different payment service providers.
 
 | Node            | Default or sample value               | Description                                                           |
 | --------------- | ------------------------------------- | --------------------------------------------------------------------- |
@@ -1329,7 +1334,7 @@ This node configures the CyberSource payment gateway integration, enabling secur
 
 ### PlatformSettings
 
-This node is used for Used for platform settings overriding.
+This node is used for Used for Platform settings overriding.
 
 |Node           | Default or sample value   | Description  |
 | ------------- | ------------------------  | ------------ |
@@ -1415,12 +1420,12 @@ This node configures the push notification settings for the Virto Commerce Push 
 
 ### PushNotifications
 
-This node configures the push notification service settings for scalability in the Virto Commerce platform.
+This node configures the push notification service settings for scalability in the Virto Commerce Platform.
 
 | Node               | Default or sample value                                   | Description                                                                                                               |
 |--------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | ScalabilityMode    | "None"                                                    | Specifies the scalability mode for notifications. Possible values are `RedisBackplane`, `AzureSignalRService`, or `None`. |
-| HubUrl             | "https://localhost:5001/pushNotificationHub"              | The URL for connecting to the platform's SignalR `/pushNotificationHub` as a client. This is used for syncing local notifications with other platform instances.  |
+| HubUrl             | "https://localhost:5001/pushNotificationHub"              | The URL for connecting to the Platform's SignalR `/pushNotificationHub` as a client. This is used for syncing local notifications with other Platform instances.  |
 | ForceWebSockets    | false                                                     | Forces the use of WebSockets for notification exchange. The host environment must support WebSockets.                     |
 | AzureSignalRService.ConnectionString | "Endpoint=https://{app name}.service.signalr.net;AccessKey={access key};Version=1.0;" | The connection string for Azure SignalR Service, specifying the endpoint and access key. |
 | RedisBackplane.ChannelName          | "VirtoCommerceChannel"                              | The name of the channel for Redis backplane, used for scaling notifications across instances.                  |
@@ -1897,7 +1902,7 @@ This node configures the Algolia search provider:
 
 #### SecurityHeaders
 
-This node configures security-related HTTP headers in the Virto Commerce platform.
+This node configures security-related HTTP headers in the Virto Commerce Platform.
 
 | Node           | Default or sample value | Description                                                                                                       |
 |----------------|-------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -1992,7 +1997,7 @@ This setting is used to configure tax providers.
 
 | Node                    | Default value             | Description                                                                                           |
 |-------------------------|---------------------------|-------------------------------------------------------------------------------------------------------|
-| FixedRateTaxProvider  | true<br>false         | Determines whether the **FixedRateTaxProvider** is enabled or disabled. When set to **false**, the **FixedRateTaxProvider** is not active, and tax calculations will not be performed using this provider. When set to **true**, the **FixedRateTaxProvider** will be enabled, allowing the platform to use fixed-rate tax calculations. |
+| FixedRateTaxProvider  | true<br>false         | Determines whether the **FixedRateTaxProvider** is enabled or disabled. When set to **false**, the **FixedRateTaxProvider** is not active, and tax calculations will not be performed using this provider. When set to **true**, the **FixedRateTaxProvider** will be enabled, allowing the Platform to use fixed-rate tax calculations. |
 | Avalara.AccountNumber  | required           | The account number provided by Avalara during registration. This is required for authentication. |
 | Avalara.LicenseKey     | required           | The license key provided by Avalara. This key is used for secure communication with Avalara’s tax calculation service. |
 

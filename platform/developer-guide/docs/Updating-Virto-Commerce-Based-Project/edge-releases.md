@@ -52,7 +52,6 @@ To update to the latest edge release:
 
 The edge release has been updated.
 
-
 <br>
 <br>
 ********

@@ -1,4 +1,5 @@
 # Set up Redis Backplane for Scaling out
+
 Running multiple instances of your application, all accessing the same distributed cache, can be challenging: the instances should find out when the data was changed and the local cache data becomes irrelevant.  One way to solve this problem is by connecting all application instances to a service that sends messages whenever cache data becomes invalid. Redis, an in-memory key-value storage, supports a messaging system with the publish/subscribe (Pub/Sub) model as follows:
 
 ![Multi-level caching](media/02-multi-level-caching.png){: style="display: block; margin: 0 auto;" }
