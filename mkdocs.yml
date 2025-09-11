@@ -553,8 +553,8 @@ extra:
                           url: /marketplace/user-guide/Vendor-portal/overview
                     - title: Developer Guide
                       links:
-                        - title: In Progress
-                          url: /marketplace/under-construction
+                        - title: State Machine Module
+                          url: /marketplace/developer-guide/state-machine-module/overview
                 - title: VC Shell
                   content:
                     - title: Developer Guide

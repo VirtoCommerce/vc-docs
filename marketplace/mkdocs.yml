@@ -30,6 +30,9 @@ extra:
             - title: Developer Guide [In Progress]
               link: developer-guide
               image: assets/images/storefront-devguide.png
+              description:
+                  - title: State Machine Module
+                    link: developer-guide/state-machine-module/overview
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
