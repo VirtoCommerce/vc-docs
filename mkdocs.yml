@@ -292,15 +292,12 @@ copyright: Copyright &copy; 2025. All rights reserved.
 nav:
     - Home: index.md
     - Marketplace:
-        - Home: marketplace/index.md
         - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
         - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
     - Storefront:
-        - Home: storefront/index.md
         - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
         - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
     - Platform:
-        - Home: platform/index.md
         - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
         - User Guide: '!include ./platform/user-guide/mkdocs.yml'
         - Deployment on Cloud: '!include ./platform/deployment-on-cloud/mkdocs.yml'
@@ -494,7 +491,6 @@ extra:
               icon: assets/icons/version-icon.svg
               link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
               outlineColor: '#FF9162'
-
     all_topics:
         megamenu:
             - iconSrc: assets/icons/all-products.svg

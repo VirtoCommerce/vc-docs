@@ -17,6 +17,124 @@ repo_name: VirtoCommerce/vc-theme-b2b-vue
 repo_url: https://github.com/VirtoCommerce/vc-theme-b2b-vue
 edit_uri: edit/dev/docs/
 
+extra:
+    main_page:
+        documentation:
+            - title: User Guide
+              link: user-guide
+              image: assets/images/storefront-userquide.png
+              description:
+                - title: Getting Started
+                  link: https://youtu.be/xsnds1QYuC0
+                - title: User Documentation
+                  link: user-guide/
+                - title: Public Demo Environment
+                  link: https://virtostart-demo-store.govirto.com/
+            - title: Developer Guide
+              link: developer-guide
+              image: assets/images/storefront-devguide.png
+              description:
+                - title: Overview
+                  link: developer-guide/
+                - title: Architecture
+                  link: developer-guide/architecture
+                - title: Deployment
+                  link: developer-guide/deployment
+                - title: Integrations
+                  link: developer-guide/integrations/prerender_io
+            - title: Other Resources
+              image: assets/images/storefront-other.png
+              description:
+                - title: Release Notes
+                  link: https://github.com/VirtoCommerce/vc-storefront/releases
+                - title: Github
+                  link: https://github.com/VirtoCommerce/vc-storefront/
+        release_notes:
+            - title: September 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-september-2025/805
+              type: Release Notes
+              date: 2 September 2025
+            - title: August 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-august-2025/801
+              type: Release Notes
+              date: 1 August 2025
+            - title: July 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-july-2025/798
+              type: Release Notes
+              date: 7 July 2025
+            - title: June 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-june-2025/796
+              type: Release Notes
+              date: 4 June 2025
+            - title: May 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-may-2025/778
+              type: Release Notes
+              date: 1 May 2025
+            - title: April 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-april-2025/769
+              type: Release Notes
+              date: 2 April 2025
+            - title: March 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-march-2025/767
+              type: Release Notes
+              date: 3 March 2025
+            - title: February 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-february-2025/760
+              type: Release Notes
+              date: 3 February 2025
+            - title: January 2025
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-january-2025/755
+              type: Release Notes
+              date: 1 January 2025
+            - title: December 2024
+              link: https://www.virtocommerce.org/t/virtos-release-notes-december-2024/747
+              type: Release Notes
+              date: 3 December 2024
+            - title: November 2024
+              link: https://www.virtocommerce.org/t/november-2024-news-digest/743
+              type: Release Notes
+              date: 1 November 2024
+            - title: October 2024
+              link: https://www.virtocommerce.org/t/october-2024-news-digest/734
+              type: Release Notes
+              date: 1 October 2024
+            - title: September 2024
+              link: https://www.virtocommerce.org/t/september-2024-news-digest/730
+              type: Release Notes
+              date: 9 September 2024
+            - title: August 2024
+              link: https://www.virtocommerce.org/t/august-2024-new-digest/719
+              type: Release Notes
+              date: 1 August 2024
+            - title: July 2024
+              link: https://www.virtocommerce.org/t/july-2024-news-digest/713
+              type: Release Notes
+              date: 1 July 2024
+            - title: June 2024
+              link: https://www.virtocommerce.org/t/june-2024-news-digest/702
+              type: Release Notes
+              date: 1 June 2024
+            - title: May 2024
+              link: https://www.virtocommerce.org/t/may-2024-news-digest/699
+              type: Release Notes
+              date: 2 May 2024
+            - title: April 2024
+              link: https://www.virtocommerce.org/t/april-2024-news-digest/689
+              type: Release Notes
+              date: 3 April 2024
+            - title: March 2024
+              link: https://www.virtocommerce.org/t/march-2024-news-digest/681
+              type: Release Notes
+              date: 5 March 2024
+            - title: February 2024
+              link: https://www.virtocommerce.org/t/february-2024-news-digest/673
+              type: Release Notes
+              date: 7 February 2024
+            - title: January 2024
+              link: https://www.virtocommerce.org/t/news-digest-january-2024/663
+              type: Release Notes
+              date: 8 January 2024
+
 nav:
     - Home: index.md
   # - Developer Guide: "!include ./developer-guide/mkdocs.yml"
