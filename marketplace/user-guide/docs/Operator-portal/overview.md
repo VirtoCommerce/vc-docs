@@ -1,14 +1,14 @@
 # Overview
 
-The Operator portal in Virto Commerce Marketplace is the main tool for marketplace owners or administrators to manage their marketplace. 
+The Operator Portal in Virto Commerce Marketplace is the main tool for marketplace owners or administrators to manage their marketplace. 
 
-Open the Operator portal homepage to see its structure and main features:
+Open the Operator Portal homepage to see its structure and main features:
 
 ![Dashboard](media/operator-portal-dashboard.png)
 
 ## Key features
 
-While the Operator portal shares a part of the Platform functionality, the following features make it uniquely suited for marketplace management:
+While the Operator Portal shares a part of the Platform functionality, the following features make it uniquely suited for marketplace management:
 
 * [Creating catalogs for vendors.](master-catalog.md)
 * [Vendor onboarding.](Vendors-management/vendor-onboarding.md)

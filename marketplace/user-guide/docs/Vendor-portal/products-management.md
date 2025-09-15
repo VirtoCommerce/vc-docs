@@ -26,7 +26,6 @@ A product can be associated with multiple offers, each of which provides a speci
     ![View products and categories](media/product-category-view.gif)
 
 
-
 ## Add offer to another vendor's product
 
 If you want to add your own offer for a product listed by another vendor:
@@ -34,31 +33,31 @@ If you want to add your own offer for a product listed by another vendor:
 1. Click **Marketplace Products** in the main menu to open the list of all products in the marketplace.
 1. In the next blade, click on the desired product to open its details.
 1. In the next blade, click on the **Offers** widget.
-1. In the next blade, click ![Plus](media/plus.png){: width="25"} in the toolbar to add your own offer.
+1. In the next blade, click **Add** in the toolbar to add your own offer.
 
-    ![Adding own offer](media/add-offer-to-another-vendors-product.png)
+    ![Adding own offer](media/add-offer-to-another-vendors-product.gif)
 
 1. In the next blade, fill in the required fields.
-1. Click ![Floppy](media/floppy.png){: width="25"} in the toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
-Your offer has been added to the list of offers for the product. Complete your offer by [adding price tags](offers.md#add-price-tags-to-offer). 
+Your offer has been added to the list of offers for the product. All vendor-created product offers are stored in the **Offers** section of the main menu, where they can be easily managed. Complete your offer by [adding price tags](#add-price-tags-to-offer). 
 
 ## Add own product 
 
 To add your own product to the marketplace:
 
 1. Click **My Products** in the main menu to open the list of your products.
-1. In the next blade, click ![Plus](media/plus.png){: width="25"} in the toolbar to add a new product.
+1. In the next blade, click **Add** in the toolbar to add a new product.
 1. In the next blade, enter all the descriptive data of the product, such as name, description, code, image(s), etc.
 
     !!! note
         A vendor can only upload products to the categories assigned to him by a marketplace operator. When a Vendor adds a product, it can only be assigned to one category from the list available to him.
 
-1. Click ![Floppy](media/floppy.png){: width="25"} in the toolbar to save the changes.
+1. Click **Save as draft** in the toolbar to save the changes.
 
     ![Add own product](media/add-own-product.png)
 
-1. Click ![Submit for approval](media/submit-for-approval.png){: width="25"} to submit your product for approval by an Operator portal manager. Only after the product has been approved and the offer for the product has been created it will be available for purchase by a customer.
+1. Click **Submit for approval** to submit your product for approval by an Operator Portal manager. Only after the product has been approved and the offer for the product has been created it will be available for purchase by a customer.
 
 ![Readmore](media/readmore.png){: width="25"} [Product approval process](../Operator-portal/marketplace-products.md#approve-product)
 
@@ -67,20 +66,41 @@ Now you can add offer to your product.
 
 ### Add offer to own product
 
-After your product has been approved by an Operator portal manager it appears in the list of vendor's products with the **Is published** status. Now you can add your offers (variations) to the published product:
+After your product has been approved by an Operator Portal manager it appears in the list of vendor's products with the **Is published** status. Now you can add your offers (variations) to the published product:
 
 1. Click on the published product in the list of products.
 1. In the next blade, click on the **Offers** widget. 
-1. In the next blade, click ![Plus](media/plus.png){: width="25"} in the toolbar to add your own offer.
-
-    ![Add offer to own product](media/add-offer-to-own-product.png)
-
+1. In the next blade, click **Add** in the toolbar to add your own offer.
 1. In the next blade, fill in the required fields.
-1. Click ![Floppy](media/floppy.png){: width="25"} in the toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
-Your offer has been added to the product. Another way to add offers to your products is described [here](offers.md#add-offers-to-product).
+    ![Add offer to own product](media/add-offer-to-own-product.gif)
 
-Complete your offer by [adding price tags](offers.md#add-price-tags-to-offer).
+Your offer has been added to the product. All vendor-created product offers are stored in the **Offers** section of the main menu, where they can be easily managed. Another way to add offers to your products is described [here](offers.md#add-offers-to-product). 
+
+Complete your offer by [adding price tags](#add-price-tags-to-offer).
+
+## Add price tags to offer
+
+For various pricing strategies a vendor might set different price tags for a single product:
+
+1. Select an offer from the offers list.
+1. In the next blade, click on the **Price tags** widget.
+1. In the next blade, fill in the required fields.
+
+    !!! note
+        The Vendor Portal supports multi-currencies pricing and volume-based pricing (configured through the [Store module](../../../../platform/user-guide/store/configuring-store)).
+
+        ![Multi-currency pricing](media/multi-currency-pricing.png){: style="display: block; margin: 0 auto;" width="600"}
+
+    ![Adding price tags](media/add-price-tags.gif)
+
+1. Click **Confirm** in the toolbar, then **Save** to save the changes.
+
+Your price tag has been added to the offer:
+
+![Added price tags](media/price-tags-added.png){: style="display: block; margin: 0 auto;" width="700"}
+
 
 ## Manage product associations
 
@@ -89,12 +109,9 @@ To increase sales and improve product discovery, Vendors can manage product asso
 1. Click **My Products** in the main menu to open the list of your products.
 1. In the next blade, select the desired product.
 1. In the next blade, click on the **Associations** widget.
-
-    ![Product associations](media/product-associations.png)
-
 1. In the next blade, add associations to the product:
 
-    ![Associations blade](media/associations-blade.png)
+    ![Product associations](media/product-associations.gif)
 
 The associations have been added.
 
@@ -102,11 +119,13 @@ The associations have been added.
 
 When an Operator has a question about a Vendor's product, the Vendor will see it in the **Communication** widget:
 
-![Communication widget](media/communication-widget.png)
+![Communication widget](media/communication-widget.png){: style="display: block; margin: 0 auto;" }
 
 Clicking on the widget, opens a communication blade, where the Vendor can send instant replies to the Operator:
 
-![Communication blade](media/communication-blade.png){: width="600"}
+![Communication blade](media/communication-blade.png){: style="display: block; margin: 0 auto;" width="550"}
+
+All dialogs are stored in the **Communication** section of the main menu, where they can be easily managed.
 
 <br>
 <br>
@@ -114,7 +133,5 @@ Clicking on the widget, opens a communication blade, where the Vendor can send i
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../orders">← Orders</a>
-    <a href="../offers">Offers and price tags →</a>
+    <a href="../offers">Offers →</a>
 </div>
-
-

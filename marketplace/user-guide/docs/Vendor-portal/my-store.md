@@ -45,5 +45,5 @@ This subsection is designed for managing the inventory aspects of your store:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../rating-and-reviews">← Rating and reviews</a>
+    <a href="../communication">← Communication</a>
 </div>
