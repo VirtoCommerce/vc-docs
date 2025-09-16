@@ -14,7 +14,7 @@ To edit the order:
 1. In the next blade, select the desired order. The order details will open in the next blade.
 1. Offer details are displayed in the bottom right corner. Click on any item to view and edit its details: 
 
-    ![Edit order](media/edit-order.gif)
+    ![Edit order](media/edit_order.gif)
 
 1. Click **Save** in the toolbar to save the changes.
 
