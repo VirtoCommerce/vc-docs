@@ -6,7 +6,7 @@ To integrate Google as SSO provider:
 1. [Configure Google Sign-in.](adding-google-as-sso-provider.md#configure-google-sign-in)
 1. [Add Module Extensions.](adding-google-as-sso-provider.md#add-module-extensions)
 
-
+ 
 ## Create Google OAuth 2.0 Client
 
 To use Google APIs in an application with OAuth 2.0, you need authorization credentials that identify the app for Google's OAuth 2.0 server. Your applications will use such credentials to access APIs that you have enabled for that project. 
@@ -34,19 +34,41 @@ To create credentials for your project:
 
 ## Configure Google sign-in
 
-Store Google Client ID, secret values and other sensitive settings in **KeyVault Storage**. In our example, we use the `appsettings.json` configuration file. Add the following section to the configuration:
+!!! note
+    In the Virto Commerce Platform, you can use Google as an SSO provider in two ways:
+        * With the [Google SSO module](https://github.com/VirtoCommerce/vc-module-google-sso), which is designed specifically for Google integration.  
+        * With the [OpenID Connect module](https://github.com/VirtoCommerce/vc-module-openid-connect), where Google is supported alongside other identity providers.
 
+Store Google Client ID, secret values and other sensitive settings in **KeyVault Storage**. In our example, we use the **appsettings.json** configuration file. Add the following section to the configuration:
 
-```json title="appsettings.json"
-"Google": {
-    "Enabled": true,
-    "AuthenticationType": "Google",
-    "AuthenticationCaption": "Google",
-    "ClientId": "<your Client ID>",
-    "ClientSecret": "<your Client Secret>",
-    "DefaultUserType": "Manager"
-}
-```
+=== "in the Google node"
+
+    ```json title="appsettings.json"
+    "GoogleSSO": {
+        "Enabled": true,
+        "ApplicationId": "<your Client ID>",
+        "Secret": "<your Client Secret>"
+    }
+    ```
+
+=== "in the OIDC node"
+
+    ```json title="appsettings.json"
+    "oidc": [
+      {
+        "Enabled": true,
+        "AuthenticationType": "google",
+        "AuthenticationCaption": "Google",
+        "Authority": "https://accounts.google.com",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "UserNameClaimType": "email",
+        "CallbackPath": "/signin-google",
+        "SignedOutCallbackPath": "/signout-google"
+      },
+    ]
+    ```
+
 
 ## Add module extensions
 
