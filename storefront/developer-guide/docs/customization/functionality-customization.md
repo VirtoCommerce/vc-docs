@@ -235,5 +235,5 @@ The [settings_data.json](https://github.com/VirtoCommerce/vc-frontend/blob/dev/c
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../visual-theme-customization">← Visual theme customization</a>
-    <a href="../texts-customization">Texts customization →</a>
+    <a href="../accelerators-overview">Development accelerators →</a>
 </div>
