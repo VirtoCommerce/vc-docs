@@ -93,9 +93,9 @@ The State Machine module follows the Virto Commerce's modular architecture:
 The workflow system is powered by several core mechanisms that define how states, transitions, and rules are managed:
 
 * State machine engine. The engine is built on the **Stateless** library, providing:
-    - Thread-safe state management
-    - Hierarchical state machines
-    - Guard conditions and entry/exit actions
+    - Thread-safe state management.
+    - Hierarchical state machines.
+    - Guard conditions and entry/exit actions.
 
 * Condition. The extensible condition system supports:
     - **Role conditions**: Check user permissions.

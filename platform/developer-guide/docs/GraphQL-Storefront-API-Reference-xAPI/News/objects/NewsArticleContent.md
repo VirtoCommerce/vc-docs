@@ -6,7 +6,7 @@ This type defines the structure of a news article and contains its main content,
 
 | Field                                                         | Description                                                                           |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `id` ==String!==                                              | The unique identifier of the news article.                                            |
+| `id` ==String!==                                              | The Id of the news article.                                            |
 | `publishDate` ==DateTime==                                    | The date and time when the article was published.                                     |
 | `title` ==String==                                            | The title of the news article.                                                        |
 | `content` ==String==                                          | The full content of the news article.                                                 |

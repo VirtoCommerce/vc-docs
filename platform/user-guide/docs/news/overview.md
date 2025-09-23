@@ -27,6 +27,6 @@ With the News module, users can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../generic-export/overview">← Generic Export module overview</a>
+    <a href="../../loyalty/overview">← Loyalty module overview</a>
     <a href="../managing-news">Managing news →</a>
 </div>

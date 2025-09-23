@@ -19,5 +19,5 @@ Once submitted, purchase requests become quotes and can be viewed and managed in
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../back-in-stock-list">← Back-in-stock list</a>
-    <a href="../company-info">Company info →</a>
+    <a href="../points-history">Points history →</a>
 </div>

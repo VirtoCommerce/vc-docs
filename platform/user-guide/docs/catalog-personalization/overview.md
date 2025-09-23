@@ -25,6 +25,6 @@ The **User groups** feature allows you to associate specific user groups with a 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../back-in-stock/overview">← Back-in-Stock module overview</a>
+    <a href="../../catalog-csv-export-import/overview">← Catalog CSV Export and Import module overview</a>
     <a href="../user-groups">Managing user groups →</a>
 </div>

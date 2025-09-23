@@ -10,7 +10,7 @@ As a result, the menu for corporate accounts does not include an **Address** ite
 
 The illustration below contrasts these two account types:
 
-![accounts](../media/personal-corporate-accounts.png)
+![accounts](../media/personal-corporate-accounts.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>
