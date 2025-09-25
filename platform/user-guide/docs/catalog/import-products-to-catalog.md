@@ -108,12 +108,21 @@ When updating an existing product through CSV import, you must provide either th
 * If a product with the specified **Id** or **SKU** exists, its properties will be updated.
 * If no matching product is found, a new product will be created. In this case, the **Name** field becomes required.
 
+!!! note
+    You can [export a catalog in a CSV format](export-catalog.md) or [download this sample file](price-list-sample.xlsx) to use as a template.
+
 ### Update specific properties
 
 To update a few properties of a product without changing the others:
 
 1. Identify the product with either **Id** or **SKU**.
-1. Include only the fields you want to update in the CSV file — all other properties will remain unchanged.
+1. Include only the fields you want to update in the CSV file - all other properties will remain unchanged:
+
+    ```json title="CSV file example" linenums="1"
+    Sku,Name,Size
+    SKU123,New name,XXL
+    ```
+
 1. Import the updated CSV file back into the system.
 
 The specified properties have been updated.

@@ -199,6 +199,7 @@ nav:
           - Pages:
                 - Overview: pages/overview.md
                 - Enabling Virto Pages: pages/enabling-pages.md
+                - Builder.io Integration: pages/builder-io-integration.md
           - Payment Related Modules:
                 - Payment:
                       - Overview: payment/overview.md
