@@ -39,6 +39,12 @@ To view a catalog:
 
 Now you see the list of products in the catalog.
 
+!!! tip
+	Right-click the product name to open the following dropdown menu:
+
+	![Dropdown](media/product-dropdown.png){: style="display: block; margin: 0 auto;" }
+
+
 ### Add new catalog
 
 To add a new catalog:

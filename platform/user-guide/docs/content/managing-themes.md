@@ -100,7 +100,7 @@ Users can personalize their store by applying a [custom theme](../../../../store
     ![Peach](media/peach.png)
 
 
-![Readmore](media/readmore.png){: width="25"} [Theme customization](../../../../storefront/developer-guide/docs/theme-customization/theme-customization.md)
+![Readmore](media/readmore.png){: width="25"} [Theme customization](../../../../storefront/developer-guide/customization/visual-theme-customization)
 
 
 To apply a new color scheme to your store:
