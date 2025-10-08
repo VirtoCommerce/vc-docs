@@ -33,6 +33,7 @@ function useModificationTracker<T>(initialValueProp: T | Ref<T>): UseModificatio
 ### Return Value (`UseModificationTrackerReturn<T>`)
 An object containing:
 -   `currentValue: Ref<T>`: A reactive reference to the current tracked value. You should bind your inputs to this ref.
+-   `pristineValue: Ref<T>`: A reactive reference to the pristine value. It is a "clean" version representing the original, unmodified state.
 -   `isModified: DeepReadonly<Ref<boolean>>`: A read-only ref that is `true` if `currentValue` has been modified compared to its original state.
 -   `resetModificationState(newBaselineValue?: T | Ref<T>)`: A function to reset the modification state.
     -   If called with no arguments, it sets the current value of `currentValue` as the new "pristine" state, making `isModified` become `false`.
