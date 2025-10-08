@@ -8,9 +8,12 @@ To enable Virto Pages for your store:
 1. In the next blade, find **Virto Pages** and turn the **Enable** option to on.
 1. Click **OK**, then click **Save** in the toolbar of the previous blade.
 
-The Virto Pages feature has been enabled. Now, you can manage pages from the **Virto Pages** widget:
+The Virto Pages feature has been enabled. Now, you can view all the created pages from the **Virto Pages** widget:
 
-![Enabling Virto Pages](media/enabling-virto-pages.gif)
+![Pages list](media/pages-list.png){: style="display: block; margin: 0 auto;" width="500"}
+
+!!! note
+    Pages created in the **Page Builder** or **Content** module are added to the list automatically, while pages created in **Builder.io** require [additional configuration](builder-io-integration.md) before they appear.
 
 
 <br>
@@ -19,5 +22,5 @@ The Virto Pages feature has been enabled. Now, you can manage pages from the **V
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Pages module overview</a>
-    <a href="../../payment/overview">Payment module overview →</a>
+    <a href="../builder-io-integration">Builder.io integration →</a>
 </div>

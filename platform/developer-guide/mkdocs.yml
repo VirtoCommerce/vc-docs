@@ -438,6 +438,17 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+          - Loyalty:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview.md
+                - Queries:
+                      - loyaltyBalance: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyBalance.md
+                      - loyaltyPointsHistory: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyPointsHistory.md
+                - Objects: 
+                      - LoyaltyBalanceResult: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyBalanceResult.md
+                      - LoyaltyOperationLog: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLog.md
+                      - LoyaltyOperationLogConnection: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogConnection.md
+                      - LoyaltyOperationLogEdge: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogEdge.md
+                      - LoyaltyOperationLogObject: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogObject.md
           - xMarketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
                 - Queries:

@@ -656,24 +656,16 @@ Example settings for the `AzureAD` section:
 	},
 ```
 
-
 ##### Google
 
-This node is used for authentication with Google OAuth 2.0.
-
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
-
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
+This node is used for authentication with Google OAuth 2.0 via the [Google SSO module](https://github.com/VirtoCommerce/vc-module-google-sso).
 
 
 | Node                   | Default or sample value   | Description                                                                                                       |
 | ---------------------- | --------------------------| ----------------------------------------------------------------------------------------------------------------- |
-| Enabled                | false<br> true            | Enables authentication with Google OAuth 2.0. By default, this value is **false**, i.e., authentication is disabled. |
-| AuthenticationType     | "Google"                  | Provides the authentication scheme. Must always have the **Google** value set.                                    |
-| AuthenticationCaption  | "Google"                  | Sets a human-readable caption for the Google authentication provider. Visible on the **Sign In** page.            |
-| ClientId               |                           | The Client ID of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
-| ClientSecret           |                           | The Client Secret of the Google OAuth 2.0 application. You can find it in the Google Cloud Console under **APIs & Services** --> **Credentials**. |
-| DefaultUserType        | "Manager"                 | Default user type for new users created upon first sign-in by Google accounts.                                    |
+| Enabled                | false<br> true            | Enables authentication with Google OAuth 2.0.<br>By default, this value is **false**, i.e., authentication is disabled. |
+| ApplicationId          |         | The Client ID of the Google OAuth 2.0 application.<br> You can find it in the **Google Cloud Console** under **APIs & Services** → **Credentials**. |
+| Secret                 |     | The Client Secret of the Google OAuth 2.0 application. You can find it in the **Google Cloud Console** under **APIs & Services** → **Credentials**. |
 
 **Example**
 
@@ -681,16 +673,18 @@ This node is used for authentication with Google OAuth 2.0.
 
 ```json title="appsettings.json"
 
-"Google": {
-	"Enabled": true,
-	"AuthenticationType": "Google",
-	"AuthenticationCaption": "Google",
-	"ClientId": "<your Client ID>",
-	"ClientSecret": "<your Client Secret>",
-	"DefaultUserType": "Manager"
-},
+"GoogleSSO": {
+  "Enabled": true,
+  "ApplicationId": "<your Client ID>",
+  "Secret": "<your Client Secret>"
+  }
 ```
+
 <!--google-end-->
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
+
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
 
 
 ### Authorization

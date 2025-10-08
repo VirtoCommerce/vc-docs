@@ -37,6 +37,6 @@ The diagram below illustrates the interconnection between the **Catalog CSV Expo
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../catalog-publishing/overview">← Catalog Publishing module overview</a>
+    <a href="../../back-in-stock/overview">← Back in Stock module overview</a>
     <a href="../import-catalog">Importing catalog →</a>
 </div>

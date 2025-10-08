@@ -20,5 +20,5 @@ Your settings have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../stock-and-notifications-management">← Inventory and notifications management</a>
-    <a href="../../catalog-personalization/overview">Catalog personalization module overview →</a>
+    <a href="../../catalog-csv-export-import/overview">Catalog CSV Export and Import module overview →</a>
 </div>
