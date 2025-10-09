@@ -141,5 +141,5 @@ Let's add automatic links to display all HP printers within the HP subcategory o
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../export-catalog">← Exporting catalogs</a>
-    <a href="../product-management-overview">Products management options →</a>
+    <a href="../managing-brands-page">Managing Brands page →</a>
 </div>
