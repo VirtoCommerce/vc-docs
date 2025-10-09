@@ -49,7 +49,7 @@ VC-Shell provides a flexible framework for working with APIs:
     {
         "scripts": {
             ...
-            "generate-api-client": "cross-env api-client-generator --APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor,Virtocommerce.Catalog,Virtocommerce.Orders]' --APP_API_CLIENT_DIRECTORY=./src/api_client/"
+            "generate-api-client": "cross-env api-client-generator --APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor, Virtocommerce.Catalog, Virtocommerce.Orders]' --APP_API_CLIENT_DIRECTORY=./src/api_client/"
         }
     }
     ```
@@ -58,7 +58,7 @@ VC-Shell provides a flexible framework for working with APIs:
 
     | Option | Description | Type | Example |
     |--------|-------------|------|---------|
-    | `--APP_PLATFORM_MODULES` | Platform modules with namespaces to generate API client | `string[]` | `--APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor,Virtocommerce.Orders,Virtocommerce.Catalog]'` |
+    | `--APP_PLATFORM_MODULES` | Platform modules with namespaces to generate API client. Supports spaces in module lists | `string[]` | `--APP_PLATFORM_MODULES='[Virtocommerce.MarketplaceVendor, Virtocommerce.Orders, Virtocommerce.Catalog]'` |
     | `--APP_API_CLIENT_DIRECTORY` | Output directory for generated API clients | `string` | `--APP_API_CLIENT_DIRECTORY=./src/api_client/` |
     | `--APP_PLATFORM_URL` | Platform URL to obtain client API configs | `string` | `--APP_PLATFORM_URL=https://vcmp-dev.govirto.com/` |
     | `--APP_PACKAGE_NAME` | Package name for generated API clients | `string` | `--APP_PACKAGE_NAME=@api-client` |
@@ -68,14 +68,21 @@ VC-Shell provides a flexible framework for working with APIs:
     | `--SKIP_BUILD` | Skip build step | `boolean` | `--SKIP_BUILD=true` |
     | `--VERBOSE` | Enable verbose logging | `boolean` | `--VERBOSE=true` |
 
-1. Configure Platform URL in your project's **.env** file:
+1. Configure Platform URL and other settings in your project's **.env** file:
 
     ```
     APP_PLATFORM_URL=https://vcmp-dev.govirto.com/
+    APP_PLATFORM_MODULES=[Virtocommerce.MarketplaceVendor,Virtocommerce.Catalog,Virtocommerce.Orders]
+    APP_API_CLIENT_DIRECTORY=./src/api_client/
+    APP_PACKAGE_NAME=@my-app/api-client
+    APP_PACKAGE_VERSION=1.0.0
+    APP_BUILD_DIR=dist
+    VERBOSE=true
+    SKIP_BUILD=false
     ```
 
     !!! note
-        Alternatively, you can specify the Platform URL as a command option when running the generator.
+        All configuration options can be set via environment variables in `.env` file or passed as command line arguments. Environment variables take precedence over CLI arguments.
 
 1. Generate the API clients using the following command:
 
@@ -110,13 +117,41 @@ The generator intelligently handles root exports based on the API modules count:
 - With multiple API modules, only subpath exports are used
 - Preserves existing root exports when possible
 
+### Environment variables support
+
+All configuration options can be set via environment variables in your `.env` file:
+
+```env
+APP_PLATFORM_URL=https://vcmp-dev.govirto.com/
+APP_PLATFORM_MODULES=[Virtocommerce.MarketplaceVendor, Virtocommerce.Catalog, Virtocommerce.Orders]
+APP_API_CLIENT_DIRECTORY=./src/api_client/
+APP_PACKAGE_NAME=@my-app/api-client
+APP_PACKAGE_VERSION=1.0.0
+APP_BUILD_DIR=dist
+VERBOSE=true
+SKIP_BUILD=false
+```
+
+This approach provides better configuration management and allows for different settings across environments.
+
+### Improved module list parsing
+
+The generator now supports spaces in module lists for better readability:
+
+```bash
+# Both formats are supported:
+--APP_PLATFORM_MODULES='[Module1, Module2, Module3]'  # With spaces
+--APP_PLATFORM_MODULES='[Module1,Module2,Module3]'   # Without spaces
+```
+
 ### Error handling and debugging
 
 For troubleshooting API client generation:
-- Enable verbose logging with `--VERBOSE=true`
+- Enable verbose logging with `--VERBOSE=true` or `VERBOSE=true` in `.env`
 - Check connectivity to the platform URL
 - Verify the specified platform modules exist
 - Ensure target directories have proper permissions
+- Use environment variables for consistent configuration across environments
 
 ## Using API clients
 
@@ -131,12 +166,12 @@ import { CustomApiClient } from './api_client';
 export default {
   setup() {
     const { getApiClient } = useApiClient(CustomApiClient);
-    
+
     async function fetchItems() {
       const client = await getApiClient();
       return client.getItems();
     }
-    
+
     return { fetchItems };
   }
 }
