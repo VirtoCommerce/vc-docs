@@ -4,7 +4,7 @@ Virto OZ is an integrated AI-powered assistant designed to help users navigate, 
 
 With Virto OZ, you can:
 
-* Ask questions in native language and get precise, documentation-based answers. Virto OZ handles typos perfectly, ensuring you get accurate results even with small mistakes:
+* Ask questions in native language and get precise, documentation-based answers. Virto OZ handles typos perfectly, ensuring you get accurate results even with small mistakes.
 * Receive relevant links to related topics for deeper learning.
 * Save time by exploring features, configurations, and best practices directly within the documentation.
 
