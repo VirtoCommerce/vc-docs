@@ -54,7 +54,5 @@ To manage the orders:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../offers">← Offers</a>
-    <a href="../state-machines">State machines →</a>
+    <a href="../quotes">Quotes →</a>
 </div>
-
-

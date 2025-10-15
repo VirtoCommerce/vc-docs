@@ -1,6 +1,6 @@
 # Settings
 
-To perform the Task Application settings:
+To configure the Task module settings:
 
 1. Open the Platform and go to **Settings**.
 1. In the new blade, select **Task management**.

@@ -8,7 +8,7 @@ Before adding a new web app, make sure the following prerequisites have been ins
 
 * [Virto Commerce Platform 3.264+](https://github.com/VirtoCommerce/vc-platform)
 * [Virto Commerce CLI (VC-BUILD) 3.12+](https://github.com/VirtoCommerce/vc-build)
-* [Virto Shell VueJS Framework](https://github.com/VirtoCommerce/vc-shell)
+* [VC-Shell framework](https://github.com/VirtoCommerce/vc-shell)
 
 ## Registration process
 
@@ -49,7 +49,7 @@ To register a new app:
     
         ![image](media/app-menu-2.png)
 
-1. Create Content/[app_id] folder in the web project. Virto Commerce reads the manifest and adds binding to this folder. You can put any web content here. It can be a Virto Shell or any other HTML application.
+1. Create Content/[app_id] folder in the web project. Virto Commerce reads the manifest and adds binding to this folder. You can put any web content here. It can be a VC-Shell or any other HTML application.
 
     ```xml
     vc-module-power-bi-reports\src\VirtoCommerce.PowerBiReports.Web\Content\reports

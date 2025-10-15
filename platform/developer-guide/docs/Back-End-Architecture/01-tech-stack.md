@@ -1,5 +1,5 @@
 ﻿# Technology Stack
-Virto Commerce is a .NET-based e-commerce platform that promotes SOLID principles and clean code. Its purpose is to facilitate rapid development in building customized solutions for e-commerce businesses.
+Virto Commerce is a .NET-based ecommerce platform that promotes SOLID principles and clean code. Its purpose is to facilitate rapid development in building customized solutions for e-commerce businesses.
 
 Virto Commerce uses a set of well known components and libraries:
 

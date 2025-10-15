@@ -1,6 +1,6 @@
 # Virto Atomic Architecture
 
-Virto Commerce views e-commerce platforms as integrated ecosystems composed of various components, such as product catalogs, order management systems, pricing mechanisms, sellers, and customer profiles that function cohesively. We refer to this approach as **Virto Atomic Architecture™ (VAA)**. It includes four key elements: 
+Virto Commerce views ecommerce platforms as integrated ecosystems composed of various components, such as product catalogs, order management systems, pricing mechanisms, sellers, and customer profiles that function cohesively. We refer to this approach as **Virto Atomic Architecture™ (VAA)**. It includes four key elements: 
 
 * [Atoms.](atomic-architecture.md#atoms)
 * [Molecules.](atomic-architecture.md#molecules)
@@ -29,7 +29,7 @@ Cells represent functional units of the eCommerce ecosystem. They comprise sets 
 
 For example, a digital catalog acts as a cell, requiring the integration of molecules such as catalog management, pricing, inventory control, search functionalities, and event buses — all interconnected through APIs. Each cell operates autonomously and can be reused or repurposed as necessary.
 
-Cells are essential for the growth and evolution of the e-commerce Platform. They allow for enhancements, combinations, or custom developments to meet specific business needs.
+Cells are essential for the growth and evolution of the ecommerce Platform. They allow for enhancements, combinations, or custom developments to meet specific business needs.
 
 ## Organisms
 

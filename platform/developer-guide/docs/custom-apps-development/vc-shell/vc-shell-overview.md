@@ -1,6 +1,6 @@
 # VC-Shell Overview
 
-[VirtoCommerce Vue3 Frontend](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current vc-platform manager concept.
+[VC-Shell Framework](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current VC Platform manager concept.
 
 ![Vendor portal](../media/vendor-portal.png)
 

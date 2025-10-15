@@ -21,6 +21,7 @@ nav:
     - Overview: index.md
     - User Manual:
           - General Guidelines: general-guidelines.md
+          - Virto OZ AI Assistant: virto-oz.md
           - User Profile: user-profile.md
           - Modules Installation: modules-installation.md
           - Getting Started: getting-started.md

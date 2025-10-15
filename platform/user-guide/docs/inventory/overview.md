@@ -2,7 +2,7 @@
 
 The **Inventory** module enables tracking the stock level and managing fulfillment centers.
 
-In the e-commerce sector, day-to-day inventory management helps increase business intelligence and visibility. eCommerce business owners have better ongoing control when they constantly keep an eye on their inventory.
+In the ecommerce sector, day-to-day inventory management helps increase business intelligence and visibility. eCommerce business owners have better ongoing control when they constantly keep an eye on their inventory.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-inventory)
 

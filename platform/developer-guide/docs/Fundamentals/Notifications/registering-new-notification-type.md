@@ -1,6 +1,6 @@
 ﻿# Register New Notification Type
 
-This guide describes the basic steps to define a new e-mail notification type, including its registration in the notification registry.
+This guide describes the basic steps to define a new email notification type, including its registration in the notification registry.
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-notification/tree/dev/samples)
 

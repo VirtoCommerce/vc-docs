@@ -1,6 +1,6 @@
 ﻿# Manage Fulfillment Centers
 
-Fulfillment centers are processing units involved in receiving, processing, and delivering orders to end customers. The fulfillment process in e-commerce includes the following steps:
+Fulfillment centers are processing units involved in receiving, processing, and delivering orders to end customers. The fulfillment process in ecommerce includes the following steps:
 
 * Receiving goods from a supplier.
 * Storing the received goods.

@@ -1,6 +1,6 @@
 # Offers
 
-The Offers section in the main menu displays all the offers from various vendors. Unlike Marketplace Products, which include product descriptions and images, the Offers section provides ecommerce specific product details such as:
+The Offers section in the main menu displays all the offers from various vendors. Unlike Marketplace Products, which include product descriptions and images, the Offers section provides e-commerce specific product details such as:
 
 * Product SKUs.
 * Availability.

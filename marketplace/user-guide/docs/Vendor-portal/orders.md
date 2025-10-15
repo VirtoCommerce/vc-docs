@@ -71,5 +71,5 @@ When creating or editing a shipment, users can add items to the shipment by clic
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Vendor portal overview</a>
-    <a href="../products-management">Products →</a>
+    <a href="../quotes">Quotes →</a>
 </div>

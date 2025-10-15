@@ -2,7 +2,7 @@
 
 The **CyberSource** module integrates CyberSource payment solutions with your Virto Commerce platform.
 
-It enables secure and seamless payment processing, using CyberSource's Flex Microform technology for enhanced user experience and PCI compliance. This module is designed for businesses seeking to integrate a robust and scalable payment gateway into their e-commerce platform.
+It enables secure and seamless payment processing, using CyberSource's Flex Microform technology for enhanced user experience and PCI compliance. This module is designed for businesses seeking to integrate a robust and scalable payment gateway into their ecommerce platform.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-cyber-source)
 
