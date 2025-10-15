@@ -2,7 +2,7 @@
 
 The `useApiClient` composable provides a standardized way to access API clients in VC-Shell applications. It serves as a factory for creating authenticated API client instances that can be used to make HTTP requests to backend services.
 
-The `useApiClient` composable simplifies the process of creating and using API clients in your application by handling common concerns such as authentication token management and base URL configuration. It's particularly useful for accessing platform APIs and custom API endpoints in a consistent manner.
+The `useApiClient` composable simplifies the process of creating and using API clients in your application by handling common concerns such as authentication token management and base URL configuration. It's particularly useful for accessing Platform APIs and custom API endpoints in a consistent manner.
 
 ## API reference
 
@@ -58,14 +58,27 @@ API client classes must implement the `IAuthApiBase` interface to be compatible 
 
 ### Generated API clients
 
-VC-Shell provides tools for generating compatible API client code:
+VC-Shell provides tools for generating compatible API client code. You can configure generation using environment variables or command line arguments:
 
-```bash
-npm run generate-api-client --APP_PLATFORM_URL=https://api.example.com/ --APP_PLATFORM_MODULES=Platform,Cart,Orders --APP_API_CLIENT_DIRECTORY=src/api-clients
+**Using environment variables (.env file):**
+```env
+APP_PLATFORM_URL=https://api.example.com/
+APP_PLATFORM_MODULES=[Platform, Cart, Orders]
+APP_API_CLIENT_DIRECTORY=src/api-clients
+APP_PACKAGE_NAME=@my-app/api-client
+VERBOSE=true
 ```
+
+**Using command line arguments:**
+```bash
+npm run generate-api-client --APP_PLATFORM_URL=https://api.example.com/ --APP_PLATFORM_MODULES='[Platform, Cart, Orders]' --APP_API_CLIENT_DIRECTORY=src/api-clients
+```
+
+!!! note
+    Environment variables take precedence over command line arguments. This allows for better configuration management across different environments.
 
 
 ## Related Resources
 
 - [API Client Integration](../API-Integration/api-client-integration.md) - Guide for generating API clients
-- [Connecting to Platform](../../How-tos/Connecting-to-Platform.md) - Guide for connecting to VirtoCommerce Platform 
+- [Connecting to Platform](../../How-tos/Connecting-to-Platform.md) - Guide for connecting to VirtoCommerce Platform

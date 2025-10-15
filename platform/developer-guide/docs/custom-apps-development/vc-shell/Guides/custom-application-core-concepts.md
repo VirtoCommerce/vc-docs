@@ -56,7 +56,7 @@ The default VC-Shell architecture encourages using the Composition API's built-i
 Communicating with backend services is a crucial part of any application.
 
 -   **Generated Clients (`src/api_client/`)**: As mentioned, this directory is for API clients generated from your backend's OpenAPI (Swagger) specification. The `@vc-shell/api-client-generator` tool is provided for this purpose.
--   **`useApiClient` Composable**: The framework provides the `useApiClient` composable from `@vc-shell/framework`. This composable is a factory that you use to get an instance of your API client (whether it's a platform client or a custom generated one). It handles aspects like injecting authentication tokens automatically.
+-   **`useApiClient` Composable**: The framework provides the `useApiClient` composable from `@vc-shell/framework`. This composable is a factory that you use to get an instance of your API client (whether it's a Platform client or a custom generated one). It handles aspects like injecting authentication tokens automatically.
 
 For detailed information on generating, configuring, and using API clients, refer to the following guides:
 

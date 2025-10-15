@@ -26,6 +26,6 @@ The **Company info** section contains the following widgets:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../purchase-requests">← Purchase requests</a>
+    <a href="../points-history">← Points history</a>
     <a href="../company-members">Company members →</a>
 </div>

@@ -25,11 +25,16 @@ nav:
         - SPA Architecture for SEO and 404 Handling: spa-architecture-for-seo-and-404-handling.md
     - Deployment: deployment.md
     - Update: update.md
-    - Frontend Customization:
+    - Customization and Development Accelerators:
         - Overview: customization/overview.md
-        - Visual Theme Customization: customization/visual-theme-customization.md
-        - Functionality Customization: customization/functionality-customization.md
-        - Texts Customization: customization/texts-customization.md
+        - Customization: 
+            - Overview: customization/customization-overview.md
+            - Visual Theme Customization: customization/visual-theme-customization.md
+            - Functionality Customization: customization/functionality-customization.md
+        - Development Accelerators: 
+            - Overview: customization/accelerators-overview.md
+            - Guidelines for Using Accelerators: customization/accelerators-guidelines.md  
+            - Locales Management: customization/texts-customization.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md
         - Migration on Azure Cloud: migration-on-azure.md
@@ -40,13 +45,13 @@ nav:
         - Adding Azure AD (Entra ID) as SSO Provider: authentication/adding-sso-provider.md
         - Adding Google as SSO Provider: authentication/adding-google-as-sso-provider.md
     - Integrations:
-          - Google Analytics Events: integrations/google-analytics/ga-events.md
-          - Enhancing SEO with Prerender.io: integrations/prerender_io.md
-          - Builder.io: integrations/builder-io/overview.md
-          - Storyblok:
-              - Overview: integrations/storyblok/overview.md
-              - Catalog Menu Integration: integrations/storyblok/catalog-menu-integration.md
-              - Category Page Integration: integrations/storyblok/category-page-integration.md
-              - Footer Integration: integrations/storyblok/footer-integration.md
-              - Index Page Integration: integrations/storyblok/index-page-integration.md
-              - Registering Custom Components: integrations/storyblok/registering-custom-components.md
+        - Google Analytics Events: integrations/google-analytics/ga-events.md
+        - Enhancing SEO with Prerender.io: integrations/prerender_io.md
+        - Builder.io: integrations/builder-io/overview.md
+        - Storyblok:
+            - Overview: integrations/storyblok/overview.md
+            - Catalog Menu Integration: integrations/storyblok/catalog-menu-integration.md
+            - Category Page Integration: integrations/storyblok/category-page-integration.md
+            - Footer Integration: integrations/storyblok/footer-integration.md
+            - Index Page Integration: integrations/storyblok/index-page-integration.md
+            - Registering Custom Components: integrations/storyblok/registering-custom-components.md

@@ -160,7 +160,6 @@ Running multiple Platform instances, each with its own local cache, and which in
 ![Readmore](media/readmore.png){: width="25"} [Caching in Azure by Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
     
 
-
 <br>
 <br>
 ********

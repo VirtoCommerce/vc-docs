@@ -87,7 +87,6 @@ To configure Serilog's Application Insights sink in code:
       ```
 
 
-
 <br>
 <br>
 ********

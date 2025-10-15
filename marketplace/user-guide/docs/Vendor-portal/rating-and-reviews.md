@@ -11,5 +11,5 @@ The Rating and Reviews segment allows vendors to view the reviews submitted by b
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../import">← Import</a>
-    <a href="../my-store">My store →</a>
+    <a href="../communication">Communication →</a>
 </div>

@@ -11,7 +11,7 @@ The **Authorize.Net** module provides seamless integration with Authorize.Net us
 The Authorize.net module enables:
 
 - **Secure payment processing**: Utilizes Accept.js to handle payment data securely, reducing the risk of PCI compliance issues.
-- **Flexible integration**: Easily integrates with your existing e-commerce platform, allowing for a smooth and efficient setup process.
+- **Flexible integration**: Easily integrates with your existing ecommerce Platform, allowing for a smooth and efficient setup process.
 - **Real-time transactions**: Provides real-time transaction processing and reporting, ensuring that you always have up-to-date information on your payments.
 - **Comprehensive support**: Supports various payment methods including credit cards, electronic checks, and more, offering flexibility to your customers.
 - **Enhanced security**: Incorporates advanced fraud detection tools and security measures to protect against fraudulent transactions.

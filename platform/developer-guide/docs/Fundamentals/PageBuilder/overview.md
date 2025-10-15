@@ -1,6 +1,6 @@
 # Virto Commerce Page Builder
 
-The Virto Commerce Page Builder enables users to create e-commerce pages by assembling and customizing blocks through a visual editor. Each page is composed of multiple blocks, with each block’s appearance and settings tailored to the specific needs of the web page. Pages are configured as a list of blocks, each with individual settings, and all data is stored in JSON format.
+The Virto Commerce Page Builder enables users to create ecommerce pages by assembling and customizing blocks through a visual editor. Each page is composed of multiple blocks, with each block’s appearance and settings tailored to the specific needs of the web page. Pages are configured as a list of blocks, each with individual settings, and all data is stored in JSON format.
 
 ![Demo](media/page-builder-demo.png)
 

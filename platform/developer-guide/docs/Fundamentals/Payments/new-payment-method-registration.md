@@ -5,7 +5,7 @@ There are two approaches of working with payment systems:
 * **Off-site**: The customer fills in the required payment credentials in payment system.
 * **On-site**: The customer fills in the required payment details on the seller's system side. Once the required details are filled, the seller's system sends a request to the payment system. In some specific cases, the customer will be asked to enter additional security data to commit the transaction (MasterCard SecureCode).
 
-VirtoCommerce supports both off-site and on-site payment method implementations.
+Virto Commerce supports both off-site and on-site payment method implementations.
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-payment/blob/master/src/VirtoCommerce.Payment.Data/DefaultManualPaymentMethod.cs)
 
@@ -27,7 +27,7 @@ In order to define a new payment method:
 		{
 			//has to implement payment transaction registration in an outside payment system;
 			//gets ProcessPaymentEvaluationContext as a parameter, which contains all the required information to create a payment transaction in an outside payment system;
-			//returns ProcessPaymentResult as a result, which includes the OuterId property, that has to be set to PaymentId. That way it associates payment in the Virto Commerce platform with the payment transaction in //the outside payment system
+			//returns ProcessPaymentResult as a result, which includes the OuterId property, that has to be set to PaymentId. That way it associates payment in the Virto Commerce Platform with the payment transaction in //the outside payment system
 			public override ProcessPaymentRequestResult ProcessPayment(ProcessPaymentRequest request) { ... }
 			//has to implement payment status check in the outside payment system;
 			//get PostProcessPaymentEvaluationContext as a parameter, which contains all the required information to check payment status in outside payment system;
@@ -38,7 +38,7 @@ In order to define a new payment method:
 			public override RefundPaymentRequestResult RefundProcessPayment(RefundPaymentRequest request) { ... }
 			//has to implement querystring request processing. The request comes to `push url` from outside payment system or frontend. The `push url` is set in account settings of most payment systems or during
 			//payment transaction processing in outside payment system (ProcessPayment method).
-			//as a result of successfully checked (valid) payment the OuterId property of ValidatePostProcessRequestResult has to be set. It identifies payment in VirtoCommerce with the transaction in outside payment system.
+			//as a result of successfully checked (valid) payment the OuterId property of ValidatePostProcessRequestResult has to be set. It identifies payment in Virto Commerce with the transaction in outside payment system.
 			public override ValidatePostProcessRequestResult ValidatePostProcessRequest(System.Collections.Specialized.NameValueCollection queryString) { ... }
 		}
 	```

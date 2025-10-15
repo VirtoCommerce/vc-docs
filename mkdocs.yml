@@ -332,6 +332,10 @@ extra:
           url: https://www.virtocommerce.org/c/news-digest/
     main_page:
         release_notes:
+            - title: October 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-october-2025/807
+              type: Release Notes
+              date: 7 October 2025
             - title: September 2025
               link: https://www.virtocommerce.org/t/virtos-release-notes-september-2025/805
               type: Release Notes
@@ -454,7 +458,7 @@ extra:
               description:
                 - title: Frontend Application
                   link: storefront
-                - title: VC Shell
+                - title: VC-Shell
                   link: platform/developer-guide/custom-apps-development/overview
 
             # - title: Marketplace
@@ -553,9 +557,9 @@ extra:
                           url: /marketplace/user-guide/Vendor-portal/overview
                     - title: Developer Guide
                       links:
-                        - title: In Progress
-                          url: /marketplace/under-construction
-                - title: VC Shell
+                        - title: State Machine Module
+                          url: /marketplace/developer-guide/state-machine-module/overview
+                - title: VC-Shell
                   content:
                     - title: Developer Guide
                       links:
@@ -591,7 +595,7 @@ extra:
                       url: /storefront/developer-guide/
                     - title: User Getting Started
                       url: /storefront/user-guide/
-                - title: VC Shell
+                - title: VC-Shell
                   links:
                     - title: Developer Getting Started
                       url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app

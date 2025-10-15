@@ -1,4 +1,5 @@
 ﻿# Main Concept
+
 The architecture and behavior of Virto Commerce Import Framework allows to easily import your data, such as product information, customers, categories, and much more, into the Virto Commerce Platform.
 
 ## Overview
@@ -66,7 +67,7 @@ Import App is the new user interface, based on [Virto Custom App Development](..
 
 ### Key features
 
-* Expandable with [VC Shell](../../custom-apps-development/vc-shell/vc-shell-overview.md). 
+* Expandable with [VC-Shell](../../custom-apps-development/vc-shell/vc-shell-overview.md). 
 * Import-on-demand for Operator user.
 
 ### Folder structure

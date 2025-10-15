@@ -23,5 +23,5 @@ The settings have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../export-catalog">← Exporting catalog</a>
-    <a href="../../contracts/overview">Contracts module overview→</a>
+    <a href="../../catalog-personalization/overview">Catalog Personalization module overview→</a>
 </div>

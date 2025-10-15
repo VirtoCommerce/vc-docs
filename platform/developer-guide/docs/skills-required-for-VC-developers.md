@@ -15,7 +15,7 @@ The following skills are important for working with Virto Commerce:
 * Integration testing
 * E2E testing
 * Debugging
-* Rest API Principles and Swagger schema
+* Rest API principles and Swagger schema
 * GitFlow
 * Design Patterns (as used by Virto Commerce Platform)
 * SOLID principles (as used by Virto Commerce Platform)
@@ -76,17 +76,17 @@ Virto Commerce developer skills include:
 #### Virto Commerce developer
 * Virto Commerce Architecture Principles, Data Flow and Lifecycle
 * [Virto Commerce Style Guides](https://github.com/VirtoCommerce/styleguide)
-* Create custom modules
-* Create extension modules
+* Custom modules creation
+* Extension modules creation
 * Background processing ([Hangfire](https://www.hangfire.io/))
 * Role-based security
 * Settings
-* In-Memory and Distributor Caches
-* Full-Text Search
-* Tax, Shipment, Payment Providers
-* Virto Commerce Admin UI (Angular JS)
-* SignalR Notifications
-* Virto Commerce Events model
+* In-Memory and distributor caches
+* Full-text search
+* Tax, shipment, payment providers
+* Virto Commerce admin UI (Angular JS)
+* SignalR notifications
+* Virto Commerce events model
 * [Liquid templates](https://community.virtocommerce.com/t/liquid-as-primary-template-language/78) for email notifications
 * Sonar Qube for Clean Code
 
@@ -95,12 +95,12 @@ Virto Commerce developer skills include:
 #### Mobile web specialist
 * [Web Fundamentals](https://developers.google.com/web/fundamentals)
 * Website layout and styling
-* Front-end networking
+* Frontend networking
 * Accessibility
-* Progressive Web Apps
+* Progressive web apps
 * Performance optimization and caching
-* Unit Testing (Jest, Karma)
-* E2E Testing
+* Unit testing (Jest, Karma)
+* E2E testing
 * Debugging
 * ES2015 concepts and syntax
 * Mobile web forms
@@ -130,7 +130,7 @@ Virto Commerce developer skills include:
 * [HTML & CSS](https://www.codecademy.com/catalog/language/html-css)
 
 
-
+To make the results easier to present, you can download this list and fill it out as a [questionnaire](skills-assessment-checklist.xlsx). You can then submit it to Virto Commerce to receive a personalized training program.
 
 <br>
 <br>

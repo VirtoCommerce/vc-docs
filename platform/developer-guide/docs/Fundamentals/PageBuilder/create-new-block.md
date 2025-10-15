@@ -4,7 +4,6 @@ This tutorial will show you how to create a new block. We are going to create a 
 
 ![Draft block](media/draft-design.png)
 
-
 ## Create block descriptor
 
 Every block starts with a descriptor file. This is a JSON file that defines the block’s structure, behavior, and settings. Descriptor files are located at the following path: **vc-frontend/blob/dev/client-app/builder-preview/schemas/sections/block-alias.json**.

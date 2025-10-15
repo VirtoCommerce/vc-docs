@@ -35,7 +35,7 @@ The issued access token life time is controlled by the `Authorization:AccessToke
 
 ## Client credentials flow (recommended for machine-to-machine communication)
 
-Virto Commerce platform authenticates and authorizes the app rather than a user. For this scenario, typical authentication schemes, such as username/password or social media credentials do not make sense.
+Virto Commerce Platform authenticates and authorizes the app rather than a user. For this scenario, typical authentication schemes, such as username/password or social media credentials do not make sense.
 
 Instead, Virto Commerce apps use the Client Credentials Flow (defined in [OAuth 2.0 RFC 6749, section 4.4](https://tools.ietf.org/html/rfc6749#section-4.4)), which enables passing along their Client ID and Client Secret for authentication to get a token.
 

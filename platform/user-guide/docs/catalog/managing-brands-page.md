@@ -74,3 +74,32 @@ The new brand appears on the frontend:
 Clicking the brand opens a page displaying all products associated with that brand:
 
 ![A-brand products](media/a-brand-products.png)
+
+## Multilingual SEO
+
+As of [Catalog 3.895.0](https://github.com/VirtoCommerce/vc-module-catalog/releases/tag/3.895.0) and [xCatalog 3.938.0](https://github.com/VirtoCommerce/vc-module-x-catalog/releases/tag/3.938.0), admins can configure SEO settings for the Brands page separately for each language:
+
+1. Click **Catalog** in the main menu.
+1. In the next blade, click on the three dots to the left of the **Brands** catalog and select **Manage** from the dropdown menu.
+1. In the next catalog, click on the **SEO** widget.
+1. In the next blade, select the language to configure SEO for.
+1. In the next blade, configure the following fields:
+
+    ![Brands page SEO](media/brands-localized-seo.png){: style="display: block; margin: 0 auto;" }
+
+    !!! note
+        If SEO info for the selected language isn’t defined, the system automatically uses the default store language or another available version. 
+
+
+1. Click **OK** to save the changes.
+
+The configured SEO data is applied for accurate language-specific rendering.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-categories">← Managing categories</a>
+    <a href="../product-management-overview">Product management options →</a>
+</div>

@@ -21,5 +21,5 @@ The modifications become available in the Frontend Application:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-shipping-methods">← Managing shipping methods</a>
-    <a href="../../shopify-taxonomy/overview">Shopify Taxonomy module overview →</a>
+    <a href="../../shipstation/overview">ShipStation module overview →</a>
 </div>

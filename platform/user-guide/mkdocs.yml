@@ -21,6 +21,7 @@ nav:
     - Overview: index.md
     - User Manual:
           - General Guidelines: general-guidelines.md
+          - Virto OZ AI Assistant: virto-oz.md
           - User Profile: user-profile.md
           - Modules Installation: modules-installation.md
           - Getting Started: getting-started.md
@@ -145,6 +146,11 @@ nav:
                   - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
                   - Settings: back-in-stock/settings.md
           - Catalog Related Modules:
+                - Catalog CSV Export and Import:
+                      - Overview: catalog-csv-export-import/overview.md
+                      - Importing Catalog: catalog-csv-export-import/import-catalog.md
+                      - Exporting Catalog: catalog-csv-export-import/export-catalog.md
+                      - Settings: catalog-csv-export-import/settings.md
                 - Catalog Personalization:
                       - Overview: catalog-personalization/overview.md
                       - Managing User Groups: catalog-personalization/user-groups.md
@@ -153,11 +159,6 @@ nav:
                 - Catalog Publishing:
                       - Overview: catalog-publishing/overview.md
                       - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
-                - Catalog CSV Export and Import:
-                      - Overview: catalog-csv-export-import/overview.md
-                      - Importing Catalog: catalog-csv-export-import/import-catalog.md
-                      - Exporting Catalog: catalog-csv-export-import/export-catalog.md
-                      - Settings: catalog-csv-export-import/settings.md
           - Contracts:
                 - Overview: contracts/overview.md
                 - Managing Contracts: contracts/creating-and-terminating-contracts.md
@@ -178,6 +179,9 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
+          - Loyalty: 
+                - Overview: loyalty/overview.md
+                - Enabling and Configuring Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
           - News:
                 - Overview: news/overview.md
                 - Managing News: news/managing-news.md
@@ -196,6 +200,7 @@ nav:
           - Pages:
                 - Overview: pages/overview.md
                 - Enabling Virto Pages: pages/enabling-pages.md
+                - Builder.io Integration: pages/builder-io-integration.md
           - Payment Related Modules:
                 - Payment:
                       - Overview: payment/overview.md
@@ -272,11 +277,11 @@ nav:
                 - Managing SEO: catalog/managing-SEO.md
                 - Managing Broken Links: seo/managing-broken-links.md
                 - Settings: seo/settings.md
-          - ShipStation: shipstation/overview.md
           - Shipping:
                 - Overview: shipping/overview.md
                 - Managing Shipping Methods: shipping/managing-shipping-methods.md
                 - Settings: shipping/settings.md
+          - ShipStation: shipstation/overview.md
           - Shopify Taxonomy:
                 - Overview: shopify-taxonomy/overview.md
                 - Importing Shopify Taxonomy: shopify-taxonomy/importing-shopify-taxonomy.md

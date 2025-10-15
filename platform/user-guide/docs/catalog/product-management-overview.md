@@ -37,6 +37,6 @@ Virto Commerce offers flexible ways to purchase products tailored to various cus
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../product-management-overview">← Product management overview</a>
+    <a href="../managing-brands-page">← Managing brands page</a>
     <a href="../managing-product-variations">Managing product variations →</a>
 </div>

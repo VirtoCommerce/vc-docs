@@ -1,6 +1,6 @@
 # Overview
 
-The **Catalog** module facilitates the addition of items to your e-commerce store, enabling the marketing of physical goods and digital content. These items can be organized into catalogs and categories, classified based on diverse attributes such as stock availability, item types, vendors, brands, and more.
+The **Catalog** module facilitates the addition of items to your ecommerce store, enabling the marketing of physical goods and digital content. These items can be organized into catalogs and categories, classified based on diverse attributes such as stock availability, item types, vendors, brands, and more.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-catalog)
 

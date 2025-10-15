@@ -2,20 +2,26 @@
 
 The lists help users save items they are interested in for future consideration. The **Lists** section contains all the product lists created by the user. You can also quickly access the **Lists** section through the **Lists** button in the top menu. 
 
+![Lists](../media/lists.png){: style="display: block; margin: 0 auto;" width="800"}
+
 In the **Lists** section, you can:
 
 * Create new lists.
-* Configure lists privacy.
 * View number of items in the list.
 * Edit lists names.
 * Delete lists.
+* Configure lists privacy. As of [2.32.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.32.0), users can share their shopping lists with configurable access scopes:
 
-![Lists](../media/lists.png){: style="display: block; margin: 0 auto;" width="800"}
+    * Private (no sharing link).
+    * Organization (shared within organization members).
+    * Anyone (readonly) (shared via public view-only link):
+
+        ![Shareable lists](../media/shareable-private.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
     If you attempt to save a new list with a name that already exists, the system automatically appends a number to differentiate it, indicating how many lists share that name.
 
-    ![Lists names](../media/lists-names.png)
+    ![Lists names](../media/lists-names.png){: style="display: block; margin: 0 auto;" }
 
 Click on the desired list to view its details. Here you can:
 

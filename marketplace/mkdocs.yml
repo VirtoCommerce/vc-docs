@@ -30,6 +30,9 @@ extra:
             - title: Developer Guide [In Progress]
               link: developer-guide
               image: assets/images/storefront-devguide.png
+              description:
+                  - title: State Machine Module
+                    link: developer-guide/state-machine-module/overview
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
@@ -38,6 +41,10 @@ extra:
                   - title: Github
                     link: https://github.com/VirtoCommerce/vc-deploy-marketplace
         release_notes:
+            - title: October 2025
+              link: https://www.virtocommerce.org/t/virtos-release-notes-october-2025/807
+              type: Release Notes
+              date: 7 October 2025
             - title: September 2025
               link: https://www.virtocommerce.org/t/virtos-release-notes-september-2025/805
               type: Release Notes

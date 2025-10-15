@@ -75,6 +75,6 @@ Component styles follow the **BEM methodology**. To avoid merge conflicts and ke
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overview">← Frontend customization overview</a>
+    <a href="../customization-overview">← Customization overview</a>
     <a href="../functionality-customization">Functionality customization →</a>
 </div>

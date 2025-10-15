@@ -77,7 +77,6 @@ Widget visibility is controlled by defining the `isVisible` method in widget re
 isVisible: function (blade) { return authService.checkPermission('pricing:query'); },
 ```
 
-
 <br>
 <br>
 ********

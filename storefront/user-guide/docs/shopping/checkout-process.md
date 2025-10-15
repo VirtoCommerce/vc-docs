@@ -88,14 +88,19 @@ To complete your order:
         === "Manual"
         
             **Manual payment** allows you to pay for the order later.
+
+        === "Pay with points"
+
+            **Pay with points** allows you to pay for the order with loyalty points earned from previous activity.
+
 <br>
 <br>
-    ![Billing step](../media/billing-step.png){: style="display: block; margin: 0 auto;" width="700"}
+    ![Billing step](../media/billing-step.png){: style="display: block; margin: 0 auto;" }
 
-    !!! note
-        The names of payment methods can be localized:
+!!! note
+    The names of payment methods can be localized:
 
-        ![Localized payment methods](../media/localized-payment-methods.png){: style="display: block; margin: 0 auto;" }
+    ![Localized payment methods](../media/localized-payment-methods.png){: style="display: block; margin: 0 auto;" width="350"}
 
 1. Click **Review order** to review your order details. You can not edit your information here, but you can return to any of the previous steps by clicking them in the navigation path menu:
 <br>

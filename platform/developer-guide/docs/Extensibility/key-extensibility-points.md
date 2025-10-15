@@ -4,12 +4,12 @@ Our Platform is based on a collection of various modules and components that for
 
 In order to provide solutions for many different use cases, we decided it was important to ensure that these core concepts were as flexible and extensible as possible.
 
-The Virto platform encompasses the **extension concept** based on various techniques and practices. It can significantly reduce the implementation and upgrade effort for your custom solution.
+The Virto Commerce Platform encompasses the **extension concept** based on various techniques and practices. It can significantly reduce the implementation and upgrade effort for your custom solution.
 
 !!! info
 	The extension concept is the backbone of the Virto Platform value proposition and has several main extensible point types.
 
-To address crucial extension requirements, the platform contains various **extensions points** for all three main parts: Platform, modules, and Frontend. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:
+To address crucial extension requirements, the Platform contains various **extensions points** for all three main parts: Platform, modules, and Frontend. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:
 
 * Domain and business logic extension:
     * [Extending domain models](../Tutorials-and-How-tos/Tutorials/extending-domain-models.md)

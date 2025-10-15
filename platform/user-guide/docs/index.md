@@ -1,6 +1,6 @@
 # Overview
 
-This guide will show you how to effortlessly customize your platform, improve customer experience and streamline operations through the intuitive use of modules and integrations. In the Modules section, you will find a list of available modules, along with detailed instructions on how to install and optimize them. The Integrations section explores connecting Virto Platform to external tools such as Google Analytics, Hotjar, Builder.io, and Avalara Tax.
+This guide will show you how to effortlessly customize your Platform, improve customer experience and streamline operations through the intuitive use of modules and integrations. In the Modules section, you will find a list of available modules, along with detailed instructions on how to install and optimize them. The Integrations section explores connecting Virto Platform to external tools such as Google Analytics, Hotjar, Builder.io, and Avalara Tax.
 
 You can [request a demo](https://virtocommerce.com/request-demo) or [deploy Platform]() to assess all the Platform's advantages.
 

@@ -6,7 +6,7 @@ Proper assignment of roles and permissions ensures that employees have the appro
 
 To create a role:
 
-1. Open the platform and go to **Security** --> **Roles** --> **Add**.
+1. Open the Platform and go to **Security** --> **Roles** --> **Add**.
 1. Enter the role's name and description.
 1. Assign the required permissions. Select permissions from at least following sections: **Platform**, **Customer**, and **Task management**.
 
@@ -33,7 +33,7 @@ To create a role:
 
 To define the scope of the role:
 
-1. Open the platform and go to **Security** -> **Roles**. 
+1. Open the Platform and go to **Security** --> **Roles**. 
 1. Select the required role.
 1. Select the permissions marked with **Assigned scopes: 0**.
 1. Select a task permission scope to allow a user to assign tasks:

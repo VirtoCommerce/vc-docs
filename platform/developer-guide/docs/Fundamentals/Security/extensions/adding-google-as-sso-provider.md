@@ -6,7 +6,7 @@ To integrate Google as SSO provider:
 1. [Configure Google Sign-in.](adding-google-as-sso-provider.md#configure-google-sign-in)
 1. [Add Module Extensions.](adding-google-as-sso-provider.md#add-module-extensions)
 
-
+ 
 ## Create Google OAuth 2.0 Client
 
 To use Google APIs in an application with OAuth 2.0, you need authorization credentials that identify the app for Google's OAuth 2.0 server. Your applications will use such credentials to access APIs that you have enabled for that project. 
@@ -21,32 +21,54 @@ To create credentials for your project:
     1. Skip **Scopes**.
     1. Skip **Test users**.
     1. Review the **OAuth consent screen** and go back to the app dashboard.
-    1. In the **Credentials** tab of the app dashboard, select **CREATE CREDENTIALS > OAuth client ID**.
+    1. In the **Credentials** tab of the app dashboard, select **CREATE CREDENTIALS --> OAuth client ID**.
 1.   Select **Application type --> Web application** and choose a name.
     
-1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the platform using the https scheme. Otherwise, the SSO won't work.
+1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the Platform using the https scheme. Otherwise, the SSO won't work.
 
     !!! Note
-        If your platform is running on a local machine, put `https://localhost:10645/signin-google`.
+        If your Platform is running on a local machine, put `https://localhost:10645/signin-google`.
 
 1.  Click **CREATE**.
 1.   Save **Client ID** and **Client Secret** to use them in the module.
 
 ## Configure Google sign-in
 
-Store Google Client ID, secret values and other sensitive settings in **KeyVault Storage**. In our example, we use the `appsettings.json` configuration file. Add the following section to the configuration:
+!!! note
+    In the Virto Commerce Platform, you can use Google as an SSO provider in two ways:
+        * With the [Google SSO module](https://github.com/VirtoCommerce/vc-module-google-sso), which is designed specifically for Google integration.  
+        * With the [OpenID Connect module](https://github.com/VirtoCommerce/vc-module-openid-connect), where Google is supported alongside other identity providers.
 
+Store Google Client ID, secret values and other sensitive settings in **KeyVault Storage**. In our example, we use the **appsettings.json** configuration file. Add the following section to the configuration:
 
-```json title="appsettings.json"
-"Google": {
-    "Enabled": true,
-    "AuthenticationType": "Google",
-    "AuthenticationCaption": "Google",
-    "ClientId": "<your Client ID>",
-    "ClientSecret": "<your Client Secret>",
-    "DefaultUserType": "Manager"
-}
-```
+=== "in the Google node"
+
+    ```json title="appsettings.json"
+    "GoogleSSO": {
+        "Enabled": true,
+        "ApplicationId": "<your Client ID>",
+        "Secret": "<your Client Secret>"
+    }
+    ```
+
+=== "in the OIDC node"
+
+    ```json title="appsettings.json"
+    "oidc": [
+      {
+        "Enabled": true,
+        "AuthenticationType": "google",
+        "AuthenticationCaption": "Google",
+        "Authority": "https://accounts.google.com",
+        "ClientId": "your-client-id",
+        "ClientSecret": "your-client-secret",
+        "UserNameClaimType": "email",
+        "CallbackPath": "/signin-google",
+        "SignedOutCallbackPath": "/signout-google"
+      },
+    ]
+    ```
+
 
 ## Add module extensions
 
@@ -128,9 +150,9 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
 
 ## Sign in with Google
 
-1. Run the platform and open **Log in**. 
+1. Run the Platform and open **Log in**. 
 1. Select **Google**. You will be redirected to Google for authentication. 
-1. Enter your Google credentials. You will be redirected back to the platform:
+1. Enter your Google credentials. You will be redirected back to the Platform:
 ![Platform login](../media/google-sso-login.png)
 1. Click **Sign in with Google.**
 

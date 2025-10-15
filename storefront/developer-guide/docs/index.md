@@ -66,105 +66,108 @@
 |   ├── assets                       // Assets needed to be precompiled during building.
 |   |   └──...
 |   |
-|   ├── core                         // Common utilities and shared logic that can be used by any pages and libraries.
-|   |   ├── api/graphql              // GraphQL Models aligned with the Virto Backoffice.
+|   ├── core                          // Common utilities and shared logic that can be used by any pages and libraries.
+|   |   ├── api/graphql               // GraphQL Models aligned with the Virto Backoffice.
 |   |   |   └──...
-|   |   ├── composables              // Core composables (app-level shared logic).
+|   |   ├── composables               // Core composables (app-level shared logic).
 |   |   |   └──...
-|   |   ├── directives               // Core Vue directives.
+|   |   ├── directives                // Core Vue directives.
 |   |   |   └──...
-|   |   ├── plugins                  // Core Vue plugins.
+|   |   ├── plugins                   // Core Vue plugins.
 |   |   |   └──...
-|   |   ├── enums                    // Core enums.
+|   |   ├── enums                     // Core enums.
 |   |   |   └──...
-|   |   ├── types                    // Core types.
+|   |   ├── types                     // Core types.
 |   |   |   └──...
-|   |   ├── utilities                // Some miscellaneous utils.
+|   |   ├── utilities                 // Some miscellaneous utils.
 |   |   |   └──...
-|   |   └── constants.ts             // Global-available constants (DO NOT USE, will be removed later).
+|   |   └── constants.ts              // Global-available constants (DO NOT USE, will be removed later).
 |   |
-|   ├── pages                        // Set of application pages used within Application router.
+|   ├── pages                         // Set of application pages used within Application router.
 |   |   └──...
 |   |
-|   ├── public                       // Statically served files
-|   |   └── static
-|   |       ├── icons                // Icons used for favicons, PWA, etc.
-|   |       └── images               // Static images used inside the application.
+|   ├── public                        // Statically served files.
+|   |   └── static 
+|   |       ├── icons                 // Icons used for favicons, PWA, etc.
+|   |       └── images                // Static images used inside the application.
 |   |
-|   ├── router                       // SPA routing configuration.
+|   ├── router                        // SPA routing configuration.
 |   |   └──...
 |   |
-|   ├── shared                       // A set of shared files grouped by their domain context.
-|   |   ├── catalog                  // Grouping context (ex.: catalog browsing).
-|   |   |   ├── components           // The collection of components specific for this domain context.
+|   ├── shared                        // A set of shared files grouped by their domain context.
+|   |   ├── catalog                   // Grouping context (ex.: catalog browsing).
+|   |   |   ├── components            // The collection of components specific for this domain context.
 |   |   |   |   └──...
-|   |   |   ├── composables          // The collection of shared logic written using Composable API pattern.
+|   |   |   ├── composables           // The collection of shared logic written using Composable API pattern.
 |   |   |   |   └──...
-|   |   |   ├── types                // Types used in this context.
+|   |   |   ├── types                 // Types used in this context.
 |   |   |   |   └──...
-|   |   |   ├── utils                // Utilities and helpers specific for this context.
+|   |   |   ├── utils                 // Utilities and helpers specific for this context.
 |   |   |   |   └──...
-|   |   |   └── index.ts             // Entry point for this context used as library.
+|   |   |   └── index.ts              // Entry point for this context used as library.
 |   |   |
 |   |   └──...
 |   |
-|   ├── ui-kit                       // Atoms, Molecules, Organisms and their types, used within the whole application.
+|   ├── ui-kit                        // Atoms, Molecules, Organisms and their types, used within the whole application.
 |   |   └──...
 |   |
-|   ├── App.vue                      // Main Application component. Use it as a wrapper for routable pages.
-|   ├── env.d.ts                     // Definition file to provide IDE IntelliSense support.
-|   ├── main.ts                      // Application entry point. Main initialization script.
-|   ├── shims-acceptjs.d.ts          // Definition file to provide IDE IntelliSense support for Accept.js (Authorize.net).
-|   ├── shims-graphql.d.ts           // Definition file to provide IDE IntelliSense support for importing *.graphql files.
-|   ├── shims-vue.d.ts               // Definition file to provide IDE IntelliSense support for importing *.vue files.
-|   ├── vue.d.ts                     // Definition file to provide IDE IntelliSense support for additional global Vue properties.
-|   └── vue-router.d.ts              // Definition file to provide IDE IntelliSense support for additional global Vue Router properties.
+|   ├── App.vue                       // Main Application component. Use it as a wrapper for routable pages.
+|   ├── env.d.ts                      // Definition file to provide IDE IntelliSense support.
+|   ├── main.ts                       // Application entry point. Main initialization script.
+|   ├── shims-acceptjs.d.ts           // Definition file to provide IDE IntelliSense support for Accept.js (Authorize.net).
+|   ├── shims-graphql.d.ts            // Definition file to provide IDE IntelliSense support for importing *.graphql files.
+|   ├── shims-vue.d.ts                // Definition file to provide IDE IntelliSense support for importing *.vue files.
+|   ├── vue.d.ts                      // Definition file to provide IDE IntelliSense support for additional global Vue properties.
+|   └── vue-router.d.ts               // Definition file to provide IDE IntelliSense support for additional global Vue Router properties.
 |
 ├── config
 |   ├── menu.json
 |   └── settings_data.json
 |   
-├── locales                          // Locale files used to provide translated content.
+├── examples                          // Code snippets and examples for different use cases.
+|   └──...
+|   
+├── locales                           // Locale files used to provide translated content.
 |   └──...
 |
-├── modules                          // Auxiliary build files that run in the Node environment.
-|   └──...                           // Modules with their own components, APIs, and logic.
+├── modules                           // Auxiliary build files that run in the Node environment.
+|   └──...                            // Modules with their own components, APIs, and logic.
 |
-├── scripts                          // Auxiliary build files that run in the Node environment.
+├── scripts                           // Auxiliary build files that run in the Node environment.
 |   └──...
 |
-├── .babelrc                         // Babel configuration for storybook
-├── .browserslistrc                  // Browserslist config file to support actual versions of browsers.
-├── .commitlintrc.json               // Config for Conventional commit hook.
+├── .babelrc                          // Babel configuration for storybook.
+├── .browserslistrc                   // Browserslist config file to support actual versions of browsers.
+├── .commitlintrc.json                // Config for Conventional commit hook.
 ├── .dependency-cruiser.cjs
 ├── .dependency-graph.cjs
-├── .editorconfig                    // Common editor settings to sync codestyle.
-├── .env                             // Envfile to define different Environment Variables.
-├── .env.local                       // Local envfile to override Environment Variables.
-├── .eslintignore                    // Ignore some files from ESlint.
-├── .eslintrc.cjs                    // ESlint configuration file.
-├── .gitattributes                   // Set attributes to specified path in Git.
-├── .gitignore                       // Ignore some files from Git.
-├── .npmrc                           // Node.js package manager settings and Node.js restrictions
-├── .prettierignore                  // Ignore some files from Prettier.
-├── .prettierrc.json                 // Config for Prettier.
-├── .yarnrc.yml                      // Yarn package manager configuration
+├── .editorconfig                     // Common editor settings to sync codestyle.
+├── .env                              // Envfile to define different Environment Variables.
+├── .env.local                        // Local envfile to override Environment Variables.
+├── .eslintignore                     // Ignore some files from ESlint.
+├── .eslintrc.cjs                     // ESlint configuration file.
+├── .gitattributes                    // Set attributes to specified path in Git.
+├── .gitignore                        // Ignore some files from Git.
+├── .npmrc                            // Node.js package manager settings and Node.js restrictions.
+├── .prettierignore                   // Ignore some files from Prettier.
+├── .prettierrc.json                  // Config for Prettier.
+├── .yarnrc.yml                       // Yarn package manager configuration.
 ├── graphql-codegen
-|   └── generator.ts                 // Generate GraphQL types 
-├── index.html                       // Vite Development entry point.
+|   └── generator.ts                  // Generate GraphQL types. 
+├── index.html                        // Vite Development entry point.
 ├── LICENSE.txt
-├── package.json                     // NPM Package description.
-├── postcss.config.cjs               // PostCSS configuration for Tailwind.
-├── README.md                        // This file.
+├── package.json                      // NPM Package description.
+├── postcss.config.cjs                // PostCSS configuration for Tailwind.
+├── README.md                         // This file.
 ├── sonar-project.properties
-├── tailwind.config.ts               // TailwindCSS configuration file.
-├── tsconfig.app.json                // Typescript configuration for application.
-├── tsconfig.json                    // Main TypeScript configuration file.
-├── tsconfig.node.json               // Typescript configuration for Node.js.
+├── tailwind.config.ts                // TailwindCSS configuration file.
+├── tsconfig.app.json                 // Typescript configuration for application.
+├── tsconfig.json                     // Main TypeScript configuration file.
+├── tsconfig.node.json                // Typescript configuration for Node.js.
 ├── tsconfig.vitest.json
-├── vite.config.ts                   // Vite configuration file.
-├── vitest.config.ts
-└── yarn.lock                        // Yarn dependencies lock file.
+├── vite.config.ts                    // Vite configuration file.
+├── vitest.config.ts 
+└── yarn.lock                         // Yarn dependencies lock file.
 
 ```
 

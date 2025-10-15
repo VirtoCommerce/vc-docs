@@ -95,8 +95,6 @@ Toolbar item definition structure:
 |index        |The 0-based position to insert the item in the toolbar.|
 
 
-
-
 <br>
 <br>
 ********

@@ -35,7 +35,6 @@ To register a custom certificate, do the following:
 	You can delete certificate files and remove keys from the configuration for safety reason.
 
 
-
 <br>
 <br>
 ********

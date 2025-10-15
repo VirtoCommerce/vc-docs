@@ -89,10 +89,19 @@ To enable email review reminder:
 1. In the main menu, click **Settings**.
 1. In the next blade, select **Product Reviews**.
 1. Click **Email Review Reminder**.
-1. In the next blade, enable the reminder in fill in the fields.
+1. In the next blade, enable the reminder and fill in the fields.
 
     ![Set email reminder](media/set-email-reminder.png)
 
 1. Click **Save** in the toolbar to save the changes.
 
 The customer will be reminded to review the product they bought.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← Rating and Reviews module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

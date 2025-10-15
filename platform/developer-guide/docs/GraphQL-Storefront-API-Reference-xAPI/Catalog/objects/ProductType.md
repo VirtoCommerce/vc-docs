@@ -112,7 +112,7 @@ This type represents the type or category of the product. It is used to classify
 ## Configuring `keyProperties`
 To make a catalog property appear in the `keyProperties` list:
 
-  1. Open the platform and go to the **Catalog** module.
+  1. Open the Platform and go to the **Catalog** module.
   1. Click the three dots next the name of the required catalog and select **Manage** from the dropdown menu.
   1. Selects the **Properties** widget.
   1. In the new blade, select the **Product property** from a list.

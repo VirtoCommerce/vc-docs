@@ -2,7 +2,7 @@
 
 The SignalR Plugin provides real-time communication capabilities for VC-Shell applications. It integrates with Microsoft SignalR to enable server-initiated updates, push notifications, and real-time data synchronization between the server and client.
 
-The SignalR Plugin establishes a persistent connection between the client and the VirtoCommerce Platform, allowing bidirectional communication. This is primarily used for receiving instant notifications and other real-time events. The actual handling and display of these notifications within the application are managed by the `useNotifications` composable.
+The SignalR Plugin establishes a persistent connection between the client and the Virto Commerce Platform, allowing bidirectional communication. This is primarily used for receiving instant notifications and other real-time events. The actual handling and display of these notifications within the application are managed by the `useNotifications` composable.
 
 For practical guidance on how to work with incoming push notifications, please refer to the [How-To: Working with Push Notifications using `useNotifications`](../Usage-Guides/working-with-push-notifications-using-usenotifications.md) guide.
 
@@ -87,7 +87,7 @@ You generally do not need to manually start or stop the SignalR connection.
 * **Specific `creator` for system events**: If your application needs to listen to specific categories of system-wide events (those sent via `SendSystemEvents`), ensure the `creator` specified in the `VcShellFramework` setup matches the `creator` identifier used in those event messages from the server. This ensures correct filtering.
 * **Rely on `useNotifications`**: For handling the logic and display of incoming notifications, use the `useNotifications` composable as described in its [How-To guide](../Usage-Guides/working-with-push-notifications-using-usenotifications.md). Avoid direct manipulation of the SignalR connection for this purpose.
 * **Understand `PushNotification` Structure**: Familiarize yourself with the `PushNotification` interface to correctly interpret notification data, especially the role of the `creator` field for system events.
-* **Server-Side Logic**: Remember that SignalR is a transport mechanism. The logic for *what* to send, *when*, and with which `creator` identifier (for system events) resides on the server (VirtoCommerce Platform).
+* **Server-Side Logic**: Remember that SignalR is a transport mechanism. The logic for *what* to send, *when*, and with which `creator` identifier (for system events) resides on the server (Virto Commerce Platform).
 
 ## Related resources
 

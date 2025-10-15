@@ -1,6 +1,6 @@
 # VC-Shell Overview
 
-[VirtoCommerce Vue3 Frontend](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current vc-platform manager concept.
+[VC-Shell Framework](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current VC Platform manager concept.
 
 ![Vendor portal](../media/vendor-portal.png)
 
@@ -8,7 +8,7 @@ VC-Shell is a modern framework for building specialized back-office applications
 
 ## Purpose
 
-VC-Shell was created to replace the AngularJS-based VirtoCommerce Platform manager with a modern Vue 3 implementation. The key goals of the framework are:
+VC-Shell was created to replace the AngularJS-based Virto Commerce Platform manager with a modern Vue 3 implementation. The key goals of the framework are:
 
 - Technological modernization from AngularJS to Vue 3
 - Modular architecture with separate packages and release cycles

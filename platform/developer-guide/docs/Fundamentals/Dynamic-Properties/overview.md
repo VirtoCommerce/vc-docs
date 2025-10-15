@@ -1,6 +1,6 @@
 # Manage Dynamic Properties
 
-Virto Commerce Platform enables adding new properties to entities at runtime. 
+The Virto Commerce Platform enables adding new properties to entities at runtime. 
 
 ## Add new dynamic property for existing type from UI
 
@@ -38,4 +38,4 @@ The modifications have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../Taxes/tax-providers-configuration">← Configuring tax providers </a>
-    <a href="../../Notifications/overview">Managing notifications  →</a>
+    <a href="../using_DynamicPropertyAccessor">Using DynamicPropertyAccessor  →</a>

@@ -7,7 +7,7 @@ One of the clear advantages of using API key authentication is its inherent simp
 
 To create a new API key:
 
-1. Open platform and click **Security** in the main menu. 
+1. Open Platform and click **Security** in the main menu. 
 1. In the next blade, click **Users**.
 1. In the next blade, select the desired user. 
 1. In the next blade, click on the **Api key** widget. 

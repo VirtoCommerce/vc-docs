@@ -64,5 +64,5 @@ Click on the reddish widgets to complete the descriptions from the current locat
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Catalog Publishing module overview</a>
-    <a href="../../catalog-csv-export-import/overview">Catalog CSV Export and Import module overview →</a>
+    <a href="../../contracts/overview">Contracts module overview →</a>
 </div>

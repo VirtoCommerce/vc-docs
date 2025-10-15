@@ -1,6 +1,6 @@
 # Grab Migrator Utility Quickstart
 
-This guide introduces the Grab Migrator utility, which facilitates the extraction and application of EF-migrations from the Virto Commerce platform and its modules.
+This guide introduces the Grab Migrator utility, which facilitates the extraction and application of EF-migrations from the Virto Commerce Platform and its modules.
 
 ## Run
 
@@ -12,9 +12,9 @@ vc-build GrabMigrator --grab-migrator-config <configfile>
 
 ## Grab migrations from Platform and modules
 
-This section outlines the process of extracting EF-migrations from both the platform and its modules:
+This section outlines the process of extracting EF-migrations from both the Platform and its modules:
 
-1. Checkout platform/modules source codes.
+1. Checkout Platform/modules source codes.
 1. Ensure the **dotnet-ef** tool is installed. If not, reference to the [Installation guide](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet).
 1. Prepare the grab config file as follows:
 
@@ -35,7 +35,7 @@ This section outlines the process of extracting EF-migrations from both the plat
     | ------------------------- | --------------------------------------------------------------------------------------------------------- |
     | `MigrationDirectories`    | Directories where tool searches for migrations. Multiple paths can be specified.                          |   
     | `StatementsDirectory`     | There the tool stores grabbed SQL statements. One file per module. Default is 'Statements'.               |
-    | Mode                      | 'V2V3' or 'All'. Upgrade platform v2 to v3 scripts or all scripts should be grabbed. Default is 'V2V3'.   |
+    | Mode                      | 'V2V3' or 'All'. Upgrade Platform v2 to v3 scripts or all scripts should be grabbed. Default is 'V2V3'.   |
 
 1. Run the tool, wait for the sql files to appear in **Statements** directory.
 1. Check the config file: the `ConnectionStringsRefs` node should appear.

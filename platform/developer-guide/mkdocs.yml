@@ -153,6 +153,7 @@ nav:
                 - Configuration: Fundamentals/SEO/configuration.md
           - Dynamic Properties:
                 - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
+                - Using DynamicPropertyAccessor: Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md
           - Notifications:
                 - Overview: Fundamentals/Notifications/overview.md
                 - Registering New Notification Type: Fundamentals/Notifications/registering-new-notification-type.md
@@ -438,6 +439,17 @@ nav:
                       - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
                 - Mutations:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+          - Loyalty:
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview.md
+                - Queries:
+                      - loyaltyBalance: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyBalance.md
+                      - loyaltyPointsHistory: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyPointsHistory.md
+                - Objects: 
+                      - LoyaltyBalanceResult: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyBalanceResult.md
+                      - LoyaltyOperationLog: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLog.md
+                      - LoyaltyOperationLogConnection: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogConnection.md
+                      - LoyaltyOperationLogEdge: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogEdge.md
+                      - LoyaltyOperationLogObject: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogObject.md
           - xMarketing:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
                 - Queries:
@@ -772,7 +784,7 @@ nav:
     - Custom Apps Development:
           - Overview: custom-apps-development/overview.md
           - Registering New App: custom-apps-development/how-to-register-new-app.md
-          - VC Shell:
+          - VC-Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md

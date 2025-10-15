@@ -23,6 +23,6 @@ With the Shopify Taxonomy module, users can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../shipping/overview">← Shipping module overview</a>
+    <a href="../../shipstation/overview">← ShipStation module overview</a>
     <a href="../importing-shopify-taxonomy">Importing Shopify Taxonomy →</a>
 </div>

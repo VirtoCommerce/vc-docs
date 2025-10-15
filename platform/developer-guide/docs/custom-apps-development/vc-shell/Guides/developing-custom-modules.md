@@ -6,7 +6,7 @@ This guide picks up after you understand the [Core Concepts of a Custom VC-Shell
 
 ## What is a Module in VC-Shell?
 
-A module in VC-Shell represents a distinct piece of functionality within your application. Think of it as a mini-application focused on a particular domain or a set of related tasks. For example, in an e-commerce application, you might have modules for:
+A module in VC-Shell represents a distinct piece of functionality within your application. Think of it as a mini-application focused on a particular domain or a set of related tasks. For example, in an ecommerce application, you might have modules for:
 
 -   **Products**: Managing product listings, details, inventory.
 -   **Orders**: Viewing and processing customer orders.
@@ -53,8 +53,8 @@ src/
 
 Let's break down these key directories and files within a module:
 
--   **`components/`**: Contains Vue components that are primarily used within this module. 
-    -   If a component is highly specific to a single page/blade, it might reside alongside that page file or in a subdirectory within `pages/`. 
+-   **`components/`**: Contains Vue components that are primarily used within this module.
+    -   If a component is highly specific to a single page/blade, it might reside alongside that page file or in a subdirectory within `pages/`.
     -   If a component is reusable across multiple pages *within this module*, `components/` is the place for it.
     -   The `components/notifications/` subfolder is a conventional place for custom Vue components used to render specific types of push notifications relevant to this module (see "[Customizing Notifications](./../Essentials/Usage-Guides/customizing-notifications.md)").
 -   **`composables/`**: This directory houses Vue Composition API functions (composables) that encapsulate reactive state and logic specific to the module. For example, a `useProductList.ts` composable in a "Products" module would handle fetching, filtering, and managing the state of the product list.
@@ -99,7 +99,7 @@ Pages in a module are typically Vue components that represent full views or blad
 
 Let's create a simple blade to list reviews and another to view/edit a single review.
 
-**`src/modules/reviews/pages/ReviewListBlade.vue`**: 
+**`src/modules/reviews/pages/ReviewListBlade.vue`**:
 ```vue
 <template>
   <VcBlade
@@ -205,7 +205,7 @@ onMounted(() => {
 </script>
 ```
 
-**`src/modules/reviews/pages/ReviewEditBlade.vue`**: 
+**`src/modules/reviews/pages/ReviewEditBlade.vue`**:
 ```vue
 <template>
   <VcBlade
@@ -239,7 +239,7 @@ import { VcBlade, type IParentCallArgs } from "@vc-shell/framework";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 // Import a composable for handling single review logic (creation/editing)
-// import { useReviewDetails } from "../composables/useReviewDetails"; 
+// import { useReviewDetails } from "../composables/useReviewDetails";
 
 interface Props {
   // reviewId?: string; // This will be passed from the route params via 'param' prop now
@@ -270,7 +270,7 @@ const { t } = useI18n();
 
 defineOptions({
   name: "ReviewEditBlade",
-  url: "/review", 
+  url: "/review",
   permissions: ["reviews:edit"], // Or "reviews:create", "reviews:edit" depending on logic
 });
 
@@ -314,7 +314,7 @@ const isNew = computed(() => !props.param); // Use param to determine if it's a 
 Composables encapsulate the state and logic related to your module's features.
 We will now adjust `useReviewList.ts` to use the actual `useApiClient` and a hypothetical generated API client.
 
-**`src/modules/reviews/composables/useReviewList.ts`**: 
+**`src/modules/reviews/composables/useReviewList.ts`**:
 ```typescript
 import { ref } from 'vue';
 import { useAsync, useApiClient } from '@vc-shell/framework';
@@ -323,12 +323,12 @@ import { useAsync, useApiClient } from '@vc-shell/framework';
 // and follows the naming convention of `[ServiceName]ApiClient`.
 import { ReviewsApiClient, type IReview } from '@/api_client';
 // If IReview is part of a namespace in the generated client, it might be:
-// import { VirtoCommercePlatformWebMarketplacesVendorsApiMarketplacevendorReviewsApiClient as ReviewsApiClient, 
+// import { VirtoCommercePlatformWebMarketplacesVendorsApiMarketplacevendorReviewsApiClient as ReviewsApiClient,
 //          VirtoCommercePlatformWebMarketplacesVendorsApiMarketplacevendorIReview as IReview } from '@/api_client';
 
 export function useReviewList() {
   const reviews = ref<IReview[]>([]);
-  
+
   // Get the API client instance using useApiClient
   // Pass the constructor of your specific API client.
   const { getApiClient } = useApiClient(ReviewsApiClient);
@@ -340,13 +340,13 @@ export function useReviewList() {
       // This example assumes a `searchReviews` method. Adjust as per your actual client.
       // You might pass search criteria, pagination, sorting, etc.
       const result = await client.searchReviews(searchCriteria || { /* default criteria */ });
-      
+
       // Assuming the API returns a structure like { items: [], totalCount: 0 }
       // Adjust based on your actual API response.
       if (result && Array.isArray(result.items)) {
         reviews.value = result.items;
         // You might also want to store totalCount for pagination
-        // totalCount.value = result.totalCount; 
+        // totalCount.value = result.totalCount;
       } else {
         // Handle cases where the response might not be as expected
         reviews.value = Array.isArray(result) ? result : [];
@@ -370,9 +370,9 @@ export function useReviewList() {
   //
   // async function goToPage(page: number) {
   //   currentPage.value = page;
-  //   await fetchReviews({ 
-  //     skip: (page - 1) * itemsPerPage.value, 
-  //     take: itemsPerPage.value 
+  //   await fetchReviews({
+  //     skip: (page - 1) * itemsPerPage.value,
+  //     take: itemsPerPage.value
   //   });
   // }
 
@@ -403,7 +403,7 @@ If your module requires UI pieces that are specific to it and reusable across it
 
 For example, you might create a `ReviewCard.vue` component to display a single review in a standardized format.
 
-**`src/modules/reviews/components/ReviewCard.vue`**: 
+**`src/modules/reviews/components/ReviewCard.vue`**:
 ```vue
 <template>
   <div class="review-card tw-border tw-p-3 tw-rounded tw-shadow-sm">
@@ -436,7 +436,7 @@ This component can then be imported and used within `ReviewListBlade.vue` or oth
 
 For any text that needs to be translated, add entries to locale files within your module, following a structured approach similar to other modules in your application.
 
-**`src/modules/reviews/locales/en.json`**: 
+**`src/modules/reviews/locales/en.json`**:
 ```json
 {
   "MODULE_REVIEWS": {
@@ -467,7 +467,7 @@ For any text that needs to be translated, add entries to locale files within you
 }
 ```
 
-**`src/modules/reviews/locales/es.json`** (Example for Spanish): 
+**`src/modules/reviews/locales/es.json`** (Example for Spanish):
 ```json
 {
   "MODULE_REVIEWS": {
@@ -514,7 +514,7 @@ The `index.ts` file in the root of your module directory (e.g., `src/modules/rev
 
 Here's an example for our "Reviews" module:
 
-**`src/modules/reviews/index.ts`**: 
+**`src/modules/reviews/index.ts`**:
 ```typescript
 import { createAppModule } from "@vc-shell/framework";
 // Import BladeInstanceConstructor for typing pages, as shown in modularity.md guide
@@ -522,7 +522,7 @@ import type { BladeInstanceConstructor } from "@vc-shell/framework/shared/compon
 
 // 1. Import Pages (Blades)
 //    Vue components defined in your module's `pages` directory.
-//    The static properties on these components (url, menuItem, permissions) 
+//    The static properties on these components (url, menuItem, permissions)
 //    will be used for routing, menu registration, and permissions.
 import ReviewListBlade from "./pages/ReviewListBlade.vue";
 import ReviewEditBlade from "./pages/ReviewEditBlade.vue";
@@ -561,7 +561,7 @@ const locales = {
 // Notification Templates: An object for custom notification renderers.
 // Keys are typically component names. Each component should have a static `notifyType` property.
 // For this "Reviews" module example, we'll assume none for now.
-const notificationTemplates = {}; 
+const notificationTemplates = {};
 // Example if we had one:
 // const notificationTemplates = {
 //   ReviewNotificationTemplate, // Component itself, expecting ReviewNotificationTemplate.notifyType to be set
@@ -595,7 +595,7 @@ The `createAppModule` function accepts the following arguments in order:
 1.  **`pages`** (Required, `Record<string, BladeInstanceConstructor>`)
     *   An object where keys are typically the component names (matching the keys used in the `pages` object passed to `createAppModule`) and values are the Vue component constructors for your module's pages. These pages are often "blades" in VC-Shell terminology.
     *   **Automatic Routing & Blade Properties**: Page components should have static properties defined on them, such as:
-        *   `url` (string, optional): Defines the blade's path segment. 
+        *   `url` (string, optional): Defines the blade's path segment.
             *   **For workspace blades (`isWorkspace: true`)**: This property is **required**, as workspaces are typically entry points accessible via a direct URL.
             *   **For child/non-workspace blades**: This property is **optional**. If provided, the blade can be part of a deep-linked URL (e.g., `/workspace-url/child-url`). If omitted, the blade can only be opened programmatically and will not have its own distinct URL segment. When a URL is resolved, the part of the path following a matched child blade's `url` is passed as the `param` prop to that child blade.
         *   `name` (string, **required**): A unique name for the blade, often matching its component name. This property is **required for all blades** as it's used for programmatic opening (e.g., `useBladeNavigation().openBlade({ blade: { name: 'MyBladeName' } })`) and internal identification.
@@ -608,7 +608,7 @@ The `createAppModule` function accepts the following arguments in order:
     *   An object where keys are locale codes (e.g., `"en"`, `"es"`) and values are the corresponding imported JSON-like objects containing translation strings for your module.
     *   **Automatic Merging**: These locales are automatically merged into the global `vue-i18n` instance when the module is registered. This makes them available throughout the application via `$t()` or `useI18n()` (typically with `useScope: 'global'` or if your i18n is configured to merge all module locales into the global scope).
 
-3.  **`notificationTemplates`** (Optional, `Record<string, Component & { notifyType?: string }>`) 
+3.  **`notificationTemplates`** (Optional, `Record<string, Component & { notifyType?: string }>`)
     *   An object for registering custom Vue components to be used as templates for specific notification types.
     *   The keys in this object are typically the component names (e.g., `MyCustomNotification`).
     *   Each registered component should have a static property `notifyType` (string) that matches the notification type string it is designed to handle (e.g., `MyCustomNotification.notifyType = 'review-submitted';`).
@@ -658,16 +658,16 @@ app.use(VirtoShellFramework, {
 
 // 2. Register each application module
 // The exact structure to access the list of modules might vary.
-// In the example, modules are under a `default` export 
+// In the example, modules are under a `default` export
 // from the `appModules` import, and each module itself is also under a `default` export.
 if (appModules.default) {
   Object.values(appModules.default).forEach((moduleDefinition: any) => {
     // Ensure you are accessing the correct module object that was returned by createAppModule.
     // It might be moduleDefinition.default if each module file also uses `export default`.
     const moduleToRegister = moduleDefinition.default || moduleDefinition;
-    
+
     // Pass any necessary options to the module during registration, e.g., the router instance.
-    app.use(moduleToRegister, { router }); 
+    app.use(moduleToRegister, { router });
   });
 } else {
   // Fallback or error handling if modules are not found as expected.
@@ -705,13 +705,13 @@ As shown in the `createAppModule` section, when you list your page components (b
     ```typescript
     // Inside ReviewListBlade.vue
     defineOptions({
-      name: "ReviewListBlade", 
+      name: "ReviewListBlade",
       url: "/reviews",       // This becomes the path
       // ... other options
     });
     ```
 2.  **`createAppModule`**: When your module is processed via `createAppModule` and subsequently registered in `main.ts`, the framework iterates through the `pages` object.
-3.  **Route Generation**: For each page, it generates a Vue Router route record. 
+3.  **Route Generation**: For each page, it generates a Vue Router route record.
     -   The `path` of the route is taken from the `url` in `defineOptions`.
     -   The `name` of the route is typically derived from the `name` in `defineOptions` (e.g., "ReviewListBlade").
     -   The `component` for the route is the page component itself.
@@ -758,7 +758,7 @@ For managing state **within** a module, the primary approach is to use Vue 3's C
 ```typescript
 import { ref } from 'vue';
 import { useAsync, useApiClient } from '@vc-shell/framework';
-// Assume: IReview interface and a specific ReviewDetailsApiClient are defined elsewhere 
+// Assume: IReview interface and a specific ReviewDetailsApiClient are defined elsewhere
 // and can be imported, similar to useReviewList.ts
 import { type IReview, ReviewDetailsApiClient } from '@/api_client'; // Adjust path and names as needed
 
@@ -861,22 +861,21 @@ defineExpose({
 </script>
 ```
 
-### Accessing Blade-Specific Context with `inject(BladeInstance)`
+### Accessing Blade-Specific Context with `useBlade()`
 
-While `param` and `options` are passed as props to your blade component, VC-Shell provides a more comprehensive way to access the current blade's context through Vue's dependency injection mechanism. You can inject `BladeInstance` to get an `ComputedRef<IBladeInstance>` object.
+While `param` and `options` are passed as props to your blade component, VC-Shell provides a more comprehensive way to access the current blade's context through Vue's dependency injection mechanism. You can use `useBlade()` composable to get an `ComputedRef<IBladeInstance>` object.
 
-**Importing `BladeInstance` and `IBladeInstance`:**
+**Importing `useBlade()`:**
 
 ```typescript
-import { inject, type ComputedRef } from 'vue'; // Added ComputedRef for clarity
-import { BladeInstance, type IBladeInstance } from '@vc-shell/framework'; // Adjust path if necessary based on your project's aliasing
+import { useBlade } from '@vc-shell/framework';
 ```
 
-**Injecting and Using `BladeInstance`:**
+**Using `useBlade()`:**
 
 ```typescript
 // Inside your blade's <script setup lang="ts">
-const currentBlade: ComputedRef<IBladeInstance | undefined> = inject(BladeInstance);
+const currentBlade = useBlade();
 
 if (currentBlade?.value) { // Check if currentBlade and currentBlade.value are defined
   console.log('Current Blade ID:', currentBlade.value.id); // e.g., "revieweditblade"
@@ -901,7 +900,7 @@ The `IBladeInstance` (accessed via `currentBlade.value`) typically provides the 
 *   `breadcrumbs?: Breadcrumbs[]`: An array of breadcrumb items relevant to this blade.
 *   `title?: string`: The current title of the blade.
 
-Using `inject(BladeInstance)` can be particularly useful for accessing properties like `id`, `maximized` state, or the blade's `title` directly within your blade's logic, beyond what's passed via standard props. It provides a richer, reactive view of the blade's current state within the navigation system.
+Using `useBlade();` can be particularly useful for accessing properties like `id`, `maximized` state, or the blade's `title` directly within your blade's logic, beyond what's passed via standard props. It provides a richer, reactive view of the blade's current state within the navigation system.
 
 ### Blade Lifecycle and Navigation
 
@@ -956,7 +955,7 @@ Blades in VC-Shell have a defined lifecycle, managed by the framework and influe
 
 3.  **Expanding and Collapsing:**
     *   Blades can signal their intent to expand or collapse by emitting `expand:blade` or `collapse:blade` events respectively (typically in response to user interaction with controls within the blade, like header buttons).
-    *   The `VcBlade` component itself handles these events and updates its internal state, which can also be reflected in the `maximized` property of the `IBladeInstance` (accessible via `inject(BladeInstance)`).
+    *   The `VcBlade` component itself handles these events and updates its internal state, which can also be reflected in the `maximized` property of the `IBladeInstance` (accessible via `useBlade()`).
     *   If a blade needs to react internally to being expanded or collapsed, it can watch its `expanded` prop (if passed and managed by a parent) or the `maximized` state from its injected `BladeInstance`.
 
 **Programmatic Navigation with `useBladeNavigation`:**

@@ -10,7 +10,7 @@ The **Skyflow** module facilitates seamless integration with [Skyflow](https://w
 
 * **Unified credit card user experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
 * **PCI compliance:** Ensure PCI compliance with Skyflow, simplifying adherence to industry standards for secure payment data handling.
-* **Integration with Virto Commerce Frontend:** Seamlessly integrate with [Virto Frontend Application](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive e-commerce experience.
+* **Integration with Virto Commerce Frontend:** Seamlessly integrate with [Virto Frontend Application](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive ecommerce experience.
 * **Flexible customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and Skyflow to tailor integrations with a variety of payment providers to meet your specific requirements.
 * **Optimized for marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
 * **Saved credit card:** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions.
@@ -135,10 +135,9 @@ To customize the module:
         * Create a new Virto Commerce Module.
         * Implement [IPaymentClient](https://github.com/VirtoCommerce/vc-module-skyflow/blob/dev/src/VirtoCommerce.Skyflow.Core/Services/IPaymentClient.cs#L6) interface.
         * Register `IPaymentClient` in `IPaymentClientFactory`.
-2. Use `SkyflowPaymentMethod` class for:
+1. Use `SkyflowPaymentMethod` class for:
     * `initializePayment` (in GraphQL): Returns a token for frontend operations.
     * `authorizePayment`: Invokes `IPaymentClientFactory` to obtain an instance of `IPaymentClient` for processing transactions using the required Connection.
-
 
 
 <br>
