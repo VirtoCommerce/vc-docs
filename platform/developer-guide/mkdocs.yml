@@ -784,7 +784,7 @@ nav:
     - Custom Apps Development:
           - Overview: custom-apps-development/overview.md
           - Registering New App: custom-apps-development/how-to-register-new-app.md
-          - VC Shell:
+          - VC-Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md

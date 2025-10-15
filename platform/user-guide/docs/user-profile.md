@@ -24,6 +24,6 @@ Your settings are saved automatically.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../general-guidelines">← General guidelines </a>
+    <a href="../virto-oz">← Virto OZ AI assistant </a>
     <a href="../modules-installation">Modules installation →</a>
 </div>

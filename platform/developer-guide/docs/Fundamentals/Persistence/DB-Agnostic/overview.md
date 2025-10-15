@@ -2,7 +2,7 @@
 
 Database agnostic architecture is a design strategy that allows an application to function with any database, regardless of its vendor or type.
 
-Virto Commerce has full DB agnostic support for e-commerce modules and offers unlimited scalability - our customers have the flexibility to choose the best-in-breed database. We offer a range of out-of-the-box database providers, including Microsoft SQL Server, MySql, and PostgreSql.
+Virto Commerce has full DB agnostic support for ecommerce modules and offers unlimited scalability - our customers have the flexibility to choose the best-in-breed database. We offer a range of out-of-the-box database providers, including Microsoft SQL Server, MySql, and PostgreSql.
 
 ## Architecture principles
 

@@ -16,7 +16,7 @@ Users can verify their email address by clicking a verification link sent to the
 1. A **SendVerificationEmail** endpoint is activated. It publishes `UserVerificationEmailEvent` via `IEventPublisher.Publish()`.
 1. `UserVerificationEmailEvent` event is received in VirtoCommerce.StoreModule.
 1. The received `ApplicationUser` is passed to `IStoreNotificationSender.SendUserEmailVerificationAsync()` (as a background job).
-1. If e-mail verification is not enabled for the particular store, stop processing and exit.
+1. If email verification is not enabled for the particular store, stop processing and exit.
 1. `ConfirmationEmailNotification` notification template is retrieved and filled.
 1. Notification is passed to `INotificationSender.SendNotificationAsync()` for dispatching.
 

@@ -1,6 +1,6 @@
 # Indexed Search
 
-This article provides an overview of indexed search that is one of the key features of any e-commerce solution. Search is fundamental to any e-commerce application that presents textual content to users, with common scenarios including catalog or entity search or data exploration.
+This article provides an overview of indexed search that is one of the key features of any ecommerce solution. Search is fundamental to any ecommerce application that presents textual content to users, with common scenarios including catalog or entity search or data exploration.
 
 A search service is an intermediary between: 
 

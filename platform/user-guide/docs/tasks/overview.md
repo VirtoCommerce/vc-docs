@@ -1,13 +1,13 @@
 # Overview
 
-The **Tasks** application in Virto Commerce is a powerful tool that enables users to manage tasks and workflows within the Platform. With the Tasks application, users can:
+The **Tasks** (**Task management**) module in Virto Commerce is a powerful tool that enables users to manage tasks and workflows within the Platform. With the Tasks application, users can:
 
 * Create tasks.
 * Assign tasks to specific users or groups.
 * Set due dates.
 * Track progress. 
 
-The tasks application is fully integrated with the Virto Commerce Platform, which means that users can manage tasks within the same interface they use for managing products and orders. Use VC Shell to view the installed applications.
+Use VC-Shell to work with the tasks module.
 
 [![Install Tasks application](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-task-management/releases)
 
@@ -19,5 +19,5 @@ The tasks application is fully integrated with the Virto Commerce Platform, whic
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../subscription/overview">← Subscription module overview</a>
-    <a href="../using-application">Using Tasks application →</a>
+    <a href="../using-application">Using Tasks module →</a>
 </div>

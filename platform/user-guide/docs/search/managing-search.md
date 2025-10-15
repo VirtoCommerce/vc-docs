@@ -5,11 +5,11 @@ To open search index details:
 1. Click **Search Index** in the main menu.
 1. The next blade displays:
     * The managed record types:
-        * **Members**: Users or entities that have access to the platform.
-        * **Content files**: Any type of digital content stored within the platform.
-        * **Product**: The goods or services offered for sale within the Virto Commerce platform.
-        * **Category**: Similar characteristics used to organize and classify products within the platform.
-        * **Customer order**: Transactions where customers purchase products or services from the platform.
+        * **Members**: Users or entities that have access to the Platform.
+        * **Content files**: Any type of digital content stored within the Platform.
+        * **Product**: The goods or services offered for sale within the Virto Commerce Platform.
+        * **Category**: Similar characteristics used to organize and classify products within the Platform.
+        * **Customer order**: Transactions where customers purchase products or services from the Platform.
 
     * The search provider for each record type:
         * Elastic App Search.

@@ -8,8 +8,8 @@ The `CancelQuoteCommandType!` is used for a command to cancel a quote.
 
 |Field|	Description|
 |-----|------------|
-|`quoteId` ==String!==|	The Id of the quote to be canceled.|
-|`comment` ==String!==|	A comment or reason for canceling the quote.|
+|`quoteId` ==String!==|	The Id of the quote to be cancelled.|
+|`comment` ==String!==|	A comment or reason for cancelling the quote.|
 
 
 ## Possible returns

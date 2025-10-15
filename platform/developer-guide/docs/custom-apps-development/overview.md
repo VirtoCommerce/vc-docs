@@ -10,7 +10,7 @@ Virto Commerce's multi-app experience:
 * Enables multiple teams to work simultaneously on different aspects of the project. 
 * Simplifies scalability.
 
-![Multi-App](media/multi-app-demo.gif)
+![Multi-App](media/multi-app-demo.png)
 
 ## Architecture
 Virto Commerce's multi-app architecture allows companies to create different UIs on any web technology, such as VueJs, Angular, React, and more, while maintaining a single UX. 

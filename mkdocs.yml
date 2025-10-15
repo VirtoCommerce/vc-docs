@@ -458,7 +458,7 @@ extra:
               description:
                 - title: Frontend Application
                   link: storefront
-                - title: VC Shell
+                - title: VC-Shell
                   link: platform/developer-guide/custom-apps-development/overview
 
             # - title: Marketplace
@@ -559,7 +559,7 @@ extra:
                       links:
                         - title: State Machine Module
                           url: /marketplace/developer-guide/state-machine-module/overview
-                - title: VC Shell
+                - title: VC-Shell
                   content:
                     - title: Developer Guide
                       links:
@@ -595,7 +595,7 @@ extra:
                       url: /storefront/developer-guide/
                     - title: User Getting Started
                       url: /storefront/user-guide/
-                - title: VC Shell
+                - title: VC-Shell
                   links:
                     - title: Developer Getting Started
                       url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app

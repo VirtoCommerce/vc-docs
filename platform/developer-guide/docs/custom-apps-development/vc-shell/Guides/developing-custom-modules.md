@@ -6,7 +6,7 @@ This guide picks up after you understand the [Core Concepts of a Custom VC-Shell
 
 ## What is a Module in VC-Shell?
 
-A module in VC-Shell represents a distinct piece of functionality within your application. Think of it as a mini-application focused on a particular domain or a set of related tasks. For example, in an e-commerce application, you might have modules for:
+A module in VC-Shell represents a distinct piece of functionality within your application. Think of it as a mini-application focused on a particular domain or a set of related tasks. For example, in an ecommerce application, you might have modules for:
 
 -   **Products**: Managing product listings, details, inventory.
 -   **Orders**: Viewing and processing customer orders.

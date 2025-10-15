@@ -38,7 +38,7 @@ All SEO-related services and models in the core module have been marked as **Obs
 
 To keep using SEO functionality:
 
-* You need to install Seo module for e-commerce bundle.​
+* You need to install Seo module for ecommerce bundle.​
 * If you have custom code referencing SEO functionality in the core module, you should migrate to SEO module.​
 
 

@@ -6,8 +6,8 @@ This type contains various fields or attributes that provide information about t
 
 | Field                                         | Description                                                                       |
 | --------------------------------------------- | --------------------------------------------------------------------------------- |
-| `cancelledDate`  ==DateTime==                 | The date when the order was canceled.                                             |
-| `cancelReason`  ==String==                    | The reason for canceling the order.                                               |
+| `cancelledDate`  ==DateTime==                 | The date when the order was cancelled.                                             |
+| `cancelReason`  ==String==                    | The reason for cancelling the order.                                               |
 | `channelId`  ==String==                       | The Id for the channel through which the order was placed.                        |
 | `comment`  ==String==                         | Any additional comments or notes related to the order.                            |
 | `coupon`  ==String==                          | The coupon associated with the order.                                             |
@@ -22,7 +22,7 @@ This type contains various fields or attributes that provide information about t
 | `id`  ==String!==                             | The Id for the order.                                                             |
 | `innerComment`  ==String==                    | Internal comments or notes related to the order.                                  |
 | `isAnonymous`  ==Boolean!==                   | A flag indicating whether the order is anonymous.                         |
-| `isCancelled`  ==Boolean!==                   | A flag indicating whether the order has been canceled.                    |
+| `isCancelled`  ==Boolean!==                   | A flag indicating whether the order has been cancelled.                    |
 | `isLocked`  ==Boolean!==                      | A flag indicating whether the order is locked.                            |
 | `languageCode`  ==String==                    | The language code associated with the order.                                      |
 | `modifiedBy`  ==String==                      | The user who last modified the order.                                             |

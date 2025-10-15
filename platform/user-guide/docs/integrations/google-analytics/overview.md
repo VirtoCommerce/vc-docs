@@ -4,7 +4,7 @@ Your Virto Commerce store can be seamlessly integrated with Google Analytics 4 u
 
 * Assign Google Analytics measurement Id for your store.
 * Measure traffic. 
-* Measure the following e-commerce events with Virto Commerce Frontend Application:
+* Measure the following ecommerce events with Virto Commerce Frontend Application:
     * Selecting an item from a category.
     * Viewing product details.
     * Adding/removing a product from a shopping cart.
