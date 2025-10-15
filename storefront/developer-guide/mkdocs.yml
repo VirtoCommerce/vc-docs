@@ -15,6 +15,11 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
 
 # Page tree
 nav:
@@ -27,13 +32,13 @@ nav:
     - Update: update.md
     - Customization and Development Accelerators:
         - Overview: customization/overview.md
-        - Customization: 
+        - Customization:
             - Overview: customization/customization-overview.md
             - Visual Theme Customization: customization/visual-theme-customization.md
             - Functionality Customization: customization/functionality-customization.md
-        - Development Accelerators: 
+        - Development Accelerators:
             - Overview: customization/accelerators-overview.md
-            - Guidelines for Using Accelerators: customization/accelerators-guidelines.md  
+            - Guidelines for Using Accelerators: customization/accelerators-guidelines.md
             - Locales Management: customization/texts-customization.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md

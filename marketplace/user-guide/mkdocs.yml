@@ -15,6 +15,12 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
+
 # Page tree
 nav:
     - Overview: index.md

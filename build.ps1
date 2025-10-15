@@ -1,3 +1,10 @@
+# Development build script (non-versioned)
+# This script builds all documentation sites without versioning for local development and testing.
+# For production builds with versioning, use: .\scripts\build-versioned.ps1
+#
+# Usage:
+#   .\build.ps1
+
 mkdocs build  -d ./site
 
 mkdocs build  -f storefront/mkdocs.yml -d ../site/storefront

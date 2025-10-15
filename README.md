@@ -35,62 +35,138 @@ pip install mkdocs-material mike mkdocs-awesome-pages-plugin \
 
 ## Documentation Versioning with Mike
 
-This project uses [Mike](https://github.com/jimporter/mike) for documentation versioning. Mike makes it easy to deploy multiple versions of your MkDocs documentation with a version selector.
+This project uses [Mike](https://github.com/jimporter/mike) for **independent versioning of each documentation subsite**.
 
-### View existing versions
-```bash
-mike list
+### Architecture
+
+The documentation is structured with **7 independently versioned subsites**:
+
+- `marketplace/developer-guide` ✓ Versioned
+- `marketplace/user-guide` ✓ Versioned
+- `platform/developer-guide` ✓ Versioned
+- `platform/user-guide` ✓ Versioned
+- `platform/deployment-on-cloud` ✓ Versioned
+- `storefront/developer-guide` ✓ Versioned
+- `storefront/user-guide` ✓ Versioned
+
+Root site (`/`) and intermediate sites (`/marketplace/`, `/platform/`, `/storefront/`) remain **unversioned**.
+
+### URL Structure
+
+Versions are part of the URL path:
+```
+https://docs.virtocommerce.org/marketplace/developer-guide/1.0/
+https://docs.virtocommerce.org/platform/user-guide/3.2025-S13/
+https://docs.virtocommerce.org/storefront/developer-guide/latest/
 ```
 
-### Serve documentation with version selector
-```bash
-mike serve
-```
-Open http://localhost:8000 - you'll see the version selector in the top right corner.
+### Quick Start Commands
 
-### Deploy a new version
-```bash
-# Deploy version 3.2025-S13
-mike deploy 3.2025-S13
+#### Deploy All Subsites (Same Version)
 
-# Deploy version and update the 'latest' alias
-mike deploy --update-aliases 3.2025-S13 latest
+Deploy all 7 subsites with version 3.2025-S13:
 
-# Set default version (for root URL redirect)
-mike set-default latest
+```powershell
+# PowerShell
+.\scripts\build-versioned.ps1 -Version "3.2025-S13" -SetAsLatest -SetAsDefault
+
+# Bash/Linux/macOS
+./scripts/build-versioned.sh 3.2025-S13 --set-latest --set-default
 ```
 
-### How Mike Works
+#### Deploy Single Subsite
 
-Mike stores all versions in the `gh-pages` branch as static files. The version selector is included automatically.
+Deploy a specific subsite with a version:
 
-**Important:** 
-- `mike serve` - only for local preview (doesn't create files)
-- `mike deploy` - creates/updates version in gh-pages branch
-- Version selector requires a web server (won't work with `file://`)
+```powershell
+# PowerShell
+.\scripts\deploy-version.ps1 -SubsitePath "marketplace/developer-guide" -Version "1.0" -Alias "latest" -SetDefault
 
-### Export for Deployment
+# Bash/Linux/macOS
+./scripts/deploy-version.sh marketplace/developer-guide 1.0 latest --set-default
+```
 
-To get all versioned documentation with selector for deployment:
+#### List Versions
+
+View all deployed versions:
+
+```powershell
+# PowerShell
+.\scripts\list-versions.ps1                                    # All subsites
+.\scripts\list-versions.ps1 -SubsitePath "platform/user-guide" # Specific subsite
+
+# Bash/Linux/macOS
+./scripts/list-versions.sh                        # All subsites
+./scripts/list-versions.sh platform/user-guide    # Specific subsite
+```
+
+#### Test Locally with Versions
+
+**Option 1: Test a versioned subsite with Mike**
 
 ```bash
-# Method 1: Use the export script
-./export-versioned-docs.sh
+# From root directory
+cd /Users/symbot/DEV/vc-docs
 
-# Method 2: Manual export
+# Set default version (required for root URL to work)
+mike set-default -F marketplace/developer-guide/mkdocs.yml \
+    --deploy-prefix marketplace/developer-guide 1.0
+
+# Start server from subsite directory
+cd marketplace/developer-guide && mike serve
+
+# Open http://localhost:8000
+```
+
+**Option 2: View all deployed versions from gh-pages**
+
+```bash
+# Switch to gh-pages branch
 git checkout gh-pages
-cp -r . ../site-export
-git checkout -
-mv ../site-export site
+
+# Start HTTP server
+python3 -m http.server 8000
+
+# Open http://localhost:8000/marketplace/developer-guide/
 ```
 
-After export, the `site/` folder will contain:
-- All versions (latest/, 3.2025-S12/, etc.)
-- versions.json (version list)
-- index.html (redirect to default version)
-- Version selector (built into each version)
+### How It Works
 
-Deploy the entire `site/` folder to your web server.
+Mike stores versions in the `gh-pages` branch with this structure:
+
+```
+gh-pages/
+├── marketplace/
+│   ├── developer-guide/
+│   │   ├── 1.0/
+│   │   ├── 1.1/
+│   │   ├── latest/
+│   │   └── versions.json
+│   └── user-guide/
+│       ├── 1.0/
+│       └── versions.json
+├── platform/
+│   ├── developer-guide/
+│   └── user-guide/
+└── storefront/
+    ├── developer-guide/
+    └── user-guide/
+```
+
+Each subsite maintains its own:
+- Version history
+- Version selector
+- Default version
+- Aliases (latest, stable, etc.)
+
+### Documentation
+
+For detailed information, see:
+- **[VERSIONING.md](VERSIONING.md)** - Complete versioning strategy, workflows, and best practices
+- **Scripts documentation:**
+  - `scripts/build-versioned.ps1` - Deploy all subsites with a version
+  - `scripts/deploy-version.ps1` - Deploy single subsite with a version
+  - `scripts/list-versions.ps1` - List versions for subsites
 
 ## Development Workflow
 

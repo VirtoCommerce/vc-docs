@@ -15,9 +15,15 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
+
 # Page tree
 nav:
-    - State Machine Module: 
+    - State Machine Module:
         Overview: state-machine-module/overview.md
         Data Structure: state-machine-module/data-structure.md
         Entity Types: state-machine-module/entity-types.md

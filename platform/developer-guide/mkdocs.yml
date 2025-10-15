@@ -15,6 +15,11 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
 
 # Page tree
 nav:
@@ -444,7 +449,7 @@ nav:
                 - Queries:
                       - loyaltyBalance: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyBalance.md
                       - loyaltyPointsHistory: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyPointsHistory.md
-                - Objects: 
+                - Objects:
                       - LoyaltyBalanceResult: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyBalanceResult.md
                       - LoyaltyOperationLog: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLog.md
                       - LoyaltyOperationLogConnection: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogConnection.md

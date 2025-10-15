@@ -15,6 +15,11 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
 
 # Page tree
 nav:
@@ -179,7 +184,7 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
-          - Loyalty: 
+          - Loyalty:
                 - Overview: loyalty/overview.md
                 - Enabling and Configuring Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
           - News:
