@@ -16,7 +16,7 @@ The example below demonstrates debugging a third party NuGet package without hav
 
 Source Link is the preferred way to debug the VC components because:
 
-* All VC platform and modules components already support the Source Link technology.
+* All VC Platform and modules components already support the Source Link technology.
 * You can step into framework methods as if you were debugging with your own code.
 * You can inspect all variables and set breakpoints.
 

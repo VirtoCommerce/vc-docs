@@ -2,7 +2,7 @@
 
 The Permissions Plugin, primarily accessed through the `usePermissions` composable, provides role-based access control (RBAC) capabilities within VC-Shell applications. It allows you to restrict access to different parts of your application and conditionally render UI elements based on user permissions.
 
-The `usePermissions` composable integrates with VirtoCommerce Platform's permission system. It enables your components and services to check if the currently authenticated user possesses specific permissions required to perform an action or view certain content.
+The `usePermissions` composable integrates with Virto Commerce Platform's permission system. It enables your components and services to check if the currently authenticated user possesses specific permissions required to perform an action or view certain content.
 
 Route protection itself (i.e., defining which permissions are needed for a route) is typically handled declaratively when registering pages/blades through the Modularity system (e.g., via the `permissions` property of a page component passed to `createAppModule`). The VC-Shell framework's navigation guards then enforce these rules, often using `usePermissions` internally.
 

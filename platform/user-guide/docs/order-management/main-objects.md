@@ -1,6 +1,6 @@
 # Order Information
 
-Once the order is created by the customer, the details are immediately displayed in the Virto Commerce platform.
+Once the order is created by the customer, the details are immediately displayed in the Virto Commerce Platform.
 
 To view the list of orders:
 

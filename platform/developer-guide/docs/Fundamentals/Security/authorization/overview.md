@@ -38,7 +38,7 @@ This solution has the following benefits:
 * You can redefine a role by changing its permissions.
 * You can implement the administration UI to easily edit roles and permissions.
 
-The Virto Commerce platform supports two main authorization strategy types for permission authorization:
+The Virto Commerce Platform supports two main authorization strategy types for permission authorization:
 
 * **Permission:** Basic right or permission. The system has a global list of predefined permissions . You can assign permissions to users via group permissions by creating a role and then assigning that role to a user.
 	* [**Global permissions:**](global-permissions.md) Permissions that are checked without taking the requested resources into account. To check this sort of permissions, you need to operate permission names only, for example, `Authorize("{permission}")`.

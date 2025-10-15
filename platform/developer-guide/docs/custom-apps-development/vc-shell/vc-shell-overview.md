@@ -8,7 +8,7 @@ VC-Shell is a modern framework for building specialized back-office applications
 
 ## Purpose
 
-VC-Shell was created to replace the AngularJS-based VirtoCommerce Platform manager with a modern Vue 3 implementation. The key goals of the framework are:
+VC-Shell was created to replace the AngularJS-based Virto Commerce Platform manager with a modern Vue 3 implementation. The key goals of the framework are:
 
 - Technological modernization from AngularJS to Vue 3
 - Modular architecture with separate packages and release cycles

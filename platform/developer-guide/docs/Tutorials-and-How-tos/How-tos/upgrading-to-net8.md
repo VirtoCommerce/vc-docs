@@ -1,6 +1,6 @@
 # Upgrading to Virto Commerce on .NET 8
 
-Virto Commerce on NET 8 (3.800+) introduces a significant technical update by transitioning the platform to .NET 8. This update focuses on enhancing performance and stability while maintaining backward compatibility. It involves updating the Target Framework to .NET 8 and integrating the latest LTS releases of third-party libraries. Importantly, no code refactoring or alterations to the API and internal structure have been made.
+Virto Commerce on NET 8 (3.800+) introduces a significant technical update by transitioning the Platform to .NET 8. This update focuses on enhancing performance and stability while maintaining backward compatibility. It involves updating the Target Framework to .NET 8 and integrating the latest LTS releases of third-party libraries. Importantly, no code refactoring or alterations to the API and internal structure have been made.
 
 The release has undergone extensive testing, including unit, end-to-end, regression, and performance tests to ensure a seamless transition as well as for other stable releases.
 
@@ -44,11 +44,11 @@ The process of updating to .NET 8 includes:
 
 === "Via package.json"
 
-    If you use package.json file for automated deployment, change versions of the platform and Virto Commerce modules to 3.800.0+. Based on latest Stable 8 or Edge release strategy.
+    If you use package.json file for automated deployment, change versions of the Platform and Virto Commerce modules to 3.800.0+. Based on latest Stable 8 or Edge release strategy.
 
 === "Manually" 
 
-Download platform and modules updates to version 3.800+. This method provides more control over the update process, allowing for a step-by-step transition.
+Download Platform and modules updates to version 3.800+. This method provides more control over the update process, allowing for a step-by-step transition.
 
 ### Update custom modules
 
@@ -100,7 +100,7 @@ vc-build Compress
 
 ## Run Virto Commerce on .NET 8
 
-With the update process completed, you can now run and enjoy the enhanced capabilities of Virto Commerce on the .NET 8 platform. Explore the platform new features and optimizations to leverage its full potential for an efficient e-commerce solution.
+With the update process completed, you can now run and enjoy the enhanced capabilities of Virto Commerce on the .NET 8 platform. Explore the Platform new features and optimizations to leverage its full potential for an efficient ecommerce solution.
 
 
 

@@ -2,7 +2,7 @@
 
 The `useApiClient` composable provides a standardized way to access API clients in VC-Shell applications. It serves as a factory for creating authenticated API client instances that can be used to make HTTP requests to backend services.
 
-The `useApiClient` composable simplifies the process of creating and using API clients in your application by handling common concerns such as authentication token management and base URL configuration. It's particularly useful for accessing platform APIs and custom API endpoints in a consistent manner.
+The `useApiClient` composable simplifies the process of creating and using API clients in your application by handling common concerns such as authentication token management and base URL configuration. It's particularly useful for accessing Platform APIs and custom API endpoints in a consistent manner.
 
 ## API reference
 

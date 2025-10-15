@@ -1,6 +1,6 @@
 # Event Bus
 
-The **Event Bus** module allows you to be notified of new Virto Commerce events or changes via the message queue of your choice. It triggers asynchronous background processes in response to platform events, delivering predefined messages or resource changes as payloads. This facilitates event-driven reactive programming using a publish-subscribe model, where publishers emit events without expectations, and subscribers choose which events to handle.
+The **Event Bus** module allows you to be notified of new Virto Commerce events or changes via the message queue of your choice. It triggers asynchronous background processes in response to the Platform events, delivering predefined messages or resource changes as payloads. This facilitates event-driven reactive programming using a publish-subscribe model, where publishers emit events without expectations, and subscribers choose which events to handle.
 
 The event description is based on the **CloudEvents** specification, which provides a standardized way to describe event data.
 

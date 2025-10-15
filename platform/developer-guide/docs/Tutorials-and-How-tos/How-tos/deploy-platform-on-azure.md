@@ -45,17 +45,17 @@ The following resources will be created during deployment:
     
     ![Deploy to azure](media/sign-in-page.png)
 
-1. After the database initialization is complete, Virto Commerce offers you to install sample data. Select this if required. The sample data can be a good starting point to launch a demo Frontend Application and play around with the platform:
+1. After the database initialization is complete, Virto Commerce offers you to install sample data. Select this if required. The sample data can be a good starting point to launch a demo Frontend Application and play around with the Platform:
 
     ![Choose sample data type](media/choose-sample-data-type.png)
 
-1. During the first login, the platform requires changing the default admin password:
+1. During the first login, the Platform requires changing the default admin password:
 
     ![Deply to azure](media/change-default-password.png)
 
-You have completed installation steps for Virto Commerce platform, now the application is ready.
+You have completed installation steps for Virto Commerce Platform, now the application is ready.
 
-## Extra Deployment
+## Extra deployment
 
 ### Deploy via PowerShell
 Read [Azure Resource Manager documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-powershell) to

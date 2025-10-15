@@ -195,7 +195,7 @@ my-custom-storefront/
 *   **api_client/**: This directory is intended to house API client code, typically generated from OpenAPI (Swagger) specifications of your backend services.
 
     !!! success "Generating API Clients"
-        Populating the `api_client/` directory is a crucial step after scaffolding your application. VC-Shell provides tools to generate TypeScript API clients directly from your platform's OpenAPI specification. These generated clients handle the communication with your backend services, providing type-safe methods for all API operations.
+        Populating the `api_client/` directory is a crucial step after scaffolding your application. VC-Shell provides tools to generate TypeScript API clients directly from your Platform's OpenAPI specification. These generated clients handle the communication with your backend services, providing type-safe methods for all API operations.
 
         ![Readmore](../../media/readmore.png){: width="25"} [API client integration guide](../Essentials/API-Integration/api-client-integration.md)
 
@@ -241,7 +241,7 @@ The most critical initial configuration is setting the URL of your Virto Commerc
     ```env
     APP_PLATFORM_URL=https://your-platform.govirto.com/
     ```
-    Replace **https://your-platform.govirto.com/** with the actual URL of your Virto Commerce Platform backend. This URL is used by the application to communicate with the platform APIs (e.g., for authentication, data fetching).
+    Replace **https://your-platform.govirto.com/** with the actual URL of your Virto Commerce Platform backend. This URL is used by the application to communicate with the Platform APIs (e.g., for authentication, data fetching).
 
 #### Other environment variables
 

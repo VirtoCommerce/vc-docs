@@ -11,7 +11,7 @@ Any service accepting the token will simply validate the digital signature of th
 For this scenario, authentication middleware that handles JWT tokens is available in the `Microsoft.AspNetCore.Authentication.JwtBearer` package.
 **JWT** stands for **JSON Web Token** and is a common security token format (defined by RFC 7519) for communicating security claims.
 
-The Virto Commerce platform has some settings that can be used to configure the **resource server** to consume such tokens
+The Virto Commerce Platform has some settings that can be used to configure the **resource server** to consume such tokens
 
 ```json title="appsettings.json"
 ...

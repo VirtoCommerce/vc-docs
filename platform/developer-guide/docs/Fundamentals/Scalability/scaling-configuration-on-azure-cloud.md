@@ -7,10 +7,10 @@ The diagram below shows proven practices for improving scalability and performan
 ![Scaling on Azure](media/scaling-on-azure.png) 
 
 
-* **Azure Redis backplane**: Enables broadcasting messages between multiple platform Web Apps to synchronize their local memory caches, ensuring consistent state across instances.
-* **VC Frontend Application**: Powers the customer-facing commerce site, serving as the main touchpoint for customers and facilitating their interactions.
+* **Azure Redis backplane**: Enables broadcasting messages between multiple Platform Web Apps to synchronize their local memory caches, ensuring consistent state across instances.
+* **VC Frontend Application**: Powers the customer-facing commerce site, serving as the main touch point for customers and facilitating their interactions.
 * **Commerce services (backend for frontend)**: Handles all requests from frontends to a commercial API with high reliability and performance, deployed across multiple regions and scaled out across multiple server instances.
-* **Authoring (backend)**: Processes background jobs, integrates with third-party services, and manages commerce data through the platform’s SPA manager, operating independently to prevent performance and resource consumption issues in platform Web Apps handling commercial services.
+* **Authoring (backend)**: Processes background jobs, integrates with third-party services, and manages commerce data through the Platform’s SPA manager, operating independently to prevent performance and resource consumption issues in Platform Web Apps handling commercial services.
 * **Hangfire server**: Configured on one or multiple Platform instances to efficiently process Hangfire background jobs.
 
 ## Memory cache. Using Redis server backplane

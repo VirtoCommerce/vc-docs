@@ -1,6 +1,6 @@
-# Health Checks in VirtoCommerce Platform
+# Health Checks in Virto Commerce Platform
 
-VirtoCommerce platform supports health checks through ASP.NET Core middlewares. To ensure robustness and reliability, this article covers two primary aspects:
+Virto Commerce Platform supports health checks through ASP.NET Core middlewares. To ensure robustness and reliability, this article covers two primary aspects:
 
 * [Module health checks.](health-checks.md#module-health-checks)
 * [Docker integration.](health-checks.md#docker-integration)
@@ -49,7 +49,7 @@ To add health checks to your modules:
     }
     ```
 
-Now you can check your platform by getting a response from `/health` endpoint:
+Now you can check your Platform by getting a response from `/health` endpoint:
 
 ![Health check](media/health-checks.png)
 

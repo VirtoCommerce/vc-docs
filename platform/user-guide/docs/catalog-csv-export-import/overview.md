@@ -19,7 +19,7 @@ By using this module, category managers can efficiently manage large amounts of 
 The key features of the module include:
 
 * **Exporting catalog data to CSV**: Extract product and category information into CSV format for easy editing and sharing.
-* **Importing catalog data from CSV**: Bring updated or new catalog data into the platform from CSV files.
+* **Importing catalog data from CSV**: Bring updated or new catalog data into the Platform from CSV files.
 * **Dynamic properties support**: Export and import dynamic properties seamlessly.
 * **Multiple product images**: Manage image URLs and groups during export and import.
 * **Configurable property mapping**: Define custom mappings for CSV columns during import.

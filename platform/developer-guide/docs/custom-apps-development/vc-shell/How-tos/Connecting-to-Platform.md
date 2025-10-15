@@ -1,4 +1,4 @@
-# Connect custom app to platform
+# Connect Custom App to Platform
 
 !!! note "Prerequisites"
     [Create custom app](../Getting-started/creating-first-custom-app.md)

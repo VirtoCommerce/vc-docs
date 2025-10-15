@@ -49,7 +49,7 @@ The webhook has been deleted.
 
 ## Warning Message
 
-Upon updating the Virto platform, users employing webhooks with multiple event subscriptions in previous versions may encounter the following warning message:
+Upon updating the Virto Commerce Platform, users employing webhooks with multiple event subscriptions in previous versions may encounter the following warning message:
 
 ![Warning message](media/warning.png)
 
