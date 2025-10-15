@@ -29,7 +29,7 @@ To add an optional dependency:
 1. [Register optional dependency configuration in module.manifest.](optional-dependency.md#register-optional-dependency-configuration-in-modulemanifest)
 1. [Resolve optional dependency in C# code.](optional-dependency.md#resolve-optional-dependency-in-c-code)
 1. [Resolve optional dependency in AngularJS code.](optional-dependency.md#resolve-optional-dependency-in-angularjs-code)
-1. [Resolve optional dependency in vc-shell code.](optional-dependency.md#resolve-optional-dependency-in-vc-shell-code)
+1. [Resolve optional dependency in VC-Shell code.](optional-dependency.md#resolve-optional-dependency-in-vc-shell-code)
 1. [Configure Virto Commerce CLI package.](optional-dependency.md#configurу-virto-commerce-cli-package)
 
 

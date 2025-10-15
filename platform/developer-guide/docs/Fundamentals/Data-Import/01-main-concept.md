@@ -67,7 +67,7 @@ Import App is the new user interface, based on [Virto Custom App Development](..
 
 ### Key features
 
-* Expandable with [VC Shell](../../custom-apps-development/vc-shell/vc-shell-overview.md). 
+* Expandable with [VC-Shell](../../custom-apps-development/vc-shell/vc-shell-overview.md). 
 * Import-on-demand for Operator user.
 
 ### Folder structure
