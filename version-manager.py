@@ -180,7 +180,7 @@ def deploy_single():
     print_info(f"Deploying version {version} to {subsite}...")
 
     # Build mike command
-    args = ['deploy', '-F', config, '--deploy-prefix', subsite, version]
+    args = ['deploy', '-F', config, '--deploy-prefix', subsite, '--update-aliases', version]
     if set_latest == 'y':
         args.append('latest')
     if push_to_github == 'y':
@@ -243,7 +243,7 @@ def deploy_all():
         print(f"{Colors.BLUE}→ {subsite}{Colors.NC}")
 
         config = f"{subsite}/mkdocs.yml"
-        args = ['deploy', '-F', config, '--deploy-prefix', subsite, version]
+        args = ['deploy', '-F', config, '--deploy-prefix', subsite, '--update-aliases', version]
 
         if set_latest == 'y':
             args.append('latest')
