@@ -37,136 +37,57 @@ pip install mkdocs-material mike mkdocs-awesome-pages-plugin \
 
 This project uses [Mike](https://github.com/jimporter/mike) for **independent versioning of each documentation subsite**.
 
-### Architecture
+### Quick Start - Interactive CLI
 
-The documentation is structured with **7 independently versioned subsites**:
-
-- `marketplace/developer-guide` ✓ Versioned
-- `marketplace/user-guide` ✓ Versioned
-- `platform/developer-guide` ✓ Versioned
-- `platform/user-guide` ✓ Versioned
-- `platform/deployment-on-cloud` ✓ Versioned
-- `storefront/developer-guide` ✓ Versioned
-- `storefront/user-guide` ✓ Versioned
-
-Root site (`/`) and intermediate sites (`/marketplace/`, `/platform/`, `/storefront/`) remain **unversioned**.
-
-### URL Structure
-
-Versions are part of the URL path:
-```
-https://docs.virtocommerce.org/marketplace/developer-guide/1.0/
-https://docs.virtocommerce.org/platform/user-guide/3.2025-S13/
-https://docs.virtocommerce.org/storefront/developer-guide/latest/
-```
-
-### Quick Start Commands
-
-#### Deploy All Subsites (Same Version)
-
-Deploy all 7 subsites with version 3.2025-S13:
-
-```powershell
-# PowerShell
-.\scripts\build-versioned.ps1 -Version "3.2025-S13" -SetAsLatest -SetAsDefault
-
-# Bash/Linux/macOS
-./scripts/build-versioned.sh 3.2025-S13 --set-latest --set-default
-```
-
-#### Deploy Single Subsite
-
-Deploy a specific subsite with a version:
-
-```powershell
-# PowerShell
-.\scripts\deploy-version.ps1 -SubsitePath "marketplace/developer-guide" -Version "1.0" -Alias "latest" -SetDefault
-
-# Bash/Linux/macOS
-./scripts/deploy-version.sh marketplace/developer-guide 1.0 latest --set-default
-```
-
-#### List Versions
-
-View all deployed versions:
-
-```powershell
-# PowerShell
-.\scripts\list-versions.ps1                                    # All subsites
-.\scripts\list-versions.ps1 -SubsitePath "platform/user-guide" # Specific subsite
-
-# Bash/Linux/macOS
-./scripts/list-versions.sh                        # All subsites
-./scripts/list-versions.sh platform/user-guide    # Specific subsite
-```
-
-#### Test Locally with Versions
-
-**Option 1: Test a versioned subsite with Mike**
+Launch the interactive version manager:
 
 ```bash
-# From root directory
-cd /Users/symbot/DEV/vc-docs
+# All platforms (Linux/Mac/Windows)
+python3 version-manager.py
 
-# Set default version (required for root URL to work)
-mike set-default -F marketplace/developer-guide/mkdocs.yml \
-    --deploy-prefix marketplace/developer-guide 1.0
-
-# Start server from subsite directory
-cd marketplace/developer-guide && mike serve
-
-# Open http://localhost:8000
+# Or on Windows
+python version-manager.py
 ```
 
-**Option 2: View all deployed versions from gh-pages**
+You'll see an interactive menu where you can:
+- Deploy versions to one or all subsites (with automatic push to GitHub)
+- Delete versions
+- List all versions
+- Set default versions
+- Add aliases
+
+Simply choose an option and follow the prompts!
+
+**Note:** When deploying, you can choose to automatically push changes to GitHub's `gh-pages` branch.
+
+### Available Subsites
+
+- `marketplace/developer-guide`
+- `marketplace/user-guide`
+- `platform/developer-guide`
+- `platform/user-guide`
+- `platform/deployment-on-cloud`
+- `storefront/developer-guide`
+- `storefront/user-guide`
+
+### Test Locally
 
 ```bash
-# Switch to gh-pages branch
+# View deployed versions
 git checkout gh-pages
-
-# Start HTTP server
 python3 -m http.server 8000
-
 # Open http://localhost:8000/marketplace/developer-guide/
+
+# Development mode (no versions)
+cd marketplace/developer-guide
+mkdocs serve
 ```
-
-### How It Works
-
-Mike stores versions in the `gh-pages` branch with this structure:
-
-```
-gh-pages/
-├── marketplace/
-│   ├── developer-guide/
-│   │   ├── 1.0/
-│   │   ├── 1.1/
-│   │   ├── latest/
-│   │   └── versions.json
-│   └── user-guide/
-│       ├── 1.0/
-│       └── versions.json
-├── platform/
-│   ├── developer-guide/
-│   └── user-guide/
-└── storefront/
-    ├── developer-guide/
-    └── user-guide/
-```
-
-Each subsite maintains its own:
-- Version history
-- Version selector
-- Default version
-- Aliases (latest, stable, etc.)
 
 ### Documentation
 
-For detailed information, see:
-- **[VERSIONING.md](VERSIONING.md)** - Complete versioning strategy, workflows, and best practices
-- **Scripts documentation:**
-  - `scripts/build-versioned.ps1` - Deploy all subsites with a version
-  - `scripts/deploy-version.ps1` - Deploy single subsite with a version
-  - `scripts/list-versions.ps1` - List versions for subsites
+- **[QUICKSTART.md](QUICKSTART.md)** - Simple commands and common workflows
+- **[VERSIONING.md](VERSIONING.md)** - Complete versioning documentation
+- **Legacy scripts** in `scripts/` directory (deprecated, use `version.sh` instead)
 
 ## Development Workflow
 
