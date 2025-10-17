@@ -108,29 +108,11 @@ def main():
         os.makedirs("site/platform", exist_ok=True)
         os.makedirs("site/marketplace", exist_ok=True)
 
-        # Create temporary mkdocs.yml files with uncommented nav for intermediate sites
-        # This allows them to build with proper navigation to subsites
-        for subsite in ["storefront", "platform", "marketplace"]:
-            print(f"  Creating temporary config for {subsite}...")
-
-            # Read original mkdocs.yml
-            with open(f"{subsite}/mkdocs.yml", "r") as f:
-                content = f.read()
-
-            # Uncomment the nav includes
-            content = content.replace("# - Developer Guide:", "- Developer Guide:")
-            content = content.replace("# - User Guide:", "- User Guide:")
-            if subsite == "platform":
-                content = content.replace("# - Deployment on Cloud:", "- Deployment on Cloud:")
-
-            # Write temporary config
-            with open(f"mkdocs-temp-{subsite}.yml", "w") as f:
-                f.write(content)
-
-        # Build each intermediate site with temporary configs
-        run_command("mkdocs build -f mkdocs-temp-storefront.yml -d site/storefront", capture=False)
-        run_command("mkdocs build -f mkdocs-temp-platform.yml -d site/platform", capture=False)
-        run_command("mkdocs build -f mkdocs-temp-marketplace.yml -d site/marketplace", capture=False)
+        # Build each intermediate site with their ORIGINAL configs (nav stays commented)
+        # This will use their real index.md with custom templates (platform-home.html, etc.)
+        run_command("mkdocs build -f storefront/mkdocs.yml -d site/storefront", capture=False)
+        run_command("mkdocs build -f platform/mkdocs.yml -d site/platform", capture=False)
+        run_command("mkdocs build -f marketplace/mkdocs.yml -d site/marketplace", capture=False)
 
         print("✅ Sites built")
 
