@@ -1,0 +1,20 @@
+INHERIT: ../mkdocs.yml
+theme:
+    custom_dir: ../overrides
+
+docs_dir: docs
+
+# Project information
+extra_site_name: Documentation
+site_name: platform
+site_description: Platform documentation center
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/platform
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+nav:
+    - Home: index.md

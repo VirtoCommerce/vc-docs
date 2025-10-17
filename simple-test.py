@@ -60,11 +60,11 @@ def main():
     # This prevents them from including all subsites
     for subsite in ["storefront", "platform", "marketplace"]:
         print(f"  Creating temporary config for {subsite}...")
-        
+
         # Read original mkdocs.yml
         with open(f"{subsite}/mkdocs.yml", "r") as f:
             content = f.read()
-        
+
         # Create temporary config with only Home: index.md
         temp_content = f"""INHERIT: ../mkdocs.yml
 theme:
@@ -87,11 +87,11 @@ edit_uri: edit/dev/docs/
 nav:
     - Home: index.md
 """
-        
+
         # Write temporary config
         with open(f"mkdocs-temp-{subsite}.yml", "w") as f:
             f.write(temp_content)
-    
+
     # Build each intermediate site with temporary configs
     run_command("mkdocs build -f mkdocs-temp-storefront.yml -d site/storefront", check=False)
     run_command("mkdocs build -f mkdocs-temp-platform.yml -d site/platform", check=False)
@@ -104,7 +104,7 @@ nav:
     # Deploy all subsites with version 1.0 using Mike
     subsites = [
         "marketplace/developer-guide",
-        "marketplace/user-guide", 
+        "marketplace/user-guide",
         "platform/developer-guide",
         "platform/user-guide",
         "platform/deployment-on-cloud",
@@ -116,19 +116,19 @@ nav:
     for subsite in subsites:
         config = f"{subsite}/mkdocs.yml"
         print(f"  Deploying {subsite} version {version}...")
-        
+
         # Deploy with version 1.0 and set as latest
         run_command(
             f'mike deploy -F "{config}" --deploy-prefix "{subsite}" --update-aliases "{version}" latest',
             check=False
         )
-        
+
         # Set as default version
         run_command(
             f'mike set-default -F "{config}" --deploy-prefix "{subsite}" {version}',
             check=False
         )
-        
+
         print(f"  ✅ {subsite} deployed")
 
     print("✅ Versioned content deployed with Mike")

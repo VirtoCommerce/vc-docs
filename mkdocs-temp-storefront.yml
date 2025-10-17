@@ -1,0 +1,20 @@
+INHERIT: ../mkdocs.yml
+theme:
+    custom_dir: ../overrides
+
+docs_dir: docs
+
+# Project information
+extra_site_name: Documentation
+site_name: storefront
+site_description: Storefront documentation center
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/storefront
+
+# Repository
+repo_name: VirtoCommerce/vc-storefront
+repo_url: https://github.com/VirtoCommerce/vc-storefront
+edit_uri: edit/dev/docs/
+
+nav:
+    - Home: index.md
