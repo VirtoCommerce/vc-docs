@@ -80,16 +80,30 @@ The changes will be automatically pushed to the `gh-pages` branch!
 
 ### Test Locally
 
+⚠️ **Важно:** Перед тестированием убедитесь, что у вас есть версионированный контент в `gh-pages`! См. [TESTING-CHECKLIST.md](TESTING-CHECKLIST.md)
+
+**Простой способ (рекомендуется):**
+
 ```bash
-# Switch to gh-pages branch
-git checkout gh-pages
+# Запустите простой тест с HTTP сервером
+python3 simple-test.py
 
-# Start server
-python3 -m http.server 8000
-
-# Open browser
-# http://localhost:8000/marketplace/developer-guide/
+# Откройте http://localhost:8000/platform/developer-guide/1.0/
 ```
+
+**Другие варианты:**
+
+```bash
+# Быстрый Docker тест
+python3 quick-test.py
+
+# Полный тест (деплой + Docker)
+python3 test-versioned-locally.py
+```
+
+**Детальные инструкции:**
+- [TESTING-CHECKLIST.md](TESTING-CHECKLIST.md) - пошаговый чеклист
+- [LOCAL-TESTING.md](LOCAL-TESTING.md) - технические детали
 
 ### Push to Production
 
