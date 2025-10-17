@@ -65,7 +65,15 @@ def main():
         with open(f"{subsite}/mkdocs.yml", "r") as f:
             content = f.read()
 
-        # Create temporary config with only Home: index.md
+        # Extract extra section from original config
+        extra_start = content.find("extra:")
+        extra_end = content.find("nav:", extra_start)
+        if extra_end == -1:
+            extra_end = len(content)
+
+        extra_section = content[extra_start:extra_end].strip()
+
+        # Create temporary config with only Home: index.md but keep extra section
         temp_content = f"""INHERIT: ../mkdocs.yml
 theme:
     custom_dir: ../overrides
@@ -83,6 +91,8 @@ site_url: https://docs.virtocommerce.org/{subsite}
 repo_name: VirtoCommerce/vc-{subsite}
 repo_url: https://github.com/VirtoCommerce/vc-{subsite}
 edit_uri: edit/dev/docs/
+
+{extra_section}
 
 nav:
     - Home: index.md
@@ -140,12 +150,20 @@ nav:
     current_branch = result.stdout.strip()
 
     try:
-        # Checkout gh-pages and copy versioned content
-        print("  Switching to gh-pages branch...")
+        # Clean up temporary files before switching branches
+        print("  Cleaning up temporary files...")
+        for temp_file in ["mkdocs-temp-root.yml", "mkdocs-temp-storefront.yml", "mkdocs-temp-platform.yml", "mkdocs-temp-marketplace.yml"]:
+            if os.path.exists(temp_file):
+                os.remove(temp_file)
+
+        # Stash changes and checkout gh-pages
+        print("  Stashing changes and switching to gh-pages branch...")
+        run_command("git stash push -m 'temp changes for testing'", check=False)
         run_command("git checkout gh-pages")
 
         print("  Copying versioned content...")
         # Copy versioned subsites to site directory
+        # IMPORTANT: Only copy the guide subdirectories, NOT the intermediate site index.html
         for subsite in ["marketplace", "platform", "storefront"]:
             for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
                 src = f"{subsite}/{guide}"
@@ -155,10 +173,13 @@ nav:
                     if os.path.exists(dst):
                         shutil.rmtree(dst)
                     shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+                else:
+                    print(f"  ⚠️  {src} not found in gh-pages")
 
-        # Return to original branch
+        # Return to original branch and restore changes
         print(f"  Returning to {current_branch} branch...")
         run_command(f"git checkout {current_branch}")
+        run_command("git stash pop", check=False)
 
     except Exception as e:
         print(f"❌ Error during export: {e}")
@@ -167,11 +188,6 @@ nav:
         sys.exit(1)
 
     print("✅ Versioned content copied to site")
-
-    # Cleanup temporary files
-    for temp_file in ["mkdocs-temp-root.yml", "mkdocs-temp-storefront.yml", "mkdocs-temp-platform.yml", "mkdocs-temp-marketplace.yml"]:
-        if os.path.exists(temp_file):
-            os.remove(temp_file)
 
     print("📋 Step 4: Start Python HTTP server")
     print("")

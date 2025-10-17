@@ -1,0 +1,1483 @@
+theme:
+  name: material
+  custom_dir: ../../overrides
+  language: en
+  favicon: assets/icons/favicon.ico
+  logo: assets/icons/logo.svg
+  logobw: assets/icons/logo-bw.svg
+  palette:
+  - scheme: default
+  font:
+    text: Circular Std
+    code: Ubuntu Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+  - navigation.tabs
+  - --md-code-bg-color
+  - search.share
+  - search.suggest
+  - navigation.tracking
+  - navigation.instant
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - toc.follow
+  - search.highlight
+  hide: false
+markdown_extensions:
+- admonition
+- codehilite
+- meta
+- pymdownx.superfences
+- pymdownx.magiclink
+- attr_list
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji ''
+    emoji_generator: !!python/name:materialx.emoji.to_svg ''
+- abbr
+- def_list
+- footnotes
+- md_in_html
+- toc:
+    permalink: true
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.caret
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.magiclink:
+    repo_url_shorthand: true
+    user: squidfunk
+    repo: mkdocs-material
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format ''
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+- pymdownx.snippets
+plugins:
+- mike
+- monorepo
+- search: null
+- awesome-pages: null
+- git-revision-date-localized
+- minify
+- redirects:
+    redirect_maps:
+      products/products-virto3-versions.md: https://docs.virtocommerce.org/platform/user-guide/versions/virto3-products-versions
+      license.md: https://virtocommerce.com/open-source-license
+      support.md: https://help.virtocommerce.com/support/home
+      vc-quickstart.md: https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows
+      architecture-center/B2B-multiregional.md: https://docs.virtocommerce.org/platform/user-guide/multiregional-ecommerce
+      developer-guide/create-new-module-advanced.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch
+      developer-guide/create-new-module.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module
+      developer-guide/deploy-from-source-code.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/debugging
+      developer-guide/deploy-module-from-source-code.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code
+      developer-guide/global-tools.md: https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/overview
+      developer-guide/logging.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Logging/overview
+      developer-guide/modules-development-via-docker.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/docker-modules-development
+      developer-guide/swagger-endpoints.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/swagger-api
+      developer-guide/user-manager.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/extending-usermanager-and-rolemanager
+      developer-guide/using-autorest-with-v3.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/generating-c-sharp-client
+      fundamentals/architecture-reference.md: https://docs.virtocommerce.org/platform/developer-guide/Back-End-Architecture/02-conceptual-overview
+      fundamentals/db-agnostic.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Persistence/DB-Agnostic/overview
+      fundamentals/essential-caching.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Caching/01-overview
+      fundamentals/essential-modularity.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Modularity/01-overview
+      fundamentals/make-secure-webapi.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/security-in-depth
+      fundamentals/scalability.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Scalability/overview
+      fundamentals/search.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Indexed-Search/overview
+      fundamentals/extensibility/blade-toolbar.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/blade-toolbar
+      fundamentals/extensibility/blades-and-navigation.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/blades-and-navigation
+      fundamentals/extensibility/extending-authorization-policies.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/extending-authorization-policies
+      fundamentals/extensibility/extending-domain-models.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/extending-domain-models
+      fundamentals/extensibility/extending-grid-columns.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/extending-grid-columns
+      fundamentals/extensibility/extending-main-menu.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/extending-main-menu
+      fundamentals/extensibility/extending-using-events.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Event-Driven-Development/using-domain-events
+      fundamentals/extensibility/metaform.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/metaform
+      fundamentals/extensibility/new-payment-method-registration.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Payments/new-payment-method-registration
+      fundamentals/extensibility/new-shipping-method-registration.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Shipments/new-shipping-method-registration
+      fundamentals/extensibility/new-tax-provider-registration.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Taxes/new-tax-provider-registration
+      fundamentals/extensibility/overview.md: https://docs.virtocommerce.org/platform/developer-guide/Extensibility/overview
+      fundamentals/extensibility/style-guide.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/style-guide
+      fundamentals/extensibility/ui-scroll-directive.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/ui-scroll-directive
+      fundamentals/extensibility/using-dynamic-properties.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Dynamic-Properties/overview
+      fundamentals/extensibility/widgets.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/widgets
+      getting-started/connect-storefront-to-platform-v3.md: https://docs.virtocommerce.org/storefront/developer-guide/deployment
+      getting-started/deploy-from-precompiled-binaries-MacOS.md: https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/macOS
+      getting-started/deploy-from-precompiled-binaries-azure.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure
+      getting-started/deploy-from-precompiled-binaries-linux.md: https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/linux
+      getting-started/deploy-from-precompiled-binaries-windows.md: https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows
+      getting-started/email-sending-settings.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Notifications/overview
+      getting-started/lessons.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/overview
+      getting-started/lessons/lesson1.md: https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows
+      getting-started/lessons/lesson2.md: https://docs.virtocommerce.org/platform/user-guide/catalog/import-products-to-catalog
+      getting-started/lessons/lesson3.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module
+      getting-started/lessons/lesson4.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/build-platform-manager-ui
+      modules/assets.md: https://docs.virtocommerce.org/platform/user-guide/assets/managing-assets
+      modules/azure-ad.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/configuring-and-managing-azure-auth
+      modules/azureblob-assets.md: https://docs.virtocommerce.org/platform/developer-guide/Configuration-Reference/appsettingsjson/#__tabbed_2_2
+      modules/cart.md: https://docs.virtocommerce.org/platform/user-guide/cart/overview
+      modules/catalog.md: https://docs.virtocommerce.org/platform/user-guide/catalog/overview
+      modules/catalog/add-new-catalog.md: https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/#physical-catalogs
+      modules/catalog/add-virtual-catalog.md: https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/#virtual-catalogs
+      modules/catalog/catalog-search.md: https://docs.virtocommerce.org/platform/user-guide/search
+      modules/catalog/glossary.md: https://docs.virtocommerce.org/platform/user-guide/search
+      modules/catalog/managing-categories.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-categories
+      modules/catalog/managing-products.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-products
+      modules/catalog/managing-productt-variations.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-product-variations
+      modules/catalog/managing-properties.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-properties
+      modules/catalog/managing-search-index.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-search-index
+      modules/catalog/product-indexing.md: https://docs.virtocommerce.org/platform/user-guide/catalog/product-indexing
+      modules/catalog/search-engine-architecture-details.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Indexed-Search/overview
+      modules/catalog/view-catalogs-and-physical-items.md: https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/#view-catalogs
+      modules/catalog/view-product-variations.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-product-variations/#view-product-variations
+      modules/catalog/view-properties.md: https://docs.virtocommerce.org/platform/user-guide/catalog/managing-properties/#view-properties
+      modules/catalog-personalization.md: https://docs.virtocommerce.org/platform/user-guide/catalog-personalization/settings
+      modules/catalog-publishing.md: https://docs.virtocommerce.org/platform/user-guide/catalog-publishing/overview
+      modules/content.md: https://docs.virtocommerce.org/platform/user-guide/content/overview
+      modules/content/pages-blogs-management.md: https://docs.virtocommerce.org/platform/user-guide/content/managing-pages
+      modules/content/theme-management.md: https://docs.virtocommerce.org/platform/user-guide/content/managing-themes
+      modules/contract.md: https://docs.virtocommerce.org/platform/user-guide/contracts/overview
+      modules/contract/XAPI.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contact
+      modules/core/How-to%20override%20rounding%20policy.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/overriding-rounding-policy
+      modules/customer.md: https://docs.virtocommerce.org/platform/user-guide/contracts/managing-contract-customers
+      modules/customer/advanced-filter.md: https://docs.virtocommerce.org/platform/user-guide/contacts/filtering-options
+      modules/customer/create-and-manage-employee.md: https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts
+      modules/customer/create-and-manage-organization.md: https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts
+      modules/customer/manage-contacts.md: https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts
+      modules/customer/manage-vendors.md: https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts
+      modules/customer/view-organization-details.md: https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts
+      modules/customer-export-import/Index.md: https://docs.virtocommerce.org/platform/user-guide/customer-export-import/overview
+      modules/customer-review.md: https://docs.virtocommerce.org/platform/user-guide/rating-reviews/overview
+      modules/customer-review/rest-api.md: https://docs.virtocommerce.org/platform/user-guide/rating-reviews/rest-api
+      modules/dynamic-associations.md: https://docs.virtocommerce.org/platform/user-guide/marketing/dynamic-associations-overview
+      modules/dynamic-associations/rest-api.md: https://docs.virtocommerce.org/platform/user-guide/marketing/dynamic-associations-restapi
+      modules/elastic-app-search/eas-setup-guide.md: https://docs.virtocommerce.org/platform/user-guide/elastic-app-search/overview
+      modules/elastic-search.md: https://docs.virtocommerce.org/platform/user-guide/elastic-search/overview
+      modules/elastic-search/blue-green-indexation.md: https://docs.virtocommerce.org/platform/user-guide/search/managing-search/#blue-green-indexing
+      modules/event-bus.md: https://docs.virtocommerce.org/platform/user-guide/event-bus/overview
+      modules/experience-api.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI
+      modules/experience-api/application-insights-integration.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/troubleshooting
+      modules/experience-api/filter-syntax.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products
+      modules/experience-api/getting-started.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+      modules/experience-api/x-api-extensions.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions
+      modules/experience-api/x-catalog-reference.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview
+      modules/experience-api/x-purchase-cart-reference.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Cart/overview
+      modules/experience-api/x-purchase-order-reference.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Order/overview
+      modules/export.md: https://docs.virtocommerce.org/platform/user-guide/generic-export/overview
+      modules/export/advanced-filter.md: https://docs.virtocommerce.org/platform/user-guide/generic-export/advanced-filtering
+      modules/gdpr/gdpr.md: https://docs.virtocommerce.org/platform/user-guide/gdpr/overview
+      modules/google-ecommerce-analytics.md: https://docs.virtocommerce.org/platform/user-guide/integrations/google-analytics/overview
+      modules/hotjar.md: https://docs.virtocommerce.org/platform/user-guide/integrations/hotjar/overview
+      modules/image-tools.md: https://docs.virtocommerce.org/platform/user-guide/thumbnails/overview
+      modules/inventory.md: https://docs.virtocommerce.org/platform/user-guide/inventory/overview
+      modules/inventory/manage-fullfilment.md: https://docs.virtocommerce.org/platform/user-guide/inventory/managing-fulfillment-centers
+      modules/marketing.md: https://docs.virtocommerce.org/platform/user-guide/marketing/overview
+      modules/marketing/combine-active-promotions.md: https://docs.virtocommerce.org/platform/user-guide/marketing/combining-active-promotions
+      modules/marketing/manage-content-items.md: https://docs.virtocommerce.org/platform/user-guide/marketing/managing-content-items/?h=content+items
+      modules/marketing/manage-content-placeholders.md: https://docs.virtocommerce.org/platform/user-guide/marketing/managing-content-placeholders
+      modules/marketing/manage-content-publishing.md: https://docs.virtocommerce.org/platform/user-guide/marketing/managing-published-content
+      modules/marketing/manage-promotions.md: https://docs.virtocommerce.org/platform/user-guide/marketing/managing-promotions
+      modules/marketing/promotion-rules.md: https://docs.virtocommerce.org/platform/user-guide/marketing/promotion-rules
+      modules/marketing/publishing-conditions.md: https://docs.virtocommerce.org/platform/user-guide/marketing/publish-conditions
+      modules/marketing-experience-api.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview
+      modules/native-payment-methods/working-guide.md: https://docs.virtocommerce.org/platform/user-guide/native-payment-methods/overview
+      modules/notification.md: https://docs.virtocommerce.org/platform/user-guide/notifications/overview
+      modules/notification/tech-doc.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Notifications/registering-new-notification-type
+      modules/notification/tips-and-tricks-for-creating-email-templates.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Notifications/notification-templates
+      modules/order.md: https://docs.virtocommerce.org/platform/user-guide/order-management/overview
+      modules/order/How-to%20extend%20validation.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions/#extend-validation-logic-replace-validators
+      modules/order/order-details.md: https://docs.virtocommerce.org/platform/user-guide/order-management/main-objects
+      modules/order/order-documents.md: https://docs.virtocommerce.org/platform/user-guide/order-management/managing-documents
+      modules/order/order-module-notification-types.md: https://docs.virtocommerce.org/platform/user-guide/order-management/notifications
+      modules/order/order-widgets.md: https://docs.virtocommerce.org/platform/user-guide/order-management/main-objects
+      modules/order/roles-and-permissions-scenarios.md: https://docs.virtocommerce.org/platform/user-guide/order-management/permissions
+      modules/payment.md: https://docs.virtocommerce.org/platform/user-guide/payment/overview
+      modules/price-export-import.md: https://docs.virtocommerce.org/platform/user-guide/pricing/export-functionality
+      modules/pricing.md: https://docs.virtocommerce.org/platform/user-guide/pricing/overview
+      modules/pricing/add-new-assignment.md: https://docs.virtocommerce.org/platform/user-guide/pricing/adding-new-assignment
+      modules/pricing/add-prices-to-products.md: https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/#add-and-edit-product-prices
+      modules/pricing/add-products-to-the-new-price-list.md: https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/#add-products-to-price-list
+      modules/pricing/create-new-price-list.md: https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/#create-new-price-list
+      modules/pricing/export-functionality.md: https://docs.virtocommerce.org/platform/user-guide/pricing/export-functionality
+      modules/pricing/managing-pricing-module-settings.md: https://docs.virtocommerce.org/platform/user-guide/pricing/managing-pricing-module-settings
+      modules/pricing/troubleshooting-guide.md: https://docs.virtocommerce.org/platform/user-guide/pricing/troubleshooting-guide
+      modules/pricing/view-price-list-via-catalog-module.md: https://docs.virtocommerce.org/platform/user-guide/pricing/viewing-price-list-in-catalog
+      modules/profile-experience-api.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Profile/overview
+      modules/quote.md: https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Quote/overview
+      modules/return/return-module-guide.md: https://docs.virtocommerce.org/platform/user-guide/return/overview
+      modules/shipping.md: https://docs.virtocommerce.org/platform/user-guide/shipping/overview
+      modules/shipstation.md: https://docs.virtocommerce.org/platform/user-guide/shipstation/overview
+      modules/sitemaps.md: https://docs.virtocommerce.org/platform/user-guide/sitemaps/overview
+      modules/store.md: https://docs.virtocommerce.org/platform/user-guide/store/overview
+      modules/store/add-new-store.md: https://docs.virtocommerce.org/platform/user-guide/store/adding-new-store
+      modules/store/edit-store-details.md: https://docs.virtocommerce.org/platform/user-guide/store/configuring-store
+      modules/store/edit-widgets.md: https://docs.virtocommerce.org/platform/user-guide/store/configuring-store
+      modules/subscription.md: https://docs.virtocommerce.org/platform/user-guide/subscriptions/overview
+      modules/tax.md: https://docs.virtocommerce.org/platform/user-guide/tax/overview
+      modules/webhooks.md: https://docs.virtocommerce.org/platform/user-guide/webhooks/overview
+      products/v3-2020-Q3.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2020-Q3
+      products/v3-2021-Q1.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2021-Q1
+      products/v3-2021-Q3.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2021-Q3
+      products/v3-2022-Q1.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q1
+      products/v3-2022-Q2.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q2
+      products/v3-2022-Q3.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q3
+      products/v3-2022-Q4.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q4
+      products/v3-2023-S5.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2023-S5
+      products/v3-2023-S6.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2023-S6
+      products/v3-2024-S7.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2024-S7
+      products/v3-2024-S8.md: https://docs.virtocommerce.org/platform/user-guide/versions/v3-2024-S8
+      release-information/update-to-version-3-800/update-platform-and-modules-to-3-800.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/upgrading-to-net8
+      techniques/add-new-sso-provider.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/adding-new-sso-provider
+      techniques/authentication-with-azure-ad.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/configuring-and-managing-azure-auth
+      techniques/countries-management.md: https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/localization
+      techniques/debugging-without-source-code.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/debugging
+      techniques/exposing-polymorphic-types-swagger.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger
+      techniques/extend-DB-model.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/extending-database-model
+      techniques/generate-pdf-file.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/generating-pdfs
+      techniques/healthchecks.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/health-checks
+      techniques/how-scale-out-platform-on-azure.md: https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Scalability/scalability-options
+      techniques/how-to-run-platform-on-azure-functions.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure
+      techniques/implementing-authorization-mechanism-using-jwt.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/authorization-using-jwt
+      techniques/sharing-bearer-tokens-across-platform-instances.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/sharing-bearer-tokens
+      techniques/user-email-verification.md: https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/user-email-verification
+      user-guide/assets-function.md: https://docs.virtocommerce.org/platform/user-guide/assets/overview
+      user-guide/configuration-settings.md: https://docs.virtocommerce.org/platform/developer-guide/Configuration-Reference/appsettingsjson
+      user-guide/getting-started.md: https://docs.virtocommerce.org/platform/user-guide/getting-started
+      user-guide/login-on-behalf.md: https://docs.virtocommerce.org/platform/user-guide/security/login-on-behalf
+      user-guide/modules.md: https://docs.virtocommerce.org/platform/user-guide/modules-installation
+      user-guide/security.md: https://docs.virtocommerce.org/platform/user-guide/security/roles-and-permissions
+      user-guide/user-profile.md: https://docs.virtocommerce.org/platform/user-guide/user-profile
+      release-information/whats-new.md: https://www.virtocommerce.org/c/news-digest
+- include-markdown
+extra_site_name: Platform Dev Docs
+site_name: platform/developer-guide
+site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce
+  platform Virto Commerce.
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/platform/developer-guide
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+copyright: Copyright &copy; 2025. All rights reserved.
+nav:
+- About Virto Commerce Platform: getting-to-know-platform.md
+- Overview: index.md
+- Getting Started:
+  - System Requirements: Getting-Started/system-requirements.md
+  - Installation Guide:
+    - Windows: Getting-Started/Installation-Guide/windows.md
+    - Linux: Getting-Started/Installation-Guide/linux.md
+    - MacOS: Getting-Started/Installation-Guide/macOS.md
+    - Post Installation Steps:
+      - Setting Up Self Signed SSL Certificate: Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
+      - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
+      - Configuring Asset Blob Storage: Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage.md
+      - Importing Sample Data: Getting-Started/Post-Installation-Steps/04-importing-sample-data.md
+  - Skills Required for VC Developers: skills-required-for-VC-developers.md
+- Architecture:
+  - Virto Atomic Architecture: Back-End-Architecture/atomic-architecture.md
+  - Back End Architecture:
+    - Tech Stack: Back-End-Architecture/01-tech-stack.md
+    - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
+- CLI Tools:
+  - Overview: CLI-tools/overview.md
+  - Getting Started: CLI-tools/getting-started.md
+  - Build Automation: CLI-tools/build-automation.md
+  - Package Management: CLI-tools/package-management.md
+  - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
+  - Cold Start Optimization and Data Migration: CLI-tools/cold-start-and-data-migration.md
+  - Install and Update Platform and Modules: CLI-tools/install-and-update-platform-and-modules.md
+  - Managing Platform and Modules with CLI: CLI-tools/more-targets.md
+  - Virto Cloud:
+    - Overview: CLI-tools/virto-cloud-overview.md
+    - Using Virto Cloud: CLI-tools/virto-cloud.md
+- Fundamentals:
+  - Caching:
+    - Overview: Fundamentals/Caching/01-overview.md
+    - Cache Configuration: Fundamentals/Caching/02-cache-configuration.md
+    - Setting Up Redis Backplane for Scaling Out: Fundamentals/Caching/03-setting-up-Redis.md
+  - Data Import:
+    - Main Concept: Fundamentals/Data-Import/01-main-concept.md
+    - Building Custom Importer: Fundamentals/Data-Import/02-building-custom-importer.md
+    - Import App: Fundamentals/Data-Import/import-app.md
+  - Indexed Search:
+    - Overview: Fundamentals/Indexed-Search/overview.md
+    - Search Query Syntax: Fundamentals/Indexed-Search/search-query-syntax-reference.md
+    - Indexing:
+      - Overview: Fundamentals/Indexed-Search/indexing/overview.md
+      - Indexing in Platform Manager: Fundamentals/Indexed-Search/indexing/indexing-in-platform-manager.md
+      - Blue-Green Indexing: Fundamentals/Indexed-Search/indexing/blue-green-indexing.md
+    - Search:
+      - Overview: Fundamentals/Indexed-Search/search/overview.md
+      - Faceted Search Overview and Configuration: Fundamentals/Indexed-Search/search/faceted-search.md
+    - Integration:
+      - Elasticsearch 9:
+        - Overview: Fundamentals/Indexed-Search/integration/elastic-search-9.md
+        - Semantic Search: Fundamentals/Indexed-Search/integration/semantic-search-es9.md
+      - Elasticsearch 8:
+        - Overview: Fundamentals/Indexed-Search/integration/elastic-search-8.md
+        - Semantic Search: Fundamentals/Indexed-Search/integration/semantic-search.md
+      - Elastic App Search:
+        - Overview: Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md
+        - Configuration: Fundamentals/Indexed-Search/integration/configuring-elastic-app-search.md
+        - Using Analytics: Fundamentals/Indexed-Search/integration/using-analytics.md
+        - Tuning Search Relevance: Fundamentals/Indexed-Search/integration/search_relevance_tuning.md
+      - Elasticsearch: Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md
+      - Azure Cognitive Search: Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
+      - Algolia: Fundamentals/Indexed-Search/integration/algolia.md
+      - Lucene: Fundamentals/Indexed-Search/integration/lucene.md
+    - Configuration: Fundamentals/Indexed-Search/configuration.md
+  - Persistence:
+    - DB Agnostic Architecture:
+      - Overview: Fundamentals/Persistence/DB-Agnostic/overview.md
+      - Configuring VC with DB Providers: Fundamentals/Persistence/DB-Agnostic/configuring-vc-with-db-providers.md
+      - Creating Custom Module with DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/creating-custom-module.md
+      - Transforming Custom Module to Support DB Agnostic Approach: Fundamentals/Persistence/DB-Agnostic/transforming-custom-module.md
+    - Concurrency Handling: Fundamentals/Persistence/Concurrency-handling/concurrency-handling.md
+  - Modularity:
+    - Overview: Fundamentals/Modularity/01-overview.md
+    - Folder Structure: Fundamentals/Modularity/02-folder-structure.md
+    - Versioning and Dependencies: Fundamentals/Modularity/03-versioning-and-dependencies.md
+    - Optional Dependency between Modules: Fundamentals/Modularity/optional-dependency.md
+    - Loading Modules into App Process: Fundamentals/Modularity/04-loading-modules-into-app-process.md
+    - Best Practices: Fundamentals/Modularity/05-best-practices.md
+    - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
+    - Configuration: Fundamentals/Modularity/configuration.md
+  - Scalability:
+    - Scalability Options: Fundamentals/Scalability/scalability-options.md
+    - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md
+  - Event Driven Development:
+    - Using Domain Events: Fundamentals/Event-Driven-Development/using-domain-events.md
+    - Event Providers:
+      - Webhooks: Fundamentals/Event-Driven-Development/webhooks.md
+      - Event Bus:
+        - Overview: Fundamentals/Event-Driven-Development/event-bus.md
+        - Configuration: Fundamentals/Event-Driven-Development/event-bus-configuration.md
+  - Page Builder:
+    - Overview: Fundamentals/PageBuilder/overview.md
+    - Getting Started: Fundamentals/PageBuilder/getting-started.md
+    - Creating New Block: Fundamentals/PageBuilder/create-new-block.md
+    - Server Descriptors: Fundamentals/PageBuilder/server-descriptors.md
+    - Settings: Fundamentals/PageBuilder/settings.md
+    - Schemas: Fundamentals/PageBuilder/schemas.md
+    - Component Context: Fundamentals/PageBuilder/component-context.md
+    - Asset File: Fundamentals/PageBuilder/asset.md
+    - Controls:
+      - Calendar: Fundamentals/PageBuilder/calendar.md
+      - Checkbox: Fundamentals/PageBuilder/checkbox.md
+      - Collection: Fundamentals/PageBuilder/collection.md
+      - Color: Fundamentals/PageBuilder/color.md
+      - Files: Fundamentals/PageBuilder/files.md
+      - Header: Fundamentals/PageBuilder/header.md
+      - Images: Fundamentals/PageBuilder/images.md
+      - Markdown: Fundamentals/PageBuilder/markdown.md
+      - Number: Fundamentals/PageBuilder/number.md
+      - Object: Fundamentals/PageBuilder/object.md
+      - Paragraph: Fundamentals/PageBuilder/paragraph.md
+      - Search: Fundamentals/PageBuilder/search.md
+      - Select: Fundamentals/PageBuilder/select.md
+      - String: Fundamentals/PageBuilder/string.md
+      - Text: Fundamentals/PageBuilder/text.md
+  - Payments:
+    - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
+    - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
+    - Authorize.net: Fundamentals/Payments/authorize-net.md
+    - Skyflow: Fundamentals/Payments/skyflow.md
+    - CyberSource: Fundamentals/Payments/cybersource.md
+  - Shipments:
+    - Registering New Shipping Method: Fundamentals/Shipments/new-shipping-method-registration.md
+  - Taxes:
+    - Configuring Tax Providers: Fundamentals/Taxes/tax-providers-configuration.md
+    - Registering New Tax Provider: Fundamentals/Taxes/new-tax-provider-registration.md
+  - SEO:
+    - Overview: Fundamentals/SEO/overview.md
+    - Adding SEO Capabilities to Module: Fundamentals/SEO/add-seo-to-module.md
+    - Configuration: Fundamentals/SEO/configuration.md
+  - Dynamic Properties:
+    - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
+    - Using DynamicPropertyAccessor: Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md
+  - Notifications:
+    - Overview: Fundamentals/Notifications/overview.md
+    - Registering New Notification Type: Fundamentals/Notifications/registering-new-notification-type.md
+    - Notification Templates: Fundamentals/Notifications/notification-templates.md
+    - Extending Notification Types: Fundamentals/Notifications/extending-notification-types.md
+    - Configuration: Fundamentals/Notifications/configuration.md
+  - Security:
+    - Overview: Fundamentals/Security/overview.md
+    - Authentication:
+      - Overview: Fundamentals/Security/authentication/overview.md
+      - Username and Password:
+        - Issuing and Using Access Token: Fundamentals/Security/authentication/issuing-and-using-access-token.md
+        - Access Token and Cookie Mixed Authentication: Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md
+        - API Key Authentication: Fundamentals/Security/authentication/api-key-authentication.md
+      - OpenId Connect: Fundamentals/Security/authentication/oidc.md
+      - Virto as Identity Provider: Fundamentals/Security/authentication/virto-as-identity-provider.md
+    - Authorization:
+      - Overview: Fundamentals/Security/authorization/overview.md
+      - Global Permissions: Fundamentals/Security/authorization/global-permissions.md
+      - Scope Based Permissions: Fundamentals/Security/authorization/scope-based-permissions.md
+    - Encryption and Signing Credentials: Fundamentals/Security/encryption-and-signing-credentials.md
+    - Extensions:
+      - Extending Authorization Policies: Fundamentals/Security/extensions/extending-authorization-policies.md
+      - Extending ASP.NET Identity UserManager and RoleManager: Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md
+      - Adding Azure AD as SSO Provider: Fundamentals/Security/extensions/adding-azure-as-sso-provider.md
+      - Adding Google as SSO Provider: Fundamentals/Security/extensions/adding-google-as-sso-provider.md
+    - Security in Depth: Fundamentals/Security/security-in-depth.md
+    - Configuration: Fundamentals/Security/configuration.md
+  - Logging:
+    - Overview: Fundamentals/Logging/overview.md
+    - Updating to Serilog Integrated Version: Fundamentals/Logging/how-to-update.md
+    - AppInsights: Fundamentals/Logging/application-insights.md
+    - Extending Logging: Fundamentals/Logging/extended-logging.md
+    - Seq Log Module: Fundamentals/Logging/seq-module.md
+- Configuration Reference:
+  - Appsettings.json: Configuration-Reference/appsettingsjson.md
+- Platform Manager:
+  - Style Guide: Platform-Manager/style-guide.md
+  - UI Scroll Directive: Platform-Manager/ui-scroll-directive.md
+  - Countries Management and Localization: Platform-Manager/localization.md
+  - Extensibility Points:
+    - Extending Main Menu: Platform-Manager/Extensibility-Points/extending-main-menu.md
+    - Blades and Navigation: Platform-Manager/Extensibility-Points/blades-and-navigation.md
+    - Metaform: Platform-Manager/Extensibility-Points/metaform.md
+    - Widgets: Platform-Manager/Extensibility-Points/widgets.md
+    - Extending Grid Columns: Platform-Manager/Extensibility-Points/extending-grid-columns.md
+    - Blade Toolbar: Platform-Manager/Extensibility-Points/blade-toolbar.md
+- GraphQL API Reference (xAPI):
+  - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
+  - Getting Started: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
+  - Update xAPI Modules Guide: GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules.md
+  - Tools to Explore GraphQL:
+    - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
+    - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
+    - Curl: GraphQL-Storefront-API-Reference-xAPI/curl.md
+  - AI Document Processing:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/overview.md
+    - Queries:
+      - purchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequest.md
+      - purchaseRequests: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequests.md
+    - Objects:
+      - PurchaseRequestType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestType.md
+      - PurchaseRequestSourceType: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestSourceType.md
+      - PurchaseRequestConnection: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestConnection.md
+      - PurchaseRequestEdge: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestEdge.md
+    - Mutations:
+      - addPurchaseRequestSource: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/addPurchaseRequestSource.md
+      - createPurchaseRequest: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequest.md
+      - createPurchaseRequestFromDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequestFromDocuments.md
+      - extractPurchaseRequestSourcesData: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/extractPurchaseRequestSourcesData.md
+      - postProcessPurchaseRequestSources: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/postProcessPurchaseRequestSources.md
+      - updatePurchaseRequestByDocuments: GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/updatePurchaseRequestByDocuments.md
+  - Back-in-Stock:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview.md
+    - Queries:
+      - backInStockSubscriptions: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Queries/backInStockSubscriptions.md
+    - Objects:
+      - BackInStockSubscriptionType: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionType.md
+      - BackInStockSubscriptionEdge: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionEdge.md
+      - BackInStockSubscriptionConnection: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionConnection.md
+    - Mutations:
+      - activateBackInStockSubscription: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/activateBackInStockSubscription.md
+      - deactivateBackInStockSubscription: GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/deactivateBackInStockSubscription.md
+  - xCart:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md
+    - Queries:
+      - Cart: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart.md
+      - Carts: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts.md
+      - Wishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlist.md
+      - Wishlists: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlists.md
+      - validateCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/validate-coupon.md
+      - productConfiguration: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/productConfiguration.md
+      - configurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/configurationItems.md
+      - getSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/queries/getSavedForLater.md
+    - Objects:
+      - CartType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type.md
+      - CartConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection.md
+      - CartEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-edge.md
+      - CartShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-shipment-item-type.md
+      - CartAddressType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-address-type.md
+      - MoneyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type.md
+      - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/currency-type.md
+      - TaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/tax-detail-type.md
+      - ShipmentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipment-type.md
+      - ShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipping-method-type.md
+      - PaymentType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-type.md
+      - PaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-method-type.md
+      - DiscountType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/discount-type.md
+      - GiftItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/gift-item-type.md
+      - CouponType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/coupon-type.md
+      - DynamicPropertyType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-type.md
+      - DynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type.md
+      - LineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/line-item-type.md
+      - DictionaryItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-type.md
+      - DictionaryItemConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-connection.md
+      - ValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type.md
+      - ErrorParameterType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type.md
+      - WishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-type.md
+      - WishListEdge: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-edge.md
+      - WishlistConnection: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-connection.md
+      - WishlistScopeType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-scope-type.md
+      - InputNewWishlistItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputNewWishlistItemType.md
+      - InputUpdateWishlistLineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistLineItemType.md
+      - InputUpdateWishlistItemsType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistItemsType.md
+      - BulkWishlistType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/bulk-wishlist-type.md
+      - ConfigurationSectionType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionType.md
+      - CartConfigurationItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/CartConfigurationItemType.md
+      - ConfigurationLineItemType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationLineItemType.md
+      - ConfigurationQueryResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationQueryResponseType.md
+      - ConfigurationItemsResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationItemsResponseType.md
+      - ConfigurationSectionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionInput.md
+      - ConfigurableProductOptionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionInput.md
+    - Mutations:
+      - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
+      - clearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
+      - selectCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartItems.md
+      - unselectCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectCartItems.md
+      - selectAllCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartItems.md
+      - unselectAllCartItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectAllCartItems.md
+      - changeComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-comment.md
+      - changeCartItemPrice: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-price.md
+      - changeCartItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-quantity.md
+      - changeCartItemComment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-comment.md
+      - removeCartItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart-item.md
+      - addCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-coupon.md
+      - removeCoupon: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-coupon.md
+      - removeShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-shipment.md
+      - addOrUpdateCartShipment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-shipment.md
+      - addOrUpdateCartPayment: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-payment.md
+      - mergeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart.md
+      - removeCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart.md
+      - clearShipments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-shipments.md
+      - clearPayments: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-payments.md
+      - updateCartDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-dynamic-properties.md
+      - updateCartItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-item-dynamic-properties.md
+      - updateCartShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-shipment-dynamic-properties.md
+      - updateCartPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties.md
+      - addCartAddress: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address.md
+      - createWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createWishlist.md
+      - changeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeWishlist.md
+      - renameWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/renameWishlist.md
+      - removeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlist.md
+      - addWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItem.md
+      - updateWishListItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateWishListItems.md
+      - addWishlistItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItems.md
+      - removeWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem.md
+      - moveWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem.md
+      - addWishListBulkItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item.md
+      - addGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addGiftItems.md
+      - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
+      - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
+      - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
+      - cloneWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/cloneWishlist.md
+      - moveFromSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveFromSavedForLater.md
+      - moveToSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveToSavedForLater.md
+  - xCatalog:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
+    - Queries:
+      - Product: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/product.md
+      - Products: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products.md
+      - Category: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/category.md
+      - Categories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/categories.md
+      - Property: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/property.md
+      - Properties: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/properties.md
+      - Fulfillment Center: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-center.md
+      - Fulfillment Centers: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-centers.md
+      - childCategories: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/child-categories.md
+      - Brand: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brand.md
+      - Brands: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brands.md
+      - SlugInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/SlugInfo.md
+      - productSuggestions: GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/productSuggestions.md
+    - Objects:
+      - ProductType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType.md
+      - ProductConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection.md
+      - ProductEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductEdge.md
+      - ProductAssociationConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationConnection.md
+      - ProductAssociationEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationEdge.md
+      - ProductAssociation: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociation.md
+      - CategoryType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryType.md
+      - CategoryConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryConnection.md
+      - CategoryEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryEdge.md
+      - CategoryDescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType.md
+      - DescriptionType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType.md
+      - FulfillmentCenterType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterType.md
+      - FulfillmentCenterAddressType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterAddressType.md
+      - FulfillmentCenterConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterConnection.md
+      - FulfillmentCenterEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterEdge.md
+      - VariationType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType.md
+      - AvailabilityData: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/AvailabilityData.md
+      - ImageType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ImageType.md
+      - PriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/PriceType.md
+      - TierPriceType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/TierPriceType.md
+      - CatalogDiscountType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/CatalogDiscountType.md
+      - PropertyType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/Property.md
+      - PropertyConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyConnection.md
+      - PropertyEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyEdge.md
+      - PropertyDictItemConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemConnection.md
+      - PropertyDictItemEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemEdge.md
+      - PropertyDictItem: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItem.md
+      - Asset: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Asset.md
+      - PageInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo.md
+      - InventoryInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo.md
+      - SeoInfo: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo.md
+      - OutlineType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType.md
+      - OutlineItemType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineItemType.md
+      - Breadcrumb: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb.md
+      - CommonVendor: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor.md
+      - Rating: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Rating.md
+      - VideoConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection.md
+      - VideoEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge.md
+      - VideoType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType.md
+      - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet.md
+      - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet.md
+      - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType.md
+      - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet.md
+      - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType.md
+      - BrandType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandType.md
+      - BrandConnection: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandConnection.md
+      - BrandEdge: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandEdge.md
+      - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SlugInfoResponseType.md
+      - ProductSuggestionsQueryResponseType: GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductSuggestionsQueryResponseType.md
+    - Examples:
+      - Full Text Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search.md
+      - Fuzzy Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search.md
+      - Filter Syntax: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filter-syntax.md
+      - Filtering: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering.md
+      - Facets: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets.md
+      - Multi Select Faceting Search: GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search.md
+  - xCMS:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Content/overview.md
+    - Queries:
+      - Page: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page.md
+      - Pages: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages.md
+      - Menu: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu.md
+      - Menus: GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus.md
+    - Objects:
+      - PageConnection: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageConnection.md
+      - PageEdge: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageEdge.md
+      - PageType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType.md
+      - MenuLinkListType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType.md
+      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType.md
+  - Customer Review:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Reviews/overview.md
+    - Queries:
+      - customerReviews: GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/customerReviews.md
+      - canLeaveFeedback: GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/canLeaveFeedback.md
+    - Objects:
+      - CustomerReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReview.md
+      - CustomerReviewConnection: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewConnection.md
+      - createReviewResult: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/createReviewResult.md
+      - CustomerReviewEdge: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewEdge.md
+      - ReviewValidationErrorType: GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/ReviewValidationErrorType.md
+    - Mutations:
+      - createCustomerReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createCustomerReview.md
+      - createReview: GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createReview.md
+  - xFile:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/File/overview.md
+    - Getting Started: GraphQL-Storefront-API-Reference-xAPI/File/getting-started.md
+    - Queries:
+      - fileUploadOptions: GraphQL-Storefront-API-Reference-xAPI/File/Queries/fileUploadOptions.md
+    - Objects:
+      - FileUploadScopeOptionsType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/FileUploadScopeOptionsType.md
+      - DeleteFileCommandType: GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType.md
+    - Mutations:
+      - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
+  - Loyalty:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview.md
+    - Queries:
+      - loyaltyBalance: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyBalance.md
+      - loyaltyPointsHistory: GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyPointsHistory.md
+    - Objects:
+      - LoyaltyBalanceResult: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyBalanceResult.md
+      - LoyaltyOperationLog: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLog.md
+      - LoyaltyOperationLogConnection: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogConnection.md
+      - LoyaltyOperationLogEdge: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogEdge.md
+      - LoyaltyOperationLogObject: GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogObject.md
+  - xMarketing:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md
+    - Queries:
+      - evaluateDynamicContent: GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content.md
+    - Objects:
+      - DynamicContentItemType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType.md
+      - EvaluateDynamicContentResultType: GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType.md
+  - News:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/News/overview.md
+    - Queries:
+      - newsArticle: GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticle.md
+      - newsArticles: GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticles.md
+    - Objects:
+      - NewsArticleContent: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContent.md
+      - NewsArticleContentConnection: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentConnection.md
+      - NewsArticleContentEdge: GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentEdge.md
+  - xOrder:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Order/overview.md
+    - Queries:
+      - order: GraphQL-Storefront-API-Reference-xAPI/Order/queries/order.md
+      - orders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders.md
+      - orderStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderStatuses.md
+      - organizationOrders: GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders.md
+      - shipmentStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/shipmentStatuses.md
+      - paymentStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/paymentStatuses.md
+      - orderLineItemStatuses: GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderLineItemStatuses.md
+    - Objects:
+      - CustomerOrderType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-type.md
+      - CustomerOrderConnection: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-connection.md
+      - OrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-address-type.md
+      - OrderLineItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-line-item-type.md
+      - PaymentInType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-in-type.md
+      - ProcessPaymentRequestResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/process-payment-request-result-type.md
+      - InputOrderBankCardInfoType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-bank-card-info-type.md
+      - InputOrderPaymentType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-payment-type.md
+      - PaymentTransactionType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-transaction-type.md
+      - AuthorizePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/authorize-payment-result-type.md
+      - InitializePaymentResultType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/initialize-payment-result-type.md
+      - OrderShipmentType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-type.md
+      - OrderShippingMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipping-method-type.md
+      - OrderShipmentItemType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-item-type.md
+      - OrderShipmentPackageType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-package-type.md
+      - InputOrderAddressType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-address-type.md
+      - OrderTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-tax-detail-type.md
+      - OrderDiscountType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-discount-type.md
+      - OrderPaymentMethodType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-payment-method-type.md
+      - LocalizedSettingResponseType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/LocalizedSettingResponseType.md
+      - CustomerOrderEdge: GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-edge.md
+      - CurrencyType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type.md
+      - KeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/key-value-type.md
+      - InputKeyValueType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type.md
+      - FilterFacet: GraphQL-Storefront-API-Reference-xAPI/Order/objects/filter-facet.md
+      - RangeFacet: GraphQL-Storefront-API-Reference-xAPI/Order/objects/range-facet.md
+      - TermFacet: GraphQL-Storefront-API-Reference-xAPI/Order/objects/term-facet.md
+      - FacetTermType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/facet-term-type.md
+      - FacetRangeType: GraphQL-Storefront-API-Reference-xAPI/Order/objects/facet-range-type.md
+    - Mutations:
+      - ChangePurchaseOrderNumber: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-purchase-order-number.md
+      - CreateOrderFromCart: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/create-order-from-cart.md
+      - ChangeOrderStatus: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-order-status.md
+      - ProcessOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/process-order-payment.md
+      - UpdateOrderDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-dynamic-properties.md
+      - UpdateOrderItemDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-item-dynamic-properties.md
+      - UpdateOrderShipmentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-shipment-dynamic-properties.md
+      - UpdateOrderPaymentDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-payment-dynamic-properties.md
+      - InitializePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment.md
+      - AuthorizePayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment.md
+      - AddOrUpdateOrderPayment: GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment.md
+  - Pages:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Pages/overview.md
+    - Queries:
+      - pageDocument: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocument.md
+      - pageDocuments: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocuments.md
+      - slugInfo: GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/slugInfo.md
+    - Objects:
+      - PageDocumentConnection: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentConnection.md
+      - PageDocumentEdge: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge.md
+      - PageDocumentType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType.md
+      - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/SlugInfoResponseType.md
+  - xProfile:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
+    - Queries:
+      - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organization.md
+      - Organizations: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organizations.md
+      - Contact: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contact.md
+      - Contacts: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contacts.md
+      - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/user.md
+      - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/role.md
+      - Vendor: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/vendor.md
+      - requestPasswordReset: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/requestPasswordReset.md
+      - validatePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/validatePassword.md
+      - checkUsernameUniqueness: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkUsernameUniqueness.md
+      - checkEmailUniqueness: GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkEmailUniqueness.md
+    - Objects:
+      - Organization: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationType.md
+      - OrganizationConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationConnection.md
+      - OrganizationEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationEdge.md
+      - Contact: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactType.md
+      - ContactConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactConnection.md
+      - ContactEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactEdge.md
+      - User: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/UserType.md
+      - InputCreateUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateUserType.md
+      - InputCreateApplicationUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateApplicationUserType.md
+      - InputUpdateApplicationUserType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateApplicationUserType.md
+      - InputApplicationUserLoginType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputApplicationUserLoginType.md
+      - CustomIdentityResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/CustomIdentityResultType.md
+      - IdentityResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityResultType.md
+      - IdentityErrorType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorType.md
+      - IdentityErrorInfoType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorInfoType.md
+      - Role: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RoleType.md
+      - InputAssignRoleType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignRoleType.md
+      - InputUpdateRoleInnerType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateRoleInnerType.md
+      - InputAssignPermissionType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionType.md
+      - InputAssignPermissionScopeType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionScopeType.md
+      - Member: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberType.md
+      - MemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressType.md
+      - MemberAddressConnection: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressConnection.md
+      - MemberAddressEdge: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressEdge.md
+      - InputMemberAddressType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputMemberAddressType.md
+      - InputDynamicPropertyValueType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType.md
+      - RequestRegistrationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RequestRegistrationType.md
+      - RegisterOrganizationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterOrganizationType.md
+      - RegisterContactType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterContactType.md
+      - RegisterAccountType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterAccountType.md
+      - AccountCreationResultType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/AccountCreationResultType.md
+      - InputRegisterOrganizationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterOrganizationType.md
+      - InputRegisterContactType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterContactType.md
+      - InputRegisterAccountType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterAccountType.md
+      - RegistrationErrorType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegistrationErrorType.md
+      - InputRegisterByInvitationType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterByInvitationType.md
+      - InputResetPasswordByTokenType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputResetPasswordByTokenType.md
+      - InputChangePasswordType: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputChangePasswordType.md
+      - Rating: GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/rating.md
+    - Mutations:
+      - createContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createContact.md
+      - updateContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateContact.md
+      - deleteContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteContact.md
+      - confirmEmail: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/confirmEmail.md
+      - sendVerifyEmail: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/sendVerifyEmail.md
+      - createUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createUser.md
+      - updateUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateUser.md
+      - inviteUser: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/inviteUser.md
+      - deleteUsers: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteUsers.md
+      - createOrganization: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createOrganization.md
+      - updateOrganization: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateOrganization.md
+      - lockOrganizationContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/lockOrganizationContact.md
+      - unlockOrganizationContact: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/unlockOrganizationContact.md
+      - changeOrganizationContactRole: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changeOrganizationContactRole.md
+      - removeMemberFromOrganization: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/removeMemberFromOrganization.md
+      - updateRole: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateRole.md
+      - updateMemberAddresses: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberAddresses.md
+      - deleteMemberAddresses: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteMemberAddresses.md
+      - updateMemberDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberDynamicProperties.md
+      - requestRegistration: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/requestRegistration.md
+      - registerByInvitation: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation.md
+      - resetPasswordByToken: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken.md
+      - changePassword: GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword.md
+  - Push Messages:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview.md
+    - Queries:
+      - Push messages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/pushMessages.md
+      - FcmSettings: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/FcmSettings.md
+    - Objects:
+      - PushMessageType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageType.md
+      - PushMessageConnection: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageConnection.md
+      - PushMessageEdge: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageEdge.md
+      - InputMarkPushMessageReadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageReadType.md
+      - InputMarkPushMessageUnreadType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageUnreadType.md
+      - FcmSettingsType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/FcmSettingsType.md
+      - InputAddFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputAddFcmTokenType.md
+      - InputDeleteFcmTokenType: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputDeleteFcmTokenType.md
+    - Mutations:
+      - markPushMessageRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageRead.md
+      - markPushMessageUnrea: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageUnread.md
+      - markAllPushMessagesRead: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesRead.md
+      - markAllPushMessagesUnread: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesUnread.md
+      - clearAllPushMessages: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/clearAllPushMessages.md
+      - addFcmToken: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/addFcmToken.md
+      - deleteFcmToken: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/deleteFcmToken.md
+    - Subscriptions:
+      - pushMessageCreated: GraphQL-Storefront-API-Reference-xAPI/Push-messages/Subscriptions/pushMessageCreated.md
+  - Quote:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md
+    - Queries:
+      - Quote: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quote.md
+      - Quotes: GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quotes.md
+    - Objects:
+      - QuoteType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteType.md
+      - QuoteConnection: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteConnection.md
+      - QuoteTotalsType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTotalsType.md
+      - QuoteItemType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteItemtype.md
+      - QuoteTierPriceType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTierPriceType.md
+      - QuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAddressType.md
+      - QuoteAttachmentType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAttachmentType.md
+      - QuoteShipmentMethodType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteShipmentMethodType.md
+      - QuoteTaxDetailType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTaxDetailType.md
+      - QuoteEdge: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteEdge.md
+      - CancelQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CancelQuoteCommandType.md
+      - ChangeQuoteCommentCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteCommentCommandType.md
+      - ChangeQuoteItemQuantityCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteItemQuantityCommandType.md
+      - CreateQuoteFromCartCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CreateQuoteFromCartCommandType.md
+      - RemoveQuoteItemCommandtype: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/RemoveQuoteItemCommandtype.md
+      - SubmitQuoteCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/SubmitQuoteCommandType.md
+      - UpdateQuoteAddressCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteAddressCommandType.md
+      - InputQuoteAddressType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/InputQuoteAddressType.md
+      - ApproveQuoteResultType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ApproveQuoteResultType.md
+      - UpdateQuoteDynamicPropertiesCommandType: GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteDynamicPropertiesCommandType.md
+    - Mutations:
+      - createQuoteFromCart: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart.md
+      - cancelQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request.md
+      - changeQuoteItemQuantity: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-item-quantity.md
+      - removeQuoteItem: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/remove-quote-item.md
+      - changeQuoteComment: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment.md
+      - submitQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request.md
+      - updateQuoteAddresses: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address.md
+      - addQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/addQuoteAttachments.md
+      - approveQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/approveQuoteRequest.md
+      - createQuote: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/createQuote.md
+      - declineQuoteRequest: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/declineQuoteRequest.md
+      - deleteQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/deleteQuoteAttachments.md
+      - updateQuoteAttachments: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments.md
+      - updateQuoteDynamicProperties: GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteDynamicProperties.md
+  - xRecommend:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Recommend/overview.md
+    - Queries:
+      - recommendations: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations.md
+      - recentlyBrowsed: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recentlyBrowsed.md
+      - searchHistory: GraphQL-Storefront-API-Reference-xAPI/Recommend/query/searchHistory.md
+    - Objects:
+      - GetRecommendationsResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType.md
+      - GetRecentlyBrowsedResponseType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecentlyBrowsedResponseType.md
+      - SearchHistoryResultType: GraphQL-Storefront-API-Reference-xAPI/Recommend/object/SearchHistoryResultType.md
+    - Mutations:
+      - pushHistoricalEvent: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent.md
+      - saveSearchQuery: GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/saveSearchQuery.md
+  - Skyflow:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Skyflow/overview.md
+    - Queries:
+      - skyflowCards: GraphQL-Storefront-API-Reference-xAPI/Skyflow/queries/skyflowCards.md
+    - Objects:
+      - SkyflowCardType: GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/SkyflowCardType.md
+      - SkyflowCardResponseType: GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/SkyflowCardResponseType.md
+      - DeleteSkyflowCardCommandType: GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/DeleteSkyflowCardCommandType.md
+    - Mutations:
+      - deleteSkyflowCard: GraphQL-Storefront-API-Reference-xAPI/Skyflow/mutations/deleteSkyflowCard.md
+  - Store:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Store/overview.md
+    - Queries:
+      - Store: GraphQL-Storefront-API-Reference-xAPI/Store/queries/store.md
+    - Objects:
+      - StoreResponseType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType.md
+      - LanguageType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType.md
+      - StoreSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType.md
+      - GraphQLSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/GraphQLSettingsType.md
+      - ModuleSettingsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingsType.md
+      - ModuleSettingType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingType.md
+      - PasswordOptionsType: GraphQL-Storefront-API-Reference-xAPI/Store/objects/PasswordOptionsType.md
+  - Shipping:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/Shipping/overview.md
+    - Queries:
+      - pickupLocations: GraphQL-Storefront-API-Reference-xAPI/Shipping/queries/pickupLocations.md
+    - Objects:
+      - PickupAddressType: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupAddressType.md
+      - PickupLocationType: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationType.md
+      - PickupLocationEdge: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationEdge.md
+      - PickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationConnection.md
+  - White Labeling:
+    - Overview: GraphQL-Storefront-API-Reference-xAPI/White-labeling/overview.md
+    - Queries:
+      - whiteLabelingSettings: GraphQL-Storefront-API-Reference-xAPI/White-labeling/queries/whiteLabelingSettings.md
+    - Objects:
+      - ChangeOrganizationLogoResultType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/ChangeOrganizationLogoResultType.md
+      - WhiteLabelingSettingsType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/WhiteLabelingSettingsType.md
+      - FaviconType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/FaviconType.md
+      - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/MenuLinkType.md
+    - Mutations:
+      - ChangeOrganizationLogo: GraphQL-Storefront-API-Reference-xAPI/White-labeling/mutations/ChangeOrganizationLogo.md
+  - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
+  - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
+- Extensibility:
+  - Overview: Extensibility/overview.md
+  - Key Extensibility Points: Extensibility/key-extensibility-points.md
+  - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
+  - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
+  - Extending Application User: Extensibility/extending-application-user.md
+  - Adding New Blocks to Page Builder: Extensibility/page-builder-extension.md
+- Operations:
+  - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
+- Tutorials and How-tos:
+  - Overview: Tutorials-and-How-tos/overview.md
+  - Tutorials:
+    - Creating Custom Module from Template:
+      - Creating Custom Module from Template: Tutorials-and-How-tos/Tutorials/creating-custom-module.md
+      - Custom Modules Templates for Dotnet New: Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md
+    - Creating New Module from Scratch: Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md
+    - Deploying Module from Source Code: Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md
+    - Modules Development via Docker: Tutorials-and-How-tos/How-tos/docker-modules-development.md
+    - Extending Database Model: Tutorials-and-How-tos/Tutorials/extending-database-model.md
+    - Building and Customizing Platform Manager UI: Tutorials-and-How-tos/Tutorials/build-platform-manager-ui.md
+    - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
+  - How-tos:
+    - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md
+    - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
+    - Type Inheritance Support in Swagger API: Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger.md
+    - Adding Azure App Configuration: Tutorials-and-How-tos/How-tos/azure-app-configuration.md
+    - Setting Up Prerender.io with Azure Application Gateway: Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway.md
+    - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
+    - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
+    - Configuring Multiple Stores on Virto Cloud: Tutorials-and-How-tos/How-tos/configuring-multiple-stores-on-virto-cloud.md
+    - Extending Cart Query With Custom Parameter: Tutorials-and-How-tos/How-tos/extending-cart-query-with-custom-parameter.md
+    - Customizing Cart Validation Policies: Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies.md
+    - Upgrading to Virto Commerce on .Net8: Tutorials-and-How-tos/How-tos/upgrading-to-net8.md
+    - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
+    - Using Feature Flags with VC Platform and Frontend: Tutorials-and-How-tos/How-tos/feature-flags.md
+    - Using responseGroup in Virto Commerce REST APIs: Tutorials-and-How-tos/How-tos/using-responseGroups-in-rest-api.md
+    - Partial Updates for Entities Using PATCH-Endpoint: Tutorials-and-How-tos/How-tos/update-using-patch.md
+    - Generating PDFs: Tutorials-and-How-tos/How-tos/generating-pdfs.md
+    - Health Checks: Tutorials-and-How-tos/How-tos/health-checks.md
+    - JSON Web Token Authorization Mechanism: Tutorials-and-How-tos/How-tos/authorization-using-jwt.md
+    - Sharing Bearer Tokens Across Multiple Instances: Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md
+    - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
+    - Enabling Embedded Mode for VC-Shell Instances: Tutorials-and-How-tos/How-tos/enable-embedded-mode-for-vc-shell.md
+    - Migration to New xAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
+- Releases, Bundles, PBCs. Installation and Updates:
+  - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
+  - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
+  - Edge Releases: Updating-Virto-Commerce-Based-Project/edge-releases.md
+  - Installing Specific Version: Updating-Virto-Commerce-Based-Project/installing-specific-version.md
+  - Packaged Business Capabilities (PBCs) and PBCs Max: Updating-Virto-Commerce-Based-Project/pbcs.md
+  - Outdated Strategy: Updating-Virto-Commerce-Based-Project/outdated-strategy.md
+  - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
+- Custom Apps Development:
+  - Overview: custom-apps-development/overview.md
+  - Registering New App: custom-apps-development/how-to-register-new-app.md
+  - VC-Shell:
+    - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
+    - Getting Started:
+      - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
+    - Guides:
+      - Application Architecture and Best Practices: custom-apps-development/vc-shell/Guides/application-architecture-best-practices.md
+      - Building, Deployment and Advanced Topics: custom-apps-development/vc-shell/Guides/building-deployment-advanced-topics.md
+      - Creating Custom VC-Shell Applications: custom-apps-development/vc-shell/Guides/creating-custom-applications.md
+      - Core Concepts for VC-Shell Applications: custom-apps-development/vc-shell/Guides/custom-application-core-concepts.md
+      - Developing Custom VC-Shell Modules: custom-apps-development/vc-shell/Guides/developing-custom-modules.md
+      - Integrating Framework Features: custom-apps-development/vc-shell/Guides/integrating-framework-features.md
+      - Internationalization: custom-apps-development/vc-shell/Guides/internationalization.md
+      - Routing Configuration: custom-apps-development/vc-shell/Guides/routing-configuration.md
+    - Essentials:
+      - Navigation: custom-apps-development/vc-shell/Essentials/navigation.md
+      - Understanding Application Layout: custom-apps-development/vc-shell/Essentials/understanding-application-layout.md
+      - API Client Integration: custom-apps-development/vc-shell/Essentials/API-Integration/api-client-integration.md
+      - Composables:
+        - useApiClient: custom-apps-development/vc-shell/Essentials/composables/useApiClient.md
+        - useAppBarWidget: custom-apps-development/vc-shell/Essentials/composables/useAppBarWidget.md
+        - useAppInsights: custom-apps-development/vc-shell/Essentials/composables/useAppInsights.md
+        - useAsync: custom-apps-development/vc-shell/Essentials/composables/useAsync.md
+        - useBeforeUnload: custom-apps-development/vc-shell/Essentials/composables/useBeforeUnload.md
+        - useBreadcrumbs: custom-apps-development/vc-shell/Essentials/composables/useBreadcrumbs.md
+        - useDashboard: custom-apps-development/vc-shell/Essentials/composables/useDashboard.md
+        - useDynamicProperties: custom-apps-development/vc-shell/Essentials/composables/useDynamicProperties.md
+        - useLanguages: custom-apps-development/vc-shell/Essentials/composables/useLanguages.md
+        - useLoading: custom-apps-development/vc-shell/Essentials/composables/useLoading.md
+        - useMenuService: custom-apps-development/vc-shell/Essentials/composables/useMenuService.md
+        - useNotifications: custom-apps-development/vc-shell/Essentials/composables/useNotifications.md
+        - usePermissions: custom-apps-development/vc-shell/Essentials/composables/usePermissions.md
+        - useSettings: custom-apps-development/vc-shell/Essentials/composables/useSettings.md
+        - useSettingsMenu: custom-apps-development/vc-shell/Essentials/composables/useSettingsMenu.md
+        - useTheme: custom-apps-development/vc-shell/Essentials/composables/useTheme.md
+        - useToolbar: custom-apps-development/vc-shell/Essentials/composables/useToolbar.md
+        - useUser: custom-apps-development/vc-shell/Essentials/composables/useUser.md
+        - useWidgets: custom-apps-development/vc-shell/Essentials/composables/useWidgets.md
+        - useExternalWidgets: custom-apps-development/vc-shell/Essentials/composables/useExternalWidgets.md
+        - useTableSort: custom-apps-development/vc-shell/Essentials/composables/useTableSort.md
+        - useModificationTracker: custom-apps-development/vc-shell/Essentials/composables/useModificationTracker.md
+      - Usage Guides:
+        - Overview: custom-apps-development/vc-shell/Essentials/Usage-Guides/overview.md
+        - Adding App Bar Widgets with useappbarwidget: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md
+        - Adding New Languages: custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-new-languages.md
+        - Building Navigation Menus with usemenuservice: custom-apps-development/vc-shell/Essentials/Usage-Guides/building-navigation-menus-with-usemenuservice.md
+        - Creating and Registering Widgets with usewidgets: custom-apps-development/vc-shell/Essentials/Usage-Guides/creating-and-registering-widgets-with-usewidgets.md
+        - Creating Interactive Dashboards with usedashboard: custom-apps-development/vc-shell/Essentials/Usage-Guides/creating-interactive-dashboards-with-usedashboard.md
+        - Customizing Application UI with usesettings: custom-apps-development/vc-shell/Essentials/Usage-Guides/customizing-application-ui-with-usesettings.md
+        - Customizing Notifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/customizing-notifications.md
+        - Displaying Toast Notifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/displaying-toast-notifications.md
+        - Error Handling in VC-Shell: custom-apps-development/vc-shell/Essentials/Usage-Guides/error-handling-in-vc-shell.md
+        - Implementing form Validation in Blades: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-form-validation-in-blades.md
+        - Implementing Navigational Breadcrumbs with usebreadcrumbs: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-navigational-breadcrumbs-with-usebreadcrumbs.md
+        - Implementing Role-Based Access Control with usepermissions: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-role-based-access-control-with-usepermissions.md
+        - Implementing Telemetry with useappinsights: custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-telemetry-with-useappinsights.md
+        - Integrating Shared Authentication Pages: custom-apps-development/vc-shell/Essentials/Usage-Guides/integrating-shared-authentication-pages.md
+        - Managing Async Operations with useasync: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-async-operations-with-useasync.md
+        - Managing Blade Toolbars with usetoolbar: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-blade-toolbars-with-usetoolbar.md
+        - Managing Dynamic Properties with usedynamicproperties: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-dynamic-properties-with-usedynamicproperties.md
+        - Managing Loading States with useloading: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-loading-states-with-useloading.md
+        - Managing Popups with usepopup and vcpopup: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-popups-with-usepopup-and-vcpopup.md
+        - Managing Settings Menu with usesettingsmenu: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-settings-menu-with-usesettingsmenu.md
+        - Managing Themes with usetheme: custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-themes-with-usetheme.md
+        - Preventing Data Loss with usebeforeunload: custom-apps-development/vc-shell/Essentials/Usage-Guides/preventing-data-loss-with-usebeforeunload.md
+        - Understanding Blade Anatomy: custom-apps-development/vc-shell/Essentials/Usage-Guides/understanding-blade-anatomy.md
+        - Using API Clients with useapiclient: custom-apps-development/vc-shell/Essentials/Usage-Guides/using-api-clients-with-useapiclient.md
+        - Working with Blade Navigation in VC-Shell: custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-blade-navigation.md
+        - Working with Push Notifications Using usenotifications: custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-push-notifications-using-usenotifications.md
+      - Plugins:
+        - i18n: custom-apps-development/vc-shell/Essentials/plugins/i18n.md
+        - Modularity: custom-apps-development/vc-shell/Essentials/plugins/modularity.md
+        - Permissions: custom-apps-development/vc-shell/Essentials/plugins/permissions.md
+        - SignalR: custom-apps-development/vc-shell/Essentials/plugins/signalr.md
+        - Validation: custom-apps-development/vc-shell/Essentials/plugins/validation.md
+      - Shared:
+        - Components:
+          - Blade Navigation: custom-apps-development/vc-shell/Essentials/shared/components/blade-navigation.md
+          - Dashboard Widget Card: custom-apps-development/vc-shell/Essentials/shared/components/dashboard-widget-card.md
+          - Draggable Dashboard: custom-apps-development/vc-shell/Essentials/shared/components/draggable-dashboard.md
+          - Generic Dropdown: custom-apps-development/vc-shell/Essentials/shared/components/generic-dropdown.md
+          - Notifications: custom-apps-development/vc-shell/Essentials/shared/components/notifications.md
+          - Popup Handler: custom-apps-development/vc-shell/Essentials/shared/components/popup-handler.md
+          - Settings Menu Item: custom-apps-development/vc-shell/Essentials/shared/components/settings-menu-item.md
+          - Sidebar: custom-apps-development/vc-shell/Essentials/shared/components/sidebar.md
+      - UI Components:
+        - VcApp: custom-apps-development/vc-shell/Essentials/ui-components/vc-app.md
+        - VcBadge: custom-apps-development/vc-shell/Essentials/ui-components/vc-badge.md
+        - VcBlade: custom-apps-development/vc-shell/Essentials/ui-components/vc-blade.md
+        - VcBreadcrumbs: custom-apps-development/vc-shell/Essentials/ui-components/vc-breadcrumbs.md
+        - VcButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-button.md
+        - VcCheckbox: custom-apps-development/vc-shell/Essentials/ui-components/vc-checkbox.md
+        - VcContainer: custom-apps-development/vc-shell/Essentials/ui-components/vc-container.md
+        - VcDynamicProperty: custom-apps-development/vc-shell/Essentials/ui-components/vc-dynamic-property.md
+        - VcEditor: custom-apps-development/vc-shell/Essentials/ui-components/vc-editor.md
+        - VcField: custom-apps-development/vc-shell/Essentials/ui-components/vc-field.md
+        - VcFileUpload: custom-apps-development/vc-shell/Essentials/ui-components/vc-file-upload.md
+        - VcForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-form.md
+        - VcGallery: custom-apps-development/vc-shell/Essentials/ui-components/vc-gallery.md
+        - VcGrid: custom-apps-development/vc-shell/Essentials/ui-components/vc-grid.md
+        - VcHint: custom-apps-development/vc-shell/Essentials/ui-components/vc-hint.md
+        - VcIcon: custom-apps-development/vc-shell/Essentials/ui-components/vc-icon.md
+        - VcImage: custom-apps-development/vc-shell/Essentials/ui-components/vc-image.md
+        - VcInput: custom-apps-development/vc-shell/Essentials/ui-components/vc-input.md
+        - VcInputCurrency: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-currency.md
+        - VcInputDropdown: custom-apps-development/vc-shell/Essentials/ui-components/vc-input-dropdown.md
+        - VcLabel: custom-apps-development/vc-shell/Essentials/ui-components/vc-label.md
+        - VcLink: custom-apps-development/vc-shell/Essentials/ui-components/vc-link.md
+        - VcLoginForm: custom-apps-development/vc-shell/Essentials/ui-components/vc-login-form.md
+        - VcMultivalue: custom-apps-development/vc-shell/Essentials/ui-components/vc-multivalue.md
+        - VcPagination: custom-apps-development/vc-shell/Essentials/ui-components/vc-pagination.md
+        - VcPopup: custom-apps-development/vc-shell/Essentials/ui-components/vc-popup.md
+        - VcProgress: custom-apps-development/vc-shell/Essentials/ui-components/vc-progress.md
+        - VcRadioButton: custom-apps-development/vc-shell/Essentials/ui-components/vc-radio-button.md
+        - VcRating: custom-apps-development/vc-shell/Essentials/ui-components/vc-rating.md
+        - VcSelect: custom-apps-development/vc-shell/Essentials/ui-components/vc-select.md
+        - VcSkeleton: custom-apps-development/vc-shell/Essentials/ui-components/vc-skeleton.md
+        - VcSlider: custom-apps-development/vc-shell/Essentials/ui-components/vc-slider.md
+        - VcStatus: custom-apps-development/vc-shell/Essentials/ui-components/vc-status.md
+        - VcStatusIcon: custom-apps-development/vc-shell/Essentials/ui-components/vc-status-icon.md
+        - VcSwitch: custom-apps-development/vc-shell/Essentials/ui-components/vc-switch.md
+        - VcTable: custom-apps-development/vc-shell/Essentials/ui-components/vc-table.md
+        - VcTextarea: custom-apps-development/vc-shell/Essentials/ui-components/vc-textarea.md
+        - VcToast: custom-apps-development/vc-shell/Essentials/ui-components/vc-toast.md
+        - VcVideo: custom-apps-development/vc-shell/Essentials/ui-components/vc-video.md
+        - VcWidget: custom-apps-development/vc-shell/Essentials/ui-components/vc-widget.md
+    - Extensibility:
+      - Modularity: custom-apps-development/vc-shell/Extensibility/modularity.md
+    - How-tos:
+      - Connecting to Platform: custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md
+extra:
+  homepage: /
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/VirtoCommerce
+  - icon: fontawesome/brands/facebook
+    link: https://facebook.com/VirtoCommerce
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/virtocommerce?lang=en
+  - icon: fontawesome/brands/instagram
+    link: google.com
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/company/virto-commerce/
+  - icon: fontawesome/brands/youtube
+    link: https://www.youtube.com/c/Virtocommerce/videos
+  search:
+    icon: assets/icons/search.svg
+  rss:
+    icon: assets/icons/rss.svg
+  footer_links:
+  - title: Support
+    url: https://help.virtocommerce.com/support/home
+  - title: Community
+    url: https://www.virtocommerce.org/
+  - title: FAQ
+    url: https://www.virtocommerce.org/faq
+  - title: Release Notes
+    url: https://www.virtocommerce.org/c/news-digest/
+  main_page:
+    release_notes:
+    - title: October 2025
+      link: https://www.virtocommerce.org/t/virtos-release-notes-october-2025/807
+      type: Release Notes
+      date: 7 October 2025
+    - title: September 2025
+      link: https://www.virtocommerce.org/t/virtos-release-notes-september-2025/805
+      type: Release Notes
+      date: 2 September 2025
+    - title: August 2025
+      link: https://www.virtocommerce.org/t/virto-s-release-notes-august-2025/801
+      type: Release Notes
+      date: 1 August 2025
+    - title: July 2025
+      link: https://www.virtocommerce.org/t/virto-s-release-notes-july-2025/798
+      type: Release Notes
+      date: 7 July 2025
+    - title: June 2025
+      link: https://www.virtocommerce.org/t/virto-s-release-notes-june-2025/796
+      type: Release Notes
+      date: 4 June 2025
+    - title: May 2025
+      link: https://www.virtocommerce.org/t/virtos-release-notes-may-2025/778
+      type: Release Notes
+      date: 1 May 2025
+    - title: April 2025
+      link: https://www.virtocommerce.org/t/virto-s-release-notes-april-2025/769
+      type: Release Notes
+      date: 2 April 2025
+    - title: March 2025
+      link: https://www.virtocommerce.org/t/virto-s-release-notes-march-2025/767
+      type: Release Notes
+      date: 3 March 2025
+    - title: February 2025
+      link: https://www.virtocommerce.org/t/virtos-release-notes-february-2025/760
+      type: Release Notes
+      date: 3 February 2025
+    - title: January 2025
+      link: https://www.virtocommerce.org/t/virto-s-release-notes-january-2025/755
+      type: Release Notes
+      date: 1 January 2025
+    - title: December 2024
+      link: https://www.virtocommerce.org/t/virtos-release-notes-december-2024/747
+      type: Release Notes
+      date: 3 December 2024
+    - title: November 2024
+      link: https://www.virtocommerce.org/t/november-2024-news-digest/743
+      type: Release Notes
+      date: 1 November 2024
+    - title: October 2024
+      link: https://www.virtocommerce.org/t/october-2024-news-digest/734
+      type: Release Notes
+      date: 1 October 2024
+    - title: September 2024
+      link: https://www.virtocommerce.org/t/september-2024-news-digest/730
+      type: Release Notes
+      date: 9 September 2024
+    - title: August 2024
+      link: https://www.virtocommerce.org/t/august-2024-new-digest/719
+      type: Release Notes
+      date: 1 August 2024
+    - title: July 2024
+      link: https://www.virtocommerce.org/t/july-2024-news-digest/713
+      type: Release Notes
+      date: 1 July 2024
+    - title: June 2024
+      link: https://www.virtocommerce.org/t/june-2024-news-digest/702
+      type: Release Notes
+      date: 1 June 2024
+    - title: May 2024
+      link: https://www.virtocommerce.org/t/may-2024-news-digest/699
+      type: Release Notes
+      date: 2 May 2024
+    - title: April 2024
+      link: https://www.virtocommerce.org/t/april-2024-news-digest/689
+      type: Release Notes
+      date: 3 April 2024
+    - title: March 2024
+      link: https://www.virtocommerce.org/t/march-2024-news-digest/681
+      type: Release Notes
+      date: 5 March 2024
+    - title: February 2024
+      link: https://www.virtocommerce.org/t/february-2024-news-digest/673
+      type: Release Notes
+      date: 7 February 2024
+    - title: January 2024
+      link: https://www.virtocommerce.org/t/news-digest-january-2024/663
+      type: Release Notes
+      date: 8 January 2024
+    top_cards:
+    - title: Storefront
+      icon: assets/icons/person.svg
+      description: Build and personalize your online store for engaging shopping experiences
+      link: storefront
+    - title: Platform
+      icon: assets/icons/code-square.svg
+      description: Explore the Virto Commerce Platform, a solution designed to efficiently
+        manage and scale your entire e-commerce ecosystem
+      link: platform
+    - title: Marketplace
+      icon: assets/icons/code-square.svg
+      description: Create and manage online marketplaces, fostering increased revenue
+        and a broader customer base
+      link: marketplace
+    documentation:
+    - title: Composable Commerce
+      image: assets/images/platform.png
+      link: platform
+      topdescription: Guides and tools for building, customizing, and deploying a
+        flexible commerce solution
+      description:
+      - title: Platform
+        link: platform
+      - title: Marketplace
+        link: marketplace
+      - title: CLI tools
+        link: platform/developer-guide/CLI-tools/overview
+    - title: Frontend
+      image: assets/images/storefront.png
+      link: storefront
+      topdescription: Tools and workflows designed to enhance customer-facing experiences
+      description:
+      - title: Frontend Application
+        link: storefront
+      - title: VC-Shell
+        link: platform/developer-guide/custom-apps-development/overview
+    link_cards:
+    - title: Contact support
+      icon: assets/icons/contact-support.svg
+      link: https://help.virtocommerce.com/support/home
+      outlineColor: '#EA534A'
+    - title: Community
+      icon: assets/icons/community.svg
+      link: https://www.virtocommerce.org/
+      outlineColor: '#EA534A'
+    - title: GitHub
+      icon: assets/icons/github-outline.svg
+      link: https://github.com/VirtoCommerce
+      outlineColor: '#FF9162'
+    - title: Blog
+      icon: assets/icons/blog.svg
+      link: https://virtocommerce.com/blog
+      outlineColor: '#FF9162'
+    - title: Versions
+      icon: assets/icons/version-icon.svg
+      link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
+      outlineColor: '#FF9162'
+  all_topics:
+    megamenu:
+    - iconSrc: assets/icons/all-products.svg
+      title: All Products
+      opened: true
+      subMenu:
+      - title: Platform
+        content:
+        - title: User Guide
+          links:
+          - title: Getting Started
+            url: /platform/user-guide/getting-started
+          - title: User Documentation
+            url: /platform/user-guide
+        - title: Developer Guide
+          links:
+          - title: Installation Guide
+            url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
+          - title: Architecture Overview
+            url: /platform/developer-guide/Back-End-Architecture/02-conceptual-overview
+          - title: Extensibility
+            url: /platform/developer-guide/Extensibility/overview
+          - title: Configuration Reference
+            url: /platform/developer-guide/Configuration-Reference/appsettingsjson
+          - title: Tutorials and How-tos
+            url: /platform/developer-guide/Tutorials-and-How-tos/overview
+        - title: API Reference
+          links:
+          - title: REST API Reference
+            url: https://virtostart-demo-admin.govirto.com/docs/index.html
+          - title: GraphQL API Reference
+            url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+      - title: Frontend
+        content:
+        - title: User Guide
+          links:
+          - title: Getting Started
+            url: https://youtu.be/xsnds1QYuC0
+          - title: User Documentation
+            url: /storefront/user-guide
+          - title: Public Demo
+            url: https://virtostart-demo-store.govirto.com/
+        - title: Developer Guide
+          links:
+          - title: Getting Started
+            url: /storefront/developer-guide
+          - title: Architecture
+            url: /storefront/developer-guide/architecture
+          - title: Deployment
+            url: /storefront/developer-guide/deployment
+          - title: Integrations
+            url: /storefront/developer-guide/integrations/prerender_io
+      - title: Marketplace
+        content:
+        - title: User Guide
+          links:
+          - title: Operator Portal
+            url: /marketplace/user-guide/Operator-portal/overview
+          - title: Vendor Portal
+            url: /marketplace/user-guide/Vendor-portal/overview
+        - title: Developer Guide
+          links:
+          - title: State Machine Module
+            url: /marketplace/developer-guide/state-machine-module/overview
+      - title: VC-Shell
+        content:
+        - title: Developer Guide
+          links:
+          - title: Overview
+            url: /platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview
+          - title: Getting Started
+            url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
+          - title: Connecting to Platform
+            url: /platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
+      - title: Deployment on Virto Cloud
+        content:
+        - links:
+          - title: Deploy Platform and Frontend on Virto Cloud
+            url: /platform/deployment-on-cloud/deploy-on-virto-cloud/
+          - title: Create Environment via CLI and VC Build
+            url: /platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
+          - title: Create and Configure Catalog
+            url: /platform/deployment-on-cloud/catalog-creation/
+          - title: Create and Configure Store
+            url: /platform/deployment-on-cloud/store-configuration/
+    - iconSrc: assets/icons/getting-started.svg
+      title: Getting Started
+      content:
+      - title: Platform
+        links:
+        - title: Developer Getting Started
+          url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
+        - title: Manager Getting Started
+          url: /platform/user-guide/getting-started
+      - title: Frontend Application
+        links:
+        - title: Developer Getting Started
+          url: /storefront/developer-guide/
+        - title: User Getting Started
+          url: /storefront/user-guide/
+      - title: VC-Shell
+        links:
+        - title: Developer Getting Started
+          url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+    - iconSrc: assets/icons/graphql.svg
+      title: APIs
+      content:
+      - title: REST API
+        url: https://virtostart-demo-admin.govirto.com/docs/index.html
+      - title: GraphQL API
+        url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+    - iconSrc: assets/icons/video-tutorials.svg
+      title: Video Tutorials
+      url: https://www.youtube.com/c/VirtoCommerce
+      external: true
+    - iconSrc: assets/icons/fire.svg
+      title: Migration to New xAPI Modules
+      url: /platform/developer-guide/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules
+    footer:
+    - iconSrc: assets/icons/release-notes.svg
+      title: Release Notes
+      url: https://www.virtocommerce.org/c/news-digest/
+    - iconSrc: assets/icons/support.svg
+      title: Support
+      url: https://help.virtocommerce.com/support/home
+    - iconSrc: assets/icons/github.svg
+      title: GitHub
+      url: https://github.com/VirtoCommerce
+  version:
+    provider: mike
+    default: latest
+extra_javascript:
+- assets/scripts/scripts-loader.js
+- assets/scripts/scroll-menu.js
+extra_css:
+- assets/stylesheets/main.css
+- assets/stylesheets/fonts.css
