@@ -27,6 +27,13 @@ def main():
         print("❌ Please run this script from the vc-docs root directory")
         sys.exit(1)
 
+    # Check if mike is installed
+    result = run_command("mike --version", check=False)
+    if result.returncode != 0:
+        print("❌ Mike is not installed. Please install it:")
+        print("pip install mike")
+        sys.exit(1)
+
     print("📋 Step 1: Build non-versioned root and intermediate sites")
 
     # Create site directory
@@ -49,28 +56,96 @@ def main():
     os.makedirs("site/platform", exist_ok=True)
     os.makedirs("site/marketplace", exist_ok=True)
 
-    # Build each intermediate site with their ORIGINAL configs (nav stays commented)
-    # This will use their real index.md with custom templates (platform-home.html, etc.)
-    run_command("mkdocs build -f storefront/mkdocs.yml -d site/storefront", check=False)
-    run_command("mkdocs build -f platform/mkdocs.yml -d site/platform", check=False)
-    run_command("mkdocs build -f marketplace/mkdocs.yml -d site/marketplace", check=False)
+    # Create temporary configs for intermediate sites with only Home: index.md
+    # This prevents them from including all subsites
+    for subsite in ["storefront", "platform", "marketplace"]:
+        print(f"  Creating temporary config for {subsite}...")
+        
+        # Read original mkdocs.yml
+        with open(f"{subsite}/mkdocs.yml", "r") as f:
+            content = f.read()
+        
+        # Create temporary config with only Home: index.md
+        temp_content = f"""INHERIT: ../mkdocs.yml
+theme:
+    custom_dir: ../overrides
+
+docs_dir: docs
+
+# Project information
+extra_site_name: Documentation
+site_name: {subsite}
+site_description: {subsite.title()} documentation center
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/{subsite}
+
+# Repository
+repo_name: VirtoCommerce/vc-{subsite}
+repo_url: https://github.com/VirtoCommerce/vc-{subsite}
+edit_uri: edit/dev/docs/
+
+nav:
+    - Home: index.md
+"""
+        
+        # Write temporary config
+        with open(f"mkdocs-temp-{subsite}.yml", "w") as f:
+            f.write(temp_content)
+    
+    # Build each intermediate site with temporary configs
+    run_command("mkdocs build -f mkdocs-temp-storefront.yml -d site/storefront", check=False)
+    run_command("mkdocs build -f mkdocs-temp-platform.yml -d site/platform", check=False)
+    run_command("mkdocs build -f mkdocs-temp-marketplace.yml -d site/marketplace", check=False)
 
     print("✅ Sites built")
 
-    print("📋 Step 2: Export and merge versioned content from gh-pages")
+    print("📋 Step 2: Deploy versioned subsites with Mike")
+
+    # Deploy all subsites with version 1.0 using Mike
+    subsites = [
+        "marketplace/developer-guide",
+        "marketplace/user-guide", 
+        "platform/developer-guide",
+        "platform/user-guide",
+        "platform/deployment-on-cloud",
+        "storefront/developer-guide",
+        "storefront/user-guide"
+    ]
+    version = "1.0"
+
+    for subsite in subsites:
+        config = f"{subsite}/mkdocs.yml"
+        print(f"  Deploying {subsite} version {version}...")
+        
+        # Deploy with version 1.0 and set as latest
+        run_command(
+            f'mike deploy -F "{config}" --deploy-prefix "{subsite}" --update-aliases "{version}" latest',
+            check=False
+        )
+        
+        # Set as default version
+        run_command(
+            f'mike set-default -F "{config}" --deploy-prefix "{subsite}" {version}',
+            check=False
+        )
+        
+        print(f"  ✅ {subsite} deployed")
+
+    print("✅ Versioned content deployed with Mike")
+
+    print("📋 Step 3: Copy versioned content from gh-pages to site")
 
     # Save current branch
     result = run_command("git branch --show-current")
     current_branch = result.stdout.strip()
 
     try:
-        # Checkout gh-pages and copy versioned content over existing files
+        # Checkout gh-pages and copy versioned content
         print("  Switching to gh-pages branch...")
         run_command("git checkout gh-pages")
 
-        print("  Copying versioned content (overwriting intermediate sites)...")
-        # Copy versioned subsites, overwriting intermediate site content
-        # This preserves versioned content while keeping intermediate index pages
+        print("  Copying versioned content...")
+        # Copy versioned subsites to site directory
         for subsite in ["marketplace", "platform", "storefront"]:
             for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
                 src = f"{subsite}/{guide}"
@@ -91,14 +166,14 @@ def main():
         run_command(f"git checkout {current_branch}", check=False)
         sys.exit(1)
 
-    print("✅ Versioned content merged")
+    print("✅ Versioned content copied to site")
 
     # Cleanup temporary files
     for temp_file in ["mkdocs-temp-root.yml", "mkdocs-temp-storefront.yml", "mkdocs-temp-platform.yml", "mkdocs-temp-marketplace.yml"]:
         if os.path.exists(temp_file):
             os.remove(temp_file)
 
-    print("📋 Step 3: Start Python HTTP server")
+    print("📋 Step 4: Start Python HTTP server")
     print("")
     print("🌐 Starting server on http://localhost:8001")
     print("")
