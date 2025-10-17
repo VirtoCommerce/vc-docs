@@ -26,8 +26,9 @@ def cleanup():
     """Cleanup temporary files"""
     print("📋 Cleaning up...")
 
-    if os.path.exists("mkdocs-temp-root.yml"):
-        os.remove("mkdocs-temp-root.yml")
+    for temp_file in ["mkdocs-temp-root.yml", "mkdocs-temp-storefront.yml", "mkdocs-temp-platform.yml", "mkdocs-temp-marketplace.yml"]:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
 
     print("✅ Cleanup completed")
 
@@ -101,28 +102,35 @@ def main():
         print("  Building root site...")
         run_command("mkdocs build -f mkdocs-temp-root.yml -d site", capture=False)
 
-        # Create intermediate site directories and index pages
-        print("  Creating intermediate site directories...")
+        # Build intermediate sites with their real content and templates
+        print("  Building intermediate sites...")
         os.makedirs("site/storefront", exist_ok=True)
         os.makedirs("site/platform", exist_ok=True)
         os.makedirs("site/marketplace", exist_ok=True)
 
-        # Create simple index.html for intermediate sites
-        # These will be landing pages that redirect to versioned subsites
+        # Create temporary mkdocs.yml files with uncommented nav for intermediate sites
+        # This allows them to build with proper navigation to subsites
         for subsite in ["storefront", "platform", "marketplace"]:
-            index_content = f"""<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>{subsite.title()} Documentation</title>
-    <meta http-equiv="refresh" content="0; url=./developer-guide/">
-</head>
-<body>
-    <p>Redirecting to <a href="./developer-guide/">developer-guide</a>...</p>
-</body>
-</html>"""
-            with open(f"site/{subsite}/index.html", "w") as f:
-                f.write(index_content)
+            print(f"  Creating temporary config for {subsite}...")
+
+            # Read original mkdocs.yml
+            with open(f"{subsite}/mkdocs.yml", "r") as f:
+                content = f.read()
+
+            # Uncomment the nav includes
+            content = content.replace("# - Developer Guide:", "- Developer Guide:")
+            content = content.replace("# - User Guide:", "- User Guide:")
+            if subsite == "platform":
+                content = content.replace("# - Deployment on Cloud:", "- Deployment on Cloud:")
+
+            # Write temporary config
+            with open(f"mkdocs-temp-{subsite}.yml", "w") as f:
+                f.write(content)
+
+        # Build each intermediate site with temporary configs
+        run_command("mkdocs build -f mkdocs-temp-storefront.yml -d site/storefront", capture=False)
+        run_command("mkdocs build -f mkdocs-temp-platform.yml -d site/platform", capture=False)
+        run_command("mkdocs build -f mkdocs-temp-marketplace.yml -d site/marketplace", capture=False)
 
         print("✅ Sites built")
 
