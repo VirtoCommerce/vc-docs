@@ -127,11 +127,15 @@ def main():
             dst_dir = f"site/{subsite}"
 
             if os.path.exists(src_dir):
-                # Create destination directory if it doesn't exist
+                # Remove the destination subsite directory if it exists
+                # This ensures we get a clean copy of the versioned content
+                if os.path.exists(dst_dir):
+                    shutil.rmtree(dst_dir)
+
+                # Create destination directory
                 os.makedirs(dst_dir, exist_ok=True)
 
                 # Use rsync to copy with symlinks preserved
-                # This will copy versioned content into the intermediate site without removing index.html
                 run_command(f'rsync -a --copy-links "{src_dir}/" "{dst_dir}/"', check=False)
                 print(f"    ✅ Copied {subsite}")
 
