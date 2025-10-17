@@ -101,15 +101,28 @@ def main():
         print("  Building root site...")
         run_command("mkdocs build -f mkdocs-temp-root.yml -d site", capture=False)
 
-        # Build intermediate sites directly into their target directories
-        print("  Building intermediate sites...")
+        # Create intermediate site directories and index pages
+        print("  Creating intermediate site directories...")
         os.makedirs("site/storefront", exist_ok=True)
         os.makedirs("site/platform", exist_ok=True)
         os.makedirs("site/marketplace", exist_ok=True)
 
-        run_command("mkdocs build -f storefront/mkdocs.yml -d site/storefront", capture=False)
-        run_command("mkdocs build -f platform/mkdocs.yml -d site/platform", capture=False)
-        run_command("mkdocs build -f marketplace/mkdocs.yml -d site/marketplace", capture=False)
+        # Create simple index.html for intermediate sites
+        # These will be landing pages that redirect to versioned subsites
+        for subsite in ["storefront", "platform", "marketplace"]:
+            index_content = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{subsite.title()} Documentation</title>
+    <meta http-equiv="refresh" content="0; url=./developer-guide/">
+</head>
+<body>
+    <p>Redirecting to <a href="./developer-guide/">developer-guide</a>...</p>
+</body>
+</html>"""
+            with open(f"site/{subsite}/index.html", "w") as f:
+                f.write(index_content)
 
         print("✅ Sites built")
 
