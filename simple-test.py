@@ -110,13 +110,13 @@ def main():
 
     print("📋 Step 3: Start Python HTTP server")
     print("")
-    print("🌐 Starting server on http://localhost:8000")
+    print("🌐 Starting server on http://localhost:8001")
     print("")
     print("You can now test:")
-    print("  • Root site: http://localhost:8000/")
-    print("  • Platform: http://localhost:8000/platform/")
-    print("  • Platform Developer Guide: http://localhost:8000/platform/developer-guide/")
-    print("  • Versioned content: http://localhost:8000/platform/developer-guide/1.0/")
+    print("  • Root site: http://localhost:8001/")
+    print("  • Platform: http://localhost:8001/platform/")
+    print("  • Platform Developer Guide: http://localhost:8001/platform/developer-guide/")
+    print("  • Versioned content: http://localhost:8001/platform/developer-guide/1.0/")
     print("")
     print("Press Ctrl+C to stop the server")
     print("")
@@ -124,7 +124,7 @@ def main():
     # Change to site directory and start server
     os.chdir("site")
 
-    PORT = 8000
+    PORT = 8001
     Handler = http.server.SimpleHTTPRequestHandler
 
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
