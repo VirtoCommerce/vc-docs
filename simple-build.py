@@ -41,27 +41,30 @@ def main():
 
     run_command("mkdocs build -f mkdocs-temp-root.yml -d site", check=False)
 
-    # Build intermediate sites (platform, marketplace, storefront)
+    # Build intermediate sites (exactly like build.ps1)
     print("  Building intermediate sites...")
-    run_command("mkdocs build -f platform/mkdocs.yml -d site/platform", check=False)
-    run_command("mkdocs build -f marketplace/mkdocs.yml -d site/marketplace", check=False)
-    run_command("mkdocs build -f storefront/mkdocs.yml -d site/storefront", check=False)
+    run_command("mkdocs build -f storefront/mkdocs.yml -d ../site/storefront", check=False)
+    run_command("mkdocs build -f platform/mkdocs.yml -d ../site/platform", check=False)
+    run_command("mkdocs build -f marketplace/mkdocs.yml -d ../site/marketplace", check=False)
 
-    # Build all subsites
+    # Build all subsites (exactly like build.ps1)
     print("  Building subsites...")
-    subsites = [
-        "platform/developer-guide",
-        "platform/user-guide",
-        "platform/deployment-on-cloud",
-        "marketplace/developer-guide",
-        "marketplace/user-guide",
-        "storefront/developer-guide",
-        "storefront/user-guide"
-    ]
 
-    for subsite in subsites:
-        print(f"    Building {subsite}...")
-        run_command(f"mkdocs build -f {subsite}/mkdocs.yml -d site/{subsite}", check=False)
+    # Storefront subsites
+    print("    Building storefront subsites...")
+    run_command("mkdocs build -f storefront/user-guide/mkdocs.yml -d ../../site/storefront/user-guide", check=False)
+    run_command("mkdocs build -f storefront/developer-guide/mkdocs.yml -d ../../site/storefront/developer-guide", check=False)
+
+    # Platform subsites
+    print("    Building platform subsites...")
+    run_command("mkdocs build -f platform/user-guide/mkdocs.yml -d ../../site/platform/user-guide", check=False)
+    run_command("mkdocs build -f platform/developer-guide/mkdocs.yml -d ../../site/platform/developer-guide", check=False)
+    run_command("mkdocs build -f platform/deployment-on-cloud/mkdocs.yml -d ../../site/platform/deployment-on-cloud", check=False)
+
+    # Marketplace subsites
+    print("    Building marketplace subsites...")
+    run_command("mkdocs build -f marketplace/user-guide/mkdocs.yml -d ../../site/marketplace/user-guide", check=False)
+    run_command("mkdocs build -f marketplace/developer-guide/mkdocs.yml -d ../../site/marketplace/developer-guide", check=False)
 
     print("✅ All sites built")
 
@@ -71,12 +74,12 @@ def main():
 
     print("📋 Step 2: Start Python HTTP server")
     print("")
-    print("🌐 Starting server on http://localhost:8010")
+    print("🌐 Starting server on http://localhost:8020")
     print("")
     print("You can now test:")
-    print("  • Root site: http://localhost:8010/")
-    print("  • Platform: http://localhost:8010/platform/")
-    print("  • Platform Developer Guide: http://localhost:8010/platform/developer-guide/")
+    print("  • Root site: http://localhost:8020/")
+    print("  • Platform: http://localhost:8020/platform/")
+    print("  • Platform Developer Guide: http://localhost:8020/platform/developer-guide/")
     print("")
     print("Press Ctrl+C to stop the server")
     print("")
@@ -84,7 +87,7 @@ def main():
     # Change to site directory and start server
     os.chdir("site")
 
-    PORT = 8010
+    PORT = 8020
     Handler = http.server.SimpleHTTPRequestHandler
 
     with socketserver.TCPServer(("", PORT), Handler) as httpd:

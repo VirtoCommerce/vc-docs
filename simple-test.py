@@ -102,10 +102,10 @@ nav:
         with open(f"mkdocs-temp-{subsite}.yml", "w") as f:
             f.write(temp_content)
 
-    # Build each intermediate site with temporary configs
-    run_command("mkdocs build -f mkdocs-temp-storefront.yml -d site/storefront", check=False)
-    run_command("mkdocs build -f mkdocs-temp-platform.yml -d site/platform", check=False)
-    run_command("mkdocs build -f mkdocs-temp-marketplace.yml -d site/marketplace", check=False)
+    # Build each intermediate site with temporary configs (using correct paths like build.ps1)
+    run_command("mkdocs build -f mkdocs-temp-storefront.yml -d ../site/storefront", check=False)
+    run_command("mkdocs build -f mkdocs-temp-platform.yml -d ../site/platform", check=False)
+    run_command("mkdocs build -f mkdocs-temp-marketplace.yml -d ../site/marketplace", check=False)
 
     print("✅ Sites built")
 
@@ -156,9 +156,10 @@ nav:
             if os.path.exists(temp_file):
                 os.remove(temp_file)
 
-        # Stash changes and checkout gh-pages
-        print("  Stashing changes and switching to gh-pages branch...")
-        run_command("git stash push -m 'temp changes for testing'", check=False)
+        # Commit changes and checkout gh-pages
+        print("  Committing changes and switching to gh-pages branch...")
+        run_command("git add .", check=False)
+        run_command("git commit -m 'temp changes for testing'", check=False)
         run_command("git checkout gh-pages")
 
         print("  Copying versioned content...")
@@ -176,10 +177,9 @@ nav:
                 else:
                     print(f"  ⚠️  {src} not found in gh-pages")
 
-        # Return to original branch and restore changes
+        # Return to original branch
         print(f"  Returning to {current_branch} branch...")
         run_command(f"git checkout {current_branch}")
-        run_command("git stash pop", check=False)
 
     except Exception as e:
         print(f"❌ Error during export: {e}")

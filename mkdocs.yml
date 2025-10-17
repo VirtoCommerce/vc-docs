@@ -506,27 +506,27 @@ extra:
                     - title: User Guide
                       links:
                         - title: Getting Started
-                          url: /platform/user-guide/getting-started
+                          url: platform/user-guide/getting-started
                         - title: User Documentation
-                          url: /platform/user-guide
+                          url: platform/user-guide
                     - title: Developer Guide
                       links:
                         - title: Installation Guide
-                          url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
+                          url: platform/developer-guide/Getting-Started/Installation-Guide/windows
                         - title: Architecture Overview
-                          url: /platform/developer-guide/Back-End-Architecture/02-conceptual-overview
+                          url: platform/developer-guide/Back-End-Architecture/02-conceptual-overview
                         - title: Extensibility
-                          url: /platform/developer-guide/Extensibility/overview
+                          url: platform/developer-guide/Extensibility/overview
                         - title: Configuration Reference
-                          url: /platform/developer-guide/Configuration-Reference/appsettingsjson
+                          url: platform/developer-guide/Configuration-Reference/appsettingsjson
                         - title: Tutorials and How-tos
-                          url: /platform/developer-guide/Tutorials-and-How-tos/overview
+                          url: platform/developer-guide/Tutorials-and-How-tos/overview
                     - title: API Reference
                       links:
                         - title: REST API Reference
                           url: https://virtostart-demo-admin.govirto.com/docs/index.html
                         - title: GraphQL API Reference
-                          url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                          url: platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
                 - title: Frontend
                   content:
                     - title: User Guide
@@ -534,27 +534,27 @@ extra:
                         - title: Getting Started
                           url: https://youtu.be/xsnds1QYuC0
                         - title: User Documentation
-                          url: /storefront/user-guide
+                          url: storefront/user-guide
                         - title: Public Demo
                           url: https://virtostart-demo-store.govirto.com/
                     - title: Developer Guide
                       links:
                         - title: Getting Started
-                          url: /storefront/developer-guide
+                          url: storefront/developer-guide
                         - title: Architecture
-                          url: /storefront/developer-guide/architecture
+                          url: storefront/developer-guide/architecture
                         - title: Deployment
-                          url: /storefront/developer-guide/deployment
+                          url: storefront/developer-guide/deployment
                         - title: Integrations
-                          url: /storefront/developer-guide/integrations/prerender_io
+                          url: storefront/developer-guide/integrations/prerender_io
                 - title: Marketplace
                   content:
                     - title: User Guide
                       links:
                         - title: Operator Portal
-                          url: /marketplace/user-guide/Operator-portal/overview
+                          url: marketplace/user-guide/Operator-portal/overview
                         - title: Vendor Portal
-                          url: /marketplace/user-guide/Vendor-portal/overview
+                          url: marketplace/user-guide/Vendor-portal/overview
                     - title: Developer Guide
                       links:
                         - title: State Machine Module
@@ -564,55 +564,55 @@ extra:
                     - title: Developer Guide
                       links:
                         - title: Overview
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview
+                          url: platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview
                         - title: Getting Started
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
+                          url: platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
                         - title: Connecting to Platform
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
+                          url: platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
                 - title: Deployment on Virto Cloud
                   content:
                     - links:
                       - title: Deploy Platform and Frontend on Virto Cloud
-                        url: /platform/deployment-on-cloud/deploy-on-virto-cloud/
+                        url: platform/deployment-on-cloud/deploy-on-virto-cloud/
                       - title: Create Environment via CLI and VC Build
-                        url: /platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
+                        url: platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
                       - title: Create and Configure Catalog
-                        url: /platform/deployment-on-cloud/catalog-creation/
+                        url: platform/deployment-on-cloud/catalog-creation/
                       - title: Create and Configure Store
-                        url: /platform/deployment-on-cloud/store-configuration/
+                        url: platform/deployment-on-cloud/store-configuration/
             - iconSrc: assets/icons/getting-started.svg
               title: Getting Started
               content:
                 - title: Platform
                   links:
                     - title: Developer Getting Started
-                      url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
+                      url: platform/developer-guide/Getting-Started/Installation-Guide/windows
                     - title: Manager Getting Started
-                      url: /platform/user-guide/getting-started
+                      url: platform/user-guide/getting-started
                 - title: Frontend Application
                   links:
                     - title: Developer Getting Started
-                      url: /storefront/developer-guide/
+                      url: storefront/developer-guide/
                     - title: User Getting Started
                       url: /storefront/user-guide/
                 - title: VC-Shell
                   links:
                     - title: Developer Getting Started
-                      url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                      url: platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/graphql.svg
               title: APIs
               content:
                 - title: REST API
                   url: https://virtostart-demo-admin.govirto.com/docs/index.html
                 - title: GraphQL API
-                  url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                  url: platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
             - iconSrc: assets/icons/video-tutorials.svg
               title: Video Tutorials
               url: https://www.youtube.com/c/VirtoCommerce
               external: true
             - iconSrc: assets/icons/fire.svg
               title: Migration to New xAPI Modules
-              url: /platform/developer-guide/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules
+              url: platform/developer-guide/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules
         footer:
             - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"
