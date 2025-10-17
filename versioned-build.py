@@ -90,6 +90,20 @@ def main():
 
     print("📋 Step 3: Copy versioned content from gh-pages to site (with symlinks)")
 
+    # Save intermediate site files before switching branches
+    print("  Saving intermediate site files...")
+    import tempfile
+    temp_dir = tempfile.mkdtemp()
+
+    for site in intermediate_sites:
+        site_dir = f"site/{site}"
+        temp_site_dir = os.path.join(temp_dir, site)
+
+        if os.path.exists(site_dir):
+            # Copy entire intermediate site to temp directory
+            shutil.copytree(site_dir, temp_site_dir, symlinks=True, dirs_exist_ok=True)
+            print(f"    ✅ Saved {site}/ to temp directory")
+
     # Save current branch
     result = run_command("git branch --show-current")
     current_branch = result.stdout.strip()
@@ -113,13 +127,42 @@ def main():
             dst_dir = f"site/{subsite}"
 
             if os.path.exists(src_dir):
-                # Remove destination if it exists
-                if os.path.exists(dst_dir):
-                    shutil.rmtree(dst_dir)
+                # Create destination directory if it doesn't exist
+                os.makedirs(dst_dir, exist_ok=True)
 
                 # Use rsync to copy with symlinks preserved
+                # This will copy versioned content into the intermediate site without removing index.html
                 run_command(f'rsync -a --copy-links "{src_dir}/" "{dst_dir}/"', check=False)
                 print(f"    ✅ Copied {subsite}")
+
+        # Restore intermediate site files (only non-versioned content)
+        print("  Restoring intermediate site files...")
+        for site in intermediate_sites:
+            temp_site_dir = os.path.join(temp_dir, site)
+            site_dir = f"site/{site}"
+
+            if os.path.exists(temp_site_dir):
+                # Copy back only the index.html and other non-subsite files
+                for item in os.listdir(temp_site_dir):
+                    src_item = os.path.join(temp_site_dir, item)
+                    dst_item = os.path.join(site_dir, item)
+
+                    # Skip versioned subsite directories
+                    if item in ['developer-guide', 'user-guide', 'deployment-on-cloud']:
+                        continue
+
+                    # Copy files and non-subsite directories
+                    if os.path.isfile(src_item):
+                        shutil.copy2(src_item, dst_item)
+                    elif os.path.isdir(src_item):
+                        if os.path.exists(dst_item):
+                            shutil.rmtree(dst_item)
+                        shutil.copytree(src_item, dst_item, symlinks=True)
+
+                print(f"    ✅ Restored {site}/ files")
+
+        # Clean up temp directory
+        shutil.rmtree(temp_dir)
 
         # Copy assets and other shared files
         shared_dirs = ["assets", "javascripts", "stylesheets", "search"]
