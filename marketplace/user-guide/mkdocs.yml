@@ -16,6 +16,8 @@ plugins:
             /latest/
     - git-revision-date-localized
     - minify
+    - mike:
+        alias_type: redirect
 theme:
     custom_dir: ../../overrides
     hide: false

@@ -3,6 +3,10 @@ theme:
     custom_dir: ../../overrides
     hide: false
 
+plugins:
+    - mike:
+        alias_type: redirect
+
 # Project information
 extra_site_name: Frontend Dev Docs
 site_name: storefront/developer-guide
