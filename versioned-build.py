@@ -56,30 +56,6 @@ def main():
 
     print("✅ Non-versioned sites built")
 
-    print("📋 Step 1.5: Verify sitemap files in subsites")
-
-    # Verify that sitemap files exist in subsites (they should already be there from the build)
-    subsites = ["storefront", "platform", "marketplace"]
-
-    for subsite_name in subsites:
-        print(f"  Checking sitemap files for {subsite_name}...")
-
-        # Check sitemap.xml
-        sitemap_path = f"site/{subsite_name}/sitemap.xml"
-        if os.path.exists(sitemap_path):
-            print(f"    ✅ sitemap.xml found for {subsite_name}")
-        else:
-            print(f"    ⚠️  sitemap.xml not found for {subsite_name}")
-
-        # Check sitemap.xml.gz
-        sitemap_gz_path = f"site/{subsite_name}/sitemap.xml.gz"
-        if os.path.exists(sitemap_gz_path):
-            print(f"    ✅ sitemap.xml.gz found for {subsite_name}")
-        else:
-            print(f"    ⚠️  sitemap.xml.gz not found for {subsite_name}")
-
-    print("✅ Sitemap files verification completed")
-
     print("📋 Step 2: Deploy versioned subsites with Mike")
 
     # Deploy all subsites with version 1.0
