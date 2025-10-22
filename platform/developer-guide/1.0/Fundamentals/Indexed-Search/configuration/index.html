@@ -25846,52 +25846,11 @@
 <p>This section explains the basic configuration for the indexed search logic via the <a href="../../../Configuration-Reference/appsettingsjson/#search">appsettings.json file</a>.</p>
 <h2 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
 <p>This node configures full text search for the Virto Commerce Search module.</p>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Default or sample value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Provider</td>
-<td>"Lucene"<br>"ElasticSearch"<br>"ElasticAppSearch"<br>"ElasticSearch8"<br>"AzureSearch"<br>"AlgoliaSearch"</td>
-<td>This <strong>required</strong> setting specifies the current search provider.</td>
-</tr>
-<tr>
-<td>Scope</td>
-<td>"default"</td>
-<td>This setting determines the scope to use and is <strong>required</strong>.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Examples</strong></p>
-<p>Configure the search provider modules and activate them in the <code>Search.Provider</code> section, providing connection parameters as specified in the module documentation:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
-<p>Tailor the search provider per document type to optimize search performance and functionality:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;DocumentScopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;DocumentType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch8&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
-</code></pre></div>
+<p>{%
+   include-markdown "../../Configuration-Reference/appsettingsjson.md"
+   start="<!--search-start-->"
+   end="<!--search-end-->"
+%}</p>
 <p><br>
 <br></p>
 <hr />

@@ -25785,52 +25785,11 @@
 <!-- Markdown content -->
 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
 <p>This node of the <a href="../../../Configuration-Reference/appsettingsjson/#modularity">appsettings.json file</a> configures the modularity logic.</p>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Default or sample value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IncludePrerelease</td>
-<td>true<br>false</td>
-<td>Shows module versions marked as <strong>Prerelease</strong> if value is <strong>true</strong>.</td>
-</tr>
-<tr>
-<td>DiscoveryPath</td>
-<td>"./Modules"</td>
-<td>Relative or absolute folder location where the Platform will discover the installed modules from.</td>
-</tr>
-<tr>
-<td>ModulesManifestUrl</td>
-<td></td>
-<td>Url to the <strong>.json file</strong> that contains module manifests.</td>
-</tr>
-<tr>
-<td>AuthorizationToken</td>
-<td></td>
-<td>The authorization token to access <strong>ModulesManifestUrl</strong>, added to the <strong>Authorization</strong> header, if specified.</td>
-</tr>
-<tr>
-<td>AutoInstallModuleBundles</td>
-<td>"commerce"</td>
-<td>Group(s) of modules to install automatically during the initial Platform setup.<br>If you do not need to install anything here, provide an empty array.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nt">&quot;ExternalModules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;IncludePrerelease&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;ModulesManifestUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://raw.githubusercontent.com/VirtoCommerce/vc-modules/master/modules_v3.json&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;AuthorizationToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;AutoInstallModuleBundles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="s2">&quot;commerce&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
-</code></pre></div>
+<p>{%
+   include-markdown "../../Configuration-Reference/appsettingsjson.md"
+   start="<!--modularity-start-->"
+   end="<!--modularity-end-->"
+%}</p>
 <p><br>
 <br></p>
 <hr />

@@ -25907,83 +25907,11 @@
 </ul>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>Configure the Elasticsearch 9 provider using the following schema:</p>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Default or sample value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Search.Provider</td>
-<td>"ElasticSearch9"</td>
-<td>Specifies the search provider name.<br> Must be set to <code>"ElasticSearch9"</code>.</td>
-</tr>
-<tr>
-<td>Search.Scope</td>
-<td>"default"</td>
-<td>Specifies the common name (prefix) for all indexes.<br>Each document type is stored in a separate index, with the full name <strong>scope-{documenttype}</strong>.<br>Allows one search service to handle multiple indexes. Optional. Default: "default".</td>
-</tr>
-<tr>
-<td>Search.ElasticSearch9.Server</td>
-<td></td>
-<td>Specifies the network address and port of the Elasticsearch 9 server.</td>
-</tr>
-<tr>
-<td>Search.ElasticSearch9.User</td>
-<td>"elastic"</td>
-<td>Specifies the username for the Elasticsearch 9 or Elastic Cloud instance.</td>
-</tr>
-<tr>
-<td>Search.ElasticSearch9.Key</td>
-<td></td>
-<td>Specifies the password or API key.</td>
-</tr>
-<tr>
-<td>Search.ElasticSearch9.CertificateFingerprint</td>
-<td></td>
-<td>(Optional) Used in development.<br>Validates the server certificate using the SHA256 fingerprint.</td>
-</tr>
-<tr>
-<td>Search.ElasticSearch9.EnableDebugMode</td>
-<td>true<br>false</td>
-<td>(Optional) Set to <strong>true</strong> to enable detailed request/response logging<br> and full stack traces on errors. Default: <strong>false</strong>.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Examples</strong></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Elasticsearch v9.x (local server)</label><label for="__tabbed_1_2">Elastic Cloud v9.x</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Configure a local Elasticsearch 9.x server:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch9&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch9&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Configure connection to Elastic Cloud v9.x:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch9&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch9&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vcdemo.es.eastus2.azure.elastic-cloud.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
+<p>{%
+   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
+   start="<!--elasticsearch9-start-->"
+   end="<!--elasticsearch9-end-->"
+%}</p>
 <h2 id="full-text-search">Full-text search<a class="headerlink" href="#full-text-search" title="Permanent link">&para;</a></h2>
 <p>The provider performs full-text keyword searches on documents, optionally with filters and aggregations.</p>
 <p><br>

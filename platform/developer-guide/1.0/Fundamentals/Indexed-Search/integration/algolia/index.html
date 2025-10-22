@@ -25849,38 +25849,11 @@
 <p><a href="https://github.com/VirtoCommerce/vc-module-algolia-search/"><img alt="Source code" src="../media/source_code.png" /></a></p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>Configure the Algolia search provider using the following schema:</p>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Default or sample value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Search.Provider</td>
-<td>"AlgoliaSearch"</td>
-<td>Name of the search provider.</td>
-</tr>
-<tr>
-<td>Search.AlgoliaSearch.ApiId</td>
-<td></td>
-<td>The API id for Algolia server.</td>
-</tr>
-<tr>
-<td>Search.AlgoliaSearch.ApiKey</td>
-<td></td>
-<td>The API key for either Algolia server.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;AlgoliaSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;AppId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_ID&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_KEY&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
-</code></pre></div>
+<p>{%
+   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
+   start="<!--algolia-start-->"
+   end="<!--algolia-end-->"
+%}</p>
 <p><br>
 <br></p>
 <hr />

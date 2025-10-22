@@ -25785,37 +25785,11 @@
 <!-- Markdown content -->
 <h1 id="seo">SEO<a class="headerlink" href="#seo" title="Permanent link">&para;</a></h1>
 <p>Currently, the only configurable setting is the priority order for resolving SEO entries when multiple matches exist for a given permalink.</p>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SeoInfoResolver:ObjectTypePriority</td>
-<td>"Pages", "ContentFile", "Catalog", "Category", "CatalogProduct"</td>
-<td>This setting defines the <strong>priority order</strong> for resolving SEO entries when multiple types match the same permalink.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<p>Configure the priority order for resolving SEO entries using the <code>Seo.SeoInfoResolver.ObjectTypePriority</code> key. The system will use this order to determine which entity to associate with a given permalink when multiple matches exist.</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Seo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;SeoInfoResolver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;ObjectTypePriority&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="s2">&quot;Pages&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="s2">&quot;ContentFile&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="s2">&quot;Catalog&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="s2">&quot;CatalogProduct&quot;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
-</code></pre></div>
-<p>In the above example, if both a <code>Page</code> and a <code>Category</code> are associated with the same permalink, the system will resolve it to the <code>Page</code> because it has higher priority in the list.</p>
+<p>{%
+   include-markdown "../../Configuration-Reference/appsettingsjson.md"
+   start="<!--seo-start-->"
+   end="<!--seo-end-->"
+%}</p>
 <p><br>
 <br></p>
 <hr />

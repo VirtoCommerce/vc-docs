@@ -25786,52 +25786,11 @@
 <h1 id="configure-tax-providers">Configure Tax Providers<a class="headerlink" href="#configure-tax-providers" title="Permanent link">&para;</a></h1>
 <p>Virto Commerce allows you to configure tax providers based on your business needs. By default, the <a href="../../../../user-guide/tax/overview">Tax module</a> includes the <strong>Fixed rate tax provider</strong>. If you require automated tax calculations, you can install the <a href="../../../../user-guide/integrations/avalara/overview">Avalara tax module</a> to use the <strong>Avalara</strong> tax provider.  </p>
 <p>Use the configuration file to configure tax providers:  </p>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FixedRateTaxProvider</td>
-<td>true<br>false</td>
-<td>Determines whether the <strong>FixedRateTaxProvider</strong> is enabled or disabled. When set to <strong>false</strong>, the <strong>FixedRateTaxProvider</strong> is not active, and tax calculations will not be performed using this provider. When set to <strong>true</strong>, the <strong>FixedRateTaxProvider</strong> will be enabled, allowing the Platform to use fixed-rate tax calculations.</td>
-</tr>
-<tr>
-<td>Avalara.AccountNumber</td>
-<td>required</td>
-<td>The account number provided by Avalara during registration. This is required for authentication.</td>
-</tr>
-<tr>
-<td>Avalara.LicenseKey</td>
-<td>required</td>
-<td>The license key provided by Avalara. This key is used for secure communication with Avalara’s tax calculation service.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fixed rate tax provider</label><label for="__tabbed_1_2">Avalara tax provider</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Tax&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;FixedRateTaxProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;Enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;Tax&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;Avalara&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&quot;AccountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;********&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;LicenseKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;**************&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
+<p>{%
+   include-markdown "../../Configuration-Reference/appsettingsjson.md"
+   start="<!--tax-start-->"
+   end="<!--tax-end-->"
+%}</p>
 <p><br>
 <br></p>
 <hr />
