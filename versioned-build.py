@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Build versioned documentation locally with Mike
-This script builds non-versioned root and intermediate sites,
-deploys versioned subsites with Mike, and serves everything with a local HTTP server
+Versioned build script - combines non-versioned sites with versioned content
+This is the proper way to build a complete site with versioning
 """
 
 import os
@@ -12,16 +11,11 @@ import shutil
 import http.server
 import socketserver
 
-def run_command(command, check=True):
-    """Run a command and return the result"""
-    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+def run_command(cmd, check=True):
+    """Run shell command and return result"""
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     if check and result.returncode != 0:
-        # Check if it's just warnings (mkdocs returns 0 even with warnings)
-        if "Error reading page" in result.stderr or "Inherited config file" in result.stderr:
-            print(f"⚠️  Warning (non-critical): {result.stderr[:200]}...")
-            return result
-        print(f"❌ Error: {command}")
-        print(result.stderr)
+        print(f"❌ Error: {result.stderr}")
         sys.exit(1)
     return result
 
@@ -30,27 +24,35 @@ def main():
 
     # Check if we're in the right directory
     if not os.path.exists("mkdocs.yml"):
-        print("❌ Error: mkdocs.yml not found. Please run from the vc-docs root directory.")
+        print("❌ Please run this script from the vc-docs root directory")
+        sys.exit(1)
+
+    # Check if mike is installed
+    result = run_command("mike --version", check=False)
+    if result.returncode != 0:
+        print("❌ Mike is not installed. Please install it:")
+        print("pip install mike")
         sys.exit(1)
 
     print("📋 Step 1: Build non-versioned sites (root + intermediate)")
 
-    # Clean up previous builds
-    if os.path.exists("site"):
-        shutil.rmtree("site")
+    # Create site directory
+    os.makedirs("site", exist_ok=True)
 
-    # Build root site (only index.md)
+    # Build root site (without subsites)
     print("  Building root site...")
-    run_command("mkdocs build -d site")
+    with open("mkdocs-temp-root.yml", "w") as f:
+        f.write("INHERIT: mkdocs.yml\n")
+        f.write("nav:\n")
+        f.write("    - Home: index.md\n")
 
-    # Build intermediate sites
+    run_command("mkdocs build -f mkdocs-temp-root.yml -d site", check=False)
+
+    # Build intermediate sites (platform, marketplace, storefront)
     print("  Building intermediate sites...")
-    intermediate_sites = ["platform", "marketplace", "storefront"]
-
-    for site in intermediate_sites:
-        if os.path.exists(f"{site}/mkdocs.yml"):
-            print(f"    Building {site}...")
-            run_command(f"mkdocs build -f {site}/mkdocs.yml -d site/{site}")
+    run_command("mkdocs build -f storefront/mkdocs.yml -d ../site/storefront", check=False)
+    run_command("mkdocs build -f platform/mkdocs.yml -d ../site/platform", check=False)
+    run_command("mkdocs build -f marketplace/mkdocs.yml -d ../site/marketplace", check=False)
 
     print("✅ Non-versioned sites built")
 
@@ -88,100 +90,36 @@ def main():
 
     print("✅ Versioned subsites deployed")
 
-    print("📋 Step 3: Copy versioned content from gh-pages to site (with symlinks)")
-
-    # Save intermediate site files before switching branches
-    print("  Saving intermediate site files...")
-    import tempfile
-    temp_dir = tempfile.mkdtemp()
-
-    for site in intermediate_sites:
-        site_dir = f"site/{site}"
-        temp_site_dir = os.path.join(temp_dir, site)
-
-        if os.path.exists(site_dir):
-            # Copy entire intermediate site to temp directory
-            shutil.copytree(site_dir, temp_site_dir, symlinks=True, dirs_exist_ok=True)
-            print(f"    ✅ Saved {site}/ to temp directory")
+    print("📋 Step 3: Copy versioned content from gh-pages to site")
 
     # Save current branch
     result = run_command("git branch --show-current")
     current_branch = result.stdout.strip()
 
     try:
-        # Stash any uncommitted changes
+        # Stash changes and checkout gh-pages
         print("  Stashing changes and switching to gh-pages branch...")
-        run_command("git stash", check=False)
+        run_command("git stash push -m 'temp changes for testing'", check=False)
+        run_command("git checkout gh-pages")
 
-        # Switch to gh-pages branch
-        result = run_command("git checkout gh-pages", check=False)
-        if result.returncode != 0:
-            print(f"❌ Error: {result.stderr}")
-            return
+        print("  Copying versioned content...")
+        # Copy versioned subsites to site directory
+        # This overwrites the non-versioned subsites with versioned ones
+        for subsite in ["marketplace", "platform", "storefront"]:
+            for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
+                src = f"{subsite}/{guide}"
+                if os.path.exists(src):
+                    dst = f"site/{subsite}/{guide}"
+                    print(f"  Copying {src} to {dst}")
+                    if os.path.exists(dst):
+                        shutil.rmtree(dst)
+                    shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+                else:
+                    print(f"  ⚠️  {src} not found in gh-pages")
 
-        # Copy versioned content to site directory
-        print("  Copying versioned subsites (preserving symlinks)...")
-
-        for subsite in subsites:
-            src_dir = subsite
-            dst_dir = f"site/{subsite}"
-
-            if os.path.exists(src_dir):
-                # Remove the destination subsite directory if it exists
-                # This ensures we get a clean copy of the versioned content
-                if os.path.exists(dst_dir):
-                    shutil.rmtree(dst_dir)
-
-                # Create destination directory
-                os.makedirs(dst_dir, exist_ok=True)
-
-                # Use rsync to copy with symlinks preserved
-                run_command(f'rsync -a --copy-links "{src_dir}/" "{dst_dir}/"', check=False)
-                print(f"    ✅ Copied {subsite}")
-
-        # Restore intermediate site files (only non-versioned content)
-        print("  Restoring intermediate site files...")
-        for site in intermediate_sites:
-            temp_site_dir = os.path.join(temp_dir, site)
-            site_dir = f"site/{site}"
-
-            if os.path.exists(temp_site_dir):
-                # Copy back only the index.html and other non-subsite files
-                for item in os.listdir(temp_site_dir):
-                    src_item = os.path.join(temp_site_dir, item)
-                    dst_item = os.path.join(site_dir, item)
-
-                    # Skip versioned subsite directories
-                    if item in ['developer-guide', 'user-guide', 'deployment-on-cloud']:
-                        continue
-
-                    # Copy files and non-subsite directories
-                    if os.path.isfile(src_item):
-                        shutil.copy2(src_item, dst_item)
-                    elif os.path.isdir(src_item):
-                        if os.path.exists(dst_item):
-                            shutil.rmtree(dst_item)
-                        shutil.copytree(src_item, dst_item, symlinks=True)
-
-                print(f"    ✅ Restored {site}/ files")
-
-        # Clean up temp directory
-        shutil.rmtree(temp_dir)
-
-        # Copy assets and other shared files
-        shared_dirs = ["assets", "javascripts", "stylesheets", "search"]
-        for shared_dir in shared_dirs:
-            if os.path.exists(shared_dir):
-                src = shared_dir
-                dst = f"site/{shared_dir}"
-                if os.path.exists(dst):
-                    shutil.rmtree(dst)
-                shutil.copytree(src, dst, symlinks=True)
-
-        # Return to original branch
-        run_command(f"git checkout {current_branch}", check=False)
-
-        # Restore stashed changes
+        # Return to original branch and restore changes
+        print(f"  Returning to {current_branch} branch...")
+        run_command(f"git checkout {current_branch}")
         run_command("git stash pop", check=False)
 
     except Exception as e:
@@ -191,13 +129,11 @@ def main():
 
     print("✅ Versioned content copied to site")
 
-    print("📋 Step 4: Links will be handled by Mike symlinks (no manual fixing needed)")
-
     # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 5: Start Python HTTP server")
+    print("📋 Step 4: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server
@@ -236,4 +172,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
