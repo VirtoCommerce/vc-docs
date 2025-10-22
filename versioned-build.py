@@ -56,6 +56,38 @@ def main():
 
     print("✅ Non-versioned sites built")
 
+    print("📋 Step 1.5: Copy sitemap files to subsites")
+
+    # Copy sitemap files from intermediate builds to subsites
+    subsites_sitemap = [
+        ("storefront", "storefront"),
+        ("platform", "platform"),
+        ("marketplace", "marketplace")
+    ]
+
+    for subsite_name, build_dir in subsites_sitemap:
+        print(f"  Copying sitemap files for {subsite_name}...")
+
+        # Copy sitemap.xml
+        src_sitemap = f"site/{build_dir}/sitemap.xml"
+        dst_sitemap = f"site/{subsite_name}/sitemap.xml"
+        if os.path.exists(src_sitemap):
+            shutil.copy2(src_sitemap, dst_sitemap)
+            print(f"    ✅ Copied sitemap.xml to {subsite_name}")
+        else:
+            print(f"    ⚠️  sitemap.xml not found for {subsite_name}")
+
+        # Copy sitemap.xml.gz
+        src_sitemap_gz = f"site/{build_dir}/sitemap.xml.gz"
+        dst_sitemap_gz = f"site/{subsite_name}/sitemap.xml.gz"
+        if os.path.exists(src_sitemap_gz):
+            shutil.copy2(src_sitemap_gz, dst_sitemap_gz)
+            print(f"    ✅ Copied sitemap.xml.gz to {subsite_name}")
+        else:
+            print(f"    ⚠️  sitemap.xml.gz not found for {subsite_name}")
+
+    print("✅ Sitemap files copied to subsites")
+
     print("📋 Step 2: Deploy versioned subsites with Mike")
 
     # Deploy all subsites with version 1.0
