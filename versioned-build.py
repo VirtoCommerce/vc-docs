@@ -34,7 +34,36 @@ def main():
         print("pip install mike")
         sys.exit(1)
 
-    print("📋 Step 1: Build non-versioned sites (root + intermediate)")
+    print("📋 Step 1: Initialize local gh-pages folder")
+
+    # Initialize local gh-pages folder if it doesn't exist
+    if not os.path.exists("gh-pages"):
+        print("  Creating local gh-pages folder from gh-pages branch...")
+        try:
+            # Save current branch
+            result = run_command("git branch --show-current")
+            current_branch = result.stdout.strip()
+
+            # Stash changes and checkout gh-pages
+            run_command("git stash push -m 'temp changes for gh-pages init'", check=False)
+            run_command("git checkout gh-pages")
+
+            # Copy content to local gh-pages folder
+            run_command("cp -r . ../gh-pages/", check=False)
+
+            # Return to original branch and restore changes
+            run_command(f"git checkout {current_branch}")
+            run_command("git stash pop", check=False)
+
+            print("  ✅ Local gh-pages folder initialized")
+        except Exception as e:
+            print(f"  ⚠️  Warning: Could not initialize gh-pages folder: {e}")
+            print("  Creating empty gh-pages folder...")
+            os.makedirs("gh-pages", exist_ok=True)
+    else:
+        print("  ✅ Local gh-pages folder already exists")
+
+    print("📋 Step 2: Build non-versioned sites (root + intermediate)")
 
     # Create site directory
     os.makedirs("site", exist_ok=True)
@@ -56,7 +85,7 @@ def main():
 
     print("✅ Non-versioned sites built")
 
-    print("📋 Step 2: Deploy versioned subsites with Mike")
+    print("📋 Step 3: Deploy versioned subsites with Mike")
 
     # Deploy all subsites with version 1.0
     subsites = [
@@ -90,46 +119,26 @@ def main():
 
     print("✅ Versioned subsites deployed")
 
-    print("📋 Step 3: Copy versioned content from gh-pages to site")
+    print("📋 Step 4: Copy versioned content from local gh-pages folder to site")
 
-    # Save current branch
-    result = run_command("git branch --show-current")
-    current_branch = result.stdout.strip()
-
-    try:
-        # Stash changes and checkout gh-pages
-        print("  Stashing changes and switching to gh-pages branch...")
-        run_command("git stash push -m 'temp changes for testing'", check=False)
-        run_command("git checkout gh-pages")
-
-        print("  Copying versioned content...")
-        # Copy versioned subsites to site directory
-        # This overwrites the non-versioned subsites with versioned ones
-        for subsite in ["marketplace", "platform", "storefront"]:
-            for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
-                src = f"{subsite}/{guide}"
-                if os.path.exists(src):
-                    dst = f"site/{subsite}/{guide}"
-                    print(f"  Copying {src} to {dst}")
-                    if os.path.exists(dst):
-                        shutil.rmtree(dst)
-                    shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
-                else:
-                    print(f"  ⚠️  {src} not found in gh-pages")
-
-        # Return to original branch and restore changes
-        print(f"  Returning to {current_branch} branch...")
-        run_command(f"git checkout {current_branch}")
-        run_command("git stash pop", check=False)
-
-    except Exception as e:
-        print(f"❌ Error during versioned content copy: {e}")
-        # Try to return to original branch
-        run_command(f"git checkout {current_branch}", check=False)
+    print("  Copying versioned content from local gh-pages folder...")
+    # Copy versioned subsites to site directory
+    # This overwrites the non-versioned subsites with versioned ones
+    for subsite in ["marketplace", "platform", "storefront"]:
+        for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
+            src = f"gh-pages/{subsite}/{guide}"
+            if os.path.exists(src):
+                dst = f"site/{subsite}/{guide}"
+                print(f"  Copying {src} to {dst}")
+                if os.path.exists(dst):
+                    shutil.rmtree(dst)
+                shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+            else:
+                print(f"  ⚠️  {src} not found in local gh-pages folder")
 
     print("✅ Versioned content copied to site")
 
-    print("📋 Step 4: Extract sitemaps from versioned subdirectories")
+    print("📋 Step 5: Extract sitemaps from versioned subdirectories")
 
     # Extract sitemap.xml files from versioned subdirectories and copy to subsites
     versioned_subsites = [
@@ -159,7 +168,7 @@ def main():
 
     print("✅ Sitemaps extracted from versioned subdirectories")
 
-    print("📋 Step 5: Clean up versioned subdirectories from site")
+    print("📋 Step 6: Clean up versioned subdirectories from site")
 
     # Remove versioned subdirectories from site/ (keep only the main subsite directories)
     for subsite in versioned_subsites:
@@ -177,7 +186,7 @@ def main():
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 6: Start Python HTTP server")
+    print("📋 Step 7: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server
