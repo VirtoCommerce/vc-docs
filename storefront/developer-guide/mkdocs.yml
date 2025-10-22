@@ -20,6 +20,12 @@ extra:
     version:
         provider: mike
         default: latest
+    # Search configuration for versioned site
+    search:
+        # Limit search to current version only
+        index_only_current: true
+        # Exclude other versions from search index
+        exclude_versions: true
 
 # Page tree
 nav:
