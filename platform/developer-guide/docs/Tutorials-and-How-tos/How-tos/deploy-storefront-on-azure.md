@@ -1,10 +1,10 @@
-# Deploy VC Storefront to Azure Cloud
+# Deploy VC Frontend to Azure Cloud
 
-You can [deploy Virto Commerce Storefront to Azure Cloud](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-storefront%2Fmaster%2Fazuredeploy.json). 
+You can [deploy Virto Commerce Frontend to Azure Cloud](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-storefront%2Fmaster%2Fazuredeploy.json). 
 
 The following resources will be created during deployment:
 
-* **Website** - Virto Commerce Storefront.
+* **Website** - Virto Commerce Frontend.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ The following resources will be created during deployment:
 * Sample data should be installed, or a Store configured.
 
 !!! tip
-    If you have not copied Content Storage Connection String from platform deployment, you can get it as follows:
+    If you have not copied Content Storage Connection String from Platform deployment, you can get it as follows:
 
     1. Open [Azure Portal](https://portal.azure.com/)
     1. Select **Storage Account** that you created when deploying the Virto Commerce Platform.

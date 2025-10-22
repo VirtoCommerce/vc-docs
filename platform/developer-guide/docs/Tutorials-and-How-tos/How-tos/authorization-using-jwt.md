@@ -1,6 +1,6 @@
 # JSON Web Token Authorization Mechanism
 
-Our platform uses OAuth2 protocol with JSON Web Tokens (JWT) for authentication. This mechanism supports Password, RefreshToken, and ClientCredentials flows. Tokens issued by the platform are signed with a private key and can be validated using either a public certificate or an Authority URL. Configuration for certificates and Authority URL is specified in the **Auth** section of the **appsettings.json** file.
+Our Platform uses OAuth2 protocol with JSON Web Tokens (JWT) for authentication. This mechanism supports Password, RefreshToken, and ClientCredentials flows. Tokens issued by the Platform are signed with a private key and can be validated using either a public certificate or an Authority URL. Configuration for certificates and Authority URL is specified in the **Auth** section of the **appsettings.json** file.
 
 The guide includes the following steps:
 

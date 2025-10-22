@@ -24,7 +24,7 @@ To create credentials for your project:
     1. In the **Credentials** tab of the app dashboard, select **CREATE CREDENTIALS --> OAuth client ID**.
 1.   Select **Application type --> Web application** and choose a name.
     
-1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the platform using the https scheme. Otherwise, the SSO won't work.
+1.   In the **Authorized redirect URIs** section, select **ADD URI** to set the redirect URI. Run the Platform using the https scheme. Otherwise, the SSO won't work.
 
     !!! Note
         If your Platform is running on a local machine, put `https://localhost:10645/signin-google`.

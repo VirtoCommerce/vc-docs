@@ -25,7 +25,7 @@ To start working with the new catalog:
 
 ## Configure store and prices
 
-Virto Commerce platform is multi-language, multi-currency, multi-theme, and multi-store. This design allows users to operate multiple stores seamlessly within the same system.
+Virto Commerce Platform is multi-language, multi-currency, multi-theme, and multi-store. This design allows users to operate multiple stores seamlessly within the same system.
 
 To configure your store:
 
@@ -49,7 +49,7 @@ To configure prices:
 
 ## Configure payments, shipments, and taxes
 
-By default, the platform provides basic payment, shipment, and tax options, enabling a smooth checkout process.
+By default, the Platform provides basic payment, shipment, and tax options, enabling a smooth checkout process.
 
 To set up the above features, configure:
 

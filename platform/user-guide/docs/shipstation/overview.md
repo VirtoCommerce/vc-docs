@@ -1,6 +1,6 @@
 # Overview
 
-The **ShipStation** module enables synchronizing customer orders with [ShipStation](http://www.shipstation.com/). This means that new orders with shipments placed in VirtoCommerce will become available in the ShipStation admin, and changes in shipment status will be synced with Virto Commerce orders.
+The **ShipStation** module enables synchronizing customer orders with [ShipStation](http://www.shipstation.com/). This means that new orders with shipments placed in Virto Commerce will become available in the ShipStation admin, and changes in shipment status will be synced with Virto Commerce orders.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-shipstation)
 

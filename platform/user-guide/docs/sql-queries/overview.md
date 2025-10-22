@@ -1,6 +1,6 @@
 # Overview
 
-The **SQL Queries** module is designed to empower administrators and developers by providing a secure and flexible way to perform direct database queries within the VirtoCommerce environment. It integrates seamlessly with the Platform and supports a variety of query types, enhancing the ability to retrieve, analyze, and manage business data without external tools.
+The **SQL Queries** module is designed to empower administrators and developers by providing a secure and flexible way to perform direct database queries within the Virto Commerce environment. It integrates seamlessly with the Platform and supports a variety of query types, enhancing the ability to retrieve, analyze, and manage business data without external tools.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-sql-queries)
 
@@ -11,7 +11,7 @@ The **SQL Queries** module is designed to empower administrators and developers 
 The SQL Queries module allows you to:
 
 * Execute custom SQL queries against the Virto Commerce databases.
-* Control query access by integrating with the platform’s security and permissions system.
+* Control query access by integrating with the Platform’s security and permissions system.
 * Return results in user-friendly formats for reporting and analysis: HTML, PDF, CSV, XLSX.
 * Use query parameters such as Short Text, Date Time, Boolean, Integer, and Decimal.
 * Work with multiple database providers: SQL Server (default), MySQL, and PostgreSQL.

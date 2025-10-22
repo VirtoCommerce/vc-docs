@@ -1,6 +1,6 @@
 # Type Inheritance Support in Swagger API
 
-The Virto Сommerce platform offers enhanced support for exposing derived types in Swagger API descriptions. Traditionally, Swagger would only expose the base type, leaving derived types absent from the JSON API definition. This limitation often required additional API methods to explicitly handle derived types, complicating the development process.
+The Virto Сommerce Platform offers enhanced support for exposing derived types in Swagger API descriptions. Traditionally, Swagger would only expose the base type, leaving derived types absent from the JSON API definition. This limitation often required additional API methods to explicitly handle derived types, complicating the development process.
 
 ## Problem
 

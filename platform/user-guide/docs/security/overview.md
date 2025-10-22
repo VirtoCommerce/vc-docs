@@ -2,7 +2,7 @@
 
 The **Security** module provides various options to manage security and authentication for your online store or website. This includes managing:
 
-* **Users**: Individuals with access to your platform or store.
+* **Users**: Individuals with access to your Platform or store.
 * **Roles**: Sets of permissions defining specific functions within the Platform, such as basic user, advanced user, administrator, order manager, etc.
 * **Permissions**: Fundamental security units that grant particular rights to perform actions, such as viewing customer details or changing order data.
 * **Scopes**: Restrictions of permissions to specific objects or actions.

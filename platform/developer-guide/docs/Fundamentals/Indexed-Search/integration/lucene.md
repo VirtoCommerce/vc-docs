@@ -1,6 +1,6 @@
 # Lucene
 
-The Virto Commerce **Lucene Search** module implements `ISearchProvider` defined in the VirtoCommerce Search module and uses Lucene search engine which stores indexed documents in a local file system.
+The Virto Commerce **Lucene Search** module implements `ISearchProvider` defined in the Virto Commerce Search module and uses Lucene search engine which stores indexed documents in a local file system.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-lucene-search)
 

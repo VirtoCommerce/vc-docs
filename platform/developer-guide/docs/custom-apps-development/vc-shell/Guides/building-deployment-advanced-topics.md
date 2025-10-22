@@ -214,8 +214,8 @@ Your deployed VC-Shell application needs to communicate with the Virto Commerce 
 
 -   **`APP_PLATFORM_URL`**: This environment variable is critical. Ensure it is correctly set in your production environment (e.g., via your hosting provider's environment variable settings or in your `.env.production` file if it's bundled, though server-side env vars are safer for such URLs).
     -   This URL must be publicly accessible from your users' browsers.
--   **CORS (Cross-Origin Resource Sharing)**: The Virto Commerce Platform must be configured to allow requests from the domain where your VC-Shell application is hosted. If CORS is not correctly set up on the platform side, API requests from your frontend application will be blocked by the browser.
-    -   Ensure your application's deployment domain is added to the allowed origins in the platform's CORS policy.
+-   **CORS (Cross-Origin Resource Sharing)**: The Virto Commerce Platform must be configured to allow requests from the domain where your VC-Shell application is hosted. If CORS is not correctly set up on the Platform side, API requests from your Frontend Application will be blocked by the browser.
+    -   Ensure your application's deployment domain is added to the allowed origins in the Platform's CORS policy.
 -   **Authentication**: 
     -   Authentication flows rely on correct redirect URIs. Ensure that the redirect URIs configured in your identity provider and your application settings match your deployment URL(s).
     -   The `useApiClient` composable in `@vc-shell/framework` handles attaching authentication tokens to API requests, but the initial authentication handshake needs proper configuration.

@@ -58,7 +58,7 @@ Now the category manager can only work with the specified catalogs. Similarly, y
 !!! note
     Above are basic permissions for category managers. You can assign any other permissions to them as needed.
 
-For category managers, the platform will only display modules for which they have permissions:
+For category managers, the Platform will only display modules for which they have permissions:
 
 ![Modules for category managers](media/category-manager-limitations2.png)
 
