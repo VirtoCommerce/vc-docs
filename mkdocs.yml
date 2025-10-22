@@ -572,13 +572,13 @@ extra:
                     content:
                         - links:
                               - title: Deploy Platform and Frontend on Virto Cloud
-                                url: platform/deployment-on-cloud/deploy-on-virto-cloud/
+                                url: platform/deployment-on-cloud/latest/deploy-on-virto-cloud/
                               - title: Create Environment via CLI and VC Build
-                                url: platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
+                                url: platform/deployment-on-cloud/latest/create-environment-via-cli-and-vc-build/
                               - title: Create and Configure Catalog
-                                url: platform/deployment-on-cloud/catalog-creation/
+                                url: platform/deployment-on-cloud/latest/catalog-creation/
                               - title: Create and Configure Store
-                                url: platform/deployment-on-cloud/store-configuration/
+                                url: platform/deployment-on-cloud/latest/store-configuration/
             - iconSrc: assets/icons/getting-started.svg
               title: Getting Started
               content:
