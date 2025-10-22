@@ -56,37 +56,29 @@ def main():
 
     print("✅ Non-versioned sites built")
 
-    print("📋 Step 1.5: Copy sitemap files to subsites")
+    print("📋 Step 1.5: Verify sitemap files in subsites")
 
-    # Copy sitemap files from intermediate builds to subsites
-    subsites_sitemap = [
-        ("storefront", "storefront"),
-        ("platform", "platform"),
-        ("marketplace", "marketplace")
-    ]
+    # Verify that sitemap files exist in subsites (they should already be there from the build)
+    subsites = ["storefront", "platform", "marketplace"]
 
-    for subsite_name, build_dir in subsites_sitemap:
-        print(f"  Copying sitemap files for {subsite_name}...")
+    for subsite_name in subsites:
+        print(f"  Checking sitemap files for {subsite_name}...")
 
-        # Copy sitemap.xml
-        src_sitemap = f"site/{build_dir}/sitemap.xml"
-        dst_sitemap = f"site/{subsite_name}/sitemap.xml"
-        if os.path.exists(src_sitemap):
-            shutil.copy2(src_sitemap, dst_sitemap)
-            print(f"    ✅ Copied sitemap.xml to {subsite_name}")
+        # Check sitemap.xml
+        sitemap_path = f"site/{subsite_name}/sitemap.xml"
+        if os.path.exists(sitemap_path):
+            print(f"    ✅ sitemap.xml found for {subsite_name}")
         else:
             print(f"    ⚠️  sitemap.xml not found for {subsite_name}")
 
-        # Copy sitemap.xml.gz
-        src_sitemap_gz = f"site/{build_dir}/sitemap.xml.gz"
-        dst_sitemap_gz = f"site/{subsite_name}/sitemap.xml.gz"
-        if os.path.exists(src_sitemap_gz):
-            shutil.copy2(src_sitemap_gz, dst_sitemap_gz)
-            print(f"    ✅ Copied sitemap.xml.gz to {subsite_name}")
+        # Check sitemap.xml.gz
+        sitemap_gz_path = f"site/{subsite_name}/sitemap.xml.gz"
+        if os.path.exists(sitemap_gz_path):
+            print(f"    ✅ sitemap.xml.gz found for {subsite_name}")
         else:
             print(f"    ⚠️  sitemap.xml.gz not found for {subsite_name}")
 
-    print("✅ Sitemap files copied to subsites")
+    print("✅ Sitemap files verification completed")
 
     print("📋 Step 2: Deploy versioned subsites with Mike")
 
