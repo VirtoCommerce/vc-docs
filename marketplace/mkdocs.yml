@@ -24,15 +24,15 @@ extra:
               link: user-guide
               description:
                   - title: Operator Portal
-                    link: user-guide/Operator-portal/overview
+                    link: user-guide/latest/Operator-portal/overview
                   - title: Vendor Portal
-                    link: user-guide/Vendor-portal/overview
+                    link: user-guide/latest/Vendor-portal/overview
             - title: Developer Guide [In Progress]
               link: developer-guide
               image: assets/images/storefront-devguide.png
               description:
                   - title: State Machine Module
-                    link: developer-guide/state-machine-module/overview
+                    link: developer-guide/latest/state-machine-module/overview
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
@@ -132,6 +132,3 @@ extra:
 
 nav:
     - Home: index.md
-  # - Developer Guide: "!include ./developer-guide/mkdocs.yml"
-  # - User Guide: "!include ./user-guide/mkdocs.yml"
-

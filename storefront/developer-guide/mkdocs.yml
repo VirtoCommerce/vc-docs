@@ -3,6 +3,10 @@ theme:
     custom_dir: ../../overrides
     hide: false
 
+plugins:
+    - mike:
+        alias_type: redirect
+
 # Project information
 extra_site_name: Frontend Dev Docs
 site_name: storefront/developer-guide
@@ -15,6 +19,17 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
+    # Search configuration for versioned site
+    search:
+        # Limit search to current version only
+        index_only_current: true
+        # Exclude other versions from search index
+        exclude_versions: true
 
 # Page tree
 nav:
@@ -27,13 +42,13 @@ nav:
     - Update: update.md
     - Customization and Development Accelerators:
         - Overview: customization/overview.md
-        - Customization: 
+        - Customization:
             - Overview: customization/customization-overview.md
             - Visual Theme Customization: customization/visual-theme-customization.md
             - Functionality Customization: customization/functionality-customization.md
-        - Development Accelerators: 
+        - Development Accelerators:
             - Overview: customization/accelerators-overview.md
-            - Guidelines for Using Accelerators: customization/accelerators-guidelines.md  
+            - Guidelines for Using Accelerators: customization/accelerators-guidelines.md
             - Locales Management: customization/texts-customization.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md
