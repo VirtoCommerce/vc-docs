@@ -136,7 +136,18 @@ def main():
 
     print("✅ Versioned subsites deployed")
 
-    print("📋 Step 4: Copy versioned content from local gh-pages folder to site")
+    print("📋 Step 4: Update local gh-pages folder with latest deployed content")
+
+    # Update local gh-pages folder to get the latest deployed content
+    print("  Updating local gh-pages folder with latest deployed content...")
+    try:
+        run_command("cd gh-pages && git fetch origin gh-pages", check=False)
+        run_command("cd gh-pages && git reset --hard origin/gh-pages", check=False)
+        print("  ✅ Local gh-pages folder updated with latest content")
+    except Exception as e:
+        print(f"  ⚠️  Warning: Could not update gh-pages folder: {e}")
+
+    print("📋 Step 5: Copy versioned content from local gh-pages folder to site")
 
     print("  Copying versioned content from local gh-pages folder...")
     # Copy versioned subsites to site directory
@@ -156,7 +167,7 @@ def main():
 
     print("✅ Versioned content copied to site")
 
-    print("📋 Step 5: Extract sitemaps from versioned subdirectories")
+    print("📋 Step 6: Extract sitemaps from versioned subdirectories")
 
     # Extract sitemap.xml files from versioned subdirectories and copy to subsites
     versioned_subsites = [
@@ -186,7 +197,7 @@ def main():
 
     print("✅ Sitemaps extracted from versioned subdirectories")
 
-    print("📋 Step 6: Clean up versioned subdirectories from site")
+    print("📋 Step 7: Clean up versioned subdirectories from site")
 
     # Remove versioned subdirectories from site/ (keep only the main subsite directories)
     for subsite in versioned_subsites:
@@ -204,7 +215,7 @@ def main():
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 7: Start Python HTTP server")
+    print("📋 Step 8: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server
