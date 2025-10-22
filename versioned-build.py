@@ -42,20 +42,20 @@ def main():
         try:
             # Create gh-pages directory
             os.makedirs("gh-pages", exist_ok=True)
-            
+
             # Initialize git repository in gh-pages folder
             run_command("cd gh-pages && git init", check=False)
-            
+
             # Add remote origin (assuming it's the same as current repo)
             result = run_command("git remote get-url origin", check=False)
             if result.returncode == 0:
                 origin_url = result.stdout.strip()
                 run_command(f"cd gh-pages && git remote add origin {origin_url}", check=False)
-            
+
             # Fetch and checkout gh-pages branch
             run_command("cd gh-pages && git fetch origin gh-pages", check=False)
             run_command("cd gh-pages && git checkout -b gh-pages origin/gh-pages", check=False)
-            
+
             print("  ✅ Local gh-pages folder initialized with gh-pages branch")
         except Exception as e:
             print(f"  ⚠️  Warning: Could not initialize gh-pages folder: {e}")
@@ -63,7 +63,7 @@ def main():
             os.makedirs("gh-pages", exist_ok=True)
     else:
         print("  ✅ Local gh-pages folder already exists")
-        
+
         # Check if gh-pages folder has git repository and is on gh-pages branch
         try:
             result = run_command("cd gh-pages && git branch --show-current", check=False)
