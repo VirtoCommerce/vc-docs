@@ -25,7 +25,7 @@ function fixSearchUrl(url) {
     if (!url) return url;
 
     // Skip if URL already has version
-    if (url.includes('/latest/') || url.includes('/1.0/') || url.includes('/2.0/') || url.includes('/3.0/')) {
+    if (url.includes('/latest/')) {
         return url;
     }
 
