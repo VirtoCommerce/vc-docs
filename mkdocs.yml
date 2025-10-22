@@ -449,7 +449,7 @@ extra:
                   - title: Marketplace
                     link: marketplace
                   - title: CLI tools
-                    link: platform/developer-guide/CLI-tools/overview
+                    link: platform/developer-guide/latest/CLI-tools/overview
             - title: Frontend
               image: assets/images/storefront.png
               link: storefront
@@ -458,7 +458,7 @@ extra:
                   - title: Frontend Application
                     link: storefront
                   - title: VC-Shell
-                    link: platform/developer-guide/custom-apps-development/overview
+                    link: platform/developer-guide/latest/custom-apps-development/overview
 
             # - title: Marketplace
             #   description: Create and manage online marketplaces, fostering increased revenue and a broader customer base

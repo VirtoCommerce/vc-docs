@@ -27,7 +27,7 @@ extra:
                 - title: Getting Started
                   link: https://youtu.be/xsnds1QYuC0
                 - title: User Documentation
-                  link: user-guide/
+                  link: user-guide/latest/
                 - title: Public Demo Environment
                   link: https://virtostart-demo-store.govirto.com/
             - title: Developer Guide
@@ -35,13 +35,13 @@ extra:
               image: assets/images/storefront-devguide.png
               description:
                 - title: Overview
-                  link: developer-guide/
+                  link: developer-guide/latest/
                 - title: Architecture
-                  link: developer-guide/architecture
+                  link: developer-guide/latest/architecture
                 - title: Deployment
-                  link: developer-guide/deployment
+                  link: developer-guide/latest/deployment
                 - title: Integrations
-                  link: developer-guide/integrations/prerender_io
+                  link: developer-guide/latest/integrations/prerender_io
             - title: Other Resources
               image: assets/images/storefront-other.png
               description:
@@ -141,5 +141,5 @@ extra:
 
 nav:
     - Home: index.md
-  # - Developer Guide: "!include ./developer-guide/mkdocs.yml"
-  # - User Guide: "!include ./user-guide/mkdocs.yml"
+  # - Developer Guide: "!include ./developer-guide/latest/mkdocs.yml"
+  # - User Guide: "!include ./user-guide/latest/mkdocs.yml"
