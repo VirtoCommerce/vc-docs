@@ -129,25 +129,55 @@ def main():
 
     print("✅ Versioned content copied to site")
 
-    # print("📋 Step 4: Fix sitemap.xml URLs for versioning")
+    print("📋 Step 4: Extract sitemaps from versioned subdirectories")
 
-    # # Fix sitemap.xml to include proper versioning
-    # sitemap_path = "site/sitemap.xml"
-    # if os.path.exists(sitemap_path):
-    #     print("  Fixing sitemap.xml URLs...")
-    #     result = run_command(f"python3 fix-sitemap.py {sitemap_path} {version} --use-latest", check=False)
-    #     if result.returncode == 0:
-    #         print("  ✅ Sitemap URLs fixed")
-    #     else:
-    #         print(f"  ⚠️  Warning: Could not fix sitemap: {result.stderr}")
-    # else:
-    #     print("  ⚠️  Warning: sitemap.xml not found")
+    # Extract sitemap.xml files from versioned subdirectories and copy to subsites
+    versioned_subsites = [
+        "marketplace/developer-guide",
+        "marketplace/user-guide", 
+        "platform/developer-guide",
+        "platform/user-guide",
+        "platform/deployment-on-cloud",
+        "storefront/developer-guide",
+        "storefront/user-guide"
+    ]
 
-    # # Cleanup
+    for subsite in versioned_subsites:
+        # Look for sitemap in versioned directory (e.g., site/storefront/developer-guide/1.0/sitemap.xml)
+        versioned_sitemap_path = f"site/{subsite}/{version}/sitemap.xml"
+        target_sitemap_path = f"{subsite}/sitemap.xml"
+        
+        if os.path.exists(versioned_sitemap_path):
+            print(f"  Extracting sitemap from {versioned_sitemap_path} to {target_sitemap_path}")
+            # Ensure target directory exists
+            os.makedirs(os.path.dirname(target_sitemap_path), exist_ok=True)
+            # Copy sitemap
+            shutil.copy2(versioned_sitemap_path, target_sitemap_path)
+            print(f"  ✅ Sitemap copied to {target_sitemap_path}")
+        else:
+            print(f"  ⚠️  Sitemap not found at {versioned_sitemap_path}")
+
+    print("✅ Sitemaps extracted from versioned subdirectories")
+
+    print("📋 Step 5: Clean up versioned subdirectories from site")
+
+    # Remove versioned subdirectories from site/ (keep only the main subsite directories)
+    for subsite in versioned_subsites:
+        versioned_dir = f"site/{subsite}/{version}"
+        if os.path.exists(versioned_dir):
+            print(f"  Removing versioned directory: {versioned_dir}")
+            shutil.rmtree(versioned_dir)
+            print(f"  ✅ Removed {versioned_dir}")
+        else:
+            print(f"  ⚠️  Versioned directory not found: {versioned_dir}")
+
+    print("✅ Versioned subdirectories cleaned up")
+
+    # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 5: Start Python HTTP server")
+    print("📋 Step 6: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server
