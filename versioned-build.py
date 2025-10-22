@@ -40,13 +40,13 @@ def main():
     os.makedirs("site", exist_ok=True)
 
     # Build root site (without subsites)
-    print("  Building root site...")
-    with open("mkdocs-temp-root.yml", "w") as f:
-        f.write("INHERIT: mkdocs.yml\n")
-        f.write("nav:\n")
-        f.write("    - Home: index.md\n")
+    # print("  Building root site...")
+    # with open("mkdocs-temp-root.yml", "w") as f:
+    #     f.write("INHERIT: mkdocs.yml\n")
+    #     f.write("nav:\n")
+    #     f.write("    - Home: index.md\n")
 
-    run_command("mkdocs build -f mkdocs-temp-root.yml -d site", check=False)
+    run_command("mkdocs build -d site", check=False)
 
     # Build intermediate sites (platform, marketplace, storefront)
     print("  Building intermediate sites...")
