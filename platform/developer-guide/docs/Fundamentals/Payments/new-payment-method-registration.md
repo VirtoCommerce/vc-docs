@@ -13,7 +13,7 @@ Virto Commerce supports both off-site and on-site payment method implementations
 
 This chart shows how the off-site payment method works:
 
-![Offside payment method](media/01-offsite-payment-method-chart.png){: width="700"}
+![Offside payment method](media/01-offsite-payment-method-chart.png){: style="display: block; margin: 0 auto;" width="700"}
 
 ## Define new payment method
 
@@ -67,7 +67,7 @@ A very important property belonging to the payment method is `PaymentMethodType`
 
 ## Enable and configure payment method for store
 
-After your module is installed in your target system, all your payment methods should appear and be available for configuration in every store in your system under the `Store->Payment` method widget. You can configure payment methods for each store individually:
+After your module is installed in your target system, all your payment methods should appear and be available for configuration in every store in your system under the **Store-->Payment method** widget. You can configure payment methods for each store individually:
 
 * Enable or disable a method for the current store
 * Change priority to determine the order in which the payment methods will be displayed at checkout
