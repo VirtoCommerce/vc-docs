@@ -38,30 +38,47 @@ def main():
 
     # Initialize local gh-pages folder if it doesn't exist
     if not os.path.exists("gh-pages"):
-        print("  Creating local gh-pages folder from gh-pages branch...")
+        print("  Creating local gh-pages folder and initializing git repository...")
         try:
-            # Save current branch
-            result = run_command("git branch --show-current")
-            current_branch = result.stdout.strip()
-
-            # Stash changes and checkout gh-pages
-            run_command("git stash push -m 'temp changes for gh-pages init'", check=False)
-            run_command("git checkout gh-pages")
-
-            # Copy content to local gh-pages folder
-            run_command("cp -r . ../gh-pages/", check=False)
-
-            # Return to original branch and restore changes
-            run_command(f"git checkout {current_branch}")
-            run_command("git stash pop", check=False)
-
-            print("  ✅ Local gh-pages folder initialized")
+            # Create gh-pages directory
+            os.makedirs("gh-pages", exist_ok=True)
+            
+            # Initialize git repository in gh-pages folder
+            run_command("cd gh-pages && git init", check=False)
+            
+            # Add remote origin (assuming it's the same as current repo)
+            result = run_command("git remote get-url origin", check=False)
+            if result.returncode == 0:
+                origin_url = result.stdout.strip()
+                run_command(f"cd gh-pages && git remote add origin {origin_url}", check=False)
+            
+            # Fetch and checkout gh-pages branch
+            run_command("cd gh-pages && git fetch origin gh-pages", check=False)
+            run_command("cd gh-pages && git checkout -b gh-pages origin/gh-pages", check=False)
+            
+            print("  ✅ Local gh-pages folder initialized with gh-pages branch")
         except Exception as e:
             print(f"  ⚠️  Warning: Could not initialize gh-pages folder: {e}")
             print("  Creating empty gh-pages folder...")
             os.makedirs("gh-pages", exist_ok=True)
     else:
         print("  ✅ Local gh-pages folder already exists")
+        
+        # Check if gh-pages folder has git repository and is on gh-pages branch
+        try:
+            result = run_command("cd gh-pages && git branch --show-current", check=False)
+            if result.returncode == 0:
+                current_branch = result.stdout.strip()
+                if current_branch != "gh-pages":
+                    print(f"  Switching gh-pages folder to gh-pages branch (currently on {current_branch})...")
+                    run_command("cd gh-pages && git checkout gh-pages", check=False)
+                    print("  ✅ Switched to gh-pages branch")
+                else:
+                    print("  ✅ Already on gh-pages branch")
+            else:
+                print("  ⚠️  gh-pages folder is not a git repository")
+        except Exception as e:
+            print(f"  ⚠️  Warning: Could not check gh-pages branch: {e}")
 
     print("📋 Step 2: Build non-versioned sites (root + intermediate)")
 
@@ -126,7 +143,8 @@ def main():
     # This overwrites the non-versioned subsites with versioned ones
     for subsite in ["marketplace", "platform", "storefront"]:
         for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
-            src = f"gh-pages/{subsite}/{guide}"
+            # Look for versioned content in gh-pages/{subsite}/{guide}/{version}/
+            src = f"gh-pages/{subsite}/{guide}/{version}"
             if os.path.exists(src):
                 dst = f"site/{subsite}/{guide}"
                 print(f"  Copying {src} to {dst}")
