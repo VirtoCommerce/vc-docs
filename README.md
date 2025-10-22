@@ -33,62 +33,6 @@ pip install mkdocs-material mike mkdocs-awesome-pages-plugin \
     pymdown-extensions jinja2
 ```
 
-## Documentation Versioning with Mike
-
-This project uses [Mike](https://github.com/jimporter/mike) for **independent versioning of each documentation subsite**.
-
-### Quick Start - Interactive CLI
-
-Launch the interactive version manager:
-
-```bash
-# All platforms (Linux/Mac/Windows)
-python3 version-manager.py
-
-# Or on Windows
-python version-manager.py
-```
-
-You'll see an interactive menu where you can:
-- Deploy versions to one or all subsites (with automatic push to GitHub)
-- Delete versions
-- List all versions
-- Set default versions
-- Add aliases
-
-Simply choose an option and follow the prompts!
-
-**Note:** When deploying, you can choose to automatically push changes to GitHub's `gh-pages` branch.
-
-### Available Subsites
-
-- `marketplace/developer-guide`
-- `marketplace/user-guide`
-- `platform/developer-guide`
-- `platform/user-guide`
-- `platform/deployment-on-cloud`
-- `storefront/developer-guide`
-- `storefront/user-guide`
-
-### Test Locally
-
-```bash
-# View deployed versions
-git checkout gh-pages
-python3 -m http.server 8000
-# Open http://localhost:8000/marketplace/developer-guide/
-
-# Development mode (no versions)
-cd marketplace/developer-guide
-mkdocs serve
-```
-
-### Documentation
-
-- **[QUICKSTART.md](QUICKSTART.md)** - Simple commands and common workflows
-- **[VERSIONING.md](VERSIONING.md)** - Complete versioning documentation
-- **Legacy scripts** in `scripts/` directory (deprecated, use `version.sh` instead)
-
 ## Development Workflow
 
 ### Regular development (without versioning)
