@@ -129,11 +129,25 @@ def main():
 
     print("✅ Versioned content copied to site")
 
+    print("📋 Step 4: Fix sitemap.xml URLs for versioning")
+
+    # Fix sitemap.xml to include proper versioning
+    sitemap_path = "site/sitemap.xml"
+    if os.path.exists(sitemap_path):
+        print("  Fixing sitemap.xml URLs...")
+        result = run_command(f"python3 fix-sitemap.py {sitemap_path} {version} --use-latest", check=False)
+        if result.returncode == 0:
+            print("  ✅ Sitemap URLs fixed")
+        else:
+            print(f"  ⚠️  Warning: Could not fix sitemap: {result.stderr}")
+    else:
+        print("  ⚠️  Warning: sitemap.xml not found")
+
     # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 4: Start Python HTTP server")
+    print("📋 Step 5: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server

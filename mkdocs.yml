@@ -625,6 +625,7 @@ extra:
 extra_javascript:
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
+    - assets/scripts/search-url-fix.js
 
 extra_css:
     - assets/stylesheets/main.css
