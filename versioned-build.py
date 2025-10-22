@@ -134,7 +134,7 @@ def main():
     # Extract sitemap.xml files from versioned subdirectories and copy to subsites
     versioned_subsites = [
         "marketplace/developer-guide",
-        "marketplace/user-guide", 
+        "marketplace/user-guide",
         "platform/developer-guide",
         "platform/user-guide",
         "platform/deployment-on-cloud",
@@ -146,7 +146,7 @@ def main():
         # Look for sitemap in versioned directory (e.g., site/storefront/developer-guide/1.0/sitemap.xml)
         versioned_sitemap_path = f"site/{subsite}/{version}/sitemap.xml"
         target_sitemap_path = f"{subsite}/sitemap.xml"
-        
+
         if os.path.exists(versioned_sitemap_path):
             print(f"  Extracting sitemap from {versioned_sitemap_path} to {target_sitemap_path}")
             # Ensure target directory exists
