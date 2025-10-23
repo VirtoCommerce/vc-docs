@@ -24,8 +24,10 @@ const VERSIONED_SECTIONS = [
 function fixSearchUrl(url) {
     if (!url) return url;
 
-    // Skip if URL already has version
-    if (url.includes('/latest/')) {
+    // Skip if URL already has any version (latest, stable, or numbered)
+    if (url.includes('/latest/') ||
+        url.includes('/stable/') ||
+        /\/[0-9]+\.[0-9]+(\.[0-9]+)?(-S[0-9]+)?\//.test(url)) {
         return url;
     }
 
@@ -34,6 +36,15 @@ function fixSearchUrl(url) {
         if (url.includes(section)) {
             // Find the end of the section path
             const sectionEnd = url.indexOf(section) + section.length;
+
+            // Check if there's already a version after the section
+            const afterSection = url.substring(sectionEnd);
+            if (afterSection.startsWith('latest/') ||
+                afterSection.startsWith('stable/') ||
+                /^[0-9]+\.[0-9]+(\.[0-9]+)?(-S[0-9]+)?\//.test(afterSection)) {
+                return url; // Already has version, don't modify
+            }
+
             // Insert /latest/ after the section
             return url.substring(0, sectionEnd) + 'latest/' + url.substring(sectionEnd);
         }
@@ -55,6 +66,8 @@ function fixSearchResultLinks() {
             if (fixedHref !== originalHref) {
                 link.setAttribute('href', fixedHref);
                 console.log(`🔧 Fixed search URL: ${originalHref} → ${fixedHref}`);
+            } else {
+                console.log(`✅ URL already correct: ${originalHref}`);
             }
         }
     });
