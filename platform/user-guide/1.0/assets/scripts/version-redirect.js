@@ -18,7 +18,7 @@
     if (match) {
         const section = match[1];      // marketplace, platform, or storefront
         const guide = match[2];         // developer-guide, user-guide, or deployment-on-cloud
-        const content = match[4];       // rest of the path
+        const content = match[3];       // rest of the path
 
         // Construct new URL with 'latest' version
         const newPath = `/${section}/${guide}/latest/${content}`;
