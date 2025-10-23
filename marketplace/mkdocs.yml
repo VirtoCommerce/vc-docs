@@ -21,14 +21,14 @@ extra:
         documentation:
             - title: User Guide
               image: assets/images/storefront-userquide.png
-              link: user-guide
+              link: user-guide/latest
               description:
                   - title: Operator Portal
                     link: user-guide/latest/Operator-portal/overview
                   - title: Vendor Portal
                     link: user-guide/latest/Vendor-portal/overview
             - title: Developer Guide [In Progress]
-              link: developer-guide
+              link: developer-guide/latest
               image: assets/images/storefront-devguide.png
               description:
                   - title: State Machine Module
@@ -132,3 +132,4 @@ extra:
 
 nav:
     - Home: index.md
+

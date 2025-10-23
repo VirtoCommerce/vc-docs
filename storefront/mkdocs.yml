@@ -21,7 +21,7 @@ extra:
     main_page:
         documentation:
             - title: User Guide
-              link: user-guide
+              link: user-guide/latest
               image: assets/images/storefront-userquide.png
               description:
                 - title: Getting Started
@@ -31,7 +31,7 @@ extra:
                 - title: Public Demo Environment
                   link: https://virtostart-demo-store.govirto.com/
             - title: Developer Guide
-              link: developer-guide
+              link: developer-guide/latest
               image: assets/images/storefront-devguide.png
               description:
                 - title: Overview

@@ -21,7 +21,7 @@ extra:
         documentation:
             - title: User Guide
               image: assets/images/storefront-userquide.png
-              link: user-guide
+              link: user-guide/latest
               description:
                   - title: Getting Started
                     link: user-guide/latest/getting-started
@@ -33,7 +33,7 @@ extra:
                     link: deployment-on-cloud/latest/deploy-on-virto-cloud
             - title: Developer Guide
               image: assets/images/storefront-devguide.png
-              link: developer-guide
+              link: developer-guide/latest
               description:
                   - title: Installation Guide
                     link: developer-guide/latest/Getting-Started/Installation-Guide/windows
