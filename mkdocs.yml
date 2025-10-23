@@ -507,7 +507,7 @@ extra:
                               - title: Getting Started
                                 url: /platform/user-guide/latest/getting-started
                               - title: User Documentation
-                                url: /platform/user-guide
+                                url: /platform/user-guide/latest/
                         - title: Developer Guide
                           links:
                               - title: Installation Guide
@@ -533,7 +533,7 @@ extra:
                               - title: Getting Started
                                 url: https://youtu.be/xsnds1QYuC0
                               - title: User Documentation
-                                url: /storefront/user-guide
+                                url: /storefront/user-guide/latest/
                               - title: Public Demo
                                 url: https://virtostart-demo-store.govirto.com/
                         - title: Developer Guide
@@ -591,9 +591,9 @@ extra:
                   - title: Frontend Application
                     links:
                         - title: Developer Getting Started
-                          url: /storefront/developer-guide/
+                          url: /storefront/developer-guide/latest/
                         - title: User Getting Started
-                          url: /storefront/user-guide/
+                          url: /storefront/user-guide/latest/
                   - title: VC-Shell
                     links:
                         - title: Developer Getting Started
