@@ -540,7 +540,7 @@ extra:
                         - title: Developer Guide
                           links:
                               - title: Getting Started
-                                url: /storefront/developer-guide
+                                url: /storefront/developer-guide/latest
                               - title: Architecture
                                 url: /storefront/developer-guide/latest/architecture
                               - title: Deployment
