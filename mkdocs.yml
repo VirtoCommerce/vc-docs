@@ -302,6 +302,7 @@ nav:
           - Deployment on Cloud: "!include ./platform/deployment-on-cloud/mkdocs.yml"
 
 extra:
+    root_url: https://docs.virtocommerce.org
     homepage: /
     social:
         - icon: fontawesome/brands/github
@@ -623,6 +624,7 @@ extra:
               title: "GitHub"
               url: "https://github.com/VirtoCommerce"
 extra_javascript:
+    - assets/scripts/version-redirect.js
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
     - assets/scripts/search-url-fix.js
