@@ -110,7 +110,10 @@ def main():
         mike_cmd.append("--push")
 
         # Execute mike deploy
-        run_command(" ".join(mike_cmd), check=False)
+        result = run_command(" ".join(mike_cmd), check=False)
+        if result.returncode != 0:
+            print(f"❌ Mike deploy failed for {subsite}: {result.stderr}")
+            print("This might cause deployment issues!")
 
         # Set as default if requested
         if args.set_as_default:
@@ -196,11 +199,28 @@ def main():
 
     print("✅ CI/CD versioned build completed!")
 
+    # Verify that files were actually created
+    print("🔍 Verifying build output...")
+    site_dir = args.output_dir
+    required_dirs = ["marketplace", "platform", "storefront"]
+
+    missing_dirs = []
+    for dir_name in required_dirs:
+        if not os.path.exists(os.path.join(site_dir, dir_name)):
+            missing_dirs.append(dir_name)
+
+    if missing_dirs:
+        print(f"❌ WARNING: Missing directories in build output: {missing_dirs}")
+        print("This will likely cause deployment failures!")
+    else:
+        print("✅ All required directories found in build output")
+
     # Output build information for GitHub Actions
     build_info = {
         "output_dir": args.output_dir,
         "subsites_deployed": [subsite for subsite, version in subsites.items() if version],
-        "versions": {subsite: version for subsite, version in subsites.items() if version}
+        "versions": {subsite: version for subsite, version in subsites.items() if version},
+        "missing_dirs": missing_dirs
     }
 
     print(f"📊 Build Summary:")
@@ -208,6 +228,9 @@ def main():
     print(f"  Subsites deployed: {len([s for s in build_info['subsites_deployed']])}")
     for subsite, version in build_info['versions'].items():
         print(f"    {subsite}: {version}")
+
+    if missing_dirs:
+        print(f"  ⚠️  Missing directories: {missing_dirs}")
 
     # Write build info to file for GitHub Actions
     with open("build-info.json", "w") as f:
