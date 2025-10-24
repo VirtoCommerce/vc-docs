@@ -292,3 +292,6 @@ site/
 
 .history
 .DS_Store
+
+# Local gh-pages folder for versioned content
+gh-pages/

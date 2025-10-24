@@ -235,7 +235,7 @@
                 {% if item.url %}
                     <a
                         class="mega-menu__menu-button {{"mega-menu__menu-button_link" if item.external}}"
-                        href="{{ item.url }}"
+                        href="{% if item.external or item.url.startswith('http') %}{{ item.url }}{% else %}{{ config.extra.root_url }}{{ item.url }}{% endif %}"
                         {% if item.external %}
                             target="_blank"
                         {% endif %}
@@ -320,7 +320,7 @@
                 {% if item.url %}
                     <a
                         class="content-item-list-item content-item-list-item_hover"
-                        href="{{ item.url }}"
+                        href="{% if item.url.startswith('http') %}{{ item.url }}{% else %}{{ config.extra.root_url }}{{ item.url }}{% endif %}"
                     >{{ item.title }}</a
                     >
                 {% else %}
@@ -329,7 +329,7 @@
                         {% if item.links %}
                             {% for link in item.links %}
                                 <li class="content-item-list-item">
-                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    <a href="{% if link.url.startswith('http') %}{{ link.url }}{% else %}{{ config.extra.root_url }}{{ link.url }}{% endif %}">{{ link.title }}</a>
                                 </li>
                             {% endfor %}
                         {% endif %}
@@ -370,7 +370,7 @@
                     class="mega-menu__menu-button-icon"
                     style="background-image: url('{{ option.iconSrc }}')"
                 ></div>
-                <a href="{{ option.url }}">{{ option.title }}</a>
+                <a href="{% if option.url.startswith('http') %}{{ option.url }}{% else %}{{ config.extra.root_url }}{{ option.url }}{% endif %}">{{ option.title }}</a>
             </div>
             {% endfor %}
         </div>

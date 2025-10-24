@@ -2,13 +2,13 @@ theme:
     name: material
     custom_dir: overrides
     language: en
-#    features:
-#        - instant # (still experimental) feature fails to load images when folder changes
+    #    features:
+    #        - instant # (still experimental) feature fails to load images when folder changes
     favicon: assets/icons/favicon.ico
     logo: assets/icons/logo.svg
     logobw: assets/icons/logo-bw.svg
     palette:
-        -   scheme: default
+        - scheme: default
 
     font:
         text: Circular Std
@@ -39,8 +39,8 @@ markdown_extensions:
     - pymdownx.magiclink
     - attr_list
     - pymdownx.emoji:
-        emoji_index: !!python/name:material.extensions.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
     - abbr
     - def_list
     - footnotes
@@ -78,199 +78,199 @@ markdown_extensions:
 plugins:
     - monorepo
     - search: # necessary for search to work
- #   - autolinks
+    #   - autolinks
     - awesome-pages:
- #       strict: false
+    #       strict: false
     - git-revision-date-localized
     - minify
- #       minify_html: true
+    #       minify_html: true
     - redirects:
-        redirect_maps:
-            'products/products-virto3-versions.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/virto3-products-versions'
-            'license.md': 'https://virtocommerce.com/open-source-license'
-            'support.md': 'https://help.virtocommerce.com/support/home'
-            'vc-quickstart.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows'
-            'architecture-center/B2B-multiregional.md': 'https://docs.virtocommerce.org/platform/user-guide/multiregional-ecommerce'
-            'developer-guide/create-new-module-advanced.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch'
-            'developer-guide/create-new-module.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module'
-            'developer-guide/deploy-from-source-code.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/debugging'
-            'developer-guide/deploy-module-from-source-code.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code'
-            'developer-guide/global-tools.md': 'https://docs.virtocommerce.org/platform/developer-guide/CLI-tools/overview'
-            'developer-guide/logging.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Logging/overview'
-            'developer-guide/modules-development-via-docker.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/docker-modules-development'
-            'developer-guide/swagger-endpoints.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/swagger-api'
-            'developer-guide/user-manager.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/extending-usermanager-and-rolemanager'
-            'developer-guide/using-autorest-with-v3.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/generating-c-sharp-client'
-            'fundamentals/architecture-reference.md': 'https://docs.virtocommerce.org/platform/developer-guide/Back-End-Architecture/02-conceptual-overview'
-            'fundamentals/db-agnostic.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Persistence/DB-Agnostic/overview'
-            'fundamentals/essential-caching.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Caching/01-overview'
-            'fundamentals/essential-modularity.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Modularity/01-overview'
-            'fundamentals/make-secure-webapi.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/security-in-depth'
-            'fundamentals/scalability.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Scalability/overview'
-            'fundamentals/search.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Indexed-Search/overview'
-            'fundamentals/extensibility/blade-toolbar.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/blade-toolbar'
-            'fundamentals/extensibility/blades-and-navigation.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/blades-and-navigation'
-            'fundamentals/extensibility/extending-authorization-policies.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/extending-authorization-policies'
-            'fundamentals/extensibility/extending-domain-models.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/extending-domain-models'
-            'fundamentals/extensibility/extending-grid-columns.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/extending-grid-columns'
-            'fundamentals/extensibility/extending-main-menu.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/extending-main-menu'
-            'fundamentals/extensibility/extending-using-events.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Event-Driven-Development/using-domain-events'
-            'fundamentals/extensibility/metaform.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/metaform'
-            'fundamentals/extensibility/new-payment-method-registration.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Payments/new-payment-method-registration'
-            'fundamentals/extensibility/new-shipping-method-registration.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Shipments/new-shipping-method-registration'
-            'fundamentals/extensibility/new-tax-provider-registration.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Taxes/new-tax-provider-registration'
-            'fundamentals/extensibility/overview.md': 'https://docs.virtocommerce.org/platform/developer-guide/Extensibility/overview'
-            'fundamentals/extensibility/style-guide.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/style-guide'
-            'fundamentals/extensibility/ui-scroll-directive.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/ui-scroll-directive'
-            'fundamentals/extensibility/using-dynamic-properties.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Dynamic-Properties/overview'
-            'fundamentals/extensibility/widgets.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/Extensibility-Points/widgets'
-            'getting-started/connect-storefront-to-platform-v3.md': 'https://docs.virtocommerce.org/storefront/developer-guide/deployment'
-            'getting-started/deploy-from-precompiled-binaries-MacOS.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/macOS'
-            'getting-started/deploy-from-precompiled-binaries-azure.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure'
-            'getting-started/deploy-from-precompiled-binaries-linux.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/linux'
-            'getting-started/deploy-from-precompiled-binaries-windows.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows'
-            'getting-started/email-sending-settings.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Notifications/overview'
-            'getting-started/lessons.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/overview'
-            'getting-started/lessons/lesson1.md': 'https://docs.virtocommerce.org/platform/developer-guide/Getting-Started/Installation-Guide/windows'
-            'getting-started/lessons/lesson2.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/import-products-to-catalog'
-            'getting-started/lessons/lesson3.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/creating-custom-module'
-            'getting-started/lessons/lesson4.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/build-platform-manager-ui'
-            'modules/assets.md': 'https://docs.virtocommerce.org/platform/user-guide/assets/managing-assets'
-            'modules/azure-ad.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/configuring-and-managing-azure-auth'
-            'modules/azureblob-assets.md': 'https://docs.virtocommerce.org/platform/developer-guide/Configuration-Reference/appsettingsjson/#__tabbed_2_2'
-            'modules/cart.md': 'https://docs.virtocommerce.org/platform/user-guide/cart/overview'
-            'modules/catalog.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/overview'
-            'modules/catalog/add-new-catalog.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/#physical-catalogs'
-            'modules/catalog/add-virtual-catalog.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/#virtual-catalogs'
-            'modules/catalog/catalog-search.md': 'https://docs.virtocommerce.org/platform/user-guide/search'
-            'modules/catalog/glossary.md': 'https://docs.virtocommerce.org/platform/user-guide/search'
-            'modules/catalog/managing-categories.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-categories'
-            'modules/catalog/managing-products.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-products'
-            'modules/catalog/managing-productt-variations.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-product-variations'
-            'modules/catalog/managing-properties.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-properties'
-            'modules/catalog/managing-search-index.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-search-index'
-            'modules/catalog/product-indexing.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/product-indexing'
-            'modules/catalog/search-engine-architecture-details.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Indexed-Search/overview'
-            'modules/catalog/view-catalogs-and-physical-items.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/add-new-catalog/#view-catalogs'
-            'modules/catalog/view-product-variations.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-product-variations/#view-product-variations'
-            'modules/catalog/view-properties.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog/managing-properties/#view-properties'
-            'modules/catalog-personalization.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog-personalization/settings'
-            'modules/catalog-publishing.md': 'https://docs.virtocommerce.org/platform/user-guide/catalog-publishing/overview'
-            'modules/content.md': 'https://docs.virtocommerce.org/platform/user-guide/content/overview'
-            'modules/content/pages-blogs-management.md': 'https://docs.virtocommerce.org/platform/user-guide/content/managing-pages'
-            'modules/content/theme-management.md': 'https://docs.virtocommerce.org/platform/user-guide/content/managing-themes'
-            'modules/contract.md': 'https://docs.virtocommerce.org/platform/user-guide/contracts/overview'
-            'modules/contract/XAPI.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contact'
-            'modules/core/How-to%20override%20rounding%20policy.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/overriding-rounding-policy'
-            'modules/customer.md': 'https://docs.virtocommerce.org/platform/user-guide/contracts/managing-contract-customers'
-            'modules/customer/advanced-filter.md': 'https://docs.virtocommerce.org/platform/user-guide/contacts/filtering-options'
-            'modules/customer/create-and-manage-employee.md': 'https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts'
-            'modules/customer/create-and-manage-organization.md': 'https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts'
-            'modules/customer/manage-contacts.md': 'https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts'
-            'modules/customer/manage-vendors.md': 'https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts'
-            'modules/customer/view-organization-details.md': 'https://docs.virtocommerce.org/platform/user-guide/contacts/managing-contacts'
-            'modules/customer-export-import/Index.md': 'https://docs.virtocommerce.org/platform/user-guide/customer-export-import/overview'
-            'modules/customer-review.md': 'https://docs.virtocommerce.org/platform/user-guide/rating-reviews/overview'
-            'modules/customer-review/rest-api.md': 'https://docs.virtocommerce.org/platform/user-guide/rating-reviews/rest-api'
-            'modules/dynamic-associations.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/dynamic-associations-overview'
-            'modules/dynamic-associations/rest-api.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/dynamic-associations-restapi'
-            'modules/elastic-app-search/eas-setup-guide.md': 'https://docs.virtocommerce.org/platform/user-guide/elastic-app-search/overview'
-            'modules/elastic-search.md': 'https://docs.virtocommerce.org/platform/user-guide/elastic-search/overview'
-            'modules/elastic-search/blue-green-indexation.md': 'https://docs.virtocommerce.org/platform/user-guide/search/managing-search/#blue-green-indexing'
-            'modules/event-bus.md': 'https://docs.virtocommerce.org/platform/user-guide/event-bus/overview'
-            'modules/experience-api.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI'
-            'modules/experience-api/application-insights-integration.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/troubleshooting'
-            'modules/experience-api/filter-syntax.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products'
-            'modules/experience-api/getting-started.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started'
-            'modules/experience-api/x-api-extensions.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions'
-            'modules/experience-api/x-catalog-reference.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview'
-            'modules/experience-api/x-purchase-cart-reference.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Cart/overview'
-            'modules/experience-api/x-purchase-order-reference.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Order/overview'
-            'modules/export.md': 'https://docs.virtocommerce.org/platform/user-guide/generic-export/overview'
-            'modules/export/advanced-filter.md': 'https://docs.virtocommerce.org/platform/user-guide/generic-export/advanced-filtering'
-            'modules/gdpr/gdpr.md': 'https://docs.virtocommerce.org/platform/user-guide/gdpr/overview'
-            'modules/google-ecommerce-analytics.md': 'https://docs.virtocommerce.org/platform/user-guide/integrations/google-analytics/overview'
-            'modules/hotjar.md': 'https://docs.virtocommerce.org/platform/user-guide/integrations/hotjar/overview'
-            'modules/image-tools.md': 'https://docs.virtocommerce.org/platform/user-guide/thumbnails/overview'
-            'modules/inventory.md': 'https://docs.virtocommerce.org/platform/user-guide/inventory/overview'
-            'modules/inventory/manage-fullfilment.md': 'https://docs.virtocommerce.org/platform/user-guide/inventory/managing-fulfillment-centers'
-            'modules/marketing.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/overview'
-            'modules/marketing/combine-active-promotions.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/combining-active-promotions'
-            'modules/marketing/manage-content-items.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/managing-content-items/?h=content+items'
-            'modules/marketing/manage-content-placeholders.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/managing-content-placeholders'
-            'modules/marketing/manage-content-publishing.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/managing-published-content'
-            'modules/marketing/manage-promotions.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/managing-promotions'
-            'modules/marketing/promotion-rules.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/promotion-rules'
-            'modules/marketing/publishing-conditions.md': 'https://docs.virtocommerce.org/platform/user-guide/marketing/publish-conditions'
-            'modules/marketing-experience-api.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview'
-            'modules/native-payment-methods/working-guide.md': 'https://docs.virtocommerce.org/platform/user-guide/native-payment-methods/overview'
-            'modules/notification.md': 'https://docs.virtocommerce.org/platform/user-guide/notifications/overview'
-            'modules/notification/tech-doc.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Notifications/registering-new-notification-type'
-            'modules/notification/tips-and-tricks-for-creating-email-templates.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Notifications/notification-templates'
-            'modules/order.md': 'https://docs.virtocommerce.org/platform/user-guide/order-management/overview'
-            'modules/order/How-to%20extend%20validation.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions/#extend-validation-logic-replace-validators'
-            'modules/order/order-details.md': 'https://docs.virtocommerce.org/platform/user-guide/order-management/main-objects'
-            'modules/order/order-documents.md': 'https://docs.virtocommerce.org/platform/user-guide/order-management/managing-documents'
-            'modules/order/order-module-notification-types.md': 'https://docs.virtocommerce.org/platform/user-guide/order-management/notifications'
-            'modules/order/order-widgets.md': 'https://docs.virtocommerce.org/platform/user-guide/order-management/main-objects'
-            'modules/order/roles-and-permissions-scenarios.md': 'https://docs.virtocommerce.org/platform/user-guide/order-management/permissions'
-            'modules/payment.md': 'https://docs.virtocommerce.org/platform/user-guide/payment/overview'
-            'modules/price-export-import.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/export-functionality'
-            'modules/pricing.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/overview'
-            'modules/pricing/add-new-assignment.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/adding-new-assignment'
-            'modules/pricing/add-prices-to-products.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/#add-and-edit-product-prices'
-            'modules/pricing/add-products-to-the-new-price-list.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/#add-products-to-price-list'
-            'modules/pricing/create-new-price-list.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/creating-new-price-list/#create-new-price-list'
-            'modules/pricing/export-functionality.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/export-functionality'
-            'modules/pricing/managing-pricing-module-settings.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/managing-pricing-module-settings'
-            'modules/pricing/troubleshooting-guide.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/troubleshooting-guide'
-            'modules/pricing/view-price-list-via-catalog-module.md': 'https://docs.virtocommerce.org/platform/user-guide/pricing/viewing-price-list-in-catalog'
-            'modules/profile-experience-api.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Profile/overview'
-            'modules/quote.md': 'https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Quote/overview'
-            'modules/return/return-module-guide.md': 'https://docs.virtocommerce.org/platform/user-guide/return/overview'
-            'modules/shipping.md': 'https://docs.virtocommerce.org/platform/user-guide/shipping/overview'
-            'modules/shipstation.md': 'https://docs.virtocommerce.org/platform/user-guide/shipstation/overview'
-            'modules/sitemaps.md': 'https://docs.virtocommerce.org/platform/user-guide/sitemaps/overview'
-            'modules/store.md': 'https://docs.virtocommerce.org/platform/user-guide/store/overview'
-            'modules/store/add-new-store.md': 'https://docs.virtocommerce.org/platform/user-guide/store/adding-new-store'
-            'modules/store/edit-store-details.md': 'https://docs.virtocommerce.org/platform/user-guide/store/configuring-store'
-            'modules/store/edit-widgets.md': 'https://docs.virtocommerce.org/platform/user-guide/store/configuring-store'
-            'modules/subscription.md': 'https://docs.virtocommerce.org/platform/user-guide/subscriptions/overview'
-            'modules/tax.md': 'https://docs.virtocommerce.org/platform/user-guide/tax/overview'
-            'modules/webhooks.md': 'https://docs.virtocommerce.org/platform/user-guide/webhooks/overview'
-            'products/v3-2020-Q3.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2020-Q3'
-            'products/v3-2021-Q1.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2021-Q1'
-            'products/v3-2021-Q3.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2021-Q3'
-            'products/v3-2022-Q1.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q1'
-            'products/v3-2022-Q2.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q2'
-            'products/v3-2022-Q3.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q3'
-            'products/v3-2022-Q4.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2022-Q4'
-            'products/v3-2023-S5.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2023-S5'
-            'products/v3-2023-S6.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2023-S6'
-            'products/v3-2024-S7.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2024-S7'
-            'products/v3-2024-S8.md': 'https://docs.virtocommerce.org/platform/user-guide/versions/v3-2024-S8'
-            'release-information/update-to-version-3-800/update-platform-and-modules-to-3-800.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/upgrading-to-net8'
-            'techniques/add-new-sso-provider.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/adding-new-sso-provider'
-            'techniques/authentication-with-azure-ad.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/configuring-and-managing-azure-auth'
-            'techniques/countries-management.md': 'https://docs.virtocommerce.org/platform/developer-guide/Platform-Manager/localization'
-            'techniques/debugging-without-source-code.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/debugging'
-            'techniques/exposing-polymorphic-types-swagger.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger'
-            'techniques/extend-DB-model.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/extending-database-model'
-            'techniques/generate-pdf-file.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/generating-pdfs'
-            'techniques/healthchecks.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/health-checks'
-            'techniques/how-scale-out-platform-on-azure.md': 'https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Scalability/scalability-options'
-            'techniques/how-to-run-platform-on-azure-functions.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure'
-            'techniques/implementing-authorization-mechanism-using-jwt.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/authorization-using-jwt'
-            'techniques/sharing-bearer-tokens-across-platform-instances.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/sharing-bearer-tokens'
-            'techniques/user-email-verification.md': 'https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/How-tos/user-email-verification'
-            'user-guide/assets-function.md': 'https://docs.virtocommerce.org/platform/user-guide/assets/overview'
-            'user-guide/configuration-settings.md': 'https://docs.virtocommerce.org/platform/developer-guide/Configuration-Reference/appsettingsjson'
-            'user-guide/getting-started.md': 'https://docs.virtocommerce.org/platform/user-guide/getting-started'
-            'user-guide/login-on-behalf.md': 'https://docs.virtocommerce.org/platform/user-guide/security/login-on-behalf'
-            'user-guide/modules.md': 'https://docs.virtocommerce.org/platform/user-guide/modules-installation'
-            'user-guide/security.md': 'https://docs.virtocommerce.org/platform/user-guide/security/roles-and-permissions'
-            'user-guide/user-profile.md': 'https://docs.virtocommerce.org/platform/user-guide/user-profile'
-            'release-information/whats-new.md': 'https://www.virtocommerce.org/c/news-digest'
+          redirect_maps:
+              "products/products-virto3-versions.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/virto3-products-versions"
+              "license.md": "https://virtocommerce.com/open-source-license"
+              "support.md": "https://help.virtocommerce.com/support/home"
+              "vc-quickstart.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows"
+              "architecture-center/B2B-multiregional.md": "https://docs.virtocommerce.org/platform/user-guide/latest/multiregional-ecommerce"
+              "developer-guide/create-new-module-advanced.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch"
+              "developer-guide/create-new-module.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/creating-custom-module"
+              "developer-guide/deploy-from-source-code.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/debugging"
+              "developer-guide/deploy-module-from-source-code.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code"
+              "developer-guide/global-tools.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/CLI-tools/overview"
+              "developer-guide/logging.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Logging/overview"
+              "developer-guide/modules-development-via-docker.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/docker-modules-development"
+              "developer-guide/swagger-endpoints.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/swagger-api"
+              "developer-guide/user-manager.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/extensions/extending-usermanager-and-rolemanager"
+              "developer-guide/using-autorest-with-v3.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/generating-c-sharp-client"
+              "fundamentals/architecture-reference.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Back-End-Architecture/02-conceptual-overview"
+              "fundamentals/db-agnostic.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Persistence/DB-Agnostic/overview"
+              "fundamentals/essential-caching.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Caching/01-overview"
+              "fundamentals/essential-modularity.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Modularity/01-overview"
+              "fundamentals/make-secure-webapi.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/security-in-depth"
+              "fundamentals/scalability.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Scalability/overview"
+              "fundamentals/search.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Indexed-Search/overview"
+              "fundamentals/extensibility/blade-toolbar.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/blade-toolbar"
+              "fundamentals/extensibility/blades-and-navigation.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/blades-and-navigation"
+              "fundamentals/extensibility/extending-authorization-policies.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/extensions/extending-authorization-policies"
+              "fundamentals/extensibility/extending-domain-models.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/extending-domain-models"
+              "fundamentals/extensibility/extending-grid-columns.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/extending-grid-columns"
+              "fundamentals/extensibility/extending-main-menu.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/extending-main-menu"
+              "fundamentals/extensibility/extending-using-events.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Event-Driven-Development/using-domain-events"
+              "fundamentals/extensibility/metaform.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/metaform"
+              "fundamentals/extensibility/new-payment-method-registration.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Payments/new-payment-method-registration"
+              "fundamentals/extensibility/new-shipping-method-registration.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Shipments/new-shipping-method-registration"
+              "fundamentals/extensibility/new-tax-provider-registration.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Taxes/new-tax-provider-registration"
+              "fundamentals/extensibility/overview.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/overview"
+              "fundamentals/extensibility/style-guide.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/style-guide"
+              "fundamentals/extensibility/ui-scroll-directive.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/ui-scroll-directive"
+              "fundamentals/extensibility/using-dynamic-properties.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Dynamic-Properties/overview"
+              "fundamentals/extensibility/widgets.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/widgets"
+              "getting-started/connect-storefront-to-platform-v3.md": "https://docs.virtocommerce.org/storefront/developer-guide/latest/deployment"
+              "getting-started/deploy-from-precompiled-binaries-MacOS.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Getting-Started/Installation-Guide/macOS"
+              "getting-started/deploy-from-precompiled-binaries-azure.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure"
+              "getting-started/deploy-from-precompiled-binaries-linux.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Getting-Started/Installation-Guide/linux"
+              "getting-started/deploy-from-precompiled-binaries-windows.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows"
+              "getting-started/email-sending-settings.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Notifications/overview"
+              "getting-started/lessons.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/overview"
+              "getting-started/lessons/lesson1.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows"
+              "getting-started/lessons/lesson2.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/import-products-to-catalog"
+              "getting-started/lessons/lesson3.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/creating-custom-module"
+              "getting-started/lessons/lesson4.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/build-platform-manager-ui"
+              "modules/assets.md": "https://docs.virtocommerce.org/platform/user-guide/latest/assets/managing-assets"
+              "modules/azure-ad.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/configuring-and-managing-azure-auth"
+              "modules/azureblob-assets.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Configuration-Reference/appsettingsjson/#__tabbed_2_2"
+              "modules/cart.md": "https://docs.virtocommerce.org/platform/user-guide/latest/cart/overview"
+              "modules/catalog.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/overview"
+              "modules/catalog/add-new-catalog.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/add-new-catalog/#physical-catalogs"
+              "modules/catalog/add-virtual-catalog.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/add-new-catalog/#virtual-catalogs"
+              "modules/catalog/catalog-search.md": "https://docs.virtocommerce.org/platform/user-guide/latest/search"
+              "modules/catalog/glossary.md": "https://docs.virtocommerce.org/platform/user-guide/latest/search"
+              "modules/catalog/managing-categories.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-categories"
+              "modules/catalog/managing-products.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-products"
+              "modules/catalog/managing-productt-variations.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-product-variations"
+              "modules/catalog/managing-properties.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-properties"
+              "modules/catalog/managing-search-index.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-search-index"
+              "modules/catalog/product-indexing.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/product-indexing"
+              "modules/catalog/search-engine-architecture-details.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Indexed-Search/overview"
+              "modules/catalog/view-catalogs-and-physical-items.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/add-new-catalog/#view-catalogs"
+              "modules/catalog/view-product-variations.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-product-variations/#view-product-variations"
+              "modules/catalog/view-properties.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog/managing-properties/#view-properties"
+              "modules/catalog-personalization.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog-personalization/settings"
+              "modules/catalog-publishing.md": "https://docs.virtocommerce.org/platform/user-guide/latest/catalog-publishing/overview"
+              "modules/content.md": "https://docs.virtocommerce.org/platform/user-guide/latest/content/overview"
+              "modules/content/pages-blogs-management.md": "https://docs.virtocommerce.org/platform/user-guide/latest/content/managing-pages"
+              "modules/content/theme-management.md": "https://docs.virtocommerce.org/platform/user-guide/latest/content/managing-themes"
+              "modules/contract.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contracts/overview"
+              "modules/contract/XAPI.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contact"
+              "modules/core/How-to%20override%20rounding%20policy.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/overriding-rounding-policy"
+              "modules/customer.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contracts/managing-contract-customers"
+              "modules/customer/advanced-filter.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contacts/filtering-options"
+              "modules/customer/create-and-manage-employee.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contacts/managing-contacts"
+              "modules/customer/create-and-manage-organization.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contacts/managing-contacts"
+              "modules/customer/manage-contacts.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contacts/managing-contacts"
+              "modules/customer/manage-vendors.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contacts/managing-contacts"
+              "modules/customer/view-organization-details.md": "https://docs.virtocommerce.org/platform/user-guide/latest/contacts/managing-contacts"
+              "modules/customer-export-import/Index.md": "https://docs.virtocommerce.org/platform/user-guide/latest/customer-export-import/overview"
+              "modules/customer-review.md": "https://docs.virtocommerce.org/platform/user-guide/latest/rating-reviews/overview"
+              "modules/customer-review/rest-api.md": "https://docs.virtocommerce.org/platform/user-guide/latest/rating-reviews/rest-api"
+              "modules/dynamic-associations.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/dynamic-associations-overview"
+              "modules/dynamic-associations/rest-api.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/dynamic-associations-restapi"
+              "modules/elastic-app-search/eas-setup-guide.md": "https://docs.virtocommerce.org/platform/user-guide/latest/elastic-app-search/overview"
+              "modules/elastic-search.md": "https://docs.virtocommerce.org/platform/user-guide/latest/elastic-search/overview"
+              "modules/elastic-search/blue-green-indexation.md": "https://docs.virtocommerce.org/platform/user-guide/latest/search/managing-search/#blue-green-indexing"
+              "modules/event-bus.md": "https://docs.virtocommerce.org/platform/user-guide/latest/event-bus/overview"
+              "modules/experience-api.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI"
+              "modules/experience-api/application-insights-integration.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/troubleshooting"
+              "modules/experience-api/filter-syntax.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products"
+              "modules/experience-api/getting-started.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started"
+              "modules/experience-api/x-api-extensions.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions"
+              "modules/experience-api/x-catalog-reference.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview"
+              "modules/experience-api/x-purchase-cart-reference.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/overview"
+              "modules/experience-api/x-purchase-order-reference.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/overview"
+              "modules/export.md": "https://docs.virtocommerce.org/platform/user-guide/latest/generic-export/overview"
+              "modules/export/advanced-filter.md": "https://docs.virtocommerce.org/platform/user-guide/latest/generic-export/advanced-filtering"
+              "modules/gdpr/gdpr.md": "https://docs.virtocommerce.org/platform/user-guide/latest/gdpr/overview"
+              "modules/google-ecommerce-analytics.md": "https://docs.virtocommerce.org/platform/user-guide/latest/integrations/google-analytics/overview"
+              "modules/hotjar.md": "https://docs.virtocommerce.org/platform/user-guide/latest/integrations/hotjar/overview"
+              "modules/image-tools.md": "https://docs.virtocommerce.org/platform/user-guide/latest/thumbnails/overview"
+              "modules/inventory.md": "https://docs.virtocommerce.org/platform/user-guide/latest/inventory/overview"
+              "modules/inventory/manage-fullfilment.md": "https://docs.virtocommerce.org/platform/user-guide/latest/inventory/managing-fulfillment-centers"
+              "modules/marketing.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/overview"
+              "modules/marketing/combine-active-promotions.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/combining-active-promotions"
+              "modules/marketing/manage-content-items.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/managing-content-items/?h=content+items"
+              "modules/marketing/manage-content-placeholders.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/managing-content-placeholders"
+              "modules/marketing/manage-content-publishing.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/managing-published-content"
+              "modules/marketing/manage-promotions.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/managing-promotions"
+              "modules/marketing/promotion-rules.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/promotion-rules"
+              "modules/marketing/publishing-conditions.md": "https://docs.virtocommerce.org/platform/user-guide/latest/marketing/publish-conditions"
+              "modules/marketing-experience-api.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview"
+              "modules/native-payment-methods/working-guide.md": "https://docs.virtocommerce.org/platform/user-guide/latest/native-payment-methods/overview"
+              "modules/notification.md": "https://docs.virtocommerce.org/platform/user-guide/latest/notifications/overview"
+              "modules/notification/tech-doc.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Notifications/registering-new-notification-type"
+              "modules/notification/tips-and-tricks-for-creating-email-templates.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Notifications/notification-templates"
+              "modules/order.md": "https://docs.virtocommerce.org/platform/user-guide/latest/order-management/overview"
+              "modules/order/How-to%20extend%20validation.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions/#extend-validation-logic-replace-validators"
+              "modules/order/order-details.md": "https://docs.virtocommerce.org/platform/user-guide/latest/order-management/main-objects"
+              "modules/order/order-documents.md": "https://docs.virtocommerce.org/platform/user-guide/latest/order-management/managing-documents"
+              "modules/order/order-module-notification-types.md": "https://docs.virtocommerce.org/platform/user-guide/latest/order-management/notifications"
+              "modules/order/order-widgets.md": "https://docs.virtocommerce.org/platform/user-guide/latest/order-management/main-objects"
+              "modules/order/roles-and-permissions-scenarios.md": "https://docs.virtocommerce.org/platform/user-guide/latest/order-management/permissions"
+              "modules/payment.md": "https://docs.virtocommerce.org/platform/user-guide/latest/payment/overview"
+              "modules/price-export-import.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/export-functionality"
+              "modules/pricing.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/overview"
+              "modules/pricing/add-new-assignment.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/adding-new-assignment"
+              "modules/pricing/add-prices-to-products.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/creating-new-price-list/#add-and-edit-product-prices"
+              "modules/pricing/add-products-to-the-new-price-list.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/creating-new-price-list/#add-products-to-price-list"
+              "modules/pricing/create-new-price-list.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/creating-new-price-list/#create-new-price-list"
+              "modules/pricing/export-functionality.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/export-functionality"
+              "modules/pricing/managing-pricing-module-settings.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/managing-pricing-module-settings"
+              "modules/pricing/troubleshooting-guide.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/troubleshooting-guide"
+              "modules/pricing/view-price-list-via-catalog-module.md": "https://docs.virtocommerce.org/platform/user-guide/latest/pricing/viewing-price-list-in-catalog"
+              "modules/profile-experience-api.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/overview"
+              "modules/quote.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Quote/overview"
+              "modules/return/return-module-guide.md": "https://docs.virtocommerce.org/platform/user-guide/latest/return/overview"
+              "modules/shipping.md": "https://docs.virtocommerce.org/platform/user-guide/latest/shipping/overview"
+              "modules/shipstation.md": "https://docs.virtocommerce.org/platform/user-guide/latest/shipstation/overview"
+              "modules/sitemaps.md": "https://docs.virtocommerce.org/platform/user-guide/latest/sitemaps/overview"
+              "modules/store.md": "https://docs.virtocommerce.org/platform/user-guide/latest/store/overview"
+              "modules/store/add-new-store.md": "https://docs.virtocommerce.org/platform/user-guide/latest/store/adding-new-store"
+              "modules/store/edit-store-details.md": "https://docs.virtocommerce.org/platform/user-guide/latest/store/configuring-store"
+              "modules/store/edit-widgets.md": "https://docs.virtocommerce.org/platform/user-guide/latest/store/configuring-store"
+              "modules/subscription.md": "https://docs.virtocommerce.org/platform/user-guide/latest/subscriptions/overview"
+              "modules/tax.md": "https://docs.virtocommerce.org/platform/user-guide/latest/tax/overview"
+              "modules/webhooks.md": "https://docs.virtocommerce.org/platform/user-guide/latest/webhooks/overview"
+              "products/v3-2020-Q3.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2020-Q3"
+              "products/v3-2021-Q1.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2021-Q1"
+              "products/v3-2021-Q3.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2021-Q3"
+              "products/v3-2022-Q1.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2022-Q1"
+              "products/v3-2022-Q2.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2022-Q2"
+              "products/v3-2022-Q3.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2022-Q3"
+              "products/v3-2022-Q4.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2022-Q4"
+              "products/v3-2023-S5.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2023-S5"
+              "products/v3-2023-S6.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2023-S6"
+              "products/v3-2024-S7.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2024-S7"
+              "products/v3-2024-S8.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/v3-2024-S8"
+              "release-information/update-to-version-3-800/update-platform-and-modules-to-3-800.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-net8"
+              "techniques/add-new-sso-provider.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/extensions/adding-new-sso-provider"
+              "techniques/authentication-with-azure-ad.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/configuring-and-managing-azure-auth"
+              "techniques/countries-management.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Platform-Manager/localization"
+              "techniques/debugging-without-source-code.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/debugging"
+              "techniques/exposing-polymorphic-types-swagger.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger"
+              "techniques/extend-DB-model.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/extending-database-model"
+              "techniques/generate-pdf-file.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/generating-pdfs"
+              "techniques/healthchecks.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/health-checks"
+              "techniques/how-scale-out-platform-on-azure.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Scalability/scalability-options"
+              "techniques/how-to-run-platform-on-azure-functions.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure"
+              "techniques/implementing-authorization-mechanism-using-jwt.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/authorization-using-jwt"
+              "techniques/sharing-bearer-tokens-across-platform-instances.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/sharing-bearer-tokens"
+              "techniques/user-email-verification.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/user-email-verification"
+              "user-guide/assets-function.md": "https://docs.virtocommerce.org/platform/user-guide/latest/assets/overview"
+              "user-guide/configuration-settings.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Configuration-Reference/appsettingsjson"
+              "user-guide/getting-started.md": "https://docs.virtocommerce.org/platform/user-guide/latest/getting-started"
+              "user-guide/login-on-behalf.md": "https://docs.virtocommerce.org/platform/user-guide/latest/security/login-on-behalf"
+              "user-guide/modules.md": "https://docs.virtocommerce.org/platform/user-guide/latest/modules-installation"
+              "user-guide/security.md": "https://docs.virtocommerce.org/platform/user-guide/latest/security/roles-and-permissions"
+              "user-guide/user-profile.md": "https://docs.virtocommerce.org/platform/user-guide/latest/user-profile"
+              "release-information/whats-new.md": "https://www.virtocommerce.org/c/news-digest"
     - include-markdown
 
 # Project information
@@ -279,7 +279,6 @@ site_name: docs
 site_description: Documentation portal for enterprise-level Microsoft .NET ecommerce platform Virto Commerce.
 site_author: Virto Commerce
 site_url: https://docs.virtocommerce.org
-
 
 # Repository
 repo_name: VirtoCommerce/vc-platform
@@ -292,31 +291,32 @@ copyright: Copyright &copy; 2025. All rights reserved.
 nav:
     - Home: index.md
     - Marketplace:
-        - Developer Guide: '!include ./marketplace/developer-guide/mkdocs.yml'
-        - User Guide: '!include ./marketplace/user-guide/mkdocs.yml'
+          - Developer Guide: "!include ./marketplace/developer-guide/mkdocs.yml"
+          - User Guide: "!include ./marketplace/user-guide/mkdocs.yml"
     - Storefront:
-        - Developer Guide: '!include ./storefront/developer-guide/mkdocs.yml'
-        - User Guide: '!include ./storefront/user-guide/mkdocs.yml'
+          - Developer Guide: "!include ./storefront/developer-guide/mkdocs.yml"
+          - User Guide: "!include ./storefront/user-guide/mkdocs.yml"
     - Platform:
-        - Developer Guide: '!include ./platform/developer-guide/mkdocs.yml'
-        - User Guide: '!include ./platform/user-guide/mkdocs.yml'
-        - Deployment on Cloud: '!include ./platform/deployment-on-cloud/mkdocs.yml'
+          - Developer Guide: "!include ./platform/developer-guide/mkdocs.yml"
+          - User Guide: "!include ./platform/user-guide/mkdocs.yml"
+          - Deployment on Cloud: "!include ./platform/deployment-on-cloud/mkdocs.yml"
 
 extra:
+    root_url: https://docs.virtocommerce.org
     homepage: /
     social:
-      - icon: fontawesome/brands/github
-        link: https://github.com/VirtoCommerce
-      - icon: fontawesome/brands/facebook
-        link: https://facebook.com/VirtoCommerce
-      - icon: fontawesome/brands/twitter
-        link: https://twitter.com/virtocommerce?lang=en
-      - icon: fontawesome/brands/instagram
-        link: google.com
-      - icon: fontawesome/brands/linkedin
-        link: https://www.linkedin.com/company/virto-commerce/
-      - icon: fontawesome/brands/youtube
-        link: https://www.youtube.com/c/Virtocommerce/videos
+        - icon: fontawesome/brands/github
+          link: https://github.com/VirtoCommerce
+        - icon: fontawesome/brands/facebook
+          link: https://facebook.com/VirtoCommerce
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/virtocommerce?lang=en
+        - icon: fontawesome/brands/instagram
+          link: google.com
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.com/company/virto-commerce/
+        - icon: fontawesome/brands/youtube
+          link: https://www.youtube.com/c/Virtocommerce/videos
     search:
         icon: assets/icons/search.svg
     rss:
@@ -426,18 +426,18 @@ extra:
             #     icon: assets/icons/package.svg
             #     description: I need to build the platform's architecture or learn how I can do that.
             #     link: https://docs.virtocommerce.org/architecture-center/B2B-multiregional/
-            -   title: Storefront
-                icon: assets/icons/person.svg
-                description: Build and personalize your online store for engaging shopping experiences
-                link: storefront
-            -   title: Platform
-                icon: assets/icons/code-square.svg
-                description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e-commerce ecosystem
-                link: platform
-            -   title: Marketplace
-                icon: assets/icons/code-square.svg
-                description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
-                link: marketplace
+            - title: Storefront
+              icon: assets/icons/person.svg
+              description: Build and personalize your online store for engaging shopping experiences
+              link: storefront
+            - title: Platform
+              icon: assets/icons/code-square.svg
+              description: Explore the Virto Commerce Platform, a solution designed to efficiently manage and scale your entire e-commerce ecosystem
+              link: platform
+            - title: Marketplace
+              icon: assets/icons/code-square.svg
+              description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
+              link: marketplace
 
         documentation:
             - title: Composable Commerce
@@ -445,21 +445,21 @@ extra:
               link: platform
               topdescription: Guides and tools for building, customizing, and deploying a flexible commerce solution
               description:
-                - title: Platform
-                  link: platform
-                - title: Marketplace
-                  link: marketplace
-                - title: CLI tools
-                  link: platform/developer-guide/CLI-tools/overview
+                  - title: Platform
+                    link: platform
+                  - title: Marketplace
+                    link: marketplace
+                  - title: CLI tools
+                    link: platform/developer-guide/latest/CLI-tools/overview
             - title: Frontend
               image: assets/images/storefront.png
               link: storefront
               topdescription: Tools and workflows designed to enhance customer-facing experiences
               description:
-                - title: Frontend Application
-                  link: storefront
-                - title: VC-Shell
-                  link: platform/developer-guide/custom-apps-development/overview
+                  - title: Frontend Application
+                    link: storefront
+                  - title: VC-Shell
+                    link: platform/developer-guide/latest/custom-apps-development/overview
 
             # - title: Marketplace
             #   description: Create and manage online marketplaces, fostering increased revenue and a broader customer base
@@ -478,141 +478,141 @@ extra:
             - title: Contact support
               icon: assets/icons/contact-support.svg
               link: https://help.virtocommerce.com/support/home
-              outlineColor: '#EA534A'
+              outlineColor: "#EA534A"
             - title: Community
               icon: assets/icons/community.svg
               link: https://www.virtocommerce.org/
-              outlineColor: '#EA534A'
+              outlineColor: "#EA534A"
             - title: GitHub
               icon: assets/icons/github-outline.svg
               link: https://github.com/VirtoCommerce
-              outlineColor: '#FF9162'
+              outlineColor: "#FF9162"
             - title: Blog
               icon: assets/icons/blog.svg
               link: https://virtocommerce.com/blog
-              outlineColor: '#FF9162'
+              outlineColor: "#FF9162"
             - title: Versions
               icon: assets/icons/version-icon.svg
               link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
-              outlineColor: '#FF9162'
+              outlineColor: "#FF9162"
     all_topics:
         megamenu:
             - iconSrc: assets/icons/all-products.svg
               title: All Products
               opened: true
               subMenu:
-                - title: Platform
-                  content:
-                    - title: User Guide
-                      links:
-                        - title: Getting Started
-                          url: /platform/user-guide/getting-started
-                        - title: User Documentation
-                          url: /platform/user-guide
-                    - title: Developer Guide
-                      links:
-                        - title: Installation Guide
-                          url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
-                        - title: Architecture Overview
-                          url: /platform/developer-guide/Back-End-Architecture/02-conceptual-overview
-                        - title: Extensibility
-                          url: /platform/developer-guide/Extensibility/overview
-                        - title: Configuration Reference
-                          url: /platform/developer-guide/Configuration-Reference/appsettingsjson
-                        - title: Tutorials and How-tos
-                          url: /platform/developer-guide/Tutorials-and-How-tos/overview
-                    - title: API Reference
-                      links:
-                        - title: REST API Reference
-                          url: https://virtostart-demo-admin.govirto.com/docs/index.html
-                        - title: GraphQL API Reference
-                          url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
-                - title: Frontend
-                  content:
-                    - title: User Guide
-                      links:
-                        - title: Getting Started
-                          url: https://youtu.be/xsnds1QYuC0
-                        - title: User Documentation
-                          url: /storefront/user-guide
-                        - title: Public Demo
-                          url: https://virtostart-demo-store.govirto.com/
-                    - title: Developer Guide
-                      links:
-                        - title: Getting Started
-                          url: /storefront/developer-guide
-                        - title: Architecture
-                          url: /storefront/developer-guide/architecture
-                        - title: Deployment
-                          url: /storefront/developer-guide/deployment
-                        - title: Integrations
-                          url: /storefront/developer-guide/integrations/prerender_io
-                - title: Marketplace
-                  content:
-                    - title: User Guide
-                      links:
-                        - title: Operator Portal
-                          url: /marketplace/user-guide/Operator-portal/overview
-                        - title: Vendor Portal
-                          url: /marketplace/user-guide/Vendor-portal/overview
-                    - title: Developer Guide
-                      links:
-                        - title: State Machine Module
-                          url: /marketplace/developer-guide/state-machine-module/overview
-                - title: VC-Shell
-                  content:
-                    - title: Developer Guide
-                      links:
-                        - title: Overview
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/vc-shell-overview
-                        - title: Getting Started
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
-                        - title: Connecting to Platform
-                          url: /platform/developer-guide/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
-                - title: Deployment on Virto Cloud
-                  content:
-                    - links:
-                      - title: Deploy Platform and Frontend on Virto Cloud
-                        url: /platform/deployment-on-cloud/deploy-on-virto-cloud/
-                      - title: Create Environment via CLI and VC Build
-                        url: /platform/deployment-on-cloud/create-environment-via-cli-and-vc-build/
-                      - title: Create and Configure Catalog
-                        url: /platform/deployment-on-cloud/catalog-creation/
-                      - title: Create and Configure Store
-                        url: /platform/deployment-on-cloud/store-configuration/
+                  - title: Platform
+                    content:
+                        - title: User Guide
+                          links:
+                              - title: Getting Started
+                                url: /platform/user-guide/latest/getting-started
+                              - title: User Documentation
+                                url: /platform/user-guide/latest/
+                        - title: Developer Guide
+                          links:
+                              - title: Installation Guide
+                                url: /platform/developer-guide/latest/Getting-Started/Installation-Guide/windows
+                              - title: Architecture Overview
+                                url: /platform/developer-guide/latest/Back-End-Architecture/02-conceptual-overview
+                              - title: Extensibility
+                                url: /platform/developer-guide/latest/Extensibility/overview
+                              - title: Configuration Reference
+                                url: /platform/developer-guide/latest/Configuration-Reference/appsettingsjson
+                              - title: Tutorials and How-tos
+                                url: /platform/developer-guide/latest/Tutorials-and-How-tos/overview
+                        - title: API Reference
+                          links:
+                              - title: REST API Reference
+                                url: https://virtostart-demo-admin.govirto.com/docs/index.html
+                              - title: GraphQL API Reference
+                                url: /platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                  - title: Frontend
+                    content:
+                        - title: User Guide
+                          links:
+                              - title: Getting Started
+                                url: https://youtu.be/xsnds1QYuC0
+                              - title: User Documentation
+                                url: /storefront/user-guide/latest/
+                              - title: Public Demo
+                                url: https://virtostart-demo-store.govirto.com/
+                        - title: Developer Guide
+                          links:
+                              - title: Getting Started
+                                url: /storefront/developer-guide/latest
+                              - title: Architecture
+                                url: /storefront/developer-guide/latest/architecture
+                              - title: Deployment
+                                url: /storefront/developer-guide/latest/deployment
+                              - title: Integrations
+                                url: /storefront/developer-guide/latest/integrations/prerender_io
+                  - title: Marketplace
+                    content:
+                        - title: User Guide
+                          links:
+                              - title: Operator Portal
+                                url: /marketplace/user-guide/latest/Operator-portal/overview
+                              - title: Vendor Portal
+                                url: /marketplace/user-guide/latest/Vendor-portal/overview
+                        - title: Developer Guide
+                          links:
+                              - title: State Machine Module
+                                url: /marketplace/developer-guide/latest/state-machine-module/overview
+                  - title: VC-Shell
+                    content:
+                        - title: Developer Guide
+                          links:
+                              - title: Overview
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/vc-shell-overview
+                              - title: Getting Started
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
+                              - title: Connecting to Platform
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
+                  - title: Deployment on Virto Cloud
+                    content:
+                        - links:
+                              - title: Deploy Platform and Frontend on Virto Cloud
+                                url: /platform/deployment-on-cloud/latest/deploy-on-virto-cloud/
+                              - title: Create Environment via CLI and VC Build
+                                url: /platform/deployment-on-cloud/latest/create-environment-via-cli-and-vc-build/
+                              - title: Create and Configure Catalog
+                                url: /platform/deployment-on-cloud/latest/catalog-creation/
+                              - title: Create and Configure Store
+                                url: /platform/deployment-on-cloud/latest/store-configuration/
             - iconSrc: assets/icons/getting-started.svg
               title: Getting Started
               content:
-                - title: Platform
-                  links:
-                    - title: Developer Getting Started
-                      url: /platform/developer-guide/Getting-Started/Installation-Guide/windows
-                    - title: Manager Getting Started
-                      url: /platform/user-guide/getting-started
-                - title: Frontend Application
-                  links:
-                    - title: Developer Getting Started
-                      url: /storefront/developer-guide/
-                    - title: User Getting Started
-                      url: /storefront/user-guide/
-                - title: VC-Shell
-                  links:
-                    - title: Developer Getting Started
-                      url: /platform/developer-guide/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                  - title: Platform
+                    links:
+                        - title: Developer Getting Started
+                          url: /platform/developer-guide/latest/Getting-Started/Installation-Guide/windows
+                        - title: Manager Getting Started
+                          url: /platform/user-guide/latest/getting-started
+                  - title: Frontend Application
+                    links:
+                        - title: Developer Getting Started
+                          url: /storefront/developer-guide/latest/
+                        - title: User Getting Started
+                          url: /storefront/user-guide/latest/
+                  - title: VC-Shell
+                    links:
+                        - title: Developer Getting Started
+                          url: /platform/developer-guide/latest/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
             - iconSrc: assets/icons/graphql.svg
               title: APIs
               content:
-                - title: REST API
-                  url: https://virtostart-demo-admin.govirto.com/docs/index.html
-                - title: GraphQL API
-                  url: /platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started
+                  - title: REST API
+                    url: https://virtostart-demo-admin.govirto.com/docs/index.html
+                  - title: GraphQL API
+                    url: /platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started
             - iconSrc: assets/icons/video-tutorials.svg
               title: Video Tutorials
               url: https://www.youtube.com/c/VirtoCommerce
               external: true
             - iconSrc: assets/icons/fire.svg
               title: Migration to New xAPI Modules
-              url: /platform/developer-guide/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules
+              url: /platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules
         footer:
             - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"
@@ -624,9 +624,10 @@ extra:
               title: "GitHub"
               url: "https://github.com/VirtoCommerce"
 extra_javascript:
+    - assets/scripts/version-redirect.js
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
-
+    - assets/scripts/search-url-fix.js
 
 extra_css:
     - assets/stylesheets/main.css

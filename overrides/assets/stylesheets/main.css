@@ -46,9 +46,13 @@
     color: var(--header-title-primary-color);
 }
 
-.md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child{
-  color: var(--neutral-0);
-  font-weight: 600;
+.md-typeset
+    .tabbed-set
+    > input:first-child:checked
+    ~ .tabbed-labels
+    > :first-child {
+    color: var(--neutral-0);
+    font-weight: 600;
 }
 
 .js .md-typeset .tabbed-labels:before {
@@ -62,7 +66,7 @@
 }
 
 @media screen and (min-width: 60em) {
-    .md-header__button[for=__search] {
+    .md-header__button[for="__search"] {
         display: none;
     }
 }
@@ -81,3 +85,8 @@ pre[id^="__code"]:hover > .md-clipboard {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.md-version {
+    height: auto;
+}
+

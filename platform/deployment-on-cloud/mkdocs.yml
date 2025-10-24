@@ -1,4 +1,23 @@
 INHERIT: ../../mkdocs.yml
+
+# Override plugins for versioned site
+plugins:
+    - search:
+        # Configure search for versioned content
+        lang: en
+        # Only index current version
+        index_docs: true
+        index_other: false
+        # Exclude versioned paths from other versions
+        exclude_docs: |
+            /1.0/
+            /1.1/
+            /2.0/
+            /latest/
+    - git-revision-date-localized
+    - minify
+    - mike:
+        alias_type: redirect
 theme:
     custom_dir: ../../overrides
     hide: false
@@ -15,6 +34,17 @@ repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
+    # Search configuration for versioned site
+    search:
+        # Limit search to current version only
+        index_only_current: true
+        # Exclude other versions from search index
+        exclude_versions: true
 
 # Page tree
 nav:

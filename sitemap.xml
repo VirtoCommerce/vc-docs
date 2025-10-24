@@ -1,20 +1,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main site sitemap -->
     <sitemap>
-        <loc>https://docs.virtocommerce.org/platform/developer-guide/sitemap.xml</loc>
+        <loc>https://docs.virtocommerce.org/sitemap.xml</loc>
+    </sitemap>
+
+    <!-- Versioned subsites - latest versions -->
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/platform/developer-guide/latest/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://docs.virtocommerce.org/platform/user-guide/sitemap.xml</loc>
+        <loc>https://docs.virtocommerce.org/platform/user-guide/latest/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://docs.virtocommerce.org/storefront/user-guide/sitemap.xml</loc>
+        <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://docs.virtocommerce.org/storefront/developer-guide/sitemap.xml</loc>
+        <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://docs.virtocommerce.org/marketplace/developer-guide/sitemap.xml</loc>
+        <loc>https://docs.virtocommerce.org/storefront/user-guide/latest/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://docs.virtocommerce.org/marketplace/user-guide/sitemap.xml</loc>
+        <loc>https://docs.virtocommerce.org/marketplace/developer-guide/latest/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/sitemap.xml</loc>
+    </sitemap>
+
+    <!-- Non-versioned intermediate sites -->
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/platform/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/storefront/sitemap.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://docs.virtocommerce.org/marketplace/sitemap.xml</loc>
     </sitemap>
 </urlset>
