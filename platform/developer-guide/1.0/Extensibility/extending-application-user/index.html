@@ -25771,7 +25771,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2025 07:25:18 UTC">June 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 24, 2025 07:27:30 UTC">October 24, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -25811,7 +25811,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnModelCreating</span><span class="p">(</span><span class="n">ModelBuilder</span><span class="w"> </span><span class="n">modelBuilder</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">OnModelCreating</span><span class="p">(</span><span class="n">modelBuilder</span><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="n">modelBuilder</span><span class="p">.</span><span class="n">Entity</span><span class="o">&lt;</span><span class="n">ExtendedApplicationUser</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 <li>
@@ -25819,6 +25826,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">dotnet</span> <span class="n">ef</span> <span class="n">migrations</span> <span class="n">add</span> <span class="n">Temporary</span>
 </code></pre></div>
 <p>This temporary migration contains the code that creates all the security tables. Delete the temporary files <code>*_Temporary.cs</code> and <code>*_Temporary.Designer.cs</code>, but keep <code>ExtendedSecurityDbContextModelSnapshot.cs</code>.</p>
+<p>Creating migrations with <code>dotnet ef migrations add ...</code> will generate migrations for all entities and fields in the extension module, even if these entities or fields already exist in the original module and database.  </p>
+<p>To avoid that:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Option 1</label><label for="__tabbed_1_2">Option 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Copy the DB snapshot file (<code>SecurityDbContextModelSnapshot.cs</code>) from the original module to the migrations directory of your extension module and change its namespace to match the new module.  </p>
+</div>
+<div class="tabbed-block">
+<p>Regenerate the DB snapshot file by creating an empty migration (before registering the extension entities in the new DB context):  </p>
+<ol>
+<li>Run <code>dotnet ef migrations add Temporary</code>.  </li>
+<li>Remove the content of the <code>Up</code> and <code>Down</code> methods in the generated migration, but keep the snapshot file unchanged.  </li>
+<li>Then, add your extended fields or entities and run <code>dotnet ef migrations add AddRecommendedPrice</code> again.  </li>
+<li>The second migration will now contain only the new fields or entities introduced in your extension.</li>
+</ol>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Define a new class, <code>ExtendedApplicationUser</code>, derived from <code>ApplicationUser</code>, and add any additional fields:</p>
@@ -25841,34 +25866,78 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 </li>
 <li>
-<p>Override the <code>OnModelCreating()</code> method in <code>ExtendedSecurityDbContext</code> to configure the extended user entity:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnModelCreating</span><span class="p">(</span><span class="n">ModelBuilder</span><span class="w"> </span><span class="n">modelBuilder</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">base</span><span class="p">.</span><span class="n">OnModelCreating</span><span class="p">(</span><span class="n">modelBuilder</span><span class="p">);</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">modelBuilder</span><span class="p">.</span><span class="n">Entity</span><span class="o">&lt;</span><span class="n">ExtendedApplicationUser</span><span class="o">&gt;</span><span class="p">().</span><span class="n">Property</span><span class="p">(</span><span class="s">&quot;Discriminator&quot;</span><span class="p">).</span><span class="n">HasDefaultValue</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">ExtendedApplicationUser</span><span class="p">));</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="c1">// Add any additional configuration here</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+<p>Create a new migration to apply the changes made to the database schema:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">dotnet</span> <span class="n">ef</span> <span class="n">migrations</span> <span class="n">add</span> <span class="n">AddRecommendedPrice</span> <span class="n">-c</span> <span class="n">Pricing2DbContext</span>
 </code></pre></div>
+<p>The migration should be created <strong>in the extension project</strong> (not in the base module).<br />
+The <code>-c</code> parameter specifies which database context to use — in this case, your <strong>extended context</strong>.  </p>
+<p>For example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">dotnet</span> <span class="n">ef</span> <span class="n">migrations</span> <span class="n">add</span> <span class="n">AddRecommendedPrice</span> <span class="n">-c</span> <span class="n">Pricing2DbContext</span>
+</code></pre></div>
+where <code>Pricing2DbContext</code> is the DbContext defined in your extension.</p>
+<p>When EF Core generates the migration, it automatically adds a system field called <code>Discriminator</code>.<br />
+This field is used by Entity Framework to store the class name that EF should instantiate when reading entities from the database.  </p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://learn.microsoft.com/en-us/ef/core/modeling/inheritance">Inheritance in EF Core</a></p>
+<p>Usually, this field does not need to be defined manually in the <code>OnModelCreating()</code> method — it is added automatically to the migration, as shown below:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AddRecommendedPrice</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Migration</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Up</span><span class="p">(</span><span class="n">MigrationBuilder</span><span class="w"> </span><span class="n">migrationBuilder</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="n">migrationBuilder</span><span class="p">.</span><span class="n">AddColumn</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Discriminator&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="n">table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Price&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;character varying(128)&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="n">maxLength</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">            </span><span class="n">nullable</span><span class="p">:</span><span class="w"> </span><span class="k">false</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">            </span><span class="n">defaultValue</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Price2Entity&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="n">migrationBuilder</span><span class="p">.</span><span class="n">AddColumn</span><span class="o">&lt;</span><span class="kt">decimal</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">            </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RecommendedPrice&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">            </span><span class="n">table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Price&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">            </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Money&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">            </span><span class="n">nullable</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Down</span><span class="p">(</span><span class="n">MigrationBuilder</span><span class="w"> </span><span class="n">migrationBuilder</span><span class="p">)</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">        </span><span class="n">migrationBuilder</span><span class="p">.</span><span class="n">DropColumn</span><span class="p">(</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">            </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RecommendedPrice&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">            </span><span class="n">table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Price&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">        </span><span class="n">migrationBuilder</span><span class="p">.</span><span class="n">DropColumn</span><span class="p">(</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">            </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Discriminator&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">            </span><span class="n">table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Price&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="p">}</span>
+</code></pre></div>
+<p>In this example, <code>RecommendedPrice</code> is the extended field, <code>Discriminator</code> is a system field that defines which derived entity (<code>Price2Entity</code>) should be used when reading data from the database.</p>
+<p>Even if this field is not specified in the <code>DbContext</code>, it will still appear in the snapshot and designer files generated by EF.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Before applying the migration</strong>, make sure to manually review the generated migration file.<br />
+It must contain only your extended fields and the <code>Discriminator</code> field — nothing else.<br />
+Otherwise, you may face issues later and need to manually roll back or remove incorrect migrations.</p>
+</div>
 </li>
 <li>
-<p>Create a new migration to apply the changes made to the database schema:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">dotnet</span> <span class="n">ef</span> <span class="n">migrations</span> <span class="n">add</span> <span class="n">ExtendApplicationUser</span>
+<p>Once verified, apply the migration to the database (in the <strong>extension project</strong>) using the command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">dotnet</span> <span class="n">ef</span> <span class="n">database</span> <span class="n">update</span> <span class="n">-c</span> <span class="n">Pricing2DbContext</span>
 </code></pre></div>
+<p>This command updates the database using the migrations associated with the specified extended context.</p>
 </li>
 <li>
 <p>In the <code>Module.Initialize()</code> method of your module, override <code>ApplicationUser</code> and <code>SecurityDbContext</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="c1">// Other initialization code</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">AbstractTypeFactory</span><span class="o">&lt;</span><span class="n">ApplicationUser</span><span class="o">&gt;</span><span class="p">.</span><span class="n">OverrideType</span><span class="o">&lt;</span><span class="n">ApplicationUser</span><span class="p">,</span><span class="w"> </span><span class="n">ExtendedApplicationUser</span><span class="o">&gt;</span><span class="p">();</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">serviceCollection</span><span class="p">.</span><span class="n">AddTransient</span><span class="o">&lt;</span><span class="n">SecurityDbContext</span><span class="p">,</span><span class="w"> </span><span class="n">ExtendedSecurityDbContext</span><span class="o">&gt;</span><span class="p">();</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="c1">// Other initialization code</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">AbstractTypeFactory</span><span class="o">&lt;</span><span class="n">ApplicationUser</span><span class="o">&gt;</span><span class="p">.</span><span class="n">OverrideType</span><span class="o">&lt;</span><span class="n">ApplicationUser</span><span class="p">,</span><span class="w"> </span><span class="n">ExtendedApplicationUser</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="n">serviceCollection</span><span class="p">.</span><span class="n">AddTransient</span><span class="o">&lt;</span><span class="n">SecurityDbContext</span><span class="p">,</span><span class="w"> </span><span class="n">ExtendedSecurityDbContext</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 </ol>
-<p>By following these steps, you can seamlessly extend the <code>ApplicationUser</code> entity in the Virto Commerce Platform to accommodate your specific requirements.</p>
+<p>By following these steps, you can correctly extend the <code>ApplicationUser</code> entity in the Virto Commerce Platform, add custom fields, and ensure compatibility with the base context.</p>
 <p><br>
 <br></p>
 <hr />
