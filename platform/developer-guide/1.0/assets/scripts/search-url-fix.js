@@ -5,6 +5,17 @@
  * for versioned documentation sections.
  */
 
+// Skip URL fixing for local development (mkdocs serve) or local build testing
+function isLocalDevelopment() {
+    return window.location.hostname === 'localhost' ||
+           window.location.hostname === '127.0.0.1' ||
+           window.location.hostname.includes('localhost') ||
+           window.location.protocol === 'file:' ||
+           // Check if this is a local build without versioning (no /latest/ in URL structure)
+           (!window.location.pathname.includes('/latest/') &&
+            !window.location.pathname.match(/\/[0-9]+\.[0-9]+/));
+}
+
 // Define versioned sections that need /latest/ added
 const VERSIONED_SECTIONS = [
     '/marketplace/developer-guide/',
@@ -23,6 +34,11 @@ const VERSIONED_SECTIONS = [
  */
 function fixSearchUrl(url) {
     if (!url) return url;
+
+    // Skip fixing for local development
+    if (isLocalDevelopment()) {
+        return url;
+    }
 
     // Check if URL matches any versioned section
     for (const section of VERSIONED_SECTIONS) {
@@ -76,6 +92,12 @@ function fixSearchResultLinks() {
  * Initialize search URL fixing with enhanced detection
  */
 function initSearchUrlFix() {
+    // Skip initialization for local development
+    if (isLocalDevelopment()) {
+        console.log('🔧 Search URL fix script loaded - skipping for local development');
+        return;
+    }
+
     // Fix URLs when search results are displayed
     const searchResultContainer = document.querySelector('.md-search-result__list');
 
@@ -152,4 +174,9 @@ document.addEventListener('keyup', (event) => {
     }
 });
 
-console.log('🔧 Search URL fix script loaded - ready to fix versioned URLs');
+// Log initialization status
+if (isLocalDevelopment()) {
+    console.log('🔧 Search URL fix script loaded - skipping for local development');
+} else {
+    console.log('🔧 Search URL fix script loaded - ready to fix versioned URLs');
+}
