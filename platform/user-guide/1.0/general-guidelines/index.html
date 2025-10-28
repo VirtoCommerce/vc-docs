@@ -1585,6 +1585,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#multilingual-seo-urls" class="md-nav__link">
+        Multilingual SEO URLs
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#blades" class="md-nav__link">
         Blades
     </a>
@@ -1754,6 +1764,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../backup-and-restore/" class="md-nav__link">
         Backup and Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../platform-settings/" class="md-nav__link">
+        Platform Settings
       </a>
     </li>
   
@@ -9593,6 +9621,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../seo/debugging-seo-links/" class="md-nav__link">
+        Debugging SEO Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../seo/settings/" class="md-nav__link">
         Settings
       </a>
@@ -12194,6 +12240,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#multilingual-seo-urls" class="md-nav__link">
+        Multilingual SEO URLs
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#blades" class="md-nav__link">
         Blades
     </a>
@@ -12253,7 +12309,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 06:27:07 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 28, 2025 07:26:29 UTC">October 28, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -12286,6 +12342,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><a href="../user-profile/">User profile link</a>. </li>
 </ul>
 <p><img alt="Guide" src="../media/platform-dashboard.png" /></p>
+<h2 id="multilingual-seo-urls">Multilingual SEO URLs<a class="headerlink" href="#multilingual-seo-urls" title="Permanent link">&para;</a></h2>
+<p>This feature allows each localized page in the Virto Commerce Frontend to have a language-specific URL that improves both search engine optimization and user experience.</p>
+<p>When a customer visits a multilingual Frontend, URLs automatically adapt to the selected language or region, ensuring that:</p>
+<ul>
+<li>Search engines index the correct localized version of each page.</li>
+<li>Customers land on the appropriate language version when browsing or sharing links.</li>
+<li>Switching languages in the Frontend does not disrupt navigation or cause broken links.</li>
+</ul>
+<p>The feature is available only for multi-language Frontend configurations.</p>
+<table>
+<thead>
+<tr>
+<th>Configuration type</th>
+<th>Example URL</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default language</td>
+<td><code>/about-us</code></td>
+<td>Used for the default Frontend language when no language code is specified.</td>
+</tr>
+<tr>
+<td>Language-specific</td>
+<td><code>/{xx}/about-us</code></td>
+<td>Includes a two-letter language code, e.g., <code>/en/about-us</code>.</td>
+</tr>
+<tr>
+<td>Region-specific</td>
+<td><code>/{xx-XX}/about-us</code></td>
+<td>Includes both language and region codes, e.g., <code>/en-US/about-us</code>, <code>/en-GB/about-us</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>When a customer changes the language in the Frontend, the permalink is updated in the browser to include the selected culture code (for example, <strong>/en/about-us</strong> &rarr; <strong>/de/über-uns</strong>). The selected language is saved in local storage and automatically applied as the default language for future visits.</p>
 <h2 id="blades">Blades<a class="headerlink" href="#blades" title="Permanent link">&para;</a></h2>
 <p>The Virto Commerce Platform's UI is organized and divided into multiple screens called blades. Blades are ordered left to right and share parent-child hierarchy. Any parent blade has one or more child blades, while every child has a reference to its parent. The hierarchy depth is unlimited. </p>
 <p>To access a module, click on it in the main menu. Its content will appear in the next blade. Manage the module's content using the buttons in the top toolbar or by clicking the three dots next to the item's name:</p>

@@ -6,6 +6,18 @@
 (function() {
     'use strict';
 
+    // Skip redirect for local development (mkdocs serve) or local build testing
+    if (window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname.includes('localhost') ||
+        window.location.protocol === 'file:' ||
+        // Check if this is a local build without versioning (no /latest/ in URL structure)
+        (!window.location.pathname.includes('/latest/') &&
+         !window.location.pathname.match(/\/[0-9]+\.[0-9]+/))) {
+        console.log('[Version Redirect] Skipping redirect for local development or non-versioned build');
+        return;
+    }
+
     // Get current path
     const currentPath = window.location.pathname;
 
