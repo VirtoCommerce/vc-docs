@@ -67,7 +67,9 @@ The barcode scanner provides immediate access to product details, inventory leve
     | **ISBN**    | GTIN-13   | 13 digits (10 digits before January 2007) | Used to identify physical books and e-books globally. |
 
 
+If no search results are found, a notification will appear. You can then reset your search:
 
+![No search results](../media/no-search-results.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

@@ -15,6 +15,27 @@ The Platform's home page shows:
 
 ![Guide](media/platform-dashboard.png)
 
+## Multilingual SEO URLs
+
+This feature allows each localized page in the Virto Commerce Frontend to have a language-specific URL that improves both search engine optimization and user experience.
+
+When a customer visits a multilingual Frontend, URLs automatically adapt to the selected language or region, ensuring that:
+
+* Search engines index the correct localized version of each page.
+* Customers land on the appropriate language version when browsing or sharing links.
+* Switching languages in the Frontend does not disrupt navigation or cause broken links.
+
+The feature is available only for multi-language Frontend configurations.
+
+| Configuration type    | Example URL     | Description                                                                          |
+| --------------------- | ----------------| ------------------------------------------------------------------------------------ |
+| Default language  | `/about-us`         | Used for the default Frontend language when no language code is specified.           |
+| Language-specific | `/{xx}/about-us`    | Includes a two-letter language code, e.g., `/en/about-us`.                           |
+| Region-specific   | `/{xx-XX}/about-us` | Includes both language and region codes, e.g., `/en-US/about-us`, `/en-GB/about-us`. |
+
+
+When a customer changes the language in the Frontend, the permalink is updated in the browser to include the selected culture code (for example, **/en/about-us** --> **/de/über-uns**). The selected language is saved in local storage and automatically applied as the default language for future visits.
+
 
 ## Blades
 

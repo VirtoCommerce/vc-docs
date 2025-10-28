@@ -48,5 +48,5 @@ Try our interactive demo to explore key features in action:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../catalog/managing-SEO">← Managing SEO</a>
-    <a href="../settings">Settings →</a>
+    <a href="../debugging-seo-links">Debugging SEO links →</a>
 </div>

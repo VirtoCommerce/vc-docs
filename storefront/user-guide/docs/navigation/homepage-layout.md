@@ -64,7 +64,7 @@ Each product card displays:
     
     ![Add to cart](../media/add-to-cart.png)
 
-    In some cases, you may want to switch to a simplified **+ / −** interface. If a product has a minimum purchase quantity, clicking the **+** button will add that quantity to the cart. Clicking the **-** button will remove that quantity from the cart.
+    A simplified **+ / −** interface is also available. If a product has a minimum purchase quantity, clicking the **+** button will add that quantity to the cart. Clicking the **-** button will remove that quantity from the cart. The cart updates instantly without unnecessary reloads:
 
     ![Plus-minus](../media/plus-minus.gif)
 

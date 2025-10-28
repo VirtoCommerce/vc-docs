@@ -19,6 +19,6 @@ The settings have been saved.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../managing-broken-links">← Managing broken links</a>
+    <a href="../debugging-seo-links">← Debugging SEO links</a>
     <a href="../../shipstation/overview">ShipStation module overview →</a>
 </div>
