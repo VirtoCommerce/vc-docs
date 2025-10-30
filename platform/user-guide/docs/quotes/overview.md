@@ -1,6 +1,6 @@
 # Overview
 
-The **Quote (Quotes)** module represents quotes management system. You can view the list of [submitted quotes](../../../../storefront/user-guide/shopping/submit-quotes) via this module.
+The **Quote (Quotes)** module represents quote management system. You can view the list of [submitted quotes](../../../../storefront/user-guide/shopping/submit-quotes) via this module.
 
 [![Download module](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-quote/releases)
 

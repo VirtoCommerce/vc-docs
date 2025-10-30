@@ -36,6 +36,12 @@ The feature is available only for multi-language Frontend configurations.
 
 When a customer changes the language in the Frontend, the permalink is updated in the browser to include the selected culture code (for example, **/en/about-us** --> **/de/über-uns**). The selected language is saved in local storage and automatically applied as the default language for future visits.
 
+### Items URLs
+
+When you open the desired order, product, or product category, you can copy its URL and paste it into a new window to open the desired item immediately:
+
+![Copy and paste order URL](media/order-url.gif)
+
 
 ## Blades
 
@@ -68,12 +74,6 @@ In the **Settings** toolbar, you can:
 
 ![Restart and reset](media/restart-reset.png){: style="display: block; margin: 0 auto;" }
 
-## Items URLs
-
-When you open the desired order, product, or product category, you can copy its URL and paste it into a new window to open the desired item immediately:
-
-![Copy and paste order URL](media/order-url.gif)
-
 
 ## Developer tools
 
@@ -88,6 +88,12 @@ This section gives developers access to useful diagnostics and integration tools
 
 
 The **Developer tools** blade is available to users with the **platform:developer-tools:access** permission. Access to **Hangfire** also requires the same permission.
+
+## Glossary
+
+All terms used throughout the Platform user documentation are listed in the [Glossary](glossary.md), where you can find clear definitions and explanations for each concept.
+Some key terms also include tooltips that appear the first time they are mentioned in the documentation, helping you quickly understand their meaning without leaving the page.
+
 
 <br>
 <br>

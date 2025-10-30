@@ -1,6 +1,6 @@
 # Backup and Restore  
 
-The **Backup and Restore** feature in Virto Commerce allows you to securely export and restore platform data, ensuring data safety and easy recovery when needed.  
+The **Backup and Restore** feature in Virto Commerce allows you to securely export and restore Platform data, ensuring data safety and easy recovery when needed.  
 
 ## Backup  
 

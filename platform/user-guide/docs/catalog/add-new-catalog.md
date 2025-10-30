@@ -11,6 +11,7 @@ You can readily differentiate physical catalogs from virtual ones through their 
 
 !!! note
 	Fulfillment centers are relevant to physical products only. If a store sells digital content, such as software or music, it does not need such centers.
+*[Fulfillment centers]: Processing units involved in receiving, processing, and delivering orders to end customers 
 
 ## Physical catalogs
 

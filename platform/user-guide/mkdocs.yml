@@ -61,6 +61,7 @@ nav:
           - Platform Settings: platform-settings.md
           - ADA Compliance: ada-compliance.md
           - Managing Frontend Content: managing-content.md
+          - Glossary: glossary.md
     - Modules:
           - Overview: platform-overview.md
           - <b>Catalog</b>:
@@ -351,7 +352,6 @@ nav:
           - White Labeling:
                 - Overview: white-labeling/overview.md
                 - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
-          - Glossary: glossary.md
     - Integrations:
           - Overview: integrations/overview.md
           - Avalara Tax:
