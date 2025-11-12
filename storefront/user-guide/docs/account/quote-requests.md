@@ -53,6 +53,6 @@ For corporate accounts, you can approve or decline a quote request once its stat
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../checkout-defaults">← Checkout defaults</a>
+    <a href="../lists">← Lists</a>
     <a href="../saved-credit-cards">Saved credit cards →</a>
 </div>

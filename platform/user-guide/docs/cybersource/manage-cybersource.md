@@ -12,7 +12,7 @@ To manage the CyberSource payment method:
 1. In the **Payment methods** blade, select **CyberSource**.
 1. In the **Edit payment method** blade, configure the following fields:
 
-    ![Edit payment method 2](media/cybersouce-enabling.png)
+    ![Edit payment method 2](media/cybersouce-enabling.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

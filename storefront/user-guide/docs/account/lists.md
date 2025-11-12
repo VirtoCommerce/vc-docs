@@ -10,7 +10,7 @@ In the **Lists** section, you can:
 * View number of items in the list.
 * Edit lists names.
 * Delete lists.
-* Configure lists privacy. As of [2.32.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.32.0), users can share their shopping lists with configurable access scopes:
+* Configure lists privacy. Users can share their shopping lists with configurable access scopes:
 
     * Private (no sharing link).
     * Organization (shared within organization members).
@@ -30,7 +30,7 @@ Click on the desired list to view its details. Here you can:
 * Update the amount of items in cart.
 * Delete items from the list.
 * Edit list by clicking **List settings**.
-* Purchase list items separately from cart (as of [Frontend 2.29.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.29.0)). This allows customers to manage and purchase items from a list without affecting their shopping cart.
+* Purchase list items separately from cart. This allows customers to manage and purchase items from a list without affecting their shopping cart.
 
 ![list management](../media/list-management.png)
 
@@ -54,6 +54,6 @@ You modifications have been saved.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../review-products">← Product reviews</a>
-    <a href="../checkout-defaults">Checkout defaults →</a>
+    <a href="../saved-for-later">← Saved for later</a>
+    <a href="../quote-requests">Quote requests →</a>
 </div>

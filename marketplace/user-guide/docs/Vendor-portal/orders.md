@@ -1,6 +1,6 @@
 # Orders
 
-The Order segment contains all orders created by the buyers. Here vendors can:
+The Orders segment contains all orders created by the buyers. Here vendors can:
 
 * [Edit orders.](orders.md#edit-order)
 * [Process orders.](orders.md#process-order) 

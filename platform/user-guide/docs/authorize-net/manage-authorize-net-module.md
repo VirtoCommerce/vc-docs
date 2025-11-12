@@ -1,13 +1,6 @@
 # Manage Authorize.net Module
 
-Managing Authorize.net module includes:
-
-* [Editing payment method.](manage-authorize-net-module.md#edit-payment-method)
-* [Configuring module settings.](manage-authorize-net-module.md#configure-settings)
-
-## Edit payment method 
-
-To edit Authorize.net payment method:
+To manage Authorize.net payment method:
 
 1. Click **Stores** in the main menu. 
 1. In the next blade, select a store.
@@ -28,23 +21,6 @@ To edit Authorize.net payment method:
 
 Your modifications have been saved.
 
-## Configure settings
-
-To configure non-confidential module settings:
-
-1. Complete steps 1-4 from the instruction above.
-1. In the **Edit payment methods** blade, click on the **Settings** widget.
-1. In the next blade, configure the following settings:
-
-    ![Settings](media/settings.png)
-
-1. Click **OK** to save the changes.
-
-![Readmore](media/readmore.png){: width="25"} [Configuring confidential information](../../../developer-guide/Fundamentals/Payments/authorize-net)
-
-Your modifications have been saved.
-
-
 
 <br>
 <br>
@@ -52,5 +28,5 @@ Your modifications have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Authorize.net module overview</a>
-    <a href="../../price-export-import/overview">Price Export Import module overview →</a>
+    <a href="../settings">Settings →</a>
 </div>

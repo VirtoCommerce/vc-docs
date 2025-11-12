@@ -1,6 +1,6 @@
 # Points History
 
-If a seller uses loyalty programs to reward customers, buyers can view their accumulated loyalty points in the Points History section.
+If a seller uses loyalty programs to reward customers, buyers can view their accumulated loyalty points in the **Points history** section.
 
 This section shows the number of points earned and redeemed for each order, as well as the total balance of points remaining:
 

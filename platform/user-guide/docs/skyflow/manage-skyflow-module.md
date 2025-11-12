@@ -11,11 +11,11 @@ To manage the Skyflow payment method:
 
 1. In the **Payment methods** blade, select **SkyFlow**.
 
-    ![Edit payment method](media/configure-backoffice-1.png)
+    ![Edit payment method](media/configure-backoffice-1.png){: style="display: block; margin: 0 auto;" }
 
 1. In the **Edit payment method** blade, configure the following fields:
 
-    ![Edit payment method 2](media/configure-backoffice-2.png)
+    ![Edit payment method 2](media/configure-backoffice-2.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -27,5 +27,5 @@ Your modifications have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Skyflow module overview</a>
-    <a href="../../authorize-net/overview">Authorize.net module overview →</a>
+    <a href="../../price-export-import/overview">Price Export and Import module overview →</a>
 </div>

@@ -20,6 +20,6 @@ The diagram below illustrates the dependencies of the CyberSource module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../native-payment-methods/overview">← Native Payment Methods module overview</a>
+    <a href="../../authorize-net/overview">← Authorize.net module overview</a>
     <a href="../manage-cybersource">Managing CyberSource →</a>
 </div>

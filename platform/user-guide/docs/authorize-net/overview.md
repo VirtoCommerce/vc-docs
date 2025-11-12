@@ -1,6 +1,6 @@
 # Overview
 
-The **Authorize.Net** module provides seamless integration with Authorize.Net using [Accept.js](https://developer.authorize.net/api/reference/features/acceptjs.html) and the [Authorize.Net API](http://developer.authorize.net/api). This module enables secure payment processing by using the powerful features of Authorize.Net. It ensures a smooth transaction experience for both sellers and customers. 
+The **Authorize.net** module provides seamless integration with Authorize.net using [Accept.js](https://developer.authorize.net/api/reference/features/acceptjs.html) and the [Authorize.net API](http://developer.authorize.net/api). This module enables secure payment processing by using the powerful features of Authorize.Net. It ensures a smooth transaction experience for both sellers and customers. 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-authorize-net)
 
@@ -26,6 +26,6 @@ The diagram below illustrates the interconnections among various key entities wi
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../skyflow/overview">← Skyflow module overview</a>
+    <a href="../../native-payment-methods/overview">← Native payment methods overview</a>
     <a href="../manage-authorize-net-module">Managing Authorize.net →</a>
 </div>

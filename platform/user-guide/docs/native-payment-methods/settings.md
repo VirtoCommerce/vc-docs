@@ -22,5 +22,5 @@ The settings have been configured.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-native-payment-methods">← Managing native payment methods</a>
-    <a href="../../cybersource/overview">CyberSource module overview →</a>
+    <a href="../../authorize-net/overview">Authorize.net module overview →</a>
 </div>
