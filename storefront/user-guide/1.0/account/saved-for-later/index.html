@@ -12,13 +12,13 @@
         <meta name="author" content="Virto Commerce">
       
       
-        <link rel="canonical" href="https://docs.virtocommerce.org/storefront/user-guide/1.0/account/back-in-stock-list/">
+        <link rel="canonical" href="https://docs.virtocommerce.org/storefront/user-guide/1.0/account/saved-for-later/">
       
       
-        <link rel="prev" href="../notifications/">
+        <link rel="prev" href="../review-products/">
       
       
-        <link rel="next" href="../purchase-requests/">
+        <link rel="next" href="../lists/">
       
       
         
@@ -28,7 +28,7 @@
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
-<title>Account - Back-in-Stock List - Frontend User Docs</title>
+<title>Account - Saved for Later - Frontend User Docs</title>
 
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
@@ -92,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#back-in-stock-list" class="md-skip">
+        <a href="#saved-for-later" class="md-skip">
           Skip to content
         </a>
       
@@ -1914,13 +1914,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+
 <!-- Main navigation item with nested items -->
 
-    <li class="md-nav__item">
-      <a href="../saved-for-later/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+         data-md-toggle="toc"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         Saved for Later
       </a>
+
+      <!-- Show table of contents -->
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
             
@@ -2004,41 +2032,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-
-
 <!-- Main navigation item with nested items -->
 
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        type="checkbox"
-         data-md-toggle="toc"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-        
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../back-in-stock-list/" class="md-nav__link">
         Back-in-Stock List
       </a>
-
-      <!-- Show table of contents -->
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
             
@@ -2438,7 +2438,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 17, 2025 08:22:30 UTC">April 17, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 12, 2025 15:00:43 UTC">November 12, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -2458,17 +2458,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="back-in-stock-list">Back-in-Stock List<a class="headerlink" href="#back-in-stock-list" title="Permanent link">&para;</a></h1>
-<p>This section contains the list of all products for which the user will receive <a href="../../shopping/back-in-stock-notifications/">back-in-stock notifications</a>:</p>
-<p><img alt="Back-in-stock list" src="../../media/back-in-stock-list.png" /></p>
-<p>Once the product is back in stock, users can add it to their cart from the list:</p>
-<p><img alt="Buyable products" src="../../media/back-in-stock-buyable.png" /></p>
+<h1 id="saved-for-later">Saved for Later<a class="headerlink" href="#saved-for-later" title="Permanent link">&para;</a></h1>
+<p>The <strong>Saved for later</strong> section stores all the product the user leaves for later purchase. Here you can:</p>
+<ul>
+<li>Add all the listed items to cart with a single click.</li>
+<li>Add specific listed items to cart.</li>
+<li>Update the amount of items in cart.</li>
+<li>Delete items from the list.</li>
+<li>Purchase items separately from cart. This allows customers to manage and purchase items from a list without affecting their shopping cart. </li>
+</ul>
+<p>Try our interactive demo to explore key features in action:</p>
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/cnb7foerg3mi?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
 <p><br>
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
-    <a href="../notifications">← Notifications</a>
-    <a href="../purchase-requests">Purchase requests →</a>
+    <a href="../review-products">← Product reviews</a>
+    <a href="../lists">Lists →</a>
 </div>
                 
               </article>
