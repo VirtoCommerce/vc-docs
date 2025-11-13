@@ -66,6 +66,7 @@ nav:
       - Quote Requests: Operator-portal/quotes.md
       - State Machines: Operator-portal/state-machines.md
       - AI Helper: Operator-portal/ai-helper.md
+      - Communication: Operator-portal/communication.md
     - Vendor Portal:
       - Overview: Vendor-portal/overview.md
       - Orders: Vendor-portal/orders.md

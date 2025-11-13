@@ -1,8 +1,8 @@
-# Communication
+# Communication 
 
-The Communication section includes all the [dialogs between Vendor and Operator](products-management.md#communicate-with-operator):
+The Communication section includes all the dialogs between Vendor and Operator:
 
-![Communication](media/communication-section.png)
+![Communications](media/communications.png)
 
 Try our interactive demo to explore key features in action:
 
@@ -13,12 +13,11 @@ Try our interactive demo to explore key features in action:
   </div>
 </div>
 
-
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../rating-and-reviews">← Rating and reviews</a>
-    <a href="../my-store">My store →</a>
+    <a href="../ai-helper">← AI Helper</a>
+    <a href="../../Vendor-portal/overview">Vendor portal overview→</a>
 </div>

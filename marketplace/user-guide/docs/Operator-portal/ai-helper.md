@@ -108,5 +108,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../state-machines">← State machines</a>
-    <a href="../../Vendor-portal/overview">Vendor portal overview→</a>
+    <a href="../communication">Communication→</a>
 </div>
