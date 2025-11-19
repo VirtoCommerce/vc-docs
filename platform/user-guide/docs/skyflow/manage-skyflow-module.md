@@ -27,5 +27,5 @@ Your modifications have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Skyflow module overview</a>
-    <a href="../../price-export-import/overview">Price Export and Import module overview →</a>
+    <a href="../../x-pickup/overview">xPickup module overview →</a>
 </div>

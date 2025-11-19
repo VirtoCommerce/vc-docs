@@ -50,6 +50,7 @@ nav:
             - Overview: customization/accelerators-overview.md
             - Guidelines for Using Accelerators: customization/accelerators-guidelines.md
             - Locales Management: customization/texts-customization.md
+    - Merge: merge.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md
         - Migration on Azure Cloud: migration-on-azure.md

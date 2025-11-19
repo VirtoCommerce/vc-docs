@@ -257,6 +257,9 @@ nav:
                 - Skyflow:
                       - Overview: skyflow/overview.md
                       - Managing Skyflow: skyflow/manage-skyflow-module.md
+          - xPickup:
+                - Overview: x-pickup/overview.md
+                - Managing Pickup Locations: x-pickup/managing-pickup-locations.md
           - Price Export Import:
                 - Overview: price-export-import/overview.md
                 - Mapping CSV files: price-export-import/mapping-csv-files.md

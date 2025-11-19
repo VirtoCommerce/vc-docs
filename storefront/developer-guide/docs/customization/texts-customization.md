@@ -35,6 +35,6 @@ This command analyzes all locale files, identifies missing keys, translates the 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../functionality-customization">← Functionality customization</a>
-    <a href="../../migration">Migration to Storefrontless architecture →</a>
+    <a href="../accelerators-guidelines">← Guidelines for using accelerators</a>
+    <a href="../../merge">Merging Frontend updates →</a>
 </div>
