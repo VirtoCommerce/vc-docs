@@ -1,45 +1,111 @@
 /**
  * Automatic version redirect for URLs without version
- * Redirects old URLs to the latest version
- * Example: /platform/developer-guide/Fundamentals/... -> /platform/developer-guide/latest/Fundamentals/...
+ *
+ * Configuration-driven approach: reads versioning config from window.DOCS_VERSIONING
+ * or falls back to data attributes on the script tag.
+ *
+ * Example usage in mkdocs.yml:
+ *   extra_javascript:
+ *     - assets/scripts/version-redirect.js
+ *
+ * Configuration via window object (preferred):
+ *   window.DOCS_VERSIONING = {
+ *     sections: ['marketplace', 'platform', 'storefront'],
+ *     guides: ['developer-guide', 'user-guide', 'deployment-on-cloud'],
+ *     defaultVersion: 'latest',
+ *     versionPattern: '\\d+\\.\\d+(\\.\\d+)?(-S\\d+)?'
+ *   };
  */
 (function() {
     'use strict';
 
-    // Skip redirect for local development (mkdocs serve) or local build testing
-    if (window.location.hostname === 'localhost' ||
-        window.location.hostname === '127.0.0.1' ||
-        window.location.hostname.includes('localhost') ||
-        window.location.protocol === 'file:' ||
-        // Check if this is a local build without versioning (no /latest/ in URL structure)
-        (!window.location.pathname.includes('/latest/') &&
-         !window.location.pathname.match(/\/[0-9]+\.[0-9]+/))) {
-        console.log('[Version Redirect] Skipping redirect for local development or non-versioned build');
+    // Skip redirect for local development
+    if (['localhost', '127.0.0.1', ''].includes(window.location.hostname) ||
+        window.location.protocol === 'file:') {
         return;
     }
 
-    // Get current path
+    // Load configuration from window object or use defaults
+    const config = window.DOCS_VERSIONING || {
+        sections: ['marketplace', 'platform', 'storefront'],
+        guides: ['developer-guide', 'user-guide', 'deployment-on-cloud'],
+        defaultVersion: 'latest',
+        versionPattern: '\\d+\\.\\d+(\\.\\d+)?(-S\\d+)?',
+        excludedPaths: ['versions\\.json', 'index\\.html'],
+        debug: false
+    };
+
+    // Helper for debug logging
+    const log = config.debug ? console.log.bind(console, '[Version Redirect]') : () => {};
+
+    // Prevent redirect loops
+    const sessionKey = 'version_redirect_attempted';
     const currentPath = window.location.pathname;
 
-    // Pattern to match paths without version: /{section}/{guide}/{content}
-    // Where content doesn't start with a version number or 'latest'/'stable'
-    const pathPattern = /^\/(marketplace|platform|storefront)\/(developer-guide|user-guide|deployment-on-cloud)\/(?!([0-9]+\.[0-9]+|[0-9]+\.[0-9]+-S[0-9]+|latest|stable|versions\.json))(.+)$/;
-
-    const match = currentPath.match(pathPattern);
-
-    if (match) {
-        const section = match[1];      // marketplace, platform, or storefront
-        const guide = match[2];         // developer-guide, user-guide, or deployment-on-cloud
-        const content = match[3];       // rest of the path
-
-        // Construct new URL with 'latest' version
-        const newPath = `/${section}/${guide}/latest/${content}`;
-        const newUrl = window.location.origin + newPath + window.location.search + window.location.hash;
-
-        console.log('[Version Redirect] Redirecting from:', currentPath, 'to:', newPath);
-
-        // Perform redirect
-        window.location.replace(newUrl);
+    if (sessionStorage.getItem(sessionKey) === currentPath) {
+        sessionStorage.removeItem(sessionKey);
+        log('Loop prevention: Already attempted redirect for', currentPath);
+        return;
     }
+
+    /**
+     * Build regex pattern dynamically from config
+     * Pattern: /^\/({sections})\/({guides})\/(?!({versions}|latest|stable|{excluded}))(.+)$/
+     */
+    function buildPattern() {
+        const sectionsPattern = config.sections.join('|');
+        const guidesPattern = config.guides.join('|');
+        const excludedPattern = config.excludedPaths.join('|');
+
+        // Negative lookahead: (?!version|latest|stable|excluded)
+        const negativeLookahead = `(?!(${config.versionPattern}|latest|stable|${excludedPattern}))`;
+
+        return new RegExp(
+            `^\\/(${sectionsPattern})\\/(${guidesPattern})\\/${negativeLookahead}([^\\/]+.*)$`
+        );
+    }
+
+    /**
+     * Extract path components and redirect to versioned URL
+     */
+    function redirectToVersioned() {
+        const pattern = buildPattern();
+        log('Built pattern:', pattern);
+        log('Testing path:', currentPath);
+
+        const match = currentPath.match(pattern);
+
+        if (!match) {
+            log('No match - path is already versioned or not a versioned section');
+            return;
+        }
+
+        const section = match[1];
+        const guide = match[2];
+        // match[3] is the negative lookahead (captured but not used)
+        const content = match[4];
+
+        // Construct new URL with default version
+        const versionedPath = `/${section}/${guide}/${config.defaultVersion}/${content}`;
+        const versionedUrl = window.location.origin + versionedPath +
+                           window.location.search + window.location.hash;
+
+        log('Redirecting:', {
+            from: currentPath,
+            to: versionedPath,
+            section,
+            guide,
+            content
+        });
+
+        // Mark redirect attempt
+        sessionStorage.setItem(sessionKey, currentPath);
+
+        // Perform redirect (replaces history entry)
+        window.location.replace(versionedUrl);
+    }
+
+    // Execute redirect logic
+    redirectToVersioned();
 })();
 
