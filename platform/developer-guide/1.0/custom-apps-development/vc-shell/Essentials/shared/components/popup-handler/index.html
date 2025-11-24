@@ -26524,7 +26524,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 11:42:40 UTC">June 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26549,7 +26549,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The VC-Shell popup system consists of several key parts:</p>
 <ul>
 <li><strong><code>usePopup</code> Composable</strong>: The main API for developers. It provides methods to show pre-styled standard popups and to configure and display custom Vue components as popups.</li>
-<li><strong><code>VcPopup</code> Component</strong>: The standard UI component used to build the actual interface of your custom popups (e.g., forms, detailed views). You will use <code>&lt;VcPopup&gt;</code> within your custom popup components. Refer to the <a href="../../../ui-components/vc-popup/">VcPopup Component Documentation</a> for its detailed API.</li>
+<li><strong><code>VcPopup</code> Component</strong>: The standard UI component used to build the actual interface of your custom popups (e.g., forms, detailed views). You will use <code>&lt;VcPopup&gt;</code> within your custom popup components. Refer to the <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup">VcPopup Component Documentation</a> for its detailed API.</li>
 <li><strong><code>VcPopupHandler</code> Plugin</strong>: A Vue plugin automatically installed by the VC-Shell framework. It sets up the global infrastructure for popups, including registering the <code>VcPopupContainer</code>.</li>
 <li><strong><code>VcPopupContainer</code> Component</strong>: A globally available component that acts as the rendering target for all popups managed by <code>usePopup</code>. Developers typically do not interact with this component directly.</li>
 </ul>
@@ -26631,7 +26631,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <h3 id="create-and-use-custom-popups">Create and use custom popups<a class="headerlink" href="#create-and-use-custom-popups" title="Permanent link">&para;</a></h3>
 <p>When you need more than standard dialogs, you'll create your own Vue component for the popup's content and UI. <strong>It is highly recommended to use the <code>VcPopup</code> component as the main building block within your custom popup component</strong> to ensure consistent styling and behavior (like header, footer, and close button integration).</p>
-<p>Refer to the <a href="../../../ui-components/vc-popup/">VcPopup Component Documentation</a> for details on how to use <code>VcPopup</code> to build your custom popup's structure.</p>
+<p>Refer to the <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup">VcPopup Component Documentation</a> for details on how to use <code>VcPopup</code> to build your custom popup's structure.</p>
 <p>Once your custom popup component (e.g., <code>MyCustomPopupComponent.vue</code>) is created (using <code>VcPopup</code> internally), you can display it programmatically using <code>usePopup(options)</code> as shown in the example above.</p>
 <h4 id="usepopupprops-interface">UsePopupProps interface<a class="headerlink" href="#usepopupprops-interface" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Slot</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">VueSlot</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Ref</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">MaybeRef</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span><span class="p">;</span>

@@ -26310,7 +26310,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2025 07:25:18 UTC">June 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26333,7 +26333,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <p>Along with JWT access token, Virto manager also uses cookie-based authentication. This additional check is necessary because it is impossible to intercept and inject Authorization header with the token bearer for all API calls requested other than through the [<span class="arithmatex">\(http](https://docs.angularjs.org/api/ng/service/\)</span>http) service. These calls can be produced by other third-party JS components; direct http links and cookie-based authorization are used to solve this problem.</p>
-<p>When the user is authorized in the platform, the system intersects all user permissions with the permissions in the <a href="../../../../Configuration-Reference/appsettingsjson/#authorization">Authorization:LimitedCookiePermissions configuration section</a> and adds them into cookies along with issuing the JWT token. When the user makes a request to the platform, they are challenged against the helper cookie and the authentication token in accordance with the following rules:</p>
+<p>When the user is authorized in the platform, the system intersects all user permissions with the permissions in the <a href="/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#authorization">Authorization:LimitedCookiePermissions configuration section</a> and adds them into cookies along with issuing the JWT token. When the user makes a request to the platform, they are challenged against the helper cookie and the authentication token in accordance with the following rules:</p>
 <table>
 <thead>
 <tr>

@@ -26622,7 +26622,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 11:42:40 UTC">June 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26652,13 +26652,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>Description:</strong> The top section of the blade, usually containing the title and an optional icon. It clearly identifies the purpose of the blade. This header is part of the <code>VcBlade</code> component.</li>
 <li><strong>Key <code>VcBlade</code> Props:</strong> <code>title</code>, <code>subtitle</code>, <code>icon</code>.</li>
 </ul>
-<p><img alt="Blade Layout" src="../../../../media/blade-layout.png" /></p>
+<p><img alt="Blade Layout" src="/platform/developer-guide/latest/custom-apps-development/media/blade-layout.png" /></p>
 <h3 id="2-blade-toolbar">2. Blade Toolbar<a class="headerlink" href="#2-blade-toolbar" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Description:</strong> Located typically below the header, the toolbar contains action buttons and controls relevant to the blade's content. This toolbar is also managed by the <code>VcBlade</code> component.</li>
 <li><strong>Key <code>VcBlade</code> Prop:</strong> <code>toolbarItems</code>. Toolbars can also be dynamically managed using <code>useToolbar</code> in conjunction with <code>VcBlade</code>.</li>
 </ul>
-<p><img alt="Blade Layout" src="../../../../media/blade-layout1.png" /></p>
+<p><img alt="Blade Layout" src="/platform/developer-guide/latest/custom-apps-development/media/blade-layout1.png" /></p>
 <ul>
 <li><strong>Further Reading:</strong> <a href="../managing-blade-toolbars-with-usetoolbar/">Managing Blade Toolbars with useToolbar</a></li>
 </ul>
@@ -26666,13 +26666,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li><strong>Description:</strong> The main body of the blade where your custom Vue component (e.g., your <code>ProductDetailsPage.vue</code>) is rendered. <code>VcBlade</code> provides a default slot for this purpose.</li>
 </ul>
-<p><img alt="Blade Layout" src="../../../../media/blade-layout2.png" /></p>
+<p><img alt="Blade Layout" src="/platform/developer-guide/latest/custom-apps-development/media/blade-layout2.png" /></p>
 <h3 id="4-blade-widgets-area">4. Blade Widgets Area<a class="headerlink" href="#4-blade-widgets-area" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Description:</strong> Blades can display contextual widgets, which are typically small, self-contained Vue components offering supplementary information or actions. These widgets are not directly defined via a prop on <code>VcBlade</code>. Instead, they are programmatically registered for a specific blade instance using the <code>useWidgets</code> composable. The <code>VcBlade</code> component includes a designated area where these registered widgets are displayed.</li>
 <li><strong>Key Management Composable:</strong> <code>useWidgets</code>.</li>
 </ul>
-<p><img alt="Blade Layout" src="../../../../media/blade-layout3.png" /></p>
+<p><img alt="Blade Layout" src="/platform/developer-guide/latest/custom-apps-development/media/blade-layout3.png" /></p>
 <ul>
 <li><strong>Further Reading:</strong> <a href="../creating-and-registering-widgets-with-usewidgets/">Creating and Registering Blade Widgets with <code>useWidgets</code></a></li>
 </ul>
@@ -26689,7 +26689,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><code>modified?: boolean</code>: If set to <code>true</code>, indicates that the blade has unsaved changes, potentially showing a visual cue.</li>
 </ul>
 <p><strong>Note on Custom Blade Component Props:</strong>
-The Vue components you create to be displayed <em>inside</em> <code>VcBlade</code> (e.g., <code>MyCustomBladePage.vue</code>) are expected to accept their own set of standard props, such as <code>param</code>, <code>options</code>, and also <code>expanded</code> and <code>closable</code> (which are passed by the blade navigation system to control the custom blade's behavior). For details on these standard props for your custom blade components, please refer to the <a href="../../../Guides/developing-custom-modules/#props-and-emits">Developing Custom Modules guide</a>.</p>
+The Vue components you create to be displayed <em>inside</em> <code>VcBlade</code> (e.g., <code>MyCustomBladePage.vue</code>) are expected to accept their own set of standard props, such as <code>param</code>, <code>options</code>, and also <code>expanded</code> and <code>closable</code> (which are passed by the blade navigation system to control the custom blade's behavior). For details on these standard props for your custom blade components, please refer to the <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules.md#props-and-emits">Developing Custom Modules guide</a>.</p>
 <h2 id="events-emitted-by-the-vcblade-ui-component">Events Emitted by the <code>VcBlade</code> UI Component<a class="headerlink" href="#events-emitted-by-the-vcblade-ui-component" title="Permanent link">&para;</a></h2>
 <p>The <code>VcBlade</code> UI component emits events in response to interactions with its own controls (primarily within its header):</p>
 <ul>
@@ -26698,14 +26698,14 @@ The Vue components you create to be displayed <em>inside</em> <code>VcBlade</cod
 <li><code>collapse</code>: Emitted when the collapse control in the <code>VcBlade</code>'s header is clicked.</li>
 </ul>
 <p><strong>Note on Custom Blade Component Emits:</strong>
-Your custom blade components (e.g., <code>MyCustomBladePage.vue</code>) will typically listen to these events from <code>VcBlade</code> (e.g., <code>&lt;VcBlade @close="$emit('close:blade')"&gt;</code>). They then emit their own standardized events like <code>close:blade</code>, <code>parent:call</code>, etc., for the blade navigation system or parent blades to handle. These standard emits for custom blade components are detailed in the <a href="../../../Guides/developing-custom-modules/#props-and-emits">Developing Custom Modules guide</a>.</p>
+Your custom blade components (e.g., <code>MyCustomBladePage.vue</code>) will typically listen to these events from <code>VcBlade</code> (e.g., <code>&lt;VcBlade @close="$emit('close:blade')"&gt;</code>). They then emit their own standardized events like <code>close:blade</code>, <code>parent:call</code>, etc., for the blade navigation system or parent blades to handle. These standard emits for custom blade components are detailed in the <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules.md#props-and-emits">Developing Custom Modules guide</a>.</p>
 <h2 id="the-blade-page-component-contract">The Blade Page Component Contract<a class="headerlink" href="#the-blade-page-component-contract" title="Permanent link">&para;</a></h2>
 <p>While <code>VcBlade</code> provides the visual frame, the custom Vue component you create for a blade's content (e.g., <code>ProductDetailsPage.vue</code>) must adhere to an implicit contract to integrate properly with the navigation system (<code>useBladeNavigation</code>).</p>
 <p>This contract involves three key parts: standard props, standard emits, and exposing the title.</p>
 <h3 id="standard-props-emits">Standard Props &amp; Emits<a class="headerlink" href="#standard-props-emits" title="Permanent link">&para;</a></h3>
 <p>Your blade page component should accept a standard set of props (<code>expanded</code>, <code>closable</code>, <code>param</code>, etc.) and emit standard events (<code>close:blade</code>, <code>parent:call</code>, etc.) to communicate with the navigation system.</p>
 <ul>
-<li>For a detailed list of these props and emits, please refer to the <a href="../../../Guides/developing-custom-modules/">Developing Custom Modules guide</a>.</li>
+<li>For a detailed list of these props and emits, please refer to the <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules">Developing Custom Modules guide</a>.</li>
 </ul>
 <h3 id="exposing-the-blade-title-defineexpose">Exposing the Blade Title (<code>defineExpose</code>)<a class="headerlink" href="#exposing-the-blade-title-defineexpose" title="Permanent link">&para;</a></h3>
 <p>For the navigation system (specifically <code>useBreadcrumbs</code>) to correctly display the blade's title in breadcrumbs or other UI elements, your blade component <strong>must</strong> expose its title via the <code>defineExpose</code> compiler macro.</p>
@@ -26740,8 +26740,8 @@ By exposing the <code>title</code>, you allow the parent navigation components t
 <p>Blades are managed by the <code>useBladeNavigation</code> composable, which handles their opening, closing, and stacking. The <code>VcBladeNavigation</code> component is responsible for rendering the visible stack of blades.</p>
 <h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>UI Component:</strong> <a href="../../ui-components/vc-blade/"><code>VcBlade</code></a></li>
-<li><strong>Developing Custom Modules (Blade Creation):</strong> <a href="../../../Guides/developing-custom-modules/"><code>developing-custom-modules.md</code></a></li>
+<li><strong>UI Component:</strong> <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-blade"><code>VcBlade</code></a></li>
+<li><strong>Developing Custom Modules (Blade Creation):</strong> <a href="/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules"><code>developing-custom-modules.md</code></a></li>
 <li><strong>Working with Blade Navigation:</strong> <a href="../working-with-blade-navigation/"><code>working-with-blade-navigation.md</code></a> </li>
 </ul>
                 
