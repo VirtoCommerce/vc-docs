@@ -23,20 +23,20 @@
 
 /* When search input is focused or checked - hide version selector AND mega-menu */
 /* The search checkbox is BEFORE the header, so we use ~ (sibling) selector */
+/* Note: mega-menu is OUTSIDE .md-header, so we target it separately */
 [data-md-toggle="search"]:checked ~ .md-header .md-version,
-[data-md-toggle="search"]:checked ~ .md-header .mega-menu {
+[data-md-toggle="search"]:checked ~ .mega-menu {
     display: none !important;
 }
 
 /* Alternative: if checkbox is inside header, use parent selector */
-.md-header:has([data-md-toggle="search"]:checked) .md-version,
-.md-header:has([data-md-toggle="search"]:checked) .mega-menu {
+.md-header:has([data-md-toggle="search"]:checked) .md-version {
     display: none !important;
 }
 
 /* When search overlay is visible */
 .md-search--active ~ .md-header .md-version,
-.md-search--active ~ .md-header .mega-menu,
+.md-search--active ~ .mega-menu,
 body:has(.md-search--active) .md-version,
 body:has(.md-search--active) .mega-menu {
     display: none !important;
