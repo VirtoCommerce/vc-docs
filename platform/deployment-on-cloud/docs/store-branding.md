@@ -7,7 +7,7 @@ Once your store is created, you can customize its branding by:
 
 ## Prepare logos and favicon
 
-For test purposes, you can use any PNG, GIF, or SVG image (for logo) or PNG, JPEG, or WEBP image (for favicon).   
+For test purposes, you can use any PNG, GIF, or SVG image (for logo) or PNG, JPEG, or WEBP image (for    favicon).
 
 For finalized branding, you can prepare logo and favicon images according to the requirements in our [figma project](https://www.figma.com/design/tSeAtWkt4DOj0khZ8Fi8wY/%F0%9F%90%B3-OCEAN-BLUE-%E2%80%A2-Storefront-screens?node-id=4142-36381&t=hwbdIQc7jxZ4YJPZ-4) or use it as a sample as follows:
 
@@ -82,9 +82,7 @@ For the purpose of this guide, a color scheme named **safco** has been created b
 1. In the **White labeling** blade, click ![Pencil](media/pencil.png){: width="25"} next to the **Theme preset name**.
 1. In the next blade, click **Add** in the toolbar.
 1. Paste the filename to the new field and click ![Floppy](media/floppy.png){: width="25"} to save the changes.
-1. Click **Save** in the toolbar.
-1. In the previous blade, select the newly added theme from the dropdown list. 
-1. Click **Save** in the toolbar. 
+1. Click **Save** in the too lbar.1.  In the previous blade, s elect the newly added theme from the dropdown list.1.  Click **Save** in the toolbar.
 
 Your new color scheme has been applied:
 
@@ -96,6 +94,6 @@ Your new color scheme has been applied:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../footer-creation">← Set up footer </a>
+    <a href="../footer-creation">← Se up footer </a>
     <a href="../create-page-in-builder-io">Create page in Builder.io →</a>
 </div>

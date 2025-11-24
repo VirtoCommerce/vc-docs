@@ -1,0 +1,168 @@
+/**
+ * Version Selector Responsive Styles
+ *
+ * This file contains styles for Mike's version selector to improve UX:
+ * 1. Hide version selector when search is active
+ * 2. Hide version selector on mobile devices
+ * 3. Smooth transitions for better user experience
+ */
+
+/* ============================================
+   Hide version selector when search is active
+   ============================================ */
+
+/**
+ * When search overlay is visible, hide the version selector
+ * This prevents UI overlap and improves search experience
+ *
+ * Multiple selectors to cover different Material theme structures:
+ * - Direct sibling selector for search toggle
+ * - Body class when search is active
+ * - Search visible state
+ */
+
+/* When search input is focused or checked - hide version selector */
+/* The search checkbox is BEFORE the header, so we use ~ (sibling) selector */
+[data-md-toggle="search"]:checked ~ .md-header .md-version {
+    display: none !important;
+}
+
+/* Alternative: if checkbox is inside header, use parent selector */
+.md-header:has([data-md-toggle="search"]:checked) .md-version {
+    display: none !important;
+}
+
+/* When search overlay is visible */
+.md-search--active ~ .md-header .md-version,
+body:has(.md-search--active) .md-version {
+    display: none !important;
+}
+
+/* Alternative: fade out animation (comment above and uncomment this if you prefer fade) */
+/*
+[data-md-toggle="search"]:checked ~ .md-header .md-version,
+[data-md-toggle="search"]:checked ~ * .md-version {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+}
+*/
+
+/**
+ * Normal state: version selector is visible
+ */
+.md-version {
+    transition: opacity 0.25s ease-in-out;
+}
+
+/* ============================================
+   Hide version selector on mobile devices
+   ============================================ */
+
+/**
+ * Mobile breakpoint: < 768px
+ * Version selector takes too much space on small screens
+ */
+@media screen and (max-width: 767px) {
+    .md-version {
+        display: none !important;
+    }
+}
+
+/**
+ * Tablet breakpoint: 768px - 1023px
+ * Optional: Show simplified version on tablets
+ * Uncomment if you want to show a compact version on tablets
+ */
+/*
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .md-version {
+        font-size: 0.85rem;
+    }
+
+    .md-version__current {
+        padding: 0.4rem 0.6rem;
+    }
+}
+*/
+
+/* ============================================
+   Additional improvements
+   ============================================ */
+
+/**
+ * Smooth animation when version selector appears/disappears
+ */
+.md-version {
+    transition: opacity 0.25s ease-in-out,
+                transform 0.25s ease-in-out;
+}
+
+/**
+ * Don't animate on page load
+ */
+.md-version:not(.md-version--animated) {
+    transition: none;
+}
+
+/**
+ * Hide version selector when header is scrolled out of view
+ * (only if your theme supports this feature)
+ */
+[data-md-state="hidden"] .md-version {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/**
+ * Hide version selector on scroll (if enabled via JS)
+ */
+.md-version--hidden-scroll {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+}
+
+/* ============================================
+   Accessibility improvements
+   ============================================ */
+
+/**
+ * Ensure version selector is accessible when visible
+ */
+.md-version:focus-within {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/**
+ * High contrast mode support
+ */
+@media (prefers-contrast: high) {
+    .md-version {
+        border: 1px solid currentColor;
+    }
+}
+
+/**
+ * Reduced motion support
+ */
+@media (prefers-reduced-motion: reduce) {
+    .md-version {
+        transition: none !important;
+    }
+}
+
+/* ============================================
+   Debug mode (uncomment to see boundaries)
+   ============================================ */
+/*
+.md-version {
+    outline: 2px solid red !important;
+}
+
+.md-version__current {
+    outline: 2px solid blue !important;
+}
+*/
