@@ -26,27 +26,31 @@
             console.log('[Version Selector] Script loaded, initializing...');
         }
 
-        // Get version selector element
+        // Get elements to hide/show
         const versionSelector = document.querySelector('.md-version');
+        const megaMenu = document.querySelector('.mega-menu');
 
-        if (!versionSelector) {
-            // No version selector found (not a versioned page)
+        if (!versionSelector && !megaMenu) {
+            // Neither element found
             if (CONFIG.debug) {
-                console.log('[Version Selector] No .md-version element found - not a versioned page');
+                console.log('[Version Selector] No .md-version or .mega-menu found - not a versioned page');
             }
             return;
         }
 
         if (CONFIG.debug) {
             console.log('[Version Selector] Initialized', {
-                element: versionSelector,
+                versionSelector: !!versionSelector,
+                megaMenu: !!megaMenu,
                 isMobile: window.innerWidth < CONFIG.mobileBreakpoint,
                 config: CONFIG
             });
         }
 
         // Add animation class for smooth transitions
-        versionSelector.classList.add(CONFIG.animationClass);
+        if (versionSelector) {
+            versionSelector.classList.add(CONFIG.animationClass);
+        }
 
         /**
          * Check if viewport is mobile
@@ -56,7 +60,7 @@
         }
 
         /**
-         * Update version selector visibility based on all conditions
+         * Update version selector and mega-menu visibility based on all conditions
          */
         function updateVisibility() {
             const searchCheckbox = document.querySelector('input[data-md-toggle="search"]');
@@ -75,11 +79,23 @@
 
             // Hide if search is open OR on mobile
             if (searchOpen || mobile) {
-                versionSelector.style.display = 'none';
-                versionSelector.setAttribute('aria-hidden', 'true');
+                if (versionSelector) {
+                    versionSelector.style.display = 'none';
+                    versionSelector.setAttribute('aria-hidden', 'true');
+                }
+                if (megaMenu) {
+                    megaMenu.style.display = 'none';
+                    megaMenu.setAttribute('aria-hidden', 'true');
+                }
             } else {
-                versionSelector.style.display = '';
-                versionSelector.removeAttribute('aria-hidden');
+                if (versionSelector) {
+                    versionSelector.style.display = '';
+                    versionSelector.removeAttribute('aria-hidden');
+                }
+                if (megaMenu) {
+                    megaMenu.style.display = '';
+                    megaMenu.removeAttribute('aria-hidden');
+                }
             }
         }
 
