@@ -6,12 +6,12 @@ This type is an object used to store and manage various financial or pricing-rel
 
 | Field                                                                         | Description                         |
 | ----------------------------------------------------------------------------- | ------------------------------------|
-| `originalSubTotalExlTax` [ ==MoneyType== ](../../Cart/objects/money-type.md)  | The original subtotal excluding tax.|
-| `subTotalExlTax` [ ==MoneyType== ](../../Cart/objects/money-type.md)          | The subtotal excluding tax.         |
-| `shippingTotal` [ ==MoneyType== ](../../Cart/objects/money-type.md)           | The total shipping cost.            |
-| `discountTotal` [ ==MoneyType== ](../../Cart/objects/money-type.md)           | The total discount applied.         |
-| `taxTotal` [ ==MoneyType== ](../../Cart/objects/money-type.md)                | The total tax amount.               |
-| `adjustmentQuoteExlTax` [ ==MoneyType== ](../../Cart/objects/money-type.md)   | The adjustment amount excluding tax.|
-| `grandTotalExlTax` [ ==MoneyType== ](../../Cart/objects/money-type.md)        | The grand total excluding tax.      |
-| `grandTotalInclTax` [ ==MoneyType== ](../../Cart/objects/money-type.md)       | The grand total including tax.      |
+| `originalSubTotalExlTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)  | The original subtotal excluding tax.|
+| `subTotalExlTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)          | The subtotal excluding tax.         |
+| `shippingTotal` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)           | The total shipping cost.            |
+| `discountTotal` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)           | The total discount applied.         |
+| `taxTotal` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)                | The total tax amount.               |
+| `adjustmentQuoteExlTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)   | The adjustment amount excluding tax.|
+| `grandTotalExlTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)        | The grand total excluding tax.      |
+| `grandTotalInclTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)       | The grand total including tax.      |
 

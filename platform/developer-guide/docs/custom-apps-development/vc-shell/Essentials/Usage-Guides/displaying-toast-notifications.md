@@ -5,7 +5,7 @@ This guide provides practical examples of how to use the global `notification` s
 ## Prerequisites
 
 -   Understanding of Vue 3 Composition API.
--   Familiarity with the [`notification` Service API Reference](../../Essentials/shared/components/notifications.md).
+-   Familiarity with the [`notification` Service API Reference](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/components/notifications).
 -   Basic knowledge of JavaScript/TypeScript for event handling and component interaction.
 
 ## Core Concept
@@ -218,6 +218,6 @@ function cleanupUI() {
 -   **Non-Blocking**: Toasts should not block user interaction with the rest of the application.
 -   **Actionable (If Needed)**: If a toast implies an action, provide a clear way for the user to take it (e.g., using a custom component with a button).
 -   **Consider Accessibility**: Ensure toasts are accessible (e.g., can be read by screen readers, have sufficient contrast).
--   **Refer to API Docs**: For the full list of `NotificationOptions` and method signatures, always refer to the [`notification` Service API Reference](../../Essentials/shared/components/notifications.md).
+-   **Refer to API Docs**: For the full list of `NotificationOptions` and method signatures, always refer to the [`notification` Service API Reference](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/components/notifications).
 
 By following these examples, you can effectively use the `notification` service to provide timely and relevant feedback to users throughout your VC-Shell application. 

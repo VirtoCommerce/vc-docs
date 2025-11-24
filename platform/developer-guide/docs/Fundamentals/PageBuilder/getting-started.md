@@ -7,7 +7,7 @@ This guide helps you set up the Page Builder for Virto Commerce Platform and Fro
 Before you begin, ensure that the following components are installed:
 
 * [Virto Commerce 3.253.0+](https://github.com/VirtoCommerce/vc-platform/releases/)  
-    ![Readmore](media/readmore.png){: width="25"} [Platform deployment guide](../../Getting-Started/Installation-Guide/windows.md)
+    ![Readmore](media/readmore.png){: width="25"} [Platform deployment guide](/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows)
 
 * [Virto Frontend 2.2.0+](https://github.com/VirtoCommerce/vc-frontend/releases/)  
     ![Readmore](media/readmore.png){: width="25"} [Frontend deployment guide](/storefront/developer-guide/latest/deployment)
@@ -73,9 +73,9 @@ Now you are ready to create and manage content pages:
 
     Your new page appears in the list of pages.
 
-![Readmore](media/readmore.png){: width="25"} [Adding content to page](../../../../user-guide/page-builder/manage-pages#add-content-to-page)
+![Readmore](media/readmore.png){: width="25"} [Adding content to page](/platform/user-guide/latest/page-builder/manage-pages#add-content-to-page)
 
-![Readmore](media/readmore.png){: width="25"} [Publishing and unpublishing pages](../../../../user-guide/page-builder/manage-pages#publish-or-unpublish-pages)
+![Readmore](media/readmore.png){: width="25"} [Publishing and unpublishing pages](/platform/user-guide/latest/page-builder/manage-pages#publish-or-unpublish-pages)
 
 
 <br>

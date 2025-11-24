@@ -23,4 +23,4 @@ This type is used to differentiate or group different types of product variation
 | `vendor` [ ==CommonVendor== ](CommonVendor/Commonvendor.md)              	| The vendor associated with the variation.                     	|
 
 
-![Readmore](media/readmore.png){: width="25"} [Managing Product Variations](../../../../../user-guide/catalog/managing-product-variations)
+![Readmore](media/readmore.png){: width="25"} [Managing Product Variations](/platform/user-guide/latest/catalog/managing-product-variations)

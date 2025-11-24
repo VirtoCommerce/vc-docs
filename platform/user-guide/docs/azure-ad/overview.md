@@ -17,7 +17,7 @@ The Azure AD module integrates Virto Commerce with Azure AD to provide secure au
 
 * Supports single-tenant and multi-tenant configurations.
 
-![Readmore](media/readmore.png){: width="25"} [Using Azure AD as SSO provider in the Platform](../../../developer-guide/Fundamentals/Security/extensions/adding-azure-as-sso-provider)
+![Readmore](media/readmore.png){: width="25"} [Using Azure AD as SSO provider in the Platform](/platform/developer-guide/latest/Fundamentals/Security/extensions/adding-azure-as-sso-provider)
 
 ![Readmore](media/readmore.png){: width="25"} [Using Azure AD as SSO provider in the Frontend Application](/storefront/developer-guide/latest/authentication/adding-sso-provider)
 

@@ -21,7 +21,7 @@ Module-specific Swagger/OpenAPI endpoints are accessible at URLs structured as `
 Example URL: `https://{admin-portal-domain-url}/docs/VirtoCommerce.Orders/swagger.json`
 
 ## Disable Swagger UI
-The Swagger UI is active by default. It can be disabled via [application settings](../../Configuration-Reference/appsettingsjson.md#virtocommerce) within the VirtoCommerce:Swagger node.
+The Swagger UI is active by default. It can be disabled via [application settings](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#virtocommerce) within the VirtoCommerce:Swagger node.
 
 
 <br>

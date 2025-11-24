@@ -46,7 +46,7 @@ Next, you need to edit the **.Web.csproj** file to allow all files from the **Te
     </Target>
 ```
 
-The **Notification** module performs discovery for template files through the path managed by the [`Notifications:DiscoveryPath` setting](../../Configuration-Reference/appsettingsjson.md#notifications), which has the `Templates` value set by default.
+The **Notification** module performs discovery for template files through the path managed by the [`Notifications:DiscoveryPath` setting](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#notifications), which has the `Templates` value set by default.
 
 In addition, if you want to use a different discovery path for individual notification types, you can add the following code into `Module.cs`:
 

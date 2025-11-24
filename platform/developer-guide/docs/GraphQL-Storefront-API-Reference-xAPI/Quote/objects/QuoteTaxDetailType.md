@@ -6,6 +6,6 @@ This type is an object that contains information about a tax detail associated w
 
 | Field                                                      | Description                                     |
 | ---------------------------------------------------------- | ----------------------------------------------- |
-| `rate` [ ==MoneyType== ](../../Cart/objects/money-type.md) | The tax rate applied.                           |
-| `amount` [ ==MoneyType== ](../../Cart/objects/money-type.md)| The tax amount calculated based on the rate.   |
+| `rate` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type) | The tax rate applied.                           |
+| `amount` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)| The tax amount calculated based on the rate.   |
 | `name`  ==String==                                         | The name of the tax detail.                     |

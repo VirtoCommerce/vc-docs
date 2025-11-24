@@ -5,7 +5,7 @@ This mutation registers:
 * A company if all arguments have been provided.
 * A customer only if the company value is null.
 
-When a company is created, the customer becomes its member and owner. In this case, the customer is assigned the role of **Organization maintainer**, whose name or Id must be specified in [appsettings.json](../../../Configuration-Reference/appsettingsjson.md).
+When a company is created, the customer becomes its member and owner. In this case, the customer is assigned the role of **Organization maintainer**, whose name or Id must be specified in [appsettings.json](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson).
 
 ## Arguments
 

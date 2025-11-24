@@ -538,7 +538,7 @@ Now that you have your first VC Shell application:
 ## Additional Resources
 
 - [Blade Generator](./blade-generator.md) - Detailed guide
-- [VC Shell Components](../../components/) - Component library
+- [VC Shell Components](/platform/developer-guide/latest/custom-apps-development/components) - Component library
 - [VC Shell Framework](../../) - Framework documentation
 - [Vue.js Guide](https://vuejs.org/guide/) - Vue.js documentation
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/) - TypeScript docs

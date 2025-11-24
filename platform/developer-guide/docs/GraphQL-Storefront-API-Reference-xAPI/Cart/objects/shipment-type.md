@@ -32,5 +32,5 @@ This type represents a shipment within a shopping cart or order.
 | `discounts` [ ==[DiscountType]== ](discount-type.md)              | The discounts applied to the shipment, represented as an array of `DiscountType` objects.                            |
 | `currency` [ ==CurrencyType== ](currency-type.md)                 | The currency used for the shipment, represented as a `CurrencyType` object.                                          |
 | `comment`  ==String==                                             | Additional comments or notes related to the shipment.                                                                |
-| `vendor` [ ==CommonVendor== ](../../Catalog/objects/CommonVendor/Commonvendor.md) | The vendor associated with the shipment.                                                             |
+| `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor) | The vendor associated with the shipment.                                                             |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](dynamic-property-value-type.md) | The dynamic properties associated with the shipment, represented as an array of `DynamicPropertyValueType` objects. |

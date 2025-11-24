@@ -9,8 +9,8 @@ VC-Shell applications follow a consistent and predictable layout structure, desi
 *   **Description:** The `VcApp` component typically serves as the main container for the entire application. It provides the overall structure, including slots for the sidebar, app bar, and main content area.
 *   **Key Component:** [`VcApp`](./ui-components/vc-app.md)
 
-![App Layout](../../media/app-layout.png)
-![App Layout](../../media/app-layout2.png)
+![App Layout](/platform/developer-guide/latest/custom-apps-development/media/app-layout.png)
+![App Layout](/platform/developer-guide/latest/custom-apps-development/media/app-layout2.png)
 
 ### Sidebar (Main Navigation Menu & Integrated App Bar Elements)
 
@@ -26,7 +26,7 @@ VC-Shell applications follow a consistent and predictable layout structure, desi
 
 *   **Key Composables/Services:** `useMenuService`, `useAppSwitcher`, `useNotifications`, `useAppBarWidget`, `useSettingsMenu`.
 
-![App Layout](../../media/app-layout3.gif)
+![App Layout](/platform/developer-guide/latest/custom-apps-development/media/app-layout3.gif)
 
 
 *   **Further Reading:**
@@ -40,7 +40,7 @@ VC-Shell applications follow a consistent and predictable layout structure, desi
 *   **Description:** This is the largest area of the application, occupying the central space. It's where primary content, pages, and blades are displayed. When `VcBladeNavigation` is used, this area will render the stack of open blades.
 *   **Key Component:** `VcBladeNavigation` is often used here to manage and display blades.
 
-![App Layout](../../media/app-layout4.png)
+![App Layout](/platform/developer-guide/latest/custom-apps-development/media/app-layout4.png)
 
 *   **Further Reading:**
     *   [Understanding Blade Anatomy](./Usage-Guides/understanding-blade-anatomy.md)

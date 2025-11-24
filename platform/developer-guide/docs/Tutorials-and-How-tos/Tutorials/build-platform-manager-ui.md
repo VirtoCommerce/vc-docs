@@ -31,19 +31,19 @@ The most common extension points for Platform Manager UI are:
 
     ![Blade](media/blades.png){: style="display: block; margin: 0 auto;" }
 
-    ![Readmore](media/readmore.png){: width="25"} [Blades and Navigation](../../Platform-Manager/Extensibility-Points/blades-and-navigation.md)
+    ![Readmore](media/readmore.png){: width="25"} [Blades and Navigation](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/blades-and-navigation)
 
 * **Toolbar**:  A dedicated area inside blade for adding commands. Hereinafter, the toolbar commands shall be referenced to as toolbar items.
 
     ![Toolbar](media/toolbar.png){: style="display: block; margin: 0 auto;" }
 
-    ![Readmore](media/readmore.png){: width="25"} [Blade Toolbar](../../Platform-Manager/Extensibility-Points/blade-toolbar.md)
+    ![Readmore](media/readmore.png){: width="25"} [Blade Toolbar](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/blade-toolbar)
  
 * **Metaform**: A placeholder (container) control that renders UI content based on provided metadata.
 
     ![Metaform](media/metaform.png){: style="display: block; margin: 0 auto;" }
 
-    ![Readmore](media/readmore.png){: width="25"} [Metaform](../../Platform-Manager/Extensibility-Points/metaform.md)
+    ![Readmore](media/readmore.png){: width="25"} [Metaform](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/metaform)
 
 * **Widget**: A transient or auxiliary tile that:
     * Provides some useful information displayed in place.
@@ -52,7 +52,7 @@ The most common extension points for Platform Manager UI are:
 
     ![Widget container](media/widgets.png){: style="display: block; margin: 0 auto;" }
 
-    ![Readmore](media/readmore.png){: width="25"} [Widget](../../Platform-Manager/Extensibility-Points/widgets.md)
+    ![Readmore](media/readmore.png){: width="25"} [Widget](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/widgets)
 
 
 ## Debug scripts
@@ -94,7 +94,7 @@ To build the module WEB UI:
 
 1. Localize UI elements. The localization is based on resources (translation files) placed in **CustomerReviewsModule&#46;Web**\\**Localizations** folder. 
 
-![Readmore](media/readmore.png){: width="25"} [Localization Implementation](../../Platform-Manager/localization.md)
+![Readmore](media/readmore.png){: width="25"} [Localization Implementation](/platform/developer-guide/latest/Platform-Manager/localization)
 
 ### Create localization
 

@@ -38,7 +38,7 @@ A well-organized codebase is crucial for long-term maintainability and team coll
 | `types/` (Optional, create if needed within a module)| For TypeScript types, interfaces, and enums that are specific to this module's domain. |
 | `utils/` (Optional, create if needed within a module) | For utility functions used only by this module.|
 
-![Readmore](../../media/readmore.png){: width="25"} [Developing custom VC-Shell modules](developing-custom-modules.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Developing custom VC-Shell modules](developing-custom-modules.md)
 
 
 
@@ -78,7 +78,7 @@ This file typically brings together all foundational styling aspects of your app
     - Define CSS variable blocks for new themes (e.g., `:root[data-theme="your-new-theme"] { --primary-500: #0000FF; /* ... */ }`), or
     - Provide overrides for variables of existing themes (e.g., `:root[data-theme="light"] { --primary-500: #AA00BB; }`). 
     
-    ![Readmore](../../media/readmore.png){: width="25"} [Managing application themes with **useTheme**](../Essentials/Usage-Guides/managing-themes-with-usetheme.md)
+    ![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Managing application themes with **useTheme**](../Essentials/Usage-Guides/managing-themes-with-usetheme.md)
 
 -   **TailwindCSS imports**: This file should import TailwindCSS's base styles, components, and utilities, typically after your custom theme definitions to ensure correct cascade if Tailwind utilities also use CSS variables affected by themes.
 

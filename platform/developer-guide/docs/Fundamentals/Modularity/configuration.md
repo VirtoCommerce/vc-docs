@@ -1,6 +1,6 @@
 # Configuration
 
-This node of the [appsettings.json file](../../Configuration-Reference/appsettingsjson.md#modularity) configures the modularity logic.
+This node of the [appsettings.json file](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#modularity) configures the modularity logic.
 
 {%
    include-markdown "../../Configuration-Reference/appsettingsjson.md"

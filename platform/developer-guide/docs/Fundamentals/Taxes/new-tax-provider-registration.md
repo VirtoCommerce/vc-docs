@@ -6,7 +6,7 @@ In order to calculate taxes in Virto Commerce, register at least one `TaxProvide
 
 To define a new tax provider, you need to:
 
-1. [Create a new module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
+1. [Create a new module](/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/creating-custom-module).
 1. Create a class derived from the `TaxProvider` abstract class and override the `CalculateRate` method:
 
     ```cs
@@ -58,7 +58,7 @@ After you complete the configuration, your tax provider will be used for tax cal
 If our standard user interface is not enough, you may consider implementing your own UI for managing tax providers through the standard UI extension point (widget container with the `taxProviderDetail` group). 
 <br>
 <br>
-![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
+![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/widgets)
 
 
 

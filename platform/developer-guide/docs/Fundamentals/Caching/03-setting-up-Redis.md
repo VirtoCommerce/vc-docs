@@ -25,7 +25,7 @@ Each cache instance with the same configuration subscribes to the same channel a
 
 To add a Redis cache backplane to the Virto Platform at the configuration stage, copy `StackExchange.Redis`, the primary connection string, to [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0):
 
-   * For local deployment, save the connection string with [Secret Manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0#secret-manager) or [appsetting.json](../../Configuration-Reference/appsettingsjson.md):
+   * For local deployment, save the connection string with [Secret Manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0#secret-manager) or [appsetting.json](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson):
       
       ``` json title="appsettings.json"
       "ConnectionStrings": {

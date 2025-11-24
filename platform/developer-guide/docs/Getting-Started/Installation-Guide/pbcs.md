@@ -30,5 +30,5 @@ Install a PBC by running:
 vc-build install -PackageManifestPath path to package.json
 ```
 
-![Readmore](media/readmore.png){: width="25"} [Release strategy](../../Updating-Virto-Commerce-Based-Project/release-strategy-overview.md)
+![Readmore](media/readmore.png){: width="25"} [Release strategy](/platform/developer-guide/latest/Updating-Virto-Commerce-Based-Project/release-strategy-overview)
 

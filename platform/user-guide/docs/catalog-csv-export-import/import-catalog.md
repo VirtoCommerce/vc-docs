@@ -18,7 +18,7 @@ To import your catalog in a CSV format:
 
 Your catalog has been successfully imported.
 
-![Readmore](media/readmore.png){: width="25"} [Importing CSV catalog example](../../../deployment-on-cloud/add-products-via-csv)
+![Readmore](media/readmore.png){: width="25"} [Importing CSV catalog example](/platform/deployment-on-cloud/latest/add-products-via-csv)
 
 
 <br>

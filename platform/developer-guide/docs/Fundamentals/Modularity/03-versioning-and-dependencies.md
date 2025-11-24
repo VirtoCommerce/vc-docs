@@ -52,7 +52,7 @@ As all module assemblies are copied into the *probing* folder before being loade
 This fact may lead to an unexpected update of third party dependencies for other modules and the Platform application itself when resolving an assembly at runtime. You should always consider this fact when updating dependencies for your custom modules.
 
 
-![Readmore](media/readmore.png){: width="25"} [Virto Commerce release strategy overview](../../Updating-Virto-Commerce-Based-Project/release-strategy-overview.md)
+![Readmore](media/readmore.png){: width="25"} [Virto Commerce release strategy overview](/platform/developer-guide/latest/Updating-Virto-Commerce-Based-Project/release-strategy-overview)
 
 
 

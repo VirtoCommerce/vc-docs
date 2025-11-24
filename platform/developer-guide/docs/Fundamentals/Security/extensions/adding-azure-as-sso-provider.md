@@ -5,7 +5,7 @@ This guide provides information about using Azure AD as a single sign-on (SSO) p
 !!! note
     **Azure Active Directory (Azure AD)** has been renamed to **Microsoft Entra ID**. For the remainder of this guide, these terms are considered synonymous.
 
-![Readmore](media/readmore.png){: width="25"} [Azure App Configuration](../../../Tutorials-and-How-tos/How-tos/azure-app-configuration.md)
+![Readmore](media/readmore.png){: width="25"} [Azure App Configuration](/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/azure-app-configuration)
 
 By default, the Virto Commerce Platform Manager authenticates users with a login and password. However, this method has its drawbacks:
 

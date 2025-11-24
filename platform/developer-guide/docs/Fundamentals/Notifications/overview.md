@@ -18,14 +18,14 @@ For data modeling purposes, the notification data model contains the following e
 * **Notification template:** Houses notification content with syntax based on [Liquid by Shopify](https://shopify.github.io/liquid/). The Liquid elements in templates act as placeholders: just before the message is sent to the recipient, Liquid is replaced and interpreted using the data taken from properties, which in their turn come from the incoming notification type instance; the data is then output into the resulting message text.
 
 	!!! note
-		To edit the notifications sent from your store, you can [provide basic customization](../../../../user-guide/notifications/notification-templates) to your notification templates.
+		To edit the notifications sent from your store, you can [provide basic customization](/platform/user-guide/latest/notifications/notification-templates) to your notification templates.
 
 * **Notification message:** The resulting text or email message scheduled or sent by a specific sender and stored in the notification feed within the system.
 
 <br>
 <br>
 
-![Readmore](media/readmore.png){: width="25"} [Notifications module overview](../../../../user-guide/notifications/overview)
+![Readmore](media/readmore.png){: width="25"} [Notifications module overview](/platform/user-guide/latest/notifications/overview)
 
 ![Readmore](media/readmore.png){: width="25"} [Scriban Liquid Reference](https://github.com/scriban/scriban/blob/master/doc/liquid-support.md)
 

@@ -3,11 +3,11 @@
 !!! note
     The blue-green indexing is supported by the ElasticSearch, ElasticSearch 8, and Azure Search modules.<br>
 
-    ![Readmore](media/readmore.png){: width="25"} [Elastic Search module](../../../../../user-guide/elastic-search/overview)
+    ![Readmore](media/readmore.png){: width="25"} [Elastic Search module](/platform/user-guide/latest/elastic-search/overview)
 
-    ![Readmore](media/readmore.png){: width="25"} [Elastic Search 8 module](../../../../../user-guide/elastic-search-8/overview)
+    ![Readmore](media/readmore.png){: width="25"} [Elastic Search 8 module](/platform/user-guide/latest/elastic-search-8/overview)
 
-    ![Readmore](media/readmore.png){: width="25"} [Azure Search module](../../../../../user-guide/azure-search/overview)
+    ![Readmore](media/readmore.png){: width="25"} [Azure Search module](/platform/user-guide/latest/azure-search/overview)
 
 
 After you choose **Delete and build** when building search index:

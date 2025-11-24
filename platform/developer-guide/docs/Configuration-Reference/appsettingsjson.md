@@ -1178,7 +1178,7 @@ The Payments node configures various payment gateway integrations for the Virto 
 
 This node configures the Authorize.Net payment gateway integration, enabling secure payment processing using Accept.js and the Authorize.Net API. Confidential Authorize.Net account settings should be configured in appsetting.json.
 
-![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](../../../user-guide/authorize-net/manage-authorize-net-module#configure-settings)
+![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](/platform/user-guide/latest/authorize-net/manage-authorize-net-module#configure-settings)
 
 
 <!--authorize-net-start-->

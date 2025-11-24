@@ -1,6 +1,6 @@
 # Cache Configuration
 
-Cache is commonly configured in the **Caching** section of the [appsettings.json file](../../Configuration-Reference/appsettingsjson.md#caching):
+Cache is commonly configured in the **Caching** section of the [appsettings.json file](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#caching):
 
 {%
    include-markdown "../../Configuration-Reference/appsettingsjson.md"
@@ -14,7 +14,7 @@ Cache is commonly configured in the **Caching** section of the [appsettings.json
 
 <br>
 <br>
-![Readmore](media/readmore.png){: width="25"} [Configuration reference](../../Configuration-Reference/appsettingsjson.md)
+![Readmore](media/readmore.png){: width="25"} [Configuration reference](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson)
 
 
 

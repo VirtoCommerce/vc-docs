@@ -5,8 +5,8 @@ This guide provides practical examples of how to effectively manage and display 
 ## Prerequisites
 
 -   Understanding of Vue 3 Composition API (`ref`, `computed`, `defineProps`, `defineEmits`).
--   Familiarity with the [`usePopup` Composable API Reference](../../Essentials/shared/components/popup-handler.md).
--   Familiarity with the [`VcPopup` Component API Reference](../../Essentials/ui-components/vc-popup.md).
+-   Familiarity with the [`usePopup` Composable API Reference](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/components/popup-handler).
+-   Familiarity with the [`VcPopup` Component API Reference](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup).
 -   Basic knowledge of Vue's dynamic components and slots.
 
 ## Core Concepts

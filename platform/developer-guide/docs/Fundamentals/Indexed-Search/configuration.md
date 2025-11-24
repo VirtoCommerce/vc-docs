@@ -1,6 +1,6 @@
 # Configuration
 
-This section explains the basic configuration for the indexed search logic via the [appsettings.json file](../../Configuration-Reference/appsettingsjson.md#search).
+This section explains the basic configuration for the indexed search logic via the [appsettings.json file](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#search).
 
 ## Search
 

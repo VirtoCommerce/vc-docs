@@ -75,7 +75,7 @@ All business-specific capabilities (like catalog, pricing, marketing, or order m
 
 ## Modules
 
-[Modules](../../user-guide/index) are the primary unit of functional delivery into the Platform. Each module can include:
+[Modules](/platform/user-guide/latest/index) are the primary unit of functional delivery into the Platform. Each module can include:
 
 * A data layer, which defines or extends the domain model and database schema.
 * A business logic layer, encapsulating domain services and rules.

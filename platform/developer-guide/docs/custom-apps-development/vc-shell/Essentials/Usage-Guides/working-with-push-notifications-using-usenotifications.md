@@ -328,7 +328,7 @@ export default createAppModule(
 
 * **Avoid Duplication**: Don't use both approaches for the same notification type unless you have a specific reason.
 
-* **Toast Appropriately**: Use local subscriptions with toasts for immediate user feedback that doesn't need to persist. For showing toasts, use the global [`notification` service API](../../Essentials/shared/components/notifications.md).
+* **Toast Appropriately**: Use local subscriptions with toasts for immediate user feedback that doesn't need to persist. For showing toasts, use the global [`notification` service API](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/components/notifications).
 
 * **Template for Persistence**: Use global subscriptions with custom templates for notifications that users might need to review later in the notification center.
 

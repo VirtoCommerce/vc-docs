@@ -125,7 +125,7 @@ To populate the **DummyModule.Data** project with necessary components:
 
 ## Create module package
 
-Create the module package following [this article](../../CLI-tools/overview.md).
+Create the module package following [this article](/platform/developer-guide/latest/CLI-tools/overview).
 
 By following these steps, you can create a new module in a structured and organized manner, ensuring compatibility with the Virto Commerce Platform.
 

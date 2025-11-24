@@ -15,9 +15,9 @@ This type is an object that provides information about a specific item within a 
 | `comment`  ==String==                                                 | A comment about the item.                         |
 | `imageUrl`  ==String==                                                | The URL of an image representing the item.        |
 | `taxType`  ==String==                                                 | The type of tax associated with the item.         |
-| `listPrice` [ ==MoneyType== ](../../Cart/objects/money-type.md)       | The list price of the item.                       |
-| `salePrice` [ ==MoneyType== ](../../Cart/objects/money-type.md)       | The sale price of the item.                       |
+| `listPrice` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)       | The list price of the item.                       |
+| `salePrice` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)       | The sale price of the item.                       |
 | `selectedTierPrice` [ ==QuoteTierPriceType== ](QuoteTierPriceType.md) | The selected tier price for the item.             |
 | `proposalPrices` [ ==[QuoteTierPriceType]== ](QuoteTierPriceType.md)  | A list of proposal prices for the item.           |
-| `product` [ ==Product== ](../../Catalog/objects/ProductType.md)       | Information about the associated product.         |
+| `product` [ ==Product== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType)       | Information about the associated product.         |
 

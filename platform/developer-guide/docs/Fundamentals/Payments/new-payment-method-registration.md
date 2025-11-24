@@ -19,7 +19,7 @@ This chart shows how the off-site payment method works:
 
 In order to define a new payment method:
 
-1. [Create a new module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
+1. [Create a new module](/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/creating-custom-module).
 1. Create a class derived from the `PaymentMethod` abstract class and override all abstract methods; each of them will be called on the appropriate stage of the payment processing workflow:
 
 	```csharp
@@ -78,7 +78,7 @@ After you are done configuring, your payment method will appear in the front end
 
 ## UI customization
 
-If our standard user interface is not enough, you may consider implementing your own UI for managing payment methods through the standard UI extension point (widget container with the `paymentMethodDetail` group). You can read more about [extending the existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md).
+If our standard user interface is not enough, you may consider implementing your own UI for managing payment methods through the standard UI extension point (widget container with the `paymentMethodDetail` group). You can read more about [extending the existing UI with widgets](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/widgets).
 
 
 <br>

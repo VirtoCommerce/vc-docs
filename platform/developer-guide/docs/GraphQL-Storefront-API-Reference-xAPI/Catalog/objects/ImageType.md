@@ -14,4 +14,4 @@ This type represents an image file or resource.
 | `sortOrder`  ==Int==       	| The order of the image within a collection or set.                                                     	|
 | `cultureName`  ==String==  	| A language to retrieve data in.                                                                          	|
 
-![Readmore](media/readmore.png){: width="25"} [Managing Images](../../../../../user-guide/catalog/managing-categories)
+![Readmore](media/readmore.png){: width="25"} [Managing Images](/platform/user-guide/latest/catalog/managing-categories)

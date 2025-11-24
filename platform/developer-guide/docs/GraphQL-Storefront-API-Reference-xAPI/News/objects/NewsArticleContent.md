@@ -11,5 +11,5 @@ This type defines the structure of a news article and contains its main content,
 | `title` ==String==                                            | The title of the news article.                                                        |
 | `content` ==String==                                          | The full content of the news article.                                                 |
 | `contentPreview` ==String==                                   | A short preview or excerpt of the news article content.                               |
-| `seoInfo` [ ==SeoInfo!== ](../../Catalog/objects/SeoInfo.md)  | SEO metadata for the article, such as semantic URL, page title, and meta description. |
+| `seoInfo` [ ==SeoInfo!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo)  | SEO metadata for the article, such as semantic URL, page title, and meta description. |
 

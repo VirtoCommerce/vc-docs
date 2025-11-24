@@ -13,5 +13,5 @@ This type represents the details of an organization during the registration proc
 | `status`  ==String==                                                                                         | The status of the organization.                          |
 | `createdBy`  ==String==                                                                                      | The user or entity who created the organization.         |
 | `ownerId`  ==String==                                                                                        | The Id of the owner associated with the organization.    |
-| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](../../Cart/objects/dynamic-property-value-type.md) | The dynamic properties associated with the organization. |
+| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | The dynamic properties associated with the organization. |
 

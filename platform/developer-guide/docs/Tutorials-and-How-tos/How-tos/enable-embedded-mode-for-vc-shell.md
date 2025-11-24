@@ -1,6 +1,6 @@
 # Enable Embedded Mode for VC-Shell Instances in Platform
 
-Vue-based external modules (such as VC-Shell apps like [Push Messages](../../../../user-guide/push-messages/overview)) can now be launched directly from the AngularJS-based Virto Commerce back office using **embedded mode**.
+Vue-based external modules (such as VC-Shell apps like [Push Messages](/platform/user-guide/latest/push-messages/overview)) can now be launched directly from the AngularJS-based Virto Commerce back office using **embedded mode**.
 
 This feature allows module developers to open a new VC-Shell instance from the VC Platform menu, creating a more seamless and unified user experience across both AngularJS and VueJS applications.
 

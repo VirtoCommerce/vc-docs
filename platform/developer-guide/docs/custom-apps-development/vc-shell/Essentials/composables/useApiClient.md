@@ -81,4 +81,4 @@ npm run generate-api-client --APP_PLATFORM_URL=https://api.example.com/ --APP_PL
 ## Related Resources
 
 - [API Client Integration](../API-Integration/api-client-integration.md) - Guide for generating API clients
-- [Connecting to Platform](../../How-tos/Connecting-to-Platform.md) - Guide for connecting to VirtoCommerce Platform
+- [Connecting to Platform](/platform/developer-guide/latest/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform) - Guide for connecting to VirtoCommerce Platform

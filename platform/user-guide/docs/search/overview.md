@@ -12,7 +12,7 @@ The **Search** module (called **Search Index** in the Platform menu) provides a 
 The Search module defines common abstractions for indexed search functionality across various search engines, providing flexibility and scalability for ecommerce search solutions. The Virto Commerce Platform is search provider agnostic, allowing different search modules to be installed separately to better meet user preferences. Create a custom search provider to integrate with the search engine or choose from a range of well-know search engines:
 
 * [Elasticsearch 9](https://github.com/VirtoCommerce/vc-module-elastic-search-9): Latest-generation provider built on the official .NET Elasticsearch client, compatible with Elasticsearch 9.x and 10.x (including Elastic Cloud deployments).
-* [Elasticsearch 8](https://github.com/VirtoCommerce/vc-module-elastic-search-8): Supports [Elasticsearch 8.x and 9.x](../../../developer-guide/Fundamentals/Indexed-Search/integration/elastic-search-8). 
+* [Elasticsearch 8](https://github.com/VirtoCommerce/vc-module-elastic-search-8): Supports [Elasticsearch 8.x and 9.x](/platform/developer-guide/latest/Fundamentals/Indexed-Search/integration/elastic-search-8). 
 * [Elastic App Search](https://github.com/VirtoCommerce/vc-module-elastic-app-search): Preferred search provider with rich no-code search customization and analytics tools.
 * [Lucene](https://github.com/VirtoCommerce/vc-module-lucene-search): Recommended for local development mode.
 * [Elastic Search](https://github.com/VirtoCommerce/vc-module-elastic-search): Version compatible with Elasticsearch 7.x.
@@ -43,7 +43,7 @@ The diagram below illustrates the functionality of the Search module:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
-![Readmore](media/readmore.png){: width="25"} [Configuring Search Settings](../../../developer-guide/Configuration-Reference/appsettingsjson)
+![Readmore](media/readmore.png){: width="25"} [Configuring Search Settings](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson)
 
 
 <br>

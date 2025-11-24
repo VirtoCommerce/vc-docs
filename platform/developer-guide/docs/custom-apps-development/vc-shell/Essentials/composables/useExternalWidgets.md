@@ -346,4 +346,4 @@ useExternalWidgets({
 - [useWidgets Composable](./useWidgets.md): Core widget management API
 - [registerExternalWidget Function](./useWidgets.md#external-widget-registration-system): Registering external widgets
 - [Creating External Widgets Guide](../Usage-Guides/creating-and-registering-widgets-with-usewidgets.md#approach-2-external-widget-system): Step-by-step external widget creation
-- [Modularity Guide](../../Extensibility/modularity.md#5-external-blade-widgets): Module architecture and external widgets
+- [Modularity Guide](/platform/developer-guide/latest/custom-apps-development/vc-shell/Extensibility/modularity.md#5-external-blade-widgets): Module architecture and external widgets

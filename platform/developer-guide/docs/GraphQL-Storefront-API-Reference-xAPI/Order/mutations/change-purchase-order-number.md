@@ -22,7 +22,7 @@ The `InputChangePurchaseOrderNumber` represents the input object for changing th
 
 | Possible return                                          	| Description                                                 	|
 |---------------------------------------------------------	|--------------------------------------------------------------	|
-| [`CartType`](../../Cart/objects/cart-type.md)           	|  The properties and fields associated with a shopping cart.  	|
+| [`CartType`](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type)           	|  The properties and fields associated with a shopping cart.  	|
 
 
 === "Mutation"

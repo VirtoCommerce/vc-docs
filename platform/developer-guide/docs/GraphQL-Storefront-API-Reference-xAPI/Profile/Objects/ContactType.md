@@ -15,11 +15,11 @@ This type represents a contact and includes various fields to describe the conta
 | `emails`  ==[String]==        	                                            | The email addresses associated with the contact.                 	|
 | `groups`  ==[String]==        	                                            | The groups to which the contact belongs.                         	|
 | `seoObjectType`  ==String==   	                                            | The type of object that the contact is associated with.          	|
-| `seoInfo(...)` [ ==SeoInfo== ](../../Catalog/objects/SeoInfo.md)              | Request related SEO info.                                       	|
+| `seoInfo(...)` [ ==SeoInfo== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo)              | Request related SEO info.                                       	|
 | `defaultBillingAddress` [ ==MemberAddressType== ](MemberAddressType.md)     	| The default billing address of the contact.                      	|
 | `defaultShippingAddress` [ ==MemberAddressType== ](MemberAddressType.md)    	| The default shipping address of the contact.                     	|
 | `addresses(...)` [ ==MemberAddressConnection== ](MemberAddressConnection.md)  | A connection to a list of addresses associated with the contact. 	|
-| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](../../Cart/objects/dynamic-property-value-type.md)| The dynamic properties of the contact.|
+| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)| The dynamic properties of the contact.|
 | `firstName`  ==String==       	                                            | The first name of the contact.                                  	|
 | `lastName`  ==String==                                                      	| The last name of the contact.                                   	|
 | `middleName`  ==String==      	                                            | The middle name of the contact.                                 	|
