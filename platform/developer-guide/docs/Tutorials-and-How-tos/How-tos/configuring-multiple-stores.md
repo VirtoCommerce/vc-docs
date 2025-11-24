@@ -11,7 +11,7 @@ For demo purposes, we will use [B2B Theme](https://github.com/VirtoCommerce/vc-t
 
 ## Prerequisites 
 
-1. Deploy the [Virto Commerce Platform](../../Getting-Started/Installation-Guide/windows.md) and [Frontend Application](../../../../../storefront/developer-guide/deployment). 
+1. Deploy the [Virto Commerce Platform](../../Getting-Started/Installation-Guide/windows.md) and [Frontend Application](/storefront/developer-guide/latest/deployment). 
 1. Configure the shared **cms-content** folder between the Frontend Application and Platform components.
 1. [Set up and configure](https://docs.virtocommerce.org/new/user-guide/platform-overview/) languages, currencies, and other relevant settings.
 1. Configure or import the necessary catalog(s) for your stores.

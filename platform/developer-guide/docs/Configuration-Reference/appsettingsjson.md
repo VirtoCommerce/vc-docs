@@ -684,7 +684,7 @@ This node is used for authentication with Google OAuth 2.0 via the [Google SSO m
 
 ![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
 
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](/storefront/developer-guide/latest/authentication/adding-google-as-sso-provider)
 
 
 ### Authorization

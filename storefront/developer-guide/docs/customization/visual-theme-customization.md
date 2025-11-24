@@ -18,7 +18,7 @@ You can use the following presets as a base to create own presets:
 !!! note
     You can use AI to create color palettes - ask it to generate colors for an e-commerce website in JSON format based on presets. 
 
-![Readmore](media/readmore.png){: width="25"} [Applying presets](../../../../platform/user-guide/content/managing-themes#apply-theme-color-scheme)
+![Readmore](media/readmore.png){: width="25"} [Applying presets](/platform/user-guide/latest/content/managing-themes#apply-theme-color-scheme)
 
 
 ## Customizable variables

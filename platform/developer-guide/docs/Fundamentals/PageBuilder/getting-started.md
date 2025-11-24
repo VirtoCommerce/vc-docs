@@ -10,7 +10,7 @@ Before you begin, ensure that the following components are installed:
     ![Readmore](media/readmore.png){: width="25"} [Platform deployment guide](../../Getting-Started/Installation-Guide/windows.md)
 
 * [Virto Frontend 2.2.0+](https://github.com/VirtoCommerce/vc-frontend/releases/)  
-    ![Readmore](media/readmore.png){: width="25"} [Frontend deployment guide](../../../../../storefront/developer-guide/deployment)
+    ![Readmore](media/readmore.png){: width="25"} [Frontend deployment guide](/storefront/developer-guide/latest/deployment)
 
 * [Page Builder module 3.201+](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases)
 

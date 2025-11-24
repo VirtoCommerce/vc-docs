@@ -56,7 +56,7 @@ To create an order order shipment:
 A new shipment has been created.
 
 !!! note
-    Users can also [create shipment documents in the Platform](../../../../platform/user-guide/order-management/managing-documents#create-shipment-documents).
+    Users can also [create shipment documents in the Platform](/platform/user-guide/latest/order-management/managing-documents#create-shipment-documents).
 
 ### Add items to shipment
 

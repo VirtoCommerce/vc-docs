@@ -22,7 +22,7 @@ To complete your order:
 
     ![Cart details](../media/cart-details.png)
 
-    The cart page may also show recently browsed products if this [feature is enabled](../../../../platform/user-guide/recommend/overview#get-started).
+    The cart page may also show recently browsed products if this [feature is enabled](/platform/user-guide/latest/recommend/overview#get-started).
 
     ![Recently browsed products](../media/recently-browsed-products.png){: width="850"}
 
@@ -39,7 +39,7 @@ To complete your order:
         Select a pickup point from the list if you do not require delivery and provide your comments, if any.
         <br>
         <br>
-        ![Readmore](../media/readmore.png){: width="25"} [Managing pickup locations](../../../../platform/user-guide/shipping/managing-shipping-methods#add-or-edit-pickup-location)
+        ![Readmore](../media/readmore.png){: width="25"} [Managing pickup locations](/platform/user-guide/latest/shipping/managing-shipping-methods#add-or-edit-pickup-location)
         <br>
         <br>
 
@@ -55,7 +55,7 @@ To complete your order:
         * Select a shipping address if you need you order to be delivered to your address.
 
             !!! note
-                If [Shipping address policy](../../../../platform/user-guide/store/settings#general-settings) is enabled in the Platform, the shipping address on the Shipping page will be prefilled with the most recently used address.
+                If [Shipping address policy](/platform/user-guide/latest/store/settings#general-settings) is enabled in the Platform, the shipping address on the Shipping page will be prefilled with the most recently used address.
 
         * Select a delivery method from the dropdown list: **Ground** or **Air**. The shipping cost appears in the order summary.
         * Enter your comments, if any.

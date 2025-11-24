@@ -6,11 +6,11 @@ In this guide, we will explore the necessary steps to get started with the Virto
 
 - Install latest version of vc-platform 3.x. 
     
-    - [On Windows](../../../../platform/developer-guide/Getting-Started/Installation-Guide/windows)
-    - [On macOS](../../../../platform/developer-guide/Getting-Started/Installation-Guide/macOS)
-    - [On Linux](../../../../platform/developer-guide/Getting-Started/Installation-Guide/linux)
+    - [On Windows](/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows)
+    - [On macOS](/platform/developer-guide/latest/Getting-Started/Installation-Guide/macOS)
+    - [On Linux](/platform/developer-guide/latest/Getting-Started/Installation-Guide/linux)
 
-- Install the [xAPI module.](../../../../platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started)
+- Install the [xAPI module.](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started)
 - Install the [Profile xAPI module](https://github.com/VirtoCommerce/vc-module-profile-experience-api) module.
 - Install [Node](https://nodejs.org/en/download/) v.16.X
 - Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) package manager.

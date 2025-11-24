@@ -93,7 +93,7 @@ Next you will be forced to set your own credentials:
     Make sure to save your credentials. Without them, you won’t be able to sign in again.
 
 !!! note
-    You can configure additional authentication methods, such as signing in via [Google](../../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider#manage-platform-settings) or [Entra ID (formerly Azure AD)](../../../../storefront/developer-guide/authentication/adding-sso-provider).
+    You can configure additional authentication methods, such as signing in via [Google](/storefront/developer-guide/latest/authentication/adding-google-as-sso-provider#manage-platform-settings) or [Entra ID (formerly Azure AD)](/storefront/developer-guide/latest/authentication/adding-sso-provider).
 
 
 ## Create catalog

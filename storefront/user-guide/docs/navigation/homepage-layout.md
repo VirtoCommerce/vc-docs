@@ -26,7 +26,7 @@ From the top menu, you can:
 
 ![Readmore](../media/readmore.png){: width="25"} [Comparing products](../shopping/compare-products.md)
 
-![Raedmore](../media/readmore.png){: width="25"} [Managing mega menu](../../../../platform/user-guide/content/managing-linklists#manage-mega-menu)
+![Raedmore](../media/readmore.png){: width="25"} [Managing mega menu](/platform/user-guide/latest/content/managing-linklists#manage-mega-menu)
 
 
 

@@ -28,7 +28,7 @@ Click **Filters** to narrow down the selection of variations:
 
 ![Variations filter](../media/variations-filter.png){: style="display: block; margin: 0 auto;" width="750"}
 
-If a [reviews option is enabled](../../../../platform/user-guide/rating-reviews/managing-reviews#enable-product-reviews) for the Frontend Application, the reviews are displayed below the product description:
+If a [reviews option is enabled](/platform/user-guide/latest/rating-reviews/managing-reviews#enable-product-reviews) for the Frontend Application, the reviews are displayed below the product description:
 
 ![Product reviews](../media/reviews-on-frontend.png){: style="display: block; margin: 0 auto;" }
 

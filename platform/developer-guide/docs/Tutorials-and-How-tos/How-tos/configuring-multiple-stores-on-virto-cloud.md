@@ -8,7 +8,7 @@ Below is a step-by-step guide to set up multiple stores on Virto Cloud.
 
 * Your Virto Commerce Platform is [deployed and running on Virto Cloud](../../../../deployment-on-cloud/deploy-on-virto-cloud).
 
-* Review [Virto Commerce Frontend Architecture](../../../../../storefront/developer-guide/architecture).
+* Review [Virto Commerce Frontend Architecture](/storefront/developer-guide/latest/architecture).
 
 ## Create and configure new stores
 

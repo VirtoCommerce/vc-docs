@@ -15,7 +15,7 @@ This guide will explain how to configure and run Elastic App Search for your env
 
 ## Set up Frontend Application 
 
-Set up Virto Commerce Frontend Application as described [in this instruction](../../../../../../storefront/developer-guide/deployment)
+Set up Virto Commerce Frontend Application as described [in this instruction](/storefront/developer-guide/latest/deployment)
 
 ## Set up Elastic App Search
 

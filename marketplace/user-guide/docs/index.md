@@ -14,7 +14,7 @@ Our Marketplace solution provides separate self-service portals to manage a rang
 
 === "Operator portal"
 
-    The Operator Portal shares many functionalities with the Platform. You can refer to the Platform user documentation for guides on modules like [Catalog](../../../platform/user-guide/catalog/overview), [Pricing](../../../platform/user-guide/pricing/overview), [Notifications](../../../platform/user-guide/notifications/overview), and more. Below are the marketplace specific features:
+    The Operator Portal shares many functionalities with the Platform. You can refer to the Platform user documentation for guides on modules like [Catalog](/platform/user-guide/latest/catalog/overview), [Pricing](/platform/user-guide/latest/pricing/overview), [Notifications](/platform/user-guide/latest/notifications/overview), and more. Below are the marketplace specific features:
 
     |Item|Description|
     |---|---|
