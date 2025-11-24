@@ -16,3 +16,4 @@ This type represents the response data for a store, including its basic informat
 | `availableCurrencies` [==[CurrencyType!]!==](../../Order/objects/currency-type.md)    | An array of available currencies for the store.             |
 | `settings` [==StoreSettingsType!==](StoreSettingsType.md)                             | The settings configuration for the store.                   |
 | `graphQLSettings` [==GraphQLSettingsType!==](GraphQLSettingsType.md)                  | The GraphQL settings configuration for the store.           |
+| `dynamicProperties` [==DynamicPropertyValueType==](../../Cart/objects/dynamic-property-value-type.md)| A collection of dynamic property values assigned to the store. |            

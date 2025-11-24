@@ -561,6 +561,23 @@ nav:
                       - PageDocumentEdge: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge.md
                       - PageDocumentType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType.md
                       - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/SlugInfoResponseType.md
+          - xPickup: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/xPickup/overview.md
+                - Queries:
+                      - pickupLocations: GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/pickupLocations.md
+                      - cartPickupLocations: GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/cartPickupLocations.md
+                      - productPickupLocations: GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/productPickupLocations.md
+                - Objects:
+                      - pickupLocationType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationType.md
+                      - pickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationConnection.md
+                      - PickupLocationAddressType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/PickupLocationAddressType.md
+                      - pickupAddressType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupAddressType.md
+                      - cartPickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/CartPickupLocationConnection.md
+                      - pickupLocationEdge: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationEdge.md
+                      - productPickupAvailabilityType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupAvailabilityType.md
+                      - productPickupLocation: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocation.md
+                      - productPickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocationConnection.md
+                      - productPickupLocationEdge: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocationEdge.md
           - xProfile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
                 - Queries:

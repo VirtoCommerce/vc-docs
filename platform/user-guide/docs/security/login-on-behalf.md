@@ -40,12 +40,12 @@ To log in on behalf of another user, sign into Virto Commerce portal as an admin
 	1. In the next **Users** blade, select the required account from the list.
 	1. The **User information** blade appears. Click **Login on behalf** in the toolbar.  
 
-		![Logging via Contacts](media/login-on-behalf-path2.png){: width="800"}
+		![Logging via Contacts](media/login-on-behalf-path2.png){: style="display: block; margin: 0 auto;" width="900"}
 
 
-The Frontend Application will open in a new window and prompt you to re-enter your credentials for security purposes:
+The Frontend application will open in a new window and prompt you to re-enter your credentials for security purposes:
 
-![Redirection to Storefront](media/redirection-to-storefront.png){: width="750"}
+![Redirection to Storefront](media/redirection-to-storefront.png){: style="display: block; margin: 0 auto;" width="750"}
 
 
 
@@ -55,5 +55,5 @@ The Frontend Application will open in a new window and prompt you to re-enter yo
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../api-key">← Generating API key</a>
-    <a href="../../seo/overview">SEO module overview →</a>
+    <a href="../active-sessions">Managing active sessions →</a>
 </div>

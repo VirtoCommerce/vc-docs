@@ -4,8 +4,8 @@ In Virto Commerce Platform, each user must have at least one role assigned. Virt
 
 Managing roles includes:
 
-* [Creating new roles and assigning permissions](roles-and-permissions.md#create-new-role)
-* [Editing new roles](roles-and-permissions.md#edit-roles)
+* [Creating new roles and assigning permissions.](roles-and-permissions.md#create-new-role)
+* [Editing new roles.](roles-and-permissions.md#edit-roles)
 
 ## Create new role and assign permissions
 

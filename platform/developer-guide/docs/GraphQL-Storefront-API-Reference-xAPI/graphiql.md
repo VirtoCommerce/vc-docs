@@ -12,7 +12,7 @@ By default, GraphiQL is disabled. To enable it, configure the following setting 
 }
 ```
 
-1. Access the interactive [GraphiQL](https://github.com/graphql/graphiql) environment at the following URL: http://localhost:10645/ui/graphiql
+1. Access the interactive [GraphiQL](https://github.com/graphql/graphiql) environment at the following URL: http://localhost:10645/ui/graphiql or open it via **Developer tools** in the main menu:
 
     Once in the GraphiQL environment, you can send GraphQL queries or mutations. The interface is as follows:
 

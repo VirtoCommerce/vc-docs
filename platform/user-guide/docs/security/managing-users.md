@@ -1,4 +1,4 @@
-﻿# Managing User Accounts
+﻿# Manage User Accounts
 
 Managing user accounts includes:
 
@@ -16,11 +16,11 @@ To create new users and assign roles to them:
 1. In the next blade, click **Users** to open the **Users** blade.
 1. Click **Add** in the toolbar.
 
-	![Path](media/add-user-path.png)
+	![Path](media/add-user-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in the fields. Each user must have at least one role assigned.
 
-	![New user](media/new-account-screen.png)
+	![New user](media/new-account-screen.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes.
 
@@ -33,7 +33,7 @@ To edit a user:
 1. Follow steps 1-2 from the instruction above.
 1. In the **Users** blade, select the required user and edit the following fields in the next blade. 
 
-	![Managing user details](media/managing-user-details.png)
+	![Managing user details](media/managing-user-details.png){: style="display: block; margin: 0 auto;" }
 
 1. Confirm changes.
 
@@ -54,7 +54,7 @@ To assign roles to users:
 1. In the **Assign roles** blade, check the roles to be assigned to the user.
 1. Click **OK** to save the changes.
 
-![path](media/assigning-roles-path.png)
+![path](media/assigning-roles-path.png){: style="display: block; margin: 0 auto;" }
 
 The role has been assigned to the user.
 

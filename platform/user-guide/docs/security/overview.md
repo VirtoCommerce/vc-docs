@@ -21,6 +21,7 @@ With the Security module, you can:
 * [Assign various roles to users](managing-users.md). Each role includes specific granular permissions that give or restrict access to specific features within the Platform. This is useful when you want to restrict access to a specific store or do not want regular Platform users to edit sensitive data.
 * [Generate API keys](api-key.md) for specific users.
 * [Log in to the Frontend Application on behalf](login-on-behalf.md) of any user.
+* [Manage active sessions](active-sessions.md).
 
 
 
