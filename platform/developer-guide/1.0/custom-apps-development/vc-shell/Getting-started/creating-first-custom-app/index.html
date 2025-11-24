@@ -18,7 +18,7 @@
         <link rel="prev" href="../../vc-shell-overview/">
       
       
-        <link rel="next" href="../../Guides/application-architecture-best-practices/">
+        <link rel="next" href="../blade-generator/">
       
       
         
@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/fonts.css">
     
+      <link rel="stylesheet" href="../../../../assets/stylesheets/version-selector.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -92,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#create-first-vc-shell-application" class="md-skip">
+        <a href="#creating-your-first-vc-shell-application" class="md-skip">
           Skip to content
         </a>
       
@@ -23382,8 +23384,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#interactive-mode-default" class="md-nav__link">
-        Interactive Mode (Default)
+    <a href="#prerequisites" class="md-nav__link">
+        Prerequisites
     </a>
 
     <!-- Render nested item list -->
@@ -23392,19 +23394,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#non-interactive-mode" class="md-nav__link">
-        Non-Interactive Mode
+    <a href="#quick-start" class="md-nav__link">
+        Quick Start
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Non-Interactive Mode">
+    <nav class="md-nav" aria-label="Quick Start">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#available-options" class="md-nav__link">
-        Available Options
+    <a href="#step-1-create-your-application" class="md-nav__link">
+        Step 1: Create Your Application
     </a>
 
     <!-- Render nested item list -->
@@ -23413,8 +23415,202 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#examples" class="md-nav__link">
-        Examples
+    <a href="#step-2-follow-the-interactive-prompts" class="md-nav__link">
+        Step 2: Follow the Interactive Prompts
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#step-3-install-dependencies" class="md-nav__link">
+        Step 3: Install Dependencies
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#step-4-start-development-server" class="md-nav__link">
+        Step 4: Start Development Server
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#what-was-created" class="md-nav__link">
+        What Was Created?
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="What Was Created?">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#application-structure" class="md-nav__link">
+        Application Structure
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#module-structure" class="md-nav__link">
+        Module Structure
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Module Structure">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#grid-blade-productsvue" class="md-nav__link">
+        Grid Blade (products.vue)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#details-blade-product-detailsvue" class="md-nav__link">
+        Details Blade (product-details.vue)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#composables" class="md-nav__link">
+        Composables
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#locales" class="md-nav__link">
+        Locales
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#customizing-your-application" class="md-nav__link">
+        Customizing Your Application
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Customizing Your Application">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-custom-form-fields" class="md-nav__link">
+        Adding Custom Form Fields
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#available-form-components" class="md-nav__link">
+        Available Form Components
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-more-modules" class="md-nav__link">
+        Adding More Modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-widgets" class="md-nav__link">
+        Adding Widgets
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#integrating-your-api" class="md-nav__link">
+        Integrating Your API
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Integrating Your API">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#example-update-grid-blade-composable" class="md-nav__link">
+        Example: Update Grid Blade Composable
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#example-update-details-blade-composable" class="md-nav__link">
+        Example: Update Details Blade Composable
     </a>
 
     <!-- Render nested item list -->
@@ -23434,23 +23630,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#application-folder-structure" class="md-nav__link">
-        Application folder structure
-    </a>
-
-    <!-- Render nested item list -->
-    
-    <nav class="md-nav" aria-label="Application folder structure">
+    <nav class="md-nav" aria-label="Configuration">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#core-concepts" class="md-nav__link">
-        Core concepts
+    <a href="#environment-variables" class="md-nav__link">
+        Environment Variables
     </a>
 
     <!-- Render nested item list -->
@@ -23459,28 +23645,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#modules-directory-structure" class="md-nav__link">
-        Modules directory structure
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#create-new-module" class="md-nav__link">
-        Create new module
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#initialize-new-module-in-application" class="md-nav__link">
-        Initialize new module in application
+    <a href="#router-configuration" class="md-nav__link">
+        Router Configuration
     </a>
 
     <!-- Render nested item list -->
@@ -23492,6 +23658,230 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#development-workflow" class="md-nav__link">
+        Development Workflow
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Development Workflow">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#running-the-app" class="md-nav__link">
+        Running the App
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-a-new-blade" class="md-nav__link">
+        Adding a New Blade
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-a-widget" class="md-nav__link">
+        Adding a Widget
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#best-practices" class="md-nav__link">
+        Best Practices
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Best Practices">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#1-module-organization" class="md-nav__link">
+        1. Module Organization
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#2-api-integration" class="md-nav__link">
+        2. API Integration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#3-state-management" class="md-nav__link">
+        3. State Management
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#4-localization" class="md-nav__link">
+        4. Localization
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#5-typescript" class="md-nav__link">
+        5. TypeScript
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#deployment" class="md-nav__link">
+        Deployment
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Deployment">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#building-for-production" class="md-nav__link">
+        Building for Production
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#deployment-options" class="md-nav__link">
+        Deployment Options
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#troubleshooting" class="md-nav__link">
+        Troubleshooting
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Troubleshooting">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#module-not-appearing" class="md-nav__link">
+        Module Not Appearing
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#build-errors" class="md-nav__link">
+        Build Errors
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#api-not-working" class="md-nav__link">
+        API Not Working
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#next-steps" class="md-nav__link">
+        Next Steps
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#additional-resources" class="md-nav__link">
+        Additional Resources
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#support" class="md-nav__link">
+        Support
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -23499,6 +23889,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
 
   <!-- Main navigation item -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../blade-generator/" class="md-nav__link">
+        Blade Generator
+      </a>
+    </li>
   
 
             
@@ -26428,8 +26836,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#interactive-mode-default" class="md-nav__link">
-        Interactive Mode (Default)
+    <a href="#prerequisites" class="md-nav__link">
+        Prerequisites
     </a>
 
     <!-- Render nested item list -->
@@ -26438,19 +26846,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#non-interactive-mode" class="md-nav__link">
-        Non-Interactive Mode
+    <a href="#quick-start" class="md-nav__link">
+        Quick Start
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Non-Interactive Mode">
+    <nav class="md-nav" aria-label="Quick Start">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#available-options" class="md-nav__link">
-        Available Options
+    <a href="#step-1-create-your-application" class="md-nav__link">
+        Step 1: Create Your Application
     </a>
 
     <!-- Render nested item list -->
@@ -26459,8 +26867,202 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#examples" class="md-nav__link">
-        Examples
+    <a href="#step-2-follow-the-interactive-prompts" class="md-nav__link">
+        Step 2: Follow the Interactive Prompts
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#step-3-install-dependencies" class="md-nav__link">
+        Step 3: Install Dependencies
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#step-4-start-development-server" class="md-nav__link">
+        Step 4: Start Development Server
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#what-was-created" class="md-nav__link">
+        What Was Created?
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="What Was Created?">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#application-structure" class="md-nav__link">
+        Application Structure
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#module-structure" class="md-nav__link">
+        Module Structure
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Module Structure">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#grid-blade-productsvue" class="md-nav__link">
+        Grid Blade (products.vue)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#details-blade-product-detailsvue" class="md-nav__link">
+        Details Blade (product-details.vue)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#composables" class="md-nav__link">
+        Composables
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#locales" class="md-nav__link">
+        Locales
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#customizing-your-application" class="md-nav__link">
+        Customizing Your Application
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Customizing Your Application">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-custom-form-fields" class="md-nav__link">
+        Adding Custom Form Fields
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#available-form-components" class="md-nav__link">
+        Available Form Components
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-more-modules" class="md-nav__link">
+        Adding More Modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-widgets" class="md-nav__link">
+        Adding Widgets
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#integrating-your-api" class="md-nav__link">
+        Integrating Your API
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Integrating Your API">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#example-update-grid-blade-composable" class="md-nav__link">
+        Example: Update Grid Blade Composable
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#example-update-details-blade-composable" class="md-nav__link">
+        Example: Update Details Blade Composable
     </a>
 
     <!-- Render nested item list -->
@@ -26480,23 +27082,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#application-folder-structure" class="md-nav__link">
-        Application folder structure
-    </a>
-
-    <!-- Render nested item list -->
-    
-    <nav class="md-nav" aria-label="Application folder structure">
+    <nav class="md-nav" aria-label="Configuration">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#core-concepts" class="md-nav__link">
-        Core concepts
+    <a href="#environment-variables" class="md-nav__link">
+        Environment Variables
     </a>
 
     <!-- Render nested item list -->
@@ -26505,28 +27097,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#modules-directory-structure" class="md-nav__link">
-        Modules directory structure
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#create-new-module" class="md-nav__link">
-        Create new module
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#initialize-new-module-in-application" class="md-nav__link">
-        Initialize new module in application
+    <a href="#router-configuration" class="md-nav__link">
+        Router Configuration
     </a>
 
     <!-- Render nested item list -->
@@ -26535,6 +27107,230 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
         </ul>
     </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#development-workflow" class="md-nav__link">
+        Development Workflow
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Development Workflow">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#running-the-app" class="md-nav__link">
+        Running the App
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-a-new-blade" class="md-nav__link">
+        Adding a New Blade
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#adding-a-widget" class="md-nav__link">
+        Adding a Widget
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#best-practices" class="md-nav__link">
+        Best Practices
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Best Practices">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#1-module-organization" class="md-nav__link">
+        1. Module Organization
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#2-api-integration" class="md-nav__link">
+        2. API Integration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#3-state-management" class="md-nav__link">
+        3. State Management
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#4-localization" class="md-nav__link">
+        4. Localization
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#5-typescript" class="md-nav__link">
+        5. TypeScript
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#deployment" class="md-nav__link">
+        Deployment
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Deployment">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#building-for-production" class="md-nav__link">
+        Building for Production
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#deployment-options" class="md-nav__link">
+        Deployment Options
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#troubleshooting" class="md-nav__link">
+        Troubleshooting
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Troubleshooting">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#module-not-appearing" class="md-nav__link">
+        Module Not Appearing
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#build-errors" class="md-nav__link">
+        Build Errors
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#api-not-working" class="md-nav__link">
+        API Not Working
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#next-steps" class="md-nav__link">
+        Next Steps
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#additional-resources" class="md-nav__link">
+        Additional Resources
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#support" class="md-nav__link">
+        Support
+    </a>
+
+    <!-- Render nested item list -->
     
 </li>
         
@@ -26560,7 +27356,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2025 08:37:07 UTC">July 7, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 08:12:10 UTC">November 24, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26580,350 +27376,500 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="create-first-vc-shell-application">Create First VC-Shell Application<a class="headerlink" href="#create-first-vc-shell-application" title="Permanent link">&para;</a></h1>
-<p>In this section we will show you how to scaffold a VC-Shell application on your local machine. The created project will use Vue 3 and Vite as the build setup.</p>
-<p><strong>Prerequisites</strong>:</p>
+<h1 id="creating-your-first-vc-shell-application">Creating Your First VC Shell Application<a class="headerlink" href="#creating-your-first-vc-shell-application" title="Permanent link">&para;</a></h1>
+<p>This guide will walk you through creating your first VC Shell application from scratch using the <code>create-vc-app</code> CLI tool.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before you begin, ensure you have:</p>
 <ul>
-<li>You have an up-to-date installation of Node.js.</li>
-<li>Your current working directory is set to the location where you want to create the application.</li>
+<li><strong>Node.js 18+</strong>: <a href="https://nodejs.org/">Download Node.js</a></li>
+<li><strong>Yarn package manager</strong>: The CLI uses Yarn (installed with Node.js)</li>
+<li><strong>Code editor</strong>: VS Code recommended with Vue.js extensions</li>
 </ul>
-<p>To create and install custom app:</p>
-<ol>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-create-your-application">Step 1: Create Your Application<a class="headerlink" href="#step-1-create-your-application" title="Permanent link">&para;</a></h3>
+<p>Run the scaffolding tool:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>create-vc-app@latest<span class="w"> </span>my-shop
+</code></pre></div>
+<p>Or with a specific version:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx<span class="w"> </span>create-vc-app<span class="w"> </span>my-shop
+</code></pre></div>
+<h3 id="step-2-follow-the-interactive-prompts">Step 2: Follow the Interactive Prompts<a class="headerlink" href="#step-2-follow-the-interactive-prompts" title="Permanent link">&para;</a></h3>
+<p>The CLI will guide you through setup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>╔══════════════════════════════════════════════════╗
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>║  create-vc-app v1.1.x                            ║
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>╚══════════════════════════════════════════════════╝
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>✔ Project name: … my-shop
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>✔ Base path: … /apps/my-shop/
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>📦 Scaffolding app in ./my-shop...
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>✅ Created 60 files
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>🎨 Formatting files with Prettier...
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>✅ All files formatted
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>🏗️  Creating module with blade generator...
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>✔ Module name (e.g., products, orders): … products
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>✔ Entity name (e.g., Product, Order): … Product
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>✔ Create both Grid and Details blades? … yes
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>✔ Which blade should be the workspace blade? › Grid blade
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>✔ Customize form fields interactively? … no
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>✅ Module generated successfully!
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>==================================================
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>✨ Application created successfully!
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>==================================================
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>📊 Summary:
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>   Location: /path/to/my-shop
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>   Package: my-shop
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>   Base path: /apps/my-shop/
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>   Files created: 85
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>🚀 Next steps:
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>  1. cd my-shop
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>  2. yarn
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>  3. yarn serve
+</code></pre></div>
+<h3 id="step-3-install-dependencies">Step 3: Install Dependencies<a class="headerlink" href="#step-3-install-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>my-shop
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>yarn
+</code></pre></div>
+<h3 id="step-4-start-development-server">Step 4: Start Development Server<a class="headerlink" href="#step-4-start-development-server" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yarn<span class="w"> </span>serve
+</code></pre></div>
+<p>Your app will be available at <code>http://localhost:8080/apps/my-shop/</code></p>
+<h2 id="what-was-created">What Was Created?<a class="headerlink" href="#what-was-created" title="Permanent link">&para;</a></h2>
+<h3 id="application-structure">Application Structure<a class="headerlink" href="#application-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>my-shop/
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── src/
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>│   ├── main.ts                     # App entry point
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>│   ├── router/                     # Vue Router configuration
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>│   │   ├── index.ts
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>│   │   └── routes.ts
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>│   ├── locales/                    # i18n translations
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>│   │   ├── index.ts
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>│   │   └── en.json
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>│   ├── modules/                    # Your modules
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>│   │   └── products/
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>│   │       ├── pages/
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>│   │       │   ├── index.ts
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>│   │       │   ├── products.vue           # Grid blade
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>│   │       │   └── product-details.vue     # Details blade
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>│   │       ├── composables/
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>│   │       │   ├── index.ts
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>│   │       │   ├── useProductList.ts
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>│   │       │   └── useProductDetails.ts
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>│   │       ├── locales/
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>│   │       │   ├── index.ts
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>│   │       │   └── en.json
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>│   │       ├── components/
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>│   │       │   └── widgets/
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>│   │       │       └── index.ts
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>│   │       └── index.ts               # Module definition
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>│   ├── api_client/                   # API client placeholder
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>│   │   └── README.md
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>│   ├── components/                   # Shared components
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>│   │   └── dashboard-widgets/
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>│   │       └── Welcome.vue
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>│   ├── pages/                        # App pages
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>│   │   ├── App.vue
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>│   │   └── Dashboard.vue
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>│   ├── styles/                       # Global styles
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>│   │   ├── custom.scss
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>│   │   └── index.scss
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>│   └── composables/
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>│       └── index.ts
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>├── public/                           # Static assets
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>│   ├── assets/
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>│   └── img/
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>├── package.json
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>├── tsconfig.json
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>├── vite.config.mts
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>├── .prettierrc
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>├── .eslintrc.js
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>└── README.md
+</code></pre></div>
+<h3 id="module-structure">Module Structure<a class="headerlink" href="#module-structure" title="Permanent link">&para;</a></h3>
+<p>Each module contains:</p>
+<h4 id="grid-blade-productsvue">Grid Blade (<code>products.vue</code>)<a class="headerlink" href="#grid-blade-productsvue" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose</strong>: List view for browsing items</li>
+<li><strong>Features</strong>:</li>
+<li>Search and filters (staged/applied architecture)</li>
+<li>Data table with sorting and pagination</li>
+<li>Toolbar with actions (Add, Refresh, Delete)</li>
+<li>Composable with async data loading</li>
+</ul>
+<h4 id="details-blade-product-detailsvue">Details Blade (<code>product-details.vue</code>)<a class="headerlink" href="#details-blade-product-detailsvue" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose</strong>: Form view for viewing/editing items</li>
+<li><strong>Features</strong>:</li>
+<li>Form fields with validation</li>
+<li>Modification tracking (detects unsaved changes)</li>
+<li>Toolbar with Save/Cancel/Delete</li>
+<li>useModificationTracker integration</li>
+</ul>
+<h4 id="composables">Composables<a class="headerlink" href="#composables" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>useProductList.ts</code></strong>: Business logic for Grid blade</li>
+<li>Data loading with <code>useAsync</code></li>
+<li>Filter management (staged/applied)</li>
+<li>Search functionality</li>
 <li>
-<p>Install and run the <code>create-vc-app</code> scaffolding tool using one of the following commands:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With NPM</label><label for="__tabbed_1_2">With NPX</label><label for="__tabbed_1_3">With Yarn</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>create<span class="w"> </span>@vc-shell/vc-app@latest
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yarn<span class="w"> </span>create<span class="w"> </span>@vc-shell/vc-app
-</code></pre></div>
-</div>
-</div>
-</div>
+<p>Pagination support</p>
 </li>
-</ol>
-<h2 id="interactive-mode-default">Interactive Mode (Default)<a class="headerlink" href="#interactive-mode-default" title="Permanent link">&para;</a></h2>
-<ol>
 <li>
-<p>Configure the options based on your requirements. If you are unsure about an option, simply choose <strong>No</strong> by clicking <strong>Enter</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>✔<span class="w"> </span>Project<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>*your-app-name*
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>✔<span class="w"> </span>Base<span class="w"> </span>path:<span class="w"> </span>…<span class="w"> </span>/apps/*your-app-name*/
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>?<span class="w"> </span>Select<span class="w"> </span>module<span class="w"> </span>variant:<span class="w"> </span>›<span class="w"> </span>-<span class="w"> </span>Use<span class="w"> </span>arrow-keys.<span class="w"> </span>Return<span class="w"> </span>to<span class="w"> </span>submit.
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>❯<span class="w">   </span>Classic<span class="w"> </span>view<span class="w"> </span>modules<span class="w"> </span>boilerplate
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Module<span class="w"> </span>name:<span class="w"> </span>›<span class="w"> </span>*your-module-name*
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>?<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span>additional<span class="w"> </span>module<span class="w"> </span>with<span class="w"> </span>sample<span class="w"> </span>data?<span class="w"> </span>›<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>Scaffolding<span class="w"> </span>app<span class="w"> </span><span class="k">in</span><span class="w"> </span>/*your-app-name*...
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Done.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>now<span class="w"> </span>run<span class="w"> </span>application:
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">cd</span><span class="w"> </span>vc-app
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>yarn
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>yarn<span class="w"> </span>serve
-</code></pre></div>
+<p><strong><code>useProductDetails.ts</code></strong>: Business logic for Details blade</p>
 </li>
-</ol>
-<h2 id="non-interactive-mode">Non-Interactive Mode<a class="headerlink" href="#non-interactive-mode" title="Permanent link">&para;</a></h2>
-<p>For automation, or when you want to skip prompts, you can use command line arguments:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest<span class="w"> </span>my-app<span class="w"> </span>--variant<span class="w"> </span>classic<span class="w"> </span>--module-name<span class="w"> </span><span class="s2">&quot;My Module&quot;</span><span class="w"> </span>--mocks
+<li>Item loading/saving</li>
+<li>Modification tracking</li>
+<li>Form state management</li>
+</ul>
+<h4 id="locales">Locales<a class="headerlink" href="#locales" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>en.json</code></strong>: English translations</li>
+<li>Organized by namespace (LIST, DETAILS, FORM)</li>
+<li>Ready for additional languages</li>
+</ul>
+<h2 id="customizing-your-application">Customizing Your Application<a class="headerlink" href="#customizing-your-application" title="Permanent link">&para;</a></h2>
+<h3 id="adding-custom-form-fields">Adding Custom Form Fields<a class="headerlink" href="#adding-custom-form-fields" title="Permanent link">&para;</a></h3>
+<p>When creating your module, choose "Customize form fields interactively":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>✔<span class="w"> </span>Customize<span class="w"> </span>form<span class="w"> </span>fields<span class="w"> </span>interactively?<span class="w"> </span>…<span class="w"> </span>yes
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Add<span class="w"> </span>form<span class="w"> </span>fields<span class="w"> </span><span class="o">(</span>press<span class="w"> </span>ESC<span class="w"> </span>or<span class="w"> </span>Enter<span class="w"> </span>with<span class="w"> </span>empty<span class="w"> </span>name<span class="w"> </span>to<span class="w"> </span>finish<span class="o">)</span>:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>name
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>✔<span class="w"> </span>Field<span class="w"> </span>type:<span class="w"> </span>›<span class="w"> </span>Text
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>✔<span class="w"> </span>Is<span class="w"> </span>required?<span class="w"> </span>…<span class="w"> </span>yes
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>price
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>✔<span class="w"> </span>Field<span class="w"> </span>type:<span class="w"> </span>›<span class="w"> </span>Currency
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>✔<span class="w"> </span>Is<span class="w"> </span>required?<span class="w"> </span>…<span class="w"> </span>yes
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>description
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>✔<span class="w"> </span>Field<span class="w"> </span>type:<span class="w"> </span>›<span class="w"> </span>Editor<span class="w"> </span><span class="o">(</span>Rich<span class="w"> </span>Text<span class="o">)</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>✔<span class="w"> </span>Is<span class="w"> </span>required?<span class="w"> </span>…<span class="w"> </span>no
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>category
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>✔<span class="w"> </span>Field<span class="w"> </span>type:<span class="w"> </span>›<span class="w"> </span>Select<span class="w"> </span><span class="o">(</span>Dropdown<span class="o">)</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>✔<span class="w"> </span>Options<span class="w"> </span><span class="o">(</span>comma-separated<span class="o">)</span>:<span class="w"> </span>…<span class="w"> </span>Electronics,Clothing,Books
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>✔<span class="w"> </span>Is<span class="w"> </span>required?<span class="w"> </span>…<span class="w"> </span>yes
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>inStock
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>✔<span class="w"> </span>Field<span class="w"> </span>type:<span class="w"> </span>›<span class="w"> </span>Switch<span class="w"> </span><span class="o">(</span>Toggle<span class="o">)</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>✔<span class="w"> </span>Is<span class="w"> </span>required?<span class="w"> </span>…<span class="w"> </span>yes
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span>images
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>✔<span class="w"> </span>Field<span class="w"> </span>type:<span class="w"> </span>›<span class="w"> </span>Gallery<span class="w"> </span><span class="o">(</span>Images<span class="o">)</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>✔<span class="w"> </span>Is<span class="w"> </span>required?<span class="w"> </span>…<span class="w"> </span>no
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>✔<span class="w"> </span>Field<span class="w"> </span>name:<span class="w"> </span>…<span class="w"> </span><span class="o">(</span>press<span class="w"> </span>Enter<span class="w"> </span>to<span class="w"> </span>finish<span class="o">)</span>
 </code></pre></div>
-<h3 id="available-options">Available Options<a class="headerlink" href="#available-options" title="Permanent link">&para;</a></h3>
+<p>This generates a Details blade with all specified components.</p>
+<h3 id="available-form-components">Available Form Components<a class="headerlink" href="#available-form-components" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Option</th>
+<th>Component</th>
+<th>Type</th>
 <th>Description</th>
-<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--name</code>, <code>--app-name</code></td>
-<td>Name of the application</td>
-<td>Directory name</td>
+<td><strong>VcInput</strong></td>
+<td>text, number, date</td>
+<td>Basic text input</td>
 </tr>
 <tr>
-<td><code>--package-name</code></td>
-<td>Package name</td>
-<td>App name (validated)</td>
+<td><strong>VcTextarea</strong></td>
+<td>textarea</td>
+<td>Multi-line text</td>
 </tr>
 <tr>
-<td><code>--variant</code></td>
-<td>Module variant (classic|dynamic)</td>
-<td><code>classic</code></td>
+<td><strong>VcSelect</strong></td>
+<td>select</td>
+<td>Dropdown selection</td>
 </tr>
 <tr>
-<td><code>--module-name</code></td>
-<td>Module name</td>
-<td>App name in title case</td>
+<td><strong>VcEditor</strong></td>
+<td>editor</td>
+<td>Rich text editor (WYSIWYG)</td>
 </tr>
 <tr>
-<td><code>--base-path</code></td>
-<td>Base path for the application</td>
-<td><code>/apps/&lt;app-name&gt;/</code></td>
+<td><strong>VcSwitch</strong></td>
+<td>switch</td>
+<td>Boolean toggle</td>
 </tr>
 <tr>
-<td><code>--mocks</code></td>
-<td>Include additional module with sample data</td>
-<td><code>false</code></td>
+<td><strong>VcGallery</strong></td>
+<td>gallery</td>
+<td>Image gallery with upload</td>
 </tr>
 <tr>
-<td><code>--overwrite</code></td>
-<td>Overwrite existing files without confirmation</td>
-<td><code>false</code></td>
+<td><strong>VcInputCurrency</strong></td>
+<td>currency</td>
+<td>Money input with formatting</td>
 </tr>
 <tr>
-<td><code>--help</code>, <code>-h</code></td>
-<td>Show help message</td>
-<td>-</td>
+<td><strong>VcRadioButton</strong></td>
+<td>radio</td>
+<td>Radio button group</td>
 </tr>
 <tr>
-<td><code>--version</code>, <code>-v</code></td>
-<td>Show version</td>
-<td>-</td>
+<td><strong>VcCheckbox</strong></td>
+<td>checkbox</td>
+<td>Single checkbox</td>
+</tr>
+<tr>
+<td><strong>VcMultivalue</strong></td>
+<td>multivalue</td>
+<td>Multiple value input</td>
+</tr>
+<tr>
+<td><strong>VcField</strong></td>
+<td>field</td>
+<td>Read-only display field</td>
 </tr>
 </tbody>
 </table>
-<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
-<p><strong>Basic usage:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest<span class="w"> </span>my-app<span class="w"> </span>--variant<span class="w"> </span>classic
-</code></pre></div></p>
-<p><strong>With custom options:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest<span class="w"> </span>my-app<span class="w"> </span>--variant<span class="w"> </span>classic<span class="w"> </span>--module-name<span class="w"> </span><span class="s2">&quot;My Module&quot;</span><span class="w"> </span>--mocks
-</code></pre></div></p>
-<p><strong>Full non-interactive example:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest<span class="w"> </span>my-ecommerce-app<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>--variant<span class="w"> </span>classic<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>--module-name<span class="w"> </span><span class="s2">&quot;Product Catalog&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span>--base-path<span class="w"> </span><span class="s2">&quot;/apps/ecommerce/&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span>--package-name<span class="w"> </span><span class="s2">&quot;@mycompany/ecommerce-app&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span>--mocks<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span>--overwrite
-</code></pre></div></p>
-<p><strong>For CI/CD automation:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest<span class="w"> </span><span class="nv">$PROJECT_NAME</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>--variant<span class="w"> </span>classic<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>--module-name<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODULE_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span>--overwrite
-</code></pre></div></p>
+<h2 id="adding-more-modules">Adding More Modules<a class="headerlink" href="#adding-more-modules" title="Permanent link">&para;</a></h2>
+<p>After creating your initial app, you can add more modules:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx<span class="w"> </span>create-vc-app<span class="w"> </span>blade
+</code></pre></div>
+<p>Select "Module (with blades)" and follow the prompts.</p>
+<p>Example: Adding an orders module</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>✔ What would you like to generate? › Module (with blades)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>✔ Module name: … orders
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>✔ Entity name: … Order
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>✔ Create both Grid and Details blades? … yes
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>✔ Which blade should be the workspace blade? › Grid blade
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>✔ Customize form fields interactively? … yes
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Add form fields:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>- orderNumber (text, required)
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>- customerName (text, required)
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>- orderDate (date, required)
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>- status (select, required) → Pending,Processing,Shipped,Delivered
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>- totalAmount (currency, required)
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>- notes (textarea, optional)
+</code></pre></div>
+<p>The new module will be automatically:
+- ✅ Created in <code>src/modules/orders/</code>
+- ✅ Registered in <code>src/main.ts</code>
+- ✅ Formatted with Prettier</p>
+<h2 id="adding-widgets">Adding Widgets<a class="headerlink" href="#adding-widgets" title="Permanent link">&para;</a></h2>
+<p>Widgets are reusable components that can be added to blades:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npx<span class="w"> </span>create-vc-app<span class="w"> </span>blade<span class="w"> </span>--widget
+</code></pre></div>
+<p>Example: Adding a statistics widget to product details</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>✔ Select module: › products
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>✔ Select blade to add widget to: › product-details
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>✔ Widget name: … ProductStats
+</code></pre></div>
+<p>The widget will be automatically:
+- ✅ Created in <code>src/modules/products/components/widgets/</code>
+- ✅ Registered in the parent blade
+- ✅ Added to locales</p>
+<h2 id="integrating-your-api">Integrating Your API<a class="headerlink" href="#integrating-your-api" title="Permanent link">&para;</a></h2>
+<p>The generated code includes TODO comments guiding you to integrate your API:</p>
+<h3 id="example-update-grid-blade-composable">Example: Update Grid Blade Composable<a class="headerlink" href="#example-update-grid-blade-composable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// src/modules/products/composables/useProductList.ts</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1">// Replace this placeholder</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">load</span><span class="p">,</span><span class="w"> </span><span class="nx">loading</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAsync</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="c1">// TODO: Replace with your API client</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="c1">// Example:</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="c1">// const response = await apiClient.products.list({</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="c1">//   filters: appliedFilters.value,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="c1">//   page: currentPage.value,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="c1">// });</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="c1">// return response.data;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="nx">results</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="nx">totalCount</span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">,</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="p">});</span>
+</code></pre></div>
+<h3 id="example-update-details-blade-composable">Example: Update Details Blade Composable<a class="headerlink" href="#example-update-details-blade-composable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// src/modules/products/composables/useProductDetails.ts</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">saveChanges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="c1">// TODO: Replace with your API client</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="c1">// Example:</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="c1">// if (item.value.id) {</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="c1">//   await apiClient.products.update(item.value.id, item.value);</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="c1">// } else {</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="c1">//   await apiClient.products.create(item.value);</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">  </span><span class="c1">// }</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">};</span>
+</code></pre></div>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>Create a <code>.env</code> file in your project root:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a># API Configuration
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>VITE_API_URL=https://api.example.com
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>VITE_APP_PLATFORM_URL=https://platform.example.com
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a># App Configuration
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>VITE_BASE_URL=/apps/my-shop/
+</code></pre></div>
+<h3 id="router-configuration">Router Configuration<a class="headerlink" href="#router-configuration" title="Permanent link">&para;</a></h3>
+<p>Update <code>src/router/routes.ts</code> to add custom routes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">import</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">RouteRecordRaw</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vue-router&quot;</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="kt">RouteRecordRaw</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Dashboard&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s2">&quot;../pages/Dashboard.vue&quot;</span><span class="p">),</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="c1">// Add custom routes here</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">];</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">routes</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="development-workflow">Development Workflow<a class="headerlink" href="#development-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="running-the-app">Running the App<a class="headerlink" href="#running-the-app" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>yarn<span class="w"> </span>serve<span class="w">      </span><span class="c1"># Start dev server</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>yarn<span class="w"> </span>build<span class="w">      </span><span class="c1"># Build for production</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>yarn<span class="w"> </span>lint<span class="w">       </span><span class="c1"># Run linter</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>yarn<span class="w"> </span>format<span class="w">     </span><span class="c1"># Format code with Prettier</span>
+</code></pre></div>
+<h3 id="adding-a-new-blade">Adding a New Blade<a class="headerlink" href="#adding-a-new-blade" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>npx<span class="w"> </span>create-vc-app<span class="w"> </span>blade<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>--module<span class="w"> </span>products<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span>--type<span class="w"> </span>details<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span>--name<span class="w"> </span>product-variants<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span>--composable<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span>--locales
+</code></pre></div>
+<h3 id="adding-a-widget">Adding a Widget<a class="headerlink" href="#adding-a-widget" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>npx<span class="w"> </span>create-vc-app<span class="w"> </span>blade<span class="w"> </span>--widget
+</code></pre></div>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="1-module-organization">1. Module Organization<a class="headerlink" href="#1-module-organization" title="Permanent link">&para;</a></h3>
+<p>Keep modules self-contained:
+- Business logic in composables
+- UI components in pages
+- Shared code in module root
+- Locales in module locales folder</p>
+<h3 id="2-api-integration">2. API Integration<a class="headerlink" href="#2-api-integration" title="Permanent link">&para;</a></h3>
+<p>Use a centralized API client:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">// src/api_client/index.ts</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApiClient</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@vc-shell/api-client&quot;</span><span class="p">;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createApiClient</span><span class="p">({</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="nx">baseURL</span><span class="o">:</span><span class="w"> </span><span class="kt">import.meta.env.VITE_API_URL</span><span class="p">,</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="p">});</span>
+</code></pre></div>
+<h3 id="3-state-management">3. State Management<a class="headerlink" href="#3-state-management" title="Permanent link">&para;</a></h3>
+<p>Use Vue's Composition API:
+- <code>ref</code> for reactive primitives
+- <code>reactive</code> for objects
+- <code>computed</code> for derived state
+- Composables for reusable logic</p>
+<h3 id="4-localization">4. Localization<a class="headerlink" href="#4-localization" title="Permanent link">&para;</a></h3>
+<p>Follow the namespace convention:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nt">&quot;PRODUCTS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;PAGES&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">      </span><span class="nt">&quot;LIST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;TITLE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">      </span><span class="nt">&quot;DETAILS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">        </span><span class="nt">&quot;TITLE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Product Details&quot;</span><span class="p">,</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">        </span><span class="nt">&quot;FORM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">          </span><span class="nt">&quot;INFO&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">            </span><span class="nt">&quot;NAME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">            </span><span class="nt">&quot;NAME_PLACEHOLDER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enter product name&quot;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="5-typescript">5. TypeScript<a class="headerlink" href="#5-typescript" title="Permanent link">&para;</a></h3>
+<p>Define types for your data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">// src/types/product.ts</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">Product</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">  </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">  </span><span class="nx">description?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">  </span><span class="nx">inStock</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="building-for-production">Building for Production<a class="headerlink" href="#building-for-production" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>yarn<span class="w"> </span>build
+</code></pre></div>
+<p>This creates an optimized build in the <code>dist/</code> directory.</p>
+<h3 id="deployment-options">Deployment Options<a class="headerlink" href="#deployment-options" title="Permanent link">&para;</a></h3>
 <ol>
-<li>
-<p>Once the application is created, go to the application folder and add Platform URL to the <strong>.env.local</strong> file under the <strong>APP_PLATFORM_URL</strong> variable:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="sb">`</span>*your-app-name*<span class="sb">`</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;APP_PLATFORM_URL=https://your_platform_url_here&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.env.local
-</code></pre></div>
-</li>
-<li>
-<p>Install the dependencies and start the development server:</p>
-</li>
+<li><strong>Static Hosting</strong>: Deploy <code>dist/</code> to any static host</li>
+<li><strong>CDN</strong>: Upload to CDN with proper caching headers</li>
+<li><strong>Docker</strong>: Create a Docker image with nginx</li>
 </ol>
-<p>Your first VC-Shell application is now ready to run!</p>
-<p><img alt="New app" src="../../../media/new-app.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The example components in the generated application are written using the Vue Composition API and <code>&lt;script setup&gt;</code>.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For an optimal development experience, we recommend using <a href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar">Volar extension</a>.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Getting Help</p>
-<p>You can always get help for the scaffolding tool by running:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx<span class="w"> </span>@vc-shell/create-vc-app@latest<span class="w"> </span>--help
-</code></pre></div></p>
-</div>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="https://vitejs.dev/">Vite tools</a></p>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="https://vuejs.org/guide/introduction.html#composition-api">Vue Composition API</a></p>
-<h2 id="application-folder-structure">Application folder structure<a class="headerlink" href="#application-folder-structure" title="Permanent link">&para;</a></h2>
-<p>After the application is scaffolded, the folder structure will look as follows. This structure is designed to promote modularity and maintainability.</p>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="../../Guides/application-architecture-best-practices/">Application architecture</a></p>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="../../Guides/creating-custom-applications/">Creating custom applications</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">├─</span><span class="w"> </span><span class="nt">public</span><span class="w">                         </span><span class="o">//</span><span class="w"> </span><span class="nt">Static</span><span class="w"> </span><span class="nt">assets</span><span class="w"> </span><span class="o">(</span><span class="nt">images</span><span class="o">,</span><span class="w"> </span><span class="nt">fonts</span><span class="o">,</span><span class="w"> </span><span class="nt">etc</span><span class="o">.)</span><span class="w"> </span><span class="nt">that</span><span class="w"> </span><span class="nt">are</span><span class="w"> </span><span class="nt">served</span><span class="w"> </span><span class="nt">directly</span><span class="w"> </span><span class="nt">by</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">web</span><span class="w"> </span><span class="nt">server</span><span class="o">.</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">assets</span><span class="w">                      </span><span class="o">//</span><span class="w"> </span><span class="nt">Static</span><span class="w"> </span><span class="nt">images</span><span class="o">,</span><span class="w"> </span><span class="nt">fonts</span><span class="o">,</span><span class="w"> </span><span class="nt">etc</span><span class="o">.,</span><span class="w"> </span><span class="nt">used</span><span class="w"> </span><span class="nt">inside</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">application</span><span class="o">.</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="nt">img</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="err">│</span><span class="w">     </span><span class="err">└─</span><span class="w"> </span><span class="nt">icons</span><span class="w">                    </span><span class="o">//</span><span class="w"> </span><span class="nt">Icons</span><span class="w"> </span><span class="nt">used</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">favicons</span><span class="o">,</span><span class="w"> </span><span class="nt">PWA</span><span class="w"> </span><span class="nt">manifests</span><span class="o">,</span><span class="w"> </span><span class="nt">etc</span><span class="o">.</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="err">├─</span><span class="w"> </span><span class="nt">src</span><span class="w">                            </span><span class="o">//</span><span class="w"> </span><span class="nt">Main</span><span class="w"> </span><span class="nt">application</span><span class="w"> </span><span class="nt">source</span><span class="w"> </span><span class="nt">code</span><span class="o">.</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">api_client</span><span class="w">                  </span><span class="o">//</span><span class="w"> </span><span class="nt">Auto-generated</span><span class="w"> </span><span class="nt">API</span><span class="w"> </span><span class="nt">client</span><span class="w"> </span><span class="o">(</span><span class="nt">e</span><span class="p">.</span><span class="nc">g</span><span class="o">.,</span><span class="w"> </span><span class="nt">from</span><span class="w"> </span><span class="nt">OpenAPI</span><span class="o">/</span><span class="nt">Swagger</span><span class="o">).</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="o">...</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">composables</span><span class="w">                 </span><span class="o">//</span><span class="w"> </span><span class="nt">Application-wide</span><span class="w"> </span><span class="nt">Vue</span><span class="w"> </span><span class="nt">composables</span><span class="w"> </span><span class="o">(</span><span class="nt">reusable</span><span class="w"> </span><span class="nt">stateful</span><span class="w"> </span><span class="nt">logic</span><span class="o">).</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="o">...</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">locales</span><span class="w">                     </span><span class="o">//</span><span class="w"> </span><span class="nt">Localization</span><span class="w"> </span><span class="nt">files</span><span class="w"> </span><span class="o">(</span><span class="nt">e</span><span class="p">.</span><span class="nc">g</span><span class="o">.,</span><span class="w"> </span><span class="nt">en</span><span class="p">.</span><span class="nc">json</span><span class="o">,</span><span class="w"> </span><span class="nt">es</span><span class="p">.</span><span class="nc">json</span><span class="o">)</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">application-level</span><span class="w"> </span><span class="nt">translations</span><span class="o">.</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="nt">en</span><span class="p">.</span><span class="nc">json</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">modules</span><span class="w">                     </span><span class="o">//</span><span class="w"> </span><span class="nt">The</span><span class="w"> </span><span class="nt">collection</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">custom</span><span class="w"> </span><span class="nt">business</span><span class="w"> </span><span class="nt">modules</span><span class="o">.</span><span class="w"> </span><span class="nt">This</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">where</span><span class="w"> </span><span class="nt">most</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">your</span><span class="w"> </span><span class="nt">application</span><span class="err">&#39;</span><span class="nt">s</span><span class="w"> </span><span class="nt">features</span><span class="w"> </span><span class="nt">will</span><span class="w"> </span><span class="nt">reside</span><span class="o">.</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="nt">your-module-name</span><span class="o">/</span><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nt">Example</span><span class="w"> </span><span class="nt">module</span><span class="w"> </span><span class="nt">folder</span><span class="o">.</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">├─</span><span class="w"> </span><span class="nt">components</span><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="nt">Components</span><span class="w"> </span><span class="nt">specific</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">module</span><span class="o">.</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">notifications</span><span class="w">      </span><span class="o">//</span><span class="w"> </span><span class="nt">Dropdown</span><span class="w"> </span><span class="nt">notification</span><span class="w"> </span><span class="nt">templates</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">module</span><span class="o">.</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="o">...</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">├─</span><span class="w"> </span><span class="nt">composables</span><span class="w">           </span><span class="o">//</span><span class="w"> </span><span class="nt">Composables</span><span class="w"> </span><span class="nt">specific</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">module</span><span class="o">.</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">├─</span><span class="w"> </span><span class="nt">locales</span><span class="w">               </span><span class="o">//</span><span class="w"> </span><span class="nt">Locale</span><span class="w"> </span><span class="nt">files</span><span class="w"> </span><span class="nt">specific</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">module</span><span class="o">.</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">├─</span><span class="w"> </span><span class="nt">pages</span><span class="w">                 </span><span class="o">//</span><span class="w"> </span><span class="nt">Blade</span><span class="w"> </span><span class="nt">components</span><span class="w"> </span><span class="o">(</span><span class="nt">pages</span><span class="o">)</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">module</span><span class="o">.</span>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">└─</span><span class="w"> </span><span class="nt">index</span><span class="p">.</span><span class="nc">ts</span><span class="w">              </span><span class="o">//</span><span class="w"> </span><span class="nt">Module</span><span class="w"> </span><span class="nt">entry</span><span class="w"> </span><span class="nt">point</span><span class="o">,</span><span class="w"> </span><span class="nt">registers</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">module</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">framework</span><span class="o">.</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">pages</span><span class="w">                       </span><span class="o">//</span><span class="w"> </span><span class="nt">Application-level</span><span class="w"> </span><span class="nt">pages</span><span class="w"> </span><span class="o">(</span><span class="nt">e</span><span class="p">.</span><span class="nc">g</span><span class="o">.,</span><span class="w"> </span><span class="nt">NotFound</span><span class="o">,</span><span class="w"> </span><span class="nt">Login</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">though</span><span class="w"> </span><span class="nt">login</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">often</span><span class="w"> </span><span class="nt">part</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">framework</span><span class="o">).</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="o">...</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">router</span><span class="w">                      </span><span class="o">//</span><span class="w"> </span><span class="nt">Vue</span><span class="w"> </span><span class="nt">Router</span><span class="w"> </span><span class="nt">configuration</span><span class="w"> </span><span class="o">(</span><span class="nt">routes</span><span class="o">,</span><span class="w"> </span><span class="nt">guards</span><span class="o">).</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="nt">index</span><span class="p">.</span><span class="nc">ts</span>
-<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">styles</span><span class="w">                      </span><span class="o">//</span><span class="w"> </span><span class="nt">Global</span><span class="w"> </span><span class="nt">styles</span><span class="o">,</span><span class="w"> </span><span class="nt">TailwindCSS</span><span class="w"> </span><span class="nt">setup</span><span class="o">,</span><span class="w"> </span><span class="nt">custom</span><span class="w"> </span><span class="nt">themes</span><span class="o">.</span>
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">index</span><span class="p">.</span><span class="nc">scss</span><span class="w">               </span><span class="o">//</span><span class="w"> </span><span class="nt">Main</span><span class="w"> </span><span class="nt">SCSS</span><span class="w"> </span><span class="nt">file</span><span class="o">,</span><span class="w"> </span><span class="nt">imports</span><span class="w"> </span><span class="nt">Tailwind</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">custom</span><span class="w"> </span><span class="nt">styles</span><span class="o">.</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="nt">custom</span><span class="p">.</span><span class="nc">scss</span><span class="w">              </span><span class="o">//</span><span class="w"> </span><span class="o">(</span><span class="nt">Optional</span><span class="o">)</span><span class="w"> </span><span class="nt">Your</span><span class="w"> </span><span class="nt">custom</span><span class="w"> </span><span class="nt">SCSS</span><span class="w"> </span><span class="nt">overrides</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">theme</span><span class="w"> </span><span class="nt">definitions</span><span class="o">.</span>
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">types</span><span class="w">                       </span><span class="o">//</span><span class="w"> </span><span class="nt">Global</span><span class="w"> </span><span class="nt">TypeScript</span><span class="w"> </span><span class="nt">type</span><span class="w"> </span><span class="nt">definitions</span><span class="w"> </span><span class="o">(</span><span class="p">.</span><span class="nc">d</span><span class="p">.</span><span class="nc">ts</span><span class="w"> </span><span class="nt">files</span><span class="o">).</span>
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="o">...</span>
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="err">│</span><span class="w">  </span><span class="err">├─</span><span class="w"> </span><span class="nt">App</span><span class="p">.</span><span class="nc">vue</span><span class="w">                     </span><span class="o">//</span><span class="w"> </span><span class="nt">Root</span><span class="w"> </span><span class="nt">Vue</span><span class="w"> </span><span class="nt">component</span><span class="o">.</span>
-<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="err">│</span><span class="w">  </span><span class="err">└─</span><span class="w"> </span><span class="nt">main</span><span class="p">.</span><span class="nc">ts</span><span class="w">                     </span><span class="o">//</span><span class="w"> </span><span class="nt">Main</span><span class="w"> </span><span class="nt">application</span><span class="w"> </span><span class="nt">entry</span><span class="w"> </span><span class="nt">point</span><span class="w"> </span><span class="o">(</span><span class="nt">initializes</span><span class="w"> </span><span class="nt">Vue</span><span class="o">,</span><span class="w"> </span><span class="nt">router</span><span class="o">,</span><span class="w"> </span><span class="nt">plugins</span><span class="o">,</span><span class="w"> </span><span class="nt">modules</span><span class="o">).</span>
+<p>Example nginx configuration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">your-domain.com</span><span class="p">;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/apps/my-shop/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri/</span><span class="w"> </span><span class="s">/apps/my-shop/index.html</span><span class="p">;</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="core-concepts">Core concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h3>
-<p>It is helpful to understand some core concepts of the VC-Shell framework. These are covered extensively in the <a href="../../Guides/custom-application-core-concepts/">Custom application core concepts guide</a>. In brief:</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="module-not-appearing">Module Not Appearing<a class="headerlink" href="#module-not-appearing" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: New module doesn't appear in the application.</p>
+<p><strong>Solution</strong>: Verify module is registered in <code>src/main.ts</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">ProductsModule</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./modules/products&quot;</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">ProductsModule</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="build-errors">Build Errors<a class="headerlink" href="#build-errors" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: TypeScript errors during build.</p>
+<p><strong>Solution</strong>:
+1. Check for <code>@ts-expect-error</code> comments
+2. Replace placeholders with actual types
+3. Ensure all imports are correct</p>
+<h3 id="api-not-working">API Not Working<a class="headerlink" href="#api-not-working" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: API calls fail or return errors.</p>
+<p><strong>Solution</strong>:
+1. Check API URL in <code>.env</code>
+2. Verify CORS configuration
+3. Check network tab in DevTools
+4. Ensure API endpoints exist</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Now that you have your first VC Shell application:</p>
+<ol>
+<li><strong>Explore Generated Code</strong>: Review the generated modules and composables</li>
+<li><strong>Integrate Your API</strong>: Replace TODO placeholders with real API calls</li>
+<li><strong>Customize UI</strong>: Modify blades and components to match your needs</li>
+<li><strong>Add More Modules</strong>: Use the blade generator to add more functionality</li>
+<li><strong>Read Documentation</strong>: <a href="../blade-generator/">Blade Generator Guide</a></li>
+</ol>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>VC-Shell framework</strong> (<code>@vc-shell/framework</code>): Provides the foundational UI, services (like navigation, notifications, API client integration), and architectural patterns for building administrative UIs.</li>
-<li><strong>Modularity</strong>: Applications are built as a collection of independent modules. Each module encapsulates a specific business domain or feature set. This is detailed in the <a href="../../Guides/developing-custom-modules/">Developing custom modules guide</a>.</li>
-<li><strong>Blade navigation</strong>: The primary UI paradigm. Blades are individual panels or pages that can be opened, closed, and stacked, providing a focused user experience for specific tasks.</li>
-<li><strong>Routing</strong>: Managed by Vue Router, integrated with the blade system.</li>
-<li><strong>State management</strong>: While VC-Shell doesn't enforce a specific global state management library like Pinia or Vuex out-of-the-box for custom apps, it provides patterns for managing local state within composables and communication between blades. Shared services and composables are common for cross-cutting concerns.</li>
-<li><strong>API client integration</strong>: Uses <code>useApiClient()</code> composable for easy integration with generated API clients.</li>
+<li><a href="../blade-generator/">Blade Generator</a> - Detailed guide</li>
+<li><a href="../../components/">VC Shell Components</a> - Component library</li>
+<li><a href="../../">VC Shell Framework</a> - Framework documentation</li>
+<li><a href="https://vuejs.org/guide/">Vue.js Guide</a> - Vue.js documentation</li>
+<li><a href="https://www.typescriptlang.org/docs/">TypeScript Handbook</a> - TypeScript docs</li>
 </ul>
-<p>Let's take a look at the modules directory as it represents the key concept in the application's architecture.</p>
-<h3 id="modules-directory-structure">Modules directory structure<a class="headerlink" href="#modules-directory-structure" title="Permanent link">&para;</a></h3>
-<p>A <strong>module</strong> is a self-contained unit that groups related functionality. It typically includes its own components, composables, localization files, and pages (blades). This structure ensures separation of concerns and makes the application easier to scale and maintain.</p>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="../../Guides/developing-custom-modules/">Developing custom VC-Shell modules</a></p>
-<table>
-<thead>
-<tr>
-<th>Folder</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>components</td>
-<td>Contains Vue components that are specific to this module. These components are typically used within the module's blades or other module components. If a component needs to be used across multiple modules or globally, consider placing it in <code>src/components</code> or a shared UI library.</td>
-</tr>
-<tr>
-<td>composables</td>
-<td>Vue Composition API functions specific to this module. They encapsulate reactive logic, state management, or business rules relevant to the module's domain (e.g., fetching and managing data for a specific entity).</td>
-</tr>
-<tr>
-<td>locales</td>
-<td>Module-specific translation files (e.g., <strong>en.json</strong>, <strong>es.json</strong>). These are merged with application-level locales to provide localized content for the module's UI.<br> <img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="../../Guides/internationalization/">Internationalization</a></td>
-</tr>
-<tr>
-<td>pages</td>
-<td>Contains the module's <strong>blade</strong> components. Blades are essentially Vue components that represent a distinct view or screen within the module, often corresponding to a specific route or a step in a workflow. They are registered with the framework to participate in navigation.</td>
-</tr>
-<tr>
-<td>index.ts</td>
-<td>The entry point for the module. This file typically uses the <code>createAppModule</code> function from <code>@vc-shell/framework</code> to register the module's pages, locales, notification templates, and other components with the main application.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="create-new-module">Create new module<a class="headerlink" href="#create-new-module" title="Permanent link">&para;</a></h3>
-<p>To create your own modules within the scaffolded application folder structure:</p>
-<ol>
-<li>Create a new folder for your module inside the <strong>src/modules</strong> directory. Choose a descriptive name that reflects its functionality (e.g., <strong>products</strong>, <strong>orders</strong>, <strong>reviews</strong>).</li>
-<li>Inside your module folder, create the standard subdirectories: <strong>components</strong>, <strong>composables</strong>, <strong>locales</strong>, and <strong>pages</strong>.</li>
-<li>Create an <strong>index.ts</strong> file in the root of your module folder. This will be the entry point for registering your module.</li>
-</ol>
-<h3 id="initialize-new-module-in-application">Initialize new module in application<a class="headerlink" href="#initialize-new-module-in-application" title="Permanent link">&para;</a></h3>
-<p>All modules are created as Vue plugins. The <code>@vc-shell/framework</code> provides a helper function, <code>createAppModule</code>, to simplify their creation and registration. This function takes the module's pages, locales, notification templates, and other module-specific components as arguments.</p>
-<p>Here's an example of a typical module <strong>index.ts</strong>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">src/modules/your-module-name/index.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span>
-<span class="normal"><a href="#__codelineno-12-11">11</a></span>
-<span class="normal"><a href="#__codelineno-12-12">12</a></span>
-<span class="normal"><a href="#__codelineno-12-13">13</a></span>
-<span class="normal"><a href="#__codelineno-12-14">14</a></span>
-<span class="normal"><a href="#__codelineno-12-15">15</a></span>
-<span class="normal"><a href="#__codelineno-12-16">16</a></span>
-<span class="normal"><a href="#__codelineno-12-17">17</a></span>
-<span class="normal"><a href="#__codelineno-12-18">18</a></span>
-<span class="normal"><a href="#__codelineno-12-19">19</a></span>
-<span class="normal"><a href="#__codelineno-12-20">20</a></span>
-<span class="normal"><a href="#__codelineno-12-21">21</a></span>
-<span class="normal"><a href="#__codelineno-12-22">22</a></span>
-<span class="normal"><a href="#__codelineno-12-23">23</a></span>
-<span class="normal"><a href="#__codelineno-12-24">24</a></span>
-<span class="normal"><a href="#__codelineno-12-25">25</a></span>
-<span class="normal"><a href="#__codelineno-12-26">26</a></span>
-<span class="normal"><a href="#__codelineno-12-27">27</a></span>
-<span class="normal"><a href="#__codelineno-12-28">28</a></span>
-<span class="normal"><a href="#__codelineno-12-29">29</a></span>
-<span class="normal"><a href="#__codelineno-12-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1">// Import all blade components from the &#39;pages&#39; directory</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">pages</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./pages&quot;</span><span class="p">;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">// Import all locale files from the &#39;locales&#39; directory</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">locales</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./locales&quot;</span><span class="p">;</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="c1">// (Optional) Import notification templates if your module uses them</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="c1">// import * as notificationTemplates from &quot;./components/notifications&quot;;</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1">// (Optional) Import any other components that need to be globally registered by this module</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="c1">// import * as moduleComponents from &quot;./components&quot;; // e.g., components to be used in this module</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="c1">// Import createAppModule from the VC-Shell framework</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createAppModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@vc-shell/framework&quot;</span><span class="p">;</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="c1">// Define the module.</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="c1">// The first argument is an object mapping page names to their constructors.</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="c1">// The second argument is an object mapping locale names to their content.</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="c1">// The third (optional) argument is for notification templates.</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="c1">// The fourth (optional) argument is for other module-specific components.</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">createAppModule</span><span class="p">(</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">  </span><span class="nx">pages</span><span class="p">,</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">  </span><span class="nx">locales</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">  </span><span class="c1">// notificationTemplates, // Uncomment if you have notification templates</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">  </span><span class="c1">// moduleComponents       // Uncomment if you have other components to register</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="p">);</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24"></a>
-<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="c1">// It&#39;s good practice to also export key parts of your module for potential direct import elsewhere,</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="c1">// though direct inter-module dependencies should be minimized.</span>
-<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./pages&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Typically, blades are what other parts of the system might want to navigate to.</span>
-<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./composables&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// If you have composables that might be useful outside the module (use with caution).</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="c1">// export * from &quot;./components&quot;; // Only if certain components are designed for external use.</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./types&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Exporting module-specific types is often necessary.</span>
-</code></pre></div></td></tr></table></div>
-<p><strong>Explanation of <code>createAppModule</code> arguments:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pages</code></td>
-<td>An object where keys are page (blade) names and values are the corresponding Vue component constructors (e.g., <code>Record&lt;string, BladeInstanceConstructor&gt;</code>).<br>These pages will be registered with the blade navigation system.</td>
-</tr>
-<tr>
-<td><code>locales</code></td>
-<td>An object where keys are locale codes (e.g., <code>"en"</code>, <code>"es"</code>) and values are objects containing the translation strings for that locale (e.g., <code>Record&lt;string, Record&lt;string, string&gt;&gt;</code>). <br>These will be merged with the application's global i18n instance.</td>
-</tr>
-<tr>
-<td><code>notificationTemplates</code> (optional)</td>
-<td>An object mapping notification template names to their Vue component constructors.<br>Used for custom notification rendering.</td>
-</tr>
-<tr>
-<td><code>moduleComponents</code> (optional)</td>
-<td>An object mapping component names to their Vue component constructors. <br> These components will be registered globally.</td>
-</tr>
-</tbody>
-</table>
-<p>After creating your module's <strong>index.ts</strong>, you need to import and register it in your main application file (<strong>src/main.ts</strong>).</p>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="../../Guides/developing-custom-modules/#how-modules-are-loaded-into-the-main-application">Loading modules into main application</a></p>
-<p>Your module is now ready for use within your application.</p>
-<p><img alt="Readmore" src="../../../media/readmore.png" width="25" /> <a href="../../Essentials/Usage-Guides/building-navigation-menus-with-usemenuservice/">Adding new module to navigation menu</a></p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Need help? Check out:</p>
+<ul>
+<li><a href="https://github.com/VirtoCommerce/vc-shell/issues">GitHub Issues</a></li>
+<li><a href="https://docs.virtocommerce.org/">Documentation</a></li>
+<li><a href="https://www.virtocommerce.org/community">Community Forum</a></li>
+</ul>
                 
               </article>
             </div>
@@ -27092,11 +28038,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <script src="../../../../assets/scripts/version-redirect.js"></script>
       
+        <script src="../../../../assets/scripts/version-selector-handler.js"></script>
+      
         <script src="../../../../assets/scripts/scripts-loader.js"></script>
       
         <script src="../../../../assets/scripts/scroll-menu.js"></script>
-      
-        <script src="../../../../assets/scripts/search-url-fix.js"></script>
       
     
   </body>

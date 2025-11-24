@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="../../../../../assets/stylesheets/fonts.css">
     
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/version-selector.css">
+    
     <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -23330,6 +23332,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../Getting-started/blade-generator/" class="md-nav__link">
+        Blade Generator
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
     </nav>
 </li>
@@ -26562,7 +26582,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 8, 2025 08:55:13 UTC">October 8, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 08:12:10 UTC">November 24, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26595,6 +26615,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 2.  <strong><code>currentValue</code></strong>: A reactive <code>Ref</code> that you bind to your UI components (e.g., form inputs).</p>
 <p>It then returns:
 -   <code>currentValue</code>: The reactive <code>Ref&lt;T&gt;</code> you should use for <code>v-model</code> or other bindings.
+-   <code>pristineValue</code>: The reactive <code>Ref&lt;T&gt;</code> that represents the original, unmodified state.
 -   <code>isModified</code>: A <code>DeepReadonly&lt;Ref&lt;boolean&gt;&gt;</code> that becomes <code>true</code> if <code>currentValue</code> is no longer deeply equal to <code>pristineValue</code>.
 -   <code>resetModificationState</code>: A function to reset the tracker. It makes the current state the new "pristine" state.</p>
 <p>This is invaluable for scenarios where you only want to allow saving when actual changes have occurred, preventing unnecessary API calls.</p>
@@ -26863,11 +26884,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <script src="../../../../../assets/scripts/version-redirect.js"></script>
       
+        <script src="../../../../../assets/scripts/version-selector-handler.js"></script>
+      
         <script src="../../../../../assets/scripts/scripts-loader.js"></script>
       
         <script src="../../../../../assets/scripts/scroll-menu.js"></script>
-      
-        <script src="../../../../../assets/scripts/search-url-fix.js"></script>
       
     
   </body>
