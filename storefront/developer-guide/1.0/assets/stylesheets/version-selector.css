@@ -21,20 +21,24 @@
  * - Search visible state
  */
 
-/* When search input is focused or checked - hide version selector */
+/* When search input is focused or checked - hide version selector AND mega-menu */
 /* The search checkbox is BEFORE the header, so we use ~ (sibling) selector */
-[data-md-toggle="search"]:checked ~ .md-header .md-version {
+[data-md-toggle="search"]:checked ~ .md-header .md-version,
+[data-md-toggle="search"]:checked ~ .md-header .mega-menu {
     display: none !important;
 }
 
 /* Alternative: if checkbox is inside header, use parent selector */
-.md-header:has([data-md-toggle="search"]:checked) .md-version {
+.md-header:has([data-md-toggle="search"]:checked) .md-version,
+.md-header:has([data-md-toggle="search"]:checked) .mega-menu {
     display: none !important;
 }
 
 /* When search overlay is visible */
 .md-search--active ~ .md-header .md-version,
-body:has(.md-search--active) .md-version {
+.md-search--active ~ .md-header .mega-menu,
+body:has(.md-search--active) .md-version,
+body:has(.md-search--active) .mega-menu {
     display: none !important;
 }
 
@@ -57,15 +61,16 @@ body:has(.md-search--active) .md-version {
 }
 
 /* ============================================
-   Hide version selector on mobile devices
+   Hide version selector AND mega-menu on mobile devices
    ============================================ */
 
 /**
  * Mobile breakpoint: < 768px
- * Version selector takes too much space on small screens
+ * Version selector and mega-menu take too much space on small screens
  */
 @media screen and (max-width: 767px) {
-    .md-version {
+    .md-version,
+    .mega-menu {
         display: none !important;
     }
 }
