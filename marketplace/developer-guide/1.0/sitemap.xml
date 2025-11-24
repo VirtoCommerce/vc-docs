@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/state-machine-module/data-structure/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/state-machine-module/entity-types/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/state-machine-module/operator-portal-actions/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/state-machine-module/overview/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/state-machine-module/transition-conditions/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/marketplace/developer-guide/1.0/state-machine-module/vendor-portal-actions/</loc>
-         <lastmod>2025-11-19</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
 </urlset>
