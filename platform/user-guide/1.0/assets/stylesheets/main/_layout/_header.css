@@ -136,7 +136,7 @@
     }
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 895px) {
     .md-header .md-ellipsis {
         display: none;
     }
