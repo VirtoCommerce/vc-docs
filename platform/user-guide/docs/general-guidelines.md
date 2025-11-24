@@ -15,6 +15,33 @@ The Platform's home page shows:
 
 ![Guide](media/platform-dashboard.png)
 
+## Multilingual SEO URLs
+
+This feature allows each localized page in the Virto Commerce Frontend to have a language-specific URL that improves both search engine optimization and user experience.
+
+When a customer visits a multilingual Frontend, URLs automatically adapt to the selected language or region, ensuring that:
+
+* Search engines index the correct localized version of each page.
+* Customers land on the appropriate language version when browsing or sharing links.
+* Switching languages in the Frontend does not disrupt navigation or cause broken links.
+
+The feature is available only for multi-language Frontend configurations.
+
+| Configuration type    | Example URL     | Description                                                                          |
+| --------------------- | ----------------| ------------------------------------------------------------------------------------ |
+| Default language  | `/about-us`         | Used for the default Frontend language when no language code is specified.           |
+| Language-specific | `/{xx}/about-us`    | Includes a two-letter language code, e.g., `/en/about-us`.                           |
+| Region-specific   | `/{xx-XX}/about-us` | Includes both language and region codes, e.g., `/en-US/about-us`, `/en-GB/about-us`. |
+
+
+When a customer changes the language in the Frontend, the permalink is updated in the browser to include the selected culture code (for example, **/en/about-us** --> **/de/über-uns**). The selected language is saved in local storage and automatically applied as the default language for future visits.
+
+### Items URLs
+
+When you open the desired order, product, or product category, you can copy its URL and paste it into a new window to open the desired item immediately:
+
+![Copy and paste order URL](media/order-url.gif)
+
 
 ## Blades
 
@@ -47,12 +74,6 @@ In the **Settings** toolbar, you can:
 
 ![Restart and reset](media/restart-reset.png){: style="display: block; margin: 0 auto;" }
 
-## Items URLs
-
-When you open the desired order, product, or product category, you can copy its URL and paste it into a new window to open the desired item immediately:
-
-![Copy and paste order URL](media/order-url.gif)
-
 
 ## Developer tools
 
@@ -67,6 +88,12 @@ This section gives developers access to useful diagnostics and integration tools
 
 
 The **Developer tools** blade is available to users with the **platform:developer-tools:access** permission. Access to **Hangfire** also requires the same permission.
+
+## Glossary
+
+All terms used throughout the Platform user documentation are listed in the [Glossary](glossary.md), where you can find clear definitions and explanations for each concept.
+Some key terms also include tooltips that appear the first time they are mentioned in the documentation, helping you quickly understand their meaning without leaving the page.
+
 
 <br>
 <br>

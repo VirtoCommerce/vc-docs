@@ -28,7 +28,7 @@ The Catalog module supports master catalogs, which are physical catalogs that st
 The following modules are included to discuss a multi-regional ecommerce solution.
 
 * **Web store** is a sales point for the store, which can be a website, application, or other platform.
-* **Virto Commerce** is a Platform with native, extended, or new customer-specific modules.
+* **Virto Commerce** is a platform with native, extended, or new customer-specific modules.
 * **The catalog module** is responsible for running CRUD operations to build the seller's product catalog structure.
 * **The master catalog** contains the seller's catalog assortment master data, which can be uploaded via .CSV file import or RESTful API. The master catalog can be enhanced with additional properties through the back office and can be utilized for multiple stores configured in Virto Commerce. In the scheme, the master catalog is directly used for US and CA web stores.
 * **The virtual catalog** is a tool that can be used to build a subset or combination of items from one or more master catalogs. This tool adjusts the catalog structure to meet specific regional requirements. The virtual catalog can be created and used specifically for the EU region web store in the architecture scheme.

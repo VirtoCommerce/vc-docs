@@ -63,8 +63,10 @@ nav:
       - Marketplace Products: Operator-portal/marketplace-products.md
       - Offers: Operator-portal/offers.md
       - Operator Orders: Operator-portal/operator-orders.md
-      - Quotes: Operator-portal/quotes.md
+      - Quote Requests: Operator-portal/quotes.md
       - State Machines: Operator-portal/state-machines.md
+      - AI Helper: Operator-portal/ai-helper.md
+      - Communication: Operator-portal/communication.md
     - Vendor Portal:
       - Overview: Vendor-portal/overview.md
       - Orders: Vendor-portal/orders.md

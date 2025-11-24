@@ -28,6 +28,6 @@ The diagram below illustrates the Price Export-Import module functionality:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../payment/overview">← Payment module overview</a>
+    <a href="../../x-pickup/overview">← xPickup module overview</a>
     <a href="../mapping-csv-files">Mapping CSV files →</a>
 </div>

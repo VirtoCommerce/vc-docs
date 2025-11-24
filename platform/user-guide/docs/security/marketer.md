@@ -10,7 +10,7 @@ To assign permissions to your marketer:
 1. In the next blade, click **Roles**.
 1. In the next blade, click **B2B Marketer**.
 
-    ![Add marketer](media/add-marketer.png)
+    ![Add marketer](media/add-marketer.png){: style="display: block; margin: 0 auto;" }
 
 1. Check the permissions you want to assign to your marketer and click **Save** in the toolbar.
 
@@ -49,7 +49,7 @@ With the Virto Commerce Platform, you can limit scopes of specific permissions t
 1. In the next blade, click **Only for the selected catalogs**. 
 1. In the next blade, select the catalogs to which you want to limit your marketer's scope.
 
-![Scope of catalogs](media/catalog-scope.png)
+![Scope of catalogs](media/catalog-scope.png){: style="display: block; margin: 0 auto;" }
 
 Now the marketer can only work with the specified catalogs. Similarly, you can limit the scopes of other permissions.
 
@@ -58,14 +58,14 @@ Now the marketer can only work with the specified catalogs. Similarly, you can l
 
 For marketers, the Platform will show only one module in the main menu:
 
-![Marketing module](media/marketing-module.png)
+![Marketing module](media/marketing-module.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Example
 
 Let's say we have a marketer who is only responsible for B2B-store promotions, while a top-level marketer can create promotions for multiple stores, including the B2B-store. As long as the marketer's permission is limited to the B2B-store, they can only view the promotions created by the top marketer and that are active for multiple stores. They will receive notifications if they try to edit these promotions. The store names other than B2b-store will be hidden.
 
-![Limitations](media/marketer-limitations.png)
+![Limitations](media/marketer-limitations.png){: style="display: block; margin: 0 auto;" }
 
 With this feature, top marketers prevent unwanted modifications of created promotions.   
 

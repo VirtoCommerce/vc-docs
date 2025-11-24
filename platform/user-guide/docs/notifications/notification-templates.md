@@ -18,18 +18,22 @@ To add a new notification template:
 
 1. Click **Add** in the toolbar.
 
-	![Notification template list](media/notification-template-path.png)
+	![Notification template list](media/notification-template-path.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, fill in the following fields:
 
-	![Notification template options](media/template-fields.png)
+	![Notification template options](media/template-fields.png){: style="display: block; margin: 0 auto;" }
 
 	!!! warning
 		The only way to create a new template for the notification you are working with is to create one for a different language. If you create a new template with the same language as the current template, such as Default or EN-US, it will override the current template.
 
-1. Click **Preview** in the toolbar. The notification preview opens in the next blade. In case of errors, you will see a detailed report on them:
+1. Click **Preview** in the toolbar. The notification preview opens in the next blade. 
 
-	![Error message](media/template-error-message.png){: style="display: block; margin: 0 auto;" width="600"}
+	![Preview notification](media/preview-notification.png){: style="display: block; margin: 0 auto;" }
+
+	In case of errors, you will see a detailed report on them:
+
+	Click **Send test email** in the toolbar to send the preview notification to the specified email address, then confirm your action.
 
 1. Click **OK** to save the changes.
 
@@ -38,9 +42,6 @@ You template has been added to the templates list.
 !!! tip
 	The PDF invoices templates can also be managed through the notification template widget. For Linux users, we recommend using embedded images instead of external image links. The reason for this is that using embedded images leads to faster rendering times when generating the PDF.
 
-
-??? Example
-	![preview](media/notification-template-preview.png){: width="550"}
 
 
 

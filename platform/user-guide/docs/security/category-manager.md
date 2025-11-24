@@ -10,7 +10,7 @@ To assign permissions to category manager:
 1. In the next blade, click **Roles**.
 1. In the next blade, click **B2B Category Manager**.
 
-    ![Add category manager](media/add-category-manager.png)
+    ![Add category manager](media/add-category-manager.png){: style="display: block; margin: 0 auto;" }
 
 1. Check the permissions you want to assign to your category manager and click **Save** in the toolbar.
 
@@ -51,7 +51,7 @@ With the Virto Commerce Platform, you can limit scopes of specific permissions t
 1. In the next blade, click **Only for the selected catalogs**. 
 1. In the next blade, select the catalogs to which you want to limit the scope of your category manager.
 
-![Scope of catalogs](media/category-manager-limitations.png)
+![Scope of catalogs](media/category-manager-limitations.png){: style="display: block; margin: 0 auto;" }
 
 Now the category manager can only work with the specified catalogs. Similarly, you can limit the scopes of other permissions.
 
@@ -60,7 +60,7 @@ Now the category manager can only work with the specified catalogs. Similarly, y
 
 For category managers, the Platform will only display modules for which they have permissions:
 
-![Modules for category managers](media/category-manager-limitations2.png)
+![Modules for category managers](media/category-manager-limitations2.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Managing categories](../catalog/managing-categories.md)
 

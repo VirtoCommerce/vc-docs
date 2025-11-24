@@ -2,7 +2,7 @@
 
 Current Storefront and Theme users have the following options:
 
-* Migrate to the new storefrontless architecture:
+* Migrate to the new Storefrontless architecture:
     * Using our [guide for migration on Azure Cloud.](migration-on-azure.md) 
     * Using our [guide for migration on a local machine.](migration-on-local-machine.md)
     * [With our assistance.](https://help.virtocommerce.com/support/home)
@@ -15,6 +15,6 @@ Current Storefront and Theme users have the following options:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../theme-customization/theme-customization">← Theme customization</a>
+    <a href="../merge">← Merging Frontend updates</a>
     <a href="../migration-on-azure">Migration on Azure Cloud →</a>
 </div>

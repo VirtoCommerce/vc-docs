@@ -16,7 +16,8 @@ With the **Payment** module, you can:
 
 Although the **Payment** module does not have its own user interface, you need to have it installed to manage payment methods via the **Store** module. Installing **Payment** module adds the **Payment methods** widget to the **Stores** module.
 
-The diagram below illustrates the interconnections among the Payment and Stores modules:
+The diagram below illustrates the functionality of the Payment module:
+
 <br>
 <br>
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }

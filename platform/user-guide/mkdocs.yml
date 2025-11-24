@@ -58,8 +58,10 @@ nav:
           - B2B Multi-Regional eCommerce Architecture: multiregional-ecommerce.md
           - Viewing Results on Frontend: view-results-on-frontend.md
           - Backup and Restore: backup-and-restore.md
+          - Platform Settings: platform-settings.md
           - ADA Compliance: ada-compliance.md
           - Managing Frontend Content: managing-content.md
+          - Glossary: glossary.md
     - Modules:
           - Overview: platform-overview.md
           - <b>Catalog</b>:
@@ -240,16 +242,24 @@ nav:
                       - Overview: native-payment-methods/overview.md
                       - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
                       - Settings: native-payment-methods/settings.md
+                - Authorize.net:
+                      - Overview: authorize-net/overview.md
+                      - Managing Authorize.net: authorize-net/manage-authorize-net-module.md
+                      - Settings: authorize-net/settings.md
                 - CyberSource:
                       - Overview: cybersource/overview.md
                       - Managing CyberSource: cybersource/manage-cybersource.md
                       - Settings: cybersource/settings.md
+                - Datatrans: 
+                      - Overview: datatrans/overview.md
+                      - Managing Datatrans: datatrans/manage-datatrans.md
+                      - Settings: datatrans/settings.md
                 - Skyflow:
                       - Overview: skyflow/overview.md
                       - Managing Skyflow: skyflow/manage-skyflow-module.md
-                - Authorize.net:
-                      - Overview: authorize-net/overview.md
-                      - Managing Authorize.net: authorize-net/manage-authorize-net-module.md
+          - xPickup:
+                - Overview: x-pickup/overview.md
+                - Managing Pickup Locations: x-pickup/managing-pickup-locations.md
           - Price Export Import:
                 - Overview: price-export-import/overview.md
                 - Mapping CSV files: price-export-import/mapping-csv-files.md
@@ -301,11 +311,13 @@ nav:
                       - Order Manager: security/order-manager.md
                       - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
-                - Login on Behalf Feature: security/login-on-behalf.md
+                - Login on Behalf of User: security/login-on-behalf.md
+                - Managing Active Sessions: security/active-sessions.md
           - SEO:
                 - Overview: seo/overview.md
                 - Managing SEO: catalog/managing-SEO.md
                 - Managing Broken Links: seo/managing-broken-links.md
+                - Debugging SEO Links: seo/debugging-seo-links.md
                 - Settings: seo/settings.md
           - Shipping:
                 - Overview: shipping/overview.md
@@ -349,7 +361,6 @@ nav:
           - White Labeling:
                 - Overview: white-labeling/overview.md
                 - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
-          - Glossary: glossary.md
     - Integrations:
           - Overview: integrations/overview.md
           - Avalara Tax:

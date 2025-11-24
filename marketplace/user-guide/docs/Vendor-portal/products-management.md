@@ -51,7 +51,19 @@ To add your own product to the marketplace:
 1. In the next blade, enter all the descriptive data of the product, such as name, description, code, image(s), etc.
 
     !!! note
-        A vendor can only upload products to the categories assigned to him by a marketplace operator. When a Vendor adds a product, it can only be assigned to one category from the list available to him.
+        A vendor can only upload products to the categories assigned by a marketplace operator. When a Vendor adds a product, it can only be assigned to one category from the list available to him.
+
+    You can use the OpenAI and Grok AI providers to generate product descriptions based on product names and selected categories, and then translate those descriptions into the desired language:
+
+    ![Product descriptions](media/ai-generated-content.gif)
+
+    Product properties can be automatically generated using AI based on the product’s name and images:
+
+    ![Product properties](media/product-properties-generation.gif)
+
+    Product accent colors can be automatically assigned based on their entered English name using standard HTML color names. Users can still manually adjust the color code if needed:
+
+    ![Color picker](media/color-picker-names.gif)
 
 1. Click **Save as draft** in the toolbar to save the changes.
 

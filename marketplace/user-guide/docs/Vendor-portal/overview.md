@@ -17,7 +17,7 @@ The Vendor Portal suggests the following key features for vendors:
 * [Employees management.](my-store.md#people)
 * [Fulfillment centers management.](my-store.md#fulfillment-centers)
 * [Organization details editing.](my-store.md#profile)
-
+* [Quote requests management.](quotes.md)
 
 <br>
 <br>

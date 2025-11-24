@@ -1,34 +1,23 @@
 # Manage Payment Methods
 
-Managing payment methods includes:
-
-* [Viewing available payment methods.](managing-payment-methods.md#view-available-payment-methods)
-* [Editing payment methods.](managing-payment-methods.md#edit-payment-methods)
-
-## View available payment methods
-
 To view the available payment methods:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the required store.
 1. In the next **Store details** blade, click on the **Payment methods** widget.
-1. The next blade displays the list of available payment methods.
+1. The next blade displays the list of available payment methods. 
 
 ![View payment methods](media/view-payment-methods.png)
 
-## Edit payment methods
+![Read more](media/readmore.png){: width="20"} [Manage Authorize.net payment method](../authorize-net/manage-authorize-net-module.md)
 
-To edit a payment method:
+![Read more](media/readmore.png){: width="20"} [Manage CyberSource payment method](../cybersource/manage-cybersource.md)
 
-1. Complete steps 1-4 from the instruction above.
-1. Select the required payment method from the list.
-1. In the next blade, fill in the following fields:
+![Read more](media/readmore.png){: width="20"} [Manage Datatrans payment method](../datatrans/manage-datatrans.md)
 
-    ![Edit payment method](media/edit-payment-method.png)
+![Read more](media/readmore.png){: width="20"} [Manage Skyflow payment method](../skyflow/manage-skyflow-module.md)
 
-1. Click **Save** in the toolbar to save the changes.
-
-Your modifications have been applied.
+![Read more](media/readmore.png){: width="20"} [Manage Loyalty programs](../loyalty/enable-and-configure-loyalty-programs.md)
 
 
 <br>

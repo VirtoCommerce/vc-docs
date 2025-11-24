@@ -316,6 +316,7 @@ nav:
                       - ConfigurationItemsResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationItemsResponseType.md
                       - ConfigurationSectionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionInput.md
                       - ConfigurableProductOptionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionInput.md
+                      - InputUpdateCartQuantityItem: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateCartQuantityItem.md
                 - Mutations:
                       - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
                       - clearCart: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart.md
@@ -346,6 +347,7 @@ nav:
                       - changeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeWishlist.md
                       - renameWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/renameWishlist.md
                       - removeWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlist.md
+                      - cloneWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/cloneWishlist.md
                       - addWishlistItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItem.md
                       - updateWishListItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateWishListItems.md
                       - addWishlistItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItems.md
@@ -356,9 +358,9 @@ nav:
                       - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
                       - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
                       - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
-                      - cloneWishlist: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/cloneWishlist.md
                       - moveFromSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveFromSavedForLater.md
                       - moveToSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveToSavedForLater.md
+                      - updateCartQuantity: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateCartQuantity.md
           - xCatalog:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md
                 - Queries:
@@ -559,6 +561,23 @@ nav:
                       - PageDocumentEdge: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge.md
                       - PageDocumentType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType.md
                       - SlugInfoResponseType: GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/SlugInfoResponseType.md
+          - xPickup: 
+                - Overview: GraphQL-Storefront-API-Reference-xAPI/xPickup/overview.md
+                - Queries:
+                      - pickupLocations: GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/pickupLocations.md
+                      - cartPickupLocations: GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/cartPickupLocations.md
+                      - productPickupLocations: GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/productPickupLocations.md
+                - Objects:
+                      - pickupLocationType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationType.md
+                      - pickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationConnection.md
+                      - PickupLocationAddressType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/PickupLocationAddressType.md
+                      - pickupAddressType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupAddressType.md
+                      - cartPickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/CartPickupLocationConnection.md
+                      - pickupLocationEdge: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationEdge.md
+                      - productPickupAvailabilityType: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupAvailabilityType.md
+                      - productPickupLocation: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocation.md
+                      - productPickupLocationConnection: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocationConnection.md
+                      - productPickupLocationEdge: GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocationEdge.md
           - xProfile:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md
                 - Queries:

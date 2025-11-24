@@ -6,8 +6,6 @@ Product inventories are shown in Frontend Application:
 * In the cart after adding the products. 
 * When processing orders.
 
-![Product availability](media/storefront-stock.png)
-
 The product's availability displayed in the Frontend Application is determined by the information configured in:
 
 * The **Catalog** module, where availability settings are established using switches.
@@ -37,17 +35,27 @@ To set product's availability:
     !!! info 
         Track inventory switch can be applied to both digital and physical products. By default, the switch is off for digital products, on for physical ones. 
 
-1. In the same blade, click on the **Fulfillment Centers** widget.
+1. In the same blade, click on the **Fulfillment centers** widget.
 
-    ![add-inventory](media/inventory-path.png)
+    ![add-inventory](media/inventory-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in the following fields:
 
-    ![Edit inventory](../inventory/media/edit-inventory.png)
+    ![Edit inventory](../inventory/media/edit-inventory.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** to save changes.   
 
 The product's availability has been set.
+
+Try our interactive demo to explore key features in action:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/vorljmcpyz7y?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
 
 ## Check availability
 
@@ -56,14 +64,14 @@ To check product's availability:
 1. Follow steps 1-3 from the instruction above.
 1. In the next blade, click on the **Index** widget.
 
-    ![Index widget](media/index-widget.png){: width="300" height="300"}
+    ![Index widget](media/index-widget.png){: style="display: block; margin: 0 auto;" width="500"}
 
 1. Find the **availability** line. The **availability** statuses can be as follows:
     * **InStock**.
     * **OutOfStock**.
     * **SoldOut**.
 
-    ![Availability status](media/availability-status.png)
+    ![Availability status](media/availability-status.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

@@ -64,8 +64,8 @@ nav:
           - Addresses: account/addresses.md
           - Orders: account/orders.md
           - Product Reviews: account/review-products.md
+          - Saved for Later: account/saved-for-later.md
           - Lists: account/lists.md
-          - Checkout Defaults: account/checkout-defaults.md
           - Quote Requests: account/quote-requests.md
           - Saved Credit Cards: account/saved-credit-cards.md
           - Notifications: account/notifications.md

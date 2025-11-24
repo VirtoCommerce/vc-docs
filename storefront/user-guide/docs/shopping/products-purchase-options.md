@@ -18,6 +18,10 @@ Users select the specific variation of a product that best fits their requiremen
 
 ![Product variations](../media/product-variation-purchase.gif)
 
+In the list view, users do not need to open a product card - all of the product’s options can be expanded directly beneath it on the same page:
+
+![Expandable variations](../media/expandable-variations.gif)
+
 As of version [2.27.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.27.0), customers can click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
 
 ![Options selector](../media/jeans_options_selector.gif)

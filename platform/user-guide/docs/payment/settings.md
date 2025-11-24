@@ -9,7 +9,7 @@ To configure the Payment module settings:
 1. In the next blade, click on the **Settings** widget. 
 1. The next blade displays settings of the selected payment method. For example, the Authorize.Net settings are as follows:
 
-    ![Settings](media/authorize-settings.png)
+    ![Settings](media/authorize-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 

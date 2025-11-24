@@ -15,5 +15,5 @@ Users can review products from the completed orders:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../orders">← Orders</a>
-    <a href="../lists">Lists →</a>
+    <a href="../saved-for-later">Saved for later →</a>
 </div>
