@@ -818,6 +818,7 @@ nav:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
                       - Create First Custom App: custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md
+                      - Blade Generator: custom-apps-development/vc-shell/Getting-started/blade-generator.md
                 - Guides:
                       - Application Architecture and Best Practices: custom-apps-development/vc-shell/Guides/application-architecture-best-practices.md
                       - Building, Deployment and Advanced Topics: custom-apps-development/vc-shell/Guides/building-deployment-advanced-topics.md
