@@ -55,7 +55,7 @@ We provide three key tools to manage your environments:
 In addition, we offer **ready-made CI/CD pipelines** using GitHub Actions or Azure DevOps to support full automation from build to deployment.
 
 
-## How It Works
+## How it works
 
 Each VC Cloud environment is defined by:
 

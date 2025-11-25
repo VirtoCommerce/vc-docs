@@ -53,7 +53,7 @@ The **Setup** group controls technical parameters related to the Platform instal
 
 The **User interface** settings store a JSON file with manager UI personalization data. The file can be automatically formatted, and detailed error messages appear if issues are detected.
 
-![User interface JSON](media/user-interface-settings.gif)
+![User interface JSON](media/user-interface-settings.gif){: style="display: block; margin: 0 auto;" }
 
 ## User profile
 

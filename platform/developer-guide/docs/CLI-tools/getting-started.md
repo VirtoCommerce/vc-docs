@@ -90,7 +90,7 @@ dotnet tool update VirtoCommerce.GlobalTool -g
     ```
 
 
-## Usage Examples
+## Usage examples
 
 Below are examples of using specific `vc-build` targets to automate development and release tasks.
 
