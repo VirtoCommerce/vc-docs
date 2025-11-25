@@ -26466,7 +26466,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 10:37:37 UTC">September 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 25, 2025 08:01:21 UTC">November 25, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26505,54 +26505,185 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <h3 id="configure-telemetry-from-appsettingsjson-file">Configure telemetry from appsettings.json file<a class="headerlink" href="#configure-telemetry-from-appsettingsjson-file" title="Permanent link">&para;</a></h3>
 <p>To send data to the Application Insights dashboard via the instrumentation key:</p>
-<p>{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--AppInsights2-start-->"
-   end="<!--AppInsights2-end-->"
-%}</p>
+<ol>
+<li>
+<p>Use current active telemetry configuration which is already initialized in most application types like ASP.NET Core:
+    <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;ApplicationInsights&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;ConnectionString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;Copy connection string from Application Insights Resource Overview&gt;&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Configure Platform Application Insights telemetry behavior inside the <code>VirtoCommerce:ApplicationInsights</code> section: 
+    <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;ApplicationInsights&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;SamplingOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;Processor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Adaptive&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;Adaptive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">          </span><span class="nt">&quot;MaxTelemetryItemsPerSecond&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">          </span><span class="nt">&quot;InitialSamplingPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="nt">&quot;MinSamplingPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="nt">&quot;MaxSamplingPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">          </span><span class="nt">&quot;EvaluationInterval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00:00:15&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">          </span><span class="nt">&quot;SamplingPercentageDecreaseTimeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00:02:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">          </span><span class="nt">&quot;SamplingPercentageIncreaseTimeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00:15:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="nt">&quot;MovingAverageRatio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.25&quot;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="nt">&quot;Fixed&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">          </span><span class="nt">&quot;SamplingPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="nt">&quot;IncludedTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dependency;Event;Exception;PageView;Request;Trace&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="nt">&quot;ExcludedTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">      </span><span class="nt">&quot;EnableSqlCommandTextInstrumentation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="nt">&quot;IgnoreSqlTelemetryOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="nt">&quot;QueryIgnoreSubstrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">          </span><span class="s2">&quot;[HangFire].&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">          </span><span class="s2">&quot;sp_getapplock&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">          </span><span class="s2">&quot;sp_releaseapplock&quot;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ol>
 <p>Values used are described below:</p>
-<p>{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--AppInsights1-start-->"
-   end="<!--AppInsights1-end-->"
-%}</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Default or sample value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SamplingOptions.Processor</td>
+<td>adaptive <br> fixed-rate</td>
+<td>This setting lets you chose between two sampling methods:<br><strong>Adaptive sampling</strong>: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications">configuring this option</a>.<br><strong>Fixed-rate sampling</strong>: reduces the volume of telemetry sent from both the application. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.MaxTelemetryItemsPerSecond</td>
+<td>5</td>
+<td>Maximum telemetry items per second allowed in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.InitialSamplingPercentage</td>
+<td>100</td>
+<td>Initial sampling percentage in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.MinSamplingPercentage</td>
+<td>0.1</td>
+<td>Minimum sampling percentage in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.MaxSamplingPercentage</td>
+<td>100</td>
+<td>Maximum sampling percentage in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.EvaluationInterval</td>
+<td>00:00:15</td>
+<td>Interval between sampling evaluations in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.SamplingPercentageDecreaseTimeout</td>
+<td>00:02:00</td>
+<td>Timeout before decreasing sampling percentage in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.SamplingPercentageIncreaseTimeout</td>
+<td>00:15:00</td>
+<td>Timeout before increasing sampling percentage in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Adaptive.MovingAverageRatio</td>
+<td>0.25</td>
+<td>Ratio used for moving average calculations in adaptive sampling.</td>
+</tr>
+<tr>
+<td>SamplingOptions.Fixed.SamplingPercentage</td>
+<td>100</td>
+<td>Fixed sampling percentage used for telemetry in Application Insights.</td>
+</tr>
+<tr>
+<td>SamplingOptions.IncludedTypes</td>
+<td>Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace</td>
+<td>A semi-colon delimited list of types that you do want to subject to sampling. The specified types will be sampled. All telemetry of the other types will always be transmitted. All types are included by default.</td>
+</tr>
+<tr>
+<td>SamplingOptions.ExcludedTypes</td>
+<td>Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace</td>
+<td>A semi-colon delimited list of types that you do not want to be sampled. All telemetry of the specified types is transmitted. The types that aren't specified will be sampled. Empty by default</td>
+</tr>
+<tr>
+<td>EnableSqlCommandTextInstrumentation</td>
+<td>true</td>
+<td>Controls Application Insight telemetry processor thats excludes dependency SQL queries. Any SQL command name or statement that contains a string from <strong>QueryIgnoreSubstrings</strong> options will be ignored.</td>
+</tr>
+<tr>
+<td>IgnoreSqlTelemetryOptions.QueryIgnoreSubstrings</td>
+<td>[HangFire]., sp_getapplock, sp_releaseapplock</td>
+<td>Specifies substrings to ignore in SQL telemetry to avoid collecting irrelevant data, particularly related to Hangfire's internal operations.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="configure-logging-from-appsettingsjson-file">Configure logging from appsettings.json file<a class="headerlink" href="#configure-logging-from-appsettingsjson-file" title="Permanent link">&para;</a></h3>
 <p>The module includes a Serilog <a href="https://github.com/serilog-contrib/serilog-sinks-applicationinsights">sink</a> for writing events to Microsoft Application Insights. Enable Application Insights logging by updating the following Serilog configuration sections:</p>
-<p>{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--AppInsights3-start-->"
-   end="<!--AppInsights3-end-->"
-%}</p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;Serilog&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;Using&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="s2">&quot;Serilog.Sinks.ApplicationInsights&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&quot;WriteTo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ApplicationInsights&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nt">&quot;Args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">          </span><span class="nt">&quot;connectionString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;Copy connection string from Application Insights Resource Overview&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">          </span><span class="nt">&quot;telemetryConverter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Serilog.Sinks.ApplicationInsights.TelemetryConverters.TraceTelemetryConverter, Serilog.Sinks.ApplicationInsights&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">          </span><span class="nt">&quot;restrictedToMinimumLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error&quot;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
+</code></pre></div>
 <p>Make sure to specify the <strong>telemetryConverter</strong> with the full type and assembly name. A connection string is optional if provided via the <strong>APPLICATIONINSIGHTS_CONNECTION_STRING</strong> environment variable.</p>
 <h3 id="configure-logging-from-code">Configure logging from code<a class="headerlink" href="#configure-logging-from-code" title="Permanent link">&para;</a></h3>
 <p>To configure Serilog's Application Insights sink in code:</p>
 <ol>
 <li>
 <p>Use special <code>ILoggerConfigurationService</code> interface:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ApplicationInsightsLoggerConfiguration</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ILoggerConfigurationService</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">TelemetryConfiguration</span><span class="w"> </span><span class="n">_configuration</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="nf">ApplicationInsightsLoggerConfiguration</span><span class="p">(</span><span class="n">TelemetryConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="n">_configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="p">}</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Configure</span><span class="p">(</span><span class="n">LoggerConfiguration</span><span class="w"> </span><span class="n">loggerConfiguration</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="n">loggerConfiguration</span><span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">ApplicationInsights</span><span class="p">(</span><span class="n">telemetryConfiguration</span><span class="p">:</span><span class="w"> </span><span class="n">_configuration</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="n">telemetryConverter</span><span class="p">:</span><span class="w"> </span><span class="n">TelemetryConverter</span><span class="p">.</span><span class="n">Traces</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="n">restrictedToMinimumLevel</span><span class="p">:</span><span class="w"> </span><span class="n">Serilog</span><span class="p">.</span><span class="n">Events</span><span class="p">.</span><span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">   </span><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ApplicationInsightsLoggerConfiguration</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ILoggerConfigurationService</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">TelemetryConfiguration</span><span class="w"> </span><span class="n">_configuration</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="nf">ApplicationInsightsLoggerConfiguration</span><span class="p">(</span><span class="n">TelemetryConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">   </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="n">_configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Configure</span><span class="p">(</span><span class="n">LoggerConfiguration</span><span class="w"> </span><span class="n">loggerConfiguration</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">   </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="n">loggerConfiguration</span><span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">ApplicationInsights</span><span class="p">(</span><span class="n">telemetryConfiguration</span><span class="p">:</span><span class="w"> </span><span class="n">_configuration</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">      </span><span class="n">telemetryConverter</span><span class="p">:</span><span class="w"> </span><span class="n">TelemetryConverter</span><span class="p">.</span><span class="n">Traces</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="n">restrictedToMinimumLevel</span><span class="p">:</span><span class="w"> </span><span class="n">Serilog</span><span class="p">.</span><span class="n">Events</span><span class="p">.</span><span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 <li>
 <p>Register the <code>Initialize</code> method in <strong>module.cs</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="n">serviceCollection</span><span class="p">.</span><span class="n">AddTransient</span><span class="o">&lt;</span><span class="n">ILoggerConfigurationService</span><span class="p">,</span><span class="w"> </span><span class="n">ApplicationInsightsLoggerConfiguration</span><span class="o">&gt;</span><span class="p">();</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span><span class="n">serviceCollection</span><span class="p">.</span><span class="n">AddTransient</span><span class="o">&lt;</span><span class="n">ILoggerConfigurationService</span><span class="p">,</span><span class="w"> </span><span class="n">ApplicationInsightsLoggerConfiguration</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 </ol>

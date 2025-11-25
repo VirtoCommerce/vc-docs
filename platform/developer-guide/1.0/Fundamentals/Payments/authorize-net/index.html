@@ -26374,7 +26374,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 25, 2025 08:01:21 UTC">November 25, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26400,11 +26400,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><a href="https://github.com/VirtoCommerce/vc-module-authorize-net/releases"><img alt="Latest release" src="../media/latest_release.png" /></a></p>
 <h2 id="configure-authorizenet">Configure Authorize.net<a class="headerlink" href="#configure-authorizenet" title="Permanent link">&para;</a></h2>
 <p>Confidential Authorize.Net account settings should be configured in the <strong>appsetting.json</strong> file as follows:</p>
-<p>{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--authorize-net-start-->"
-   end="<!--authorize-net-end-->"
-%}</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Default or sample value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IsActive</td>
+<td>true<br>false</td>
+<td>Toggle to enable or disable the Authorize.Net payment module.</td>
+</tr>
+<tr>
+<td>ApiLogin</td>
+<td>"YourApiLogin"</td>
+<td>The API login ID provided by Authorize.Net.</td>
+</tr>
+<tr>
+<td>TxnKey</td>
+<td>"YourTransactionKey"</td>
+<td>The transaction key provided by Authorize.Net.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Payments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;AuthorizeNet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&quot;IsActive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&quot;ApiLogin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YourApiLogin&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&quot;TxnKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YourTransactionKey&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</code></pre></div>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/latest/authorize-net/manage-authorize-net-module#configure-settings">Configuring non-confidential settings</a></p>
 <p><br>
 <br></p>

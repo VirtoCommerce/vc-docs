@@ -26610,7 +26610,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 06:27:07 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 25, 2025 08:01:21 UTC">November 25, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26718,11 +26718,158 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 <h4 id="configure-appsettingsjson">Configure appsettings.json<a class="headerlink" href="#configure-appsettingsjson" title="Permanent link">&para;</a></h4>
 <p>Configure the <strong>appsettings.json</strong> file as follows:</p>
-<p>{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--skyflow-start-->"
-   end="<!--skyflow-end-->"
-%}</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Default or sample value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tokenURI</td>
+<td></td>
+<td>The URI for obtaining authentication tokens from the Skyflow API. Can be taken from credentials.json file downloaded from Skyflow dashboard.</td>
+</tr>
+<tr>
+<td>vaultURI</td>
+<td></td>
+<td>The URI for the Skyflow vault. Can be taken from Skyflow studio by clicking three dots on the vault and selecting <strong>View details</strong> action.</td>
+</tr>
+<tr>
+<td>gatewayURI</td>
+<td></td>
+<td>The URI for invoking outbound connection rules. Replace <strong>vault</strong> with <strong>gateway</strong> in the <strong>vaultURI</strong>.</td>
+</tr>
+<tr>
+<td>vaultId</td>
+<td></td>
+<td>The identifier for the Skyflow vault.</td>
+</tr>
+<tr>
+<td>tableName</td>
+<td></td>
+<td>The table name for storing credit card data.</td>
+</tr>
+<tr>
+<td>PaymentFormAccount</td>
+<td></td>
+<td>Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps.</td>
+</tr>
+<tr>
+<td>PaymentFormAccount:clientID</td>
+<td></td>
+<td>The client ID for authentication with the Skyflow Payment Form account.</td>
+</tr>
+<tr>
+<td>PaymentFormAccount:keyID</td>
+<td></td>
+<td>The key ID for authentication with the Skyflow Payment Form account.</td>
+</tr>
+<tr>
+<td>PaymentFormAccount:privateKey</td>
+<td></td>
+<td>The private key for authentication with the Skyflow Payment Form account.</td>
+</tr>
+<tr>
+<td>IntegrationsAccount</td>
+<td></td>
+<td>Service account configuration section with credentials taken from the Skyflow service account configuration in the previous steps.</td>
+</tr>
+<tr>
+<td>IntegrationsAccount:clientID</td>
+<td></td>
+<td>The client ID for authentication with the Skyflow Integrations account.</td>
+</tr>
+<tr>
+<td>IntegrationsAccount:keyID</td>
+<td></td>
+<td>The key ID for authentication with the Skyflow Integrations account.</td>
+</tr>
+<tr>
+<td>IntegrationsAccount:privateKey</td>
+<td></td>
+<td>The private key for authentication with the Skyflow Integrations account.</td>
+</tr>
+<tr>
+<td>TargetPaymentMethod</td>
+<td>"AuthorizeNetPaymentMethod"</td>
+<td>The payment method used for authorizing payments via Skyflow. To outbound Payment Service Provider API through the Skyflow connection, create an HttpClient instance IHttpServiceFactory.CreateClient("Skyflow") and execute the request to the Payment Service API with the tokenized card data.</td>
+</tr>
+<tr>
+<td>TargetConnectionRoute</td>
+<td></td>
+<td>The connection route for the target payment method.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To execute the outbound Payment Service Provider API through Skyflow connection, create an HttpClient instance IHttpServiceFactory.CreateClient("Skyflow") and execute the request to the Payment Service API with the tokenized card data. 
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>public override PostProcessPaymentRequestResult PostProcessPayment(PostProcessPaymentRequest request)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    {
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>....
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      if (request.Parameters[&quot;CreditCard&quot;] != null)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      {
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>          var tokenizedCard = JsonConvert.DeserializeObject&lt;dynamic&gt;(request.Parameters[&quot;CreditCard&quot;]);
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>          creditCard = new AuthorizeNetCreditCard
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>          {
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>              CardCode = tokenizedCard.Cvv,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>              CardNumber = tokenizedCard.CardNumber,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>              ExpirationDate = tokenizedCard.CardExpiration,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>              ProxyEndpointUrl = request.Parameters[&quot;ProxyEndpointUrl&quot;],
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>              ProxyHttpClientName = request.Parameters[&quot;ProxyHttpClientName&quot;]
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>          };
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>          using var stream = new MemoryStream();
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>          var proxyHttpClient = _httpClientFactory.CreateClient(request.CreditCard.ProxyHttpClientName);
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>          var xmlSerializer = new XmlSerializer(typeof(AuthorizeNetCreateTransactionRequest));
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>          using var xmlWriter = XmlWriter.Create(stream, new XmlWriterSettings
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>          {
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>              Encoding = new UTF8Encoding(false, true), //Exclude BOM
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>              Indent = true,
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>          });
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>          xmlSerializer.Serialize(xmlWriter, this);
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>          using var content = new StreamContent(stream);
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>          content.Headers.ContentType = new MediaTypeHeaderValue(MediaTypeNames.Application.Xml);
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>          var proxyRequest = new HttpRequestMessage(HttpMethod.Post, new Uri(request.CreditCard.ProxyEndpointUrl))
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>          {
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>              Content = content
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>          };
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>          var response = proxyHttpClient.Send(proxyRequest);
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>      }
+</code></pre></div></p>
+<details>
+<summary>See code example</summary>
+</details>
+</div>
+<p><strong>Example</strong></p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;Payments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;Skyflow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;tokenURI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://manage.skyflowapis-preview.com/v1/auth/sa/oauth/token&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;vaultURI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://a370a9658141.vault.skyflowapis-preview.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&quot;gatewayURI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://a370a9658141.gateway.skyflowapis-preview.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">&quot;vaultId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ff9fc275bec848318361cc8928e094d1&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">&quot;tableName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;credit_cards&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">&quot;PaymentFormAccount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">&quot;clientID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;j873500104e6439bbbeb8cec63a6d21&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nt">&quot;keyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a70d977de5f24532810df376585031aa&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">&quot;privateKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-----BEGIN PRIVATE KEY-----Base64-----END PRIVATE KEY-----&quot;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">&quot;IntegrationsAccount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="nt">&quot;clientID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b47bea9c61c74cf4aac3b26d09aaf825&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="nt">&quot;keyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c950c459157548f0817500288ec8ac96&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="nt">&quot;privateKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-----BEGIN PRIVATE KEY-----Base64-----END PRIVATE KEY-----&quot;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="nt">&quot;TargetPaymentMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AuthorizeNetPaymentMethod&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="nt">&quot;TargetConnectionRoute&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b47bea9c61c74cf4aac3b26d09aaf825/xml/v1/request.api&quot;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">}</span>
+</code></pre></div>
 <h4 id="setup-virto-commerce-back-office">Setup Virto Commerce back office<a class="headerlink" href="#setup-virto-commerce-back-office" title="Permanent link">&para;</a></h4>
 <p>To setup Virto Commerce back office:</p>
 <ol>

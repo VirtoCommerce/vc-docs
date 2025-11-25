@@ -26315,7 +26315,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 25, 2025 08:01:21 UTC">November 25, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26337,11 +26337,95 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Markdown content -->
 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
 <p>This section explains the basic configuration for the Notifications module via the <a href="/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#notifications">appsettings.json file</a></p>
-<p>{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--notifications-start-->"
-   end="<!--notifications-end-->"
-%}</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Default or sample value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gateway</td>
+<td>"Smtp"<br>"SendGrid"</td>
+<td>The current notification sending gateway. The out-of-the-box implemented and supported values are <strong>Smtp</strong>, <strong>SendGrid</strong>.</td>
+</tr>
+<tr>
+<td>DefaultSender</td>
+<td></td>
+<td>This <strong>required</strong> setting provides sender<br>identification used by the current notification sending gateway.</td>
+</tr>
+<tr>
+<td>Smtp</td>
+<td></td>
+<td>SMTP gateway configuration.<br>Used if the <strong>Gateway</strong> setting has the <strong>Smtp</strong> value.</td>
+</tr>
+<tr>
+<td>Smtp:SmtpServer</td>
+<td></td>
+<td>The SMTP server address for sending emails.</td>
+</tr>
+<tr>
+<td>Smtp:Port</td>
+<td></td>
+<td>The port number to use when connecting to the SMTP server.</td>
+</tr>
+<tr>
+<td>Smtp:Login</td>
+<td></td>
+<td>The login (username) for authenticating to the SMTP server.</td>
+</tr>
+<tr>
+<td>Smtp:Password</td>
+<td></td>
+<td>The password for authenticating to the SMTP server.</td>
+</tr>
+<tr>
+<td>Smtp:ForceSslTls</td>
+<td>true<br>false</td>
+<td>If <strong>true</strong>, forces the usage of SSL/TLS when connecting to the SMTP server.</td>
+</tr>
+<tr>
+<td>SendGrid</td>
+<td></td>
+<td>SendGrid gateway configuration.<br>Used when the <strong>Gateway</strong> setting has the <strong>SendGrid</strong> value.</td>
+</tr>
+<tr>
+<td>SendGrid:ApiKey</td>
+<td></td>
+<td>The API key for authenticating to the SendGrid service.</td>
+</tr>
+<tr>
+<td>Notifications:DiscoveryPath</td>
+<td></td>
+<td>Relative folder path in the local file system<br>that will be used to discover notification template files<br>during notification rendering.</td>
+</tr>
+<tr>
+<td>Notifications:FallbackDiscoveryPath</td>
+<td></td>
+<td>Alternative relative folder path in the local file<br>system that will be used to discover alternative template<br>files during notification rendering.<br>Templates found through this path will be used as a backup,<br>in case the templates defined in the<br><strong>Notifications:DiscoveryPath</strong> setting are not found.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Notifications&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;Gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smtp&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;DefaultSender&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;noreply@gmail.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;Smtp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">&quot;SmtpServer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;smtp.gmail.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">&quot;Port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">587</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">&quot;Login&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">&quot;Password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">&quot;ForceSslTls&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">&quot;SendGrid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">&quot;Notifications:DiscoveryPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Templates&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">&quot;Notifications:FallbackDiscoveryPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</code></pre></div>
 <p><br>
 <br></p>
 <hr />
