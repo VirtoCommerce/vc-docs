@@ -137,6 +137,11 @@ def main():
         run_command("git stash push -m 'temp changes for CI/CD build'", check=False)
         run_command("git checkout gh-pages")
 
+        # IMPORTANT: Pull latest changes from remote gh-pages
+        # Mike --push updates origin/gh-pages but not local gh-pages branch
+        print("  Pulling latest changes from origin/gh-pages...")
+        run_command("git pull origin gh-pages --ff-only", check=False)
+
         print("  Copying versioned content...")
         # Copy versioned subsites to output directory
         for subsite in ["marketplace", "platform", "storefront"]:
