@@ -5,6 +5,7 @@ hooks:
     - ../../overrides/hooks/search_index_fixer.py
 
 # Override plugins for versioned site
+# Note: INHERIT doesn't merge plugins, so we must include ALL needed plugins
 plugins:
     - search:
         # Configure search for versioned content
@@ -20,6 +21,7 @@ plugins:
             /latest/
     - git-revision-date-localized
     - minify
+    - include-markdown
     - mike:
         alias_type: redirect
 theme:

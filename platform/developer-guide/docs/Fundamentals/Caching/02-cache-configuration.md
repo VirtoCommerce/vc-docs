@@ -3,7 +3,7 @@
 Cache is commonly configured in the **Caching** section of the [appsettings.json file](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#caching):
 
 {%
-   include-markdown "platform/developer-guide/Configuration-Reference/appsettingsjson"
+   include-markdown "../../Configuration-Reference/appsettingsjson.md"
    start="<!--caching-start-->"
    end="<!--caching-end-->"
 %}
