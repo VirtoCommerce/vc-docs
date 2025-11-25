@@ -26,7 +26,7 @@ The diagram below illustrates the functionality of the Elastic App Search module
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
-![Readmore](media/readmore.png){: width="25"} [Configuring Elastic App Search Provider](../../../developer-guide/Configuration-Reference/appsettingsjson)
+![Readmore](media/readmore.png){: width="25"} [Configuring Elastic App Search Provider](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson)
 
 ![Readmore](media/readmore.png){: width="25"} [Elastic App Search Documentation](https://www.elastic.co/guide/en/app-search/current/getting-started.html)
 

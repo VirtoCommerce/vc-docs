@@ -24,21 +24,21 @@ The "blade" system is a hallmark of VC-Shell, offering a powerful way to manage 
 
 While blades are components managed by `useBladeNavigation`, they can also be accessed via direct URLs. This is made possible by a "catch-all" route in **routes.ts** that uses a resolver to find and display the correct blade.
 
-![Readmore](../../media/readmore.png){: width="25"} [Primary composable. UseBladeNavigation](./shared/components/blade-navigation.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Primary composable. UseBladeNavigation](./shared/components/blade-navigation.md)
 
-![Readmore](../../media/readmore.png){: width="25"} [Working with blade navigation](./Usage-Guides/working-with-blade-navigation.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Working with blade navigation](./Usage-Guides/working-with-blade-navigation.md)
 
-![Readmore](../../media/readmore.png){: width="25"} [UI components. VC-blade](./ui-components/vc-blade.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [UI components. VC-blade](./ui-components/vc-blade.md)
 
-![Readmore](../../media/readmore.png){: width="25"} [Router integration details](./../Guides/routing-configuration.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Router integration details](./../Guides/routing-configuration.md)
 
 ### Main Application Menu (Sidebar/App Menu)
 
 The primary navigation menu provides top-level entry points into your application's modules and key features. Menu items can be registered for both router pages and blades.
 
-![Readmore](../../media/readmore.png){: width="25"} [Building navigation menus with usemenuservice](./Usage-Guides/building-navigation-menus-with-usemenuservice.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Building navigation menus with usemenuservice](./Usage-Guides/building-navigation-menus-with-usemenuservice.md)
 
-![Readmore](../../media/readmore.png){: width="25"} [Adding custom pages and menu items](./Usage-Guides/adding-custom-pages-and-menu-items.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Adding custom pages and menu items](./Usage-Guides/adding-custom-pages-and-menu-items.md)
 
 ## Choosing the Right Navigation System
 
@@ -58,27 +58,27 @@ Beyond the core systems, VC-Shell offers several UI components and composables t
 
 Breadcrumbs provide users with a clear trail of their navigation path, allowing them to easily understand their current location within the application's hierarchy and navigate back to previous levels.
 
-![Readmore](../../media/readmore.png){: width="25"} [Implementing navigational breadcrumbs with usebreadcrumbs](./Usage-Guides/implementing-navigational-breadcrumbs-with-usebreadcrumbs.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Implementing navigational breadcrumbs with usebreadcrumbs](./Usage-Guides/implementing-navigational-breadcrumbs-with-usebreadcrumbs.md)
 
-![Readmore](../../media/readmore.png){: width="25"} [UI component. VC breadcrumbs](./ui-components/vc-breadcrumbs.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [UI component. VC breadcrumbs](./ui-components/vc-breadcrumbs.md)
 
 ### App Bar Widgets
 
 The application's top bar can be extended with custom widgets. These widgets can serve as quick access points to features, display status information, or trigger actions, contributing to the overall navigation and interaction flow.
 
-![Readmore](../../media/readmore.png){: width="25"} [Adding app bar widgets with useappbarwidget](./Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Adding app bar widgets with useappbarwidget](./Usage-Guides/adding-app-bar-widgets-with-useappbarwidget.md)
 
 ### Settings Menu
 
 VC-Shell applications often feature a dedicated settings area. The framework provides tools to manage and extend this settings menu, allowing modules to register their own settings pages.
 
-![Readmore](../../media/readmore.png){: width="25"} [Managing settings menu with usesettingsmenu](./Usage-Guides/managing-settings-menu-with-usesettingsmenu.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Managing settings menu with usesettingsmenu](./Usage-Guides/managing-settings-menu-with-usesettingsmenu.md)
 
 ### Blade Toolbar Items
 
 Toolbars within blades provide contextual actions relevant to the blade's content. These are crucial for in-blade navigation and task execution.
 
-![Readmore](../../media/readmore.png){: width="25"} [Managing blade toolbars with usetoolbar](./Usage-Guides/managing-blade-toolbars-with-usetoolbar.md)
+![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Managing blade toolbars with usetoolbar](./Usage-Guides/managing-blade-toolbars-with-usetoolbar.md)
 
 ## Programmatic Navigation
 

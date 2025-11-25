@@ -35,7 +35,7 @@ This type contains various fields or attributes that provide information about t
 | `status`  ==String==                          | The status of the order.                                                          |
 | `storeId`  ==String!==                        | The Id for the store where the order was placed.                                  |
 | `tag`  ==String==                             | A tag or label associated with the order.                                         |   
-| `currency` [ ==CurrencyType== ](../../Order/objects/currency-type.md) | The currency used for financial transactions within the order. |
+| `currency` [ ==CurrencyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type) | The currency used for financial transactions within the order. |
 | `manualRelDiscountAmount`  ==MoneyType==      | The manually applied relative discount amount.                                    |
 | `manualShippingTotal`  ==MoneyType==          | The manually calculated shipping total for the order.                             |
 | `manualSubTotal`  ==MoneyType==               | The manually calculated subtotal for the order.                                   |
@@ -45,4 +45,4 @@ This type contains various fields or attributes that provide information about t
 | `attachments` [ ==[QuoteAttachmentType]== ](QuoteAttachmentType.md) | An array of attachments or documents linked to the order.   |
 | `shipmentMethod` [ ==QuoteShipmentMethodType== ](QuoteShipmentMethodType.md)| The selected method for shipping items in the order.|
 | `taxDetails` [ ==[QuoteTaxDetailType]== ](QuoteTaxDetailType.md) | An array of tax details associated with the order.             |
-| `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](../../Cart/objects/dynamic-property-value-type.md) | An array of dynamic properties that can be associated with the order.     |
+| `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | An array of dynamic properties that can be associated with the order.     |

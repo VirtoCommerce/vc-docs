@@ -12,7 +12,7 @@ The `InputUpdateOrderPaymentDynamicPropertiesType` is a type that represents the
 |-------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | `orderId`  ==String==                     | An optional identifier of the order for which the order payment's dynamic properties will be updated.        |
 | `paymentId`  ==String==                   | An optional identifier of the order payment for which the dynamic properties will be updated.                |
-| `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](../../Profile/Objects/InputDynamicPropertyValueType.md) | Dynamic property value types representing the updated dynamic properties of the order payment.|
+| `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType) | Dynamic property value types representing the updated dynamic properties of the order payment.|
 
 ## Possible returns
 

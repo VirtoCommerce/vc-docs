@@ -6,13 +6,13 @@ Below is a step-by-step guide to set up multiple stores on Virto Cloud.
 
 ## Prerequisites
 
-* Your Virto Commerce Platform is [deployed and running on Virto Cloud](../../../../deployment-on-cloud/deploy-on-virto-cloud).
+* Your Virto Commerce Platform is [deployed and running on Virto Cloud](/platform/deployment-on-cloud/latest/deploy-on-virto-cloud).
 
-* Review [Virto Commerce Frontend Architecture](../../../../../storefront/developer-guide/architecture).
+* Review [Virto Commerce Frontend Architecture](/storefront/developer-guide/latest/architecture).
 
 ## Create and configure new stores
 
-Follow the [guide](../../../../deployment-on-cloud/store-configuration) to configure a new store.
+Follow the [guide](/platform/deployment-on-cloud/latest/store-configuration) to configure a new store.
 
 ## Create new Frontend Application
 
@@ -44,7 +44,7 @@ To integrate a Frontend Application (for example, **B2B-loyalty**) into your Vir
 1. Configure domain and routing in ingress:
 
     !!! note
-      3rd-level domain for **govirto.com** will be enabled automatically. If you need additional steps for custom domain assignment, follow [Virto Cloud documentation](../../../../deployment-on-cloud/index) for it. 
+      3rd-level domain for **govirto.com** will be enabled automatically. If you need additional steps for custom domain assignment, follow [Virto Cloud documentation](/platform/deployment-on-cloud/latest/index) for it. 
 
     ```yaml
         - host: virtostart-loyalty-store.govirto.com

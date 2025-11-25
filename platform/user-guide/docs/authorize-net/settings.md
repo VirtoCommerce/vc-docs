@@ -10,7 +10,7 @@ To configure the module's settings:
 
 1. Click **OK** to save the changes.
 
-![Readmore](media/readmore.png){: width="25"} [Configuring confidential information](../../../developer-guide/Fundamentals/Payments/authorize-net)
+![Readmore](media/readmore.png){: width="25"} [Configuring confidential information](/platform/developer-guide/latest/Fundamentals/Payments/authorize-net)
 
 Your modifications have been saved.
 

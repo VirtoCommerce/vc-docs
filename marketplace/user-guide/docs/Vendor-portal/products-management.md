@@ -101,7 +101,7 @@ For various pricing strategies a vendor might set different price tags for a sin
 1. In the next blade, fill in the required fields.
 
     !!! note
-        The Vendor Portal supports multi-currencies pricing and volume-based pricing (configured through the [Store module](../../../../platform/user-guide/store/configuring-store)).
+        The Vendor Portal supports multi-currencies pricing and volume-based pricing (configured through the [Store module](/platform/user-guide/latest/store/configuring-store)).
 
         ![Multi-currency pricing](media/multi-currency-pricing.png){: style="display: block; margin: 0 auto;" width="600"}
 

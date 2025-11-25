@@ -25,6 +25,6 @@ This type represents a payment made within a shopping cart or order.
 | `taxDetails` [ ==[TaxDetailType]== ](tax-detail-type.md)                                    | An array of tax details associated with the payment, represented as `[TaxDetailType]`.                               |
 | `discounts` [ ==[DiscountType]== ](discount-type.md)                                        | An array of discounts applied to the payment, represented as `[DiscountType]`.                                       |
 | `comment`  ==String==                                                                       | A comment or additional information related to the payment.                                                          |
-| `vendor` [ ==CommonVendor== ](../../Catalog/objects/CommonVendor/Commonvendor.md)           | The vendor associated with the payment.                                                                              |
+| `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor)           | The vendor associated with the payment.                                                                              |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](dynamic-property-value-type.md) | The dynamic properties associated with the payment, represented as an array of `DynamicPropertyValueType` objects.   |
 

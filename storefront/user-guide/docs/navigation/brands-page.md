@@ -19,7 +19,7 @@ Here, users can:
 
 <br>
 <br>
-![Readmore](../media/readmore.png){: width="25"} [Brand page management](../../../../platform/user-guide/catalog/managing-brands-page)
+![Readmore](../media/readmore.png){: width="25"} [Brand page management](/platform/user-guide/latest/catalog/managing-brands-page)
 
 <br>
 <br>

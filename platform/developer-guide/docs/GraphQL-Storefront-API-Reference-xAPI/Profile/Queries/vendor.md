@@ -15,11 +15,11 @@ This query is used to retrieve detailed information about a vendor, including co
 | `emails` ==[String]!==                       | List of vendor emails.                                                     |
 | `groups` ==[String]!==                       | Groups the vendor belongs to.                                              |
 | `seoObjectType` ==String!==                  | Type used for SEO objects.                                                 |
-| `seoInfo` [==SeoInfo==](../../Catalog/objects/SeoInfo.md) | Returns SEO-related information for the vendor.                                   |
+| `seoInfo` [==SeoInfo==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo) | Returns SEO-related information for the vendor.                                   |
 | `defaultBillingAddress` [==MemberAddressType==](../Objects/MemberAddressType.md) | Default billing address.                                   |
 | `defaultShippingAddress` [==MemberAddressType==](../Objects/MemberAddressType.md) | Default shipping address.                                 |
 | `addresses` [==MemberAddressConnection==](../Objects/MemberAddressConnection.md) | List of all addresses associated with the vendor.          |
-| `dynamicProperties` [==[DynamicPropertyValueType]!==](../../Cart/objects/dynamic-property-value-type.md) | Dynamic properties of the vendor.  |
+| `dynamicProperties` [==[DynamicPropertyValueType]!==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | Dynamic properties of the vendor.  |
 | `about` ==String==                           | About the vendor.                                                          |
 | `iconUrl` ==String==                         | URL to the vendor icon.                                                    |
 | `siteUrl` ==String==                         | Vendor website URL.                                                        |

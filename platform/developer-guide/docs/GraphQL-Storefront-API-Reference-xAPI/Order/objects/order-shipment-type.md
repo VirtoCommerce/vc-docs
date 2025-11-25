@@ -53,8 +53,8 @@ This type contains information about a shipment within a customer order.
 | `packages` [ ==[OrderShipmentPackageType]== ](order-shipment-package-type.md)                                  | Packages associated with the shipment.                             |
 | `inPayments` [ ==[PaymentInType]== ](payment-in-type.md)                                                       | Payment transactions associated with the shipment.                 |
 | `discounts` [ ==[OrderDiscountType]== ](order-discount-type.md)                                                | Discounts applied to the shipment.                                 |
-| `vendor` [ ==CommonVendor== ](../../Catalog/objects/CommonVendor/Commonvendor.md)                              | The common vendor associated with the shipment.                    |
-| `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](../../Cart/objects/dynamic-property-value-type.md) | An array of dynamic properties associated with the shipment.       |
+| `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor)                              | The common vendor associated with the shipment.                    |
+| `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | An array of dynamic properties associated with the shipment.       |
 
 
 

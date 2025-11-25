@@ -65,7 +65,7 @@ Statistics and information on task completion are displayed in the blade or as N
 Import App is based on VC-Shell and can be extended as a usual custom app. 
 <br>
 <br>
-![Readmore](media/readmore.png){: width="25"} [VC-Shell extensibility](../../custom-apps-development/vc-shell/Extensibility/modularity.md)
+![Readmore](media/readmore.png){: width="25"} [VC-Shell extensibility](/platform/developer-guide/latest/custom-apps-development/vc-shell/Extensibility/modularity)
 
 <br>
 <br>

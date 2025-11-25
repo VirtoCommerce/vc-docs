@@ -66,7 +66,7 @@ export const routes: RouteRecordRaw[] = [
   // ... other top-level routes like /login
 ];
 ```
-For more details on routing configuration, see the [Routing and Navigation Configuration guide](../../Guides/routing-configuration.md).
+For more details on routing configuration, see the [Routing and Navigation Configuration guide](/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/routing-configuration).
 
 ## Step 3: Add the Page to the Main Menu
 
@@ -149,5 +149,5 @@ By following this pattern, you keep your setup logic organized and separate from
 ## Related Resources
 
 -   [Building Navigation Menus with `useMenuService`](./building-navigation-menus-with-usemenuservice.md)
--   [Routing and Navigation Configuration](../../Guides/routing-configuration.md)
+-   [Routing and Navigation Configuration](/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/routing-configuration)
 -   [Creating Interactive Dashboards with `useDashboard`](./creating-interactive-dashboards-with-usedashboard.md) 

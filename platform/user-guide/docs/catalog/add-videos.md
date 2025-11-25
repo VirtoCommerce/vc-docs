@@ -1,7 +1,7 @@
 # Add Videos
 
 !!! note
-    Adding videos requires preset Google API Key in the [Platform configuration file](../../../developer-guide/Configuration-Reference/appsettingsjson#videos).
+    Adding videos requires preset Google API Key in the [Platform configuration file](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson#videos).
 
 To add a YouTube video to a product page:
 

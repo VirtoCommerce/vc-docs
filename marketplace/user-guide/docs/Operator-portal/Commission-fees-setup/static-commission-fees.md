@@ -60,7 +60,7 @@ To assign a static commission fee to a Vendor:
 
 1. Click **Vendors** in the main menu to open the list of vendors.
 1. Select the desired Vendor from the **Vendors** blade to open the vendor details. 
-1. Click ![pencil](../../media/pencil.png){: width="20" height="20"} next to the **Commission** field to open the **Static commissions** blade or select a fee from a dropdown list. 
+1. Click ![pencil](/marketplace/user-guide/latest/media/pencil.png){: width="20" height="20"} next to the **Commission** field to open the **Static commissions** blade or select a fee from a dropdown list. 
 1. Select one of the predefined commission fees or [add a new one](static-commission-fees.md#add-new-static-commission).
 1. Click **Save** in the toolbar to save the changes.
 

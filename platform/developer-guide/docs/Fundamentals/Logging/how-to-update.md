@@ -57,7 +57,7 @@ After:
 
 Since Application Insights integration was moved to a separate module:
 
-1. [Download it manually](https://github.com/VirtoCommerce/vc-module-app-insights/releases)  or  [install it via vc-build CLI](../../CLI-tools/more-targets.md#installmodules).
+1. [Download it manually](https://github.com/VirtoCommerce/vc-module-app-insights/releases)  or  [install it via vc-build CLI](/platform/developer-guide/latest/CLI-tools/more-targets.md#installmodules).
 
 1. Add the following changes to the appsettings.{ENVIRONMENT}.json file.  
 

@@ -629,10 +629,11 @@ extra:
               url: "https://github.com/VirtoCommerce"
 extra_javascript:
     - assets/scripts/version-redirect.js
+    - assets/scripts/version-selector-handler.js
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
-    - assets/scripts/search-url-fix.js
 
 extra_css:
     - assets/stylesheets/main.css
     - assets/stylesheets/fonts.css
+    - assets/stylesheets/version-selector.css

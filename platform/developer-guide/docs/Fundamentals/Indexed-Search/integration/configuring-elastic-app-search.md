@@ -5,17 +5,17 @@ This guide will explain how to configure and run Elastic App Search for your env
 ## Prerequisites
 
 * Install the latest version of the Platform:
-    * [On Windows.](../../../Getting-Started/Installation-Guide/windows.md)
-    * [On Linux.](../../../Getting-Started/Installation-Guide/linux.md)
-    * [On MacOS.](../../../Getting-Started/Installation-Guide/macOS.md)
-* [Install the xAPI module.](../../../GraphQL-Storefront-API-Reference-xAPI/getting-started.md)
+    * [On Windows.](/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows)
+    * [On Linux.](/platform/developer-guide/latest/Getting-Started/Installation-Guide/linux)
+    * [On MacOS.](/platform/developer-guide/latest/Getting-Started/Installation-Guide/macOS)
+* [Install the xAPI module.](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started)
 * Install the [Profile module.](https://github.com/VirtoCommerce/vc-module-profile-experience-api)
 * Install [Node.js v.16.X.](https://nodejs.org/en/download/)
 * Install [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) Package Manager by running `npm install --global yarn`.
 
 ## Set up Frontend Application 
 
-Set up Virto Commerce Frontend Application as described [in this instruction](../../../../../../storefront/developer-guide/deployment)
+Set up Virto Commerce Frontend Application as described [in this instruction](/storefront/developer-guide/latest/deployment)
 
 ## Set up Elastic App Search
 

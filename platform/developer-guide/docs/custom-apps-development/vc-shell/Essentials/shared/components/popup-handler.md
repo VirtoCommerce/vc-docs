@@ -5,7 +5,7 @@ The `usePopup` composable is the primary public interface for managing popups an
 The VC-Shell popup system consists of several key parts:
 
 *  **`usePopup` Composable**: The main API for developers. It provides methods to show pre-styled standard popups and to configure and display custom Vue components as popups.
-* **`VcPopup` Component**: The standard UI component used to build the actual interface of your custom popups (e.g., forms, detailed views). You will use `<VcPopup>` within your custom popup components. Refer to the [VcPopup Component Documentation](../../ui-components/vc-popup.md) for its detailed API.
+* **`VcPopup` Component**: The standard UI component used to build the actual interface of your custom popups (e.g., forms, detailed views). You will use `<VcPopup>` within your custom popup components. Refer to the [VcPopup Component Documentation](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup) for its detailed API.
 * **`VcPopupHandler` Plugin**: A Vue plugin automatically installed by the VC-Shell framework. It sets up the global infrastructure for popups, including registering the `VcPopupContainer`.
 * **`VcPopupContainer` Component**: A globally available component that acts as the rendering target for all popups managed by `usePopup`. Developers typically do not interact with this component directly.
 
@@ -94,7 +94,7 @@ function openCustomPopup() {
 
 When you need more than standard dialogs, you'll create your own Vue component for the popup's content and UI. **It is highly recommended to use the `VcPopup` component as the main building block within your custom popup component** to ensure consistent styling and behavior (like header, footer, and close button integration).
 
-Refer to the [VcPopup Component Documentation](../../ui-components/vc-popup.md) for details on how to use `VcPopup` to build your custom popup's structure.
+Refer to the [VcPopup Component Documentation](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup) for details on how to use `VcPopup` to build your custom popup's structure.
 
 Once your custom popup component (e.g., `MyCustomPopupComponent.vue`) is created (using `VcPopup` internally), you can display it programmatically using `usePopup(options)` as shown in the example above.
 

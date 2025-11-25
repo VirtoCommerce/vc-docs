@@ -6,4 +6,4 @@ This type represents the response for a query retrieving information about a slu
 
 | Field                | Description                                        |  
 |----------------------|----------------------------------------------------|  
-| `entityInfo` [==SeoInfo==](../../Catalog/objects/SeoInfo.md) | Contains SEO information associated with the slug. |  
+| `entityInfo` [==SeoInfo==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo) | Contains SEO information associated with the slug. |  

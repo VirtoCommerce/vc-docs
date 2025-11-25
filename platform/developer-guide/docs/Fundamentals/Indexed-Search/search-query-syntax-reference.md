@@ -119,7 +119,7 @@ The following search request filters products of a certain brand, Onkyo, and a c
 `color:Black brand:Onkyo`
 ```
 
-![Readmore](media/readmore.png){: width="25"} [AND and OR search operators and examples](../../../../user-guide/search-query-syntax)
+![Readmore](media/readmore.png){: width="25"} [AND and OR search operators and examples](/platform/user-guide/latest/search-query-syntax)
 
 ## Wildcard search
 Within a single phrase or phrase terms, you can use:

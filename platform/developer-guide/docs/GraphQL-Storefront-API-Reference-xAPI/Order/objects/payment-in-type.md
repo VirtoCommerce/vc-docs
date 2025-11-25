@@ -39,8 +39,8 @@ This type represents the received incoming payment. Each `PaymentInType` instanc
 | `paymentMethod` [ ==OrderPaymentMethodType== ](order-payment-method-type.md)                                   | The payment method used for the transaction.                                               |
 | `currency` [ ==CurrencyType== ](currency-type.md)                                                              | The currency used for the payment transaction.                                                    |
 | `billingAddress` [ ==OrderAddressType== ](order-address-type.md)                                               | The billing address associated with the payment transaction.                                  |
-| `vendor` [ ==CommonVendor== ](../../Catalog/objects/CommonVendor/Commonvendor.md)                              | The common vendor associated with the payment transaction.                                        |
+| `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor)                              | The common vendor associated with the payment transaction.                                        |
 | `transactions` [ ==[PaymentTransactionType]== ](payment-transaction-type.md)                                   | Payment transaction details associated with the payment.                         |
 | `order` [ ==CustomerOrderType!== ](customer-order-type.md)                                                     | The customer order associated with the payment transaction.                                      |
-| `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](../../Cart/objects/dynamic-property-value-type.md) | Dynamic property value types. |
+| `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | Dynamic property value types. |
 

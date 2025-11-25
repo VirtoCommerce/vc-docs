@@ -524,4 +524,4 @@ This guide equips you to build and manage dynamic, modular widgets within your V
 -   [`useExternalWidgets` API Reference](../composables/useExternalWidgets.md)
 -   [`VcWidget` Component Documentation](../ui-components/vc-widget.md)
 -   [`VcBlade` Component Documentation](../ui-components/vc-blade.md)
--   [Modularity in VC-Shell Applications](../../Extensibility/modularity.md)
+-   [Modularity in VC-Shell Applications](/platform/developer-guide/latest/custom-apps-development/vc-shell/Extensibility/modularity)

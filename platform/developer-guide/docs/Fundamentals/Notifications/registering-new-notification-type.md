@@ -6,7 +6,7 @@ This guide describes the basic steps to define a new email notification type, in
 
 ## Prerequisites
 
-* [Configure the notification gateway.](../../Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md)
+* [Configure the notification gateway.](/platform/developer-guide/latest/Getting-Started/Post-Installation-Steps/02-configuring-email-notifications)
 
 ## Define custom email notification type
 

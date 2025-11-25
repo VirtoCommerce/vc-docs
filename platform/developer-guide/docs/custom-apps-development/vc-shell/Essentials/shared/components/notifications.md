@@ -283,7 +283,7 @@ The notification system uses the `VcToast` component internally for rendering an
     *   Use `false` (persistent) for critical errors or messages requiring user action before dismissal.
     *   Use short timeouts (2000-5000ms) for confirmations or brief info.
 * **Limit usage**: Avoid overwhelming users with too many toasts. Use the `limit` option if necessary. The system usually has a default limit per position.
-* **Distinguish from push notifications**: This `notification` service is for immediate toasts. For persistent notifications that appear in a notification center, use the `useNotifications` composable and system. See [How-To: Working with Push Notifications using `useNotifications`](../../Usage-Guides/working-with-push-notifications-using-usenotifications.md).
+* **Distinguish from push notifications**: This `notification` service is for immediate toasts. For persistent notifications that appear in a notification center, use the `useNotifications` composable and system. See [How-To: Working with Push Notifications using `useNotifications`](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-push-notifications-using-usenotifications).
 
 ## Examples
 

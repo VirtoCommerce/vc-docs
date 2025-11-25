@@ -28,15 +28,15 @@ import { ref } from 'vue';
 import { VcBlade, IBladeToolbar } from '@vc-shell/framework';
 
 const toolbarItems = ref<IBladeToolbar[]>([
-  { 
-    id: 'refresh', 
-    icon: 'material-refresh', 
+  {
+    id: 'refresh',
+    icon: 'material-refresh',
     title: 'Refresh',
     clickHandler: () => refreshData()
   },
-  { 
-    id: 'add', 
-    icon: 'material-add', 
+  {
+    id: 'add',
+    icon: 'material-add',
     title: 'Add New',
     clickHandler: () => addNewItem()
   }
@@ -177,7 +177,7 @@ VcBlade automatically adapts to mobile screens. On mobile devices:
     title="Products"
     width="50%"
     :toolbar-items="toolbarItems"
-    @close="$emit('close')"
+    @close="$emit('close:blade')"
   >
     <VcTable
       :columns="columns"
@@ -195,16 +195,16 @@ import ProductDetails from './ProductDetails.vue';
 const { openBlade } = useBladeNavigation();
 
 const toolbarItems = ref<IBladeToolbar[]>([
-  { 
-    id: 'refresh', 
-    icon: 'material-refresh', 
-    title: 'Refresh', 
+  {
+    id: 'refresh',
+    icon: 'material-refresh',
+    title: 'Refresh',
     clickHandler: () => loadProducts()
   },
-  { 
-    id: 'add', 
-    icon: 'material-add', 
-    title: 'Add Product', 
+  {
+    id: 'add',
+    icon: 'material-add',
+    title: 'Add Product',
     clickHandler: () => addProduct()
   }
 ]);
@@ -254,9 +254,9 @@ function addProduct() {
     <div v-if="error" class="tw-text-red-500 tw-p-4">
       {{ error }}
     </div>
-    
-    <VcForm 
-      v-if="product" 
+
+    <VcForm
+      v-if="product"
       :model="product"
       @update:model="hasChanges = true"
     >
@@ -309,18 +309,18 @@ function closeForm() {
     :closable="true"
   >
     <template #actions>
-      <VcButton 
-        variant="icon" 
-        icon="material-download" 
+      <VcButton
+        variant="icon"
+        icon="material-download"
         @click="downloadImage"
       />
-      <VcButton 
-        variant="icon" 
-        icon="material-share" 
+      <VcButton
+        variant="icon"
+        icon="material-share"
         @click="shareImage"
       />
     </template>
-    
+
     <div class="tw-p-4">
       <VcImage :src="imageUrl" aspect="16x9" />
     </div>

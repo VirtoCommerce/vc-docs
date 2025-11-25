@@ -197,12 +197,12 @@ my-custom-storefront/
     !!! success "Generating API Clients"
         Populating the `api_client/` directory is a crucial step after scaffolding your application. VC-Shell provides tools to generate TypeScript API clients directly from your Platform's OpenAPI specification. These generated clients handle the communication with your backend services, providing type-safe methods for all API operations.
 
-        ![Readmore](../../media/readmore.png){: width="25"} [API client integration guide](../Essentials/API-Integration/api-client-integration.md)
+        ![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [API client integration guide](../Essentials/API-Integration/api-client-integration.md)
 
 *   **composables/**: Contains application-wide Vue composables. These are reusable functions that encapsulate stateful logic, making it easy to share functionality across different components and modules. An example **useLogin.ts** might be generated here.
 *   **locales/**: Stores JSON files for internationalization (i18n). Each file (e.g., **en.json**, **es.json**) contains key-value pairs for translations in a specific language.
 
-    ![Readmore](../../media/readmore.png){: width="25"} [Adding new languages](../Essentials/Usage-Guides/adding-new-languages.md)
+    ![Readmore](/platform/developer-guide/latest/custom-apps-development/media/readmore.png){: width="25"} [Adding new languages](../Essentials/Usage-Guides/adding-new-languages.md)
 
 *   **modules/**: This is where the core business logic and features of your application are organized. Each subdirectory within **modules/** represents a distinct feature or domain of your application. We'll delve deeper into module development later.
 *   **pages/**: Contains global application pages that are not part of a specific module, such as a "Not Found" (404) page or a generic "Unauthorized" page.

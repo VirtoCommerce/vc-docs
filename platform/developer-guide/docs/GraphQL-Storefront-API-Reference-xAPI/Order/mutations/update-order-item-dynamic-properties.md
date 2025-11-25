@@ -12,7 +12,7 @@ The `InputUpdateOrderItemDynamicPropertiesType` is a type that represents the in
 |-------------------------------------------|----------------------------------------------------------------------------------------------|
 | `orderId`  ==String==                     | The Id of the order for which the order item's dynamic properties will be updated.           |
 | `lineItemId`  ==String==                  | The Id of the order item for which the dynamic properties will be updated.                   |
-| `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](../../Profile/Objects/InputDynamicPropertyValueType.md) | The dynamic property value types representing the updated dynamic properties of the order item.|
+| `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType) | The dynamic property value types representing the updated dynamic properties of the order item.|
 
 ## Possible returns
 

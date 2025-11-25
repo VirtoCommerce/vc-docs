@@ -19,7 +19,7 @@ The diagram below illustrates the interconnections among various key entities wi
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
-![Readmore](media/readmore.png){: width="25"} [Skyflow integration with Virto Commerce](../../../developer-guide/Fundamentals/Payments/skyflow)
+![Readmore](media/readmore.png){: width="25"} [Skyflow integration with Virto Commerce](/platform/developer-guide/latest/Fundamentals/Payments/skyflow)
 
 <br>
 <br>

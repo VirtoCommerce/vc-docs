@@ -3,7 +3,7 @@
 Use this technique if you want to develop a module that can work with different database systems without having to rewrite your code for each one.
 
 !!! info
-    [Custom modules templates for Dotnet New](../../../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md) help you generate the basic structure and files for a new module based on some parameters. 
+    [Custom modules templates for Dotnet New](/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new) help you generate the basic structure and files for a new module based on some parameters. 
 
 To create a new module with a database agnostic approach:
 

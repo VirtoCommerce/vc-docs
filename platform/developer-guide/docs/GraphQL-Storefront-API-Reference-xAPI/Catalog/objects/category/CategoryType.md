@@ -27,4 +27,4 @@ This type is used to differentiate or group different types of categories.
 | `childCategories` [ ==Category== ](CategoryType.md)                              	| The child categories of the current category.                                   	|
 
 
-![Readmore](../media/readmore.png){: width="25"} [Managing Categories](../../../../../../user-guide/catalog/managing-categories)
+![Readmore](../media/readmore.png){: width="25"} [Managing Categories](/platform/user-guide/latest/catalog/managing-categories)

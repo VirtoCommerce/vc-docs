@@ -12,7 +12,7 @@ Virto Commerce includes the following out-of-the-box providers:
 * [**File System**](https://github.com/VirtoCommerce/vc-module-filesystem-assets): For storing files in the same directory as the Platform.
 * [**Azure Blob Storage**](https://github.com/VirtoCommerce/vc-module-azureblob-assets): For storing files in the external storage, e.g. Azure blob storage.
 
-![Readmore](media/readmore.png){: width="25"} [Configuring assets providers](../../../developer-guide/Configuration-Reference/appsettingsjson)
+![Readmore](media/readmore.png){: width="25"} [Configuring assets providers](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson)
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-assets)
 

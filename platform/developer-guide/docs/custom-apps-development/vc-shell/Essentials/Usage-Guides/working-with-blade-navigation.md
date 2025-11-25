@@ -5,9 +5,9 @@ This guide provides practical steps and examples for effectively using the blade
 ## Prerequisites
 
 -   Familiarity with Vue 3 Composition API.
--   Understanding of the `VcBladeNavigation` component and `useBladeNavigation` composable API. (Refer to the [VcBladeNavigation API Documentation](../../Essentials/shared/components/blade-navigation.md)).
+-   Understanding of the `VcBladeNavigation` component and `useBladeNavigation` composable API. (Refer to the [VcBladeNavigation API Documentation](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/components/blade-navigation)).
 -   Basic knowledge of Vue Router.
--   Your blade/page components should be correctly configured with necessary static properties (like `name`, `url`, `isWorkspace`, etc.) and included in your module's `createAppModule` definition for automatic registration by the VC-Shell modularity system. Refer to the [Modularity Plugin documentation](../../Essentials/plugins/modularity.md) for details on how to define and register pages.
+-   Your blade/page components should be correctly configured with necessary static properties (like `name`, `url`, `isWorkspace`, etc.) and included in your module's `createAppModule` definition for automatic registration by the VC-Shell modularity system. Refer to the [Modularity Plugin documentation](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/plugins/modularity) for details on how to define and register pages.
 -   The `VcBladeNavigation` component is part of the core `vc-app.vue` and does not require manual setup in your layout.
 
 ## 1. Basic Blade Creation and Opening
@@ -440,4 +440,4 @@ The URL might look like: `/#/your-workspace-route?productlistworkspace_searchTer
 -   `onBeforeClose` hooks will be respected. `closeBlade` returns a Promise resolving to `true` if closing was prevented, `false` otherwise.
 
 
-This How-To guide should cover the main practical aspects of using the blade navigation system. Refer to the [VcBladeNavigation API Documentation](../../Essentials/shared/components/blade-navigation.md) for detailed API information and the [Modularity Plugin Documentation](../../Essentials/plugins/modularity.md) for how pages/blades are registered. 
+This How-To guide should cover the main practical aspects of using the blade navigation system. Refer to the [VcBladeNavigation API Documentation](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/components/blade-navigation) for detailed API information and the [Modularity Plugin Documentation](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/plugins/modularity) for how pages/blades are registered. 

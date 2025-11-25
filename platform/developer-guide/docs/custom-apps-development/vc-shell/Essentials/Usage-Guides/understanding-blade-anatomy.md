@@ -13,14 +13,14 @@ A `VcBlade` component typically provides the following sections to frame your cu
 *   **Description:** The top section of the blade, usually containing the title and an optional icon. It clearly identifies the purpose of the blade. This header is part of the `VcBlade` component.
 *   **Key `VcBlade` Props:** `title`, `subtitle`, `icon`.
 
-![Blade Layout](../../../media/blade-layout.png)
+![Blade Layout](/platform/developer-guide/latest/custom-apps-development/media/blade-layout.png)
 
 ### 2. Blade Toolbar
 
 *   **Description:** Located typically below the header, the toolbar contains action buttons and controls relevant to the blade's content. This toolbar is also managed by the `VcBlade` component.
 *   **Key `VcBlade` Prop:** `toolbarItems`. Toolbars can also be dynamically managed using `useToolbar` in conjunction with `VcBlade`.
 
-![Blade Layout](../../../media/blade-layout1.png)
+![Blade Layout](/platform/developer-guide/latest/custom-apps-development/media/blade-layout1.png)
 
 *   **Further Reading:** [Managing Blade Toolbars with useToolbar](./managing-blade-toolbars-with-usetoolbar.md)
 
@@ -28,14 +28,14 @@ A `VcBlade` component typically provides the following sections to frame your cu
 
 *   **Description:** The main body of the blade where your custom Vue component (e.g., your `ProductDetailsPage.vue`) is rendered. `VcBlade` provides a default slot for this purpose.
 
-![Blade Layout](../../../media/blade-layout2.png)
+![Blade Layout](/platform/developer-guide/latest/custom-apps-development/media/blade-layout2.png)
 
 ### 4. Blade Widgets Area
 
 *   **Description:** Blades can display contextual widgets, which are typically small, self-contained Vue components offering supplementary information or actions. These widgets are not directly defined via a prop on `VcBlade`. Instead, they are programmatically registered for a specific blade instance using the `useWidgets` composable. The `VcBlade` component includes a designated area where these registered widgets are displayed.
 *   **Key Management Composable:** `useWidgets`.
 
-![Blade Layout](../../../media/blade-layout3.png)
+![Blade Layout](/platform/developer-guide/latest/custom-apps-development/media/blade-layout3.png)
 
 *   **Further Reading:** [Creating and Registering Blade Widgets with `useWidgets`](./creating-and-registering-widgets-with-usewidgets.md)
 
@@ -53,7 +53,7 @@ The `VcBlade` UI component accepts several important props to control its appear
 *   `modified?: boolean`: If set to `true`, indicates that the blade has unsaved changes, potentially showing a visual cue.
 
 **Note on Custom Blade Component Props:**
-The Vue components you create to be displayed *inside* `VcBlade` (e.g., `MyCustomBladePage.vue`) are expected to accept their own set of standard props, such as `param`, `options`, and also `expanded` and `closable` (which are passed by the blade navigation system to control the custom blade's behavior). For details on these standard props for your custom blade components, please refer to the [Developing Custom Modules guide](../../Guides/developing-custom-modules.md#props-and-emits).
+The Vue components you create to be displayed *inside* `VcBlade` (e.g., `MyCustomBladePage.vue`) are expected to accept their own set of standard props, such as `param`, `options`, and also `expanded` and `closable` (which are passed by the blade navigation system to control the custom blade's behavior). For details on these standard props for your custom blade components, please refer to the [Developing Custom Modules guide](/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules.md#props-and-emits).
 
 ## Events Emitted by the `VcBlade` UI Component
 
@@ -64,7 +64,7 @@ The `VcBlade` UI component emits events in response to interactions with its own
 *   `collapse`: Emitted when the collapse control in the `VcBlade`'s header is clicked.
 
 **Note on Custom Blade Component Emits:**
-Your custom blade components (e.g., `MyCustomBladePage.vue`) will typically listen to these events from `VcBlade` (e.g., `<VcBlade @close="$emit('close:blade')">`). They then emit their own standardized events like `close:blade`, `parent:call`, etc., for the blade navigation system or parent blades to handle. These standard emits for custom blade components are detailed in the [Developing Custom Modules guide](../../Guides/developing-custom-modules.md#props-and-emits).
+Your custom blade components (e.g., `MyCustomBladePage.vue`) will typically listen to these events from `VcBlade` (e.g., `<VcBlade @close="$emit('close:blade')">`). They then emit their own standardized events like `close:blade`, `parent:call`, etc., for the blade navigation system or parent blades to handle. These standard emits for custom blade components are detailed in the [Developing Custom Modules guide](/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules.md#props-and-emits).
 
 ## The Blade Page Component Contract
 
@@ -76,7 +76,7 @@ This contract involves three key parts: standard props, standard emits, and expo
 
 Your blade page component should accept a standard set of props (`expanded`, `closable`, `param`, etc.) and emit standard events (`close:blade`, `parent:call`, etc.) to communicate with the navigation system.
 
-*   For a detailed list of these props and emits, please refer to the [Developing Custom Modules guide](../../Guides/developing-custom-modules.md).
+*   For a detailed list of these props and emits, please refer to the [Developing Custom Modules guide](/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules).
 
 ### Exposing the Blade Title (`defineExpose`)
 
@@ -118,6 +118,6 @@ Blades are managed by the `useBladeNavigation` composable, which handles their o
 
 ## Related Documentation
 
-*   **UI Component:** [`VcBlade`](../../Essentials/ui-components/vc-blade.md)
-*   **Developing Custom Modules (Blade Creation):** [`developing-custom-modules.md`](../../Guides/developing-custom-modules.md)
+*   **UI Component:** [`VcBlade`](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-blade)
+*   **Developing Custom Modules (Blade Creation):** [`developing-custom-modules.md`](/platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/developing-custom-modules)
 *   **Working with Blade Navigation:** [`working-with-blade-navigation.md`](./working-with-blade-navigation.md) 

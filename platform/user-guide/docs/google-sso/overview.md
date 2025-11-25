@@ -15,9 +15,9 @@ The Google SSO module can be integrated with both the Virto Commerce Platform an
 
 ![Platform and Frontend integration](media/frontend-platform.png){: style="display: block; margin: 0 auto;" }
 
-![Readmore](media/readmore.png){: width="25"} [Using Google as SSO provider in the Platform](../../../developer-guide/Fundamentals/Security/extensions/adding-google-as-sso-provider)
+![Readmore](media/readmore.png){: width="25"} [Using Google as SSO provider in the Platform](/platform/developer-guide/latest/Fundamentals/Security/extensions/adding-google-as-sso-provider)
 
-![Readmore](media/readmore.png){: width="25"} [Using Google as SSO provider in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
+![Readmore](media/readmore.png){: width="25"} [Using Google as SSO provider in the Frontend Application](/storefront/developer-guide/latest/authentication/adding-google-as-sso-provider)
 
 
 

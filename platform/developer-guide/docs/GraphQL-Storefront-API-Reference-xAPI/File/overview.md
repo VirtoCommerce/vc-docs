@@ -22,7 +22,7 @@ Its architecture is designed to:
     5. The quote page then stores these links.
 
 
-This function is now used in our Frontend Application to [attach files to the created quotes](../../../../../storefront/user-guide/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
+This function is now used in our Frontend Application to [attach files to the created quotes](/storefront/user-guide/latest/shopping/submit-quotes). However, developers can now add the file uploader to any segment, such as the Order module.  
 
 ## Key features
 

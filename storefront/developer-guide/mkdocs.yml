@@ -1,4 +1,9 @@
 INHERIT: ../mkdocs.yml
+
+# Hooks to fix search index for versioned docs
+hooks:
+    - ../../overrides/hooks/search_index_fixer.py
+
 theme:
     custom_dir: ../../overrides
     hide: false
@@ -9,9 +14,10 @@ plugins:
 
 # Project information
 extra_site_name: Frontend Dev Docs
-site_name: storefront/developer-guide
+site_name: Storefront Developer Guide
 site_description: Build and personalize your online store for engaging shopping experiences
 site_url: https://docs.virtocommerce.org/storefront/developer-guide
+use_directory_urls: true
 
 
 # Repository
@@ -30,6 +36,18 @@ extra:
         index_only_current: true
         # Exclude other versions from search index
         exclude_versions: true
+
+# CSS and JavaScript (must include ALL files from root, as INHERIT doesn't merge arrays)
+extra_css:
+    - assets/stylesheets/main.css
+    - assets/stylesheets/fonts.css
+    - assets/stylesheets/version-selector.css
+
+extra_javascript:
+    - assets/scripts/version-redirect.js
+    - assets/scripts/version-selector-handler.js
+    - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
 
 # Page tree
 nav:

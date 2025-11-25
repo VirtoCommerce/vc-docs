@@ -5,7 +5,7 @@ Managing quotes includes:
 * [Viewing quotes list and quote details.](manage-quotes.md#view-quotes-list-and-quote-details)
 * [Editing quote details.](manage-quotes.md#edit-quote-details)
 
-![Readmore](media/readmore.png){: width="25"} [Creating quotes](../../../../storefront/user-guide/shopping/submit-quotes)
+![Readmore](media/readmore.png){: width="25"} [Creating quotes](/storefront/user-guide/latest/shopping/submit-quotes)
 
 ## View quotes list and quote details
 

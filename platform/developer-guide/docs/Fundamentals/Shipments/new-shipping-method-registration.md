@@ -6,7 +6,7 @@ In case your customers have any shippable products to choose from, they can also
 
 To define a new shipping method:
 
-1. [Create a new module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md).
+1. [Create a new module](/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/creating-custom-module).
 1. Create a class derived from the `ShippingMethod` abstract class and override all abstract methods; each of them will be called on the appropriate stage of the payment processing workflow: 
 
     ```cs
@@ -58,7 +58,7 @@ After you are done configuring, your shipping method will appear in the front en
 
 If our standard user interface is not enough, you may consider implementing your own UI for managing shipping methods through the standard UI extension point (widget container with the `shippingMethodDetail` group).
 
-![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](../../Platform-Manager/Extensibility-Points/widgets.md)
+![Readmore](media/readmore.png){: width="25"} [Extending existing UI with widgets](/platform/developer-guide/latest/Platform-Manager/Extensibility-Points/widgets)
 
 
 <br>

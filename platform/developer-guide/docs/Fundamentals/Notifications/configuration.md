@@ -1,6 +1,6 @@
 # Configuration
 
-This section explains the basic configuration for the Notifications module via the [appsettings.json file](../../Configuration-Reference/appsettingsjson.md#notifications)
+This section explains the basic configuration for the Notifications module via the [appsettings.json file](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson.md#notifications)
 
 
 {%

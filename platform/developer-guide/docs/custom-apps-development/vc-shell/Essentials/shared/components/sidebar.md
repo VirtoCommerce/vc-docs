@@ -286,6 +286,6 @@ The `Sidebar` component uses CSS variables for styling, which can be overridden 
 
 ## Related resources
 
-- [VcAppBar Component](../../ui-components/vc-app.md) - The `VcApp` often contains the `VcAppBar` which might house a button to toggle a `Sidebar`.
+- [VcAppBar Component](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-app) - The `VcApp` often contains the `VcAppBar` which might house a button to toggle a `Sidebar`.
 - [VcBladeNavigation Component](./blade-navigation.md) - For more complex, stacked panel navigation, `VcBladeNavigation` is preferred over nested sidebars.
-- [VcPopup Component](../../ui-components/vc-popup.md) - For modal dialogs, which are distinct from sidebars. 
+- [VcPopup Component](/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup) - For modal dialogs, which are distinct from sidebars. 

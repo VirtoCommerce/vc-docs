@@ -16,7 +16,7 @@ Confidential Authorize.Net account settings should be configured in the **appset
    end="<!--authorize-net-end-->"
 %}
 
-![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](../../../../user-guide/authorize-net/manage-authorize-net-module#configure-settings)
+![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](/platform/user-guide/latest/authorize-net/manage-authorize-net-module#configure-settings)
 
 
 <br>

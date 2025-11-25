@@ -3,7 +3,7 @@
 Frontend developers can now add or edit Page Builder blocks in Virto Commerce Frontend to simplify the customization process. 
 <br>
 <br>
-![Readmore](media/readmore.png){: width="25"} [Page Builder user guide](../../../user-guide/page-builder/overview)
+![Readmore](media/readmore.png){: width="25"} [Page Builder user guide](/platform/user-guide/latest/page-builder/overview)
 <br>
 
 As of [Page Builder 3.818.0](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases/tag/3.818.0), the Virto Commerce Frontend includes a **PageBuilderPreview** plugin, which enhances how preview mode works. Here is what this update changes:

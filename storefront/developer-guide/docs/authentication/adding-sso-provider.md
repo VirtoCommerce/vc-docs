@@ -11,7 +11,7 @@ To integrate Entra ID (Azure AD) as a new SSO provider, install the [Azure AD mo
 
 ## Backend settings
 
-Set up the necessary environment variables for the Platform backend to enable user authentication via the Azure AD authentication provider. To allow the Frontend Application to authenticate users as well, [enable the corresponding SSO option](../../../../platform/user-guide/azure-ad/enabling-authentication-types) for the desired store in the Platform interface:
+Set up the necessary environment variables for the Platform backend to enable user authentication via the Azure AD authentication provider. To allow the Frontend Application to authenticate users as well, [enable the corresponding SSO option](/platform/user-guide/latest/azure-ad/enabling-authentication-types) for the desired store in the Platform interface:
 
 ```json title="environment.yml"
 set "Azuread:Enabled=true"

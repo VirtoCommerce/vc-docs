@@ -123,7 +123,7 @@ When using Virto Commerce in your production environment, you will rather have t
 
 ### Design-time mode
 
-The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a [special CLI tool](../../CLI-tools/package-management.md) for this that.
+The **Design time** mode is often leveraged during the development process, when you manage the installed versions of modules, or install or update them manually on the local computer or in any other public environment. Virto provides a [special CLI tool](/platform/developer-guide/latest/CLI-tools/package-management) for this that.
 
 Here are some examples of interface commands you can use to perform various operations:
 
@@ -139,11 +139,11 @@ vc-build install -Module VirtoCommerce.Store
 vc-build update
 ``` 
 
-For the **module deployment process**, use our  [Virto Commerce Global Tool](../../CLI-tools/overview.md), which helps bundle your module solution to the deployment package. 
+For the **module deployment process**, use our  [Virto Commerce Global Tool](/platform/developer-guide/latest/CLI-tools/overview), which helps bundle your module solution to the deployment package. 
 
-![Readmore](media/readmore.png){: width="25"} [Build automation](../../CLI-tools/build-automation.md)
+![Readmore](media/readmore.png){: width="25"} [Build automation](/platform/developer-guide/latest/CLI-tools/build-automation)
 
-![Readmore](media/readmore.png){: width="25"} [How to create new module](../../Tutorials-and-How-tos/Tutorials/creating-custom-module.md) 
+![Readmore](media/readmore.png){: width="25"} [How to create new module](/platform/developer-guide/latest/Tutorials-and-How-tos/Tutorials/creating-custom-module) 
 
 ![Readmore](media/readmore.png){: width="25"} [Modular monolith by Kamil Grzybek](https://www.kamilgrzybek.com/design/modular-monolith-primer/ "https://www.kamilgrzybek.com/design/modular-monolith-primer/")
     

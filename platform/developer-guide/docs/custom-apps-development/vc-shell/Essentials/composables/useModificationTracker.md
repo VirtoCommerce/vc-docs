@@ -15,6 +15,7 @@ The `useModificationTracker` composable is a powerful utility in VC-Shell for de
 
 It then returns:
 -   `currentValue`: The reactive `Ref<T>` you should use for `v-model` or other bindings.
+-   `pristineValue`: The reactive `Ref<T>` that represents the original, unmodified state.
 -   `isModified`: A `DeepReadonly<Ref<boolean>>` that becomes `true` if `currentValue` is no longer deeply equal to `pristineValue`.
 -   `resetModificationState`: A function to reset the tracker. It makes the current state the new "pristine" state.
 

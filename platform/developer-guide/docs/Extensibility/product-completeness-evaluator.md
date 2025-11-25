@@ -2,7 +2,7 @@
 
 The Catalog Publishing Module allows to evaluate the completeness of products for publication according to specified criteria. 
 
-![Readmore](media/readmore.png){: width="25"} [Catalog Publishing Module](../../../user-guide/catalog-publishing/overview)
+![Readmore](media/readmore.png){: width="25"} [Catalog Publishing Module](/platform/user-guide/latest/catalog-publishing/overview)
 
 In this guide, we will show how to extend the product completeness evaluation process to allow full customization. Below are potential user scenarios along with solutions.
 

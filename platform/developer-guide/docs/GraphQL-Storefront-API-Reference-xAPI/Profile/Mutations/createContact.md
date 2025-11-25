@@ -17,11 +17,11 @@ The `InputCreateContactType!` represents the input object for creating a contact
 | `emails`  ==[String]!==                                               | The email addresses associated with the contact.                        |
 | `groups`  ==[String]!==                                               | The groups to which the contact belongs.                                |
 | `seoObjectType`  ==String!==                                          | The type of object that the contact is associated with.                 |
-| `seoInfo(...)` [ ==SeoInfo== ](../../Catalog/objects/SeoInfo.md)                                             | SEO information related to the contact.                            |
+| `seoInfo(...)` [ ==SeoInfo== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo)                                             | SEO information related to the contact.                            |
 | `defaultBillingAddress` [ ==MemberAddressType== ](../Objects/MemberAddressType.md)                           | The default billing address of the contact.                        |
 | `defaultShippingAddress` [ ==MemberAddressType== ](../Objects/MemberAddressType.md)                          | The default shipping address of the contact.                       |
 | `addresses(...)` [ ==MemberAddressConnection== ](../Objects/MemberAddressConnection.md)                      | A connection to a list of addresses associated with the contact.   |
-| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](../../Cart/objects/dynamic-property-value-type.md) | Dynamic properties of the contact.                                 |
+| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | Dynamic properties of the contact.                                 |
 | `firstName`  ==String!==                                              | The first name of the contact.                                          |
 | `lastName`  ==String!==                                               | The last name of the contact.                                           |
 | `middleName`  ==String==                                              | The middle name of the contact.                                         |

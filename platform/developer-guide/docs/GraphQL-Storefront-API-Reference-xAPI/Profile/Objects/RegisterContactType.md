@@ -16,5 +16,5 @@ This type represents the details of a contact person during the registration pro
 | `createdBy`  ==String==                                                                                       | The user or entity who created the contact.           |
 | `about`  ==String==                                                                                           | Additional information or details about the contact.  |
 | `address` [ ==MemberAddressType== ](MemberAddressType.md)                                                     | The address of the contact person.                    |
-| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](../../Cart/objects/dynamic-property-value-type.md)  | The dynamic properties associated with the contact.   |
+| `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)  | The dynamic properties associated with the contact.   |
 

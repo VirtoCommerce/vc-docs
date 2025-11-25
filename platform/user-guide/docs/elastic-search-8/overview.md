@@ -11,7 +11,7 @@ The **Elasticsearch 8** module serves as a search engine for the Search module. 
 With the Elasticsearch 8 module, you can perform:
 
 * Full-text search with new .NET client for Elasticsearch.
-* [Semantic search](../../../developer-guide/Fundamentals/Indexed-Search/integration/semantic-search).
+* [Semantic search](/platform/developer-guide/latest/Fundamentals/Indexed-Search/integration/semantic-search).
 * Hybrid mode search.
 * Third party ML models support.
 

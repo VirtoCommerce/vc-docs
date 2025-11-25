@@ -74,7 +74,7 @@ This type represents a customer order.
 | `inPayments` [ ==[PaymentInType]!== ](payment-in-type.md) | In-payment entities associated with the order.                                                                |
 | `shipments` [ ==[OrderShipmentType]== ](order-shipment-type.md) | Shipments associated with the order.                                                                    |
 | `taxDetails` [ ==[OrderTaxDetailType]!== ](order-tax-detail-type.md) | Tax details for the order.                                                                         |
-| `dynamicProperties` [ ==[DynamicPropertyValueType]== ](../../Cart/objects/dynamic-property-value-type.md) | An array of dynamic property value types.                     |
+| `dynamicProperties` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | An array of dynamic property value types.                     |
 | `coupons`  ==[String]==             | Coupon codes applied to the order.                                                                                                  |
 | `discounts` [ ==[OrderDiscountType]== ](order-discount-type.md) | Discount entities associated with the order.                                                            |
 | `availablePaymentMethods` [ ==[OrderPaymentMethodType]== ](order-payment-method-type.md) | An array of available payment methods for the order.                           |

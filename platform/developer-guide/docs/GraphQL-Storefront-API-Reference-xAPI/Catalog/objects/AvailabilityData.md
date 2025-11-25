@@ -14,5 +14,5 @@ This type refers to the information related to the availability and inventory st
 | `isTrackInventory`  ==Boolean==   	| Indicates whether the inventory of the product or variation is being tracked.      	|
 | `inventories` [ ==InventoryInfo== ](InventoryInfo.md)    | The inventory information associated with the product or variation.|
 
-![Readmore](media/readmore.png){: width="25"} [Managing Product Availability](../../../../../user-guide/catalog/setting-product-availability)
+![Readmore](media/readmore.png){: width="25"} [Managing Product Availability](/platform/user-guide/latest/catalog/setting-product-availability)
 

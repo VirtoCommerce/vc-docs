@@ -684,7 +684,7 @@ This node is used for authentication with Google OAuth 2.0 via the [Google SSO m
 
 ![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Platform](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
 
-![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](../../../../storefront/developer-guide/authentication/adding-google-as-sso-provider)
+![Readmore](media/readmore.png){: width="25"}  [How to enable authentication with Google OAuth 2.0 in the Frontend Application](/storefront/developer-guide/latest/authentication/adding-google-as-sso-provider)
 
 
 ### Authorization
@@ -1178,7 +1178,7 @@ The Payments node configures various payment gateway integrations for the Virto 
 
 This node configures the Authorize.Net payment gateway integration, enabling secure payment processing using Accept.js and the Authorize.Net API. Confidential Authorize.Net account settings should be configured in appsetting.json.
 
-![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](../../../user-guide/authorize-net/manage-authorize-net-module#configure-settings)
+![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](/platform/user-guide/latest/authorize-net/manage-authorize-net-module#configure-settings)
 
 
 <!--authorize-net-start-->
