@@ -76,6 +76,17 @@ def main():
 
     print("📋 Step 3: Deploy versioned subsites with Mike")
 
+    # IMPORTANT: Reset local gh-pages to match origin/gh-pages
+    # This prevents "gh-pages has diverged from origin/gh-pages" error
+    print("  Synchronizing local gh-pages with origin...")
+    run_command("git fetch origin gh-pages", check=False)
+    # Check if local gh-pages exists
+    result = run_command("git show-ref --verify --quiet refs/heads/gh-pages", check=False)
+    if result.returncode == 0:
+        # Local branch exists - reset it to origin
+        run_command("git branch -f gh-pages origin/gh-pages", check=False)
+    print("  ✅ gh-pages synchronized")
+
     # Define subsites and their versions
     subsites = {
         "marketplace/developer-guide": args.marketplace_developer_guide_version or args.version,
@@ -97,10 +108,9 @@ def main():
         print(f"  Deploying {subsite} version {version}...")
 
         # Build mike command
-        # Use --force to overwrite existing version content
         mike_cmd = [
             "mike", "deploy", "-F", config, "--deploy-prefix", subsite,
-            "--update-aliases", "--force", version
+            "--update-aliases", version
         ]
 
         # Add latest alias if requested
