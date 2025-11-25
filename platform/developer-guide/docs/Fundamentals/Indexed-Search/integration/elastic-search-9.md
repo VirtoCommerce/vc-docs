@@ -24,11 +24,7 @@ The module supports the following deployment options:
 
 Configure the Elasticsearch 9 provider using the following schema:
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--elasticsearch9-start-->"
-   end="<!--elasticsearch9-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--elasticsearch9-start-->" end="<!--elasticsearch9-end-->" %}
 
 
 ## Full-text search 

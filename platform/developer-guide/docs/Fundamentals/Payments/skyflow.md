@@ -100,11 +100,7 @@ Configuring Virto Commerce includes:
 
 Configure the **appsettings.json** file as follows:
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--skyflow-start-->"
-   end="<!--skyflow-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--skyflow-start-->" end="<!--skyflow-end-->" %}
 
 #### Setup Virto Commerce back office 
 

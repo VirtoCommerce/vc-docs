@@ -8,11 +8,7 @@ The Virto Commerce **Lucene Search** module implements `ISearchProvider` defined
 
 Configure the Lucene search provider using the following schema:
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--lucene-start-->"
-   end="<!--lucene-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--lucene-start-->" end="<!--lucene-end-->" %}
 
 
 

@@ -10,11 +10,7 @@ Authorize.Net payment module provides integration with Authorize.Net using [Acce
 
 Confidential Authorize.Net account settings should be configured in the **appsetting.json** file as follows:
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--authorize-net-start-->"
-   end="<!--authorize-net-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--authorize-net-start-->" end="<!--authorize-net-end-->" %}
 
 ![Readmore](media/readmore.png){: width="25"} [Configuring non-confidential settings](/platform/user-guide/latest/authorize-net/manage-authorize-net-module#configure-settings)
 

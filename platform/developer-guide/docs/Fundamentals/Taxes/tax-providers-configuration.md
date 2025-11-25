@@ -5,11 +5,7 @@ Virto Commerce allows you to configure tax providers based on your business need
 
 Use the configuration file to configure tax providers:  
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--tax-start-->"
-   end="<!--tax-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--tax-start-->" end="<!--tax-end-->" %}
 
 <br>
 <br>

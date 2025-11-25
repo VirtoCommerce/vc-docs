@@ -8,11 +8,7 @@ The Virto Commerce **Algolia Search** module implements `ISearchProvider` define
 
 Configure the Algolia search provider using the following schema:
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--algolia-start-->"
-   end="<!--algolia-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--algolia-start-->" end="<!--algolia-end-->" %}
 
 
 <br>

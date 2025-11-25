@@ -49,11 +49,7 @@ The known limitations are:
 
 Configure the Elasticsearch 8 provider using the following schema:
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--elasticsearch8-start-->"
-   end="<!--elasticsearch8-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--elasticsearch8-start-->" end="<!--elasticsearch8-end-->" %}
 
 
 ## Full-text search 

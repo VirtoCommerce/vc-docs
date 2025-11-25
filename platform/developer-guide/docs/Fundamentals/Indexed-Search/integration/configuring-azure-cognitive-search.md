@@ -10,11 +10,7 @@ Azure Search implements **ISearchProvider** defined within the Virto Commerce Se
 
 To configure the Azure Search provider, use the following schema:
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--azuresearch-start-->"
-   end="<!--azuresearch-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--azuresearch-start-->" end="<!--azuresearch-end-->" %}
 
 
 

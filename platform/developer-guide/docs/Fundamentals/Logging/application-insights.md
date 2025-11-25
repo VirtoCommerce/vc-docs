@@ -25,30 +25,18 @@ Configuring the Application Insights module includes:
 
 To send data to the Application Insights dashboard via the instrumentation key:
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--AppInsights2-start-->"
-   end="<!--AppInsights2-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--AppInsights2-start-->" end="<!--AppInsights2-end-->" %}
 
 Values used are described below:
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--AppInsights1-start-->"
-   end="<!--AppInsights1-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--AppInsights1-start-->" end="<!--AppInsights1-end-->" %}
 
 
 ### Configure logging from appsettings.json file
 
 The module includes a Serilog [sink](https://github.com/serilog-contrib/serilog-sinks-applicationinsights) for writing events to Microsoft Application Insights. Enable Application Insights logging by updating the following Serilog configuration sections:
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--AppInsights3-start-->"
-   end="<!--AppInsights3-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--AppInsights3-start-->" end="<!--AppInsights3-end-->" %}
 
 Make sure to specify the **telemetryConverter** with the full type and assembly name. A connection string is optional if provided via the **APPLICATIONINSIGHTS_CONNECTION_STRING** environment variable.
 

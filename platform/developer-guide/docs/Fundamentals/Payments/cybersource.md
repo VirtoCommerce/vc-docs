@@ -29,11 +29,7 @@ To integrate CyberSource with Virto Commerce for secure payment processing:
 
 Configure the **appsettings.json** file as follows:
 
-{%
-   include-markdown "../../Configuration-Reference/appsettingsjson.md"
-   start="<!--cybersource-start-->"
-   end="<!--cybersource-end-->"
-%}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--cybersource-start-->" end="<!--cybersource-end-->" %}
 
 ### Configure Platform 
 

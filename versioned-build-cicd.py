@@ -97,9 +97,10 @@ def main():
         print(f"  Deploying {subsite} version {version}...")
 
         # Build mike command
+        # Use --force to overwrite existing version content
         mike_cmd = [
             "mike", "deploy", "-F", config, "--deploy-prefix", subsite,
-            "--update-aliases", version
+            "--update-aliases", "--force", version
         ]
 
         # Add latest alias if requested

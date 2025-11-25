@@ -24,11 +24,7 @@ The Elastic App Search module offers:
 
 Configure the Elastic App Search using the following schema:
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--elasticappsearch-start-->"
-   end="<!--elasticappsearch-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--elasticappsearch-start-->" end="<!--elasticappsearch-end-->" %}
 
 ## Performance
 

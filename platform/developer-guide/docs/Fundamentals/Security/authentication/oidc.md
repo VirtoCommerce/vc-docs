@@ -34,11 +34,7 @@ Our OpenID module allows using any, all, or a combination of the existing provid
 
 The `oidc` node in the **appsettings.json** file defines the settings for OpenID Connect authentication in Virto Commerce. This configuration enables integration with OIDC providers, allowing users to authenticate via external identity systems:  
 
-{%
-   include-markdown "../../../Configuration-Reference/appsettingsjson.md"
-   start="<!--OIDC-start-->"
-   end="<!--OIDC-end-->"
-%}
+{% include-markdown "../../../Configuration-Reference/appsettingsjson.md" start="<!--OIDC-start-->" end="<!--OIDC-end-->" %}
 
 You can now use the registered identity provider.
 
