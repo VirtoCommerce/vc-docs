@@ -57,6 +57,19 @@ Alternatively, you can publish your page from Page Builder Office later:
 ![Publish or unpublish](media/publish-unpublish-office.gif){: style="display: block; margin: 0 auto;" width="500"}
 
 
+## Customize pages for specific users
+
+Users can customize pages for different organizations so that each organization’s users see only the content intended specifically for them.
+For example, let's configure separate homepages so that users from the Melon organization see one version, while users from the Mercury organization see another:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/et3jycryjqkg?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
+
 
 <br>
 <br>
