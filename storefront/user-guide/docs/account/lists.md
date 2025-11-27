@@ -40,13 +40,13 @@ To edit a list:
 
 1. Click ![wheel](../media/wheel.png){: width="20"} to the right of the list name.
 1. In the popup menu, click **Edit** to open the list settings.
-1. Update the list name, its description, or check the **Private list** setting to make the list invisible for other company members.
+1. Update the list name, its description, or configure privacy settings:
 
     ![List settings](../media/list-settings.png){: style="display: block; margin: 0 auto;" width="500"}
 
 1. Click **Save** to save the changes.
 
-You modifications have been saved.
+You modifications have been applied.
 
 
 <br>
