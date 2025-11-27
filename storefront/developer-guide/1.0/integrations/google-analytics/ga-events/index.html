@@ -2446,11 +2446,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#other-tracked-events" class="md-nav__link">
-        Other tracked events
+    <a href="#events-beyond-the-checkout-funnel" class="md-nav__link">
+        Events beyond the checkout funnel
     </a>
 
     <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Events beyond the checkout funnel">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#search-events" class="md-nav__link">
+        Search events
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#other-frontend-interactions" class="md-nav__link">
+        Other Frontend interactions
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
     
 </li>
         
@@ -2763,11 +2789,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#other-tracked-events" class="md-nav__link">
-        Other tracked events
+    <a href="#events-beyond-the-checkout-funnel" class="md-nav__link">
+        Events beyond the checkout funnel
     </a>
 
     <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Events beyond the checkout funnel">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#search-events" class="md-nav__link">
+        Search events
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#other-frontend-interactions" class="md-nav__link">
+        Other Frontend interactions
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
     
 </li>
         
@@ -2793,7 +2845,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 16, 2025 05:58:31 UTC">May 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 27, 2025 05:28:51 UTC">November 27, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -2814,9 +2866,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="google-analytics-events">Google Analytics Events<a class="headerlink" href="#google-analytics-events" title="Permanent link">&para;</a></h1>
-<p>Google Analytics is used in the Virto Commerce Frontend Application to track user interactions and provide insights into user behavior. To make it easier for marketers, we have added several events that can be tracked by Google Analytics. This section details these events and how to implement them. You can track the results of these events in Google Tag Manager.</p>
+<p>Google Analytics is used in the Virto Commerce Frontend Application to track user interactions and provide insights into user behavior. To make these insights more accessible for marketers, several preconfigured events are automatically sent to Google Analytics. You can view and analyze these events through Google Tag Manager (GTM).</p>
+<p><img alt="Readmore" src="../../media/readmore.png" width="25" /> <a href="../../../../../platform/user-guide/integrations/google-analytics/integration#direct-ga4-integration">GA integration</a></p>
+<p><img alt="Readmore" src="../../media/readmore.png" width="25" /> <a href="../../../../../platform/user-guide/integrations/google-analytics/integration#google-tag-manager-setup-for-ga4">Google Tag Manager setup for GA4</a></p>
 <h2 id="tracked-sales-funnel-events">Tracked sales funnel events<a class="headerlink" href="#tracked-sales-funnel-events" title="Permanent link">&para;</a></h2>
-<p>After proceeding to checkout, the following events are tracked in the specified order.</p>
+<p>Sales funnel (checkout) events represent sequential steps that guide the customer from the shopping cart to completing the payment. These events help you understand where customers drop off and how efficiently your checkout flow works.</p>
+<p>After the customer proceeds to checkout, the following events are tracked in the specified order:</p>
 <table>
 <thead>
 <tr>
@@ -2828,38 +2883,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tbody>
 <tr>
 <td>begin_checkout</td>
-<td>Сlick <strong>Proceed to checkout</strong>.</td>
+<td>Click <strong>Proceed to checkout</strong>.</td>
 <td></td>
 </tr>
 <tr>
 <td>add_shipping_info</td>
-<td>Сlick <strong>Proceed to billing</strong> after specifying the shipping address and delivery method.</td>
+<td>Click <strong>Proceed to billing</strong> after specifying the shipping address and delivery method.</td>
 <td>Shipping.</td>
 </tr>
 <tr>
 <td>add_payment_info</td>
-<td>Сlick <strong>Review order</strong> after specifying the billing address and the payment method.</td>
+<td>Click <strong>Review order</strong> after specifying the billing address and the payment method.</td>
 <td>Billing.</td>
 </tr>
 <tr>
 <td>place_order</td>
-<td>Сlick <strong>Place order</strong> after reviewing the order.</td>
+<td>Click <strong>Place order</strong> after reviewing the order.</td>
 <td>Order review.</td>
 </tr>
 <tr>
 <td>purchase</td>
-<td>Сlick <strong>Pay now</strong> after selecting the payment method.</td>
+<td>Click <strong>Pay now</strong> after selecting the payment method.</td>
 <td>Payment (unless manual payment was select at the previous step).</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For a single-step checkout, only <code>begin-checkout</code> and <code>place_order</code> are tracked. Other events can be added at the client's request.</p>
+<p>For a single-step checkout, only <code>begin_checkout</code> and <code>place_order</code> are tracked. Other events can be added at the client's request.</p>
 </div>
-<h2 id="other-tracked-events">Other tracked events<a class="headerlink" href="#other-tracked-events" title="Permanent link">&para;</a></h2>
-<p>You can also track different search actions. For example, after you type a query into a search field, a dropdown list appears. Clicking <strong>Enter</strong>/ <img alt="Magnifying glass" src="../../media/magnifying-glass.png" width="25" /> / <strong>View all results</strong> triggers the <strong>search</strong>, <strong>search_term</strong>, <strong>items_count</strong>, <strong>visible_items</strong>, and <strong>view_item_list</strong> GA events:</p>
+<h2 id="events-beyond-the-checkout-funnel">Events beyond the checkout funnel<a class="headerlink" href="#events-beyond-the-checkout-funnel" title="Permanent link">&para;</a></h2>
+<p>Outside the checkout flow, Virto Commerce tracks various interaction events that describe how users search, browse, and interact with products. Unlike sales funnel events, these do not follow a specific order. Instead, they capture actions wherever the user is on the Frontend.</p>
+<h3 id="search-events">Search events<a class="headerlink" href="#search-events" title="Permanent link">&para;</a></h3>
+<p>When a user types a query into the search bar and submits it (presses <strong>Enter</strong>, clicks the magnifying glass icon, or selects <strong>View all results</strong>), several search-related events are triggered automatically.
+These events help you analyze:</p>
+<ul>
+<li>What users search for.</li>
+<li>How many results they see.</li>
+<li>How many items are visible in the suggestions dropdown.</li>
+<li>Which product lists users view immediately after searching.</li>
+</ul>
 <p><img alt="GA events" src="../../media/google-analytics-events.png" /></p>
+<h3 id="other-frontend-interactions">Other Frontend interactions<a class="headerlink" href="#other-frontend-interactions" title="Permanent link">&para;</a></h3>
+<p>The table below shows additional events that track user actions across the Frontend:</p>
 <table border="1" cellpadding="8" cellspacing="0">
   <thead>
     <tr>
@@ -2870,6 +2936,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>login</td>
+      <td>Submit login form with valid credentials.</td>
+      <td>User is logged into the storefront.</td>
+      <td>Login page.<br>Popup login form.</td>
+    </tr>
+    <tr>
+      <td>sign_up</td>
+      <td>Submit registration form.</td>
+      <td>User account is created.</td>
+      <td>Registration page.<br>Registration popup.</td>
+    </tr>
     <tr>
       <td rowspan="7">view_item_list</td>
       <td>Type query into the search bar.</td>
@@ -2978,10 +3056,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <td>Cart</td>
     </tr>
     <tr>
+      <td>update_cart_item</td>
+      <td>Change product quantity or options in the cart.</td>
+      <td>Updated item quantity or configuration.</td>
+      <td>Cart.</td>
+    </tr>
+    <tr>
       <td>add_to_wishlist</td>
       <td>Add product to wishlist.</td>
       <td>The product is added to list.</td>
       <td>Category page.<br>Product page.</td>
+    </tr>
+    <tr>
+      <td>view_search_results</td>
+      <td>Submit a search query and open the full search results page.</td>
+      <td>Search results page with matching products appears.</td>
+      <td>Search results page.</td>
     </tr>
   </tbody>
 </table>
