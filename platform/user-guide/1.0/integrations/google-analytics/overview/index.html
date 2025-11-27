@@ -11719,6 +11719,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -11727,6 +11731,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#key-features" class="md-nav__link">
+        Key features
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -11747,24 +11788,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../integration/" class="md-nav__link">
         Using Google Analytics 4
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../settings/" class="md-nav__link">
-        Settings
       </a>
     </li>
   
@@ -12417,6 +12440,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#key-features" class="md-nav__link">
+        Key features
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -12437,7 +12478,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 06:27:07 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 27, 2025 05:28:51 UTC">November 27, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -12458,20 +12499,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>Your Virto Commerce store can be seamlessly integrated with Google Analytics 4 using the <strong>Google eCommerce Analytics</strong> module. With this module, you can:</p>
+<p>The <strong>Google Analytics 4</strong> module allows you to assign Google Analytics Measurement Id and Google Tag Manager Container Id for a Store and measure traffic, ecommerce events to collect information about the shopping behavior of your users.</p>
+<p>The module supports both direct GA4 integration and advanced Google Tag Manager integration for centralized tag management.</p>
+<h2 id="key-features">Key features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Assign Google Analytics measurement Id for your store.</li>
-<li>Measure traffic. </li>
-<li>Measure the following ecommerce events with Virto Commerce Frontend Application:<ul>
-<li>Selecting an item from a category.</li>
-<li>Viewing product details.</li>
-<li>Adding/removing a product from a shopping cart.</li>
-<li>Initiating the checkout process.</li>
-<li>Making purchases or refunds.</li>
-<li>Applying promotions.</li>
-</ul>
-</li>
-<li>Configure your store.</li>
+<li>Store configuration.</li>
+<li>eCommerce event measurement in Virto Frontend.</li>
+<li>Google Tag Manager integration for advanced tracking.</li>
+<li>Integration with additional sales channels.</li>
+<li>Application menu integration.</li>
 </ul>
 <p>The solution is ready for integration with other sales channels.</p>
 <p><a href="https://github.com/VirtoCommerce/vc-module-google-ecommerce-analytics"><img alt="Source code" src="../media/source_code.png" /></a></p>

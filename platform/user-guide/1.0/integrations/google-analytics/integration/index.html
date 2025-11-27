@@ -18,7 +18,7 @@
         <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../settings/">
+        <link rel="next" href="../../hotjar/overview/">
       
       
         
@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#integration-with-google-analytics-4" class="md-skip">
+        <a href="#integration-with-google-analytics-4-and-google-tag-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -11737,6 +11737,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Using Google Analytics 4
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -11746,27 +11750,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Show table of contents -->
       
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#direct-ga4-integration" class="md-nav__link">
+        Direct GA4 integration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#google-tag-manager-setup-for-ga4" class="md-nav__link">
+        Google Tag Manager setup for GA4
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#gtm-and-ga4-integration-benefits" class="md-nav__link">
+        GTM and GA4 integration benefits
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#important-notes" class="md-nav__link">
+        Important notes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#gtm-event-tracking-optional-setup" class="md-nav__link">
+        GTM event tracking (optional setup)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
+      
     </li>
 
   <!-- Main navigation item -->
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../settings/" class="md-nav__link">
-        Settings
-      </a>
-    </li>
   
 
             
@@ -12417,6 +12480,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#direct-ga4-integration" class="md-nav__link">
+        Direct GA4 integration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#google-tag-manager-setup-for-ga4" class="md-nav__link">
+        Google Tag Manager setup for GA4
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#gtm-and-ga4-integration-benefits" class="md-nav__link">
+        GTM and GA4 integration benefits
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#important-notes" class="md-nav__link">
+        Important notes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#gtm-event-tracking-optional-setup" class="md-nav__link">
+        GTM event tracking (optional setup)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -12437,7 +12558,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 06:11:55 UTC">July 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 27, 2025 05:28:51 UTC">November 27, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -12457,29 +12578,100 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="integration-with-google-analytics-4">Integration with Google Analytics 4<a class="headerlink" href="#integration-with-google-analytics-4" title="Permanent link">&para;</a></h1>
-<p>Virto Commerce Frontend Application has native integration with Google Analytics 4 module.</p>
-<p>To install it and assign Google Analytics Measurement Id for you store:</p>
+<h1 id="integration-with-google-analytics-4-and-google-tag-manager">Integration with Google Analytics 4 and Google Tag Manager<a class="headerlink" href="#integration-with-google-analytics-4-and-google-tag-manager" title="Permanent link">&para;</a></h1>
+<p>The Virto Commerce Frontend application has native integration with Google Analytics 4 (GA4) and Google Tag Manager (GTM).</p>
+<h2 id="direct-ga4-integration">Direct GA4 integration<a class="headerlink" href="#direct-ga4-integration" title="Permanent link">&para;</a></h2>
+<p>Using GA4 is recommended for simple setups. To install it and assign Google Analytics Measurement Id for you store:</p>
 <ol>
 <li>
 <p>Create Google Analytics Account according to the <a href="https://support.google.com/analytics/answer/9304153">Instruction</a></p>
 <p><img alt="Demo" src="../../media/demo.gif" /></p>
 </li>
 <li>
-<p>In the main menu, click <strong>Stores</strong> to open the <strong>Stores</strong> blade.</p>
+<p>Open <strong>Stores</strong> from the main menu.</p>
 </li>
 <li>Select the required store.</li>
 <li>In the <strong>Store details</strong> blade, click on the <strong>Settings</strong> widget.</li>
-<li>Enable Google Analytics 4.</li>
+<li>Find the <strong>Google Analytics</strong> section and enable Google Analytics 4.</li>
 <li>
-<p>Enter your measurement Id. </p>
-<p><img alt="Enable Google Analytics" src="../../media/enable-google-analytics.png" /></p>
+<p>Enter your Measurement Id. </p>
+<p><img alt="Enable Google Analytics" src="../media/measurementId.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
-<p>Save the <strong>Store Settings</strong> to activate the Google Analytics tracking.</p>
+<p>Click <strong>OK</strong>, then save the <strong>Store settings</strong> from the toolbar to activate the Google Analytics tracking.</p>
 <p><img alt="Google Analytics Tracking" src="../../media/google-analytics-tracking.png" /></p>
 </li>
 </ol>
+<p>Your modifications have been applied.</p>
+<h2 id="google-tag-manager-setup-for-ga4">Google Tag Manager setup for GA4<a class="headerlink" href="#google-tag-manager-setup-for-ga4" title="Permanent link">&para;</a></h2>
+<p>Google Tag Manager provides a centralized way to manage all your tracking tags without code changes. It is recommended for advanced tracking. Use this option if you need:</p>
+<ul>
+<li>Multiple tracking tools (GA4, Facebook Pixel, LinkedIn Insight, etc.)</li>
+<li>Custom event tracking and triggers.</li>
+<li>A/B testing tools.</li>
+<li>Enhanced flexibility for marketing teams. </li>
+</ul>
+<p>To start using GTM:</p>
+<ol>
+<li><a href="https://support.google.com/tagmanager/answer/6103696">Create a Google Tag Manager account and container</a>.</li>
+<li>Save your Container Id (GTM-XXXXXXX).</li>
+<li>In Google Tag Manager, create a new <strong>Google Analytics: GA4 Configuration</strong> tag.</li>
+<li>Enter your GA4 Measurement Id.</li>
+<li>Set the trigger to <strong>All Pages</strong> or <strong>Initialization - All Pages</strong>.</li>
+<li>Configure additional parameters (user properties, custom dimensions, etc.)</li>
+<li>Save and publish your container.</li>
+<li>Open <strong>Stores</strong> from the main menu of the Platform.</li>
+<li>Select the required store.</li>
+<li>In the <strong>Store details</strong> blade, click on the <strong>Settings</strong> widget.</li>
+<li>Find the <strong>Google Analytics</strong> section and enable Google Analytics 4.</li>
+<li>
+<p>Enter your <strong>GTM Container Id</strong> (GTM-XXXXXXX):</p>
+<p><img alt="Container Id" src="../media/containerId.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>(Optional) Enter your <strong>Measurement Id</strong>, if you want both GTM and direct GA4 tracking.</p>
+</li>
+<li>Click <strong>OK</strong>, then save the <strong>Store settings</strong> from the toolbar.</li>
+</ol>
+<p>Your modifications have been applied.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the Virto Commerce Frontend integrates with Google Tag Manager (GTM) through the GA module, it can now automatically support additional third-party SaaS tools that rely on GTM - such as Product Guide.
+Product Guide can be connected to our Frontend by simply adding its script or tag to GTM. No custom Frontend development, code changes, or manual script injection into the Frontend are required:</p>
+<p><img alt="Product guide" src="../media/product-guide.gif" style="display: block; margin: 0 auto;" width="400" /></p>
+</div>
+<h2 id="gtm-and-ga4-integration-benefits">GTM and GA4 integration benefits<a class="headerlink" href="#gtm-and-ga4-integration-benefits" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Centralized management</strong>: Update tracking configurations without code deployments.</li>
+<li><strong>Enhanced events</strong>: Leverage <code>dataLayer</code> for rich ecommerce events.</li>
+<li><strong>Multiple tags</strong>: Add other marketing and analytics tools easily.</li>
+<li><strong>Testing</strong>: Preview and debug tags before publishing.</li>
+<li><strong>Load order</strong>: GTM loads first, ensuring proper event sequencing for all tags.</li>
+</ul>
+<h2 id="important-notes">Important notes<a class="headerlink" href="#important-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If both <strong>GTM Container Id</strong> and <strong>Measurement Id</strong> are provided, GTM will load first, followed by direct GA4.</li>
+<li>The module automatically pushes ecommerce events to <code>dataLayer</code> which GTM can capture.</li>
+<li>All standard ecommerce events (<strong>add_to_cart</strong>, <strong>purchase</strong>, etc.) are available in <code>dataLayer</code>.</li>
+<li>Virto Frontend has native integration with Google Analytics 4 module. Once you save store settings, the Google Analytics tracking will be activated.</li>
+</ul>
+<h2 id="gtm-event-tracking-optional-setup">GTM event tracking (optional setup)<a class="headerlink" href="#gtm-event-tracking-optional-setup" title="Permanent link">&para;</a></h2>
+<p>The module automatically <a href="../../../../../storefront/developer-guide/integrations/google-analytics/ga-events">tracks a number of ecommerce actions</a>. If you are using GTM, you can capture these events by creating GA4 Event tags in GTM:</p>
+<ul>
+<li>In GTM, create a new <strong>Google Analytics: GA4 Event</strong> tag.</li>
+<li>Set <strong>Configuration Tag</strong> to your GA4 Configuration tag.</li>
+<li>Set <strong>Event Name</strong> to a custom variable that reads from <code>dataLayer</code> (e.g., {{Event}}).</li>
+<li>Set the trigger to Custom Event matching the ecommerce events listed above.</li>
+<li>(Optional) Pass additional parameters using variables from <code>dataLayer</code>.</li>
+<li>Save and publish your container.</li>
+</ul>
+<p>This allows you to:</p>
+<ul>
+<li>Customize event names before sending to GA4.</li>
+<li>Add conditional logic to events.</li>
+<li>Send events to multiple analytics platforms.</li>
+<li>Debug events in GTM Preview mode.</li>
+</ul>
 <p><br>
 <br></p>
 <hr />
