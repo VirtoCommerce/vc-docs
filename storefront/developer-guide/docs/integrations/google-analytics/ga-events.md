@@ -1,28 +1,47 @@
 # Google Analytics Events
 
-Google Analytics is used in the Virto Commerce Frontend Application to track user interactions and provide insights into user behavior. To make it easier for marketers, we have added several events that can be tracked by Google Analytics. This section details these events and how to implement them. You can track the results of these events in Google Tag Manager.
+Google Analytics is used in the Virto Commerce Frontend Application to track user interactions and provide insights into user behavior. To make these insights more accessible for marketers, several preconfigured events are automatically sent to Google Analytics. You can view and analyze these events through Google Tag Manager (GTM).
+
+![Readmore](../media/readmore.png){: width="25"} [GA integration](../../../../../platform/user-guide/integrations/google-analytics/integration#direct-ga4-integration)
+
+![Readmore](../media/readmore.png){: width="25"} [Google Tag Manager setup for GA4](../../../../../platform/user-guide/integrations/google-analytics/integration#google-tag-manager-setup-for-ga4)
 
 ## Tracked sales funnel events
 
-After proceeding to checkout, the following events are tracked in the specified order.
+Sales funnel (checkout) events represent sequential steps that guide the customer from the shopping cart to completing the payment. These events help you understand where customers drop off and how efficiently your checkout flow works.
+
+After the customer proceeds to checkout, the following events are tracked in the specified order:
 
 | GA event         	    | Action (trigger)                                                                          | Checkout step                                                          	|
 |-------------------	|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------	|
-| begin_checkout    	| Сlick **Proceed to checkout**.                                                           	|                                                                         	|
-| add_shipping_info 	| Сlick **Proceed to billing** after specifying the shipping address and delivery method. 	| Shipping.                                                             	|
-| add_payment_info  	| Сlick **Review order** after specifying the billing address and the payment method.       | Billing.                                                              	|
-| place_order       	| Сlick **Place order** after reviewing the order.                                       	| Order review.                                                         	|
-| purchase          	| Сlick **Pay now** after selecting the payment method.                                 	| Payment (unless manual payment was select at the previous step). 	        |
+| begin_checkout    	| Click **Proceed to checkout**.                                                           	|                                                                         	|
+| add_shipping_info 	| Click **Proceed to billing** after specifying the shipping address and delivery method. 	| Shipping.                                                             	|
+| add_payment_info  	| Click **Review order** after specifying the billing address and the payment method.       | Billing.                                                              	|
+| place_order       	| Click **Place order** after reviewing the order.                                       	| Order review.                                                         	|
+| purchase          	| Click **Pay now** after selecting the payment method.                                 	| Payment (unless manual payment was select at the previous step). 	        |
 
 !!! note
-    For a single-step checkout, only `begin-checkout` and `place_order` are tracked. Other events can be added at the client's request.
+    For a single-step checkout, only `begin_checkout` and `place_order` are tracked. Other events can be added at the client's request.
 
-## Other tracked events
+## Events beyond the checkout funnel
 
-You can also track different search actions. For example, after you type a query into a search field, a dropdown list appears. Clicking **Enter**/ ![Magnifying glass](../media/magnifying-glass.png){: width="25"} / **View all results** triggers the **search**, **search_term**, **items_count**, **visible_items**, and **view_item_list** GA events:
+Outside the checkout flow, Virto Commerce tracks various interaction events that describe how users search, browse, and interact with products. Unlike sales funnel events, these do not follow a specific order. Instead, they capture actions wherever the user is on the Frontend.
+
+### Search events
+
+When a user types a query into the search bar and submits it (presses **Enter**, clicks the magnifying glass icon, or selects **View all results**), several search-related events are triggered automatically.
+These events help you analyze:
+
+* What users search for.
+* How many results they see.
+* How many items are visible in the suggestions dropdown.
+* Which product lists users view immediately after searching.
 
 ![GA events](../media/google-analytics-events.png)
 
+### Other Frontend interactions
+
+The table below shows additional events that track user actions across the Frontend:
 
 <table border="1" cellpadding="8" cellspacing="0">
   <thead>
@@ -34,6 +53,18 @@ You can also track different search actions. For example, after you type a query
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>login</td>
+      <td>Submit login form with valid credentials.</td>
+      <td>User is logged into the storefront.</td>
+      <td>Login page.<br>Popup login form.</td>
+    </tr>
+    <tr>
+      <td>sign_up</td>
+      <td>Submit registration form.</td>
+      <td>User account is created.</td>
+      <td>Registration page.<br>Registration popup.</td>
+    </tr>
     <tr>
       <td rowspan="7">view_item_list</td>
       <td>Type query into the search bar.</td>
@@ -142,20 +173,25 @@ You can also track different search actions. For example, after you type a query
       <td>Cart</td>
     </tr>
     <tr>
+      <td>update_cart_item</td>
+      <td>Change product quantity or options in the cart.</td>
+      <td>Updated item quantity or configuration.</td>
+      <td>Cart.</td>
+    </tr>
+    <tr>
       <td>add_to_wishlist</td>
       <td>Add product to wishlist.</td>
       <td>The product is added to list.</td>
       <td>Category page.<br>Product page.</td>
     </tr>
+    <tr>
+      <td>view_search_results</td>
+      <td>Submit a search query and open the full search results page.</td>
+      <td>Search results page with matching products appears.</td>
+      <td>Search results page.</td>
+    </tr>
   </tbody>
 </table>
-
-
-
-
-
-
-
 
 <br>
 <br>

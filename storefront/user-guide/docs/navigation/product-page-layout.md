@@ -3,10 +3,13 @@
 Product pages display:
 
 * Product name and description.
+* Product properties organized into collapsible groups.
 * Quantity in stock (for physical products).
 * Discounts and price per item.
+* **Purchased before** tag for previously purchased products. 
 * Images and videos.
-* Related products.
+* Related products and other recommendations.
+* Product reviews.
 * Product variations.
 
 From the product page, you can:
@@ -19,6 +22,10 @@ From the product page, you can:
 * Share product information via social networks or email. 
 
 ![Physical product page layout](../media/product-page.png)
+
+[Google Tag Manager users](../../../../platform/user-guide/integrations/google-analytics/integration#google-tag-manager-setup-for-ga4) can add a **Product guide**, a smart product assistant, to the Frontend:
+
+![Product guide](../media/product-guide.gif){: style="display: block; margin: 0 auto;" width="400"}
 
 If a product has variations, they are displayed in a separate widget as a list or as a table:
 

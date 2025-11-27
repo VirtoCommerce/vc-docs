@@ -396,7 +396,6 @@ nav:
           - Google Analytics 4:
                 - Overview: integrations/google-analytics/overview.md
                 - Using Google Analytics 4: integrations/google-analytics/integration.md
-                - Settings: integrations/google-analytics/settings.md
           - Hotjar:
                 - Overview: integrations/hotjar/overview.md
                 - Getting Started: integrations/hotjar/getting-started.md

@@ -1,17 +1,16 @@
 # Overview
 
-Your Virto Commerce store can be seamlessly integrated with Google Analytics 4 using the **Google eCommerce Analytics** module. With this module, you can:
+The **Google Analytics 4** module allows you to assign Google Analytics Measurement Id and Google Tag Manager Container Id for a Store and measure traffic, ecommerce events to collect information about the shopping behavior of your users.
 
-* Assign Google Analytics measurement Id for your store.
-* Measure traffic. 
-* Measure the following ecommerce events with Virto Commerce Frontend Application:
-    * Selecting an item from a category.
-    * Viewing product details.
-    * Adding/removing a product from a shopping cart.
-    * Initiating the checkout process.
-    * Making purchases or refunds.
-    * Applying promotions.
-* Configure your store.
+The module supports both direct GA4 integration and advanced Google Tag Manager integration for centralized tag management.
+
+## Key features
+
+* Store configuration.
+* eCommerce event measurement in Virto Frontend.
+* Google Tag Manager integration for advanced tracking.
+* Integration with additional sales channels.
+* Application menu integration.
 
 The solution is ready for integration with other sales channels.
 
