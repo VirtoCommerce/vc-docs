@@ -1,6 +1,6 @@
 # Overview
 
-The **Content** module is designed to manage and display content on your e-commerce site. 
+The **Content** module is designed to manage and display content on your ecommerce site. 
 
 The diagram below illustrates the relationships within the Virto Commerce Content Management System:
 
@@ -17,7 +17,7 @@ With the Content module, you can manage:
 ![overview](media/overview.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
-    The Content module supports creating and editing pages using Markdown and HTML. Therefore, you may be interested in installing the [Page Builder module](../page-builder/overview.md) to create e-commerce pages from blocks and edit them using a visual editor. However, the Content module should be installed first.
+    The Content module supports creating and editing pages using Markdown and HTML. Therefore, you may be interested in installing the [Page Builder module](../page-builder/overview.md) to create ecommerce pages from blocks and edit them using a visual editor. However, the Content module should be installed first.
 
 
 You can access the Content module via:

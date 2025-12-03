@@ -18,7 +18,7 @@ The order itself contains minimum details.  You will find payment, shipment, and
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-order/releases)
 
 
-The **Order management** modules is designed to:
+The **Order management** module is designed to:
 
 * Add or remove line items from the order.
 * Ensure accurate price calculations based on the Frontend Application logic, applying relevant discounts, store settings, and customer-specific pricing. 

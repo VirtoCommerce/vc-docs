@@ -1,6 +1,6 @@
 # Import Products, Prices, and Stock Quantities to Catalog via CSV File
 
-To efficiently bulk add new products, along with their prices and stock quantities at each fulfillment center, you can use the CSV file import option.
+To efficiently bulk add new products, along with their prices and [stock](/platform/user-guide/glossary#stock) quantities at each fulfillment center, you can use the CSV file import option.
 
 !!! note
     Importing products to catalogs requires the preinstalled [Catalog CSV Import module](https://github.com/VirtoCommerce/vc-module-catalog-csv-import).
@@ -11,7 +11,7 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 1. [Create a new price list](../pricing/creating-new-price-list.md). **New-price-list** in our example.
 1. Copy the Id of the created price list to clipboard. **c801f074-b9d3-4662-8978-845c8b0d75ca** in our example.
 
-    ![Copy pricelist Id](media/copy-pricelist-id.png){: style="display: block; margin: 0 auto;" }
+    ![Copy price list Id](media/copy-pricelist-id.png){: style="display: block; margin: 0 auto;" }
 
 1. Create a CSV file containing all the necessary fields, i.e., product name, Id, SKU, price, price list Id, etc. To create a new catalog, you can [export a catalog in a CSV format](export-catalog.md) or [download this sample file](price-list-sample.xlsx) to use as a template.
 

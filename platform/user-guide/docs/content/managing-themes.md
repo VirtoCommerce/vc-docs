@@ -2,7 +2,7 @@
 
 The Virto Commerce Content module allows you to:
 
-* Add as many themes as needed.
+* Add as many [themes](/platform/user-guide/glossary#theme) as needed.
 * Set an active theme to be displayed in the Frontend.
 
 Managing theme includes:

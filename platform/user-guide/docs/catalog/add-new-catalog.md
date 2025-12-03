@@ -10,9 +10,8 @@ You can readily differentiate physical catalogs from virtual ones through their 
 ![Physical vs. Virtual catalogs](media/physical-virtual-catalogs.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
-	Fulfillment centers are relevant to physical products only. If a store sells digital content, such as software or music, it does not need such centers.
-*[Fulfillment centers]: Processing units involved in receiving, processing, and delivering orders to end customers 
-
+	[Fulfillment centers](/platform/user-guide/glossary#fulfillment-center) are relevant to physical products only. If a store sells digital content, such as software or music, it does not need such centers.
+ 
 ## Physical catalogs
 
 A physical catalog is an online inventory of products or services that a company presents. These products can be categorized, where each product may belong to a single category or can directly belong to a catalog without being associated with any specific category.
