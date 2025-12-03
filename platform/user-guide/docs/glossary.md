@@ -85,7 +85,7 @@ Same as **Company**. A profile for an entire company, within which you can store
 Any tangible product that the shop owner can list in the shop. Physical products have a unique Track Inventory attribute that digital products do not have. Shipping and Fulfillment Center attributes are also relevant to them.
 
 ## Product
-A basic entity in Virto Commerce's Catalog module, a product is a basic type of item that can be created and listed on an e-commerce site. You can choose to create entries for both physical and digital products. There are also special types of products, such as bills of materials, variations, and configurables.
+A basic entity in Virto Commerce's Catalog module, a product is a basic type of item that can be created and listed on an ecommerce site. You can choose to create entries for both physical and digital products. There are also special types of products, such as bills of materials, variations, and configurables.
 
 ## Product with bill of materials
 A physical product that comes with a bill of materials (a list of additional items). It can be used for specific promotions and requires physical shipping
@@ -106,7 +106,7 @@ Virto Commerce catalog offers dedicated SEO tools to increase traffic to the eco
 Same as **Inventory**. The quantity of a product available at a specific fulfillment center.
 
 ## Store
-Any digital means of marketing and/or selling products created with the Virto Commerce Platform and its modules. Technically, this can be an e-commerce website, a mobile app, etc.
+Any digital means of marketing and/or selling products created with the Virto Commerce Platform and its modules. Technically, this can be an ecommerce website, a mobile app, etc.
 
 ## Theme
 A package of assets that defines the visual appearance and layout of your Frontend.
