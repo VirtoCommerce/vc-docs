@@ -58,7 +58,6 @@
 
 .md-sidebar--primary{
 border-right: 1px var(--neutral-90) solid;
-height: auto;
 padding-top: 1.5rem;
 }
 
@@ -122,6 +121,10 @@ padding-top: 1.5rem;
 .md-sidebar.md-sidebar--secondary .md-nav__link:is(:focus,:hover) {
     background-color: transparent;
     color: var(--primary-70);
+}
+
+.md-sidebar__scrollwrap {
+    overscroll-behavior: contain;
 }
 
 .md-sidebar__scrollwrap::-webkit-scrollbar {
