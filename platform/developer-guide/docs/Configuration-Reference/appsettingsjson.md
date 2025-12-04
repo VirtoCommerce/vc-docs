@@ -42,80 +42,18 @@ This configuration node defines the system settings of the VC Platform.
 | DiscoveryPath                 | ./modules                                                 | The relative or absolute file system path where the Platform will discover installed modules.           |
 | AllowInsecureHttp             | false                                                     | Controls how the OpenID Connect server (ASOS) handles requests arriving on non-HTTPS endpoints. When set to **false**, it helps mitigate man-in-the-middle attacks. |
 | UseResponseCompression        | false                                                     | Enables or disables response compression to improve performance.                                        |
-| Hangfire                      | [Read more](appsettingsjson.md#hangfire)                  | Configures background processing settings, including job storage options and retry mechanisms.          |
-| ApplicationInsights           | [Read more](appsettingsjson.md#application-insights)      | Manages telemetry settings and sampling options for Application Insights.                               |
-| Swagger.Enable                | true                                                      | Controls whether Swagger is enabled, allowing access to the Swagger UI and API documentation.           |
-| GraphQLPlayground.Enable      | true                                                      | Controls whether the GraphQL Playground is enabled, allowing access to the GraphQL UI and schemas.      |
-| PlatformUI.Enable             | true                                                      | Determines whether the Platform's user interface is enabled.                                            |
+| Hangfire                      | ![Read more](media/readmore.png){: width="20"} [Hangfire](#hangfire)  | Configures background processing settings, including job storage options and retry mechanisms.          |
+| ApplicationInsights           | ![Read more](media/readmore.png){: width="20"} [ApplicationInsights](#application-insights) | Manages telemetry settings and sampling options for Application Insights.|
+| Swagger                       | ![Read more](media/readmore.png){: width="20"} [Swagger](#swagger)| Manages the Swagger documentation engine.                                                       |
+| GraphQL                       | ![Read more](media/readmore.png){: width="20"} [GraphQL](#graphql) | Specifies which authentication types are not allowed when accessing GraphQL endpoints.         |
+| GraphQLPlayground             | ![Read more](media/readmore.png){: width="20"} [GraphQLPlayground](#graphqlplayground) | Controls whether the GraphQL Playground is enabled, allowing access to the GraphQL UI and schemas. |
+| PlatformUI                    | ![Read more](media/readmore.png){: width="20"} [PlatformUI](#platformui)| Manages the Platform's user interface.                                            |
 
-
-**Examples**
-
-=== "Hangfire"
-
-    ```json title="appsettings.json"
-    "Hangfire": {
-        "JobStorageType": "Database",
-        //Set value to false to stop processing the background jobs.
-        "UseHangfireServer": true,
-        "AutomaticRetryCount": 2,
-        //"WorkerCount": 11,
-        //"Queues": [
-        //    "alpha", "beta", "default"
-        //],
-        "SqlServerStorageOptions": {
-            "CommandBatchMaxTimeout": "00:05:00",
-            "SlidingInvisibilityTimeout": "00:05:00",
-            "QueuePollInterval": "00:00:00",
-            "UseRecommendedIsolationLevel": true,
-            "UseIgnoreDupKeyOption": true,
-            "UsePageLocksOnDequeue": true,
-            "DisableGlobalLocks": true,
-            "EnableHeavyMigrations": true,
-            "TryAutoDetectSchemaDependentOptions": false,
-            "InactiveStateExpirationTimeout": "7.00:00:00"
-          },
-          "MySqlStorageOptions": {
-            "InvisibilityTimeout": "00:05:00",
-            "QueuePollInterval": "00:00:05"
-          },
-          "PostgreSqlStorageOptions": {
-            "InvisibilityTimeout": "00:05:00",
-            "QueuePollInterval": "00:00:05",
-            "UseRecommendedIsolationLevel": true,
-            "UsePageLocksOnDequeue": true,
-            "DisableGlobalLocks": true
-          }
-        },
-    ```
-
-=== "Swagger"
-
-    ```json title="appsettings.json"
-    "Swagger":
-    {
-    "Enable": true
-    }
-    ```
-
-=== "Playground"
-
-    ```json title="appsettings.json"
-    "GraphQLPlayground": {
-      "Enable": false
-    }
-    ```
-
-=== "FileExtensionsBlackList"
-
-    ```json title="appsettings.json"
-    "FileExtensionsBlackList": [".pdf", ".json"]
-    ```
 
 
 #### Application Insights
 
-This node adds and customizes the Application Insight section.
+This node adds and customizes the Application Insights section.
 
 <!--AppInsights1-start-->
 
@@ -133,7 +71,7 @@ This node adds and customizes the Application Insight section.
 | SamplingOptions.Fixed.SamplingPercentage                  | 100                      | Fixed sampling percentage used for telemetry in Application Insights.|
 | SamplingOptions.IncludedTypes                             | Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace     | A semi-colon delimited list of types that you do want to subject to sampling. The specified types will be sampled. All telemetry of the other types will always be transmitted. All types are included by default.|
 | SamplingOptions.ExcludedTypes                             | Dependency<br>Event<br>Exception<br>PageView<br>Request<br>Trace       | A semi-colon delimited list of types that you do not want to be sampled. All telemetry of the specified types is transmitted. The types that aren't specified will be sampled. Empty by default |
-| EnableSqlCommandTextInstrumentation                       | true                     | Controls Application Insight telemetry processor thats excludes dependency SQL queries. Any SQL command name or statement that contains a string from **QueryIgnoreSubstrings** options will be ignored.|
+| EnableSqlCommandTextInstrumentation                       | true                     | Controls Application Insights telemetry processor thats excludes dependency SQL queries. Any SQL command name or statement that contains a string from **QueryIgnoreSubstrings** options will be ignored.|
 | IgnoreSqlTelemetryOptions.QueryIgnoreSubstrings           | [HangFire]., sp_getapplock, sp_releaseapplock | Specifies substrings to ignore in SQL telemetry to avoid collecting irrelevant data, particularly related to Hangfire's internal operations.     |
 
 <!--AppInsights1-end-->
@@ -223,6 +161,49 @@ You can enable AI logging by updating the following `Serilog` configuration sect
 
 The **telemetryConverter** has to be specified with the full type name and the assembly name. A **connectionString** can be omitted if it's supplied in the **APPLICATIONINSIGHTS_CONNECTION_STRING** environment variable.
 
+#### GraphQL
+
+This node configures GraphQL-specific Platform settings.
+
+|Node                                                                  | Default or sample value  | Description                                                                                        |
+|----------------------------------------------------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
+| ForbiddenAuthenticationTypes| ["Identity.Application"] | Specifies which authentication types are not allowed when accessing GraphQL endpoints. Helps prevent accidental use of cookie-based authentication in API contexts. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "GraphQL": {
+      "ForbiddenAuthenticationTypes": [
+        "Identity.Application"
+      ]
+    },
+  }
+}
+```
+
+#### GraphQLPlayground
+
+This node controls the availability of the GraphQL Playground interface.
+
+|Node                           | Default or sample value  | Description                                                                                        |
+|-------------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
+| GraphQLPlayground.Enable      | true                     | Controls whether the GraphQL Playground is enabled, allowing access to the GraphQL UI and schemas. |
+
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "GraphQLPlayground": {
+      "Enable": true
+    },
+  }
+}
+```
+
+
+
 #### Hangfire
 
 This node configures the background processing settings for Hangfire in the Virto Commerce Platform. 
@@ -293,6 +274,32 @@ This node configures the background processing settings for Hangfire in the Virt
     }
 ```
 
+#### PlatformUI
+
+This node manages the Platform's user interface settings, including environment-specific visual markers.
+
+|Node                           | Default or sample value  | Description                                                                                        |
+|-------------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
+| Enable                        | true                                                      | Determines whether the Platform's user interface is enabled.                                            |
+| EnvironmentBanner.Name	      |                                                           |	Optional custom name shown in the environment banner (e.g., **Staging**, **QA**, **Test environment**). |
+| EnvironmentBanner.ThemePreset |prod <br> dev <br> test <br> staging <br> demo <br> default| Defines the color theme of the environment banner. Useful for visually identifying the environment type .|
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "PlatformUI": {
+      "Enable": true,
+      "EnvironmentBanner": {
+        "Enable": true,
+        "Name": "",
+        "ThemePreset": "" // Possible values: prod, dev, test, staging, demo, default
+      }
+    },
+  }
+}
+```
+
+
 #### Stores
 
 This node configures default store settings and domain assignments in the Virto Commerce Platform.
@@ -312,6 +319,27 @@ This node configures default store settings and domain assignments in the Virto 
       "Domains": {
         "localhost": "B2B-store"
       }
+    }
+  }
+}
+```
+
+#### Swagger
+
+This node configures the Swagger documentation engine for the Virto Commerce Platform. Swagger provides an interactive UI for exploring and testing REST API endpoints.
+
+| Node           | Default or sample value | Description                                                                                   |
+|----------------|-------------------------|-----------------------------------------------------------------------------------------------|
+| Enable         | true                    | Controls whether Swagger is enabled, allowing access to the Swagger UI and API documentation. |
+
+
+**Example** 
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "Swagger": {
+      "Enable": true
     }
   }
 }
@@ -388,49 +416,75 @@ This node configures AI-based document processing services and file upload setti
 
 ### Assets
 
-This **required** node determines how VC Platform will be working with assets, i.e. files.
+This **required** node defines how the Virto Commerce Platform manages assets (files), including storage location, access configuration, and provider-specific settings.
+
 
 | Node                              | Default or sample value             | Description                                                                                                                   |
 | --------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------  |
 | Provider                          | "FileSystem"<br>"AzureBlobStorage"  | Current asset provider.                                                                                                       |
-| FileSystem                        |                                     | File system-based asset provider configuration. Used when the **Provider** setting has the value **"FileSystem"**.            |
-| FileSystem:RootPath               | "~/assets"                          | The root path where assets are stored in the file system.                                                                     |
-| FileSystem:PublicUrl              | "https://localhost:5001/assets/"    | The public Url used to access assets stored in the file system.                                                               |
-| AzureBlobStorage                  |                                     | Azure Blob Storage-based asset provider configuration. Used when the **Provider** setting has the value **"AzureBlobStorage"**.   |
-| AzureBlobStorage:ConnectionString |                                     | The connection string for Azure Blob Storage.                                                                                 |
-| AzureBlobStorage:CdnUrl           |                                     | The optional CDN Url for serving assets from Azure Blob Storage.                                                              |
-| AzureBlobStorage:AllowBlobPublicAccess	| true <br> false               | Determines whether public access to blobs is allowed in Azure Blob Storage. Set to true to enable public access.|
 
 
+**Example**
 
-**Examples**
+```json title="appsettings.json"
+  "Assets": {
+    "Provider": "",
+  }
+```
 
-=== "FileSystem"
-    <!--filesystem-start-->
-    ```json title="appsettings.json"
-     "Assets": {
-        "Provider": "FileSystem",
-        "FileSystem": {
-          "RootPath": "~/assets",
-          "PublicUrl": "http://localhost:5001/assets/"
-        }
-     }
-    ```
-    <!--filesystem-end-->
+#### FileSystem
 
-=== "AzureBlobStorage"
-    <!--azureblobstorage-start-->
-    ```json title="appsettings.json"
-     "Assets": {
-        "Provider": "AzureBlobStorage",
-        "AzureBlobStorage": {
-            "ConnectionString": "",
-            "CdnUrl": ""
-            "AllowBlobPublicAccess": true
-        }
-     }  
-    ```
-    <!--azureblobstorage-end-->
+Configuration used when `"Provider": "FileSystem"`.
+
+| Node                 | Default or sample value                                            | Description                                               |
+| -------------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
+| Provider             | "FileSystem"                                                       | Specifies that the file system is used for asset storage. |
+| FileSystem           |                                                                    | File system-based asset provider settings.                |
+| FileSystem:RootPath  | "~/assets"                                                         | The root directory where assets are stored.               |
+| FileSystem:PublicUrl | "[https://.../assets/](https://.../assets/)" | The public URL used to access stored assets.              |
+
+**Example**
+
+<!--filesystem-start-->
+
+```json title="appsettings.json"
+"Assets": {
+  "Provider": "FileSystem",
+  "FileSystem": {
+    "RootPath": "~/assets",
+    "PublicUrl": "http://.../assets/"
+  }
+}
+```
+<!--filesystem-end-->
+
+
+#### AzureBlobStorage
+
+Configuration used when `"Provider": "AzureBlobStorage"`.
+
+| Node                                   | Default or sample value | Description                                                              |
+| -------------------------------------- | ----------------------- | ------------------------------------------------------------------------ |
+| Provider                               | "AzureBlobStorage"      | Specifies that Azure Blob Storage is used for asset storage.             |
+| AzureBlobStorage                       |                         | Azure Blob Storage asset provider settings.                              |
+| AzureBlobStorage:ConnectionString      |                         | Connection string used to connect to Azure Blob Storage.                 |
+| AzureBlobStorage:CdnUrl                |                         | Optional CDN URL for serving assets with improved performance.           |
+
+**Example**
+
+<!--azureblobstorage-start-->
+
+```json title="appsettings.json"
+"Assets": {
+  "Provider": "AzureBlobStorage",
+  "AzureBlobStorage": {
+    "ConnectionString": "",
+    "CdnUrl": "",
+  }
+}
+```
+<!--azureblobstorage-end-->
+
 
 ### Auth
 
@@ -712,8 +766,6 @@ This configuration node defines authorization settings for the system.
 ```
 
 
-
-
 ### Caching
 This node manages caching configuration.
 
@@ -827,7 +879,7 @@ This configuration node configures lifetimes for security tokens that are issued
 
 ### DatabaseProvider
 
-The DatabaseProvider node specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage its data. 
+The node specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage its data. 
 
 | Node               | Supported values                                  | Description                                                                                                            |
 | ------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -1120,7 +1172,7 @@ This node configures external sources, from which modules are being installed an
 
 ### Notifications
 
-This node enables notification configuration for the `VirtoCommerce.Notifications` module.
+This node enables notification configuration for the Virto Commerce Notifications module.
 
 <!--notifications-start-->
 
@@ -1134,6 +1186,8 @@ This node enables notification configuration for the `VirtoCommerce.Notification
 | Smtp:Login                        |                                 | The login (username) for authenticating to the SMTP server.                                                               |
 | Smtp:Password                     |                                 | The password for authenticating to the SMTP server.                                                                       |
 | Smtp:ForceSslTls                  | true<br>false                   | If **true**, forces the usage of SSL/TLS when connecting to the SMTP server.                                         |
+| Smtp:CustomHeaders                |                                 | A collection of key-value pairs representing custom SMTP headers. Store administrators can add, edit, and remove headers
+to enable advanced email configuration without code changes. |
 | SendGrid                          |                                 | SendGrid gateway configuration.<br>Used when the **Gateway** setting has the **SendGrid** value.                              |
 | SendGrid:ApiKey                   |                                 | The API key for authenticating to the SendGrid service.                                                                   |
 | Notifications:DiscoveryPath       |                                 | Relative folder path in the local file system<br>that will be used to discover notification template files<br>during notification rendering. |
@@ -1151,6 +1205,11 @@ This node enables notification configuration for the `VirtoCommerce.Notification
       "Login": "",
       "Password": "",
       "ForceSslTls": false
+      "ForceSslTls": false,
+      "CustomHeaders": {
+        "X-Custom-Header": "value",
+        "X-Custom-Header2": "value2"
+      }
     },
     "SendGrid": {
       "ApiKey": ""
@@ -1172,7 +1231,7 @@ The Payments node configures various payment gateway integrations for the Virto 
 | AuthorizeNet    |                                       | Configuration settings for the Authorize.Net payment gateway.         |
 | Skyflow         |                                       | Configuration settings for the Skyflow payment processing module.     |
 | CyberSource     |                                       | Configuration settings for the CyberSource payment processing module. |
-
+| DataTrans       |                                       | Configuration settings for the DataTrans payment processing module. |
 
 #### Authorize.Net
 
@@ -1326,6 +1385,32 @@ This node configures the CyberSource payment gateway integration, enabling secur
 <!--cybersource-end-->  
 
 
+
+#### DataTrans
+
+This node configures the DataTrans payment gateway integration, enabling secure payment processing using the merchant credentials provided by the DataTrans service. Sensitive values such as the merchant secret should be stored in `appsettings.json` or a secure configuration source.
+
+
+| Node       | Default or sample value | Description                                                        |
+| ---------- | ----------------------- | ------------------------------------------------------------------ |
+| MerchantId | "1110020617"            | The unique merchant identifier assigned by DataTrans.              |
+| Secret     | "YourSecretKey"         | The secret key used to authenticate requests to the DataTrans API. |
+
+**Example**
+<!--datatrans-start-->
+
+```json title="appsettings.json"
+"Payments": {
+  "DataTrans": {
+    "MerchantId": "1110020617",
+    "Secret": "eVZ5bq237EUzbpOF"
+  }
+}
+```
+
+<!--datatrans-end-->
+
+
 ### PlatformSettings
 
 This node is used for Used for Platform settings overriding.
@@ -1354,7 +1439,7 @@ This node is used for Used for Platform settings overriding.
 
 ### PushMessages
 
-This node configures the push notification settings for the Virto Commerce Push Messages` module using Firebase Cloud Messaging (FCM).
+This node configures the push notification settings for the Virto Commerce Push Messages module using Firebase Cloud Messaging (FCM).
 
 | Node                        | Sample value                                                      | Description                                                                 |
 |-----------------------------|------------------------------------------------------------------ |-----------------------------------------------------------------------------|
@@ -1446,7 +1531,7 @@ This node configures the push notification service settings for scalability in t
 
 ### Search
 
-This node configures full text search for the `VirtoCommerce.Search` module.
+This node configures full text search for the Virto Commerce Search module.
 
 <!--search-start-->
 

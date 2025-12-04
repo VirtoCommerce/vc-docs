@@ -136,11 +136,12 @@ To customize the module:
     * `authorizePayment`: Invokes `IPaymentClientFactory` to obtain an instance of `IPaymentClient` for processing transactions using the required Connection.
 
 
+
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../authorize-net">← Authorize.net </a>
-    <a href="../cybersource">CyberSource →</a>
+    <a href="../datatrans">← DataTrans payment method </a>
+    <a href="../../Shipments/new-shipping-method-registration">Registering new shipping method →</a>
 </div>

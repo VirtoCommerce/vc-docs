@@ -1,7 +1,7 @@
 # Manage Datatrans Module
 
 To manage the Datatrans payment method:
-
+<!--datatrans1-start-->
 1. Click **Stores** in the main menu. 
 1. In the next blade, select a store.
 1. In the **Store details** blade, click on the **Payment methods** widget.
@@ -17,6 +17,7 @@ To manage the Datatrans payment method:
 1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been saved.
+<!--datatrans1-end-->
 
 
 <br>

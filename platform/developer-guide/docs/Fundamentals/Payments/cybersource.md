@@ -53,6 +53,6 @@ The CyberSource payment method has been enabled for your Store.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../skyflow">← Skyflow </a>
-    <a href="../../Shipments/new-shipping-method-registration">Registering new shipping method →</a>
+    <a href="../authorize-net">← Authorize.net payment method </a>
+    <a href="../datatrans">Datatrans payment method →</a>
 </div>
