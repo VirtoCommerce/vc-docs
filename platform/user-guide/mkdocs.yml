@@ -220,6 +220,8 @@ nav:
                 - Overview: dynamic-associations/overview.md
           - Event Bus:
                 - Overview: event-bus/overview.md
+          - xFrontend:
+                - Overview: x-frontend/overview.md
           - GDPR:
                 - Overview: gdpr/overview.md
                 - Managing Personal Data: gdpr/manage-personal-data.md

@@ -42,5 +42,5 @@ The diagram below illustrates the functionality of the Event Bus module:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../dynamic-associations/overview">← Dynamic Associations module overview</a>
-    <a href="../../gdpr/overview">GDPR module overview →</a>
+    <a href="../../x-Frontend/overview">xFrontend module overview →</a>
 </div>

@@ -22,6 +22,6 @@ The diagram below illustrates the functionality of the GDPR module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../event-bus/overview">← Event Bus module overview</a>
+    <a href="../../x-Frontend/overview">← xFrontend module overview</a>
     <a href="../manage-personal-data">Managing personal data →</a>
 </div>
