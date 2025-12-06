@@ -47,5 +47,5 @@ Virto Commerce architecture enables companies to quickly and affordably expand t
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../getting-started">← Getting started </a>
-    <a href="../view-results-on-frontend">Viewing results on frontend →</a>
+    <a href="../view-results-on-frontend">Viewing results on Frontend →</a>
 </div>

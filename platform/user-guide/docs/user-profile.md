@@ -14,7 +14,7 @@ To configure the admin profile:
 	!!! note
 		If a user is listed in the Contacts, they can now upload their personal photos to customize and brand their workspace:
 
-		![User photo](media/user-photo.png){: style="display: block; margin: 0 auto;" }{: style="display: block; margin: 0 auto;" }
+		![User photo](media/user-photo.png){: style="display: block; margin: 0 auto;" }
 
 Your settings are saved automatically.
 

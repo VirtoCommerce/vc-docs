@@ -78,7 +78,7 @@ To add sections and options:
 
             ![Product type](media/adding-product-type-option.gif)
 
-            The product options appear on the frontend:
+            The product options appear on the Frontend:
 
             ![Product options](media/product-options.png)
 
@@ -86,7 +86,7 @@ To add sections and options:
 
             ![Text type](media/adding-text-type-option.gif)
 
-            The predefined text appears on the frontend:
+            The predefined text appears on the Frontend:
 
             ![Predefined text](media/predefined-text.png)
 
@@ -94,7 +94,7 @@ To add sections and options:
 
             ![File type](media/adding-text-type-option.gif)
 
-            The file upload section appears on the frontend:
+            The file upload section appears on the Frontend:
 
             ![Logo upload](media/logo-upload.png)
 
@@ -108,7 +108,7 @@ To add sections and options:
 
       If you switch this option to off, a **None** option automatically appears in the list on the Frontend. This allows users to skip selecting an option for that section when configuring their product:
 
-        ![Non-required option](media/none-option.png){: style="display: block; margin: 0 auto;" }
+      ![Non-required option](media/none-option.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Confirm** in the toolbar.
 1. Your options appear in the options list of the previous blade. Click **OK** to save the changes.
