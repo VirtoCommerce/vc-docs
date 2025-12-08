@@ -9,12 +9,12 @@ As an example, let's enable SEO for the **Bolts** category within the **B2B-mixe
 1. In the next blade, click the three dots to the left of the **Bolts** category and select **Manage** from the dropdown list.
 1. In the next blade, click on the **SEO** widget. 
 
-    ![Enable SEO](media/enabling-seo.png)
+    ![Enable SEO](media/enabling-seo.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the following fields:
 
-    ![SEO fields](media/seo-fields.png)
+    ![SEO fields](media/seo-fields.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 

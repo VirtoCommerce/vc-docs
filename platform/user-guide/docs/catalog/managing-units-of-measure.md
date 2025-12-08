@@ -83,7 +83,7 @@ To add a new dimension:
 1. The next blade lists all the registered units of measure. Click **Add** in the toolbar to add a new dimension.
 1. In the next blade, fill in the required fields, then click **Save** in the toolbar:
 
-![Add new UoM](media/add-uom.png)
+![Add new UoM](media/add-uom.png){: style="display: block; margin: 0 auto;" }
 
 Your new dimension appears in the list.
 
@@ -111,7 +111,7 @@ The first added measure unit is automatically set as the default. To set another
 1. Click the unit in the list that you want to set as the default.
 1. In the next blade, click **Set as default** in the toolbar.
 
-    ![Default unit](media/default-uom.png)
+    ![Default unit](media/default-uom.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 

@@ -9,23 +9,23 @@ In both the widget and the settings section, you will find fully or partly simil
 
 ## General settings
 
-![widget](media/widget-general-settings.png)
+![widget](media/widget-general-settings.png){: style="display: block; margin: 0 auto;" }
 
 ## SEO settings
 
-![SEO settings](media/seo-settings.png)
+![SEO settings](media/seo-settings.png){: style="display: block; margin: 0 auto;" }
 
 ## Products settings
 
-![Products settings](media/products-settings.png)
+![Products settings](media/products-settings.png){: style="display: block; margin: 0 auto;" }
 
 Turn this option to on to display the **Purchased before** filter for products on the frontend:
 
-![Purchased before](media/filter-by-purchased-before-status.gif)
+![Purchased before](media/filter-by-purchased-before-status.gif){: style="display: block; margin: 0 auto;" }
 
 This setting activates the logic to enrich the product index with customer purchase history. It also extends the product index schema with a new field: `__purchase_by_user_<StoreId>`, containing user IDs of customers who have previously purchased the product:
 
-![Index](media/purchased-before-index.png)
+![Index](media/purchased-before-index.png){: style="display: block; margin: 0 auto;" }
 
 [Rebuild the product index](../catalog/product-indexing.md) to populate the `__purchase_by_user_<StoreId>` fields with historical data.
 

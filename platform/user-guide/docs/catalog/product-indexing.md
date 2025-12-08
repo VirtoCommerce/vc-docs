@@ -13,12 +13,12 @@ To start indexation:
 1. In the next **Categories and items** blade, click on the required product.
 1. In the next **Physical items details** blade, scroll down and click the index widget.  
 
-    ![Path](media/index-path.png)
+    ![Path](media/index-path.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, click **Build index** in the toolbar. 
 1. The indexation result is displayed in the **Indexation process** blade.
 
-    ![Fig. Indexing completed](media/index-details.png){: width="550"}
+    ![Fig. Indexing completed](media/index-details.png){: style="display: block; margin: 0 auto;" width="550"}
 
 The indexation has been completed.
 

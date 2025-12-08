@@ -18,7 +18,7 @@ To create a new price list:
 1. In the next blade, click **Add** in the toolbar to open the **New Price List** blade.
 1. The following blade appears:
 
-	![New Price List screen](media/new-price-list-screen.png)
+	![New Price List screen](media/new-price-list-screen.png){: style="display: block; margin: 0 auto;" }
 
 	Add:
 
@@ -51,7 +51,7 @@ To add prices:
 1. In the next blade, click on the **Prices** widget.
 1. In the next blade, click **Add** to select items for pricing.
 
-	![Path](media/price-list-path1.png)
+	![Path](media/price-list-path1.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, select the category you want to add the product prices from.
 1. In the **Select catalog items...** blade, check the products you need.
@@ -61,7 +61,7 @@ To add prices:
 
 1. Click **Add selected** to add the prices of the selected products to your price list.
 
-	![Selecting items](media/price-list-path2.png)
+	![Selecting items](media/price-list-path2.png){: style="display: block; margin: 0 auto;" }
 
 You can see the added prices in the **Prices** widget.
 
@@ -76,7 +76,7 @@ To start editing or adding a price:
 1. Edit the **List price**, **Sale price**, and **Minimum quantity**, which cannot be less than 1 by default.
 1. Click **Save** to save the changes.
 
-	![Path](media/price-list-path.png)
+	![Path](media/price-list-path.png){: style="display: block; margin: 0 auto;" }
 
 The modifications have been saved.
 

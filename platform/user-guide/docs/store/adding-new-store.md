@@ -11,7 +11,7 @@ To add a new store to your Virto Commerce system:
 
 1. Click **Create** to save the changes.
 
-![New Store screen](media/add-store-screen.png){: width="800"}
+![New Store screen](media/add-store-screen.png){: style="display: block; margin: 0 auto;" width="800"}
 
 Your new store has been added to the list.
 
