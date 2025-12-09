@@ -74,7 +74,8 @@ nav:
         - Development Accelerators:
             - Overview: customization/accelerators-overview.md
             - Guidelines for Using Accelerators: customization/accelerators-guidelines.md
-            - Locales Management: customization/texts-customization.md
+            - Localization: customization/localization.md
+            - Tracking and Fixing Locales: customization/texts-customization.md
     - Merge: merge.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md

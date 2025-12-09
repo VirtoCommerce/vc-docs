@@ -815,6 +815,7 @@ nav:
           - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
           - Extending Application User: Extensibility/extending-application-user.md
           - Adding New Blocks to Page Builder: Extensibility/page-builder-extension.md
+          - Localization: Extensibility/localization.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:

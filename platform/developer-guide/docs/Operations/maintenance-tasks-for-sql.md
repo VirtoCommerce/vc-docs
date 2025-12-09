@@ -26,7 +26,7 @@ To start index defragmentation and rebuilding:
     CROSS APPLY sys.dm_db_index_physical_stats(DB_ID(), ps.object_id, ps.index_id, null, 'LIMITED') ips
     ORDER BY ips.avg_fragmentation_in_percent desc, ps.object_id, ps.index_id
     ```
-1.  Run the query to rebuilding indexes. Use the [SQL maintenance script](https://raw.githubusercontent.com/yochananrachamim/AzureSQL/master/AzureSQLMaintenance.txt) or the simplest one:
+1.  Run the query to rebuild indexes. Use the [SQL maintenance script](https://github.com/yochananrachamim/AzureSQL/tree/master) or the simplest one:
     ```sql
     DECLARE @TableName varchar(255)
     

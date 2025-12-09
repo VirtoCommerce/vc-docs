@@ -13,5 +13,5 @@ To ensure your project remains stable, maintainable, and easy to update, please 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../accelerators-overview">← Development accelerators</a>
-    <a href="../texts-customization">Locales management →</a>
+    <a href="../localization">Localization →</a>
 </div>

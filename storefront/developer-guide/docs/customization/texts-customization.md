@@ -1,4 +1,4 @@
-# Managing Locales
+# Tracking and Fixing Locales
 
 Virto Commerce Frontend provides flexible tools to customize all text content displayed in the Frontend. This includes modifying static texts, translating them into multiple languages, and ensuring consistent localization across the entire application. Text customization is handled through locale files, which define translation keys and their corresponding values for different languages.
 
@@ -35,6 +35,6 @@ This command analyzes all locale files, identifies missing keys, translates the 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../accelerators-guidelines">← Guidelines for using accelerators</a>
+    <a href="../localization">← Localization</a>
     <a href="../../merge">Merging Frontend updates →</a>
 </div>
