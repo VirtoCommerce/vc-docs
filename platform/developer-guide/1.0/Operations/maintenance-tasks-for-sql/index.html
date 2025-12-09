@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.virtocommerce.org/platform/developer-guide/1.0/Operations/maintenance-tasks-for-sql/">
       
       
-        <link rel="prev" href="../../Extensibility/page-builder-extension/">
+        <link rel="prev" href="../../Extensibility/localization/">
       
       
         <link rel="next" href="../../Tutorials-and-How-tos/overview/">
@@ -22216,6 +22216,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../Extensibility/localization/" class="md-nav__link">
+        Localization
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
     </nav>
 </li>
@@ -26889,7 +26907,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2025 07:25:18 UTC">June 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 11:50:21 UTC">December 9, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26933,7 +26951,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">CROSS</span><span class="w"> </span><span class="n">APPLY</span><span class="w"> </span><span class="n">sys</span><span class="p">.</span><span class="n">dm_db_index_physical_stats</span><span class="p">(</span><span class="n">DB_ID</span><span class="p">(),</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="n">object_id</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="n">index_id</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;LIMITED&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">ips</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ips</span><span class="p">.</span><span class="n">avg_fragmentation_in_percent</span><span class="w"> </span><span class="k">desc</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="n">object_id</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="n">index_id</span>
 </code></pre></div></li>
-<li>Run the query to rebuilding indexes. Use the <a href="https://raw.githubusercontent.com/yochananrachamim/AzureSQL/master/AzureSQLMaintenance.txt">SQL maintenance script</a> or the simplest one:
+<li>Run the query to rebuild indexes. Use the <a href="https://github.com/yochananrachamim/AzureSQL/tree/master">SQL maintenance script</a> or the simplest one:
     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">DECLARE</span><span class="w"> </span><span class="o">@</span><span class="n">TableName</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">DECLARE</span><span class="w"> </span><span class="n">TableCursor</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="k">FOR</span>
