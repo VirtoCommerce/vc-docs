@@ -2,3154 +2,3166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/getting-to-know-platform/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/skills-required-for-VC-developers/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Back-End-Architecture/01-tech-stack/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Back-End-Architecture/02-conceptual-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Back-End-Architecture/atomic-architecture/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/build-automation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/cold-start-and-data-migration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/getting-started/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/grab-migrator/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/install-and-update-platform-and-modules/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/more-targets/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/package-management/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/virto-cloud-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/CLI-tools/virto-cloud/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Configuration-Reference/appsettingsjson/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Extensibility/extending-application-user/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Extensibility/extending-dynamic-expression-tree/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Extensibility/key-extensibility-points/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Extensibility/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Extensibility/page-builder-extension/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Extensibility/product-completeness-evaluator/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Caching/01-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Caching/02-cache-configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Caching/03-setting-up-Redis/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Data-Import/01-main-concept/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Data-Import/02-building-custom-importer/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Data-Import/import-app/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Dynamic-Properties/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Event-Driven-Development/event-bus-configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Event-Driven-Development/event-bus/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Event-Driven-Development/using-domain-events/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Event-Driven-Development/webhooks/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/search-query-syntax-reference/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/indexing/blue-green-indexing/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/indexing/indexing-in-platform-manager/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/indexing/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/algolia/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/configuring-elastic-app-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/configuring-elasticsearch/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/elastic-app-search-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/elastic-search-8/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/elastic-search-9/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/lucene/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/search_relevance_tuning/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/semantic-search-es9/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/semantic-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/integration/using-analytics/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/search/faceted-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Indexed-Search/search/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Intent-Search/examples/</loc>
+         <lastmod>2025-12-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Intent-Search/installation-and-configuration/</loc>
+         <lastmod>2025-12-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Intent-Search/overview/</loc>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Logging/application-insights/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Logging/extended-logging/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Logging/how-to-update/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Logging/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Logging/seq-module/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/01-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/02-folder-structure/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/03-versioning-and-dependencies/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/04-loading-modules-into-app-process/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/05-best-practices/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/06-module-manifest-file/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Modularity/optional-dependency/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Notifications/configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Notifications/extending-notification-types/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Notifications/notification-templates/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Notifications/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Notifications/registering-new-notification-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/asset/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/calendar/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/checkbox/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/collection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/color/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/component-context/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/create-new-block/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/files/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/getting-started/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/header/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/images/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/markdown/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/number/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/object/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/paragraph/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/schemas/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/script-based-evaluation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/select/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/server-descriptors/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/settings/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/string/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/PageBuilder/text/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Payments/authorize-net/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Payments/cybersource/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Payments/datatrans/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Payments/new-payment-method-registration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Payments/simplified-integration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Payments/skyflow/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Persistence/Concurrency-handling/concurrency-handling/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Persistence/DB-Agnostic/configuring-vc-with-db-providers/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Persistence/DB-Agnostic/creating-custom-module/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Persistence/DB-Agnostic/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Persistence/DB-Agnostic/transforming-custom-module/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/SEO/add-seo-to-module/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/SEO/configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/SEO/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Scalability/scalability-options/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Scalability/scaling-configuration-on-azure-cloud/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/encryption-and-signing-credentials/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/security-in-depth/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authentication/api-key-authentication/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authentication/issuing-and-using-access-token/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authentication/oidc/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authentication/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authentication/virto-as-identity-provider/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authorization/global-permissions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authorization/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/authorization/scope-based-permissions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/extensions/adding-azure-as-sso-provider/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/extensions/adding-google-as-sso-provider/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/extensions/extending-authorization-policies/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Security/extensions/extending-usermanager-and-rolemanager/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Shipments/new-shipping-method-registration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Taxes/new-tax-provider-registration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Taxes/tax-providers-configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Fundamentals/Uploading-files/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/system-requirements/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Installation-Guide/linux/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Installation-Guide/macOS/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Installation-Guide/pbcs/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Installation-Guide/windows/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Post-Installation-Steps/02-configuring-email-notifications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Getting-Started/Post-Installation-Steps/04-importing-sample-data/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/curl/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/getting-started/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/graphiql/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/postman/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/troubleshooting/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/activateBackInStockSubscription/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Mutations/deactivateBackInStockSubscription/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Objects/BackInStockSubscriptionType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Back-in-stock/Queries/backInStockSubscriptions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-cart-address/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-coupon/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-payment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-or-update-cart-shipment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-wish-list-bulk-item/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addGiftItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/addWishlistItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-comment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-price/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-cart-item-quantity/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/change-comment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeWishlist/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-cart/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-payments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/clear-shipments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/cloneWishlist/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createWishlist/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveFromSavedForLater/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveToSavedForLater/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveWishlistItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart-item/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-cart/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-coupon/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/remove-shipment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlist/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/removeWishlistItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/renameWishlist/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectAllCartItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unselectCartItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-item-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-payment-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/update-cart-shipment-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateCartQuantity/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateWishListItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/CartConfigurationItemType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/CartWithListType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionInput/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationItemsResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationLineItemType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationQueryResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionInput/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputNewWishlistItemType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateCartQuantityItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistItemsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateWishlistLineItemType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/bulk-wishlist-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-address-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-connection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-edge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-shipment-item-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/coupon-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/currency-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-connection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dictionary-item-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/discount-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/error-parameter-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/gift-item-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/line-item-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-method-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/payment-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipment-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/shipping-method-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/tax-detail-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/validation-error-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-connection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-edge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-scope-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/wishlist-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/cart/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/carts/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/configurationItems/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/getSavedForLater/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/productConfiguration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/validate-coupon/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlist/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Cart/queries/wishlists/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/facets/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filter-syntax/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/filtering/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/full-text-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/fuzzy-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/examples/multi-select-faceting-search/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Asset/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/AvailabilityData/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/BrandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Breadcrumb/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/DescriptionType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/FulfillmentCenterType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ImageType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/InventoryInfo/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineItemType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/OutlineType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductSuggestionsQueryResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SlugInfoResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VariationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Rating/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FacetRangeType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/FilterFacet/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/RangeFacet/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/TermFacet/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Facets/facetTermType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/CatalogDiscountType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/PriceType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Price/TierPriceType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductAssociation/ProductAssociationEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductConnection/ProductEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/Property/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItem/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyDictItemEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/Property/PropertyEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/VideoConnection/VideoType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryDescriptionType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/category/CategoryType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/SlugInfo/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brand/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/brands/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/categories/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/category/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/child-categories/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-center/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/fulfillment-centers/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/product/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/productSuggestions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/products/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Catalog/queries/property/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkListType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Objects/MenuLinkType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Objects/PageType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menu/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Queries/menus/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Queries/page/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Content/Queries/pages/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/File/getting-started/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/File/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/File/Objects/DeleteFileCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/File/Objects/FileUploadScopeOptionsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/File/Queries/fileUploadOptions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyBalanceResult/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLog/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/objects/LoyaltyOperationLogObject/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyBalance/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Loyalty/queries/loyaltyPointsHistory/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/DynamicContentItemType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Marketing/objects/EvaluateDynamicContentResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Marketing/queries/evaluate-dynamic-content/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/News/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContent/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/News/objects/NewsArticleContentEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticle/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/News/queries/newsArticles/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/add-or-update-order-payment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/authorize-payment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-order-status/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/change-purchase-order-number/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/create-order-from-cart/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/initialize-payment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/process-order-payment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-item-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-payment-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/mutations/update-order-shipment-dynamic-properties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/LocalizedSettingResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/authorize-payment-result-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-connection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-edge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/customer-order-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/facet-range-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/facet-term-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/filter-facet/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/initialize-payment-result-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-key-value-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-address-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-bank-card-info-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/input-order-payment-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/key-value-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-address-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-discount-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-line-item-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-payment-method-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-item-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-package-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipment-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-shipping-method-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/order-tax-detail-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-in-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/payment-transaction-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/process-payment-request-result-type/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/range-facet/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/objects/term-facet/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/order/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderLineItemStatuses/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/orderStatuses/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/orders/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/organization-orders/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/paymentStatuses/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Order/queries/shipmentStatuses/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/PageDocumentType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Objects/SlugInfoResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocument/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/pageDocuments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Pages/Queries/slugInfo/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changeOrganizationContactRole/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/changePassword/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/confirmEmail/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createContact/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createOrganization/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/createUser/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteContact/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteMemberAddresses/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/deleteUsers/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/inviteUser/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/lockOrganizationContact/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/registerByInvitation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/removeMemberFromOrganization/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/requestRegistration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/resetPasswordByToken/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/sendVerifyEmail/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/unlockOrganizationContact/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateContact/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberAddresses/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateMemberDynamicProperties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateOrganization/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateRole/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Mutations/updateUser/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/AccountCreationResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/ContactType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/CustomIdentityResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorInfoType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityErrorType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/IdentityResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputApplicationUserLoginType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionScopeType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignPermissionType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputAssignRoleType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputChangePasswordType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateApplicationUserType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputCreateUserType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputMemberAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterAccountType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterByInvitationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterContactType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputRegisterOrganizationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputResetPasswordByTokenType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateApplicationUserType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputUpdateRoleInnerType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/MemberType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/OrganizationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterAccountType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterContactType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegisterOrganizationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RegistrationErrorType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RequestRegistrationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/RoleType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/UserType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/rating/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkEmailUniqueness/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkUsernameUniqueness/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contact/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/contacts/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organization/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/organizations/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/requestPasswordReset/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/role/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/user/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/validatePassword/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/vendor/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/addPurchaseRequestSource/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequest/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/createPurchaseRequestFromDocuments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/extractPurchaseRequestSourcesData/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/postProcessPurchaseRequestSources/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Mutations/updatePurchaseRequestByDocuments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestSourceType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Objects/PurchaseRequestType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequest/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/PurchaseRequest/Queries/purchaseRequests/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/addFcmToken/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/clearAllPushMessages/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/deleteFcmToken/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesRead/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markAllPushMessagesUnread/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageRead/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Mutations/markPushMessageUnread/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/FcmSettingsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputAddFcmTokenType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputDeleteFcmTokenType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageReadType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/InputMarkPushMessageUnreadType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Objects/PushMessageType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/FcmSettings/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Queries/pushMessages/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Push-messages/Subscriptions/pushMessageCreated/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/addQuoteAttachments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/approveQuoteRequest/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/cancel-quote-request/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-comment/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/change-quote-item-quantity/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/create-quote-from-cart/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/createQuote/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/declineQuoteRequest/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/deleteQuoteAttachments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/remove-quote-item/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/submit-quote-request/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/update-quote-address/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteAttachments/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/mutations/updateQuoteDynamicProperties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ApproveQuoteResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CancelQuoteCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteCommentCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/ChangeQuoteItemQuantityCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/CreateQuoteFromCartCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/InputQuoteAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteAttachmentType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteItemtype/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteShipmentMethodType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTaxDetailType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTierPriceType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteTotalsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/QuoteType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/RemoveQuoteItemCommandtype/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/SubmitQuoteCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteAddressCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/objects/UpdateQuoteDynamicPropertiesCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quote/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Quote/queries/quotes/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/pushHistoricalEvent/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/mutation/saveSearchQuery/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecentlyBrowsedResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/object/GetRecommendationsResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/object/SearchHistoryResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recentlyBrowsed/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/query/recommendations/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Recommend/query/searchHistory/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createCustomerReview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Mutations/createReview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/CustomerReviewEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/ReviewValidationErrorType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Objects/createReviewResult/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/canLeaveFeedback/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Reviews/Queries/customerReviews/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Shipping/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Shipping/objects/PickupLocationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Shipping/queries/pickupLocations/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Skyflow/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Skyflow/mutations/deleteSkyflowCard/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/DeleteSkyflowCardCommandType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/SkyflowCardResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Skyflow/objects/SkyflowCardType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Skyflow/queries/skyflowCards/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/GraphQLSettingsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/LanguageType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/ModuleSettingsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/PasswordOptionsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreSettingsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/Store/queries/store/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/mutations/ChangeOrganizationLogo/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/ChangeOrganizationLogoResultType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/FaviconType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/MenuLinkType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/WhiteLabelingSettingsType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/White-labeling/queries/whiteLabelingSettings/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xFrontend/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/CartPickupLocationConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/PickupLocationAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupAvailabilityType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocationConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/ProductPickupLocationEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupAddressType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationConnection/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationEdge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/objects/pickupLocationType/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/cartPickupLocations/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/pickupLocations/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/GraphQL-Storefront-API-Reference-xAPI/xPickup/queries/productPickupLocations/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Operations/maintenance-tasks-for-sql/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/localization/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/style-guide/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/ui-scroll-directive/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/Extensibility-Points/blade-toolbar/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/Extensibility-Points/blades-and-navigation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/Extensibility-Points/extending-grid-columns/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/Extensibility-Points/extending-main-menu/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/Extensibility-Points/metaform/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Platform-Manager/Extensibility-Points/widgets/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/authorization-using-jwt/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/azure-app-configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/configuring-multiple-stores-on-virto-cloud/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/configuring-multiple-stores/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/debugging/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/deploy-storefront-on-azure/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/docker-modules-development/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/enable-embedded-mode-for-vc-shell/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/extending-cart-query-with-custom-parameter/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/feature-flags/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/generating-c-sharp-client/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/generating-pdfs/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/health-checks/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/overriding-rounding-policy/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/sharing-bearer-tokens/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/swagger-api/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/update-using-patch/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/upgrading-to-net8/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/user-email-verification/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/How-tos/using-responseGroups-in-rest-api/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/build-platform-manager-ui/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/creating-custom-module/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/extending-database-model/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/extending-domain-models/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/edge-releases/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/installing-specific-version/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/outdated-strategy/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/pbcs/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/release-strategy-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/stable-releases/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/Updating-Virto-Commerce-Based-Project/tips/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/how-to-register-new-app/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/vc-shell-overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/navigation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/understanding-application-layout/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/API-Integration/api-client-integration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-app-bar-widgets-with-useappbarwidget/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-custom-pages-and-menu-items/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/adding-new-languages/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/building-navigation-menus-with-usemenuservice/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/creating-and-registering-widgets-with-usewidgets/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/creating-interactive-dashboards-with-usedashboard/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/customizing-application-ui-with-usesettings/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/customizing-notifications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/displaying-toast-notifications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/error-handling-in-vc-shell/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-custom-authentication-providers/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-form-validation-in-blades/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-navigational-breadcrumbs-with-usebreadcrumbs/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-role-based-access-control-with-usepermissions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/implementing-telemetry-with-useappinsights/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/integrating-shared-authentication-pages/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-async-operations-with-useasync/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-blade-toolbars-with-usetoolbar/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-dynamic-properties-with-usedynamicproperties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-loading-states-with-useloading/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-popups-with-usepopup-and-vcpopup/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-settings-menu-with-usesettingsmenu/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/managing-themes-with-usetheme/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/overview/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/preventing-data-loss-with-usebeforeunload/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/understanding-blade-anatomy/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/using-api-clients-with-useapiclient/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-blade-navigation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/Usage-Guides/working-with-push-notifications-using-usenotifications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useApiClient/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useAppBarWidget/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useAppInsights/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useAsync/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useBeforeUnload/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useBreadcrumbs/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useDashboard/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useDynamicProperties/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useExternalWidgets/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useLanguages/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useLoading/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useMenuService/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useModificationTracker/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useNotifications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/usePermissions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useSettings/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useSettingsMenu/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useTableSort/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useTheme/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useToolbar/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useUser/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/composables/useWidgets/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/plugins/i18n/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/plugins/modularity/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/plugins/permissions/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/plugins/signalr/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/plugins/validation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/blade-navigation/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/dashboard-widget-card/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/draggable-dashboard/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/generic-dropdown/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/notifications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/popup-handler/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/settings-menu-item/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/shared/components/sidebar/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-app/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-badge/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-blade/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-breadcrumbs/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-button/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-checkbox/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-container/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-dynamic-property/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-editor/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-field/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-file-upload/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-form/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-gallery/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-grid/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-hint/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-icon/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-image/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-input-currency/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-input-dropdown/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-input/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-label/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-link/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-login-form/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-multivalue/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-pagination/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-popup/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-progress/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-radio-button/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-rating/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-select/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-skeleton/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-slider/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-status-icon/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-status/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-switch/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-table/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-textarea/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-toast/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-video/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Essentials/ui-components/vc-widget/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Extensibility/modularity/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Getting-started/blade-generator/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/application-architecture-best-practices/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/building-deployment-advanced-topics/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/creating-custom-applications/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/custom-application-core-concepts/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/developing-custom-modules/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/integrating-framework-features/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/internationalization/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/Guides/routing-configuration/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/1.0/under-construction/under-construction/</loc>
-         <lastmod>2025-12-08</lastmod>
+         <lastmod>2025-12-09</lastmod>
     </url>
 </urlset>
