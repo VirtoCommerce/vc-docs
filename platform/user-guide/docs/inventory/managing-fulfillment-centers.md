@@ -15,7 +15,7 @@ To start managing fulfillment centers:
 1. On the product page, click the **Fulfillment centers** widget.
 1. In the next blade, click **Managing fulfillment centers** in the toolbar to view the list of fulfillment centers. 
 
-	![Managing fulfillment centers](media/fulfillment-centers-path.png)
+	![Managing fulfillment centers](media/fulfillment-centers-path.png){: style="display: block; margin: 0 auto;" }
 
 Now you can:
 
@@ -31,7 +31,7 @@ In the list of fulfillment centers:
 1. Fill in the following fields
 1. Fill in the fields:
 
-	![Editing fulfillment center](media/editing-fulfillment-center.png)
+	![Editing fulfillment center](media/editing-fulfillment-center.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

@@ -16,15 +16,9 @@ To create a new price list:
 1. Click **Pricing** in the main menu.
 1. In the next blade, click **Price lists**.
 1. In the next blade, click **Add** in the toolbar to open the **New Price List** blade.
-1. The following blade appears:
+1. In the next blade, fill in the following fields:
 
 	![New Price List screen](media/new-price-list-screen.png){: style="display: block; margin: 0 auto;" }
-
-	Add:
-
-	* Name.
-	* Currency.
-	* Short description (optional).
 
 	You will need the Assignments widget later when [configuring price list assignments](adding-new-assignment.md), if any.   
 

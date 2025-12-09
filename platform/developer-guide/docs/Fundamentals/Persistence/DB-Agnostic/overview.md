@@ -18,6 +18,6 @@ Our architecture follows key principles to ensure stability, flexibility, and ma
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../../Indexed-Search/overview">← Indexed search overview</a>
+    <a href="../../../Intent-Search/overview">← Intent Search overview</a>
     <a href="../configuring-vc-with-db-providers">Configuring VC with DB providers →</a>
 </div>

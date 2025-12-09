@@ -11,7 +11,7 @@ To add a new price list assignment:
 1. In the next blade, click **Add** in the toolbar to open the **New Price List Assignment** blade.
 1. Fill in the following fields.
 
-	![New price list assignment screen](media/price-list-assignments.png)
+	![New price list assignment screen](media/price-list-assignments.png){: style="display: block; margin: 0 auto;" }
 
 
 !!! note
@@ -23,4 +23,13 @@ To add a new price list assignment:
 !!! note
 	Contract managers and merchandisers can control price list assignment validity through contract dates. The start and end dates of a contract automatically define the active period of the associated price list assignment. This ensures that pricing is applied only during the contract’s validity and is deactivated when the contract expires
 
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../creating-new-price-list">← Managing price lists</a>
+    <a href="../export-functionality">Pricing data export →</a>
+</div>
 

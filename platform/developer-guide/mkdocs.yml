@@ -135,6 +135,10 @@ nav:
                       - Algolia: Fundamentals/Indexed-Search/integration/algolia.md
                       - Lucene: Fundamentals/Indexed-Search/integration/lucene.md
                 - Configuration: Fundamentals/Indexed-Search/configuration.md
+          - Intent Search:
+                - Overview: Fundamentals/Intent-Search/overview.md
+                - Installation and Configuration: Fundamentals/Intent-Search/installation-and-configuration.md
+                - Examples: Fundamentals/Intent-Search/examples.md
           - Persistence:
                 - DB Agnostic Architecture:
                       - Overview: Fundamentals/Persistence/DB-Agnostic/overview.md

@@ -21,6 +21,6 @@ With the Loyalty module, users can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../generic-export/overview">← Generic export overview</a>
+    <a href="../../intent-search/overview">← Intent Search module overview</a>
     <a href="../enable-and-configure-loyalty-programs">Enabling and configuring loyalty programs →</a>
 </div>

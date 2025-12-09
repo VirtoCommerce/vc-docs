@@ -2,7 +2,7 @@
 
 As the Pricing module allows for the addition of multiple prices of the same currency to a single product, sometimes the prices shown in the Frontend Application catalog aren't what you expect. For example, you add a new price to your product, but Frontend Application presents it incorrectly:
 
-![Incorrect price](media/incorrect-price.png)
+![Incorrect price](media/incorrect-price.png){: style="display: block; margin: 0 auto;" }
 
 Here are steps to help you determine why the correct price isn't showing up:
 

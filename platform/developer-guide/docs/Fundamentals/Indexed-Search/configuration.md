@@ -15,5 +15,5 @@ This node configures full text search for the Virto Commerce Search module.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../integration/elastic-search-8">← Search providers integration</a>
-    <a href="../../Persistence/DB-Agnostic/overview">Database agnostic architecture →</a>
+    <a href="../../Intent-Search/overview">Intent Search overview →</a>
 </div>

@@ -547,17 +547,17 @@ This node defines the settings for OpenID Connect authentication in Virto Commer
 <!--OIDC-start-->
 
 
-| Node                             | Default value                                       | Description                                                                                     |
+| Node                             | Default or sample value                                       | Description                                                                                     |
 |----------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| Enabled                          | false                                               | Enables or disables the OIDC authentication.                                                    |
+| Enabled                          | false <br> true                                               | Enables or disables the OIDC authentication.                                                    |
 | AuthenticationType               | "oidc"                                              | A unique identifier for the authentication method.                                              |
 | AuthenticationCaption            | "OpenID Connect"                                    | A user-friendly name for the authentication method.                                             |
-| AllowCreateNewUser               | true                                                | Allows creating new users upon successful authentication.                                       |
+| AllowCreateNewUser               | true <br> false                                                | Allows creating new users upon successful authentication.                                       |
 | DefaultUserType                  | "Manager"                                           | Specifies the user type of newly created users.                                                |
 | DefaultUserRoles                 | []                                                  | List of roles assigned to newly created users.                                                 |
 | UserNameClaimType                | "name"                                              | Claim type used to retrieve the username.                                                      |
 | EmailClaimType                   | "email"                                             | Claim type used to retrieve the email address.                                                 |
-| HasLoginForm                     | true                                                | Displays a dedicated login form for this authentication method.                                |
+| HasLoginForm                     | true <br> false                                                | Displays a dedicated login form for this authentication method.                                |
 | Priority                         | 1                                                   | Specifies the sorting order of the authentication method.                                      |
 | LogoUrl                          | null                                                | URL of the logo for the OpenID Connect authentication provider.                                |
 | Authority                        | "https://localhost:5001"                            | Base URL of the OIDC provider (identity server).                                               |
@@ -566,7 +566,7 @@ This node defines the settings for OpenID Connect authentication in Virto Commer
 | Scope                            | ["openid", "profile", "email"]                      | List of scopes requested from the OIDC provider.                                               |
 | ResponseMode                     | "form_post"                                         | Determines how the authorization response is returned.                                         |
 | ResponseType                     | "id_token"                                          | Specifies the type of response expected from the OIDC provider.                                |
-| GetClaimsFromUserInfoEndpoint    | false                                               | Enables retrieval of additional claims from the user info endpoint.                            |
+| GetClaimsFromUserInfoEndpoint    | false <br> true                                             | Enables retrieval of additional claims from the user info endpoint.                            |
 | CallbackPath                     | "/signin-oidc"                                      | Path for redirection after successful authentication.                                          |
 | SignedOutCallbackPath            | "/signout-callback-oidc"                            | Path for redirection after successful logout.                                                  |
 
@@ -865,7 +865,7 @@ This configuration node defines settings for the CRUD operations within the syst
 
 This configuration node configures lifetimes for security tokens that are issued by the Platform like password reset.
 
-| Node                         | Default value                    | Description                                         |
+| Node                         | Default or sample value                    | Description                                         |
 | ---------------------------- | ---------------------------------|---------------------------------------------------- |
 | DataProtection.TokenLifespan | "1.00:00:00" - Defaults to 1 day | The amount of time a generated token remains valid. |
 
@@ -881,7 +881,7 @@ This configuration node configures lifetimes for security tokens that are issued
 
 The node specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage its data. 
 
-| Node               | Supported values                                  | Description                                                                                                            |
+| Node               | Default or sample values                                  | Description                                                                                                            |
 | ------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | DatabaseProvider   | SqlServer (default)<br>MySql<br>PostgreSql       | Specifies the type of database management system (DBMS) that the Virto Commerce Platform will use to store and manage data.    |
 
@@ -1364,7 +1364,7 @@ This node configures the CyberSource payment gateway integration, enabling secur
 
 <!--cybersource-start-->  
 
-| Node               | Sample value                           | Description                                 |  
+| Node               | Default or sample value                | Description                                 |  
 |--------------------|----------------------------------------|---------------------------------------------|  
 | MerchantId         | "demo_1729579220"                      | Your CyberSource merchant ID.               |  
 | MerchantKeyId      | "2eb27f6a-0000-0000-8f24-455a4d406e8a" | Your CyberSource key ID.                    |  
@@ -1441,7 +1441,7 @@ This node is used for Used for Platform settings overriding.
 
 This node configures the push notification settings for the Virto Commerce Push Messages module using Firebase Cloud Messaging (FCM).
 
-| Node                        | Sample value                                                      | Description                                                                 |
+| Node                        | Default or sample value                                           | Description                                                                 |
 |-----------------------------|------------------------------------------------------------------ |-----------------------------------------------------------------------------|
 | UseFirebaseCloudMessaging   | true<br> false                                                    | This **required** setting enables/disables Firebase Cloud Messaging.        |
 | FcmSenderOptions            |                                                                   | Configuration settings for the FCM sender account.                          |
@@ -2007,7 +2007,7 @@ This node configures SEO entry resolution for the Virto Commerce SEO module.
 
 <!--seo-start-->
 
-| Node                                     | Default value  | Description                                                                                                         |
+| Node                                     | Default or sample value  | Description                                                                                                         |
 | ---------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------- |
 | SeoInfoResolver:ObjectTypePriority | "Pages", "ContentFile", "Catalog", "Category", "CatalogProduct" | This setting defines the **priority order** for resolving SEO entries when multiple types match the same permalink. |
 
@@ -2074,7 +2074,7 @@ This setting is used to configure tax providers.
 <!--tax-start-->
 
 
-| Node                    | Default value             | Description                                                                                           |
+| Node                    | Default or sample value   | Description                                                                                           |
 |-------------------------|---------------------------|-------------------------------------------------------------------------------------------------------|
 | FixedRateTaxProvider  | true<br>false         | Determines whether the **FixedRateTaxProvider** is enabled or disabled. When set to **false**, the **FixedRateTaxProvider** is not active, and tax calculations will not be performed using this provider. When set to **true**, the **FixedRateTaxProvider** will be enabled, allowing the Platform to use fixed-rate tax calculations. |
 | Avalara.AccountNumber  | required           | The account number provided by Avalara during registration. This is required for authentication. |
@@ -2101,6 +2101,49 @@ This setting is used to configure tax providers.
     ```
 
 <!--tax-end-->
+
+
+
+### Weaviate
+
+The Intent Search module uses Weaviate as its vector database for semantic search, intent classification, and product categorization. This configuration section defines how the module connects to Weaviate and manages authentication, performance, retries, and fault-tolerance when communicating with the Weaviate cluster.
+
+| Node                               | Default value | Description                                                    |
+| ---------------------------------- | ------------- | -------------------------------------------------------------- |
+| Url                                | –             | The endpoint of your Weaviate cluster.                         |
+| ApiKey                             | –             | Authentication key for Weaviate.                               |
+| HuggingFaceToken                   | –             | Token used to authenticate against Hugging Face APIs.          |
+| TimeoutSeconds                     | 30            | Maximum allowed time for Weaviate requests.                    |
+| MaxRetries                         | 3             | Number of retry attempts for transient failures.               |
+| MaxConnectionsPerServer            | 10            | Connection limit for outbound requests to improve concurrency. |
+| EnableCircuitBreaker               | true <br> false | Enables resilience to repeated failures.                       |
+| CircuitBreakerFailureThreshold     | 5             | Number of failed requests before the circuit opens.            |
+| CircuitBreakerBreakDurationSeconds | 30            | Duration the circuit remains open before retrying.             |
+
+
+
+<!--weaviate-start-->
+
+```json title="appsettings.json"
+{
+  "Weaviate": {
+    "Url": "http://localhost:8080",
+    "ApiKey": "your-weaviate-api-key",
+    "HuggingFaceToken": "your-huggingface-token",
+    "TimeoutSeconds": 30,
+    "MaxRetries": 3,
+    "MaxConnectionsPerServer": 10,
+    "EnableCircuitBreaker": true,
+    "CircuitBreakerFailureThreshold": 5,
+    "CircuitBreakerBreakDurationSeconds": 30
+  }
+}
+```
+
+<!--weaviate-end-->
+
+
+
 
 
 ## Hierarchic keys and separators

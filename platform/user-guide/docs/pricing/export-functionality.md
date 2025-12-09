@@ -9,7 +9,7 @@ To start exporting your pricing data:
 1. Check the relevant data.
 1. Click **Export**.
 
-	![Exporting pricing data](media/pricing-data-export1.png){: width="750"}
+	![Exporting pricing data](media/pricing-data-export1.png){: style="display: block; margin: 0 auto;" width="750"}
 
 1. Fill in the following fields:
 

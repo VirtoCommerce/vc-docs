@@ -18,7 +18,7 @@ To configure general settings:
     * Enable/ disable logging of pricing changes.
     * Enable/ disable the event-based indexing.
 
-	![General settings](media/general-settings.png)
+	![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -34,7 +34,7 @@ To configure search settings:
 
 1. Select **Search** to enable or disable price indexing.
 
-	![Search settings](media/search-settings.png)
+	![Search settings](media/search-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

@@ -231,6 +231,8 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
+          - Intent Search: 
+                - Overview: intent-search/overview.md
           - Loyalty:
                 - Overview: loyalty/overview.md
                 - Enabling and Configuring Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md

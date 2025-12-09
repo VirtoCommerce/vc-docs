@@ -13,7 +13,7 @@ To configure general settings:
 1. Type **Inventory** to find the settings related to the module.
 1. Select **General** to configure the page size for export or import and enable/ disable logging of inventory changes:
 
-	![General settings](media/general-settings.png)
+	![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -27,7 +27,7 @@ To configure search settings:
 1. Type **Inventory** to find the settings related to the module.
 1. Select **Search** to enable or disable event-based indexing.
 
-	![Search settings](media/search-settings.png)
+	![Search settings](media/search-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
