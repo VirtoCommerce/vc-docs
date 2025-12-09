@@ -45,7 +45,7 @@ As a result, the shopper sees more accurate and highly relevant products on the 
 * **Product categorization**: Match product titles to taxonomies with confidence scoring.
 
 
-![Read more](media/readmore.png){: width="20"} [Intent Search Installation](../../../developer-guide/Fundamentals/Intent-Search/installation-and-configuration)
+![Read more](media/readmore.png){: width="20"} [Intent Search Installation](/platform/developer-guide/Fundamentals/Intent-Search/installation-and-configuration)
 
 <br>
 <br>
