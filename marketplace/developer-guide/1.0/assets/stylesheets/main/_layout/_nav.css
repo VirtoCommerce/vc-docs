@@ -75,6 +75,7 @@
     .md-nav--primary > .md-nav__list {
         position: relative;
         overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .md-nav__header[for^=__nav_] {
