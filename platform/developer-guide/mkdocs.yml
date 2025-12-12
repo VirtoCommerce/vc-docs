@@ -236,6 +236,7 @@ nav:
                       - Adding Azure AD as SSO Provider:   Fundamentals/Security/extensions/adding-azure-as-sso-provider.md
                       - Adding Google as SSO Provider: Fundamentals/Security/extensions/adding-google-as-sso-provider.md
                 - Security in Depth: Fundamentals/Security/security-in-depth.md
+                - Passwords Management: Fundamentals/Security/password-management.md
                 - Configuration: Fundamentals/Security/configuration.md
           - Logging:
                 - Overview: Fundamentals/Logging/overview.md

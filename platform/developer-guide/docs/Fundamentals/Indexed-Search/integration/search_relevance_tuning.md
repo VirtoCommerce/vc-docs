@@ -1,4 +1,4 @@
-# Improve search relevance
+# Tune Search Relevance
 
 With Elastic App Search, you can make relevance and tune adjustments, or promote/demote results based on your findings in a few clicks, right from the management interface using:
 
@@ -69,7 +69,7 @@ To manage curations using Kibana:
 	![Curation applied](media/curation-applied.png)
 
 !!! note
-	Currently, Elastic App Search offers an upgrade to the ***Platinum** subscription to harness the power of machine learning. By analyzing your engine’s analytics, App Search is able to suggest new or updated curations. This way, you can effortlessly help your users find exactly what they are looking for.
+	Currently, Elastic App Search offers an upgrade to the **Platinum** subscription to harness the power of machine learning. By analyzing your engine’s analytics, App Search is able to suggest new or updated curations. This way, you can effortlessly help your users find exactly what they are looking for.
 
 For even more advanced results, refer to the **Relevance Tuning** section.
 

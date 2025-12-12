@@ -46,5 +46,5 @@ Virto Platform uses JWT token authentication and OAuth2 Password, Client Credent
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Security overview </a>
-    <a href="../configuration">Configuration →</a>
+    <a href="../passwords-management">Passwords management →</a>
 </div>

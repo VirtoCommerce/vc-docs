@@ -12,6 +12,6 @@ This section explains the basic configuration for the security logic via the [ap
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../security-in-depth">← Security in Depth </a>
+    <a href="../passwords-management">← Passwords management </a>
     <a href="../../logging/overview">Logging overview →</a>
 </div>

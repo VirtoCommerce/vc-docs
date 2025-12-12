@@ -218,6 +218,9 @@ nav:
                 - Overview: customer-export-import/overview.md
           - Dynamic Associations:
                 - Overview: dynamic-associations/overview.md
+          - Environments Comparison: 
+                - Overview: environments-comparison/overview.md
+                - Comparing Environments: environments-comparison/compare-environments.md
           - Event Bus:
                 - Overview: event-bus/overview.md
           - xFrontend:
