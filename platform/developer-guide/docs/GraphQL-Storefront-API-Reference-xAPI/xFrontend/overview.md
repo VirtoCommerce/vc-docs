@@ -1,6 +1,6 @@
 # xFrontend
 
-The **xFrontend** module extends the Virto Commerce GraphQL schema and aggregates several essential backend calls into a single optimized `rageContext` request. By providing this consolidated query, the xFrontend module significantly reduces the number of API calls required during store bootstrap, improves First Contentful Paint (FCP), and simplifies frontend integration. Without this module, storefronts must continue using four separate requests to gather the same data.
+The **xFrontend** module extends the Virto Commerce GraphQL schema and aggregates several essential backend calls into a single optimized `pageContext` request. By providing this consolidated query, the xFrontend module significantly reduces the number of API calls required during store bootstrap, improves First Contentful Paint (FCP), and simplifies frontend integration. Without this module, storefronts must continue using four separate requests to gather the same data.
 
 
 ## Key features
