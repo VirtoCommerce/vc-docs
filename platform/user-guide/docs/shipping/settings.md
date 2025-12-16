@@ -9,11 +9,11 @@ To configure the **Shipping** module settings:
 1. In the next blade, click on the **Settings** widget.
 1. In the next blade, configure the following settings:
 
-    ![Settings](media/settings.png)
+    ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 The modifications become available in the Frontend Application:
 
-![Frontend Application shipping methods](media/storefront-shipping-methods.png)
+![Frontend Application shipping methods](media/storefront-shipping-methods.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

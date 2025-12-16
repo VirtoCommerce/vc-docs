@@ -67,9 +67,9 @@ Download and execute the [vc-net8-update.ps1 Power Shell script](https://github.
 ./vc-net8-update.ps1
 ```
 
-![step1 run ps1 script](media/updatenet8-step1-run-ps1-script.png)
+![step1 run ps1 script](media/updatenet8-step1-run-ps1-script.png){: style="display: block; margin: 0 auto;" }
 
-![step2 run ps1 script result](media/updatenet8-step2-ps1-script-result.png)
+![step2 run ps1 script result](media/updatenet8-step2-ps1-script-result.png){: style="display: block; margin: 0 auto;" }
 
 This script automates several tasks, including:
 
@@ -78,7 +78,7 @@ This script automates several tasks, including:
 1. Updating other third-party dependencies to save version that used by Virto Commerce Platform.
 1. Updating the **module.manifest** file to align with the changes in .NET 8.
 
-![step3 review modified files](media/updatenet8-step3-modified-files.png)
+![step3 review modified files](media/updatenet8-step3-modified-files.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
     You can perform the above updates manually.

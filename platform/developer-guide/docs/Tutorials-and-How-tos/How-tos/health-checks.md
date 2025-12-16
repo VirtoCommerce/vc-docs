@@ -51,7 +51,7 @@ To add health checks to your modules:
 
 Now you can check your Platform by getting a response from `/health` endpoint:
 
-![Health check](media/health-checks.png)
+![Health check](media/health-checks.png){: style="display: block; margin: 0 auto;" }
 
 ## Docker integration
 

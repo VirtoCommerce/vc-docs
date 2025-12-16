@@ -75,7 +75,7 @@ To integrate a Frontend Application (for example, **B2B-loyalty**) into your Vir
 
 The **B2B-loyalty** Frontend Application has been successfully added to your Virto Commerce deployment configuration:
 
-![New frontend app added](media/multiple-stores.png)
+![New frontend app added](media/multiple-stores.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

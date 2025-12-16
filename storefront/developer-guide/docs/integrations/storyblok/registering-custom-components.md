@@ -8,7 +8,7 @@ To register a custom component in the Storyblok CMS:
 1. Register the component as a global component in your application. This will make the custom component available for use in the Storyblok CMS.
 1. Create component model in Storyblok for the custom component. The component model should define the properties of the custom component and how it should be rendered in the Storyblok CMS.
 
-## Example. Slider Component Registration
+## Example. Slider component registration
 
 In this example, we will show how to register a `Slider` component in the Storyblok CMS:
 
@@ -52,7 +52,7 @@ In this example, we will show how to register a `Slider` component in the Storyb
     }
     ```
 
-### Create Component Model in Storyblok
+### Create component model in Storyblok
 
 To create component model in Storyblok:
 

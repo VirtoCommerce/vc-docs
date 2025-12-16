@@ -1,4 +1,4 @@
-# Getting Started
+# Get Started
 
 This guide helps you set up the Page Builder for Virto Commerce Platform and Frontend, ensuring content creation works smoothly.
 

@@ -23,7 +23,7 @@ To address this, a service is needed to which all application instances connect,
 
 When a Platform instance evicts data from its cache, a message for this event is sent to the backplane, which then distributes it to all connected clients via their respective servers. This process ensures cache consistency across multiple instances, as illustrated in the following diagram:
 
-![Redis cache](media/redis-cache.png) 
+![Redis cache](media/redis-cache.png){: style="display: block; margin: 0 auto;" }
 
 Use the Redis backplane for memory cache in **appsettings.json** for setting up as follows: 
 

@@ -7,7 +7,7 @@ This section describes the techniques related to debugging that enhance developm
 * Debugging VC components with using [Source Link](https://github.com/dotnet/sourcelink/blob/main/README.md) technology.
 * Loading a PDB directly from public symbol servers.
 
-The example below demonstrates debugging a third party NuGet package without having acceess to the source code of the library and the local project that references it as a package.
+The example below demonstrates debugging a third party NuGet package without having access to the source code of the library and the local project that references it as a package.
 
 ## Debug with Source Link
 
@@ -27,14 +27,14 @@ To start using Source Link for debugging:
     1. Check **NuGet.org Symbol Server** to allow VS load symbols from public NuGet servers.
     1. Select the option **Load only specified modules** to speed up the launch of a debug session.
 
-    ![VS configuration](media/vs-configuration.png)
+    ![VS configuration](media/vs-configuration.png){: style="display: block; margin: 0 auto;" }
 
 1. Configure Visual Studio debugging general options:
 
     1. In Visual Studio, go to **Tools** > **Options** > **Debugging** > **General**.
     1. Select the options according to the screenshot:
 
-        ![General options configuration](media/options-configuration.png)
+        ![General options configuration](media/options-configuration.png){: style="display: block; margin: 0 auto;" }
 
         1. Uncheck **Enable Just My Code** to allow stepping into third-party code.
         1. Uncheck **Enable .NET Framework source stepping**  not to prevent debugging .NET classes.
@@ -45,11 +45,11 @@ To start using Source Link for debugging:
 
     1. Set the breakpoint in our code in the line where we call '_searchService.SearchCustomerOrdersAsync'.
 
-        ![Breakpoint](media/breakpoint.png)
+        ![Breakpoint](media/breakpoint.png){: style="display: block; margin: 0 auto;" }
     
     1. When the debugger hits that line, press F11 or use the Step Into functionality to download the VirtoCommerce.OrderModule.Data source code via Source Link.
 
-        ![Breakpoint](media/download.png)
+        ![Breakpoint](media/download.png){: style="display: block; margin: 0 auto;" }
 
     1. Accept downloading from Github to view the source code for that specific version of your package.
 
@@ -60,7 +60,7 @@ If the third-party component doesn't support Source Link and you haven't loaded 
 
 1. Go to **Debug** > **Window** > **Modules** and load symbols of **Newtonsoft.Json** library manually.
 
-    ![Manual loading](media/manual-loading.png)
+    ![Manual loading](media/manual-loading.png){: style="display: block; margin: 0 auto;" }
 
 1. Step into this library and continue debugging process.
 

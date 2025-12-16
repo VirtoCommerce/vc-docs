@@ -12,17 +12,17 @@ In this guide, we describe the results of Prerender.io  integration with the vc-
 
 The integration involved setting up a reverse proxy using Nginx in front of the VC Frontend Application. Additionally, the vc-theme-b2b-vue and Prerender's cloud service were installed. The Nginx reverse proxy was configured based on the [example](https://docs.prerender.io/docs/nginx-1).
 
-![diagram](media/prerender-io.png)
+![diagram](media/prerender-io.png){: style="display: block; margin: 0 auto;" }
 
 A notable configuration adjustment was made to ensure proper image loading on Server-Side Rendering (SSR) pages, requiring the activation of the image loading option in the [Prerender.io dashboard](http://Prerender.io).
 
-![dashboard](media/dashboard.png)
+![dashboard](media/dashboard.png){: style="display: block; margin: 0 auto;" }
 
 ## Performance evaluation
 
 To measure the impact of Prerender.io on performance, a PageSpeed analysis was conducted for a category listing page. The comparison involved assessing the performance with and without SSR page rendering through Prerender.io.
 
-![comparison](media/with-without-ssr-page.png)
+![comparison](media/with-without-ssr-page.png){: style="display: block; margin: 0 auto;" }
 
 ## Conclusion
 

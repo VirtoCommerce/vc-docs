@@ -445,11 +445,11 @@ After creating your module, install it from your source and debug it as follows:
 
     * If you run the Platform from source (built and launched via **VirtoCommerce.Platform.Web.exe**), attach to the **VirtoCommerce.Platform.Web.exe** process.
 
-        ![debug](media/03-debugging.png)
+        ![debug](media/03-debugging.png){: style="display: block; margin: 0 auto;" }
 
     * If you run the Platform using prebuilt binaries (as described in this guide), the executable process will be **dotnet.exe**. In that case, attach to the appropriate **dotnet.exe** process instead:
 
-        ![dotnet](media/attach-dotnet.png)
+        ![dotnet](media/attach-dotnet.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Extend VC manager with new UI 
@@ -567,7 +567,7 @@ To build your custom module for distribution, use our Virto Commerce CLI tool:
 
 The result will be as follows:
 
-![Build tools](media/04-build-tools.png)
+![Build tools](media/04-build-tools.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
     The new module package will be created in the **Artifacts** directory. 

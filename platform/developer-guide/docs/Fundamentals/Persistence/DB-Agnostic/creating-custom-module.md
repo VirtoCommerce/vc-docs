@@ -25,7 +25,7 @@ The template key features  are:
     * CustomerReviews.Data.PostgreSql
     * CustomerReviews.Data.SqlServer
 
-    ![Four projects](media/four-data-projects.png)
+    ![Four projects](media/four-data-projects.png){: style="display: block; margin: 0 auto;" }
 
 * The Data.[Provider] projects have a specific structure and configuration for each database system: MySql, PostgreSql, and SqlServer:
     * Migrations folder contains the migration files for the database system.
@@ -33,21 +33,22 @@ The template key features  are:
     * [Provider]DbContextFactory class contains implementation of IDesignTimeDbContextFactory for a specific database provider. 
     * Readme.md file contains the instructions for configuring and migration creation the specific database provider.
     
-    ![Data provider project](media/data-provider-project.png)
+    ![Data provider project](media/data-provider-project.png){: style="display: block; margin: 0 auto;" }
 
 * The Data project contains the common data models and interfaces that are shared by all database systems.
 * The Module.Initialize method registers the DbContext service using the AddDbContext extension method from Virto Commerce Platform Core library.
 
-    ![AddDBContext](media/add_db_context.png)
+    ![AddDBContext](media/add_db_context.png){: style="display: block; margin: 0 auto;" }
 
 * The OnModelCreating extension method customizes the entity type configuration for different database systems using conditional compilation symbols. You can specify the properties, keys, indexes, relationships, etc. of your entities using a fluent API.
 
-    ![Customize Code-First Model Migrations](media/customize-model.png)
+    ![Customize Code-First Model Migrations](media/customize-model.png){: style="display: block; margin: 0 auto;" }
 
     To use this feature, you need to implement the `IEntityTypeConfiguration<TEntity>` interface in your entity configuration classes. It defines a Configure method that takes an `EntityTypeBuilder<TEntity>` parameter and configures various aspects of the entity type.
 
     Below is an example implementing this interface for `CurrencyEntity`:
 
+        ```csharp
         public class CurrencyEntityConfiguration : IEntityTypeConfiguration<CurrencyEntity>
         {
             public void Configure(EntityTypeBuilder<CurrencyEntity> builder)
@@ -55,7 +56,7 @@ The template key features  are:
                 builder.Property(x => x.ExchangeRate).HasColumnType("decimal").HasPrecision(18, 4);
             }
         }
-
+        ```
 
 
 <br>

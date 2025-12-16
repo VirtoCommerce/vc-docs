@@ -3,7 +3,7 @@
 In some deployment scenarios, when running multiple platform instances, one of them usually play **authentication server** role and has access to user account stores.
 Other platform instances play the role of **resource server**, which only needs to restrict access to those users who have valid security tokens provided by an **authentication server**.
 
-![Sharing bearer token](media/share-bearer-token.png)
+![Sharing bearer token](media/share-bearer-token.png){: style="display: block; margin: 0 auto;" }
 
 Once the token is issued and signed by the authentication server, no database communication is required to verify the token.
 Any service accepting the token will simply validate the digital signature of the token.

@@ -87,7 +87,7 @@ To debug backend:
 1. Open the module solution in Visual Studio.
 1. Attach the debugger to the `VirtoCommerce.Platform.Web.exe` process.
 
-![image](media/debug-backend.png)
+![image](media/debug-backend.png){: style="display: block; margin: 0 auto;" }
 
 ## Debug frontend
 
@@ -97,7 +97,7 @@ Frontend debugging can be done in Chrome Developer Tools:
 1. Navigate to the **Sources** tab.
 1. In the file navigator, go to **{module-name}/./Script/** to view the source files.
 
-![image](media/debug-frontend.png)
+![image](media/debug-frontend.png){: style="display: block; margin: 0 auto;" }
 
 ## Test
 

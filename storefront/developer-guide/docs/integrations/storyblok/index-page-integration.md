@@ -8,7 +8,7 @@ To use Storyblok CMS with the page:
 2. [Add Storyblok to the page component in **Virto Commerce vue-b2b-theme**](index-page-integration.md#add-storyblok-to-the-page-component). This allows you to fetch content from Storyblok and display it in the index page.
 3. [Create content](index-page-integration.md#create-content). Add components to your page model and fill them with content.
 
-## Create Page Model in Storyblok
+## Create page model in Storyblok
 
 To create Page Model in Storyblok:
 
@@ -23,7 +23,7 @@ To create Page Model in Storyblok:
 
     ![Create New Story](media/create-new-story.png)
 
-## Add Storyblok to the Page Component
+## Add Storyblok to Page Component
 
 To add **Storyblok** to the page component, add `StoryblokComponent` into your template. As long as we want replace the content of the page with the content from Storyblok, we use `v-if` directive to show `StoryblokComponent` only when `story` is loaded.
 
@@ -74,7 +74,7 @@ To add **Storyblok** to the page component, add `StoryblokComponent` into your t
 
 Now you can preview the index page in the Storyblok and start creating content for it.
 
-## Create Content
+## Create content
 
 After adding Storyblok to the page component, start creating content in the Storyblok CMS. Add components to your page model and fill them with content.
 

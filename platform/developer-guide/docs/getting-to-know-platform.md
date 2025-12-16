@@ -1,4 +1,4 @@
-# Getting to Know Virto Commerce Platform
+# Get to Know Virto Commerce Platform
 
 The **Virto Commerce Platform** is the foundational core of the entire Virto ecosystem serving as:
 
@@ -19,7 +19,7 @@ You can integrate it into an existing architecture as a central system, or use i
     * Modules can be replaced or extended without affecting the core Platform.
     * The Platform can be used as a full e-commerce core or embedded as a subsystem in larger solutions. For example, it can be used solely as a pricing engine or as a marketing promotion service.
 
-* Headless architecture:
+* [Headless architecture](Back-End-Architecture/02-conceptual-overview.md):
 
     * Business logic is exposed entirely via APIs.
     * [REST](https://virtostart-demo-admin.govirto.com/docs/index.html) is commonly used for integrations and admin tools.
@@ -66,7 +66,7 @@ These services are shared across all modules:
 * [Authentication](Fundamentals/Security/authentication/overview.md) and [authorization](Fundamentals/Security/authorization/overview.md).
 * Background jobs (via [Hangfire](Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md#configure-hangfire-server-to-process-background-jobs-in-another-process)).
 * [Centralized logging](Fundamentals/Logging/overview.md) and auditing.
-* Configuration management.
+* [Configuration management](Configuration-Reference/appsettingsjson.md).
 * [Localization and internationalization](Platform-Manager/localization.md).
 * Host application for administrative UI.
 
@@ -75,7 +75,7 @@ All business-specific capabilities (like catalog, pricing, marketing, or order m
 
 ## Modules
 
-[Modules](/platform/user-guide/latest/index) are the primary unit of functional delivery into the Platform. Each module can include:
+[Modules](../../user-guide/) are the primary unit of functional delivery into the Platform. Each module can include:
 
 * A data layer, which defines or extends the domain model and database schema.
 * A business logic layer, encapsulating domain services and rules.

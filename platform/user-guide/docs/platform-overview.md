@@ -1,6 +1,6 @@
 # Overview
 
-Virto Commerce is a modular Platform. All functionality is delivered through separate modules, and the base installation is intentionally minimal—so you only add what your solution requires. This approach makes the Platform easier to customize, upgrade, and maintain over time. Learn more about the features of Virto Commerce modules:
+Virto Commerce is a modular Platform. All functionality is delivered through separate modules, and the base installation is intentionally minimal - so you only add what your solution requires. This approach makes the Platform easier to customize, upgrade, and maintain over time. Learn more about the features of Virto Commerce modules:
 
 
 |Item|Description|

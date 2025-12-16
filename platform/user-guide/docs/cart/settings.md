@@ -11,11 +11,11 @@ To open the Cart module settings:
 1. In the search field of the next blade, type **Cart** to find the settings related to the module.
 1. Click **General** to configure the following settings:
 
-    ![General catalog settings](media/general-settings.png)
+    ![General catalog settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Abandoned cart reminder** to configure the following settings:
 
-    ![Abandoned cart reminder](media/abandoned-carts-notifications.png)
+    ![Abandoned cart reminder](media/abandoned-carts-notifications.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         The notification text is configured via the [Notifications module](../notifications/notification-templates.md).

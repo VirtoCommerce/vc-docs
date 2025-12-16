@@ -15,7 +15,7 @@ In order to eliminate the issues above, we developed a new Angular.js component
 
 Here is how we use Metaform out of the box in our Catalog module:
 
-![Metaform sample](media/03-metaform-sample.png)
+![Metaform sample](media/03-metaform-sample.png){: style="display: block; margin: 0 auto;" }
 
 ## Using metaform
 
@@ -34,11 +34,11 @@ Metaform is implemented as `vaMetaform` Angular.js directive and has the follow
 </form>
 ```
 
-|Parameter        |Description                        |
-|-----------------|-----------------------------------|
-|registered-inputs|Reference to metadata (meta-fields).|
-|blade            |Reference to parent blade.         |
-|column-count     |Number of columns to arrange the rendered elements (optional).|
+| Parameter         | Description                                                    |
+|-------------------|----------------------------------------------------------------|
+| registered-inputs | Reference to metadata (meta-fields).                           |
+| blade             | Reference to parent blade.                                     |
+| column-count      | Number of columns to arrange the rendered elements (optional). |
 
 ## Metaform sample code
 
@@ -80,15 +80,14 @@ Meta-field registration can also be done using the Platform-level factory. This 
 1. Reference `platformWebApp.metaFormsService` (as `metaFormsService`) in your module's **run** method.
 1. Create meta-field definitions and register them using the `metaFormsService.registerMetaFields` method.
 
-```
-metaFormsService.registerMetaFields("accountDetails",
-                [
-                    {
-                        name: "isAdministrator",
-                        title: "Is admin",
-                        valueType: "Boolean"
-                    }
-                ]);
+```ts
+metaFormsService.registerMetaFields("accountDetails", [
+    {
+        name: "isAdministrator",
+        title: "Is admin",
+        valueType: "Boolean",
+    },
+]);
 ```
 
 ## Meta-field data structure

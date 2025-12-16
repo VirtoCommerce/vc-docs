@@ -16,11 +16,11 @@ Managing promotions includes:
 1. In the next blade, click **Promotions**.
 1. In the **Promotions** blade, click **Add** in the toolbar.
 
-	![path](media/add-promotion-path.png){: width="550"}
+	![path](media/add-promotion-path.png){: style="display: block; margin: 0 auto;" width="550"}
 
 1. Fill in the following fields in the **New promotion** blade.
 
-	![fields](media/create-promotion.png)
+	![fields](media/create-promotion.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes. 
 
@@ -40,13 +40,13 @@ To create a coupon:
 1. In the new blade, click on the **Coupons** widget. 
 1. In the **Coupons** blade, click **Add** to add a coupon manually or **Import** to import a coupon via CSV.
 
-	![path](media/add-coupon-path.png)
+	![path](media/add-coupon-path.png){: style="display: block; margin: 0 auto;" }
 
 === "Add coupon"
 
 	1. Fill in the following fields:
 
-		![fields](media/new-coupon-fields.png)
+		![fields](media/new-coupon-fields.png){: style="display: block; margin: 0 auto;" }
 
 	1. Click **Save** in the toolbar to save the changes.
 
@@ -54,7 +54,7 @@ To create a coupon:
 
 	1. Fill in the following fields:
 
-		![fields](media/import-coupons.png)
+		![fields](media/import-coupons.png){: style="display: block; margin: 0 auto;" }
 
 	1. Upload CSV file.
 	1. Click **Start import**.
@@ -90,5 +90,3 @@ The promotion has been removed from the promotions list.
     <a href="../promotions-overview">← Promotions overview</a>
     <a href="../combining-active-promotions">Promotion combination policies →</a>
 </div>
-
-

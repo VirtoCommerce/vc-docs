@@ -94,7 +94,7 @@ nav:
           - Package Management: CLI-tools/package-management.md
           - Grab Migrator Utility Quickstart: CLI-tools/grab-migrator.md
           - Cold Start Optimization and Data Migration: CLI-tools/cold-start-and-data-migration.md
-          - Install and Update Platform and Modules: CLI-tools/install-and-update-platform-and-modules.md
+          - Installing and Updating Platform and Modules: CLI-tools/install-and-update-platform-and-modules.md
           - Managing Platform and Modules with CLI: CLI-tools/more-targets.md
           - Virto Cloud:
                 - Overview: CLI-tools/virto-cloud-overview.md
@@ -249,7 +249,7 @@ nav:
     - Platform Manager:
           - Style Guide: Platform-Manager/style-guide.md
           - UI Scroll Directive: Platform-Manager/ui-scroll-directive.md
-          - Countries Management and Localization: Platform-Manager/localization.md
+          - Localization: Platform-Manager/localization.md
           - Extensibility Points:
                 - Extending Main Menu: Platform-Manager/Extensibility-Points/extending-main-menu.md
                 - Blades and Navigation: Platform-Manager/Extensibility-Points/blades-and-navigation.md
@@ -816,7 +816,6 @@ nav:
           - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
           - Extending Application User: Extensibility/extending-application-user.md
           - Adding New Blocks to Page Builder: Extensibility/page-builder-extension.md
-          - Localization: Extensibility/localization.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:

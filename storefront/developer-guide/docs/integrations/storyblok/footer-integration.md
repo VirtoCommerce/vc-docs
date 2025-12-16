@@ -9,7 +9,7 @@ With this guide, we will:
 1. [Create footer content.](footer-integration.md#create-footer-content)
 1. [Fetch Content from Storyblok.](footer-integration.md#fetch-content-from-storyblok-and-display-in-vue-b2b-theme)
 
-## Set Up Global Component
+## Set up global component
 
 To set up a folder in Storyblok:
 
@@ -30,7 +30,7 @@ To set up a folder in Storyblok:
     ![Add Global Blocks](media/add-global-blocks-footer.png)
 
 
-## Create Footer Block
+## Create footer block
 
 To create a new block called **footer**:
 
@@ -67,7 +67,7 @@ To create a new block called **footer**:
 
 The blocks have been created and their nesting has been configured.
 
-## Create Footer Content
+## Create footer content
 
 To create the content for our **Footer**:
 
@@ -81,7 +81,7 @@ To create the content for our **Footer**:
 1. Fill in the necessary fields for each block.
 1. Click **Save** to save the changes.
 
-## Fetch Content from Storyblok and Display in vue-b2b-theme
+## Fetch content from Storyblok and display in vue-b2b-theme
 
 To fetch content from Storyblok and display it in the vue-b2b-theme, go to the **vue-b2b-theme** and edit the **vc-footer** component. Remove hard-coded columns and change it to the fetched ones.
 

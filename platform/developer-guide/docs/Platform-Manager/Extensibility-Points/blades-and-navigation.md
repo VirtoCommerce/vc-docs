@@ -10,22 +10,22 @@ Every blade is instantiated from a highly customizable template. The template ha
 
 Any blade object has the following properties that Virto Commerce Platform respects:
 
-|Property                 |Description|
-|-------------------------|-----------|
-| id ==string==            |Blade identifier, which is required and should be unique at the module level.|
-| isLoading ==boolean==    |Toggles the **loading** indicator in the UI.|
-| headIcon ==string==      |An icon to show on the blade header. A [Font Awesome](http://fontawesome.io/icon/github/) icon identifier. If undefined, the default **fa-folder** icon is displayed.|
-| title ==string==         |Blade title|
-| subtitle ==string==      |Blade subtitle|
-| toolbarCommands ==object []==|Toolbar controls. <br> ![Readmore](media/readmore.png){: width="25"} [Blade Toolbars](blade-toolbar.md)|
-| controller ==string==    |Angular.js controller ID. This property is required.|
-| template ==string==      | Angular.js template path. This property is required.|
-| parentBlade ==object==   |Reference to parent blade. Platform sets this value automatically.|
-| childrenBlades ==object []== |Child blades. Platform sets and manages this value automatically.|
-| isClosingDisabled ==boolean== |Shows whether the close button (**x**) should be grayed out. A blade with such button grayed out can be closed only using a script.|
-| onClose(callback) ==function==|Action to call **before** closing the blade. This can prevent a blade from closing if the provided callback action is not run. The **onClose** property is usually used to show confirmation dialog.|
-|isExpandable ==boolean== |Causes the blade to open maximized and then shrink when a child blade is opened.|
-|onExpand() ==function==  |Action to call on maximizing the blade; most often used to expand inner controls of the blade.|
+| Property                       | Description                                                                                                                                                                |
+|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `id` ==string==                  | Blade identifier, which is required and should be unique at the module level.                                                                                              |
+| `isLoading` ==boolean==          | Toggles the **loading** indicator in the UI.                                                                                                                               |
+| `headIcon` ==string==            | An icon to show on the blade header. A [Font Awesome](http://fontawesome.io/icon/github/) icon identifier. If undefined, the default **fa-folder** icon is displayed.      |
+| `title` ==string==               | Blade title                                                                                                                                                                |
+| `subtitle` ==string==            | Blade subtitle                                                                                                                                                             |
+| `toolbarCommands` ==object []==  | Toolbar controls. <br> ![Readmore](media/readmore.png){: width="25"} [Blade Toolbars](blade-toolbar.md)                                                                    |
+| `controller` ==string==          | Angular.js controller ID. This property is required.                                                                                                                       |
+| `template` ==string==            | Angular.js template path. This property is required.                                                                                                                       |
+| `parentBlade` ==object==         | Reference to parent blade. Platform sets this value automatically.                                                                                                         |
+| `childrenBlades` ==object []==   | Child blades. Platform sets and manages this value automatically.                                                                                                          |
+| `isClosingDisabled` ==boolean==  | Shows whether the close button (**x**) should be grayed out. A blade with such button grayed out can be closed only using a script.                                        |
+| `onClose(callback)` ==function== | Action to call **before** closing the blade. This can prevent a blade from closing if the provided callback action is not run. The **onClose** property is usually used to show confirmation dialog. |
+| `isExpandable` ==boolean==       | Causes the blade to open maximized and then shrink when a child blade is opened.                                                                                           |
+| `onExpand()` ==function==        | Action to call on maximizing the blade; most often used to expand inner controls of the blade.                                                                             |
 
 !!! info
     Blade instances can have other additional properties, such as **isNew**, **currentEntity**, etc. However, you have to manually change such properties in the associated controller. 

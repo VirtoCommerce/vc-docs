@@ -6,7 +6,7 @@ To help you explore Virto Commerce's capabilities, we provide a sample dataset t
 
 Sometimes you might not want to import sample data right away and can skip this step. If so, you will have to manually import it later.
 
-## Import Sample Data Manually
+## Import sample data manually
 
 To import sample data manually:
 

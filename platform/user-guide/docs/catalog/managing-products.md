@@ -64,4 +64,13 @@ To ensure that orders are placed in the correct quantities, set a pack size for 
 
 This helps suppliers fulfill orders smoothly without needing to cancel or unexpectedly adjust quantities:
 
-![Pack size on frontend](media/pack-size-frontend.png)
+![Pack size on frontend](media/pack-size-frontend.png){: style="display: block; margin: 0 auto;" }
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../product-management-overview">← Product management options </a>
+    <a href="../managing-product-variations">Managing product variations →</a>
+</div>

@@ -355,8 +355,8 @@ var graphQlBuilder = new GraphQLBuilder(serviceCollection, builder =>
 
 Some settings were moved to their corresponding X-modules and made public:
 
-* `VirtoCommerce.Xapi.Core.ModuleConstants.Settings.General.IsSelectedForCheckout` —> `VirtoCommerce.XCart.Core.ModuleConstants.Settings.General.IsSelectedForCheckout`
-* `VirtoCommerce.Xapi.Core.ModuleConstants.Settings.General.CreateAnonymousOrder` —> `VirtoCommerce.XOrder.Core.ModuleConstants.Settings.General.CreateAnonymousOrder`
+* `VirtoCommerce.Xapi.Core.ModuleConstants.Settings.General.IsSelectedForCheckout` --> `VirtoCommerce.XCart.Core.ModuleConstants.Settings.General.IsSelectedForCheckout`
+* `VirtoCommerce.Xapi.Core.ModuleConstants.Settings.General.CreateAnonymousOrder` --> `VirtoCommerce.XOrder.Core.ModuleConstants.Settings.General.CreateAnonymousOrder`
 
 ## Deprecated fields and mutations
 
@@ -364,19 +364,19 @@ Deprecated fields and mutations were removed to reduce redundancy and ensure sch
 
 ### Fields
 
-- `DynamicPropertyType.valueType` —> Use `dynamicPropertyValueType` instead
-- `InputDynamicPropertyValueType.locale` —> Use `cultureName` field
-- `QuoteAttachmentType.mimeType` —> Use `contentType` field
-- `PriceType.validFrom` —> Use `startDate` field
-- `PriceType.validUntil` —> Use `endDate` field
-- `PropertyType.type` —> Use `propertyType` field
-- `PropertyType.valueType` —> Use `propertyValueType` field
-- `PropertyType.propertyDictItems` —> Use `propertyDictionaryItems` field
+- `DynamicPropertyType.valueType` --> Use `dynamicPropertyValueType` instead
+- `InputDynamicPropertyValueType.locale` --> Use `cultureName` field
+- `QuoteAttachmentType.mimeType` --> Use `contentType` field
+- `PriceType.validFrom` --> Use `startDate` field
+- `PriceType.validUntil` --> Use `endDate` field
+- `PropertyType.type` --> Use `propertyType` field
+- `PropertyType.valueType` --> Use `propertyValueType` field
+- `PropertyType.propertyDictItems` --> Use `propertyDictionaryItems` field
 
 ### Mutations
 
-- `renameWishlist` —> Use `changeWishlist` mutation
-- `processOrderPayment` —> Use `initializePayment` mutation
+- `renameWishlist` --> Use `changeWishlist` mutation
+- `processOrderPayment` --> Use `initializePayment` mutation
 
 <br>
 <br>

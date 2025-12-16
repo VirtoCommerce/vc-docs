@@ -27,7 +27,7 @@ To configure multiple stores with their own domains in Virto Commerce:
 1. Create and configure **Store1**:
     1. Assign the appropriate catalog to **Store1**.
 
-        ![assigning catalog](media/b2b-catalog.png)
+        ![assigning catalog](media/b2b-catalog.png){: style="display: block; margin: 0 auto;" }
 
     1. Configure price list assignments for **Store1**, if required.
 
@@ -40,11 +40,11 @@ To configure multiple stores with their own domains in Virto Commerce:
     1. Click on the **Themes** widget.
     1. In the **Themes list** blade, click **Upload** to upload new theme.  
     
-    ![new theme](media/new-theme-path.png)
+    ![new theme](media/new-theme-path.png){: style="display: block; margin: 0 auto;" }
 
     The new theme has been uploaded. Go to your store to see it.
 
-    ![store1 theme](media/store1-theme.png)
+    ![store1 theme](media/store1-theme.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         The default path for the **CMS-CONTENT** folder is **wwwroot\cms-content\Themes{StoreId}**.
@@ -54,7 +54,7 @@ To configure multiple stores with their own domains in Virto Commerce:
 
 1. To create and configure your next store, repeat steps 1 and 2.
 
-    ![store2 theme](media/store2-theme.png)
+    ![store2 theme](media/store2-theme.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         Each store should have its own domain name, such as https://store2-domain.com.

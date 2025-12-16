@@ -2,7 +2,7 @@
 
 Generic UI scroll directive helps developers add dropdown lists to the UI and bind them to a custom data source. 
 
-## Use Directive
+## Use directive
 
 UI scroll is implemented as the `uiScrollDropDown` Angular.js directive and has the following features:
 

@@ -7,25 +7,25 @@ To view analytics:
 1. Click ![Nine dots](media/nine-dots-icon1.png){: width="25"} in the top left corner of the Platform.
 1. Select  **App Search**
 
-	![VC Applications](media/app-search-in-platform.png)
+	![VC Applications](media/app-search-in-platform.png){: style="display: block; margin: 0 auto;" }
 
 1. The **App Search** application opens in the new window. Select **Engines** in the left menu:
 
-	![Kibana Engines](media/kibana-engines.png)
+	![Kibana Engines](media/kibana-engines.png){: style="display: block; margin: 0 auto;" }
 
 	By default, Virto Commerce adds five engines: **Product**, **Category**, **CustomerOrder**, **ContentFile**, and **Member**.
 
 1. Let's explore the **Product** section. Click **Overview** to find basic information on product queries and API requests per day:
 
-	![Overview Section](media/overview-section.png)
+	![Overview Section](media/overview-section.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Analytics** to dive into customer experience and query data: 
 
-	![Analytics](media/analytics.png)
+	![Analytics](media/analytics.png){: style="display: block; margin: 0 auto;" }
 
 	Out-of-the-box data collection, metrics, and visualizations on search keywords give you all you need to glean insights from the user behavior:
 
-	![Query Analytics](media/query-analytics.png)
+	![Query Analytics](media/query-analytics.png){: style="display: block; margin: 0 auto;" }
 
 
 

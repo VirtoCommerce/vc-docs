@@ -48,9 +48,10 @@ Virto Search is a search component that gives developers infrastructure, APIs, a
 
 * **Integration:** Middleware providing integration to a specific search engine that enables mapping for objects of internal intermediated types, index documents and search requests, into the respective document and query objects a particular search engine expects to receive.     
 
-* **Search Engine:** A specific index search engine that handles all indexing and search requests. Virto has ready-made integrations with the following services:
+* **Search engine:** A specific index search engine that handles all indexing and search requests. Virto has ready-made integrations with the following services:
 
-    * [Elastic Search 8](https://github.com/VirtoCommerce/vc-module-elastic-search-8): Version compatible with Elasticsearch 8.x. For driving innovation like semantic and hybrid search.
+    * [Elasticsearch 9](https://github.com/VirtoCommerce/vc-module-elastic-search-9): Version compatible with Elasticsearch 9.x, providing high-performance full-text search and advanced indexing capabilities for enterprise-scale deployments.
+    * [Elasticsearch 8](https://github.com/VirtoCommerce/vc-module-elastic-search-8): Version compatible with Elasticsearch 8.x. For driving innovation like semantic and hybrid search.
     * [Elastic App Search](https://github.com/VirtoCommerce/vc-module-elastic-app-search): Preferred search provider with rich no-code search customization and analytics tools.
     * [Lucene](https://github.com/VirtoCommerce/vc-module-lucene-search): Recommended for local development mode.
     * [Elastic Search](https://github.com/VirtoCommerce/vc-module-elastic-search): Version compatible with Elasticsearch 7.x.

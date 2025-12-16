@@ -20,7 +20,7 @@ To add a contact:
 1. In the next blade, click **Add** in the toolbar to open the **New Contact** blade.
 1. Select the entity you need and start creating your contact. We will use **Organization** as an example. Adding employees, contacts, and vendors is a similar process.
 
-	![enter image description here](media/new_company_screen.png)
+	![New company](media/new_company_screen.png){: style="display: block; margin: 0 auto;" }
 
 	Assigning organizations or users to particular user groups enables showing personal offers to them.
 
@@ -32,12 +32,12 @@ To add a contact:
 	!!! note
 		When adding store customers (**Contacts**), you can set the default language and default currency for their accounts:
 
-		![Default language](media/default-language.png)
+		![Default language](media/default-language.png){: style="display: block; margin: 0 auto;" }
 	
 	!!! note
 		If a user is listed in the Contacts, they can now upload their personal photos to customize and brand their workspace:
 
-		![User photo](media/user-photo.png)
+		![User photo](media/user-photo.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes.
 
@@ -51,7 +51,7 @@ To edit any previously added contact:
 1. In the **Companies and Contacts** blade, click the three dots to the left of the required contact's name and click **Manage** in the popup menu. 
 1. In the next blade, update the contact, for example, change the email account by clicking on the **Accounts** widget, then click **Save** in the toolbar to save the changes.
 
-![Edit contact](media/edit-contact.png){: width="650"}
+![Edit contact](media/edit-contact.png){: style="display: block; margin: 0 auto;" width="650"}
 
 !!! note
 	Editing the **Company details** blade allows you to upload and assign assets (images, documents, etc.) to this company. Use the **Assets** widget that appears when editing the company details. 
@@ -77,7 +77,7 @@ The contact has been deleted.
 To export contacts into a CSV file:
 
 1. Click **Contacts** in the main menu.
-1. In the next **Companies and Contacts** blade, check the required contact (vendor/ organization/ person).
+1. In the next **Companies and Contacts** blade, check the required contact (vendor/organization/person).
 
 	!!! note
 		If you do not check any contact, all the contacts of all the organizations will be exported into a CSV file.
@@ -85,7 +85,7 @@ To export contacts into a CSV file:
 1. Click **Export** in the top toolbar and confirm your action.
 1. In the next blade, click on the generated links to download the contacts:
 
-![Export contacts](media/export-finished.png)
+![Export contacts](media/export-finished.png){: style="display: block; margin: 0 auto;" }
 
 The contacts have been saved as a CSV file.
 
@@ -106,7 +106,7 @@ To import contacts into the Contacts module:
 1. In the next blade, select the data type from the dropdown list (Contacts or Organizations).
 1. Browse your file or drag and drop it to the specified field.
 
-	![Import Contacts](media/import-contacts.png)
+	![Import Contacts](media/import-contacts.png){: style="display: block; margin: 0 auto;" }
 
 1. After uploading files, click **Preview** to open the uploaded contacts in the next blade.
 1. Verify the result. Click **Import** in the top toolbar to complete the process. Otherwise, click **Close**.
@@ -123,11 +123,11 @@ The procedure for updating contacts is similar to the one for [importing contact
 
 Contact URLs now include the member ID slug, allowing for easy sharing with colleagues or partners:
 
-![Contact URLs](media/contact-urls.png)
+![Contact URLs](media/contact-urls.png){: style="display: block; margin: 0 auto;" }
 
 You can also share company name and company ID by copying them from the dropdown menu:
 
-![Contact ID](media/contact-id-name.png)
+![Contact ID](media/contact-id-name.png){: style="display: block; margin: 0 auto;" }
 
 ## Set default company
 
@@ -137,7 +137,7 @@ Administrators can now set a default company for an employee, so that they can l
 1. In the next blade, select an employee.
 1. In the next blade, set a default company for them.
 
-	![Default company](media/default-company.png)
+	![Default company](media/default-company.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes. 
 
@@ -150,11 +150,11 @@ For corporate accounts in the Frontend Application, you can assign multiple orga
 1. In the next blade, add as many companies to the **Member of company (ies)** segment as needed from the dropdown list.
 1. Click **Save** in the top toolbar to save the changes.
 
-	![Assign multiple organizations](media/assign-multiple-organizatopns.png)
+	![Assign multiple organizations](media/assign-multiple-organizatopns.png){: style="display: block; margin: 0 auto;" }
 
 The contact can now switch between the assigned organizations in the Frontend Application:
 
-![Storefront multiple organizations](media/storefront-multiple-organizations.png)
+![Storefront multiple organizations](media/storefront-multiple-organizations.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>
@@ -164,5 +164,3 @@ The contact can now switch between the assigned organizations in the Frontend Ap
     <a href="../overview">← Contacts module overview</a>
     <a href="../filtering-options">Filtering options →</a>
 </div>
-
-

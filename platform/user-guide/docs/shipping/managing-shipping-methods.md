@@ -16,11 +16,11 @@ To select a shipping method:
 1. In the next blade, click on the **Shipping methods** widget.
 1. The next blade displays the available shipping methods. We currently offer a fixed rate shipping method and a BOPIS service:
 
-![Shipping methods list](media/fixed-rate-shipping-method.png)
+![Shipping methods list](media/fixed-rate-shipping-method.png){: style="display: block; margin: 0 auto;" }
 
 On the Frontend, the available shipping methods are displayed as follows:
 
-![Frontend shipping methods](media/frontend-shipping-methods.png)
+![Frontend shipping methods](media/frontend-shipping-methods.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Edit fixed rate shipping method
@@ -34,7 +34,7 @@ To edit a fixed rate shipping method:
     * Specify logo URL.
     * Enter shipping method description.
 
-    ![Edit shipping method](media/edit-shipping-method.png)
+    ![Edit shipping method](media/edit-shipping-method.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -53,7 +53,7 @@ To edit a BOPIS shipping method:
     * Enter shipping method description.
     * Click on the **Pickup locations** widget to [add or edit pickup points](#add-or-edit-pickup-points).
 
-    ![Edit shipping method](media/edit-bopis-shipping-method.png)
+    ![Edit shipping method](media/edit-bopis-shipping-method.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -67,7 +67,7 @@ To add or edit a pickup location:
 1. Select a pickup location from the list or click **Add** in the toolbar.
 1. In the next blade, fill in the following fields:
 
-    ![New location](media/bopis-new-location.png)
+    ![New location](media/bopis-new-location.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 
@@ -75,7 +75,7 @@ New pickup location has been added to the list.
 
 On the Frontend, the active addresses are displayed as follows:
 
-![Select address](media/frontend-pickup-addresses.png)
+![Select address](media/frontend-pickup-addresses.png){: style="display: block; margin: 0 auto;" }
 
 ## Configure tax provider
 
@@ -89,7 +89,7 @@ To configure a tax provider:
 
 1. Click **Save** in the toolbar to save the changes.
 
-![Edit tax type](media/edit-tax-type.png)
+![Edit tax type](media/edit-tax-type.png){: style="display: block; margin: 0 auto;" }
 
 The tax provider has been configured.
 

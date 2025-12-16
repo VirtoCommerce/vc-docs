@@ -10,29 +10,29 @@ The migration process begins with an existing Virto Commerce setup, where:
 
 The result of initial deployment is as follows:
 
-![Migration starting point](media/migration-starting-point.png)
+![Migration starting point](media/migration-starting-point.png){: style="display: block; margin: 0 auto;" }
 
 1. [Use an ARM template](https://github.com/VirtoCommerce/vc-platform/blob/dev/azureDeployPlatformAndFrontend.json) to add the necessary Azure resources for running the Platform with the Theme v.2.0.0 and higher. 
 1. [Open the Azure portal](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployPlatformAndFrontend.json) and provide the required Azure resources. Use the existing resource group and the name of the existing Platform Web Application. If the name of the platform application doesn’t match the existing application, the new web application will be created for the Platform.
 
-    ![Add resources](media/add-resources.png)
+    ![Add resources](media/add-resources.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Review + create**, verify the values again, and click **Create**. The deployment will begin.
 1. After the deployment is complete, the resource list will look as follows (new resources are highlighted): 
 
-    ![New resources](media/new-resources.png)
+    ![New resources](media/new-resources.png){: style="display: block; margin: 0 auto;" }
 
 1. Add a store URL (**Stores --> B2B-store --> Store URL**) pointing to the Azure Application Gateway IP address in the format **http://x.x.x.x/**:
 
-    ![Store URL](media/add-store-url.png)
+    ![Store URL](media/add-store-url.png){: style="display: block; margin: 0 auto;" }
 
 1. Use the Azure Application Gateway IP address (**http://x.x.x.x/**) to access the frontend part of the Virto Commerce solution:
 
-    ![Azure App Gateway IP](media/azure-app-gateway-ip.png)
+    ![Azure App Gateway IP](media/azure-app-gateway-ip.png){: style="display: block; margin: 0 auto;" }
 
 1. Test the functionality, then remove the Storefront resources:
 
-    ![Remove Storefront](media/delete-storefront.png)
+    ![Remove Storefront](media/delete-storefront.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

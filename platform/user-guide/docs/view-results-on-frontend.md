@@ -6,7 +6,7 @@ To view the results of Platform modifications in the Frontend Application:
 1. In the next blade, select the desired store.
 1. In the next blade, click **Open in browser** in the toolbar.
 
-![View Frontend Application](media/view-storefront.png)
+![View Frontend Application](media/view-storefront.png){: style="display: block; margin: 0 auto;" }
 
 The Frontend Application opens in a new blade.
 

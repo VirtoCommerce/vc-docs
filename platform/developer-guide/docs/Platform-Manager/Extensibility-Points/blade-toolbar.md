@@ -2,7 +2,7 @@
 
 Blade toolbar represents a dedicated area inside a **blade**, where one can add **controls**, which we will call, for convenience, **toolbar items**.
 
-![Blade toolbar](media/02-blade-toobar.png)
+![Blade toolbar](media/02-blade-toobar.png){: style="display: block; margin: 0 auto;" }
 
 Toolbar items can be added to a **blade instance** directly or using Virto Commerce Platform toolbar extensibility service.
 

@@ -22,10 +22,10 @@ To assign order procession to specific users:
 
 1. In the main menu, click **Orders**.
 1. In the next **Customer orders** blade, select the required order.
-1. In the **Assigned to** field, select the assignee from a drop-down list.
+1. In the **Assigned to** field, select the assignee from a dropdown.
 1. Click **Save** to save the changes.
 
-    ![Assigning orders](media/assignees-path.png){: width="800"}
+    ![Assigning orders](media/assignees-path.png){: style="display: block; margin: 0 auto;" width="800"}
 
 Now only the assigned user can process the order.
 

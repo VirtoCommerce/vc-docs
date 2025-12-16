@@ -7,7 +7,7 @@ You can register Virto Commerce as an identity provider as follows:
 1. In the next blade, click **Add** in the toolbar.
 1. Configure the following fields:
 
-    ![Adding OAuth application](media/OAuth-settings.png)
+    ![Adding OAuth application](media/OAuth-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 
@@ -19,7 +19,7 @@ To log in using the Virto authentication provider for the first time:
 
 1. Click **Virto** on the login page.
 
-    ![Virto login](media/click-virto.png)
+    ![Virto login](media/click-virto.png){: style="display: block; margin: 0 auto;" }
 
 1. Consent to providing access to the following information:
 
@@ -29,7 +29,7 @@ To log in using the Virto authentication provider for the first time:
 
 1. You will see an **Access denied** notification:
 
-    ![Access denied](media/access-denied.png){: width="600"}
+    ![Access denied](media/access-denied.png){: style="display: block; margin: 0 auto;" width="600"}
 
 This message means that you are logged in, but you will not be able to perform until an administrator assigns you the required roles. 
 

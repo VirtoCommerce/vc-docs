@@ -11,7 +11,7 @@ To start improving search relevance:
 1. Click ![Nine dots](media/nine-dots-icon1.png){: width="25"} in the top left corner of the Platform.
 1. Select  **App Search**
 
-	![VC Applications](media/app-search-in-platform.png)
+	![VC Applications](media/app-search-in-platform.png){: style="display: block; margin: 0 auto;" }
 
 1. The **App Search** application opens in the new window. Select **Engines** in the left menu:
 
@@ -21,11 +21,11 @@ Now you can proceed to configuring synonyms, curations, and relevance search.
 
 Sometimes, users use different terminology than your context might expect. In the **Top queries with no results** section, you can find query results:
 
-![Top queries with no results](media/top-queries-no-results.png)
+![Top queries with no results](media/top-queries-no-results.png){: style="display: block; margin: 0 auto;" }
 
 For example, your customers might search for a **duplicator** in the Frontend Application, but don't find any matching product:
 
-![Searching for a product with no result](media/searching-for-duplicator.png)
+![Searching for a product with no result](media/searching-for-duplicator.png){: style="display: block; margin: 0 auto;" }
 
 It is a common mistake that may lead to poor search relevance and can be avoided using the Synonyms feature. The Synonym feature builds  **synonym sets** containing two or more queries that have similar meanings. Each synonym set can contain up to 32 words. 
 
@@ -34,13 +34,13 @@ To manage synonyms via the App Search dashboard:
 1. Go to **Synonyms**
 1. Click  **Create a synonym set** and add a synonym set:
 
-	![Synonym set](media/synonym-set.png)
+	![Synonym set](media/synonym-set.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** to apply the synonym set.
 
 Now, if your customers search for a **duplicator**, they see the appropriate product set:
 
-![Duplicator product set displayed](media/duplicator-product-set.png)
+![Duplicator product set displayed](media/duplicator-product-set.png){: style="display: block; margin: 0 auto;" }
 
 Configuring  **Synonyms**  is a useful way to guide your users to the most relevant content. It is most efficient when you know the precise terms they are searching for. For that, explore the **Analytics** section.
 
@@ -62,11 +62,11 @@ To manage curations using Kibana:
 1. Add a curation for **office printer**.
 1. In our example, we promote two products: **565507636 - HP OfficeJet Pro 6978 All-in-One Multifunction** and **551879675 - HP LaserJet Pro MFP M521dn - multifunction printer (B/W)**:
 
-	![Manage Curation screen](media/manage-curation-screen.png)
+	![Manage Curation screen](media/manage-curation-screen.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** to apply the curation:
 
-	![Curation applied](media/curation-applied.png)
+	![Curation applied](media/curation-applied.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
 	Currently, Elastic App Search offers an upgrade to the **Platinum** subscription to harness the power of machine learning. By analyzing your engine’s analytics, App Search is able to suggest new or updated curations. This way, you can effortlessly help your users find exactly what they are looking for.

@@ -67,7 +67,7 @@ To authorize client applications (for example, Frontend Application), use the **
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the following fields:
 
-    ![OAuth application](media/oauth-applications.png)
+    ![OAuth application](media/oauth-applications.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         **Client Id** and **Client secret** are generated automatically. Save them, as the system will not allow you to view already saved **Client secret**. 

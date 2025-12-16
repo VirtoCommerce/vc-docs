@@ -5,7 +5,7 @@ Virto Commerce provides a customizable logic for managing and sending end user n
 ## Notification data model
 
 The chart below shows how notification data is sent:
-![Notification data model](media/data-model.png)
+![Notification data model](media/data-model.png){: style="display: block; margin: 0 auto;" }
 
 Each notification sent by the system is represented with an individual notification type. Each Notification type, in its turn, can contain multiple notification templates, each being individual per language.
 

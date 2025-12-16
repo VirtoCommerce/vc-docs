@@ -15,12 +15,12 @@ The Virto Commerce Platform's core components are:
 	- **Integration modules**: Implement various kinds of integration with third-party services.
 	- **Custom solution modules**: Usually contain an extension of the existing logic other modules have.
 
-* **Supported Databases**: The Platform is database-agnostic, supporting multiple databases for flexibility and scalability:
+* **Supported databases**: The Platform is database-agnostic, supporting multiple databases for flexibility and scalability:
 	- PostgreSQL.
 	- MySQL.
 	- Microsoft SQL Server.
 
-* **Supported Search Engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:
+* **Supported search engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:
 	- Elasticsearch.
 	- Elasticsearch 8.
 	- Elasticsearch 9.

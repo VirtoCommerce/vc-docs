@@ -2,9 +2,9 @@
 
 Follow the instructions below to build your own data importer of a specific type. They describe importing product images from a CSV file.
 
-1. Сheck which components need to be implemented into a new importer:
+1. Сheck the components to be implemented into a new importer:
 
-    ![Custom importer prerequisites](media/03-custom-importer-prerequisites.png)
+    ![Custom importer prerequisites](media/03-custom-importer-prerequisites.png){: style="display: block; margin: 0 auto;" }
 
 1. Create a CSV file.
 

@@ -17,7 +17,7 @@ A **widget service** is a Platform level engine for registering **widgets** and
 
 Here is how we use widgets out of the box in our Catalog module:
 
-![Widget sample](media/04-widget-sample.png)
+![Widget sample](media/04-widget-sample.png){: style="display: block; margin: 0 auto;" }
 
 ## Widget container (va-widget-container)
 

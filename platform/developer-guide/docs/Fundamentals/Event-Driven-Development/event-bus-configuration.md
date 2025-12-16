@@ -41,7 +41,7 @@ If you have connections with the same name in the DB and in the configuration op
 
 Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.EventBus** from the dropdown list.
 
-![Select Event Bus](media/event-bus-api.png)
+![Select Event Bus](media/event-bus-api.png){: style="display: block; margin: 0 auto;" }
 
 Use REST API functionality to:
 
@@ -93,7 +93,7 @@ If there are conflicting subscriptions with the same name in both the database a
 
 Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and choose **VirtoCommerce.EventBus** from the dropdown list.
 
-![Select Event Bus](media/event-bus-api.png)
+![Select Event Bus](media/event-bus-api.png){: style="display: block; margin: 0 auto;" }
 
 Use the REST API to perform the following actions:
 

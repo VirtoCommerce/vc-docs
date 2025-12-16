@@ -15,7 +15,7 @@ To configure general settings:
 1. Select **General**.
 1. In the next blade, configure the general settings:
 
-    ![General settings](media/general_settings.png)
+    ![General settings](media/general_settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -30,7 +30,7 @@ To configure import settings:
 1. Select **Import**.
 1. In the next blade, enable or disable strong validation of address region:
 
-    ![Import settings](media/import-settings.png)
+    ![Import settings](media/import-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -48,11 +48,11 @@ To add and edit statuses for various contact entities:
 
     1. Set default status for a company or a contact:
 
-        ![Default status](media/company-contact-default-statuses.png)
+        ![Default status](media/company-contact-default-statuses.png){: style="display: block; margin: 0 auto;" }
 
     1. Click ![Pencil](media/pencil.png){: width="25"} to add or delete a status. In the example below, we add the **Pending** status to the **Company** entity:
 
-        ![Status settings](media/status-settings.png){: width="600" height="600"}
+        ![Status settings](media/status-settings.png){: style="display: block; margin: 0 auto;" width="600" }
 
 1. Click ![Floppy](media/floppy.png){: width="25"} to save the changes.
 

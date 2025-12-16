@@ -2,7 +2,7 @@
 
 Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
 
-There are types of vendor-made extensions that guarantee 'seamless delivery'.  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
+There are types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
 
 * No-code extensions.
  
@@ -10,7 +10,7 @@ There are types of vendor-made extensions that guarantee 'seamless delivery'.  V
  
 * Native extensions. 
 
-![Extensibility Overview](media/01-extensibility-overview.png)
+![Extensibility Overview](media/01-extensibility-overview.png){: style="display: block; margin: 0 auto;" }
 
 ## No-code extensions
 

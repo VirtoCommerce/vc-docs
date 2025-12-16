@@ -32,7 +32,7 @@ To deploy Elastic App Search using Docker:
 
 1. Install Elastic App Search container using **Docker-Compose** as follows:
 
-    1. Create a directory and with a file named `.env` inside:
+    1. Create a directory and with a file named **.env** inside:
 
     ```
     STACK_VERSION=8.3.3
@@ -266,7 +266,7 @@ To install Elastic App Search on Virto Commerce Platform:
 
 1. Run Platform and build the indexes. You will see **ElasticAppSearch** as a **Provider**: 
 
-    ![Elastic App Search as Provider](media/admin-index.png)
+    ![Elastic App Search as Provider](media/admin-index.png){: style="display: block; margin: 0 auto;" }
 
 1. Go back to **Kibana** and confirm that engines (indexes) are created:
 

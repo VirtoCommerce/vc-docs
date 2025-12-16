@@ -17,11 +17,11 @@ It is closely associated with a particular user or touch point experience and en
 
 GraphQL is a an API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
 
-![graphQL-Rest](media/rest-graphQL.png)
+![graphQL-Rest](media/rest-graphQL.png){: style="display: block; margin: 0 auto;" }
 
 With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Client customize the endpoints using schema, which provides a description of how the data is structured and contains. Here is a part from Virto Commerce schema:
 
-![schema](media/schema.png)
+![schema](media/schema.png){: style="display: block; margin: 0 auto;" }
 
 !!! info
     Another concept to know is a **Variable**. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.

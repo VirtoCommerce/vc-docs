@@ -19,7 +19,7 @@ To add Azure App Configuration:
 
 1. Register new Azure App Resource:
 
-    ![create](media/app-configuration-create.png)
+    ![create](media/app-configuration-create.png){: style="display: block; margin: 0 auto;" }
 
 1. Go to the Azure Portal and locate your newly created resource. 
 1. In the Azure App Configuration settings, navigate to the **Access Keys** section, which provides you with essential connection details.
@@ -35,7 +35,7 @@ To add Azure App Configuration:
 
 1. Register your key-values inside **Operations --> Configuration Explorer**. Existing keys values will be overwritten with ones from your Azure App Configuration.
 
-    ![explorer](media/configuration-explorer.png)
+    ![explorer](media/configuration-explorer.png){: style="display: block; margin: 0 auto;" }
 
 1.  Bind a new options class inside the **module.cs** Initialize method:
     1. Locate the **module.cs** file where you initialize your application's settings and configurations and define a new options class within the **module.cs** file.
@@ -61,11 +61,11 @@ To add Azure App Configuration:
 
 1. Configure labels for environment-specific configurations. You can load keys with or without labels based on specific environments (e.g., Development, Production, etc.).
 
-    ![labels](media/labels.png)
+    ![labels](media/labels.png){: style="display: block; margin: 0 auto;" }
 
 1. Configure auto-reload. The configuration supports **Sentinel**, a special key which functions as a versioning key for the list of configuration values. The application monitors the value of this key. When it changes, the configuration values are automatically reloaded. By default, the application checks the Sentinel key every 30 seconds.
 
-    ![sentinel](media/sentinel.png)
+    ![sentinel](media/sentinel.png){: style="display: block; margin: 0 auto;" }
 
 !!! info
     To use current values of the configuration, inject `IOptionsMonitor<T>` instead of `IOptions<T>` and access `CurrentValue` property.

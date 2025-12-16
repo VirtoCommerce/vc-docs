@@ -4,7 +4,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Exact product identification
 
-**ExactId & StandardCode Classes**
+**ExactId and StandardCode classes**
 
 ```json
 // Input: "SKU-12345-ABC"
@@ -68,7 +68,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Technical specifications
 
-**TechnicalSpec & Dimension Classes**
+**TechnicalSpec and dimension classes**
 
 ```json
 // Input: "2.5 inch LCD display 5V 2A"
@@ -120,7 +120,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Product features and attributes
 
-**Feature Class**
+**Feature class**
 
 ```json
 // Input: "red leather waterproof case"
@@ -170,7 +170,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Product categories
 
-**ProductType Class**
+**ProductType class**
 
 ```json
 // Input: "gaming laptop"
@@ -203,7 +203,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 ```
 
 ## Price and budget
-**Price Class**
+**Price class**
 
 ```json
 // Input: "bluetooth headphones under $100"
@@ -240,7 +240,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Problem solving queries
 
-**SymptomJob Class**
+**SymptomJob class**
 
 ```json
 // Input: "fix leaky faucet"
@@ -270,8 +270,8 @@ The Intent Search system supports 17 different intent classes and can intelligen
 "reduce noise in room"        → Acoustic problem
 ```
 
-## Use case & application
-**UseCase Class**
+## Use case and application
+**UseCase class**
 
 ```json
 // Input: "outdoor photography gear"
@@ -305,7 +305,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Complex multi-intent queries
 
-**Combined Intent Classes**
+**Combined intent classes**
 
 ```json
 // Input: "Samsung 55 inch 4K OLED TV under $2000"
@@ -408,7 +408,7 @@ The Intent Search system supports 17 different intent classes and can intelligen
 
 ## Non-product queries
 
-**NonProduct Class**
+**NonProduct class**
 
 ```json
 // Input: "how to install the software"

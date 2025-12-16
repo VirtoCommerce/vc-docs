@@ -29,7 +29,7 @@ To start using xAPI:
 1. Select **Search**.
 1. Enable **Store serialized catalog objects in index** option:
 
-    ![Catalog-enabled](media/catalog-index-enabled.png)
+    ![Catalog-enabled](media/catalog-index-enabled.png){: style="display: block; margin: 0 auto;" }
 
 1. Rebuild index.
 
@@ -139,15 +139,15 @@ Some GraphQL queries and mutations require additional authorization. To test the
 1. Open the [Virto Commerce API Docs (v1)](https://virtostart-demo-admin.govirto.com/docs/index.html) in your browser.
 1. **Authorize** as an administrator or manager.
 
-    ![Auth](media/authorization.png)
+    ![Auth](media/authorization.png){: style="display: block; margin: 0 auto;" }
 
 1. Expand **VirtoCommerce platform/POST/connect/token** section to fill in the required fields with appropriate credentials, then click **Execute**.
 
-    ![token](media/token-field.png)
+    ![token](media/token-field.png){: style="display: block; margin: 0 auto;" }
 
 1. Copy the token that appears in the field below:
 
-    ![token](media/token-code.png)
+    ![token](media/token-code.png){: style="display: block; margin: 0 auto;" }
 
 Providing token in GraphiQL is described in the [GraphiQL](graphiql.md) section. 
 

@@ -1,4 +1,4 @@
-# Setting Up Prerender.io with Azure Application Gateway
+# Set Up Prerender.io with Azure Application Gateway
 
 [Prerender.io](http://Prerender.io)  is a valuable tool for optimizing your website's SEO performance by rendering JavaScript content for search engine crawlers.
 
@@ -141,7 +141,6 @@ Configure the **UrlRewrite** rules to redirect all incoming **GET** requests fro
 
     ![Rule 2](media/rule2.png){: style="display: block; margin: 0 auto;" }
 
-
 ## Verify result
 
 Verify the result by navigating to https://vc-prerender.westeurope.cloudapp.azure.com. The original home page **virtostart-demo-store.govirto.com** should be open:
@@ -166,9 +165,9 @@ To pre-render site for crawlers only:
     | Backend target   	| service.prerender.io                         	|
 
     ![Rule 3](media/routing-rule3.png){: style="display: block; margin: 0 auto;" }
-
+    <br>
     The resulting routing rule should be as follows:
-
+    <br>
     ![Result](media/routing-rule-result.png){: style="display: block; margin: 0 auto;" }
 
 1. Update the rewrite rule to forward requests to the **Prerender.io** service only if the **User-Agent** in the header matches one of the predefined values for crawlers:
