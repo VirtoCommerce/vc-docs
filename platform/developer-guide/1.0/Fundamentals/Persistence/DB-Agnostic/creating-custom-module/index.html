@@ -2262,7 +2262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../../CLI-tools/install-and-update-platform-and-modules/" class="md-nav__link">
-        Install and Update Platform and Modules
+        Installing and Updating Platform and Modules
       </a>
     </li>
   
@@ -7207,7 +7207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../../Platform-Manager/localization/" class="md-nav__link">
-        Countries Management and Localization
+        Localization
       </a>
     </li>
   
@@ -22309,24 +22309,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../../../Extensibility/localization/" class="md-nav__link">
-        Localization
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
     </nav>
 </li>
@@ -26769,7 +26751,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26817,7 +26799,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>CustomerReviews.Data.PostgreSql</li>
 <li>CustomerReviews.Data.SqlServer</li>
 </ul>
-<p><img alt="Four projects" src="../media/four-data-projects.png" /></p>
+<p><img alt="Four projects" src="../media/four-data-projects.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>The Data.[Provider] projects have a specific structure and configuration for each database system: MySql, PostgreSql, and SqlServer:</p>
@@ -26827,27 +26809,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>[Provider]DbContextFactory class contains implementation of IDesignTimeDbContextFactory for a specific database provider. </li>
 <li>Readme.md file contains the instructions for configuring and migration creation the specific database provider.</li>
 </ul>
-<p><img alt="Data provider project" src="../media/data-provider-project.png" /></p>
+<p><img alt="Data provider project" src="../media/data-provider-project.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>The Data project contains the common data models and interfaces that are shared by all database systems.</p>
 </li>
 <li>
 <p>The Module.Initialize method registers the DbContext service using the AddDbContext extension method from Virto Commerce Platform Core library.</p>
-<p><img alt="AddDBContext" src="../media/add_db_context.png" /></p>
+<p><img alt="AddDBContext" src="../media/add_db_context.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>The OnModelCreating extension method customizes the entity type configuration for different database systems using conditional compilation symbols. You can specify the properties, keys, indexes, relationships, etc. of your entities using a fluent API.</p>
-<p><img alt="Customize Code-First Model Migrations" src="../media/customize-model.png" /></p>
+<p><img alt="Customize Code-First Model Migrations" src="../media/customize-model.png" style="display: block; margin: 0 auto;" /></p>
 <p>To use this feature, you need to implement the <code>IEntityTypeConfiguration&lt;TEntity&gt;</code> interface in your entity configuration classes. It defines a Configure method that takes an <code>EntityTypeBuilder&lt;TEntity&gt;</code> parameter and configures various aspects of the entity type.</p>
 <p>Below is an example implementing this interface for <code>CurrencyEntity</code>:</p>
-<div class="codehilite"><pre><span></span><code>public class CurrencyEntityConfiguration : IEntityTypeConfiguration&lt;CurrencyEntity&gt;
+<div class="codehilite"><pre><span></span><code>```csharp
+public class CurrencyEntityConfiguration : IEntityTypeConfiguration&lt;CurrencyEntity&gt;
 {
     public void Configure(EntityTypeBuilder&lt;CurrencyEntity&gt; builder)
     {
         builder.Property(x =&gt; x.ExchangeRate).HasColumnType(&quot;decimal&quot;).HasPrecision(18, 4);
     }
 }
+```
 </code></pre></div>
 
 </li>

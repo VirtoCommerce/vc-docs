@@ -2262,7 +2262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../CLI-tools/install-and-update-platform-and-modules/" class="md-nav__link">
-        Install and Update Platform and Modules
+        Installing and Updating Platform and Modules
       </a>
     </li>
   
@@ -7134,7 +7134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../localization/" class="md-nav__link">
-        Countries Management and Localization
+        Localization
       </a>
     </li>
   
@@ -22317,24 +22317,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../../Extensibility/localization/" class="md-nav__link">
-        Localization
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
     </nav>
 </li>
@@ -26787,7 +26769,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 10:37:37 UTC">September 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26822,59 +26804,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </thead>
 <tbody>
 <tr>
-<td>id <mark>string</mark></td>
+<td><code>id</code> <mark>string</mark></td>
 <td>Blade identifier, which is required and should be unique at the module level.</td>
 </tr>
 <tr>
-<td>isLoading <mark>boolean</mark></td>
+<td><code>isLoading</code> <mark>boolean</mark></td>
 <td>Toggles the <strong>loading</strong> indicator in the UI.</td>
 </tr>
 <tr>
-<td>headIcon <mark>string</mark></td>
+<td><code>headIcon</code> <mark>string</mark></td>
 <td>An icon to show on the blade header. A <a href="http://fontawesome.io/icon/github/">Font Awesome</a> icon identifier. If undefined, the default <strong>fa-folder</strong> icon is displayed.</td>
 </tr>
 <tr>
-<td>title <mark>string</mark></td>
+<td><code>title</code> <mark>string</mark></td>
 <td>Blade title</td>
 </tr>
 <tr>
-<td>subtitle <mark>string</mark></td>
+<td><code>subtitle</code> <mark>string</mark></td>
 <td>Blade subtitle</td>
 </tr>
 <tr>
-<td>toolbarCommands <mark>object []</mark></td>
+<td><code>toolbarCommands</code> <mark>object []</mark></td>
 <td>Toolbar controls. <br> <img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../blade-toolbar/">Blade Toolbars</a></td>
 </tr>
 <tr>
-<td>controller <mark>string</mark></td>
+<td><code>controller</code> <mark>string</mark></td>
 <td>Angular.js controller ID. This property is required.</td>
 </tr>
 <tr>
-<td>template <mark>string</mark></td>
+<td><code>template</code> <mark>string</mark></td>
 <td>Angular.js template path. This property is required.</td>
 </tr>
 <tr>
-<td>parentBlade <mark>object</mark></td>
+<td><code>parentBlade</code> <mark>object</mark></td>
 <td>Reference to parent blade. Platform sets this value automatically.</td>
 </tr>
 <tr>
-<td>childrenBlades <mark>object []</mark></td>
+<td><code>childrenBlades</code> <mark>object []</mark></td>
 <td>Child blades. Platform sets and manages this value automatically.</td>
 </tr>
 <tr>
-<td>isClosingDisabled <mark>boolean</mark></td>
+<td><code>isClosingDisabled</code> <mark>boolean</mark></td>
 <td>Shows whether the close button (<strong>x</strong>) should be grayed out. A blade with such button grayed out can be closed only using a script.</td>
 </tr>
 <tr>
-<td>onClose(callback) <mark>function</mark></td>
+<td><code>onClose(callback)</code> <mark>function</mark></td>
 <td>Action to call <strong>before</strong> closing the blade. This can prevent a blade from closing if the provided callback action is not run. The <strong>onClose</strong> property is usually used to show confirmation dialog.</td>
 </tr>
 <tr>
-<td>isExpandable <mark>boolean</mark></td>
+<td><code>isExpandable</code> <mark>boolean</mark></td>
 <td>Causes the blade to open maximized and then shrink when a child blade is opened.</td>
 </tr>
 <tr>
-<td>onExpand() <mark>function</mark></td>
+<td><code>onExpand()</code> <mark>function</mark></td>
 <td>Action to call on maximizing the blade; most often used to expand inner controls of the blade.</td>
 </tr>
 </tbody>

@@ -2262,7 +2262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../CLI-tools/install-and-update-platform-and-modules/" class="md-nav__link">
-        Install and Update Platform and Modules
+        Installing and Updating Platform and Modules
       </a>
     </li>
   
@@ -7271,7 +7271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../Platform-Manager/localization/" class="md-nav__link">
-        Countries Management and Localization
+        Localization
       </a>
     </li>
   
@@ -22373,24 +22373,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../../Extensibility/localization/" class="md-nav__link">
-        Localization
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
     </nav>
 </li>
@@ -26899,7 +26881,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 11:01:34 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26935,7 +26917,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>While distributed cache could address this challenge, it introduces network latency and requires serialization/deserialization support for all cached data, which can be complex to achieve. Instead, Virto Commerce utilizes a local cache storage approach for each application instance connected to a shared broadcasted service (backplane), receiving invalidation messages.</p>
 <p>To address this, a service is needed to which all application instances connect, broadcasting messages when cache data becomes invalid. Redis, an in-memory key-value store supporting a publish/subscribe model, is well-suited for this task. The Virto memory caching Redis backplane employs the pub/sub feature to forward messages to other servers.</p>
 <p>When a Platform instance evicts data from its cache, a message for this event is sent to the backplane, which then distributes it to all connected clients via their respective servers. This process ensures cache consistency across multiple instances, as illustrated in the following diagram:</p>
-<p><img alt="Redis cache" src="../media/redis-cache.png" /> </p>
+<p><img alt="Redis cache" src="../media/redis-cache.png" style="display: block; margin: 0 auto;" /></p>
 <p>Use the Redis backplane for memory cache in <strong>appsettings.json</strong> for setting up as follows: </p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="err">...</span>

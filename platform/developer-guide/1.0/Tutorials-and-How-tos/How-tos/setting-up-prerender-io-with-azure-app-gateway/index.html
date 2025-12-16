@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-prerenderio-with-azure-application-gateway" class="md-skip">
+        <a href="#set-up-prerenderio-with-azure-application-gateway" class="md-skip">
           Skip to content
         </a>
       
@@ -2262,7 +2262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../CLI-tools/install-and-update-platform-and-modules/" class="md-nav__link">
-        Install and Update Platform and Modules
+        Installing and Updating Platform and Modules
       </a>
     </li>
   
@@ -7132,7 +7132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../Platform-Manager/localization/" class="md-nav__link">
-        Countries Management and Localization
+        Localization
       </a>
     </li>
   
@@ -22234,24 +22234,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../../Extensibility/localization/" class="md-nav__link">
-        Localization
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
     </nav>
 </li>
@@ -26959,7 +26941,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:11:06 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26979,7 +26961,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="setting-up-prerenderio-with-azure-application-gateway">Setting Up Prerender.io with Azure Application Gateway<a class="headerlink" href="#setting-up-prerenderio-with-azure-application-gateway" title="Permanent link">&para;</a></h1>
+<h1 id="set-up-prerenderio-with-azure-application-gateway">Set Up Prerender.io with Azure Application Gateway<a class="headerlink" href="#set-up-prerenderio-with-azure-application-gateway" title="Permanent link">&para;</a></h1>
 <p><a href="http://Prerender.io">Prerender.io</a>  is a valuable tool for optimizing your website's SEO performance by rendering JavaScript content for search engine crawlers.</p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/storefront/developer-guide/latest/integrations/prerender_io">Enhancing SEO with Prerender.io</a></p>
 <p>In this guide, we will walk you through the process of setting up <strong>Prerender.io</strong> with <strong>Azure Application Gateway</strong> for our <a href="https://virtostart-demo-store.govirto.com">https://virtostart-demo-store.govirto.com</a> single page application using the <strong>Azure Portal</strong>.</p>
@@ -27189,9 +27171,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
-<p><img alt="Rule 3" src="../media/routing-rule3.png" style="display: block; margin: 0 auto;" /></p>
-<p>The resulting routing rule should be as follows:</p>
-<p><img alt="Result" src="../media/routing-rule-result.png" style="display: block; margin: 0 auto;" /></p>
+<p><img alt="Rule 3" src="../media/routing-rule3.png" style="display: block; margin: 0 auto;" />
+<br>
+The resulting routing rule should be as follows:
+<br>
+<img alt="Result" src="../media/routing-rule-result.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Update the rewrite rule to forward requests to the <strong>Prerender.io</strong> service only if the <strong>User-Agent</strong> in the header matches one of the predefined values for crawlers:</p>
