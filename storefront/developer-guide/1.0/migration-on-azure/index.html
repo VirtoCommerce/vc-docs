@@ -2732,7 +2732,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 14, 2025 09:52:31 UTC">March 14, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -2763,31 +2763,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>If you didn’t use the <strong>Deploy VC Platform to Azure Cloud</strong> article and the names of the Azure resources differ (for example, the web application name is <strong>platform</strong> and the SQL server name is <strong>sql-server</strong>), you will need to modify the ARM template to match the correct names.</p>
 </div>
 <p>The result of initial deployment is as follows:</p>
-<p><img alt="Migration starting point" src="../media/migration-starting-point.png" /></p>
+<p><img alt="Migration starting point" src="../media/migration-starting-point.png" style="display: block; margin: 0 auto;" /></p>
 <ol>
 <li><a href="https://github.com/VirtoCommerce/vc-platform/blob/dev/azureDeployPlatformAndFrontend.json">Use an ARM template</a> to add the necessary Azure resources for running the Platform with the Theme v.2.0.0 and higher. </li>
 <li>
 <p><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployPlatformAndFrontend.json">Open the Azure portal</a> and provide the required Azure resources. Use the existing resource group and the name of the existing Platform Web Application. If the name of the platform application doesn’t match the existing application, the new web application will be created for the Platform.</p>
-<p><img alt="Add resources" src="../media/add-resources.png" /></p>
+<p><img alt="Add resources" src="../media/add-resources.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Click <strong>Review + create</strong>, verify the values again, and click <strong>Create</strong>. The deployment will begin.</p>
 </li>
 <li>
 <p>After the deployment is complete, the resource list will look as follows (new resources are highlighted): </p>
-<p><img alt="New resources" src="../media/new-resources.png" /></p>
+<p><img alt="New resources" src="../media/new-resources.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Add a store URL (<strong>Stores &rarr; B2B-store &rarr; Store URL</strong>) pointing to the Azure Application Gateway IP address in the format <strong><a href="http://x.x.x.x/">http://x.x.x.x/</a></strong>:</p>
-<p><img alt="Store URL" src="../media/add-store-url.png" /></p>
+<p><img alt="Store URL" src="../media/add-store-url.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Use the Azure Application Gateway IP address (<strong><a href="http://x.x.x.x/">http://x.x.x.x/</a></strong>) to access the frontend part of the Virto Commerce solution:</p>
-<p><img alt="Azure App Gateway IP" src="../media/azure-app-gateway-ip.png" /></p>
+<p><img alt="Azure App Gateway IP" src="../media/azure-app-gateway-ip.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Test the functionality, then remove the Storefront resources:</p>
-<p><img alt="Remove Storefront" src="../media/delete-storefront.png" /></p>
+<p><img alt="Remove Storefront" src="../media/delete-storefront.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <p><br>

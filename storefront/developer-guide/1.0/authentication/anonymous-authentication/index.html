@@ -2732,7 +2732,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 14, 2025 09:52:31 UTC">March 14, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -2755,7 +2755,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 id="anonymous-authentication">Anonymous Authentication<a class="headerlink" href="#anonymous-authentication" title="Permanent link">&para;</a></h1>
 <p>Anonymous authentication allows an e-commerce system to track and manage interactions for users who haven't logged in. In the Virto Commerce Frontend Application, anonymous users are recognized using a unique identifier stored locally in their browser.</p>
 <p>When a visitor accesses the website, Virto Commerce assigns an anonymous ID to that user if they don’t already have one. This ID is stored in the browser’s <code>localStorage</code>. This enables the system to recognize the user as long as they remain on the same device and browser. When the Frontend Application needs to fetch data about the user (for example, their shopping cart, browsing history, or preferences), it sends a <code>getMe</code> request to the backend. This request includes the anonymous user ID that was stored earlier in <code>localStorage</code>. Instead of creating a new anonymous user for every session, the backend now checks whether an ID was provided in the request. If the ID is not empty and does not belong to an existing user, that ID is returned. Otherwise, a new one is generated. In other words, no anonymous profiles are stored on the server, and the backend only checks whether an ID was provided in the request. </p>
-<p><img alt="Anonymous authentication" src="../media/anonymous-authentication.png" /></p>
+<p><img alt="Anonymous authentication" src="../media/anonymous-authentication.png" style="display: block; margin: 0 auto;" /></p>
 <p>Anonymous authentication provides the following benefits:</p>
 <ul>
 <li>Enhanced user experience.</li>
