@@ -22,7 +22,7 @@ You can send the order to AvaTax:
         1. Click **Send to AvaTax** in the **Details of AvaTax transaction** blade.
         1. The report of the process results appears in the next blade.
         
-        ![image](../media/single-order.png)
+        ![image](../media/single-order.png){: style="display: block; margin: 0 auto;" }
 
     * For multiple orders: 
         1. In the main menu, click **Orders** to open the **Order details** blade.
@@ -30,7 +30,7 @@ You can send the order to AvaTax:
         1. Click **Send to AvaTax** in the top menu.
         1. The report of the process results appears in the next blade. The orders are sent to Avalara only for the stores that use AvaTax as their tax provider.
 
-        ![image](../media/multiple-orders.png){: width="700"}
+        ![image](../media/multiple-orders.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
     * Set **AvaTax** as a tax provider for your store to send transactions to AvaTax.
@@ -43,7 +43,7 @@ It displays:
 * The link to the AvaTax transaction corresponding to the order.
 * Raw AvaTax transaction representation.
 
-![AvaTax transaction details blade](../media/avatax-widget.png){: width="700"}
+![AvaTax transaction details blade](../media/avatax-widget.png){: style="display: block; margin: 0 auto;" width="700"}
 
 
 

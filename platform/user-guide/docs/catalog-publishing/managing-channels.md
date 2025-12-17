@@ -12,11 +12,11 @@ To evaluate the completeness of a catalog description create a **channel** as fo
 1. Click **Channels** in the main menu.
 1. In the next blade, click **Add** in the toolbar to create a new channel.
 
-    ![New channel](media/create-channel.png)
+    ![New channel](media/create-channel.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, fill in the following fields:
 
-    ![Create channel](media/create-channel-2.png)
+    ![Create channel](media/create-channel-2.png){: style="display: block; margin: 0 auto;" }
     <br>
     <br>
     ![Readmore](media/readmore.png){: width="25"} [Configuring products completeness evaluator](/platform/developer-guide/latest/Extensibility/product-completeness-evaluator)
@@ -24,20 +24,20 @@ To evaluate the completeness of a catalog description create a **channel** as fo
     <br>
 1. Click **Create** to save the changes. The channel will appear in the **Channels** blade.
 
-    ![New channel](media/new-channel.png)
+    ![New channel](media/new-channel.png){: style="display: block; margin: 0 auto;" }
 
 1. Select the created channel from the list. 
 
 1. In the next blade, click **Evaluate** in the toolbar to start the evaluation. 
 1. You will see the result in the next blade.
 
-    ![Evaluation results](media/evaluation-results.png)
+    ![Evaluation results](media/evaluation-results.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Refresh** in the **Channels** blade to see the result of the evaluation. 
 
 In our case, the completeness of the **Bolts** catalog equals 75%.
 
-![Catalog completeness](media/bolts-catalog-completeness.png)
+![Catalog completeness](media/bolts-catalog-completeness.png){: style="display: block; margin: 0 auto;" }
 
 ## View missing descriptions
 
@@ -49,11 +49,11 @@ To see what is missing in the product descriptions:
     !!! note
         You may need to click the cross in the filters field to remove the filters and see full results list.
 
-        ![Remove filter](media/remove-filter.png)
+        ![Remove filter](media/remove-filter.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, the reddish background indicates the widgets with incomplete information. 
 
-    ![Missing descriptions](media/view-items-details.png)
+    ![Missing descriptions](media/view-items-details.png){: style="display: block; margin: 0 auto;" }
 
 Click on the reddish widgets to complete the descriptions from the current location. 
 

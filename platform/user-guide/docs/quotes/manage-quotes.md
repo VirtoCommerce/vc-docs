@@ -17,7 +17,7 @@ To view the list of submitted quotes and details of a specific quote:
 
 1. Quote details open in the next blade. 
 
-    ![Image](media/view-quotes.png)
+    ![Image](media/view-quotes.png){: style="display: block; margin: 0 auto;" }
 
 You now can view and edit the quote details.
 
@@ -38,7 +38,7 @@ With the top toolbar, you can:
 * Cancel a quote with a comment.
 * Delete a quote.
 
-    ![Top menu](media/top-menu.png)
+    ![Top menu](media/top-menu.png){: style="display: block; margin: 0 auto;" }
 
 In the general information section, you can:
 
@@ -57,7 +57,7 @@ In the general information section, you can:
 * Assign an employee to process the quote from the dropdown list.
 * Leave public and internal comments.  
 
-![General info](media/general-information.png)
+![General info](media/general-information.png){: style="display: block; margin: 0 auto;" }
 
 In the widgets section, you can view:
 
@@ -67,7 +67,7 @@ In the widgets section, you can view:
 * Quote dynamic properties.
 * Quote changes history.
 
-![Widgets](media/widgets.png)
+![Widgets](media/widgets.png){: style="display: block; margin: 0 auto;" }
 
 ### Edit shipping/ billing addresses
 
@@ -79,7 +79,7 @@ In the widgets section of the **Quote details** blade, you can add or edit shipm
 1. Click **OK** to save the changes, or
 1. Click **Delete** in the toolbar to delete the address. 
 
-![Edit address](media/edit-address.png)
+![Edit address](media/edit-address.png){: style="display: block; margin: 0 auto;" }
 
 ### Attach files
 
@@ -91,7 +91,7 @@ To attach files to quotes:
 1. In the next **Quote attachments** blade, drag and drop you files, or
 1. Browse your files from your computer.
 
-![Attach files](media/attach-files.png){: width="800"}
+![Attach files](media/attach-files.png){: style="display: block; margin: 0 auto;" width="800"}
 
 The attached files appear in the list below.
 
@@ -103,7 +103,7 @@ To manage quote totals, click on the **Totals** widget. In the next **Edit line 
 * Propose personalized prices and discounts.
 * Calculate grand total based on the shipping rate.
 
-![Manage quote](media/manage-quote.png)
+![Manage quote](media/manage-quote.png){: style="display: block; margin: 0 auto;" }
 
 In our example:
 
@@ -112,7 +112,7 @@ In our example:
     !!! note
         You can also propose special prices for a specific quantity of products. Click **Add** above the quantity field to specify the quantity and the price.
 
-        ![Price/amount](media/price-amount.png)
+        ![Price/amount](media/price-amount.png){: style="display: block; margin: 0 auto;" }
 
 * We have set a relative discount of  10%. This is the **Discount** line in the totals calculation section.
 * We have set the shipping rate to 10 USD. This is the **Shipping** line in the calculation section. 
@@ -120,7 +120,7 @@ In our example:
 
 !!! note
     In case you forgot to fill the quote with items or you have offered an item with a zero price, you will see the following notification:<br>
-    ![Incomplete quote](media/incomplete-quote-proposal.png)
+    ![Incomplete quote](media/incomplete-quote-proposal.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

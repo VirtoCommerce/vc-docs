@@ -15,11 +15,11 @@ To create new roles and assign permissions to them:
 1. In the next blade, click **Roles** to open the **Roles** blade.
 1. Click **Add** in the toolbar.
 
-	![Path](media/roles-path.png)
+	![Path](media/roles-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in the following fields:
 
-	![New user](media/new-role-fields.png)
+	![New user](media/new-role-fields.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes.
 

@@ -1,6 +1,6 @@
-# Manage Taxes
+# Manage Tax Providers
 
-Managing taxes includes:
+Managing tax providers includes:
 
 * [Viewing the list of available tax providers.](managing-taxes.md#view-tax-providers)
 * [Enabling/disabling tax providers.](managing-taxes.md#enabledisable-tax-provider)
@@ -15,7 +15,7 @@ To view the available tax providers:
 1. In the next **Store details** blade, click on the **Tax providers** widget.
 1. The next blade displays the available tax providers:
 
-![View tax providers](media/view-tax-providers.png)
+![View tax providers](media/view-tax-providers.png){: style="display: block; margin: 0 auto;" }
 
 ## Enable/ disable tax provider
 
@@ -24,7 +24,7 @@ To view the available tax providers:
 1. In the next blade, turn the switch to on/ off.
 1. Click **Save** in the toolbar to save the changes.
 
-![Enable tax provider](media/enable-tax-provider.png)
+![Enable tax provider](media/enable-tax-provider.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

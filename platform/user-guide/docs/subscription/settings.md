@@ -8,11 +8,11 @@ To configure subscriptions settings:
 
     * General settings:
 
-        ![General settings](media/general-settings.png)
+        ![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
     * Subscriptions settings:
 
-        ![Subscriptions](media/subscriptions-settings.png)
+        ![Subscriptions](media/subscriptions-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

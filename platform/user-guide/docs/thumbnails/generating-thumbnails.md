@@ -10,7 +10,7 @@ To create a new thumbnail generation job:
 1. In the next **Thumbnail generation tasks list** blade, click **Add** in the toolbar.
 1. Fill in the following fields:
 
-	![fields](media/thumbnail-job.png)
+	![fields](media/thumbnail-job.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -33,14 +33,14 @@ To run the job manually:
 	* **Process changes** to generate thumbnails only for new or changed images.
 	* **Regenerate** to force generation process for all images.
 
-		![notification](media/notification.png)
+		![notification](media/notification.png){: style="display: block; margin: 0 auto;" }
 
 	!!! note
 		If you are running this job for the first time, the **Process Changes** option will be grayed out.
 
 1. The result is displayed in the next **Process images** blade:
 
-	![result](media/result.png)
+	![result](media/result.png){: style="display: block; margin: 0 auto;" }
 
 ### Scheduled run
 

@@ -6,11 +6,11 @@ To manage dynamic associations you need to create a rule according to which the 
 1. In the next blade, click **Dynamic product associations**. 
 1. In the next blade, click **Add** in the toolbar.
 
-    ![Create rule](media/create-rule.png)
+    ![Create rule](media/create-rule.png){: style="display: block; margin: 0 auto;" }
 
 1. Specify the following parameters:
 
-    ![dynamic association rule](media/dynamic-associations-rule.png)
+    ![dynamic association rule](media/dynamic-associations-rule.png){: style="display: block; margin: 0 auto;" }
 
     1. [Set main parameters for the rule.](managing-dynamic-associations.md#set-main-parameters-for-rule)
     1. [Manage products to match.](managing-dynamic-associations.md#manage-products-to-match)
@@ -38,7 +38,7 @@ To set the applicability of the rule:
     1. Set the priority of the newly created rule, where **1** is the highest.
 1. Click **OK** to save the changes. 
 
-![Rule parameters](media/parameters-for-rule.png)
+![Rule parameters](media/parameters-for-rule.png){: style="display: block; margin: 0 auto;" }
 
 The rule's applicability has been set.
 
@@ -51,15 +51,15 @@ To set the products with which the promoted item will appear:
 1. In the next blade:
     1. Click **Select categories** to select the product categories with which your product will be displayed, then click **Confirm** in the toolbar.
 
-        ![Select categories](media/select-categories-1.png)
+        ![Select categories](media/select-categories-1.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **Select properties** to select properties from a dropdown list or add new ones. This will limit the products with which your product will be displayed to a specific brand, or material, or size. Then click **OK**.
     
-        ![Select properties](media/select-properties-1.png)
+        ![Select properties](media/select-properties-1.png){: style="display: block; margin: 0 auto;" }
     
     1. Click **Set value to selected properties** to specify the value of the selected properties, then click **OK**.
 
-        ![Select values](media/create-value-1.png)
+        ![Select values](media/create-value-1.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Confirm** to save the changes.
 
@@ -73,15 +73,15 @@ To set a product for promotion:
 1. In the next blade:
     1. Click **Select categories** to select a category to which the product to be promoted belongs, then click **Confirm** in the toolbar.
 
-        ![Select category](media/select-categories-2.png)
+        ![Select category](media/select-categories-2.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **Select properties** to select properties from a dropdown list or add new properties. This will limit the products you want to promote to a specific brand, material, or size. Then click **OK**.
 
-        ![Select property](media/select-properties-2.png)
+        ![Select property](media/select-properties-2.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **Set value to selected properties** to specify the value of the selected properties, then click **OK**.
 
-        ![Set values](media/set-value-2.png)
+        ![Set values](media/set-value-2.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Confirm** to save the changes.
  
@@ -97,7 +97,7 @@ To narrow down the output of associated products:
     1. Select ascending or descending sorting order.
     1. Limit the number of the associated products displayed.
 
-        ![Output tuning](media/tune-output.png)
+        ![Output tuning](media/tune-output.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 
@@ -113,5 +113,3 @@ The output range has been set.
     <a href="../dynamic-associations-overview">← Dynamic associations overview</a>
     <a href="../dynamic-associations-restapi">REST API testing →</a>
 </div>
-
-

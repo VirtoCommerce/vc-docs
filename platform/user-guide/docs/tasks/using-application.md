@@ -42,7 +42,7 @@ To create a new task:
 
 The assignee receives an email notification of the assigned task:
 
-![Notification](media/notification.png)
+![Notification](media/notification.png){: style="display: block; margin: 0 auto;" }
 
 ## Process tasks
 

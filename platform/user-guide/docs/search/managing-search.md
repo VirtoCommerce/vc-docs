@@ -25,7 +25,7 @@ To open search index details:
 
     * Last indexed date, record count, and scope if specified by the user:
 
-    ![Search index](media/open-search-index-module.png)
+    ![Search index](media/open-search-index-module.png){: style="display: block; margin: 0 auto;" }
 
 ## Build search index
 
@@ -42,7 +42,7 @@ To build search index:
 
 The next blade displays the result of indexation:
 
-![Indexation result](media/indexation-result.png)
+![Indexation result](media/indexation-result.png){: style="display: block; margin: 0 auto;" }
 
 ## Blue-green indexing
 
@@ -65,13 +65,13 @@ To revert to the previous index, use the **Swap indices** feature:
 
 1. Click **Show backup indices** in the top toolbar.
 
-    ![Backup indices](media/show-backup-indices.png)
+    ![Backup indices](media/show-backup-indices.png){: style="display: block; margin: 0 auto;" }
 
 1. Click on the three dots to the left of the required document type.
 1. Select **Swap indices** in the popup menu.
 1. Click **Hide backup indices** in the top toolbar.
 
-    ![Three dots](media/three-dots.png)
+    ![Three dots](media/three-dots.png){: style="display: block; margin: 0 auto;" }
 
 The roles of the backup and active indices have been exchanged.
 
@@ -81,7 +81,7 @@ Elasticsearch implements blue-green indexing using Elasticsearch [aliases](https
 
 Each time you start the **Delete and build** process, the Elasticsearch index provider looks for an existing backup index by the backup alias, for example, `default-member-backup`, and deletes it if it is found. After that, when the reidnexing process starts, a new backup index is created with the `backup' alias. However, an actual index name is created dynamically: this is a special alphanumeric token suffix added to the end of the index name. The only way to tell which index is active is to look at its alias. After the indexing process is complete, the active and backup indices swap aliases, i.e. the active index becomes the backup index, and vice versa.
 
-![Kibana index alias](media/implementation.png)
+![Kibana index alias](media/implementation.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

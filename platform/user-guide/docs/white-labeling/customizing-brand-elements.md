@@ -15,7 +15,7 @@ To enable white labeling via the **Stores** module:
 1. In the next blade, click on the **White labeling** widget.
 1. In the next blade, turn the white labeling option to on.
 
-![Enabling white labeling via Stores](media/enabling-via-stores.png)
+![Enabling white labeling via Stores](media/enabling-via-stores.png){: style="display: block; margin: 0 auto;" }
 
 White labeling has been enabled.
 
@@ -28,7 +28,7 @@ To enable white labeling via the **Contacts** module:
 1. In the next blade, click on the **White labeling** widget.
 1. In the **White Labeling** blade, turn the white labeling option to on.
 
-![Enabling white labeling via Contacts](media/enabling-via-contacts.png)
+![Enabling white labeling via Contacts](media/enabling-via-contacts.png){: style="display: block; margin: 0 auto;" }
 
 White labeling has been enabled.
 
@@ -42,31 +42,31 @@ To add own logos and favicon:
 
 Your changes have been applied.
 
-![Before and after white labeling](media/before-after.png)
+![Before and after white labeling](media/before-after.png){: style="display: block; margin: 0 auto;" }
 
 ## Customize footer
 
 Let's create the following footer:
 
-![Footer example](media/footer-example.png)
+![Footer example](media/footer-example.png){: style="display: block; margin: 0 auto;" }
 
 1. Go to **Content** --> Your store --> **Link lists**.
 1. In the **Link lists** blade, click **Add** in the toolbar.
 1. To create root categories, fill in the fields as follows:
 
-    ![Footer links](media/footer-links.png)
+    ![Footer links](media/footer-links.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         Name your footer link list **footer-links** so that the Platform recognizes it as a part of the footer structure.
 
 1. Click **Create**. The current result in the Frontend Application is as follows:
 
-    ![Footer result](media/footer-example1.png)
+    ![Footer result](media/footer-example1.png){: style="display: block; margin: 0 auto;" }
 
 1. Now let's add subcategories to the footer root categories. In the **Link lists** blade, click **Add** in the toolbar.
 1. For the **My account** category, fill in the fields as follows:
 
-    ![Root categories](media/footer-subcategories.png)
+    ![Root categories](media/footer-subcategories.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create**.
 

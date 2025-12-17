@@ -7,7 +7,7 @@ To manage personalization settings:
 1. Select **General**.
 1. In the next blade, configure the settings:
 
-	![Settings](media/personalization-settings.png)
+	![Settings](media/personalization-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

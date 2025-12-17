@@ -7,7 +7,7 @@ To open general settings:
 1. Click **General**.
 1. Configure the following settings:
 
-    ![General settings](media/general-settings.png)
+    ![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

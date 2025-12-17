@@ -7,7 +7,7 @@ To open the Content module settings:
 1. Click **Search**.
 1. Set date and time at which the content indexing task will start:
 
-    ![Settings](media/settings.png)
+    ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** to save the changes.
 

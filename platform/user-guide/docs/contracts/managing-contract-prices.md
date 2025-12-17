@@ -18,13 +18,13 @@ To add a price list to the contract:
 
 1. In the next blade, click **Link pricelist**.
 
-	![Link a price list](media/link-price-list-button.png)
+	![Link a price list](media/link-price-list-button.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next **Available pricelists** blade, check the price list you want to use as the default.
 
 1. Click **Confirm** in the toolbar.
 
-	![Adding price list](media/adding-price-list.png){: width="350"}
+	![Adding price list](media/adding-price-list.png){: style="display: block; margin: 0 auto;" width="350"}
 
 The appropriate prices will be displayed in the **Contract prices** blade.
 
@@ -38,7 +38,7 @@ To update the prices after adding a default price list:
 
 1. Click **Save** to save the changes.
 
-	![Modify prices](media/modifying-price.png){: width="700" height="700"}
+	![Modify prices](media/modifying-price.png){: style="display: block; margin: 0 auto;" width="700"}
 
 To create a new price to be used when the price differs based on a different minimum quantity:
 
@@ -48,11 +48,11 @@ To create a new price to be used when the price differs based on a different min
 
 1. Click **Save**. 
 
-![Add new price](media/add-new-price.png){: width="700" height="700"}
+![Add new price](media/add-new-price.png){: style="display: block; margin: 0 auto;" width="700"}
 
 The prices will now be marked as **Updated** and **New**, while the product you changed the prices for will get marked as **Modified**:
 
-![Updated prices](media/updated-prices.png){: width="700" height="700"}
+![Updated prices](media/updated-prices.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
 	Any changes you make to the prices in your contract will not affect the default price list. These changes only overlap the default prices in that specific contract. This means that a single default price list can be used for multiple contracts, and these contracts will not affect each other.
@@ -64,7 +64,7 @@ The prices will now be marked as **Updated** and **New**, while the product you 
 When you update contract prices, a new price list is created to keep these changes. 
 This price list is accessible in the [Pricing module](../pricing/overview.md) as `Contract-YourContractName-DefaultPriceListName` (`Contract-b2b test organization-MFDUSD` in the picture below):
 
-![Price list for modified contract prices](media/price-list-for-modified-prices.png){: width="700" height="700"}
+![Price list for modified contract prices](media/price-list-for-modified-prices.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
 	The `YourContractName` part of the price list name is the name you originally gave to your contract. 
@@ -79,7 +79,7 @@ To make the default price and the contract price updates applicable for the cust
 * The one with the suffix `-Base` refers to the default price list.
 * The one with the suffix `-Priority` is the price list with updated prices:
 
-![Price list assignments for modified contract prices](media/price-list-assignments-for-modified-prices.png){: width="700" height="700"}
+![Price list assignments for modified contract prices](media/price-list-assignments-for-modified-prices.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
 	The assignment having the `-Priority` suffix logically has a higher priority, and its prices overlap the default prices.
@@ -94,7 +94,7 @@ To restore the initial price:
 
 1. Click **Restore** in the top toolbar.
 
-	![Restoring prices](media/restoring-prices.png){: width="700" height="700"}
+	![Restoring prices](media/restoring-prices.png){: style="display: block; margin: 0 auto;" width="700"}
 
 1. Confirm your action.
 

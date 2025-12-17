@@ -60,7 +60,7 @@ To configure the receiver settings:
 
 1. In the left menu, click **Project Overview** --> **Web**.
 
-    ![Web app](media/add-web-app.png){: width="650"}
+    ![Web app](media/add-web-app.png){: style="display: block; margin: 0 auto;" width="650"}
 
 1. Enter application name, then click **Register app**.
 1. In the **Add Firebase SDK** section, locate settings to paste to the `PushMessages.FcmReceiverOptions` section in the **appsettings.json** file.
@@ -137,11 +137,11 @@ To ensure proper configuration across different environments, update the **envir
 
 You will start receiving push messages as soon as you approve them:
 
-![Approval](media/allow-block.png){: width="400"}
+![Approval](media/allow-block.png){: style="display: block; margin: 0 auto;" width="400"}
 
 Browser notifications appear in the lower right corner of your screen:
 
-![Browser notifications](media/browser-notifications.png)
+![Browser notifications](media/browser-notifications.png){: style="display: block; margin: 0 auto;" }
 
 Clicking on it redirects user to the frontend application.
 
@@ -149,7 +149,7 @@ If you block messages in your browser, you will still be able to see them in the
 
 You can change your decision at any time:
 
-![Change decision](media/change-decision.png){: width="400"}
+![Change decision](media/change-decision.png){: style="display: block; margin: 0 auto;" width="400"}
 
 <br>
 <br>

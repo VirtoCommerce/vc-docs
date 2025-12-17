@@ -7,7 +7,7 @@ To configure Thumbnail settings:
 1. Click **General**.
 1. In the next blade, configure the following settings: 
 
-    ![General settings](media/thumbnail-general-settings.png){: width="700"}
+    ![General settings](media/thumbnail-general-settings.png){: style="display: block; margin: 0 auto;" width="700"}
 
 1. Click **Save** in the toolbar to save the changes.
 

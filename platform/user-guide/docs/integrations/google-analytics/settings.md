@@ -11,7 +11,7 @@ To set Google Analytics 4 module:
 1. Configure your settings in the next blade.
 1. Click **Save** in the toolbar to save the changes.
 
-![Settings](../media/ga-settings.png){: width="800"}
+![Settings](../media/ga-settings.png){: style="display: block; margin: 0 auto;" width="800"}
 
 
 

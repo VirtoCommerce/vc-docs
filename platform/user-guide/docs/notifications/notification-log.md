@@ -15,7 +15,7 @@ To view the log of a specific notification:
 1. In the next blade, click on the **Notification log** widget.
 1. The next blade shows whether the notification was delivered successfully or failed when it was sent.
 
-![Notification log](media/notification-log-widget-path.png)
+![Notification log](media/notification-log-widget-path.png){: style="display: block; margin: 0 auto;" }
 
 ## Notification activity feed
 
@@ -25,7 +25,7 @@ To view the log of all the notifications sent:
 1. In the next **Notifications** blade, click **Notification activity feed**.
 1. The next blade shows the notifications log.
 
-![Notification activity feed](media/notification-activity-feed-path.png){: width="800"}
+![Notification activity feed](media/notification-activity-feed-path.png){: style="display: block; margin: 0 auto;" width="800"}
 
 To review email messages sent to clients you can preview the email notifications: 
 

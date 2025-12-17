@@ -22,7 +22,7 @@ To upload a file:
     * Browsing it from your computer.
     * Pasting the file URL to the specified field.
 
-![Uploading](media/upload-files.png)
+![Uploading](media/upload-files.png){: style="display: block; margin: 0 auto;" }
 
 The uploading starts automatically.
 
@@ -34,7 +34,7 @@ For your convenience, the files are stored in folders. Choose either the existin
 
 To find a file, type its name in the search field and click <kbd>Enter</kbd>.
 
-![Search](media/search-files.png)
+![Search](media/search-files.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

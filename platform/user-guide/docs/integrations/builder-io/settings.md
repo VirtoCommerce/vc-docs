@@ -6,7 +6,7 @@ To configure Builder.io settings:
 1. In the next blade, select **BuilderIO**.
 1. Enable/disable Builder.io or add/edit API key, then click **Save** in the top toolbar.
 
-![Settings](media/settings.png)
+![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 The modifications have been saved.
 

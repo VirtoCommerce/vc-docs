@@ -204,7 +204,7 @@ nav:
                 - Catalog Personalization:
                       - Overview: catalog-personalization/overview.md
                       - Managing User Groups: catalog-personalization/user-groups.md
-                      - Example: catalog-personalization/example.md
+                      - Showing Catalog Items to Specific Users: catalog-personalization/example.md
                       - Settings: catalog-personalization/settings.md
                 - Catalog Publishing:
                       - Overview: catalog-publishing/overview.md

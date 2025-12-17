@@ -2,7 +2,7 @@
 
 Dynamic product associations refer to the establishment of connections between products based on predefined rules or conditions rather than fixed relationships. These associations are flexible and automatically adapt to changes in product inventory or attributes. For example, if a customer adds a laptop to their cart, the system automatically suggests relevant products that might interest the customer. This dynamic approach enhances the shopping experience, increases cross-selling opportunities, and streamlines product management:
 
-![Displaying related products](media/displaying-related-products.png)
+![Displaying related products](media/displaying-related-products.png){: style="display: block; margin: 0 auto;" }
 
 !!! note 
     Managing dynamic product associations requires preinstalled [Dynamic Associations module](https://github.com/VirtoCommerce/vc-module-dynamic-associations/releases).
@@ -26,5 +26,3 @@ With the dynamic product associations feature, you can:
     <a href="../advertising-spot">← Adding advertising spot</a>
     <a href="../managing-dynamic-associations">Managing dynamic associations →</a>
 </div>
-
-

@@ -19,11 +19,11 @@ To assign user groups to a category:
 1. In the next **Categories and items** blade, click three dots to the left of the category name, then click **Manage** in the popup menu. 
 1. In the next **Category details** blade, click on the **User Groups** widget.
 
-	![Path](media/user-groups-path.png)
+	![Path](media/user-groups-path.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a drop-down list.
 
-    ![User groups](media/user-groups-widget.png)
+    ![User groups](media/user-groups-widget.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes. 
 
@@ -39,7 +39,7 @@ To add a new user group:
 1. Click ![Save](media/save.png){: width="20"}. 
 1. Click **Save** in the toolbar to save the changes.
 
-![Path](media/new-user-group-path.png){: width="550"}
+![Path](media/new-user-group-path.png){: style="display: block; margin: 0 auto;" width="550"}
 
 Your new user group has been created.
 
@@ -52,11 +52,11 @@ To assign user groups to a product:
 1. In the next **Categories and items** blade, click the required product.
 1. In the next **Physical items details** blade, click on the **User Groups** widget.
 
-	![Path](media/assigning-user-group-to-product.png)
+	![Path](media/assigning-user-group-to-product.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a drop-down list.
 
-    ![User groups](media/user-groups-widget.png)
+    ![User groups](media/user-groups-widget.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes. 
 
@@ -66,7 +66,7 @@ The user group has been assigned to the product.
 !!! warning
 	Rebuild the search indexes for categories and products after assigning user groups:
 
-	![Rebuilding index](https://user-images.githubusercontent.com/7536694/31497248-d12a5efe-af5e-11e7-8938-b39d2b03ad1e.gif){: width="550"}
+	![Rebuilding index](https://user-images.githubusercontent.com/7536694/31497248-d12a5efe-af5e-11e7-8938-b39d2b03ad1e.gif){: style="display: block; margin: 0 auto;" width="550"}
 
 
 

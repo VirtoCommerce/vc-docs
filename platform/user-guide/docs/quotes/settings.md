@@ -7,7 +7,7 @@ To open the Quotes module general settings:
 1. Click **General**.
 1. In the next blade, configure the following settings:
 
-    ![General catalog settings](media/settings.png)
+    ![General catalog settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

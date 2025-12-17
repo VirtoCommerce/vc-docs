@@ -1,4 +1,4 @@
-﻿# Login on behalf
+﻿# Login on Behalf
 
 If you are an administrator or support engineer responsible for maintaining a Virto Commerce-based web store, you can use our **Login on behalf** feature. This feature allows you to log in as another user, which can be helpful for:
 

@@ -14,13 +14,13 @@ To anonymize personal data according to the customer's request:
 1. The next blades display personal data of your customers. Click on the required contact. 
 1. The next blade displays available contact details. Click **Anonymize data** in the top toolbar to anonymize them.
 
-	![Anonymize data](media/anonymize-contacts.png)
+	![Anonymize data](media/anonymize-contacts.png){: style="display: block; margin: 0 auto;" }
 
 1. Confirm your action.
 
 The personal data have been anonymized to comply with the customer's request in accordance with the GDPR:
 
-![Anonymized data](media/anonymized-data.png)
+![Anonymized data](media/anonymized-data.png){: style="display: block; margin: 0 auto;" }
 
 !!! note 
 	While the customer's login and email will appear as a GUID once anonymized, their address and other personal data will only appear as **Anonymized**. This is because both login and email must still have valid values to store order data, even after anonymizing.

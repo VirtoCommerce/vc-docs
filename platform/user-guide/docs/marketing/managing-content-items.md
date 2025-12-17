@@ -10,7 +10,7 @@ Managing dynamic content items includes:
 
 The first step of bringing marketing content online is creating content items:
 
-![step1](media/step1.png)
+![step1](media/step1.png){: style="display: block; margin: 0 auto;" }
 
 To create a dynamic content item:
 
@@ -20,11 +20,11 @@ To create a dynamic content item:
 1. In the next **Content items** blade, click **Add** in the toolbar.
 1. In the next **New content item** blade, click **Content item**. 
 
-	![path](media/add-content-item-path.png)
+	![path](media/add-content-item-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in the following fields:
 
-	![fields](media/new-content-item.png)
+	![fields](media/new-content-item.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes.
 
@@ -67,5 +67,3 @@ The item has been deleted.
     <a href="../dynamic-content-overview">← Dynamic content overview</a>
     <a href="../managing-content-placeholders">Managing content placeholders →</a>
 </div>
-
-

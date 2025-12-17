@@ -7,7 +7,7 @@ To open the **Elasticsearch** module settings:
 1. Select **Elasticsearch** from the list. 
 1. In the next blade, configure the following settings:
 
-    ![General settings](media/settings.png)
+    ![General settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the top toolbar to save the changes.
 

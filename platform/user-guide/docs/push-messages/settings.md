@@ -6,15 +6,15 @@ To open the settings of the **Push Message** module:
 1. In the search field of the next blade, type **Push message** to find the settings related to the module.
 1. Click **General** to configure the following settings:
 
-    ![General settings](media/general-settings.png)
+    ![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Background jobs** to configure the following settings:
 
-    ![Advanced settings](media/background-jobs-settings.png)
+    ![Advanced settings](media/background-jobs-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **FCM receiver options** to configure the following settings:
 
-    ![FCM receiver options](media/FCM-receiver-options.png)
+    ![FCM receiver options](media/FCM-receiver-options.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the top toolbar to save the changes.
 

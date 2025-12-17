@@ -13,24 +13,24 @@ To start using the Builder.io solution for a specific store:
 
 1. Copy the public API key in the Builder.io settings:
 
-    ![Copy API key](media/copy-api-key.gif) 
+    ![Copy API key](media/copy-api-key.gif){: style="display: block; margin: 0 auto;" }
 
 1. Paste the copied API key into the Platform: 
 
     1. Go to **Platform--> Stores --> Your store --> Settings widget --> BuilderIO settings**.
     1. Paste the copied API key into the appropriate field.
 
-    ![Paste API key](media/paste-api-key.gif)
+    ![Paste API key](media/paste-api-key.gif){: style="display: block; margin: 0 auto;" }
 
 1. Enable the Builder.io switch:
 
-    ![Switch](media/switch.png)
+    ![Switch](media/switch.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK**.
 
 Click on the link to start using Builder.io:
 
-![Builder.io link](media/builder-io-link.png)
+![Builder.io link](media/builder-io-link.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

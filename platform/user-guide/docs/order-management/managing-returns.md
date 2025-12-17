@@ -15,11 +15,11 @@ To create a return for a particular order:
 1. In the new blade, check the items that require a return. Enter the return reason, if necessary.
 1. Click **Make return**.
 
-    ![Creating a return](media/make-return-1.png)
+    ![Creating a return](media/make-return-1.png){: style="display: block; margin: 0 auto;" }
 
 1. In the **Return** blade, edit the fields with the description typed in green:
 
-    ![Return specification](media/make-return-2.png)
+    ![Return specification](media/make-return-2.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -34,7 +34,7 @@ To process the returns:
 1. In the **Edit order details and related documents** blade, click on the **Returns** widget.
 1. In the next blade, select the required return from the list.
 
-    ![Return processing](media/return-processing.png)
+    ![Return processing](media/return-processing.png){: style="display: block; margin: 0 auto;" }
 
 1. In the **Return** blade, change the return status and enter your resolution.
 1. Click **Save** in the toolbar to save the changes.

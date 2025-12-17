@@ -17,7 +17,7 @@ Click on the three dots to left of the page name to:
 * Copy its link.
 * Delete it.
 
-![pages list](media/pages-list.png){: width="450"}
+![pages list](media/pages-list.png){: style="display: block; margin: 0 auto;" width="450"}
 
 ## Create page
 
@@ -29,19 +29,19 @@ To create new pages:
     !!! note
         If you have the [Page Builder](../page-builder/overview.md) module installed, you can build pages from individual blocks by clicking **Design Page** in the blade below.
 
-![designer or html](media/designer-or-html.png)
+![designer or html](media/designer-or-html.png){: style="display: block; margin: 0 auto;" }
 
 ### Code-based creation
 
 To create a new page using markdown or html, fill in the following fields in the **Markdown** tab: 
 
-![markdown](media/new-md-page.png)
+![markdown](media/new-md-page.png){: style="display: block; margin: 0 auto;" }
 
 !!! info
     To manage page settings, switch to the Metadata tab. Click **Manage Metadata properties** to edit, add, or delete the settings.
 
     ??? Example
-        ![metadata tab](media/metadata-tab.png)
+        ![metadata tab](media/metadata-tab.png){: style="display: block; margin: 0 auto;" }
 
 ## Edit pages with .page and .page-draft extensions
 
@@ -50,13 +50,13 @@ To create a new page using markdown or html, fill in the following fields in the
 
 In the **Pages list** blade, select the desired page and edit the following fields:
 
-![Edit page](media/edit-page.png)
+![Edit page](media/edit-page.png){: style="display: block; margin: 0 auto;" }
 
 ## Edit pages with .md extension
 
 In the **Pages list** blade, select the desired page and edit it as markdown or html:
 
-![edit md page](media/edit-md-page.png)
+![edit md page](media/edit-md-page.png){: style="display: block; margin: 0 auto;" }
 
 Click **Save** in the toolbar to save the changes.
 

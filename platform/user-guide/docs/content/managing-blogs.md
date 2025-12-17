@@ -14,7 +14,7 @@ Click on the three dots to left of the blog name to:
 * Copy its link.
 * Delete it.
 
-![Blogs list](media/blogs-list.png){: width="450"}
+![Blogs list](media/blogs-list.png){: style="display: block; margin: 0 auto;" width="450"}
 
 Each blog contains an unlimited number of posts. The posts can have the following extensions:
 
@@ -29,7 +29,7 @@ New blogs can be:
 * Uploaded (see image above)
 * Added by clicking **Add blog** in the toolbar of the **Blogs List** blade. The following fields should be filled in:
 
-  ![New blog](media/new-blog.png)
+  ![New blog](media/new-blog.png){: style="display: block; margin: 0 auto;" }
 
 !!! note 
     Edit the fields to fill in by clicking **Manage Metadata properties** in the toolbar.
@@ -42,25 +42,25 @@ To create new post in your blog:
 * [Use Virto Commerce Page Builder](../page-builder/overview.md) to build posts from individual blocks by clicking **Design Page** in the blade below.
 * Use markdown or html by clicking **Html Page** in the blade below.
 
-![Designer or html](media/designer-or-html.png)
+![Designer or html](media/designer-or-html.png){: style="display: block; margin: 0 auto;" }
 
 ### Code-based creation
 
 To create a new post using markdown or html, fill in the following fields in the **Markdown** tab: 
 
-![Markdown](media/new-md-blog.png)
+![Markdown](media/new-md-blog.png){: style="display: block; margin: 0 auto;" }
 
 ## Edit posts with .page and .page-draft extensions
 
 In the **Blogs list** blade, select the desired post and edit the following fields:
 
-![Edit blog](media/edit-post.png)
+![Edit blog](media/edit-post.png){: style="display: block; margin: 0 auto;" }
 
 ## Edit posts with .md extension
 
 In the **Blogs List** blade, select the desired page and edit it as markdown or html:
 
-![Edit md blog](media/edit-md-blog.png)
+![Edit md blog](media/edit-md-blog.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

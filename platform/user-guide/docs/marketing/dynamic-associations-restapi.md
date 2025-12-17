@@ -4,23 +4,23 @@ To test the created rule, use REST API testing as follows:
 
 1. Let's say that according to the created rule you have 6 products to promote (products to display) as related products to 6 items (matching products).
 
-    ![Number of matching products](media/products-to-match-total.png)
+    ![Number of matching products](media/products-to-match-total.png){: style="display: block; margin: 0 auto;" }
 
 1. Copy any of the matching products ids from the Catalog module.
 
-    ![Matching product id](media/any-matching-product-id.png)
+    ![Matching product id](media/any-matching-product-id.png){: style="display: block; margin: 0 auto;" }
 
 1. Access the [REST API endpoint](https://virtostart-demo-admin.govirto.com/docs/index.html) and select **VirtoCommerce.DynamicAssociationsModule** from the dropdown list.
 
-    ![Dropdown](media/api-testing-1.png)
+    ![Dropdown](media/api-testing-1.png){: style="display: block; margin: 0 auto;" }
 
 1. Select **POST /api/dynamicassociations/evaluate**, paste the Id of the product from clipboard, and complete the request as follows:
 
-    ![Request](media/api-testing-2.png)
+    ![Request](media/api-testing-2.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Execute** to receive the response:
 
-    ![Response](media/api-testing-3.png)
+    ![Response](media/api-testing-3.png){: style="display: block; margin: 0 auto;" }
 
 You can see, the rule is correct returning 6 related items that will be displayed with the specified item. 
 
@@ -34,5 +34,3 @@ You can see, the rule is correct returning 6 related items that will be displaye
     <a href="../managing-dynamic-associations">← Managing dynamic associations</a>
     <a href="../../quotes/overview">Quotes module overview →</a>
 </div>
-
-

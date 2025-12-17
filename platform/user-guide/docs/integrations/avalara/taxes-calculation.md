@@ -11,23 +11,23 @@ To calculate taxes and send them to AvaTax automatically :
 1. Click **Avalara Tax Provider**. Make sure the **Is active** option is checked.
 1. In the **Edit tax provider** blade, click **Settings**.
 
-    ![path](../media/avalara-path.png)
+    ![path](../media/avalara-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Enter the desired [settings](settings.md). Enable scheduled synchronization of VC Platform orders with AvaTax to send orders to AvaTax automatically.
 
-    ![Enabled Synchronization](../media/send-orders-automatically.png)
+    ![Enabled Synchronization](../media/send-orders-automatically.png){: style="display: block; margin: 0 auto;" }
 
 1. Verify your connection by clicking the **Test connection with AvaTax** button.
     * If the button gets green, the connection was set successfully.
         
-        ![Successful connection](../media/connection-test.png)
+        ![Successful connection](../media/connection-test.png){: style="display: block; margin: 0 auto;" }
     
     * If the button gets red, correct the listed mistakes.
     
-        ![Connection errors](../media/connection-errors.png) 
+        ![Connection errors](../media/connection-errors.png){: style="display: block; margin: 0 auto;" }
 
 ## Send orders manually
-In some cases, you may need the option to manually send transaction data to AvaTax. For example, if an error occured during the automatic data transfer. 
+In some cases, you may need the option to manually send transaction data to AvaTax. For example, if an error occurred during the automatic data transfer. 
 
 To send the data to AvaTax manually:
 
@@ -35,7 +35,7 @@ To send the data to AvaTax manually:
 1. Select the required order.
 1. Click the red button to send the order to AvaTax.
 
-![Send data manually](../media/send-orders-manually.png){: width="700"}
+![Send data manually](../media/send-orders-manually.png){: style="display: block; margin: 0 auto;" width="700"}
 
 Your data has been successfully sent.
 

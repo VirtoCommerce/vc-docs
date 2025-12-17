@@ -13,15 +13,15 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
 1. Open your newly created page. It already contains a header and a footer that maintain the UI and design of the Virto Frontend Application:
 
-    ![Header and footer](media/header-footer.png)
+    ![Header and footer](media/header-footer.png){: style="display: block; margin: 0 auto;" }
 
     The left sidebar contains builder.io components and [Virto Commerce custom components](use-builder-io.md#virto-commerce-custom-components). If necessary, users can [add their own custom components](https://www.builder.io/c/docs/custom-components-intro) or edit the existing ones:
 
-    ![Custom components](media/custom-components.png)
+    ![Custom components](media/custom-components.png){: style="display: block; margin: 0 auto;" }
 
     For example, you can add an **N-pinned products** component to a custom category page. You can create fully customized category pages that include not only standard products but also specifically curated products that remain pinned:
 
-    ![N-pinned-products](media/n-pinned-products.png)
+    ![N-pinned-products](media/n-pinned-products.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Builder.io user guide](https://www.builder.io/c/docs/start-building)
 
@@ -31,23 +31,23 @@ The custom components by Virto include:
 
 * **Category**:
 
-    ![Category](media/custom-category.png)
+    ![Category](media/custom-category.png){: style="display: block; margin: 0 auto;" }
 
 * **Products**:
 
-    ![Products](media/custom-products.png)
+    ![Products](media/custom-products.png){: style="display: block; margin: 0 auto;" }
 
 * **Slider**:
 
-    ![Slider](media/custom-slider.png)
+    ![Slider](media/custom-slider.png){: style="display: block; margin: 0 auto;" }
 
 * **Favourite products**:
 
-    ![Favourite products](media/custom-favorite-products.png)
+    ![Favourite products](media/custom-favorite-products.png){: style="display: block; margin: 0 auto;" }
 
 * **VC-container** that allows images to be uploaded in a format fully supported by the Frontend Application. It eliminates the need for further resizing to fit other elements:
 
-    ![VC-container](media/vc-container.png)
+    ![VC-container](media/vc-container.png){: style="display: block; margin: 0 auto;" }
 
 * **Breadcrumbs**.
 
@@ -86,13 +86,13 @@ The selected component has been pasted to your Builder.io edited page.
 
 With Builder.io, you can customize both component and section color:
 
-![Component or section color](media/section-component-background.png)
+![Component or section color](media/section-component-background.png){: style="display: block; margin: 0 auto;" }
 
 For a solid color throughout, edit the section color: 
 
 1. Disable **Components-only-mode** switch:
 
-    ![Disable switch](media/disable-switch.gif)
+    ![Disable switch](media/disable-switch.gif){: style="display: block; margin: 0 auto;" }
 
 1. Create new page.
 1. Add a section to your new page.
@@ -100,7 +100,7 @@ For a solid color throughout, edit the section color:
 1. Click **Background** and set a color you need.
 1. Add the required components to your newly created section.
 
-![Edit background](media/edit-background-color.gif)
+![Edit background](media/edit-background-color.gif){: style="display: block; margin: 0 auto;" }
 
 
 
@@ -109,7 +109,7 @@ For a solid color throughout, edit the section color:
 If you are trying to change the formatting of the header and it does not react, try to refresh your preview.
 
 ??? Demo
-    ![Demonstration](media/builder.io_set_background.gif)
+    ![Demonstration](media/builder.io_set_background.gif){: style="display: block; margin: 0 auto;" }
 
 
 <br>

@@ -6,7 +6,7 @@ To configure the **Webhooks** module settings:
 1. In the search field of the next blade, type **Webhooks** to find the settings related to the module.
 1. Click **General** to configure the following settings:
 
-    ![Settings](media/settings.png)
+    ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

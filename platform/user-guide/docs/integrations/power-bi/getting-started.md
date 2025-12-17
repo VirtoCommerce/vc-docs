@@ -29,13 +29,13 @@ To get started with the module, complete the following steps:
 1. Click **Power BI Reports URL**.
 1. In the next blade, set up **Power BI Reports URL**.
 
-    ![Set up URL](../media/power-bi-report-url.png)
+    ![Set up URL](../media/power-bi-report-url.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
 Once set up, Virto Commerce will redirect users to Power BI reports from the Apps menu:
 
-![Redirect](../media/redirecting-to-power-bi.gif)
+![Redirect](../media/redirecting-to-power-bi.gif){: style="display: block; margin: 0 auto;" }
 
 
 <br>

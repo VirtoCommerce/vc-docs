@@ -15,13 +15,13 @@ To manage the list of customers linked to the contract (get prices based on this
 
 1. In the next blade, click **Add** to open the list of contacts and organizations.
 
-    ![Add companies](media/add-customers1.png)
+    ![Add companies](media/add-customers1.png){: style="display: block; margin: 0 auto;" }
 
 1. Check the companies you need to add to your contract. 
 
 1. Click **Confirm** in the toolbar.
 
-    ![Add companies](media/add-customers2.png){: width="350"}
+    ![Add companies](media/add-customers2.png){: style="display: block; margin: 0 auto;" width="350"}
 
 The specified companies have now been added to the contract. This also adds all child companies and related contacts, so it is not necessary to add each user individually.
 
@@ -37,7 +37,7 @@ To remove a company from your contract:
 
 1. Click **Delete** in the top toolbar.
 
-    ![Delete companies](media/delete-customers.png)
+    ![Delete companies](media/delete-customers.png){: style="display: block; margin: 0 auto;" }
 
 1. Confirm your action.
 

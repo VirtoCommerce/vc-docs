@@ -6,11 +6,11 @@ Before generating your thumbnails, you can edit various settings to adjust the i
 1. In the **Thumbnails generation task detail** blade, click ![pencil](media/pencil.png){: width="30" height="30"} next to the **Thumbnails settings** field.
 1. In the **Thumbnails settings** blade, click **Add** in the toolbar to add a new setting or click the required setting from the list to edit it. 
 
-	![path](media/thumbnail-settings-path.png)
+	![path](media/thumbnail-settings-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in or edit the following fields:
 
-	![settings](media/new-thumbnail-setting.png)
+	![settings](media/new-thumbnail-setting.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

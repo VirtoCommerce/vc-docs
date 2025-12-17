@@ -8,11 +8,11 @@ To configure AI smart capture settings:
 
     * General settings:
 
-        ![General settings](media/general-settings.png)
+        ![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
     * Purchase request settings:
 
-        ![Purchase request settings](media/purchase-request-settings.png)
+        ![Purchase request settings](media/purchase-request-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

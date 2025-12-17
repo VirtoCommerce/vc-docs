@@ -2,7 +2,7 @@
 
 The Virto's Marketing module allows you to customize the publishing conditions for your marketing content. With a variety of expressions and operators, you can tailor your content behavior to virtually any situation in your promotions and marketing campaigns.
 
-![Publish conditions](media/publish-conditions-options.png)
+![Publish conditions](media/publish-conditions-options.png){: style="display: block; margin: 0 auto;" }
 
 The following conditions can be configured:
 
@@ -26,7 +26,7 @@ The conditions below are configured to display content only to:
 * Residing in Ohio.
 * Who searched for anything containing **phone** in the **Cell phones** category.
 
-![Condition configuration example](media/publish-conditions/condition-set-example.png)
+![Condition configuration example](media/publish-conditions/condition-set-example.png){: style="display: block; margin: 0 auto;" }
  
 
 
@@ -39,5 +39,3 @@ The conditions below are configured to display content only to:
     <a href="../managing-published-content">← Managing published content</a>
     <a href="../advertising-spot">Adding advertising spot →</a>
 </div>
-
-

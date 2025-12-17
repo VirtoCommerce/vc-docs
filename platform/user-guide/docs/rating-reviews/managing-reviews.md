@@ -16,23 +16,23 @@ To see product reviews right after the product description in the Frontend Appli
 1. Type **Review** to find the settings related to the module.
 1. Select **Product reviews enabled**.
 
-    ![Enable reviews](media/enable-reviews.png)
+    ![Enable reviews](media/enable-reviews.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, switch the **Product reviews enabled** option to on. You can also configure the following options:
 
-    ![Review options](media/general-settings.png)
+    ![Review options](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 
 The reviews are now displayed after product description in the Frontend Application:
 
-![Reviews displayed](media/reviews-on-frontend.png)
+![Reviews displayed](media/reviews-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
 ## View reviews
 
 To view the list of submitted reviews, click **Rating and Reviews** in the main menu:
 
-![Review list](media/view-reviews-list.png)
+![Review list](media/view-reviews-list.png){: style="display: block; margin: 0 auto;" }
 
 ## View average rating
 
@@ -43,7 +43,7 @@ To view the products' average rating:
 1. In the next blade, select the required item.
 1. In the next blade, find the reviews widget.
 
-![Average rating](media/average-rating.png)
+![Average rating](media/average-rating.png){: style="display: block; margin: 0 auto;" }
 
 In our case, the product has received 2 reviews with an average rating of 3.5 out of 5.
 
@@ -59,7 +59,7 @@ Moderating reviews is crucial because it allows you to remove unwanted content a
     * **Reset Review Status** to change your previous decision to approve or reject the review.
     * **Delete** to delete the review without the option to restore it. 
 
-![Moderating reviews](media/moderating-ratings.png)
+![Moderating reviews](media/moderating-ratings.png){: style="display: block; margin: 0 auto;" }
 
 ## Email review reminders
 
@@ -77,7 +77,7 @@ To configure order request review notifications:
 1. In the next blade, click **Order request review notification**.
 1. Fill in the fields as described [here](../notifications/notification-list.md#email-notifications) or use the [Notification Templates](../notifications/notification-templates.md).
 
-![Customize notifications](media/customize-notification.png)
+![Customize notifications](media/customize-notification.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
     You can [customize your notifications for a specific store](../store/settings.md).
@@ -91,7 +91,7 @@ To enable email review reminder:
 1. Click **Email Review Reminder**.
 1. In the next blade, enable the reminder and fill in the fields.
 
-    ![Set email reminder](media/set-email-reminder.png)
+    ![Set email reminder](media/set-email-reminder.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

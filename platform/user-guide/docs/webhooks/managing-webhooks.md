@@ -15,7 +15,7 @@ To create a new webhook:
 1. The next blade displays the list of existing webhooks. Click **Add** in the toolbar.
 1. In the next blade, fill in the following fields:
 
-    ![New webhook](media/new-webhook.png){: width="700"}
+    ![New webhook](media/new-webhook.png){: style="display: block; margin: 0 auto;" width="700"}
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -51,7 +51,7 @@ The webhook has been deleted.
 
 Upon updating the Virto Commerce Platform, users employing webhooks with multiple event subscriptions in previous versions may encounter the following warning message:
 
-![Warning message](media/warning.png)
+![Warning message](media/warning.png){: style="display: block; margin: 0 auto;" }
 
 You can continue using such a webhook as before, although **you will not be able to edit it**. However, we recommend that you remove such webhooks and replace them with new ones. 
 

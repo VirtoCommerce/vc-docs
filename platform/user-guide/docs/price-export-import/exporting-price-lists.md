@@ -14,7 +14,7 @@ To start exporting:
 1. In the next blade, check the price list to export.
 1. In the next blade, click on the **Prices** widget.
 
-![Export pricelists](media/export-pricelists.png)
+![Export pricelists](media/export-pricelists.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Export all prices from price list
@@ -25,11 +25,11 @@ To export all prices from a price list:
 1. In the top toolbar, click **Export** to start exporting.
 1. You will see a notification, that all the lines in the selected category will be exported to a CSV file:
 
-    ![Exporting ALL lines](media/all-prices-export.png)
+    ![Exporting ALL lines](media/all-prices-export.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Export**. You can see the export progress in the next blade. When the export is complete, you will see a link to download the generated CSV file:
 
-    ![Download SCV](media/download-link.png)
+    ![Download SCV](media/download-link.png){: style="display: block; margin: 0 auto;" }
 
 All prices from the price list have been successfully exported to a CSV file. 
 
@@ -43,7 +43,7 @@ To export selected prices from a price list:
 1. Click **Export** in the top toolbar to start exporting. 
 1. You will see a notification, that the selected lines will be exported to a CSV file:
 
-    ![Exporting selected lines](media/selected-prices-export.png)
+    ![Exporting selected lines](media/selected-prices-export.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Export**. You can see the export progress in the next blade. When the export is complete, you will see a link to download the generated CSV file.
 
@@ -58,16 +58,16 @@ To export all prices from a filtered price list:
 1. Check the items you need to export.
 1. Filter the list by entering a keyword to the search field, for example, **bolts**:
 
-    ![Filtered prices](media/filtered-prices.png)
+    ![Filtered prices](media/filtered-prices.png){: style="display: block; margin: 0 auto;" }
 
 1. Bulk select all the filtered prices by checking the top check:
 
-    ![Bulk select](media/bulk-select-prices.png)
+    ![Bulk select](media/bulk-select-prices.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Export** in the top toolbar to start exporting.
 1. You will see a notification, that the selected lines will be exported to a CSV file:
 
-    ![Export filtered prices](media/export-filtered-prices.png)
+    ![Export filtered prices](media/export-filtered-prices.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Export**. You can see the export progress in the next blade. When the export is complete, you will see a link to download the generated CSV file:
 
@@ -81,7 +81,7 @@ To customize exported information to your needs, use **advanced export**:
 1. In the next blade, click **Export** in the top toolbar.
 1. In the next blade, you will see the following filters to apply:
 
-    ![Advanced filters](media/price-export-import-advanced-filter.png)
+    ![Advanced filters](media/price-export-import-advanced-filter.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Start** to start exporting.
 1. You can see the export progress in the next blade. When the export is complete, you will see a link to download the generated CSV file.
@@ -89,7 +89,7 @@ To customize exported information to your needs, use **advanced export**:
 !!! note
     You can apply advanced filters to the first 3 export options described above. Click **Use advanced export** in the notification window:
     
-    ![Advanced filter](media/use-advanced-filter-from-notification.png)
+    ![Advanced filter](media/use-advanced-filter-from-notification.png){: style="display: block; margin: 0 auto;" }
 
 The required items have been exported to a CSV file.
 

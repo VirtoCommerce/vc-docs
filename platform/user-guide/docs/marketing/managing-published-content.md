@@ -4,7 +4,7 @@ The published content management feature determines the conditions under which y
 
 This is the third step of bringing marketing content online:
 
-![step1](media/step3.png)
+![step1](media/step3.png){: style="display: block; margin: 0 auto;" }
 
 ## Add published content
 
@@ -15,11 +15,11 @@ To add a published content item:
 1. In the next blade, click **Published content**.
 1. In the next **Published content** blade, click **Add** in the toolbar.
 
-	![Published content path](media/published-content-path.png)
+	![Published content path](media/published-content-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in the following fields:
 
-	![Fields](media/published-content.png)
+	![Fields](media/published-content.png){: style="display: block; margin: 0 auto;" }
 
 The published content has been added.
 
@@ -53,5 +53,3 @@ The content element has been deleted.
     <a href="../managing-content-placeholders">← Managing content placeholders</a>
     <a href="../publish-conditions">Publishing conditions →</a>
 </div>
-
-
