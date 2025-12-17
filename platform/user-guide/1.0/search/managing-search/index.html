@@ -5491,7 +5491,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../catalog-personalization/example/" class="md-nav__link">
-        Example
+        Showing Catalog Items to Specific Users
       </a>
     </li>
   
@@ -12835,7 +12835,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 06:27:07 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 04:59:28 UTC">December 17, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -12892,7 +12892,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Last indexed date, record count, and scope if specified by the user:</p>
 </li>
 </ul>
-<p><img alt="Search index" src="../media/open-search-index-module.png" /></p>
+<p><img alt="Search index" src="../media/open-search-index-module.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <h2 id="build-search-index">Build search index<a class="headerlink" href="#build-search-index" title="Permanent link">&para;</a></h2>
@@ -12913,7 +12913,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ol>
 <p>The next blade displays the result of indexation:</p>
-<p><img alt="Indexation result" src="../media/indexation-result.png" /></p>
+<p><img alt="Indexation result" src="../media/indexation-result.png" style="display: block; margin: 0 auto;" /></p>
 <h2 id="blue-green-indexing">Blue-green indexing<a class="headerlink" href="#blue-green-indexing" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12933,7 +12933,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>
 <p>Click <strong>Show backup indices</strong> in the top toolbar.</p>
-<p><img alt="Backup indices" src="../media/show-backup-indices.png" /></p>
+<p><img alt="Backup indices" src="../media/show-backup-indices.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Click on the three dots to the left of the required document type.</p>
@@ -12941,14 +12941,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Select <strong>Swap indices</strong> in the popup menu.</li>
 <li>
 <p>Click <strong>Hide backup indices</strong> in the top toolbar.</p>
-<p><img alt="Three dots" src="../media/three-dots.png" /></p>
+<p><img alt="Three dots" src="../media/three-dots.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <p>The roles of the backup and active indices have been exchanged.</p>
 <h3 id="implementation-details">Implementation details<a class="headerlink" href="#implementation-details" title="Permanent link">&para;</a></h3>
 <p>Elasticsearch implements blue-green indexing using Elasticsearch <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html">aliases</a>. Search provider implementations use two aliases to distinguish one index role from the other: <strong>active</strong> and <strong>backup</strong>. The full index alias is built as <strong>scope name + document type name + alias name</strong>; for example, an active index alias for the <strong>Members</strong> index using the <code>default</code> scope will be <code>default-member-active</code>.</p>
 <p>Each time you start the <strong>Delete and build</strong> process, the Elasticsearch index provider looks for an existing backup index by the backup alias, for example, <code>default-member-backup</code>, and deletes it if it is found. After that, when the reidnexing process starts, a new backup index is created with the `backup' alias. However, an actual index name is created dynamically: this is a special alphanumeric token suffix added to the end of the index name. The only way to tell which index is active is to look at its alias. After the indexing process is complete, the active and backup indices swap aliases, i.e. the active index becomes the backup index, and vice versa.</p>
-<p><img alt="Kibana index alias" src="../media/implementation.png" /></p>
+<p><img alt="Kibana index alias" src="../media/implementation.png" style="display: block; margin: 0 auto;" /></p>
 <p><br>
 <br></p>
 <hr />
