@@ -960,6 +960,42 @@ This node configures the default state of the main menu in the Virto Commerce Pl
 }
 ```
 
+
+### EnvironmentsCompare
+
+This node configures the Environments Comparison feature in the Virto Commerce Platform. It defines the current environment and specifies which remote environments can be compared against it, including their access endpoints and authentication details.
+
+| Node                          | Default or sample value     | Description                                                                                                                               |
+| ----------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| CurrentEnvironmentName        | `"Production"`              | Logical name of the current environment. This value is used as a reference point when comparing settings with other environments.         |
+| ComparableEnvironments        | –                           | List of environments that can be compared with the current environment.                                                                   |
+| ComparableEnvironments:Name   | `"QA"`                      | A descriptive name for the comparable environment (for example, QA, Staging, or Development).                                             |
+| ComparableEnvironments:Url    | `"https://qa.mydomaim.com"` | Base URL of the remote environment. Must be accessible from the current environment over HTTP or HTTPS.                                   |
+| ComparableEnvironments:ApiKey | –                           | API key used to authenticate requests to the remote environment. The key must belong to a user with environments-compare:read permission. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "EnvironmentsCompare": {
+    "CurrentEnvironmentName": "Production",
+    "ComparableEnvironments": [
+      {
+        "Name": "QA",
+        "Url": "https://qa.mydomaim.com",
+        "ApiKey": "a4a86441-cabb-4a60-af90-9c6ebe11a401"
+      },
+      {
+        "Name": "Development",
+        "Url": "https://dev.mydomaim.com",
+        "ApiKey": "a4a86441-cabb-4a60-af90-9c6ebe11a401"
+      }
+    ]
+  }
+}
+```
+
+
 ### ExternalModules
 
 This node configures the settings for external modules in the Virto Commerce Platform.

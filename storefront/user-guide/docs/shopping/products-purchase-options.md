@@ -22,10 +22,13 @@ In the list view, users do not need to open a product card - all of the product�
 
 ![Expandable variations](../media/expandable-variations.gif)
 
-As of version [2.27.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.27.0), customers can click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
+Customers can click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
 
 ![Options selector](../media/jeans_options_selector.gif)
 
+For products available in multiple colors, the frontend provides a multicolor selector that lets customers choose a complete color set rather than a single color variant. The remaining options are refreshed to reflect what’s available based on that selection: 
+
+![Multicolor selector](../media/multicolor-selector.gif)
 
 ## Configure products
 

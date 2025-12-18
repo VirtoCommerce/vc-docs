@@ -49,7 +49,7 @@ There are two options to display product variations on the Frontend:
 
     ![Widget](media/variations-as-widget.png){: style="display: block; margin: 0 auto;" }
 
-* As a selector as a part of product description (as of Frontend version [2.27.0](https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.27.0)). Customers click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
+* As a selector as a part of product description. Customers click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
 
     ![Selector](media/jeans_options_selector.gif)
 
@@ -79,6 +79,8 @@ By default, variations are displayed on the Frontend as a list or as a table in 
 
 On the Frontend, the product variations are now displayed as a selector.
 
+Try our interactive demo to explore this setting in action:
+
 <div>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
   <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
@@ -91,58 +93,44 @@ On the Frontend, the product variations are now displayed as a selector.
 
 * **One value per variation property**: Each variation should have just one value for each variation property (for example, one **Size** and one **Color**). Don’t put more than one value for the same property in a single variation - shoppers can only pick one value per property, and if a variation has **Size: L and XL**, the system can’t tell which one to use.
 
-    **Good examples**:
+    | Good examples                             | Bad examples                                                          |
+    | ----------------------------------------- | --------------------------------------------------------------------- |
+    | T-shirt variation: Size = L, Color = Red  | T-shirt variation: Size = L and XL                                    |
+    | Shoes variation: Size = 42, Color = Black | Jacket variation: Color = “Blue / Navy” (two colors in one variation) |
 
-    * T‑shirt variation: Size = L, Color = Red
-    * Shoes variation: Size = 42, Color = Black
 
-    **Bad examples**:
-
-    * T‑shirt variation: Size = L and XL
-    * Jacket variation: Color = “Blue / Navy” (two colors in one variation)
- 
 * **Use the same variation properties for every variation**: Choose the set of variation properties for the product (e.g., **Size** and **Color**) and use those same properties for all variations. Keep property names the same everywhere - the store shows a single set of properties to the shopper, and if some variations are missing a property or use a different name, the selection becomes confusing or impossible to finish.
 
-    **Good examples**:
+    | Good examples                                   | Bad examples                                                       |
+    | ----------------------------------------------- | ------------------------------------------------------------------ |
+    | All T-shirt variations have both Size and Color | Some T-shirt variations have Size and Color; others only have Size |
+    | All Sofa variations have Width and Fabric       | Mixing names: Color on some variations and Colour on others        |
 
-    * All T‑shirt variations have both Size and Color
-    * All Sofa variations have Width and Fabric
-
-    **Bad examples**:
-
-    * Some T‑shirt variations have Size and Color; others only have Size
-    * Mixing names: **Color** on some variations and **Colour** on others
  
 * **Each combination must point to exactly one variation**: Any set of chosen values (e.g., **Size: L** + **Color: Red**) should match ONLY ONE variation. Don’t create two variations with the same full set of values - after a shopper makes their choices, the system must find exactly one item to buy, and if two variations share the same values, the result is unclear.
 
-    **Good examples**:
+    | Good examples                          | Bad examples                                                       |
+    | -------------------------------------- | ------------------------------------------------------------------ |
+    | Size: M + Color: Blue exists only once | Two variations with Size: M + Color: Red                           |
+    | Every Size/Color pair is unique        | Copies where only the SKU differs but the properties are identical |
 
-    * **Size: M + Color: Blue** exists only once in the product
-    * Every **Size/Color** pair is unique
-    
-    **Bad examples**:
-
-    * Two variations with **Size: M + Color: Red**
-    * Copies where only the SKU differs but the properties are identical
  
 * **Make sure the product is actually selectable**: If your product has more than one variation, you must add at least one variation property (like **Size** or **Color**) so shoppers can choose. If the product has only one variation, either add a simple one‑value property (e.g., **Size: One Size**) so it auto‑selects, or allow buying without variations. The system can finish the selection only when it can match one specific variation. With multiple variations and no properties, shoppers can’t choose which one; with zero properties, the system won’t produce a final selection.
 
-    **Good examples**:
+    | Good examples                                                              | Bad examples                                                   |
+    | -------------------------------------------------------------------------- | -------------------------------------------------------------- |
+    | Hoodie with multiple variations has Size and Color                         | Product has 3 variations but no variation properties to select |
+    | Single-variation belt with Size: One Size (auto-selected) or no variations |                                                                |
 
-    * Hoodie with multiple variations: has Size and Color
-    * Single‑variation belt: **Size: One Size** (auto‑selects) or is buyable without variations
-
-    **Bad examples**:
-
-    * Product has 3 variations but no variation properties (no way to choose)
  
-
 #### Quick checklist
 
 * One value per variation property.
 * Same variation properties on every variation.
 * No duplicate value combinations.
 * Multi‑variation products: at least one variation property. Single‑variation products: auto‑select or better prefer non variation product.
+
+
 
 <br>
 <br>

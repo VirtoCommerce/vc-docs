@@ -9,18 +9,18 @@ The **Environments Compare** (**Environments Comparison**) module enables backen
 
 ## Key features
 
-* Multi-environment comparison: Comparison of settings across multiple environments, including local and remote.
-* Comprehensive settings coverage:
+* **Multi-environment comparison**: Comparison of settings across multiple environments, including local and remote.
+* **Comprehensive settings coverage**:
     * Platform settings (grouped by settings groups).
     * Environment variables (system and process variables).
     * .NET runtime information (framework version, OS description, architecture).
     * Server features and hosting configuration.
-* Environment settings view: Dedicated view for inspecting all settings of a single environment in a structured, filterable layout.
-* Base environment comparison: Comparison of all environments against a selected base environment.
-* Difference filtering: Toggle for displaying all settings or only differing values.
-* Search: Keyword-based filtering of settings.
-* Settings export: Export of selected environment settings for reference.
-* Security features:
+* **Environment settings view**: Dedicated view for inspecting all settings of a single environment in a structured, filterable layout.
+* **Base environment comparison**: Comparison of all environments against a selected base environment.
+* **Difference filtering**: Toggle for displaying all settings or only differing values.
+* **Search**: Keyword-based filtering of settings.
+* **Settings export**: Export of selected environment settings for reference.
+* **Security features**:
     * API key-based authentication for secure communication with remote environments.
     * Automatic masking of secret/sensitive settings (passwords, secure strings) using SHA1 hashes.
     * Clear visual feedback showing which settings differ from the base environment and which environments have errors.

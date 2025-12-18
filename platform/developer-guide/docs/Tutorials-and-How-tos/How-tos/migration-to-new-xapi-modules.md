@@ -67,5 +67,5 @@ To migrate to the new modules:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../enable-embedded-mode-for-vc-shell">← Enabling embedded mode for VC-Shell instances </a>
-    <a href="../../../Updating-Virto-Commerce-Based-Project/release-strategy-overview">Release strategy  →</a>
+    <a href="../configuring-environments">Configuring environments for comparison  →</a>
 </div>

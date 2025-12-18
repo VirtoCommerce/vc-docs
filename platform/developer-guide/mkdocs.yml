@@ -853,6 +853,7 @@ nav:
                 - User Email Verification: Tutorials-and-How-tos/How-tos/user-email-verification.md
                 - Enabling Embedded Mode for VC-Shell Instances: Tutorials-and-How-tos/How-tos/enable-embedded-mode-for-vc-shell.md
                 - Migration to New xAPI Modules: Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md
+                - Configuring Environments for Comparison: Tutorials-and-How-tos/How-tos/configuring-environments.md
     - Releases, Bundles, PBCs. Installation and Updates:
           - Release Strategy Overview: Updating-Virto-Commerce-Based-Project/release-strategy-overview.md
           - Stable Releases: Updating-Virto-Commerce-Based-Project/stable-releases.md
