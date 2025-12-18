@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
 <title>Products Management Options - Managing Product Variations - Platform User Docs</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -12927,7 +12927,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 9, 2025 05:45:59 UTC">October 9, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 18, 2025 13:29:06 UTC">December 18, 2025</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -12991,7 +12991,7 @@ Variations inherit property values from the master product, including descriptio
 <p><img alt="Widget" src="../media/variations-as-widget.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
-<p>As a selector as a part of product description (as of Frontend version <a href="https://github.com/VirtoCommerce/vc-frontend/releases/tag/2.27.0">2.27.0</a>). Customers click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:</p>
+<p>As a selector as a part of product description. Customers click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:</p>
 <p><img alt="Selector" src="../media/jeans_options_selector.gif" /></p>
 </li>
 </ul>
@@ -13020,6 +13020,7 @@ Variations inherit property values from the master product, including descriptio
 <li>Click <strong>Save</strong> in the toolbar.</li>
 </ol>
 <p>On the Frontend, the product variations are now displayed as a selector.</p>
+<p>Try our interactive demo to explore this setting in action:</p>
 <div>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
   <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
@@ -13031,54 +13032,87 @@ Variations inherit property values from the master product, including descriptio
 <ul>
 <li>
 <p><strong>One value per variation property</strong>: Each variation should have just one value for each variation property (for example, one <strong>Size</strong> and one <strong>Color</strong>). Don’t put more than one value for the same property in a single variation - shoppers can only pick one value per property, and if a variation has <strong>Size: L and XL</strong>, the system can’t tell which one to use.</p>
-<p><strong>Good examples</strong>:</p>
-<ul>
-<li>T‑shirt variation: Size = L, Color = Red</li>
-<li>Shoes variation: Size = 42, Color = Black</li>
-</ul>
-<p><strong>Bad examples</strong>:</p>
-<ul>
-<li>T‑shirt variation: Size = L and XL</li>
-<li>Jacket variation: Color = “Blue / Navy” (two colors in one variation)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Good examples</th>
+<th>Bad examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-shirt variation: Size = L, Color = Red</td>
+<td>T-shirt variation: Size = L and XL</td>
+</tr>
+<tr>
+<td>Shoes variation: Size = 42, Color = Black</td>
+<td>Jacket variation: Color = “Blue / Navy” (two colors in one variation)</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p><strong>Use the same variation properties for every variation</strong>: Choose the set of variation properties for the product (e.g., <strong>Size</strong> and <strong>Color</strong>) and use those same properties for all variations. Keep property names the same everywhere - the store shows a single set of properties to the shopper, and if some variations are missing a property or use a different name, the selection becomes confusing or impossible to finish.</p>
-<p><strong>Good examples</strong>:</p>
-<ul>
-<li>All T‑shirt variations have both Size and Color</li>
-<li>All Sofa variations have Width and Fabric</li>
-</ul>
-<p><strong>Bad examples</strong>:</p>
-<ul>
-<li>Some T‑shirt variations have Size and Color; others only have Size</li>
-<li>Mixing names: <strong>Color</strong> on some variations and <strong>Colour</strong> on others</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Good examples</th>
+<th>Bad examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All T-shirt variations have both Size and Color</td>
+<td>Some T-shirt variations have Size and Color; others only have Size</td>
+</tr>
+<tr>
+<td>All Sofa variations have Width and Fabric</td>
+<td>Mixing names: Color on some variations and Colour on others</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p><strong>Each combination must point to exactly one variation</strong>: Any set of chosen values (e.g., <strong>Size: L</strong> + <strong>Color: Red</strong>) should match ONLY ONE variation. Don’t create two variations with the same full set of values - after a shopper makes their choices, the system must find exactly one item to buy, and if two variations share the same values, the result is unclear.</p>
-<p><strong>Good examples</strong>:</p>
-<ul>
-<li><strong>Size: M + Color: Blue</strong> exists only once in the product</li>
-<li>Every <strong>Size/Color</strong> pair is unique</li>
-</ul>
-<p><strong>Bad examples</strong>:</p>
-<ul>
-<li>Two variations with <strong>Size: M + Color: Red</strong></li>
-<li>Copies where only the SKU differs but the properties are identical</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Good examples</th>
+<th>Bad examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size: M + Color: Blue exists only once</td>
+<td>Two variations with Size: M + Color: Red</td>
+</tr>
+<tr>
+<td>Every Size/Color pair is unique</td>
+<td>Copies where only the SKU differs but the properties are identical</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p><strong>Make sure the product is actually selectable</strong>: If your product has more than one variation, you must add at least one variation property (like <strong>Size</strong> or <strong>Color</strong>) so shoppers can choose. If the product has only one variation, either add a simple one‑value property (e.g., <strong>Size: One Size</strong>) so it auto‑selects, or allow buying without variations. The system can finish the selection only when it can match one specific variation. With multiple variations and no properties, shoppers can’t choose which one; with zero properties, the system won’t produce a final selection.</p>
-<p><strong>Good examples</strong>:</p>
-<ul>
-<li>Hoodie with multiple variations: has Size and Color</li>
-<li>Single‑variation belt: <strong>Size: One Size</strong> (auto‑selects) or is buyable without variations</li>
-</ul>
-<p><strong>Bad examples</strong>:</p>
-<ul>
-<li>Product has 3 variations but no variation properties (no way to choose)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Good examples</th>
+<th>Bad examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hoodie with multiple variations has Size and Color</td>
+<td>Product has 3 variations but no variation properties to select</td>
+</tr>
+<tr>
+<td>Single-variation belt with Size: One Size (auto-selected) or no variations</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 <h4 id="quick-checklist">Quick checklist<a class="headerlink" href="#quick-checklist" title="Permanent link">&para;</a></h4>
@@ -13256,10 +13290,10 @@ Variations inherit property values from the master product, including descriptio
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "--md-code-bg-color", "search.share", "search.suggest", "navigation.tracking", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "toc.follow", "search.highlight"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "--md-code-bg-color", "search.share", "search.suggest", "navigation.tracking", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "toc.follow", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../assets/scripts/version-redirect.js"></script>
       
