@@ -130,7 +130,16 @@ Try our interactive demo to explore this setting in action:
 * No duplicate value combinations.
 * Multi‑variation products: at least one variation property. Single‑variation products: auto‑select or better prefer non variation product.
 
+### Configure multicolored products
 
+Let's suppose our product is multicolored. Let's add all available product color variations to the catalog. In our interactive demo, we'll add color variations to men's shirts:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/rpx2m2ax9mzr?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
 <br>
 <br>
