@@ -411,17 +411,18 @@ nav:
                 - Getting Started: integrations/power-bi/getting-started.md
     - Versions:
           - Virto 3. Products versions: versions/virto3-products-versions.md
-          - v3 2020 Q3: versions/v3-2020-Q3.md
-          - v3 2021 Q1: versions/v3-2021-Q1.md
-          - v3 2021 Q3: versions/v3-2021-Q3.md
-          - v3 2022 Q1: versions/v3-2022-Q1.md
-          - v3 2022 Q2: versions/v3-2022-Q2.md
-          - v3 2022 Q3: versions/v3-2022-Q3.md
-          - v3 2022 Q4: versions/v3-2022-Q4.md
-          - v3 2023 S5: versions/v3-2023-S5.md
-          - v3 2023 S6: versions/v3-2023-S6.md
-          - v3 2024 S7: versions/v3-2024-S7.md
-          - v3 2024 S8: versions/v3-2024-S8.md
-          - v3 2024 S9: versions/v3-2024-S9.md
-          - v3 2024 S10: versions/v3-2024-S10.md
+          - v3 2025 S12: versions/v3-2025-S12.md
           - v3 2025 S11: versions/v3-2025-S11.md
+          - v3 2024 S10: versions/v3-2024-S10.md
+          - v3 2024 S9: versions/v3-2024-S9.md
+          - v3 2024 S8: versions/v3-2024-S8.md
+          - v3 2024 S7: versions/v3-2024-S7.md
+          - v3 2023 S6: versions/v3-2023-S6.md
+          - v3 2023 S5: versions/v3-2023-S5.md
+          - v3 2022 Q4: versions/v3-2022-Q4.md
+          - v3 2022 Q3: versions/v3-2022-Q3.md
+          - v3 2022 Q2: versions/v3-2022-Q2.md
+          - v3 2022 Q1: versions/v3-2022-Q1.md
+          - v3 2020 Q3: versions/v3-2020-Q3.md
+          - v3 2021 Q3: versions/v3-2021-Q3.md
+          - v3 2021 Q1: versions/v3-2021-Q1.md
