@@ -40,6 +40,7 @@ import { VcBadge, VcIcon } from '@vc-shell/framework';
 | `customPosition`  | `Boolean`                                                         | `false`    | Whether to use custom positioning for the badge               |
 | `top`             | `String`                                                          | -          | Custom top position when `customPosition` is `true`           |
 | `right`           | `String`                                                          | -          | Custom right position when `customPosition` is `true`         |
+| `inline`          | `Boolean`                                                         | `false`    | Renders badge as inline element without absolute positioning (no slot content needed) |
 
 ## Events
 
@@ -257,9 +258,9 @@ function handleClick() {
 <template>
   <nav class="tw-flex tw-space-x-6">
     <div v-for="item in navItems" :key="item.id" class="tw-relative">
-      <VcBadge 
-        v-if="item.count && item.count > 0" 
-        :content="item.count > 99 ? '99+' : item.count" 
+      <VcBadge
+        v-if="item.count && item.count > 0"
+        :content="item.count > 99 ? '99+' : item.count"
         :variant="item.badgeVariant || 'primary'"
       >
         <a href="#" class="tw-flex tw-items-center tw-px-4 tw-py-2">
@@ -267,9 +268,9 @@ function handleClick() {
           {{ item.title }}
         </a>
       </VcBadge>
-      <a 
-        v-else 
-        href="#" 
+      <a
+        v-else
+        href="#"
         class="tw-flex tw-items-center tw-px-4 tw-py-2"
       >
         <VcIcon :icon="item.icon" class="tw-mr-2" />
@@ -288,5 +289,32 @@ const navItems = [
   { id: 3, title: 'Notifications', icon: 'bell', count: 12, badgeVariant: 'danger' },
   { id: 4, title: 'Settings', icon: 'settings', count: 0 },
 ];
+</script>
+```
+
+### Inline Badge
+
+Use `inline` mode when you want to display the badge as a standalone element without wrapping content. This is useful for displaying badges next to text or in flex layouts.
+
+```vue
+<template>
+  <div class="tw-flex tw-items-center tw-gap-2">
+    <span>Orders</span>
+    <VcBadge content="5" inline variant="primary" />
+  </div>
+
+  <div class="tw-flex tw-items-center tw-gap-2">
+    <span>Alerts</span>
+    <VcBadge content="3" inline variant="danger" />
+  </div>
+
+  <div class="tw-flex tw-items-center tw-gap-2">
+    <span>New messages</span>
+    <VcBadge inline isDot variant="success" />
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { VcBadge } from '@vc-shell/framework';
 </script>
 ```

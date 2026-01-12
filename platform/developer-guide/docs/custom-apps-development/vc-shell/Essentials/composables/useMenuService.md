@@ -15,6 +15,7 @@ interface MenuService {
   addMenuItem: (item: MenuItem) => void;    // Adds a menu item to the menu
   menuItems: Ref<MenuItem[]>;               // Reactive reference to the menu items
   removeMenuItem: (item: MenuItem) => void; // Removes a menu item from the menu
+  menuBadges: Ref<Map<string, MenuItemBadgeConfig>>; // Reactive map of badge configurations
 }
 ```
 
@@ -50,6 +51,45 @@ A reactive reference to the array of menu items, organized into their final stru
 menuItems: Ref<MenuItem[]>
 ```
 
+#### menuBadges
+
+A reactive Map containing badge configurations keyed by routeId or groupId.
+
+```typescript
+menuBadges: Ref<Map<string, MenuItemBadgeConfig>>
+```
+
+### Standalone Functions
+
+In addition to the `useMenuService` composable, the following standalone functions are exported for managing menu badges:
+
+#### setMenuBadge
+
+Sets a badge for a menu item by its routeId (blade name) or groupId. Can be called at any time, even after menu registration.
+
+```typescript
+setMenuBadge(id: string, badge: MenuItemBadgeConfig): void
+```
+
+- `id`: The routeId (blade name) for menu items, or groupId for groups
+- `badge`: Badge configuration (number, string, ref, function, or full config object)
+
+#### getMenuBadge
+
+Gets the badge configuration for a menu item by routeId or groupId.
+
+```typescript
+getMenuBadge(id: string): MenuItemBadgeConfig | undefined
+```
+
+#### removeMenuBadge
+
+Removes a badge from a menu item.
+
+```typescript
+removeMenuBadge(id: string): void
+```
+
 ### MenuItem interface
 
 ```typescript
@@ -61,16 +101,37 @@ interface MenuItem {
   icon?: string | Component;             // Icon identifier or component
   priority?: number;                     // Sorting priority (lower = higher in the menu)
   permissions?: string | string[];       // Required permissions
-  
+  badge?: MenuItemBadgeConfig;           // Badge/counter configuration
+
   // Modern group configuration
-  groupConfig?: {                       
+  groupConfig?: {
     id: string;                          // Group ID (required)
     title?: string;                      // Group title (optional)
     icon?: string | Component;           // Group icon (optional)
     priority?: number;                   // Group priority (optional)
     permissions?: string | string[];     // Group permissions (optional)
+    badge?: MenuItemBadgeConfig;         // Badge for the group (optional)
   };
 }
+```
+
+### MenuItemBadge interface
+
+```typescript
+interface MenuItemBadge {
+  content?: string | number | Ref<string | number | undefined> | ComputedRef<string | number | undefined> | (() => string | number | undefined);
+  variant?: "primary" | "success" | "warning" | "danger" | "info" | "secondary";
+  isDot?: boolean;  // Show as dot indicator only
+}
+
+// Shorthand types also supported
+type MenuItemBadgeConfig =
+  | MenuItemBadge
+  | number
+  | string
+  | Ref<number | string | undefined>
+  | ComputedRef<number | string | undefined>
+  | (() => number | string | undefined);
 ```
 
 ## Usage
@@ -194,7 +255,7 @@ import { useMenuService } from '@vc-shell/framework';
 export default {
   setup() {
     const { addMenuItem } = useMenuService();
-    
+
     // Add a menu item that requires specific permissions
     addMenuItem({
       id: "admin-dashboard",
@@ -204,7 +265,7 @@ export default {
       priority: 5,
       permissions: 'admin-access'  // Can be a string
     });
-    
+
     // Add a menu item that requires multiple permissions
     addMenuItem({
       id: "security-settings",
@@ -214,7 +275,7 @@ export default {
       priority: 15,
       permissions: ['admin-access', 'security-manage']  // Can be an array
     });
-    
+
     // Add a group with permissions
     addMenuItem({
       id: "user-management",
@@ -231,6 +292,80 @@ export default {
     });
   }
 }
+```
+
+### Menu badges and counters
+
+Display counters or indicators on menu items using the badge feature. Badges support reactive values that automatically update when data changes.
+
+```typescript
+import { setMenuBadge } from '@vc-shell/framework';
+import { ref, computed } from 'vue';
+
+// Simple reactive counter using ref
+const pendingOrdersCount = ref(5);
+setMenuBadge("Orders", pendingOrdersCount);  // "Orders" is the blade/component name (routeId)
+
+// Using a function callback for dynamic values
+setMenuBadge("Orders", () => useOrdersStore().pendingCount);
+
+// Full configuration with custom variant
+setMenuBadge("Alerts", {
+  content: computed(() => alertStore.criticalCount),
+  variant: "danger",  // "primary" | "success" | "warning" | "danger" | "info" | "secondary"
+});
+
+// Dot indicator (shows presence without a number)
+setMenuBadge("Messages", {
+  isDot: true,
+  content: () => hasUnreadMessages.value ? 1 : 0,  // Badge visible when content > 0
+});
+
+// Badge on a menu group
+setMenuBadge("orders-group", totalOrdersBadge);  // Use groupId for groups
+```
+
+#### Badge behavior
+
+- **Position**: Badge is displayed to the right of the menu item text, aligned at the same height
+- **Visibility**: Badge is hidden when content is `0`, `null`, `undefined`, or empty string
+- **Truncation**: Values greater than 99 are displayed as "99+"
+- **Reactivity**: Badge automatically updates when ref/computed values change
+- **Variants**: Use `variant` to change badge color (default: "primary")
+
+#### Using badges in blade components
+
+```vue
+<script lang="ts" setup>
+import { defineOptions, onMounted } from 'vue';
+import { setMenuBadge } from '@vc-shell/framework';
+
+defineOptions({
+  name: 'Orders',
+  url: '/orders',
+  menuItem: {
+    title: 'ORDERS.MENU.TITLE',
+    icon: 'lucide-shopping-cart',
+    priority: 10
+  }
+});
+
+// Set badge after component mounts
+onMounted(() => {
+  const ordersStore = useOrdersStore();
+  // Badge will update automatically when pendingCount changes
+  setMenuBadge("Orders", () => ordersStore.pendingCount);
+});
+</script>
+```
+
+#### Removing badges
+
+```typescript
+import { removeMenuBadge } from '@vc-shell/framework';
+
+// Remove badge from menu item
+removeMenuBadge("Orders");
 ```
 
 ## Best practices

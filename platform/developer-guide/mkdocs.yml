@@ -905,6 +905,7 @@ nav:
                             - useWidgets: custom-apps-development/vc-shell/Essentials/composables/useWidgets.md
                             - useExternalWidgets: custom-apps-development/vc-shell/Essentials/composables/useExternalWidgets.md
                             - useTableSort: custom-apps-development/vc-shell/Essentials/composables/useTableSort.md
+                            - useTableSelection: custom-apps-development/vc-shell/Essentials/composables/useTableSelection.md
                             - useModificationTracker: custom-apps-development/vc-shell/Essentials/composables/useModificationTracker.md
                       - Usage Guides:
                             - Overview: custom-apps-development/vc-shell/Essentials/Usage-Guides/overview.md
