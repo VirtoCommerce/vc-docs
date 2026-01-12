@@ -2,7 +2,7 @@
 
 The Communication section includes all the dialogs between Vendor and Operator:
 
-![Communications](media/communications.png)
+![Communications](media/communications.png){: style="display: block; margin: 0 auto;" width="600"}
 
 Try our interactive demo to explore key features in action:
 

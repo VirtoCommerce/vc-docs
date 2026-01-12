@@ -21,7 +21,7 @@ As a result, a new Vendor entity will be added to the list. The vendor owner wil
 
 Vendors can send registration requests themselves to initiate the onboarding process. The registration form opens for unregistered users:
 
-![Registration form](media/registration-form.png)
+![Registration form](media/registration-form.png){: style="display: block; margin: 0 auto;" }
 
 ![Readmore](media/readmore.png){: width="25"} [Registration requests](../registration-requests.md)
 

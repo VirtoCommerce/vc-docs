@@ -36,7 +36,7 @@ To add properties to the newly created category:
 
 Your properties have been added to the master catalog and become available for vendors in the Vendor portal:
 
-![Properties for vendors](media/properties-available-for-vendors.png)
+![Properties for vendors](media/properties-available-for-vendors.png){: style="display: block; margin: 0 auto;" width="600"}
 
 
 <br>

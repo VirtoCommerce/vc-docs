@@ -2,7 +2,7 @@
 
 If a vendor wants to register on the marketplace, they can fill out a registration form that opens up to unregistered users:
 
-![Registration form](media/registration-form.png)
+![Registration form](media/registration-form.png){: style="display: block; margin: 0 auto;" }
 
 After the vendor submits the form, the Operator sees it in the **Registration requests** section of the Operator portal with the **Pending** status:
 
@@ -17,7 +17,7 @@ The Operator can:
 * **Decline** the registration if it does not meet the necessary criteria. It receives **Declined** status in the list of registration requests.
 * **Complete** the registration if no additional information is required. This will open the following form, which will be pre-filled with the information provided by the vendor:
 
-    ![Send invitation](media/invite-new-vendor.png)
+    ![Send invitation](media/invite-new-vendor.png){: style="display: block; margin: 0 auto;" }
 
     Complete the form and click invite to send the invitation to the Vendor. The registration requests receives the **Completed** status.
     

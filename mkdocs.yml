@@ -286,7 +286,7 @@ repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
 
 # Copyright
-copyright: Copyright &copy; 2025. All rights reserved.
+copyright: Copyright &copy; 2026. All rights reserved.
 
 nav:
     - Home: index.md

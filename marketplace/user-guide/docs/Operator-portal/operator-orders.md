@@ -46,7 +46,7 @@ To manage the orders:
 
 1. Use the toolbar to save, reset changes, delete order, cancel document, or get invoice PDF.
 
-
+Your modifications have been applied.
 
 <br>
 <br>

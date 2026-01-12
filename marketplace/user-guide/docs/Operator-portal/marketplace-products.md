@@ -32,7 +32,7 @@ To decline a product uploaded by a vendor in the Vendor portal:
 1. In the next blade, check the correctness of products properties. Click **Decline** in the toolbar if the products information does not meet the marketplace requirements.
 1. In the popup window, specify the reason for decline and confirm the action:
 
-    ![Decline reason](media/decline-reason.png)
+    ![Decline reason](media/decline-reason.png){: style="display: block; margin: 0 auto;" }
 
 The product status in the list of products changes for **Rejected** in both Operator and Vendor portals:
 

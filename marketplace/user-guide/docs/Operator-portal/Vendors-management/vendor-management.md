@@ -14,7 +14,7 @@ To manage a vendor from the Operator portal:
 1. In the next blade, select a vendor you need to edit.
 1. In the next blade, edit the desired information.
 
-    ![Vendor info](media/vendor-fields.png)
+    ![Vendor info](media/vendor-fields.png){: style="display: block; margin: 0 auto;" width="400"}
     
     !!! note
         When configuring the approval policy, select:
@@ -44,7 +44,7 @@ To log in to the Vendor portal on Vendor behalf:
 
 The Vendor portal opens in a new window. Here you can also switch between Vendors without having to return to the Operator portal:
 
-![Login on behalf](media/switch-between-vendors.gif)
+![Login on behalf](media/switch-between-vendors.gif){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>

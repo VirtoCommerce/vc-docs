@@ -21,7 +21,7 @@ To add a new static commission:
 
 1. In the new blade, fill in the following fields:
 
-    ![New static commission](media/new-static-commission.png)
+    ![New static commission](media/new-static-commission.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes.
 

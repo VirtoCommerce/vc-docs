@@ -11,10 +11,11 @@ To manage quotes:
 1. In the next blade, select the quote you need to manage.
 1. In the next blade, configure the following:
 
-    ![Quotes management](media/quote-management.png){: style="display: block; margin: 0 auto;" }
+    ![Quotes management](media/quote-management.png){: style="display: block; margin: 0 auto;" width="500"}
 
 1. Use the toolbar to submit proposal, put it on hold, cancel or delete the document.
 
+Your modifications have been applied.
 
 <br>
 <br>

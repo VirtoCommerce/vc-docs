@@ -12,10 +12,11 @@ To manage the offers:
 1. In the next blade, select the offer you need to edit.
 1. In the next blade:
 
-    ![Offers management](media/offers-management.png)
+    ![Offers management](media/offers-management.png){: style="display: block; margin: 0 auto;" }
 
 1. Use the toolbar to save, reset changes, delete offer, or set it as default.
 
+Your modifications have been applied.
 
 <br>
 <br>

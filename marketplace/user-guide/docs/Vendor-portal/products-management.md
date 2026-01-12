@@ -55,19 +55,19 @@ To add your own product to the marketplace:
 
     You can use the OpenAI and Grok AI providers to generate product descriptions based on product names and selected categories, and then translate those descriptions into the desired language:
 
-    ![Product descriptions](media/ai-generated-content.gif)
+    ![Product descriptions](media/ai-generated-content.gif){: style="display: block; margin: 0 auto;" width="500"}
 
     Product properties can be automatically generated using AI based on the product’s name and images:
 
-    ![Product properties](media/product-properties-generation.gif)
+    ![Product properties](media/product-properties-generation.gif){: style="display: block; margin: 0 auto;" width="500"}
 
     Product accent colors can be automatically assigned based on their entered English name using standard HTML color names. Users can still manually adjust the color code if needed:
 
-    ![Color picker](media/color-picker-names.gif)
+    ![Color picker](media/color-picker-names.gif){: style="display: block; margin: 0 auto;" width="500"}
 
 1. Click **Save as draft** in the toolbar to save the changes.
 
-    ![Add own product](media/add-own-product.png)
+    ![Add own product](media/add-own-product.png){: style="display: block; margin: 0 auto;" width="600"}
 
 1. Click **Submit for approval** to submit your product for approval by an Operator Portal manager. Only after the product has been approved and the offer for the product has been created it will be available for purchase by a customer.
 
