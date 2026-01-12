@@ -24553,6 +24553,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../composables/useTableSelection/" class="md-nav__link">
+        useTableSelection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../composables/useModificationTracker/" class="md-nav__link">
         useModificationTracker
       </a>
@@ -25933,6 +25951,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#inline-badge" class="md-nav__link">
+        Inline Badge
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -27096,6 +27124,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#inline-badge" class="md-nav__link">
+        Inline Badge
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -27123,7 +27161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 11:42:40 UTC">June 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 12, 2026 14:05:54 UTC">January 12, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27234,6 +27272,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td><code>String</code></td>
 <td>-</td>
 <td>Custom right position when <code>customPosition</code> is <code>true</code></td>
+</tr>
+<tr>
+<td><code>inline</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td>Renders badge as inline element without absolute positioning (no slot content needed)</td>
 </tr>
 </tbody>
 </table>
@@ -27436,9 +27480,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-flex tw-space-x-6&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">navItems</span><span class="s">&quot;</span> <span class="p">:</span><span class="na">key</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="s">&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-relative&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>      <span class="p">&lt;</span><span class="nt">VcBadge</span> 
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="s">&quot;</span> 
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="p">:</span><span class="na">content</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">99</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;99+&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="s">&quot;</span> 
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>      <span class="p">&lt;</span><span class="nt">VcBadge</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="s">&quot;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="p">:</span><span class="na">content</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">99</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;99+&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">count</span><span class="s">&quot;</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="p">:</span><span class="na">variant</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">badgeVariant</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;primary&#39;</span><span class="s">&quot;</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>      <span class="p">&gt;</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-flex tw-items-center tw-px-4 tw-py-2&quot;</span><span class="p">&gt;</span>
@@ -27446,9 +27490,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>          <span class="cp">{{</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="cp">}}</span>
 <a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>      <span class="p">&lt;/</span><span class="nt">VcBadge</span><span class="p">&gt;</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>      <span class="p">&lt;</span><span class="nt">a</span> 
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="na">v-else</span> 
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> 
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>      <span class="p">&lt;</span><span class="nt">a</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="na">v-else</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span>
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>        <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-flex tw-items-center tw-px-4 tw-py-2&quot;</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>      <span class="p">&gt;</span>
 <a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>        <span class="p">&lt;</span><span class="nt">VcIcon</span> <span class="p">:</span><span class="na">icon</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">icon</span><span class="s">&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-mr-2&quot;</span> <span class="p">/&gt;</span>
@@ -27468,6 +27512,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Settings&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">icon</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;settings&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">},</span>
 <a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="p">];</span>
 <a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="inline-badge">Inline Badge<a class="headerlink" href="#inline-badge" title="Permanent link">&para;</a></h3>
+<p>Use <code>inline</code> mode when you want to display the badge as a standalone element without wrapping content. This is useful for displaying badges next to text or in flex layouts.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-flex tw-items-center tw-gap-2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Orders<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="p">&lt;</span><span class="nt">VcBadge</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;5&quot;</span> <span class="na">inline</span> <span class="na">variant</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-flex tw-items-center tw-gap-2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Alerts<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="p">&lt;</span><span class="nt">VcBadge</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;3&quot;</span> <span class="na">inline</span> <span class="na">variant</span><span class="o">=</span><span class="s">&quot;danger&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tw-flex tw-items-center tw-gap-2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>New messages<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="p">&lt;</span><span class="nt">VcBadge</span> <span class="na">inline</span> <span class="na">isDot</span> <span class="na">variant</span><span class="o">=</span><span class="s">&quot;success&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;ts&quot;</span> <span class="na">setup</span><span class="p">&gt;</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">VcBadge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vc-shell/framework&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
                 
               </article>

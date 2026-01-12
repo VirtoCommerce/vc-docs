@@ -24553,6 +24553,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../composables/useTableSelection/" class="md-nav__link">
+        useTableSelection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../composables/useModificationTracker/" class="md-nav__link">
         useModificationTracker
       </a>
@@ -24874,6 +24892,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </a>
 
     <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#7-menu-badges-and-counters" class="md-nav__link">
+        7. Menu Badges and Counters
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="7. Menu Badges and Counters">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#badge-integration-in-blade-components" class="md-nav__link">
+        Badge Integration in Blade Components
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#badge-behavior" class="md-nav__link">
+        Badge Behavior
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#available-badge-variants" class="md-nav__link">
+        Available Badge Variants
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
     
 </li>
             
@@ -26978,6 +27042,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#7-menu-badges-and-counters" class="md-nav__link">
+        7. Menu Badges and Counters
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="7. Menu Badges and Counters">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#badge-integration-in-blade-components" class="md-nav__link">
+        Badge Integration in Blade Components
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#badge-behavior" class="md-nav__link">
+        Badge Behavior
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#available-badge-variants" class="md-nav__link">
+        Available Badge Variants
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -27015,7 +27125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 11:42:40 UTC">June 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 12, 2026 14:05:54 UTC">January 12, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27052,6 +27162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>Permission Control</strong>: Showing/hiding menu items based on user permissions</li>
 <li><strong>Dynamic Updates</strong>: Runtime menu modification based on application state</li>
 <li><strong>Automatic Module Registration</strong>: Modules can automatically add themselves to the menu</li>
+<li><strong>Badge/Counter Support</strong>: Display reactive counters or indicators on menu items</li>
 </ul>
 <p>Menu items can be registered manually or automatically through module registration. When using <code>createAppModule</code>, any blade with a <code>menuItem</code> property in its <code>defineOptions</code> will be automatically added to the navigation menu.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useMenuService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vc-shell/framework&#39;</span><span class="p">;</span>
@@ -27303,7 +27414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <h2 id="menuitem-configuration">MenuItem Configuration<a class="headerlink" href="#menuitem-configuration" title="Permanent link">&para;</a></h2>
 <p>When defining menu items, whether through the <code>addMenuItem</code> function of <code>useMenuService</code> or via the <code>menuItem</code> property in a blade's <code>defineOptions</code>, you should use an object that conforms to the <code>MenuItem</code> interface defined in the <a href="../../composables/useMenuService/#menuitem-interface"><code>useMenuService</code> API documentation</a>. This interface typically includes fields like:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">ComputedRef</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">ComputedRef</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">Ref</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span><span class="p">;</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kd">interface</span><span class="w"> </span><span class="nx">MenuItem</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nx">id?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w">                           </span><span class="c1">// Unique identifier (generated if not provided when using useMenuService)</span>
@@ -27313,16 +27424,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nx">icon?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Component</span><span class="p">;</span><span class="w">             </span><span class="c1">// Icon identifier (e.g., &#39;material-home&#39;) or an imported Vue component</span>
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="nx">priority?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">                     </span><span class="c1">// Sorting priority (lower numbers appear higher in the menu)</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="nx">permissions?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w">       </span><span class="c1">// Optional: Permissions required to display this item</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="c1">// Modern group configuration</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="nx">groupConfig</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w">                       </span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w">                          </span><span class="c1">// Group ID (required to associate item with a group)</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nx">title?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ComputedRef</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Group title (required only when this item is the first to define the group)</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="nx">icon?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Component</span><span class="p">;</span><span class="w">           </span><span class="c1">// Optional icon for the group</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="nx">priority?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">                   </span><span class="c1">// Optional priority for the group itself (affects group order)</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="nx">permissions?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w">     </span><span class="c1">// Optional: Permissions required to display the entire group</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">  </span><span class="p">};</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">}</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="nx">badge?</span><span class="o">:</span><span class="w"> </span><span class="kt">MenuItemBadgeConfig</span><span class="p">;</span><span class="w">           </span><span class="c1">// Optional: Badge/counter configuration</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="c1">// Modern group configuration</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">  </span><span class="nx">groupConfig</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w">                          </span><span class="c1">// Group ID (required to associate item with a group)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="nx">title?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ComputedRef</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Group title (required only when this item is the first to define the group)</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="nx">icon?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Component</span><span class="p">;</span><span class="w">           </span><span class="c1">// Optional icon for the group</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="nx">priority?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">                   </span><span class="c1">// Optional priority for the group itself (affects group order)</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="nx">permissions?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w">     </span><span class="c1">// Optional: Permissions required to display the entire group</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="nx">badge?</span><span class="o">:</span><span class="w"> </span><span class="kt">MenuItemBadgeConfig</span><span class="p">;</span><span class="w">         </span><span class="c1">// Optional: Badge for the group</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="c1">// Badge configuration types</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="kd">interface</span><span class="w"> </span><span class="nx">MenuItemBadge</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">  </span><span class="nx">content?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Ref</span><span class="o">&lt;</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ComputedRef</span><span class="o">&lt;</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">);</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">  </span><span class="nx">variant</span><span class="o">?:</span><span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;warning&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;danger&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;info&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;secondary&quot;</span><span class="p">;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">  </span><span class="nx">isDot?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="p">}</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="kr">type</span><span class="w"> </span><span class="nx">MenuItemBadgeConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MenuItemBadge</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Ref</span><span class="o">&lt;</span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ComputedRef</span><span class="o">&lt;</span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">);</span>
 </code></pre></div>
 <p>Key points for <code>MenuItem</code> configuration:</p>
 <ul>
@@ -27391,6 +27513,108 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="p">});</span>
 </code></pre></div>
+<h3 id="7-menu-badges-and-counters">7. Menu Badges and Counters<a class="headerlink" href="#7-menu-badges-and-counters" title="Permanent link">&para;</a></h3>
+<p>Display counters or notification indicators on menu items using the badge feature. Badges support reactive values that automatically update when underlying data changes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setMenuBadge</span><span class="p">,</span><span class="w"> </span><span class="nx">removeMenuBadge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vc-shell/framework&#39;</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ref</span><span class="p">,</span><span class="w"> </span><span class="nx">computed</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1">// Simple reactive counter</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">pendingOrdersCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nx">setMenuBadge</span><span class="p">(</span><span class="s2">&quot;Orders&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pendingOrdersCount</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;Orders&quot; is the blade name (routeId)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="c1">// Using function callback for store values</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="nx">setMenuBadge</span><span class="p">(</span><span class="s2">&quot;Orders&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">useOrdersStore</span><span class="p">().</span><span class="nx">pendingCount</span><span class="p">);</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="c1">// Full configuration with variant</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nx">setMenuBadge</span><span class="p">(</span><span class="s2">&quot;Alerts&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="kt">computed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">alertStore</span><span class="p">.</span><span class="nx">criticalCount</span><span class="p">),</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">  </span><span class="nx">variant</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;danger&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">});</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="c1">// Dot indicator (presence indicator without number)</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="nx">setMenuBadge</span><span class="p">(</span><span class="s2">&quot;Messages&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">  </span><span class="nx">isDot</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">hasUnreadMessages</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">,</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="p">});</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="c1">// Badge on menu group</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="nx">setMenuBadge</span><span class="p">(</span><span class="s2">&quot;orders-group&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">totalOrdersBadge</span><span class="p">);</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="c1">// Remove badge when no longer needed</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="nx">removeMenuBadge</span><span class="p">(</span><span class="s2">&quot;Orders&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="badge-integration-in-blade-components">Badge Integration in Blade Components<a class="headerlink" href="#badge-integration-in-blade-components" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="cm">&lt;!-- OrdersBlade.vue --&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;ts&quot;</span> <span class="na">setup</span><span class="p">&gt;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineOptions</span><span class="p">,</span><span class="w"> </span><span class="nx">onMounted</span><span class="p">,</span><span class="w"> </span><span class="nx">onUnmounted</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setMenuBadge</span><span class="p">,</span><span class="w"> </span><span class="nx">removeMenuBadge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vc-shell/framework&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useOrdersStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../stores/orders&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="nx">defineOptions</span><span class="p">({</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Orders&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">  </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/orders&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">  </span><span class="nx">menuItem</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ORDERS.MENU.TITLE&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="nx">icon</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lucide-shopping-cart&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="nx">groupConfig</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">      </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sales-group&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Sales&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">      </span><span class="nx">icon</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lucide-dollar-sign&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">      </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="p">});</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ordersStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useOrdersStore</span><span class="p">();</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="nx">onMounted</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">  </span><span class="c1">// Set badge with reactive function - updates automatically</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">  </span><span class="nx">setMenuBadge</span><span class="p">(</span><span class="s2">&quot;Orders&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">ordersStore</span><span class="p">.</span><span class="nx">pendingOrdersCount</span><span class="p">);</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="p">});</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="c1">// Optional: clean up when component unmounts</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="nx">onUnmounted</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="w">  </span><span class="nx">removeMenuBadge</span><span class="p">(</span><span class="s2">&quot;Orders&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="p">});</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="badge-behavior">Badge Behavior<a class="headerlink" href="#badge-behavior" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content is <code>0</code>, <code>null</code>, <code>undefined</code>, or <code>""</code></td>
+<td>Badge hidden</td>
+</tr>
+<tr>
+<td>Content is number &gt; 99</td>
+<td>Displays "99+"</td>
+</tr>
+<tr>
+<td><code>isDot: true</code></td>
+<td>Shows dot indicator, ignores content value</td>
+</tr>
+<tr>
+<td>Ref/computed value changes</td>
+<td>Badge updates automatically</td>
+</tr>
+</tbody>
+</table>
+<h4 id="available-badge-variants">Available Badge Variants<a class="headerlink" href="#available-badge-variants" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>primary</code> (default) - Blue accent color</li>
+<li><code>success</code> - Green</li>
+<li><code>warning</code> - Yellow/Orange</li>
+<li><code>danger</code> - Red</li>
+<li><code>info</code> - Light blue</li>
+<li><code>secondary</code> - Gray</li>
+</ul>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -27413,6 +27637,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li>
 <p><strong>URL Consistency</strong>: Ensure menu URLs align with your blade URLs and routing structure.</p>
+</li>
+<li>
+<p><strong>Badge Performance</strong>: Use function callbacks or computed refs for badge content when values come from stores - this ensures proper reactivity without unnecessary re-renders.</p>
 </li>
 </ul>
                 
