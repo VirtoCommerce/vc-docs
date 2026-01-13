@@ -11,6 +11,7 @@ import shutil
 import argparse
 import json
 import tempfile
+import re
 
 def run_command(cmd, check=True, cwd=None):
     """Run shell command and return result"""
@@ -159,21 +160,39 @@ def main():
 
     print("✅ Git configured for CI/CD")
 
-    print("📋 Step 2: Build non-versioned sites (root + intermediate)")
+    print("📋 Step 2: Build non-versioned sites (root + intermediate landing pages only)")
 
     # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
 
-    # Build root site (without subsites)
-    run_command("mkdocs build -d " + args.output_dir, check=False)
+    # Create a temporary mkdocs.yml WITHOUT !include directives for root site
+    # This avoids building all subsites (they come from gh-pages in Step 4)
+    print("  Creating temp config for root site (without !include subsites)...")
+    with open("mkdocs.yml", "r") as f:
+        root_config = f.read()
 
-    # Build intermediate sites (platform, marketplace, storefront)
-    print("  Building intermediate sites...")
+    # Remove nav section with !include directives, keep only Home
+    # Replace the nav section to only include Home
+    temp_config = re.sub(
+        r'nav:\s*\n(\s+-\s+Home:.*?\n)(\s+-\s+\w+:.*?!include.*?\n)+',
+        r'nav:\n\1',
+        root_config,
+        flags=re.MULTILINE
+    )
+
+    with open("mkdocs-temp-root.yml", "w") as f:
+        f.write(temp_config)
+
+    # Build root site using temp config (only landing page, no subsites)
+    run_command("mkdocs build -f mkdocs-temp-root.yml -d " + args.output_dir, check=False)
+
+    # Build intermediate sites (platform, marketplace, storefront) - only their landing pages
+    print("  Building intermediate landing pages...")
     run_command(f"mkdocs build -f storefront/mkdocs.yml -d ../{args.output_dir}/storefront", check=False)
     run_command(f"mkdocs build -f platform/mkdocs.yml -d ../{args.output_dir}/platform", check=False)
     run_command(f"mkdocs build -f marketplace/mkdocs.yml -d ../{args.output_dir}/marketplace", check=False)
 
-    print("✅ Non-versioned sites built")
+    print("✅ Non-versioned landing pages built (subsites will come from gh-pages)")
 
     print("📋 Step 3: Deploy versioned subsites with Mike")
 
