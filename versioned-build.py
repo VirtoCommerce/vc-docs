@@ -34,6 +34,7 @@ def main():
         print("pip install mike")
         sys.exit(1)
 
+<<<<<<< Updated upstream
     print("📋 Step 1: Initialize local gh-pages folder")
 
     # Initialize local gh-pages folder if it doesn't exist
@@ -81,11 +82,15 @@ def main():
             print(f"  ⚠️  Warning: Could not check gh-pages branch: {e}")
 
     print("📋 Step 2: Build non-versioned sites (root + intermediate)")
+=======
+    print("📋 Step 1: Build non-versioned sites (root + intermediate)")
+>>>>>>> Stashed changes
 
     # Create site directory
     os.makedirs("site", exist_ok=True)
 
     # Build root site (without subsites)
+<<<<<<< Updated upstream
     # print("  Building root site...")
     # with open("mkdocs-temp-root.yml", "w") as f:
     #     f.write("INHERIT: mkdocs.yml\n")
@@ -93,6 +98,15 @@ def main():
     #     f.write("    - Home: index.md\n")
 
     run_command("mkdocs build -d site", check=False)
+=======
+    print("  Building root site...")
+    with open("mkdocs-temp-root.yml", "w") as f:
+        f.write("INHERIT: mkdocs.yml\n")
+        f.write("nav:\n")
+        f.write("    - Home: index.md\n")
+
+    run_command("mkdocs build -f mkdocs-temp-root.yml -d site", check=False)
+>>>>>>> Stashed changes
 
     # Build intermediate sites (platform, marketplace, storefront)
     print("  Building intermediate sites...")
@@ -102,7 +116,11 @@ def main():
 
     print("✅ Non-versioned sites built")
 
+<<<<<<< Updated upstream
     print("📋 Step 3: Deploy versioned subsites with Mike")
+=======
+    print("📋 Step 2: Deploy versioned subsites with Mike")
+>>>>>>> Stashed changes
 
     # Deploy all subsites with version 1.0
     subsites = [
@@ -136,6 +154,7 @@ def main():
 
     print("✅ Versioned subsites deployed")
 
+<<<<<<< Updated upstream
     print("📋 Step 4: Update local gh-pages folder with latest deployed content")
 
     # Update local gh-pages folder to get the latest deployed content
@@ -213,12 +232,88 @@ def main():
             print(f"  ⚠️  Sitemap not found at {sitemap_path}")
 
     print("✅ Sitemaps extracted from copied content")
+=======
+    print("📋 Step 2.5: Create aliases for unversioned paths")
+
+    # Create aliases for unversioned paths to redirect to latest versions
+    for subsite in subsites:
+        config = f"{subsite}/mkdocs.yml"
+        print(f"  Creating aliases for {subsite}...")
+
+        # Create alias for developer-guide path (if it exists)
+        if "developer-guide" in subsite:
+            run_command(
+                f'mike alias -F "{config}" --deploy-prefix "{subsite}" latest developer-guide',
+                check=False
+            )
+
+        # Create alias for user-guide path (if it exists)
+        if "user-guide" in subsite:
+            run_command(
+                f'mike alias -F "{config}" --deploy-prefix "{subsite}" latest user-guide',
+                check=False
+            )
+
+        # Create alias for deployment-on-cloud path (if it exists)
+        if "deployment-on-cloud" in subsite:
+            run_command(
+                f'mike alias -F "{config}" --deploy-prefix "{subsite}" latest deployment-on-cloud',
+                check=False
+            )
+
+    print("✅ Aliases for unversioned paths created")
+
+    print("📋 Step 3: Copy versioned content from gh-pages to site")
+
+    # Save current branch
+    result = run_command("git branch --show-current")
+    current_branch = result.stdout.strip()
+
+    try:
+        # Stash changes and checkout gh-pages
+        print("  Stashing changes and switching to gh-pages branch...")
+        run_command("git stash push -m 'temp changes for testing'", check=False)
+        run_command("git checkout gh-pages")
+
+        print("  Copying versioned content...")
+        # Copy versioned subsites to site directory
+        # This overwrites the non-versioned subsites with versioned ones
+        for subsite in ["marketplace", "platform", "storefront"]:
+            for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
+                src = f"{subsite}/{guide}"
+                if os.path.exists(src):
+                    dst = f"site/{subsite}/{guide}"
+                    print(f"  Copying {src} to {dst}")
+                    if os.path.exists(dst):
+                        shutil.rmtree(dst)
+                    shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+                else:
+                    print(f"  ⚠️  {src} not found in gh-pages")
+
+        # Return to original branch and restore changes
+        print(f"  Returning to {current_branch} branch...")
+        run_command(f"git checkout {current_branch}")
+        run_command("git stash pop", check=False)
+
+    except Exception as e:
+        print(f"❌ Error during versioned content copy: {e}")
+        # Try to return to original branch
+        run_command(f"git checkout {current_branch}", check=False)
+
+    print("✅ Versioned content copied to site")
+
+    print("📋 Step 4: Links will be handled by Mike aliases (no manual fixing needed)")
+>>>>>>> Stashed changes
 
     # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
+<<<<<<< Updated upstream
     print("📋 Step 7: Start Python HTTP server")
+=======
+    print("📋 Step 5: Start Python HTTP server")
+>>>>>>> Stashed changes
     print("")
 
     # Change to site directory and start server
@@ -228,7 +323,11 @@ def main():
     PORT = 8020
     Handler = http.server.SimpleHTTPRequestHandler
 
+<<<<<<< Updated upstream
     for port in range(8020, 8100):
+=======
+    for port in range(8020, 8030):
+>>>>>>> Stashed changes
         try:
             with socketserver.TCPServer(("", port), Handler) as httpd:
                 print(f"🌐 Server started on http://localhost:{port}")
