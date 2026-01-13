@@ -18,6 +18,7 @@ The Menu Service manages the application's navigation structure through:
 - **Permission Control**: Showing/hiding menu items based on user permissions
 - **Dynamic Updates**: Runtime menu modification based on application state
 - **Automatic Module Registration**: Modules can automatically add themselves to the menu
+- **Badge/Counter Support**: Display reactive counters or indicators on menu items
 
 Menu items can be registered manually or automatically through module registration. When using `createAppModule`, any blade with a `menuItem` property in its `defineOptions` will be automatically added to the navigation menu.
 
@@ -304,7 +305,7 @@ export function setupGroupedMenus() {
 When defining menu items, whether through the `addMenuItem` function of `useMenuService` or via the `menuItem` property in a blade's `defineOptions`, you should use an object that conforms to the `MenuItem` interface defined in the [`useMenuService` API documentation](../composables/useMenuService.md#menuitem-interface). This interface typically includes fields like:
 
 ```typescript
-import { type ComputedRef, type Component } from 'vue';
+import { type ComputedRef, type Component, type Ref } from 'vue';
 
 interface MenuItem {
   id?: string;                           // Unique identifier (generated if not provided when using useMenuService)
@@ -314,16 +315,27 @@ interface MenuItem {
   icon?: string | Component;             // Icon identifier (e.g., 'material-home') or an imported Vue component
   priority?: number;                     // Sorting priority (lower numbers appear higher in the menu)
   permissions?: string | string[];       // Optional: Permissions required to display this item
-  
+  badge?: MenuItemBadgeConfig;           // Optional: Badge/counter configuration
+
   // Modern group configuration
-  groupConfig?: {                       
+  groupConfig?: {
     id: string;                          // Group ID (required to associate item with a group)
     title?: string | ComputedRef<string>; // Group title (required only when this item is the first to define the group)
     icon?: string | Component;           // Optional icon for the group
     priority?: number;                   // Optional priority for the group itself (affects group order)
     permissions?: string | string[];     // Optional: Permissions required to display the entire group
+    badge?: MenuItemBadgeConfig;         // Optional: Badge for the group
   };
 }
+
+// Badge configuration types
+interface MenuItemBadge {
+  content?: string | number | Ref<string | number | undefined> | ComputedRef<string | number | undefined> | (() => string | number | undefined);
+  variant?: "primary" | "success" | "warning" | "danger" | "info" | "secondary";
+  isDot?: boolean;
+}
+
+type MenuItemBadgeConfig = MenuItemBadge | number | string | Ref<number | string | undefined> | ComputedRef<number | string | undefined> | (() => number | string | undefined);
 ```
 
 Key points for `MenuItem` configuration:
@@ -404,6 +416,97 @@ addMenuItem({
 });
 ```
 
+### 7. Menu Badges and Counters
+
+Display counters or notification indicators on menu items using the badge feature. Badges support reactive values that automatically update when underlying data changes.
+
+```typescript
+import { setMenuBadge, removeMenuBadge } from '@vc-shell/framework';
+import { ref, computed } from 'vue';
+
+// Simple reactive counter
+const pendingOrdersCount = ref(5);
+setMenuBadge("Orders", pendingOrdersCount);  // "Orders" is the blade name (routeId)
+
+// Using function callback for store values
+setMenuBadge("Orders", () => useOrdersStore().pendingCount);
+
+// Full configuration with variant
+setMenuBadge("Alerts", {
+  content: computed(() => alertStore.criticalCount),
+  variant: "danger",
+});
+
+// Dot indicator (presence indicator without number)
+setMenuBadge("Messages", {
+  isDot: true,
+  content: () => hasUnreadMessages.value ? 1 : 0,
+});
+
+// Badge on menu group
+setMenuBadge("orders-group", totalOrdersBadge);
+
+// Remove badge when no longer needed
+removeMenuBadge("Orders");
+```
+
+#### Badge Integration in Blade Components
+
+```vue
+<!-- OrdersBlade.vue -->
+<script lang="ts" setup>
+import { defineOptions, onMounted, onUnmounted } from 'vue';
+import { setMenuBadge, removeMenuBadge } from '@vc-shell/framework';
+import { useOrdersStore } from '../stores/orders';
+
+defineOptions({
+  name: 'Orders',
+  url: '/orders',
+  menuItem: {
+    title: 'ORDERS.MENU.TITLE',
+    icon: 'lucide-shopping-cart',
+    priority: 10,
+    groupConfig: {
+      id: 'sales-group',
+      title: 'Sales',
+      icon: 'lucide-dollar-sign',
+      priority: 20
+    }
+  }
+});
+
+const ordersStore = useOrdersStore();
+
+onMounted(() => {
+  // Set badge with reactive function - updates automatically
+  setMenuBadge("Orders", () => ordersStore.pendingOrdersCount);
+});
+
+// Optional: clean up when component unmounts
+onUnmounted(() => {
+  removeMenuBadge("Orders");
+});
+</script>
+```
+
+#### Badge Behavior
+
+| Scenario | Result |
+|----------|--------|
+| Content is `0`, `null`, `undefined`, or `""` | Badge hidden |
+| Content is number > 99 | Displays "99+" |
+| `isDot: true` | Shows dot indicator, ignores content value |
+| Ref/computed value changes | Badge updates automatically |
+
+#### Available Badge Variants
+
+- `primary` (default) - Blue accent color
+- `success` - Green
+- `warning` - Yellow/Orange
+- `danger` - Red
+- `info` - Light blue
+- `secondary` - Gray
+
 ## Best Practices
 
 * **Automatic Registration**: Prefer automatic menu registration through `defineOptions` and `menuItem` for blade components to keep menu configuration close to the component.
@@ -419,3 +522,5 @@ addMenuItem({
 * **Consistent Iconography**: Use Material Design icons consistently across your menu items for a cohesive visual experience.
 
 * **URL Consistency**: Ensure menu URLs align with your blade URLs and routing structure.
+
+* **Badge Performance**: Use function callbacks or computed refs for badge content when values come from stores - this ensures proper reactivity without unnecessary re-renders.

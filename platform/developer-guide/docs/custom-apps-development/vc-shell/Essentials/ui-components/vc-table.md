@@ -559,6 +559,10 @@ function onHeaderClick(column: ITableColumns) {
 
 ### Table with Multi-Select and Actions
 
+The recommended approach for handling multi-select in `VcTable` is to use the `useTableSelection` composable. It provides a standardized way to manage selected items, extract IDs, and handle "select all" functionality.
+
+For detailed information on the composable's API and options, see the [**`useTableSelection` documentation**](../composables/useTableSelection.md).
+
 ```vue
 <template>
   <VcTable
@@ -569,7 +573,8 @@ function onHeaderClick(column: ITableColumns) {
     :item-action-builder="actionBuilder"
     enable-item-actions
     state-key="products-table"
-    @selection-changed="onSelectionChanged"
+    @selection-changed="handleSelectionChange"
+    @select:all="handleSelectAll"
   >
     <template #item_status="{ item }">
       <VcBadge :variant="item.isActive ? 'success' : 'danger'">
@@ -581,7 +586,15 @@ function onHeaderClick(column: ITableColumns) {
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { VcTable, VcBadge, ITableColumns, IActionBuilderResult } from '@vc-shell/framework';
+import { VcTable, VcBadge, ITableColumns, IActionBuilderResult, useTableSelection } from '@vc-shell/framework';
+
+interface Product {
+  id: string;
+  name: string;
+  sku: string;
+  price: number;
+  isActive: boolean;
+}
 
 const columns = ref<ITableColumns[]>([
   { id: 'name', title: 'Product Name', sortable: true, alwaysVisible: true },
@@ -590,15 +603,25 @@ const columns = ref<ITableColumns[]>([
   { id: 'status', title: 'Status', sortable: true, width: 120 }
 ]);
 
-const products = ref([
+const products = ref<Product[]>([
   { id: '1', name: 'Product A', sku: 'SKU001', price: 29.99, isActive: true },
   { id: '2', name: 'Product B', sku: 'SKU002', price: 49.99, isActive: true },
   { id: '3', name: 'Product C', sku: 'SKU003', price: 19.99, isActive: false }
 ]);
 
-const selectedProducts = ref([]);
+// Use the composable for selection management
+const {
+  selectedItems,
+  selectedIds,
+  allSelected,
+  hasSelection,
+  handleSelectionChange,
+  handleSelectAll,
+  resetSelection,
+  selectItems,
+} = useTableSelection<Product>();
 
-function actionBuilder(item) {
+function actionBuilder(item: Product): IActionBuilderResult[] {
   return [
     {
       title: 'Edit',
@@ -614,16 +637,24 @@ function actionBuilder(item) {
   ];
 }
 
-function onSelectionChanged(items) {
-  selectedProducts.value = items;
-}
-
-function editProduct(product) {
+function editProduct(product: Product) {
   // Edit logic
 }
 
-function deleteProduct(product) {
+function deleteProduct(product: Product) {
   // Delete logic
+}
+
+// Example: Delete selected products
+async function deleteSelectedProducts() {
+  if (allSelected.value) {
+    // Handle bulk delete all
+    await api.deleteAllProducts();
+  } else {
+    // Delete specific items by IDs
+    await api.deleteProducts(selectedIds.value);
+  }
+  resetSelection();
 }
 </script>
 ```

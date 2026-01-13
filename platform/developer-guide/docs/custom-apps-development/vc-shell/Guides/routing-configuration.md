@@ -115,6 +115,56 @@ The initial template includes a `redirect` function that forwards the user from 
 
 If you add a component to the root path (`path: ""`), as in the dashboard example, you **must remove** this `redirect`, otherwise the user will never see your main page.
 
+## Single-Module Application Setup
+
+If your application contains only one module and you don't need a navigation menu with a single item, you can configure the app to redirect directly to your module's blade and hide the menu entirely.
+
+### Step 1: Configure the Redirect
+
+Keep or modify the `redirect` function in your root route to point to your module:
+
+```typescript
+{
+  path: "/",
+  component: App,
+  name: "App",
+  meta: {
+    root: true,
+  },
+  children: [],
+  redirect: (to) => {
+    if (to.name === "App") {
+      return { path: "/my-module", params: to.params };
+    }
+    return to.path;
+  },
+}
+```
+
+This ensures that when users navigate to the root path (`/`), they are automatically redirected to your module's blade (e.g., `/my-module`).
+
+### Step 2: Hide the Navigation Menu
+
+To hide the navigation menu, add the `disable-menu` prop to the `VcApp` component in your `App.vue`:
+
+```vue
+<template>
+  <VcApp
+    :is-ready="isReady"
+    :logo="logoImage"
+    title="My Single Module App"
+    :version="version"
+    disable-menu
+  >
+  </VcApp>
+</template>
+```
+
+With this configuration:
+- Users are automatically redirected to your module's blade on app load
+- The navigation menu is hidden, providing a cleaner interface
+- Users can still navigate using blade navigation within your module
+
 ## Blade Navigation and the Catch-All Route
 
 The last route in the configuration deserves special attention:
