@@ -10,6 +10,7 @@ import subprocess
 import shutil
 import argparse
 import json
+import tempfile
 
 def run_command(cmd, check=True, cwd=None):
     """Run shell command and return result"""
@@ -230,41 +231,62 @@ def main():
     result = run_command("git branch --show-current")
     current_branch = result.stdout.strip()
 
+    # Create temp directory OUTSIDE the repo to avoid git conflicts
+    temp_dir = tempfile.mkdtemp(prefix="vc-docs-versioned-")
+    print(f"  Using temp directory: {temp_dir}")
+
     try:
         # Stash changes and checkout gh-pages
         print("  Stashing changes and switching to gh-pages branch...")
         run_command("git stash push -m 'temp changes for CI/CD build'", check=False)
         run_command("git checkout gh-pages")
 
-        print("  Copying versioned content (all versions)...")
-        # Copy all versioned content from gh-pages
+        print("  Copying versioned content (all versions) to temp dir...")
+        # Copy all versioned content from gh-pages to TEMP dir
         for subsite in ["marketplace", "platform", "storefront"]:
             for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
                 src_base = f"{subsite}/{guide}"
-                dst_base = f"{args.output_dir}/{subsite}/{guide}"
+                dst_base = os.path.join(temp_dir, subsite, guide)
 
                 if not os.path.exists(src_base):
                     print(f"  ⚠️  {src_base} not found in gh-pages")
                     continue
 
-                # Copy entire versioned subsite (includes all versions: 1.0, 2.0, latest, etc.)
-                print(f"    Copying {src_base}/ -> {dst_base}/")
-                if os.path.exists(dst_base):
-                    shutil.rmtree(dst_base)
+                print(f"    Copying {src_base}/ -> temp/{subsite}/{guide}/")
+                os.makedirs(os.path.dirname(dst_base), exist_ok=True)
                 shutil.copytree(src_base, dst_base, ignore=shutil.ignore_patterns('.git'))
-
                 print(f"  ✅ {src_base}")
 
-        # Return to original branch and restore changes
+        # Return to original branch (no conflicts now!)
         print(f"  Returning to {current_branch} branch...")
         run_command(f"git checkout {current_branch}")
         run_command("git stash pop", check=False)
+
+        # NOW move files from temp to site/
+        print("  Moving versioned content from temp to site/...")
+        for subsite in ["marketplace", "platform", "storefront"]:
+            for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
+                src_base = os.path.join(temp_dir, subsite, guide)
+                dst_base = f"{args.output_dir}/{subsite}/{guide}"
+
+                if not os.path.exists(src_base):
+                    continue
+
+                print(f"    Moving temp/{subsite}/{guide}/ -> {dst_base}/")
+                if os.path.exists(dst_base):
+                    shutil.rmtree(dst_base)
+                shutil.move(src_base, dst_base)
 
     except Exception as e:
         print(f"❌ Error during versioned content copy: {e}")
         # Try to return to original branch
         run_command(f"git checkout {current_branch}", check=False)
         sys.exit(1)
+    finally:
+        # Cleanup temp directory
+        if os.path.exists(temp_dir):
+            shutil.rmtree(temp_dir)
+            print(f"  Cleaned up temp directory")
 
     print("✅ Versioned content exported")
 
