@@ -24,7 +24,7 @@ To create a new non-integrative payment method:
 
 1. Click **Save** in the top toolbar to save the changes.
 
-![Add new method](media/add-new-method.png)
+![Add new method](media/add-new-method.png){: style="display: block; margin: 0 auto;" }
 
 Your new method has been added to the list.
 

@@ -62,6 +62,13 @@ To add the pre-filled dimensions and their measure units to your initial configu
 1. In the next blade, check the dimensions you want to include in your configuration.
 1. Click **Create** in the toolbar. 
 
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/vjemi4tpsy9o?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
 The selected dimensions from the default list have been added to your configuration.
 
 To set new default units of measure:
@@ -70,10 +77,17 @@ To set new default units of measure:
 1. In the next blade, click on the **Units** widget.
 1. In the next blade, click on the measure unit from the list.
 1. In the next blade, click **Set as default** in the toolbar.
+1. Confirm your selection by clicking **OK** --> **Yes** --> **Save**.
+
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/yp5gtvbct24s?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
 The selected unit of measure is now the default for this dimension.
-
-![Default units of measure](media/units-of-measure.gif)
 
 ## Add new dimension
 

@@ -48,11 +48,15 @@ The next blade displays the result of indexation:
 
 !!! note
     The blue-green indexing is supported by the ElasticSearch, Azure Search,  and the Elastic Search 8 modules.<br>
+    <br>
+
     ![Readmore](media/readmore.png){: width="25"} [Azure Search module](../azure-search/overview.md)
 
     ![Readmore](media/readmore.png){: width="25"} [Elastic Search module](../elastic-search/overview.md)
     
     ![Readmore](media/readmore.png){: width="25"} [Elastic Search 8 module](../elastic-search-8/overview.md)
+
+    ![Readmore](media/readmore.png){: width="25"} [Elastic Search 9 module](../elastic-search-9/overview.md)
 
 After you choose **Delete and build** when building search index:
 

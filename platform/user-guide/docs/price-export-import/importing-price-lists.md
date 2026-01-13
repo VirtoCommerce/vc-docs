@@ -31,7 +31,7 @@ After [creating a price list](../pricing/creating-new-price-list.md), you can fi
 
 1. When the import is complete, click **Refresh** in the price list blade.
 
-    ![Import price list3](media/import-pricelist3.png)
+    ![Import price list3](media/import-pricelist3.png){: style="display: block; margin: 0 auto;" }
 
 Your price list has been filled with information. 
 

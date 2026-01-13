@@ -20,12 +20,12 @@ To create a return via the Return module:
     * Specify the return reason.
     * If required, correct the amount and the price of the items returned.
 
-    ![Return reasons](media/return-reasons.png)
+    ![Return reasons](media/return-reasons.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Make return** in the toolbar. 
 1. In the **Return** blade, edit the fields with the description typed in green:
 
-    ![Editable fields](media/make-return.png)
+    ![Editable fields](media/make-return.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes. 
 

@@ -3,15 +3,15 @@
 Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost. The Virto Commerce Push Messages module uses FCM to notify a client across platforms, including web, Android, and iOS that a new notification is available:
 
 === "Regular desktop notification"
-    ![Regular notification](media/regular-desktop-notification.gif)
+    ![Regular notification](media/regular-desktop-notification.gif){: style="display: block; margin: 0 auto;" }
 
 
 === "Android Chrome notification"
-    ![Android notification](media/android-chrome-notification.png)
+    ![Android notification](media/android-chrome-notification.png){: style="display: block; margin: 0 auto;" }
 
 
 === "White labeled desktop notification"
-    ![White labeled notification](media/white-labeling-icon.gif)
+    ![White labeled notification](media/white-labeling-icon.gif){: style="display: block; margin: 0 auto;" }
 
 
 ## Send messages
