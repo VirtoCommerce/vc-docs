@@ -236,19 +236,41 @@ def main():
         run_command("git stash push -m 'temp changes for CI/CD build'", check=False)
         run_command("git checkout gh-pages")
 
-        print("  Copying versioned content...")
-        # Copy versioned subsites to output directory
+        print("  Copying versioned content (latest only, not all versions)...")
+        # Copy only 'latest' version + metadata files from versioned subsites
+        # This avoids copying ALL versions (1.0, 2.0, etc.) which would multiply the size
         for subsite in ["marketplace", "platform", "storefront"]:
             for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
-                src = f"{subsite}/{guide}"
-                if os.path.exists(src):
-                    dst = f"{args.output_dir}/{subsite}/{guide}"
-                    print(f"  Copying {src} to {dst}")
-                    if os.path.exists(dst):
-                        shutil.rmtree(dst)
-                    shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+                src_base = f"{subsite}/{guide}"
+                dst_base = f"{args.output_dir}/{subsite}/{guide}"
+
+                if not os.path.exists(src_base):
+                    print(f"  ⚠️  {src_base} not found in gh-pages")
+                    continue
+
+                # Ensure destination exists
+                os.makedirs(dst_base, exist_ok=True)
+
+                # Copy only 'latest' version (which is the active/default version)
+                src_latest = f"{src_base}/latest"
+                dst_latest = f"{dst_base}/latest"
+                if os.path.exists(src_latest):
+                    print(f"    Copying {src_latest}/ -> {dst_latest}/")
+                    if os.path.exists(dst_latest):
+                        shutil.rmtree(dst_latest)
+                    shutil.copytree(src_latest, dst_latest, ignore=shutil.ignore_patterns('.git'))
                 else:
-                    print(f"  ⚠️  {src} not found in gh-pages")
+                    print(f"    ⚠️  {src_latest} not found")
+
+                # Copy metadata files (versions.json, index.html for version selector)
+                for meta_file in ["versions.json", "index.html"]:
+                    src_meta = f"{src_base}/{meta_file}"
+                    dst_meta = f"{dst_base}/{meta_file}"
+                    if os.path.exists(src_meta):
+                        shutil.copy2(src_meta, dst_meta)
+                        print(f"    Copied {meta_file}")
+
+                print(f"  ✅ {src_base} (latest only)")
 
         # Return to original branch and restore changes
         print(f"  Returning to {current_branch} branch...")
