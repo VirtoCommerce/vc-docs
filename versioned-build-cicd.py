@@ -19,6 +19,106 @@ def run_command(cmd, check=True, cwd=None):
         sys.exit(1)
     return result
 
+
+def cleanup_duplicate_folders(site_dir):
+    """
+    Remove duplicate flat folders created by monorepo plugin.
+
+    The monorepo plugin creates folders like 'platform-developer-guide' at the root level
+    when using !include directives. These duplicate the content already present in
+    nested paths like 'platform/developer-guide/', causing the build to be ~2x larger.
+    """
+    duplicate_folders = [
+        "platform-developer-guide",
+        "platform-user-guide",
+        "platform-deployment-on-cloud",
+        "marketplace-developer-guide",
+        "marketplace-user-guide",
+        "storefront-developer-guide",
+        "storefront-user-guide",
+    ]
+
+    removed_count = 0
+    freed_bytes = 0
+
+    for folder in duplicate_folders:
+        path = os.path.join(site_dir, folder)
+        if os.path.exists(path):
+            # Calculate size before removal
+            folder_size = get_folder_size(path)
+            freed_bytes += folder_size
+
+            shutil.rmtree(path)
+            removed_count += 1
+            print(f"    Removed {folder}/ ({format_size(folder_size)})")
+
+    return removed_count, freed_bytes
+
+
+def deduplicate_assets(site_dir):
+    """
+    Replace duplicate MkDocs theme assets folders with symlinks to the root assets.
+
+    MkDocs Material theme copies ~11MB of assets (CSS, JS, fonts, icons) into each
+    subsite build. With 10+ subsites, this adds ~100MB+ of duplicate content.
+    This function replaces all nested assets/ folders with symlinks to the root assets/.
+    """
+    root_assets = os.path.join(site_dir, "assets")
+
+    if not os.path.exists(root_assets):
+        print("    ⚠️  Root assets folder not found, skipping deduplication")
+        return 0, 0
+
+    replaced_count = 0
+    freed_bytes = 0
+
+    for root, dirs, _ in os.walk(site_dir, topdown=True):
+        if "assets" in dirs and root != site_dir:
+            assets_path = os.path.join(root, "assets")
+
+            # Skip if already a symlink
+            if os.path.islink(assets_path):
+                continue
+
+            # Calculate size before removal
+            folder_size = get_folder_size(assets_path)
+            freed_bytes += folder_size
+
+            # Calculate relative path from current directory to root assets
+            rel_path = os.path.relpath(root_assets, root)
+
+            # Remove the duplicate folder and create symlink
+            shutil.rmtree(assets_path)
+            os.symlink(rel_path, assets_path)
+
+            replaced_count += 1
+            # Print relative path from site_dir for cleaner output
+            rel_assets = os.path.relpath(assets_path, site_dir)
+            print(f"    Symlinked {rel_assets}/ -> {rel_path}")
+
+    return replaced_count, freed_bytes
+
+
+def get_folder_size(path):
+    """Calculate total size of a folder in bytes."""
+    total = 0
+    for dirpath, _, filenames in os.walk(path):
+        for filename in filenames:
+            filepath = os.path.join(dirpath, filename)
+            # Skip symbolic links
+            if not os.path.islink(filepath):
+                total += os.path.getsize(filepath)
+    return total
+
+
+def format_size(size_bytes):
+    """Format bytes as human-readable size."""
+    for unit in ['B', 'KB', 'MB', 'GB']:
+        if size_bytes < 1024:
+            return f"{size_bytes:.1f} {unit}"
+        size_bytes /= 1024
+    return f"{size_bytes:.1f} TB"
+
 def main():
     parser = argparse.ArgumentParser(description='CI/CD versioned documentation build')
     parser.add_argument('--version', help='Global version for all subsites')
@@ -75,17 +175,6 @@ def main():
     print("✅ Non-versioned sites built")
 
     print("📋 Step 3: Deploy versioned subsites with Mike")
-
-    # IMPORTANT: Reset local gh-pages to match origin/gh-pages
-    # This prevents "gh-pages has diverged from origin/gh-pages" error
-    print("  Synchronizing local gh-pages with origin...")
-    run_command("git fetch origin gh-pages", check=False)
-    # Check if local gh-pages exists
-    result = run_command("git show-ref --verify --quiet refs/heads/gh-pages", check=False)
-    if result.returncode == 0:
-        # Local branch exists - reset it to origin
-        run_command("git branch -f gh-pages origin/gh-pages", check=False)
-    print("  ✅ gh-pages synchronized")
 
     # Define subsites and their versions
     subsites = {
@@ -147,24 +236,41 @@ def main():
         run_command("git stash push -m 'temp changes for CI/CD build'", check=False)
         run_command("git checkout gh-pages")
 
-        # IMPORTANT: Pull latest changes from remote gh-pages
-        # Mike --push updates origin/gh-pages but not local gh-pages branch
-        print("  Pulling latest changes from origin/gh-pages...")
-        run_command("git pull origin gh-pages --ff-only", check=False)
-
-        print("  Copying versioned content...")
-        # Copy versioned subsites to output directory
+        print("  Copying versioned content (latest only, not all versions)...")
+        # Copy only 'latest' version + metadata files from versioned subsites
+        # This avoids copying ALL versions (1.0, 2.0, etc.) which would multiply the size
         for subsite in ["marketplace", "platform", "storefront"]:
             for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
-                src = f"{subsite}/{guide}"
-                if os.path.exists(src):
-                    dst = f"{args.output_dir}/{subsite}/{guide}"
-                    print(f"  Copying {src} to {dst}")
-                    if os.path.exists(dst):
-                        shutil.rmtree(dst)
-                    shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+                src_base = f"{subsite}/{guide}"
+                dst_base = f"{args.output_dir}/{subsite}/{guide}"
+
+                if not os.path.exists(src_base):
+                    print(f"  ⚠️  {src_base} not found in gh-pages")
+                    continue
+
+                # Ensure destination exists
+                os.makedirs(dst_base, exist_ok=True)
+
+                # Copy only 'latest' version (which is the active/default version)
+                src_latest = f"{src_base}/latest"
+                dst_latest = f"{dst_base}/latest"
+                if os.path.exists(src_latest):
+                    print(f"    Copying {src_latest}/ -> {dst_latest}/")
+                    if os.path.exists(dst_latest):
+                        shutil.rmtree(dst_latest)
+                    shutil.copytree(src_latest, dst_latest, ignore=shutil.ignore_patterns('.git'))
                 else:
-                    print(f"  ⚠️  {src} not found in gh-pages")
+                    print(f"    ⚠️  {src_latest} not found")
+
+                # Copy metadata files (versions.json, index.html for version selector)
+                for meta_file in ["versions.json", "index.html"]:
+                    src_meta = f"{src_base}/{meta_file}"
+                    dst_meta = f"{dst_base}/{meta_file}"
+                    if os.path.exists(src_meta):
+                        shutil.copy2(src_meta, dst_meta)
+                        print(f"    Copied {meta_file}")
+
+                print(f"  ✅ {src_base} (latest only)")
 
         # Return to original branch and restore changes
         print(f"  Returning to {current_branch} branch...")
@@ -209,9 +315,24 @@ def main():
 
     print("✅ Sitemaps extracted from versioned content")
 
-    # Cleanup
+    # Cleanup temp files
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
+
+    print("📋 Step 6: Optimize build size (remove duplicates)")
+
+    # Remove duplicate folders created by monorepo plugin
+    print("  Removing duplicate folders from monorepo plugin...")
+    folders_removed, folders_freed = cleanup_duplicate_folders(args.output_dir)
+    print(f"  ✅ Removed {folders_removed} duplicate folders ({format_size(folders_freed)} freed)")
+
+    # Replace duplicate assets with symlinks
+    print("  Deduplicating assets folders...")
+    assets_replaced, assets_freed = deduplicate_assets(args.output_dir)
+    print(f"  ✅ Replaced {assets_replaced} assets folders with symlinks ({format_size(assets_freed)} freed)")
+
+    total_freed = folders_freed + assets_freed
+    print(f"✅ Build optimized! Total space saved: {format_size(total_freed)}")
 
     print("✅ CI/CD versioned build completed!")
 
