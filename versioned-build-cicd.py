@@ -82,41 +82,6 @@ def run_command(cmd, check=True, cwd=None):
     return result
 
 
-def cleanup_duplicate_folders(site_dir):
-    """
-    Remove duplicate flat folders created by monorepo plugin.
-
-    The monorepo plugin creates folders like 'platform-developer-guide' at the root level
-    when using !include directives. These duplicate the content already present in
-    nested paths like 'platform/developer-guide/', causing the build to be ~2x larger.
-    """
-    duplicate_folders = [
-        "platform-developer-guide",
-        "platform-user-guide",
-        "platform-deployment-on-cloud",
-        "marketplace-developer-guide",
-        "marketplace-user-guide",
-        "storefront-developer-guide",
-        "storefront-user-guide",
-    ]
-
-    removed_count = 0
-    freed_bytes = 0
-
-    for folder in duplicate_folders:
-        path = os.path.join(site_dir, folder)
-        if os.path.exists(path):
-            # Calculate size before removal
-            folder_size = get_folder_size(path)
-            freed_bytes += folder_size
-
-            shutil.rmtree(path)
-            removed_count += 1
-            print(f"    Removed {folder}/ ({format_size(folder_size)})")
-
-    return removed_count, freed_bytes
-
-
 def deduplicate_assets(site_dir):
     """
     Replace duplicate MkDocs theme assets folders with symlinks to the root assets.
@@ -400,17 +365,12 @@ def main():
 
     print("📋 Step 6: Optimize build size (remove duplicates)")
 
-    # Remove duplicate folders created by monorepo plugin
-    print("  Removing duplicate folders from monorepo plugin...")
-    folders_removed, folders_freed = cleanup_duplicate_folders(args.output_dir)
-    print(f"  ✅ Removed {folders_removed} duplicate folders ({format_size(folders_freed)} freed)")
-
     # Replace duplicate assets with symlinks
     print("  Deduplicating assets folders...")
     assets_replaced, assets_freed = deduplicate_assets(args.output_dir)
     print(f"  ✅ Replaced {assets_replaced} assets folders with symlinks ({format_size(assets_freed)} freed)")
 
-    total_freed = folders_freed + assets_freed
+    total_freed = assets_freed
     print(f"✅ Build optimized! Total space saved: {format_size(total_freed)}")
 
     print("✅ CI/CD versioned build completed!")
