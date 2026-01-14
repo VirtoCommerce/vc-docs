@@ -10,8 +10,67 @@ import subprocess
 import shutil
 import argparse
 import json
-import tempfile
-import re
+
+def get_latest_version(output_dir, subsite):
+    """Get the actual version number that has 'latest' alias from versions.json"""
+    versions_path = os.path.join(output_dir, subsite, "versions.json")
+    if os.path.exists(versions_path):
+        with open(versions_path) as f:
+            versions = json.load(f)
+        for v in versions:
+            if "latest" in v.get("aliases", []):
+                return v["version"]
+        # If no 'latest' alias found, return first version
+        if versions:
+            return versions[0]["version"]
+    return None
+
+def merge_search_indexes(output_dir):
+    """Merge search indexes from all versioned subsites into a global index"""
+    subsites = [
+        "platform/developer-guide",
+        "platform/user-guide",
+        "platform/deployment-on-cloud",
+        "marketplace/developer-guide",
+        "marketplace/user-guide",
+        "storefront/developer-guide",
+        "storefront/user-guide"
+    ]
+
+    merged_docs = []
+    config = {"lang": ["en"], "separator": "[\\s\\-]+", "pipeline": ["stopWordFilter"]}
+
+    for subsite in subsites:
+        # Get actual version from versions.json (latest is an alias)
+        actual_version = get_latest_version(output_dir, subsite)
+        if not actual_version:
+            print(f"    ⚠️  No versions.json found for {subsite}")
+            continue
+
+        index_path = os.path.join(output_dir, subsite, actual_version, "search", "search_index.json")
+        if os.path.exists(index_path):
+            with open(index_path) as f:
+                data = json.load(f)
+
+            # Add prefix using 'latest' alias for URL consistency
+            prefix = f"{subsite}/latest/"
+            for doc in data.get("docs", []):
+                doc["location"] = prefix + doc["location"]
+                merged_docs.append(doc)
+
+            print(f"    Added {len(data.get('docs', []))} docs from {subsite} (v{actual_version})")
+        else:
+            print(f"    ⚠️  Index not found: {index_path}")
+
+    # Write merged index
+    merged_index = {"config": config, "docs": merged_docs}
+    search_dir = os.path.join(output_dir, "search")
+    os.makedirs(search_dir, exist_ok=True)
+
+    with open(os.path.join(search_dir, "search_index.json"), "w") as f:
+        json.dump(merged_index, f)
+
+    print(f"    Total: {len(merged_docs)} docs in global search index")
 
 def run_command(cmd, check=True, cwd=None):
     """Run shell command and return result"""
@@ -165,28 +224,15 @@ def main():
     # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
 
-    # Create a temporary mkdocs.yml WITHOUT !include directives for root site
-    # This avoids building all subsites (they come from gh-pages in Step 4)
-    print("  Creating temp config for root site (without !include subsites)...")
-    with open("mkdocs.yml", "r") as f:
-        root_config = f.read()
+    # Build root site using mkdocs.yml (WITHOUT monorepo plugin)
+    # This builds only the main page + redirects, without rebuilding all subsites
+    # Search index will be merged from versioned subsite indexes later
+    print("  Building root site (without monorepo)...")
+    run_command("mkdocs build -f mkdocs.yml -d " + args.output_dir, check=False)
 
-    # Remove nav section with !include directives, keep only Home
-    # Replace the nav section to only include Home
-    temp_config = re.sub(
-        r'nav:\s*\n(\s+-\s+Home:.*?\n)(\s+-\s+\w+:.*?!include.*?\n)+',
-        r'nav:\n\1',
-        root_config,
-        flags=re.MULTILINE
-    )
-
-    with open("mkdocs-temp-root.yml", "w") as f:
-        f.write(temp_config)
-
-    # Build root site using temp config (only landing page, no subsites)
-    run_command("mkdocs build -f mkdocs-temp-root.yml -d " + args.output_dir, check=False)
-
-    # Build intermediate sites (platform, marketplace, storefront) - only their landing pages
+    # Build intermediate landing pages (platform, marketplace, storefront)
+    # Using mkdocs.yml configs which override plugins to exclude redirects
+    # This prevents generating hundreds of redirect HTML files
     print("  Building intermediate landing pages...")
     run_command(f"mkdocs build -f storefront/mkdocs.yml -d ../{args.output_dir}/storefront", check=False)
     run_command(f"mkdocs build -f platform/mkdocs.yml -d ../{args.output_dir}/platform", check=False)
@@ -339,7 +385,15 @@ def main():
 
     print("✅ Sitemaps extracted from versioned content")
 
-    # Cleanup temp files
+    print("📋 Step 6: Merge search indexes from versioned subsites")
+
+    # Merge search indexes from all versioned subsites into a global search index
+    # This replaces the monorepo-generated index without rebuilding all subsites
+    merge_search_indexes(args.output_dir)
+
+    print("✅ Search indexes merged")
+
+    # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 

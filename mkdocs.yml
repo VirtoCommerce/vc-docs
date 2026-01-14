@@ -1,3 +1,7 @@
+# Root config for building main page + redirects WITHOUT monorepo
+# This avoids rebuilding all subsites and creating duplicate folders
+# Search index is merged from versioned subsite indexes separately
+
 theme:
     name: material
     custom_dir: overrides
@@ -75,8 +79,9 @@ markdown_extensions:
     - pymdownx.tilde
     - pymdownx.snippets
 
+# NO monorepo plugin - we don't want to rebuild all subsites
 plugins:
-    - monorepo
+    # - monorepo  # REMOVED - subsites are built separately with mike
     - search: # necessary for search to work
     #   - autolinks
     - awesome-pages:
@@ -288,18 +293,9 @@ edit_uri: edit/dev/docs/
 # Copyright
 copyright: Copyright &copy; 2026. All rights reserved.
 
+# Simple nav WITHOUT !include directives (no monorepo)
 nav:
     - Home: index.md
-    - Marketplace:
-          - Developer Guide: "!include ./marketplace/developer-guide/mkdocs.yml"
-          - User Guide: "!include ./marketplace/user-guide/mkdocs.yml"
-    - Storefront:
-          - Developer Guide: "!include ./storefront/developer-guide/mkdocs.yml"
-          - User Guide: "!include ./storefront/user-guide/mkdocs.yml"
-    - Platform:
-          - Developer Guide: "!include ./platform/developer-guide/mkdocs.yml"
-          - User Guide: "!include ./platform/user-guide/mkdocs.yml"
-          - Deployment on Cloud: "!include ./platform/deployment-on-cloud/mkdocs.yml"
 
 extra:
     root_url: https://docs.virtocommerce.org

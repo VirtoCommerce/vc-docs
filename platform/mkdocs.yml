@@ -1,4 +1,7 @@
+# Landing page config for /platform/
+# Inherits from root but OVERRIDES plugins to remove redirects
 INHERIT: ../mkdocs.yml
+
 theme:
     custom_dir: ../overrides
 
@@ -15,6 +18,15 @@ site_url: https://docs.virtocommerce.org/platform
 repo_name: VirtoCommerce/vc-platform
 repo_url: https://github.com/VirtoCommerce/vc-platform
 edit_uri: edit/dev/docs/
+
+# OVERRIDE plugins - NO redirects, NO monorepo!
+# This is the key difference from mkdocs.yml
+plugins:
+    - search
+
+# Only build index.md
+nav:
+    - Home: index.md
 
 extra:
     main_page:
@@ -130,6 +142,3 @@ extra:
               icon: assets/icons/version-icon.svg
               link: https://github.com/VirtoCommerce/vc-platform/tree/dev/docs/products
               outlineColor: "#FF9162"
-
-nav:
-    - Home: index.md

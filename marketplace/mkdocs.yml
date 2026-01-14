@@ -1,4 +1,7 @@
+# Landing page config for /marketplace/
+# Inherits from root but OVERRIDES plugins to remove redirects
 INHERIT: ../mkdocs.yml
+
 theme:
     custom_dir: ../overrides
 
@@ -15,6 +18,14 @@ site_url: https://docs.virtocommerce.org/marketplace
 repo_name: VirtoCommerce/vc-deploy-marketplace
 repo_url: https://github.com/VirtoCommerce/vc-deploy-marketplace
 edit_uri: edit/dev/docs/
+
+# OVERRIDE plugins - NO redirects, NO monorepo!
+plugins:
+    - search
+
+# Only build index.md
+nav:
+    - Home: index.md
 
 extra:
     main_page:
@@ -93,7 +104,20 @@ extra:
               link: https://www.virtocommerce.org/t/virto-s-release-notes-january-2025/755
               type: Release Notes
               date: 1 January 2025
-
-nav:
-    - Home: index.md
-
+        link_cards:
+            - title: Contact support
+              icon: assets/icons/contact-support.svg
+              link: https://help.virtocommerce.com/support/home
+              outlineColor: "#EA534A"
+            - title: Community
+              icon: assets/icons/community.svg
+              link: https://www.virtocommerce.org/
+              outlineColor: "#EA534A"
+            - title: GitHub
+              icon: assets/icons/github-outline.svg
+              link: https://github.com/VirtoCommerce
+              outlineColor: "#FF9162"
+            - title: Blog
+              icon: assets/icons/blog.svg
+              link: https://virtocommerce.com/blog
+              outlineColor: "#FF9162"
