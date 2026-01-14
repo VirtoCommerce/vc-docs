@@ -10,6 +10,7 @@ import subprocess
 import shutil
 import argparse
 import json
+import tempfile
 
 def get_latest_version(output_dir, subsite):
     """Get the actual version number that has 'latest' alias from versions.json"""
