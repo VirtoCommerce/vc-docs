@@ -27,7 +27,7 @@ Each molecule is API-driven, single accountable and has its own dedicated storag
 
 Cells represent functional units of the eCommerce ecosystem. They comprise sets of molecules integrated by a common functional context to execute comprehensive business scenarios.
 
-For example, a digital catalog acts as a cell, requiring the integration of molecules such as catalog management, pricing, inventory control, search functionalities, and event buses — all interconnected through APIs. Each cell operates autonomously and can be reused or repurposed as necessary.
+For example, a digital catalog acts as a cell, requiring the integration of molecules such as catalog management, pricing, inventory control, search functionalities, and event buses - all interconnected through APIs. Each cell operates autonomously and can be reused or repurposed as necessary.
 
 Cells are essential for the growth and evolution of the ecommerce Platform. They allow for enhancements, combinations, or custom developments to meet specific business needs.
 

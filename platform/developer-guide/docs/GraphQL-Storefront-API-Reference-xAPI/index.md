@@ -13,22 +13,54 @@ It is closely associated with a particular user or touch point experience and en
 
     ![Readmore](media/readmore.png){: width="25"} [Migration to new xAPI modules](../Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md)
 
-# GraphQL core ideas
+## GraphQL vs REST
 
 GraphQL is a an API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
 
 ![graphQL-Rest](media/rest-graphQL.png){: style="display: block; margin: 0 auto;" }
 
-With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Client customize the endpoints using schema, which provides a description of how the data is structured and contains. Here is a part from Virto Commerce schema:
+Virto Commerce intentionally keeps both GraphQL and REST, each for different purposes.
+
+| GraphQL is used for:|	REST is used for:|
+| --------------------| -----------------|
+|  Frontend applications. <br> Customer-facing experiences. <br> Business workflows (browse, search, cart, checkout). <br> Aggregated, contextual data. <br> High-performance read/write scenarios.| System integrations. <br> ERP synchronization. <br> Bulk data import/export. <br> Back-office operations. <br> Data migration and administrative APIs.|
+
+## GraphQL core components
+
+GraphQL’s power lies in its structured, declarative nature. Its fundamental elements are:
+
+* [Schema.](#schema)
+* [Query.](#query)
+* [Mutation.](#mutation)
+* [Subscription.](#subscription)
+* [Variable.](#variable)
+
+### Schema
+
+The schema is the backbone of GraphQL, defining the API’s data structure in a strongly typed manner. It acts as a contract between client and server, specifying available types (e.g., objects like “Product” or “Order”), fields (e.g., “title” or “price”), and relationships. This self-documenting schema enables tools for auto-generating clients, validation, and introspection. Unlike REST’s often loosely defined endpoints, GraphQL schemas evolve predictably - new fields can be added without breaking existing queries - making it ideal for long-term API maintenance in ecommerce.
 
 ![schema](media/schema.png){: style="display: block; margin: 0 auto;" }
 
-!!! info
-    Another concept to know is a **Variable**. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
+### Query
 
-Our instruction provides Virto Commerce related guidelines. 
+Query is a read-only operation used to fetch data. Clients specify exactly what data they need, and the server responds with a matching structure. For example, a query might request product details for a specific store and language context. Another to term to know is **Variable**. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.
 
-![Readmore](media/readmore.png){: width="25"} [Extensive GraphQL guide](https://graphql.org/learn/)
+
+```graphql
+query GetOrdersForApproval ($storeId: String!,  $cultureName: String!) {​
+  ordersForApproval(storeId: $ storeId, cultureName: $cultureName) {​
+    id​
+    number​
+    status​
+    total {​
+      amount​
+      currency​
+    }​
+  }​
+}
+```
+
+This avoids REST’s over-fetching, ensuring efficient, targeted data retrieval.
 
 ??? "Sample queries"
 
@@ -40,11 +72,58 @@ Our instruction provides Virto Commerce related guidelines.
     | Show first 2 products from the list | ![first-products](media/first-products-query.png)             | ![first-products](media/first-products-return.png) |
 
 
-## Key concepts
+### Mutation
+
+Mutations handle write operations, such as creating, updating, or deleting data. They follow the same request-response pattern as queries but perform side effects. For instance, a mutation could approve an order:
+
+```graphql
+mutation ApproveOrder($storeId: String!,  $cultureName: String!, $orderId: String!) {​
+  approveOrder(storeId: $ storeId, cultureName: $cultureName, orderId: $orderId) {​
+    id​
+    number​
+    status​
+    approvedBy {​
+      id​
+      name​
+    }​
+    approvedDate​
+  }  ​
+}
+```
+
+Mutations return data, allowing clients to fetch updated results in one request, reducing the need for follow-up queries common in REST.
+
+### Subscription
+
+Subscriptions enable real-time updates via WebSockets, pushing data to clients when events occur. This is perfect for dynamic e-commerce features like live inventory changes or order notifications:
+
+```graphql
+subscription OnOrderStatusChanged($userId: ID!) {​
+  orderStatusChanged(userId: $userId) {​
+    id​
+    number​
+    status​
+    updatedDate​
+  }​
+}​
+```
+
+Unlike REST’s polling (which wastes resources), subscriptions provide efficient, event-driven real-time communication.
+
+With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Clients customize the endpoints using schema, which provides a description of how the data is structured. Here is a part from Virto Commerce schema:
+
+
+
+Our instruction provides Virto Commerce related guidelines. 
+
+![Readmore](media/readmore.png){: width="25"} [Extensive GraphQL guide](https://graphql.org/learn/)
+
+
+## Key principles
 
 * Utilize GraphQL protocol for precise and flexible data retrieval control from the API.
 * Achieve fast and dependable indexed search through integration with:
-    * [Elasticsearch 8.x](https://www.elastic.co/downloads/elasticsearch)
+    * [Elasticsearch 9.x](https://www.elastic.co/downloads/elasticsearch)
     * [Elastic App Search](https://www.elastic.co/downloads/app-search)
     * [Azure Search](https://learn.microsoft.com/en-us/shows/azure/azure-search)
 * Maintain autonomy by exclusively relying on the index data source, separate from the rest of the VC data infrastructure.

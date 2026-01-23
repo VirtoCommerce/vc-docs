@@ -29,6 +29,6 @@ The Swagger UI is active by default. It can be disabled via [application setting
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Tutorials and how-tos </a>
+    <a href="../upgrading-to-dot-net-10">← Upgrading to Virto Commerce on .NET10 </a>
     <a href="../generating-c-sharp-client">Generating C# client  →</a>
 </div>

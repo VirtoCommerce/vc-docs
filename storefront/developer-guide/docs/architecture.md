@@ -1,6 +1,6 @@
 # Architecture
 
-The simplified and accelerated Frontend Application architecture is as follows: 
+The simplified and accelerated Frontend architecture is as follows: 
 
 ![Architecture](media/frontend-application-architecture.png)
 
@@ -12,7 +12,7 @@ It includes:
 * Static Content Storage (Virto Commerce Frontend or any SPA application).
 * Virto Commerce Platform (xAPI/GraphQL).
 * CDN (optional, placed before the load balancer).
-* Prerender.IO (optional for Server-Side Rendering).
+* Prerender.io (optional for server-side rendering).
 
 The workflow ensures a seamless and efficient operation of the Virto Commerce Frontend Application:
 

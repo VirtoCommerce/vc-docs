@@ -7,7 +7,7 @@ The Virto Commerce Frontend application has native integration with Google Analy
 
 Using GA4 is recommended for simple setups. To install it and assign Google Analytics Measurement Id for you store:
 
-1. Create Google Analytics Account according to the [Instruction](https://support.google.com/analytics/answer/9304153)
+1. Create Google Analytics Account according to the [Instruction](https://support.google.com/analytics/answer/9304153):
 
     ![Demo](../media/demo.gif){: style="display: block; margin: 0 auto;" }
     

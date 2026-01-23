@@ -571,8 +571,8 @@ extra:
               url: https://www.youtube.com/c/VirtoCommerce
               external: true
             - iconSrc: assets/icons/fire.svg
-              title: Migration to New xAPI Modules
-              url: /platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules
+              title: Upgrading to .NET10
+              url: /platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10
         footer:
             - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"

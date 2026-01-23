@@ -1,4 +1,4 @@
-﻿# Identifying domain model boundaries for each module and best number of modules for custom solution
+﻿# Identify Domain Model Boundaries for Each Module and Best Number of Modules for Custom Solution
 
 When it comes to identifying model boundaries and size for each module, the goal is not to get to the most granular separation possible, although you should tend towards having smaller modules, when possible. Instead, however, your goal is to get to the most meaningful separation guided by your domain knowledge.
 
