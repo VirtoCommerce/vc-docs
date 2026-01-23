@@ -519,7 +519,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                     <a
                         class="mega-menu__menu-button "
-                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules"
+                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10"
                         
                     >
                         
@@ -528,7 +528,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 style="background-image: url('assets/icons/fire.svg')"
                             ></div>
                         
-                        Migration to New xAPI Modules
+                        Upgrading to .NET10
                     </a>
 
                 
@@ -7438,6 +7438,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -7446,6 +7450,119 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#graphql-vs-rest" class="md-nav__link">
+        GraphQL vs REST
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#graphql-core-components" class="md-nav__link">
+        GraphQL core components
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="GraphQL core components">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#schema" class="md-nav__link">
+        Schema
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#query" class="md-nav__link">
+        Query
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#mutation" class="md-nav__link">
+        Mutation
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#subscription" class="md-nav__link">
+        Subscription
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#key-principles" class="md-nav__link">
+        Key principles
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#key-features" class="md-nav__link">
+        Key features
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -7465,7 +7582,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="getting-started/" class="md-nav__link">
-        Getting Started
+        Setting up Environment for Working with xAPI
       </a>
     </li>
   
@@ -22048,6 +22165,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="multiregional-development/" class="md-nav__link">
+        Multiregional Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="x-api-extensions/" class="md-nav__link">
         xAPI Extensions
       </a>
@@ -22840,6 +22975,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10/" class="md-nav__link">
+        Upgrading to Virto Commerce on .NET10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -23004,24 +23157,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies/" class="md-nav__link">
         Customizing Cart Validation Policies
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../Tutorials-and-How-tos/How-tos/upgrading-to-net8/" class="md-nav__link">
-        Upgrading to Virto Commerce on .Net8
       </a>
     </li>
   
@@ -26704,6 +26839,100 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#graphql-vs-rest" class="md-nav__link">
+        GraphQL vs REST
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#graphql-core-components" class="md-nav__link">
+        GraphQL core components
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="GraphQL core components">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#schema" class="md-nav__link">
+        Schema
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#query" class="md-nav__link">
+        Query
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#mutation" class="md-nav__link">
+        Mutation
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#subscription" class="md-nav__link">
+        Subscription
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#key-principles" class="md-nav__link">
+        Key principles
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#key-features" class="md-nav__link">
+        Key features
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -26724,7 +26953,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 11:17:54 UTC">January 23, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26754,17 +26983,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>We have migrated to a new xAPI architecture to better support the evolving needs of our business API with GraphQL. The previously used <a href="https://github.com/VirtoCommerce/vc-module-experience-api">Experience API module</a> has been replaced with a suite of new, more specialized modules. This change is part of our effort to simplify business API development and streamline our release cycle. The <strong>ExperienceAPI module</strong> will be archived and supported in Stable 8 and Stable 9 releases. Future developments will focus on the new xAPI module and related modules. </p>
 <p><img alt="Readmore" src="media/readmore.png" width="25" /> <a href="../Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules/">Migration to new xAPI modules</a></p>
 </div>
-<h1 id="graphql-core-ideas">GraphQL core ideas<a class="headerlink" href="#graphql-core-ideas" title="Permanent link">&para;</a></h1>
+<h2 id="graphql-vs-rest">GraphQL vs REST<a class="headerlink" href="#graphql-vs-rest" title="Permanent link">&para;</a></h2>
 <p>GraphQL is a an API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. </p>
 <p><img alt="graphQL-Rest" src="media/rest-graphQL.png" style="display: block; margin: 0 auto;" /></p>
-<p>With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Client customize the endpoints using schema, which provides a description of how the data is structured and contains. Here is a part from Virto Commerce schema:</p>
+<p>Virto Commerce intentionally keeps both GraphQL and REST, each for different purposes.</p>
+<table>
+<thead>
+<tr>
+<th>GraphQL is used for:</th>
+<th>REST is used for:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frontend applications. <br> Customer-facing experiences. <br> Business workflows (browse, search, cart, checkout). <br> Aggregated, contextual data. <br> High-performance read/write scenarios.</td>
+<td>System integrations. <br> ERP synchronization. <br> Bulk data import/export. <br> Back-office operations. <br> Data migration and administrative APIs.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="graphql-core-components">GraphQL core components<a class="headerlink" href="#graphql-core-components" title="Permanent link">&para;</a></h2>
+<p>GraphQL’s power lies in its structured, declarative nature. Its fundamental elements are:</p>
+<ul>
+<li><a href="#schema">Schema.</a></li>
+<li><a href="#query">Query.</a></li>
+<li><a href="#mutation">Mutation.</a></li>
+<li><a href="#subscription">Subscription.</a></li>
+<li><a href="#variable">Variable.</a></li>
+</ul>
+<h3 id="schema">Schema<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h3>
+<p>The schema is the backbone of GraphQL, defining the API’s data structure in a strongly typed manner. It acts as a contract between client and server, specifying available types (e.g., objects like “Product” or “Order”), fields (e.g., “title” or “price”), and relationships. This self-documenting schema enables tools for auto-generating clients, validation, and introspection. Unlike REST’s often loosely defined endpoints, GraphQL schemas evolve predictably - new fields can be added without breaking existing queries - making it ideal for long-term API maintenance in ecommerce.</p>
 <p><img alt="schema" src="media/schema.png" style="display: block; margin: 0 auto;" /></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Another concept to know is a <strong>Variable</strong>. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.</p>
-</div>
-<p>Our instruction provides Virto Commerce related guidelines. </p>
-<p><img alt="Readmore" src="media/readmore.png" width="25" /> <a href="https://graphql.org/learn/">Extensive GraphQL guide</a></p>
+<h3 id="query">Query<a class="headerlink" href="#query" title="Permanent link">&para;</a></h3>
+<p>Query is a read-only operation used to fetch data. Clients specify exactly what data they need, and the server responds with a matching structure. For example, a query might request product details for a specific store and language context. Another to term to know is <strong>Variable</strong>. It is a placeholder that allows clients to pass values as arguments to a query or mutation without hard-coding those values directly into the query. Variables are defined in the query or mutation. They are then referenced in the query using the dollar sign ($). This feature makes GraphQL queries more reusable and flexible, as clients can change variable values when making requests.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">query</span><span class="w"> </span><span class="nf">GetOrdersForApproval</span><span class="w"> </span><span class="p">(</span><span class="nv">$storeId</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!,</span><span class="w">  </span><span class="nv">$cultureName</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">ordersForApproval</span><span class="p">(</span><span class="n">storeId</span><span class="p">:</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="no">storeId</span><span class="p">,</span><span class="w"> </span><span class="n">cultureName</span><span class="p">:</span><span class="w"> </span><span class="nv">$cultureName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">id</span><span class="err">​</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">number</span><span class="err">​</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">status</span><span class="err">​</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="n">amount</span><span class="err">​</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="n">currency</span><span class="err">​</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span><span class="err">​</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span><span class="err">​</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>This avoids REST’s over-fetching, ensuring efficient, targeted data retrieval.</p>
 <details>
 <summary>Sample queries</summary>
 <table>
@@ -26799,11 +27062,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </details>
-<h2 id="key-concepts">Key concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="mutation">Mutation<a class="headerlink" href="#mutation" title="Permanent link">&para;</a></h3>
+<p>Mutations handle write operations, such as creating, updating, or deleting data. They follow the same request-response pattern as queries but perform side effects. For instance, a mutation could approve an order:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">mutation</span><span class="w"> </span><span class="nf">ApproveOrder</span><span class="p">(</span><span class="nv">$storeId</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!,</span><span class="w">  </span><span class="nv">$cultureName</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!,</span><span class="w"> </span><span class="nv">$orderId</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="n">approveOrder</span><span class="p">(</span><span class="n">storeId</span><span class="p">:</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="no">storeId</span><span class="p">,</span><span class="w"> </span><span class="n">cultureName</span><span class="p">:</span><span class="w"> </span><span class="nv">$cultureName</span><span class="p">,</span><span class="w"> </span><span class="n">orderId</span><span class="p">:</span><span class="w"> </span><span class="nv">$orderId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">id</span><span class="err">​</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">number</span><span class="err">​</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">status</span><span class="err">​</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">approvedBy</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="n">id</span><span class="err">​</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="n">name</span><span class="err">​</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span><span class="err">​</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="n">approvedDate</span><span class="err">​</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="p">}</span><span class="w">  </span><span class="err">​</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<p>Mutations return data, allowing clients to fetch updated results in one request, reducing the need for follow-up queries common in REST.</p>
+<h3 id="subscription">Subscription<a class="headerlink" href="#subscription" title="Permanent link">&para;</a></h3>
+<p>Subscriptions enable real-time updates via WebSockets, pushing data to clients when events occur. This is perfect for dynamic e-commerce features like live inventory changes or order notifications:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">subscription</span><span class="w"> </span><span class="nf">OnOrderStatusChanged</span><span class="p">(</span><span class="nv">$userId</span><span class="p">:</span><span class="w"> </span><span class="nb">ID</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="n">orderStatusChanged</span><span class="p">(</span><span class="n">userId</span><span class="p">:</span><span class="w"> </span><span class="nv">$userId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="err">​</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">id</span><span class="err">​</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">number</span><span class="err">​</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">status</span><span class="err">​</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">updatedDate</span><span class="err">​</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">}</span><span class="err">​</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span><span class="err">​</span>
+</code></pre></div>
+<p>Unlike REST’s polling (which wastes resources), subscriptions provide efficient, event-driven real-time communication.</p>
+<p>With GraphQL, clients can optimize their data queries, reducing network load, improving performance, and addressing the more complex and specific data requirements of modern applications. Clients customize the endpoints using schema, which provides a description of how the data is structured. Here is a part from Virto Commerce schema:</p>
+<p>Our instruction provides Virto Commerce related guidelines. </p>
+<p><img alt="Readmore" src="media/readmore.png" width="25" /> <a href="https://graphql.org/learn/">Extensive GraphQL guide</a></p>
+<h2 id="key-principles">Key principles<a class="headerlink" href="#key-principles" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Utilize GraphQL protocol for precise and flexible data retrieval control from the API.</li>
 <li>Achieve fast and dependable indexed search through integration with:<ul>
-<li><a href="https://www.elastic.co/downloads/elasticsearch">Elasticsearch 8.x</a></li>
+<li><a href="https://www.elastic.co/downloads/elasticsearch">Elasticsearch 9.x</a></li>
 <li><a href="https://www.elastic.co/downloads/app-search">Elastic App Search</a></li>
 <li><a href="https://learn.microsoft.com/en-us/shows/azure/azure-search">Azure Search</a></li>
 </ul>
