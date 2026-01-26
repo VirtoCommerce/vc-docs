@@ -22946,8 +22946,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#remove-buildhost-net472-and-buildhost-netcore" class="md-nav__link">
-        Remove BuildHost-net472 and BuildHost-netcore
+    <a href="#clean-up-buildhost-artifacts-after-upgrade" class="md-nav__link">
+        Clean up BuildHost artifacts after upgrade
     </a>
 
     <!-- Render nested item list -->
@@ -22956,8 +22956,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#failed-to-load-type-for-module" class="md-nav__link">
-        Failed to load type for module
+    <a href="#resolve-moduletypeloadingexception-in-net-10" class="md-nav__link">
+        Resolve ModuleTypeLoadingException in .NET 10
     </a>
 
     <!-- Render nested item list -->
@@ -22966,8 +22966,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#415-client-error-unsupported-media-type" class="md-nav__link">
-        415 Client Error: Unsupported media type
+    <a href="#415-unsupported-media-type-for-json-patch-requests" class="md-nav__link">
+        415 Unsupported Media Type for JSON Patch Requests
     </a>
 
     <!-- Render nested item list -->
@@ -26981,8 +26981,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#remove-buildhost-net472-and-buildhost-netcore" class="md-nav__link">
-        Remove BuildHost-net472 and BuildHost-netcore
+    <a href="#clean-up-buildhost-artifacts-after-upgrade" class="md-nav__link">
+        Clean up BuildHost artifacts after upgrade
     </a>
 
     <!-- Render nested item list -->
@@ -26991,8 +26991,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#failed-to-load-type-for-module" class="md-nav__link">
-        Failed to load type for module
+    <a href="#resolve-moduletypeloadingexception-in-net-10" class="md-nav__link">
+        Resolve ModuleTypeLoadingException in .NET 10
     </a>
 
     <!-- Render nested item list -->
@@ -27001,8 +27001,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#415-client-error-unsupported-media-type" class="md-nav__link">
-        415 Client Error: Unsupported media type
+    <a href="#415-unsupported-media-type-for-json-patch-requests" class="md-nav__link">
+        415 Unsupported Media Type for JSON Patch Requests
     </a>
 
     <!-- Render nested item list -->
@@ -27107,7 +27107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 11:17:54 UTC">January 23, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 26, 2026 16:02:10 UTC">January 26, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27181,7 +27181,7 @@ This update focuses on:</p>
 <p class="admonition-title">Note</p>
 <p>If you find any new breaking changes, submit a question on <a href="https://www.virtocommerce.org/c/support/12">Virto Commerce Community</a>.</p>
 </div>
-<h2 id="remove-buildhost-net472-and-buildhost-netcore">Remove BuildHost-net472 and BuildHost-netcore<a class="headerlink" href="#remove-buildhost-net472-and-buildhost-netcore" title="Permanent link">&para;</a></h2>
+<h2 id="clean-up-buildhost-artifacts-after-upgrade">Clean up BuildHost artifacts after upgrade<a class="headerlink" href="#clean-up-buildhost-artifacts-after-upgrade" title="Permanent link">&para;</a></h2>
 <p>After updating Microsoft.EntityFrameworkCore.Design to 10.x, you will see that your project includes two folders <strong>BuildHost-net472</strong> and <strong>BuildHost-netcore</strong> under <strong>obj</strong> folder.
 These folders are created by Microsoft.EntityFrameworkCore.Design - a package to support design-time services for different target frameworks. </p>
 <p>You can remove these two folders by modifying your <strong>.csproj file</strong> to include the following PackageReference for Microsoft.EntityFrameworkCore.Design with PrivateAssets set to all:</p>
@@ -27190,7 +27190,7 @@ These folders are created by Microsoft.EntityFrameworkCore.Design - a package to
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&lt;IncludeAssets&gt;</span>runtime;<span class="w"> </span>build;<span class="w"> </span>native;<span class="w"> </span>analyzers;<span class="w"> </span>buildtransitive<span class="nt">&lt;/IncludeAssets&gt;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">&lt;/PackageReference&gt;</span>
 </code></pre></div>
-<h2 id="failed-to-load-type-for-module">Failed to load type for module<a class="headerlink" href="#failed-to-load-type-for-module" title="Permanent link">&para;</a></h2>
+<h2 id="resolve-moduletypeloadingexception-in-net-10">Resolve ModuleTypeLoadingException in .NET 10<a class="headerlink" href="#resolve-moduletypeloadingexception-in-net-10" title="Permanent link">&para;</a></h2>
 <p>You can get the ModuleTypeLoadingException exception after updating Platform and modules to v3.1000+:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Unhandled exception. VirtoCommerce.Platform.Core.Modularity.Exceptions.ModuleTypeLoadingException: Failed to load type for module SomeModule.
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Cannot load &quot;Microsoft.IO.RecyclableMemoryStream&quot; for module ...
@@ -27209,8 +27209,8 @@ In .NET 10, Microsoft refreshed and excluded some assemblies (dll) that are no l
 </div>
 </div>
 </div>
-<h2 id="415-client-error-unsupported-media-type">415 Client Error: Unsupported media type<a class="headerlink" href="#415-client-error-unsupported-media-type" title="Permanent link">&para;</a></h2>
-<p>After upgrading to .NET 10, you may encounter a 415 Client Error: Unsupported Media Type when performing store update operations that use JSON Patch, such as:</p>
+<h2 id="415-unsupported-media-type-for-json-patch-requests">415 Unsupported Media Type for JSON Patch Requests<a class="headerlink" href="#415-unsupported-media-type-for-json-patch-requests" title="Permanent link">&para;</a></h2>
+<p>After upgrading to .NET 10, you may encounter a <strong>415 Client Error: Unsupported Media Type</strong> when performing store update operations that use JSON Patch, such as:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>PATCH /api/stores/{storeId}
 </code></pre></div>
 <p>For example:</p>
