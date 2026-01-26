@@ -67,7 +67,7 @@ Virto Commerce updated Microsoft.OpenApi from version 1.0.0 to 2.3.0 that includ
 !!! note
     If you find any new breaking changes, submit a question on [Virto Commerce Community](https://www.virtocommerce.org/c/support/12).
 
-## Remove BuildHost-net472 and BuildHost-netcore
+## Clean up BuildHost artifacts after upgrade
 
 After updating Microsoft.EntityFrameworkCore.Design to 10.x, you will see that your project includes two folders **BuildHost-net472** and **BuildHost-netcore** under **obj** folder.
 These folders are created by Microsoft.EntityFrameworkCore.Design - a package to support design-time services for different target frameworks. 
@@ -81,7 +81,7 @@ You can remove these two folders by modifying your **.csproj file** to include t
 </PackageReference>
 ```
 
-## Failed to load type for module
+## Resolve ModuleTypeLoadingException in .NET 10
 
 You can get the ModuleTypeLoadingException exception after updating Platform and modules to v3.1000+:
 
@@ -105,9 +105,9 @@ To resolve the issue, you can:
     
     Update your module to .NET 10 using the [instructions](#update-virto-commerce-platform-and-modules-to-v31000).
 
-## 415 Client Error: Unsupported media type
+## 415 Unsupported Media Type for JSON Patch Requests
 
-After upgrading to .NET 10, you may encounter a 415 Client Error: Unsupported Media Type when performing store update operations that use JSON Patch, such as:
+After upgrading to .NET 10, you may encounter a **415 Client Error: Unsupported Media Type** when performing store update operations that use JSON Patch, such as:
 
 ```txt
 PATCH /api/stores/{storeId}
