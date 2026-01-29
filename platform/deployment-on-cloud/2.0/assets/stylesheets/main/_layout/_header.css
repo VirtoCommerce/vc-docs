@@ -147,3 +147,19 @@
     opacity: 1;
     z-index: 0;
 }
+
+/* Hide burger button on wide screens */
+@media screen and (min-width: 1221px) {
+    .md-header__button[for="__drawer"] {
+        display: none;
+    }
+}
+
+/* Show burger button on narrow screens (1220px and below) */
+@media screen and (max-width: 1220px) {
+    .md-header__button[for="__drawer"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
