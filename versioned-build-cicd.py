@@ -39,7 +39,7 @@ def merge_search_indexes(output_dir):
     ]
 
     merged_docs = []
-    config = {"lang": ["en"], "separator": "[\\s\\-]+", "pipeline": ["stopWordFilter"]}
+    config = {"lang": ["en"], "separator": "[\\s\\-]+", "pipeline": ["stopWordFilter"], "fields": {"title": {"boost": 1000.0}, "text": {"boost": 1.0}, "tags": {"boost": 1000000.0}}}
 
     for subsite in subsites:
         # Get actual version from versions.json (latest is an alias)
