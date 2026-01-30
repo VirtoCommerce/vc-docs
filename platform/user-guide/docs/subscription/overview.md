@@ -9,10 +9,10 @@ The **Subscription** module enables retailers to sell subscription-based offerin
 
 When [enabled](enabling-subscriptions.md), the subscriptions will be displayed:
 
-* [In the Subscriptions module.](overview.md#view-subscriptions-in-subscriptions-module)
-* [In the Order module.](overview.md#view-subscriptions-in-order-module)
+* [In the Subscriptions section.](#view-subscriptions-through-subscriptions-section)
+* [In the Order section.](#view-subscriptions-through-order-section)
 
-## View subscriptions in Subscriptions module
+## View subscriptions through Subscriptions section
 
 To view all the created subscriptions, click **Subscriptions** in the main menu. The next blade displays the list of created subscriptions:
 
@@ -22,7 +22,7 @@ Click on the required subscription to edit it:
 
 ![Edit subscription](media/edit-subscription.png){: style="display: block; margin: 0 auto;" }
 
-## View subscriptions in Order module
+## View subscriptions through Order section
 
 To view the created subscriptions by the order for which they were created:
 

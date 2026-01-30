@@ -2,10 +2,11 @@
 
 Managing promotions includes:
 
-* [Creating new promotions.](managing-promotions.md#creating-new-promotion)
-* [Creating coupons and gift cards.](managing-promotions.md#create-coupons-and-gift-cards)
-* [Editing promotions.](managing-promotions.md#edit-promotion)
-* [Deleting promotions.](managing-promotions.md#delete-promotion)
+* [Creating new promotions.](#create-new-promotion)
+* [Creating coupons and gift cards.](#create-coupons-and-gift-cards)
+* [Editing promotions.](#edit-promotion)
+* [Viewing promotion usage history.](#view-promotion-usage-history)
+* [Deleting promotions.](#delete-promotion)
 
 ## Create new promotion
 
@@ -26,11 +27,9 @@ Managing promotions includes:
 
 Your newly created promotion appears in the promotions list.
 
-![Readmore](media/readmore.png){: width="25"} [Promotion conditions](promotion-rules.md)
+![Readmore](media/readmore.png){: width="25"} [Promotion rules](promotion-rules.md)
 
 ## Create coupons and gift cards
-
-Creating personal coupons is possible as of [VC Marketing module version 3.210.0](https://github.com/VirtoCommerce/vc-module-marketing/releases/tag/3.210.0) 
 
 To create a coupon:
 
@@ -41,7 +40,8 @@ To create a coupon:
 1. In the **Coupons** blade, click **Add** to add a coupon manually or **Import** to import a coupon via CSV.
 
 	![path](media/add-coupon-path.png){: style="display: block; margin: 0 auto;" }
-
+<br>
+<br>
 === "Add coupon"
 
 	1. Fill in the following fields:
@@ -59,17 +59,36 @@ To create a coupon:
 	1. Upload CSV file.
 	1. Click **Start import**.
 
-Your new coupon has been added to the promotion.
+Your new coupon has been added to the promotion. The created coupons are stored in the **Coupons** widget.
+
 
 ## Edit promotion
 
 To edit a promotion:
 
-1. Follow steps 1-3 from the instruction above.
-1. Edit the required fields.
+1. Click **Marketing** in the main menu.
+1. In the next blade, click **Promotions**.
+1. Click the required promotion in the **Promotions** blade.
+1. In the next blade, edit the required fields. 
 1. Click **Save** to save the changes.
 
 The modifications have been saved.
+
+
+## View promotion usage history
+
+After you create a promotion, its usage history is stored in the corresponding widget:
+
+1. Click **Marketing** in the main menu.
+1. In the next blade, click **Promotions**.
+1. Click the required promotion in the **Promotions** blade.
+1. In the next blade, click on the **Usage history** widget.
+1. The next blade opens a list of orders where the promotion was applied. You can track how many times a coupon was used, identify which customers applied it, etc.
+
+![Usage history](media/usage-history.png){: style="display: block; margin: 0 auto;" }
+
+<br>
+Applied coupons can also be viewed from **Orders** --> your order --> **Discounts** widget. 
 
 ## Delete promotion
 

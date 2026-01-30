@@ -8,13 +8,13 @@ By default, catalog menu is automatically generated based on the existing catego
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, let's create root categories as follows:
 
-    ![Root categories](media/root-categories.png)
+    ![Root categories](media/root-categories.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create**. Your link list appears in the previous blade.
 1. Click **Add** in the **Link lists** blade.
 1. In the next blade, let's create subcategories as follows:
 
-    ![Link lists](media/link-lists.png)
+    ![Link lists](media/link-lists.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create**. Your link list appears in the previous blade.
 
@@ -24,7 +24,7 @@ By default, catalog menu is automatically generated based on the existing catego
 1. Go to **Stores** --> Your store --> **Settings**.
 1. In the **Settings** blade, find **Virto Commerce Frontend** settings and paste the name of the root link list into the **Top level catalog linked list** field:
 
-    ![Top catalog level](media/top-catalog-level-settings.png)
+    ![Top catalog level](media/top-catalog-level-settings.png){: style="display: block; margin: 0 auto;" }
 
 Your new dropdown menu appears in the Frontend Application.
 
@@ -37,4 +37,3 @@ Your new dropdown menu appears in the Frontend Application.
     <a href="../store-configuration">← Configure store </a>
     <a href="../footer-creation">Set up footer →</a>
 </div>
-

@@ -26,13 +26,13 @@ Add links to documentation - deploy on Windows, Create custom module
 
 To confirm that the module is working as intended, let's check that the modifications made to the Order module have been applied. For example, a new document type can be added in the extended module:
 
-![Extended vs. Standard](media/extended-vs-standard.png)
+![Extended vs. Standard](media/extended-vs-standard.png){: style="display: block; margin: 0 auto;" }
 
 ## Build artifact
 
 To deploy the module on Virto Cloud, build an artifact:
 
-![Build](media/build-module.png)
+![Build](media/build-module.png){: style="display: block; margin: 0 auto;" }
 
 This command compiles the entire package into a single artifact, ready for installation and deployment.
 
@@ -41,7 +41,7 @@ This command compiles the entire package into a single artifact, ready for insta
 
 After the build is finished, the artifact appears in the artifacts folder:
 
-![Artifacts folder](media/artifacts-folder.png)
+![Artifacts folder](media/artifacts-folder.png){: style="display: block; margin: 0 auto;" }
 
 ## Publish release
 
@@ -51,7 +51,7 @@ Let's manually add the compiled release to GitHub:
 1. Click **Create a new release**.
 1. Name your release, select a tag from the dropdown list, and attach your ZIP archive:
 
-    ![Publish release](media/publish-release.png)
+    ![Publish release](media/publish-release.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Publish release**.
 
@@ -64,7 +64,7 @@ The release is now published.
 1. Describe what this token is for in the **Note** field and set token expiration date if necessary. **No expiration** option is recommended. Otherwise, set a reminder to renew the token before it expires.
 1. Define the access scope for your personal token. Generally, the following access scope should be sufficient:
 
-    ![Access scope](media/access-scope.png)
+    ![Access scope](media/access-scope.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Generate token** and copy its value.
 1. Go to your deployment repository (**vc-deploy-dental** in our case) --> **Settings** --> **Secrets and variables** --> **Actions**
@@ -106,10 +106,10 @@ This token will be used for downloading the repository and uploading artifacts.
 1. You can monitor the process:
 
     === "In the Portal"
-        ![Portal update](media/monitor-in-portal.png)
+        ![Portal update](media/monitor-in-portal.png){: style="display: block; margin: 0 auto;" }
     
     === "In Argo"
-        ![Argo update](media/monitor-in-argo.png)
+        ![Argo update](media/monitor-in-argo.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Verify result
@@ -117,13 +117,13 @@ This token will be used for downloading the repository and uploading artifacts.
 1. Open your project's backend environment (**virtostart-dentalstoredemo.govirto.com** in our case).
 1. Open platform information (click Platform version in the toolbar) to verify that the module has been installed:
 
-    ![Installed module](media/platform-information.png)
+    ![Installed module](media/platform-information.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Orders** in the main menu. Then select any order.
 1. In the next blade, click **New document** in the toolbar.
 1. In the next blade, you see that the new document type can be added:
 
-    ![New document type](media/new-document-type-added.png)
+    ![New document type](media/new-document-type-added.png){: style="display: block; margin: 0 auto;" }
 
 The modifications have been applied.
 

@@ -19,14 +19,14 @@ To start using AvaTax:
     * Avalara account number.
     * Avalara license key.
 
-    ![License key](media/license-key-number.png)
+    ![License key](media/license-key-number.png){: style="display: block; margin: 0 auto;" }
 
 1. Set up Virto Cloud portal:
 
     1. Go to **Virto Cloud Portal** --> **Your environment** (Dentalstoredemo in our case) --> **Applications** widget --> Platform **Application settings**.
     1. Add Avalara account number and Avalara license key:
 
-        ![Avalara account number](media/avalara-account-number.png)
+        ![Avalara account number](media/avalara-account-number.png){: style="display: block; margin: 0 auto;" }
 
     1. Click **Save** in the toolbar to apply the changes.
 

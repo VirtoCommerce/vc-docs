@@ -4,11 +4,11 @@ In this guide, we explore the creation of environments via the CLI. The alternat
 
 To create a new environment using CLI and VC Build, complete the following steps:
 
-1. [Install or update CLI tools.](create-environment-via-cli-and-vc-build.md#install-cli-tools)
-1. [Generate API key.](create-environment-via-cli-and-vc-build.md#generate-api-key)
-1. [Authenticate with Virto Commerce Cloud services.](create-environment-via-cli-and-vc-build.md#authenticate-with-virto-commerce-cloud-services)
-1. [List environments (optionally).](create-environment-via-cli-and-vc-build.md#list-environemnts-optional)
-1. [Create new environment.](create-environment-via-cli-and-vc-build.md#create-new-environment)
+1. [Install or update CLI tools.](#install-cli-tools)
+1. [Generate API key.](#generate-api-key)
+1. [Authenticate with Virto Commerce Cloud services.](#authenticate-with-virto-commerce-cloud-services)
+1. [List environments (optionally).](#list-environments-optional)
+1. [Create new environment.](#create-new-environment)
 
 ## Install CLI tools
 
@@ -33,7 +33,7 @@ To generate API key, open the Virto Cloud Portal:
 1. In the next blade, click **Generate** in the toolbar.
 1. Copy the generated API key.
 
-![Generate API key](media/generate-api-key.png)
+![Generate API key](media/generate-api-key.png){: style="display: block; margin: 0 auto;" }
 
 ## Authenticate with Virto Commerce Cloud services
 
@@ -63,7 +63,7 @@ vc-build CloudInit -EnvironmentName DentalCMD -ServicePlan B1 -Organization virt
 
 Your environment has been created. You can see it in the Virto Cloud Portal:
 
-![New environment](media/created-environment.png)
+![New environment](media/created-environment.png){: style="display: block; margin: 0 auto;" }
 
 You can also:
 

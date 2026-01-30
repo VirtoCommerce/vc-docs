@@ -7,7 +7,7 @@ Complete the steps described below to deploy Platform and Frontend Application o
 1. Use a new account to [enter the Virto Cloud portal](https://portal.virtocommerce.cloud/#!/login). Our specialists provide every client with login and password for a new account.
 1. The portal homepage opens:
 
-    ![Portal dashboard](media/portal-dashboard.png)
+    ![Portal dashboard](media/portal-dashboard.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Add new environment
@@ -23,7 +23,7 @@ To add a new environment through the Cloud Portal:
 1. In the next blade, click **Add** in the toolbar. 
 1. The following blade opens:
 
-    ![Add new environment](media/new-environment.png)
+    ![Add new environment](media/new-environment.png){: style="display: block; margin: 0 auto;" }
 
     Set the following parameters:
 
@@ -34,7 +34,7 @@ To add a new environment through the Cloud Portal:
 1. Click on the **Applications** widget:
     1. In the next blade, click **Platform** to configure the highlighted Platform system settings, then click **Save** in the toolbar:
 
-        ![Platform settings](media/platform-system-settings.png)
+        ![Platform settings](media/platform-system-settings.png){: style="display: block; margin: 0 auto;" }
 
         !!! note
              The dropdown lists contain backend images and image tags provided by Virto Commerce, such as stable bundle images, as well as any custom images you’ve uploaded. For the purpose of this guide, it's best to select the latest (top) possible option available in the dropdown.
@@ -42,16 +42,16 @@ To add a new environment through the Cloud Portal:
 
     1. Click **Frontend** to configure **System Settings**, then click **Add**, then **Save** in the toolbar:
 
-        ![Frontend system settings](media/frontend-system-settings.png)
+        ![Frontend system settings](media/frontend-system-settings.png){: style="display: block; margin: 0 auto;" }
 
         !!! note
             You can find and copy the theme latest release URL [on GitHub](https://github.com/VirtoCommerce/vc-theme-b2b-vue/releases/latest):
 
-            ![Theme URL](media/copy-link-to-theme.png){: width="400"}
+            ![Theme URL](media/copy-link-to-theme.png){: style="display: block; margin: 0 auto;" width="400"}
 
 1. Click **Create** in the **New Environment** blade. The system will check for available resources and, if necessary, allocate additional virtual machines to run your application. This process may take up to 5 minutes. Once you see the **Healthy** and **Synced** statuses, you have a fully functional environment, including the following components:
 
-    * Elasticsearch 8.
+    * Elasticsearch 9.
     * SQL Database.
     * Redis Cache.
     * File Storage System.
@@ -61,7 +61,7 @@ To add a new environment through the Cloud Portal:
 
 Once setup is complete, your environment appears in the list. Click on it to get a link to your application:
 
-![Link to backend](media/environment-url.png)
+![Link to backend](media/environment-url.png){: style="display: block; margin: 0 auto;" }
 
 To sign in for the first time:
 
@@ -72,7 +72,7 @@ To sign in for the first time:
 
 1. Log in using the default credentials: **admin** as the username and **store** as the password.
 
-    ![Default credentials](media/default-credentials.png)
+    ![Default credentials](media/default-credentials.png){: style="display: block; margin: 0 auto;" }
 
 Now you can configure your Platform.
 
@@ -80,14 +80,14 @@ Now you can configure your Platform.
 
 You will be offered to use sample data (B2B Sample Store), or create your store from scratch (Empty). For the purpose of this guide, we are going to create store from scratch:
 
-![Sample Store](media/sample-data-type.png)
+![Sample Store](media/sample-data-type.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Set own credentials
 
 Next you will be forced to set your own credentials:
 
-![New credentials](media/change-credentials.png)
+![New credentials](media/change-credentials.png){: style="display: block; margin: 0 auto;" }
 
 !!! warning
     Make sure to save your credentials. Without them, you won’t be able to sign in again.
@@ -111,7 +111,7 @@ To create a store, you must first create a catalog (more specifically, **master 
 1. (Optional) Click **Save** in the toolbar.
 1. Click **Create** to save the changes.
 
-![Create catalog](media/dental-store-creation.png)
+![Create catalog](media/dental-store-creation.png){: style="display: block; margin: 0 auto;" }
 
 You catalog appears in the list of catalogs.
 
@@ -126,7 +126,7 @@ We are going to create a new store based on the previously created catalog:
     !!! note
         Remember that the store code should be the same as the name of your Frontend Application specified in the **Frontend system settings** when adding a new environment.
 
-    ![Connect store to catalog](media/connect-store-to-catalog.png)
+    ![Connect store to catalog](media/connect-store-to-catalog.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create**. Your new store is created, its details open in a new blade.
 
@@ -140,18 +140,18 @@ To set a Frontend Application URL:
 1. In the next blade, click **Add hostname** in the toolbar.
 1. In the next blade, add a hostname and select a root from the dropdown list: 
 
-    ![Hostname](media/host-name.png)
+    ![Hostname](media/host-name.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the current, then in the previous two blades.
 1. Refresh the list of environments and select your new environment. The Frontend Application URL appears in the URLs list.
 
-    ![Urls list](media/urls-list.png)
+    ![Urls list](media/urls-list.png){: style="display: block; margin: 0 auto;" }
 
 1. Copy this URL.
 1. Open the **Platform** --> **Stores** --> **Your store**.
 1. Paste the URL to the **Store URL** field.
 
-    ![Store url](media/store-url.png)
+    ![Store url](media/store-url.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** to save the changes.
 
@@ -166,23 +166,30 @@ To start using your applications, you need to configure the paths and routes cor
 1. Select your network.
 1. In the next blade, click **Add path** in the toolbar to add the following paths and routes: 
 
-    | Path          | Route     |
-    |---------------|-----------|
-    | /xapi         | Platform  |  
-    | /files        | Platform  |    
-    | /connect/token| Platform  |    
-    | /graphql      | Platform  |    
-    | /revoke/token | Platform  |    
-    | /api/files    | Platform  |    
-    | /externalsignin| Platform |    
-    | /signin-oidc  | Platform  |    
-    | /signin-google| Platform  |
+<div class="grid" markdown>
 
-    ![Required routes](media/environments-yml.png)
+| Path          | Route     |
+|---------------|-----------|
+| /xapi         | Platform  |  
+| /files        | Platform  |    
+| /connect/token| Platform  |    
+| /graphql      | Platform  |    
+| /revoke/token | Platform  |    
+| /api/files    | Platform  |    
+| /externalsignin| Platform |    
+| /signin-oidc  | Platform  |    
+| /signin-google| Platform  |
+
+
+![Required routes](media/environments-yml.png)
+
+
+</div>
+
 
 1. Click **Save** in the current blade, then in the previous two blades. 
 
-Your Frontend Application paths have been successfully added.
+Your Frontend paths have been successfully added.
 
 ## Review search index
 
@@ -192,7 +199,7 @@ Verify that all the records you added have been indexed:
 1. In the next blade, check if all record types have been indexed. If you find any unindexed records, select them.
 1. Click **Build index** in the toolbar.
 
-    ![Build index](media/review-search-index.png)
+    ![Build index](media/review-search-index.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Build** in the popup window.
 
@@ -200,7 +207,7 @@ All added records have been indexed.
 
 You can start using your environments!
 
-![App](media/first-app-opening.png)
+![App](media/first-app-opening.png){: style="display: block; margin: 0 auto;" }
 
 
 

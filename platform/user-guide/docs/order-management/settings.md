@@ -39,7 +39,7 @@ In the **Products** blade, you can:
 * Enable purchased product indexation.
 * Enable the [purchased product store filter](../store/settings.md#products-settings):
 
-![Product settings](media/product-settings.png)
+![Product settings](media/product-settings.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

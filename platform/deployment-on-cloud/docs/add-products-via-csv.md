@@ -18,7 +18,7 @@ Let's create a CSV file containing all the necessary columns, i.e., product name
 
 1. Go to **Pricing** --> **Price lists** to copy the Id of the price list to clipboard:
 
-    ![Copy pricelist Id](media/copy-pricelist-id.png)
+    ![Copy pricelist Id](media/copy-pricelist-id.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         If not set by default, you can find the Price list Id column by clicking the hamburger menu in the top right corner and then checking **Id**:
@@ -27,11 +27,11 @@ Let's create a CSV file containing all the necessary columns, i.e., product name
 
     Paste the copied price list Id to the **PriceListId** column.
 
-    ![Paste pricelist Id](media/paste-pricelist-id.png)
+    ![Paste pricelist Id](media/paste-pricelist-id.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill the **CategoryPath** column to specify the product's separate category in a catalog as follows:
 
-    ![Category path](media/category-path-field.png)
+    ![Category path](media/category-path-field.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         You can create categories and subcategories from the CSV file. You will need to add the names of categories (for example, **Сategory 1**) and subcategories (for example, **Сategory 1/Subcategory 1**). In our example, we use our manually created structure.
@@ -41,19 +41,19 @@ Let's create a CSV file containing all the necessary columns, i.e., product name
 
 1. Go to **Catalog** --> Your catalog to copy the category Id by right-clicking:
 
-    ![Category ID](media/category-id.png)
+    ![Category ID](media/category-id.png){: style="display: block; margin: 0 auto;" }
 
     Paste it to the **CategoryID** column:
 
-    ![Category ID column](media/category-id-field.png) 
+    ![Category ID column](media/category-id-field.png){: style="display: block; margin: 0 auto;" } 
 
 1. Go to **Inventory** to copy the fulfillment center ID:
     
-    ![FFC ID](media/ffc-id.png)
+    ![FFC ID](media/ffc-id.png){: style="display: block; margin: 0 auto;" }
 
     Paste it to the **FulfillmentCenterId** column:
 
-    ![Fulfillment center](media/fultillment-center-id.png)
+    ![Fulfillment center](media/fultillment-center-id.png){: style="display: block; margin: 0 auto;" }
 
     You may also specify quantities in stock in the **Quantity** column.
 
@@ -79,7 +79,7 @@ To import your CSV to your catalog:
 
 The catalog import begins. When the import is finished, you can see that your catalog is filled with products. Each product has a complete description:
 
-![Correct products](media/correct-products.png)
+![Correct products](media/correct-products.png){: style="display: block; margin: 0 auto;" }
 
 ## View results on frontend
 
@@ -87,11 +87,11 @@ The catalog import begins. When the import is finished, you can see that your ca
 1. In the next blade, click on the required store (**Dental Demo Store** in our case).
 1. In the next blade, click **Open in browser** in the top toolbar.
 
-![View result](media/store-frontend.png){: width="750"}
+![View result](media/store-frontend.png){: style="display: block; margin: 0 auto;" width="750"}
 
 The CSV file columns are displayed as follows:
 
-![CSV file and frontend correspondence](media/catalog-csv.png)
+![CSV file and frontend correspondence](media/catalog-csv.png){: style="display: block; margin: 0 auto;" }
 
 
 

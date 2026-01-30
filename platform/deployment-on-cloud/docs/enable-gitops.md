@@ -4,7 +4,7 @@ To ensure that your environments are always up to date with the latest configura
 
 For demonstration purposes, let's update the Platform from version 3.851 to 3.852:
 
-![Old version](media/old-version.png)
+![Old version](media/old-version.png){: style="display: block; margin: 0 auto;" }
 
 !!! warning
     When upgrading to a version significantly beyond the current one, it is recommended to first test it on a local machine to check module compatibility with the new version.  If a module version is incompatible with the Platform, the system may show a **Degraded** status during the update. Refer to the [Troubleshooting](enable-gitops.md#troubleshooting) section to learn how to identify the causes of errors.
@@ -19,13 +19,13 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
 1. Click **Save** in the toolbar.
 1. Click **Download manifest**. 
 
-![Portal configuration](media/portal-configuration.png)
+![Portal configuration](media/portal-configuration.png){: style="display: block; margin: 0 auto;" }
 
 ## Set up GitHub
 
 1. Download the [initial GitOps template for Virto Cloud](https://github.com/VirtoCommerce/vc-deploy-dev/tree/template/) as a ZIP archive (click **Code**, then **Download ZIP**): 
 
-    ![Download template](media/download-template.png)
+    ![Download template](media/download-template.png){: style="display: block; margin: 0 auto;" }
 
     It contains the minimal setup required for Virto Cloud and GitHub.
 
@@ -34,7 +34,7 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
 1. Unzip and copy the downloaded template structure into the cloned repository.
 1. Make the first commit and open the template. Adjust the files from the template to link it to your environment:
 
-    ![Adjust files](media/template-description.png)
+    ![Adjust files](media/template-description.png){: style="display: block; margin: 0 auto;" }
 
 1. Commit and push changes to your repository.
 
@@ -43,7 +43,7 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
 1. In your repository, go to **Settings** --> **Secrets and variables** --> **Actions** --> **New repository secret**.
 1. Add the secrets (VIRTOSTART_ACR_DOCKER_PASSWORD and VIRTOSTART_PLATFORM_TOKEN), that are required for the automation workflows to access Virto Cloud and deploy changes:
 
-    ![Secrets](media/add-secrets.png)
+    ![Secrets](media/add-secrets.png){: style="display: block; margin: 0 auto;" }
 
 
     !!! note
@@ -53,19 +53,19 @@ For demonstration purposes, let's update the Platform from version 3.851 to 3.85
 
 Let's check how the following workflows work:
 
-* [Cloud infra deployment.](enable-gitops.md#cloud-infra-deployment)
-* [Cloud platform deployment.](enable-gitops.md#cloud-platform-deployment)
+* [Cloud infra deployment.](#cloud-infra-deployment)
+* [Cloud platform deployment.](#cloud-platform-deployment)
 
 ### Cloud infra deployment
 
 1. In your repository, go to **Actions** tab, then click **Cloud infra deployment**.
 1. By default, this action is triggered automatically when there’s a commit to the main branch. Alternatively, you can start it manually by clicking **Run workflow**:
 
-    ![Manual run](media/infra-deployment-manual-run.png)
+    ![Manual run](media/infra-deployment-manual-run.png){: style="display: block; margin: 0 auto;" }
 
 1. Monitor the update process:
     
-    ![Portal update](media/update-in-portal.png)
+    ![Portal update](media/update-in-portal.png){: style="display: block; margin: 0 auto;" }
     
 The **Synced** and **Healthy** statuses indicate that the process is complete.
 
@@ -74,17 +74,17 @@ The **Synced** and **Healthy** statuses indicate that the process is complete.
 1. In your repository, go to **Actions** tab, then click **Cloud platform deployment**.
 1. By default, this action is triggered automatically when there’s a commit to the main branch. Alternatively, you can start it manually by clicking **Run workflow**:
 
-    ![Manual run](media/platform-deployment-manual-run.png)
+    ![Manual run](media/platform-deployment-manual-run.png){: style="display: block; margin: 0 auto;" }
 
 1. Monitor the update process:
 
-    ![Portal update](media/platform-update-in-portal.png)
+    ![Portal update](media/platform-update-in-portal.png){: style="display: block; margin: 0 auto;" }
     
 The **Synced** and **Healthy** statuses indicate that the process is complete.
 
 The Platform version has been successfully updated:
 
-![Updated Platform version](media/updated-platform-version.png)
+![Updated Platform version](media/updated-platform-version.png){: style="display: block; margin: 0 auto;" }
 
 ## Troubleshooting
 

@@ -9,7 +9,7 @@ In this guide, we'll explore how to create new environments on the Virto Cloud P
 1. In the next blade, click **Add** in the toolbar. 
 1. The following blade opens:
 
-    ![Add new environment](media/qa-new-environment.png)
+    ![Add new environment](media/qa-new-environment.png){: style="display: block; margin: 0 auto;" }
 
     Set the following parameters:
 
@@ -27,7 +27,7 @@ The system will check for available resources and, if necessary, allocate additi
 
 Once setup is complete, your environment appears in the list. Click on it to get a link to your application:
 
-![Link to backend](media/qa-environment-url.png)
+![Link to backend](media/qa-environment-url.png){: style="display: block; margin: 0 auto;" }
 
 To sign in for the first time:
 
@@ -35,18 +35,18 @@ To sign in for the first time:
 
 1. Log in using the default credentials: **admin** as the username and **store** as the password.
 
-    ![Default credentials](media/default-credentials.png)
+    ![Default credentials](media/default-credentials.png){: style="display: block; margin: 0 auto;" }
 
 You will be offered to use sample data (B2B Sample Store), or create your store from scratch (Empty). For the purpose of this guide, we are going to use sample data:
 
-![Sample Store](media/sample-data-type.png)
+![Sample Store](media/sample-data-type.png){: style="display: block; margin: 0 auto;" }
 
 
 ## Set own credentials
 
 Next you will be forced to set your own credentials:
 
-![New credentials](media/change-credentials.png)
+![New credentials](media/change-credentials.png){: style="display: block; margin: 0 auto;" }
 
 !!! warning
     Make sure to save your credentials. Without them, you won’t be able to sign in again.
@@ -79,12 +79,12 @@ You will need this API key later.
 1. Use the existing **vcptcore-qa** branch as a source to create your new branch. Its name should contain the name of your new environment (**vcptcore-testenv** in our example).
 1. Click **Create new branch**. Your new branch appears in the list of branches.
 
-    ![Create new branch](media/new-qa-env.gif)
+    ![Create new branch](media/new-qa-env.gif){: style="display: block; margin: 0 auto;" }
 
 1. Open this branch, select the **Infra** folder, then open the **environments.yml** file.
 1. Now, you need to replace the settings in the environments.yml file with the settings from the downloaded manifest file and the copied API key:
 
-    ![Settings replacement](media/settings-replacememt.png)
+    ![Settings replacement](media/settings-replacememt.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Commit changes**.
 

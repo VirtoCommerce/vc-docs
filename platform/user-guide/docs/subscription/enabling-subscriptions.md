@@ -10,7 +10,7 @@ To enable subscriptions :
 
 Now, you can sell subscription-based offerings.
 
-![Enabling subscriptions](media/enable-subscriptions.gif)
+![Enabling subscriptions](media/enable-subscriptions.gif){: style="display: block; margin: 0 auto;" }
 
 You can [configure other settings](settings.md).
 

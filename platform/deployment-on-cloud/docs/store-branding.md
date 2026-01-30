@@ -7,7 +7,7 @@ Once your store is created, you can customize its branding by:
 
 ## Prepare logos and favicon
 
-For test purposes, you can use any PNG, GIF, or SVG image (for logo) or PNG, JPEG, or WEBP image (for    favicon).
+For test purposes, you can use any PNG, GIF, or SVG image (for logo) or PNG, JPEG, or WEBP image (for favicon).
 
 For finalized branding, you can prepare logo and favicon images according to the requirements in our [figma project](https://www.figma.com/design/tSeAtWkt4DOj0khZ8Fi8wY/%F0%9F%90%B3-OCEAN-BLUE-%E2%80%A2-Storefront-screens?node-id=4142-36381&t=hwbdIQc7jxZ4YJPZ-4) or use it as a sample as follows:
 
@@ -27,7 +27,7 @@ To enable white labeling:
 1. In the next blade, click on the **White labeling** widget.
 1. In the next blade, turn the white labeling option to on.
 
-![Enabling white labeling Stores](media/enabling-via-stores.png)
+![Enabling white labeling Stores](media/enabling-via-stores.png){: style="display: block; margin: 0 auto;" }
 
 White labeling has been enabled.
 
@@ -41,7 +41,7 @@ To replace default logos and favicons with your own images:
 
 Your changes have been applied.
 
-![Before and after white labeling](media/before-after.png)
+![Before and after white labeling](media/before-after.png){: style="display: block; margin: 0 auto;" }
 
 ## Apply theme color scheme
 
@@ -49,27 +49,27 @@ You can personalize your store by applying a [custom theme](/storefront/develope
 
 === "purple-pink"
 
-    ![purple-pink](media/purple.png)
+    ![purple-pink](media/purple.png){: style="display: block; margin: 0 auto;" }
 
 === "black-gold"
 
-    ![Black](media/black.png)
+    ![Black](media/black.png){: style="display: block; margin: 0 auto;" }
 
 === "watermelon"
 
-    ![Watermelon](media/watermelon.png)
+    ![Watermelon](media/watermelon.png){: style="display: block; margin: 0 auto;" }
 
 === "coffee"
 
-    ![Coffee](media/coffee.png)
+    ![Coffee](media/coffee.png){: style="display: block; margin: 0 auto;" }
 
 === "ocean"
 
-    ![Ocean](media/ocean.png)
+    ![Ocean](media/ocean.png){: style="display: block; margin: 0 auto;" }
 
 === "peach"
 
-    ![Peach](media/peach.png)
+    ![Peach](media/peach.png){: style="display: block; margin: 0 auto;" }
 
 
 ![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/theme-customization/theme-customization)
@@ -86,7 +86,7 @@ For the purpose of this guide, a color scheme named **safco** has been created b
 
 Your new color scheme has been applied:
 
-![Branded store](media/branded-shop.png)
+![Branded store](media/branded-shop.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

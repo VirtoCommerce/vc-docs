@@ -88,7 +88,7 @@ In the Platform, add a category to the master catalog as follows:
 1. Enter the category name. The code is generated automatically.
 1. Click **Create**.
 
-    ![New Category](media/create-categories.png)
+    ![New Category](media/create-categories.png){: style="display: block; margin: 0 auto;" }
 
 Your new category appears in the **Categories** list. Repeat these steps to add more categories.
 
@@ -125,7 +125,7 @@ First, you need to create a price list:
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the fields as follows:
 
-    ![Create price list](media/create-price-list.png)
+    ![Create price list](media/create-price-list.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create**.
 
@@ -138,7 +138,7 @@ To add prices to each product:
 1. Enter list price, sale price (optionally), and minimum quantity (optionally).
 1. Click **Save** in the toolbar.
 
-![Adding prices](media/add-prices.png)
+![Adding prices](media/add-prices.png){: style="display: block; margin: 0 auto;" }
 
 Repeat these steps to add more prices.
 
@@ -148,7 +148,7 @@ Now, we need to add a price list assignment:
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the fields as follows:
 
-    ![Price list assignment](media/add-price-list-assignment.png)
+    ![Price list assignment](media/add-price-list-assignment.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 
@@ -175,7 +175,7 @@ Now you need to add product stock in the fulfillment center.
 1. In the next blade, fill in the necessary information. For the purpose of this guide, you can add only quantity in stock.
 1. Click **Save** in the toolbar.
 
-![Add FFC](media/add-ffc.png)
+![Add FFC](media/add-ffc.png){: style="display: block; margin: 0 auto;" }
 
 The specified stock appears next to the fulfillment center.
 
@@ -188,7 +188,7 @@ The specified stock appears next to the fulfillment center.
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the fields as follows:
 
-    ![Add slug URL](media/add-catalog-slug.png)
+    ![Add slug URL](media/add-catalog-slug.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK**
 
@@ -205,11 +205,11 @@ Now, your store catalog is filled with products and organized into categories an
 
 The **Catalog** button is now collapsible, displaying all categories and subcategories:
 
-![Categories](media/catalog-categories-frontend.png)
+![Categories](media/catalog-categories-frontend.png){: style="display: block; margin: 0 auto;" }
 
 Click on any category or subcategory to view the products within:
 
-![Catalog](media/store-frontend.png)
+![Catalog](media/store-frontend.png){: style="display: block; margin: 0 auto;" }
 
 !!! note
     By default, catalog menu is automatically generated based on the existing categories. You can create your own catalog menu using [this guide](main-menu-setup.md).
@@ -219,7 +219,7 @@ Click on any category or subcategory to view the products within:
 
 For enhanced product filtering and search, let's configure properties within our catalog. They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
 
-![Facets](media/properties-configuration.png)
+![Facets](media/properties-configuration.png){: style="display: block; margin: 0 auto;" }
 
 Properties can be set for:
 
@@ -319,28 +319,28 @@ Let's add a **Brand** property at the catalog level:
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Product property**.
 
-    ![Add product property](media/add-property.png)
+    ![Add product property](media/add-property.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, enter property name, switch the **Dictionary** option to on, and select **Short text**  [value type](#value-type-selection):
 
-    ![Manage product property](media/manage-product-property.png)
+    ![Manage product property](media/manage-product-property.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 1. Click **Dictionary**, then click **Add** in the next blade toolbar to add brand options:
 
-    ![Manage dictionary](media/manage-dictionary.png)
+    ![Manage dictionary](media/manage-dictionary.png){: style="display: block; margin: 0 auto;" }
 
     Click **Save** in the toolbar to add the dictionary entry to the list. Continue to add options as required:
 
-    ![Dictionary items](media/dictionary-items.png)
+    ![Dictionary items](media/dictionary-items.png){: style="display: block; margin: 0 auto;" }
 
 The property appears in the list. On the frontend, the **Brand** facet becomes collapsible and the properties are displayed as follows:
 
-![Brand on frontend](media/brand-property-on-frontend.png)
+![Brand on frontend](media/brand-property-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
 Continue to add properties and their values according to the table above.
 
-![Catalog properties](media/catalog-properties-added.png)
+![Catalog properties](media/catalog-properties-added.png){: style="display: block; margin: 0 auto;" }
 
 
 #### Value type selection
@@ -368,11 +368,11 @@ Let's add a **Date of preparation** property to the **Anesthetics** category:
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Category property**.
 
-    ![Add category property](media/add-category-property.png)
+    ![Add category property](media/add-category-property.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, enter property name and select **Date time** value type from the dropdown list:
 
-    ![Manage category property](media/manage-category-property.png)
+    ![Manage category property](media/manage-category-property.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar.
 
@@ -387,7 +387,7 @@ Now, we will add properties to the products:
 1. In the product details blade, click on the **Properties** widget.
 1. In the next blade, you fill in the properties you have added in the previous steps. From the dropdown lists, select the product's brand and its physical state. Enter date of preparation by clicking ![Calendar](media/calendar.png){: width="25"}:
 
-    ![Adding properties to products](media/add-properties-to-product.png)
+    ![Adding properties to products](media/add-properties-to-product.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK** to save the changes.
 
@@ -407,11 +407,11 @@ To add similar properties and property to a group of products:
 1. In the next blade, add all or some previously added product properties.
 1. Click **OK** to add the properties to the group of products.
 
-    ![Bulk add properties](media/bulk-add-properties.png)
+    ![Bulk add properties](media/bulk-add-properties.png){: style="display: block; margin: 0 auto;" }
 
 1. In the next blade, specify values for the selected properties, then click **OK**.
 
-    ![Add property values](media/bulk-add-properties-to-product.png)
+    ![Add property values](media/bulk-add-properties-to-product.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Execute** in the previous blade.
 
@@ -424,14 +424,14 @@ To set the visibility of facets:
 1. Go to **Stores** --> **Your store (Dental Demo Store)** --> **Aggregation properties** widget.
 1. In the next blade, click on the properties in the left column (available properties) to move them to the right column (properties visible on the frontend):
 
-    ![Facets visibility](media/facets-visibility.png)
+    ![Facets visibility](media/facets-visibility.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
 The selected facets are now displayed in the Frontend Application.
 
 
-## View results on frontend
+## View results on Frontend
 
 1. In the main menu, click **Stores**.
 1. In the next blade, click on the required store (**Dental Demo Store** in our case).
@@ -439,11 +439,11 @@ The selected facets are now displayed in the Frontend Application.
 
 The properties are displayed as facets:
 
-![Facets](media/facets-frontend-view.png)
+![Facets](media/facets-frontend-view.png){: style="display: block; margin: 0 auto;" }
 
 The product properties are also displayed in the product cards:
 
-![Product properties](media/product-properties.png)
+![Product properties](media/product-properties.png){: style="display: block; margin: 0 auto;" }
 
 <!--properties-end-->
 
