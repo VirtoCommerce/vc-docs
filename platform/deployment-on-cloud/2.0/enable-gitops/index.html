@@ -1965,7 +1965,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 14, 2025 09:52:31 UTC">March 14, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 30, 2026 09:58:20 UTC">January 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -1988,7 +1988,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 id="enable-gitops">Enable GitOps<a class="headerlink" href="#enable-gitops" title="Permanent link">&para;</a></h1>
 <p>To ensure that your environments are always up to date with the latest configurations, enable GitOps.</p>
 <p>For demonstration purposes, let's update the Platform from version 3.851 to 3.852:</p>
-<p><img alt="Old version" src="../media/old-version.png" /></p>
+<p><img alt="Old version" src="../media/old-version.png" style="display: block; margin: 0 auto;" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When upgrading to a version significantly beyond the current one, it is recommended to first test it on a local machine to check module compatibility with the new version.  If a module version is incompatible with the Platform, the system may show a <strong>Degraded</strong> status during the update. Refer to the <a href="./#troubleshooting">Troubleshooting</a> section to learn how to identify the causes of errors.</p>
@@ -2002,12 +2002,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Click <strong>Save</strong> in the toolbar.</li>
 <li>Click <strong>Download manifest</strong>. </li>
 </ol>
-<p><img alt="Portal configuration" src="../media/portal-configuration.png" /></p>
+<p><img alt="Portal configuration" src="../media/portal-configuration.png" style="display: block; margin: 0 auto;" /></p>
 <h2 id="set-up-github">Set up GitHub<a class="headerlink" href="#set-up-github" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Download the <a href="https://github.com/VirtoCommerce/vc-deploy-dev/tree/template/">initial GitOps template for Virto Cloud</a> as a ZIP archive (click <strong>Code</strong>, then <strong>Download ZIP</strong>): </p>
-<p><img alt="Download template" src="../media/download-template.png" /></p>
+<p><img alt="Download template" src="../media/download-template.png" style="display: block; margin: 0 auto;" /></p>
 <p>It contains the minimal setup required for Virto Cloud and GitHub.</p>
 </li>
 <li>
@@ -2017,7 +2017,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Unzip and copy the downloaded template structure into the cloned repository.</li>
 <li>
 <p>Make the first commit and open the template. Adjust the files from the template to link it to your environment:</p>
-<p><img alt="Adjust files" src="../media/template-description.png" /></p>
+<p><img alt="Adjust files" src="../media/template-description.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Commit and push changes to your repository.</p>
@@ -2028,7 +2028,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>In your repository, go to <strong>Settings</strong> &rarr; <strong>Secrets and variables</strong> &rarr; <strong>Actions</strong> &rarr; <strong>New repository secret</strong>.</li>
 <li>
 <p>Add the secrets (VIRTOSTART_ACR_DOCKER_PASSWORD and VIRTOSTART_PLATFORM_TOKEN), that are required for the automation workflows to access Virto Cloud and deploy changes:</p>
-<p><img alt="Secrets" src="../media/add-secrets.png" /></p>
+<p><img alt="Secrets" src="../media/add-secrets.png" style="display: block; margin: 0 auto;" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The secrets can be edited. However, you will not see previously saved values when editing. </p>
@@ -2038,19 +2038,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="run-workflows">Run workflows<a class="headerlink" href="#run-workflows" title="Permanent link">&para;</a></h2>
 <p>Let's check how the following workflows work:</p>
 <ul>
-<li><a href="./#cloud-infra-deployment">Cloud infra deployment.</a></li>
-<li><a href="./#cloud-platform-deployment">Cloud platform deployment.</a></li>
+<li><a href="#cloud-infra-deployment">Cloud infra deployment.</a></li>
+<li><a href="#cloud-platform-deployment">Cloud platform deployment.</a></li>
 </ul>
 <h3 id="cloud-infra-deployment">Cloud infra deployment<a class="headerlink" href="#cloud-infra-deployment" title="Permanent link">&para;</a></h3>
 <ol>
 <li>In your repository, go to <strong>Actions</strong> tab, then click <strong>Cloud infra deployment</strong>.</li>
 <li>
 <p>By default, this action is triggered automatically when there’s a commit to the main branch. Alternatively, you can start it manually by clicking <strong>Run workflow</strong>:</p>
-<p><img alt="Manual run" src="../media/infra-deployment-manual-run.png" /></p>
+<p><img alt="Manual run" src="../media/infra-deployment-manual-run.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Monitor the update process:</p>
-<p><img alt="Portal update" src="../media/update-in-portal.png" /></p>
+<p><img alt="Portal update" src="../media/update-in-portal.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <p>The <strong>Synced</strong> and <strong>Healthy</strong> statuses indicate that the process is complete.</p>
@@ -2059,16 +2059,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>In your repository, go to <strong>Actions</strong> tab, then click <strong>Cloud platform deployment</strong>.</li>
 <li>
 <p>By default, this action is triggered automatically when there’s a commit to the main branch. Alternatively, you can start it manually by clicking <strong>Run workflow</strong>:</p>
-<p><img alt="Manual run" src="../media/platform-deployment-manual-run.png" /></p>
+<p><img alt="Manual run" src="../media/platform-deployment-manual-run.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Monitor the update process:</p>
-<p><img alt="Portal update" src="../media/platform-update-in-portal.png" /></p>
+<p><img alt="Portal update" src="../media/platform-update-in-portal.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <p>The <strong>Synced</strong> and <strong>Healthy</strong> statuses indicate that the process is complete.</p>
 <p>The Platform version has been successfully updated:</p>
-<p><img alt="Updated Platform version" src="../media/updated-platform-version.png" /></p>
+<p><img alt="Updated Platform version" src="../media/updated-platform-version.png" style="display: block; margin: 0 auto;" /></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>If you encounter issues, such as a <strong>Degraded</strong> status, you can identify the cause as follows:</p>
 <ol>

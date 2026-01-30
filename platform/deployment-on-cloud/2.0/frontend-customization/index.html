@@ -1731,7 +1731,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#fork-frontend-repository" class="md-nav__link">
-        Fork frontend repository
+        Fork Frontend repository
     </a>
 
     <!-- Render nested item list -->
@@ -1741,7 +1741,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#customize-frontend" class="md-nav__link">
-        Customize frontend
+        Customize Frontend
     </a>
 
     <!-- Render nested item list -->
@@ -1820,7 +1820,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 22, 2025 23:36:17 UTC">January 22, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 30, 2026 09:58:20 UTC">January 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -1843,16 +1843,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 id="virto-commerce-frontend-customization-and-deployment-on-virto-cloud">Virto Commerce Frontend Customization and Deployment on Virto Cloud<a class="headerlink" href="#virto-commerce-frontend-customization-and-deployment-on-virto-cloud" title="Permanent link">&para;</a></h1>
 <p>This guide provides detailed instructions to help you customize the Virto Commerce Frontend application and deploy it to the Virto Cloud environment. Complete the following steps:</p>
 <ol>
-<li><a href="./#ensure-local-machine-connectivity">Ensuring local machine connectivity.</a></li>
-<li><a href="./#fork-frontend-repository">Forking the frontend repository.</a></li>
-<li><a href="./#customize-frontend">Customizing frontend.</a></li>
-<li><a href="./#prepare-application-for-deployment">Preparing application for deployment.</a></li>
-<li><a href="./#prepare-artifact-for-release">Preparing artifact for release.</a></li>
-<li><a href="./#release-frontend-application">Releasing Frontend Application.</a></li>
-<li><a href="./#deploy-customized-frontend-application">Deploying customized Frontend Application.</a></li>
-<li><a href="./#verify-result">Verifying results.</a></li>
+<li><a href="#ensure-local-machine-connectivity">Ensuring local machine connectivity.</a></li>
+<li><a href="#fork-frontend-repository">Forking the frontend repository.</a></li>
+<li><a href="#customize-frontend">Customizing frontend.</a></li>
+<li><a href="#prepare-application-for-deployment">Preparing application for deployment.</a></li>
+<li><a href="#prepare-artifact-for-release">Preparing artifact for release.</a></li>
+<li><a href="#release-frontend-application">Releasing Frontend Application.</a></li>
+<li><a href="#deploy-customized-frontend-application">Deploying customized Frontend Application.</a></li>
+<li><a href="#verify-result">Verifying results.</a></li>
 </ol>
-<p>This guide outlines the steps for customizing the Virto Commerce Frontend application and deploying it to Virto Cloud.</p>
+<p>This guide outlines the steps for customizing the Virto Commerce Frontend and deploying it to Virto Cloud.</p>
 <h2 id="ensure-local-machine-connectivity">Ensure local machine connectivity<a class="headerlink" href="#ensure-local-machine-connectivity" title="Permanent link">&para;</a></h2>
 <p>Let's explore some methods of identifying stores:</p>
 <ol>
@@ -1862,7 +1862,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Open the Platform, then go to <strong>Stores</strong> &rarr; <strong>Your store</strong> (Dental Demo Store in our case) &rarr; <strong>Store URL</strong>.</li>
 <li>
 <p>Ensure the store URL is specified correctly:</p>
-<p><img alt="Store url" src="../media/store-url-1.png" /></p>
+<p><img alt="Store url" src="../media/store-url-1.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 </li>
@@ -1872,11 +1872,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Open your GitHub repository, then go to <strong>Files</strong> &rarr; <strong>environment.yml</strong>.</li>
 <li>
 <p>Copy the code of the store from <strong>Platform</strong> &rarr; <strong>Stores</strong> &rarr; <strong>Your store</strong> (Dental Demo Store in our case) &rarr; <strong>Store URL</strong>:</p>
-<p><img alt="Store code" src="../media/dental-store-code.png" /></p>
+<p><img alt="Store code" src="../media/dental-store-code.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Paste it to the <strong>environment.yml</strong> file:</p>
-<p><img alt="Store code" src="../media/environments-yml-dental-store.png" /></p>
+<p><img alt="Store code" src="../media/environments-yml-dental-store.png" style="display: block; margin: 0 auto;" /></p>
 <p>After this, any undefined query will automatically redirect to the specified store. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1885,54 +1885,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li>
 <p>Commit the changes:</p>
-<p><img alt="Commit" src="../media/commit-changes.png" /></p>
+<p><img alt="Commit" src="../media/commit-changes.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Go to the <strong>Actions</strong> tab to confirm the action is running:</p>
-<p><img alt="Action is running" src="../media/check-action-run.png" /></p>
+<p><img alt="Action is running" src="../media/check-action-run.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 </li>
 </ol>
-<h2 id="fork-frontend-repository">Fork frontend repository<a class="headerlink" href="#fork-frontend-repository" title="Permanent link">&para;</a></h2>
+<h2 id="fork-frontend-repository">Fork Frontend repository<a class="headerlink" href="#fork-frontend-repository" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Open the <a href="https://github.com/VirtoCommerce/vc-frontend">Virto Commerce Frontend repository</a>.</li>
 <li>Click on the <strong>Fork</strong> button. GitHub will prompt you to choose where to fork the repository, usually defaulting to your own GitHub account.</li>
 <li>
 <p>Click <strong>Create fork</strong>:</p>
-<p><img alt="Fork" src="../media/fork-frontend.png" /></p>
+<p><img alt="Fork" src="../media/fork-frontend.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Open the forked repository in your GitHub account:</p>
-<p><img alt="Forked repo" src="../media/forked-repo.png" /></p>
+<p><img alt="Forked repo" src="../media/forked-repo.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Follow the <strong>Getting started</strong> instructions to start working with your copy.</p>
 </li>
 </ol>
-<h2 id="customize-frontend">Customize frontend<a class="headerlink" href="#customize-frontend" title="Permanent link">&para;</a></h2>
+<h2 id="customize-frontend">Customize Frontend<a class="headerlink" href="#customize-frontend" title="Permanent link">&para;</a></h2>
 <p>Add themes, logos, icons, configure the catalog and categories, setup the main menu and footer as described in previous guides. Additionally: </p>
 <ol>
 <li>
 <p>Add <strong>.env</strong> file to your forked frontend repository to specify the backend application URL: </p>
-<p><img alt="Backend url" src="../media/app-backend-url.png" /></p>
+<p><img alt="Backend url" src="../media/app-backend-url.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Use <code>yarn dev</code>to run your Frontend Application on your local machine. </p>
 </li>
 <li>
 <p>Use the provided URL to open your Frontend Application:</p>
-<p><img alt="Open frontend locally" src="../media/localhost-url.png" /></p>
+<p><img alt="Open frontend locally" src="../media/localhost-url.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <p>Your application runs correctly with all customizations applied:</p>
-<p><img alt="Application running correctly" src="../media/frontend-run-locally.png" /></p>
+<p><img alt="Application running correctly" src="../media/frontend-run-locally.png" style="display: block; margin: 0 auto;" /></p>
 <h2 id="prepare-application-for-deployment">Prepare application for deployment<a class="headerlink" href="#prepare-application-for-deployment" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Run <code>yarn build</code> to build and package the modified application, preparing it as an artifact for deployment. </li>
 <li>
 <p>The <strong>dist</strong> folder containing artifacts appears in the forked repository:</p>
-<p><img alt="Artifcats" src="../media/prepared-artifcats.png" /></p>
+<p><img alt="Artifacts" src="../media/prepared-artifcats.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <h2 id="prepare-artifact-for-release">Prepare artifact for release<a class="headerlink" href="#prepare-artifact-for-release" title="Permanent link">&para;</a></h2>
@@ -1966,7 +1966,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Click <strong>Create a new release</strong>.</li>
 <li>
 <p>Name your release, select a tag from the dropdown list, and attach your ZIP archive:</p>
-<p><img alt="Release frontend" src="../media/release-frontend.png" /></p>
+<p><img alt="Release frontend" src="../media/release-frontend.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Click <strong>Publish release</strong>.</p>
@@ -1977,11 +1977,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>
 <p>Copy the link to the released artifact:</p>
-<p><img alt="Artifact url" src="../media/copy-artifact-url.png" /></p>
+<p><img alt="Artifact url" src="../media/copy-artifact-url.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Open your previously created repository (vc-deploy-dental in our case) and go to <strong>infra</strong> &rarr; <strong>environment.yml</strong> to paste the link as follows:</p>
-<p><img alt="Paste link" src="../media/paste-link.png" /></p>
+<p><img alt="Paste link" src="../media/paste-link.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>Click <strong>Commit changes</strong>.</p>
