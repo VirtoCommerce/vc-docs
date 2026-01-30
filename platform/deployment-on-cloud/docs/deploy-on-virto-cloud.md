@@ -166,25 +166,25 @@ To start using your applications, you need to configure the paths and routes cor
 1. Select your network.
 1. In the next blade, click **Add path** in the toolbar to add the following paths and routes: 
 
-<div class="grid" markdown>
+    <div class="grid" markdown>
 
-| Path          | Route     |
-|---------------|-----------|
-| /xapi         | Platform  |  
-| /files        | Platform  |    
-| /connect/token| Platform  |    
-| /graphql      | Platform  |    
-| /revoke/token | Platform  |    
-| /api/files    | Platform  |    
-| /externalsignin| Platform |    
-| /signin-oidc  | Platform  |    
-| /signin-google| Platform  |
-
-
-![Required routes](media/environments-yml.png)
+    | Path          | Route     |
+    |---------------|-----------|
+    | /xapi         | Platform  |  
+    | /files        | Platform  |    
+    | /connect/token| Platform  |    
+    | /graphql      | Platform  |    
+    | /revoke/token | Platform  |    
+    | /api/files    | Platform  |    
+    | /externalsignin| Platform |    
+    | /signin-oidc  | Platform  |    
+    | /signin-google| Platform  |
 
 
-</div>
+    ![Required routes](media/environments-yml.png)
+
+
+    </div>
 
 
 1. Click **Save** in the current blade, then in the previous two blades. 

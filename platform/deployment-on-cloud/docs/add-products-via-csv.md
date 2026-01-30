@@ -23,7 +23,7 @@ Let's create a CSV file containing all the necessary columns, i.e., product name
     !!! note
         If not set by default, you can find the Price list Id column by clicking the hamburger menu in the top right corner and then checking **Id**:
 
-        ![Finding price list Id](media/how-to-find-price-list-id.png){: width="400"}
+        ![Finding price list Id](media/how-to-find-price-list-id.png){: style="display: block; margin: 0 auto;" width="400"}
 
     Paste the copied price list Id to the **PriceListId** column.
 
