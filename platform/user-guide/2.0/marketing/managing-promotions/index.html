@@ -3807,6 +3807,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#view-promotion-usage-history" class="md-nav__link">
+        View promotion usage history
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#delete-promotion" class="md-nav__link">
         Delete promotion
     </a>
@@ -12831,6 +12841,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#view-promotion-usage-history" class="md-nav__link">
+        View promotion usage history
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#delete-promotion" class="md-nav__link">
         Delete promotion
     </a>
@@ -12861,7 +12881,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 30, 2026 09:58:20 UTC">January 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -12884,10 +12904,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 id="manage-promotions">Manage Promotions<a class="headerlink" href="#manage-promotions" title="Permanent link">&para;</a></h1>
 <p>Managing promotions includes:</p>
 <ul>
-<li><a href="./#creating-new-promotion">Creating new promotions.</a></li>
-<li><a href="./#create-coupons-and-gift-cards">Creating coupons and gift cards.</a></li>
-<li><a href="./#edit-promotion">Editing promotions.</a></li>
-<li><a href="./#delete-promotion">Deleting promotions.</a></li>
+<li><a href="#create-new-promotion">Creating new promotions.</a></li>
+<li><a href="#create-coupons-and-gift-cards">Creating coupons and gift cards.</a></li>
+<li><a href="#edit-promotion">Editing promotions.</a></li>
+<li><a href="#view-promotion-usage-history">Viewing promotion usage history.</a></li>
+<li><a href="#delete-promotion">Deleting promotions.</a></li>
 </ul>
 <h2 id="create-new-promotion">Create new promotion<a class="headerlink" href="#create-new-promotion" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
@@ -12910,9 +12931,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ol>
 <p>Your newly created promotion appears in the promotions list.</p>
-<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../promotion-rules/">Promotion conditions</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../promotion-rules/">Promotion rules</a></p>
 <h2 id="create-coupons-and-gift-cards">Create coupons and gift cards<a class="headerlink" href="#create-coupons-and-gift-cards" title="Permanent link">&para;</a></h2>
-<p>Creating personal coupons is possible as of <a href="https://github.com/VirtoCommerce/vc-module-marketing/releases/tag/3.210.0">VC Marketing module version 3.210.0</a> </p>
 <p>To create a coupon:</p>
 <ol>
 <li>Click <strong>Marketing</strong> in the main menu.</li>
@@ -12921,7 +12941,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>In the new blade, click on the <strong>Coupons</strong> widget. </li>
 <li>
 <p>In the <strong>Coupons</strong> blade, click <strong>Add</strong> to add a coupon manually or <strong>Import</strong> to import a coupon via CSV.</p>
-<p><img alt="path" src="../media/add-coupon-path.png" style="display: block; margin: 0 auto;" /></p>
+<p><img alt="path" src="../media/add-coupon-path.png" style="display: block; margin: 0 auto;" />
+<br>
+<br></p>
 </li>
 </ol>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Add coupon</label><label for="__tabbed_1_2">Import coupon from CSV file</label></div>
@@ -12951,15 +12973,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 </div>
-<p>Your new coupon has been added to the promotion.</p>
+<p>Your new coupon has been added to the promotion. The created coupons are stored in the <strong>Coupons</strong> widget.</p>
 <h2 id="edit-promotion">Edit promotion<a class="headerlink" href="#edit-promotion" title="Permanent link">&para;</a></h2>
 <p>To edit a promotion:</p>
 <ol>
-<li>Follow steps 1-3 from the instruction above.</li>
-<li>Edit the required fields.</li>
+<li>Click <strong>Marketing</strong> in the main menu.</li>
+<li>In the next blade, click <strong>Promotions</strong>.</li>
+<li>Click the required promotion in the <strong>Promotions</strong> blade.</li>
+<li>In the next blade, edit the required fields. </li>
 <li>Click <strong>Save</strong> to save the changes.</li>
 </ol>
 <p>The modifications have been saved.</p>
+<h2 id="view-promotion-usage-history">View promotion usage history<a class="headerlink" href="#view-promotion-usage-history" title="Permanent link">&para;</a></h2>
+<p>After you create a promotion, its usage history is stored in the corresponding widget:</p>
+<ol>
+<li>Click <strong>Marketing</strong> in the main menu.</li>
+<li>In the next blade, click <strong>Promotions</strong>.</li>
+<li>Click the required promotion in the <strong>Promotions</strong> blade.</li>
+<li>In the next blade, click on the <strong>Usage history</strong> widget.</li>
+<li>The next blade opens a list of orders where the promotion was applied. You can track how many times a coupon was used, identify which customers applied it, etc.</li>
+</ol>
+<p><img alt="Usage history" src="../media/usage-history.png" style="display: block; margin: 0 auto;" /></p>
+<p><br>
+Applied coupons can also be viewed from <strong>Orders</strong> &rarr; your order &rarr; <strong>Discounts</strong> widget. </p>
 <h2 id="delete-promotion">Delete promotion<a class="headerlink" href="#delete-promotion" title="Permanent link">&para;</a></h2>
 <p>To delete a promotion:</p>
 <ol>
