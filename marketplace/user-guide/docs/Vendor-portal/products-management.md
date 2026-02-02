@@ -68,7 +68,7 @@ To add your own product to the marketplace:
 
 1. Click **Save as draft** in the toolbar to save the changes.
 
-    ![Add own product](media/add-own-product.png){: style="display: block; margin: 0 auto;" width="600"}
+    ![Add own product](media/add-own-product.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Submit for approval** to submit your product for approval by an Operator Portal manager. Only after the product has been approved and the offer for the product has been created it will be available for purchase by a customer.
 
