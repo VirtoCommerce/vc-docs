@@ -53,15 +53,16 @@ To add your own product to the marketplace:
     !!! note
         A vendor can only upload products to the categories assigned by a marketplace operator. When a Vendor adds a product, it can only be assigned to one category from the list available to him.
 
-    You can use the OpenAI and Grok AI providers to generate product descriptions based on product names and selected categories, and then translate those descriptions into the desired language:
+    You can use our AI Assistant to generate product descriptions, translate them into the desired language, or apply the generated information:
 
-    ![Product descriptions](media/ai-generated-content.gif){: style="display: block; margin: 0 auto;" width="500"}
+    <div>
+    <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+    <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+        <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/03bt6ewcwy8e?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+    </div>
+    </div>
 
-    Product properties can be automatically generated using AI based on the product’s name and images:
-
-    ![Product properties](media/product-properties-generation.gif){: style="display: block; margin: 0 auto;" width="500"}
-
-    Product accent colors can be automatically assigned based on their entered English name using standard HTML color names. Users can still manually adjust the color code if needed:
+1. Product accent colors can be automatically assigned based on their entered English name using standard HTML color names. Users can still manually adjust the color code if needed:
 
     ![Color picker](media/color-picker-names.gif){: style="display: block; margin: 0 auto;" width="500"}
 
