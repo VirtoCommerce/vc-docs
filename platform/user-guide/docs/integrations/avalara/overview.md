@@ -29,6 +29,6 @@ With the AvaTax Store module, users can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Integrations overview </a>
+    <a href="../../../application-insights/overview">← Application Insights module overview </a>
     <a href="../orders-synchronization">Orders synchronization →</a>
 </div>

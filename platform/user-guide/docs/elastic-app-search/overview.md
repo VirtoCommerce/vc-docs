@@ -40,5 +40,5 @@ The diagram below illustrates the functionality of the Elastic App Search module
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../elastic-search-8/overview">← Elasticsearch 8 module overview</a>
-    <a href="../../elastic-search/overview">Elasticsearch module overview →</a>
+    <a href="../using-analytics">Using analytics →</a>
 </div>

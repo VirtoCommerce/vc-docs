@@ -184,9 +184,6 @@ nav:
                 - Overview: ai-doc-processing/overview.md
                 - Enabling AI Smart Capture: ai-doc-processing/enabling-ai-doc-processing.md
                 - Settings: ai-doc-processing/settings.md
-          - Application Insights:
-                - Overview: application-insights/overview.md
-                - Enabling Application Insights: application-insights/enable-app-insights.md
           - Authentication Related Modules:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md
@@ -318,7 +315,11 @@ nav:
                 - Elasticsearch 8:
                       - Overview: elastic-search-8/overview.md
                       - Settings: elastic-search-8/settings.md
-                - Elastic App Search: elastic-app-search/overview.md
+                - Elastic App Search: 
+                      - Overview: elastic-app-search/overview.md
+                      - Using Search Analytics: elastic-app-search/using-analytics.md
+                      - Tuning Search Relevance: elastic-app-search/search-relevance-tuning.md
+                      - Settings: elastic-app-search/settings.md
                 - Elasticsearch:
                       - Overview: elastic-search/overview.md
                       - Settings: elastic-search/settings.md
@@ -388,6 +389,10 @@ nav:
                 - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
     - Integrations:
           - Overview: integrations/overview.md
+          - Application Insights:
+                - Overview: application-insights/overview.md
+                - Enabling Application Insights: application-insights/enable-app-insights.md
+                - Settings: application-insights/settings.md
           - Avalara Tax:
                 - Overview: integrations/avalara/overview.md
                 - Orders Synchronization: integrations/avalara/orders-synchronization.md

@@ -23,5 +23,5 @@ To configure AI smart capture settings:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../enabling-ai-doc-processing">← Enabling AI doc processing</a>
-    <a href="../../application-insights/overview">Application Insights module overview →</a>
+    <a href="../../google-sso/overview">Google SSO module overview →</a>
 </div>

@@ -18,5 +18,6 @@ The Application Insights feature is now enabled, and metrics, application teleme
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Application Insights module overview</a>
-    <a href="../../google-sso/overview">Google SSO module overview →</a>
+    <a href="../settings">Settings →</a>
 </div>
+

@@ -260,7 +260,12 @@ nav:
     - GraphQL API Reference (xAPI):
           - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
           - Setting up Environment for Working with xAPI: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
-          - Update xAPI Modules Guide: GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules.md
+          - Creating xAPI Module: GraphQL-Storefront-API-Reference-xAPI/creating-custom-module.md
+          - Extending xAPI module: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
+          - Updating xAPI Modules Guide: GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules.md
+          - Multiregional Development: GraphQL-Storefront-API-Reference-xAPI/multiregional-development.md
+          - Best Practices: GraphQL-Storefront-API-Reference-xAPI/best-practices.md
+          - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
           - Tools to Explore GraphQL:
                 - GraphiQL: GraphQL-Storefront-API-Reference-xAPI/graphiql.md
                 - Postman: GraphQL-Storefront-API-Reference-xAPI/postman.md
@@ -807,9 +812,6 @@ nav:
                       - MenuLinkType: GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/MenuLinkType.md
                 - Mutations:
                       - ChangeOrganizationLogo: GraphQL-Storefront-API-Reference-xAPI/White-labeling/mutations/ChangeOrganizationLogo.md
-          - Multiregional Development: GraphQL-Storefront-API-Reference-xAPI/multiregional-development.md
-          - xAPI Extensions: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
-          - Troubleshooting: GraphQL-Storefront-API-Reference-xAPI/troubleshooting.md
     - Extensibility:
           - Overview: Extensibility/overview.md
           - Key Extensibility Points: Extensibility/key-extensibility-points.md

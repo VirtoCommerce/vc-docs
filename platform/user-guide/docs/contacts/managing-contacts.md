@@ -2,15 +2,15 @@
 
 Managing contact entities (companies, employees, customers, and vendors) includes:
 
-* [Adding contacts.](managing-contacts.md#adding-contacts)
-* [Editing contacts.](managing-contacts.md#editing-contacts)
-* [Deleting contacts.](managing-contacts.md#deleting-contacts)
-* [Exporting contacts.](managing-contacts.md#export-contacts)
-* [Importing contacts.](managing-contacts.md#import-contacts)
-* [Updating contacts.](managing-contacts.md#import-contacts)
-* [Sharing contacts.](managing-contacts.md#share-contacts)
-* [Setting default company.](managing-contacts.md#set-default-company)
-* [Assigning multiple organizations to contacts and employees.](managing-contacts.md#assign-multiple-organizations-to-contacts-and-employees)
+* [Adding contacts.](#adding-contacts)
+* [Editing contacts.](#editing-contacts)
+* [Deleting contacts.](#deleting-contacts)
+* [Exporting contacts.](#export-contacts)
+* [Importing contacts.](#import-contacts)
+* [Updating contacts.](#import-contacts)
+* [Sharing contacts.](#share-contacts)
+* [Setting default company.](#set-default-company)
+* [Assigning multiple organizations to contacts and employees.](#assign-multiple-organizations-to-contacts-and-employees)
 
 ## Add contacts
 
@@ -65,7 +65,7 @@ To delete a contact:
 1. Click **Contacts** in the main menu.
 1. In the **Companies and Contacts** blade, check the contact you need to delete. 
 1. Click **Delete** in the toolbar.
-1. Confirm your action.
+1. Type **Yes** to confirm your action.
 
 The contact has been deleted.
 
