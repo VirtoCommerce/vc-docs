@@ -2948,6 +2948,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
+    <nav class="md-nav" aria-label="Range filtration">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#date-and-time-range-filtering" class="md-nav__link">
+        Date and time range filtering
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
 </li>
         
         <!-- Table of contents item -->
@@ -7568,7 +7584,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../GraphQL-Storefront-API-Reference-xAPI/getting-started/" class="md-nav__link">
-        Setting up Environment for Working with xAPI
+        Setting Up Environment For Working With xAPI
       </a>
     </li>
   
@@ -7585,7 +7601,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../GraphQL-Storefront-API-Reference-xAPI/creating-custom-module.md" class="md-nav__link">
+      <a href="../../../GraphQL-Storefront-API-Reference-xAPI/custom-module-creation/" class="md-nav__link">
         Creating xAPI Module
       </a>
     </li>
@@ -7604,7 +7620,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../GraphQL-Storefront-API-Reference-xAPI/x-api-extensions/" class="md-nav__link">
-        Extending xAPI module
+        Extending xAPI Module
       </a>
     </li>
   
@@ -7622,7 +7638,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../../GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules/" class="md-nav__link">
-        Updating xAPI Modules Guide
+        Updating xAPI Modules
       </a>
     </li>
   
@@ -7657,7 +7673,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../GraphQL-Storefront-API-Reference-xAPI/best-practices.md" class="md-nav__link">
+      <a href="../../../GraphQL-Storefront-API-Reference-xAPI/best-practices/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -26915,6 +26931,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
+    <nav class="md-nav" aria-label="Range filtration">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#date-and-time-range-filtering" class="md-nav__link">
+        Date and time range filtering
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
 </li>
         
         <!-- Table of contents item -->
@@ -26959,7 +26991,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 3, 2026 14:04:54 UTC">February 3, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27023,6 +27055,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><code>phrase</code> is an exact phrase in quotation marks. </li>
 <li><code>filter phrase</code> is used to apply additional criteria to a search query apart from the full text search terms.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All examples in this article illustrate the unified search query syntax.
+Actual field names and supported filters depend on the specific API endpoint and indexed entity.</p>
+</div>
 <p><strong>Example</strong></p>
 <table>
 <thead>
@@ -27104,10 +27141,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
+<h3 id="date-and-time-range-filtering">Date and time range filtering<a class="headerlink" href="#date-and-time-range-filtering" title="Permanent link">&para;</a></h3>
+<p>Date and time-based filtering must follow the unified search query syntax rules for range filters:</p>
+<ul>
+<li>
+<p>Date-only values may be specified without quotes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>createdDate:[2023-12-01 TO 2023-12-31]
+</code></pre></div>
+</li>
+<li>
+<p>Date-time values contain special characters and must be provided as quoted strings:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>createdDate:[&quot;2026-01-19T11:47:35.4270502Z&quot; TO &quot;2026-01-31T11:47:35.4270502Z&quot;]
+</code></pre></div>
+</li>
+</ul>
+<p>If date-time values are not wrapped in double quotes, the range expression is not parsed correctly and returns no results.</p>
 <h2 id="boolean-operators">Boolean operators<a class="headerlink" href="#boolean-operators" title="Permanent link">&para;</a></h2>
 <p>Having multiple field terms separated by a space delimiter in a single filter expression will combine them with an <code>AND</code> operator.</p>
 <p>The following search request filters products of a certain brand, Onkyo, and a certain color, black:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>`color:Black brand:Onkyo`
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>`color:Black brand:Onkyo`
 </code></pre></div>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/latest/search-query-syntax">AND and OR search operators and examples</a></p>
 <h2 id="wildcard-search">Wildcard search<a class="headerlink" href="#wildcard-search" title="Permanent link">&para;</a></h2>
@@ -27137,7 +27189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="admonition-title">Info</p>
 <p>Inside the double quotes block, you may use any unsafe characters.</p>
 <p>To escape double quote character, use backslash (<code>\</code>):
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>`\&quot;my cool property\&quot;:\&quot;&amp;~!&#39;\&quot;`
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>`\&quot;my cool property\&quot;:\&quot;&amp;~!&#39;\&quot;`
 </code></pre></div></p>
 </div>
 <p><strong>Example</strong></p>

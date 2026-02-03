@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.virtocommerce.org/platform/developer-guide/2.0/GraphQL-Storefront-API-Reference-xAPI/troubleshooting/">
       
       
-        <link rel="prev" href="../multiregional-development/">
+        <link rel="prev" href="../best-practices/">
       
       
         <link rel="next" href="../graphiql/">
@@ -7437,7 +7437,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Setting up Environment for Working with xAPI
+        Setting Up Environment For Working With xAPI
       </a>
     </li>
   
@@ -7454,7 +7454,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../creating-custom-module.md" class="md-nav__link">
+      <a href="../custom-module-creation/" class="md-nav__link">
         Creating xAPI Module
       </a>
     </li>
@@ -7473,7 +7473,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../x-api-extensions/" class="md-nav__link">
-        Extending xAPI module
+        Extending xAPI Module
       </a>
     </li>
   
@@ -7491,7 +7491,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../update-xapi-modules/" class="md-nav__link">
-        Updating xAPI Modules Guide
+        Updating xAPI Modules
       </a>
     </li>
   
@@ -7526,7 +7526,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../best-practices.md" class="md-nav__link">
+      <a href="../best-practices/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -26778,7 +26778,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2025 05:42:59 UTC">January 21, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 3, 2026 14:04:54 UTC">February 3, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26799,15 +26799,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
-<p>By default, all GraphQL requests are sent via HTTP <code>POST /graphql</code> endpoint method and all the information about the request is included in the POST request body, therefore the ability to see in Application Insights what query or mutation was executed is lost.</p>
+<p>By default, all GraphQL requests are sent via HTTP <code>POST /graphql</code> endpoint method and all the information about the request is included in the POST request body, therefore the ability to see in <a href="../../Fundamentals/Logging/application-insights/">Application Insights</a> what query or mutation was executed is lost.</p>
 <p>By <a href="https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/VirtoCommerce.ExperienceApiModule.Core/Infrastructure/CustomGraphQLExecuter.cs">overriding</a> the default GraphQL executor we can send our custom telemetry to Application Insights and see what mutation or query was executed and what errors, if any, were handled by GraphQL.</p>
-<p><strong>1. General list of requests can be seen in the Performance tab:</strong></p>
+<ul>
+<li>
+<p>General list of requests can be seen in the <strong>Performance</strong> tab:</p>
 <p><img alt="Performance tab" src="../media/ai-perf.png" /></p>
-<p><strong>2. Information about failed requests and associated Exceptions can be found in Failures tab:</strong></p>
-<p><img alt="Failures tab" src="../media/ai-failure.png" />
-<img alt="Exceptions tab" src="../media/ai-failure2.png" /></p>
-<p><strong>3. Application Insights query mechanism:</strong></p>
-<p><img alt="Queries" src="../media/ai-log.png" /></p>
+</li>
+<li>
+<p>Information about failed requests and associated exceptions can be found in the <strong>Failures</strong> tab:</p>
+<p><img alt="Failures tab" src="../media/ai-failure.png" /></p>
+</li>
+</ul>
+<p><br>
+<br></p>
+<hr />
+<div style="display: flex; justify-content: space-between;">
+    <a href="../best-practices">← Best practices </a>
+    <a href="../graphiql">GraphiQL  →</a>
+</div>
                 
               </article>
             </div>
