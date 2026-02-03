@@ -9,6 +9,6 @@ In the Virto Commerce Platform, zooming and scaling can not be disabled for logi
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../platform-settings">← Platform settings </a>
+    <a href="../backup-and-restore">← Backup and restore </a>
     <a href="../managing-content">Managing Frontend content →</a>
 </div>

@@ -1,4 +1,4 @@
-# xAPI Modules Update Guide
+# Update xAPI Modules
 
 This guide explains how to update xAPI modules in the Virto Commerce Platform after upgrading GraphQL.NET libraries from v4 to v8. Follow these steps to update references, initialize modules, and handle breaking changes. Be sure to thoroughly test your implementations after making these updates.
 
@@ -383,6 +383,6 @@ Deprecated fields and mutations were removed to reduce redundancy and ensure sch
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../getting-started">← Getting started </a>
-    <a href="../graphiql">GraphiQL  →</a>
+    <a href="../x-api-extensions">← Extending xAPI module </a>
+    <a href="../multiregional-development">Multiregional development  →</a>
 </div>

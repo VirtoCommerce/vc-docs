@@ -32,5 +32,5 @@ $ curl -X POST http://localhost:10645/graphql \
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../postman">← Postman </a>
-    <a href="../Back-in-stock/overview">Back in stock  →</a>
+    <a href="../PurchaseRequest/overview">AI document processing module overview →</a>
 </div>

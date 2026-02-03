@@ -26,3 +26,12 @@ GraphQL queries can be safely routed to read-only regions. GraphQL mutations are
 Because xAPI is the single business-facing entry point, routing decisions can be made consistently and transparently, without frontend or integration clients needing to understand database topology.
 
 This is one of the key reasons multiregional routing was difficult to implement in earlier REST-centric architectures: REST endpoints often mixed reads and writes, making safe routing far more complex.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-xapi-modules">← Updating xAPI modules </a>
+    <a href="../best-practices">Best practices  →</a>
+</div>

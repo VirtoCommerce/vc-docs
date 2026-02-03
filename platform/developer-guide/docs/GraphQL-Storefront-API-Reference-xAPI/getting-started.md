@@ -1,4 +1,4 @@
-# Get Started
+# Set Up Environment For Working With xAPI
 
 This section explains how to prepare your environment for testing xAPI.
 
@@ -159,6 +159,6 @@ Providing token in Postman is described in the [Postman](postman.md#authorizatio
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../">← GraphQL overview </a>
-    <a href="../update-xapi-modules">Updating xAPI modules  →</a>
+    <a href="../">← xAPI module overview </a>
+    <a href="../custom-module-creation">Creating xAPI module  →</a>
 </div>

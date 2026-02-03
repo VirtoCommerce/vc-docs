@@ -162,5 +162,5 @@ The xAPI project provides the following major features:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../Platform-Manager/style-guide">← Platform manager </a>
-    <a href="../GraphQL-Storefront-API-Reference-xAPI/getting-started">Getting started  →</a>
+    <a href="../GraphQL-Storefront-API-Reference-xAPI/getting-started">Setting up environment for working with xAPI  →</a>
 </div>

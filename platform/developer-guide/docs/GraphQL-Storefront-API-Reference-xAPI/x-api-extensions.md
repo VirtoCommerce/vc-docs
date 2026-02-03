@@ -343,15 +343,6 @@ In the example above, two related components (a custom type and an extended quer
 The original module first registers the custom type in the schema, and the dependent module uses this type to extend or override the connection type. If a new module needs to override both the custom type and the extended query builder with its own implementations, it should declare a dependency on the module containing these components. This ensures a proper dependency chain for GraphQL type registration and overrides, avoiding issues with type resolution or loading order.
 
 
-
-
-
-
-
-
-
-
-
 ## Extend validation logic/ replace validators
 
 In the system, the Platform's abstract type factory is employed to create instances of validators. Consequently, the approach for extending validation logic is similar to other cases, such as extending domain models:
@@ -471,3 +462,12 @@ To replace an existing command with your implementation:
     ```csharp title="module.cs" linenums="1"
     services.OverrideCommandType<RemoveCartCommand, RemoveCartCommandExtended>().WithCommandHandler<RemoveCartCommandHandlerExtended>();
     ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../custom-module-creation">← Creating xAPI module </a>
+    <a href="../update-xapi-modules">Updating xAPI modules  →</a>
+</div>

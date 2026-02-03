@@ -2,6 +2,8 @@
 
 In this guide, we will learn how to create own custom module using `dotnet new` templates for Virto Commerce modules. This feature allows you to create a Virto Commerce module with a pre-configured entity, simplifying the development and integration of new components.
 
+<!--templates-start-->
+
 | Template Name                                                                                                                 | Description |
 |-------------------------------------------------------------------------------------------------------------------------------|-------------|
 | [vc-module-dba-xapi](https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-module-dba-xapi-template) | Creates a new Virto Commerce module with DB Agnostic and xAPI support. |
@@ -9,6 +11,7 @@ In this guide, we will learn how to create own custom module using `dotnet new` 
 | [vc-module-xapi](https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-module-xapi-template)         | Creates a new Virto Commerce module with xAPI support. |
 | [vc-crud](https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-crud-template)                       | Creates all the classes needed for CRUD operations. |
 
+<!--templates-end-->
 
 [![video tutorial](media/video-tutorial-button.png)](https://youtu.be/C77kBhl1At4)
 

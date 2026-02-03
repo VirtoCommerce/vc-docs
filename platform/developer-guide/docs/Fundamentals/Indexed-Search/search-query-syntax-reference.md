@@ -48,6 +48,10 @@ The search supports any language and allows the use of boolean operators, preced
 * `filter phrase` is used to apply additional criteria to a search query apart from the full text search terms.
 
 
+!!! note
+    All examples in this article illustrate the unified search query syntax.
+    Actual field names and supported filters depend on the specific API endpoint and indexed entity.
+
 **Example**
 
 | Query            | Description                                                                                                                |
@@ -109,6 +113,25 @@ Range filtration helps you find products that have field values within a specifi
 | `price:[100 TO 200]` 	| Finds products with prices between 100 and 200, inclusive.             	|
 | `price:(100 TO 200]` 	| Finds products with prices between 100, exclusive, and 200, inclusive. 	|
 | `price:(TO 100]`     	| The price must be less than or equal to 100.                           	|
+
+### Date and time range filtering
+
+Date and time-based filtering must follow the unified search query syntax rules for range filters:
+
+* Date-only values may be specified without quotes:
+
+    ```
+    createdDate:[2023-12-01 TO 2023-12-31]
+    ```
+
+* Date-time values contain special characters and must be provided as quoted strings:
+
+    ```
+    createdDate:["2026-01-19T11:47:35.4270502Z" TO "2026-01-31T11:47:35.4270502Z"]
+    ```
+
+If date-time values are not wrapped in double quotes, the range expression is not parsed correctly and returns no results.
+
 
 ## Boolean operators
 Having multiple field terms separated by a space delimiter in a single filter expression will combine them with an `AND` operator.
