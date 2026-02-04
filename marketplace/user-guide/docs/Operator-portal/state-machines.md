@@ -8,7 +8,7 @@ To add a flow:
 1. The next blade lists all the available order state flows. Click **Add** in the toolbar to add a new flow.
 1. In the next blade, click **Open Visual Editor**:
 
-    ![Edit states](media/add-view-state.png)
+    ![Edit states](media/add-view-state.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
         The flows are applicable for the following entity types:

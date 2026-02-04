@@ -1,6 +1,6 @@
 ﻿# Marketplace 
 
-Marketplace product introduces a list of predefined features to fulfill common and complex tasks related to the B2B marketplace management. It uses the Virto Atomic architecture principles to bring extensibility to the product to adjust it to the specific project needs.
+Marketplace product introduces a list of predefined features to fulfill common and complex tasks related to the B2B marketplace management. It uses the Virto [atomic architecture](../../../platform/developer-guide/Back-End-Architecture/atomic-architecture) principles to bring extensibility to the product to adjust it to the specific project needs.
 
 [![Release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-marketplace-vendor/releases/latest)
 

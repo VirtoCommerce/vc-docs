@@ -10,7 +10,7 @@ To add a new vendor:
 1. In the next blade, click **Add** in the toolbar.
 1. In the new blade, fill in the following fields:
 
-    ![New vendor](media/new-vendor.png)
+    ![New vendor](media/new-vendor.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Invite** to send an invitation.
 
