@@ -260,7 +260,6 @@ nav:
     - GraphQL API Reference (xAPI):
           - Overview: GraphQL-Storefront-API-Reference-xAPI/index.md
           - Setting Up Environment For Working With xAPI: GraphQL-Storefront-API-Reference-xAPI/getting-started.md
-          - Creating xAPI Module: GraphQL-Storefront-API-Reference-xAPI/custom-module-creation.md
           - Extending xAPI Module: GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md
           - Updating xAPI Modules: GraphQL-Storefront-API-Reference-xAPI/update-xapi-modules.md
           - Multiregional Development: GraphQL-Storefront-API-Reference-xAPI/multiregional-development.md

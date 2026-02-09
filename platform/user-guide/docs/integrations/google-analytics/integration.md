@@ -58,7 +58,7 @@ To start using GTM:
 Your modifications have been applied.
 
 !!! note
-    Because the Virto Commerce Frontend integrates with Google Tag Manager (GTM) through the GA module, it can now automatically support additional third-party SaaS tools that rely on GTM - such as Product Guide.
+    Because the Virto Commerce Frontend integrates with Google Tag Manager (GTM) through the GA module, it can now automatically support additional third-party SaaS tools that rely on GTM, for example, Product Guide.
     Product Guide can be connected to our Frontend by simply adding its script or tag to GTM. No custom Frontend development, code changes, or manual script injection into the Frontend are required:
 
     ![Product guide](media/product-guide.gif){: style="display: block; margin: 0 auto;" width="400"}
