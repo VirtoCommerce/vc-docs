@@ -29,27 +29,44 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
 The custom components by Virto include:
 
+
 * **Category**:
 
-    ![Category](media/custom-category.png){: style="display: block; margin: 0 auto;" }
+    ![Category](media/custom-category.png)
 
 * **Products**:
 
-    ![Products](media/custom-products.png){: style="display: block; margin: 0 auto;" }
+    ![Products](media/custom-products.png)
 
 * **Slider**:
 
-    ![Slider](media/custom-slider.png){: style="display: block; margin: 0 auto;" }
+    ![Slider](media/custom-slider.png)
 
-* **Favourite products**:
+* **Favorite products**:
 
-    ![Favourite products](media/custom-favorite-products.png){: style="display: block; margin: 0 auto;" }
+    ![Favorite products](media/custom-favorite-products.png)
 
 * **VC-container** that allows images to be uploaded in a format fully supported by the Frontend Application. It eliminates the need for further resizing to fit other elements:
 
-    ![VC-container](media/vc-container.png){: style="display: block; margin: 0 auto;" }
+    ![VC-container](media/vc-container.png)
 
-* **Breadcrumbs**.
+* **Breadcrumbs**:
+
+    ![Breadcrumbs](media/breadcrumbs.png){: width="650" }
+
+* **Predefined products**:
+
+    ![Predefined products](media/predefined-products.png)
+
+* **Products carousel**:
+
+    ![Products carousel](media/products-carousel.png)
+
+
+!!! note 
+    To add products to the **Predefined products** or **Products carousel** custom components, enter the products' SKUs:
+
+    ![Product SKUs](media/products-carousel-skus.gif)
 
 ## Add category block with subcategory filters
 

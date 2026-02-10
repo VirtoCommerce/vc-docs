@@ -66,6 +66,12 @@ To add content to your page:
 
     ![Available blocks](media/available-blocks.png){: style="display: block; margin: 0 auto;" }
 
+    !!! note 
+    
+        To add products to the **Predefined products** or **Products carousel** blocks, enter the products' SKUs:
+
+        ![Predefined products](media/predefined-products.gif){: style="display: block; margin: 0 auto;" }
+    
 1. Click on the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
 
     ![Call to action](media/call-to-action.png){: style="display: block; margin: 0 auto;" }
