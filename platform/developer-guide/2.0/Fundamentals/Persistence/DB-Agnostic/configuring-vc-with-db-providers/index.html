@@ -22898,6 +22898,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../../../Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre/" class="md-nav__link">
+        Adding Case-Insensitive Search Support for PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -26764,7 +26782,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 10:37:37 UTC">September 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 12, 2026 10:23:12 UTC">February 12, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26801,11 +26819,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>Install and configure database. Run the SQL command <code>CREATE DATABASE [database_name];</code> to create a new database.</li>
 <li>Create a user with access to the database.</li>
-<li>Open the appsettings.json file in Visual Studio or other text editor. </li>
+<li>Open the <a href="../../../../Configuration-Reference/appsettingsjson/">appsettings.json</a> file in Visual Studio or other text editor. </li>
 <li>Change <code>DatabaseProvider</code> to <code>"SqlServer"</code>.</li>
 <li>
 <p>Change <code>ConnectionStrings</code> as follows: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SqlServer&quot;</span><span class="p">,</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SqlServer&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30;TrustServerCertificate=True;&quot;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">},</span>
@@ -26819,17 +26837,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>Install and configure database. Run the SQL command <code>CREATE DATABASE [database_name];</code> to create a new database.</li>
 <li>Create a user with access to the database.</li>
-<li>Open the appsettings.json file in Visual Studio or other text editor. </li>
+<li>Open the <a href="../../../../Configuration-Reference/appsettingsjson/">appsettings.json</a> file in Visual Studio or other text editor. </li>
 <li>Change <code>DatabaseProvider</code> to <code>"MySql"</code>.</li>
 <li>
 <p>Change <code>ConnectionStrings</code> as follows: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MySql&quot;</span><span class="p">,</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MySql&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;&quot;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">},</span>
 </code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MySql&quot;</span><span class="p">,</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MySql&quot;</span><span class="p">,</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;&quot;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">},</span>
@@ -26843,17 +26861,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>Install and configure database. Run the SQL command <code>CREATE DATABASE [database_name];</code> to create a new database.</li>
 <li>Create a user with access to the database.</li>
-<li>Open the appsettings.json file in Visual Studio or other text editor. </li>
+<li>Open the <a href="../../../../Configuration-Reference/appsettingsjson/">appsettings.json</a> file in Visual Studio or other text editor. </li>
 <li>Change <code>DatabaseProvider</code> to <code>"PostgreSql"</code>.</li>
 <li>
 <p>Change "ConnectionString" as follows: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PostgreSql&quot;</span><span class="p">,</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PostgreSql&quot;</span><span class="p">,</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User ID=postgres;Password=password;Host=localhost;Port=5432;Database=virtocommerce3;&quot;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">},</span>
 </code></pre></div>
 </li>
 </ol>
+<p><img alt="Readmore" src="../media/readmore.png" width="20" /> <a href="../../../../Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre/">Add case-insensitive search support for PostgreSQL into Virto Commerce module</a></p>
 </div>
 </div>
 </div>

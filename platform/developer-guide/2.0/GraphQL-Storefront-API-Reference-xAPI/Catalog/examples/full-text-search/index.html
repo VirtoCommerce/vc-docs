@@ -22898,6 +22898,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../../../Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre/" class="md-nav__link">
+        Adding Case-Insensitive Search Support for PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -26764,7 +26782,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2025 06:03:16 UTC">July 8, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 12, 2026 10:23:12 UTC">February 12, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26784,7 +26802,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="full-text-search">Full text search<a class="headerlink" href="#full-text-search" title="Permanent link">&para;</a></h1>
+<h1 id="full-text-search">Full Text Search<a class="headerlink" href="#full-text-search" title="Permanent link">&para;</a></h1>
 <p>The <code>query</code> parameter performs the full text search against the product index document. It expects a full text search phrase.</p>
 <p>The search performs full text search over product data in the index. Product search returns all product variations a product has.
 All searchable text data of a product are stored in the single <code>__content</code> field in the resulting index document. The full text search is performed only for this field.</p>
@@ -26810,111 +26828,43 @@ All searchable text data of a product are stored in the single <code>__content</
 <li><code>product.variations.code</code></li>
 <li><code>product.variations.properties.value</code></li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sample query</label><label for="__tabbed_1_2">Sample return</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">query</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="err">produc</span><span class="kc">ts</span><span class="err">(</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="err">query</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shirt&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="err">cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="err">i</span><span class="kc">te</span><span class="err">ms</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="err">id</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">      </span><span class="kc">na</span><span class="err">me</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="err">...</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span>
-<span class="normal"><a href="#__codelineno-2-35">35</a></span>
-<span class="normal"><a href="#__codelineno-2-36">36</a></span>
-<span class="normal"><a href="#__codelineno-2-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">      </span><span class="nt">&quot;totalCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Eye Bolt,Carbon Steel 4.6,M6x70,PK25&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/38DJ66/5ZA21_AS01.jpg&quot;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20mm Steel Hex Flange Bolt, Class 10.9, Plain Finish, M10-1.50 Dia/Thread Size, 400 PK&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/157A20/41MY01.jpg&quot;</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16mm Stainless Steel Carriage Bolt, A2, Plain Finish, M5-0.80 Dia/Thread Size, 100 PK&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/54FT59/164W33.jpg&quot;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2\&quot; Alloy Steel Camrail Bolt, Grade 8, 3/4\&quot;-10 Dia/Thread Size, 100 PK&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/19N083/19N102.jpg&quot;</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16mm Steel Hex Flange Bolt, Class 8.8, Zinc Plated Finish, M8-1.25 Dia/Thread Size, 100 PK&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/DCJ-12823700/41MY01.jpg&quot;</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2\&quot; Steel Carriage Bolt, Grade 5, Plain Finish, 5/8-11 Dia/Thread Size, 25 PK&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/BBI-43450591/21A915.jpg&quot;</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-1/2\&quot; Alloy Steel Camrail Bolt, Grade 8, 7/8\&quot;-9 Dia/Thread Size, 5 PK&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">          </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/19N069/19N069.jpg&quot;</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
+<div class="grid">
+<div class="highlight"><span class="filename">Sample query</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">query</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="err">produc</span><span class="kc">ts</span><span class="err">(</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="err">query</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shirt&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="err">cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="err">i</span><span class="kc">te</span><span class="err">ms</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="err">id</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="kc">na</span><span class="err">me</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="err">...</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Sample return</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">          </span><span class="nt">&quot;totalCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Eye Bolt,Carbon Steel 4.6,M6x70,PK25&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">              </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/38DJ66/5ZA21_AS01.jpg&quot;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20mm Steel Hex Flange Bolt, Class 10.9, Plain Finish, M10-1.50 Dia/Thread Size, 400 PK&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">              </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/157A20/41MY01.jpg&quot;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16mm Stainless Steel Carriage Bolt, A2, Plain Finish, M5-0.80 Dia/Thread Size, 100 PK&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">              </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qademovc3.blob.core.windows.net/catalog/7829d/54FT59/164W33.jpg&quot;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">           </span><span class="c1">// ... more product items</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">          </span><span class="p">]</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
