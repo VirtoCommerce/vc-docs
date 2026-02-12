@@ -70,7 +70,7 @@ The term type facets provide the counts for each of the different values the que
 | `name`           | Represents the key of the requested facet taken from the facet expression.                                                                                |
 | `terms.term`     | Represents one of the values for the field specified in the facet expression,<br>for which at least one product could be found.                              |
 | `terms.count`    | Represents the number of products for which the term applies.                                                                                             |
-| `terms.isSelected` | Indicates whether the requested facet term is used in the `filter` expression.<br>This flag simplifies displaying the already selected facet terms on the frontend. |
+| `terms.isSelected` | Indicates whether the requested facet term is used in the `filter` expression.<br>This flag simplifies displaying the already selected facet terms on the Frontend. |
 
 ## RangeFacet expression
 
@@ -85,12 +85,12 @@ To aggregate facet counts across ranges of values, the range qualifier can be ap
 
 The range facet type counts the products for which the query value is a range specified in the range expression. Range facets are typically used to determine the minimum and maximum value for example product prices to filter products by price with a range slider.
 
-| Field               | Description                                                                                                                                                              |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Field               | Description                                                                                                                                     |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`              | Represents the key of the requested facet taken from the facet expression.<br>It is built from range parameters concatenated by "_". Example: `price_*-100_100-200`.        |
-| `ranges.from`       | Represents the lower endpoint of the range in number format.                                                                                                             |
-| `ranges.to`         | Represents the upper endpoint of the range in string format.                                                                                                             |
-| `ranges.count`      | Represents the number of products that fall into the specified range.                                                                                                    |
-| `ranges.includeTo`  | Indicates whether the lower bound of the range is included.                                                                                                              |
-| `ranges.includeFrom`| Indicates whether the upper bound of the range is included.                                                                                                              |
-| `ranges.isSelected` | Indicates whether the requested facet term is used in the `filter` expression.<br>This flag simplifies displaying the already selected facet terms on the frontend.         |
+| `ranges.from`       | Represents the lower endpoint of the range in number format.                                                                                    |
+| `ranges.to`         | Represents the upper endpoint of the range in string format.                                                                                    |
+| `ranges.count`      | Represents the number of products that fall into the specified range.                                                                           |
+| `ranges.includeTo`  | Indicates whether the lower bound of the range is included.                                                                                     |
+| `ranges.includeFrom`| Indicates whether the upper bound of the range is included.                                                                                     |
+| `ranges.isSelected` | Indicates whether the requested facet term is used in the `filter` expression.<br>This flag simplifies displaying the already selected facet terms on the Frontend.  |

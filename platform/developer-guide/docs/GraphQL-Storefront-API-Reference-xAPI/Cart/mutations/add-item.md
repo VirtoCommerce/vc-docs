@@ -32,8 +32,12 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation addItem($command: InputAddItemType!) {
       addItem(command: $command) {
         id
@@ -53,21 +57,22 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
         }
       }
     }
-    ```
+```
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
-      "storeId": "B2B-store",
-      "cartName": "default",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "cartType": "null",
-      "productId": "ec235043d51848249e90ef170c371a1c",
-      "quantity": 1,
-      "currencyCode": "USD",
-      "cultureName":"en-US",
-      "price": 10.85,
-      "comment": ""
-    }
-    ```
+```json title="Variables"
+  "command": {
+    "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+    "storeId": "B2B-store",
+    "cartName": "default",
+    "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+    "cartType": "null",
+    "productId": "ec235043d51848249e90ef170c371a1c",
+    "quantity": 1,
+    "currencyCode": "USD",
+    "cultureName":"en-US",
+    "price": 10.85,
+    "comment": ""
+  }
+```
+
+</div>

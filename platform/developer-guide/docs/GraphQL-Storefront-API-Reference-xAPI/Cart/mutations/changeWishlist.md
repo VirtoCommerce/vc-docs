@@ -21,27 +21,31 @@ The `InputChangeWishlistType!` represents the input for modifying a wishlist.
 | [`WishlistType`](../objects/wishlist-type.md)          	  |  The details and properties of the wishlist.  |
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation changeWishlist ($command: InputChangeWishlistType!) {​
-      changeWishlist (command: $command) {​
-        id​
-        name​
-        name​
-        scope​
-        description​
-      } ​
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {​
-      "command": {​
-        "listId": "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",​
-        "listName": "new list name",​
-        "scope": "private",​
-        "description": "new description"​
-      } ​
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation changeWishlist ($command: InputChangeWishlistType!) {​
+  changeWishlist (command: $command) {​
+    id​
+    name​
+    name​
+    scope​
+    description​
+  } ​
+}
+```
+
+```json title="Variables"
+{​
+  "command": {​
+    "listId": "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",​
+    "listName": "new list name",​
+    "scope": "private",​
+    "description": "new description"​
+  } ​
+}
+```
+
+</div>

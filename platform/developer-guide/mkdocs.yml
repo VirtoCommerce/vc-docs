@@ -834,6 +834,7 @@ nav:
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
           - How-tos:
                 - Upgrading to Virto Commerce on .NET10: Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md
+                - Adding Case-Insensitive Search Support for PostgreSQL: Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre.md
                 - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md
                 - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
                 - Type Inheritance Support in Swagger API: Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger.md

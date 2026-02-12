@@ -21,42 +21,45 @@ The `InputSaveForLaterType` represents the input object type used for saving a c
 | ---------------------------------------------------- | ------------------------------------------------------------------------- |
 | [`CartWithListType`](../objects/CartWithListType.md) | The updated cart details, including the Saved for Later list information. |
 
-=== "Mutation"
 
-    ```graphql linenums="1"
-    mutation moveToSavedForLater($command: InputSaveForLaterType!) {
-    moveToSavedForLater(command: $command) {
-        id
-        name
-        items {
-          id
-          name
-          productId
-          quantity
-        }
-        savedForLater {
-          id
-          name
-          productId
-          quantity
-        }
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-    "command": {
-        "storeId": "B2B-store",
-        "cartId": "4f36f405-70fe-4de7-ad72-5d1aed912f48",
-        "userId": "2afc394a-c1e2-41ad-bd3a-c0e27705a12d",
-        "lineItemId": "20e00498-c9b1-4a90-b804-4eaf21861ea2",
-        "currencyCode": "USD",
-        "cultureName": "en-US",
-        "cartType": "ShoppingCart",
-        "cartName": "Default"
+```json title="Mutation"
+mutation moveToSavedForLater($command: InputSaveForLaterType!) {
+  moveToSavedForLater(command: $command) {
+    id
+    name
+    items {
+      id
+      name
+      productId
+      quantity
     }
+    savedForLater {
+      id
+      name
+      productId
+      quantity
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "storeId": "B2B-store",
+    "cartId": "4f36f405-70fe-4de7-ad72-5d1aed912f48",
+    "userId": "2afc394a-c1e2-41ad-bd3a-c0e27705a12d",
+    "lineItemId": "20e00498-c9b1-4a90-b804-4eaf21861ea2",
+    "currencyCode": "USD",
+    "cultureName": "en-US",
+    "cartType": "ShoppingCart",
+    "cartName": "Default"
+  }
+}
+```
+
+</div>

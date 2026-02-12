@@ -18,40 +18,44 @@ This connection allows you to search for a specific category.
 |-----------------------------------------------------------------------	|--------------------------------	|
 | [`CategoryType`](../objects/category/CategoryType.md)                 	| The description of a category. 	|
 
-**Examples**
+## Example
 
-=== "Query" 
-    ```json linenums="1"
-    {
-      category(
-        storeId: "B2B-store"
-        id: "02fe37dcaeb2458a831011abe43fd335"
-        cultureName: "en-US"
-        currencyCode: "USD"
-      ) {
-        name
-        code
-        id
-        level
-        path
-        parent {
-          name
-        }
-      }
+
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  category(
+    storeId: "B2B-store"
+    id: "02fe37dcaeb2458a831011abe43fd335"
+    cultureName: "en-US"
+    currencyCode: "USD"
+  ) {
+    name
+    code
+    id
+    level
+    path
+    parent {
+      name
     }
-    ```
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "category": {
-          "name": "Bolts",
-          "code": "cd931",
-          "id": "02fe37dcaeb2458a831011abe43fd335",
-          "level": 1,
-          "path": "Bolts",
-          "parent": null
-        }
-      }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "category": {
+      "name": "Bolts",
+      "code": "cd931",
+      "id": "02fe37dcaeb2458a831011abe43fd335",
+      "level": 1,
+      "path": "Bolts",
+      "parent": null
     }
-    ```
+  }
+}
+```
+
+</div>

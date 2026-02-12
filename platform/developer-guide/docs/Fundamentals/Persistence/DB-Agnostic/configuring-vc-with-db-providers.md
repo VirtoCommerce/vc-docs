@@ -18,11 +18,11 @@ Select the tab with the required provider setup information.
 
     1. Install and configure database. Run the SQL command `CREATE DATABASE [database_name];` to create a new database.
     1. Create a user with access to the database.
-    1. Open the appsettings.json file in Visual Studio or other text editor. 
+    1. Open the [appsettings.json](../../../Configuration-Reference/appsettingsjson.md) file in Visual Studio or other text editor. 
     1. Change `DatabaseProvider` to `"SqlServer"`.
     1. Change `ConnectionStrings` as follows: 
 
-        ```json
+        ```json title="appsettings.json"
         "DatabaseProvider": "SqlServer",
         "ConnectionStrings": {
         "VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30;TrustServerCertificate=True;"
@@ -37,11 +37,11 @@ Select the tab with the required provider setup information.
 
     1. Install and configure database. Run the SQL command `CREATE DATABASE [database_name];` to create a new database.
     1. Create a user with access to the database.
-    1. Open the appsettings.json file in Visual Studio or other text editor. 
+    1. Open the [appsettings.json](../../../Configuration-Reference/appsettingsjson.md) file in Visual Studio or other text editor. 
     1. Change `DatabaseProvider` to `"MySql"`.
     1. Change `ConnectionStrings` as follows: 
 
-        ```json
+        ```json title="appsettings.json"
         "DatabaseProvider": "MySql",
         "ConnectionStrings": {
         "VirtoCommerce": "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;"
@@ -50,7 +50,7 @@ Select the tab with the required provider setup information.
 
         or
         
-        ```json
+        ```json title="appsettings.json"
         "DatabaseProvider": "MySql",
         "ConnectionStrings": {
         "VirtoCommerce": "Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;"
@@ -65,16 +65,18 @@ Select the tab with the required provider setup information.
 
     1. Install and configure database. Run the SQL command `CREATE DATABASE [database_name];` to create a new database.
     1. Create a user with access to the database.
-    1. Open the appsettings.json file in Visual Studio or other text editor. 
+    1. Open the [appsettings.json](../../../Configuration-Reference/appsettingsjson.md) file in Visual Studio or other text editor. 
     1. Change `DatabaseProvider` to `"PostgreSql"`.
     1. Change "ConnectionString" as follows: 
 
-        ```json
+        ```json title="appsettings.json"
         "DatabaseProvider": "PostgreSql",
         "ConnectionStrings": {
         "VirtoCommerce": "User ID=postgres;Password=password;Host=localhost;Port=5432;Database=virtocommerce3;"
         },
         ```
+
+    ![Readmore](media/readmore.png){: width="20"} [Add case-insensitive search support for PostgreSQL into Virto Commerce module](../../../Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre.md)
 
 !!! note  
     Migrations must be created and applied **separately** for each supported database provider. Each provider may generate slightly different SQL and behaviors, so a single migration run is not sufficient.

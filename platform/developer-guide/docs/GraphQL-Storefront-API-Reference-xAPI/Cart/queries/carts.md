@@ -23,71 +23,71 @@ This query allows you to retrieve information about shopping carts and wishlists
 |---------------------------------------------------------	|------------------------------------------------------------------------	|
 | [`CartConnection`](../objects/cart-connection.md)         |  Defines the properties and fields associated with a shopping cart.    	|
 
-## Examples
 
-=== "Query"
+## Example
 
-    ```json linenums="1"  
-    {
-      carts(
-        storeId: "B2B-Store"
-        userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
-        cultureName: "en-Us"
-        currencyCode: "USD"
-        cartType: "cart"
-        first: 5
-        after: "0"
-      ) {
-        items {
-          id
-          name
-          hasPhysicalProducts
-          status
-          storeId
-          isAnonymous
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  carts(
+    storeId: "B2B-Store"
+    userId: "d97ee2c7-e29d-440a-a43a-388eb5586087"
+    cultureName: "en-Us"
+    currencyCode: "USD"
+    cartType: "cart"
+    first: 5
+    after: "0"
+  ) {
+    items {
+      id
+      name
+      hasPhysicalProducts
+      status
+      storeId
+      isAnonymous
+    }
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "carts": {
+      "items": [
+        {
+          "id": "cart_id_1",
+          "name": "Shopping Cart 1",
+          "hasPhysicalProducts": true,
+          "status": "Active",
+          "storeId": "B2B-Store",
+          "isAnonymous": false
+        },
+        {
+          "id": "cart_id_2",
+          "name": "Shopping Cart 2",
+          "hasPhysicalProducts": false,
+          "status": "Active",
+          "storeId": "B2B-Store",
+          "isAnonymous": true
         }
-        pageInfo {
-          startCursor
-          endCursor
-          hasNextPage
-          hasPreviousPage
-        }
+      ],
+      "pageInfo": {
+        "startCursor": "0",
+        "endCursor": "4",
+        "hasNextPage": true,
+        "hasPreviousPage": false
       }
     }
-    ```
+  }
+}
+```
 
-
-=== "Return"
-
-    ```json linenums="1"  
-    {
-      "data": {
-        "carts": {
-          "items": [
-            {
-              "id": "cart_id_1",
-              "name": "Shopping Cart 1",
-              "hasPhysicalProducts": true,
-              "status": "Active",
-              "storeId": "B2B-Store",
-              "isAnonymous": false
-            },
-            {
-              "id": "cart_id_2",
-              "name": "Shopping Cart 2",
-              "hasPhysicalProducts": false,
-              "status": "Active",
-              "storeId": "B2B-Store",
-              "isAnonymous": true
-            }
-          ],
-          "pageInfo": {
-            "startCursor": "0",
-            "endCursor": "4",
-            "hasNextPage": true,
-            "hasPreviousPage": false
-          }
-        }
-      }
-    }
-    ```
+</div>

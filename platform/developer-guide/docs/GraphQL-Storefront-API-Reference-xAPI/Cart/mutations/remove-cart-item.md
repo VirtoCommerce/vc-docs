@@ -24,8 +24,11 @@ The `InputRemoveItemType` represents the input object type used for removing a s
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation removeCartItem ($command: InputRemoveItemType!) {
       removeCartItem (command: $command) {
         items{
@@ -37,18 +40,19 @@ The `InputRemoveItemType` represents the input object type used for removing a s
         }
       }
     }
-    ```
+```
 
-=== "Variables"
-    ```json linenums="1"
-      "command": {
-      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
-      "storeId": "B2B-store",
-      "cartName": "default",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "cartType": "null",
-      "currencyCode": "USD",
-      "cultureName":"en-US",
-      "lineItemId": "a3c9e72a-5b33-48c2-90b4-780886f54ec8"
-    }
-    ```
+```json title="Variables"
+"command": {
+  "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+  "storeId": "B2B-store",
+  "cartName": "default",
+  "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+  "cartType": "null",
+  "currencyCode": "USD",
+  "cultureName":"en-US",
+  "lineItemId": "a3c9e72a-5b33-48c2-90b4-780886f54ec8"
+}
+```
+
+</div>

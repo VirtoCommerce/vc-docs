@@ -24,8 +24,12 @@ The `InputAddOrUpdateCartAddressType!` represents the input object type used for
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation($command: InputAddOrUpdateCartAddressType!) {
       addCartAddress(command: $command) {
         id
@@ -48,10 +52,9 @@ The `InputAddOrUpdateCartAddressType!` represents the input object type used for
         }
       }
     }
-    ```
+```
 
-=== "Variables"
-    ```json linenums="1"
+```json title="Variables"
     "command": {
       "storeId": "B2B-store",
       "cartName": "default",
@@ -78,4 +81,6 @@ The `InputAddOrUpdateCartAddressType!` represents the input object type used for
         "addressType": 1
       }
     }
-    ```
+```
+
+</div>

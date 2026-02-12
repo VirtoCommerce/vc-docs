@@ -10,8 +10,8 @@ The section below explains you how to manage the filtering process in the most c
 
 ## Filtering by price
 
-| Query                          	| Description                                                   	| Note                                                                                                    	|
-|--------------------------------	|---------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------	|
+| Query                          	| Description                                                   	| Note                                                               |
+|--------------------------------	|---------------------------------------------------------------	|--------------------------------------------------------------------|
 | `filter: "price.{currency}.{pricelist?}:{range expression}"`<br> `filter: "price.usd:(TO 100]"`<br> `filter: "price.usd.pricelist_1:(20 TO 100]"`   `filter: "is:priced"` (keeps only products that have at least one price set) 	| Filters products based on the specified price value or range. 	| The search will be performed against<br>the `price_{currency}` and `price_{currency}_{pricelist}`<br>index fields of the product document.<br> Only the indexed prices may be used<br>for filtration. Scoped prices based on user groups<br>or dynamic expressions temporary do not support filtration. 	|
 
 ## Filtering by SKU
@@ -20,76 +20,76 @@ The section below explains you how to manage the filtering process in the most c
 |-----------------------------	|----------------------------------------------	|
 | `filter: "sku:DLL-65789352` 	| Filters products based on the specified SKU. 	|
 
-## Filtering Products or Variations
+## Filtering products or variations
 
 | Query                       	| Description                                  	|
 |-----------------------------	|----------------------------------------------	|
-| `filter: "is:product status:visible"`<br>`filter: "is:variation status:hidden"`	| Includes only either the products or variations in the result. If not set, it will return both types. 	|
+| `filter: "is:product status:visible"`<br>`filter: "is:variation status:hidden"`	| Includes only either the products or variations in the result. If not set, it will return both types. |
 
-## Filtering by Custom Properties
+## Filtering by custom properties
 
 !!! info
 	All product custom properties are stored in the index as fields with the same names as the base properties have (`{property.name}:{property.value}`).
 
-| Query                                                                              	| Description                                                                                           	|
-|------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------	|
-| `filter: "properties.{property name}: {value}`<br> `filter: "properties.color:red` 	| For keeping the products or variation with the custom attribute<br>matching the specified value or range. 	|
-| `filter= "\"processor core (ghz)\":\"1.8 GHz Intel GTX Quad-Core\""`               	| For property name that contains spaces.                                                               	|
-| `filter: "length:(10 TO 20)"`<br> `filter: "publishDate:(TO \"2020-01-28\")"`      	| For numeric and date time properties.                                                                 	|
+| Query                                                                              	| Description                                                                         |
+|------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------	|
+| `filter: "properties.{property name}: {value}`<br> `filter: "properties.color:red` 	| For keeping the products or variation with the custom attribute<br>matching the specified value or range.|
+| `filter= "\"processor core (ghz)\":\"1.8 GHz Intel GTX Quad-Core\""`               	| For property name that contains spaces.                                             |
+| `filter: "length:(10 TO 20)"`<br> `filter: "publishDate:(TO \"2020-01-28\")"`      	| For numeric and date time properties.                                               |
 
 
-## Filtering by Product Availability
+## Filtering by product availability
 
-| Query                                                                         	| Description                                                                                        	|
-|-------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------	|
-| `filter: "available_in:{warehouse}"`<br>`filter: "available_in:my-warehouse"` 	| Keeps only the products or variations with the availability matching the specified value or range. 	|
+| Query                                                                         	| Description                                                                          |
+|-------------------------------------------------------------------------------	|--------------------------------------------------------------------------------------|
+| `filter: "available_in:{warehouse}"`<br>`filter: "available_in:my-warehouse"` 	| Keeps only the products or variations with the availability matching the specified value or range. |
+
 
 ### Example
 
-=== "Sample query"
-    Displays products and variations in a list from a specific category.
+Display products and variations in a list from a specific category.
 
-    ```json linenums="1"
-    query {
-      products(
-        storeId: "B2B-store"
-        cultureName: "en-US"
-        first: 20
-        after: "0"
-        filter: "status:hidden,visible category.path:7829d35f417e4dd98851f51322f32c23/4fbaca886f014767a52f3f38b9df648f"
-      ) {
-        items {
-          name
-        }
-        totalCount
-      }
+<div class="grid" markdown>
+
+
+```json title="Sample query"
+query {
+  products(
+    storeId: "B2B-store"
+    cultureName: "en-US"
+    first: 20
+    after: "0"
+    filter: "status:hidden,visible category.path:7829d35f417e4dd98851f51322f32c23/4fbaca886f014767a52f3f38b9df648f"
+  ) {
+    items {
+      name
     }
-    ```
-=== "Sample return"
-    ```json linenums="1"
-    {
-      "data": {
-        "products": {
-          "items": [
-            {
-              "name": "1-1/2\" Steel Carriage Bolt, Grade 5, Chrome Plated Finish, 1/4\"-20 Dia/Thread Size, 5 PK"
-            },
-            {
-              "name": "1\" Steel Carriage Bolt, Grade A, Hot Dipped Galvanized Finish, 1/4\"-20 Dia/Thread Size, 1300 PK"
-            },
-            {
-              "name": "1-1/4\" Steel Carriage Bolt, Grade A, Hot Dipped Galvanized Finish, 1/4\"-20 Dia/Thread Size, 1100 PK"
-            },
-            {
-              "name": "1-1/4\" Steel Carriage Bolt, Grade A, Hot Dipped Galvanized Finish, 5/16\"-18 Dia/Thread Size, 700 PK"
-            },
-            // ... more product items
-          ],
-          "totalCount": 23
-        }
-      }
+    totalCount
+  }
+}
+```
+
+```json title="Sample return"
+{
+  "data": {
+    "products": {
+      "items": [
+        {
+          "name": "1-1/2\" Steel Carriage Bolt, Grade 5, Chrome Plated Finish, 1/4\"-20 Dia/Thread Size, 5 PK"
+        },
+        {
+          "name": "1\" Steel Carriage Bolt, Grade A, Hot Dipped Galvanized Finish, 1/4\"-20 Dia/Thread Size, 1300 PK"
+        },
+        // ... more product items
+      ],
+      "totalCount": 23
     }
-    ```
+  }
+}
+```
+
+</div>
+
 
 ## Sorting
 

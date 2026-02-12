@@ -1,4 +1,4 @@
-# Multi-select Faceting Search
+# Multi-Select Faceting Search
 
 This policy allows you to select multiple values of the same facet, for example, by using checkboxes.
 

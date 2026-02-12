@@ -16,36 +16,36 @@ This query allows you to retrieve a specific brand by its ID and optionally loca
 | -------------------------------------- | -------------------------------- |
 | [`BrandType`](../objects/BrandType.md) | The brand object and its fields. |
 
-## Examples
+## Example
 
-=== "Query 1"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-    brand(
-        id: "Efes"
-        storeId: "B2B-store"
-        cultureName: "en-US"
-    ) {
-        id
-        name
-        description
-        logoUrl
+```json title="Query"
+{
+  brand(
+    id: "Efes"
+    storeId: "B2B-store"
+    cultureName: "en-US"
+  ) {
+      id
+      name
+      description
+      logoUrl
     }
-    }
-    ```
+}
+```
 
-=== "Return 1"
+```json title="Return"
+{
+  "data": {
+    "brand": {
+      "id": "Efes",
+      "name": "Efes",
+      "description": null,
+      "logoUrl": null
+    }
+  }
+}
+```
 
-    ```json linenums="1"
-    {
-    "data": {
-        "brand": {
-        "id": "Efes",
-        "name": "Efes",
-        "description": null,
-        "logoUrl": null
-        }
-    }
-    }
-    ```
+</div>

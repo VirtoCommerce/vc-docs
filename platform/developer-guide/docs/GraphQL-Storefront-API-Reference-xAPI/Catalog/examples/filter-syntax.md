@@ -11,8 +11,8 @@ In a query, terms can be either Single Terms or Phrases. Single Terms are indivi
 | Phrase             | A collection of words enclosed in double quotes, such as "hello dolly".                                   |
 
 ## Fields
-| Expression                            	| Description                                                                                      	| Example                            	                        |
-|---------------------------------------	|--------------------------------------------------------------------------------------------------	|-----------------------------------------------------------	|
+| Expression                            	| Description                                                                                      	| Example                   |
+|---------------------------------------	|--------------------------------------------------------------------------------------------------	|---------------------------|
 | `field_name:value`                    	| Specifies a field by entering the field name followed by a colon `:` and then the desired value. 	| `name:"My cool name"  color:Black`<br> Filters products based on the field values provided. |
 | `field_name:value1,value2,value3,...` 	| Specifies multiple values in a field parameter, separated by a comma.                            	| `color:Black,Grey,Blue`<br> Retrieves products where the color is "black", "grey", or "blue" (acting as an OR-operator for the value))" 	|
 
@@ -59,9 +59,8 @@ When using a double quotes block, you have the freedom to include any unsafe cha
 
 For example, `\"my cool property\":\"&~!'\"` searches "my cool property", and the value being matched is &~!'. The backslashes \ before the double quotes " are used to escape the double quotes and ensure they are treated as part of the search term.
 
-[Read more](https://spec.graphql.org/June2018/#sec-String-Value){ .md-button }
 
-## More Examples
+## More examples
 
 | Query                                 | Description                                                                                   |
 |---------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -74,59 +73,66 @@ For example, `\"my cool property\":\"&~!'\"` searches "my cool property", and th
 | `Da?? Red*`                           | Retrieves products where the name matches the pattern "Da" followed by any two characters, followed by " Red" with any number of characters after it. |
 | `color:Black price:[100 TO 200)`       | Retrieves products where the color is 'Black' and the price is between 100 and 200 (inclusive).|
 
-=== "Sample query"
 
-    Filters products based on specific criteria. It includes products with the color "Black" or "Blue," a price range of $100 (inclusive) to $200 (exclusive), and names that start with "ASUS ZenFone 2."
-    ```json linenums="1"
-    {
-      products(filter: "color:Black,Blue price.usd:[100 TO 200) name:\"ASUS ZenFone 2*\" {
-          totalCount
-          items
-          {
+## Example
+
+Filter products based on specific criteria, include products with the color "Black" or "Blue," a price range of $100 (inclusive) to $200 (exclusive), and names that start with "ASUS ZenFone 2."
+
+<div class="grid" markdown>
+
+
+```json title="Sample query"
+{
+  products(filter: "color:Black,Blue price.usd:[100 TO 200) name:\"ASUS ZenFone 2*\" {
+      totalCount
+      items
+      {
+        name
+        properties
+        {
             name
-            properties
-            {
-                name
-                values
-            }
+            values
+        }
+      }
+  }
+}
+```
+
+```json title="Sample return"
+{
+  "products": {
+    "totalCount": 7,
+    "items": [
+      {
+        "name": "ASUS ZenFone 2",
+        "properties": [
+          {
+            "name": "Color",
+            "values": ["Black"]
+          },
+          {
+            "name": "Price",
+            "values": ["$199.99"]
           }
-      }
-    }
-    ```
-=== "Sample return"
-    ```json linenums="1"
-    {
-      "products": {
-        "totalCount": 7,
-        "items": [
-          {
-            "name": "ASUS ZenFone 2",
-            "properties": [
-              {
-                "name": "Color",
-                "values": ["Black"]
-              },
-              {
-                "name": "Price",
-                "values": ["$199.99"]
-              }
-            ]
-          },
-          {
-            "name": "ASUS ZenFone 2 Deluxe",
-            "properties": [
-              {
-                "name": "Color",
-                "values": ["Black", "Blue"]
-              },
-              {
-                "name": "Price",
-                "values": ["$189.99"]
-              }
-            ]
-          },
-          // ... more product items
         ]
-      }
-    }
-    ```
+      },
+      {
+        "name": "ASUS ZenFone 2 Deluxe",
+        "properties": [
+          {
+            "name": "Color",
+            "values": ["Black", "Blue"]
+          },
+          {
+            "name": "Price",
+            "values": ["$189.99"]
+          }
+        ]
+      },
+      // ... more product items
+    ]
+  }
+}
+```
+
+</div>

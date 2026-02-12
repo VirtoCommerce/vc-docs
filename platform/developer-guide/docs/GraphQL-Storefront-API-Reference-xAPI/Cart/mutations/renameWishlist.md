@@ -18,26 +18,30 @@ The `InputRenameWishlistType!` represents the input for renaming a wishlist.
 | [`WishlistType`](../objects/wishlist-type.md)          	|  The details and properties of the wishlist.  |
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation renameWishlist($command: InputRenameWishlistType!) {
-      renameWishlist(command: $command) {
-        id
-        name
-        scope
-        description
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "id": "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",
-        "name": "new list name",
-        "scope": "private",
-        "description": "new description"
-      }
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation renameWishlist($command: InputRenameWishlistType!) {
+  renameWishlist(command: $command) {
+    id
+    name
+    scope
+    description
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "id": "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",
+    "name": "new list name",
+    "scope": "private",
+    "description": "new description"
+  }
+}
+```
+
+</div>

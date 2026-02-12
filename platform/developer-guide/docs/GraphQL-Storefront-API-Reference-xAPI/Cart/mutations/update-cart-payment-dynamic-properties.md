@@ -25,61 +25,65 @@ The `InputUpdateCartPaymentDynamicPropertiesType` represents the input object ty
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateCartShipmentDynamicProperties(
-      $command: InputUpdateCartShipmentDynamicPropertiesType!
-    ) {
-      updateCartShipmentDynamicProperties(command: $command) {
-        id
-        shipments {
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateCartShipmentDynamicProperties(
+  $command: InputUpdateCartShipmentDynamicPropertiesType!
+) {
+  updateCartShipmentDynamicProperties(command: $command) {
+    id
+    shipments {
+      id
+      dynamicProperties {
+        name
+        value
+        valueType
+        dictionaryItem {
+          label
+          name
           id
-          dynamicProperties {
-            name
-            value
-            valueType
-            dictionaryItem {
-              label
-              name
-              id
-            }
-          }
         }
       }
     }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
-      "storeId": "B2B-Store",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "currencyCode": "USD",
-      "cultureName": "en-US",
-      "cartName": "default",
-      "shipmentId":"3de4c66b-c178-44c2-87d1-8fe2a3e392c0",
-      "dynamicProperties": [
-        {
-          "name": "Purchase order number",
-          "value": "Test22"
-        },
-        {
-          "name": "Shipment_decimal",
-          "value": "2.6"
-        },
-        {
-          "name": "Shipment_decimal",
-          "value": "4.55"
-        },
-        {
-          "name": "Shipment_Integer_multi",
-          "value": "23"
-        },
-        {
-          "name": "Shipment_Integer_multi",
-          "value": "66"
-        }
-     ]
+```json title="Variables"
+"command": {
+  "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+  "storeId": "B2B-Store",
+  "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+  "currencyCode": "USD",
+  "cultureName": "en-US",
+  "cartName": "default",
+  "shipmentId":"3de4c66b-c178-44c2-87d1-8fe2a3e392c0",
+  "dynamicProperties": [
+    {
+      "name": "Purchase order number",
+      "value": "Test22"
+    },
+    {
+      "name": "Shipment_decimal",
+      "value": "2.6"
+    },
+    {
+      "name": "Shipment_decimal",
+      "value": "4.55"
+    },
+    {
+      "name": "Shipment_Integer_multi",
+      "value": "23"
+    },
+    {
+      "name": "Shipment_Integer_multi",
+      "value": "66"
     }
-    ```
+  ]
+}
+```
+
+</div>

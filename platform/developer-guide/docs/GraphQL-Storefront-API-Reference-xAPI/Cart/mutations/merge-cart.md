@@ -23,33 +23,36 @@ The `InputMergeCartType` represents the input object type used for merging two c
 |---------------------------------------------------------	|------------------------------------------------------------	|
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation mergeCart($command: InputMergeCartType!) {
-      mergeCart(command: $command) {
-        id
-        items {
-          id
-          name
-          quantity
-        }
-        total {
-          amount
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-        "storeId": "B2B-Store",
-        "cartName": "default",
-        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "secondCartId": "7777-7777-7777-7777",
+```json title="Mutation"
+mutation mergeCart($command: InputMergeCartType!) {
+  mergeCart(command: $command) {
+    id
+    items {
+      id
+      name
+      quantity
     }
-    ```
+    total {
+      amount
+    }
+  }
+}
+```
+
+```json title="Variables"
+"command": {
+    "storeId": "B2B-Store",
+    "cartName": "default",
+    "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+    "cultureName": "en-US",
+    "currencyCode": "USD",
+    "cartType": "cart",
+    "secondCartId": "7777-7777-7777-7777",
+}
+```
+
+</div>

@@ -24,31 +24,34 @@ The `InputChangeCartItemCommentType` represents the input object type used for c
 |---------------------------------------------------------	|------------------------------------------------------------	|
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation ($command:InputChangeCartItemCommentType!) {
-      (command: $command) {
-        id
-        items {
-          sku
-          productId
-          comment
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "storeId": "B2B-store",
-      "cartName": "default",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "cultureName": "en-US",
-      "currencyCode": "USD",
-      "cartType": "cart",
-      "lineItemId": "127fffb3-9840-454e-a879-c0e621d7f128"
-      "comment": "nice product"
+```json title="Mutation"
+mutation ($command:InputChangeCartItemCommentType!) {
+  (command: $command) {
+    id
+    items {
+      sku
+      productId
+      comment
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+"command": {
+  "storeId": "B2B-store",
+  "cartName": "default",
+  "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+  "cultureName": "en-US",
+  "currencyCode": "USD",
+  "cartType": "cart",
+  "lineItemId": "127fffb3-9840-454e-a879-c0e621d7f128"
+  "comment": "nice product"
+}
+```
+
+</div>

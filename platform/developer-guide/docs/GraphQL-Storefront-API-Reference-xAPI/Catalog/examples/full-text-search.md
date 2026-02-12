@@ -1,4 +1,4 @@
-# Full text search
+# Full Text Search
 
 The `query` parameter performs the full text search against the product index document. It expects a full text search phrase.
 
@@ -28,24 +28,24 @@ The following product properties are stored in the `__content` field and are sea
 - `product.variations.properties.value`
 
 
-=== "Sample query"
-    ```json linenums="1"
-    query {
-      products(
-        query: "shirt",
-        cultureName: "en-US"
-      ) {
-        items {
-          id
-          name
-          ...
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Sample return"
-    ```json linenums="1"
+```json title="Sample query"
+query {
+  products(
+    query: "shirt",
+    cultureName: "en-US"
+  ) {
+    items {
+      id
+      name
+      ...
+    }
+  }
+}
+```
+
+```json title="Sample return"
     {
       "data": {
         "products": {
@@ -63,27 +63,15 @@ The following product properties are stored in the `__content` field and are sea
               "name": "16mm Stainless Steel Carriage Bolt, A2, Plain Finish, M5-0.80 Dia/Thread Size, 100 PK",
               "imgSrc": "https://qademovc3.blob.core.windows.net/catalog/7829d/54FT59/164W33.jpg"
             },
-            {
-              "name": "2\" Alloy Steel Camrail Bolt, Grade 8, 3/4\"-10 Dia/Thread Size, 100 PK",
-              "imgSrc": "https://qademovc3.blob.core.windows.net/catalog/7829d/19N083/19N102.jpg"
-            },
-            {
-              "name": "16mm Steel Hex Flange Bolt, Class 8.8, Zinc Plated Finish, M8-1.25 Dia/Thread Size, 100 PK",
-              "imgSrc": "https://qademovc3.blob.core.windows.net/catalog/7829d/DCJ-12823700/41MY01.jpg"
-            },
-            {
-              "name": "2\" Steel Carriage Bolt, Grade 5, Plain Finish, 5/8-11 Dia/Thread Size, 25 PK",
-              "imgSrc": "https://qademovc3.blob.core.windows.net/catalog/7829d/BBI-43450591/21A915.jpg"
-            },
-            {
-              "name": "3-1/2\" Alloy Steel Camrail Bolt, Grade 8, 7/8\"-9 Dia/Thread Size, 5 PK",
-              "imgSrc": "https://qademovc3.blob.core.windows.net/catalog/7829d/19N069/19N069.jpg"
-            }
+           // ... more product items
           ]
         }
       }
     }
-    ```
+```
+
+</div>
+
 
 !!! note
     The `cultureName` parameter is required for retrieving localized fields such as name, description, etc. If it is not passed, the request will return an error like **Cannot resolve field `name`**.

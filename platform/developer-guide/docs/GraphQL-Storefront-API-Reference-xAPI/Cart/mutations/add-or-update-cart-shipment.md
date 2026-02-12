@@ -27,22 +27,24 @@ The `InputAddOrUpdateCartShipmentType` represents the input object type used for
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputAddOrUpdateCartShipmentType!) {
-      addOrUpdateCartShipment(command: $command) {
-        name
-        availableShippingMethods {
-          code
-          optionName
-          optionDescription
-        }
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+  mutation($command: InputAddOrUpdateCartShipmentType!) {
+    addOrUpdateCartShipment(command: $command) {
+      name
+      availableShippingMethods {
+        code
+        optionName
+        optionDescription
       }
     }
-    ```
+  }
+```
 
-=== "Variables"
-    ```json linenums="1"
+```json title="Variables"
     "command": {
       "storeId": "B2B-store",
       "cartName": "default",
@@ -64,6 +66,6 @@ The `InputAddOrUpdateCartShipmentType` represents the input object type used for
         ]
       },
     }
-    ```
+```
 
-[See all parametrs for the Shipment object](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/XPurchase/VirtoCommerce.XPurchase/Schemas/InputShipmentType.cs){ .md-button }
+</div>

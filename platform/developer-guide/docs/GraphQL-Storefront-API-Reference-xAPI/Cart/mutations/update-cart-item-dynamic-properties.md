@@ -25,49 +25,53 @@ The `InputUpdateCartItemDynamicPropertiesType` represents the input object type 
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateCartItemDynamicProperties(
-      $command: InputUpdateCartItemDynamicPropertiesType!
-    ) {
-      updateCartItemDynamicProperties(command: $command) {
-        id
-        items {
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateCartItemDynamicProperties(
+  $command: InputUpdateCartItemDynamicPropertiesType!
+) {
+  updateCartItemDynamicProperties(command: $command) {
+    id
+    items {
+      id
+      dynamicProperties {
+        name
+        value
+        valueType
+        dictionaryItem {
+          label
+          name
           id
-          dynamicProperties {
-            name
-            value
-            valueType
-            dictionaryItem {
-              label
-              name
-              id
-            }
-          }
         }
       }
     }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
-      "storeId": "B2B-Store",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "currencyCode": "USD",
-      "cultureName": "en-US",
-      "cartName": "default",
-      "lineItemId": "65325e25-0176-4140-a40b-73b58c8706e6",
-      "dynamicProperties": [
-        {
-          "name": "A_line_long",
-          "value": "Long comment"
-        },
-        {
-          "name": "Brand",
-          "value": "Asus"
-        }
-      ]
+```json title="Variables"
+"command": {
+  "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+  "storeId": "B2B-Store",
+  "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+  "currencyCode": "USD",
+  "cultureName": "en-US",
+  "cartName": "default",
+  "lineItemId": "65325e25-0176-4140-a40b-73b58c8706e6",
+  "dynamicProperties": [
+    {
+      "name": "A_line_long",
+      "value": "Long comment"
+    },
+    {
+      "name": "Brand",
+      "value": "Asus"
     }
-    ```
+  ]
+}
+```
+
+</div>

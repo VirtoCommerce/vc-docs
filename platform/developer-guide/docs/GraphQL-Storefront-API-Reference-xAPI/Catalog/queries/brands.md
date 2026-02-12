@@ -21,68 +21,59 @@ This connection allows you to retrieve a list of brands, supporting pagination, 
 | -------------------------------------------------- | --------------------------------- |
 | [`BrandConnection`](../objects/BrandConnection.md) | A connection to a list of brands. |
 
-## Examples
 
-=== "Query"
+## Example
 
-    ```json linenums="1"
-    {
-    brands(
-        storeId: "B2B-Store"
-        cultureName: "en-US"
-        first: 5
-        sort: "name"
-    ) {
-        items {
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  brands(
+    storeId: "B2B-Store"
+    cultureName: "en-US"
+    first: 5
+    sort: "name"
+  ) {
+      items {
         id
         name
         featured
         logoUrl
-        }
-        pageInfo {
+      }
+      pageInfo {
         hasNextPage
         startCursor
-        }
       }
     }
-    ```
-=== "Return"
+}
+```
 
-    ```json linenums="1"
-    {
-      "data": {
-        "brands": {
-          "items": [
-            {
-              "id": "68162d61-2faa-454c-8d79-a3fdf99eedef",
-              "name": "Absolut",
-              "featured": true,
-              "logoUrl": "https://qademovc3.blob.core.windows.net/catalog/4f354/8df2b/Absolute.png"
-            },
-            {
-              "id": "d33aba5f-b256-4824-98ad-e55b93c10830",
-              "name": "Affligem",
-              "featured": true,
-              "logoUrl": "https://qademovc3.blob.core.windows.net/catalog/4f354/61c01/abbaye-de-affligem.svg"
-            },
-            {
-              "id": "Affligem1",
-              "name": "Affligem1",
-              "featured": false,
-              "logoUrl": null
-            },
-            {
-              "id": "03843cf8-b42b-4273-a415-44bc438f1eb9",
-              "name": "AKDOV",
-              "featured": false,
-              "logoUrl": "https://qademovc3.blob.core.windows.net/catalog/4f354/2a2b6/Logo/akdov_logo.jpg"
-            }
-        ],
-        "pageInfo": {
-            "hasNextPage": true,
-            "startCursor": "0"
-        }
-        }
-      }
+```json title="Return"
+{
+  "data": {
+    "brands": {
+      "items": [
+        {
+          "id": "68162d61-2faa-454c-8d79-a3fdf99eedef",
+          "name": "Absolut",
+          "featured": true,
+          "logoUrl": "https://qademovc3.blob.core.windows.net/catalog/4f354/8df2b/Absolute.png"
+        },
+        {
+          "id": "d33aba5f-b256-4824-98ad-e55b93c10830",
+          "name": "Affligem",
+          "featured": true,
+          "logoUrl": "https://qademovc3.blob.core.windows.net/catalog/4f354/61c01/abbaye-de-affligem.svg"
+        },
+        // ... more product items
+    ],
+    "pageInfo": {
+        "hasNextPage": true,
+        "startCursor": "0"
     }
-    ```
+    }
+  }
+}
+```
+
+</div>

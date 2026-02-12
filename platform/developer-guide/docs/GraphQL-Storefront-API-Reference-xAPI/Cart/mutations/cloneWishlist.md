@@ -24,43 +24,47 @@ The `InputCloneWishlistType!` represents the input for cloning a wishlist.
 | [`WishlistType`](../objects/wishlist-type.md) | The newly cloned wishlist and its full contents. |
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation cloneWishlist($command: InputCloneWishlistType!) {
-      cloneWishlist(command: $command) {
-        id
-        name
-        customerId
-        scope
-        itemsCount
-        description
-        items {
-          id
-          product {
-            availabilityData {
-              isActive
-              inventories {
-                fulfillmentCenterId
-              }
-            }
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation cloneWishlist($command: InputCloneWishlistType!) {
+  cloneWishlist(command: $command) {
+    id
+    name
+    customerId
+    scope
+    itemsCount
+    description
+    items {
+      id
+      product {
+        availabilityData {
+          isActive
+          inventories {
+            fulfillmentCenterId
           }
         }
       }
     }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "storeId": "B2B-store",
-        "userId": "user2",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "scope": "Private",
-        "listId": "wishlist1",
-        "listName": "This is a cloned wishlist",
-        "description": "This is my description"
-      }
-    }
-    ```
+```json title="Variables"
+{
+  "command": {
+    "storeId": "B2B-store",
+    "userId": "user2",
+    "cultureName": "en-US",
+    "currencyCode": "USD",
+    "scope": "Private",
+    "listId": "wishlist1",
+    "listName": "This is a cloned wishlist",
+    "description": "This is my description"
+  }
+}
+```
+
+</div>

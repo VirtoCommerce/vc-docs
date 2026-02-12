@@ -22,10 +22,13 @@ This is to query whether the provided coupon is valid or not.
 |-------------------------------|-------------------------------------------------|
 | `Boolean`                     |  Shows whether the coupon is valid or not.    	|
 
-## Examples
 
-=== "Query"
-    ```json linenums="1"
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Query"
     query {
       validateCoupon(
         storeId: "B2B-store",
@@ -36,14 +39,14 @@ This is to query whether the provided coupon is valid or not.
         coupon:"123"
       )
     }
-    ```
+```
 
-=== "Return"
-    ```json linenums="1"
+```json title="Return"
     {
       "data": {
         "validateCoupon": false
       }
     }
-    ```
+```
 
+</div>

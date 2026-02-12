@@ -20,10 +20,12 @@ This query retrieves a list of back-in-stock subscriptions based on specified fi
 |------------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 | [`BackInStockSubscriptionConnection`](../Objects/BackInStockSubscriptionConnection.md) | A paginated list of back-in-stock subscriptions, including customer details and product information. |  
 
-## Examples  
 
-=== "Query"  
-    ```json linenums="1"  
+## Example
+
+<div class="grid" markdown>
+
+```graphql title="Query"
     {  
       backInStockSubscriptions(first: 10, storeId: "store123", isActive: true) {  
         edges {  
@@ -37,10 +39,9 @@ This query retrieves a list of back-in-stock subscriptions based on specified fi
         }  
       }  
     }  
-    ```  
+```
 
-=== "Return"  
-    ```json linenums="1"  
+```json title="Return"
     {  
       "data": {  
         "backInStockSubscriptions": {  
@@ -58,5 +59,6 @@ This query retrieves a list of back-in-stock subscriptions based on specified fi
         }  
       }  
     }  
-    ```  
+```
 
+</div>

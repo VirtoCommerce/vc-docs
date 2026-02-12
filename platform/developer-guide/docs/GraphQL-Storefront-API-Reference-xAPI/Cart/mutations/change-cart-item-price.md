@@ -24,35 +24,38 @@ The `InputChangeCartItemPriceType` represents the input object type used for cha
 |---------------------------------------------------------	|------------------------------------------------------------	|
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputChangeCartItemPriceType!) {
-      changeCartItemPrice(command: $command) {
-        id
-        items {
-          sku
-          productId
-          listPrice
-          listPriceWithTax
-          salePrice
-          salePriceWithTax
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-        "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05"
-        "storeId": "B2B-store",
-        "cartName": "default",
-        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "lineItemId": "127fffb3-9840-454e-a879-c0e621d7f128"
-        "price": 777
+```json title="Mutation"
+mutation($command: InputChangeCartItemPriceType!) {
+  changeCartItemPrice(command: $command) {
+    id
+    items {
+      sku
+      productId
+      listPrice
+      listPriceWithTax
+      salePrice
+      salePriceWithTax
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+"command": {
+    "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05"
+    "storeId": "B2B-store",
+    "cartName": "default",
+    "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+    "cultureName": "en-US",
+    "currencyCode": "USD",
+    "cartType": "cart",
+    "lineItemId": "127fffb3-9840-454e-a879-c0e621d7f128"
+    "price": 777
+}
+```
+
+</div>

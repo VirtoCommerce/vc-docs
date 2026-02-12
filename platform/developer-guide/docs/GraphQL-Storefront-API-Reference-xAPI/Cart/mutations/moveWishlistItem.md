@@ -20,9 +20,11 @@ The `InputMoveWishlistItemType!` represents the input for moving a wishlist item
 | [`WishlistType`](../objects/wishlist-type.md)          	|  The details and properties of the wishlist.  |
 
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation moveWishlistItem($command: InputMoveWishlistItemType!) {
       moveWishlistItem(command: $command) {
         id
@@ -36,15 +38,16 @@ The `InputMoveWishlistItemType!` represents the input for moving a wishlist item
         }
       }
     }
-    ```
+```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-      "listId": "52752d17-7ee3-4a01-8b3d-d0aff210bf88",
-      "lineItemId":  "22be3704-cd77-45e8-8f1e-4a46b18881b7",
-      "destinationListId": "71389851-d644-4aec-a69b-23994263e56b"
-      }
-    }
-    ```
+```json title="Variables"
+{
+  "command": {
+  "listId": "52752d17-7ee3-4a01-8b3d-d0aff210bf88",
+  "lineItemId":  "22be3704-cd77-45e8-8f1e-4a46b18881b7",
+  "destinationListId": "71389851-d644-4aec-a69b-23994263e56b"
+  }
+}
+```
+
+</div>

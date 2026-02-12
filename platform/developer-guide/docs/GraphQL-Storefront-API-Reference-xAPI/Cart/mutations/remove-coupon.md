@@ -24,29 +24,32 @@ The `InputRemoveCouponType` represents the input object type used for removing a
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation removeCoupon($command: InputRemoveCouponType!) {
-      removeCoupon(command: $command) {
-        id
-        name
-        customerName
-        coupons {
-          code
-          isAppliedSuccessfully
-        }
-        discounts {
-          coupon
-        }
-        discountTotal {
-          amount
-        }
-      }
-    }
-    ```
 
-=== "Variables"
-    ```json linenums="1"
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation removeCoupon($command: InputRemoveCouponType!) {
+  removeCoupon(command: $command) {
+    id
+    name
+    customerName
+    coupons {
+      code
+      isAppliedSuccessfully
+    }
+    discounts {
+      coupon
+    }
+    discountTotal {
+      amount
+    }
+  }
+}
+```
+
+```json title="Variables"
     "command": {
       "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
       "storeId": "B2B-store",
@@ -57,4 +60,6 @@ The `InputRemoveCouponType` represents the input object type used for removing a
       "cartType": "null",
       "couponCode": "CouponXAPI"
     }
-    ```
+```
+
+</div>

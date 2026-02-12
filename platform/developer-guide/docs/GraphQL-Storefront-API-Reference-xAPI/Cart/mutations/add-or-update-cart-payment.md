@@ -27,8 +27,20 @@ The `InputAddOrUpdateCartPaymentType` represents the input object type used for 
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
+
+
+
+
+
+
+
+
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation addOrUpdateCartPayment($command: InputAddOrUpdateCartPaymentType!) {
       addOrUpdateCartPayment(command: s$command) {
         id
@@ -64,10 +76,9 @@ The `InputAddOrUpdateCartPaymentType` represents the input object type used for 
         }
       }
     }
-    ```
+```
 
-=== "Variables"
-    ```json linenums="1"
+```json title="Variables"
     "command": {
       "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
       "storeId": "B2B-Store",
@@ -106,6 +117,7 @@ The `InputAddOrUpdateCartPaymentType` represents the input object type used for 
         "amount": "1050"
       }
     }
-    ```
+```
 
-[See all parameters for the Payment object](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/XPurchase/VirtoCommerce.XPurchase/Schemas/InputPaymentType.cs){ .md-button }
+</div>
+

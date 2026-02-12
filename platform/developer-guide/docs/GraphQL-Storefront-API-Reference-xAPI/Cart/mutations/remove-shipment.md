@@ -15,7 +15,7 @@ The `InputRemoveShipmentType` represents the input object type used for removing
 | `currencyCode`  ==String==        | The currency code for the cart.                                       |
 | `cultureName`  ==String==         | The culture or language associated with the cart.                     |
 | `cartType`  ==String==            | The type of the cart.                                                 |
-| `shipmentId`  ==String ==         | The Id of the shipment to be removed from the cart.                   |
+| `shipmentId`  ==String==         | The Id of the shipment to be removed from the cart.                   |
 
 ## Possible returns
 
@@ -24,8 +24,12 @@ The `InputRemoveShipmentType` represents the input object type used for removing
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation removeShipment($command: InputRemoveShipmentType!) {
       removeShipment(command: $command) {
         id
@@ -41,18 +45,19 @@ The `InputRemoveShipmentType` represents the input object type used for removing
         }
       }
     }
-    ```
+```
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
-      "storeId": "B2B-Store",
-      "cartName": "default",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "currencyCode": "USD",
-      "cultureName":"en-US",
-      "cartType": "null",
-      "shipmentId": "80e594ba-23ae-4da3-8981-d48c0c2f1141"
-    }
-    ```
+```json title="Variables"
+"command": {
+  "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+  "storeId": "B2B-Store",
+  "cartName": "default",
+  "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+  "currencyCode": "USD",
+  "cultureName":"en-US",
+  "cartType": "null",
+  "shipmentId": "80e594ba-23ae-4da3-8981-d48c0c2f1141"
+}
+```
+
+</div>

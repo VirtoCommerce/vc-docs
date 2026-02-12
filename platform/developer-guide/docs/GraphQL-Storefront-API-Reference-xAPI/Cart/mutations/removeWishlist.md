@@ -18,18 +18,22 @@ The `InputRemoveWishlistType!` represents the input for removing a wishlist.
 | `Boolean`          	  | Indicates whether the wishlist was successfully removed.  |
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation removeWishlist($command: InputRemoveWishlistType!) {
-      removeWishlist(command: $command)
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {​
-      "command": {​
-        "listId": "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",​
-      } ​
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation removeWishlist($command: InputRemoveWishlistType!) {
+  removeWishlist(command: $command)
+}
+```
+
+```json title="Variables"
+{​
+  "command": {​
+    "listId": "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",​
+  } ​
+}
+```
+
+</div>

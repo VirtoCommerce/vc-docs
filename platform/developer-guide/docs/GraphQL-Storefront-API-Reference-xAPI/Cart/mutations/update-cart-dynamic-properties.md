@@ -24,45 +24,49 @@ The `InputUpdateCartDynamicPropertiesType` represents the input object type used
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateCartDynamicProperties(
-      $command: InputUpdateCartDynamicPropertiesType!
-    ) {
-      updateCartDynamicProperties(command: $command) {
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateCartDynamicProperties(
+  $command: InputUpdateCartDynamicPropertiesType!
+) {
+  updateCartDynamicProperties(command: $command) {
+    id
+    dynamicProperties {
+      name
+      value
+      valueType
+      dictionaryItem {
+        label
+        name
         id
-        dynamicProperties {
-          name
-          value
-          valueType
-          dictionaryItem {
-            label
-            name
-            id
-          }
-        }
       }
     }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
-      "storeId": "B2B-Store",
-      "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-      "currencyCode": "USD",
-      "cultureName": "en-US",
-      "cartName": "default",
-      "dynamicProperties": [
-        {
-          "name":"Purchase order number",
-          "value":"new value_1_2"
-        },
-        {
-        "name":"Decimal",
-        "value":"33.88"
-        }
-      ]
+```json title="Variables"
+"command": {
+  "cartId": "e6a7d5af-6378-44a6-b645-af9ecf702c05",
+  "storeId": "B2B-Store",
+  "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+  "currencyCode": "USD",
+  "cultureName": "en-US",
+  "cartName": "default",
+  "dynamicProperties": [
+    {
+      "name":"Purchase order number",
+      "value":"new value_1_2"
+    },
+    {
+    "name":"Decimal",
+    "value":"33.88"
     }
-    ```
+  ]
+}
+```
+
+</div>

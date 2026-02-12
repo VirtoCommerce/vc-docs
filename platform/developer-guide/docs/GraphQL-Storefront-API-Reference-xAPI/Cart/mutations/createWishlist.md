@@ -23,30 +23,34 @@ The `InputCreateWishlistType` represents the input for creating a wishlist.
 | [`WishlistType`](../objects/wishlist-type.md)          	|  The details and properties of the wishlist.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation createWishlist ($command: InputCreateWishlistType!) {​
-      createWishlist (command: $command) {​
-        id​
-        name​
-        storeId​
-        scope​
-        description​
-      }​
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {​
-      "command": {​
-        "storeId": "B2B-store",​
-        "userId": "530dbc7b-796a-4eea-bca5-10568b3c5050",​
-        "listName": "Some name",​
-        "cultureName": "en-US",​
-        "currencyCode": "USD",​
-        "scope": "organization",​
-        "description": "Some description"​
-      }​
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation createWishlist ($command: InputCreateWishlistType!) {​
+  createWishlist (command: $command) {​
+    id​
+    name​
+    storeId​
+    scope​
+    description​
+  }​
+}
+```
+
+```json title="Variables"
+{​
+  "command": {​
+    "storeId": "B2B-store",​
+    "userId": "530dbc7b-796a-4eea-bca5-10568b3c5050",​
+    "listName": "Some name",​
+    "cultureName": "en-US",​
+    "currencyCode": "USD",​
+    "scope": "organization",​
+    "description": "Some description"​
+  }​
+}
+```
+
+</div>

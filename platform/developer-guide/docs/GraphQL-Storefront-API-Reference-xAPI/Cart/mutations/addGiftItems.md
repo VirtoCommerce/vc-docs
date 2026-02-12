@@ -17,9 +17,48 @@ The `InputAddGiftItemsType!` represents the input type required for adding gift 
 | `cartType` ==String==     | The type of the cart.                                       |
 | `ids` ==[String]!==       | An array of Ids for the items to be rejected from the cart. |
 
-## Possible Returns
+## Possible returns
 
 | Possible return                                          	| Description                                                 	|
 |---------------------------------------------------------	|------------------------------------------------------------	|
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation addGiftItems($command: InputAddGiftItemsType!) {
+  addGiftItems(command: $command) {
+    id
+    name
+    items {
+      id
+      productId
+      name
+      quantity
+    }
+    total {
+      grandTotal {
+        amount
+        currency
+      }
+    }
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "cartId": "d8f3c7c1-1234-4567-89ab-987654321000",
+    "storeId": "B2B-store",
+    "cartName": "default",
+    "userId": "john.doe",
+    "currencyCode": "USD",
+    "cultureName": "en-US",
+  }
+}
+```
+
+</div>

@@ -25,24 +25,29 @@ The `InputChangeCommentType` represents the input object type used for changing 
 | [`CartType`](../objects/cart-type.md)                   	|  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputChangeCommentType!) {
-      changeComment(command: $command) {
-        name
-        comment
-      }
-    }
-    ```
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-        "storeId": "B2B-store",
-        "cartName": "default",
-        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
-        "cultureName": "en-US",
-        "currencyCode": "USD",
-        "cartType": "cart",
-        "comment": "Hi, Virto! :)"
-    }
-    ```
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation($command: InputChangeCommentType!) {
+  changeComment(command: $command) {
+    name
+    comment
+  }
+}
+```
+
+```json title="Variables"
+"command": {
+    "storeId": "B2B-store",
+    "cartName": "default",
+    "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",
+    "cultureName": "en-US",
+    "currencyCode": "USD",
+    "cartType": "cart",
+    "comment": "Hi, Virto! :)"
+}
+```
+
+</div>

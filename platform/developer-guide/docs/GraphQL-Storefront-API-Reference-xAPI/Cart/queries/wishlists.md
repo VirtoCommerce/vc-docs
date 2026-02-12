@@ -21,43 +21,45 @@ This query allows you to retrieve information about wishlists.
 |---------------------------------------------------------	|--------------------------------------------------------	|
 | [`WishlistConnection`](../objects/wishlist-connection.md) |  The properties and fields associated with lists.    	  |
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    {
-    wishlists(
-      after: "0", 
-      first: "50", 
-      userId: "3212395e-46cc-49cc-8d67-f06029b2be28") {
-        totalCount
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  wishlists(
+    after: "0", 
+    first: "50", 
+    userId: "3212395e-46cc-49cc-8d67-f06029b2be28") {
+      totalCount
+      items {
+        id
+        name
         items {
           id
+          productId
           name
-          items {
-            id
-            productId
-            name
-          }
         }
       }
-    }      
-    ```
+    }
+}      
+```
 
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "wishlists": {
-          "totalCount": 1,
-          "items": [
-            {
-              "id": "8b621092-f279-42a7-829d-ef4b7992c8a4",
-              "name": "Wishlist1",
-              "items": []
-            }
-          ]
+```json title="Return"
+{
+  "data": {
+    "wishlists": {
+      "totalCount": 1,
+      "items": [
+        {
+          "id": "8b621092-f279-42a7-829d-ef4b7992c8a4",
+          "name": "Wishlist1",
+          "items": []
         }
-      }
-    }  
-    ```
+      ]
+    }
+  }
+}
+```
+
+</div>
