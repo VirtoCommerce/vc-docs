@@ -18,40 +18,43 @@ The `InputDeleteMemberAddressType!` represents the input fields required to dele
 |-------------------------------------------------------- |---------------------------------------------------------------------------	 |
 | [`MemberType`](../Objects/MemberType.md)                |  The member object with the deleted addresses.                               |
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation deleteMemberAddresses ($command: InputDeleteMemberAddressType!) {
-      deleteMemberAddresses (command: $command) {
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation deleteMemberAddresses ($command: InputDeleteMemberAddressType!) {
+  deleteMemberAddresses (command: $command) {
+    id
+    name
+    addresses {
+      items{
         id
-        name
-        addresses {
-          items{
-            id
-          }
-        }
       }
     }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "memberId": "393ceb5d-125c-479f-b993-81e2b9679dea",
-        "addresses": {
-            "key": "0afd4d27-488c-487e-adea-01b818f4ee8e",
-            "city": "third",
-            "countryCode": "AFG",
-            "countryName": "Islamic Republic of Afghanistan",
-            "email": "",
-            "firstName": "third",
-            "lastName": "second",
-            "line1": "third",
-            "name": "ALB, first, first, first",
-            "postalCode": "third",
-            "regionName": "third"
-        }
-      }
+```json title="Variables"
+{
+  "command": {
+    "memberId": "393ceb5d-125c-479f-b993-81e2b9679dea",
+    "addresses": {
+        "key": "0afd4d27-488c-487e-adea-01b818f4ee8e",
+        "city": "third",
+        "countryCode": "AFG",
+        "countryName": "Islamic Republic of Afghanistan",
+        "email": "",
+        "firstName": "third",
+        "lastName": "second",
+        "line1": "third",
+        "name": "ALB, first, first, first",
+        "postalCode": "third",
+        "regionName": "third"
     }
-    ```
+  }
+}
+```
+
+</div>

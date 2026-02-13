@@ -21,114 +21,117 @@ This connection allows you to search for fulfillment centers.
 
 ## Examples
 
-<div class="grid" markdown>
+=== "Example 1"
 
-```json title="Query 1"
-{
-  fulfillmentCenters(
-    fulfillmentCenterIds: ["vendor-fulfillment", "los-angeles-fulfillment"]
-  ) {
-    totalCount
-    items {
-      id
-      name
-      shortDescription
-      address {
-        city
-        countryCode
-      }
-    }
-  }
-}
-```
+    <div class="grid" markdown>
 
-```json title="Return 1"
-{
-  "data": {
-    "fulfillmentCenters": {
-      "totalCount": 1,
-      "items": [
-        {
-          "id": "vendor-fulfillment",
-          "name": "Los Angeles Branch",
-          "shortDescription": null,
-          "address": {
-            "city": "Los Angeles",
-            "countryCode": "USA"
+    ```json title="Query 1"
+    {
+      fulfillmentCenters(
+        fulfillmentCenterIds: ["vendor-fulfillment", "los-angeles-fulfillment"]
+      ) {
+        totalCount
+        items {
+          id
+          name
+          shortDescription
+          address {
+            city
+            countryCode
           }
         }
-      ]
+      }
     }
-  }
-}
-```
+    ```
 
-</div>
+    ```json title="Return 1"
+    {
+      "data": {
+        "fulfillmentCenters": {
+          "totalCount": 1,
+          "items": [
+            {
+              "id": "vendor-fulfillment",
+              "name": "Los Angeles Branch",
+              "shortDescription": null,
+              "address": {
+                "city": "Los Angeles",
+                "countryCode": "USA"
+              }
+            }
+          ]
+        }
+      }
+    }
+    ```
 
+    </div>
 
-<div class="grid" markdown>
+=== "Example 2"
 
-```json title="Query 2"
-{
-  products (storeId:"B2B-store")
-  {
-    items{
-      name
-      availabilityData
+    <div class="grid" markdown>
+
+    ```json title="Query 2"
+    {
+      products (storeId:"B2B-store")
       {
-        isActive
-        inventories
-        {
-          fulfillmentCenterId
-          fulfillmentCenterName
-          inStockQuantity
+        items{
+          name
+          availabilityData
+          {
+            isActive
+            inventories
+            {
+              fulfillmentCenterId
+              fulfillmentCenterName
+              inStockQuantity
+            }
+          }
         }
       }
     }
-  }
-}
-```
+    ```
 
-```json title="Return 2"
-{
-  "data": {
-    "products": {
-      "items": [
-        {
-          "name": "1\" Steel Carriage Bolt, Grade 5, Chrome Plated Finish, 1/4\"-20 Dia/Thread Size, 5 PK",
-          "availabilityData": {
-            "isActive": true,
-            "inventories": [
-              {
-                "fulfillmentCenterId": "tulsa-branch",
-                "fulfillmentCenterName": "Tennessee Branch",
-                "inStockQuantity": 10
-              },
-              {
-                "fulfillmentCenterId": "vendor-fulfillment",
-                "fulfillmentCenterName": "Los Angeles Branch",
-                "inStockQuantity": 10
+    ```json title="Return 2"
+    {
+      "data": {
+        "products": {
+          "items": [
+            {
+              "name": "1\" Steel Carriage Bolt, Grade 5, Chrome Plated Finish, 1/4\"-20 Dia/Thread Size, 5 PK",
+              "availabilityData": {
+                "isActive": true,
+                "inventories": [
+                  {
+                    "fulfillmentCenterId": "tulsa-branch",
+                    "fulfillmentCenterName": "Tennessee Branch",
+                    "inStockQuantity": 10
+                  },
+                  {
+                    "fulfillmentCenterId": "vendor-fulfillment",
+                    "fulfillmentCenterName": "Los Angeles Branch",
+                    "inStockQuantity": 10
+                  }
+                ]
               }
-            ]
-          }
-        },
-        {
-          "name": "Eyebolt, 1/2-13,3/8In",
-          "availabilityData": {
-            "isActive": true,
-            "inventories": [
-              {
-                "fulfillmentCenterId": "vendor-fulfillment",
-                "fulfillmentCenterName": "Los Angeles Branch",
-                "inStockQuantity": 245
+            },
+            {
+              "name": "Eyebolt, 1/2-13,3/8In",
+              "availabilityData": {
+                "isActive": true,
+                "inventories": [
+                  {
+                    "fulfillmentCenterId": "vendor-fulfillment",
+                    "fulfillmentCenterName": "Los Angeles Branch",
+                    "inStockQuantity": 245
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
-      ]
+      }
     }
-  }
-}
-```
+    ```
 
-</div>
+    </div>

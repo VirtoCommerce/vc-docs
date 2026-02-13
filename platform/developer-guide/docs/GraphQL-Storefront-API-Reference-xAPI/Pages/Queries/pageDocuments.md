@@ -18,39 +18,41 @@ This query retrieves a list of page documents that match specified search criter
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------|  
 | [`PageDocumentConnection`](../Objects/PageDocumentConnection.md)       | A list of page documents, including their ID, source, permalink, and content.      |  
 
-## Examples  
+## Example
 
-=== "Query"  
-    ```json linenums="1"  
-    {  
-      pageDocuments(after: "0", first: 10, storeId: "B2B-store", keyword: "tv", cultureName: "en-US") {  
-        totalCount  
-        items {  
-          id  
-          source  
-          permalink  
-          content  
-        }  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Return"  
-    ```json linenums="1"  
-    {  
-      "data": {  
-        "pageDocuments": {  
-          "totalCount": 16,  
-          "items": [  
-            {  
-              "id": "9911349254704e3596ddbe9136fc8273",  
-              "source": "builder.io",  
-              "permalink": "/televisions-d",  
-              "content": "..."  
-            }  
-            // Additional pages...  
-          ]  
-        }  
-      }  
+```json title="Query"
+{  
+  pageDocuments(after: "0", first: 10, storeId: "B2B-store", keyword: "tv", cultureName: "en-US") {  
+    totalCount  
+    items {  
+      id  
+      source  
+      permalink  
+      content  
     }  
-    ```  
+  }  
+}  
+```
+
+```json title="Return"
+{  
+  "data": {  
+    "pageDocuments": {  
+      "totalCount": 16,  
+      "items": [  
+        {  
+          "id": "9911349254704e3596ddbe9136fc8273",  
+          "source": "builder.io",  
+          "permalink": "/televisions-d",  
+          "content": "..."  
+        }  
+        // Additional pages...  
+      ]  
+    }  
+  }  
+}  
+```
+
+</div>

@@ -18,34 +18,40 @@ The `InputInitializePaymentType!` is a type used as an input for initializing a 
 | [`InitializePaymentResultType`](../objects/initialize-payment-result-type.md) | The result of initializing a payment.|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation ($command: InputInitializePaymentType!)
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation ($command: InputInitializePaymentType!)
+{
+    initializePayment(command: $command)
     {
-        initializePayment(command: $command)
-        {
-            isSuccess
-            errorMessage
-            storeId
-            paymentId
-            orderId
-            orderNumber
-            paymentMethodCode
-            paymentActionType
-            actionRedirectUrl
-            publicParameters {
-              key
-              value
-            }
+        isSuccess
+        errorMessage
+        storeId
+        paymentId
+        orderId
+        orderNumber
+        paymentMethodCode
+        paymentActionType
+        actionRedirectUrl
+        publicParameters 
+          {
+            key
+            value
           }
-    }
-    ```
+        }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    {"command": {
-        "orderId": "d548c750-5a74-4e54-b72b-f5209f44caa6",
-        "paymentId": "0859f1e8-16e8-4924-808b-47e03560085d"
-    }}
-    ```
+```json title="Variables"
+{"command": 
+  {
+    "orderId": "d548c750-5a74-4e54-b72b-f5209f44caa6",
+    "paymentId": "0859f1e8-16e8-4924-808b-47e03560085d"
+  }
+}
+```
 
+</div>

@@ -16,46 +16,48 @@ This query allows you to retrieve information about the available order line ite
 
 ## Example
 
-=== "Query"
-    ```json linenums="1"
-    {
-      orderLineItemStatuses(cultureName: "en-US") {
-        items {
-            key
-            value
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "orderLineItemStatuses": {
-            "items": [
-                {
-                    "key": "New",
-                    "value": "New"
-                },
-                {
-                    "key": "Processing",
-                    "value": "Processing"
-                },
-                {
-                    "key": "Shipped",
-                    "value": "Shipped"
-                },
-                {
-                    "key": "Cancelled",
-                    "value": "Cancelled"
-                },
-                {
-                    "key": "Returned",
-                    "value": "Returned"
-                }
-            ]
-        }
-      }
+```json title="Query"
+{
+  orderLineItemStatuses(cultureName: "en-US") {
+    items {
+      key
+      value
     }
-    ```
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "orderLineItemStatuses": {
+      "items": [
+        {
+        "key": "New",
+        "value": "New"
+        },
+        {
+        "key": "Processing",
+        "value": "Processing"
+        },
+        {
+        "key": "Shipped",
+        "value": "Shipped"
+        },
+        {
+        "key": "Cancelled",
+        "value": "Cancelled"
+        },
+        {
+        "key": "Returned",
+        "value": "Returned"
+        }
+      ]
+    }
+  }
+}
+```
+
+</div>

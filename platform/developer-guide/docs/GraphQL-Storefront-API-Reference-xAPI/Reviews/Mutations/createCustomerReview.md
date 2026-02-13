@@ -24,36 +24,38 @@ The `CreateCustomerReviewCommandType` represents the input data required to crea
 |---------------------------------------------------|-----------------------------------------------------------------------------|
 | [`CustomerReview`](../Objects/CustomerReview.md)  | The newly created customer review, including all its details.               |  
 
-## Examples  
+## Example
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation($command: CreateCustomerReviewCommandType!) {  
-      createCustomerReview(command: $command) {  
-        id  
-        userName  
-        entityName  
-        review  
-        rating  
-        createdDate  
-        reviewStatus  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "storeId": "B2B-store",  
-        "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",  
-        "userName": "JohnDoe",  
-        "entityId": "24caa0d5a05145f3a3433a2930fbfb0f",  
-        "entityType": "Product",  
-        "entityName": "Television",  
-        "title": "Great Product",  
-        "review": "The TV quality is excellent and meets my expectations.",  
-        "rating": 5  
-      }  
-    }  
-    ```  
+```json title="Mutation"
+mutation($command: CreateCustomerReviewCommandType!) {  
+  createCustomerReview(command: $command) {  
+    id  
+    userName  
+    entityName  
+    review  
+    rating  
+    createdDate  
+    reviewStatus  
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "storeId": "B2B-store",  
+    "userId": "c50e5237-8a4c-41fe-b878-8e5a72390a08",  
+    "userName": "JohnDoe",  
+    "entityId": "24caa0d5a05145f3a3433a2930fbfb0f",  
+    "entityType": "Product",  
+    "entityName": "Television",  
+    "title": "Great Product",  
+    "review": "The TV quality is excellent and meets my expectations.",  
+    "rating": 5  
+  }  
+}  
+```
+
+</div>

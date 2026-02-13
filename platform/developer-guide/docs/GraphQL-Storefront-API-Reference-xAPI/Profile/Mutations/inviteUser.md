@@ -23,32 +23,36 @@ The `InputInviteUserType!` represents the input for inviting users.
 |------------------------------------------------------------------------|---------------------------------------------	|
 | [`CustomIdentityResultType`](../Objects/CustomIdentityResultType.md)   | The outcome of identity-related operations. 	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation inviteUSer ($command: InputInviteUserType!){
-      inviteUser(command:$command)
-      {
-        succeeded
-        errors
-        {parameter
-        code
-        description}
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "storeId": "Electronics",
-        "organizationId": "72c4d52a-9504-4704-8009-6335f68ad092" ,
-        "emails":
-        [
-          "test_user@test1.com",
-          "test_user@test2.com"
-        ]
-      }
+```json title="Mutation"
+mutation inviteUSer ($command: InputInviteUserType!){
+  inviteUser(command:$command)
+  {
+    succeeded
+    errors {
+      parameter
+      code
+      description
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "storeId": "Electronics",
+    "organizationId": "72c4d52a-9504-4704-8009-6335f68ad092" ,
+    "emails":
+    [
+      "test_user@test1.com",
+      "test_user@test2.com"
+    ]
+  }
+}
+```
+
+</div>

@@ -21,50 +21,52 @@ This query allows you to evaluate dynamic content.
 |---------------------------------------------------------------------------------------	|-----------------------------------------------------	|
 | [`EvaluateDynamicContentResultType`](../objects/EvaluateDynamicContentResultType.md)    | The result type for the evaluation of dynamic content.|
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    {
-      evaluateDynamicContent(
-        storeId: "B2B-store"
-        placeName: "MainSlider"
-        tags: ["Main"]
-        userGroups: ["Customers"]
-        productId: "8b7b07c165924a879392f4f51a6f7ce0"
-      ) {
-        items {
-          id
-          name
-          contentType
-          dynamicProperties {
-            name
-            value
-          }
-        }
-        totalCount
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  evaluateDynamicContent(
+    storeId: "B2B-store"
+    placeName: "MainSlider"
+    tags: ["Main"]
+    userGroups: ["Customers"]
+    productId: "8b7b07c165924a879392f4f51a6f7ce0"
+  ) {
+    items {
+      id
+      name
+      contentType
+      dynamicProperties {
+        name
+        value
       }
     }
-    ```
+    totalCount
+  }
+}
+```
 
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "evaluateDynamicContent": {
-          "items": [
+```json title="Return"
+{
+  "data": {
+    "evaluateDynamicContent": {
+      "items": [
+        {
+          "id": "1165b9ab-205f-488f-a9c7-64187bb85702",
+          "name": "B2B slider",
+          "contentType": "slider",
+          "dynamicProperties": [
             {
-              "id": "1165b9ab-205f-488f-a9c7-64187bb85702",
-              "name": "B2B slider",
-              "contentType": "slider",
-              "dynamicProperties": [
-                {
-                  "name": "Content type",
-                  "value": "slider"            }
-              ]
-            }
-          ],
-          "totalCount": 1    }
-      }
-    }
-    ```
+              "name": "Content type",
+              "value": "slider"            }
+          ]
+        }
+      ],
+      "totalCount": 1    }
+  }
+}
+```
+
+</div>

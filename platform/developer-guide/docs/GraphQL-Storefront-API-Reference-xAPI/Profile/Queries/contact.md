@@ -16,47 +16,48 @@ This connection allows you to get the contact by its Id.
 |---------------------------------------------------	|------------------------------------------	|
 | [`ContactType`](../Objects/ContactType.md)              | The contact's information and attributes.	|
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    {
-      contact(id: "5f807280-bb1a-42b2-9a96-ed107269ea06") {
-        id
-        fullName
-        memberType
-        name
-        organizationId
-        emails
-        organizations {
-          totalCount
-          pageInfo
-          edges
-          items
-        }    
-        addresses {
-          totalCount
-          pageInfo
-          edges
-          items
-        }
-        defaultBillingAddress {
-          id
-          key
-          city
-          countryName
-        }
-        defaultShippingAddress {
-          id
-          key
-          city
-          countryName
-        }
-      }
-    }  
-    ```
-=== "Return"
-    ```json linenums="1"
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  contact(id: "5f807280-bb1a-42b2-9a96-ed107269ea06") {
+    id
+    fullName
+    memberType
+    name
+    organizationId
+    emails
+    organizations {
+      totalCount
+      pageInfo
+      edges
+      items
+    }    
+    addresses {
+      totalCount
+      pageInfo
+      edges
+      items
+    }
+    defaultBillingAddress {
+      id
+      key
+      city
+      countryName
+    }
+    defaultShippingAddress {
+      id
+      key
+      city
+      countryName
+    }
+  }
+}  
+```
+
+```json title="Return"
     {
       "data": {
         "contact": {
@@ -159,4 +160,6 @@ This connection allows you to get the contact by its Id.
         }
       }
     }
-    ```
+```
+
+</div>

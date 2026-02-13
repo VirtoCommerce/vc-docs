@@ -16,25 +16,28 @@ The `InputDeleteUserType!` represents the input structure for deleting user data
 |---------------------------------------------------------	|--------------------------------------------------------------------	|
 | [`IdentityResultType`](../Objects/IdentityResultType.md)  | The result of an identity-related operation.                        	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputDeleteUserType!) {
-      deleteUsers(command: $command) {
-        succeeded
-        errors{
-          code
-          description
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "userNames": ["graphqlTestUserName2"]
-      }
+```json title="Mutation"
+mutation($command: InputDeleteUserType!) {
+  deleteUsers(command: $command) {
+    succeeded
+    errors{
+      code
+      description
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "userNames": ["graphqlTestUserName2"]
+  }
+}
+```
+
+</div>

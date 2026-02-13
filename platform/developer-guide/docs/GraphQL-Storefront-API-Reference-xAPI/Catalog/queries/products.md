@@ -4,21 +4,21 @@ This connection allows you to search for products.
 
 ## Arguments
 
-| Argument                     	      | Description                                                                                                                                             	|
-|------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `after`  ==String==                	| A cursor value to paginate through the results.                                                                                                 	|
-| `first`  ==Int==                  	| The number of pages in a single query.                                                                                                        	|
-| `storeId`  ==String!==            	| The ID of the store to retrieve pages from.                                                                                                   	|
-| `userId`  ==String==              	| The current user Id.                                                                                                                                    	|
-| `currencyCode`  ==String==        	| A standardized code of a specific currency.                                                                                                   	|
-| `query`  ==String==               	| Performs the full-text search.                                                                                                                          	|
-| `cultureName`  ==String==         	| A language to retrieve data in.                                                                                                                                 	|
-| `filter`  ==String==              	| Filters query results.                                                                                                                  	|
-| `fuzzy`  ==Boolean==              	| If true, includes slight variations of the search text<br>in the returned products.                                                                       |
+| Argument                     	      | Description                                                                                                                     	  |
+|------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------	|
+| `after`  ==String==                	| A cursor value to paginate through the results.                                                                                     |
+| `first`  ==Int==                  	| The number of pages in a single query.                                                                                              |
+| `storeId`  ==String!==            	| The ID of the store to retrieve pages from.                                                                                       	|
+| `userId`  ==String==              	| The current user Id.                                                                                                                |
+| `currencyCode`  ==String==        	| A standardized code of a specific currency.                                                                                         |
+| `query`  ==String==               	| Performs the full-text search.                                                                                                      |
+| `cultureName`  ==String==         	| A language to retrieve data in.                                                                                                     |
+| `filter`  ==String==              	| Filters query results.                                                                                                              |
+| `fuzzy`  ==Boolean==              	| If true, includes slight variations of the search text<br>in the returned products.                                                 |
 | `fuzzyLevel`  ==Int==             	| The fuzziness level is measured by the Damerau-Levenshtein distance.<br>It calculates the number of operations required to transform one word into another.|
-| `facet`  ==String==               	| Calculates statistical counts to aid in faceted navigation.                                                                                             	|
-| `sort`  ==String==                	| Specifies the sorting order of the returned products.                                                                                                   	|
-| `productIds`  ==String==          	| Identifies specific products within a given store.                                                                                                      	|
+| `facet`  ==String==               	| Calculates statistical counts to aid in faceted navigation.                                                                         |
+| `sort`  ==String==                	| Specifies the sorting order of the returned products.                                                                               |
+| `productIds`  ==String==          	| Identifies specific products within a given store.                                                                                  |
 
 ## Possible returns
 
@@ -28,8 +28,11 @@ This connection allows you to search for products.
 
 ## Examples
 
-=== "Query 1"
-    ```json linenums="1"
+=== "Example 1"
+
+    <div class="grid" markdown>
+
+    ```json title="Query 1"
     {
       products(
         storeId: "B2B-Store"
@@ -51,8 +54,7 @@ This connection allows you to search for products.
     }
     ```
 
-=== "Return 1"
-    ```json linenums="1"
+    ```json title="Return 1"
     {
       "data": {
         "products": {
@@ -83,8 +85,13 @@ This connection allows you to search for products.
     }
     ```
 
-=== "Query 2"
-    ```json linenums="1"
+    </div>
+
+=== "Example 2"
+
+    <div class="grid" markdown>
+
+    ```json title="Query 2"
     {
       products(
         storeId: "B2B-store"
@@ -102,37 +109,41 @@ This connection allows you to search for products.
     }
     ```
 
-=== "Return 2"
-    ```json linenums="1"
-    {
-      "data": {
-        "products": {
-          "totalCount": 4,
-          "items": [
-            {
-              "id": "330e7e41055b4781a9f4d3868557c093",
-              "code": "53MF89"
-            },
-            {
-              "id": "72c69a42-4c24-40c9-baa8-6922106be6bf",
-              "code": "OBV-20813041"
-            },
-            {
-              "id": "baa4931161214690ad51c50787b1ed94",
-              "code": "53MF87"
-            },
-            {
-              "id": "6ba8b1a9b2a54298a1ec1aea6a4bb3b2",
-              "code": "53MF88"
+    ```json title="Return 2"
+        {
+          "data": {
+            "products": {
+              "totalCount": 4,
+              "items": [
+                {
+                  "id": "330e7e41055b4781a9f4d3868557c093",
+                  "code": "53MF89"
+                },
+                {
+                  "id": "72c69a42-4c24-40c9-baa8-6922106be6bf",
+                  "code": "OBV-20813041"
+                },
+                {
+                  "id": "baa4931161214690ad51c50787b1ed94",
+                  "code": "53MF87"
+                },
+                {
+                  "id": "6ba8b1a9b2a54298a1ec1aea6a4bb3b2",
+                  "code": "53MF88"
+                }
+              ]
             }
-          ]
+          }
         }
-      }
-    }
     ```
 
-=== "Query 3"
-    ```json linenums="1"
+    </div>
+
+=== "Example 3"
+
+    <div class="grid" markdown>
+
+    ```json title="Query 3"
     {
     products(
       first: 20
@@ -158,8 +169,7 @@ This connection allows you to search for products.
     }
     ```
 
-=== "Return 3"
-    ```json linenums="1"
+    ```json title="Return 3"
     {
       "data": {
         "products": {
@@ -195,3 +205,5 @@ This connection allows you to search for products.
       }
     }
     ```
+
+    </div>

@@ -18,35 +18,39 @@ The `InputAddOrUpdateOrderPaymentType` is a type that represents the input objec
 | [`CustomerOrderType`](../objects/customer-order-type.md)           	  |  A customer order.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation addOrUpdateOrderPayment ($command: InputAddOrUpdateOrderPaymentType!) {
-      addOrUpdateOrderPayment (command: $command)
-    {
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation addOrUpdateOrderPayment ($command: InputAddOrUpdateOrderPaymentType!) {
+  addOrUpdateOrderPayment (command: $command)
+  {
     id
-      inPayments
+    inPayments
       {
         id
         number
         sum
-        {
-          amount
-        }
-      }
-    }}
-    ```
-
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
-        "payment": {
-          "id": "testpaymentId",
-          "price": 20,
-          "comment": "this is a comment"
-        }
+      {
+        amount
       }
     }
-    ```
+  }
+}
+```
 
+```json title="Variables"
+{
+  "command": {
+    "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+    "payment": {
+      "id": "testpaymentId",
+      "price": 20,
+      "comment": "this is a comment"
+    }
+  }
+}
+```
+
+</div>

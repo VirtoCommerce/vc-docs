@@ -17,33 +17,33 @@ This query allows you to retrieve the loyalty balance information for a specific
 
 ## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-    loyaltyBalance(
-        userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"
-        orderId: "f3d2a8a7-6c47-4ad0-bc8c-88e2d13f4412"
-    ) {
-        balance
-        availableBalance
-        reservedBalance
-        currency
-    }
-    }
-    ```
+```json title="Query"
+{
+loyaltyBalance(
+    userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"
+    orderId: "f3d2a8a7-6c47-4ad0-bc8c-88e2d13f4412"
+) {
+    balance
+    availableBalance
+    reservedBalance
+    currency
+  }
+}
+```
 
-=== "Return"
+```json title="Return"
+{
+  "data": {
+    "loyaltyBalance": {
+    "balance": 250,
+    "availableBalance": 200,
+    "reservedBalance": 50,
+    "currency": "USD"
+    }
+  }
+}
+```
 
-    ```json linenums="1"
-    {
-    "data": {
-        "loyaltyBalance": {
-        "balance": 250,
-        "availableBalance": 200,
-        "reservedBalance": 50,
-        "currency": "USD"
-        }
-    }
-    }
-    ```
+</div>

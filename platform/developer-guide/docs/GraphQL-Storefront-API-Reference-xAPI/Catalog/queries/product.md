@@ -20,8 +20,11 @@ This query allows you to get a product by its Id and calculate all fields based 
 
 ## Examples
 
-=== "Query 1"
-    ```json linenums="1"
+
+=== "Example 1"
+    <div class="grid" markdown>
+
+    ```json title="Query 1"
     {
       product(
         id: "2dcd49147dc04892892af26bb91e5530"
@@ -35,8 +38,7 @@ This query allows you to get a product by its Id and calculate all fields based 
     }
     ```
 
-=== "Return 1"
-    ```json linenums="1"
+    ```json title="Return 1"
     {
       "data": {
         "product": {
@@ -47,8 +49,13 @@ This query allows you to get a product by its Id and calculate all fields based 
     }
     ```
 
-=== "Query 2"
-    ```json linenums="1"
+    </div>
+
+=== "Example 2"
+
+    <div class="grid" markdown>
+
+    ```json title="Query 2"
     {
       product(
         id: "2dcd49147dc04892892af26bb91e5530"
@@ -73,8 +80,7 @@ This query allows you to get a product by its Id and calculate all fields based 
     }
     ```
 
-=== "Return 2"
-    ```json linenums="1"
+    ```json title="Return 2"
     {
       "data": {
         "product": {
@@ -102,3 +108,5 @@ This query allows you to get a product by its Id and calculate all fields based 
       }
     }
     ```
+
+    </div>

@@ -22,8 +22,11 @@ This connection allows you to search for catalog property metadata.
 
 ## Examples
 
-=== "Query 1"
-    ```json linenums="1"
+=== "Example 1"
+
+    <div class="grid" markdown>
+
+    ```json title="Query 1"
     { 
       properties(
         storeId: "B2B-Store"
@@ -45,8 +48,7 @@ This connection allows you to search for catalog property metadata.
       }
     ```
 
-=== "Return 1"
-    ```json linenums="1"
+    ```json title="Return 1"
     {
       "data": {
         "properties": {
@@ -76,9 +78,13 @@ This connection allows you to search for catalog property metadata.
       }
     }
     ```
-    
-=== "Query 2"
-    ```json linenums="1"
+
+    </div>
+
+=== "Example 2" 
+    <div class="grid" markdown>
+
+    ```json title="Query 2"
     {
       properties(
         storeId: "B2B-Store")
@@ -99,8 +105,7 @@ This connection allows you to search for catalog property metadata.
     }
     ```
 
-=== "Return 2"
-    ```json linenums="1"
+    ```json title="Return 2"
     {
       "data": {
         "properties": {
@@ -152,4 +157,6 @@ This connection allows you to search for catalog property metadata.
         }
       }
     }
-    ```  
+    ```
+
+    </div>

@@ -17,17 +17,19 @@ The `InputCreateUserType!` represents the input object for creating a user.
 | [`IdentityResultType`](../Objects/IdentityResultType.md)  | The result of an identity-related operation.                        	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputCreateUserType!) {
-      createUser(command: $command) {
-        succeeded
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation($command: InputCreateUserType!) {
+  createUser(command: $command) {
+    succeeded
+  }
+}
+```
+
+```json title="Variables"
 {
   "command": {"applicationUser": {
     "email": "graphql@test.local",
@@ -37,4 +39,6 @@ The `InputCreateUserType!` represents the input object for creating a user.
   }
  }
 }
-    ```
+```
+
+</div>

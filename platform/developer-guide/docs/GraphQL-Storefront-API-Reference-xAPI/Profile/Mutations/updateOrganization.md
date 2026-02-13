@@ -25,22 +25,27 @@ The `InputUpdateOrganizationType!` represents the input object used to update an
 | [`Organization`](../Objects/OrganizationType.md)          | Information about the organization.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputUpdateOrganizationType!) {
-      updateOrganization(command: $command) {
-        id
-        name
-      }
-    }
-    ```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "id": "f8512cf2aa004ead858c286b0141e856",
-        "name": "org2.com"
-      }
-    }
-    ```
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation($command: InputUpdateOrganizationType!) {
+  updateOrganization(command: $command) {
+    id
+    name
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "id": "f8512cf2aa004ead858c286b0141e856",
+    "name": "org2.com"
+  }
+}
+```
+
+</div>

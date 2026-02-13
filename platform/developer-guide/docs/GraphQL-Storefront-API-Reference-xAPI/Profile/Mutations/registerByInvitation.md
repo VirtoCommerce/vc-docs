@@ -24,30 +24,34 @@ The `InputRegisterByInvitationType!` represents the input object for registering
 | [`CustomIdentityResultType`](../Objects/CustomIdentityResultType.md)   | The outcome of identity-related operations.         	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation registerByInvitation($command: InputRegisterByInvitationType!) {
-    registerByInvitation(command: $command) {
-    succeeded
-        errors
-        {
-        code
-        description
-        }
-    }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation registerByInvitation($command: InputRegisterByInvitationType!) {
+  registerByInvitation(command: $command) {
+    succeeded
+    errors
     {
-    "command": {
-        "userId": "testuserid",
-        "token":  "This is token",
-        "firstName":  "firstName",
-        "lastName": "lastName",
-        "username": "testUserName",
-        "password": "TestPassword"
+      code
+      description
     }
-    }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "userId": "testuserid",
+    "token":  "This is token",
+    "firstName":  "firstName",
+    "lastName": "lastName",
+    "username": "testUserName",
+    "password": "TestPassword"
+  }
+}
+```
+
+</div>

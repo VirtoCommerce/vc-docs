@@ -21,36 +21,40 @@ The `InputUpdateOrderItemDynamicPropertiesType` is a type that represents the in
 | [`CustomerOrderType`](../objects/customer-order-type.md)           	|  A customer order  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateOrderItemDynamicProperties ($command: InputUpdateOrderItemDynamicPropertiesType!) {
-        updateOrderItemDynamicProperties (command: $command)
-        {
-            id
-            items{
-                dynamicProperties
-                {
-                    value
-                    name
-                }
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateOrderItemDynamicProperties ($command: InputUpdateOrderItemDynamicPropertiesType!) {
+    updateOrderItemDynamicProperties (command: $command)
+    {
+        id
+        items{
+            dynamicProperties
+            {
+                value
+                name
             }
         }
     }
-    ```
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-    "command": {
-        "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
-        "lineItemId": "testlineitemid",
-        "dynamicProperties": [
-        {
-            "name": "propery1",
-            "value": "value1"
-        }
-        ]
-    }
-    }
-    ```
+```json title="Variables"
+{
+  "command": {
+    "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+    "lineItemId": "testlineitemid",
+    "dynamicProperties": [
+      {
+        "name": "property1",
+        "value": "value1"
+      }
+    ]
+  }
+}
+```
 
+</div>

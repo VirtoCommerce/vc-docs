@@ -17,19 +17,23 @@ The `InputLockUnlockOrganizationContactType!` provides the necessary input value
 | [`ContactType`](../Objects/ContactType.md)                | A contact and various fields to describe the contact's information.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation lockContact($command: InputLockUnlockOrganizationContactType!){
-      lockOrganizationContact(command: $command){
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "userId":"5f807280-bb1a-42b2-9a96-ed107269ea06"
-      }
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation lockContact($command: InputLockUnlockOrganizationContactType!){
+  lockOrganizationContact(command: $command){
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "userId":"5f807280-bb1a-42b2-9a96-ed107269ea06"
+  }
+}
+```
+
+</div>

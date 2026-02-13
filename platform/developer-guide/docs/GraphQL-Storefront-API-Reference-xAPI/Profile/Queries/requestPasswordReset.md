@@ -16,23 +16,25 @@ This connection is used to initiate a password reset process for a user.
 |-----------------|--------------------------------------------------------------------------	|
 | `Boolean`     	| Indicates whether the password reset request was successfully initiated.	|
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    query {
-      requestPasswordReset(
-        loginOrEmail: "User_1"
-        urlSuffix: "reset-password/reset"
-      )
-    }
-    ```
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "requestPasswordReset": true
-      }
-    }
-    ```
+<div class="grid" markdown>
 
+```json title="Query"
+query {
+  requestPasswordReset(
+    loginOrEmail: "User_1"
+    urlSuffix: "reset-password/reset"
+  )
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "requestPasswordReset": true
+  }
+}
+```
+
+</div>

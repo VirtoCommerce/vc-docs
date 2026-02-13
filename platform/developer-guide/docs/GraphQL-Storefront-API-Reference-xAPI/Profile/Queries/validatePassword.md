@@ -15,29 +15,32 @@ This connection is used to check the validity of a password.
 |---------------------------------------------------------------------	|------------------------------------------	|
 | [`CustomIdentityResultType`](../Objects/CustomIdentityResultType.md) 	|  Outcome of identity-related operations.	|
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    query {
-      validatePassword(password: "tew1WEEEEr") {
-        succeeded
-        errors {
-          code
-          parameter
-          description
-        }
-      }
+<div class="grid" markdown>
+
+```json title="Query"
+query {
+  validatePassword(password: "tew1WEEEEr") {
+    succeeded
+    errors {
+      code
+      parameter
+      description
     }
-    ```
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "validatePassword": {
-          "succeeded": true,
-          "errors": []
-        }
-      }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "validatePassword": {
+      "succeeded": true,
+      "errors": []
     }
-    ```
+  }
+}
+```
+
+</div>

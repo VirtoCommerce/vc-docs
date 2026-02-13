@@ -24,31 +24,35 @@ The `InputCreateOrganizationType!` represents the input object for creating a co
 | [`OrgzanizationType`](../Objects/OrganizationType.md)     | Information about the organization.                	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation createOrganization  ($command: InputCreateOrganizationType!) {
-      createOrganization (command: $command) {
-        id
-        name
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "name": "NewOrgADMIN",
-        "addresses": {
-          "city": "Berlin",
-          "countryCode": "DE",
-          "countryName": "German",
-          "email": "t123@t123.com",
-          "line1": "line1",
-          "firstName": "first123",
-          "postalCode": "44232",
-          "description": "test"
-        }
-      }
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation createOrganization  ($command: InputCreateOrganizationType!) {
+  createOrganization (command: $command) {
+    id
+    name
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "name": "NewOrgADMIN",
+    "addresses": {
+      "city": "Berlin",
+      "countryCode": "DE",
+      "countryName": "German",
+      "email": "t123@t123.com",
+      "line1": "line1",
+      "firstName": "first123",
+      "postalCode": "44232",
+      "description": "test"
     }
-    ```
+  }
+}
+```
+
+</div>

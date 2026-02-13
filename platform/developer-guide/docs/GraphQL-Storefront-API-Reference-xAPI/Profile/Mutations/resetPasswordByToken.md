@@ -20,28 +20,32 @@ The `InputResetPasswordByTokenType!` represents the input object for resetting a
 | [`CustomIdentityResultType`](../Objects/CustomIdentityResultType.md)  | The outcome of identity-related operations.                        	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation resetPasswordByToken ($command:InputResetPasswordByTokenType){
-    resetPasswordByToken(command:$command)
-    {
-        succeeded
-        errors{
-        code
-        parameter
-        description
-        }
-    }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-    "command":{
-        "token":"token_1",
-        "userId":"UseId_1",
-        "newPassword":"qwERTY2345"
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation resetPasswordByToken ($command:InputResetPasswordByTokenType){
+resetPasswordByToken(command:$command)
+{
+    succeeded
+    errors{
+    code
+    parameter
+    description
     }
-    }
-    ```
+}
+}
+```
+
+```json title="Variables"
+{
+  "command":{
+    "token":"token_1",
+    "userId":"UseId_1",
+    "newPassword":"qwERTY2345"
+  }
+}
+```
+
+</div>

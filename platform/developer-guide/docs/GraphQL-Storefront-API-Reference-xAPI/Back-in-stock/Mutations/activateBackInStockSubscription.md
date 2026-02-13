@@ -18,25 +18,29 @@ The `ActivateBackInStockSubscriptionCommandType!` provides the necessary input v
 |--------------------------------------------------------------------|-------------------------------------------------------------------|  
 | [`BackInStockSubscriptionType`](../Objects/BackInStockSubscriptionType.md) | The activated back-in-stock subscription details.                 |  
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation activateBackInStockSubscription($command: ActivateBackInStockSubscriptionCommandType!) {  
-      activateBackInStockSubscription(command: $command) {  
-        id  
-        storeId  
-        productId  
-        isActive  
-      }  
-    }  
-    ```  
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "storeId": "store123",  
-        "productId": "product456"  
-      }  
-    }  
-    ```  
+## Example
 
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation activateBackInStockSubscription($command: ActivateBackInStockSubscriptionCommandType!) {  
+  activateBackInStockSubscription(command: $command) {  
+    id  
+    storeId  
+    productId  
+    isActive  
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "storeId": "store123",  
+    "productId": "product456"  
+  }  
+}  
+```
+
+</div>

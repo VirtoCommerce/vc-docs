@@ -14,19 +14,23 @@ This query is used to check whether a given username is unique in the system.
 |-----------------|-----------------------------------------------------------------------------|
 | `Boolean`       | Returns `true` if the username is unique and available, `false` otherwise.  |
 
-## Examples
 
-=== "Query"
-    ```json linenums="1"
-    query {
-      checkUsernameUniqueness(username: "john_doe")
-    }
-    ```
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "checkUsernameUniqueness": true
-      }
-    }
-    ```
+## Example
+
+<div class="grid" markdown>
+
+```json title="Query"
+query {
+  checkUsernameUniqueness(username: "john_doe")
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "checkUsernameUniqueness": true
+  }
+}
+```
+
+</div>

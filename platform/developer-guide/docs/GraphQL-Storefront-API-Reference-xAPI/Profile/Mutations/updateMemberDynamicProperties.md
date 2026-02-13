@@ -18,57 +18,62 @@ The `InputUpdateMemberDynamicPropertiesType!` represents the input for updating 
 | [`MemberType`](../Objects/MemberType.md)                               | A member entity                          	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateMemberDynamicProperties($command: InputUpdateMemberDynamicPropertiesType!) {
-      updateMemberDynamicProperties(command: $command) {
-        name
-        dynamicProperties {
-          name
-          value
-          valueType
-          dictionaryItem {
-            label
-            name 
-            id
-          }
-        }
-      }
-    }
-    ```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-    "command": {
-      "memberId": "820c58c5-b518-454b-aefd-2fc4616bd25e",
-      "dynamicProperties": [
-        {
-          "name": "Sex",
-          "value": "d58bedc559c6420fbde35666adae3251"
-        },
-        {
-          "name": "Multilanguage",
-          "cultureName":"fr-FR",
-          "value": "fr-value"
-        },
-        {
-          "name": "occupation",
-          "value": "578fadeb1d2a40b3b08b1daf8db09463"
-        },
-        {
-          "name": "occupation",
-          "value": "6fba64f496a24317b476b8101fddb57b"
-        },
-        {
-          "name": "Default shipping address",
-          "value": "aDefault"
-        },
-        {
-          "name": "Married",
-          "value": "true"
-        }
-        ]
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateMemberDynamicProperties($command: InputUpdateMemberDynamicPropertiesType!) {
+  updateMemberDynamicProperties(command: $command) {
+    name
+    dynamicProperties {
+      name
+      value
+      valueType
+      dictionaryItem {
+        label
+        name 
+        id
       }
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+"command": {
+  "memberId": "820c58c5-b518-454b-aefd-2fc4616bd25e",
+  "dynamicProperties": [
+    {
+      "name": "Sex",
+      "value": "d58bedc559c6420fbde35666adae3251"
+    },
+    {
+      "name": "Multilanguage",
+      "cultureName":"fr-FR",
+      "value": "fr-value"
+    },
+    {
+      "name": "occupation",
+      "value": "578fadeb1d2a40b3b08b1daf8db09463"
+    },
+    {
+      "name": "occupation",
+      "value": "6fba64f496a24317b476b8101fddb57b"
+    },
+    {
+      "name": "Default shipping address",
+      "value": "aDefault"
+    },
+    {
+      "name": "Married",
+      "value": "true"
+    }
+    ]
+  }
+}
+```
+
+</div>

@@ -19,43 +19,47 @@ This connection allows you to get the user by several arguments.
 |------------------------------------------	|---------------------------------------	|
 | [`UserType`](../Objects/UserType.md)     	|  The user's information and attributes.	|
 
-## Examples
 
-=== "Query"
-    ```json linenums="1"
-    {
-      user(id: "78b0208a-bb52-4a33-9250-583d63aa1f77") {
-        accessFailedCount
-        contact {
-          id
-          name
-        }
-        createdDate
-        email
-        isAdministrator
-        passwordExpiryInDays
-        passwordExpired
-        userName
-      }
+## Example
+
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  user(id: "78b0208a-bb52-4a33-9250-583d63aa1f77") {
+    accessFailedCount
+    contact {
+      id
+      name
     }
-    ```
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "user": {
-          "accessFailedCount": 0,
-          "contact": {
-            "id": "cb0a5340-f9fb-4f49-bd62-9d03518868ff",
-            "name": "b2b admin"
-          },
-          "createdDate": "2022-04-18T13:18:33.6009031Z",
-          "email": "b2badmin@test.com",
-          "isAdministrator": false,
-          "passwordExpiryInDays": 83,
-          "passwordExpired": false,
-          "userName": "b2badmin"
-        }
-      }
+    createdDate
+    email
+    isAdministrator
+    passwordExpiryInDays
+    passwordExpired
+    userName
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "user": {
+      "accessFailedCount": 0,
+      "contact": {
+        "id": "cb0a5340-f9fb-4f49-bd62-9d03518868ff",
+        "name": "b2b admin"
+      },
+      "createdDate": "2022-04-18T13:18:33.6009031Z",
+      "email": "b2badmin@test.com",
+      "isAdministrator": false,
+      "passwordExpiryInDays": 83,
+      "passwordExpired": false,
+      "userName": "b2badmin"
     }
-    ```
+  }
+}
+```
+
+</div>

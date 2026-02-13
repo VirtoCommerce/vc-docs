@@ -19,17 +19,20 @@ The `InputChangeOrderStatusType!` represents the input object for changing the s
 | `Boolean`           	|  Indicates the success or failure of the operation.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation changeOrderStatus ($command: InputChangeOrderStatusType!) {
-    changeOrderStatus (command: $command) }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-    "orderId":  "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
-    "status":  "Paid"
-    }
-    ```
+<div class="grid" markdown>
 
+```json title="Mutation"
+mutation changeOrderStatus ($command: InputChangeOrderStatusType!) {
+changeOrderStatus (command: $command) }
+```
+
+```json title="Variables"
+"command": {
+"orderId":  "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+"status":  "Paid"
+}
+```
+
+</div>

@@ -20,31 +20,35 @@ The `InputChangePurchaseOrderNumber` represents the input object for changing th
 
 ## Possible returns
 
-| Possible return                                          	| Description                                                 	|
-|---------------------------------------------------------	|--------------------------------------------------------------	|
-| [`CartType`](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type)           	|  The properties and fields associated with a shopping cart.  	|
+| Possible return                                          	| Description                                     |
+|---------------------------------------------------------	|------------------------------------------------	|
+| [`CartType`](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/cart-type) |  The properties and fields associated with a shopping cart.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation changePurchaseOrderNumber ($command: InputChangePurchaseOrderNumber!) {
-      changePurchaseOrderNumber (command: $command) {
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation changePurchaseOrderNumber ($command: InputChangePurchaseOrderNumber!) {
+  changePurchaseOrderNumber (command: $command) {
+  id
+    name
+    purchaseOrderNumber
+  addresses
+    {
       id
-        name
-        purchaseOrderNumber
-      addresses
-        {
-          id
-        }
-      }
     }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {
-      "storeId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
-      "userId": "23eed211-ee84-4dd5-aa9b-dsacg32210",
-        "purchaseOrderNumber": "test purchase order"
-    }
-    ```
+```json title="Variables"
+"command": {
+  "storeId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+  "userId": "23eed211-ee84-4dd5-aa9b-dsacg32210",
+    "purchaseOrderNumber": "test purchase order"
+}
+```
+
+</div>

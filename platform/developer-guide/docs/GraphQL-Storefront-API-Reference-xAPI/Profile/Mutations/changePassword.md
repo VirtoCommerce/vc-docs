@@ -19,28 +19,30 @@ The `InputChangePasswordType!` represents the input object for changing a user's
 |---------------------------------------------------------------------	|------------------------------------------------------	|
 | [`CustomIdentityResultType`](../Objects/CustomIdentityResultType.md)  | The outcome of identity-related operations.         	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation changePassword($command: InputChangePasswordType!)  
-    changePassword(command: $command) {
-    succeeded
-        errors
-        {
-        code
-        description
-        }
-    }
+<div class="grid" markdown>
 
-    ```
-
-=== "Variables"
-    ```json linenums="1"
+```json title="Mutation"
+mutation changePassword($command: InputChangePasswordType!)  
+changePassword(command: $command) {
+  succeeded
+    errors
     {
-    "command": {
-        "userId": "testuserid",
-        "newPassword": "Password1",
-        "oldPassword": "Password2"
+      code
+      description
     }
-    }
-    ```
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "userId": "testuserid",
+    "newPassword": "Password1",
+    "oldPassword": "Password2"
+  }
+}
+```
+
+</div>

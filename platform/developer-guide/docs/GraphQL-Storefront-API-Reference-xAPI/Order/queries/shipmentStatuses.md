@@ -14,44 +14,46 @@ This query allows you to retrieve information about the available shipment statu
 |---------------------------------------------------------------------------	|------------------------------------------- |
 | [`LocalizedSettingResponseType`](../objects/LocalizedSettingResponseType.md)  | Contains information about shipment statuses. |
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    {
-      shipmentStatuses(cultureName: "en-US") {
-        items {
-            key
-            value
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Return"
-    ```json linenums="1"
-    {
-      "data": {
-        "shipmentStatuses": {
-            "items": [
-                {
-                    "key": "New",
-                    "value": "New"
-                },
-                {
-                    "key": "Pending",
-                    "value": "Pending"
-                },
-                {
-                    "key": "Processing",
-                    "value": "Processing"
-                },
-                {
-                    "key": "Cancelled",
-                    "value": "Cancelled"
-                }
-            ]
-        }
-      }
+```json title="Query"
+{
+  shipmentStatuses(cultureName: "en-US") {
+    items {
+        key
+        value
     }
-    ```
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "shipmentStatuses": {
+      "items": [
+        {
+          "key": "New",
+          "value": "New"
+        },
+        {
+         "key": "Pending",
+          "value": "Pending"
+        },
+        {
+          "key": "Processing",
+          "value": "Processing"
+        },
+        {
+          "key": "Cancelled",
+          "value": "Cancelled"
+        }
+      ]
+    }
+  }
+}
+```
+
+</div>

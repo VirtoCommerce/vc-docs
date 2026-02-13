@@ -18,55 +18,56 @@ This connection allows you to retrieve information about a slug or permalink.
 | --------------------------------------------------------------------------------- | ------------------------------------------------- |
 | [`SlugInfoResponseType`](../objects/SlugInfoResponseType.md)                      | Information about the resolved slug or permalink. |
 
-## Examples
+## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    query GetSlugInfo($slug: String, $storeId: String, $userId: String, $cultureName: String) {
-      slugInfo(
-        slug: "brands"
-        storeId: "B2B-store"
-        userId: "30ce3994-2cbc-4c5e-93b8-e56a9792be49"
-        cultureName: "en-US"
-    ) {
-      entityInfo {
-        id
-        isActive
-        languageCode
-        objectId
-        objectType
-        semanticUrl
-        metaDescription
-        metaKeywords
-        pageTitle
-        __typename
-        }
-        __typename
-      }
+```json title="Query"
+{
+  slugInfo(
+    slug: "brands"
+    storeId: "B2B-store"
+    userId: "30ce3994-2cbc-4c5e-93b8-e56a9792be49"
+    cultureName: "en-US"
+  )
+  {
+    entityInfo {
+      id
+      isActive
+      languageCode
+      objectId
+      objectType
+      semanticUrl
+      metaDescription
+      metaKeywords
+      pageTitle
+      __typename
     }
-    ```
+    __typename
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-          "slugInfo": {
-          "entityInfo": {
-            "id": "Brands",
-            "isActive": true,
-            "languageCode": "en-US",
-            "objectId": "Brands",
-            "objectType": "Brands",
-            "semanticUrl": "brands",
-            "metaDescription": null,
-            "metaKeywords": null,
-            "pageTitle": null,
-            "__typename": "SeoInfo"
-        },
-        "__typename": "SlugInfoResponseType"
-        }
-      }
+```json title="Return"
+{
+  "data": {
+      "slugInfo": {
+      "entityInfo": {
+        "id": "Brands",
+        "isActive": true,
+        "languageCode": "en-US",
+        "objectId": "Brands",
+        "objectType": "Brands",
+        "semanticUrl": "brands",
+        "metaDescription": null,
+        "metaKeywords": null,
+        "pageTitle": null,
+        "__typename": "SeoInfo"
+    },
+    "__typename": "SlugInfoResponseType"
     }
-    ```
+  }
+}
+```
+
+</div>

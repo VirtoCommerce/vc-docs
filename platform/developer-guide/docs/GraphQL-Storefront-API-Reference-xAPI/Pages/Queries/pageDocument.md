@@ -14,30 +14,32 @@ This query retrieves information about a specific page document using its unique
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------|  
 | [`PageDocumentType`](../Objects/PageDocumentType.md)                   | Information about the page document, including its source, permalink, and content. |  
 
-## Examples  
+## Example
 
-=== "Query"  
-    ```json linenums="1"  
-    {  
-      pageDocument(id: "24caa0d5a05145f3a3433a2930fbfb0f") {  
-        id  
-        source  
-        permalink  
-        content  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Return"  
-    ```json linenums="1"  
-    {  
-      "data": {  
-        "pageDocument": {  
-          "id": "24caa0d5a05145f3a3433a2930fbfb0f",  
-          "source": "builder.io",  
-          "permalink": "/test-2",  
-          "content": "..."  
-        }  
-      }  
+```json title="Query"
+{  
+  pageDocument(id: "24caa0d5a05145f3a3433a2930fbfb0f") {  
+    id  
+    source  
+    permalink  
+    content  
+  }  
+}  
+```
+
+```json title="Return"
+{  
+  "data": {  
+    "pageDocument": {  
+      "id": "24caa0d5a05145f3a3433a2930fbfb0f",  
+      "source": "builder.io",  
+      "permalink": "/test-2",  
+      "content": "..."  
     }  
-    ```  
+  }  
+}  
+```
+
+</div>

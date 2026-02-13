@@ -17,24 +17,29 @@ The `DeactivateBackInStockSubscriptionCommandType!` provides the necessary input
 |--------------------------------------------------------------------|-------------------------------------------------------------------|  
 | [`BackInStockSubscriptionType`](../Objects/BackInStockSubscriptionType.md) | The deactivated back-in-stock subscription details.               |  
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation deactivateBackInStockSubscription($command: DeactivateBackInStockSubscriptionCommandType!) {  
-      deactivateBackInStockSubscription(command: $command) {  
-        id  
-        storeId  
-        productId  
-        isActive  
-      }  
-    }  
-    ```  
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "storeId": "store123",  
-        "productId": "product456"  
-      }  
-    }  
-    ```  
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation deactivateBackInStockSubscription($command: DeactivateBackInStockSubscriptionCommandType!) {  
+  deactivateBackInStockSubscription(command: $command) {  
+    id  
+    storeId  
+    productId  
+    isActive  
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "storeId": "store123",  
+    "productId": "product456"  
+  }  
+}  
+```
+
+</div>

@@ -20,51 +20,50 @@ This query is used to retrieve a collection of pages based on specified criteria
 | [`PageConnection`](../Objects/PageConnection.md)        	|  A connection to a collection of pages.  	|
 
 
-## Examples
+## Example
 
+<div class="grid" markdown>
 
-=== "Query"
+```json title="Query"
+{
+  pages(storeId: "B2B-store", keyword: "aliases:test", after: "0", first: 30) {
+    totalCount
+    items {
+      relativeUrl
+      name
+      __typename
+    }
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
+```
 
-    ```json linenums="1"
-    {
-      pages(storeId: "B2B-store", keyword: "aliases:test", after: "0", first: 30) {
-        totalCount
-        items {
-          relativeUrl
-          name
-          __typename
+```json title="Return"
+{
+  "data": {
+    "pages": {
+      "totalCount": 1,
+      "items": [
+        {
+          "relativeUrl": "/testpagefrompage",
+          "name": "testpagefrompage",
+          "__typename": "PageType"
         }
-        pageInfo {
-          startCursor
-          endCursor
-          hasNextPage
-          hasPreviousPage
-        }
+      ],
+      "pageInfo": {
+        "startCursor": "0",
+        "endCursor": "1",
+        "hasNextPage": false,
+        "hasPreviousPage": false
       }
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-        "pages": {
-          "totalCount": 1,
-          "items": [
-            {
-              "relativeUrl": "/testpagefrompage",
-              "name": "testpagefrompage",
-              "__typename": "PageType"
-            }
-          ],
-          "pageInfo": {
-            "startCursor": "0",
-            "endCursor": "1",
-            "hasNextPage": false,
-            "hasPreviousPage": false
-          }
-        }
-      }
-    }
-    ```
+</div>

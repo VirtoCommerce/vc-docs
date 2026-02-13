@@ -17,26 +17,30 @@ The `InputUpdateUserType!` represents the input object for creating a contact.
 | [`IdentityResultType`](../Objects/IdentityResultType.md)  | The result of an identity-related operation.                        	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateUser($command: InputUpdateUserType!) {
-      updateUser(command: $command) {
-        succeeded
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-    "command": {
-        "id": "916abee5-1b4d-4f1f-80f2-8be0a55cf011",
-        "userName": "graphqlTestUserName2",
-        "userType": "Customer",
-        "roles": [],
-        "securityStamp": "",
-        "email": "graphql2@test.local"
-        "storeId": "B2B-Store"
-      }
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateUser($command: InputUpdateUserType!) {
+  updateUser(command: $command) {
+    succeeded
+  }
+}
+```
+
+```json title="Variables"
+{
+"command": {
+    "id": "916abee5-1b4d-4f1f-80f2-8be0a55cf011",
+    "userName": "graphqlTestUserName2",
+    "userType": "Customer",
+    "roles": [],
+    "securityStamp": "",
+    "email": "graphql2@test.local"
+    "storeId": "B2B-Store"
+  }
+}
+```
+
+</div>

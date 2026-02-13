@@ -21,18 +21,22 @@ The `InputSendVerifyEmailType` represents the input for sending a verification e
 | `Boolean`             | Indicates the outcome of the operation. 	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation ($command: InputSendVerifyEmailType){​
-      sendVerifyEmail(command: $command)​
-    }​
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    "command": {​
-      "userId": "4162ff51-c880-4e42-bc4b-4bfd120a0bdf",​
-      "storeId": "B2B-store",​
-      "languageCode": "EN-US"​
-    }   ​
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation ($command: InputSendVerifyEmailType){​
+  sendVerifyEmail(command: $command)​
+}​
+```
+
+```json title="Variables"
+"command": {​
+  "userId": "4162ff51-c880-4e42-bc4b-4bfd120a0bdf",​
+  "storeId": "B2B-store",​
+  "languageCode": "EN-US"​
+}   ​
+```
+
+</div>

@@ -15,36 +15,38 @@ This query allows retrieving the file upload options for the specified scope.
 |------------------------------------------------------------------------------------	  |------------------------------------------------------------------------	|
 | [`FileUploadScopeOptionsType`](../Objects/FileUploadScopeOptionsType.md)              | Represents the options for file upload within the specified scope.    	|
 
-## Examples
+## Example
 
-=== "Query"
-    ```graphql linenums="1"
-    query {
-      fileUploadOptions(scope: "quote-attachments"){
-        scope
-        maxFileSize
-        allowedExtensions
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Return"
-    ```graphql linenums="1"
-    {
-      "data": {
-        "fileUploadOptions": {
-          "scope": "quote-attachments",
-          "maxFileSize": 10485760,
-          "allowedExtensions": [
-            ".csv",
-            ".docx",
-            ".jpg",
-            ".pdf",
-            ".png",
-            ".txt",
-            ".xlsx"
-          ]
-        }
-      }
+```json title="Query"
+query {
+  fileUploadOptions(scope: "quote-attachments"){
+    scope
+    maxFileSize
+    allowedExtensions
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "fileUploadOptions": {
+      "scope": "quote-attachments",
+      "maxFileSize": 10485760,
+      "allowedExtensions": [
+        ".csv",
+        ".docx",
+        ".jpg",
+        ".pdf",
+        ".png",
+        ".txt",
+        ".xlsx"
+      ]
     }
-    ```
+  }
+}
+```
+
+</div>

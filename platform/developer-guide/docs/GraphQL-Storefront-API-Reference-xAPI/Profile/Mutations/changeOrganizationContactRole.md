@@ -18,28 +18,31 @@ The `InputChangeOrganizationContactRoleType!` provides the necessary input value
 |---------------------------------------------------------------------	|------------------------------------------------------	|
 | [`CustomIdentityResultType`](../Objects/CustomIdentityResultType.md)  | The result of an identity-related operation.         	|
 
+## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation changeOrganizationContactRole($command:  InputChangeOrganizationContactRoleType!){
-      changeOrganizationContactRole(command:$command){
-        succeeded
-        errors
-        {
-          code
-          description
-        }
-      }
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
+```json title="Mutation"
+mutation changeOrganizationContactRole($command:  InputChangeOrganizationContactRoleType!){
+  changeOrganizationContactRole(command:$command){
+    succeeded
+    errors
     {
-    "command":
-      {
-      "userId": "237a4784-d25f-419e-b4d7-cf151393d1cc",
-      "roleIds": ["org-maintainer","purchasing-agent"]
-      }
+      code
+      description
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command":
+  {
+    "userId": "237a4784-d25f-419e-b4d7-cf151393d1cc",
+    "roleIds": ["org-maintainer","purchasing-agent"]
+  }
+}
+```
+
+</div>

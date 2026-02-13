@@ -14,56 +14,43 @@ This query allows you to retrieve information about the available order statuses
 |---------------------------------------------------------------------------	|------------------------------------------- |
 | [`LocalizedSettingResponseType`](../objects/LocalizedSettingResponseType.md)  | Contains information about order statuses. |
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
-    {
-      orderStatuses(cultureName: "de-DE") {
-        items {
-            key
-            value
-        }
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  orderStatuses(cultureName: "de-DE") {
+    items {
+        key
+        value
+    }
+  }
+}
+```
+
+```json title="Return"
+​{​
+  "data" {​
+    "orderStatuses": {
+        "items": [
+            {
+              "key": "Cancelled",
+              "value": "CancelledEN"
+            },
+            {
+              "key": "Completed",
+              "value": "Completed"
+            },
+            {
+              "key": "Confirmed",
+              "value": "Confirmed" 
+            },
+            // more items
+        ]
       }
     }
-    ```
+}
+```
 
-=== "Return"
-    ```json linenums="1"
-    ​{​
-      "data" {​
-        "orderStatuses": {
-            "items": [
-                {
-                    "key": "Cancelled",
-                    "value": "CancelledEN"
-                },
-                {
-                    "key": "Completed",
-                    "value": "Complteted"
-                },
-                {
-                    "key": "Confirmed",
-                    "value": "Confirmed" 
-                },
-                {
-                    "key": "New",
-                    "value": "NewEn" 
-                },
-                {
-                    "key": "Payment required",
-                    "value": "Payment required" 
-                },
-                {
-                    "key": "Pending",
-                    "value": "Pending" 
-                },
-                {
-                    "key": "Processing",
-                    "value": "Processing" 
-                }
-            ]
-        }
-      }
-    }
-    ```
+</div>

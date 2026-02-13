@@ -16,24 +16,26 @@ This query checks if a user is eligible to leave feedback for a specific entity,
 |------------------|--------------------------------------------|  
 | `Boolean`        | Returns `true` if feedback can be left, otherwise `false`. |  
 
-## Examples  
+## Example
 
-=== "Query"  
-    ```json linenums="1"  
-    {  
-      canLeaveFeedback(  
-        storeId: "B2B-store",  
-        entityId: "product-12345",  
-        entityType: "Product"  
-      )  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Return"  
-    ```json linenums="1"  
-    {  
-      "data": {  
-        "canLeaveFeedback": true  
-      }  
-    }  
-    ```  
+```json title="Query"
+{  
+  canLeaveFeedback(  
+    storeId: "B2B-store",  
+    entityId: "product-12345",  
+    entityType: "Product"  
+  )  
+}  
+```
+
+```json title="Return"
+{  
+  "data": {  
+    "canLeaveFeedback": true  
+  }  
+} 
+```
+
+</div>

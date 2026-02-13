@@ -20,28 +20,30 @@ The `CreateReviewCommandType` represents the input data required to create a new
 |--------------------------------------------------------|-----------------------------------------------------------------------------|
 | [`CreateReviewResult`](../Objects/createReviewResult.md) | The result of the review creation, including its status and any additional data. |  
 
-## Examples  
+## Example
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation($command: CreateReviewCommandType!) {  
-      createReview(command: $command) {  
-        success  
-        message  
-        reviewId  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "storeId": "B2B-store",  
-        "entityId": "24caa0d5a05145f3a3433a2930fbfb0f",  
-        "entityType": "Product",  
-        "review": "Excellent quality, highly recommended!",  
-        "rating": 5  
-      }  
-    }  
-    ```  
+```json title="Mutation"
+mutation($command: CreateReviewCommandType!) {  
+  createReview(command: $command) {  
+    success  
+    message  
+    reviewId  
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "storeId": "B2B-store",  
+    "entityId": "24caa0d5a05145f3a3433a2930fbfb0f",  
+    "entityType": "Product",  
+    "review": "Excellent quality, highly recommended!",  
+    "rating": 5  
+  }  
+}  
+```
+
+</div>

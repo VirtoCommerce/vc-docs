@@ -17,49 +17,48 @@ This query is used to retrieve a specific menu based on the provided criteria.
 |---------------------------------------------------------	|--------------------------	|
 | [`MenuLinkListType`](../Objects/MenuLinkListType.md)      |  A list of menu links.   	|
 
-## Examples
+## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-      menu(
-        storeId: "B2B-store"
-        cultureName: "en-US"
-        name: "Bolts"
-      ) {
-        items {
-          url
-          title
-        }
-      }
+```json title="Query"
+{
+  menu(
+    storeId: "B2B-store"
+    cultureName: "en-US"
+    name: "Bolts"
+  ) {
+    items {
+      url
+      title
     }
-    ```
+  }
+}
+```
 
-
-=== "Return"
-
-    ```json linenums="1"
-    "data": {
-        "menu": { 
-            "items": [ 
-                { 
-                  "url": "/bolts/freight-car-bolts", 
-                  "title": "Freight car bolts" 
-                }, 
-                { 
-                  "url": "/bolts/carriage-bolts", 
-                  "title": "Carriage bolts" 
-                }, 
-                { 
-                  "url": "/bolts/eyebolts", 
-                  "title": "Eyebolts" 
-                }, 
-                { 
-                  "url": "/bolts/flange-bolts", 
-                  "title": "Flange Bolts" 
-                } 
-            ] 
-        } 
+```json title="Return"
+"data": {
+    "menu": { 
+        "items": [ 
+            { 
+              "url": "/bolts/freight-car-bolts", 
+              "title": "Freight car bolts" 
+            }, 
+            { 
+              "url": "/bolts/carriage-bolts", 
+              "title": "Carriage bolts" 
+            }, 
+            { 
+              "url": "/bolts/eyebolts", 
+              "title": "Eyebolts" 
+            }, 
+            { 
+              "url": "/bolts/flange-bolts", 
+              "title": "Flange Bolts" 
+            } 
+        ] 
     } 
-    ```
+} 
+```
+
+</div>

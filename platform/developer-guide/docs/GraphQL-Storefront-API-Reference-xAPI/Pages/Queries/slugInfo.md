@@ -19,46 +19,48 @@ This query retrieves information about an entity associated with a specific perm
 | [`SlugInfoResponseType`](../Objects/SlugInfoResponseType.md)      | Details of the entity, including its ID, status, language, type, and semantic URL. |  
 
 
-## Examples  
+## Example
 
-=== "Query"  
-    ```json linenums="1"  
-    {  
-      slugInfo(  
-        permalink: "/test-2"  
-        storeId: "B2B-store"  
-        cultureName: "en-US"  
-      ) {  
-        entityInfo {  
-          id  
-          isActive  
-          languageCode  
-          objectId  
-          objectType  
-          semanticUrl  
-          __typename  
-        }  
-        __typename  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Return"  
-    ```json linenums="1"  
-    {  
-      "data": {  
-        "slugInfo": {  
-          "entityInfo": {  
-            "id": "24caa0d5a05145f3a3433a2930fbfb0f",  
-            "isActive": true,  
-            "languageCode": "en-US",  
-            "objectId": "24caa0d5a05145f3a3433a2930fbfb0f",  
-            "objectType": "Pages",  
-            "semanticUrl": "/test-2",  
-            "__typename": "SeoInfo"  
-          },  
-          "__typename": "SlugInfoResponseType"  
-        }  
-      }  
+```json title="Query"
+{  
+  slugInfo(  
+    permalink: "/test-2"  
+    storeId: "B2B-store"  
+    cultureName: "en-US"  
+  ) {  
+    entityInfo {  
+      id  
+      isActive  
+      languageCode  
+      objectId  
+      objectType  
+      semanticUrl  
+      __typename  
     }  
-    ```  
+    __typename  
+  }  
+}  
+```
+
+```json title="Return"
+{  
+  "data": {  
+    "slugInfo": {  
+      "entityInfo": {  
+        "id": "24caa0d5a05145f3a3433a2930fbfb0f",  
+        "isActive": true,  
+        "languageCode": "en-US",  
+        "objectId": "24caa0d5a05145f3a3433a2930fbfb0f",  
+        "objectType": "Pages",  
+        "semanticUrl": "/test-2",  
+        "__typename": "SeoInfo"  
+      },  
+      "__typename": "SlugInfoResponseType"  
+    }  
+  }  
+}  
+```
+
+</div>

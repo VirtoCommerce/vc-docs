@@ -17,18 +17,22 @@ The `InputDeleteContactType!` represents the input object for deleting a contact
 |----------------------	  |-------------------------------------------------------------|
 | `Boolean`               | Indicates the success or failure of the deletion operation. |
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: InputDeleteContactType!){
-      deleteContact(command: $command)
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "contactId": "550e9b14-ddde-46fe-bc28-0afec83ade96"
-      }
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation($command: InputDeleteContactType!){
+  deleteContact(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "contactId": "550e9b14-ddde-46fe-bc28-0afec83ade96"
+  }
+}
+```
+
+</div>

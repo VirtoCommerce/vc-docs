@@ -6,9 +6,9 @@ This mutation updates the dynamic properties of the order.
 
 The `InputUpdateOrderDynamicPropertiesType` is a type that represents the input object for updating dynamic properties of an order. 
 
-| Field                                                                                                                   | Description                                                                            |
-|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| `orderId`  ==String==                                                                                                   | The Id of the order for which the dynamic properties will be updated.                  |
+| Field                                                                                   | Description                                     |
+|-----------------------------------------------------------------------------------------|-------------------------------------------------|
+| `orderId`  ==String==                                                                   | The Id of the order for which the dynamic properties will be updated. |
 | `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType)    | Dynamic property value types representing the updated dynamic properties of the order. |
 
 ## Possible returns
@@ -18,33 +18,36 @@ The `InputUpdateOrderDynamicPropertiesType` is a type that represents the input 
 | [`CustomerOrderType`](../objects/customer-order-type.md)           	|  A customer order.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation updateOrderDynamicProperties ($command: InputUpdateOrderDynamicPropertiesType!) {
-        updateOrderDynamicProperties (command: $command)
-        {
-            id
-            dynamicProperties
-            {
-                value
-                name
-            }
-        }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateOrderDynamicProperties ($command: InputUpdateOrderDynamicPropertiesType!) {
+    updateOrderDynamicProperties (command: $command)
     {
-      "command": {
-        "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
-        "dynamicProperties": [
+        id
+        dynamicProperties
         {
-            "name": "propery1",
-            "value": "value1"
+            value
+            name
         }
-        ]
-      }
     }
-    ```
+}
+```
 
+```json title="Variables"
+{
+  "command": {
+    "orderId": "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
+    "dynamicProperties": [
+      {
+        "name": "property1",
+        "value": "value1"
+      }
+    ]
+  }
+}
+```
+
+</div>

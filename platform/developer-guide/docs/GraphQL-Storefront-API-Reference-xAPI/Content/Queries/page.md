@@ -17,35 +17,34 @@ This query retrieves information about a specific page based on the provided cri
 | [`PageType`](../Objects/PageType.md)        	            |  Details of the requested page.          	|
 
 
-## Examples
+## Example
 
+<div class="grid" markdown>
 
-=== "Query"
+```json title="Query"
+{
+  page(storeId: "B2B-store", cultureName: "en-US", id: "12345") {
+    id
+    name
+    relativeUrl
+    permalink
+    content
+  }
+}
+```
 
-    ```json linenums="1"
-    {
-      page(storeId: "B2B-store", cultureName: "en-US", id: "12345") {
-        id
-        name
-        relativeUrl
-        permalink
-        content
-      }
+```json title="Return"
+{
+  "data": {
+    "page": {
+      "id": "12345",
+      "name": "Example Page",
+      "relativeUrl": "/example-page",
+      "permalink": "/example-page",
+      "content": "<p>This is an example page.</p>"
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-        "page": {
-          "id": "12345",
-          "name": "Example Page",
-          "relativeUrl": "/example-page",
-          "permalink": "/example-page",
-          "content": "<p>This is an example page.</p>"
-        }
-      }
-    }
-    ```
+</div>

@@ -19,61 +19,61 @@ This query retrieves all contextual information required to initialize and rende
 | --------------------------- | -------------------------------------------------------------- |
 | [`PageContextResponseType`](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType) | A combined object containing all contextual data required to initialize and render a storefront page. |
 
-## Examples
+## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-      pageContext(
-        domain: "localhost"
-        storeId: "B2B-store"
-        cultureName: "en-US"
-        permalink: "/"
-        organizationId: "OrganizationId"
-        userId: "UserId"
-      ) {
-          slugInfo {
-            entityInfo {
-              id
-            }
-          }
-        store {
-          storeId
-        }
-        whiteLabelingSettings {
-          logoUrl
-        }
-          user {
-            id
-            userName
-          }
-        }
-    }
-    ```
-
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-        "pageContext": {
-        "slugInfo": {
-            "entityInfo": {
-            "id": "92ab56ae-4199-47dc-"
-            }
-        },
-        "store": {
-            "storeId": "B2B-store"
-        },
-        "whiteLabelingSettings": {
-            "logoUrl": "https://virtostart-main.govirto.com/cms-content/assets/customization/logo_B2B-store_1750915110008.png"
-        },
-        "user": {
-            "id": "UserId",
-            "userName": "Anonymous"
-        }
+```json title="Query"
+{
+  pageContext(
+    domain: "localhost"
+    storeId: "B2B-store"
+    cultureName: "en-US"
+    permalink: "/"
+    organizationId: "OrganizationId"
+    userId: "UserId"
+  ) {
+      slugInfo {
+        entityInfo {
+          id
         }
       }
+    store {
+      storeId
     }
-    ```
+    whiteLabelingSettings {
+      logoUrl
+    }
+      user {
+        id
+        userName
+      }
+    }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "pageContext": {
+    "slugInfo": {
+        "entityInfo": {
+        "id": "92ab56ae-4199-47dc-"
+        }
+    },
+    "store": {
+        "storeId": "B2B-store"
+    },
+    "whiteLabelingSettings": {
+        "logoUrl": "https://virtostart-main.govirto.com/cms-content/assets/customization/logo_B2B-store_1750915110008.png"
+    },
+    "user": {
+        "id": "UserId",
+        "userName": "Anonymous"
+    }
+    }
+  }
+}
+```
+
+</div>

@@ -21,65 +21,67 @@ This query retrieves customer reviews associated with a specific entity, such as
 |--------------------------------------------------------------------|-----------------------------------------------------------------|  
 | [`CustomerReviewConnection`](../Objects/CustomerReviewConnection.md) | A paginated list of customer reviews matching the query criteria. |  
 
-## Examples  
+## Example
 
-=== "Query"  
-    ```json linenums="1"  
-    {  
-      customerReviews(  
-        after: "cursor123",  
-        first: 10,  
-        keyword: "great",  
-        sort: "rating_desc",  
-        storeId: "B2B-store",  
-        entityId: "product-12345",  
-        entityType: "Product",  
-        filter: "rating:5"  
-      ) {  
-        totalCount  
-        edges {  
-          cursor  
-          node {  
-            id  
-            rating  
-            comment  
-            author  
-          }  
-        }  
-        pageInfo {  
-          hasNextPage  
-          hasPreviousPage  
-          startCursor  
-          endCursor  
-        }  
+<div class="grid" markdown>
+
+```json title="Query"
+{  
+  customerReviews(  
+    after: "cursor123",  
+    first: 10,  
+    keyword: "great",  
+    sort: "rating_desc",  
+    storeId: "B2B-store",  
+    entityId: "product-12345",  
+    entityType: "Product",  
+    filter: "rating:5"  
+  ) {  
+    totalCount  
+    edges {  
+      cursor  
+      node {  
+        id  
+        rating  
+        comment  
+        author  
       }  
     }  
-    ```  
+    pageInfo {  
+      hasNextPage  
+      hasPreviousPage  
+      startCursor  
+      endCursor  
+    }  
+  }  
+}  
+```
 
-=== "Return"  
-    ```json linenums="1"  
-    {  
-      "data": {  
-        "customerReviews": {  
-          "totalCount": 25,  
-          "edges": [  
-            {  
-              "cursor": "cursor123",  
-              "node": {  
-                "id": "review1",  
-                "rating": 5,  
-                "comment": "Excellent product!",  
-                "author": "John Doe"  
-              }  
-            }  
-          ],  
-          "pageInfo": {  
-            "hasNextPage": true,  
-            "hasPreviousPage": false,  
-            "startCursor": "cursor123",  
-            "endCursor": "cursor456"  
+```json title="Return"
+{  
+  "data": {  
+    "customerReviews": {  
+      "totalCount": 25,  
+      "edges": [  
+        {  
+          "cursor": "cursor123",  
+          "node": {  
+            "id": "review1",  
+            "rating": 5,  
+            "comment": "Excellent product!",  
+            "author": "John Doe"  
           }  
         }  
+      ],  
+      "pageInfo": {  
+        "hasNextPage": true,  
+        "hasPreviousPage": false,  
+        "startCursor": "cursor123",  
+        "endCursor": "cursor456"  
       }  
     }  
-    ```  
+  }  
+}  
+```
+
+</div>  
