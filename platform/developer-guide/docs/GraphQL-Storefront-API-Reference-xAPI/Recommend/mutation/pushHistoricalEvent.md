@@ -1,4 +1,4 @@
-# PushHistoricalEvent ==~mutation~==
+# pushHistoricalEvent ==~mutation~==
 
 This mutation logs a historical event for a user, such as product views or purchases, in order to enhance the recommendation engine. The historical event helps track user interactions and optimize future recommendations.
 
