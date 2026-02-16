@@ -13529,11 +13529,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Main navigation item with nested items -->
 
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_9_16_2"
+        type="checkbox"
+        id="__nav_9_16_2"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_9_16_2"
+          id="__nav_9_16_2_label"
+          tabindex="0"
+        >
+          Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="3"
+        aria-labelledby="__nav_9_16_2_label"
+        aria-expanded="false"
+          aria-label="Queries"
+      >
+        <label class="md-nav__title" for="__nav_9_16_2">
+          <span class="md-nav__icon md-icon"></span>
+          Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
     <li class="md-nav__item">
       <a href="../../../xFrontend/PageContext/" class="md-nav__link">
-        Query
+        PageContext
       </a>
     </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
   
 
             
@@ -20276,8 +20353,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#examples" class="md-nav__link">
-        Examples
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -26851,8 +26928,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#examples" class="md-nav__link">
-        Examples
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -26881,7 +26958,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 10, 2024 10:43:17 UTC">October 10, 2024</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 16, 2026 15:13:03 UTC">February 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26961,538 +27038,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Related products query</label><label for="__tabbed_1_2">Return</label><label for="__tabbed_1_3">Products bought together query </label><label for="__tabbed_1_4">Return</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="err">recomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">(</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">s</span><span class="kc">t</span><span class="err">oreId</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Electronics&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="err">cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US&quot;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="err">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;related-products&quot;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="err">produc</span><span class="kc">t</span><span class="err">Id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Product-ID-12345&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="err">curre</span><span class="kc">n</span><span class="err">cyCode</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="err">maxRecomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="err">produc</span><span class="kc">ts</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="err">id</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="kc">na</span><span class="err">me</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span><span class="err">code</span><span class="w">  </span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;recommendations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product-1&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smartphone XYZ&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">          </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ123&quot;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product-2&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smartphone ABC&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">          </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC456&quot;</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span>
-<span class="normal"><a href="#__codelineno-2-35">35</a></span>
-<span class="normal"><a href="#__codelineno-2-36">36</a></span>
-<span class="normal"><a href="#__codelineno-2-37">37</a></span>
-<span class="normal"><a href="#__codelineno-2-38">38</a></span>
-<span class="normal"><a href="#__codelineno-2-39">39</a></span>
-<span class="normal"><a href="#__codelineno-2-40">40</a></span>
-<span class="normal"><a href="#__codelineno-2-41">41</a></span>
-<span class="normal"><a href="#__codelineno-2-42">42</a></span>
-<span class="normal"><a href="#__codelineno-2-43">43</a></span>
-<span class="normal"><a href="#__codelineno-2-44">44</a></span>
-<span class="normal"><a href="#__codelineno-2-45">45</a></span>
-<span class="normal"><a href="#__codelineno-2-46">46</a></span>
-<span class="normal"><a href="#__codelineno-2-47">47</a></span>
-<span class="normal"><a href="#__codelineno-2-48">48</a></span>
-<span class="normal"><a href="#__codelineno-2-49">49</a></span>
-<span class="normal"><a href="#__codelineno-2-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="err">query</span><span class="w"> </span><span class="err">Ge</span><span class="kc">t</span><span class="err">Produc</span><span class="kc">t</span><span class="err">Recomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">(</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="err">$s</span><span class="kc">t</span><span class="err">oreId</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g!</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="err">$userId</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="err">$curre</span><span class="kc">n</span><span class="err">cyCode</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="err">$cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="err">$produc</span><span class="kc">t</span><span class="err">Id</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="err">$model</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="err">$maxRecomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="err">I</span><span class="kc">nt</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="err">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="err">recomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">(</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="err">s</span><span class="kc">t</span><span class="err">oreId</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B2B-store&quot;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="err">userId</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bd502614-9e68-4920-a4ac-3f51e258d8d2&quot;</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="err">produc</span><span class="kc">t</span><span class="err">Id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7d93937c-740b-420c-9a34-3353dc0aaa22&quot;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="err">curre</span><span class="kc">n</span><span class="err">cyCode</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="err">cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="s2">    model: &quot;</span><span class="err">bough</span><span class="kc">t</span><span class="mi">-</span><span class="kc">t</span><span class="err">oge</span><span class="kc">t</span><span class="err">her&quot;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="err">    maxRecommendations: 6</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="err">  ) {</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="err">    products {</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="err">      id</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="err">      name</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="err">      code</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="err">      hasVariations</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="err">      imgSrc</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="err">      vendor {</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="err">        name</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="err">      }</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="err">      price {</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="err">        actual {</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="err">          amount</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="err">          formattedAmount</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="err">        }</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="err">        list {</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="err">          amount</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="err">          formattedAmount</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="err">        }</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="err">      }</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="err">      minVariationPrice {</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="err">        actual {</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="err">          amount</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="err">          formattedAmount</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="err">        }</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="err">        list {</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="err">          amount</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="err">          formattedAmount</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="err">        }</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="err">      }</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="err">    }</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="err">  }</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="err">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">  1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">  2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">  3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">  4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">  5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">  6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">  7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">  8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">  9</a></span>
-<span class="normal"><a href="#__codelineno-3-10"> 10</a></span>
-<span class="normal"><a href="#__codelineno-3-11"> 11</a></span>
-<span class="normal"><a href="#__codelineno-3-12"> 12</a></span>
-<span class="normal"><a href="#__codelineno-3-13"> 13</a></span>
-<span class="normal"><a href="#__codelineno-3-14"> 14</a></span>
-<span class="normal"><a href="#__codelineno-3-15"> 15</a></span>
-<span class="normal"><a href="#__codelineno-3-16"> 16</a></span>
-<span class="normal"><a href="#__codelineno-3-17"> 17</a></span>
-<span class="normal"><a href="#__codelineno-3-18"> 18</a></span>
-<span class="normal"><a href="#__codelineno-3-19"> 19</a></span>
-<span class="normal"><a href="#__codelineno-3-20"> 20</a></span>
-<span class="normal"><a href="#__codelineno-3-21"> 21</a></span>
-<span class="normal"><a href="#__codelineno-3-22"> 22</a></span>
-<span class="normal"><a href="#__codelineno-3-23"> 23</a></span>
-<span class="normal"><a href="#__codelineno-3-24"> 24</a></span>
-<span class="normal"><a href="#__codelineno-3-25"> 25</a></span>
-<span class="normal"><a href="#__codelineno-3-26"> 26</a></span>
-<span class="normal"><a href="#__codelineno-3-27"> 27</a></span>
-<span class="normal"><a href="#__codelineno-3-28"> 28</a></span>
-<span class="normal"><a href="#__codelineno-3-29"> 29</a></span>
-<span class="normal"><a href="#__codelineno-3-30"> 30</a></span>
-<span class="normal"><a href="#__codelineno-3-31"> 31</a></span>
-<span class="normal"><a href="#__codelineno-3-32"> 32</a></span>
-<span class="normal"><a href="#__codelineno-3-33"> 33</a></span>
-<span class="normal"><a href="#__codelineno-3-34"> 34</a></span>
-<span class="normal"><a href="#__codelineno-3-35"> 35</a></span>
-<span class="normal"><a href="#__codelineno-3-36"> 36</a></span>
-<span class="normal"><a href="#__codelineno-3-37"> 37</a></span>
-<span class="normal"><a href="#__codelineno-3-38"> 38</a></span>
-<span class="normal"><a href="#__codelineno-3-39"> 39</a></span>
-<span class="normal"><a href="#__codelineno-3-40"> 40</a></span>
-<span class="normal"><a href="#__codelineno-3-41"> 41</a></span>
-<span class="normal"><a href="#__codelineno-3-42"> 42</a></span>
-<span class="normal"><a href="#__codelineno-3-43"> 43</a></span>
-<span class="normal"><a href="#__codelineno-3-44"> 44</a></span>
-<span class="normal"><a href="#__codelineno-3-45"> 45</a></span>
-<span class="normal"><a href="#__codelineno-3-46"> 46</a></span>
-<span class="normal"><a href="#__codelineno-3-47"> 47</a></span>
-<span class="normal"><a href="#__codelineno-3-48"> 48</a></span>
-<span class="normal"><a href="#__codelineno-3-49"> 49</a></span>
-<span class="normal"><a href="#__codelineno-3-50"> 50</a></span>
-<span class="normal"><a href="#__codelineno-3-51"> 51</a></span>
-<span class="normal"><a href="#__codelineno-3-52"> 52</a></span>
-<span class="normal"><a href="#__codelineno-3-53"> 53</a></span>
-<span class="normal"><a href="#__codelineno-3-54"> 54</a></span>
-<span class="normal"><a href="#__codelineno-3-55"> 55</a></span>
-<span class="normal"><a href="#__codelineno-3-56"> 56</a></span>
-<span class="normal"><a href="#__codelineno-3-57"> 57</a></span>
-<span class="normal"><a href="#__codelineno-3-58"> 58</a></span>
-<span class="normal"><a href="#__codelineno-3-59"> 59</a></span>
-<span class="normal"><a href="#__codelineno-3-60"> 60</a></span>
-<span class="normal"><a href="#__codelineno-3-61"> 61</a></span>
-<span class="normal"><a href="#__codelineno-3-62"> 62</a></span>
-<span class="normal"><a href="#__codelineno-3-63"> 63</a></span>
-<span class="normal"><a href="#__codelineno-3-64"> 64</a></span>
-<span class="normal"><a href="#__codelineno-3-65"> 65</a></span>
-<span class="normal"><a href="#__codelineno-3-66"> 66</a></span>
-<span class="normal"><a href="#__codelineno-3-67"> 67</a></span>
-<span class="normal"><a href="#__codelineno-3-68"> 68</a></span>
-<span class="normal"><a href="#__codelineno-3-69"> 69</a></span>
-<span class="normal"><a href="#__codelineno-3-70"> 70</a></span>
-<span class="normal"><a href="#__codelineno-3-71"> 71</a></span>
-<span class="normal"><a href="#__codelineno-3-72"> 72</a></span>
-<span class="normal"><a href="#__codelineno-3-73"> 73</a></span>
-<span class="normal"><a href="#__codelineno-3-74"> 74</a></span>
-<span class="normal"><a href="#__codelineno-3-75"> 75</a></span>
-<span class="normal"><a href="#__codelineno-3-76"> 76</a></span>
-<span class="normal"><a href="#__codelineno-3-77"> 77</a></span>
-<span class="normal"><a href="#__codelineno-3-78"> 78</a></span>
-<span class="normal"><a href="#__codelineno-3-79"> 79</a></span>
-<span class="normal"><a href="#__codelineno-3-80"> 80</a></span>
-<span class="normal"><a href="#__codelineno-3-81"> 81</a></span>
-<span class="normal"><a href="#__codelineno-3-82"> 82</a></span>
-<span class="normal"><a href="#__codelineno-3-83"> 83</a></span>
-<span class="normal"><a href="#__codelineno-3-84"> 84</a></span>
-<span class="normal"><a href="#__codelineno-3-85"> 85</a></span>
-<span class="normal"><a href="#__codelineno-3-86"> 86</a></span>
-<span class="normal"><a href="#__codelineno-3-87"> 87</a></span>
-<span class="normal"><a href="#__codelineno-3-88"> 88</a></span>
-<span class="normal"><a href="#__codelineno-3-89"> 89</a></span>
-<span class="normal"><a href="#__codelineno-3-90"> 90</a></span>
-<span class="normal"><a href="#__codelineno-3-91"> 91</a></span>
-<span class="normal"><a href="#__codelineno-3-92"> 92</a></span>
-<span class="normal"><a href="#__codelineno-3-93"> 93</a></span>
-<span class="normal"><a href="#__codelineno-3-94"> 94</a></span>
-<span class="normal"><a href="#__codelineno-3-95"> 95</a></span>
-<span class="normal"><a href="#__codelineno-3-96"> 96</a></span>
-<span class="normal"><a href="#__codelineno-3-97"> 97</a></span>
-<span class="normal"><a href="#__codelineno-3-98"> 98</a></span>
-<span class="normal"><a href="#__codelineno-3-99"> 99</a></span>
-<span class="normal"><a href="#__codelineno-3-100">100</a></span>
-<span class="normal"><a href="#__codelineno-3-101">101</a></span>
-<span class="normal"><a href="#__codelineno-3-102">102</a></span>
-<span class="normal"><a href="#__codelineno-3-103">103</a></span>
-<span class="normal"><a href="#__codelineno-3-104">104</a></span>
-<span class="normal"><a href="#__codelineno-3-105">105</a></span>
-<span class="normal"><a href="#__codelineno-3-106">106</a></span>
-<span class="normal"><a href="#__codelineno-3-107">107</a></span>
-<span class="normal"><a href="#__codelineno-3-108">108</a></span>
-<span class="normal"><a href="#__codelineno-3-109">109</a></span>
-<span class="normal"><a href="#__codelineno-3-110">110</a></span>
-<span class="normal"><a href="#__codelineno-3-111">111</a></span>
-<span class="normal"><a href="#__codelineno-3-112">112</a></span>
-<span class="normal"><a href="#__codelineno-3-113">113</a></span>
-<span class="normal"><a href="#__codelineno-3-114">114</a></span>
-<span class="normal"><a href="#__codelineno-3-115">115</a></span>
-<span class="normal"><a href="#__codelineno-3-116">116</a></span>
-<span class="normal"><a href="#__codelineno-3-117">117</a></span>
-<span class="normal"><a href="#__codelineno-3-118">118</a></span>
-<span class="normal"><a href="#__codelineno-3-119">119</a></span>
-<span class="normal"><a href="#__codelineno-3-120">120</a></span>
-<span class="normal"><a href="#__codelineno-3-121">121</a></span>
-<span class="normal"><a href="#__codelineno-3-122">122</a></span>
-<span class="normal"><a href="#__codelineno-3-123">123</a></span>
-<span class="normal"><a href="#__codelineno-3-124">124</a></span>
-<span class="normal"><a href="#__codelineno-3-125">125</a></span>
-<span class="normal"><a href="#__codelineno-3-126">126</a></span>
-<span class="normal"><a href="#__codelineno-3-127">127</a></span>
-<span class="normal"><a href="#__codelineno-3-128">128</a></span>
-<span class="normal"><a href="#__codelineno-3-129">129</a></span>
-<span class="normal"><a href="#__codelineno-3-130">130</a></span>
-<span class="normal"><a href="#__codelineno-3-131">131</a></span>
-<span class="normal"><a href="#__codelineno-3-132">132</a></span>
-<span class="normal"><a href="#__codelineno-3-133">133</a></span>
-<span class="normal"><a href="#__codelineno-3-134">134</a></span>
-<span class="normal"><a href="#__codelineno-3-135">135</a></span>
-<span class="normal"><a href="#__codelineno-3-136">136</a></span>
-<span class="normal"><a href="#__codelineno-3-137">137</a></span>
-<span class="normal"><a href="#__codelineno-3-138">138</a></span>
-<span class="normal"><a href="#__codelineno-3-139">139</a></span>
-<span class="normal"><a href="#__codelineno-3-140">140</a></span>
-<span class="normal"><a href="#__codelineno-3-141">141</a></span>
-<span class="normal"><a href="#__codelineno-3-142">142</a></span>
-<span class="normal"><a href="#__codelineno-3-143">143</a></span>
-<span class="normal"><a href="#__codelineno-3-144">144</a></span>
-<span class="normal"><a href="#__codelineno-3-145">145</a></span>
-<span class="normal"><a href="#__codelineno-3-146">146</a></span>
-<span class="normal"><a href="#__codelineno-3-147">147</a></span>
-<span class="normal"><a href="#__codelineno-3-148">148</a></span>
-<span class="normal"><a href="#__codelineno-3-149">149</a></span>
-<span class="normal"><a href="#__codelineno-3-150">150</a></span>
-<span class="normal"><a href="#__codelineno-3-151">151</a></span>
-<span class="normal"><a href="#__codelineno-3-152">152</a></span>
-<span class="normal"><a href="#__codelineno-3-153">153</a></span>
-<span class="normal"><a href="#__codelineno-3-154">154</a></span>
-<span class="normal"><a href="#__codelineno-3-155">155</a></span>
-<span class="normal"><a href="#__codelineno-3-156">156</a></span>
-<span class="normal"><a href="#__codelineno-3-157">157</a></span>
-<span class="normal"><a href="#__codelineno-3-158">158</a></span>
-<span class="normal"><a href="#__codelineno-3-159">159</a></span>
-<span class="normal"><a href="#__codelineno-3-160">160</a></span>
-<span class="normal"><a href="#__codelineno-3-161">161</a></span>
-<span class="normal"><a href="#__codelineno-3-162">162</a></span>
-<span class="normal"><a href="#__codelineno-3-163">163</a></span>
-<span class="normal"><a href="#__codelineno-3-164">164</a></span>
-<span class="normal"><a href="#__codelineno-3-165">165</a></span>
-<span class="normal"><a href="#__codelineno-3-166">166</a></span>
-<span class="normal"><a href="#__codelineno-3-167">167</a></span>
-<span class="normal"><a href="#__codelineno-3-168">168</a></span>
-<span class="normal"><a href="#__codelineno-3-169">169</a></span>
-<span class="normal"><a href="#__codelineno-3-170">170</a></span>
-<span class="normal"><a href="#__codelineno-3-171">171</a></span>
-<span class="normal"><a href="#__codelineno-3-172">172</a></span>
-<span class="normal"><a href="#__codelineno-3-173">173</a></span>
-<span class="normal"><a href="#__codelineno-3-174">174</a></span>
-<span class="normal"><a href="#__codelineno-3-175">175</a></span>
-<span class="normal"><a href="#__codelineno-3-176">176</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="nt">&quot;recommendations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">            </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">                </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2a7412c0-fa88-4c98-b2ef-1a7312d68f7b&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3D Kawaii Pencil Case Girls Decompression Pen Pouch Cute Waterproof School Supplies Aesthetic Organizer Box  Korean Stationery&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">                    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ALCOE2126&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">                    </span><span class="nt">&quot;hasVariations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">                    </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://ae01.alicdn.com/kf/S72aa2e07a98c4cb59c057ffae5657838p/3D-Kawaii-Pencil-Case-Girls-Decompression-Pen-Pouch-Cute-Waterproof-School-Supplies-Aesthetic-Organizer-Box-Korean.jpg_470x470.jpg_.webp&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">                    </span><span class="nt">&quot;vendor&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">                    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.990</span><span class="p">,</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.000</span><span class="p">,</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$100.00&quot;</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">                    </span><span class="nt">&quot;minVariationPrice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">                </span><span class="p">},</span>
-<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">                </span><span class="p">{</span>
-<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;46415f23-f4dd-4a77-916f-f1ba2ebceac4&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Soft Wavy Lines Phone Case For iphone 15 11 12 13 14 Pro Max XS MaxCandy Bumper Transparent Cases Cover&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">                    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PA583787&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">                    </span><span class="nt">&quot;hasVariations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">                    </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://ae01.alicdn.com/kf/S9a0635405cd0491583b73797eda9c5fdU/Soft-Wavy-Lines-Phone-Case-For-iphone-15-11-12-13-14-Pro-Max-XS-MaxCandy.jpg_470x470.jpg_.webp&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">                    </span><span class="nt">&quot;vendor&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">                    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.990</span><span class="p">,</span>
-<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.000</span><span class="p">,</span>
-<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$100.00&quot;</span>
-<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">                    </span><span class="nt">&quot;minVariationPrice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-3-60" name="__codelineno-3-60"></a><span class="w">                </span><span class="p">},</span>
-<a id="__codelineno-3-61" name="__codelineno-3-61"></a><span class="w">                </span><span class="p">{</span>
-<a id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ef011d8b-7cae-46cf-86b3-e62334c08c3a&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3pcs/lot Cartoon Creative Fruit Eraser Pupils Exam Pencil Eraser Children&#39;s Stationery Painting Sketch Eraser  School  Kawaii&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-64" name="__codelineno-3-64"></a><span class="w">                    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ALCOE6380&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-65" name="__codelineno-3-65"></a><span class="w">                    </span><span class="nt">&quot;hasVariations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-66" name="__codelineno-3-66"></a><span class="w">                    </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://ae01.alicdn.com/kf/Sc39b47a7cdc24b818eefd4219456e231u/3pcs-lot-Cartoon-Creative-Fruit-Eraser-Pupils-Exam-Pencil-Eraser-Children-s-Stationery-Painting-Sketch-Eraser.jpg_470x470.jpg_.webp&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-67" name="__codelineno-3-67"></a><span class="w">                    </span><span class="nt">&quot;vendor&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-3-68" name="__codelineno-3-68"></a><span class="w">                    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-69" name="__codelineno-3-69"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-70" name="__codelineno-3-70"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.990</span><span class="p">,</span>
-<a id="__codelineno-3-71" name="__codelineno-3-71"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-72" name="__codelineno-3-72"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-73" name="__codelineno-3-73"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-74" name="__codelineno-3-74"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.000</span><span class="p">,</span>
-<a id="__codelineno-3-75" name="__codelineno-3-75"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$100.00&quot;</span>
-<a id="__codelineno-3-76" name="__codelineno-3-76"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-77" name="__codelineno-3-77"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-3-78" name="__codelineno-3-78"></a><span class="w">                    </span><span class="nt">&quot;minVariationPrice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-79" name="__codelineno-3-79"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-80" name="__codelineno-3-80"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-81" name="__codelineno-3-81"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-82" name="__codelineno-3-82"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-83" name="__codelineno-3-83"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-84" name="__codelineno-3-84"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-85" name="__codelineno-3-85"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-86" name="__codelineno-3-86"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-87" name="__codelineno-3-87"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-3-88" name="__codelineno-3-88"></a><span class="w">                </span><span class="p">},</span>
-<a id="__codelineno-3-89" name="__codelineno-3-89"></a><span class="w">                </span><span class="p">{</span>
-<a id="__codelineno-3-90" name="__codelineno-3-90"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f33bae48-c89f-477b-972c-1986405beb45&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-91" name="__codelineno-3-91"></a><span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;14 K Rhodium Plated Rose Gold Ring  - fineness 14 K&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-92" name="__codelineno-3-92"></a><span class="w">                    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LJE-78218335&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-93" name="__codelineno-3-93"></a><span class="w">                    </span><span class="nt">&quot;hasVariations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-94" name="__codelineno-3-94"></a><span class="w">                    </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://s1.apart.pl/products/jewellery/packshot/73065/apart-189-353--0.jpg&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-95" name="__codelineno-3-95"></a><span class="w">                    </span><span class="nt">&quot;vendor&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-3-96" name="__codelineno-3-96"></a><span class="w">                    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-97" name="__codelineno-3-97"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-98" name="__codelineno-3-98"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">123.000</span><span class="p">,</span>
-<a id="__codelineno-3-99" name="__codelineno-3-99"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$123.00&quot;</span>
-<a id="__codelineno-3-100" name="__codelineno-3-100"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-101" name="__codelineno-3-101"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-102" name="__codelineno-3-102"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">123.000</span><span class="p">,</span>
-<a id="__codelineno-3-103" name="__codelineno-3-103"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$123.00&quot;</span>
-<a id="__codelineno-3-104" name="__codelineno-3-104"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-105" name="__codelineno-3-105"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-3-106" name="__codelineno-3-106"></a><span class="w">                    </span><span class="nt">&quot;minVariationPrice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-107" name="__codelineno-3-107"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-108" name="__codelineno-3-108"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">123.0</span><span class="p">,</span>
-<a id="__codelineno-3-109" name="__codelineno-3-109"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$123.00&quot;</span>
-<a id="__codelineno-3-110" name="__codelineno-3-110"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-111" name="__codelineno-3-111"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-112" name="__codelineno-3-112"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">123.0</span><span class="p">,</span>
-<a id="__codelineno-3-113" name="__codelineno-3-113"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$123.00&quot;</span>
-<a id="__codelineno-3-114" name="__codelineno-3-114"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-115" name="__codelineno-3-115"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-3-116" name="__codelineno-3-116"></a><span class="w">                </span><span class="p">},</span>
-<a id="__codelineno-3-117" name="__codelineno-3-117"></a><span class="w">                </span><span class="p">{</span>
-<a id="__codelineno-3-118" name="__codelineno-3-118"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;e3689aabceb44a12be512ec0acd89887&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-119" name="__codelineno-3-119"></a><span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Epson Expression Premium XP-820 Wireless Color Photo Printer/Copier/Scanner/Fax Machine&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-120" name="__codelineno-3-120"></a><span class="w">                    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;553390824&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-121" name="__codelineno-3-121"></a><span class="w">                    </span><span class="nt">&quot;hasVariations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-122" name="__codelineno-3-122"></a><span class="w">                    </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vcst-qa.govirto.com/cms-content/assets/catalog/5aa50/553390824/epson-xp820-1.jpg&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-123" name="__codelineno-3-123"></a><span class="w">                    </span><span class="nt">&quot;vendor&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-3-124" name="__codelineno-3-124"></a><span class="w">                    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-125" name="__codelineno-3-125"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-126" name="__codelineno-3-126"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1000.000</span><span class="p">,</span>
-<a id="__codelineno-3-127" name="__codelineno-3-127"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$1,000.00&quot;</span>
-<a id="__codelineno-3-128" name="__codelineno-3-128"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-129" name="__codelineno-3-129"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-130" name="__codelineno-3-130"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1200.000</span><span class="p">,</span>
-<a id="__codelineno-3-131" name="__codelineno-3-131"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$1,200.00&quot;</span>
-<a id="__codelineno-3-132" name="__codelineno-3-132"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-133" name="__codelineno-3-133"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-3-134" name="__codelineno-3-134"></a><span class="w">                    </span><span class="nt">&quot;minVariationPrice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-135" name="__codelineno-3-135"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-136" name="__codelineno-3-136"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">,</span>
-<a id="__codelineno-3-137" name="__codelineno-3-137"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$1,000.00&quot;</span>
-<a id="__codelineno-3-138" name="__codelineno-3-138"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-139" name="__codelineno-3-139"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-140" name="__codelineno-3-140"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">,</span>
-<a id="__codelineno-3-141" name="__codelineno-3-141"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$1,000.00&quot;</span>
-<a id="__codelineno-3-142" name="__codelineno-3-142"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-143" name="__codelineno-3-143"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-3-144" name="__codelineno-3-144"></a><span class="w">                </span><span class="p">},</span>
-<a id="__codelineno-3-145" name="__codelineno-3-145"></a><span class="w">                </span><span class="p">{</span>
-<a id="__codelineno-3-146" name="__codelineno-3-146"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;98bbbdcc-c4ef-4ca3-85b5-4c14da3ab85a&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-147" name="__codelineno-3-147"></a><span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5pcs Kawaii Sanrio Gel Pen Kuromi Melody Hello Kitty Cinnamoroll Pressing Gel Pen for Girls Students School Supplies Stationery&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-148" name="__codelineno-3-148"></a><span class="w">                    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ALCOE3475&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-149" name="__codelineno-3-149"></a><span class="w">                    </span><span class="nt">&quot;hasVariations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-150" name="__codelineno-3-150"></a><span class="w">                    </span><span class="nt">&quot;imgSrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://ae01.alicdn.com/kf/Sb2882c275c48475f9d77151a4579317b6/5pcs-Kawaii-Sanrio-Gel-Pen-Kuromi-Melody-Hello-Kitty-Cinnamoroll-Pressing-Gel-Pen-for-Girls-Students.jpg_470x470.jpg_.webp&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-151" name="__codelineno-3-151"></a><span class="w">                    </span><span class="nt">&quot;vendor&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-3-152" name="__codelineno-3-152"></a><span class="w">                    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-153" name="__codelineno-3-153"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-154" name="__codelineno-3-154"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.990</span><span class="p">,</span>
-<a id="__codelineno-3-155" name="__codelineno-3-155"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-156" name="__codelineno-3-156"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-157" name="__codelineno-3-157"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-158" name="__codelineno-3-158"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.000</span><span class="p">,</span>
-<a id="__codelineno-3-159" name="__codelineno-3-159"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$100.00&quot;</span>
-<a id="__codelineno-3-160" name="__codelineno-3-160"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-161" name="__codelineno-3-161"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-3-162" name="__codelineno-3-162"></a><span class="w">                    </span><span class="nt">&quot;minVariationPrice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-163" name="__codelineno-3-163"></a><span class="w">                        </span><span class="nt">&quot;actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-164" name="__codelineno-3-164"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-165" name="__codelineno-3-165"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-166" name="__codelineno-3-166"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-3-167" name="__codelineno-3-167"></a><span class="w">                        </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-168" name="__codelineno-3-168"></a><span class="w">                            </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
-<a id="__codelineno-3-169" name="__codelineno-3-169"></a><span class="w">                            </span><span class="nt">&quot;formattedAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$99.99&quot;</span>
-<a id="__codelineno-3-170" name="__codelineno-3-170"></a><span class="w">                        </span><span class="p">}</span>
-<a id="__codelineno-3-171" name="__codelineno-3-171"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-3-172" name="__codelineno-3-172"></a><span class="w">                </span><span class="p">}</span>
-<a id="__codelineno-3-173" name="__codelineno-3-173"></a><span class="w">            </span><span class="p">]</span>
-<a id="__codelineno-3-174" name="__codelineno-3-174"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-175" name="__codelineno-3-175"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-176" name="__codelineno-3-176"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="grid">
+<div class="highlight"><span class="filename">Query</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="err">recomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">(</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="err">s</span><span class="kc">t</span><span class="err">oreId</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B2B-store&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="err">cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="err">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;related-products&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="err">produc</span><span class="kc">t</span><span class="err">Id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Product-ID-12345&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="err">curre</span><span class="kc">n</span><span class="err">cyCode</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="err">maxRecomme</span><span class="kc">n</span><span class="err">da</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="err">produc</span><span class="kc">ts</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="err">id</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="kc">na</span><span class="err">me</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="err">code</span><span class="w">  </span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Return</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nt">&quot;recommendations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">          </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product-1&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smartphone XYZ&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ123&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="p">},</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product-2&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smartphone ABC&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC456&quot;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
+</code></pre></div>
 </div>
                 
               </article>

@@ -13529,11 +13529,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Main navigation item with nested items -->
 
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_9_16_2"
+        type="checkbox"
+        id="__nav_9_16_2"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_9_16_2"
+          id="__nav_9_16_2_label"
+          tabindex="0"
+        >
+          Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="3"
+        aria-labelledby="__nav_9_16_2_label"
+        aria-expanded="false"
+          aria-label="Queries"
+      >
+        <label class="md-nav__title" for="__nav_9_16_2">
+          <span class="md-nav__icon md-icon"></span>
+          Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
     <li class="md-nav__item">
       <a href="../../../xFrontend/PageContext/" class="md-nav__link">
-        Query
+        PageContext
       </a>
     </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
   
 
             
@@ -19862,6 +19939,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#possible-returns" class="md-nav__link">
         Possible returns
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -26839,6 +26926,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#example" class="md-nav__link">
+        Example
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -26861,7 +26958,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 06:27:07 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 16, 2026 15:13:03 UTC">February 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26918,115 +27015,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mutation</label><label for="__tabbed_1_2">Variables</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="err">($comma</span><span class="kc">n</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="err">Ca</span><span class="kc">n</span><span class="err">celQuo</span><span class="kc">te</span><span class="err">Comma</span><span class="kc">n</span><span class="err">dType!)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="err">ca</span><span class="kc">n</span><span class="err">celQuo</span><span class="kc">te</span><span class="err">Reques</span><span class="kc">t</span><span class="err">(comma</span><span class="kc">n</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="err">$comma</span><span class="kc">n</span><span class="err">d)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">id</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="err">s</span><span class="kc">tatus</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="err">s</span><span class="kc">t</span><span class="err">oreId</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="err">cus</span><span class="kc">t</span><span class="err">omerId</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="err">cus</span><span class="kc">t</span><span class="err">omerName</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="err">comme</span><span class="kc">nt</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="kc">nu</span><span class="err">mber</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="err">i</span><span class="kc">te</span><span class="err">ms</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="err">produc</span><span class="kc">t</span><span class="err">Id</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="kc">na</span><span class="err">me</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span><span class="err">sku</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">      </span><span class="err">produc</span><span class="kc">t</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="err">id</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="kc">na</span><span class="err">me</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="err">addresses</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">      </span><span class="err">cou</span><span class="kc">ntr</span><span class="err">yCode</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">      </span><span class="err">cou</span><span class="kc">ntr</span><span class="err">yName</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">      </span><span class="err">ci</span><span class="kc">t</span><span class="err">y</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">      </span><span class="err">regio</span><span class="kc">n</span><span class="err">Name</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">      </span><span class="err">li</span><span class="kc">ne</span><span class="mi">1</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">      </span><span class="err">li</span><span class="kc">ne</span><span class="mi">2</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">      </span><span class="err">email</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">      </span><span class="kc">f</span><span class="err">irs</span><span class="kc">t</span><span class="err">Name</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">      </span><span class="err">las</span><span class="kc">t</span><span class="err">Name</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">      </span><span class="err">pho</span><span class="kc">ne</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">      </span><span class="err">pos</span><span class="kc">tal</span><span class="err">Code</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">      </span><span class="err">orga</span><span class="kc">n</span><span class="err">iza</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">      </span><span class="err">addressType</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="kc">t</span><span class="err">o</span><span class="kc">tals</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">      </span><span class="err">origi</span><span class="kc">nal</span><span class="err">SubTo</span><span class="kc">tal</span><span class="err">ExlTax</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">        </span><span class="err">amou</span><span class="kc">nt</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">      </span><span class="err">subTo</span><span class="kc">tal</span><span class="err">ExlTax</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">        </span><span class="err">amou</span><span class="kc">nt</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">      </span><span class="err">shippi</span><span class="kc">n</span><span class="err">gTo</span><span class="kc">tal</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">        </span><span class="err">amou</span><span class="kc">nt</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="p">{</span><span class="nt">&quot;quoteId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;80d92257-5286-4fe2-933c-e1280d16677f&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sample comment&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="grid">
+<div class="highlight"><span class="filename">Mutation</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">ca</span><span class="kc">n</span><span class="err">celQuo</span><span class="kc">te</span><span class="err">Reques</span><span class="kc">t</span><span class="err">($comma</span><span class="kc">n</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="err">Ca</span><span class="kc">n</span><span class="err">celQuo</span><span class="kc">te</span><span class="err">Comma</span><span class="kc">n</span><span class="err">dType!)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="err">ca</span><span class="kc">n</span><span class="err">celQuo</span><span class="kc">te</span><span class="err">Reques</span><span class="kc">t</span><span class="err">(comma</span><span class="kc">n</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="err">$comma</span><span class="kc">n</span><span class="err">d)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Variables</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;quoteId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;quote-12345&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The customer decided to postpone the purchase.&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</code></pre></div>
 </div>
                 
               </article>

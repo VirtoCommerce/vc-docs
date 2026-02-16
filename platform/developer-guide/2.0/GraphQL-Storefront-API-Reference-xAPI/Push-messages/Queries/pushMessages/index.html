@@ -13529,11 +13529,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Main navigation item with nested items -->
 
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_9_16_2"
+        type="checkbox"
+        id="__nav_9_16_2"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_9_16_2"
+          id="__nav_9_16_2_label"
+          tabindex="0"
+        >
+          Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="3"
+        aria-labelledby="__nav_9_16_2_label"
+        aria-expanded="false"
+          aria-label="Queries"
+      >
+        <label class="md-nav__title" for="__nav_9_16_2">
+          <span class="md-nav__icon md-icon"></span>
+          Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
     <li class="md-nav__item">
       <a href="../../../xFrontend/PageContext/" class="md-nav__link">
-        Query
+        PageContext
       </a>
     </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
   
 
             
@@ -18575,8 +18652,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#examples" class="md-nav__link">
-        Examples
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -26851,8 +26928,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#examples" class="md-nav__link">
-        Examples
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -26881,7 +26958,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2024 08:17:14 UTC">June 20, 2024</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 16, 2026 15:13:03 UTC">February 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26957,78 +27034,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Query</label><label for="__tabbed_1_2">Return</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="n">pushMessages</span><span class="w"> </span><span class="p">(</span><span class="n">unreadOnly</span><span class="p">:</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">cultureName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;en-Us&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">unreadCount</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">items</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">      </span><span class="n">id</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="n">shortMessage</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="n">createdDate</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">      </span><span class="n">isRead</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;pushMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;unreadCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">          </span><span class="nt">&quot;shortMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New notification&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">          </span><span class="nt">&quot;createdDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-02T08:15:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">          </span><span class="nt">&quot;isRead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">          </span><span class="nt">&quot;shortMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Important update&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">          </span><span class="nt">&quot;createdDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-01T16:30:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">          </span><span class="nt">&quot;isRead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="grid">
+<div class="highlight"><span class="filename">Query</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">query</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="err">pushMessages</span><span class="w"> </span><span class="err">(u</span><span class="kc">nrea</span><span class="err">dO</span><span class="kc">nl</span><span class="err">y</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="err">cul</span><span class="kc">ture</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-Us&quot;</span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="err">u</span><span class="kc">nrea</span><span class="err">dCou</span><span class="kc">nt</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="err">i</span><span class="kc">te</span><span class="err">ms</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="err">id</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="err">shor</span><span class="kc">t</span><span class="err">Message</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="err">crea</span><span class="kc">te</span><span class="err">dDa</span><span class="kc">te</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="err">isRead</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Return</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;pushMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;unreadCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">          </span><span class="nt">&quot;shortMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New notification&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="nt">&quot;createdDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-02T08:15:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="nt">&quot;isRead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="nt">&quot;shortMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Important update&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">          </span><span class="nt">&quot;createdDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-01T16:30:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">          </span><span class="nt">&quot;isRead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
+</code></pre></div>
 </div>
                 
               </article>
