@@ -16,3 +16,27 @@ The `UpdateQuoteAttachmentsCommandType!` represents the input required to update
 | Possible return                                          	| Description                                 	|
 |---------------------------------------------------------	|---------------------------------------------	|
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the updated quote.        	|
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updateQuoteAttachments($command: UpdateQuoteAttachmentsCommandType!) {
+  updateQuoteAttachments(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "quote-12345",
+    "urls": [
+      "https://example.com/files/specification-v2.pdf",
+      "https://example.com/files/contract-final.docx"
+    ]
+  }
+}
+```
+
+</div>

@@ -16,43 +16,47 @@ The `UpdateQuoteDynamicPropertiesCommandType!` represents the input required to 
 | -------------------------------------- | ---------------------------------------------- |
 | [`QuoteType`](../objects/QuoteType.md) | Updated quote information with new properties. |
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation {
-      updateQuoteDynamicProperties(
-        command: {
-          quoteId: "6c03681f-clef-4210-afb0-cd849957aacc",
-          dynamicProperties: [
-            {
-              name: "TestDyn2",
-              value: "TestDyn2",
-              locale: "English",
-              cultureName: "en-US"
-            }
-          ]
-        }
-      )
-    }
 
-    ```
+## Example
 
-=== "Return"
-    ```json linenums="1"
-    {
-      data"：{
-        "updateQuoteDynamicProperties": {
-          "id": "6c03681f-clef-4210-afb-cd849957aacc",
-          "dynamicProperties": [
-            {
-              "name": "TestDyn2",
-              "value": "TestDyn2"
-            },
-            {
-              "name": "TestDyn1",
-              "value": "TestDyn1"
-            }
-          ]
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation {
+  updateQuoteDynamicProperties(
+    command: {
+      quoteId: "6c03681f-clef-4210-afb0-cd849957aacc",
+      dynamicProperties: [
+        {
+          name: "TestDyn2",
+          value: "TestDyn2",
+          locale: "English",
+          cultureName: "en-US"
         }
-      }
+      ]
     }
-    ```
+  )
+}
+```
+
+```json title="Variables"
+{
+  data"：{
+    "updateQuoteDynamicProperties": {
+      "id": "6c03681f-clef-4210-afb-cd849957aacc",
+      "dynamicProperties": [
+        {
+          "name": "TestDyn2",
+          "value": "TestDyn2"
+        },
+        {
+          "name": "TestDyn1",
+          "value": "TestDyn1"
+        }
+      ]
+    }
+  }
+}
+```
+
+</div>

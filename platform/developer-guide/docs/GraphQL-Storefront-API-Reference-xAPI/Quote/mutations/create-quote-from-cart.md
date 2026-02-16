@@ -19,42 +19,45 @@ The `CreateQuoteFromCartCommandType!` represents the arguments for `CreateQuoteF
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the order.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation ($command: CreateQuoteFromCartCommandType!){
-      createQuoteFromCart(command: $command)
-          {
-        id
-        number
-        status
-        comment
-            items{
-              productId
-              name
-              sku
-              listPrice{
-                amount
-              }
-              salePrice{
-                amount
-              }
-              selectedTierPrice{
-                quantity
-                price{
-                  amount
-                }
-              }
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation ($command: CreateQuoteFromCartCommandType!){
+  createQuoteFromCart(command: $command)
+      {
+    id
+    number
+    status
+    comment
+        items{
+          productId
+          name
+          sku
+          listPrice{
+            amount
+          }
+          salePrice{
+            amount
+          }
+          selectedTierPrice{
+            quantity
+            price{
+              amount
+            }
           }
       }
-    }
-    ```
+  }
+}
+```
 
-=== "Variables"
-    ```json linenums="1"
-    {"command": 
-      {"cartId": "d34cae74-e863-4a93-a20d-845472b85037",
-        "comment": "Sample comment"
-      }
-    }
-    ```
+```json title="Variables"
+{"command": 
+  {"cartId": "d34cae74-e863-4a93-a20d-845472b85037",
+    "comment": "Sample comment"
+  }
+}
+```
 
+</div>

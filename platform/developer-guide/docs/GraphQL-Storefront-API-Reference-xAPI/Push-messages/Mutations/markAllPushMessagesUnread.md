@@ -8,12 +8,23 @@ This mutation marks all push messages as unread.
 |-----------------|-------------------------------------------------------------------------------------------|
 | `Boolean`       | Indicates whether the operation of marking all push messages as unread was successful or not.|
 
+
 ## Example
 
-```graphql linenums="1"
-mutation markAllPushMessagesUnread {
-markAllPushMessagesUnread
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation MarkAllPushMessagesUnread {
+  markAllPushMessagesUnread
 }
 ```
 
+```json title="Expected response"
+{
+  "data": {
+    "markAllPushMessagesUnread": true
+  }
+}
+```
 
+</div>

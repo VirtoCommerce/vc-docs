@@ -17,21 +17,24 @@ The `DeleteSkyflowCardCommandType!` represents the input object type used for de
 | --------------- | ---------------------------------------------------- |
 | `Boolean`       | Indicates whether the card was successfully deleted. |
 
-=== "Mutation"
 
-    ```json linenums="1"
-    mutation($command: DeleteSkyflowCardCommandType!) {
-    deleteSkyflowCard(command: $command)
-    }
-    ```
+## Example
 
-=== "Variables"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-    "command": {
-        "skyflowId": "12345",
-        "storeId": "B2B-Store"
-    }
-    }
-    ```
+```json title="Mutation"
+mutation($command: DeleteSkyflowCardCommandType!) {
+  deleteSkyflowCard(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "skyflowId": "12345",
+    "storeId": "B2B-Store"
+  }
+}
+```
+
+</div>

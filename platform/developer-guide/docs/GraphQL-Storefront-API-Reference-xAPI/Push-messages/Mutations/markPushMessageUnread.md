@@ -19,8 +19,20 @@ The [InputMarkPushMessageUnreadType!](../Objects/InputMarkPushMessageUnreadType.
 
 ## Example
 
-```graphql linenums="1"
+<div class="grid" markdown>
+
+```json title="Mutation"
 mutation markPushMessageUnread($command: InputMarkPushMessageUnreadType!) {
-markPushMessageUnread(command: $command)
+  markPushMessageUnread(command: $command)
 }
 ```
+
+```json title="Variables"
+{
+  "command": {
+    "messageId": "80d92257-5286-4fe2-933c-e1280d16677f"
+  }
+}
+```
+
+</div>

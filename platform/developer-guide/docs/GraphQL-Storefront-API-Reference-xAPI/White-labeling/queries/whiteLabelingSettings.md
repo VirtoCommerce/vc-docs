@@ -17,50 +17,52 @@ This query allows you to retrieve white labeling settings.
 |------------------------------------------------------|------------------------------------------------|
 | [`WhiteLabelingSettingsType`](../objects/WhiteLabelingSettingsType.md) | The white labeling settings for the given parameters. |
 
-## Examples
+## Example
 
-=== "Query"
-    ```json linenums="1"
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  whiteLabelingSettings(organizationId: "f081c52234754c9c8229aa42d6a19220", storeId: "Electronics", cultureName:"en-US") {
+    userId
+    organizationId
+    logoUrl
+    secondaryLogoUrl
+    faviconUrl
+    favicons {
+      rel
+      type
+      sizes
+      href
+    }
+    themePresetName
+    footerLinks {
+      title
+      url
+      childItems {
+        title
+        url
+      }
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  store(storeId: "B2B-store") {
+    settings
     {
-      whiteLabelingSettings(organizationId: "f081c52234754c9c8229aa42d6a19220", storeId: "Electronics", cultureName:"en-US") {
-        userId
-        organizationId
-        logoUrl
-        secondaryLogoUrl
-        faviconUrl
-        favicons {
-          rel
-          type
-          sizes
-          href
-        }
-        themePresetName
-        footerLinks {
-          title
-          url
-          childItems {
-            title
-            url
-          }
+      modules {
+        moduleId
+        settings {
+          name
+          value
         }
       }
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-    ```json linenums="1"
-    {
-      store(storeId: "Electronics") {
-        settings
-        {
-          modules {
-            moduleId
-            settings {
-              name
-              value
-            }
-          }
-        }
-      }
-    }
-    ```
+</div>

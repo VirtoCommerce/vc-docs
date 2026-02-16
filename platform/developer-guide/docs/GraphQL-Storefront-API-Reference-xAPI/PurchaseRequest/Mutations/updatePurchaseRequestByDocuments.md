@@ -18,21 +18,25 @@ The `InputUpdatePurchaseRequestByDocumentsType!` represents the input object for
 | [`PurchaseRequestType`](../Objects/PurchaseRequestType.md)   | Defines the properties and fields associated with a purchase request.  |  
 
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation updatePurchaseRequestByDocuments($command: InputUpdatePurchaseRequestByDocumentsType!) {  
-      updatePurchaseRequestByDocuments(command: $command) {  
-        id  
-      }  
-    }  
-    ```  
+## Example
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "purchaseRequestId": "",  
-        "documentUrls": []  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation updatePurchaseRequestByDocuments($command: InputUpdatePurchaseRequestByDocumentsType!) {  
+  updatePurchaseRequestByDocuments(command: $command) {  
+    id  
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "purchaseRequestId": "",  
+    "documentUrls": []  
+  }  
+}  
+```
+
+</div>

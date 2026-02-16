@@ -16,20 +16,24 @@ The [InputMarkPushMessageReadType!](../Objects/InputMarkPushMessageReadType.md) 
 |-----------------|-------------------------------------------------------------------------------------------|
 | `Boolean`       | Indicates whether the operation of marking the push message as read was successful or not.|
 
-=== "Mutation"
 
-    ```graphql linenums="1"
-    mutation markPushMessageRead($command: InputMarkPushMessageReadType!) {
-    markPushMessageRead(command: $command)
-    }
-    ```
 
-=== "Variables"
+## Example
 
-    ```graphql linenums="1"
-    {
-    "command": {
-        "messageId": "80d92257-5286-4fe2-933c-e1280d16677f"
-    }
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation markPushMessageRead($command: InputMarkPushMessageReadType!) {
+  markPushMessageRead(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "messageId": "80d92257-5286-4fe2-933c-e1280d16677f"
+  }
+}
+```
+
+</div>

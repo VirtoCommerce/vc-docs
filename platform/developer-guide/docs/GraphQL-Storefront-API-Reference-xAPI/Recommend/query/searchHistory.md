@@ -15,33 +15,32 @@ This query allows you to retrieve the most recent search terms entered by a spec
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [`SearchHistoryResultType`](../object/SearchHistoryResultType.md)  | A list of search terms previously entered by the user in the given context. |
 
-## Examples
+## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```graphql linenums="1"
-    query {
-      searchHistory(storeId: "b2b-store", maxCount: 5) {
-        queries
-      }
+```json title="Query"
+query {
+  searchHistory(storeId: "b2b-store", maxCount: 5) {
+    queries
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "searchHistory": {
+      "queries": [
+        "apple",
+        "epson",
+        "samsung",
+        "xiaomi",
+        "kodak"
+      ]
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-        {
-          "data": {
-            "searchHistory": {
-              "queries": [
-                "apple",
-                "epson",
-                "samsung",
-                "xiaomi",
-                "kodak"
-              ]
-            }
-          }
-        }
-    ```
-
+</div>

@@ -18,75 +18,76 @@ This query allows you to retrieve pickup locations available in a specific store
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | [`PickupLocationConnection`](../objects/pickupLocationConnection.md) | Defines the structure for paginated pickup locations, including edges and cursors. |
 
-## Examples
+## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-    pickupLocations(
-        storeId: "B2B-store"
-        first: 5
-        keyword: "Downtown"
-        sort: 
-    ) {
-        edges {
-        cursor
-        node {
-            id
-            name
-            address
-            geoPoint {
-            latitude
-            longitude
+```json title="Query"
+{
+  pickupLocations(
+    storeId: "B2B-store"
+    first: 5
+    keyword: "Downtown"
+    sort: 
+  ) 
+  {
+      edges {
+      cursor
+      node {
+        id
+        name
+        address
+        geoPoint {
+        latitude
+        longitude
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "pickupLocations": {
+      "edges": [
+        {
+        "cursor": 
+        "node": {
+            "id": 
+            "name": "Downtown Pickup Point",
+            "address": "123 Main Street, Cityville",
+            "geoPoint": {
+            "latitude":
+            "longitude":
             }
         }
+        },
+        {
+          "cursor": 
+          "node": {
+            "id": 
+            "name": "Downtown South",
+            "address": "500 South St, Cityville",
+            "geoPoint": {
+              "latitude": 
+              "longitude": 
+            }
+          }
         }
-        pageInfo {
-        hasNextPage
-        endCursor
-        }
+      ],
+      "pageInfo": {
+        "hasNextPage": true,
+        "endCursor":
+      }
     }
-    }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-    "data": {
-        "pickupLocations": {
-        "edges": [
-            {
-            "cursor": 
-            "node": {
-                "id": 
-                "name": "Downtown Pickup Point",
-                "address": "123 Main Street, Cityville",
-                "geoPoint": {
-                "latitude":
-                "longitude":
-                }
-            }
-            },
-            {
-            "cursor": 
-            "node": {
-                "id": 
-                "name": "Downtown South",
-                "address": "500 South St, Cityville",
-                "geoPoint": {
-                "latitude": 
-                "longitude": 
-                }
-            }
-            }
-        ],
-        "pageInfo": {
-            "hasNextPage": true,
-            "endCursor":
-        }
-        }
-    }
-    }
-    ```
+</div>

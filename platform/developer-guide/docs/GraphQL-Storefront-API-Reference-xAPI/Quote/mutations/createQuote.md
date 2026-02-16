@@ -18,3 +18,34 @@ The `CreateQuoteCommandType!` represents the input required to create a new quot
 | Possible return                                          	| Description                                 	|
 |---------------------------------------------------------	|---------------------------------------------	|
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the created quote.        	|
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation createQuote($command: CreateQuoteCommandType!) {
+  createQuote(command: $command) {
+    id
+    number
+    status
+    storeId
+    userId
+    currencyCode
+    cultureName
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "storeId": "B2B-store",
+    "userId": "user-789",
+    "currencyCode": "USD",
+    "cultureName": "en-US"
+  }
+}
+```
+
+</div>

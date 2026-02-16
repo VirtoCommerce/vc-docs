@@ -16,21 +16,23 @@ The [InputAddFcmTokenType!](../Objects/InputAddFcmTokenType.md) is used to provi
 |-----------------|-------------------------------------------------------------------------------------------|
 | `Boolean`       | Indicates whether the FCM token was successfully added.                                   |
 
-=== "Mutation"
 
-    ```graphql linenums="1"
-    mutation {
-      addFcmToken(command: { token: "qwerty" })
-    }
-    ```
+## Example
 
-=== "Variables"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    {
-      "command": {
-        "token": "qwerty"
-      }
-    }
-    ```
+```json title="Mutation"
+mutation {
+  addFcmToken(command: { token: "qwerty" })
+}
+```
 
+```json title="Variables"
+{
+  "command": {
+    "token": "qwerty"
+  }
+}
+```
+
+</div>

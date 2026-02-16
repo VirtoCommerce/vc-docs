@@ -15,3 +15,24 @@ The `DeclineQuoteCommandType!` represents the input required to decline a quote 
 | Possible return                                          	| Description                                 	|
 |---------------------------------------------------------	|---------------------------------------------	|
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the declined quote.       	|
+
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation declineQuoteRequest($command: DeclineQuoteCommandType!) {
+  declineQuoteRequest(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "quote-12345"
+  }
+}
+```
+
+</div>

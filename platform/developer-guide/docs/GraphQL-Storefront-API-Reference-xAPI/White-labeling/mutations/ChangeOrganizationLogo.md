@@ -11,30 +11,32 @@ The `InputChangeOrganizationLogoCommandType` represents the input data required 
 | `organizationId` ==String!== | The Id of the organization whose logo is being updated. |
 | `logoUrl` ==String==         | The URL of the new logo image.                          |
 
-## Possible Returns  
+## Possible returns  
 
-| Possible Return                    | Description                                              |
+| Possible return                    | Description                                              |
 |------------------------------------|----------------------------------------------------------|
 | [ChangeOrganizationLogoResultType](../objects/ChangeOrganizationLogoResultType.md) | The result of the logo update, including status details. |
 
-## Examples  
+## Example
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation($command: InputChangeOrganizationLogoCommandType!) {  
-      changeOrganizationLogo(command: $command) {  
-        isSuccess
-        errorMessage
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "organizationId": "d690f3df-8782-4dcc-99be-a1f644220e50",  
-        "logoUrl": "/api/files/a42162a18d1c4a309516dc9777221c0d"  
-      }  
-    }  
-    ```  
+```json title="Mutation"
+mutation($command: InputChangeOrganizationLogoCommandType!) {  
+  changeOrganizationLogo(command: $command) {  
+    isSuccess
+    errorMessage
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "organizationId": "d690f3df-8782-4dcc-99be-a1f644220e50",  
+    "logoUrl": "/api/files/a42162a18d1c4a309516dc9777221c0d"  
+  }  
+}  
+```
+
+</div>

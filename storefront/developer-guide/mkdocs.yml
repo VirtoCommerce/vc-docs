@@ -76,6 +76,7 @@ nav:
             - Guidelines for Using Accelerators: customization/accelerators-guidelines.md
             - Localization: customization/localization.md
             - Tracking and Fixing Locales: customization/texts-customization.md
+            - Storybook: storybook.md
     - Merge: merge.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md

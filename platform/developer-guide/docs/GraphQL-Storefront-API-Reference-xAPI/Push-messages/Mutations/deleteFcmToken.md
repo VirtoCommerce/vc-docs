@@ -16,21 +16,22 @@ The [InputDeleteFcmTokenType!](../Objects/InputDeleteFcmTokenType.md) is used to
 |-----------------|-------------------------------------------------------------------------------------------|
 | `Boolean`       | Indicates whether the FCM token was successfully deleted.                                   |
 
-=== "Mutation"
+## Example
 
-    ```graphql linenums="1"
-    mutation {
-      deleteFcmToken(command: { token: "qwerty" })
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
+```json title="Mutation"
+mutation {
+  deleteFcmToken(command: { token: "qwerty" })
+}
+```
 
-    ```json linenums="1"
-    {
-      "command": {
-        "token": "qwerty"
-      }
-    }
-    ```
+```json title="Variables"
+{
+  "command": {
+    "token": "qwerty"
+  }
+}
+```
 
+</div>

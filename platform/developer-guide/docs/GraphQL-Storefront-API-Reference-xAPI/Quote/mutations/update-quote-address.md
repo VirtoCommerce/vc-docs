@@ -18,63 +18,55 @@ The `UpdateQuoteAddressesCommandType!` is a type that represents a command for u
 | [`QuoteType`](../objects/QuoteType.md)           	  |  Information about the order.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation UpdateQuoteAddresses($command: UpdateQuoteAddressesCommandType!) {
-      updateQuoteAddresses(command: $command) {
-        id
-        addresses {
-          name
-          id
-          countryCode
-          addressType
-          city
-        }
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "quoteId": "893f7cd7-75eb-4b16-9fbb-e1e3b9053f16",
-        "addresses": [
-          {
-            "name": "SHN, city1, address 1",
-            "organization": "",
-            "firstName": "Test 13378",
-            "lastName": "Test 13378",
-            "line1": "address 1",
-            "line2": "address2",
-            "city": "city1",
-            "countryCode": "SHN",
-            "countryName": "Saint Helena, Ascension and Tristan da Cunha",
-            "regionId": "",
-            "regionName": null,
-            "postalCode": "02558",
-            "phone": "",
-            "email": "tzykin.alexandr@gmail.com",
-            "addressType": 2
-          },
-          {
-            "name": "SHN, city1, address 1",
-            "organization": "",
-            "firstName": "Test 13378",
-            "lastName": "Test 13378",
-            "line1": "address 1",
-            "line2": "address2",
-            "city": "city1",
-            "countryCode": "SHN",
-            "countryName": "Saint Helena, Ascension and Tristan da Cunha",
-            "regionId": "",
-            "regionName": null,
-            "postalCode": "02558",
-            "phone": "",
-            "email": "tzykin.alexandr@gmail.com",
-            "addressType": 1
-          }
-        ]
-      }
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation UpdateQuoteAddresses($command: UpdateQuoteAddressesCommandType!) {
+  updateQuoteAddresses(command: $command) {
+    id
+    addresses {
+      name
+      id
+      countryCode
+      addressType
+      city
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "quote-12345",
+    "addresses": [
+      {
+        "id": "addr-001",
+        "name": "Billing Address",
+        "addressType": "Billing",
+        "countryCode": "US",
+        "city": "New York",
+        "line1": "123 Main St",
+        "line2": "Apt 4B",
+        "postalCode": "10001",
+        "region": "NY"
+      },
+      {
+        "id": "addr-002",
+        "name": "Shipping Address",
+        "addressType": "Shipping",
+        "countryCode": "US",
+        "city": "Los Angeles",
+        "line1": "456 Sunset Blvd",
+        "line2": "",
+        "postalCode": "90028",
+        "region": "CA"
+      }
+    ]
+  }
+}
+```
+
+</div>

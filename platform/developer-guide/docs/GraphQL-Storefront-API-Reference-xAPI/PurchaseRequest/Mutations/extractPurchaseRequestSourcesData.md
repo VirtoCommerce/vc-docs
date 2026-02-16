@@ -17,20 +17,24 @@ The `InputExtractDataFromPurchaseRequestSourcesType!` represents the input objec
 | [`PurchaseRequestType`](../Objects/PurchaseRequestType.md)   | Defines the properties and fields associated with a purchase request. |  
 
 
-=== "Mutation"  
-    ```json linenums="1"  
-    mutation extractPurchaseRequestSourcesData($command: InputExtractPurchaseRequestSourcesDataType!) {  
-      extractPurchaseRequestSourcesData(command: $command) {  
-        id  
-      }  
-    }  
-    ```  
+## Example
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "purchaseRequestId": "8a4f3656-0aa1-43b1-aafa-3545286d6f4b"  
-      }  
-    }  
-    ```  
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation extractPurchaseRequestSourcesData($command: InputExtractPurchaseRequestSourcesDataType!) {  
+  extractPurchaseRequestSourcesData(command: $command) {  
+    id  
+  }  
+}  
+```
+
+```json title="Variables"
+{  
+  "command": {  
+    "purchaseRequestId": "8a4f3656-0aa1-43b1-aafa-3545286d6f4b"  
+  }  
+}  
+```
+
+</div>

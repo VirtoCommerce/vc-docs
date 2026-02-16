@@ -17,25 +17,29 @@ The `SubmitQuoteCommandType!` represents .
 |---------------------------------------------------------	|-------------------------------	|
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the order.  	|
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation SubmitQuoteRequest($command: SubmitQuoteCommandType!) {
-      submitQuoteRequest(command: $command) {
-        id
-        status
-        coupon
-        comment
-      }
-    }
-    ```
 
-=== "Variables"
-    ```json linenums="1"
-    {
-      "command": {
-        "quoteId": "80d92257-5286-4fe2-933c-e1280d16677f",
-        "comment": "this is a comment"
-      }
-    }
-    ```
- 
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation SubmitQuoteRequest($command: SubmitQuoteCommandType!) {
+  submitQuoteRequest(command: $command) {
+    id
+    status
+    coupon
+    comment
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "80d92257-5286-4fe2-933c-e1280d16677f",
+    "comment": "this is a comment"
+  }
+}
+```
+
+</div>

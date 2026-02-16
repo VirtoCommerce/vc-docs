@@ -8,30 +8,31 @@ This subscription is used to receive real-time updates when a new push message i
 |-------------------------------------------------------|---------------------------------------------------------|
 | [`PushMessageType`](../Objects/PushMessageType.md)    | The structure containing details of the newly created push message. |
 
-=== "Subscription"
 
-    ```graphql linenums="1"
-    subscription pushMessageCreated {
-      pushMessageCreated {
-        id
-        shortMessage
-        createdDate
-        isRead
-      }
+## Example
+
+<div class="grid" markdown>
+
+```json title="Subscription"
+subscription pushMessageCreated {
+  pushMessageCreated {
+    id
+    shortMessage
+    createdDate
+    isRead
+  }
+}
+```
+
+```json title="Return"
+{
+"data": {
+    "pushMessageCreated": {
+      "id": "3",
+      "shortMessage": "New notification",
+      "createdDate": "2024-04-03T10:30:00Z",
+      "isRead": false
     }
-    ```
-
-=== "Response"
-
-    ```graphql linenums="1"
-    {
-    "data": {
-        "pushMessageCreated": {
-          "id": "3",
-          "shortMessage": "New notification",
-          "createdDate": "2024-04-03T10:30:00Z",
-          "isRead": false
-        }
-      }
-    }
-    ```
+  }
+}
+```

@@ -11,8 +11,20 @@ This mutation marks all push messages as read.
 
 ## Example
 
-```graphql linenums="1"
-mutation markAllPushMessagesRead {
-markAllPushMessagesRead
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation MarkAllPushMessagesRead {
+  markAllPushMessagesRead
 }
 ```
+
+```json title="Expected response"
+{
+  "data": {
+    "markAllPushMessagesRead": true
+  }
+}
+```
+
+</div>

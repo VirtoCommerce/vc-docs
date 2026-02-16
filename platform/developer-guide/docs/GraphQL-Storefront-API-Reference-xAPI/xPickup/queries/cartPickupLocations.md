@@ -22,107 +22,108 @@ This query allows you to retrieve pickup locations where the items in a specific
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | [`CartPickupLocationConnection`](../objects/CartPickupLocationConnection.md) | A paginated connection containing pickup locations available for the items in the specified cart. |
 
-## Examples
 
-=== "Query"
+## Example
 
-    ```json linenums="1"
-    {
-      cartPickupLocations(
-        storeId: "B2B-store"
-        cultureName: "en-US"
-        cartId: 
-        keyword: "Center"
-        first: 5
-        after: null
-        sort: "name:asc"
-        facet: "availabilityType"
-        filter: "availabilityType:InStock"
-      ) {
-        totalCount
-        items {
-          id
-          name
-          description
-          contactEmail
-          contactPhone
-          workingHours
-          geoLocation
-          availabilityType
-          availableQuantity
-          availabilityNote
-          address {
-            id
-            line1
-            line2
-            city
-            countryName
-            countryCode
-            regionId
-            postalCode
-            phone
-          }
-        }
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  cartPickupLocations(
+    storeId: "B2B-store"
+    cultureName: "en-US"
+    cartId: 
+    keyword: "Center"
+    first: 5
+    after: null
+    sort: "name:asc"
+    facet: "availabilityType"
+    filter: "availabilityType:InStock"
+  ) {
+    totalCount
+    items {
+      id
+      name
+      description
+      contactEmail
+      contactPhone
+      workingHours
+      geoLocation
+      availabilityType
+      availableQuantity
+      availabilityNote
+      address {
+        id
+        line1
+        line2
+        city
+        countryName
+        countryCode
+        regionId
+        postalCode
+        phone
       }
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-        "cartPickupLocations": {
-        "totalCount": 2,
-        "items": [
-          {
+```json title="Return"
+{
+  "data": {
+    "cartPickupLocations": {
+    "totalCount": 2,
+    "items": [
+      {
+        "id": 
+        "name": "Central Pickup Hub",
+        "description": "Main pickup location for cart orders.",
+        "contactEmail": "pickup@store.com",
+        "contactPhone": "+1-555-0300",
+        "workingHours": "Mon–Fri 9:00–18:00",
+        "geoLocation": "40.7128,-74.0060",
+        "availabilityType": "InStock",
+        "availableQuantity": 12,
+        "availabilityNote": "All cart items available",
+        "address": {
             "id": 
-            "name": "Central Pickup Hub",
-            "description": "Main pickup location for cart orders.",
-            "contactEmail": "pickup@store.com",
-            "contactPhone": "+1-555-0300",
-            "workingHours": "Mon–Fri 9:00–18:00",
-            "geoLocation": "40.7128,-74.0060",
-            "availabilityType": "InStock",
-            "availableQuantity": 12,
-            "availabilityNote": "All cart items available",
-            "address": {
-                "id": 
-                "line1": "200 Market St",
-                "line2": "",
-                "city": "Cityville",
-                "countryName": "United States",
-                "countryCode": "US",
-                "regionId": "NY",
-                "postalCode": "10002",
-                "phone": "+1-555-0300"
-            }
-          },
-          {
+            "line1": "200 Market St",
+            "line2": "",
+            "city": "Cityville",
+            "countryName": "United States",
+            "countryCode": "US",
+            "regionId": "NY",
+            "postalCode": "10002",
+            "phone": "+1-555-0300"
+        }
+      },
+      {
+        "id": 
+        "name": "East Side Pickup Point",
+        "description": "Pickup office with limited availability for some cart items.",
+        "contactEmail": "east@store.com",
+        "contactPhone": "+1-555-0400",
+        "workingHours": "Mon–Sat 10:00–17:00",
+        "geoLocation": "40.7210,-73.9500",
+        "availabilityType": "Limited",
+        "availableQuantity": 3,
+        "availabilityNote": "Some items may require transfer",
+        "address": {
             "id": 
-            "name": "East Side Pickup Point",
-            "description": "Pickup office with limited availability for some cart items.",
-            "contactEmail": "east@store.com",
-            "contactPhone": "+1-555-0400",
-            "workingHours": "Mon–Sat 10:00–17:00",
-            "geoLocation": "40.7210,-73.9500",
-            "availabilityType": "Limited",
-            "availableQuantity": 3,
-            "availabilityNote": "Some items may require transfer",
-            "address": {
-                "id": 
-                "line1": "900 East St",
-                "line2": "Building B",
-                "city": "Cityville",
-                "countryName": "United States",
-                "countryCode": "US",
-                "regionId": "NY",
-                "postalCode": "10009",
-                "phone": "+1-555-0400"
-            }
-          }
-        ]
+            "line1": "900 East St",
+            "line2": "Building B",
+            "city": "Cityville",
+            "countryName": "United States",
+            "countryCode": "US",
+            "regionId": "NY",
+            "postalCode": "10009",
+            "phone": "+1-555-0400"
         }
       }
+    ]
     }
-    ```
+  }
+}
+```
+
+</div>

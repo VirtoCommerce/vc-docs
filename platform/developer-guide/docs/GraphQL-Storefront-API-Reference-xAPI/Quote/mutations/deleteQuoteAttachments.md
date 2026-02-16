@@ -16,3 +16,28 @@ The `DeleteQuoteAttachmentsCommandType!` represents the input required to delete
 | Possible return                                          	| Description                                 	|
 |---------------------------------------------------------	|---------------------------------------------	|
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the updated quote.        	|
+
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation deleteQuoteAttachments($command: DeleteQuoteAttachmentsCommandType!) {
+  deleteQuoteAttachments(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "quote-12345",
+    "urls": [
+      "https://example.com/files/specification.pdf",
+      "https://example.com/files/contract-draft.docx"
+    ]
+  }
+}
+```
+
+</div>

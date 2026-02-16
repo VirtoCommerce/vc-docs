@@ -18,25 +18,30 @@ The `RemoveQuoteItemCommandType!` represents a command for removing a product it
 | [`QuoteType`](../objects/QuoteType.md)                   	|  Information about the order.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation RemoveQuoteItem($command: RemoveQuoteItemCommandType!) {
-      removeQuoteItem(command: $command) {
-        id
-        items
-        {
-          id
-        }
-      }
-    }
-    ```
 
-=== "Variables"
-    ```json linenums="1"
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation RemoveQuoteItem($command: RemoveQuoteItemCommandType!) {
+  removeQuoteItem(command: $command) {
+    id
+    items
     {
-      "command": {
-        "quoteId": "893f7cd7-75eb-4b16-9fbb-e1e3b9053f16",
-        "lineItemId": "d8a7ecf3-c112-4778-8fb3-e3fcd01ac063"
-      }
+      id
     }
-    ```
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "893f7cd7-75eb-4b16-9fbb-e1e3b9053f16",
+    "lineItemId": "d8a7ecf3-c112-4778-8fb3-e3fcd01ac063"
+  }
+}
+```
+
+</div>

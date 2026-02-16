@@ -19,61 +19,23 @@ The `CancelQuoteCommandType!` is used for a command to cancel a quote.
 | [`QuoteType`](../objects/QuoteType.md)                   	| Information about the order.  	|
 
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation($command: CancelQuoteCommandType!) {
-      cancelQuoteRequest(command: $command) {
-        id
-        status
-        storeId
-        customerId
-        customerName
-        comment
-        number
-        items {
-          productId
-          name
-          sku
-          product {
-            id
-            name
-          }
-        }
-        addresses {
-          countryCode
-          countryName
-          city
-          regionName
-          line1
-          line2
-          email
-          firstName
-          lastName
-          phone
-          postalCode
-          organization
-          addressType
-        }
-        totals {
-          originalSubTotalExlTax {
-            amount
-          }
-          subTotalExlTax {
-            amount
-          }
-          shippingTotal {
-            amount
-          }
-        }
-      }
-    }
-    ```
+## Example
 
-=== "Variables"
-    ```json linenums="1"
-    {"command": 
-      {"quoteId": "80d92257-5286-4fe2-933c-e1280d16677f",
-        "comment": "Sample comment"
-      }
-    }
-    ```
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation cancelQuoteRequest($command: CancelQuoteCommandType!) {
+  cancelQuoteRequest(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "quote-12345",
+    "comment": "The customer decided to postpone the purchase."
+  }
+}
+```
+
+</div>

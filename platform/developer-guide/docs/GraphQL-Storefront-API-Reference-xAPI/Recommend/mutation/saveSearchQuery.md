@@ -17,25 +17,26 @@ The `InputSaveSearchQueryType!` is a type that represents the input object for s
 | --------------- | -------------------------------------------------------------------- |
 | `Boolean`       | A boolean value indicating whether the query was saved successfully. |
 
+
 ## Example
 
-=== "Mutation"
+<div class="grid" markdown>
 
-    ```graphql linenums="1"
-    mutation {
-      saveSearchQuery(command: {
-        storeId: "b2b-store"
-        query: "printers"
-      })
-    }
-    ```
+```json title="Mutation"
+mutation {
+  saveSearchQuery(command: {
+    storeId: "b2b-store"
+    query: "printers"
+  })
+}
+```
 
-=== "Return"
+```json title="Expected response"
+{
+  "data": {
+    "saveSearchQuery": true
+  }
+}
+```
 
-    ```json linenums="1"
-    {
-      "data": {
-        "saveSearchQuery": true
-      }
-    }
-    ```
+</div>

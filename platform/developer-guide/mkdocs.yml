@@ -503,7 +503,8 @@ nav:
                       - deleteFile: GraphQL-Storefront-API-Reference-xAPI/File/Mutations/deleteFile.md
           - xFrontend:
                 - Overview: GraphQL-Storefront-API-Reference-xAPI/xFrontend/overview.md
-                - Query: GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext.md
+                - Queries: 
+                      - PageContext: GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext.md
                 - Objects:
                       - PageContextResponseType: GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType.md
           - Loyalty:

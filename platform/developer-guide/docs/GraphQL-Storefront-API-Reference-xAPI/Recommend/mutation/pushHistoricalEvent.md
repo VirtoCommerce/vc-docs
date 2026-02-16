@@ -20,23 +20,26 @@ The `InputPushHistoricalEventType` is a type that represents the input object fo
 |-----------------------------------------------------------------------|---------------------	|
 | `Boolean`                                                             | A boolean value indicating whether the event was successfully recorded. 	|
 
+
 ## Example
 
-=== "Mutation"
-    ```json linenums="1"
-    mutation pushHistoricalEvent($command: InputPushHistoricalEventType!) {
-    pushHistoricalEvent(command: $command)
-    }
-    ```
+<div class="grid" markdown>
 
-=== "Variables"
-    ```json linenums="1"
-    {
-    "command": {
-        "userId": "user-123",
-        "eventType": "ProductViewed",
-        "productId": "product-456",
-        "eventDate": "2024-09-16T10:00:00Z"
-    }
-    }
-    ```
+```json title="Mutation"
+mutation pushHistoricalEvent($command: InputPushHistoricalEventType!) {
+pushHistoricalEvent(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "userId": "user-123",
+    "eventType": "ProductViewed",
+    "productId": "product-456",
+    "eventDate": "2024-09-16T10:00:00Z"
+  }
+}
+```
+
+</div>

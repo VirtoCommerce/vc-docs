@@ -21,24 +21,28 @@ The `InputCreatePurchaseRequestFromDocumentsType!` represents the input object f
 | [`PurchaseRequestType`](../Objects/PurchaseRequestType.md)   | Defines the properties and fields associated with a purchase request.      |  
 
 
-=== "Mutation"  
-    ```json linenums="1"  
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
     mutation createPurchaseRequestFromDocuments($command: InputCreatePurchaseRequestFromDocumentsType!) {  
       createPurchaseRequestFromDocuments(command: $command) {  
         id  
       }  
     }  
-    ```  
+```
 
-=== "Variables"  
-    ```json linenums="1"  
-    {  
-      "command": {  
-        "storeId": "3a67b3dc-9eae-432d-a17d-25ef86b28aa3",  
-        "userId": "444d8de1-ff99-47ca-86f9-3756a9fd788c",  
-        "currencyCode": "USD",  
-        "cultureName": "en-US",  
-        "documentUrls": ["/api/files/5df05423-511d-433f-bbe3-5e75ec886e01"]  
-      }  
-    }  
-    ```
+```json title="Variables"
+{  
+  "command": {  
+    "storeId": "3a67b3dc-9eae-432d-a17d-25ef86b28aa3",  
+    "userId": "444d8de1-ff99-47ca-86f9-3756a9fd788c",  
+    "currencyCode": "USD",  
+    "cultureName": "en-US",  
+    "documentUrls": ["/api/files/5df05423-511d-433f-bbe3-5e75ec886e01"]  
+  }  
+}  
+```
+
+</div>

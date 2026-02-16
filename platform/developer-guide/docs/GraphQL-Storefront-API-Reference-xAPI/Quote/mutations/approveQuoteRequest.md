@@ -15,3 +15,23 @@ The `ApproveQuoteCommandType!` represents the input required to approve a quote 
 | Possible return                                          	| Description                                 	|
 |---------------------------------------------------------	|---------------------------------------------	|
 | [`ApproveQuoteResultType`](../objects/ApproveQuoteResultType.md) |  Information about the approval result.      	|
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation approveQuoteRequest($command: ApproveQuoteCommandType!) {
+  approveQuoteRequest(command: $command)
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "quoteId": "quote-12345"
+  }
+}
+```
+
+</div>

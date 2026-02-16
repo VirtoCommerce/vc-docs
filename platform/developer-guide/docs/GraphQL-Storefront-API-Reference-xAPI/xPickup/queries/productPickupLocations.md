@@ -20,105 +20,106 @@ This query allows you to retrieve pickup locations where a specific product is a
 | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | [`ProductPickupLocationConnection`](../objects/ProductPickupLocationConnection.md) | A paginated connection containing pickup locations where the specified product is available.|
 
-## Examples
 
-=== "Query"
+## Example
 
-    ```json linenums="1"
-    {
-      productPickupLocations(
-        storeId: "B2B-store"
-        cultureName: "en-US"
-        productId: 
-        keyword: "Center"
-        first: 5
-        after: 
-        sort: 
-      ) {
-          totalCount
-          items {
-          id
-          name
-          description
-          contactEmail
-          contactPhone
-          workingHours
-          geoLocation
-          availabilityType
-          availableQuantity
-          availabilityNote
-          address {
-            id
-            line1
-            line2
-            city
-            countryName
-            countryCode
-            regionId
-            postalCode
-            phone
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  productPickupLocations(
+    storeId: "B2B-store"
+    cultureName: "en-US"
+    productId: 
+    keyword: "Center"
+    first: 5
+    after: 
+    sort: 
+  ) {
+      totalCount
+      items {
+      id
+      name
+      description
+      contactEmail
+      contactPhone
+      workingHours
+      geoLocation
+      availabilityType
+      availableQuantity
+      availabilityNote
+      address {
+        id
+        line1
+        line2
+        city
+        countryName
+        countryCode
+        regionId
+        postalCode
+        phone
+      }
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "productPickupLocations": {
+    "totalCount": 2,
+    "items": [
+        {
+          "id": 
+          "name": "Central Warehouse Pickup",
+          "description": "Main pickup location for high-stock items.",
+          "contactEmail": "pickup@store.com",
+          "contactPhone": 
+          "workingHours":
+          "geoLocation": 
+          "availabilityType": 
+          "availableQuantity": 14,
+          "availabilityNote": "Available for same-day pickup",
+          "address": {
+            "id": 
+            "line1": "123 Main St",
+            "line2": "Suite A",
+            "city": "Cityville",
+            "countryName": "United States",
+            "countryCode": "US",
+            "regionId": "NY",
+            "postalCode": 
+            "phone": 
+          }
+        },
+        {
+          "id": 
+          "name": "North Pickup Point",
+          "description": "Regional pickup office with limited stock.",
+          "contactEmail": 
+          "contactPhone": 
+          "workingHours":
+          "geoLocation": 
+          "availabilityType": 
+          "availableQuantity": 3,
+          "availabilityNote":
+          "address": {
+            "id": 
+            "line1": "500 North Ave",
+            "line2": "",
+            "city": "Cityville",
+            "countryName": "United States",
+            "countryCode": "US",
+            "regionId": "NY",
+            "postalCode": 
+            "phone": 
           }
         }
-      }
+    ]
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-        "productPickupLocations": {
-        "totalCount": 2,
-        "items": [
-            {
-              "id": 
-              "name": "Central Warehouse Pickup",
-              "description": "Main pickup location for high-stock items.",
-              "contactEmail": "pickup@store.com",
-              "contactPhone": 
-              "workingHours":
-              "geoLocation": 
-              "availabilityType": 
-              "availableQuantity": 14,
-              "availabilityNote": "Available for same-day pickup",
-              "address": {
-                "id": 
-                "line1": "123 Main St",
-                "line2": "Suite A",
-                "city": "Cityville",
-                "countryName": "United States",
-                "countryCode": "US",
-                "regionId": "NY",
-                "postalCode": 
-                "phone": 
-              }
-            },
-            {
-              "id": 
-              "name": "North Pickup Point",
-              "description": "Regional pickup office with limited stock.",
-              "contactEmail": 
-              "contactPhone": 
-              "workingHours":
-              "geoLocation": 
-              "availabilityType": 
-              "availableQuantity": 3,
-              "availabilityNote":
-              "address": {
-                "id": 
-                "line1": "500 North Ave",
-                "line2": "",
-                "city": "Cityville",
-                "countryName": "United States",
-                "countryCode": "US",
-                "regionId": "NY",
-                "postalCode": 
-                "phone": 
-              }
-            }
-        ]
-        }
-      }
-    }
-    ```
+</div>

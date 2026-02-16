@@ -19,44 +19,47 @@ This query allows you to retrieve a list of purchase requests based on specific 
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 | [`PurchaseRequestConnection`](../Objects/PurchaseRequestConnection.md) | A list of purchase request objects matching the specified filters and sort criteria.   |  
 
-## Examples  
 
-=== "Query"  
-    ```json linenums="1"
-    {
-      purchaseRequests(
-        after: "10"
-        first: 5
-        sort: "desc:createDate"
-        storeId: "B2B-store"
-        customerId: "83a6c535-810a-4c67-8447-b1c324d615b6"
-      ) {
-        totalCount
-        items {
-          id
+## Example  
+
+<div class="grid" markdown>
+
+```json title="Query"
+{
+  purchaseRequests(
+    after: "10"
+    first: 5
+    sort: "desc:createDate"
+    storeId: "B2B-store"
+    customerId: "83a6c535-810a-4c67-8447-b1c324d615b6"
+  ) {
+    totalCount
+    items {
+      id
+      ...
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "purchaseRequests": {
+      "totalCount": 123,
+      "items": [
+        {
+          "id": "7a7e080d-f0ff-4358-830a-839e07b75c3b",
+          ...
+        },
+        {
+          "id": "8b7e080d-f0ff-4358-830a-839e07b75c3c",
           ...
         }
-      }
+      ]
     }
-    ```  
+  }
+}
+```
 
-=== "Return"  
-    ```json linenums="1"
-    {
-      "data": {
-        "purchaseRequests": {
-          "totalCount": 123,
-          "items": [
-            {
-              "id": "7a7e080d-f0ff-4358-830a-839e07b75c3b",
-              ...
-            },
-            {
-              "id": "8b7e080d-f0ff-4358-830a-839e07b75c3c",
-              ...
-            }
-          ]
-        }
-      }
-    }
-    ```  
+</div>

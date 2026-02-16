@@ -24,73 +24,73 @@ This query allows getting a specified number of quotes from a particular user.
 
 ## Example
 
-=== "Query"
+<div class="grid" markdown>
 
-    ```json linenums="1"
-    query {
-      quotes(
-        userId: "edec910a-122f-4391-b026-831771c3c947"
-        storeId:"B2B-store",
-        currencyCode:"USD",
-        cultureName:"en-US",
-        sort: "createdDate"
-        first: 10
-      ) {
-        totalCount
-        items {
-          id
-          number
-          status
-          totals {
-            grandTotalInclTax {
-              formattedAmount
+```json title="Query"
+query {
+  quotes(
+    userId: "edec910a-122f-4391-b026-831771c3c947"
+    storeId:"B2B-store",
+    currencyCode:"USD",
+    cultureName:"en-US",
+    sort: "createdDate"
+    first: 10
+  ) {
+    totalCount
+    items {
+      id
+      number
+      status
+      totals {
+        grandTotalInclTax {
+          formattedAmount
+        }
+      }
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "quotes": {
+      "totalCount": 10,
+      "items": [
+        {
+          "id": "5e6f7g8h",
+          "number": "Q789012",
+          "status": "Approved",
+          "totals": {
+            "grandTotalInclTax": {
+              "formattedAmount": "$2,345.67"
             }
           }
-        }
-      }
+        },
+        {
+          "id": "9i0j1k2l",
+          "number": "Q345678",
+          "status": "Pending",
+          "totals": {
+            "grandTotalInclTax": {
+              "formattedAmount": "$3,456.78"
+            }
+          }
+        },
+        {
+          "id": "3m4n5o6p",
+          "number": "Q901234",
+          "status": "Declined",
+          "totals": {
+            "grandTotalInclTax": {
+              "formattedAmount": "$4,567.89"
+            }
+          }
+        },
+      ]
     }
-    ```
+  }
+}
+```
 
-=== "Return"
-
-    ```json linenums="1"
-    {
-      "data": {
-        "quotes": {
-          "totalCount": 10,
-          "items": [
-            {
-              "id": "5e6f7g8h",
-              "number": "Q789012",
-              "status": "Approved",
-              "totals": {
-                "grandTotalInclTax": {
-                  "formattedAmount": "$2,345.67"
-                }
-              }
-            },
-            {
-              "id": "9i0j1k2l",
-              "number": "Q345678",
-              "status": "Pending",
-              "totals": {
-                "grandTotalInclTax": {
-                  "formattedAmount": "$3,456.78"
-                }
-              }
-            },
-            {
-              "id": "3m4n5o6p",
-              "number": "Q901234",
-              "status": "Declined",
-              "totals": {
-                "grandTotalInclTax": {
-                  "formattedAmount": "$4,567.89"
-                }
-              }
-            },
-          ]
-        }
-      }
-    }
-    ```
+</div>
