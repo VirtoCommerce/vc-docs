@@ -2072,8 +2072,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#how-to-use-virto-commerce-storybook" class="md-nav__link">
-        How to use Virto Commerce Storybook
+    <a href="#use-virto-commerce-storybook" class="md-nav__link">
+        Use Virto Commerce Storybook
     </a>
 
     <!-- Render nested item list -->
@@ -2821,8 +2821,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#how-to-use-virto-commerce-storybook" class="md-nav__link">
-        How to use Virto Commerce Storybook
+    <a href="#use-virto-commerce-storybook" class="md-nav__link">
+        Use Virto Commerce Storybook
     </a>
 
     <!-- Render nested item list -->
@@ -2851,7 +2851,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 16, 2026 15:13:03 UTC">February 16, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 17, 2026 06:57:04 UTC">February 17, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -2872,7 +2872,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="storybook">Storybook<a class="headerlink" href="#storybook" title="Permanent link">&para;</a></h1>
-<p>The Virto Commerce Storybook is an interactive component library that documents and showcases reusable UI components used across Virto Commerce frontends.</p>
+<p>The <a href="https://virtostart-main-storybook.govirto.com/">Virto Commerce Storybook</a> is an interactive component library that documents and showcases reusable UI components used in Virto Commerce Frontend.</p>
 <p>It serves as:</p>
 <ul>
 <li>A visual catalog of UI elements</li>
@@ -2883,56 +2883,98 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <p>Use Storybook when:</p>
 <ul>
-<li>Developing a new frontend feature</li>
-<li>Customizing storefront UI</li>
-<li>Creating a new module with UI elements</li>
-<li>Reviewing available components before building custom ones</li>
-<li>Ensuring UI consistency across projects</li>
+<li>Developing a new frontend feature.</li>
+<li>Customizing storefront UI.</li>
+<li>Creating a new module with UI elements.</li>
+<li>Reviewing available components before building custom ones.</li>
+<li>Ensuring UI consistency across projects.</li>
 <li>Testing component states (loading, error, disabled, etc.)</li>
 <li>It should be your first stop before creating any new UI component.</li>
 </ul>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
 <p>The Virto Commerce UI Kit follows Atomic Design principles:</p>
-<table>
-<thead>
-<tr>
-<th>Group of elements</th>
-<th>Description</th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Atoms</td>
-<td>Smallest, foundational UI elements. <br> Use atoms when building basic UI interactions or composing larger components.</td>
-<td></td>
-</tr>
-<tr>
-<td>Molecules</td>
-<td>Combinations of atoms forming functional UI blocks. <br> Use molecules for structured UI elements like forms, alerts, selectors, or cart items.</td>
-<td></td>
-</tr>
-<tr>
-<td>Organisms</td>
-<td>Complex components composed of molecules and atoms. <br> Use organisms when building complete functional sections of a page.</td>
-<td>VcProductCard <br> VcAddToCart</td>
-</tr>
-</tbody>
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Group of elements</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- ATOMS -->
+    <tr>
+      <td rowspan="3"><strong>Atoms</strong></td>
+      <td rowspan="3">
+        Smallest, foundational UI elements.<br>
+        Use atoms when building basic UI <br> interactions or composing larger components.
+      </td>
+      <td>VcSwitch</td>
+      <td><img src="../media/VcSwitch.png" alt="VcSwitch" width="60"></td>
+    </tr>
+    <tr>
+      <td>VcIcon</td>
+      <td><img src="../media/VcIcon.png" alt="VcIcon" width="60"></td>
+    </tr>
+    <tr>
+      <td>VcRadioButton</td>
+      <td><img src="../media/VcRadioButton.png" alt="VcRadioButton" width="50"></td>
+    </tr>
+
+    <!-- MOLECULES -->
+    <tr>
+      <td rowspan="3"><strong>Molecules</strong></td>
+      <td rowspan="3">
+        Combinations of atoms forming functional UI blocks.<br>
+        Use molecules for structured UI elements <br> like forms, alerts, selectors, or cart items.
+      </td>
+      <td>VcButtonSeeMoreLess</td>
+      <td><img src="../media/VcButtonSeeMoreLess.png" alt="VcAlert" width="100"></td>
+    </tr>
+    <tr>
+      <td>VcButton</td>
+      <td><img src="../media/VcButton.png" alt="VcButton" width="110"></td>
+    </tr>
+    <tr>
+      <td>VcChip</td>
+      <td><img src="../media/VcChip.png" alt="VcChip" width="90"></td>
+    </tr>
+
+    <!-- ORGANISMS -->
+    <tr>
+      <td rowspan="2"><strong>Organisms</strong></td>
+      <td rowspan="2">
+        Complex components composed of molecules and atoms.<br>
+        Use organisms when building complete <br> functional sections of a page.
+      </td>
+      <td>VcTable</td>
+      <td><img src="../media/VcTable.png" alt="VcTable" width="400"></td>
+    </tr>
+    <tr>
+      <td>VcPaginaton</td>
+      <td><img src="../media/VcPaginaton.png" alt="VcAddToCart" width="400"></td>
+    </tr>
+
+  </tbody>
 </table>
+
 <h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Always search Storybook before creating a new component.</li>
+<li>Search Storybook before creating a new component.</li>
 <li>Extend existing components instead of duplicating them.</li>
 <li>Use atoms → molecules → organisms hierarchy correctly.</li>
 <li>Follow existing naming conventions (Vc*).</li>
 <li>Keep UI consistent with the design system.</li>
 </ul>
-<h2 id="how-to-use-virto-commerce-storybook">How to use Virto Commerce Storybook<a class="headerlink" href="#how-to-use-virto-commerce-storybook" title="Permanent link">&para;</a></h2>
+<h2 id="use-virto-commerce-storybook">Use Virto Commerce Storybook<a class="headerlink" href="#use-virto-commerce-storybook" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Browse components:
-    1.Open the link → navigate through Atoms → Molecules → Organisms.</p>
+<p>Browse components:</p>
 <ol>
+<li>Open the <a href="https://virtostart-main-storybook.govirto.com/">link</a>.</li>
+<li>Navigate through Atoms → Molecules → Organisms.</li>
 <li>Explore variants and states.</li>
 </ol>
 </li>
@@ -2948,6 +2990,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Copy code of the component you need for further use.</p>
 </li>
 </ol>
+<p><br>
+<br></p>
+<hr />
+<div style="display: flex; justify-content: space-between;">
+    <a href="../customization/texts-customization/">← Tracking and fixing localizations</a>
+    <a href="../../merge">Merging Frontend updates →</a>
+</div>
                 
               </article>
             </div>
