@@ -36,5 +36,5 @@ This command analyzes all locale files, identifies missing keys, translates the 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../localization">← Localization</a>
-    <a href="../../merge">Merging Frontend updates →</a>
+    <a href="../../Storybook">Storybook →</a>
 </div>
