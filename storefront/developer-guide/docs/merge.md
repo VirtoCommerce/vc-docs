@@ -42,6 +42,6 @@ The latest official changes have been brought into your project.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../customization/overview">← Customization and development accelerators</a>
+    <a href="../tests">← Testing</a>
     <a href="../migration">Migration to Storefrontless architecture →</a>
 </div>

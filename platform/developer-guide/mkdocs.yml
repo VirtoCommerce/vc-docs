@@ -165,6 +165,7 @@ nav:
                       - Event Bus:
                             - Overview: Fundamentals/Event-Driven-Development/event-bus.md
                             - Configuration: Fundamentals/Event-Driven-Development/event-bus-configuration.md
+          - Testing: Fundamentals/Testing/testing.md
           - Page Builder:
                 - Overview: Fundamentals/PageBuilder/overview.md
                 - Getting Started: Fundamentals/PageBuilder/getting-started.md

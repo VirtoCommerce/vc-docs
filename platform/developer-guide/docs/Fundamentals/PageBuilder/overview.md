@@ -56,6 +56,6 @@ The two subsystems communicate via `window.postMessage()` to synchronize edits a
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../Event-Driven-Development/using-domain-events">← Event-driven development </a>
+    <a href="../../Testing/testing">← Testing </a>
     <a href="../getting-started">Getting started →</a>
 </div>

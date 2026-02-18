@@ -77,6 +77,7 @@ nav:
             - Localization: customization/localization.md
             - Tracking and Fixing Locales: customization/texts-customization.md
             - Storybook: storybook.md
+    - Test: tests.md
     - Merge: merge.md
     - Migration to Storefrontless Architecture:
         - Overview: migration.md

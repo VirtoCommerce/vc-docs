@@ -117,11 +117,14 @@ The Virto Commerce UI Kit follows Atomic Design principles:
 
 1. Copy code of the component you need for further use.
 
+
+
+
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../customization/texts-customization/">← Tracking and fixing localizations</a>
-    <a href="../../merge">Merging Frontend updates →</a>
+    <a href="../customization/overview">← Customization and development accelerators</a>
+    <a href="../tests">Testing →</a>
 </div>
