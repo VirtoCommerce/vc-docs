@@ -64,7 +64,13 @@ To use Virto Commerce CLI (vc-build):
     vc-build install -version 3.800.0
     ```
 
-![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)
+
+!!! note
+    `vc-build` should not be executed with the user profile directory as the build root. A dedicated deployment directory must be used via `--root`.
+
+
+![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](/platform/developer-guide/CLI-tools/package-management)
+
 
 ## Setup Platform
 

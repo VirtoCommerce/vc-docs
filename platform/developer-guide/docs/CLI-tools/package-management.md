@@ -20,13 +20,13 @@ This target installs stable versions of modules by default. If you need the late
 
 If you use a source that requires authorization, you can pass tokens using the following parameters:
 
-| Parameter                   | Description                                                                                                                                                |
-|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `GithubToken`               | This token is used to authenticate and authorize access to GitHub resources.                                                                               |
-| `GitLabToken`               | This token is used to authenticate and authorize access to GitLab resources.                                                                               |
-| `AzureToken`                | This parameter represents the Azure Personal Access Token (PAT). <br>Azure PAT is a security token that allows you to authenticate and access Azure resources. |
-| `AzureUniversalPackagesPat` | This parameter represents the Azure PAT specifically used for Universal Packages. <br>Universal Packages are a type of package feed in Azure DevOps.           |
-| `AzureSasToken`             | This parameter represents the Azure Shared Access Signature (SAS) Token for Azure Blob storage,<br> used to store unstructured data like images or documents.  |
+| Parameter                   | Description                                                                                                                              |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `GithubToken`               | This token is used to authenticate and authorize access to GitHub resources.                                                             |
+| `GitLabToken`               | This token is used to authenticate and authorize access to GitLab resources.                                                             |
+| `AzureToken`      | This parameter represents the Azure Personal Access Token (PAT). <br>Azure PAT is a security token that allows you to authenticate and access Azure resources. |
+| `AzureUniversalPackagesPat` | This parameter represents the Azure PAT specifically used for Universal Packages. <br>Universal Packages are a type of package feed in Azure DevOps. |
+| `AzureSasToken`   | This parameter represents the Azure Shared Access Signature (SAS) Token for Azure Blob storage,<br> used to store unstructured data like images or documents.  |
 
 
 **Examples**
@@ -169,7 +169,7 @@ vc-build uninstall -module <module>
 
 **Example**
 ```console
-vc-build uninstall -Module VirtoCommerce.Cart VirtoCommerce.Catalog
+vc-build uninstall -Module VirtoCommerce.Cart
 ```
 
 
