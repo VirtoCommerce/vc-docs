@@ -87,21 +87,21 @@ You can find detailed instructions [here](/platform/deployment-on-cloud/latest/d
 
 To deploy the Frontend Application on Azure:
 
-1. Create all Azure resources using the Azure button:
+1. Create all Azure resources using the Azure button: 
 
     [![Azure button](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployPlatformAndFrontend.json)
 
 1. Fill in the required values on the **Custom deployment** page and create Azure resources:
 
-    ![Required values](media/required-values.png)
+    ![Required values](media/required-values.png){: style="display: block; margin: 0 auto;" }
 
 1. After successful deployment, open the Platform and perform initial setup, installing sample data if necessary.
 1. Change the default password for the **admin** user. 
 1. Set the store URL (**Stores** --> **Your store** --> **Store URL**) in the Platform in the form of `http://x.x.x.x/`:
 
-    ![Current URL](media/store-url.png)
+    ![Current URL](media/store-url.png){: style="display: block; margin: 0 auto;" }
 
-1. Use the Azure Application Gateway IP address to access the Frontend part of Virtocommerce solutions.
+1. Use the Azure Application Gateway IP address to access the Frontend part of Virto Сommerce solutions.
 
 Your Frontend App has now been successfully deployed on Azure.
 
@@ -125,7 +125,7 @@ This issue can arise because the template uses the `App Service Name` parameter 
 
 Errors may occur if the password entered in the `Sql Administrator Password` field does not meet complexity requirements. 
 
-![Password issue](media/password-issue.png)
+![Password issue](media/password-issue.png){: style="display: block; margin: 0 auto;" }
 
 To resolve this, the template must be redeployed with a new, compliant password.
 
@@ -133,7 +133,7 @@ To resolve this, the template must be redeployed with a new, compliant password.
 
 The error occurs during the deployment process and has a self-explanatory description. 
 
-![Infrastructure issue](media/azure-infrastructure-issue.png)
+![Infrastructure issue](media/azure-infrastructure-issue.png){: style="display: block; margin: 0 auto;" }
 
 The problem is usually temporary and cannot be solved by the user. The workaround is to use a new resource group for the deployment.
 

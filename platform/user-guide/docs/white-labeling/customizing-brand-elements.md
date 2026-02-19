@@ -42,7 +42,18 @@ To add own logos and favicon:
 
 Your changes have been applied.
 
-![Before and after white labeling](media/before-after.png){: style="display: block; margin: 0 auto;" }
+<div class="grid cards" markdown>
+
+-    __Before__
+
+    ![New statuses](media/before.png)
+
+-   __After__
+
+    ![New statuses](media/after.png)
+
+</div>
+
 
 ## Customize footer
 

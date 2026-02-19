@@ -20,7 +20,17 @@ To approve a product uploaded by a vendor in the Vendor portal:
 
 The product status in the list of products changes for **Published** in both Operator and Vendor portals:
 
-![New statuses](media/approve-statuses.png)
+<div class="grid cards" markdown>
+
+-    __Operator portal__
+
+    ![New statuses](media/approve-statuses-operator-portal.png)
+
+-   __Vendor portal__
+
+    ![New statuses](media/approve-statuses-vendor-portal.png)
+
+</div>
 
 
 ## Decline product
@@ -36,7 +46,18 @@ To decline a product uploaded by a vendor in the Vendor portal:
 
 The product status in the list of products changes for **Rejected** in both Operator and Vendor portals:
 
-![New statuses](media/decline-statuses.png)
+<div class="grid cards" markdown>
+
+-    __Operator portal__
+
+    ![New statuses](media/operator-portal-new-statuses.png)
+
+-   __Vendor portal__
+
+    ![New statuses](media/vendor-portal-new-statuses.png)
+
+</div>
+
 
 !!! note
     Operators can now unpublish and republish products. This feature allows operators to quickly remove products that do not meet the marketplace’s standards, have become outdated, or are no longer aligned with the marketplace’s goals.
@@ -64,8 +85,17 @@ To contact a Vendor directly:
 1. In the next blade, click on the **Communication** widget.
 1. In the next blade, you can start or continue a conversation. The dialog will appear the same way in the Vendor portal:
 
-![Communication](media/communication.png)
+<div class="grid cards" markdown>
 
+-    __Operator portal__
+
+    ![Communication](media/communication-operator-portal.png)
+
+-   __Vendor portal__
+
+    ![New statuses](media/communication-vendor-portal.png)
+
+</div>
 
 <br>
 <br>
