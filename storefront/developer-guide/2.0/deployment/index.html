@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
 <title>Deployment - Frontend Dev Docs</title>
@@ -3210,7 +3210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:11:06 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 19, 2026 10:59:59 UTC">February 19, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3335,12 +3335,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To deploy the Frontend Application on Azure:</p>
 <ol>
 <li>
-<p>Create all Azure resources using the Azure button:</p>
+<p>Create all Azure resources using the Azure button: </p>
 <p><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVirtoCommerce%2Fvc-platform%2Fdev%2FazureDeployPlatformAndFrontend.json"><img alt="Azure button" src="../media/deploytoazure.png" /></a></p>
 </li>
 <li>
 <p>Fill in the required values on the <strong>Custom deployment</strong> page and create Azure resources:</p>
-<p><img alt="Required values" src="../media/required-values.png" /></p>
+<p><img alt="Required values" src="../media/required-values.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
 <p>After successful deployment, open the Platform and perform initial setup, installing sample data if necessary.</p>
@@ -3348,10 +3348,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Change the default password for the <strong>admin</strong> user. </li>
 <li>
 <p>Set the store URL (<strong>Stores</strong> &rarr; <strong>Your store</strong> &rarr; <strong>Store URL</strong>) in the Platform in the form of <code>http://x.x.x.x/</code>:</p>
-<p><img alt="Current URL" src="../media/store-url.png" /></p>
+<p><img alt="Current URL" src="../media/store-url.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
-<p>Use the Azure Application Gateway IP address to access the Frontend part of Virtocommerce solutions.</p>
+<p>Use the Azure Application Gateway IP address to access the Frontend part of Virto Сommerce solutions.</p>
 </li>
 </ol>
 <p>Your Frontend App has now been successfully deployed on Azure.</p>
@@ -3368,11 +3368,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>This issue can arise because the template uses the <code>App Service Name</code> parameter as a name for other Azure resources, potentially leading to conflicts.</p>
 <h4 id="password-issue">Password issue<a class="headerlink" href="#password-issue" title="Permanent link">&para;</a></h4>
 <p>Errors may occur if the password entered in the <code>Sql Administrator Password</code> field does not meet complexity requirements. </p>
-<p><img alt="Password issue" src="../media/password-issue.png" /></p>
+<p><img alt="Password issue" src="../media/password-issue.png" style="display: block; margin: 0 auto;" /></p>
 <p>To resolve this, the template must be redeployed with a new, compliant password.</p>
 <h4 id="azure-infrastructure-issue">Azure infrastructure issue<a class="headerlink" href="#azure-infrastructure-issue" title="Permanent link">&para;</a></h4>
 <p>The error occurs during the deployment process and has a self-explanatory description. </p>
-<p><img alt="Infrastructure issue" src="../media/azure-infrastructure-issue.png" /></p>
+<p><img alt="Infrastructure issue" src="../media/azure-infrastructure-issue.png" style="display: block; margin: 0 auto;" /></p>
 <p>The problem is usually temporary and cannot be solved by the user. The workaround is to use a new resource group for the deployment.</p>
 <h2 id="deployment-on-local-machine">Deployment on local machine<a class="headerlink" href="#deployment-on-local-machine" title="Permanent link">&para;</a></h2>
 <p>Deploying on a local machine includes:</p>
