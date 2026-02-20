@@ -27104,7 +27104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 3, 2026 14:04:54 UTC">February 3, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 20, 2026 06:22:09 UTC">February 20, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27447,10 +27447,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Register all the overrides in <strong>Module.Initialize</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="c1">//// Register GraphQL schema</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="c1">// Register GraphQL schema</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GraphQLBuilder</span><span class="p">(</span><span class="n">serviceCollection</span><span class="p">,</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=&gt;</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="c1">// extremely important to override connection builder BEFORE registering schemas if using AddSchema to register GraphQL types</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="c1">//  It is extremely important to override the connection builder BEFORE registering schemas if you are using the AddSchema method to register your GraphQL types</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">            </span><span class="n">serviceCollection</span><span class="p">.</span><span class="n">OverrideSchemaBuilder</span><span class="o">&lt;</span><span class="n">SearchProductQueryBuilder</span><span class="p">,</span><span class="w"> </span><span class="n">SearchProductQueryBuilderExtended</span><span class="o">&gt;</span><span class="p">();</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSchema</span><span class="p">(</span><span class="n">serviceCollection</span><span class="p">,</span><span class="w"> </span><span class="k">typeof</span><span class="p">(</span><span class="n">AssemblyMarker</span><span class="p">));</span>
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="p">});</span>
@@ -27486,7 +27486,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">CartValidator2</span><span class="p">()</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">            </span><span class="c1">// Some additional rules (to the basic) can be provided there</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">            </span><span class="c1">// Some additional rules (in addition to the basic rules) can be provided there</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">            </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">CartAggregate</span><span class="p">.</span><span class="n">Cart</span><span class="p">.</span><span class="n">Id</span><span class="p">).</span><span class="n">NotEmpty</span><span class="p">();</span><span class="w"> </span><span class="c1">// Just example</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="p">}</span>
@@ -27529,7 +27529,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="normal"><a href="#__codelineno-13-5">5</a></span>
 <span class="normal"><a href="#__codelineno-13-6">6</a></span>
 <span class="normal"><a href="#__codelineno-13-7">7</a></span>
-<span class="normal"><a href="#__codelineno-13-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="w"> </span><span class="c1">//the generic pipeline that is used  for on-the-fly additional data evaluation (prices, inventories, discounts and taxes) for resulting products</span>
+<span class="normal"><a href="#__codelineno-13-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="w"> </span><span class="c1">//The generic pipeline that is used for on-the-fly evaluation of the additional data for resulting products (prices, inventories, discounts and taxes) </span>
 <a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">services</span><span class="p">.</span><span class="n">AddPipeline</span><span class="o">&lt;</span><span class="n">SearchProductResponse</span><span class="o">&gt;</span><span class="p">(</span><span class="n">builder</span><span class="w"> </span><span class="o">=&gt;</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">{</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="n">builder</span><span class="p">.</span><span class="n">AddMiddleware</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">EvalProductsPricesMiddleware</span><span class="p">));</span>
@@ -27546,7 +27546,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
 <span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyCoolMiddleware</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IAsyncMiddleware</span><span class="o">&lt;</span><span class="n">SearchProductResponse</span><span class="o">&gt;</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="p">{</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="c1">//code skipped for better clarity</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="c1">//code skipped for clarity</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </li>
@@ -27582,7 +27582,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">services</span><span class="p">.</span><span class="n">AddPipeline</span><span class="o">&lt;</span><span class="n">SearchProductResponse</span><span class="o">&gt;</span><span class="p">(</span><span class="n">builder</span><span class="w"> </span><span class="o">=&gt;</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">            </span><span class="p">{</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">                </span><span class="n">builder</span><span class="p">.</span><span class="n">ReplaceMiddleware</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">EvalProductsTaxMiddleware</span><span class="p">),</span><span class="w"> </span><span class="k">typeof</span><span class="p">(</span><span class="n">MyCoolMiddleware</span><span class="p">));</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">                </span><span class="c1">//this line replaced the EvalProductsTaxMiddleware with the MyCoolMiddleware for GenericPipeline&lt;SearchProductResponse&gt;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">                </span><span class="c1">//This line replaced the EvalProductsTaxMiddleware with the MyCoolMiddleware for GenericPipeline&lt;SearchProductResponse&gt;</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">            </span><span class="p">});</span>
 </code></pre></div></td></tr></table></div>
 </li>
@@ -27601,7 +27601,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="p">{</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">services</span><span class="p">)</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="c1">//use such lines to override exists query or command handler</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="c1">//Use such lines to override existing query or command handler</span>
 <a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">        </span><span class="n">services</span><span class="p">.</span><span class="n">AddTransient</span><span class="o">&lt;</span><span class="n">IRequestHandler</span><span class="o">&lt;</span><span class="n">GetCartQuery</span><span class="p">,</span><span class="w"> </span><span class="n">CartAggregate</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">CustomGetCartQueryHandler</span><span class="o">&gt;</span><span class="p">();</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="p">}</span>
