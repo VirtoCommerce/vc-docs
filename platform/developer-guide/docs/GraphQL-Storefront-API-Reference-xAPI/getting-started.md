@@ -40,8 +40,14 @@ To start using xAPI:
 
 Open GraphQL UI playground in the browser by navigating to **http://{platform url}/ui/graphiql**, and run some sample queries.
 
-=== "Sample query 1"
-    ```json
+
+## Examples
+
+
+=== "Example 1"
+    <div class="grid" markdown>
+
+    ```json title="Query 1"
     query {
       product(
         storeId: "B2B-store"
@@ -58,8 +64,7 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
     }
     ```
 
-=== "Sample response 1"
-    ```json
+    ```json title="Return 1"
     {
       "data": {
         "product": {
@@ -75,8 +80,13 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
     }
     ```
 
-=== "Sample query 2"
-    ```json
+    </div>
+
+=== "Example 2"
+
+    <div class="grid" markdown>
+
+    ```json title="Query 2"
     query {
       products(
         query: "test"
@@ -95,8 +105,7 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
     }
     ```
 
-=== "Sample response 2"
-    ```json
+    ```json title="Return 2"
     {
       "data": {
         "products": {
@@ -123,13 +132,13 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
               }
             },
             // more items...
-              }
-            }
-          ]
         }
       }
     }
     ```
+
+    </div>
+
 
 
 ## Authorization and token usage

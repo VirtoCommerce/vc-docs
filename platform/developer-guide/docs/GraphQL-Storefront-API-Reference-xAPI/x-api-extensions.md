@@ -316,10 +316,10 @@ Let’s suppose that our object is mapped to a connection type schema which give
     ```csharp
         public void Initialize(IServiceCollection serviceCollection)
         {
-            //// Register GraphQL schema
+            // Register GraphQL schema
             _ = new GraphQLBuilder(serviceCollection, builder =>
             {
-                // extremely important to override connection builder BEFORE registering schemas if using AddSchema to register GraphQL types
+                //  It is extremely important to override the connection builder BEFORE registering schemas if you are using the AddSchema method to register your GraphQL types
                 serviceCollection.OverrideSchemaBuilder<SearchProductQueryBuilder, SearchProductQueryBuilderExtended>();
                 builder.AddSchema(serviceCollection, typeof(AssemblyMarker));
             });
@@ -354,7 +354,7 @@ In the system, the Platform's abstract type factory is employed to create instan
         {
             public CartValidator2()
             {
-                // Some additional rules (to the basic) can be provided there
+                // Some additional rules (in addition to the basic rules) can be provided there
                 RuleFor(x => x.CartAggregate.Cart.Id).NotEmpty(); // Just example
             }
         }
@@ -388,7 +388,7 @@ You can extend the existing generic pipelines with you custom middlewares or eve
 In the example below, you will replace the existing generic pipeline responsible for enriching the `ProductSearchResult` with pricing and availability data from different sources.
 
 ```csharp linenums="1"
- //the generic pipeline that is used  for on-the-fly additional data evaluation (prices, inventories, discounts and taxes) for resulting products
+ //The generic pipeline that is used for on-the-fly evaluation of the additional data for resulting products (prices, inventories, discounts and taxes) 
 services.AddPipeline<SearchProductResponse>(builder =>
 {
     builder.AddMiddleware(typeof(EvalProductsPricesMiddleware));
@@ -403,7 +403,7 @@ services.AddPipeline<SearchProductResponse>(builder =>
     ```csharp title="MyCoolMiddleware.cs" linenums="1"
     public class MyCoolMiddleware : IAsyncMiddleware<SearchProductResponse>
     {
-        //code skipped for better clarity
+        //code skipped for clarity
     }
     ```
 
@@ -428,7 +428,7 @@ services.AddPipeline<SearchProductResponse>(builder =>
     services.AddPipeline<SearchProductResponse>(builder =>
                 {
                     builder.ReplaceMiddleware(typeof(EvalProductsTaxMiddleware), typeof(MyCoolMiddleware));
-                    //this line replaced the EvalProductsTaxMiddleware with the MyCoolMiddleware for GenericPipeline<SearchProductResponse>
+                    //This line replaced the EvalProductsTaxMiddleware with the MyCoolMiddleware for GenericPipeline<SearchProductResponse>
                 });
     ```
 
@@ -443,7 +443,7 @@ public class Module : IModule
 {
     public void Initialize(IServiceCollection services)
     {
-        //use such lines to override exists query or command handler
+        //Use such lines to override existing query or command handler
         services.AddTransient<IRequestHandler<GetCartQuery, CartAggregate>, CustomGetCartQueryHandler>();
     }
 }
