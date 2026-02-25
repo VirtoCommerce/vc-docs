@@ -13,7 +13,7 @@ To manage quotes:
 
     ![Quotes management](media/quote-management.png){: style="display: block; margin: 0 auto;" width="500"}
 
-1. Use the toolbar to submit proposal, put it on hold, cancel or delete the document.
+1. Use the toolbar to submit a proposal, put it on hold, cancel or delete the document.
 
 Your modifications have been applied.
 

@@ -30,6 +30,6 @@ Vendors can send registration requests themselves to initiate the onboarding pro
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../commission-fees-setup/dynamic-commission-fees">← Dynamic commission fees</a>
+    <a href="../../Commission-fees-setup/dynamic-commission-fees">← Dynamic commission fees</a>
     <a href="../vendor-management">Vendor management →</a>
 </div>

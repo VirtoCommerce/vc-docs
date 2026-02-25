@@ -7,5 +7,5 @@ This type represents a key-value pair that provides additional information or co
 | Field                | Description                                           |
 |----------------------|-------------------------------------------------------|
 | `key`  ==String==    | The key or name of the error parameter.                |
-| `value`  ==String==} | The value associated with the error parameter.         |
+| `value`  ==String== | The value associated with the error parameter.         |
 

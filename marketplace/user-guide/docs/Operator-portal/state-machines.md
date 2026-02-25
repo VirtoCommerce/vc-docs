@@ -170,6 +170,6 @@ The order states flow for orders is applied and displayed in the Vendor Portal a
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../quotes">← Quotes</a>
-    <a href="../ai-helper">AI Helper</a>
+    <a href="../quotes">← Quote requests</a>
+    <a href="../communication"> Communication→</a>
 </div>

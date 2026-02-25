@@ -6,15 +6,15 @@ This mutation updates the quantity of one or more items in a specific shopping c
 
 The `InputUpdateCartQuantity` type represents the input object used to specify which cart items should have their quantities updated.
 
-| Field                                     | Description                                                                                                               |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `cartId` ==String==                       | The ID of the cart whose item quantities will be updated.                                                                 |
-| `storeId` ==String!==                     | The ID of the store associated with the cart.                                                                             |
-| `cartName` ==String==                     | The name of the cart.                                                                                                     |
-| `userId` ==String!==                      | The ID of the user who owns the cart.                                                                                     |
-| `currencyCode` ==String==                 | The currency code for the cart.                                                                                           |
-| `cultureName` ==String==                  | The culture or language associated with the cart.                                                                         |
-| `cartType` ==String==                     | The type of the cart.                                                                                                     |
+| Field                                     | Description                                                                        |
+| ------------- | ---------------------------------------------------------------------------------------------------------------|
+| `cartId` ==String==                       | The ID of the cart whose item quantities will be updated.                          |
+| `storeId` ==String!==                     | The ID of the store associated with the cart.                                      |
+| `cartName` ==String==                     | The name of the cart.                                                              |
+| `userId` ==String!==                      | The ID of the user who owns the cart.                                              |
+| `currencyCode` ==String==                 | The currency code for the cart.                                                    |
+| `cultureName` ==String==                  | The culture or language associated with the cart.                                  |
+| `cartType` ==String==                     | The type of the cart.                                                              |
 | `items` ==[InputUpdateCartQuantityItem](../objects/InputUpdateCartQuantityItem.md)== | A list of cart items and their new quantities. Each item specifies which product line to update and the desired quantity. |
 
 ## Possible returns

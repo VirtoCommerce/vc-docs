@@ -13,8 +13,8 @@ After the vendor submits the form, the Operator sees it in the **Registration re
 
 The Operator can:
 
-* **Process** the registration if additional steps are required. It receives **Processing** status in the list of registration requests.
-* **Decline** the registration if it does not meet the necessary criteria. It receives **Declined** status in the list of registration requests.
+* **Process** the registration if additional steps are required. The request receives **Processing** status in the list of registration requests.
+* **Decline** the registration if it does not meet the necessary criteria. The request receives **Declined** status in the list of registration requests.
 * **Complete** the registration if no additional information is required. This will open the following form, which will be pre-filled with the information provided by the vendor:
 
     ![Send invitation](media/invite-new-vendor.png){: style="display: block; margin: 0 auto;" }

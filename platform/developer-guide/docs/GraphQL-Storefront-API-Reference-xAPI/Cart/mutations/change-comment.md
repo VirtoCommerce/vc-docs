@@ -14,7 +14,7 @@ The `InputChangeCommentType` represents the input object type used for changing 
 | `cartName` ==String==    | The name of the cart.                                                     |
 | `userId` ==String!==     | The Id of the user.                                                       |
 | `currencyCode` ==String==| The currency code for the cart.                                           |
-| `cultureName` ==String==} | The culture or locale name for the cart.                                  |
+| `cultureName` ==String== | The culture or locale name for the cart.                                  |
 | `cartType` ==String==    | The type or category of the cart.                                         |
 | `comment` ==String==     | The new comment or note to be associated with the cart.                   |
 

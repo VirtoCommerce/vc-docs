@@ -31,7 +31,7 @@ The **Bulk order** pad opens. You will see the following placement options:
     To copy and paste your order details:
 
     1. In the **Bulk order** pad, click on the **Copy & paste** tab.
-    1. Сopy and paste item records from your CSV file into the field using the following format: **SKU,Quantity**. Each record should start with a new line:
+    1. Copy and paste item records from your CSV file into the field using the following format: **SKU,Quantity**. Each record should start with a new line:
 
     ![Copy and paste](../media/copy-paste.png)
 

@@ -29,7 +29,7 @@ To add a new dynamic commission assigned to a vendor or a product:
 
     ![New dynamic commission](media/new-dynamic-commission.png)
 
-    Let's say, we need want to assign a commission to a laser color printer Epson:
+    Let's say, we need to assign a commission to a laser color printer Epson:
 
     ![Example](media/assigning-dynamic-commission-to-product.gif)
 
