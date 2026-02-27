@@ -1,6 +1,6 @@
 # Search Options
 
-The Frontend Application provides the following ways to find products:
+Our Frontend provides the following ways to find products:
 
 * [Text-based search](#text-based-search), including [scoped search.](#scoped-hierarchical-search) 
 * [Barcode scanning.](#barcode-scanner)
@@ -67,9 +67,9 @@ The barcode scanner provides immediate access to product details, inventory leve
     | **ISBN**    | GTIN-13   | 13 digits (10 digits before January 2007) | Used to identify physical books and e-books globally. |
 
 
-If no search results are found, a notification will appear. You can then reset your search:
+If no search results are found or a selected combination of filters returns no products, users can now clear all applied filters with a single click and instantly restore the full product list:
 
-![No search results](../media/no-search-results.png){: style="display: block; margin: 0 auto;" }
+![No search results](../media/no-search-results.png){: style="display: block; margin: 0 auto;" width="800" }
 
 
 <br>
