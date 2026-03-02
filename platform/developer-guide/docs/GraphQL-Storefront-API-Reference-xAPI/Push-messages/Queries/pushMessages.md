@@ -27,8 +27,7 @@ This query is used to retrieve push messages, including the unread count and the
 
 ```json title="Query"
 query {
-  {
-    pushMessages (unreadOnly: true, cultureName: "en-Us") {
+    pushMessages (unreadOnly: true, cultureName: "en-US") {
       unreadCount
       items {
         id
@@ -37,7 +36,6 @@ query {
         isRead
       }
     }
-  }
 }
 ```
 

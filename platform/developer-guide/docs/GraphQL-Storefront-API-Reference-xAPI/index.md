@@ -152,7 +152,7 @@ The xAPI project provides the following major features:
 - [Reviews](Reviews/overview.md)
 - [Skyflow](Skyflow/overview.md)
 - [Store](Store/overview.md)
-- [Shipping](White-labeling/overview.md)
+- [Shipping](Shipping/overview.md)
 - [White labeling](White-labeling/overview.md)
 
 

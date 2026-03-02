@@ -35,15 +35,15 @@ This query retrieves all contextual information required to initialize and rende
   ) {
       slugInfo {
         entityInfo {
-          id
+        id
         }
       }
-    store {
-      storeId
-    }
-    whiteLabelingSettings {
-      logoUrl
-    }
+      store {
+        storeId
+      }
+      whiteLabelingSettings {
+        logoUrl
+      }
       user {
         id
         userName

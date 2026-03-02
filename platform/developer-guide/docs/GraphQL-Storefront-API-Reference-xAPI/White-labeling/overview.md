@@ -4,7 +4,7 @@ The **White Labeling** module enables organizations to enhance the enterprise us
 
 | Queries                    	                                    | Objects                                                                         	| Mutations                            |
 |----------------------------------------------------------------	|-------------------------------------------------------------------------------	|--------------------------------------|
-| [whiteLabelingSettings](queries/whiteLabelingSettings.md) 	    | [WhiteLabelingSettingsType](objects/WhiteLabelingSettingsType.md)<br> [ChangeOrganizationLogoResultType](objects/ChangeOrganizationLogoResultType.md) <br> [FaviconType](objects/FaviconType.md) <br> [MenuLinkType](objects/MenuLinkType.md) | [ChangeOrganizationLogo](mutations/ChangeOrganizationLogo.md)
+| [whiteLabelingSettings](queries/whiteLabelingSettings.md) 	    | [WhiteLabelingSettingsType](objects/WhiteLabelingSettingsType.md)<br> [ChangeOrganizationLogoResultType](objects/ChangeOrganizationLogoResultType.md) <br> [FaviconType](objects/FaviconType.md) <br> [MenuLinkType](objects/MenuLinkType.md) | [ChangeOrganizationLogo](mutations/ChangeOrganizationLogo.md)|
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-white-labeling/releases)
 

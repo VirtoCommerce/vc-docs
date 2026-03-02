@@ -6,12 +6,12 @@ This query allows you to retrieve the history of loyalty point transactions for 
 
 | Argument                    | Description                                                                                                        |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `after` ==String!==         | Returns only edges after the specified cursor (for pagination).                                                    |
-| `first` ==Int!==            | The maximum number of edges to return. Works with `after` for paginated results, or from the beginning if not set. |
-| `keyword` ==String!==       | A keyword to filter the history records.                                                                           |
-| `sort` ==String!==          | The sorting expression to order the results.                                                                       |
-| `userId` ==String!==        | The Id of the user whose loyalty history is requested.                                              |
-| `operationType` ==String!== | Filters results by operation type (Earned or Redeemed).                                                   |
+| `after` ==String==         | Returns only edges after the specified cursor (for pagination).                                                    |
+| `first` ==Int==            | The maximum number of edges to return. Works with `after` for paginated results, or from the beginning if not set. |
+| `keyword` ==String==       | A keyword to filter the history records.                                                                           |
+| `sort` ==String==          | The sorting expression to order the results.                                                                       |
+| `userId` ==String==        | The Id of the user whose loyalty history is requested.                                              |
+| `operationType` ==String== | Filters results by operation type (Earned or Redeemed).                                                   |
 
 ## Possible returns
 

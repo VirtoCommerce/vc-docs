@@ -50,16 +50,16 @@ This query allows you to retrieve white labeling settings.
 
 ```json title="Return"
 {
-  store(storeId: "B2B-store") {
-    settings
-    {
-      modules {
-        moduleId
-        settings {
-          name
-          value
-        }
-      }
+  "data": {
+    "whiteLabelingSettings": {
+      "userId": null,
+      "organizationId": "f081c52234754c9c8229aa42d6a19220",
+      "logoUrl": "https://example.com/logo.png",
+      "secondaryLogoUrl": "https://example.com/logo-footer.png",
+      "faviconUrl": "https://example.com/favicon.ico",
+      "themePresetName": "default",
+      "favicons": [],
+      "footerLinks": []
     }
   }
 }
