@@ -60,6 +60,10 @@ extra:
                 - title: Github
                   link: https://github.com/VirtoCommerce/vc-storefront/
         release_notes:
+            - title: March 2026
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-march-2026/839
+              type: Release Notes
+              date: 2 March 2026
             - title: February 2026
               link: https://www.virtocommerce.org/t/virto-s-release-notes-february-2026/834
               type: Release Notes
