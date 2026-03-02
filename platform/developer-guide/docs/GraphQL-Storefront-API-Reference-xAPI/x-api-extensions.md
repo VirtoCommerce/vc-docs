@@ -89,6 +89,29 @@ To extend the existing GraphQL type:
     }
     ```
 
+## Extend existing graph type using IGraphTypeHook
+
+`IGraphTypeHook` is a lightweight extension point that lets a module add, remove, or modify fields on an existing GraphQL type before the schema is initialized. Unlike the type-override approach, it requires no subclassing and no dependency on the extensibility framework: the hook runs as part of schema initialization and the target graph type is left untouched.
+
+Use `IGraphTypeHook` when:
+
+* You need to extend a shared or platform-owned graph type (such as `PageContextResponseType`) that your module does not own and cannot subclass.
+* You want to avoid creating a hard coupling between your module and the extensibility framework.
+* You need multiple independent modules to each contribute fields to the same type without conflicting overrides.
+
+Implementation steps:
+
+1. Create a hook class. Create a new class that implements `IGraphTypeHook` and inject any services your field resolver will need via the constructor.
+1. Implement the field modifications. Inside `ExecuteAsync`, locate the target graph type using `schema.FindType<T>()`, then use `FieldCreator.CreateFieldAsync` to define the new field and add, remove, or modify fields on the type.
+1. Register the hook. In **module.cs**, register your hook inside the `GraphQLBuilder` block using `builder.AddGraphTypeHook<YourHook>()`, before calling `builder.AddSchema(...)`.
+
+
+### Use case
+
+* The **White Labeling** module uses `IGraphTypeHook` to inject `whiteLabelingSettings` into `PageContextResponseType` without requiring the xFrontend module to have any knowledge of white labeling. The xFrontend module defines and owns `PageContextResponseType`; the White Labeling module extends it independently, keeping the two modules fully decoupled.
+* A partner module can add proprietary fields (for example, loyalty points, custom pricing tiers, or regional metadata) to shared response types without forking or patching the platform source.
+* Because `PageContextResponseType` aggregates all data needed to bootstrap a storefront page, it is a natural extension target. Any module that needs to contribute contextual data to the frontend without additional round-trips can add a field to this type via a hook.
+
 ## Extend schema type that contains another complex type
 
 Let’s extend a field of type `InputPersonalDataType` belonging to the `InputUpdatePersonalDataType` schema type with a new `gender` field.
