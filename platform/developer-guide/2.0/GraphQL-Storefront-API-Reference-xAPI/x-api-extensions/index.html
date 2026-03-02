@@ -7550,6 +7550,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#extend-existing-graph-type-using-igraphtypehook" class="md-nav__link">
+        Extend existing graph type using IGraphTypeHook
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Extend existing graph type using IGraphTypeHook">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#use-case" class="md-nav__link">
+        Use case
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#extend-schema-type-that-contains-another-complex-type" class="md-nav__link">
         Extend schema type that contains another complex type
     </a>
@@ -27008,6 +27034,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#extend-existing-graph-type-using-igraphtypehook" class="md-nav__link">
+        Extend existing graph type using IGraphTypeHook
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Extend existing graph type using IGraphTypeHook">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#use-case" class="md-nav__link">
+        Use case
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#extend-schema-type-that-contains-another-complex-type" class="md-nav__link">
         Extend schema type that contains another complex type
     </a>
@@ -27104,7 +27156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 20, 2026 06:22:09 UTC">February 20, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 2, 2026 11:19:54 UTC">March 2, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27246,6 +27298,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div></td></tr></table></div>
 </li>
 </ol>
+<h2 id="extend-existing-graph-type-using-igraphtypehook">Extend existing graph type using IGraphTypeHook<a class="headerlink" href="#extend-existing-graph-type-using-igraphtypehook" title="Permanent link">&para;</a></h2>
+<p><code>IGraphTypeHook</code> is a lightweight extension point that lets a module add, remove, or modify fields on an existing GraphQL type before the schema is initialized. Unlike the type-override approach, it requires no subclassing and no dependency on the extensibility framework: the hook runs as part of schema initialization and the target graph type is left untouched.</p>
+<p>Use <code>IGraphTypeHook</code> when:</p>
+<ul>
+<li>You need to extend a shared or platform-owned graph type (such as <code>PageContextResponseType</code>) that your module does not own and cannot subclass.</li>
+<li>You want to avoid creating a hard coupling between your module and the extensibility framework.</li>
+<li>You need multiple independent modules to each contribute fields to the same type without conflicting overrides.</li>
+</ul>
+<p>Implementation steps:</p>
+<ol>
+<li>Create a hook class. Create a new class that implements <code>IGraphTypeHook</code> and inject any services your field resolver will need via the constructor.</li>
+<li>Implement the field modifications. Inside <code>ExecuteAsync</code>, locate the target graph type using <code>schema.FindType&lt;T&gt;()</code>, then use <code>FieldCreator.CreateFieldAsync</code> to define the new field and add, remove, or modify fields on the type.</li>
+<li>Register the hook. In <strong>module.cs</strong>, register your hook inside the <code>GraphQLBuilder</code> block using <code>builder.AddGraphTypeHook&lt;YourHook&gt;()</code>, before calling <code>builder.AddSchema(...)</code>.</li>
+</ol>
+<h3 id="use-case">Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong>White Labeling</strong> module uses <code>IGraphTypeHook</code> to inject <code>whiteLabelingSettings</code> into <code>PageContextResponseType</code> without requiring the xFrontend module to have any knowledge of white labeling. The xFrontend module defines and owns <code>PageContextResponseType</code>; the White Labeling module extends it independently, keeping the two modules fully decoupled.</li>
+<li>A partner module can add proprietary fields (for example, loyalty points, custom pricing tiers, or regional metadata) to shared response types without forking or patching the platform source.</li>
+<li>Because <code>PageContextResponseType</code> aggregates all data needed to bootstrap a storefront page, it is a natural extension target. Any module that needs to contribute contextual data to the frontend without additional round-trips can add a field to this type via a hook.</li>
+</ul>
 <h2 id="extend-schema-type-that-contains-another-complex-type">Extend schema type that contains another complex type<a class="headerlink" href="#extend-schema-type-that-contains-another-complex-type" title="Permanent link">&para;</a></h2>
 <p>Let’s extend a field of type <code>InputPersonalDataType</code> belonging to the <code>InputUpdatePersonalDataType</code> schema type with a new <code>gender</code> field.</p>
 <p>The <code>InputUpdatePersonalDataType</code> schema type contains a field of type <code>InputPersonalDataType</code>. By extending <code>InputPersonalDataType</code>, we indirectly extend <code>InputUpdatePersonalDataType</code> as well, as it depends on it.</p>
