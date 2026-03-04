@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Installation Guide - MacOS - Platform Dev Docs</title>
@@ -1756,13 +1756,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#setup-platform" class="md-nav__link">
-        Setup Platform
+    <a href="#set-up-platform" class="md-nav__link">
+        Set up Platform
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Setup Platform">
+    <nav class="md-nav" aria-label="Set up Platform">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
@@ -1777,8 +1777,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#run-platform-by-cli-dotnet" class="md-nav__link">
-        Run Platform by CLI "dotnet"
+    <a href="#run-platform" class="md-nav__link">
+        Run Platform
     </a>
 
     <!-- Render nested item list -->
@@ -23116,6 +23116,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -27000,13 +27018,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#setup-platform" class="md-nav__link">
-        Setup Platform
+    <a href="#set-up-platform" class="md-nav__link">
+        Set up Platform
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Setup Platform">
+    <nav class="md-nav" aria-label="Set up Platform">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
@@ -27021,8 +27039,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#run-platform-by-cli-dotnet" class="md-nav__link">
-        Run Platform by CLI "dotnet"
+    <a href="#run-platform" class="md-nav__link">
+        Run Platform
     </a>
 
     <!-- Render nested item list -->
@@ -27066,7 +27084,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 30, 2025 07:38:08 UTC">August 30, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27112,7 +27130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li>
 <p>Move the library to dotnet location path. You can find the location of dotnet using CLI <strong>dotnet --info</strong>  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/6.x.x/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.x.x/</span>
 </code></pre></div>
 </li>
 </ol>
@@ -27136,12 +27154,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ol>
 <p>Now you have the directory with the precompiled files of the Virto Commerce Platform.</p>
-<h2 id="setup-platform">Setup Platform<a class="headerlink" href="#setup-platform" title="Permanent link">&para;</a></h2>
+<h2 id="set-up-platform">Set up Platform<a class="headerlink" href="#set-up-platform" title="Permanent link">&para;</a></h2>
 <p>To set up the Platform:</p>
 <ol>
-<li><a href="../linux/#configure-application-strings">Configure application strings.</a></li>
-<li><a href="../linux/#run-the-platform-by-cli-dotnet">Run the Platform by CLI "dotnet".</a></li>
-<li><a href="../linux/#perform-initial-sign-in">Perform initial sign in.</a></li>
+<li><a href="#configure-application-strings">Configure application strings.</a></li>
+<li><a href="#run-platform-by-cli-dotnet">Run the Platform by CLI "dotnet".</a></li>
+<li><a href="#perform-initial-sign-in">Perform initial sign-in.</a></li>
 </ol>
 <h3 id="configure-application-strings">Configure application strings<a class="headerlink" href="#configure-application-strings" title="Permanent link">&para;</a></h3>
 <p>To configure application strings:</p>
@@ -27164,18 +27182,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FileSystem&quot;</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nt">&quot;FileSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">            </span><span class="nt">&quot;RootPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;~/assets&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/assets/&quot;</span><span class="w"> </span><span class="err">&lt;</span><span class="mi">--</span><span class="w"> </span><span class="err">Se</span><span class="kc">t</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">Pla</span><span class="kc">tf</span><span class="err">orm</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">por</span><span class="kc">t</span><span class="w"> </span><span class="err">localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5001</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/assets/&quot;</span><span class="w"> </span><span class="c1">// Set your Platform application url with port localhost:5001</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p">},</span>
 </code></pre></div>
 </li>
 <li>
 <p>To configure CMS content storage, specify the public url for content for content by updating <code>Content:FileSystem:PublicUrl</code> in the Content section: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&quot;Content*&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&quot;Content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FileSystem&quot;</span><span class="p">,</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="nt">&quot;FileSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">            </span><span class="nt">&quot;RootPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;~/cms-content&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/cms-content/&quot;</span><span class="w"> </span><span class="err">&lt;</span><span class="mi">--</span><span class="w"> </span><span class="err">Se</span><span class="kc">t</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">Pla</span><span class="kc">tf</span><span class="err">orm</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">por</span><span class="kc">t</span><span class="w"> </span><span class="err">localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5001</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/cms-content/&quot;</span><span class="w"> </span><span class="c1">// Set your Platform application url with port localhost:5001</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="p">},</span>
 </code></pre></div>
@@ -27184,7 +27202,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Save the <strong>appsettings.json</strong> file to apply the configurations.</p>
 </li>
 </ol>
-<h3 id="run-platform-by-cli-dotnet">Run Platform by CLI "dotnet"<a class="headerlink" href="#run-platform-by-cli-dotnet" title="Permanent link">&para;</a></h3>
+<h3 id="run-platform">Run Platform<a class="headerlink" href="#run-platform" title="Permanent link">&para;</a></h3>
 <p>To run the Platform by CLI:</p>
 <ol>
 <li>

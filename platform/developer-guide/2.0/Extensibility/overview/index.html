@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Extensibility - Overview - Platform Dev Docs</title>
@@ -23114,6 +23114,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -27064,7 +27082,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27086,7 +27104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Markdown content -->
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
 <p>Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.</p>
-<p>There are types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:</p>
+<p>There are several types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:</p>
 <ul>
 <li>
 <p>No-code extensions.</p>
@@ -27107,7 +27125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><a href="../../Fundamentals/Dynamic-Properties/overview/">Dynamic properties</a>: Extend entities, such as Cart, Order, Company, etc., with new properties.</p>
 </li>
 <li>
-<p>Statuses: Enable implementing any workflow.</p>
+<p><a href="../../../user-guide/contacts/settings#statuses">Statuses</a>: Add Order, Shipment, Payment, etc. statuses.</p>
 </li>
 <li>
 <p><a href="../../Fundamentals/Security/overview/">Role-based security and permissions</a>: Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the <strong>Search products</strong> API, you can achieve that. In a similar way, you can allow a user to have access to the <strong>Orders</strong> API for a specific store, only.</p>
@@ -27127,7 +27145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>We also support two types of event providers:</p>
 <ul>
 <li><a href="../../Fundamentals/Event-Driven-Development/webhooks/">Webhooks</a>: A good point for no development integration.</li>
-<li><a href="../../Fundamentals/Event-Driven-Development/event-bus/">Event Bus</a>: Read for reactive programming and enterprise integrations.</li>
+<li><a href="../../Fundamentals/Event-Driven-Development/event-bus/">Event Bus</a>: Ready for reactive programming and enterprise integrations.</li>
 </ul>
 <h2 id="native-extensions">Native extensions<a class="headerlink" href="#native-extensions" title="Permanent link">&para;</a></h2>
 <p>This is an advanced mode of modular extensions. It is called native because it is a way how Virto Commerce is built internally. </p>
@@ -27135,7 +27153,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Moreover, it simplifies DevOps processes and optimizes performance.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Source code is available only for transparency purposes. Virto does not recommend extending the Platform through the source code, as it may breach the continuous delivery functionality.</p>
+<p>Source code is available only for transparency purposes. Virto Commerce does not recommend extending the Platform through the source code, as it may breach the continuous delivery functionality.</p>
 </div>
 <p>With a custom module, you can extend every layer:</p>
 <ul>

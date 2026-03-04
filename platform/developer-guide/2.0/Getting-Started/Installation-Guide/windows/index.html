@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Installation Guide - Windows - Platform Dev Docs</title>
@@ -1736,13 +1736,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#setup-platform" class="md-nav__link">
-        Setup Platform
+    <a href="#set-up-platform" class="md-nav__link">
+        Set up Platform
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Setup Platform">
+    <nav class="md-nav" aria-label="Set up Platform">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
@@ -23132,6 +23132,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -27032,13 +27050,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#setup-platform" class="md-nav__link">
-        Setup Platform
+    <a href="#set-up-platform" class="md-nav__link">
+        Set up Platform
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Setup Platform">
+    <nav class="md-nav" aria-label="Set up Platform">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
@@ -27098,7 +27116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 19, 2026 13:00:20 UTC">February 19, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27153,8 +27171,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="install-platform">Install Platform<a class="headerlink" href="#install-platform" title="Permanent link">&para;</a></h2>
 <p>The Platform can be installed:</p>
 <ul>
-<li><a href="./#download-precompiled-binaries">Manually by downloading the precompiled binaries</a>.</li>
-<li><a href="./#use-virto-commerce-cli">Using Virto Commerce CLI (vc-build)</a>.</li>
+<li><a href="#download-precompiled-binaries">Manually by downloading the precompiled binaries</a>.</li>
+<li><a href="#use-virto-commerce-cli">Using Virto Commerce CLI (vc-build)</a>.</li>
 </ul>
 <h3 id="download-precompiled-binaries">Download precompiled binaries<a class="headerlink" href="#download-precompiled-binaries" title="Permanent link">&para;</a></h3>
 <ol>
@@ -27184,7 +27202,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li>
 <p>Specify the Platform version (if required) using the command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">vc-build install -version 3.800.0</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">vc-build install -version 3.x.x.x</span>
 </code></pre></div>
 </li>
 </ol>
@@ -27193,12 +27211,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><code>vc-build</code> should not be executed with the user profile directory as the build root. A dedicated deployment directory must be used via <code>--root</code>.</p>
 </div>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/developer-guide/CLI-tools/package-management">Vc-build for packages management</a></p>
-<h2 id="setup-platform">Setup Platform<a class="headerlink" href="#setup-platform" title="Permanent link">&para;</a></h2>
+<h2 id="set-up-platform">Set up Platform<a class="headerlink" href="#set-up-platform" title="Permanent link">&para;</a></h2>
 <p>To set up the Platform:</p>
 <ol>
 <li><a href="./#configure-application-strings">Configure application strings.</a></li>
 <li><a href="./#run-platform">Run the Platform.</a></li>
-<li><a href="./#perform-initial-sign-in">Perform initial sign in.</a></li>
+<li><a href="./#perform-initial-sign-in">Perform initial sign-in.</a></li>
 </ol>
 <h3 id="configure-application-strings">Configure application strings<a class="headerlink" href="#configure-application-strings" title="Permanent link">&para;</a></h3>
 <p>To configure application strings:</p>
@@ -27225,7 +27243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FileSystem&quot;</span><span class="p">,</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nt">&quot;FileSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="nt">&quot;RootPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;~/assets&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/assets/&quot;</span><span class="w"> </span><span class="err">&lt;</span><span class="mi">--</span><span class="w"> </span><span class="err">Se</span><span class="kc">t</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">Pla</span><span class="kc">tf</span><span class="err">orm</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">por</span><span class="kc">t</span><span class="w"> </span><span class="err">localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5001</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/assets/&quot;</span><span class="w"> </span><span class="c1">// Set your Platform application url with port localhost:5001</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">},</span>
 </code></pre></div>
@@ -27236,7 +27254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FileSystem&quot;</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nt">&quot;FileSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">            </span><span class="nt">&quot;RootPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;~/cms-content&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/cms-content/&quot;</span><span class="w"> </span><span class="err">&lt;</span><span class="mi">--</span><span class="w"> </span><span class="err">Se</span><span class="kc">t</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">Pla</span><span class="kc">tf</span><span class="err">orm</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">por</span><span class="kc">t</span><span class="w"> </span><span class="err">localhos</span><span class="kc">t</span><span class="p">:</span><span class="mi">5001</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="nt">&quot;PublicUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/cms-content/&quot;</span><span class="w"> </span><span class="c1">// Set your Platform application url with port localhost:5001</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p">},</span>
 </code></pre></div>
@@ -27251,7 +27269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>On HTTPS schema (Preferred).</li>
 <li>On HTTP schema.</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Run on HTTPS schema (Prefered)</label><label for="__tabbed_2_2">Run on HTTP schema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Run on HTTPS schema (Preferred)</label><label for="__tabbed_2_2">Run on HTTP schema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>

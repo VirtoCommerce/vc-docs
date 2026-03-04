@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Extensibility - Key Extensibility Points - Platform Dev Docs</title>
@@ -23007,6 +23007,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -26873,7 +26891,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2025 11:01:34 UTC">October 15, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26894,39 +26912,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="key-extensibility-points">Key Extensibility Points<a class="headerlink" href="#key-extensibility-points" title="Permanent link">&para;</a></h1>
-<p>Our Platform is based on a collection of various modules and components that form the backbone of the Virto value proposition, which is to make each part of our system extensible and usable.</p>
+<p>Our Platform is based on a collection of various modules and components that form the backbone of the Virto value proposition, which is to make each part of our system extensible and reusable.</p>
 <p>In order to provide solutions for many different use cases, we decided it was important to ensure that these core concepts were as flexible and extensible as possible.</p>
 <p>The Virto Commerce Platform encompasses the <strong>extension concept</strong> based on various techniques and practices. It can significantly reduce the implementation and upgrade effort for your custom solution.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The extension concept is the backbone of the Virto Platform value proposition and has several main extensible point types.</p>
+<p>The extension concept is the backbone of the Virto Platform value proposition and has several main extensibility point types.</p>
 </div>
 <p>To address crucial extension requirements, the Platform contains various <strong>extensions points</strong> for all three main parts: Platform, modules, and Frontend. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:</p>
 <ul>
 <li>Domain and business logic extension:<ul>
 <li><a href="../../Tutorials-and-How-tos/Tutorials/extending-domain-models/">Extending domain models</a></li>
 <li><a href="../../Fundamentals/Event-Driven-Development/using-domain-events/">Extending through domain events</a></li>
-<li><a href="../../Fundamentals/Dynamic-Properties/overview/">Dynamic properties</a></li>
+<li><a href="../../Fundamentals/Dynamic-Properties/overview/">Using dynamic properties</a></li>
 </ul>
 </li>
 <li>Platform manager UI extension:<ul>
 <li><a href="../../Platform-Manager/Extensibility-Points/extending-main-menu/">Extending main menu</a></li>
 <li><a href="../../Platform-Manager/Extensibility-Points/widgets/">Working with widgets</a></li>
-<li><a href="../../Platform-Manager/Extensibility-Points/metaform/">Metaforms</a></li>
+<li><a href="../../Platform-Manager/Extensibility-Points/metaform/">Using metaforms</a></li>
 <li><a href="../../Platform-Manager/Extensibility-Points/blade-toolbar/">Extending blade toolbar</a></li>
 <li><a href="../../Platform-Manager/Extensibility-Points/extending-grid-columns/">Extending grid columns</a></li>
 </ul>
 </li>
 <li>Extending commerce logic:<ul>
-<li><a href="../../Fundamentals/Payments/new-payment-method-registration/">New payment method registration</a></li>
-<li><a href="../../Fundamentals/Shipments/new-shipping-method-registration/">New shipping method registration</a></li>
-<li><a href="../../Fundamentals/Taxes/new-tax-provider-registration/">New tax provider registration</a></li>
+<li><a href="../../Fundamentals/Payments/new-payment-method-registration/">Registering a new payment method</a></li>
+<li><a href="../../Fundamentals/Shipments/new-shipping-method-registration/">Registering a new shipping method</a></li>
+<li><a href="../../Fundamentals/Taxes/new-tax-provider-registration/">Registering a new tax provider</a></li>
 </ul>
 </li>
 <li>Security extensions:<ul>
 <li><a href="../../Fundamentals/Security/extensions/extending-authorization-policies/">Extending authorization policies</a></li>
 <li><a href="../../Fundamentals/Security/extensions/extending-usermanager-and-rolemanager/">Extending ASP.NET Identity UserManager and RoleManager</a></li>
-<li><a href="../../Fundamentals/Security/extensions/adding-google-as-sso-provider/">Adding New SSO Provider</a></li>
+<li><a href="../../Fundamentals/Security/extensions/adding-google-as-sso-provider/">Adding new SSO Provider</a></li>
 </ul>
 </li>
 <li>Notification extensions:<ul>

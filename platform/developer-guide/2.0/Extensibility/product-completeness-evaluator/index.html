@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Extensibility - Extending Product Completeness Evaluator - Platform Dev Docs</title>
@@ -22401,13 +22401,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#define-own-product-completeness-evaluator_1" class="md-nav__link">
-        Define own product completeness evaluator
+    <a href="#implement-custom-product-completeness-evaluator" class="md-nav__link">
+        Implement custom product completeness evaluator
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Define own product completeness evaluator">
+    <nav class="md-nav" aria-label="Implement custom product completeness evaluator">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
@@ -23098,6 +23098,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre/" class="md-nav__link">
         Adding Case-Insensitive Search Support for PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
       </a>
     </li>
   
@@ -26988,13 +27006,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#define-own-product-completeness-evaluator_1" class="md-nav__link">
-        Define own product completeness evaluator
+    <a href="#implement-custom-product-completeness-evaluator" class="md-nav__link">
+        Implement custom product completeness evaluator
     </a>
 
     <!-- Render nested item list -->
     
-    <nav class="md-nav" aria-label="Define own product completeness evaluator">
+    <nav class="md-nav" aria-label="Implement custom product completeness evaluator">
         <ul class="md-nav__list">
             
             <!-- Table of contents item -->
@@ -27064,7 +27082,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27137,7 +27155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">_container</span><span class="p">.</span><span class="n">RegisterType</span><span class="o">&lt;</span><span class="n">ICompletenessEvaluator</span><span class="p">,</span><span class="w"> </span><span class="n">CustomCompletenessEvaluator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">CustomCompletenessEvaluator</span><span class="p">));</span>
 </code></pre></div>
 <p>Now your product completeness evaluator is available in module's REST API and UI.</p>
-<h2 id="define-own-product-completeness-evaluator_1">Define own product completeness evaluator<a class="headerlink" href="#define-own-product-completeness-evaluator_1" title="Permanent link">&para;</a></h2>
+<h2 id="implement-custom-product-completeness-evaluator">Implement custom product completeness evaluator<a class="headerlink" href="#implement-custom-product-completeness-evaluator" title="Permanent link">&para;</a></h2>
 <p>If you want to define your own product completeness evaluation process, you can implement the same extensibility logic as ours:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CustomCompletenessEvaluator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ICompletenessEvaluator</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
@@ -27159,12 +27177,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">}</span>
 </code></pre></div>
-<p>If you prefer not to define your own product completeness evaluation process from scratch, you can simply customize the default process provided by inheriting from the DefaultCompletenessEvaluator. Here are the options for customizing your product completeness evaluator:</p>
+<p>If you prefer not to define your own product completeness evaluation process from scratch, you can simply customize the default process provided by inheriting from the <code>DefaultCompletenessEvaluator</code>. Here are the options for customizing your product completeness evaluator:</p>
 <ul>
-<li><a href="./#default-detail-evaluators">Default detail evaluators</a>: Use the default detail evaluators provided.</li>
-<li><a href="./#custom-detail-evaluators">Custom detail evaluators</a>: Implement your own custom detail evaluators.</li>
-<li><a href="./#combining-default-and-custom-detail-evaluators">Combining default and custom detail evaluators</a>: Mix default and custom detail evaluators to suit your needs.</li>
-<li><a href="./#mixing-default-and-all-custom-detail-evaluators">Mixing default and all custom detail evaluators</a>: Utilize some default evaluators alongside entirely custom ones.</li>
+<li><a href="#default-detail-evaluators">Default detail evaluators</a>: Use the default detail evaluators provided.</li>
+<li><a href="#custom-detail-evaluators">Custom detail evaluators</a>: Implement your own custom detail evaluators.</li>
+<li><a href="#combining-default-and-custom-detail-evaluators">Combining default and custom detail evaluators</a>: Mix default and custom detail evaluators to suit your needs.</li>
+<li><a href="#mixing-default-and-all-custom-detail-evaluators">Mixing default and all custom detail evaluators</a>: Utilize some default evaluators alongside entirely custom ones.</li>
 </ul>
 <h3 id="default-detail-evaluators">Default detail evaluators<a class="headerlink" href="#default-detail-evaluators" title="Permanent link">&para;</a></h3>
 <p>To use the default detail evaluators provided:</p>

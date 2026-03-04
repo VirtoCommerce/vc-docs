@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Back End Architecture - Conceptual Overview - Platform Dev Docs</title>
@@ -23009,6 +23009,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -26875,7 +26893,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26901,7 +26919,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The Virto Commerce Platform's core components are:</p>
 <ul>
 <li>
-<p><strong>Platform manager (SPA)</strong>: A web-based user interface packed into an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for ecommerce applications. It works with all data through REST API the Platform runtime provides.</p>
+<p><strong>Platform manager (SPA)</strong>: A web-based user interface built as an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for ecommerce applications. It works with all data through REST API the Platform runtime provides.</p>
 </li>
 <li>
 <p><strong>Platform application (Runtime)</strong>: An <a href="http://asp.net/">ASP.NET</a> Core application that bootstraps the modules and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless ecommerce experience, including support for different databases, search engines, and caching mechanisms.</p>
@@ -26917,9 +26935,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>
 <p><strong>Supported databases</strong>: The Platform is database-agnostic, supporting multiple databases for flexibility and scalability:</p>
 <ul>
-<li>PostgreSQL.</li>
-<li>MySQL.</li>
-<li>Microsoft SQL Server.</li>
+<li>MS SQL Server 2019 and higher.</li>
+<li>MySql Server 5.7 and higher.</li>
+<li>PostgreSQL 12 and higher.</li>
 </ul>
 </li>
 <li>
@@ -26938,7 +26956,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><strong>Caching</strong>: Virto Commerce integrates Redis for efficient caching to improve performance and scalability.</p>
 </li>
 <li>
-<p><strong>REST and GraphQL API</strong>: A set of APIs used to manage resources. <a href="https://virtostart-demo-admin.govirto.com/docs/index.html">REST API</a> is mainly used to build integration and interact with Virto resources, while <a href="../../GraphQL-Storefront-API-Reference-xAPI/">GraphQL</a> represents an implementation of the Back End for Front End design pattern and provides a lightweight access to ecommerce capabilities for various Frontend applications.</p>
+<p><strong>REST and GraphQL API</strong>: A set of APIs used to manage resources. <a href="https://virtostart-demo-admin.govirto.com/docs/index.html">REST API</a> is mainly used to build integration and interact with Virto resources, while <a href="../../GraphQL-Storefront-API-Reference-xAPI/">GraphQL</a> represents an implementation of the Back End for Front End design pattern and provides lightweight access to ecommerce capabilities for various Frontend applications.</p>
 </li>
 </ul>
 <p><br>

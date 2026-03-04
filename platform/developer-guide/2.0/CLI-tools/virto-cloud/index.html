@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Virto Cloud - Using Virto Cloud - Platform Dev Docs</title>
@@ -23176,6 +23176,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -27186,7 +27204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 06:50:34 UTC">July 17, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27210,24 +27228,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>In this guide, we will explore how to interact with Virto Cloud, including logging in, initializing environments, managing environments, deploying to Virto Cloud, and additional operations, all with detailed commands and parameters.</p>
 <h2 id="log-in-via-github-account">Log in via GitHub account<a class="headerlink" href="#log-in-via-github-account" title="Permanent link">&para;</a></h2>
 <p>This target saves a token for accessing the Virto Cloud portal, eliminating the need to use the <code>CloudToken</code> parameter with every call to targets in the Cloud group.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>vc-build CloudAuth
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">vc-build CloudAuth</span>
 </code></pre></div>
 <p>By default, authorization uses a Github account. There is an optional <code>-AzureAD</code> parameter that allows you to authorize using an Azure AD (Entra ID) account:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vc-build CloudAuth -AzureAD
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">vc-build CloudAuth -AzureAD</span>
 </code></pre></div>
 <p>You can also authenticate by directly providing a cloud token using the <code>-CloudToken</code> parameter. This eliminates the need for a Github or Azure AD account when accessing the VirtoCloud portal:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">vc-build CloudAuth -CloudToken &lt;token&gt;</span>
 </code></pre></div>
 <h2 id="initialize-new-environment">Initialize new environment<a class="headerlink" href="#initialize-new-environment" title="Permanent link">&para;</a></h2>
 <p>This target creates a new environment. It additionally accepts the <code>ServicePlan</code> parameter to specify the service plan (the default value is <strong>F1</strong>).  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>vc-build CloudInit -EnvironmentName &lt;EnvName&gt;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>vc-build CloudInit -EnvironmentName &lt;EnvName&gt; -ServicePlan **F1**
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">vc-build CloudInit -EnvironmentName &lt;EnvName&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">vc-build CloudInit -EnvironmentName &lt;EnvName&gt; -ServicePlan F1</span>
 </code></pre></div>
 <h2 id="list-environments-with-statuses">List environments with statuses<a class="headerlink" href="#list-environments-with-statuses" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vc-build CloudEnvList 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="go">vc-build CloudEnvList </span>
 </code></pre></div>
 <h2 id="download-environment-manifest">Download environment manifest<a class="headerlink" href="#download-environment-manifest" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>vc-build CloudDownloadManifest -EnvironmentName &lt;name&gt; -Manifest &lt;path&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">vc-build CloudDownloadManifest -EnvironmentName &lt;name&gt; -Manifest &lt;path&gt;</span>
 </code></pre></div>
 <p>This command downloads the manifest for the specified environment:</p>
 <ul>
@@ -27235,14 +27253,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><code>-Manifest &lt;path&gt;</code> (optional): Defines the path where the manifest will be saved. If not provided, the manifest will be saved in the current directory with a filename matching the environment name.</li>
 </ul>
 <h2 id="restart-environment">Restart environment<a class="headerlink" href="#restart-environment" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>vc-build CloudEnvRestart -EnvironmentName &lt;EnvName&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="go">vc-build CloudEnvRestart -EnvironmentName &lt;EnvName&gt;</span>
 </code></pre></div>
 <h2 id="show-environments-logs">Show environment’s logs<a class="headerlink" href="#show-environments-logs" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>vc-build CloudEnvLogs -EnvironmentName &lt;EnvName&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="go">vc-build CloudEnvLogs -EnvironmentName &lt;EnvName&gt;</span>
 </code></pre></div>
 <h2 id="update-environment">Update environment<a class="headerlink" href="#update-environment" title="Permanent link">&para;</a></h2>
 <p>This target updates an existing environment with a new application manifest. You can update the environment configuration, application version, or other settings defined in the manifest.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>vc-build CloudEnvUpdate -EnvironmentName &lt;EnvName&gt; -Manifest &lt;path&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">vc-build CloudEnvUpdate -EnvironmentName &lt;EnvName&gt; -Manifest &lt;path&gt;</span>
 </code></pre></div>
 <p>It accepts the following parameters: </p>
 <ul>
@@ -27253,14 +27271,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <h3 id="alternative-syntax-with-cloudtoken">Alternative syntax with CloudToken<a class="headerlink" href="#alternative-syntax-with-cloudtoken" title="Permanent link">&para;</a></h3>
 <p>If you haven't authenticated using <code>CloudAuth</code>, you can provide the cloud token directly:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>vc-build CloudEnvUpdate -CloudToken &lt;your token&gt; -EnvironmentName &lt;EnvName&gt; -Manifest &lt;path&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">vc-build CloudEnvUpdate -CloudToken &lt;your token&gt; -EnvironmentName &lt;EnvName&gt; -Manifest &lt;path&gt;</span>
 </code></pre></div>
 <h3 id="usage-with-routes-file">Usage with routes file<a class="headerlink" href="#usage-with-routes-file" title="Permanent link">&para;</a></h3>
 <p>This optional configuration allows you to include a routes file by specifying the <code>-RoutesFile</code> parameter:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>vc-build CloudEnvUpdate -EnvironmentName &lt;EnvName&gt; -Manifest &lt;path&gt; -RoutesFile &lt;routes-path&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="go">vc-build CloudEnvUpdate -EnvironmentName &lt;EnvName&gt; -Manifest &lt;path&gt; -RoutesFile &lt;routes-path&gt;</span>
 </code></pre></div>
 <p><strong>Example</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>vc-build CloudEnvUpdate -EnvironmentName myapp-prod -Manifest ./manifests/production-manifest.yml -RoutesFile ./config/routes.yml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">vc-build CloudEnvUpdate -EnvironmentName myapp-prod -Manifest ./manifests/production-manifest.yml -RoutesFile ./config/routes.yml</span>
 </code></pre></div>
 <p><strong>Routes file example (routes.yml)</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>- name: my-environment
@@ -27291,7 +27309,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="go">vc-build CloudEnvStatus -CloudToken &lt;your token&gt; -EnvironmentName &lt;environment name&gt; -HealthStatus Healthy -SyncStatus Progressing</span>
 </code></pre></div>
 <p>Additional parameter <code>AttemptsNumber</code> (default value <strong>100</strong>) determines the number of attempts, while <code>Delay</code> (default value <strong>10</strong>) specifies the delay between attempts.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber &lt;number of attempts&gt; -Delay &lt;num of sec&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="go">vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber &lt;number of attempts&gt; -Delay &lt;num of sec&gt;</span>
 </code></pre></div>
 <h2 id="deploy-custom-image-to-cloud">Deploy custom image to cloud<a class="headerlink" href="#deploy-custom-image-to-cloud" title="Permanent link">&para;</a></h2>
 <p>You can quickly deploy a local environment and see how it performs in the cloud.</p>
@@ -27304,12 +27322,12 @@ The <code>DockerfileUrl</code> parameter can be used to pass the url of a custom
 <ul>
 <li>
 <p>Existing environment: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>vc-build CloudDeploy -EnvironmentName &lt;EnvName&gt; -DockerUsername &lt;username of docker hub&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">vc-build CloudDeploy -EnvironmentName &lt;EnvName&gt; -DockerUsername &lt;username of docker hub&gt;</span>
 </code></pre></div>
 </li>
 <li>
 <p>New environment:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>vc-build CloudUp -EnvironmentName &lt;EnvName&gt; -DockerUsername &lt;username of docker hub&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="go">vc-build CloudUp -EnvironmentName &lt;EnvName&gt; -DockerUsername &lt;username of docker hub&gt;</span>
 </code></pre></div>
 </li>
 </ul>

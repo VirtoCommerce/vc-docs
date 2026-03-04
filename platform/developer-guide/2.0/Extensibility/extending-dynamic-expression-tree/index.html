@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Extensibility - Extending Dynamic Expression Tree - Platform Dev Docs</title>
@@ -23098,6 +23098,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -27032,7 +27050,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 1, 2025 10:28:44 UTC">September 1, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27094,7 +27112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To register your extension in the <strong>module.cs</strong> file: </p>
 <ol>
 <li>
-<p>Override the original <code>PromotionConditionAndRewardTreePrototype</code> type with the newly created one in the <code>module.cs</code> file:</p>
+<p>Override the original <code>PromotionConditionAndRewardTreePrototype</code> type with the newly created one in the <strong>module.cs</strong> file:</p>
 <div class="highlight"><span class="filename">module.cs</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">            </span><span class="c1">// Override the original expression prototype tree with new type</span>
@@ -27123,7 +27141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="admonition-title">Tip</p>
 <p>Use the following schema as a template ID: <code>expression-{C# element class name}.html</code>.</p>
 </div>
-<div class="highlight"><span class="filename">Scripts/all-templates.js</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/ng-template&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;expression-BlockSampleCondition.html&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><span class="filename">Scripts/all-templates.html</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/ng-template&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;expression-BlockSampleCondition.html&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">For</span><span class="w"> </span><span class="nx">condition</span><span class="w"> </span><span class="nx">evaluator</span><span class="w"> </span><span class="kd">with</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">&quot;__link&quot;</span><span class="w"> </span><span class="nx">left</span><span class="o">-</span><span class="nx">click</span><span class="o">-</span><span class="nx">menu</span><span class="w"> </span><span class="nx">data</span><span class="o">-</span><span class="nx">target</span><span class="o">=</span><span class="s2">&quot;allAny_menu{{element.id}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">element</span><span class="p">.</span><span class="nx">all</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">boolToValue</span><span class="o">:</span><span class="s1">&#39;all&#39;</span><span class="o">:</span><span class="s1">&#39;any&#39;</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/a&gt; of these sample values</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">ul</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">&quot;menu __context&quot;</span><span class="w"> </span><span class="nx">role</span><span class="o">=</span><span class="s2">&quot;menu&quot;</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;allAny_menu{{element.id}}&quot;</span><span class="o">&gt;</span>
@@ -27142,7 +27160,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <h2 id="register-new-elements-in-main-modulejs-file">Register new elements in main module.js file<a class="headerlink" href="#register-new-elements-in-main-modulejs-file" title="Permanent link">&para;</a></h2>
 <p>Register your newly created expression elements in <code>dynamicExpressionService</code> that is used as a registry for all known tree elements:</p>
-<div class="highlight"><span class="filename">Script/module.js</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="nx">moduleName</span><span class="p">,</span><span class="w"> </span><span class="p">[])</span>
+<div class="highlight"><span class="filename">Script/module.html</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="nx">moduleName</span><span class="p">,</span><span class="w"> </span><span class="p">[])</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="p">.</span><span class="nx">run</span><span class="p">([</span><span class="s1">&#39;virtoCommerce.coreModule.common.dynamicExpressionService&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$http&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$compile&#39;</span><span class="p">,</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">dynamicExpressionService</span><span class="p">,</span><span class="w"> </span><span class="nx">$http</span><span class="p">,</span><span class="w"> </span><span class="nx">$compile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="c1">//Register Sample expressions</span>

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Configuration Reference - Appsettings.json - Platform Dev Docs</title>
@@ -7201,7 +7201,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#ai-document-processing" class="md-nav__link">
-        AI Document Processing
+        AI document processing
     </a>
 
     <!-- Render nested item list -->
@@ -23686,6 +23686,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -27668,7 +27686,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#ai-document-processing" class="md-nav__link">
-        AI Document Processing
+        AI document processing
     </a>
 
     <!-- Render nested item list -->
@@ -28208,7 +28226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 15:51:57 UTC">February 10, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -28377,7 +28395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tr>
 <td>SamplingOptions.Processor</td>
 <td>adaptive <br> fixed-rate</td>
-<td>This setting lets you chose between two sampling methods:<br><strong>Adaptive sampling</strong>: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications">configuring this option</a>.<br><strong>Fixed-rate sampling</strong>: reduces the volume of telemetry sent from both the application. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting.</td>
+<td>This setting lets you choose between two sampling methods:<br><strong>Adaptive sampling</strong>: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications">configuring this option</a>.<br><strong>Fixed-rate sampling</strong>: reduces the volume of telemetry sent from both your ASP.NET/ASP.NET Core app and Azure functions. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting.</td>
 </tr>
 <tr>
 <td>SamplingOptions.Adaptive.MaxTelemetryItemsPerSecond</td>
@@ -28501,7 +28519,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 <!--AppInsights2-end-->
 
-<p>You can enable AI logging by updating the following <code>Serilog</code> configuration sections (the module comes with a <a href="https://github.com/serilog-contrib/serilog-sinks-applicationinsights">sink</a> for Serilog that writes events to Microsoft Application Insights. To enable AI logging update the following <code>Serilog</code> configuration sections):</p>
+<p>The module includes a <a href="https://github.com/serilog-contrib/serilog-sinks-applicationinsights">sink</a> for Serilog that writes events to Microsoft Application Insights. To enable it, update the <code>Serilog</code> section in <code>appsettings.json</code>:</p>
 <!--AppInsights3-start-->
 
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
@@ -28994,8 +29012,8 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span>
 </code></pre></div>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" />  <a href="https://developers.google.com/youtube/v3/getting-started">YouTube Data API Overview</a></p>
-<h3 id="ai-document-processing">AI Document Processing<a class="headerlink" href="#ai-document-processing" title="Permanent link">&para;</a></h3>
-<p>This node configures AI-based document processing services and file upload settings in the application.  </p>
+<h3 id="ai-document-processing">AI document processing<a class="headerlink" href="#ai-document-processing" title="Permanent link">&para;</a></h3>
+<p>This node configures AI-based document processing services and file upload settings in the Virto Commerce Platform.  </p>
 <table>
 <thead>
 <tr>
@@ -29557,16 +29575,11 @@ The Reset icon is not displayed when:</p>
 <td></td>
 <td>An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys.<br> If your app has custom signing keys as a result of using the claim mapping feature, you should append the <code>appid</code> query parameter containing the app ID in order to get a <code>jwks_uri</code> pointing to your app's signing key information.<br> For example, <a href="https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e">https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e</a> contains a <code>jwks_uri</code> of <a href="https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e">https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e</a>.</td>
 </tr>
-<tr>
-<td>UsePreferredUsername</td>
-<td>true<br>false</td>
-<td>Indicates whether to use the <code>preferred_username</code> claim as a fallback scenario in case the UPN claim is not set for getting the username.</td>
-</tr>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
 <p>Example settings for the <code>AzureAD</code> section:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">&quot;AzureAd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">&quot;AzureAd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">        </span><span class="nt">&quot;Enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">        </span><span class="nt">&quot;AuthenticationType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureAD&quot;</span><span class="p">,</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="nt">&quot;AuthenticationCaption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Azure Active Directory&quot;</span><span class="p">,</span>
@@ -29972,7 +29985,7 @@ The Reset icon is not displayed when:</p>
 </tr>
 <tr>
 <td>ComparableEnvironments:Url</td>
-<td><code>"https://qa.mydomaim.com"</code></td>
+<td><code>"https://qa.mydomain.com"</code></td>
 <td>Base URL of the remote environment. Must be accessible from the current environment over HTTP or HTTPS.</td>
 </tr>
 <tr>
@@ -29989,12 +30002,12 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="w">    </span><span class="nt">&quot;ComparableEnvironments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="w">      </span><span class="p">{</span>
 <a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QA&quot;</span><span class="p">,</span>
-<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="w">        </span><span class="nt">&quot;Url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qa.mydomaim.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="w">        </span><span class="nt">&quot;Url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://qa.mydomain.com&quot;</span><span class="p">,</span>
 <a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="w">        </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4a86441-cabb-4a60-af90-9c6ebe11a401&quot;</span>
 <a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="w">      </span><span class="p">},</span>
 <a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="w">      </span><span class="p">{</span>
 <a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Development&quot;</span><span class="p">,</span>
-<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="w">        </span><span class="nt">&quot;Url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dev.mydomaim.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="w">        </span><span class="nt">&quot;Url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dev.mydomain.com&quot;</span><span class="p">,</span>
 <a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="w">        </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4a86441-cabb-4a60-af90-9c6ebe11a401&quot;</span>
 <a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a><span class="w">    </span><span class="p">]</span>
@@ -30449,19 +30462,18 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">      </span><span class="nt">&quot;Port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">587</span><span class="p">,</span>
 <a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="w">      </span><span class="nt">&quot;Login&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a><span class="w">      </span><span class="nt">&quot;Password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a><span class="w">      </span><span class="nt">&quot;ForceSslTls&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a><span class="w">      </span><span class="nt">&quot;ForceSslTls&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a><span class="w">      </span><span class="nt">&quot;CustomHeaders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a><span class="w">        </span><span class="nt">&quot;X-Custom-Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a><span class="w">        </span><span class="nt">&quot;X-Custom-Header2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span>
-<a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-43-15" name="__codelineno-43-15" href="#__codelineno-43-15"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-43-16" name="__codelineno-43-16" href="#__codelineno-43-16"></a><span class="w">    </span><span class="nt">&quot;SendGrid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-43-17" name="__codelineno-43-17" href="#__codelineno-43-17"></a><span class="w">      </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-<a id="__codelineno-43-18" name="__codelineno-43-18" href="#__codelineno-43-18"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-43-19" name="__codelineno-43-19" href="#__codelineno-43-19"></a><span class="w">    </span><span class="nt">&quot;Notifications:DiscoveryPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Templates&quot;</span><span class="p">,</span>
-<a id="__codelineno-43-20" name="__codelineno-43-20" href="#__codelineno-43-20"></a><span class="w">    </span><span class="nt">&quot;Notifications:FallbackDiscoveryPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-<a id="__codelineno-43-21" name="__codelineno-43-21" href="#__codelineno-43-21"></a><span class="p">}</span>
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a><span class="w">      </span><span class="nt">&quot;ForceSslTls&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a><span class="w">      </span><span class="nt">&quot;CustomHeaders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a><span class="w">        </span><span class="nt">&quot;X-Custom-Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a><span class="w">        </span><span class="nt">&quot;X-Custom-Header2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span>
+<a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-43-15" name="__codelineno-43-15" href="#__codelineno-43-15"></a><span class="w">    </span><span class="nt">&quot;SendGrid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-43-16" name="__codelineno-43-16" href="#__codelineno-43-16"></a><span class="w">      </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-43-17" name="__codelineno-43-17" href="#__codelineno-43-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-43-18" name="__codelineno-43-18" href="#__codelineno-43-18"></a><span class="w">    </span><span class="nt">&quot;Notifications:DiscoveryPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Templates&quot;</span><span class="p">,</span>
+<a id="__codelineno-43-19" name="__codelineno-43-19" href="#__codelineno-43-19"></a><span class="w">    </span><span class="nt">&quot;Notifications:FallbackDiscoveryPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-43-20" name="__codelineno-43-20" href="#__codelineno-43-20"></a><span class="p">}</span>
 </code></pre></div>
 <!--notifications-end-->
 
@@ -30667,6 +30679,7 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-45-30" name="__codelineno-45-30" href="#__codelineno-45-30"></a>          };
 <a id="__codelineno-45-31" name="__codelineno-45-31" href="#__codelineno-45-31"></a>          var response = proxyHttpClient.Send(proxyRequest);
 <a id="__codelineno-45-32" name="__codelineno-45-32" href="#__codelineno-45-32"></a>      }
+<a id="__codelineno-45-33" name="__codelineno-45-33" href="#__codelineno-45-33"></a>    }
 </code></pre></div>
 </details>
 </div>
@@ -30775,7 +30788,7 @@ The Reset icon is not displayed when:</p>
 <!--datatrans-end-->
 
 <h3 id="platformsettings">PlatformSettings<a class="headerlink" href="#platformsettings" title="Permanent link">&para;</a></h3>
-<p>This node is used for Used for Platform settings overriding.</p>
+<p>This node is used for Platform settings overriding.</p>
 <table>
 <thead>
 <tr>
@@ -31298,7 +31311,7 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-62-21" name="__codelineno-62-21" href="#__codelineno-62-21"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
 <a id="__codelineno-62-22" name="__codelineno-62-22" href="#__codelineno-62-22"></a><span class="w">            </span><span class="p">},</span>
 <a id="__codelineno-62-23" name="__codelineno-62-23" href="#__codelineno-62-23"></a><span class="w">            </span><span class="p">{</span>
-<a id="__codelineno-62-24" name="__codelineno-62-24" href="#__codelineno-62-24"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LOw&quot;</span><span class="p">,</span>
+<a id="__codelineno-62-24" name="__codelineno-62-24" href="#__codelineno-62-24"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Low&quot;</span><span class="p">,</span>
 <a id="__codelineno-62-25" name="__codelineno-62-25" href="#__codelineno-62-25"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
 <a id="__codelineno-62-26" name="__codelineno-62-26" href="#__codelineno-62-26"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
 <a id="__codelineno-62-27" name="__codelineno-62-27" href="#__codelineno-62-27"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
@@ -31781,7 +31794,7 @@ The Reset icon is not displayed when:</p>
 <thead>
 <tr>
 <th>Node</th>
-<th>Default value</th>
+<th>Default or sample value</th>
 <th>Description</th>
 </tr>
 </thead>

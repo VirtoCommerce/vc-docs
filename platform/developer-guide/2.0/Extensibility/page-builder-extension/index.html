@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Extensibility - Adding New Blocks to Page Builder - Platform Dev Docs</title>
@@ -23007,6 +23007,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -26873,7 +26891,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -26894,19 +26912,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="add-blocks-to-page-builder">Add Blocks to Page Builder<a class="headerlink" href="#add-blocks-to-page-builder" title="Permanent link">&para;</a></h1>
-<p>Frontend developers can now add or edit Page Builder blocks in Virto Commerce Frontend to simplify the customization process. 
+<p>Frontend developers can add or edit Page Builder blocks in Virto Commerce Frontend to simplify the customization process. 
 <br>
 <br>
 <img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/latest/page-builder/overview">Page Builder user guide</a>
 <br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>As of <a href="https://github.com/VirtoCommerce/vc-module-pagebuilder/releases/tag/3.818.0">Page Builder 3.818.0</a>, the Virto Commerce Frontend includes a <strong>PageBuilderPreview</strong> plugin, which enhances how preview mode works. Here is what this update changes:</p>
 <ul>
 <li>The plugin runs automatically when the system enters preview mode in Page Builder.</li>
 <li>The plugin collects all configuration files into a single object for streamlined data management.</li>
 <li>The collected data is sent to the Page Builder using <strong>postMessage</strong>, ensuring smooth communication.</li>
 <li>The previous approach (using a shared folder or blob storage) is still supported for backward compatibility.</li>
-<li>If a section with the same name already exists in the Page Builder, it will now be overwritten.</li>
+<li>If a section with the same name already exists in the Page Builder, it will be overwritten.</li>
 </ul>
+</div>
 <p>As an example, let's add two blocks to the configuration:</p>
 <ul>
 <li><strong>Image</strong>: A modified version of the existing <strong>Image</strong> block.</li>
@@ -26915,7 +26936,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To add these blocks:</p>
 <ol>
 <li>Go to <strong>Content</strong> &rarr; <strong>Theme</strong>.</li>
-<li>Create the following folder structure: <strong>config</strong>&rarr; <strong>schemas</strong> &rarr; <strong>sections</strong>.</li>
+<li>Create the following folder structure: <strong>config/schemas/sections/</strong>.</li>
 <li>Upload <strong>Image.json</strong> and <strong>Image2.json</strong> files to this folder.</li>
 </ol>
 <p>The existing <strong>Image</strong> block is replaced with the new one. The new <strong>Image2</strong> block is added to the list of blocks:</p>

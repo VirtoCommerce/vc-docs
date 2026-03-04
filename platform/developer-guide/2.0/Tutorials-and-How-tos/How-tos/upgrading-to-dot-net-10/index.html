@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>How-tos - Upgrading to Virto Commerce on .NET10 - Platform Dev Docs</title>
@@ -23025,7 +23025,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#updated-mysql-provider" class="md-nav__link">
-        Updated MySQL Provider
+        Updated MySQL provider
     </a>
 
     <!-- Render nested item list -->
@@ -23121,7 +23121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#update-solution-to-net10" class="md-nav__link">
-        Update solution to NET10
+        Update solution to .NET10
     </a>
 
     <!-- Render nested item list -->
@@ -23186,6 +23186,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../adding-case-sensitive-search-support-for-postgre/" class="md-nav__link">
         Adding Case-Insensitive Search Support for PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../using-context7/" class="md-nav__link">
+        Using Context7
       </a>
     </li>
   
@@ -27078,7 +27096,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#updated-mysql-provider" class="md-nav__link">
-        Updated MySQL Provider
+        Updated MySQL provider
     </a>
 
     <!-- Render nested item list -->
@@ -27174,7 +27192,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Table of contents item -->
 <li class="md-nav__item">
     <a href="#update-solution-to-net10" class="md-nav__link">
-        Update solution to NET10
+        Update solution to .NET10
     </a>
 
     <!-- Render nested item list -->
@@ -27238,7 +27256,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 12, 2026 10:23:12 UTC">February 12, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27287,7 +27305,7 @@ This update focuses on:</p>
 </div>
 <h2 id="known-limitations-and-breaking-changes">Known limitations and breaking changes<a class="headerlink" href="#known-limitations-and-breaking-changes" title="Permanent link">&para;</a></h2>
 <p>This section outlines known limitations and breaking changes introduced with the .NET 10 upgrade that may require adjustments to existing solutions or custom module.</p>
-<h3 id="updated-mysql-provider">Updated MySQL Provider<a class="headerlink" href="#updated-mysql-provider" title="Permanent link">&para;</a></h3>
+<h3 id="updated-mysql-provider">Updated MySQL provider<a class="headerlink" href="#updated-mysql-provider" title="Permanent link">&para;</a></h3>
 <p>Virto Commerce uses <strong>Pomelo.EntityFrameworkCore.MySql 9.0.0</strong> for MySql.</p>
 <h3 id="ef-core-9-strict-validation-of-pending-model-changes">EF Core 9: Strict validation of pending model changes<a class="headerlink" href="#ef-core-9-strict-validation-of-pending-model-changes" title="Permanent link">&para;</a></h3>
 <p>Starting with EF Core 9.0, the runtime enforces stricter validation of entity models. If there are model changes that are not reflected in the latest migration, an exception is thrown when executing:</p>
@@ -27399,10 +27417,10 @@ In .NET 10, Microsoft refreshed and excluded some assemblies (dll) that are no l
 </li>
 </ol>
 <p>If you develop a custom module, we recommend updating it to the .NET10 version.</p>
-<h3 id="update-solution-to-net10">Update solution to NET10<a class="headerlink" href="#update-solution-to-net10" title="Permanent link">&para;</a></h3>
+<h3 id="update-solution-to-net10">Update solution to .NET10<a class="headerlink" href="#update-solution-to-net10" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Download and execute the <a href="vc-net10-update.ps1">vc-net10-update.ps1 Power Shell script</a> in your solution folder. </p>
+<p>Download and execute the <a href="https://github.com/VirtoCommerce/vc-platform/blob/dev/docs/release-information/update-to-version-3-1000/vc-net10-update.ps1">PowerShell script</a> in your solution folder. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If script execution is restricted, temporarily allow PowerShell scripts for the current session:</p>

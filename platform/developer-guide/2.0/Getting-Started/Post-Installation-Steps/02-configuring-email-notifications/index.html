@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
 <title>Post Installation Steps - Configuring Email Notifications - Platform Dev Docs</title>
@@ -23082,6 +23082,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../../Tutorials-and-How-tos/How-tos/using-context7/" class="md-nav__link">
+        Using Context7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../../Tutorials-and-How-tos/How-tos/swagger-api/" class="md-nav__link">
         Swagger/API Integration in Virto Commerce
       </a>
@@ -26996,7 +27014,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 30, 2025 07:38:08 UTC">August 30, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27017,7 +27035,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="configure-email-notifications">Configure Email Notifications<a class="headerlink" href="#configure-email-notifications" title="Permanent link">&para;</a></h1>
-<p>Virto Commerce Platform enables sending email notifications for various system events, such as restoring passwords, customer order processing, etc. To send such notifications, use a third-party email service provider by setting up an mail gateway so that the Platform may start sending emails. Currently, there are two gateways options: SMTP and SendGrid.</p>
+<p>Virto Commerce Platform enables sending email notifications for various system events, such as restoring passwords, customer order processing, etc. To send such notifications, use a third-party email service provider by setting up an mail gateway so that the Platform may start sending emails. Currently, there are two gateway options: SMTP and SendGrid.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/VirtoCommerce/vc-module-notification">Notification module</a></li>
@@ -27026,7 +27044,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To enable sending notifications through Gmail:</p>
 <ol>
 <li>
-<p>Turn on the  <strong>Allow less secure apps</strong> option in <a href="https://www.google.com/settings/security/lesssecureapps" title="https://www.google.com/settings/security/lesssecureapps">Google Security Settings</a>. </p>
+<p>Enable <strong>2-Step Verification</strong> on your Google Account if it is not already active:
+   Go to <a href="https://myaccount.google.com/security">Google Account Security</a> &rarr; <strong>How you sign in to Google</strong> &rarr; <strong>2-Step Verification</strong>.</p>
+</li>
+<li>
+<p>Generate an <strong>App Password</strong>:
+   Go to <a href="https://myaccount.google.com/apppasswords">https://myaccount.google.com/apppasswords</a>, enter a name (e.g. VirtoCommerce), and click <strong>Create</strong>. Copy the generated 16-character password.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>App Passwords are only available when 2-Step Verification is enabled. If you do not see the App Passwords option, check that your account is not a managed Workspace account with App Passwords disabled by an administrator.</p>
+</div>
 </li>
 <li>
 <p>Edit the <strong>Notifications</strong> section in the <strong>appsettings.json</strong> file:</p>
@@ -27079,7 +27106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 </li>
 <li>
-<p>In case of success, you will receive an test email on your email account. Otherwise, go to <strong>Notifications</strong> → <strong>Notification activity feed</strong> to see which error(s) led to a failure:</p>
+<p>In case of success, you will receive a test email on your email account. Otherwise, go to <strong>Notifications</strong> → <strong>Notification activity feed</strong> to see which error(s) led to a failure:</p>
 </li>
 </ol>
 <p><img alt="Notification activity feed" src="../media/05-notification-activity-feed.png" /></p>
