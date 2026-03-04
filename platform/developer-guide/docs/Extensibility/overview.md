@@ -2,7 +2,7 @@
 
 Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
 
-There are types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
+There are several types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
 
 * No-code extensions.
  
@@ -20,7 +20,7 @@ In particular, Virto Commerce supports:
 
 * [Dynamic properties](../Fundamentals/Dynamic-Properties/overview.md): Extend entities, such as Cart, Order, Company, etc., with new properties.
 
-* Statuses: Enable implementing any workflow.
+* [Statuses](../../../user-guide/contacts/settings#statuses): Add Order, Shipment, Payment, etc. statuses.
 
 * [Role-based security and permissions](../Fundamentals/Security/overview.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
 
@@ -37,7 +37,7 @@ Virto Commerce currently provides two types of API:
 We also support two types of event providers:
 
 * [Webhooks](../Fundamentals/Event-Driven-Development/webhooks.md): A good point for no development integration.
-* [Event Bus](../Fundamentals/Event-Driven-Development/event-bus.md): Read for reactive programming and enterprise integrations.
+* [Event Bus](../Fundamentals/Event-Driven-Development/event-bus.md): Ready for reactive programming and enterprise integrations.
 
 ## Native extensions
 
@@ -48,7 +48,7 @@ Virto Commerce creates a unique extension framework based on .NET extension and 
 Moreover, it simplifies DevOps processes and optimizes performance.
 
 !!! warning
-    Source code is available only for transparency purposes. Virto does not recommend extending the Platform through the source code, as it may breach the continuous delivery functionality.
+    Source code is available only for transparency purposes. Virto Commerce does not recommend extending the Platform through the source code, as it may breach the continuous delivery functionality.
 
 With a custom module, you can extend every layer:
 
@@ -112,11 +112,11 @@ The table below will help you understand the differences between various customi
 | API    	| Messages         	| Integration                             	| Order processing and financial transactions 	| Transactions<br> Ready for price applications  	| Cost<br> Network latency          |
 
 ## Summary
-+ Virto Commerce provides the best opportunities for customization. 
-+ As a developer you can choose the best approach and balance between inside and outside integrations.
-+ The Native approach simplifies the DevOps processes and optimizes performance, allowing you to reuse and improve Virto Commerce modules.
-+ The API approach helps you to **glue** Virto Commerce's Platform into your ecommerce ecosystem. 
-+ The open source principle enables developers to learn the code and fix issues.
+* Virto Commerce provides the best opportunities for customization. 
+* As a developer you can choose the best approach and balance between inside and outside integrations.
+* The Native approach simplifies the DevOps processes and optimizes performance, allowing you to reuse and improve Virto Commerce modules.
+* The API approach helps you to **glue** Virto Commerce's Platform into your ecommerce ecosystem. 
+* The open source principle enables developers to learn the code and fix issues.
 
 
 

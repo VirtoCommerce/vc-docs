@@ -88,13 +88,7 @@ vc-build install -module VirtoCommerce.WhiteLabeling
 
 ## Update Platform and modules
 
-To update **vc-package.json** with the latest Platform and module versions or install the updated versions, run:
-
-```bash
-vc-build update
-```
-
-Run the same command to update to the latest stable bundle:
+To update **vc-package.json** with the latest Platform and module versions, to install the updated versions, or to update a stable bundle, run:
 
 ```bash
 vc-build update
@@ -223,7 +217,7 @@ vc-build install -PackageManifestPath ./vc-package.json -GithubToken ghp_XXXXXXX
 If `vc-build install` or `vc-build update` is executed in a directory that already contains Platform files, a backup will be created automatically. To skip the backup step, use:
 
 ```bash
-vc-build install -skip backup
+vc-build install -skip Backup
 ```
 
 

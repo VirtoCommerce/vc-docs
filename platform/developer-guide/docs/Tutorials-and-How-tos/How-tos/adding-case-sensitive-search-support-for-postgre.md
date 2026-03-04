@@ -64,5 +64,5 @@ By default, PostgreSQL performs case-sensitive string comparisons, unlike SQL Se
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../upgrading-to-dot-net-10">← Upgrading to Virto Commerce on .NET10 </a>
-    <a href="../swagger-api">Swagger/API integration  →</a>
+    <a href="../using-context7">Setting up Context7  →</a>
 </div>

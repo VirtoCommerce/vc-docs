@@ -8,20 +8,12 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 * [.NET Core SDK on Linux.](https://dotnet.microsoft.com/en-us/download?initial-os=linux)
 * [Microsoft SQL Server.](https://www.microsoft.com/en-us/sql-server/)
 
-## Supported databases
-
-Virto Commerce is built with DB agnostic architecture and supports the following databases:
-
-* Microsoft SQL Server 2019 or higher.
-* MySql Server 5.7 or higher.
-* PostgreSQL 12 or higher.
-
 ## Install Platform
 
 The Platform can be installed:
 
-* [Manually by downloading the precompiled binaries](linux.md#download-precompiled-binaries).
-* [Using Virto Commerce CLI (vc-build)](linux.md#use-virto-commerce-cli).
+* [Manually by downloading the precompiled binaries](#download-precompiled-binaries).
+* [Using Virto Commerce CLI (vc-build)](#use-virto-commerce-cli).
   
 ### Download precompiled binaries
 
@@ -31,7 +23,7 @@ To download precompiled binaries:
 
 1. Find **VirtoCommerce.Platform.3.x.x.zip** file. This file contains the prebuilt site and can be executed without additional compilation. The source code is not included. 
 
-* Unpack this ZIP to a local directory **/vc-platform-3**. After that you will have the directory with Platform precompiled files.
+1. Unpack this ZIP to a local directory **/vc-platform-3**. After that you will have the directory with Platform precompiled files.
 
     ```console
     wget "https://github.com/VirtoCommerce/vc-platform/releases/download/3.x.x/VirtoCommerce.Platform.3.x.x.zip"
@@ -43,7 +35,7 @@ To download precompiled binaries:
     unzip VirtoCommerce.Platform.3.x.x.zip -d vc-platform-3
     ```
 
-Now you have the directory with the precompiled files of the Virto Commerce Platform.
+Now, you have the directory with the precompiled files of the Virto Commerce Platform.
 
 ### Use Virto Commerce CLI
 
@@ -64,18 +56,18 @@ To use Virto Commerce CLI (vc-build):
 1. Specify the Platform version (if required) using the command:
 
     ```console
-    vc-build install -version 3.293.0
+    vc-build install -version 3.x.x.x
     ```
 
 ![Readmore](media/readmore.png){: width="25"} [VC-Build for Packages Management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)
 
-## Setup Platform
+## Set up Platform
 
 To set up the Platform:
 
 1. [Configure application strings.](linux.md#configure-application-strings)
 2. [Run the Platform by CLI "dotnet".](linux.md#run-the-platform-by-cli-dotnet)
-3. [Perform initial sign in.](linux.md#perform-initial-sign-in)
+3. [Perform initial sign-in.](linux.md#perform-initial-sign-in)
 
 ### Configure application strings
 
@@ -102,7 +94,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/assets",
-                "PublicUrl": "https://localhost:5001/assets/" <-- Set your Platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/assets/" // Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -110,11 +102,11 @@ To configure application strings:
 1. To configure CMS content storage, specify the public url for content for content by updating `Content:FileSystem:PublicUrl` in the Content section: 
 
     ```json
-    "Content*": {
+    "Content": {
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/cms-content",
-                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your Platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/cms-content/" // Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -122,7 +114,7 @@ To configure application strings:
 1. Save the **appsettings.json** file to apply the configurations.
 
 
-### Run Platform by CLI "dotnet"
+### Run Platform 
 
 To run the Platform by CLI:
 

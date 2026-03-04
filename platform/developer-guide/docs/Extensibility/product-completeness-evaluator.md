@@ -66,7 +66,7 @@ _container.RegisterType<ICompletenessEvaluator, CustomCompletenessEvaluator>(nam
 Now your product completeness evaluator is available in module's REST API and UI.
 
 
-## Define own product completeness evaluator
+## Implement custom product completeness evaluator
 
 If you want to define your own product completeness evaluation process, you can implement the same extensibility logic as ours:
 
@@ -92,12 +92,12 @@ public class CustomCompletenessEvaluator : ICompletenessEvaluator
 }
 ```
 
-If you prefer not to define your own product completeness evaluation process from scratch, you can simply customize the default process provided by inheriting from the DefaultCompletenessEvaluator. Here are the options for customizing your product completeness evaluator:
+If you prefer not to define your own product completeness evaluation process from scratch, you can simply customize the default process provided by inheriting from the `DefaultCompletenessEvaluator`. Here are the options for customizing your product completeness evaluator:
 
-* [Default detail evaluators](product-completeness-evaluator.md#default-detail-evaluators): Use the default detail evaluators provided.
-* [Custom detail evaluators](product-completeness-evaluator.md#custom-detail-evaluators): Implement your own custom detail evaluators.
-* [Combining default and custom detail evaluators](product-completeness-evaluator.md#combining-default-and-custom-detail-evaluators): Mix default and custom detail evaluators to suit your needs.
-* [Mixing default and all custom detail evaluators](product-completeness-evaluator.md#mixing-default-and-all-custom-detail-evaluators): Utilize some default evaluators alongside entirely custom ones.
+* [Default detail evaluators](#default-detail-evaluators): Use the default detail evaluators provided.
+* [Custom detail evaluators](#custom-detail-evaluators): Implement your own custom detail evaluators.
+* [Combining default and custom detail evaluators](#combining-default-and-custom-detail-evaluators): Mix default and custom detail evaluators to suit your needs.
+* [Mixing default and all custom detail evaluators](#mixing-default-and-all-custom-detail-evaluators): Utilize some default evaluators alongside entirely custom ones.
 
 ### Default detail evaluators
 

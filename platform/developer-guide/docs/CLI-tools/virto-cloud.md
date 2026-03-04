@@ -6,13 +6,13 @@ In this guide, we will explore how to interact with Virto Cloud, including loggi
    
 This target saves a token for accessing the Virto Cloud portal, eliminating the need to use the `CloudToken` parameter with every call to targets in the Cloud group.  
    
-```
+```console
 vc-build CloudAuth
 ```
 
 By default, authorization uses a Github account. There is an optional `-AzureAD` parameter that allows you to authorize using an Azure AD (Entra ID) account:
 
-```
+```console
 vc-build CloudAuth -AzureAD
 ```
 
@@ -26,20 +26,20 @@ vc-build CloudAuth -CloudToken <token>
 
 This target creates a new environment. It additionally accepts the `ServicePlan` parameter to specify the service plan (the default value is **F1**).  
    
-```
+```console
 vc-build CloudInit -EnvironmentName <EnvName>
-vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan **F1**
+vc-build CloudInit -EnvironmentName <EnvName> -ServicePlan F1
 ```
 
 ## List environments with statuses  
 
-```
+```console
 vc-build CloudEnvList 
 ```
 
 ## Download environment manifest
 
-```
+```console
 vc-build CloudDownloadManifest -EnvironmentName <name> -Manifest <path>
 ```
 
@@ -51,13 +51,13 @@ This command downloads the manifest for the specified environment:
 
 ## Restart environment
 
-```
+```console
 vc-build CloudEnvRestart -EnvironmentName <EnvName>
 ```
 
 ## Show environment’s logs  
 
-```
+```console
 vc-build CloudEnvLogs -EnvironmentName <EnvName>
 ```
 
@@ -66,7 +66,7 @@ vc-build CloudEnvLogs -EnvironmentName <EnvName>
 This target updates an existing environment with a new application manifest. You can update the environment configuration, application version, or other settings defined in the manifest.
 
 
-```
+```console
 vc-build CloudEnvUpdate -EnvironmentName <EnvName> -Manifest <path>
 ```
 
@@ -81,7 +81,7 @@ It accepts the following parameters:
 
 If you haven't authenticated using `CloudAuth`, you can provide the cloud token directly:
 
-```
+```console
 vc-build CloudEnvUpdate -CloudToken <your token> -EnvironmentName <EnvName> -Manifest <path>
 ```
 
@@ -90,13 +90,13 @@ vc-build CloudEnvUpdate -CloudToken <your token> -EnvironmentName <EnvName> -Man
 
 This optional configuration allows you to include a routes file by specifying the `-RoutesFile` parameter:
 
-```
+```console
 vc-build CloudEnvUpdate -EnvironmentName <EnvName> -Manifest <path> -RoutesFile <routes-path>
 ```
 
 **Example**:
 
-```
+```console
 vc-build CloudEnvUpdate -EnvironmentName myapp-prod -Manifest ./manifests/production-manifest.yml -RoutesFile ./config/routes.yml
 ```
 
@@ -146,7 +146,7 @@ vc-build CloudEnvStatus -CloudToken <your token> -EnvironmentName <environment n
 
 Additional parameter `AttemptsNumber` (default value **100**) determines the number of attempts, while `Delay` (default value **10**) specifies the delay between attempts.  
 
-```
+```console
 vc-build CloudEnvStatus -HealthStatus Healthy -SyncStatus Progressing -AttemptsNumber <number of attempts> -Delay <num of sec>
 ```
 
@@ -163,13 +163,13 @@ You can build and deploy docker images to:
 
 * Existing environment: 
     
-    ```
+    ```console
     vc-build CloudDeploy -EnvironmentName <EnvName> -DockerUsername <username of docker hub>
     ```
 
 * New environment:
     
-    ```
+    ```console
     vc-build CloudUp -EnvironmentName <EnvName> -DockerUsername <username of docker hub>
     ```
 

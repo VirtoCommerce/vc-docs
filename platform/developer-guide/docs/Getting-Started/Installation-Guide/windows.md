@@ -29,8 +29,8 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 The Platform can be installed:
 
-* [Manually by downloading the precompiled binaries](windows.md#download-precompiled-binaries).
-* [Using Virto Commerce CLI (vc-build)](windows.md#use-virto-commerce-cli).
+* [Manually by downloading the precompiled binaries](#download-precompiled-binaries).
+* [Using Virto Commerce CLI (vc-build)](#use-virto-commerce-cli).
 
 ### Download precompiled binaries
 
@@ -61,7 +61,7 @@ To use Virto Commerce CLI (vc-build):
 1. Specify the Platform version (if required) using the command:
 
     ```console
-    vc-build install -version 3.800.0
+    vc-build install -version 3.x.x.x
     ```
 
 
@@ -72,13 +72,13 @@ To use Virto Commerce CLI (vc-build):
 ![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](/platform/developer-guide/CLI-tools/package-management)
 
 
-## Setup Platform
+## Set up Platform
 
 To set up the Platform:
 
 1. [Configure application strings.](windows.md#configure-application-strings)
 2. [Run the Platform.](windows.md#run-platform)
-3. [Perform initial sign in.](windows.md#perform-initial-sign-in)
+3. [Perform initial sign-in.](windows.md#perform-initial-sign-in)
 
 ### Configure application strings
 
@@ -108,7 +108,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/assets",
-                "PublicUrl": "https://localhost:5001/assets/" <-- Set your Platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/assets/" // Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -120,7 +120,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/cms-content",
-                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your Platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/cms-content/" // Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -134,7 +134,7 @@ You can run the Platform:
 * On HTTPS schema (Preferred).
 * On HTTP schema.
 
-=== "Run on HTTPS schema (Prefered)"
+=== "Run on HTTPS schema (Preferred)"
 
     1. Install and trust HTTPS certificate. [Trust the .NET Core SDK HTTPS development certificate on Windows](https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos-1).
 

@@ -60,7 +60,7 @@ This node adds and customizes the Application Insights section.
 
 | Node                                         | Default or sample value                                   | Description                                                      |
 | ---------------------------------------------| ----------------------------------------------------------| -----------------------------------------------------------------|
-| SamplingOptions.Processor                                 | adaptive <br> fixed-rate | This setting lets you chose between two sampling methods:<br>**Adaptive sampling**: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about [configuring this option](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications).<br>**Fixed-rate sampling**: reduces the volume of telemetry sent from both the application. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting. |
+| SamplingOptions.Processor                                 | adaptive <br> fixed-rate | This setting lets you choose between two sampling methods:<br>**Adaptive sampling**: automatically adjusts the volume of telemetry sent from the SDK in your ASP.NET/ASP.NET Core app, and from Azure Functions. Learn more about [configuring this option](https://learn.microsoft.com/en-us/azure/azure-monitor/app/sampling?tabs=net-core-new#configuring-adaptive-sampling-for-aspnet-applications).<br>**Fixed-rate sampling**: reduces the volume of telemetry sent from both your ASP.NET/ASP.NET Core app and Azure functions. Unlike adaptive sampling, it reduces telemetry at a fixed rate controlled by SamplingPercentage setting. |
 | SamplingOptions.Adaptive.MaxTelemetryItemsPerSecond       | 5                        | Maximum telemetry items per second allowed in adaptive sampling. |
 | SamplingOptions.Adaptive.InitialSamplingPercentage        | 100                      | Initial sampling percentage in adaptive sampling.|
 | SamplingOptions.Adaptive.MinSamplingPercentage            | 0.1                      | Minimum sampling percentage in adaptive sampling.|
@@ -132,8 +132,7 @@ To configure telemetry:
 
 <!--AppInsights2-end-->
 
-
-You can enable AI logging by updating the following `Serilog` configuration sections (the module comes with a [sink](https://github.com/serilog-contrib/serilog-sinks-applicationinsights) for Serilog that writes events to Microsoft Application Insights. To enable AI logging update the following `Serilog` configuration sections):
+The module includes a [sink](https://github.com/serilog-contrib/serilog-sinks-applicationinsights) for Serilog that writes events to Microsoft Application Insights. To enable it, update the `Serilog` section in `appsettings.json`:
 
 <!--AppInsights3-start-->
 
@@ -488,21 +487,21 @@ This node configures the integration settings for accessing video-related servic
 
 ![Readmore](media/readmore.png){: width="25"}  [YouTube Data API Overview](https://developers.google.com/youtube/v3/getting-started)
 
-### AI Document Processing  
+### AI document processing  
 
-This node configures AI-based document processing services and file upload settings in the application.  
+This node configures AI-based document processing services and file upload settings in the Virto Commerce Platform.  
 
-| Node                                  | Default or sample value                      | Description                                                                                   |
-| ------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| AI:Service                            | "OpenAI"                                     | The AI service provider. Currently, the only supported option is **"OpenAI"**.                |
-| AI:OpenAI                             |                                              | OpenAI-specific configuration.                                                               |
-| AI:OpenAI:ModelId                     | "gpt-4o"<br>"gpt-4o-mini"                   | Specifies the OpenAI model to use.                                                           |
-| AI:OpenAI:ApiKey                      | "your-api-key"                               | The API key used for authentication with OpenAI.                                              |
-| FileUpload                            |                                              | Configuration for file uploads.                                                              |
-| FileUpload:Scopes                     |                                              | Array of upload scopes, each defining settings for specific file categories.                  |
-| FileUpload:Scopes[n]:Scope            | "purchase-request-sources"                  | Name of the file upload scope.                                                               |
-| FileUpload:Scopes[n]:MaxFileSize      | 20971520                                     | Maximum file size in bytes. The sample value is **20 MB**.                                    |
-| FileUpload:Scopes[n]:AllowedExtensions| [".gif", ".jpeg", ".jpg", ".png", ".webp"]  | Array of allowed file extensions for the specified upload scope.                              |
+| Node                                   | Default or sample value                    | Description                                                                    |
+|----------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------|
+| AI:Service                             | "OpenAI"                                   | The AI service provider. Currently, the only supported option is **"OpenAI"**. |
+| AI:OpenAI                              |                                            | OpenAI-specific configuration.                                                 |
+| AI:OpenAI:ModelId                      | "gpt-4o"<br>"gpt-4o-mini"                  | Specifies the OpenAI model to use.                                             |
+| AI:OpenAI:ApiKey                       | "your-api-key"                             | The API key used for authentication with OpenAI.                               |
+| FileUpload                             |                                            | Configuration for file uploads.                                                |
+| FileUpload:Scopes                      |                                            | Array of upload scopes, each defining settings for specific file categories.   |
+| FileUpload:Scopes[n]:Scope             | "purchase-request-sources"                 | Name of the file upload scope.                                                 |
+| FileUpload:Scopes[n]:MaxFileSize       | 20971520                                   | Maximum file size in bytes. The sample value is **20 MB**.                     |
+| FileUpload:Scopes[n]:AllowedExtensions | [".gif", ".jpeg", ".jpg", ".png", ".webp"] | Array of allowed file extensions for the specified upload scope.               |
 
 
 **Example**  
@@ -805,19 +804,19 @@ This node is used for authentication with Azure Active Directory.
 | Priority              | 0 <br> 1...                                      | Configures the priority of the Azure Active Directory login popup on the Login page. The lowest value means the highest priority. |
 | AuthenticationType    | "AzureAD"                                        | Provides the authentication scheme. Must always have the **AzureAD** value set.                           |
 | AuthenticationCaption | "Azure Active Directory"                         | Sets a human-readable caption for the Azure AD authentication provider. Visible on the **Sign In** page.  |
-| ApplicationId         |                                                           | The ID of the Virto Commerce Platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
-| TenantId              |                                                           | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory --> Properties --> Directory ID**.  |
+| ApplicationId         | | The ID of the Virto Commerce Platform application registered in Azure Active Directory. You can find it in the Azure control panel through **Azure Active Directory --> App registrations --> (platform app) --> Application ID**. |
+| TenantId              |      | The ID of the Azure AD domain that will be used for authentication. You can find it in the Azure control panel through **Azure Active Directory --> Properties --> Directory ID**.  |
 | AzureAdInstance       | https://login.microsoftonline.com/               | Url of the Azure AD endpoint used for authentication.                                            |
 | DefaultUserType       | "Manager"<br>"Customer"                          | Default user type for new users created upon first sign-in by Azure AD accounts.                 |
 | DefaultUserRoles      | "Order manager"<br>"Store manager"               | Default user roles assigned to new users created upon first sign-in by Azure AD accounts.        |
 | MetadataAddress       |                                                  | An optional setting that enables the discovery endpoint for obtaining metadata. Must be set only when your app has custom signing keys.<br> If your app has custom signing keys as a result of using the claim mapping feature, you should append the `appid` query parameter containing the app ID in order to get a `jwks_uri` pointing to your app's signing key information.<br> For example, [https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e) contains a `jwks_uri` of [https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e](https://login.microsoftonline.com/%7Btenant%7D/discovery/v2.0/keys?appid=6731de76-14a6-49ae-97bc-6eba6914391e). |
-| UsePreferredUsername  | true<br>false                                    | Indicates whether to use the `preferred_username` claim as a fallback scenario in case the UPN claim is not set for getting the username. |
+
 
 **Example**
 
 Example settings for the `AzureAD` section:
 
-```json
+```json title="appsettings.json"
 "AzureAd": {
 		"Enabled": true,
 		"AuthenticationType": "AzureAD",
@@ -1091,7 +1090,7 @@ This node configures the Environments Comparison feature in the Virto Commerce P
 | CurrentEnvironmentName        | `"Production"`              | Logical name of the current environment. This value is used as a reference point when comparing settings with other environments.|
 | ComparableEnvironments        | –                           | List of environments that can be compared with the current environment. |
 | ComparableEnvironments:Name   | `"QA"`                      | A descriptive name for the comparable environment (for example, QA, Staging, or Development).                       |
-| ComparableEnvironments:Url    | `"https://qa.mydomaim.com"` | Base URL of the remote environment. Must be accessible from the current environment over HTTP or HTTPS.             |
+| ComparableEnvironments:Url    | `"https://qa.mydomain.com"` | Base URL of the remote environment. Must be accessible from the current environment over HTTP or HTTPS.             |
 | ComparableEnvironments:ApiKey | –                           | API key used to authenticate requests to the remote environment. The key must belong to a user with environments-compare:read permission. |
 
 **Example**
@@ -1103,12 +1102,12 @@ This node configures the Environments Comparison feature in the Virto Commerce P
     "ComparableEnvironments": [
       {
         "Name": "QA",
-        "Url": "https://qa.mydomaim.com",
+        "Url": "https://qa.mydomain.com",
         "ApiKey": "a4a86441-cabb-4a60-af90-9c6ebe11a401"
       },
       {
         "Name": "Development",
-        "Url": "https://dev.mydomaim.com",
+        "Url": "https://dev.mydomain.com",
         "ApiKey": "a4a86441-cabb-4a60-af90-9c6ebe11a401"
       }
     ]
@@ -1360,7 +1359,6 @@ This node enables notification configuration for the Virto Commerce Notification
       "Port": 587,
       "Login": "",
       "Password": "",
-      "ForceSslTls": false
       "ForceSslTls": false,
       "CustomHeaders": {
         "X-Custom-Header": "value",
@@ -1481,6 +1479,7 @@ This node configures the Skyflow payment processing module, facilitating secure 
                   };
                   var response = proxyHttpClient.Send(proxyRequest);
               }
+            }
         ```
 
 **Example**
@@ -1569,7 +1568,7 @@ This node configures the DataTrans payment gateway integration, enabling secure 
 
 ### PlatformSettings
 
-This node is used for Used for Platform settings overriding.
+This node is used for Platform settings overriding.
 
 |Node           | Default or sample value   | Description  |
 | ------------- | ------------------------  | ------------ |
@@ -1925,7 +1924,7 @@ Define Boost Presets as follows:
 			  "Factor": 3
 			},
 			{
-			  "Name": "LOw",
+			  "Name": "Low",
 			  "Type": "value",
 			  "Operation": "add",
 			  "Factor": 3
@@ -2264,7 +2263,7 @@ This setting is used to configure tax providers.
 
 The Intent Search module uses Weaviate as its vector database for semantic search, intent classification, and product categorization. This configuration section defines how the module connects to Weaviate and manages authentication, performance, retries, and fault-tolerance when communicating with the Weaviate cluster.
 
-| Node                               | Default value | Description                                                    |
+| Node                               | Default or sample value | Description                                                    |
 | ---------------------------------- | ------------- | -------------------------------------------------------------- |
 | Url                                | –             | The endpoint of your Weaviate cluster.                         |
 | ApiKey                             | –             | Authentication key for Weaviate.                               |

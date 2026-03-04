@@ -25,7 +25,7 @@ To install LibSass:
 1. Move the library to dotnet location path. You can find the location of dotnet using CLI **dotnet --info**  
 
     ```console
-    sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/6.x.x/
+    sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.x.x/
     ```
 
 ## Download precompiled binaries
@@ -48,13 +48,13 @@ To install LibSass:
 
 Now you have the directory with the precompiled files of the Virto Commerce Platform.
 
-## Setup Platform
+## Set up Platform
 
 To set up the Platform:
 
-1. [Configure application strings.](linux.md#configure-application-strings)
-2. [Run the Platform by CLI "dotnet".](linux.md#run-the-platform-by-cli-dotnet)
-3. [Perform initial sign in.](linux.md#perform-initial-sign-in)
+1. [Configure application strings.](#configure-application-strings)
+1. [Run the Platform by CLI "dotnet".](#run-platform-by-cli-dotnet)
+1. [Perform initial sign-in.](#perform-initial-sign-in)
 
 ### Configure application strings
 
@@ -81,7 +81,7 @@ To configure application strings:
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/assets",
-                "PublicUrl": "https://localhost:5001/assets/" <-- Set your Platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/assets/" // Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -89,11 +89,11 @@ To configure application strings:
 1. To configure CMS content storage, specify the public url for content for content by updating `Content:FileSystem:PublicUrl` in the Content section: 
 
     ```json
-    "Content*": {
+    "Content": {
             "Provider": "FileSystem",
             "FileSystem": {
                 "RootPath": "~/cms-content",
-                "PublicUrl": "https://localhost:5001/cms-content/" <-- Set your Platform application url with port localhost:5001
+                "PublicUrl": "https://localhost:5001/cms-content/" // Set your Platform application url with port localhost:5001
             },
         },
     ```
@@ -101,7 +101,7 @@ To configure application strings:
 1. Save the **appsettings.json** file to apply the configurations.
 
 
-### Run Platform by CLI "dotnet"
+### Run Platform
 
 To run the Platform by CLI:
 

@@ -168,5 +168,5 @@ By following these steps, you can correctly extend the `ApplicationUser` entity 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../product-completeness-evaluator">← Extending product completeness evaluator </a>
-    <a href="../page-builder-extension">Adding new blocks to Page Builder  →</a>
+    <a href="../page-builder-extension">Adding blocks to Page Builder  →</a>
 </div>

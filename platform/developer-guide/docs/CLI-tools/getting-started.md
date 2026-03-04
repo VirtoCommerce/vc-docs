@@ -76,7 +76,6 @@ dotnet tool update VirtoCommerce.GlobalTool -g
     - CloudInit
     - CloudEnvList
     - CloudEnvRestart
-    - CloudEnvStatus
     - CloudEnvLogs
     - CloudDown
     - CloudDeploy
@@ -88,6 +87,10 @@ dotnet tool update VirtoCommerce.GlobalTool -g
     ```console
     vc-build help NameOfTheTarget
     ```
+
+![Readmore](media/readmore.png){: width="25"} [Build automation. Targets](build-automation.md)
+
+![Readmore](media/readmore.png){: width="25"} [Managing Platform and modules with CLI. Targets](more-targets.md)
 
 
 ## Usage examples

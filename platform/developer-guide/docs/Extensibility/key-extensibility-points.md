@@ -1,34 +1,34 @@
 # Key Extensibility Points
 
-Our Platform is based on a collection of various modules and components that form the backbone of the Virto value proposition, which is to make each part of our system extensible and usable.
+Our Platform is based on a collection of various modules and components that form the backbone of the Virto value proposition, which is to make each part of our system extensible and reusable.
 
 In order to provide solutions for many different use cases, we decided it was important to ensure that these core concepts were as flexible and extensible as possible.
 
 The Virto Commerce Platform encompasses the **extension concept** based on various techniques and practices. It can significantly reduce the implementation and upgrade effort for your custom solution.
 
 !!! info
-	The extension concept is the backbone of the Virto Platform value proposition and has several main extensible point types.
+	The extension concept is the backbone of the Virto Platform value proposition and has several main extensibility point types.
 
 To address crucial extension requirements, the Platform contains various **extensions points** for all three main parts: Platform, modules, and Frontend. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:
 
 * Domain and business logic extension:
     * [Extending domain models](../Tutorials-and-How-tos/Tutorials/extending-domain-models.md)
     * [Extending through domain events](../Fundamentals/Event-Driven-Development/using-domain-events.md)
-    * [Dynamic properties](../Fundamentals/Dynamic-Properties/overview.md)
+    * [Using dynamic properties](../Fundamentals/Dynamic-Properties/overview.md)
 * Platform manager UI extension:
     * [Extending main menu](../Platform-Manager/Extensibility-Points/extending-main-menu.md)
     * [Working with widgets](../Platform-Manager/Extensibility-Points/widgets.md)
-    * [Metaforms](../Platform-Manager/Extensibility-Points/metaform.md)
+    * [Using metaforms](../Platform-Manager/Extensibility-Points/metaform.md)
     * [Extending blade toolbar](../Platform-Manager/Extensibility-Points/blade-toolbar.md)
     * [Extending grid columns](../Platform-Manager/Extensibility-Points/extending-grid-columns.md)
 * Extending commerce logic:
-    * [New payment method registration](../Fundamentals/Payments/new-payment-method-registration.md)
-    * [New shipping method registration](../Fundamentals/Shipments/new-shipping-method-registration.md)
-    * [New tax provider registration](../Fundamentals/Taxes/new-tax-provider-registration.md)
+    * [Registering a new payment method](../Fundamentals/Payments/new-payment-method-registration.md)
+    * [Registering a new shipping method](../Fundamentals/Shipments/new-shipping-method-registration.md)
+    * [Registering a new tax provider](../Fundamentals/Taxes/new-tax-provider-registration.md)
 * Security extensions:
     * [Extending authorization policies](../Fundamentals/Security/extensions/extending-authorization-policies.md)
     * [Extending ASP.NET Identity UserManager and RoleManager](../Fundamentals/Security/extensions/extending-usermanager-and-rolemanager.md)
-    * [Adding New SSO Provider](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
+    * [Adding new SSO Provider](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
 * Notification extensions:
     * [Extending notification types](../Fundamentals/Notifications/extending-notification-types.md)
 * Logging extension:

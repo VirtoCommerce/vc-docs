@@ -33,7 +33,7 @@ The release has undergone extensive testing, including unit, end-to-end, regress
 
 This section outlines known limitations and breaking changes introduced with the .NET 10 upgrade that may require adjustments to existing solutions or custom module.
 
-### Updated MySQL Provider
+### Updated MySQL provider
 
 Virto Commerce uses **Pomelo.EntityFrameworkCore.MySql 9.0.0** for MySql.
 
@@ -172,9 +172,9 @@ For example:
 
 If you develop a custom module, we recommend updating it to the .NET10 version.
 
-### Update solution to NET10
+### Update solution to .NET10
 
-1. Download and execute the [vc-net10-update.ps1 Power Shell script](vc-net10-update.ps1) in your solution folder. 
+1. Download and execute the [PowerShell script](https://github.com/VirtoCommerce/vc-platform/blob/dev/docs/release-information/update-to-version-3-1000/vc-net10-update.ps1) in your solution folder. 
 
     !!! info
 

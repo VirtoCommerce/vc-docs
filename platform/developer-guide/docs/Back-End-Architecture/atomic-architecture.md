@@ -21,7 +21,7 @@ Molecules are formed from atoms to perform specific functions, such as managing 
 
 For example, the Catalog molecule is responsible for organizing products, the Price molecule focuses on pricing strategies, and Webhook molecules manage event capturing and notifications.
 
-Each molecule is API-driven, single accountable and has its own dedicated storage. In addition, users can create custom molecules to meet specific business needs, such as dynamic pricing tools or loyalty programmes. This increases the adaptability of the architecture.
+Each molecule is API-driven, single accountable and has its own dedicated storage. In addition, users can create custom molecules to meet specific business needs, such as dynamic pricing tools or loyalty programs. This increases the adaptability of the architecture.
 
 ## Cells
 

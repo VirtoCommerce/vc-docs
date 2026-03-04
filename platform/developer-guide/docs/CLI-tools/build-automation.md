@@ -1,6 +1,6 @@
 # Build Automation
 
-The **vc-build** tool streamlines various build scenarios for solutions based on VirtoCommerce. Its builder-server agnostic nature and cross-platform support make it adaptable to any CI/CD pipeline or local development setup.
+The **vc-build** tool streamlines various build scenarios for solutions based on Virto Commerce. Its builder-server agnostic nature and cross-platform support make it adaptable to any CI/CD pipeline or local development setup.
 
 ![vc-build CLI](media/CLI.png){: style="display: block; margin: 0 auto;" }
 
@@ -16,7 +16,6 @@ The **vc-build** tool streamlines various build scenarios for solutions based on
     ```console
     vc-build compress -verbosity <Verbose|Normal|Minimal|Quiet>
     ```
-
 
 
 ## Clean

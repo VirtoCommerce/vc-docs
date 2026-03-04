@@ -14,6 +14,11 @@ Before installing, make sure your computer meets these minimum requirements:
 
 ## Supported operation systems for .NET 8
 
+!!! note
+    Virto Commerce (3.1000+) introduces a significant technical update by transitioning the Platform to .NET 10. 
+
+    ![Readmore](media/readmore.png){: width="25"} [Read more about upgrading to .NET 10](../Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md)    
+
 The Virto Platform runs on .NET 8. [.NET 8](https://github.com/dotnet/core/blob/main/release-notes/8.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
 
 For issues with .NET on operating systems not listed here, open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community . 
@@ -94,16 +99,12 @@ The Virto Commerce Platform supports:
 
 ## Supported browsers
 
-The Virto Commerce Platform supports:
+The Virto Commerce Platform Manager supports all modern evergreen browsers:
 
--   Microsoft Internet Explorer 9 and higher.
-
-    !!! note
-        Virto Commerce previously supported IE6 and IE7 in versions prior to 3.60, while IE8 was supported in versions prior to 4.10.
-    
--   Mozilla Firefox 2.0 and higher.
--   Google Chrome 1.x.
--   Apple Safari 2.x.
+- Google Chrome (latest 2 versions)
+- Mozilla Firefox (latest 2 versions)
+- Microsoft Edge (latest 2 versions)
+- Apple Safari (latest 2 versions)
 
 
 <br>

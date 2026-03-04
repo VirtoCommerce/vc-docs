@@ -6,7 +6,7 @@ The chart below shows the high level architecture of the Platform:
 
 The Virto Commerce Platform's core components are:
 
-* **Platform manager (SPA)**: A web-based user interface packed into an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for ecommerce applications. It works with all data through REST API the Platform runtime provides.
+* **Platform manager (SPA)**: A web-based user interface built as an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for ecommerce applications. It works with all data through REST API the Platform runtime provides.
 
 * **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the modules and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless ecommerce experience, including support for different databases, search engines, and caching mechanisms.
 
@@ -16,9 +16,9 @@ The Virto Commerce Platform's core components are:
 	- **Custom solution modules**: Usually contain an extension of the existing logic other modules have.
 
 * **Supported databases**: The Platform is database-agnostic, supporting multiple databases for flexibility and scalability:
-	- PostgreSQL.
-	- MySQL.
-	- Microsoft SQL Server.
+	- MS SQL Server 2019 and higher.
+	- MySql Server 5.7 and higher.
+	- PostgreSQL 12 and higher.
 
 * **Supported search engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:
 	- Elasticsearch.
@@ -31,7 +31,7 @@ The Virto Commerce Platform's core components are:
 
 * **Caching**: Virto Commerce integrates Redis for efficient caching to improve performance and scalability.
 
-* **REST and GraphQL API**: A set of APIs used to manage resources. [REST API](https://virtostart-demo-admin.govirto.com/docs/index.html) is mainly used to build integration and interact with Virto resources, while [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md) represents an implementation of the Back End for Front End design pattern and provides a lightweight access to ecommerce capabilities for various Frontend applications.
+* **REST and GraphQL API**: A set of APIs used to manage resources. [REST API](https://virtostart-demo-admin.govirto.com/docs/index.html) is mainly used to build integration and interact with Virto resources, while [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md) represents an implementation of the Back End for Front End design pattern and provides lightweight access to ecommerce capabilities for various Frontend applications.
 
 
 <br>

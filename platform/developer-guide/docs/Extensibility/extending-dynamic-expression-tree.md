@@ -45,7 +45,7 @@ public sealed class SamplePromotionConditionAndRewardTreePrototype : PromotionCo
 
 To register your extension in the **module.cs** file: 
 
-1. Override the original `PromotionConditionAndRewardTreePrototype` type with the newly created one in the `module.cs` file:
+1. Override the original `PromotionConditionAndRewardTreePrototype` type with the newly created one in the **module.cs** file:
 
     ``` csharp title="module.cs"
     public void Initialize(IServiceCollection serviceCollection)
@@ -77,7 +77,7 @@ It is a best practice to define all HTML templates for new elements within a sin
 !!! tip
 	Use the following schema as a template ID: `expression-{C# element class name}.html`.
 
-``` html title="Scripts/all-templates.js"
+``` html title="Scripts/all-templates.html"
 <script type="text/ng-template" id="expression-BlockSampleCondition.html">
     For condition evaluator with
     <a class="__link" left-click-menu data-target="allAny_menu{{element.id}}">{{element.all | boolToValue:'all':'any'}}</a> of these sample values
@@ -100,7 +100,7 @@ It is a best practice to define all HTML templates for new elements within a sin
 
 Register your newly created expression elements in `dynamicExpressionService` that is used as a registry for all known tree elements:
 
-``` js title="Script/module.js"
+``` js title="Script/module.html"
 angular.module(moduleName, [])
     .run(['virtoCommerce.coreModule.common.dynamicExpressionService', '$http', '$compile',
         function (dynamicExpressionService, $http, $compile) {
