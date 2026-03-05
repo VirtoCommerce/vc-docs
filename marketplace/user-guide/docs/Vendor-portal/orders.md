@@ -65,6 +65,12 @@ When creating or editing a shipment, users can add items to the shipment by clic
 ![Add items to shipment](media/edit-shipment-items.gif)
 
 
+## AI assistant
+
+You can use our AI assistant to collect information about orders. For example, you can ask it to show new orders or organize them by country or total:
+
+![AI orders](media/ai-orders.png)
+
 <br>
 <br>
 ********

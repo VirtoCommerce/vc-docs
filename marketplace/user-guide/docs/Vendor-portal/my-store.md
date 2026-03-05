@@ -46,4 +46,5 @@ This subsection is designed for managing the inventory aspects of your store:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../communication">← Communication</a>
+    <a href="../ai-assistant">AI assistant →</a>
 </div>
