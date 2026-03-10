@@ -64,7 +64,67 @@ To add content to your page:
 1. In the next blade, click **Design** to open your page in Page Builder.
 1. In Page Builder, click **Add block** in the left menu to open the block library. The available blocks are as follows:
 
-    ![Available blocks](media/available-blocks.png){: style="display: block; margin: 0 auto;" }
+    <div class="grid" markdown>
+
+    Call to action
+
+    ![Call to action](media/call-to-action-sample.png)
+
+    Call to action with image
+
+    ![Call to action](media/call-to-action-with-image.png)
+
+    Category
+
+    ![Custom categories](media/custom-categories.png)
+
+    Favorite products
+
+    ![Favorite products](media/favorite-products.png)
+
+    Features
+
+    ![Features](media/features.png)
+
+    Image
+
+    ![Image](media/image.png)
+
+    Login
+
+    ![Login](media/Login.png)
+
+    Predefined products
+
+    ![Predefined products](media/predefined-products.png)
+
+    Products
+
+    ![Products](media/products.png)
+
+    Products carousel
+
+    ![Products carousel](media/products-carousel.png)
+
+    Slider
+
+    ![Slider](media/slider.png)
+
+    Subscribe form
+
+    ![Subscribe form](media/subscribe-form.png)
+
+    Text
+
+    ![Text](media/text.png)
+
+    Title
+
+    ![Subtitle](media/title.png)
+
+    </div>
+
+
 
     !!! note 
     
@@ -79,6 +139,8 @@ To add content to your page:
 1. Click **Save** to save the changes.
 
 The added content is saved. Continue adding content until your page is ready for publishing. 
+
+
 
 ## Publish or unpublish pages
 
