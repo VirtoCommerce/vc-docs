@@ -7,10 +7,10 @@ The Virto Commerce Content module allows you to:
 
 Managing theme includes:
 
-* [Uploading new theme.](managing-themes.md#upload-new-theme)
-* [Activating theme.](managing-themes.md#activate-theme)
-* [Managing theme assets.](managing-themes.md#manage-theme-assets)
-* [Adding new theme.](managing-themes.md#add-new-theme)
+* [Uploading new theme.](#upload-new-theme)
+* [Activating theme.](#activate-theme)
+* [Managing theme assets.](#manage-theme-assets)
+* [Adding new theme.](#add-new-theme)
 
 
 ## Upload new theme
@@ -87,10 +87,6 @@ Users can personalize their store by applying a [custom theme](/storefront/devel
 
     ![Watermelon](media/watermelon.png)
 
-=== "coffee"
-
-    ![Coffee](media/coffee.png)
-
 === "ocean"
 
     ![Ocean](media/ocean.png)
@@ -99,6 +95,12 @@ Users can personalize their store by applying a [custom theme](/storefront/devel
 
     ![Peach](media/peach.png)
 
+=== "coffee"
+
+    ![Coffee](media/coffee.png)
+
+=== "coffee (dark theme)"
+    ![Coffee, dark theme](media/coffee-dark.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/customization/visual-theme-customization)
 
