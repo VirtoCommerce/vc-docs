@@ -168,22 +168,22 @@
     color: var(--primary-70);
 }
 
-.md-sidebar__scrollwrap {
+/* .md-sidebar__scrollwrap {
     margin: 0 0.25rem;
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-color: var(--md-default-fg-color--lighter) transparent;
     backface-visibility: hidden;
-}
+} */
 
-@media screen and (min-width: 1221px) {
+/* @media screen and (min-width: 1221px) {
     .md-sidebar__scrollwrap {
         scrollbar-gutter: stable;
         scrollbar-width: thin;
     }
-}
+} */
 
-.md-sidebar__scrollwrap::-webkit-scrollbar {
+/* .md-sidebar__scrollwrap::-webkit-scrollbar {
     width: 12px;
     height: 12px;
 }
@@ -195,7 +195,7 @@
 .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-color);
     border-radius: 12px;
-}
+} */
 
 @media screen and (min-width: 60em) {
     .md-nav--secondary .md-nav__title[for=__toc] {
