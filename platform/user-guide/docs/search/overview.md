@@ -51,6 +51,6 @@ The diagram below illustrates the functionality of the Search module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../sanity/overview">← Sanity module overview</a>
+    <a href="../../return/overview">← Return module overview</a>
     <a href="../managing-search">Managing search index →</a>
 </div>

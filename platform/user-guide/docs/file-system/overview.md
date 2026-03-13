@@ -18,5 +18,5 @@ The diagram below illustrates the functionality of the File System Assets module
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../azure-blob-storage/overview">← Azure Blob Storage module overview</a>
-    <a href="../../content/overview">Content module overview→</a>
+    <a href="../../google-sso/overview">Google SSO module overview→</a>
 </div>

@@ -40,6 +40,6 @@ With the Page Builder module, you can
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../notifications/overview">← Notifications module overview</a>
+    <a href="../../integrations/builder-io/overview">← Builder.io module overview</a>
     <a href="../manage-pages">Managing pages via Content module →</a>
 </div>

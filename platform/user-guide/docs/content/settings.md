@@ -19,5 +19,5 @@ The settings have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-blogs">← Managing blogs</a>
-    <a href="../../ai-doc-processing/overview">AI Doc Processing module →</a>
+    <a href="../../integrations/builder-io/overview">Builder.io module overview →</a>
 </div>

@@ -38,6 +38,6 @@ With the Assets module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../quotes/overview">← Quotes module overview</a>
+    <a href="../../ai-doc-processing/overview">← AI Smart Capture module overview</a>
     <a href="../managing-assets">Managing assets →</a>
 </div>

@@ -26,6 +26,6 @@ The Google SSO module can be integrated with both the Virto Commerce Platform an
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../ai-doc-processing/overview">← AI Smart Capture module overview</a>
+    <a href="../../file-system/overview">← File System Assets module overview</a>
     <a href="../../azure-ad/overview">Azure AD module overview →</a>
 </div>
