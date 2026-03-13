@@ -38,7 +38,7 @@ The newly created orders are processed in accordance with the created [states fl
 
 ## Create shipment
 
-To create an order order shipment:
+To create an order shipment:
 
 1. Click **Orders** in the main menu to open the list of the received orders.
 1. In the next blade, select the desired order. The order details will open in the next blade.

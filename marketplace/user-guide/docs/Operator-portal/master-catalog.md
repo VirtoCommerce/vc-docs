@@ -4,8 +4,8 @@ The Master catalog serves as the central repository for all products listed in t
 
 Let's explore a standard scenario and:
 
-* [Add new category to the master catalog.](master-catalog.md#add-new-category)
-* [Adding properties to the newly created category.](master-catalog.md#add-new-category)
+* [Add new category to the master catalog.](#add-new-category)
+* [Add properties to the newly created category.](#add-properties-to-category)
 
 ## Add new category
 

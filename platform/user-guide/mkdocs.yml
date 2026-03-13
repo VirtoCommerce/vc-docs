@@ -166,12 +166,6 @@ nav:
                 - Overview: quotes/overview.md
                 - Managing Quotes: quotes/manage-quotes.md
                 - Settings: quotes/settings.md
-          - <b>Assets Related Modules</b>:
-                - Assets:
-                      - Overview: assets/overview.md
-                      - Managing Assets: assets/managing-assets.md
-                - Azure Blob Storage: azure-blob-storage/overview.md
-                - File System Assets: file-system/overview.md
           - <b>Content</b>:
                 - Overview: content/overview.md
                 - Themes: content/managing-themes.md
@@ -179,10 +173,31 @@ nav:
                 - Link Lists: content/managing-linklists.md
                 - Blogs: content/managing-blogs.md
                 - Settings: content/settings.md
+          - <b>Content Related Modules</b>:
+                - Builder.io:
+                      - Overview: integrations/builder-io/overview.md
+                      - Getting Started: integrations/builder-io/getting-started.md
+                      - Using Builder.io: integrations/builder-io/use-builder-io.md
+                      - Settings: integrations/builder-io/settings.md                      - 
+                - Page Builder:
+                      - Overview: page-builder/overview.md
+                      - Managing Pages via Content Module: page-builder/manage-pages.md
+                      - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
+                - Pages:
+                      - Overview: pages/overview.md
+                      - Enabling Virto Pages: pages/enabling-pages.md
+                - Sanity:
+                      - Overview: sanity/overview.md
           - AI Smart Capture:
                 - Overview: ai-doc-processing/overview.md
                 - Enabling AI Smart Capture: ai-doc-processing/enabling-ai-doc-processing.md
                 - Settings: ai-doc-processing/settings.md
+          - Assets Related Modules:
+                - Assets:
+                      - Overview: assets/overview.md
+                      - Managing Assets: assets/managing-assets.md
+                - Azure Blob Storage: azure-blob-storage/overview.md
+                - File System Assets: file-system/overview.md
           - Authentication Related Modules:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md
@@ -246,14 +261,6 @@ nav:
                 - Notification Log: notifications/notification-log.md
                 - Notification Templates: notifications/notification-templates.md
                 - Settings: notifications/settings.md
-          - Page Builder:
-                - Overview: page-builder/overview.md
-                - Managing Pages via Content Module: page-builder/manage-pages.md
-                - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
-          - Pages:
-                - Overview: pages/overview.md
-                - Enabling Virto Pages: pages/enabling-pages.md
-                - Builder.io Integration: pages/builder-io-integration.md
           - Payment Related Modules:
                 - Payment:
                       - Overview: payment/overview.md

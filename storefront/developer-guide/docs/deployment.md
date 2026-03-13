@@ -159,7 +159,7 @@ Before installing the Frontend Application:
     * [Skyflow](https://github.com/VirtoCommerce/vc-module-skyflow)
     * [xRecommend](https://github.com/VirtoCommerce/vc-module-x-recommend)
 
-1. Install [Node.js v22 (22.10.0 or higher).](https://nodejs.org/en/download/)
+1. Install [Node.js v22 or higher).](https://nodejs.org/en/download/)
 1. Enable [corepack](https://yarnpkg.com/corepack) (run as administrator on Windows):
 
    ```bash

@@ -14,13 +14,14 @@ Users add products to their carts directly from the catalog by clicking on the *
 
 ## Choose from product variations
 
-Users select the specific variation of a product that best fits their requirements, such as size or color, by clicking on the **Variations** button: 
+Users select the specific variation of a product that best fits their requirements, such as size or color, by clicking on the **Variations** button. In the list view, users do not need to open a product card - all of the product’s options can be expanded directly beneath it on the same page:
 
-![Product variations](../media/product-variation-purchase.gif)
-
-In the list view, users do not need to open a product card - all of the product’s options can be expanded directly beneath it on the same page:
-
-![Expandable variations](../media/expandable-variations.gif)
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/pot8fs7qg7ke?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
 Customers can click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
 

@@ -183,6 +183,39 @@ This node configures GraphQL-specific Platform settings.
 }
 ```
 
+#### GraphQLComplexityValidation
+
+This node configures query complexity validation for GraphQL in the Virto Commerce Platform. When enabled, it limits the depth and complexity of incoming GraphQL queries to protect the platform from resource-intensive or malicious requests.
+
+| Node | Default or sample value | Description |
+|---|---|---|
+| Enable | true<br>false | Enables or disables GraphQL complexity validation. |
+| IgnoreIntrospection | false<br>true | When set to **true**, disables complexity validation for introspection queries. Set to **false** by default. |
+| MaxDepth | unlimited | Limits the maximum nesting depth of a query. Unlimited by default. |
+| MaxComplexity | unlimited | Limits the total complexity score of a query. Unlimited by default. |
+| ScalarFieldImpact | 1 | The complexity score assigned to each scalar field. |
+| ObjectFieldImpact | 1 | The complexity score assigned to each object field. |
+| ListImpactMultiplier | 20 | The multiplier applied to the complexity score of list fields, representing the average number of items returned. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "VirtoCommerce": {
+    "GraphQLComplexityValidation": {
+      "Enable": true,
+      "IgnoreIntrospection": true,
+      "MaxDepth": 2,
+      "MaxComplexity": 1000,
+      "ScalarFieldImpact": 1,
+      "ObjectFieldImpact": 1,
+      "ListImpactMultiplier": 20
+    }
+  }
+}
+```
+
+
 #### GraphQLPlayground
 
 This node controls the availability of the GraphQL Playground interface.

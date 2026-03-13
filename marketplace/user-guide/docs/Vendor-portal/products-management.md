@@ -150,5 +150,5 @@ All dialogs are stored in the **Communication** section of the main menu, where 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../quotes">← Quotes</a>
-    <a href="../products-management">Products management →</a>
+    <a href="../offers">Offers →</a>
 </div>

@@ -12,7 +12,7 @@ In this guide, we will explore the necessary steps to get started with the Virto
 
 - Install the [xAPI module.](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started)
 - Install the [Profile xAPI module](https://github.com/VirtoCommerce/vc-module-profile-experience-api) module.
-- Install [Node](https://nodejs.org/en/download/) v.16.X
+- Install [Node](https://nodejs.org/en/download/) v.22.X
 - Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) package manager.
   
   ```

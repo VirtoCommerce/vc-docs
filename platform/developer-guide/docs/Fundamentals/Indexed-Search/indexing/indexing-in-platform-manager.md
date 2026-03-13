@@ -74,6 +74,18 @@ To disable/ enable event-based indexing:
 
 Your settings have been saved.
 
+
+## User context in background indexing jobs
+
+When indexing runs as a background job, the standard HTTP request context is not available. As a result, the audit fields (`CreatedBy`, `ModifiedBy`) on affected entities are populated based on how the job was triggered.
+
+| Job type | Trigger | Audit field value |
+|---|---|---|
+| **Manual** | User action (**Build index** or **Delete and build**) | Username of the user who initiated the operation |
+| **Recurring** | Hangfire scheduler (for example, time-based incremental indexing) | `system:{RecurringJobId}`, e.g. `system:IndexingJobs.IndexChangesJob` |
+
+This ensures that all indexing operations remain traceable in the audit log regardless of whether they were initiated by a user or executed by the scheduler.
+
 <br>
 <br>
 ********

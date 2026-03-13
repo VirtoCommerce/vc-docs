@@ -70,7 +70,7 @@ To complete your order:
 1. Click **Proceed to billing** to proceed to the next step.
 
 1. Specify payment details:
-    * Select a shipping address from the list, add new one, or check **Same as shipping address**. 
+    * Select a billing address from the list, add new one, or check **Same as shipping address**. 
     * Select a payment method from the dropdown list:
 
         === "Bank card (Authorize.Net)"

@@ -69,5 +69,5 @@ The commission has been deleted.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../static-commission-fees">← Static commission fees</a>
-    <a href="../../vendors-management/vendor-onboarding">Vendor onboarding →</a>
+    <a href="../../Vendors-management/vendor-onboarding">Vendor onboarding →</a>
 </div>

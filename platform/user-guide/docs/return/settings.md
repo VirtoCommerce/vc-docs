@@ -28,5 +28,5 @@ The settings have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-returns">← Managing returns</a>
-    <a href="../../search/overview">Search module overview →</a>
+    <a href="../../sanity/overview">Sanity module overview →</a>
 </div>
