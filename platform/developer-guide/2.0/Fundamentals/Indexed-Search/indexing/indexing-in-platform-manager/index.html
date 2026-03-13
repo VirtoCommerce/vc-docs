@@ -3026,6 +3026,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#user-context-in-background-indexing-jobs" class="md-nav__link">
+        User context in background indexing jobs
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -26952,6 +26962,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#user-context-in-background-indexing-jobs" class="md-nav__link">
+        User context in background indexing jobs
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -26974,7 +26994,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2025 07:25:18 UTC">June 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 13, 2026 09:36:33 UTC">March 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27079,6 +27099,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 <p><img alt="Enabling event-based indexing" src="../media/event-based-indexing.png" style="display: block; margin: 0 auto;" /></p>
 <p>Your settings have been saved.</p>
+<h2 id="user-context-in-background-indexing-jobs">User context in background indexing jobs<a class="headerlink" href="#user-context-in-background-indexing-jobs" title="Permanent link">&para;</a></h2>
+<p>When indexing runs as a background job, the standard HTTP request context is not available. As a result, the audit fields (<code>CreatedBy</code>, <code>ModifiedBy</code>) on affected entities are populated based on how the job was triggered.</p>
+<table>
+<thead>
+<tr>
+<th>Job type</th>
+<th>Trigger</th>
+<th>Audit field value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Manual</strong></td>
+<td>User action (<strong>Build index</strong> or <strong>Delete and build</strong>)</td>
+<td>Username of the user who initiated the operation</td>
+</tr>
+<tr>
+<td><strong>Recurring</strong></td>
+<td>Hangfire scheduler (for example, time-based incremental indexing)</td>
+<td><code>system:{RecurringJobId}</code>, e.g. <code>system:IndexingJobs.IndexChangesJob</code></td>
+</tr>
+</tbody>
+</table>
+<p>This ensures that all indexing operations remain traceable in the audit log regardless of whether they were initiated by a user or executed by the scheduler.</p>
 <p><br>
 <br></p>
 <hr />
