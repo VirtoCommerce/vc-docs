@@ -4,11 +4,11 @@ Click on a version name to see which modules are included in that version.
 | Product                                  | Version                       | GA<br>(Mainstream support phase) | End of support <br> (Extended support phase) | End of life <br>(Sustaining support phase) |
 |------------------------------------------|-------------------------------|----------------------------------|----------------------------------------------|--------------------------------------------|
 | Virto Commerce platform core pack        | [v3-2026-S14](v3-2026-S14.md) | March 1, 2026                    | September 1, 2026                            | January 1, 2027                            |
-| Virto Commerce platform integration pack | [v3-2026-S14](v3-2026-S14.md) | March 2, 2026                    | September 2, 2026                            | January 2, 2027                            |
-| Virto Commerce platform enterprise pack  | [v3-2026-S14](v3-2026-S14.md) | March 3, 2026                    | September 3, 2026                            | January 3, 2027                            |
+| Virto Commerce platform integration pack | [v3-2026-S14](v3-2026-S14.md) | March 1, 2026                    | September 1, 2026                            | January 1, 2027                            |
+| Virto Commerce platform enterprise pack  | [v3-2026-S14](v3-2026-S14.md) | March 1, 2026                    | September 1, 2026                            | January 1, 2027                            |
 | Virto Commerce platform core pack        | [v3-2025-S12](v3-2025-S12.md) | November 1, 2025                 | May 1, 2026                                  | September 1, 2026                          |
-| Virto Commerce platform integration pack | [v3-2025-S12](v3-2025-S12.md) | November 2, 2025                 | May 2, 2026                                  | September 2, 2026                          |
-| Virto Commerce platform enterprise pack  | [v3-2025-S12](v3-2025-S12.md) | November 3, 2025                 | May 3, 2026                                  | September 3, 2026                          |
+| Virto Commerce platform integration pack | [v3-2025-S12](v3-2025-S12.md) | November 1, 2025                 | May 1, 2026                                  | September 1, 2026                          |
+| Virto Commerce platform enterprise pack  | [v3-2025-S12](v3-2025-S12.md) | November 1, 2025                 | May 1, 2026                                  | September 1, 2026                          |
 | Virto Commerce platform core pack        | [v3-2025-S11](v3-2025-S11.md) | May 29, 2025                     | November 29, 2025                            | March 29, 2026                             |
 | Virto Commerce platform integration pack | [v3-2025-S11](v3-2025-S11.md) | May 29, 2025                     | November 29, 2025                            | March 29, 2026                             |
 | Virto Commerce platform enterprise pack  | [v3-2025-S11](v3-2025-S11.md) | May 29, 2025                     | November 29, 2025                            | March 29, 2026                             |
@@ -22,8 +22,8 @@ Click on a version name to see which modules are included in that version.
 | Virto Commerce platform integration pack | [v3-2024-S8](v3-2024-S8.md)   | January 1, 2024                  | July 1, 2024                                 | November 1, 2024                           |
 | Virto Commerce platform enterprise pack  | [v3-2024-S8](v3-2024-S8.md)   | January 1, 2024                  | July 1, 2024                                 | November 1, 2024                           |
 | Virto Commerce platform core pack        | [v3-2024-S7](v3-2024-S7.md)   | December 1, 2023                 | June 1, 2024                                 | October 1, 2024                            |
-| Virto Commerce platform integration pack | [v3-2024-S7](v3-2024-S7.md)   | December 2, 2023                 | June 2, 2024                                 | October 2, 2024                            |
-| Virto Commerce platform enterprise pack  | [v3-2024-S7](v3-2024-S7.md)   | December 3, 2023                 | June 3, 2024                                 | October 3, 2024                            |
+| Virto Commerce platform integration pack | [v3-2024-S7](v3-2024-S7.md)   | December 1, 2023                 | June 1, 2024                                 | October 1, 2024                            |
+| Virto Commerce platform enterprise pack  | [v3-2024-S7](v3-2024-S7.md)   | December 1, 2023                 | June 1, 2024                                 | October 1, 2024                            |
 | Virto Commerce platform core pack        | [v3-2023-S6](v3-2023-S6.md)   | October 1, 2023                  | April 1, 2024                                | August 1, 2024                             |
 | Virto Commerce platform integration pack | [v3-2023-S6](v3-2023-S6.md)   | October 1, 2023                  | April 1, 2024                                | August 1, 2024                             |
 | Virto Commerce platform enterprise pack  | [v3-2023-S6](v3-2023-S6.md)   | October 1, 2023                  | April 1, 2024                                | August 1, 2024                             |
