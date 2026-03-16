@@ -86,6 +86,6 @@ If our standard user interface is not enough, you may consider implementing your
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../PageBuilder/overview">← Page Builder overview </a>
+    <a href="../../Testing/testing">← Testing </a>
     <a href="../simplified-integration">Simplified integration via CSV files →</a>
 </div>

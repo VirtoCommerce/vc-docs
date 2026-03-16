@@ -21,29 +21,12 @@ The **Pages** module is a solution designed to connect different CMSs seamlessly
 
 ## Supported CMS platforms
 
-* **Builder.io**: Fully supported for integration.
+* [Builder.io](../integrations/builder-io/overview.md): Fully supported for integration.
+* [Sanity](../sanity/overview.md)
+* [Virto Page Builder.](../page-builder/overview.md)
 * **Contentful**: Coming soon.
 * **Optimizely**: Coming soon.
-* [Virto Page Builder.](../page-builder/overview.md)
 
-## Architecture
-
-![Architecture](media/virto-pages-architecture.png){: style="display: block; margin: 0 auto;" }
-
-The Virto Pages module employs an event-driven architecture to ensure efficient content management and retrieval. The key components include:
-
-* **Content storage**: Pages are stored offline in an index, ensuring quick access and rendering without live CMS dependency.
-* **Event handling**: Content updates trigger events to update, index, or remove pages as necessary.
-* **Frontend integration**: Pages are resolved by their permalink (slug) and served  from the offline index for rendering.
-* **Unified page document and API**: Unified Page Document and API allow access to pages that are created by different CMS.
-
-## Scenarios
-
-The Virto Pages module supports end-to-end content workflows:
-
-* **Design time**: Integrate with a CMS to create and design pages, preparing them for publishing.
-* **Publishing**: Publish pages to Virto Pages, removing dependency on the CMS afterward.
-* **Rendering**: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.
 
 
 

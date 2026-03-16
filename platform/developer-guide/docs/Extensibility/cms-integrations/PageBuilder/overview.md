@@ -50,12 +50,13 @@ The two subsystems communicate via `window.postMessage()` to synchronize edits a
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases)
 
+![Readmore](media/readmore.png){: width="25"} [Using Page Builder](../../../../../user-guide/page-builder/overview)
 
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../Testing/testing">← Testing </a>
-    <a href="../getting-started">Getting started →</a>
+    <a href="../../builder-io-setup">← Builder.io setup</a>
+    <a href="../page-builder-setup">Page Builder setup →</a>
 </div>

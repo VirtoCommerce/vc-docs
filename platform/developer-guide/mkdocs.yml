@@ -166,31 +166,6 @@ nav:
                             - Overview: Fundamentals/Event-Driven-Development/event-bus.md
                             - Configuration: Fundamentals/Event-Driven-Development/event-bus-configuration.md
           - Testing: Fundamentals/Testing/testing.md
-          - Page Builder:
-                - Overview: Fundamentals/PageBuilder/overview.md
-                - Getting Started: Fundamentals/PageBuilder/getting-started.md
-                - Creating New Block: Fundamentals/PageBuilder/create-new-block.md
-                - Server Descriptors: Fundamentals/PageBuilder/server-descriptors.md
-                - Settings: Fundamentals/PageBuilder/settings.md
-                - Schemas: Fundamentals/PageBuilder/schemas.md
-                - Component Context: Fundamentals/PageBuilder/component-context.md
-                - Asset File: Fundamentals/PageBuilder/asset.md
-                - Controls:
-                      - Calendar: Fundamentals/PageBuilder/calendar.md
-                      - Checkbox: Fundamentals/PageBuilder/checkbox.md
-                      - Collection: Fundamentals/PageBuilder/collection.md
-                      - Color: Fundamentals/PageBuilder/color.md
-                      - Files: Fundamentals/PageBuilder/files.md
-                      - Header: Fundamentals/PageBuilder/header.md
-                      - Images: Fundamentals/PageBuilder/images.md
-                      - Markdown: Fundamentals/PageBuilder/markdown.md
-                      - Number: Fundamentals/PageBuilder/number.md
-                      - Object: Fundamentals/PageBuilder/object.md
-                      - Paragraph: Fundamentals/PageBuilder/paragraph.md
-                      - Search: Fundamentals/PageBuilder/search.md
-                      - Select: Fundamentals/PageBuilder/select.md
-                      - String: Fundamentals/PageBuilder/string.md
-                      - Text: Fundamentals/PageBuilder/text.md
           - Payments:
                 - Registering New Payment Method: Fundamentals/Payments/new-payment-method-registration.md
                 - Simplified Integration via CSV files: Fundamentals/Payments/simplified-integration.md
@@ -819,7 +794,35 @@ nav:
           - Extending Dynamic Expression Tree: Extensibility/extending-dynamic-expression-tree.md
           - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
           - Extending Application User: Extensibility/extending-application-user.md
-          - Adding New Blocks to Page Builder: Extensibility/page-builder-extension.md
+          - CMS Integrations:
+                - Overview: Extensibility/cms-integrations/cms-overview.md
+                - Builder.io Setup: Extensibility/cms-integrations/builder-io-setup.md
+                - Page Builder: 
+                      - Overview: Extensibility/cms-integrations/PageBuilder/overview.md
+                      - Setup: Extensibility/cms-integrations/PageBuilder/page-builder-setup.md
+                      - Creating New Block: Extensibility/cms-integrations/PageBuilder/create-new-block.md
+                      - Server Descriptors: Extensibility/cms-integrations/PageBuilder/server-descriptors.md
+                      - Settings: Extensibility/cms-integrations/PageBuilder/settings.md
+                      - Schemas: Extensibility/cms-integrations/PageBuilder/schemas.md
+                      - Component Context: Extensibility/cms-integrations/PageBuilder/component-context.md
+                      - Asset File: Extensibility/cms-integrations/PageBuilder/asset.md
+                      - Controls:
+                            - Calendar: Extensibility/cms-integrations/PageBuilder/calendar.md
+                            - Checkbox: Extensibility/cms-integrations/PageBuilder/checkbox.md
+                            - Collection: Extensibility/cms-integrations/PageBuilder/collection.md
+                            - Color: Extensibility/cms-integrations/PageBuilder/color.md
+                            - Files: Extensibility/cms-integrations/PageBuilder/files.md
+                            - Header: Extensibility/cms-integrations/PageBuilder/header.md
+                            - Images: Extensibility/cms-integrations/PageBuilder/images.md
+                            - Markdown: Extensibility/cms-integrations/PageBuilder/markdown.md
+                            - Number: Extensibility/cms-integrations/PageBuilder/number.md
+                            - Object: Extensibility/cms-integrations/PageBuilder/object.md
+                            - Paragraph: Extensibility/cms-integrations/PageBuilder/paragraph.md
+                            - Search: Extensibility/cms-integrations/PageBuilder/search.md
+                            - Select: Extensibility/cms-integrations/PageBuilder/select.md
+                            - String: Extensibility/cms-integrations/PageBuilder/string.md
+                            - Text: Extensibility/cms-integrations/PageBuilder/text.md
+                - Sanity Setup: Extensibility/cms-integrations/sanity-setup.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:

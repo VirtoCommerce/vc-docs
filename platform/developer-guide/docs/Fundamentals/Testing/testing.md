@@ -432,5 +432,5 @@ Configure test data in **dataset/dataset_config.py** and **dataset/dataset.json*
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../Event-Driven-Development/using-domain-events">← Event-driven development </a>
-    <a href="../../PageBuilder/overview">Page Builder →</a>
+    <a href="../../Payments/new-payment-method-registration">Payments →</a>
 </div>

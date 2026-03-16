@@ -1,10 +1,17 @@
 # Glossary
 
+## Admin UI
+Same as **Platform** and **Back office**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
+
 ## Asset
 A file (such as an image, video, document, or media resource) that is uploaded to the platform and linked to a product, category, or catalog to provide additional visual or informational content.
 
 ## Association
 A tool that allows you to add a block of related items to a product or multiple products. For example, this could be a widget with related products or accessories that go with the product in question.
+
+## Back office
+Same as **Admin UI** and **Platform**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
+
 
 ## Bill of materials
 A special type of Product that is actually a list of materials required for a specific item purchased by the customer that can be created for internal purposes.
@@ -83,6 +90,9 @@ Same as **Company**. A profile for an entire company, within which you can store
 
 ## Physical product
 Any tangible product that the shop owner can list in the shop. Physical products have a unique Track Inventory attribute that digital products do not have. Shipping and Fulfillment Center attributes are also relevant to them.
+
+## Platform
+Same as **Admin UI** and **Back office**. An administrative interface where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
 ## Product
 A basic entity in Virto Commerce's Catalog module, a product is a basic type of item that can be created and listed on an ecommerce site. You can choose to create entries for both physical and digital products. There are also special types of products, such as bills of materials, variations, and configurables.

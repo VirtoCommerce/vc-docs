@@ -195,6 +195,6 @@ The result is as follows:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../getting-started">← Getting started </a>
+    <a href="../page-builder-setup">← Setup </a>
     <a href="../server-descriptors">Server descriptors →</a>
 </div>

@@ -29,5 +29,5 @@ This control provides a rich-text editor based on [ckeditor-angular](https://www
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../string">← String </a>
-    <a href="../../Payments/new-payment-method-registration">Payments. New payment method →</a>
+    <a href="../../sanity-setup">Sanity setup →</a>
 </div>

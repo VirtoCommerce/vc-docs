@@ -6,16 +6,6 @@ The **Builder.io** module adds link to Builder.io to the application menu. By cl
 
 ![Readmore](media/readmore.png){: width="25"} [Integrating custom components with Builder.io](https://www.builder.io/c/docs/custom-components-intro)
 
-Virto Commerce and Builder.io integrate seamlessly via API. Once connected, Builder.io pulls in content components like text, images, videos, and carousels, which are then displayed in your online storefront alongside commerce modules from Virto Commerce — such as stock availability, pricing, customer reviews, and shipping information.
-
-Your ecommerce team can efficiently use existing code components and the design system from the Virto Commerce frontend as building blocks, enabling faster development while maintaining brand consistency. In addition, they can utilize Builder’s pre-built blocks to create customized experiences 
-
-![Overview](media/overview.png){: style="display: block; margin: 0 auto;" width="650"}
-
-Developers can easily register new Virto frontend components in code, allowing business team members to use the Builder’s visual editor to drag and drop these components to create content-rich experiences with no dev support. These components can be reused and built into templates, speeding the launch of new pages.
-
-Once the content is complete in the Builder's visual editor, Virto's pre-rendering functionality allows your online storefront to generate static versions of pages in advance, smoothing the development process, speeding load times, reducing server load, and simplifying SSR.
-
 
 ## Key features
 
@@ -36,6 +26,8 @@ The module is ready for integration with other sales channels.
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-builder-io/releases)
 
+![Readmore](media/readmore.png){: width="25"} [Builder.io setup](../../../../developer-guide/Extensibility/cms-integrations/builder-io-setup)
+
 
 <br>
 <br>
@@ -43,5 +35,5 @@ The module is ready for integration with other sales channels.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../avalara/overview">← Avalara module overview </a>
-    <a href="../getting-started">Getting started →</a>
+    <a href="../use-builder-io">Using Builder.io →</a>
 </div>
