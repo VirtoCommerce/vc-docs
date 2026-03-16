@@ -4571,24 +4571,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
-        Getting Started
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../use-builder-io/" class="md-nav__link">
         Using Builder.io
       </a>
@@ -4604,13 +4586,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+
 <!-- Main navigation item with nested items -->
 
-    <li class="md-nav__item">
-      <a href="../settings.md                      -" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+         data-md-toggle="toc"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         Settings
       </a>
+
+      <!-- Show table of contents -->
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
             

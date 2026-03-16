@@ -4575,24 +4575,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/builder-io/getting-started/" class="md-nav__link">
-        Getting Started
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../../integrations/builder-io/use-builder-io/" class="md-nav__link">
         Using Builder.io
       </a>
@@ -4611,7 +4593,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/builder-io/settings.md                      -" class="md-nav__link">
+      <a href="../../integrations/builder-io/settings/" class="md-nav__link">
         Settings
       </a>
     </li>
@@ -4909,26 +4891,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#supported-cms-platforms" class="md-nav__link">
         Supported CMS platforms
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#architecture" class="md-nav__link">
-        Architecture
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#scenarios" class="md-nav__link">
-        Scenarios
     </a>
 
     <!-- Render nested item list -->
@@ -13271,26 +13233,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#architecture" class="md-nav__link">
-        Architecture
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#scenarios" class="md-nav__link">
-        Scenarios
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
     </ul>
     
 </nav>
@@ -13313,7 +13255,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 11, 2025 12:44:59 UTC">August 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 16, 2026 14:31:03 UTC">March 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -13354,26 +13296,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <h2 id="supported-cms-platforms">Supported CMS platforms<a class="headerlink" href="#supported-cms-platforms" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Builder.io</strong>: Fully supported for integration.</li>
+<li><a href="../../integrations/builder-io/overview/">Builder.io</a>: Fully supported for integration.</li>
+<li><a href="../../sanity/overview/">Sanity</a></li>
+<li><a href="../../page-builder/overview/">Virto Page Builder.</a></li>
 <li><strong>Contentful</strong>: Coming soon.</li>
 <li><strong>Optimizely</strong>: Coming soon.</li>
-<li><a href="../../page-builder/overview/">Virto Page Builder.</a></li>
-</ul>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p><img alt="Architecture" src="../media/virto-pages-architecture.png" style="display: block; margin: 0 auto;" /></p>
-<p>The Virto Pages module employs an event-driven architecture to ensure efficient content management and retrieval. The key components include:</p>
-<ul>
-<li><strong>Content storage</strong>: Pages are stored offline in an index, ensuring quick access and rendering without live CMS dependency.</li>
-<li><strong>Event handling</strong>: Content updates trigger events to update, index, or remove pages as necessary.</li>
-<li><strong>Frontend integration</strong>: Pages are resolved by their permalink (slug) and served  from the offline index for rendering.</li>
-<li><strong>Unified page document and API</strong>: Unified Page Document and API allow access to pages that are created by different CMS.</li>
-</ul>
-<h2 id="scenarios">Scenarios<a class="headerlink" href="#scenarios" title="Permanent link">&para;</a></h2>
-<p>The Virto Pages module supports end-to-end content workflows:</p>
-<ul>
-<li><strong>Design time</strong>: Integrate with a CMS to create and design pages, preparing them for publishing.</li>
-<li><strong>Publishing</strong>: Publish pages to Virto Pages, removing dependency on the CMS afterward.</li>
-<li><strong>Rendering</strong>: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.</li>
 </ul>
 <p><br>
 <br></p>
