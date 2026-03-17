@@ -65,7 +65,7 @@ This control allows you to edit complex objects composed of multiple fields. You
 
 ### External elementDescriptor schema
 
-You can also define the object editor separately in a file (e.g., `buttonEditor.json`) inside the `theme/config/objects/` folder:
+You can also define the object editor separately in a file (e.g., **buttonEditor.json**) inside the **theme/config/objects/** folder:
 
 ```json
 {

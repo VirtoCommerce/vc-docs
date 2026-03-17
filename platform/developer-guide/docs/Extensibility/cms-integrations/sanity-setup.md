@@ -37,7 +37,7 @@ In your [Sanity Studio](https://www.sanity.io/docs/sanity-studio-quickstart/sett
 
 1. Register the schema in **schemaTypes/index.ts**:
 
-    ```typescript title="schemaTypes/virtoPageType.ts"
+    ```typescript title="schemaTypes/index.ts"
     import { virtoPageType } from './virtoPageType'
 
     export const schemaTypes = [virtoPageType]

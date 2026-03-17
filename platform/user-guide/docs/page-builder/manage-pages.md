@@ -66,59 +66,59 @@ To add content to your page:
 
     <div class="grid" markdown>
 
-    Call to action
+    **Call to action:**
 
     ![Call to action](media/call-to-action-sample.png)
 
-    Call to action with image
+    **Call to action with image:**
 
     ![Call to action](media/call-to-action-with-image.png)
 
-    Category
+    **Category:**
 
     ![Custom categories](media/custom-categories.png)
 
-    Favorite products
+    **Favorite products:**
 
     ![Favorite products](media/favorite-products.png)
 
-    Features
+    **Features:**
 
     ![Features](media/features.png)
 
-    Image
+    **Image:**
 
     ![Image](media/image.png)
 
-    Login
+    **Login:**
 
     ![Login](media/Login.png)
 
-    Predefined products
+    **Predefined products:**
 
     ![Predefined products](media/predefined-products.png)
 
-    Products
+    **Products:**
 
     ![Products](media/products.png)
 
-    Products carousel
+    **Products carousel:**
 
     ![Products carousel](media/products-carousel.png)
 
-    Slider
+    **Slider:**
 
     ![Slider](media/slider.png)
 
-    Subscribe form
+    **Subscribe form:**
 
     ![Subscribe form](media/subscribe-form.png)
 
-    Text
+    **Text:**
 
     ![Text](media/text.png)
 
-    Title
+    **Title:**
 
     ![Subtitle](media/title.png)
 

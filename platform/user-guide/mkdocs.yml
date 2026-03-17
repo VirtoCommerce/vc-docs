@@ -407,7 +407,6 @@ nav:
                 - Settings: integrations/avalara/settings.md
           - Builder.io:
                 - Overview: integrations/builder-io/overview.md
-                - Getting Started: integrations/builder-io/getting-started.md
                 - Using Builder.io: integrations/builder-io/use-builder-io.md
                 - Settings: integrations/builder-io/settings.md
           - Google Analytics 4:

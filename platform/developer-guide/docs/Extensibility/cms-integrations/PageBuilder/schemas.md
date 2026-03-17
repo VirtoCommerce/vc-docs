@@ -106,7 +106,7 @@ Each file defines a section that can be added to a page. The section editor in t
 |-----------------|-------------------------------|-------------------------------------------------------------------------------------------------------------|
 | `icon`          | string                        | Icon in section list.                                                                                        |
 | `name`          | string                        | Section name in list of new elements.                                                                        |
-| `static`        | boolean <br> string           | Indicates that block is static. These blocks cannot be added or removed. <br>Actually it is a section settings. |
+| `static`        | boolean <br> string           | Indicates that block is static. When set, <br> this section acts as a fixed settings group and <br> cannot be added or removed by users. |
 | `displayField`  | string                        | Property name, that used for indicate section in section list.                                              |
 | `sort`          | number                        | Order section in list of new elements.                                                                      |
 | `settings`      | SectionPropertyDescriptor[] | List of descriptors for section properties.                                                                  |

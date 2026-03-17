@@ -15,7 +15,7 @@ This control uses the [file-upload](https://pivan.github.io/file-upload/) compon
 | `urlField`               | string              | Field name containing the file URL (if value is an object).                                                                      |
 | `filenameField`          | string              | Field name containing the filename (if value is an object).                                                                      |
 | `element`                | ControlDescriptor[] | Additional descriptors for custom fields in the file object.                                                                     |
-| `UploadAcceptRequest`    | <br> AssetsRequest<br> string <br> inline       | Custom request descriptor used to upload assets.                                                     |
+| `UploadAssetsRequest`    | AssetsRequest<br> string <br> inline       | Custom request descriptor used to upload assets.                                                     |
 
 The value of this control is an array of URLs by default, or an array of objects if the `element` property is defined.
 
@@ -73,7 +73,7 @@ If `uploadAssetsRequest` is not defined, the default request will be used, which
             "id": "attachment",
             "label": "Attach a file",
             "type": "files",
-            "multiple": false,
+            "multiple": true,
             "accept": ".pdf,application/pdf"
         },
         ...

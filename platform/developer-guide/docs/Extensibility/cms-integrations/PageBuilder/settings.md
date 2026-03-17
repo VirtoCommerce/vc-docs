@@ -6,23 +6,23 @@ Each setting can be either a static string or a dynamic request (or list of requ
 
 ## Key settings properties
 
-| Property                  | Description                                                                                                                                       |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `templatesListUrl`      | URL or server request returning the list of available templates. Templates are managed <br>as described in the [schemas documentation](./schemas.md). |
-| `sectionsListUrl`       | URL or request that returns the list of available sections (blocks).<br>Response format is documented [here](./schemas.md).                          |
-| `templateUrl`           | URL or request used to fetch a selected template by path and type.                                                                                |
-| `saveTemplates`         | Request for saving templates. Usually a POST request with a `files` array in the body,<br> each containing: `path`, `pageId`, `type`, and `content`.  |
-| `settingsDataRequest`   | Request to retrieve the theme's **settings_data.json** file.                                                                                        |
-| `settingsSchemaRequest` | Request to retrieve the theme’s **settings_schema.json** used to render the settings form and presets.                                              |
-| `saveSettings`          | URL or request for saving theme settings.<br> The request format matches `saveTemplates`.                                                             |
-| `uploadAssetsRequest`   | Request for uploading assets (e.g., images or media).<br>Can be defined directly or referenced as a setting.                                         |
-| `fullPreviewUrl`        | URL template used as the source of the preview iframe.<br>**Example**:<br> `{{settings.storefrontUrl}}{{settings.previewPath}}?ep={{location.origin}}` <br>resolves to <https://localhost:3000/designer-preview?ep=https://localhost:5001> |
-| `skipTheme`         | Boolean flag or a request resolving to a flag. If **true**, the theme settings panel is hidden. |
-| `skipTemplates`     | Boolean flag or a request resolving to a flag. If **true**, template switching is disabled.     |
-| `assetsUrlTemplate` | Template for forming asset upload URLs.                                                       |
-| `publish`           | An object containing configuration for publishing content. Includes: <br> - `status`: URL to check publication status. <br> - `publish`: request to publish. <br> - `unpublish`: request to unpublish. <br> If not defined, the publish functionality is disabled. |
-| `publishPages` | Same structure as `publish`, but used for **VirtoPages**-based pages. |
-| `externalPreview` | Object with a `url` property that defines how the preview page is formed in the live environment. <br>Triggered via the preview button in the toolbar. |
+| Property                | Description                                                                                                                                             |
+| ------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `templatesListUrl`      | URL or server request returning the list of available templates. Templates are managed <br>as described in the [schemas documentation](./schemas.md).   |
+| `sectionsListUrl`       | URL or request that returns the list of available sections (blocks).<br>Response format is documented [here](./schemas.md).                             |
+| `templateUrl`           | URL or request used to fetch a selected template by path and type.                                                                                      |
+| `saveTemplates`         | Request for saving templates. Usually a POST request with a `files` array in the body,<br> each containing: `path`, `pageId`, `type`, and `content`.    |
+| `settingsDataRequest`   | Request to retrieve the theme's **settings_data.json** file.                                                                                            |
+| `settingsSchemaRequest` | Request to retrieve the theme’s **settings_schema.json** used to render the settings form and presets.                                                  |
+| `saveSettings`          | URL or request for saving theme settings.<br> The request format matches `saveTemplates`.                                                               |
+| `uploadAssetsRequest`   | Request for uploading assets (e.g., images or media).<br>Can be defined directly or referenced as a setting.                                            |
+| `fullPreviewUrl`        | URL template used as the source of the preview iframe.<br>**Example**:<br> `{{settings.storefrontUrl}}{{settings.previewPath}}?ep={{location.origin}}` <br>resolves to <https://localhost:3000/designer-preview?ep=https://localhost:5001>                                                                                                                          |
+| `skipTheme`             | Boolean flag or a request resolving to a flag. If **true**, the theme settings panel is hidden.                                                         |
+| `skipTemplates`         | Boolean flag or a request resolving to a flag. If **true**, template switching is disabled.                                                             |
+| `assetsUrlTemplate`     | Template for forming asset upload URLs.                                                                                                                 |
+| `publish`               | An object containing configuration for publishing content. Includes: <br> - `status`: URL to check publication status. <br> - `publish`: request to publish. <br> - `unpublish`: request to unpublish. <br> If not defined, the publish functionality is disabled.                                                                                                              |
+| `publishPages`          | Same structure as `publish`, but used for **VirtoPages**-based pages.                                                                                   |
+| `externalPreview`       | Object with a `url` property that defines how the preview page is formed in the live environment. <br>Triggered via the preview button in the toolbar.  |
 
 
 ## Execution context

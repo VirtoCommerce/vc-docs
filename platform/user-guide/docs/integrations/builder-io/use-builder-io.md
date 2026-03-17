@@ -29,39 +29,41 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
 The custom components by Virto include:
 
+<div class="grid" markdown>
 
-* **Category**:
+**Category**:
 
-    ![Category](media/custom-category.png)
+![Category](media/custom-category.png)
 
-* **Products**:
+**Products**:
 
-    ![Products](media/custom-products.png)
+![Products](media/custom-products.png)
 
-* **Slider**:
+**Slider**:
 
-    ![Slider](media/custom-slider.png)
+![Slider](media/custom-slider.png)
 
-* **Favorite products**:
+**Favorite products**:
 
-    ![Favorite products](media/custom-favorite-products.png)
+![Favorite products](media/custom-favorite-products.png)
 
-* **VC-container** that allows images to be uploaded in a format fully supported by the Frontend Application. It eliminates the need for further resizing to fit other elements:
+**VC-container** that allows images to be uploaded in a format fully supported by the Frontend Application. It eliminates the need for further resizing to fit other elements:
 
-    ![VC-container](media/vc-container.png)
+![VC-container](media/vc-container.png)
 
-* **Breadcrumbs**:
+**Breadcrumbs**:
 
-    ![Breadcrumbs](media/breadcrumbs.png){: width="650" }
+![Breadcrumbs](media/breadcrumbs.png){: width="650" }
 
-* **Predefined products**:
+**Predefined products**:
 
-    ![Predefined products](media/predefined-products.png)
+![Predefined products](media/predefined-products.png)
 
-* **Products carousel**:
+**Products carousel**:
 
-    ![Products carousel](media/products-carousel.png)
+![Products carousel](media/products-carousel.png)
 
+</div>
 
 !!! note 
     To add products to the **Predefined products** or **Products carousel** custom components, enter the products' SKUs:
@@ -134,6 +136,6 @@ If you are trying to change the formatting of the header and it does not react, 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../getting-started">← Getting started </a>
+    <a href="../overview">← Builder.io overview </a>
     <a href="../settings">Settings →</a>
 </div>
