@@ -78,6 +78,38 @@ def generate_sitemap_index(output_dir):
 
     print(f"    ✅ Generated sitemap_index.xml with {len(sitemap_entries)} sitemaps")
 
+
+def generate_robots_txt(output_dir):
+    """Generate robots.txt with sitemap reference"""
+    robots_content = f"""User-agent: *
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap_index.xml
+"""
+    robots_path = os.path.join(output_dir, "robots.txt")
+    with open(robots_path, "w") as f:
+        f.write(robots_content)
+    print(f"    ✅ Generated robots.txt")
+
+
+def copy_static_root_files(output_dir):
+    """Copy static files from docs/ that must be at site root (e.g. Google verification)"""
+    docs_dir = "docs"
+    copied = 0
+    for filename in os.listdir(docs_dir):
+        filepath = os.path.join(docs_dir, filename)
+        if os.path.isfile(filepath) and not filename.endswith(".md"):
+            dest = os.path.join(output_dir, filename)
+            if not os.path.exists(dest):
+                shutil.copy2(filepath, dest)
+                print(f"    Copied {filename} to {output_dir}/")
+                copied += 1
+    if copied:
+        print(f"    ✅ Copied {copied} static root files")
+    else:
+        print(f"    No additional static files to copy")
+
+
 def merge_search_indexes(output_dir):
     """Merge search indexes from all versioned subsites into a global index"""
     merged_docs = []
@@ -401,9 +433,11 @@ def main():
 
     print("✅ Search indexes merged")
 
-    print("📋 Step 7: Generate sitemap index for SEO")
+    print("📋 Step 7: Generate SEO files (sitemap index, robots.txt, static root files)")
     generate_sitemap_index(args.output_dir)
-    print("✅ Sitemap index generated")
+    generate_robots_txt(args.output_dir)
+    copy_static_root_files(args.output_dir)
+    print("✅ SEO files generated")
 
     # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
