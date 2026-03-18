@@ -12,6 +12,18 @@ import http.server
 import socketserver
 import json
 
+SITE_URL = "https://docs.virtocommerce.org"
+
+VERSIONED_SUBSITES = [
+    "platform/developer-guide",
+    "platform/user-guide",
+    "platform/deployment-on-cloud",
+    "marketplace/developer-guide",
+    "marketplace/user-guide",
+    "storefront/developer-guide",
+    "storefront/user-guide"
+]
+
 def get_latest_version(output_dir, subsite):
     """Get the actual version number that has 'latest' alias from versions.json"""
     versions_path = os.path.join(output_dir, subsite, "versions.json")
@@ -26,22 +38,52 @@ def get_latest_version(output_dir, subsite):
             return versions[0]["version"]
     return None
 
+
+def generate_sitemap_index(output_dir):
+    """Generate sitemap_index.xml referencing all subsite sitemaps for the latest version"""
+    sitemap_entries = []
+
+    # Add root sitemap
+    root_sitemap = os.path.join(output_dir, "sitemap.xml")
+    if os.path.exists(root_sitemap):
+        sitemap_entries.append(f"{SITE_URL}/sitemap.xml")
+
+    # Add subsite sitemaps for latest version
+    for subsite in VERSIONED_SUBSITES:
+        actual_version = get_latest_version(output_dir, subsite)
+        if not actual_version:
+            print(f"    ⚠️  No version found for {subsite}, skipping sitemap")
+            continue
+
+        sitemap_path = os.path.join(output_dir, subsite, actual_version, "sitemap.xml")
+        if os.path.exists(sitemap_path):
+            sitemap_entries.append(f"{SITE_URL}/{subsite}/{actual_version}/sitemap.xml")
+            print(f"    Added sitemap for {subsite} (v{actual_version})")
+        else:
+            print(f"    ⚠️  Sitemap not found: {sitemap_path}")
+
+    # Write sitemap index
+    xml_entries = "\n".join(
+        f"    <sitemap>\n        <loc>{url}</loc>\n    </sitemap>"
+        for url in sitemap_entries
+    )
+    sitemap_index_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{xml_entries}
+</sitemapindex>
+"""
+    sitemap_index_path = os.path.join(output_dir, "sitemap_index.xml")
+    with open(sitemap_index_path, "w") as f:
+        f.write(sitemap_index_xml)
+
+    print(f"    ✅ Generated sitemap_index.xml with {len(sitemap_entries)} sitemaps")
+
 def merge_search_indexes(output_dir):
     """Merge search indexes from all versioned subsites into a global index"""
-    subsites = [
-        "platform/developer-guide",
-        "platform/user-guide",
-        "platform/deployment-on-cloud",
-        "marketplace/developer-guide",
-        "marketplace/user-guide",
-        "storefront/developer-guide",
-        "storefront/user-guide"
-    ]
-
     merged_docs = []
     config = {"lang": ["en"], "separator": "[\\s\\-]+", "pipeline": ["stopWordFilter"], "fields": {"title": {"boost": 1000.0}, "text": {"boost": 1.0}, "tags": {"boost": 1000000.0}}}
 
-    for subsite in subsites:
+    for subsite in VERSIONED_SUBSITES:
         # Get actual version from versions.json (latest is an alias)
         actual_version = get_latest_version(output_dir, subsite)
         if not actual_version:
@@ -283,11 +325,15 @@ def main():
 
     print("✅ Search indexes merged")
 
+    print("📋 Step 8: Generate sitemap index for SEO")
+    generate_sitemap_index("site")
+    print("✅ Sitemap index generated")
+
     # Cleanup
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 8: Start Python HTTP server")
+    print("📋 Step 9: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server
