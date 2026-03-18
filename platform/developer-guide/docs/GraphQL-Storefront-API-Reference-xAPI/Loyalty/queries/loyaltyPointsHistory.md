@@ -35,10 +35,13 @@ This query allows you to retrieve the history of loyalty point transactions for 
       node {
         id
         operationType
-        points
-        balance
+        amount
         createdDate
-        orderId
+        object {
+          type
+          orderId
+          orderNumber
+        }
       }
     }
     pageInfo {
@@ -58,27 +61,33 @@ This query allows you to retrieve the history of loyalty point transactions for 
           "node": {
             "id": "op-001",
             "operationType": "Earned",
-            "points": 50,
-            "balance": 250,
+            "amount": 50,
             "createdDate": "2025-09-10T12:45:00Z",
-            "orderId": "ord-123"
+            "object": {
+              "type": "Order",
+              "orderId": "ord-123",
+              "orderNumber": "PO-001"
+            }
           }
         },
         {
           "node": {
             "id": "op-002",
             "operationType": "Earned",
-            "points": 30,
-            "balance": 200,
+            "amount": 30,
             "createdDate": "2025-09-05T09:15:00Z",
-            "orderId": "ord-122"
+            "object": {
+              "type": "Order",
+              "orderId": "ord-122",
+              "orderNumber": "PO-002"
+            }
           }
         }
-    ],
-    "pageInfo": {
+      ],
+      "pageInfo": {
         "hasNextPage": true,
         "endCursor": ""
-    }
+      }
     }
   }
 }

@@ -4,22 +4,22 @@ This query allows you to retrieve product recommendations based on various crite
 
 ## Arguments
 
-| Argument                       | Description                                                                                     |
-|--------------------------------|-------------------------------------------------------------------------------------------------|
-| `storeId` ==String!==          | The ID of the store to retrieve recommendations from.                                           |
-| `userId`  ==String==           | The ID of the user.                                                                             |
-| `cultureName` ==String==       | The language to retrieve data in.                                                               |
-| `currencyCode` ==String!==     | A standardized code for the specific currency.                                                  |
-| `productId` ==String==         | The ID of the product for which recommendations are requested.                                  |
-| `model` ==String==             | The recommendation model to use (e.g., **related-products** or **bought-together**).            |
-| `fallbackProductsFilter` ==String== | A filter to apply when no recommendations are found.                                       |
-| `maxRecommendations` ==String== | The maximum number of recommendations to return.                                               |
+| Argument                            | Description                                                                          |
+|-------------------------------------|--------------------------------------------------------------------------------------|
+| `storeId` ==String!==               | The ID of the store to retrieve recommendations from.                                |
+| `userId`  ==String==                | The ID of the user.                                                                  |
+| `cultureName` ==String==            | The language to retrieve data in.                                                    |
+| `currencyCode` ==String==           | A standardized code for the specific currency.                                       |
+| `productId` ==String==              | The ID of the product for which recommendations are requested.                       |
+| `model` ==String==                  | The recommendation model to use (e.g., **related-products** or **bought-together**). |
+| `fallbackProductsFilter` ==String== | A filter to apply when no recommendations are found.                                 |
+| `maxRecommendations` ==Int==        | The maximum number of recommendations to return.                                     |
 
 ## Possible return
 
-| Possible return                                         	| Description                                                              	|
-|---------------------------------------------------------	|------------------------------------------------------------------------	|
-| [`GetRecommendationsResponseType`](../object/GetRecommendationsResponseType.md)  | Defines the properties and fields associated with the recommendations response. 	|
+| Possible return                                                                 | Description                                                                     |
+|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [`GetRecommendationsResponseType`](../object/GetRecommendationsResponseType.md) | Defines the properties and fields associated with the recommendations response. |
 
 ## Example
 

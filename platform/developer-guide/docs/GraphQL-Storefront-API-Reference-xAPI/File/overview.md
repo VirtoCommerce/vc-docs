@@ -37,7 +37,7 @@ The xFiles modules provides the following features:
 
 | Queries               	                            | Objects                                                      	            | Mutations                                 |
 |----------------------------------------------------	|-------------------------------------------------------------------------	|----------------	                        |
-| [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)<br>  	| [deleteFile](Mutations/deleteFile.md) 	|
+| [fileUploadOptions](Queries/fileUploadOptions.md) 	| [FileUploadScopeOptionsType](Objects/FileUploadScopeOptionsType.md)  	    | [deleteFile](Mutations/deleteFile.md) 	|
 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-file-experience-api/releases)

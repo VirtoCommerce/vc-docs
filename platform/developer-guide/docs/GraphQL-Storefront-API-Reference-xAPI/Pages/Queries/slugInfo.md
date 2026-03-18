@@ -4,15 +4,15 @@ This query retrieves information about an entity associated with a specific perm
 
 ## Arguments  
 
-| Argument                  | Description                                                                  |  
-|---------------------------|-----------------------------------------------------------------------------------|
-| `slug` ==String==         | The URL slug, related to the request.  |
-| `permalink` ==String==    | The unique permalink of the entity (e.g., a page URL).                          |  
-| `storeId` ==String==      | The store ID associated with the permalink.                                     |  
-| `userId` ==String==    | The current user Id.                          |  
-| `cultureName` ==String==  | A language to retrieve data in.               |  
+| Argument                 | Description                                            |
+|--------------------------|--------------------------------------------------------|
+| `slug` ==String==        | The URL slug, related to the request.                  |
+| `permalink` ==String==   | The unique permalink of the entity (e.g., a page URL). |
+| `storeId` ==String==     | The store ID associated with the permalink.            |
+| `userId` ==String==      | The current user Id.                                   |
+| `cultureName` ==String== | A language to retrieve data in.                        |
 
-## Possible Returns  
+## Possible returns  
 
 | Possible Return                                                   | Description                                                                    |  
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------|  

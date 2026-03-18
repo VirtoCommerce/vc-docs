@@ -12,9 +12,9 @@ The [InputMarkPushMessageReadType!](../Objects/InputMarkPushMessageReadType.md) 
 
 ## Possible returns
 
-| Possible return | Description                                                                               |
-|-----------------|-------------------------------------------------------------------------------------------|
-| `Boolean`       | Indicates whether the operation of marking the push message as read was successful or not.|
+| Possible return | Description                                                                        |
+|-----------------|------------------------------------------------------------------------------------|
+| `Boolean`       | Indicates whether the operation of marking the push message as read was successful.|
 
 
 

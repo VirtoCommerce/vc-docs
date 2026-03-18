@@ -20,6 +20,7 @@ The `InputUpdateRoleType!` represents the input data required to update a role.
 
 ## Example
 
+
 <div class="grid" markdown>
 
 ```json title="Mutation"
@@ -36,8 +37,13 @@ mutation updateRole ($command: InputUpdateRoleType!) {
 
 ```json title="Variables"
 {
-  "command": {"contactId": "550e9b14-ddde-46fe-bc28-0afec83ade96", "organizationId": "689a72757c754bef97cde51afc663430"}
+  "command": {
+    "role": {
+      "id": "org-maintainer",
+      "name": "Org Maintainer",
+      "description": "Role for managing organization settings."
+    }
+  }
 }
 ```
-
 </div>
