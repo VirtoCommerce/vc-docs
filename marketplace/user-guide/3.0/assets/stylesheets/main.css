@@ -1,0 +1,92 @@
+@import "main/_layout/_header.css";
+@import "main/_layout/_search.css";
+@import "main/_layout/_source-file.css";
+@import "main/_layout/_sidebar.css";
+@import "main/_layout/_footer.css";
+@import "main/_layout/_admonitions.css";
+@import "main/_layout/_big-card.css";
+@import "main/_layout/_wide-card.css";
+@import "main/_layout/_card.css";
+@import "main/_layout/_home.css";
+@import "main/_layout/_nav.css";
+@import "main/_layout/_source.css";
+@import "main/_layout/_link-card.css";
+@import "main/_layout/_doc-card.css";
+@import "main/_layout/_zebra-table.css";
+@import "main/_icons.css";
+@import "main/_typeset.css";
+@import "main/_colors.css";
+@import "palette/_scheme.css";
+@import "../fonts/Inter/index.css";
+@import "../fonts/CircularStd/index.css";
+
+.md-grid {
+    max-width: 74rem;
+}
+
+.md-content {
+    padding-top: 0.2rem;
+}
+
+.md-main__inner {
+    display: flex;
+    height: 100%;
+    margin-top: 0rem;
+}
+
+.md-icon svg {
+    fill: currentcolor;
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.md-tabs {
+    background-color: var(--neutral-70);
+    color: var(--header-title-primary-color);
+}
+
+.md-typeset
+    .tabbed-set
+    > input:first-child:checked
+    ~ .tabbed-labels
+    > :first-child {
+    color: var(--neutral-0);
+    font-weight: 600;
+}
+
+.js .md-typeset .tabbed-labels:before {
+    background: var(--md-accent-fg-color);
+}
+
+@media screen and (min-width: 60em) {
+    .md-nav--secondary .md-nav__title {
+        box-shadow: none !important;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .md-header__button[for="__search"] {
+        display: none;
+    }
+}
+
+.md-clipboard {
+    visibility: hidden;
+}
+
+pre[id^="__code"]:hover > .md-clipboard {
+    visibility: visible !important;
+    color: var(--md-default-fg-color--lightest) !important;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.md-version {
+    height: auto;
+}
+

@@ -1,0 +1,104 @@
+@media screen {
+    [data-md-color-scheme=slate] {
+        --header-footer-primary-color: #202020;
+        --md-primary-bg-color: #E7E7E7;
+        --text-color: #E7E7E7;
+        --md-default-bg-color: #171717;
+        --search-bg-color: #fff;
+        --search-border-color: #CCCCCC;
+        --search-icon-color: #BFBFBF;
+        --footer-icon-color: #ACACAC;
+        --header-footer-primary-color: #ffffff;
+        --palette-button-nav: var(--header-button-primary-color);
+        --md-default-fg-color--light: #383838;
+        --md-source-primary-color: rgba(255, 255, 255, 0.5);
+        --sidebar-hover-color: #1E1E1E;
+        --sidebar-text-color: var(--neutral-40);
+        --scrollbar-track-color: #171717;
+        --scrollbar-thumb-color: #252525;
+        --md-typeset-table-color: rgba(211, 211, 211, 0.2);
+        --md-code-bg-color: #EDEDED;
+        --neutral-60: #717171;
+        --neutral-95: #1E1E1E;
+        --primary-70: #EF776C;
+        --neutral-80: #414141;
+        --teritary-99: #D6E9FF;
+        --success-99: #C8EBC0;
+        --success-40: #1D4B12;
+        --neutral-40: #A0A0A0;
+        --neutral-90: #252525;
+        --neutral-99: #171717;
+        --neutral-10: #E7E7E7;
+        --neutral-20: #D0D0D0;
+        --warning-30: #4A2E01;
+        --warning-80: #F8AD35;
+        --error-30: #4D1B16;
+        --error-90: #EF776C;
+        --table-cell: rgba(255, 244, 217, 0.2);
+        --table-head: var(--table-cell);
+        --table-head-title: #FB927E;
+        --table-text: #EAE8E8;
+        --pill-color-primary: #0F2F53;
+        --pill-text-color-primary: #85BCFF;
+        --pill-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), #0F2F53;
+        --card-primary-color: #1E1E1E;
+        --card-border-primary-color: rgba(255, 255, 255, 0.2);
+        --card-text-color: #E7E7E7;
+        --card-desc-color: #D0D0D0;
+        --card-hover-color: #1E1E1E;
+        --card-button-hover-color: #0F2F53;
+        --card-button-icon: #D3D3D3;
+        --card-icon-holder: rgba(255, 255, 255, 0.05);
+        --burger-color: var(--neutral-40);
+        /* --icon-color: currentColor; */
+        --icon-color: var(--md-default-fg-color--light);
+        --card-bg: rgba(255, 252, 250, 0.9);
+        --card-bg-color: rgba(255, 255, 255, 0.8);
+        --subscribe-title-color: rgba(255, 255, 255, 0.92);
+        --subscribe-placeholder: rgba(255, 255, 255, 0.56);
+        --subscribe-description: rgba(255, 255, 255, 0.64);
+
+        --admonition-info-bg: var(--neutral-10);
+        --admonition-info-border: var(--neutral-20);
+        --admonition-info-title: var(--neutral-0);
+        --admonition-info-text: var(--neutral-99);
+
+        --admonition-warning-bg: var(--warning-30);
+        --admonition-warning-border: var(--warning-80);
+        --admonition-warning-title: var(--warning-80);
+        --admonition-warning-text: #FAC167;
+
+        --admonition-error-bg: var(--error-30);
+        --admonition-error-border: var(--primary-70);
+        --admonition-error-title: var(--error-90);
+        --admonition-error-text: var(--text-color);
+
+        --admonition-tip-bg: var(--success-99);
+        --admonition-tip-border: #6DC956;
+        --admonition-tip-title: var(--success-40);
+        --admonition-tip-text: var(--success-40);
+
+        --admonition-example-bg: rgb(238, 238, 250);
+        --admonition-example-border: rgb(45, 2, 109);
+        --admonition-example-title: rgb(62, 3, 151);
+        --admonition-example-text: rgb(3, 3, 3);
+
+        --admonition-note-bg: #0F2F53;
+        --admonition-note-border: #5CA6FF;
+        --admonition-note-title: #5CA6FF;
+        --admonition-note-text: #85BCFF;
+
+
+        --admonition-github-bg: rgba(255, 255, 255, 0.05);
+        --admonition-github-border: rgba(255, 255, 255, 0.2);
+        --admonition-github-title: rgba(255, 255, 255, 0.64);
+        --admonition-github-icon: rgba(255, 255, 255, 0.92);
+
+
+        --admonition-blue-highlight-bg: #143D6C;
+        --admonition-blue-highlight-text: rgba(255, 255, 255, 0.92);
+
+        --admonition-yellow-highlight-bg: #623D01;
+        --admonition-yellow-highlight-text: rgba(255, 255, 255, 0.92);
+    }
+}
