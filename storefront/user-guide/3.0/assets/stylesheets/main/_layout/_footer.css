@@ -1,0 +1,221 @@
+.md-footer {
+    background-color: var(--header-footer-primary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    /* remove is makes ui bugs */
+    margin-top: auto;
+}
+
+.md-footer .md-tabs {
+    background-color: transparent;
+    margin-right: 0;
+}
+
+.md-footer-meta__inner.md-grid {
+    max-width: 74.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.md-footer__title {
+    font-family: "Circular Std Book", sans-serif;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--header-title-primary-color);
+    padding: 0 0.5rem 0 0;
+    flex-grow: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+[dir="ltr"] .md-footer__title {
+    margin-left: 0.545rem;
+}
+
+.md-footer__bottom {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: var(--md-source-primary-color);
+    /* background-color: var(--neutral-99); */
+    background: url(../../../images/footer-bg.svg) var(--neutral-99) no-repeat
+        center top;
+    padding: 1rem 0 1rem 2rem;
+    text-align: left;
+}
+
+.md-footer__bottom p {
+    margin: 0;
+    color: var(--neutral-60);
+}
+
+.md-footer__button.md-logo :-webkit-any(img, svg) {
+    fill: currentcolor;
+    display: block;
+    height: 1.318rem;
+    width: auto;
+}
+
+.md-footer__button.md-logo {
+    margin: 0;
+    padding: 0;
+}
+.md-footer__button:not(.focus-visible) {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+.md-footer__button:not([hidden]) {
+    display: inline-block;
+}
+.md-footer__button {
+    color: currentcolor;
+    cursor: pointer;
+    margin: 0.2rem;
+    outline-color: var(--md-accent-fg-color);
+    padding: 0.4rem;
+    position: relative;
+    transition: opacity 0.25s;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+    color: var(--sidebar-text-color);
+}
+
+.md-footer-meta__inner {
+    padding: 0;
+    background-color: transparent;
+}
+
+.md-footer-meta {
+    background-color: transparent;
+}
+
+html .md-footer-meta.md-typeset a {
+    color: #ffffff;
+    color: var(--text-color);
+    opacity: 0.92;
+}
+
+html .md-footer-meta.md-typeset a:is(:focus, :hover) {
+    color: var(--neutral-80);
+}
+
+.md-footer__logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+}
+
+.md-footer__title > .md-footer__ellipsis {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.md-footer__topic {
+    display: flex;
+    max-width: 100%;
+}
+
+.md-footer .md-tabs {
+    display: flex;
+    flex: 1;
+}
+
+.md-footer .md-tabs__inner {
+    flex: 1 1 auto;
+}
+
+.md-footer .md-tabs__list {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.md-footer .md-tabs__link {
+    font-family: "Circular Std Book", sans-serif;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 0.7rem;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    margin-top: 0;
+    opacity: 1;
+    font-weight: 500;
+}
+
+.md-footer .md-tabs__item {
+    padding-left: 0.521rem;
+    padding-right: 0.521rem;
+    display: flex;
+    align-items: center;
+}
+
+.md-footer .md-social {
+    padding: 0;
+    margin: 0;
+}
+
+.md-grid.md-footer-meta__inner {
+    padding: 16px 0;
+}
+
+.md-footer__copyright {
+    font-family: "Circular Std", sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 450 !important;
+    line-height: 12px !important;
+    text-align: right !important;
+    color: #a7a7a7 !important;
+    margin: 0 !important;
+}
+
+.md-social__link {
+    color: var(--footer-icon-color) !important;
+}
+
+@media screen and (max-width: 780px) {
+    .md-footer-meta__inner.md-grid {
+        flex-direction: column;
+    }
+
+    .md-grid.md-footer-meta__inner {
+        padding: 32px 0;
+    }
+
+    .md-footer .md-tabs {
+        padding: 15px 0;
+    }
+
+    .md-footer__bottom {
+        padding: 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    .md-footer__logo {
+        margin-left: 0;
+        grid-area: logo;
+        justify-content: center;
+    }
+
+    .md-footer__bottom {
+        background-color: transparent;
+        padding: 0 32px 32px;
+    }
+
+    .md-footer .md-tabs__link {
+        font-size: 12px;
+        line-height: 135%;
+    }
+}
