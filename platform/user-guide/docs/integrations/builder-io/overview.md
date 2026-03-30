@@ -26,7 +26,7 @@ The module is ready for integration with other sales channels.
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-builder-io/releases)
 
-![Readmore](media/readmore.png){: width="25"} [Builder.io setup](../../../../developer-guide/Extensibility/cms-integrations/builder-io-setup)
+![Readmore](media/readmore.png){: width="25"} [Builder.io setup](/platform/developer-guide/latest/Extensibility/cms-integrations/builder-io-setup)
 
 
 <br>
