@@ -22,7 +22,7 @@ With the Sanity module, you can:
 * Combine Sanity-managed content with Virto Commerce product and catalog data for rich, content-driven shopping experiences.
 * Deliver consistent content across web, mobile, and other digital touchpoints from a single source.
 
-![Readmore](media/readmore.png){: width="25"} [Sanity module setup](/platform/developer-guide/latest/Extensibility/cms-integrations/sanity-setup/)
+![Readmore](media/readmore.png){: width="25"} [Sanity module setup](/platform/developer-guide/latest/Extensibility/cms-integrations/sanity-setup)
 
 <br>
 <br>

@@ -18,7 +18,7 @@ Once the content is complete in the Builder's visual editor, Virto's pre-renderi
 
 ## Prerequisites
 
-* [Builder.io module](https://github.com/VirtoCommerce/vc-module-builder-io/releases/latest)
+* [Builder.io module](https://github.com/VirtoCommerce/vc-module-builder-io/releases/latest).
 * [Builder.io account](https://www.builder.io/).
 * [Space in Builder.io](https://www.builder.io/c/docs/ui-tour#selecting-and-creating-organizations-and-spaces). For demonstration purposes, we will choose **Publish** space type.
 
@@ -52,7 +52,7 @@ Click on the link to start using Builder.io:
 
 Virto Commerce Frontend and the Vue B2B Theme have native integration with the Builder.io module. No additional frontend configuration is required beyond saving the store settings as described above.
 
-![Readmore](media/readmore.png){: width="25"} [Using Builder.io](../../../../user-guide/integrations/builder-io/overview) 
+![Readmore](media/readmore.png){: width="25"} [Using Builder.io](/platform/user-guide/latest/integrations/builder-io/overview) 
 
 <br>
 <br>

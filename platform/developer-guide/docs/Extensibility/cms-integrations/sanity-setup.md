@@ -52,7 +52,7 @@ The webhook endpoint requires an API key for a Virto Commerce user with the foll
 | `sanity:update` | Create and update operations. |
 | `sanity:delete` | Delete operations.            |
 
-To create an API key with these permissions, follow the [API key guide](../Fundamentals/Security/authorization/overview.md).
+To create an API key with these permissions, follow the [API key guide](/platform/developer-guide/latest/Fundamentals/Security/authorization/overview).
 
 ## Configure webhook
 

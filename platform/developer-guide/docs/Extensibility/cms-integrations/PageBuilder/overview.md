@@ -50,7 +50,7 @@ The two subsystems communicate via `window.postMessage()` to synchronize edits a
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases)
 
-![Readmore](media/readmore.png){: width="25"} [Using Page Builder](../../../../../user-guide/page-builder/overview)
+![Readmore](media/readmore.png){: width="25"} [Using Page Builder](/platform/user-guide/latest/page-builder/overview)
 
 <br>
 <br>

@@ -4,7 +4,7 @@ The **Page Builder** module allows you to create ecommerce pages from blocks and
 
 [Contact us to install Page Builder](https://virtocommerce.com/contact-us)
 
-![Readmore](media/readmore.png){: width="25"} [Page Builder setup](../../../developer-guide/Extensibility/cms-integrations/PageBuilder/overview)
+![Readmore](media/readmore.png){: width="25"} [Page Builder setup](/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/overview)
 
 
 The Virto Commerce Page Builder module offers:
