@@ -24,6 +24,34 @@ plugins:
     - include-markdown
     - mike:
         alias_type: redirect
+    - redirects:
+        redirect_maps:
+            "Fundamentals/PageBuilder/overview.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/overview/"
+            "Fundamentals/PageBuilder/create-new-block.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/create-new-block/"
+            "Fundamentals/PageBuilder/server-descriptors.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/server-descriptors/"
+            "Fundamentals/PageBuilder/settings.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/settings/"
+            "Fundamentals/PageBuilder/schemas.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/schemas/"
+            "Fundamentals/PageBuilder/component-context.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/component-context/"
+            "Fundamentals/PageBuilder/asset.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/asset/"
+            "Fundamentals/PageBuilder/getting-started.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/page-builder-setup/"
+            "Fundamentals/PageBuilder/calendar.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/calendar/"
+            "Fundamentals/PageBuilder/checkbox.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/checkbox/"
+            "Fundamentals/PageBuilder/collection.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/collection/"
+            "Fundamentals/PageBuilder/color.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/color/"
+            "Fundamentals/PageBuilder/files.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/files/"
+            "Fundamentals/PageBuilder/header.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/header/"
+            "Fundamentals/PageBuilder/images.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/images/"
+            "Fundamentals/PageBuilder/markdown.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/markdown/"
+            "Fundamentals/PageBuilder/number.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/number/"
+            "Fundamentals/PageBuilder/object.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/object/"
+            "Fundamentals/PageBuilder/page-builder-extension.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/page-builder-extension/"
+            "Fundamentals/PageBuilder/paragraph.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/paragraph/"
+            "Fundamentals/PageBuilder/script-based-evaluation.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/script-based-evaluation/"
+            "Fundamentals/PageBuilder/search.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/search/"
+            "Fundamentals/PageBuilder/select.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/select/"
+            "Fundamentals/PageBuilder/string.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/string/"
+            "Fundamentals/PageBuilder/text.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/text/"
+
 theme:
     custom_dir: ../../overrides
     hide: false
