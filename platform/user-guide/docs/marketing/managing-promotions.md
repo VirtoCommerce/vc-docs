@@ -16,16 +16,15 @@ Managing promotions includes:
 1. Click **Marketing** in the main menu.
 1. In the next blade, click **Promotions**.
 1. In the **Promotions** blade, click **Add** in the toolbar.
-
-	![path](media/add-promotion-path.png){: style="display: block; margin: 0 auto;" width="550"}
-
-1. Fill in the following fields in the **New promotion** blade.
+1. Fill in the following fields in the **New promotion** blade:
 
 	![fields](media/create-promotion.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Create** to save the changes. 
 
-Your newly created promotion appears in the promotions list.
+Your newly created promotion appears in the promotions list and on the Frontend:
+
+![Coupons on the Frontend](media/coupon-frontend.png)
 
 ![Readmore](media/readmore.png){: width="25"} [Promotion rules](promotion-rules.md)
 

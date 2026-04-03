@@ -54,6 +54,6 @@ You modifications have been applied.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../saved-for-later">← Saved for later</a>
+    <a href="../orders">← Orders</a>
     <a href="../quote-requests">Quote requests →</a>
 </div>

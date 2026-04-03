@@ -42,6 +42,6 @@ Here you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../addresses">← Addresses</a>
-    <a href="../review-products">Product reviews →</a>
+    <a href="../dashboard">← Dashboard</a>
+    <a href="../lists">Lists →</a>
 </div>

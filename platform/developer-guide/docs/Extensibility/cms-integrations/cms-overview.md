@@ -47,6 +47,6 @@ The Virto Pages module supports end-to-end content workflows:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../extending-application-user">← Extending application user</a>
+    <a href="../../opentelemetry">← Open Telemetry</a>
     <a href="../builder-io-setup">Builder.io setup →</a>
 </div>

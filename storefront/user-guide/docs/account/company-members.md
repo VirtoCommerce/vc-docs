@@ -54,5 +54,5 @@ The role has been successfully modified.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../company-info">← Company info</a>
-    <a href="../../shopping/products-purchase-options">Shopping process →</a>
+    <a href="../profile">Profile →</a>
 </div>

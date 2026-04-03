@@ -13,6 +13,6 @@ You can read the messages received, view their total amount, mark notifications 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../saved-credit-cards">← Saved credit cards</a>
-    <a href="../back-in-stock-list">Back-in-stock list →</a>
+    <a href="../coupons">← Coupons and promotions</a>
+    <a href="../points-history">Points history →</a>
 </div>

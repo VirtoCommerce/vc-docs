@@ -11,6 +11,6 @@ This section shows the number of points earned and redeemed for each order, as w
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../purchase-requests">← Purchase requests</a>
+    <a href="../notifications">← Notifications</a>
     <a href="../company-info">Company info →</a>
 </div>

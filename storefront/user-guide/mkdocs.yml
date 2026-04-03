@@ -76,22 +76,26 @@ nav:
           - Brands Page: navigation/brands-page.md
     - Account:
           - Personal and Corporate Accounts: account/overview.md
-          - Dashboard: account/dashboard.md
-          - Profile: account/profile.md
-          - Change Password: account/change-password.md
-          - Addresses: account/addresses.md
-          - Orders: account/orders.md
-          - Product Reviews: account/review-products.md
-          - Saved for Later: account/saved-for-later.md
-          - Lists: account/lists.md
-          - Quote Requests: account/quote-requests.md
-          - Saved Credit Cards: account/saved-credit-cards.md
-          - Notifications: account/notifications.md
-          - Back-in-Stock List: account/back-in-stock-list.md
-          - Purchase Requests: account/purchase-requests.md
-          - Points History: account/points-history.md
-          - Company Info: account/company-info.md
-          - Company Members: account/company-members.md
+          - Purchasing:
+                - Dashboard: account/dashboard.md
+                - Orders: account/orders.md
+                - Lists: account/lists.md
+                - Quote Requests: account/quote-requests.md
+                - Purchase Requests: account/purchase-requests.md
+                - Saved for Later: account/saved-for-later.md
+                - Back-in-Stock List: account/back-in-stock-list.md
+          - Marketing:
+                - Coupons and Promotions: account/coupons.md
+                - Notifications: account/notifications.md
+                - Points History: account/points-history.md
+          - Corporate:
+                - Company Info: account/company-info.md
+                - Company Members: account/company-members.md
+          - User: 
+                - Profile: account/profile.md
+                - Change Password: account/change-password.md
+                - Addresses: account/addresses.md
+                - Saved Credit Cards: account/saved-credit-cards.md
     - Shopping:
           - Options for Buying Products: shopping/products-purchase-options.md
           - Search Options: shopping/searching-for-products.md
@@ -101,5 +105,5 @@ nav:
           - Product Lists: shopping/lists.md
           - Save for Later: shopping/save-for-later.md
           - Notifications: shopping/notifications.md
-          - Checkout: shopping/checkout-process.md
-
+          - Check Out: shopping/checkout-process.md
+          - Review Products: account/review-products.md

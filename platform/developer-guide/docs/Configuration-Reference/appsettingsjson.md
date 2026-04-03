@@ -1598,6 +1598,28 @@ This node configures the DataTrans payment gateway integration, enabling secure 
 
 <!--datatrans-end-->
 
+### OpenTelemetry
+
+This node controls the OpenTelemetry observability settings:
+
+<!--opentelemetry-start-->
+
+| Node | Default or sample value | Description |
+|------|------------------------|-------------|
+| OpenTelemetry.Enabled | false | Required. Enables the module. Set to `true` to activate. |
+| OpenTelemetry.Endpoint | http://localhost:4317 | Required. OTLP collector endpoint (gRPC). Required to export data. |
+| OpenTelemetry.ServiceName | VirtoCommerce.Platform | Optional. Service name reported in telemetry. |
+
+```json title="appsettings.json"
+{
+  "OpenTelemetry": {
+    "Enabled": true,
+    "Endpoint": "http://localhost:4317",
+    "ServiceName": "VirtoCommerce.Platform"
+  }
+}
+```
+<!--opentelemetry-end-->
 
 ### PlatformSettings
 

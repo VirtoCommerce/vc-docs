@@ -21,5 +21,5 @@ The following fields should be filled in when editing or adding new address:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../change-password">← Change password</a>
-    <a href="../orders">Orders →</a>
+    <a href="../saved-credit-cards">Saved credit cards →</a>
 </div>

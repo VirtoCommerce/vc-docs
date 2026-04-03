@@ -11,5 +11,5 @@ Both personal and corporate accounts open with the **Dashboard** menu item. With
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Personal and corporate accounts</a>
-    <a href="../profile">Profile →</a>
+    <a href="../orders">Orders →</a>
 </div>

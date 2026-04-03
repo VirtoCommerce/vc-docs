@@ -27,7 +27,7 @@ To integrate DataTrans with Virto Commerce for secure payment processing:
 
 Configure the **appsettings.json** file as follows:
 
-{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--datatrans-start-->" end="<!--datatrans-end-->" %}
+{% include-markdown "../../Configuration-Reference/appsettingsjson.md" start="<!--opentelemetry-start-->" end="<!--opentelemetry-end-->" %}
 
 ### Configure Platform
 

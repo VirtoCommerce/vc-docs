@@ -2,12 +2,9 @@
 
 Users can review products from the completed orders:
 
-1. In the list of the completed orders, click on the product you want to review.
-1. Once the order is completed, a review widget appears on the product page. Fill in the required fields and optionally upload an image.
-1. Click **Submit** (the button will be enabled once all required fields are filled).
-1. Your review will appear on the product page once approved by the seller:
 
-![Reviewing products](../media/product-review.gif)
+<div> <script async src="https://js.storylane.io/js/v2/storylane.js"></script> <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)"> <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/hagsh9avevgk?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe> </div> </div>
+
 
 <br>
 <br>

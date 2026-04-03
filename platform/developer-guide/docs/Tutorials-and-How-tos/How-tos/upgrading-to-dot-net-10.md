@@ -223,5 +223,5 @@ With the update process completed, you can now run and enjoy the enhanced capabi
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../overview">← Tutorials and how-tos </a>
-    <a href="../adding-case-sensitive-search-support-for-postgre">Adding case-insensitive search support for PostgreSQL  →</a>
+    <a href="../connect-to-ai-agents-via-onx">Connecting to AI Agents via onX Adapter  →</a>
 </div>
