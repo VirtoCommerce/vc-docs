@@ -86,10 +86,10 @@ The adapter is configured via the `ADAPTER_CONFIG` environment variable as a JSO
 
 | Option          | Type       | Required | Default | Description                                                                          |
 |-----------------|------------|----------|---------|--------------------------------------------------------------------------------------|
-| `apiUrl`        | ==string== | Yes      | —       | Virto Commerce Platform URL.                                                         |
-| `apiKey`        | ==string== | Yes      | —       | API key passed in the `api_key` header.                                              |
-| `workspace`     | ==string== | No       | —       | Store ID — scopes orders and shipments, auto-detects catalog.                        |
-| `catalogId`     | ==string== | No       | —       | Catalog ID for product searches. Auto-detected from the store if `workspace` is set. |
+| `apiUrl`        | ==string== | Yes      | -       | Virto Commerce Platform URL.                                                         |
+| `apiKey`        | ==string== | Yes      | -       | API key passed in the `api_key` header.                                              |
+| `workspace`     | ==string== | No       | -       | Store ID <br> (scopes orders and shipments, auto-detects catalog)                        |
+| `catalogId`     | ==string== | No       | -       | Catalog ID for product searches.<br>Auto-detected from the store if `workspace` is set. |
 | `timeout`       | ==string== | No       | `30000` | Request timeout in milliseconds.                                                     |
 | `retryAttempts` | ==string== | No       | `3`     | Maximum retry attempts for failed requests.                                          |
 | `debugMode`     | ==string== | No       | `false` | Logs all API requests and responses to stderr.                                       |
@@ -108,10 +108,10 @@ The API key used must have the following Virto Commerce permissions:
 | Inventory        | Search                                                                 |
 | Platform         | Read (countries list)                                                  |
 | Store            | Read (required when `workspace` is set)                                |
-| Pricing          | Evaluate (optional — for automatic price lookup during order creation) |
+| Pricing          | Evaluate (optional for automatic price lookup during order creation) |
 
 <br>
-![Read more](media/readmore.png){: width="20"} [Permissions management](../../../../user-guide/security/roles-and-permissions#create-new-role-and-assign-permissions)
+![Read more](media/readmore.png){: width="20"} [Permissions management](/platform/user-guide/latest/security/roles-and-permissions/#create-new-role-and-assign-permissions)
 
 <br>
 <br>
