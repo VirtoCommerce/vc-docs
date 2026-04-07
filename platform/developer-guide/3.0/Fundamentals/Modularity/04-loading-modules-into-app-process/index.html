@@ -18,7 +18,7 @@
         <link rel="prev" href="../optional-dependency/">
       
       
-        <link rel="next" href="../05-best-practices/">
+        <link rel="next" href="../IPlatformStartup/">
       
       
         
@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#loading-modules-into-application-process" class="md-skip">
+        <a href="#load-modules-into-application-process" class="md-skip">
           Skip to content
         </a>
       
@@ -4192,6 +4192,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Loading Modules into App Process
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -4200,6 +4204,165 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#module-discovery-and-loading" class="md-nav__link">
+        Module discovery and loading
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Module discovery and loading">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#discover-modules" class="md-nav__link">
+        Discover modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#copy-assemblies" class="md-nav__link">
+        Copy assemblies
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#load-modules" class="md-nav__link">
+        Load modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#host-building" class="md-nav__link">
+        Host building
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#services-registration" class="md-nav__link">
+        Services registration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#application-configuration" class="md-nav__link">
+        Application configuration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#imoduleservice" class="md-nav__link">
+        IModuleService
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#diagnostics" class="md-nav__link">
+        Diagnostics
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Diagnostics">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#logging" class="md-nav__link">
+        Logging
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#failed-modules" class="md-nav__link">
+        Failed modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#health-check" class="md-nav__link">
+        Health check
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -4218,8 +4381,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../05-best-practices/" class="md-nav__link">
-        Best Practices
+      <a href="../IPlatformStartup/" class="md-nav__link">
+        IPlatformStartup
       </a>
     </li>
   
@@ -4238,6 +4401,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../06-module-manifest-file/" class="md-nav__link">
         Module.manifest File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../05-best-practices/" class="md-nav__link">
+        Best Practices
       </a>
     </li>
   
@@ -27189,6 +27370,146 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#module-discovery-and-loading" class="md-nav__link">
+        Module discovery and loading
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Module discovery and loading">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#discover-modules" class="md-nav__link">
+        Discover modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#copy-assemblies" class="md-nav__link">
+        Copy assemblies
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#load-modules" class="md-nav__link">
+        Load modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#host-building" class="md-nav__link">
+        Host building
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#services-registration" class="md-nav__link">
+        Services registration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#application-configuration" class="md-nav__link">
+        Application configuration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#imoduleservice" class="md-nav__link">
+        IModuleService
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#diagnostics" class="md-nav__link">
+        Diagnostics
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Diagnostics">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#logging" class="md-nav__link">
+        Logging
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#failed-modules" class="md-nav__link">
+        Failed modules
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#health-check" class="md-nav__link">
+        Health check
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -27209,7 +27530,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 10:37:37 UTC">September 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 7, 2026 07:13:10 UTC">April 7, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27229,51 +27550,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="loading-modules-into-application-process">Loading Modules into Application Process<a class="headerlink" href="#loading-modules-into-application-process" title="Permanent link">&para;</a></h1>
-<p>The process of loading modules into the Virto Platform application process includes the following steps:</p>
-<ol>
-<li>
-<p><strong>Discovering or registering modules</strong>. The modules to load at the first run in runtime are defined in the discovery folder called <strong>~/modules</strong>. This folder contains the module folder tree, with each module folder containing the <strong>module.manifest</strong> file and other module resources, such as assemblies, JavaScript files, style bundles, and localization resources.</p>
-</li>
-<li>
-<p><strong>Copying module assemblies into the probing folder</strong> to apply the version conflict resolution.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<h1 id="load-modules-into-application-process">Load Modules into Application Process<a class="headerlink" href="#load-modules-into-application-process" title="Permanent link">&para;</a></h1>
+<p>The process of loading modules into the Virto Platform application process is managed by a single <code>ModuleBootstrapper</code> class. It runs a fluent pipeline in <code>Program.Main()</code> before the ASP.NET Core host is built, which allows modules to participate in the earliest startup phases, including adding configuration sources and registering host-level services.</p>
+<p>After the pipeline completes, the host is built and the remaining initialization phases run in sequence. The full process consists of four phases:</p>
+<p><img alt="Module loading process" src="../media/loading-modules-into-application-process.png" style="display: block; margin: 0 auto;" width="800" /></p>
 <ul>
-<li>
-<p>The current policy is as follows: the assembly with the latest version or latest date of modification always prevails when copying.</p>
-</li>
-<li>
-<p>Copying assemblies into the probing folder prevents assembly lock issues that might happen when the same assemblies loaded into the application process at the same time can be modified during development or other activity.</p>
-</li>
-<li>
-<p>In multi-instance Platform configurations, only one instance checks or copies assemblies into the probing folder. This is achieved by distributed locking between instances through Redis: the first instance copies the files, while subsequent instances skip this process.</p>
-</li>
+<li><a href="#module-discovery-and-loading">Module discovery and loading.</a></li>
+<li><a href="#host-building">Host building.</a></li>
+<li><a href="#services-registration">Services registration.</a></li>
+<li><a href="#application-configuration">Application configuration.</a></li>
 </ul>
-</div>
-</li>
-<li>
-<p><strong>Loading modules</strong>: The assemblies that contain the modules are loaded into the <code>AssemblyLoadContex.Default</code> default context of the application process. This phase requires the module assemblies to be retrieved from the probing folder.</p>
-</li>
-<li>
-<p><strong>Ordering by dependency graph</strong>: All loaded modules are stored in the order of their dependencies for proper initialization order.</p>
-</li>
-<li>
-<p><strong>Initializing modules</strong>: Finally, the modules get initialized, which means creating instances of the module class and calling the <strong>Initialize</strong> method against them via the <code>IModule</code> interface.</p>
-</li>
-</ol>
-<p>The chart below shows the module loading process:</p>
-<p><img alt="Module loading process" src="../media/04-module-loading-process.png" style="display: block; margin: 0 auto;" /></p>
+<h2 id="module-discovery-and-loading">Module discovery and loading<a class="headerlink" href="#module-discovery-and-loading" title="Permanent link">&para;</a></h2>
+<p>This phase runs entirely before the ASP.NET Core host is built and before the DI container is available. It consists of three sequential steps executed as a fluent pipeline on the <code>ModuleBootstrapper</code> instance:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ModuleBootstrapper</span><span class="p">.</span><span class="n">Instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModuleBootstrapper</span><span class="p">(</span><span class="n">loggerFactory</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">boostOptions</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Discover</span><span class="p">(</span><span class="n">PlatformVersion</span><span class="p">.</span><span class="n">CurrentVersion</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="n">RuntimeInformation</span><span class="p">.</span><span class="n">ProcessArchitecture</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="n">isDevelopment</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="discover-modules">Discover modules<a class="headerlink" href="#discover-modules" title="Permanent link">&para;</a></h3>
+<p><code>Discover()</code> reads all <strong>module.manifest</strong> files from the discovery folder (<strong>~/modules</strong>). Each manifest describes the module's identity, version, platform version requirement, and dependencies. After reading, modules are sorted by their dependency graph and validated against the current Platform version. Once this step completes, the full module registry is available via <code>GetModules()</code> and <code>GetInstalledModules()</code>.</p>
+<h3 id="copy-assemblies">Copy assemblies<a class="headerlink" href="#copy-assemblies" title="Permanent link">&para;</a></h3>
+<p><code>Copy()</code> copies module assemblies from the discovery folder into a flat probing folder. This intermediate step exists to apply version conflict resolution before any assembly is loaded:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Virto Platform's modularity engine supports only eager loading from local disk for modules.</p>
+<p>The assembly with the latest version or latest date of modification always prevails when copying.</p>
 </div>
+<p>If a <code>.rebuild</code> marker file is present in the probing folder, <code>Copy()</code> clears the folder entirely before copying. This marker is written automatically by <code>InvalidateProbingFolder()</code> when a module is installed or uninstalled at runtime. Because the DLLs are locked by the running process, they cannot be replaced immediately. The rebuild is deferred to the next startup.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In multi-instance Platform configurations, only one instance checks or copies assemblies into the probing folder. This is achieved by distributed locking between instances through Redis: the first instance copies the files, while subsequent instances skip this process.</p>
+</div>
+<h3 id="load-modules">Load modules<a class="headerlink" href="#load-modules" title="Permanent link">&para;</a></h3>
+<p><code>Load()</code> loads the module assemblies from the probing folder into <code>AssemblyLoadContext.Default</code>. Loading from the probing folder, rather than directly from the discovery folder, prevents assembly lock issues that might occur when assemblies are modified during development or deployment. After loading, <code>Load()</code> also scans the assemblies for any <code>IPlatformStartup</code> implementations declared in the module manifests via the <code>&lt;startupType&gt;</code> element.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A module that fails to load does not block platform startup. Errors are accumulated in <code>ManifestModuleInfo.Errors</code> and reported after startup completes, while the platform remains operational with the remaining modules.</p>
+</div>
+<p><code>IPlatformStartup</code> is an extension point that allows a module to hook into startup phases earlier than the standard <code>IModule</code> lifecycle, for example, to add a configuration source such as Azure App Configuration or Consul, or to register a background job server. An implementation is declared in the module manifest as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;startupType&gt;</span>VirtoCommerce.MyModule.MyModuleStartup<span class="nt">&lt;/startupType&gt;</span>
+</code></pre></div>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../IPlatformStartup/">IPlatformStartup</a></p>
+<h2 id="host-building">Host building<a class="headerlink" href="#host-building" title="Permanent link">&para;</a></h2>
+<p>Once the <code>ModuleBootstrapper</code> pipeline completes, the ASP.NET Core host is built. During this phase the bootstrapper invokes any discovered <code>IPlatformStartup</code> implementations at two points:</p>
+<ul>
+<li><code>ConfigureAppConfiguration</code> called inside the host's <code>ConfigureAppConfiguration</code> callback. Modules use this to add configuration sources that must be available before the DI container is built.</li>
+<li><code>ConfigureHostServices</code> called inside the host-level <code>ConfigureServices</code> callback. Modules use this to register hosted services or background job servers at the host level.</li>
+</ul>
+<h2 id="services-registration">Services registration<a class="headerlink" href="#services-registration" title="Permanent link">&para;</a></h2>
+<p>This phase corresponds to <code>Startup.ConfigureServices()</code>. The bootstrapper performs two operations in order:</p>
+<ul>
+<li><code>RunConfigureServices</code> invokes <code>IPlatformStartup.ConfigureServices()</code> on each startup implementation. This runs before any module is initialized, making it suitable for application-level DI registrations that modules may depend on.</li>
+<li><code>InitializeModules</code> creates an instance of each module class and calls <code>IModule.Initialize()</code> on them in dependency order (modules with no dependencies first). At this point each module registers its own services into the DI container.</li>
+</ul>
+<p>After module initialization, API controllers are registered as application parts and the backward-compatibility adapter for <code>ILocalModuleCatalog</code> is registered in DI.</p>
+<h2 id="application-configuration">Application configuration<a class="headerlink" href="#application-configuration" title="Permanent link">&para;</a></h2>
+<p>This phase corresponds to <code>Startup.Configure()</code>. The bootstrapper performs two operations:</p>
+<ul>
+<li><code>RunConfigure</code> invokes <code>IPlatformStartup.Configure()</code> on each startup implementation. This runs before routing middleware is added and is used to insert early middleware into the HTTP pipeline.</li>
+<li><code>PostInitializeModules</code> calls <code>IModule.PostInitialize()</code> on all initialized modules in dependency order. This runs inside a distributed lock (<code>ExecuteSynchronized</code>) together with platform database migrations and Hangfire setup, ensuring that post-initialization is performed by only one instance in a multi-instance deployment.</li>
+</ul>
+<h2 id="imoduleservice">IModuleService<a class="headerlink" href="#imoduleservice" title="Permanent link">&para;</a></h2>
+<p><code>ModuleBootstrapper</code> implements the <code>IModuleService</code> interface and is registered in DI as a singleton after the pipeline completes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">IModuleService</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ModuleBootstrapper</span><span class="p">.</span><span class="n">Instance</span><span class="p">);</span>
+</code></pre></div>
+<p>This allows controllers, health checks, and other services to query the module registry at runtime. The key methods available through <code>IModuleService</code> are listed below.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GetModules()</code></td>
+<td>Returns all modules sorted in dependency order.</td>
+</tr>
+<tr>
+<td><code>GetInstalledModules()</code></td>
+<td>Returns installed modules with no errors.</td>
+</tr>
+<tr>
+<td><code>GetFailedModules()</code></td>
+<td>Returns modules that failed to load.</td>
+</tr>
+<tr>
+<td><code>IsInstalled(moduleId)</code></td>
+<td>Checks whether a module is installed.</td>
+</tr>
+<tr>
+<td><code>IsInstalled(moduleId, minVersion)</code></td>
+<td>Checks whether a module is installed at or above a minimum version.</td>
+</tr>
+<tr>
+<td><code>GetModule(moduleId)</code></td>
+<td>Returns <code>ManifestModuleInfo</code> for the given module, or <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diagnostics">Diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">&para;</a></h2>
+<p>The Platform provides several ways to monitor module loading and diagnose issues at runtime.</p>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
+<p>All module operations are logged through <code>ILoggerFactory</code>. The log output covers the full pipeline from discovery through initialization:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[INF] ModuleBootstrapper: Discovered modules: 12, with errors: 2
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[DBG] ModuleBootstrapper: Copying assemblies from /app/modules/VirtoCommerce.Catalog/bin
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>[DBG] ModuleBootstrapper: Loading module VirtoCommerce.Catalog 3.800.0
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>[WRN] ModuleBootstrapper: Module VirtoCommerce.Broken has errors: incompatible platform version
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>[INF] ModuleBootstrapper: Loaded modules: 12, with errors: 2
+</code></pre></div>
+<h3 id="failed-modules">Failed modules<a class="headerlink" href="#failed-modules" title="Permanent link">&para;</a></h3>
+<p>Modules that fail to load are available through <code>IModuleService</code> after startup completes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moduleService</span><span class="p">.</span><span class="n">GetFailedModules</span><span class="p">();</span>
+</code></pre></div>
+<p>Each entry in the result contains the module identity and the errors accumulated during the pipeline, which can be used to diagnose version conflicts, missing dependencies, or assembly load failures.</p>
+<h3 id="health-check">Health check<a class="headerlink" href="#health-check" title="Permanent link">&para;</a></h3>
+<p>The Platform exposes a built-in health check endpoint that reports the overall module status:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>GET /health
+</code></pre></div>
+<p>If any modules have errors, the response reflects an unhealthy state:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;Modules health&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unhealthy&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Some modules have errors&quot;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+</code></pre></div>
 <p><br>
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
-    <a href="../optional-dependency">← Optional dependency between modules </a>
-    <a href="../05-best-practices">Best practices →</a>
+    <a href="../optional-dependency">← Optional dependency between modules</a>
+    <a href="../IPlatformStartup">IPlatformStartup →</a>
 </div>
                 
               </article>

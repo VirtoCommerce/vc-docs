@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://docs.virtocommerce.org/platform/developer-guide/3.0/Fundamentals/Modularity/06-module-manifest-file/">
       
       
-        <link rel="prev" href="../05-best-practices/">
+        <link rel="prev" href="../IPlatformStartup/">
       
       
-        <link rel="next" href="../configuration/">
+        <link rel="next" href="../05-best-practices/">
       
       
         
@@ -4190,8 +4190,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../05-best-practices/" class="md-nav__link">
-        Best Practices
+      <a href="../IPlatformStartup/" class="md-nav__link">
+        IPlatformStartup
       </a>
     </li>
   
@@ -4317,6 +4317,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
 
   <!-- Main navigation item -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../05-best-practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
   
 
             
@@ -27340,7 +27358,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 30, 2025 06:50:23 UTC">May 30, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 7, 2026 07:13:10 UTC">April 7, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27427,53 +27445,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 </li>
 <li>
-<p><code>&lt;dependencies&gt;</code>: Any number of <code>&lt;dependency&gt;</code> elements that identify other modules this module depends on. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&lt;dependency</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;VirtoCommerce.Core&quot;</span><span class="err">`</span><span class="w"> </span><span class="err">`</span><span class="na">version=</span><span class="s">&quot;3.22.0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">&lt;/dependencies&gt;</span>
+<p><code>&lt;startupType&gt;</code>: A fully qualified name of a class that implements the <code>IPlatformStartup</code> interface. When declared, the Platform discovers and invokes this class during startup phases that occur before the standard <code>IModule</code> lifecycle, for example, to add configuration sources or register host-level services.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;startupType&gt;</span>VirtoCommerce.CartModule.Web.CartModuleStartup,<span class="w"> </span>VirtoCommerce.CartModule.Web<span class="nt">&lt;/startupType&gt;</span>
 </code></pre></div>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../IPlatformStartup/">IPlatformStartup</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../04-loading-modules-into-app-process/">Loading modules into application process</a>
+<br></p>
+</li>
+<li>
+<p><code>&lt;dependencies&gt;</code>: Any number of <code>&lt;dependency&gt;</code> elements that identify other modules this module depends on. Each <code>&lt;dependency&gt;</code> requires an <code>id</code> and a <code>version</code> attribute. To mark a dependency as optional  add the <code>optional="True"</code> attribute.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">&lt;dependency</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;VirtoCommerce.Core&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;3.22.0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">&lt;dependency</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;VirtoCommerce.Export&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;3.800.0&quot;</span><span class="w"> </span><span class="na">optional=</span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../optional-dependency/">Optional dependency between modules</a></p>
 </li>
 </ul>
 <details><summary>Module.manifest example</summary>
 
-  <div class="highlight"><span class="filename">module.manifest</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;module</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nt">&lt;id&gt;</span>VirtoCommerce.Cart<span class="nt">&lt;/id&gt;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>3.27.0<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="nt">&lt;version-tag&gt;</span>beta001<span class="nt">&lt;/version-tag&gt;</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="nt">&lt;platformVersion&gt;</span>3.62.0<span class="nt">&lt;/platformVersion&gt;</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="nt">&lt;title&gt;</span>Shopping<span class="w"> </span>cart<span class="w"> </span>module<span class="nt">&lt;/title&gt;</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="nt">&lt;description&gt;</span>Shopping<span class="w"> </span>cart<span class="w"> </span>/<span class="w"> </span>checkout<span class="w"> </span>functionality<span class="nt">&lt;/description&gt;</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="nt">&lt;authors&gt;</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nt">&lt;author&gt;</span>Virto<span class="w"> </span>Commerce<span class="nt">&lt;/author&gt;</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="nt">&lt;/authors&gt;</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">  </span><span class="nt">&lt;owners&gt;</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="nt">&lt;owner&gt;</span>Virto<span class="w"> </span>Commerce<span class="nt">&lt;/owner&gt;</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span><span class="nt">&lt;/owners&gt;</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">  </span><span class="nt">&lt;projectUrl&gt;</span>https://virtocommerce.com/apps/extensions/virto-shoppingcart-module<span class="nt">&lt;/projectUrl&gt;</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="nt">&lt;iconUrl&gt;</span>Modules/$(VirtoCommerce.Cart)/Content/logo.png<span class="nt">&lt;/iconUrl&gt;</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">  </span><span class="nt">&lt;assemblyFile&gt;</span>VirtoCommerce.CartModule.Web.dll<span class="nt">&lt;/assemblyFile&gt;</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">  </span><span class="nt">&lt;moduleType&gt;</span>VirtoCommerce.CartModule.Web.Module,<span class="w"> </span>VirtoCommerce.CartModule.Web<span class="nt">&lt;/moduleType&gt;</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="nt">&lt;dependency</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;VirtoCommerce.Core&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;3.22.0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">  </span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">  </span><span class="nt">&lt;/dependencies&gt;</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="nt">&lt;/module&gt;</span>
+  <div class="highlight"><span class="filename">module.manifest</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;module</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nt">&lt;id&gt;</span>VirtoCommerce.Cart<span class="nt">&lt;/id&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>3.27.0<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="nt">&lt;version-tag&gt;</span>beta001<span class="nt">&lt;/version-tag&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="nt">&lt;platformVersion&gt;</span>3.62.0<span class="nt">&lt;/platformVersion&gt;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nt">&lt;title&gt;</span>Shopping<span class="w"> </span>cart<span class="w"> </span>module<span class="nt">&lt;/title&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="nt">&lt;description&gt;</span>Shopping<span class="w"> </span>cart<span class="w"> </span>/<span class="w"> </span>checkout<span class="w"> </span>functionality<span class="nt">&lt;/description&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="nt">&lt;authors&gt;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="nt">&lt;author&gt;</span>Virto<span class="w"> </span>Commerce<span class="nt">&lt;/author&gt;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">  </span><span class="nt">&lt;/authors&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">  </span><span class="nt">&lt;owners&gt;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="nt">&lt;owner&gt;</span>Virto<span class="w"> </span>Commerce<span class="nt">&lt;/owner&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">  </span><span class="nt">&lt;/owners&gt;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span><span class="nt">&lt;projectUrl&gt;</span>https://virtocommerce.com/apps/extensions/virto-shoppingcart-module<span class="nt">&lt;/projectUrl&gt;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">  </span><span class="nt">&lt;iconUrl&gt;</span>Modules/$(VirtoCommerce.Cart)/Content/logo.png<span class="nt">&lt;/iconUrl&gt;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">  </span><span class="nt">&lt;assemblyFile&gt;</span>VirtoCommerce.CartModule.Web.dll<span class="nt">&lt;/assemblyFile&gt;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">  </span><span class="nt">&lt;moduleType&gt;</span>VirtoCommerce.CartModule.Web.Module,<span class="w"> </span>VirtoCommerce.CartModule.Web<span class="nt">&lt;/moduleType&gt;</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">  </span><span class="nt">&lt;startupType&gt;</span>VirtoCommerce.CartModule.Web.CartModuleStartup,<span class="w"> </span>VirtoCommerce.CartModule.Web<span class="nt">&lt;/startupType&gt;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">  </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">    </span><span class="nt">&lt;dependency</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;VirtoCommerce.Core&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;3.22.0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">    </span><span class="nt">&lt;dependency</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;VirtoCommerce.Export&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;3.800.0&quot;</span><span class="w"> </span><span class="na">optional=</span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">  </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="nt">&lt;/module&gt;</span>
 </code></pre></div>
 </details>
 
 <h2 id="adding-new-app">Adding new app<a class="headerlink" href="#adding-new-app" title="Permanent link">&para;</a></h2>
 <p>To add a new web, add the app section into the <strong>module.manifest</strong> file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>...
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">&lt;apps&gt;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">&lt;app</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;reports&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="nt">&lt;title&gt;</span>Reports<span class="nt">&lt;/title&gt;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">        </span><span class="nt">&lt;description&gt;</span>Power<span class="w"> </span>BI<span class="w"> </span>Commerce<span class="w"> </span>Reports<span class="nt">&lt;/description&gt;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="nt">&lt;iconUrl&gt;</span>/apps/reports/power_bi_logo.svg<span class="nt">&lt;/iconUrl&gt;</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="nt">&lt;permission&gt;</span>PowerBiReports:access<span class="nt">&lt;/permission&gt;</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="nt">&lt;/app&gt;</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nt">&lt;/apps&gt;</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>...
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">&lt;apps&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">&lt;app</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;reports&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="nt">&lt;title&gt;</span>Reports<span class="nt">&lt;/title&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="nt">&lt;description&gt;</span>Power<span class="w"> </span>BI<span class="w"> </span>Commerce<span class="w"> </span>Reports<span class="nt">&lt;/description&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="nt">&lt;iconUrl&gt;</span>/apps/reports/power_bi_logo.svg<span class="nt">&lt;/iconUrl&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="nt">&lt;permission&gt;</span>PowerBiReports:access<span class="nt">&lt;/permission&gt;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="nt">&lt;/app&gt;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="nt">&lt;/apps&gt;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>...
 </code></pre></div>
 <p>You can use the following attributes:</p>
 <ul>
@@ -27488,8 +27519,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
-    <a href="../05-best-practices">← Best practices </a>
-    <a href="../configuration">Configuration →</a>
+    <a href="../IPlatformStartup">← IPlatformStartup </a>
+    <a href="../05-best-practices"> Best practices →</a>
 </div>
                 
               </article>
