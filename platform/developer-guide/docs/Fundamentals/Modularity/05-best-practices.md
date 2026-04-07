@@ -28,7 +28,7 @@ One can draw parallels between how your code can be distributed among Virto modu
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../04-loading-modules-into-app-process">← Loading modules into application process </a>
-    <a href="../06-module-manifest-file">Module.manifest file →</a>
+    <a href="../06-module-manifest-file">← Module.manifest file </a>
+    <a href="../configuration">Configuration →</a>
 </div>
 

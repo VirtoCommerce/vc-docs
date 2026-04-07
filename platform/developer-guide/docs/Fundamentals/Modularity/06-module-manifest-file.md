@@ -76,13 +76,28 @@ The **module.manifest** file can be configured using a number of required and op
     <iconUrl>Modules/$(VirtoCommerce.Cart)/Content/logo.png</iconUrl>
     ```
 
-* `<dependencies>`: Any number of `<dependency>` elements that identify other modules this module depends on. 
+* `<startupType>`: A fully qualified name of a class that implements the `IPlatformStartup` interface. When declared, the Platform discovers and invokes this class during startup phases that occur before the standard `IModule` lifecycle, for example, to add configuration sources or register host-level services.
 
-    ```xml 
+    ``` xml
+    <startupType>VirtoCommerce.CartModule.Web.CartModuleStartup, VirtoCommerce.CartModule.Web</startupType>
+    ```
+
+    <br>
+    ![Readmore](media/readmore.png){: width="25"} [IPlatformStartup](IPlatformStartup.md)
+
+    ![Readmore](media/readmore.png){: width="25"} [Loading modules into application process](04-loading-modules-into-app-process.md)
+    <br>
+
+* `<dependencies>`: Any number of `<dependency>` elements that identify other modules this module depends on. Each `<dependency>` requires an `id` and a `version` attribute. To mark a dependency as optional  add the `optional="True"` attribute.
+
+    ```xml
     <dependencies>
-      <dependency id="VirtoCommerce.Core"` `version="3.22.0" />
+      <dependency id="VirtoCommerce.Core" version="3.22.0" />
+      <dependency id="VirtoCommerce.Export" version="3.800.0" optional="True" />
     </dependencies>
     ```
+
+    ![Readmore](media/readmore.png){: width="25"} [Optional dependency between modules](optional-dependency.md)
 
 <details><summary>Module.manifest example</summary>
 
@@ -90,7 +105,7 @@ The **module.manifest** file can be configured using a number of required and op
   <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <id>VirtoCommerce.Cart</id>
+    <id>VirtoCommerce.Cart</id>
     <version>3.27.0</version>
     <version-tag>beta001</version-tag>
     <platformVersion>3.62.0</platformVersion>
@@ -103,15 +118,19 @@ The **module.manifest** file can be configured using a number of required and op
       <owner>Virto Commerce</owner>
     </owners>
     <projectUrl>https://virtocommerce.com/apps/extensions/virto-shoppingcart-module</projectUrl>
-  <iconUrl>Modules/$(VirtoCommerce.Cart)/Content/logo.png</iconUrl>
+    <iconUrl>Modules/$(VirtoCommerce.Cart)/Content/logo.png</iconUrl>
     <assemblyFile>VirtoCommerce.CartModule.Web.dll</assemblyFile>
     <moduleType>VirtoCommerce.CartModule.Web.Module, VirtoCommerce.CartModule.Web</moduleType>
-  <dependencies>
-      <dependency id="VirtoCommerce.Core" version="3.22.0" />  
+    <startupType>VirtoCommerce.CartModule.Web.CartModuleStartup, VirtoCommerce.CartModule.Web</startupType>
+    <dependencies>
+      <dependency id="VirtoCommerce.Core" version="3.22.0" />
+      <dependency id="VirtoCommerce.Export" version="3.800.0" optional="True" />
     </dependencies>
   </module>
   ```
-</details>  
+</details>
+
+
 
 ## Adding new app
 
@@ -146,6 +165,6 @@ You can use the following attributes:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../05-best-practices">← Best practices </a>
-    <a href="../configuration">Configuration →</a>
+    <a href="../IPlatformStartup">← IPlatformStartup </a>
+    <a href="../05-best-practices"> Best practices →</a>
 </div>

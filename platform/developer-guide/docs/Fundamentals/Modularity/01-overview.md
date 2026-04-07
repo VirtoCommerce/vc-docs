@@ -15,8 +15,6 @@ The following chart shows the overall design concept of the Platform application
 
 ![Overall Platform design chart](media/01-overall-design-chart.png){: style="display: block; margin: 0 auto;" width="600"}
 
-Notes to the chart:
-
 * **Platform application:** Works as a runtime environment that hosts the modules running within the same process and having access to shared resources and dependencies.
     
 * **Modularity engine:** A software component that is responsible for module discovery, initialization, and loading into the main [ASP.NET](http://asp.net/) app process.
@@ -29,9 +27,9 @@ Notes to the chart:
 
 Traditionally, **module** and **plugin** are defined as follows:
 
-* A **Module** is a self-contained piece of software, which may contain types, data structure, functions, or otherwise, and can be combined with other modules to construct more complex software.
+* A **module** is a self-contained piece of software, which may contain types, data structure, functions, or otherwise, and can be combined with other modules to construct more complex software.
 
-* In the meantime, a **Plugin** is a ready to use software component that can be added to an existing software to change or add features.
+* In the meantime, a **plugin** is a ready to use software component that can be added to an existing software to change or add features.
 
 As a module, any Virto component can have dependencies to other modules, while, as a plugin, it can be added to an existing application without any recompilation.
 
@@ -93,18 +91,18 @@ Apart from the above, there are several loosely coupled communication patterns, 
     
 * **Shared services:** A shared service is a class that can be accessed through a common interface. Typically, shared services are located in shared assemblies and provide system-wide services, such as authentication, logging, or configuration.
 
-![Readmore](media/readmore.png){: width="25"} [Versioning and Dependencies](03-versioning-and-dependencies.md)
+![Readmore](media/readmore.png){: width="25"} [Versioning and dependencies](03-versioning-and-dependencies.md)
 
 ## Module installation, update, and deployment processes
 
 Virto offers two different ways to install and update modules: 
 
-* [Runtime mode.](01-overview.md#runtime-mode)
-* [Design-time mode.](01-overview.md#design-time-mode)
+* [Runtime mode.](#runtime-mode)
+* [Design-time mode.](#design-time-mode)
 
 ### Runtime mode
 
-The **Runtime** mode is used to update and install modules on a working system or at the first time setup. This process is based on requesting the `modules.json` file, a registry that can be either public or internal and contains information on all modules and their latest major versions (minor and patch versions history is not stored). You can set the path to this file with the `module.manifest` setting in the `appsettings.json` file (see string 7):
+The **Runtime** mode is used to update and install modules on a working system or at the first time setup. This process is based on requesting the **modules.json** file, a registry that can be either public or internal and contains information on all modules and their latest major versions (minor and patch versions history is not stored). You can set the path to this file with the **module.manifest** setting in the **appsettings.json** file (see string 7):
 
 ```json title="appsettings.json" linenums="1"
 ...
@@ -119,7 +117,30 @@ The **Runtime** mode is used to update and install modules on a working system o
 ...
 ```
 
-When using Virto Commerce in your production environment, you will rather have to deal with a list of your custom modules that have dependencies to the Virto modules that are not upgraded to the latest version. If this is the case, it is better to define your own version of the `modules.json` file that will contain a list of your custom and Virto modules with specific versions for your solution. Having your own `modules.json` file is basically the same as having `package.json` for NPM dependencies; the difference lies in the shared nature and the option to use it globally.
+When using Virto Commerce in your production environment, you will rather have to deal with a list of your custom modules that have dependencies to the Virto modules that are not upgraded to the latest version. If this is the case, it is better to define your own version of the **modules.json** file that will contain a list of your custom and Virto modules with specific versions for your solution. Having your own **modules.json** file is basically the same as having **package.json** for NPM dependencies; the difference lies in the shared nature and the option to use it globally.
+
+Module loading at runtime is handled by a single `ModuleBootstrapper` class that runs a fluent pipeline in `Program.Main()` before the ASP.NET Core host is built. The pipeline consists of three sequential steps:
+
+1. `Discover()` — reads manifests from the discovery folder, sorts modules by dependency graph, and validates them against the platform version.
+2. `Copy()` — copies module assemblies to the probing path. If a `.rebuild` marker file is present (written after a previous install or uninstall operation), the probing folder is cleared and fully rebuilt before copying.
+3. `Load()` — loads module assemblies into `AssemblyLoadContext.Default` from the probing path and discovers any `IPlatformStartup` implementations declared in the module manifests.
+
+    <br>
+    ![Readmore](media/readmore.png){: width="25"} [IPlatformStartup](IPlatformStartup.md)
+
+
+!!! note
+    A module that fails to load does not block platform startup. Errors are accumulated and reported after startup completes, and the platform remains operational with the remaining modules.
+
+The `.rebuild` marker file is written automatically when a module is installed or uninstalled at runtime, since the DLLs are locked by the running process and cannot be replaced immediately. On the next startup, `Copy()` detects the marker, clears the probing folder, and rebuilds it from scratch with the correct assembly versions.
+
+!!! note
+    In multi-instance Platform configurations, only one instance checks or copies assemblies into the probing folder. This is achieved by distributed locking between instances through Redis: the first instance copies the files, while subsequent instances skip this process.
+
+The `IPlatformStartup` interface is an extension point that allows modules to participate in startup phases that occur before the standard `IModule` lifecycle, for example, adding configuration sources or registering host-level services. An implementation is declared in the module manifest via the `<startupType>` element.
+
+![Readmore](media/readmore.png){: width="25"} [Loading modules into application process](04-loading-modules-into-app-process.md)
+
 
 ### Design-time mode
 
@@ -129,15 +150,15 @@ Here are some examples of interface commands you can use to perform various oper
 
 * Installing the latest version of a particular module:
 
-```
-vc-build install -Module VirtoCommerce.Store
-``` 
+    ```
+    vc-build install -Module VirtoCommerce.Store
+    ``` 
 
 * Updating the Platform and all installed modules to the latest version:
 
-```
-vc-build update
-``` 
+    ```
+    vc-build update
+    ``` 
 
 For the **module deployment process**, use our  [Virto Commerce Global Tool](/platform/developer-guide/latest/CLI-tools/overview), which helps bundle your module solution to the deployment package. 
 

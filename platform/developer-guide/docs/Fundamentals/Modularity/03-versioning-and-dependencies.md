@@ -47,7 +47,7 @@ The Virto dependency version resolving logic always interprets all versions as *
 As all module assemblies are copied into the *probing* folder before being loaded into the Platform application process, except the assemblies of the module in question, the Platform module manager copies all third party dependency assemblies and applies the same version conflict resolution policy:
 
 !!! note
-    The assembly with the highest version or the one that was modified last, wins.
+    The assembly with the highest version or latest date of modification, wins.
 
 This fact may lead to an unexpected update of third party dependencies for other modules and the Platform application itself when resolving an assembly at runtime. You should always consider this fact when updating dependencies for your custom modules.
 
