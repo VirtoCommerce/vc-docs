@@ -2,7 +2,7 @@
 
 The **Open Telemetry** module provides OpenTelemetry observability for Virto Commerce Platform (metrics, distributed tracing, and structured logging via OTLP exporter).
 
-![Metrics](media/open-telemetry.png)
+![Metrics](media/open-telemetry.png){: style="display: block; margin: 0 auto;" }
 
 ## Key features
 

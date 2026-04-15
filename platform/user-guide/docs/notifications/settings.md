@@ -3,30 +3,21 @@
 To configure notification settings:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Notifications** to find the settings related to the module.
-1. Click **General**.
-1. In the next blade, click ![pencil](media/pencil.png){: width="20"} configure the language settings.
+1. In the search field of the next blade, type **Notifications** to find the settings related to the module:
 
-    === "Add language"
+    ![Notification settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-        To add a language:
+1. As you can see, the notifications-related settings belong to various modules:
 
-        1. Click **Add** in the toolbar.
-        1. Type new language item.
-        1. Click ![save](media/save.png){: width="20"} next to it.
+    * [Back-in-Stock module.](../back-in-stock/settings.md)
+    * [Cart module.](../cart/settings.md)
+    * [Orders module.](../order-management/settings.md)
+    * [Task Management module.](../tasks/settings.md)
+    * [Webhooks module.](../webhooks/settings.md)
 
-    === "Delete language"
+1. Configure the settings and click **Save** in the toolbar.
 
-        To delete a language:
-
-        1. Check the item to delete.
-        1. Click **Delete** in the toolbar.
-
-1. In the **General** blade, click **Save** in the toolbar to save the changes.
-
-The notification settings have been configured.
-
-
+Your modifications have been applied.
 
 <br>
 <br>

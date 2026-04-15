@@ -918,6 +918,41 @@ This configuration node defines authorization settings for the system.
 }
 ```
 
+### AzureAppConfiguration
+
+This configuration node integrates [Azure App Configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview) as a centralized, cloud-managed configuration source for the Virto Commerce Platform. Once enabled, all platform modules automatically gain access to settings stored in Azure App Configuration without any code changes.
+
+| Node                      | Default or sample value                   | Description                                                                                               |
+| ------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Enabled                   | true<br>false                             | Enables or disables the Azure App Configuration module.                                                   |
+| ConnectionString          |                                           | Azure App Configuration connection string. Takes priority over **Endpoint** if both are specified.        |
+| Endpoint                  |                                           | Azure App Configuration endpoint URI for Managed Identity authentication (e.g., `https://myconfig.azconfig.io`). |
+| SentinelKey               | Sentinel                                  | Key name used to trigger configuration refresh. When its value changes in Azure, all configuration entries are reloaded without application restart. |
+| RefreshInterval           | 00:00:30                                  | How often the module polls Azure App Configuration for changes. Format: `hh:mm:ss`.                      |
+| KeyPrefix                 |                                           | Filters keys by prefix and trims the prefix from loaded keys, scoping configuration to your application.  |
+
+**Example**
+
+```json title="appsettings.json"
+"AzureAppConfiguration": {
+  "Endpoint": "https://myconfig.azconfig.io",
+  "SentinelKey": "Sentinel",
+  "RefreshInterval": "00:02:00",
+  "KeyPrefix": "VirtoCommerce:",
+  "Enabled": true
+}
+```
+
+An alternative connection string authentication method is also supported:
+
+```json title="appsettings.json"
+"AzureAppConfiguration": {
+  "ConnectionString": "Endpoint=https://<your-resource>.azconfig.io;Id=<id>;Secret=<secret>"
+}
+```
+
+!!! note
+    A legacy connection string key `ConnectionStrings:AzureAppConfigurationConnectionString` is also supported for backward compatibility.
 
 ### Caching
 This node manages caching configuration.

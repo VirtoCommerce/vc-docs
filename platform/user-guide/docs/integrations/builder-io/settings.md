@@ -2,13 +2,16 @@
 
 To configure Builder.io settings:
 
-1. Click **Settings** in the main menu.
-1. In the next blade, select **BuilderIO**.
-1. Enable/disable Builder.io or add/edit API key, then click **Save** in the top toolbar.
+1. Open **Stores** from the main menu.
+1. In the next blade, select  your store.
+1. In the next blade, click on the **Settings** widget.
+1. Find **BuilderIO** settings in the left panel and configure the following
 
-![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
+    ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-The modifications have been saved.
+1. Click **Save** in the toolbar to save the changes.
+
+The modifications have been applied.
 
 
 <br>

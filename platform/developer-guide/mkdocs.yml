@@ -184,6 +184,7 @@ nav:
                 - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
                 - Best Practices: Fundamentals/Modularity/05-best-practices.md
                 - Configuration: Fundamentals/Modularity/configuration.md
+                - Azure App Configuration: Fundamentals/Modularity/azure-app-configuration.md
           - Scalability:
                 - Scalability Options: Fundamentals/Scalability/scalability-options.md
                 - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md

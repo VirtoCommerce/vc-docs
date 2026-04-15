@@ -2,15 +2,14 @@
 
 The modules can be accessed only by admin user who can view view the installed modules, new updates, install new modules or remove the installed ones.
 
-Clicking the **Modules** in the main menu opens the **Modules** blade. The blade resembles the layout of Visual Studio and enhance the user experience:
+Try our interactive demo to explore key features in action:
 
-![Modules](media/modules.png){: style="display: block; margin: 0 auto;" }
-
-Within the **Browse** section, you can organize and display modules as bundles:
-
-![Bundles](media/modules-as-bundles.png){: style="display: block; margin: 0 auto;" }
-
-All the Virto Commerce modules are marked with ![tick](media/tick.png){: width="25"}.
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/ghtzkparnn0c?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
 
 <br>

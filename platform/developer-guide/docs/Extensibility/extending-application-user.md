@@ -1,10 +1,11 @@
 # Extend ApplicationUser
 
-Extending the `ApplicationUser` entity in the Virto Commerce Platform allows you to add custom fields and behaviors to user profiles. This guide outlines the steps to extend `ApplicationUser` by creating a new class, `ExtendedApplicationUser`, and updating the database context accordingly.
+Extending the ApplicationUser entity in the Virto Commerce Platform allows you to add custom fields and behavior to user profiles. This guide explains how to create a custom `ExtendedApplicationUser` class, update the security database context, and configure the platform to use the extended user model.
 
 To extend an application user:
 
-1. Create a new class named `ExtendedSecurityDbContext` derived from `SecurityDbContext`:
+1. Create `ExtendedSecurityDbContext` class derived from `SecurityDbContext` or change the base class of your existing DbContext to `SecurityDbContext`.
+Override the `OnModelCreating()` method and add `modelBuilder.UseOpenIddict<...>();`:
 
     ```csharp
     using Microsoft.EntityFrameworkCore;
@@ -25,36 +26,27 @@ To extend an application user:
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<ExtendedApplicationUser>();
+        
+            modelBuilder.UseOpenIddict<VirtoOpenIddictEntityFrameworkCoreApplication,
+                                    VirtoOpenIddictEntityFrameworkCoreAuthorization,
+                                    VirtoOpenIddictEntityFrameworkCoreScope,
+                                    VirtoOpenIddictEntityFrameworkCoreToken,
+                                    string>();
+            ...
         }
     }
     ```
 
-1. Create a temporary migration to initialize the security tables:
+1. Create a temporary migration:
 
     ```powershell
     dotnet ef migrations add Temporary
     ```
 
-    This temporary migration contains the code that creates all the security tables. Delete the temporary files `*_Temporary.cs` and `*_Temporary.Designer.cs`, but keep `ExtendedSecurityDbContextModelSnapshot.cs`.
+    This temporary migration will contain the code that creates all the security tables.
+    Delete temporary migration files `*_Temporary.cs` and `*_Temporary.Designer.cs`, but keep the `ExtendedSecurityDbContextModelSnapshot.cs`.
 
-    Creating migrations with `dotnet ef migrations add ...` will generate migrations for all entities and fields in the extension module, even if these entities or fields already exist in the original module and database.  
-    
-    To avoid that:
-    
-    === "Option 1"
-        Copy the DB snapshot file (`SecurityDbContextModelSnapshot.cs`) from the original module to the migrations directory of your extension module and change its namespace to match the new module.  
-    
-    === "Option 2"
-        Regenerate the DB snapshot file by creating an empty migration (before registering the extension entities in the new DB context):  
-    
-        1. Run `dotnet ef migrations add Temporary`.  
-        1. Remove the content of the `Up` and `Down` methods in the generated migration, but keep the snapshot file unchanged.  
-        1. Then, add your extended fields or entities and run `dotnet ef migrations add AddRecommendedPrice` again.  
-        1. The second migration will now contain only the new fields or entities introduced in your extension.
-
-1. Define a new class, `ExtendedApplicationUser`, derived from `ApplicationUser`, and add any additional fields:
+1. Create `ExtendedApplicationUser` class derived from `ApplicationUser` and add your new fields:
 
     ```csharp
     using VirtoCommerce.Platform.Core.Security;
@@ -75,87 +67,53 @@ To extend an application user:
     }
     ```
 
-1. Create a new migration to apply the changes made to the database schema:
-
-    ```powershell
-    dotnet ef migrations add AddRecommendedPrice -c Pricing2DbContext
-    ```
-
-    The migration should be created **in the extension project** (not in the base module).  
-    The `-c` parameter specifies which database context to use — in this case, your **extended context**.  
-    
-    For example:
-    ```powershell
-    dotnet ef migrations add AddRecommendedPrice -c Pricing2DbContext
-    ```
-    where `Pricing2DbContext` is the DbContext defined in your extension.
-
-    When EF Core generates the migration, it automatically adds a system field called `Discriminator`.  
-    This field is used by Entity Framework to store the class name that EF should instantiate when reading entities from the database.  
-    
-    ![Readmore](media/readmore.png){: width="25"} [Inheritance in EF Core](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance)
-
-    Usually, this field does not need to be defined manually in the `OnModelCreating()` method — it is added automatically to the migration, as shown below:
+1. In the `ExtendedSecurityDbContext.OnModelCreating()` method add your `ExtendedApplicationUser` entity:
 
     ```csharp
-    public partial class AddRecommendedPrice : Migration
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.AddColumn<string>(
-                name: "Discriminator",
-                table: "Price",
-                type: "character varying(128)",
-                maxLength: 128,
-                nullable: false,
-                defaultValue: "Price2Entity");
+        base.OnModelCreating(modelBuilder);
+        
+        modelBuilder.UseOpenIddict<VirtoOpenIddictEntityFrameworkCoreApplication,
+                                VirtoOpenIddictEntityFrameworkCoreAuthorization,
+                                VirtoOpenIddictEntityFrameworkCoreScope,
+                                VirtoOpenIddictEntityFrameworkCoreToken,
+                                string>();
 
-            migrationBuilder.AddColumn<decimal>(
-                name: "RecommendedPrice",
-                table: "Price",
-                type: "Money",
-                nullable: true);
-        }
-
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DropColumn(
-                name: "RecommendedPrice",
-                table: "Price");
-
-            migrationBuilder.DropColumn(
-                name: "Discriminator",
-                table: "Price");
-        }
+        modelBuilder.Entity<ExtendedApplicationUser>().Property("Discriminator").HasDefaultValue(nameof(ExtendedApplicationUser));
+        ...
     }
     ```
 
-    In this example, `RecommendedPrice` is the extended field, `Discriminator` is a system field that defines which derived entity (`Price2Entity`) should be used when reading data from the database.
-
-    Even if this field is not specified in the `DbContext`, it will still appear in the snapshot and designer files generated by EF.
-
-    !!! note
-        **Before applying the migration**, make sure to manually review the generated migration file.  
-        It must contain only your extended fields and the `Discriminator` field — nothing else.  
-        Otherwise, you may face issues later and need to manually roll back or remove incorrect migrations.
-
-1.  Once verified, apply the migration to the database (in the **extension project**) using the command:
+1. Create new migration:
 
     ```powershell
-    dotnet ef database update -c Pricing2DbContext
+    dotnet ef migrations add ExtendApplicationUser
     ```
 
-    This command updates the database using the migrations associated with the specified extended context.
+1. Create `ExtendedUserStore` class derived form the platform's `CustomUserStore`, and pass the `ExtendedSecurityDbContext` to its constructor:
 
-1. In the `Module.Initialize()` method of your module, override `ApplicationUser` and `SecurityDbContext`:
+    ```csharp
+    using Microsoft.AspNetCore.Identity;
+    using VirtoCommerce.ExtendedSecurity.Data.Repositories;
+    using VirtoCommerce.Platform.Security;
+
+    namespace VirtoCommerce.ExtendedSecurity.Data.Services;
+
+    public class ExtendedUserStore(ExtendedSecurityDbContext context, IdentityErrorDescriber describer = null)
+        : CustomUserStore(context, describer)
+    {
+    }
+    ```
+
+1. In the `Module.Initialize()` method override `ApplicationUser` and `IUserStore<ApplicationUser>`:
 
     ```csharp
     public void Initialize(IServiceCollection serviceCollection)
     {
-        // Other initialization code
-
+        ...
         AbstractTypeFactory<ApplicationUser>.OverrideType<ApplicationUser, ExtendedApplicationUser>();
-        serviceCollection.AddTransient<SecurityDbContext, ExtendedSecurityDbContext>();
+        serviceCollection.AddScoped<IUserStore<ApplicationUser>, ExtendedUserStore>();
     }
     ```
 

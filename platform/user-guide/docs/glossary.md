@@ -12,7 +12,6 @@ A tool that allows you to add a block of related items to a product or multiple 
 ## Back office
 Same as **Admin UI** and **Platform**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
-
 ## Bill of materials
 A special type of Product that is actually a list of materials required for a specific item purchased by the customer that can be created for internal purposes.
  
@@ -60,7 +59,7 @@ A set of properties grouped together (e.g., size and color).
 ![Facets](media/facets-glossary.png){: style="display: block; margin: 0 auto;" }
 
 ## Fulfillment center
-Processing unit involved in receiving, processing, and delivering orders to end customers.
+Same as **Warehouse**. Processing unit involved in receiving, processing, and delivering orders to end customers.
 
 ## GTIN, or Global Trade Item Number
 Part of a numerical code used to uniquely identify a product. 
@@ -156,7 +155,7 @@ A profile for a vendor you work with.
 An integrated AI-powered assistant designed to help users navigate, learn, and work more efficiently with Virto Commerce.
 
 ## Warehouse
-Same as **Fulfillment center**. 
+Same as **Fulfillment center**. Processing unit involved in receiving, processing, and delivering orders to end customers.
 
 
 

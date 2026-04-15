@@ -1,16 +1,19 @@
 # Settings
 
-To manage personalization settings:
+To configure the module's settings:
 
-1. Click **Settings** in the main menu.
-1. In the next blade, type **Payment**, then select **Datatrans**.
-1. In the next blade, configure the settings:
+1. Click **Stores** in the main menu. 
+1. In the next blade, select your store.
+1. In the next blade, click on the **Payment methods** widget.
+1. In the next blade, select **Datatrans**.
+1. In the next blade, click on the **Settings** widget:
+1. In the next blade, configure the following settings:
 
     ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the toolbar to save the changes.
+1. Click **OK**, then **Save** to save the changes.
 
-The settings have been saved.
+You modifications have been applied.
 
 
 <br>

@@ -53,37 +53,45 @@ To access a module, click on it in the main menu. Its content will appear in the
 
 ## Settings
 
-There are several options to open a module's settings in the Platform:
+There are two types of properties: global properties and store-specific (tenant) properties. There are several options to open module's settings in the Platform:
 
-=== "**Settings** in the main menu"
+=== "**Settings** in the main menu (global)"
 
     ![Settings in the main menu](media/settings-in-main-menu.png){: style="display: block; margin: 0 auto;" }
 
-=== "**Settings** button in the toolbar"
+=== "**Settings** button in the toolbar (global)"
 
     ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-=== "**Settings** widget inside the specific module"
+=== "**Settings** widget in the Stores module (tenant)"
 
     ![Settings](media/settings-widget.png){: style="display: block; margin: 0 auto;" }
 
-In the **Settings** toolbar, you can:
 
-* Restart the application to apply new settings.
-* Clear all cached data.
+!!! note
+    Global settings are configured from the main menu and apply system-wide.
+    Store-specific settings are also listed there for reference, but they cannot be edited globally. They must be configured within the settings of the corresponding store.
 
-![Restart and reset](media/restart-reset.png){: style="display: block; margin: 0 auto;" }
+
+Try our interactive demo to explore key features in action:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/q8pssku1j005?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
 
 ### Platform settings
 
 The **Platform settings** section contains global configuration options that define how the Virto Commerce Platform behaves at the system level.
 These settings are organized into logical categories:
 
-* [General](#general).
-* [Security](#security).
-* [Setup](#setup).
-* [User interface](#user-interface).
-* [User profile](#user-profile).
+* [General.](#general)
+* [Security.](#security)
+* [Setup.](#setup)
+* [User interface.](#user-interface)
 
 #### General
 
@@ -131,27 +139,12 @@ The **User interface** settings store a JSON file with manager UI personalizatio
 
 ![User interface JSON](media/user-interface-settings.gif){: style="display: block; margin: 0 auto;" }
 
-#### User profile
-
-The **User profile** group allows users to personalize their experience in the admin interface.
-
-| Setting                               | Description                                                                                                    |
-|---------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| **Full date threshold**               | Defines how long ago a date can be shown in the **time ago** format before switching to the full date display. |
-| **Full date threshold unit**          | Defines the unit for the date threshold (**days**, **hours**).                                                 |
-| **Language**                          | Specifies the default language for the user interface.                                                         |
-| **Persisted state of the main menu**  | Determines whether the left navigation menu is collapsed or expanded.                                          |
-| **Regional format**                   | Determines date, time, and number formatting according to locale conventions.                                  |
-| **Show time meridian**                | Enables display of AM/PM time format.                                                                          |
-| **Time zone**                         | Sets the user’s preferred time zone for displaying time-sensitive data.                                        |
-| **Use time ago format when possible** | Enables relative time formatting (“5 minutes ago”) for improved readability.                                   |
-
-
 ### Frontend settings
 
-The Frontend settings define how the storefront behaves and how customer-facing elements such as navigation, page titles, and display options are configured:
+The Frontend settings are store-specific and configured via the Store module. They define how the Frontend behaves and how customer-facing elements such as navigation, page titles, and display options are configured:
 
 ![Frontend settings](media/frontend-settings.png){: style="display: block; margin: 0 auto;" }
+
 
 ## Developer tools
 
@@ -163,7 +156,6 @@ This section gives developers access to useful diagnostics and integration tools
 * **GraphQL**: An IDE for exploring and executing GraphQL queries against the platform.
 
 ![Developer tools](media/developer-tools.gif)
-
 
 The **Developer tools** blade is available to users with the **platform:developer-tools:access** permission. Access to **Hangfire** also requires the same permission.
 
@@ -180,4 +172,3 @@ Some key terms also include tooltips that appear the first time they are mention
 <div style="display: flex; justify-content: flex-end;">
     <a href="../virto-oz">Virto OZ AI assistant →</a>
 </div>
-

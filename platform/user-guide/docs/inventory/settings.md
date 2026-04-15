@@ -1,37 +1,37 @@
 ﻿# Settings
 
-The Inventory module settings include:
+The **Inventory** module settings include:
 
-* [General settings.](settings.md#general-settings)
-* [Search settings.](settings.md#search)
+* [General settings.](#general-settings)
+* [Search settings.](#search-settings)
 
 ## General settings
 
 To configure general settings:
 
 1. Click **Settings** in the main menu.
-1. Type **Inventory** to find the settings related to the module.
+1. In the search field of the next blade, type **Inventory** to find the settings related to the module.
 1. Select **General** to configure the page size for export or import and enable/ disable logging of inventory changes:
 
 	![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
-The modifications have been saved.
+The modifications have been applied.
 
 ## Search settings
 
 To configure search settings: 
 
 1. Click **Settings** in the main menu.
-1. Type **Inventory** to find the settings related to the module.
+1. In the search field of the next blade, type **Inventory** to find the settings related to the module.
 1. Select **Search** to enable or disable event-based indexing.
 
 	![Search settings](media/search-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
-The modifications have been saved.
+The modifications have been applied.
 
 <br>
 <br>
@@ -41,4 +41,3 @@ The modifications have been saved.
     <a href="../managing-fulfillment-centers">← Managing fulfillment centers</a>
     <a href="../../order-management/overview">Order module overview →</a>
 </div>
-

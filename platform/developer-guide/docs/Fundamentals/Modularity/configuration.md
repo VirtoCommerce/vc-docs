@@ -11,6 +11,6 @@ This node of the [appsettings.json file](/platform/developer-guide/latest/Config
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../06-module-manifest-file">← Module.manifest file </a>
-    <a href="../../Scalability/scalability-options">Scalability options →</a>
+    <a href="../azure-app-configuration">Azure App Configuration →</a>
 </div>
 

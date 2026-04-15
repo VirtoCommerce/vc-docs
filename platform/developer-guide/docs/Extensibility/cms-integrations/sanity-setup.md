@@ -2,6 +2,11 @@
 
 The Sanity module integrates [Sanity](https://www.sanity.io/) CMS with Virto Commerce. It exposes a webhook endpoint that receives page create, update, and delete events from Sanity and publishes them to the [Pages module](cms-overview.md#pages-module-as-unification-layer).
 
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-sanity/releases)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-sanity/releases/latest)
+
+
 ## Prerequisites
 
 Before you begin, make sure the following modules are installed:
