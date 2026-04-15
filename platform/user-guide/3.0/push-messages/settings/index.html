@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
     
     
 <title>Push Messages - Settings - Platform User Docs</title>
@@ -6160,7 +6160,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../contracts/creating-and-terminating-contracts/" class="md-nav__link">
-        Managing Contracts
+        Creating Contract
       </a>
     </li>
   
@@ -8770,6 +8770,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Settings
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -8778,6 +8782,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#general-settings" class="md-nav__link">
+        General settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#fcm-receiver-options" class="md-nav__link">
+        FCM receiver options
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#background-jobs" class="md-nav__link">
+        Background jobs
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -13136,6 +13197,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#general-settings" class="md-nav__link">
+        General settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#fcm-receiver-options" class="md-nav__link">
+        FCM receiver options
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#background-jobs" class="md-nav__link">
+        Background jobs
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -13156,7 +13255,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 04:59:28 UTC">December 17, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 15, 2026 04:42:58 UTC">April 15, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -13177,27 +13276,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>To open the settings of the <strong>Push Message</strong> module:</p>
+<p>Within the <strong>Push Messages</strong> module, you can configure:</p>
+<ul>
+<li><a href="#general-settings">General settings.</a></li>
+<li><a href="#fcm-receiver-options">FCM receiver options.</a></li>
+<li><a href="#background-jobs">Background jobs.</a></li>
+</ul>
+<h2 id="general-settings">General settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h2>
+<p>To configure the module general settings globally:</p>
 <ol>
 <li>Click <strong>Settings</strong> in the main menu.</li>
-<li>In the search field of the next blade, type <strong>Push message</strong> to find the settings related to the module.</li>
+<li>In the search field of the next blade, type <strong>Push messages</strong> to find the settings related to the module.</li>
+<li>Click <strong>General</strong>.</li>
 <li>
-<p>Click <strong>General</strong> to configure the following settings:</p>
+<p>In the next blade, define the number of messages sent per batch:</p>
 <p><img alt="General settings" src="../media/general-settings.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
-<p>Click <strong>Background jobs</strong> to configure the following settings:</p>
-<p><img alt="Advanced settings" src="../media/background-jobs-settings.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-<li>
-<p>Click <strong>FCM receiver options</strong> to configure the following settings:</p>
-<p><img alt="FCM receiver options" src="../media/FCM-receiver-options.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-<li>
-<p>Click <strong>Save</strong> in the top toolbar to save the changes.</p>
+<p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
 </li>
 </ol>
-<p>The settings have been saved.</p>
+<p>Your modifications have been applied.</p>
+<p><br>
+<br></p>
+<p>To open store-specific module settings:</p>
+<ol>
+<li>Open <strong>Stores</strong> from the main menu.</li>
+<li>In the next blade, select  your store.</li>
+<li>In the next blade, click on the <strong>Settings</strong> widget.</li>
+<li>Find <strong>Push messages</strong> settings in the left panel and click <strong>General</strong>.</li>
+<li>
+<p>In the next blade, configure the following:</p>
+<p><img alt="Store-specific general settings" src="../media/general-settings1.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong>, then <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
+<h2 id="fcm-receiver-options">FCM receiver options<a class="headerlink" href="#fcm-receiver-options" title="Permanent link">&para;</a></h2>
+<p>To configure FCM receiver options:</p>
+<ol>
+<li>Open <strong>Stores</strong> from the main menu.</li>
+<li>In the next blade, select  your store.</li>
+<li>In the next blade, click on the <strong>Settings</strong> widget.</li>
+<li>Find <strong>Push messages</strong> settings in the left panel and click <strong>FCM Receiver Options</strong>.</li>
+<li>
+<p>In the next blade, configure the following:</p>
+<p><img alt="Store-specific general settings" src="../media/FCM-receiver-options.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong>, then <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
+<h2 id="background-jobs">Background jobs<a class="headerlink" href="#background-jobs" title="Permanent link">&para;</a></h2>
+<p>To configure the background jobs:</p>
+<ol>
+<li>Click <strong>Settings</strong> in the main menu.</li>
+<li>In the search field of the next blade, type <strong>Push messages</strong> to find the settings related to the module.</li>
+<li>Click <strong>Background Jobs</strong>.</li>
+<li>
+<p>In the next blade, configure the following settings:</p>
+<p><img alt="Background jobs" src="../media/background-jobs-settings.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
 <p><br>
 <br></p>
 <hr />

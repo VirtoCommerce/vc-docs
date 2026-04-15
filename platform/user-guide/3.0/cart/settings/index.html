@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
     
     
 <title>Cart - Settings - Platform User Docs</title>
@@ -3520,6 +3520,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Settings
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -3528,6 +3532,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#general-settings" class="md-nav__link">
+        General settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#abandoned-cart-reminder" class="md-nav__link">
+        Abandoned cart reminder
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -6190,7 +6241,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../contracts/creating-and-terminating-contracts/" class="md-nav__link">
-        Managing Contracts
+        Creating Contract
       </a>
     </li>
   
@@ -13136,6 +13187,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#general-settings" class="md-nav__link">
+        General settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#abandoned-cart-reminder" class="md-nav__link">
+        Abandoned cart reminder
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -13156,7 +13235,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 15, 2026 04:42:58 UTC">April 15, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -13177,12 +13256,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>Although the Cart module does not have a UI, you can configure its settings:</p>
+<p>Although the Cart module does not have a UI, you can configure:</p>
 <ul>
-<li>Abandoned cart reminder.</li>
-<li>General settings.</li>
+<li><a href="#general-settings">General settings.</a></li>
+<li><a href="#abandoned-cart-reminder">Abandoned cart reminder.</a></li>
 </ul>
-<p>To open the Cart module settings:</p>
+<h2 id="general-settings">General settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h2>
+<p>To open the Cart module general settings:</p>
 <ol>
 <li>Click <strong>Settings</strong> in the main menu.</li>
 <li>In the search field of the next blade, type <strong>Cart</strong> to find the settings related to the module.</li>
@@ -13191,8 +13271,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><img alt="General catalog settings" src="../media/general-settings.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
-<p>Click <strong>Abandoned cart reminder</strong> to configure the following settings:</p>
+<p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
+<h2 id="abandoned-cart-reminder">Abandoned cart reminder<a class="headerlink" href="#abandoned-cart-reminder" title="Permanent link">&para;</a></h2>
+<p>To configure the abandoned cart reminder globally:</p>
+<ol>
+<li>Click <strong>Settings</strong> in the main menu.</li>
+<li>In the search field of the next blade, type <strong>Cart</strong> to find the settings related to the module.</li>
+<li>
+<p>Click <strong>General</strong> to configure the cron expression for periodic notification sending:</p>
 <p><img alt="Abandoned cart reminder" src="../media/abandoned-carts-notifications.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
+<p><br>
+<br>
+To configure store-specific reminders:</p>
+<ol>
+<li>Open <strong>Stores</strong> from the main menu.</li>
+<li>In the next blade, select  your store.</li>
+<li>In the next blade, click on the <strong>Settings</strong> widget.</li>
+<li>
+<p>Find <strong>Cart</strong> settings in the left panel and configure the following:</p>
+<p><img alt="Store-specific reminder" src="../media/store-specific-abandoned-carts-reminder.png" style="display: block; margin: 0 auto;" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The notification text is configured via the <a href="../../notifications/notification-templates/">Notifications module</a>.</p>
@@ -13202,7 +13308,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
 </li>
 </ol>
-<p>The settings have been saved.</p>
+<p>Your modifications have been applied.</p>
 <p><br>
 <br></p>
 <hr />
