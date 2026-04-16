@@ -3565,6 +3565,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Indexed-Search/integration/opensearch/" class="md-nav__link">
+        OpenSearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Indexed-Search/integration/configuring-azure-cognitive-search/" class="md-nav__link">
         Azure Cognitive Search
       </a>
@@ -5560,6 +5578,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#inline-definition-in-source-code" class="md-nav__link">
         Inline definition in source code
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#predefined-layout-override-logic" class="md-nav__link">
+        Predefined layout override logic
     </a>
 
     <!-- Render nested item list -->
@@ -22154,7 +22182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           id="__nav_10_7_label"
           tabindex="0"
         >
-          CMS Integrations
+          CMSs
           <span class="md-nav__icon md-icon"></span>
         </label>
 
@@ -22167,11 +22195,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         data-md-level="2"
         aria-labelledby="__nav_10_7_label"
         aria-expanded="false"
-          aria-label="CMS Integrations"
+          aria-label="CMSs"
       >
         <label class="md-nav__title" for="__nav_10_7">
           <span class="md-nav__icon md-icon"></span>
-          CMS Integrations
+          CMSs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
 
@@ -27354,6 +27382,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#predefined-layout-override-logic" class="md-nav__link">
+        Predefined layout override logic
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -27376,7 +27414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 16, 2026 11:58:45 UTC">April 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27470,6 +27508,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">            </span><span class="n">Body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assembly</span><span class="p">.</span><span class="n">GetManifestResourceStream</span><span class="p">(</span><span class="s">&quot;VirtoCommerce.NotificationsSampleModule.Web.Templates.SampleEmailNotification_body.html&quot;</span><span class="p">).</span><span class="n">ReadToString</span><span class="p">()</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="p">});</span>
 </code></pre></div>
+<h2 id="predefined-layout-override-logic">Predefined layout override logic<a class="headerlink" href="#predefined-layout-override-logic" title="Permanent link">&para;</a></h2>
+<p>Notification layouts follow the same predefined/override logic as notification templates. A predefined layout is served from the code until it is explicitly modified through Platform Manager. If the source layout changes in code and no override exists in the database, the updated version is picked up automatically on restart. This means you can update a layout by editing its source file without writing database migrations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Earlier versions of the Notification module prior to <a href="https://github.com/VirtoCommerce/vc-module-notification/releases/tag/3.1004.0">3.1004.0</a> always persisted layouts to the database on registration and served them exclusively from the database afterward. This meant that updating a layout's source file in code had no effect if a database copy already existed. If you are upgrading from an earlier version, remove any stale layout records from the database to ensure the current code-level layouts are picked up correctly.</p>
+</div>
 <p><br>
 <br></p>
 <hr />

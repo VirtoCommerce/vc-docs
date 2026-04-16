@@ -18,7 +18,7 @@
         <link rel="prev" href="../search_relevance_tuning/">
       
       
-        <link rel="next" href="../configuring-azure-cognitive-search/">
+        <link rel="next" href="../opensearch/">
       
       
         
@@ -3624,6 +3624,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
 
   <!-- Main navigation item -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../opensearch/" class="md-nav__link">
+        OpenSearch
+      </a>
+    </li>
   
 
             
@@ -22120,7 +22138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           id="__nav_10_7_label"
           tabindex="0"
         >
-          CMS Integrations
+          CMSs
           <span class="md-nav__icon md-icon"></span>
         </label>
 
@@ -22133,11 +22151,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         data-md-level="2"
         aria-labelledby="__nav_10_7_label"
         aria-expanded="false"
-          aria-label="CMS Integrations"
+          aria-label="CMSs"
       >
         <label class="md-nav__title" for="__nav_10_7">
           <span class="md-nav__icon md-icon"></span>
-          CMS Integrations
+          CMSs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
 
@@ -27306,7 +27324,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2025 07:25:18 UTC">June 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 16, 2026 11:58:45 UTC">April 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27330,11 +27348,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The Virto Commerce <strong>Elasticsearch</strong> module enables integrating <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> as a <a href="https://doc.oroinc.com/backend/architecture/tech-stack/search-index/#search-index-overview">search engine</a>.</p>
 <p>ElasticSearch implements <strong>ISearchProvider</strong> defined in the Virto Commerce Search module and uses the Elasticsearch engine, which stores indexed documents on:</p>
 <ul>
-<li>Standalone <a href="https://www.elastic.co/products/elasticsearch" title="https://www.elastic.co/products/elasticsearch">Elasticsearch</a></li>
-<li><a href="https://cloud.elastic.co/" title="https://cloud.elastic.co/">Elastic Cloud</a></li>
-<li><a href="https://opensearch.org/">OpenSearch</a></li>
-<li><a href="https://aws.amazon.com/opensearch-service/" title="https://aws.amazon.com/opensearch-service/">Amazon OpenSearch Service</a></li>
+<li>Standalone <a href="https://www.elastic.co/products/elasticsearch" title="https://www.elastic.co/products/elasticsearch">Elasticsearch.</a></li>
+<li><a href="https://cloud.elastic.co/" title="https://cloud.elastic.co/">Elastic Cloud.</a></li>
+<li><a href="https://opensearch.org/">OpenSearch.</a></li>
+<li><a href="https://aws.amazon.com/opensearch-service/" title="https://aws.amazon.com/opensearch-service/">Amazon OpenSearch Service.</a></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>OpenSearch</strong> and <strong>Amazon OpenSearch Service</strong> are also supported by the dedicated <a href="../opensearch/">OpenSearch module</a>, which uses the native OpenSearch client for full compatibility with OpenSearch-specific features.</p>
+</div>
 <p><a href="https://github.com/VirtoCommerce/vc-module-elastic-search/"><img alt="Source code" src="../media/source_code.png" /></a></p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>To configure Elasticsearch as a search provider, use the following schema:</p>
@@ -27342,20 +27364,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <thead>
 <tr>
 <th>Node</th>
-<th>Default or Sample Value</th>
+<th>Default or sample value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Search.Provider</td>
-<td><code>"ElasticSearch"</code></td>
-<td>Specifies the search provider name, which must be set to "ElasticSearch".</td>
+<td>"ElasticSearch"</td>
+<td>Specifies the search provider name.</td>
 </tr>
 <tr>
 <td>Search.Scope</td>
-<td><code>"default"</code></td>
-<td>Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is <code>scope-{documenttype}</code>. This allows one search service to serve multiple indexes. The key is optional. Its default value is <code>default</code>.</td>
+<td>"default"</td>
+<td>Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is <strong>scope-{documenttype}</strong>. This allows one search service to serve multiple indexes. The key is optional. Its default value is <strong>default</strong>.</td>
 </tr>
 <tr>
 <td>Search.ElasticSearch.Server</td>
@@ -27364,7 +27386,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 <tr>
 <td>Search.ElasticSearch.User</td>
-<td><code>"elastic"</code></td>
+<td>"elastic"</td>
 <td>Specifies the username for either the Elastic Cloud cluster or private Elasticsearch server.</td>
 </tr>
 <tr>
@@ -27374,13 +27396,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 <tr>
 <td>Search.ElasticSearch.EnableCompatibilityMode</td>
-<td><code>false</code></td>
-<td>(Optional) Set this to "true" to use Elasticsearch v8.x or "false" (default) for earlier versions.</td>
+<td>true<br>false</td>
+<td>(Optional) Set this to <strong>true</strong> to use Elasticsearch v8.x or <strong>false</strong> (default) for earlier versions.</td>
 </tr>
 <tr>
 <td>Search.ElasticSearch.EnableHttpCompression</td>
-<td><code>false</code></td>
-<td>(Optional) Set this to "true" to enable gzip compressed requests and responses or "false" (default) to disable compression.</td>
+<td>true<br>false</td>
+<td>(Optional) Set this to <strong>true</strong> to enable gzip compressed requests and responses or <strong>false</strong> (default) to disable compression.</td>
 </tr>
 <tr>
 <td>Search.ElasticSearch.CertificateFingerprint</td>
@@ -27487,7 +27509,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <hr />
 <div style="display: flex; justify-content: space-between;">
     <a href="../search_relevance_tuning">← Improving search relevance</a>
-    <a href="../configuring-azure-cognitive-search">Azure cognitive search →</a>
+    <a href="../opensearch">OpenSearch search →</a>
 </div>
                 
               </article>

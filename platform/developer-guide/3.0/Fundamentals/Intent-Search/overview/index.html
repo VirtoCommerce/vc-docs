@@ -3565,6 +3565,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
+      <a href="../../Indexed-Search/integration/opensearch/" class="md-nav__link">
+        OpenSearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
       <a href="../../Indexed-Search/integration/configuring-azure-cognitive-search/" class="md-nav__link">
         Azure Cognitive Search
       </a>
@@ -22164,7 +22182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           id="__nav_10_7_label"
           tabindex="0"
         >
-          CMS Integrations
+          CMSs
           <span class="md-nav__icon md-icon"></span>
         </label>
 
@@ -22177,11 +22195,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         data-md-level="2"
         aria-labelledby="__nav_10_7_label"
         aria-expanded="false"
-          aria-label="CMS Integrations"
+          aria-label="CMSs"
       >
         <label class="md-nav__title" for="__nav_10_7">
           <span class="md-nav__icon md-icon"></span>
-          CMS Integrations
+          CMSs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
 
@@ -27396,7 +27414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 13:21:43 UTC">December 9, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 16, 2026 11:58:45 UTC">April 16, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27418,7 +27436,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Markdown content -->
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
 <p>Virto Commerce Intent Search is an advanced AI-powered search intent classification and product categorization module that intelligently analyzes search queries and classifies products for e-commerce platforms. Built with enterprise-grade multi-tenancy, performance monitoring, and flexible configuration capabilities, it transforms how your platform understands customer search intent and categorizes products.</p>
-<p><img alt="Read more" src="../media/readmore.png" width="20" /> <a href="/platform/user-guide/intent-search/overview">How Intent Search works</a></p>
+<p>When a user enters a natural-language query (such as “HP white laptop”) the Intent Search module analyzes the text and breaks it into meaningful components. Instead of treating the whole phrase as a single keyword, the module intelligently interprets user intent and restructures the query with the help of external AI services:</p>
+<ul>
+<li><strong>Hugging Face</strong>.</li>
+<li><strong>Weaviate</strong>.</li>
+</ul>
+<p>The combined workflow is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Actor</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>User</td>
+<td>Types a query</td>
+<td><strong>"HP laptop white"</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hugging Face</td>
+<td>Converts the query into a vector and extracts key concepts</td>
+<td>Embeds the query into a vector and identifies concepts: <strong>HP</strong>, <strong>laptop</strong>, <strong>white</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Weaviate</td>
+<td>Finds matching vectors using semantic similarity</td>
+<td>Returns semantically closest product/category vectors (e.g., laptops with HP/white attributes)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Intent Search</td>
+<td>Transforms the query into structured search input</td>
+<td>Combines semantic matches with filters. <strong>Keyword:</strong> laptop; <strong>Filters:</strong> Brand = HP, Color = White</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Search provider</td>
+<td>Performs high-performance, relevance-ranked search</td>
+<td>Returns final product results for HP white laptops</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><img alt="Read more" src="../media/readmore.png" width="20" /> <a href="/platform/user-guide/intent-search/overview">How Intent Search works</a>
+<br></p>
 <h2 id="key-features">Key features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Lightning-fast AI classification</strong>: Analyze search intent and categorize products in milliseconds.</li>
