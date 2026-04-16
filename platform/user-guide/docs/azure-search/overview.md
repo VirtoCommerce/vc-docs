@@ -19,6 +19,6 @@ The diagram below illustrates the functionality of the Azure Search module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../lucene/overview">← Lucene Search module overview</a>
-    <a href="../../search">Search options →</a>
+    <a href="../../elastic-search/overview">← Elasticsearch module overview</a>
+    <a href="../settings">Settings →</a>
 </div>

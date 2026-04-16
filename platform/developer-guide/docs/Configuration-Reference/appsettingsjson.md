@@ -500,11 +500,12 @@ This node configures the Swagger documentation engine for the Virto Commerce Pla
 
 #### Videos
 
-This node configures the integration settings for accessing video-related services via the Google API.
+This node configures the integration settings for accessing video-related services via the Google API and Vimeo API.
 
 | Node         | Default or sample value | Description                                                                 |
 |--------------|--------------------------|-----------------------------------------------------------------------------|
 | GoogleApiKey | YOUR_GOOGLE_API_KEY      | Specifies the API key required to authenticate requests to Google video services. |
+| VimeoAccessToken | YOUR_VIMEO_ACCESS_TOKEN | Specifies the access token required to authenticate requests to Vimeo video services. |
 
 **Example**
 
@@ -512,7 +513,8 @@ This node configures the integration settings for accessing video-related servic
 {
   "VirtoCommerce": {
     "Videos": {
-      "GoogleApiKey": "YOUR_GOOGLE_API_KEY"
+      "GoogleApiKey": "YOUR_GOOGLE_API_KEY",
+      "VimeoAccessToken": "YOUR_VIMEO_ACCESS_TOKEN"
     }
   }
 }
@@ -1820,7 +1822,7 @@ Tailor the search provider per document type to optimize search performance and 
 <!--search-end-->
 
 
-#### ElasticSearch
+#### Elasticsearch
 
 This node configures the Elasticsearch provider:
 
@@ -2139,6 +2141,65 @@ Configure Elastic Cloud v8.x:
 ```
 
 <!--elasticsearch8-end-->
+
+
+#### OpenSearch
+
+This node configures the OpenSearch provider:
+
+<!--opensearch-start-->
+
+| Node                                        | Default or sample value | Description                                                                                                                   |
+|---------------------------------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Search.Provider                             | "OpenSearch"            | Specifies the search provider name.                                                                                           |
+| Search.Scope                                | "default"               | Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. The key is optional. Its default value is **default**. |
+| Search.OpenSearch.Server                    |                         | Specifies the network address and port of the OpenSearch server.                                                              |
+| Search.OpenSearch.User                      | "openSearch"            | (Optional) Specifies the username for private OpenSearch server. Its default value is **openSearch**.                         |
+| Search.OpenSearch.Password                  |                         | (Optional) Specifies the password for the private OpenSearch server.                                                          |
+| Search.OpenSearch.EnableHttpCompression     | true<br>false           | (Optional) Set this to **true** to enable gzip compressed requests and responses or **false** (default) to disable compression. |
+
+**Examples**
+
+=== "OpenSearch v2.x without security features enabled"
+
+    ```json title="appsettings.json"
+        "Search": {
+            "Provider": "OpenSearch",
+            "Scope": "default",
+            "OpenSearch": {
+                "Server": "https://localhost:9200"
+            }
+        }
+    ```
+
+=== "OpenSearch v2.x with ApiKey authorization"
+
+    ```json title="appsettings.json"
+        "Search": {
+            "Provider": "OpenSearch",
+            "Scope": "default",
+            "OpenSearch": {
+                "Server": "https://localhost:9200",
+                "User": "{USER_NAME}",
+                "Password": "{PASSWORD}"
+            }
+        }
+    ```
+
+=== "Amazon OpenSearch Service"
+
+    ```json title="appsettings.json"
+        "Search": {
+            "Provider": "OpenSearch",
+            "Scope": "default",
+            "OpenSearch": {
+                "Server": "https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com"
+            }
+        }
+    ```
+
+<!--opensearch-end-->
+
 
 
 #### Lucene

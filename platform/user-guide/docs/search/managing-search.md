@@ -17,6 +17,7 @@ To open search index details:
         * Elasticsearch 8.
         * Lucene.
         * Elasticsearch.
+        * OpenSearch.
         * Azure Cognitive Search.
         * Algolia.
 
@@ -47,16 +48,18 @@ The next blade displays the result of indexation:
 ## Blue-green indexing
 
 !!! note
-    The blue-green indexing is supported by the ElasticSearch, Azure Search,  and the Elastic Search 8 modules.<br>
+    The blue-green indexing is supported by the Elasticsearch, Azure Search, Elasticsearch 8, OpenSearch providers.<br>
     <br>
 
     ![Readmore](media/readmore.png){: width="25"} [Azure Search module](../azure-search/overview.md)
 
-    ![Readmore](media/readmore.png){: width="25"} [Elastic Search module](../elastic-search/overview.md)
-    
-    ![Readmore](media/readmore.png){: width="25"} [Elastic Search 8 module](../elastic-search-8/overview.md)
+    ![Readmore](media/readmore.png){: width="25"} [OpenSearch module](../opensearch/overview.md)
 
-    ![Readmore](media/readmore.png){: width="25"} [Elastic Search 9 module](../elastic-search-9/overview.md)
+    ![Readmore](media/readmore.png){: width="25"} [Elasticsearch module](../elastic-search/overview.md)
+    
+    ![Readmore](media/readmore.png){: width="25"} [Elasticsearch 8 module](../elastic-search-8/overview.md)
+
+    ![Readmore](media/readmore.png){: width="25"} [Elasticsearch 9 module](../elastic-search-9/overview.md)
 
 After you choose **Delete and build** when building search index:
 
@@ -83,7 +86,7 @@ The roles of the backup and active indices have been exchanged.
 
 Elasticsearch implements blue-green indexing using Elasticsearch [aliases](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html). Search provider implementations use two aliases to distinguish one index role from the other: **active** and **backup**. The full index alias is built as **scope name + document type name + alias name**; for example, an active index alias for the **Members** index using the `default` scope will be `default-member-active`.
 
-Each time you start the **Delete and build** process, the Elasticsearch index provider looks for an existing backup index by the backup alias, for example, `default-member-backup`, and deletes it if it is found. After that, when the reidnexing process starts, a new backup index is created with the `backup' alias. However, an actual index name is created dynamically: this is a special alphanumeric token suffix added to the end of the index name. The only way to tell which index is active is to look at its alias. After the indexing process is complete, the active and backup indices swap aliases, i.e. the active index becomes the backup index, and vice versa.
+Each time you start the **Delete and build** process, the Elasticsearch index provider looks for an existing backup index by the backup alias, for example, `default-member-backup`, and deletes it if it is found. After that, when the reindexing process starts, a new backup index is created with the `backup' alias. However, an actual index name is created dynamically: this is a special alphanumeric token suffix added to the end of the index name. The only way to tell which index is active is to look at its alias. After the indexing process is complete, the active and backup indices swap aliases, i.e. the active index becomes the backup index, and vice versa.
 
 ![Kibana index alias](media/implementation.png){: style="display: block; margin: 0 auto;" }
 

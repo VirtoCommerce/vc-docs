@@ -15,6 +15,23 @@ To configure the module's settings:
 
 You modifications have been applied.
 
+On the Frontend, the selected mode is displayed as follows:
+
+<div class="grid cards" markdown>
+
+-   __Inline mode__
+
+    ---
+
+    ![Inline mode](media/inline-mode.png)
+
+-   __Popup mode__
+
+    ---
+
+    ![Popup mode](media/popup-mode.png)
+
+</div>
 
 <br>
 <br>

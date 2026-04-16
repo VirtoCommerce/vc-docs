@@ -11,6 +11,7 @@ Managing theme includes:
 * [Activating theme.](#activate-theme)
 * [Managing theme assets.](#manage-theme-assets)
 * [Adding new theme.](#add-new-theme)
+* [Applying theme color schemes.](#apply-theme-color-scheme)
 
 
 ## Upload new theme
@@ -99,8 +100,9 @@ Users can personalize their store by applying a [custom theme](/storefront/devel
 
     ![Coffee](media/coffee.png)
 
-=== "coffee (dark theme)"
-    ![Coffee, dark theme](media/coffee-dark.png)
+!!! note
+    Dark mode is available for **Mercury** (default), **Coffee**, **Watermelon**, **Black-Gold** themes. 
+
 
 ![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/customization/visual-theme-customization)
 

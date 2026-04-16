@@ -88,6 +88,13 @@ registrar.RegisterNotification<SampleEmailNotification>().WithTemplates(new Emai
         });
 ```
 
+## Predefined layout override logic
+
+Notification layouts follow the same predefined/override logic as notification templates. A predefined layout is served from the code until it is explicitly modified through Platform Manager. If the source layout changes in code and no override exists in the database, the updated version is picked up automatically on restart. This means you can update a layout by editing its source file without writing database migrations.
+
+!!! warning
+    Earlier versions of the Notification module prior to [3.1004.0](https://github.com/VirtoCommerce/vc-module-notification/releases/tag/3.1004.0) always persisted layouts to the database on registration and served them exclusively from the database afterward. This meant that updating a layout's source file in code had no effect if a database copy already existed. If you are upgrading from an earlier version, remove any stale layout records from the database to ensure the current code-level layouts are picked up correctly.
+
 
 <br>
 <br>

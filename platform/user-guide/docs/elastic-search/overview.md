@@ -8,10 +8,13 @@ The **Elasticsearch** module serves as a search engine for the Search module. It
 
 The module supports the following Elasticsearch deployment options:
 
-* Standalone [Elasticsearch](https://www.elastic.co/products/elasticsearch)
-* [Elastic Cloud](https://cloud.elastic.co/)
-* [OpenSearch](https://opensearch.org/)
-* [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service/)
+* Standalone [Elasticsearch.](https://www.elastic.co/products/elasticsearch)
+* [Elastic Cloud.](https://cloud.elastic.co/)
+* [OpenSearch.](https://opensearch.org/)
+* [Amazon OpenSearch Service.](https://aws.amazon.com/opensearch-service/)
+
+!!! note
+    **OpenSearch** and **Amazon OpenSearch Service** are also supported by the dedicated [OpenSearch module](../opensearch/overview.md), which uses the native OpenSearch client for full compatibility with OpenSearch-specific features.
 
 ## Key features
 
@@ -19,7 +22,7 @@ The diagram below illustrates the functionality of the Elasticsearch module:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
-![Readmore](media/readmore.png){: width="25"} [Blue-Green Indexing](../search/managing-search.md#blue-green-indexing)
+![Readmore](media/readmore.png){: width="25"} [Blue-green indexing](../search/managing-search.md#blue-green-indexing)
 
 
 
