@@ -16,6 +16,11 @@ Developers can easily register new Virto frontend components in code, allowing b
 
 Once the content is complete in the Builder's visual editor, Virto's pre-rendering functionality allows your online storefront to generate static versions of pages in advance, smoothing the development process, speeding load times, reducing server load, and simplifying SSR.
 
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-builder-io/releases)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-builder-io/releases/latest)
+
+
 ## Prerequisites
 
 * [Builder.io module](https://github.com/VirtoCommerce/vc-module-builder-io/releases/latest).

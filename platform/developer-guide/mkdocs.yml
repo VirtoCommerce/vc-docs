@@ -159,6 +159,7 @@ nav:
                           - Using Analytics: Fundamentals/Indexed-Search/integration/using-analytics.md
                           - Tuning Search Relevance: Fundamentals/Indexed-Search/integration/search_relevance_tuning.md
                       - Elasticsearch: Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md
+                      - OpenSearch: Fundamentals/Indexed-Search/integration/opensearch.md
                       - Azure Cognitive Search: Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md
                       - Algolia: Fundamentals/Indexed-Search/integration/algolia.md
                       - Lucene: Fundamentals/Indexed-Search/integration/lucene.md
@@ -184,6 +185,7 @@ nav:
                 - Module.manifest File: Fundamentals/Modularity/06-module-manifest-file.md
                 - Best Practices: Fundamentals/Modularity/05-best-practices.md
                 - Configuration: Fundamentals/Modularity/configuration.md
+                - Azure App Configuration: Fundamentals/Modularity/azure-app-configuration.md
           - Scalability:
                 - Scalability Options: Fundamentals/Scalability/scalability-options.md
                 - Scaling Configuration on Azure Cloud: Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md
@@ -830,7 +832,7 @@ nav:
           - Extending Product Completeness Evaluator: Extensibility/product-completeness-evaluator.md
           - Extending Application User: Extensibility/extending-application-user.md
           - Open Telemetry: Extensibility/opentelemetry.md
-          - CMS Integrations:
+          - CMSs:
                 - Overview: Extensibility/cms-integrations/cms-overview.md
                 - Builder.io Setup: Extensibility/cms-integrations/builder-io-setup.md
                 - Page Builder: 

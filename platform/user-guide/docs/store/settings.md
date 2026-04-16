@@ -1,11 +1,8 @@
 ﻿# Settings
 
-You can configure the module settings through:
+You can configure the module settings through the **Settings** widget in the **Store details blade** (**Stores** -->Your store -->**Settings**).
 
-* Settings widget in the **Store details blade** (**Stores -->Your store -->Settings**).
-* Settings section in the main menu (**Settings-->Store**).
-
-In both the widget and the settings section, you will find fully or partly similar settings.
+All settings related to the store, including the store settings themselves, are collected here. In this guide, we describe only store-specific settings. Settings related to the store but belonging to other modules are covered in the [Settings articles of the respective modules](#other-settings).
 
 ## General settings
 
@@ -15,32 +12,37 @@ In both the widget and the settings section, you will find fully or partly simil
 
 ![SEO settings](media/seo-settings.png){: style="display: block; margin: 0 auto;" }
 
-## Products settings
+## Products reviews
 
-![Products settings](media/products-settings.png){: style="display: block; margin: 0 auto;" }
+![Product reviews](media/product-review-settings.png){: style="display: block; margin: 0 auto;" }
 
-Turn this option to on to display the **Purchased before** filter for products on the frontend:
+## Frontend settings
 
-![Purchased before](media/filter-by-purchased-before-status.gif){: style="display: block; margin: 0 auto;" }
+The Frontend settings define how the Frontend behaves and how customer-facing elements such as navigation, page titles, and display options are configured:
 
-This setting activates the logic to enrich the product index with customer purchase history. It also extends the product index schema with a new field: `__purchase_by_user_<StoreId>`, containing user IDs of customers who have previously purchased the product:
-
-![Index](media/purchased-before-index.png){: style="display: block; margin: 0 auto;" }
-
-[Rebuild the product index](../catalog/product-indexing.md) to populate the `__purchase_by_user_<StoreId>` fields with historical data.
-
-To update the index with the corresponding user IDs upon new order creation, [trigger an update via the event](../order-management/settings.md#products-settings) after the order has been successfully created.
+![Frontend settings](media/frontend-settings.png){: style="display: block; margin: 0 auto;" }
 
 ## Other settings
 
 Other store-specific settings include:
 
-* [Orders templates settings](../order-management/settings.md#orders-templates-settings).
-* [Statuses](../contacts/settings.md#statuses).
-* [Return settings](../return/settings.md).
-* [Google Analytics 4 settings](../integrations/google-analytics/settings.md).
-* [Application Insights settings](../application-insights/enable-app-insights.md).
-* [Sitemap settings](../sitemaps/settings.md), etc.
+* [AI Document Processing settings.](../ai-doc-processing/settings.md)
+* [Application Insights settings.](../application-insights/enable-app-insights.md)
+* [Builder.io settings.](../integrations/builder-io/settings.md)
+* [Cart settings.](../cart/settings.md)
+* [Catalog settings.](../catalog/settings.md)
+* [Customer settings.](../contacts/settings.md)
+* [Google Analytics 4 settings.](../integrations/google-analytics/settings.md)
+* [Loyalty settings.](../loyalty/enable-and-configure-loyalty-programs.md)
+* [News settings.](../news/settings.md)
+* [Orders settings.](../order-management/settings.md)
+* [Push messages settings.](../push-messages/settings.md)
+* [Quotes settings.](../quotes/settings.md)
+* [Recommendations settings.](../recommend/settings.md)
+* [Return settings.](../return/settings.md)
+* [Shipping settings.](../shipping/settings.md)
+* [Sitemap settings.](../sitemaps/settings.md)
+* [Subscriptions settings.](../subscription/settings.md)
 
 
 <br>

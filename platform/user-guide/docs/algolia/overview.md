@@ -19,6 +19,6 @@ The diagram below illustrates the functionality of the Algolia Search module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../elastic-search/overview">← Elasticsearch module overview</a>
+    <a href="../../opensearch/overview">← OpenSearch module overview</a>
     <a href="../../lucene/overview">Lucene Search module overview →</a>
 </div>

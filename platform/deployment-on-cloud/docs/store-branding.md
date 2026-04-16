@@ -83,6 +83,10 @@ You can personalize your store by applying a [custom theme](/storefront/develope
     ![Peach](media/peach.png){: style="display: block; margin: 0 auto;" }
 
 
+!!! note
+    Dark mode is available for **Mercury** (default), **Coffee**, **Watermelon**, **Black-Gold** themes. 
+
+
 ![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/theme-customization/theme-customization)
 
 

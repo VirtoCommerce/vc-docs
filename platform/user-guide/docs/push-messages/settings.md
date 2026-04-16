@@ -1,24 +1,78 @@
 # Settings
 
-To open the settings of the **Push Message** module:
+Within the **Push Messages** module, you can configure:
+
+* [General settings.](#general-settings)
+* [FCM receiver options.](#fcm-receiver-options)
+* [Background jobs.](#background-jobs)
+
+
+## General settings
+
+To configure the module general settings globally:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Push message** to find the settings related to the module.
-1. Click **General** to configure the following settings:
+1. In the search field of the next blade, type **Push messages** to find the settings related to the module.
+1. Click **General**.
+1. In the next blade, define the number of messages sent per batch:
 
     ![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Background jobs** to configure the following settings:
+1. Click **Save** in the toolbar to save the changes.
 
-    ![Advanced settings](media/background-jobs-settings.png){: style="display: block; margin: 0 auto;" }
+Your modifications have been applied.
 
-1. Click **FCM receiver options** to configure the following settings:
+<br>
+<br>
 
-    ![FCM receiver options](media/FCM-receiver-options.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the top toolbar to save the changes.
+To open store-specific module settings:
 
-The settings have been saved.
+1. Open **Stores** from the main menu.
+1. In the next blade, select  your store.
+1. In the next blade, click on the **Settings** widget.
+1. Find **Push messages** settings in the left panel and click **General**.
+1. In the next blade, configure the following:
+
+    ![Store-specific general settings](media/general-settings1.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **OK**, then **Save** in the toolbar to save the changes.
+
+Your modifications have been applied.
+
+
+
+## FCM receiver options
+
+To configure FCM receiver options:
+
+1. Open **Stores** from the main menu.
+1. In the next blade, select  your store.
+1. In the next blade, click on the **Settings** widget.
+1. Find **Push messages** settings in the left panel and click **FCM Receiver Options**.
+1. In the next blade, configure the following:
+
+    ![Store-specific general settings](media/FCM-receiver-options.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **OK**, then **Save** in the toolbar to save the changes.
+
+Your modifications have been applied.
+
+
+## Background jobs
+
+To configure the background jobs:
+
+1. Click **Settings** in the main menu.
+1. In the search field of the next blade, type **Push messages** to find the settings related to the module.
+1. Click **Background Jobs**.
+1. In the next blade, configure the following settings:
+
+    ![Background jobs](media/background-jobs-settings.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **Save** in the toolbar to save the changes.
+
+Your modifications have been applied.
 
 
 

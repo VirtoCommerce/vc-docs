@@ -6,14 +6,12 @@ To configure the settings of the **Catalog CSV Import** module:
 1. In the next blade, type **CSV** to find settings related to the module.
 1. Click **General**.
 1. In the next blade:
-    * Enable/ disable the creation of new property dictionary values during import.
-    * Configure the template that will be used to generate exported file name.
 
-    ![Configure settings](media/settings.png)
+    ![Configure settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the top toolbar to save the changes.
 
-The settings have been saved.
+Your modifications have been applied.
 
 
 

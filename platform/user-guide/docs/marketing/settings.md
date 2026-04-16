@@ -9,9 +9,8 @@ In the Marketing module settings, you can configure promotion policies:
 	![General settings](media/promotion-policies/switching-promotion-policies.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
-1. **Restart** the application for the new settings to come into effect.
 
-The modifications have been saved.
+The modifications have been applied.
 
 <br>
 <br>

@@ -1,4 +1,4 @@
-# CMS Integrations
+# CMSs
 
 Virto Commerce Platform content management capabilities can be extended with external and native CMS platforms. This allows development and marketing teams to design, author, and publish pages using their preferred tools, while the Platform handles content storage, indexing, and delivery independently of any specific CMS.
 

@@ -21,5 +21,5 @@ The diagram below illustrates the functionality of the Lucene Search module:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../algolia/overview">← Algolia Search module overview</a>
-    <a href="../../azure-search/overview">Azure Search module overview →</a>
+    <a href="../../search">Search options →</a>
 </div>

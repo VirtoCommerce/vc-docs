@@ -22,6 +22,7 @@ To evaluate the completeness of a catalog description create a **channel** as fo
     ![Readmore](media/readmore.png){: width="25"} [Configuring products completeness evaluator](/platform/developer-guide/latest/Extensibility/product-completeness-evaluator)
     <br>
     <br>
+
 1. Click **Create** to save the changes. The channel will appear in the **Channels** blade.
 
     ![New channel](media/new-channel.png){: style="display: block; margin: 0 auto;" }

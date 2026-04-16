@@ -2,7 +2,25 @@
 
 Virto Commerce Intent Search is an advanced AI-powered search intent classification and product categorization module that intelligently analyzes search queries and classifies products for e-commerce platforms. Built with enterprise-grade multi-tenancy, performance monitoring, and flexible configuration capabilities, it transforms how your platform understands customer search intent and categorizes products.
 
+When a user enters a natural-language query (such as “HP white laptop”) the Intent Search module analyzes the text and breaks it into meaningful components. Instead of treating the whole phrase as a single keyword, the module intelligently interprets user intent and restructures the query with the help of external AI services:
+
+* **Hugging Face**.
+* **Weaviate**.
+
+The combined workflow is as follows:
+
+| Step | Actor           | Description                                                | Example                                                                                                         |
+|------|-----------------|------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| 1    | User            | Types a query                                              | **"HP laptop white"**                                                                                           |
+| 2    | Hugging Face    | Converts the query into a vector and extracts key concepts | Embeds the query into a vector and identifies concepts: **HP**, **laptop**, **white**                           |
+| 3    | Weaviate        | Finds matching vectors using semantic similarity           | Returns semantically closest product/category vectors (e.g., laptops with HP/white attributes)                  |
+| 4    | Intent Search   | Transforms the query into structured search input          | Combines semantic matches with filters. **Keyword:** laptop; **Filters:** Brand = HP, Color = White             |
+| 5    | Search provider | Performs high-performance, relevance-ranked search         | Returns final product results for HP white laptops                                                              |
+
+<br>
+
 ![Read more](media/readmore.png){: width="20"} [How Intent Search works](/platform/user-guide/intent-search/overview)
+<br>
 
 ## Key features
 

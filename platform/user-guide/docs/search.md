@@ -58,6 +58,6 @@ To enable broader and more powerful search capabilities across indexed fields, o
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../azure-search/overview">← Azure Search module overview</a>
+    <a href="../lucene/overview">← Lucene module overview</a>
     <a href="../search-query-syntax">Search query syntax and examples →</a>
 </div>

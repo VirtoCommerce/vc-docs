@@ -79,7 +79,7 @@ Out of the box, App Search provides quality search relevance.
 
 Built on top of Elasticsearch, App Search is a managed, the expertly crafted distillation of its finest points. It provides tools to help you further tune the search experience to optimize for your own needs.
 
-![Readmore](media/readmore.png){: width="25"} [Relevance tuning guide](https://www.elastic.co/guide/en/app-search/8.3/relevance-tuning-guide.html)
+![Readmore](media/readmore.png){: width="25"} [Relevance tuning guide](https://www.elastic.co/guide/en/app-search/8.12/relevance-tuning-guide.html)
 
 
 

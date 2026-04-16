@@ -25,6 +25,6 @@ The diagram below illustrates the functionality of the Elasticsearch 9 module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../search/overview">← Search module overview</a>
+    <a href="../../intent-search/overview">← Intent Search module overview</a>
     <a href="../settings">Settings →</a>
 </div>

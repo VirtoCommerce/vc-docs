@@ -12,9 +12,9 @@ To open the **Elasticsearch 9** module settings:
 
     ![Semantic settings](media/semantic-settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
-The settings have been saved.
+Your modifications have been applied.
 
 
 <br>
@@ -23,5 +23,5 @@ The settings have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Elasticsearch 9 module overview</a>
-    <a href="../../elastic-search-8/overview">Elastic Search 8 module overview →</a>
+    <a href="../../elastic-search-8/overview">Elasticsearch 8 module overview →</a>
 </div>

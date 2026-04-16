@@ -9,9 +9,10 @@ To open the Content module settings:
 
     ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
-The settings have been saved.
+The modifications have been applied.
+
 
 <br>
 <br>

@@ -221,7 +221,7 @@ nav:
                       - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
           - Contracts:
                 - Overview: contracts/overview.md
-                - Managing Contracts: contracts/creating-and-terminating-contracts.md
+                - Creating Contract: contracts/creating-and-terminating-contracts.md
                 - Managing Contract Prices: contracts/managing-contract-prices.md
                 - Managing Contract Customers: contracts/managing-contract-customers.md
           - Customer Export and Import:
@@ -244,8 +244,6 @@ nav:
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
-          - Intent Search: 
-                - Overview: intent-search/overview.md
           - Loyalty:
                 - Overview: loyalty/overview.md
                 - Enabling and Configuring Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
@@ -314,6 +312,8 @@ nav:
                       - Overview: search/overview.md
                       - Managing Search Index: search/managing-search.md
                       - Settings: search/settings.md
+                - Intent Search: 
+                      - Overview: intent-search/overview.md
                 - Elasticsearch 9:
                       - Overview: elastic-search-9/overview.md
                       - Settings: elastic-search-9/settings.md
@@ -328,9 +328,14 @@ nav:
                 - Elasticsearch:
                       - Overview: elastic-search/overview.md
                       - Settings: elastic-search/settings.md
+                - Azure Search:
+                      - Overview: azure-search/overview.md
+                      - Settings: azure-search/settings.md
+                - OpenSearch:
+                      - Overview: opensearch/overview.md
+                      - Settings: opensearch/settings.md
                 - Algolia: algolia/overview.md
                 - Lucene: lucene/overview.md
-                - Azure Search: azure-search/overview.md
                 - Search Options: search.md
                 - Search Query Syntax: search-query-syntax.md
           - Security:

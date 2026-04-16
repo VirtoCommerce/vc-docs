@@ -9,10 +9,9 @@ To open the **Elasticsearch** module settings:
 
     ![General settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
-The settings have been saved.
-
+Your modifications have been applied.
 
 
 <br>
@@ -20,6 +19,6 @@ The settings have been saved.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overview">← Elastic App Search module overview</a>
-    <a href="../../algolia/overview">Algolia Search module overview →</a>
+    <a href="../overview">← Elasticsearch module overview</a>
+    <a href="../../azure-search/overview">Azure Search module overview →</a>
 </div>

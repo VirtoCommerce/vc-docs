@@ -4,22 +4,13 @@ To configure the **Return** module settings:
 
 1. Click **Settings** in the main menu.
 1. In the search field of the next blade, type **Return** to find the settings related to the module.
-1. Click **Advanced** to set up the return module password:
-
-    ![Advanced settings](media/advanced-settings.png){: style="display: block; margin: 0 auto;" }
-
-1. Click **Return** to configure the following settings.
+1. In the next blade, configure the following:
 
     ![Advanced settings](media/return-settings.png){: style="display: block; margin: 0 auto;" }
 
-    1. Click ![Pencil](media/pencil.png) to add or delete order return statuses
-
-        ![Order return statuses](media/order-return-statuses.png){: style="display: block; margin: 0 auto;" }
-
 1. Click **Save** in the toolbar to save the changes.
 
-The settings have been saved.
-
+Your modifications have been applied.
 
 
 <br>
