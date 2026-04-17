@@ -1,6 +1,5 @@
 # Settings
 
-
 To open the Back-in-Stock module general settings:
 
 1. Click **Settings** in the main menu.
@@ -30,8 +29,6 @@ To open store-specific module settings:
 1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been applied.
-
-
 
 
 <br>
