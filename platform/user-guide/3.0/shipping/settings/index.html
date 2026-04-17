@@ -10459,6 +10459,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../security/settings/" class="md-nav__link">
+        Settings
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
     </nav>
 </li>
@@ -10771,6 +10789,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Settings
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -10779,6 +10801,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#global-shipping-settings" class="md-nav__link">
+        Global shipping settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#fixed-shipping-rate" class="md-nav__link">
+        Fixed shipping rate
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#bopis-settings" class="md-nav__link">
+        BOPIS settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -11434,8 +11513,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../tasks/settings/" class="md-nav__link">
-        Settings
+      <a href="../../tasks/roles-permissions/" class="md-nav__link">
+        Roles and Permissions
       </a>
     </li>
   
@@ -11452,8 +11531,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../tasks/roles-permissions/" class="md-nav__link">
-        Roles and Permissions
+      <a href="../../tasks/settings/" class="md-nav__link">
+        Settings
       </a>
     </li>
   
@@ -13344,6 +13423,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#global-shipping-settings" class="md-nav__link">
+        Global shipping settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#fixed-shipping-rate" class="md-nav__link">
+        Fixed shipping rate
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#bopis-settings" class="md-nav__link">
+        BOPIS settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -13364,7 +13481,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 17, 2026 05:58:30 UTC">April 17, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -13385,20 +13502,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>To configure the <strong>Shipping</strong> module settings:</p>
+<p>For the Shipping module, you can configure:</p>
+<ul>
+<li><a href="#global-shipping-settings">Global shipping settings.</a></li>
+<li><a href="#fixed-shipping-rate">Fixed shipping rate.</a></li>
+<li><a href="#bopis-settings">BOPIS settings.</a></li>
+</ul>
+<h2 id="global-shipping-settings">Global shipping settings<a class="headerlink" href="#global-shipping-settings" title="Permanent link">&para;</a></h2>
+<p>To configure the Shipping module settings globally:</p>
 <ol>
-<li>In the main menu, click <strong>Stores</strong>.</li>
-<li>In the next blade, select the required store.</li>
-<li>In the next blade, click on the <strong>Shipping methods</strong> widget.</li>
-<li>In the next blade, select the required shipping method from the list.</li>
-<li>In the next blade, click on the <strong>Settings</strong> widget.</li>
+<li>Click <strong>Settings</strong> in the main menu.</li>
+<li>In the search field of the next blade, type <strong>Shipping</strong> to find the settings related to the module or simply click on it in the list.</li>
 <li>
-<p>In the next blade, configure the following settings:</p>
-<p><img alt="Settings" src="../media/settings.png" style="display: block; margin: 0 auto;" /></p>
+<p>Configure the following:</p>
+<p><img alt="General settings" src="../media/global-settings.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
 </li>
 </ol>
-<p>The modifications become available in the Frontend Application:</p>
-<p><img alt="Frontend Application shipping methods" src="../media/storefront-shipping-methods.png" style="display: block; margin: 0 auto;" /></p>
+<p>Your modifications have been applied.</p>
+<p><br>
+<br></p>
+<h2 id="fixed-shipping-rate">Fixed shipping rate<a class="headerlink" href="#fixed-shipping-rate" title="Permanent link">&para;</a></h2>
+<p>To configure the fixed shipping settings:</p>
+<ol>
+<li>Open <strong>Stores</strong> from the main menu.</li>
+<li>In the next blade, select  your store.</li>
+<li>In the next blade, click on the <strong>Shipping methods</strong> widget.</li>
+<li>In the next blade, click <strong>Fixed shipping rate</strong></li>
+<li>
+<p>In the next blade, click on the <strong>Settings</strong> widget to configure the following:</p>
+<p><img alt="Fixed rate shipping settings" src="../media/fixed-rate-shipping-settings.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong>, then <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
+<h2 id="bopis-settings">BOPIS settings<a class="headerlink" href="#bopis-settings" title="Permanent link">&para;</a></h2>
+<p>To configure BOPIS settings:</p>
+<ol>
+<li>Open <strong>Stores</strong> from the main menu.</li>
+<li>In the next blade, select  your store.</li>
+<li>In the next blade, click on the <strong>Settings</strong> widget.</li>
+<li>
+<p>Find <strong>Shipping</strong> settings in the left panel and click <strong>BOPIS</strong>:</p>
+<p><img alt="Google maps for BOPIS" src="../media/enabling-bopis.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong>, then <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
 <p><br>
 <br></p>
 <hr />
