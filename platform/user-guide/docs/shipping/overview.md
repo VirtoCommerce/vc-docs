@@ -25,6 +25,6 @@ The diagram below illustrates the functionality of the Shipping module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../shipstation/overview">← ShipStation module overview</a>
+    <a href="../../seo/overview">← SEO module overview</a>
     <a href="../managing-shipping-methods">Managing shipping methods →</a>
 </div>

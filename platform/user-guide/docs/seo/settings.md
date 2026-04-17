@@ -11,7 +11,7 @@ To configure the **SEO** module settings:
 
 1. Click **Save** in the toolbar to save the changes.
 
-The settings have been saved.
+Your modifications have been applied.
 
 
 <br>
@@ -20,5 +20,5 @@ The settings have been saved.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../debugging-seo-links">← Debugging SEO links</a>
-    <a href="../../shipstation/overview">ShipStation module overview →</a>
+    <a href="../../shipping/overview">Shipping module overview →</a>
 </div>
