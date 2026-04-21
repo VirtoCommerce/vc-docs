@@ -1,0 +1,59 @@
+name: Snapshot previous version on bump
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: bump-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  snapshot-previous:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.REPO_TOKEN }}
+
+      - name: Detect bump and create release branch
+        run: |
+          set -euo pipefail
+
+          # 1. Must be a merge commit (>= 2 parents, so >= 3 tokens in rev-list output).
+          read -ra parents_arr <<< "$(git rev-list --parents -n 1 HEAD)"
+          if [ "${#parents_arr[@]}" -lt 3 ]; then
+            echo "HEAD is not a merge commit — nothing to do."
+            exit 0
+          fi
+
+          # 2. Diff between HEAD and HEAD^1 must contain only the VERSION file.
+          changed=$(git diff --name-only --diff-filter=M HEAD^1 HEAD)
+          if [ "$changed" != "VERSION" ]; then
+            echo "PR merged, but diff is not bump-only (modified files: $changed). Not a bump."
+            exit 0
+          fi
+
+          # 3. Read the previous version from HEAD^1's VERSION.
+          prev=$(git show HEAD^1:VERSION | tr -d '[:space:]')
+          if [ -z "$prev" ]; then
+            echo "❌ Could not read previous VERSION from HEAD^1 — aborting."
+            exit 1
+          fi
+          echo "Previous version: $prev"
+
+          branch="release/$prev"
+
+          # 4. Skip if the release branch already exists on origin.
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            echo "Branch $branch already exists on origin — skipping."
+            exit 0
+          fi
+
+          # 5. Create and push the branch from HEAD^1.
+          git branch "$branch" HEAD^1
+          git push origin "$branch"
+          echo "✅ Created $branch from $(git rev-parse HEAD^1)"
