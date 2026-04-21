@@ -222,14 +222,7 @@ def format_size(size_bytes):
 
 def main():
     parser = argparse.ArgumentParser(description='CI/CD versioned documentation build')
-    parser.add_argument('--version', help='Global version for all subsites')
-    parser.add_argument('--marketplace-developer-guide-version', help='Version for marketplace/developer-guide')
-    parser.add_argument('--marketplace-user-guide-version', help='Version for marketplace/user-guide')
-    parser.add_argument('--platform-developer-guide-version', help='Version for platform/developer-guide')
-    parser.add_argument('--platform-user-guide-version', help='Version for platform/user-guide')
-    parser.add_argument('--platform-deployment-on-cloud-version', help='Version for platform/deployment-on-cloud')
-    parser.add_argument('--storefront-developer-guide-version', help='Version for storefront/developer-guide')
-    parser.add_argument('--storefront-user-guide-version', help='Version for storefront/user-guide')
+    parser.add_argument('--version', required=True, help='Version for all subsites (read from VERSION file by caller)')
     parser.add_argument('--set-as-latest', action='store_true', help='Set as latest version')
     parser.add_argument('--set-as-default', action='store_true', help='Set as default version')
     parser.add_argument('--output-dir', default='site', help='Output directory for built site')
@@ -284,13 +277,13 @@ def main():
 
     # Define subsites and their versions
     subsites = {
-        "marketplace/developer-guide": args.marketplace_developer_guide_version or args.version,
-        "marketplace/user-guide": args.marketplace_user_guide_version or args.version,
-        "platform/developer-guide": args.platform_developer_guide_version or args.version,
-        "platform/user-guide": args.platform_user_guide_version or args.version,
-        "platform/deployment-on-cloud": args.platform_deployment_on_cloud_version or args.version,
-        "storefront/developer-guide": args.storefront_developer_guide_version or args.version,
-        "storefront/user-guide": args.storefront_user_guide_version or args.version
+        "marketplace/developer-guide": args.version,
+        "marketplace/user-guide": args.version,
+        "platform/developer-guide": args.version,
+        "platform/user-guide": args.version,
+        "platform/deployment-on-cloud": args.version,
+        "storefront/developer-guide": args.version,
+        "storefront/user-guide": args.version,
     }
 
     # Deploy each subsite

@@ -249,7 +249,16 @@ def main():
         "storefront/developer-guide",
         "storefront/user-guide"
     ]
-    version = "1.0"
+    version_file = "VERSION"
+    if not os.path.exists(version_file):
+        print(f"❌ {version_file} file not found in repo root. See VERSIONING.md.")
+        sys.exit(1)
+    with open(version_file) as f:
+        version = f.read().strip()
+    if not version:
+        print(f"❌ {version_file} is empty. See VERSIONING.md.")
+        sys.exit(1)
+    print(f"Using version {version} from {version_file}")
 
     for subsite in subsites:
         config = f"{subsite}/mkdocs.yml"
