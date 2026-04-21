@@ -1,0 +1,38 @@
+name: Deploy versioned docs
+
+on:
+  push:
+    branches:
+      - main
+      - 'release/**'
+
+concurrency:
+  group: docs-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.REPO_TOKEN }}
+
+      - name: Deploy
+        uses: VirtoCommerce/vc-github-actions/update-virtocommerce-docs-versioned@master
+        with:
+          githubToken: ${{ secrets.REPO_TOKEN }}
+          ref: ${{ github.ref_name }}
+          setAsLatest: ${{ github.ref_name == 'main' }}
+          setAsDefault: ${{ github.ref_name == 'main' }}
+          azureSubscriptionId: ${{ secrets.AZURESUBSCRIPTIONID }}
+          azureResourceGroupName: ${{ secrets.AZURERESOURCEGROUPNAME }}
+          azureWebAppName: ${{ secrets.AZUREWEBAPPNAME }}
+          azureApiKey: ${{ secrets.AZUREAPIKEY }}
+          azureTenantId: ${{ secrets.AZURETENANTID }}
+          azureAppId: ${{ secrets.AZUREAPPID }}
+          dockerRegistry: ${{ secrets.MAIN_DOCKER_REGISTRY }}
+          dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
+          dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
