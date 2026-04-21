@@ -27,12 +27,6 @@ jobs:
           ref: ${{ github.ref_name }}
           setAsLatest: ${{ github.ref_name == 'main' }}
           setAsDefault: ${{ github.ref_name == 'main' }}
-          azureSubscriptionId: ${{ secrets.AZURESUBSCRIPTIONID }}
-          azureResourceGroupName: ${{ secrets.AZURERESOURCEGROUPNAME }}
-          azureWebAppName: ${{ secrets.AZUREWEBAPPNAME }}
-          azureApiKey: ${{ secrets.AZUREAPIKEY }}
-          azureTenantId: ${{ secrets.AZURETENANTID }}
-          azureAppId: ${{ secrets.AZUREAPPID }}
           dockerRegistry: ${{ secrets.MAIN_DOCKER_REGISTRY }}
           dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
           dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
