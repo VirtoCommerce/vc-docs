@@ -19,7 +19,10 @@ This repository publishes versioned documentation using [mike](https://github.co
 ## Editing docs
 
 ### Current version (whatever `main` points to)
-Open a PR into `main` with your markdown changes. On merge, CI redeploys that version and keeps the `latest`/`default` aliases on it.
+
+The documentation maintainer may push directly to `main`. CI redeploys the current version on every push.
+
+Other contributors must open a PR into `main`. On merge, CI redeploys the same way.
 
 ### Older version (e.g. 2.0)
 Open a PR into `release/2.0` with your markdown changes. On merge, CI rebuilds the `2.0` snapshot only. `latest`/`default` remain on the current major.
