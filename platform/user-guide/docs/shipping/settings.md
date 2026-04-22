@@ -52,6 +52,7 @@ To configure BOPIS settings:
 
 1. Click **OK**, then **Save** in the toolbar to save the changes.
 
+Your modifications have been applied.
 
 <br>
 <br>

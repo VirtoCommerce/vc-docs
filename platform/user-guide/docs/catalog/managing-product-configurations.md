@@ -89,7 +89,13 @@ To add sections and options:
             The predefined text appears on the Frontend:
 
             ![Predefined text](media/predefined-text.png)
+            <br>
+            <br>
+            For the **Text** section, you can configure the following additional settings:
 
+            ![Text settings](media/text-settings.png)
+            <br>
+            <br>
         * **File**: Upload a file.
 
             ![File type](media/adding-text-type-option.gif)

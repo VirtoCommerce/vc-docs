@@ -23,5 +23,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-search">← Managing search index</a>
-    <a href="../../intent-search/overview">Intent Search module overview→</a>
+    <a href="../../intent-search/overview">Intent Search module overview →</a>
 </div>

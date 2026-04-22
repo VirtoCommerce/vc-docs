@@ -26,5 +26,5 @@ As a result, the shopper sees more accurate and highly relevant products on the 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../search/overview">← Search module overview</a>
-    <a href="../../elastic-search-9/overview">Elasticsearch 9 module overview→</a>
+    <a href="../../elastic-search-9/overview">Elasticsearch 9 module overview →</a>
 </div>

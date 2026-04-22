@@ -203,6 +203,11 @@ To add similar properties and property to a group of products:
 
 The properties have been added to the selected products.
 
+On the Frontend, they are displayed in the product cards:
+
+![Product properties](media/product-properties.png){: style="display: block; margin: 0 auto;" }
+
+
 ## Configure facets
 
 To set the visibility of facets:
@@ -214,22 +219,59 @@ To set the visibility of facets:
 
 1. Click **Save** in the toolbar to save the changes.
 
-The selected facets are now displayed in the Frontend Application.
-
-
-## View results on frontend
-
-1. In the main menu, click **Stores**.
-1. In the next blade, click on the required store (**Dental Demo Store** in our case).
-1. In the next blade, click **Open in browser** in the top toolbar.
-
-The properties are displayed as facets:
+The selected facets are now displayed on the Frontend:
 
 ![Facets](media/facets-frontend-view.png){: style="display: block; margin: 0 auto;" }
 
-The product properties are also displayed in the product cards:
+<br>
+<br>
+Properties can be displayed as attributes or as a range:
 
-![Product properties](media/product-properties.png){: style="display: block; margin: 0 auto;" }
+<div class="grid cards" markdown>
+
+-   __Attribute aggregation type__
+
+    ---
+    
+    ![Attributes](media/facets-as-attributes.png){: style="display: block; margin: 0 auto;" }
+
+-   __Range aggregation type__
+
+    ---
+
+    ![Range](media/facets-as-range.png){: style="display: block; margin: 0 auto;" }
+
+</div>
+
+
+The property aggregation type is configured via the **Aggregation properties** widget:
+
+=== "Range"
+
+    1. Click on the property you need to set the required view for.
+    1. In the next blade, select **Range** from the dropdown.
+    1. Add range bounds:
+        
+        ![Configure range](media/range-display-type.png){: style="display: block; margin: 0 auto;" }
+
+    1. Click **OK**, then **Save** to save your modifications. 
+
+    Your modifications have been applied.
+
+=== "Attribute"
+
+    1. Click on the property you need to set the required view for.
+    1. Select **Attribute** from the dropdown.
+    1. Select sorting method from the dropdown.
+    1. Enter the maximum number of aggregation values in search results.
+    1. Add aggregation values allowed in search results:
+
+        ![Configure attribute](media/attribute-display-type.png){: style="display: block; margin: 0 auto;" }
+
+    1. Click **OK**, then **Save** to save the changes.
+
+    Your modifications have been applied.  
+
 
 ## Set property priority
 
@@ -244,10 +286,10 @@ The priority of properties defines the order in which they are displayed on the 
 1. Repeat steps 5-6 for the remaining values.
 1. Click **Save** in the toolbar.
 
-![Setting up priority](media/setting-property-priority.png)
+![Setting up priority](media/setting-property-priority.png){: style="display: block; margin: 0 auto;" }
 
 The priorities have been applied, and the values are displayed on the Frontend in the specified order:
-![Property priority](media/property-priority-frontend.png)
+![Property priority](media/property-priority-frontend.png){: style="display: block; margin: 0 auto;" }
 
 ## Normalize facets
 

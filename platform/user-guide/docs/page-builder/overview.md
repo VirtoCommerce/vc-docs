@@ -29,6 +29,7 @@ With the Page Builder module, you can
 * Customize the look of your site.
 * Customize ecommerce pages with a preview feature.
 * Preview content before publishing.
+* Export, import, and duplicate pages.
 * Access a block library for different page elements.
 * Implement SEO by design for better search engine visibility.
 * Ensure mobile-friendliness through design.

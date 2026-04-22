@@ -13,7 +13,7 @@ To configure the module's settings:
 
 1. Click **OK**, then **Save** to save the changes.
 
-You modifications have been applied.
+Your modifications have been applied.
 
 On the Frontend, the selected mode is displayed as follows:
 
@@ -32,6 +32,11 @@ On the Frontend, the selected mode is displayed as follows:
     ![Popup mode](media/popup-mode.png)
 
 </div>
+
+!!! note
+    The Datatrans payment form is fully localized:
+
+    ![Payment](media/localized-payment-window.png){: style="display: block; margin: 0 auto;" width="500"}
 
 <br>
 <br>

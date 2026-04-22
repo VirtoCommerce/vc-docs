@@ -11,6 +11,9 @@ To configure the admin profile:
 
     ![User profile](media/user-profile.png){: style="display: block; margin: 0 auto;" }
 
+    !!! note
+        The **Time ago** format is disabled by default. Orders and similar entities use the medium format (MM:DD:YYYY HH:MM:SS). Logs use the extended medium format (MM:DD:YYYY HH:MM:SS.fff).
+
 	!!! note
 		If a user is listed in the Contacts, they can now upload their personal photos to customize and brand their workspace:
 

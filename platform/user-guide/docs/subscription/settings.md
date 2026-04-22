@@ -23,5 +23,5 @@ To configure subscriptions settings:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../enabling-subscriptions">← Enabling subscriptions</a>
-    <a href="../../tasks/overview">Tasks module overview →</a>
+    <a href="../../system-operations/overview">System Operations module overview →</a>
 </div>

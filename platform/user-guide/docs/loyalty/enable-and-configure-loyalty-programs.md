@@ -42,5 +42,5 @@ Buyers will now start earning and redeeming loyalty points.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Loyalty module overview</a>
-    <a href="../../news/overview">News module overview→</a>
+    <a href="../loyalty-points-history">Loyalty points history →</a>
 </div>

@@ -182,6 +182,7 @@ nav:
                       - Overview: page-builder/overview.md
                       - Managing Pages via Content Module: page-builder/manage-pages.md
                       - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
+                      - Preview as User: page-builder/preview-as-user.md
                 - Pages:
                       - Overview: pages/overview.md
                       - Enabling Virto Pages: pages/enabling-pages.md
@@ -246,7 +247,8 @@ nav:
                 - Settings: generic-export/settings.md
           - Loyalty:
                 - Overview: loyalty/overview.md
-                - Enabling and Configuring Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
+                - Enabling and Creating Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
+                - Loyalty Points History: loyalty/loyalty-points-history.md
           - News:
                 - Overview: news/overview.md
                 - Managing News: news/managing-news.md
@@ -376,6 +378,7 @@ nav:
                 - Overview: subscription/overview.md
                 - Enabling Subscriptions: subscription/enabling-subscriptions.md
                 - Settings: subscription/settings.md
+          - System Operations: system-operations/overview.md
           - Tasks:
                 - Overview: tasks/overview.md
                 - Using Tasks Application: tasks/using-application.md

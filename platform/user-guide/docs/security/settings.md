@@ -1,6 +1,6 @@
 # Settings
 
-To open the **Search** module settings:
+To open the **Security** module settings:
 
 1. Click **Settings** in the main menu.
 1. In the search field of the next blade, type **Security** to find the settings related to search modules.
@@ -19,5 +19,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-search">← Managing search index</a>
-    <a href="../../intent-search/overview">Intent Search module overview→</a>
+    <a href="../../intent-search/overview">Intent Search module overview →</a>
 </div>
