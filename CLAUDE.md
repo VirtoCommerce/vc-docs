@@ -110,7 +110,7 @@ Precede every interactive demo with this phrase:
 
 ## Glossaries
 
-Two glossaries exist, one per audience. A term that belongs in both gets a guide-appropriate entry in each, with cross-links.
+Audience-partitioned, one per guide. Shared terms get a separate entry in each, with bidirectional cross-links.
 
 - [platform/user-guide/docs/glossary.md](platform/user-guide/docs/glossary.md): business and operations vocabulary.
 - [platform/developer-guide/docs/glossary.md](platform/developer-guide/docs/glossary.md): DDD, .NET, code-pattern vocabulary.
@@ -118,13 +118,14 @@ Two glossaries exist, one per audience. A term that belongs in both gets a guide
 ### Entry shape
 
 - H2 per term, alphabetical insertion. 2 to 4 sentences max.
-- User guide: business language. No dev jargon such as "runtime", "code changes", "schema", "interface", "data model".
-- Developer guide: name the canonical types, interfaces, services. Stay terse. Do not enumerate full APIs in a glossary entry; link to the deep-dive page.
-- Internal Virto Commerce synonyms (for example, Admin UI / Platform / Back office) use inline "Same as **X**." Do not put internal synonyms in the comparison table.
+- Define by endonym, not exonym. Opening noun is a Virto-native label ("extra field", "user-defined field", "extension"). Vendor analogs ("custom field", "metafield") live only in the comparison table.
+- User guide: business register. No developer jargon (runtime, code changes, schema, interface, data model). If the concept is partial (not universal across objects), qualify scope explicitly ("that supports X"); never use "any object" as shorthand.
+- Developer guide: name canonical types, interfaces, services. When a known pattern from the GoF / DDD / EAA catalogs applies (for example, Entity-Attribute-Value, Specification), name it. Disambiguate via architectural shape; list supported modifiers and value types when part of the concept's signature. Terse. No API enumeration; link to the deep-dive.
+- Internal synonyms (Admin UI / Platform / Back office) use inline "Same as **X**." Never in the comparison table.
 
 ### Cross-platform comparison table
 
-For terms with industry analogs, append one one-row table after the prose:
+For terms with industry analogs, append one one-row Rosetta table after the prose:
 
 ```markdown
 Equivalent in other ecommerce platforms:
@@ -134,40 +135,41 @@ Equivalent in other ecommerce platforms:
 | Dynamic property | Metafield | Custom attribute (EAV) | Custom field | Metafield |
 ```
 
-- Tier 1 columns, always in this order: Shopify, Adobe Commerce (Magento), commercetools, BigCommerce.
-- Add a Tier 2 column (Salesforce Commerce Cloud, SAP Commerce Cloud, Spryker, VTEX, WooCommerce, Sylius, Elastic Path) only when that platform has a distinctively named equivalent.
-- Cells are short labels, not sentences: no trailing periods.
-- "commercetools" stays lowercase. It is the product's own spelling.
-- Use the merchant-facing label, not an internal schema or developer-only name. For example, commercetools "Custom field" is the merchant-facing label, not "Custom type" which is the schema.
+- Tier 1 columns, fixed order: Shopify, Adobe Commerce (Magento), commercetools, BigCommerce.
+- Tier 2 column (Salesforce Commerce Cloud, SAP Commerce Cloud, Spryker, VTEX, WooCommerce, Sylius, Elastic Path) only when that vendor has a distinctively named equivalent.
+- Cells are labels, not sentences: no trailing periods.
+- "commercetools" stays lowercase (vendor's own orthography).
+- Merchant-facing label, not internal schema or developer-only name. For example, commercetools "Custom field" (merchant-facing), not "Custom type" (schema).
 
 ### Linking from other pages
 
-- Use relative paths, for example **../glossary.md#fulfillment-center**. Never absolute paths like **/platform/user-guide/glossary#...** because they break under `mike` versioning.
-- Link on first mention per page only. Do not repeat in nested articles when the parent overview already linked the term.
-- Skip the link when the page is itself the canonical definition of the term.
+- Relative paths only (**../glossary.md#fulfillment-center**). Absolute paths break under `mike` versioning.
+- First mention per page only. No relink in child pages once the parent overview has linked the term.
+- No self-link on the canonical definition page.
 
 ## Abbreviation tooltips
 
-Tooltip definitions live in YAML content files separated from `mkdocs.yml` configuration. The hook [overrides/hooks/abbreviations_loader.py](overrides/hooks/abbreviations_loader.py) injects them into python-markdown's abbr extension at build time.
+YAML content files, decoupled from `mkdocs.yml`. Hook [overrides/hooks/abbreviations_loader.py](overrides/hooks/abbreviations_loader.py) injects entries into python-markdown's abbr extension at build time.
 
 ### When to add a tooltip
 
-Add a tooltip when the term is referenced across many pages. Skip for single-page mentions.
+Cross-page references only. Single-page mentions: skip.
 
 ### Files
 
-- [overrides/abbreviations.yml](overrides/abbreviations.yml): general definitions used by every guide that opts in.
-- `<guide>/abbreviations.yml`, sibling of the guide's `mkdocs.yml`. Per-guide overrides. Same key replaces the general definition; new keys add to it. Do not create the override file unless the wording must genuinely differ for the audience. If an override becomes identical to the root, delete it.
+- [overrides/abbreviations.yml](overrides/abbreviations.yml): base layer, shared across opted-in guides.
+- `<guide>/abbreviations.yml`, sibling of the guide's `mkdocs.yml`: per-guide overlay. Same key overrides base; new key extends. Create an overlay only for audience-driven divergence (pattern name for developers, "without code" for merchants); not for stylistic rewording of the same information. Delete an overlay that has drifted back to parity with the base.
 
 ### Authoring rules
 
-- Length budget: aim for ~50 characters, hard cap ~100. Tooltips render as a non-interactive browser hover popup, roughly 1/4 of the screen width at most.
-- The abbr extension matches case-sensitively. Use YAML anchors and aliases (`&name`, `*name`) to share one definition across casing and plural variants. The four common forms are "Term", "Terms", "term", "terms".
-- Do not put links or "See the Glossary" hints inside a tooltip. They do not render.
+- Length budget: ~50 char target, ~100 char hard cap. Renders as a non-interactive hover popover, ~1/4 viewport wide max.
+- Abbr extension matches case-sensitively. Use YAML anchors and aliases (`&name`, `*name`) to DRY one definition across casing and plural variants. Four common forms: "Term", "Terms", "term", "terms".
+- No links, no "See the Glossary" pointers. They do not render.
+- Define by endonym, not exonym (same rule as glossary entries).
 
 ### Opting a guide in
 
-Add the hook to the guide's `mkdocs.yml`:
+Register the hook in the guide's `mkdocs.yml`:
 
 ```yaml
 hooks:
@@ -176,8 +178,8 @@ hooks:
 
 ## Verification before claims
 
-Every claim about a Virto Commerce class, interface, type, vocabulary preference, or third-party product name must be verified before any draft text is written. Unverified names do not appear in the draft; "to be confirmed" footnotes and "I would verify later" comments do not ship.
+Every Virto Commerce class, interface, type, vocabulary form, or third-party product name is verified before drafting. Unverified names do not appear in drafts; TBC footnotes do not ship.
 
-- Virto Commerce code: invoke GitHub MCP to search and fetch files in the `VirtoCommerce` organization, or grep a local source mirror. Mentioning the tool without running it is not verification.
-- Virto Commerce vocabulary: grep the docs corpus for term frequency before choosing wording. For example, "object" (689 hits) versus "record" (14 hits) means the answer is "object".
-- Third-party products: fetch the platform's own current docs (Shopify Help Center, Adobe Commerce, commercetools, BigCommerce) per cell before drafting. Vendor blogs and tutorials are secondary sources. If a platform has no equivalent, the cell is `n/a`. If most cells cannot be verified, drop the comparison table rather than ship recall-based cells.
+- Virto code: GitHub MCP search plus file fetch in the `VirtoCommerce` org, or grep a local source mirror. Name-dropping the tool without invocation is not verification.
+- Virto vocabulary: grep the docs corpus for term frequency; highest count wins. For example, "object" (689) beats "record" (14).
+- Third-party products: fetch the vendor's own current docs (primary source: Shopify Help Center, Adobe Commerce, commercetools, BigCommerce) per cell. Blogs and tutorials are secondary. No equivalent → cell is `n/a`. If most cells cannot be verified against primary sources, drop the table rather than ship recall-based cells.

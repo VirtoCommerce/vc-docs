@@ -5,58 +5,63 @@ description: Use when adding or defining a Virto Commerce vocabulary term, mappi
 
 # Introducing terms
 
-Adds terms to the Virto Commerce glossaries and, where warranted, to the abbreviation tooltips. Works for one term or a batch.
+Workflow for adding terms to the Virto Commerce glossaries and, where warranted, to the abbreviation tooltips. One term or a batch.
 
-Rules live in [CLAUDE.md](../../../CLAUDE.md), sections "Glossaries", "Abbreviation tooltips", and "Verification before claims". This skill is the workflow that applies them.
+Authoritative rules live in [CLAUDE.md](../../../CLAUDE.md): Glossaries, Abbreviation tooltips, Verification before claims. This skill is the applying procedure.
 
 ## Iteration
 
-For a batch, run the full workflow per term. Do not batch verification or drafting across terms: claims drift from the terms they support.
+Per-term full-pass. No batching of verification or drafting across terms: evidence decouples from claims.
 
 ## Inputs per term
 
-- Term as Virto Commerce code names it.
+- Term as the Virto code names it.
 - Audience: business, developer, or both.
-- Suspected industry analog, to be verified.
+- Suspected industry analog (unverified).
 
 ## Workflow
 
-### 1. Verify Virto Commerce vocabulary
+### 1. Verify Virto vocabulary
 
-- Symbol existence: invoke GitHub MCP to search code and fetch files in the `VirtoCommerce` organization. Mentioning GitHub MCP in commentary without running it does not count. An org or repo filter plus a quoted string is required; unfiltered queries return nothing. Fetch the matching file to confirm the symbol is where you expect it.
-- Prose wording: grep the local docs corpus for term frequency. Pick the form that wins and record the count.
+- Symbol existence: GitHub MCP search plus file fetch in the `VirtoCommerce` org. Org/repo filter plus quoted string is required; unfiltered queries return empty. Fetch the hit to confirm location. Name-dropping the tool without invocation is not verification.
+- Prose form: grep the docs corpus for frequency. Highest count wins; record the count.
 
 ### 2. Verify cross-platform terminology
 
-Before writing any comparison-table cell, check that platform's own current docs (Shopify Help Center, Adobe Commerce, commercetools, BigCommerce). Use the merchant-facing label, not an internal schema or developer-only name. Vendor blogs are secondary. If a platform has no equivalent, the cell is `n/a`. If most cells cannot be verified from vendor docs, drop the whole comparison table rather than ship recall-based cells.
+Primary source per cell (Shopify Help Center, Adobe Commerce, commercetools, BigCommerce). Merchant-facing label, not internal schema or developer-only name. Vendor blogs are secondary. No equivalent → `n/a`. Most cells unverifiable against primary sources → drop the table rather than ship recall-based cells.
 
-Match scope, not just label. If the Virto concept attaches to many object types (Product, Order, Cart, Company, etc.), the vendor analog must also. A multi-object Virto concept does not map to a single-object vendor feature, even when the label sounds closer. Example: Virto Dynamic property (multi-object) maps to BigCommerce Metafield (multi-object), not Custom field (product-only).
+Match scope, not just label. A multi-object Virto concept (Product, Order, Cart, Company, ...) maps only to a multi-object vendor analog, even when a single-object label sounds closer. Example: Virto Dynamic property (multi-object) → BigCommerce Metafield (multi-object), not Custom field (product-only).
 
 ### 3. Draft the glossary entry or entries
 
-No draft text until sections 1 and 2 have produced verified names from tool output. Every class, interface, namespace, and vendor cell in the draft must trace to a GitHub MCP result or a fetched vendor page. "To be confirmed" or "I would verify later" footnotes do not ship.
+Gate: no draft text until sections 1–2 have produced verified names from tool output. Every class, interface, namespace, and vendor cell traces to a GitHub MCP result or a fetched vendor page. TBC footnotes do not ship.
 
-Apply the rules in CLAUDE.md "Glossaries" (entry shape, comparison table, linking from other pages).
+Before drafting a user-guide entry, sample 2–3 adjacent entries at the insertion point; match sentence length, voice, density.
+
+Apply CLAUDE.md §Glossaries (entry shape, comparison table, linking).
 
 ### 4. Add a tooltip if warranted
 
-Apply the rules in CLAUDE.md "Abbreviation tooltips" (when to add, files, authoring rules).
+Apply CLAUDE.md §Abbreviation tooltips.
 
-### 5. Self-check per term
+### 5. Per-term self-check
 
-- Every class, interface, namespace, and vendor cell traces to a tool call made in this session.
-- Each vendor cell matches the Virto concept's scope (multi-object vs single-object, etc.), not just the label.
-- User-facing entry has no developer jargon.
-- Developer-facing entry does not enumerate full APIs.
+- Every class, interface, namespace, and vendor cell traces to a tool call in this session.
+- Each vendor cell matches the Virto concept's scope (multi-object vs single-object), not just the label.
+- Defining noun is an endonym (CLAUDE.md §Entry shape).
+- Developer entry names the GoF / DDD / EAA pattern when one applies.
+- User entry qualifies scope when the concept is partial.
+- User entry free of developer jargon.
+- Developer entry does not inline the API surface.
 - Comparison-table cells have no trailing periods.
-- Cross-link present if both glossaries have the entry.
-- Scope not expanded beyond the requested term.
+- Bidirectional cross-link present when both glossaries contain the entry.
+- Scope locked to the requested term; no drive-by edits.
 
 ## Common mistakes
 
 | Mistake | Fix |
 | --- | --- |
-| Using a platform's internal, schema-level, or developer-only name instead of the merchant-facing label. | Use the label shown in that platform's admin-facing docs. |
-| Developer jargon ("runtime", "schema", "interface") in a user-facing entry. | Rewrite for a non-developer reader. |
+| Internal, schema-level, or developer-only vendor name instead of merchant-facing label. | Use the label from that vendor's admin-facing docs. |
+| Developer jargon (runtime, schema, interface) in a user-facing entry. | Rewrite for a non-developer reader. |
 | Enumerating every related interface in a developer-facing entry. | Move detail to the deep-dive page. |
-| Backticking product names like "Shopify" or "commercetools". | Plain text; they are proper nouns. |
+| Backticking proper nouns like "Shopify" or "commercetools". | Plain text. |
