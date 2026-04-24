@@ -20,7 +20,8 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.REPO_TOKEN }}
 
-      - name: Deploy
+      - name: Build and push
+        id: build
         uses: VirtoCommerce/vc-github-actions/update-virtocommerce-docs-versioned@master
         with:
           githubToken: ${{ secrets.REPO_TOKEN }}
@@ -30,3 +31,29 @@ jobs:
           dockerRegistry: ${{ secrets.MAIN_DOCKER_REGISTRY }}
           dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
           dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
+
+      - name: Deploy to VC Cloud
+        timeout-minutes: 10
+        run: |
+          dotnet tool update --global VirtoCommerce.GlobalTool
+
+          vc-build CloudEnvSetParameter \
+            -CloudUrl https://portal.virtocommerce.cloud \
+            -CloudToken ${{ secrets.VCPT_CLOUD_TOKEN }} \
+            -EnvironmentName vcpt-license \
+            -HelmParameters custom.app1.image.tag=${{ steps.build.outputs.docker-image-tag }}
+
+          vc-build CloudEnvStatus \
+            -CloudUrl https://portal.virtocommerce.cloud \
+            -CloudToken ${{ secrets.VCPT_CLOUD_TOKEN }} \
+            -EnvironmentName vcpt-license \
+            -HealthStatus Progressing
+
+          timeout 600 vc-build CloudEnvStatus \
+            -CloudUrl https://portal.virtocommerce.cloud \
+            -CloudToken ${{ secrets.VCPT_CLOUD_TOKEN }} \
+            -EnvironmentName vcpt-license \
+            -HealthStatus Healthy \
+            -SyncStatus Synced
+
+          echo "✅ Deployment to VC Cloud completed"
