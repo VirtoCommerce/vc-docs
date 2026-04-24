@@ -39,19 +39,19 @@ jobs:
 
           vc-build CloudEnvSetParameter \
             -CloudUrl https://portal.virtocommerce.cloud \
-            -CloudToken ${{ secrets.VCPT_CLOUD_TOKEN }} \
+            -CloudToken ${{ secrets.VIRTOCLOUD_KEY_VCPT_VCST }} \
             -EnvironmentName vcpt-license \
             -HelmParameters custom.app1.image.tag=${{ steps.build.outputs.docker-image-tag }}
 
           vc-build CloudEnvStatus \
             -CloudUrl https://portal.virtocommerce.cloud \
-            -CloudToken ${{ secrets.VCPT_CLOUD_TOKEN }} \
+            -CloudToken ${{ secrets.VIRTOCLOUD_KEY_VCPT_VCST }} \
             -EnvironmentName vcpt-license \
             -HealthStatus Progressing
 
           timeout 600 vc-build CloudEnvStatus \
             -CloudUrl https://portal.virtocommerce.cloud \
-            -CloudToken ${{ secrets.VCPT_CLOUD_TOKEN }} \
+            -CloudToken ${{ secrets.VIRTOCLOUD_KEY_VCPT_VCST }} \
             -EnvironmentName vcpt-license \
             -HealthStatus Healthy \
             -SyncStatus Synced
