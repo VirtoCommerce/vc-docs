@@ -32,28 +32,12 @@ jobs:
           dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
           dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
 
-      - name: Deploy to VC Cloud
-        timeout-minutes: 10
+      - name: Trigger cloud deploy
         run: |
-          dotnet tool update --global VirtoCommerce.GlobalTool
-
-          vc-build CloudEnvSetParameter \
-            -CloudUrl https://portal.virtocommerce.cloud \
-            -CloudToken ${{ secrets.VIRTOCLOUD_KEY_VCPT_VCST }} \
-            -EnvironmentName vcpt-license \
-            -HelmParameters custom.app1.image.tag=${{ steps.build.outputs.docker-image-tag }}
-
-          vc-build CloudEnvStatus \
-            -CloudUrl https://portal.virtocommerce.cloud \
-            -CloudToken ${{ secrets.VIRTOCLOUD_KEY_VCPT_VCST }} \
-            -EnvironmentName vcpt-license \
-            -HealthStatus Progressing
-
-          timeout 600 vc-build CloudEnvStatus \
-            -CloudUrl https://portal.virtocommerce.cloud \
-            -CloudToken ${{ secrets.VIRTOCLOUD_KEY_VCPT_VCST }} \
-            -EnvironmentName vcpt-license \
-            -HealthStatus Healthy \
-            -SyncStatus Synced
-
-          echo "✅ Deployment to VC Cloud completed"
+          gh api repos/VirtoCommerce/vc-github-actions/dispatches \
+            -f event_type=deploy-docs \
+            -f "client_payload[image_tag]=${{ steps.build.outputs.docker-image-tag }}" \
+            -f "client_payload[environment]=vcpt-license"
+          echo "✅ Dispatched cloud deploy for ${{ steps.build.outputs.docker-image-tag }}"
+        env:
+          GH_TOKEN: ${{ secrets.REPO_TOKEN }}
