@@ -11,3 +11,8 @@
 # Keep tooltip text short (~50 characters). Tooltips render as a non-interactive
 # browser hover popup; if a clickable cross-reference is needed, link the term
 # in prose separately.
+
+"Dynamic property": &dynamic_property "User-defined field added to an object from the admin UI, without code."
+"Dynamic properties": *dynamic_property
+"dynamic property": *dynamic_property
+"dynamic properties": *dynamic_property

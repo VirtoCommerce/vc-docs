@@ -18,14 +18,14 @@ Same as **Admin UI** and **Platform**. An administrative interface of the Virto 
 
 ## Bill of materials
 A special type of Product that is actually a list of materials required for a specific item purchased by the customer that can be created for internal purposes.
- 
+
 ## Catalog
-A module offered by the Virto Commerce Platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations. 
+A module offered by the Virto Commerce Platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations.
 
 ## Category
 Each category acts as a container, or folder, that houses various products of a particular type; these can be both physical and digital products. For example, a consumer electronics site might have categories such as laptops, tablets, smartphones, cameras, etc.
 
-## Company 
+## Company
 Same as **Organization**. A profile for an entire company, within which you can store employee profiles, other company profiles, and those of individual customers related to that company.
 
 ## Contact (Customer)
@@ -51,6 +51,17 @@ The companies and contacts to whom the contract prices apply.
 ## Digital product
 Any tangible product that the store owner can list in the Store. Digital products have unique attributes such as download type, maximum downloads, etc., unlike physical products; no shipping or inventory attributes may apply to such products.
 
+## Dynamic property
+An extra field that admins can add to any Virto Commerce object that supports dynamic properties, from the Admin UI. Dynamic properties capture, store, and display unique, nonstandard information.
+
+Equivalent in other ecommerce platforms:
+
+| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
+| --- | --- | --- | --- | --- |
+| Dynamic property | Metafield | Custom attribute (EAV) | Custom field | Metafield |
+
+See also the [Developer guide glossary](../../developer-guide/glossary.md#dynamic-property).
+
 ## Employee
 A profile of an employee working for a specific company.
 
@@ -66,7 +77,7 @@ A set of properties grouped together (e.g., size and color).
 Same as **Warehouse**. Processing unit involved in receiving, processing, and delivering orders to end customers.
 
 ## GTIN, or Global Trade Item Number
-Part of a numerical code used to uniquely identify a product. 
+Part of a numerical code used to uniquely identify a product.
 
 ## Inheritance
 A technique that allows entities at different levels to inherit tags. Tags can be inherited both **upwards** (e.g. a category inherits the tags of product) and **downwards** (e.g. a product inherits the tags of its category).
