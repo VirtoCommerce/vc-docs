@@ -1,0 +1,13 @@
+# General abbreviation tooltips, shared by every guide whose mkdocs.yml loads
+# overrides/hooks/abbreviations_loader.py.
+#
+# Per-guide files at the guide root (for example,
+# platform/developer-guide/abbreviations.yml) override the same key here; new
+# keys add to this base.
+#
+# Use YAML anchors (&name) and aliases (*name) to share one definition across
+# casing or plural variants without duplicating the text.
+#
+# Keep tooltip text short (~50 characters). Tooltips render as a non-interactive
+# browser hover popup; if a clickable cross-reference is needed, link the term
+# in prose separately.

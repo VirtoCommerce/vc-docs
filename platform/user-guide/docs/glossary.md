@@ -1,5 +1,9 @@
 # Glossary
 
+This glossary explains Virto Commerce business and operations vocabulary used throughout the user documentation, and maps key terms to their equivalents in other ecommerce platforms. Use it as a reverse lookup when searching for a concept you know by a different name.
+
+For developer vocabulary, such as DDD patterns, .NET interfaces, or extensibility APIs, see the [Developer guide glossary](../../developer-guide/glossary.md).
+
 ## Admin UI
 Same as **Platform** and **Back office**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 

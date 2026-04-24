@@ -1,0 +1,4 @@
+# Developer-guide-specific abbreviation tooltips. Definitions here override
+# the general defaults in overrides/abbreviations.yml when this guide is built.
+#
+# Keep tooltip text short (~50 characters).

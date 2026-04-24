@@ -295,3 +295,5 @@ site/
 
 # Local gh-pages folder for versioned content
 gh-pages/
+
+audit/
