@@ -1,6 +1,6 @@
 # Backend Customization
 
-This guides demonstrates how to build a custom module and deploy it to a Virto Cloud environment, which was previously connected using DevOps practices.
+This guides demonstrates how to build a custom [module](/platform/developer-guide/latest/glossary#module) and deploy it to a Virto Cloud environment, which was previously connected using DevOps practices.
 
 For demonstration purposes, we are going to:
 

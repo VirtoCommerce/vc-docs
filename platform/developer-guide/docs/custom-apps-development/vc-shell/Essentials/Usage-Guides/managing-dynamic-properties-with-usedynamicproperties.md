@@ -1,6 +1,6 @@
 # How-To: Managing Dynamic Properties with `useDynamicProperties`
 
-The `useDynamicProperties` composable provides a powerful and flexible system for managing dynamic properties in VC-Shell applications. This guide demonstrates how to effectively handle multi-language, multi-value, and dictionary-based properties with seamless integration to UI components.
+The `useDynamicProperties` composable provides a powerful and flexible system for managing [dynamic properties](../../../../glossary.md#dynamic-property) in VC-Shell applications. This guide demonstrates how to effectively handle multi-language, multi-value, and dictionary-based properties with seamless integration to UI components.
 
 ## Prerequisites
 

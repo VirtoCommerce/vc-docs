@@ -110,10 +110,15 @@ Precede every interactive demo with this phrase:
 
 ## Glossaries
 
-Audience-partitioned, one per guide. Shared terms get a separate entry in each, with bidirectional cross-links.
+Per-guide, audience-partitioned. A term lives in the glossary that owns its topic; bidirectional cross-link between audience-siblings.
 
-- [platform/user-guide/docs/glossary.md](platform/user-guide/docs/glossary.md): business and operations vocabulary.
-- [platform/developer-guide/docs/glossary.md](platform/developer-guide/docs/glossary.md): DDD, .NET, code-pattern vocabulary.
+Ownership routing:
+
+- General VC concept (Module, Dynamic property, Catalog) → platform/{audience}-guide.
+- Product-specific (storefront/marketplace/deployment-on-cloud) → that product's {audience}-guide. Create the file on first such term.
+- Both audiences relevant → entry in each, scoped to audience, cross-linked.
+
+Existing glossaries: [platform/user-guide](platform/user-guide/docs/glossary.md), [platform/developer-guide](platform/developer-guide/docs/glossary.md).
 
 ### Entry shape
 
@@ -147,9 +152,11 @@ Equivalent in other ecommerce platforms:
 
 ### Linking from other pages
 
-- Relative paths only (**../glossary.md#fulfillment-center**). Absolute paths break under `mike` versioning.
-- First mention per page only. No relink in child pages once the parent overview has linked the term.
-- No self-link on the canonical definition page.
+- Target = owning glossary (§Ownership routing), audience-matched.
+- Same-guide: relative path (**../glossary.md#anchor**). Mike versioning breaks site-internal absolute paths.
+- Cross-guide: absolute with `/latest/` (**/platform/user-guide/latest/glossary#module**); the `/latest/` alias is mike-stable.
+- First occurrence per top-level section, on its entry page (overview/index, or first page mentioning the term). Top-level section = immediate subdir of `docs/` or top-level standalone page.
+- Apply across every guide where the term appears, not just the owning one. No relink in deeper pages of the same section. No self-link on the canonical page.
 
 ## Abbreviation tooltips
 
@@ -157,7 +164,11 @@ YAML content files, decoupled from `mkdocs.yml`. Hook [overrides/hooks/abbreviat
 
 ### When to add a tooltip
 
-Cross-page references only. Single-page mentions: skip.
+Acronyms, initialisms, letter-based shorthands only (EAV, DDD, SKU, GTIN, xAPI). Native Virto and external industry: same rules. Threshold: cross-page reach.
+
+Multi-word vocabulary terms (Dynamic property, Module) → glossary entry, not here. The abbr extension renders a non-interactive popover — wrong affordance for clickable definitions.
+
+Definition leads with WHAT (concept type) and WHY (use case), not HOW (mechanism). Mechanism belongs in the glossary entry, which has room for it.
 
 ### Files
 

@@ -7,7 +7,7 @@ description: Use when adding or defining a Virto Commerce vocabulary term, mappi
 
 Workflow for adding terms to the Virto Commerce glossaries and, where warranted, to the abbreviation tooltips. One term or a batch.
 
-Authoritative rules live in [CLAUDE.md](../../../CLAUDE.md): Glossaries, Abbreviation tooltips, Verification before claims. This skill is the applying procedure.
+Authoritative rules live in [CLAUDE.md](../../../CLAUDE.md) §Glossaries, §Abbreviation tooltips, §Verification before claims. This skill is the applying procedure; do not restate rules here.
 
 ## Iteration
 
@@ -23,37 +23,49 @@ Per-term full-pass. No batching of verification or drafting across terms: eviden
 
 ### 1. Verify Virto vocabulary
 
-- Symbol existence: GitHub MCP search plus file fetch in the `VirtoCommerce` org. Org/repo filter plus quoted string is required; unfiltered queries return empty. Fetch the hit to confirm location. Name-dropping the tool without invocation is not verification.
+Per CLAUDE.md §Verification before claims.
+
+- Symbol existence: GitHub MCP search plus file fetch in the `VirtoCommerce` org. Org/repo filter plus quoted string is required; unfiltered queries return empty. Fetch the hit to confirm location.
 - Prose form: grep the docs corpus for frequency. Highest count wins; record the count.
 
 ### 2. Verify cross-platform terminology
 
-Primary source per cell (Shopify Help Center, Adobe Commerce, commercetools, BigCommerce). No equivalent → `n/a`. Most cells unverifiable against primary sources → drop the table rather than ship recall-based cells.
+Per CLAUDE.md §Cross-platform comparison table and §Verification before claims.
 
-WebFetch returning 403 → fall back to WebSearch with `allowed_domains` on the vendor's primary docs host.
+- One primary-source fetch per cell (vendor's own docs).
+- WebFetch returning 403 → fall back to WebSearch with `allowed_domains` on the vendor's primary docs host.
+- Cell unverifiable → `n/a`. Most cells unverifiable → drop the table.
 
-Apply CLAUDE.md §Cross-platform comparison table for: scope match, audience split (merchant-facing in user-guide, same cells in dev-guide unless general prose differs), `n/a (uses X)` for architectural collapse.
+### 3. Decide ownership and draft the entry
 
-### 3. Draft the glossary entry or entries
+Decide which glossary owns the term per CLAUDE.md §Glossaries → Ownership routing. Create the owning glossary file if absent.
 
-Gate: no draft text until sections 1–2 have produced verified names from tool output. Every class, interface, namespace, and vendor cell traces to a GitHub MCP result or a fetched vendor page. TBC footnotes do not ship.
+Gate: no draft text until steps 1–2 have produced verified names from tool output. Before drafting, sample 2–3 adjacent entries at the insertion point; match sentence length, voice, density. Apply CLAUDE.md §Entry shape and §Cross-platform comparison table to the draft.
 
-Before drafting a user-guide entry, sample 2–3 adjacent entries at the insertion point; match sentence length, voice, density.
+### 4. Add an abbreviation tooltip if applicable
 
-Apply CLAUDE.md §Glossaries (entry shape, comparison table, linking).
+Per CLAUDE.md §Abbreviation tooltips: eligibility, scope (base vs overlay), casing/plural variants.
 
-### 4. Add a tooltip if warranted
+### 5. Cross-link from every guide
 
-Apply CLAUDE.md §Abbreviation tooltips.
+Survey procedure for CLAUDE.md §Linking from other pages.
 
-### 5. Per-term self-check
+1. Per guide, recursive grep the term; group hits by first path segment under `docs/` to enumerate top-level sections (or standalone pages).
+2. For each section, link first occurrence on its entry page to the owning glossary. Form per CLAUDE.md.
+3. No relink in deeper pages of the same section; no self-link on the canonical glossary page.
+4. Skip auto-rendered API references (e.g., `GraphQL-Storefront-API-Reference-xAPI/`) unless an authored overview exists; link from the authored overview only.
 
-- Identified fundamental properties (user-defined? runtime-added? EAV? admin-configurable?) from code BEFORE drafting. Sampled adjacent entries and any parallel-concept sibling for opener cadence.
-- Every class, interface, namespace, and vendor cell traces to a tool call in this session.
-- CLAUDE.md §Entry shape applied: endonym, parallel-concept parity, code identifier discipline, no fabricated framing, scope qualified, register matched per audience.
-- CLAUDE.md §Cross-platform comparison table applied: audience split, scope match, `n/a (uses X)` for architectural collapse, no trailing periods.
-- Bidirectional cross-link present when both glossaries contain the entry.
-- Scope locked to the requested term; no drive-by edits.
+### 6. Per-term self-check
+
+Evidence trail for CLAUDE.md rules:
+
+- Fundamentals identified from code before drafting (§Entry shape).
+- Every class/interface/namespace/vendor cell traces to a tool call this session (§Verification before claims).
+- Entry shape, comparison table, bidirectional cross-link applied (§Glossaries).
+- Tooltip eligibility decided (§Abbreviation tooltips).
+- Owning glossary identified, link form correct (§Linking from other pages).
+- All seven content guides surveyed.
+- Scope locked; no drive-by edits.
 
 ## Common mistakes
 
@@ -63,5 +75,8 @@ Apply CLAUDE.md §Abbreviation tooltips.
 | Developer jargon (runtime, schema, interface) in a user-facing entry. | Rewrite for a non-developer reader. |
 | Enumerating every related interface in a developer-facing entry. | Move detail to the deep-dive page. |
 | Backticking proper nouns like "Shopify" or "commercetools". | Plain text. |
-| Drafting before identifying the concept's fundamental properties (user-defined? runtime? EAV?). | List shared properties with the sibling entry first; opener mirrors shared nature. Differences belong in scope and modifiers, not framing words ("structured", "schema-defined") or "Unlike **X**" prose. |
+| Drafting before identifying the concept's fundamental properties (user-defined? runtime? EAV?). | List shared properties with the sibling entry first; opener mirrors shared nature. |
 | PascalCase identifier or implementation-pattern label in a dev-guide table cell. | Use general prose form, or `n/a (uses X)` if the platform collapses the distinction architecturally. |
+| Adding a multi-word vocabulary term to abbreviations.yml because it has a short definition. | Glossary entry plus cross-link instead. |
+| Linking the glossary on every page that mentions the term. | One link per top-level section, on its entry page. |
+| Restating rules in this skill instead of pointing to CLAUDE.md. | Keep this file workflow-only; cite the rule section by name. |
