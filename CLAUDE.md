@@ -110,7 +110,7 @@ Precede every interactive demo with this phrase:
 
 ## Glossaries
 
-Per-guide, audience-partitioned. A term lives in the glossary that owns its topic; bidirectional cross-link between audience-siblings.
+Per-guide, audience-partitioned. A term lives in the glossary that owns its topic; the audience-sibling cross-link sits once at the top of the glossary, never per entry.
 
 Ownership routing:
 
@@ -129,6 +129,7 @@ Existing glossaries: [platform/user-guide](platform/user-guide/docs/glossary.md)
 - Internal synonyms (Admin UI / Platform / Back office) use inline "Same as **X**." Never in the comparison table.
 - Identify the concept's fundamental properties (user-defined vs system; runtime-added vs compile-time; EAV vs columnar; admin-configurable vs dev-only) from code before drafting. With a parallel-concept sibling (for example, Catalog property and Dynamic property: both user-defined, runtime-registered, EAV-stored), opener mirrors shared nature; differences appear in scope, modifiers, or inheritance — never in inline "Unlike **X**" prose or in framing words ("structured", "schema-defined") that fabricate distinctions between equally-EAV concepts.
 - Dev entry: code identifier only when the name IS the mechanism (interface consumers implement, scope discriminator type). Closed enumerable scopes go in prose.
+- Per-entry "See also" lines may point to deep-dive pages within the same guide. They do not point to the audience-sibling glossary; the top-of-file cross-link covers that. Drop the entire "See also" line when nothing same-guide remains.
 
 ### Cross-platform comparison table
 
@@ -157,6 +158,7 @@ Equivalent in other ecommerce platforms:
 - Cross-guide: absolute with `/latest/` (**/platform/user-guide/latest/glossary#module**); the `/latest/` alias is mike-stable.
 - First occurrence per top-level section, on its entry page (overview/index, or first page mentioning the term). Top-level section = immediate subdir of `docs/` or top-level standalone page.
 - Apply across every guide where the term appears, not just the owning one. No relink in deeper pages of the same section. No self-link on the canonical page.
+- Concept use vs label use. Phrasings like "the **Catalog** module" or "the **Quote** module" on a named-module overview page use "module" as a suffix to a specific named module; the substantive concept there is the named module (Catalog, Quote), not the abstract Module type. Do not link the suffix. Link only when the abstract concept is the subject ("separate modules", "modular Platform", "loaded as Virto Commerce modules"). Same rule applies to any term that doubles as concept and label suffix.
 
 ## Abbreviation tooltips
 

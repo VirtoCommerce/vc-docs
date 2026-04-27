@@ -31,8 +31,6 @@ Equivalent in other ecommerce platforms:
 | --- | --- | --- | --- | --- |
 | Catalog property | Product option | Product attribute | Product type attribute | Product option |
 
-See also the [Developer guide glossary](/platform/developer-guide/latest/glossary#catalog-property).
-
 ## Category
 Each category acts as a container, or folder, that houses various products of a particular type; these can be both physical and digital products. For example, a consumer electronics site might have categories such as laptops, tablets, smartphones, cameras, etc.
 
@@ -70,8 +68,6 @@ Equivalent in other ecommerce platforms:
 | Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
 | --- | --- | --- | --- | --- |
 | Dynamic property | Metafield | Custom attribute (EAV) | Custom field | Metafield |
-
-See also the [Developer guide glossary](/platform/developer-guide/latest/glossary#dynamic-property).
 
 ## Employee
 A profile of an employee working for a specific company.
@@ -118,8 +114,6 @@ Equivalent in other ecommerce platforms:
 | Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
 | --- | --- | --- | --- | --- |
 | Module | n/a (uses Apps) | Extension | n/a (composable architecture) | n/a (uses Apps) |
-
-See also the [Developer guide glossary](/platform/developer-guide/latest/glossary#module).
 
 ## Organization
 Same as **Company**. A profile for an entire company, within which you can store employee profiles, other company profiles, and those of individual customers related to that company.
