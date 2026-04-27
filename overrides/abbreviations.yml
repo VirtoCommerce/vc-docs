@@ -12,6 +12,11 @@
 # browser hover popup; if a clickable cross-reference is needed, link the term
 # in prose separately.
 
+"Catalog property": &catalog_property "User-defined field added to a catalog, category, product, or variation, without code."
+"Catalog properties": *catalog_property
+"catalog property": *catalog_property
+"catalog properties": *catalog_property
+
 "Dynamic property": &dynamic_property "User-defined field added to an object from the admin UI, without code."
 "Dynamic properties": *dynamic_property
 "dynamic property": *dynamic_property

@@ -3,6 +3,11 @@
 #
 # Keep tooltip text short (~50 characters).
 
+"Catalog property":   &cp "User-defined field on a catalog-hierarchy entity, with inheritance (Entity-Attribute-Value pattern)."
+"Catalog properties": *cp
+"catalog property":   *cp
+"catalog properties": *cp
+
 "Dynamic property":   &dp "User-defined field on an object, added at runtime (Entity-Attribute-Value pattern)."
 "Dynamic properties": *dp
 "dynamic property":   *dp

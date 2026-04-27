@@ -22,6 +22,17 @@ A special type of Product that is actually a list of materials required for a sp
 ## Catalog
 A module offered by the Virto Commerce Platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations.
 
+## Catalog property
+An extra field that admins can add to a catalog, category, product, or product variation from the Admin UI to record standard product information such as size, color, brand, or weight. Catalog properties accept typed values and dictionary lookups, support multilingual content, and cascade down the catalog hierarchy so a variation receives its product's catalog properties, a product its category's, and a category its catalog's. They power faceted search, filtering, and product card display on the storefront.
+
+Equivalent in other ecommerce platforms:
+
+| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
+| --- | --- | --- | --- | --- |
+| Catalog property | Product option | Product attribute | Product type attribute | Product option |
+
+See also the [Developer guide glossary](../../developer-guide/glossary.md#catalog-property).
+
 ## Category
 Each category acts as a container, or folder, that houses various products of a particular type; these can be both physical and digital products. For example, a consumer electronics site might have categories such as laptops, tablets, smartphones, cameras, etc.
 
@@ -113,9 +124,6 @@ A basic entity in Virto Commerce's Catalog module, a product is a basic type of 
 
 ## Product with bill of materials
 A physical product that comes with a bill of materials (a list of additional items). It can be used for specific promotions and requires physical shipping
-
-## Property
-Properties are customizable entities that each catalog, category, or product (including its variations) can have. For example, typical properties for a physical product might include size, color, brand, etc.
 
 ## Quote
 Formal document from a seller that provides a potential buyer with the estimated cost of specific products or services, along with the terms and conditions of a potential sale.
