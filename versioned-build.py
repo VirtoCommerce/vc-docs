@@ -264,9 +264,11 @@ def main():
         config = f"{subsite}/mkdocs.yml"
         print(f"  Deploying {subsite} version {version}...")
 
-        # Deploy with version 1.0 and set as latest
+        # Deploy with version 1.0 and set as latest.
+        # --alias-type=copy: copy files into latest/ instead of redirect stubs, so
+        # binary assets (images, PDFs) resolve under /<subsite>/latest/... too.
         run_command(
-            f'mike deploy -F "{config}" --deploy-prefix "{subsite}" --update-aliases "{version}" latest',
+            f'mike deploy -F "{config}" --deploy-prefix "{subsite}" --alias-type=copy --update-aliases "{version}" latest',
             check=False
         )
 
