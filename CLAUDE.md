@@ -122,6 +122,8 @@ Audience-partitioned, one per guide. Shared terms get a separate entry in each, 
 - User guide: business register. No developer jargon (runtime, code changes, schema, interface, data model). If the concept is partial (not universal across objects), qualify scope explicitly ("that supports X"); never use "any object" as shorthand.
 - Developer guide: name canonical types, interfaces, services. When a known pattern from the GoF / DDD / EAA catalogs applies (for example, Entity-Attribute-Value, Specification), name it. Disambiguate via architectural shape; list supported modifiers and value types when part of the concept's signature. Terse. No API enumeration; link to the deep-dive.
 - Internal synonyms (Admin UI / Platform / Back office) use inline "Same as **X**." Never in the comparison table.
+- Identify the concept's fundamental properties (user-defined vs system; runtime-added vs compile-time; EAV vs columnar; admin-configurable vs dev-only) from code before drafting. With a parallel-concept sibling (for example, Catalog property and Dynamic property: both user-defined, runtime-registered, EAV-stored), opener mirrors shared nature; differences appear in scope, modifiers, or inheritance — never in inline "Unlike **X**" prose or in framing words ("structured", "schema-defined") that fabricate distinctions between equally-EAV concepts.
+- Dev entry: code identifier only when the name IS the mechanism (interface consumers implement, scope discriminator type). Closed enumerable scopes go in prose.
 
 ### Cross-platform comparison table
 
@@ -140,6 +142,8 @@ Equivalent in other ecommerce platforms:
 - Cells are labels, not sentences: no trailing periods.
 - "commercetools" stays lowercase (vendor's own orthography).
 - Merchant-facing label, not internal schema or developer-only name. For example, commercetools "Custom field" (merchant-facing), not "Custom type" (schema).
+- Audience split: user-guide table = merchant-facing labels; dev-guide table = same cells unless dev community uses a different general prose term. PascalCase identifiers (`AttributeDefinition`) and implementation-pattern labels ("EAV attribute") stay excluded.
+- `n/a (uses X)` when a vendor's architecture collapses the distinction at the dev level (one mechanism, many object types). Example: Magento unified EAV across product, category, customer.
 
 ### Linking from other pages
 

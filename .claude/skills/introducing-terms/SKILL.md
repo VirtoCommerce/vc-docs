@@ -28,9 +28,11 @@ Per-term full-pass. No batching of verification or drafting across terms: eviden
 
 ### 2. Verify cross-platform terminology
 
-Primary source per cell (Shopify Help Center, Adobe Commerce, commercetools, BigCommerce). Merchant-facing label, not internal schema or developer-only name. Vendor blogs are secondary. No equivalent → `n/a`. Most cells unverifiable against primary sources → drop the table rather than ship recall-based cells.
+Primary source per cell (Shopify Help Center, Adobe Commerce, commercetools, BigCommerce). No equivalent → `n/a`. Most cells unverifiable against primary sources → drop the table rather than ship recall-based cells.
 
-Match scope, not just label. A multi-object Virto concept (Product, Order, Cart, Company, ...) maps only to a multi-object vendor analog, even when a single-object label sounds closer. Example: Virto Dynamic property (multi-object) → BigCommerce Metafield (multi-object), not Custom field (product-only).
+WebFetch returning 403 → fall back to WebSearch with `allowed_domains` on the vendor's primary docs host.
+
+Apply CLAUDE.md §Cross-platform comparison table for: scope match, audience split (merchant-facing in user-guide, same cells in dev-guide unless general prose differs), `n/a (uses X)` for architectural collapse.
 
 ### 3. Draft the glossary entry or entries
 
@@ -46,14 +48,10 @@ Apply CLAUDE.md §Abbreviation tooltips.
 
 ### 5. Per-term self-check
 
+- Identified fundamental properties (user-defined? runtime-added? EAV? admin-configurable?) from code BEFORE drafting. Sampled adjacent entries and any parallel-concept sibling for opener cadence.
 - Every class, interface, namespace, and vendor cell traces to a tool call in this session.
-- Each vendor cell matches the Virto concept's scope (multi-object vs single-object), not just the label.
-- Defining noun is an endonym (CLAUDE.md §Entry shape).
-- Developer entry names the GoF / DDD / EAA pattern when one applies.
-- User entry qualifies scope when the concept is partial.
-- User entry free of developer jargon.
-- Developer entry does not inline the API surface.
-- Comparison-table cells have no trailing periods.
+- CLAUDE.md §Entry shape applied: endonym, parallel-concept parity, code identifier discipline, no fabricated framing, scope qualified, register matched per audience.
+- CLAUDE.md §Cross-platform comparison table applied: audience split, scope match, `n/a (uses X)` for architectural collapse, no trailing periods.
 - Bidirectional cross-link present when both glossaries contain the entry.
 - Scope locked to the requested term; no drive-by edits.
 
@@ -65,3 +63,5 @@ Apply CLAUDE.md §Abbreviation tooltips.
 | Developer jargon (runtime, schema, interface) in a user-facing entry. | Rewrite for a non-developer reader. |
 | Enumerating every related interface in a developer-facing entry. | Move detail to the deep-dive page. |
 | Backticking proper nouns like "Shopify" or "commercetools". | Plain text. |
+| Drafting before identifying the concept's fundamental properties (user-defined? runtime? EAV?). | List shared properties with the sibling entry first; opener mirrors shared nature. Differences belong in scope and modifiers, not framing words ("structured", "schema-defined") or "Unlike **X**" prose. |
+| PascalCase identifier or implementation-pattern label in a dev-guide table cell. | Use general prose form, or `n/a (uses X)` if the platform collapses the distinction architecturally. |
