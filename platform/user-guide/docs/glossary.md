@@ -110,6 +110,17 @@ Collections of hyperlinks organized to facilitate efficient navigation through t
 ## Modified price
 A price that is different from the default price because it has been updated by the user.
 
+## Module
+A self-contained unit of functionality that admins install into the Virto Commerce Platform to compose a tailored solution from independent pieces such as Catalog, Pricing, Orders, Marketing, or integrations. Each module brings its own back-end features and the admin screens to manage them; an App, by contrast, contributes mostly user interface. The base installation is intentionally minimal: admins add only the modules their solution requires and can later install, update, or remove them from the Admin UI.
+
+Equivalent in other ecommerce platforms:
+
+| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
+| --- | --- | --- | --- | --- |
+| Module | n/a (uses Apps) | Extension | n/a (composable architecture) | n/a (uses Apps) |
+
+See also the [Developer guide glossary](../../developer-guide/glossary.md#module).
+
 ## Organization
 Same as **Company**. A profile for an entire company, within which you can store employee profiles, other company profiles, and those of individual customers related to that company.
 
