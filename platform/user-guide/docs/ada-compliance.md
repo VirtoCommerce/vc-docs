@@ -16,5 +16,5 @@ Virto Commerce includes accessibility features by default, so you can deliver an
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../backup-and-restore">← Backup and restore </a>
-    <a href="../managing-content">Managing Frontend content →</a>
+    <a href="../glossary">Glossary →</a>
 </div>

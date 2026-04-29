@@ -164,6 +164,6 @@ Same as **Fulfillment center**. Processing unit involved in receiving, processin
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../white-labeling/overview">← White Labeling module overview</a>
-    <a href="../integrations/overview">Integrations overview →</a>
+    <a href="../ada-compliance">← ADA and WCAG compliance</a>
+    <a href="../platform-overview">Modules overview →</a>
 </div>
