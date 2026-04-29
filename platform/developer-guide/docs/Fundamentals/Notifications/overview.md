@@ -35,6 +35,6 @@ For data modeling purposes, the notification data model contains the following e
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../Dynamic-Properties/overview">← Managing dynamic properties </a>
+    <a href="../../Dynamic-Properties/using-DynamicPropertyAccessor">← Accessing dynamic properties in code</a>
     <a href="../registering-new-notification-type">Registering new notification type →</a>
 </div>

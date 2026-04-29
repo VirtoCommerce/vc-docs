@@ -33,6 +33,6 @@ The **Environments Compare** (**Environments Comparison**) module enables backen
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../dynamic-associations/overview">← Dynamic Associations module overview</a>
+    <a href="../../dynamic-properties/managing-dynamic-properties">← Managing dynamic properties</a>
     <a href="../compare-environments">Comparing environments →</a>
 </div>

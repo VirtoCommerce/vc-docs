@@ -7,6 +7,8 @@ This file defines the writing and formatting conventions for all documentation i
 Use the following forms exactly:
 
 - Virto Commerce (space separated; two words in text; alternatives allowed in code only).
+- Platform / platform (capitalize Platform when referring to the Virto Commerce Platform; use lowercase platform for any other platform).
+- Frontend (not storefront, not Frontend Application). Both "storefront" and "Frontend Application" are outdated and must not be used in Virto Commerce documentation. Use "Frontend" alone.
 - ecommerce (within a sentence).
 - eCommerce (in titles).
 - xAPI (in text, not in code).
@@ -32,7 +34,11 @@ American spelling is preferable.
 
 ### Bold
 
-Use bold for file names, for example, **appsettings.json**, **module.manifest**.
+Use bold for:
+
+- File names, for example, **appsettings.json**, **module.manifest**.
+- Module names on their first mention in an overview article. Subsequent mentions in the same article use regular weight. For example, "The **Loyalty** module provides..." on first mention, then "With the Loyalty module, users can..." afterward.
+- UI elements in step-by-step guides: buttons, widgets, menu items, tabs, field labels, toggle options, and dialog titles. For example, "Click **Save** in the toolbar." or "Click on the **Settings** widget."
 
 ### Italics
 
@@ -68,6 +74,29 @@ Add the file name as a title on every code block that represents file contents:
 - Write verbs with the "re" prefix as a single closed word (for example, rewrite, reconfigure). Keep the hyphen only when removal causes ambiguity or awkward reading, for example, re-enter (not reenter), re-create (to create again, not recreate meaning "have fun").
 - Write "pre" words as a single closed word with no hyphen.
 
+## Headings
+
+Do not place two consecutive headings without at least one sentence of introductory text between them. Every heading must be followed by at least one line of prose before descending to a lower heading level.
+
+Correct:
+
+```markdown
+## Title
+
+Short introduction to this section.
+
+### Subtitle
+
+Short introduction to this subsection.
+```
+
+Incorrect:
+
+```markdown
+## Title
+### Subtitle
+```
+
 ## Sentences
 
 Avoid long sentences. If a sentence contains more than one comma, consider rewriting.
@@ -83,6 +112,7 @@ Avoid long sentences. If a sentence contains more than one comma, consider rewri
 - Capitalize the first word of every list item.
 - End each list item with a period, unless the item ends with a code fragment.
 - Punctuation may be omitted in lists of one or two-word items.
+- When a list item is a link, place the terminal period **inside** the link text, not after the URL. Correct: `1. [Name.](link)`. Incorrect: `1. [Name](link).`
 
 ## Steps
 

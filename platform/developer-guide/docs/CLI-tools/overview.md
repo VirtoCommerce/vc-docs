@@ -42,6 +42,6 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../back-end-architecture/atomic-architecture">← Atomic architecture</a>
+    <a href="../../Security-and-Compliance/soc2-type-ii">← SOC 2 Type II compliance</a>
     <a href="../getting-started">Getting started →</a>
 </div>
