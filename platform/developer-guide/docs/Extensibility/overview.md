@@ -1,6 +1,6 @@
 # Overview
 
-Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
+Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce [modules](../glossary.md#module) with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
 
 There are several types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
 
@@ -18,7 +18,7 @@ Virto Commerce supports declarative extensions through the admin interface and A
 
 In particular, Virto Commerce supports:
 
-* [Dynamic properties](../Fundamentals/Dynamic-Properties/overview.md): Extend entities, such as Cart, Order, Company, etc., with new properties.
+* [Dynamic properties](../glossary.md#dynamic-property): [Extend entities](../Fundamentals/Dynamic-Properties/overview.md), such as Cart, Order, Company, etc., with new properties.
 
 * [Statuses](../../../user-guide/contacts/settings#statuses): Add Order, Shipment, Payment, etc. statuses.
 

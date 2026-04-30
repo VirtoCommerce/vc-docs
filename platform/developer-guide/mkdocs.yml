@@ -3,6 +3,7 @@ INHERIT: ../../mkdocs.yml
 # Hooks to fix search index for versioned docs
 hooks:
     - ../../overrides/hooks/search_index_fixer.py
+    - ../../overrides/hooks/abbreviations_loader.py
 
 # Override plugins for versioned site
 # Note: INHERIT doesn't merge plugins, so we must include ALL needed plugins
@@ -98,6 +99,7 @@ extra_javascript:
 nav:
     - About Virto Commerce Platform: getting-to-know-platform.md
     - Overview: index.md
+    - Glossary: glossary.md
     - Getting Started:
           - System Requirements: Getting-Started/system-requirements.md
           - Installation Guide:

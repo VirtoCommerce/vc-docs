@@ -3,6 +3,7 @@ INHERIT: ../../mkdocs.yml
 # Hooks to fix search index for versioned docs
 hooks:
     - ../../overrides/hooks/search_index_fixer.py
+    - ../../overrides/hooks/abbreviations_loader.py
 
 # Override plugins for versioned site
 plugins:
