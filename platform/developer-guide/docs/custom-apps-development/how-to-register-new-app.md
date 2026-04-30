@@ -39,7 +39,7 @@ To register a new app:
         | `description`  	| A short description of the app that gives users an overview of what the app does and its purpose.|
         | `iconUrl`      	| The URL or path to the app's icon or logo used to identify the app in the system.          	|
         | `permission`   	| The permissions or access rights required to use the app, which are used to control<br>who can access the app and its features.     	|
-        | `contentPath`  	| The default path to the app's content, which is used to specify where the app's files<br>are stored and accessed. In this example, the ContentPath is set to [VcModuleWeb]/Content/[Id],<br>which means that the app's content will be stored in the Content folder of the VcModuleWeb module,<br>with the app's Id appended to the end of the path. 	|
+        | `contentPath`  	| Optional override for the path to the built app, relative to the module's install directory. When omitted, the Platform serves the app from **Content/[Id]**. 	|
 
         </details>
         
@@ -49,11 +49,22 @@ To register a new app:
     
         ![image](media/app-menu-2.png)
 
-1. Create Content/[app_id] folder in the web project. Virto Commerce reads the manifest and adds binding to this folder. You can put any web content here. It can be a VC-Shell or any other HTML application.
+1. The app lives in two locations:
 
-    ```xml
-    vc-module-power-bi-reports\src\VirtoCommerce.PowerBiReports.Web\Content\reports
+    - **Runtime (inside the deployed module package).** The Platform serves the app from **Content/[app_id]** under the module's install directory, or from the `contentPath` value declared in **module.manifest** when present. It binds this folder to the `/apps/[app_id]` URL and throws a module initialization error if the folder is missing.
+    - **Source (inside the source repo).** The VC-Shell source code lives in the module's Web project. The Virto Commerce CLI (vc-build) `BuildCustomApp` target looks for the app's **package.json** under **Apps/[app_id]** first, and falls back to a legacy **App** folder when the module declares a single app. It then runs `yarn install` and `yarn build` in that folder (Vite emits to **dist** by default) and copies the **dist** contents into **Content/[app_id]** in the module package, satisfying the runtime requirement above.
+
+    The content can be a VC-Shell app or any other HTML application. For example, **vc-module-news** ships a single app via the legacy layout:
+
+    ```text title="Source repo"
+    src/VirtoCommerce.News.Web/App/             # VC-Shell source (vc-build runs yarn build, emits dist)
     ```
+
+    ```text title="Module package (.zip), produced by vc-build"
+    Content/vc-news/                            # dist contents, served by the Platform at /apps/vc-news
+    ```
+
+    A multi-app module instead places sources under **Apps/[app_id]**, for example **vc-module-pagebuilder** has **Apps/page-builder-shell/** and **Apps/page-builder-designer/**.
 
     ![image](media/app-folder.png)
 
