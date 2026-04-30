@@ -117,6 +117,8 @@ nav:
           - Back End Architecture:
                 - Tech Stack: Back-End-Architecture/01-tech-stack.md
                 - Conceptual Overview: Back-End-Architecture/02-conceptual-overview.md
+    - Security and Compliance:
+          - SOC 2 Type II Compliance: Security-and-Compliance/soc2-type-ii.md
     - CLI Tools:
           - Overview: CLI-tools/overview.md
           - Getting Started: CLI-tools/getting-started.md
@@ -216,8 +218,7 @@ nav:
                 - Adding SEO Capabilities to Module: Fundamentals/SEO/add-seo-to-module.md
                 - Configuration: Fundamentals/SEO/configuration.md
           - Dynamic Properties:
-                - Managing Dynamic Properties: Fundamentals/Dynamic-Properties/overview.md
-                - Using DynamicPropertyAccessor: Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md
+                - Accessing Dynamic Properties in Code: Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md
           - Notifications:
                 - Overview: Fundamentals/Notifications/overview.md
                 - Registering New Notification Type: Fundamentals/Notifications/registering-new-notification-type.md

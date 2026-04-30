@@ -21,13 +21,14 @@ The Virto Commerce Platform's core components are:
 	- PostgreSQL 12 and higher.
 
 * **Supported search engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:
-	- Elasticsearch.
-	- Elasticsearch 8.
-	- Elasticsearch 9.
-	- Elastic App Search.
-	- Azure Search.
-	- Algolia.
-	- Lucene.
+	- [Elasticsearch.](../Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md)
+	- [Elasticsearch 8.](../Fundamentals/Indexed-Search/integration/elastic-search-8.md)
+	- [Elasticsearch 9.](../Fundamentals/Indexed-Search/integration/elastic-search-9.md)
+	- [Elastic App Search.](../Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md)
+	- [Azure Search.](../Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md)
+	- [OpenSearch.](../Fundamentals/Indexed-Search/integration/opensearch.md)
+	- [Algolia.](../Fundamentals/Indexed-Search/integration/algolia.md)
+	- [Lucene.](../Fundamentals/Indexed-Search/integration/lucene.md)
 
 * **Caching**: Virto Commerce integrates Redis for efficient caching to improve performance and scalability.
 
@@ -40,5 +41,5 @@ The Virto Commerce Platform's core components are:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../01-tech-stack">← Technical stack</a>
-    <a href="../../CLI-tools/overview">CLI tools overview →</a>
+    <a href="../../Security-and-Compliance/soc2-type-ii">SOC 2 Type II compliance →</a>
 </div>

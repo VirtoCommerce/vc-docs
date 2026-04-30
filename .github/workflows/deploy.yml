@@ -20,7 +20,8 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.REPO_TOKEN }}
 
-      - name: Deploy
+      - name: Build and push
+        id: build
         uses: VirtoCommerce/vc-github-actions/update-virtocommerce-docs-versioned@master
         with:
           githubToken: ${{ secrets.REPO_TOKEN }}
@@ -30,3 +31,13 @@ jobs:
           dockerRegistry: ${{ secrets.MAIN_DOCKER_REGISTRY }}
           dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
           dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
+
+      - name: Trigger cloud deploy
+        run: |
+          gh api repos/VirtoCommerce/vc-github-actions/dispatches \
+            -f event_type=deploy-docs \
+            -f "client_payload[image_tag]=${{ steps.build.outputs.docker-image-tag }}" \
+            -f "client_payload[environment]=vcpt-license"
+          echo "✅ Dispatched cloud deploy for ${{ steps.build.outputs.docker-image-tag }}"
+        env:
+          GH_TOKEN: ${{ secrets.REPO_TOKEN }}

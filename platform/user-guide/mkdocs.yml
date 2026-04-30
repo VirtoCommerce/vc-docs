@@ -77,8 +77,7 @@ nav:
           - B2B Multi-Regional eCommerce Architecture: multiregional-ecommerce.md
           - Viewing Results on Frontend: view-results-on-frontend.md
           - Backup and Restore: backup-and-restore.md
-          - ADA Compliance: ada-compliance.md
-          - Managing Frontend Content: managing-content.md
+          - ADA and WCAG Compliance: ada-compliance.md
           - Glossary: glossary.md
     - Modules:
           - Overview: platform-overview.md
@@ -230,6 +229,8 @@ nav:
                 - Overview: customer-export-import/overview.md
           - Dynamic Associations:
                 - Overview: dynamic-associations/overview.md
+          - Dynamic Properties:
+                - Managing Dynamic Properties: dynamic-properties/managing-dynamic-properties.md
           - Environments Comparison: 
                 - Overview: environments-comparison/overview.md
                 - Comparing Environments: environments-comparison/compare-environments.md

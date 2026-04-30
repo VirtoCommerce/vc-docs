@@ -11,5 +11,5 @@ Currently, the only configurable setting is the priority order for resolving SEO
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../add-seo-to-module">← Adding SEO capabilities to module </a>
-    <a href="../../Dynamic-Properties/overview">Managing dynamic properties →</a>
+    <a href="../../Dynamic-Properties/using-DynamicPropertyAccessor">Accessing dynamic properties in code →</a>
 </div>

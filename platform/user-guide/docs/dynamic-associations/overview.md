@@ -30,5 +30,5 @@ The diagram below illustrates the function of the Dynamic Associations module:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../customer-export-import/overview">← Customer Export and Import module overview</a>
-    <a href="../../environments-comparison/overview">Environments Comparison module overview →</a>
+    <a href="../../dynamic-properties/managing-dynamic-properties">Managing dynamic properties →</a>
 </div>

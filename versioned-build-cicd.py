@@ -296,8 +296,12 @@ def main():
         print(f"  Deploying {subsite} version {version}...")
 
         # Build mike command
+        # --alias-type=copy: copy version files into the alias directory instead of
+        # generating HTML redirect stubs. Redirect stubs are only emitted for pages,
+        # so binary assets (images, PDFs, etc.) under latest/ would 404 otherwise.
         mike_cmd = [
             "mike", "deploy", "-F", config, "--deploy-prefix", subsite,
+            "--alias-type=copy",
             "--update-aliases", version
         ]
 
