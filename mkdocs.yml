@@ -540,7 +540,7 @@ extra:
                               - title: Getting Started
                                 url: /platform/developer-guide/latest/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
                               - title: Connecting to Platform
-                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/Guides/creating-custom-applications/#initial-configuration
                   - title: Deployment on Virto Cloud
                     content:
                         - links:
