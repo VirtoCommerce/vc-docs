@@ -913,7 +913,8 @@ nav:
           - Useful Tips: Updating-Virto-Commerce-Based-Project/tips.md
     - Custom Apps Development:
           - Overview: custom-apps-development/overview.md
-          - Registering New App: custom-apps-development/how-to-register-new-app.md
+          - Register Your Own App: custom-apps-development/register-your-own-app.md
+          - Register a Third-Party App: custom-apps-development/register-third-party-app.md
           - VC-Shell:
                 - Overview: custom-apps-development/vc-shell/vc-shell-overview.md
                 - Getting Started:
@@ -1043,5 +1044,3 @@ nav:
                             - VcWidget: custom-apps-development/vc-shell/Essentials/ui-components/vc-widget.md
                 - Extensibility:
                       - Modularity: custom-apps-development/vc-shell/Extensibility/modularity.md
-                - How-tos:
-                      - Connecting to Platform: custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md

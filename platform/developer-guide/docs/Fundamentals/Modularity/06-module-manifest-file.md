@@ -132,12 +132,11 @@ The **module.manifest** file can be configured using a number of required and op
 
 
 
-## Adding new app
+## Apps section
 
-To add a new web, add the app section into the **module.manifest** file:
+Apps are entries that show up in the Platform's **Apps** menu. Each app declares its identity, icon, and permission inside the `<apps>` section of **module.manifest**. The Platform serves the app's static content from the deployed module and binds it to the `/apps/[id]` URL.
 
-```xml
-...
+```xml title="module.manifest"
 <apps>
     <app id="reports">
         <title>Reports</title>
@@ -146,17 +145,26 @@ To add a new web, add the app section into the **module.manifest** file:
         <permission>PowerBiReports:access</permission>
     </app>
 </apps>
-...
 ```
 
-You can use the following attributes:
+### App attributes
 
-* `id`: A unique identifier for the app, which distinguishes it from other apps in the system.
-* `title`: The name or title of the app that is displayed to the users.
-* `description`: A short description of the app that gives users an overview of what the app does and its purpose.
-* `iconUrl`: The URL or path to the app's icon or logo used to identify the app in the system.
-* `permission`: The permissions or access rights required to use the app, which are used to control who can access the app and its features.
-*  `contentPath`: The default path to the app's content  specifying where the app's files are stored. If the ContentPath is set to `[VcModuleWeb]/Content/[Id]`, the app's content is stored in the **Content** folder of the **VcModuleWeb** module, with the app's Id appended to the end of the path.
+| Attribute | Description |
+| --- | --- |
+| `id` | A unique app identifier within the Platform. Becomes part of the runtime URL `/apps/[id]`. |
+| `title` | The name shown to users in the Apps menu. |
+| `description` | A short description shown next to the title. |
+| `iconUrl` | The URL or path to the app's icon. Typically `/apps/[id]/<file>` for assets shipped with the app, or `Modules/$(ModuleId)/Content/<file>` for module-level icons. |
+| `permission` | The permission a user must have to see and open the app. |
+| `contentPath` | Optional override for the path to the app's content, relative to the module's install directory. When omitted, the Platform serves the app from **Content/[id]** and throws a module initialization error if the folder is missing. |
+| `supportEmbeddedMode` | Optional. When `true`, allows the app to be opened inside the AngularJS-based back office in embedded mode. See [Enabling Embedded Mode for VC-Shell Instances](../../Tutorials-and-How-tos/How-tos/enable-embedded-mode-for-vc-shell.md). |
+
+### Registration procedures
+
+Two registration paths exist depending on what kind of app you ship:
+
+* [Register your own app](../../custom-apps-development/register-your-own-app.md): For custom back-office apps you build yourself, packaged into a module via the Virto Commerce CLI (vc-build). VC-Shell is the recommended framework, but other frontend toolchains, such as Vue, React, or Angular, are also supported.
+* [Register a third-party app](../../custom-apps-development/register-third-party-app.md): For Apps menu entries that hand the user off to an external service via a static redirect, for example, the [Power BI Reports module](https://github.com/VirtoCommerce/vc-module-power-bi-reports).
 
 
 
