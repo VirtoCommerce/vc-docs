@@ -1,0 +1,20 @@
+# General abbreviation tooltips, shared by every guide whose mkdocs.yml loads
+# overrides/hooks/abbreviations_loader.py.
+#
+# Per-guide files at the guide root (for example,
+# platform/developer-guide/abbreviations.yml) override the same key here; new
+# keys add to it.
+#
+# Use YAML anchors (&name) and aliases (*name) to share one definition across
+# casing or plural variants without duplicating the text.
+#
+# Scope: every abbreviation that appears in the docs, regardless of origin.
+# Native Virto-Commerce shorthands (xAPI, xCatalog) and external industry
+# abbreviations (EAV, DDD, SKU, GTIN) are treated alike. Multi-word vocabulary
+# terms ("Dynamic property", "Module") belong in the glossary with a clickable
+# cross-link from prose, not here. See CLAUDE.md §Abbreviation tooltips.
+#
+# Length budget: ~50-character target, ~100-character hard cap. Renders as a
+# non-interactive hover popover.
+
+"EAV": "Entity-Attribute-Value: data model for sparse, runtime-defined attributes that vary per entity."
