@@ -8,7 +8,7 @@ The Virto Commerce Platform's core components are:
 
 * **Platform manager (SPA)**: A web-based user interface built as an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for ecommerce applications. It works with all data through REST API the Platform runtime provides.
 
-* **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the modules and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless ecommerce experience, including support for different databases, search engines, and caching mechanisms.
+* **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the [modules](../glossary.md#module) and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless ecommerce experience, including support for different databases, search engines, and caching mechanisms.
 
 * **Modules**: Each module is a portion of the application's overall functionality. Multiple modules get organized into independent and interchangeable [software packages hosted by the Platform Application](../Fundamentals/Modularity/01-overview.md). All modules can be divided into three main categories depending on the tasks they are intended for:
 	- **Business modules**: Contain the implementation of business functionality.

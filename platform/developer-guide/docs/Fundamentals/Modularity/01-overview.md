@@ -2,7 +2,7 @@
 
 This article provides an overview of modular architecture, a core principle of any Virto Commerce solution.
 
-Virto Commerce is a modular Platform that consists of various loosely coupled components that are loaded into the Platform. It is a good way of tackling complexity for large applications by breaking it up into separate conceptual modules.
+Virto Commerce is a modular Platform that consists of various loosely coupled components that are loaded into the Platform. It is a good way of tackling complexity for large applications by breaking it up into separate conceptual [modules](../../glossary.md#module).
 
 A module encapsulates a portion of the application's overall functionality and typically contains a set of related components, such as domain features, including user interface and business logic, or pieces of application infrastructure and REST API methods.
 

@@ -17,7 +17,7 @@ This solution targets multi-regional support with a unified master catalog and c
 
 The architecture diagram shows three web stores aimed at different regions, all interfacing with a shared Virto Commerce backend that is integrated with various third-party systems such as ERPs or PIMs.
 
-Each web store serves as a sales point tailored to its respective region, employing localized language, catalog properties, descriptions, and currency pricing.
+Each web store serves as a sales point tailored to its respective region, employing localized language, [catalog properties](glossary.md#catalog-property), descriptions, and currency pricing.
 
 The Virto Commerce backend comprises essential modules (Catalog and Price list modules in the diagram).
 

@@ -1,6 +1,6 @@
 # Manage Properties
 
-For enhanced product filtering and search, let's configure properties within our catalog. They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
+For enhanced product filtering and search, let's configure [catalog properties](../glossary.md#catalog-property). They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
 
 ![Facets](media/properties-configuration.png){: style="display: block; margin: 0 auto;" }
 

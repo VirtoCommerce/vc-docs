@@ -1,6 +1,6 @@
 # Modules Installation
 
-The modules can be accessed only by admin user who can view view the installed modules, new updates, install new modules or remove the installed ones.
+The [modules](glossary.md#module) can be accessed only by admin user who can view view the installed modules, new updates, install new modules or remove the installed ones.
 
 Try our interactive demo to explore key features in action:
 

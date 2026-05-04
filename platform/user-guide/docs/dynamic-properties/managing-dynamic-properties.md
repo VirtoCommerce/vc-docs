@@ -1,6 +1,6 @@
 # Manage Dynamic Properties
 
-Dynamic properties extend almost any entity in the Platform at runtime, including Orders, Carts, Quotes, Customers, Companies, Shipments, and Payments. They are configured in the dedicated **Dynamic properties** section of the main menu, where you first pick the object type and then add the property to it.
+[Dynamic properties](../glossary.md#dynamic-property) extend almost any entity in the Platform at runtime, including Orders, Carts, Quotes, Customers, Companies, Shipments, and Payments. They are configured in the dedicated **Dynamic properties** section of the main menu, where you first pick the object type and then add the property to it.
 
 ## Add a dynamic property
 

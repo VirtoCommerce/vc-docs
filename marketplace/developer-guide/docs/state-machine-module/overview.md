@@ -1,6 +1,6 @@
 # Overview
 
-The Virto Commerce **State Machine** module provides a comprehensive framework for modeling and managing complex business processes through configurable finite state machines. This module enables organizations to define, visualize, and control the lifecycle of any business entity by establishing clear states, transitions, and business rules.
+The Virto Commerce **State Machine** [module](/platform/developer-guide/latest/glossary#module) provides a comprehensive framework for modeling and managing complex business processes through configurable finite state machines. This module enables organizations to define, visualize, and control the lifecycle of any business entity by establishing clear states, transitions, and business rules.
 
 A **state machine** (also known as a finite state machine or FSM) is a computational model used to design algorithms and model complex behaviors. In business contexts, state machines help manage the lifecycle of entities by defining:
 
