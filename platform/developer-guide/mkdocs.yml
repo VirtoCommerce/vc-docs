@@ -99,7 +99,6 @@ extra_javascript:
 nav:
     - About Virto Commerce Platform: getting-to-know-platform.md
     - Overview: index.md
-    - Glossary: glossary.md
     - Getting Started:
           - System Requirements: Getting-Started/system-requirements.md
           - Installation Guide:
@@ -246,7 +245,7 @@ nav:
                       - Adding Azure AD as SSO Provider:   Fundamentals/Security/extensions/adding-azure-as-sso-provider.md
                       - Adding Google as SSO Provider: Fundamentals/Security/extensions/adding-google-as-sso-provider.md
                 - Security in Depth: Fundamentals/Security/security-in-depth.md
-                - Passwords Management: Fundamentals/Security/password-management.md
+                - Password Management: Fundamentals/Security/passwords-management.md
                 - Configuration: Fundamentals/Security/configuration.md
           - Logging:
                 - Overview: Fundamentals/Logging/overview.md
@@ -883,6 +882,7 @@ nav:
                 - Connecting Virto Commerce to AI agents via onX Adapter: Tutorials-and-How-tos/How-tos/connect-to-ai-agents-via-onx.md
                 - Adding Case-Insensitive Search Support for PostgreSQL: Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre.md
                 - Setting up Context7: Tutorials-and-How-tos/How-tos/using-context7.md
+                - Using llms.txt: Tutorials-and-How-tos/How-tos/using-llms-txt.md
                 - Swagger/API Integration in Virto Commerce: Tutorials-and-How-tos/How-tos/swagger-api.md
                 - Generating C# Client from VC Swagger with NSwag: Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md
                 - Type Inheritance Support in Swagger API: Tutorials-and-How-tos/How-tos/type-inheritance-support-in-swagger.md
@@ -1047,3 +1047,4 @@ nav:
                       - Modularity: custom-apps-development/vc-shell/Extensibility/modularity.md
                 - How-tos:
                       - Connecting to Platform: custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md
+    - Glossary: glossary.md

@@ -1,0 +1,67 @@
+# Virto Commerce Cloud
+
+> Cloud sub-index of the Virto Commerce AI documentation hub. Covers Virto Cloud, the managed deployment target for the Platform and Frontend, plus self-hosted cloud patterns (Azure, AWS, on-premise). Includes environment provisioning via portal or CLI, custom module/Frontend deployment, GitOps workflows, and end-to-end "build a store on cloud" walkthroughs. For Platform/backend, Frontend, Marketplace, VC-Shell, or cross-vendor concept mapping, see the parent hub at https://docs.virtocommerce.org/llms.txt.
+
+Virto Cloud runs the same `virtocommerce/platform` Docker image used for local Docker development; environments include Elasticsearch, SQL Database, Redis, and File Storage. Custom modules deploy as ZIP artifacts pulled from GitHub releases (or equivalent).
+
+## Start here
+
+- [Deploy on Virto Cloud](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/deploy-on-virto-cloud/). End-to-end portal-driven deployment walkthrough.
+- [Cloud Portal](https://portal.virtocommerce.cloud/). Virto Cloud customer portal entry point.
+
+## Environment provisioning
+
+- [Create environment via CLI and vc-build](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/create-environment-via-cli-and-vc-build/). Scriptable environment provisioning.
+- [QA new environment](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/qa-new-environment/). Verifying a freshly provisioned environment.
+- [VirtoCloud overview](https://docs.virtocommerce.org/platform/developer-guide/latest/CLI-tools/virto-cloud-overview/). Cloud-side architectural concepts.
+- [VirtoCloud CLI](https://docs.virtocommerce.org/platform/developer-guide/latest/CLI-tools/virto-cloud/). `vc-build CloudInit`, `CloudUp`, `CloudDeploy`, `CloudEnvList`, `CloudEnvLogs`, and related targets.
+
+## Customization on cloud
+
+- [Backend customization](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/backend-customization/). Building a custom module and deploying it to a Virto Cloud environment.
+- [Frontend customization](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/frontend-customization/). Deploying a custom Frontend to a Virto Cloud environment.
+- [Store branding](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/store-branding/). Theme and branding application.
+- [Integrations configuration](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/integrations-configuration/). Connecting external systems (payment, shipping, search, CMS).
+
+## End-to-end store walkthrough
+
+These pages walk through standing up a complete demo store ("DentalDemo") on Virto Cloud.
+
+- [Create and configure catalog](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/catalog-creation/). Catalog setup.
+- [Add products via CSV](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/add-products-via-csv/). Bulk product import.
+- [Create and configure store](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/store-configuration/). Store setup.
+- [Main menu setup](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/main-menu-setup/). Configuring storefront navigation.
+- [Footer creation](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/footer-creation/). Configuring storefront footer.
+- [Create page in Builder.io](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/create-page-in-builder-io/). Visual page authoring.
+
+## CI/CD and GitOps
+
+- [Enable GitOps](https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/enable-gitops/). GitOps workflow for cloud environments.
+- [Build automation targets](https://docs.virtocommerce.org/platform/developer-guide/latest/CLI-tools/build-automation/). vc-build pipeline primitives used by cloud deployments.
+- [Cold start and data migration](https://docs.virtocommerce.org/platform/developer-guide/latest/CLI-tools/cold-start-and-data-migration/). Importing data into a fresh cloud environment.
+
+## Self-hosted cloud (Azure, AWS, on-premise)
+
+- [Deploy Platform on Azure](https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure/). Azure App Service and Azure Functions deployment.
+- [Modules development via Docker](https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/docker-modules-development/). Local Docker dev environment that mirrors cloud runtime.
+- [Scalability options](https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Scalability/scalability-options/). Horizontal scaling and Hangfire offload patterns.
+- [Setting up Redis](https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Caching/03-setting-up-Redis/). Distributed cache for multi-instance deployments.
+
+## Operations and observability
+
+- [Health checks](https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/health-checks/). Configuring `/health` endpoints for cloud probes.
+- [Logging overview](https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Logging/overview/). Centralized logging providers.
+- [Backup and restore](https://docs.virtocommerce.org/platform/user-guide/latest/backup-and-restore/). Operational procedures.
+- [Sharing bearer tokens](https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/sharing-bearer-tokens/). Multi-instance token sharing.
+
+## Versioning
+
+- [Release strategy overview](https://docs.virtocommerce.org/platform/developer-guide/latest/Updating-Virto-Commerce-Based-Project/release-strategy-overview/). Stable bundles vs edge releases.
+- [Stable releases](https://docs.virtocommerce.org/platform/developer-guide/latest/Updating-Virto-Commerce-Based-Project/stable-releases/). Recommended for production cloud environments.
+- [Install a specific version](https://docs.virtocommerce.org/platform/developer-guide/latest/Updating-Virto-Commerce-Based-Project/installing-specific-version/). Pinning a known-good cloud image.
+
+## Optional
+
+- [Cloud Portal login](https://portal.virtocommerce.cloud/#!/login). Sign in to manage environments.
+- [Support portal](https://help.virtocommerce.com/support/home). Cloud support entry point.
+- [Community forum](https://www.virtocommerce.org/). Discussions and Q&A.

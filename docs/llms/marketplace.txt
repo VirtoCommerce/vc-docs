@@ -1,0 +1,67 @@
+# Virto Commerce Marketplace
+
+> Marketplace sub-index of the Virto Commerce AI documentation hub. Covers multi-vendor marketplace functionality split across two portals: the Operator Portal (marketplace owner) and the Vendor Portal (sellers). Built on top of the Platform; vendors manage their own catalogs, offers, orders, and quotes; operators curate the master catalog, manage vendor onboarding, set commission fees, and orchestrate cross-vendor workflows. Includes the State Machine module for codifying business processes. For Platform/backend, Frontend, VC-Shell, Cloud, or cross-vendor concept mapping, see the parent hub at https://docs.virtocommerce.org/llms.txt.
+
+## Start here
+
+- [Marketplace user guide root](https://docs.virtocommerce.org/marketplace/user-guide/latest/). Top-level marketplace documentation.
+- [Operator Portal overview](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/overview/). Marketplace owner capabilities.
+- [Vendor Portal overview](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/overview/). Vendor self-service capabilities.
+
+## Operator Portal
+
+- [Master catalog](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/master-catalog/). Operator-owned product taxonomy that vendors map their listings into.
+- [Marketplace products](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/marketplace-products/). Curating products surfaced on the storefront.
+- [Vendors management](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Vendors-management/). Vendor lifecycle and access.
+- [Registration requests](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/registration-requests/). Approving new vendor signups.
+- [Commission fees setup](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Commission-fees-setup/). Configuring marketplace commission structure.
+- [Operator orders](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/operator-orders/). Cross-vendor order visibility for the operator.
+- [Offers](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/offers/). Operator-side view of vendor offers.
+- [Quotes](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/quotes/). Operator-side view of B2B quotes.
+- [State machines](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/state-machines/). Workflow definitions used by marketplace processes.
+- [Communication](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/communication/). Operator-vendor messaging.
+- [AI helper](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/ai-helper/). Built-in AI assistance for operator tasks.
+
+## Vendor Portal
+
+- [My store](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/my-store/). Vendor storefront-presence configuration.
+- [Products management](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/products-management/). Vendor product CRUD.
+- [Marketplace products](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/marketplace-products/). Linking vendor products to operator master catalog.
+- [Import](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/import/). Bulk product import for vendors.
+- [Offers](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/offers/). Vendor offers, prices, and availability.
+- [Orders](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/orders/). Vendor order management.
+- [Quotes](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/quotes/). B2B quote handling.
+- [Rating and reviews](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/rating-and-reviews/). Vendor-facing ratings.
+- [Communication](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/communication/). Vendor-operator messaging.
+- [AI assistant](https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/ai-assistant/). Built-in AI assistance for vendor tasks.
+
+## State Machine module
+
+The State Machine module powers marketplace workflows by codifying multi-step business processes (vendor onboarding, order routing, dispute handling, etc.) as configurable state machines.
+
+- [State machine overview](https://docs.virtocommerce.org/marketplace/developer-guide/latest/state-machine-module/overview/). Module purpose and concepts.
+- [Data structure](https://docs.virtocommerce.org/marketplace/developer-guide/latest/state-machine-module/data-structure/). State machine data model.
+- [Entity types](https://docs.virtocommerce.org/marketplace/developer-guide/latest/state-machine-module/entity-types/). Entities that can be driven by state machines.
+- [Transition conditions](https://docs.virtocommerce.org/marketplace/developer-guide/latest/state-machine-module/transition-conditions/). Conditional logic gating state transitions.
+- [Operator portal actions](https://docs.virtocommerce.org/marketplace/developer-guide/latest/state-machine-module/operator-portal-actions/). Operator-side action triggers.
+- [Vendor portal actions](https://docs.virtocommerce.org/marketplace/developer-guide/latest/state-machine-module/vendor-portal-actions/). Vendor-side action triggers.
+
+## Related Platform topics
+
+Marketplace functionality builds on Platform primitives. See the Platform sub-index for details.
+
+- [Platform sub-index](https://docs.virtocommerce.org/llms/platform.txt). Backend modules, extensibility, APIs, CLI.
+- [Catalog overview](https://docs.virtocommerce.org/platform/user-guide/latest/catalog/overview/). Underlying catalog model used by master catalog and vendor catalogs.
+- [Order management overview](https://docs.virtocommerce.org/platform/user-guide/latest/order-management/overview/). Underlying order model.
+- [GraphQL xAPI overview](https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/). API surface that marketplace Frontends consume.
+- [Quote GraphQL reference](https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Quote/overview/). B2B quote operations used in marketplace flows.
+
+## Solution context
+
+- [Marketplace solution overview](https://virtocommerce.com/solutions/marketplace). Product-level positioning for marketplace use cases.
+- [B2B headless commerce](https://virtocommerce.com/b2b-headless-ecommerce-solution). Adjacent solution for B2B-only deployments without multi-vendor needs.
+
+## Optional
+
+- [Community forum](https://www.virtocommerce.org/). Discussions and Q&A on marketplace patterns.
+- [Release notes](https://www.virtocommerce.org/c/news-digest/). Monthly digest of what shipped, including marketplace modules.

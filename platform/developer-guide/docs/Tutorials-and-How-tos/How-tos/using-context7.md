@@ -78,5 +78,5 @@ Implement a custom pricing calculator service in a Virto Commerce module. use co
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../adding-case-sensitive-search-support-for-postgre">← Adding case-insensitive search support for PostgreSQL </a>
-    <a href="../swagger-api">Swagger/API integration  →</a>
+    <a href="../using-llms-txt">Using llms.txt  →</a>
 </div>

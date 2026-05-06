@@ -1,0 +1,75 @@
+# Virto Commerce
+
+> Open-source, modular .NET ecommerce platform for B2B, B2C, B2B2C, and marketplaces. This file is the **hub** for AI-readable Virto Commerce documentation. Each product line below has its own dedicated sub-index. Stack: .NET 10 and EF Core 10 backend, Vue 3 Frontend with xAPI, modular Atomic Architecture (Module.Core / Module.Data / Module.Web vertical slice).
+
+## Bootstrap
+
+If your AI agent has not loaded Virto Commerce context yet, prefix your prompt with one of the following directives.
+
+For platform and backend questions:
+
+> Before answering, please read https://docs.virtocommerce.org/llms/platform.txt to learn about the latest Virto Commerce Platform documentation, then answer my question.
+
+For Frontend (Vue 3) or xAPI questions:
+
+> Before answering, please read https://docs.virtocommerce.org/llms/frontend.txt to learn about the latest Virto Commerce Frontend documentation, then answer my question.
+
+For "how does Virto Commerce do X like Shopify, Magento, commercetools, or BigCommerce":
+
+> Before answering, please read https://docs.virtocommerce.org/llms/rosetta.txt to map ecommerce concepts across vendors, then answer my question.
+
+For deeper Virto knowledge in any session, use one of these companion tools.
+
+- Context7 MCP. Queries Virto docs at library id `/virtocommerce/vc-docs` with weekly refresh: https://context7.com/virtocommerce/vc-docs.
+- Virto OZ. Built-in documentation chatbot for natural-language questions on the docs site: https://docs.virtocommerce.org/platform/user-guide/latest/virto-oz/.
+
+## Products
+
+Six AI-readable indexes. Use the one closest to the question, then drill into the linked doc pages.
+
+- [Platform](https://docs.virtocommerce.org/llms/platform.txt). Backend modules, admin SPA, xAPI gateway, .NET 10 and EF Core 10 stack. The starting point for backend and full-stack developers.
+- [Frontend](https://docs.virtocommerce.org/llms/frontend.txt). vc-frontend Vue 3 SPA, xAPI integration, theming, customization, customer-facing experience. The starting point for Frontend developers.
+- [Marketplace](https://docs.virtocommerce.org/llms/marketplace.txt). Operator Portal, Vendor Portal, and the State Machine module. Multi-vendor commerce.
+- [VC-Shell](https://docs.virtocommerce.org/llms/vc-shell.txt). TypeScript and Vue framework for building custom admin apps outside the legacy AngularJS shell.
+- [Cloud](https://docs.virtocommerce.org/llms/cloud.txt). Deployment on Virto Cloud, environments, CI/CD with vc-build, plus Azure / AWS / on-premise patterns.
+- [Rosetta](https://docs.virtocommerce.org/llms/rosetta.txt). Cross-vendor concept mapping. Translates Virto vocabulary to Shopify, Adobe Commerce (Magento), commercetools, and BigCommerce. Useful when "I know how X works in vendor Y" needs to become "I want to do X in Virto".
+
+## For Product Owners
+
+If you are evaluating capabilities or mapping business needs to modules, start with these.
+
+- [Atomic Architecture](https://virtocommerce.com/atomic-architecture). Mental model. Atoms, Molecules, Cells, and Organisms compose into commerce solutions.
+- [Product overview](https://virtocommerce.com/b2b-ecommerce-platform). Capability summary covering B2B, B2C, B2B2C, and marketplace.
+- [B2B headless commerce](https://virtocommerce.com/b2b-headless-ecommerce-solution). Quotes, organizations, contract pricing, and punchout.
+- [Marketplace solution](https://virtocommerce.com/solutions/marketplace). Multi-vendor patterns.
+- [Composable commerce](https://virtocommerce.com/composable-ecommerce). MACH-aligned composability.
+- [User Guide](https://docs.virtocommerce.org/platform/user-guide/latest/). Back-office (Admin SPA) end-user documentation.
+- [Frontend public demo](https://virtostart-demo-store.govirto.com/). Live customer experience reference.
+- [REST API live reference](https://virtostart-demo-admin.govirto.com/docs/index.html). Live Swagger UI hosted by Virto.
+- [Release notes](https://www.virtocommerce.org/c/news-digest/). Monthly digest of what shipped.
+- [Community forum](https://www.virtocommerce.org/). Roadmap signals, Q&A, and the dev training program.
+
+## For Solution Developers
+
+If you ship features end-to-end, start with the Platform sub-index, then add Frontend and Cloud as needed.
+
+- [Platform sub-index](https://docs.virtocommerce.org/llms/platform.txt). The largest child of this hub. Modules, services, extensibility, CLI, AI tooling.
+- [Developer Guide root](https://docs.virtocommerce.org/platform/developer-guide/latest/). Top-level developer documentation.
+- [Architecture conceptual overview](https://docs.virtocommerce.org/platform/developer-guide/latest/Back-End-Architecture/02-conceptual-overview/). Read first.
+- [Installation Guide (Windows)](https://docs.virtocommerce.org/platform/developer-guide/latest/Getting-Started/Installation-Guide/windows/). Local setup.
+- [Modules development via Docker](https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/docker-modules-development/). Containerized backend dev environment.
+- [REST API live](https://virtostart-demo-admin.govirto.com/docs/index.html). Browse and try every REST endpoint.
+- [GraphQL xAPI getting started](https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/getting-started/). xAPI usage primer.
+- [Setting up Context7](https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/using-context7/). MCP grounding for Claude Code, Cursor, and other editors.
+- [Dev training program](https://www.virtocommerce.org/t/virto-commerce-dev-training-program/786). First-day, module dev, xAPI, and Frontend tracks.
+- [Skills required for Virto developers](https://www.virtocommerce.org/t/what-are-the-skills-required-for-virto-commerce-developer/90). Prerequisites and self-assessment.
+
+## Style guide
+
+If you are an AI authoring or editing Virto Commerce documentation, follow [vc-docs CLAUDE.md](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/main/CLAUDE.md) for spelling, terminology, formatting, and the cross-platform comparison-table convention. Highlights:
+
+- Use **Frontend** (not "storefront", not "Frontend Application").
+- Use **xAPI** in prose, not XAPI.
+- Avoid the em dash with spaces. Use a colon, comma, or new sentence.
+- End every list item with a period.
+- Verify every Virto class, interface, and type name from source before writing it.
