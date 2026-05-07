@@ -609,3 +609,4 @@ extra_css:
     - assets/stylesheets/main.css
     - assets/stylesheets/fonts.css
     - assets/stylesheets/version-selector.css
+    - assets/stylesheets/ai-overrides.css
