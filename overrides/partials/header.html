@@ -45,6 +45,31 @@
         {% include "partials/search.html" %}
         {% endif %}
 
+        <!-- AI agent button (desktop) -->
+        <button
+            type="button"
+            id="virto-oz-button"
+            class="virto-oz-button md-header__ai-button"
+            aria-label="Ask AI"
+            title="Ask AI">
+            <span class="md-header__ai-button-label">Ask AI</span>
+            <span class="md-header__ai-button-icon md-icon">
+                {% include "assets/icons/ai-sparkles.svg" %}
+            </span>
+        </button>
+
+        <!-- AI agent button (mobile) -->
+        <button
+            type="button"
+            id="virto-oz-button-mobile"
+            class="virtooz-button-mobile md-header__ai-button md-header__ai-button--mobile"
+            aria-label="Ask AI"
+            title="Ask AI">
+            <span class="md-header__ai-button-icon md-icon">
+                {% include "assets/icons/ai-sparkles.svg" %}
+            </span>
+        </button>
+
         {% if config.repo_url %}
         <div class="md-header__source">
             {% include "partials/source.html" %}
