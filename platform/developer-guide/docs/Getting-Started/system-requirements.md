@@ -15,14 +15,15 @@ Before installing, make sure your computer meets these minimum requirements:
 ## Supported operation systems for .NET 8
 
 !!! note
-    Virto Commerce (3.1000+) introduces a significant technical update by transitioning the Platform to .NET 10. 
+    Virto Commerce (3.1000+) introduces a significant technical update by transitioning the Platform from .NET 8 to .NET 10. 
 
     ![Readmore](media/readmore.png){: width="25"} [Read more about upgrading to .NET 10](../Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md)    
 
-The Virto Platform runs on .NET 8. [.NET 8](https://github.com/dotnet/core/blob/main/release-notes/8.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
+The Virto Platform runs on .NET 10. [.NET 10](https://github.com/dotnet/core/blob/main/release-notes/8.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
 
-For issues with .NET on operating systems not listed here, open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community . 
-
+For issues with .NET on operating systems not listed here, open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community. 
+<br>
+<br>
 ![Readmore](media/readmore.png){: width="25"} [List of repositories](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md)
 
 === "Windows"
@@ -34,8 +35,6 @@ For issues with .NET on operating systems not listed here, open a GitHub issue i
     |[Windows Server](https://learn.microsoft.com/windows-server/) | 2012+                | x64, x86        | [Windows Server](https://learn.microsoft.com/windows-server/get-started/windows-server-release-info)   |
     |[Windows Server Core](https://learn.microsoft.com/windows-server/) | 2012+           | x64, x86        | [Windows Server](https://learn.microsoft.com/windows-server/get-started/windows-server-release-info)   |
     |[Nano Server](https://learn.microsoft.com/windows-server/get-started/getting-started-with-nano-server) | Version 1809+| x64| [Windows Server](https://learn.microsoft.com/windows-server/get-started/windows-server-release-info)|
-
-    .NET 8 is supported in the x64 emulator on Windows 11 Arm64.
 
     
 === "Linux"
@@ -64,7 +63,6 @@ For issues with .NET on operating systems not listed here, open a GitHub issue i
     |-------------------------------------------|---------------------------|-------------------|
     |[macOS](https://support.apple.com/macos)   | 10.15+                    | x64, Arm64        |
 
-    .NET 8 is supported in the Rosetta 2 x64 emulator.
 
 === "Android"
 
@@ -82,11 +80,6 @@ For issues with .NET on operating systems not listed here, open a GitHub issue i
     | [tvOS Simulator](https://support.apple.com/apple-tv)  | 11.0+                   | x64, Arm64        |
     | [MacCatalyst](https://support.apple.com/macos)        | 10.15+, 11.0+ on Arm64  | x64, Arm64        |
 
-
-!!! note
-    The following versions [are no longer supported by .NET 8.0](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md).
-
-
 ## Supported databases
 
 The Virto Commerce Platform supports:
@@ -95,6 +88,7 @@ The Virto Commerce Platform supports:
 * MySql Server 5.7 and higher.
 * PostgreSQL 12 and higher.
 
+<br>
 ![Readmore](media/readmore.png){: width="25"} [Configuring Platform with database providers](../Fundamentals/Persistence/DB-Agnostic/overview.md)
 
 ## Supported browsers
@@ -111,6 +105,7 @@ The Virto Commerce Platform Manager supports all modern evergreen browsers:
 <br>
 ********
 
-<div style="display: flex; justify-content: flex-end;">
-    <a href="../../Getting-Started/Installation-Guide/windows">Installation guide →</a>
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ai-quick-start">← AI quick start </a>
+    <a href="Installation-Guide/windows">Installation guide →</a>
 </div>

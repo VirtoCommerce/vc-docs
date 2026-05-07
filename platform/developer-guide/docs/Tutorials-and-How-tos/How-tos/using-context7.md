@@ -70,6 +70,9 @@ Append **use context7** to any platform-specific prompt to ground the generation
 Implement a custom pricing calculator service in a Virto Commerce module. use context7
 ```
 
+<br>
+<br>
+![Readmore](media/readmore.png){: width="25"} [AI quick start](../../Getting-Started/ai-quick-start.md)
 
 
 <br>

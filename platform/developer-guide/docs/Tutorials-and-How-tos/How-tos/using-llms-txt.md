@@ -27,16 +27,9 @@ When asked Virto Commerce questions, AI assistants often answer from training da
 * Always reflects the current documentation site.
 * Reduces hallucinated APIs and deprecated patterns.
 
-
-## llms.txt vs other AI tooling
-
-Virto Commerce provides three complementary AI-grounding tools. Pick the one that matches your workflow.
-
-| Tool            | Effort              | Best for                                                           |
-|-----------------|----------------------------------------|--------------------------------------------------|
-| **llms.txt**    | Zero install, works in any chat        | One-off questions, evaluating Virto Commerce, no tooling commitment  |
-| **[Virto OZ](../../../../user-guide/virto-oz.md)** | Zero install, built into the docs site | Browsing-while-reading, step-by-step guides with links to actual articles |
-| **[Context7 MCP](using-context7.md)**  | One-time MCP install in your editor    | Active coding sessions, persistent project work, code generation |
+<br>
+<br>
+![Readmore](media/readmore.png){: width="25"} [AI quick start](../../Getting-Started/ai-quick-start.md)
 
 
 

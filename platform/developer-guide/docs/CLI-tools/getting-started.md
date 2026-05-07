@@ -4,7 +4,7 @@ In this guide, we will explore how to start using **VirtoCommerce.GlobalTool**.
 
 ## Prerequisites
 
-* .NET SDK 8.x
+* .NET SDK 10.x
 * Node.js 12.x
 * Git SCM
 

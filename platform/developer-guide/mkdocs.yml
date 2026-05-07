@@ -100,6 +100,8 @@ nav:
     - About Virto Commerce Platform: getting-to-know-platform.md
     - Overview: index.md
     - Getting Started:
+          - Quick Start: Getting-Started/quick-start.md
+          - AI Quick Start: Getting-Started/ai-quick-start.md
           - System Requirements: Getting-Started/system-requirements.md
           - Installation Guide:
                 - Windows: Getting-Started/Installation-Guide/windows.md
