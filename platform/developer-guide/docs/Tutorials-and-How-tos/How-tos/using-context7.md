@@ -64,7 +64,7 @@ Select your preferred environment and follow the steps to set up Context7 as an 
 
 ## Usage
 
-Append **use context7** to any platform-specific prompt to ground the generation on current Virto Commerce documentation retrieved at runtime. The directive triggers documentation retrieval before the AI generates its response.
+Append `use context7` to any platform-specific prompt to ground the generation on current Virto Commerce documentation retrieved at runtime. The directive triggers documentation retrieval before the AI generates its response.
 
 ```
 Implement a custom pricing calculator service in a Virto Commerce module. use context7

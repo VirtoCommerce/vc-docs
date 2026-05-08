@@ -77,6 +77,6 @@ You now have the foundation to explore, extend, and contribute to the Virto Comm
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../..">← Overview </a>
-    <a href="../ai-quick-start">AI quick start →</a>
+    <a href="../ai-quick-start">AI assistance →</a>
 </div>
 
