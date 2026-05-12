@@ -1,0 +1,20 @@
+title: Concepts
+nav:
+  - Blade Navigation: blade-navigation.md
+  - Modules: modules.md
+  - Extensions: extensions.md
+  - Services: services.md
+  - Notifications: notifications.md
+  - Layout: layout.md
+  - Permissions: permissions.md
+  - Localization: localization.md
+  - State Persistence: state-persistence.md
+  - API Clients: api-clients.md
+  - AI Agent: ai-agent.md
+  - Extension Points: extension-points.md
+  - Global Error Handler: global-error-handler.md
+  - Internationalization: i18n.md
+  - Modularity: modularity.md
+  - Permissions Plugin: permissions-plugin.md
+  - SignalR: signalr.md
+  - Validation: validation.md

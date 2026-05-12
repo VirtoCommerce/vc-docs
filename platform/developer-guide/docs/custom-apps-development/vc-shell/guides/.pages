@@ -1,0 +1,10 @@
+title: Guides
+nav:
+  - Blades: blades/index.md
+  - Data: data/index.md
+  - Forms: forms/index.md
+  - UI: ui/index.md
+  - Modules and Extensions: modules-and-extensions/index.md
+  - Platform: platform/index.md
+  - Cookbook: cookbook/index.md
+  - Troubleshooting: troubleshooting/index.md

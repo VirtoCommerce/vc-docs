@@ -1,0 +1,7 @@
+title: Getting Started
+nav:
+  - installation.md
+  - create-your-app.md
+  - project-structure.md
+  - connecting-to-platform.md
+  - first-blade.md

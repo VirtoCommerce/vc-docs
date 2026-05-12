@@ -1,0 +1,5 @@
+title: Custom Apps Development
+nav:
+  - Overview: overview.md
+  - Registering New App: how-to-register-new-app.md
+  - vc-shell
