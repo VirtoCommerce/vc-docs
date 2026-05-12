@@ -1,0 +1,10 @@
+title: Concepts
+nav:
+  - Blade Navigation: blade-navigation.md
+  - Modules: modules.md
+  - Extensions: extensions.md
+  - Layout: layout.md
+  - Permissions Model: permissions-model.md
+  - Localization: localization.md
+  - State Persistence: state-persistence.md
+  - API Clients: api-clients.md
