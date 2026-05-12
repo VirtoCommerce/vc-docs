@@ -27457,7 +27457,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 12, 2026 10:23:12 UTC">February 12, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 12, 2026 06:52:26 UTC">May 12, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27485,7 +27485,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>PostgreSQL.</li>
 </ul>
 <p>At the same time, Virto Commerce architecture allows you add custom database provider on top of Entity Framework for solution as well as for a specific module.</p>
-<p>Select the tab with the required provider setup information.</p>
+<p>Select the tab with the required provider setup information:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Microsoft SQL Server</label><label for="__tabbed_1_2">MySql</label><label for="__tabbed_1_3">PostgreSql</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -27518,17 +27518,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Change <code>ConnectionStrings</code> as follows: </p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MySql&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Allow User Variables=true;&quot;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">},</span>
 </code></pre></div>
 <p>or</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;DatabaseProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MySql&quot;</span><span class="p">,</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;Allow User Variables=true;&quot;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">},</span>
 </code></pre></div>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>Allow User Variables=true</code> parameter is required for Hangfire support when using MySQL.<br />
+Without it, background jobs may fail with SQL execution errors.</p>
+</div>
 </div>
 <div class="tabbed-block">
 <p><strong>Supported version</strong>: PostgreSQL 12 or higher.</p>
