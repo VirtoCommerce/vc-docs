@@ -1,50 +1,42 @@
-# VC-Shell Overview
+# VC-Shell
 
-[VC-Shell Framework](https://github.com/VirtoCommerce/vc-shell) for specialized back-office applications is created to replace the current VC Platform manager concept.
+Vue 3 frontend framework for building back-office applications on the Virto Commerce Platform.
 
-![Vendor portal](../../media/vendor-portal.png)
+VC-Shell gives you the chrome around your business logic: an authenticated app shell, a blade-paradigm navigation engine, an Atomic Design component library, a dynamic module loader, and ready-to-wire integration with OAuth, permissions, i18n, SignalR, and the Platform's API surface. You focus on modules; the framework handles routing, layout, state plumbing, and Platform connectivity.
 
-VC-Shell is a modern framework for building specialized back-office applications using Vue 3. It provides a set of reusable components, services, and utilities designed to simplify and speed up the development of custom business applications.
+Apps you build with VC-Shell run as standalone Vue 3 bundles or as remote Module Federation modules loaded by an existing host. The same code targets the Virto Commerce admin portal, vendor-facing marketplace consoles, and any internal tool that needs to read or write Platform data.
 
-## Purpose
+You stay in the Vue 3 ecosystem the whole way through: Composition API, TypeScript, Vue Router, Pinia, Vite. VC-Shell does not replace those tools; it composes them into a back-office-shaped starting point so the first screen you ship looks and behaves like the rest of the Virto Commerce experience.
 
-VC-Shell was created to replace the AngularJS-based Virto Commerce Platform manager with a modern Vue 3 implementation. The key goals of the framework are:
+![Readmore](what-is-vc-shell.md){: width="25"} What is VC-Shell.
 
-- Technological modernization from AngularJS to Vue 3
-- Modular architecture with separate packages and release cycles
-- Simplified customization for specialized back-office applications
-- Consistent design system with reusable components
+```bash
+npx @vc-shell/create-vc-app my-app
+cd my-app && yarn install && yarn serve
+```
 
-## Key features
+![Vendor portal](../../media/vendor-portal.png){: style="display: block; margin: 0 auto;" }
 
-- **Modular architecture**: Enables developing independent blocks of functionality (modules), enhancing scalability and maintainability.
-- **Reusable components**: Offers an extensive library of pre-built UI components for creating consistent user interfaces.
-- **Service system**: Provides extensible services for common business logic and integrations.
-- **Theming support**: Allows flexible appearance customization using CSS variables and Tailwind CSS.
-- **TypeScript integration**: Features full TypeScript support for increased code reliability and an improved developer experience.
-- **Responsive design**: Components and layouts are adapted for correct display on various devices.
-- **Internationalization**: Includes built-in multi-language support for global applications.
+## What you build with it
 
-## Tech stack
+- Data-management modules: list and details screens, bulk operations, custom dynamic properties.
+- Workflow-driven back office: wizards, multi-step approvals, dashboards with widgets.
+- Vendor and partner portals that expose a slice of the Platform to external users.
+- Standalone bundles or remote Module Federation modules loaded by an existing host.
 
-- **Vue 3**: Progressive JavaScript framework for building user interfaces
-- **TypeScript**: Static typing for improved maintainability and developer experience
-- **Vite**: Fast build tooling for modern web projects
-- **Yarn Berry**: Package manager with support for monorepo architecture
-- **Tailwind CSS**: Utility-first CSS framework
-- **Storybook**: Development environment for UI components
+![Readmore](architecture-overview.md){: width="25"} Architecture overview.
 
-## Framework structure
+## Live components
 
-The VC-Shell framework itself is organized into several key internal directories within its own codebase (typically found under a `framework/` path in the monorepo). Understanding this internal structure can be helpful for advanced customization or contributions to the framework:
+<div class="vc-storybook-embed" style="--height: 420px">
+  <iframe
+    src="https://vc-shell-storybook.govirto.com/iframe.html?id=action-vcbutton--all-variants&viewMode=story"
+    width="100%"
+    height="100%"
+    frameborder="0"
+  ></iframe>
+</div>
 
-- **core**: Core functionality including API clients, services, and global utilities.
-- **ui**: User interface components organized using atomic design principles.
-- **shared**: Shared components, composables, and utilities used across the framework.
-- **assets**: Static assets like base styles, images, and icons for the framework itself.
-- **locales**: Default internationalization resources for framework elements.
+Full catalog: [Storybook](https://vc-shell-storybook.govirto.com/).
 
-![Readmore](../../media/readmore.png){: width="25"} [What is VC-Shell?](what-is-vc-shell.md)
-
-![Readmore](../../media/readmore.png){: width="25"}  [Architecture Overview](architecture-overview.md)
-
+![Readmore](../getting-started/installation.md){: width="25"} Install and run your first app.
