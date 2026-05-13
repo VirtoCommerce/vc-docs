@@ -1,0 +1,9 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Misc
+nav:
+  - VcBadge: vc-badge.md
+  - VcButton: vc-button.md
+  - VcIcon: vc-icon.md
+  - VcLabel: vc-label.md
+  - VcWidget: vc-widget.md
