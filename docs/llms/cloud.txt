@@ -1,0 +1,49 @@
+﻿# Virto Commerce Cloud
+
+> Cloud sub-index of the Virto Commerce AI documentation hub. Covers Virto Cloud, the managed deployment target for the Platform and Frontend, plus self-hosted cloud patterns (Azure, AWS, on-premise). Includes environment provisioning via portal or CLI, custom module/Frontend deployment, GitOps workflows, and end-to-end "build a store on cloud" walkthroughs. For Platform/backend, Frontend, Marketplace, VC-Shell, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+
+Virto Cloud runs the same `virtocommerce/platform` Docker image used for local Docker development; environments include Elasticsearch, SQL Database, Redis, and File Storage. Custom modules deploy as ZIP artifacts pulled from GitHub releases (or equivalent).
+
+## Start here
+
+- [Deploy on Virto Cloud](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/deploy-on-virto-cloud.md). End-to-end portal-driven deployment walkthrough.
+- [Cloud Portal](https://portal.virtocommerce.cloud/). Virto Cloud customer portal entry point.
+
+## Environment provisioning
+
+- [Create environment via CLI and vc-build](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/create-environment-via-cli-and-vc-build.md). Scriptable environment provisioning.
+- [QA new environment](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/qa-new-environment.md). Verifying a freshly provisioned environment.
+- [VirtoCloud overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/virto-cloud-overview.md). Cloud-side architectural concepts.
+- [VirtoCloud CLI](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/virto-cloud.md). `vc-build CloudInit`, `CloudUp`, `CloudDeploy`, `CloudEnvList`, `CloudEnvLogs`, and related targets.
+
+## Customization on cloud
+
+- [Backend customization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/backend-customization.md). Building a custom module and deploying it to a Virto Cloud environment.
+- [Frontend customization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/frontend-customization.md). Deploying a custom Frontend to a Virto Cloud environment.
+- [Store branding](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/store-branding.md). Theme and branding application.
+- [Integrations configuration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/integrations-configuration.md). Connecting external systems (payment, shipping, search, CMS).
+
+## End-to-end store walkthrough
+
+These pages walk through standing up a complete demo store ("DentalDemo") on Virto Cloud.
+
+- [Create and configure catalog](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/catalog-creation.md). Catalog setup.
+- [Add products via CSV](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/add-products-via-csv.md). Bulk product import.
+- [Create and configure store](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/store-configuration.md). Store setup.
+- [Main menu setup](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/main-menu-setup.md). Configuring storefront navigation.
+- [Footer creation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/footer-creation.md). Configuring storefront footer.
+- [Create page in Builder.io](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/create-page-in-builder-io.md). Visual page authoring.
+
+## CI/CD and GitOps
+
+- [Enable GitOps](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/deployment-on-cloud/docs/enable-gitops.md). GitOps workflow for cloud environments.
+- [Build automation targets](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/build-automation.md). vc-build pipeline primitives used by cloud deployments.
+- [Cold start and data migration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/cold-start-and-data-migration.md). Importing data into a fresh cloud environment.
+
+## Self-hosted cloud (Azure, AWS, on-premise)
+
+- [Deploy Platform on Azure](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/deploy-platform-on-azure.md). Azure App Service and Azure Functions deployment.
+- [Modules development via Docker](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/docker-modules-development.md). Local Docker dev environment that mirrors cloud runtime.
+- [Scalability options](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Scalability/scalability-options.md). Horizontal scaling and Hangfire offload patterns.
+- [Setting up Redis](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Caching/03-setting-up-Redis.md). Distributed cache for multi-instance deployments.
+

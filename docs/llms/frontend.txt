@@ -1,0 +1,81 @@
+﻿# Virto Commerce Frontend
+
+> Frontend sub-index of the Virto Commerce AI documentation hub. Covers vc-frontend, the Vue 3 customer-facing SPA that consumes the Platform's GraphQL xAPI. Includes architecture, theming, customization, authentication, deployment, and third-party integrations. Stack: Vue 3, TypeScript, Vite, Pinia, Tailwind. For Platform/backend, Marketplace, VC-Shell, Cloud, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+
+This is a curated index of authoritative Frontend documentation. Frontend means the customer-facing storefront application; do not confuse it with the admin Backoffice UI (covered in the Platform sub-index). Default repo is vc-frontend; the default B2B theme is vc-theme-b2b-vue.
+
+## Start here
+
+- [Frontend developer guide root](https://docs.virtocommerce.org/storefront/developer-guide/latest/). Top-level Frontend documentation.
+- [Architecture](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/architecture.md). Vue 3 SPA structure, state management, routing.
+- [Modules architecture](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/modules-architecture/modules-architecture.md). How Frontend code is organized into feature modules.
+- [SPA architecture for SEO and 404 handling](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/spa-architecture-for-seo-and-404-handling.md). SSR/prerender strategy and edge-case handling.
+- [Frontend public demo](https://virtostart-demo-store.govirto.com/). Live B2B reference site.
+- [Frontend user guide](https://docs.virtocommerce.org/storefront/user-guide/latest/). Store-manager-facing documentation for navigation, account, and shopping flows.
+
+## Customization
+
+- [Customization overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/customization-overview.md). Customization model and entry points.
+- [Visual theme customization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/visual-theme-customization.md). Branding, colors, typography.
+- [Functionality customization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/functionality-customization.md). Overriding and extending feature behavior.
+- [Texts customization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/texts-customization.md). Copy and content overrides.
+- [Localization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/localization.md). Adding and configuring languages.
+- [Accelerators overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/accelerators-overview.md). Pre-built starter packages.
+- [Accelerators guidelines](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/customization/accelerators-guidelines.md). When and how to use accelerators.
+
+## Authentication
+
+- [Authentication types](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/authentication/authentication-types.md). Available auth modes for the Frontend.
+- [Anonymous authentication](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/authentication/anonymous-authentication.md). Guest browsing and cart.
+- [Add an SSO provider](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/authentication/adding-sso-provider.md). External identity provider integration.
+- [Add Google as SSO provider](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/authentication/adding-google-as-sso-provider.md). Google sign-in walkthrough.
+
+## Integrations
+
+- [Prerender.io](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/integrations/prerender_io.md). SEO prerendering for crawlers.
+- [Builder.io](https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/). Visual content authoring integration.
+- [Storyblok](https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/). Headless CMS integration.
+- [Google Analytics](https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/google-analytics/). Analytics wiring.
+
+## Deployment and operations
+
+- [Deployment](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/deployment.md). Frontend deployment guide.
+- [Connect Frontend to Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/deployment.md). Configuring the xAPI endpoint and auth.
+- [Migration overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/migration.md). Migrating from older Frontend versions.
+- [Migration on local machine](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/migration-on-local-machine.md). Local migration workflow.
+- [Migration on Azure](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/migration-on-azure.md). Azure migration workflow.
+- [Update](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/update.md). Update procedure.
+- [Merging upstream changes](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/merge.md). Keeping a fork in sync with upstream vc-frontend.
+
+## Quality and tooling
+
+- [Tests](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/tests.md). Test strategy and tooling.
+- [Storybook](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/storefront/developer-guide/docs/storybook.md). Component sandbox for the Frontend.
+- [Vue.js starter theme](https://docs.virtocommerce.org/storefront/developer-guide/latest/vue-js-starter-theme/). Theme scaffold and conventions.
+
+## xAPI (GraphQL) integration
+
+The Frontend consumes the Platform's GraphQL xAPI. These references live in the Platform docs.
+
+- [xAPI overview](https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/). Frontend-optimized GraphQL API.
+- [xAPI getting started](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md). First queries.
+- [GraphiQL](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/graphiql.md). Interactive query explorer.
+- [xAPI extensions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md). Extending or replacing GraphQL types and validators.
+- [xAPI best practices](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/best-practices.md). Performance, caching, schema design.
+- [Catalog GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md).
+- [Cart GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md).
+- [Order GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Order/overview.md).
+- [Profile GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md).
+- [Marketing GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md).
+- [Quote GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md).
+
+## Source repositories
+
+- [vc-frontend](https://github.com/VirtoCommerce/vc-frontend). Vue-based headless Frontend application.
+- [vc-theme-b2b-vue](https://github.com/VirtoCommerce/vc-theme-b2b-vue). Default B2B Frontend theme.
+
+## Optional
+
+- [Frontend public demo](https://virtostart-demo-store.govirto.com/). Live B2B storefront demo.
+- [REST API live reference](https://virtostart-demo-admin.govirto.com/docs/index.html). Useful when verifying admin-side data shape.
+- [Community forum](https://www.virtocommerce.org/). Discussions and Q&A.
