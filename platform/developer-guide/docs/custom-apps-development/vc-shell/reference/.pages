@@ -3,4 +3,4 @@ nav:
   - CLI: cli
   - API: api
   - Modules: modules
-  - Migration: migration/index.md
+  - Migration: migration
