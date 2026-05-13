@@ -3,5 +3,8 @@ nav:
   - introduction
   - getting-started
   - concepts
+  - components
+  - composables
+  - plugins
   - guides
   - reference
