@@ -1,0 +1,13 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Plugins
+nav:
+  - AI Agent: ai-agent.md
+  - Extension Points: extension-points.md
+  - Global Error Handler: global-error-handler.md
+  - Internationalization: i18n.md
+  - Modularity: modularity.md
+  - Notifications: notifications.md
+  - Permissions: permissions.md
+  - SignalR: signalr.md
+  - Validation: validation.md

@@ -1,0 +1,10 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Navigation
+nav:
+  - VcBreadcrumbs: vc-breadcrumbs.md
+  - VcDropdown: vc-dropdown.md
+  - VcDropdownPanel: vc-dropdown-panel.md
+  - VcLink: vc-link.md
+  - VcMenu: vc-menu.md
+  - VcPagination: vc-pagination.md
