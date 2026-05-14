@@ -323,6 +323,47 @@ Use `replaceWith` instead when the new blade should permanently take the slot, f
 
 ![Readmore](../../concepts/blade-navigation.md){: width="25"} The blade stack model in depth.
 
+## Persist filter state in the URL with query
+
+A list workspace can mirror its filters in the address bar so refreshing or sharing the URL restores the same view. Use the `query` field on `openBlade` to seed initial filters, read them back through `useBlade().query`, and call `replaceWith` (same `name`, same `param`) to write updated filters without growing the history stack.
+
+```vue title="orders-list.vue"
+<script setup lang="ts">
+import { onMounted, reactive, watch } from "vue";
+import { useBlade } from "@vc-shell/framework";
+
+defineBlade({ name: "Orders", url: "/orders", isWorkspace: true });
+
+const { query, replaceWith, name } = useBlade();
+
+const filters = reactive({
+  search: query.value?.search ?? "",
+  status: query.value?.status ?? "",
+});
+
+onMounted(() => loadOrders(filters));
+
+watch(filters, (next) => {
+  loadOrders(next);
+  replaceWith({
+    name: name.value,
+    query: {
+      ...(next.search ? { search: next.search } : {}),
+      ...(next.status ? { status: next.status } : {}),
+    },
+  });
+});
+</script>
+```
+
+`query` is a read-only `ComputedRef<Record<string, string> | undefined>` on the blade descriptor. The framework writes the entries to the address bar verbatim, so keep keys short and values URL-safe. Use `replaceWith` (not `openBlade`) so the back button still steps out of the workspace instead of cycling through every keystroke.
+
+!!! note "query vs options"
+    `query` rides the URL and survives a refresh; `options` rides `history.state` only. Use `query` for shareable filter state (search term, page size, status). Use `options` for preloaded payloads that are too large or too sensitive for the URL.
+
+!!! warning "Legacy setNavigationQuery is deprecated"
+    The v1 adapter still ships `setNavigationQuery` and `getNavigationQuery` for backward compatibility, but both log a deprecation warning. New code should pass `query` to `openBlade` / `replaceWith` and read it from `useBlade().query`.
+
 ## More patterns
 
 The vc-shell repo ships an AI-codegen knowledge base with deeper, generator-oriented recipes. Browse [`cli/vc-app-skill/runtime/knowledge/patterns/`](https://github.com/VirtoCommerce/vc-shell/tree/main/cli/vc-app-skill/runtime/knowledge/patterns) for templates covering list blades, details blades, toolbar conventions, SignalR notification templates, data tables, multilanguage fields, and dashboard widgets. The vendor-portal app under `apps/vendor-portal/src/modules/` is the canonical real-world reference for every recipe on this page.
