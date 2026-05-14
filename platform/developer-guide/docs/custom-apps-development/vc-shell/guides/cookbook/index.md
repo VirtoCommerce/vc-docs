@@ -203,6 +203,26 @@ watch(saving, (busy) => {
 
 The button only appears while the form is dirty and becomes disabled mid-save without flicker.
 
+## Combine loading flags from several sources
+
+`useAsync().loading` is one flag per action. When a blade depends on several async sources, OR them into a single flag with `useLoading(...refs)` and bind that to `VcBlade`'s `:loading` prop.
+
+```vue title="order-details.vue"
+<script setup lang="ts">
+import { useAsync, useLoading } from "@vc-shell/framework";
+
+const { loading: orderLoading, action: loadOrder } = useAsync(fetchOrder);
+const { loading: customerLoading, action: loadCustomer } = useAsync(fetchCustomer);
+const { loading: lineItemsLoading, action: loadLineItems } = useAsync(fetchLineItems);
+
+const isLoading = useLoading(orderLoading, customerLoading, lineItemsLoading);
+</script>
+```
+
+The result is `true` while any input ref is `true`. Use it for the blade overlay; keep the per-action refs for granular UI, such as a spinner inside one button.
+
+![Readmore](../../composables/ui-state/useLoading.md){: width="25"} `useLoading` reference.
+
 ## Set a dynamic blade title
 
 The `VcBlade` shell takes a `:title` prop directly. Bind it to a `computed` and the header re-renders as the underlying entity changes.
