@@ -28,6 +28,35 @@ The guard returns `true` to **prevent** closure and `false` to **allow** it, mat
 
 ![Readmore](../../composables/blade-navigation/useBlade.md){: width="25"} Full `useBlade` API and guard semantics.
 
+## Warn before browser tab close (useBeforeUnload)
+
+Stop the user from accidentally closing the browser tab when a form has unsaved changes. `useBeforeUnload(modified)` accepts a `ComputedRef<boolean>` and registers a `beforeunload` listener that fires the browser's standard "Leave site?" prompt whenever the ref is `true`. This is the browser-level twin of `onBeforeClose` from `useBlade()`. Pair them so the user is protected whether they click the blade close button or close the whole tab.
+
+```vue title="src/modules/orders/pages/order-details.vue"
+<script setup lang="ts">
+import { computed, ref } from "vue";
+import { useBeforeUnload, useBlade, usePopup } from "@vc-shell/framework";
+
+const original = ref({ name: "" });
+const draft = ref({ name: "" });
+const isModified = computed(() => JSON.stringify(original.value) !== JSON.stringify(draft.value));
+
+useBeforeUnload(isModified);
+
+const { onBeforeClose } = useBlade();
+const { showConfirmation } = usePopup();
+
+onBeforeClose(async () => {
+  if (!isModified.value) return false;
+  return !(await showConfirmation("Discard unsaved changes?"));
+});
+</script>
+```
+
+The composable always uses the browser's native dialog. The wording is fixed by the browser and cannot be customized, which is a deliberate antiphishing restriction. Reach for `useBeforeUnload` only for browser-level closes; use `onBeforeClose` for in-app blade navigation. Reset whatever drives `isModified` after a successful save, otherwise the prompt keeps appearing.
+
+![Readmore](../../composables/utilities/useBeforeUnload.md){: width="25"} `useBeforeUnload` reference.
+
 ## Pass selected rows from a list to a details blade
 
 Use `param` for the entity id, which lands in the URL for deep linking. Use `options` for richer preloaded data, which stays in `history.state` only.
