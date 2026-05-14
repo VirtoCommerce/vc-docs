@@ -7,4 +7,5 @@ nav:
   - modules-and-extensions
   - platform
   - cookbook
+  - deployment.md
   - troubleshooting
