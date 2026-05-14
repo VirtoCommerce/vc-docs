@@ -228,6 +228,34 @@ const bladeTitle = computed(() => item.value?.number ?? "New order");
 
 For breadcrumbs and the blade stack, expose the same title with `defineExpose({ title: bladeTitle })` so the navigation chrome can read it.
 
+## Show navigational breadcrumbs in a blade
+
+Register a breadcrumb in the blade stack with `useBreadcrumbs().push`. The composable deduplicates by `id` and trims the trail automatically when the user clicks a previous breadcrumb.
+
+```vue title="order-details.vue"
+<script setup lang="ts">
+import { computed, onBeforeUnmount } from "vue";
+import { useBlade, useBreadcrumbs } from "@vc-shell/framework";
+
+const { openBlade, param } = useBlade();
+const { push, remove } = useBreadcrumbs();
+
+const crumbId = `order-${param.value}`;
+
+push({
+  id: crumbId,
+  title: computed(() => `Order #${order.value?.number ?? ""}`),
+  clickHandler: () => openBlade({ name: "OrderDetails", param: param.value }),
+});
+
+onBeforeUnmount(() => remove([crumbId]));
+</script>
+```
+
+Include the blade `param` in the breadcrumb `id` so two open instances of the same blade type do not overwrite each other. Pair every `push` with a `remove` on unmount, otherwise stale entries accumulate. To run custom logic before the trail trims, return `false` from `clickHandler`.
+
+![Readmore](../../composables/ui-state/useBreadcrumbs.md){: width="25"} `useBreadcrumbs` reference.
+
 ## Display a success toast after save
 
 The `notification` helper is a plain singleton, so it works inside or outside a blade. Toasts render in the global container regardless of which blade triggered them.
