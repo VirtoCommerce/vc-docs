@@ -171,6 +171,21 @@ Full recipes: [`useBlade` reference, Recipes section](../composables/blade-navig
 
 Blades that declare `url` in their config are reflected in the address bar. The router guard distinguishes a real route from the blade catch-all; on a catch-all, the URL is parsed and the stack restored idempotently. Child blades without `url` do not change the URL, so deep links land on the deepest URL-bearing blade.
 
+## Errors are caught automatically
+
+Every blade is wrapped with an error boundary. Throw from any function inside the blade and the framework renders a banner with the message and a "More" button; the app keeps running. Use `setError(...)` from `useBlade()` only for a custom error you constructed yourself.
+
+```ts
+const { action: load } = useAsync(async () => {
+  const client = await getApiClient();
+  // If this throws, the blade renders an error banner. No try/catch.
+  item.value = await client.getProductById(props.param);
+});
+```
+
+!!! tip "Skip the try/catch in actions"
+    Throwing inside a `useAsync` action is enough. Catch only to convert errors, for example, wrapping a 500.
+
 ## Common mistakes
 
 These four mistakes account for most blade-navigation bugs.
