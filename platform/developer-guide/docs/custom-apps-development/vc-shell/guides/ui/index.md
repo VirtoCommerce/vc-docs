@@ -127,6 +127,41 @@ To embed a specific story inline in your own documentation, use the `vc-storyboo
 
 The story ID follows the pattern `<group>-<component>--<variant>`, visible in the URL when you open any story. The `--height` CSS custom property controls iframe height.
 
+## Recipe: server-driven branding with useSettings
+
+`useSettings()` exposes a single source of UI customization that the framework loads from the Platform on startup through `SettingClient.getUICustomizationSetting()`: app title, logo, contrast logo, and optional avatar and role. Override the values at runtime through `applySettings(...)` when a module ships its own branding or you want a multi-tenant skin.
+
+```vue title="src/pages/App.vue"
+<script setup lang="ts">
+import { useSettings, VcApp } from "@vc-shell/framework";
+
+const { uiSettings, loading, applySettings } = useSettings();
+
+// Override on top of the server-loaded settings.
+function applyTenantSkin(tenantId: string) {
+  applySettings({
+    ...uiSettings.value,
+    title: `Tenant ${tenantId}`,
+    logo: `/tenants/${tenantId}/logo.svg`,
+  });
+}
+</script>
+
+<template>
+  <VcApp
+    :is-ready="!loading"
+    :logo="uiSettings.logo"
+    :title="uiSettings.title"
+  />
+</template>
+```
+
+`uiSettings` is reactive, so binding it directly to **VcApp** props means the chrome rerenders whenever `applySettings` is called or the platform fetch resolves. Each `applySettings` call replaces the entire object, so spread `uiSettings.value` first when you only want to change one field; otherwise the unset fields become undefined.
+
+Calling `applySettings()` early, for example in **App.vue** setup, sets an internal flag that skips the Platform API fetch entirely. Use that path for fully custom apps that never read from the Platform.
+
+![Readmore](../../composables/services/useSettings.md){: width="25"} useSettings reference.
+
 ## Variations
 
 | Variation | Where |
