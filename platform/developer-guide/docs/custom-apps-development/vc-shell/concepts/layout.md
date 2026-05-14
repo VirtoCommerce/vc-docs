@@ -63,6 +63,75 @@ export function bootstrap(app: App) {
 
 ![Readmore](../composables/services/useMenuService.md){: width="25"} Menu service API reference.
 
+## Top bar widgets
+
+The top bar holds a row of small interactive pieces such as a notification bell, a sync status indicator, or a language picker. Modules add their own widgets through `useAppBarWidget()`.
+
+```typescript title="bootstrap.ts"
+import { useAppBarWidget } from "@vc-shell/framework";
+import { markRaw } from "vue";
+import SyncStatusIndicator from "./components/SyncStatusIndicator.vue";
+
+export function bootstrap() {
+  const { register } = useAppBarWidget();
+
+  register({
+    id: "notifications",
+    icon: "lucide-bell",
+    title: "Notifications",
+    order: 10,
+    onClick: () => openNotifications(),
+  });
+
+  register({
+    id: "sync-status",
+    component: markRaw(SyncStatusIndicator),
+    order: 1,
+  });
+}
+```
+
+Pass `icon` plus `onClick` for a default icon button, or pass `component` (wrapped in `markRaw`) to render a fully custom widget. Widgets are sorted by `order`; lower values render further left. If the registering code runs before the service is provided, use the standalone `addAppBarWidget()` function instead; pre-registered items flush automatically when the shell bootstraps.
+
+![Readmore](../composables/services/useAppBarWidget.md){: width="25"} useAppBarWidget API reference.
+
+## Settings menu
+
+The shell hosts a settings page with its own sidebar. Modules contribute entries to that sidebar through `useSettingsMenu()`; each entry points to a Vue component rendered in the settings workspace. Use it for module-level configuration that does not warrant a top-level menu item.
+
+```typescript title="bootstrap.ts"
+import { useSettingsMenu } from "@vc-shell/framework";
+import { markRaw } from "vue";
+import CatalogGeneralSettings from "./components/settings/CatalogGeneralSettings.vue";
+import CatalogSeoSettings from "./components/settings/CatalogSeoSettings.vue";
+
+export function bootstrap() {
+  const { register } = useSettingsMenu();
+
+  register({
+    id: "catalog-general",
+    title: "General",
+    icon: "lucide-settings",
+    component: markRaw(CatalogGeneralSettings),
+    group: "Catalog",
+    priority: 1,
+  });
+
+  register({
+    id: "catalog-seo",
+    title: "SEO Settings",
+    icon: "lucide-search",
+    component: markRaw(CatalogSeoSettings),
+    group: "Catalog",
+    priority: 2,
+  });
+}
+```
+
+`group` clusters related entries into a labeled section in the settings sidebar; `priority` orders entries within a group. Wrap component references in `markRaw` to keep Vue from making the definition reactive. Register entries conditionally if access depends on permissions; the service does not gate items by itself.
+
+![Readmore](../composables/services/useSettingsMenu.md){: width="25"} useSettingsMenu API reference.
+
 ## Theme and branding
 
 Theming is driven by CSS custom properties scoped under `:root[data-theme="light"]` and `:root[data-theme="dark"]`. The framework ships full palettes for primary, secondary, accent, neutrals, plus state colors (warning, danger, success, info) and derived tokens for surfaces, shadows, overlays, and frosted glass.
