@@ -9,4 +9,5 @@ nav:
   - routing.md
   - cookbook
   - deployment.md
+  - best-practices.md
   - troubleshooting
