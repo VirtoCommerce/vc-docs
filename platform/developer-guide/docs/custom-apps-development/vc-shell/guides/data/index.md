@@ -186,6 +186,34 @@ The slot props are `{ data, field, index }`. Use the full column type (`type="st
 !!! tip
     For inline edit cells, slot `#editor` instead of `#body`. The `editorCallback` it receives commits the edited value back to the row.
 
+## Recipe: file download from a binary endpoint
+
+Generated clients expose binary endpoints (PDF invoices, ZIP exports, CSV reports) as methods that return `FileResponse`: a small wrapper around a `Blob` plus a suggested file name. The browser does not download the file on its own. Wrap the call in `useAsync` so the toolbar button shows a spinner, then trigger a download with a hidden anchor.
+
+```ts title="composables/useOrderDetailsNew.ts (extract)"
+import { useApiClient, useAsync } from "@vc-shell/framework";
+import { VcmpSellerOrdersClient } from "../../../api_client/virtocommerce.marketplacevendor";
+
+const { getApiClient: getOrderApiClient } = useApiClient(VcmpSellerOrdersClient);
+
+const { loading: pdfLoading, action: loadPdf } = useAsync(async () => {
+  if (!item.value?.number) return;
+  const response = await (await getOrderApiClient()).getInvoicePdf(item.value.number);
+
+  const link = document.createElement("a");
+  link.href = window.URL.createObjectURL(new Blob([response.data], { type: response.data.type }));
+  link.setAttribute("download", response.fileName || `Invoice ${item.value.number}`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+```
+
+`response.data` is a `Blob`; `response.fileName` comes from the `Content-Disposition` header when the Platform sets one. Fall back to a generated name when the header is absent. Bind `pdfLoading` to the toolbar button's `:loading` so the user gets feedback during large exports.
+
+!!! tip
+    Revoke the object URL with `URL.revokeObjectURL(link.href)` after a few seconds if the page stays open. Browsers hold the blob in memory until the document unloads otherwise.
+
 ## Recipe: state persistence
 
 Pass `state-key` and `VcDataTable` persists column widths, order, sort, filters, and visibility under that key. Use one key per logical table; the persistence layer namespaces it automatically.
