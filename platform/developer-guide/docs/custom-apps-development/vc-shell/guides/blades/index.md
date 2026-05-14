@@ -123,6 +123,65 @@ onMounted(async () => {
 
 ![Readmore](../../composables/blade-navigation/useBlade.md){: width="25"} useBlade API reference.
 
+## Recipe: blade widgets with useBladeWidgets
+
+Blade widgets are sidebar entries scoped to a single blade: counters, status indicators, related-entity launchers. They share the blade's lifetime and disappear when it closes. This is distinct from dashboard widgets, registered globally with `registerDashboardWidget` and rendered on the home Dashboard.
+
+The preferred API is `useBladeWidgets`, which takes an array of headless declarations and registers and unregisters them with the blade. No `VcWidget` markup is needed; the framework renders entries automatically.
+
+```vue title="pages/order-details.vue"
+<script setup lang="ts">
+import { useBlade, useBladeWidgets } from "@vc-shell/framework";
+
+const offersCount = ref(0);
+
+async function reloadOffers() {
+  const result = await offersApi.search({ orderId: item.value?.id });
+  offersCount.value = result.totalCount;
+}
+
+const { refresh, refreshAll } = useBladeWidgets([
+  {
+    id: "OffersWidget",
+    icon: "lucide-tag",
+    title: "ORDER.WIDGETS.OFFERS",
+    badge: offersCount,
+    isVisible: computed(() => !!item.value?.id),
+    onClick: () => openBlade({ name: "OffersList" }),
+    onRefresh: reloadOffers,
+  },
+]);
+
+async function save() {
+  await saveOrder(item.value);
+  refreshAll();
+}
+</script>
+```
+
+Each declaration carries an `icon`, `title`, optional reactive `badge` and `isVisible`, plus `onClick` and `onRefresh` callbacks. Call `refreshAll()` after a save to recompute every widget's data, or `refresh(id)` for one. Widgets without `onRefresh` are skipped silently.
+
+To add a full-component widget from another module, register at module load with `registerExternalWidget`, then call `useWidgetTrigger` inside the widget to expose its refresh handler, and `injectBladeContext` to read the host blade's reactive item.
+
+```ts title="src/modules/shipping/index.ts"
+import { registerExternalWidget } from "@vc-shell/framework";
+import { markRaw } from "vue";
+import ShippingTracker from "./widgets/ShippingTracker.vue";
+
+registerExternalWidget({
+  id: "ShippingTracker",
+  component: markRaw(ShippingTracker),
+  targetBlades: ["OrderDetails"],
+  isVisible: (blade) => !!blade?.param,
+});
+```
+
+The low-level `useWidgets` service and singular `registerWidget` exist for framework infrastructure and rarely appear in app code.
+
+![Readmore](../../composables/blade-navigation/useBladeWidgets.md){: width="25"} useBladeWidgets reference.
+
+![Readmore](../../composables/services/useWidgets.md){: width="25"} useWidgets service reference.
+
 ## Recipe: wizard blade
 
 A wizard chains blades. Step one collects input and opens step two with `openBlade`, passing data through `options`. Step two reads `options`, lets the user refine, then either steps forward or calls `closeSelf` to return to step one. The final step submits, then calls `closeChildren` from the root to dismiss every step at once.
