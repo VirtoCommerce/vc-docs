@@ -190,6 +190,47 @@ const { getPropertyValue, setPropertyValue, loadDictionaries, loadMeasurements }
 
 ![Readmore](../../components/form/vc-dynamic-property.md){: width="25"} VcDynamicProperty component reference.
 
+## Recipe: Application Insights telemetry
+
+VC-Shell integrates with Microsoft Azure Application Insights through `useAppInsights()`. The composable wraps the official SDK with framework-aware defaults: per-navigation page-view timing, fresh W3C trace IDs for distributed tracing, and user-context enrichment on every event. App Insights is opt-in. The framework only initializes when you pass `applicationInsights.instrumentationKey` during plugin install.
+
+### Step 1: enable App Insights at install
+
+```ts title="src/main.ts" hl_lines="6 7 8 9 10"
+import VirtoShellFramework from "@vc-shell/framework";
+
+const app = createApp(RouterView);
+app.use(VirtoShellFramework, {
+  router,
+  applicationInsights: {
+    instrumentationKey: import.meta.env.APP_INSIGHTS_KEY,
+    appName: "Vendor Portal",
+  },
+});
+```
+
+The framework provides options synchronously, then defers the SDK install to post-paint. Page-view tracking, exception capture via `useErrorHandler`, and user-ID enrichment all hook in automatically. `appName` prefixes every page name as `[Vendor Portal] RouteName` so multiple apps can report into the same App Insights resource.
+
+### Step 2: track custom events from anywhere
+
+```ts title="pages/orders-list.vue"
+import { useAppInsights } from "@vc-shell/framework";
+
+const { appInsights } = useAppInsights();
+
+function onExportClick() {
+  appInsights?.trackEvent({
+    name: "OrderExportRequested",
+    properties: { format: "csv" },
+    measurements: { rowCount: selected.value.length },
+  });
+}
+```
+
+`appInsights` is the raw `ApplicationInsights` instance, so the full SDK surface is available: `trackEvent`, `trackException`, `trackMetric`, `trackDependencyData`. Guard with `?.` because the instance is `null` when the instrumentation key was omitted at install time. Reach for `trackEvent` only for domain-specific events on top of the automatic page-view and exception stream.
+
+![Readmore](../../composables/utilities/useAppInsights.md){: width="25"} useAppInsights reference.
+
 ## Variations
 
 | Variation | Approach |
