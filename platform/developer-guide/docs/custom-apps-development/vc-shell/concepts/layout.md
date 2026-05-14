@@ -63,6 +63,28 @@ export function bootstrap(app: App) {
 
 ![Readmore](../composables/services/useMenuService.md){: width="25"} Menu service API reference.
 
+## Dashboard widgets
+
+The dashboard view is a separate, ready-made page composed of registered widgets. The standalone scaffold mounts **DraggableDashboard** at the root route, which reads every widget from the dashboard service and renders it inside a Gridstack-powered grid.
+
+```vue title="pages/Dashboard.vue"
+<template>
+  <DraggableDashboard />
+</template>
+
+<script lang="ts" setup>
+import { DraggableDashboard } from "@vc-shell/framework";
+</script>
+```
+
+You do not pass widgets through props. They flow in from the registrations made during bootstrap. The grid is 12 columns wide, so common widget widths are 3 (quarter), 4 (third), 6 (half), and 12 (full). The `position` you pass to `registerDashboardWidget` is the initial placement only. Once a user rearranges or resizes a widget, the new layout is persisted to localStorage and replayed on the next visit. Provide a "Reset layout" affordance through the component's exposed `useBuiltInPositions()` and `saveLayout()` methods if you want users to revert.
+
+For visual consistency across widgets, wrap content in **DashboardWidgetCard**. The card supplies a header row, optional icon, loading state, and a small action area, so module widgets stay aligned with the framework look.
+
+To filter widgets by role, set `permissions` on each registration. The dashboard service applies the same `usePermissions().hasAccess` check that gates menu items, so admins always see every widget and other users see only those they can access.
+
+![Readmore](../composables/services/useDashboard.md){: width="25"} useDashboard API reference and recipes.
+
 ## Top bar widgets
 
 The top bar holds a row of small interactive pieces such as a notification bell, a sync status indicator, or a language picker. Modules add their own widgets through `useAppBarWidget()`.
