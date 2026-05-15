@@ -1,6 +1,6 @@
 # Data
 
-Recipes for the data layer behind a list blade: pagination, sorting, filtering, selection, custom cell rendering, and persisted table state. Each recipe is trimmed from the vendor-portal orders module and the sample-module CLI template.
+Recipes for the data layer behind a list blade: pagination, sorting, filtering, selection, custom cell rendering, and persisted table state. Each recipe is trimmed from a real orders module and the sample-module CLI template.
 
 ## Prerequisites
 

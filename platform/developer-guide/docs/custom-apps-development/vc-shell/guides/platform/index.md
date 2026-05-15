@@ -1,6 +1,6 @@
 # Platform
 
-Recipes that connect a VC-Shell module to Virto Commerce Platform subsystems: real-time push, background jobs, notifications, asset upload, and dynamic properties. Each pattern follows what the vendor-portal modules actually do.
+Recipes that connect a VC-Shell module to Virto Commerce Platform subsystems: real-time push, background jobs, notifications, asset upload, and dynamic properties. Each pattern follows what production modules actually do.
 
 ## Prerequisites
 
@@ -204,12 +204,12 @@ app.use(VirtoShellFramework, {
   router,
   applicationInsights: {
     instrumentationKey: import.meta.env.APP_INSIGHTS_KEY,
-    appName: "Vendor Portal",
+    appName: "Seller Console",
   },
 });
 ```
 
-The framework provides options synchronously, then defers the SDK install to post-paint. Page-view tracking, exception capture via `useErrorHandler`, and user-ID enrichment all hook in automatically. `appName` prefixes every page name as `[Vendor Portal] RouteName` so multiple apps can report into the same App Insights resource.
+The framework provides options synchronously, then defers the SDK install to post-paint. Page-view tracking, exception capture via `useErrorHandler`, and user-ID enrichment all hook in automatically. `appName` prefixes every page name as `[Seller Console] RouteName` so multiple apps can report into the same App Insights resource.
 
 ### Step 2: track custom events from anywhere
 

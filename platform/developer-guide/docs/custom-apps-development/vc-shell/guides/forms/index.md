@@ -1,6 +1,6 @@
 # Forms
 
-Recipes for the form layer inside a detail blade: layout, validation, dynamic properties, file upload, and unsaved-changes tracking. Each recipe is trimmed from the vendor-portal offers and orders modules.
+Recipes for the form layer inside a detail blade: layout, validation, dynamic properties, file upload, and unsaved-changes tracking. Each recipe is trimmed from real offers and orders modules.
 
 ## Prerequisites
 

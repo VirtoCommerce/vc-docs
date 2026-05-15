@@ -2,7 +2,7 @@
 
 Quick recipes for everyday VC-Shell tasks. Each one is self-contained, so read the recipe you need and ignore the rest.
 
-Every snippet below is lifted or adapted from the **vendor-portal** sample app and the framework source. Composable names, options, and return shapes are real and current.
+Every snippet below is lifted or adapted from a real seller-facing sample app and the framework source. Composable names, options, and return shapes are real and current.
 
 ## Show a confirmation before closing a blade
 
@@ -366,4 +366,4 @@ watch(filters, (next) => {
 
 ## More patterns
 
-The vc-shell repo ships an AI-codegen knowledge base with deeper, generator-oriented recipes. Browse [`cli/vc-app-skill/runtime/knowledge/patterns/`](https://github.com/VirtoCommerce/vc-shell/tree/main/cli/vc-app-skill/runtime/knowledge/patterns) for templates covering list blades, details blades, toolbar conventions, SignalR notification templates, data tables, multilanguage fields, and dashboard widgets. The vendor-portal app under `apps/vendor-portal/src/modules/` is the canonical real-world reference for every recipe on this page.
+The vc-shell repo ships an AI-codegen knowledge base with deeper, generator-oriented recipes. Browse [`cli/vc-app-skill/runtime/knowledge/patterns/`](https://github.com/VirtoCommerce/vc-shell/tree/main/cli/vc-app-skill/runtime/knowledge/patterns) for templates covering list blades, details blades, toolbar conventions, SignalR notification templates, data tables, multilanguage fields, and dashboard widgets.

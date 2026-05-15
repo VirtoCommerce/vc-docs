@@ -1,6 +1,6 @@
 # Blades
 
-Recipes for the five blade shapes you actually build: list, details, wizard, confirmation, and decorated. Each recipe is lifted from the vendor-portal source and trimmed to the load-bearing lines.
+Recipes for the five blade shapes you actually build: list, details, wizard, confirmation, and decorated. Each recipe is trimmed to the load-bearing lines from a real seller-facing module.
 
 ## Prerequisites
 

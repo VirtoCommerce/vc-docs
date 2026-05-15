@@ -4,7 +4,7 @@ VC-Shell apps talk to a Virto Commerce Platform through typed clients generated 
 
 Application code never instantiates these classes directly. The `useApiClient(ClientCtor)` composable returns an async factory that resolves to a configured, authenticated client. The base URL is filled in from `APP_PLATFORM_URL`, the OAuth token is attached, and token rotation is handled automatically. The factory is paired with `useAsync` to provide loading and error refs that flow into `<VcBlade :loading>`, `<VcButton :loading>`, and error banners.
 
-The standard composable shape across vendor-portal modules is: import the client class, call `useApiClient(ClientCtor)`, wrap each operation in `useAsync`, expose `items`, `loading`, and the action functions. Pagination plugs in via `useDataTablePagination`; sort strings come from `useTableSort`.
+The standard composable shape across modules is: import the client class, call `useApiClient(ClientCtor)`, wrap each operation in `useAsync`, expose `items`, `loading`, and the action functions. Pagination plugs in via `useDataTablePagination`; sort strings come from `useTableSort`.
 
 ## Quick start
 

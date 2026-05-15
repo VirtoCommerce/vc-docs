@@ -99,7 +99,7 @@ add({ id: "notes:block", component: OrderNotes, priority: 30 });
 
 ## Real example: customizing seller-details with marketplace-commissions
 
-The vendor portal ships a Seller Details blade that knows nothing about commissions. A separate `marketplace-commissions` module adds commission rate fields below the standard form. The host module declares one slot; the consumer module registers one component.
+A `seller-details` module ships a Seller Details blade that knows nothing about commissions. A separate `marketplace-commissions` module adds commission rate fields below the standard form. The host module declares one slot; the consumer module registers one component.
 
 Host blade:
 
