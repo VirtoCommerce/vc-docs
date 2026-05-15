@@ -4,7 +4,7 @@ Extension points are the framework's answer to one question: how does module A l
 
 A host blade declares a named slot with `defineExtensionPoint("id")`. Consumer modules register components against that slot with `useExtensionPoint("id").add({ id, component, priority })`. The two sides never import each other. They share only a string name.
 
-Registration is order independent. A consumer may register before the host has declared the slot, and the host receives a reactive, priority-sorted list once both sides have run. This separates extension points from Vue's `<slot>`, which is compile-time and same-file, and from `provide` / `inject`, which is scoped to the component tree. Extension points live in an app-scoped reactive registry and resolve at runtime, which is what makes them safe for modules loaded through Module Federation in any sequence.
+Registration is order independent. A consumer may register before the host has declared the slot, and the host receives a reactive, priority-sorted list once both sides have run. Extension points live in an app-scoped reactive registry and resolve at runtime, which is what makes them safe for modules loaded through Module Federation in any sequence.
 
 ## Host: declaring an extension point
 
