@@ -28,6 +28,44 @@ Prompts (in order):
 
 Skip the prompts by passing the equivalent flags. Full reference: [create-vc-app README](https://github.com/VirtoCommerce/vc-shell/blob/main/cli/create-vc-app/README.md#options).
 
+## Scaffold with the vc-app AI skill
+
+The `vc-app` AI skill installs slash commands into your AI coding tool that scaffold projects, connect to a Virto Commerce Platform, and generate full UI modules from plain-English intent. This is an alternative to running the CLI by hand. Pick the path that fits your workflow.
+
+### Install
+
+Pick the line that matches your AI tool. Restart the AI tool session after install to register the `/vc-app` commands.
+
+```bash
+# Claude Code / Cursor / GitHub Copilot
+npx @vc-shell/vc-app-skill install
+
+# OpenCode
+npx @vc-shell/vc-app-skill install --runtime opencode
+
+# Gemini CLI
+npx @vc-shell/vc-app-skill install --runtime gemini
+
+# Codex
+npx @vc-shell/vc-app-skill install --runtime codex
+```
+
+### Slash commands
+
+| Command | What it does |
+| --- | --- |
+| `/vc-app create` | Scaffold a new VC-Shell project interactively. |
+| `/vc-app connect` | Wire **.env** and **.env.local** and generate typed API clients from a Platform instance. |
+| `/vc-app add-module <name>` | Add a list and details module to an existing app. |
+| `/vc-app generate` | Intent-driven module generation with mock or live data. |
+| `/vc-app design` | Generate a multi-module app from a free-text product description. |
+| `/vc-app promote <name>` | Promote a prototype module from mock data to real API clients. |
+| `/vc-app migrate` | Migrate the app to the latest `@vc-shell/framework` version, running the CLI migrator and AI-assisted manual refactors. |
+
+The skill follows VC-Shell conventions automatically: Vue 3 with `<script setup lang="ts">`, Tailwind with the `tw-` prefix, BEM class names, and the framework's blade and module patterns.
+
+![Readmore](https://github.com/VirtoCommerce/vc-shell/blob/main/cli/vc-app-skill/README.md){: width="25"} Full vc-app skill README on GitHub.
+
 ## Generated layout
 
 The scaffolder produces a Vite-driven Vue app, fully wired to the framework, ready for `yarn install` and `yarn serve`.
