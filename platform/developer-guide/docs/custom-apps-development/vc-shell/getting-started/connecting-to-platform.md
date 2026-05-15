@@ -1,6 +1,10 @@
 # Connecting to the Platform
 
+Point a scaffolded VC-Shell app at a running Virto Commerce Platform, sign in, and make your first authenticated API call.
+
 ## Prerequisites
+
+Before connecting the app, make sure you have:
 
 - A running Virto Commerce Platform instance you can reach from your dev machine.
 - A user account on that Platform with permissions for the data you intend to read.
@@ -35,7 +39,7 @@ const { user, isAuthenticated, isAdministrator, signOut } = useUser();
 </template>
 ```
 
-`useUser()` is a shared composable — every caller reads from the same singleton, so a single request loads the user once. `loadUser()` is invoked from the generated `src/main.ts` during startup.
+`useUser()` is a shared composable. Every caller reads from the same singleton, so a single request loads the user once. `loadUser()` is invoked from the generated `src/main.ts` during startup.
 
 ## First authenticated API call
 
@@ -68,7 +72,7 @@ onMounted(load);
 ```
 
 !!! tip
-    `getApiClient()` is async. Call it inside each async function — never at the top of `<script setup>`. Storing the client outside an async block gives you a stale reference when tokens rotate.
+    `getApiClient()` is async. Call it inside each async function, never at the top of `<script setup>`. Storing the client outside an async block gives you a stale reference when tokens rotate.
 
 For multiple clients in one blade, alias the destructured factory:
 
@@ -120,4 +124,4 @@ Two ways to make cross-origin requests work in development:
     `localStorage` was cleared (incognito tab, storage quota). The framework re-prompts sign-in automatically.
 
 !!! warning "Generated clients fail to compile"
-    Re-run `yarn generate:api-client` — the Platform schema likely changed.
+    Re-run `yarn generate:api-client`. The Platform schema likely changed.
