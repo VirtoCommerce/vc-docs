@@ -1,6 +1,6 @@
 # Architecture Overview
 
-VC-Shell is layered. Dependency direction flows top to bottom; the rule is enforced by `yarn check:layers`.
+VC-Shell is layered. Dependency direction flows top to bottom.
 
 ```mermaid
 flowchart TD
@@ -11,14 +11,12 @@ flowchart TD
     D --> E["Virto Commerce Platform<br/>HTTP · OAuth · SignalR"]
 ```
 
-| Layer | Responsibility | Constraints |
-| --- | --- | --- |
-| `framework/core`. | API clients, composables, services (menu, toolbar, settings, notifications), plugins (modularity, extensions, permissions, i18n, SignalR), blade navigation engine. | No imports from `shell` or `ui`. |
-| `framework/ui`. | Atomic Design components including `VcBlade`, `VcDataTable`, `VcForm`. | No imports from `shell`. |
-| `framework/shell`. | Sidebar, top bar, dashboard, settings, auth layout, blade rendering glue. | May depend on `core` and `ui`. |
-| Your app. | Modules, custom blades, business logic, app-specific config. | Depends on everything below. |
-
-Enforcement rules: [`scripts/check-layer-violations.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/scripts/check-layer-violations.ts).
+| Layer | Responsibility |
+| --- | --- |
+| `framework/core`. | API clients, composables, services (menu, toolbar, settings, notifications), plugins (modularity, extensions, permissions, i18n, SignalR), blade navigation engine. |
+| `framework/ui`. | Atomic Design components including `VcBlade`, `VcDataTable`, `VcForm`. |
+| `framework/shell`. | Sidebar, top bar, dashboard, settings, auth layout, blade rendering glue. |
+| Your app. | Modules, custom blades, business logic, app-specific config. |
 
 ## Blade architecture
 
@@ -87,15 +85,3 @@ Standalone apps skip MF and bundle modules at build time. Host apps load remotes
 
 **Framework bootstrap.** `app.use(VirtoShellFramework, options)` runs a fixed sequence: register the base theme, install `fetch` interceptors, initialize `vue-i18n` and merge framework locales, provide breakpoints, create core services (`widget`, `toolbar`, `menu`, `settings`, notifications), create the `BladeRegistry`, install the blade navigation plugin and the built-in modules (SignalR, permissions, touch events, AI agent), provide App Insights options, install global error handlers, start connection and slow-network composables, and register the router guards (auth + permissions). Authoritative source: [`framework/index.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/framework/index.ts).
 
-## Source of truth
-
-When this page drifts, treat these as authoritative:
-
-| Concern | File |
-| --- | --- |
-| Runtime bootstrap. | [`framework/index.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/framework/index.ts). |
-| Blade runtime. | [`framework/core/blade-navigation/`](https://github.com/VirtoCommerce/vc-shell/tree/main/framework/core/blade-navigation), [`framework/core/composables/useBlade/`](https://github.com/VirtoCommerce/vc-shell/tree/main/framework/core/composables/useBlade). |
-| Module registration. | [`framework/core/plugins/modularity/index.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/framework/core/plugins/modularity/index.ts). |
-| Extension points. | [`framework/core/plugins/extension-points/`](https://github.com/VirtoCommerce/vc-shell/tree/main/framework/core/plugins/extension-points). |
-| MF runtime. | [`packages/mf-host/src/register-remote-modules.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/packages/mf-host/src/register-remote-modules.ts). |
-| MF shared and build config. | [`packages/mf-config/src/shared-deps.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/packages/mf-config/src/shared-deps.ts), [`packages/mf-module/src/dynamic-module-config.ts`](https://github.com/VirtoCommerce/vc-shell/blob/main/packages/mf-module/src/dynamic-module-config.ts). |
