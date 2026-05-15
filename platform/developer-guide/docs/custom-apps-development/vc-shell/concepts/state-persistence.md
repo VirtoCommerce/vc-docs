@@ -58,7 +58,7 @@ This is the right mode for tables embedded inside a modal, a wizard step, or any
 
 ## Schema migration
 
-The composable handles two schema versions. Payloads tagged `v: 2` are applied directly. Payloads tagged `v: 1` (pixel-based widths from an older shell version) are migrated on read: pixels are normalized to weights against the total stored width, then handed to the v2 code path. The migrated state is rewritten on the next save. Anything else — wrong type, missing required field, corrupted JSON, totalPx of zero — is discarded, and the table starts from defaults.
+The composable handles two schema versions. Payloads tagged `v: 2` are applied directly. Payloads tagged `v: 1` (pixel-based widths from an older shell version) are migrated on read: pixels are normalized to weights against the total stored width, then handed to the v2 code path. The migrated state is rewritten on the next save. Anything else, including wrong type, missing required field, corrupted JSON, or totalPx of zero, is discarded, and the table starts from defaults.
 
 The framework does not run schema migrations for the application's own column changes. When a developer renames a column id, adds a new column, or removes one:
 
