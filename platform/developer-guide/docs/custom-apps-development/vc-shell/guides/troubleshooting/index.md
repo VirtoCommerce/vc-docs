@@ -63,17 +63,6 @@ yarn why vue
 
 `preserveSymlinks: true` must also be set in both **vite.config.ts** and **tsconfig.json**; the scaffolder enables it, so an absent flag means a manually edited config.
 
-## Build errors: circular deps and layer violations
-
-When the framework's strict-checks pre-commit hook fires on a contribution, two scripts catch the most common architectural slips.
-
-```bash
-yarn check:circular   # madge over framework/
-yarn check:layers     # enforces layer dependency direction
-```
-
-`check:circular` lists every cycle madge finds; `check:layers` reports any import that crosses a layer boundary in the wrong direction. Both must pass before the build is considered green.
-
 ## Auth: 401 on refresh
 
 A 401 immediately after a token refresh means the refresh token itself was rejected. The two causes: the refresh token expired (default lifetime is 30 days, the user has been idle longer), or the OAuth client on the Platform was reconfigured and the previously issued tokens no longer match its scopes.
