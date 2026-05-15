@@ -1750,6 +1750,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Main navigation item with nested items -->
 
+    <li class="md-nav__item">
+      <a href="../../Getting-Started/Installation-Guide/start-local/" class="md-nav__link">
+        Local install with start-local
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
 
  <!-- Determine whether to render item as a section -->
  
@@ -1767,9 +1785,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <input
         class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_3_4_4"
+        data-md-toggle="__nav_3_4_5"
         type="checkbox"
-        id="__nav_3_4_4"
+        id="__nav_3_4_5"
         
     />
     
@@ -1782,8 +1800,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <label
           class="md-nav__link"
-          for="__nav_3_4_4"
-          id="__nav_3_4_4_label"
+          for="__nav_3_4_5"
+          id="__nav_3_4_5_label"
           tabindex="0"
         >
           Post Installation Steps
@@ -1797,11 +1815,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <nav
         class="md-nav"
         data-md-level="3"
-        aria-labelledby="__nav_3_4_4_label"
+        aria-labelledby="__nav_3_4_5_label"
         aria-expanded="false"
           aria-label="Post Installation Steps"
       >
-        <label class="md-nav__title" for="__nav_3_4_4">
+        <label class="md-nav__title" for="__nav_3_4_5">
           <span class="md-nav__icon md-icon"></span>
           Post Installation Steps
         </label>
@@ -7193,6 +7211,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#platformsettings" class="md-nav__link">
         PlatformSettings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#productsnapshot" class="md-nav__link">
+        ProductSnapshot
     </a>
 
     <!-- Render nested item list -->
@@ -23608,6 +23636,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../Extensibility/cms-integrations/contentful-setup/" class="md-nav__link">
+        Contentful Setup
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
     </nav>
 </li>
@@ -24411,6 +24457,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../Tutorials-and-How-tos/How-tos/configuring-multiple-stores-on-virto-cloud/" class="md-nav__link">
         Configuring Multiple Stores on Virto Cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../Tutorials-and-How-tos/How-tos/product-snapshot/" class="md-nav__link">
+        Product Snapshot Module Architecture and Extensibility
       </a>
     </li>
   
@@ -28651,6 +28715,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#productsnapshot" class="md-nav__link">
+        ProductSnapshot
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#pushmessages" class="md-nav__link">
         PushMessages
     </a>
@@ -28868,7 +28942,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 16, 2026 11:58:45 UTC">April 16, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 15, 2026 07:49:16 UTC">May 15, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -31632,6 +31706,35 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-53-12" name="__codelineno-53-12" href="#__codelineno-53-12"></a><span class="w">  </span><span class="nt">&quot;IsDictionary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <a id="__codelineno-53-13" name="__codelineno-53-13" href="#__codelineno-53-13"></a><span class="p">}</span>
 </code></pre></div>
+<h3 id="productsnapshot">ProductSnapshot<a class="headerlink" href="#productsnapshot" title="Permanent link">&para;</a></h3>
+<p>This node configures the Product Snapshot module, which captures product information at order creation so completed orders keep their original product details after catalog changes.</p>
+<!--product-snapshot-start-->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Default or sample value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enabled</td>
+<td>true<br> false</td>
+<td>Enables automatic product snapshot creation on new orders. Must be set to <code>true</code> to activate the module.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples</strong></p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="p">{</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="w">  </span><span class="nt">&quot;ProductSnapshot&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">    </span><span class="nt">&quot;Enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="p">}</span>
+</code></pre></div>
+<!--product-snapshot-end-->
+
 <h3 id="pushmessages">PushMessages<a class="headerlink" href="#pushmessages" title="Permanent link">&para;</a></h3>
 <p>This node configures the push notification settings for the Virto Commerce Push Messages module using Firebase Cloud Messaging (FCM).</p>
 <table>
@@ -31751,33 +31854,33 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Examples</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="p">{</span>
-<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="w">  </span><span class="nt">&quot;PushMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">    </span><span class="nt">&quot;UseFirebaseCloudMessaging&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="w">    </span><span class="nt">&quot;FcmSenderOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="w">      </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;service_account&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a><span class="w">      </span><span class="nt">&quot;ProjectId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-7" name="__codelineno-54-7" href="#__codelineno-54-7"></a><span class="w">      </span><span class="nt">&quot;PrivateKeyId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;956335b2eeccd3b37ef8f6871b406a6a31e1b29a&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-8" name="__codelineno-54-8" href="#__codelineno-54-8"></a><span class="w">      </span><span class="nt">&quot;PrivateKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-----BEGIN PRIVATE KEY-----\n…-----END PRIVATE KEY-----\n&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-9" name="__codelineno-54-9" href="#__codelineno-54-9"></a><span class="w">      </span><span class="nt">&quot;ClientEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;firebase-adminsdk-5gw7s@vc-push-86046.iam.gserviceaccount.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-10" name="__codelineno-54-10" href="#__codelineno-54-10"></a><span class="w">      </span><span class="nt">&quot;ClientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;117271734888260111772&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-11" name="__codelineno-54-11" href="#__codelineno-54-11"></a><span class="w">      </span><span class="nt">&quot;AuthUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://accounts.google.com/o/oauth2/auth&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-12" name="__codelineno-54-12" href="#__codelineno-54-12"></a><span class="w">      </span><span class="nt">&quot;TokenUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://oauth2.googleapis.com/token&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-13" name="__codelineno-54-13" href="#__codelineno-54-13"></a><span class="w">      </span><span class="nt">&quot;AuthProviderX509CertUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.googleapis.com/oauth2/v1/certs&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-14" name="__codelineno-54-14" href="#__codelineno-54-14"></a><span class="w">      </span><span class="nt">&quot;ClientX509CertUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5gw7s%40vc-push-86046.iam.gserviceaccount.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-15" name="__codelineno-54-15" href="#__codelineno-54-15"></a><span class="w">      </span><span class="nt">&quot;UniverseDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;googleapis.com&quot;</span>
-<a id="__codelineno-54-16" name="__codelineno-54-16" href="#__codelineno-54-16"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-54-17" name="__codelineno-54-17" href="#__codelineno-54-17"></a><span class="w">    </span><span class="nt">&quot;FcmReceiverOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-54-18" name="__codelineno-54-18" href="#__codelineno-54-18"></a><span class="w">      </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AIzaSyCy9gsvKM1e77GRYw6M9rKRRSekZNAgRnI&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-19" name="__codelineno-54-19" href="#__codelineno-54-19"></a><span class="w">      </span><span class="nt">&quot;AuthDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046.firebaseapp.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-20" name="__codelineno-54-20" href="#__codelineno-54-20"></a><span class="w">      </span><span class="nt">&quot;ProjectId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-21" name="__codelineno-54-21" href="#__codelineno-54-21"></a><span class="w">      </span><span class="nt">&quot;StorageBucket&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046.appspot.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-22" name="__codelineno-54-22" href="#__codelineno-54-22"></a><span class="w">      </span><span class="nt">&quot;MessagingSenderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;647691501458&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-23" name="__codelineno-54-23" href="#__codelineno-54-23"></a><span class="w">      </span><span class="nt">&quot;AppId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1:647691501458:web:2b18fc3a864469ac378b4b&quot;</span><span class="p">,</span>
-<a id="__codelineno-54-24" name="__codelineno-54-24" href="#__codelineno-54-24"></a><span class="w">      </span><span class="nt">&quot;VapidKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BJyVagnZqcHI6_vwxILEfxpbVAq0F-ASE5k3WwX_F72WaQr_ysHKqhH5-8yWfUhNs9oecGcOy8kJ_m4b-OXrNFs&quot;</span>
-<a id="__codelineno-54-25" name="__codelineno-54-25" href="#__codelineno-54-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-54-26" name="__codelineno-54-26" href="#__codelineno-54-26"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-54-27" name="__codelineno-54-27" href="#__codelineno-54-27"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="p">{</span>
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">  </span><span class="nt">&quot;PushMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="w">    </span><span class="nt">&quot;UseFirebaseCloudMessaging&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a><span class="w">    </span><span class="nt">&quot;FcmSenderOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="w">      </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;service_account&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a><span class="w">      </span><span class="nt">&quot;ProjectId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a><span class="w">      </span><span class="nt">&quot;PrivateKeyId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;956335b2eeccd3b37ef8f6871b406a6a31e1b29a&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a><span class="w">      </span><span class="nt">&quot;PrivateKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-----BEGIN PRIVATE KEY-----\n…-----END PRIVATE KEY-----\n&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a><span class="w">      </span><span class="nt">&quot;ClientEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;firebase-adminsdk-5gw7s@vc-push-86046.iam.gserviceaccount.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a><span class="w">      </span><span class="nt">&quot;ClientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;117271734888260111772&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a><span class="w">      </span><span class="nt">&quot;AuthUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://accounts.google.com/o/oauth2/auth&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a><span class="w">      </span><span class="nt">&quot;TokenUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://oauth2.googleapis.com/token&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-13" name="__codelineno-55-13" href="#__codelineno-55-13"></a><span class="w">      </span><span class="nt">&quot;AuthProviderX509CertUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.googleapis.com/oauth2/v1/certs&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-14" name="__codelineno-55-14" href="#__codelineno-55-14"></a><span class="w">      </span><span class="nt">&quot;ClientX509CertUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5gw7s%40vc-push-86046.iam.gserviceaccount.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-15" name="__codelineno-55-15" href="#__codelineno-55-15"></a><span class="w">      </span><span class="nt">&quot;UniverseDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;googleapis.com&quot;</span>
+<a id="__codelineno-55-16" name="__codelineno-55-16" href="#__codelineno-55-16"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-55-17" name="__codelineno-55-17" href="#__codelineno-55-17"></a><span class="w">    </span><span class="nt">&quot;FcmReceiverOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-55-18" name="__codelineno-55-18" href="#__codelineno-55-18"></a><span class="w">      </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AIzaSyCy9gsvKM1e77GRYw6M9rKRRSekZNAgRnI&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-19" name="__codelineno-55-19" href="#__codelineno-55-19"></a><span class="w">      </span><span class="nt">&quot;AuthDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046.firebaseapp.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-20" name="__codelineno-55-20" href="#__codelineno-55-20"></a><span class="w">      </span><span class="nt">&quot;ProjectId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-21" name="__codelineno-55-21" href="#__codelineno-55-21"></a><span class="w">      </span><span class="nt">&quot;StorageBucket&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-push-86046.appspot.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-22" name="__codelineno-55-22" href="#__codelineno-55-22"></a><span class="w">      </span><span class="nt">&quot;MessagingSenderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;647691501458&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-23" name="__codelineno-55-23" href="#__codelineno-55-23"></a><span class="w">      </span><span class="nt">&quot;AppId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1:647691501458:web:2b18fc3a864469ac378b4b&quot;</span><span class="p">,</span>
+<a id="__codelineno-55-24" name="__codelineno-55-24" href="#__codelineno-55-24"></a><span class="w">      </span><span class="nt">&quot;VapidKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BJyVagnZqcHI6_vwxILEfxpbVAq0F-ASE5k3WwX_F72WaQr_ysHKqhH5-8yWfUhNs9oecGcOy8kJ_m4b-OXrNFs&quot;</span>
+<a id="__codelineno-55-25" name="__codelineno-55-25" href="#__codelineno-55-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-55-26" name="__codelineno-55-26" href="#__codelineno-55-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-55-27" name="__codelineno-55-27" href="#__codelineno-55-27"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="pushnotifications">PushNotifications<a class="headerlink" href="#pushnotifications" title="Permanent link">&para;</a></h3>
 <p>This node configures the push notification service settings for scalability in the Virto Commerce Platform.</p>
@@ -31818,21 +31921,21 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="p">{</span>
-<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="w">    </span><span class="nt">&quot;PushNotifications&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a><span class="w">      </span><span class="nt">&quot;ScalabilityMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
-<a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="w">      </span><span class="nt">&quot;HubUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/pushNotificationHub&quot;</span><span class="p">,</span>
-<a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a><span class="w">      </span><span class="nt">&quot;ForceWebSockets&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a><span class="w">      </span><span class="nt">&quot;AzureSignalRService&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a><span class="w">        </span><span class="nt">&quot;ConnectionString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Endpoint=https://{app name}.service.signalr.net;AccessKey={access key};Version=1.0;&quot;</span>
-<a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a><span class="w">      </span><span class="p">},</span>
-<a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a><span class="w">      </span><span class="nt">&quot;RedisBackplane&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a><span class="w">        </span><span class="nt">&quot;ChannelName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VirtoCommerceChannel&quot;</span>
-<a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-55-13" name="__codelineno-55-13" href="#__codelineno-55-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-55-14" name="__codelineno-55-14" href="#__codelineno-55-14"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-55-15" name="__codelineno-55-15" href="#__codelineno-55-15"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="p">{</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="w">    </span><span class="nt">&quot;PushNotifications&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a><span class="w">      </span><span class="nt">&quot;ScalabilityMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
+<a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a><span class="w">      </span><span class="nt">&quot;HubUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/pushNotificationHub&quot;</span><span class="p">,</span>
+<a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a><span class="w">      </span><span class="nt">&quot;ForceWebSockets&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a><span class="w">      </span><span class="nt">&quot;AzureSignalRService&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a><span class="w">        </span><span class="nt">&quot;ConnectionString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Endpoint=https://{app name}.service.signalr.net;AccessKey={access key};Version=1.0;&quot;</span>
+<a id="__codelineno-56-9" name="__codelineno-56-9" href="#__codelineno-56-9"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-56-10" name="__codelineno-56-10" href="#__codelineno-56-10"></a><span class="w">      </span><span class="nt">&quot;RedisBackplane&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-56-11" name="__codelineno-56-11" href="#__codelineno-56-11"></a><span class="w">        </span><span class="nt">&quot;ChannelName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VirtoCommerceChannel&quot;</span>
+<a id="__codelineno-56-12" name="__codelineno-56-12" href="#__codelineno-56-12"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-56-13" name="__codelineno-56-13" href="#__codelineno-56-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-56-14" name="__codelineno-56-14" href="#__codelineno-56-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-56-15" name="__codelineno-56-15" href="#__codelineno-56-15"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h3>
 <p>This node configures full text search for the Virto Commerce Search module.</p>
@@ -31861,28 +31964,28 @@ The Reset icon is not displayed when:</p>
 </table>
 <p><strong>Examples</strong></p>
 <p>Configure the search provider modules and activate them in the <code>Search.Provider</code> section, providing connection parameters as specified in the module documentation:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a><span class="w">      </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
-<a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a><span class="w">            </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
-<a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span>
-<a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-56-9" name="__codelineno-56-9" href="#__codelineno-56-9"></a><span class="w">    </span><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a><span class="w">      </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
+<a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a><span class="w">            </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
+<a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span>
+<a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <p>Tailor the search provider per document type to optimize search performance and functionality:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="p">{</span>
-<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="w">  </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a><span class="w">    </span><span class="nt">&quot;DocumentScopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a><span class="w">      </span><span class="p">{</span>
-<a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a><span class="w">        </span><span class="nt">&quot;DocumentType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
-<a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch8&quot;</span>
-<a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-57-10" name="__codelineno-57-10" href="#__codelineno-57-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-57-11" name="__codelineno-57-11" href="#__codelineno-57-11"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="p">{</span>
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">  </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a><span class="w">    </span><span class="nt">&quot;DocumentScopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a><span class="w">        </span><span class="nt">&quot;DocumentType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
+<a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch8&quot;</span>
+<a id="__codelineno-58-8" name="__codelineno-58-8" href="#__codelineno-58-8"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-58-9" name="__codelineno-58-9" href="#__codelineno-58-9"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-58-10" name="__codelineno-58-10" href="#__codelineno-58-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-58-11" name="__codelineno-58-11" href="#__codelineno-58-11"></a><span class="p">}</span>
 </code></pre></div>
 <!--search-end-->
 
@@ -31950,86 +32053,86 @@ The Reset icon is not displayed when:</p>
 <p>Virto Commerce has its native <a href="https://github.com/VirtoCommerce/vc-module-elastic-search-8">Elasticsearch 8.x module</a>. The current module works with Elasticsearch 8.x in compatibility mode.</p>
 </div>
 <p>Enable the compatibility mode for Elastic Cloud v8.x:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a><span class="w">        </span><span class="nt">&quot;EnableCompatibilityMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
-<a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://4fe3ad462de203c52b358ff2cc6fe9cc.europe-west1.gcp.cloud.es.io:9243&quot;</span><span class="p">,</span>
-<a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-58-8" name="__codelineno-58-8" href="#__codelineno-58-8"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
-<a id="__codelineno-58-9" name="__codelineno-58-9" href="#__codelineno-58-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-58-10" name="__codelineno-58-10" href="#__codelineno-58-10"></a><span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Configure Elasticsearch v8.x without security features enabled:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a><span class="w">        </span><span class="nt">&quot;EnableCompatibilityMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
-<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span>
-<a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a><span class="p">}</span>
+<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://4fe3ad462de203c52b358ff2cc6fe9cc.europe-west1.gcp.cloud.es.io:9243&quot;</span><span class="p">,</span>
+<a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
+<a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a><span class="p">}</span>
 </code></pre></div>
-<p>Configure Elasticsearch v8.x with ApiKey authorization:</p>
+</div>
+<div class="tabbed-block">
+<p>Configure Elasticsearch v8.x without security features enabled:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a><span class="w">        </span><span class="nt">&quot;EnableCompatibilityMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
-<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
-<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{USER_NAME}&quot;</span><span class="p">,</span>
-<a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
-<a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-60-10" name="__codelineno-60-10" href="#__codelineno-60-10"></a><span class="p">}</span>
+<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span>
+<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a><span class="p">}</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Configure Elastic Cloud v7.x as follows:</p>
+<p>Configure Elasticsearch v8.x with ApiKey authorization:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://4fe3ad462de203c52b358ff2cc6fe9cc.europe-west1.gcp.cloud.es.io:9243&quot;</span><span class="p">,</span>
-<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
-<a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-61-9" name="__codelineno-61-9" href="#__codelineno-61-9"></a><span class="p">}</span>
+<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a><span class="w">        </span><span class="nt">&quot;EnableCompatibilityMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
+<a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{USER_NAME}&quot;</span><span class="p">,</span>
+<a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-61-9" name="__codelineno-61-9" href="#__codelineno-61-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-61-10" name="__codelineno-61-10" href="#__codelineno-61-10"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>Configure Elasticsearch v7.x without security features enabled:</p>
+<p>Configure Elastic Cloud v7.x as follows:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span>
-<a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a><span class="p">}</span>
+<a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://4fe3ad462de203c52b358ff2cc6fe9cc.europe-west1.gcp.cloud.es.io:9243&quot;</span><span class="p">,</span>
+<a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
+<a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a><span class="p">}</span>
 </code></pre></div>
-<p>Configure Elasticsearch v7.x with ApiKey authorization:</p>
+</div>
+<div class="tabbed-block">
+<p>Configure Elasticsearch v7.x without security features enabled:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
-<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{USER_NAME}&quot;</span><span class="p">,</span>
-<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
-<a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a><span class="p">}</span>
+<a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span>
+<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a><span class="p">}</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Configure Amazon OpenSearch Service:</p>
+<p>Configure Elasticsearch v7.x with ApiKey authorization:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com&quot;</span>
-<a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a><span class="p">}</span>
+<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
+<a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{USER_NAME}&quot;</span><span class="p">,</span>
+<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Configure Amazon OpenSearch Service:</p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com&quot;</span>
+<a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-65-7" name="__codelineno-65-7" href="#__codelineno-65-7"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
@@ -32086,59 +32189,59 @@ The Reset icon is not displayed when:</p>
 <p>Endpoint and API key can be managed in the Credential menu within the App Search Dashboard panel.</p>
 </div>
 <p><strong>Examples</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a><span class="w">                </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
-<a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a><span class="w">            </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
-<a id="__codelineno-65-7" name="__codelineno-65-7" href="#__codelineno-65-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span>
-<a id="__codelineno-65-8" name="__codelineno-65-8" href="#__codelineno-65-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-65-9" name="__codelineno-65-9" href="#__codelineno-65-9"></a><span class="w">    </span><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a><span class="w">                </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
+<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a><span class="w">            </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
+<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span>
+<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h5 id="dynamic-boosting">Dynamic Boosting<a class="headerlink" href="#dynamic-boosting" title="Permanent link">&para;</a></h5>
 <p>The Elastic App Search provider combines static boosting from the Search Relevance Tuning panel with dynamic boosting that can be passed at runtime.</p>
 <p>Dynamic Boosting supports both Value Boost and Functional Boosting.</p>
 <p>Define Boost Presets as follows:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a><span class="w">          </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a><span class="w">          </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>
-<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a><span class="w">          </span><span class="nt">&quot;BoostPresets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-66-10" name="__codelineno-66-10" href="#__codelineno-66-10"></a><span class="w">            </span><span class="p">{</span>
-<a id="__codelineno-66-11" name="__codelineno-66-11" href="#__codelineno-66-11"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-12" name="__codelineno-66-12" href="#__codelineno-66-12"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-13" name="__codelineno-66-13" href="#__codelineno-66-13"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-14" name="__codelineno-66-14" href="#__codelineno-66-14"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<a id="__codelineno-66-15" name="__codelineno-66-15" href="#__codelineno-66-15"></a><span class="w">              </span><span class="nt">&quot;IsDefault&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-66-16" name="__codelineno-66-16" href="#__codelineno-66-16"></a><span class="w">            </span><span class="p">},</span>
-<a id="__codelineno-66-17" name="__codelineno-66-17" href="#__codelineno-66-17"></a><span class="w">            </span><span class="p">{</span>
-<a id="__codelineno-66-18" name="__codelineno-66-18" href="#__codelineno-66-18"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-19" name="__codelineno-66-19" href="#__codelineno-66-19"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-20" name="__codelineno-66-20" href="#__codelineno-66-20"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-21" name="__codelineno-66-21" href="#__codelineno-66-21"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-66-22" name="__codelineno-66-22" href="#__codelineno-66-22"></a><span class="w">            </span><span class="p">},</span>
-<a id="__codelineno-66-23" name="__codelineno-66-23" href="#__codelineno-66-23"></a><span class="w">            </span><span class="p">{</span>
-<a id="__codelineno-66-24" name="__codelineno-66-24" href="#__codelineno-66-24"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Low&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-25" name="__codelineno-66-25" href="#__codelineno-66-25"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-26" name="__codelineno-66-26" href="#__codelineno-66-26"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
-<a id="__codelineno-66-27" name="__codelineno-66-27" href="#__codelineno-66-27"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
-<a id="__codelineno-66-28" name="__codelineno-66-28" href="#__codelineno-66-28"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-66-29" name="__codelineno-66-29" href="#__codelineno-66-29"></a><span class="w">          </span><span class="p">]</span>
-<a id="__codelineno-66-30" name="__codelineno-66-30" href="#__codelineno-66-30"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-66-31" name="__codelineno-66-31" href="#__codelineno-66-31"></a><span class="w">      </span><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticAppSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a><span class="w">        </span><span class="nt">&quot;ElasticAppSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a><span class="w">          </span><span class="nt">&quot;Endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:3002&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a><span class="w">          </span><span class="nt">&quot;PrivateApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;private-key&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-7" name="__codelineno-67-7" href="#__codelineno-67-7"></a><span class="w">          </span><span class="nt">&quot;KibanaBaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5601&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-8" name="__codelineno-67-8" href="#__codelineno-67-8"></a>
+<a id="__codelineno-67-9" name="__codelineno-67-9" href="#__codelineno-67-9"></a><span class="w">          </span><span class="nt">&quot;BoostPresets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-67-10" name="__codelineno-67-10" href="#__codelineno-67-10"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-67-11" name="__codelineno-67-11" href="#__codelineno-67-11"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-12" name="__codelineno-67-12" href="#__codelineno-67-12"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-13" name="__codelineno-67-13" href="#__codelineno-67-13"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-14" name="__codelineno-67-14" href="#__codelineno-67-14"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-67-15" name="__codelineno-67-15" href="#__codelineno-67-15"></a><span class="w">              </span><span class="nt">&quot;IsDefault&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-67-16" name="__codelineno-67-16" href="#__codelineno-67-16"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-67-17" name="__codelineno-67-17" href="#__codelineno-67-17"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-67-18" name="__codelineno-67-18" href="#__codelineno-67-18"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-19" name="__codelineno-67-19" href="#__codelineno-67-19"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-20" name="__codelineno-67-20" href="#__codelineno-67-20"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-21" name="__codelineno-67-21" href="#__codelineno-67-21"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<a id="__codelineno-67-22" name="__codelineno-67-22" href="#__codelineno-67-22"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-67-23" name="__codelineno-67-23" href="#__codelineno-67-23"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-67-24" name="__codelineno-67-24" href="#__codelineno-67-24"></a><span class="w">              </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Low&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-25" name="__codelineno-67-25" href="#__codelineno-67-25"></a><span class="w">              </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-26" name="__codelineno-67-26" href="#__codelineno-67-26"></a><span class="w">              </span><span class="nt">&quot;Operation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<a id="__codelineno-67-27" name="__codelineno-67-27" href="#__codelineno-67-27"></a><span class="w">              </span><span class="nt">&quot;Factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<a id="__codelineno-67-28" name="__codelineno-67-28" href="#__codelineno-67-28"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-67-29" name="__codelineno-67-29" href="#__codelineno-67-29"></a><span class="w">          </span><span class="p">]</span>
+<a id="__codelineno-67-30" name="__codelineno-67-30" href="#__codelineno-67-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-67-31" name="__codelineno-67-31" href="#__codelineno-67-31"></a><span class="w">      </span><span class="p">}</span>
 </code></pre></div>
 <p>Pass SearchBoost with Search Request:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="err">searchReques</span><span class="kc">t</span><span class="err">.Boos</span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">[</span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">SearchBoos</span><span class="kc">t</span>
-<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="w">      </span><span class="p">{</span>
-<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="w">                </span><span class="err">FieldName</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;brand&quot;</span><span class="p">,</span>
-<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a><span class="w">                </span><span class="err">Value</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span>
-<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a><span class="w">                </span><span class="err">Prese</span><span class="kc">t</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
-<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a><span class="w">        </span><span class="p">}]</span><span class="err">;</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="err">searchReques</span><span class="kc">t</span><span class="err">.Boos</span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">[</span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">SearchBoos</span><span class="kc">t</span>
+<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a><span class="w">                </span><span class="err">FieldName</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;brand&quot;</span><span class="p">,</span>
+<a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a><span class="w">                </span><span class="err">Value</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span>
+<a id="__codelineno-68-5" name="__codelineno-68-5" href="#__codelineno-68-5"></a><span class="w">                </span><span class="err">Prese</span><span class="kc">t</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+<a id="__codelineno-68-6" name="__codelineno-68-6" href="#__codelineno-68-6"></a><span class="w">        </span><span class="p">}]</span><span class="err">;</span>
 </code></pre></div>
 <!--elasticappsearch-end-->
 
@@ -32197,28 +32300,28 @@ The Reset icon is not displayed when:</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Configure a local Elasticsearch 9.x server:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch9&quot;</span><span class="p">,</span>
-<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch9&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-68-5" name="__codelineno-68-5" href="#__codelineno-68-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
-<a id="__codelineno-68-6" name="__codelineno-68-6" href="#__codelineno-68-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-68-7" name="__codelineno-68-7" href="#__codelineno-68-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
-<a id="__codelineno-68-8" name="__codelineno-68-8" href="#__codelineno-68-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-68-9" name="__codelineno-68-9" href="#__codelineno-68-9"></a><span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Configure connection to Elastic Cloud v9.x:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch9&quot;</span><span class="p">,</span>
 <a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch9&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vcdemo.es.eastus2.azure.elastic-cloud.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
 <a id="__codelineno-69-6" name="__codelineno-69-6" href="#__codelineno-69-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-69-7" name="__codelineno-69-7" href="#__codelineno-69-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-69-7" name="__codelineno-69-7" href="#__codelineno-69-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
 <a id="__codelineno-69-8" name="__codelineno-69-8" href="#__codelineno-69-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-69-9" name="__codelineno-69-9" href="#__codelineno-69-9"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Configure connection to Elastic Cloud v9.x:</p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch9&quot;</span><span class="p">,</span>
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch9&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vcdemo.es.eastus2.azure.elastic-cloud.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
+<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
@@ -32272,26 +32375,26 @@ The Reset icon is not displayed when:</p>
 </table>
 <p><strong>Examples</strong></p>
 <p>Configure local v8.x server:</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch8&quot;</span><span class="p">,</span>
-<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch8&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
-<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
-<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a><span class="p">}</span>
-</code></pre></div>
-<p>Configure Elastic Cloud v8.x:</p>
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch8&quot;</span><span class="p">,</span>
 <a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch8&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vcdemo.es.eastus2.azure.elastic-cloud.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
 <a id="__codelineno-71-6" name="__codelineno-71-6" href="#__codelineno-71-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
-<a id="__codelineno-71-7" name="__codelineno-71-7" href="#__codelineno-71-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-71-7" name="__codelineno-71-7" href="#__codelineno-71-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
 <a id="__codelineno-71-8" name="__codelineno-71-8" href="#__codelineno-71-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-71-9" name="__codelineno-71-9" href="#__codelineno-71-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>Configure Elastic Cloud v8.x:</p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElasticSearch8&quot;</span><span class="p">,</span>
+<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a><span class="w">    </span><span class="nt">&quot;ElasticSearch8&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a><span class="w">        </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vcdemo.es.eastus2.azure.elastic-cloud.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-72-6" name="__codelineno-72-6" href="#__codelineno-72-6"></a><span class="w">        </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;elastic&quot;</span><span class="p">,</span>
+<a id="__codelineno-72-7" name="__codelineno-72-7" href="#__codelineno-72-7"></a><span class="w">        </span><span class="nt">&quot;Key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{SECRET_KEY}&quot;</span>
+<a id="__codelineno-72-8" name="__codelineno-72-8" href="#__codelineno-72-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-72-9" name="__codelineno-72-9" href="#__codelineno-72-9"></a><span class="p">}</span>
 </code></pre></div>
 <!--elasticsearch8-end-->
 
@@ -32344,25 +32447,13 @@ The Reset icon is not displayed when:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">OpenSearch v2.x without security features enabled</label><label for="__tabbed_6_2">OpenSearch v2.x with ApiKey authorization</label><label for="__tabbed_6_3">Amazon OpenSearch Service</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OpenSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a><span class="w">        </span><span class="nt">&quot;OpenSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a><span class="w">            </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span>
-<a id="__codelineno-72-6" name="__codelineno-72-6" href="#__codelineno-72-6"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-72-7" name="__codelineno-72-7" href="#__codelineno-72-7"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
 <div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OpenSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a><span class="w">        </span><span class="nt">&quot;OpenSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a><span class="w">            </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
-<a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a><span class="w">            </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{USER_NAME}&quot;</span><span class="p">,</span>
-<a id="__codelineno-73-7" name="__codelineno-73-7" href="#__codelineno-73-7"></a><span class="w">            </span><span class="nt">&quot;Password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
-<a id="__codelineno-73-8" name="__codelineno-73-8" href="#__codelineno-73-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-73-9" name="__codelineno-73-9" href="#__codelineno-73-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a><span class="w">            </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span>
+<a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-73-7" name="__codelineno-73-7" href="#__codelineno-73-7"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -32370,9 +32461,21 @@ The Reset icon is not displayed when:</p>
 <a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OpenSearch&quot;</span><span class="p">,</span>
 <a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a><span class="w">        </span><span class="nt">&quot;OpenSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a><span class="w">            </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com&quot;</span>
-<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a><span class="w">            </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:9200&quot;</span><span class="p">,</span>
+<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a><span class="w">            </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{USER_NAME}&quot;</span><span class="p">,</span>
+<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a><span class="w">            </span><span class="nt">&quot;Password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{PASSWORD}&quot;</span>
+<a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-74-9" name="__codelineno-74-9" href="#__codelineno-74-9"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="w">    </span><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="w">        </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OpenSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="w">        </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a><span class="w">        </span><span class="nt">&quot;OpenSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-5" name="__codelineno-75-5" href="#__codelineno-75-5"></a><span class="w">            </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com&quot;</span>
+<a id="__codelineno-75-6" name="__codelineno-75-6" href="#__codelineno-75-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-75-7" name="__codelineno-75-7" href="#__codelineno-75-7"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
@@ -32410,13 +32513,13 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lucene&quot;</span><span class="p">,</span>
-<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a><span class="w">    </span><span class="nt">&quot;Lucene&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-75-5" name="__codelineno-75-5" href="#__codelineno-75-5"></a><span class="w">        </span><span class="nt">&quot;Path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/path/to/lucene/indexes&quot;</span>
-<a id="__codelineno-75-6" name="__codelineno-75-6" href="#__codelineno-75-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-75-7" name="__codelineno-75-7" href="#__codelineno-75-7"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lucene&quot;</span><span class="p">,</span>
+<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a><span class="w">    </span><span class="nt">&quot;Lucene&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-76-5" name="__codelineno-76-5" href="#__codelineno-76-5"></a><span class="w">        </span><span class="nt">&quot;Path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/path/to/lucene/indexes&quot;</span>
+<a id="__codelineno-76-6" name="__codelineno-76-6" href="#__codelineno-76-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-76-7" name="__codelineno-76-7" href="#__codelineno-76-7"></a><span class="p">}</span>
 </code></pre></div>
 <!--lucene-end-->
 
@@ -32461,15 +32564,15 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureSearch&quot;</span><span class="p">,</span>
-<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a><span class="w">    </span><span class="nt">&quot;AzureSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-5" name="__codelineno-76-5" href="#__codelineno-76-5"></a><span class="w">        </span><span class="nt">&quot;SearchServiceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YOUR_SEARCH_SERVICE_NAME.search.windows.net&quot;</span><span class="p">,</span>
-<a id="__codelineno-76-6" name="__codelineno-76-6" href="#__codelineno-76-6"></a><span class="w">        </span><span class="nt">&quot;AccessKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YOUR_SEARCH_SERVICE_ACCESS_KEY&quot;</span><span class="p">,</span>
-<a id="__codelineno-76-7" name="__codelineno-76-7" href="#__codelineno-76-7"></a><span class="w">        </span><span class="nt">&quot;QueryParserType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simple&quot;</span>
-<a id="__codelineno-76-8" name="__codelineno-76-8" href="#__codelineno-76-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-76-9" name="__codelineno-76-9" href="#__codelineno-76-9"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="nt">&quot;Search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="w">    </span><span class="nt">&quot;Provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureSearch&quot;</span><span class="p">,</span>
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="w">    </span><span class="nt">&quot;Scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a><span class="w">    </span><span class="nt">&quot;AzureSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a><span class="w">        </span><span class="nt">&quot;SearchServiceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YOUR_SEARCH_SERVICE_NAME.search.windows.net&quot;</span><span class="p">,</span>
+<a id="__codelineno-77-6" name="__codelineno-77-6" href="#__codelineno-77-6"></a><span class="w">        </span><span class="nt">&quot;AccessKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YOUR_SEARCH_SERVICE_ACCESS_KEY&quot;</span><span class="p">,</span>
+<a id="__codelineno-77-7" name="__codelineno-77-7" href="#__codelineno-77-7"></a><span class="w">        </span><span class="nt">&quot;QueryParserType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simple&quot;</span>
+<a id="__codelineno-77-8" name="__codelineno-77-8" href="#__codelineno-77-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-77-9" name="__codelineno-77-9" href="#__codelineno-77-9"></a><span class="p">}</span>
 </code></pre></div>
 <!--azuresearch-end-->
 
@@ -32504,10 +32607,10 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="nt">&quot;AlgoliaSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="w">    </span><span class="nt">&quot;AppId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_ID&quot;</span><span class="p">,</span>
-<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="w">    </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_KEY&quot;</span>
-<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="nt">&quot;AlgoliaSearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a><span class="w">    </span><span class="nt">&quot;AppId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_ID&quot;</span><span class="p">,</span>
+<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a><span class="w">    </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_KEY&quot;</span>
+<a id="__codelineno-78-4" name="__codelineno-78-4" href="#__codelineno-78-4"></a><span class="p">}</span>
 </code></pre></div>
 <!--algolia-end-->
 
@@ -32535,14 +32638,14 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="p">{</span>
-<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a><span class="w">    </span><span class="nt">&quot;SecurityHeaders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-78-4" name="__codelineno-78-4" href="#__codelineno-78-4"></a><span class="w">      </span><span class="nt">&quot;FrameOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
-<a id="__codelineno-78-5" name="__codelineno-78-5" href="#__codelineno-78-5"></a><span class="w">      </span><span class="nt">&quot;FrameAncestors&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span>
-<a id="__codelineno-78-6" name="__codelineno-78-6" href="#__codelineno-78-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-78-7" name="__codelineno-78-7" href="#__codelineno-78-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-78-8" name="__codelineno-78-8" href="#__codelineno-78-8"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="p">{</span>
+<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a><span class="w">  </span><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a><span class="w">    </span><span class="nt">&quot;SecurityHeaders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-79-4" name="__codelineno-79-4" href="#__codelineno-79-4"></a><span class="w">      </span><span class="nt">&quot;FrameOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+<a id="__codelineno-79-5" name="__codelineno-79-5" href="#__codelineno-79-5"></a><span class="w">      </span><span class="nt">&quot;FrameAncestors&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span>
+<a id="__codelineno-79-6" name="__codelineno-79-6" href="#__codelineno-79-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-79-7" name="__codelineno-79-7" href="#__codelineno-79-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-79-8" name="__codelineno-79-8" href="#__codelineno-79-8"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="seo">SEO<a class="headerlink" href="#seo" title="Permanent link">&para;</a></h3>
 <p>This node configures SEO entry resolution for the Virto Commerce SEO module.</p>
@@ -32566,17 +32669,17 @@ The Reset icon is not displayed when:</p>
 </table>
 <p><strong>Example</strong></p>
 <p>Configure the priority order for resolving SEO entries using the <code>Seo.SeoInfoResolver.ObjectTypePriority</code> key. The system will use this order to determine which entity to associate with a given permalink when multiple matches exist.</p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="nt">&quot;Seo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a><span class="w">  </span><span class="nt">&quot;SeoInfoResolver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a><span class="w">    </span><span class="nt">&quot;ObjectTypePriority&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-79-4" name="__codelineno-79-4" href="#__codelineno-79-4"></a><span class="w">      </span><span class="s2">&quot;Pages&quot;</span><span class="p">,</span>
-<a id="__codelineno-79-5" name="__codelineno-79-5" href="#__codelineno-79-5"></a><span class="w">      </span><span class="s2">&quot;ContentFile&quot;</span><span class="p">,</span>
-<a id="__codelineno-79-6" name="__codelineno-79-6" href="#__codelineno-79-6"></a><span class="w">      </span><span class="s2">&quot;Catalog&quot;</span><span class="p">,</span>
-<a id="__codelineno-79-7" name="__codelineno-79-7" href="#__codelineno-79-7"></a><span class="w">      </span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
-<a id="__codelineno-79-8" name="__codelineno-79-8" href="#__codelineno-79-8"></a><span class="w">      </span><span class="s2">&quot;CatalogProduct&quot;</span>
-<a id="__codelineno-79-9" name="__codelineno-79-9" href="#__codelineno-79-9"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-79-10" name="__codelineno-79-10" href="#__codelineno-79-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-79-11" name="__codelineno-79-11" href="#__codelineno-79-11"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="nt">&quot;Seo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="w">  </span><span class="nt">&quot;SeoInfoResolver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="w">    </span><span class="nt">&quot;ObjectTypePriority&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a><span class="w">      </span><span class="s2">&quot;Pages&quot;</span><span class="p">,</span>
+<a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="w">      </span><span class="s2">&quot;ContentFile&quot;</span><span class="p">,</span>
+<a id="__codelineno-80-6" name="__codelineno-80-6" href="#__codelineno-80-6"></a><span class="w">      </span><span class="s2">&quot;Catalog&quot;</span><span class="p">,</span>
+<a id="__codelineno-80-7" name="__codelineno-80-7" href="#__codelineno-80-7"></a><span class="w">      </span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
+<a id="__codelineno-80-8" name="__codelineno-80-8" href="#__codelineno-80-8"></a><span class="w">      </span><span class="s2">&quot;CatalogProduct&quot;</span>
+<a id="__codelineno-80-9" name="__codelineno-80-9" href="#__codelineno-80-9"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-80-10" name="__codelineno-80-10" href="#__codelineno-80-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-80-11" name="__codelineno-80-11" href="#__codelineno-80-11"></a><span class="p">}</span>
 </code></pre></div>
 <p>In the above example, if both a <code>Page</code> and a <code>Category</code> are associated with the same permalink, the system will resolve it to the <code>Page</code> because it has higher priority in the list.</p>
 <!--seo-end-->
@@ -32615,22 +32718,22 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="nt">&quot;Serilog&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="w">    </span><span class="nt">&quot;Using&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="w">      </span><span class="s2">&quot;Serilog.Sinks.Console&quot;</span><span class="p">,</span>
-<a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a><span class="w">      </span><span class="s2">&quot;Serilog.Sinks.Debug&quot;</span>
-<a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-80-6" name="__codelineno-80-6" href="#__codelineno-80-6"></a><span class="w">    </span><span class="nt">&quot;MinimumLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-7" name="__codelineno-80-7" href="#__codelineno-80-7"></a><span class="w">      </span><span class="nt">&quot;Default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Information&quot;</span>
-<a id="__codelineno-80-8" name="__codelineno-80-8" href="#__codelineno-80-8"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-80-9" name="__codelineno-80-9" href="#__codelineno-80-9"></a><span class="w">    </span><span class="nt">&quot;WriteTo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-80-10" name="__codelineno-80-10" href="#__codelineno-80-10"></a><span class="w">      </span><span class="s2">&quot;Console&quot;</span><span class="p">,</span>
-<a id="__codelineno-80-11" name="__codelineno-80-11" href="#__codelineno-80-11"></a><span class="w">      </span><span class="s2">&quot;Debug&quot;</span>
-<a id="__codelineno-80-12" name="__codelineno-80-12" href="#__codelineno-80-12"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-80-13" name="__codelineno-80-13" href="#__codelineno-80-13"></a><span class="w">    </span><span class="nt">&quot;Enrich&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-80-14" name="__codelineno-80-14" href="#__codelineno-80-14"></a><span class="w">      </span><span class="s2">&quot;FromLogContext&quot;</span>
-<a id="__codelineno-80-15" name="__codelineno-80-15" href="#__codelineno-80-15"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-80-16" name="__codelineno-80-16" href="#__codelineno-80-16"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="nt">&quot;Serilog&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a><span class="w">    </span><span class="nt">&quot;Using&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-81-3" name="__codelineno-81-3" href="#__codelineno-81-3"></a><span class="w">      </span><span class="s2">&quot;Serilog.Sinks.Console&quot;</span><span class="p">,</span>
+<a id="__codelineno-81-4" name="__codelineno-81-4" href="#__codelineno-81-4"></a><span class="w">      </span><span class="s2">&quot;Serilog.Sinks.Debug&quot;</span>
+<a id="__codelineno-81-5" name="__codelineno-81-5" href="#__codelineno-81-5"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-81-6" name="__codelineno-81-6" href="#__codelineno-81-6"></a><span class="w">    </span><span class="nt">&quot;MinimumLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-81-7" name="__codelineno-81-7" href="#__codelineno-81-7"></a><span class="w">      </span><span class="nt">&quot;Default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Information&quot;</span>
+<a id="__codelineno-81-8" name="__codelineno-81-8" href="#__codelineno-81-8"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-81-9" name="__codelineno-81-9" href="#__codelineno-81-9"></a><span class="w">    </span><span class="nt">&quot;WriteTo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-81-10" name="__codelineno-81-10" href="#__codelineno-81-10"></a><span class="w">      </span><span class="s2">&quot;Console&quot;</span><span class="p">,</span>
+<a id="__codelineno-81-11" name="__codelineno-81-11" href="#__codelineno-81-11"></a><span class="w">      </span><span class="s2">&quot;Debug&quot;</span>
+<a id="__codelineno-81-12" name="__codelineno-81-12" href="#__codelineno-81-12"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-81-13" name="__codelineno-81-13" href="#__codelineno-81-13"></a><span class="w">    </span><span class="nt">&quot;Enrich&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-81-14" name="__codelineno-81-14" href="#__codelineno-81-14"></a><span class="w">      </span><span class="s2">&quot;FromLogContext&quot;</span>
+<a id="__codelineno-81-15" name="__codelineno-81-15" href="#__codelineno-81-15"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-81-16" name="__codelineno-81-16" href="#__codelineno-81-16"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="tax">Tax<a class="headerlink" href="#tax" title="Permanent link">&para;</a></h3>
 <p>This setting is used to configure tax providers.</p>
@@ -32666,18 +32769,18 @@ The Reset icon is not displayed when:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Fixed rate tax provider</label><label for="__tabbed_7_2">Avalara tax provider</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="nt">&quot;Tax&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a><span class="w">    </span><span class="nt">&quot;FixedRateTaxProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;Enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
-<a id="__codelineno-81-3" name="__codelineno-81-3" href="#__codelineno-81-3"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="nt">&quot;Tax&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a><span class="w">    </span><span class="nt">&quot;FixedRateTaxProvider&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;Enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
+<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="nt">&quot;Tax&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a><span class="w">    </span><span class="nt">&quot;Avalara&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a><span class="w">        </span><span class="nt">&quot;AccountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;********&quot;</span><span class="p">,</span>
-<a id="__codelineno-82-4" name="__codelineno-82-4" href="#__codelineno-82-4"></a><span class="w">        </span><span class="nt">&quot;LicenseKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;**************&quot;</span>
-<a id="__codelineno-82-5" name="__codelineno-82-5" href="#__codelineno-82-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-82-6" name="__codelineno-82-6" href="#__codelineno-82-6"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="nt">&quot;Tax&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a><span class="w">    </span><span class="nt">&quot;Avalara&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-83-3" name="__codelineno-83-3" href="#__codelineno-83-3"></a><span class="w">        </span><span class="nt">&quot;AccountNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;********&quot;</span><span class="p">,</span>
+<a id="__codelineno-83-4" name="__codelineno-83-4" href="#__codelineno-83-4"></a><span class="w">        </span><span class="nt">&quot;LicenseKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;**************&quot;</span>
+<a id="__codelineno-83-5" name="__codelineno-83-5" href="#__codelineno-83-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-83-6" name="__codelineno-83-6" href="#__codelineno-83-6"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
@@ -32744,19 +32847,19 @@ The Reset icon is not displayed when:</p>
 </table>
 <!--weaviate-start-->
 
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="p">{</span>
-<a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a><span class="w">  </span><span class="nt">&quot;Weaviate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-83-3" name="__codelineno-83-3" href="#__codelineno-83-3"></a><span class="w">    </span><span class="nt">&quot;Url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8080&quot;</span><span class="p">,</span>
-<a id="__codelineno-83-4" name="__codelineno-83-4" href="#__codelineno-83-4"></a><span class="w">    </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-weaviate-api-key&quot;</span><span class="p">,</span>
-<a id="__codelineno-83-5" name="__codelineno-83-5" href="#__codelineno-83-5"></a><span class="w">    </span><span class="nt">&quot;HuggingFaceToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-huggingface-token&quot;</span><span class="p">,</span>
-<a id="__codelineno-83-6" name="__codelineno-83-6" href="#__codelineno-83-6"></a><span class="w">    </span><span class="nt">&quot;TimeoutSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
-<a id="__codelineno-83-7" name="__codelineno-83-7" href="#__codelineno-83-7"></a><span class="w">    </span><span class="nt">&quot;MaxRetries&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<a id="__codelineno-83-8" name="__codelineno-83-8" href="#__codelineno-83-8"></a><span class="w">    </span><span class="nt">&quot;MaxConnectionsPerServer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-83-9" name="__codelineno-83-9" href="#__codelineno-83-9"></a><span class="w">    </span><span class="nt">&quot;EnableCircuitBreaker&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-83-10" name="__codelineno-83-10" href="#__codelineno-83-10"></a><span class="w">    </span><span class="nt">&quot;CircuitBreakerFailureThreshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<a id="__codelineno-83-11" name="__codelineno-83-11" href="#__codelineno-83-11"></a><span class="w">    </span><span class="nt">&quot;CircuitBreakerBreakDurationSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
-<a id="__codelineno-83-12" name="__codelineno-83-12" href="#__codelineno-83-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-83-13" name="__codelineno-83-13" href="#__codelineno-83-13"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="p">{</span>
+<a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a><span class="w">  </span><span class="nt">&quot;Weaviate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="w">    </span><span class="nt">&quot;Url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8080&quot;</span><span class="p">,</span>
+<a id="__codelineno-84-4" name="__codelineno-84-4" href="#__codelineno-84-4"></a><span class="w">    </span><span class="nt">&quot;ApiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-weaviate-api-key&quot;</span><span class="p">,</span>
+<a id="__codelineno-84-5" name="__codelineno-84-5" href="#__codelineno-84-5"></a><span class="w">    </span><span class="nt">&quot;HuggingFaceToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-huggingface-token&quot;</span><span class="p">,</span>
+<a id="__codelineno-84-6" name="__codelineno-84-6" href="#__codelineno-84-6"></a><span class="w">    </span><span class="nt">&quot;TimeoutSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<a id="__codelineno-84-7" name="__codelineno-84-7" href="#__codelineno-84-7"></a><span class="w">    </span><span class="nt">&quot;MaxRetries&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-84-8" name="__codelineno-84-8" href="#__codelineno-84-8"></a><span class="w">    </span><span class="nt">&quot;MaxConnectionsPerServer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<a id="__codelineno-84-9" name="__codelineno-84-9" href="#__codelineno-84-9"></a><span class="w">    </span><span class="nt">&quot;EnableCircuitBreaker&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-84-10" name="__codelineno-84-10" href="#__codelineno-84-10"></a><span class="w">    </span><span class="nt">&quot;CircuitBreakerFailureThreshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-84-11" name="__codelineno-84-11" href="#__codelineno-84-11"></a><span class="w">    </span><span class="nt">&quot;CircuitBreakerBreakDurationSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+<a id="__codelineno-84-12" name="__codelineno-84-12" href="#__codelineno-84-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-84-13" name="__codelineno-84-13" href="#__codelineno-84-13"></a><span class="p">}</span>
 </code></pre></div>
 <!--weaviate-end-->
 
