@@ -163,7 +163,7 @@ app.use(router);
 yarn serve
 ```
 
-Sign in. A **Reservations** entry with the calendar icon appears in the sidebar at priority 30. Click it: the workspace blade opens, the data table loads, and clicking a row tries to open a `ReservationDetails` blade — that does not exist yet.
+Sign in. A **Reservations** entry with the calendar icon appears in the sidebar at priority 30. Click it: the workspace blade opens, the data table loads, and clicking a row tries to open a `ReservationDetails` blade that does not exist yet.
 
 ## Troubleshooting
 
