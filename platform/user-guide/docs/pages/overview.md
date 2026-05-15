@@ -24,7 +24,7 @@ The **Pages** module is a solution designed to connect different CMSs seamlessly
 * [Builder.io](../integrations/builder-io/overview.md): Fully supported for integration.
 * [Sanity](../sanity/overview.md)
 * [Virto Page Builder.](../page-builder/overview.md)
-* **Contentful**: Coming soon.
+* [Contentful.](../contentful/overview.md)
 * **Optimizely**: Coming soon.
 
 

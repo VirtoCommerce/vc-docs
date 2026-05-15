@@ -22,6 +22,6 @@ With the Push Messages module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../price-export-import/overview">← Price Export-Import module overview</a>
+    <a href="../../product-snapshot/overview">← Product Snapshot module overview</a>
     <a href="../manage-push-messages">Managing push messages →</a>
 </div>

@@ -46,6 +46,6 @@ You can access the Content module via:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../assets/overview">← Assets module overview</a>
+    <a href="../../quotes/overview">← Quotes module overview</a>
     <a href="../managing-themes">Managing themes →</a>
 </div>

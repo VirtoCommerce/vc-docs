@@ -108,6 +108,7 @@ nav:
                 - Windows: Getting-Started/Installation-Guide/windows.md
                 - Linux: Getting-Started/Installation-Guide/linux.md
                 - MacOS: Getting-Started/Installation-Guide/macOS.md
+                - Local install with start-local: Getting-Started/Installation-Guide/start-local.md
                 - Post Installation Steps:
                       - Setting Up Self Signed SSL Certificate: Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
                       - Configuring Email Notifications: Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md
@@ -866,6 +867,7 @@ nav:
                             - String: Extensibility/cms-integrations/PageBuilder/string.md
                             - Text: Extensibility/cms-integrations/PageBuilder/text.md
                 - Sanity Setup: Extensibility/cms-integrations/sanity-setup.md
+                - Contentful Setup: Extensibility/cms-integrations/contentful-setup.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
     - Tutorials and How-tos:
@@ -894,6 +896,7 @@ nav:
                 - Debugging VC Code without Source Code: Tutorials-and-How-tos/How-tos/debugging.md
                 - Configuring Multiple Stores: Tutorials-and-How-tos/How-tos/configuring-multiple-stores.md
                 - Configuring Multiple Stores on Virto Cloud: Tutorials-and-How-tos/How-tos/configuring-multiple-stores-on-virto-cloud.md
+                - Product Snapshot Module Architecture and Extensibility: Tutorials-and-How-tos/How-tos/product-snapshot.md
                 - Extending Cart Query With Custom Parameter: Tutorials-and-How-tos/How-tos/extending-cart-query-with-custom-parameter.md
                 - Customizing Cart Validation Policies: Tutorials-and-How-tos/How-tos/customizing-cart-validation-policies.md
                 - Overriding Rounding Policy: Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md
