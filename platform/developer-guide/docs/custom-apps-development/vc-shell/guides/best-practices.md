@@ -29,7 +29,7 @@ The full layout reference lives in [Project structure](../getting-started/projec
 
 A few rules keep the app shell lean and prevent it from absorbing module-specific logic.
 
-- **Reach for `src/composables/` only when the composable is used by 2+ modules**, or holds genuinely app-wide state (current tenant, feature flags, global search). A composable used by one module belongs in that module.
+- **Reach for `src/composables/` only when the composable is used by 2+ modules**, or holds genuinely app-wide state (current tenant, feature flags, shopping cart). A composable used by one module belongs in that module.
 - **`src/services/` is optional**. Create it only when you have a non-Vue class that wraps an external SDK or third-party service. Plain functions belong in `src/utils/`.
 - **`src/components/` is rare**. App-wide UI usually comes from `@vc-shell/framework`. Hand-rolled shared components signal that the framework is missing something. Flag it as an extension point candidate before forking.
 
