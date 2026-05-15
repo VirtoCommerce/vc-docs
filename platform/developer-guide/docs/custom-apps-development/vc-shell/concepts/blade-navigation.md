@@ -2,7 +2,7 @@
 
 A blade is a vertical panel pushed onto a stack. Opening a new blade slides it in from the right; closing it slides it back out.
 
-The pattern (popularized by the Azure Portal) preserves context across drill-downs: opening a details panel does not unmount the list, so the user compares list and details side by side instead of losing search state on every click. Each blade has at most one active child, so navigation history is linear but branchable; the URL captures the whole stack, so the browser back button restores the workspace and every open child blade. The framework owns the header, toolbar slot, banners, and close button; blade authors write only the body.
+The pattern preserves context across drill-downs: opening a details panel does not unmount the list, so the user compares list and details side by side instead of losing search state on every click. Each blade has at most one active child, so navigation history is linear but branchable; the URL captures the whole stack, so the browser back button restores the workspace and every open child blade. The framework owns the header, toolbar slot, banners, and close button; blade authors write only the body.
 
 Three primitives back the system: `useBladeStack` is the state machine; `useBladeMessaging` is the parent-child method dispatcher; `useBlade()` is the everyday composable that wraps both and works inside and outside blade context.
 
@@ -61,7 +61,7 @@ Stack source of truth: [`useBladeStack`](https://github.com/VirtoCommerce/vc-she
 | `coverCurrentBlade(event)`. | Hide the active blade and open a covering blade on top. Closing it restores the hidden one. |
 
 !!! warning "Close guards return `true` to prevent the close"
-    Same convention as Vue Router's `beforeRouteLeave`. The legacy adapter inverts this; guards written via `useBlade()` follow the modern semantics.
+    A guard returning `true` blocks the close; returning `false` lets it proceed. The legacy adapter inverts this; guards written via `useBlade()` follow the modern semantics.
 
 ## useBlade()
 
