@@ -1,12 +1,12 @@
 # VC-Shell
 
-Vue 3 frontend framework for building back-office applications on the Virto Commerce Platform.
+VC-Shell is the Vue 3 frontend layer of the Virto Commerce ecosystem, the framework you build custom back-office apps on top of the Virto Commerce Platform.
 
 VC-Shell gives you the chrome around your business logic: an authenticated app shell, a blade-paradigm navigation engine, an Atomic Design component library, a dynamic module loader, and ready-to-wire integration with OAuth, permissions, i18n, SignalR, and the Platform's API surface. You focus on modules; the framework handles routing, layout, state plumbing, and Platform connectivity.
 
 Apps you build with VC-Shell run as standalone Vue 3 bundles or as remote Module Federation modules loaded by an existing host. The same code targets the Virto Commerce admin portal, vendor-facing marketplace consoles, and any internal tool that needs to read or write Platform data.
 
-You stay in the Vue 3 ecosystem the whole way through: Composition API, TypeScript, Vue Router, Pinia, Vite. VC-Shell does not replace those tools; it composes them into a back-office-shaped starting point so the first screen you ship looks and behaves like the rest of the Virto Commerce experience.
+VC-Shell apps slot into the broader Virto Commerce product family alongside the Platform itself, the Vendor portal, and the Frontend. The Platform owns data and APIs, the Vendor portal and Frontend cover the default merchant and shopper surfaces, and a VC-Shell app is how you ship a back-office surface that those defaults do not cover, sharing the same authentication, permissions, and API contracts.
 
 ![Readmore](what-is-vc-shell.md){: width="25"} What is VC-Shell.
 
