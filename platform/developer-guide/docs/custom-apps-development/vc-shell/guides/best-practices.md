@@ -47,11 +47,11 @@ Consistent names make the codebase searchable and the module boundaries obvious.
 
 | Kind | Pattern | Example |
 | --- | --- | --- |
-| Blade name. | `<Module><Entity><Role>`. | `OrdersList`, `OrderDetails`, `OrderShipmentDetails`. |
-| Composable. | `use<Subject>`. | `useOrdersList`, `useOrderDetails`. |
-| Locale key. | `MODULE.SECTION.SUBSECTION.KEY`. | `ORDERS.PAGES.LIST.TABLE.HEADER.STATUS`. |
-| Permission. | `<domain>:<entity>:<verb>`. | `seller:orders:view`, `catalog:product:edit`. |
-| Extension point id. | `<owning-module>:<slot>`. | `seller:commissions`, `order:line-items`. |
+| Blade name | `<Module><Entity><Role>` | `OrdersList`, `OrderDetails`, `OrderShipmentDetails` |
+| Composable | `use<Subject>` | `useOrdersList`, `useOrderDetails` |
+| Locale key | `MODULE.SECTION.SUBSECTION.KEY` | `ORDERS.PAGES.LIST.TABLE.HEADER.STATUS` |
+| Permission | `<domain>:<entity>:<verb>` | `seller:orders:view`, `catalog:product:edit` |
+| Extension point id | `<owning-module>:<slot>` | `seller:commissions`, `order:line-items` |
 
 ## Styling strategy
 
