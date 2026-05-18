@@ -1,0 +1,6 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Notifications
+nav:
+  - useNotifications: useNotifications.md
+  - usePopup: usePopup.md

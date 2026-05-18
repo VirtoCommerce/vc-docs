@@ -1,0 +1,12 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Composables
+nav:
+  - blade-navigation
+  - data
+  - ui-state
+  - services
+  - user
+  - notifications
+  - forms
+  - utilities

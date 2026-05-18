@@ -1,0 +1,13 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Services
+nav:
+  - Overview: index.md
+  - useAppBarMobileButtons: useAppBarMobileButtons.md
+  - useAppBarWidget: useAppBarWidget.md
+  - useDashboard: useDashboard.md
+  - useMenuService: useMenuService.md
+  - useSettings: useSettings.md
+  - useSettingsMenu: useSettingsMenu.md
+  - useToolbar: useToolbar.md
+  - useWidgets: useWidgets.md
