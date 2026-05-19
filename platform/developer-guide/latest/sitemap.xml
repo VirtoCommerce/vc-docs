@@ -769,6 +769,10 @@
          <lastmod>2026-05-19</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfigurationItemSelected/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem/</loc>
          <lastmod>2026-05-19</lastmod>
     </url>
@@ -849,11 +853,27 @@
          <lastmod>2026-05-19</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartConfigurationItems/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartItems/</loc>
          <lastmod>2026-05-19</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartConfigurationItems/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartItems/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unSelectAllCartConfigurationItems/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unSelectCartConfigurationItems/</loc>
          <lastmod>2026-05-19</lastmod>
     </url>
     <url>
@@ -901,6 +921,10 @@
          <lastmod>2026-05-19</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionKeyInput/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationItemsResponseType/</loc>
          <lastmod>2026-05-19</lastmod>
     </url>
@@ -914,6 +938,10 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionInput/</loc>
+         <lastmod>2026-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/3.0/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionKeyInput/</loc>
          <lastmod>2026-05-19</lastmod>
     </url>
     <url>
