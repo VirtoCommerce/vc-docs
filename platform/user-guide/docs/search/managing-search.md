@@ -10,6 +10,8 @@ To open search index details:
         * **Product**: The goods or services offered for sale within the Virto Commerce Platform.
         * **Category**: Similar characteristics used to organize and classify products within the Platform.
         * **Customer order**: Transactions where customers purchase products or services from the Platform.
+        * **Pickup location**: Physical store, warehouse, or partner locations where customers can collect their orders.
+        * **Pages**: Content pages stored in the Virto Pages module, including those published from native Page Builder and external CMSs (Sanity, Contentful, Builder.io). Indexed for full-text search and permalink resolution.
 
     * The search provider for each record type:
         * Elastic App Search.

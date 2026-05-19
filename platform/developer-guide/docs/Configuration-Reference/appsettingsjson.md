@@ -1328,39 +1328,41 @@ This configuration node configures the ASP.NET Core Identity system.
 
 ### LoginPageUI
 
-This node configures background screen and background pattern of the Login page.
+This node configures the appearance and behavior of the login page.
 
-| Node                      | Default or sample value   | Description                                                                                              |
-| ------------------------- | ------------------------  | -------------------------------------------------------------------------------------------------------- |
-| BackgroundUrl             |                           | Url for the background image of the login page. If empty, no background image is displayed.             |
-| PatternUrl                |                           | Url for the pattern image of the login page. If empty, no pattern image is displayed.                   |
-| Preset                    |                           | The currently selected preset for the login page. If empty, no preset is applied.                         |
-| Presets                   |                           | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
-| Presets:Name              | "demo", "prod"...         | The name of the preset. Used for identification and selection of the preset.                              |
-| Presets:BackgroundUrl     |                           | Url for the background image specific to the preset. If empty, the default background is used.          |
-| Presets:PatternUrl        |                           | Url for the pattern image specific to the preset. If empty, the default pattern is used.          |
+| Node                   | Default or sample value | Description                                                                                                       |
+|------------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------|
+| BackgroundUrl          |                         | Url for the background image of the login page. If empty, no background image is displayed.                       |
+| PatternUrl             |                         | Url for the pattern image of the login page. If empty, no pattern image is displayed.                             |
+| Preset                 |                         | The currently selected preset for the login page. If empty, no preset is applied.                                 |
+| Presets                |                         | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
+| ShowForgotPasswordLink | `true`                  | Controls whether the **Forgot password** link is displayed on the login page. Set to `false` to hide the link.    |
+| Presets:Name           | "demo", "prod"...       | The name of the preset. Used for identification and selection of the preset.                                      |
+| Presets:BackgroundUrl  |                         | Url for the background image specific to the preset. If empty, the default background is used.                    |
+| Presets:PatternUrl     |                         | Url for the pattern image specific to the preset. If empty, the default pattern is used.                          |
 
 
 **Example**
 
 ```json title="appsettings.json"
-    "LoginPageUI": {
+"LoginPageUI": {
+    "BackgroundUrl": "",
+    "PatternUrl": "",
+    "Preset": "",
+    "ShowForgotPasswordLink": true,
+    "Presets": [
+      {
+        "Name": "demo",
         "BackgroundUrl": "",
-        "PatternUrl": "",
-        "Preset": "",
-        "Presets": [
-          {
-            "Name": "demo",
-            "BackgroundUrl": "",
-            "PatternUrl": "/images/pattern-demo.svg"
-          },
-          {
-            "Name": "prod",
-            "BackgroundUrl": "",
-            "PatternUrl": "/images/pattern-live.svg"
-          }
-        ]
+        "PatternUrl": "/images/pattern-demo.svg"
+      },
+      {
+        "Name": "prod",
+        "BackgroundUrl": "",
+        "PatternUrl": "/images/pattern-live.svg"
       }
+    ]
+  },
 ```
 
 

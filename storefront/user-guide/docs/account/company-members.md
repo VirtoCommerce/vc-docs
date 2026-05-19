@@ -8,6 +8,7 @@ In this section, you can:
 * Manage members access by blocking, unblocking, or deleting them.
 * Edit roles. 
 * Filter company members by their role and status.
+* Log in on behalf of any member if you have the required permissions.
 
 ![Company members](../media/company-members.png){: style="display: block; margin: 0 auto;" }
 
