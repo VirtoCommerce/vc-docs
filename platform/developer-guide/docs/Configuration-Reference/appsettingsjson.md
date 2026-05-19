@@ -1216,16 +1216,16 @@ This node configures the settings for external modules in the Virto Commerce Pla
 
 ### FileUpload
 
-This node is used to configure file uploads, including quotes and organization logo uploads.
+This node configures file upload settings, including storage location, upload scopes, file size limits, allowed file types, and anonymous upload permissions.
 
-| Node                      |Default or sample value            | Description                                               |
-|---------------------------|-----------------------------------|-----------------------------------------------------------|
-| RootPath                  |                                   | The root directory where uploaded files will be stored.   |
-| Scopes                    |                                   | Specifies different upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions.              |
-| Scopes.Scope              |                                   | Identifies the upload scope.              |
-| Scopes.MaxFileSize        | 123                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
-| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | Defines the allowed file types for uploads.               |
-| Scopes.AllowAnonymousUpload | true <br> false                 | Indicates whether anonymous uploads are permitted.        |
+| Node                        | Default or sample value                                                                 | Description |
+|-----------------------------|-------------------------------------------------------------------------------------------|-------------|
+| RootPath                    | `"upload"`                                                                               | The root directory where uploaded files are stored. |
+| Scopes                      |                                                                                           | Specifies upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions. |
+| Scopes.Scope                | `"quote-attachments"` <br> `"organization-logos"` <br> `"product-configuration"` <br> `"purchase-request-sources"`      | Identifies the upload scope. Supported scopes include quote attachments, organization logos, and product configuration uploads. |
+| Scopes.MaxFileSize          | `10485760`                                                                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
+| Scopes.AllowedExtensions    | `[".jpg", ".jpeg", ".png", ".gif", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".txt"]` | Defines the allowed file extensions for uploads within this scope. Supported extensions include image (`.jpg`, `.jpeg`, `.png`, `.gif`), document (`.pdf`, `.doc`, `.docx`, `.txt`), and spreadsheet (`.xls`, `.xlsx`) formats. |
+| Scopes.AllowAnonymousUpload | `true` <br> `false`                                                                      | Indicates whether anonymous uploads are permitted for this scope. |
 
 
 **Example**
@@ -1239,7 +1239,7 @@ This node is used to configure file uploads, including quotes and organization l
           {
             "Scope": "quote-attachments",
             "MaxFileSize": 123,
-            "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
+            "AllowedExtensions": [".jpg", ".pdf", ".png", ".txt"],
             "AllowAnonymousUpload": true
           }
         ]
@@ -1256,13 +1256,42 @@ This node is used to configure file uploads, including quotes and organization l
           {
             "Scope": "organization-logos",
             "MaxFileSize": 5000000,
-            "AllowedExtensions": [ ".jpg", ".png" ],
+            "AllowedExtensions": [".jpg", ".png"],
             "AllowAnonymousUpload": false
           }
         ]
       }
     }
     ```
+
+=== "Product configuration upload"
+    ```json title="appsettings.json"
+    {
+      "FileUpload": {
+        "RootPath": "upload",
+        "Scopes": [
+          {
+            "Scope": "product-configuration",
+            "MaxFileSize": 10485760,
+            "AllowedExtensions": [
+              ".jpg",
+              ".jpeg",
+              ".png",
+              ".gif",
+              ".pdf",
+              ".doc",
+              ".docx",
+              ".xls",
+              ".xlsx",
+              ".txt"
+            ],
+            "AllowAnonymousUpload": true
+          }
+        ]
+      }
+    }
+    ```
+
 
 ### FrontendSecurity
 
