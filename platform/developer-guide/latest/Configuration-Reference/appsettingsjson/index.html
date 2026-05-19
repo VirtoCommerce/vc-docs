@@ -28942,7 +28942,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 15, 2026 07:49:16 UTC">May 15, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 19, 2026 05:40:30 UTC">May 19, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -31101,7 +31101,7 @@ The Reset icon is not displayed when:</p>
 <!--security-end-->
 
 <h3 id="loginpageui">LoginPageUI<a class="headerlink" href="#loginpageui" title="Permanent link">&para;</a></h3>
-<p>This node configures background screen and background pattern of the Login page.</p>
+<p>This node configures the appearance and behavior of the login page.</p>
 <table>
 <thead>
 <tr>
@@ -31132,6 +31132,11 @@ The Reset icon is not displayed when:</p>
 <td>An array of preset configurations for the login page, allowing different visual settings for different scenarios.</td>
 </tr>
 <tr>
+<td>ShowForgotPasswordLink</td>
+<td><code>true</code></td>
+<td>Controls whether the <strong>Forgot password</strong> link is displayed on the login page. Set to <code>false</code> to hide the link.</td>
+</tr>
+<tr>
 <td>Presets:Name</td>
 <td>"demo", "prod"...</td>
 <td>The name of the preset. Used for identification and selection of the preset.</td>
@@ -31149,23 +31154,24 @@ The Reset icon is not displayed when:</p>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="w">    </span><span class="nt">&quot;LoginPageUI&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">        </span><span class="nt">&quot;BackgroundUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">        </span><span class="nt">&quot;PatternUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">        </span><span class="nt">&quot;Preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">        </span><span class="nt">&quot;Presets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">          </span><span class="p">{</span>
-<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a><span class="w">            </span><span class="nt">&quot;BackgroundUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="w">            </span><span class="nt">&quot;PatternUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/images/pattern-demo.svg&quot;</span>
-<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a><span class="w">          </span><span class="p">},</span>
-<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a><span class="w">          </span><span class="p">{</span>
-<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a><span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prod&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a><span class="w">            </span><span class="nt">&quot;BackgroundUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a><span class="w">            </span><span class="nt">&quot;PatternUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/images/pattern-live.svg&quot;</span>
-<a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a><span class="w">          </span><span class="p">}</span>
-<a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a><span class="w">      </span><span class="p">}</span>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nt">&quot;LoginPageUI&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="nt">&quot;BackgroundUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="nt">&quot;PatternUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">    </span><span class="nt">&quot;Preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">    </span><span class="nt">&quot;ShowForgotPasswordLink&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">    </span><span class="nt">&quot;Presets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="w">        </span><span class="nt">&quot;BackgroundUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a><span class="w">        </span><span class="nt">&quot;PatternUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/images/pattern-demo.svg&quot;</span>
+<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a><span class="w">        </span><span class="nt">&quot;BackgroundUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a><span class="w">        </span><span class="nt">&quot;PatternUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/images/pattern-live.svg&quot;</span>
+<a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-44-18" name="__codelineno-44-18" href="#__codelineno-44-18"></a><span class="w">  </span><span class="p">},</span>
 </code></pre></div>
 <h3 id="modularity">Modularity<a class="headerlink" href="#modularity" title="Permanent link">&para;</a></h3>
 <p>This node configures external sources, from which modules are being installed and discovered.</p>

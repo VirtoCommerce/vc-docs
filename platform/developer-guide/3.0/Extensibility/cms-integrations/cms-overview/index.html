@@ -27620,7 +27620,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 15, 2026 07:49:16 UTC">May 15, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 19, 2026 05:40:30 UTC">May 19, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27665,11 +27665,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 <p><img alt="Architecture" src="../media/virto-pages-architecture.png" style="display: block; margin: 0 auto;" /></p>
 <h3 id="scenarios">Scenarios<a class="headerlink" href="#scenarios" title="Permanent link">&para;</a></h3>
-<p>The Virto Pages module supports end-to-end content workflows:</p>
+<p>The Virto Pages module supports end-to-end content workflows and standard platform operations:</p>
 <ul>
+<li>Content lifecycle:<ul>
 <li><strong>Design time</strong>: Integrate with a CMS to create and design pages, preparing them for publishing.</li>
 <li><strong>Publishing</strong>: Publish pages to Virto Pages, removing dependency on the CMS afterward.</li>
 <li><strong>Rendering</strong>: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.</li>
+</ul>
+</li>
+<li>Maintenance:<ul>
+<li><a href="/platform/user-guide/latest/search/managing-search/">Reindexing</a>: Build and rebuild (with Delete) operations are available from the admin UI and as background jobs. If a connected provider does not support reindexation, the rebuild fails with a clear error message instead of producing an incomplete index​.</li>
+<li><a href="/platform/user-guide/latest/backup-and-restore/">Backing up and restoring</a>: The Pages module participates in the platform's standard backup and restore mechanism. Pages can be exported to JSON and re-imported, and imported pages are automatically re-indexed.​</li>
+</ul>
+</li>
 </ul>
 <h2 id="supported-cms-platforms">Supported CMS platforms<a class="headerlink" href="#supported-cms-platforms" title="Permanent link">&para;</a></h2>
 <table>
