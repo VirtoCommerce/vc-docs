@@ -1,0 +1,144 @@
+﻿# Virto Commerce Platform
+
+> Backend platform sub-index of the Virto Commerce AI documentation hub. Covers the .NET host application, modular engine, admin SPA (Backoffice UI), Module.Core / Module.Data / Module.Web vertical-slice modules, REST and GraphQL (xAPI) gateways, extensibility framework, CLI tooling, and admin user guide. Stack: .NET 10, EF Core 10, OpenIddict 7. For Frontend, Marketplace, VC-Shell, Cloud, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+
+This is a curated index of the most authoritative platform documentation pages. Fetch the linked pages for current, version-specific guidance instead of relying on pre-trained memory. Platform docs are versioned and `/latest/` resolves to the current stable version.
+
+## Start here
+
+- [Platform overview](https://docs.virtocommerce.org/platform/developer-guide/latest/). Architectural pillars (modularity, headless, extensibility, scalability) and core components.
+- [Get to know the Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/getting-to-know-platform.md). Conceptual orientation. What the platform is and what is delivered as modules.
+- [Skills required for Virto developers](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/skills-required-for-VC-developers.md). Required and recommended skills before building.
+- [Glossary](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/glossary.md). Definitions for module, manifest, PBC, xAPI, and other Virto-specific terms.
+
+## Installation and getting started
+
+- [System requirements](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/system-requirements.md). Supported OS, .NET, database, search, and cache versions.
+- [Install on Windows](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Installation-Guide/windows.md). CLI-based local install via VirtoCommerce.GlobalTool.
+- [Install on Linux](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Installation-Guide/linux.md). CLI-based local install on Linux.
+- [Install on macOS](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Installation-Guide/macOS.md). CLI-based local install on macOS.
+- [Install a Packaged Business Capability (PBC)](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Installation-Guide/pbcs.md). Pre-bundled capabilities. Virto Start, Digital Catalog, Purchase, CRM, IdP, and PIM.
+- [Modules development via Docker](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/docker-modules-development.md). Containerized dev environment for backend module development.
+- [Set up self-signed SSL](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md). Post-install SSL setup.
+- [Configure email notifications](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Post-Installation-Steps/02-configuring-email-notifications.md). Post-install email setup.
+- [Configure asset blob storage](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Post-Installation-Steps/03-configuring-asset-blob-storage.md). Post-install storage setup.
+- [Import sample data](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Post-Installation-Steps/04-importing-sample-data.md). Post-install seed data.
+- [Manager getting started](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/getting-started.md). No-code admin onboarding. Catalog, store, prices, payments, and inventory.
+
+## Architecture and fundamentals
+
+- [Tech stack](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Back-End-Architecture/01-tech-stack.md). .NET, EF Core, supported databases, search engines, and cache.
+- [Conceptual architecture overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Back-End-Architecture/02-conceptual-overview.md). Host application, modular engine, and Backoffice UI.
+- [Modularity](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Modularity/01-overview.md). How modules are discovered, loaded, and depend on each other.
+- [Caching](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Caching/01-overview.md). Caching primitives and patterns.
+- [Setting up Redis](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Caching/03-setting-up-Redis.md). Distributed cache setup.
+- [Database-agnostic persistence](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Persistence/DB-Agnostic/overview.md). Supporting MS SQL, PostgreSQL, and MySQL.
+- [Indexed search overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Indexed-Search/overview.md). Search abstractions.
+- [Data import main concept](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Data-Import/01-main-concept.md). Bulk import framework.
+- [Scalability options](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Scalability/scalability-options.md). Horizontal scaling, multi-instance, and Hangfire offload.
+- [Authentication overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Security/authentication/access-token-and-cookie-mixed-auth.md). Mixed token and cookie auth model.
+- [Authorization overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Security/authorization/overview.md). Role and permission framework.
+- [Logging overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Logging/overview.md). Centralized logging, providers, and audit.
+- [Dynamic properties](https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Dynamic-Properties/overview/). Runtime-extensible entity properties.
+- [Notifications](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Notifications/overview.md). Email and notification framework.
+
+## Extensibility
+
+- [Extensibility overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Extensibility/overview.md). Extension points across the platform.
+- [Extending domain models](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/Tutorials/extending-domain-models.md). Add fields and behavior to existing entities.
+- [Extending the database model](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/Tutorials/extending-database-model.md). Schema changes via EF Core migrations.
+- [Extending main menu](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Platform-Manager/Extensibility-Points/extending-main-menu.md). Adding admin UI menu entries.
+- [Extending blades and navigation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Platform-Manager/Extensibility-Points/blades-and-navigation.md). Admin UI panel extensibility.
+- [Extending grid columns](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Platform-Manager/Extensibility-Points/extending-grid-columns.md). Adding columns to admin lists.
+- [Extending blade toolbar](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Platform-Manager/Extensibility-Points/blade-toolbar.md). Adding actions to blade toolbars.
+- [Widgets](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Platform-Manager/Extensibility-Points/widgets.md). Pluggable UI widgets.
+- [Metaform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Platform-Manager/Extensibility-Points/metaform.md). Form-builder extensibility.
+- [Extending authorization policies](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Security/extensions/extending-authorization-policies.md). Custom authorization handlers.
+- [Domain events](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Event-Driven-Development/using-domain-events.md). Hook into entity lifecycle events.
+- [Register a payment method](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Payments/new-payment-method-registration.md). Plug in a custom payment provider.
+- [Register a shipping method](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Shipments/new-shipping-method-registration.md). Plug in a custom shipping provider.
+- [Register a tax provider](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Taxes/new-tax-provider-registration.md). Plug in a custom tax provider.
+- [Add a new SSO provider](https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Security/extensions/adding-new-sso-provider/). External identity provider integration.
+
+## Building and customizing modules
+
+- [Tutorials overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/overview.md). Index of tutorials and how-tos.
+- [Create a custom module from template](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/Tutorials/creating-custom-module.md). Recommended starting point. `dotnet new vc-module`.
+- [Create a new module from scratch](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md). Manual module creation without the template.
+- [Deploy a module from source code](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md). Local install of a custom-built module.
+- [Debugging without source](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/debugging.md). Attach a debugger to a running platform.
+- [Health checks](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/health-checks.md). Configuring `/health` endpoints.
+- [Generate a C# API client](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/generating-c-sharp-client.md). AutoRest-based client generation.
+- [Override rounding policy](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/overriding-rounding-policy.md). Customize money rounding behavior.
+- [Authorization using JWT](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/authorization-using-jwt.md). JWT-based authorization sample.
+- [Sharing bearer tokens](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/sharing-bearer-tokens.md). Multi-instance token sharing.
+- [User email verification](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/user-email-verification.md). Self-service email verification flow.
+- [Upgrading to .NET 10](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md). Migration guide for the .NET 10 baseline.
+
+## CLI tools
+
+- [CLI tools overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/overview.md). VirtoCommerce.GlobalTool capabilities.
+- [Get started with vc-build](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/getting-started.md). Install and run `vc-build` targets.
+- [Build automation targets](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/build-automation.md). Compile, pack, compress, and release.
+- [Platform and module management targets](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/more-targets.md). Install, update, and uninstall.
+- [Package management](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/package-management.md). `package.json` for module bundles.
+- [VirtoCloud overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/virto-cloud-overview.md). Cloud-side concepts.
+- [VirtoCloud CLI](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/virto-cloud.md). `vc-build CloudInit`, `CloudUp`, `CloudDeploy`, and related targets.
+- [Cold start and data migration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/CLI-tools/cold-start-and-data-migration.md). Importing data into a fresh environment.
+
+## Configuration
+
+- [appsettings.json reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Configuration-Reference/appsettingsjson.md). Complete platform configuration reference.
+
+## REST and GraphQL APIs
+
+- [REST API reference (Swagger)](https://virtostart-demo-admin.govirto.com/docs/index.html). Live Swagger UI on the demo admin host.
+- [Swagger and API integration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/swagger-api.md). Calling REST endpoints via Swagger.
+- [GraphQL xAPI overview](https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/). Frontend-optimized GraphQL API.
+- [xAPI getting started](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md). First queries against xAPI.
+- [GraphiQL](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/graphiql.md). Interactive query explorer.
+- [Postman collection](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/postman.md). Run xAPI calls in Postman.
+- [curl examples](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/curl.md). Command-line query samples.
+- [xAPI extensions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md). Extending or replacing GraphQL types and validators.
+- [xAPI best practices](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/best-practices.md). Performance, caching, and schema design.
+- [Catalog GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Catalog/overview.md). Catalog query and mutation reference.
+- [Cart GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md). Cart operations.
+- [Order GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Order/overview.md). Order queries.
+- [Profile GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md). Customer and profile queries.
+- [Marketing GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview.md). Promotions and content via GraphQL.
+- [Quote GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md). B2B quote operations.
+
+## User guide (admin and no-code)
+
+- [User guide home](https://docs.virtocommerce.org/platform/user-guide/latest/). Index of admin functionality.
+- [Modules installation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/modules-installation.md). Install modules via the admin UI.
+- [Catalog overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/overview.md). Catalog management essentials.
+- [Add a new catalog](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/add-new-catalog.md). Physical and virtual catalogs.
+- [Manage categories](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/managing-categories.md). Category tree, taxes, and properties.
+- [Manage products](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/managing-products.md). Product CRUD, variations, and attributes.
+- [Manage product variations](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/managing-product-variations.md). SKU variation modeling.
+- [Manage properties](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/managing-properties.md). Catalog properties.
+- [Pricing overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/pricing/overview.md). Pricelists and assignments.
+- [Create a price list](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/pricing/creating-new-price-list.md). Pricelist creation.
+- [Add a price list assignment](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/pricing/adding-new-assignment.md). Assigning prices to stores and customers.
+- [Inventory overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/inventory/overview.md). Stock and fulfillment management.
+- [Manage fulfillment centers](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/inventory/managing-fulfillment-centers.md). Warehouse setup.
+- [Order management overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/order-management/overview.md). Order lifecycle in the admin.
+- [Marketing overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/marketing/overview.md). Promotions, dynamic content, and content placeholders.
+- [Manage promotions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/marketing/managing-promotions.md). Discounts and rules.
+- [Store overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/store/overview.md). Store configuration.
+- [Add a new store](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/store/adding-new-store.md). Store creation walkthrough.
+- [Roles and permissions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/security/roles-and-permissions.md). Security model.
+- [Manage users](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/security/managing-users.md). User CRUD and role assignment.
+- [Backup and restore](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/backup-and-restore.md). Operational guidance.
+- [Multi-region B2B architecture](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/multiregional-ecommerce.md). Architectural patterns for multi-region B2B.
+- [GDPR](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/gdpr/overview.md). Compliance features.
+- [Virto OZ AI assistant](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/virto-oz.md). Built-in documentation chatbot.
+
+## Versioning and updates
+
+- [Release strategy overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Updating-Virto-Commerce-Based-Project/release-strategy-overview.md). Stable bundles vs edge releases.
+- [Stable releases](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Updating-Virto-Commerce-Based-Project/stable-releases.md). Recommended for production.
+- [Edge releases](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Updating-Virto-Commerce-Based-Project/edge-releases.md). Latest features and less testing.
+- [Install a specific version](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Updating-Virto-Commerce-Based-Project/installing-specific-version.md). Pinning a known-good version.
+- [PBC release alignment](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Updating-Virto-Commerce-Based-Project/pbcs.md). Versioning of Packaged Business Capabilities.

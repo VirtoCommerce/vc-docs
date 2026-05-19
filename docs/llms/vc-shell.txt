@@ -1,0 +1,54 @@
+﻿# Virto Commerce VC-Shell
+
+> VC-Shell sub-index of the Virto Commerce AI documentation hub. VC-Shell is a TypeScript and Vue 3 framework for building custom admin applications outside the legacy AngularJS Backoffice UI. Use it when you need a dedicated admin app for a custom workflow rather than a panel inside the standard admin SPA. For Platform/backend, Frontend, Marketplace, Cloud, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+
+VC-Shell apps connect to the Platform via REST and GraphQL xAPI. They run as separate SPAs, can be deployed independently, and use generated TypeScript API clients to talk to the Platform.
+
+## Start here
+
+- [VC-Shell overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/vc-shell-overview.md). What VC-Shell is and when to choose it over extending the standard admin SPA.
+- [Custom apps overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/overview.md). High-level decision framework for custom apps vs admin extensions.
+- [Register a new app](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/how-to-register-new-app.md). Plumbing a custom admin app into the platform.
+
+## Getting started
+
+- [Create your first custom app](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md). Hello-world walkthrough.
+- [Blade generator](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Getting-started/blade-generator.md). CLI tool for scaffolding new admin blades.
+
+## Essentials
+
+- [Understanding application layout](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Essentials/understanding-application-layout.md). Layout primitives and slot model.
+- [Navigation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Essentials/navigation.md). Routing, blade stack, and navigation API.
+- [Composables](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/composables/). Vue composables provided by the framework.
+- [UI components](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/). Built-in component library.
+- [Plugins](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/plugins/). Plugin system for extending core capabilities.
+- [Shared utilities](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/). Common utility helpers.
+
+## API integration
+
+- [Connect to Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md). Auth and API client wiring.
+- [Generate and use API clients with useApiClient](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Essentials/Usage-Guides/using-api-clients-with-useapiclient.md). The composable for typed API access.
+
+## Guides
+
+- [Custom application core concepts](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/custom-application-core-concepts.md). Conceptual model for VC-Shell apps.
+- [Application architecture best practices](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/application-architecture-best-practices.md). Recommended structure for production apps.
+- [Creating custom applications](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/creating-custom-applications.md). End-to-end walkthrough beyond Hello-world.
+- [Developing custom modules](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/developing-custom-modules.md). Authoring reusable VC-Shell modules.
+- [Routing configuration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/routing-configuration.md). Configuring app routing and blade navigation.
+- [Integrating framework features](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/integrating-framework-features.md). Cross-cutting framework integrations.
+- [Internationalization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/internationalization.md). Localization for VC-Shell apps.
+- [Building and deployment advanced topics](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/building-deployment-advanced-topics.md). Production build and deploy patterns.
+
+## Extensibility
+
+- [Modularity](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Extensibility/modularity.md). Composing apps from independent modules.
+
+## Source repository
+
+- [vc-shell](https://github.com/VirtoCommerce/vc-shell). Framework source.
+
+## Optional
+
+- [Platform sub-index](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/platform.txt). REST/xAPI surface that VC-Shell apps consume.
+- [Community forum](https://www.virtocommerce.org/). Discussions and Q&A.
