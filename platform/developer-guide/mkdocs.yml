@@ -358,7 +358,9 @@ nav:
                       - ConfigurationQueryResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationQueryResponseType.md
                       - ConfigurationItemsResponseType: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationItemsResponseType.md
                       - ConfigurationSectionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionInput.md
+                      - ConfigurationSectionKeyInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurationSectionKeyInput.md
                       - ConfigurableProductOptionInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionInput.md
+                      - ConfigurableProductOptionKeyInput: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/ConfigurableProductOptionKeyInput.md
                       - InputUpdateCartQuantityItem: GraphQL-Storefront-API-Reference-xAPI/Cart/objects/InputUpdateCartQuantityItem.md
                 - Mutations:
                       - addItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/add-item.md
@@ -401,6 +403,11 @@ nav:
                       - rejectGiftItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/rejectGiftItems.md
                       - changeCartConfiguredItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfiguredItem.md
                       - createConfiguredLineItem: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/createConfiguredLineItem.md
+                      - changeCartConfigurationItemSelected: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/changeCartConfigurationItemSelected.md
+                      - selectCartConfigurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectCartConfigurationItems.md
+                      - unSelectCartConfigurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unSelectCartConfigurationItems.md
+                      - selectAllCartConfigurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/selectAllCartConfigurationItems.md
+                      - unSelectAllCartConfigurationItems: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/unSelectAllCartConfigurationItems.md
                       - moveFromSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveFromSavedForLater.md
                       - moveToSavedForLater: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/moveToSavedForLater.md
                       - updateCartQuantity: GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/updateCartQuantity.md
