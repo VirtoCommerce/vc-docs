@@ -907,6 +907,7 @@ This configuration node defines authorization settings for the system.
 | AccessTokenLifeTime      | "00:30:00"               | The time span specifying the lifetime of an access token.<br>An access token is used to access protected resources.<br>The default is 30 minutes. |
 | LimitedCookiePermissions | "platform:asset:read;platform:export;..." | A semicolon-separated list of permissions that define the limited cookie permissions for the user. These permissions determine what actions the user can perform when using cookies for authentication. |
 | AllowApiAccessForCustomers| true<br>false         | A boolean setting that controls whether API access is allowed for customers.<br>If set to **false**, customers are not allowed to access the API; if set to **true**, they are granted API access. |
+| EnablePersistentStorageTokenValidation | true<br>false | A boolean setting that enables validation of access tokens against the persistent token store on every request.<br>If set to **true**, tokens revoked in the database (for example, after a password change, password reset, lockout, or explicit session termination) stop working immediately on all browsers and devices. If set to **false**, revoked tokens remain valid until their natural expiration. |
 
 **Example**
 
@@ -916,7 +917,8 @@ This configuration node defines authorization settings for the system.
   "RefreshTokenLifeTime": "30.00:00:00",
   "AccessTokenLifeTime": "00:30:00",
   "LimitedCookiePermissions": "platform:asset:read;platform:export;content:read;platform:asset:create;licensing:issue;export:download",
-  "AllowApiAccessForCustomers": false
+  "AllowApiAccessForCustomers": false,
+  "EnablePersistentStorageTokenValidation": true
 }
 ```
 

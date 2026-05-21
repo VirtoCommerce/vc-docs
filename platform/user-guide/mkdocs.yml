@@ -359,7 +359,7 @@ nav:
                       - Order Manager: security/order-manager.md
                       - Category Manager: security/category-manager.md
                 - Generating API Key: security/api-key.md
-                - Login on Behalf of User: security/login-on-behalf.md
+                - Logging in on Behalf of User: security/login-on-behalf.md
                 - Managing Active Sessions: security/active-sessions.md
                 - Settings: security/settings.md
           - SEO:

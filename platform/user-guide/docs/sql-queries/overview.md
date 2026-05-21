@@ -16,6 +16,7 @@ The SQL Queries module allows you to:
 * Use query parameters such as Short Text, Date Time, Boolean, Integer, and Decimal.
 * Work with multiple database providers: SQL Server (default), MySQL, and PostgreSQL.
 * Define and use multiple connection strings.
+* back up and restore SQL query definitions through the platform's standard [backup and restore mechanism](../backup-and-restore.md).
 
 <br>
 <br>
