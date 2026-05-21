@@ -10804,6 +10804,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#granular-catalog-entity-permissions" class="md-nav__link">
+        Granular catalog entity permissions
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Granular catalog entity permissions">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#catalog-scope" class="md-nav__link">
+        Catalog scope
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#behavior-in-the-admin-ui" class="md-nav__link">
+        Behavior in the admin UI
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#backward-compatibility" class="md-nav__link">
+        Backward compatibility
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -10907,7 +10953,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../login-on-behalf/" class="md-nav__link">
-        Login on Behalf of User
+        Logging in on Behalf of User
       </a>
     </li>
   
@@ -13849,6 +13895,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#granular-catalog-entity-permissions" class="md-nav__link">
+        Granular catalog entity permissions
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Granular catalog entity permissions">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#catalog-scope" class="md-nav__link">
+        Catalog scope
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#behavior-in-the-admin-ui" class="md-nav__link">
+        Behavior in the admin UI
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#backward-compatibility" class="md-nav__link">
+        Backward compatibility
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -13871,7 +13963,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 04:59:28 UTC">December 17, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 07:05:40 UTC">May 21, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -13915,7 +14007,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Click <strong>Create</strong> to save the changes.</p>
 </li>
 </ol>
-<p>The new user has been added to the list in the <strong>Roles</strong> blade.</p>
+<p>The new role has been added to the list in the <strong>Roles</strong> blade.</p>
 <h2 id="edit-roles">Edit roles<a class="headerlink" href="#edit-roles" title="Permanent link">&para;</a></h2>
 <p>To edit a role:</p>
 <ol>
@@ -13924,6 +14016,92 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Click <strong>Save</strong> in the toolbar to save the changes.</li>
 </ol>
 <p>The role has been modified.</p>
+<h2 id="granular-catalog-entity-permissions">Granular catalog entity permissions<a class="headerlink" href="#granular-catalog-entity-permissions" title="Permanent link">&para;</a></h2>
+<p>Catalog access can be configured separately for categories and products within a catalog. A role can be granted full write access to categories while limiting products to read-only, or vice versa. This replaces the umbrella <code>catalog:*</code> permissions that cover both entity types together.</p>
+<p>Eight permissions are registered under the <strong>Catalog</strong> group in the role editor:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>catalog:categories:create</code></td>
+<td>Create categories</td>
+</tr>
+<tr>
+<td><code>catalog:categories:read</code></td>
+<td>View categories</td>
+</tr>
+<tr>
+<td><code>catalog:categories:update</code></td>
+<td>Edit categories</td>
+</tr>
+<tr>
+<td><code>catalog:categories:delete</code></td>
+<td>Delete categories</td>
+</tr>
+<tr>
+<td><code>catalog:products:create</code></td>
+<td>Create products</td>
+</tr>
+<tr>
+<td><code>catalog:products:read</code></td>
+<td>View products</td>
+</tr>
+<tr>
+<td><code>catalog:products:update</code></td>
+<td>Edit products</td>
+</tr>
+<tr>
+<td><code>catalog:products:delete</code></td>
+<td>Delete products</td>
+</tr>
+</tbody>
+</table>
+<p>All permissions are localized for the 13 Platform languages.</p>
+<h3 id="catalog-scope">Catalog scope<a class="headerlink" href="#catalog-scope" title="Permanent link">&para;</a></h3>
+<p>The new permissions support the existing <strong>Selected catalog</strong> scope. For example, a role can be granted <code>catalog:categories:update</code> only for Catalog A. Operations on entities outside the user's scoped catalogs return HTTP 403.</p>
+<h3 id="behavior-in-the-admin-ui">Behavior in the admin UI<a class="headerlink" href="#behavior-in-the-admin-ui" title="Permanent link">&para;</a></h3>
+<p>The <strong>Catalog</strong> blade and detail blades respect entity-level permissions:</p>
+<ul>
+<li>The unified catalog list filters automatically to show only the entity types the user can read.</li>
+<li>Toolbar actions like <strong>Add</strong>, <strong>Cut</strong>, <strong>Paste</strong>, and <strong>Delete</strong> appear only for entity types the user has the corresponding permission for.</li>
+<li><strong>Save</strong> and <strong>Reset</strong> on the category detail blade require <code>catalog:categories:update</code>. On the product detail blade, they require <code>catalog:products:update</code>.</li>
+<li><strong>Add variation</strong> and <strong>Delete variation</strong> depend on <code>catalog:products:create</code> and <code>catalog:products:delete</code>.</li>
+<li>Read-only users still see <strong>Copy ID</strong> and <strong>Copy SKU</strong> actions.</li>
+</ul>
+<h3 id="backward-compatibility">Backward compatibility<a class="headerlink" href="#backward-compatibility" title="Permanent link">&para;</a></h3>
+<p>Existing roles that use the legacy <code>catalog:create</code>, <code>catalog:read</code>, <code>catalog:update</code>, and <code>catalog:delete</code> permissions continue to work unchanged. The Platform automatically maps each legacy permission to both entity-level equivalents:</p>
+<table>
+<thead>
+<tr>
+<th>Legacy permission</th>
+<th>Maps to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>catalog:create</code></td>
+<td><code>catalog:categories:create</code> + <code>catalog:products:create</code></td>
+</tr>
+<tr>
+<td><code>catalog:read</code></td>
+<td><code>catalog:categories:read</code> + <code>catalog:products:read</code></td>
+</tr>
+<tr>
+<td><code>catalog:update</code></td>
+<td><code>catalog:categories:update</code> + <code>catalog:products:update</code></td>
+</tr>
+<tr>
+<td><code>catalog:delete</code></td>
+<td><code>catalog:categories:delete</code> + <code>catalog:products:delete</code></td>
+</tr>
+</tbody>
+</table>
+<p>No migration is required for existing roles.</p>
 <p><br>
 <br></p>
 <hr />

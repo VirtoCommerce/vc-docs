@@ -2460,6 +2460,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#filtering-properties" class="md-nav__link">
+        Filtering properties
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Filtering properties">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#automatic-migration-from-earlier-versions" class="md-nav__link">
+        Automatic migration from earlier versions
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#brands-settings" class="md-nav__link">
         Brands settings
     </a>
@@ -10915,7 +10941,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../security/login-on-behalf/" class="md-nav__link">
-        Login on Behalf of User
+        Logging in on Behalf of User
       </a>
     </li>
   
@@ -13859,6 +13885,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#filtering-properties" class="md-nav__link">
+        Filtering properties
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Filtering properties">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#automatic-migration-from-earlier-versions" class="md-nav__link">
+        Automatic migration from earlier versions
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#brands-settings" class="md-nav__link">
         Brands settings
     </a>
@@ -13889,7 +13941,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 15, 2026 04:42:58 UTC">April 15, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 07:05:40 UTC">May 21, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -13914,6 +13966,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li><a href="#general-settings">General settings.</a></li>
 <li><a href="#search-settings">Search settings.</a></li>
+<li><a href="#filtering-properties">Filtering properties.</a></li>
 <li><a href="#brands-settings">Brands settings.</a></li>
 </ul>
 <h2 id="general-settings">General settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h2>
@@ -13946,6 +13999,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ol>
 <p>Your modifications have been applied.</p>
+<h2 id="filtering-properties">Filtering properties<a class="headerlink" href="#filtering-properties" title="Permanent link">&para;</a></h2>
+<p><strong>Filtering properties</strong> define the attribute, range, and price-range filters that drive faceted browsing on the Frontend. They are configured per store and stored as a store-level setting.</p>
+<p>You can edit filtering properties in two equivalent places:</p>
+<ul>
+<li>The <strong>Aggregation properties</strong> widget on the store page. This is the recommended editing surface for adding, removing, and reordering filters.</li>
+<li>The <strong>Filtering properties</strong> entry under the store's <strong>Settings</strong> &gt; <strong>Catalog</strong> &gt; <strong>Search</strong> section.</li>
+</ul>
+<p>Both views read and write the same value, so changes made in one are visible in the other.</p>
+<h3 id="automatic-migration-from-earlier-versions">Automatic migration from earlier versions<a class="headerlink" href="#automatic-migration-from-earlier-versions" title="Permanent link">&para;</a></h3>
+<p>Earlier versions of the Platform stored this configuration as a store dynamic property named <strong>FilteredBrowsing</strong>. The <strong>Catalog</strong> module runs a one-time automatic migration on first startup. For every store with a non-empty value, the existing configuration is copied into the new setting. The migration runs only once and never overwrites manual edits.</p>
+<p>After upgrade, the legacy dynamic property record is left in place but is no longer used. You can delete it without losing data.</p>
+<p>For partner deployments that need a coordinated database migration, SQL scripts for SQL Server, MySQL, and PostgreSQL are available in the <strong>Catalog</strong> module repository at <strong>docs/migrations/scripts/</strong>.</p>
 <h2 id="brands-settings">Brands settings<a class="headerlink" href="#brands-settings" title="Permanent link">&para;</a></h2>
 <p>To open store-specific Brands settings:</p>
 <ol>
