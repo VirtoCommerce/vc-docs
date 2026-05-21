@@ -14,7 +14,7 @@ To address crucial extension requirements, the Platform contains various **exten
 * Domain and business logic extension:
     * [Extending domain models.](../Tutorials-and-How-tos/Tutorials/extending-domain-models.md)
     * [Extending through domain events.](../Fundamentals/Event-Driven-Development/using-domain-events.md)
-    * [Using dynamic properties.](../Fundamentals/Dynamic-Properties/overview.md)
+    * [Using dynamic properties.](../Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md)
 * Platform manager UI extension:
     * [Extending main menu.](../Platform-Manager/Extensibility-Points/extending-main-menu.md)
     * [Working with widgets.](../Platform-Manager/Extensibility-Points/widgets.md)
@@ -35,7 +35,7 @@ To address crucial extension requirements, the Platform contains various **exten
     * [Using MS Azure Application Insights.](../Fundamentals/Logging/application-insights.md)
     * [Using Seq log module.](../Fundamentals/Logging/seq-module.md)
 * Page Builder extension:
-    * [Adding and editing blocks.](page-builder-extension.md)
+    * [Adding and editing blocks.](cms-integrations/PageBuilder/create-new-block.md)
 * Product Snapshot extension:
     * [Adding custom properties via metaform.](../Tutorials-and-How-tos/How-tos/product-snapshot.md#adding-custom-properties-via-metaform)
     * [Adding widgets.](../Tutorials-and-How-tos/How-tos/product-snapshot.md#adding-widgets)

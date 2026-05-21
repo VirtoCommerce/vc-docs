@@ -11,7 +11,7 @@ The following CMS integrations are currently available:
 
 ## Pages module as unification layer
 
-All CMS integrations converge on the [Pages module](../../../../user-guide/pages/overview), which acts as a CMS-agnostic content layer. Regardless of which CMS is used to design and author content, the Pages module provides a unified storage, search, and delivery API for all published pages.
+All CMS integrations converge on the [Pages module](/platform/user-guide/latest/pages/overview), which acts as a CMS-agnostic content layer. Regardless of which CMS is used to design and author content, the Pages module provides a unified storage, search, and delivery API for all published pages.
 
 This means:
 

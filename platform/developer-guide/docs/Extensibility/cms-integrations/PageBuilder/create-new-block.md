@@ -105,7 +105,7 @@ The layout defines the HTML structure and logic for our block. Since we use a Vu
 
 To add the newly created block to a page:
 
-1. Create a new **products-promo** page as described [here](getting-started.md#run).
+1. Create a new **products-promo** page as described [here](/platform/user-guide/latest/page-builder/manage-pages/#create-new-page).
 
 1. Add your block to the page:
 

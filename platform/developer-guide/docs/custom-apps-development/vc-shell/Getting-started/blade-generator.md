@@ -678,8 +678,7 @@ await generateBlade({
 ## What's Next?
 
 - [Creating Your First Custom App](./creating-first-custom-app.md)
-- [VC Shell Framework Documentation](../../)
-- [Component Library](../components/)
+- [Component Library](../Essentials/ui-components/vc-app.md)
 
 ## Support
 
