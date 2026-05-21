@@ -1752,7 +1752,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../Getting-Started/Installation-Guide/start-local/" class="md-nav__link">
-        Local install with start-local
+        Local Installation with start-local
       </a>
     </li>
   
@@ -22255,6 +22255,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Key Extensibility Points
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -22263,6 +22267,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#extension-points-inspector" class="md-nav__link">
+        Extension Points Inspector
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#usage" class="md-nav__link">
+        Usage
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -27613,6 +27664,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#extension-points-inspector" class="md-nav__link">
+        Extension Points Inspector
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#usage" class="md-nav__link">
+        Usage
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -27633,7 +27712,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 15, 2026 07:49:16 UTC">May 15, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 07:05:40 UTC">May 21, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27664,50 +27743,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To address crucial extension requirements, the Platform contains various <strong>extensions points</strong> for all three main parts: Platform, modules, and Frontend. Such extension points enable performing multiple customizations without direct code modification. The list below mentions the important ones:</p>
 <ul>
 <li>Domain and business logic extension:<ul>
-<li><a href="../../Tutorials-and-How-tos/Tutorials/extending-domain-models/">Extending domain models</a></li>
-<li><a href="../../Fundamentals/Event-Driven-Development/using-domain-events/">Extending through domain events</a></li>
-<li><a href="../Fundamentals/Dynamic-Properties/overview.md">Using dynamic properties</a></li>
+<li><a href="../../Tutorials-and-How-tos/Tutorials/extending-domain-models/">Extending domain models.</a></li>
+<li><a href="../../Fundamentals/Event-Driven-Development/using-domain-events/">Extending through domain events.</a></li>
+<li><a href="../Fundamentals/Dynamic-Properties/overview.md">Using dynamic properties.</a></li>
 </ul>
 </li>
 <li>Platform manager UI extension:<ul>
-<li><a href="../../Platform-Manager/Extensibility-Points/extending-main-menu/">Extending main menu</a></li>
-<li><a href="../../Platform-Manager/Extensibility-Points/widgets/">Working with widgets</a></li>
-<li><a href="../../Platform-Manager/Extensibility-Points/metaform/">Using metaforms</a></li>
-<li><a href="../../Platform-Manager/Extensibility-Points/blade-toolbar/">Extending blade toolbar</a></li>
-<li><a href="../../Platform-Manager/Extensibility-Points/extending-grid-columns/">Extending grid columns</a></li>
+<li><a href="../../Platform-Manager/Extensibility-Points/extending-main-menu/">Extending main menu.</a></li>
+<li><a href="../../Platform-Manager/Extensibility-Points/widgets/">Working with widgets.</a></li>
+<li><a href="../../Platform-Manager/Extensibility-Points/metaform/">Using metaforms.</a></li>
+<li><a href="../../Platform-Manager/Extensibility-Points/blade-toolbar/">Extending blade toolbar.</a></li>
+<li><a href="../../Platform-Manager/Extensibility-Points/extending-grid-columns/">Extending grid columns.</a></li>
 </ul>
 </li>
 <li>Extending commerce logic:<ul>
-<li><a href="../../Fundamentals/Payments/new-payment-method-registration/">Registering a new payment method</a></li>
-<li><a href="../../Fundamentals/Shipments/new-shipping-method-registration/">Registering a new shipping method</a></li>
-<li><a href="../../Fundamentals/Taxes/new-tax-provider-registration/">Registering a new tax provider</a></li>
+<li><a href="../../Fundamentals/Payments/new-payment-method-registration/">Registering a new payment method.</a></li>
+<li><a href="../../Fundamentals/Shipments/new-shipping-method-registration/">Registering a new shipping method.</a></li>
+<li><a href="../../Fundamentals/Taxes/new-tax-provider-registration/">Registering a new tax provider.</a></li>
 </ul>
 </li>
 <li>Security extensions:<ul>
-<li><a href="../../Fundamentals/Security/extensions/extending-authorization-policies/">Extending authorization policies</a></li>
-<li><a href="../../Fundamentals/Security/extensions/extending-usermanager-and-rolemanager/">Extending ASP.NET Identity UserManager and RoleManager</a></li>
-<li><a href="../../Fundamentals/Security/extensions/adding-google-as-sso-provider/">Adding new SSO Provider</a></li>
+<li><a href="../../Fundamentals/Security/extensions/extending-authorization-policies/">Extending authorization policies.</a></li>
+<li><a href="../../Fundamentals/Security/extensions/extending-usermanager-and-rolemanager/">Extending ASP.NET Identity UserManager and RoleManager.</a></li>
+<li><a href="../../Fundamentals/Security/extensions/adding-google-as-sso-provider/">Adding new SSO Provider.</a></li>
 </ul>
 </li>
 <li>Notification extensions:<ul>
-<li><a href="../../Fundamentals/Notifications/extending-notification-types/">Extending notification types</a></li>
+<li><a href="../../Fundamentals/Notifications/extending-notification-types/">Extending notification types.</a></li>
 </ul>
 </li>
 <li>Logging extension:<ul>
-<li><a href="../../Fundamentals/Logging/application-insights/">Using MS Azure Application Insights</a></li>
-<li><a href="../../Fundamentals/Logging/seq-module/">Using Seq log module</a></li>
+<li><a href="../../Fundamentals/Logging/application-insights/">Using MS Azure Application Insights.</a></li>
+<li><a href="../../Fundamentals/Logging/seq-module/">Using Seq log module.</a></li>
 </ul>
 </li>
 <li>Page Builder extension:<ul>
-<li><a href="page-builder-extension.md">Adding and editing blocks</a></li>
+<li><a href="page-builder-extension.md">Adding and editing blocks.</a></li>
 </ul>
 </li>
 <li>Product Snapshot extension:<ul>
-<li><a href="../../Tutorials-and-How-tos/How-tos/product-snapshot/#adding-custom-properties-via-metaform">Adding custom properties via metaform</a></li>
-<li><a href="../../Tutorials-and-How-tos/How-tos/product-snapshot/#adding-widgets">Adding widgets</a></li>
+<li><a href="../../Tutorials-and-How-tos/How-tos/product-snapshot/#adding-custom-properties-via-metaform">Adding custom properties via metaform.</a></li>
+<li><a href="../../Tutorials-and-How-tos/How-tos/product-snapshot/#adding-widgets">Adding widgets.</a></li>
 </ul>
 </li>
 </ul>
+<h2 id="extension-points-inspector">Extension Points Inspector<a class="headerlink" href="#extension-points-inspector" title="Permanent link">&para;</a></h2>
+<p>The list above is the complete reference. To find the right point for a specific page the quickest possible, use the <strong>Extension Points Inspector</strong> in the Platform Manager admin UI. It highlights every extension point on the page and copies a ready-to-paste snippet for each.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>To inspect the extension points on a page:</p>
+<ol>
+<li>Run the Virto Commerce Platform.</li>
+<li>Open the browser developer console.</li>
+<li>
+<p>Run <code>vcExt.show()</code> to display the overlay. Each highlighted region shows the name or ID of the extension point and a <strong>Copy snippet</strong> button. For example, the illustration below shows that menu , blades, toolbars, and widgets can be extended:</p>
+<p><img alt="Extension points inspector" src="../media/extensibility-points-inspector.png" /></p>
+</li>
+<li>
+<p>Click <strong>Copy snippet</strong> on the point you want to extend. A ready-to-paste registration call is copied to the clipboard. For example, a widget extension snippet looks like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">widgetService</span><span class="p">.</span><span class="nx">registerWidget</span><span class="p">({</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;yourModule&gt;.&lt;yourWidgetController&gt;&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;$(YourModule)/Scripts/widgets/&lt;widget&gt;.tpl.html&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">},</span><span class="w"> </span><span class="s1">&#39;storeDetail&#39;</span><span class="p">);</span>
+</code></pre></div>
+</li>
+<li>
+<p>Paste the snippet into your module and adjust the parameters as needed.</p>
+</li>
+<li>Run <code>vcExt.hide()</code> to remove the overlay.</li>
+</ol>
+<p>The available commands are:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vcExt.help()</code></td>
+<td>Show the list of available commands.</td>
+</tr>
+<tr>
+<td><code>vcExt.show()</code></td>
+<td>Overlay every extension point on the current page with its name and Id.</td>
+</tr>
+<tr>
+<td><code>vcExt.hide()</code></td>
+<td>Remove the overlay.</td>
+</tr>
+<tr>
+<td><code>vcExt.list()</code></td>
+<td>Print a <code>console.table</code> of every registered item across all five services.</td>
+</tr>
+</tbody>
+</table>
 <p><br>
 <br></p>
 <hr />

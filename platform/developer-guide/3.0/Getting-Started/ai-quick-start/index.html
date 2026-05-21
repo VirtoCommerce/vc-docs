@@ -1659,6 +1659,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
+    <nav class="md-nav" aria-label="Virto OZ">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#using-virto-oz-as-an-mcp-connector" class="md-nav__link">
+        Using Virto OZ as an MCP connector
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
 </li>
         
         <!-- Table of contents item -->
@@ -1843,7 +1859,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../Installation-Guide/start-local/" class="md-nav__link">
-        Local install with start-local
+        Local Installation with start-local
       </a>
     </li>
   
@@ -27688,6 +27704,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
+    <nav class="md-nav" aria-label="Virto OZ">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#using-virto-oz-as-an-mcp-connector" class="md-nav__link">
+        Using Virto OZ as an MCP connector
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
 </li>
         
         <!-- Table of contents item -->
@@ -27732,7 +27764,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 8, 2026 07:56:02 UTC">May 8, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 07:05:40 UTC">May 21, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -27791,9 +27823,22 @@ Receive relevant links to related topics for deeper learning.
 Save time by exploring features, configurations, and best practices directly within the documentation.</p>
 <p><br>
 <img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/virto-oz">Virto OZ interactive demo</a></p>
+<h3 id="using-virto-oz-as-an-mcp-connector">Using Virto OZ as an MCP connector<a class="headerlink" href="#using-virto-oz-as-an-mcp-connector" title="Permanent link">&para;</a></h3>
+<p>Beyond the in-docs widget, Virto OZ is also available as a Model Context Protocol (MCP) connector. This lets you query Virto Commerce documentation directly from Claude Web, Claude Desktop, and Claude Code without leaving your client. The connector can be enabled at two scopes:</p>
+<ul>
+<li>
+<p><strong>Organization scope</strong>. This setup covers Claude Web and Claude Desktop. An Anthropic Console administrator adds the <strong>VirtoOZ</strong> connector to your organization once. After that, every member of the organization can use it in Claude Web and Claude Desktop with no further setup on their part.</p>
+</li>
+<li>
+<p><strong>User scope</strong>. This setup covers Claude Code on an individual developer's machine. Register the connector with one CLI command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>claude mcp add --transport http --scope user virtooz https://virtooz.virtocommerce.com/v1/
+</code></pre></div>
+<p>The <code>--scope user</code> flag makes the connector available across all your Claude Code sessions on this machine. Use <code>--scope project</code> instead to commit the MCP configuration to <strong>.mcp.json</strong> in a repository so teammates inherit it automatically.</p>
+</li>
+</ul>
 <h2 id="llmstxt">llms.txt<a class="headerlink" href="#llmstxt" title="Permanent link">&para;</a></h2>
 <p>Using <strong>llms.txt</strong> is the fastest way to ground any AI assistant on current Virto Commerce documentation. It does not require installation, MCP server, editor plugin, just a URL you paste into a prompt:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Before answering, please read https://docs.virtocommerce.org/llms.txt to learn about the latest Virto Commerce documentation, then answer my question: What are the main extensibility options in Virto Commerce?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Before answering, please read https://docs.virtocommerce.org/llms.txt to learn about the latest Virto Commerce documentation, then answer my question: What are the main extensibility options in Virto Commerce?
 </code></pre></div>
 <p><br>
 <img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../Tutorials-and-How-tos/How-tos/using-llms-txt/">Using llms.txt</a></p>
@@ -27802,7 +27847,7 @@ Save time by exploring features, configurations, and best practices directly wit
 <p>To eliminate this, Virto Commerce documentation is now available through Context7, an MCP (Model Context Protocol) server that provides AI assistants with access to current official documentation during prompt execution.</p>
 <p>Context7 retrieves version-specific documentation and relevant code examples directly from Virto Commerce documentation and source repositories, allowing AI-generated responses to be grounded in current platform behavior rather than historical training data.</p>
 <p>After configuring Context7 as an MCP server in your editor or AI client, append use context7 to platform-specific prompts to trigger documentation retrieval before generation:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Implement a custom pricing calculator service in a Virto Commerce module. use context7
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Implement a custom pricing calculator service in a Virto Commerce module. use context7
 </code></pre></div>
 <br>
 <br>
