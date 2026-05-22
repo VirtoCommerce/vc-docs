@@ -15,7 +15,7 @@ With the Elasticsearch 9 module, you can perform:
 * Hybrid mode search.
 * Third party ML models support.
 
-The diagram below illustrates the functionality of the Elasticsearch 9 module:
+The diagram below illustrates the available search providers and their functionality:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 

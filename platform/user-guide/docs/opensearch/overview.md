@@ -13,7 +13,7 @@ The module supports the following OpenSearch deployment options:
 
 ## Key features
 
-The diagram below illustrates the functionality of the OpenSearch module:
+The diagram below illustrates the available search providers and their functionality:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 

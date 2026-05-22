@@ -206,7 +206,7 @@ nav:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md
                 - Enabling Authentication Types: azure-ad/enabling-authentication-types.md
-          - Back in Stock:
+          - Back-in-Stock:
                   - Overview: back-in-stock/overview.md
                   - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
                   - Settings: back-in-stock/settings.md

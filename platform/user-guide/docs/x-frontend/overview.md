@@ -20,7 +20,7 @@ This module is intended to be installed in a Virto Commerce backend as part of a
     * **WhiteLabelingSettingsType**.
     * **UserType**.
 
-![Read more](media/readmore.png){: width="20"} [pageContext query](../../../developer-guide/GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext)
+![Read more](media/readmore.png){: width="20"} [pageContext query](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext/)
 
 
 <br>

@@ -18,7 +18,7 @@ The module supports the following Elasticsearch deployment options:
 
 ## Key features
 
-The diagram below illustrates the functionality of the Elasticsearch module:
+The diagram below illustrates the available search providers and their functionality:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 

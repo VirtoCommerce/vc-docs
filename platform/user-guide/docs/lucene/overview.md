@@ -8,7 +8,7 @@ The **Lucene Search** module serves as a search engine within the Search module.
 
 ## Key features
 
-The diagram below illustrates the functionality of the Lucene Search module:
+The diagram below illustrates the available search providers and their functionality:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
