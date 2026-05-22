@@ -15,6 +15,6 @@ Virto Commerce includes accessibility features by default, so you can deliver an
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../backup-and-restore">← Backup and restore </a>
+    <a href="../dynamic-properties/managing-dynamic-properties">← Managing dynamic properties </a>
     <a href="../glossary">Glossary →</a>
 </div>

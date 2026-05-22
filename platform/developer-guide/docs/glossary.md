@@ -24,7 +24,7 @@ Equivalent in other ecommerce platforms:
 | --- | --- | --- | --- | --- |
 | Dynamic property | Metafield | Custom attribute (EAV) | Custom field | Metafield |
 
-See also [Managing Dynamic Properties](Fundamentals/Dynamic-Properties/overview.md) for the object model.
+See also [Managing Dynamic Properties](Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md) for the object model.
 
 ## Module
 A self-contained .NET project that plugs into the Virto Commerce Platform process at runtime to deliver a single bounded slice of functionality (Catalog, Pricing, Orders, etc.) end-to-end: back-end services, REST endpoints, persistence, and Admin UI extensions. Each module implements `IModule` (lifecycle methods `Initialize`, `PostInitialize`, `Uninstall`) and ships a **module.manifest** file declaring its identifier, version, and dependencies. The Platform follows the Modular Monolith pattern with vertical slices: it is composed from the modules a solution needs, with cross-module communication through integration events, shared services, or extension points rather than direct references. A module is distinct from a custom App built on the VC-Shell SDK, which is a standalone web UI that talks to the Platform over its public APIs.

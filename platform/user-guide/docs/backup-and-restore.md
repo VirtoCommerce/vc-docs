@@ -35,5 +35,5 @@ The system will restore the data from the backup file.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../view-results-on-frontend">← Viewing results on Frontend </a>
-    <a href="../ada-compliance">ADA compliance →</a>
+    <a href="../dynamic-properties/managing-dynamic-properties">Managing dynamic properties →</a>
 </div>

@@ -41,5 +41,5 @@ The modifications have been saved.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../dynamic-associations/overview">← Dynamic Associations module overview</a>
-    <a href="../../environments-comparison/overview">Environments Comparison module overview →</a>
+    <a href="../../backup-and-restore">← Backup and restore</a>
+    <a href="../../ada-compliance">ADA and WCAG compliance →</a>
