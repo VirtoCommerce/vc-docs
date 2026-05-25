@@ -22,21 +22,18 @@ The notification system receives `PushNotification` messages from the platform S
 
 ## Architecture
 
-```
-PushNotification (SignalR)
-        |
-  ┌─────┴─────┐
-  Send     SendSystemEvents
-  |            |
-  |     broadcastFilter?
-  |            |
-  v            v
-  NotificationStore.ingest()
-        |
-        +---> history[]  (persistent, loaded from API)
-        +---> realtime[] (session-only, from SignalR)
-        +---> ToastController.handle()   [Level 1: always-on]
-        +---> subscriber callbacks        [Level 2: blade-scoped]
+```mermaid
+flowchart TD
+    H["PushNotification (SignalR hub)"] --> S["Send<br/>(targeted)"]
+    H --> B["SendSystemEvents<br/>(broadcast)"]
+    B --> F{"broadcastFilter?"}
+    F -->|accept| I["NotificationStore.ingest()"]
+    F -->|reject| X["dropped"]
+    S --> I
+    I --> Hist["history[]<br/>(persistent, loaded from API)"]
+    I --> RT["realtime[]<br/>(session-only)"]
+    I --> Toast["ToastController.handle()<br/>Level 1: always-on"]
+    I --> Sub["subscriber callbacks<br/>Level 2: blade-scoped"]
 ```
 
 ## API
@@ -243,4 +240,13 @@ await store.markAllAsRead(); // optimistic update with rollback on failure
 - `framework/shared/components/notifications/` -- Notification dropdown UI
 - `framework/core/api/platform.ts` -- `PushNotification`, `PushNotificationClient`
 
+<!-- internal:start -->
 
+## Internal Files
+
+- `framework/core/notifications/store.ts` -- `NotificationStore` implementation
+- `framework/core/notifications/toast-controller.ts` -- Toast lifecycle management
+- `framework/core/notifications/composables/` -- `useNotificationStore`, `useBladeNotifications`, `useNotificationContext`, `useBroadcastFilter`
+- `framework/core/notifications/types.ts` -- All notification type definitions
+
+<!-- internal:end -->
