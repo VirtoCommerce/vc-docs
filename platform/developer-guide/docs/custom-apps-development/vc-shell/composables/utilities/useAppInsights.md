@@ -5,7 +5,7 @@
 
 # useAppInsights
 
-Integrates Azure Application Insights page-view tracking with Vue Router and the current user context. This composable bridges the `vue3-application-insights` plugin with the vc-shell framework by automatically enriching every page-view event with the authenticated user's ID and name, generating fresh W3C trace IDs per navigation for distributed tracing, and optionally prefixing page names with the application name (for example, `[Operations Console] Dashboard`).
+Integrates Azure Application Insights page-view tracking with Vue Router and the current user context. This composable bridges the `vue3-application-insights` plugin with the vc-shell framework by automatically enriching every page-view event with the authenticated user's ID and name, generating fresh W3C trace IDs per navigation for distributed tracing, and optionally prefixing page names with the application name (e.g., `[Vendor Portal] Dashboard`).
 
 ## When to Use
 
@@ -51,7 +51,7 @@ export default router;
 
 | Key                     | Type                                     | Description                                                                                       |
 | ----------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `AppInsightsOptionsKey` | `InjectionKey<AppInsightsPluginOptions>` | Optional. Provide this at app level with `{ appName: 'Operations Console' }` to prefix all page names. |
+| `AppInsightsOptionsKey` | `InjectionKey<AppInsightsPluginOptions>` | Optional. Provide this at app level with `{ appName: 'Vendor Portal' }` to prefix all page names. |
 
 ## How It Works
 
@@ -98,12 +98,12 @@ import { AppInsightsOptionsKey } from "@vc-shell/framework";
 const app = createApp(App);
 
 app.provide(AppInsightsOptionsKey, {
-  appName: "Operations Console",
+  appName: "Vendor Portal",
   // ... other AppInsightsPluginOptions
 });
 ```
 
-This results in page names like `[Operations Console] Dashboard` instead of just `Dashboard`.
+This results in page names like `[Vendor Portal] Dashboard` instead of just `Dashboard`.
 
 ## Tips
 

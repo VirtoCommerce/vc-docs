@@ -93,8 +93,8 @@ const { applySettings } = useSettings();
 
 // Override default platform settings with module-specific branding
 applySettings({
-  logo: "/modules/operations-console/logo.svg",
-  title: "Operations Console",
+  logo: "/modules/vendor-portal/logo.svg",
+  title: "Vendor Portal",
 });
 </script>
 ```
