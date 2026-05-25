@@ -1,0 +1,457 @@
+INHERIT: ../../mkdocs.yml
+
+# Hooks to fix search index for versioned docs
+hooks:
+    - ../../overrides/hooks/search_index_fixer.py
+    - ../../overrides/hooks/abbreviations_loader.py
+
+# Override plugins for versioned site
+plugins:
+    - search:
+        # Configure search for versioned content
+        lang: en
+        # Only index current version
+        index_docs: true
+        index_other: false
+        # Exclude versioned paths from other versions
+        exclude_docs: |
+            /1.0/
+            /1.1/
+            /2.0/
+            /latest/
+    - git-revision-date-localized
+    - minify
+    - include-markdown
+    - mike:
+        alias_type: redirect
+theme:
+    custom_dir: ../../overrides
+    hide: false
+
+# Project information
+extra_site_name: Platform User Docs
+site_name: Platform User Guide
+site_description: Documentation portal for Virto Commerce, an enterprise-level Microsoft .NET ecommerce platform.
+site_author: Virto Commerce
+site_url: https://docs.virtocommerce.org/platform/user-guide
+use_directory_urls: true
+
+# Repository
+repo_name: VirtoCommerce/vc-platform
+repo_url: https://github.com/VirtoCommerce/vc-platform
+edit_uri: edit/dev/docs/
+
+# Versioning
+extra:
+    version:
+        provider: mike
+        default: latest
+    # Search configuration for versioned site
+    search:
+        # Limit search to current version only
+        index_only_current: true
+        # Exclude other versions from search index
+        exclude_versions: true
+
+# CSS and JavaScript (must include ALL files from root, as INHERIT doesn't merge arrays)
+extra_css:
+    - assets/stylesheets/main.css
+    - assets/stylesheets/fonts.css
+    - assets/stylesheets/version-selector.css
+    - assets/stylesheets/ai-overrides.css
+
+extra_javascript:
+    - assets/scripts/version-redirect.js
+    - assets/scripts/version-selector-handler.js
+    - assets/scripts/scripts-loader.js
+    - assets/scripts/scroll-menu.js
+
+# Page tree
+nav:
+    - Overview: index.md
+    - User Manual:
+          - General Guidelines: general-guidelines.md
+          - Virto OZ AI Assistant: virto-oz.md
+          - User Profile: user-profile.md
+          - Modules Installation: modules-installation.md
+          - Getting Started: getting-started.md
+          - B2B Multi-Regional eCommerce Architecture: multiregional-ecommerce.md
+          - Viewing Results on Frontend: view-results-on-frontend.md
+          - Backup and Restore: backup-and-restore.md
+          - ADA and WCAG Compliance: ada-compliance.md
+          - Glossary: glossary.md
+    - Modules:
+          - Overview: platform-overview.md
+          - <b>Catalog</b>:
+                - Overview: catalog/overview.md
+                - Managing Catalogs:
+                      - Creating New Catalog: catalog/add-new-catalog.md
+                      - Importing Catalogs: catalog/import-catalog.md
+                      - Importing Products, Prices, and Stock to Catalog: catalog/import-products-to-catalog.md
+                      - Exporting Catalogs: catalog/export-catalog.md
+                - Managing Categories: catalog/managing-categories.md
+                - Managing Brands Page: catalog/managing-brands-page.md
+                - Products Management Options:
+                      - Overview: catalog/product-management-overview.md
+                      - Managing Products: catalog/managing-products.md
+                      - Managing Product Variations: catalog/managing-product-variations.md
+                      - Managing Product Configurations: catalog/managing-product-configurations.md
+                - Managing Product Availability: catalog/setting-product-availability.md
+                - Managing Properties: catalog/managing-properties.md
+                - Managing SEO: catalog/managing-SEO.md
+                - Adding Videos: catalog/add-videos.md
+                - Managing Units of Measure: catalog/managing-units-of-measure.md
+                - Managing Search Index: catalog/managing-search-index.md
+                - Product Indexing: catalog/product-indexing.md
+                - Settings: catalog/settings.md
+          - <b>Stores</b>:
+                - Overview: store/overview.md
+                - Adding New Store: store/adding-new-store.md
+                - Configuring Store: store/configuring-store.md
+                - Custom robot.txt: store/custom-robot-txt.md
+                - Settings: store/settings.md
+          - <b>Pricing</b>:
+                - Overview: pricing/overview.md
+                - Managing Price Lists: pricing/creating-new-price-list.md
+                - Managing Price List Assignments: pricing/adding-new-assignment.md
+                - Pricing Data Export: pricing/export-functionality.md
+                - Viewing Prices in Catalog: pricing/viewing-price-list-in-catalog.md
+                - Settings: pricing/managing-pricing-module-settings.md
+                - Troubleshooting: pricing/troubleshooting-guide.md
+                - Enabling Special Prices for Specific Users: pricing/example.md
+          - <b>Inventory</b>:
+                - Overview: inventory/overview.md
+                - Managing Inventory: inventory/managing-inventory.md
+                - Managing Fulfillment Centers: inventory/managing-fulfillment-centers.md
+                - Settings: inventory/settings.md
+          - <b>Orders</b>:
+                - Overview: order-management/overview.md
+                - Order Information: order-management/main-objects.md
+                - Order Processing Scenarios:
+                      - Managing Documents: order-management/managing-documents.md
+                      - Tracking Order Changes: order-management/tracking-order-changes.md
+                      - Managing Returns: order-management/managing-returns.md
+                      - Sending Order Information to AvaTax: order-management/sending-order-information-to-avatax.md
+                      - Indexation: order-management/indexation.md
+                - Notifications: order-management/notifications.md
+                - Permissions: order-management/permissions.md
+                - Settings: order-management/settings.md
+          - <b>Contacts</b>:
+                - Overview: contacts/overview.md
+                - Managing Companies and Contacts: contacts/managing-contacts.md
+                - Filtering Options: contacts/filtering-options.md
+                - Settings: contacts/settings.md
+          - <b>Cart</b>:
+                - Overview: cart/overview.md
+                - Settings: cart/settings.md
+          - <b>Marketing</b>:
+                - Overview: marketing/overview.md
+                - Promotions:
+                      - Overview: marketing/promotions-overview.md
+                      - Managing Promotions: marketing/managing-promotions.md
+                      - Promotion Combination Policies: marketing/combining-active-promotions.md
+                      - Promotion Rules: marketing/promotion-rules.md
+                      - Settings: marketing/settings.md
+                - Dynamic Content:
+                      - Overview: marketing/dynamic-content-overview.md
+                      - Managing Content Items: marketing/managing-content-items.md
+                      - Managing Content Placeholders: marketing/managing-content-placeholders.md
+                      - Managing Published Content: marketing/managing-published-content.md
+                      - Publishing Conditions: marketing/publish-conditions.md
+                      - Adding Advertising Spot: marketing/advertising-spot.md
+                - Dynamic Product Associations:
+                      - Overview: marketing/dynamic-associations-overview.md
+                      - Managing Dynamic Product Associations: marketing/managing-dynamic-associations.md
+                      - Rest API Testing: marketing/dynamic-associations-restapi.md
+          - <b>Quotes</b>:
+                - Overview: quotes/overview.md
+                - Managing Quotes: quotes/manage-quotes.md
+                - Settings: quotes/settings.md
+          - <b>Content</b>:
+                - Overview: content/overview.md
+                - Themes: content/managing-themes.md
+                - Pages: content/managing-pages.md
+                - Link Lists: content/managing-linklists.md
+                - Blogs: content/managing-blogs.md
+                - Settings: content/settings.md
+          - <b>Content Related Modules</b>:
+                - Overview: cms-overview.md
+                - Builder.io:
+                      - Overview: integrations/builder-io/overview.md
+                      - Using Builder.io: integrations/builder-io/use-builder-io.md
+                      - Settings: integrations/builder-io/settings.md
+                - Page Builder:
+                      - Overview: page-builder/overview.md
+                      - Managing Pages via Content Module: page-builder/manage-pages.md
+                      - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
+                      - Preview as User: page-builder/preview-as-user.md
+                - Pages:
+                      - Overview: pages/overview.md
+                      - Enabling Virto Pages: pages/enabling-pages.md
+                - Sanity:
+                      - Overview: sanity/overview.md
+                - Contentful:
+                      - Overview: contentful/overview.md
+          - AI Smart Capture:
+                - Overview: ai-doc-processing/overview.md
+                - Enabling AI Smart Capture: ai-doc-processing/enabling-ai-doc-processing.md
+                - Settings: ai-doc-processing/settings.md
+          - Assets Related Modules:
+                - Assets:
+                      - Overview: assets/overview.md
+                      - Managing Assets: assets/managing-assets.md
+                - Azure Blob Storage: azure-blob-storage/overview.md
+                - File System Assets: file-system/overview.md
+          - Authentication Related Modules:
+                - Google SSO: google-sso/overview.md
+                - Azure AD: azure-ad/overview.md
+                - Enabling Authentication Types: azure-ad/enabling-authentication-types.md
+          - Back in Stock:
+                  - Overview: back-in-stock/overview.md
+                  - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
+                  - Settings: back-in-stock/settings.md
+          - Catalog Related Modules:
+                - Catalog CSV Export and Import:
+                      - Overview: catalog-csv-export-import/overview.md
+                      - Importing Catalog: catalog-csv-export-import/import-catalog.md
+                      - Exporting Catalog: catalog-csv-export-import/export-catalog.md
+                      - Settings: catalog-csv-export-import/settings.md
+                - Catalog Personalization:
+                      - Overview: catalog-personalization/overview.md
+                      - Managing User Groups: catalog-personalization/user-groups.md
+                      - Showing Catalog Items to Specific Users: catalog-personalization/example.md
+                      - Settings: catalog-personalization/settings.md
+                - Catalog Publishing:
+                      - Overview: catalog-publishing/overview.md
+                      - Evaluating Product Description Completeness: catalog-publishing/managing-channels.md
+          - Contracts:
+                - Overview: contracts/overview.md
+                - Creating Contract: contracts/creating-and-terminating-contracts.md
+                - Managing Contract Prices: contracts/managing-contract-prices.md
+                - Managing Contract Customers: contracts/managing-contract-customers.md
+          - Customer Export and Import:
+                - Overview: customer-export-import/overview.md
+          - Dynamic Associations:
+                - Overview: dynamic-associations/overview.md
+          - Dynamic Properties:
+                - Managing Dynamic Properties: dynamic-properties/managing-dynamic-properties.md
+          - Environments Comparison: 
+                - Overview: environments-comparison/overview.md
+                - Comparing Environments: environments-comparison/compare-environments.md
+          - Event Bus:
+                - Overview: event-bus/overview.md
+          - xFrontend:
+                - Overview: x-frontend/overview.md
+          - GDPR:
+                - Overview: gdpr/overview.md
+                - Managing Personal Data: gdpr/manage-personal-data.md
+          - Generic Export:
+                - Overview: generic-export/overview.md
+                - Assigning Permissions: generic-export/assigning-permissions.md
+                - Data Export: generic-export/exporting-data.md
+                - Advanced Filtering: generic-export/advanced-filtering.md
+                - Settings: generic-export/settings.md
+          - Loyalty:
+                - Overview: loyalty/overview.md
+                - Enabling and Creating Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
+                - Loyalty Points History: loyalty/loyalty-points-history.md
+          - News:
+                - Overview: news/overview.md
+                - Managing News: news/managing-news.md
+                - Settings: news/settings.md
+          - Notifications:
+                - Overview: notifications/overview.md
+                - Notification List: notifications/notification-list.md
+                - Notification Layouts: notifications/notification-layouts.md
+                - Notification Log: notifications/notification-log.md
+                - Notification Templates: notifications/notification-templates.md
+                - Settings: notifications/settings.md
+          - Payment Related Modules:
+                - Payment:
+                      - Overview: payment/overview.md
+                      - Managing Payment Methods: payment/managing-payment-methods.md
+                      - Settings: payment/settings.md
+                - Non-Integrative Payment Methods:
+                      - Overview: native-payment-methods/overview.md
+                      - Managing Native Payment Methods: native-payment-methods/managing-native-payment-methods.md
+                      - Settings: native-payment-methods/settings.md
+                - Authorize.net:
+                      - Overview: authorize-net/overview.md
+                      - Managing Authorize.net: authorize-net/manage-authorize-net-module.md
+                      - Settings: authorize-net/settings.md
+                - CyberSource:
+                      - Overview: cybersource/overview.md
+                      - Managing CyberSource: cybersource/manage-cybersource.md
+                      - Settings: cybersource/settings.md
+                - Datatrans: 
+                      - Overview: datatrans/overview.md
+                      - Managing Datatrans: datatrans/manage-datatrans.md
+                      - Settings: datatrans/settings.md
+                - Skyflow:
+                      - Overview: skyflow/overview.md
+                      - Managing Skyflow: skyflow/manage-skyflow-module.md
+          - xPickup:
+                - Overview: x-pickup/overview.md
+                - Managing Pickup Locations: x-pickup/managing-pickup-locations.md
+          - Price Export Import:
+                - Overview: price-export-import/overview.md
+                - Mapping CSV files: price-export-import/mapping-csv-files.md
+                - Exporting Price Lists: price-export-import/exporting-price-lists.md
+                - Importing Price Lists: price-export-import/importing-price-lists.md
+          - Product Snapshot: 
+                - Overview: product-snapshot/overview.md
+                - Viewing Product Snapshots: product-snapshot/viewing-products-snapshot.md
+                - Enabling Product Snapshots: product-snapshot/enabling-products-snapshot.md
+          - Push Messages:
+                - Overview: push-messages/overview.md
+                - Managing Push Messages: push-messages/manage-push-messages.md
+                - Messaging via Firebase Cloud: push-messages/firebase-cloud-messaging.md
+                - Settings: push-messages/settings.md
+          - Rating and Reviews:
+                - Overview: rating-reviews/overview.md
+                - Managing Reviews: rating-reviews/managing-reviews.md
+                - Settings: rating-reviews/settings.md
+          - xRecommend:
+                - Overview: recommend/overview.md
+                - Enabling Recommendations: recommend/enable-recommendations.md
+                - Settings: recommend/settings.md
+          - Return:
+                - Overview: return/overview.md
+                - Managing Returns: return/managing-returns.md
+                - Settings: return/settings.md
+          - Search Related Modules:
+                - Search Index:
+                      - Overview: search/overview.md
+                      - Managing Search Index: search/managing-search.md
+                      - Settings: search/settings.md
+                - Intent Search: 
+                      - Overview: intent-search/overview.md
+                - Elasticsearch 9:
+                      - Overview: elastic-search-9/overview.md
+                      - Settings: elastic-search-9/settings.md
+                - Elasticsearch 8:
+                      - Overview: elastic-search-8/overview.md
+                      - Settings: elastic-search-8/settings.md
+                - Elastic App Search: 
+                      - Overview: elastic-app-search/overview.md
+                      - Using Search Analytics: elastic-app-search/using-analytics.md
+                      - Tuning Search Relevance: elastic-app-search/search-relevance-tuning.md
+                      - Settings: elastic-app-search/settings.md
+                - Elasticsearch:
+                      - Overview: elastic-search/overview.md
+                      - Settings: elastic-search/settings.md
+                - Azure Search:
+                      - Overview: azure-search/overview.md
+                      - Settings: azure-search/settings.md
+                - OpenSearch:
+                      - Overview: opensearch/overview.md
+                      - Settings: opensearch/settings.md
+                - Algolia: algolia/overview.md
+                - Lucene: lucene/overview.md
+                - Search Options: search.md
+                - Search Query Syntax: search-query-syntax.md
+          - Security:
+                - Overview: security/overview.md
+                - Managing User Accounts: security/managing-users.md
+                - Roles and Permissions:
+                      - Managing Roles and Permissions: security/roles-and-permissions.md
+                      - Marketer:  security/marketer.md
+                      - Order Manager: security/order-manager.md
+                      - Category Manager: security/category-manager.md
+                - Generating API Key: security/api-key.md
+                - Login on Behalf of User: security/login-on-behalf.md
+                - Managing Active Sessions: security/active-sessions.md
+                - Settings: security/settings.md
+          - SEO:
+                - Overview: seo/overview.md
+                - Managing SEO: catalog/managing-SEO.md
+                - Managing Broken Links: seo/managing-broken-links.md
+                - Debugging SEO Links: seo/debugging-seo-links.md
+                - Settings: seo/settings.md
+          - Shipping:
+                - Overview: shipping/overview.md
+                - Managing Shipping Methods: shipping/managing-shipping-methods.md
+                - Settings: shipping/settings.md
+          - ShipStation: shipstation/overview.md
+          - Shopify Taxonomy:
+                - Overview: shopify-taxonomy/overview.md
+                - Importing Shopify Taxonomy: shopify-taxonomy/importing-shopify-taxonomy.md
+                - Settings: shopify-taxonomy/settings.md
+          - Sitemaps:
+                - Overview: sitemaps/overview.md
+                - Managing Sitemaps: sitemaps/configuring-sitemaps.md
+                - Settings: sitemaps/settings.md
+          - SQL Queries:
+                - Overview: sql-queries/overview.md
+                - Running Queries: sql-queries/running-queries.md
+          - Subscription:
+                - Overview: subscription/overview.md
+                - Enabling Subscriptions: subscription/enabling-subscriptions.md
+                - Settings: subscription/settings.md
+          - System Operations: system-operations/overview.md
+          - Tasks:
+                - Overview: tasks/overview.md
+                - Using Tasks Application: tasks/using-application.md
+                - Roles and Permissions: tasks/roles-permissions.md
+                - Settings: tasks/settings.md
+          - Tax:
+                - Overview: tax/overview.md
+                - Managing Tax Providers: tax/managing-taxes.md
+                - Settings: tax/settings.md
+          - Thumbnails:
+                - Overview: thumbnails/overview.md
+                - Generating Thumbnails: thumbnails/generating-thumbnails.md
+                - Managing Thumbnail Settings: thumbnails/thumbnail-options.md
+                - Using Thumbnails: thumbnails/using-thumbnails.md
+                - Settings: thumbnails/settings.md
+          - Webhooks:
+                - Overview: webhooks/overview.md
+                - Managing Webhooks: webhooks/managing-webhooks.md
+                - Settings: webhooks/settings.md
+          - White Labeling:
+                - Overview: white-labeling/overview.md
+                - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
+    - Integrations:
+          - Overview: integrations/overview.md
+          - Application Insights:
+                - Overview: application-insights/overview.md
+                - Enabling Application Insights: application-insights/enable-app-insights.md
+                - Settings: application-insights/settings.md
+          - Avalara Tax:
+                - Overview: integrations/avalara/overview.md
+                - Orders Synchronization: integrations/avalara/orders-synchronization.md
+                - Taxes Calculation: integrations/avalara/taxes-calculation.md
+                - Tax Type Configuration: integrations/avalara/tax-type-configuration.md
+                - Address Validation: integrations/avalara/address-validation.md
+                - Settings: integrations/avalara/settings.md
+          - Builder.io:
+                - Overview: integrations/builder-io/overview.md
+                - Using Builder.io: integrations/builder-io/use-builder-io.md
+                - Settings: integrations/builder-io/settings.md
+          - Google Analytics 4:
+                - Overview: integrations/google-analytics/overview.md
+                - Using Google Analytics 4: integrations/google-analytics/integration.md
+          - Hotjar:
+                - Overview: integrations/hotjar/overview.md
+                - Getting Started: integrations/hotjar/getting-started.md
+          - Power BI Reports:
+                - Overview: integrations/power-bi/overview.md
+                - Getting Started: integrations/power-bi/getting-started.md
+    - Versions:
+          - Virto 3. Products versions: versions/virto3-products-versions.md
+          - v3 2026 S14: versions/v3-2026-S14.md
+          - v3 2025 S12: versions/v3-2025-S12.md
+          - v3 2025 S11: versions/v3-2025-S11.md
+          - v3 2024 S10: versions/v3-2024-S10.md
+          - v3 2024 S9: versions/v3-2024-S9.md
+          - v3 2024 S8: versions/v3-2024-S8.md
+          - v3 2024 S7: versions/v3-2024-S7.md
+          - v3 2023 S6: versions/v3-2023-S6.md
+          - v3 2023 S5: versions/v3-2023-S5.md
+          - v3 2022 Q4: versions/v3-2022-Q4.md
+          - v3 2022 Q3: versions/v3-2022-Q3.md
+          - v3 2022 Q2: versions/v3-2022-Q2.md
+          - v3 2022 Q1: versions/v3-2022-Q1.md
+          - v3 2020 Q3: versions/v3-2020-Q3.md
+          - v3 2021 Q3: versions/v3-2021-Q3.md
+          - v3 2021 Q1: versions/v3-2021-Q1.md

@@ -1,0 +1,40 @@
+# unlockOrganizationContact ==~mutation~==
+
+This mutation unlocks an organization contact.
+
+## Arguments
+
+The `InputLockUnlockOrganizationContactType!` provides the necessary input values to lock or unlock an organization contact.
+
+| Field                                                                                 | Description                                             |
+|---------------------------------------------------------------------------------------|---------------------------------------------------------|
+| `userId` ==String==                                                                   | The Id of the user.                                     |
+
+## Possible returns
+
+| Possible return                                          	| Description                                                       	|
+|---------------------------------------------------------	|--------------------------------------------------------------------	|
+| [`ContactType`](../Objects/ContactType.md)                | A contact and various fields to describe the contact's information.  	|
+
+
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Mutation"
+mutation unlockContact($command: InputLockUnlockOrganizationContactType!){
+  unlockOrganizationContact(command: $command){
+  }
+}
+```
+
+```json title="Variables"
+{
+  "command": {
+    "userId":"5f807280-bb1a-42b2-9a96-ed107269ea06"
+  }
+}
+```
+
+</div>

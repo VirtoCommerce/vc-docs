@@ -5,31 +5,64 @@
 MkDocs is a **fast**, **simple** and **downright gorgeous** static site generator that's geared towards building project documentation.
 More info: https://www.mkdocs.org/
 
-
 ## Prerequisites - Install pip on Windows
 Follow the instructions in this article
-https://www.dataquest.io/blog/install-pip-windows/ 
+https://www.dataquest.io/blog/install-pip-windows/
 
 ## Setup on-premises
 
-```
-pip install mkdocs
+### Install MkDocs and all required packages
+```bash
+# Install MkDocs Material theme and core dependencies
+pip install mkdocs-material
+
+# Install additional plugins
+pip install mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin \
+    mkdocs-minify-plugin mkdocs-redirects mkdocs-monorepo-plugin \
+    mkdocs-include-markdown-plugin pymdown-extensions jinja2
+
+# Install Mike for versioning support
+pip install mike
 ```
 
-```
-pip install mkdocs
-           pip install mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-material==8.5.1 mkdocs-minify-plugin mkdocs-redirects pymdown-extensions jinja2 mkdocs-git-revision-date-localized-plugin mkdocs-include-markdown-plugin
+### Quick install (all at once)
+```bash
+pip install mkdocs-material mike mkdocs-awesome-pages-plugin \
+    mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin \
+    mkdocs-redirects mkdocs-monorepo-plugin mkdocs-include-markdown-plugin \
+    pymdown-extensions jinja2
 ```
 
-## Preview User docs
-```
-cd user_docs
+## Development Workflow
+
+### Regular development (without versioning)
+```bash
+# Serve documentation locally for development
 mkdocs serve
 ```
-- Open http://127.0.0.1:8000
-## Preview Dev docs
+Open http://127.0.0.1:8000
+
+### Build documentation
+```bash
+# Build to site/ directory
+mkdocs build
+
+# Build to custom directory
+mkdocs build -d /path/to/output
 ```
-cd dev_docs
+
+## Preview specific docs
+
+### Preview User docs
+```bash
+cd user-guide
 mkdocs serve
 ```
-- Open http://127.0.0.1:8000
+Open http://127.0.0.1:8000
+
+### Preview Dev docs
+```bash
+cd developer-guide
+mkdocs serve
+```
+Open http://127.0.0.1:8000

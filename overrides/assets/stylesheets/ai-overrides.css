@@ -1,0 +1,91 @@
+/* Loaded as a separate extra_css entry. Its URL is fresh, so Cloudflare cannot
+   serve a stale copy that pre-dates the AI button. Keep all AI-button styles
+   and any selector overrides for cached neighbours of main.css here. */
+
+.md-search {
+    margin-right: 0.6rem;
+}
+
+@media screen and (max-width: 1265px) {
+    .md-search {
+        margin-right: 0.6rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .md-search__form,
+    .md-search__input {
+        height: 42px;
+    }
+}
+
+.md-header__ai-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 42px;
+    padding: 0 0.95rem;
+    margin-right: 0.6rem;
+    background-color: var(--search-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--search-border-color);
+    border-radius: 6px;
+    font-family: "CircularStd", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.md-header__ai-button:hover {
+    background-color: var(--neutral-95);
+    border-color: #FF7E13;
+    color: #FF7E13;
+}
+
+.md-header__ai-button:focus-visible {
+    outline: 2px solid #FF7E13;
+    outline-offset: 2px;
+}
+
+.md-header__ai-button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF7E13;
+}
+
+.md-header__ai-button-icon svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    fill: currentColor;
+    display: block;
+}
+
+.md-header__ai-button-label {
+    display: inline-block;
+}
+
+.md-header__ai-button--mobile {
+    display: none;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .md-header__ai-button:not(.md-header__ai-button--mobile) {
+        display: none;
+    }
+
+    .md-header__ai-button--mobile {
+        display: inline-flex;
+    }
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-header__ai-button {
+    display: none;
+}

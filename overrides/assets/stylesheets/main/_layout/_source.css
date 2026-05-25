@@ -97,12 +97,11 @@
     }
 }
 
-@media  screen and (max-width: 400px) {
+@media  screen and (max-width: 520px) {
     .md-header__source {
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        margin-left: 5rem;
     }
 }

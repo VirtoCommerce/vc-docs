@@ -1,0 +1,96 @@
+# loyaltyPointsHistory ==~query~==
+
+This query allows you to retrieve the history of loyalty point transactions for a specific user. The results include details about earned and redeemed points, with support for pagination, filtering, and sorting.
+
+## Arguments
+
+| Argument                    | Description                                                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `after` ==String==         | Returns only edges after the specified cursor (for pagination).                                                    |
+| `first` ==Int==            | The maximum number of edges to return. Works with `after` for paginated results, or from the beginning if not set. |
+| `keyword` ==String==       | A keyword to filter the history records.                                                                           |
+| `sort` ==String==          | The sorting expression to order the results.                                                                       |
+| `userId` ==String==        | The Id of the user whose loyalty history is requested.                                              |
+| `operationType` ==String== | Filters results by operation type (Earned or Redeemed).                                                   |
+
+## Possible returns
+
+| Possible return                                                                | Description                                                               |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| [LoyaltyOperationLogConnection](../objects/LoyaltyOperationLogConnection.md) | Defines the paginated list of loyalty operation log entries with details. |
+
+## Example
+
+<div class="grid" markdown>
+
+```json title="Query"
+{
+    loyaltyPointsHistory(
+    userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"
+    first: 5
+    sort: "createdDate:desc"
+    operationType: "Earned"
+) {
+    edges {
+      node {
+        id
+        operationType
+        amount
+        createdDate
+        object {
+          type
+          orderId
+          orderNumber
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+```
+
+```json title="Return"
+{
+  "data": {
+    "loyaltyPointsHistory": {
+      "edges": [
+        {
+          "node": {
+            "id": "op-001",
+            "operationType": "Earned",
+            "amount": 50,
+            "createdDate": "2025-09-10T12:45:00Z",
+            "object": {
+              "type": "Order",
+              "orderId": "ord-123",
+              "orderNumber": "PO-001"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "op-002",
+            "operationType": "Earned",
+            "amount": 30,
+            "createdDate": "2025-09-05T09:15:00Z",
+            "object": {
+              "type": "Order",
+              "orderId": "ord-122",
+              "orderNumber": "PO-002"
+            }
+          }
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": true,
+        "endCursor": ""
+      }
+    }
+  }
+}
+```
+
+</div>

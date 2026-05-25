@@ -1,0 +1,8 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Data Display
+nav:
+  - VcAccordion: vc-accordion.md
+  - VcDataTable: vc-data-table.md
+  - VcGallery: vc-gallery.md
+  - VcImageTile: vc-image-tile.md

@@ -1,0 +1,67 @@
+<!-- Custom HTML site displayed as the Marketplace Home chapter -->
+
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+
+<section class="main-container md-grid">
+    <div class="md-typeset main-container__wrapper">
+        <div class="main-container__head">
+            <h1 class="main-container__title">Marketplace</h1>
+            <p class="main-container__desc">Create and manage online marketplaces, fostering increased revenue and broader customer base</p>
+        </div>
+    </div>
+</section>
+
+<section class="main-container md-grid">
+    {% if not config.extra.main_page.education is mapping %}
+    <div class="main-container__cards">
+        <div class="main-container__cards-row main-container__no-wrap">
+            {% for card in config.extra.main_page.documentation %}
+            <div class="main-container__cards-col main-container__cards-col_wide">
+                {% include "partials/doc-card.html" %}
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+
+
+<section class="main-container md-grid">
+    {% if not config.extra.main_page.release_notes is mapping %}
+    <table class="zebra-table">
+        <h2 class="zebra-table__title">Release Notes</h2>
+        <tbody>
+            {% for card in config.extra.main_page.release_notes %}
+            <tr>
+                <td><a class="zebra-table__link" href="{{card.link}}">{{card.title}}</a></td>
+                <td class="zebra-table__type">{{card.type}}</td>
+                <td class="zebra-table__date">{{card.date}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</section>
+
+<section class="main-container md-grid">
+    {% if not config.extra.main_page.link_cards is mapping %}
+    <div class="main-container__cards">
+        <div class="main-container__cards-row main-container__no-wrap">
+            {% for card in config.extra.main_page.link_cards %}
+            <div class="main-container__cards-col main-container__cards-col_wide">
+                {% include "partials/link-card.html" %}
+            </div>
+            {% endfor %}
+    </div>
+    {% endif %}
+</section>
+
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

@@ -1,0 +1,29 @@
+# Create Account
+
+To work with the Frontend Application, you need to create a new account:
+
+1. Open the Frontend Application and click **Sign up now** in the top right corner.
+
+    ![Sign-up](../media/sign-up.png){: style="display: block; margin: 0 auto;" }
+
+1. Fill in the registration form. All fields are mandatory. Follow the tips for creating a strong password.
+
+    ![registration](../media/registration-form.png){: style="display: block; margin: 0 auto;" width="500"}
+
+    !!! note
+        You can create a personal or company account. For a company account, you must provide your company name. More company details will be specified in the account profile after signing in.
+
+1. Click **Sign up**.
+
+1. Check your email inbox for a verification link to complete the registration.
+
+Your account has been registered.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: flex-end;">
+    <a href="../sign-in">Sign in →</a>
+</div>
+

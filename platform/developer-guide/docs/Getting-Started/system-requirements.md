@@ -1,0 +1,111 @@
+﻿# System Requirements
+This sections lists the basic hardware and software requirements to installing the Virto Commerce Platform.
+
+## Minimum hardware requirements
+Before installing, make sure your computer meets these minimum requirements:
+
+| Parameter         | Value         |
+|-------------------|---------------|
+| RAM               | 1GB           |
+| Disk space        | 1GB           |
+| Processor speed   | 2GHz          |
+| Number of cores   | Dual core     |
+| Processor type    | x64-compatible only |
+
+## Supported operation systems for .NET 8
+
+!!! note
+    Virto Commerce (3.1000+) introduces a significant technical update by transitioning the Platform from .NET 8 to .NET 10. 
+
+    ![Readmore](media/readmore.png){: width="25"} [Read more about upgrading to .NET 10](../Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md)    
+
+The Virto Platform runs on .NET 10. [.NET 10](https://github.com/dotnet/core/blob/main/release-notes/8.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
+
+For issues with .NET on operating systems not listed here, open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community. 
+<br>
+<br>
+![Readmore](media/readmore.png){: width="25"} [List of repositories](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md)
+
+=== "Windows"
+
+    |OS                                                         | Version                 | Architectures   | Lifecycle                                                                                              |
+    |---------------------------------------------------------- |-------------------------|-----------------|--------------------------------------------------------------------------------------------------------|
+    |[Windows 10 Client](https://www.microsoft.com/windows/)    | Version 1607+           | x64, x86, Arm64 | [Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)                       |
+    |[Windows 11](https://www.microsoft.com/windows/)           | Version 22000+          | x64, x86, Arm64 | [Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)                       |
+    |[Windows Server](https://learn.microsoft.com/windows-server/) | 2012+                | x64, x86        | [Windows Server](https://learn.microsoft.com/windows-server/get-started/windows-server-release-info)   |
+    |[Windows Server Core](https://learn.microsoft.com/windows-server/) | 2012+           | x64, x86        | [Windows Server](https://learn.microsoft.com/windows-server/get-started/windows-server-release-info)   |
+    |[Nano Server](https://learn.microsoft.com/windows-server/get-started/getting-started-with-nano-server) | Version 1809+| x64| [Windows Server](https://learn.microsoft.com/windows-server/get-started/windows-server-release-info)|
+
+    
+=== "Linux"
+
+    |OS                                                                                                     | Version               | Architectures     | Lifecycle                     |
+    |-------------------------------------------------------------------------------------------------------|-----------------------|-------------------|-------------------------------|
+    |[Alpine Linux](https://alpinelinux.org/)                                                               | 3.17+                 | x64, Arm64, Arm32 | [Alpine][Alpine-lifecycle]    |
+    |[Debian](https://www.debian.org/)                                                                      | 11+                   | x64, Arm64, Arm32 | [Debian][Debian-lifecycle]    |
+    |[Fedora](https://getfedora.org/)                                                                       | 37+                   | x64               | [Fedora][Fedora-lifecycle]    |
+    |[openSUSE](https://opensuse.org/)                                                                      | 15+                   | x64               | [OpenSUSE][OpenSUSE-lifecycle]|
+    |[Oracle Linux](https://www.oracle.com/linux/)                                                          | 8+                    | x64               | [Oracle][Oracle-lifecycle]    |
+    |[Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)    | 8+                    | x64, Arm64        | [Red Hat][RHEL-lifecycle]     |
+    |[SUSE Enterprise Linux (SLES)](https://www.suse.com/products/server/)                                  | 12 SP5+               | x64               | [SUSE][SLES-lifecycle]        |
+    |[Ubuntu](https://ubuntu.com/)                                                                          | 20.04+                | x64, Arm64, Arm32 | [Ubuntu][Ubuntu-lifecycle]    |
+
+    Other distributions are supported at best effort, per [.NET Support and Compatibility for Linux Distributions](https://github.com/dotnet/core/blob/main/linux-support.md).
+
+    **Libc compatibility**:
+
+    - [glibc](https://www.gnu.org/software/libc/) 2.23 (from Ubuntu 16.04).
+    - Alpine: [musl](https://musl.libc.org/) 1.2.2 (from Alpine 3.13).
+
+=== "macOS"
+
+    |OS                                         | Version                   | Architectures     |
+    |-------------------------------------------|---------------------------|-------------------|
+    |[macOS](https://support.apple.com/macos)   | 10.15+                    | x64, Arm64        |
+
+
+=== "Android"
+
+    | OS                                            | Version                 | Architectures     |
+    |-----------------------------------------------|-------------------------|-------------------|
+    | [Android](https://support.google.com/android) | API 21+                 | x64, Arm32, Arm64 |
+
+=== "iOS / tvOS / MacCatalyst"
+
+    | OS                                                    | Version                 | Architectures     |
+    |-------------------------------------------------------|-------------------------|-------------------|
+    | [iOS](https://support.apple.com/ios)                  | 11.0+                   | Arm64             |
+    | [iOS Simulator](https://support.apple.com/ios)        | 11.0+                   | x64, Arm64        |
+    | [tvOS](https://support.apple.com/apple-tv)            | 11.0+                   | Arm64             |
+    | [tvOS Simulator](https://support.apple.com/apple-tv)  | 11.0+                   | x64, Arm64        |
+    | [MacCatalyst](https://support.apple.com/macos)        | 10.15+, 11.0+ on Arm64  | x64, Arm64        |
+
+## Supported databases
+
+The Virto Commerce Platform supports:
+
+* MS SQL Server 2019 and higher.
+* MySql Server 5.7 and higher.
+* PostgreSQL 12 and higher.
+
+<br>
+![Readmore](media/readmore.png){: width="25"} [Configuring Platform with database providers](../Fundamentals/Persistence/DB-Agnostic/overview.md)
+
+## Supported browsers
+
+The Virto Commerce Platform Manager supports all modern evergreen browsers:
+
+- Google Chrome (latest 2 versions)
+- Mozilla Firefox (latest 2 versions)
+- Microsoft Edge (latest 2 versions)
+- Apple Safari (latest 2 versions)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ai-quick-start">← AI assistance </a>
+    <a href="Installation-Guide/windows">Installation guide →</a>
+</div>

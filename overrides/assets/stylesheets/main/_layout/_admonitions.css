@@ -52,6 +52,24 @@
     color: var(--admonition-warning-text);
 }
 
+.md-typeset :is(.admonition,details):is(.example) {
+    border-color: var(--admonition-example-border);
+    background-color: var(--admonition-example-bg);
+}
+
+.md-typeset :is(.example)>:is(.admonition-title,summary):before {
+    background-color:  var(--admonition-example-title);
+}
+
+.md-typeset :is(.example)>:is(.admonition-title,summary) {
+    color: var(--admonition-example-title);
+    background-color: transparent;
+}
+
+.md-typeset :is(.example) > :is(ul) > :is(li) {
+    color: var(--admonition-example-text);
+}
+
 .md-typeset :is(.admonition,details):is(.danger,.error,.bug) {
     border-color: var(--admonition-error-border);
     background-color: var(--admonition-error-bg);
@@ -150,11 +168,10 @@
 .md-typeset :is(.admonition-title,summary) {
     font-style: normal;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     line-height: 1.2rem;
     letter-spacing: 0.01em;
     background-color: transparent;
-    text-transform: uppercase;
     padding-bottom: 0;
 }
 
@@ -178,7 +195,7 @@
     }
 
     .md-typeset ol li, .md-typeset ul li {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         line-height: 150%;
     }
 }

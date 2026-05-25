@@ -1,0 +1,4 @@
+title: CLI
+nav:
+  - API Client Generator: api-client-generator.md
+  - create-vc-app: create-vc-app.md

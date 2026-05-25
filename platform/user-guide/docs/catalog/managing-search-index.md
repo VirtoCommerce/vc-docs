@@ -1,0 +1,36 @@
+# Manage Search Index
+
+Virto Commerce uses custom analyzer to extract tokens from the text when building search index. The following token filters are supported:
+
+* custom_edge_ngram (default)
+* custom_ngram
+
+To manage search index: 
+
+1. In the main menu, click **Search index**.
+1. In the next **Record types blade**, check the required document.
+1. Click **Build index** in the toolbar.
+
+     ![Build index](media/search-index-path.png){: style="display: block; margin: 0 auto;" }
+
+1. In the popup window:
+     1. Click **Build** to initiate the process of building and indexing all the objects into the search engine.
+     1. Click **Delete and build** to delete search index of the selected document and rebuild it from scratch. 
+
+          ![Index options](media/popup-window-build-index.png){: style="display: block; margin: 0 auto;" }
+
+1. The result of the indexation process appears in the new blade.
+
+     ![Result](media/indexation-result.png){: style="display: block; margin: 0 auto;" }
+
+The search results will become available once the build process is finished.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../managing-units-of-measure">← Managing units of measure</a>
+    <a href="../product-indexing">Product indexing →</a>
+</div>

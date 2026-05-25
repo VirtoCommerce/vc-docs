@@ -1,0 +1,154 @@
+# Manage Units of Measure
+
+The Catalog module allows you to sell products in different units of measure. 
+
+Managing units of measure includes:
+
+* [Adding default units of measure.](#add-default-units-of-measure)
+* [Adding new dimension.](#add-new-dimension)
+* [Adding measure units to a specific dimension.](#add-unit-of-measure-to-dimension)
+* [Setting measure unit as default.](#set-unit-as-default)
+* [Deleting units.](#delete-unit)
+
+## Add default units of measure
+
+To simplify initial configuration, we have added default dimensions and their measure units to the Catalog:
+
+=== "Weight"
+    | Name     | Code | Conversion rate (to base) | Base unit | Default |
+    |----------|------|---------------------------|-----------|---------|
+    | Kilogram | KG   | 1                         | KG        | ✔       |
+    | Gram     | G    | 0.001                     | KG        | x       |
+    | Pound    | LB   | 0.453592                  | KG        | x       |
+    | Ounce    | OZ   | 0.0283495                 | KG        | x       |
+
+=== "Volume"
+    | Name        | Code  | Conversion rate (to base) | Base unit | Default |
+    |-------------|-------|---------------------------|-----------|---------|
+    | Liter       | L     | 1                         | L         | ✔       |
+    | Milliliter  | ML    | 0.001                     | L         | x       |
+    | Gallon      | GAL   | 0.264172                  | L         | x       |
+    | Fluid Ounce | FL OZ | 33.814                    | L         | x       |
+
+=== "Length"
+    | Name       | Code | Conversion rate (to base) | Base unit | Default |
+    |------------|------|---------------------------|-----------|---------|
+    | Meter      | M    | 1                         | M         | ✔       |
+    | Centimeter | CM   | 0.01                      | M         | x       |
+    | Inch       | IN   | 39.3701                   | M         | x       |
+    | Foot       | FT   | 3.28084                   | M         | x       |
+
+=== "Quantity"
+    | Name  | Code | Conversion rate (to base) | Base unit | Default |
+    |-------|------|---------------------------|-----------|---------|
+    | Piece | PCS  | 1                         | PCS       | ✔       |
+    | Dozen | DOZ  | 12                        | PCS       | x       |
+    | Pack  | PACK | 1                         | PCS       | x       |
+    | Case  | CASE | 24                        | PCS       | x       |
+
+=== "Time"
+    | Name  | Code | Conversion rate (to base) | Base unit | Default |
+    |-------|------|---------------------------|-----------|---------|
+    | Hour  | HR   | 1                         | HR        | ✔       |
+    | Day   | DAY  | 24                        | HR        | x       |
+    | Week  | WK   | 168                       | HR        | x       |
+    | Month | MO   | 730                       | HR        | x       |
+
+
+To add the pre-filled dimensions and their measure units to your initial configuration:
+
+1. Click **Units of measure** in the main menu. 
+1. In the next blade, click **Create default**.
+1. In the next blade, check the dimensions you want to include in your configuration.
+1. Click **Create** in the toolbar. 
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/vjemi4tpsy9o?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
+The selected dimensions from the default list have been added to your configuration.
+
+To set new default units of measure:
+
+1. Click on the required dimension.
+1. In the next blade, click on the **Units** widget.
+1. In the next blade, click on the measure unit from the list.
+1. In the next blade, click **Set as default** in the toolbar.
+1. Confirm your selection by clicking **OK** --> **Yes** --> **Save**.
+
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/yp5gtvbct24s?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
+The selected unit of measure is now the default for this dimension.
+
+## Add new dimension
+
+To add a new dimension:
+
+1. Click **Units of measure** in the main menu. 
+1. The next blade lists all the registered units of measure. Click **Add** in the toolbar to add a new dimension.
+1. In the next blade, fill in the required fields, then click **Save** in the toolbar:
+
+![Add new UoM](media/add-uom.png){: style="display: block; margin: 0 auto;" }
+
+Your new dimension appears in the list.
+
+## Add unit of measure to dimension 
+
+To extend a dimension from the list with new measure units:
+
+1. Click on the desired dimension. 
+1. In the next blade, click on the **Units** widget.
+1. In the next blade, click **Add** in the toolbar.
+
+    ![New measure unit](media/new-measure-unit.png)
+
+1. Fill in the following fields, then click **OK**:
+
+    ![New measure unit 1](media/add-uom1.png)
+
+Your new unit of measure has been added.
+
+## Set unit as default
+
+The first added measure unit is automatically set as the default. To set another unit as the default:
+
+1. Complete steps 1-2 from the [instruction above](managing-units-of-measure.md#add-unit-of-measure-to-dimension).
+1. Click the unit in the list that you want to set as the default.
+1. In the next blade, click **Set as default** in the toolbar.
+
+    ![Default unit](media/default-uom.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **OK** to save the changes.
+
+The unit has been set as the default.
+
+## Delete unit
+
+To delete a unit:
+
+1. Complete steps 1-2 from the [instruction above](managing-units-of-measure.md#add-unit-of-measure-to-dimension).
+1. Check the unit you want to delete.
+1. Click **Delete** in the toolbar.
+1. Confirm your action.
+
+The unit has been deleted from the list.
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../add-videos">← Adding videos</a>
+    <a href="../managing-search-index">Managing search index →</a>
+</div>
+

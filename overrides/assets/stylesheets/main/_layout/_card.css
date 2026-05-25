@@ -9,6 +9,10 @@
     overflow: hidden;
 }
 
+.card:hover {
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.12);
+}
+
 .card:hover .card__icon-wrap {
     background: var(--card-hover-color);
 }
@@ -19,15 +23,15 @@
 }
 
 .card__wrapper {
-    padding: 24px;
+    padding: 16px;
 }
 
 .card__title {
     font-family: 'Circular Std Book', sans-serif;
-    font-weight: 450;
+    font-weight: 700;
     font-style: normal;
-    font-size: 18px;
-    line-height: 150%;
+    font-size: 26px;
+    line-height: 100%;
     letter-spacing: 0.01em;
     color: var(--card-text-color);
     display: flex;
@@ -46,8 +50,8 @@
     font-family: 'Circular Std Book', sans-serif;
     font-weight: 450;
     font-style: normal;
-    font-size: 15px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--card-desc-color);
     margin: 0;

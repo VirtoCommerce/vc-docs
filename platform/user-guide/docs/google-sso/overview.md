@@ -1,0 +1,31 @@
+# Google SSO
+
+The **Google Single Sign-On (SSO)** module provides users with a simplified sign-in experience. It allows users to access multiple applications with a single set of credentials, eliminating the need to remember different usernames and passwords for each application.
+
+The Google SSO module integrates Virto Commerce with Google to provide secure authentication and authorization for cloud and on-premises applications. This helps to improve productivity, security, and user satisfaction by reducing the number of times users are prompted for their credentials.
+
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-google-sso)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-google-sso/releases)
+
+
+## Key features
+
+The Google SSO module can be integrated with both the Virto Commerce Platform and the Frontend Application:
+
+![Platform and Frontend integration](media/frontend-platform.png){: style="display: block; margin: 0 auto;" }
+
+![Readmore](media/readmore.png){: width="25"} [Using Google as SSO provider in the Platform](/platform/developer-guide/latest/Fundamentals/Security/extensions/adding-google-as-sso-provider)
+
+![Readmore](media/readmore.png){: width="25"} [Using Google as SSO provider in the Frontend Application](/storefront/developer-guide/latest/authentication/adding-google-as-sso-provider)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../file-system/overview">← File System Assets module overview</a>
+    <a href="../../azure-ad/overview">Azure AD module overview →</a>
+</div>

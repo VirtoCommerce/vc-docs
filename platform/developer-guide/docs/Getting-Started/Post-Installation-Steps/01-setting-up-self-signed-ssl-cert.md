@@ -1,0 +1,42 @@
+﻿# Set up Self-signed SSL Certificate
+
+Running Virto Commerce Platform with HTTPS requires using an SSL certificate. When it comes to non-production applications or development and testing scenarios, you can use a self-signed certificate. 
+
+![Readmore](media/readmore.png){: width="25"} [First time launch](../Installation-Guide/windows.md#perform-initial-sign-in) 
+
+Although such a certificate implements full encryption, the visitors of your website will see a browser warning saying the certificate should not be trusted.
+
+When you first launch the Platform with HTTPS enabled at [https://localhost:5001](https://localhost:5001/), you may also get this warning:
+
+![Your Connection Is Not Private screen](media/01-your-connection-is-not-private-screen.png){: style="display: block; margin: 0 auto;" }
+
+This is because it is a locally generated, untrusted SSL certificate.
+
+![Locally generated certificate](media/02-locally-generated-cert.png){: style="display: block; margin: 0 auto;" }
+
+If this warning appears:
+
+1. Run `dotnet dev-certs https --trust`
+
+1. Click **Yes** on a local host certificate installation popup:
+
+    ![Trust certificate security warning](media/03-trust-cert-security-warning.png){: style="display: block; margin: 0 auto;" }
+
+1. Close your browser and open it again at [https://localhost:5001](https://localhost:5001/). The trusted **Secure** badge appears in your browser (a lock icon):
+    <br>
+    <br>
+    ![Secure connection badge](media/04-secure-badge-in-browser.png){: style="display: block; margin: 0 auto;" }
+    <br>
+    <br>
+
+![Readmore](media/readmore.png){: width="25"} [Microsoft .NET guide on self-signed certificates](https://docs.microsoft.com/en-us/dotnet/core/additional-tools/self-signed-certificates-guide)
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../installation-guide/start-local">← Local install with start-local</a>
+    <a href="../02-configuring-email-notifications">Configuring email notifications →</a>
+</div>

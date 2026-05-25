@@ -1,0 +1,36 @@
+# Overview
+
+The **Elasticsearch** module serves as a search engine for the Search module. It leverages the Elasticsearch and OpenSearch engines to store indexed documents.
+
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-elastic-search/)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-elastic-search/releases)
+
+The module supports the following Elasticsearch deployment options:
+
+* Standalone [Elasticsearch.](https://www.elastic.co/products/elasticsearch)
+* [Elastic Cloud.](https://cloud.elastic.co/)
+* [OpenSearch.](https://opensearch.org/)
+* [Amazon OpenSearch Service.](https://aws.amazon.com/opensearch-service/)
+
+!!! note
+    **OpenSearch** and **Amazon OpenSearch Service** are also supported by the dedicated [OpenSearch module](../opensearch/overview.md), which uses the native OpenSearch client for full compatibility with OpenSearch-specific features.
+
+## Key features
+
+The diagram below illustrates the functionality of the Elasticsearch module:
+
+![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
+
+![Readmore](media/readmore.png){: width="25"} [Blue-green indexing](../search/managing-search.md#blue-green-indexing)
+
+
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../elastic-app-search/overview">← Elastic App Search module overview</a>
+    <a href="../settings">Settings →</a>
+</div>

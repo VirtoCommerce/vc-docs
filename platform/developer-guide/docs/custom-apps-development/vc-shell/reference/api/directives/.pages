@@ -1,0 +1,6 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Directives
+nav:
+  - v-autofocus: v-autofocus.md
+  - v-loading: v-loading.md
