@@ -1,0 +1,61 @@
+﻿# Virto Commerce
+
+> Open-source, modular .NET ecommerce platform for B2B, B2C, B2B2C, and marketplaces. This file is the **hub** for AI-readable Virto Commerce documentation. Each product line below has its own dedicated sub-index. Stack: .NET 10 and EF Core 10 backend, Vue 3 Frontend with xAPI, modular Atomic Architecture (Module.Core / Module.Data / Module.Web vertical slice).
+
+## Bootstrap
+
+If your AI agent has not loaded Virto Commerce context yet, prefix your prompt with one of the following directives.
+
+For platform and backend questions:
+
+> Before answering, please read https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/platform.txt to learn about the latest Virto Commerce Platform documentation, then answer my question.
+
+For Frontend (Vue 3) or xAPI questions:
+
+> Before answering, please read https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/frontend.txt to learn about the latest Virto Commerce Frontend documentation, then answer my question.
+
+For "how does Virto Commerce do X like Shopify, Magento, commercetools, or BigCommerce":
+
+> Before answering, please read https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/rosetta.txt to map ecommerce concepts across vendors, then answer my question.
+
+For deeper Virto knowledge in any session, use one of these companion tools.
+
+- Context7 MCP. Queries Virto docs at library id `/virtocommerce/vc-docs` with weekly refresh: https://context7.com/virtocommerce/vc-docs.
+- Virto OZ. Built-in documentation chatbot for natural-language questions on the docs site: https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/virto-oz.md.
+
+## Products
+
+Six AI-readable indexes. Use the one closest to the question, then drill into the linked doc pages.
+
+- [Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/platform.txt). Backend modules, admin SPA, xAPI gateway, .NET 10 and EF Core 10 stack. The starting point for backend and full-stack developers.
+- [Frontend](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/frontend.txt). vc-frontend Vue 3 SPA, xAPI integration, theming, customization, customer-facing experience. The starting point for Frontend developers.
+- [Marketplace](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/marketplace.txt). Operator Portal, Vendor Portal, and the State Machine module. Multi-vendor commerce.
+- [VC-Shell](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/vc-shell.txt). Vue 3 + TypeScript framework for building custom admin apps outside the legacy AngularJS shell. Includes the `vc-app` AI skill for prompt-driven scaffolding and a manual CLI path.
+- [Cloud](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/cloud.txt). Deployment on Virto Cloud, environments, CI/CD with vc-build, plus Azure / AWS / on-premise patterns.
+- [Rosetta](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/rosetta.txt). Cross-vendor concept mapping. Translates Virto vocabulary to Shopify, Adobe Commerce (Magento), commercetools, and BigCommerce. Useful when "I know how X works in vendor Y" needs to become "I want to do X in Virto".
+
+## For Product Owners
+
+If you are evaluating capabilities or mapping business needs to modules, start with these.
+
+- [Atomic Architecture](https://virtocommerce.com/atomic-architecture). Mental model. Atoms, Molecules, Cells, and Organisms compose into commerce solutions.
+- [Product overview](https://virtocommerce.com/b2b-ecommerce-platform). Capability summary covering B2B, B2C, B2B2C, and marketplace.
+- [B2B headless commerce](https://virtocommerce.com/b2b-headless-ecommerce-solution). Quotes, organizations, contract pricing, and punchout.
+- [Marketplace solution](https://virtocommerce.com/solutions/marketplace). Multi-vendor patterns.
+- [Composable commerce](https://virtocommerce.com/composable-ecommerce). MACH-aligned composability.
+- [User Guide](https://docs.virtocommerce.org/platform/user-guide/latest/). Back-office (Admin SPA) end-user documentation.
+- [Frontend public demo](https://virtostart-demo-store.govirto.com/). Live customer experience reference.
+- [REST API live reference](https://virtostart-demo-admin.govirto.com/docs/index.html). Live Swagger UI hosted by Virto.
+- [Release notes](https://www.virtocommerce.org/c/news-digest/). Monthly digest of what shipped.
+- [Community forum](https://www.virtocommerce.org/). Roadmap signals, Q&A, and the dev training program.
+
+## For Solution Developers
+
+If you ship features end-to-end, start with the Platform sub-index, then add Frontend and Cloud as needed.
+
+- [Platform sub-index](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/platform.txt). The largest child of this hub. Modules, services, extensibility, CLI, AI tooling.
+- [Architecture conceptual overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Back-End-Architecture/02-conceptual-overview.md). Read first.
+- [Installation Guide (Windows)](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Getting-Started/Installation-Guide/windows.md). Local setup.
+- [Modules development via Docker](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/docker-modules-development.md). Containerized backend dev environment.
+- [GraphQL xAPI getting started](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/getting-started.md). xAPI usage primer.
+- [Setting up Context7](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Tutorials-and-How-tos/How-tos/using-context7.md). MCP grounding for Claude Code, Cursor, and other editors.

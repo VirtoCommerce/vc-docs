@@ -1,0 +1,134 @@
+﻿# Virto Commerce Rosetta
+
+> Cross-vendor concept mapping sub-index of the Virto Commerce AI documentation hub. Translates Virto Commerce vocabulary to Shopify, Adobe Commerce (Magento), commercetools, and BigCommerce. Use this when an AI agent needs to answer "I know how X works in vendor Y, how do I do X in Virto?". Mappings are approximate; near-matches are noted, and important nuances are called out under "When the analogy breaks". For Platform/backend, Frontend, Marketplace, VC-Shell, or Cloud, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+
+вљ  This file uses *approximate* mappings to enable cross-vendor reasoning. A "≈" in a table means "closest analog", not "exact equivalent". Always verify implementation specifics in the linked Virto docs before generating code or schema.
+
+## How to use this file
+
+When a developer asks "how do I do X in Virto, given I know it as Y in vendor Z":
+1. Look up Y in the table for vendor Z.
+2. Read the Virto column for the closest concept.
+3. Follow the linked doc page in the [Platform sub-index](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/platform.txt) for implementation details.
+4. Check "When the analogy breaks" for known gotchas.
+
+## Catalog model
+
+| Virto | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
+|---|---|---|---|---|
+| Catalog (Physical or Virtual) | Shop (single) + Markets | Catalog | Project + Stores | Channel + Storefront |
+| Category | Collection (manual/smart) | Category | Category | Category |
+| Product | Product | Product (simple/configurable/grouped/bundle/virtual) | Product (with Product Type) | Product |
+| Variation / SKU | Variant | Configurable child product | Variant | Variant / SKU |
+| Property (static) | ≈ Product field | Attribute | Attribute (typed) | Custom Field |
+| Dynamic Property | ≈ Metafield | Custom Attribute (EAV) | Custom Type / Custom Field | Metafield |
+| Master Catalog (Marketplace) | n/a | Shared Catalog (B2B) | Master Data | n/a |
+
+→ Virto: [Catalog overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/catalog/overview.md) В· [Dynamic Properties](https://docs.virtocommerce.org/platform/developer-guide/latest/Fundamentals/Dynamic-Properties/overview/) В· [Marketplace master catalog](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/master-catalog.md).
+
+## Pricing
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| PriceList | Market price list / B2B Catalog price | Price (per website/store/customer group) | Embedded or Standalone Price | Price List |
+| PriceList Assignment (rules) | Market or B2B Catalog assignment | Customer Group + Website binding | Channel / Customer Group selectors on Price | Price List Assignment |
+| Tier Price | Quantity Breaks (B2B) | Tier Price | Price Tiers | Bulk Pricing |
+| Promotion (cart/catalog rule) | Discount (Function) | Cart/Catalog Price Rule | Cart / Product Discount | Promotion |
+| Contract Price (B2B) | B2B Catalog price | Negotiable Quote pricing | Standalone Price per Business Unit | Customer-Group Price List |
+
+→ Virto: [Pricing overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/pricing/overview.md) В· [Price list assignment](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/pricing/adding-new-assignment.md) В· [Promotions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/marketing/managing-promotions.md).
+
+## Cart, checkout, and orders
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| Cart | Cart / Checkout | Quote (cart-stage) | Cart | Cart |
+| Order | Order | Order | Order | Order |
+| Payment document | Transaction | Payment | Payment | Transaction |
+| Shipment document | Fulfillment | Shipment | Delivery / Parcel | Shipment |
+| Quote (B2B) | Draft Order (≈) / B2B Quote | Negotiable Quote | Quote | Quote (B2B Edition) |
+
+→ Virto: [Order management overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/order-management/overview.md) В· [Cart GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Cart/overview.md) В· [Quote GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Quote/overview.md).
+
+## Customers and B2B organizations
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| Contact | Customer | Customer | Customer | Customer |
+| Organization | Company (B2B) | Company (B2B) | Business Unit | Company (B2B Edition) |
+| Member (org user) | Company contact | Company user | Associate | Company user |
+| Role / Permission | Permission set | ACL Role | Permissions on Business Unit | Role |
+| Contract (B2B) | B2B Catalog assignment | Shared Catalog assignment | Standalone Price + Business Unit | Customer Group + Price List |
+
+→ Virto: [Roles and permissions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/security/roles-and-permissions.md) В· [Profile GraphQL reference](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/Profile/overview.md).
+
+## Content and storefront
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| Frontend (vc-frontend, Vue 3) | Online Store theme (Liquid) or Hydrogen (React) | Luma theme (PHTML) or PWA Studio (React) | bring-your-own (always headless) | Stencil theme or headless |
+| Theme | Theme | Theme | n/a | Theme |
+| Content (pages, blogs) | Pages, Blogs, Sections | CMS Pages, Blocks, Page Builder | bring-your-own CMS | Pages, Page Builder |
+| Page Builder integration | Sections / Online Store 2.0 | Page Builder (built-in) | external (Builder.io, Storyblok) | Page Builder (built-in) |
+| Sitemap | Auto | Auto | bring-your-own | Auto |
+
+→ Virto: [Frontend sub-index](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/frontend.txt) В· [Content module](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/user-guide/docs/content/managing-themes.md) В· [Builder.io integration](https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/).
+
+## Extensibility model
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| Module (Module.Core/Data/Web) | App | Module (component) | n/a (API-only) | App |
+| Extension Framework / Override | App extensions | Plugin (interceptor) / Observer | API Extension / Subscription | Theme/script injection |
+| Domain Event | Webhook | Observer / Event | Subscription / Message | Webhook |
+| Dynamic Property | Metafield | EAV custom attribute | Custom Type / Custom Field | Metafield |
+| xAPI extension | Storefront API custom field | GraphQL schema extension | API Extension | Storefront API custom field |
+| Custom payment method | Payment app | Payment Method module | n/a (custom integration) | Payment provider app |
+| Custom shipping method | Shipping app / Carrier service | Shipping Method module | n/a (custom integration) | Shipping provider app |
+
+→ Virto: [Extensibility overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Extensibility/overview.md) В· [Domain events](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Event-Driven-Development/using-domain-events.md) В· [Register a payment method](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/Fundamentals/Payments/new-payment-method-registration.md) В· [xAPI extensions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/GraphQL-Storefront-API-Reference-xAPI/x-api-extensions.md).
+
+## Marketplace (multi-vendor)
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| Marketplace solution | n/a (3rd-party app) | Mirakl / Marketplacer (3rd-party) | Composable patterns (custom) | Marketplace by Mirakl |
+| Operator Portal | n/a | n/a | n/a | n/a |
+| Vendor Portal | n/a | n/a | n/a | n/a |
+| State Machine module | n/a | n/a | n/a | n/a |
+| Master catalog | n/a | Shared Catalog (B2B, repurposed) | Project-level | n/a |
+
+→ Virto: [Marketplace sub-index](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/marketplace.txt). Note: Virto Marketplace is built-in; competitor mappings here are typically third-party add-ons or custom builds.
+
+## Custom admin apps
+
+| Virto | Shopify | Adobe Commerce | commercetools | BigCommerce |
+|---|---|---|---|---|
+| VC-Shell custom app | App Bridge embedded admin app | Adobe App Builder | Merchant Center custom apps | App with Big Design |
+| Backoffice extension (admin SPA panel) | App Bridge action / Admin block | Adminhtml UI Component | Merchant Center extension | Admin panel app |
+
+→ Virto: [VC-Shell sub-index](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/vc-shell.txt).
+
+## When the analogy breaks
+
+Use this section when a one-line mapping isn't enough.
+
+- **Virto is open-source and self-hostable; Shopify, commercetools, and BigCommerce are SaaS-only.** This affects deployment, customization depth, and how "extensions" are conceived. Shopify Apps run *outside* Shopify; Virto modules run *inside* the platform.
+- **Virto's Module is a vertical slice (Module.Core / Module.Data / Module.Web).** Magento's Module concept is similar, but Shopify Apps and commercetools API Extensions are external services, not in-process code. Pattern translation matters.
+- **Virto Dynamic Properties ≈ Shopify Metafields**, but Dynamic Properties are typed and queryable through standard query infrastructure; Shopify Metafields require explicit definition and have query restrictions.
+- **B2B is first-class in Virto** (Quotes, Organizations, Contracts, contract pricing) without an enterprise tier. In Shopify it requires Shopify Plus + B2B Catalogs; in Adobe Commerce it requires the B2B feature set; in commercetools it uses Business Units (newer feature).
+- **Headless is the default in Virto.** All admin and backend logic is exposed via REST and GraphQL xAPI; vc-frontend is one possible Frontend, not "the" Frontend. Shopify and BigCommerce default to bundled themes and only optionally go headless.
+- **Marketplace is a first-party Virto product**, with Operator Portal, Vendor Portal, and State Machine module shipped together. Competitor mappings in the Marketplace table are typically third-party (e.g., Mirakl) or DIY.
+- **No EAV.** Virto uses typed entities + Dynamic Properties; if you're translating from Magento's EAV model, expect simpler queries, less flexibility for arbitrary types, and predictable schema.
+- **No Liquid template language.** Virto's Frontend is Vue 3 components. Translating Shopify Liquid sections requires rewriting in Vue, not just file-format conversion.
+
+## Vocabulary cheat sheet
+
+- "Frontend" in Virto = customer-facing storefront. Use **Frontend**, not "storefront" (per the [vc-docs style guide](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/main/CLAUDE.md)).
+- "Backoffice UI" = legacy AngularJS admin SPA (today's main admin). Sometimes called "admin SPA" or "Platform Manager".
+- "xAPI" = the GraphQL Frontend-optimized API gateway. Always written **xAPI**, never "XAPI".
+- "PBC" = Packaged Business Capability - a curated bundle of modules with a `package.json` manifest.
+- "Module" = vertical-slice .NET module (Module.Core + Module.Data + Module.Web). Not equivalent to "Shopify App" or "commercetools API Extension".
+- "Atomic Architecture" = Virto's MACH-aligned compositional model (Atoms → Molecules → Cells → Organisms).
+
+→ More terms: [Glossary](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/glossary.md) В· [vc-docs style guide](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/main/CLAUDE.md).

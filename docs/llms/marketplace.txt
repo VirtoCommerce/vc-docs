@@ -1,0 +1,47 @@
+﻿# Virto Commerce Marketplace
+
+> Marketplace sub-index of the Virto Commerce AI documentation hub. Covers multi-vendor marketplace functionality split across two portals: the Operator Portal (marketplace owner) and the Vendor Portal (sellers). Built on top of the Platform; vendors manage their own catalogs, offers, orders, and quotes; operators curate the master catalog, manage vendor onboarding, set commission fees, and orchestrate cross-vendor workflows. Includes the State Machine module for codifying business processes. For Platform/backend, Frontend, VC-Shell, Cloud, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+
+## Start here
+
+- [Marketplace user guide root](https://docs.virtocommerce.org/marketplace/user-guide/latest/). Top-level marketplace documentation.
+- [Operator Portal overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/overview.md). Marketplace owner capabilities.
+- [Vendor Portal overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/overview.md). Vendor self-service capabilities.
+
+## Operator Portal
+
+- [Master catalog](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/master-catalog.md). Operator-owned product taxonomy that vendors map their listings into.
+- [Marketplace products](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/marketplace-products.md). Curating products surfaced on the storefront.
+- [Vendors management](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Vendors-management/). Vendor lifecycle and access.
+- [Registration requests](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/registration-requests.md). Approving new vendor signups.
+- [Commission fees setup](https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Commission-fees-setup/). Configuring marketplace commission structure.
+- [Operator orders](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/operator-orders.md). Cross-vendor order visibility for the operator.
+- [Offers](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/offers.md). Operator-side view of vendor offers.
+- [Quotes](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/quotes.md). Operator-side view of B2B quotes.
+- [State machines](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/state-machines.md). Workflow definitions used by marketplace processes.
+- [Communication](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/communication.md). Operator-vendor messaging.
+- [AI helper](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Operator-portal/ai-helper.md). Built-in AI assistance for operator tasks.
+
+## Vendor Portal
+
+- [My store](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/my-store.md). Vendor storefront-presence configuration.
+- [Products management](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/products-management.md). Vendor product CRUD.
+- [Marketplace products](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/marketplace-products.md). Linking vendor products to operator master catalog.
+- [Import](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/import.md). Bulk product import for vendors.
+- [Offers](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/offers.md). Vendor offers, prices, and availability.
+- [Orders](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/orders.md). Vendor order management.
+- [Quotes](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/quotes.md). B2B quote handling.
+- [Rating and reviews](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/rating-and-reviews.md). Vendor-facing ratings.
+- [Communication](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/communication.md). Vendor-operator messaging.
+- [AI assistant](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/user-guide/docs/Vendor-portal/ai-assistant.md). Built-in AI assistance for vendor tasks.
+
+## State Machine module
+
+The State Machine module powers marketplace workflows by codifying multi-step business processes (vendor onboarding, order routing, dispute handling, etc.) as configurable state machines.
+
+- [State machine overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/developer-guide/docs/state-machine-module/overview.md). Module purpose and concepts.
+- [Data structure](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/developer-guide/docs/state-machine-module/data-structure.md). State machine data model.
+- [Entity types](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/developer-guide/docs/state-machine-module/entity-types.md). Entities that can be driven by state machines.
+- [Transition conditions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/developer-guide/docs/state-machine-module/transition-conditions.md). Conditional logic gating state transitions.
+- [Operator portal actions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/developer-guide/docs/state-machine-module/operator-portal-actions.md). Operator-side action triggers.
+- [Vendor portal actions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/marketplace/developer-guide/docs/state-machine-module/vendor-portal-actions.md). Vendor-side action triggers.
