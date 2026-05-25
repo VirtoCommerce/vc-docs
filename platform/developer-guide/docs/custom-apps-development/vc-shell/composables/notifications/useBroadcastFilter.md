@@ -42,10 +42,10 @@ interface UseBroadcastFilterReturn {
 }
 ```
 
-| Method                  | Type                                       | Description                                                                                                  |
-| ----------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `setBroadcastFilter`    | `((msg: PushNotification) => boolean) => void` | Install the filter. Replaces any previous filter — there is at most one active at a time.                |
-| `clearBroadcastFilter`  | `() => void`                               | Remove the filter. All subsequent broadcasts are accepted.                                                   |
+| Method                 | Type                                           | Description                                                                               |
+| ---------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `setBroadcastFilter`   | `((msg: PushNotification) => boolean) => void` | Install the filter. Replaces any previous filter — there is at most one active at a time. |
+| `clearBroadcastFilter` | `() => void`                                   | Remove the filter. All subsequent broadcasts are accepted.                                |
 
 The filter returns `true` to **accept** a message, `false` to **drop** it.
 

@@ -32,7 +32,10 @@ const notification = computed(() => notificationRef.value);
 </script>
 
 <template>
-  <NotificationTemplate :title="notification.title ?? ''" :notification="notification">
+  <NotificationTemplate
+    :title="notification.title ?? ''"
+    :notification="notification"
+  >
     <p>Order {{ notification.orderId }} — ${{ notification.total }}</p>
   </NotificationTemplate>
 </template>
@@ -71,11 +74,7 @@ const ctx = useNotificationContext<IProductPush>();
 const notification = computed(() => ctx.value);
 const { t } = useI18n({ useScope: "global" });
 
-const title = computed(() =>
-  notification.value.productName
-    ? `${t("PRODUCTS.PUSH.PRODUCT")} "${notification.value.productName}" ${t("PRODUCTS.PUSH.UPDATE")}`
-    : (notification.value.title ?? ""),
-);
+const title = computed(() => (notification.value.productName ? `${t("PRODUCTS.PUSH.PRODUCT")} "${notification.value.productName}" ${t("PRODUCTS.PUSH.UPDATE")}` : (notification.value.title ?? "")));
 </script>
 ```
 
@@ -97,7 +96,11 @@ function onClick() {
 </script>
 
 <template>
-  <NotificationTemplate :title="notification.title ?? ''" :notification="notification" @click="onClick">
+  <NotificationTemplate
+    :title="notification.title ?? ''"
+    :notification="notification"
+    @click="onClick"
+  >
     <p>{{ notification.description }}</p>
   </NotificationTemplate>
 </template>
@@ -110,10 +113,14 @@ function onClick() {
 ```ts
 const notificationStyle = computed(() => {
   switch (notification.value.newStatus) {
-    case "Approved":         return { color: "var(--success-400)", icon: "lucide-check-circle" };
-    case "RequestChanges":   return { color: "var(--danger-400)",  icon: "lucide-alert-circle" };
-    case "WaitForApproval":  return { color: "var(--warning-600)", icon: "lucide-clock" };
-    default:                  return { color: "var(--primary-400)", icon: "lucide-bell" };
+    case "Approved":
+      return { color: "var(--success-400)", icon: "lucide-check-circle" };
+    case "RequestChanges":
+      return { color: "var(--danger-400)", icon: "lucide-alert-circle" };
+    case "WaitForApproval":
+      return { color: "var(--warning-600)", icon: "lucide-clock" };
+    default:
+      return { color: "var(--primary-400)", icon: "lucide-bell" };
   }
 });
 ```

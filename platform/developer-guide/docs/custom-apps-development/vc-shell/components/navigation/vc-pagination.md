@@ -314,7 +314,7 @@ currentPage.value = Math.min(currentPage.value, totalPages.value);
 
 ## Related Components
 
-- [VcDataTable](../../organisms/vc-table) -- Data table that commonly pairs with pagination for large datasets
+- [VcDataTable](../data-display/vc-data-table.md) -- Data table that commonly pairs with pagination for large datasets
 - [VcSelect](../form/vc-select.md) -- Can be used alongside pagination for a "rows per page" selector
 
 

@@ -18,6 +18,7 @@ If you are building anything in vc-shell -- a new page, a CRUD flow, a dashboard
 - Every vc-shell feature starts here -- `defineAppModule()` is the entry point for all module development
 - When NOT to use: for shared utilities or composables that have no UI -- export them as plain TypeScript modules instead
 
+---
 
 ## Table of Contents
 
@@ -45,6 +46,7 @@ If you are building anything in vc-shell -- a new page, a CRUD flow, a dashboard
 - [API Reference](#api-reference)
 - [Related](#related)
 
+---
 
 ## Quick Start
 
@@ -104,6 +106,7 @@ The module is installed by the host application (or loaded remotely via Module F
 3. Adds "My Feature" to the sidebar menu
 4. Merges English locale strings into vue-i18n
 
+---
 
 ## Concepts
 
@@ -187,6 +190,7 @@ export default createAppModule(pages, locales);
 export default defineAppModule({ blades: pages, locales });
 ```
 
+---
 
 ## Features
 
@@ -505,6 +509,7 @@ See the [Module Federation guide](../guides/module-federation/index.md) for the 
 
 The host shares singleton instances of core dependencies (Vue, Vue Router, vue-i18n, @vc-shell/framework) so that remote modules use the same runtime. This is critical for reactivity, routing, and DI to work across module boundaries.
 
+---
 
 ## Recipes
 
@@ -641,7 +646,7 @@ export default defineAppModule({});
 
 ### Module Extending Another Module
 
-A module can extend another module's UI by using extension points (see the [Extension Points Plugin](../extension-points/extension-points.docs.md)):
+A module can extend another module's UI by using extension points (see the [Extension Points Plugin](./extension-points.md)):
 
 ```typescript
 // modules/marketplace-commissions/index.ts
@@ -685,6 +690,7 @@ import { ExtensionPoint } from "@vc-shell/framework";
 </script>
 ```
 
+---
 
 ## Common Mistakes
 
@@ -769,6 +775,7 @@ export default defineAppModule({
 
 Always namespace locale keys under your module name: `ORDERS.ACTIONS.SAVE`, `PRODUCTS.ACTIONS.SAVE`.
 
+---
 
 ## API Reference
 
@@ -796,6 +803,7 @@ interface DefineAppModuleOptions {
 
 **Returns:** `{ install(app: App): void }` -- a standard Vue plugin.
 
+---
 
 ### `createAppModule(pages, locales?, notificationTemplates?, components?): Plugin`
 
@@ -810,6 +818,7 @@ interface DefineAppModuleOptions {
 | 3   | `notificationTemplates` | `Record<string, Component>`                | Legacy notification templates (optional)          |
 | 4   | `components`            | `Record<string, Component>`                | Global components (optional, ignored in new impl) |
 
+---
 
 ### `registerDashboardWidget(widget): void`
 
@@ -827,6 +836,7 @@ interface DashboardWidget {
 }
 ```
 
+---
 
 ### Blade Static Properties (defineOptions)
 
@@ -848,6 +858,7 @@ interface DashboardWidget {
 | `priority`    | `number`   | Sort order (lower = higher in menu)                             |
 | `permissions` | `string[]` | Permission override (optional, falls back to blade permissions) |
 
+---
 
 ### `NotificationTypeConfig`
 
@@ -876,6 +887,7 @@ interface ToastConfig {
 }
 ```
 
+---
 
 ## Related
 
