@@ -1,26 +1,27 @@
 # Deployment
 
-Build, configure, and deploy a VC-Shell app to production, whether as a standalone bundle or a Module Federation host that loads dynamic remotes from the Platform.
+A VC-Shell app ships **with** a Virto Commerce Platform module, not next to it. The frontend bundle lives inside the module's `App/` folder; the .NET module's publish step copies the built assets into the Platform's `Modules/{moduleId}/App/dist/` directory, and the Platform sources them from there. There is no separate frontend host to maintain — wherever the Platform runs, the app runs.
+
+This guide covers the **host app** delivery — the SPA users navigate to. Adding plugin extensions that attach to that host at runtime is a separate topic: see [Module Federation](module-federation/index.md).
 
 ## Prerequisites
 
 Before deploying, make sure you have:
 
-- A production-ready build pipeline that runs Node.js 20 and Yarn 4.
-- A Virto Commerce Platform instance with the OAuth client configured for the production origin.
-- Static hosting (CDN, S3 bucket, NGINX, container) for the bundled assets.
+- A production-ready build pipeline that runs Node.js 22 or higher and Yarn 4.
+- A `.csproj` for the .NET module that includes the App folder in its publish output.
+- A Virto Commerce Platform instance the module deploys into.
 
 ## Production build
 
-The scaffold ships a `build` script that runs Vite in production mode and emits the application bundle plus TypeScript declaration files:
+The scaffold ships a `build` script inside the `App/` folder that runs Vite in production mode and emits the application bundle plus TypeScript declaration files:
 
 ```bash
+cd src/MyModule.Web/App
 yarn build
 ```
 
-Internally, this expands to `yarn build:app && yarn build:types`. The first step runs `cross-env APP_ENV=production vite build` and writes hashed, minified assets to **dist/**. The second step runs `vue-tsc --declaration --emitDeclarationOnly --outDir dist/types` and emits **.d.ts** files for downstream consumers.
-
-The output of **dist/** is everything you need to deploy. Serve it from any static host that can return **index.html** for unknown paths so the client-side router handles deep links.
+Internally, this expands to `yarn build:app && yarn build:types`. The first step runs `cross-env APP_ENV=production vite build` and writes hashed, minified assets to **dist/**. The second step runs `vue-tsc --declaration --emitDeclarationOnly --outDir dist/types** and emits **.d.ts** files for downstream consumers.
 
 To smoke-test the production bundle locally before shipping, run:
 
@@ -28,96 +29,119 @@ To smoke-test the production bundle locally before shipping, run:
 yarn preview
 ```
 
-This starts a static server that mirrors the eventual deployment and helps catch base-path or asset issues that only surface in production builds.
+This starts a static server that mirrors how the Platform serves the assets and helps catch base-path or asset issues that only surface in production builds.
 
 ## Environments and configuration
 
-Vite loads environment variables from **.env** files at build time. The scaffold ships **.env** with the public defaults and **.env.local** with a placeholder for the Platform URL, which stays out of version control. For per-mode overrides, add **.env.production**, **.env.staging**, or **.env.&lt;mode&gt;** alongside them.
+Vite loads environment variables from **.env** files at build time. The scaffold ships **.env** with the public defaults and **.env.local** with a placeholder for the Platform URL, which stays out of version control:
 
-```bash title=".env.production"
-APP_PLATFORM_URL=https://platform.example.com
+```bash title=".env"
 APP_BASE_PATH=/apps/my-app/
 APP_I18N_LOCALE=en
 APP_I18N_FALLBACK_LOCALE=en
 ```
 
-Variables must be prefixed with `APP_` to be exposed to the client bundle. The framework configures Vite with `envPrefix: "APP_"`, so anything else is dropped at build time. `APP_BASE_PATH` and `APP_PLATFORM_URL` are read by the framework's Vite preset and inlined into the bundle as `import.meta.env.APP_BASE_PATH` and `import.meta.env.APP_PLATFORM_URL`.
-
-Because the values are baked into the bundle at build time, do not store secrets in **.env** files. Anything in the client bundle is visible to every user. Use the Platform's OAuth flow for credentialed access and inject runtime URLs through the build pipeline.
-
-## Standalone deployment
-
-The default deployment is a standalone SPA. After `yarn build`, copy **dist/** to your static host and configure a fallback rewrite so unknown paths return **index.html**.
-
-Common targets:
-
-- NGINX or Apache with a `try_files` rewrite to **index.html**.
-- Amazon S3 with CloudFront, using the SPA error-document trick to return **index.html** with a 200 status.
-- Azure Static Web Apps with the `navigationFallback` rule.
-- GitHub Pages, with `APP_BASE_PATH` set to the repo subpath.
-- A container image based on `nginx:alpine` that copies **dist/** into **/usr/share/nginx/html/**.
-
-When deploying under a subpath, set `APP_BASE_PATH` to that subpath, including the trailing slash (`/apps/my-app/`). Vite uses this value as the `base` option, and the router prefixes every navigation path with it.
-
-## Module Federation deployment
-
-When the app composes remote modules at runtime, two extra concerns appear: the host must reach the Platform registry, and remote bundles must be served with permissive CORS.
-
-### Host app
-
-The host calls `registerRemoteModules()` during bootstrap, which issues a `POST` request to **/api/frontend-modules** on the Platform. The endpoint returns the registry of compatible remote bundles for the current app. Because the request uses `credentials: "same-origin"`, deploy the host on the same origin as the Platform whenever possible. If you cannot, set up a reverse proxy that forwards **/api/** to the Platform, preserving cookies. Direct cross-origin calls require the Platform's CORS policy and OAuth client to list the host origin explicitly.
-
-### Remote module
-
-A remote module is built with `dynamicModuleConfiguration()` from `@vc-shell/mf-module`. The build emits a Module Federation bundle to **dist/mf/** with `remoteEntry.js` as the entry file:
-
-```text
-my-remote-module/dist/mf/
-├─ remoteEntry.js     entry the host loads
-├─ assets/
-│  ├─ index.css
-│  └─ ... (chunks)
+```bash title=".env.local"
+APP_PLATFORM_URL=https://your-platform-host
 ```
 
-Upload **dist/mf/** to a static host and register the resulting `remoteEntry.js` URL in the Platform's frontend-modules table. The host filters the registry by `compatibleWith.dependencies["@vc-shell/framework"]`, so the remote's manifest must declare the framework version range it was built against. Mismatched ranges cause the host to skip the remote with a console warning rather than break the app.
+For per-mode overrides, add **.env.production**, **.env.staging**, or **.env.&lt;mode&gt;** alongside them.
+
+Variables must be prefixed with `APP_` to be exposed to the client bundle. The framework configures Vite with `envPrefix: "APP_"`, so anything else is dropped at build time. `APP_BASE_PATH` matches the URL path the Platform serves the app from (typically `/apps/{appId}/`); `APP_PLATFORM_URL` is the Platform origin the bundle issues API calls against.
+
+Because the values are baked into the bundle at build time, do not store secrets in **.env** files. Anything in the client bundle is visible to every user. Use the Platform's OAuth flow for credentialed access; pass runtime URLs through the build pipeline.
+
+## Packaging the App folder into the .NET module
+
+The module's `.csproj` copies `App/dist/**` into the publish output so the Platform finds the bundle alongside the assembly. The Import module's project file is a working reference:
+
+```xml title="src/MyModule.Web/MyModule.Web.csproj"
+<ItemGroup>
+  <ImportApp Include="App\dist\**" />
+</ItemGroup>
+
+<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+  <Copy SourceFiles="@(ImportApp)" DestinationFiles="$(PublishDir)\..\%(Identity)" />
+</Target>
+
+<ItemGroup>
+  <Compile Remove="App\**" />
+  <Content Remove="App\**" />
+  <EmbeddedResource Remove="App\**" />
+  <None Remove="App\**" />
+</ItemGroup>
+```
+
+The two halves matter:
+
+- The `CopyCustomContentOnPublish` target runs after `dotnet publish` and lifts the built assets next to the module assembly.
+- The `Remove` items keep the `App/` source out of the .NET build — only the compiled `dist/**` ships.
+
+When the Platform loads the module, it sources the bundle from `Modules/{moduleId}/App/dist/` and serves it under `APP_BASE_PATH`.
+
+## Registering the app in the manifest
+
+A single `<apps>` entry tells the Platform's app-hub to surface the app in the application grid. The same declaration is what the Platform's manifest endpoint uses to know which `appId` exists — without an `<app>` element, the host endpoint returns 404 and no plugins ever attach:
+
+```xml title="module.manifest"
+<apps>
+  <app id="my-app">
+    <title>My App</title>
+    <iconUrl>/apps/my-app/img/icons/favicon-32x32.png</iconUrl>
+    <contentPath>App/dist</contentPath>
+    <permission>my-app:access</permission>
+    <supportEmbeddedMode>true</supportEmbeddedMode>
+  </app>
+</apps>
+```
+
+- `contentPath` points at `App/dist` relative to the module root.
+- `permission` gates the app behind a Platform permission. Users without it never see the app in the hub.
+- `supportEmbeddedMode` (optional) opts the app in to running inside the AngularJS back office iframe — see the [embedded mode](#embedded-mode) section.
+
+See [Register an App in the Module Manifest](../../how-to-register-new-app.md) for the full set of manifest options.
 
 ## Embedded mode
 
-When the app ships as a Platform module, it also runs inside the AngularJS back office through embedded mode. The build, env, and hosting story is identical; only the manifest changes.
+The same Vue bundle runs in two layouts. **Standalone** is the default — the app serves its own SPA at `APP_BASE_PATH`, with its own header, sidebar, and user dropdown. **Embedded** is opt-in: the Platform iframes the same app from a back-office menu entry, and the shell hides its outer chrome so the AngularJS host frame owns the navigation.
 
-![Readmore](platform/embedded-mode.md){: width="25"} Embedded mode setup.
+Add `<supportEmbeddedMode>true</supportEmbeddedMode>` inside the `<app>` element to opt in. There is no separate build, deploy target, or bundle — the framework detects the embedding context at runtime (via `EmbeddedMode=true` in the query string) and hides the standalone chrome. One artifact, two surfaces.
+
+For details on what changes inside the app (which composables expose the embedding flag, how to vary behavior) see the [embedded-mode concept](../concepts/embedded-mode.md) and the [embedded-mode guide](platform/embedded-mode.md).
 
 ## CI/CD
 
-A typical pipeline installs dependencies, runs the static checks, builds the bundle, and deploys the artifact. The scaffold ships `lint` and `type-check` as the verification commands; replace them with `check` if your project extends the umbrella script from the monorepo template.
+A typical pipeline builds the frontend, then publishes the .NET module that wraps it. The scaffold ships `lint` and `type-check` as the verification commands:
 
 ```yaml title=".github/workflows/deploy.yml"
-- run: yarn install --immutable
-- run: yarn lint
-- run: yarn type-check
-- run: yarn build
-- run: <deploy step>
+- run: cd src/MyModule.Web/App && yarn install --immutable
+- run: cd src/MyModule.Web/App && yarn lint
+- run: cd src/MyModule.Web/App && yarn type-check
+- run: cd src/MyModule.Web/App && yarn build
+- run: dotnet publish src/MyModule.Web/MyModule.Web.csproj -c Release
+- run: <upload .nupkg or copy publish output to the Platform>
 ```
 
-For deploys, copy **dist/** to the static host, invalidate the CDN cache for **index.html**, and keep the hashed assets cached for a long time. The hashed filenames make cache busting automatic on the next deploy.
+The frontend build must run **before** `dotnet publish`, because the publish target copies `App/dist/**` — an empty directory means an empty bundle in the published module.
 
 ## Common deployment mistakes
 
 !!! warning "Wrong APP_BASE_PATH"
-    The `APP_BASE_PATH` value used by the build must match the URL path where the app is served. A mismatch breaks asset URLs and HTML5 history routing. Verify the value in **.env.production** before running `yarn build`, and confirm the bundled **index.html** uses the expected paths.
+    `APP_BASE_PATH` must match the URL path the Platform serves the app from — usually `/apps/{appId}/`. A mismatch breaks asset URLs and HTML5 history routing. Verify the value in **.env.production** before running `yarn build`, and confirm the bundled **index.html** uses the expected paths.
 
-!!! warning "OAuth client missing the production origin"
-    The Platform's OAuth client lists allowed origins. A new production deploy on a fresh origin requires the OAuth client to be updated, or the sign-in handshake fails with a CORS or redirect error.
+!!! warning "Forgot to run yarn build before dotnet publish"
+    The `.csproj` copies `App/dist/**`. If you publish the .NET module without rebuilding the frontend first, the Platform deploys a stale or empty bundle. Wire the order explicitly in CI.
 
-!!! warning "Module Federation host on a different origin from remotes"
-    Remote bundles served from another origin need a CORS policy that allows the host. Configure the static host serving **remoteEntry.js** to send `Access-Control-Allow-Origin` for the host origin, otherwise the host fails to fetch the remote and skips the module.
+!!! warning "Missing permission"
+    The `<app>` element gates visibility behind `permission`. A new permission must exist in the Platform (registered via the module's `Module.cs` `ModuleConstants.Security.Permissions`) before users can be granted it. Without that, the app stays invisible no matter what the bundle does.
 
-!!! warning "Forgot to set NODE_ENV"
-    `yarn build` sets `APP_ENV=production` through the scaffold script, but custom CI scripts may bypass it. Without production mode, Vite skips tree shaking and minification, and the bundle ships unoptimized.
+!!! warning "Forgot to set APP_ENV"
+    `yarn build` sets `APP_ENV=production` through the scaffold script, but custom CI scripts may bypass it. Without production mode, Vite skips production-only optimizations and the bundle ships unoptimized.
 
-!!! warning "Missing SPA rewrite"
-    A static host that returns 404 for unknown paths breaks deep links and page reloads. Configure the host to return **index.html** for any path that does not match a built asset.
+!!! warning "Embedded mode flag missing"
+    `<supportEmbeddedMode>true</supportEmbeddedMode>` is the only switch that lets the AngularJS back office iframe the app cleanly. Without it the app still loads in the iframe, but its full chrome (header, sidebar, user dropdown) renders on top of the host shell.
 
-![Readmore](../introduction/architecture-overview.md){: width="25"} Module Federation in the architecture overview.
-![Readmore](modules-and-extensions/index.md){: width="25"} Distributing modules.
-![Readmore](platform/embedded-mode.md){: width="25"} Embedded mode.
+- [Register an App in the Module Manifest.](../../how-to-register-new-app.md)
+- [Module Federation — adding plugin remotes to a host.](module-federation/index.md)
+- [Embedded mode concept.](../concepts/embedded-mode.md)
+- [Embedded mode guide.](platform/embedded-mode.md)
