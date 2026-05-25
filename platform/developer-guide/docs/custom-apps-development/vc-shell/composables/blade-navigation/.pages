@@ -1,0 +1,9 @@
+# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
+# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
+title: Blade Navigation
+nav:
+  - Blade Navigation Composables: blade-nav-composables.md
+  - useBlade: useBlade.md
+  - useBladeContext: useBladeContext.md
+  - useBladeRegistry: useBladeRegistry.md
+  - useBladeWidgets: useBladeWidgets.md
