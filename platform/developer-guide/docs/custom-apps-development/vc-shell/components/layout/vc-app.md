@@ -44,7 +44,7 @@ import { VcApp } from "@vc-shell/framework";
 
 const isReady = ref(true);
 const logoUrl = "/logo.svg";
-const appTitle = "Operations Console";
+const appTitle = "Vendor Portal";
 const user = reactive({ name: "John", role: "Admin" });
 </script>
 ```
@@ -148,7 +148,7 @@ Modules registered via `useDynamicModules()` are loaded at runtime. Each module 
 
 The App Hub is a popover panel (desktop) or a swipeable tab (mobile) that combines two sections:
 
-- **Applications** — tile grid of registered apps (for example, Operations Console or Marketplace Admin). Clicking an app switches context without a full page reload. This section can be hidden with `disableAppHub` or customized via the `app-hub` slot. The list is searchable via a built-in search input inside the hub.
+- **Applications** — tile grid of registered apps (e.g., Vendor Portal, Marketplace Admin). Clicking an app switches context without a full page reload. This section can be hidden with `disableAppHub` or customized via the `app-hub` slot. The list is searchable via a built-in search input inside the hub.
 - **Widgets** — registered app bar widgets (notifications, background tasks, etc.). Clicking a widget expands its content inline (desktop) or navigates to its panel (mobile). Widgets are registered via `useAppBarWidget()` and can display badges for unread counts.
 
 On desktop, the App Hub opens from the sidebar header menu button (`AppHubPopover`). On mobile, it appears as a second tab ("Hub") in the slide-out navigation panel — users can swipe between Menu and Hub tabs.
