@@ -9,6 +9,7 @@ nav:
     - module-federation
     - platform
     - routing.md
+    - Integrate the AI Agent: ai-agent-integration.md
     - cookbook
     - Testing a Module: testing-a-module.md
     - Accessibility Checklist: accessibility-checklist.md
