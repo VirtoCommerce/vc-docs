@@ -173,7 +173,7 @@ Formats as currency. Reads the currency code from each row's `currency` field by
 ### Image
 
 ```vue
-<VcColumn id="thumbnail" field="imgSrc" title="Image" type="image" width=\"60px\" />
+<VcColumn id="thumbnail" field="imgSrc" title="Image" type="image" width="60px" />
 ```
 
 Renders a small thumbnail from the field's URL value.
@@ -371,7 +371,7 @@ For explicit control over checkbox column placement:
 
 ```vue
 <VcDataTable :items="products" v-model:selection="selected">
-  <VcColumn id="select" selection-mode="multiple" width=\"40px\" />
+  <VcColumn id="select" selection-mode="multiple" width="40px" />
   <VcColumn id="name" field="name" title="Name" />
 </VcDataTable>
 ```
@@ -505,7 +505,7 @@ A row enters edit mode when the user clicks the edit button. All editable cells 
   <VcColumn id="name" field="name" title="Name" editable />
   <VcColumn id="price" field="price" title="Price" type="money" editable />
   <VcColumn id="stock" field="stock" title="Stock" type="number" editable />
-  <VcColumn id="actions" :row-editor="true" title="" width=\"80px\" />
+  <VcColumn id="actions" :row-editor="true" title="" width="80px" />
 </VcDataTable>
 ```
 
@@ -605,7 +605,7 @@ VcDataTable uses a **weight-based engine** to compute exact pixel widths for eve
 
 | Declaration                     | Meaning                                                      |
 | ------------------------------- | ------------------------------------------------------------ |
-| `width="200"` or `width=\"200px\"` | Initial 200 px hint                                          |
+| `width="200"` or `width="200px"` | Initial 200 px hint                                          |
 | `width="20%"`                   | Initial hint based on 20% of available width                 |
 | `width` omitted                 | Auto — splits remaining space equally among all auto columns |
 
@@ -648,7 +648,7 @@ When a blade narrows (e.g., a second blade opens), only `alwaysVisible` columns 
 
 ```vue
 <VcDataTable :items="products" :show-all-columns="!isBladeNarrow">
-  <VcColumn id="image" field="imgSrc" type="image" width=\"60px\" :always-visible="true" />
+  <VcColumn id="image" field="imgSrc" type="image" width="60px" :always-visible="true" />
   <VcColumn id="name" field="name" title="Name" :always-visible="true" />
   <VcColumn id="price" field="price" title="Price" type="money" />
   <VcColumn id="stock" field="stock" title="Stock" type="number" />
@@ -673,7 +673,7 @@ Enable drag-and-drop row reordering with a drag handle column:
     <VcColumn
       id="drag"
       :row-reorder="true"
-      width=\"40px\"
+      width="40px"
     />
     <VcColumn
       id="name"
@@ -715,7 +715,7 @@ Show additional detail below a row when the user clicks the expand toggle:
     <VcColumn
       id="expand"
       :expander="true"
-      width=\"40px\"
+      width="40px"
     />
     <VcColumn
       id="orderNumber"
@@ -772,7 +772,7 @@ Use `isRowExpandable` to control which rows show the expand toggle. Rows that fa
     <VcColumn
       id="expand"
       :expander="true"
-      width=\"40px\"
+      width="40px"
     />
     <VcColumn
       id="orderNumber"
@@ -1155,7 +1155,7 @@ On mobile screens, VcDataTable automatically switches from a table to a card lay
 
 ```vue
 <VcDataTable :items="products">
-  <VcColumn id="image" field="imgSrc" type="image" mobile-role="image" width=\"60px\" />
+  <VcColumn id="image" field="imgSrc" type="image" mobile-role="image" width="60px" />
   <VcColumn id="name" field="name" title="Name" mobile-role="title" />
   <VcColumn id="price" field="price" title="Price" type="money" mobile-role="field" />
   <VcColumn id="stock" field="stock" title="Stock" type="number" mobile-role="field" />

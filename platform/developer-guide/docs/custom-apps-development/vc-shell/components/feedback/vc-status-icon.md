@@ -50,7 +50,7 @@ import { VcStatusIcon } from "@vc-shell/framework";
   <VcColumn
     id="isActive"
     header="Active"
-    width=\"80px\"
+    width="80px"
   >
     <template #default="{ row }">
       <VcStatusIcon :status="row.isActive" />
@@ -70,7 +70,7 @@ import { VcStatusIcon } from "@vc-shell/framework";
     <VcColumn
       id="emailVerified"
       header="Email"
-      width=\"70px\"
+      width="70px"
     >
       <template #default="{ row }">
         <VcStatusIcon :status="row.emailVerified" />
@@ -79,7 +79,7 @@ import { VcStatusIcon } from "@vc-shell/framework";
     <VcColumn
       id="isActive"
       header="Active"
-      width=\"70px\"
+      width="70px"
     >
       <template #default="{ row }">
         <VcStatusIcon :status="row.isActive" />
@@ -88,7 +88,7 @@ import { VcStatusIcon } from "@vc-shell/framework";
     <VcColumn
       id="hasAvatar"
       header="Avatar"
-      width=\"70px\"
+      width="70px"
     >
       <template #default="{ row }">
         <VcStatusIcon :status="!!row.avatarUrl" />

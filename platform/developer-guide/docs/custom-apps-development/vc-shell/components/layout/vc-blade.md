@@ -453,7 +453,7 @@ Four variants are available: `danger`, `warning`, `info`, `success`. System bann
 ## Blade Width Control
 
 ```vue
-<VcBlade width=\"350px\">          <!-- Pixels (number) -->
+<VcBlade width="350px">          <!-- Pixels (number) -->
 <VcBlade width="50%">           <!-- CSS value (string) -->
 <VcBlade>                       <!-- Default: "30%" -->
 ```
