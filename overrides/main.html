@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% set _title = config.extra_site_name %}
+{% set _title = config.site_name %}
 {% set _page = page %}
 
 {% if _page and _page.meta and _page.meta.title %}
-	{% set _title = _title %}
+	{% set _title = _page.meta.title ~ " - " ~ _title %}
 {% elif _page and _page.title and not _page.is_home_page %}
 	{% set _title = _page.title | striptags ~ " - " ~ _title %}
 {% endif %}
@@ -12,51 +12,11 @@
 {% set _page = _page.parent %}
 
 {% if _page and _page.meta and _page.meta.title %}
-	{% set _title = _title %}
+	{% set _title = _page.meta.title ~ " - " ~ _title %}
 {% elif _page and _page.title and not _page.is_home_page %}
 	{% set _title = _page.title | striptags ~ " - " ~ _title %}
 {% endif %}
 
 {% block htmltitle %}
 <title>{{ _title }}</title>
-{% endblock %}
-
-{% block extrahead %}
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5HSVF5VV');
-</script>
-<!-- End Google Tag Manager -->
-{% endblock %}
-
-{% block announce %}
-  <div id="vc-shell-frozen-banner" hidden style="background: var(--md-warning-fg-color, #f0a020); color: #fff; padding: 0.5rem 1rem; text-align: center;">
-    Live demos on this page show the latest framework version, which may differ from the documented version.
-  </div>
-  <script>
-    (function () {
-      // Only on vc-shell pages.
-      if (window.location.pathname.indexOf('custom-apps-development/vc-shell') === -1) return;
-      // Only on numbered release versions (e.g. "2.0", "3.0"); hide on "latest" / main builds.
-      var versionEl = document.querySelector('[data-mike-version]') || document.querySelector('.md-version__current');
-      var version = versionEl ? versionEl.textContent.trim() : '';
-      if (/^\d+\.\d+$/.test(version)) {
-        var banner = document.getElementById('vc-shell-frozen-banner');
-        if (banner) banner.hidden = false;
-      }
-    })();
-  </script>
-{% endblock %}
-
-{% block html_body %}
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HSVF5VV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-{{ super() }}
 {% endblock %}

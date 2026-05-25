@@ -2,18 +2,6 @@
     display: none;
 }
 
-/* Hide nav title with logo on wide screens - only show in drawer on mobile */
-.md-nav--primary > .md-nav__title[for="__drawer"] {
-    display: none;
-}
-
-/* Show nav title with logo only in drawer mode (mobile) */
-@media screen and (max-width: 1220px) {
-    .md-nav--primary > .md-nav__title[for="__drawer"] {
-        display: flex;
-    }
-}
-
 @media screen and (min-width: 76.25em) {
     .md-nav__icon {
         height: 10px;
@@ -21,7 +9,7 @@
     }
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 76.1875em) {
     .md-nav__item {
         position: static;
     }
@@ -35,115 +23,66 @@
         background: transparent;
     }
 
-    .md-nav__item .md-nav__link :not([data-md-component="toc"]) {
+    .md-nav__item .md-nav__link :not([data-md-component=toc]){
+        color: var(--header-title-primary-color);
         font-size: 15px;
         line-height: 20px;
+        padding: 16px 24px;
     }
 
-    /* Arrow icon for items with children */
-    .md-nav__link > .md-nav__icon.md-icon {
-        display: inline-block !important;
-        width: 10px !important;
-        height: 10px !important;
-        flex-shrink: 0 !important;
-        margin-left: auto !important;
-    }
-
-    .md-nav__link > .md-nav__icon.md-icon::after {
-        background-color: currentcolor;
-        content: "";
-        display: block;
-        height: 10px;
-        width: 10px;
-        -webkit-mask-image: var(--md-nav-icon--next);
-        mask-image: var(--md-nav-icon--next);
-        -webkit-mask-position: center;
-        mask-position: center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-    }
-
-    .md-nav__link > .md-nav__icon.md-icon svg {
-        display: none !important;
-    }
-
-    /* Make nav link a flex container to position arrow */
-    .md-nav__link {
-        display: flex !important;
-        align-items: center;
-        justify-content: space-between;
+    .md-nav--primary .md-nav__link .md-nav__icon:after {
+        height: 11px;
+        width: 5px;
+        background-color: var(--burger-color);
     }
 
     .md-nav__item .md-nav__link--active {
         color: var(--primary-70);
     }
 
-    .md-nav--primary .md-nav__item--active > .md-nav__link:is(:focus, :hover) {
+    .md-nav--primary .md-nav__item--active>.md-nav__link:is(:focus,:hover) {
         color: var(--primary-70);
     }
 
-    /* Back arrow in submenu title */
-    .md-nav__title > .md-nav__icon.md-icon {
-        display: inline-block !important;
-        width: 10px !important;
-        height: 10px !important;
-        flex-shrink: 0 !important;
-        margin-right: 6px !important;
+    .md-nav--primary .md-nav__link .md-nav__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .md-nav__title > .md-nav__icon.md-icon::after {
-        background-color: currentcolor;
-        content: "";
-        display: block;
-        height: 10px;
-        width: 10px;
-        -webkit-mask-image: var(--md-nav-icon--prev);
-        mask-image: var(--md-nav-icon--prev);
-        -webkit-mask-position: center;
-        mask-position: center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
+    .md-nav--primary .md-nav__title .md-nav__icon {
+        position: static;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
     }
 
-    .md-nav__title > .md-nav__icon.md-icon svg {
-        display: none !important;
+    .md-nav--primary .md-nav__title .md-nav__icon:after {
+        height: 11px;
+        background-color: var(--burger-color);
     }
 
-    /* Ensure title is flex for vertical alignment */
-    .md-nav__title[for^="__nav_"] {
-        display: flex !important;
-        align-items: center !important;
-    }
-
-    .md-nav--primary .md-nav__title[for^="__nav_"] {
+    .md-nav--primary .md-nav__title[for^=__nav_] {
         text-transform: none;
-        padding: 16px 24px 16px 30px;
+        padding: 16px 24px;
         background-color: transparent;
         font-size: 15px;
         line-height: 20px;
         border-top: 0.05rem solid var(--md-default-fg-color--lightest);
     }
 
-    .md-nav--primary .md-nav__title .md-nav__icon {
-        top: 17px !important;
-    }
-
     .md-nav--primary > .md-nav__list {
         position: relative;
         overflow-x: hidden;
-        overflow-y: auto;
     }
 
-    .md-nav__header[for^="__nav_"] {
+    .md-nav__header[for^=__nav_] {
         padding: 16px 25px;
         background: transparent;
     }
 
-    /* .md-sidebar__scrollwrap .md-header__option {
+    .md-sidebar__scrollwrap .md-header__option {
         display: flex;
         z-index: 1;
     }
@@ -153,14 +92,14 @@
         align-items: center;
         flex: 1;
         display: flex;
-    } */
+    }
 
     .md-nav .md-nav__palette {
         display: block;
     }
 
     .md-nav__palette {
-        font-family: "Circular Std", sans-serif;
+        font-family: 'Circular Std', sans-serif;
         font-style: normal;
         font-weight: 450;
         font-size: 15px;
@@ -170,22 +109,18 @@
         margin: 24px;
     }
 
-    /* .md-sidebar__scrollwrap [for^="__palette2"] .md-header__button {
+    .md-sidebar__scrollwrap [for^=__palette2] .md-header__button {
         background: var(--palette-button-nav);
         border-radius: 2px;
         height: auto;
         margin: 0;
     }
 
-    .md-sidebar__scrollwrap
-        [for^="__palette2"]
-        .md-header__button:not([for="__drawer"])
-        svg
-        path {
+    .md-sidebar__scrollwrap [for^=__palette2] .md-header__button:not([for="__drawer"]) svg path{
         fill: var(--icon-color);
-    } */
+    }
 
-    .md-option:checked + label:not([hidden]) {
+    .md-option:checked+label:not([hidden]) {
         display: flex;
     }
 
@@ -193,15 +128,15 @@
         background-color: var(--primary-70);
     }
 
-    .md-nav--primary .md-nav__title ~ .md-nav__list > :last-child {
-        border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+    .md-nav--primary .md-nav__title~.md-nav__list>:last-child {
+        border-bottom: 0.05rem solid var(--md-default-fg-color--lightest)
     }
 
-    .md-nav--primary .md-nav__title[for="__drawer"] {
+    .md-nav--primary .md-nav__title[for=__drawer] {
         background-color: var(--md-default-bg-color);
     }
 
-    .md-nav__title .md-nav__button.md-logo :-webkit-any(img, svg) {
+    .md-nav__title .md-nav__button.md-logo :-webkit-any(img,svg) {
         height: 1.318rem;
         width: auto;
     }
@@ -216,7 +151,7 @@
     }
 
     .md-nav--primary .md-nav__title {
-        font-family: "Circular Std", sans-serif;
+        font-family: 'Circular Std', sans-serif;
         font-style: normal;
         font-weight: 450;
         font-size: 0.682rem;
@@ -230,7 +165,7 @@
         align-items: center;
     }
 
-    .md-nav--primary .md-nav__title[for="__drawer"] {
+    .md-nav--primary .md-nav__title[for=__drawer] {
         color: var(--text-color);
     }
 }

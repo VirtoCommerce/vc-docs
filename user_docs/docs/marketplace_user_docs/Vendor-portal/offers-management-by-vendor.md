@@ -1,0 +1,1 @@
+# Offers management by vendor [In progress]
