@@ -28,6 +28,7 @@ theme:
         - navigation.instant
         - navigation.tabs
         - navigation.tabs.sticky
+        - navigation.indexes
         - toc.follow
         - search.highlight
 
@@ -539,12 +540,22 @@ extra:
                     content:
                         - title: Developer Guide
                           links:
-                              - title: Overview
-                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/vc-shell-overview
+                              - title: Introduction
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/
                               - title: Getting Started
-                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app/
-                              - title: Connecting to Platform
-                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform/
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/getting-started/getting-started/
+                              - title: Concepts
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/concepts/architecture/
+                              - title: Guides
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/guides/blades/
+                              - title: Components
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/components/data-display/vc-data-table/
+                              - title: Composables
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/composables/blade-navigation/useBlade/
+                              - title: Plugins
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/plugins/modularity/
+                              - title: Reference
+                                url: /platform/developer-guide/latest/custom-apps-development/vc-shell/reference/cli/create-vc-app/
                   - title: Deployment on Virto Cloud
                     content:
                         - links:
@@ -574,7 +585,7 @@ extra:
                   - title: VC-Shell
                     links:
                         - title: Developer Getting Started
-                          url: /platform/developer-guide/latest/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app
+                          url: /platform/developer-guide/latest/custom-apps-development/vc-shell/getting-started/getting-started/
             - iconSrc: assets/icons/graphql.svg
               title: APIs
               content:

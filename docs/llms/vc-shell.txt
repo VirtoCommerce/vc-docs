@@ -1,52 +1,88 @@
-﻿# Virto Commerce VC-Shell
+# Virto Commerce VC-Shell
 
-> VC-Shell sub-index of the Virto Commerce AI documentation hub. VC-Shell is a TypeScript and Vue 3 framework for building custom admin applications outside the legacy AngularJS Backoffice UI. Use it when you need a dedicated admin app for a custom workflow rather than a panel inside the standard admin SPA. For Platform/backend, Frontend, Marketplace, Cloud, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
+> VC-Shell sub-index of the Virto Commerce AI documentation hub. VC-Shell is the Vue 3 + TypeScript application framework for building custom admin (back-office) applications on the Virto Commerce Platform. It provides the authenticated shell, blade navigation, UI components, composables, module runtime, localization, permissions, notifications, and Platform API integration. Use it when you need a dedicated admin app for a custom workflow rather than a panel inside the legacy admin SPA. For Platform/backend, Frontend, Marketplace, Cloud, or cross-vendor concept mapping, see the parent hub at https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms.txt.
 
-VC-Shell apps connect to the Platform via REST and GraphQL xAPI. They run as separate SPAs, can be deployed independently, and use generated TypeScript API clients to talk to the Platform.
+VC-Shell apps connect to the Platform via REST and GraphQL xAPI. They run as separate SPAs, can be deployed independently, and use generated TypeScript API clients for typed Platform access.
 
 ## Start here
 
-- [VC-Shell overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/vc-shell-overview.md). What VC-Shell is and when to choose it over extending the standard admin SPA.
-- [Custom apps overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/overview.md). High-level decision framework for custom apps vs admin extensions.
-- [Register a new app](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/how-to-register-new-app.md). Plumbing a custom admin app into the platform.
+- [VC-Shell entry page](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/index.md). What VC-Shell is and the documentation map across Getting Started, Concepts, Guides, Components, Composables, Plugins, and Reference.
+- [Custom apps overview](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/overview.md). Decision framework: custom app vs admin extension.
+- [Register a new app](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/how-to-register-new-app.md). Plumbing a custom admin app into the Platform.
 
-## Getting started
+## Getting Started (AI-skill path — recommended)
 
-- [Create your first custom app](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app.md). Hello-world walkthrough.
-- [Blade generator](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Getting-started/blade-generator.md). CLI tool for scaffolding new admin blades.
+- [Getting started](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/getting-started.md). Tutorial entry: install the AI skill, scaffold, connect, generate a module.
+- [Install the vc-app skill](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/install-vc-app-skill.md). Skill install commands per AI coding tool (Claude Code, Cursor, Copilot, OpenCode, Gemini CLI, Codex).
+- [Generate an app from a prompt](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/generate-app-from-prompt.md). `/vc-app design` workflow for prompt-driven app generation.
+- [Connect to Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/connect-to-platform.md). Auth and API wiring for a new shell app.
+- [Project structure](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/project-structure.md). What lives where in a scaffolded VC-Shell project.
+- [Your first module](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/your-first-module.md). End-to-end module walkthrough.
+- [Promote prototype to API](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/promote-prototype-to-api.md). Replace mock data with generated typed API clients once the backend contract is ready.
 
-## Essentials
+## Getting Started (manual CLI path)
 
-- [Understanding application layout](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Essentials/understanding-application-layout.md). Layout primitives and slot model.
-- [Navigation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Essentials/navigation.md). Routing, blade stack, and navigation API.
-- [Composables](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/composables/). Vue composables provided by the framework.
-- [UI components](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/ui-components/). Built-in component library.
-- [Plugins](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/plugins/). Plugin system for extending core capabilities.
-- [Shared utilities](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/Essentials/shared/). Common utility helpers.
+- [Manual CLI start](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/manual-cli-start.md). Deterministic scaffold without AI-assisted generation via `npx @vc-shell/create-vc-app`.
+- [Manual Platform API setup](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/getting-started/manual-platform-api-setup.md). Hand-wiring API clients without the skill.
 
-## API integration
+## Concepts
 
-- [Connect to Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/How-tos/Connecting-to-Platform.md). Auth and API client wiring.
-- [Generate and use API clients with useApiClient](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Essentials/Usage-Guides/using-api-clients-with-useapiclient.md). The composable for typed API access.
+Framework mental model. Read these to understand the contracts behind the patterns.
 
-## Guides
+- [Architecture](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/architecture.md). App structure, layers, runtime composition.
+- [Blade navigation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/blade-navigation.md). Blade stack model, URL persistence, parent/child messaging.
+- [Modules](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/modules.md). Module unit, registration, lifecycle.
+- [Module Federation](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/module-federation.md). Remote modules loaded at runtime.
+- [Layout](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/layout.md). Sidebar, app hub, dashboard widgets, blade chrome.
+- [API clients](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/api-clients.md). Generated typed clients and `useApiClient`.
+- [Forms](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/forms.md). Form model, validation, dirty tracking, close guards.
+- [Notifications](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/notifications.md). Three surfaces — toast, bell, push — and the three composables that drive them.
+- [Permissions model](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/permissions-model.md). How Platform permissions flow into blade and menu visibility.
+- [Localization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/localization.md). Locale registration, multilingual fields, fallback rules.
+- [Theming](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/theming.md). Tailwind tokens, brand variables, dark mode.
+- [Extensions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/extensions.md). Extension points and slot model.
+- [AI Agent](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/ai-agent.md). Embedding the Virto OZ assistant panel inside an app.
+- [Embedded mode](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/concepts/embedded-mode.md). Running a VC-Shell app inside another shell as an iframe.
 
-- [Custom application core concepts](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/custom-application-core-concepts.md). Conceptual model for VC-Shell apps.
-- [Application architecture best practices](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/application-architecture-best-practices.md). Recommended structure for production apps.
-- [Creating custom applications](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/creating-custom-applications.md). End-to-end walkthrough beyond Hello-world.
-- [Developing custom modules](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/developing-custom-modules.md). Authoring reusable VC-Shell modules.
-- [Routing configuration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/routing-configuration.md). Configuring app routing and blade navigation.
-- [Integrating framework features](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/integrating-framework-features.md). Cross-cutting framework integrations.
-- [Internationalization](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/internationalization.md). Localization for VC-Shell apps.
-- [Building and deployment advanced topics](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Guides/building-deployment-advanced-topics.md). Production build and deploy patterns.
+## Guides (task-oriented how-tos)
 
-## Extensibility
+- [Cookbook](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/cookbook/index.md). Single-page collection of small, self-contained recipes.
+- [Blades](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/blades/index.md). Building list, details, dashboard, and modal blades.
+- [Forms](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/forms/index.md). Form composition, validation, multilingual fields, asset uploads.
+- [Data](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/data/index.md). Data loading patterns, async/loading state, pagination, sorting.
+- [UI patterns](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/ui/index.md). Tables, breadcrumbs, toolbar buttons, gradients, status icons.
+- [Modules and extensions](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/modules-and-extensions/index.md). Authoring modules, contributing menu items, dashboard widgets, notification templates.
+- [Module Federation guide](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/module-federation/index.md). Loading remote modules at runtime.
+- [Platform integration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/platform/index.md). Auth pages, custom auth, embedded mode wiring.
+- [AI Agent integration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/ai-agent-integration.md). Configure URL and pass blade context to the assistant.
+- [Routing](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/routing.md). vue-router integration, dynamic routes, blade URLs.
+- [Build a production module](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/build-production-module.md). Production-ready packaging.
+- [Testing a module](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/testing-a-module.md). Vitest + Vue Test Utils patterns.
+- [Performance tuning](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/performance-tuning.md). Bundle size, lazy loading, virtualization.
+- [Accessibility checklist](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/accessibility-checklist.md). WCAG-aligned checks per blade type.
+- [Best practices](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/best-practices.md). Recommended structure for production apps.
+- [Deployment](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/deployment.md). Hosting options, Platform-co-hosted vs standalone.
+- [Troubleshooting](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/guides/troubleshooting/index.md). Common errors and resolutions.
 
-- [Modularity](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/Extensibility/modularity.md). Composing apps from independent modules.
+## API reference
+
+Drill into individual exported APIs.
+
+- [Components](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/components/). UI components grouped by data-display, feedback, form, layout, media, misc, navigation.
+- [Composables](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/composables/). Vue composables grouped by blade-navigation, data, forms, notifications, services, ui-state, user, utilities.
+- [Plugins](https://docs.virtocommerce.org/platform/developer-guide/latest/custom-apps-development/vc-shell/plugins/). Plugin reference: ai-agent, extension-points, global-error-handler, i18n, modularity, notifications, permissions, signalr, validation.
+- [API utilities](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/reference/api/index.md). Asset URL helpers, formatters, thumbnail builders.
+- [Built-in modules](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/reference/modules/index.md). Framework-bundled modules (assets manager, settings).
+- [Migration](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/reference/migration/index.md). Upgrade guides between framework versions.
+
+## CLI
+
+- [create-vc-app](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/reference/cli/create-vc-app.md). Project scaffolder.
+- [API client generator](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/platform/developer-guide/docs/custom-apps-development/vc-shell/reference/cli/api-client-generator.md). Generates TypeScript clients from Platform Swagger.
 
 ## Source repository
 
-- [vc-shell](https://github.com/VirtoCommerce/vc-shell). Framework source.
+- [vc-shell](https://github.com/VirtoCommerce/vc-shell). Framework source, monorepo of `@vc-shell/framework`, `@vc-shell/create-vc-app`, `@vc-shell/api-client-generator`, and `@vc-shell/mf-host`.
 
 ## Optional
 

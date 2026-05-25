@@ -1,0 +1,179 @@
+<!-- AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY -->
+<!-- Source: ui/components/atoms/vc-status-icon/vc-status-icon.docs.md -->
+<!-- To update: edit the source file in vc-shell, then run yarn docs:sync -->
+
+
+# VcStatusIcon
+
+A simple boolean status indicator that displays a green check icon for active/success or a muted cross icon for inactive/failure. It is designed for compact spaces like table cells and lists where a full text label would be too verbose.
+
+<div class="vc-storybook-embed" style="--height: 400px">
+  <iframe
+    src="https://vc-shell-storybook.govirto.com/iframe.html?id=data-display-vcstatusicon--both-statuses&viewMode=story"
+    loading="lazy"
+    title="data-display-vcstatusicon--both-statuses"
+  ></iframe>
+  <a href="https://vc-shell-storybook.govirto.com/?path=/story/data-display-vcstatusicon--both-statuses" target="_blank" rel="noopener">Open in Storybook ↗</a>
+</div>
+
+## When to Use
+
+- Show on/off or pass/fail state in tables and lists (e.g., "Is Active", "Email Verified")
+- Display system health checks with a quick visual indicator
+- Compact boolean display in dense data views
+- When NOT to use: multi-state status with labels (use [VcStatus](./vc-status.md) instead); when you need to show more than two states (consider VcBadge with inline mode)
+
+## Basic Usage
+
+```vue
+<template>
+  <VcStatusIcon :status="user.isActive" />
+</template>
+
+<script setup lang="ts">
+import { VcStatusIcon } from "@vc-shell/framework";
+</script>
+```
+
+## Key Props
+
+| Prop     | Type      | Default     | Description                                                           |
+| -------- | --------- | ----------- | --------------------------------------------------------------------- |
+| `status` | `boolean` | `undefined` | `true` shows a green check circle; `false` shows a muted cross circle |
+
+## Common Patterns
+
+### Boolean Column in a Table
+
+For a simple yes/no indicator, declare the column with `type="status-icon"` — `VcDataTable` renders the icon based on the boolean cell value, no slot needed:
+
+```vue
+<template>
+  <VcColumn
+    id="isActive"
+    title="Active"
+    type="status-icon"
+    width="80px"
+  />
+</template>
+```
+
+Reach for the `#body` slot only when you need a custom predicate or a non-boolean source:
+
+```vue
+<template>
+  <VcColumn
+    id="isActive"
+    title="Active"
+    width="80px"
+  >
+    <template #body="{ data }">
+      <VcStatusIcon :status="data.isActive && data.confirmed" />
+    </template>
+  </VcColumn>
+</template>
+```
+
+### Multiple Boolean Columns
+
+```vue
+<template>
+  <VcDataTable :items="users">
+    <VcColumn
+      id="emailVerified"
+      title="Email"
+      type="status-icon"
+      width="70px"
+    />
+    <VcColumn
+      id="isActive"
+      title="Active"
+      type="status-icon"
+      width="70px"
+    />
+    <VcColumn
+      id="hasAvatar"
+      title="Avatar"
+      width="70px"
+    >
+      <template #body="{ data }">
+        <VcStatusIcon :status="!!data.avatarUrl" />
+      </template>
+    </VcColumn>
+  </VcDataTable>
+</template>
+```
+
+### System Health Dashboard
+
+```vue
+<template>
+  <div class="tw-space-y-2">
+    <div
+      v-for="service in services"
+      :key="service.name"
+      class="tw-flex tw-justify-between tw-items-center tw-py-2 tw-border-b"
+    >
+      <span>{{ service.name }}</span>
+      <div class="tw-flex tw-items-center tw-gap-2">
+        <span class="tw-text-sm">{{ service.status ? "Online" : "Offline" }}</span>
+        <VcStatusIcon :status="service.status" />
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+<div class="vc-storybook-embed" style="--height: 400px">
+  <iframe
+    src="https://vc-shell-storybook.govirto.com/iframe.html?id=data-display-vcstatusicon--in-context&viewMode=story"
+    loading="lazy"
+    title="data-display-vcstatusicon--in-context"
+  ></iframe>
+  <a href="https://vc-shell-storybook.govirto.com/?path=/story/data-display-vcstatusicon--in-context" target="_blank" rel="noopener">Open in Storybook ↗</a>
+</div>
+
+## Recipe: Status Icon with Custom Label
+
+VcStatusIcon is intentionally minimal. If you need a text label next to the icon, compose it yourself:
+
+```vue
+<template>
+  <div class="tw-flex tw-items-center tw-gap-2">
+    <VcStatusIcon :status="order.isPaid" />
+    <span
+      class="tw-text-sm"
+      :class="order.isPaid ? 'tw-text-green-600' : 'tw-text-gray-400'"
+    >
+      {{ order.isPaid ? "Paid" : "Unpaid" }}
+    </span>
+  </div>
+</template>
+```
+
+## CSS Custom Properties
+
+| Variable                       | Default               | Description             |
+| ------------------------------ | --------------------- | ----------------------- |
+| `--status-icon-success-color`  | `var(--success-500)`  | Color of the check icon |
+| `--status-icon-inactive-color` | `var(--neutrals-300)` | Color of the cross icon |
+
+## Tips
+
+- The component uses Lucide icons (`lucide-circle-check` and `lucide-circle-x`) internally. The icon inherits its size from the parent font size, so you can control it with Tailwind text-size classes on a wrapper.
+- When `status` is `undefined`, the component still renders the inactive (cross) icon. If you want to hide the icon entirely when the value is unknown, use `v-if` on the component.
+- For theming, override `--status-icon-success-color` to change the positive indicator to a different palette (e.g., `var(--primary-500)` for brand color).
+
+## Accessibility
+
+- Container has `role="img"` with `aria-label` set to "Active" or "Inactive" based on `status`
+- Icons are marked `aria-hidden="true"` since the container carries the label
+- Uses Lucide icons (`lucide-circle-check` and `lucide-circle-x`)
+
+## Related Components
+
+- [VcStatus](./vc-status.md) -- labeled multi-variant status badge for richer state display
+- [VcIcon](../misc/vc-icon.md) -- standalone icon component used internally
+- [VcBadge](../misc/vc-badge.md) -- inline pill badges for multi-state indicators
+
+

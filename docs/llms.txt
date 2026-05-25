@@ -30,7 +30,7 @@ Six AI-readable indexes. Use the one closest to the question, then drill into th
 - [Platform](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/platform.txt). Backend modules, admin SPA, xAPI gateway, .NET 10 and EF Core 10 stack. The starting point for backend and full-stack developers.
 - [Frontend](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/frontend.txt). vc-frontend Vue 3 SPA, xAPI integration, theming, customization, customer-facing experience. The starting point for Frontend developers.
 - [Marketplace](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/marketplace.txt). Operator Portal, Vendor Portal, and the State Machine module. Multi-vendor commerce.
-- [VC-Shell](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/vc-shell.txt). TypeScript and Vue framework for building custom admin apps outside the legacy AngularJS shell.
+- [VC-Shell](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/vc-shell.txt). Vue 3 + TypeScript framework for building custom admin apps outside the legacy AngularJS shell. Includes the `vc-app` AI skill for prompt-driven scaffolding and a manual CLI path.
 - [Cloud](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/cloud.txt). Deployment on Virto Cloud, environments, CI/CD with vc-build, plus Azure / AWS / on-premise patterns.
 - [Rosetta](https://raw.githubusercontent.com/VirtoCommerce/vc-docs/master/docs/llms/rosetta.txt). Cross-vendor concept mapping. Translates Virto vocabulary to Shopify, Adobe Commerce (Magento), commercetools, and BigCommerce. Useful when "I know how X works in vendor Y" needs to become "I want to do X in Virto".
 

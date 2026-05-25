@@ -1,0 +1,11 @@
+title: Getting Started
+nav:
+  - Getting Started: getting-started.md
+  - Tutorial - Your First Module: your-first-module.md
+  - Install the vc-app Skill: install-vc-app-skill.md
+  - Generate an App from a Prompt: generate-app-from-prompt.md
+  - Connect to Platform: connect-to-platform.md
+  - Promote a Prototype to API: promote-prototype-to-api.md
+  - Manual CLI Start: manual-cli-start.md
+  - Manual Platform API Setup: manual-platform-api-setup.md
+  - Project Structure: project-structure.md
