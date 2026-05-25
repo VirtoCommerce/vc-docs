@@ -37,6 +37,7 @@ With the Page Builder module, you can
 * Seamlessly integrate with Virto Frontend Application.
 * Leverage the native extensibility framework.
 * Set permissions to control access and editing capabilities.
+* Back up and restore page content and layouts through the Platform's standard [backup and restore mechanism](../backup-and-restore.md).
 
 
 <br>

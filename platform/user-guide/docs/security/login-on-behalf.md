@@ -1,21 +1,15 @@
-﻿# Login on Behalf
+﻿# Log in on Behalf
 
-If you are an administrator or support engineer responsible for maintaining a Virto Commerce-based web store, you can use our **Login on behalf** feature. This feature allows you to log in as another user, which can be helpful for:
+The **Login on behalf** feature lets you sign in as another user and act on their behalf without ever seeing or entering their password. It serves two audiences:
 
-* Assessing what a user sees on a webpage.
-* Assisting with order placement.
-* Making payments on their behalf, and more.
+* **Administrators and support engineers** can log in as any user from the Platform to assess what a customer sees, assist with order placement, make payments on the customer's behalf, and reproduce hard-to-diagnose issues.
+* **Authorized organization members** can open the Frontend as a colleague from the same organization to keep that colleague's work moving while they are away. They can browse the catalog, complete carts, place orders, and use the company account features.
 
 !!! note
-	All actions performed through the **Login on Behalf** feature are strictly logged to avoid potential customer claims.
+	All actions performed through the **Login on behalf** feature are strictly logged to avoid potential customer claims.
+
 
 ## How it works
-
-The **Login on behalf** feature enhances the efficiency of your web store operations and significantly contributes to customer satisfaction and brand loyalty, while reducing cart abandonment rates.
-
-When a user encounters issues with order processing or identifies a bug, support engineers often require a view of the user's perspective. This becomes especially crucial when dealing with application errors, which can be challenging to reproduce.
-
-Moreover, **Login on behalf** enables experienced users to guide staff through the application. For instance, an administrator can assist a salesperson in bulk-adding products from an Excel file.
 
 To log in on behalf of another user, sign into Virto Commerce portal as an administrator. Make sure the admin role and the respective permissions have been assigned properly. You can log in on behalf of another user via the **User information** blade. It can be accessed via the **Contacts** or **Security** module.
 
@@ -43,10 +37,25 @@ To log in on behalf of another user, sign into Virto Commerce portal as an admin
 		![Logging via Contacts](media/login-on-behalf-path2.png){: style="display: block; margin: 0 auto;" width="900"}
 
 
-The Frontend application will open in a new window and prompt you to re-enter your credentials for security purposes:
+The Frontend application will open in a new window and prompt you to re-enter your credentials for security purposes.
 
-![Redirection to Storefront](media/redirection-to-storefront.png){: style="display: block; margin: 0 auto;" width="750"}
+On the Frontend, you will be identified you as the operator and the user you are acting as:
 
+![Login on behalf](media/redirection-to-storefront.png){: style="display: block; margin: 0 auto;" width="750"}
+
+### Permissions
+
+To use **Login on behalf** on the Frontend:
+
+* Your role must include the **Login on behalf** permission.
+* You must be signed in to the Frontend as your own operator account first.
+* The action is exposed on the **Company** > **Members** page only.
+
+Only members who already have a security (login) account are valid targets. Members shown in the table but who have never signed in, and so have no security account, cannot be impersonated from this screen.
+
+Permissions live on roles, not on individual user accounts. To grant a Company Maintainer or Employee access, see [Roles and permissions](roles-and-permissions.md).
+
+The change takes effect on the operator's next action, with no sign-out required. Removing the permission from the role removes the action for everyone in that role, effective on their next attempt.
 
 
 <br>

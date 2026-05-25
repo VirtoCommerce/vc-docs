@@ -2,7 +2,7 @@
 
 With the **Environments Compare (Environments Comparison)** module you can compare platform settings, environment configurations, and system information across multiple Virto Commerce environments (development, staging, production, etc.). 
 
-![Read more](media/readmore.png){: width="20"} [Environments comparison](../../../../user-guide/environments-comparison/overview)
+![Read more](media/readmore.png){: width="20"} [Environments comparison](/platform/user-guide/latest/environments-comparison/compare-environments/)
 
 To start comparing environments:
 

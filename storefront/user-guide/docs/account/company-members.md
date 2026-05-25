@@ -4,10 +4,11 @@ The **Company members** section contains a list of the invited company members.
 
 In this section, you can:
 
-* Send invitations to new members.
-* Manage members access by blocking, unblocking, or deleting them.
-* Edit roles. 
+* [Send invitations to new members.](#invite-company-members)
+* [Manage members access by blocking, unblocking, or deleting them.](#block-unblock-delete-company-members)
+* [Edit roles.](#edit-user-role) 
 * Filter company members by their role and status.
+* Log in on behalf of any member if you have the required permissions.
 
 ![Company members](../media/company-members.png){: style="display: block; margin: 0 auto;" }
 
@@ -48,11 +49,26 @@ To edit user role:
 
 The role has been successfully modified.
 
+## Log in on behalf of company member
+
+Login on behalf lets an authorized organization member access the storefront as a colleague in the same organization to continue their work. You can browse catalogs, complete carts, place orders, and use company account features without needing their password. 
+
+Try our interactive demo to explore this features in action:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/clzzoz4ouudq?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
+
+
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../company-info">← Company info</a>
-    <a href="../profile">Profile →</a>
+    <a href="../profile">User profile →</a>
 </div>

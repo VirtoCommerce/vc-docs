@@ -8,6 +8,10 @@ The **Loyalty** module provides a flexible loyalty program management system for
 
 ## Key features
 
+The diagram below illustrates the payment options within the Virto Commerce Platform:
+
+![Payment options](media/key-entities.png)
+
 With the Loyalty module, users can:
 
 * **Manage programs**: Create and configure loyalty programs with conditions, reward rules (fixed points or % of order value), priorities, activation periods, and localized names.

@@ -2,9 +2,9 @@
 
 Google Analytics is used in the Virto Commerce Frontend Application to track user interactions and provide insights into user behavior. To make these insights more accessible for marketers, several preconfigured events are automatically sent to Google Analytics. You can view and analyze these events through Google Tag Manager (GTM).
 
-![Readmore](../media/readmore.png){: width="25"} [GA integration](../../../../../platform/user-guide/integrations/google-analytics/integration#direct-ga4-integration)
+![Readmore](../media/readmore.png){: width="25"} [GA integration](/platform/user-guide/latest/integrations/google-analytics/integration/)
 
-![Readmore](../media/readmore.png){: width="25"} [Google Tag Manager setup for GA4](../../../../../platform/user-guide/integrations/google-analytics/integration#google-tag-manager-setup-for-ga4)
+![Readmore](../media/readmore.png){: width="25"} [Google Tag Manager setup for GA4](/platform/user-guide/latest/integrations/google-analytics/integration/#google-tag-manager-setup-for-ga4)
 
 ## Tracked sales funnel events
 

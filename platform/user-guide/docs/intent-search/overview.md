@@ -10,6 +10,10 @@ As a result, the shopper sees more accurate and highly relevant products on the 
 
 ![Frontend](media/intent-search-frontend.png){: style="display: block; margin: 0 auto;" width="850"}
 
+The diagram below illustrates the interconnection of the Intent Search and Search module:
+
+![Key entities](media/key-entities.png)
+
 <br>
 <br>
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-intent-search)

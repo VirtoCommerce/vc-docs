@@ -22,7 +22,7 @@ The Elastic App Search module offers:
 * Boosting profile functionality.
 * Dynamic boosting concatenation, combining dynamic boosting with query and static boosting from the Search Relevance Tuning panel.
 
-The diagram below illustrates the functionality of the Elastic App Search module:
+The diagram below illustrates the available search providers and their functionality:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 

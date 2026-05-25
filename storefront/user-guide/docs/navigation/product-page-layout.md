@@ -23,7 +23,7 @@ From the product page, you can:
 
 ![Physical product page layout](../media/product-page.png)
 
-[Google Tag Manager users](../../../../platform/user-guide/integrations/google-analytics/integration#google-tag-manager-setup-for-ga4) can add a **Product guide**, a smart product assistant, to the Frontend:
+[Google Tag Manager users](/platform/user-guide/integrations/google-analytics/integration#google-tag-manager-setup-for-ga4) can add a **Product guide**, a smart product assistant, to the Frontend:
 
 ![Product guide](../media/product-guide.gif){: style="display: block; margin: 0 auto;" width="400"}
 

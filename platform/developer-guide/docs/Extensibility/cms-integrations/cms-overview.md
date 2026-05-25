@@ -11,7 +11,7 @@ The following CMS integrations are currently available:
 
 ## Pages module as unification layer
 
-All CMS integrations converge on the [Pages module](../../../../user-guide/pages/overview), which acts as a CMS-agnostic content layer. Regardless of which CMS is used to design and author content, the Pages module provides a unified storage, search, and delivery API for all published pages.
+All CMS integrations converge on the [Pages module](/platform/user-guide/latest/pages/overview), which acts as a CMS-agnostic content layer. Regardless of which CMS is used to design and author content, the Pages module provides a unified storage, search, and delivery API for all published pages.
 
 This means:
 
@@ -29,11 +29,15 @@ The architecture follows an event-driven pattern:
 
 ### Scenarios
 
-The Virto Pages module supports end-to-end content workflows:
+The Virto Pages module supports end-to-end content workflows and standard platform operations:
 
-* **Design time**: Integrate with a CMS to create and design pages, preparing them for publishing.
-* **Publishing**: Publish pages to Virto Pages, removing dependency on the CMS afterward.
-* **Rendering**: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.
+* Content lifecycle:
+    * **Design time**: Integrate with a CMS to create and design pages, preparing them for publishing.
+    * **Publishing**: Publish pages to Virto Pages, removing dependency on the CMS afterward.
+    * **Rendering**: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.
+* Maintenance:
+    * [Reindexing](/platform/user-guide/latest/search/managing-search/): Build and rebuild (with Delete) operations are available from the admin UI and as background jobs. If a connected provider does not support reindexation, the rebuild fails with a clear error message instead of producing an incomplete index​.
+    * [Backing up and restoring](/platform/user-guide/latest/backup-and-restore/): The Pages module participates in the platform's standard backup and restore mechanism. Pages can be exported to JSON and re-imported, and imported pages are automatically re-indexed.​
 
 ## Supported CMS platforms
 

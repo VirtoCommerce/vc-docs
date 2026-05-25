@@ -25,6 +25,20 @@ Save time by exploring features, configurations, and best practices directly wit
 <br>
 ![Readmore](media/readmore.png){: width="25"} [Virto OZ interactive demo](/platform/user-guide/virto-oz)
 
+### Using Virto OZ as an MCP connector
+
+Beyond the in-docs widget, Virto OZ is also available as a Model Context Protocol (MCP) connector. This lets you query Virto Commerce documentation directly from Claude Web, Claude Desktop, and Claude Code without leaving your client. The connector can be enabled at two scopes:
+
+* **Organization scope**. This setup covers Claude Web and Claude Desktop. An Anthropic Console administrator adds the **VirtoOZ** connector to your organization once. After that, every member of the organization can use it in Claude Web and Claude Desktop with no further setup on their part.
+
+* **User scope**. This setup covers Claude Code on an individual developer's machine. Register the connector with one CLI command:
+
+    ```
+    claude mcp add --transport http --scope user virtooz https://virtooz.virtocommerce.com/v1/
+    ```
+
+    The `--scope user` flag makes the connector available across all your Claude Code sessions on this machine. Use `--scope project` instead to commit the MCP configuration to **.mcp.json** in a repository so teammates inherit it automatically.
+
 ## llms.txt
 
 Using **llms.txt** is the fastest way to ground any AI assistant on current Virto Commerce documentation. It does not require installation, MCP server, editor plugin, just a URL you paste into a prompt:

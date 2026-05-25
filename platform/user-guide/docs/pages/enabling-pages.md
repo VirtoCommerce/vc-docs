@@ -15,6 +15,10 @@ The Virto Pages feature has been enabled. Now, you can view all the created page
 !!! note
     Pages created in the **Page Builder** or **Content** module are added to the list automatically, while pages created in **Builder.io** require [additional configuration](builder-io-integration.md) before they appear.
 
+<br>
+![Readmore](media/readmore.png){: width="20"} [Building and rebuilding search index](../search/managing-search.md#build-search-index)
+
+![Readmore](media/readmore.png){: width="20"} [Backing up and restoring pages](../backup-and-restore.md)
 
 <br>
 <br>

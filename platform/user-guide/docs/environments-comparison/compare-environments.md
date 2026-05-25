@@ -9,7 +9,7 @@ Try our interactive demo to explore key features in action:
   </div>
 </div>
 
-![Read more](media/readmore.png){: width="20"} [Configuring environments for comparison](../../../developer-guide/Tutorials-and-How-tos/How-tos/configuring-environments)
+![Read more](media/readmore.png){: width="20"} [Configuring environments for comparison](/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/configuring-environments/)
 
 <br>
 <br>

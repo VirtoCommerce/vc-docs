@@ -8,16 +8,19 @@ The **Pages** module is a solution designed to connect different CMSs seamlessly
 
 ## Key features
 
-* **CMS-agnostic architecture**: CMS is required only during the design phase. Once published, content is stored in Virto Pages for use without real-time CMS dependency.
-* **Hosted content pages**: Save pages retrieved from a CMS into the Virto platform for efficient management.
-* **Content scenarios**:
-    * **Public pages**: Allow access to all users.
-    * **Private pages**: Restrict access to unauthorized users.
-    * **Personalized pages**: Tailor content for specific user groups.
-    * **Scheduled publishing**: Define start and end dates for content visibility.
-    * **Pages returned by permalink**: Access pages easily using unique identifiers or user-friendly URLs.
-    * **Pages returned by ID**: Access pages easily using unique identifiers or user-friendly URLs.
-* **Full-text search capabilities**: Quickly search and retrieve pages by keyword.
+With the Pages module, you can:
+
+* **Connect any CMS**: A CMS is required only during the design phase. Once published, content is stored in Virto Pages for use without real-time CMS dependency.
+* **Host content pages**: Save pages retrieved from a CMS in the Virto Commerce Platform for efficient management.
+* **Manage page access scenarios**:
+    * **Publish public pages**: Allow access to all users.
+    * **Restrict private pages**: Hide content from unauthorized users.
+    * **Personalize content**: Tailor pages to specific user groups.
+    * **Schedule publishing**: Define start and end dates for content visibility.
+    * **Resolve pages by permalink**: Access pages via user-friendly URLs.
+    * **Resolve pages by ID**: Access pages via unique identifiers.
+* **Search pages by keyword**: Quickly find and retrieve pages using full-text search.
+* **Back up and restore pages**: [Save a copy of your pages and restore them](../backup-and-restore.md) when needed.
 
 ## Supported CMS platforms
 

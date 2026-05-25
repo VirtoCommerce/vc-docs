@@ -907,6 +907,7 @@ This configuration node defines authorization settings for the system.
 | AccessTokenLifeTime      | "00:30:00"               | The time span specifying the lifetime of an access token.<br>An access token is used to access protected resources.<br>The default is 30 minutes. |
 | LimitedCookiePermissions | "platform:asset:read;platform:export;..." | A semicolon-separated list of permissions that define the limited cookie permissions for the user. These permissions determine what actions the user can perform when using cookies for authentication. |
 | AllowApiAccessForCustomers| true<br>false         | A boolean setting that controls whether API access is allowed for customers.<br>If set to **false**, customers are not allowed to access the API; if set to **true**, they are granted API access. |
+| EnablePersistentStorageTokenValidation | true<br>false | A boolean setting that enables validation of access tokens against the persistent token store on every request.<br>If set to **true**, tokens revoked in the database (for example, after a password change, password reset, lockout, or explicit session termination) stop working immediately on all browsers and devices. If set to **false**, revoked tokens remain valid until their natural expiration. |
 
 **Example**
 
@@ -916,7 +917,8 @@ This configuration node defines authorization settings for the system.
   "RefreshTokenLifeTime": "30.00:00:00",
   "AccessTokenLifeTime": "00:30:00",
   "LimitedCookiePermissions": "platform:asset:read;platform:export;content:read;platform:asset:create;licensing:issue;export:download",
-  "AllowApiAccessForCustomers": false
+  "AllowApiAccessForCustomers": false,
+  "EnablePersistentStorageTokenValidation": true
 }
 ```
 
@@ -1216,16 +1218,16 @@ This node configures the settings for external modules in the Virto Commerce Pla
 
 ### FileUpload
 
-This node is used to configure file uploads, including quotes and organization logo uploads.
+This node configures file upload settings, including storage location, upload scopes, file size limits, allowed file types, and anonymous upload permissions.
 
-| Node                      |Default or sample value            | Description                                               |
-|---------------------------|-----------------------------------|-----------------------------------------------------------|
-| RootPath                  |                                   | The root directory where uploaded files will be stored.   |
-| Scopes                    |                                   | Specifies different upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions.              |
-| Scopes.Scope              |                                   | Identifies the upload scope.              |
-| Scopes.MaxFileSize        | 123                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
-| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | Defines the allowed file types for uploads.               |
-| Scopes.AllowAnonymousUpload | true <br> false                 | Indicates whether anonymous uploads are permitted.        |
+| Node                        | Default or sample value                                                                 | Description |
+|-----------------------------|-------------------------------------------------------------------------------------------|-------------|
+| RootPath                    | `"upload"`                                                                               | The root directory where uploaded files are stored. |
+| Scopes                      |                                                                                           | Specifies upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions. |
+| Scopes.Scope                | `"quote-attachments"` <br> `"organization-logos"` <br> `"product-configuration"` <br> `"purchase-request-sources"`      | Identifies the upload scope. Supported scopes include quote attachments, organization logos, and product configuration uploads. |
+| Scopes.MaxFileSize          | `10485760`                                                                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
+| Scopes.AllowedExtensions    | `[".jpg", ".jpeg", ".png", ".gif", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".txt"]` | Defines the allowed file extensions for uploads within this scope. Supported extensions include image (`.jpg`, `.jpeg`, `.png`, `.gif`), document (`.pdf`, `.doc`, `.docx`, `.txt`), and spreadsheet (`.xls`, `.xlsx`) formats. |
+| Scopes.AllowAnonymousUpload | `true` <br> `false`                                                                      | Indicates whether anonymous uploads are permitted for this scope. |
 
 
 **Example**
@@ -1239,7 +1241,7 @@ This node is used to configure file uploads, including quotes and organization l
           {
             "Scope": "quote-attachments",
             "MaxFileSize": 123,
-            "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
+            "AllowedExtensions": [".jpg", ".pdf", ".png", ".txt"],
             "AllowAnonymousUpload": true
           }
         ]
@@ -1256,13 +1258,42 @@ This node is used to configure file uploads, including quotes and organization l
           {
             "Scope": "organization-logos",
             "MaxFileSize": 5000000,
-            "AllowedExtensions": [ ".jpg", ".png" ],
+            "AllowedExtensions": [".jpg", ".png"],
             "AllowAnonymousUpload": false
           }
         ]
       }
     }
     ```
+
+=== "Product configuration upload"
+    ```json title="appsettings.json"
+    {
+      "FileUpload": {
+        "RootPath": "upload",
+        "Scopes": [
+          {
+            "Scope": "product-configuration",
+            "MaxFileSize": 10485760,
+            "AllowedExtensions": [
+              ".jpg",
+              ".jpeg",
+              ".png",
+              ".gif",
+              ".pdf",
+              ".doc",
+              ".docx",
+              ".xls",
+              ".xlsx",
+              ".txt"
+            ],
+            "AllowAnonymousUpload": true
+          }
+        ]
+      }
+    }
+    ```
+
 
 ### FrontendSecurity
 
@@ -1328,39 +1359,41 @@ This configuration node configures the ASP.NET Core Identity system.
 
 ### LoginPageUI
 
-This node configures background screen and background pattern of the Login page.
+This node configures the appearance and behavior of the login page.
 
-| Node                      | Default or sample value   | Description                                                                                              |
-| ------------------------- | ------------------------  | -------------------------------------------------------------------------------------------------------- |
-| BackgroundUrl             |                           | Url for the background image of the login page. If empty, no background image is displayed.             |
-| PatternUrl                |                           | Url for the pattern image of the login page. If empty, no pattern image is displayed.                   |
-| Preset                    |                           | The currently selected preset for the login page. If empty, no preset is applied.                         |
-| Presets                   |                           | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
-| Presets:Name              | "demo", "prod"...         | The name of the preset. Used for identification and selection of the preset.                              |
-| Presets:BackgroundUrl     |                           | Url for the background image specific to the preset. If empty, the default background is used.          |
-| Presets:PatternUrl        |                           | Url for the pattern image specific to the preset. If empty, the default pattern is used.          |
+| Node                   | Default or sample value | Description                                                                                                       |
+|------------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------|
+| BackgroundUrl          |                         | Url for the background image of the login page. If empty, no background image is displayed.                       |
+| PatternUrl             |                         | Url for the pattern image of the login page. If empty, no pattern image is displayed.                             |
+| Preset                 |                         | The currently selected preset for the login page. If empty, no preset is applied.                                 |
+| Presets                |                         | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
+| ShowForgotPasswordLink | `true`                  | Controls whether the **Forgot password** link is displayed on the login page. Set to `false` to hide the link.    |
+| Presets:Name           | "demo", "prod"...       | The name of the preset. Used for identification and selection of the preset.                                      |
+| Presets:BackgroundUrl  |                         | Url for the background image specific to the preset. If empty, the default background is used.                    |
+| Presets:PatternUrl     |                         | Url for the pattern image specific to the preset. If empty, the default pattern is used.                          |
 
 
 **Example**
 
 ```json title="appsettings.json"
-    "LoginPageUI": {
+"LoginPageUI": {
+    "BackgroundUrl": "",
+    "PatternUrl": "",
+    "Preset": "",
+    "ShowForgotPasswordLink": true,
+    "Presets": [
+      {
+        "Name": "demo",
         "BackgroundUrl": "",
-        "PatternUrl": "",
-        "Preset": "",
-        "Presets": [
-          {
-            "Name": "demo",
-            "BackgroundUrl": "",
-            "PatternUrl": "/images/pattern-demo.svg"
-          },
-          {
-            "Name": "prod",
-            "BackgroundUrl": "",
-            "PatternUrl": "/images/pattern-live.svg"
-          }
-        ]
+        "PatternUrl": "/images/pattern-demo.svg"
+      },
+      {
+        "Name": "prod",
+        "BackgroundUrl": "",
+        "PatternUrl": "/images/pattern-live.svg"
       }
+    ]
+  },
 ```
 
 
