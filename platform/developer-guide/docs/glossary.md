@@ -4,6 +4,11 @@ This glossary maps Virto Commerce developer vocabulary to the industry terms use
 
 For business and operations vocabulary, such as Catalog, Order, or Fulfillment Center, see the [User guide glossary](/platform/user-guide/latest/glossary).
 
+## App module
+A self-contained slice of a VC-Shell custom app: a Vue 3 unit that bundles its blades, composables, locales, and side effects under a single `defineAppModule({ blades, locales })` declaration in **index.ts**. The host app installs an app module by importing it in **main.ts**, or by loading it at runtime through Module Federation when the module is shipped as a remote. App modules are the frontend counterpart of a Platform module (which is .NET, server-side, and ships in **module.manifest**); the two are independent units with separate release cycles. The same Platform may serve many apps, each composed of many app modules.
+
+See also [Modules concept](custom-apps-development/vc-shell/concepts/modules.md) and [Module Federation concept](custom-apps-development/vc-shell/concepts/module-federation.md).
+
 ## Catalog property
 A user-defined field added at runtime to a catalog, category, product, or product variation. Values are persisted in a separate table (the Entity-Attribute-Value pattern) and cascade down the catalog hierarchy, so a variation receives its product's properties, a product its category's, and a category its catalog's. Catalog properties support multi-value, multilingual, and dictionary (lookup) modifiers, plus validation rules and display ordering. Values can be of one of the predefined types (text, number, measure, etc.).
 
@@ -36,3 +41,8 @@ Equivalent in other ecommerce platforms:
 | Module | n/a (uses Apps) | Module | n/a (composable architecture) | n/a (uses Apps) |
 
 See also [Modular Architecture Overview](Fundamentals/Modularity/01-overview.md) for the architecture deep-dive and [VC-Shell custom apps overview](custom-apps-development/overview.md) for the App concept.
+
+## Workspace
+A top-level blade in a VC-Shell custom app, declared with `isWorkspace: true` on its `defineBlade` config. A workspace blade is the first frame the user sees when they enter a section from the main menu: typically a list view from which child blades open to the right in the blade stack. Non-workspace blades cannot be opened directly from the menu; they require a parent workspace to host them. Within a single app, there is one active workspace at a time, and switching workspaces collapses the blade stack of the previous one.
+
+See also [Blade Navigation concept](custom-apps-development/vc-shell/concepts/blade-navigation.md).

@@ -159,8 +159,8 @@ You do not need to manually set the auth token on client instances. The `useApiC
 Do not import from the `platform.ts` file path directly. Always import from `@vc-shell/framework` to ensure proper module resolution and tree-shaking:
 
 ```typescript
-// Bad: direct file import
-import { SecurityClient } from "@core/api/platform";
+// Bad: direct file path
+"@core/api/platform";
 
 // Good: framework re-export
 import { SecurityClient } from "@vc-shell/framework";
