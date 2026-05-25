@@ -35,7 +35,7 @@ const {
 } = useUserManagement();
 ```
 
-`signIn(username, password)` posts to `/connect/token` with `grant_type=password` and stores the resulting tokens in `localStorage` under `vc_auth_data`. The fetch interceptor reads from that key on every API call and silently refreshes when the access token expires. Replacing the storage manually breaks the interceptor, so any customization wraps these methods rather than reimplementing them.
+`signIn(username, password)` makes two calls. First, it posts to the Platform's `login` endpoint, which sets a session cookie that the browser replays on every same-origin API call — this cookie is what authenticates the typed clients used through `useApiClient`. Second, it posts to `/connect/token` with `grant_type=password&scope=offline_access`, receives an access token and a refresh token, and stores them in `localStorage` under `vc_auth_data`. The token in storage is used by `getAccessToken()` for the subset of calls that need an explicit token (real-time channels, refresh flow), not by the every-request fetch path. Customizations should wrap `useUserManagement` rather than write to that storage directly, so the framework's client-side state stays consistent with the active session.
 
 ## Enterprise SSO through Platform external providers
 
@@ -138,8 +138,8 @@ If you embed VC-Shell components in a marketing site or a public kiosk that has 
 !!! warning "Reaching for IAuthProvider"
     The `IAuthProvider` interface, the `AuthProviderManager` singleton, and the `VirtoShellFramework.configure({ authProvider })` static method shipped in version 1 do not exist in version 2. Searching the framework source for any of these names returns nothing. Wrap `useUserManagement` instead, or configure an external provider on the Platform.
 
-!!! warning "Replacing the token storage"
-    The fetch interceptor reads from `localStorage` under `vc_auth_data` on every API call. Writing your own tokens to a different key or returning a custom object from a wrapper composable breaks the interceptor; the API call goes out without an `Authorization` header and Platform answers with a 401. Always let `signIn` write the storage.
+!!! warning "Writing to vc_auth_data directly"
+    The framework writes to `localStorage` under `vc_auth_data` during `signIn`, and reads from it for client-side state like `isAuthenticated`. Editing or replacing that storage from app code leaves the framework's view of the session out of sync with the actual cookie, causing the UI to behave as signed-in for a session the Platform no longer accepts (or the opposite). Always let `signIn` and `signOut` write the storage.
 
 !!! warning "Configuring SSO providers in the app"
     External providers are discovered, not declared. The `Login` page calls `getExternalLoginProviders` on Platform; an app cannot inject a provider that Platform has not registered. If a button does not appear, fix the Platform configuration first, then reload the app.
@@ -147,8 +147,8 @@ If you embed VC-Shell components in a marketing site or a public kiosk that has 
 !!! warning "Mocking only `/connect/token` in tests"
     A fulfilled token response with no matching `currentuser` stub leaves `useUser` in the loading state forever. Stub both endpoints in test setup, and stub `/api/platform/security/logout` if your test path exercises sign-out.
 
-![Readmore](auth-pages.md){: width="25"} Wiring the auth UI pages and branding props.
+- [Wiring the auth UI pages and branding props.](auth-pages.md)
 
-![Readmore](../../getting-started/connecting-to-platform.md){: width="25"} The default Platform OAuth flow.
+- [The default Platform OAuth flow.](../../getting-started/connect-to-platform.md)
 
-![Readmore](../../composables/user/useUser.md){: width="25"} useUser composable reference.
+- [useUser composable reference.](../../composables/user/useUser.md)

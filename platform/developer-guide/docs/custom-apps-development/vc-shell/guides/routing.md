@@ -139,9 +139,9 @@ The blade router guard reads the first route param as the tenant prefix and pres
 
 ## URL synchronization
 
-Every blade with a `url` segment is reflected in the address bar. Closing the blade rolls the URL back. Deep-linking restores the workspace plus its deepest URL-bearing child. Non-URL child blades ride on top of the parent's URL and disappear from the address bar entirely.
+Every blade with a `url` segment can be reflected in the address bar. Deep-linking opens the matching routable blade. Non-URL child blades ride on top of the parent's route, do not change the address bar, and are not restored after a hard refresh. Treat browser Back and Forward as route navigation, not as a complete blade-stack history.
 
-![Readmore](../concepts/blade-navigation.md#url-synchronization){: width="25"} URL sync details.
+- [URL sync details.](../concepts/blade-navigation.md#url-synchronization)
 
 ## Common mistakes
 
@@ -154,6 +154,6 @@ Every blade with a `url` segment is reflected in the address bar. Closing the bl
 !!! warning "Removing meta.root from the App route"
     The framework anchors the blade catch-all and the auth guard on `meta: { root: true }`. Without it, blade navigation does not work and the auth guard never fires.
 
-![Readmore](../concepts/modules.md){: width="25"} How modules register routes.
+- [How modules register routes.](../concepts/modules.md)
 
-![Readmore](platform/auth-pages.md){: width="25"} Wiring shared auth pages.
+- [Wiring shared auth pages.](platform/auth-pages.md)

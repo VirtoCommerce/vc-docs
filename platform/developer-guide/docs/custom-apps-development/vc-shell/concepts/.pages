@@ -1,10 +1,16 @@
 title: Concepts
 nav:
+  - Architecture: architecture.md
   - Blade Navigation: blade-navigation.md
   - Modules: modules.md
+  - Module Federation: module-federation.md
   - Extensions: extensions.md
   - Layout: layout.md
+  - Theming: theming.md
+  - Forms: forms.md
+  - Notifications: notifications.md
   - Permissions Model: permissions-model.md
   - Localization: localization.md
-  - State Persistence: state-persistence.md
   - API Clients: api-clients.md
+  - AI Agent: ai-agent.md
+  - Embedded Mode: embedded-mode.md

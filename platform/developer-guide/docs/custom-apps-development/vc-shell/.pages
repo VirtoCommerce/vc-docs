@@ -1,10 +1,10 @@
 title: VC-Shell
 nav:
-  - introduction
+  - index.md
   - getting-started
   - concepts
+  - guides
   - components
   - composables
   - plugins
-  - guides
   - reference

@@ -6,7 +6,7 @@ Recipes that connect a VC-Shell module to Virto Commerce Platform subsystems: re
 
 Before wiring a module to Platform subsystems, make sure you have:
 
-- A VC-Shell app scaffolded and authenticated against a Platform instance. See [Connecting to Platform](../../getting-started/connecting-to-platform.md).
+- A VC-Shell app scaffolded and authenticated against a Platform instance. See [Connect to Platform](../../getting-started/connect-to-platform.md).
 - A generated API client for the resource you read or write. See [API clients](../../concepts/api-clients.md).
 - Familiarity with `defineAppModule` and the module registration lifecycle. See [Modules](../../concepts/modules.md).
 
@@ -44,7 +44,7 @@ const { messages, unreadCount, markAsRead } = useBladeNotifications({
 
 The subscription is tied to the blade's effect scope. When the blade closes, the framework unsubscribes automatically. Module developers do not touch the raw SignalR connection.
 
-![Readmore](../../plugins/signalr.md){: width="25"} SignalR plugin reference.
+- [SignalR plugin reference.](../../plugins/signalr.md)
 
 ## Recipe: background jobs and Hangfire
 
@@ -79,7 +79,7 @@ useBladeNotifications<ICatalogExportNotification>({
 
 Polling with `useAsync` and `setInterval` is the fallback when SignalR is unavailable, not the default. Polling burns request budget and lags behind reality; reach for it only when the Platform endpoint refuses to emit a notification.
 
-![Readmore](../../plugins/notifications.md){: width="25"} Notification system reference.
+- [Notification system reference.](../../plugins/notifications.md)
 
 ## Recipe: notifications subsystem
 
@@ -102,7 +102,7 @@ async function save() {
 
 `notification` exposes `success`, `error`, `warning`, and a default call signature. Use the declarative form for events that originate on Platform; use the imperative form for outcomes that originate in the blade. Mixing both inside the same flow is fine and common.
 
-![Readmore](../../composables/notifications/useNotifications.md){: width="25"} useNotifications reference.
+- [useNotifications reference.](../../composables/notifications/useNotifications.md)
 
 ## Recipe: asset and file upload
 
@@ -139,7 +139,7 @@ const assets = useAssetsManager(
 
 `uploadPath` is a function because the destination often depends on the entity's ID, which only exists after the first save. The composable evaluates it lazily on each upload. For a single avatar or logo field, wrap the value in a one-element computed array and bind to `VcImageUpload` instead.
 
-![Readmore](../../composables/data/useAssetsManager.md){: width="25"} useAssetsManager reference.
+- [useAssetsManager reference.](../../composables/data/useAssetsManager.md)
 
 ## Recipe: dynamic properties for entities
 
@@ -172,9 +172,9 @@ Platform's dynamic-property system lets merchants add fields to a catalog object
 
 <script setup lang="ts">
 import { useApiClient, useDynamicProperties } from "@vc-shell/framework";
-import { VcmpSellerCatalogClient } from "../../../api_client/virtocommerce.marketplacevendor";
+import { CatalogClient } from "../../../api_client/catalog";
 
-const { getApiClient } = useApiClient(VcmpSellerCatalogClient);
+const { getApiClient } = useApiClient(CatalogClient);
 
 const { getPropertyValue, setPropertyValue, loadDictionaries, loadMeasurements } =
   useDynamicProperties({
@@ -188,7 +188,7 @@ const { getPropertyValue, setPropertyValue, loadDictionaries, loadMeasurements }
 
 `setPropertyValue` mutates the property in place and cleans up empty value scaffolding, so `useBladeForm`'s deep comparison stays honest. Pass `dictionary` whenever you set a dictionary value, otherwise the composable cannot resolve `valueId` to its localized alias.
 
-![Readmore](../../components/form/vc-dynamic-property.md){: width="25"} VcDynamicProperty component reference.
+- [VcDynamicProperty component reference.](../../components/form/vc-dynamic-property.md)
 
 ## Recipe: Application Insights telemetry
 
@@ -229,7 +229,7 @@ function onExportClick() {
 
 `appInsights` is the raw `ApplicationInsights` instance, so the full SDK surface is available: `trackEvent`, `trackException`, `trackMetric`, `trackDependencyData`. Guard with `?.` because the instance is `null` when the instrumentation key was omitted at install time. Reach for `trackEvent` only for domain-specific events on top of the automatic page-view and exception stream.
 
-![Readmore](../../composables/utilities/useAppInsights.md){: width="25"} useAppInsights reference.
+- [useAppInsights reference.](../../composables/utilities/useAppInsights.md)
 
 ## Variations
 
@@ -240,4 +240,4 @@ function onExportClick() {
 | Custom template per event. | `notifications: { Event: { template: MyTemplate } }`. |
 | Polling instead of SignalR. | `useAsync` plus `setInterval` in a composable; only when SignalR is unavailable. |
 
-![Readmore](../../composables/forms/useDynamicProperties.md){: width="25"} useDynamicProperties reference.
+- [useDynamicProperties reference.](../../composables/forms/useDynamicProperties.md)

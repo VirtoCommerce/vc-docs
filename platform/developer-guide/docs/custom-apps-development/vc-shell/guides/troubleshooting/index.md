@@ -8,7 +8,7 @@ A blade that disappears the moment you click its menu entry, or never appears at
 
 Open the browser console first. The four common causes are: `useBlade()` invoked outside a blade context (for example, in a dashboard widget), a missing `defineBlade` macro on the component, a route guard that is rejecting the navigation silently, or a parent that closed itself in `onMounted` because of a thrown error. The console message names the failing function in every case.
 
-![Readmore](../../concepts/blade-navigation.md){: width="25"} Blade lifecycle in depth.
+- [Blade lifecycle in depth.](../../concepts/blade-navigation.md)
 
 ## `useBlade()` methods throw "requires blade context"
 
@@ -63,13 +63,13 @@ yarn why vue
 
 `preserveSymlinks: true` must also be set in both **vite.config.ts** and **tsconfig.json**; the scaffolder enables it, so an absent flag means a manually edited config.
 
-## Auth: 401 on refresh
+## Auth: 401 after sign-in
 
-A 401 immediately after a token refresh means the refresh token itself was rejected. The two causes: the refresh token expired (default lifetime is 30 days, the user has been idle longer), or the OAuth client on the Platform was reconfigured and the previously issued tokens no longer match its scopes.
+A 401 returned on the first protected call after sign-in means the Platform session is gone or the user lacks the role to reach the endpoint. The framework's fetch interceptor catches the 401, signs the user out, and redirects to the login page; the application sees the underlying request reject.
 
-Sign out and sign in again. If the new sign-in still hits 401 on the first protected call, open the OAuth client config on the Platform and confirm the scopes cover the API endpoints the app calls.
+Sign in again. If the new sign-in still hits 401 on the first protected call, confirm that the user's Platform role grants access to the API endpoints the app calls. A reconfigured OAuth client on the Platform can also invalidate older browser sessions; clear cookies for the Platform origin and try again.
 
-![Readmore](../../getting-started/connecting-to-platform.md){: width="25"} Auth wiring in depth.
+- [Auth wiring in depth.](../../getting-started/connect-to-platform.md)
 
 ## CORS preflight rejected
 
@@ -90,7 +90,7 @@ export default defineConfig({
 });
 ```
 
-![Readmore](../../concepts/api-clients.md){: width="25"} API client patterns.
+- [API client patterns.](../../concepts/api-clients.md)
 
 ## VcDataTable state lost across reloads
 
@@ -131,7 +131,7 @@ defineBlade({
 
 If you also see another module's blade silently replace yours, you collided on the global `BladeRegistry`. Blade names are global; prefix every name with the module domain (`ReservationsList`, not `List`).
 
-![Readmore](../../getting-started/first-blade.md){: width="25"} Walk through a working module.
+- [Generate a working module.](../../getting-started/generate-app-from-prompt.md)
 
 ## Where else to look
 
@@ -141,4 +141,4 @@ A few source-side pages cover the same ground in more detail and stay closer to 
 - The modularity plugin "Common Mistakes" section, for module registration footguns (`defineOptions` missing on a blade, unwrapped `markRaw` on dashboard widget components, duplicate blade names, locale key collisions).
 - The vc-shell README's `portal:` troubleshooting section, for the full list of local-linking issues (lost reactivity, stale **.tsbuildinfo**, lockfile conflicts).
 
-If your symptom is not listed here or in the source-side pages, the [Connecting to the Platform](../../getting-started/connecting-to-platform.md) and [Installation](../../getting-started/installation.md) pages also carry inline `!!! warning` blocks for the most common setup failures.
+If your symptom is not listed here or in the source-side pages, the [Connect to Platform](../../getting-started/connect-to-platform.md) and [Manual CLI Start](../../getting-started/manual-cli-start.md) pages also carry inline `!!! warning` blocks for common setup failures.

@@ -51,4 +51,4 @@ Locale follows the host: when `isEmbedded` is `true`, `useShellBootstrap` calls 
 - A `<permission>` declared on the app so the menu entry respects back-office access control.
 - Module deployed to a Platform instance whose VC-Shell dependency supports embedded mode. The feature landed in VC-Shell 1.1.61.
 
-![Readmore](../../introduction/architecture-overview.md){: width="25"} How the shell composes apps.
+- [How the shell composes apps.](../../concepts/architecture.md)

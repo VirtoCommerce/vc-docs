@@ -27,6 +27,7 @@ When the returned `action` is called, `useAsync` automatically:
 ## Quick Start
 
 ```typescript
+// pseudo-code: replace OrderClient with your generated API client
 import { useAsync, useApiClient } from "@vc-shell/framework";
 import { OrderClient } from "@api/orders";
 
@@ -203,6 +204,7 @@ const { action: silentRefresh } = useAsync(
 The standard pattern for API operations in VC-Shell:
 
 ```typescript
+// pseudo-code: replace VcmpSellerCatalogClient with your generated API client
 import { useAsync, useApiClient } from "@vc-shell/framework";
 import { VcmpSellerCatalogClient } from "@api/client";
 
@@ -245,6 +247,7 @@ The standard VC-Shell pattern: encapsulate all CRUD operations for an entity in 
 
 ```typescript
 // composables/useFulfillmentCenter/index.ts
+// pseudo-code: replace VcmpSellerCatalogClient with your generated API client
 import { useApiClient, useAsync, useLoading } from "@vc-shell/framework";
 import { VcmpSellerCatalogClient, type FulfillmentCenter } from "@api/client";
 

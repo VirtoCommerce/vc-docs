@@ -517,7 +517,7 @@ The most common pattern: a list workspace that opens a details blade on row clic
 <script setup lang="ts">
 import { useBlade } from "@vc-shell/framework";
 
-defineOptions({ name: "ProductsList", url: "/products", isWorkspace: true });
+defineBlade({ name: "ProductsList", url: "/products", isWorkspace: true });
 
 const { openBlade } = useBlade();
 const selectedItemId = ref<string>();
@@ -551,7 +551,7 @@ defineExpose({ reload, title: "Products" });
 <script setup lang="ts">
 import { useBlade, usePopup } from "@vc-shell/framework";
 
-defineOptions({ name: "ProductDetails", url: "/product-details" });
+defineBlade({ name: "ProductDetails", url: "/product-details" });
 
 const { param, onBeforeClose, closeSelf, callParent } = useBlade();
 const { showConfirmation } = usePopup();

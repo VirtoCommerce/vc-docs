@@ -129,8 +129,8 @@ All five pages accept the same two branding props:
     The `Invite` and `ResetPassword` pages fail without the URL parameters that the Platform's email links carry. Both validate the token on mount and disable the form when validation fails. If you replace the email template, keep the `userId`, `userName`, and `token` query parameter names exactly.
 
 !!! warning "Replacing the OAuth flow"
-    The shared pages call `useUserManagement` under the hood, which speaks to the Platform's `/connect/token` endpoint and stores the result in `localStorage` under `vc_auth_data`. If you write a custom wrapper, return an object that exposes `signIn` and `signOut` and let the framework handle the storage. Replacing the storage manually breaks the request interceptor that attaches the bearer token to every API call.
+    The shared pages call `useUserManagement` under the hood. Its `signIn` first calls the Platform's `login` endpoint, which sets a session cookie that the browser replays on every same-origin API call, then calls `/connect/token` to obtain an access and refresh token that are stored in `localStorage` under `vc_auth_data`. Cookies authenticate the everyday API path; the token in storage backs `getAccessToken()` for flows that need an explicit token. If you write a custom wrapper, return an object that exposes `signIn` and `signOut` and let the framework handle the storage; editing `vc_auth_data` directly desynchronizes the UI's view of the session from the actual cookie.
 
-![Readmore](../../getting-started/connecting-to-platform.md){: width="25"} Connecting to the Platform.
+- [Connecting to the Platform.](../../getting-started/connect-to-platform.md)
 
-![Readmore](../../composables/user/useUser.md){: width="25"} useUser composable.
+- [useUser composable.](../../composables/user/useUser.md)

@@ -1,10 +1,10 @@
 # Modules
 
-A module is the unit of feature packaging in VC-Shell: a self-contained Vue plugin that bundles blades, routes, menu items, notification handlers, and translations for one bounded subdomain.
+A module is the unit of feature packaging inside a VC-Shell application: a self-contained unit that bundles blades, routes, menu items, notification handlers, and translations for one bounded subdomain.
 
-Modules exist to make features composable. A standalone app bundles its modules at build time. A host app loads remote modules at runtime via Module Federation, with semver compatibility filtering. Either way, the host calls `app.use(myModule)` and the install function registers blades in the `BladeRegistry`, creates routes, attaches menu items, registers notification types, and merges locale bundles.
+Application modules live in `src/modules/` and are bundled with the app. The app imports each module from its entry point and installs it; the framework reads the module's declarations and adds the blades, routes, menu entries, notification handlers, and locale bundles to the running app.
 
-Two modules never import from each other directly. Cross-module wiring goes through extension points or the menu service. That is what lets a remote module ship independently and still slot into a host without name collisions.
+Modules keep their internals private by default. Cross-module UI wiring goes through extension points, the menu service, or explicit public exports from the module entry point. A module may expose composables from its `index.ts` as a deliberate frontend contract; consumers should import that public export instead of reaching into another module's private folder structure.
 
 A module is produced by `defineAppModule()`, which returns a standard Vue plugin:
 
@@ -39,49 +39,25 @@ src/modules/orders/
 ├─ pages/            Blade components.
 ├─ composables/      Module-scoped logic (useList, useDetails).
 ├─ components/       Module-scoped Vue components.
+├─ widgets/          Blade widgets, widget definitions, and widget-specific composables.
+├─ utilities/        Module-scoped helper functions (optional).
 ├─ locales/          Translation bundles per language.
 └─ notifications/    Notification template components (optional).
 ```
 
-Dashboard widgets are not registered through `defineAppModule`. They use `registerDashboardWidget(...)`. See [Modularity plugin reference](../plugins/modularity.md).
+Dashboard widgets are registered with `registerDashboardWidget(...)`, not through the `defineAppModule` options object. Widget components can live under `components/`; widget composition logic often lives under `widgets/`.
 
 ## API
 
-`defineAppModule` takes a single options object. Every field is optional, so `defineAppModule({})` is valid for modules that only register dashboard widgets or extension contributions.
-
-```ts
-defineAppModule({
-  blades?:      Record<string, Component>;
-  locales?:     Record<string, object>;
-  notifications?: ModuleNotificationsConfig;
-  notificationTemplates?: Record<string, Component>; // legacy
-});
-```
+`defineAppModule` takes a single options object. Every field is optional, so `defineAppModule({})` is valid when a folder must still be installed through module discovery but has no blades, locales, or notifications of its own.
 
 | Option | Purpose |
 | --- | --- |
 | `blades`. | Record of blade components. Keys serve as fallback names when `defineBlade` does not set one. |
 | `locales`. | Record keyed by language code (`{ en, de }`). Each value is a translation object. |
-| `notifications`. | Notification type configurations (toast mode, severity, custom templates). |
-| `notificationTemplates`. | Legacy path. Use `notifications` for new code. |
+| `notifications`. | Notification type configurations (toast mode, severity, custom templates). See [Notifications](notifications.md). |
 
-Returns a standard Vue plugin: `{ install(app) { ... } }`.
-
-!!! note "Legacy adapter"
-    `createAppModule(pages, locales, notificationTemplates, components)` delegates to `defineAppModule`. Migrate on touch: `defineAppModule({ blades: pages, locales })`.
-
-## Lifecycle
-
-When `app.use(module)` runs, the install function executes synchronously and in this order:
-
-1. **Blade registration.** Each blade lands in `BladeRegistry`. With `url` and `menuItem` set, the menu service registers a sidebar entry.
-2. **Notification registration (new API).** Entries in `notifications` go into the notification store.
-3. **Legacy notification compatibility.** If only `notificationTemplates` is provided, or a blade has a deprecated `notifyType`, the framework keeps the old behavior and emits a deprecation warning.
-4. **Locale merge.** Translation bundles are merged into the global `vue-i18n` instance.
-
-Blades are registered first so menu items can reference them; locales come last because they are purely additive. Full step-by-step including the legacy shims: [Modularity plugin reference](../plugins/modularity.md#module-lifecycle).
-
-![Readmore](../plugins/modularity.md){: width="25"} Modularity plugin reference.
+- [Modularity plugin reference.](../plugins/modularity.md)
 
 ## Blade static properties
 
@@ -96,12 +72,12 @@ defineBlade({
   url: "/orders",
   isWorkspace: true,
   routable: true,
-  permissions: ["seller:orders:view"],
+  permissions: ["orders:order:view"],
   menuItem: {
     title: "ORDERS.MENU.TITLE",
     icon: "lucide-shopping-cart",
     priority: 10,
-    permissions: ["seller:orders:view"],
+    permissions: ["orders:order:view"],
   },
 });
 </script>
@@ -109,14 +85,14 @@ defineBlade({
 
 | Property | Default | Notes |
 | --- | --- | --- |
-| `name`. | Export key. | Unique key in `BladeRegistry`. Always set explicitly. |
-| `url`. | `undefined`. | URL path. A route is created when set. |
+| `name`. | Export key. | The global lookup key used by `openBlade({ name: ... })`. Always set explicitly. |
+| `url`. | `undefined`. | URL path for opening or restoring the blade from navigation. |
 | `isWorkspace`. | `false`. | `true` for top-level workspaces. |
-| `routable`. | `true`. | Whether a router route is created. |
+| `routable`. | `true`. | Whether the blade may be opened from a URL when the URL points to it. Set `false` for blades that should only be opened programmatically. |
 | `permissions`. | `undefined`. | Required permission strings. Flow into route guard and menu visibility. |
 | `menuItem`. | `undefined`. | Sidebar menu config. Created only when `url` is also set. |
 
-Child blades, the details panels opened from a list, skip `url`, `isWorkspace`, and `menuItem`. They are opened programmatically via `openBlade(...)`.
+Child blades, such as details panels opened from a list, are usually opened programmatically via `openBlade(...)`. They may define `url` when direct URL navigation or restore should be supported, or omit `url` when they should only be reachable from parent UI. They usually do not define `isWorkspace` or `menuItem`.
 
 ## Notifications
 
@@ -142,7 +118,7 @@ notifications: {
 
 Full schema: [Modularity plugin reference](../plugins/modularity.md#registering-notification-types).
 
-![Readmore](../plugins/notifications.md){: width="25"} Notifications plugin reference.
+- [Notifications plugin reference.](../plugins/notifications.md)
 
 ## Locales
 
@@ -189,10 +165,10 @@ export default defineAppModule({ blades: { HelloWorld } });
 
 Workspace list blade plus a child details blade. The list exposes `reload`; the details calls `callParent("reload")` after save. Full code: [Modularity plugin, CRUD example](../plugins/modularity.md#module-with-crud-blades-list--details).
 
-### Dashboard-only module
+### Dashboard widget registration
 
-```ts
-import { defineAppModule, registerDashboardWidget } from "@vc-shell/framework";
+```ts title="src/dashboard/registerSalesWidget.ts"
+import { registerDashboardWidget } from "@vc-shell/framework";
 import { markRaw } from "vue";
 import SalesChart from "./components/SalesChart.vue";
 
@@ -202,15 +178,13 @@ registerDashboardWidget({
   component: markRaw(SalesChart),
   size: { width: 12, height: 8 },
 });
-
-export default defineAppModule({});
 ```
 
-`defineAppModule({})` returns a valid plugin with no blades. Dashboard widgets are registered separately; the registration bus survives until the framework picks them up at bootstrap.
+The important part is that this file is imported during application startup, before the dashboard service reads registered widgets. If your app only discovers feature folders through `src/modules/*` default exports, wrapping a widget-only folder in `defineAppModule({})` is a valid integration shim, but it is not required by dashboard registration itself.
 
 ### Module that extends another module
 
-A module can register components against an extension point declared by another module. The host blade declares `<ExtensionPoint name="seller:commissions" />`; the contributing module calls `useExtensionPoint("seller:commissions").add({ id, component, priority })`. See [Extensions](extensions.md).
+A module can register components against an extension point declared by another module. The host blade declares `<ExtensionPoint name="account:pricing-adjustments" />`; the contributing module calls `useExtensionPoint("account:pricing-adjustments").add({ id, component, priority })`. See [Extensions](extensions.md).
 
 ## When to split
 
@@ -218,40 +192,22 @@ Split when the unit has independent lifecycle, ownership, or release cadence:
 
 - A bounded subdomain (orders, customers, inventory) deserves its own module.
 - A cross-cutting capability used by several apps should be its own publishable module.
-- A remote add-on loaded at runtime via Module Federation is necessarily its own module.
 
 Stay in one module when the boundary is organizational. A single module with subfolders is cheaper than two modules with implicit dependencies.
 
-## Module Federation
-
-Remote module manifest:
-
-```json title="frontend-module manifest"
-{
-  "id": "orders-remote",
-  "entry": "https://cdn.example.com/orders/remoteEntry.js",
-  "version": "1.4.0",
-  "compatibleWith": {
-    "dependencies": { "@vc-shell/framework": ">=2.0.0 <3.0.0" }
-  }
-}
-```
-
-The host fetches the registry from `POST /api/frontend-modules`, filters by semver, loads compatible remotes in parallel, resolves the exported Vue plugin from each, and installs with `app.use(...)`. Shared dependencies (`@vc-shell/mf-config`) keep Vue, Vue Router, `vue-i18n`, and the framework as singletons across remotes. Full flow: [Architecture overview](../introduction/architecture-overview.md#module-federation).
-
 ## Common mistakes
 
-!!! warning "Forgetting `defineBlade` (or `defineOptions({ name }))` in a blade"
+!!! warning "Forgetting `defineBlade` in a blade"
     The blade falls back to the export key as its name and ships without a route or menu entry.
 
 !!! warning "Duplicate blade names across modules"
-    `BladeRegistry` silently overwrites the earlier registration. Prefix names with the module domain (`OrdersList`, not `List`).
+    Registering two blades under the same name throws at module install time and halts the app. Prefix blade names with the module domain (`OrdersList`, not `List`) so two unrelated modules cannot collide on a generic word.
+
+!!! warning "Duplicate dashboard widget ids"
+    `registerDashboardWidget` throws when called twice with the same `id`. Prefix widget ids the same way (`orders:sales-chart`, not `sales-chart`).
 
 !!! warning "Forgetting `markRaw()` on a dashboard widget component"
     Vue treats the component definition as reactive, triggering warnings and pointless rerenders.
 
 !!! warning "Missing locale namespace"
     Two modules that both register `MENU.TITLE` collide; the second wins.
-
-!!! warning "Using `createAppModule` for new code"
-    Deprecated; does not accept the typed `notifications` option.

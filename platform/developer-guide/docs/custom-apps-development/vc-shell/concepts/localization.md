@@ -2,11 +2,9 @@
 
 Every module contributes translations to a single shared `vue-i18n` instance, so language switching propagates across the whole app in one step.
 
-VC-Shell instantiates `vue-i18n` in Composition API mode once during framework bootstrap. Modules never call `createI18n`. Instead, each module passes its locale bundles to `defineAppModule({ locales })`, and the modularity plugin merges them into `i18n.global` per language code as the module installs. The instance is a singleton; modules contribute, they do not own.
+Modules do not own their i18n instance. Each module passes locale bundles to `defineAppModule({ locales })`, and the framework merges them into the running app per language code. Translation keys are nested JSON objects namespaced under the module's domain (`ORDERS.PAGES.LIST.TITLE`); the namespace prefix is what keeps two modules from overwriting each other's labels.
 
-Translation keys are nested JSON objects, namespaced under the module's domain (`ORDERS.PAGES.LIST.TITLE`). The framework merges shallowly per language code, so two modules that both declare `MENU.TITLE` at the root overwrite each other on load order. The domain prefix is the only line of defence.
-
-Runtime locale switching goes through `useLanguages()`. The composable wraps a `LanguageService` that owns the current locale, persists it to the `VC_LANGUAGE_SETTINGS` key in `localStorage`, and reconfigures `vee-validate` in lockstep. On boot the service reads `VC_LANGUAGE_SETTINGS` first, then falls back to `APP_I18N_LOCALE` from `.env`.
+Runtime locale switching goes through `useLanguages()`. Calling `setLocale("de")` switches every translated label across the app, persists the choice so it survives a page reload, and reconfigures `vee-validate` error messages to match.
 
 ## Setting up locale bundles
 
@@ -55,7 +53,7 @@ The key shape is a free-form object tree; nesting is purely organizational. The 
 
 ## Namespacing
 
-Every key in a module's bundle must sit under a single root that names the module. `ORDERS.PAGES.LIST.TITLE`, not `PAGES.LIST.TITLE`. The reason is mechanical: `i18n.global.mergeLocaleMessage(lang, bundle)` performs a shallow merge by language code, so two modules that both ship a top-level `PAGES` object collide on shared sub-keys, and the second `app.use(...)` wins.
+Every key in a module's bundle must sit under a single root that names the module. `ORDERS.PAGES.LIST.TITLE`, not `PAGES.LIST.TITLE`. Without a prefix, two modules that both ship a top-level `PAGES` object collide on shared sub-keys, and whichever installs later wins.
 
 !!! warning "Namespace collisions are silent"
     Vue-i18n does not warn when a merge overwrites an existing key. A second module that declares `MENU.TITLE` simply replaces the first module's value, and the visible bug looks like "the wrong label". Prefix every key with the module domain to make this impossible.
@@ -92,11 +90,15 @@ const greeting = t("ORDERS.COMMON.WELCOME", { name: "Maria" });
 
 For utilities, services, and other code that runs outside the component setup context, import the `i18n` singleton directly and use `i18n.global.t(...)`. Do not call `useI18n()` from non-component code.
 
-![Readmore](../plugins/i18n.md){: width="25"} i18n plugin reference for the full API.
+- [i18n plugin reference for the full API.](../plugins/i18n.md)
 
 ## Switching the language at runtime
 
-`useLanguages()` returns the language service that drives all locale changes. `currentLocale` is a computed ref over `i18n.global.locale`; `setLocale` normalizes the input, validates it against `i18n.global.availableLocales`, switches the live locale, reconfigures `vee-validate` with the same locale, and writes the result to `VC_LANGUAGE_SETTINGS` in `localStorage`. On next page load the service re-reads that key first.
+The shell ships a built-in language picker in the user-area Settings popover (Settings → **Language** opens a submenu of every locale a module has registered). End users switch without leaving the app:
+
+![Settings popover with the Language submenu open](media/localization-language-picker.png){: style="display: block; margin: 0 auto; max-width: 540px;" }
+
+`useLanguages()` exposes the current locale and a `setLocale` action programmatically. Calling `setLocale("de")` validates the input against the locales that have actually been registered, switches every translated label, and persists the choice so the next visit starts in the same language.
 
 ```vue
 <script setup lang="ts">
@@ -117,9 +119,9 @@ function switchToGerman() {
 </template>
 ```
 
-If a caller passes a locale that is not in `availableLocales` (no module ever provided a bundle for it), `setLocale` falls back to `"en"` rather than throwing. Add new languages by shipping the bundle through `defineAppModule({ locales })` first, then the locale tag becomes selectable.
+If `setLocale` receives a tag no module has registered a bundle for, it falls back to `"en"` rather than throwing. Add new languages by shipping the bundle through `defineAppModule({ locales })` first, then the locale tag becomes selectable.
 
-![Readmore](../composables/user/useLanguages.md){: width="25"} useLanguages composable reference.
+- [useLanguages composable reference.](../composables/user/useLanguages.md)
 
 ## Pluralization and formatting
 
@@ -154,10 +156,10 @@ Interpolation uses `{name}` placeholders resolved from the second argument. For 
     `menuItem: { title: "Orders" }` ships a literal label; the menu service has no key to re-resolve when the locale changes. Pass an i18n key (`"ORDERS.MENU.TITLE"`) and let the framework translate.
 
 !!! warning "Forgetting to re-export a language from `locales/index.ts`"
-    The file in `locales/de.json` exists, but `index.ts` only re-exports `en`. The German bundle never reaches `i18n.global`, and `setLocale("de")` falls back to `"en"` because `"de"` is not in `availableLocales`.
+    The file in `locales/de.json` exists, but `index.ts` only re-exports `en`. The German bundle never reaches the running app, and `setLocale("de")` falls back to `"en"`.
 
 !!! warning "Fallback locale set but its bundle never loaded"
-    Setting `APP_I18N_LOCALE=fr` in `.env` without providing a French bundle from any module leaves the app in `formatFallbackMessages` mode: keys render as their raw `MODULE.PAGE.LABEL` strings. Either ship the bundle or change the default.
+    Setting `APP_I18N_LOCALE=fr` in `.env` without providing a French bundle from any module leaves the app rendering raw keys (`MODULE.PAGE.LABEL`) wherever French was expected. Either ship the bundle or change the default.
 
-!!! warning "Calling `createI18n()` from a module"
-    A module-local i18n instance is isolated from the framework's. Translations from other modules are invisible to it, and `setLocale` on the shared service has no effect on its strings. Always import the singleton from `@vc-shell/framework`.
+!!! warning "Creating a local i18n instance"
+    Calling `createI18n` inside a module gives you a private translator that the rest of the app cannot see. Other modules' strings disappear and `setLocale` has no effect on it. Use the framework's instance via `useI18n()`.

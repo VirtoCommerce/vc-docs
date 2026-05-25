@@ -16,10 +16,20 @@ VC-Shell apps follow a few overarching principles. Treat them as defaults, not a
 | Principle | What it means |
 | --- | --- |
 | **High cohesion**. | Related code lives together. A blade, its composable, its types, and its locale strings sit in the same module folder. |
-| **Low coupling**. | Modules do not import from each other. Cross-module wiring runs through extension points or the menu service. |
+| **Low coupling**. | Modules keep internals private. Cross-module UI wiring runs through extension points or the menu service; shared composables are imported only when they are intentionally exposed as a module contract. |
 | **Colocation**. | Files that change together live together. Resist organizing strictly by technical layer (`all-types/`, `all-composables/`) at the app level. |
 | **Convention over configuration**. | Follow the scaffolder's layout. Diverging adds onboarding cost; reverting later costs more. |
 | **Verify, don't assume**. | Before reusing or refactoring, read the source. APIs evolve. |
+
+## AI-generated work
+
+Use `/vc-app design` and `/vc-app generate` to get to a working module quickly, then treat the result as production code you own. The generated scaffold gives you the framework shape; your job is to verify contracts, replace mocks, and make the business behavior explicit.
+
+- **Keep the generated boundaries**. Preserve module-local pages, composables, locales, and API wiring unless there is a concrete reason to move them.
+- **Promote prototypes deliberately**. Use `/vc-app promote <module>` when a mock-backed module is ready for a Platform API. Do not mix mock arrays and real API calls in the same composable after promotion.
+- **Review generated permissions and routes**. AI can infer intent, but final route names, menu labels, and permission codes are product decisions.
+- **Type-check before manual cleanup**. Run the app and type-check the generated module before broad refactoring; otherwise it is hard to tell whether a failure came from generation or cleanup.
+- **Document deviations inside the module**. If a module intentionally breaks the scaffold convention, leave a short README or code comment near the decision.
 
 ## Code organization
 
@@ -50,8 +60,8 @@ Consistent names make the codebase searchable and the module boundaries obvious.
 | Blade name | `<Module><Entity><Role>` | `OrdersList`, `OrderDetails`, `OrderShipmentDetails` |
 | Composable | `use<Subject>` | `useOrdersList`, `useOrderDetails` |
 | Locale key | `MODULE.SECTION.SUBSECTION.KEY` | `ORDERS.PAGES.LIST.TABLE.HEADER.STATUS` |
-| Permission | `<domain>:<entity>:<verb>` | `seller:orders:view`, `catalog:product:edit` |
-| Extension point id | `<owning-module>:<slot>` | `seller:commissions`, `order:line-items` |
+| Permission | `<domain>:<entity>:<verb>` | `orders:order:view`, `catalog:product:edit` |
+| Extension point id | `<owning-module>:<slot>` | `account:pricing-adjustments`, `order:line-items` |
 
 ## Styling strategy
 
@@ -61,7 +71,7 @@ VC-Shell ships a CSS-variable theme system layered with Tailwind utilities. Stay
 - **Tailwind utilities for layout**. Use `tw-` prefixed utilities for spacing, flex, and grid. Reach for SCSS only when a computed property or a complex selector is required.
 - **Don't fork Vc-components**. Wrap them. A `MyCard` that wraps `VcCard` with app-specific defaults is cheaper than a forked `VcCard` to maintain.
 
-![Readmore](ui/index.md){: width="25"} Theming and the UI layer.
+- [Theming and the UI layer.](ui/index.md)
 
 ## TypeScript
 
@@ -101,17 +111,17 @@ Test the layer that holds the logic, not the layer that paints it.
 A few patterns reliably bite later. Catch them in review.
 
 !!! warning "Cross-module imports"
-    Module A importing from **src/modules/B/** is a smell. Move the shared piece to **src/composables/** or expose an extension point in B that A consumes.
+    Module A reaching into **src/modules/B/composables/internalThing** is a smell. Move app-wide utilities to **src/composables/**, expose UI composition through an extension point, or export a stable composable from module B's **index.ts** and treat it as a public frontend contract.
 
 !!! warning "Hand-rolled fetch in modules"
-    All Platform calls go through `useApiClient`. A bare `fetch("/api/...")` skips the framework's auth interceptor and breaks token refresh.
+    All Platform calls go through `useApiClient`. The framework's fetch wrapper still applies its timeout, offline check, and 401-redirect to any same-origin `/api/*` request — including a bare `fetch("/api/...")` — so the operational guards survive. What you lose with a bare fetch is the generated client's typed request and response signatures and the unified `useAsync` error handling that blade banners rely on.
 
 !!! warning "Blade names without a module prefix"
-    `BladeRegistry` is a flat global namespace. Two modules registering `Details` collide; the second overwrites the first.
+    `BladeRegistry` is a flat global namespace. Registering two blades under the same name throws at module install time. Prefix every name with the module domain (`OrdersList`, not `List`).
 
 !!! warning "Modifying generated code under src/api_client/"
-    Rerunning `yarn generate:api-client` discards every hand-edit. Wrap or extend in your own composable instead.
+    Rerunning `yarn generate-api-client` discards every hand-edit. Wrap or extend in your own composable instead.
 
-![Readmore](../concepts/modules.md){: width="25"} Module mechanics.
+- [Module mechanics.](../concepts/modules.md)
 
-![Readmore](modules-and-extensions/index.md){: width="25"} Distributing modules.
+- [Distributing modules.](modules-and-extensions/index.md)

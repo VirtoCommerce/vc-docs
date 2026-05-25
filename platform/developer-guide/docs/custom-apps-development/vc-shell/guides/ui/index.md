@@ -6,7 +6,7 @@ Recipes for styling a VC-Shell app: tweaking the color palette through CSS custo
 
 Before customizing the UI, make sure you have:
 
-- A VC-Shell app scaffolded and running. See [Create your app](../../getting-started/create-your-app.md).
+- A VC-Shell app scaffolded and running. See [Generate an app from a prompt](../../getting-started/generate-app-from-prompt.md) or [Manual CLI start](../../getting-started/manual-cli-start.md).
 - Basic familiarity with Tailwind CSS utility classes and CSS custom properties.
 - An editor that resolves SCSS imports for **src/styles/custom.scss**.
 
@@ -45,7 +45,7 @@ setTheme("acme");
 
 The active theme is written to `<html data-theme="acme">` and persisted to localStorage. To add a dark counterpart, define a second `:root[data-theme="acme-dark"]` block with darker values and register both keys.
 
-![Readmore](../../composables/ui-state/useTheme.md){: width="25"} useTheme reference.
+- [useTheme reference.](../../composables/ui-state/useTheme.md)
 
 ## Recipe: extending Tailwind
 
@@ -106,7 +106,7 @@ import { VcCard } from "@vc-shell/framework";
 
 The wrapper inherits every prop, slot, and event from **VcCard** through `v-bind="$attrs"` and the slot loop, so callers can still pass anything the underlying component accepts. Forking the source would mean re-implementing keyboard handling, ARIA attributes, and shared variants, and you would lose every fix that ships in subsequent framework releases. Wrap, and you keep the upgrades for free.
 
-![Readmore](../../components/layout/vc-card.md){: width="25"} VcCard reference.
+- [VcCard reference.](../../components/layout/vc-card.md)
 
 ## Recipe: Storybook for visual exploration
 
@@ -160,7 +160,7 @@ function applyTenantSkin(tenantId: string) {
 
 Calling `applySettings()` early, for example in **App.vue** setup, sets an internal flag that skips the Platform API fetch entirely. Use that path for fully custom apps that never read from the Platform.
 
-![Readmore](../../composables/services/useSettings.md){: width="25"} useSettings reference.
+- [useSettings reference.](../../composables/services/useSettings.md)
 
 ## Variations
 
@@ -172,4 +172,4 @@ Calling `applySettings()` early, for example in **App.vue** setup, sets an inter
 | Dark mode toggle. | Register the built-in `dark` theme via `useTheme().register({ key: "dark" })` and bind a button to `setTheme("dark")` or `next()`. |
 | Per-component override. | Wrap the Vc component as in **Recipe: compose, don't fork**; do not edit framework source. |
 
-![Readmore](../../concepts/layout.md){: width="25"} Layout primitives and how they compose with theme tokens.
+- [Layout primitives and how they compose with theme tokens.](../../concepts/layout.md)

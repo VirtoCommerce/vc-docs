@@ -2,9 +2,9 @@
 
 VC-Shell consumes a user's Platform permissions as a flat string list and uses it to gate blade navigation, menu visibility, toolbar buttons, and arbitrary UI fragments.
 
-Permissions are string identifiers like `order:read`, `catalog:manage`, or `seller:orders:view`, granted by Platform roles. The Platform issues them as OAuth scopes on the access token; VC-Shell reads the resolved set from the current user object during sign-in and keeps it cached in memory for the session. `usePermissions()` and the `$hasAccess` global property both check against that cached set.
+Permissions are string identifiers like `order:read`, `catalog:manage`, or `orders:order:view`, granted by Platform roles. The framework loads the current user's permission set at sign-in and keeps it available for the session through `usePermissions()` and the `$hasAccess` template helper.
 
-Blade-level gating is declarative. A blade declares `permissions` through `defineBlade`, and the framework wires the check into the blade router guard and into menu visibility. Module authors do not write the guard themselves: when a user without the required permission tries to open a workspace by URL, the framework cancels the navigation, shows a toast, and redirects to the main route.
+Blade-level gating is declarative. A blade declares `permissions` through `defineBlade`, and the framework checks them during navigation and menu rendering. You do not write the guard yourself: when a user without the required permission tries to open a workspace by URL, the framework cancels the navigation, shows a toast, and redirects to the main route.
 
 Server-side enforcement is the source of truth. Every check described on this page runs in the browser, on data the user can read with DevTools. UI gating exists to hide controls the user cannot exercise, not to keep secrets. The Platform's API rejects unauthorized calls regardless of what the UI shows.
 
@@ -14,9 +14,9 @@ A permission is an opaque string. The Platform decides the naming; VC-Shell only
 
 - `order:read`, `order:create`, `order:update`, `order:delete`, `order:manage`.
 - `catalog:product:edit`, `catalog:category:read`, `catalog:manage`.
-- `seller:orders:view`, `seller:catalog:edit`.
+- `orders:order:view`, `catalog:product:edit`.
 
-The exact strings come from the Platform role assigned to the user. Module authors agree with the backend team on which permission gates which blade, then hardcode the strings in `defineBlade` and `useToolbar` calls. Treat them as identifiers that match a contract, not as a typed enum the framework exposes.
+The exact strings come from the Platform role assigned to the user. Module authors agree with the backend team on which permission gates which blade, then hardcode the strings in `defineBlade` and on individual toolbar items. Treat them as identifiers that match a contract, not as a typed enum the framework exposes.
 
 Two short-circuits apply to every check, regardless of the string:
 
@@ -25,7 +25,7 @@ Two short-circuits apply to every check, regardless of the string:
 
 ## Blade-level gating
 
-A blade declares its required permissions through `defineBlade`. The framework reads them during module install, attaches them to the entry in `BladeRegistry`, and the blade router guard checks them before opening a workspace.
+A blade declares its required permissions through `defineBlade`. The framework checks them every time a workspace is about to open.
 
 ```vue title="src/modules/orders/pages/OrdersList.vue"
 <script setup lang="ts">
@@ -35,12 +35,12 @@ defineBlade({
   name: "OrdersList",
   url: "/orders",
   isWorkspace: true,
-  permissions: ["seller:orders:view"],
+  permissions: ["orders:order:view"],
   menuItem: {
     title: "ORDERS.MENU.TITLE",
     icon: "lucide-shopping-cart",
     priority: 10,
-    permissions: ["seller:orders:view"],
+    permissions: ["orders:order:view"],
   },
 });
 </script>
@@ -48,15 +48,15 @@ defineBlade({
 
 What the framework does with `permissions`:
 
-- The menu service filters the sidebar. A workspace whose user lacks the permission does not appear.
-- The blade router guard checks the permission on URL restore. A direct visit to `/orders` for an unauthorized user redirects to the main route and surfaces a toast with key `PERMISSION_MESSAGES.ACCESS_RESTRICTED`.
-- `useBladeStack.openWorkspace` repeats the check as a defense-in-depth net for programmatic navigation.
+- The sidebar filters out workspaces the user cannot reach. A blade whose permission the user lacks does not appear as a menu entry.
+- A direct URL visit to a forbidden workspace redirects to the main route and shows an "access restricted" toast.
+- Programmatic `openBlade` calls to a forbidden workspace are blocked by the same check.
 
-Note that `menuItem.permissions` is independent. It defaults to the blade-level `permissions` only when you let it; if you set `menuItem.permissions` explicitly, that value wins for menu visibility, even when it disagrees with the blade's own gate. Keep the two in sync unless you have a reason to diverge.
+`menuItem.permissions` is independent of the blade's own gate. It defaults to the blade-level `permissions` only when you let it; if you set `menuItem.permissions` explicitly, that value wins for menu visibility, even when it disagrees with the blade's own gate. Keep the two in sync unless you have a reason to diverge.
 
 Child blades, the details panels opened from a list, are opened programmatically. They inherit no gate from their parent. If a details blade should be permission-gated, declare `permissions` on it too.
 
-![Readmore](../plugins/permissions.md){: width="25"} Permissions plugin reference.
+- [Permissions plugin reference.](../plugins/permissions.md)
 
 ## Component-level gating
 
@@ -81,30 +81,43 @@ if (!hasAccess("catalog:manage")) {
 }
 ```
 
-`$hasAccess` and the composable's `hasAccess` are the same function, exposed two ways. Templates reach it through `app.config.globalProperties.$hasAccess`; composition API code calls `usePermissions().hasAccess`. Both run the same set-membership check against `user.value.permissions`.
+`$hasAccess` in templates and `hasAccess` from `usePermissions()` are the same check exposed two ways. Both consult the user's permission set; templates use the global helper, composition API code uses the composable.
 
-Toolbar buttons accept a `permissions` field that the framework filters before render, so you rarely wrap a toolbar button in a `v-if`:
+Toolbar buttons gate visibility through `isVisible`, a computed boolean that consults `hasAccess`. A blade declares its toolbar as a plain `IBladeToolbar[]` array and passes it to `VcBlade`:
 
-```ts title="Toolbar item gating"
-const toolbar = useToolbar([
+```vue title="Toolbar item gating"
+<script setup lang="ts">
+import { computed, ref } from "vue";
+import { usePermissions, VcBlade, type IBladeToolbar } from "@vc-shell/framework";
+
+const { hasAccess } = usePermissions();
+
+const bladeToolbar = ref<IBladeToolbar[]>([
   {
     id: "save",
     title: "Save",
     icon: "lucide-save",
-    permissions: "order:update",
+    isVisible: computed(() => hasAccess("order:update")),
     clickHandler: () => saveOrder(),
   },
   {
     id: "delete",
     title: "Delete",
     icon: "lucide-trash",
-    permissions: ["order:delete", "order:manage"],
+    isVisible: computed(() => hasAccess(["order:delete", "order:manage"])),
     clickHandler: () => deleteOrder(),
   },
 ]);
+</script>
+
+<template>
+  <VcBlade :toolbar-items="bladeToolbar" />
+</template>
 ```
 
-![Readmore](../composables/user/usePermissions.md){: width="25"} usePermissions composable reference.
+`isVisible` runs on every reactivity pass, so the toolbar reacts immediately to user-permission changes. Use `disabled: computed(() => !hasAccess(...))` instead when the action should stay visible but be disabled.
+
+- [usePermissions composable reference.](../composables/user/usePermissions.md)
 
 ## Working with multiple permissions
 
@@ -139,7 +152,7 @@ If a permission gate is the only thing standing between a user and a forbidden o
     `hasAccess(["order:read", "order:manage"])` passes when the user has either permission. Reviewers and authors both misread this regularly. Use `hasAccess(a) && hasAccess(b)` when you need both.
 
 !!! warning "Forgetting `menuItem.permissions`"
-    A blade with `permissions: ["seller:orders:view"]` and a `menuItem` without its own `permissions` falls back to the blade gate, which is usually what you want. The moment you set `menuItem.permissions` explicitly, that value wins. Set it deliberately or leave it off; do not copy-paste a stale value that drifts from the blade gate.
+    A blade with `permissions: ["orders:order:view"]` and a `menuItem` without its own `permissions` falls back to the blade gate, which is usually what you want. The moment you set `menuItem.permissions` explicitly, that value wins. Set it deliberately or leave it off; do not copy-paste a stale value that drifts from the blade gate.
 
 !!! warning "Gating child blades by relying on the parent"
     Child blades opened by `openBlade(...)` do not inherit `permissions` from the workspace that opened them. If the details blade should be gated, declare `permissions` on it too.

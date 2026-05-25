@@ -86,7 +86,7 @@ function openDetails() {
 ### Inline Action in a Table Cell
 
 ```vue
-<VcColumn id="actions" header="Actions" :width="120">
+<VcColumn id="actions" header="Actions" width=\"120px\">
   <template #default="{ row }">
     <div class="tw-flex tw-gap-3">
       <VcLink @click="editItem(row)">Edit</VcLink>

@@ -82,6 +82,7 @@ registerToolbarItem({
 Use `updateToolbarItem` to change any property of a registered button without re-registering it. This is the recommended pattern for toggling disabled state during async operations.
 
 ```typescript
+// pseudo-code: replace OrderClient with your generated API client
 <script setup lang="ts">
 import { watch } from "vue";
 import { useToolbar, useAsync } from "@vc-shell/framework";
@@ -205,6 +206,7 @@ registerToolbarItem({
 ### Complete Blade with Save / Delete / Refresh
 
 ```typescript
+// pseudo-code: replace OrderClient with your generated API client
 <script setup lang="ts">
 import { watch } from "vue";
 import { useToolbar, useAsync, usePermissions, useApiClient } from "@vc-shell/framework";

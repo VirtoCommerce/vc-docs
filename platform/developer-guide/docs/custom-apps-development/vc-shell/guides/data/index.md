@@ -1,6 +1,6 @@
 # Data
 
-Recipes for the data layer behind a list blade: pagination, sorting, filtering, selection, custom cell rendering, and persisted table state. Each recipe is trimmed from a real orders module and the sample-module CLI template.
+Recipes for the data layer behind a list blade: pagination, sorting, filtering, selection, custom cell rendering, and persisted table state.
 
 ## Prerequisites
 
@@ -17,20 +17,16 @@ For any dataset that does not fit in memory, page on the server. Pair `useDataTa
 ```ts title="composables/useOrdersList.ts"
 import { computed, ref } from "vue";
 import { useAsync, useApiClient, useDataTablePagination } from "@vc-shell/framework";
-import {
-  VcmpSellerOrdersClient,
-  type SearchOrdersQuery,
-  type CustomerOrderSearchResult,
-} from "../../../api_client/virtocommerce.marketplacevendor";
+import { OrdersClient, type OrderSearchCriteria, type OrderSearchResult } from "../../../api_client/orders";
 
 export function useOrdersList(options?: { pageSize?: number; sort?: string }) {
-  const { getApiClient } = useApiClient(VcmpSellerOrdersClient);
+  const { getApiClient } = useApiClient(OrdersClient);
   const pageSize = options?.pageSize ?? 20;
 
-  const searchQuery = ref<SearchOrdersQuery>({ take: pageSize, sort: options?.sort });
-  const searchResult = ref<CustomerOrderSearchResult>();
+  const searchQuery = ref<OrderSearchCriteria>({ take: pageSize, sort: options?.sort });
+  const searchResult = ref<OrderSearchResult>();
 
-  const { action: loadOrders, loading } = useAsync<SearchOrdersQuery>(async (query) => {
+  const { action: loadOrders, loading } = useAsync<OrderSearchCriteria>(async (query) => {
     searchQuery.value = { ...searchQuery.value, ...(query || {}) };
     const client = await getApiClient();
     searchResult.value = await client.searchOrders(searchQuery.value);
@@ -68,7 +64,7 @@ export function useOrdersList(options?: { pageSize?: number; sort?: string }) {
 
 The composable returns `pagination` as a single reactive object exposing `currentPage`, `pages`, `skip`, `pageSize`, `totalCount`, and `goToPage`. Pass the whole object to the `pagination` prop and wire `pagination-click` to `pagination.goToPage`.
 
-![Readmore](../../composables/data/useDataTablePagination.md){: width="25"} useDataTablePagination API reference.
+- [useDataTablePagination API reference.](../../composables/data/useDataTablePagination.md)
 
 ## Recipe: client-side filtering
 
@@ -92,13 +88,13 @@ Trade-off: simpler wiring, but pagination over `filteredItems` becomes meaningle
 
 ## Recipe: sorting integration
 
-`useTableSort` tracks the current sort property and direction, and exposes a `sortExpression` ref like `"createdDate:DESC"` ready to send to the API. `VcDataTable` reports sort changes through `v-model:sort-field` and `v-model:sort-order`; pipe both into the composable's handler, then watch `sortExpression` and reload.
+`useDataTableSort` tracks the current sort field and direction, and exposes a `sortExpression` ref like `"createdDate:DESC"` ready to send to the API. `VcDataTable` reports sort changes through `v-model:sort-field` and `v-model:sort-order`; bind both to the composable's refs, then watch `sortExpression` and reload.
 
 ```ts title="Sort wiring"
-import { useTableSort } from "@vc-shell/framework";
+import { useDataTableSort } from "@vc-shell/framework";
 
-const { sortExpression } = useTableSort({
-  initialProperty: "createdDate",
+const { sortField, sortOrder, sortExpression } = useDataTableSort({
+  initialField: "createdDate",
   initialDirection: "DESC",
 });
 
@@ -122,20 +118,23 @@ watch(sortExpression, (value) => {
 
 Mark sortable columns with `:sortable="true"`. Override the backend field with `sort-field` on `VcColumn` when it differs from the column `id`.
 
-![Readmore](../../composables/data/useTableSort.md){: width="25"} useTableSort API reference.
+- [useDataTableSort API reference.](../../composables/data/useDataTableSort.md)
 
 ## Recipe: row selection and bulk actions
 
-Set `selection-mode="multiple"` to render a checkbox column, bind `v-model:selection` to an array ref, and drive toolbar item state from the selected IDs.
+Set `selection-mode="multiple"` to render a checkbox column, bind `v-model:selection` to an array ref, and drive toolbar item state from the selected IDs. For server-paginated tables, also bind `v-model:select-all-active` and `:select-all="true"` so the user can select every record across all pages with a single click — the table fires `@select-all` and your bulk command sends an "all" flag instead of an ID list.
 
-```vue title="Bulk delete toolbar"
+```vue title="Bulk delete with select-all across pages"
 <template>
   <VcBlade :title="title" :toolbar-items="bladeToolbar" width="50%">
     <VcDataTable
       v-model:selection="selectedItems"
+      v-model:select-all-active="allSelected"
       selection-mode="multiple"
+      :select-all="true"
       :items="items"
       data-key="id"
+      @select-all="allSelected = true"
     >
       <VcColumn id="name" :title="$t('LIST.NAME')" />
       <VcColumn id="price" :title="$t('LIST.PRICE')" type="money" />
@@ -144,25 +143,32 @@ Set `selection-mode="multiple"` to render a checkbox column, bind `v-model:selec
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from "vue";
+
 const selectedItems = ref<Item[]>([]);
+const allSelected = ref(false);
 const selectedIds = computed(() => selectedItems.value.map((i) => i.id).filter(Boolean));
 
-const bladeToolbar = computed<IBladeToolbar[]>(() => [
+const bladeToolbar = ref<IBladeToolbar[]>([
   {
     id: "remove",
     icon: "lucide-trash-2",
-    title: t("LIST.TOOLBAR.REMOVE"),
-    disabled: computed(() => selectedIds.value.length === 0),
+    title: computed(() => t("LIST.TOOLBAR.REMOVE")),
+    disabled: computed(() => selectedIds.value.length === 0 && !allSelected.value),
     async clickHandler() {
-      await removeItems({ ids: selectedIds.value });
+      await removeItems({
+        all: allSelected.value,
+        ids: allSelected.value ? [] : selectedIds.value,
+      });
       selectedItems.value = [];
+      allSelected.value = false;
     },
   },
 ]);
 </script>
 ```
 
-Use `data-key="id"` so the table compares rows by identifier rather than reference. Clear `selectedItems` after the bulk action completes; otherwise the checkboxes keep pointing at stale objects.
+Use `data-key="id"` so the table compares rows by identifier rather than reference. The `all: true` flag on the bulk command tells the API "delete every record matching the current filter" rather than enumerating IDs — much smaller payload, and the server applies the same access scope it would on a single delete. Clear `selectedItems` and `allSelected` after the bulk action completes.
 
 ## Recipe: custom cell renderer
 
@@ -190,11 +196,11 @@ The slot props are `{ data, field, index }`. Use the full column type (`type="st
 
 Generated clients expose binary endpoints (PDF invoices, ZIP exports, CSV reports) as methods that return `FileResponse`: a small wrapper around a `Blob` plus a suggested file name. The browser does not download the file on its own. Wrap the call in `useAsync` so the toolbar button shows a spinner, then trigger a download with a hidden anchor.
 
-```ts title="composables/useOrderDetailsNew.ts (extract)"
+```ts title="composables/useOrderDetails.ts (extract)"
 import { useApiClient, useAsync } from "@vc-shell/framework";
-import { VcmpSellerOrdersClient } from "../../../api_client/virtocommerce.marketplacevendor";
+import { OrdersClient } from "../../../api_client/orders";
 
-const { getApiClient: getOrderApiClient } = useApiClient(VcmpSellerOrdersClient);
+const { getApiClient: getOrderApiClient } = useApiClient(OrdersClient);
 
 const { loading: pdfLoading, action: loadPdf } = useAsync(async () => {
   if (!item.value?.number) return;
@@ -233,8 +239,6 @@ Pass `state-key` and `VcDataTable` persists column widths, order, sort, filters,
 
 `state-storage` defaults to `"local"` (survives reload) and accepts `"session"` for tab-scoped state. Keep `state-key` stable across releases. Renaming it discards every user's saved column layout.
 
-![Readmore](../../concepts/state-persistence.md){: width="25"} State persistence in depth.
-
 ## Variations
 
 | Variation | Change |
@@ -247,6 +251,6 @@ Pass `state-key` and `VcDataTable` persists column widths, order, sort, filters,
 | Empty state with a call to action. | `:empty-state="{ icon, title, actionLabel, actionHandler }"`. |
 | Column visibility toggle. | `:column-switcher="true"` (or `"defined"` to limit to declared columns). |
 
-![Readmore](../../components/data-display/vc-data-table.md){: width="25"} VcDataTable full prop and event reference.
+- [VcDataTable full prop and event reference.](../../components/data-display/vc-data-table.md)
 
-![Readmore](../../concepts/api-clients.md){: width="25"} API clients and the `useApiClient` contract.
+- [API clients and the `useApiClient` contract.](../../concepts/api-clients.md)

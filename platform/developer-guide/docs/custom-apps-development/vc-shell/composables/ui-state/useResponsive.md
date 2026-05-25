@@ -81,7 +81,7 @@ const { openBlade } = useBlade();
         id="image"
         title=""
         type="image"
-        :width="60"
+        width=\"60px\"
         :always-visible="true"
         mobile-role="image"
       />

@@ -105,7 +105,7 @@ A small indicator component for displaying counts, status dots, or short text la
 ## Recipe: Status Tags in a Table Cell
 
 ```vue
-<VcColumn id="status" header="Status" :width="120">
+<VcColumn id="status" header="Status" width=\"120px\">
   <template #default="{ row }">
     <VcBadge
       inline

@@ -1,6 +1,8 @@
-# How to Register New App 
+# Register an App in the Module Manifest
 
-Using the Reports application as an example, let's look at the application installation process.
+This guide describes how to register a custom app with the Virto Commerce Platform through the **module.manifest** of a hosting .NET module, using the Reports app as an example. Registration is a Platform-side step that exposes the app in the back-office app switcher and gates it behind a permission. It is independent of the app's frontend stack: VC-Shell apps, plain HTML apps, and apps built with other web frameworks all register the same way.
+
+For scaffolding the VC-Shell frontend itself, see [Getting Started](vc-shell/getting-started/getting-started.md).
 
 ## Prerequisites
 

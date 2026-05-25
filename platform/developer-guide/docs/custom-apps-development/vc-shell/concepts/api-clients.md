@@ -1,10 +1,8 @@
 # API Clients
 
-VC-Shell apps talk to a Virto Commerce Platform through typed clients generated from the Platform's OpenAPI documents. The generator (`@vc-shell/api-client-generator`) emits one TypeScript class per Platform module under `src/api_client/`; each class carries the type definitions for every request, response, and search query.
+VC-Shell apps talk to a Virto Commerce Platform through typed clients generated from the Platform's OpenAPI documents. The generator (`@vc-shell/api-client-generator`) emits one TypeScript class per Platform module under `src/api_client/`. Each class carries the type definitions for every request, response, and search query.
 
-Application code never instantiates these classes directly. The `useApiClient(ClientCtor)` composable returns an async factory that resolves to a configured, authenticated client. The base URL is filled in from `APP_PLATFORM_URL`, the OAuth token is attached, and token rotation is handled automatically. The factory is paired with `useAsync` to provide loading and error refs that flow into `<VcBlade :loading>`, `<VcButton :loading>`, and error banners.
-
-The standard composable shape across modules is: import the client class, call `useApiClient(ClientCtor)`, wrap each operation in `useAsync`, expose `items`, `loading`, and the action functions. Pagination plugs in via `useDataTablePagination`; sort strings come from `useTableSort`.
+Application code never instantiates these classes directly. The `useApiClient(ClientCtor)` composable returns an async factory that constructs the client on demand. Authentication flows through the browser session cookie that the Platform sets at sign-in; the framework redirects to the login page when the session expires. Application code never attaches a token, tracks expiry, or builds an `Authorization` header.
 
 ## Quick start
 
@@ -12,30 +10,30 @@ A minimal list composable pulls orders from the Platform and exposes a `loading`
 
 ```ts title="src/modules/orders/composables/useOrdersList.ts"
 import { useApiClient, useAsync } from "@vc-shell/framework";
-import { VcmpSellerOrdersClient, type SearchOrdersQuery } from "../../../api_client/virtocommerce.marketplacevendor";
+import { OrdersClient, type OrderSearchCriteria } from "../../../api_client/orders";
 
-const { getApiClient } = useApiClient(VcmpSellerOrdersClient);
+const { getApiClient } = useApiClient(OrdersClient);
 
-const { action: loadOrders, loading } = useAsync(async (query: SearchOrdersQuery) => {
+const { action: loadOrders, loading } = useAsync(async (query: OrderSearchCriteria) => {
   const client = await getApiClient();
   searchResult.value = await client.searchOrders(query);
 });
 ```
 
-![Readmore](../composables/data/useApiClient.md){: width="25"} Full useApiClient reference.
+- [Full useApiClient reference.](../composables/data/useApiClient.md)
 
 !!! warning "`getApiClient()` is async"
-    Call it inside the function that needs the client, never at the top of `<script setup>`. A `const client = await getApiClient()` outside an async block is a stale reference once the token rotates.
+    Call it inside the function that needs the client, never at the top of `<script setup>`. A `const client = await getApiClient()` outside an async block holds a single instance for the lifetime of the component, which is fine for stable sessions but couples your code to one client object across re-runs of the action.
 
-## CRUD pattern
+## The useApiClient + useAsync pattern
 
-Wrap each operation in its own `useAsync` so the `loading` and `saving` refs flow into the UI independently:
+The canonical shape across modules pairs `useApiClient` with `useAsync`. Each operation gets its own `useAsync` so loading and saving refs flow into the UI independently:
 
 ```ts
 import { useApiClient, useAsync } from "@vc-shell/framework";
-import { VcmpSellerCatalogClient } from "../../../api_client/...";
+import { CatalogClient } from "../../../api_client/catalog";
 
-const { getApiClient } = useApiClient(VcmpSellerCatalogClient);
+const { getApiClient } = useApiClient(CatalogClient);
 
 const item = ref<Product>();
 
@@ -55,14 +53,14 @@ const { action: remove } = useAsync(async (ids: string[]) => {
 });
 ```
 
-Inline form is fine when you only call one method per action: `await (await getApiClient()).updateOrder(command)`.
+`useAsync` catches thrown errors and exposes them through the blade's error boundary. Inline form is fine when you only call one method per action: `await (await getApiClient()).updateOrder(command)`.
 
 ## Multiple clients in one blade
 
 When a blade talks to several Platform modules, alias the destructured factory so names do not shadow each other:
 
 ```ts
-const { getApiClient } = useApiClient(VcmpSellerOrdersClient);
+const { getApiClient } = useApiClient(OrdersClient);
 const { getApiClient: getOrderApiClient } = useApiClient(OrderModuleClient);
 const { getApiClient: getStateMachineApiClient } = useApiClient(StateMachineClient);
 
@@ -70,46 +68,30 @@ const { action: loadOrder } = useAsync(async (id: string) => {
   const orders = await getApiClient();
   const order = await orders.getById(id);
 
-  const statemachine = await getStateMachineApiClient();
-  stateMachine.value = await statemachine.searchInstances({ entityId: id });
+  const stateMachine = await getStateMachineApiClient();
+  stateMachineInstance.value = await stateMachine.searchInstances({ entityId: id });
 });
 ```
-
-## Search and pagination
-
-Platform search endpoints take `{ keyword, skip, take, sort, ... }` and return `{ results, totalCount }`. Combine the client call with `useDataTablePagination` to drive `VcDataTable`:
-
-```ts
-import { useApiClient, useAsync, useDataTablePagination } from "@vc-shell/framework";
-
-const { getApiClient } = useApiClient(VcmpSellerOrdersClient);
-
-const searchQuery = ref<SearchOrdersQuery>({ take: 20 });
-const searchResult = ref<CustomerOrderSearchResult>();
-
-const { action: loadOrders, loading } = useAsync(async (q: SearchOrdersQuery = {}) => {
-  searchQuery.value = { ...searchQuery.value, ...q };
-  const client = await getApiClient();
-  searchResult.value = await client.searchOrders(searchQuery.value);
-});
-
-const pagination = useDataTablePagination({
-  pageSize: 20,
-  totalCount: computed(() => searchResult.value?.totalCount ?? 0),
-  onPageChange: ({ skip }) => loadOrders({ skip }),
-});
-
-const items = computed(() => searchResult.value?.results ?? []);
-```
-
-`useTableSort` produces the `sort` string (`"createdDate:DESC"`); pass it into the same `searchQuery`.
 
 ## Generate clients
 
-Regenerate the typed clients whenever the Platform schema changes:
+Regenerate the typed clients whenever the Platform schema changes. A scaffolded VC-Shell app exposes the generator as an npm script:
 
 ```bash
-yarn generate:api-client
+yarn generate-api-client
 ```
 
-The command reads OpenAPI from `APP_PLATFORM_URL` and writes typed classes into `src/api_client/<platform-module>/`. Each module gets its own folder with the client class, the request and response types, and the search query types. The output is committed; hand-edits are overwritten on the next run.
+The command reads OpenAPI from the configured Platform URL and writes one `<module>.ts` file per Platform module into `src/api_client/`, plus a shared `authApiBase.ts`. Each file exports the client class along with the request, response, and search-query types. The output is committed; hand-edits are overwritten on the next run.
+
+- [api-client-generator CLI reference.](../reference/cli/api-client-generator.md)
+
+## Common mistakes
+
+!!! warning "Hand-rolling an Authorization header"
+    There is nothing to hand-roll. The Platform login endpoint sets a session cookie and the browser replays it. A token-attach wrapper around `useApiClient` is wasted code; if a call comes back unauthenticated, check sign-in and the cookie, not your interceptor.
+
+!!! warning "Calling `getApiClient()` once at module load"
+    The factory is async because it is expected inside an async action. Calling it at the top of `<script setup>` ties one client instance to the component for its whole lifetime. Prefer one `await getApiClient()` per action — it is cheap, and it keeps the call shape uniform with `useAsync`.
+
+!!! warning "Reaching for a Platform client through raw `fetch`"
+    For Platform endpoints, go through a generated client. Raw `fetch` bypasses the typed signatures and the framework error handling that `useAsync` relies on. Raw `fetch` is fine for third-party hosts.

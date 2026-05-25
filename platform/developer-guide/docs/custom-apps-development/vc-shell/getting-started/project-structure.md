@@ -27,7 +27,7 @@ src/
 ├─ main.ts                       Installs the framework plugin and modules.
 ├─ bootstrap.ts                  Side effects (menu items, dashboard widgets).
 ├─ env.d.ts                      Vite env typings.
-├─ api_client/                   Generated TypeScript API clients (yarn generate:api-client).
+├─ api_client/                   Generated TypeScript API clients (yarn generate-api-client).
 ├─ components/                   App-scoped Vue components reused across modules.
 ├─ composables/                  App-scoped composables. Re-exported via composables/index.ts.
 ├─ config/                       App extras (push-hub config).
@@ -65,18 +65,18 @@ export * from "./pages";
 export * from "./composables";
 ```
 
-![Readmore](../concepts/modules.md){: width="25"} Modules in depth.
+- [Modules in depth.](../concepts/modules.md)
 
 ## Where things go
 
 | You want to add | Put it in |
 | --- | --- |
 | A new blade in an existing module. | `src/modules/<module>/pages/<MyBlade>.vue`, re-export from `pages/index.ts`. |
-| A new module. | `npx @vc-shell/create-vc-app add-module <module>`. |
-| A shared composable used by multiple modules. | `src/composables/`, exported through `composables/index.ts`. |
+| A new module. | `/vc-app generate` for AI-assisted generation, or `npx @vc-shell/create-vc-app add-module <module>` for an empty skeleton. |
+| A shared composable used by multiple modules. | Prefer `src/composables/` for app-wide utilities. If the composable belongs to a domain module, export it from that module's public `index.ts` and import it as an explicit module contract. |
 | A shared Vue component used by multiple modules. | `src/components/`. |
 | A module-private composable or component. | `src/modules/<module>/composables/` or `.../components/`. |
-| A new API client for a Platform module. | Generated into `src/api_client/` by `yarn generate:api-client`. |
+| A new API client for a Platform module. | Generated into `src/api_client/` by `yarn generate-api-client`. |
 | A module-scoped translation key. | `src/modules/<module>/locales/<lang>.json`. |
 | An app-wide translation key. | `src/locales/<lang>.json`. |
 | A new menu item. | `menuItem` config of `defineBlade`, or `addMenuItem(...)` in `bootstrap.ts`. |
@@ -85,10 +85,9 @@ export * from "./composables";
 
 ## Conventions
 
-- **Module isolation.** Modules do not import from other modules. Cross-module wiring goes through extension points, the menu service, or shared composables in `src/composables/`.
+- **Module boundaries.** Keep module internals private by default. Cross-module UI wiring should use extension points or the menu service. Reusing another module's composable is acceptable when that composable is intentionally exported from the module entry point and treated as a public frontend contract; avoid reaching into another module's private folders.
 - **Locale namespacing.** Prefix module keys with the module name in uppercase (`SAMPLE_APP.PAGES.LIST.TITLE`).
 - **Blade names are global.** `defineBlade({ name: "OrderDetails" })` is the lookup key in `BladeRegistry`. Use a `<Module><Subject>` shape (`OrdersList`, `OrderDetails`).
-- **Generated code stays generated.** Do not hand-edit `src/api_client/`. Re-run `yarn generate:api-client` after a schema change.
-- **Framework code is imported, not patched.** Customize through extension points, menu services, and overrides.
+- **Generated code stays generated.** Do not hand-edit `src/api_client/`. Re-run `yarn generate-api-client` after a schema change.
 
-![Readmore](first-blade.md){: width="25"} Build your first blade.
+- [Generate an app or module from a prompt.](generate-app-from-prompt.md)
