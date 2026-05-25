@@ -19,7 +19,6 @@ Creates a typed API client instance for communicating with VirtoCommerce platfor
 ## Quick Start
 
 ```typescript
-// pseudo-code: replace OrderClient with your generated API client
 <script setup lang="ts">
 import { useApiClient } from "@vc-shell/framework";
 import { OrderClient } from "@api/orders";
@@ -39,7 +38,6 @@ async function loadOrder(orderId: string) {
 The standard pattern for API calls in blades combines `useApiClient` with `useAsync`. This gives you automatic loading state, error handling, and a clean async action:
 
 ```typescript
-// pseudo-code: replace ProductClient with your generated API client
 <script setup lang="ts">
 import { useApiClient, useAsync } from "@vc-shell/framework";
 import { ProductClient, Product } from "@api/catalog";
@@ -79,7 +77,6 @@ The `loading` ref is `true` while the request is in-flight. The `error` ref capt
 When a blade needs data from multiple platform modules, create multiple client instances using destructuring aliases:
 
 ```typescript
-// pseudo-code: replace these clients with your generated API clients
 <script setup lang="ts">
 import { useApiClient, useAsync } from "@vc-shell/framework";
 import { OrderClient } from "@api/orders";
@@ -107,7 +104,6 @@ const { action: loadOrderDetails } = useAsync(async (orderId: string) => {
 API clients generated from VirtoCommerce platform endpoints follow a consistent search pattern with `SearchCriteria` objects:
 
 ```typescript
-// pseudo-code: replace OrderClient with your generated API client
 <script setup lang="ts">
 import { useApiClient, useAsync } from "@vc-shell/framework";
 import { OrderClient, OrderSearchCriteria, OrderSearchResult } from "@api/orders";
@@ -135,7 +131,6 @@ searchOrders();
 A complete CRUD composable for a domain entity:
 
 ```typescript
-// pseudo-code: replace ProductClient with your generated API client
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useApiClient, useAsync, useToolbar } from "@vc-shell/framework";

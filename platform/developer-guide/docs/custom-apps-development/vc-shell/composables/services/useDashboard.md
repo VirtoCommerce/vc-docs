@@ -269,7 +269,6 @@ export function registerAnalyticsDashboard() {
 ### Widget Component Template
 
 ```typescript
-// pseudo-code: replace OrderClient with your generated API client
 <!-- widgets/OrdersSummary.vue -->
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
