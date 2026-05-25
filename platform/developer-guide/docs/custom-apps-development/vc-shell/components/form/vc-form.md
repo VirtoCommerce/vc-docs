@@ -558,6 +558,6 @@ disabled: computed(() => !modified.value),
 - **[VcCheckbox](./vc-checkbox.md)** -- checkbox input
 - **[VcRow](../layout/vc-row.md)** -- horizontal flex row for form layout
 - **[VcCol](../layout/vc-col.md)** -- column within a VcRow
-- **[VcCard](../vc-card/)** -- collapsible card for grouping form sections
+- **[VcCard](../layout/vc-card.md)** -- collapsible card for grouping form sections
 - **[VcBlade](../layout/vc-blade.md)** -- blade container that hosts the form
 - **[VcPopup](../feedback/vc-popup.md)** -- modal dialog, often used for inline forms

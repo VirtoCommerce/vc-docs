@@ -295,7 +295,7 @@ interface AccordionItem {
 
 ## Related Components
 
-- [VcAccordionItem](./_internal/vc-accordion-item/) -- individual accordion panel (used internally and available via the default slot)
+- **VcAccordionItem** -- internal sub-component for individual accordion panels (used internally and available via the default slot)
 
 <div class="vc-storybook-embed" style="--height: 400px">
   <iframe

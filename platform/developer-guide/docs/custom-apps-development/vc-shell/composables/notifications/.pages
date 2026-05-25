@@ -5,6 +5,6 @@ nav:
   - useBladeNotifications: useBladeNotifications.md
   - useBroadcastFilter: useBroadcastFilter.md
   - useNotificationContext: useNotificationContext.md
-  - useNotificationStore: useNotificationStore.md
   - useNotifications: useNotifications.md
+  - useNotificationStore: useNotificationStore.md
   - usePopup: usePopup.md

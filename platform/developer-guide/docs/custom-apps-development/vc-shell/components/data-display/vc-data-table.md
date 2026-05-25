@@ -603,11 +603,11 @@ VcDataTable uses a **weight-based engine** to compute exact pixel widths for eve
 
 **Width prop contract:**
 
-| Declaration                     | Meaning                                                      |
-| ------------------------------- | ------------------------------------------------------------ |
+| Declaration                      | Meaning                                                      |
+| -------------------------------- | ------------------------------------------------------------ |
 | `width="200"` or `width="200px"` | Initial 200 px hint                                          |
-| `width="20%"`                   | Initial hint based on 20% of available width                 |
-| `width` omitted                 | Auto — splits remaining space equally among all auto columns |
+| `width="20%"`                    | Initial hint based on 20% of available width                 |
+| `width` omitted                  | Auto — splits remaining space equally among all auto columns |
 
 After initialization the column lives in the weight model. Container resizes recompute px values without changing weights.
 
@@ -1048,9 +1048,9 @@ async function loadNextPage() {
 ## State Persistence
 
 !!! tip "Use unique state keys"
-Every table in your application must have a distinct `state-key`. Two tables sharing the same key will silently overwrite each other's persisted column widths, order, and sort state.
+Every table in your application must have a distinct `state-key`. Two tables sharing the same key will silently overwrite each other's persisted column widths, order, and hidden/shown column lists.
 
-Persist column widths, column order, hidden columns, sort, and filters across page reloads:
+Persist column widths, column order, and column visibility across page reloads. Sort, filters, pagination, selection, and search input are session-scoped — they are deliberately excluded from the persisted state so the blade owns them through its own URL or store:
 
 ```vue
 <VcDataTable :items="products" state-key="product-list">

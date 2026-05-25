@@ -157,4 +157,4 @@ onMounted(async () => {
 
 ## Related Components
 
-- [LanguageSelector](../language-selector/language-selector.docs.md) -- settings menu entry for UI locale switching (different purpose)
+- **LanguageSelector** -- shell-internal settings menu entry for UI locale switching (different purpose)

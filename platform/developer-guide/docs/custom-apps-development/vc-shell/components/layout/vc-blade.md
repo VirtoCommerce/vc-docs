@@ -34,14 +34,21 @@ flowchart LR
 
 ## When to Use
 
-| Scenario                                          | Component                                    |
-| ------------------------------------------------- | -------------------------------------------- |
-| Stacked panel with toolbar, header, and lifecycle | **VcBlade**                                  |
-| One-off confirmation or input dialog              | [VcPopup](../vc-popup/vc-popup.docs.md)      |
-| Full-page route without blade stack               | Vue Router view                              |
-| Scrollable content section inside a blade         | [VcContainer](../../atoms/vc-container/vc-container.docs.md) |
+| Scenario                                          | Component                                                    |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| Stacked panel with toolbar, header, and lifecycle | **VcBlade**                                                  |
+| One-off confirmation or input dialog              | [VcPopup](../feedback/vc-popup.md)                      |
+| Full-page route without blade stack               | Vue Router view                                              |
+| Scrollable content section inside a blade         | [VcContainer](./vc-container.md) |
 
-::storybook id="navigation-vcblade--default"
+<div class="vc-storybook-embed" style="--height: 400px">
+  <iframe
+    src="https://vc-shell-storybook.govirto.com/iframe.html?id=navigation-vcblade--default&viewMode=story"
+    loading="lazy"
+    title="navigation-vcblade--default"
+  ></iframe>
+  <a href="https://vc-shell-storybook.govirto.com/?path=/story/navigation-vcblade--default" target="_blank" rel="noopener">Open in Storybook ↗</a>
+</div>
 
 Use VcBlade for every screen in a vc-shell application -- it is the standard container that integrates with the navigation system, toolbar, breadcrumbs, and unsaved-changes guards. **Do not use** VcBlade for transient dialogs (use `VcPopup` / `usePopup()`) or for content areas that do not need their own header and close button.
 
@@ -384,7 +391,14 @@ interface IBladeToolbar {
 
 ## Loading State and Skeleton
 
-::storybook id="navigation-vcblade--loading" height="500"
+<div class="vc-storybook-embed" style="--height: 500px">
+  <iframe
+    src="https://vc-shell-storybook.govirto.com/iframe.html?id=navigation-vcblade--loading&viewMode=story"
+    loading="lazy"
+    title="navigation-vcblade--loading"
+  ></iframe>
+  <a href="https://vc-shell-storybook.govirto.com/?path=/story/navigation-vcblade--loading" target="_blank" rel="noopener">Open in Storybook ↗</a>
+</div>
 
 `loading` shows skeleton placeholders for header, toolbar, and content:
 
@@ -425,7 +439,14 @@ useBeforeUnload(hasChanges); // Browser tab close warning
 
 ## Custom Banners
 
-::storybook id="navigation-vcblade--custom-banners" height="500"
+<div class="vc-storybook-embed" style="--height: 500px">
+  <iframe
+    src="https://vc-shell-storybook.govirto.com/iframe.html?id=navigation-vcblade--custom-banners&viewMode=story"
+    loading="lazy"
+    title="navigation-vcblade--custom-banners"
+  ></iframe>
+  <a href="https://vc-shell-storybook.govirto.com/?path=/story/navigation-vcblade--custom-banners" target="_blank" rel="noopener">Open in Storybook ↗</a>
+</div>
 
 Add informational, warning, or success banners to a blade programmatically. Banners appear between the header and toolbar, sorted by severity.
 
@@ -625,17 +646,17 @@ openBlade({ name: "ProductsList" });
 
 ## Props
 
-| Prop           | Type               | Default     | Description                                                  |
-| -------------- | ------------------ | ----------- | ------------------------------------------------------------ |
-| `title`        | `string`           | `undefined` | Title text in the blade header.                              |
-| `subtitle`     | `string`           | `undefined` | Secondary text below the title.                              |
-| `icon`         | `string`           | `undefined` | Icon name (e.g., `"lucide-box"`) displayed before the title. |
-| `width`        | `number \| string` | `"30%"`     | Blade width. Numbers are pixels; strings are CSS values.     |
+| Prop           | Type               | Default     | Description                                                                                                                                                                               |
+| -------------- | ------------------ | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`        | `string`           | `undefined` | Title text in the blade header.                                                                                                                                                           |
+| `subtitle`     | `string`           | `undefined` | Secondary text below the title.                                                                                                                                                           |
+| `icon`         | `string`           | `undefined` | Icon name (e.g., `"lucide-box"`) displayed before the title.                                                                                                                              |
+| `width`        | `number \| string` | `"30%"`     | Blade width. Numbers are pixels; strings are CSS values.                                                                                                                                  |
 | `expanded`     | `boolean`          | `undefined` | Whether the blade fills all available width. Inside a blade-navigation context this prop is overridden by the active blade's expanded state; in standalone use the prop is read directly. |
-| `closable`     | `boolean`          | `true`      | Whether the close button is shown.                           |
-| `toolbarItems` | `IBladeToolbar[]`  | `[]`        | Action buttons in the toolbar zone.                          |
-| `modified`     | `boolean`          | `undefined` | Shows unsaved changes indicator and banner.                  |
-| `loading`      | `boolean`          | `undefined` | Shows skeleton placeholders for all blade zones.             |
+| `closable`     | `boolean`          | `true`      | Whether the close button is shown.                                                                                                                                                        |
+| `toolbarItems` | `IBladeToolbar[]`  | `[]`        | Action buttons in the toolbar zone.                                                                                                                                                       |
+| `modified`     | `boolean`          | `undefined` | Shows unsaved changes indicator and banner.                                                                                                                                               |
+| `loading`      | `boolean`          | `undefined` | Shows skeleton placeholders for all blade zones.                                                                                                                                          |
 
 ## Events
 
@@ -693,36 +714,4 @@ openBlade({ name: "ProductsList" });
 | `usePopup()`                                    | Confirmation dialogs and error messages.                                           |
 | `useBladeWidgets()`                             | Register contextual widgets for the blade widget area.                             |
 
-<!-- internal:start -->
 
-## Content Skeleton Mode
-
-When `loading=true`, VcBlade provides `BladeLoadingKey` to all descendant components via Vue's provide/inject. Each framework UI component automatically renders a skeleton placeholder matching its visual footprint.
-
-### How It Works
-
-1. Set `loading` prop on VcBlade (typically bound to your data-fetching composable's loading ref)
-2. All child components (`VcInput`, `VcSelect`, `VcCard`, etc.) detect the loading state and render skeletons
-3. Layout containers (`VcContainer`, `VcRow`, `VcCol`, `VcForm`) are transparent — they preserve layout structure
-4. When loading completes, components switch to their normal rendering
-
-### What Shows During Loading
-
-- **Config-gated fields** (`v-if="config.showName"`) — config is available immediately, so these fields show skeletons
-- **Data-gated fields** (`v-if="item.productData"`) — data not yet loaded, so these fields don't appear in the skeleton
-- **Header and toolbar** — have their own dedicated skeletons (unchanged)
-
-No changes to existing blade pages are required.
-
-### Custom Components
-
-To make custom components skeleton-aware:
-
-```ts
-import { useBladeLoading } from "@vc-shell/framework";
-
-const bladeLoading = useBladeLoading();
-// bladeLoading.value === true when parent VcBlade is loading
-```
-
-<!-- internal:end -->

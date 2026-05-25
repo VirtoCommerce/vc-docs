@@ -14,7 +14,7 @@ This is the **Level 2** entry point in the notification system. Level 1 — `def
 - A list blade needs to refresh when an entity is created, updated, or deleted elsewhere.
 - A long-running operation has a dedicated blade and the blade should update as `processedCount` / `errorCount` flow in.
 - A blade wants to surface an inline "N new" badge for messages of a specific type.
-- When NOT to use: app-wide toasts already come from the Level 1 module config — the blade does not need to subscribe just to show a toast. Reach for the blade subscription only when you also need to *react* to the event in code.
+- When NOT to use: app-wide toasts already come from the Level 1 module config — the blade does not need to subscribe just to show a toast. Reach for the blade subscription only when you also need to _react_ to the event in code.
 
 ## Quick Start
 
@@ -41,11 +41,11 @@ interface BladeNotificationOptions<T extends PushNotification = PushNotification
 }
 ```
 
-| Field       | Type                       | Required | Description                                                                                                              |
-| ----------- | -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `types`     | `string[]`                 | Yes      | Notification types to subscribe to. Must match the `notifyType` field on incoming messages.                              |
-| `filter`    | `(msg: T) => boolean`      | No       | Narrow the subscription further (for example, only events for the entity this blade is editing).                         |
-| `onMessage` | `(msg: T) => void`         | No       | Callback fired once per matching message. Use it to refresh data, mark progress, or update local state.                  |
+| Field       | Type                  | Required | Description                                                                                             |
+| ----------- | --------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| `types`     | `string[]`            | Yes      | Notification types to subscribe to. Must match the `notifyType` field on incoming messages.             |
+| `filter`    | `(msg: T) => boolean` | No       | Narrow the subscription further (for example, only events for the entity this blade is editing).        |
+| `onMessage` | `(msg: T) => void`    | No       | Callback fired once per matching message. Use it to refresh data, mark progress, or update local state. |
 
 ### Returns
 
@@ -57,10 +57,10 @@ interface BladeNotificationReturn<T extends PushNotification = PushNotification>
 }
 ```
 
-| Property      | Type                  | Description                                                                                                            |
-| ------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `messages`    | `ComputedRef<T[]>`    | Realtime messages matching `types` and `filter` that are still unread. Updates reactively as new messages arrive.      |
-| `unreadCount` | `ComputedRef<number>` | `messages.value.length`. Bind to a badge.                                                                              |
+| Property      | Type                  | Description                                                                                                             |
+| ------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `messages`    | `ComputedRef<T[]>`    | Realtime messages matching `types` and `filter` that are still unread. Updates reactively as new messages arrive.       |
+| `unreadCount` | `ComputedRef<number>` | `messages.value.length`. Bind to a badge.                                                                               |
 | `markAsRead`  | `(msg: T) => void`    | Mark a specific message as read. Removes it from `messages` (and reduces the global unread badge in the bell dropdown). |
 
 ## Typed payloads

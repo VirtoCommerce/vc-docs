@@ -240,13 +240,4 @@ await store.markAllAsRead(); // optimistic update with rollback on failure
 - `framework/shared/components/notifications/` -- Notification dropdown UI
 - `framework/core/api/platform.ts` -- `PushNotification`, `PushNotificationClient`
 
-<!-- internal:start -->
 
-## Internal Files
-
-- `framework/core/notifications/store.ts` -- `NotificationStore` implementation
-- `framework/core/notifications/toast-controller.ts` -- Toast lifecycle management
-- `framework/core/notifications/composables/` -- `useNotificationStore`, `useBladeNotifications`, `useNotificationContext`, `useBroadcastFilter`
-- `framework/core/notifications/types.ts` -- All notification type definitions
-
-<!-- internal:end -->

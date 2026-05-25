@@ -22,14 +22,22 @@ Unified composable for blade navigation, identity, communication, guards, and er
 <script setup lang="ts">
 import { useBlade } from "@vc-shell/framework";
 
-// Inside a blade -- full API is available
-const { openBlade, closeSelf, param, onBeforeClose } = useBlade();
+// List blade -- typical destructure: open children, expose parent methods, read param
+interface BladeOptions {
+  item?: Order;
+}
+const { openBlade, exposeToChildren, param, options, callParent } = useBlade<BladeOptions>();
 
-// Open a child blade
-await openBlade({ name: "OrderDetails", param: "order-123" });
+// Expose a reload method so child details blades can refresh the list after save
+async function reload() {
+  /* refetch items */
+}
+exposeToChildren({ reload });
 
-// Read the parameter passed when this blade was opened
-console.log(param.value); // "order-123"
+// Open a child details blade
+function onRowClick(order: Order) {
+  openBlade({ name: "OrderDetails", param: order.id, options: { item: order } });
+}
 </script>
 ```
 
@@ -40,7 +48,7 @@ import { useBlade } from "@vc-shell/framework";
 // Outside a blade (e.g. dashboard widget) -- only navigation works
 const { openBlade } = useBlade();
 
-openBlade({ name: "OrderDetails", param: "order-123" });
+openBlade({ name: "OrdersList", isWorkspace: true });
 </script>
 ```
 
@@ -48,13 +56,14 @@ openBlade({ name: "OrderDetails", param: "order-123" });
 <script setup lang="ts">
 import { useBlade } from "@vc-shell/framework";
 
-// Typed options — no manual casting needed
-interface BladeOptions {
-  sellerProduct?: SellerProduct;
-}
-const { param, options, callParent } = useBlade<BladeOptions>();
+// Details blade -- call back into the parent after save
+const { param, options, callParent, closeSelf } = useBlade<{ item?: Order }>();
 
-console.log(options.value?.sellerProduct); // typed as SellerProduct | undefined
+async function onSave() {
+  await saveOrder();
+  await callParent("reload");
+  await closeSelf();
+}
 </script>
 ```
 
@@ -517,7 +526,7 @@ The most common pattern: a list workspace that opens a details blade on row clic
 <script setup lang="ts">
 import { useBlade } from "@vc-shell/framework";
 
-defineOptions({ name: "ProductsList", url: "/products", isWorkspace: true });
+defineBlade({ name: "ProductsList", url: "/products", isWorkspace: true });
 
 const { openBlade } = useBlade();
 const selectedItemId = ref<string>();
@@ -551,7 +560,7 @@ defineExpose({ reload, title: "Products" });
 <script setup lang="ts">
 import { useBlade, usePopup } from "@vc-shell/framework";
 
-defineOptions({ name: "ProductDetails", url: "/product-details" });
+defineBlade({ name: "ProductDetails", url: "/product-details" });
 
 const { param, onBeforeClose, closeSelf, callParent } = useBlade();
 const { showConfirmation } = usePopup();
@@ -754,11 +763,10 @@ if (param.value) {
 
 ## Related
 
-| Resource                                                                  | Description                                                  |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [`defineBladeContext` / `injectBladeContext`](../useBladeContext.docs.md) | Share reactive blade data with descendant widgets            |
-| [`useBladeRegistry`](./useBladeRegistry.md)                                | Look up registered blade components by name                  |
-| [`VcBlade`](../../components/layout/vc-blade.md)                   | The blade UI shell component (header, toolbar, content area) |
-| [`VcBladeNavigation`](../../../shared/components/blade-navigation/)       | The container component that renders the blade stack         |
-| [`useToolbar`](../../../shared/composables/useToolbar/)                   | Dynamic toolbar management for blades                        |
-| [`usePopup`](../../../shared/composables/usePopup/)                       | Confirmation dialogs, commonly used in close guards          |
+| Resource                                                                     | Description                                                  |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [`defineBladeContext` / `injectBladeContext`](./useBladeContext.md) | Share reactive blade data with descendant widgets            |
+| [`useBladeRegistry`](./useBladeRegistry.md)                                   | Look up registered blade components by name                  |
+| [`VcBlade`](../../components/layout/vc-blade.md)      | The blade UI shell component (header, toolbar, content area) |
+| [`useToolbar`](../services/useToolbar.md)                             | Dynamic toolbar management for blades                        |
+| [`usePopup`](../notifications/usePopup.md)                                   | Confirmation dialogs, commonly used in close guards          |

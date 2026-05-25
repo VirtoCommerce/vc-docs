@@ -147,6 +147,6 @@ The plain data object stored in the stack for each blade:
 ## Related
 
 - [`useBlade`](./useBlade.md) -- recommended API for everyday blade operations
-- [`useBladeContext`](../composables/bladeContext/) -- share reactive blade data with descendant components
+- [`useBladeContext`](./useBladeContext.md) -- share reactive blade data with descendant components
 
 
