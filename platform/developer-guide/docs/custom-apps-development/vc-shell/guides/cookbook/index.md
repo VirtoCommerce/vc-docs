@@ -2,64 +2,86 @@
 
 Quick recipes for everyday VC-Shell tasks. Each one is self-contained, so read the recipe you need and ignore the rest.
 
-Every snippet below is lifted or adapted from a real seller-facing sample app and the framework source. Composable names, options, and return shapes are real and current.
+Every snippet below focuses on one framework pattern and uses neutral module names. Composable names, options, and return shapes follow the current VC-Shell APIs.
 
 ## Show a confirmation before closing a blade
 
-Block close until the user confirms when there are unsaved changes. Combine `onBeforeClose` with `usePopup().showConfirmation`.
+For details blades — the common case — let `useBladeForm` wire the guard for you. Pass `closeConfirmMessage` and the framework handles both the in-app close and the browser tab unload, both reading the form's dirty state.
 
-```vue title="ProductDetails.vue"
+```vue title="OrderDetails.vue"
 <script setup lang="ts">
+import { computed } from "vue";
+import { useBladeForm } from "@vc-shell/framework";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+const { item, loadItem, saveItem } = useOrderDetails();
+
+const form = useBladeForm({
+  data: item,
+  closeConfirmMessage: computed(() => t("ORDER.UNSAVED_CHANGES")),
+});
+</script>
+```
+
+That is the whole recipe for a form blade. The popup, the tab-close prompt, and the dirty tracking all hang off `useBladeForm`.
+
+For a blade with unsaved state outside a form — a kanban board, a wizard with custom state, an editor not backed by `useBladeForm` — fall back to the lower-level guard. Register `onBeforeClose` and return `true` to block, `false` to proceed:
+
+```vue title="KanbanBoard.vue"
+<script setup lang="ts">
+import { ref } from "vue";
 import { useBlade, usePopup } from "@vc-shell/framework";
 
 const { onBeforeClose } = useBlade();
 const { showConfirmation } = usePopup();
-const isModified = ref(false);
+const hasPendingMoves = ref(false);
 
 onBeforeClose(async () => {
-  if (!isModified.value) return false;
-  const confirmed = await showConfirmation("Discard unsaved changes?");
+  if (!hasPendingMoves.value) return false;
+  const confirmed = await showConfirmation("Discard pending moves?");
   return !confirmed;
 });
 </script>
 ```
 
-The guard returns `true` to **prevent** closure and `false` to **allow** it, matching Vue Router's `beforeRouteLeave`. Always negate the user's confirmation.
+The guard returns `true` to **prevent** closure and `false` to **allow** it. Always negate the user's confirmation.
 
-![Readmore](../../composables/blade-navigation/useBlade.md){: width="25"} Full `useBlade` API and guard semantics.
+- [useBladeForm reference.](../../composables/forms/useBladeForm.md)
+- [Full `useBlade` API and guard semantics.](../../composables/blade-navigation/useBlade.md)
 
 ## Warn before browser tab close (useBeforeUnload)
 
-Stop the user from accidentally closing the browser tab when a form has unsaved changes. `useBeforeUnload(modified)` accepts a `ComputedRef<boolean>` and registers a `beforeunload` listener that fires the browser's standard "Leave site?" prompt whenever the ref is `true`. This is the browser-level twin of `onBeforeClose` from `useBlade()`. Pair them so the user is protected whether they click the blade close button or close the whole tab.
+For form blades, you do not need to wire this yourself. `useBladeForm` registers `useBeforeUnload(isModified)` automatically (set `autoBeforeUnload: false` if you ever need to turn it off). Recipe above already covers the typical case.
 
-```vue title="src/modules/orders/pages/order-details.vue"
+Reach for `useBeforeUnload` directly only when the unsaved state lives **outside** a form — a kanban board, a wizard, a custom editor not backed by `useBladeForm`. Pair it with `onBeforeClose` so the user is protected whether they close the blade or the whole tab:
+
+```vue title="src/modules/orders/pages/board.vue"
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { useBeforeUnload, useBlade, usePopup } from "@vc-shell/framework";
 
-const original = ref({ name: "" });
-const draft = ref({ name: "" });
-const isModified = computed(() => JSON.stringify(original.value) !== JSON.stringify(draft.value));
+const hasPendingMoves = ref(false);
 
-useBeforeUnload(isModified);
+useBeforeUnload(hasPendingMoves);
 
 const { onBeforeClose } = useBlade();
 const { showConfirmation } = usePopup();
 
 onBeforeClose(async () => {
-  if (!isModified.value) return false;
-  return !(await showConfirmation("Discard unsaved changes?"));
+  if (!hasPendingMoves.value) return false;
+  return !(await showConfirmation("Discard pending moves?"));
 });
 </script>
 ```
 
-The composable always uses the browser's native dialog. The wording is fixed by the browser and cannot be customized, which is a deliberate antiphishing restriction. Reach for `useBeforeUnload` only for browser-level closes; use `onBeforeClose` for in-app blade navigation. Reset whatever drives `isModified` after a successful save, otherwise the prompt keeps appearing.
+The composable always uses the browser's native dialog. The wording is fixed by the browser and cannot be customized, which is a deliberate antiphishing restriction. Reset whatever drives the modified flag after a successful save, otherwise the prompt keeps appearing.
 
-![Readmore](../../composables/utilities/useBeforeUnload.md){: width="25"} `useBeforeUnload` reference.
+- [`useBeforeUnload` reference.](../../composables/utilities/useBeforeUnload.md)
 
 ## Pass selected rows from a list to a details blade
 
-Use `param` for the entity id, which lands in the URL for deep linking. Use `options` for richer preloaded data, which stays in `history.state` only.
+Use `param` for the entity id. Use `options` for richer preloaded data that should stay runtime-only and should not be encoded in the URL.
 
 ```vue title="orders-list.vue"
 <script setup lang="ts">
@@ -134,7 +156,7 @@ defineBlade({
   name: "Orders",
   url: "/orders",
   isWorkspace: true,
-  permissions: ["seller:orders:view"],
+  permissions: ["orders:order:view"],
   menuItem: {
     title: "ORDERS.MENU.TITLE",
     icon: "lucide-shopping-cart",
@@ -146,7 +168,7 @@ defineBlade({
 
 For finer-grained checks inside a blade, use `usePermissions().hasAccess(...)` to toggle individual toolbar buttons or sections.
 
-![Readmore](../../concepts/permissions-model.md){: width="25"} How permissions flow from the Platform to the UI.
+- [How permissions flow from the Platform to the UI.](../../concepts/permissions-model.md)
 
 ## Open a blade from a dashboard widget
 
@@ -172,36 +194,37 @@ Pass `isWorkspace: true` to replace the whole stack with the target workspace, w
 
 ## Add a toolbar button conditionally
 
-`useToolbar()` registers buttons in the current blade's toolbar and cleans them up on unmount. Use `updateToolbarItem` to toggle state without re-registering, and `isVisible` for reactive visibility.
+A blade declares its toolbar as a `ref<IBladeToolbar[]>([...])` and passes it to `<VcBlade :toolbar-items>`. The framework filters items by `permissions` and `isVisible` before render, and re-reads reactive fields whenever they change, so visibility and disabled state follow the form state automatically.
 
 ```vue title="ItemDetails.vue"
 <script setup lang="ts">
-import { computed, watch } from "vue";
-import { useToolbar, useAsync } from "@vc-shell/framework";
+import { computed, ref } from "vue";
+import { useAsync, VcBlade, type IBladeToolbar } from "@vc-shell/framework";
 
-const { registerToolbarItem, updateToolbarItem } = useToolbar();
 const hasChanges = computed(() => form.isDirty);
 
 const { loading: saving, action: save } = useAsync(async () => {
   await saveItem();
 });
 
-registerToolbarItem({
-  id: "save",
-  title: "Save",
-  icon: "lucide-save",
-  clickHandler: () => save(),
-  isVisible: hasChanges,
-  priority: 100,
-});
-
-watch(saving, (busy) => {
-  updateToolbarItem("save", { disabled: busy });
-});
+const bladeToolbar = ref<IBladeToolbar[]>([
+  {
+    id: "save",
+    title: "Save",
+    icon: "lucide-save",
+    clickHandler: () => save(),
+    isVisible: hasChanges,
+    disabled: computed(() => saving.value),
+  },
+]);
 </script>
+
+<template>
+  <VcBlade :toolbar-items="bladeToolbar" />
+</template>
 ```
 
-The button only appears while the form is dirty and becomes disabled mid-save without flicker.
+The button appears only while the form is dirty and becomes disabled mid-save — both are reactive without any `watch` or `updateToolbarItem` plumbing.
 
 ## Combine loading flags from several sources
 
@@ -221,7 +244,7 @@ const isLoading = useLoading(orderLoading, customerLoading, lineItemsLoading);
 
 The result is `true` while any input ref is `true`. Use it for the blade overlay; keep the per-action refs for granular UI, such as a spinner inside one button.
 
-![Readmore](../../composables/ui-state/useLoading.md){: width="25"} `useLoading` reference.
+- [`useLoading` reference.](../../composables/ui-state/useLoading.md)
 
 ## Set a dynamic blade title
 
@@ -274,7 +297,7 @@ onBeforeUnmount(() => remove([crumbId]));
 
 Include the blade `param` in the breadcrumb `id` so two open instances of the same blade type do not overwrite each other. Pair every `push` with a `remove` on unmount, otherwise stale entries accumulate. To run custom logic before the trail trims, return `false` from `clickHandler`.
 
-![Readmore](../../composables/ui-state/useBreadcrumbs.md){: width="25"} `useBreadcrumbs` reference.
+- [`useBreadcrumbs` reference.](../../composables/ui-state/useBreadcrumbs.md)
 
 ## Display a success toast after save
 
@@ -297,7 +320,103 @@ async function onSave() {
 
 Use `notification.success`, `notification.error`, `notification.warning`, or the default `notification(...)` for an info-style toast. Pass `{ timeout: 5000 }` as the second argument to override the default lifetime.
 
-![Readmore](../../composables/notifications/useNotifications.md){: width="25"} The full notification system and SignalR integration.
+The toast helper is **not** the same as push notifications. It fires in-app feedback that never reaches the bell dropdown. For real-time platform events, register the type in `defineAppModule({ notifications })` and subscribe with `useBladeNotifications`.
+
+- [Notifications concept page — three surfaces.](../../concepts/notifications.md#three-surfaces-three-apis)
+- [Notifications plugin reference — toast helper.](../../plugins/notifications.md)
+
+## Refresh a list when a push notification arrives
+
+When a record can change from somewhere else (another tab, a background job, a different blade), subscribe to the relevant notification type and re-fetch. The subscription is scoped to the blade — when the blade closes, it stops listening automatically.
+
+```vue title="src/modules/offers/pages/offers-list.vue"
+<script setup lang="ts">
+import { useBladeNotifications } from "@vc-shell/framework";
+
+const { loadOffers } = useOffers();
+
+useBladeNotifications({
+  types: ["OfferCreatedDomainEvent", "OfferDeletedDomainEvent"],
+  onMessage: () => loadOffers(),
+});
+</script>
+```
+
+Pass an array of types when several events should trigger the same refresh. Use the `filter` option to narrow further — for example, only events whose `sellerId` matches the current view. The default toast and dropdown entry still fire from the module's Level 1 config; the blade just adds its own reaction.
+
+- [useBladeNotifications reference.](../../composables/notifications/useBladeNotifications.md)
+
+## Drive a long-running progress toast
+
+For a long job (import, export, indexation), let the blade own a single toast that updates as `processedCount` rises and resolves to success or error when `finished` flips. Suppress the auto-toast in the module config and steer the toast manually:
+
+```ts title="src/modules/import/index.ts"
+import { defineAppModule } from "@vc-shell/framework";
+
+export default defineAppModule({
+  // ...
+  notifications: {
+    ImportPushNotification: { toast: { mode: "silent" } },
+  },
+});
+```
+
+```vue title="src/modules/import/pages/import-process.vue"
+<script setup lang="ts">
+import { ref } from "vue";
+import { notification, useBladeNotifications } from "@vc-shell/framework";
+
+let toastId = ref<string>();
+
+useBladeNotifications<ImportPushNotification>({
+  types: ["ImportPushNotification"],
+  onMessage: (msg) => {
+    const content = msg.profileName ? `${msg.profileName}: ${msg.title}` : msg.title;
+
+    if (!toastId.value) {
+      toastId.value = notification(content, { timeout: false });
+    } else if (!msg.finished) {
+      notification.update(toastId.value, { content });
+    } else {
+      notification.update(toastId.value, {
+        content,
+        timeout: 5000,
+        type: msg.errorCount ? "error" : "success",
+        onClose: () => (toastId.value = undefined),
+      });
+    }
+  },
+});
+</script>
+```
+
+`notification(message, opts)` returns a toast id; `notification.update(id, ...)` mutates the same toast in place instead of stacking new ones. `mode: "silent"` keeps the event in the bell dropdown history but suppresses the framework's own toast, leaving the blade in full control of what the user sees.
+
+- [useBladeNotifications reference.](../../composables/notifications/useBladeNotifications.md)
+- [Notifications plugin reference — toast modes.](../../plugins/notifications.md)
+
+## Scope broadcasts to the current user
+
+Platform broadcasts go to every connected client. In a multi-tenant app — vendor portal, seller back office, organization-scoped admin — install a broadcast filter at bootstrap so each user sees only the broadcasts that mention them. The filter runs once per incoming broadcast; targeted (one-to-one) messages bypass it entirely.
+
+```vue title="src/pages/App.vue"
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { useBroadcastFilter, useUser } from "@vc-shell/framework";
+
+const { user } = useUser();
+const { setBroadcastFilter } = useBroadcastFilter();
+
+onMounted(() => {
+  setBroadcastFilter((msg) => msg.creator === user.value?.userName);
+});
+</script>
+```
+
+Filter on the field your platform uses to identify the originator — `creator` in the vendor portal example, but it could be `sellerId`, `organizationId`, or any payload field that survives the broadcast. Install once at app mount; if your app supports user switching, watch the user and re-install accordingly.
+
+- [useBroadcastFilter reference.](../../composables/notifications/useBroadcastFilter.md)
+- [Notifications concept page — broadcast vs targeted.](../../concepts/notifications.md#broadcast-vs-targeted)
 
 ## Cover a blade with a preview, then return
 
@@ -321,7 +440,7 @@ async function onPreview() {
 
 Use `replaceWith` instead when the new blade should permanently take the slot, for example switching from a create form to the edit view of a freshly created entity.
 
-![Readmore](../../concepts/blade-navigation.md){: width="25"} The blade stack model in depth.
+- [The blade stack model in depth.](../../concepts/blade-navigation.md)
 
 ## Persist filter state in the URL with query
 
@@ -359,11 +478,137 @@ watch(filters, (next) => {
 `query` is a read-only `ComputedRef<Record<string, string> | undefined>` on the blade descriptor. The framework writes the entries to the address bar verbatim, so keep keys short and values URL-safe. Use `replaceWith` (not `openBlade`) so the back button still steps out of the workspace instead of cycling through every keystroke.
 
 !!! note "query vs options"
-    `query` rides the URL and survives a refresh; `options` rides `history.state` only. Use `query` for shareable filter state (search term, page size, status). Use `options` for preloaded payloads that are too large or too sensitive for the URL.
+    `query` rides the URL and survives a refresh. Use `query` for shareable filter state (search term, page size, status). Use `options` for runtime-only payloads that are too large or too sensitive for the URL.
 
 !!! warning "Legacy setNavigationQuery is deprecated"
     The v1 adapter still ships `setNavigationQuery` and `getNavigationQuery` for backward compatibility, but both log a deprecation warning. New code should pass `query` to `openBlade` / `replaceWith` and read it from `useBlade().query`.
 
-## More patterns
+## Custom notification template
 
-The vc-shell repo ships an AI-codegen knowledge base with deeper, generator-oriented recipes. Browse [`cli/vc-app-skill/runtime/knowledge/patterns/`](https://github.com/VirtoCommerce/vc-shell/tree/main/cli/vc-app-skill/runtime/knowledge/patterns) for templates covering list blades, details blades, toolbar conventions, SignalR notification templates, data tables, multilanguage fields, and dashboard widgets.
+Render a SignalR push notification with your own Vue component instead of the default toast layout. The notification type is registered in `defineAppModule({ notifications })` with a `template` reference; the template reads the current payload through `useNotificationContext()`.
+
+```vue title="src/modules/orders/notifications/OrderCreatedDomainEvent.vue"
+<template>
+  <NotificationTemplate
+    :color="style.color"
+    :title="notification.title ?? ''"
+    :icon="style.icon"
+    :notification="notification"
+  >
+    <VcHint
+      v-if="notification.description"
+      class="tw-mb-1"
+    >
+      {{ notification.description }}
+    </VcHint>
+  </NotificationTemplate>
+</template>
+
+<script lang="ts" setup>
+import { NotificationTemplate, useNotificationContext } from "@vc-shell/framework";
+import { VcHint } from "@vc-shell/framework/ui";
+import { computed } from "vue";
+
+const notificationRef = useNotificationContext();
+const notification = computed(() => notificationRef.value);
+
+const style = {
+  color: "var(--success-400)",
+  icon: "lucide-package",
+};
+</script>
+```
+
+```ts title="src/modules/orders/index.ts"
+import { defineAppModule } from "@vc-shell/framework";
+import * as pages from "./pages";
+import * as locales from "./locales";
+import OrderCreatedDomainEvent from "./notifications/OrderCreatedDomainEvent.vue";
+
+export default defineAppModule({
+  blades: pages,
+  locales,
+  notifications: {
+    OrderCreatedDomainEvent: {
+      template: OrderCreatedDomainEvent,
+      toast: { mode: "auto" },
+    },
+  },
+});
+```
+
+The dropdown renders your template; the toast still follows the `toast` config (mode, severity, timeout). Use `useNotificationContext<T>()` with a generic when your notification carries extra fields beyond the base `PushNotification` shape.
+
+- [Notifications concept.](../../concepts/notifications.md)
+- [useNotifications reference.](../../composables/notifications/useNotifications.md)
+
+## Dashboard widget with DashboardWidgetCard
+
+Wrap the widget content in `DashboardWidgetCard` so it inherits the framework's header, loading state, and action area. The component is registered through `registerDashboardWidget` in the module entry; the registration accepts the size in the 12-column grid.
+
+```vue title="src/modules/orders/components/OrdersDashboardCard.vue"
+<template>
+  <DashboardWidgetCard
+    :header="$t('ORDERS.WIDGET.TITLE')"
+    icon="lucide-package"
+    :loading="loading"
+  >
+    <template #actions>
+      <VcButton
+        size="sm"
+        variant="ghost"
+        @click="openWorkspace"
+      >
+        {{ $t("ORDERS.WIDGET.ALL") }} &rarr;
+      </VcButton>
+    </template>
+
+    <template #stats>
+      <DashboardStatItem
+        :value="totalCount"
+        :label="$t('ORDERS.WIDGET.ALL')"
+      />
+      <DashboardStatItem
+        :value="openCount"
+        :label="$t('ORDERS.WIDGET.OPEN')"
+        variant="success"
+      />
+    </template>
+  </DashboardWidgetCard>
+</template>
+
+<script setup lang="ts">
+import { DashboardWidgetCard, useBlade } from "@vc-shell/framework";
+import { VcButton } from "@vc-shell/framework/ui";
+
+const { openBlade } = useBlade();
+
+const totalCount = ref(0);
+const openCount = ref(0);
+const loading = ref(false);
+
+function openWorkspace() {
+  openBlade({ name: "OrdersList", isWorkspace: true });
+}
+</script>
+```
+
+```ts title="src/modules/orders/index.ts"
+import { defineAppModule, registerDashboardWidget } from "@vc-shell/framework";
+import { markRaw } from "vue";
+import OrdersDashboardCard from "./components/OrdersDashboardCard.vue";
+
+registerDashboardWidget({
+  id: "orders-widget",
+  name: "Orders",
+  component: markRaw(OrdersDashboardCard),
+  size: { width: 6, height: 6 },
+});
+
+export default defineAppModule({ blades, locales });
+```
+
+The grid is 12 columns wide, so common widths are `3` (quarter), `4` (third), `6` (half), and `12` (full). The `#actions` slot sits in the card header on the right; `#stats` shows a compact metric strip above the default `#content` slot.
+
+- [Layout concept — Dashboard widgets.](../../concepts/layout.md#dashboard-widgets)
+- [useDashboard reference.](../../composables/services/useDashboard.md)
