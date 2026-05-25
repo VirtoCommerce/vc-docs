@@ -10,11 +10,16 @@ This guide gets you from a fresh machine to a running Virto Commerce solution in
 
 ## Install and try locally
 
-Use **[start-local](https://github.com/VirtoCommerce/start-local)** to bring up the full stack (Platform, Frontend, database, Redis, Elasticsearch, Kibana) on your machine in one command.
+Use `start-local` to bring up the full Virto Commerce stack (Platform backend, Frontend, database, Redis, Elasticsearch, and Kibana) on your machine in one PowerShell command:
 
 ```powershell
 $installSCript = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/VirtoCommerce/start-local/dev/VirtoLocal_create_local_files.ps1" -UseBasicParsing; Set-Content -Path ".\VirtoLocal_create_local_files.ps1" -Value $installSCript.Content; .\VirtoLocal_create_local_files.ps1
 ```
+
+Open `http://localhost:8090` and sign in with `admin` / `store` to access the Platform admin.
+
+<br>
+![Read more](media/readmore.png){: width="20"} [Local install with start-local. Prerequisites, lifecycle commands, customization, and troubleshooting](Installation-Guide/start-local.md)
 
 ## Configure your custom solution
 

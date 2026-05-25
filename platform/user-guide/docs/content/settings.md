@@ -20,5 +20,5 @@ The modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-blogs">← Managing blogs</a>
-    <a href="../../integrations/builder-io/overview">Builder.io module overview →</a>
+    <a href="../../cms-overview">CMSs overview →</a>
 </div>

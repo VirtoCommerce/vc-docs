@@ -36,7 +36,9 @@ To address crucial extension requirements, the Platform contains various **exten
     * [Using Seq log module](../Fundamentals/Logging/seq-module.md)
 * Page Builder extension:
     * [Adding and editing blocks](page-builder-extension.md)
-
+* Product Snapshot extension:
+    * [Adding custom properties via metaform](../Tutorials-and-How-tos/How-tos/product-snapshot.md#adding-custom-properties-via-metaform)
+    * [Adding widgets](../Tutorials-and-How-tos/How-tos/product-snapshot.md#adding-widgets)
 
 
 <br>

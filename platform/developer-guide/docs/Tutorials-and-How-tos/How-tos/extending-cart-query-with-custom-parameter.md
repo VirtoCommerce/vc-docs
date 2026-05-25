@@ -76,6 +76,6 @@ This implementation extends the original `GetCartQuery` by introducing a `GetCar
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../configuring-multiple-stores-on-virto-cloud">← Configuring multiple stores on Virto Cloud </a>
+    <a href="../configuring-multiple-stores-on-virto-cloud">← Product Snapshot module </a>
     <a href="../customizing-cart-validation-policies">Customizing cart validation policies  →</a>
 </div>

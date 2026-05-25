@@ -33,6 +33,6 @@ Please [contact us](https://virtocommerce.com/request-demo) to start using our *
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../sanity/overview">← Sanity module overview</a>
+    <a href="../../cms-overview">← CMSs overview</a>
     <a href="../enabling-ai-doc-processing">Enabling AI doc processing →</a>
 </div>
