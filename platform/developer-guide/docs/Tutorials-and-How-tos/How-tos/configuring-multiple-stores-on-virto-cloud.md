@@ -84,5 +84,5 @@ The **B2B-loyalty** Frontend Application has been successfully added to your Vir
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../configuring-multiple-stores">← Configuring multiple stores </a>
-    <a href="../extending-cart-query-with-custom-parameter">Extending Cart query with custom parameter  →</a>
+    <a href="../product-snapshot">Product Snapshot module  →</a>
 </div>

@@ -34,5 +34,5 @@ The modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../manage-quotes">← Managing quotes</a>
-    <a href="../../assets/overview">Assets module overview →</a>
+    <a href="../../content/overview">Content module overview →</a>
 </div>

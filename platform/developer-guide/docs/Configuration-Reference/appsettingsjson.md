@@ -1684,6 +1684,28 @@ This node is used for Platform settings overriding.
 }
 ```
 
+### ProductSnapshot
+
+This node configures the Product Snapshot module, which captures product information at order creation so completed orders keep their original product details after catalog changes.
+
+<!--product-snapshot-start-->
+
+| Node    | Default or sample value | Description                                                                                              |
+|---------|-------------------------|----------------------------------------------------------------------------------------------------------|
+| Enabled | true<br> false          | Enables automatic product snapshot creation on new orders. Must be set to `true` to activate the module. |
+
+**Examples**
+
+```json title="appsettings.json"
+{
+  "ProductSnapshot": {
+    "Enabled": true
+  }
+}
+```
+
+<!--product-snapshot-end-->
+
 ### PushMessages
 
 This node configures the push notification settings for the Virto Commerce Push Messages module using Firebase Cloud Messaging (FCM).

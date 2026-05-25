@@ -175,6 +175,7 @@ nav:
                 - Blogs: content/managing-blogs.md
                 - Settings: content/settings.md
           - <b>Content Related Modules</b>:
+                - Overview: cms-overview.md
                 - Builder.io:
                       - Overview: integrations/builder-io/overview.md
                       - Using Builder.io: integrations/builder-io/use-builder-io.md
@@ -189,6 +190,8 @@ nav:
                       - Enabling Virto Pages: pages/enabling-pages.md
                 - Sanity:
                       - Overview: sanity/overview.md
+                - Contentful:
+                      - Overview: contentful/overview.md
           - AI Smart Capture:
                 - Overview: ai-doc-processing/overview.md
                 - Enabling AI Smart Capture: ai-doc-processing/enabling-ai-doc-processing.md
@@ -295,6 +298,10 @@ nav:
                 - Mapping CSV files: price-export-import/mapping-csv-files.md
                 - Exporting Price Lists: price-export-import/exporting-price-lists.md
                 - Importing Price Lists: price-export-import/importing-price-lists.md
+          - Product Snapshot: 
+                - Overview: product-snapshot/overview.md
+                - Viewing Product Snapshots: product-snapshot/viewing-products-snapshot.md
+                - Enabling Product Snapshots: product-snapshot/enabling-products-snapshot.md
           - Push Messages:
                 - Overview: push-messages/overview.md
                 - Managing Push Messages: push-messages/manage-push-messages.md

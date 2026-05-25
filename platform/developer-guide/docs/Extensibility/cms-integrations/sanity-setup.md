@@ -1,4 +1,4 @@
-# Sanity
+# Sanity Setup
 
 The Sanity module integrates [Sanity](https://www.sanity.io/) CMS with Virto Commerce. It exposes a webhook endpoint that receives page create, update, and delete events from Sanity and publishes them to the [Pages module](cms-overview.md#pages-module-as-unification-layer).
 
@@ -90,5 +90,5 @@ To check whether webhooks are being delivered correctly, go to **Sanity Manage**
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../PageBuilder/overview">← Page Builder overview </a>
-    <a href="../../../Operations/maintenance-tasks-for-sql">Operations. Maintenance tasks for SQL →</a>
+    <a href="../contentful-setup">Contentful setup →</a>
 </div>
