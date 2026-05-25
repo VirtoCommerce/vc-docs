@@ -2,5 +2,9 @@
 # To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
 title: Notifications
 nav:
+  - useBladeNotifications: useBladeNotifications.md
+  - useBroadcastFilter: useBroadcastFilter.md
+  - useNotificationContext: useNotificationContext.md
+  - useNotificationStore: useNotificationStore.md
   - useNotifications: useNotifications.md
   - usePopup: usePopup.md
