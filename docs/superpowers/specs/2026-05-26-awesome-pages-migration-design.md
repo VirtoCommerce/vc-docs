@@ -93,9 +93,12 @@ nav:
   - Cold Start Optimization and Data Migration: cold-start-and-data-migration.md
   - Installing and Updating Platform and Modules: install-and-update-platform-and-modules.md
   - Managing Platform and Modules with CLI: more-targets.md
-  - Virto Cloud: virto-cloud-overview.md
-  - Using Virto Cloud: virto-cloud.md
+  - Virto Cloud:
+      - Overview: virto-cloud-overview.md
+      - Using Virto Cloud: virto-cloud.md
 ```
+
+Note the inline nested list for `Virto Cloud`: its two pages live in the `CLI-tools/` folder directly (not in a sub-folder), so they cannot be moved into a sibling `.pages` without renaming files. `awesome-pages` supports nested inline groups inside `nav:` exactly for this case. Where a sub-section corresponds to a real sub-folder, prefer a separate `.pages` in that sub-folder instead — see Step 2 conventions.
 
 ### Step 3 — Remove section from `mkdocs.yml`
 
