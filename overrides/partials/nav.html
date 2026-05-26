@@ -1,42 +1,41 @@
-<!-- Determine class according to configuration -->
+{#-
+  Override of mkdocs-material partials/nav.html (theme 9.5.4).
+  Divergences from stock are limited to:
+  1. Uses config.extra_site_name as the displayed and aria-labelled title (project's preferred display name).
+  2. Omits the repo_url source block — kept out of the primary nav drawer.
+  3. Appends a palette toggle block inside the drawer.
+-#}
+{% import "partials/nav-item.html" as item with context %}
 {% set class = "md-nav md-nav--primary" %}
-{% if "toc.integrate" in features %}
-{% set class = class ~ " md-nav--integrated" %}
+{% if "navigation.tabs" in features %}
+  {% set class = class ~ " md-nav--lifted" %}
 {% endif %}
-
-<!-- Main navigation -->
-<nav
-    class="{{ class }}"
-    aria-label="{{ lang.t('nav.title') }}"
-    data-md-level="0"
->
-
-    <!-- Site title -->
-    <label class="md-nav__title" for="__drawer">
-        <a
-            href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-            title="{{ config.extra_site_name | e }}"
-            class="md-nav__button md-logo"
-            aria-label="{{ config.extra_site_name }}"
-            data-md-component="logo"
-        >
-            {% include "partials/logo.html" %}
-        </a>
-        {{ config.extra_site_name }}
-    </label>
-
-    <!-- Render item list -->
-    <ul class="md-nav__list" data-md-scrollfix>
-        {% for nav_item in nav %}
-        {% set path = "__nav_" ~ loop.index %}
-        {% set level = 1 %}
-        {% include "partials/nav-item.html" %}
-        {% endfor %}
-    </ul>
-    {% if not config.theme.palette is mapping %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a
+      href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+      title="{{ config.extra_site_name | e }}"
+      class="md-nav__button md-logo"
+      aria-label="{{ config.extra_site_name }}"
+      data-md-component="logo"
+    >
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.extra_site_name }}
+  </label>
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+  {% if not config.theme.palette is mapping %}
     <div class="md-nav__palette">
-        {% set paletteVar = "__palette2" %}
-        {% include "partials/palette.html" %}
-        {% endif %}
+      {% set paletteVar = "__palette2" %}
+      {% include "partials/palette.html" %}
     </div>
+  {% endif %}
 </nav>
