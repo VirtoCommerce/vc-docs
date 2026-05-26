@@ -91,6 +91,7 @@ extra_css:
     - assets/stylesheets/version-selector.css
     - assets/stylesheets/vc-shell-docs.css
     - assets/stylesheets/ai-overrides.css
+    - assets/stylesheets/vc-shell-docs.css
 
 extra_javascript:
     - assets/scripts/version-redirect.js
