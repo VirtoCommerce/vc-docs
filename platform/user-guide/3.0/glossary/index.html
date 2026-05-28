@@ -1871,6 +1871,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#approval-workflow" class="md-nav__link">
+        Approval workflow
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#asset" class="md-nav__link">
         Asset
     </a>
@@ -2013,6 +2023,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#digital-product" class="md-nav__link">
         Digital product
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#digital-showroom" class="md-nav__link">
+        Digital showroom
     </a>
 
     <!-- Render nested item list -->
@@ -15143,6 +15163,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#approval-workflow" class="md-nav__link">
+        Approval workflow
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#asset" class="md-nav__link">
         Asset
     </a>
@@ -15285,6 +15315,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#digital-product" class="md-nav__link">
         Digital product
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#digital-showroom" class="md-nav__link">
+        Digital showroom
     </a>
 
     <!-- Render nested item list -->
@@ -15573,7 +15613,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 4, 2026 18:01:35 UTC">May 4, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2026 11:45:09 UTC">May 28, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15598,6 +15638,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>For developer vocabulary, such as DDD patterns, .NET interfaces, or extensibility APIs, see the <a href="/platform/developer-guide/latest/glossary">Developer guide glossary</a>.</p>
 <h2 id="admin-ui">Admin UI<a class="headerlink" href="#admin-ui" title="Permanent link">&para;</a></h2>
 <p>Same as <strong>Platform</strong> and <strong>Back office</strong>. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.</p>
+<h2 id="approval-workflow">Approval workflow<a class="headerlink" href="#approval-workflow" title="Permanent link">&para;</a></h2>
+<p>A multi-step process where a cart requires authorization before becoming a confirmed order. In Virto Commerce, the approval-bearing object is the <a href="#quote">Quote</a>, not the cart itself. A buyer, or a sales rep using <a href="../security/login-on-behalf/">Login on behalf</a>, converts the cart into a <a href="/storefront/user-guide/latest/shopping/submit-quotes/">Quote Request</a> and submits it. The Quote then moves through <strong>Processing</strong>, <strong>Proposal sent</strong>, and finally <strong>Ordered</strong> or <strong>Declined</strong>.</p>
+<p>The base Platform does not include a standalone cart-approval state, spending-limit-triggered rules, or multi-level approval chains. The <a href="/marketplace/developer-guide/latest/state-machine-module/overview/">State Machine module</a> provides a generic state-machine engine for customizing this.</p>
 <h2 id="asset">Asset<a class="headerlink" href="#asset" title="Permanent link">&para;</a></h2>
 <p>A file (such as an image, video, document, or media resource) that is uploaded to the platform and linked to a product, category, or catalog to provide additional visual or informational content.</p>
 <h2 id="association">Association<a class="headerlink" href="#association" title="Permanent link">&para;</a></h2>
@@ -15650,6 +15693,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The companies and contacts to whom the contract prices apply.</p>
 <h2 id="digital-product">Digital product<a class="headerlink" href="#digital-product" title="Permanent link">&para;</a></h2>
 <p>Any tangible product that the store owner can list in the Store. Digital products have unique attributes such as download type, maximum downloads, etc., unlike physical products; no shipping or inventory attributes may apply to such products.</p>
+<h2 id="digital-showroom">Digital showroom<a class="headerlink" href="#digital-showroom" title="Permanent link">&para;</a></h2>
+<p>A digital replacement for the physical wholesale showroom experience. Virto Commerce does not use this term but delivers all the required features:</p>
+<ul>
+<li>The <strong>rep beside the buyer</strong> mechanic → <a href="../security/login-on-behalf/">Login on behalf</a> (rep impersonates the retailer to walk them through and place orders).</li>
+<li>The <strong>your assortment, your prices</strong> mechanic → <a href="../catalog-personalization/overview/">Catalog personalization</a> + <a href="../contracts/overview/">Contracts</a> + per-store catalog scoping.</li>
+<li>The <strong>curated collection presentation</strong> mechanic → <a href="../pages/overview/">Pages</a>, <a href="../page-builder/overview/">Page Builder</a>, <a href="../marketing/dynamic-content-overview/">Marketing dynamic content</a>, categories, brand pages.</li>
+<li>The <strong>story-driven cross-sell/upsell</strong> mechanic → <a href="../marketing/dynamic-associations-overview/">Dynamic associations</a> + <a href="../recommend/overview/">Recommendations</a> + CMS-driven narrative blocks.</li>
+<li>The <strong>fast B2B reorder</strong> mechanic → <a href="/storefront/user-guide/latest/shopping/bulk-orders/">Bulk orders</a>, <a href="/storefront/user-guide/latest/shopping/lists/">Lists</a>, <a href="/storefront/user-guide/latest/shopping/submit-quotes/">Quotes</a>, <a href="/storefront/user-guide/latest/account/purchase-requests/">Purchase requests</a>.</li>
+</ul>
 <h2 id="dynamic-property">Dynamic property<a class="headerlink" href="#dynamic-property" title="Permanent link">&para;</a></h2>
 <p>An extra field that admins can add to any Virto Commerce object that supports dynamic properties, from the Admin UI. Dynamic properties capture, store, and display unique, nonstandard information.</p>
 <p>Equivalent in other ecommerce platforms:</p>
