@@ -48,6 +48,37 @@ To install LibSass:
 
 Now you have the directory with the precompiled files of the Virto Commerce Platform.
 
+## Use Virto Commerce CLI
+
+To use Virto Commerce CLI (vc-build):
+
+1. Install vc-build using the command:
+
+    ```console
+    dotnet tool install -g VirtoCommerce.GlobalTool
+    ```
+
+    !!! note
+        Global dotnet tools are installed to `~/.dotnet/tools` on macOS. If this directory is not in your **PATH**, add it by appending the following line to your shell profile (**~/.zshrc** or **~/.bash_profile**) and reloading the shell:
+
+        ```console
+        export PATH="$PATH:$HOME/.dotnet/tools"
+        ```
+
+1. Install the Platform and the modules using the command:
+
+    ```console
+    vc-build install
+    ```
+
+1. Specify the Platform version (if required) using the command:
+
+    ```console
+    vc-build install -version 3.x.x.x
+    ```
+
+![Readmore](media/readmore.png){: width="25"} [VC-Build for Packages Management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)
+
 ## Set up Platform
 
 To set up the Platform:

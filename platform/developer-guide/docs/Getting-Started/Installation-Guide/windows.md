@@ -195,6 +195,6 @@ Your Platform is ready to go.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../system-requirements">← System requirements</a>
+    <a href="../../installation-deployment-options">← Installation and deployment options</a>
     <a href="../linux">Installation on Linux →</a>
 </div>
