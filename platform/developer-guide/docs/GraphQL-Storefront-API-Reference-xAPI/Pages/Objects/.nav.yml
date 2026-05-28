@@ -1,0 +1,6 @@
+title: Objects
+nav:
+  - PageDocumentConnection: PageDocumentConnection.md
+  - PageDocumentEdge: PageDocumentEdge.md
+  - PageDocumentType: PageDocumentType.md
+  - SlugInfoResponseType: SlugInfoResponseType.md

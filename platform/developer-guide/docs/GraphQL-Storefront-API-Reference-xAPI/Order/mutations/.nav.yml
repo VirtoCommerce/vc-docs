@@ -1,0 +1,13 @@
+title: Mutations
+nav:
+  - ChangePurchaseOrderNumber: change-purchase-order-number.md
+  - CreateOrderFromCart: create-order-from-cart.md
+  - ChangeOrderStatus: change-order-status.md
+  - ProcessOrderPayment: process-order-payment.md
+  - UpdateOrderDynamicProperties: update-order-dynamic-properties.md
+  - UpdateOrderItemDynamicProperties: update-order-item-dynamic-properties.md
+  - UpdateOrderShipmentDynamicProperties: update-order-shipment-dynamic-properties.md
+  - UpdateOrderPaymentDynamicProperties: update-order-payment-dynamic-properties.md
+  - InitializePayment: initialize-payment.md
+  - AuthorizePayment: authorize-payment.md
+  - AddOrUpdateOrderPayment: add-or-update-order-payment.md

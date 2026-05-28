@@ -1,0 +1,6 @@
+title: DB Agnostic Architecture
+nav:
+  - Overview: overview.md
+  - Configuring VC with DB Providers: configuring-vc-with-db-providers.md
+  - Creating Custom Module with DB Agnostic Approach: creating-custom-module.md
+  - Transforming Custom Module to Support DB Agnostic Approach: transforming-custom-module.md

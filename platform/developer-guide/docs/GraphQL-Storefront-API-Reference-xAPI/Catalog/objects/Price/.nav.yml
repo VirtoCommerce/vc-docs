@@ -1,0 +1,5 @@
+title: Price
+nav:
+  - PriceType: PriceType.md
+  - TierPriceType: TierPriceType.md
+  - CatalogDiscountType: CatalogDiscountType.md

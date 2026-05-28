@@ -1,0 +1,12 @@
+title: Modularity
+nav:
+  - Overview: 01-overview.md
+  - Folder Structure: 02-folder-structure.md
+  - Versioning and Dependencies: 03-versioning-and-dependencies.md
+  - Optional Dependency between Modules: optional-dependency.md
+  - Loading Modules into App Process: 04-loading-modules-into-app-process.md
+  - IPlatformStartup: IPlatformStartup.md
+  - Module.manifest File: 06-module-manifest-file.md
+  - Best Practices: 05-best-practices.md
+  - Configuration: configuration.md
+  - Azure App Configuration: azure-app-configuration.md

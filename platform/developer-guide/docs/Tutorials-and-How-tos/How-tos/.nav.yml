@@ -1,0 +1,30 @@
+title: How-tos
+nav:
+  - Upgrading to Virto Commerce on .NET10: upgrading-to-dot-net-10.md
+  - Connecting Virto Commerce to AI agents via onX Adapter: connect-to-ai-agents-via-onx.md
+  - Adding Case-Insensitive Search Support for PostgreSQL: adding-case-sensitive-search-support-for-postgre.md
+  - Setting up Context7: using-context7.md
+  - Using llms.txt: using-llms-txt.md
+  - Swagger/API Integration in Virto Commerce: swagger-api.md
+  - Generating C# Client from VC Swagger with NSwag: generating-c-sharp-client.md
+  - Type Inheritance Support in Swagger API: type-inheritance-support-in-swagger.md
+  - Adding Azure App Configuration: azure-app-configuration.md
+  - Setting Up Prerender.io with Azure Application Gateway: setting-up-prerender-io-with-azure-app-gateway.md
+  - Debugging VC Code without Source Code: debugging.md
+  - Configuring Multiple Stores: configuring-multiple-stores.md
+  - Configuring Multiple Stores on Virto Cloud: configuring-multiple-stores-on-virto-cloud.md
+  - Product Snapshot Module Architecture and Extensibility: product-snapshot.md
+  - Extending Cart Query With Custom Parameter: extending-cart-query-with-custom-parameter.md
+  - Customizing Cart Validation Policies: customizing-cart-validation-policies.md
+  - Overriding Rounding Policy: overriding-rounding-policy.md
+  - Using Feature Flags with VC Platform and Frontend: feature-flags.md
+  - Using responseGroup in Virto Commerce REST APIs: using-responseGroups-in-rest-api.md
+  - Partial Updates for Entities Using PATCH-Endpoint: update-using-patch.md
+  - Generating PDFs: generating-pdfs.md
+  - Health Checks: health-checks.md
+  - JSON Web Token Authorization Mechanism: authorization-using-jwt.md
+  - Sharing Bearer Tokens Across Multiple Instances: sharing-bearer-tokens.md
+  - User Email Verification: user-email-verification.md
+  - Enabling Embedded Mode for VC-Shell Instances: enable-embedded-mode-for-vc-shell.md
+  - Migration to New xAPI Modules: migration-to-new-xapi-modules.md
+  - Configuring Environments for Comparison: configuring-environments.md

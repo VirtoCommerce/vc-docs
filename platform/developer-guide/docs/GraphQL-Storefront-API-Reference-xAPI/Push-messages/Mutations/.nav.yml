@@ -1,0 +1,9 @@
+title: Mutations
+nav:
+  - markPushMessageRead: markPushMessageRead.md
+  - markPushMessageUnread: markPushMessageUnread.md
+  - markAllPushMessagesRead: markAllPushMessagesRead.md
+  - markAllPushMessagesUnread: markAllPushMessagesUnread.md
+  - clearAllPushMessages: clearAllPushMessages.md
+  - addFcmToken: addFcmToken.md
+  - deleteFcmToken: deleteFcmToken.md

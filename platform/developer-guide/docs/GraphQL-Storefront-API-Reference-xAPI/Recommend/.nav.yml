@@ -1,0 +1,6 @@
+title: xRecommend
+nav:
+  - Overview: overview.md
+  - Queries: query
+  - Objects: object
+  - Mutations: mutation

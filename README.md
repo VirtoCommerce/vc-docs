@@ -5,50 +5,48 @@
 MkDocs is a **fast**, **simple** and **downright gorgeous** static site generator that's geared towards building project documentation.
 More info: https://www.mkdocs.org/
 
-## Prerequisites - Install pip on Windows
-Follow the instructions in this article
-https://www.dataquest.io/blog/install-pip-windows/
+## Prerequisites
 
-## Setup on-premises
+- **Python 3.10 or newer.** `platform/developer-guide` depends on `mkdocs-awesome-nav` v3, which requires Python ≥ 3.10.
+  - macOS: `brew install python@3.10`
+  - Ubuntu: `apt-get install python3.10 python3.10-venv`
+  - Windows: install from https://www.python.org/downloads/
 
-### Install MkDocs and all required packages
+## Setup
+
+Create a virtualenv with Python 3.10+ and install pinned dependencies:
+
 ```bash
-# Install MkDocs Material theme and core dependencies
-pip install mkdocs-material
-
-# Install additional plugins
-pip install mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin \
-    mkdocs-minify-plugin mkdocs-redirects mkdocs-monorepo-plugin \
-    mkdocs-include-markdown-plugin pymdown-extensions jinja2
-
-# Install Mike for versioning support
-pip install mike
+# macOS / Linux
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-docs.txt
 ```
 
-### Quick install (all at once)
-```bash
-pip install mkdocs-material mike mkdocs-awesome-pages-plugin \
-    mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin \
-    mkdocs-redirects mkdocs-monorepo-plugin mkdocs-include-markdown-plugin \
-    pymdown-extensions jinja2
+```powershell
+# Windows
+py -3.10 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements-docs.txt
 ```
 
-## Development Workflow
+`requirements-docs.txt` pins every plugin to the version known to work with the current overrides (notably `mkdocs-material==9.5.27` and `mkdocs-awesome-nav==3.3.0`).
 
-### Regular development (without versioning)
+## Quick start
+
+After activating the venv:
+
 ```bash
-# Serve documentation locally for development
-mkdocs serve
+mkdocs serve -f platform/developer-guide/mkdocs.yml
+# open http://127.0.0.1:8000
 ```
-Open http://127.0.0.1:8000
 
-### Build documentation
+For other guides, swap the `-f` path (`platform/user-guide/mkdocs.yml`, `storefront/developer-guide/mkdocs.yml`, etc.).
+
+### Build the full multi-site
+
 ```bash
-# Build to site/ directory
-mkdocs build
-
-# Build to custom directory
-mkdocs build -d /path/to/output
+./build.sh    # builds every sub-site into ./site
 ```
 
 ## Preview specific docs

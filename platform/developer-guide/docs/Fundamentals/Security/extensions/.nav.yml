@@ -1,0 +1,6 @@
+title: Extensions
+nav:
+  - Extending Authorization Policies: extending-authorization-policies.md
+  - Extending ASP.NET Identity UserManager and RoleManager: extending-usermanager-and-rolemanager.md
+  - Adding Azure AD as SSO Provider: adding-azure-as-sso-provider.md
+  - Adding Google as SSO Provider: adding-google-as-sso-provider.md

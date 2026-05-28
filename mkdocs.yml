@@ -85,8 +85,7 @@ plugins:
     # - monorepo  # REMOVED - subsites are built separately with mike
     - search: # necessary for search to work
     #   - autolinks
-    - awesome-pages:
-    #       strict: false
+    - awesome-nav
     - git-revision-date-localized
     - minify
     #       minify_html: true

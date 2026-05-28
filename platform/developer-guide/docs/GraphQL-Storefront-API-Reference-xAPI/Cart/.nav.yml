@@ -1,0 +1,6 @@
+title: xCart
+nav:
+  - Overview: overview.md
+  - Queries: queries
+  - Objects: objects
+  - Mutations: mutations
