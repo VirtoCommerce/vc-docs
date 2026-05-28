@@ -107,5 +107,5 @@ The Virto Commerce Platform Manager supports all modern evergreen browsers:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../ai-quick-start">← AI assistance </a>
-    <a href="Installation-Guide/windows">Installation guide →</a>
+    <a href="../installation-deployment-options">Installation and deployment options →</a>
 </div>

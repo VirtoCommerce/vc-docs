@@ -287,5 +287,5 @@ SELECT COUNT(*) AS [Sessions] FROM sys.dm_exec_connections
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../Extensibility/overview">← Extensibility overview</a>
-    <a href="../../Tutorials-and-How-tos/overview">Tutorials and how-tos  →</a>
+    <a href="../integration-failure-handling">Integration failure handling  →</a>
 </div>

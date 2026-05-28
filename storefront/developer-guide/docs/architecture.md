@@ -2,7 +2,7 @@
 
 The simplified and accelerated Frontend architecture is as follows: 
 
-![Architecture](media/frontend-application-architecture.png)
+![Architecture](media/frontend-application-architecture.png){: style="display: block; margin: 0 auto;" }
 
 It includes: 
 

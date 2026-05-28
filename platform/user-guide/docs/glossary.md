@@ -7,6 +7,11 @@ For developer vocabulary, such as DDD patterns, .NET interfaces, or extensibilit
 ## Admin UI
 Same as **Platform** and **Back office**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
+## Approval workflow
+A multi-step process where a cart requires authorization before becoming a confirmed order. In Virto Commerce, the approval-bearing object is the [Quote](#quote), not the cart itself. A buyer, or a sales rep using [Login on behalf](security/login-on-behalf.md), converts the cart into a [Quote Request](/storefront/user-guide/latest/shopping/submit-quotes/) and submits it. The Quote then moves through **Processing**, **Proposal sent**, and finally **Ordered** or **Declined**.
+
+The base Platform does not include a standalone cart-approval state, spending-limit-triggered rules, or multi-level approval chains. The [State Machine module](/marketplace/developer-guide/latest/state-machine-module/overview/) provides a generic state-machine engine for customizing this.
+
 ## Asset
 A file (such as an image, video, document, or media resource) that is uploaded to the platform and linked to a product, category, or catalog to provide additional visual or informational content.
 
@@ -59,6 +64,16 @@ The companies and contacts to whom the contract prices apply.
 
 ## Digital product
 Any tangible product that the store owner can list in the Store. Digital products have unique attributes such as download type, maximum downloads, etc., unlike physical products; no shipping or inventory attributes may apply to such products.
+
+## Digital showroom
+
+A digital replacement for the physical wholesale showroom experience. Virto Commerce does not use this term but delivers all the required features:
+
+* The **rep beside the buyer** mechanic → [Login on behalf](security/login-on-behalf.md) (rep impersonates the retailer to walk them through and place orders).
+* The **your assortment, your prices** mechanic → [Catalog personalization](catalog-personalization/overview.md) + [Contracts](contracts/overview.md) + per-store catalog scoping.
+* The **curated collection presentation** mechanic → [Pages](pages/overview.md), [Page Builder](page-builder/overview.md), [Marketing dynamic content](marketing/dynamic-content-overview.md), categories, brand pages.
+* The **story-driven cross-sell/upsell** mechanic → [Dynamic associations](marketing/dynamic-associations-overview.md) + [Recommendations](recommend/overview.md) + CMS-driven narrative blocks.
+* The **fast B2B reorder** mechanic → [Bulk orders](/storefront/user-guide/latest/shopping/bulk-orders/), [Lists](/storefront/user-guide/latest/shopping/lists/), [Quotes](/storefront/user-guide/latest/shopping/submit-quotes/), [Purchase requests](/storefront/user-guide/latest/account/purchase-requests/).
 
 ## Dynamic property
 An extra field that admins can add to any Virto Commerce object that supports dynamic properties, from the Admin UI. Dynamic properties capture, store, and display unique, nonstandard information.

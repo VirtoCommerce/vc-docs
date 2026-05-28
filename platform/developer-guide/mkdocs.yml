@@ -108,6 +108,7 @@ nav:
           - AI Assistance: Getting-Started/ai-quick-start.md
           - System Requirements: Getting-Started/system-requirements.md
           - Installation Guide:
+                - Installation and Deployment Options: Getting-Started/installation-deployment-options.md
                 - Windows: Getting-Started/Installation-Guide/windows.md
                 - Linux: Getting-Started/Installation-Guide/linux.md
                 - MacOS: Getting-Started/Installation-Guide/macOS.md
@@ -880,6 +881,7 @@ nav:
                 - Contentful Setup: Extensibility/cms-integrations/contentful-setup.md
     - Operations:
           - Maintenance Tasks for SQL: Operations/maintenance-tasks-for-sql.md
+          - Integration Failure Handling: Operations/integration-failure-handling.md
     - Tutorials and How-tos:
           - Overview: Tutorials-and-How-tos/overview.md
           - Tutorials:
@@ -893,6 +895,9 @@ nav:
                 - Building and Customizing Platform Manager UI: Tutorials-and-How-tos/Tutorials/build-platform-manager-ui.md
                 - Extending Domain Models: Tutorials-and-How-tos/Tutorials/extending-domain-models.md
           - How-tos:
+                - Deploy on AWS: Tutorials-and-How-tos/How-tos/deploy-platform-on-aws.md
+                - Deploy on Google Cloud: Tutorials-and-How-tos/How-tos/deploy-platform-on-gcp.md
+                - Connect Azure Functions to Virto Events: Tutorials-and-How-tos/How-tos/connect-azure-function-to-events.md
                 - Upgrading to Virto Commerce on .NET10: Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md
                 - Connecting Virto Commerce to AI agents via onX Adapter: Tutorials-and-How-tos/How-tos/connect-to-ai-agents-via-onx.md
                 - Adding Case-Insensitive Search Support for PostgreSQL: Tutorials-and-How-tos/How-tos/adding-case-sensitive-search-support-for-postgre.md
