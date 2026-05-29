@@ -1,0 +1,8 @@
+title: State Machine Module
+nav:
+  - Overview: overview.md
+  - Data Structure: data-structure.md
+  - Entity Types: entity-types.md
+  - Transition Conditions: transition-conditions.md
+  - Operator Portal Actions: operator-portal-actions.md
+  - Vendor Portal Actions: vendor-portal-actions.md
