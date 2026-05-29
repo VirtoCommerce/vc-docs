@@ -19,6 +19,7 @@ plugins:
             /1.1/
             /2.0/
             /latest/
+    - awesome-nav
     - git-revision-date-localized
     - minify
     - include-markdown
@@ -65,35 +66,3 @@ extra_javascript:
     - assets/scripts/version-selector-handler.js
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
-
-# Page tree
-nav:
-    - Overview: index.md
-    - Operator Portal:
-      - Overview: Operator-portal/overview.md
-      - Master Catalog: Operator-portal/master-catalog.md
-      - Commissions:
-        - Overview: Operator-portal/Commission-fees-setup/overview.md
-        - Static Commission Fees: Operator-portal/Commission-fees-setup/static-commission-fees.md
-        - Dynamic Commission Fees: Operator-portal/Commission-fees-setup/dynamic-commission-fees.md
-      - Vendors:
-        - Vendor Onboarding: Operator-portal/Vendors-management/vendor-onboarding.md
-        - Vendor Management: Operator-portal/Vendors-management/vendor-management.md
-      - Registration Requests: Operator-portal/registration-requests.md
-      - Marketplace Products: Operator-portal/marketplace-products.md
-      - Offers: Operator-portal/offers.md
-      - Operator Orders: Operator-portal/operator-orders.md
-      - Quote Requests: Operator-portal/quotes.md
-      - State Machines: Operator-portal/state-machines.md
-      - Communication: Operator-portal/communication.md
-    - Vendor Portal:
-      - Overview: Vendor-portal/overview.md
-      - Orders: Vendor-portal/orders.md
-      - Quotes: Vendor-portal/quotes.md
-      - Products: Vendor-portal/products-management.md
-      - Offers: Vendor-portal/offers.md
-      - Import: Vendor-portal/import.md
-      - Rating and Reviews: Vendor-portal/rating-and-reviews.md
-      - Communication: Vendor-portal/communication.md
-      - My Store: Vendor-portal/my-store.md
-      - AI Assistant: Vendor-portal/ai-assistant.md
