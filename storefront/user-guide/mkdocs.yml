@@ -19,6 +19,7 @@ plugins:
             /1.1/
             /2.0/
             /latest/
+    - awesome-nav
     - git-revision-date-localized
     - minify
     - include-markdown
@@ -64,48 +65,3 @@ extra_javascript:
     - assets/scripts/version-selector-handler.js
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
-
-# Page tree
-nav:
-    - Overview: index.md
-    - Register and Sign In:
-          - Create Account: registration_and_signing_in/create-account.md
-          - Sign In: registration_and_signing_in/sign-in.md
-          - Password Management: registration_and_signing_in/password-management.md
-    - Navigation:
-          - Homepage Layout: navigation/homepage-layout.md
-          - Product Page Layout: navigation/product-page-layout.md
-          - Brands Page: navigation/brands-page.md
-    - Account:
-          - Personal and Corporate Accounts: account/overview.md
-          - Purchasing:
-                - Dashboard: account/dashboard.md
-                - Orders: account/orders.md
-                - Lists: account/lists.md
-                - Quote Requests: account/quote-requests.md
-                - Purchase Requests: account/purchase-requests.md
-                - Saved for Later: account/saved-for-later.md
-                - Back-in-Stock List: account/back-in-stock-list.md
-          - Marketing:
-                - Coupons and Promotions: account/coupons.md
-                - Notifications: account/notifications.md
-                - Points History: account/points-history.md
-          - Corporate:
-                - Company Info: account/company-info.md
-                - Company Members: account/company-members.md
-          - User: 
-                - Profile: account/profile.md
-                - Change Password: account/change-password.md
-                - Addresses: account/addresses.md
-                - Saved Credit Cards: account/saved-credit-cards.md
-    - Shopping:
-          - Options for Buying Products: shopping/products-purchase-options.md
-          - Search Options: shopping/searching-for-products.md
-          - Back-in-Stock Notifications: shopping/back-in-stock-notifications.md
-          - Bulk Orders: shopping/bulk-orders.md
-          - Compare Products: shopping/compare-products.md
-          - Product Lists: shopping/lists.md
-          - Save for Later: shopping/save-for-later.md
-          - Notifications: shopping/notifications.md
-          - Check Out: shopping/checkout-process.md
-          - Review Products: account/review-products.md
