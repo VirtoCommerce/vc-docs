@@ -19,6 +19,7 @@ plugins:
             /1.1/
             /2.0/
             /latest/
+    - awesome-nav
     - git-revision-date-localized
     - minify
     - include-markdown
@@ -65,17 +66,3 @@ extra_javascript:
     - assets/scripts/version-selector-handler.js
     - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js
-
-# Page tree
-nav:
-    - Overview: index.md
-    - Deploy Platform and Frontend on Virto Cloud: deploy-on-virto-cloud.md
-    - Create Environment via CLI and VC Build: create-environment-via-cli-and-vc-build.md
-    - Create and Configure Catalog: catalog-creation.md
-    - Create Catalog via CSV: add-products-via-csv.md
-    - Configure Store: store-configuration.md
-    - Set up Main Menu: main-menu-setup.md
-    - Set up Footer: footer-creation.md
-    - Brand Store: store-branding.md
-    - Create Pages in Builder.io: create-page-in-builder-io.md
-    - Enable GitOps: enable-gitops.md
