@@ -1,0 +1,5 @@
+title: Objects
+nav:
+  - BackInStockSubscriptionType: BackInStockSubscriptionType.md
+  - BackInStockSubscriptionEdge: BackInStockSubscriptionEdge.md
+  - BackInStockSubscriptionConnection: BackInStockSubscriptionConnection.md

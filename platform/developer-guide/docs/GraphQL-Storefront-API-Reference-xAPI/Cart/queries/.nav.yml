@@ -1,0 +1,10 @@
+title: Queries
+nav:
+  - Cart: cart.md
+  - Carts: carts.md
+  - Wishlist: wishlist.md
+  - Wishlists: wishlists.md
+  - validateCoupon: validate-coupon.md
+  - productConfiguration: productConfiguration.md
+  - configurationItems: configurationItems.md
+  - getSavedForLater: getSavedForLater.md

@@ -1,0 +1,16 @@
+nav:
+  - Overview: index.md
+  - registration_and_signing_in
+  - navigation
+  - account
+  - Shopping:
+      - Options for Buying Products: shopping/products-purchase-options.md
+      - Search Options: shopping/searching-for-products.md
+      - Back-in-Stock Notifications: shopping/back-in-stock-notifications.md
+      - Bulk Orders: shopping/bulk-orders.md
+      - Compare Products: shopping/compare-products.md
+      - Product Lists: shopping/lists.md
+      - Save for Later: shopping/save-for-later.md
+      - Notifications: shopping/notifications.md
+      - Check Out: shopping/checkout-process.md
+      - Review Products: account/review-products.md

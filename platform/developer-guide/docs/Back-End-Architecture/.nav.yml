@@ -1,0 +1,6 @@
+title: Architecture
+nav:
+  - Virto Atomic Architecture: atomic-architecture.md
+  - Back End Architecture:
+      - Tech Stack: 01-tech-stack.md
+      - Conceptual Overview: 02-conceptual-overview.md

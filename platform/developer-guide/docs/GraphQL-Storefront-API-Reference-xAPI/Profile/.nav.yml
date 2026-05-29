@@ -1,0 +1,6 @@
+title: xProfile
+nav:
+  - Overview: overview.md
+  - Queries: Queries
+  - Objects: Objects
+  - Mutations: Mutations

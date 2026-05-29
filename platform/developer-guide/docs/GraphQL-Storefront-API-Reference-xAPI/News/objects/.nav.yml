@@ -1,0 +1,5 @@
+title: Objects
+nav:
+  - NewsArticleContent: NewsArticleContent.md
+  - NewsArticleContentConnection: NewsArticleContentConnection.md
+  - NewsArticleContentEdge: NewsArticleContentEdge.md

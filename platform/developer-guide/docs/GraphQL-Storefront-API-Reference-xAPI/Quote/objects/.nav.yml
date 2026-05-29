@@ -1,0 +1,22 @@
+title: Objects
+nav:
+  - QuoteType: QuoteType.md
+  - QuoteConnection: QuoteConnection.md
+  - QuoteTotalsType: QuoteTotalsType.md
+  - QuoteItemType: QuoteItemtype.md
+  - QuoteTierPriceType: QuoteTierPriceType.md
+  - QuoteAddressType: QuoteAddressType.md
+  - QuoteAttachmentType: QuoteAttachmentType.md
+  - QuoteShipmentMethodType: QuoteShipmentMethodType.md
+  - QuoteTaxDetailType: QuoteTaxDetailType.md
+  - QuoteEdge: QuoteEdge.md
+  - CancelQuoteCommandType: CancelQuoteCommandType.md
+  - ChangeQuoteCommentCommandType: ChangeQuoteCommentCommandType.md
+  - ChangeQuoteItemQuantityCommandType: ChangeQuoteItemQuantityCommandType.md
+  - CreateQuoteFromCartCommandType: CreateQuoteFromCartCommandType.md
+  - RemoveQuoteItemCommandtype: RemoveQuoteItemCommandtype.md
+  - SubmitQuoteCommandType: SubmitQuoteCommandType.md
+  - UpdateQuoteAddressCommandType: UpdateQuoteAddressCommandType.md
+  - InputQuoteAddressType: InputQuoteAddressType.md
+  - ApproveQuoteResultType: ApproveQuoteResultType.md
+  - UpdateQuoteDynamicPropertiesCommandType: UpdateQuoteDynamicPropertiesCommandType.md

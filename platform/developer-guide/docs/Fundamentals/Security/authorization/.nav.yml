@@ -1,0 +1,5 @@
+title: Authorization
+nav:
+  - Overview: overview.md
+  - Global Permissions: global-permissions.md
+  - Scope Based Permissions: scope-based-permissions.md

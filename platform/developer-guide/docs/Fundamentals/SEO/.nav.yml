@@ -1,0 +1,5 @@
+title: SEO
+nav:
+  - Overview: overview.md
+  - Adding SEO Capabilities to Module: add-seo-to-module.md
+  - Configuration: configuration.md

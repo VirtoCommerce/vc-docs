@@ -1,0 +1,4 @@
+title: Search
+nav:
+  - Overview: overview.md
+  - Faceted Search Overview and Configuration: faceted-search.md

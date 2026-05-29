@@ -1,0 +1,4 @@
+title: Taxes
+nav:
+  - Configuring Tax Providers: tax-providers-configuration.md
+  - Registering New Tax Provider: new-tax-provider-registration.md

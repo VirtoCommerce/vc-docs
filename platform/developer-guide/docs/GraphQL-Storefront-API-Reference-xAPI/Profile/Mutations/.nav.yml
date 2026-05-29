@@ -1,0 +1,25 @@
+title: Mutations
+nav:
+  - createContact: createContact.md
+  - updateContact: updateContact.md
+  - deleteContact: deleteContact.md
+  - confirmEmail: confirmEmail.md
+  - sendVerifyEmail: sendVerifyEmail.md
+  - createUser: createUser.md
+  - updateUser: updateUser.md
+  - inviteUser: inviteUser.md
+  - deleteUsers: deleteUsers.md
+  - createOrganization: createOrganization.md
+  - updateOrganization: updateOrganization.md
+  - lockOrganizationContact: lockOrganizationContact.md
+  - unlockOrganizationContact: unlockOrganizationContact.md
+  - changeOrganizationContactRole: changeOrganizationContactRole.md
+  - removeMemberFromOrganization: removeMemberFromOrganization.md
+  - updateRole: updateRole.md
+  - updateMemberAddresses: updateMemberAddresses.md
+  - deleteMemberAddresses: deleteMemberAddresses.md
+  - updateMemberDynamicProperties: updateMemberDynamicProperties.md
+  - requestRegistration: requestRegistration.md
+  - registerByInvitation: registerByInvitation.md
+  - resetPasswordByToken: resetPasswordByToken.md
+  - changePassword: changePassword.md

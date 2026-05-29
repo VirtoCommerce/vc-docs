@@ -1,0 +1,7 @@
+title: Notifications
+nav:
+  - Overview: overview.md
+  - Registering New Notification Type: registering-new-notification-type.md
+  - Notification Templates: notification-templates.md
+  - Extending Notification Types: extending-notification-types.md
+  - Configuration: configuration.md

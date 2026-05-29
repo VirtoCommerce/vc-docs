@@ -1,0 +1,9 @@
+title: Releases, Bundles, PBCs. Installation and Updates
+nav:
+  - Release Strategy Overview: release-strategy-overview.md
+  - Stable Releases: stable-releases.md
+  - Edge Releases: edge-releases.md
+  - Installing Specific Version: installing-specific-version.md
+  - Packaged Business Capabilities (PBCs) and PBCs Max: pbcs.md
+  - Outdated Strategy: outdated-strategy.md
+  - Useful Tips: tips.md

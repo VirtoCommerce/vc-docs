@@ -1,0 +1,8 @@
+title: Examples
+nav:
+  - Full Text Search: full-text-search.md
+  - Fuzzy Search: fuzzy-search.md
+  - Filter Syntax: filter-syntax.md
+  - Filtering: filtering.md
+  - Facets: facets.md
+  - Multi Select Faceting Search: multi-select-faceting-search.md

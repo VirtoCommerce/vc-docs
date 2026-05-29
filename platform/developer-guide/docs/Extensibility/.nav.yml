@@ -1,0 +1,9 @@
+title: Extensibility
+nav:
+  - Overview: overview.md
+  - Key Extensibility Points: key-extensibility-points.md
+  - Extending Dynamic Expression Tree: extending-dynamic-expression-tree.md
+  - Extending Product Completeness Evaluator: product-completeness-evaluator.md
+  - Extending Application User: extending-application-user.md
+  - Open Telemetry: opentelemetry.md
+  - cms-integrations

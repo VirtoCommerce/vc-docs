@@ -1,0 +1,4 @@
+title: Mutations
+nav:
+  - activateBackInStockSubscription: activateBackInStockSubscription.md
+  - deactivateBackInStockSubscription: deactivateBackInStockSubscription.md

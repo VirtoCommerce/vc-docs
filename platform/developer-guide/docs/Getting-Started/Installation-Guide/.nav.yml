@@ -1,0 +1,11 @@
+title: Installation Guide
+nav:
+  - Windows: windows.md
+  - Linux: linux.md
+  - MacOS: macOS.md
+  - Local install with start-local: start-local.md
+  - Post Installation Steps:
+      - Setting Up Self Signed SSL Certificate: ../Post-Installation-Steps/01-setting-up-self-signed-ssl-cert.md
+      - Configuring Email Notifications: ../Post-Installation-Steps/02-configuring-email-notifications.md
+      - Configuring Asset Blob Storage: ../Post-Installation-Steps/03-configuring-asset-blob-storage.md
+      - Importing Sample Data: ../Post-Installation-Steps/04-importing-sample-data.md

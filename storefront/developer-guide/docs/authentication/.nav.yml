@@ -1,0 +1,6 @@
+title: Authentication
+nav:
+  - Token-based Authentication: authentication-types.md
+  - Anonymous Authentication: anonymous-authentication.md
+  - Adding Azure AD (Entra ID) as SSO Provider: adding-sso-provider.md
+  - Adding Google as SSO Provider: adding-google-as-sso-provider.md
