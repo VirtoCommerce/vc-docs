@@ -1,0 +1,28 @@
+nav:
+  - Overview: index.md
+  - Architecture:
+      - Frontend Application Architecture: architecture.md
+      - Modules Architecture: modules-architecture/modules-architecture.md
+      - SPA Architecture for SEO and 404 Handling: spa-architecture-for-seo-and-404-handling.md
+  - Deployment: deployment.md
+  - Update: update.md
+  - Customization and Development Accelerators:
+      - Overview: customization/overview.md
+      - Customization:
+          - Overview: customization/customization-overview.md
+          - Visual Theme Customization: customization/visual-theme-customization.md
+          - Functionality Customization: customization/functionality-customization.md
+      - Development Accelerators:
+          - Overview: customization/accelerators-overview.md
+          - Guidelines for Using Accelerators: customization/accelerators-guidelines.md
+          - Localization: customization/localization.md
+          - Tracking and Fixing Locales: customization/texts-customization.md
+          - Storybook: storybook.md
+  - Test: tests.md
+  - Merge: merge.md
+  - Migration to Storefrontless Architecture:
+      - Overview: migration.md
+      - Migration on Azure Cloud: migration-on-azure.md
+      - Migration on Local Machine: migration-on-local-machine.md
+  - authentication
+  - integrations
