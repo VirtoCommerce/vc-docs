@@ -1,6 +1,6 @@
 # SOC 2 Type II Compliance
 
-Virto Cloud holds an active SOC 2 Type II certification for the 2025 audit period. This is the third consecutive year that Virto Cloud has been certified.
+Virto Cloud holds an active SOC 2 Type II certification for the 2026 audit period. This is the fourth consecutive year that Virto Cloud has been certified.
 
 SOC 2 is an auditing procedure defined by the American Institute of Certified Public Accountants (AICPA). It evaluates how a cloud service provider designs and operates controls aligned with the AICPA Trust Services Criteria: security, availability, processing integrity, confidentiality, and privacy.
 
