@@ -261,15 +261,15 @@ def main():
     # This builds only the main page + redirects, without rebuilding all subsites
     # Search index will be merged from versioned subsite indexes later
     print("  Building root site (without monorepo)...")
-    run_command("mkdocs build -f mkdocs.yml -d " + args.output_dir, check=False)
+    run_command("mkdocs build -f mkdocs.yml -d " + args.output_dir)
 
     # Build intermediate landing pages (platform, marketplace, storefront)
     # Using mkdocs.yml configs which override plugins to exclude redirects
     # This prevents generating hundreds of redirect HTML files
     print("  Building intermediate landing pages...")
-    run_command(f"mkdocs build -f storefront/mkdocs.yml -d ../{args.output_dir}/storefront", check=False)
-    run_command(f"mkdocs build -f platform/mkdocs.yml -d ../{args.output_dir}/platform", check=False)
-    run_command(f"mkdocs build -f marketplace/mkdocs.yml -d ../{args.output_dir}/marketplace", check=False)
+    run_command(f"mkdocs build -f storefront/mkdocs.yml -d ../{args.output_dir}/storefront")
+    run_command(f"mkdocs build -f platform/mkdocs.yml -d ../{args.output_dir}/platform")
+    run_command(f"mkdocs build -f marketplace/mkdocs.yml -d ../{args.output_dir}/marketplace")
 
     print("✅ Non-versioned landing pages built (subsites will come from gh-pages)")
 
@@ -286,7 +286,9 @@ def main():
         "storefront/user-guide": args.version,
     }
 
-    # Deploy each subsite
+    # Deploy each subsite; collect failures so one broken subsite
+    # cannot silently produce a partial site image.
+    failed_subsites = []
     for subsite, version in subsites.items():
         if not version:
             print(f"  ⚠️  Skipping {subsite} (no version specified)")
@@ -316,14 +318,24 @@ def main():
         result = run_command(" ".join(mike_cmd), check=False)
         if result.returncode != 0:
             print(f"❌ Mike deploy failed for {subsite}: {result.stderr}")
-            print("This might cause deployment issues!")
+            failed_subsites.append(subsite)
+            continue
 
         # Set as default if requested
         if args.set_as_default:
             print(f"  Setting {subsite} as default...")
-            run_command(f'mike set-default -F "{config}" --deploy-prefix "{subsite}" {version} --push', check=False)
+            result = run_command(f'mike set-default -F "{config}" --deploy-prefix "{subsite}" {version} --push', check=False)
+            if result.returncode != 0:
+                print(f"❌ Mike set-default failed for {subsite}: {result.stderr}")
+                failed_subsites.append(subsite)
+                continue
 
         print(f"  ✅ {subsite} deployed")
+
+    if failed_subsites:
+        print(f"❌ Mike deploy failed for {len(failed_subsites)} subsite(s): {', '.join(failed_subsites)}")
+        print("Aborting before image build to avoid shipping a broken site.")
+        sys.exit(1)
 
     print("✅ Versioned subsites deployed")
 
