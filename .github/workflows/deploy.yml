@@ -33,7 +33,9 @@ jobs:
           dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
 
       - name: Trigger cloud deploy
+        id: dispatch
         run: |
+          echo "dispatched-at=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
           gh api repos/VirtoCommerce/vc-github-actions/dispatches \
             -f event_type=deploy-docs \
             -f "client_payload[image_tag]=${{ steps.build.outputs.docker-image-tag }}" \
@@ -41,3 +43,38 @@ jobs:
           echo "✅ Dispatched cloud deploy for ${{ steps.build.outputs.docker-image-tag }}"
         env:
           GH_TOKEN: ${{ secrets.REPO_TOKEN }}
+
+      - name: Wait for cloud deploy
+        timeout-minutes: 30
+        run: |
+          set -euo pipefail
+
+          # 1. Find the downstream run spawned by the dispatch above.
+          run_id=""
+          for attempt in $(seq 1 30); do
+            run_id=$(gh run list -R VirtoCommerce/vc-github-actions \
+              --workflow "Deploy docs to VC Cloud" \
+              --event repository_dispatch \
+              --created ">=$DISPATCHED_AT" \
+              --limit 1 \
+              --json databaseId --jq '.[0].databaseId // empty')
+            [ -n "$run_id" ] && break
+            sleep 10
+          done
+          if [ -z "$run_id" ]; then
+            echo "::error::Cloud deploy run never appeared in VirtoCommerce/vc-github-actions within 5 minutes. The deploy-docs dispatch may have been lost."
+            exit 1
+          fi
+
+          run_url="https://github.com/VirtoCommerce/vc-github-actions/actions/runs/$run_id"
+          echo "Watching cloud deploy: $run_url"
+
+          # 2. Fail this workflow if the downstream deploy fails.
+          if ! gh run watch "$run_id" -R VirtoCommerce/vc-github-actions --interval 30 --exit-status; then
+            echo "::error::Cloud deploy FAILED. The docs image was built and pushed, but prod was NOT updated. Inspect: $run_url"
+            exit 1
+          fi
+          echo "✅ Cloud deploy succeeded: $run_url"
+        env:
+          GH_TOKEN: ${{ secrets.REPO_TOKEN }}
+          DISPATCHED_AT: ${{ steps.dispatch.outputs.dispatched-at }}
