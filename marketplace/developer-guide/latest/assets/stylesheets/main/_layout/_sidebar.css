@@ -8,6 +8,15 @@
     color: var(--sidebar-text-color);
 }
 
+/* Stock mkdocs-material 9.5.4 wraps every nav title in <span class="md-ellipsis">,
+   which forces white-space: nowrap and truncates with an ellipsis. Restore the
+   pre-migration wrap behavior for sidebar entries while leaving header/TOC ellipses alone. */
+.md-nav__link .md-ellipsis {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
 .md-nav__item .md-nav__link--active {
     color: var(--neutral-0);
     background-color: var(--sidebar-hover-color);
@@ -36,7 +45,25 @@
     margin-top: 0;
 }
 
-.md-nav__link .md-nav__link--active:before {
+/* Section-index pages render as <a> + chevron <label> inside .md-nav__container.
+   By default the container, <a>, and <label> all carry .md-nav__link styling — so the
+   padding stacks (row gets 22px from container + 22px from child) and the active
+   background paints two visually separate gray boxes with a gap between them.
+   Collapse the container into a transparent zero-padding flex wrapper and host the
+   active background and indicator on it instead, so the row reads as one continuous bar. */
+.md-nav__link.md-nav__container {
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    background: transparent;
+}
+
+.md-nav__container:has(> a.md-nav__link--active) {
+    position: relative;
+    background-color: var(--sidebar-hover-color);
+}
+
+.md-nav__container:has(> a.md-nav__link--active)::before {
     content: "";
     width: 0.167rem;
     height: 100%;
@@ -44,6 +71,11 @@
     position: absolute;
     top: 0;
     bottom: 0;
+    left: 0;
+}
+
+.md-nav__container > .md-nav__link--active {
+    background: transparent;
 }
 
 .md-nav__link:is(:focus, :hover) {
