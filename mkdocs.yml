@@ -76,7 +76,7 @@ markdown_extensions:
     - pymdownx.snippets
 
 plugins:
-    - monorepo
+    # - monorepo  # REMOVED - subsites are built separately with mike
     - search: # necessary for search to work
     #   - autolinks
     - awesome-pages:
