@@ -33084,7 +33084,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 4, 2026 09:20:35 UTC">June 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33295,6 +33295,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>Mutations → internal → source</strong>: Every operation (<code>upload</code>, <code>remove</code>, <code>reorder</code>, <code>updateItem</code>) updates <code>_items</code> first, then writes back to the source via <code>_sync()</code></li>
 </ol>
 <p>This two-way sync avoids reactivity issues when the source is a <code>WritableComputed</code> wrapping deeply nested properties (e.g., <code>item.value.productData.assets</code>).</p>
+<p><strong><code>sortOrder</code> normalization:</strong> items entering from the source are ordered by their current <code>sortOrder</code> (items without one stay stable at the end) and reassigned a clean sequential <code>sortOrder</code> (<code>0..n</code>). This guarantees every item carries a <code>sortOrder</code> for display and reordering even when the source provides them without one. The normalization is idempotent, so it does not loop on the <code>_sync()</code> writeback.</p>
 <h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <h3 id="assetlike"><code>AssetLike</code><a class="headerlink" href="#assetlike" title="Permanent link">&para;</a></h3>
 <p>Minimal structural contract compatible with any domain image type:</p>

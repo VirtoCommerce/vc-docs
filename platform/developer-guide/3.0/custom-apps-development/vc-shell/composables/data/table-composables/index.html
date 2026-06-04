@@ -33196,7 +33196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 4, 2026 09:20:35 UTC">June 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33290,7 +33290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tbody>
 <tr>
 <td><code>useTableRowReorder</code></td>
-<td>Drag-and-drop row reordering with live-swap at 50% vertical threshold. Commits via <code>dragend</code> (always fires) with <code>drop</code> as preferred path.</td>
+<td>Drag-and-drop row reordering via SortableJS (touch + mouse). Dragging is restricted to a handle selector. Commits on SortableJS <code>onEnd</code> with <code>{ dragIndex, dropIndex, value }</code>. Keeps an optimistic <code>reorderedItems</code> buffer until the parent updates <code>items</code>.</td>
 </tr>
 <tr>
 <td><code>useTableColumnsReorder</code></td>

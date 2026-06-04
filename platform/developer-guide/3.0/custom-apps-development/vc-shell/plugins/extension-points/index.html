@@ -33526,7 +33526,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 4, 2026 09:20:35 UTC">June 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33656,10 +33656,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Later, host calls <code>defineExtensionPoint("seller:commissions")</code> -- the store upgrades the entry to "declared" and preserves all previously registered components.</li>
 <li>The host's <code>components</code> computed ref reactively picks up the registered components.</li>
 </ol>
-<p>This means module load order does not matter. Remote modules loaded via Module Federation may install in any sequence, and extensions still work.</p>
-<blockquote>
-<p><strong>Dev warning:</strong> In development mode, if a plugin registers into a point that is never declared, a console warning appears: <code>Extension point "xyz" is not declared.</code> This helps catch typos in extension point names.</p>
-</blockquote>
+<p>This means module load order does not matter. Remote modules loaded via Module Federation may install in any sequence, and extensions still work. Plugins typically register in module <code>install()</code> at app startup, while hosts declare lazily when their page mounts -- an undeclared entry in between is a normal, expected state.</p>
 <h3 id="priority-based-sorting">Priority-Based Sorting<a class="headerlink" href="#priority-based-sorting" title="Permanent link">&para;</a></h3>
 <p>Components are sorted by <code>priority</code> (ascending). Lower numbers render first:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">add</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="kt">A</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="kt">20</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Renders second</span>
@@ -34025,7 +34022,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nx">add</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;my-fields&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="kt">MyFields</span><span class="w"> </span><span class="p">});</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1">// Component is registered but never rendered because the host declared &quot;seller:commissions&quot;</span>
 </code></pre></div>
-<p>The dev-mode console warning (<code>Extension point "seller:comissions" is not declared</code>) will alert you to this. Always check the console in development.</p>
+<p>There is no console warning for this case -- registering before a host declares the point is a supported flow, so the framework cannot tell a typo apart from a host page that simply has not been opened yet. The most reliable protection is to avoid string literals altogether:</p>
 <blockquote>
 <p><strong>Tip:</strong> Define constants for your extension point names in a shared file:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1">// shared/extension-points.ts</span>

@@ -35088,7 +35088,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 4, 2026 09:20:35 UTC">June 4, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -35666,7 +35666,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>When <code>show-all-columns</code> is <code>false</code>, only <code>image</code> and <code>name</code> remain visible.</p>
 <hr />
 <h2 id="row-reorder">Row Reorder<a class="headerlink" href="#row-reorder" title="Permanent link">&para;</a></h2>
-<p>Enable drag-and-drop row reordering with a drag handle column:</p>
+<p>Enable drag-and-drop row reordering. A grip handle appears on the left of each row (desktop) or card (mobile) whenever <code>reorderable-rows</code> is enabled, and dragging is initiated from that handle. Reorder works on both desktop and touch devices (powered by SortableJS):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>  <span class="p">&lt;</span><span class="nt">VcDataTable</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    <span class="p">:</span><span class="na">items</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">products</span><span class="s">&quot;</span>
@@ -35701,7 +35701,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-35-32" name="__codelineno-35-32" href="#__codelineno-35-32"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <blockquote>
-<p><strong>Tip:</strong> The drag handle column renders a grip icon. Without <code>row-reorder</code> on a VcColumn, the entire row is draggable (less precise, but works).</p>
+<p><strong>Tip:</strong> Setting <code>:reorderable-rows="true"</code> is enough — a grip handle is shown automatically and is the only drag affordance (so row clicks, mobile swipe actions, and long-press selection keep working). A dedicated <code>:row-reorder</code> VcColumn is optional and simply reserves an aligned column slot for the handle. On mobile, drag the handle to reorder cards.</p>
 </blockquote>
 <hr />
 <h2 id="expandable-rows">Expandable Rows<a class="headerlink" href="#expandable-rows" title="Permanent link">&para;</a></h2>
