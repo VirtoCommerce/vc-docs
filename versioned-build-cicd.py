@@ -156,13 +156,30 @@ def run_command(cmd, check=True, cwd=None):
     return result
 
 
+def list_relative_files(folder):
+    """Return the set of file paths under folder, relative to folder."""
+    files = set()
+    for dirpath, _, filenames in os.walk(folder):
+        for filename in filenames:
+            files.add(os.path.relpath(os.path.join(dirpath, filename), folder))
+    return files
+
+
 def deduplicate_assets(site_dir):
     """
     Replace duplicate MkDocs theme assets folders with symlinks to the root assets.
 
     MkDocs Material theme copies ~11MB of assets (CSS, JS, fonts, icons) into each
-    subsite build. With 10+ subsites, this adds ~100MB+ of duplicate content.
-    This function replaces all nested assets/ folders with symlinks to the root assets/.
+    subsite build. With 10+ subsites, this adds ~100MB+ of duplicate content, so
+    nested assets/ folders are replaced with symlinks to the root assets/.
+
+    IMPORTANT: only deduplicate a nested assets/ folder when every file in it also
+    exists in the root assets/. Material uses content-hashed asset filenames
+    (e.g. main.<hash>.min.css); a mike version built with a different Material
+    release carries a DIFFERENT hash. Blindly symlinking such a folder to the root
+    assets/ (built with the current Material) would hide that version's stylesheets,
+    so its pages reference a hash that no longer exists and load unstyled. Folders
+    whose files are not a subset of the root assets/ are kept as real files.
     """
     root_assets = os.path.join(site_dir, "assets")
 
@@ -170,8 +187,13 @@ def deduplicate_assets(site_dir):
         print("    ⚠️  Root assets folder not found, skipping deduplication")
         return 0, 0
 
+    # Files available in the root assets/ (relative paths). A nested folder can
+    # only be safely symlinked here if all of its files are present in this set.
+    root_files = list_relative_files(root_assets)
+
     replaced_count = 0
     freed_bytes = 0
+    kept_count = 0
 
     for root, dirs, _ in os.walk(site_dir, topdown=True):
         if "assets" in dirs and root != site_dir:
@@ -179,6 +201,16 @@ def deduplicate_assets(site_dir):
 
             # Skip if already a symlink
             if os.path.islink(assets_path):
+                continue
+
+            rel_assets = os.path.relpath(assets_path, site_dir)
+
+            # Keep version-specific assets that the root assets/ does not contain
+            # (e.g. an older Material build's content-hashed stylesheets).
+            nested_files = list_relative_files(assets_path)
+            if not nested_files.issubset(root_files):
+                kept_count += 1
+                print(f"    Kept {rel_assets}/ (version-specific assets differ from root)")
                 continue
 
             # Calculate size before removal
@@ -194,8 +226,10 @@ def deduplicate_assets(site_dir):
 
             replaced_count += 1
             # Print relative path from site_dir for cleaner output
-            rel_assets = os.path.relpath(assets_path, site_dir)
             print(f"    Symlinked {rel_assets}/ -> {rel_path}")
+
+    if kept_count:
+        print(f"    Kept {kept_count} version-specific assets folder(s) intact")
 
     return replaced_count, freed_bytes
 
