@@ -4571,6 +4571,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -4820,6 +4822,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#serving-back-office-app-plugins" class="md-nav__link">
+        Serving back-office app plugins
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#imoduleservice" class="md-nav__link">
         IModuleService
     </a>
@@ -4915,6 +4927,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../06-module-manifest-file/" class="md-nav__link">
         Module.manifest File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../07-backoffice-app-modularity/" class="md-nav__link">
+        Back-Office UI Modularity
       </a>
     </li>
   
@@ -32973,6 +33003,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#serving-back-office-app-plugins" class="md-nav__link">
+        Serving back-office app plugins
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#imoduleservice" class="md-nav__link">
         IModuleService
     </a>
@@ -33048,7 +33088,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 7, 2026 07:13:10 UTC">April 7, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 5, 2026 12:56:33 UTC">June 5, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33128,9 +33168,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><code>RunConfigure</code> invokes <code>IPlatformStartup.Configure()</code> on each startup implementation. This runs before routing middleware is added and is used to insert early middleware into the HTTP pipeline.</li>
 <li><code>PostInitializeModules</code> calls <code>IModule.PostInitialize()</code> on all initialized modules in dependency order. This runs inside a distributed lock (<code>ExecuteSynchronized</code>) together with platform database migrations and Hangfire setup, ensuring that post-initialization is performed by only one instance in a multi-instance deployment.</li>
 </ul>
+<h2 id="serving-back-office-app-plugins">Serving back-office app plugins<a class="headerlink" href="#serving-back-office-app-plugins" title="Permanent link">&para;</a></h2>
+<p>Besides loading .NET assemblies, the platform also serves front-end plugins to its back-office hosts. Once the module registry is available, the platform can resolve the plugins that belong to a given host application.</p>
+<p>Discovery is by convention. The platform walks the dependency-sorted module list and probes each module for a <strong>plugins/{appId}/remoteEntry.js</strong> bundle. When the file is present, the plugin is registered for that host app. A frontend-only module can contribute a plugin even when its <code>&lt;assemblyFile&gt;</code> is empty.</p>
+<p>Hosts fetch their plugins from a single endpoint, resolved by app id:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GET /api/apps/{appId}/manifest
+</code></pre></div>
+<p><code>AppManifestController</code> returns the plugins for that host in module-dependency order, with their Module Federation coordinates, permission metadata, and cache-busting hashes. The response is cached for the process lifetime and carries an <code>ETag</code>, so a request with a matching <code>If-None-Match</code> returns <code>304 Not Modified</code>. In development the cache is bypassed, so plugin rebuilds are visible on the next reload. To force a refresh without a restart, call <code>POST /api/apps/manifest/invalidate</code>.</p>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../07-backoffice-app-modularity/">Back-Office UI Modularity</a></p>
 <h2 id="imoduleservice">IModuleService<a class="headerlink" href="#imoduleservice" title="Permanent link">&para;</a></h2>
 <p><code>ModuleBootstrapper</code> implements the <code>IModuleService</code> interface and is registered in DI as a singleton after the pipeline completes:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">IModuleService</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ModuleBootstrapper</span><span class="p">.</span><span class="n">Instance</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">IModuleService</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ModuleBootstrapper</span><span class="p">.</span><span class="n">Instance</span><span class="p">);</span>
 </code></pre></div>
 <p>This allows controllers, health checks, and other services to query the module registry at runtime. The key methods available through <code>IModuleService</code> are listed below.</p>
 <table>
@@ -33171,28 +33220,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The Platform provides several ways to monitor module loading and diagnose issues at runtime.</p>
 <h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
 <p>All module operations are logged through <code>ILoggerFactory</code>. The log output covers the full pipeline from discovery through initialization:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[INF] ModuleBootstrapper: Discovered modules: 12, with errors: 2
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[DBG] ModuleBootstrapper: Copying assemblies from /app/modules/VirtoCommerce.Catalog/bin
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>[DBG] ModuleBootstrapper: Loading module VirtoCommerce.Catalog 3.800.0
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>[WRN] ModuleBootstrapper: Module VirtoCommerce.Broken has errors: incompatible platform version
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>[INF] ModuleBootstrapper: Loaded modules: 12, with errors: 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[INF] ModuleBootstrapper: Discovered modules: 12, with errors: 2
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[DBG] ModuleBootstrapper: Copying assemblies from /app/modules/VirtoCommerce.Catalog/bin
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[DBG] ModuleBootstrapper: Loading module VirtoCommerce.Catalog 3.800.0
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>[WRN] ModuleBootstrapper: Module VirtoCommerce.Broken has errors: incompatible platform version
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[INF] ModuleBootstrapper: Loaded modules: 12, with errors: 2
 </code></pre></div>
 <h3 id="failed-modules">Failed modules<a class="headerlink" href="#failed-modules" title="Permanent link">&para;</a></h3>
 <p>Modules that fail to load are available through <code>IModuleService</code> after startup completes:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moduleService</span><span class="p">.</span><span class="n">GetFailedModules</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moduleService</span><span class="p">.</span><span class="n">GetFailedModules</span><span class="p">();</span>
 </code></pre></div>
 <p>Each entry in the result contains the module identity and the errors accumulated during the pipeline, which can be used to diagnose version conflicts, missing dependencies, or assembly load failures.</p>
 <h3 id="health-check">Health check<a class="headerlink" href="#health-check" title="Permanent link">&para;</a></h3>
 <p>The Platform exposes a built-in health check endpoint that reports the overall module status:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>GET /health
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>GET /health
 </code></pre></div>
 <p>If any modules have errors, the response reflects an unhealthy state:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;Modules health&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unhealthy&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Some modules have errors&quot;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;Modules health&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unhealthy&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Some modules have errors&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
 </code></pre></div>
 <p><br>
 <br></p>

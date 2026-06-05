@@ -4571,6 +4571,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -4704,6 +4706,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#modules-relationships" class="md-nav__link">
         Modules relationships
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#back-office-ui-modularity" class="md-nav__link">
+        Back-office UI modularity
     </a>
 
     <!-- Render nested item list -->
@@ -4859,6 +4871,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../06-module-manifest-file/" class="md-nav__link">
         Module.manifest File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../07-backoffice-app-modularity/" class="md-nav__link">
+        Back-Office UI Modularity
       </a>
     </li>
   
@@ -32881,6 +32911,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#back-office-ui-modularity" class="md-nav__link">
+        Back-office UI modularity
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#module-installation-update-and-deployment-processes" class="md-nav__link">
         Module installation, update, and deployment processes
     </a>
@@ -32936,7 +32976,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 4, 2026 18:01:35 UTC">May 4, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 5, 2026 12:56:33 UTC">June 5, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33056,6 +33096,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ul>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../03-versioning-and-dependencies/">Versioning and dependencies</a></p>
+<h2 id="back-office-ui-modularity">Back-office UI modularity<a class="headerlink" href="#back-office-ui-modularity" title="Permanent link">&para;</a></h2>
+<p>Modularity is not limited to backend code. The same module that ships services and APIs can also extend a back-office user interface at runtime.</p>
+<p>Virto Commerce ships three back-office UI hosts: the legacy AngularJS Platform Admin, the Vue 3 VC-Shell admin, and custom standalone SPAs. A single contract lets any of them be extended by plugins delivered inside other modules. Plugins are discovered through the module dependency graph, with Module Federation 2.0 as the default loading mechanism.</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../07-backoffice-app-modularity/">Back-Office UI Modularity</a></p>
 <h2 id="module-installation-update-and-deployment-processes">Module installation, update, and deployment processes<a class="headerlink" href="#module-installation-update-and-deployment-processes" title="Permanent link">&para;</a></h2>
 <p>Virto offers two different ways to install and update modules: </p>
 <ul>

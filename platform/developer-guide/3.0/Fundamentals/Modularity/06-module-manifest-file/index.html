@@ -18,7 +18,7 @@
         <link rel="prev" href="../IPlatformStartup/">
       
       
-        <link rel="next" href="../05-best-practices/">
+        <link rel="next" href="../07-backoffice-app-modularity/">
       
       
       <link rel="icon" href="../../../assets/icons/favicon.ico">
@@ -4571,6 +4571,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -4824,6 +4826,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#declaring-settings" class="md-nav__link">
+        Declaring settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Declaring settings">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#per-user-settings" class="md-nav__link">
+        Per-user settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -4831,6 +4859,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
 
   <!-- Main navigation item -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../07-backoffice-app-modularity/" class="md-nav__link">
+        Back-Office UI Modularity
+      </a>
+    </li>
   
 
             
@@ -32855,6 +32901,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#declaring-settings" class="md-nav__link">
+        Declaring settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Declaring settings">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#per-user-settings" class="md-nav__link">
+        Per-user settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -32876,7 +32948,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 7, 2026 07:13:10 UTC">April 7, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 5, 2026 12:56:33 UTC">June 5, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33033,12 +33105,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><code>permission</code>: The permissions or access rights required to use the app, which are used to control who can access the app and its features.</li>
 <li><code>contentPath</code>: The default path to the app's content  specifying where the app's files are stored. If the ContentPath is set to <code>[VcModuleWeb]/Content/[Id]</code>, the app's content is stored in the <strong>Content</strong> folder of the <strong>VcModuleWeb</strong> module, with the app's Id appended to the end of the path.</li>
 </ul>
+<h2 id="declaring-settings">Declaring settings<a class="headerlink" href="#declaring-settings" title="Permanent link">&para;</a></h2>
+<p>A module can declare its settings directly in <strong>module.manifest</strong> instead of registering them in code. The platform parses the <code>&lt;settings&gt;</code> element at startup and registers each descriptor, so the settings surface through the existing settings API with no extra code. This also lets frontend-only modules, which ship no assembly, declare settings.</p>
+<p>Add a <code>&lt;settings&gt;</code> element with one <code>&lt;setting&gt;</code> per descriptor:</p>
+<div class="highlight"><span class="filename">module.manifest</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;settings&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&lt;setting&gt;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>VirtoCommerce.MyModule.MaxRetries<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="nt">&lt;groupName&gt;</span>MyModule|Reliability<span class="nt">&lt;/groupName&gt;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="nt">&lt;valueType&gt;</span>PositiveInteger<span class="nt">&lt;/valueType&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nt">&lt;defaultValue&gt;</span>3<span class="nt">&lt;/defaultValue&gt;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="nt">&lt;/setting&gt;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="nt">&lt;/settings&gt;</span>
+</code></pre></div>
+<p>A <code>&lt;setting&gt;</code> supports the following elements:</p>
+<ul>
+<li><code>name</code>: The unique setting key. Required.</li>
+<li><code>groupName</code>: The group path shown in the settings UI, for example MyModule|Reliability. Required.</li>
+<li><code>valueType</code>: The value type, for example ShortText, Boolean, PositiveInteger, or Integer. Required.</li>
+<li><code>defaultValue</code>: The value used when nothing is stored.</li>
+<li><code>displayName</code>: A human-friendly label for the settings UI.</li>
+<li><code>allowedValues</code>: A fixed list of <code>&lt;value&gt;</code> entries when the setting is a dictionary.</li>
+</ul>
+<p>By default every setting is global, with one value shared across all administrators. Read global settings through <code>/api/platform/settings/v2/global/*</code>.</p>
+<h3 id="per-user-settings">Per-user settings<a class="headerlink" href="#per-user-settings" title="Permanent link">&para;</a></h3>
+<p>To store a value per administrator rather than globally, add the <code>tenant="UserProfile"</code> attribute. The value then follows the user across devices, for example a theme preference or layout density.</p>
+<div class="highlight"><span class="filename">module.manifest</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">&lt;settings&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&lt;setting</span><span class="w"> </span><span class="na">tenant=</span><span class="s">&quot;UserProfile&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>VirtoCommerce.SystemOperations.DefaultTheme<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&lt;groupName&gt;</span>System<span class="w"> </span>Operations|UI<span class="nt">&lt;/groupName&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nt">&lt;displayName&gt;</span>Theme<span class="w"> </span>preference<span class="nt">&lt;/displayName&gt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nt">&lt;valueType&gt;</span>ShortText<span class="nt">&lt;/valueType&gt;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nt">&lt;defaultValue&gt;</span>system<span class="nt">&lt;/defaultValue&gt;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="nt">&lt;allowedValues&gt;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">      </span><span class="nt">&lt;value&gt;</span>system<span class="nt">&lt;/value&gt;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">      </span><span class="nt">&lt;value&gt;</span>light<span class="nt">&lt;/value&gt;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">      </span><span class="nt">&lt;value&gt;</span>dark<span class="nt">&lt;/value&gt;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">    </span><span class="nt">&lt;/allowedValues&gt;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">  </span><span class="nt">&lt;/setting&gt;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="nt">&lt;/settings&gt;</span>
+</code></pre></div>
+<p>Per-user values are read and written through the <code>/api/platform/settings/v2/me/*</code> endpoints, which resolve the current user from the auth token. No <code>platform:setting:*</code> permission is required to manage your own profile settings. On the frontend, the <code>useModuleSettings</code> composable reads both the global and per-user scopes in a single round trip.</p>
 <p><br>
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
     <a href="../IPlatformStartup">← IPlatformStartup </a>
-    <a href="../05-best-practices"> Best practices →</a>
+    <a href="../07-backoffice-app-modularity"> Back-Office UI Modularity →</a>
 </div>
                 
               </article>
