@@ -160,11 +160,62 @@ You can use the following attributes:
 
 
 
+## Declaring settings
+
+A module can declare its settings directly in **module.manifest** instead of registering them in code. The platform parses the `<settings>` element at startup and registers each descriptor, so the settings surface through the existing settings API with no extra code. This also lets frontend-only modules, which ship no assembly, declare settings.
+
+Add a `<settings>` element with one `<setting>` per descriptor:
+
+```xml title="module.manifest"
+<settings>
+  <setting>
+    <name>VirtoCommerce.MyModule.MaxRetries</name>
+    <groupName>MyModule|Reliability</groupName>
+    <valueType>PositiveInteger</valueType>
+    <defaultValue>3</defaultValue>
+  </setting>
+</settings>
+```
+
+A `<setting>` supports the following elements:
+
+* `name`: The unique setting key. Required.
+* `groupName`: The group path shown in the settings UI, for example MyModule|Reliability. Required.
+* `valueType`: The value type, for example ShortText, Boolean, PositiveInteger, or Integer. Required.
+* `defaultValue`: The value used when nothing is stored.
+* `displayName`: A human-friendly label for the settings UI.
+* `allowedValues`: A fixed list of `<value>` entries when the setting is a dictionary.
+
+By default every setting is global, with one value shared across all administrators. Read global settings through `/api/platform/settings/v2/global/*`.
+
+### Per-user settings
+
+To store a value per administrator rather than globally, add the `tenant="UserProfile"` attribute. The value then follows the user across devices, for example a theme preference or layout density.
+
+```xml title="module.manifest"
+<settings>
+  <setting tenant="UserProfile">
+    <name>VirtoCommerce.SystemOperations.DefaultTheme</name>
+    <groupName>System Operations|UI</groupName>
+    <displayName>Theme preference</displayName>
+    <valueType>ShortText</valueType>
+    <defaultValue>system</defaultValue>
+    <allowedValues>
+      <value>system</value>
+      <value>light</value>
+      <value>dark</value>
+    </allowedValues>
+  </setting>
+</settings>
+```
+
+Per-user values are read and written through the `/api/platform/settings/v2/me/*` endpoints, which resolve the current user from the auth token. No `platform:setting:*` permission is required to manage your own profile settings. On the frontend, the `useModuleSettings` composable reads both the global and per-user scopes in a single round trip.
+
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../IPlatformStartup">← IPlatformStartup </a>
-    <a href="../05-best-practices"> Best practices →</a>
+    <a href="../07-backoffice-app-modularity"> Back-Office UI Modularity →</a>
 </div>

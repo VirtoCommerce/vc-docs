@@ -410,6 +410,8 @@ Subpath exports of `@vc-shell/framework` (e.g. `@vc-shell/framework/ui`) are lis
 
 ## Related
 
+- [Back-Office UI Modularity (Platform contract).](../../../../Fundamentals/Modularity/07-backoffice-app-modularity.md)
+- [Declaring settings in module.manifest.](../../../../Fundamentals/Modularity/06-module-manifest-file.md#declaring-settings)
 - [Module Federation concept.](../../concepts/module-federation.md)
 - [Deployment of the host app.](../deployment.md)
 - [Modularity plugin reference.](../../plugins/modularity.md)

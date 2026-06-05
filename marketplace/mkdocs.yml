@@ -52,6 +52,10 @@ extra:
                   - title: Github
                     link: https://github.com/VirtoCommerce/vc-deploy-marketplace
         release_notes:
+            - title: June 2026
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-june-2026/854
+              type: Release Notes
+              date: June 4, 2026
             - title: May 2026
               link: https://www.virtocommerce.org/t/virto-s-release-notes-may-2026/849
               type: Release Notes

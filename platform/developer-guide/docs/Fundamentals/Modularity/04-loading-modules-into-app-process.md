@@ -75,6 +75,23 @@ This phase corresponds to `Startup.Configure()`. The bootstrapper performs two o
 * `RunConfigure` invokes `IPlatformStartup.Configure()` on each startup implementation. This runs before routing middleware is added and is used to insert early middleware into the HTTP pipeline.
 * `PostInitializeModules` calls `IModule.PostInitialize()` on all initialized modules in dependency order. This runs inside a distributed lock (`ExecuteSynchronized`) together with platform database migrations and Hangfire setup, ensuring that post-initialization is performed by only one instance in a multi-instance deployment.
 
+## Serving back-office app plugins
+
+Besides loading .NET assemblies, the platform also serves front-end plugins to its back-office hosts. Once the module registry is available, the platform can resolve the plugins that belong to a given host application.
+
+Discovery is by convention. The platform walks the dependency-sorted module list and probes each module for a **plugins/{appId}/remoteEntry.js** bundle. When the file is present, the plugin is registered for that host app. A frontend-only module can contribute a plugin even when its `<assemblyFile>` is empty.
+
+Hosts fetch their plugins from a single endpoint, resolved by app id:
+
+```
+GET /api/apps/{appId}/manifest
+```
+
+`AppManifestController` returns the plugins for that host in module-dependency order, with their Module Federation coordinates, permission metadata, and cache-busting hashes. The response is cached for the process lifetime and carries an `ETag`, so a request with a matching `If-None-Match` returns `304 Not Modified`. In development the cache is bypassed, so plugin rebuilds are visible on the next reload. To force a refresh without a restart, call `POST /api/apps/manifest/invalidate`.
+
+<br>
+![Readmore](media/readmore.png){: width="25"} [Back-Office UI Modularity](07-backoffice-app-modularity.md)
+
 ## IModuleService
 
 `ModuleBootstrapper` implements the `IModuleService` interface and is registered in DI as a singleton after the pipeline completes:

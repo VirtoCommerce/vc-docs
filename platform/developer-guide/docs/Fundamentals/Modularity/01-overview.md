@@ -93,6 +93,14 @@ Apart from the above, there are several loosely coupled communication patterns, 
 
 ![Readmore](media/readmore.png){: width="25"} [Versioning and dependencies](03-versioning-and-dependencies.md)
 
+## Back-office UI modularity
+
+Modularity is not limited to backend code. The same module that ships services and APIs can also extend a back-office user interface at runtime.
+
+Virto Commerce ships three back-office UI hosts: the legacy AngularJS Platform Admin, the Vue 3 VC-Shell admin, and custom standalone SPAs. A single contract lets any of them be extended by plugins delivered inside other modules. Plugins are discovered through the module dependency graph, with Module Federation 2.0 as the default loading mechanism.
+
+![Readmore](media/readmore.png){: width="25"} [Back-Office UI Modularity](07-backoffice-app-modularity.md)
+
 ## Module installation, update, and deployment processes
 
 Virto offers two different ways to install and update modules: 

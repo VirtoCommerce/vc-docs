@@ -21,7 +21,7 @@ The key concepts of modules architecture are as follows:
 | Type generation system    | Handles the generation of types and constants for GraphQL API.                                   |
 
 
-![Key concepts](media/platform-acrhitecture.png)
+![Key concepts](media/platform-acrhitecture.png){: style="display: block; margin: 0 auto;" }
 
 ## Module folder structure
 

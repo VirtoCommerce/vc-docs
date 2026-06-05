@@ -7,6 +7,7 @@ nav:
   - Loading Modules into App Process: 04-loading-modules-into-app-process.md
   - IPlatformStartup: IPlatformStartup.md
   - Module.manifest File: 06-module-manifest-file.md
+  - Back-Office UI Modularity: 07-backoffice-app-modularity.md
   - Best Practices: 05-best-practices.md
   - Configuration: configuration.md
   - Azure App Configuration: azure-app-configuration.md
