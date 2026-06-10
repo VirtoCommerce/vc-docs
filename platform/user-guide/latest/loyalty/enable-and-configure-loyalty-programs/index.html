@@ -18,7 +18,7 @@
         <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../loyalty-points-history/">
+        <link rel="next" href="../configuring-loyalty-points-per-product/">
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#enable-and-configure-loyalty-programs" class="md-skip">
+        <a href="#enable-and-create-loyalty-programs" class="md-skip">
           Skip to content
         </a>
       
@@ -7729,6 +7729,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -7810,6 +7814,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enabling and Creating Loyalty Programs
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -7819,9 +7827,102 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Show table of contents -->
       
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#enable-loyalty-on-the-store" class="md-nav__link">
+        Enable loyalty on the store
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#create-order-loyalty-program" class="md-nav__link">
+        Create order loyalty program
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#create-product-points-loyalty-program" class="md-nav__link">
+        Create product points loyalty program
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
+      
     </li>
 
   <!-- Main navigation item -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../configuring-loyalty-points-per-product/" class="md-nav__link">
+        Configuring Loyalty Points per Product
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../set-up-loyalty-catalog-browsing/" class="md-nav__link">
+        Setting Up Loyalty Catalog Browsing
+      </a>
+    </li>
   
 
             
@@ -14674,6 +14775,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#enable-loyalty-on-the-store" class="md-nav__link">
+        Enable loyalty on the store
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#create-order-loyalty-program" class="md-nav__link">
+        Create order loyalty program
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#create-product-points-loyalty-program" class="md-nav__link">
+        Create product points loyalty program
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -14693,7 +14832,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 22, 2026 14:13:32 UTC">April 22, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 10, 2026 16:56:31 UTC">June 10, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -14713,59 +14852,104 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="enable-and-configure-loyalty-programs">Enable and Configure Loyalty Programs<a class="headerlink" href="#enable-and-configure-loyalty-programs" title="Permanent link">&para;</a></h1>
-<p>To start applying loyalty programs:</p>
+<h1 id="enable-and-create-loyalty-programs">Enable and Create Loyalty Programs<a class="headerlink" href="#enable-and-create-loyalty-programs" title="Permanent link">&para;</a></h1>
+<p>To start using loyalty features:</p>
 <ol>
+<li><a href="#enable-loyalty-on-the-store">Enable loyalty on the store.</a></li>
 <li>
+<p>Create one or both program types:</p>
+<ul>
+<li><a href="#create-order-loyalty-program">Order loyalty.</a></li>
+<li><a href="#create-product-points-loyalty-program">Product points loyalty.</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="enable-loyalty-on-the-store">Enable loyalty on the store<a class="headerlink" href="#enable-loyalty-on-the-store" title="Permanent link">&para;</a></h2>
 <p>Enable loyalty in the store settings:</p>
 <ol>
-<li>Go to <strong>Stores</strong> &rarr; Your store &rarr; <strong>Settings</strong> widget.</li>
-<li>
-<p>Switch the <strong>Loyalty enabled</strong> option to on:</p>
+<li>In the main menu, click <strong>Stores</strong>.</li>
+<li>Select your store.</li>
+<li>In the next blade, click the <strong>Settings</strong> widget.</li>
+<li>Turn the <strong>Loyalty enabled</strong> option to on, then click <strong>OK</strong>.</li>
+<li>Click <strong>Save</strong> in the toolbar.</li>
+</ol>
 <p><img alt="Loyalty enabled" src="../media/loyalty-enabled.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-<li>
-<p>Click <strong>OK</strong> to save the changes.</p>
-</li>
-<li>Click <strong>Save</strong> in the previous blade toolbar to apply the changes. </li>
-</ol>
-</li>
-<li>
-<p>Activate loyalty payment method:</p>
+<p>To let customers pay with points, activate the loyalty payment method:</p>
 <ol>
-<li>In the store settings blade, click on the <strong>Payment methods</strong> widget.</li>
-<li>In the next blade, select <strong>Loyalty payment method</strong>.</li>
-<li>
-<p>In the next blade, switch the <strong>Is active</strong> option to on:</p>
+<li>In the store settings blade, click the <strong>Payment methods</strong> widget.</li>
+<li>Select <strong>Loyalty payment method</strong>.</li>
+<li>Turn the <strong>Is active</strong> option to on.</li>
+<li>Click <strong>Save</strong> in the toolbar.</li>
+</ol>
 <p><img alt="Payment activated" src="../media/loyalty-activated.png" style="display: block; margin: 0 auto;" width="800" /></p>
-</li>
-<li>
-<p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Create a loyalty program:</p>
+<h2 id="create-order-loyalty-program">Create order loyalty program<a class="headerlink" href="#create-order-loyalty-program" title="Permanent link">&para;</a></h2>
+<p>An <strong>Order loyalty</strong> program awards points when an order meets the program conditions:</p>
 <ol>
-<li>Click <strong>Loyalty</strong> in the main menu.</li>
-<li>In the next blade, click <strong>Add</strong> in the toolbar.</li>
+<li>In the main menu, click <strong>Loyalty</strong>.</li>
+<li>Click <strong>Add</strong> in the toolbar.</li>
+<li>In the <strong>Add loyalty program</strong> blade, select <strong>Order loyalty</strong>.</li>
 <li>
-<p>Fill in the following fields. For example, you could accrue one percent of the order value as points for each completed order:</p>
+<p>Fill in the program details:</p>
+<ul>
+<li><strong>Active</strong>: Toggle on to make the program live.</li>
+<li><strong>Name</strong>: Required. The <strong>Save</strong> button stays disabled until you enter a name.</li>
+<li><strong>Store</strong>: Select the store the program applies to.</li>
+<li><strong>Priority</strong>: Sets the order in which programs are evaluated when several match.</li>
+<li><strong>Start date</strong> and <strong>End date</strong>: Optional active date range.</li>
+</ul>
+</li>
+<li>
+<p>Under <strong>If any of the following criteria</strong>, click <strong>Add condition</strong> and choose the earning rules:</p>
+<ul>
+<li><strong>Order status is</strong>: Award points when the order reaches a status, for example Completed.</li>
+<li><strong>Order total</strong>: Award points when the order value meets a threshold.</li>
+<li><strong>Is first order</strong>: Award points on the customer's first purchase.</li>
+<li><strong>Is recurring order</strong>: Award points on repeat purchases.</li>
+<li><strong>Is registration</strong>: Award points when a customer registers.</li>
+</ul>
+<p>You can add several conditions. Any matching condition triggers the reward.</p>
+</li>
+<li>
+<p>Under <strong>Get the following loyalty rewards</strong>, configure the reward:</p>
+<ul>
+<li><strong>Fixed points</strong>: A flat points amount per qualifying order.</li>
+<li><strong>% of order value as points</strong>: A percentage of the order total converted to points.</li>
+</ul>
 <p><img alt="Create loyalty program" src="../media/create-loyalty-program.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
+<p>Click <strong>Save</strong> in the toolbar.</p>
+</li>
+</ol>
+<p>Your order loyalty program has been created.</p>
+<h2 id="create-product-points-loyalty-program">Create product points loyalty program<a class="headerlink" href="#create-product-points-loyalty-program" title="Permanent link">&para;</a></h2>
+<p>A Product Points Loyalty program awards points for purchasing specific products. The number of points is calculated per product using a multiply factor.</p>
+<ol>
+<li>In the main menu, click <strong>More</strong>, then click <strong>Loyalty</strong>.</li>
+<li>Click <strong>Add</strong> in the toolbar.</li>
+<li>In the <strong>Add loyalty program</strong> blade, select <strong>Product Points Loyalty</strong>.</li>
+<li>Fill in the program details (<strong>Active</strong>, <strong>Name</strong>, <strong>Store</strong>, <strong>Priority</strong>, <strong>Start date</strong>, <strong>End date</strong>) as for an Order Loyalty program.</li>
+<li>
+<p>Under <strong>If any of the following criteria</strong>, click <strong>Add condition</strong> and choose a condition specific to this type:</p>
+<ul>
+<li><strong>User group is …</strong>: Apply the program only to customers in the listed groups, for example VIP or LUX.</li>
+<li><strong>Any user group</strong>: Apply to any customer who belongs to at least one user group.</li>
+</ul>
+</li>
+<li>
 <p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
 </li>
 </ol>
-</li>
-</ol>
-<p>Buyers will now start earning and redeeming loyalty points.</p>
+<p>After saving your loyalty program, the <strong>Product factors</strong> widget appears at the bottom of the program details blade:</p>
+<p><img alt="Product factors" src="../media/product-points-loyalty.png" style="display: block; margin: 0 auto;" /></p>
+<p>Now, you can set the per-product multiply factors that determine how many points each product earns.</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../configuring-loyalty-points-per-product/">Configuring loyalty points per product</a></p>
 <p><br>
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Loyalty module overview</a>
-    <a href="../loyalty-points-history">Loyalty points history →</a>
+    <a href="../set-up-loyalty-catalog-browsing">Set up loyalty catalog browsing →</a>
 </div>
                 
               </article>

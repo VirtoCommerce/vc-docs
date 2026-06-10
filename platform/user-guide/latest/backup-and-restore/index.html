@@ -1821,6 +1821,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
+    <nav class="md-nav" aria-label="Restore">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#incorrect-password" class="md-nav__link">
+        Incorrect password
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#restoring-sensitive-data" class="md-nav__link">
+        Restoring sensitive data
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
 </li>
         
     </ul>
@@ -7806,6 +7832,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -7869,6 +7899,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../loyalty/enable-and-configure-loyalty-programs/" class="md-nav__link">
         Enabling and Creating Loyalty Programs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../loyalty/configuring-loyalty-points-per-product/" class="md-nav__link">
+        Configuring Loyalty Points per Product
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../loyalty/set-up-loyalty-catalog-browsing/" class="md-nav__link">
+        Setting Up Loyalty Catalog Browsing
       </a>
     </li>
   
@@ -14747,6 +14813,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render nested item list -->
     
+    <nav class="md-nav" aria-label="Restore">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#incorrect-password" class="md-nav__link">
+        Incorrect password
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#restoring-sensitive-data" class="md-nav__link">
+        Restoring sensitive data
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
 </li>
         
     </ul>
@@ -14770,7 +14862,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 22, 2026 09:43:08 UTC">May 22, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 10, 2026 16:56:31 UTC">June 10, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -14791,31 +14883,112 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="backup-and-restore">Backup and Restore<a class="headerlink" href="#backup-and-restore" title="Permanent link">&para;</a></h1>
-<p>The <strong>Backup and Restore</strong> feature in Virto Commerce allows you to securely export and restore Platform data, ensuring data safety and easy recovery when needed.  </p>
+<p>The <strong>Backup and restore</strong> feature in Virto Commerce allows you to securely export and restore Platform data, ensuring data safety and easy recovery when needed.  Backups can be encrypted with a one-time password (AES-256) so that sensitive information such as user credentials and API keys is protected at rest.</p>
 <h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h2>
 <p>To create a backup of your data:  </p>
 <ol>
-<li>Click <strong>Backup and Restore</strong> in the main menu.  </li>
+<li>Click <strong>Backup and restore</strong> in the main menu.  </li>
 <li>In the <strong>Data backup and restore</strong> blade, click <strong>Backup</strong>.  </li>
-<li>In the <strong>Data backup</strong> blade, check modules and the data types you want to back up, such as security settings, binary data, and more.  </li>
 <li>
-<p>Click <strong>Start export</strong> in the toolbar.  </p>
+<p>In the <strong>Data backup</strong> blade, check the data types you want to back up, such as security accounts, binary data, and more:</p>
+<table>
+<thead>
+<tr>
+<th>Platform entry</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Password protect</strong></td>
+<td>Encrypt the backup with a one-time password (AES-256). Enabled by default and recommended for all backups that include sensitive data.</td>
+<td>If you also disable <strong>Password protect</strong>, an additional red warning banner is displayed, alerting you that the backup will be unencrypted.</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Include accounts and roles.</td>
+<td>When you include <strong>Security</strong> in the backup, the blade displays a contextual warning banner above the Platform entries section, informing you that password hashes, API keys, and security stamps will be included in the backup file.</td>
+</tr>
+<tr>
+<td><strong>Binary</strong></td>
+<td>Include binary data.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td>Include Platform settings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Dynamic properties</strong></td>
+<td>Include Platform dynamic properties.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Keep <strong>Password protect</strong> enabled whenever the backup includes Security, Binary, or Settings entries. The one-time password is the only thing that stops a stolen backup file from being used to take over user accounts.</p>
+</div>
+</li>
+<li>
+<p>Check the modules you want to back up.</p>
+</li>
+<li>
+<p>Click <strong>Start export</strong> in the toolbar. The backup process starts and a per-module progress timeline appears. Each module renders as a card showing its current state (in progress, completed, or failed) and the elapsed time. Use Show detailed log to reveal the full progress log and Copy log to copy it to the clipboard.</p>
 <p><img alt="Backup" src="../media/backup-data.gif" style="display: block; margin: 0 auto;" width="700" /></p>
+</li>
+<li>
+<p>When the backup finishes:</p>
+<ul>
+<li>A green <strong>Backup finished</strong> banner is displayed.</li>
+<li>A <strong>Download backup</strong> link appears. Click it to download the resulting ZIP file.</li>
+<li>If password protection is enabled, the <strong>Backup password</strong> card displays the one-time password. Use the <strong>Copy</strong> button next to the password to copy it to the clipboard.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The backup password is shown only once on this screen. If you navigate away from the blade without copying it, the password cannot be recovered, and the backup file cannot be restored.</p>
+</div>
+<p><img alt="Password" src="../media/one-time-password-backup.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 </ol>
 <p>You can now download a ZIP file containing your backup for future restoration.  </p>
 <h2 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link">&para;</a></h2>
 <p>To restore data from a backup:  </p>
 <ol>
-<li>Click <strong>Backup and Restore</strong> in the main menu.  </li>
+<li>Click <strong>Backup and restore</strong> in the main menu.  </li>
 <li>In the <strong>Data backup and restore</strong> blade, click <strong>Restore</strong>.  </li>
 <li>In the <strong>Data restore</strong> blade, drag and drop your backup ZIP file into the designated area.  </li>
+<li>The Platform reads the backup manifest and displays Restore data information (Author, Data file created, Created in Platform version).</li>
+<li>If the backup is encrypted, a <strong>Backup password</strong> section appears. Enter the password that was shown when the backup was created.</li>
+<li>
+<p>Under <strong>Platform entries</strong> and <strong>Choose modules to restore</strong>, select the data types and modules you want to restore:</p>
+<p><img alt="Restore password" src="../media/restore-password.png" style="display: block; margin: 0 auto;" /></p>
+</li>
 <li>
 <p>Click <strong>Start restore</strong> in the toolbar.  </p>
 <p><img alt="Restore" src="../media/restore-data.gif" style="display: block; margin: 0 auto;" width="700" /></p>
 </li>
 </ol>
 <p>The system will restore the data from the backup file.</p>
+<h3 id="incorrect-password">Incorrect password<a class="headerlink" href="#incorrect-password" title="Permanent link">&para;</a></h3>
+<p>If the password you enter does not match the one used when the backup was created, the restore is rejected by the Platform. The blade stays in the password entry state and displays a red message below the password field:</p>
+<p><img alt="Password error" src="../media/password-error.png" style="display: block; margin: 0 auto;" /></p>
+<p>The password field is cleared so you can re-enter the value. No data is changed in the Platform.</p>
+<h3 id="restoring-sensitive-data">Restoring sensitive data<a class="headerlink" href="#restoring-sensitive-data" title="Permanent link">&para;</a></h3>
+<p>When you restore a backup with <strong>Security</strong> enabled, the blade displays a warning banner that explains the consequences:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>This restore will overwrite sensitive data — User passwords, API keys, and security stamps from the backup will replace the current values for every user in the file.
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Your own admin account (username) will not be modified — your password and active session are preserved.
+</code></pre></div>
+<p>The Platform automatically preserves the account of the administrator who initiated the restore. Your <strong>PasswordHash</strong>, <strong>SecurityStamp</strong>, <strong>LockoutEnd</strong>, and <strong>AccessFailedCount</strong> values stay unchanged, your active session is not invalidated, and the password you logged in with continues to work.</p>
+<p>The detailed log includes a confirmation message for this skip:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User &#39;admin&#39; skipped to preserve your active session — password and security stamp left unchanged.
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All other users in the backup file have their credentials replaced with the values stored in the backup. After the restore, they may need to use the password they had at the moment the backup was created.</p>
+</div>
 <p><br>
 <br></p>
 <hr />
