@@ -184,6 +184,8 @@ nav:
           - Loyalty:
                 - Overview: loyalty/overview.md
                 - Enabling and Creating Loyalty Programs: loyalty/enable-and-configure-loyalty-programs.md
+                - Configuring Loyalty Points per Product: loyalty/configuring-loyalty-points-per-product.md
+                - Setting Up Loyalty Catalog Browsing: loyalty/set-up-loyalty-catalog-browsing.md
                 - Loyalty Points History: loyalty/loyalty-points-history.md
           - News:
                 - Overview: news/overview.md

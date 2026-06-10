@@ -5,12 +5,12 @@ The **Assets** module is a base module that provides a powerful, flexible, and e
 The module is designed to be highly configurable and extensible, allowing developers to easily add new asset storage providers or customize existing ones to meet the unique needs of their organization. It defines a set of common abstractions for searching, retrieving, and manipulating assets, making it easy for developers to work with assets regardless of their underlying storage location.
 
 !!! note
-    You cannot work directly with Platform files; the only way to do so is through the Assets abstraction.
+    You cannot work directly with Platform files. The only way to do so is through the Assets abstraction.
 
 Virto Commerce includes the following out-of-the-box providers: 
 
-* [**File System**](https://github.com/VirtoCommerce/vc-module-filesystem-assets): For storing files in the same directory as the Platform.
-* [**Azure Blob Storage**](https://github.com/VirtoCommerce/vc-module-azureblob-assets): For storing files in the external storage, e.g. Azure blob storage.
+* [File System](https://github.com/VirtoCommerce/vc-module-filesystem-assets): For storing files in the same directory as the Platform.
+* [Azure Blob Storage](https://github.com/VirtoCommerce/vc-module-azureblob-assets): For storing files in the external storage, e.g. Azure blob storage.
 
 ![Readmore](media/readmore.png){: width="25"} [Configuring assets providers](/platform/developer-guide/latest/Configuration-Reference/appsettingsjson)
 

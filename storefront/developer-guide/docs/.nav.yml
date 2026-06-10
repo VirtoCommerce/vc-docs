@@ -2,6 +2,7 @@ nav:
   - Overview: index.md
   - Architecture:
       - Frontend Application Architecture: architecture.md
+      - Application Initialization: application-initialization.md
       - Modules Architecture: modules-architecture/modules-architecture.md
       - SPA Architecture for SEO and 404 Handling: spa-architecture-for-seo-and-404-handling.md
   - Deployment: deployment.md

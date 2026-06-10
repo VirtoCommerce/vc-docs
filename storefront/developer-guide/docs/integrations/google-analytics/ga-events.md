@@ -193,6 +193,75 @@ The table below shows additional events that track user actions across the Front
   </tbody>
 </table>
 
+## Ecommerce event payloads
+
+Several events carry a structured ecommerce payload in `dataLayer`, following the GA4 ecommerce reference. Each payload sends an `items` array instead of a concatenated SKU string, along with an `items_count`. Order events also send a `transaction_id`.
+
+### Item fields
+
+Each object in an `items` array describes one product:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `index` | Number | The zero-based position of the product in the list. |
+| `item_id` | String | The product SKU. |
+| `item_name` | String | The product name. |
+| `brand` | String | The product brand. |
+| `affiliation` | String | The store the product is sold through. |
+| `currency` | String | The currency code, for example `EUR`. |
+| `item_list_id` | String | The list identifier. Matches `item_list_id` in the event. |
+| `item_list_name` | String | The list name. Matches `item_list_name` in the event. |
+| `item_category` | String | The product category, when available. |
+| `item_category2` | String | A secondary product category, when available. |
+| `discount` | Number | The discount applied to the product. |
+| `price` | Number | The product price. |
+| `quantity` | Number | The quantity. |
+
+!!! note
+    `item_list_id`, `item_list_name`, `item_category`, and `item_category2` apply to list and catalog contexts. The `place_order` and `purchase` events send `index`, `item_id`, `item_name`, `affiliation`, `currency`, `discount`, `price`, and `quantity`.
+
+### view_item_list payload
+
+Pushed when a product list renders, for example the **Recently browsed** widget or a catalog grid. The payload reports the list and the products in it:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `item_list_id` | String | The list identifier, for example `recently_browsed_products`. |
+| `item_list_name` | String | The list name, for example "Recently browsed". |
+| `items` | Array | The products in the list. See [Item fields](#item-fields). |
+| `items_count` | Number | The number of entries in `items`. |
+
+!!! note
+    The legacy `items_skus` string is no longer sent.
+
+### place_order payload
+
+Pushed when the customer places an order, from the `placeOrder()` handler on the Frontend:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `transaction_id` | String | The unique transaction identifier. |
+| `currency` | String | The order currency code. |
+| `value` | Number | The order total, excluding tax and shipping. |
+| `shipping` | Number | The shipping cost, when known. |
+| `tax` | Number | The tax amount, when known. |
+| `items` | Array | The products in the order. See [Item fields](#item-fields). |
+| `items_count` | Number | The number of entries in `items`. |
+
+### purchase payload
+
+Forwarded to GA4 when the purchase completes. The Frontend dispatches this downstream from `place_order` as the internal `purchased` event, and the event definition forwards the `transaction_id` and `items` to GA4:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `transaction_id` | String | The unique transaction identifier, forwarded to GA4. |
+| `currency` | String | The order currency code. |
+| `value` | Number | The order total, excluding tax and shipping. |
+| `shipping` | Number | The shipping cost, when known. |
+| `tax` | Number | The tax amount, when known. |
+| `items` | Array | The purchased products. See [Item fields](#item-fields). |
+| `items_count` | Number | The number of entries in `items`. |
+
 <br>
 <br>
 ********
