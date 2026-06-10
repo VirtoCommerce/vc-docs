@@ -32866,7 +32866,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 13, 2026 11:44:20 UTC">February 13, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 10, 2026 16:56:31 UTC">June 10, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32926,6 +32926,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>A language to retrieve data in.</td>
 </tr>
 <tr>
+<td><code>previousOutline</code>  <mark>String</mark></td>
+<td>The previous category outline.</td>
+</tr>
+<tr>
 <td><code>filter</code>  <mark>String</mark></td>
 <td>Filters query results.</td>
 </tr>
@@ -32938,6 +32942,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>The fuzziness level is measured by the Damerau-Levenshtein distance.<br>It calculates the number of operations required to transform one word into another.</td>
 </tr>
 <tr>
+<td><code>preserveUserQuery</code>  <mark>Boolean</mark></td>
+<td>When true, the application does not modify the search query and filters.</td>
+</tr>
+<tr>
 <td><code>facet</code>  <mark>String</mark></td>
 <td>Calculates statistical counts to aid in faceted navigation.</td>
 </tr>
@@ -32946,8 +32954,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>Specifies the sorting order of the returned products.</td>
 </tr>
 <tr>
-<td><code>productIds</code>  <mark>String</mark></td>
+<td><code>productIds</code>  <mark>[String]</mark></td>
 <td>Identifies specific products within a given store.</td>
+</tr>
+<tr>
+<td><code>selectedAddressId</code>  <mark>String</mark></td>
+<td>The ID of the selected shipping address.</td>
+</tr>
+<tr>
+<td><code>selectedAddress</code>  <mark>String</mark></td>
+<td>The shipping address the products are to be delivered to.</td>
+</tr>
+<tr>
+<td><code>custom</code>  <mark>String</mark></td>
+<td>Can be used for custom query parameters.</td>
 </tr>
 </tbody>
 </table>
