@@ -12,26 +12,26 @@
         <meta name="author" content="Virto Commerce">
       
       
-        <link rel="canonical" href="https://docs.virtocommerce.org/storefront/developer-guide/3.0/customization/visual-theme-customization/">
+        <link rel="canonical" href="https://docs.virtocommerce.org/storefront/developer-guide/3.0/application-initialization/">
       
       
-        <link rel="prev" href="../customization-overview/">
+        <link rel="prev" href="../architecture/">
       
       
-        <link rel="next" href="../functionality-customization/">
+        <link rel="next" href="../modules-architecture/modules-architecture/">
       
       
-      <link rel="icon" href="../../assets/icons/favicon.ico">
+      <link rel="icon" href="../assets/icons/favicon.ico">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.5.27">
     
     
-<title>Customization - Visual Theme Customization - Frontend Dev Docs</title>
+<title>Architecture - Application Initialization - Frontend Dev Docs</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,15 +50,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/fonts.css">
+      <link rel="stylesheet" href="../assets/stylesheets/fonts.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/version-selector.css">
+      <link rel="stylesheet" href="../assets/stylesheets/version-selector.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/ai-overrides.css">
+      <link rel="stylesheet" href="../assets/stylesheets/ai-overrides.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#visual-theme-customization" class="md-skip">
+        <a href="#application-initialization" class="md-skip">
           Skip to content
         </a>
       
@@ -161,7 +161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            aria-label="Frontend Dev Docs"
                            data-md-component="logo">
                             
-  <img src="../../assets/icons/logo.svg" alt="logo">
+  <img src="../assets/icons/logo.svg" alt="logo">
 
                             <span class="md-ellipsis">
                                 Frontend Dev Docs
@@ -1479,7 +1479,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             data-md-component="logo"
         >
             
-  <img src="../../assets/icons/logo.svg" alt="logo">
+  <img src="../assets/icons/logo.svg" alt="logo">
 
         </a>
         Storefront Developer Guide
@@ -1504,7 +1504,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1524,6 +1524,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+
 <!-- Main navigation item with nested items -->
 
 
@@ -1531,7 +1533,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  
 
 <!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
  
       
 
@@ -1546,7 +1548,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         data-md-toggle="__nav_2"
         type="checkbox"
         id="__nav_2"
-        
+        checked
     />
     
 
@@ -1584,7 +1586,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         class="md-nav"
         data-md-level="1"
         aria-labelledby="__nav_2_label"
-        aria-expanded="false"
+        aria-expanded="true"
           aria-label="Architecture"
       >
         <label class="md-nav__title" for="__nav_2">
@@ -1605,314 +1607,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         Frontend Application Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../application-initialization/" class="md-nav__link">
-        Application Initialization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../modules-architecture/modules-architecture/" class="md-nav__link">
-        Modules Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../spa-architecture-for-seo-and-404-handling/" class="md-nav__link">
-        SPA Architecture for SEO and 404 Handling
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-    </nav>
-</li>
-
-  <!-- Currently active page -->
-  
-
-        
-        
-        
-        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-<!-- Color palette -->
-
-<!-- Render current and nested navigation items -->
-
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../deployment/" class="md-nav__link">
-        Deployment
-      </a>
-    </li>
-  
-
-        
-        
-        
-        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-<!-- Color palette -->
-
-<!-- Render current and nested navigation items -->
-
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../update/" class="md-nav__link">
-        Update
-      </a>
-    </li>
-  
-
-        
-        
-        
-        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-<!-- Color palette -->
-
-<!-- Render current and nested navigation items -->
-
-
-<!-- Determine class according to state -->
-
-
-
-
-
-<!-- Main navigation item with nested items -->
-
-
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_5"
-        type="checkbox"
-        id="__nav_5"
-        checked
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_5"
-          id="__nav_5_label"
-          tabindex="0"
-        >
-          Customization and Development Accelerators
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <!-- Render link to index page + toggle -->
-      
-
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="1"
-        aria-labelledby="__nav_5_label"
-        aria-expanded="true"
-          aria-label="Customization and Development Accelerators"
-      >
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Customization and Development Accelerators
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-
-
-<!-- Main navigation item with nested items -->
-
-
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_5_2"
-        type="checkbox"
-        id="__nav_5_2"
-        checked
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_5_2"
-          id="__nav_5_2_label"
-          tabindex="0"
-        >
-          Customization
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <!-- Render link to index page + toggle -->
-      
-
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="2"
-        aria-labelledby="__nav_5_2_label"
-        aria-expanded="true"
-          aria-label="Customization"
-      >
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Customization
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../customization-overview/" class="md-nav__link">
-        Overview
       </a>
     </li>
   
@@ -1950,14 +1646,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Render table of contents, if not empty -->
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Visual Theme Customization
+          Application Initialization
         </label>
       
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
       >
-        Visual Theme Customization
+        Application Initialization
       </a>
 
       <!-- Show table of contents -->
@@ -1987,8 +1683,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#presets" class="md-nav__link">
-        Presets
+    <a href="#single-bootstrap-query-benefits" class="md-nav__link">
+        Single bootstrap query benefits
     </a>
 
     <!-- Render nested item list -->
@@ -1997,8 +1693,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#customizable-variables" class="md-nav__link">
-        Customizable variables
+    <a href="#frontend-initialization-steps" class="md-nav__link">
+        Frontend initialization steps
     </a>
 
     <!-- Render nested item list -->
@@ -2007,8 +1703,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#border-radius-configuration" class="md-nav__link">
-        Border radius configuration
+    <a href="#send-bootstrap-query" class="md-nav__link">
+        Send bootstrap query
     </a>
 
     <!-- Render nested item list -->
@@ -2017,8 +1713,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#styles-customization" class="md-nav__link">
-        Styles customization
+    <a href="#cache-manifest" class="md-nav__link">
+        Cache manifest
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#build-feature-map" class="md-nav__link">
+        Build feature map
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#gate-optional-features" class="md-nav__link">
+        Gate optional features
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#suppress-version-fingerprinting" class="md-nav__link">
+        Suppress version fingerprinting
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#validate-module-versions" class="md-nav__link">
+        Validate module versions
     </a>
 
     <!-- Render nested item list -->
@@ -2046,7 +1782,309 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../functionality-customization/" class="md-nav__link">
+      <a href="../modules-architecture/modules-architecture/" class="md-nav__link">
+        Modules Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../spa-architecture-for-seo-and-404-handling/" class="md-nav__link">
+        SPA Architecture for SEO and 404 Handling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_5"
+        type="checkbox"
+        id="__nav_5"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_5"
+          id="__nav_5_label"
+          tabindex="0"
+        >
+          Customization and Development Accelerators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_5_label"
+        aria-expanded="false"
+          aria-label="Customization and Development Accelerators"
+      >
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Customization and Development Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../customization/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_5_2"
+        type="checkbox"
+        id="__nav_5_2"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_5_2"
+          id="__nav_5_2_label"
+          tabindex="0"
+        >
+          Customization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="2"
+        aria-labelledby="__nav_5_2_label"
+        aria-expanded="false"
+          aria-label="Customization"
+      >
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Customization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../customization/customization-overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../customization/visual-theme-customization/" class="md-nav__link">
+        Visual Theme Customization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../customization/functionality-customization/" class="md-nav__link">
         Functionality Customization
       </a>
     </li>
@@ -2153,7 +2191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../accelerators-overview/" class="md-nav__link">
+      <a href="../customization/accelerators-overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -2171,7 +2209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../accelerators-guidelines/" class="md-nav__link">
+      <a href="../customization/accelerators-guidelines/" class="md-nav__link">
         Guidelines for Using Accelerators
       </a>
     </li>
@@ -2189,7 +2227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../localization/" class="md-nav__link">
+      <a href="../customization/localization/" class="md-nav__link">
         Localization
       </a>
     </li>
@@ -2207,7 +2245,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../texts-customization/" class="md-nav__link">
+      <a href="../customization/texts-customization/" class="md-nav__link">
         Tracking and Fixing Locales
       </a>
     </li>
@@ -2225,7 +2263,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../storybook/" class="md-nav__link">
+      <a href="../storybook/" class="md-nav__link">
         Storybook
       </a>
     </li>
@@ -2266,7 +2304,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../tests/" class="md-nav__link">
+      <a href="../tests/" class="md-nav__link">
         Test
       </a>
     </li>
@@ -2289,7 +2327,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../merge/" class="md-nav__link">
+      <a href="../merge/" class="md-nav__link">
         Merge
       </a>
     </li>
@@ -2388,7 +2426,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../migration/" class="md-nav__link">
+      <a href="../migration/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -2406,7 +2444,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../migration-on-azure/" class="md-nav__link">
+      <a href="../migration-on-azure/" class="md-nav__link">
         Migration on Azure Cloud
       </a>
     </li>
@@ -2424,7 +2462,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../migration-on-local-machine/" class="md-nav__link">
+      <a href="../migration-on-local-machine/" class="md-nav__link">
         Migration on Local Machine
       </a>
     </li>
@@ -2534,7 +2572,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../authentication/authentication-types/" class="md-nav__link">
+      <a href="../authentication/authentication-types/" class="md-nav__link">
         Token-based Authentication
       </a>
     </li>
@@ -2552,7 +2590,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../authentication/anonymous-authentication/" class="md-nav__link">
+      <a href="../authentication/anonymous-authentication/" class="md-nav__link">
         Anonymous Authentication
       </a>
     </li>
@@ -2570,7 +2608,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../authentication/adding-sso-provider/" class="md-nav__link">
+      <a href="../authentication/adding-sso-provider/" class="md-nav__link">
         Adding Azure AD (Entra ID) as SSO Provider
       </a>
     </li>
@@ -2588,7 +2626,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../authentication/adding-google-as-sso-provider/" class="md-nav__link">
+      <a href="../authentication/adding-google-as-sso-provider/" class="md-nav__link">
         Adding Google as SSO Provider
       </a>
     </li>
@@ -2698,7 +2736,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/google-analytics/ga-events/" class="md-nav__link">
+      <a href="../integrations/google-analytics/ga-events/" class="md-nav__link">
         Google Analytics Events
       </a>
     </li>
@@ -2716,7 +2754,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/prerender_io/" class="md-nav__link">
+      <a href="../integrations/prerender_io/" class="md-nav__link">
         Enhancing SEO with Prerender.io
       </a>
     </li>
@@ -2734,7 +2772,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/builder-io/overview/" class="md-nav__link">
+      <a href="../integrations/builder-io/overview/" class="md-nav__link">
         Builder.io
       </a>
     </li>
@@ -2834,7 +2872,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/overview/" class="md-nav__link">
+      <a href="../integrations/storyblok/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -2852,7 +2890,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/catalog-menu-integration/" class="md-nav__link">
+      <a href="../integrations/storyblok/catalog-menu-integration/" class="md-nav__link">
         Catalog Menu Integration
       </a>
     </li>
@@ -2870,7 +2908,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/category-page-integration/" class="md-nav__link">
+      <a href="../integrations/storyblok/category-page-integration/" class="md-nav__link">
         Category Page Integration
       </a>
     </li>
@@ -2888,7 +2926,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/footer-integration/" class="md-nav__link">
+      <a href="../integrations/storyblok/footer-integration/" class="md-nav__link">
         Footer Integration
       </a>
     </li>
@@ -2906,7 +2944,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/index-page-integration/" class="md-nav__link">
+      <a href="../integrations/storyblok/index-page-integration/" class="md-nav__link">
         Index Page Integration
       </a>
     </li>
@@ -2924,7 +2962,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/registering-custom-components/" class="md-nav__link">
+      <a href="../integrations/storyblok/registering-custom-components/" class="md-nav__link">
         Registering Custom Components
       </a>
     </li>
@@ -3008,8 +3046,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#presets" class="md-nav__link">
-        Presets
+    <a href="#single-bootstrap-query-benefits" class="md-nav__link">
+        Single bootstrap query benefits
     </a>
 
     <!-- Render nested item list -->
@@ -3018,8 +3056,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#customizable-variables" class="md-nav__link">
-        Customizable variables
+    <a href="#frontend-initialization-steps" class="md-nav__link">
+        Frontend initialization steps
     </a>
 
     <!-- Render nested item list -->
@@ -3028,8 +3066,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#border-radius-configuration" class="md-nav__link">
-        Border radius configuration
+    <a href="#send-bootstrap-query" class="md-nav__link">
+        Send bootstrap query
     </a>
 
     <!-- Render nested item list -->
@@ -3038,8 +3076,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#styles-customization" class="md-nav__link">
-        Styles customization
+    <a href="#cache-manifest" class="md-nav__link">
+        Cache manifest
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#build-feature-map" class="md-nav__link">
+        Build feature map
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#gate-optional-features" class="md-nav__link">
+        Gate optional features
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#suppress-version-fingerprinting" class="md-nav__link">
+        Suppress version fingerprinting
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#validate-module-versions" class="md-nav__link">
+        Validate module versions
     </a>
 
     <!-- Render nested item list -->
@@ -3067,7 +3145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:11:06 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 10, 2026 16:56:31 UTC">June 10, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3087,65 +3165,96 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Markdown content -->
-<h1 id="visual-theme-customization">Visual Theme Customization<a class="headerlink" href="#visual-theme-customization" title="Permanent link">&para;</a></h1>
-<p>Visual theme customization in Virto Commerce Frontend is based on a flexible system of presets, CSS variables, and style overrides. Presets define the overall look of the Frontend by providing color palettes and design tokens that are automatically converted into reusable CSS custom properties. These variables can be fine-tuned or extended in custom styles, giving you full control over colors, spacing, and component appearance. Additionally, global and per-component options such as border radius ensure consistent, brand-aligned UI design.</p>
-<h2 id="presets">Presets<a class="headerlink" href="#presets" title="Permanent link">&para;</a></h2>
-<p>Presets are JSON files that define color palettes and other design tokens for the Frontend.</p>
-<p>During project build, presets are converted into <strong>CSS custom properties</strong> (<code>--color-*</code> variables), which can be reused across all components.</p>
-<p>For example, <code>"color_primary_50": "#f6f1ef"</code> becomes <code>--color-primary-50: #f6f1ef</code>.</p>
-<p>You can use the following presets as a base to create own presets:</p>
+<h1 id="application-initialization">Application Initialization<a class="headerlink" href="#application-initialization" title="Permanent link">&para;</a></h1>
+<p>The Frontend bootstraps from a single GraphQL query, resolved by the store's domain, that returns a capability manifest for the Platform instance it is connected to. The manifest lists the store settings and the installed modules with their versions. With it, the Frontend plans every later query and includes or excludes optional features, for example white labeling, customer reviews, or quotes.</p>
+<h2 id="single-bootstrap-query-benefits">Single bootstrap query benefits<a class="headerlink" href="#single-bootstrap-query-benefits" title="Permanent link">&para;</a></h2>
+<p>Without a unified view of the backend, the Frontend (a Vue.js SPA) would start by making many independent GraphQL calls. That leads to several problems, which the bootstrap query prevents:</p>
 <ul>
-<li>The <a href="https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/mercury.json">default preset</a>: Uses the base palette without additional variables.</li>
-<li>The <a href="https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/coffee.json">Coffee</a>, <a href="https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/black-gold.json">Black-Gold</a>, <a href="https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/purple-pink.json">Purple-Pink</a>, <a href="https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/watermelon.json">Watermelon</a> presets: Redefine palettes and may introduce additional variables if needed.</li>
+<li>Wasted requests for features that are not installed, for example querying <code>whiteLabeling</code> in <code>pageContext</code> when the module is absent.</li>
+<li>Runtime errors when the Frontend expects a GraphQL type that does not exist.</li>
+<li>No version compatibility contract between the Frontend and the backend modules.</li>
+<li>No single entry point describing the Platform instance the Frontend is connected to.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can use AI to create color palettes - ask it to generate colors for an e-commerce website in JSON format based on presets. </p>
-</div>
-<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/latest/content/managing-themes#apply-theme-color-scheme">Applying presets</a></p>
-<h2 id="customizable-variables">Customizable variables<a class="headerlink" href="#customizable-variables" title="Permanent link">&para;</a></h2>
-<p>The <a href="https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/styles/_colors.scss">CSS custom properties</a> are generated from presets and can be overridden in <strong>_custom.scss</strong>.</p>
-<p>Below is the breakdown of some variables:</p>
-<p><img alt="Variables" src="../media/colors-explanation.png" /></p>
-<h2 id="border-radius-configuration">Border radius configuration<a class="headerlink" href="#border-radius-configuration" title="Permanent link">&para;</a></h2>
-<p>You can easily adjust border-radius values for all components or on a per-component basis using CSS custom properties.</p>
-<ul>
-<li><code>--vc-radius</code>: Sets the global border-radius for all components. Default: 0.5rem (8px).</li>
-<li>
-<p>Per-component overrides: If you need a different radius for a specific component, you can override the global value by defining a custom property scoped to that component. For example:</p>
-<ul>
-<li><code>--vc-button-radius</code></li>
-<li><code>--vc-widget-radius</code></li>
-<li>etc.</li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Recommended maximum border-radius: <strong>10px (0.625rem)</strong>. Larger values may appear overly rounded and disrupt visual consistency.</p>
-</div>
-<div class="highlight"><span class="filename">_custom.scss</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">:root</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1">// Change the global radius</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">--vc-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="nc">.25rem</span><span class="o">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">now</span><span class="w"> </span><span class="nt">4px</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">Override</span><span class="w"> </span><span class="nt">button</span><span class="w"> </span><span class="nt">radius</span><span class="w"> </span><span class="nt">only</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">--vc-button-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="nc">.75rem</span><span class="o">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">now</span><span class="w"> </span><span class="nt">12px</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+<h2 id="frontend-initialization-steps">Frontend initialization steps<a class="headerlink" href="#frontend-initialization-steps" title="Permanent link">&para;</a></h2>
+<p>At a high level, the Frontend initializes in four steps:</p>
+<ol>
+<li>Load the SPA shell.</li>
+<li><a href="#send-bootstrap-query">Send the bootstrap query</a> to fetch the capability manifest, then <a href="#cache-manifest">cache the manifest</a> for the session.</li>
+<li><a href="#build-feature-map">Build the feature map</a> from the manifest's installed-module list.</li>
+<li>Run feature queries and <a href="#gate-optional-features">gate optional features</a> down to the modules the feature map reports.</li>
+</ol>
+<p>The sections below detail the query, caching, feature map, and gating.</p>
+<h2 id="send-bootstrap-query">Send bootstrap query<a class="headerlink" href="#send-bootstrap-query" title="Permanent link">&para;</a></h2>
+<p>The Frontend fires an anonymous <code>POST</code> to <code>{BACK_URL}/graphql</code> with the operation name <code>InitializeApplication</code>. The operation name is case-sensitive, so the browser Network panel can filter by it. The query is single-fire across navigations.</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Query</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">query</span><span class="w"> </span><span class="err">I</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="err">ializeApplica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">($domai</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g!)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="err">s</span><span class="kc">t</span><span class="err">ore(domai</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">$domai</span><span class="kc">n</span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="err">s</span><span class="kc">t</span><span class="err">oreUrl</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="err">se</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="err">modules</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="err">moduleId</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="err">versio</span><span class="kc">n</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="err">se</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kc">na</span><span class="err">me</span><span class="w"> </span><span class="err">value</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="styles-customization">Styles customization<a class="headerlink" href="#styles-customization" title="Permanent link">&para;</a></h2>
-<p>Component styles follow the <strong>BEM methodology</strong>. To avoid merge conflicts and keep your customizations centralized, <strong>do not</strong> edit the core style files. Instead, put all your overrides into the <strong>client-app/assets/styles/_custom.scss</strong> file:</p>
-<div class="highlight"><span class="filename">_custom.scss</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">.vc-container</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">&amp;</span><span class="nt">__bg</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">red</span><span class="o">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+<div class="highlight"><span class="filename">Variables</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">&quot;domain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example.storefront.com&quot;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
+</div>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Store/queries/store/">Store query</a></p>
+<h2 id="cache-manifest">Cache manifest<a class="headerlink" href="#cache-manifest" title="Permanent link">&para;</a></h2>
+<p>The manifest is cached per browser session under <code>localStorage["vc:initialStore:v1:&lt;storefront-domain&gt;"]</code> and is shared across tabs.</p>
+<ol>
+<li>The Frontend loads <strong>index.html</strong>.</li>
+<li>The Frontend checks the cached manifest for the current domain.</li>
+<li>If a cached manifest exists, it is used.</li>
+<li>Otherwise, the Frontend calls <code>InitializeApplication</code>, resolves the store and installed modules by domain, and stores the result under <code>vc:initialStore:v1:&lt;domain&gt;</code>.</li>
+</ol>
+<h2 id="build-feature-map">Build feature map<a class="headerlink" href="#build-feature-map" title="Permanent link">&para;</a></h2>
+<p>The feature map is the list of installed modules taken from the manifest. The Frontend builds it once from the cached manifest and uses it to decide which optional fields a query may request. Before a query is sent, the Frontend checks the map and removes any selection whose module is not installed.</p>
+<h2 id="gate-optional-features">Gate optional features<a class="headerlink" href="#gate-optional-features" title="Permanent link">&para;</a></h2>
+<p>Optional selections are gated with the <code>@needsModule</code> directive. The Apollo <code>apply-gates-link</code> strips any selection whose named module is absent from the manifest before the request leaves the browser, so there is no HTTP 400 and no "Cannot query field" error.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">query</span><span class="w"> </span><span class="nf">GetPageContext</span><span class="p">(</span><span class="nv">$domain</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="nv">$userId</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="nv">$permalink</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="n">pageContext</span><span class="p">(</span><span class="n">domain</span><span class="p">:</span><span class="w"> </span><span class="nv">$domain</span><span class="p">,</span><span class="w"> </span><span class="n">userId</span><span class="p">:</span><span class="w"> </span><span class="nv">$userId</span><span class="p">,</span><span class="w"> </span><span class="n">permalink</span><span class="p">:</span><span class="w"> </span><span class="nv">$permalink</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">user</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="n">userTypeFields</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">store</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="n">storeResponseTypeFields</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">slugInfo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="n">slugInfoResponseTypeFields</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>When <code>VirtoCommerce.WhiteLabeling</code> is absent from the manifest, both the inline <code>whiteLabelingSettings { ... }</code> selection and the dependent fragment definition are stripped from the outgoing request. Any field contributed by <code>VirtoCommerce.WhiteLabeling</code> is gated this way.</p>
+<h2 id="suppress-version-fingerprinting">Suppress version fingerprinting<a class="headerlink" href="#suppress-version-fingerprinting" title="Permanent link">&para;</a></h2>
+<p>The <code>XAPI.Security.ReturnModuleVersion</code> setting controls whether module versions are returned in the manifest. Open the Admin UI, then go to <strong>Settings</strong> → <strong>Platform</strong> → <strong>Security</strong> → <strong>Return module version</strong>. The default is on.</p>
+<p>When the setting is off, <code>version</code> returns an empty string, which preserves the non-null <code>String!</code> contract, and modules without public settings drop from the list. Turn it off for public-facing production Frontends to suppress version fingerprinting.</p>
+<h2 id="validate-module-versions">Validate module versions<a class="headerlink" href="#validate-module-versions" title="Permanent link">&para;</a></h2>
+<p>In non-production builds, the Frontend compares the installed module versions from the manifest against the minimum versions it was built to require. When an installed module is older than the required minimum, the Frontend shows a warning so the operator can upgrade the backend.</p>
+<p>The warning fires only when all of the following hold:</p>
+<ul>
+<li><code>XAPI.Security.ReturnModuleVersion</code> is on. Otherwise versions are empty and the comparison is skipped.</li>
+<li>The Frontend is running in non-production mode, for example dev, QA, or staging. Production builds suppress the warning, so customers never see it.</li>
+<li>At least one installed module is strictly lower than the Frontend's required minimum.</li>
+</ul>
+<p>The warning lists only the out-of-date modules. Each row reads as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;moduleId&gt;   &lt;expected-minimum&gt;   ≥   &lt;installed-version&gt;
+</code></pre></div>
+<p>For example, <code>VirtoCommerce.Catalog 3.1022.0 ≥ 3.1020.0</code> means the Frontend requires Catalog 3.1022.0 or higher but the Platform reports 3.1020.0, so Catalog must be upgraded. The warning reads from the live manifest, so re-running <code>InitializeApplication</code> after an upgrade clears it on the next refresh without a manual cache purge.</p>
+<p>When the warning appears, the operator should:</p>
+<ol>
+<li>Click <strong>Copy to clipboard</strong> to capture the full mismatch list as plain text.</li>
+<li>Share the list with the Platform team.</li>
+<li>Upgrade each listed module to at least the expected minimum on the left of the row.</li>
+<li>Hard-refresh the Frontend. The warning disappears on the next manifest fetch.</li>
+</ol>
+<p>Once the manifest is cached and validated, the Frontend queries only the modules the Platform actually provides, which keeps requests lean and avoids runtime errors.</p>
 <p><br>
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
-    <a href="../customization-overview">← Customization overview</a>
-    <a href="../functionality-customization">Functionality customization →</a>
+    <a href="../architecture">← Frontend Application Architecture</a>
+    <a href="../modules-architecture/modules-architecture">Modules Architecture →</a>
 </div>
                 
               </article>
@@ -3174,7 +3283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 data-md-component="logo"
             >
                 
-                <img src="../../assets/icons/logo-bw.svg" alt="logo">
+                <img src="../assets/icons/logo-bw.svg" alt="logo">
                 
             </a>
 
@@ -3304,18 +3413,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "--md-code-bg-color", "search.share", "search.suggest", "navigation.tracking", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "--md-code-bg-color", "search.share", "search.suggest", "navigation.tracking", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "search.highlight"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="../../assets/scripts/version-redirect.js"></script>
+        <script src="../assets/scripts/version-redirect.js"></script>
       
-        <script src="../../assets/scripts/version-selector-handler.js"></script>
+        <script src="../assets/scripts/version-selector-handler.js"></script>
       
-        <script src="../../assets/scripts/scripts-loader.js"></script>
+        <script src="../assets/scripts/scripts-loader.js"></script>
       
-        <script src="../../assets/scripts/scroll-menu.js"></script>
+        <script src="../assets/scripts/scroll-menu.js"></script>
       
     
   </body>

@@ -1560,6 +1560,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -1605,6 +1607,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../architecture/" class="md-nav__link">
         Frontend Application Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../application-initialization/" class="md-nav__link">
+        Application Initialization
       </a>
     </li>
   
@@ -2679,6 +2699,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#ecommerce-event-payloads" class="md-nav__link">
+        Ecommerce event payloads
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Ecommerce event payloads">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#item-fields" class="md-nav__link">
+        Item fields
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#view_item_list-payload" class="md-nav__link">
+        view_item_list payload
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#place_order-payload" class="md-nav__link">
+        place_order payload
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#purchase-payload" class="md-nav__link">
+        purchase payload
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -3036,6 +3112,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#ecommerce-event-payloads" class="md-nav__link">
+        Ecommerce event payloads
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Ecommerce event payloads">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#item-fields" class="md-nav__link">
+        Item fields
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#view_item_list-payload" class="md-nav__link">
+        view_item_list payload
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#place_order-payload" class="md-nav__link">
+        place_order payload
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#purchase-payload" class="md-nav__link">
+        purchase payload
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -3057,7 +3189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 09:07:07 UTC">May 21, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 10, 2026 16:56:31 UTC">June 10, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3288,6 +3420,223 @@ These events help you analyze:</p>
   </tbody>
 </table>
 
+<h2 id="ecommerce-event-payloads">Ecommerce event payloads<a class="headerlink" href="#ecommerce-event-payloads" title="Permanent link">&para;</a></h2>
+<p>Several events carry a structured ecommerce payload in <code>dataLayer</code>, following the GA4 ecommerce reference. Each payload sends an <code>items</code> array instead of a concatenated SKU string, along with an <code>items_count</code>. Order events also send a <code>transaction_id</code>.</p>
+<h3 id="item-fields">Item fields<a class="headerlink" href="#item-fields" title="Permanent link">&para;</a></h3>
+<p>Each object in an <code>items</code> array describes one product:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>Number</td>
+<td>The zero-based position of the product in the list.</td>
+</tr>
+<tr>
+<td><code>item_id</code></td>
+<td>String</td>
+<td>The product SKU.</td>
+</tr>
+<tr>
+<td><code>item_name</code></td>
+<td>String</td>
+<td>The product name.</td>
+</tr>
+<tr>
+<td><code>brand</code></td>
+<td>String</td>
+<td>The product brand.</td>
+</tr>
+<tr>
+<td><code>affiliation</code></td>
+<td>String</td>
+<td>The store the product is sold through.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>String</td>
+<td>The currency code, for example <code>EUR</code>.</td>
+</tr>
+<tr>
+<td><code>item_list_id</code></td>
+<td>String</td>
+<td>The list identifier. Matches <code>item_list_id</code> in the event.</td>
+</tr>
+<tr>
+<td><code>item_list_name</code></td>
+<td>String</td>
+<td>The list name. Matches <code>item_list_name</code> in the event.</td>
+</tr>
+<tr>
+<td><code>item_category</code></td>
+<td>String</td>
+<td>The product category, when available.</td>
+</tr>
+<tr>
+<td><code>item_category2</code></td>
+<td>String</td>
+<td>A secondary product category, when available.</td>
+</tr>
+<tr>
+<td><code>discount</code></td>
+<td>Number</td>
+<td>The discount applied to the product.</td>
+</tr>
+<tr>
+<td><code>price</code></td>
+<td>Number</td>
+<td>The product price.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td>Number</td>
+<td>The quantity.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>item_list_id</code>, <code>item_list_name</code>, <code>item_category</code>, and <code>item_category2</code> apply to list and catalog contexts. The <code>place_order</code> and <code>purchase</code> events send <code>index</code>, <code>item_id</code>, <code>item_name</code>, <code>affiliation</code>, <code>currency</code>, <code>discount</code>, <code>price</code>, and <code>quantity</code>.</p>
+</div>
+<h3 id="view_item_list-payload">view_item_list payload<a class="headerlink" href="#view_item_list-payload" title="Permanent link">&para;</a></h3>
+<p>Pushed when a product list renders, for example the <strong>Recently browsed</strong> widget or a catalog grid. The payload reports the list and the products in it:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>item_list_id</code></td>
+<td>String</td>
+<td>The list identifier, for example <code>recently_browsed_products</code>.</td>
+</tr>
+<tr>
+<td><code>item_list_name</code></td>
+<td>String</td>
+<td>The list name, for example "Recently browsed".</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td>Array</td>
+<td>The products in the list. See <a href="#item-fields">Item fields</a>.</td>
+</tr>
+<tr>
+<td><code>items_count</code></td>
+<td>Number</td>
+<td>The number of entries in <code>items</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The legacy <code>items_skus</code> string is no longer sent.</p>
+</div>
+<h3 id="place_order-payload">place_order payload<a class="headerlink" href="#place_order-payload" title="Permanent link">&para;</a></h3>
+<p>Pushed when the customer places an order, from the <code>placeOrder()</code> handler on the Frontend:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transaction_id</code></td>
+<td>String</td>
+<td>The unique transaction identifier.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>String</td>
+<td>The order currency code.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Number</td>
+<td>The order total, excluding tax and shipping.</td>
+</tr>
+<tr>
+<td><code>shipping</code></td>
+<td>Number</td>
+<td>The shipping cost, when known.</td>
+</tr>
+<tr>
+<td><code>tax</code></td>
+<td>Number</td>
+<td>The tax amount, when known.</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td>Array</td>
+<td>The products in the order. See <a href="#item-fields">Item fields</a>.</td>
+</tr>
+<tr>
+<td><code>items_count</code></td>
+<td>Number</td>
+<td>The number of entries in <code>items</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase-payload">purchase payload<a class="headerlink" href="#purchase-payload" title="Permanent link">&para;</a></h3>
+<p>Forwarded to GA4 when the purchase completes. The Frontend dispatches this downstream from <code>place_order</code> as the internal <code>purchased</code> event, and the event definition forwards the <code>transaction_id</code> and <code>items</code> to GA4:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transaction_id</code></td>
+<td>String</td>
+<td>The unique transaction identifier, forwarded to GA4.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>String</td>
+<td>The order currency code.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Number</td>
+<td>The order total, excluding tax and shipping.</td>
+</tr>
+<tr>
+<td><code>shipping</code></td>
+<td>Number</td>
+<td>The shipping cost, when known.</td>
+</tr>
+<tr>
+<td><code>tax</code></td>
+<td>Number</td>
+<td>The tax amount, when known.</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td>Array</td>
+<td>The purchased products. See <a href="#item-fields">Item fields</a>.</td>
+</tr>
+<tr>
+<td><code>items_count</code></td>
+<td>Number</td>
+<td>The number of entries in <code>items</code>.</td>
+</tr>
+</tbody>
+</table>
 <p><br>
 <br></p>
 <hr />
