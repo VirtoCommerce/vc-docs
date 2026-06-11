@@ -1,1 +1,19 @@
-[{"version": "stable14", "title": "Stable 14", "aliases": ["latest"]}, {"version": "stable12", "title": "Stable 12", "aliases": []}, {"version": "stable10", "title": "Stable 10", "aliases": []}]
+[
+  {
+    "version": "stable14",
+    "title": "Stable 14",
+    "aliases": [
+      "latest"
+    ]
+  },
+  {
+    "version": "stable12",
+    "title": "Stable 12",
+    "aliases": []
+  },
+  {
+    "version": "stable10",
+    "title": "Stable 10",
+    "aliases": []
+  }
+]
