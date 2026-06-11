@@ -11,8 +11,21 @@ import shutil
 import argparse
 import json
 import tempfile
+import re
 
 SITE_URL = "https://docs.virtocommerce.org"
+
+
+def derive_title(version):
+    """Derive the version-selector title from a version slug.
+
+    Slugs are URL-safe (no spaces); the dropdown label is prettier.
+    "stable14" -> "Stable 14". Anything that does not match the
+    stable<N> pattern keeps mike's default (title == slug)."""
+    m = re.fullmatch(r"stable(\d+)", version or "")
+    if m:
+        return f"Stable {m.group(1)}"
+    return None
 
 VERSIONED_SUBSITES = [
     "platform/developer-guide",
@@ -257,6 +270,7 @@ def format_size(size_bytes):
 def main():
     parser = argparse.ArgumentParser(description='CI/CD versioned documentation build')
     parser.add_argument('--version', required=True, help='Version for all subsites (read from VERSION file by caller)')
+    parser.add_argument('--title', default=None, help='Version-selector title (defaults to "Stable N" derived from a stableN slug)')
     parser.add_argument('--set-as-latest', action='store_true', help='Set as latest version')
     parser.add_argument('--set-as-default', action='store_true', help='Set as default version')
     parser.add_argument('--output-dir', default='site', help='Output directory for built site')
@@ -309,6 +323,10 @@ def main():
 
     print("📋 Step 3: Deploy versioned subsites with Mike")
 
+    # Pretty version-selector title (e.g. "Stable 14" for slug "stable14").
+    # Passed to mike via --title so re-deploys do not reset the label to the slug.
+    title = args.title or derive_title(args.version)
+
     # Define subsites and their versions
     subsites = {
         "marketplace/developer-guide": args.version,
@@ -338,8 +356,10 @@ def main():
         mike_cmd = [
             "mike", "deploy", "-F", config, "--deploy-prefix", subsite,
             "--alias-type=copy",
-            "--update-aliases", version
         ]
+        if title:
+            mike_cmd += ["--title", title]
+        mike_cmd += ["--update-aliases", version]
 
         # Add latest alias if requested
         if args.set_as_latest:
