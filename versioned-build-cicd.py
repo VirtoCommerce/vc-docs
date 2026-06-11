@@ -12,6 +12,7 @@ import argparse
 import json
 import tempfile
 import re
+import shlex
 
 SITE_URL = "https://docs.virtocommerce.org"
 
@@ -369,7 +370,10 @@ def main():
         mike_cmd.append("--push")
 
         # Execute mike deploy
-        result = run_command(" ".join(mike_cmd), check=False)
+        # Quote each token: run_command uses shell=True, and the title
+        # ("Stable 14") contains a space that would otherwise split into a
+        # stray positional arg. shlex.quote also closes the injection surface.
+        result = run_command(" ".join(shlex.quote(a) for a in mike_cmd), check=False)
         if result.returncode != 0:
             print(f"❌ Mike deploy failed for {subsite}: {result.stderr}")
             failed_subsites.append(subsite)
