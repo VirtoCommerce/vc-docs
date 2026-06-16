@@ -4,6 +4,7 @@ INHERIT: ../../mkdocs.yml
 hooks:
     - ../../overrides/hooks/search_index_fixer.py
     - ../../overrides/hooks/abbreviations_loader.py
+    - ../../overrides/hooks/extra_css_cache_bust.py
 
 # Override plugins for versioned site
 plugins:
