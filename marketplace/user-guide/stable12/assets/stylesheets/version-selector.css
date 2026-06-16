@@ -171,3 +171,18 @@ body:has(.md-search--active) .mega-menu {
     outline: 2px solid blue !important;
 }
 */
+
+
+/* ============================================
+   Preserve title casing in the version selector
+   ============================================ */
+
+/**
+ * .md-header__title applies text-transform: uppercase, which is inherited
+ * by the version selector text. Reset it on the selector's text elements so
+ * version titles render as authored ("Stable 14", not "STABLE 14").
+ */
+.md-version__current,
+.md-version__link {
+    text-transform: none;
+}
