@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - 'release/**'
+  # Manual trigger: rebuild and redeploy the prod image from the selected branch.
+  # Run on `main` to refresh the non-versioned landing pages (/, /platform/, ...),
+  # which are baked into the prod image only from `main`.
+  workflow_dispatch:
 
 concurrency:
   group: docs-deploy-${{ github.ref }}
@@ -32,8 +36,17 @@ jobs:
           dockerUsr: ${{ secrets.VCPT_DOCKER_USER }}
           dockerPwd: ${{ secrets.VCPT_DOCKER_PASSWORD }}
 
+      # Only `main` updates the live prod image. The image build above bakes in
+      # the non-versioned landing pages (/, /platform/, /storefront/, /marketplace/)
+      # from whatever branch triggered the run. release/** branches carry stale
+      # landing sources (and lack newer header changes), so deploying their image
+      # would clobber the landings built from main. release/** still runs the build
+      # above, which pushes its versioned guide to gh-pages via mike; it just does
+      # not get promoted to prod. A subsequent main run (or manual workflow_dispatch)
+      # bakes the refreshed gh-pages versions into the prod image.
       - name: Trigger cloud deploy
         id: dispatch
+        if: github.ref_name == 'main'
         run: |
           echo "dispatched-at=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
           gh api repos/VirtoCommerce/vc-github-actions/dispatches \
@@ -45,6 +58,7 @@ jobs:
           GH_TOKEN: ${{ secrets.REPO_TOKEN }}
 
       - name: Wait for cloud deploy
+        if: github.ref_name == 'main'
         timeout-minutes: 30
         run: |
           set -euo pipefail
