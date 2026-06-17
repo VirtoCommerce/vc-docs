@@ -185,3 +185,32 @@ body:has(.md-search--active) .mega-menu {
 .md-version__link {
     text-transform: none;
 }
+
+/* ============================================
+   Prevent version selector / mega-menu overlap
+   ============================================ */
+
+/**
+ * Mike injects the version selector into .md-header__topic, which Material
+ * positions absolutely (for a page-title scroll animation that isn't used
+ * here: there is a single topic). Being absolute, the topic reserves no
+ * in-flow width, so the site title + version selector overflow their box and
+ * the "All topics" mega-menu (the next in-flow item) renders on top of them
+ * at every width from desktop down to tablet.
+ *
+ * Make the topic flow in-line so the logo reserves the real width of the
+ * title and version selector; the mega-menu then lays out after them.
+ */
+.md-header__topic {
+    position: static;
+}
+
+/* Keep the "All topics" button on one line and stop it from being squeezed
+   once the version selector takes its proper space. */
+.mega-menu {
+    flex: 0 0 auto;
+}
+
+.mega-menu__button {
+    white-space: nowrap;
+}
