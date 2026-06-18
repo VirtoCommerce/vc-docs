@@ -172,7 +172,6 @@ body:has(.md-search--active) .mega-menu {
 }
 */
 
-
 /* ============================================
    Preserve title casing in the version selector
    ============================================ */
@@ -239,19 +238,61 @@ body:has(.md-search--active) .mega-menu {
  * Revisit if the theme is upgraded.
  */
 @media screen and (min-width: 80em) {
-    .md-header__inner .md-search,
+    /* Logo sizes to its content (logo + title + version selector) instead of
+       growing, so the search field can flex into the remaining row space. */
+    .md-header__logo {
+        flex: 0 1 auto;
+    }
+
+    /* Search field has a dynamic width: it fills the space between the mega-menu
+       and the Ask AI button, growing on wide screens and shrinking as the
+       viewport narrows down to the 80em breakpoint (where it becomes the icon).
+       The grid max-width caps how wide it gets on very large screens. */
+    .md-header__inner .md-search {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
     .md-header__inner .md-search__inner,
     .md-header__inner .md-search__form,
     .md-header__inner .md-search__input {
-        width: 340px !important;
-        max-width: 340px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
 @media screen and (min-width: 60em) and (max-width: 79.984em) {
-    /* Show the search icon button (Material hides it >= 60em). */
+    /* Show the search icon button (Material hides it >= 60em) and style it to
+       match the Ask AI button so the two header buttons form a consistent pair. */
     .md-header__button[for="__search"] {
         display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px !important;
+        height: 42px !important;
+        margin: 0 0.6rem 0 0 !important;
+        padding: 0 !important;
+        background-color: var(--search-bg-color) !important;
+        border: 1px solid var(--search-border-color) !important;
+        border-radius: 6px !important;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .md-header__button[for="__search"]:hover {
+        background-color: var(--neutral-95);
+        border-color: #FF7E13;
+    }
+
+    /* Collapse the Ask AI button to an icon-only square (matching the search
+       icon button) when the search itself becomes an icon. */
+    .md-header__ai-button:not(.md-header__ai-button--mobile) .md-header__ai-button-label {
+        display: none;
+    }
+
+    .md-header__ai-button:not(.md-header__ai-button--mobile) {
+        width: 42px;
+        padding: 0;
+        justify-content: center;
     }
 
     /* Collapse the inline field into the off-canvas overlay field. */
@@ -342,5 +383,23 @@ body:has(.md-search--active) .mega-menu {
 
     .md-search__scrollwrap {
         width: auto !important;
+    }
+}
+
+/* At <= 1050px the Ask AI button switches to its smaller icon-only variant
+   (32x32); match the search icon button to that size so the pair stays
+   consistent. */
+@media screen and (max-width: 1050px) {
+    .md-header__button[for="__search"] {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+/* At <= 990px drop the site title text and keep just the logo mark, freeing
+   room for the version selector, mega-menu and the icon buttons. */
+@media screen and (max-width: 990px) {
+    .md-header__title .md-ellipsis {
+        display: none;
     }
 }
