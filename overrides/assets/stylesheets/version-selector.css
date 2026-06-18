@@ -214,3 +214,132 @@ body:has(.md-search--active) .mega-menu {
 .mega-menu__button {
     white-space: nowrap;
 }
+
+/* ============================================
+   Fit the whole header at every resolution
+   ============================================ */
+
+/**
+ * Once the version selector reserves real width, the header (logo + site title +
+ * version selector + "All topics" + search box + Ask AI + repo) no longer fits
+ * below ~1280px and the GitHub repo block overflowed off-screen.
+ *
+ * Nothing is removed. Instead the search adapts, like Material's own responsive
+ * search, just at a higher breakpoint:
+ *   - >= 80em (1280px): keep the inline search box but cap its width so
+ *     everything fits on one row.
+ *   - 60em-80em (960-1280px): there is no room for an inline box next to all the
+ *     other items, so the search collapses to its icon and opens as the
+ *     full-width overlay (exactly what Material does natively below 60em). This
+ *     re-applies Material 9.5's mobile-search rules in that band.
+ *   - < 60em: Material's native search icon already applies.
+ *
+ * NOTE: the 60em-80em block mirrors mkdocs-material 9.5.x mobile-search CSS.
+ * Revisit if the theme is upgraded.
+ */
+@media screen and (min-width: 80em) {
+    .md-header__inner .md-search,
+    .md-header__inner .md-search__inner,
+    .md-header__inner .md-search__form,
+    .md-header__inner .md-search__input {
+        width: 340px !important;
+        max-width: 340px !important;
+    }
+}
+
+@media screen and (min-width: 60em) and (max-width: 79.984em) {
+    /* Show the search icon button (Material hides it >= 60em). */
+    .md-header__button[for="__search"] {
+        display: flex !important;
+    }
+
+    /* Collapse the inline field into the off-canvas overlay field. */
+    .md-search__inner {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        float: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        padding: 0 !important;
+        opacity: 0;
+        overflow: hidden;
+        z-index: 2;
+        transform: translateX(5%);
+        transition: width 0.3s, height 0.3s,
+            transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+            opacity 0.15s 0.15s;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__inner {
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 1;
+        transform: translateX(0);
+        transition: width, height,
+            transform 0.15s cubic-bezier(0.1, 0.7, 0.1, 1) 0.15s,
+            opacity 0.15s 0.15s;
+    }
+
+    .md-search__overlay {
+        background-color: var(--md-default-bg-color);
+        border-radius: 1rem;
+        width: 0;
+        height: 2rem;
+        overflow: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: -1rem;
+        left: -2.2rem;
+        opacity: 0;
+        transform-origin: center center;
+        transition: transform 0.3s 0.1s, opacity 0.2s 0.2s, width 0s 0.3s;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
+        width: 100%;
+        opacity: 1;
+        transform: scale(75);
+        transition: transform 0.4s, opacity 0.1s;
+    }
+
+    .md-search__form {
+        background-color: var(--md-default-bg-color) !important;
+        border-radius: 0 !important;
+        height: 2.4rem !important;
+    }
+
+    .md-search__input {
+        width: 100% !important;
+        height: 2.4rem !important;
+        padding-left: 2.2rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .md-search__icon[for="__search"] {
+        top: 0.6rem;
+        left: 0.8rem;
+    }
+
+    .md-search__icon[for="__search"] svg:first-child {
+        display: block;
+    }
+
+    .md-search__icon[for="__search"] svg:last-child {
+        display: none;
+    }
+
+    .md-search__options {
+        top: 0.6rem;
+        right: 0.8rem;
+    }
+
+    .md-search__output {
+        top: 2.4rem !important;
+        bottom: 0;
+    }
+
+    .md-search__scrollwrap {
+        width: auto !important;
+    }
+}
