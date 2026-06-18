@@ -18,7 +18,7 @@ The Virto Pages feature has been enabled. Now, you can view all the created page
 <br>
 ![Readmore](media/readmore.png){: width="20"} [Building and rebuilding search index](../search/managing-search.md#build-search-index)
 
-![Readmore](media/readmore.png){: width="20"} [Backing up and restoring pages](../backup-and-restore.md)
+![Readmore](media/readmore.png){: width="20"} [Backing up and restoring pages](../backup-and-restore/overview.md)
 
 <br>
 <br>

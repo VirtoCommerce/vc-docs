@@ -177,6 +177,8 @@ Generated_Code/
 # because we have git ;-)
 _UpgradeReport_Files/
 Backup*/
+# Documentation folder, not a Visual Studio backup folder
+!/platform/user-guide/docs/backup-and-restore/
 UpgradeLog*.XML
 UpgradeLog*.htm
 # SQL Server files

@@ -40,6 +40,9 @@ This configuration node defines the system settings of the VC Platform.
 | LicenseActivationUrl          | https://license.virtocommerce.org/api/licenses/activate/  | The URL used to activate the Virto Commerce Platform license.                     |
 | SampleDataUrl                 | https://virtocommerce.azureedge.net/sample-data           | URL for downloading sample data during the initial setup of the Virto Commerce Platform.   |
 | DiscoveryPath                 | ./modules                                                 | The relative or absolute file system path where the Platform will discover installed modules. |
+| DefaultExportFolder           | export                                                    | The folder, relative to the asset storage root, where the Backup and Restore module writes exported backup files. |
+| DefaultExportFileName         | vc_backup_{0:yyyyMMddHHmmss}.zip                          | The file name template used for generated backup files. The **{0}** placeholder is replaced with the backup creation timestamp. |
+| LocalUploadFolderPath         | app_data/uploads                                          | **Required.** The local file system folder used to temporarily store uploaded files, including backup archives selected for restore. |
 | AllowInsecureHttp             | false                                            | Controls how the OpenID Connect server (ASOS) handles requests arriving on non-HTTPS endpoints. When set to **false**, it helps mitigate man-in-the-middle attacks. |
 | UseResponseCompression        | false <br> true                                          | Enables or disables response compression to improve performance.                 |
 | Settings                      | ![Read more](media/readmore.png){: width="20"} [Settings](#settings) | Configures global and tenant-level platform settings, including default values, enforced (forced) values, and visibility of specific parameters. |

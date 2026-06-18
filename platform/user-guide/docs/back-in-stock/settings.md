@@ -37,5 +37,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../stock-and-notifications-management">← Inventory and notifications management</a>
-    <a href="../../catalog-csv-export-import/overview">Catalog CSV Export and Import module overview →</a>
+    <a href="../../backup-and-restore/overview">Backup and Restore →</a>
 </div>

@@ -126,5 +126,5 @@ By following these steps, you can correctly extend the `ApplicationUser` entity 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../product-completeness-evaluator">← Extending product completeness evaluator </a>
-    <a href="../opentelemetry">Open Telemetry  →</a>
+    <a href="../including-module-data-in-backups">Including module data in backups →</a>
 </div>

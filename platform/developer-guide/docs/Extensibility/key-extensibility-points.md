@@ -31,6 +31,8 @@ To address crucial extension requirements, the Platform contains various **exten
     * [Adding new SSO Provider.](../Fundamentals/Security/extensions/adding-google-as-sso-provider.md)
 * Notification extensions:
     * [Extending notification types.](../Fundamentals/Notifications/extending-notification-types.md)
+* Backup and restore extensions:
+    * [Including module data in backups.](including-module-data-in-backups.md)
 * Logging extension:
     * [Using MS Azure Application Insights.](../Fundamentals/Logging/application-insights.md)
     * [Using Seq log module.](../Fundamentals/Logging/seq-module.md)

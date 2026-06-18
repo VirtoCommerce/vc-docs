@@ -65,6 +65,18 @@ A very important property belonging to the payment method is `PaymentMethodType`
 
 **PreparedForm**: Use this type of action in case the payment method provides an HTML form for filling in the credentials. Namely, you need to set the `HtmlForm` property in the `ProcessPaymentResult` with an HTML form the outside payment system returns or with the generated form in our payment system. An example of such behavior would be the Klarna Checkout payment method.
 
+## Display payment form on checkout page
+
+A payment method can display its payment form, for example a credit card form, directly on the checkout page. The customer enters the card details inline, on the same page, as soon as they select the method. To enable this for your method, override the `AllowCartPayment` property:
+
+```csharp
+public override bool AllowCartPayment => true;
+```
+
+The Frontend reads this flag through the `allowCartPayment` field of the payment method in the GraphQL API. When it returns `true`, the Frontend renders the form on the checkout page instead of redirecting the customer to a separate page. This behavior is typically combined with the `PreparedForm` payment method type, which supplies that form.
+
+The property returns `false` unless you override it, so existing payment methods are unaffected. It is available in the Payment module version 3.812.0 and higher.
+
 ## Enable and configure payment method for store
 
 After your module is installed in your target system, all your payment methods should appear and be available for configuration in every store in your system under the **Store-->Payment method** widget. You can configure payment methods for each store individually:

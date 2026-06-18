@@ -27,6 +27,7 @@ This type defines the properties and fields associated with a shopping cart.
 | `total` [==MoneyType!==](../objects/money-type.md)                                            | The total cost of the cart.                                                 |
 | `subTotal` [==MoneyType!==](../objects/money-type.md)                                         | The subtotal of the cart before taxes and discounts.                        |
 | `subTotalWithTax` [==MoneyType!==](../objects/money-type.md)                                  | The subtotal of the cart including taxes.                                   |
+| `cartTotals` [==[CartTotalType]==](../objects/CartTotalType.md)                               | A list of cart totals, one element per currency present in the cart, for example when paying with loyalty points. The scalar total fields stay in the primary currency. |
 | `extendedPriceTotal` [==MoneyType!==](../objects/money-type.md)                               | The total extended price of the items in the cart.                          |
 | `extendedPriceTotalWithTax` [==MoneyType!==](../objects/money-type.md)                        | The total extended price of the items in the cart including taxes.          |
 | `currency` [==CurrencyType!==](../objects/currency-type.md)                                   | The currency used for the cart.                                             |
@@ -72,3 +73,5 @@ This type defines the properties and fields associated with a shopping cart.
 The `Cart.Addresses` field in `CartType` is a functional enabler. Currently, it is not featured in any internal business logic and is separated from `Cart.Billing.Addresses` and `Cart.Shipping.Addresses`. Feel free to add your own business logic to it.
 
 You can find the address type structure [here](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/VirtoCommerce.ExperienceApiModule.Core/Schemas/AddressType.cs).
+
+![Readmore](../media/readmore.png){: width="25"} [Mixed-currency carts](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview#mixed-currency-carts)

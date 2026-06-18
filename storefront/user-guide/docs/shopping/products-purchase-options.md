@@ -48,15 +48,15 @@ Users adapt products to their preferences by configuring available options, such
 
 ## Buy products from loyalty catalog
 
-The **Loyalty catalog** is a dedicated section where products are priced in loyalty points instead of the store's standard currency. If you have points, you can:
+If your store runs a loyalty program, you can buy products with the points you have earned. You can put them in the same cart as products you pay for with money. The cart keeps these two apart, showing a separate total for your money items and your points items, so it is always clear what each one costs.
 
-* Browse a separate product grid at **/loyalty-catalog**.
-* See prices shown in points, for example PTS, on every product card and product page.
-* Move through the catalog using the same category structure as the standard store.
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.22% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/bx2gh1kcevb4?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
-![Loyalty catalog](../media/loyalty-frontend.png)
-
-The loyalty catalog appears only when a store administrator has enabled it.
 
 ![Readmore](../media/readmore.png){: width="25"} [Setting up loyalty catalog browsing](/platform/user-guide/latest/loyalty/set-up-loyalty-catalog-browsing)
 

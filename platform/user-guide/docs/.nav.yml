@@ -8,7 +8,6 @@ nav:
           - Getting Started: getting-started.md
           - B2B Multi-Regional eCommerce Architecture: multiregional-ecommerce.md
           - Viewing Results on Frontend: view-results-on-frontend.md
-          - Backup and Restore: backup-and-restore.md
           - Managing Dynamic Properties: dynamic-properties/managing-dynamic-properties.md
           - ADA and WCAG Compliance: ada-compliance.md
           - Glossary: glossary.md
@@ -142,6 +141,10 @@ nav:
                   - Overview: back-in-stock/overview.md
                   - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
                   - Settings: back-in-stock/settings.md
+          - Backup and Restore:
+                - Overview: backup-and-restore/overview.md
+                - Backup: backup-and-restore/backup.md
+                - Restore: backup-and-restore/restore.md
           - Catalog Related Modules:
                 - Catalog CSV Export and Import:
                       - Overview: catalog-csv-export-import/overview.md

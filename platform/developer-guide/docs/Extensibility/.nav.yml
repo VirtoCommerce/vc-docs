@@ -5,5 +5,6 @@ nav:
   - Extending Dynamic Expression Tree: extending-dynamic-expression-tree.md
   - Extending Product Completeness Evaluator: product-completeness-evaluator.md
   - Extending Application User: extending-application-user.md
+  - Including Module Data in Backups: including-module-data-in-backups.md
   - Open Telemetry: opentelemetry.md
   - cms-integrations

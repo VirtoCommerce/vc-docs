@@ -93,6 +93,9 @@ To complete your order:
 
             **Pay with points** allows you to pay for the order with loyalty points earned from previous activity.
 
+    !!! note
+        For **Authorize.net** and **Skyflow**, the credit card form is shown directly on the checkout page as soon as you select the payment method, so you can enter your card details on the same page.
+
 <br>
 <br>
     ![Billing step](../media/billing-step.png){: style="display: block; margin: 0 auto;" }

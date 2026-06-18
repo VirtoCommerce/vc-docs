@@ -20,7 +20,7 @@ With the Pages module, you can:
     * **Resolve pages by permalink**: Access pages via user-friendly URLs.
     * **Resolve pages by ID**: Access pages via unique identifiers.
 * **Search pages by keyword**: Quickly find and retrieve pages using full-text search.
-* **Back up and restore pages**: [Save a copy of your pages and restore them](../backup-and-restore.md) when needed.
+* **Back up and restore pages**: [Save a copy of your pages and restore them](../backup-and-restore/overview.md) when needed.
 
 ## Supported CMS platforms
 

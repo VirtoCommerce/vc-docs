@@ -22,6 +22,7 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 | `productId` ==String!==        | The Id of the product to add to the cart.                                                    |
 | `quantity` ==Int!==            | The quantity of the product to add to the cart.                                              |
 | `price` ==Decimal==            | The price of the product.                                                                    |
+| `itemCurrencyCode` ==String==  | Adds the product in a currency other than the cart's primary currency, for example a points-priced loyalty product. |
 | `comment` ==String==           | A comment associated with the added item.                                                    |
 | `dynamicProperties` [==[InputDynamicPropertyValueType]==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType) | The dynamic properties associated with the added item.  |
 
@@ -76,3 +77,5 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 ```
 
 </div>
+
+![Readmore](../media/readmore.png){: width="25"} [Mixed-currency carts](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview#mixed-currency-carts)

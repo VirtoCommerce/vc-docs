@@ -215,7 +215,7 @@ For example, let's configure separate homepages so that users from the Melon org
 <br>
 <br>
 
-![Readmore](media/readmore.png){: width="25"} [Back up and restore](../backup-and-restore.md)
+![Readmore](media/readmore.png){: width="25"} [Back up and restore](../backup-and-restore/overview.md)
 
 
 <br>

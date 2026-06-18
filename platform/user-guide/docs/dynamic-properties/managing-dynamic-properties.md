@@ -41,5 +41,5 @@ The modifications have been saved.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../backup-and-restore">← Backup and restore</a>
+    <a href="../../view-results-on-frontend">← Viewing results on Frontend</a>
     <a href="../../ada-compliance">ADA and WCAG compliance →</a>

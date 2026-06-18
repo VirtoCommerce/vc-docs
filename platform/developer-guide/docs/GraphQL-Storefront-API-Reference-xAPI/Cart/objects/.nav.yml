@@ -1,6 +1,7 @@
 title: Objects
 nav:
   - CartType: cart-type.md
+  - CartTotalType: CartTotalType.md
   - CartConnection: cart-connection.md
   - CartEdge: cart-edge.md
   - CartShipmentItemType: cart-shipment-item-type.md

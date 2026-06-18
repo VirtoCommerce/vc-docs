@@ -118,6 +118,6 @@ Configure the **appsettings.json** file as follows:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../extending-application-user">← Extending application user </a>
+    <a href="../including-module-data-in-backups">← Including module data in backups</a>
     <a href="../cms-integrations/cms-overview">CMS integrations  →</a>
 </div>
