@@ -172,7 +172,6 @@ body:has(.md-search--active) .mega-menu {
 }
 */
 
-
 /* ============================================
    Preserve title casing in the version selector
    ============================================ */
@@ -214,4 +213,193 @@ body:has(.md-search--active) .mega-menu {
 
 .mega-menu__button {
     white-space: nowrap;
+}
+
+/* ============================================
+   Fit the whole header at every resolution
+   ============================================ */
+
+/**
+ * Once the version selector reserves real width, the header (logo + site title +
+ * version selector + "All topics" + search box + Ask AI + repo) no longer fits
+ * below ~1280px and the GitHub repo block overflowed off-screen.
+ *
+ * Nothing is removed. Instead the search adapts, like Material's own responsive
+ * search, just at a higher breakpoint:
+ *   - >= 80em (1280px): keep the inline search box but cap its width so
+ *     everything fits on one row.
+ *   - 60em-80em (960-1280px): there is no room for an inline box next to all the
+ *     other items, so the search collapses to its icon and opens as the
+ *     full-width overlay (exactly what Material does natively below 60em). This
+ *     re-applies Material 9.5's mobile-search rules in that band.
+ *   - < 60em: Material's native search icon already applies.
+ *
+ * NOTE: the 60em-80em block mirrors mkdocs-material 9.5.x mobile-search CSS.
+ * Revisit if the theme is upgraded.
+ */
+@media screen and (min-width: 80em) {
+    /* Logo sizes to its content (logo + title + version selector) instead of
+       growing, so the search field can flex into the remaining row space. */
+    .md-header__logo {
+        flex: 0 1 auto;
+    }
+
+    /* Search field has a dynamic width: it fills the space between the mega-menu
+       and the Ask AI button, growing on wide screens and shrinking as the
+       viewport narrows down to the 80em breakpoint (where it becomes the icon).
+       The grid max-width caps how wide it gets on very large screens. */
+    .md-header__inner .md-search {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .md-header__inner .md-search__inner,
+    .md-header__inner .md-search__form,
+    .md-header__inner .md-search__input {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 60em) and (max-width: 79.984em) {
+    /* Show the search icon button (Material hides it >= 60em) and style it to
+       match the Ask AI button so the two header buttons form a consistent pair. */
+    .md-header__button[for="__search"] {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px !important;
+        height: 42px !important;
+        margin: 0 0.6rem 0 0 !important;
+        padding: 0 !important;
+        background-color: var(--search-bg-color) !important;
+        border: 1px solid var(--search-border-color) !important;
+        border-radius: 6px !important;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .md-header__button[for="__search"]:hover {
+        background-color: var(--neutral-95);
+        border-color: #FF7E13;
+    }
+
+    /* Collapse the Ask AI button to an icon-only square (matching the search
+       icon button) when the search itself becomes an icon. */
+    .md-header__ai-button:not(.md-header__ai-button--mobile) .md-header__ai-button-label {
+        display: none;
+    }
+
+    .md-header__ai-button:not(.md-header__ai-button--mobile) {
+        width: 42px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    /* Collapse the inline field into the off-canvas overlay field. */
+    .md-search__inner {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        float: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        padding: 0 !important;
+        opacity: 0;
+        overflow: hidden;
+        z-index: 2;
+        transform: translateX(5%);
+        transition: width 0.3s, height 0.3s,
+            transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+            opacity 0.15s 0.15s;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__inner {
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 1;
+        transform: translateX(0);
+        transition: width, height,
+            transform 0.15s cubic-bezier(0.1, 0.7, 0.1, 1) 0.15s,
+            opacity 0.15s 0.15s;
+    }
+
+    .md-search__overlay {
+        background-color: var(--md-default-bg-color);
+        border-radius: 1rem;
+        width: 0;
+        height: 2rem;
+        overflow: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: -1rem;
+        left: -2.2rem;
+        opacity: 0;
+        transform-origin: center center;
+        transition: transform 0.3s 0.1s, opacity 0.2s 0.2s, width 0s 0.3s;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
+        width: 100%;
+        opacity: 1;
+        transform: scale(75);
+        transition: transform 0.4s, opacity 0.1s;
+    }
+
+    .md-search__form {
+        background-color: var(--md-default-bg-color) !important;
+        border-radius: 0 !important;
+        height: 2.4rem !important;
+    }
+
+    .md-search__input {
+        width: 100% !important;
+        height: 2.4rem !important;
+        padding-left: 2.2rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .md-search__icon[for="__search"] {
+        top: 0.6rem;
+        left: 0.8rem;
+    }
+
+    .md-search__icon[for="__search"] svg:first-child {
+        display: block;
+    }
+
+    .md-search__icon[for="__search"] svg:last-child {
+        display: none;
+    }
+
+    .md-search__options {
+        top: 0.6rem;
+        right: 0.8rem;
+    }
+
+    .md-search__output {
+        top: 2.4rem !important;
+        bottom: 0;
+    }
+
+    .md-search__scrollwrap {
+        width: auto !important;
+    }
+}
+
+/* At <= 1050px the Ask AI button switches to its smaller icon-only variant
+   (32x32); match the search icon button to that size so the pair stays
+   consistent. */
+@media screen and (max-width: 1050px) {
+    .md-header__button[for="__search"] {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+/* At <= 990px drop the site title text and keep just the logo mark, freeing
+   room for the version selector, mega-menu and the icon buttons. */
+@media screen and (max-width: 990px) {
+    .md-header__title .md-ellipsis {
+        display: none;
+    }
 }
