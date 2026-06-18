@@ -2709,6 +2709,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#operating-prerender" class="md-nav__link">
+        Operating Prerender
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Operating Prerender">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#refresh-snapshots-after-deploy" class="md-nav__link">
+        Refresh snapshots after deploy
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#exclude-private-routes" class="md-nav__link">
+        Exclude private routes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#verify-routing" class="md-nav__link">
+        Verify routing
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#conclusion" class="md-nav__link">
         Conclusion
     </a>
@@ -3048,6 +3094,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#operating-prerender" class="md-nav__link">
+        Operating Prerender
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Operating Prerender">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#refresh-snapshots-after-deploy" class="md-nav__link">
+        Refresh snapshots after deploy
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#exclude-private-routes" class="md-nav__link">
+        Exclude private routes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#verify-routing" class="md-nav__link">
+        Verify routing
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#conclusion" class="md-nav__link">
         Conclusion
     </a>
@@ -3077,7 +3169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 07:10:45 UTC">June 18, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3110,10 +3202,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="performance-evaluation">Performance evaluation<a class="headerlink" href="#performance-evaluation" title="Permanent link">&para;</a></h2>
 <p>To measure the impact of Prerender.io on performance, a PageSpeed analysis was conducted for a category listing page. The comparison involved assessing the performance with and without SSR page rendering through Prerender.io.</p>
 <p><img alt="comparison" src="../media/with-without-ssr-page.png" style="display: block; margin: 0 auto;" /></p>
+<h2 id="operating-prerender">Operating Prerender<a class="headerlink" href="#operating-prerender" title="Permanent link">&para;</a></h2>
+<p>Once Prerender serves cached snapshots to crawlers, three operational tasks come up regularly: refreshing snapshots after a deploy, keeping private routes out of the cache, and verifying that bots and humans are routed correctly.</p>
+<h3 id="refresh-snapshots-after-deploy">Refresh snapshots after deploy<a class="headerlink" href="#refresh-snapshots-after-deploy" title="Permanent link">&para;</a></h3>
+<p>Prerender caches each rendered page and does not automatically invalidate snapshots when you deploy a new frontend version. Until a snapshot expires or is recached, crawlers keep receiving the old HTML.</p>
+<p>To refresh a page immediately, call the Prerender <a href="https://docs.prerender.io/docs/6-api">Recache API</a> from your CI/CD pipeline after each deploy:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;prerenderToken&quot;: &quot;&lt;your-token&gt;&quot;, &quot;url&quot;: &quot;https://&lt;storefront&gt;/catalog/laptops&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>https://api.prerender.io/recache
+</code></pre></div>
+<p>To refresh many pages at once, replace <code>url</code> with a <code>urls</code> array (up to 1000 per request). Recaching only the pages that changed lets you keep a long cache expiration and still serve fresh content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Recache API is available on Prerender.io Advanced and Enterprise plans.</p>
+</div>
+<h3 id="exclude-private-routes">Exclude private routes<a class="headerlink" href="#exclude-private-routes" title="Permanent link">&para;</a></h3>
+<p>Account and checkout pages contain session-specific content and have no SEO value. Add a path exclusion in your reverse proxy so prefixes such as <code>/account</code>, <code>/checkout</code>, <code>/cart</code>, and <code>/sign-in</code> bypass Prerender even when the User-Agent matches the crawler regex. This avoids wasting render capacity and prevents caching transient, user-specific responses.</p>
+<p>Block the same routes from crawling in <strong>robots.txt</strong>, which is managed from the Platform Admin and served by the storefront. </p>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/latest/store/custom-robot-txt">Custom robots.txt file</a></p>
+<h3 id="verify-routing">Verify routing<a class="headerlink" href="#verify-routing" title="Permanent link">&para;</a></h3>
+<p>Use the <code>x-prerender-cache</code> response header to confirm which path a request took:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Bot path: should return x-prerender-cache: HIT (or MISS on the first hit)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>curl<span class="w"> </span>-sI<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;googlebot&quot;</span><span class="w"> </span>https://&lt;storefront&gt;/catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>x-prerender-cache
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Human path: the header is absent, confirming the request was served the SPA shell</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>curl<span class="w"> </span>-sI<span class="w"> </span>https://&lt;storefront&gt;/catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>x-prerender-cache
+</code></pre></div>
+<p>A <code>MISS</code> triggers a fresh render that takes a few seconds; a <code>HIT</code> is served from cache near-instantly. To force a fresh render during testing without clearing the cache, append a throwaway query parameter, for example <code>?cachebust=1</code>. Each unique URL is a separate cache entry, so remove the parameter when testing real cached behavior. When you contact Prerender support about a request, include the <code>x-prerender-request-id</code> value from the response.</p>
+<p>Crawlers should also receive correct HTTP status codes, for example 404 for a removed product. </p>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../spa-architecture-for-seo-and-404-handling/">SPA architecture for SEO and 404 handling</a></p>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>The primary advantage of utilizing Prerender.io for custom Virto Commerce frontend solutions, especially those with stringent SEO requirements, lies in its ability to enhance SEO without compromising the purity of the SPA architecture. This eliminates the need for substantial changes or investments in complex SSR frameworks like Nuxt.js.</p>
 <p>By avoiding server-side logic, Prerender.io enables a streamlined frontend solution, eliminating concerns related to caching, scaling, server error handling, and logging – elements typically unnecessary for pure SPA applications. Prerender.io offers a simplified and effective solution to enhance search engine visibility and performance without requiring extensive modifications to existing code.</p>
-<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://prerender.io/blog/spa-javascript-seo-challenges-and-solutions/">SPA JavaScript SEO Challenges and Solutions - Prerender.io</a></p>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://prerender.io/blog/spa-javascript-seo-challenges-and-solutions/">SPA JavaScript SEO Challenges and Solutions - Prerender.io</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway">Setting Up Prerender.io with Azure Application Gateway</a></p>
 <p><br>
 <br></p>
