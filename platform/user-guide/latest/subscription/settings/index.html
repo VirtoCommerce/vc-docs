@@ -5075,6 +5075,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -5180,6 +5182,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../page-builder/settings/" class="md-nav__link">
+        Settings
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
     </nav>
 </li>
@@ -5225,6 +5245,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Determine all nested items that are index pages -->
       
       
+        
+          
         
           
         
@@ -5293,6 +5315,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../pages/enabling-pages/" class="md-nav__link">
         Enabling Virto Pages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../pages/settings/" class="md-nav__link">
+        Settings
       </a>
     </li>
   
@@ -12624,6 +12664,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Settings
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -12632,6 +12676,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#global-settings" class="md-nav__link">
+        Global settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#store-specific-settings" class="md-nav__link">
+        Store-specific settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -13324,6 +13415,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -13387,6 +13480,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../white-labeling/customizing-brand-elements/" class="md-nav__link">
         Customizing Brand Elements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../white-labeling/settings/" class="md-nav__link">
+        Settings
       </a>
     </li>
   
@@ -14835,6 +14946,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#global-settings" class="md-nav__link">
+        Global settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#store-specific-settings" class="md-nav__link">
+        Store-specific settings
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -14854,7 +14993,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 22, 2026 14:13:32 UTC">April 22, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2026 09:58:57 UTC">June 19, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -14875,27 +15014,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>To configure subscriptions settings:</p>
+<p>Within the <strong>Subscription</strong> module, you can configure:</p>
+<ul>
+<li><a href="#global-settings">Global settings.</a></li>
+<li><a href="#store-specific-settings">Store-specific settings.</a></li>
+</ul>
+<h2 id="global-settings">Global settings<a class="headerlink" href="#global-settings" title="Permanent link">&para;</a></h2>
+<p>To configure the module settings globally:</p>
 <ol>
 <li>Click <strong>Settings</strong> in the main menu.</li>
-<li>Select settings related to the <strong>Subscriptions</strong> module.</li>
+<li>In the search field of the next blade, type <strong>Subscription</strong> to find the settings related to the module.</li>
 <li>
-<p>In the next blade, select settings to configure:</p>
-<ul>
-<li>
-<p>General settings:</p>
+<p>In the next blade, configure the following:</p>
 <p><img alt="General settings" src="../media/general-settings.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-<li>
-<p>Subscriptions settings:</p>
-<p><img alt="Subscriptions" src="../media/subscriptions-settings.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-</ul>
 </li>
 <li>
 <p>Click <strong>Save</strong> in the toolbar to save the changes.</p>
 </li>
 </ol>
+<p>Your modifications have been applied.</p>
+<p><br>
+<br></p>
+<h2 id="store-specific-settings">Store-specific settings<a class="headerlink" href="#store-specific-settings" title="Permanent link">&para;</a></h2>
+<p>To configure the store-specific module settings:</p>
+<ol>
+<li>Open <strong>Stores</strong> from the main menu.</li>
+<li>In the next blade, select  your store.</li>
+<li>In the next blade, click on the <strong>Settings</strong> widget.</li>
+<li>Type <strong>Subscription</strong> in the search bar and select the <strong>Subscription</strong> from the list.</li>
+<li>
+<p>In the next blade, configure the following:</p>
+<p><img alt="Store-specific settings" src="../media/subscriptions-settings.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong>, then <strong>Save</strong> in the toolbar to save the changes.</p>
+</li>
+</ol>
+<p>Your modifications have been applied.</p>
 <p><br>
 <br></p>
 <hr />
