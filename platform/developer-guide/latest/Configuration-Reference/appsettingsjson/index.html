@@ -7199,6 +7199,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#location" class="md-nav__link">
+        Location
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#configuration-settings" class="md-nav__link">
         Configuration settings
     </a>
@@ -33521,6 +33531,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#location" class="md-nav__link">
+        Location
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#configuration-settings" class="md-nav__link">
         Configuration settings
     </a>
@@ -34238,7 +34258,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 07:10:45 UTC">June 18, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2026 09:58:57 UTC">June 19, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34260,6 +34280,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Markdown content -->
 <h1 id="appsettingsjson">Appsettings.json<a class="headerlink" href="#appsettingsjson" title="Permanent link">&para;</a></h1>
 <p>As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1">this Microsoft article</a>.</p>
+<h2 id="location">Location<a class="headerlink" href="#location" title="Permanent link">&para;</a></h2>
+<p>The <strong>appsettings.json</strong> file lives in the application root, next to the Platform binaries. In the source, it is at <strong>src/VirtoCommerce.Platform.Web/appsettings.json</strong>. The Platform loads it first, then layers environment overrides such as <strong>appsettings.Development.json</strong> and <strong>appsettings.Production.json</strong>, followed by environment variables, on top of it.</p>
 <h2 id="configuration-settings">Configuration settings<a class="headerlink" href="#configuration-settings" title="Permanent link">&para;</a></h2>
 <p>The configuration keys are hierarchical, and the most convenient way to manage them is to work with the <strong>appsettings.json</strong> file. The following sections, organized by configuration node and alphabetically, show the general structure of the file, provide defaults, and explain what each key is.</p>
 <div class="admonition note">
