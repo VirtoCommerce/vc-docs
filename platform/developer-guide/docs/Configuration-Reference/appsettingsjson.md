@@ -2,6 +2,10 @@
 
 As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
 
+## Location
+
+The **appsettings.json** file lives in the application root, next to the Platform binaries. In the source, it is at **src/VirtoCommerce.Platform.Web/appsettings.json**. The Platform loads it first, then layers environment overrides such as **appsettings.Development.json** and **appsettings.Production.json**, followed by environment variables, on top of it.
+
 ## Configuration settings
 
 The configuration keys are hierarchical, and the most convenient way to manage them is to work with the **appsettings.json** file. The following sections, organized by configuration node and alphabetically, show the general structure of the file, provide defaults, and explain what each key is.

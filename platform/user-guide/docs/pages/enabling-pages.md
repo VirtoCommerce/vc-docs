@@ -26,5 +26,5 @@ The Virto Pages feature has been enabled. Now, you can view all the created page
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Pages module overview</a>
-    <a href="../../sanity/overview">Sanity module overview →</a>
+    <a href="../settings">Settings →</a>
 </div>

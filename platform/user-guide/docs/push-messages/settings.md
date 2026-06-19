@@ -26,7 +26,7 @@ Your modifications have been applied.
 <br>
 
 
-To open store-specific module settings:
+To open store-specific module general settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.

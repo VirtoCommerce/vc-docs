@@ -63,5 +63,5 @@ Try our interactive demo to explore the flow in action:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../manage-pages">← Managing pages via Page Builder office </a>
-    <a href="../../pages/overview">Pages module overview →</a>
+    <a href="../settings">Settings →</a>
 </div>

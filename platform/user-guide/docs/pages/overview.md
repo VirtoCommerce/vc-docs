@@ -38,6 +38,6 @@ With the Pages module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../page-builder/overview">← Page Builder module overview</a>
+    <a href="../../page-builder/overview">← Page Builder overview</a>
     <a href="../enabling-pages">Enabling Pages →</a>
 </div>

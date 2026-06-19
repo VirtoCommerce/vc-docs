@@ -116,9 +116,11 @@ nav:
                       - Managing Pages via Content Module: page-builder/manage-pages.md
                       - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
                       - Preview as User: page-builder/preview-as-user.md
+                      - Settings: page-builder/settings.md
                 - Pages:
                       - Overview: pages/overview.md
                       - Enabling Virto Pages: pages/enabling-pages.md
+                      - Settings: pages/settings.md
                 - Sanity:
                       - Overview: sanity/overview.md
                 - Contentful:
@@ -346,6 +348,7 @@ nav:
           - White Labeling:
                 - Overview: white-labeling/overview.md
                 - Customizing Brand Elements: white-labeling/customizing-brand-elements.md
+                - Settings: white-labeling/settings.md
     - Integrations:
           - Overview: integrations/overview.md
           - Application Insights:

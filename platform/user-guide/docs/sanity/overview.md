@@ -29,6 +29,6 @@ With the Sanity module, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../pages/overview">← Pages module overview</a>
+    <a href="../../pages/settings">← Pages settings</a>
     <a href="../../contentful/overview">Contentful module overview →</a>
 </div>

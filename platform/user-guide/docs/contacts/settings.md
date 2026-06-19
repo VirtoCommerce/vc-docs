@@ -2,8 +2,8 @@
 
 The module settings include:
 
-* [General settings).](#general-settings)
-* [Import settings).](#import)
+* [General settings.](#general-settings)
+* [Import settings.](#import)
 * [Settings for contact entities statuses.](#statuses)
 
 ## General settings
