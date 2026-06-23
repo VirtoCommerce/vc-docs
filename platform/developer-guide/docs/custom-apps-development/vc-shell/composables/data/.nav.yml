@@ -9,5 +9,6 @@ nav:
   - useDataTablePagination: useDataTablePagination.md
   - useDataTableSort: useDataTableSort.md
   - useTableQueryState: useTableQueryState.md
+  - useTableSearch: useTableSearch.md
   - useTableSelection: useTableSelection.md
   - useTableSort: useTableSort.md
