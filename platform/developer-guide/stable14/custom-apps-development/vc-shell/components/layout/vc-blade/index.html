@@ -30910,6 +30910,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -31045,6 +31047,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../composables/data/useDataTableSort/" class="md-nav__link">
         useDataTableSort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../composables/data/useTableQueryState/" class="md-nav__link">
+        useTableQueryState
       </a>
     </li>
   
@@ -33804,7 +33824,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 08:53:45 UTC">June 23, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33946,7 +33966,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <p><strong>Header</strong> -- Displays <code>icon</code>, <code>title</code>, <code>subtitle</code>, close button, and expand/collapse controls. The <code>#actions</code> slot injects custom elements next to the title. On mobile, the header is hidden when only one blade is in the stack.</p>
 <p><strong>Toolbar</strong> -- Action buttons from the <code>toolbarItems</code> prop. Overflow items automatically collapse into a "More" dropdown (via <code>ResizeObserver</code>).</p>
-<p><strong>Status Banners</strong> -- Unified, priority-sorted banner area. System banners: yellow when <code>modified</code> is <code>true</code>, red when the blade has an error (via <code>setError()</code>). Custom banners can be added programmatically via <code>useBlade().addBanner()</code> — see <a href="../../../../core/composables/useBlade/useBlade.docs.md#banner-management">useBlade docs</a>.</p>
+<p><strong>Status Banners</strong> -- Unified, priority-sorted banner area. System banners: yellow when <code>modified</code> is <code>true</code>, red when the blade has an error (via <code>setError()</code>). Custom banners can be added programmatically via <code>useBlade().addBanner()</code> — see <a href="../../../composables/blade-navigation/useBlade/#banner-management">useBlade docs</a>.</p>
 <p><strong>Content Area</strong> -- The <code>default</code> slot. Scrolls independently of header and toolbar.</p>
 <h2 id="creating-a-blade-component">Creating a Blade Component<a class="headerlink" href="#creating-a-blade-component" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
@@ -34275,7 +34295,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="p">});</span>
 <a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Four variants are available: <code>danger</code>, <code>warning</code>, <code>info</code>, <code>success</code>. System banners (error and unsaved changes) are always present and cannot be removed by <code>clearBanners()</code>. For the full API reference, see <a href="../../../../core/composables/useBlade/useBlade.docs.md#banner-management">useBlade — Banner Management</a>.</p>
+<p>Four variants are available: <code>danger</code>, <code>warning</code>, <code>info</code>, <code>success</code>. System banners (error and unsaved changes) are always present and cannot be removed by <code>clearBanners()</code>. For the full API reference, see <a href="../../../composables/blade-navigation/useBlade/#banner-management">useBlade — Banner Management</a>.</p>
 <h2 id="blade-width-control">Blade Width Control<a class="headerlink" href="#blade-width-control" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">&lt;</span><span class="nt">VcBlade</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;350px&quot;</span><span class="p">&gt;</span>          <span class="cm">&lt;!-- Pixels (number) --&gt;</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">&lt;</span><span class="nt">VcBlade</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;50%&quot;</span><span class="p">&gt;</span>           <span class="cm">&lt;!-- CSS value (string) --&gt;</span>

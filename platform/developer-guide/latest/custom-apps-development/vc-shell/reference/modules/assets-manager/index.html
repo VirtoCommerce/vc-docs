@@ -30369,6 +30369,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -30504,6 +30506,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../composables/data/useDataTableSort/" class="md-nav__link">
         useDataTableSort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../composables/data/useTableQueryState/" class="md-nav__link">
+        useTableQueryState
       </a>
     </li>
   
@@ -33060,7 +33080,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 08:53:45 UTC">June 23, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33129,7 +33149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 <blockquote>
-<p><strong>Breaking change:</strong> The old options (<code>assets</code>, <code>loading</code>, <code>assetsUploadHandler</code>, <code>assetsEditHandler</code>, <code>assetsRemoveHandler</code>) have been removed. Pass a single <code>manager</code> instance instead. See <a href="../../../migration/32-use-assets-manager.md">migration guide #32</a>.</p>
+<p><strong>Breaking change:</strong> The old options (<code>assets</code>, <code>loading</code>, <code>assetsUploadHandler</code>, <code>assetsEditHandler</code>, <code>assetsRemoveHandler</code>) have been removed. Pass a single <code>manager</code> instance instead. See <a href="https://github.com/VirtoCommerce/vc-shell/blob/main/migration/32-use-assets-manager.md">migration guide #32</a>.</p>
 </blockquote>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>The canonical pattern is to bind the manager to a writable <code>computed</code> over a field of the parent entity, so that uploads/removes/reorders propagate back into the form. <code>confirmRemove</code> is wired to the framework's popup service rather than <code>window.confirm</code>.</p>
