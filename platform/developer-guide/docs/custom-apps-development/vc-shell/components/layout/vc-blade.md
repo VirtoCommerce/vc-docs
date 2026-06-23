@@ -95,7 +95,7 @@ A blade has four visual zones, rendered top-to-bottom:
 
 **Toolbar** -- Action buttons from the `toolbarItems` prop. Overflow items automatically collapse into a "More" dropdown (via `ResizeObserver`).
 
-**Status Banners** -- Unified, priority-sorted banner area. System banners: yellow when `modified` is `true`, red when the blade has an error (via `setError()`). Custom banners can be added programmatically via `useBlade().addBanner()` — see [useBlade docs](../../../../core/composables/useBlade/useBlade.docs.md#banner-management).
+**Status Banners** -- Unified, priority-sorted banner area. System banners: yellow when `modified` is `true`, red when the blade has an error (via `setError()`). Custom banners can be added programmatically via `useBlade().addBanner()` — see [useBlade docs](../../composables/blade-navigation/useBlade.md#banner-management).
 
 **Content Area** -- The `default` slot. Scrolls independently of header and toolbar.
 
@@ -469,7 +469,7 @@ addBanner({
 </script>
 ```
 
-Four variants are available: `danger`, `warning`, `info`, `success`. System banners (error and unsaved changes) are always present and cannot be removed by `clearBanners()`. For the full API reference, see [useBlade — Banner Management](../../../../core/composables/useBlade/useBlade.docs.md#banner-management).
+Four variants are available: `danger`, `warning`, `info`, `success`. System banners (error and unsaved changes) are always present and cannot be removed by `clearBanners()`. For the full API reference, see [useBlade — Banner Management](../../composables/blade-navigation/useBlade.md#banner-management).
 
 ## Blade Width Control
 

@@ -8,5 +8,6 @@ nav:
   - useAssetsManager: useAssetsManager.md
   - useDataTablePagination: useDataTablePagination.md
   - useDataTableSort: useDataTableSort.md
+  - useTableQueryState: useTableQueryState.md
   - useTableSelection: useTableSelection.md
   - useTableSort: useTableSort.md
