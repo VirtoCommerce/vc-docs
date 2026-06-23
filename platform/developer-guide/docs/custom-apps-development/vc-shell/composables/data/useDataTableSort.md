@@ -85,14 +85,16 @@ const { sortField, sortOrder, sortExpression, resetSort } = useDataTableSort({
 
 const items = ref([]);
 const loading = ref(false);
+const currentPage = ref(1);
+const PAGE_SIZE = 20;
 
-async function loadItems() {
+async function loadItems(query: { sort?: string; skip?: number }) {
   loading.value = true;
   try {
     const response = await api.searchProducts({
-      sort: sortExpression.value, // e.g. "createdDate:DESC" or undefined
-      skip: 0,
-      take: 20,
+      sort: query.sort, // e.g. "createdDate:DESC" or undefined
+      skip: query.skip ?? 0,
+      take: PAGE_SIZE,
     });
     items.value = response.results;
   } finally {
@@ -141,7 +143,8 @@ watch(sortExpression, () => loadItems());
 ## Tips
 
 - Always mark columns as `sortable` in your `<VcColumn>` definitions for the sort indicator icon to appear.
-- Use `{ immediate: true }` on the `watch(sortExpression, ...)` call to trigger the initial data load with the correct sort on mount.
+- Use `{ immediate: true }` on the combined loader watcher to trigger the initial (or URL-restored) data load with the correct sort on mount.
+- On reload, seed `sortField`/`sortOrder` from `useTableQueryState(stateKey).read().sort` (`"field:DIR"`) before the loader watcher, so restore costs a single request.
 - Call `resetSort()` alongside any "clear all filters" action to keep sort state consistent with the rest of the filter UI.
 
 ## Related
