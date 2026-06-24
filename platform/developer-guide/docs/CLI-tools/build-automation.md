@@ -18,6 +18,10 @@ The **vc-build** tool streamlines various build scenarios for solutions based on
     ```
 
 
+## Using vc-build in a CI/CD pipeline
+
+Because vc-build is builder-server agnostic, the same targets run in any CI/CD system. Virto Commerce provides ready-made [GitHub Actions and Azure DevOps pipelines](virto-cloud-overview.md) for Virto Cloud. For other systems, such as GitLab CI or Jenkins, there are no prebuilt templates: call the same vc-build targets from that system's pipeline.
+
 ## Clean
 
 To clean your bin, objects, and artifacts directories, run:

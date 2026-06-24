@@ -70,6 +70,10 @@ logger.LogWarning("Disk quota {Quota} MB exceeded by {User}", quota, user);
 ```
 
 
+### Correlating logs with traces
+
+When the [Open Telemetry module](../../Extensibility/opentelemetry.md) is enabled, log events are enriched with the `TraceId` and `SpanId` of the current request and forwarded to your OTLP collector, so you can correlate a log line with its distributed trace across services. Without that module, the Platform does not add a correlation or trace ID to log events.
+
 **References**:
 
 * [Logging in .NET Core and ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0)

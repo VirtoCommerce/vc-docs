@@ -68,6 +68,20 @@ Implement `VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider` against 
 | Native GCS performance, lifecycle policies, GCS-class economics, no FUSE caveats.
 | A custom module to build and maintain. <br> Not part of the Virto-supported module catalog. |
 
+## Module installation
+
+The `platform` image ships without commerce modules; they are installed into the module discovery path (`/app/modules`) on first boot.
+
+The Platform auto-installs the module bundles listed in the `ExternalModules:AutoInstallModuleBundles` setting, which the stock **appsettings.json** defaults to `["commerce"]`. On first startup the Platform downloads those modules into the discovery path, installs them, and then becomes ready. Two implications for self-hosting:
+
+* The volume mounted at the discovery path must be **writable** on first boot, and the container needs outbound internet access to pull the module packages from the Virto Commerce feed.
+* The install runs once and persists to the volume, so the volume must survive restarts and scale-to-zero.
+
+!!! warning
+    Do not let multiple instances perform the first install concurrently against the same modules volume; they can race and corrupt the modules directory. For the initial deploy, run a single instance, or pre-seed the volume, then scale out after the install finishes. On Cloud Run, this is the main reason to run the Admin Platform tier with `minScale: 1` and a persistent volume rather than relying on a scale-to-zero first-boot install.
+
+To use immutable, pre-baked modules instead, build your own image `FROM virtocommerce/platform:latest` with modules copied into the discovery path, set `ExternalModules:AutoInstallModuleBundles` to an empty array, and mount the modules volume read-only. This is the recommended pattern for Cloud Run's stateless tiers.
+
 ## GKE
 
 Use this topology when you have an existing Kubernetes investment, multi-tenant or multi-environment workloads, or a GitOps pipeline such as Argo CD or Flux. GKE is the most flexible and most operationally portable option.
@@ -98,7 +112,7 @@ spec:
     spec:
       containers:
         - name: vc-platform
-          image: ghcr.io/virtocommerce/vc-platform/platform:latest
+          image: virtocommerce/platform:latest
           ports:
             - containerPort: 80
           envFrom:
@@ -161,7 +175,7 @@ spec:
       containerConcurrency: 50
       timeoutSeconds: 900
       containers:
-        - image: ghcr.io/virtocommerce/vc-platform/platform:latest
+        - image: virtocommerce/platform:latest
           ports:
             - containerPort: 80
           env:
@@ -200,6 +214,7 @@ The minimum set of environment variables for a Google Cloud deployment:
 | `Content__FileSystem__RootPath` | Mount path of the CMS volume. | Environment variable |
 | `Content__FileSystem__PublicUrl` | Public URL prefix for CMS content. | Environment variable |
 | `VirtoCommerce__DiscoveryPath` | Module discovery path; typically `/app/modules`. | Environment variable |
+| `ExternalModules__AutoInstallModuleBundles__0` | First module bundle to auto-install on first boot. Defaults to `commerce`. | Environment variable |
 
 ![Readmore](media/readmore.png){: width="25"} [appsettings.json reference](../../Configuration-Reference/appsettingsjson.md)
 

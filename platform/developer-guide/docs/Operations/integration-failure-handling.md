@@ -57,6 +57,41 @@ The Platform does not ship a first-class dead-letter queue. Functionally, the Ha
 
 If you need true DLQ semantics (automatic quarantine, separate metrics, replay tooling), that is a custom build on top of these primitives.
 
+## Transactional delivery and the outbox pattern
+
+The Platform does not implement a transactional outbox. Domain events are dispatched [in-process](../Fundamentals/Event-Driven-Development/using-domain-events.md) and are not persisted as part of the database transaction, so there is no stored event log that the Platform replays after a crash or a failed external delivery.
+
+This answers a common question: if the database commit succeeds but the webhook or Event Grid delivery fails, is the event lost?
+
+* The change is committed to the database regardless of delivery.
+* Delivery to external systems is best-effort. Webhooks and Event Grid retry on failure, but once retries are exhausted the event remains only in its failure surface and is not re-delivered automatically. An in-process handler that throws runs once and leaves only an application-log entry.
+* So without extra handling, an external system can miss an event that the database has already committed.
+
+To achieve at-least-once delivery on top of these primitives:
+
+* Make receivers idempotent, keyed on the event identifier, so a manual retry is safe.
+* For work that must not be lost, enqueue a [Hangfire background job](#hangfire-background-jobs) from the handler so that Hangfire's persisted queue and retries cover it, or implement your own outbox table and reconcile it against the [failed-message surfaces](#failed-message-surface).
+* Monitor those surfaces and replay manually when needed.
+
+## Long-running and multi-step processes
+
+The Platform does not include a distributed saga or process-manager framework with automatic compensating transactions. Multi-step and long-running processes are built from two blocks:
+
+* The [State Machine module](/marketplace/developer-guide/latest/state-machine-module/overview/) models an entity's lifecycle as a configurable finite state machine, with states, transitions, trigger conditions, and per-transition actions. Order and approval workflows use it.
+* [Hangfire background jobs](#hangfire-background-jobs) run asynchronous or retryable steps off the request thread.
+
+There is no built-in coordinator that rolls back a partially completed cross-service process. If a step fails after earlier steps have committed, design and trigger the compensating action yourself, for example as a Hangfire job driven by a state transition.
+
+## Data pipelines and ETL
+
+The Platform does not ship connectors for ETL tools such as Apache Airflow or Kafka Connect. Build data pipelines on the integration surfaces it does provide:
+
+* The REST and GraphQL APIs for targeted reads and writes.
+* The bulk import and export modules for large datasets.
+* [Webhooks](#webhooks) for change notifications that trigger a pipeline.
+
+Middleware such as Azure Logic Apps or Azure Functions can sit between these surfaces and your pipeline for transformation and routing.
+
 ## Alerting hookups
 
 The Platform does not include a first-party alerting feature. Alerts are wired through the logging integrations:
@@ -85,6 +120,9 @@ For operators sizing the Platform against an integration-heavy environment, the 
 
 * No central integration-failure dashboard. Three or four surfaces to check and no unified view across them.
 * No first-class dead-letter queue. Failed jobs and webhook deliveries persist, but there is no quarantine, no DLQ-specific tooling, and no built-in replay-from-DLQ workflow.
+* No transactional outbox. Domain events are in-process and not persisted with the database transaction, so a committed change is not guaranteed to reach an external system. See [Transactional delivery and the outbox pattern](#transactional-delivery-and-the-outbox-pattern).
+* No native EDI, cXML, or OCI punchout. B2B e-procurement integrations are delivered through partner solutions rather than a first-party connector.
+* No gRPC service interface. The Platform's programmatic surfaces are REST and GraphQL (xAPI).
 * No first-party alerting policy. No default alert rules ship with the Platform; alerting is delegated to Application Insights or Seq and configured per deployment.
 * No documented retry semantics for domain event handlers or inbound APIs. Custom integration code must follow ASP.NET, MediatR, and Hangfire conventions directly.
 * No incident timeline or postmortem feature. Operators reconstruct events from logs.

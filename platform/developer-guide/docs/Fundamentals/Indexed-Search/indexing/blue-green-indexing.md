@@ -1,5 +1,8 @@
 ﻿# Blue-Green Indexing
 
+!!! info
+    Blue-green indexing rebuilds the **search index** with no downtime. It is unrelated to blue-green *deployment* of the Platform. For zero-downtime Platform rollouts, see [GitOps on Virto Cloud](/platform/deployment-on-cloud/latest/enable-gitops/).
+
 !!! note
     The blue-green indexing is supported by the ElasticSearch, ElasticSearch 8, and Azure Search modules.<br>
 

@@ -119,7 +119,6 @@ Automated export simplifies the process by using a scheduled job. By default, it
     1. In the next blade, find the "Export to assets" feature and enable it.
     1. Click **OK** to save the changes.
 
-    ![Enable via stores](media/enable-via-stores.gif) 
 
 1. Enable via the settings and configure export schedule:
 
@@ -130,7 +129,6 @@ Automated export simplifies the process by using a scheduled job. By default, it
     1. Set the cron expression to "0 0 * * *" to export sitemaps to store assets daily at 00:00.
     1. Click **Save** in the toolbar to save the changes.
 
-  ![Enable sitemaps export](media/enable-sitemaps-export-in-settings.gif)
 
 With automated export enabled, sitemaps will be regularly updated and saved to store assets, ensuring they're always up-to-date and accessible.
 

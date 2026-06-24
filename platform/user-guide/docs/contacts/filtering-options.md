@@ -40,7 +40,7 @@ Keyword search operates based on:
 
 ![Index content](media/index-content.png){: style="display: block; margin: 0 auto;" }
 
-Let's search for all the contacts from the United States of America. Enter **United States of America** to the keyword search field and click <kbd>Enter</kbd>. You will see all the contacts with the United States of America specified in the index content:
+Let's search for all the contacts from the United States of America. Enter **United States of America** to the keyword search field and click **Enter**. You will see all the contacts with the United States of America specified in the index content:
 
 ![Contacts from the USA](media/USA.png){: style="display: block; margin: 0 auto;" }
 

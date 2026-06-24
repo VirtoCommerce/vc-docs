@@ -63,6 +63,20 @@ Implement `VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider` against 
 |Native S3 performance, lifecycle policies, S3-class economics.| A custom module to build and maintain.<br> Not part of the Virto-supported module catalog.|
 
 
+## Module installation
+
+The `platform` image ships without commerce modules; they are installed into the module discovery path (`/app/modules`) on first boot.
+
+The Platform auto-installs the module bundles listed in the `ExternalModules:AutoInstallModuleBundles` setting, which the stock **appsettings.json** defaults to `["commerce"]`. On first startup the Platform downloads those modules into the discovery path, installs them, and then becomes ready. Two implications for self-hosting:
+
+* The modules volume must be **writable** on first boot, and the container needs outbound internet access to pull the module packages from the Virto Commerce feed.
+* The install runs once and persists to the volume, so the volume must survive restarts (which EFS does).
+
+!!! warning
+    Do not let multiple instances perform the first install concurrently against the same modules volume; they can race and corrupt the modules directory. For the initial deploy, run a single instance, or pre-seed the volume, then scale out after the install finishes.
+
+To use immutable, pre-baked modules instead, build your own image `FROM virtocommerce/platform:latest` with modules copied into the discovery path, set `ExternalModules:AutoInstallModuleBundles` to an empty array, and mount the modules volume read-only.
+
 ## Elastic Beanstalk
 
 Use this topology for single-environment deployments, prototypes, and internal pilots. It is the simplest path from a Docker image to a running URL.
@@ -81,7 +95,7 @@ A minimal **Dockerrun.aws.json** (Beanstalk single-container format) looks like:
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "ghcr.io/virtocommerce/vc-platform/platform:latest",
+    "Name": "virtocommerce/platform:latest",
     "Update": "true"
   },
   "Ports": [{ "ContainerPort": 80 }],
@@ -123,7 +137,7 @@ A minimal task-definition fragment:
   "containerDefinitions": [
     {
       "name": "vc-platform",
-      "image": "ghcr.io/virtocommerce/vc-platform/platform:latest",
+      "image": "virtocommerce/platform:latest",
       "portMappings": [{ "containerPort": 80 }],
       "mountPoints": [
         { "sourceVolume": "vc-modules", "containerPath": "/app/modules" },
@@ -179,7 +193,7 @@ spec:
     spec:
       containers:
         - name: vc-platform
-          image: ghcr.io/virtocommerce/vc-platform/platform:latest
+          image: virtocommerce/platform:latest
           ports:
             - containerPort: 80
           envFrom:
@@ -226,6 +240,7 @@ The minimum set of environment variables for an AWS deployment:
 | `Content__FileSystem__RootPath` | Mount path of the EFS CMS volume. | Environment variable |
 | `Content__FileSystem__PublicUrl` | Public URL prefix for CMS content. | Environment variable |
 | `VirtoCommerce__DiscoveryPath` | Module discovery path; typically `/app/modules`. | Environment variable |
+| `ExternalModules__AutoInstallModuleBundles__0` | First module bundle to auto-install on first boot. Defaults to `commerce`. | Environment variable |
 
 ![Readmore](media/readmore.png){: width="25"} [appsettings.json reference](../../Configuration-Reference/appsettingsjson.md)
 

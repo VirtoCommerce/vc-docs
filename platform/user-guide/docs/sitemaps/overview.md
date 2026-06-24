@@ -18,10 +18,10 @@ The diagram below illustrates the Sitemaps module functionality:
 
 With the Sitemaps module, you can:
 
-* [Generate sitemap files on-the-fly by an API call, or manually](configuring-sitemaps.md#add-new-sitemap-to-store)
-* [Create sitemaps based on catalog items, vendor items, custom or static content items](configuring-sitemaps.md#add-sitemap-items)
-* [Schedule and configure a recurring job to generate sitemap files](settings.md)
-* [Download sitemap ZIP packages with XML files](configuring-sitemaps.md#download-sitemaps)
+* [Generate sitemap files on-the-fly by an API call, or manually.](configuring-sitemaps.md#add-new-sitemap-to-store)
+* [Create sitemaps based on catalog items, vendor items, custom or static content items.](configuring-sitemaps.md#add-sitemap-items)
+* [Schedule and configure a recurring job to generate sitemap files.](settings.md)
+* [Download sitemap ZIP packages with XML files.](configuring-sitemaps.md#download-sitemaps)
 
 
 <br>

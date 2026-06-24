@@ -75,6 +75,26 @@ The following example shows how to configure scaling for push notifications usin
 ...
 ```
 
+## Session affinity (sticky sessions)
+
+**Session affinity**, also called **sticky sessions**, keeps a client's requests routed to the same Platform instance. On Azure App Service this is the **ARR Affinity** setting (Application Request Routing), toggled per app under **Configuration** --> **General settings** --> **ARR affinity**.
+
+As noted above, SignalR push notifications on a server farm require sticky sessions, so the browser keeps talking to the instance that holds its connection. The rule of thumb:
+
+* Enable **ARR Affinity** on apps that serve the Platform Manager UI or hold SignalR connections, so notifications reach the right client.
+* Disable it on stateless commerce-service (backend-for-frontend) instances, so the load balancer distributes requests evenly across them.
+
+The reference configurations below follow this rule:
+
+| App | ARR Affinity |
+| --- | --- |
+| [Authoring](#authoring-app) (Platform Manager UI) | On |
+| [Commerce service](#commerce-service-app) (backend for frontend) | Off |
+| [Frontend](#frontend-app) | On |
+
+!!! warning
+    If ARR Affinity is off on an app where users work with the Platform Manager UI, push notifications may not reach the browser, because the SignalR connection is not pinned to the instance that produced them.
+
 ## Configure hangfire server to process background jobs in another process
 
 To ensure overall application reliability, it is important to process all background tasks on a separate Platform instance (process). This separation prevents background processing from consuming excessive CPU or other resources, which could otherwise degrade the main application's performance. We strongly recommend using a dedicated Platform instance for processing background jobs.

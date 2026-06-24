@@ -69,11 +69,14 @@ For a fast end-to-end trial that combines installation and deployment in one com
       <td><a href="../Installation-Guide/start-local">Docker (start-local)</a></td>
     </tr>
     <tr>
-      <td>Kubernetes</td>
+      <td><a href="#self-hosting-on-kubernetes">Kubernetes</a></td>
     </tr>
   </tbody>
 </table>
 
+## Self-hosting on Kubernetes
+
+Virto Commerce does not publish a Helm chart for self-managed Kubernetes. To run the Platform on your own cluster, adapt the example Kubernetes `Deployment` manifests in the [AWS (EKS)](../Tutorials-and-How-tos/How-tos/deploy-platform-on-aws.md#eks) and [Google Cloud (GKE)](../Tutorials-and-How-tos/How-tos/deploy-platform-on-gcp.md#gke) guides. Virto Cloud runs on Kubernetes internally, but its Helm chart is tied to Virto Cloud's infrastructure and is not distributed for self-hosting.
 
 <br>
 <br>

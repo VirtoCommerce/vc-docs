@@ -342,7 +342,22 @@ Now, the **Country of origin** facet shows only **USA**, which includes all the 
 
 Numerous properties can be organized into groups for enhanced readability.
 
-![Grouped properties](media/property-groups.png){: style="display: block; margin: 0 auto;" }
+<div class="grid cards" markdown>
+
+-   __Ungrouped properties__
+
+    ---
+    
+    ![Ungrouped](media/property-groups-ungrouped.png){: style="display: block; margin: 0 auto;" }
+
+-   __Grouped properties__
+
+    ---
+
+    ![Grouped](media/property-groups-grouped.png){: style="display: block; margin: 0 auto;" }
+
+</div>
+
 
 Organizing properties into groups includes the following steps:
 
