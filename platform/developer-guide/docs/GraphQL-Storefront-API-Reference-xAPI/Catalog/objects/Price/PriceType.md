@@ -22,3 +22,12 @@ This type object represents the pricing information for a product or variation.
 | `discounts` [ ==CatalogDiscountType== ](CatalogDiscountType.md)   	| The catalog-level discounts applied to the item.                                             	|
 | `pricelistId`  ==String==               	| The Id of the price list to which the item's price belongs.                                                           	|
 | `minQuantity`  ==Int==                  	| The minimum quantity required to be eligible for the price or discount.                                               	|
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../ImageType">← ImageType</a>
+    <a href="../TierPriceType">TierPriceType →</a>
+</div>

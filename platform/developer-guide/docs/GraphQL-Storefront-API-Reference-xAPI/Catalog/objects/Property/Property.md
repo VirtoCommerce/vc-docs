@@ -17,3 +17,12 @@ This type represents a type or category of properties. Properties are used to pr
 | `value`  ==PropertyValue==                                        	| The default value or values associated with the property type.                    	|
 | `valueId`  ==String==                                             	| The Id of the default value for the property type.                 	                |
 | `propertyDictItems(...)` [ ==PropertyDictionaryItemsConnection== ](PropertyDictItemConnection.md)  	| A connection to retrieve the dictionary items associated with the property type.  	|
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Price/CatalogDiscountType">← CatalogDiscountType</a>
+    <a href="../PropertyConnection">PropertyConnection →</a>
+</div>

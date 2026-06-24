@@ -15,3 +15,11 @@ This type defines the structure of a menu link item.
 | `outerId` ==String==              | An external identifier for the menu item, used for integrations.             |
 | `childItems` ==[MenuLinkType!]!== | A list of submenu items, each represented by a **MenuLinkType** object.      |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../FaviconType">← FaviconType</a>
+    <a href="../../mutations/ChangeOrganizationLogo">ChangeOrganizationLogo mutation →</a>
+</div>

@@ -85,3 +85,12 @@ query{
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Store module overview</a>
+    <a href="../../objects/StoreResponseType">StoreResponseType →</a>
+</div>

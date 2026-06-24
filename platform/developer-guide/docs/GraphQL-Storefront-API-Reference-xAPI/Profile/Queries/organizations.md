@@ -69,3 +69,12 @@ query {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../organization">← Organization query</a>
+    <a href="../contact">Contact query →</a>
+</div>

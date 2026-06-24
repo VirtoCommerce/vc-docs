@@ -121,3 +121,11 @@ The `InputAddOrUpdateCartPaymentType` represents the input object type used for 
 
 </div>
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../add-or-update-cart-shipment">← AddOrUpdateCartShipment mutation</a>
+    <a href="../merge-cart">MergeCart mutation →</a>
+</div>

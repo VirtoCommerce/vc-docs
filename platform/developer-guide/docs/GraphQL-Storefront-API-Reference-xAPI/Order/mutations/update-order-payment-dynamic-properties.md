@@ -53,3 +53,12 @@ mutation updateOrderPaymentDynamicProperties ($command: InputUpdateOrderPaymentD
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-order-shipment-dynamic-properties">← UpdateOrderShipmentDynamicProperties mutation</a>
+    <a href="../initialize-payment">InitializePayment mutation →</a>
+</div>

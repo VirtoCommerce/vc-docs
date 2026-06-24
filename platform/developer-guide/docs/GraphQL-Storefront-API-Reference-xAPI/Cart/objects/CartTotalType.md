@@ -15,3 +15,12 @@ This type represents one total bucket for a single currency present in the cart.
 This type has no `currencyCode` scalar. Read the currency from any `MoneyType.currency.code`, or branch on `isDefaultTotalCurrency`.
 
 ![Readmore](../media/readmore.png){: width="25"} [Mixed-currency carts](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview#mixed-currency-carts)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../cart-type">← CartType</a>
+    <a href="../cart-connection">CartConnection →</a>
+</div>

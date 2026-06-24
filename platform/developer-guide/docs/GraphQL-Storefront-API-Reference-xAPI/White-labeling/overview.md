@@ -9,3 +9,12 @@ The **White Labeling** module enables organizations to enhance the enterprise us
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-white-labeling/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-white-labeling/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Shipping/overview">← Shipping module overview</a>
+    <a href="../queries/whiteLabelingSettings">WhiteLabelingSettings query →</a>
+</div>

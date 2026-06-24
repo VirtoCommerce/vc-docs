@@ -12,3 +12,12 @@ One of its prominent functionalities is the ability to evaluate dynamic content 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-marketing-experience-api/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-marketing-experience-api/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Loyalty/overview">← Loyalty module overview</a>
+    <a href="../queries/promotionCoupons">PromotionCoupons query →</a>
+</div>

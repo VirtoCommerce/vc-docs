@@ -11,3 +11,11 @@ The **Back-in-Stock** module lets customers subscribe to real-time notifications
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-back-in-stock/releases/latest)
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../PurchaseRequest/overview">← AI Document Processing module overview</a>
+    <a href="../Queries/backInStockSubscriptions">BackInStockSubscriptions query →</a>
+</div>

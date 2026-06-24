@@ -47,3 +47,12 @@ mutation updateRole ($command: InputUpdateRoleType!) {
 }
 ```
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../removeMemberFromOrganization">← RemoveMemberFromOrganization mutation</a>
+    <a href="../updateMemberAddresses">UpdateMemberAddresses mutation →</a>
+</div>

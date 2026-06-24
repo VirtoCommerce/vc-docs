@@ -16,3 +16,11 @@ This type represents an asset. It can be an image, video, document, or any other
 | `group`  ==String==        	| The grouping to which the asset belongs.                                                                 	|
 | `cultureName`  ==String==  	| A language to retrieve data in.                                                                         	|
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../Property/PropertyDictItem">← PropertyDictItem</a>
+    <a href="../PageInfo">PageInfo →</a>
+</div>

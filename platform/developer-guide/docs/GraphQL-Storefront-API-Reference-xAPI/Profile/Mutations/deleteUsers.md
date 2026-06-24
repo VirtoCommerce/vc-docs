@@ -41,3 +41,12 @@ mutation($command: InputDeleteUserType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../inviteUser">← InviteUser mutation</a>
+    <a href="../createOrganization">CreateOrganization mutation →</a>
+</div>

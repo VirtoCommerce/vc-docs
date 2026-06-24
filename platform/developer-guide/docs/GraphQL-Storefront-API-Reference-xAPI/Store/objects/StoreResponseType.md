@@ -16,4 +16,13 @@ This type represents the response data for a store, including its basic informat
 | `availableCurrencies` [==[CurrencyType!]!==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type)    | An array of available currencies for the store.             |
 | `settings` [==StoreSettingsType!==](StoreSettingsType.md)                             | The settings configuration for the store.                   |
 | `graphQLSettings` [==GraphQLSettingsType!==](GraphQLSettingsType.md)                  | The GraphQL settings configuration for the store.           |
-| `dynamicProperties` [==DynamicPropertyValueType==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)| A collection of dynamic property values assigned to the store. |            
+| `dynamicProperties` [==DynamicPropertyValueType==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)| A collection of dynamic property values assigned to the store. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/store">← Store query</a>
+    <a href="../LanguageType">LanguageType →</a>
+</div>

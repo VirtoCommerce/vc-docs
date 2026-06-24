@@ -41,3 +41,12 @@ To add a points-priced product, pass [`itemCurrencyCode`](../Cart/mutations/add-
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-loyalty)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-loyalty/releases)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../xFrontend/overview">← xFrontend module overview</a>
+    <a href="../queries/loyaltyBalance">LoyaltyBalance query →</a>
+</div>

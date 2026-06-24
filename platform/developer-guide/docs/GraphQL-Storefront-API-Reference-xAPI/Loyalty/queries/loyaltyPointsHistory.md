@@ -94,3 +94,12 @@ This query allows you to retrieve the history of loyalty point transactions for 
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../loyaltyBalance">← LoyaltyBalance query</a>
+    <a href="../../objects/LoyaltyBalanceResult">LoyaltyBalanceResult →</a>
+</div>

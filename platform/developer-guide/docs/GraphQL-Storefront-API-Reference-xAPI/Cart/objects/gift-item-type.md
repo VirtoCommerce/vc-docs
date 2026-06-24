@@ -17,3 +17,11 @@ This type represents a gift item associated with a shopping cart or order.
 | `id`  ==String!==                 | The unique identifier of the gift item.                                       |
 | `product`  ==Product==            | The detailed information about the product associated with the gift item.     |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../discount-type">← DiscountType</a>
+    <a href="../coupon-type">CouponType →</a>
+</div>

@@ -40,3 +40,12 @@ mutation addPurchaseRequestSource($command: InputAddPurchaseRequestSource!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Objects/PurchaseRequestEdge">← PurchaseRequestEdge</a>
+    <a href="../createPurchaseRequest">CreatePurchaseRequest mutation →</a>
+</div>

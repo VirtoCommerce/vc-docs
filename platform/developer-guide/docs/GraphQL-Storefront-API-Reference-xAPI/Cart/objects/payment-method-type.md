@@ -26,3 +26,11 @@ This type represents a specific payment method available for use in a shopping c
 | `taxDetails` [ ==[TaxDetailType]== ](tax-detail-type.md)    | An array of tax details associated with the payment method, represented as `[TaxDetailType]`.                            |
 | `description`  ==String==                                   | The description or additional information about the payment method.                                                      |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../payment-type">← PaymentType</a>
+    <a href="../discount-type">DiscountType →</a>
+</div>

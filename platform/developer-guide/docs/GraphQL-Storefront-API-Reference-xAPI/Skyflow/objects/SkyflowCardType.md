@@ -15,3 +15,12 @@ This type represents the details of a stored Skyflow card.
 | `skyflowId` ==String!==     | The unique identifier of the card in Skyflow.               |
 | `userId` ==String!==        | The Id of the user associated with the card.                |
 | `active` ==Boolean!==       | Indicates whether the card is active and available for use. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/skyflowCards">← SkyflowCards query</a>
+    <a href="../SkyflowCardResponseType">SkyflowCardResponseType →</a>
+</div>

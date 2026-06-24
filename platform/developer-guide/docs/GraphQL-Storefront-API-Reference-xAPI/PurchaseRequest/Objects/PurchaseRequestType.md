@@ -15,4 +15,13 @@ This type represents a purchase request, including its details and associated so
 | `storeId` ==String!==             | The Id of the store where the purchase request was created.                |  
 | `customerId` ==String!==          | The Id of the customer associated with the purchase request.             |  
 | `quoteId` ==String==              | The Id of the quote associated with the purchase request, if available.    |  
-| `sources` [==[PurchaseRequestSourceType!]!==](PurchaseRequestSourceType.md) | A list of sources associated with the purchase request. |  
+| `sources` [==[PurchaseRequestSourceType!]!==](PurchaseRequestSourceType.md) | A list of sources associated with the purchase request. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Queries/purchaseRequests">← PurchaseRequests query</a>
+    <a href="../PurchaseRequestSourceType">PurchaseRequestSourceType →</a>
+</div>

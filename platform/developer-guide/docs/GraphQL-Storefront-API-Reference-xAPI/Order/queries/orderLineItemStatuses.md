@@ -61,3 +61,12 @@ This query allows you to retrieve information about the available order line ite
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../paymentStatuses">← PaymentStatuses query</a>
+    <a href="../../objects/customer-order-type">CustomerOrderType →</a>
+</div>

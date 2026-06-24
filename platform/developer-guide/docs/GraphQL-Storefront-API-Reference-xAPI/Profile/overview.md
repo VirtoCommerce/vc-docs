@@ -11,3 +11,12 @@ The **xProfile** module provides high performance search queries for user, organ
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-profile-experience-api/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-profile-experience-api/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../xPickup/overview">← xPickup module overview</a>
+    <a href="../Queries/organization">Organization query →</a>
+</div>

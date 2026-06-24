@@ -75,3 +75,12 @@ The `Cart.Addresses` field in `CartType` is a functional enabler. Currently, it 
 You can find the address type structure [here](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/VirtoCommerce.ExperienceApiModule.Core/Schemas/AddressType.cs).
 
 ![Readmore](../media/readmore.png){: width="25"} [Mixed-currency carts](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview#mixed-currency-carts)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/getSavedForLater">← GetSavedForLater query</a>
+    <a href="../CartTotalType">CartTotalType →</a>
+</div>

@@ -6,4 +6,13 @@ This type represents the response for a query retrieving information about a slu
 
 | Field                | Description                                        |  
 |----------------------|----------------------------------------------------|  
-| `entityInfo` [==SeoInfo==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo) | Contains SEO information associated with the slug. |  
+| `entityInfo` [==SeoInfo==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/SeoInfo) | Contains SEO information associated with the slug. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../PageDocumentType">← PageDocumentType</a>
+    <a href="../../../xPickup/overview">xPickup module overview →</a>
+</div>

@@ -9,3 +9,12 @@ The **xPickup** module provides high-performance queries for retrieving and mana
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-pickup)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-pickup/releases)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Pages/overview">← Pages module overview</a>
+    <a href="../queries/pickupLocations">PickupLocations query →</a>
+</div>

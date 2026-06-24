@@ -12,3 +12,12 @@ This type is an object that contains information about a shipment method associa
 | `typeName`  ==String==                                                | The type of the shipment method.                  |
 | `currency` [ ==CurrencyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type) | The currency used for pricing the shipment method. |
 | `price` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)           | The price associated with the shipment method.     |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../QuoteAttachmentType">← QuoteAttachmentType</a>
+    <a href="../QuoteTaxDetailType">QuoteTaxDetailType →</a>
+</div>

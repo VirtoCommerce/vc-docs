@@ -120,3 +120,12 @@ To make a catalog property appear in the `keyProperties` list:
   1. Add the **KeyProperty** attribute to **Current attributes**.`KeyProperties` are automatically sorted in ascending order based on the attribute value.
 
     ![KeyProperties](../objects/media/KeyPropertiesAttr.png)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/productSuggestions">← ProductSuggestions query</a>
+    <a href="../ProductConnection/ProductConnection">ProductConnection →</a>
+</div>

@@ -84,4 +84,13 @@ This query retrieves customer reviews associated with a specific entity, such as
 }  
 ```
 
-</div>  
+</div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Customer Review module overview</a>
+    <a href="../canLeaveFeedback">CanLeaveFeedback query →</a>
+</div>

@@ -43,3 +43,12 @@ mutation SubmitQuoteRequest($command: SubmitQuoteCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../change-quote-comment">← ChangeQuoteComment mutation</a>
+    <a href="../update-quote-address">UpdateQuoteAddresses mutation →</a>
+</div>

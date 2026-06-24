@@ -9,3 +9,12 @@ This type represents the input for changing a user's password.
 | `userId`  ==String!==           | The ID of the user whose password is being changed.        |
 | `oldPassword`  ==String!==      | The current password of the user.                          |
 | `newPassword`  ==String!==      | The new password to set for the user.                      |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../InputResetPasswordByTokenType">← InputResetPasswordByTokenType</a>
+    <a href="../rating">Rating →</a>
+</div>

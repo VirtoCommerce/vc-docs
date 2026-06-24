@@ -10,3 +10,12 @@ This type represents a connection from an object to a list of objects of type `P
 | `pageInfo`  [==PageInfo!==](../../Catalog/objects/PageInfo.md)                                 | Information to aid in pagination.                                                    |
 | `edges` [[ ==PromotionCouponEdge== ]](../objects/PromotionCouponEdge.md)                       | A list of all edges returned in the connection.                                      |
 | `items` [[ ==PromotionCouponType== ]](../objects/PromotionCouponType.md)                       | A list of all objects returned in the connection. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../PromotionCouponType">← PromotionCouponType</a>
+    <a href="../PromotionCouponEdge">PromotionCouponEdge →</a>
+</div>

@@ -11,3 +11,11 @@ This type provides information about the connection to a list of organizations.
 | `edges` [ ==OrganizationEdge== ](OrganizationEdge.md)                      	| The edges in the connection, representing individual organizations.                           |
 | `items` [ ==Organization== ](OrganizationType.md)        	                    | The list of organizations in the connection.                                              	|
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../OrganizationType">← Organization</a>
+    <a href="../OrganizationEdge">OrganizationEdge →</a>
+</div>

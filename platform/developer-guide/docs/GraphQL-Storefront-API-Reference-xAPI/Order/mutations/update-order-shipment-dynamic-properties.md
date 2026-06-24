@@ -57,3 +57,12 @@ updateOrderShipmentDynamicProperties (command: $command)
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-order-item-dynamic-properties">← UpdateOrderItemDynamicProperties mutation</a>
+    <a href="../update-order-payment-dynamic-properties">UpdateOrderPaymentDynamicProperties mutation →</a>
+</div>

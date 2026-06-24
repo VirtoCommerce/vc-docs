@@ -12,3 +12,12 @@ The **Skyflow** module provides secure management of payment card data and relat
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-skyflow/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-skyflow/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Recommend/overview">← xRecommend module overview</a>
+    <a href="../queries/skyflowCards">SkyflowCards query →</a>
+</div>

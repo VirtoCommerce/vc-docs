@@ -42,3 +42,12 @@ mutation($command: InputCreateUserType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../sendVerifyEmail">← SendVerifyEmail mutation</a>
+    <a href="../updateUser">UpdateUser mutation →</a>
+</div>

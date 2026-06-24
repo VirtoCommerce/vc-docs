@@ -19,5 +19,5 @@ By [overriding](https://github.com/VirtoCommerce/vc-module-experience-api/blob/d
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../best-practices">← Best practices </a>
-    <a href="../graphiql">GraphiQL  →</a>
+    <a href="../tools-overview">Tools to explore GraphQL →</a>
 </div>

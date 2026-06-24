@@ -19,3 +19,11 @@ This type represents the SEO information associated with an asset or webpage.
 | `isActive`  ==Boolean==            	| Indicates whether the SEO information is currently enabled.                                              	|
 | `languageCode`  ==String==         	| The language code associated with the SEO information, indicating the intended audience or localization. 	|
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../InventoryInfo">← InventoryInfo</a>
+    <a href="../OutlineType">OutlineType →</a>
+</div>

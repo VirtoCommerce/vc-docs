@@ -8,3 +8,12 @@ This type represents the input for updating a line item in a wishlist.
 | ------------------------------------------ | --------------------------------------------------------------- |
 | `lineItemId`  ==String!==                  | The Id of the line item to be updated.                          |
 | `quantity`  ==Int!==                       | The new quantity for the line item in the wishlist.             |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../InputNewWishlistItemType">← InputNewWishlistItemType</a>
+    <a href="../InputUpdateWishlistItemsType">InputUpdateWishlistItemsType →</a>
+</div>

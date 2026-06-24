@@ -127,3 +127,12 @@ This query allows you to retrieve pickup locations where the items in a specific
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../pickupLocations">← PickupLocations query</a>
+    <a href="../productPickupLocations">ProductPickupLocations query →</a>
+</div>

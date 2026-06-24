@@ -56,3 +56,12 @@ This query retrieves a list of page documents that match specified search criter
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../pageDocument">← PageDocument query</a>
+    <a href="../slugInfo">SlugInfo query →</a>
+</div>

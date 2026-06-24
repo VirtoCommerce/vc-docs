@@ -10,3 +10,12 @@ The **xCatalog** module provides high performance search queries for catalog dat
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce//vc-module-x-catalog/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce//vc-module-x-catalog/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Cart/overview">← xCart module overview</a>
+    <a href="../queries/product">Product query →</a>
+</div>

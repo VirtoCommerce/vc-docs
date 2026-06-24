@@ -46,3 +46,12 @@ You can optionally specify the fuzzy level using the `fuzzyLevel` parameter. If 
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../full-text-search">← Full Text Search</a>
+    <a href="../filter-syntax">Filter Syntax →</a>
+</div>

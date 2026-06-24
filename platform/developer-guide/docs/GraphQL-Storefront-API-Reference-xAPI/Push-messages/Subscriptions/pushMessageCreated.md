@@ -36,3 +36,12 @@ subscription pushMessageCreated {
   }
 }
 ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Mutations/deleteFcmToken">← DeleteFcmToken mutation</a>
+    <a href="../../../Quote/overview">Quote module overview →</a>
+</div>

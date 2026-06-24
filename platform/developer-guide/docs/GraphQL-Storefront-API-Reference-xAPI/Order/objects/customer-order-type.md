@@ -78,3 +78,12 @@ This type represents a customer order.
 | `coupons`  ==[String]==             | Coupon codes applied to the order.                                                                                                  |
 | `discounts` [ ==[OrderDiscountType]== ](order-discount-type.md) | Discount entities associated with the order.                                                            |
 | `availablePaymentMethods` [ ==[OrderPaymentMethodType]== ](order-payment-method-type.md) | An array of available payment methods for the order.                           |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/orderLineItemStatuses">← OrderLineItemStatuses query</a>
+    <a href="../customer-order-connection">CustomerOrderConnection →</a>
+</div>

@@ -58,3 +58,12 @@ mutation clearPayments($command: InputClearPaymentsType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../clear-shipments">← ClearShipments mutation</a>
+    <a href="../update-cart-dynamic-properties">UpdateCartDynamicProperties mutation →</a>
+</div>

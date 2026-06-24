@@ -63,3 +63,12 @@ mutation updateCartQuantity($command: InputUpdateCartQuantity!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../moveToSavedForLater">← MoveToSavedForLater mutation</a>
+    <a href="../../../Catalog/overview">xCatalog module overview →</a>
+</div>

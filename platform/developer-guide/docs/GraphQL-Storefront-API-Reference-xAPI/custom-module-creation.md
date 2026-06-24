@@ -1,191 +1,123 @@
 # Create Custom xAPI Module
 
-This guide describes how to create a **custom xAPI module** in Virto Commerce. xAPI modules extend the GraphQL-based Storefront API by introducing new types, queries, and mutations while following the platform’s modular architecture and conventions.
+An **xAPI module** extends the GraphQL Storefront API with new types, queries, and mutations. This page covers only the parts that are specific to xAPI. For everything generic to a Virto Commerce module, the project layout, dependency injection, the module manifest, building, and installing, start with the general guides:
 
-The guide focuses on a **basic but production-aligned setup** and assumes familiarity with:
+![Readmore](media/readmore.png){: width="25"} [Creating a custom module from a template](../Tutorials-and-How-tos/Tutorials/creating-custom-module.md)
 
-* .NET SDK
-* C# and ASP.NET Core
-* GraphQL concepts
-* Virto Commerce Platform fundamentals
+![Readmore](media/readmore.png){: width="25"} [Module templates for dotnet new](../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md)
 
-## Install module template
+![Readmore](media/readmore.png){: width="25"} [Creating a module from scratch](../Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch.md)
 
-Virto Commerce provides official .NET templates that scaffold modules with the recommended structure.
+## Scaffold xAPI module
 
-1. Open a command-line interface and navigate to your source directory.
-1. Install (or update) the module templates:
+Scaffold with the **vc-module-xapi** template, or **vc-module-dba-xapi** if the module also needs its own database. Install the templates and run `dotnet new` as described in [Module templates for dotnet new](../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md). The xAPI command is:
 
-    ```
-    dotnet new install VirtoCommerce.Module.Template
-    ```
-
-Now, you can use one of the following templates:
-
-{%
-   include-markdown "../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new.md"
-   start="<!--templates-start-->"
-   end="<!--templates-end-->"
-%}
-
-
-## Generate module structure
-
-Create a new xAPI module using the provided template.
-
-```
+```powershell
 dotnet new vc-module-xapi --ModuleName XYourModule --Author "Your Name" --CompanyName YourCompany
 ```
 
-This command generates a solution with the following structure:
+The template generates a module whose xAPI code lives in the **{Module}.Data** project. The relevant folders, empty and ready for you to fill in, are `Queries`, `Commands`, `Schemas`, `Aggregates`, and `Services`, alongside `XapiAssemblyMarker.cs`. The schema is wired up in the **{Module}.Web** project's **Module.cs**.
 
-```
-XYourModule/
-├── src/
-│   └── XYourModule.Web/
-│       ├── Module.cs
-│       ├── Schemas/
-│       ├── Queries/
-│       ├── Commands/
-│       ├── Types/
-│       └── Services/
-├── tests/
-└── module.manifest
-```
+## Register schema
 
-Open the solution in Visual Studio and ensure it builds successfully.
+The template already wires the module's schema in **Module.cs**, keyed off the module's `XapiAssemblyMarker`. You rarely change this, but it explains how your components are discovered.
 
-
-## Register GraphQL schema
-
-In Virto Commerce modules, GraphQL schemas and components are registered during the module lifecycle. Each module defines its lifecycle in **module.cs**:
-
-* **Initialize**: Register services, repositories, and dependencies.
-* **PostInitialize**: Register GraphQL schemas and extend xAPI components. This ensures your types, queries, and mutations participate in the platform’s modular schema composition.
-
-```csharp title="module.cs"
-public class Module : IModule
+```csharp title="Module.cs"
+public void Initialize(IServiceCollection serviceCollection)
 {
-    public void Initialize(IServiceCollection services)
-    {
-        // Register application services
-        services.AddTransient<IYourService, YourService>();
+    // ... register your services ...
 
-        // Register CQRS handlers using MediatR
-        services.AddMediatR(cfg =>
-            cfg.RegisterServicesFromAssembly(typeof(Module).Assembly));
-    }
-
-    public void PostInitialize(IApplicationBuilder appBuilder)
+    _ = new GraphQLBuilder(serviceCollection, builder =>
     {
-        // Register GraphQL schema builder for this module
-        _ = new GraphQLBuilder(appBuilder.ApplicationServices, builder =>
-        {
-            builder.AddSchema(appBuilder.ApplicationServices, typeof(YourModuleAssemblyMarker));
-        });
-    }
+        builder.AddSchema(serviceCollection, typeof(XapiAssemblyMarker));
+    });
+    serviceCollection.AddSingleton<ScopedSchemaFactory<XapiAssemblyMarker>>();
+}
+
+public void PostInitialize(IApplicationBuilder appBuilder)
+{
+    appBuilder.UseScopedSchema<XapiAssemblyMarker>("XYourModule");
 }
 ```
 
-## Define and register GraphQL types
+Every query, mutation, and GraphQL type in the module is discovered through `XapiAssemblyMarker`, so you do not register them one by one. `GraphQLBuilder` comes from `GraphQL.MicrosoftDI`; `ScopedSchemaFactory` and `UseScopedSchema` come from `VirtoCommerce.Xapi.Core`.
 
-GraphQL types map your domain models to the GraphQL schema. Follow these steps:
+## Add query
 
-1. Create a GraphQL type class for your domain model:
+A query is made of four pieces, all placed in the **{Module}.Data** project.
 
-    ```csharp
-    public class YourCustomType : ExtendableGraphType<YourModel>
+1. The **request** derives from `Query<TResponse>` and declares its GraphQL arguments:
+
+    ```csharp title="Queries/GetYourModelQuery.cs"
+    public class GetYourModelQuery : Query<YourModelResponse>
     {
-        public YourCustomType(IMediator mediator)
-        {
-            Name = "YourCustomType";
-            Description = "Represents a custom domain object.";
+        public string Id { get; private set; }
 
-            Field(x => x.Id).Description("Unique identifier.");
-            Field(x => x.Name, nullable: true).Description("Display name.");
-            Field(x => x.CreatedDate, nullable: true)
-                .Description("Creation date.");
+        public override IEnumerable<QueryArgument> GetArguments()
+        {
+            yield return new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id" };
+        }
+
+        public override void Map(IResolveFieldContext context)
+        {
+            Id = context.GetArgument<string>("id");
         }
     }
     ```
 
-1. Register the GraphQL type in the DI container, typically in `Module.Initialize`:
+1. The **handler** implements `IQueryHandler<TQuery, TResponse>`:
 
-    ```csharp
-    services.AddSchemaType<YourCustomType>();
+    ```csharp title="Queries/GetYourModelQueryHandler.cs"
+    public class GetYourModelQueryHandler : IQueryHandler<GetYourModelQuery, YourModelResponse>
+    {
+        private readonly IYourService _service;
+
+        public GetYourModelQueryHandler(IYourService service) => _service = service;
+
+        public async Task<YourModelResponse> Handle(GetYourModelQuery request, CancellationToken cancellationToken)
+        {
+            var model = await _service.GetByIdAsync(request.Id);
+            return new YourModelResponse { Model = model };
+        }
+    }
     ```
 
-1. Verify your type is included in your module’s schema by running the GraphQL playground and checking that `YourCustomType` is available for queries or mutations.
+1. The **GraphQL type** derives from `ExtendableGraphType<TResponse>`:
 
-
-## Implement queries and mutations
-
-Virto Commerce xAPI modules follow the **CQRS pattern** using MediatR. Follow these steps to implement your own queries and mutations:
-
-
-1. Create a query:
-    1. In your module project, create a new file in the `Queries/` folder, e.g., `GetYourModelQuery.cs`.
-    1. Define the query class that represents the request:
-
-        ```csharp
-        public class GetYourModelQuery : IRequest<YourModel>
+    ```csharp title="Schemas/YourModelType.cs"
+    public class YourModelType : ExtendableGraphType<YourModelResponse>
+    {
+        public YourModelType()
         {
-            public string Id { get; set; }
+            Field<NonNullGraphType<StringGraphType>>("id").Resolve(context => context.Source.Model.Id);
+            Field<StringGraphType>("name").Resolve(context => context.Source.Model.Name);
         }
-        ```
+    }
+    ```
 
-1. Create a query handler:
-    1. In the same `Queries/` folder, create a handler class, e.g., `GetYourModelQueryHandler.cs`.
-    1. Implement `IRequestHandler<TRequest, TResponse>` to handle the query:
+1. The **builder** derives from `QueryBuilder<TQuery, TResponse, TResponseType>` and names the GraphQL field. The base builder dispatches the request through MediatR and runs authorization:
 
-        ```csharp
-        public class GetYourModelQueryHandler
-            : IRequestHandler<GetYourModelQuery, YourModel>
+    ```csharp title="Queries/GetYourModelQueryBuilder.cs"
+    public class GetYourModelQueryBuilder : QueryBuilder<GetYourModelQuery, YourModelResponse, YourModelType>
+    {
+        public GetYourModelQueryBuilder(IMediator mediator, IAuthorizationService authorizationService)
+            : base(mediator, authorizationService)
         {
-            private readonly IYourService _service;
-
-            public GetYourModelQueryHandler(IYourService service)
-            {
-                _service = service;
-            }
-
-            public async Task<YourModel> Handle(
-                GetYourModelQuery request,
-                CancellationToken cancellationToken)
-            {
-                return await _service.GetByIdAsync(request.Id);
-            }
         }
-        ```
 
-1. Create a mutation (command):
-    1. In the `Commands/` folder, create a file `UpdateYourModelCommand.cs`.
-    1. Define the command class:
+        protected override string Name => "yourModel";
+    }
+    ```
 
-        ```csharp
-        public class UpdateYourModelCommand : IRequest<YourModel>
-        {
-            public string Id { get; set; }
-            public string Name { get; set; }
-        }
-        ```
+## Add mutation
 
-1. Define the GraphQL input type:
-    1. In the `Types/` folder, create a new file `UpdateYourModelInputType.cs`.
-    1. Map the command properties to a GraphQL input type:
+A mutation follows the same shape, using the command base types:
 
-        ```csharp
-        public class UpdateYourModelInputType
-            : InputObjectGraphType<UpdateYourModelCommand>
-        {
-            public UpdateYourModelInputType()
-            {
-                Name = "UpdateYourModelInput";
-                Field(x => x.Id);
-                Field(x => x.Name, nullable: true);
-            }
-        }
-        ```
+* The **command** implements `ICommand<TResult>` and carries the input fields.
+* The **input type** derives from `InputObjectGraphType<TCommand>`.
+* The **handler** implements `IRequestHandler<TCommand, TResult>` (MediatR).
+* The **builder** derives from `CommandBuilder<TCommand, TResult, TInputType, TResultGraphType>` and overrides `Name` with the mutation field name.
+
 
 
 <br>

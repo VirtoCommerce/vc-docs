@@ -13,3 +13,12 @@ This type represents the association between products in queries.
 | `associatedObjectType`  ==String==                        	| The type of the associated object.                             	|
 | `tags`  ==String==                                          	| Tags or labels associated with the product association.        	|
 | `product` [ ==Product== ](../ProductType.md)               	| The product object associated with the association.            	|
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ProductAssociationEdge">← ProductAssociationEdge</a>
+    <a href="../../category/CategoryType">CategoryType →</a>
+</div>

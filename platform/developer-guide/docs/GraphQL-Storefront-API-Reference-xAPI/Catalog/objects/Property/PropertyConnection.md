@@ -10,3 +10,12 @@ This type and its associated fields are used to retrieve and manage properties w
 | `pageInfo` [ ==PageInfo!== ](../PageInfo.md)   	| The information about the current page.                          	|
 | `edges` [ ==PropertyEdge== ](PropertyEdge.md) 	| A connection between a property and the `PropertyConnection`.    	|
 | `items` [ ==Property== ](Property.md)          	| All the properties included in the current query result.      	|
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../Property">← PropertyType</a>
+    <a href="../PropertyEdge">PropertyEdge →</a>
+</div>

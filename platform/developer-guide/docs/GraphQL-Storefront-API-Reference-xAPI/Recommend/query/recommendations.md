@@ -66,3 +66,12 @@ This query allows you to retrieve product recommendations based on various crite
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← xRecommend module overview</a>
+    <a href="../recentlyBrowsed">RecentlyBrowsed query →</a>
+</div>

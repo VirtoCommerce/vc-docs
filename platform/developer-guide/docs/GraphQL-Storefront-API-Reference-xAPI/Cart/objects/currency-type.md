@@ -13,3 +13,11 @@ This type represents a currency and its associated properties.
 | `englishName` ==String!==       | The English name of the currency.                                                   |
 | `cultureName` ==String!==       | The culture-specific name of the currency.                                          |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../money-type">← MoneyType</a>
+    <a href="../tax-detail-type">TaxDetailType →</a>
+</div>

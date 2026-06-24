@@ -36,3 +36,12 @@ mutation declineQuoteRequest($command: DeclineQuoteCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../createQuote">← CreateQuote mutation</a>
+    <a href="../deleteQuoteAttachments">DeleteQuoteAttachments mutation →</a>
+</div>

@@ -18,3 +18,11 @@ This type represents the details and properties of a wishlist.
 | `description`  ==String==                                     | A description of the wishlist.                              |
 | `modifiedDate`  ==DateTime==                                  | The date the wishlist was modified.                         |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../error-parameter-type">← ErrorParameterType</a>
+    <a href="../wishlist-edge">WishListEdge →</a>
+</div>

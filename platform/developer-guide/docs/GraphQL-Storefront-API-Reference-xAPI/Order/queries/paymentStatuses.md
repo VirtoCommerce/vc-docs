@@ -62,3 +62,12 @@ This query allows you to retrieve information about the available payment status
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../shipmentStatuses">← ShipmentStatuses query</a>
+    <a href="../orderLineItemStatuses">OrderLineItemStatuses query →</a>
+</div>

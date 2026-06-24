@@ -10,3 +10,12 @@ This type represents a facet used for filtering search results based on numerica
 | `label` ==String!==               | The human-readable label or display name of the range facet.                                      |
 | `facetType` ==FacetTypes!==       | The type of facet, indicating its nature such as categorical, numerical, etc.                     |
 | `ranges` [==[FacetRangeType!]!==](facet-range-type.md)   | An array of ranges representing the numerical or range-based attributes for filtering.            |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../filter-facet">← FilterFacet</a>
+    <a href="../term-facet">TermFacet →</a>
+</div>

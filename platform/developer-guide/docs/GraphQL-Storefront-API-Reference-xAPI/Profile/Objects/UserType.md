@@ -37,3 +37,11 @@ This type represents a user with its corresponding information.
 | `lockedState`  ==Boolean==            | Indicates whether the user is in a locked state.                         	|
 | `operator` [ ==UserType== ](UserType.md)| The operator associated with the user.                                  |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ContactEdge">← ContactEdge</a>
+    <a href="../InputCreateUserType">InputCreateUserType →</a>
+</div>

@@ -11,3 +11,11 @@ This type represents a connection to a list of fulfillment centers.
 |`edges` [ ==FulfillmentCenterEdge== ](FulfillmentCenterEdge.md)|A connection between fulfillment centers and a cursor associated with it.|
 |`items` [ ==FulfillmentCenterType== ](FulfillmentCenterType.md)|Fulfillment centers returned in the connection.|
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../FulfillmentCenterAddressType">← FulfillmentCenterAddressType</a>
+    <a href="../FulfillmentCenterEdge">FulfillmentCenterEdge →</a>
+</div>

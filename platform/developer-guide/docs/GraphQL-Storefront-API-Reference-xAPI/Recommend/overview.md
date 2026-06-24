@@ -11,3 +11,12 @@ The xRecommend module adds the xAPI product recommendation query to the Virto Co
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-recommend/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-recommend/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Quote/overview">← Quote module overview</a>
+    <a href="../query/recommendations">Recommendations query →</a>
+</div>

@@ -54,3 +54,12 @@ This type represents a line item within a customer order.
 | `product` [ ==Product== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType)                                                   | The detailed information about the product associated with the order line item.                |
 | `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor)                                 | The information about the common vendor associated with the order line item.                   |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)    | Dynamic property value types. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../order-address-type">← OrderAddressType</a>
+    <a href="../payment-in-type">PaymentInType →</a>
+</div>

@@ -57,3 +57,12 @@ This query allows you to retrieve information about the available shipment statu
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../organization-orders">← OrganizationOrders query</a>
+    <a href="../paymentStatuses">PaymentStatuses query →</a>
+</div>

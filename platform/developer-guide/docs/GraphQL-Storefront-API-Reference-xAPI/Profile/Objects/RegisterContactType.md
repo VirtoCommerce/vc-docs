@@ -18,3 +18,11 @@ This type represents the details of a contact person during the registration pro
 | `address` [ ==MemberAddressType== ](MemberAddressType.md)                                                     | The address of the contact person.                    |
 | `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)  | The dynamic properties associated with the contact.   |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../RegisterOrganizationType">← RegisterOrganizationType</a>
+    <a href="../RegisterAccountType">RegisterAccountType →</a>
+</div>

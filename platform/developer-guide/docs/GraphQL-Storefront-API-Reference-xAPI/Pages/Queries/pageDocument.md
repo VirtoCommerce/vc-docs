@@ -43,3 +43,12 @@ This query retrieves information about a specific page document using its unique
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Pages module overview</a>
+    <a href="../pageDocuments">PageDocuments query →</a>
+</div>

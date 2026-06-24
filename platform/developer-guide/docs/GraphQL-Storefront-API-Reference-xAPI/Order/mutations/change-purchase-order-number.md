@@ -52,3 +52,12 @@ mutation changePurchaseOrderNumber ($command: InputChangePurchaseOrderNumber!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../objects/facet-range-type">← FacetRangeType</a>
+    <a href="../create-order-from-cart">CreateOrderFromCart mutation →</a>
+</div>

@@ -14,3 +14,12 @@ This type describes a fulfillment center. It provides information about various 
 |`outerId`  ==String==            |The external Id of the fulfillment center.|
 |`address` [ ==FulfillmentCenterAddressType== ](FulfillmentCenterAddressType.md)|The address of the fulfillment center. |
 |`nearest`  ==FulfillmentCenterType== |A list of the top 10 nearest fulfillment centers to the current one,<br>ordered by the distance between their geo-coordinates.<br>This property accepts an optional `take` argument (integer) to limit the selection. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../DescriptionType">← DescriptionType</a>
+    <a href="../FulfillmentCenterAddressType">FulfillmentCenterAddressType →</a>
+</div>

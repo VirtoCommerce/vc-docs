@@ -70,3 +70,12 @@ This query allows you to evaluate dynamic content.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../promotionCoupons">← PromotionCoupons query</a>
+    <a href="../../objects/PromotionCouponType">PromotionCouponType →</a>
+</div>

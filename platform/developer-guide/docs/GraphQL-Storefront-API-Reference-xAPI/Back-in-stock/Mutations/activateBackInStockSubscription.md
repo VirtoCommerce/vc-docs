@@ -44,3 +44,12 @@ mutation activateBackInStockSubscription($command: ActivateBackInStockSubscripti
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Objects/BackInStockSubscriptionConnection">← BackInStockSubscriptionConnection</a>
+    <a href="../deactivateBackInStockSubscription">DeactivateBackInStockSubscription mutation →</a>
+</div>

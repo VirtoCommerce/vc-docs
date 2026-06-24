@@ -46,3 +46,12 @@ The `InputCreatePurchaseRequestFromDocumentsType!` represents the input object f
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../createPurchaseRequest">← CreatePurchaseRequest mutation</a>
+    <a href="../extractPurchaseRequestSourcesData">ExtractPurchaseRequestSourcesData mutation →</a>
+</div>

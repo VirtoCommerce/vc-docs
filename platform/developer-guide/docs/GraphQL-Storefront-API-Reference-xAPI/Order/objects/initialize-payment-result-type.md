@@ -18,3 +18,11 @@ This type represents the result of initializing a payment.
 | `actionHtmlForm`  ==String==                                          | An HTML form that can be used to submit payment data to an external payment gateway.  |
 | `publicParameters` [ ==[KeyValueType]== ](../objects/key-value-type.md) | Additional public parameters that may be needed for the payment process.            |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../authorize-payment-result-type">← AuthorizePaymentResultType</a>
+    <a href="../order-shipment-type">OrderShipmentType →</a>
+</div>

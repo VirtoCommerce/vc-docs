@@ -98,3 +98,12 @@ The default sorting of search results is based on their relevancy to the provide
 For example, to sort the results by priority in descending order, followed by price_usd in ascending order, and finally by score, you can use the following sort parameter:
 
 `sort: "priority:desc;price_usd;score"`
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../filter-syntax">← Filter Syntax</a>
+    <a href="../facets">Facets →</a>
+</div>

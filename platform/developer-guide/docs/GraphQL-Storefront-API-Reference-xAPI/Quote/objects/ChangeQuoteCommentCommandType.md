@@ -6,3 +6,12 @@ This type is used to change the comment associated with a specific quote.
 | ------------------------- | ------------------------------------------- |
 | `quoteId`  ==String!==    | The Id of the quote related to the comment. |
 | `comment`  ==String!==    | The comment for the quote.                  |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../CancelQuoteCommandType">← CancelQuoteCommandType</a>
+    <a href="../ChangeQuoteItemQuantityCommandType">ChangeQuoteItemQuantityCommandType →</a>
+</div>

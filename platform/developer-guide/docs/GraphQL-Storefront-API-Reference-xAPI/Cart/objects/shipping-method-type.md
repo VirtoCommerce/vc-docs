@@ -20,3 +20,11 @@ This type represents a shipping method available for selection within a shopping
 | `discountAmount` [ ==MoneyType== ](money-type.md)           | The discount amount applied to the shipping method, represented as a `MoneyType` object.                                 |
 | `discountAmountWithTax` [ ==MoneyType== ](money-type.md)    | The discount amount applied to the shipping method including taxes, represented as a `MoneyType` object.                 |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../shipment-type">← ShipmentType</a>
+    <a href="../payment-type">PaymentType →</a>
+</div>

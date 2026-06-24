@@ -44,3 +44,12 @@ query {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../recentlyBrowsed">← RecentlyBrowsed query</a>
+    <a href="../../object/GetRecommendationsResponseType">GetRecommendationsResponseType →</a>
+</div>

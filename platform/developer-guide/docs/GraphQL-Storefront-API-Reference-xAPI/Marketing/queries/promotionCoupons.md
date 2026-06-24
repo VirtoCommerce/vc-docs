@@ -61,3 +61,12 @@ This query allows you to retrieve promotion coupons.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← xMarketing module overview</a>
+    <a href="../evaluate-dynamic-content">EvaluateDynamicContent query →</a>
+</div>

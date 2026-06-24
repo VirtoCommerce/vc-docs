@@ -19,3 +19,12 @@ The module offers the following key features:
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-quote/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-quote/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Push-messages/overview">← Push Messages module overview</a>
+    <a href="../queries/quote">Quote query →</a>
+</div>

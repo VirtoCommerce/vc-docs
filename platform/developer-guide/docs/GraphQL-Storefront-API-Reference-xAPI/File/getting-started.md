@@ -70,3 +70,12 @@ GET https://<YOUR-DOMAIN>/api/files/<safe-file-id>
 ## Delete files
 
 Use the [deleteFile](Mutations/deleteFile.md) mutation to remove file from storage.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← xFile module overview</a>
+    <a href="../Queries/fileUploadOptions">FileUploadOptions query →</a>
+</div>

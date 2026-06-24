@@ -81,3 +81,12 @@ This connection allows you to search for categories.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../category">← Category query</a>
+    <a href="../property">Property query →</a>
+</div>

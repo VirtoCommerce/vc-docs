@@ -49,3 +49,12 @@ This query provides product name suggestions based on partial user input. It is 
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../SlugInfo">← SlugInfo query</a>
+    <a href="../../objects/ProductType">ProductType →</a>
+</div>

@@ -44,3 +44,11 @@ This type represents the received incoming payment. Each `PaymentInType` instanc
 | `order` [ ==CustomerOrderType!== ](customer-order-type.md)                                                     | The customer order associated with the payment transaction.                                      |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | Dynamic property value types. |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../order-line-item-type">← OrderLineItemType</a>
+    <a href="../process-payment-request-result-type">ProcessPaymentRequestResultType →</a>
+</div>

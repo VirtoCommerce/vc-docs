@@ -17,3 +17,12 @@ This type represents a discount applied to a catalog or specific items within a 
 
 
 [Read more about managing promotions](https://docs.virtocommerce.org/new/user-guide/marketing/managing-promotions/){ .md-button }
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../TierPriceType">← TierPriceType</a>
+    <a href="../../Property/Property">PropertyType →</a>
+</div>

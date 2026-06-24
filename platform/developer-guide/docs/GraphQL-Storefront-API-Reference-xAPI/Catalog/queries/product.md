@@ -110,3 +110,12 @@ This query allows you to get a product by its Id and calculate all fields based 
     ```
 
     </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← xCatalog module overview</a>
+    <a href="../products">Products query →</a>
+</div>

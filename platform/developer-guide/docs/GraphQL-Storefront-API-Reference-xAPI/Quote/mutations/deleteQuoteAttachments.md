@@ -41,3 +41,12 @@ mutation deleteQuoteAttachments($command: DeleteQuoteAttachmentsCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../declineQuoteRequest">← DeclineQuoteRequest mutation</a>
+    <a href="../updateQuoteAttachments">UpdateQuoteAttachments mutation →</a>
+</div>

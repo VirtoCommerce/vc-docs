@@ -38,3 +38,12 @@ mutation extractPurchaseRequestSourcesData($command: InputExtractPurchaseRequest
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../createPurchaseRequestFromDocuments">← CreatePurchaseRequestFromDocuments mutation</a>
+    <a href="../postProcessPurchaseRequestSources">PostProcessPurchaseRequestSources mutation →</a>
+</div>

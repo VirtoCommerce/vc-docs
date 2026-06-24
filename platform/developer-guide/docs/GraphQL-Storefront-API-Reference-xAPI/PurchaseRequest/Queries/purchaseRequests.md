@@ -63,3 +63,12 @@ This query allows you to retrieve a list of purchase requests based on specific 
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../purchaseRequest">← PurchaseRequest query</a>
+    <a href="../../Objects/PurchaseRequestType">PurchaseRequestType →</a>
+</div>

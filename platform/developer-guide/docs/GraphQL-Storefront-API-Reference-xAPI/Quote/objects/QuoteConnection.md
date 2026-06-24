@@ -10,3 +10,12 @@ This type is an object used to manage and retrieve quotes.
 | `pageInfo` [ ==PageInfo!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo)| Pagination information.   |
 | `edges` [ ==[QuoteEdge]== ](QuoteEdge.md) | Connections to quotes.    |
 | `items` [ ==[QuoteType]== ](QuoteType.md) | Individual quotes .       |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../QuoteType">← QuoteType</a>
+    <a href="../QuoteTotalsType">QuoteTotalsType →</a>
+</div>

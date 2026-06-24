@@ -58,3 +58,12 @@ mutation createOrder($command: InputCreateOrderFromCartType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../change-purchase-order-number">← ChangePurchaseOrderNumber mutation</a>
+    <a href="../change-order-status">ChangeOrderStatus mutation →</a>
+</div>

@@ -35,3 +35,12 @@ mutation {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../addFcmToken">← AddFcmToken mutation</a>
+    <a href="../../Subscriptions/pushMessageCreated">pushMessageCreated →</a>
+</div>

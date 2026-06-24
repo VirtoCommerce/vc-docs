@@ -12,3 +12,12 @@ This type is utilized to store information about a specific currency.
 | `customFormatting` ==String== | An optional field that provides custom formatting for displaying the currency.   |
 | `englishName` ==String!==     | The English name of the currency.                                                |
 | `cultureName` ==String!==     | The culture name associated with the currency.                                   |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../customer-order-edge">← CustomerOrderEdge</a>
+    <a href="../key-value-type">KeyValueType →</a>
+</div>

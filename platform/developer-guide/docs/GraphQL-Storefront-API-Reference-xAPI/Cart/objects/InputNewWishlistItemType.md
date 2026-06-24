@@ -8,3 +8,12 @@ This type represents the input for creating a new wishlist item.
 | --------------------------| --------------------------------------------------------------- |
 | `productId`  ==String!==  | The Id of the product to be added to the wishlist.              |
 | `quantity`  ==Int==       | The quantity of the product to be added to the wishlist.        |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../wishlist-scope-type">← WishlistScopeType</a>
+    <a href="../InputUpdateWishlistLineItemType">InputUpdateWishlistLineItemType →</a>
+</div>

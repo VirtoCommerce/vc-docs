@@ -60,3 +60,12 @@ mutation selectAllCartConfigurationItems($command: InputChangeAllCartConfigurati
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../unSelectCartConfigurationItems">← UnSelectCartConfigurationItems mutation</a>
+    <a href="../unSelectAllCartConfigurationItems">UnSelectAllCartConfigurationItems mutation →</a>
+</div>

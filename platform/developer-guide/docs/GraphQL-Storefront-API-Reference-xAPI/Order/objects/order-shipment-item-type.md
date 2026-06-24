@@ -13,3 +13,11 @@ This type represents a specific item included in a shipment for an order.
 | `quantity`  ==Int!==                                          | The quantity of this specific item included in the shipment.|
 | `outerId`  ==String==                                         | The external Id for the shipment item.                      |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../order-shipping-method-type">← OrderShippingMethodType</a>
+    <a href="../order-shipment-package-type">OrderShipmentPackageType →</a>
+</div>

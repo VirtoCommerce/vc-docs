@@ -55,3 +55,12 @@ mutation registerByInvitation($command: InputRegisterByInvitationType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../requestRegistration">← RequestRegistration mutation</a>
+    <a href="../resetPasswordByToken">ResetPasswordByToken mutation →</a>
+</div>

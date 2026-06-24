@@ -77,3 +77,12 @@ This query retrieves all contextual information required to initialize and rende
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../overview">← xFrontend module overview</a>
+    <a href="../objects/PageContextResponseType">PageContextResponseType →</a>
+</div>

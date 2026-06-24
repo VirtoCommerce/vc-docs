@@ -10,3 +10,12 @@ This type defines the structure of the paginated response returned by the `picku
 | `pageInfo` ==[PageInfo](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo)== | Metadata to assist in pagination,<br> such as whether there are more pages and what the cursor positions are.                                        |
 | `edges` ==[PickupLocationEdge](PickupLocationEdge.md)==  | A list of edges, each containing a `node` (pickup location) <br> and a `cursor` used for pagination. Required when clients need to access cursor data.   |
 | `items` ==[PickupLocationType](PickupLocationType.md)==      | A list of pickup location objects. Provided as a convenience <br> when edge metadata is not required. Use `edges` if cursor-based pagination is needed.|
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../PickupLocationEdge">← PickupLocationEdge</a>
+    <a href="../../../White-labeling/overview">White Labeling module overview →</a>
+</div>

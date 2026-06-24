@@ -59,3 +59,12 @@ mutation($command: CreateCustomerReviewCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Objects/ReviewValidationErrorType">← ReviewValidationErrorType</a>
+    <a href="../createReview">CreateReview mutation →</a>
+</div>

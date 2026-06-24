@@ -7,3 +7,12 @@ The **AI Document Processing** module provides functionality for managing purcha
 | [purchaseRequest](Queries/purchaseRequest.md)<br> [purchaseRequests](Queries/purchaseRequests.md)<br> |  [PurchaseRequestType](Objects/PurchaseRequestType.md)<br> [PurchaseRequestConnection](Objects/PurchaseRequestConnection.md) <br> [PurchaseRequestSourceType](Objects/PurchaseRequestSourceType.md) <br> [PurchaseRequestEdge](Objects/PurchaseRequestEdge.md) <br>  | [createPurchaseRequest](Mutations/createPurchaseRequest.md)<br> [createPurchaseRequestFromDocuments](Mutations/createPurchaseRequestFromDocuments.md)<br> [addPurchaseRequestSource](Mutations/addPurchaseRequestSource.md)<br> [extractPurchaseRequestSourcesData](Mutations/extractPurchaseRequestSourcesData.md)<br> [postProcessPurchaseRequestSources](Mutations/postProcessPurchaseRequestSources.md)<br> [updatePurchaseRequestByDocuments](Mutations/updatePurchaseRequestByDocuments.md)<br>  |
 
 Please [contact us](https://virtocommerce.com/request-demo) to start using our AI Document Processing module.
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../tools-overview">← Tools to explore GraphQL</a>
+    <a href="../Queries/purchaseRequest">PurchaseRequest query →</a>
+</div>

@@ -38,3 +38,12 @@ mutation changeQuoteComment($command: ChangeQuoteCommentCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../remove-quote-item">← RemoveQuoteItem mutation</a>
+    <a href="../submit-quote-request">SubmitQuoteRequest mutation →</a>
+</div>

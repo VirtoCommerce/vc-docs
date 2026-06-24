@@ -14,4 +14,13 @@ This type represents a configuration section within a product, detailing its pro
 | `allowCustomText` ==Boolean!==                                | Indicates whether custom text is allowed for a Text-type section. |  
 | `allowTextOptions` ==Boolean!==                               | Indicates whether predefined text options are allowed for a Text-type section. |  
 | `maxLength` ==Int==                                           | The maximum text length for a Text-type section.            |  
-| `options` [ ==ConfigurationLineItemType== ](ConfigurationLineItemType.md) | A list of configuration options available in this section.   |  
+| `options` [ ==ConfigurationLineItemType== ](ConfigurationLineItemType.md) | A list of configuration options available in this section.   |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../bulk-wishlist-type">← BulkWishlistType</a>
+    <a href="../CartConfigurationItemType">CartConfigurationItemType →</a>
+</div>

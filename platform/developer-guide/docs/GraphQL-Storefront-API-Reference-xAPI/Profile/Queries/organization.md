@@ -75,3 +75,12 @@ This connection allows you to get the organization by its Id.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← xProfile module overview</a>
+    <a href="../organizations">Organizations query →</a>
+</div>

@@ -40,3 +40,12 @@ mutation ($command: InputConfirmEmailType){
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../deleteContact">← DeleteContact mutation</a>
+    <a href="../sendVerifyEmail">SendVerifyEmail mutation →</a>
+</div>

@@ -13,3 +13,11 @@ This type represents a type or category of dynamic content items.
 | `priority`  ==Int!==                                                                  | The priority of the dynamic content item type.                                            |
 | `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)| The dynamic properties associated with the dynamic content item type.                     |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../PromotionCouponEdge">← PromotionCouponEdge</a>
+    <a href="../EvaluateDynamicContentResultType">EvaluateDynamicContentResultType →</a>
+</div>

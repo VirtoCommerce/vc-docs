@@ -69,3 +69,12 @@ mutation createContact($command: InputCreateContactType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Objects/rating">← Rating</a>
+    <a href="../updateContact">UpdateContact mutation →</a>
+</div>

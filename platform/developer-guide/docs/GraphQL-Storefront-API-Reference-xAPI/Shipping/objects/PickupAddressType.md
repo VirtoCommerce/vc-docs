@@ -23,3 +23,12 @@ This type represents the structured address details of a pickup location, includ
 | `outerId` ==String==      | An external identifier, if available.                   |
 | `description` ==String==  | Additional information or notes about the address.      |
 | `addressType` ==Int==     | The type of address (e.g., billing, shipping, pickup).  |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/pickupLocations">← PickupLocations query</a>
+    <a href="../PickupLocationType">PickupLocationType →</a>
+</div>

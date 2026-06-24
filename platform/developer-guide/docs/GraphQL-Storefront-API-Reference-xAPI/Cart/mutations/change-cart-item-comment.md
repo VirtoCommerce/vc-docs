@@ -55,3 +55,12 @@ mutation ($command:InputChangeCartItemCommentType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../change-cart-item-quantity">← ChangeCartItemQuantity mutation</a>
+    <a href="../remove-cart-item">RemoveCartItem mutation →</a>
+</div>

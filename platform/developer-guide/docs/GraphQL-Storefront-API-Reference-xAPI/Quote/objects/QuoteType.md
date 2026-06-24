@@ -46,3 +46,12 @@ This type contains various fields or attributes that provide information about t
 | `shipmentMethod` [ ==QuoteShipmentMethodType== ](QuoteShipmentMethodType.md)| The selected method for shipping items in the quote.|
 | `taxDetails` [ ==[QuoteTaxDetailType]== ](QuoteTaxDetailType.md) | An array of tax details associated with the quote.             |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | An array of dynamic properties that can be associated with the quote.     |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/quotes">← Quotes query</a>
+    <a href="../QuoteConnection">QuoteConnection →</a>
+</div>

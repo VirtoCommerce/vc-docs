@@ -17,3 +17,11 @@ This type represents the input object for creating or updating an order payment.
 | `billingAddress` [ ==InputOrderAddressType== ](../objects/input-order-address-type.md)                              | The billing address associated with the payment.                                |
 | `dynamicProperties` [ ==[InputDynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType) | The dynamic property value types.                                               |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../input-order-bank-card-info-type">← InputOrderBankCardInfoType</a>
+    <a href="../payment-transaction-type">PaymentTransactionType →</a>
+</div>

@@ -39,3 +39,12 @@ mutation cancelQuoteRequest($command: CancelQuoteCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../create-quote-from-cart">← CreateQuoteFromCart mutation</a>
+    <a href="../change-quote-item-quantity">ChangeQuoteItemQuantity mutation →</a>
+</div>

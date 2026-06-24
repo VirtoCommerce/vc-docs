@@ -13,3 +13,12 @@ This type defines the structure of Firebase Cloud Messaging (FCM) settings.
 | `messagingSenderId` ==String!==   | The sender ID used by Firebase Cloud Messaging.               |
 | `appId` ==String!==               | The ID of the Firebase application.                           |
 | `vapidKey` ==String!==            | The VAPID key used for Web Push protocol.                     |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../InputMarkPushMessageUnreadType">← InputMarkPushMessageUnreadType</a>
+    <a href="../InputAddFcmTokenType">InputAddFcmTokenType →</a>
+</div>

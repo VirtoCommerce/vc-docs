@@ -50,3 +50,12 @@ This is to query whether the provided coupon is valid or not.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../wishlists">← Wishlists query</a>
+    <a href="../productConfiguration">ProductConfiguration query →</a>
+</div>

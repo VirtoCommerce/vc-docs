@@ -160,3 +160,12 @@ This connection allows you to search for catalog property metadata.
     ```
 
     </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../property">← Property query</a>
+    <a href="../fulfillment-center">Fulfillment Center query →</a>
+</div>

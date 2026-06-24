@@ -118,3 +118,12 @@ This query is used to retrieve specific order details.​
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← xOrder module overview</a>
+    <a href="../orders">Orders query →</a>
+</div>

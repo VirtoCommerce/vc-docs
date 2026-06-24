@@ -71,3 +71,12 @@ This query allows you to retrieve a list of child categories for a given parent 
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../fulfillment-centers">← Fulfillment Centers query</a>
+    <a href="../brand">Brand query →</a>
+</div>

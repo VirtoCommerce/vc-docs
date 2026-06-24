@@ -8,6 +8,7 @@ nav:
   - Best Practices: best-practices.md
   - Troubleshooting: troubleshooting.md
   - Tools to Explore GraphQL:
+      - Overview: tools-overview.md
       - GraphiQL: graphiql.md
       - Postman: postman.md
       - Curl: curl.md

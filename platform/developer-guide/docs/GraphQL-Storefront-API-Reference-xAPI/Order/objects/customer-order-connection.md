@@ -13,3 +13,12 @@ This type represents a connection of customer orders.
 | `term_facets` [==[TermFacet!]!==](term-facet.md)                  | Faceted search results grouped by terms or categories.                                                    |
 | `range_facets` [==[RangeFacet!]!==](range-facet.md)               | Faceted search results grouped by numerical or range-based attributes.                                    |
 | `filter_facets` [==[FilterFacet!]!==](filter-facet.md)            | Faceted search results grouped by filter criteria.                                                        |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../customer-order-type">← CustomerOrderType</a>
+    <a href="../order-address-type">OrderAddressType →</a>
+</div>

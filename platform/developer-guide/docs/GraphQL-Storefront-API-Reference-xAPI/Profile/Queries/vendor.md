@@ -133,3 +133,12 @@ query($vendorId: String!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../role">← Role query</a>
+    <a href="../requestPasswordReset">RequestPasswordReset query →</a>
+</div>

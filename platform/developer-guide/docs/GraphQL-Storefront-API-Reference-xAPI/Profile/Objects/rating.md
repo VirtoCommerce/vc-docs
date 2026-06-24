@@ -8,3 +8,12 @@ This type provides information about a vendor or product rating, including the a
 |-----------------------|----------------------------------------------|
 | `value` ==Decimal!==  | The average rating value.                    |
 | `reviewCount` ==Int!==| The total number of customer reviews.       |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../InputChangePasswordType">← InputChangePasswordType</a>
+    <a href="../../Mutations/createContact">CreateContact mutation →</a>
+</div>

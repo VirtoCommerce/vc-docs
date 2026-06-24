@@ -59,3 +59,12 @@ This connection allows you to search for a specific category.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../products">← Products query</a>
+    <a href="../categories">Categories query →</a>
+</div>

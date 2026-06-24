@@ -46,3 +46,12 @@ mutation changeOrganizationContactRole($command:  InputChangeOrganizationContact
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../unlockOrganizationContact">← UnlockOrganizationContact mutation</a>
+    <a href="../removeMemberFromOrganization">RemoveMemberFromOrganization mutation →</a>
+</div>

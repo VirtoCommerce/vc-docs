@@ -29,3 +29,11 @@ This type represents a member address with its corresponding information.
 | `description`  ==String== | The description of the member address.                          	|
 | `addressType`  ==Int==    | The type of the member address.                                	|
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../MemberType">← Member</a>
+    <a href="../MemberAddressConnection">MemberAddressConnection →</a>
+</div>

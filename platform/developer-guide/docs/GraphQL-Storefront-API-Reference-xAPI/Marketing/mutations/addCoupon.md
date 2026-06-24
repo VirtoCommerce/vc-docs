@@ -63,3 +63,12 @@ mutation {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../objects/EvaluateDynamicContentResultType">← EvaluateDynamicContentResultType</a>
+    <a href="../../../News/overview">News module overview →</a>
+</div>

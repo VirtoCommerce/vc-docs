@@ -44,3 +44,12 @@ query {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../pushMessages">← Push messages query</a>
+    <a href="../../Objects/PushMessageType">PushMessageType →</a>
+</div>

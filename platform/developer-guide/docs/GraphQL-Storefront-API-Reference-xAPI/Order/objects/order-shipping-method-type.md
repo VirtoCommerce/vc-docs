@@ -13,3 +13,11 @@ This type represents a shipping method available for orders.
 | `storeId`  ==String!==  | The Id of the store associated with the shipping method.       |
 | `typeName`  ==String!== | The type of the shipping method.                       |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../order-shipment-type">← OrderShipmentType</a>
+    <a href="../order-shipment-item-type">OrderShipmentItemType →</a>
+</div>

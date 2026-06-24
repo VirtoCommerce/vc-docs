@@ -10,3 +10,12 @@ The **Store** module is responsible for managing and providing access to informa
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-store/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-store/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Skyflow/overview">← Skyflow module overview</a>
+    <a href="../queries/store">Store query →</a>
+</div>

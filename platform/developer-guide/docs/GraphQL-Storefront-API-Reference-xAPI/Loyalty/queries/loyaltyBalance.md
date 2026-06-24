@@ -42,3 +42,12 @@ loyaltyBalance(
 }
 ```
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← Loyalty module overview</a>
+    <a href="../loyaltyPointsHistory">LoyaltyPointsHistory query →</a>
+</div>

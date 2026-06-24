@@ -11,3 +11,12 @@ This type represents a validation error encountered during a specific operation 
 | `objectId`  ==String==                 | The ID of the object that encountered the validation error.                                                |
 | `objectType`  ==String==               | The type or category of the object that encountered the validation error.                                  |
 | `errorParameters` [ ==ErrorParameterType== ](error-parameter-type.md) | A list of error parameters providing additional information about the validation error, if available. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../dictionary-item-connection">← DictionaryItemConnection</a>
+    <a href="../error-parameter-type">ErrorParameterType →</a>
+</div>

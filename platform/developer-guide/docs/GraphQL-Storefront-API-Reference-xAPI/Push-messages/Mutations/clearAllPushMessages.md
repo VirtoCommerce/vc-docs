@@ -38,3 +38,12 @@ mutation clearAllPushMessages {
 clearAllPushMessages
 }
 ```
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../markAllPushMessagesUnread">← MarkAllPushMessagesUnread mutation</a>
+    <a href="../addFcmToken">AddFcmToken mutation →</a>
+</div>

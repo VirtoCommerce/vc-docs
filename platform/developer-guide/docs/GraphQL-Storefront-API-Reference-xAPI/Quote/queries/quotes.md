@@ -94,3 +94,12 @@ query {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../quote">← Quote query</a>
+    <a href="../../objects/QuoteType">QuoteType →</a>
+</div>

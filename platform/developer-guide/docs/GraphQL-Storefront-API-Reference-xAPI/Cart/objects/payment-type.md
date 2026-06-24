@@ -28,3 +28,11 @@ This type represents a payment made within a shopping cart or order.
 | `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor)           | The vendor associated with the payment.                                                                              |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](dynamic-property-value-type.md) | The dynamic properties associated with the payment, represented as an array of `DynamicPropertyValueType` objects.   |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../shipping-method-type">← ShipmentMethodType</a>
+    <a href="../payment-method-type">PaymentMethodType →</a>
+</div>

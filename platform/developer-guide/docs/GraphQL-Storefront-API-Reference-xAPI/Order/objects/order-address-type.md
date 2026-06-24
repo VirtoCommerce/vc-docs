@@ -27,3 +27,11 @@ This type represents an address associated with a customer order.
 | `outerId`  ==String==     | An optional external identifier associated with the order address.            |
 | `addressType`  ==Int==    | An integer representing the type of the order address.                        |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../customer-order-connection">← CustomerOrderConnection</a>
+    <a href="../order-line-item-type">OrderLineItemType →</a>
+</div>

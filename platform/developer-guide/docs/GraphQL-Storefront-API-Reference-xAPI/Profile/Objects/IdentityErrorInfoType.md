@@ -10,3 +10,11 @@ This type represents detailed information about an identity error that occurred 
 | `parameter`  ==String==     | The parameter that is related to the identity error, if applicable.                             |
 | `description`  ==String==   | A description or message that provides additional information about the identity error.         |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../IdentityErrorType">← IdentityErrorType</a>
+    <a href="../RoleType">Role →</a>
+</div>

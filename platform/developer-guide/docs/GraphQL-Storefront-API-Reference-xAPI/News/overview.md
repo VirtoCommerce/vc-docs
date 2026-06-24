@@ -10,3 +10,12 @@ The **News** module provides functionality for creating, managing, and deliverin
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-news)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-news/releases)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Marketing/overview">← xMarketing module overview</a>
+    <a href="../queries/newsArticle">NewsArticle query →</a>
+</div>

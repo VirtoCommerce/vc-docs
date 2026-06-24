@@ -38,3 +38,12 @@ mutation($command: DeleteSkyflowCardCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../objects/DeleteSkyflowCardCommandType">← DeleteSkyflowCardCommandType</a>
+    <a href="../../../Store/overview">Store module overview →</a>
+</div>

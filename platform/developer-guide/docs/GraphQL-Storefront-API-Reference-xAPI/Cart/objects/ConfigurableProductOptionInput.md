@@ -7,4 +7,13 @@ This type represents the input data for a selected option within a configuration
 | Field             | Description                                        |
 |-------------------|----------------------------------------------------|
 | `productId` ==String!== | The Id of the product option.       |
-| `quantity` ==Int!==      | The quantity of the selected product option. | 
+| `quantity` ==Int!==      | The quantity of the selected product option. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ConfigurationSectionKeyInput">← ConfigurationSectionKeyInput</a>
+    <a href="../ConfigurableProductOptionKeyInput">ConfigurableProductOptionKeyInput →</a>
+</div>

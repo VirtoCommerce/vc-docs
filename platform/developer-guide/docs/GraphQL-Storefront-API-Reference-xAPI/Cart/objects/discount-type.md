@@ -14,3 +14,11 @@ This type represents a discount applied to a shopping cart or order.
 | `amountWithTax`  ==Decimal==                          | The discount amount including taxes.                                                  |
 | `moneyAmountWithTax` [ ==MoneyType== ](money-type.md) | The discount amount including taxes represented as a `MoneyType` object.              |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../payment-method-type">← PaymentMethodType</a>
+    <a href="../gift-item-type">GiftItemType →</a>
+</div>

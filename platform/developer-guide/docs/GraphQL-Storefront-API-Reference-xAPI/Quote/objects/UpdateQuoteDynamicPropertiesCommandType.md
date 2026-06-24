@@ -9,3 +9,11 @@ This type is used to update the dynamic properties associated with a specific qu
 | `quoteId` ==String!==                                                                            | The Id of the quote for which dynamic properties are being updated. |
 | `dynamicProperties` [ ==[InputDynamicPropertyValueType]!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/InputDynamicPropertyValueType) | A list of dynamic properties to be assigned to the quote.           |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ApproveQuoteResultType">← ApproveQuoteResultType</a>
+    <a href="../../mutations/create-quote-from-cart">CreateQuoteFromCart mutation →</a>
+</div>

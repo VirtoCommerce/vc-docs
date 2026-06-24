@@ -27,3 +27,12 @@ This type represents a payment method available for orders.
 | `description`  ==String!==                                            | A description of the payment method.                                      |
 | `paymentMethodType`  ==Int!==                                         | The type of the payment method.                                           |
 | `paymentMethodGroupType`  ==Int!==                                    | The group type of the payment method.                                     |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../order-discount-type">← OrderDiscountType</a>
+    <a href="../LocalizedSettingResponseType">LocalizedSettingResponseType →</a>
+</div>

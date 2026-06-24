@@ -61,3 +61,12 @@ This connection allows you to get metadata for a specific catalog property.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../categories">← Categories query</a>
+    <a href="../properties">Properties query →</a>
+</div>

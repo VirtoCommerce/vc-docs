@@ -71,3 +71,12 @@ mutation changeCartConfigurationItemSelected($command: InputChangeCartConfigurat
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../createConfiguredLineItem">← CreateConfiguredLineItem mutation</a>
+    <a href="../selectCartConfigurationItems">SelectCartConfigurationItems mutation →</a>
+</div>

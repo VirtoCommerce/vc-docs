@@ -11,3 +11,11 @@ This type defines the structure of a favicon used in a web page.
 | `sizes` ==String!== | The sizes of the favicon.                                         |
 | `href` ==String!==  | The URL of the favicon file, pointing to its location on the web. |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../WhiteLabelingSettingsType">← WhiteLabelingSettingsType</a>
+    <a href="../MenuLinkType">MenuLinkType →</a>
+</div>

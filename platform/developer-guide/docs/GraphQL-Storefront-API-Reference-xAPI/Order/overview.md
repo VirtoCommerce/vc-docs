@@ -13,3 +13,12 @@ The **xOrder** module provides high performance API for order data with the foll
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-order/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-order/releases/latest)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../News/overview">← News module overview</a>
+    <a href="../queries/order">Order query →</a>
+</div>

@@ -63,3 +63,12 @@ This connection allows you to get the user by several arguments.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../contacts">← Contacts query</a>
+    <a href="../role">Role query →</a>
+</div>

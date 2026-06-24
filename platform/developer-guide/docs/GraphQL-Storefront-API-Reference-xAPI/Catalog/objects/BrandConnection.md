@@ -10,3 +10,12 @@ This type represents a connection to a list of brands.
 | `pageInfo` [==PageInfo!==](PageInfo.md) | Information about the current page of brands and pagination details.                                                                                             |
 | `edges` [==BrandEdge==](BrandEdge.md)   | A connection between brands and a cursor associated with each one.                                                                                               |
 | `items` [==BrandType==](BrandType.md)   | Brands returned in the connection. This shortcut can be used<br>instead of querying `edges { node }` when cursor information is not required.                       |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../BrandType">← BrandType</a>
+    <a href="../BrandEdge">BrandEdge →</a>
+</div>

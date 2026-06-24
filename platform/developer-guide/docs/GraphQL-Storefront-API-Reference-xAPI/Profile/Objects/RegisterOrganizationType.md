@@ -15,3 +15,11 @@ This type represents the details of an organization during the registration proc
 | `ownerId`  ==String==                                                                                        | The Id of the owner associated with the organization.    |
 | `dynamicProperties(...)` [ ==DynamicPropertyValueType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | The dynamic properties associated with the organization. |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../RequestRegistrationType">← RequestRegistrationType</a>
+    <a href="../RegisterContactType">RegisterContactType →</a>
+</div>

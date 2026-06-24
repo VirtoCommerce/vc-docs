@@ -10,3 +10,12 @@ This type is a connection from an object to a list of objects of `VideoType`.
 | `pageInfo` [ ==PageInfo!== ](../PageInfo.md) 	| The information about the current page.                                                                                                                         	|
 | `edges` [ ==VideoEdge== ](VideoEdge.md)    	| A list of edges that represent the connections between videos and other related objects.                                                                          |
 | `items` [ ==VideoType== ](VideoType.md)    	| A list of all of the objects returned in the connection.                                                                                                       	|
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../CommonVendor/Rating">← Rating</a>
+    <a href="../VideoEdge">VideoEdge →</a>
+</div>

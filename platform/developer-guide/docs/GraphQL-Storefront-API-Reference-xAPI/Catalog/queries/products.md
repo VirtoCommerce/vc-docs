@@ -212,3 +212,12 @@ This connection allows you to search for products.
     ```
 
     </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../product">← Product query</a>
+    <a href="../category">Category query →</a>
+</div>

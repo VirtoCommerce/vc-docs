@@ -34,3 +34,12 @@ This type represents a shipment within a shopping cart or order.
 | `comment`  ==String==                                             | Additional comments or notes related to the shipment.                                                                |
 | `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor) | The vendor associated with the shipment.                                                             |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](dynamic-property-value-type.md) | The dynamic properties associated with the shipment, represented as an array of `DynamicPropertyValueType` objects. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../tax-detail-type">← TaxDetailType</a>
+    <a href="../shipping-method-type">ShipmentMethodType →</a>
+</div>

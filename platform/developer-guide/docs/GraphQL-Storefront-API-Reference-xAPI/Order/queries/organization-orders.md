@@ -120,3 +120,12 @@ This query is used to view all orders from your organization. The user can view 
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../orderStatuses">← OrderStatuses query</a>
+    <a href="../shipmentStatuses">ShipmentStatuses query →</a>
+</div>

@@ -79,3 +79,12 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 </div>
 
 ![Readmore](../media/readmore.png){: width="25"} [Mixed-currency carts](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview#mixed-currency-carts)
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../objects/InputUpdateCartQuantityItem">← InputUpdateCartQuantityItem</a>
+    <a href="../clear-cart">ClearCart mutation →</a>
+</div>

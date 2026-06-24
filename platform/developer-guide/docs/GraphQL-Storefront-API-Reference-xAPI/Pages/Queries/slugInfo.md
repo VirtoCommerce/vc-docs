@@ -64,3 +64,12 @@ This query retrieves information about an entity associated with a specific perm
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../pageDocuments">← PageDocuments query</a>
+    <a href="../../Objects/PageDocumentConnection">PageDocumentConnection →</a>
+</div>

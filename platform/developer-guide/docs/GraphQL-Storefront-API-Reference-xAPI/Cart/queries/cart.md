@@ -178,3 +178,12 @@ This query allows you to retrieve information about a shopping cart.
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../overview">← xCart module overview</a>
+    <a href="../carts">Carts query →</a>
+</div>

@@ -10,3 +10,12 @@ This type represents a combined response containing all contextual data required
 | `store` [==StoreResponseType==](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Store/objects/StoreResponseType)   | Store-related data such as store ID, settings, and metadata.       |
 | `whiteLabelingSettings` [==WhiteLabelingSettingsType==](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/White-labeling/objects/WhiteLabelingSettingsType) | Branding and theme configuration applied to the Frontend.|
 | `user` [==UserType==](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Profile/Objects/UserType)  | Information about the current user, including identity and profile details. |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../PageContext">← PageContext</a>
+    <a href="../../../Loyalty/overview">Loyalty module overview →</a>
+</div>

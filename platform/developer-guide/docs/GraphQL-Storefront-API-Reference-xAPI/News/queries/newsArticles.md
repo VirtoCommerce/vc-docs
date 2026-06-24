@@ -91,3 +91,12 @@ newsArticles(
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../newsArticle">← NewsArticle query</a>
+    <a href="../../objects/NewsArticleContent">NewsArticleContent →</a>
+</div>

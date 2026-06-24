@@ -12,4 +12,13 @@ This type represents information about a language.
 | `threeLetterLanguageName` ==String!== | The three-letter code representing the language.                                                  |
 | `twoLetterLanguageName` ==String!==   | The two-letter code representing the language.                                                    |
 | `twoLetterRegionName` ==String!==     | The two-letter code representing the region associated with the language.                         |
-| `threeLetterRegionName` ==String!==   | The three-letter code representing the region associated with the language.                       | 
+| `threeLetterRegionName` ==String!==   | The three-letter code representing the region associated with the language.                       |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../StoreResponseType">← StoreResponseType</a>
+    <a href="../StoreSettingsType">StoreSettingsType →</a>
+</div>

@@ -81,3 +81,12 @@ This query allows you to retrieve a list of products recently browsed by the use
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../recommendations">← Recommendations query</a>
+    <a href="../searchHistory">SearchHistory query →</a>
+</div>

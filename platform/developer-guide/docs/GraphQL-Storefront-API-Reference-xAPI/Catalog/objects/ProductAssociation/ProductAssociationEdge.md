@@ -9,3 +9,11 @@ This type represents an edge in a connection between a vendor and associated pro
 | `cursor`  ==String!==           	| A cursor that can be used for pagination purposes.                                                                     	|
 | `node` [ ==ProductAssociation== ](ProductAssociation.md) 	| A node in the connection graph, connecting the vendor to the associated product.           	    |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../ProductAssociationConnection">← ProductAssociationConnection</a>
+    <a href="../ProductAssociation">ProductAssociation →</a>
+</div>

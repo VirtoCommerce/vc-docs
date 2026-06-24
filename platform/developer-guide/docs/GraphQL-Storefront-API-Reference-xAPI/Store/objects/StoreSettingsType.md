@@ -19,3 +19,12 @@ This type represents the settings configuration for a store.
 | `environmentName` ==String!==             | The environment name in which the store is running.                                               |
 | `passwordRequirements` [==PasswordOptionsType==](PasswordOptionsType.md)| The password requirements for user accounts in the store.           |
 | `modules` [==[ModuleSettingsType!]==](ModuleSettingsType.md)| An array of settings for the store's modules.                                   |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../LanguageType">← LanguageType</a>
+    <a href="../GraphQLSettingsType">GraphQLSettingsType →</a>
+</div>

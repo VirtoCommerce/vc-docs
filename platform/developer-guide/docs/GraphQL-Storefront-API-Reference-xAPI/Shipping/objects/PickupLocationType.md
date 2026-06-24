@@ -16,3 +16,11 @@ This type represents a pickup location where customers can collect their orders.
 | `geoLocation` ==String==                                | The geographic coordinates (e.g., latitude and longitude) of the location. |
 | `address` ==[PickupAddressType](PickupAddressType.md)== | The physical address of the pickup location.                               |
 
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../PickupAddressType">← PickupAddressType</a>
+    <a href="../PickupLocationEdge">PickupLocationEdge →</a>
+</div>

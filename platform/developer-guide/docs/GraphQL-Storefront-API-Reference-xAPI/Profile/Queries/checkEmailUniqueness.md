@@ -34,3 +34,12 @@ query {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../checkUsernameUniqueness">← CheckUsernameUniqueness query</a>
+    <a href="../../Objects/OrganizationType">Organization →</a>
+</div>

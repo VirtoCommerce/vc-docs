@@ -28,3 +28,12 @@ mutation MarkAllPushMessagesRead {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../markPushMessageUnread">← MarkPushMessageUnread mutation</a>
+    <a href="../markAllPushMessagesUnread">MarkAllPushMessagesUnread mutation →</a>
+</div>

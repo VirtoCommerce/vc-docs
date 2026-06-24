@@ -40,3 +40,12 @@ mutation($command: InputChangeOrganizationLogoCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../objects/MenuLinkType">← MenuLinkType</a>
+    <a href="../../../../Extensibility/overview">Extensibility →</a>
+</div>

@@ -37,3 +37,12 @@ mutation markPushMessageRead($command: InputMarkPushMessageReadType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../Objects/InputDeleteFcmTokenType">← InputDeleteFcmTokenType</a>
+    <a href="../markPushMessageUnread">MarkPushMessageUnread mutation →</a>
+</div>

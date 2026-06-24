@@ -47,3 +47,12 @@ mutation($command: CreateReviewCommandType!) {
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../createCustomerReview">← CreateCustomerReview mutation</a>
+    <a href="../../../File/overview">xFile module overview →</a>
+</div>

@@ -87,3 +87,12 @@ mutation updateCartShipmentDynamicProperties(
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-cart-shipment-dynamic-properties">← UpdateCartShipmentDynamicProperties mutation</a>
+    <a href="../add-cart-address">AddCartAddress mutation →</a>
+</div>

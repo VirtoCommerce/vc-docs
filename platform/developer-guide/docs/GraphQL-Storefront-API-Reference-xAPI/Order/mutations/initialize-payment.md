@@ -55,3 +55,12 @@ mutation ($command: InputInitializePaymentType!)
 ```
 
 </div>
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../update-order-payment-dynamic-properties">← UpdateOrderPaymentDynamicProperties mutation</a>
+    <a href="../authorize-payment">AuthorizePayment mutation →</a>
+</div>

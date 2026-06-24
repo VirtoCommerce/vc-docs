@@ -91,6 +91,6 @@ Similarly, you can access other partial schemas by adding the appropriate slugs 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../">← xAPI module overview </a>
+    <a href="../tools-overview">← Tools to explore GraphQL</a>
     <a href="../postman">Postman  →</a>
 </div>

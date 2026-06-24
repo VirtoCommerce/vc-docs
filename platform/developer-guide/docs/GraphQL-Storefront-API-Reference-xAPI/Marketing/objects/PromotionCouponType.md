@@ -13,3 +13,12 @@ This type represents a promotion coupon.
 | `name`  ==String==      | The localized name of the promotion.           |
 | `description`  ==String==| The localized description of the promotion.  |
 | `couponCode`  ==String==| The coupon code of the promotion.              |
+
+<br>
+<br>
+********
+
+<div style="display: flex; justify-content: space-between;">
+    <a href="../../queries/evaluate-dynamic-content">← EvaluateDynamicContent query</a>
+    <a href="../PromotionCouponConnection">PromotionCouponConnection →</a>
+</div>
