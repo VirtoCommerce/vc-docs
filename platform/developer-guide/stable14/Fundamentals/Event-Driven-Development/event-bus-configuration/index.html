@@ -29486,7 +29486,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -33328,7 +33328,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 18, 2026 12:53:03 UTC">February 18, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33568,6 +33568,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h3 id="handle-errors">Handle errors<a class="headerlink" href="#handle-errors" title="Permanent link">&para;</a></h3>
 <p>Event Grid ensures reliable delivery of messages by employing a durable delivery mechanism. Each message is guaranteed to be delivered at least once for every subscription. Events are promptly dispatched to the registered endpoint of each subscription. In case an endpoint fails to acknowledge the receipt of an event, Event Grid initiates retries to ensure successful delivery.</p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.microsoft.com/en-us/azure/event-grid/delivery-and-retry">Event Grid. Delivery and Retry</a></p>
+<p>That at-least-once guarantee and retry cover delivery from Event Grid to your subscriber endpoints. For the step before it, forwarding an event from Virto Commerce to the provider connection, any failure is recorded in the Event Bus <a href="#health-status-fail-logs">fail log</a>. The Event Bus does not provide a dead-letter queue, so the fail log is where you find events that did not reach the provider.</p>
 <h3 id="default-event-data-model-for-azure-event-grid">Default event data model for Azure Event Grid<a class="headerlink" href="#default-event-data-model-for-azure-event-grid" title="Permanent link">&para;</a></h3>
 <p>You can specify the payload transformation via the Scriban-template with the <code>payloadTransformationTemplate</code> option. If you skip this option, the Event Grid provider will apply the following structure as a payload in the <code>CloudEvents</code> format:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span><span class="err">​​​​​</span>

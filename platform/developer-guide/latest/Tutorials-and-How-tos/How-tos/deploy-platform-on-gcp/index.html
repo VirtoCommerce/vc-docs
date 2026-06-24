@@ -29205,7 +29205,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32884,6 +32884,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#module-installation" class="md-nav__link">
+        Module installation
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#gke" class="md-nav__link">
         GKE
     </a>
@@ -32943,7 +32953,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2026 11:45:09 UTC">May 28, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33120,6 +33130,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
+<h2 id="module-installation">Module installation<a class="headerlink" href="#module-installation" title="Permanent link">&para;</a></h2>
+<p>The <code>platform</code> image ships without commerce modules; they are installed into the module discovery path (<code>/app/modules</code>) on first boot.</p>
+<p>The Platform auto-installs the module bundles listed in the <code>ExternalModules:AutoInstallModuleBundles</code> setting, which the stock <strong>appsettings.json</strong> defaults to <code>["commerce"]</code>. On first startup the Platform downloads those modules into the discovery path, installs them, and then becomes ready. Two implications for self-hosting:</p>
+<ul>
+<li>The volume mounted at the discovery path must be <strong>writable</strong> on first boot, and the container needs outbound internet access to pull the module packages from the Virto Commerce feed.</li>
+<li>The install runs once and persists to the volume, so the volume must survive restarts and scale-to-zero.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not let multiple instances perform the first install concurrently against the same modules volume; they can race and corrupt the modules directory. For the initial deploy, run a single instance, or pre-seed the volume, then scale out after the install finishes. On Cloud Run, this is the main reason to run the Admin Platform tier with <code>minScale: 1</code> and a persistent volume rather than relying on a scale-to-zero first-boot install.</p>
+</div>
+<p>To use immutable, pre-baked modules instead, build your own image <code>FROM virtocommerce/platform:latest</code> with modules copied into the discovery path, set <code>ExternalModules:AutoInstallModuleBundles</code> to an empty array, and mount the modules volume read-only. This is the recommended pattern for Cloud Run's stateless tiers.</p>
 <h2 id="gke">GKE<a class="headerlink" href="#gke" title="Permanent link">&para;</a></h2>
 <p>Use this topology when you have an existing Kubernetes investment, multi-tenant or multi-environment workloads, or a GitOps pipeline such as Argo CD or Flux. GKE is the most flexible and most operationally portable option.</p>
 <p>The architecture combines:</p>
@@ -33146,7 +33168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vc-platform</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/virtocommerce/vc-platform/platform:latest</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtocommerce/platform:latest</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">          </span><span class="nt">ports</span><span class="p">:</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">          </span><span class="nt">envFrom</span><span class="p">:</span>
@@ -33204,7 +33226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">containerConcurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">timeoutSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">900</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/virtocommerce/vc-platform/platform:latest</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtocommerce/platform:latest</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">          </span><span class="nt">ports</span><span class="p">:</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">          </span><span class="nt">env</span><span class="p">:</span>
@@ -33299,6 +33321,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tr>
 <td><code>VirtoCommerce__DiscoveryPath</code></td>
 <td>Module discovery path; typically <code>/app/modules</code>.</td>
+<td>Environment variable</td>
+</tr>
+<tr>
+<td><code>ExternalModules__AutoInstallModuleBundles__0</code></td>
+<td>First module bundle to auto-install on first boot. Defaults to <code>commerce</code>.</td>
 <td>Environment variable</td>
 </tr>
 </tbody>

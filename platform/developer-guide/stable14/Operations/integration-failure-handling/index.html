@@ -29205,7 +29205,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32910,6 +32910,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#transactional-delivery-and-the-outbox-pattern" class="md-nav__link">
+        Transactional delivery and the outbox pattern
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#long-running-and-multi-step-processes" class="md-nav__link">
+        Long-running and multi-step processes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#data-pipelines-and-etl" class="md-nav__link">
+        Data pipelines and ETL
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#alerting-hookups" class="md-nav__link">
         Alerting hookups
     </a>
@@ -32969,7 +32999,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2026 11:45:09 UTC">May 28, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33071,6 +33101,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h3 id="dead-letter-queue">Dead-letter queue<a class="headerlink" href="#dead-letter-queue" title="Permanent link">&para;</a></h3>
 <p>The Platform does not ship a first-class dead-letter queue. Functionally, the Hangfire <strong>Failed</strong> tab and the Webhooks error log fill the same role. They hold messages whose retries are exhausted and that need human attention. Manual retry is available in both surfaces.</p>
 <p>If you need true DLQ semantics (automatic quarantine, separate metrics, replay tooling), that is a custom build on top of these primitives.</p>
+<h2 id="transactional-delivery-and-the-outbox-pattern">Transactional delivery and the outbox pattern<a class="headerlink" href="#transactional-delivery-and-the-outbox-pattern" title="Permanent link">&para;</a></h2>
+<p>The Platform does not implement a transactional outbox. Domain events are dispatched <a href="../../Fundamentals/Event-Driven-Development/using-domain-events/">in-process</a> and are not persisted as part of the database transaction, so there is no stored event log that the Platform replays after a crash or a failed external delivery.</p>
+<p>This answers a common question: if the database commit succeeds but the webhook or Event Grid delivery fails, is the event lost?</p>
+<ul>
+<li>The change is committed to the database regardless of delivery.</li>
+<li>Delivery to external systems is best-effort. Webhooks and Event Grid retry on failure, but once retries are exhausted the event remains only in its failure surface and is not re-delivered automatically. An in-process handler that throws runs once and leaves only an application-log entry.</li>
+<li>So without extra handling, an external system can miss an event that the database has already committed.</li>
+</ul>
+<p>To achieve at-least-once delivery on top of these primitives:</p>
+<ul>
+<li>Make receivers idempotent, keyed on the event identifier, so a manual retry is safe.</li>
+<li>For work that must not be lost, enqueue a <a href="#hangfire-background-jobs">Hangfire background job</a> from the handler so that Hangfire's persisted queue and retries cover it, or implement your own outbox table and reconcile it against the <a href="#failed-message-surface">failed-message surfaces</a>.</li>
+<li>Monitor those surfaces and replay manually when needed.</li>
+</ul>
+<h2 id="long-running-and-multi-step-processes">Long-running and multi-step processes<a class="headerlink" href="#long-running-and-multi-step-processes" title="Permanent link">&para;</a></h2>
+<p>The Platform does not include a distributed saga or process-manager framework with automatic compensating transactions. Multi-step and long-running processes are built from two blocks:</p>
+<ul>
+<li>The <a href="/marketplace/developer-guide/latest/state-machine-module/overview/">State Machine module</a> models an entity's lifecycle as a configurable finite state machine, with states, transitions, trigger conditions, and per-transition actions. Order and approval workflows use it.</li>
+<li><a href="#hangfire-background-jobs">Hangfire background jobs</a> run asynchronous or retryable steps off the request thread.</li>
+</ul>
+<p>There is no built-in coordinator that rolls back a partially completed cross-service process. If a step fails after earlier steps have committed, design and trigger the compensating action yourself, for example as a Hangfire job driven by a state transition.</p>
+<h2 id="data-pipelines-and-etl">Data pipelines and ETL<a class="headerlink" href="#data-pipelines-and-etl" title="Permanent link">&para;</a></h2>
+<p>The Platform does not ship connectors for ETL tools such as Apache Airflow or Kafka Connect. Build data pipelines on the integration surfaces it does provide:</p>
+<ul>
+<li>The REST and GraphQL APIs for targeted reads and writes.</li>
+<li>The bulk import and export modules for large datasets.</li>
+<li><a href="#webhooks">Webhooks</a> for change notifications that trigger a pipeline.</li>
+</ul>
+<p>Middleware such as Azure Logic Apps or Azure Functions can sit between these surfaces and your pipeline for transformation and routing.</p>
 <h2 id="alerting-hookups">Alerting hookups<a class="headerlink" href="#alerting-hookups" title="Permanent link">&para;</a></h2>
 <p>The Platform does not include a first-party alerting feature. Alerts are wired through the logging integrations:</p>
 <ul>
@@ -33117,6 +33176,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li>No central integration-failure dashboard. Three or four surfaces to check and no unified view across them.</li>
 <li>No first-class dead-letter queue. Failed jobs and webhook deliveries persist, but there is no quarantine, no DLQ-specific tooling, and no built-in replay-from-DLQ workflow.</li>
+<li>No transactional outbox. Domain events are in-process and not persisted with the database transaction, so a committed change is not guaranteed to reach an external system. See <a href="#transactional-delivery-and-the-outbox-pattern">Transactional delivery and the outbox pattern</a>.</li>
+<li>No native EDI, cXML, or OCI punchout. B2B e-procurement integrations are delivered through partner solutions rather than a first-party connector.</li>
+<li>No gRPC service interface. The Platform's programmatic surfaces are REST and GraphQL (xAPI).</li>
 <li>No first-party alerting policy. No default alert rules ship with the Platform; alerting is delegated to Application Insights or Seq and configured per deployment.</li>
 <li>No documented retry semantics for domain event handlers or inbound APIs. Custom integration code must follow ASP.NET, MediatR, and Hangfire conventions directly.</li>
 <li>No incident timeline or postmortem feature. Operators reconstruct events from logs.</li>

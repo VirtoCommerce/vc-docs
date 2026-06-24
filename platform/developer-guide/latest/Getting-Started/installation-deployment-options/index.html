@@ -1712,6 +1712,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation and Deployment Options
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -1720,6 +1724,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#self-hosting-on-kubernetes" class="md-nav__link">
+        Self-hosting on Kubernetes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -29239,7 +29280,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32844,6 +32885,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#self-hosting-on-kubernetes" class="md-nav__link">
+        Self-hosting on Kubernetes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -32863,7 +32922,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2026 11:45:09 UTC">May 28, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32951,11 +33010,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <td><a href="../Installation-Guide/start-local">Docker (start-local)</a></td>
     </tr>
     <tr>
-      <td>Kubernetes</td>
+      <td><a href="#self-hosting-on-kubernetes">Kubernetes</a></td>
     </tr>
   </tbody>
 </table>
 
+<h2 id="self-hosting-on-kubernetes">Self-hosting on Kubernetes<a class="headerlink" href="#self-hosting-on-kubernetes" title="Permanent link">&para;</a></h2>
+<p>Virto Commerce does not publish a Helm chart for self-managed Kubernetes. To run the Platform on your own cluster, adapt the example Kubernetes <code>Deployment</code> manifests in the <a href="../../Tutorials-and-How-tos/How-tos/deploy-platform-on-aws/#eks">AWS (EKS)</a> and <a href="../../Tutorials-and-How-tos/How-tos/deploy-platform-on-gcp/#gke">Google Cloud (GKE)</a> guides. Virto Cloud runs on Kubernetes internally, but its Helm chart is tied to Virto Cloud's infrastructure and is not distributed for self-hosting.</p>
 <p><br>
 <br></p>
 <hr />

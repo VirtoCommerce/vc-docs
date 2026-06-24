@@ -24273,6 +24273,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#viewing-metrics-in-prometheus-and-grafana" class="md-nav__link">
+        Viewing metrics in Prometheus and Grafana
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#troubleshooting" class="md-nav__link">
         Troubleshooting
     </a>
@@ -29330,7 +29340,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32993,6 +33003,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#viewing-metrics-in-prometheus-and-grafana" class="md-nav__link">
+        Viewing metrics in Prometheus and Grafana
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#troubleshooting" class="md-nav__link">
         Troubleshooting
     </a>
@@ -33022,7 +33042,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 07:10:45 UTC">June 18, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33172,6 +33192,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </code></pre></div>
+<h2 id="viewing-metrics-in-prometheus-and-grafana">Viewing metrics in Prometheus and Grafana<a class="headerlink" href="#viewing-metrics-in-prometheus-and-grafana" title="Permanent link">&para;</a></h2>
+<p>The module exports metrics, traces, and logs over OTLP only. The Platform does not expose a native Prometheus scrape endpoint, so Prometheus and Grafana consume the data through a collector rather than scraping the Platform directly:</p>
+<ol>
+<li>Point <code>OpenTelemetry:Endpoint</code> at an OTLP-capable collector, for example the OpenTelemetry Collector or Grafana Alloy.</li>
+<li>In the collector, route each signal to your backend: metrics to Prometheus through the collector's Prometheus exporter, traces to a trace store such as Tempo, and logs to a log store such as Loki.</li>
+<li>Query those backends from Grafana.</li>
+</ol>
+<p>The exported metrics are infrastructure-level: request rate and duration, .NET runtime, process, database, and the other sources listed above. The module does not define custom business metrics, so application-level indicators are not emitted out of the box.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

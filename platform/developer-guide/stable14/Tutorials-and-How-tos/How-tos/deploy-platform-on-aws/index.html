@@ -29205,7 +29205,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32874,6 +32874,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#module-installation" class="md-nav__link">
+        Module installation
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#elastic-beanstalk" class="md-nav__link">
         Elastic Beanstalk
     </a>
@@ -32943,7 +32953,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2026 11:45:09 UTC">May 28, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33104,6 +33114,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
+<h2 id="module-installation">Module installation<a class="headerlink" href="#module-installation" title="Permanent link">&para;</a></h2>
+<p>The <code>platform</code> image ships without commerce modules; they are installed into the module discovery path (<code>/app/modules</code>) on first boot.</p>
+<p>The Platform auto-installs the module bundles listed in the <code>ExternalModules:AutoInstallModuleBundles</code> setting, which the stock <strong>appsettings.json</strong> defaults to <code>["commerce"]</code>. On first startup the Platform downloads those modules into the discovery path, installs them, and then becomes ready. Two implications for self-hosting:</p>
+<ul>
+<li>The modules volume must be <strong>writable</strong> on first boot, and the container needs outbound internet access to pull the module packages from the Virto Commerce feed.</li>
+<li>The install runs once and persists to the volume, so the volume must survive restarts (which EFS does).</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not let multiple instances perform the first install concurrently against the same modules volume; they can race and corrupt the modules directory. For the initial deploy, run a single instance, or pre-seed the volume, then scale out after the install finishes.</p>
+</div>
+<p>To use immutable, pre-baked modules instead, build your own image <code>FROM virtocommerce/platform:latest</code> with modules copied into the discovery path, set <code>ExternalModules:AutoInstallModuleBundles</code> to an empty array, and mount the modules volume read-only.</p>
 <h2 id="elastic-beanstalk">Elastic Beanstalk<a class="headerlink" href="#elastic-beanstalk" title="Permanent link">&para;</a></h2>
 <p>Use this topology for single-environment deployments, prototypes, and internal pilots. It is the simplest path from a Docker image to a running URL.</p>
 <p>The architecture combines:</p>
@@ -33118,7 +33140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><span class="filename">Dockerrun.aws.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;AWSEBDockerrunVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;Image&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ghcr.io/virtocommerce/vc-platform/platform:latest&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;virtocommerce/platform:latest&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;Update&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">},</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&quot;Ports&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nt">&quot;ContainerPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="p">}],</span>
@@ -33152,7 +33174,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">&quot;containerDefinitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-platform&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ghcr.io/virtocommerce/vc-platform/platform:latest&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;virtocommerce/platform:latest&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">&quot;portMappings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nt">&quot;containerPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="p">}],</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;mountPoints&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;sourceVolume&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vc-modules&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;containerPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/app/modules&quot;</span><span class="w"> </span><span class="p">},</span>
@@ -33201,7 +33223,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vc-platform</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/virtocommerce/vc-platform/platform:latest</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtocommerce/platform:latest</span>
 <a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">          </span><span class="nt">ports</span><span class="p">:</span>
 <a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
 <a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">          </span><span class="nt">envFrom</span><span class="p">:</span>
@@ -33303,6 +33325,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tr>
 <td><code>VirtoCommerce__DiscoveryPath</code></td>
 <td>Module discovery path; typically <code>/app/modules</code>.</td>
+<td>Environment variable</td>
+</tr>
+<tr>
+<td><code>ExternalModules__AutoInstallModuleBundles__0</code></td>
+<td>First module bundle to auto-install on first boot. Defaults to <code>commerce</code>.</td>
 <td>Environment variable</td>
 </tr>
 </tbody>

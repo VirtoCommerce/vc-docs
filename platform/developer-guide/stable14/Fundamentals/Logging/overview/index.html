@@ -7045,6 +7045,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#correlating-logs-with-traces" class="md-nav__link">
+        Correlating logs with traces
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -29308,7 +29318,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32950,6 +32960,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#correlating-logs-with-traces" class="md-nav__link">
+        Correlating logs with traces
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -32976,7 +32996,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 10:37:37 UTC">September 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33052,6 +33072,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ILogger logger;
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>logger.LogWarning(&quot;Disk quota {Quota} MB exceeded by {User}&quot;, quota, user);
 </code></pre></div>
+<h3 id="correlating-logs-with-traces">Correlating logs with traces<a class="headerlink" href="#correlating-logs-with-traces" title="Permanent link">&para;</a></h3>
+<p>When the <a href="../../../Extensibility/opentelemetry/">Open Telemetry module</a> is enabled, log events are enriched with the <code>TraceId</code> and <code>SpanId</code> of the current request and forwarded to your OTLP collector, so you can correlate a log line with its distributed trace across services. Without that module, the Platform does not add a correlation or trace ID to log events.</p>
 <p><strong>References</strong>:</p>
 <ul>
 <li>

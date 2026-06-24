@@ -2573,6 +2573,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#using-vc-build-in-a-cicd-pipeline" class="md-nav__link">
+        Using vc-build in a CI/CD pipeline
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#clean" class="md-nav__link">
         Clean
     </a>
@@ -29460,7 +29470,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -33073,6 +33083,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#using-vc-build-in-a-cicd-pipeline" class="md-nav__link">
+        Using vc-build in a CI/CD pipeline
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#clean" class="md-nav__link">
         Clean
     </a>
@@ -33282,7 +33302,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 05:58:42 UTC">March 4, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33318,6 +33338,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">vc-build compress -verbosity &lt;Verbose|Normal|Minimal|Quiet&gt;</span>
 </code></pre></div></p>
 </div>
+<h2 id="using-vc-build-in-a-cicd-pipeline">Using vc-build in a CI/CD pipeline<a class="headerlink" href="#using-vc-build-in-a-cicd-pipeline" title="Permanent link">&para;</a></h2>
+<p>Because vc-build is builder-server agnostic, the same targets run in any CI/CD system. Virto Commerce provides ready-made <a href="../virto-cloud-overview/">GitHub Actions and Azure DevOps pipelines</a> for Virto Cloud. For other systems, such as GitLab CI or Jenkins, there are no prebuilt templates: call the same vc-build targets from that system's pipeline.</p>
 <h2 id="clean">Clean<a class="headerlink" href="#clean" title="Permanent link">&para;</a></h2>
 <p>To clean your bin, objects, and artifacts directories, run:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">vc-build clean</span>

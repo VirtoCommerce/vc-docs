@@ -26060,6 +26060,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#health-endpoint" class="md-nav__link">
+        /health endpoint
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#module-health-checks" class="md-nav__link">
         Module health checks
     </a>
@@ -26072,6 +26082,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#docker-integration" class="md-nav__link">
         Docker integration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#liveness-and-readiness-probes" class="md-nav__link">
+        Liveness and readiness probes
     </a>
 
     <!-- Render nested item list -->
@@ -29292,7 +29312,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32905,6 +32925,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#health-endpoint" class="md-nav__link">
+        /health endpoint
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#module-health-checks" class="md-nav__link">
         Module health checks
     </a>
@@ -32917,6 +32947,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#docker-integration" class="md-nav__link">
         Docker integration
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#liveness-and-readiness-probes" class="md-nav__link">
+        Liveness and readiness probes
     </a>
 
     <!-- Render nested item list -->
@@ -32944,7 +32984,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32965,11 +33005,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="health-checks-in-virto-commerce-platform">Health Checks in Virto Commerce Platform<a class="headerlink" href="#health-checks-in-virto-commerce-platform" title="Permanent link">&para;</a></h1>
-<p>Virto Commerce Platform supports health checks through ASP.NET Core middlewares. To ensure robustness and reliability, this article covers two primary aspects:</p>
+<p>Virto Commerce Platform supports health checks through ASP.NET Core middlewares and exposes them at the <code>/health</code> endpoint. This article covers:</p>
 <ul>
-<li><a href="./#module-health-checks">Module health checks.</a></li>
-<li><a href="./#docker-integration">Docker integration.</a></li>
+<li><a href="#health-endpoint">The /health endpoint and built-in checks.</a></li>
+<li><a href="#module-health-checks">Adding module health checks.</a></li>
+<li><a href="#docker-integration">Docker integration.</a></li>
+<li><a href="#liveness-and-readiness-probes">Liveness and readiness probes.</a></li>
 </ul>
+<h2 id="health-endpoint">/health endpoint<a class="headerlink" href="#health-endpoint" title="Permanent link">&para;</a></h2>
+<p>The Platform exposes a single health endpoint at <code>/health</code>. It runs every registered check and returns a JSON document with the overall status and a per-check breakdown. The same endpoint is available as a Developer Tool on the System Operations page.</p>
+<p>The overall status follows the ASP.NET Core health model:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Default HTTP code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Healthy</td>
+<td>All checks passed.</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Degraded</td>
+<td>A non-critical check reported a problem.</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Unhealthy</td>
+<td>A critical check failed.</td>
+<td>503</td>
+</tr>
+</tbody>
+</table>
+<p>The Platform registers these checks out of the box:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Tag</th>
+<th>Status on failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installed modules</td>
+<td>Modules</td>
+<td>Unhealthy</td>
+</tr>
+<tr>
+<td>Memory cache</td>
+<td>Cache</td>
+<td>Degraded</td>
+</tr>
+<tr>
+<td>Redis connection</td>
+<td>Cache</td>
+<td>Unhealthy</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>Database</td>
+<td>Unhealthy</td>
+</tr>
+</tbody>
+</table>
+<p>The Redis check applies when a Redis backplane is configured, and the database check targets the configured provider. So a failed database connection or an unreachable Redis backplane marks the Platform <strong>Unhealthy</strong>, while a memory cache problem only marks it <strong>Degraded</strong>.</p>
 <h2 id="module-health-checks">Module health checks<a class="headerlink" href="#module-health-checks" title="Permanent link">&para;</a></h2>
 <p>To add health checks to your modules:</p>
 <ol>
@@ -33019,6 +33123,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>HEALTHCHECK<span class="w"> </span>CMD<span class="w"> </span>curl<span class="w"> </span>--fail<span class="w"> </span>http://localhost:5000/health<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span>
 </code></pre></div>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-5.0">Microsoft ASP.NET Core Health Checks Documentation</a></p>
+<h2 id="liveness-and-readiness-probes">Liveness and readiness probes<a class="headerlink" href="#liveness-and-readiness-probes" title="Permanent link">&para;</a></h2>
+<p>The Platform exposes one health endpoint, not separate liveness and readiness paths. To configure container orchestrator probes, point both at <code>/health</code>:</p>
+<div class="highlight"><span class="filename">Kubernetes probes</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">livenessProbe</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w">   </span><span class="c1"># match your container&#39;s HTTP port</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">readinessProbe</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+</code></pre></div>
+<p>Because the endpoint returns <strong>503</strong> only for an <strong>Unhealthy</strong> result, a <strong>Degraded</strong> memory cache does not fail the probe, while a failed database or Redis check does.</p>
 <p><br>
 <br></p>
 <hr />

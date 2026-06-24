@@ -4484,6 +4484,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#supported-databases-and-support-level" class="md-nav__link">
+        Supported databases and support level
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#database-migrations" class="md-nav__link">
+        Database migrations
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -29284,7 +29304,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../../custom-apps-development/vc-shell/components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32905,6 +32925,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#supported-databases-and-support-level" class="md-nav__link">
+        Supported databases and support level
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#database-migrations" class="md-nav__link">
+        Database migrations
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -32926,7 +32966,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 08:59:29 UTC">December 9, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32953,10 +32993,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Our architecture follows key principles to ensure stability, flexibility, and maintainability:</p>
 <ul>
 <li><strong>No breaking changes</strong>: Safe updates without disrupting existing solutions.</li>
-<li><strong>Entity Framework 6</strong>.</li>
+<li><strong>Entity Framework Core</strong>: All data access is built on EF Core.</li>
 <li><strong>Database provider isolation</strong>: DB-specific code is isolated per project to avoid affecting the core.</li>
 <li><strong>Customization support</strong>: Designed to support solution customization.</li>
 </ul>
+<h2 id="supported-databases-and-support-level">Supported databases and support level<a class="headerlink" href="#supported-databases-and-support-level" title="Permanent link">&para;</a></h2>
+<p>Virto Commerce ships three first-party database providers, selected through the <code>DatabaseProvider</code> setting in <strong>appsettings.json</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th><code>DatabaseProvider</code> value</th>
+<th>Minimum version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft SQL Server</td>
+<td><code>SqlServer</code></td>
+<td>2019</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td><code>MySql</code></td>
+<td>5.7</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td><code>PostgreSql</code></td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>All three are fully supported for ecommerce modules. <strong>SQL Server is the default</strong>: <code>DatabaseProvider</code> falls back to <code>SqlServer</code> when it is not set. A few operational paths are SQL Server-specific, namely the legacy Virto Commerce 2.x to 3.x upgrade path and the <a href="../../../../Operations/maintenance-tasks-for-sql/">SQL maintenance scripts</a>. MySQL and PostgreSQL have no such legacy constraints.</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../configuring-vc-with-db-providers/">Configuring VC with DB providers</a></p>
+<h2 id="database-migrations">Database migrations<a class="headerlink" href="#database-migrations" title="Permanent link">&para;</a></h2>
+<p>Each module owns its schema and ships Entity Framework Core migrations. A module applies its own migrations automatically on startup, so a fresh database is created and an existing one is brought up to date without manual steps.</p>
+<p>Migrations are provider-specific. Every database provider project, for example <strong>VirtoCommerce.Platform.Data.SqlServer</strong>, <strong>VirtoCommerce.Platform.Data.MySql</strong>, and <strong>VirtoCommerce.Platform.Data.PostgreSql</strong>, holds its own migration assembly, because each provider can generate slightly different SQL. When you extend the data model, add a migration for every provider you support.</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../creating-custom-module/">Creating a custom DB-agnostic module</a></p>
+<p>For bulk or offline migration, for example generating SQL scripts during a 2.x to 3.x upgrade, use the Grab Migrator tool.</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../../../CLI-tools/grab-migrator/">Grab Migrator</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../Concurrency-handling/concurrency-handling/">Handling concurrency conflicts</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../../Caching/01-overview/">Caching overview</a></p>
 <p><br>
 <br></p>
 <hr />

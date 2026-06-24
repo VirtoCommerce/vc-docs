@@ -29217,7 +29217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../components/data-display/vc-data-table/" class="md-nav__link">
+      <a href="../../../../vc-data-table.md" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -33075,7 +33075,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <p>The workspace flag pins the blade to the sidebar; child blades open to its right.</p>
 <ul>
-<li><a href="../../components/data-display/vc-data-table/">VcDataTable reference.</a></li>
+<li><a href="../../components/data-display/vc-data-table.md">VcDataTable reference.</a></li>
 </ul>
 <h2 id="recipe-details-blade-with-form">Recipe: details blade with form<a class="headerlink" href="#recipe-details-blade-with-form" title="Permanent link">&para;</a></h2>
 <p>A details blade receives <code>param</code> (the record ID) from <code>useBlade</code>, loads the record on mount, and exposes save and cancel through <code>toolbar-items</code>. Wrap the data in <code>useBladeForm</code> to get the dirty-tracking, <code>canSave</code>, and close-confirmation guard wired in one call. After a successful save, call <code>setBaseline()</code> to seal the saved state, <code>callParent("reload")</code> to refresh the list, then <code>replaceWith</code> to switch from "new" to "edit" mode (or <code>closeSelf()</code> if the flow ends).</p>
