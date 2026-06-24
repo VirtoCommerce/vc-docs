@@ -7788,6 +7788,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -7820,6 +7822,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../tools-overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -32798,8 +32818,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#install-module-template" class="md-nav__link">
-        Install module template
+    <a href="#scaffold-xapi-module" class="md-nav__link">
+        Scaffold xAPI module
     </a>
 
     <!-- Render nested item list -->
@@ -32808,8 +32828,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#generate-module-structure" class="md-nav__link">
-        Generate module structure
+    <a href="#register-schema" class="md-nav__link">
+        Register schema
     </a>
 
     <!-- Render nested item list -->
@@ -32818,8 +32838,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#register-graphql-schema" class="md-nav__link">
-        Register GraphQL schema
+    <a href="#add-query" class="md-nav__link">
+        Add query
     </a>
 
     <!-- Render nested item list -->
@@ -32828,18 +32848,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#define-and-register-graphql-types" class="md-nav__link">
-        Define and register GraphQL types
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#implement-queries-and-mutations" class="md-nav__link">
-        Implement queries and mutations
+    <a href="#add-mutation" class="md-nav__link">
+        Add mutation
     </a>
 
     <!-- Render nested item list -->
@@ -32867,7 +32877,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 3, 2026 14:04:54 UTC">February 3, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:48:25 UTC">June 24, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32888,206 +32898,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="create-custom-xapi-module">Create Custom xAPI Module<a class="headerlink" href="#create-custom-xapi-module" title="Permanent link">&para;</a></h1>
-<p>This guide describes how to create a <strong>custom xAPI module</strong> in Virto Commerce. xAPI modules extend the GraphQL-based Storefront API by introducing new types, queries, and mutations while following the platform’s modular architecture and conventions.</p>
-<p>The guide focuses on a <strong>basic but production-aligned setup</strong> and assumes familiarity with:</p>
-<ul>
-<li>.NET SDK</li>
-<li>C# and ASP.NET Core</li>
-<li>GraphQL concepts</li>
-<li>Virto Commerce Platform fundamentals</li>
-</ul>
-<h2 id="install-module-template">Install module template<a class="headerlink" href="#install-module-template" title="Permanent link">&para;</a></h2>
-<p>Virto Commerce provides official .NET templates that scaffold modules with the recommended structure.</p>
+<p>An <strong>xAPI module</strong> extends the GraphQL Storefront API with new types, queries, and mutations. This page covers only the parts that are specific to xAPI. For everything generic to a Virto Commerce module, the project layout, dependency injection, the module manifest, building, and installing, start with the general guides:</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../Tutorials-and-How-tos/Tutorials/creating-custom-module/">Creating a custom module from a template</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new/">Module templates for dotnet new</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../Tutorials-and-How-tos/Tutorials/create-new-module-from-scratch/">Creating a module from scratch</a></p>
+<h2 id="scaffold-xapi-module">Scaffold xAPI module<a class="headerlink" href="#scaffold-xapi-module" title="Permanent link">&para;</a></h2>
+<p>Scaffold with the <strong>vc-module-xapi</strong> template, or <strong>vc-module-dba-xapi</strong> if the module also needs its own database. Install the templates and run <code>dotnet new</code> as described in <a href="../../Tutorials-and-How-tos/Tutorials/module-templates-for-dotnet-new/">Module templates for dotnet new</a>. The xAPI command is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dotnet</span> <span class="n">new</span> <span class="n">vc-module-xapi</span> <span class="p">-</span><span class="n">-ModuleName</span> <span class="n">XYourModule</span> <span class="p">-</span><span class="n">-Author</span> <span class="s2">&quot;Your Name&quot;</span> <span class="p">-</span><span class="n">-CompanyName</span> <span class="n">YourCompany</span>
+</code></pre></div>
+<p>The template generates a module whose xAPI code lives in the <strong>{Module}.Data</strong> project. The relevant folders, empty and ready for you to fill in, are <code>Queries</code>, <code>Commands</code>, <code>Schemas</code>, <code>Aggregates</code>, and <code>Services</code>, alongside <code>XapiAssemblyMarker.cs</code>. The schema is wired up in the <strong>{Module}.Web</strong> project's <strong>Module.cs</strong>.</p>
+<h2 id="register-schema">Register schema<a class="headerlink" href="#register-schema" title="Permanent link">&para;</a></h2>
+<p>The template already wires the module's schema in <strong>Module.cs</strong>, keyed off the module's <code>XapiAssemblyMarker</code>. You rarely change this, but it explains how your components are discovered.</p>
+<div class="highlight"><span class="filename">Module.cs</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">serviceCollection</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// ... register your services ...</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GraphQLBuilder</span><span class="p">(</span><span class="n">serviceCollection</span><span class="p">,</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSchema</span><span class="p">(</span><span class="n">serviceCollection</span><span class="p">,</span><span class="w"> </span><span class="k">typeof</span><span class="p">(</span><span class="n">XapiAssemblyMarker</span><span class="p">));</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">serviceCollection</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">ScopedSchemaFactory</span><span class="o">&lt;</span><span class="n">XapiAssemblyMarker</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PostInitialize</span><span class="p">(</span><span class="n">IApplicationBuilder</span><span class="w"> </span><span class="n">appBuilder</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">appBuilder</span><span class="p">.</span><span class="n">UseScopedSchema</span><span class="o">&lt;</span><span class="n">XapiAssemblyMarker</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;XYourModule&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</code></pre></div>
+<p>Every query, mutation, and GraphQL type in the module is discovered through <code>XapiAssemblyMarker</code>, so you do not register them one by one. <code>GraphQLBuilder</code> comes from <code>GraphQL.MicrosoftDI</code>; <code>ScopedSchemaFactory</code> and <code>UseScopedSchema</code> come from <code>VirtoCommerce.Xapi.Core</code>.</p>
+<h2 id="add-query">Add query<a class="headerlink" href="#add-query" title="Permanent link">&para;</a></h2>
+<p>A query is made of four pieces, all placed in the <strong>{Module}.Data</strong> project.</p>
 <ol>
-<li>Open a command-line interface and navigate to your source directory.</li>
 <li>
-<p>Install (or update) the module templates:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet new install VirtoCommerce.Module.Template
+<p>The <strong>request</strong> derives from <code>Query&lt;TResponse&gt;</code> and declares its GraphQL arguments:</p>
+<div class="highlight"><span class="filename">Queries/GetYourModelQuery.cs</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GetYourModelQuery</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Query</span><span class="o">&lt;</span><span class="n">YourModelResponse</span><span class="o">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">QueryArgument</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetArguments</span><span class="p">()</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QueryArgument</span><span class="o">&lt;</span><span class="n">NonNullGraphType</span><span class="o">&lt;</span><span class="n">StringGraphType</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Map</span><span class="p">(</span><span class="n">IResolveFieldContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="n">Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">GetArgument</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
 </code></pre></div>
 </li>
-</ol>
-<p>Now, you can use one of the following templates:</p>
-<table>
-<thead>
-<tr>
-<th>Template Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-module-dba-xapi-template">vc-module-dba-xapi</a></td>
-<td>Creates a new Virto Commerce module with DB Agnostic and xAPI support.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-module-dba-template">vc-module-dba</a></td>
-<td>Creates a new Virto Commerce module with DB Agnostic support.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-module-xapi-template">vc-module-xapi</a></td>
-<td>Creates a new Virto Commerce module with xAPI support.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/VirtoCommerce/vc-cli-module-template/tree/main/templates/vc-crud-template">vc-crud</a></td>
-<td>Creates all the classes needed for CRUD operations.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="generate-module-structure">Generate module structure<a class="headerlink" href="#generate-module-structure" title="Permanent link">&para;</a></h2>
-<p>Create a new xAPI module using the provided template.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dotnet new vc-module-xapi --ModuleName XYourModule --Author &quot;Your Name&quot; --CompanyName YourCompany
-</code></pre></div>
-<p>This command generates a solution with the following structure:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>XYourModule/
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── src/
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   └── XYourModule.Web/
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│       ├── Module.cs
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│       ├── Schemas/
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│       ├── Queries/
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│       ├── Commands/
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│       ├── Types/
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│       └── Services/
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>├── tests/
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>└── module.manifest
-</code></pre></div>
-<p>Open the solution in Visual Studio and ensure it builds successfully.</p>
-<h2 id="register-graphql-schema">Register GraphQL schema<a class="headerlink" href="#register-graphql-schema" title="Permanent link">&para;</a></h2>
-<p>In Virto Commerce modules, GraphQL schemas and components are registered during the module lifecycle. Each module defines its lifecycle in <strong>module.cs</strong>:</p>
-<ul>
-<li><strong>Initialize</strong>: Register services, repositories, and dependencies.</li>
-<li><strong>PostInitialize</strong>: Register GraphQL schemas and extend xAPI components. This ensures your types, queries, and mutations participate in the platform’s modular schema composition.</li>
-</ul>
-<div class="highlight"><span class="filename">module.cs</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Module</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IModule</span>
+<li>
+<p>The <strong>handler</strong> implements <code>IQueryHandler&lt;TQuery, TResponse&gt;</code>:</p>
+<div class="highlight"><span class="filename">Queries/GetYourModelQueryHandler.cs</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GetYourModelQueryHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IQueryHandler</span><span class="o">&lt;</span><span class="n">GetYourModelQuery</span><span class="p">,</span><span class="w"> </span><span class="n">YourModelResponse</span><span class="o">&gt;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">services</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="c1">// Register application services</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="n">services</span><span class="p">.</span><span class="n">AddTransient</span><span class="o">&lt;</span><span class="n">IYourService</span><span class="p">,</span><span class="w"> </span><span class="n">YourService</span><span class="o">&gt;</span><span class="p">();</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="c1">// Register CQRS handlers using MediatR</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="n">services</span><span class="p">.</span><span class="n">AddMediatR</span><span class="p">(</span><span class="n">cfg</span><span class="w"> </span><span class="o">=&gt;</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">            </span><span class="n">cfg</span><span class="p">.</span><span class="n">RegisterServicesFromAssembly</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">Module</span><span class="p">).</span><span class="n">Assembly</span><span class="p">));</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IYourService</span><span class="w"> </span><span class="n">_service</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">GetYourModelQueryHandler</span><span class="p">(</span><span class="n">IYourService</span><span class="w"> </span><span class="n">service</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">YourModelResponse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Handle</span><span class="p">(</span><span class="n">GetYourModelQuery</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_service</span><span class="p">.</span><span class="n">GetByIdAsync</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">YourModelResponse</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="p">};</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PostInitialize</span><span class="p">(</span><span class="n">IApplicationBuilder</span><span class="w"> </span><span class="n">appBuilder</span><span class="p">)</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="c1">// Register GraphQL schema builder for this module</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GraphQLBuilder</span><span class="p">(</span><span class="n">appBuilder</span><span class="p">.</span><span class="n">ApplicationServices</span><span class="p">,</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=&gt;</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSchema</span><span class="p">(</span><span class="n">appBuilder</span><span class="p">.</span><span class="n">ApplicationServices</span><span class="p">,</span><span class="w"> </span><span class="k">typeof</span><span class="p">(</span><span class="n">YourModuleAssemblyMarker</span><span class="p">));</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="p">});</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="define-and-register-graphql-types">Define and register GraphQL types<a class="headerlink" href="#define-and-register-graphql-types" title="Permanent link">&para;</a></h2>
-<p>GraphQL types map your domain models to the GraphQL schema. Follow these steps:</p>
-<ol>
+</li>
 <li>
-<p>Create a GraphQL type class for your domain model:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">YourCustomType</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ExtendableGraphType</span><span class="o">&lt;</span><span class="n">YourModel</span><span class="o">&gt;</span>
+<p>The <strong>GraphQL type</strong> derives from <code>ExtendableGraphType&lt;TResponse&gt;</code>:</p>
+<div class="highlight"><span class="filename">Schemas/YourModelType.cs</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">YourModelType</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ExtendableGraphType</span><span class="o">&lt;</span><span class="n">YourModelResponse</span><span class="o">&gt;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">YourCustomType</span><span class="p">(</span><span class="n">IMediator</span><span class="w"> </span><span class="n">mediator</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">YourModelType</span><span class="p">()</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;YourCustomType&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Represents a custom domain object.&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="n">Field</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Id</span><span class="p">).</span><span class="n">Description</span><span class="p">(</span><span class="s">&quot;Unique identifier.&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">Field</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">nullable</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">).</span><span class="n">Description</span><span class="p">(</span><span class="s">&quot;Display name.&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="n">Field</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">CreatedDate</span><span class="p">,</span><span class="w"> </span><span class="n">nullable</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">)</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">            </span><span class="p">.</span><span class="n">Description</span><span class="p">(</span><span class="s">&quot;Creation date.&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">}</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="n">Field</span><span class="o">&lt;</span><span class="n">NonNullGraphType</span><span class="o">&lt;</span><span class="n">StringGraphType</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">).</span><span class="n">Resolve</span><span class="p">(</span><span class="n">context</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">Source</span><span class="p">.</span><span class="n">Model</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">Field</span><span class="o">&lt;</span><span class="n">StringGraphType</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">).</span><span class="n">Resolve</span><span class="p">(</span><span class="n">context</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">Source</span><span class="p">.</span><span class="n">Model</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 <li>
-<p>Register the GraphQL type in the DI container, typically in <code>Module.Initialize</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">services</span><span class="p">.</span><span class="n">AddSchemaType</span><span class="o">&lt;</span><span class="n">YourCustomType</span><span class="o">&gt;</span><span class="p">();</span>
-</code></pre></div>
-</li>
-<li>
-<p>Verify your type is included in your module’s schema by running the GraphQL playground and checking that <code>YourCustomType</code> is available for queries or mutations.</p>
-</li>
-</ol>
-<h2 id="implement-queries-and-mutations">Implement queries and mutations<a class="headerlink" href="#implement-queries-and-mutations" title="Permanent link">&para;</a></h2>
-<p>Virto Commerce xAPI modules follow the <strong>CQRS pattern</strong> using MediatR. Follow these steps to implement your own queries and mutations:</p>
-<ol>
-<li>
-<p>Create a query:</p>
-<ol>
-<li>In your module project, create a new file in the <code>Queries/</code> folder, e.g., <code>GetYourModelQuery.cs</code>.</li>
-<li>
-<p>Define the query class that represents the request:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GetYourModelQuery</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IRequest</span><span class="o">&lt;</span><span class="n">YourModel</span><span class="o">&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+<p>The <strong>builder</strong> derives from <code>QueryBuilder&lt;TQuery, TResponse, TResponseType&gt;</code> and names the GraphQL field. The base builder dispatches the request through MediatR and runs authorization:</p>
+<div class="highlight"><span class="filename">Queries/GetYourModelQueryBuilder.cs</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GetYourModelQueryBuilder</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">QueryBuilder</span><span class="o">&lt;</span><span class="n">GetYourModelQuery</span><span class="p">,</span><span class="w"> </span><span class="n">YourModelResponse</span><span class="p">,</span><span class="w"> </span><span class="n">YourModelType</span><span class="o">&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">GetYourModelQueryBuilder</span><span class="p">(</span><span class="n">IMediator</span><span class="w"> </span><span class="n">mediator</span><span class="p">,</span><span class="w"> </span><span class="n">IAuthorizationService</span><span class="w"> </span><span class="n">authorizationService</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">mediator</span><span class="p">,</span><span class="w"> </span><span class="n">authorizationService</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;yourModel&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 </ol>
-</li>
-<li>
-<p>Create a query handler:</p>
-<ol>
-<li>In the same <code>Queries/</code> folder, create a handler class, e.g., <code>GetYourModelQueryHandler.cs</code>.</li>
-<li>
-<p>Implement <code>IRequestHandler&lt;TRequest, TResponse&gt;</code> to handle the query:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GetYourModelQueryHandler</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="n">IRequestHandler</span><span class="o">&lt;</span><span class="n">GetYourModelQuery</span><span class="p">,</span><span class="w"> </span><span class="n">YourModel</span><span class="o">&gt;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">{</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IYourService</span><span class="w"> </span><span class="n">_service</span><span class="p">;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">GetYourModelQueryHandler</span><span class="p">(</span><span class="n">IYourService</span><span class="w"> </span><span class="n">service</span><span class="p">)</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="n">_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">YourModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Handle</span><span class="p">(</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="n">GetYourModelQuery</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">)</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_service</span><span class="p">.</span><span class="n">GetByIdAsync</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">}</span>
-</code></pre></div>
-</li>
-</ol>
-</li>
-<li>
-<p>Create a mutation (command):</p>
-<ol>
-<li>In the <code>Commands/</code> folder, create a file <code>UpdateYourModelCommand.cs</code>.</li>
-<li>
-<p>Define the command class:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UpdateYourModelCommand</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IRequest</span><span class="o">&lt;</span><span class="n">YourModel</span><span class="o">&gt;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
-</code></pre></div>
-</li>
-</ol>
-</li>
-<li>
-<p>Define the GraphQL input type:</p>
-<ol>
-<li>In the <code>Types/</code> folder, create a new file <code>UpdateYourModelInputType.cs</code>.</li>
-<li>
-<p>Map the command properties to a GraphQL input type:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UpdateYourModelInputType</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="n">InputObjectGraphType</span><span class="o">&lt;</span><span class="n">UpdateYourModelCommand</span><span class="o">&gt;</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">{</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">UpdateYourModelInputType</span><span class="p">()</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UpdateYourModelInput&quot;</span><span class="p">;</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="n">Field</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="n">Field</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">nullable</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
-</code></pre></div>
-</li>
-</ol>
-</li>
-</ol>
+<h2 id="add-mutation">Add mutation<a class="headerlink" href="#add-mutation" title="Permanent link">&para;</a></h2>
+<p>A mutation follows the same shape, using the command base types:</p>
+<ul>
+<li>The <strong>command</strong> implements <code>ICommand&lt;TResult&gt;</code> and carries the input fields.</li>
+<li>The <strong>input type</strong> derives from <code>InputObjectGraphType&lt;TCommand&gt;</code>.</li>
+<li>The <strong>handler</strong> implements <code>IRequestHandler&lt;TCommand, TResult&gt;</code> (MediatR).</li>
+<li>The <strong>builder</strong> derives from <code>CommandBuilder&lt;TCommand, TResult, TInputType, TResultGraphType&gt;</code> and overrides <code>Name</code> with the mutation field name.</li>
+</ul>
 <p><br>
 <br></p>
 <hr />
