@@ -19,5 +19,5 @@ Try our interactive demo to explore key features in action:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../state-machines">← State machines</a>
-    <a href="../../Vendor-portal/overview">Vendor portal overview→</a>
+    <a href="../virto-oz">Virto OZ →</a>
 </div>

@@ -1,6 +1,6 @@
 # Marketplace Products
 
-The Operator portal allows operators to manage products uploaded by vendors. The Marketplace products section in the main menu displays all the products uploaded by all vendors in the marketplace, including product descriptions, images, categories, status, and vendor. Operators can list, view, edit, approve, or decline uploaded products and provide the reason for the decline. 
+The Operator portal allows operators to view and manage products uploaded by vendors. The Marketplace products section in the main menu displays all the products uploaded by all vendors in the marketplace, including product descriptions, configurations (if any), images, categories, status, and vendor. Operators can list, view, edit, approve, or decline uploaded products and provide the reason for the decline. 
 
 Let's explore most common scenarios and:
 
