@@ -28,14 +28,13 @@ import { useDataTablePagination } from "@vc-shell/framework";
 const pagination = useDataTablePagination({
   pageSize: 20,
   totalCount: computed(() => searchResult.value?.totalCount ?? 0),
+  onPageChange: ({ skip }) => loadItems({ ...searchQuery.value, skip }),
 });
 ```
 
 ```vue
 <VcDataTable :items="items" :total-count="pagination.totalCount" :pagination="pagination" @pagination-click="pagination.goToPage" />
 ```
-
-> **Note:** Let `@pagination-click` only update the page (`goToPage`) and load from one watcher that reads `pagination.skip` together with sort and search — see the recipe below. `onPageChange` (load on each page change) still works for simple tables, but do not combine it with that watcher or the page loads twice.
 
 ## API
 
@@ -107,12 +106,6 @@ watch(sortExpression, () => loadItems());
     :total-count="pagination.totalCount"
     :pagination="pagination"
     @pagination-click="pagination.goToPage"
-    @search="
-      (kw) => {
-        searchValue = kw;
-        pagination.setPage(1);
-      }
-    "
     v-model:sort-field="sortField"
     v-model:sort-order="sortOrder"
   >
@@ -146,6 +139,7 @@ export function useOffers() {
   const pagination = useDataTablePagination({
     pageSize: 20,
     totalCount: computed(() => searchResult.value?.totalCount ?? 0),
+    onPageChange: ({ skip }) => loadOffers({ ...searchQuery.value, skip }),
   });
 
   return {
@@ -156,7 +150,7 @@ export function useOffers() {
 }
 ```
 
-The blade owns the single loader watch (reading `pagination.skip` with sort/search) and binds:
+Blade then simply binds:
 
 ```vue
 <VcDataTable :total-count="pagination.totalCount" :pagination="pagination" @pagination-click="pagination.goToPage" />
