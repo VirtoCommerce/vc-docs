@@ -239,6 +239,108 @@ Pass `state-key` and `VcDataTable` persists column widths, order, sort, filters,
 
 `state-storage` defaults to `"local"` (survives reload) and accepts `"session"` for tab-scoped state. Keep `state-key` stable across releases. Renaming it discards every user's saved column layout.
 
+## Recipe: persist sort, search, and pagination in the URL
+
+The `state-key` **prop** above persists *column layout* (widths, order, visibility) to `localStorage`. To make the *view itself* — the current sort, search keyword, and page — survive a reload **and** travel in a shareable link, opt in to URL-query persistence by passing a `stateKey` **option** to the state composables. They read their initial value from the blade URL on creation and write changes back as you interact.
+
+!!! note "Two different `state-key`s"
+    The `state-key` **prop** on `VcDataTable` is column layout in `localStorage`. The `stateKey` **option** on `useDataTableSort` / `useTableSearch` / `useDataTablePagination` is view state in the URL query. They are independent stores; using the same string for both is fine and keeps things readable.
+
+Two prerequisites:
+
+- The blade must be **URL-addressable** — give it a `url` in `defineBlade`. For a non-routable or nested blade the query service is a no-op and nothing is persisted.
+- Each `stateKey` must be **unique** among tables that can be visible at the same time (e.g. a list and a child list in the same stack), so their query params do not collide.
+
+```ts title="pages/orders-list.vue (script)"
+import { onMounted, watch } from "vue";
+import { useBlade, useDataTableSort, useTableSearch, useDataTablePagination } from "@vc-shell/framework";
+import { debounce } from "lodash-es";
+import { useOrdersList } from "../composables/useOrdersList";
+
+defineBlade({ name: "Orders", url: "/orders", isWorkspace: true });
+
+const { items, loading, totalCount, loadOrders, searchQuery } = useOrdersList();
+
+// Same stateKey across all three — one namespace per table.
+const { sortField, sortOrder, sortExpression } = useDataTableSort({
+  stateKey: "orders_list",
+  initialField: "createdDate",
+  initialDirection: "DESC",
+});
+const { searchValue } = useTableSearch({ stateKey: "orders_list" });
+const pagination = useDataTablePagination({
+  stateKey: "orders_list",
+  pageSize: 20,
+  totalCount,
+});
+
+// Initial load reads the values already restored from the URL.
+const load = () =>
+  loadOrders({
+    sort: sortExpression.value,
+    keyword: searchValue.value || undefined,
+    skip: pagination.skip,
+    take: 20,
+  });
+
+onMounted(() => load());
+
+// A new keyword must reset to page 1 — otherwise a saved page beyond the
+// filtered result set strands the reload on an empty page.
+watch(searchValue, () => pagination.setPage(1));
+watch([sortExpression, searchValue, () => pagination.skip], debounce(load, 300));
+```
+
+```vue title="pages/orders-list.vue (template fragment)"
+<VcDataTable
+  :items="items"
+  :loading="loading"
+  :pagination="pagination"
+  :total-count="pagination.totalCount"
+  :searchable="true"
+  state-key="orders_list"
+  v-model:sort-field="sortField"
+  v-model:sort-order="sortOrder"
+  v-model:search-value="searchValue"
+  @pagination-click="pagination.goToPage"
+>
+  <VcColumn id="number" :title="$t('ORDERS.LIST.NUMBER')" :sortable="true" />
+  <VcColumn id="createdDate" :title="$t('ORDERS.LIST.CREATED')" :sortable="true" type="date-ago" />
+</VcDataTable>
+```
+
+The URL ends up with `?orders_list_sort=createdDate:ASC&orders_list_search=acme&orders_list_page=3`. Writes use `router.replace` (no extra history entries) and page 1 is encoded as *absent* rather than `_page=1`.
+
+!!! warning "Always reset the page when search changes"
+    `watch(searchValue, () => pagination.setPage(1))` is not optional. If the user is on page 3 and types a query that returns one page, leaving `_page=3` in the URL means the next reload requests page 3 of the filtered set — `skip` overshoots the results and the table shows an empty "nothing found" state. Resetting to page 1 drops `_page` from the URL and keeps the `(search, page)` pair consistent. The same applies to applying a filter.
+
+### When pagination lives in the composable
+
+If `useDataTablePagination` is created inside your list composable (so the page can drive `onPageChange`), thread the `stateKey` through as an option rather than hard-coding it — the blade still owns the key:
+
+```ts title="composables/useOrdersList.ts (extract)"
+export function useOrdersList(options?: { pageSize?: number; stateKey?: string }) {
+  // ...
+  const pagination = useDataTablePagination({
+    stateKey: options?.stateKey,
+    pageSize: options?.pageSize ?? 20,
+    totalCount: computed(() => searchResult.value?.totalCount ?? 0),
+    onPageChange: ({ skip }) => loadOrders({ ...searchQuery.value, skip }),
+  });
+  // ...
+}
+```
+
+```ts title="pages/orders-list.vue"
+const { items, pagination, loadOrders } = useOrdersList({ stateKey: "orders_list" });
+```
+
+Make sure the blade's **initial** load passes `skip: pagination.skip` (and `keyword`) so the restored page and keyword are actually applied on first paint — a load that ignores `skip` always shows page 1 regardless of the URL.
+
+- [useDataTableSort API reference.](../../composables/data/useDataTableSort.md)
+- [useTableSearch API reference.](../../composables/data/useTableSearch.md)
+- [useDataTablePagination API reference.](../../composables/data/useDataTablePagination.md)
+
 ## Variations
 
 | Variation | Change |
@@ -246,6 +348,7 @@ Pass `state-key` and `VcDataTable` persists column widths, order, sort, filters,
 | Hide pagination. | Omit the `pagination` prop. |
 | Server-side filtering. | Merge filter values into the search query, like `sort`. |
 | Highlight the active row. | Bind `v-model:active-item-id` to the selected record ID. |
+| Persist sort, search, and page in the URL. | Pass a `stateKey` option to the sort/search/pagination composables (see recipe above). |
 | Fixed scroll height. | `:scrollable="true"` plus `scroll-height="400px"`. |
 | Infinite scroll instead of pages. | `:infinite-scroll="true"` and listen to `@load-more`. |
 | Empty state with a call to action. | `:empty-state="{ icon, title, actionLabel, actionHandler }"`. |
