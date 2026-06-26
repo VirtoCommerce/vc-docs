@@ -29217,7 +29217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../../../vc-data-table.md" class="md-nav__link">
+      <a href="../../components/data-display/vc-data-table/" class="md-nav__link">
         VcDataTable
       </a>
     </li>
@@ -32910,6 +32910,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#recipe-persist-sort-search-and-pagination-in-the-url" class="md-nav__link">
+        Recipe: persist sort, search, and pagination in the URL
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Recipe: persist sort, search, and pagination in the URL">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#when-pagination-lives-in-the-composable" class="md-nav__link">
+        When pagination lives in the composable
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#variations" class="md-nav__link">
         Variations
     </a>
@@ -32939,7 +32965,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 09:06:58 UTC">June 26, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32966,7 +32992,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li>A list blade scaffolded. See <a href="../blades/">Blades guide</a>.</li>
 <li>An API client generated for the resource you list. See <a href="../../concepts/api-clients/">API clients</a>.</li>
-<li>Familiarity with the <strong>VcDataTable</strong> component. See <a href="../../components/data-display/vc-data-table.md">VcDataTable reference</a>.</li>
+<li>Familiarity with the <strong>VcDataTable</strong> component. See <a href="../../components/data-display/vc-data-table/">VcDataTable reference</a>.</li>
 </ul>
 <h2 id="recipe-server-side-paginated-list">Recipe: server-side paginated list<a class="headerlink" href="#recipe-server-side-paginated-list" title="Permanent link">&para;</a></h2>
 <p>For any dataset that does not fit in memory, page on the server. Pair <code>useDataTablePagination</code> with <code>useApiClient</code> and <code>useAsync</code>. The composable owns the search query, page size, and total count; the page binds the returned pagination object straight to <code>VcDataTable</code>.</p>
@@ -33160,6 +33186,97 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">&lt;/</span><span class="nt">VcDataTable</span><span class="p">&gt;</span>
 </code></pre></div>
 <p><code>state-storage</code> defaults to <code>"local"</code> (survives reload) and accepts <code>"session"</code> for tab-scoped state. Keep <code>state-key</code> stable across releases. Renaming it discards every user's saved column layout.</p>
+<h2 id="recipe-persist-sort-search-and-pagination-in-the-url">Recipe: persist sort, search, and pagination in the URL<a class="headerlink" href="#recipe-persist-sort-search-and-pagination-in-the-url" title="Permanent link">&para;</a></h2>
+<p>The <code>state-key</code> <strong>prop</strong> above persists <em>column layout</em> (widths, order, visibility) to <code>localStorage</code>. To make the <em>view itself</em> — the current sort, search keyword, and page — survive a reload <strong>and</strong> travel in a shareable link, opt in to URL-query persistence by passing a <code>stateKey</code> <strong>option</strong> to the state composables. They read their initial value from the blade URL on creation and write changes back as you interact.</p>
+<div class="admonition note">
+<p class="admonition-title">Two different <code>state-key</code>s</p>
+<p>The <code>state-key</code> <strong>prop</strong> on <code>VcDataTable</code> is column layout in <code>localStorage</code>. The <code>stateKey</code> <strong>option</strong> on <code>useDataTableSort</code> / <code>useTableSearch</code> / <code>useDataTablePagination</code> is view state in the URL query. They are independent stores; using the same string for both is fine and keeps things readable.</p>
+</div>
+<p>Two prerequisites:</p>
+<ul>
+<li>The blade must be <strong>URL-addressable</strong> — give it a <code>url</code> in <code>defineBlade</code>. For a non-routable or nested blade the query service is a no-op and nothing is persisted.</li>
+<li>Each <code>stateKey</code> must be <strong>unique</strong> among tables that can be visible at the same time (e.g. a list and a child list in the same stack), so their query params do not collide.</li>
+</ul>
+<div class="highlight"><span class="filename">pages/orders-list.vue (script)</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">onMounted</span><span class="p">,</span><span class="w"> </span><span class="nx">watch</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vue&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useBlade</span><span class="p">,</span><span class="w"> </span><span class="nx">useDataTableSort</span><span class="p">,</span><span class="w"> </span><span class="nx">useTableSearch</span><span class="p">,</span><span class="w"> </span><span class="nx">useDataTablePagination</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@vc-shell/framework&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">debounce</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;lodash-es&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useOrdersList</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;../composables/useOrdersList&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nx">defineBlade</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Orders&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/orders&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">isWorkspace</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">items</span><span class="p">,</span><span class="w"> </span><span class="nx">loading</span><span class="p">,</span><span class="w"> </span><span class="nx">totalCount</span><span class="p">,</span><span class="w"> </span><span class="nx">loadOrders</span><span class="p">,</span><span class="w"> </span><span class="nx">searchQuery</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useOrdersList</span><span class="p">();</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1">// Same stateKey across all three — one namespace per table.</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">sortField</span><span class="p">,</span><span class="w"> </span><span class="nx">sortOrder</span><span class="p">,</span><span class="w"> </span><span class="nx">sortExpression</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useDataTableSort</span><span class="p">({</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="nx">stateKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;orders_list&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">  </span><span class="nx">initialField</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;createdDate&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span><span class="nx">initialDirection</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;DESC&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">});</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">searchValue</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useTableSearch</span><span class="p">({</span><span class="w"> </span><span class="nx">stateKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;orders_list&quot;</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="kd">const</span><span class="w"> </span><span class="nx">pagination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useDataTablePagination</span><span class="p">({</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">  </span><span class="nx">stateKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;orders_list&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">  </span><span class="nx">pageSize</span><span class="o">:</span><span class="w"> </span><span class="kt">20</span><span class="p">,</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">  </span><span class="nx">totalCount</span><span class="p">,</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="p">});</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="c1">// Initial load reads the values already restored from the URL.</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="kd">const</span><span class="w"> </span><span class="nx">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">  </span><span class="nx">loadOrders</span><span class="p">({</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">    </span><span class="nx">sort</span><span class="o">:</span><span class="w"> </span><span class="kt">sortExpression.value</span><span class="p">,</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="nx">keyword</span><span class="o">:</span><span class="w"> </span><span class="kt">searchValue.value</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">    </span><span class="nx">skip</span><span class="o">:</span><span class="w"> </span><span class="kt">pagination.skip</span><span class="p">,</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span><span class="nx">take</span><span class="o">:</span><span class="w"> </span><span class="kt">20</span><span class="p">,</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="nx">onMounted</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">load</span><span class="p">());</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="c1">// A new keyword must reset to page 1 — otherwise a saved page beyond the</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="c1">// filtered result set strands the reload on an empty page.</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="nx">watch</span><span class="p">(</span><span class="nx">searchValue</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">pagination</span><span class="p">.</span><span class="nx">setPage</span><span class="p">(</span><span class="mf">1</span><span class="p">));</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="nx">watch</span><span class="p">([</span><span class="nx">sortExpression</span><span class="p">,</span><span class="w"> </span><span class="nx">searchValue</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">pagination</span><span class="p">.</span><span class="nx">skip</span><span class="p">],</span><span class="w"> </span><span class="nx">debounce</span><span class="p">(</span><span class="nx">load</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">pages/orders-list.vue (template fragment)</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">VcDataTable</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="p">:</span><span class="na">items</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">items</span><span class="s">&quot;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  <span class="p">:</span><span class="na">loading</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">loading</span><span class="s">&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  <span class="p">:</span><span class="na">pagination</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">pagination</span><span class="s">&quot;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  <span class="p">:</span><span class="na">total-count</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">totalCount</span><span class="s">&quot;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  <span class="p">:</span><span class="na">searchable</span><span class="o">=</span><span class="s">&quot;</span><span class="kc">true</span><span class="s">&quot;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  <span class="na">state-key</span><span class="o">=</span><span class="s">&quot;orders_list&quot;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="na">v-model</span><span class="p">:</span><span class="na">sort-field</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">sortField</span><span class="s">&quot;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  <span class="na">v-model</span><span class="p">:</span><span class="na">sort-order</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">sortOrder</span><span class="s">&quot;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>  <span class="na">v-model</span><span class="p">:</span><span class="na">search-value</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">searchValue</span><span class="s">&quot;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>  <span class="p">@</span><span class="na">pagination-click</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">goToPage</span><span class="s">&quot;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  <span class="p">&lt;</span><span class="nt">VcColumn</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="p">:</span><span class="na">title</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">$t</span><span class="p">(</span><span class="s1">&#39;ORDERS.LIST.NUMBER&#39;</span><span class="p">)</span><span class="s">&quot;</span> <span class="p">:</span><span class="na">sortable</span><span class="o">=</span><span class="s">&quot;</span><span class="kc">true</span><span class="s">&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  <span class="p">&lt;</span><span class="nt">VcColumn</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;createdDate&quot;</span> <span class="p">:</span><span class="na">title</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">$t</span><span class="p">(</span><span class="s1">&#39;ORDERS.LIST.CREATED&#39;</span><span class="p">)</span><span class="s">&quot;</span> <span class="p">:</span><span class="na">sortable</span><span class="o">=</span><span class="s">&quot;</span><span class="kc">true</span><span class="s">&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;date-ago&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="p">&lt;/</span><span class="nt">VcDataTable</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>The URL ends up with <code>?orders_list_sort=createdDate:ASC&amp;orders_list_search=acme&amp;orders_list_page=3</code>. Writes use <code>router.replace</code> (no extra history entries) and page 1 is encoded as <em>absent</em> rather than <code>_page=1</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Always reset the page when search changes</p>
+<p><code>watch(searchValue, () =&gt; pagination.setPage(1))</code> is not optional. If the user is on page 3 and types a query that returns one page, leaving <code>_page=3</code> in the URL means the next reload requests page 3 of the filtered set — <code>skip</code> overshoots the results and the table shows an empty "nothing found" state. Resetting to page 1 drops <code>_page</code> from the URL and keeps the <code>(search, page)</code> pair consistent. The same applies to applying a filter.</p>
+</div>
+<h3 id="when-pagination-lives-in-the-composable">When pagination lives in the composable<a class="headerlink" href="#when-pagination-lives-in-the-composable" title="Permanent link">&para;</a></h3>
+<p>If <code>useDataTablePagination</code> is created inside your list composable (so the page can drive <code>onPageChange</code>), thread the <code>stateKey</code> through as an option rather than hard-coding it — the blade still owns the key:</p>
+<div class="highlight"><span class="filename">composables/useOrdersList.ts (extract)</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">useOrdersList</span><span class="p">(</span><span class="nx">options</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pageSize?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">stateKey?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="c1">// ...</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">pagination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useDataTablePagination</span><span class="p">({</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nx">stateKey</span><span class="o">:</span><span class="w"> </span><span class="kt">options?.stateKey</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nx">pageSize</span><span class="o">:</span><span class="w"> </span><span class="kt">options?.pageSize</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nx">totalCount</span><span class="o">:</span><span class="w"> </span><span class="kt">computed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">searchResult</span><span class="p">.</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">totalCount</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nx">onPageChange</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">skip</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">loadOrders</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">searchQuery</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">skip</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="c1">// ...</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">pages/orders-list.vue</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">items</span><span class="p">,</span><span class="w"> </span><span class="nx">pagination</span><span class="p">,</span><span class="w"> </span><span class="nx">loadOrders</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useOrdersList</span><span class="p">({</span><span class="w"> </span><span class="nx">stateKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;orders_list&quot;</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<p>Make sure the blade's <strong>initial</strong> load passes <code>skip: pagination.skip</code> (and <code>keyword</code>) so the restored page and keyword are actually applied on first paint — a load that ignores <code>skip</code> always shows page 1 regardless of the URL.</p>
+<ul>
+<li><a href="../../composables/data/useDataTableSort/">useDataTableSort API reference.</a></li>
+<li><a href="../../composables/data/useTableSearch/">useTableSearch API reference.</a></li>
+<li><a href="../../composables/data/useDataTablePagination/">useDataTablePagination API reference.</a></li>
+</ul>
 <h2 id="variations">Variations<a class="headerlink" href="#variations" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -33182,6 +33299,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>Bind <code>v-model:active-item-id</code> to the selected record ID.</td>
 </tr>
 <tr>
+<td>Persist sort, search, and page in the URL.</td>
+<td>Pass a <code>stateKey</code> option to the sort/search/pagination composables (see recipe above).</td>
+</tr>
+<tr>
 <td>Fixed scroll height.</td>
 <td><code>:scrollable="true"</code> plus <code>scroll-height="400px"</code>.</td>
 </tr>
@@ -33201,7 +33322,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </table>
 <ul>
 <li>
-<p><a href="../../components/data-display/vc-data-table.md">VcDataTable full prop and event reference.</a></p>
+<p><a href="../../components/data-display/vc-data-table/">VcDataTable full prop and event reference.</a></p>
 </li>
 <li>
 <p><a href="../../concepts/api-clients/">API clients and the <code>useApiClient</code> contract.</a></p>
