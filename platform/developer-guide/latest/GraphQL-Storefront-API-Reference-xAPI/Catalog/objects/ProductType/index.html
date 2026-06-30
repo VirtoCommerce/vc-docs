@@ -32966,7 +32966,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:48:25 UTC">June 24, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2026 06:13:41 UTC">June 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33022,6 +33022,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>The maximum quantity that can be ordered for the product.</td>
 </tr>
 <tr>
+<td><code>packSize</code>  <mark>Int!</mark></td>
+<td>Number of items in a package (quantity step).</td>
+</tr>
+<tr>
+<td><code>relevanceScore</code>  <mark>Float</mark></td>
+<td>The product relevance score.</td>
+</tr>
+<tr>
 <td><code>outline</code>  <mark>String</mark></td>
 <td>The hierarchical outline.</td>
 </tr>
@@ -33055,11 +33063,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 <tr>
 <td><code>outerId</code>  <mark>String</mark></td>
-<td>The external Id of the category to which the product belongs.</td>
+<td>The outer identifier of the product.</td>
 </tr>
 <tr>
 <td><code>gtin</code> <mark>String</mark></td>
-<td>Global Trade Item Number.</td>
+<td>Global Trade Item Number (GTIN).</td>
+</tr>
+<tr>
+<td><code>manufacturerPartNumber</code> <mark>String</mark></td>
+<td>Manufacturer Part Number (MPN).</td>
+</tr>
+<tr>
+<td><code>weightUnit</code>  <mark>String</mark></td>
+<td>The weight unit.</td>
+</tr>
+<tr>
+<td><code>weight</code>  <mark>Float</mark></td>
+<td>The product weight.</td>
+</tr>
+<tr>
+<td><code>measureUnit</code>  <mark>String</mark></td>
+<td>The measure unit.</td>
+</tr>
+<tr>
+<td><code>height</code>  <mark>Float</mark></td>
+<td>The product height.</td>
+</tr>
+<tr>
+<td><code>width</code>  <mark>Float</mark></td>
+<td>The product width.</td>
+</tr>
+<tr>
+<td><code>length</code>  <mark>Float</mark></td>
+<td>The product length.</td>
 </tr>
 <tr>
 <td><code>brandName</code>  <mark>String</mark></td>
@@ -33122,8 +33158,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>The vendor associated with the product.</td>
 </tr>
 <tr>
+<td><code>rating</code> <a href="../CommonVendor/Rating/"> <mark>Rating</mark> </a></td>
+<td>The product rating.</td>
+</tr>
+<tr>
 <td><code>inWishlist</code>  <mark>Boolean!</mark></td>
 <td>Indicates whether the product is in the user's wishlist or not.</td>
+</tr>
+<tr>
+<td><code>wishlistIds</code>  <mark>[String]!</mark></td>
+<td>The IDs of the wishlists that contain the product.</td>
+</tr>
+<tr>
+<td><code>isPurchased</code>  <mark>Boolean!</mark></td>
+<td>Indicates whether the product has been purchased.</td>
 </tr>
 <tr>
 <td><code>associations(...)</code> <a href="../ProductAssociation/ProductAssociationConnection/"> <mark>ProductAssociationConnection</mark> </a></td>
@@ -33183,7 +33231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="err">value</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="err">label</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="err">displayOrder</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="err">proper</span><span class="kc">t</span><span class="err">yDic</span><span class="kc">t</span><span class="err">I</span><span class="kc">te</span><span class="err">ms</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="err">proper</span><span class="kc">t</span><span class="err">yDic</span><span class="kc">t</span><span class="err">io</span><span class="kc">nar</span><span class="err">yI</span><span class="kc">te</span><span class="err">ms</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">          </span><span class="err">pageI</span><span class="kc">nf</span><span class="err">o</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="err">e</span><span class="kc">n</span><span class="err">dCursor</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="err">hasNex</span><span class="kc">t</span><span class="err">Page</span>
@@ -33197,7 +33245,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">          </span><span class="p">}</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="err">id</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="kc">t</span><span class="err">ype</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="err">proper</span><span class="kc">t</span><span class="err">yType</span>
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">      </span><span class="err">mi</span><span class="kc">n</span><span class="err">Varia</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">Price</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="err">amou</span><span class="kc">nt</span>

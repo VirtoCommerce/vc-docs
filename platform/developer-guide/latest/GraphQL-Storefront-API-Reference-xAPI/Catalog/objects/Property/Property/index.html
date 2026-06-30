@@ -12297,6 +12297,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#value-types" class="md-nav__link">
+        Value types
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -32905,6 +32915,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#value-types" class="md-nav__link">
+        Value types
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -32926,7 +32946,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:48:25 UTC">June 24, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2026 06:13:41 UTC">June 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32982,12 +33002,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>The label of the property type.</td>
 </tr>
 <tr>
-<td><code>type</code>  <mark>String</mark></td>
-<td>The type or category of the propertyType.</td>
+<td><code>propertyType</code>  <mark>PropertyType!</mark></td>
+<td>The entity the property applies to: <code>Product</code>, <code>Variation</code>, <code>Category</code>, or <code>Catalog</code>.</td>
 </tr>
 <tr>
-<td><code>valueType</code>  <mark>String</mark></td>
-<td>The data type of the property values.</td>
+<td><code>propertyValueType</code>  <mark>PropertyValueType!</mark></td>
+<td>The data type of the property values. See <a href="#value-types">Value types</a> below for the full list.</td>
 </tr>
 <tr>
 <td><code>value</code>  <mark>PropertyValue</mark></td>
@@ -32998,8 +33018,72 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>The Id of the default value for the property type.</td>
 </tr>
 <tr>
-<td><code>propertyDictItems(...)</code> <a href="../PropertyDictItemConnection/"> <mark>PropertyDictionaryItemsConnection</mark> </a></td>
+<td><code>valueDisplayOrder</code>  <mark>Int</mark></td>
+<td>The display order of the property value.</td>
+</tr>
+<tr>
+<td><code>colorCode</code>  <mark>String</mark></td>
+<td>Color code in CSS format, used when <code>propertyValueType</code> is <code>Color</code>.</td>
+</tr>
+<tr>
+<td><code>group</code>  <mark>PropertyGroup</mark></td>
+<td>The property group the property belongs to.</td>
+</tr>
+<tr>
+<td><code>propertyDictionaryItems(...)</code> <a href="../PropertyDictItemConnection/"> <mark>PropertyDictionaryItemsConnection</mark> </a></td>
 <td>A connection to retrieve the dictionary items associated with the property type.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="value-types">Value types<a class="headerlink" href="#value-types" title="Permanent link">&para;</a></h2>
+<p>The <code>valueType</code> determines how a property value is stored and edited:</p>
+<table>
+<thead>
+<tr>
+<th>Value type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ShortText</code></td>
+<td>A single-line string.</td>
+</tr>
+<tr>
+<td><code>LongText</code></td>
+<td>A multi-line string.</td>
+</tr>
+<tr>
+<td><code>Html</code></td>
+<td>Rich text stored as HTML.</td>
+</tr>
+<tr>
+<td><code>Number</code></td>
+<td>A decimal number.</td>
+</tr>
+<tr>
+<td><code>Integer</code></td>
+<td>A whole number.</td>
+</tr>
+<tr>
+<td><code>Boolean</code></td>
+<td>A true or false flag.</td>
+</tr>
+<tr>
+<td><code>DateTime</code></td>
+<td>A date and time.</td>
+</tr>
+<tr>
+<td><code>GeoPoint</code></td>
+<td>A geographic coordinate (latitude and longitude).</td>
+</tr>
+<tr>
+<td><code>Measure</code></td>
+<td>A number paired with a unit of measure.</td>
+</tr>
+<tr>
+<td><code>Color</code></td>
+<td>A color stored as a CSS color code.</td>
 </tr>
 </tbody>
 </table>
