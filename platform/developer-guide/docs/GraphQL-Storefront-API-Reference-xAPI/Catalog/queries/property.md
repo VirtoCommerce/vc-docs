@@ -23,7 +23,7 @@ This connection allows you to get metadata for a specific catalog property.
 ```json title="Query"
 {
   property(id: "43d14478-d142-4a65-956f-0a308d0c4ee8", cultureName: "de-DE") {
-    propertyDictItems {
+    propertyDictionaryItems {
       items {
         value
       }
@@ -36,7 +36,7 @@ This connection allows you to get metadata for a specific catalog property.
 {
   "data": {
     "property": {
-      "propertyDictItems": {
+      "propertyDictionaryItems": {
         "items": [
           {
             "value": "3DR"

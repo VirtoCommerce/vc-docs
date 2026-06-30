@@ -12,6 +12,7 @@ This type is used to differentiate or group different types of product variation
 | `productType`  ==String==                                             	| The type of the product associated with the variation.        	|
 | `minQuantity`  ==Int==                                                  	| The minimum quantity allowed for the variation.               	|
 | `maxQuantity`  ==Int==                                                 	| The maximum quantity allowed for the variation.               	|
+| `packSize`  ==Int==                                                    	| Number of items in a package (quantity step).                 	|
 | `availabilityData` [ ==availabilityData== ](AvailabilityData.md) 	        | The availability data for the variation.                      	|
 | `images` [ ==ImageType== ](ImageType.md)                              	| The images associated with the variation.                     	|
 | `price` [ ==PriceType== ](Price/PriceType.md)                            	| The price information for the variation.                      	|
@@ -21,6 +22,7 @@ This type is used to differentiate or group different types of product variation
 | `outlines` [ ==OutlineType== ](OutlineType.md)                        	| The hierarchical outlines of the variation.                   	|
 | `slug`  ==String==                        	                            | The URL slug of the variation.                                	|
 | `vendor` [ ==CommonVendor== ](CommonVendor/Commonvendor.md)              	| The vendor associated with the variation.                     	|
+| `rating` [ ==Rating== ](CommonVendor/Rating.md)                          	| The rating of the variation.                                  	|
 
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Product Variations](/platform/user-guide/latest/catalog/managing-product-variations)

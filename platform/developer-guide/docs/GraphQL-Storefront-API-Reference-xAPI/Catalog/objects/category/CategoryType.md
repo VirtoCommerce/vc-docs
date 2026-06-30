@@ -12,6 +12,7 @@ This type is used to differentiate or group different types of categories.
 | `name`  ==String!==                                                        	    | The name of the category.                                                       	|
 | `level`  ==Int==                                                                 	| The level in the hierarchy.                                                      	|
 | `priority`  ==Int!==                                                             	| The priority of the category.                                                   	|
+| `relevanceScore`  ==String==                                                     	| The category relevance score.                                                   	|
 | `outline`  ==String==                                                            	| The hierarchical outline.                                       	|
 | `slug`  ==String==                                                               	| The URL slug of the category.                                                   	|
 | `path`  ==String==                                                             	| The full path of the category within the category hierarchy.                    	|
@@ -22,6 +23,7 @@ This type is used to differentiate or group different types of categories.
 | `hasParent`  ==Boolean==                                                      	| Indicates whether the category has a parent category.                           	|
 | `outlines` [ ==OutlineType== ](../OutlineType.md)                              	| A list of category outlines.                    	                                |
 | `images` [ ==ImageType== ](../ImageType.md)                                    	| The images associated with the category.                                        	|
+| `assets` [ ==Asset== ](../Asset.md)                                            	| The assets associated with the category.                                        	|
 | `breadcrumbs` [ ==Breadcrumb== ](../Breadcrumb.md)                    	        | The breadcrumbs representing the category's position. 	|
 | `properties(...)` [ ==Property== ](../Property/Property.md)                      	| The properties associated with the category.                                    	|
 | `childCategories` [ ==Category== ](CategoryType.md)                              	| The child categories of the current category.                                   	|

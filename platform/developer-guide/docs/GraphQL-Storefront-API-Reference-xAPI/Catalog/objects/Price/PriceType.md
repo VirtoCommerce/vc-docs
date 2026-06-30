@@ -21,6 +21,7 @@ This type object represents the pricing information for a product or variation.
 | `tierPrices` [ ==TierPriceType== ](TierPriceType.md)        	| The tiered pricing options available for the item. 	                                                |
 | `discounts` [ ==CatalogDiscountType== ](CatalogDiscountType.md)   	| The catalog-level discounts applied to the item.                                             	|
 | `pricelistId`  ==String==               	| The Id of the price list to which the item's price belongs.                                                           	|
+| `pricelistName`  ==String==             	| The name of the price list to which the item's price belongs.                                                         	|
 | `minQuantity`  ==Int==                  	| The minimum quantity required to be eligible for the price or discount.                                               	|
 
 <br>

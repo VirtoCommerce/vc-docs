@@ -8,6 +8,7 @@ This type represents an individual item within a property dictionary.
 |------------------------	|-----------------------------------------------------------------	|
 | `id`  ==String!==      	| The Id of the property dictionary item.          	                |
 | `value`  ==String==    	| The value or content of the property dictionary item.           	|
+| `colorCode`  ==String!==  	| Color code in CSS format.                                    	|
 | `sortOrder`  ==Int!==  	| The order of the property dictionary item in a list. 	            |
 
 <br>

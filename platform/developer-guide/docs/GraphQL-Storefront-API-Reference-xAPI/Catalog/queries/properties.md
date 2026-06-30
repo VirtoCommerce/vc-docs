@@ -35,10 +35,10 @@ This connection allows you to search for catalog property metadata.
       )  
         items {
           name
-          type
+          propertyType
           id
           multivalue
-          propertyDictItems {
+          propertyDictionaryItems {
             totalCount
             items {
               value
@@ -55,20 +55,20 @@ This connection allows you to search for catalog property metadata.
           "items": [
             {
               "name": "date_prp",
-              "type": "Product",
+              "propertyType": "Product",
               "id": "2e412a78-e6fb-46d9-837e-e187512b7f62",
               "multivalue": false,
-              "propertyDictItems": {
+              "propertyDictionaryItems": {
                 "totalCount": 0,
                 "items": []
               }
             },
             {
               "name": "variation_prop_date",
-              "type": "Variation",
+              "propertyType": "Variation",
               "id": "0a1b9281-b567-40c5-b456-f3c5f420f5bd",
               "multivalue": false,
-              "propertyDictItems": {
+              "propertyDictionaryItems": {
                 "totalCount": 0,
                 "items": []
               }
@@ -91,10 +91,10 @@ This connection allows you to search for catalog property metadata.
       {
         items {
           name
-          type
+          propertyType
           id
           multivalue
-          propertyDictItems {
+          propertyDictionaryItems {
             totalCount
             items {
               value
@@ -112,20 +112,20 @@ This connection allows you to search for catalog property metadata.
           "items": [
             {
               "name": "catalog_0_0_0",
-              "type": "Catalog",
+              "propertyType": "Catalog",
               "id": "2cdd23ca-f7cc-4496-a46b-2ab7063e86a5",
               "multivalue": false,
-              "propertyDictItems": {
+              "propertyDictionaryItems": {
                 "totalCount": 0,
                 "items": []
               }
             },
             {
               "name": "propertycatalog_d",
-              "type": "Catalog",
+              "propertyType": "Catalog",
               "id": "bbe0d9f6-7ddd-417c-bb1d-c297044b2b57",
               "multivalue": true,
-              "propertyDictItems": {
+              "propertyDictionaryItems": {
                 "totalCount": 4,
                 "items": [
                   {
@@ -145,10 +145,10 @@ This connection allows you to search for catalog property metadata.
             },
             {
               "name": "variation_prop_date",
-              "type": "Variation",
+              "propertyType": "Variation",
               "id": "0a1b9281-b567-40c5-b456-f3c5f420f5bd",
               "multivalue": false,
-              "propertyDictItems": {
+              "propertyDictionaryItems": {
                 "totalCount": 0,
                 "items": []
               }

@@ -12,6 +12,8 @@ This type represents the type or category of the product. It is used to classify
 | `productType`  ==String==                                               	| The type of product.                                                                         	|
 | `minQuantity`  ==Int==                                                   	| The minimum quantity that can be ordered for the product.                                    	|
 | `maxQuantity`  ==Int==                                                   	| The maximum quantity that can be ordered for the product.                                    	|
+| `packSize`  ==Int!==                                                     	| Number of items in a package (quantity step).                                                	|
+| `relevanceScore`  ==Float==                                              	| The product relevance score.                                                                 	|
 | `outline`  ==String==                                                    	| The hierarchical outline.                                                                   	|
 | `slug`  ==String==                                                       	| The URL slug for the product, related to the request.                                        	|
 | `name`  ==String!==                                                      	| The name of the product.                                                                    	|
@@ -20,8 +22,15 @@ This type represents the type or category of the product. It is used to classify
 | `description(...)` [ ==DescriptionType== ](DescriptionType.md)            | A description or review associated with the product.                                         	|
 | `category` [ ==Category== ](category/CategoryType.md)                     | The category to which the product is associated.                                             	|
 | `imgSrc`  ==String==                                                     	| The URL or path to the main image of the product.                                            	|
-| `outerId`  ==String==                                                   	| The external Id of the category to which the product belongs.                           	    |
-| `gtin` ==String==                                                         | Global Trade Item Number.                                                                     |
+| `outerId`  ==String==                                                   	| The outer identifier of the product.                                                    	    |
+| `gtin` ==String==                                                         | Global Trade Item Number (GTIN).                                                              |
+| `manufacturerPartNumber` ==String==                                       | Manufacturer Part Number (MPN).                                                               |
+| `weightUnit`  ==String==                                                 	| The weight unit.                                                                              |
+| `weight`  ==Float==                                                       | The product weight.                                                                           |
+| `measureUnit`  ==String==                                                	| The measure unit.                                                                             |
+| `height`  ==Float==                                                       | The product height.                                                                           |
+| `width`  ==Float==                                                        | The product width.                                                                            |
+| `length`  ==Float==                                                       | The product length.                                                                           |
 | `brandName`  ==String==                                                  	| The brand name associated with the product.                                                  	|
 | `masterVariation` [ ==VariationType== ](VariationType.md)                	| The main variation of the product.                                                           	|
 | `variations` [ ==VariationType== ](VariationType.md)                     	| A list of variations available for the product.                                              	|
@@ -37,7 +46,10 @@ This type represents the type or category of the product. It is used to classify
 | `outlines` [ ==OutlineType== ](OutlineType.md)                           	| A list of category outlines.                                                                	|
 | `breadcrumbs` [ ==Breadcrumb== ](Breadcrumb.md)                           | The breadcrumbs representing the product's position.                                          |
 | `vendor` [ ==CommonVendor== ](CommonVendor/Commonvendor.md)            	  | The vendor associated with the product.                                                       |
+| `rating` [ ==Rating== ](CommonVendor/Rating.md)                          | The product rating.                                                                           |
 | `inWishlist`  ==Boolean!==                             	                  | Indicates whether the product is in the user's wishlist or not.                               |
+| `wishlistIds`  ==[String]!==                                              | The IDs of the wishlists that contain the product.                                            |
+| `isPurchased`  ==Boolean!==                                               | Indicates whether the product has been purchased.                                             |
 | `associations(...)` [ ==ProductAssociationConnection== ](ProductAssociation/ProductAssociationConnection.md) 	| The associations or relationships of the product with other products. This field is resolved using the object.  	|
 | `videos(...)` [ ==VideoConnection== ](VideoConnection/VideoConnection.md)| The videos associated with the product.                                                      	|
 
@@ -56,7 +68,7 @@ This type represents the type or category of the product. It is used to classify
             value
             label
             displayOrder
-            propertyDictItems {
+            propertyDictionaryItems {
               pageInfo {
                 endCursor
                 hasNextPage
@@ -70,7 +82,7 @@ This type represents the type or category of the product. It is used to classify
               }
             }
             id
-            type
+            propertyType
           }
           minVariationPrice {
             amount
