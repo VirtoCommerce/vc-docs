@@ -5,7 +5,6 @@ nav:
       - Custom Modules Templates for Dotnet New: module-templates-for-dotnet-new.md
   - Creating New Module from Scratch: create-new-module-from-scratch.md
   - Deploying Module from Source Code: deploy-module-from-source-code.md
-  - Modules Development via Docker: ../How-tos/docker-modules-development.md
   - Extending Database Model: extending-database-model.md
   - Building and Customizing Platform Manager UI: build-platform-manager-ui.md
   - Extending Domain Models: extending-domain-models.md

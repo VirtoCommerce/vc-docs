@@ -18,7 +18,7 @@ To create a backup of your data:
         Keep **Password protect** enabled whenever the backup includes Security, Binary, or Settings entries. The one-time password is the only thing that stops a stolen backup file from being used to take over user accounts.
 
 1. Check the modules you want to back up.
-1. Click **Start export** in the toolbar. The backup process starts and a per-module progress timeline appears. Each module renders as a card showing its current state (in progress, completed, or failed) and the elapsed time. Use Show detailed log to reveal the full progress log and Copy log to copy it to the clipboard.
+1. Click **Start export** in the toolbar. The backup process starts and a per-module progress timeline appears. Each module renders as a card showing its current state (in progress, completed, or failed) and the elapsed time. Use **Show detailed log** to reveal the full progress log:
 
     ![Backup](media/backup-data.gif){: style="display: block; margin: 0 auto;" width="700"}
 

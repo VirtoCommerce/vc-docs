@@ -11,6 +11,7 @@ nav:
   - Adding Azure App Configuration: azure-app-configuration.md
   - Setting Up Prerender.io with Azure Application Gateway: setting-up-prerender-io-with-azure-app-gateway.md
   - Debugging VC Code without Source Code: debugging.md
+  - Modules Development via Docker: docker-modules-development.md
   - Configuring Multiple Stores: configuring-multiple-stores.md
   - Configuring Multiple Stores on Virto Cloud: configuring-multiple-stores-on-virto-cloud.md
   - Product Snapshot Module Architecture and Extensibility: product-snapshot.md
