@@ -50,15 +50,16 @@ VcField renders without form-field chrome (borders, focus rings, placeholders) a
 
 ## Key Props
 
-| Prop          | Type                                                  | Default      | Description                                               |
-| ------------- | ----------------------------------------------------- | ------------ | --------------------------------------------------------- |
-| `label`       | `string`                                              | --           | Field label text                                          |
-| `modelValue`  | `string \| number \| Date`                            | --           | Field content to display                                  |
-| `type`        | `"text" \| "date" \| "date-ago" \| "link" \| "email"` | `"text"`     | Content type for formatting                               |
-| `copyable`    | `boolean`                                             | `false`      | Show a copy-to-clipboard button                           |
-| `orientation` | `"vertical" \| "horizontal"`                          | `"vertical"` | Layout direction of label and value                       |
-| `aspectRatio` | `[number, number]`                                    | `[1, 1]`     | Column width ratio for label and value in horizontal mode |
-| `tooltip`     | `string`                                              | --           | Tooltip shown on the label                                |
+| Prop           | Type                                                  | Default      | Description                                                                          |
+| -------------- | ----------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------ |
+| `label`        | `string`                                              | --           | Field label text                                                                     |
+| `modelValue`   | `string \| number \| Date`                            | --           | Field content to display                                                             |
+| `displayValue` | `string`                                              | --           | Text shown instead of `modelValue`; `modelValue` is still used for copy/link actions |
+| `type`         | `"text" \| "date" \| "date-ago" \| "link" \| "email"` | `"text"`     | Content type for formatting                                                          |
+| `copyable`     | `boolean`                                             | `false`      | Show a copy-to-clipboard button                                                      |
+| `orientation`  | `"vertical" \| "horizontal"`                          | `"vertical"` | Layout direction of label and value                                                  |
+| `aspectRatio`  | `[number, number]`                                    | `[1, 1]`     | Column width ratio for label and value in horizontal mode                            |
+| `tooltip`      | `string`                                              | --           | Tooltip shown on the label                                                           |
 
 ## Type Formatting
 
@@ -205,13 +206,11 @@ const displayFields = computed(() => [
 
 ## CSS Variables
 
-| Variable      | Default  | Description                                  |
-| ------------- | -------- | -------------------------------------------- |
-| `--field-gap` | `0.5rem` | Gap between label and value in vertical mode |
+VcField exposes no CSS custom properties. The gap between label and value is fixed in the component: `0.25rem` in vertical mode and `0.5rem` in horizontal mode.
 
 ## Accessibility
 
-- The label is rendered via `VcLabel`, which associates with the field content
+- The label is rendered via `VcLabel` for consistent styling; there is no `for`/`id` association to the value (the value is not a focusable form control)
 - The copy button has `aria-label="Copy to clipboard"`
 - Provides visual feedback (checkmark icon) after successful copy
 
@@ -244,7 +243,6 @@ In `orientation="horizontal"` the component reserves the `aspectRatio[0]` track 
 
 - [VcInput](./vc-input.md) -- editable text field (use instead when user input is needed)
 - [VcLabel](../misc/vc-label.md) -- standalone label atom used internally
-- [VcCol](../layout/vc-col.md) -- column layout atom used for aspect ratio
 
 <div class="vc-storybook-embed" style="--height: 400px">
   <iframe

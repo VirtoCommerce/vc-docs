@@ -36,6 +36,8 @@ const combinedLoading = useLoading(loadingA, loadingB, loadingC);
 | ---------------------- | ------------------------------------------------------------------------------------------------------ |
 | `ComputedRef<boolean>` | `true` if any of the input refs is `true`, `false` otherwise. Re-evaluates whenever any input changes. |
 
+The module also exports a shape-helper interface `HasLoading` (`{ loading: Readonly<Ref<boolean>> }`), for typing objects that expose a readonly `loading` ref. It is not part of `useLoading`'s call signature.
+
 
 
 ## Recipe: Blade with Multiple Data Sources

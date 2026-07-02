@@ -5,7 +5,7 @@
 
 # VcTooltip
 
-A floating tooltip that appears on hover or focus to provide contextual information about a trigger element. Powered by Floating UI for automatic positioning, collision detection, and arrow alignment. The tooltip is teleported to the document body for proper stacking above all content.
+A floating tooltip that appears on hover or focus to provide contextual information about a trigger element. Powered by Floating UI for automatic positioning, collision detection, and arrow alignment. The tooltip is teleported to the vc-app root element (falling back to `document.body`) for proper stacking above all content.
 
 ## Quick Start
 
@@ -261,13 +261,13 @@ const actions = [
   </template>
 </VcTooltip>
 
-<!-- Correct -- use a popover or dropdown for interactive content -->
-<VcPopover>
+<!-- Correct -- use a popover or dropdown component for interactive content -->
+<YourPopover>
   <span>Click for help</span>
   <template #content>
     <a href="/docs">Read the documentation</a>
   </template>
-</VcPopover>
+</YourPopover>
 ```
 
 ### Forgetting the #tooltip slot
@@ -337,7 +337,8 @@ const actions = [
 | `--tooltip-font-size`     | `12px`                 | Text size                  |
 | `--tooltip-padding-x`     | `10px`                 | Horizontal padding         |
 | `--tooltip-padding-y`     | `6px`                  | Vertical padding           |
-| `--tooltip-z-index`       | `1002`                 | Stacking order             |
+
+Stacking order comes from the global `--z-critical-tooltip` token and is not overridable per-instance.
 
 ## Accessibility
 
@@ -345,7 +346,7 @@ const actions = [
 - `aria-describedby` links the trigger to the tooltip when visible
 - Shows on `focusin`, hides on `focusout` for keyboard users
 - Escape key dismisses the tooltip
-- Tooltip is teleported to the document body for proper stacking context
+- Tooltip is teleported to the vc-app root element (falling back to `document.body`) for proper stacking context
 - Fade transition (150ms in, 100ms out) provides smooth visual feedback
 - The tooltip has `pointer-events: none` -- it cannot be interacted with directly
 

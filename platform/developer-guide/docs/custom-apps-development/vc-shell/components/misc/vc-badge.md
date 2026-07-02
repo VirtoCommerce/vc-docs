@@ -52,6 +52,7 @@ A small indicator component for displaying counts, status dots, or short text la
 | `inline`         | `boolean`                                                                  | `false`     | Renders as an inline element without absolute positioning |
 | `clickable`      | `boolean`                                                                  | `false`     | Makes the badge respond to click events                   |
 | `disabled`       | `boolean`                                                                  | `false`     | Disables interaction on clickable badges                  |
+| `active`         | `boolean`                                                                  | `false`     | Applies the active-state color tokens to the badge        |
 | `customPosition` | `boolean`                                                                  | `false`     | Enables custom `top`/`right` positioning                  |
 | `top`            | `string`                                                                   | --          | Custom top offset (requires `customPosition`)             |
 | `right`          | `string`                                                                   | --          | Custom right offset (requires `customPosition`)           |

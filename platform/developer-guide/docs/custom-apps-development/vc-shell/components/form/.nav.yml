@@ -2,7 +2,6 @@
 # To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
 title: Form
 nav:
-  - MultilanguageSelector: multilanguage-selector.md
   - VcCheckbox: vc-checkbox.md
   - VcCheckboxGroup: vc-checkbox-group.md
   - VcColorInput: vc-color-input.md
@@ -16,6 +15,7 @@ nav:
   - VcInputCurrency: vc-input-currency.md
   - VcInputDropdown: vc-input-dropdown.md
   - VcInputGroup: vc-input-group.md
+  - VcLanguageSelector: multilanguage-selector.md
   - VcMultivalue: vc-multivalue.md
   - VcRadioButton: vc-radio-button.md
   - VcRadioGroup: vc-radio-group.md

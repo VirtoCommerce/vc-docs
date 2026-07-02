@@ -3,6 +3,7 @@
 title: Feedback
 nav:
   - VcBanner: vc-banner.md
+  - VcEnvironmentBanner: vc-environment-banner.md
   - VcHint: vc-hint.md
   - VcLoading: vc-loading.md
   - VcPopup: vc-popup.md

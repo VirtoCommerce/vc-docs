@@ -3,7 +3,6 @@
 title: Services
 nav:
   - Overview: index.md
-  - useAppBarMobileButtons: useAppBarMobileButtons.md
   - useAppBarWidget: useAppBarWidget.md
   - useDashboard: useDashboard.md
   - useMenuService: useMenuService.md

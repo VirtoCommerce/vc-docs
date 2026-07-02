@@ -161,13 +161,14 @@ async function handleUpload(files: FileList) {
 
 ## CSS Custom Properties
 
-| Variable                         | Default               | Description                |
-| -------------------------------- | --------------------- | -------------------------- |
-| `--progressbar-height`           | `8px`                 | Bar height                 |
-| `--progressbar-border-radius`    | `9999px`              | Border radius (pill shape) |
-| `--progressbar-background-color` | `var(--neutrals-200)` | Track background           |
-| `--progressbar-foreground-color` | `var(--primary-500)`  | Fill color                 |
-| `--progressbar-striped-bg`       | gradient              | Striped variant background |
+| Variable                         | Default               | Description                  |
+| -------------------------------- | --------------------- | ---------------------------- |
+| `--progressbar-height`           | `8px`                 | Bar height                   |
+| `--progressbar-border-radius`    | `9999px`              | Border radius (pill shape)   |
+| `--progressbar-background-color` | `var(--neutrals-200)` | Track background             |
+| `--progressbar-foreground-color` | `var(--primary-500)`  | Fill color                   |
+| `--progressbar-striped-bg`       | gradient              | Striped variant background   |
+| `--progressbar-striped-color`    | `var(--primary-400)`  | Striped variant stripe color |
 
 ## Tips
 

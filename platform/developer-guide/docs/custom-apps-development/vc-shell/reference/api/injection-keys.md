@@ -11,7 +11,7 @@ Centralized Vue `InjectionKey` symbols for the vc-shell framework's provide/inje
 
 The vc-shell framework uses Vue's provide/inject mechanism extensively to share services, navigation state, and configuration across the component tree. Instead of relying on global singletons or Pinia stores, the framework creates typed injection keys for each service, allowing components to declare their dependencies explicitly.
 
-All keys are defined in a single file (`framework/injection-keys.ts`) to avoid symbol duplication and ensure type safety. The app shell provides these values at the root during bootstrap; components and composables inject them using the corresponding key.
+Most keys live in `framework/injection-keys.ts` to avoid symbol duplication and ensure type safety; a few blade-stack keys such as `BladeDescriptorKey` are declared in `core/blade-navigation/types` and re-exported from there. The app shell provides these values at the root during bootstrap; components and composables inject them using the corresponding key.
 
 This centralized approach has several advantages:
 
@@ -32,6 +32,8 @@ This centralized approach has several advantages:
 | `BladeContextKey`    | `ComputedRef<Record<string, unknown>>` | Blade-exposed context for widgets/extensions |
 | `BladeRoutesKey`     | `BladeRoutesRecord[]`                  | Registered blade routes                      |
 | `InternalRoutesKey`  | `BladeRoutesRecord[]`                  | Internal framework routes                    |
+| `BladeFormKey`       | `BladeFormInjection`                   | Blade form context shared with child fields  |
+| `BladeLoadingKey`    | `Ref<boolean>`                         | Blade loading (skeleton) state for children  |
 
 ### Notifications
 
@@ -72,6 +74,8 @@ This centralized approach has several advantages:
 | `CloseSettingsMenuKey` | `() => void`                    | Callback to close the settings menu                                                          |
 
 ### Breakpoints
+
+> **Deprecated.** All five breakpoint keys below are deprecated in favor of the `useResponsive()` composable. Prefer `useResponsive()` over injecting these keys directly.
 
 | Key            | Type           | Description            |
 | -------------- | -------------- | ---------------------- |
@@ -170,5 +174,5 @@ const service = inject(MenuServiceKey); // MenuService instance
 
 - `framework/core/services/` -- Service implementations provided via these keys
 - `framework/core/notifications/store.ts` -- NotificationStore provided via `NotificationStoreKey`
-- `framework/shared/components/blade-navigation/types.ts` -- Blade types for navigation keys
+- `framework/core/blade-navigation/types/` -- Blade types for navigation keys
 - `framework/core/composables/` -- Composable wrappers for most injection keys
