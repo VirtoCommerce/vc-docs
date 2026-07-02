@@ -4,5 +4,4 @@ title: User
 nav:
   - useLanguages: useLanguages.md
   - usePermissions: usePermissions.md
-  - usePlatformLocaleSync: usePlatformLocaleSync.md
   - useUser: useUser.md

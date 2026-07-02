@@ -1,0 +1,41 @@
+<!-- AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY -->
+<!-- Source: ui/components/atoms/vc-environment-banner/vc-environment-banner.docs.md -->
+<!-- To update: edit the source file in vc-shell, then run yarn docs:sync -->
+
+
+# VcEnvironmentBanner
+
+Centered badge pinned to the top of the application that labels the current
+environment (Development, QA, Demo, etc.). Mirrors the platform environment
+banner (vc-env-badge). Purely presentational — it renders the colored badge and
+its label, and does not know where the name comes from. Visibility and color are
+decided by the caller (see `useEnvironmentName`).
+
+## When to Use
+
+- Inside the app shell to make non-production environments visually obvious
+- When NOT to use: do not place it manually in blades — `VcApp` already mounts it
+
+## Props
+
+- `name: string` — environment label to render
+- `color?: string` — badge color (vc-shell theme tokens); recognized values are `primary | secondary | info | success | warning | danger | neutral`, any other value falls back to neutral via CSS, default `neutral`
+
+## Quick Start
+
+```vue
+<template>
+  <VcEnvironmentBanner
+    v-if="!isIgnored"
+    :name="environmentName"
+    :color="color"
+  />
+</template>
+
+<script setup>
+import { VcEnvironmentBanner } from "@vc-shell/framework";
+import { useEnvironmentName } from "@vc-shell/framework";
+
+const { environmentName, isIgnored, color } = useEnvironmentName();
+</script>
+```

@@ -73,10 +73,10 @@ const { isExpanded, isPinned, togglePin, openMenu, closeMenu } = useSidebarState
 ```vue
 <script setup lang="ts">
 import { useSidebarState } from "@vc-shell/framework";
-import { useBladeContext } from "@vc-shell/framework";
+import { useBlade } from "@vc-shell/framework";
 
 const { closeMenu, isMenuOpen } = useSidebarState();
-const { openBlade } = useBladeContext();
+const { openBlade } = useBlade();
 
 async function navigateToProducts() {
   // Close the mobile menu first so it does not overlay the new blade
@@ -85,7 +85,7 @@ async function navigateToProducts() {
   }
 
   await openBlade({
-    component: ProductListBlade,
+    name: "ProductList",
     param: { catalogId: "default" },
   });
 }

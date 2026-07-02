@@ -40,6 +40,18 @@ const items = settingsMenu.items.value;
 | `unregister` | `(id: string) => void`                                 | Remove a settings menu item by ID                    |
 | `items`      | `ComputedRef<ISettingsMenuItem[]>`                     | Reactive array of all registered settings menu items |
 
+### RegisterSettingsMenuItemOptions
+
+| Field       | Type                      | Required | Description                                                              |
+| ----------- | ------------------------- | -------- | ------------------------------------------------------------------------ |
+| `id`        | `string`                  | No       | Item ID. If omitted, a UUID is generated and returned from `register()`. |
+| `order`     | `number`                  | No       | Sort order. Defaults to the current registry size (appended at the end). |
+| `group`     | `string`                  | No       | Group key used to cluster related items.                                 |
+| `component` | `Component`               | Yes      | Component rendered for this item. Wrapped in `markRaw()` internally.     |
+| `props`     | `Record<string, unknown>` | No       | Props passed to the component.                                           |
+
+There is no `title` or `icon` field; the registered component is responsible for rendering its own label and icon.
+
 ### Related Exports
 
 | Export                  | Description                                        |
@@ -57,11 +69,9 @@ const settingsMenu = useSettingsMenu();
 
 const itemId = settingsMenu.register({
   id: "notification-preferences",
-  title: "Notifications",
-  icon: "fas fa-bell",
   component: NotificationSettingsPage,
   group: "General",
-  priority: 10,
+  order: 10,
 });
 ```
 
@@ -76,29 +86,23 @@ const settingsMenu = useSettingsMenu();
 // Group related settings under a common section
 settingsMenu.register({
   id: "catalog-general",
-  title: "General",
-  icon: "lucide-settings",
   component: markRaw(CatalogGeneralSettings),
   group: "Catalog",
-  priority: 1,
+  order: 1,
 });
 
 settingsMenu.register({
   id: "catalog-seo",
-  title: "SEO Settings",
-  icon: "lucide-search",
   component: markRaw(CatalogSeoSettings),
   group: "Catalog",
-  priority: 2,
+  order: 2,
 });
 
 settingsMenu.register({
   id: "catalog-import-export",
-  title: "Import / Export",
-  icon: "lucide-arrow-left-right",
   component: markRaw(CatalogImportExportSettings),
   group: "Catalog",
-  priority: 3,
+  order: 3,
 });
 ```
 
@@ -111,11 +115,9 @@ import { onBeforeUnmount } from "vue";
 const settingsMenu = useSettingsMenu();
 const itemId = settingsMenu.register({
   id: "my-settings",
-  title: "My Module Settings",
-  icon: "lucide-wrench",
   component: markRaw(MySettingsPage),
   group: "Modules",
-  priority: 10,
+  order: 10,
 });
 
 onBeforeUnmount(() => {
@@ -135,11 +137,9 @@ const { hasAccess } = usePermissions();
 if (hasAccess("catalog:manage")) {
   settingsMenu.register({
     id: "catalog-advanced",
-    title: "Advanced Catalog Settings",
-    icon: "lucide-settings-2",
     component: markRaw(AdvancedCatalogSettings),
     group: "Catalog",
-    priority: 99,
+    order: 99,
   });
 }
 ```
