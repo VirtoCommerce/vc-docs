@@ -56,21 +56,21 @@ const products = [
 
 ## Key Props
 
-| Prop                 | Type                                     | Default              | Description                                             |
-| -------------------- | ---------------------------------------- | -------------------- | ------------------------------------------------------- |
-| `slides`             | `Record<string, unknown>[] \| unknown[]` | `[]`                 | Array of slide data objects                             |
-| `navigation`         | `boolean`                                | `false`              | Show previous/next navigation buttons                   |
-| `slidesPerView`      | `string \| "auto"`                       | `"auto"`             | Number of visible slides at once                        |
-| `spaceBetweenSlides` | `number`                                 | `10`                 | Gap between slides in pixels                            |
-| `overflow`           | `boolean`                                | `false`              | Allow slides to be visible outside the container bounds |
-| `ariaLabel`          | `string`                                 | `"Content carousel"` | Accessible label for the slider region                  |
+| Prop                 | Type                                     | Default  | Description                                                                           |
+| -------------------- | ---------------------------------------- | -------- | ------------------------------------------------------------------------------------- |
+| `slides`             | `Record<string, unknown>[] \| unknown[]` | `[]`     | Array of slide data objects                                                           |
+| `navigation`         | `boolean`                                | `false`  | Show previous/next navigation buttons                                                 |
+| `slidesPerView`      | `string \| "auto"`                       | `"auto"` | Number of visible slides at once                                                      |
+| `spaceBetweenSlides` | `number`                                 | `10`     | Gap between slides in pixels                                                          |
+| `overflow`           | `boolean`                                | `false`  | Allow slides to be visible outside the container bounds                               |
+| `ariaLabel`          | `string`                                 | --       | Accessible label for the slider region. Falls back to `"Content carousel"` when unset |
 
 ## Common Patterns
 
 ### Fixed Slides Per View
 
 ```vue
-<VcSlider :slides="items" :slides-per-view="3" navigation :space-between-slides="20">
+<VcSlider :slides="items" :slides-per-view="'3'" navigation :space-between-slides="20">
   <template #default="{ slide }">
     <ProductCard :product="slide" />
   </template>
@@ -109,7 +109,7 @@ const products = [
 ### Single Slide View
 
 ```vue
-<VcSlider :slides="banners" :slides-per-view="1" navigation>
+<VcSlider :slides="banners" :slides-per-view="'1'" navigation>
   <template #default="{ slide }">
     <img :src="slide.imageUrl" class="tw-w-full tw-rounded" />
   </template>

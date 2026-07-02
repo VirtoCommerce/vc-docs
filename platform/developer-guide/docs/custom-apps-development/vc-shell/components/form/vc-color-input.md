@@ -66,6 +66,18 @@ const color = ref<string | null>(null);
 | `error` / `errorMessage` | `boolean` / `string`   | --          | Error styling and validation message                     |
 | `disabled`               | `boolean`              | `false`     | Disables the input and color picker                      |
 
+## Events
+
+| Event               | Payload          | Description                          |
+| ------------------- | ---------------- | ------------------------------------ |
+| `update:modelValue` | `string \| null` | Emitted when the color value changes |
+| `blur`              | `Event`          | Emitted when the text input blurs    |
+| `focus`             | --               | Emitted when the text input focuses  |
+
+## Exposed Methods
+
+- `focus()` -- focuses the text input (accessible via a template ref).
+
 ## Common Patterns
 
 ### With Validation
@@ -207,6 +219,7 @@ Uses the same `--input-*` variables as VcInput, plus:
 
 - `--color-input-swatch-size` -- swatch square size (default 20px)
 - `--color-input-swatch-border-radius`, `--color-input-swatch-border-color`
+- `--color-input-swatch-border-color-hover` -- swatch border color on hover (default var(--neutrals-400))
 
 ## Tip: CSS Color Names
 

@@ -4,11 +4,8 @@ title: UI State
 nav:
   - UI Composables: ui-composables-overview.md
   - useBreadcrumbs: useBreadcrumbs.md
-  - useConnectionStatus: useConnectionStatus.md
-  - useKeyboardNavigation: useKeyboardNavigation.md
   - useLoading: useLoading.md
   - useMenuExpanded: useMenuExpanded.md
   - useResponsive: useResponsive.md
   - useSidebarState: useSidebarState.md
-  - useSlowNetworkDetection: useSlowNetworkDetection.md
   - useTheme: useTheme.md

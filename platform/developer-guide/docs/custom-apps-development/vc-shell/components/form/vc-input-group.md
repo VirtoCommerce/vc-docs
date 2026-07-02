@@ -54,17 +54,19 @@ const lastName = ref("");
 
 ## Key Props
 
-| Prop                     | Type                         | Default      | Description                                |
-| ------------------------ | ---------------------------- | ------------ | ------------------------------------------ |
-| `label`                  | `string`                     | --           | Group label rendered as a `<legend>`       |
-| `tooltip`                | `string`                     | --           | Tooltip on the label's info icon           |
-| `hint`                   | `string`                     | --           | Helper text below the group                |
-| `orientation`            | `"vertical" \| "horizontal"` | `"vertical"` | Layout direction for child controls        |
-| `role`                   | `"group" \| "radiogroup"`    | `"group"`    | ARIA role for the fieldset                 |
-| `disabled`               | `boolean`                    | `false`      | Disables all controls in the group         |
-| `error` / `errorMessage` | `boolean` / `string`         | --           | Group-level error styling and message      |
-| `required`               | `boolean`                    | `false`      | Shows required indicator on the label      |
-| `name`                   | `string`                     | --           | Shared `name` propagated to child controls |
+| Prop                     | Type                         | Default      | Description                                                         |
+| ------------------------ | ---------------------------- | ------------ | ------------------------------------------------------------------- |
+| `label`                  | `string`                     | --           | Group label rendered as a `<legend>`                                |
+| `tooltip`                | `string`                     | --           | Tooltip on the label's info icon                                    |
+| `hint`                   | `string`                     | --           | Helper text below the group                                         |
+| `orientation`            | `"vertical" \| "horizontal"` | `"vertical"` | Layout direction for child controls                                 |
+| `role`                   | `"group" \| "radiogroup"`    | `"group"`    | ARIA role for the fieldset                                          |
+| `disabled`               | `boolean`                    | `false`      | Disables all controls in the group                                  |
+| `error` / `errorMessage` | `boolean` / `string`         | --           | Group-level error styling and message                               |
+| `required`               | `boolean`                    | `false`      | Shows required indicator on the label                               |
+| `name`                   | `string`                     | --           | Shared `name` propagated to child controls                          |
+| `ariaLabel`              | `string`                     | --           | Sets `aria-label` on the fieldset                                   |
+| `ariaLabelledby`         | `string`                     | --           | Sets `aria-labelledby` on the fieldset (fallback when no legend id) |
 
 ## Common Patterns
 

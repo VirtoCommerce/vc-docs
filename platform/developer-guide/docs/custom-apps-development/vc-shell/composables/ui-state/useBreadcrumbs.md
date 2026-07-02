@@ -80,10 +80,10 @@ push({
 
 ```typescript
 <script setup lang="ts">
-import { useBreadcrumbs, useBladeContext } from "@vc-shell/framework";
+import { useBreadcrumbs, useBlade } from "@vc-shell/framework";
 
 const { push } = useBreadcrumbs();
-const { openBlade } = useBladeContext();
+const { openBlade } = useBlade();
 
 // Level 1: Catalog
 push({
@@ -182,4 +182,4 @@ onBeforeUnmount(() => remove([crumbId]));
 
 - [useBlade](../blade-navigation/useBlade.md) -- blade navigation composable
 - [VcBlade](../../components/layout/vc-blade.md) -- blade component that displays breadcrumbs
-- `framework/ui/types/form-field.ts` -- `Breadcrumbs` interface definition
+- `framework/core/types/breadcrumbs.ts` -- `Breadcrumbs` interface definition
