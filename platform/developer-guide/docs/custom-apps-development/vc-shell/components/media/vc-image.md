@@ -44,6 +44,12 @@ An image display component with predefined sizes, aspect ratio control, and a pl
 | `alt`           | `string`                                                        | —                | Accessible alt text                                                                                                                                |
 | `thumbnailSize` | `ThumbnailSize`                                                 | —                | Load a thumbnail variant instead of full-size image. Values: `"sm"`, `"md"`, `"lg"`, `"64x64"`, `"128x128"`, `"168x168"`, `"216x216"`, `"348x348"` |
 
+## Events
+
+| Event   | Payload | Description                                                 |
+| ------- | ------- | ----------------------------------------------------------- |
+| `click` | —       | Emitted on click/Enter/Space, only when `clickable` is true |
+
 <div class="vc-storybook-embed" style="--height: 300px">
   <iframe
     src="https://vc-shell-storybook.govirto.com/iframe.html?id=data-display-vcimage--size-variants&viewMode=story"
@@ -65,6 +71,15 @@ An image display component with predefined sizes, aspect ratio control, and a pl
 | `xl`   | 128px          |
 | `xxl`  | 145px          |
 | `auto` | 100% of parent |
+
+## CSS Custom Properties
+
+| Variable                   | Default               | Description                     |
+| -------------------------- | --------------------- | ------------------------------- |
+| `--image-border-radius`    | `6px`                 | Corner radius when `bordered`   |
+| `--image-border-color`     | `var(--neutrals-200)` | Border color when `bordered`    |
+| `--image-empty-icon-color` | `var(--neutrals-400)` | Placeholder icon color          |
+| `--image-focus-ring-color` | `var(--primary-300)`  | Focus ring color when clickable |
 
 ## Common Patterns
 

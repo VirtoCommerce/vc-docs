@@ -57,7 +57,7 @@ const assets = useAssetsManager(ref, options);
 
 ```typescript
 import { useAssetsManager } from "@vc-shell/framework";
-import { toRef } from "vue";
+import { computed } from "vue";
 
 const assets = useAssetsManager(
   computed({
@@ -88,6 +88,8 @@ const assets = useAssetsManager(
 Wrap a single value in a computed array:
 
 ```typescript
+import { computed } from "vue";
+
 const photoAssets = computed({
   get: () => (user.value?.iconUrl ? [{ url: user.value.iconUrl }] : []),
   set: (val) => {

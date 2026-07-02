@@ -58,7 +58,8 @@ const isLoading = ref(true);
 | `--loading-overlay-bg` | `rgba(255,255,255,0.6)` | Overlay background color      |
 | `--loading-bar-width`  | `140px`                 | Width of the progress bar     |
 | `--loading-bar-height` | `4px`                   | Height of the progress bar    |
-| `--loading-z-index`    | `9998`                  | Z-index of the overlay layer  |
+
+> **Note:** The overlay z-index comes from the global `--z-critical-loading` token and is not overridable per-instance.
 
 <div class="vc-storybook-embed" style="--height: 400px">
   <iframe
@@ -130,7 +131,7 @@ Override the bar color to match a specific status or brand theme:
 
 ## Tips
 
-- VcLoading is hidden with `display: none` when inactive, so it adds zero layout cost when idle.
+- VcLoading is hidden via the `tw-hidden` class when inactive, so it adds zero layout cost when idle.
 - The sweep animation runs on a 1.5-second infinite loop using CSS `@keyframes` — no JavaScript timers involved.
 - The overlay applies `backdrop-filter: blur(3px)` for a frosted-glass effect. If you need a fully opaque overlay, set `--loading-overlay-bg: rgba(255,255,255,1)`.
 - When using inside a scrollable container, the overlay covers only the visible viewport of that container because it is absolutely positioned.

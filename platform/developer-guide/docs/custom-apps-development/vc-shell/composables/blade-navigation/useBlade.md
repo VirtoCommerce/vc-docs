@@ -791,7 +791,7 @@ if (param.value) {
 | Resource                                                                     | Description                                                  |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | [`defineBladeContext` / `injectBladeContext`](./useBladeContext.md) | Share reactive blade data with descendant widgets            |
-| [`useBladeRegistry`](./useBladeRegistry.md)                                   | Look up registered blade components by name                  |
+| [`useBladeRegistry`](../useBladeRegistry/)                                   | Look up registered blade components by name                  |
 | [`VcBlade`](../../components/layout/vc-blade.md)      | The blade UI shell component (header, toolbar, content area) |
 | [`useToolbar`](../services/useToolbar.md)                             | Dynamic toolbar management for blades                        |
 | [`usePopup`](../notifications/usePopup.md)                                   | Confirmation dialogs, commonly used in close guards          |

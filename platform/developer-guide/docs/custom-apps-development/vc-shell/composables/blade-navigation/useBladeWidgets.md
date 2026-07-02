@@ -80,17 +80,17 @@ Inline `useBladeWidgets([...])` is fine for one-off widgets, but extracting beco
 
 ### HeadlessWidgetDeclaration
 
-| Field       | Type                              | Required | Description                               |
-| ----------- | --------------------------------- | -------- | ----------------------------------------- |
-| `id`        | `string`                          | Yes      | Unique widget identifier                  |
-| `icon`      | `string`                          | Yes      | Icon name (e.g., `"lucide-tag"`)          |
-| `title`     | `string`                          | Yes      | i18n key or display title                 |
-| `badge`     | `Ref<number \| string>`           | No       | Badge counter value                       |
-| `loading`   | `Ref<boolean>`                    | No       | Show loading indicator                    |
-| `disabled`  | `Ref<boolean> \| boolean`         | No       | Disable the widget                        |
-| `isVisible` | `ComputedRef<boolean> \| boolean` | No       | Toggle visibility                         |
-| `onClick`   | `() => void`                      | No       | Action when widget is clicked             |
-| `onRefresh` | `() => void \| Promise<void>`     | No       | Called by `refresh(id)` or `refreshAll()` |
+| Field       | Type                                                     | Required | Description                               |
+| ----------- | -------------------------------------------------------- | -------- | ----------------------------------------- |
+| `id`        | `string`                                                 | Yes      | Unique widget identifier                  |
+| `icon`      | `string`                                                 | Yes      | Icon name (e.g., `"lucide-tag"`)          |
+| `title`     | `string`                                                 | Yes      | i18n key or display title                 |
+| `badge`     | `Ref<number \| string> \| ComputedRef<number \| string>` | No       | Badge counter value                       |
+| `loading`   | `Ref<boolean> \| ComputedRef<boolean>`                   | No       | Show loading indicator                    |
+| `disabled`  | `Ref<boolean> \| boolean`                                | No       | Disable the widget                        |
+| `isVisible` | `ComputedRef<boolean> \| Ref<boolean> \| boolean`        | No       | Toggle visibility                         |
+| `onClick`   | `() => void`                                             | No       | Action when widget is clicked             |
+| `onRefresh` | `() => void \| Promise<void>`                            | No       | Called by `refresh(id)` or `refreshAll()` |
 
 ### Returns
 

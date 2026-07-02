@@ -48,14 +48,15 @@ function openNotifications() {
 
 ## Key Props
 
-| Prop         | Type               | Default | Description                                                       |
-| ------------ | ------------------ | ------- | ----------------------------------------------------------------- |
-| `icon`       | `string`           | --      | Icon name (Lucide format, e.g., `"lucide-save"`)                  |
-| `title`      | `string`           | --      | Label text below (or beside) the icon                             |
-| `value`      | `string \| number` | --      | Badge count displayed on the icon; numbers above 99 show as "99+" |
-| `disabled`   | `boolean`          | `false` | Prevents clicks and applies muted styling                         |
-| `isExpanded` | `boolean`          | `false` | Expanded visual state                                             |
-| `horizontal` | `boolean`          | `false` | Arranges icon and title side by side instead of stacked           |
+| Prop         | Type               | Default | Description                                                                                                                                                      |
+| ------------ | ------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `icon`       | `string`           | --      | Icon name (Lucide format, e.g., `"lucide-save"`)                                                                                                                 |
+| `title`      | `string`           | --      | Label text below (or beside) the icon                                                                                                                            |
+| `value`      | `string \| number` | --      | Badge count displayed on the icon; numbers above 99 show as "99+"                                                                                                |
+| `disabled`   | `boolean`          | `false` | Prevents clicks and applies muted styling                                                                                                                        |
+| `isExpanded` | `boolean`          | `false` | Expanded visual state                                                                                                                                            |
+| `horizontal` | `boolean`          | `false` | Arranges icon and title side by side instead of stacked                                                                                                          |
+| `widgetId`   | `string`           | --      | Sets the `data-widget-id` attribute on the root element. The root also binds `data-widget-name` from `title`; both are used for widget identification/targeting. |
 
 ## Events
 
@@ -110,16 +111,18 @@ Badge values above 99 are automatically displayed as "99+".
 
 ## CSS Custom Properties
 
-| Variable                     | Default               | Description          |
-| ---------------------------- | --------------------- | -------------------- |
-| `--widget-bg-color`          | `transparent`         | Background color     |
-| `--widget-bg-hover-color`    | `var(--neutrals-50)`  | Background on hover  |
-| `--widget-icon-color`        | `var(--neutrals-700)` | Icon color           |
-| `--widget-icon-hover-color`  | `var(--primary-600)`  | Icon color on hover  |
-| `--widget-title-color`       | `var(--neutrals-600)` | Title text color     |
-| `--widget-title-hover-color` | `var(--primary-600)`  | Title color on hover |
-| `--widget-border-radius`     | `8px`                 | Corner radius        |
-| `--widget-focus-ring-color`  | `var(--primary-300)`  | Focus ring color     |
+| Variable                        | Default               | Description               |
+| ------------------------------- | --------------------- | ------------------------- |
+| `--widget-bg-color`             | `transparent`         | Background color          |
+| `--widget-bg-hover-color`       | `var(--neutrals-50)`  | Background on hover       |
+| `--widget-icon-color`           | `var(--neutrals-700)` | Icon color                |
+| `--widget-icon-hover-color`     | `var(--primary-600)`  | Icon color on hover       |
+| `--widget-icon-disabled-color`  | `var(--neutrals-400)` | Icon color when disabled  |
+| `--widget-title-color`          | `var(--neutrals-600)` | Title text color          |
+| `--widget-title-hover-color`    | `var(--primary-600)`  | Title color on hover      |
+| `--widget-title-disabled-color` | `var(--neutrals-400)` | Title color when disabled |
+| `--widget-border-radius`        | `8px`                 | Corner radius             |
+| `--widget-focus-ring-color`     | `var(--primary-300)`  | Focus ring color          |
 
 ## Accessibility
 
