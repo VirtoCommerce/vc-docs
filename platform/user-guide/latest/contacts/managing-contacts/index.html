@@ -544,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                     <a
                         class="mega-menu__menu-button "
-                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10"
+                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15"
                         
                     >
                         
@@ -553,7 +553,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 style="background-image: url('assets/icons/fire.svg')"
                             ></div>
                         
-                        Upgrading to .NET10
+                        Upgrading to Stable 15
                     </a>
 
                 
@@ -3729,8 +3729,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#edit-contacts" class="md-nav__link">
-        Edit contacts
+    <a href="#edit-company-info" class="md-nav__link">
+        Edit company info
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#edit-customer-info" class="md-nav__link">
+        Edit customer info
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Edit customer info">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#manage-account" class="md-nav__link">
+        Manage account
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#invite-contacts" class="md-nav__link">
+        Invite contacts
     </a>
 
     <!-- Render nested item list -->
@@ -3781,26 +3817,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#share-contacts" class="md-nav__link">
         Share contacts
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#set-default-company" class="md-nav__link">
-        Set default company
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#assign-multiple-organizations-to-contacts-and-employees" class="md-nav__link">
-        Assign multiple organizations to contacts and employees
     </a>
 
     <!-- Render nested item list -->
@@ -15054,8 +15070,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#edit-contacts" class="md-nav__link">
-        Edit contacts
+    <a href="#edit-company-info" class="md-nav__link">
+        Edit company info
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#edit-customer-info" class="md-nav__link">
+        Edit customer info
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Edit customer info">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#manage-account" class="md-nav__link">
+        Manage account
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#invite-contacts" class="md-nav__link">
+        Invite contacts
     </a>
 
     <!-- Render nested item list -->
@@ -15112,26 +15164,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#set-default-company" class="md-nav__link">
-        Set default company
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#assign-multiple-organizations-to-contacts-and-employees" class="md-nav__link">
-        Assign multiple organizations to contacts and employees
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
     </ul>
     
 </nav>
@@ -15153,7 +15185,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 2, 2026 11:29:56 UTC">February 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 06:39:51 UTC">July 7, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15177,60 +15209,275 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Managing contact entities (companies, employees, customers, and vendors) includes:</p>
 <ul>
 <li><a href="#adding-contacts">Adding contacts.</a></li>
-<li><a href="#editing-contacts">Editing contacts.</a></li>
+<li><a href="#edit-company-info">Editing company info.</a></li>
+<li><a href="#edit-customer-info">Editing customer info.</a></li>
+<li><a href="#invite-contacts">Inviting contacts.</a></li>
 <li><a href="#deleting-contacts">Deleting contacts.</a></li>
 <li><a href="#export-contacts">Exporting contacts.</a></li>
 <li><a href="#import-contacts">Importing contacts.</a></li>
 <li><a href="#import-contacts">Updating contacts.</a></li>
 <li><a href="#share-contacts">Sharing contacts.</a></li>
-<li><a href="#set-default-company">Setting default company.</a></li>
-<li><a href="#assign-multiple-organizations-to-contacts-and-employees">Assigning multiple organizations to contacts and employees.</a></li>
 </ul>
 <h2 id="add-contacts">Add contacts<a class="headerlink" href="#add-contacts" title="Permanent link">&para;</a></h2>
 <p>To add a contact:</p>
 <ol>
 <li>Click <strong>Contacts</strong> in the main menu.</li>
-<li>In the next blade, click <strong>Add</strong> in the toolbar to open the <strong>New Contact</strong> blade.</li>
+<li>In the next blade, click <strong>Add</strong> in the toolbar to open the <strong>New contact</strong> blade.</li>
 <li>
 <p>Select the entity you need and start creating your contact. We will use <strong>Organization</strong> as an example. Adding employees, contacts, and vendors is a similar process.</p>
 <p><img alt="New company" src="../media/new_company_screen.png" style="display: block; margin: 0 auto;" /></p>
 <p>Assigning organizations or users to particular user groups enables showing personal offers to them.</p>
-<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../catalog-personalization/user-groups/">Assigning user groups to products and categories</a></p>
+<p><br>
+<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../catalog-personalization/user-groups/">Assigning user groups to products and categories</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../pricing/adding-new-assignment/">Managing personal prices</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When adding store customers (<strong>Contacts</strong>), you can set the default language and default currency for their accounts:</p>
-<p><img alt="Default language" src="../media/default-language.png" style="display: block; margin: 0 auto;" /></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If a user is listed in the Contacts, they can now upload their personal photos to customize and brand their workspace:</p>
-<p><img alt="User photo" src="../media/user-photo.png" style="display: block; margin: 0 auto;" /></p>
-</div>
+<p><br></p>
 </li>
 <li>
 <p>Click <strong>Create</strong> to save the changes.</p>
 </li>
 </ol>
-<p>The company appears in the <strong>Companies and Contacts</strong> list.</p>
-<h2 id="edit-contacts">Edit contacts<a class="headerlink" href="#edit-contacts" title="Permanent link">&para;</a></h2>
-<p>To edit any previously added contact:</p>
+<p>The company appears in the <strong>Companies and contacts</strong> list.</p>
+<h2 id="edit-company-info">Edit company info<a class="headerlink" href="#edit-company-info" title="Permanent link">&para;</a></h2>
+<p>To edit a previously added company info:</p>
 <ol>
 <li>Click <strong>Contacts</strong> in the main menu.</li>
-<li>In the <strong>Companies and Contacts</strong> blade, click the three dots to the left of the required contact's name and click <strong>Manage</strong> in the popup menu. </li>
-<li>In the next blade, update the contact, for example, change the email account by clicking on the <strong>Accounts</strong> widget, then click <strong>Save</strong> in the toolbar to save the changes.</li>
+<li>In the <strong>Companies and contacts</strong> blade, click the three dots to the left of the required contact's name and click <strong>Manage</strong> in the popup menu. </li>
+<li>In the next blade, update the contact, for example, change the email account by clicking on the <strong>Accounts</strong> widget. </li>
+<li>Click <strong>Save</strong> in the toolbar to save the changes.</li>
 </ol>
-<p><img alt="Edit contact" src="../media/edit-contact.png" style="display: block; margin: 0 auto;" width="650" /></p>
+<p><img alt="Edit contact" src="../media/edit-contact.png" style="display: block; margin: 0 auto;" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Editing the <strong>Company details</strong> blade allows you to upload and assign assets (images, documents, etc.) to this company. Use the <strong>Assets</strong> widget that appears when editing the company details. </p>
 </div>
 <p>The contact has been edited.</p>
+<h2 id="edit-customer-info">Edit customer info<a class="headerlink" href="#edit-customer-info" title="Permanent link">&para;</a></h2>
+<p>To edit a previously added customer info:</p>
+<ol>
+<li>Click <strong>Contacts</strong> in the main menu.</li>
+<li>In the <strong>Companies and contacts</strong> blade, click the required contact's name.</li>
+<li>
+<p>In the next blade, configure the following:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First name, last name, full name</td>
+<td>Enter the customer's first name, last name, and full name.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Select the account status from the dropdown:<ul><li>Approved</li><li>New</li><li>Locked</li><li>Invited</li><li>Deleted</li><li>Rejected</li></ul></td>
+</tr>
+<tr>
+<td>User groups</td>
+<td>Add one or more user groups if needed, for example wholesaler or VIP.</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Enter the customer's job title.</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>Manage the current user's accounts:<ul><li>Add</li><li>Link</li><li>Unlink</li><li>Delete</li></ul></td>
+</tr>
+<tr>
+<td>Organization membership</td>
+<td>Assign the contact to an organization:<ul><li>Select the organization from the dropdown.</li><li>Add roles.</li><li>Lock or unlock the account.</li></ul></td>
+</tr>
+<tr>
+<td>Emails</td>
+<td>Add one or more email addresses.</td>
+</tr>
+<tr>
+<td>Orders</td>
+<td>View the list of orders the customer has submitted.<br> <img alt="Customer orders" src="../media/customer-orders-list.png" /></td>
+</tr>
+<tr>
+<td>Addresses</td>
+<td>Add, edit, or delete the customer's billing and shipping addresses.</td>
+</tr>
+<tr>
+<td>Back in stock subscriptions</td>
+<td>View the list of products the customer wants to be notified about when they are restocked.<br> <img alt="Back-in-stock" src="../media/back-in-stock-subscriptions.png" /></td>
+</tr>
+<tr>
+<td>Loyalty balance</td>
+<td>View the loyalty operations log with the points earned and redeemed for each order.<br> <img alt="Loyalty balance" src="../media/loyalty-operations-log.png" /></td>
+</tr>
+<tr>
+<td>Member of companies</td>
+<td>Assign one or multiple organizations to the the contact by selecting them from the dropdown, without assigning a role. <br> <img alt="Multiple organizations" src="../media/multiple-companies.png" /> <br> On the Frontend, multiple companies assigned to the user are displayed as follows: <br> <img alt="Multiple companies on Frontend" src="../media/multiple-companies-frontend.png" /></td>
+</tr>
+<tr>
+<td>Default company</td>
+<td>Set a default company for an employee, so that they can log in to that company by default upon first login or after changing the default company.</td>
+</tr>
+<tr>
+<td>Birth date</td>
+<td>Select the customer's date of birth.</td>
+</tr>
+<tr>
+<td>Time zone</td>
+<td>Select the customer's time zone from the dropdown.</td>
+</tr>
+<tr>
+<td>Default language</td>
+<td>Select the customer's preferred language. <br> <img alt="Default language" src="../media/default-language.png" /></td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>Select the customer's preferred currency. <br> <img alt="Default language" src="../media/default-currency.png" /></td>
+</tr>
+<tr>
+<td>Taxpayer ID</td>
+<td>Enter the customer's taxpayer identification number.</td>
+</tr>
+<tr>
+<td>Preferred communication channel</td>
+<td>Enter the customer's preferred communication channel, for example email or phone.</td>
+</tr>
+<tr>
+<td>Preferred delivery method</td>
+<td>Select the customer's preferred delivery method.</td>
+</tr>
+<tr>
+<td>About</td>
+<td>Enter additional information about the contact.</td>
+</tr>
+<tr>
+<td>Phone numbers</td>
+<td>Add one or more phone numbers.</td>
+</tr>
+<tr>
+<td>Dynamic properties</td>
+<td>Add any dynamic property, for example sex or marital status. <br> <img alt="Dynamic properties" src="../media/dynamic-properties.png" /></td>
+</tr>
+<tr>
+<td>Indexed date</td>
+<td>Manage the search index for the contact:<ul><li>View the last indexed date.</li><li>Build the index.</li><li>Copy the index content to the clipboard.</li></ul></td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>Attach a photo for the contact. <br> <img alt="User photo" src="../media/manage-icon.png" /> <br> Alternatively, you can attach photo via the <a href="../../user-profile/">user profile</a>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the toolbar.</p>
+</li>
+</ol>
+<p>Your modifications have been saved.</p>
+<h3 id="manage-account">Manage account<a class="headerlink" href="#manage-account" title="Permanent link">&para;</a></h3>
+<p>To manage customer or employee accounts:</p>
+<ol>
+<li>Click <strong>Contacts</strong> in the main menu.</li>
+<li>In the <strong>Companies and contacts</strong> blade, click the required contact's name.</li>
+<li>In the next blade, click the <strong>Accounts</strong> widget.</li>
+<li>In the next blade, select the account to manage.</li>
+<li>
+<p>In the next blade, use the toolbar to:</p>
+<ol>
+<li>Change password on the user's behalf.</li>
+<li>Lock the account.</li>
+<li><a href="../../security/login-on-behalf/">Log in on the user's behalf</a>.</li>
+</ol>
+</li>
+<li>
+<p>In the next blade, configure the following:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is administrator</td>
+<td>Enable or disable administrator privileges for the account.</td>
+</tr>
+<tr>
+<td>Login</td>
+<td>Edit the account login.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Edit the account email address.</td>
+</tr>
+<tr>
+<td>Verified</td>
+<td>Enable it for verified email addresses, or resend the verification link.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Select the account status from the dropdown:<ul><li>Approved</li><li>Deleted</li><li>New</li><li>Rejected</li></ul></td>
+</tr>
+<tr>
+<td>Account type</td>
+<td>Select the account type from the dropdown, or add a custom one:<ul><li>Administrator</li><li>Customer</li></ul></td>
+</tr>
+<tr>
+<td>Locked date</td>
+<td>View the date the account was locked.</td>
+</tr>
+<tr>
+<td>Last login date</td>
+<td>View the date of the account's last sign-in.</td>
+</tr>
+<tr>
+<td>Container (store)</td>
+<td>Select the store the account belongs to from the dropdown.</td>
+</tr>
+<tr>
+<td>Roles</td>
+<td><a href="../../security/managing-users/#assign-roles-to-users">Assign roles to the account</a> and view the list of assigned roles.</td>
+</tr>
+<tr>
+<td>Changes</td>
+<td>View the change log for the account.</td>
+</tr>
+<tr>
+<td>API key</td>
+<td><a href="../../security/api-key/">Generate an API key for authenticating the account's API requests</a>.</td>
+</tr>
+<tr>
+<td>Active sessions</td>
+<td><a href="../../security/active-sessions/">Manage the account's sessions</a>:<ul><li>View active sessions.</li><li>Terminate a single session.</li><li>Terminate all sessions.</li></ul></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the toolbar.</p>
+</li>
+</ol>
+<p>Your modifications have been saved.</p>
+<h2 id="invite-contacts">Invite contacts<a class="headerlink" href="#invite-contacts" title="Permanent link">&para;</a></h2>
+<p>To invite a user:</p>
+<ol>
+<li>Click <strong>Contacts</strong> in the main menu.</li>
+<li>In the <strong>Companies and contacts</strong> blade, click <strong>Invite</strong> in the toolbar. </li>
+<li>
+<p>In the next blade, configure the following:</p>
+<p><img alt="Invite user" src="../media/invite-user.png" /></p>
+</li>
+<li>
+<p>Click <strong>Invite</strong> in the toolbar.</p>
+</li>
+</ol>
+<p>Your invitations have been sent.</p>
 <h2 id="delete-contacts">Delete contacts<a class="headerlink" href="#delete-contacts" title="Permanent link">&para;</a></h2>
 <p>To delete a contact:</p>
 <ol>
 <li>Click <strong>Contacts</strong> in the main menu.</li>
-<li>In the <strong>Companies and Contacts</strong> blade, check the contact you need to delete. </li>
+<li>In the <strong>Companies and contacts</strong> blade, check the contact you need to delete. </li>
 <li>Click <strong>Delete</strong> in the toolbar.</li>
 <li>Type <strong>Yes</strong> to confirm your action.</li>
 </ol>
@@ -15244,14 +15491,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>Click <strong>Contacts</strong> in the main menu.</li>
 <li>
-<p>In the next <strong>Companies and Contacts</strong> blade, check the required contact (vendor/organization/person).</p>
+<p>In the next <strong>Companies and contacts</strong> blade, check the required contact (vendor/organization/person).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you do not check any contact, all the contacts of all the organizations will be exported into a CSV file.</p>
 </div>
 </li>
 <li>
-<p>Click <strong>Export</strong> in the top toolbar and confirm your action.</p>
+<p>Click <strong>Export</strong> in the toolbar and confirm your action.</p>
 </li>
 <li>In the next blade, click on the generated links to download the contacts:</li>
 </ol>
@@ -15267,7 +15514,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Prepare a CSV file of contacts. We recommend to <a href="./#export-contacts">export a sample CSV file</a> and use it as a template.</li>
 <li>Click <strong>Contacts</strong> in the main menu.</li>
 <li>
-<p>In the next <strong>Companies and Contacts</strong> blade, click <strong>Import</strong> in the top toolbar.</p>
+<p>In the next <strong>Companies and contacts</strong> blade, click <strong>Import</strong> in the toolbar.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In this step, you can specify an organization to import your contacts into. </p>
@@ -15283,43 +15530,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>
 <p>After uploading files, click <strong>Preview</strong> to open the uploaded contacts in the next blade.</p>
 </li>
-<li>Verify the result. Click <strong>Import</strong> in the top toolbar to complete the process. Otherwise, click <strong>Close</strong>.</li>
+<li>Verify the result. Click <strong>Import</strong> in the toolbar to complete the process. Otherwise, click <strong>Close</strong>.</li>
 <li>Confirm your action.</li>
 </ol>
 <p>Your contacts have been uploaded.</p>
 <h2 id="update-contacts">Update contacts<a class="headerlink" href="#update-contacts" title="Permanent link">&para;</a></h2>
 <p>The procedure for updating contacts is similar to the one for <a href="./#import-contacts">importing contacts</a>. The system finds organizations by Id or outer Id and updates them. </p>
 <h2 id="share-contacts">Share contacts<a class="headerlink" href="#share-contacts" title="Permanent link">&para;</a></h2>
-<p>Contact URLs now include the member ID slug, allowing for easy sharing with colleagues or partners:</p>
+<p>Contact URLs include the member ID slug, allowing for easy sharing with colleagues or partners:</p>
 <p><img alt="Contact URLs" src="../media/contact-urls.png" style="display: block; margin: 0 auto;" /></p>
 <p>You can also share company name and company ID by copying them from the dropdown menu:</p>
 <p><img alt="Contact ID" src="../media/contact-id-name.png" style="display: block; margin: 0 auto;" /></p>
-<h2 id="set-default-company">Set default company<a class="headerlink" href="#set-default-company" title="Permanent link">&para;</a></h2>
-<p>Administrators can now set a default company for an employee, so that they can log in to that company by default upon first login or after changing the default company:</p>
-<ol>
-<li>Click <strong>Contacts</strong> in the main menu.</li>
-<li>In the next blade, select an employee.</li>
-<li>
-<p>In the next blade, set a default company for them.</p>
-<p><img alt="Default company" src="../media/default-company.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-<li>
-<p>Click <strong>Save</strong> in the toolbar to save the changes. </p>
-</li>
-</ol>
-<h2 id="assign-multiple-organizations-to-contacts-and-employees">Assign multiple organizations to contacts and employees<a class="headerlink" href="#assign-multiple-organizations-to-contacts-and-employees" title="Permanent link">&para;</a></h2>
-<p>For corporate accounts in the Frontend Application, you can assign multiple organizations to any contact or employee:</p>
-<ol>
-<li>Click <strong>Contacts</strong> in the main menu.</li>
-<li>In the <strong>Companies and Contacts</strong> blade, select the required contact. </li>
-<li>In the next blade, add as many companies to the <strong>Member of company (ies)</strong> segment as needed from the dropdown list.</li>
-<li>
-<p>Click <strong>Save</strong> in the top toolbar to save the changes.</p>
-<p><img alt="Assign multiple organizations" src="../media/assign-multiple-organizatopns.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-</ol>
-<p>The contact can now switch between the assigned organizations in the Frontend Application:</p>
-<p><img alt="Storefront multiple organizations" src="../media/storefront-multiple-organizations.png" style="display: block; margin: 0 auto;" /></p>
 <p><br>
 <br></p>
 <hr />

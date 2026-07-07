@@ -544,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                     <a
                         class="mega-menu__menu-button "
-                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10"
+                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15"
                         
                     >
                         
@@ -553,7 +553,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 style="background-image: url('assets/icons/fire.svg')"
                             ></div>
                         
-                        Upgrading to .NET10
+                        Upgrading to Stable 15
                     </a>
 
                 
@@ -2782,6 +2782,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Render table of contents, if not empty -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Custom robot.txt
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -2790,6 +2794,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
       <!-- Show table of contents -->
+      
+        <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="">
+    
+
+    <!--
+      Hack: check whether the content contains a h1 headline. If it does, the
+      top-level anchor must be skipped, since it would be redundant to the link
+      to the current page that is located just above the anchor. Therefore we
+      directly continue with the children of the anchor.
+    -->
+    
+    
+    
+    
+
+    <!-- Render item list -->
+    
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#environment-policies" class="md-nav__link">
+        Environment policies
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
+</nav>
       
     </li>
 
@@ -14915,6 +14956,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Render item list -->
     
+    <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#environment-policies" class="md-nav__link">
+        Environment policies
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+    </ul>
+    
 </nav>
                   </div>
                 </div>
@@ -14934,7 +14993,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 11, 2025 12:44:59 UTC">August 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 06:39:51 UTC">July 7, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -14980,6 +15039,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="admonition-title">Note</p>
 <p>To serve different <strong>robots.txt</strong> files based on domain or language, we recommend creating separate stores for each domain and uploading a distinct <strong>robots.txt</strong> file to the <strong>Assets</strong> of each store. This approach allows each store to manage its own file.</p>
 </div>
+<h2 id="environment-policies">Environment policies<a class="headerlink" href="#environment-policies" title="Permanent link">&para;</a></h2>
+<p>Use different crawl policies for production and non-production environments.</p>
+<p>For production, allow crawling and point crawlers to the sitemap, while keeping session-specific routes out of the index:</p>
+<div class="highlight"><span class="filename">robots.txt (production)</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User-agent: *
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Disallow: /account
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Disallow: /checkout
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Disallow: /cart
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Disallow: /sign-in
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Allow: /
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Sitemap: https://&lt;your-storefront-domain&gt;/sitemap/sitemap.xml
+</code></pre></div>
+<p>For demo, QA, and staging, block all crawling so the environment is never indexed:</p>
+<div class="highlight"><span class="filename">robots.txt (non-production)</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Restrictive policy for demo and QA environments
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>User-agent: *
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Disallow: /
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>Disallow: /</code> blocks all crawling. Replace the non-production file with the permissive production policy before go-live. Behind a disallow-all <strong>robots.txt</strong>, dynamic rendering with Prerender.io delivers no SEO value.</p>
+</div>
+<p>Two things to keep in mind for the <code>Sitemap:</code> directive:</p>
+<ul>
+<li>The valid sitemap path is <code>/sitemap/sitemap.xml</code>, not <code>/sitemap.xml</code>. Use it in the <code>Sitemap:</code> directive and in any recache scripts.</li>
+<li>The sitemap is generated by the Platform <strong>Sitemaps</strong> module, not by the Frontend. Add sitemap items and export them to the store assets before the <code>Sitemap:</code> URL returns anything useful.</li>
+</ul>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../sitemaps/overview/">Manage sitemaps</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/storefront/developer-guide/latest/integrations/prerender_io/">Enhancing SEO with Prerender.io</a></p>
 <p><br>
 <br></p>
 <hr />

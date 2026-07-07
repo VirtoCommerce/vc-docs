@@ -544,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                     <a
                         class="mega-menu__menu-button "
-                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10"
+                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15"
                         
                     >
                         
@@ -553,7 +553,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 style="background-image: url('assets/icons/fire.svg')"
                             ></div>
                         
-                        Upgrading to .NET10
+                        Upgrading to Stable 15
                     </a>
 
                 
@@ -14993,7 +14993,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 10, 2026 16:56:31 UTC">June 10, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 06:39:51 UTC">July 7, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15041,17 +15041,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>In the program details blade, click the <strong>Product factors</strong> widget.</li>
 <li>In the <strong>Product factors</strong> blade, click <strong>Add</strong>.</li>
 <li>Select the products that should use a custom factor, then click <strong>Add selected</strong>.</li>
-<li>
-<p>For each row, enter the multiply factor in the <strong>Factor</strong> column. Whole numbers and decimals are both accepted, for example 5, 0.5, or 2.75. Negative values are rejected with a red highlight, and the <strong>Save</strong> button stays disabled.</p>
-<p><img alt="Product factors" src="../media/product-factors.png" style="display: block; margin: 0 auto;" /></p>
-</li>
-<li>
-<p>Click <strong>Save</strong> in the toolbar.</p>
-</li>
+<li>For each row, enter the multiply factor in the <strong>Factor</strong> column. Whole numbers and decimals are both accepted, for example 5, 0.5, or 2.75. Negative values are rejected with a red highlight, and the <strong>Save</strong> button stays disabled.
+    <br>
+    <img alt="Product factors" src="../media/product-factors.png" style="display: block; margin: 0 auto;" />
+    <br></li>
+<li>Click <strong>Save</strong> in the toolbar.</li>
 </ol>
 </li>
 </ol>
 <p>Your modifications have been saved. </p>
+<p>On the Frontend, after purchasing this product...:</p>
+<p><img alt="Product purchase" src="../media/buying-product-with-product-factor.png" style="display: block; margin: 0 auto;" /></p>
+<p>... you will see that 278 loyalty points have been accrued (the product price multiplied by the previously set factor of 2):</p>
+<p><img alt="Accrued points" src="../media/accured-points.png" style="display: block; margin: 0 auto;" /></p>
 <p>A product can have a factor in several programs at the same time, for example one factor for VIP and another for LUX:</p>
 <p><img alt="Product factors" src="../media/product-factors-for-loyalty-products.png" style="display: block; margin: 0 auto;" /></p>
 <p>The factor used at runtime depends on which program matches the customer's groups first by priority. Within a single program, a product can have only one factor row.</p>
