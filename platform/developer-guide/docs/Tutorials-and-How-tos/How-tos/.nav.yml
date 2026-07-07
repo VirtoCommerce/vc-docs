@@ -1,5 +1,6 @@
 title: How-tos
 nav:
+  - Stable 15 and Breaking Changes: upgrading-to-stable-15.md
   - Upgrading to Virto Commerce on .NET10: upgrading-to-dot-net-10.md
   - Connecting Virto Commerce to AI agents via onX Adapter: connect-to-ai-agents-via-onx.md
   - Adding Case-Insensitive Search Support for PostgreSQL: adding-case-sensitive-search-support-for-postgre.md

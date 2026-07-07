@@ -3,6 +3,9 @@ Click on a version name to see which modules are included in that version.
 
 | Product                                  | Version                       | GA<br>(Mainstream support phase) | End of support <br> (Extended support phase) | End of life <br>(Sustaining support phase) |
 |------------------------------------------|-------------------------------|----------------------------------|----------------------------------------------|--------------------------------------------|
+| Virto Commerce platform core pack        | [v3-2026-S15](v3-2026-S15.md) | July 1, 2026                     | January 1, 2027                              | May 1, 2027                                |
+| Virto Commerce platform integration pack | [v3-2026-S15](v3-2026-S15.md) | July 1, 2026                     | January 1, 2027                              | May 1, 2027                                |
+| Virto Commerce platform enterprise pack  | [v3-2026-S15](v3-2026-S15.md) | July 1, 2026                     | January 1, 2027                              | May 1, 2027                                |
 | Virto Commerce platform core pack        | [v3-2026-S14](v3-2026-S14.md) | March 1, 2026                    | September 1, 2026                            | January 1, 2027                            |
 | Virto Commerce platform integration pack | [v3-2026-S14](v3-2026-S14.md) | March 1, 2026                    | September 1, 2026                            | January 1, 2027                            |
 | Virto Commerce platform enterprise pack  | [v3-2026-S14](v3-2026-S14.md) | March 1, 2026                    | September 1, 2026                            | January 1, 2027                            |

@@ -222,6 +222,6 @@ With the update process completed, you can now run and enjoy the enhanced capabi
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../connect-azure-function-to-events">← Connect Azure Functions to Virto Events</a>
+    <a href="../upgrading-to-stable-15">← Upgrading to Stable 15</a>
     <a href="../connect-to-ai-agents-via-onx">Connecting to AI Agents via onX Adapter  →</a>
 </div>

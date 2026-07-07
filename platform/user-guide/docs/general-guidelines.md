@@ -6,7 +6,7 @@ Although the Platform interface is user friendly and intuitive, read this articl
 
 The Platform's home page shows:
 
-* **Dashboard**: Provides insights into sales performance, customer behavior, and overall business health.
+* **Dashboard**: Provides insights into sales performance, customer behavior, and overall business health. Every value is visible and scrollable within the card.
 * **Main menu**: Lists some of the available modules. You can adjust the number of items in the menu to suit your needs. Click **More** in the main menu to view the complete list of available modules.
 * **Applications menu button**: Opens a list of tools and integrations to enhance various aspects of ecommerce operations.
 * **Links to documentation**.

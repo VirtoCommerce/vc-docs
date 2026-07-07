@@ -605,8 +605,8 @@ extra:
               url: https://www.youtube.com/c/VirtoCommerce
               external: true
             - iconSrc: assets/icons/fire.svg
-              title: Upgrading to .NET10
-              url: /platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10
+              title: Upgrading to Stable 15
+              url: /platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15
         footer:
             - iconSrc: "assets/icons/release-notes.svg"
               title: "Release Notes"

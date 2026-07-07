@@ -32,13 +32,20 @@ To configure loyalty points per product:
     1. In the **Product factors** blade, click **Add**.
     1. Select the products that should use a custom factor, then click **Add selected**.
     1. For each row, enter the multiply factor in the **Factor** column. Whole numbers and decimals are both accepted, for example 5, 0.5, or 2.75. Negative values are rejected with a red highlight, and the **Save** button stays disabled.
-
+        <br>
         ![Product factors](media/product-factors.png){: style="display: block; margin: 0 auto;" }
-
+        <br>
     1. Click **Save** in the toolbar.
 
-
 Your modifications have been saved. 
+
+On the Frontend, after purchasing this product...:
+
+![Product purchase](media/buying-product-with-product-factor.png){: style="display: block; margin: 0 auto;" }
+
+... you will see that 278 loyalty points have been accrued (the product price multiplied by the previously set factor of 2):
+
+![Accrued points](media/accured-points.png){: style="display: block; margin: 0 auto;" }
 
 A product can have a factor in several programs at the same time, for example one factor for VIP and another for LUX:
 

@@ -48,7 +48,7 @@ Users adapt products to their preferences by configuring available options, such
 
 ## Buy products from loyalty catalog
 
-If your store runs a loyalty program, you can buy products with the points you have earned. You can put them in the same cart as products you pay for with money. The cart keeps these two apart, showing a separate total for your money items and your points items, so it is always clear what each one costs.
+If your store runs a loyalty program, you can buy products with the points you have earned. You can find such products at **<storefront>/loyalty-catalog**. You can put them in the same cart as products you pay for with money. The cart keeps these two apart, showing a separate total for your money items and your points items, so it is always clear what each one costs.
 
 <div>
   <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
