@@ -2472,8 +2472,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#add-product" class="md-nav__link">
-        Add product
+    <a href="#add-item-to-physical-catalog" class="md-nav__link">
+        Add item to physical catalog
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#add-item-to-virtual-catalog" class="md-nav__link">
+        Add item to virtual catalog
     </a>
 
     <!-- Render nested item list -->
@@ -14986,8 +14996,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#add-product" class="md-nav__link">
-        Add product
+    <a href="#add-item-to-physical-catalog" class="md-nav__link">
+        Add item to physical catalog
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#add-item-to-virtual-catalog" class="md-nav__link">
+        Add item to virtual catalog
     </a>
 
     <!-- Render nested item list -->
@@ -15035,7 +15055,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:00:18 UTC">December 16, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15066,18 +15086,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../managing-product-variations/">Managing product variations</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../managing-product-configurations/">Managing product configurations</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../catalog-personalization/user-groups/">Assigning user groups to products</a></p>
-<h2 id="add-product">Add product<a class="headerlink" href="#add-product" title="Permanent link">&para;</a></h2>
+<h2 id="add-item-to-physical-catalog">Add item to physical catalog<a class="headerlink" href="#add-item-to-physical-catalog" title="Permanent link">&para;</a></h2>
 <p>To add a new product to your catalog:</p>
 <ol>
 <li>Click <strong>Catalog</strong> in the main menu.</li>
 <li>In the next blade, select the required catalog to open the <strong>Categories and Items</strong> blade.</li>
 <li>Click <strong>Add</strong> in the toolbar.</li>
 <li>
-<p>In the <strong>New category item</strong> blade, select the type of the product to add. </p>
-<p><img alt="Adding a new product" src="../media/add-new-product.png" style="display: block; margin: 0 auto;" /></p>
+<p>In the <strong>New category item</strong> blade, select the type of item to add:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>A container for other categories, products, or variations.</td>
+</tr>
+<tr>
+<td><strong>Physical product</strong></td>
+<td>A tangible item that can be purchased. It requires physical shipping and can be used for targeted promotions.</td>
+</tr>
+<tr>
+<td><strong>Digital product</strong></td>
+<td>An intangible item available for purchase. It can be downloaded directly after purchase, so it does not require physical shipping. Digital products are also suitable for targeted promotions.</td>
+</tr>
+<tr>
+<td><strong>Product with bill of materials</strong></td>
+<td>A physical product that comes with a bill of materials (a list of additional items). It can be used for specific promotions and requires physical shipping.</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>In the <strong>New Product</strong> blade, fill in the following fields:</p>
+<p>In the <strong>New product</strong> blade, fill in the following fields:</p>
 <p><img alt="New product blade" src="../media/new-product-blade.png" style="display: block; margin: 0 auto;" /></p>
 </li>
 <li>
@@ -15085,6 +15130,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ol>
 <p>The product has been added to the selected category or catalog.</p>
+<h2 id="add-item-to-virtual-catalog">Add item to virtual catalog<a class="headerlink" href="#add-item-to-virtual-catalog" title="Permanent link">&para;</a></h2>
+<p>A virtual catalog does not store its own products. You structure it with categories and pull in existing items from physical catalogs through links.</p>
+<p>To add an item to a virtual catalog:</p>
+<ol>
+<li>Click <strong>Catalog</strong> in the main menu.</li>
+<li>In the next blade, select the required virtual catalog to open the <strong>Categories and Items</strong> blade.</li>
+<li>Click <strong>Add</strong> in the toolbar.</li>
+<li>
+<p>In the <strong>New category item</strong> blade, select the type of item to add:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>A container for other categories, products, or variations.</td>
+</tr>
+<tr>
+<td><strong>Link</strong></td>
+<td>A link to a physical category or product.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Complete the item:</p>
+<ul>
+<li>For a <strong>Category</strong>, fill in the category name and click <strong>Create</strong>.</li>
+<li>
+<p>For a <strong>Link</strong>:</p>
+<ol>
+<li>Find products to add and check them.</li>
+<li>Click <strong>Map</strong> in the toolbar:</li>
+</ol>
+<p><img alt="Add product to virtual catalog" src="../media/add-product-to-virtual-catalog.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>The item has been added to the virtual catalog.</p>
 <h2 id="view-product-details">View product details<a class="headerlink" href="#view-product-details" title="Permanent link">&para;</a></h2>
 <p>To view the product details of the added product:</p>
 <ol>
@@ -15112,10 +15201,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>In the main menu, click <strong>Catalog</strong>.</li>
 <li>In the next blade, select the required catalog.</li>
 <li>In the next blade, select the required product.</li>
-<li>In the next blade, set pack size.</li>
-<li>Click <strong>Save</strong> in the toolbar.</li>
-</ol>
+<li>
+<p>In the next blade, set pack size.</p>
 <p><img alt="Add pack size" src="../media/add-pack-size.png" style="display: block; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the toolbar.</p>
+</li>
+</ol>
 <p>This helps suppliers fulfill orders smoothly without needing to cancel or unexpectedly adjust quantities:</p>
 <p><img alt="Pack size on frontend" src="../media/pack-size-frontend.png" style="display: block; margin: 0 auto;" /></p>
 <p><br>
