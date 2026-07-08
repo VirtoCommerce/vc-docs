@@ -32888,7 +32888,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32995,7 +32995,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="s2">&quot;2024-01-01&quot;</span><span class="p">);</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">endDateRules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">computed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`required|after:</span><span class="si">${</span><span class="nx">startDate</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 </code></pre></div>
-<p>The <code>Field</code> will re-validate <code>endDate</code> automatically whenever <code>startDate</code> changes.</p>
+<p>The <code>Field</code> will revalidate <code>endDate</code> automatically whenever <code>startDate</code> changes.</p>
 <h3 id="custom-rule-with-async-server-validation">Custom rule with async server validation<a class="headerlink" href="#custom-rule-with-async-server-validation" title="Permanent link">&para;</a></h3>
 <p>When the server is the source of truth (uniqueness checks, business-rule validation), register a custom rule that calls the API. Debounce so each keystroke does not hit the server, and gate <strong>Save</strong> until the in-flight check resolves:</p>
 <div class="highlight"><span class="filename">pages/offer-details.vue (script fragment)</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;ts&quot;</span><span class="p">&gt;</span>

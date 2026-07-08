@@ -33123,7 +33123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 15, 2026 07:49:16 UTC">May 15, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33164,7 +33164,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>Async snapshot creation (coming soon)</strong>: Snapshot generation runs in the background to avoid impacting order processing performance. If snapshot creation fails, it is logged but does not block the order from being created.</li>
 </ul>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>Snapshots are written on both <code>Added</code> and <code>Modified</code> order change entries, so line items added to an existing order after creation are still captured. The handler ignores <code>Deleted</code> and <code>Unchanged</code> entries. A unique <code>(OrderId, ProductId)</code> constraint combined with the idempotent skip in the provider guarantees exactly one snapshot per product per order. Re-saving an unchanged order is a no-op.</p>
+<p>Snapshots are written on both <code>Added</code> and <code>Modified</code> order change entries, so line items added to an existing order after creation are still captured. The handler ignores <code>Deleted</code> and <code>Unchanged</code> entries. A unique <code>(OrderId, ProductId)</code> constraint combined with the idempotent skip in the provider guarantees exactly one snapshot per product per order. Resaving an unchanged order is a no-op.</p>
 <p>REST API calls go straight through <code>ICatalogProductSnapshotProvider</code>. GraphQL and xAPI calls are routed through xOrder's <code>IOrderProductResolver</code>, which launches the <code>ExternalOrderProducts</code> pipeline. <code>LoadorderProductSnapshotMiddleware</code> fills in frozen snapshots. Anything still missing falls through to xOrder's catalog fallback.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>The module exposes a single setting in <strong>appsettings.json</strong>:</p>

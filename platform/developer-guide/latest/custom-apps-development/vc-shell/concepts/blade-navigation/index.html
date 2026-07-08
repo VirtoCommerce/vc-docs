@@ -32989,7 +32989,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33130,7 +33130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <p>See <a href="../forms/">Forms</a> for the recommended path.</p>
 <h2 id="url-synchronization">URL synchronization<a class="headerlink" href="#url-synchronization" title="Permanent link">&para;</a></h2>
-<p>A blade that declares <code>url</code> in its config gets reflected in the address bar; routing back to that URL re-opens the matching workspace. Non-routable child blades and <code>options</code> payloads are runtime state: they do not change the address bar and are not restored after a hard refresh. Do not rely on the browser Back and Forward buttons to replay every blade open and close operation.</p>
+<p>A blade that declares <code>url</code> in its config gets reflected in the address bar; routing back to that URL reopens the matching workspace. Non-routable child blades and <code>options</code> payloads are runtime state: they do not change the address bar and are not restored after a hard refresh. Do not rely on the browser Back and Forward buttons to replay every blade open and close operation.</p>
 <h2 id="errors-are-caught-automatically">Errors are caught automatically<a class="headerlink" href="#errors-are-caught-automatically" title="Permanent link">&para;</a></h2>
 <p>Every blade is wrapped with an error boundary. Throw from any function inside the blade and the framework renders a banner with the message; the app keeps running. There is usually no reason to wrap your action in <code>try/catch</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kt">load</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAsync</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>

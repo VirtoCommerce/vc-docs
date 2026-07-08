@@ -33151,7 +33151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 06:39:51 UTC">July 7, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33388,7 +33388,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>xOrder, updated to version 3.1005.0, stops calling the obsolete <code>CartAggregate.ValidateAsync(CartValidationContext, ruleSet)</code> and calls the non-obsolete <code>ValidateAsync(string ruleSet)</code> instead, which builds the validation context internally.</p>
 <ul>
 <li>Public API change. <code>CreateOrderFromCartCommandHandler</code>'s constructor no longer takes an <code>ICartValidationContextFactory</code> parameter. Subclasses and direct constructor calls must drop that argument. DI registration is unaffected.</li>
-<li>Behavioral change (intended). Validation now runs against the products re-resolved for the cart's current items at validation time, so it reflects the cart as it will be ordered.</li>
+<li>Behavioral change (intended). Validation now runs against the products reresolved for the cart's current items at validation time, so it reflects the cart as it will be ordered.</li>
 </ul>
 <h2 id="migrate-icancellationtoken-to-cancellationtoken">Migrate ICancellationToken to CancellationToken<a class="headerlink" href="#migrate-icancellationtoken-to-cancellationtoken" title="Permanent link">&para;</a></h2>
 <p>This is a forced migration rather than a removal. The Platform keeps <code>ICancellationToken</code> marked obsolete (VC0014), but with <code>TreatWarningsAsErrors</code> any module that uses it fails to build once it references the new Platform version. The Platform's <code>IExportSupport</code> and <code>IImportSupport</code> now expose a modern <code>CancellationToken</code> overload, while the <code>ICancellationToken</code> overload throws by default.</p>

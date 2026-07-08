@@ -33357,7 +33357,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 3, 2026 14:04:54 UTC">February 3, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33665,7 +33665,7 @@ This kind of inconsistency is one of the most common causes of frontend GraphQL 
 <p>For automation, use TypeScript to enforce; consider custom scripts to analyze queries vs. component usage.</p>
 <h2 id="optimistic-updates">Optimistic updates<a class="headerlink" href="#optimistic-updates" title="Permanent link">&para;</a></h2>
 <p>Optimistic updates are a powerful GraphQL feature that makes web apps feel like native mobile apps - responsive and snappy. They provide immediate UI feedback by assuming a successful server response, then confirming in the background.</p>
-<p>When a user performs an action (e.g., clicking "+" to increase quantity), Apollo Client updates the local cache instantly with an "optimistic" version of the data. The UI re-renders immediately. Meanwhile, the real network request runs. On success, the cache updates with actual data (often seamless if it matches). On error, it reverts and shows an error.</p>
+<p>When a user performs an action (e.g., clicking "+" to increase quantity), Apollo Client updates the local cache instantly with an "optimistic" version of the data. The UI rerenders immediately. Meanwhile, the real network request runs. On success, the cache updates with actual data (often seamless if it matches). On error, it reverts and shows an error.</p>
 <p>For example, in a cart, adding items or changing quantity updates the UI instantly without delays or spinners. Users sometimes think it's "too fast".</p>
 <table>
 <thead>

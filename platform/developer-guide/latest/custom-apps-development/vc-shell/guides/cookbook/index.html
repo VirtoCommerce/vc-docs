@@ -32932,7 +32932,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33108,7 +33108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <p>Pass <code>isWorkspace: true</code> to replace the whole stack with the target workspace, which is the right choice for top-level navigation.</p>
 <h2 id="add-a-toolbar-button-conditionally">Add a toolbar button conditionally<a class="headerlink" href="#add-a-toolbar-button-conditionally" title="Permanent link">&para;</a></h2>
-<p>A blade declares its toolbar as a <code>ref&lt;IBladeToolbar[]&gt;([...])</code> and passes it to <code>&lt;VcBlade :toolbar-items&gt;</code>. The framework filters items by <code>permissions</code> and <code>isVisible</code> before render, and re-reads reactive fields whenever they change, so visibility and disabled state follow the form state automatically.</p>
+<p>A blade declares its toolbar as a <code>ref&lt;IBladeToolbar[]&gt;([...])</code> and passes it to <code>&lt;VcBlade :toolbar-items&gt;</code>. The framework filters items by <code>permissions</code> and <code>isVisible</code> before render, and rereads reactive fields whenever they change, so visibility and disabled state follow the form state automatically.</p>
 <div class="highlight"><span class="filename">ItemDetails.vue</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;ts&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">computed</span><span class="p">,</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vue&quot;</span><span class="p">;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useAsync</span><span class="p">,</span><span class="w"> </span><span class="nx">VcBlade</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="w"> </span><span class="nx">IBladeToolbar</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@vc-shell/framework&quot;</span><span class="p">;</span>
@@ -33153,7 +33153,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><a href="../../composables/ui-state/useLoading/"><code>useLoading</code> reference.</a></li>
 </ul>
 <h2 id="set-a-dynamic-blade-title">Set a dynamic blade title<a class="headerlink" href="#set-a-dynamic-blade-title" title="Permanent link">&para;</a></h2>
-<p>The <code>VcBlade</code> shell takes a <code>:title</code> prop directly. Bind it to a <code>computed</code> and the header re-renders as the underlying entity changes.</p>
+<p>The <code>VcBlade</code> shell takes a <code>:title</code> prop directly. Bind it to a <code>computed</code> and the header rerenders as the underlying entity changes.</p>
 <div class="highlight"><span class="filename">order-details.vue</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="p">&lt;</span><span class="nt">VcBlade</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="p">:</span><span class="na">title</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">bladeTitle</span><span class="s">&quot;</span>
@@ -33218,7 +33218,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><a href="../../plugins/notifications/">Notifications plugin reference — toast helper.</a></li>
 </ul>
 <h2 id="refresh-a-list-when-a-push-notification-arrives">Refresh a list when a push notification arrives<a class="headerlink" href="#refresh-a-list-when-a-push-notification-arrives" title="Permanent link">&para;</a></h2>
-<p>When a record can change from somewhere else (another tab, a background job, a different blade), subscribe to the relevant notification type and re-fetch. The subscription is scoped to the blade — when the blade closes, it stops listening automatically.</p>
+<p>When a record can change from somewhere else (another tab, a background job, a different blade), subscribe to the relevant notification type and refetch. The subscription is scoped to the blade — when the blade closes, it stops listening automatically.</p>
 <div class="highlight"><span class="filename">src/modules/offers/pages/offers-list.vue</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;ts&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useBladeNotifications</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@vc-shell/framework&quot;</span><span class="p">;</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
@@ -33291,7 +33291,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">});</span>
 <a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Filter on the field your platform uses to identify the originator — <code>creator</code> in the vendor portal example, but it could be <code>sellerId</code>, <code>organizationId</code>, or any payload field that survives the broadcast. Install once at app mount; if your app supports user switching, watch the user and re-install accordingly.</p>
+<p>Filter on the field your platform uses to identify the originator — <code>creator</code> in the vendor portal example, but it could be <code>sellerId</code>, <code>organizationId</code>, or any payload field that survives the broadcast. Install once at app mount; if your app supports user switching, watch the user and reinstall accordingly.</p>
 <ul>
 <li><a href="../../composables/notifications/useBroadcastFilter/">useBroadcastFilter reference.</a></li>
 <li><a href="../../concepts/notifications/#broadcast-vs-targeted">Notifications concept page — broadcast vs targeted.</a></li>

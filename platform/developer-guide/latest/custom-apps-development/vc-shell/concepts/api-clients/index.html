@@ -32909,7 +32909,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32949,7 +32949,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <div class="admonition warning">
 <p class="admonition-title"><code>getApiClient()</code> is async</p>
-<p>Call it inside the function that needs the client, never at the top of <code>&lt;script setup&gt;</code>. A <code>const client = await getApiClient()</code> outside an async block holds a single instance for the lifetime of the component, which is fine for stable sessions but couples your code to one client object across re-runs of the action.</p>
+<p>Call it inside the function that needs the client, never at the top of <code>&lt;script setup&gt;</code>. A <code>const client = await getApiClient()</code> outside an async block holds a single instance for the lifetime of the component, which is fine for stable sessions but couples your code to one client object across reruns of the action.</p>
 </div>
 <h2 id="the-useapiclient-useasync-pattern">The useApiClient + useAsync pattern<a class="headerlink" href="#the-useapiclient-useasync-pattern" title="Permanent link">&para;</a></h2>
 <p>The canonical shape across modules pairs <code>useApiClient</code> with <code>useAsync</code>. Each operation gets its own <code>useAsync</code> so loading and saving refs flow into the UI independently:</p>

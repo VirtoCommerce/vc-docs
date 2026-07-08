@@ -32902,7 +32902,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 06:50:26 UTC">June 24, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33000,7 +33000,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 </tbody>
 </table>
-<p>The Webhooks module preserves the error message and response payload for each failed delivery, so an operator can read the actual server response without re-triggering the call. The Hangfire dashboard shows each failed attempt with its stack trace and runtime, and exposes a manual retry action.</p>
+<p>The Webhooks module preserves the error message and response payload for each failed delivery, so an operator can read the actual server response without retriggering the call. The Hangfire dashboard shows each failed attempt with its stack trace and runtime, and exposes a manual retry action.</p>
 <h3 id="dead-letter-queue">Dead-letter queue<a class="headerlink" href="#dead-letter-queue" title="Permanent link">&para;</a></h3>
 <p>The Platform does not ship a first-class dead-letter queue. Functionally, the Hangfire <strong>Failed</strong> tab and the Webhooks error log fill the same role. They hold messages whose retries are exhausted and that need human attention. Manual retry is available in both surfaces.</p>
 <p>If you need true DLQ semantics (automatic quarantine, separate metrics, replay tooling), that is a custom build on top of these primitives.</p>
@@ -33009,7 +33009,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>This answers a common question: if the database commit succeeds but the webhook or Event Grid delivery fails, is the event lost?</p>
 <ul>
 <li>The change is committed to the database regardless of delivery.</li>
-<li>Delivery to external systems is best-effort. Webhooks and Event Grid retry on failure, but once retries are exhausted the event remains only in its failure surface and is not re-delivered automatically. An in-process handler that throws runs once and leaves only an application-log entry.</li>
+<li>Delivery to external systems is best-effort. Webhooks and Event Grid retry on failure, but once retries are exhausted the event remains only in its failure surface and is not redelivered automatically. An in-process handler that throws runs once and leaves only an application-log entry.</li>
 <li>So without extra handling, an external system can miss an event that the database has already committed.</li>
 </ul>
 <p>To achieve at-least-once delivery on top of these primitives:</p>
