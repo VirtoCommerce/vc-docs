@@ -40,18 +40,6 @@ Let'a add the **Epson** subcategory to the **Printers** category of the **B2B** 
   </div>
 </div>
 
-## Rebuild product search index for category
-
-To rebuild the product search index for a specific category without reindexing the entire catalog:
-
-1. Select a category you want to reindex and click the three dots to the left on its name.
-1. In the popup menu, click **Manage**.
-1. In the next blade, click the **Last indexed** widget.
-1. In the next blade, click **Reindex all products** in the toolbar.
-1. Confirm your action.
-1. Wait until a notification confirms that the reindexing has completed successfully.
-
-The products in the category have been reindexed.
 
 ### Tax type
 
@@ -146,6 +134,20 @@ Let's add automatic links to display all HP printers within the HP subcategory o
 ![Readmore](media/readmore.png){: width="25"} [Properties widget](managing-properties.md)
 
 ![Readmore](media/readmore.png){: width="25"} [User Groups widget](../catalog-personalization/user-groups.md)
+
+
+## Rebuild product search index for category
+
+To rebuild the product search index for a specific category without reindexing the entire catalog:
+
+1. Select a category you want to reindex and click the three dots to the left on its name.
+1. In the popup menu, click **Manage**.
+1. In the next blade, click the **Last indexed** widget.
+1. In the next blade, click **Reindex all products** in the toolbar.
+1. Confirm your action.
+1. Wait until a notification confirms that the reindexing has completed successfully.
+
+The products in the category have been reindexed.
 
 
 <br>

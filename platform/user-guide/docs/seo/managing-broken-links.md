@@ -1,6 +1,11 @@
 # Manage Broken Links
 
-The SEO module includes a powerful tool for detecting and managing broken URLs reported by the Frontend. When the Frontend encounters a missing slug (via an empty `slugInfo` GraphQL response), the system logs the **404 error** and makes it visible to administrators in the back office.
+The SEO module includes powerful tools that help:
+
+* [Detect and manage broken URLs reported by the Frontend](#detect-and-manage-broken-links). When the Frontend encounters a missing slug (via an empty `slugInfo` GraphQL response), the system logs the **404 error** and makes it visible to administrators in the back office.
+* [Configure universal redirect rules](#configure-universal-redirect-rules). Define store-wide URL rewrite rules, using static or regex patterns, so an incoming URL serves a target URL without a per-link redirect.
+
+## Detect and manage broken links
 
 To view the list of broken links and manage them:
 
@@ -18,9 +23,9 @@ To view the list of broken links and manage them:
 
 1. The next blade lists all the broken links with the following statuses:
 
-    | Broken link status   | Description                                                                                                                                                                          |
-    | ---------------------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | **Active**           | Broken links that require your attention. The hit count continues until the link is either resolved or accepted.                                                                     |
+    | Broken link status   | Description                                                                                                                                    |
+    | ---------------------| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **Active**           | Broken links that require your attention. The hit count continues until the link is either resolved or accepted.        |
     | **Accepted**         | Broken links pointing to intentionally removed pages. Once accepted, the hit count stops. This status indicates that you're aware of the broken link and have approved it as intentional. |
     | **Resolved**         | Broken links that have been redirected to a valid URL. The hit count stops once the redirect is assigned. Resolved broken links can be reopened to modify redirect URLs. |
 
@@ -33,7 +38,7 @@ To view the list of broken links and manage them:
 
 1. Click **Save** in the toolbar to save the changes.
 
-Try our interactive demo to explore key features in action:
+Try our interactive demo to explore this feature in action:
 
 <div>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -41,6 +46,36 @@ Try our interactive demo to explore key features in action:
     <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/0xrjkdy7i95a?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
   </div>
 </div>
+
+## Configure universal redirect rules
+
+Instead of resolving broken links one by one, you can define store-wide redirect rules that map an incoming URL to a target URL. Rules run server-side, so the target is served without a client-side redirect. Two rule types are supported:
+
+* **Static**: an exact path match, for example `/abc` serves `/cdf`.
+* **Regex**: an NGINX-style regular expression. For example, `^/old/(.*)$` serves `/new/$1`. Here `^` and `$` anchor the start and end of the path, `/old/` matches that literal prefix, and `(.*)` captures everything after it into a group. In the target, `$1` inserts that captured group. As a result, `/old/product1` serves `/new/product1`, and `/old/tools/hammer` serves `/new/tools/hammer`.
+
+To manage redirect rules:
+
+1. Click **Stores** in the main menu.
+1. In the next blade, select your store.
+1. In the next blade, click the **Active rules** widget, which shows the number of configured rules.
+1. In the **Redirect rules** blade, click **Add** to create a rule, or select an existing rule to edit it.
+1. Configure the rule:
+
+	| Field | Description |
+	|---|---|
+	| **Is active** | Enable or disable the rule. |
+	| **Inbound rule** | The source pattern to match, for example `/abc` (static) or `^/old/(.*)$` (regex). |
+	| **Outbound rule** | The target URL to serve, for example `/cdf` (static) or `/new/$1` (regex). |
+	| **Redirect rule type** | Select **Static** for an exact path match or **Regex** for a regular expression. |
+	| **Priority** | An integer that sets execution order. When several rules match a URL, priority determines which rewrite runs first. |
+
+	![Rewrite rule](media/rewrite-rule.png){: style="display: block; margin: 0 auto;" }
+
+1. Click **Save** in the toolbar. The platform validates the rule on the backend and the Frontend and prevents saving an invalid rule.
+
+Once the rule is active, it is applied when a matching URL is entered on the Frontend.
+
 
 <br>
 <br>
