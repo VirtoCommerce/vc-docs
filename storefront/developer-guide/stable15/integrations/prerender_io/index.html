@@ -3209,7 +3209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 06:39:51 UTC">July 7, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3354,7 +3354,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To force a fresh render and measure MISS latency:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">time</span><span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;googlebot&quot;</span><span class="w"> </span><span class="s2">&quot;https://&lt;storefront&gt;/catalog/laptops?cachebust=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;HTTP %{http_code} | Time: %{time_total}s\n&quot;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Expected: HTTP 200 in 3-14 s on a MISS. Re-run without ?cachebust to confirm a near-instant HIT.</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Expected: HTTP 200 in 3-14 s on a MISS. Rerun without ?cachebust to confirm a near-instant HIT.</span>
 </code></pre></div>
 <p>Crawlers should also receive correct HTTP status codes, for example 404 for a removed product. </p>
 <p><br>
