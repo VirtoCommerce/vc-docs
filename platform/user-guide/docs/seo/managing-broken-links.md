@@ -70,8 +70,6 @@ To manage redirect rules:
 	| **Redirect rule type** | Select **Static** for an exact path match or **Regex** for a regular expression. |
 	| **Priority** | An integer that sets execution order. When several rules match a URL, priority determines which rewrite runs first. |
 
-	![Rewrite rule](media/rewrite-rule.png){: style="display: block; margin: 0 auto;" }
-
 1. Click **Save** in the toolbar. The platform validates the rule on the backend and the Frontend and prevents saving an invalid rule.
 
 Once the rule is active, it is applied when a matching URL is entered on the Frontend.
