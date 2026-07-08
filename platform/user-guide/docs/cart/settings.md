@@ -39,7 +39,7 @@ To configure store-specific reminders:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **Cart** settings in the left panel and configure the following:
 
     ![Store-specific reminder](media/store-specific-abandoned-carts-reminder.png){: style="display: block; margin: 0 auto;" }

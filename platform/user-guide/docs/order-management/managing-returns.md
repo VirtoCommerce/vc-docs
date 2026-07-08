@@ -31,7 +31,7 @@ To process the returns:
 
 1. In the main menu, click **Orders**.
 1. In the next **Customer orders** blade select the required order.
-1. In the **Edit order details and related documents** blade, click on the **Returns** widget.
+1. In the **Edit order details and related documents** blade, click the **Returns** widget.
 1. In the next blade, select the required return from the list.
 
     ![Return processing](media/return-processing.png){: style="display: block; margin: 0 auto;" }

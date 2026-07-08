@@ -14,7 +14,7 @@ To create a return via the Return module:
 
 1. Click **Return** in the main menu.
 1. The next blade displays the list of existing returns. Click **Add new return** in the toolbar. 
-1. The next blade displays the list of created customer orders. Click on the order for which you need to create a return. 
+1. The next blade displays the list of created customer orders. Click the order for which you need to create a return. 
 1. The next blade displays the list of items in this order:
     * Check the items to return.
     * Specify the return reason.
@@ -45,7 +45,7 @@ To process the created return:
     !!! note
         You cannot delete line items or returns as a whole.
 
-1. If required, click on the **Line items** widget to edit the return reason.
+1. If required, click the **Line items** widget to edit the return reason.
 1. Click **Save** in the toolbar to save the changes.
 
 Your changes have been saved.

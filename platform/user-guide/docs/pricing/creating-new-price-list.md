@@ -42,7 +42,7 @@ The price list has been deleted.
 To add prices:
 
 1. Select your new price list.
-1. In the next blade, click on the **Prices** widget.
+1. In the next blade, click the **Prices** widget.
 1. In the next blade, click **Add** to select items for pricing.
 
 	![Path](media/price-list-path1.png){: style="display: block; margin: 0 auto;" }

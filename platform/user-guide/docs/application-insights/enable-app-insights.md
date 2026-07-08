@@ -4,7 +4,7 @@ To enable the Application Insights feature:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. In the next blade, switch the **Application Insights** option to on. The instrumentation key is automatically loaded from the connection string. 
 
 ![Enabling App Insights](media/enable-app-insights.png)

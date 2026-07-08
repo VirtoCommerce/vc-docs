@@ -89,7 +89,7 @@ You can use the keyboard to navigate through the store:
 
 ## Mobile version
 
-In the Frontend Application mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.
+On the Frontend mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.
 
 ### Homepage
 

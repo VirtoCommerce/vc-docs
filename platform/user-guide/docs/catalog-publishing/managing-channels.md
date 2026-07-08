@@ -56,7 +56,7 @@ To see what is missing in the product descriptions:
 
     ![Missing descriptions](media/view-items-details.png){: style="display: block; margin: 0 auto;" }
 
-Click on the reddish widgets to complete the descriptions from the current location. 
+Click the reddish widgets to complete the descriptions from the current location. 
 
 
 <br>

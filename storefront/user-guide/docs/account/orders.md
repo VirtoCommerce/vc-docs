@@ -16,7 +16,7 @@ Here you can:
     ![Order management](../media/managing-orders.gif)
 
 
-To view the order details, click on the desired order in the orders list. The order details open in a new window:
+To view the order details, click the desired order in the orders list. The order details open in a new window:
 
 ![Order details](../media/order-details.png)
 
@@ -31,7 +31,7 @@ Here you can:
 
 * Print your order information.
 * Pay for the order in case of **Payment required** status.
-* Re-order all items from the completed orders:
+* Reorder all items from the completed orders:
 
     ![Reorder all](../media/reorder-all.gif)
 

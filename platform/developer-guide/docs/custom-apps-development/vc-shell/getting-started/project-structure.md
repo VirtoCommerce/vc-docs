@@ -88,6 +88,6 @@ export * from "./composables";
 - **Module boundaries.** Keep module internals private by default. Cross-module UI wiring should use extension points or the menu service. Reusing another module's composable is acceptable when that composable is intentionally exported from the module entry point and treated as a public frontend contract; avoid reaching into another module's private folders.
 - **Locale namespacing.** Prefix module keys with the module name in uppercase (`SAMPLE_APP.PAGES.LIST.TITLE`).
 - **Blade names are global.** `defineBlade({ name: "OrderDetails" })` is the lookup key in `BladeRegistry`. Use a `<Module><Subject>` shape (`OrdersList`, `OrderDetails`).
-- **Generated code stays generated.** Do not hand-edit `src/api_client/`. Re-run `yarn generate-api-client` after a schema change.
+- **Generated code stays generated.** Do not hand-edit `src/api_client/`. Rerun `yarn generate-api-client` after a schema change.
 
 - [Generate an app or module from a prompt.](generate-app-from-prompt.md)

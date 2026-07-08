@@ -5,7 +5,7 @@ To generate an API key for API authentication of a user you have created:
 1. Click **Security** in the main menu.
 1. In the next blade, click **Users** to open the **Users** blade.
 1. Select the required user. 
-1. In the **User information** blade, click on the **API key** widget.
+1. In the **User information** blade, click the **API key** widget.
 
 	![path](media/api-path.png){: style="display: block; margin: 0 auto;" }
 

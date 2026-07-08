@@ -9,7 +9,7 @@ To configure the settings of the **Catalog CSV Import** module:
 
     ![Configure settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been applied.
 

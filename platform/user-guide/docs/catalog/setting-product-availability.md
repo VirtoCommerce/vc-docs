@@ -6,7 +6,7 @@ Product inventories are shown in Frontend Application:
 * In the cart after adding the products. 
 * When processing orders.
 
-The product's availability displayed in the Frontend Application is determined by the information configured in:
+The product's availability displayed on the Frontend is determined by the information configured in:
 
 * The **Catalog** module, where availability settings are established using switches.
 * The **Inventory** module, storing the actual quantity of the product in stock. 
@@ -35,7 +35,7 @@ To set product's availability:
     !!! info 
         Track inventory switch can be applied to both digital and physical products. By default, the switch is off for digital products, on for physical ones. 
 
-1. In the same blade, click on the **Fulfillment centers** widget.
+1. In the same blade, click the **Fulfillment centers** widget.
 
     ![add-inventory](media/inventory-path.png){: style="display: block; margin: 0 auto;" }
 
@@ -62,7 +62,7 @@ Try our interactive demo to explore key features in action:
 To check product's availability:
 
 1. Follow steps 1-3 from the instruction above.
-1. In the next blade, click on the **Index** widget.
+1. In the next blade, click the **Index** widget.
 
     ![Index widget](media/index-widget.png){: style="display: block; margin: 0 auto;" width="500"}
 

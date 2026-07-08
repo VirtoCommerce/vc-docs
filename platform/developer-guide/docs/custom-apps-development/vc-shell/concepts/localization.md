@@ -153,7 +153,7 @@ Interpolation uses `{name}` placeholders resolved from the second argument. For 
     Keys declared at the root level (`MENU.TITLE`, `PAGES.LIST.TITLE`) collide with every other module. Always wrap module keys in `MODULE_NAME.*`.
 
 !!! warning "Hard-coded strings in `defineBlade`"
-    `menuItem: { title: "Orders" }` ships a literal label; the menu service has no key to re-resolve when the locale changes. Pass an i18n key (`"ORDERS.MENU.TITLE"`) and let the framework translate.
+    `menuItem: { title: "Orders" }` ships a literal label; the menu service has no key to reresolve when the locale changes. Pass an i18n key (`"ORDERS.MENU.TITLE"`) and let the framework translate.
 
 !!! warning "Forgetting to re-export a language from `locales/index.ts`"
     The file in `locales/de.json` exists, but `index.ts` only re-exports `en`. The German bundle never reaches the running app, and `setLocale("de")` falls back to `"en"`.

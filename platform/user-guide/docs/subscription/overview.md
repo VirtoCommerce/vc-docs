@@ -18,7 +18,7 @@ To view all the created subscriptions, click **Subscriptions** in the main menu.
 
 ![Subscriptions](media/subscriptions-in-subscriptions-module.png){: style="display: block; margin: 0 auto;" }
 
-Click on the required subscription to edit it:
+Click the required subscription to edit it:
 
 ![Edit subscription](media/edit-subscription.png){: style="display: block; margin: 0 auto;" }
 
@@ -32,7 +32,7 @@ To view the created subscriptions by the order for which they were created:
 
     ![Subscriptions widget](media/subscriptions-widget.png){: style="display: block; margin: 0 auto;" }
 
-1. Click on the widget to edit the subscription.
+1. Click the widget to edit the subscription.
 
 
 

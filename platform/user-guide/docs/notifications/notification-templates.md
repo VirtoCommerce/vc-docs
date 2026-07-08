@@ -7,7 +7,7 @@ To add a new notification template:
 1. Click **Notifications** in the main menu.
 1. In the next **Notifications** blade, click **Notification list**.
 1. In the next blade, select the required notification.  
-1. In the next blade, click on the **Templates** widget to open the **Manage notification templates** blade. The list of available templates appears.
+1. In the next blade, click the **Templates** widget to open the **Manage notification templates** blade. The list of available templates appears.
 
 	!!! info
 		The **predefined** label means that this notification template is supplied out of the box. If you make changes to it and then save it, it will be replaced with your modified version, but the system will warn you:

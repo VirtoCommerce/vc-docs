@@ -73,9 +73,9 @@ The selected dimensions from the default list have been added to your configurat
 
 To set new default units of measure:
 
-1. Click on the required dimension.
-1. In the next blade, click on the **Units** widget.
-1. In the next blade, click on the measure unit from the list.
+1. Click the required dimension.
+1. In the next blade, click the **Units** widget.
+1. In the next blade, click the measure unit from the list.
 1. In the next blade, click **Set as default** in the toolbar.
 1. Confirm your selection by clicking **OK** --> **Yes** --> **Save**.
 
@@ -105,8 +105,8 @@ Your new dimension appears in the list.
 
 To extend a dimension from the list with new measure units:
 
-1. Click on the desired dimension. 
-1. In the next blade, click on the **Units** widget.
+1. Click the desired dimension. 
+1. In the next blade, click the **Units** widget.
 1. In the next blade, click **Add** in the toolbar.
 
     ![New measure unit](media/new-measure-unit.png)

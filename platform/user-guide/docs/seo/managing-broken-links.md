@@ -6,7 +6,7 @@ To view the list of broken links and manage them:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select your store.
-1. In the next blade, click on the broken links widget.
+1. In the next blade, click the broken links widget.
 
     If the [broken links management feature is enabled](settings.md), the widget displays the number of active broken links, not the total number:
 

@@ -11,7 +11,7 @@ For the Shipping module, you can configure:
 To configure the Shipping module settings globally:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Shipping** to find the settings related to the module or simply click on it in the list.
+1. In the search field of the next blade, type **Shipping** to find the settings related to the module or simply click it in the list.
 1. Configure the following:
 
     ![General settings](media/global-settings.png){: style="display: block; margin: 0 auto;" }
@@ -29,9 +29,9 @@ To configure the fixed shipping settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Shipping methods** widget.
+1. In the next blade, click the **Shipping methods** widget.
 1. In the next blade, click **Fixed shipping rate**
-1. In the next blade, click on the **Settings** widget to configure the following:
+1. In the next blade, click the **Settings** widget to configure the following:
 
     ![Fixed rate shipping settings](media/fixed-rate-shipping-settings.png){: style="display: block; margin: 0 auto;" }
 
@@ -45,7 +45,7 @@ To configure BOPIS settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **Shipping** settings in the left panel and click **BOPIS**:
 
     ![Google maps for BOPIS](media/enabling-bopis.png){: style="display: block; margin: 0 auto;" }

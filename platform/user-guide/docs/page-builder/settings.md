@@ -4,7 +4,7 @@ To configure Page Builder settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **Page Builder** settings in the left panel and configure the following:
 
     ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }

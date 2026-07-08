@@ -6,7 +6,7 @@ With this module, you can:
 
 * Export catalog data to CSV format.
 * Import catalog data from CSV format.
-* Simplify bulk operations through export, update, and re-import workflows.
+* Simplify bulk operations through export, update, and reimport workflows.
 
 By using this module, category managers can efficiently manage large amounts of catalog data and ensure consistency across systems.
 

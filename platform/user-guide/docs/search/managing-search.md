@@ -35,7 +35,7 @@ To open search index details:
 To build search index:
 
 1. Check the required record types from the list.
-1. Click **Build index** in the top toolbar.
+1. Click **Build index** in the toolbar.
 1. In the popup window, choose how you want to update the search index. There are two options available:
     * **Build**: Index all data without recreating.
     * **Delete and build**: Delete the existing search index and build a new one from scratch. 
@@ -72,13 +72,13 @@ After you choose **Delete and build** when building search index:
 
 To revert to the previous index, use the **Swap indices** feature:
 
-1. Click **Show backup indices** in the top toolbar.
+1. Click **Show backup indices** in the toolbar.
 
     ![Backup indices](media/show-backup-indices.png){: style="display: block; margin: 0 auto;" }
 
-1. Click on the three dots to the left of the required document type.
+1. Click the three dots to the left of the required document type.
 1. Select **Swap indices** in the popup menu.
-1. Click **Hide backup indices** in the top toolbar.
+1. Click **Hide backup indices** in the toolbar.
 
     ![Three dots](media/three-dots.png){: style="display: block; margin: 0 auto;" }
 

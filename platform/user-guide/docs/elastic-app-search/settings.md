@@ -9,7 +9,7 @@ To open the **Elastic App Search** module settings:
 
     ![General settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 The settings have been saved.
 

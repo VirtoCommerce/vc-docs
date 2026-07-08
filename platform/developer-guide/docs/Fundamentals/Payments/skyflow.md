@@ -108,7 +108,7 @@ To setup Virto Commerce back office:
 
 1. Go to Virto Commerce Back Office and click **Stores** in the main menu. 
 1. In the next blade, select a store.
-1. In the **Store details** blade,  click on the **Payment methods** widget.
+1. In the **Store details** blade,  click the **Payment methods** widget.
 
     ![Back office 1](media/configure-backoffice-1.png)
 

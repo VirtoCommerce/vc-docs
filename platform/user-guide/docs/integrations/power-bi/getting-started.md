@@ -16,7 +16,7 @@ To get started with the module, complete the following steps:
 1. Open the [eCommerce-Sales-Report file](https://github.com/VirtoCommerce/vc-module-power-bi-reports/blob/dev/src/Power-BI-Files/ECommerce-Sales-Report.pbix) in Power BI Desktop and check that it loads the data correctly.
 1. On the **Home** tab of the Power BI Desktop ribbon, click **Publish** to publish the report to Power BI Service.
 1. Set up data refresh options for the report:
-    1. Go to the **Datasets** page and click on the ellipsis (...) next to the dataset that corresponds to the report data source.
+    1. Go to the **Datasets** page and click the ellipsis (...) next to the dataset that corresponds to the report data source.
     1. Select **Schedule Refresh** and configure the refresh settings as needed.
 1. Ensure that the you have appropriate access to the report and its underlying data sources.
 1. Share the report with the System Administrator, assign them to a role with appropriate permissions, or grant them access to the SQL Server database if necessary.

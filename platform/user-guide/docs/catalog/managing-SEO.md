@@ -7,7 +7,7 @@ As an example, let's enable SEO for the **Bolts** category within the **B2B-mixe
 1. Click **Catalog** in the main menu. 
 1. In the next blade, select the **B2B-mixed** catalog.
 1. In the next blade, click the three dots to the left of the **Bolts** category and select **Manage** from the dropdown list.
-1. In the next blade, click on the **SEO** widget. 
+1. In the next blade, click the **SEO** widget. 
 
     ![Enable SEO](media/enabling-seo.png){: style="display: block; margin: 0 auto;" }
 

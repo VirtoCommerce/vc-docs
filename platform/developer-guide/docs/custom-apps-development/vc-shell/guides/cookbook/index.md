@@ -194,7 +194,7 @@ Pass `isWorkspace: true` to replace the whole stack with the target workspace, w
 
 ## Add a toolbar button conditionally
 
-A blade declares its toolbar as a `ref<IBladeToolbar[]>([...])` and passes it to `<VcBlade :toolbar-items>`. The framework filters items by `permissions` and `isVisible` before render, and re-reads reactive fields whenever they change, so visibility and disabled state follow the form state automatically.
+A blade declares its toolbar as a `ref<IBladeToolbar[]>([...])` and passes it to `<VcBlade :toolbar-items>`. The framework filters items by `permissions` and `isVisible` before render, and rereads reactive fields whenever they change, so visibility and disabled state follow the form state automatically.
 
 ```vue title="ItemDetails.vue"
 <script setup lang="ts">
@@ -248,7 +248,7 @@ The result is `true` while any input ref is `true`. Use it for the blade overlay
 
 ## Set a dynamic blade title
 
-The `VcBlade` shell takes a `:title` prop directly. Bind it to a `computed` and the header re-renders as the underlying entity changes.
+The `VcBlade` shell takes a `:title` prop directly. Bind it to a `computed` and the header rerenders as the underlying entity changes.
 
 ```vue title="order-details.vue"
 <template>
@@ -327,7 +327,7 @@ The toast helper is **not** the same as push notifications. It fires in-app feed
 
 ## Refresh a list when a push notification arrives
 
-When a record can change from somewhere else (another tab, a background job, a different blade), subscribe to the relevant notification type and re-fetch. The subscription is scoped to the blade — when the blade closes, it stops listening automatically.
+When a record can change from somewhere else (another tab, a background job, a different blade), subscribe to the relevant notification type and refetch. The subscription is scoped to the blade — when the blade closes, it stops listening automatically.
 
 ```vue title="src/modules/offers/pages/offers-list.vue"
 <script setup lang="ts">
@@ -413,7 +413,7 @@ onMounted(() => {
 </script>
 ```
 
-Filter on the field your platform uses to identify the originator — `creator` in the vendor portal example, but it could be `sellerId`, `organizationId`, or any payload field that survives the broadcast. Install once at app mount; if your app supports user switching, watch the user and re-install accordingly.
+Filter on the field your platform uses to identify the originator — `creator` in the vendor portal example, but it could be `sellerId`, `organizationId`, or any payload field that survives the broadcast. Install once at app mount; if your app supports user switching, watch the user and reinstall accordingly.
 
 - [useBroadcastFilter reference.](../../composables/notifications/useBroadcastFilter.md)
 - [Notifications concept page — broadcast vs targeted.](../../concepts/notifications.md#broadcast-vs-targeted)

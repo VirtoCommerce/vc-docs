@@ -1,6 +1,6 @@
 # Track and Fix Locales
 
-Virto Commerce Frontend provides flexible tools to customize all text content displayed in the Frontend. This includes modifying static texts, translating them into multiple languages, and ensuring consistent localization across the entire application. Text customization is handled through locale files, which define translation keys and their corresponding values for different languages.
+Virto Commerce Frontend provides flexible tools to customize all text content displayed on the Frontend. This includes modifying static texts, translating them into multiple languages, and ensuring consistent localization across the entire application. Text customization is handled through locale files, which define translation keys and their corresponding values for different languages.
 
 ## Check for missing locale keys
 

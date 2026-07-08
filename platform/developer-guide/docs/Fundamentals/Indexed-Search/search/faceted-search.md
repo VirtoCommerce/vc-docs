@@ -32,15 +32,15 @@ To configure properties available for faceted search via Platform Manager:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the required store.
-1. In the next blade, click on the **Aggregation properties** widget.
-1. Click on the available properties to be applied to filtering. There are two types of properties:
+1. In the next blade, click the **Aggregation properties** widget.
+1. Click the available properties to be applied to filtering. There are two types of properties:
     * **Attributes**: Displays and enables using all or selected values of the selected property for facet filters.
     * **Range**: Enables aggregating facet counts across ranges of values. This type is applicable to the date, time, datetime, number, and money type fields.
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 ![Filtering properties](media/filtering-properties.png){: style="display: block; margin: 0 auto;" }
 
-To edit the selected property, click on it and configure the following fields:
+To edit the selected property, click it and configure the following fields:
 
 ![Edit property](media/edit-property.png){: style="display: block; margin: 0 auto;" }
 

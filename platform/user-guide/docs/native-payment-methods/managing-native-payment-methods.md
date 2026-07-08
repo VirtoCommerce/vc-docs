@@ -11,7 +11,7 @@ Managing non-integrative payment methods includes:
 To create a new non-integrative payment method: 
 
 1. Click **Non-integrative payment methods** in the main menu.
-1. In the next blade, click **Add** in the top toolbar.
+1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, specify the following details:
 
     * **Code**: A unique Id for the payment method within the system. It helps distinguish one payment method from another and is used for internal processing.
@@ -22,7 +22,7 @@ To create a new non-integrative payment method:
     * **Name**: The name of the payment method, which is displayed to users during the checkout process. It helps users understand the payment option they are selecting.
     * **Description**: A brief explanation of the payment method, providing additional information or details about its features, usage, or any specific instructions. This helps users make informed decisions when choosing a payment method.
 
-1. Click **Save** in the top toolbar to save the changes.
+1. Click **Save** in the toolbar to save the changes.
 
 ![Add new method](media/add-new-method.png){: style="display: block; margin: 0 auto;" }
 
@@ -39,7 +39,7 @@ To view the details of the existing non-integrative payment methods:
     * Enable/ disable it.
     * Add or edit its logo by browsing your files to the next blade.
 
-1. Click **Save** in the top toolbar to save the changes, if any.
+1. Click **Save** in the toolbar to save the changes, if any.
 
 The changes have been saved.
 
@@ -49,7 +49,7 @@ To delete a non-integrative method:
 
 1. Click **Non-integrative payment methods** in the main menu.
 1. In the next blade, check the required method.
-1. Click **Delete** in the top toolbar.
+1. Click **Delete** in the toolbar.
 
 The selected method has been deleted.
 

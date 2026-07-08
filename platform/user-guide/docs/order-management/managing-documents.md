@@ -33,7 +33,7 @@ To create a new shipment document:
 
 1. Click **OK** to save the changes.
 
-All the shipment documents for the selected order can be found by clicking on the **Shipment** widget:
+All the shipment documents for the selected order can be found by clicking the **Shipment** widget:
 
 ![New shipment document](media/shipment-documents-stored.png){: style="display: block; margin: 0 auto;" width="400"}
 
@@ -49,7 +49,7 @@ To create a new payment document:
 
 1. Click **OK** to save the changes.
 
-All the payment documents for the selected order can be found by clicking on the **PaymentIn** widget:
+All the payment documents for the selected order can be found by clicking the **PaymentIn** widget:
 
 ![Payment document stored](media/payment-document-stored.png){: style="display: block; margin: 0 auto;" width="400"}
 
@@ -57,7 +57,7 @@ All the payment documents for the selected order can be found by clicking on the
 
 To capture payment:
 
-1. Click on the **PaymentIn** widget where all the payment documents for the selected order are stored.
+1. Click the **PaymentIn** widget where all the payment documents for the selected order are stored.
 1. In the next blade, click **Capture payment** in the toolbar.
 1. In the next blade, fill in the following fields:
 
@@ -69,7 +69,7 @@ To capture payment:
 
     ![Capture widget](media/capture-widget.png){: style="display: block; margin: 0 auto;" width="400"}
 
-1. Click on it to view the details:
+1. Click it to view the details:
 
     ![Capture details](media/capture-details.png){: style="display: block; margin: 0 auto;" width="400"}
 
@@ -77,7 +77,7 @@ To capture payment:
 
 To create a new refund document:
 
-1. Click on the **PaymentIn** widget where all the payment documents for the selected order are stored.
+1. Click the **PaymentIn** widget where all the payment documents for the selected order are stored.
 1. In the next blade, check the payment status. Refunding is possible for the orders with the **Paid** status. 
 1. Click **Refund payment** in the toolbar.
 1. In the next blade, enter the refund amount, the refund message, and select the refund reason from the drop-down list. Click **OK** to save the changes.
@@ -88,7 +88,7 @@ To create a new refund document:
 
     ![Refund widget](media/new-refund-document.png){: style="display: block; margin: 0 auto;" width="400"}
 
-1. Click on it to see the details.
+1. Click it to see the details.
 
     ![Refund details](media/refund-document.png){: style="display: block; margin: 0 auto;" width="400"}
 

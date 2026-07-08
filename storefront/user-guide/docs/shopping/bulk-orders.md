@@ -19,7 +19,7 @@ The **Bulk order** pad opens. You will see the following placement options:
 
     Intelligent document processing allows you to upload printed or handwritten files containing order details. It not only recognizes and extracts text from documents, but also understands the context and meaning of the information. To place your bulk order from file:
 
-    1. In the **Bulk order** pad, click on the **From file** tab.
+    1. In the **Bulk order** pad, click the **From file** tab.
     1. Drag and drop or browse your file containing order details.
 
     In a few seconds, the file will be properly recognized, the products will be found in the catalog, and their correct quantities will be added to the order:
@@ -30,7 +30,7 @@ The **Bulk order** pad opens. You will see the following placement options:
 
     To copy and paste your order details:
 
-    1. In the **Bulk order** pad, click on the **Copy & paste** tab.
+    1. In the **Bulk order** pad, click the **Copy & paste** tab.
     1. Copy and paste item records from your CSV file into the field using the following format: **SKU,Quantity**. Each record should start with a new line:
 
     ![Copy and paste](../media/copy-paste.png)
@@ -41,7 +41,7 @@ The **Bulk order** pad opens. You will see the following placement options:
 
 === "Manually"
 
-    1. In the **Bulk order pad**, click on the **Manually** tab:
+    1. In the **Bulk order pad**, click the **Manually** tab:
     1. Enter SKUs and quantities of the items you want to order:
 
     ![pad](../media/bulk-order-pad.png)

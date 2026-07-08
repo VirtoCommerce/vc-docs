@@ -31,8 +31,8 @@ A product can be associated with multiple offers, each of which provides a speci
 If you want to add your own offer for a product listed by another vendor:
 
 1. Click **Marketplace Products** in the main menu to open the list of all products in the marketplace.
-1. In the next blade, click on the desired product to open its details.
-1. In the next blade, click on the **Offers** widget.
+1. In the next blade, click the desired product to open its details.
+1. In the next blade, click the **Offers** widget.
 1. In the next blade, click **Add** in the toolbar to add your own offer.
 
     ![Adding own offer](media/add-offer-to-another-vendors-product.gif)
@@ -72,8 +72,8 @@ Now you can add offer to your product.
 
 After your product has been approved by an Operator Portal manager it appears in the list of vendor's products with the **Is published** status. Now you can add your offers (variations) to the published product:
 
-1. Click on the published product in the list of products.
-1. In the next blade, click on the **Offers** widget. 
+1. Click the published product in the list of products.
+1. In the next blade, click the **Offers** widget. 
 1. In the next blade, click **Add** in the toolbar to add your own offer.
 1. In the next blade, fill in the required fields.
 1. Click **Save** in the toolbar to save the changes.
@@ -89,7 +89,7 @@ Complete your offer by [adding price tags](#add-price-tags-to-offer).
 For various pricing strategies a vendor might set different price tags for a single product:
 
 1. Select an offer from the offers list.
-1. In the next blade, click on the **Price tags** widget.
+1. In the next blade, click the **Price tags** widget.
 1. In the next blade, fill in the required fields.
 
     !!! note
@@ -117,7 +117,7 @@ To increase sales and improve product discovery, Vendors can manage product asso
 
 1. Click **My Products** in the main menu to open the list of your products.
 1. In the next blade, select the desired product.
-1. In the next blade, click on the **Associations** widget.
+1. In the next blade, click the **Associations** widget.
 1. In the next blade, add associations to the product:
 
     ![Product associations](media/product-associations.gif)
@@ -156,7 +156,7 @@ When an Operator has a question about a Vendor's product, the Vendor will see it
 
 ![Communication widget](media/communication-widget.png){: style="display: block; margin: 0 auto;" }
 
-Clicking on the widget, opens a communication blade, where the Vendor can send instant replies to the Operator:
+Clicking the widget, opens a communication blade, where the Vendor can send instant replies to the Operator:
 
 ![Communication blade](media/communication-blade.png){: style="display: block; margin: 0 auto;" width="550"}
 

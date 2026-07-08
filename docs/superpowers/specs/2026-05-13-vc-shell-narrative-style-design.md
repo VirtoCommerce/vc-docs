@@ -363,7 +363,7 @@ Apply the archetype skeletons. Commit per page.
 - Translation to non-English languages.
 - Screenshots and screencasts beyond what `media/` already holds.
 - Tutorial courses spanning multiple pages.
-- Re-styling the mkdocs theme.
+- Restyling the mkdocs theme.
 - Adding new mkdocs plugins.
 - Modifying the `*.docs.md` → vc-docs sync pipeline.
 - Hidden source-frontmatter blocks (deferred; revisit when maintainability becomes an issue).

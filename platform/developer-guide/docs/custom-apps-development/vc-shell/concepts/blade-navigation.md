@@ -144,7 +144,7 @@ See [Forms](forms.md) for the recommended path.
 
 ## URL synchronization
 
-A blade that declares `url` in its config gets reflected in the address bar; routing back to that URL re-opens the matching workspace. Non-routable child blades and `options` payloads are runtime state: they do not change the address bar and are not restored after a hard refresh. Do not rely on the browser Back and Forward buttons to replay every blade open and close operation.
+A blade that declares `url` in its config gets reflected in the address bar; routing back to that URL reopens the matching workspace. Non-routable child blades and `options` payloads are runtime state: they do not change the address bar and are not restored after a hard refresh. Do not rely on the browser Back and Forward buttons to replay every blade open and close operation.
 
 ## Errors are caught automatically
 

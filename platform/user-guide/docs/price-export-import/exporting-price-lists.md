@@ -12,7 +12,7 @@ To start exporting:
 1. Click **Pricing** in the main menu.
 1. In the next blade, click **Price lists**.
 1. In the next blade, check the price list to export.
-1. In the next blade, click on the **Prices** widget.
+1. In the next blade, click the **Prices** widget.
 
 ![Export pricelists](media/export-pricelists.png){: style="display: block; margin: 0 auto;" }
 
@@ -22,7 +22,7 @@ To start exporting:
 To export all prices from a price list:
 
 1. Complete steps 1-4 from the instruction above.
-1. In the top toolbar, click **Export** to start exporting.
+1. In the toolbar, click **Export** to start exporting.
 1. You will see a notification, that all the lines in the selected category will be exported to a CSV file:
 
     ![Exporting ALL lines](media/all-prices-export.png){: style="display: block; margin: 0 auto;" }
@@ -40,7 +40,7 @@ To export selected prices from a price list:
 
 1. Complete steps 1-4 from the instruction above.
 1. Check the items you need to export.
-1. Click **Export** in the top toolbar to start exporting. 
+1. Click **Export** in the toolbar to start exporting. 
 1. You will see a notification, that the selected lines will be exported to a CSV file:
 
     ![Exporting selected lines](media/selected-prices-export.png){: style="display: block; margin: 0 auto;" }
@@ -64,7 +64,7 @@ To export all prices from a filtered price list:
 
     ![Bulk select](media/bulk-select-prices.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Export** in the top toolbar to start exporting.
+1. Click **Export** in the toolbar to start exporting.
 1. You will see a notification, that the selected lines will be exported to a CSV file:
 
     ![Export filtered prices](media/export-filtered-prices.png){: style="display: block; margin: 0 auto;" }
@@ -78,7 +78,7 @@ The prices from a filtered price list have been exported to a CSV file.
 To customize exported information to your needs, use **advanced export**:
 
 1. Complete the steps 1-2 from the instruction above.
-1. In the next blade, click **Export** in the top toolbar.
+1. In the next blade, click **Export** in the toolbar.
 1. In the next blade, you will see the following filters to apply:
 
     ![Advanced filters](media/price-export-import-advanced-filter.png){: style="display: block; margin: 0 auto;" }

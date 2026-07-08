@@ -16,7 +16,7 @@ To create a new page:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the required store.
-1. In the next blade, click on the **Page Builder** widget to open the Page Builder Office:
+1. In the next blade, click the **Page Builder** widget to open the Page Builder Office:
 
     ![Office](media/page-builder-office.png){: style="display: block; margin: 0 auto;" }
 
@@ -127,7 +127,7 @@ To add content to your page:
     </div>
 
 
-1. Click on the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
+1. Click the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
 
     ![Call to action](media/call-to-action.png){: style="display: block; margin: 0 auto;" }
 

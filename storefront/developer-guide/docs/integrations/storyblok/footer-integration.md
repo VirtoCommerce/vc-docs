@@ -17,7 +17,7 @@ To set up a folder in Storyblok:
 
     ![Create Global Component](media/create-global-folder.png)
 
-    If you don't have a **global** content type, create it by clicking on the **New content type** button.
+    If you don't have a **global** content type, create it by clicking the **New content type** button.
 
     ![Create Global Block](media/create-global-block.png)
 
@@ -71,8 +71,8 @@ The blocks have been created and their nesting has been configured.
 
 To create the content for our **Footer**:
 
-1. Go to the **Content** menu and click on the **Footer** entry we created earlier. 
-1. Click on the **Add Block** button and select the **Footer** block.
+1. Go to the **Content** menu and click the **Footer** entry we created earlier. 
+1. Click the **Add Block** button and select the **Footer** block.
 
     ![Add Footer Block](media/add-footer-block.png)
 

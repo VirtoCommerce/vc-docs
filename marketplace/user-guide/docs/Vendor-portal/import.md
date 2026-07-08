@@ -11,7 +11,7 @@ To upload large volumes of products and offers simultaneously, vendors can use t
     * **D365PackageImporter** to import data specifically from Microsoft Dynamics 365, using its package format.
 1. After you fill in the above fields, you can download a template for reference and set a delimiter.
 1. Click **Save** in the toolbar to save the changes.
-1. Your newly created profile appears in the list. Click on it.
+1. Your newly created profile appears in the list. Click it.
 
     ![Import](media/import-offers-products.png)
 

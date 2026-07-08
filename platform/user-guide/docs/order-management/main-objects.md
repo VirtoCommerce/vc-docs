@@ -9,7 +9,7 @@ To view the list of orders:
 
     ![Filters](media/time-range-filter.png)
 
-    Click on the three dots to the left of any order or right-click to open a dropdown menu and:
+    Click the three dots to the left of any order or right-click to open a dropdown menu and:
 
     - Start managing the order.
     - Copy order id or number.

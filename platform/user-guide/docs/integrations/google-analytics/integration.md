@@ -13,7 +13,7 @@ Using GA4 is recommended for simple setups. To install it and assign Google Anal
     
 1. Open **Stores** from the main menu.
 1. Select the required store.
-1. In the **Store details** blade, click on the **Settings** widget.
+1. In the **Store details** blade, click the **Settings** widget.
 1. Find the **Google Analytics** section and enable Google Analytics 4.
 1. Enter your Measurement Id. 
 
@@ -46,7 +46,7 @@ To start using GTM:
 1. Save and publish your container.
 1. Open **Stores** from the main menu of the Platform.
 1. Select the required store.
-1. In the **Store details** blade, click on the **Settings** widget.
+1. In the **Store details** blade, click the **Settings** widget.
 1. Find the **Google Analytics** section and enable Google Analytics 4.
 1. Enter your **GTM Container Id** (GTM-XXXXXXX):
 

@@ -28,7 +28,7 @@ To configure the store-specific module settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Type **Pages** in the search bar and select it from the list.
 1. In the next blade,  enable or disable the Pages module for the store.
 1. Click **OK**, then **Save** in the toolbar to save the changes.

@@ -3,7 +3,7 @@
 The Virto Commerce Content module allows you to:
 
 * Add as many [themes](/platform/user-guide/glossary#theme) as needed.
-* Set an active theme to be displayed in the Frontend.
+* Set an active theme to be displayed on the Frontend.
 
 Managing theme includes:
 
@@ -20,7 +20,7 @@ To upload a theme ZIP file:
 
 1. Click **Content** in the main menu.
 1. Select the store from the list in the next blade.
-1. Click on the **Themes** widget.
+1. Click the **Themes** widget.
 1. In the **Themes list** blade, click **Upload** in the toolbar. 
 1. Drag and drop or browse the ZIP file. 
 
@@ -40,7 +40,7 @@ To activate the theme:
 
 1. Click **Content** in the main menu.
 1. Select the store from the list in the next blade.
-1. Click on the **Themes** widget.
+1. Click the **Themes** widget.
 1. In the **Themes list** blade, click the three dots to the left of the desired theme and click **Set active**.
 
 ![activate theme](media/activate-theme.png)
@@ -63,7 +63,7 @@ To add a new theme:
 
 1. Click **Content** in the main menu.
 1. In the nest blade, select the store from the list.
-1. Click on the **Themes** widget.
+1. Click the **Themes** widget.
 1. In the **Themes list** blade, click **Add** in the toolbar. 
 1. Enter the name of the new theme. 
 1. Click **Create** to create your new theme. 

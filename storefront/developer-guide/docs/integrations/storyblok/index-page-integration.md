@@ -19,7 +19,7 @@ To create Page Model in Storyblok:
 
     ![Main Page Block](media/main-page-block.png)
 
-1. Use this block to create the content for our category page: Go to the **Content** menu and click on the **Create new** to create new **Story** with previously created **Catalog** block:
+1. Use this block to create the content for our category page: Go to the **Content** menu and click the **Create new** to create new **Story** with previously created **Catalog** block:
 
     ![Create New Story](media/create-new-story.png)
 

@@ -12,7 +12,7 @@ To edit the order:
 
 1. Click **Orders** in the main menu to open the list of the received orders.
 1. In the next blade, select the desired order. The order details will open in the next blade.
-1. Offer details are displayed in the bottom right corner. Click on any item to view and edit its details: 
+1. Offer details are displayed in the bottom right corner. Click any item to view and edit its details: 
 
     ![Edit order](media/edit_order.gif)
 
@@ -47,7 +47,7 @@ To create an order shipment:
 
 1. Click **Orders** in the main menu to open the list of the received orders.
 1. In the next blade, select the desired order. The order details will open in the next blade.
-1. In the next blade, click on the **Shipping** widget.
+1. In the next blade, click the **Shipping** widget.
 1. In the next blade, click **Add** to add a new shipment.
 
     ![Create shipment](media/create-shipping.gif)

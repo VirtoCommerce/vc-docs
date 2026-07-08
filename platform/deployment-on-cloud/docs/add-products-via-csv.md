@@ -68,7 +68,7 @@ To import your CSV to your catalog:
 
 1. Click **Catalog** in the main menu.
 1. In the next blade, select your catalog.
-1. Click **Import** in the top toolbar.
+1. Click **Import** in the toolbar.
 1. In the next blade, click **VirtoCommerce CSV import**.
 1. In the next blade: 
     1. Select **Comma** as a delimiter from the dropdown list.
@@ -84,8 +84,8 @@ The catalog import begins. When the import is finished, you can see that your ca
 ## View results on frontend
 
 1. In the main menu, click **Stores**.
-1. In the next blade, click on the required store (**Dental Demo Store** in our case).
-1. In the next blade, click **Open in browser** in the top toolbar.
+1. In the next blade, click the required store (**Dental Demo Store** in our case).
+1. In the next blade, click **Open in browser** in the toolbar.
 
 ![View result](media/store-frontend.png){: style="display: block; margin: 0 auto;" width="750"}
 

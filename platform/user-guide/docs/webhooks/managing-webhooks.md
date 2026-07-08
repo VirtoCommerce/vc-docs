@@ -30,7 +30,7 @@ Your new webhook appears in the webhook list.
 To edit a webhook:
 
 1. Click **Webhooks** in the main menu.
-1. In the next blade, click on the required webhook.
+1. In the next blade, click the required webhook.
 1. Edit it in the next blade.
 1. Click **Save** in the toolbar to save the changes.
 

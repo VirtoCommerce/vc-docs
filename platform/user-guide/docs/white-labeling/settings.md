@@ -25,7 +25,7 @@ To configure the store-specific module settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Type **White labeling** in the search bar and select the **General** from the list.
 1. In the next blade,  enable or disable white labeling for the store.
 1. Click **OK**, then **Save** in the toolbar to save the changes.

@@ -40,6 +40,19 @@ Let'a add the **Epson** subcategory to the **Printers** category of the **B2B** 
   </div>
 </div>
 
+## Rebuild product search index for category
+
+To rebuild the product search index for a specific category without reindexing the entire catalog:
+
+1. Select a category you want to reindex and click the three dots to the left on its name.
+1. In the popup menu, click **Manage**.
+1. In the next blade, click the **Last indexed** widget.
+1. In the next blade, click **Reindex all products** in the toolbar.
+1. Confirm your action.
+1. Wait until a notification confirms that the reindexing has completed successfully.
+
+The products in the category have been reindexed.
+
 ### Tax type
 
 !!! info
@@ -86,7 +99,7 @@ Your new SEO block has been added to the SEO list.
 To link categories, subcategories, or products to the catalog items manually:
 
 1. Select the category or subcategory you need to add a link to.
-1. Click on the **Links** widget.
+1. Click the **Links** widget.
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, select the desired items. You can not select the current category (if it is in the list), categories labelled as Marked, or category links within virtual catalogs.
 1. Click **Map** in the toolbar to create the links.
@@ -111,8 +124,8 @@ Let's add an **Epson printer** link to **Epson** category of the **B2B** catalog
 To link products to the catalog categories or subcategories automatically:
 
 1. Select the category or subcategory you need to add a link to.
-1. Click on the three dots to the left of the selected subcategory, then select **Manage** from the dropdown menu.
-1. In the next blade, click on the **Automatic links** widget.
+1. Click the three dots to the left of the selected subcategory, then select **Manage** from the dropdown menu.
+1. In the next blade, click the **Automatic links** widget.
 1. In the next blade:
     1. Select a catalog to add items from. 
     1. Define the desired items using the [query syntax expressions](../search-query-syntax.md).

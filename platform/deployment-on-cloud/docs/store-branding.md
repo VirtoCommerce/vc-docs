@@ -24,7 +24,7 @@ To enable white labeling:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.
-1. In the next blade, click on the **White labeling** widget.
+1. In the next blade, click the **White labeling** widget.
 1. In the next blade, turn the white labeling option to on.
 
 ![Enabling white labeling Stores](media/enabling-via-stores.png){: style="display: block; margin: 0 auto;" }
@@ -35,8 +35,8 @@ White labeling has been enabled.
 
 To replace default logos and favicons with your own images:
 
-1. In the **White Labeling** blade, click on the **Logo** widget to upload your company's logo.
-1. Click on the **Favicon** widget to upload your favicon.
+1. In the **White Labeling** blade, click the **Logo** widget to upload your company's logo.
+1. Click the **Favicon** widget to upload your favicon.
 1. Click **Save** in the toolbar, then click **Save** in the previous blade.
 
 Your changes have been applied.

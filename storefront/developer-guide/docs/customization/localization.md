@@ -29,7 +29,7 @@ To add your translation to Virto Commerce Frontend:
 1. **Commit and push** your changes.
 1. **Submit a pull request** to the main repo.
 
-Once your localization PR is accepted, the new language files are included in the Frontend source. The language becomes available in the Frontend.
+Once your localization PR is accepted, the new language files are included in the Frontend source. The language becomes available on the Frontend.
 
 <br>
 

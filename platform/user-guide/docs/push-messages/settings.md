@@ -30,7 +30,7 @@ To open store-specific module general settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **Push messages** settings in the left panel and click **General**.
 1. In the next blade, configure the following:
 
@@ -48,7 +48,7 @@ To configure FCM receiver options:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **Push messages** settings in the left panel and click **FCM Receiver Options**.
 1. In the next blade, configure the following:
 

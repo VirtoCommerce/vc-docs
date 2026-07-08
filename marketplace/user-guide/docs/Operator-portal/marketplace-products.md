@@ -13,7 +13,7 @@ Let's explore most common scenarios and:
 To approve a product uploaded by a vendor in the Vendor portal:
 
 1. Click **Marketplace products** in the main menu to open the list of all products from all marketplace vendors.
-1. In the next blade, find products with **Wait for approval** status. Click on the one you need to review.
+1. In the next blade, find products with **Wait for approval** status. Click the one you need to review.
 1. In the next blade, check the correctness of products properties. Click **Approve** in the toolbar if the product information meets the marketplace requirements.
 
     ![Approve product](media/approve-product.png)
@@ -38,7 +38,7 @@ The product status in the list of products changes for **Published** in both Ope
 To decline a product uploaded by a vendor in the Vendor portal:
 
 1. Click **Marketplace products** in the main menu to open the list of all products from all marketplace vendors.
-1. In the next blade, find products with **Wait for approval** status. Click on the one you need to review.
+1. In the next blade, find products with **Wait for approval** status. Click the one you need to review.
 1. In the next blade, check the correctness of products properties. Click **Decline** in the toolbar if the products information does not meet the marketplace requirements.
 1. In the popup window, specify the reason for decline and confirm the action:
 
@@ -82,7 +82,7 @@ To contact a Vendor directly:
 
 1. Click **Marketplace products** in the main menu to open the list of all products from all marketplace vendors.
 1. In the next blade, find the product your want to discuss with the Vendor.
-1. In the next blade, click on the **Communication** widget.
+1. In the next blade, click the **Communication** widget.
 1. In the next blade, you can start or continue a conversation. The dialog will appear the same way in the Vendor portal:
 
 <div class="grid cards" markdown>

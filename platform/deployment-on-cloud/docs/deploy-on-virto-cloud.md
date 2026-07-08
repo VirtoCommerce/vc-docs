@@ -31,7 +31,7 @@ To add a new environment through the Cloud Portal:
     * Service plan.
     * Database technology.
 
-1. Click on the **Applications** widget:
+1. Click the **Applications** widget:
     1. In the next blade, click **Platform** to configure the highlighted Platform system settings, then click **Save** in the toolbar:
 
         ![Platform settings](media/platform-system-settings.png){: style="display: block; margin: 0 auto;" }
@@ -59,13 +59,13 @@ To add a new environment through the Cloud Portal:
 
 ## Sign in to backend
 
-Once setup is complete, your environment appears in the list. Click on it to get a link to your application:
+Once setup is complete, your environment appears in the list. Click it to get a link to your application:
 
 ![Link to backend](media/environment-url.png){: style="display: block; margin: 0 auto;" }
 
 To sign in for the first time:
 
-1. Click on the link highlighted above. The login page opens.
+1. Click the link highlighted above. The login page opens.
 
     !!! note
         SSL certificates are integrated by default and are automatically renewed, ensuring continuous security.
@@ -100,14 +100,14 @@ Next you will be forced to set your own credentials:
 
 To create a store, you must first create a catalog (more specifically, **master catalog**):
 
-1. Click on the **Catalog** module in the main menu.
+1. Click the **Catalog** module in the main menu.
 1. In the next **Catalog** blade, click **Add** in the toolbar.  
 1. In the **New catalog** blade, choose the catalog type: physical or virtual. In our example, we are creating a physical catalog.
 
     ![Read more](media/readmore.png){: width="25"} [Learn more about physical and virtual catalogs](/platform/user-guide/latest/catalog/add-new-catalog)
 
 1. In the next blade, enter the catalog's name (Dental Demo in our case).
-1. (Optional) Click on the **Languages** widget to select the required languages in the next blade.
+1. (Optional) Click the **Languages** widget to select the required languages in the next blade.
 1. (Optional) Click **Save** in the toolbar.
 1. Click **Create** to save the changes.
 
@@ -136,7 +136,7 @@ To set a Frontend Application URL:
 
 1. Open the Portal, then click **Environments** in the main menu.
 1. In the next blade, select your newly created environment from the list.
-1. In the next blade,  click on the **Network settings** widget.
+1. In the next blade,  click the **Network settings** widget.
 1. In the next blade, click **Add hostname** in the toolbar.
 1. In the next blade, add a hostname and select a root from the dropdown list: 
 

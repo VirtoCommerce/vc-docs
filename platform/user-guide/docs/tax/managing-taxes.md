@@ -12,7 +12,7 @@ To view the available tax providers:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the required **Store**.
-1. In the next **Store details** blade, click on the **Tax providers** widget.
+1. In the next **Store details** blade, click the **Tax providers** widget.
 1. The next blade displays the available tax providers:
 
 ![View tax providers](media/view-tax-providers.png){: style="display: block; margin: 0 auto;" }
@@ -20,7 +20,7 @@ To view the available tax providers:
 ## Enable/ disable tax provider
 
 1. Complete steps 1-4 from the instruction above.
-1. In the next blade, click on the required tax provider.
+1. In the next blade, click the required tax provider.
 1. In the next blade, turn the switch to on/ off.
 1. Click **Save** in the toolbar to save the changes.
 

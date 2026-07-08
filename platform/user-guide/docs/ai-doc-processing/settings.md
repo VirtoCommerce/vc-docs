@@ -20,7 +20,7 @@ To open store-specific module settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **AI Document Processing** settings in the left panel and configure the following:
 
     ![Purchase request settings](media/purchase-request-settings.png){: style="display: block; margin: 0 auto;" }

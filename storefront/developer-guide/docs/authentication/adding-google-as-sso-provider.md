@@ -51,7 +51,7 @@ Configure store settings:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.
-1. In the next blade, click on the **Authentication** widget.
+1. In the next blade, click the **Authentication** widget.
 1. In the next blade, enable/disable **Google sign-in** for the selected store.
 
     ![Configure authentication types](media/enable-google.png)

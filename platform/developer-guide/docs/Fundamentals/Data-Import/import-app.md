@@ -7,7 +7,7 @@ The Import App is an application integrated into the work environment, offering 
 * Create and edit Import Profiles with flexible settings based on the data source format.
 * Use files from the local workplace or download them via URL as data sources.
 * Initiate an import job with detailed information available during execution, allowing users to interrupt the job.
-* Re-run import jobs without changing parameters in case of issues.
+* Rerun import jobs without changing parameters in case of issues.
 * View import history for each profile.
 * Download a template for the import file. 
 

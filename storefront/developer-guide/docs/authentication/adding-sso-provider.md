@@ -26,7 +26,7 @@ Configure store settings:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.
-1. In the next blade, click on the **Authentication** widget.
+1. In the next blade, click the **Authentication** widget.
 1. In the next blade, enable/disable authentication types for the selected store.
 
     ![Configure authentication types](media/authentication-types.png)
@@ -45,7 +45,7 @@ The Azure AD (Entra ID) authentication button appears on the login page of the F
 ![Azure AD button](media/azure-ad-button.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
-    If an account does not exist, clicking on the Azure Active Directory button will automatically create a new account.
+    If an account does not exist, clicking the Azure Active Directory button will automatically create a new account.
 
 
 <br>

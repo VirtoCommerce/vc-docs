@@ -17,7 +17,7 @@ To use Builder.io CMS with the page:
 
     ![Main Page Block](media/main-page-block-builder.png)
 
-1. Use this model to create the content for our index page. Go to **Content** menu and click on the **main page** in **Page models** section. 
+1. Use this model to create the content for our index page. Go to **Content** menu and click the **main page** in **Page models** section. 
 1. Click **New Entry** and select **main page** model from the dropdown list to create a new page:
 
     ![Create New Content](media/create-new-content-builder.png)

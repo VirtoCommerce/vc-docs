@@ -1,6 +1,6 @@
 # Pages
 
-Clicking on the **Pages** widget opens the list of the all pages your Storefront consists of. 
+Clicking the **Pages** widget opens the list of the all pages your Storefront consists of. 
 
 From the **Pages list**, you can:
 
@@ -11,7 +11,7 @@ From the **Pages list**, you can:
 * Search pages by keyword. You can even search for pages containing images by their alternative text.
 
 
-Click on the three dots to left of the page name to:
+Click the three dots to left of the page name to:
 
 * Download it.
 * Copy its link.

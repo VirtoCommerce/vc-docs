@@ -37,7 +37,7 @@ To setup Virto Commerce Platform:
 
 1. Go to Virto Commerce Platform and click **Stores** in the main menu. 
 1. In the next blade, select your store.
-1. In the **Store details** blade, click on the **Payment methods** widget.
+1. In the **Store details** blade, click the **Payment methods** widget.
 1. In the next blade, select **CyberSource** payment method. It automatically appears in the list after the module is installed.
 1. In the next blade, enable the CyberSource payment method and configure other settings (optionally):
 

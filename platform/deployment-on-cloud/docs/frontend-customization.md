@@ -51,7 +51,7 @@ Let's explore some methods of identifying stores:
 ## Fork Frontend repository
 
 1. Open the [Virto Commerce Frontend repository](https://github.com/VirtoCommerce/vc-frontend).
-1. Click on the **Fork** button. GitHub will prompt you to choose where to fork the repository, usually defaulting to your own GitHub account.
+1. Click the **Fork** button. GitHub will prompt you to choose where to fork the repository, usually defaulting to your own GitHub account.
 1. Click **Create fork**:
 
     ![Fork](media/fork-frontend.png){: style="display: block; margin: 0 auto;" }

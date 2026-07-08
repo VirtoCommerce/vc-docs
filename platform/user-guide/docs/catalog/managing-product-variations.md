@@ -2,7 +2,7 @@
 
 In Virto Commerce, we define products as SKUs. Adding variations links a product and its variation(s) together. A product with variations is essentially a collection, with one variation as the title product (master product), while also being a variation itself. Linked products inherit property values from the master product, with the option to override if needed.
 
-To display a product with variations in the Frontend Application, we use the master product, along with its variations. The product description also draws from the master product's properties. Variation properties build the SKU selector for such products.
+To display a product with variations on the Frontend, we use the master product, along with its variations. The product description also draws from the master product's properties. Variation properties build the SKU selector for such products.
 
 Variations are individual product entities linked to their master product. For instance, a master product like a mobile phone can have variations like black, white, or red versions, or 5’’ and 6’’ models (or both).
 Variations inherit property values from the master product, including descriptions and assets, while also allowing overrides when necessary.
@@ -49,7 +49,7 @@ There are two options to display product variations on the Frontend:
 
     ![Widget](media/variations-as-widget.png){: style="display: block; margin: 0 auto;" }
 
-* As a selector as a part of product description. Customers click on individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
+* As a selector as a part of product description. Customers click individual option values (e.g., color, size, material) to configure their desired product. Once a customer selects an option, the remaining options are refreshed to reflect what’s available based on that selection. Unavailable combinations are visibly disabled. When only one value is available for a specific option, it is automatically selected:
 
     ![Selector](media/jeans_options_selector.gif)
 
@@ -60,9 +60,9 @@ Below is the guide how to switch between these two options.
 By default, variations are displayed on the Frontend as a list or as a table in a separate widget. To display product variations as a selector instead:
 
 1. Click **Catalog** in the main menu to open the list of available catalogs.
-1. Find the catalog containing the product and its variations you want to display as a selector and click on the three dots to the left of the catalog's name.
+1. Find the catalog containing the product and its variations you want to display as a selector and click the three dots to the left of the catalog's name.
 1. Select **Manage** from the dropdown menu. 
-1. In the next blade, click on the **Properties** widget.
+1. In the next blade, click the **Properties** widget.
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Product property**.
 1. In the next blade, enter **VirtoFrontend_UI_Layout** as a property name.
@@ -71,8 +71,8 @@ By default, variations are displayed on the Frontend as a list or as a table in 
     The new product property appears in the product properties list.
 
 1. Open the catalog containing the product and its variations. 
-1. Click on the required product.
-1. In the next blade, click on the **Properties** widget.
+1. Click the required product.
+1. In the next blade, click the **Properties** widget.
 1. Set the value of the **VirtoFrontend_UI_Layout** property to **B2C**.
 1. Click **OK**.
 1. Click **Save** in the toolbar.

@@ -1,6 +1,6 @@
 # Manage Properties
 
-For enhanced product filtering and search, let's configure [catalog properties](../glossary.md#catalog-property). They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
+For enhanced product filtering and search, let's configure [catalog properties](../glossary.md#catalog-property). They allow customers to filter and search for products based on specific attributes. On the Frontend, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
 
 ![Facets](media/properties-configuration.png){: style="display: block; margin: 0 auto;" }
 
@@ -97,8 +97,8 @@ For demonstration purposes, we are going to add the following properties:
 Let's add a **Brand** property at the catalog level:
 
 1. Click **Catalog** in the main menu.
-1. In the next blade, click on the three dots to the left of the required catalog and select **Manage** from the dropdown list.  
-1. In the next blade, click on the **Properties** widget. 
+1. In the next blade, click the three dots to the left of the required catalog and select **Manage** from the dropdown list.  
+1. In the next blade, click the **Properties** widget. 
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Product property**.
 
@@ -149,8 +149,8 @@ Let's add a **Date of preparation** property to the **Anesthetics** category:
 
 1. Click **Catalog** in the main menu.
 1. In the next blade, select the required catalog.  
-1. In the next blade, click on the three dots to the left of the required category and select **Manage** from the dropdown list.  
-1. In the next blade, click on the **Properties** widget. 
+1. In the next blade, click the three dots to the left of the required category and select **Manage** from the dropdown list.  
+1. In the next blade, click the **Properties** widget. 
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Category property**.
 
@@ -170,7 +170,7 @@ The property appears in the list. Continue to add properties according to the ta
 Now, we will add properties to the products:
 
 1. In your catalog, select the product you want to add properties to (**OraVerse** in our example).
-1. In the product details blade, click on the **Properties** widget.
+1. In the product details blade, click the **Properties** widget.
 1. In the next blade, you fill in the properties you have added in the previous steps. From the dropdown lists, select the product's brand and its physical state. Enter date of preparation by clicking ![Calendar](media/calendar.png){: width="25"}:
 
     ![Adding properties to products](media/add-properties-to-product.png){: style="display: block; margin: 0 auto;" }
@@ -210,10 +210,13 @@ On the Frontend, they are displayed in the product cards:
 
 ## Configure facets
 
+### Set up facets visibility
+
 To set the visibility of facets:
 
-1. Go to **Stores** --> **Your store (Dental Demo Store)** --> **Aggregation properties** widget.
-1. In the next blade, click on the properties in the left column (available properties) to move them to the right column (properties visible on the frontend):
+1. Go to **Stores** --> **Your store (Dental Demo Store)** --> **Search configuration** widget.
+1. In the next blade, click the **Facets** widget.
+1. In the next blade, click the properties in the left column (available properties) to move them to the right column (properties visible on the Frontend):
 
     ![Facets visibility](media/facets-visibility.png){: style="display: block; margin: 0 auto;" }
 
@@ -225,6 +228,9 @@ The selected facets are now displayed on the Frontend:
 
 <br>
 <br>
+
+### Configure property aggregation type
+
 Properties can be displayed as attributes or as a range:
 
 <div class="grid cards" markdown>
@@ -234,20 +240,24 @@ Properties can be displayed as attributes or as a range:
     ---
     
     ![Attributes](media/facets-as-attributes.png){: style="display: block; margin: 0 auto;" }
+    
+    1. Click on the property you need to set the required view for.
+    1. In the next blade, select **Attribute** from the dropdown.
+    1. Select sorting method from the dropdown.
+    1. Enter the maximum number of aggregation values in search results.
+    1. Add aggregation values allowed in search results:
+
+        ![Configure attribute](media/attribute-display-type.png){: style="display: block; margin: 0 auto;" }
+
+    1. Click **OK**, then **Save** to save your modifications.
+
 
 -   __Range aggregation type__
 
     ---
 
     ![Range](media/facets-as-range.png){: style="display: block; margin: 0 auto;" }
-
-</div>
-
-
-The property aggregation type is configured via the **Aggregation properties** widget:
-
-=== "Range"
-
+    
     1. Click on the property you need to set the required view for.
     1. In the next blade, select **Range** from the dropdown.
     1. Add range bounds:
@@ -256,21 +266,48 @@ The property aggregation type is configured via the **Aggregation properties** w
 
     1. Click **OK**, then **Save** to save your modifications. 
 
-    Your modifications have been applied.
+</div>
 
-=== "Attribute"
 
-    1. Click on the property you need to set the required view for.
-    1. Select **Attribute** from the dropdown.
-    1. Select sorting method from the dropdown.
-    1. Enter the maximum number of aggregation values in search results.
-    1. Add aggregation values allowed in search results:
+Your modifications have been applied.  
 
-        ![Configure attribute](media/attribute-display-type.png){: style="display: block; margin: 0 auto;" }
+### Define products' sorting order 
 
-    1. Click **OK**, then **Save** to save the changes.
+To define how products are ordered by default when customers browse categories or search:
 
-    Your modifications have been applied.  
+1. To set the visibility of facets:
+1. Go to **Stores** --> **Your store (Dental Demo Store)** --> **Search configuration** widget.
+1. In the next blade, click **Sorting** widget.
+1. In the next blade, you can:
+    
+    1. Configure the existing sorting options by dragging and dropping them. The first visible option is the default:
+
+
+        <div class="grid cards" markdown>
+
+        -   __Platform__
+
+            ---
+            
+            ![Attributes](media/sorting-platform.png){: style="display: block; margin: 0 auto;" }
+
+
+        -   __Frontend__
+
+            ---
+
+            ![Range](media/sorting-frontend.png){: style="display: block; margin: 0 auto;" }
+
+        </div>
+
+
+    1. Add new sorting options by clicking **Add** in the toolbar and configure the following in the next blade:
+
+        ![Add new sorting option](media/add-sorting-option.png)
+
+1. Save the modifications.
+
+The sorting options appear on the Frontend.
 
 
 ## Set property priority
@@ -278,7 +315,7 @@ The property aggregation type is configured via the **Aggregation properties** w
 The priority of properties defines the order in which they are displayed on the Frontend. For example, to set the priority of fabrics for a men’s hat:
 
 1. Open **Men's Scholarship Hat** in the Catalog.
-1. In the product description blade, click on the **Properties** widget.
+1. In the product description blade, click the **Properties** widget.
 1. In the next blade, click ![Pencil](media/pencil.png){: width="25" } next to the **Fabric** property.
 1. In the next blade, click **Dictionary**.
 1. In the next blade, choose a dictionary value.
@@ -302,8 +339,8 @@ To improve product filtering, users can merge multiple values into one:
 === "from the Stores module"
 
     1. In the main menu, click **Stores**.
-    1. In the next blade, click on the three dots to the left of the required store and select **Manage** from the dropdown list.  
-    1. In the next blade, click on the **Aggregation properties** widget. 
+    1. In the next blade, click the three dots to the left of the required store and select **Manage** from the dropdown list.  
+    1. In the next blade, click the **Aggregation properties** widget. 
     1. In the next blade, select the **Country of origin** property.
     1. In the next blade, click **Value mapping** in the toolbar. 
     1. In the next blade, click **Add** in the toolbar.
@@ -321,7 +358,7 @@ To improve product filtering, users can merge multiple values into one:
 === "from Search Index"
 
     1. In the main menu, click **Search index**.
-    1. In the next blade, click on the three dots to the left of the **Product** item and select **Value mapping** from the dropdown list.  
+    1. In the next blade, click the three dots to the left of the **Product** item and select **Value mapping** from the dropdown list.  
     1. In the next blade, select the item to map values for (**Country of origin** in our case). 
     1. In the next blade, click **Add** in the toolbar.
 
@@ -369,9 +406,9 @@ Organizing properties into groups includes the following steps:
 To create a property group:
 
 1. Open **Catalog** in the main menu.
-1. In the next blade find the required catalog and click on the three dots to the left of its name to open the dropdown menu.
+1. In the next blade find the required catalog and click the three dots to the left of its name to open the dropdown menu.
 1. In the dropdown, select **Manage**.
-1. In the next blade, click on the **Property groups** widget.
+1. In the next blade, click the **Property groups** widget.
 1. In the next blade, click **Add** in the toolbar, then fill in the following fields:
 
     ![Add new property group](media/add-property-group.png){: style="display: block; margin: 0 auto;" }
@@ -388,7 +425,7 @@ To assign a new property group to the product properties:
 1. Open **Catalog** in the main menu.
 1. In the next blade, select the required catalog.
 1. In the next blade(s), select the required product.
-1. In the next blade, click on the **Properties** widget.
+1. In the next blade, click the **Properties** widget.
 1. In the next blade, select the property to assign property group to, then click ![Pencil](media/pencil.png){: width="25"}.
 1. In the next blade, select a group from the dropdown:
 

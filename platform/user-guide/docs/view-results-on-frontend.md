@@ -1,6 +1,6 @@
 # View Results on Frontend
 
-To view the results of Platform modifications in the Frontend Application:
+To view the results of Platform modifications on the Frontend:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.

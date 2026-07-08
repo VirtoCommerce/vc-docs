@@ -25,13 +25,13 @@ The system will check for available resources and, if necessary, allocate additi
 
 ## Sign in to backend
 
-Once setup is complete, your environment appears in the list. Click on it to get a link to your application:
+Once setup is complete, your environment appears in the list. Click it to get a link to your application:
 
 ![Link to backend](media/qa-environment-url.png){: style="display: block; margin: 0 auto;" }
 
 To sign in for the first time:
 
-1. Click on the link highlighted above. The login page opens.
+1. Click the link highlighted above. The login page opens.
 
 1. Log in using the default credentials: **admin** as the username and **store** as the password.
 

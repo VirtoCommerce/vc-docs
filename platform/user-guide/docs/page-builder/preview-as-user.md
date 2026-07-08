@@ -24,7 +24,7 @@ Let's preview the Frontend with the eyes of an reseller:
 
     1. Open **Stores** from the main menu.
     1. In the next blade, select your store.
-    1. In the next blade, click on the **Settings** widget.
+    1. In the next blade, click the **Settings** widget.
     1. Open **CMS Content** --> **Page Builder** --> **Preview user IDs**:
     1. Paste the copied user IDs, one per line.
     1. Click **OK**, then **Save** in the toolbar.

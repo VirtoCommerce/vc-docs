@@ -17,7 +17,7 @@ If you forgot your password, you can reset it as follows:
 
     ![Password reset](../media/resetting-password-1.png){: style="display: block; margin: 0 auto;" width="400"}
 
-1. Click on the link in the email and follow further instructions.
+1. Click the link in the email and follow further instructions.
 
 You new password has been created.
 
@@ -39,7 +39,7 @@ If the password has expired, the user will be prompted to set a new password whe
 
 To change the password:
 
-1. Click on the user name in the top right corner. In the dropdown list, click on the user name again.
+1. Click the user name in the top right corner. In the dropdown list, click the user name again.
 
     ![Path](../media/profile-path-1.png){: style="display: block; margin: 0 auto;" }
 

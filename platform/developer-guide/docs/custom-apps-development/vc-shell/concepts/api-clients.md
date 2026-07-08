@@ -23,7 +23,7 @@ const { action: loadOrders, loading } = useAsync(async (query: OrderSearchCriter
 - [Full useApiClient reference.](../composables/data/useApiClient.md)
 
 !!! warning "`getApiClient()` is async"
-    Call it inside the function that needs the client, never at the top of `<script setup>`. A `const client = await getApiClient()` outside an async block holds a single instance for the lifetime of the component, which is fine for stable sessions but couples your code to one client object across re-runs of the action.
+    Call it inside the function that needs the client, never at the top of `<script setup>`. A `const client = await getApiClient()` outside an async block holds a single instance for the lifetime of the component, which is fine for stable sessions but couples your code to one client object across reruns of the action.
 
 ## The useApiClient + useAsync pattern
 

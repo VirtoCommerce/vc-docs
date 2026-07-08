@@ -5,8 +5,8 @@ After [creating a price list](../pricing/creating-new-price-list.md), you can fi
 1. Click **Pricing** in the main menu. 
 1. In the next blade, click **Price lists**.
 1. In the next blade, select the price list you want to fill with information. 
-1. In the next blade, click on the **Prices** widget.
-1. In the next blade, click **Import** in the top toolbar.
+1. In the next blade, click the **Prices** widget.
+1. In the next blade, click **Import** in the toolbar.
 
     ![Import price list](media/import-pricelist1.png)
 
@@ -25,7 +25,7 @@ After [creating a price list](../pricing/creating-new-price-list.md), you can fi
     * Update existing only.
     * Create and update.
 
-1. In the top toolbar, click **Import**. You can see the import progress in the next blade.
+1. In the toolbar, click **Import**. You can see the import progress in the next blade.
 
     ![Import price list2](media/import-pricelist2.png)
 

@@ -1,5 +1,5 @@
 
-Click on a version name to see which modules are included in that version.
+Click a version name to see which modules are included in that version.
 
 | Product                                  | Version                       | GA<br>(Mainstream support phase) | End of support <br> (Extended support phase) | End of life <br>(Sustaining support phase) |
 |------------------------------------------|-------------------------------|----------------------------------|----------------------------------------------|--------------------------------------------|

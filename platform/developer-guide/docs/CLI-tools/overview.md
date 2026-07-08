@@ -18,7 +18,7 @@ It is powered by [nuke.build](https://nuke.build/) - a cross-platform build auto
 
     * Build and bundle a module project (both managed and scripted parts).
     * Discover and run all the unit tests from the solution.
-    * Create and publish NuGet packages for projects from your solution, this can be helpful if you intend to re-use a module's logic in another project, you will be able to quickly publish the needed version as a NuGet package. In the private or public NuGet registry.
+    * Create and publish NuGet packages for projects from your solution, this can be helpful if you intend to reuse a module's logic in another project, you will be able to quickly publish the needed version as a NuGet package. In the private or public NuGet registry.
     * Include targets that allow performing various additional quality checks such as static code analysis (currently we support out-of-the-box integration with SonarCloud).
 
 * [Packages management:](package-management.md) 

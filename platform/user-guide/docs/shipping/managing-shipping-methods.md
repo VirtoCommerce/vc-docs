@@ -13,7 +13,7 @@ To select a shipping method:
 
 1. In the main menu, click **Stores**.
 1. In the next blade, select the required store.
-1. In the next blade, click on the **Shipping methods** widget.
+1. In the next blade, click the **Shipping methods** widget.
 1. The next blade displays the available shipping methods. We currently offer a fixed rate shipping method and a BOPIS service:
 
 ![Shipping methods list](media/fixed-rate-shipping-method.png){: style="display: block; margin: 0 auto;" }
@@ -27,7 +27,7 @@ On the Frontend, the available shipping methods are displayed as follows:
 
 To edit a fixed rate shipping method:
 
-1. Complete steps 1-4 from the instruction above and click on the fixed rate shipping method in the list.
+1. Complete steps 1-4 from the instruction above and click the fixed rate shipping method in the list.
 1. In the next blade:
     * Enable/disable the shipping method.
     * Select tax type from the dropdown list.
@@ -45,13 +45,13 @@ Your changes have been applied to the shipping method.
 
 To edit a BOPIS shipping method:
 
-1. Complete steps 1-4 from the instruction above and click on the BOPIS shipping method from the list.
+1. Complete steps 1-4 from the instruction above and click the BOPIS shipping method from the list.
 1. In the next blade:
     * Enable/disable the shipping method.
     * Select tax type from the dropdown list.
     * Specify logo URL.
     * Enter shipping method description.
-    * Click on the **Pickup locations** widget to [add or edit pickup points](#add-or-edit-pickup-points).
+    * Click the **Pickup locations** widget to [add or edit pickup points](#add-or-edit-pickup-points).
 
     ![Edit shipping method](media/edit-bopis-shipping-method.png){: style="display: block; margin: 0 auto;" }
 
@@ -63,7 +63,7 @@ Your changes have been applied to the shipping method.
 
 To add or edit a pickup location:
 
-1. In the **Buy Online Pickup in Store** blade, click on the **Pickup locations** widget.
+1. In the **Buy Online Pickup in Store** blade, click the **Pickup locations** widget.
 1. Select a pickup location from the list or click **Add** in the toolbar.
 1. In the next blade, fill in the following fields:
 

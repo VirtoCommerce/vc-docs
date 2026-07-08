@@ -36,14 +36,14 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 
     1. In the main menu, click **Catalog**.
     1. In the next blade, select the required **Catalog**. **B2B-mixed** in our example.
-    1. In the next blade, click **Add** in the top toolbar.
+    1. In the next blade, click **Add** in the toolbar.
     1. In the next blade, select **Link**.
     1. In the next blade, select the newly created catalog. **New-catalog** in our example.
 
         ![Link catalog 1](media/link-catalog-1.png)
 
     1. In the next blade, check the category. **New-category** in our example.
-    1. Click **Map** in the top toolbar.
+    1. Click **Map** in the toolbar.
 
         ![Link catalog 2](media/link-catalog-2.png){: style="display: block; margin: 0 auto;" }
 
@@ -51,13 +51,13 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 
     ![Result](media/result.png){: style="display: block; margin: 0 auto;" }
 
-1. Create a price list assignment to connect the price list (**New-price-list** in our example) to the catalog displayed in the Frontend Application (**B2B-mixed** in our example):
+1. Create a price list assignment to connect the price list (**New-price-list** in our example) to the catalog displayed on the Frontend (**B2B-mixed** in our example):
 
     1. In the main menu, click **Pricing**.
     1. In the next blade, click **Price Lists**.
     1. In the next blade, select the required price list (**New-price-list** in our example).
-    1. In the next blade, click on the **Assignments** widget. 
-    1. In the next blade, click **Add** in the top toolbar.
+    1. In the next blade, click the **Assignments** widget. 
+    1. In the next blade, click **Add** in the toolbar.
 
         ![Add assignment 1](media/add-assignment-1.png)
 
@@ -75,12 +75,12 @@ Follow this step-by-step guide to learn how to import new products into the Virt
     ![New assignment](media/new-assignment.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill the price list with the items from your newly created catalog:
-    1. Click on the **Prices** widget.
-    1. In the next blade, click **Add** in the top toolbar.
+    1. Click the **Prices** widget.
+    1. In the next blade, click **Add** in the toolbar.
     1. In the next blade, select the required catalog (**New-catalog** in our example.)
     1. In the next blade, select the category (**New-category** in our example).
     1. In the next blade, check the items to add to the price list. 
-    1. Click **Add selected** in the top toolbar. You might need to repeat it several times if the items are located on more the one page.
+    1. Click **Add selected** in the toolbar. You might need to repeat it several times if the items are located on more the one page.
 
         ![Fill price list](media/fill-price-list-1.png){: style="display: block; margin: 0 auto;" }
 
@@ -91,8 +91,8 @@ Follow this step-by-step guide to learn how to import new products into the Virt
 1. View the results in the Frontend environment:
 
     1. In the main menu, click **Stores**.
-    1. In the next blade, click on the required store (**B2B-Store** in our example).
-    1. In the next blade, click **Open in browser** in the top toolbar.
+    1. In the next blade, click the required store (**B2B-Store** in our example).
+    1. In the next blade, click **Open in browser** in the toolbar.
 
 
         ![View result](media/result-in-frontend-2.png){: style="display: block; margin: 0 auto;" width="750"}

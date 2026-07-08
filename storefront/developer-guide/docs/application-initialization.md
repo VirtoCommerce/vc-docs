@@ -103,7 +103,7 @@ The warning lists only the out-of-date modules. Each row reads as follows:
 <moduleId>   <expected-minimum>   ≥   <installed-version>
 ```
 
-For example, `VirtoCommerce.Catalog 3.1022.0 ≥ 3.1020.0` means the Frontend requires Catalog 3.1022.0 or higher but the Platform reports 3.1020.0, so Catalog must be upgraded. The warning reads from the live manifest, so re-running `InitializeApplication` after an upgrade clears it on the next refresh without a manual cache purge.
+For example, `VirtoCommerce.Catalog 3.1022.0 ≥ 3.1020.0` means the Frontend requires Catalog 3.1022.0 or higher but the Platform reports 3.1020.0, so Catalog must be upgraded. The warning reads from the live manifest, so rerunning `InitializeApplication` after an upgrade clears it on the next refresh without a manual cache purge.
 
 When the warning appears, the operator should:
 

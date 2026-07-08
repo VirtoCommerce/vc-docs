@@ -14,7 +14,7 @@ To assign permissions to your order manager:
     !!! note
         In our case, the list of basic permissions to be assigned to your order manager includes **Order related permissions** to create/ delete/ view/ update and access orders. You can assign any other permissions to them as needed.
 
-1. Click **Save** in the top toolbar.
+1. Click **Save** in the toolbar.
 
     ![Add order manager](media/add-order-manager.png){: style="display: block; margin: 0 auto;" }
 

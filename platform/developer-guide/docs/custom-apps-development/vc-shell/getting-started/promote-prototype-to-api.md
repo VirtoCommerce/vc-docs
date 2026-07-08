@@ -31,6 +31,6 @@ const { action: loadProducts, loading } = useAsync(async (query) => {
 - Review field mappings and labels.
 - Keep business-specific transformation outside `src/api_client/`.
 - Add tests around the module composable.
-- Re-run type checking and the app build.
+- Rerun type checking and the app build.
 
 - [Data loading patterns.](../guides/data/index.md)

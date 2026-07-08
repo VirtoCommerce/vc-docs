@@ -35,7 +35,7 @@ To remove a company from your contract:
 
 1. Check one or more companies that you want to remove. 
 
-1. Click **Delete** in the top toolbar.
+1. Click **Delete** in the toolbar.
 
     ![Delete companies](media/delete-customers.png){: style="display: block; margin: 0 auto;" }
 

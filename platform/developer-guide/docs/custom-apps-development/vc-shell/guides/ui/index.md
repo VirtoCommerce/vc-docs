@@ -104,7 +104,7 @@ import { VcCard } from "@vc-shell/framework";
 </script>
 ```
 
-The wrapper inherits every prop, slot, and event from **VcCard** through `v-bind="$attrs"` and the slot loop, so callers can still pass anything the underlying component accepts. Forking the source would mean re-implementing keyboard handling, ARIA attributes, and shared variants, and you would lose every fix that ships in subsequent framework releases. Wrap, and you keep the upgrades for free.
+The wrapper inherits every prop, slot, and event from **VcCard** through `v-bind="$attrs"` and the slot loop, so callers can still pass anything the underlying component accepts. Forking the source would mean reimplementing keyboard handling, ARIA attributes, and shared variants, and you would lose every fix that ships in subsequent framework releases. Wrap, and you keep the upgrades for free.
 
 - [VcCard reference.](../../components/layout/vc-card.md)
 

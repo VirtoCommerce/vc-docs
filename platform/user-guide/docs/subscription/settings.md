@@ -28,7 +28,7 @@ To configure the store-specific module settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Type **Subscription** in the search bar and select the **Subscription** from the list.
 1. In the next blade, configure the following:
 

@@ -56,7 +56,7 @@ Computed properties that touch a large array on every read get expensive when th
 
 1. **`computed` that maps the entire list.** Move to `shallowRef` for lists with thousands of rows, or compute once and cache.
 2. **`watch` with `deep: true` on a list ref.** Replace with a watcher on a derived shallow signal.
-3. **Vue DevTools' Components tab during interaction.** Components re-rendering on every key press point at a too-coarse dependency.
+3. **Vue DevTools' Components tab during interaction.** Components rerendering on every key press point at a too-coarse dependency.
 
 ## Production build flags
 

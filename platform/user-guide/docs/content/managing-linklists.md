@@ -14,7 +14,7 @@ On the frontend, the mega menu consists of two parts:
 Let's create a horizontal bar of the mega menu from the above illustration: 
 
 1. Click **Content** in the main menu.
-1. In the next blade, select the required store, then click on the link lists widget.
+1. In the next blade, select the required store, then click the link lists widget.
 1. In the next blade, click **Add** in the toolbar to add a new link list.
 1. Let's add the existing catalog categories to the link list to be displayed in the mega menu:
 
@@ -30,7 +30,7 @@ Let's create a horizontal bar of the mega menu from the above illustration:
 
 1. Now we need to add this link to the store settings so that the Frontend uses the newly created catalog-menu as the source for the mega menu's horizontal bar, instead of generating it automatically from catalog data. Click **Stores** in the main menu.
 1. In the next blade, select your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. In the **Settings** blade, find **Virto Commerce Frontend** segment and add **catalog-menu** as the top level catalog linked list.
 
     ![Horizontal menu source](media/top-level-catalog-link.png){: style="display: block; margin: 0 auto;" }
@@ -55,7 +55,7 @@ Let's create the following footer:
     !!! note
         Name your footer link list **footer-links** so the Platform recognizes it as a part of the footer structure.
 
-1. Click **Create**. The current result in the Frontend Application is as follows:
+1. Click **Create**. The current result on the Frontend is as follows:
 
     ![Footer result](media/footer-example1.png){: style="display: block; margin: 0 auto;" }
 
@@ -68,7 +68,7 @@ Let's create the following footer:
 
 Continue adding subcategories to the root categories according to the example above.
 
-The footer appears in the Frontend Application.
+The footer appears on the Frontend.
 
 
 <br>

@@ -1,6 +1,6 @@
 # PageContext ==~query~==
 
-This query retrieves all contextual information required to initialize and render a page in the Frontend. It aggregates several backend calls into a single response optimized for frontend use.
+This query retrieves all contextual information required to initialize and render a page on the Frontend. It aggregates several backend calls into a single response optimized for frontend use.
 
 ## Arguments
 

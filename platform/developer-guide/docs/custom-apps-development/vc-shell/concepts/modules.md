@@ -146,7 +146,7 @@ export default defineAppModule({ blades, locales: { en, de } });
     `ORDERS.PAGES.LIST.TITLE`, not `PAGES.LIST.TITLE`. Without a prefix, modules collide on common keys.
 
 !!! tip "Use i18n keys, not literal strings, in blade configs"
-    `menuItem.title: "ORDERS.MENU.TITLE"` lets the menu service resolve labels at render time and respond to locale changes without re-running module install.
+    `menuItem.title: "ORDERS.MENU.TITLE"` lets the menu service resolve labels at render time and respond to locale changes without rerunning module install.
 
 ## Recipes
 

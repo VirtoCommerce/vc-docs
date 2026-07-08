@@ -38,7 +38,7 @@ In the **Lists** section, you can:
 
     ![Lists names](../media/lists-names.png){: style="display: block; margin: 0 auto;" }
 
-Click on the desired list to view its details. Here you can:
+Click the desired list to view its details. Here you can:
 
 * Add all the listed items to cart with a single click.
 * Add specific listed items to cart.

@@ -12,7 +12,7 @@ To enable the configuration feature for any product:
 1. Click **Catalog** in the main menu.
 1. In the next blade, select the catalog with the product you want to make configurable.
 1. In the next blade, select your product.
-1. In the next blade, click on the **Configuration** widget.
+1. In the next blade, click the **Configuration** widget.
 1. In the **Product configuration** blade, switch the configuration option to on.
 
 Now, you can add configurations to your product.
@@ -62,7 +62,7 @@ Let's add sections, each representing customizable parts of the product, and opt
 </table>
 
 !!! note
-    Options are selected from existing catalog items, so ensure they are [added to a catalog](managing-products.md#add-product) before assigning them to sections.  
+    Options are selected from existing catalog items, so ensure they are [added to a catalog](managing-products.md#add-item-to-physical-catalog) before assigning them to sections.  
 
 
 To add sections and options:
@@ -135,11 +135,11 @@ To add sections and options:
     ![Added sections](media/added-sections.png){: style="display: block; margin: 0 auto;" }
 
     !!! note
-        Drag and drop the sections to configure the order of their appearance in the Frontend Application.
+        Drag and drop the sections to configure the order of their appearance on the Frontend.
 
 1. Click **Save** in the toolbar to save the changes.
 
-In the Frontend Application, you can identify configurable products by the **Customize** button instead of the **Add to cart** button:
+On the Frontend, you can identify configurable products by the **Customize** button instead of the **Add to cart** button:
 
 ![Customize button](media/customize-button.png){: style="display: block; margin: 0 auto;" }
 

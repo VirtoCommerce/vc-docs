@@ -1,13 +1,13 @@
 # Back-in-Stock Notifications
 
-If a product or its variation is out of stock, users can subscribe to be notified when it's available again. Instead of the **Add to Cart** button, they'll see a **Notify me when in stock** button. After clicking on it, a popup confirmation appears:  
+If a product or its variation is out of stock, users can subscribe to be notified when it's available again. Instead of the **Add to Cart** button, they'll see a **Notify me when in stock** button. After clicking it, a popup confirmation appears:  
 
 ![Back-in-stock subscription](../media/back-in-stock-subscription.gif){: style="display: block; margin: 0 auto;" width="600"}
 
 !!! note
     Uncheck the **Show in stock** option to see the out-of-stock products.
 
-Users can view all the subscriptions by clicking on the [Back-in-stock list](../account/back-in-stock-list.md) link in the popup notification or in the **Back-in-stock list** section in their profile.
+Users can view all the subscriptions by clicking the [Back-in-stock list](../account/back-in-stock-list.md) link in the popup notification or in the **Back-in-stock list** section in their profile.
 
 Click **You'll be notified** to unsubscribe from the notifications.
 

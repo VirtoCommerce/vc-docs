@@ -49,7 +49,7 @@ To assign roles to users:
 
 1. Follow steps 1-2 from the instruction above.
 1. In the **Users** blade, select the required user.
-1. In the **User information** blade, click on the **Roles** widget.
+1. In the **User information** blade, click the **Roles** widget.
 1. In the **Manage roles** blade, click **Assign** in the toolbar.
 1. In the **Assign roles** blade, check the roles to be assigned to the user.
 1. Click **OK** to save the changes.

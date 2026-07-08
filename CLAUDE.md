@@ -38,7 +38,7 @@ Use bold for:
 
 - File names, for example, **appsettings.json**, **module.manifest**.
 - Module names on their first mention in an overview article. Subsequent mentions in the same article use regular weight. For example, "The **Loyalty** module provides..." on first mention, then "With the Loyalty module, users can..." afterward.
-- UI elements in step-by-step guides: buttons, widgets, menu items, tabs, field labels, toggle options, and dialog titles. For example, "Click **Save** in the toolbar." or "Click on the **Settings** widget."
+- UI elements in step-by-step guides: buttons, widgets, menu items, tabs, field labels, toggle options, and dialog titles. For example, "Click **Save** in the toolbar." or "Click the **Settings** widget."
 
 ### Italics
 

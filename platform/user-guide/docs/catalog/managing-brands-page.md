@@ -33,7 +33,7 @@ To start displaying brands page on the frontend:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select a store to enable brand pages for.
-1. In the next blade, click on the **Brand settings** widget.
+1. In the next blade, click the **Brand settings** widget.
 1. In the next blade, configure the following:
 
     ![Brand settings configuration](media/enable-brands.png)
@@ -80,8 +80,8 @@ Clicking the brand opens a page displaying all products associated with that bra
 As of [Catalog 3.895.0](https://github.com/VirtoCommerce/vc-module-catalog/releases/tag/3.895.0) and [xCatalog 3.938.0](https://github.com/VirtoCommerce/vc-module-x-catalog/releases/tag/3.938.0), admins can configure SEO settings for the Brands page separately for each language:
 
 1. Click **Catalog** in the main menu.
-1. In the next blade, click on the three dots to the left of the **Brands** catalog and select **Manage** from the dropdown menu.
-1. In the next catalog, click on the **SEO** widget.
+1. In the next blade, click the three dots to the left of the **Brands** catalog and select **Manage** from the dropdown menu.
+1. In the next catalog, click the **SEO** widget.
 1. In the next blade, select the language to configure SEO for.
 1. In the next blade, configure the following fields:
 

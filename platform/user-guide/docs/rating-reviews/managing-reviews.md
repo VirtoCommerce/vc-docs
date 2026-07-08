@@ -10,7 +10,7 @@ Managing reviews includes:
 
 ## Enable product reviews
 
-To see product reviews right after the product description in the Frontend Application, enable **Product reviews** as follows:
+To see product reviews right after the product description on the Frontend, enable **Product reviews** as follows:
 
 1. Open **Settings**.
 1. Type **Review** to find the settings related to the module.
@@ -24,7 +24,7 @@ To see product reviews right after the product description in the Frontend Appli
 
 1. Click **Save** in the toolbar.
 
-The reviews are now displayed after product description in the Frontend Application:
+The reviews are now displayed after product description on the Frontend:
 
 ![Reviews displayed](media/reviews-on-frontend.png){: style="display: block; margin: 0 auto;" }
 
@@ -53,7 +53,7 @@ Moderating reviews is crucial because it allows you to remove unwanted content a
 
 1. Click **Rating and Reviews** in the main menu.
 1. In the next blade, select the required review.
-1. In the next blade, you will see its content and author. In the top toolbar, click:
+1. In the next blade, you will see its content and author. In the toolbar, click:
     * **Approve review** to publish the review and include it in the rating calculation.
     * **Reject Review** to exclude it from the rating calculation. The review will remain in the list with the status **Rejected**.
     * **Reset Review Status** to change your previous decision to approve or reject the review.

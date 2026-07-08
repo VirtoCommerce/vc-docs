@@ -28,7 +28,7 @@ Your category has been added to the categories and items of master catalog.
 To add properties to the newly created category:
 
 1. Click the three dots to the left of the name of the newly created category and select **Manage** from the dropdown list.
-1. In the next blade, click on the **Properties** widget.
+1. In the next blade, click the **Properties** widget.
 1. In the next blade, manage the properties. 
 1. Click **OK** to save the changes.
 

@@ -1,6 +1,6 @@
 # Blogs
 
-Clicking on the **Blogs** widget opens the list of the all blogs in your Storefront. In the Content module, the blogs are folders with an unlimited number of files (posts) in them. 
+Clicking the **Blogs** widget opens the list of the all blogs in your Storefront. In the Content module, the blogs are folders with an unlimited number of files (posts) in them. 
 
 From the **Blogs List**, you can:
 
@@ -8,7 +8,7 @@ From the **Blogs List**, you can:
 * Upload new blogs.
 * Delete blogs.
 
-Click on the three dots to left of the blog name to:
+Click the three dots to left of the blog name to:
 
 * Download it.
 * Copy its link.

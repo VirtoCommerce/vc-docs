@@ -11,8 +11,8 @@ Managing GDPR includes:
 To anonymize personal data according to the customer's request:
 
 1. Click **GDPR** in the main menu.
-1. The next blades display personal data of your customers. Click on the required contact. 
-1. The next blade displays available contact details. Click **Anonymize data** in the top toolbar to anonymize them.
+1. The next blades display personal data of your customers. Click the required contact. 
+1. The next blade displays available contact details. Click **Anonymize data** in the toolbar to anonymize them.
 
 	![Anonymize data](media/anonymize-contacts.png){: style="display: block; margin: 0 auto;" }
 
@@ -30,7 +30,7 @@ The personal data have been anonymized to comply with the customer's request in 
 To download the personal data for demonstration to the customer:
 
 1. Complete the steps 1-2 from the instruction above.
-1. In the next blade, click **Download data** in the top toolbar.
+1. In the next blade, click **Download data** in the toolbar.
 
 The personal data have been downloaded as a JSON file. 
 

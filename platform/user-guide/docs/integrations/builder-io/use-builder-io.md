@@ -109,7 +109,7 @@ Now you can see your category with the required results.
 Thanks to the Builder.io Figma plugin, any user can copy components designed in Figma and paste them into a page edited in Builder.io:
 
 1. [Run Builder.io plugin in Figma](https://help.figma.com/hc/en-us/articles/360042532714-Use-plugins-in-files).
-1. Click on the component you want to copy to your Builder.io edited page.
+1. Click the component you want to copy to your Builder.io edited page.
 1. Open the Builder.io plugin.
 1. Click **Copy to Builder**.
 1. Open the page you are editing in Builder.io.
@@ -133,7 +133,7 @@ For a solid color throughout, edit the section color:
 
 1. Create new page.
 1. Add a section to your new page.
-1. In the right sidebar, click on the **layout** tab.
+1. In the right sidebar, click the **layout** tab.
 1. Click **Background** and set a color you need.
 1. Add the required components to your newly created section.
 

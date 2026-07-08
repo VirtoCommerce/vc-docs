@@ -139,7 +139,7 @@ To force a fresh render and measure MISS latency:
 ```bash
 time curl -s -A "googlebot" "https://<storefront>/catalog/laptops?cachebust=$(date +%s)" \
   -o /dev/null -w "HTTP %{http_code} | Time: %{time_total}s\n"
-# Expected: HTTP 200 in 3-14 s on a MISS. Re-run without ?cachebust to confirm a near-instant HIT.
+# Expected: HTTP 200 in 3-14 s on a MISS. Rerun without ?cachebust to confirm a near-instant HIT.
 ```
 
 Crawlers should also receive correct HTTP status codes, for example 404 for a removed product. 

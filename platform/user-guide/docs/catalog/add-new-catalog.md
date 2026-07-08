@@ -31,11 +31,9 @@ Basically, a virtual catalog is a method to visually present products. All items
 
 To view a catalog:
 
-1. Click on the **Catalog** module in the main menu.
-1. In the next **Manage catalogs** blade, select the desired catalog.
-1. In the next **Categories and Items** blade, select a desired category, or search for the desired product by keyword.
-
-	![View catalogs](media/view-catalogs.png)
+1. Click **Catalog** in the main menu.
+1. In the next blade, select the desired catalog.
+1. In the next blade, select a desired category, or search for the desired product by keyword.
 
 Now you see the list of products in the catalog.
 
@@ -49,13 +47,11 @@ Now you see the list of products in the catalog.
 
 To add a new catalog:
 
-1. Click on the **Catalog** module in the main menu.
+1. Click the **Catalog** module in the main menu.
 1. In the next **Catalog** blade, click **Add** in the toolbar.  
 1. In the **New catalog** blade, choose the catalog type: physical or virtual.
 1. In the next blade, enter the catalog's name and specify the language.
 1. Click **Create** to save the changes.
-
-	![New catalog](media/add-new-catalog.png)
 
 Your catalog is ready to use!
 

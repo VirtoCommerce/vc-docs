@@ -205,7 +205,7 @@ yarn generate-api-client --VERBOSE=true
 | `APP_TYPE_STYLE` error. | Use exactly `Class` or `Interface`. The value is case-sensitive. |
 | `Error converting value "$(APP_TYPE_STYLE)" to type ...`. | NSwag received the literal placeholder string instead of an expanded value. Pass `APP_TYPE_STYLE` explicitly through the CLI or shell environment, not as a `$(VAR)` interpolation in a script. |
 | `Unknown RUNTIME value`. | Use `Net80`, `Net90`, or `Net100`. The generator only warns; NSwag fails if the chosen runtime is not installed. |
-| `tsc` errors after regeneration. | The backend contract changed. Update the module composable or view-model mapping that consumed the previous shape, then re-run `tsc`. |
+| `tsc` errors after regeneration. | The backend contract changed. Update the module composable or view-model mapping that consumed the previous shape, then rerun `tsc`. |
 | Top-level `module`/`types` fields disappeared from **package.json**. | The package now generates more than one module, so root `.` export is suppressed. Consumers should import from `./<module>` subpaths instead. |
 
 ## Related

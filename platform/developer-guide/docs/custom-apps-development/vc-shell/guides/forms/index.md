@@ -108,7 +108,7 @@ const startDate = ref("2024-01-01");
 const endDateRules = computed(() => `required|after:${startDate.value}`);
 ```
 
-The `Field` will re-validate `endDate` automatically whenever `startDate` changes.
+The `Field` will revalidate `endDate` automatically whenever `startDate` changes.
 
 ### Custom rule with async server validation
 

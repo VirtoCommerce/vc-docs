@@ -366,7 +366,7 @@ You will see the existing Customer reviews list:
 
 1. Save all changes, restart application and open Product detail blade. 
 
-The new widget appears in the widget container and shows actual number of existing reviews for the product. Click on the widget to display the list of Customer reviews for the product.
+The new widget appears in the widget container and shows actual number of existing reviews for the product. Click the widget to display the list of Customer reviews for the product.
 
 ![Customer review widget](media/reviews-widget.png){: style="display: block; margin: 0 auto;" }
 

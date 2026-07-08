@@ -109,7 +109,7 @@ Your new subcategory appears in the list of subcategories inside the category. R
 
 To fill catalog with products:
 
-1. Click on your catalog, select category and subcategory you want to add your product to. 
+1. Click your catalog, select category and subcategory you want to add your product to. 
 1. Click **Add** in the toolbar. 
 1. In the next blade, select **Physical product**.
 1. In the next blade, enter product name, (optionally) add image and description.
@@ -132,8 +132,8 @@ First, you need to create a price list:
 To add prices to each product:
 
 1. Go to **Catalog** --> Your catalog.
-1. Click on a product from your catalog (in our example, Alpen FG surgical carbide burs).
-1. In the next blade, click on the **Price** widget.
+1. Click a product from your catalog (in our example, Alpen FG surgical carbide burs).
+1. In the next blade, click the **Price** widget.
 1. In the next blade, select your price list as a source price list, then click **Add new price**.
 1. Enter list price, sale price (optionally), and minimum quantity (optionally).
 1. Click **Save** in the toolbar.
@@ -169,9 +169,9 @@ The fulfillment center has been added to the list. Repeat these steps to add mor
 
 Now you need to add product stock in the fulfillment center.
 
-1. Click on a product from your catalog (in our example, Alpen FG surgical carbide burs). 
-1. In the next blade, click on the **Fulfillment centers** widget. 
-1. In the next blade, you will see the list of all the available fulfillment centers. Click on a fulfillment center from the list.
+1. Click a product from your catalog (in our example, Alpen FG surgical carbide burs). 
+1. In the next blade, click the **Fulfillment centers** widget. 
+1. In the next blade, you will see the list of all the available fulfillment centers. Click a fulfillment center from the list.
 1. In the next blade, fill in the necessary information. For the purpose of this guide, you can add only quantity in stock.
 1. Click **Save** in the toolbar.
 
@@ -182,9 +182,9 @@ The specified stock appears next to the fulfillment center.
 ## Add semantic URL for your catalog
 
 1. Open **Catalog**.
-1. In the next blade, click on the three dots next to the name of your catalog.
+1. In the next blade, click the three dots next to the name of your catalog.
 1. Select **Manage** from the popup menu.
-1. In the next blade, click on the **SEO** widget.
+1. In the next blade, click the **SEO** widget.
 1. In the next blade, click **Add** in the toolbar.
 1. In the next blade, fill in the fields as follows:
 
@@ -207,7 +207,7 @@ The **Catalog** button is now collapsible, displaying all categories and subcate
 
 ![Categories](media/catalog-categories-frontend.png){: style="display: block; margin: 0 auto;" }
 
-Click on any category or subcategory to view the products within:
+Click any category or subcategory to view the products within:
 
 ![Catalog](media/store-frontend.png){: style="display: block; margin: 0 auto;" }
 
@@ -217,7 +217,7 @@ Click on any category or subcategory to view the products within:
 ## Configure properties
 <!--properties-start-->
 
-For enhanced product filtering and search, let's configure properties within our catalog. They allow customers to filter and search for products based on specific attributes. In the Frontend Application, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
+For enhanced product filtering and search, let's configure properties within our catalog. They allow customers to filter and search for products based on specific attributes. On the Frontend, they are displayed as filtering facets. In this guide, we are going to create the following properties displayed as facets:
 
 ![Facets](media/properties-configuration.png){: style="display: block; margin: 0 auto;" }
 
@@ -314,8 +314,8 @@ In our example, we are going to add the following properties:
 Let's add a **Brand** property at the catalog level:
 
 1. Click **Catalog** in the main menu.
-1. In the next blade, click on the three dots to the left of the required catalog and select **Manage** from the dropdown list.  
-1. In the next blade, click on the **Properties** widget. 
+1. In the next blade, click the three dots to the left of the required catalog and select **Manage** from the dropdown list.  
+1. In the next blade, click the **Properties** widget. 
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Product property**.
 
@@ -363,8 +363,8 @@ Let's add a **Date of preparation** property to the **Anesthetics** category:
 
 1. Click **Catalog** in the main menu.
 1. In the next blade, select the required catalog.  
-1. In the next blade, click on the three dots to the left of the required category and select **Manage** from the dropdown list.  
-1. In the next blade, click on the **Properties** widget. 
+1. In the next blade, click the three dots to the left of the required category and select **Manage** from the dropdown list.  
+1. In the next blade, click the **Properties** widget. 
 1. In the next blade, click **Add property** in the toolbar.
 1. In the next blade, select **Category property**.
 
@@ -384,7 +384,7 @@ The property appears in the list. Continue to add properties according to the ta
 Now, we will add properties to the products:
 
 1. In your catalog, select the product you want to add properties to (**OraVerse** in our example).
-1. In the product details blade, click on the **Properties** widget.
+1. In the product details blade, click the **Properties** widget.
 1. In the next blade, you fill in the properties you have added in the previous steps. From the dropdown lists, select the product's brand and its physical state. Enter date of preparation by clicking ![Calendar](media/calendar.png){: width="25"}:
 
     ![Adding properties to products](media/add-properties-to-product.png){: style="display: block; margin: 0 auto;" }
@@ -422,20 +422,20 @@ The properties have been added to the selected products.
 To set the visibility of facets:
 
 1. Go to **Stores** --> **Your store (Dental Demo Store)** --> **Aggregation properties** widget.
-1. In the next blade, click on the properties in the left column (available properties) to move them to the right column (properties visible on the frontend):
+1. In the next blade, click the properties in the left column (available properties) to move them to the right column (properties visible on the frontend):
 
     ![Facets visibility](media/facets-visibility.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
-The selected facets are now displayed in the Frontend Application.
+The selected facets are now displayed on the Frontend.
 
 
 ## View results on Frontend
 
 1. In the main menu, click **Stores**.
-1. In the next blade, click on the required store (**Dental Demo Store** in our case).
-1. In the next blade, click **Open in browser** in the top toolbar.
+1. In the next blade, click the required store (**Dental Demo Store** in our case).
+1. In the next blade, click **Open in browser** in the toolbar.
 
 The properties are displayed as facets:
 

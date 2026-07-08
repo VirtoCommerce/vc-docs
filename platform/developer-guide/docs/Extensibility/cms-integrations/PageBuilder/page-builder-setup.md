@@ -103,7 +103,7 @@ Now you are ready to create and manage content pages:
 === "via the Content module"
 
     1. Click **Content** in the main menu.
-    1. In the next blade, find the required store and click on the **Pages** widget.
+    1. In the next blade, find the required store and click the **Pages** widget.
     1. In the next blade, click **Add** in the toolbar. 
     1. In the next blade, select **Design page**.
 
@@ -126,7 +126,7 @@ Now you are ready to create and manage content pages:
 
     1. Click **Stores** in the main menu.
     1. In the next blade, select the required store.
-    1. In the next blade, click on the **Page Builder** widget to open the Page Builder Office:
+    1. In the next blade, click the **Page Builder** widget to open the Page Builder Office:
 
         ![Office](media/page-builder-office.png){: style="display: block; margin: 0 auto;" }
 

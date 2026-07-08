@@ -4,7 +4,7 @@ To enable Virto Pages for your store:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. In the next blade, find **Virto Pages** and turn the **Enable** option to on.
 1. Click **OK**, then click **Save** in the toolbar of the previous blade.
 

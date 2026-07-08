@@ -41,7 +41,7 @@ To edit a previously added company info:
 
 1. Click **Contacts** in the main menu.
 1. In the **Companies and contacts** blade, click the three dots to the left of the required contact's name and click **Manage** in the popup menu. 
-1. In the next blade, update the contact, for example, change the email account by clicking on the **Accounts** widget. 
+1. In the next blade, update the contact, for example, change the email account by clicking the **Accounts** widget. 
 1. Click **Save** in the toolbar to save the changes.
 
 ![Edit contact](media/edit-contact.png){: style="display: block; margin: 0 auto;" }
@@ -167,7 +167,7 @@ To export contacts into a CSV file:
 		If you do not check any contact, all the contacts of all the organizations will be exported into a CSV file.
 
 1. Click **Export** in the toolbar and confirm your action.
-1. In the next blade, click on the generated links to download the contacts:
+1. In the next blade, click the generated links to download the contacts:
 
 ![Export contacts](media/export-finished.png){: style="display: block; margin: 0 auto;" }
 

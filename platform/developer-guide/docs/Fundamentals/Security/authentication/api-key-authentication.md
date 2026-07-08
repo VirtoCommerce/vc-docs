@@ -10,7 +10,7 @@ To create a new API key:
 1. Open Platform and click **Security** in the main menu. 
 1. In the next blade, click **Users**.
 1. In the next blade, select the desired user. 
-1. In the next blade, click on the **Api key** widget. 
+1. In the next blade, click the **Api key** widget. 
 1. Click **Generate** in the toolbar. The Api key appears in the corresponding field:
 
 	![API Key widget](media/api-key-widget.png)

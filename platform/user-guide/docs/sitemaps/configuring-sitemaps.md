@@ -59,7 +59,7 @@ To add sitemap items:
 
 After creating your sitemap, you can download a ZIP package containing your sitemap(s) in order to view what it includes:
 
-1. Click **Download sitemaps** in the top toolbar.
+1. Click **Download sitemaps** in the toolbar.
 
 1. In the new window, enter base URL for sitemaps and confirm your action.
 
@@ -92,11 +92,11 @@ To export sitemaps to store assets manually:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select your store.
-1. In the next blade, click on the **Sitemaps** widget.
+1. In the next blade, click the **Sitemaps** widget.
 1. In the next blade, click **Export to store assets** in the toolbar.
 1. Confirm your action.
 1. Monitor the export progress in the next blade.
-1. Once complete, click on the **Assets** widget in your store details blade to verify the sitemaps.
+1. Once complete, click the **Assets** widget in your store details blade to verify the sitemaps.
 
 <div>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -115,7 +115,7 @@ Automated export simplifies the process by using a scheduled job. By default, it
 
     1. Click **Stores** in the main menu.
     1. In the next blade, select your store.
-    1. In the next blade, click on the settings widget.
+    1. In the next blade, click the settings widget.
     1. In the next blade, find the "Export to assets" feature and enable it.
     1. Click **OK** to save the changes.
 

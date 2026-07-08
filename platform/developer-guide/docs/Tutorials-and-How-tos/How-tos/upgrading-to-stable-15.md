@@ -114,7 +114,7 @@ xAPI, updated to version 3.1011.0, removes `IHasLanguageExtensions.FirstBestMatc
 xOrder, updated to version 3.1005.0, stops calling the obsolete `CartAggregate.ValidateAsync(CartValidationContext, ruleSet)` and calls the non-obsolete `ValidateAsync(string ruleSet)` instead, which builds the validation context internally.
 
 * Public API change. `CreateOrderFromCartCommandHandler`'s constructor no longer takes an `ICartValidationContextFactory` parameter. Subclasses and direct constructor calls must drop that argument. DI registration is unaffected.
-* Behavioral change (intended). Validation now runs against the products re-resolved for the cart's current items at validation time, so it reflects the cart as it will be ordered.
+* Behavioral change (intended). Validation now runs against the products reresolved for the cart's current items at validation time, so it reflects the cart as it will be ordered.
 
 ## Migrate ICancellationToken to CancellationToken
 

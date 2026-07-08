@@ -62,7 +62,7 @@ To open store-specific Brands settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget or click on the **Brand settings** widget.
+1. In the next blade, click the **Settings** widget or click the **Brand settings** widget.
 1. Find **Brands** settings in the left panel and configure the following:
 
     ![Brands settings](media/brands-settings.png){: style="display: block; margin: 0 auto;" }

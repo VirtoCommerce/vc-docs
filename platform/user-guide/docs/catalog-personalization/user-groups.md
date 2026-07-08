@@ -17,7 +17,7 @@ To assign user groups to a category:
 1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
 1. In the next **Categories and items** blade, click three dots to the left of the category name, then click **Manage** in the popup menu. 
-1. In the next **Category details** blade, click on the **User Groups** widget.
+1. In the next **Category details** blade, click the **User Groups** widget.
 
 	![Path](media/user-groups-path.png){: style="display: block; margin: 0 auto;" }
 
@@ -50,7 +50,7 @@ To assign user groups to a product:
 1. Click **Catalog** in the main menu.
 1. In the next **Manage catalogs** blade, select the required catalog.
 1. In the next **Categories and items** blade, click the required product.
-1. In the next **Physical items details** blade, click on the **User Groups** widget.
+1. In the next **Physical items details** blade, click the **User Groups** widget.
 
 	![Path](media/assigning-user-group-to-product.png){: style="display: block; margin: 0 auto;" }
 

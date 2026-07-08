@@ -19,7 +19,7 @@ To analyze a slug:
     | 5         | **Ordered**       | SEO items are ordered by score and object type priority.                                                  |
     | 6         | **Final**         | The first item with the highest priority is selected as the resolved SEO result.                          |
 
-Click on any stage to view detailed information.
+Click any stage to view detailed information.
 
 Try our interactive demo to explore key features in action:
 

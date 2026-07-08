@@ -12,7 +12,7 @@ To enable white labeling via the **Stores** module:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select the desired store.
-1. In the next blade, click on the **White labeling** widget.
+1. In the next blade, click the **White labeling** widget.
 1. In the next blade, turn the white labeling option to on.
 
 ![Enabling white labeling via Stores](media/enabling-via-stores.png){: style="display: block; margin: 0 auto;" }
@@ -24,8 +24,8 @@ White labeling has been enabled.
 To enable white labeling via the **Contacts** module:
 
 1. Click **Contacts** in the main menu.
-1. In the next blade, click on the three dots to the left of the desired company.
-1. In the next blade, click on the **White labeling** widget.
+1. In the next blade, click the three dots to the left of the desired company.
+1. In the next blade, click the **White labeling** widget.
 1. In the **White Labeling** blade, turn the white labeling option to on.
 
 ![Enabling white labeling via Contacts](media/enabling-via-contacts.png){: style="display: block; margin: 0 auto;" }
@@ -36,8 +36,8 @@ White labeling has been enabled.
 
 To add own logos and favicon:
 
-1. In the **White Labeling** blade, click on the **Logo** widget to upload your company's logo.
-1. Click on the **Favicon** widget to upload your favicon.
+1. In the **White Labeling** blade, click the **Logo** widget to upload your company's logo.
+1. Click the **Favicon** widget to upload your favicon.
 1. Click **Save** in the toolbar, then click **Save** in the previous blade.
 
 Your changes have been applied.
@@ -70,7 +70,7 @@ Let's create the following footer:
     !!! note
         Name your footer link list **footer-links** so that the Platform recognizes it as a part of the footer structure.
 
-1. Click **Create**. The current result in the Frontend Application is as follows:
+1. Click **Create**. The current result on the Frontend is as follows:
 
     ![Footer result](media/footer-example1.png){: style="display: block; margin: 0 auto;" }
 
@@ -83,7 +83,7 @@ Let's create the following footer:
 
 Continue adding subcategories to the root categories according to the example above.
 
-The footer appears in the Frontend Application.
+The footer appears on the Frontend.
 
 
 <br>

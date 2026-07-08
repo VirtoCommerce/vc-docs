@@ -46,9 +46,9 @@ To start using AvaTax:
 
 As an example, let't set the fixed tax rate to 20%:
 
-1. Click on the **Tax providers** widget.
-1. In the next blade, check **Fixed percent tax rate**, then click on it.
-1. In the next blade, click on the **Settings** widget.
+1. Click the **Tax providers** widget.
+1. In the next blade, check **Fixed percent tax rate**, then click it.
+1. In the next blade, click the **Settings** widget.
 1. In the next blade, enter 20 to the **Fixed tax rate** field.
 1. Click **OK** to save the changes.
 
@@ -65,13 +65,13 @@ You can configure payment methods as described in [this guide](/platform/user-gu
 
 As an example, let't set the ground fixed shipping rate to 20% and air shipping rate to 50%:
 
-1. Click on the **Shipping methods** widget.
+1. Click the **Shipping methods** widget.
 1. In the next blade, select **Fixed shipping rate**.
 
     !!! note
         At this step, you can specify the shipping method logo URL in the following format **/static/images/checkout/fedex.svg**.
 
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. In the next blade, enter 20 to the **Ground shipping rate** field and 50 to the **Air shipping rate** field.
 1. Click **OK** to save the changes.
 

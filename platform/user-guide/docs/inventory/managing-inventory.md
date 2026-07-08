@@ -5,7 +5,7 @@ To edit the product's inventory:
 1. Click **Catalog** in the main menu to open the list of catalogs.
 1. Select the relevant catalog in the **Catalog** blade.
 1. In the next **Categories and Items** blade, select the product.
-1. On the product page, click on the [Fulfillment centers](../glossary.md#fulfillment-center) widget.
+1. On the product page, click the [Fulfillment centers](../glossary.md#fulfillment-center) widget.
 1. Click the fulfillment center to which you want to add the product inventory. This opens the **Edit inventory** blade:
 1. Update the following fields:
 

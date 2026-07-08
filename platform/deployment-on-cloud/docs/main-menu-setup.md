@@ -26,7 +26,7 @@ By default, catalog menu is automatically generated based on the existing catego
 
     ![Top catalog level](media/top-catalog-level-settings.png){: style="display: block; margin: 0 auto;" }
 
-Your new dropdown menu appears in the Frontend Application.
+Your new dropdown menu appears on the Frontend.
 
 
 <br>

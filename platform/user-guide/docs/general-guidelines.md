@@ -23,7 +23,7 @@ When a customer visits a multilingual Frontend, URLs automatically adapt to the 
 
 * Search engines index the correct localized version of each page.
 * Customers land on the appropriate language version when browsing or sharing links.
-* Switching languages in the Frontend does not disrupt navigation or cause broken links.
+* Switching languages on the Frontend does not disrupt navigation or cause broken links.
 
 The feature is available only for multi-language Frontend configurations.
 
@@ -34,7 +34,7 @@ The feature is available only for multi-language Frontend configurations.
 | Region-specific   | `/{xx-XX}/about-us` | Includes both language and region codes, e.g., `/en-US/about-us`, `/en-GB/about-us`. |
 
 
-When a customer changes the language in the Frontend, the permalink is updated in the browser to include the selected culture code (for example, **/en/about-us** --> **/de/über-uns**). The selected language is saved in local storage and automatically applied as the default language for future visits.
+When a customer changes the language on the Frontend, the permalink is updated in the browser to include the selected culture code (for example, **/en/about-us** --> **/de/über-uns**). The selected language is saved in local storage and automatically applied as the default language for future visits.
 
 ### Items URLs
 
@@ -47,7 +47,7 @@ When you open the desired order, product, or product category, you can copy its 
 
 The Virto Commerce Platform's UI is organized and divided into multiple screens called blades. Blades are ordered left to right and share parent-child hierarchy. Any parent blade has one or more child blades, while every child has a reference to its parent. The hierarchy depth is unlimited. 
 
-To access a module, click on it in the main menu. Its content will appear in the next blade. Manage the module's content using the buttons in the top toolbar or by clicking the three dots next to the item's name:
+To access a module, click it in the main menu. Its content will appear in the next blade. Manage the module's content using the buttons in the toolbar or by clicking the three dots next to the item's name:
 
 ![Blades](media/blades.png)
 

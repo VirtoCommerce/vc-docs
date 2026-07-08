@@ -21,7 +21,7 @@ To upload your custom **robots.txt**:
 
 1. Open **Stores** in the main menu.
 1. In the next blade, select your store.
-1. In the next blade, click on the **Assets** widget.
+1. In the next blade, click the **Assets** widget.
 1. In the next blade, click **Upload** in the toolbar and upload your file.
 
 ![Upload robots.txt](media/adding-robot-txt.png)

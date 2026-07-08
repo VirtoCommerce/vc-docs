@@ -37,7 +37,7 @@ The Virto Pages module supports end-to-end content workflows and standard platfo
     * **Rendering**: Render pages via permalink or unique ID, ensuring fast, reliable performance. Pages can also be searched by keywords for easy retrieval.
 * Maintenance:
     * [Reindexing](/platform/user-guide/latest/search/managing-search/): Build and rebuild (with Delete) operations are available from the admin UI and as background jobs. If a connected provider does not support reindexation, the rebuild fails with a clear error message instead of producing an incomplete index​.
-    * [Backing up and restoring](/platform/user-guide/latest/backup-and-restore/): The Pages module participates in the platform's standard backup and restore mechanism. Pages can be exported to JSON and re-imported, and imported pages are automatically re-indexed.​
+    * [Backing up and restoring](/platform/user-guide/latest/backup-and-restore/): The Pages module participates in the platform's standard backup and restore mechanism. Pages can be exported to JSON and reimported, and imported pages are automatically reindexed.​
 
 ## Supported CMS platforms
 

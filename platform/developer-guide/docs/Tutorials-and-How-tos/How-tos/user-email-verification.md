@@ -7,7 +7,7 @@ Users can verify their email address by clicking a verification link sent to the
 * Administrator clicks **Verify email** in the Platform UI (`users/{userId}/sendVerificationEmail` endpoint requested).
 * Administrator calls the `users/{userId}/sendVerificationEmail` endpoint.
 * New user is created in xAPI.
-* New user registers in the Frontend Application UI.
+* New user registers on the Frontend UI.
 
 ## Email verification in Platform API
 

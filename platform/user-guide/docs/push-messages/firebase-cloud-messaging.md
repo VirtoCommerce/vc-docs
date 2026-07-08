@@ -40,7 +40,7 @@ To begin setting up FCM for Virto Commerce:
 To configure the sender settings:
 
 1. In the left menu, click **Project Overview** --> **Project settings**:
-1. In the **Project settings** field, click on the **Service accounts** tab.
+1. In the **Project settings** field, click the **Service accounts** tab.
 1. Click **Generate new private key**.
 
     ![Project settings](media/project-settings.png){: width="950"}
@@ -143,9 +143,9 @@ Browser notifications appear in the lower right corner of your screen:
 
 ![Browser notifications](media/browser-notifications.png){: style="display: block; margin: 0 auto;" }
 
-Clicking on it redirects user to the frontend application.
+Clicking it redirects user to the frontend application.
 
-If you block messages in your browser, you will still be able to see them in the Frontend Application.
+If you block messages in your browser, you will still be able to see them on the Frontend.
 
 You can change your decision at any time:
 

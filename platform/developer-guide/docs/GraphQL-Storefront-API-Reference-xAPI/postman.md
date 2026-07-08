@@ -30,7 +30,7 @@ The schema will be imported in a couple of seconds. In the **Schema** tab, you c
 
 Environments are predefined sets of variables that allow you to configure and switch between different testing and development environments easily. To create an environment:
 
-1. Click on the **Environments** tab in the sidebar. 
+1. Click the **Environments** tab in the sidebar. 
 1. Click ![plus](media/plus.png){: width="20"} to create a new environment. 
 1. Enter its name. 
 1. Copy address from GraphiQL and paste it as initial value.

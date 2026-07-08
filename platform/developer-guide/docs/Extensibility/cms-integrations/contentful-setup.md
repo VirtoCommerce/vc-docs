@@ -84,7 +84,7 @@ To configure store settings:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. In the search field of the next blade, type **Contentful** to find the settings related to the module.
 1. Configure the following fields:
 

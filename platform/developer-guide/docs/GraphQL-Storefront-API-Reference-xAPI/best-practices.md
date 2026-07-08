@@ -244,7 +244,7 @@ For automation, use TypeScript to enforce; consider custom scripts to analyze qu
 
 Optimistic updates are a powerful GraphQL feature that makes web apps feel like native mobile apps - responsive and snappy. They provide immediate UI feedback by assuming a successful server response, then confirming in the background.
 
-When a user performs an action (e.g., clicking "+" to increase quantity), Apollo Client updates the local cache instantly with an "optimistic" version of the data. The UI re-renders immediately. Meanwhile, the real network request runs. On success, the cache updates with actual data (often seamless if it matches). On error, it reverts and shows an error.
+When a user performs an action (e.g., clicking "+" to increase quantity), Apollo Client updates the local cache instantly with an "optimistic" version of the data. The UI rerenders immediately. Meanwhile, the real network request runs. On success, the cache updates with actual data (often seamless if it matches). On error, it reverts and shows an error.
 
 For example, in a cart, adding items or changing quantity updates the UI instantly without delays or spinners. Users sometimes think it's "too fast".
 

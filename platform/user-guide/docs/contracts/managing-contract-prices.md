@@ -92,7 +92,7 @@ To restore the initial price:
 
 1. Check the price line you need to restore.
 
-1. Click **Restore** in the top toolbar.
+1. Click **Restore** in the toolbar.
 
 	![Restoring prices](media/restoring-prices.png){: style="display: block; margin: 0 auto;" width="700"}
 

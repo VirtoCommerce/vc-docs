@@ -28,7 +28,7 @@ To start using the Builder.io solution for a specific store:
 
 1. Click **OK**.
 
-Click on the link to start using Builder.io:
+Click the link to start using Builder.io:
 
 ![Builder.io link](media/builder-io-link.png){: style="display: block; margin: 0 auto;" }
 

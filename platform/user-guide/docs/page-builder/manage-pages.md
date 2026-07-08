@@ -18,7 +18,7 @@ You can create new pages using:
 To create a new page in Designer:
 
 1. Click **Content** in the main menu.
-1. In the next blade, find the required store and click on the **Pages** widget.
+1. In the next blade, find the required store and click the **Pages** widget.
 1. In the next blade, click **Add** in the toolbar. 
 1. In the next blade, select **Design page**.
 
@@ -44,7 +44,7 @@ You can open it in the browser using the specified permalink.
 To create a new page in HTML or Markdown:
 
 1. Click **Content** in the main menu.
-1. In the next blade, find the required store and click on the **Pages** widget.
+1. In the next blade, find the required store and click the **Pages** widget.
 1. In the next blade, click **Add** in the toolbar. 
 1. In the next blade, select **HTML page**.
 
@@ -159,7 +159,7 @@ To add content to your page:
 
         ![Predefined products](media/predefined-products.gif){: style="display: block; margin: 0 auto;" }
     
-1. Click on the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
+1. Click the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
 
     ![Call to action](media/call-to-action.png){: style="display: block; margin: 0 auto;" }
 

@@ -1,6 +1,6 @@
 # Overview
 
-The **Builder.io** module adds link to Builder.io to the application menu. By clicking on it, users immediately access the toolkit for transforming Frontend Application page designs into optimized web and mobile experiences.
+The **Builder.io** module adds link to Builder.io to the application menu. By clicking it, users immediately access the toolkit for transforming Frontend Application page designs into optimized web and mobile experiences.
 
 ![Readmore](media/readmore.png){: width="25"} [How builder.io works](https://www.builder.io/c/docs/how-builder-works)
 

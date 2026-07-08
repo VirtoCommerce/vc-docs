@@ -4,7 +4,7 @@ To open the Recommendations module settings:
 
 1. Open **Stores** from the main menu.
 1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
+1. In the next blade, click the **Settings** widget.
 1. Find **Recommendations** settings in the left panel and click **General**.
 1. In the next blade, configure the following:
 

@@ -13,7 +13,7 @@ To import sample data manually:
 1. Click **Settings** in the main menu of the Virto Commerce Platform.
 1. In the next blade, select **Platform**.
 1. Click **Setup**.
-1. In the next blade, click on the **Import sample data** widget:
+1. In the next blade, click the **Import sample data** widget:
 
     ![Import Sample Data widget](media/07-import-sample-data-widget.png){: style="display: block; margin: 0 auto;" }
 

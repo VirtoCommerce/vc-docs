@@ -35,7 +35,7 @@ To create a coupon:
 1. Click **Marketing** in the main menu.
 1. In the next blade, click **Promotions**.
 1. Click the required promotion in the **Promotions** blade.
-1. In the new blade, click on the **Coupons** widget. 
+1. In the new blade, click the **Coupons** widget. 
 1. In the **Coupons** blade, click **Add** to add a coupon manually or **Import** to import a coupon via CSV.
 
 	![path](media/add-coupon-path.png){: style="display: block; margin: 0 auto;" }
@@ -81,7 +81,7 @@ After you create a promotion, its usage history is stored in the corresponding w
 1. Click **Marketing** in the main menu.
 1. In the next blade, click **Promotions**.
 1. Click the required promotion in the **Promotions** blade.
-1. In the next blade, click on the **Usage history** widget.
+1. In the next blade, click the **Usage history** widget.
 1. The next blade opens a list of orders where the promotion was applied. You can track how many times a coupon was used, identify which customers applied it, etc.
 
 ![Usage history](media/usage-history.png){: style="display: block; margin: 0 auto;" }

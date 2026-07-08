@@ -49,7 +49,7 @@ When retries are exhausted, failures land in one of these places:
 | Domain event handlers | Application logs (Serilog targets: console, Application Insights, Seq). |
 | Inbound REST and GraphQL | Application logs and HTTP response codes captured by telemetry. |
 
-The Webhooks module preserves the error message and response payload for each failed delivery, so an operator can read the actual server response without re-triggering the call. The Hangfire dashboard shows each failed attempt with its stack trace and runtime, and exposes a manual retry action.
+The Webhooks module preserves the error message and response payload for each failed delivery, so an operator can read the actual server response without retriggering the call. The Hangfire dashboard shows each failed attempt with its stack trace and runtime, and exposes a manual retry action.
 
 ### Dead-letter queue
 
@@ -64,7 +64,7 @@ The Platform does not implement a transactional outbox. Domain events are dispat
 This answers a common question: if the database commit succeeds but the webhook or Event Grid delivery fails, is the event lost?
 
 * The change is committed to the database regardless of delivery.
-* Delivery to external systems is best-effort. Webhooks and Event Grid retry on failure, but once retries are exhausted the event remains only in its failure surface and is not re-delivered automatically. An in-process handler that throws runs once and leaves only an application-log entry.
+* Delivery to external systems is best-effort. Webhooks and Event Grid retry on failure, but once retries are exhausted the event remains only in its failure surface and is not redelivered automatically. An in-process handler that throws runs once and leaves only an application-log entry.
 * So without extra handling, an external system can miss an event that the database has already committed.
 
 To achieve at-least-once delivery on top of these primitives:

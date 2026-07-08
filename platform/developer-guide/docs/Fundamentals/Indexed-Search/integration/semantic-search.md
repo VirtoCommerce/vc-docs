@@ -144,7 +144,7 @@ To reindex data, open Platform:
 1. In the next blade, type **ElasticSearch8** to find settings related to the module.
 1. Click **Semantic**.
 1. In the next blade, fill in the fields. Make sure that semantic model ID, semantic field name, and pipeline name are the same as above.
-1. Click **Save** in the top toolbar to save the settings.
+1. Click **Save** in the toolbar to save the settings.
 
     ![Settings](media/semantic-search-activation.png)
 
@@ -226,7 +226,7 @@ To reindex data, open Platform:
 1. Click **Semantic**.
 1. In the next blade, select **ThirdParty** model type from a dropdown list.
 1. Fill in the required fields. Make sure that semantic model ID, semantic field name, and pipeline name are the same as above.
-1. Click **Save** in the top toolbar to save the settings.
+1. Click **Save** in the toolbar to save the settings.
 
     ![Settings](media/semantic-search-settings.png)
 

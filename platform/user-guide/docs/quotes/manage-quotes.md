@@ -25,11 +25,11 @@ You now can view and edit the quote details.
 
 The quote details blade contains:
 
-* Top toolbar.
+* Toolbar.
 * General information segment.
 * Widgets segment.
 
-With the top toolbar, you can:
+With the toolbar, you can:
 
 * View the current quote status.
 * Reset changes in the quote.
@@ -73,7 +73,7 @@ In the widgets section, you can view:
 
 In the widgets section of the **Quote details** blade, you can add or edit shipment/ billing addresses of the quote requester:
 
-1. Click on the address widget.
+1. Click the address widget.
 1. In the next **Manage addresses** blade, select an address to edit from the list or click **Add** in the toolbar to add new address.
 1. In the next **Edit address** blade, fill in the required fields.
 1. Click **OK** to save the changes, or
@@ -87,7 +87,7 @@ Attaching files facilitates the quoting process and ensures that quotes are accu
 
 To attach files to quotes:
 
-1. Click on the **Attachments** widget.
+1. Click the **Attachments** widget.
 1. In the next **Quote attachments** blade, drag and drop you files, or
 1. Browse your files from your computer.
 
@@ -97,7 +97,7 @@ The attached files appear in the list below.
 
 ### Manage quote totals
 
-To manage quote totals, click on the **Totals** widget. In the next **Edit line items** blade, you can:
+To manage quote totals, click the **Totals** widget. In the next **Edit line items** blade, you can:
 
 * Add or remove items from the quote.
 * Propose personalized prices and discounts.

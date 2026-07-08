@@ -4,7 +4,7 @@ The AI Helper section displays all requests processed by AI providers - for exam
 
 ![AI resolved tasks](media/ai-tasks.png)
 
-Clicking on any request opens its details:
+Clicking any request opens its details:
 
 ![AI request details](media/ai-request-details.png)
 

@@ -26,7 +26,7 @@ A category manager updates or removes a product from the catalog, but existing o
 
 ## Architecture
 
-Snapshots are written on both `Added` and `Modified` order change entries, so line items added to an existing order after creation are still captured. The handler ignores `Deleted` and `Unchanged` entries. A unique `(OrderId, ProductId)` constraint combined with the idempotent skip in the provider guarantees exactly one snapshot per product per order. Re-saving an unchanged order is a no-op.
+Snapshots are written on both `Added` and `Modified` order change entries, so line items added to an existing order after creation are still captured. The handler ignores `Deleted` and `Unchanged` entries. A unique `(OrderId, ProductId)` constraint combined with the idempotent skip in the provider guarantees exactly one snapshot per product per order. Resaving an unchanged order is a no-op.
 
 REST API calls go straight through `ICatalogProductSnapshotProvider`. GraphQL and xAPI calls are routed through xOrder's `IOrderProductResolver`, which launches the `ExternalOrderProducts` pipeline. `LoadorderProductSnapshotMiddleware` fills in frozen snapshots. Anything still missing falls through to xOrder's catalog fallback.
 
