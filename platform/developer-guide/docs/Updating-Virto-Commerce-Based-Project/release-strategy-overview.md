@@ -1,15 +1,22 @@
 ﻿# Virto Commerce Release Strategy
 
-Virto Commerce follows a structured release strategy designed to provide flexibility, stability, and innovation for a wide range of user needs.  To cater to various scenarios, this strategy includes:
+Virto Commerce follows a structured release strategy designed to provide flexibility, stability, and innovation for a wide range of user needs.
+
+Virto Commerce is not a single monolith with one annual version. It is the Platform plus more than 100 independent modules, each evolving and shipping continuously. The release strategy is the set of rules that keeps all those moving parts predictable and safe to combine, so you adopt new capabilities faster and with far less risk than a once-a-year upgrade.
+
+To cater to various scenarios, this strategy includes:
 
 * [Releases.](#releases)
 * [Private modules.](#private-modules)
 * [Bundles.](#bundles)
 * [Packaged business capabilities and PBCs Max](#packaged-business-capabilities-pbcs-and-pbcs-max)
 
+![Readmore](media/readmore.png){: width="25"} [Release strategy presentation](https://virtocommerce.github.io/vc-release-notes/presentations/release-strategy-for-business-users)
+
+
 ## Releases
 
-At Virto Commerce, we provide frequent releases for various modules and the Platform, packed with new features, enhancements, and fixes. Releases are a foundation for all [bundles](#bundles) and [PBCs](#packaged-business-capabilities-pbcs).
+At Virto Commerce, we provide frequent releases for various modules and the Platform, packed with new features, enhancements, and fixes. Releases are a foundation for all [bundles](#bundles) and [PBCs](#packaged-business-capabilities-pbcs-and-pbcs-max).
 
 Generally, we have three release channels: 
 
@@ -29,9 +36,13 @@ Every quarter, we publish a new stable release in our [Stable Release Module Man
 
 When we fix a bug, we release a hotfix for the two latest stable releases. 
 
+When a stable release contains breaking changes, it ships with migration guides so you can upgrade predictably.
+
 We recommend using it for maintenance updates and new solution development.
 
 ![Readmore](media/readmore.png){: width="25"} [Install and update stable release](stable-releases.md)
+
+![Readmore](media/readmore.png){: width="25"} [Upgrade to Stable 15 and its breaking changes](/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15/)
 
 
 ### Edge releases
@@ -49,6 +60,53 @@ We recommend using these releases if you want to stay up to date and get access 
 The releases in the **Preview** channel show what we are currently working on. These releases may still have some bugs, as we want to get our new features out to you as quickly as possible.
 
 We usually create a preview release for either PR or Contribution so that we can review and adjust the implementation process early on.
+
+### Choose channel
+
+The **Stable** and **Edge** channels cover most needs. Use this comparison to decide which fits a given environment:
+
+![Stable-vs-edge](media/edge-stable.gif){: style="display: block; margin: 0 auto;" }
+
+| Aspect | Stable | Edge |
+|---|---|---|
+| Cadence | About every three months. | Published daily. |
+| Testing | Full regression, E2E, and load testing. | Automated testing only. |
+| Strengths | Production-ready, with hotfixes for the two latest releases, documented breaking changes, and a quarterly checkpoint for roadmap alignment. | Latest features and fixes immediately, faster access to innovation, and room for development and staging experimentation. |
+| Considerations | Features arrive later, after hardening, at a quarterly pace. | Lighter testing, possible breaking changes, and frequent updates. |
+| Best for | Production, new builds, and maintenance. | Pre-production work, such as pilots, MVPs, and proofs of concept. |
+
+Run **Stable** in production for predictability, and reach for **Edge** selectively for development and staging, or when a single feature cannot wait for the next quarter. **Preview** is for early looks at work in progress. Updating with every stable release keeps you current with the least effort, but monthly or yearly rhythms are also supported, based on your team's capacity.
+
+
+## Preserve customizations across updates
+
+Custom code extends the Platform rather than editing it, so updates recompile and re-test your solution without rewriting your customizations. It is similar to how an added room in a house survives a plumbing upgrade: the extension stays intact while the core is improved. This is the platform's seamless delivery principle: follow the Open-Closed Principle, open for extension and closed for modification, and never modify code you do not own.
+
+![Preserve customizations](media/preserve-customizations.gif){: style="display: block; margin: 0 auto;" }
+
+![Readmore](media/readmore.png){: width="25"} [Extensibility overview](/platform/developer-guide/latest/Extensibility/overview/)
+
+## Update complexity
+
+Most updates are small, but the custom-code work depends on what changed. The levels below form an update ladder, from a manifest edit to a full Platform upgrade:
+
+| Level | Typical trigger | What it involves |
+|---|---|---|
+| Edit manifest only | Bump a module or Platform version, or add a Virto Commerce module. | Update the **vc-package.json** manifest. No code changes. |
+| Small (S) | A new feature for your customization. | Add a C# class or extension point, then recompile and re-test. |
+| Medium (M) | Documented breaking changes in a stable release. | Resolve the obsolete APIs and apply the documented fixes, then recompile and re-test. |
+| Large (L) | A Platform update path, for example a .NET LTS upgrade. | Follow the upgrade recommendations for the Microsoft and .NET changes, then recompile and re-test. |
+
+## How updates reach your project
+
+Updates flow into your solution through a standard CI/CD pipeline that merges two sources:
+
+* **Your Git repository**: your custom modules and extensions.
+* **Virto Commerce releases**: the Platform and modules, resolved from the [module manifest](https://github.com/VirtoCommerce/vc-modules/blob/master/modules_v3.json).
+
+Both sources are pulled into artifact storage. The **vc-package.json** manifest pins the exact versions you build against, so every build is reproducible. Virto Commerce CLI builds a single container image from that manifest, and the image is then promoted through your environments: development, staging, and production.
+
+![Updates flow](media/updates-flow.gif){: style="display: block; margin: 0 auto;" }
 
 ## Private modules
 

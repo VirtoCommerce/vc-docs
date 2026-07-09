@@ -1,6 +1,8 @@
 # Stable Releases
 
-In this guide, we will explore the process of installing and updating to the latest stable release of Virto Commerce. 
+In this guide, we will explore the process of installing and updating to the latest stable release of Virto Commerce using Virto Commerce CLI (**vc-build**).
+
+![Readmore](media/readmore.png){: width="25"} [Install and use Virto Commerce CLI](../Getting-Started/Installation-Guide/windows.md)
 
 ## Install Platform stable release
 
