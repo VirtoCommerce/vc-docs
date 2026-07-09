@@ -26353,8 +26353,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#choose-channel" class="md-nav__link">
+        Choose channel
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#preserve-customizations-across-updates" class="md-nav__link">
+        Preserve customizations across updates
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#update-complexity" class="md-nav__link">
+        Update complexity
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#how-updates-reach-your-project" class="md-nav__link">
+        How updates reach your project
+    </a>
+
+    <!-- Render nested item list -->
     
 </li>
         
@@ -32901,8 +32941,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#choose-channel" class="md-nav__link">
+        Choose channel
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#preserve-customizations-across-updates" class="md-nav__link">
+        Preserve customizations across updates
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#update-complexity" class="md-nav__link">
+        Update complexity
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#how-updates-reach-your-project" class="md-nav__link">
+        How updates reach your project
+    </a>
+
+    <!-- Render nested item list -->
     
 </li>
         
@@ -32957,7 +33037,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2025 10:37:37 UTC">September 11, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2026 12:15:56 UTC">July 9, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32978,15 +33058,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="virto-commerce-release-strategy">Virto Commerce Release Strategy<a class="headerlink" href="#virto-commerce-release-strategy" title="Permanent link">&para;</a></h1>
-<p>Virto Commerce follows a structured release strategy designed to provide flexibility, stability, and innovation for a wide range of user needs.  To cater to various scenarios, this strategy includes:</p>
+<p>Virto Commerce follows a structured release strategy designed to provide flexibility, stability, and innovation for a wide range of user needs.</p>
+<p>Virto Commerce is not a single monolith with one annual version. It is the Platform plus more than 100 independent modules, each evolving and shipping continuously. The release strategy is the set of rules that keeps all those moving parts predictable and safe to combine, so you adopt new capabilities faster and with far less risk than a once-a-year upgrade.</p>
+<p>To cater to various scenarios, this strategy includes:</p>
 <ul>
 <li><a href="#releases">Releases.</a></li>
 <li><a href="#private-modules">Private modules.</a></li>
 <li><a href="#bundles">Bundles.</a></li>
 <li><a href="#packaged-business-capabilities-pbcs-and-pbcs-max">Packaged business capabilities and PBCs Max</a></li>
 </ul>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://virtocommerce.github.io/vc-release-notes/presentations/release-strategy-for-business-users">Release strategy presentation</a></p>
 <h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
-<p>At Virto Commerce, we provide frequent releases for various modules and the Platform, packed with new features, enhancements, and fixes. Releases are a foundation for all <a href="#bundles">bundles</a> and <a href="#packaged-business-capabilities-pbcs">PBCs</a>.</p>
+<p>At Virto Commerce, we provide frequent releases for various modules and the Platform, packed with new features, enhancements, and fixes. Releases are a foundation for all <a href="#bundles">bundles</a> and <a href="#packaged-business-capabilities-pbcs-and-pbcs-max">PBCs</a>.</p>
 <p>Generally, we have three release channels: </p>
 <ul>
 <li><a href="./#stable-releases">Stable.</a></li>
@@ -32999,8 +33082,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>By default, Virto Commerce CLI runs on stable releases.</p>
 <p>Every quarter, we publish a new stable release in our <a href="https://github.com/VirtoCommerce/vc-modules/blob/master/modules_v3.json">Stable Release Module Manifest</a> on GitHub. You can use it with Virto Commerce CLI to apply updates.</p>
 <p>When we fix a bug, we release a hotfix for the two latest stable releases. </p>
+<p>When a stable release contains breaking changes, it ships with migration guides so you can upgrade predictably.</p>
 <p>We recommend using it for maintenance updates and new solution development.</p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../stable-releases/">Install and update stable release</a></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15/">Upgrade to Stable 15 and its breaking changes</a></p>
 <h3 id="edge-releases">Edge releases<a class="headerlink" href="#edge-releases" title="Permanent link">&para;</a></h3>
 <p>The <strong>Edge</strong> channel gives you the opportunity to be among the first to try the latest updates, performance enhancements, and new features with minimal risk.</p>
 <p>We publish edge releases for various modules on a daily basis. You can find more information about our releases in the <a href="https://github.com/VirtoCommerce">Virto Commerce GitHub repository</a> and in the <a href="https://github.com/VirtoCommerce/vc-modules/blob/master/modules_v3.json">Module Manifest</a> file.</p>
@@ -33009,6 +33094,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h3 id="preview-releases">Preview releases<a class="headerlink" href="#preview-releases" title="Permanent link">&para;</a></h3>
 <p>The releases in the <strong>Preview</strong> channel show what we are currently working on. These releases may still have some bugs, as we want to get our new features out to you as quickly as possible.</p>
 <p>We usually create a preview release for either PR or Contribution so that we can review and adjust the implementation process early on.</p>
+<h3 id="choose-channel">Choose channel<a class="headerlink" href="#choose-channel" title="Permanent link">&para;</a></h3>
+<p>The <strong>Stable</strong> and <strong>Edge</strong> channels cover most needs. Use this comparison to decide which fits a given environment:</p>
+<p><img alt="Stable-vs-edge" src="../media/edge-stable.gif" style="display: block; margin: 0 auto;" /></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Stable</th>
+<th>Edge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cadence</td>
+<td>About every three months.</td>
+<td>Published daily.</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Full regression, E2E, and load testing.</td>
+<td>Automated testing only.</td>
+</tr>
+<tr>
+<td>Strengths</td>
+<td>Production-ready, with hotfixes for the two latest releases, documented breaking changes, and a quarterly checkpoint for roadmap alignment.</td>
+<td>Latest features and fixes immediately, faster access to innovation, and room for development and staging experimentation.</td>
+</tr>
+<tr>
+<td>Considerations</td>
+<td>Features arrive later, after hardening, at a quarterly pace.</td>
+<td>Lighter testing, possible breaking changes, and frequent updates.</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Production, new builds, and maintenance.</td>
+<td>Pre-production work, such as pilots, MVPs, and proofs of concept.</td>
+</tr>
+</tbody>
+</table>
+<p>Run <strong>Stable</strong> in production for predictability, and reach for <strong>Edge</strong> selectively for development and staging, or when a single feature cannot wait for the next quarter. <strong>Preview</strong> is for early looks at work in progress. Updating with every stable release keeps you current with the least effort, but monthly or yearly rhythms are also supported, based on your team's capacity.</p>
+<h2 id="preserve-customizations-across-updates">Preserve customizations across updates<a class="headerlink" href="#preserve-customizations-across-updates" title="Permanent link">&para;</a></h2>
+<p>Custom code extends the Platform rather than editing it, so updates recompile and re-test your solution without rewriting your customizations. It is similar to how an added room in a house survives a plumbing upgrade: the extension stays intact while the core is improved. This is the platform's seamless delivery principle: follow the Open-Closed Principle, open for extension and closed for modification, and never modify code you do not own.</p>
+<p><img alt="Preserve customizations" src="../media/preserve-customizations.gif" style="display: block; margin: 0 auto;" /></p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/developer-guide/latest/Extensibility/overview/">Extensibility overview</a></p>
+<h2 id="update-complexity">Update complexity<a class="headerlink" href="#update-complexity" title="Permanent link">&para;</a></h2>
+<p>Most updates are small, but the custom-code work depends on what changed. The levels below form an update ladder, from a manifest edit to a full Platform upgrade:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Typical trigger</th>
+<th>What it involves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit manifest only</td>
+<td>Bump a module or Platform version, or add a Virto Commerce module.</td>
+<td>Update the <strong>vc-package.json</strong> manifest. No code changes.</td>
+</tr>
+<tr>
+<td>Small (S)</td>
+<td>A new feature for your customization.</td>
+<td>Add a C# class or extension point, then recompile and re-test.</td>
+</tr>
+<tr>
+<td>Medium (M)</td>
+<td>Documented breaking changes in a stable release.</td>
+<td>Resolve the obsolete APIs and apply the documented fixes, then recompile and re-test.</td>
+</tr>
+<tr>
+<td>Large (L)</td>
+<td>A Platform update path, for example a .NET LTS upgrade.</td>
+<td>Follow the upgrade recommendations for the Microsoft and .NET changes, then recompile and re-test.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-updates-reach-your-project">How updates reach your project<a class="headerlink" href="#how-updates-reach-your-project" title="Permanent link">&para;</a></h2>
+<p>Updates flow into your solution through a standard CI/CD pipeline that merges two sources:</p>
+<ul>
+<li><strong>Your Git repository</strong>: your custom modules and extensions.</li>
+<li><strong>Virto Commerce releases</strong>: the Platform and modules, resolved from the <a href="https://github.com/VirtoCommerce/vc-modules/blob/master/modules_v3.json">module manifest</a>.</li>
+</ul>
+<p>Both sources are pulled into artifact storage. The <strong>vc-package.json</strong> manifest pins the exact versions you build against, so every build is reproducible. Virto Commerce CLI builds a single container image from that manifest, and the image is then promoted through your environments: development, staging, and production.</p>
+<p><img alt="Updates flow" src="../media/updates-flow.gif" style="display: block; margin: 0 auto;" /></p>
 <h2 id="private-modules">Private modules<a class="headerlink" href="#private-modules" title="Permanent link">&para;</a></h2>
 <p>Virto Commerce also offers private modules that are not included in the public repository. These modules are available to customers with specific requirements such as AI, Enterprise, High Performance, and Marketplace functionality. <a href="https://virtocommerce.com/request-demo">Contact us</a> for access to private modules.</p>
 <h2 id="bundles">Bundles<a class="headerlink" href="#bundles" title="Permanent link">&para;</a></h2>
