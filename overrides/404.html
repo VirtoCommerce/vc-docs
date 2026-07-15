@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{#
+  Catch-all 404: any not-found page redirects to the documentation root.
+  Targeted legacy URLs are handled earlier by the mkdocs-redirects plugin
+  (see redirect_maps in mkdocs.yml) and never reach this page.
+
+  NOTE: for this to fire on the live site, the serving layer (nginx in the
+  prod Docker image built by VirtoCommerce/vc-github-actions) must route
+  missing paths to /404.html, e.g. `error_page 404 /404.html;`.
+#}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta http-equiv="refresh" content="0; url=/">
+  <script>
+    // Immediate client-side redirect; keeps the current query string dropped
+    // and always lands on the documentation home.
+    if (window.location.pathname !== "/") {
+      window.location.replace("/");
+    }
+  </script>
+{% endblock %}
+
+{% block content %}
+  <h1>Page not found</h1>
+  <p>The page you requested does not exist. Redirecting you to the
+     <a href="/">documentation home</a>.</p>
+{% endblock %}
