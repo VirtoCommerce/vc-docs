@@ -91,6 +91,14 @@ plugins:
     #       minify_html: true
     - redirects:
           redirect_maps:
+              # Legacy flat URLs (old /{section}-{guide}/ scheme still indexed by search engines).
+              # Each generates {key}/index.html served at /{key}/ that meta-refreshes to the current path.
+              "platform-user-guide.md": "https://docs.virtocommerce.org/platform/user-guide/latest/"
+              "platform-developer-guide.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/"
+              "storefront-user-guide.md": "https://docs.virtocommerce.org/storefront/user-guide/latest/"
+              "storefront-developer-guide.md": "https://docs.virtocommerce.org/storefront/developer-guide/latest/"
+              "marketplace-user-guide.md": "https://docs.virtocommerce.org/marketplace/user-guide/latest/"
+              "marketplace-developer-guide.md": "https://docs.virtocommerce.org/marketplace/developer-guide/latest/"
               "products/products-virto3-versions.md": "https://docs.virtocommerce.org/platform/user-guide/latest/versions/virto3-products-versions"
               "license.md": "https://virtocommerce.com/open-source-license"
               "support.md": "https://help.virtocommerce.com/support/home"
