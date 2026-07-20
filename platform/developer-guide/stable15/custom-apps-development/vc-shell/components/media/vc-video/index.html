@@ -29177,6 +29177,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -29276,6 +29278,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../data-display/vc-image-tile/" class="md-nav__link">
         VcImageTile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../data-display/vc-scheduler/" class="md-nav__link">
+        VcScheduler
       </a>
     </li>
   
@@ -29718,24 +29738,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../navigation/vc-dropdown-panel/" class="md-nav__link">
-        VcDropdownPanel
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../../navigation/vc-link/" class="md-nav__link">
         VcLink
       </a>
@@ -29774,6 +29776,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../navigation/vc-pagination/" class="md-nav__link">
         VcPagination
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../navigation/vc-popover/" class="md-nav__link">
+        VcPopover
       </a>
     </li>
   
@@ -30089,6 +30109,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#accessibility" class="md-nav__link">
         Accessibility
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#security" class="md-nav__link">
+        Security
     </a>
 
     <!-- Render nested item list -->
@@ -33054,6 +33084,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#security" class="md-nav__link">
+        Security
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#related-components" class="md-nav__link">
         Related Components
     </a>
@@ -33083,7 +33123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 17:11:09 UTC">July 20, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33165,6 +33205,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td><code>string</code></td>
 <td>--</td>
 <td>Tooltip text shown on the label's info icon</td>
+</tr>
+<tr>
+<td><code>additionalSandbox</code></td>
+<td><code>string</code></td>
+<td>--</td>
+<td>Extra space-separated iframe sandbox tokens appended to the secure default (see below)</td>
 </tr>
 </tbody>
 </table>
@@ -33271,7 +33317,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li>Always use the <strong>embed</strong> URL format, not the standard watch URL. For YouTube, use <code>https://www.youtube.com/embed/VIDEO_ID</code> instead of <code>https://www.youtube.com/watch?v=VIDEO_ID</code>.</li>
 <li>The iframe has <code>loading="lazy"</code>, so videos below the fold are not loaded until the user scrolls to them. This keeps initial page load fast.</li>
-<li>The <code>sandbox</code> attribute restricts iframe capabilities to <code>allow-scripts allow-same-origin allow-presentation allow-popups</code> for security. If your video host requires additional permissions, you may need a custom wrapper.</li>
+<li>The <code>sandbox</code> attribute defaults to the secure minimum <code>allow-scripts allow-presentation</code>. If your video host requires more, append tokens via <code>additionalSandbox</code> — see the Security section below.</li>
 <li>The iframe sets a fixed <code>allow</code> permissions policy (<code>accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture</code>) plus <code>allowfullscreen</code>, so embedded players can autoplay, go fullscreen, and use picture-in-picture. These are not configurable per-instance.</li>
 <li>The iframe renders at a fixed height of 300px. To customize the height, override the iframe styles via a scoped CSS rule targeting <code>.vc-video__container iframe</code>.</li>
 <li>The placeholder has a height of 200px so the layout does not collapse when no source is provided.</li>
@@ -33279,10 +33325,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The iframe uses the <code>title</code> attribute (set to <code>label</code> or "Video") for screen readers</li>
-<li><code>sandbox</code> attribute restricts iframe capabilities to <code>allow-scripts allow-same-origin allow-presentation allow-popups</code></li>
+<li><code>sandbox</code> attribute defaults to the secure minimum <code>allow-scripts allow-presentation</code></li>
 <li><code>loading="lazy"</code> defers iframe load until visible</li>
 <li>Placeholder state uses <code>role="img"</code> with <code>aria-label="No video source"</code></li>
 </ul>
+<h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
+<p>The iframe <code>sandbox</code> defaults to <code>allow-scripts allow-presentation</code> — the minimum that keeps mainstream embeds (YouTube, Vimeo) working while denying the framed page access to the parent origin. To add capabilities a specific host needs, pass them through <code>additionalSandbox</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cm">&lt;!-- Some embeds need popups for auth flows --&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">VcVideo</span> <span class="na">source</span><span class="o">=</span><span class="s">&quot;https://example.com/embed&quot;</span> <span class="na">additional-sandbox</span><span class="o">=</span><span class="s">&quot;allow-popups&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Never combine <code>allow-same-origin</code> with <code>allow-scripts</code></p>
+</div>
+<p>Per MDN and OWASP, enabling both tokens lets the embedded page remove its own sandbox and reach the parent origin's cookies, <code>localStorage</code>, and DOM. <code>VcVideo</code> renders whatever <code>source</code> you pass, so for untrusted or user-supplied URLs do <strong>not</strong> add <code>allow-same-origin</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Always use embed URLs, not watch URLs</p>
 </div>

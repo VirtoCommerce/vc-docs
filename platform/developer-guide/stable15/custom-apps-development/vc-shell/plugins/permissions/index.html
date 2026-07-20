@@ -29175,6 +29175,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -29274,6 +29276,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../components/data-display/vc-image-tile/" class="md-nav__link">
         VcImageTile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../components/data-display/vc-scheduler/" class="md-nav__link">
+        VcScheduler
       </a>
     </li>
   
@@ -29716,24 +29736,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../components/navigation/vc-dropdown-panel/" class="md-nav__link">
-        VcDropdownPanel
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../../components/navigation/vc-link/" class="md-nav__link">
         VcLink
       </a>
@@ -29772,6 +29774,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../components/navigation/vc-pagination/" class="md-nav__link">
         VcPagination
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../components/navigation/vc-popover/" class="md-nav__link">
+        VcPopover
       </a>
     </li>
   
@@ -33145,7 +33165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 17:11:09 UTC">July 20, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33173,7 +33193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Permission-based access control plugin. Exposes a global <code>$hasAccess</code> helper for checking user permissions throughout the application.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The VirtoCommerce platform uses a role-based permission system where each user is assigned one or more roles, and each role grants a set of named permissions (e.g., <code>order:read</code>, <code>order:create</code>, <code>catalog:manage</code>). The permissions plugin bridges this system into the Vue application layer so that UI elements can be shown or hidden based on the current user's access rights.</p>
-<p>The plugin installs the <code>hasAccess()</code> function from the <code>usePermissions()</code> composable as both a Vue global property (<code>$hasAccess</code>) and a provide/inject injectable (<code>"$hasAccess"</code>). This means permission checks are available everywhere: in templates via <code>$hasAccess()</code>, in composition API code via <code>usePermissions()</code>, and in any injecting component.</p>
+<p>The plugin installs the <code>hasAccess()</code> function from the <code>usePermissions()</code> composable as a Vue global property (<code>$hasAccess</code>). This means permission checks are available everywhere: in templates via <code>$hasAccess()</code> and in composition API code via <code>usePermissions()</code>.</p>
 <h2 id="when-to-use">When to Use<a class="headerlink" href="#when-to-use" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Show/hide UI elements based on user permissions: <code>v-if="$hasAccess('order:create')"</code> in templates or <code>hasAccess()</code> in composables</li>
@@ -33191,9 +33211,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nx">install</span><span class="p">(</span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="kt">App</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">hasAccess</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usePermissions</span><span class="p">();</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">globalProperties</span><span class="p">.</span><span class="nx">$hasAccess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hasAccess</span><span class="p">;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">provide</span><span class="p">(</span><span class="s2">&quot;$hasAccess&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">hasAccess</span><span class="p">);</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">};</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">};</span>
 </code></pre></div>
 <p>Module developers use the composable or global property directly -- no registration needed.</p>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>

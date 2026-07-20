@@ -18,7 +18,7 @@
         <link rel="prev" href="../vc-breadcrumbs/">
       
       
-        <link rel="next" href="../vc-dropdown-panel/">
+        <link rel="next" href="../vc-link/">
       
       
       <link rel="icon" href="../../../../../assets/icons/favicon.ico">
@@ -29177,6 +29177,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -29276,6 +29278,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../data-display/vc-image-tile/" class="md-nav__link">
         VcImageTile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../data-display/vc-scheduler/" class="md-nav__link">
+        VcScheduler
       </a>
     </li>
   
@@ -30017,24 +30037,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../vc-dropdown-panel/" class="md-nav__link">
-        VcDropdownPanel
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../vc-link/" class="md-nav__link">
         VcLink
       </a>
@@ -30073,6 +30075,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../vc-pagination/" class="md-nav__link">
         VcPagination
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../vc-popover/" class="md-nav__link">
+        VcPopover
       </a>
     </li>
   
@@ -33287,7 +33307,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 17:11:09 UTC">July 20, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33327,7 +33347,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>When NOT to use:</p>
 <ul>
 <li>For form field selection -- use <a href="../../form/vc-select/">VcSelect</a></li>
-<li>For rich panel content with header/footer/scrollable body -- use <a href="../vc-dropdown-panel/">VcDropdownPanel</a></li>
+<li>For rich panel content with header/footer/scrollable body -- use <a href="../vc-popover/">VcPopover</a></li>
 <li>For navigation menus -- use <a href="../vc-menu/">VcMenu</a></li>
 </ul>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
@@ -33674,6 +33694,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>ARIA role for the dropdown panel</td>
 </tr>
 <tr>
+<td><code>ariaLabel</code></td>
+<td><code>string</code></td>
+<td>--</td>
+<td>Accessible name for the panel. Required for a named <code>listbox</code>.</td>
+</tr>
+<tr>
 <td><code>closeOnClickOutside</code></td>
 <td><code>boolean</code></td>
 <td><code>true</code></td>
@@ -33755,8 +33781,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tbody>
 <tr>
 <td><code>trigger</code></td>
-<td><code>{ isActive: boolean, toggle: () =&gt; void, open: () =&gt; void, close: () =&gt; void }</code></td>
-<td>Custom trigger element</td>
+<td><code>{ isActive: boolean, toggle: () =&gt; void, open: () =&gt; void, close: () =&gt; void, panelId: string }</code></td>
+<td>Custom trigger element. Render a real interactive control (e.g. <code>VcButton</code>) that calls <code>toggle</code> — the wrapper is a passive container, so nesting a button inside a <code>role="button"</code> wrapper is avoided. Use <code>panelId</code> to wire <code>aria-controls</code>/<code>aria-expanded</code> on your control.</td>
 </tr>
 <tr>
 <td><code>item</code></td>
@@ -33834,8 +33860,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </table>
 <h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Trigger element</strong>: has <code>role="button"</code>, <code>tabindex="0"</code>, <code>aria-expanded</code>, and <code>aria-haspopup</code> set to the dropdown role</li>
-<li><strong>Panel</strong>: uses the specified <code>role</code> attribute (<code>"menu"</code> or <code>"listbox"</code>)</li>
+<li><strong>Trigger element</strong>: a passive wrapper — the interactive control lives in the <code>#trigger</code> slot. Render a real <code>&lt;button&gt;</code> (e.g. <code>VcButton</code>) that calls <code>toggle</code>; wire <code>aria-expanded</code>/<code>aria-haspopup</code>/<code>aria-controls</code> (via the slot's <code>panelId</code>) on it. This avoids nesting interactive controls (WCAG 4.1.2).</li>
+<li><strong>Panel</strong>: uses the specified <code>role</code> attribute (<code>"menu"</code> or <code>"listbox"</code>), is keyboard-focusable (<code>tabindex="0"</code>), and takes an accessible name from <code>ariaLabel</code></li>
 <li><strong>Items</strong>: use <code>role="menuitem"</code> (menu mode) or <code>role="option"</code> (listbox mode)</li>
 <li><strong>Active item tracking</strong>: <code>aria-activedescendant</code> on the panel tracks the currently focused item</li>
 <li><strong>Listbox selection</strong>: <code>aria-selected</code> is set on items when <code>role="listbox"</code> and <code>isItemActive</code> returns <code>true</code></li>
@@ -33849,7 +33875,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <h2 id="related-components">Related Components<a class="headerlink" href="#related-components" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../vc-dropdown-panel/">VcDropdownPanel</a> -- floating panel with header, footer, and scrollable content</li>
+<li><a href="../vc-popover/">VcPopover</a> -- floating panel with header, footer, and scrollable content</li>
 <li><a href="../../form/vc-select/">VcSelect</a> -- form field dropdown for selecting values with label and validation</li>
 <li><a href="../vc-menu/">VcMenu</a> -- sidebar navigation menu</li>
 </ul>
