@@ -6,3 +6,4 @@ nav:
   - VcDataTable: vc-data-table.md
   - VcGallery: vc-gallery.md
   - VcImageTile: vc-image-tile.md
+  - VcScheduler: vc-scheduler.md
