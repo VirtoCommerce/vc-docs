@@ -39,6 +39,15 @@ Virto Platform uses JWT token authentication and OAuth2 Password, Client Credent
 
 ![Readmore](media/readmore.png){: width="25"} [Custom policy-based authorization](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
+## Session revocation and cookie hardening
+
+The Platform hardens the application cookie scheme (`.VirtoCommerce.Identity.Application`) so that a captured or expired admin cookie cannot be replayed to reach protected panels such as the Security users list. Three mechanisms work together:
+
+* **Server-side revocation on sign-out:** `SecurityController.Logout()` calls `UserManager.UpdateSecurityStampAsync(user)` before `SignOutAsync()`. Rotating the security stamp invalidates every previously issued cookie at the next stamp validation. This applies to the cookie scheme only. OpenIddict bearer tokens keep their existing revocation path.
+* **Short revalidation interval:** The cookie is revalidated against the user's security stamp on the configurable `SecurityStampValidationInterval` (default 5 minutes). Set it to `00:00:00` for per-request validation, which rejects a stale or revoked cookie immediately.
+* **Explicit cookie flags:** The application cookie is issued with `HttpOnly`, `SecurePolicy=Always`, `SameSite=Lax`, a configurable `CookieExpireTimeSpan` (default 60 minutes), and bounded `CookieSlidingExpiration`. These are scoped to the application cookie and leave the global `MinimumSameSitePolicy` unchanged.
+
+For the configurable keys, see the [Authorization settings](../../Configuration-Reference/appsettingsjson.md#authorization) in the appsettings.json reference.
 
 <br>
 <br>

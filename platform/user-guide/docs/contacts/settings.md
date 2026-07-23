@@ -5,6 +5,7 @@ The module settings include:
 * [General settings.](#general-settings)
 * [Import settings.](#import)
 * [Settings for contact entities statuses.](#statuses)
+* [Role whitelists.](#roles)
 
 ## General settings
 
@@ -64,6 +65,10 @@ To edit store-specific statuses:
 1. Find **Customer** settings in the left panel and configure the following:
 
     ![Store-specific settings](media/store-specific-settings.png){: style="display: block; margin: 0 auto;" }
+
+## Roles
+
+Two whitelists under **Settings → Customer → Roles** control which roles can be assigned to organizations and to memberships. For the full procedure, see [Manage organization-scoped roles](managing-organization-roles.md#restrict-roles-assignment).
 
 
 <br>

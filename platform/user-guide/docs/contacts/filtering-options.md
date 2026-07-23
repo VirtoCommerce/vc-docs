@@ -49,7 +49,7 @@ Let's search for all the contacts from the United States of America. Enter **Uni
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../managing-contacts">← Managing companies and contacts</a>
+    <a href="../managing-organization-roles">← Managing organization-scoped roles</a>
     <a href="../settings">Contacts module settings →</a>
 </div>
 

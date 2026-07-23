@@ -7,8 +7,10 @@ In this section, you can:
 * [Send invitations to new members.](#invite-company-members)
 * [Manage members access by blocking, unblocking, or deleting them.](#block-unblock-delete-company-members)
 * [Edit roles.](#edit-user-role) 
+* [Log in on behalf of any member](#log-in-on-behalf-of-company-member) if you have the required permissions.
 * Filter company members by their role and status.
-* Log in on behalf of any member if you have the required permissions.
+<br>
+<br>
 
 ![Company members](../media/company-members.png){: style="display: block; margin: 0 auto;" }
 
@@ -37,7 +39,14 @@ The user has been successfully blocked/ unblocked/ deleted from the list.
 
 ## Edit user role
 
-To edit user role:
+Every person in your company can hold more than one role at the same time. On the Company members page you can see all the roles each member has.
+
+Every company member can hold two kinds of roles combined:
+
+* **Organization-level roles** assigned to your whole organization by your platform administrator. Every member inherits them automatically; you do not add them person by person.
+* **Individual roles** assigned to one specific member, such as Organization maintainer or Purchasing agent.
+
+To edit an individual role:
 
 1. Click ![wheel](../media/settings-wheel.png){: width="20"} next to the name of the required user.
 1. Click **Edit role** from the drop-down menu.
@@ -48,6 +57,10 @@ To edit user role:
 1. Click **SAVE** to save the changes.
 
 The role has been successfully modified.
+
+!!! info
+    A role change takes effect the next time the member signs in. 
+
 
 ## Log in on behalf of company member
 

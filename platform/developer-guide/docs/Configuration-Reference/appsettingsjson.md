@@ -915,6 +915,9 @@ This configuration node defines authorization settings for the system.
 | LimitedCookiePermissions | "platform:asset:read;platform:export;..." | A semicolon-separated list of permissions that define the limited cookie permissions for the user. These permissions determine what actions the user can perform when using cookies for authentication. |
 | AllowApiAccessForCustomers| true<br>false         | A boolean setting that controls whether API access is allowed for customers.<br>If set to **false**, customers are not allowed to access the API; if set to **true**, they are granted API access. |
 | EnablePersistentStorageTokenValidation | true<br>false | A boolean setting that enables validation of access tokens against the persistent token store on every request.<br>If set to **true**, tokens revoked in the database (for example, after a password change, password reset, lockout, or explicit session termination) stop working immediately on all browsers and devices. If set to **false**, revoked tokens remain valid until their natural expiration. |
+| SecurityStampValidationInterval | "00:05:00" | The time span between revalidations of a signed-in application cookie against the user's security stamp.<br>A shorter interval rejects a stale or replayed cookie sooner. If set to **00:00:00**, the cookie is validated on every request. The default is 5 minutes. |
+| CookieExpireTimeSpan | "01:00:00" | The time span specifying the lifetime of the application authentication cookie.<br>The default is 60 minutes. |
+| CookieSlidingExpiration | true<br>false | A boolean setting that renews the cookie lifetime on user activity, up to the bounded maximum.<br>If set to **true**, the lifetime is extended while the user stays active; if set to **false**, the cookie expires at a fixed time. |
 
 **Example**
 
@@ -925,7 +928,10 @@ This configuration node defines authorization settings for the system.
   "AccessTokenLifeTime": "00:30:00",
   "LimitedCookiePermissions": "platform:asset:read;platform:export;content:read;platform:asset:create;licensing:issue;export:download",
   "AllowApiAccessForCustomers": false,
-  "EnablePersistentStorageTokenValidation": true
+  "EnablePersistentStorageTokenValidation": true,
+  "SecurityStampValidationInterval": "00:05:00",
+  "CookieExpireTimeSpan": "01:00:00",
+  "CookieSlidingExpiration": true
 }
 ```
 

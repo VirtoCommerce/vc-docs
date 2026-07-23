@@ -220,5 +220,5 @@ You can also share company name and company ID by copying them from the dropdown
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Contacts module overview</a>
-    <a href="../filtering-options">Filtering options →</a>
+    <a href="../managing-organization-roles">Managing organization-scoped roles →</a>
 </div>

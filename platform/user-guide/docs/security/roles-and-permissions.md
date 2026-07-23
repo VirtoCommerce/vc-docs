@@ -1,11 +1,24 @@
 ﻿# Roles and Permissions
 
-In Virto Commerce Platform, each user must have at least one role assigned. Virto Commerce offers pre-defined roles by default, which you can customize or create new ones according to your needs.
+In Virto Commerce Platform, permissions are granted through roles. Virto Commerce offers pre-defined roles by default, which you can customize, or you can create new ones according to your needs.
 
 Managing roles includes:
 
+* [Understanding role scopes.](roles-and-permissions.md#role-scopes)
 * [Creating new roles and assigning permissions.](roles-and-permissions.md#create-new-role)
-* [Editing new roles.](roles-and-permissions.md#edit-roles)
+* [Editing roles.](roles-and-permissions.md#edit-roles)
+
+## Role scopes
+
+A member's effective permissions are the union of three role sources, re-evaluated each time they sign in:
+
+* **Global roles** are assigned to the user account itself in the Security module.
+* [Organization roles](../contacts/managing-organization-roles.md#assign-organization-level-role) are assigned to a whole organization and inherited by all its employees.
+* [Membership roles](../contacts/managing-organization-roles.md#assign-membership-role) are assigned to one person within one organization.
+
+In this article we are going to explore the global roles assigned via the Security module.
+
+![Readmore](media/readmore.png){: width="25"} [Manage organization-scoped roles](../contacts/managing-organization-roles.md)
 
 ## Create new role and assign permissions
 
