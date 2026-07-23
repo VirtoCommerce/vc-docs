@@ -6884,6 +6884,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#session-revocation-and-cookie-hardening" class="md-nav__link">
+        Session revocation and cookie hardening
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -32826,6 +32836,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#session-revocation-and-cookie-hardening" class="md-nav__link">
+        Session revocation and cookie hardening
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -32847,7 +32867,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 12, 2025 06:02:11 UTC">December 12, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 23, 2026 14:37:17 UTC">July 23, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -32894,6 +32914,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.microsoft.com/aspnet/core/security/authorization/introduction">ASP.NET Core authorization</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.microsoft.com/aspnet/core/security/authorization/roles">Role-based authorization</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.microsoft.com/aspnet/core/security/authorization/policies">Custom policy-based authorization</a></p>
+<h2 id="session-revocation-and-cookie-hardening">Session revocation and cookie hardening<a class="headerlink" href="#session-revocation-and-cookie-hardening" title="Permanent link">&para;</a></h2>
+<p>The Platform hardens the application cookie scheme (<code>.VirtoCommerce.Identity.Application</code>) so that a captured or expired admin cookie cannot be replayed to reach protected panels such as the Security users list. Three mechanisms work together:</p>
+<ul>
+<li><strong>Server-side revocation on sign-out:</strong> <code>SecurityController.Logout()</code> calls <code>UserManager.UpdateSecurityStampAsync(user)</code> before <code>SignOutAsync()</code>. Rotating the security stamp invalidates every previously issued cookie at the next stamp validation. This applies to the cookie scheme only. OpenIddict bearer tokens keep their existing revocation path.</li>
+<li><strong>Short revalidation interval:</strong> The cookie is revalidated against the user's security stamp on the configurable <code>SecurityStampValidationInterval</code> (default 5 minutes). Set it to <code>00:00:00</code> for per-request validation, which rejects a stale or revoked cookie immediately.</li>
+<li><strong>Explicit cookie flags:</strong> The application cookie is issued with <code>HttpOnly</code>, <code>SecurePolicy=Always</code>, <code>SameSite=Lax</code>, a configurable <code>CookieExpireTimeSpan</code> (default 60 minutes), and bounded <code>CookieSlidingExpiration</code>. These are scoped to the application cookie and leave the global <code>MinimumSameSitePolicy</code> unchanged.</li>
+</ul>
+<p>For the configurable keys, see the <a href="../../../Configuration-Reference/appsettingsjson/#authorization">Authorization settings</a> in the appsettings.json reference.</p>
 <p><br>
 <br></p>
 <hr />
