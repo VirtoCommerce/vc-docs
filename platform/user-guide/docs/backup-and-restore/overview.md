@@ -18,6 +18,9 @@ With the Backup and Restore module, you can:
 * **Track progress**: Follow a per-module progress timeline during the operation, with a detailed log you can copy to the clipboard.
 * **Restore selectively**: Choose which Platform entries and modules to restore from a backup file.
 * **Preserve your admin account**: When restoring sensitive data, the account that started the restore keeps its password and active session.
+* **Restore from stored backups**: Restore a backup ZIP that is already in the store's **backups** folder, without uploading it again. This is useful for large files that exceed proxy upload limits.
+* **Clearer restore feedback**: The restore blade separates the uploading phase from the server processing phase, lets you cancel an upload, and reports size and timeout errors instead of staying in progress indefinitely.
+* **Browse backup storage**: Open the **backups** folder in the Assets browser from the **Backup storage** menu item to review or clean up stored backup files. Requires the **platform:backuprestore:storage** permission.
 
 
 <br>

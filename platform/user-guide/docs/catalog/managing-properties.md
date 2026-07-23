@@ -210,6 +210,8 @@ On the Frontend, they are displayed in the product cards:
 
 ## Configure facets
 
+This section explains how to control which facets appear and how their values are displayed.
+
 ### Set up facets visibility
 
 To set the visibility of facets:
@@ -243,7 +245,13 @@ Properties can be displayed as attributes or as a range:
     
     1. Click on the property you need to set the required view for.
     1. In the next blade, select **Attribute** from the dropdown.
-    1. Select sorting method from the dropdown.
+    1. Select sorting method from the dropdown:
+
+        * Name (ascending/descending).
+        * Numeric (ascending/descending).
+        * Priority.
+        * Score.
+
     1. Enter the maximum number of aggregation values in search results.
     1. Add aggregation values allowed in search results:
 

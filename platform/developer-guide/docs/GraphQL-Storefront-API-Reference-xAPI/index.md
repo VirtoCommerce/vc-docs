@@ -9,7 +9,7 @@ It is closely associated with a particular user or touch point experience and en
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-api/releases)
 
 !!! note
-    We have migrated to a new xAPI architecture to better support the evolving needs of our business API with GraphQL. The previously used [Experience API module](https://github.com/VirtoCommerce/vc-module-experience-api) has been replaced with a suite of new, more specialized modules. This change is part of our effort to simplify business API development and streamline our release cycle. The **ExperienceAPI module** will be archived and supported in Stable 8 and Stable 9 releases. Future developments will focus on the new xAPI module and related modules. 
+    We have migrated to a new xAPI architecture to better support the evolving needs of our business API with GraphQL. The previously used [Experience API module](https://github.com/VirtoCommerce/vc-module-experience-api) has been replaced with a suite of new, more specialized modules. This change is part of our effort to simplify business API development and streamline our release cycle. The **Experience API module** will be archived and supported in Stable 8 and Stable 9 releases. Future developments will focus on the new xAPI module and related modules. 
 
     ![Readmore](media/readmore.png){: width="25"} [Migration to new xAPI modules](../Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md)
 
