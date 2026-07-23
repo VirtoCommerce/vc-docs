@@ -3598,6 +3598,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -3661,6 +3663,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../contacts/managing-contacts/" class="md-nav__link">
         Managing Companies and Contacts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../contacts/managing-organization-roles/" class="md-nav__link">
+        Managing Organization-Scoped Roles
       </a>
     </li>
   
@@ -11697,6 +11717,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#role-scopes" class="md-nav__link">
+        Role scopes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#create-new-role-and-assign-permissions" class="md-nav__link">
         Create new role and assign permissions
     </a>
@@ -15022,6 +15052,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#role-scopes" class="md-nav__link">
+        Role scopes
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#create-new-role-and-assign-permissions" class="md-nav__link">
         Create new role and assign permissions
     </a>
@@ -15107,7 +15147,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 07:05:40 UTC">May 21, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 23, 2026 14:37:17 UTC">July 23, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15128,12 +15168,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Markdown content -->
 <h1 id="roles-and-permissions">Roles and Permissions<a class="headerlink" href="#roles-and-permissions" title="Permanent link">&para;</a></h1>
-<p>In Virto Commerce Platform, each user must have at least one role assigned. Virto Commerce offers pre-defined roles by default, which you can customize or create new ones according to your needs.</p>
+<p>In Virto Commerce Platform, permissions are granted through roles. Virto Commerce offers pre-defined roles by default, which you can customize, or you can create new ones according to your needs.</p>
 <p>Managing roles includes:</p>
 <ul>
+<li><a href="./#role-scopes">Understanding role scopes.</a></li>
 <li><a href="./#create-new-role">Creating new roles and assigning permissions.</a></li>
-<li><a href="./#edit-roles">Editing new roles.</a></li>
+<li><a href="./#edit-roles">Editing roles.</a></li>
 </ul>
+<h2 id="role-scopes">Role scopes<a class="headerlink" href="#role-scopes" title="Permanent link">&para;</a></h2>
+<p>A member's effective permissions are the union of three role sources, re-evaluated each time they sign in:</p>
+<ul>
+<li><strong>Global roles</strong> are assigned to the user account itself in the Security module.</li>
+<li><a href="../../contacts/managing-organization-roles/#assign-organization-level-role">Organization roles</a> are assigned to a whole organization and inherited by all its employees.</li>
+<li><a href="../../contacts/managing-organization-roles/#assign-membership-role">Membership roles</a> are assigned to one person within one organization.</li>
+</ul>
+<p>In this article we are going to explore the global roles assigned via the Security module.</p>
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../contacts/managing-organization-roles/">Manage organization-scoped roles</a></p>
 <h2 id="create-new-role-and-assign-permissions">Create new role and assign permissions<a class="headerlink" href="#create-new-role-and-assign-permissions" title="Permanent link">&para;</a></h2>
 <p>To create new roles and assign permissions to them:</p>
 <ol>

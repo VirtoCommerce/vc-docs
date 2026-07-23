@@ -3598,6 +3598,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -3661,6 +3663,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../contacts/managing-contacts/" class="md-nav__link">
         Managing Companies and Contacts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../contacts/managing-organization-roles/" class="md-nav__link">
+        Managing Organization-Scoped Roles
       </a>
     </li>
   
@@ -6394,18 +6414,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#incorrect-password" class="md-nav__link">
-        Incorrect password
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#restoring-sensitive-data" class="md-nav__link">
-        Restoring sensitive data
+    <a href="#sensitive-data-restoration" class="md-nav__link">
+        Sensitive data restoration
     </a>
 
     <!-- Render nested item list -->
@@ -14974,18 +14984,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#incorrect-password" class="md-nav__link">
-        Incorrect password
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-        
-        <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#restoring-sensitive-data" class="md-nav__link">
-        Restoring sensitive data
+    <a href="#sensitive-data-restoration" class="md-nav__link">
+        Sensitive data restoration
     </a>
 
     <!-- Render nested item list -->
@@ -15013,7 +15013,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 07:10:45 UTC">June 18, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 23, 2026 14:37:17 UTC">July 23, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15038,40 +15038,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ol>
 <li>Click <strong>Backup and restore</strong> in the main menu.</li>
 <li>In the <strong>Data backup and restore</strong> blade, click <strong>Restore</strong>.</li>
-<li>In the <strong>Data restore</strong> blade, drag and drop your backup ZIP file into the designated area.</li>
-<li>The Platform reads the backup manifest and displays Restore data information (Author, Data file created, Created in Platform version).</li>
-<li>If the backup is encrypted, a <strong>Backup password</strong> section appears. Enter the password that was shown when the backup was created.</li>
 <li>
-<p>Under <strong>Platform entries</strong> and <strong>Choose modules to restore</strong>, select the data types and modules you want to restore:</p>
-<p><img alt="Restore password" src="../media/restore-password.png" style="display: block; margin: 0 auto;" /></p>
+<p>In the <strong>Data restore</strong> blade:</p>
+<ul>
+<li>Drag and drop your backup ZIP file into the designated area, or</li>
+<li>Choose a backup file from the storage list.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For large backups over 100 MB use a stored backup instead of uploading it through the browser.</p>
+</div>
 </li>
 <li>
-<p>Click <strong>Start restore</strong> in the toolbar.</p>
-<p><img alt="Restore" src="../media/restore-data.gif" style="display: block; margin: 0 auto;" width="700" /></p>
+<p>The Platform reads the backup manifest and displays Restore data information (Author, Data file created, Created in Platform version).</p>
 </li>
+<li>
+<p>If the backup is encrypted, a <strong>Backup password</strong> section appears. Enter the password that was shown when the backup was created.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the password you enter does not match the one used when the backup was created, the restore is rejected by the Platform. No data is changed in the Platform.</p>
+</div>
+</li>
+<li>
+<p>Under <strong>Platform entries</strong> and <strong>Choose modules to restore</strong>, select the data types and modules you want to restore.</p>
+</li>
+<li>Click <strong>Start restore</strong> in the toolbar.</li>
 </ol>
-<p>The system will restore the data from the backup file.</p>
+<p>The system will restore the data from the backup file. Click <strong>Cancel</strong> to stop an upload in progress. If an upload fails or stalls, the blade surfaces a clear message, for example a file-too-large or timeout error, instead of remaining in progress indefinitely. To choose a different file, click <strong>Back</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>After a fully successful restore, the Platform automatically removes the backup file you uploaded for the restore. If the restore finishes with any errors, the file is kept so you can fix the issue and retry without uploading it again. The original backup file you downloaded when creating the backup is not affected.</p>
 </div>
-<h2 id="incorrect-password">Incorrect password<a class="headerlink" href="#incorrect-password" title="Permanent link">&para;</a></h2>
-<p>If the password you enter does not match the one used when the backup was created, the restore is rejected by the Platform. The blade stays in the password entry state and displays a red message below the password field:</p>
-<p><img alt="Password error" src="../media/password-error.png" style="display: block; margin: 0 auto;" /></p>
-<p>The password field is cleared so you can re-enter the value. No data is changed in the Platform.</p>
-<h2 id="restoring-sensitive-data">Restoring sensitive data<a class="headerlink" href="#restoring-sensitive-data" title="Permanent link">&para;</a></h2>
-<p>When you restore a backup with <strong>Security</strong> enabled, the blade displays a warning banner that explains the consequences:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>This restore will overwrite sensitive data — User passwords, API keys, and security stamps from the backup will replace the current values for every user in the file.
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Your own admin account (username) will not be modified — your password and active session are preserved.
-</code></pre></div>
-<p>The Platform automatically preserves the account of the administrator who initiated the restore. Your <strong>PasswordHash</strong>, <strong>SecurityStamp</strong>, <strong>LockoutEnd</strong>, and <strong>AccessFailedCount</strong> values stay unchanged, your active session is not invalidated, and the password you logged in with continues to work.</p>
-<p>The detailed log includes a confirmation message for this skip:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User &#39;admin&#39; skipped to preserve your active session — password and security stamp left unchanged.
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>All other users in the backup file have their credentials replaced with the values stored in the backup. After the restore, they may need to use the password they had at the moment the backup was created.</p>
+<p>Try our interactive demo to explore the feature in action:</p>
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/2ibxaohstrqi?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
 </div>
+
+<h2 id="sensitive-data-restoration">Sensitive data restoration<a class="headerlink" href="#sensitive-data-restoration" title="Permanent link">&para;</a></h2>
+<p>When you restore a backup with <strong>Security</strong> enabled, the blade displays a warning banner that explains the consequences: </p>
+<p><strong>This restore will overwrite sensitive data - User passwords, API keys, and security stamps from the backup will replace the current values for every user in the file.
+Your own admin account (username) will not be modified — your password and active session are preserved.</strong></p>
+<p>The Platform automatically preserves the account of the administrator who initiated the restore. Your <strong>PasswordHash</strong>, <strong>SecurityStamp</strong>, <strong>LockoutEnd</strong>, and <strong>AccessFailedCount</strong> values stay unchanged, your active session is not invalidated, and the password you logged in with continues to work.</p>
+<p>All other users in the backup file have their credentials replaced with the values stored in the backup. After the restore, they may need to use the password they had at the moment the backup was created.</p>
 <p><br>
 <br></p>
 <hr />
