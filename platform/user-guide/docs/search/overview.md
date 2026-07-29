@@ -62,6 +62,6 @@ With the **Search** module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../return/overview">← Return module overview</a>
+    <a href="../../sales-rep/overview">← Sales Rep module overview</a>
     <a href="../managing-search">Managing search index →</a>
 </div>

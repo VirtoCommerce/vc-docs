@@ -33,6 +33,9 @@ Pragma: no-cache
 
 The issued access token life time is controlled by the `Authorization:AccessTokenLifeTime` setting, the default value being one hour.<!---Add link to settings-->
 
+!!! note "Store-bound accounts"
+    When the user's login account is bound to a specific store, the password grant must include the `storeId` form parameter, for example `storeId=B2B-store`. Without it, the grant fails with `400 invalid_grant`.
+
 ## Client credentials flow (recommended for machine-to-machine communication)
 
 Virto Commerce Platform authenticates and authorizes the app rather than a user. For this scenario, typical authentication schemes, such as username/password or social media credentials do not make sense.

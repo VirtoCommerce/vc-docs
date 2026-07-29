@@ -257,6 +257,10 @@ nav:
                 - Overview: return/overview.md
                 - Managing Returns: return/managing-returns.md
                 - Settings: return/settings.md
+          - Sales Rep:
+                - Overview: sales-rep/overview.md
+                - Enabling Sales Rep App: sales-rep/enabling-sales-rep.md
+                - Managing Sales Reps: sales-rep/managing-sales-reps.md
           - Search Related Modules:
                 - Search Index:
                       - Overview: search/overview.md

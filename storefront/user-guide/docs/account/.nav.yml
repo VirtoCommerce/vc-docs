@@ -1,6 +1,7 @@
 title: Account
 nav:
   - Personal and Corporate Accounts: overview.md
+  - Sales Rep Hub: sales-rep-hub.md
   - Purchasing:
       - Dashboard: dashboard.md
       - Orders: orders.md
@@ -16,6 +17,7 @@ nav:
   - Corporate:
       - Company Info: company-info.md
       - Company Members: company-members.md
+      - Sales Reps: sales-reps.md
   - User:
       - Profile: profile.md
       - Change Password: change-password.md

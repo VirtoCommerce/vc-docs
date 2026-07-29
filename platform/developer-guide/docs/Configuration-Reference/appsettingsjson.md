@@ -935,6 +935,34 @@ This configuration node defines authorization settings for the system.
 }
 ```
 
+### BackgroundJobs
+
+<!--backgroundjobs-start-->
+This configuration node selects and tunes the background-processing engine. The `Provider` key selects the active engine behind the background job API, Map/Reduce, and platform recurring jobs.
+
+| Node | Default or sample value | Description |
+| ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Provider | "Hangfire" | The active engine: **Hangfire**, **RabbitMQ**, or **InMemory**. |
+| Mode | "Both" | The instance role: **Producer** (enqueue only), **Worker** (process only), or **Both**. |
+| EnableLegacyHangfire | true<br>false | Keeps Hangfire initialized even under another engine, so modules that call Hangfire directly keep working.<br>Set to **false** for a Hangfire-free deployment. |
+| DefaultQueue | "default" | The queue used when a job does not specify one. |
+| MaxRetryAttempts | 3 | The number of retry attempts before a job is dead-lettered. |
+
+**Example**
+
+```json title="appsettings.json"
+"BackgroundJobs": {
+  "Provider": "Hangfire",
+  "Mode": "Both",
+  "EnableLegacyHangfire": true,
+  "DefaultQueue": "default",
+  "MaxRetryAttempts": 3
+}
+```
+<!--backgroundjobs-end-->
+
+![Readmore](media/readmore.png){: width="25"} [Background Jobs](../Fundamentals/Background-Jobs/overview.md)
+
 ### AzureAppConfiguration
 
 This configuration node integrates [Azure App Configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview) as a centralized, cloud-managed configuration source for the Virto Commerce Platform. Once enabled, all platform modules automatically gain access to settings stored in Azure App Configuration without any code changes.
@@ -2519,6 +2547,42 @@ The Intent Search module uses Weaviate as its vector database for semantic searc
 
 
 
+
+### UCP
+
+This node configures the UCP protocol adapter.
+
+<!--ucp-start-->
+This configuration node configures the UCP protocol adapter. It sets the default store context, the public UCP URLs, and the checkout handoff behavior.
+
+| Node | Default or sample value | Description |
+| ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
+| DefaultStoreId | "store-acme" | Virto Commerce Store ID used when the client does not pass `store_id`. Use the exact Store ID, not the display name. |
+| DefaultCurrency | "USD" | Default currency code for catalog, cart, and checkout operations. |
+| DefaultCultureName | "en-US" | Default culture, for example `en-US`. |
+| UcpBaseUrl | "https://store.example.com/ucp/v1" | Public base URL of the UCP API published in the discovery profile. |
+| StorefrontOrigin | "https://store.example.com" | Fallback Frontend origin for hosted checkout URLs in environments without Store URLs. |
+| HandoffUrlTemplate | "https://store.example.com/checkout?ucp_session={token}" | Explicit override for the hosted checkout handoff URL. `{token}` is replaced with the `ucp_session` token. |
+| HandoffTokenTtlMinutes | 15 | Absolute expiration of temporary checkout handoff sessions in the distributed cache. |
+| AnonymousCatalog | true | Allows anonymous catalog search and product detail requests. |
+
+**Example**
+
+```json title="appsettings.json"
+"UCP": {
+  "DefaultStoreId": "store-acme",
+  "DefaultCurrency": "USD",
+  "DefaultCultureName": "en-US",
+  "UcpBaseUrl": "https://store.example.com/ucp/v1",
+  "StorefrontOrigin": "https://store.example.com",
+  "HandoffUrlTemplate": "https://store.example.com/checkout?ucp_session={token}",
+  "HandoffTokenTtlMinutes": 15,
+  "AnonymousCatalog": true
+}
+```
+<!--ucp-end-->
+
+![Readmore](media/readmore.png){: width="25"} [UCP module](../Fundamentals/UCP/overview.md)
 
 ## Hierarchic keys and separators
 

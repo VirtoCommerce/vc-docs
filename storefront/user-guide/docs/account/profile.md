@@ -15,6 +15,6 @@ In the **Profile** section, you can:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../company-members">← Company members</a>
+    <a href="../sales-reps">← Sales reps</a>
     <a href="../change-password">Change password →</a>
 </div>

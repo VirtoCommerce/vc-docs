@@ -17,6 +17,6 @@ The xRecommend module adds the xAPI product recommendation query to the Virto Co
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../Quote/overview">← Quote module overview</a>
+    <a href="../../SalesRep/overview">← Sales Rep module overview</a>
     <a href="../query/recommendations">Recommendations query →</a>
 </div>

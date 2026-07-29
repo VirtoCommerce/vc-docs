@@ -83,5 +83,5 @@ Try our interactive demo to explore this features in action:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../company-info">← Company info</a>
-    <a href="../profile">User profile →</a>
+    <a href="../sales-reps">Sales reps →</a>
 </div>

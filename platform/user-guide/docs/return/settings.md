@@ -19,5 +19,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-returns">← Managing returns</a>
-    <a href="../../search/overview">Search module overview →</a>
+    <a href="../../sales-rep/overview">Sales Rep module overview →</a>
 </div>

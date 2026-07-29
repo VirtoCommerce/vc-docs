@@ -1,0 +1,8 @@
+title: Background Jobs
+nav:
+  - Overview: overview.md
+  - Creating Background Jobs: creating-background-jobs.md
+  - Recurring Jobs: recurring-jobs.md
+  - Map and Reduce: map-reduce.md
+  - Extensibility: extensibility.md
+  - Configuration: configuration.md

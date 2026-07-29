@@ -100,8 +100,12 @@ Users can personalize their store by applying a [custom theme](/storefront/devel
 
     ![Coffee](media/coffee.png)
 
+=== "red"
+
+    ![Red](media/red.png)
+
 !!! note
-    Dark mode is available for **Mercury** (default), **Coffee**, **Watermelon**, **Black-Gold** themes. 
+    Dark mode is available for **Mercury** (default), **Coffee**, **Watermelon**, **Black-Gold**, **Red** themes. 
 
 
 ![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/customization/visual-theme-customization)

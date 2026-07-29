@@ -3,6 +3,7 @@ nav:
   - Overview: index.md
   - Setting Up Environment For Working With xAPI: getting-started.md
   - Extending xAPI Module: x-api-extensions.md
+  - Creating Custom xAPI Module: custom-module-creation.md
   - Updating xAPI Modules: update-xapi-modules.md
   - Multiregional Development: multiregional-development.md
   - Best Practices: best-practices.md
@@ -29,6 +30,7 @@ nav:
   - xProfile: Profile
   - Push Messages: Push-messages
   - Quote: Quote
+  - Sales Rep: SalesRep
   - xRecommend: Recommend
   - Skyflow: Skyflow
   - Store: Store
