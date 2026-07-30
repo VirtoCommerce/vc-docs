@@ -11909,8 +11909,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#behavior-in-the-admin-ui" class="md-nav__link">
-        Behavior in the admin UI
+    <a href="#behavior-in-admin-ui" class="md-nav__link">
+        Behavior in admin UI
     </a>
 
     <!-- Render nested item list -->
@@ -11921,6 +11921,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#backward-compatibility" class="md-nav__link">
         Backward compatibility
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#catalog-linking-permissions" class="md-nav__link">
+        Catalog linking permissions
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Catalog linking permissions">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#configure-linking-permissions" class="md-nav__link">
+        Configure linking permissions
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#mapping-picker-behavior" class="md-nav__link">
+        Mapping picker behavior
     </a>
 
     <!-- Render nested item list -->
@@ -15244,8 +15280,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#behavior-in-the-admin-ui" class="md-nav__link">
-        Behavior in the admin UI
+    <a href="#behavior-in-admin-ui" class="md-nav__link">
+        Behavior in admin UI
     </a>
 
     <!-- Render nested item list -->
@@ -15256,6 +15292,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="md-nav__item">
     <a href="#backward-compatibility" class="md-nav__link">
         Backward compatibility
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#catalog-linking-permissions" class="md-nav__link">
+        Catalog linking permissions
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Catalog linking permissions">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#configure-linking-permissions" class="md-nav__link">
+        Configure linking permissions
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#mapping-picker-behavior" class="md-nav__link">
+        Mapping picker behavior
     </a>
 
     <!-- Render nested item list -->
@@ -15288,7 +15360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 23, 2026 14:37:17 UTC">July 23, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 30, 2026 16:23:46 UTC">July 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -15399,7 +15471,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>All permissions are localized for the 13 Platform languages.</p>
 <h3 id="catalog-scope">Catalog scope<a class="headerlink" href="#catalog-scope" title="Permanent link">&para;</a></h3>
 <p>The new permissions support the existing <strong>Selected catalog</strong> scope. For example, a role can be granted <code>catalog:categories:update</code> only for Catalog A. Operations on entities outside the user's scoped catalogs return HTTP 403.</p>
-<h3 id="behavior-in-the-admin-ui">Behavior in the admin UI<a class="headerlink" href="#behavior-in-the-admin-ui" title="Permanent link">&para;</a></h3>
+<h3 id="behavior-in-admin-ui">Behavior in admin UI<a class="headerlink" href="#behavior-in-admin-ui" title="Permanent link">&para;</a></h3>
 <p>The <strong>Catalog</strong> blade and detail blades respect entity-level permissions:</p>
 <ul>
 <li>The unified catalog list filters automatically to show only the entity types the user can read.</li>
@@ -15437,6 +15509,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 <p>No migration is required for existing roles.</p>
+<h2 id="catalog-linking-permissions">Catalog linking permissions<a class="headerlink" href="#catalog-linking-permissions" title="Permanent link">&para;</a></h2>
+<p>Two permissions control whether a role can link entities into virtual, curated catalogs and categories. They extend the <a href="#granular-catalog-entity-permissions">granular catalog entity permissions</a> above, splitting the linking action by entity type. A role can be allowed to link categories but not products, or the reverse.</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>catalog:categories:link</code></td>
+<td>Link categories to other categories or catalogs.</td>
+</tr>
+<tr>
+<td><code>catalog:products:link</code></td>
+<td>Link products and variations to categories or catalogs.</td>
+</tr>
+</tbody>
+</table>
+<p>Linking happens in the virtual catalog mapping flow. Open a virtual catalog or category, use <strong>Add &gt; Link</strong>, pick a physical catalog, then click <strong>Map</strong> to open the <strong>Choose categories and items for mapping</strong> picker.</p>
+<h3 id="configure-linking-permissions">Configure linking permissions<a class="headerlink" href="#configure-linking-permissions" title="Permanent link">&para;</a></h3>
+<p>To control linking for a role:</p>
+<ol>
+<li><a href="#create-new-role-and-assign-permissions">Open or create a role</a>.</li>
+<li>
+<p>Grant the permissions the role needs:</p>
+<ul>
+<li><code>catalog:products:link</code> lets the role link products and variations only.</li>
+<li><code>catalog:categories:link</code> lets the role link categories only.</li>
+<li>Grant both for unrestricted linking, which matches the previous behavior.</li>
+</ul>
+</li>
+<li>
+<p>Assign the role to the relevant users, for example a <strong>Merchandising</strong> role.</p>
+</li>
+</ol>
+<p>The role can now link only the entity types you granted.</p>
+<h3 id="mapping-picker-behavior">Mapping picker behavior<a class="headerlink" href="#mapping-picker-behavior" title="Permanent link">&para;</a></h3>
+<p>In the <strong>Choose categories and items for mapping</strong> picker, the role's linking permissions are enforced:</p>
+<ul>
+<li>Rows whose entity type the role cannot link are dimmed and non-selectable, with a warning banner that explains why.</li>
+<li>The backend enforces the same rule. Create-links and bulk-create-links requests return HTTP 403 for a disallowed entity type, so the restriction cannot be bypassed through the API.</li>
+</ul>
+<p>A role that holds both linking permissions, like the administrator, sees no change. Both categories and products remain selectable.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Linking previously required <code>catalog:categories:update</code> or <code>catalog:products:update</code>. It now requires the new <code>catalog:categories:link</code> and <code>catalog:products:link</code> permissions. Grant the matching link permission to any existing role that relied on the update permissions for linking, otherwise linking returns HTTP 403 for that role. Reaching the mapping picker through <strong>Add &rarr; Link</strong> also requires a create permission (<code>catalog:create</code>, <code>catalog:categories:create</code>, or <code>catalog:products:create</code>).</p>
+</div>
 <p><br>
 <br></p>
 <hr />
