@@ -10,6 +10,7 @@ To configure your store, select it in the **Stores** blade. Here, you can adjust
 
     ![Store settings widgets](media/store-settings-widgets-explained.png)
 
+
 <br>
 <br>
 ********

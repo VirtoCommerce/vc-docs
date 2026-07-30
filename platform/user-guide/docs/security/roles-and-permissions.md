@@ -71,7 +71,7 @@ All permissions are localized for the 13 Platform languages.
 
 The new permissions support the existing **Selected catalog** scope. For example, a role can be granted `catalog:categories:update` only for Catalog A. Operations on entities outside the user's scoped catalogs return HTTP 403.
 
-### Behavior in the admin UI
+### Behavior in admin UI
 
 The **Catalog** blade and detail blades respect entity-level permissions:
 
@@ -93,6 +93,44 @@ Existing roles that use the legacy `catalog:create`, `catalog:read`, `catalog:up
 | `catalog:delete` | `catalog:categories:delete` + `catalog:products:delete` |
 
 No migration is required for existing roles.
+
+## Catalog linking permissions
+
+Two permissions control whether a role can link entities into virtual, curated catalogs and categories. They extend the [granular catalog entity permissions](#granular-catalog-entity-permissions) above, splitting the linking action by entity type. A role can be allowed to link categories but not products, or the reverse.
+
+| Permission | Purpose |
+| --- | --- |
+| `catalog:categories:link` | Link categories to other categories or catalogs. |
+| `catalog:products:link` | Link products and variations to categories or catalogs. |
+
+Linking happens in the virtual catalog mapping flow. Open a virtual catalog or category, use **Add > Link**, pick a physical catalog, then click **Map** to open the **Choose categories and items for mapping** picker.
+
+### Configure linking permissions
+
+To control linking for a role:
+
+1. [Open or create a role](#create-new-role-and-assign-permissions).
+1. Grant the permissions the role needs:
+
+	* `catalog:products:link` lets the role link products and variations only.
+	* `catalog:categories:link` lets the role link categories only.
+	* Grant both for unrestricted linking, which matches the previous behavior.
+
+1. Assign the role to the relevant users, for example a **Merchandising** role.
+
+The role can now link only the entity types you granted.
+
+### Mapping picker behavior
+
+In the **Choose categories and items for mapping** picker, the role's linking permissions are enforced:
+
+* Rows whose entity type the role cannot link are dimmed and non-selectable, with a warning banner that explains why.
+* The backend enforces the same rule. Create-links and bulk-create-links requests return HTTP 403 for a disallowed entity type, so the restriction cannot be bypassed through the API.
+
+A role that holds both linking permissions, like the administrator, sees no change. Both categories and products remain selectable.
+
+!!! warning
+    Linking previously required `catalog:categories:update` or `catalog:products:update`. It now requires the new `catalog:categories:link` and `catalog:products:link` permissions. Grant the matching link permission to any existing role that relied on the update permissions for linking, otherwise linking returns HTTP 403 for that role. Reaching the mapping picker through **Add --> Link** also requires a create permission (`catalog:create`, `catalog:categories:create`, or `catalog:products:create`).
 
 
 <br>

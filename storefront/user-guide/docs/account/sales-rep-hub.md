@@ -15,6 +15,7 @@ The **My customers** page lists the customer organizations the rep is assigned t
 
 ![My customers](../media/my-customers.png){: style="display: block; margin: 0 auto;" }
 
+
 <br>
 <br>
 ********

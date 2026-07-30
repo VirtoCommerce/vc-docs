@@ -2584,6 +2584,33 @@ This configuration node configures the UCP protocol adapter. It sets the default
 
 ![Readmore](media/readmore.png){: width="25"} [UCP module](../Fundamentals/UCP/overview.md)
 
+### StoreAssets
+
+This node restricts which source hosts are rewritten onto a store's custom asset URL.
+
+<!--storeassets-start-->
+When a store has a custom **Store asset URL**, the Platform rebases absolute asset URLs onto it at query time. The `VirtoCommerce:StoreAssets` node limits that rewrite to specific source hosts.
+
+| Node | Default or sample value | Description |
+| --- | --- | --- |
+| KnownAssetHosts | [] | Source hosts whose absolute asset URLs may be rebased onto the store asset URL. When empty, the rewrite is not restricted by host. |
+
+**Example**
+
+```json title="appsettings.json"
+"VirtoCommerce": {
+  "StoreAssets": {
+    "KnownAssetHosts": [
+      "cdn.example.com",
+      "https://mycompany.blob.core.windows.net"
+    ]
+  }
+}
+```
+<!--storeassets-end-->
+
+![Readmore](media/readmore.png){: width="25"} [Store query](../GraphQL-Storefront-API-Reference-xAPI/Store/queries/store.md)
+
 ## Hierarchic keys and separators
 
 When working with keys, one should follow these rules:

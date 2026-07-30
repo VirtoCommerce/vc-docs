@@ -7,6 +7,9 @@ The app itself is global, but you can enable or disable the feature for each sto
 1. In the next blade, select the **Settings** widget.
 1. In the search field of the next blade, type **Sales rep** to find the module-related settings.
 1. Turn the **Sales rep enabled** feature to on.
+
+    ![Enabling sales rep module](media/enable-sales-rep.png){: style="display: block; margin: 0 auto;" }
+
 1. Click **OK**, then **Save** in the previous blade.
 
 The Sales Rep application has been enabled for your store.

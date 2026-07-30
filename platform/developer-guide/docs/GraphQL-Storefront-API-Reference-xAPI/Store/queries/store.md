@@ -16,6 +16,8 @@ This query allows you to retrieve information about a store. The Frontend uses i
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | [`StoreResponseType`](../objects/StoreResponseType.md) | Defines the properties and fields associated with the store, including its basic information and configuration. |
 
+!!! note
+    When a store sets a custom asset URL, image and asset URLs are rebased onto it at query time, with no reindexing. The affected fields use the `StoreUrl` scalar, serialized as a string: `Image.url`, `Asset.url`, `Product.imgSrc`, and `Category.imgSrc`. An image's `relativeUrl` is left unchanged.
 
 ## Example
 
@@ -30,6 +32,7 @@ query{
     storeName
     catalogId
     storeUrl
+    assetPublicUrl
     defaultLanguage {
       isInvariant
       cultureName

@@ -10,6 +10,7 @@ This type represents the response data for a store, including its basic informat
 | `storeName` ==String!==                                                               | The name of the store.                                      |
 | `catalogId` ==String!==                                                               | The Id for the store's catalog.                             |
 | `storeUrl` ==String==                                                                 | The URL of the store.                                       |
+| `assetPublicUrl` ==String==                                                           | The store's custom base URL for public asset links. When set, image and asset URLs in the store's queries are rebased onto it. |
 | `defaultLanguage` [==LanguageType!==](LanguageType.md)                                | The default language used in the store.                     |
 | `availableLanguages` [==[LanguageType!]!==](LanguageType.md)                          | An array of available languages for the store.              |
 | `defaultCurrency` [==CurrencyType!==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type)           | The default currency used in the store.                     |

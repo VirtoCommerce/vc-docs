@@ -66,6 +66,11 @@ The account has been deleted.
 
 <br>
 <br>
+![Readmore](media/readmore.png){: width="25"} [Sales Rep Hub on the Frontend](/storefront/user-guide/latest/account/sales-rep-hub)
+
+
+<br>
+<br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
