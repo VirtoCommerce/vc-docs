@@ -8215,6 +8215,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#storeassets" class="md-nav__link">
+        StoreAssets
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -34930,6 +34940,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#storeassets" class="md-nav__link">
+        StoreAssets
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -34966,7 +34986,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 29, 2026 12:57:36 UTC">July 29, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 30, 2026 16:23:46 UTC">July 30, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -39082,6 +39102,39 @@ The Reset icon is not displayed when:</p>
 <!--ucp-end-->
 
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../Fundamentals/UCP/overview/">UCP module</a></p>
+<h3 id="storeassets">StoreAssets<a class="headerlink" href="#storeassets" title="Permanent link">&para;</a></h3>
+<p>This node restricts which source hosts are rewritten onto a store's custom asset URL.</p>
+<!--storeassets-start-->
+<p>When a store has a custom <strong>Store asset URL</strong>, the Platform rebases absolute asset URLs onto it at query time. The <code>VirtoCommerce:StoreAssets</code> node limits that rewrite to specific source hosts.</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Default or sample value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KnownAssetHosts</td>
+<td>[]</td>
+<td>Source hosts whose absolute asset URLs may be rebased onto the store asset URL. When empty, the rewrite is not restricted by host.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><span class="filename">appsettings.json</span><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a><span class="nt">&quot;VirtoCommerce&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-88-2" name="__codelineno-88-2" href="#__codelineno-88-2"></a><span class="w">  </span><span class="nt">&quot;StoreAssets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-88-3" name="__codelineno-88-3" href="#__codelineno-88-3"></a><span class="w">    </span><span class="nt">&quot;KnownAssetHosts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-88-4" name="__codelineno-88-4" href="#__codelineno-88-4"></a><span class="w">      </span><span class="s2">&quot;cdn.example.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-88-5" name="__codelineno-88-5" href="#__codelineno-88-5"></a><span class="w">      </span><span class="s2">&quot;https://mycompany.blob.core.windows.net&quot;</span>
+<a id="__codelineno-88-6" name="__codelineno-88-6" href="#__codelineno-88-6"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-88-7" name="__codelineno-88-7" href="#__codelineno-88-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-88-8" name="__codelineno-88-8" href="#__codelineno-88-8"></a><span class="p">}</span>
+</code></pre></div>
+<!--storeassets-end-->
+
+<p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../GraphQL-Storefront-API-Reference-xAPI/Store/queries/store/">Store query</a></p>
 <h2 id="hierarchic-keys-and-separators">Hierarchic keys and separators<a class="headerlink" href="#hierarchic-keys-and-separators" title="Permanent link">&para;</a></h2>
 <p>When working with keys, one should follow these rules:</p>
 <ul>
