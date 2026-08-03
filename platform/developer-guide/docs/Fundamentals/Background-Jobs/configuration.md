@@ -42,5 +42,5 @@ To run without Hangfire, set `EnableLegacyHangfire` to **false**.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../extensibility">← Extensibility</a>
-    <a href="../../UCP/overview">UCP →</a>
+    <a href="../../UCP/overview">UCP module overview →</a>
 </div>

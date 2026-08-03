@@ -431,6 +431,6 @@ Configure test data in **dataset/dataset_config.py** and **dataset/dataset.json*
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../UCP/overview">← UCP</a>
+    <a href="../../UCP/overview">← UCP module overview</a>
     <a href="../../Payments/new-payment-method-registration">Payments →</a>
 </div>
