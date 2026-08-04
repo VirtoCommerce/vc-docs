@@ -129,7 +129,7 @@ The specified properties have been updated.
 
 ### Update SEO data
 
-If you need to update SEO information after the initial product import, Virto Commerce supports this workflow through the CSV import mechanism. As of version [3.811.0](https://github.com/VirtoCommerce/vc-module-catalog-csv-export-import/releases/tag/3.811.0), reimporting SEO fields updates the existing entry instead of creating a new one.
+If you need to update SEO information after the initial product import, Virto Commerce supports this workflow through the CSV import mechanism. Reimporting SEO fields updates the existing entry instead of creating a new one.
 
 To update SEO information via CSV:
 
