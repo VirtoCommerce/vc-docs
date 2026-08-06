@@ -48,6 +48,53 @@ It provides the following benefits:
 * Simpler than full server-side rendering (SSR).
 
 
+## Product structured data (schema.org)
+
+Structured data describes a page's content to search engines in a machine-readable format. On product pages, a schema.org `Product` block in JSON-LD enables rich results, such as price, availability, and ratings, in search listings.
+
+The default Frontend sets standard SEO metadata on the product page (title, description, and keywords through `useSeoMeta`), but it does not emit `Product` structured data. Add it when you want product rich results.
+
+Add a JSON-LD block to the product page with `useHead`, populated from the product data:
+
+```ts title="pages/product.vue"
+import {useHead} from "@unhead/vue";
+
+useHead(() => ({
+  script: product.value
+    ? [
+        {
+          type: "application/ld+json",
+          innerHTML: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.value.name,
+            image: product.value.imgSrc,
+            description: product.value.description,
+            sku: product.value.code,
+            brand: { "@type": "Brand", name: product.value.brandName },
+            offers: {
+              "@type": "Offer",
+              price: product.value.price?.actual?.amount,
+              priceCurrency: product.value.price?.currency?.code,
+              availability: product.value.availabilityData?.isAvailable
+                ? "https://schema.org/InStock"
+                : "https://schema.org/OutOfStock",
+            },
+          }),
+        },
+      ]
+    : [],
+}));
+```
+
+Map the fields to your product model. The values in the structured data must match what the page displays, or the markup is flagged as invalid.
+
+!!! note
+    Because the Frontend is an SPA, crawlers see the JSON-LD only when the page is prerendered. The [Prerender](#seo-and-dynamic-rendering-with-prerenderio) setup above already serves bots a fully rendered snapshot, so the structured data is included in what they receive.
+
+Validate the result with the [Rich Results Test](https://search.google.com/test/rich-results) or the [Schema Markup Validator](https://validator.schema.org).
+
+
 ## Handling 404s in SPA
 
 Because Virto always serves **index.html** even for unknown URLs, the HTTP response is always 200 — even when the page doesn't exist. The Vue app handles these cases and displays a custom 404 page (e.g., the CMS page with slug **/404**). However, that error page is a **soft 404**: the browser shows an error message, but the server has already sent a 200 OK status. This is a common SPA behavior. It ensures the user sees an error page (and can navigate from it), but from the server’s point of view the request was fulfilled. 

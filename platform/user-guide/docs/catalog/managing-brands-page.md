@@ -1,6 +1,6 @@
 # Manage Brands Page
 
-[On the frontend](https://virtostart-demo-store.govirto.com/brands), products from the catalog can be displayed on a dedicated page organized by brands in alphabetical order:
+[On the Frontend](https://virtostart-demo-store.govirto.com/brands), products from the catalog can be displayed on a dedicated page organized by brands in alphabetical order:
 
 ![Brands page on frontend](media/brands-page.png){: style="display: block; margin: 0 auto;" }
 
@@ -29,14 +29,14 @@ The **Brands** catalog appears in the list.
 
 ## Enable brands page for store
 
-To start displaying brands page on the frontend:
+To start displaying brands page on the Frontend:
 
 1. Click **Stores** in the main menu.
 1. In the next blade, select a store to enable brand pages for.
 1. In the next blade, click the **Brand settings** widget.
 1. In the next blade, configure the following:
 
-    ![Brand settings configuration](media/enable-brands.png)
+    ![Brand settings configuration](media/brands-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar of the current and of the previous blades.
 
@@ -67,7 +67,7 @@ Adding brands to the newly created catalog is similar to [creating categories](m
 
 1. Click **OK** to save the changes, then click **Save** in the previous blade's toolbar.
 
-The new brand appears on the frontend:
+The new brand appears on the Frontend:
 
 ![New brand added](media/new-brand-added.png)
 
@@ -77,7 +77,7 @@ Clicking the brand opens a page displaying all products associated with that bra
 
 ## Multilingual SEO
 
-As of [Catalog 3.895.0](https://github.com/VirtoCommerce/vc-module-catalog/releases/tag/3.895.0) and [xCatalog 3.938.0](https://github.com/VirtoCommerce/vc-module-x-catalog/releases/tag/3.938.0), admins can configure SEO settings for the Brands page separately for each language:
+Admins can configure SEO settings for the Brands page separately for each language:
 
 1. Click **Catalog** in the main menu.
 1. In the next blade, click the three dots to the left of the **Brands** catalog and select **Manage** from the dropdown menu.

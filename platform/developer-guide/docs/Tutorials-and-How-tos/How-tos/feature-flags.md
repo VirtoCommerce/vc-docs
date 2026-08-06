@@ -159,6 +159,6 @@ Implementing feature flags with Virto Commerce Platform and Frontend Application
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overriding-rounding-policy">← Overriding rounding policy </a>
+    <a href="../extending-pricing-module">← Extending Pricing module </a>
     <a href="../using-responseGroups-in-rest-api">Using responseGroups in Rest API  →</a>
 </div>

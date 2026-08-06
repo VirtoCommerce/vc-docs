@@ -35,5 +35,5 @@ To customize the rounding behavior in your application:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../upgrading-to-net8">← Upgrading to .NET 8 </a>
-    <a href="../feature-flags">Using feature flags  →</a>
+    <a href="../extending-pricing-module">Extending Pricing module  →</a>
 </div>

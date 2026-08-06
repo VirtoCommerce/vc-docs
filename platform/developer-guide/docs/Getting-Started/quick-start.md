@@ -21,6 +21,9 @@ Open `http://localhost:8090` and sign in with `admin` / `store` to access the Pl
 <br>
 ![Read more](media/readmore.png){: width="20"} [Local install with start-local. Prerequisites, lifecycle commands, customization, and troubleshooting](Installation-Guide/start-local.md)
 
+!!! note
+    Virto Commerce also offers a hosted demo (trial) environment for evaluating the Platform without installing it. Access is granted to authorized users only.
+
 ## Configure your custom solution
 
 A Virto Commerce solution is **composed**, not forked. Customize three layers independently.

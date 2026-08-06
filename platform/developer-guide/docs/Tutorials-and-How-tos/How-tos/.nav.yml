@@ -19,6 +19,7 @@ nav:
   - Extending Cart Query With Custom Parameter: extending-cart-query-with-custom-parameter.md
   - Customizing Cart Validation Policies: customizing-cart-validation-policies.md
   - Overriding Rounding Policy: overriding-rounding-policy.md
+  - Extending Pricing Module: extending-pricing-module.md
   - Using Feature Flags with VC Platform and Frontend: feature-flags.md
   - Using responseGroup in Virto Commerce REST APIs: using-responseGroups-in-rest-api.md
   - Partial Updates for Entities Using PATCH-Endpoint: update-using-patch.md

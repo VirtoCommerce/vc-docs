@@ -75,6 +75,6 @@ With this feature, top marketers prevent unwanted modifications of created promo
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../roles-and-permissions">← Managing roles and permissions</a>
+    <a href="../administrator">← Administrator</a>
     <a href="../order-manager">Order manager →</a>
 </div>

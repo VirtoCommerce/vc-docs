@@ -30,6 +30,9 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
 * **REDIS_PASS**: Redis service password (default value `passwd@123`).
 * **SEARCH_PROVIDER**: Search provider used in VC Platform (default value ElasticSearch).
 
+!!! note
+    You set **DB_PASS** and **REDIS_PASS** yourself. **DB_PASS** is the SQL Server `sa` password and must meet SQL Server complexity requirements: at least 8 characters with uppercase and lowercase letters, digits, and special characters. These passwords are unrelated to the Platform Manager sign-in.
+
 ## Prerequisites
 
 * Basic understanding of Docker and Docker Compose, along with key terms used in the ecosystem.
@@ -45,7 +48,7 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
 
 ## Use
 
-1. Copy the [ModulesDevelop](https://github.com/VirtoCommerce/vc-platform/blob/dev/DockerCompose/ModulesDevelop/) folder to your local machine.
+1. Download the [ModulesDevelop](https://github.com/VirtoCommerce/vc-platform/tree/dev/DockerCompose/ModulesDevelop/) folder to your local machine. Clone the **vc-platform** repository, or click **Code > Download ZIP** on the **dev** branch and take the `DockerCompose/ModulesDevelop` folder. It contains **docker-compose.yml** and **.env**.
 1. Create an external network for the Docker engine by running the following command in PowerShell with elevated administrator privileges:
 
     ```cmd
@@ -81,7 +84,7 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
 
 ## Run Virto Commerce Platform Manager
 
-After the containers are started, open VC Platform Manager. This will launch the application and install default modules. After the modules have been installed, restart the container with the Platform to configure sample data.
+After the containers are started, open VC Platform Manager at http://localhost:8090/ and sign in with the default credentials `admin` / `store`. Change the password when prompted. This will launch the application and install default modules. After the modules have been installed, restart the container with the Platform to configure sample data.
 
 ![Choose sample data](media/screen-sample-data.png)
 
@@ -132,6 +135,17 @@ If you need to recreate the Platform database for the next debug session, remove
 ```cmd
 docker volume rm db-volume
 ```
+
+## Troubleshooting
+
+| Symptom | Cause and fix |
+| --- | --- |
+| A console window flashes and closes immediately. | You double-clicked **docker-compose.yml**. Run it from a terminal instead: open PowerShell in the `ModulesDevelop` folder and run `docker-compose up --build -d`. |
+| `invalid mount config for type "bind"`. | The mapped host folders do not exist. Create the `Modules` and `App_Data/Modules` folders before starting, and enable the drive under **Docker Desktop > Settings > Resources > File Sharing**. |
+| `Ports are not available`, or port 8090 is already in use. | Set a different host port in **.env**, for example `DOCKER_PLATFORM_PORT=8091`. The SQL Server port is configurable the same way with `DOCKER_SQL_PORT`. |
+| The SQL Server container fails on startup with a password policy error. | Set a stronger **DB_PASS** in **.env** (see the note under the **.env** parameters above). |
+
+To see what failed, run the containers in the foreground with `docker-compose up` (without `-d`), or inspect logs with `docker-compose logs`.
 
 ![Readmore](media/readmore.png){: width="25"} [Diagnose Docker problems](https://docs.docker.com/docker-for-windows/troubleshoot)
 

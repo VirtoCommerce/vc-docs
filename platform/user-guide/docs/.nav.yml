@@ -297,6 +297,7 @@ nav:
                 - Managing User Accounts: security/managing-users.md
                 - Roles and Permissions:
                       - Managing Roles and Permissions: security/roles-and-permissions.md
+                      - Administrator: security/administrator.md
                       - Marketer:  security/marketer.md
                       - Order Manager: security/order-manager.md
                       - Category Manager: security/category-manager.md

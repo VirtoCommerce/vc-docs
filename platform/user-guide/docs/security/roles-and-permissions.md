@@ -139,5 +139,5 @@ A role that holds both linking permissions, like the administrator, sees no chan
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-users">← Managing user accounts</a>
-    <a href="../marketer">Marketer →</a>
+    <a href="../administrator">Administrator →</a>
 </div>
