@@ -1729,6 +1729,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#product-structured-data-schemaorg" class="md-nav__link">
+        Product structured data (schema.org)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#handling-404s-in-spa" class="md-nav__link">
         Handling 404s in SPA
     </a>
@@ -3052,6 +3062,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#product-structured-data-schemaorg" class="md-nav__link">
+        Product structured data (schema.org)
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#handling-404s-in-spa" class="md-nav__link">
         Handling 404s in SPA
     </a>
@@ -3137,7 +3157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:11:06 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 6, 2026 08:50:56 UTC">August 6, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3197,6 +3217,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>No major changes required to the SPA architecture.</li>
 <li>Simpler than full server-side rendering (SSR).</li>
 </ul>
+<h2 id="product-structured-data-schemaorg">Product structured data (schema.org)<a class="headerlink" href="#product-structured-data-schemaorg" title="Permanent link">&para;</a></h2>
+<p>Structured data describes a page's content to search engines in a machine-readable format. On product pages, a schema.org <code>Product</code> block in JSON-LD enables rich results, such as price, availability, and ratings, in search listings.</p>
+<p>The default Frontend sets standard SEO metadata on the product page (title, description, and keywords through <code>useSeoMeta</code>), but it does not emit <code>Product</code> structured data. Add it when you want product rich results.</p>
+<p>Add a JSON-LD block to the product page with <code>useHead</code>, populated from the product data:</p>
+<div class="highlight"><span class="filename">pages/product.vue</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">useHead</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@unhead/vue&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">useHead</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">script</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">          </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/ld+json&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">          </span><span class="nx">innerHTML</span><span class="o">:</span><span class="w"> </span><span class="kt">JSON.stringify</span><span class="p">({</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="s2">&quot;@context&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Product&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.name</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nx">image</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.imgSrc</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.description</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="nx">sku</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.code</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="nx">brand</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Brand&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.brandName</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="nx">offers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">              </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Offer&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">              </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.price?.actual?.amount</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">              </span><span class="nx">priceCurrency</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.price?.currency?.code</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">              </span><span class="nx">availability</span><span class="o">:</span><span class="w"> </span><span class="kt">product.value.availabilityData?.isAvailable</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;https://schema.org/InStock&quot;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/OutOfStock&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">          </span><span class="p">}),</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">}));</span>
+</code></pre></div>
+<p>Map the fields to your product model. The values in the structured data must match what the page displays, or the markup is flagged as invalid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the Frontend is an SPA, crawlers see the JSON-LD only when the page is prerendered. The <a href="#seo-and-dynamic-rendering-with-prerenderio">Prerender</a> setup above already serves bots a fully rendered snapshot, so the structured data is included in what they receive.</p>
+</div>
+<p>Validate the result with the <a href="https://search.google.com/test/rich-results">Rich Results Test</a> or the <a href="https://validator.schema.org">Schema Markup Validator</a>.</p>
 <h2 id="handling-404s-in-spa">Handling 404s in SPA<a class="headerlink" href="#handling-404s-in-spa" title="Permanent link">&para;</a></h2>
 <p>Because Virto always serves <strong>index.html</strong> even for unknown URLs, the HTTP response is always 200 — even when the page doesn't exist. The Vue app handles these cases and displays a custom 404 page (e.g., the CMS page with slug <strong>/404</strong>). However, that error page is a <strong>soft 404</strong>: the browser shows an error message, but the server has already sent a 200 OK status. This is a common SPA behavior. It ensures the user sees an error page (and can navigate from it), but from the server’s point of view the request was fulfilled. </p>
 <p>Virto’s current SPA setup can’t immediately send a 404 status from the server for a missing route, because that would break the SPA flow (the load balancer simply forwarded the request to the app). In practice, when a page isn’t found the SPA shows the 404 content, but Googlebot still sees a 200 response – what Google calls a soft 404. </p>
