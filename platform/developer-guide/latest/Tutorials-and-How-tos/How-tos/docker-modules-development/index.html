@@ -26353,6 +26353,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -26748,6 +26750,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#troubleshooting" class="md-nav__link">
+        Troubleshooting
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -26861,6 +26873,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../overriding-rounding-policy/" class="md-nav__link">
         Overriding Rounding Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../extending-pricing-module/" class="md-nav__link">
+        Extending Pricing Module
       </a>
     </li>
   
@@ -33751,6 +33781,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
         
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#troubleshooting" class="md-nav__link">
+        Troubleshooting
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+        
     </ul>
     
 </nav>
@@ -33772,7 +33812,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 1, 2025 10:28:44 UTC">September 1, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 6, 2026 08:50:56 UTC">August 6, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -33815,6 +33855,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>REDIS_PASS</strong>: Redis service password (default value <code>passwd@123</code>).</li>
 <li><strong>SEARCH_PROVIDER</strong>: Search provider used in VC Platform (default value ElasticSearch).</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You set <strong>DB_PASS</strong> and <strong>REDIS_PASS</strong> yourself. <strong>DB_PASS</strong> is the SQL Server <code>sa</code> password and must meet SQL Server complexity requirements: at least 8 characters with uppercase and lowercase letters, digits, and special characters. These passwords are unrelated to the Platform Manager sign-in.</p>
+</div>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Basic understanding of Docker and Docker Compose, along with key terms used in the ecosystem.</li>
@@ -33830,7 +33874,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 <h2 id="use">Use<a class="headerlink" href="#use" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Copy the <a href="https://github.com/VirtoCommerce/vc-platform/blob/dev/DockerCompose/ModulesDevelop/">ModulesDevelop</a> folder to your local machine.</li>
+<li>Download the <a href="https://github.com/VirtoCommerce/vc-platform/tree/dev/DockerCompose/ModulesDevelop/">ModulesDevelop</a> folder to your local machine. Clone the <strong>vc-platform</strong> repository, or click <strong>Code &gt; Download ZIP</strong> on the <strong>dev</strong> branch and take the <code>DockerCompose/ModulesDevelop</code> folder. It contains <strong>docker-compose.yml</strong> and <strong>.env</strong>.</li>
 <li>
 <p>Create an external network for the Docker engine by running the following command in PowerShell with elevated administrator privileges:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker network create nat
@@ -33861,7 +33905,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Debug the new module.</li>
 </ol>
 <h2 id="run-virto-commerce-platform-manager">Run Virto Commerce Platform Manager<a class="headerlink" href="#run-virto-commerce-platform-manager" title="Permanent link">&para;</a></h2>
-<p>After the containers are started, open VC Platform Manager. This will launch the application and install default modules. After the modules have been installed, restart the container with the Platform to configure sample data.</p>
+<p>After the containers are started, open VC Platform Manager at <a href="http://localhost:8090/">http://localhost:8090/</a> and sign in with the default credentials <code>admin</code> / <code>store</code>. Change the password when prompted. This will launch the application and install default modules. After the modules have been installed, restart the container with the Platform to configure sample data.</p>
 <p><img alt="Choose sample data" src="../media/screen-sample-data.png" /></p>
 <h2 id="copy-built-module-to-modules-folder">Copy built module to modules folder<a class="headerlink" href="#copy-built-module-to-modules-folder" title="Permanent link">&para;</a></h2>
 <ol>
@@ -33907,6 +33951,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>If you need to recreate the Platform database for the next debug session, remove the <code>db-volume</code> by running:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker volume rm db-volume
 </code></pre></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Cause and fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A console window flashes and closes immediately.</td>
+<td>You double-clicked <strong>docker-compose.yml</strong>. Run it from a terminal instead: open PowerShell in the <code>ModulesDevelop</code> folder and run <code>docker-compose up --build -d</code>.</td>
+</tr>
+<tr>
+<td><code>invalid mount config for type "bind"</code>.</td>
+<td>The mapped host folders do not exist. Create the <code>Modules</code> and <code>App_Data/Modules</code> folders before starting, and enable the drive under <strong>Docker Desktop &gt; Settings &gt; Resources &gt; File Sharing</strong>.</td>
+</tr>
+<tr>
+<td><code>Ports are not available</code>, or port 8090 is already in use.</td>
+<td>Set a different host port in <strong>.env</strong>, for example <code>DOCKER_PLATFORM_PORT=8091</code>. The SQL Server port is configurable the same way with <code>DOCKER_SQL_PORT</code>.</td>
+</tr>
+<tr>
+<td>The SQL Server container fails on startup with a password policy error.</td>
+<td>Set a stronger <strong>DB_PASS</strong> in <strong>.env</strong> (see the note under the <strong>.env</strong> parameters above).</td>
+</tr>
+</tbody>
+</table>
+<p>To see what failed, run the containers in the foreground with <code>docker-compose up</code> (without <code>-d</code>), or inspect logs with <code>docker-compose logs</code>.</p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.docker.com/docker-for-windows/troubleshoot">Diagnose Docker problems</a></p>
 <p><img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="https://docs.microsoft.com/en-us/visualstudio/containers/troubleshooting-docker-errors?view=vs-2022">Visual Studio Docker development</a></p>
 <p><br>
