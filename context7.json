@@ -1,4 +1,18 @@
 {
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Virto Commerce",
+  "branch": "main",
+  "previousVersions": [
+    {
+      "branch": "release/stable14"
+    },
+    {
+      "branch": "release/stable12"
+    },
+    {
+      "branch": "release/stable10"
+    }
+  ],
   "url": "https://context7.com/virtocommerce/vc-docs",
   "public_key": "pk_tJVCDYWsAhEkwzp0zjDh2"
 }

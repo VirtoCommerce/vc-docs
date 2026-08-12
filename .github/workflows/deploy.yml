@@ -5,6 +5,12 @@ on:
     branches:
       - main
       - 'release/**'
+    # context7.json only configures the external Context7 indexer and has no
+    # effect on the built site. bump.yml commits it to main automatically, so
+    # ignoring it here keeps that commit from triggering a pointless redeploy.
+    # A push that touches it alongside real content still deploys.
+    paths-ignore:
+      - 'context7.json'
   # Manual trigger: rebuild and redeploy the prod image from the selected branch.
   # Run on `main` to refresh the non-versioned landing pages (/, /platform/, ...),
   # which are baked into the prod image only from `main`.

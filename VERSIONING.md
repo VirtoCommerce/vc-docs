@@ -52,6 +52,7 @@ Open a PR into the matching release branch (`release/stable12` for `stable12`) w
 2. Review and merge the PR as a **merge commit** (not squash, not rebase). Merge commit is required because automation needs `HEAD^1` of the merge to snapshot the previous version.
 3. On merge, automation:
    - Creates `release/<previous>` from `HEAD^1` and pushes it (e.g. `release/stable14`).
+   - Appends that branch to `previousVersions` in **context7.json** and commits it to `main`.
    - Deploys the new version as `latest` and `default`.
 4. From that point, the new version is current on `main` and the old version is editable on its `release/<previous>` branch.
 
@@ -62,6 +63,17 @@ External indexers such as Context7 and VirtoOZ should resolve versions from the 
 - The authoritative list of published versions is the `versions.json` file that mike writes per subsite, for example **platform/user-guide/versions.json** on `gh-pages`. It names every version and marks which one carries the `latest` alias.
 - Do not infer the set of versions from `release/*` branches. The current version has no release branch, so the branch list is always missing the newest entry.
 - To index markdown sources instead of built HTML, read `main` for the current version and `release/stable<NN>` for each older one.
+
+### Context7
+
+Context7 parses one branch only, so older versions have to be declared. **context7.json** at the repo root does that:
+
+- `branch` pins the current version to `main`.
+- `previousVersions` lists one `{ "branch": "release/stableNN" }` entry per superseded version, newest first.
+
+The bump workflow appends the newly created release branch to `previousVersions` and commits the file to `main`. No manual step is required on release. The schema caps the list at 20 entries. On overflow the workflow drops the oldest entry and emits a build warning.
+
+Pushes that touch only **context7.json** are excluded from the deploy workflow, since the file configures an external indexer and does not affect the built site.
 
 ## What not to do
 
