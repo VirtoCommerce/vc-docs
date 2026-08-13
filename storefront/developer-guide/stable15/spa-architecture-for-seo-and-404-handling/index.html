@@ -1739,6 +1739,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#organization-structured-data-schemaorg" class="md-nav__link">
+        Organization structured data (schema.org)
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Organization structured data (schema.org)">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#open-graph-tags" class="md-nav__link">
+        Open Graph tags
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#handling-404s-in-spa" class="md-nav__link">
         Handling 404s in SPA
     </a>
@@ -3072,6 +3098,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
+    <a href="#organization-structured-data-schemaorg" class="md-nav__link">
+        Organization structured data (schema.org)
+    </a>
+
+    <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Organization structured data (schema.org)">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#open-graph-tags" class="md-nav__link">
+        Open Graph tags
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
+    
+</li>
+        
+        <!-- Table of contents item -->
+<li class="md-nav__item">
     <a href="#handling-404s-in-spa" class="md-nav__link">
         Handling 404s in SPA
     </a>
@@ -3157,7 +3209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 6, 2026 08:50:56 UTC">August 6, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 07:15:30 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3256,6 +3308,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Because the Frontend is an SPA, crawlers see the JSON-LD only when the page is prerendered. The <a href="#seo-and-dynamic-rendering-with-prerenderio">Prerender</a> setup above already serves bots a fully rendered snapshot, so the structured data is included in what they receive.</p>
 </div>
 <p>Validate the result with the <a href="https://search.google.com/test/rich-results">Rich Results Test</a> or the <a href="https://validator.schema.org">Schema Markup Validator</a>.</p>
+<h2 id="organization-structured-data-schemaorg">Organization structured data (schema.org)<a class="headerlink" href="#organization-structured-data-schemaorg" title="Permanent link">&para;</a></h2>
+<p>Organization structured data gives search engines and AI agents a machine-readable representation of your brand identity: name, logo, social profiles, contact information, and founding date. Agents use it to verify the store is who it claims to be and to link it to a recognizable entity.</p>
+<p>The Frontend renders an <code>OnlineStore</code> JSON-LD block on the home page. The values come from the store's <strong>Store Information</strong> settings, which the Platform returns in the storefront initialization query, so the block is populated without any code change.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="s2">&quot;@context&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;OnlineStore&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Yourstore&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://yourstore.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="s2">&quot;logo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://yourstore.com/logo.png&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;One-sentence description of what you sell.&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="s2">&quot;slogan&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Your trusted B2B supplier&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="s2">&quot;foundingDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1998-04-01&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="s2">&quot;sameAs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="s2">&quot;https://twitter.com/yourstore&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="s2">&quot;https://www.instagram.com/yourstore&quot;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="s2">&quot;contactPoint&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ContactPoint&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="s2">&quot;telephone&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;+1-800-000-0000&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="s2">&quot;contactType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Customer Service&quot;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Configure the values under <strong>Store Information</strong>. Each field maps to a schema property, while <code>name</code> and <code>url</code> come from the store itself:</p>
+<table>
+<thead>
+<tr>
+<th>Store Information field</th>
+<th>Schema property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Store description</strong></td>
+<td><code>description</code></td>
+</tr>
+<tr>
+<td><strong>Tagline</strong></td>
+<td><code>slogan</code></td>
+</tr>
+<tr>
+<td><strong>Founding date</strong></td>
+<td><code>foundingDate</code></td>
+</tr>
+<tr>
+<td><strong>Brand logo URL</strong></td>
+<td><code>logo</code></td>
+</tr>
+<tr>
+<td><strong>Profile URLs (sameAs)</strong></td>
+<td><code>sameAs</code></td>
+</tr>
+<tr>
+<td><strong>Customer service phone</strong></td>
+<td><code>contactPoint.telephone</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the Frontend is an SPA, crawlers and agents see this block only when the page is prerendered. The <a href="#seo-and-dynamic-rendering-with-prerenderio">Prerender</a> setup above serves bots a fully rendered snapshot, so the structured data is included in what they receive.</p>
+</div>
+<h3 id="open-graph-tags">Open Graph tags<a class="headerlink" href="#open-graph-tags" title="Permanent link">&para;</a></h3>
+<p>The Frontend also renders Open Graph tags on the home page, so links shared on social platforms show a title, description, and preview image. These values come from the same <strong>Store Information</strong> settings.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Yourstore — short tagline&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;website&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:url&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;https://yourstore.com/&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;One-sentence description of what you sell.&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;https://yourstore.com/og-cover.jpg&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:site_name&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Yourstore&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>The <strong>Social share image URL</strong> field sets <code>og:image</code>, <strong>Tagline</strong> sets <code>og:title</code>, and <strong>Store description</strong> sets <code>og:description</code>.</p>
+<p>Both the JSON-LD block and the Open Graph tags appear in the rendered home page source:</p>
+<p><img alt="Organization JSON-LD and Open Graph tags in the home page source" src="../media/json-organization-schema-on-frontpage.png" style="display: block; margin: 0 auto;" /></p>
 <h2 id="handling-404s-in-spa">Handling 404s in SPA<a class="headerlink" href="#handling-404s-in-spa" title="Permanent link">&para;</a></h2>
 <p>Because Virto always serves <strong>index.html</strong> even for unknown URLs, the HTTP response is always 200 — even when the page doesn't exist. The Vue app handles these cases and displays a custom 404 page (e.g., the CMS page with slug <strong>/404</strong>). However, that error page is a <strong>soft 404</strong>: the browser shows an error message, but the server has already sent a 200 OK status. This is a common SPA behavior. It ensures the user sees an error page (and can navigate from it), but from the server’s point of view the request was fulfilled. </p>
 <p>Virto’s current SPA setup can’t immediately send a 404 status from the server for a missing route, because that would break the SPA flow (the load balancer simply forwarded the request to the app). In practice, when a page isn’t found the SPA shows the 404 content, but Googlebot still sees a 200 response – what Google calls a soft 404. </p>
