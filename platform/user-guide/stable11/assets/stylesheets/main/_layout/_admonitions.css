@@ -1,0 +1,229 @@
+.md-typeset :is(.admonition,details):is(.info,.todo) {
+    border-color: var(--admonition-info-border);
+    background-color: var(--admonition-info-bg);
+}
+
+.md-typeset :is(.info,.todo)>:is(.admonition-title,summary):before {
+    background-color: var(--admonition-info-title);
+}
+
+.md-typeset :is(.info,.todo)>:is(.admonition-title,summary) {
+    color: var(--admonition-info-title);
+    background-color: transparent;
+}
+
+.md-typeset :is(.admonition,details):is(.note) {
+    border-color: var(--admonition-note-border);
+    background-color: var(--admonition-note-bg);
+}
+
+.md-typeset :is(.note)>:is(.admonition-title,summary):before {
+    background-color:  var(--admonition-note-title);
+}
+
+.md-typeset :is(.note)>:is(.admonition-title,summary) {
+    color: var(--admonition-note-title);
+    background-color: transparent;
+}
+
+.md-typeset :is(.note) > :is(ul) > :is(li) {
+    color: var(--admonition-note-text);
+}
+
+.md-typeset :is(.admonition) li {
+    opacity: 1;
+}
+
+.md-typeset :is(.admonition,details):is(.warning,.attention,.caution) {
+    border-color: var(--admonition-warning-border);
+    background-color: var(--admonition-warning-bg);
+}
+
+.md-typeset :is(.warning,.attention,.caution)>:is(.admonition-title,summary):before {
+    background-color: var(--admonition-warning-border);
+}
+
+.md-typeset :is(.warning,.attention,.caution)>:is(.admonition-title,summary) {
+    color: var(--admonition-warning-border);
+    background-color: transparent;
+}
+
+.md-typeset :is(.warning,.attention,.caution) > :is(ul) > :is(li) {
+    color: var(--admonition-warning-text);
+}
+
+.md-typeset :is(.admonition,details):is(.example) {
+    border-color: var(--admonition-example-border);
+    background-color: var(--admonition-example-bg);
+}
+
+.md-typeset :is(.example)>:is(.admonition-title,summary):before {
+    background-color:  var(--admonition-example-title);
+}
+
+.md-typeset :is(.example)>:is(.admonition-title,summary) {
+    color: var(--admonition-example-title);
+    background-color: transparent;
+}
+
+.md-typeset :is(.example) > :is(ul) > :is(li) {
+    color: var(--admonition-example-text);
+}
+
+.md-typeset :is(.admonition,details):is(.danger,.error,.bug) {
+    border-color: var(--admonition-error-border);
+    background-color: var(--admonition-error-bg);
+}
+
+.md-typeset :is(.danger,.error,.bug)>:is(.admonition-title,summary):before {
+    background-color: var(--admonition-error-title);
+}
+
+.md-typeset :is(.danger,.error,.bug)>:is(.admonition-title,summary) {
+    color: var(--admonition-error-title);
+    background-color: transparent;
+}
+
+.md-typeset :is(.danger,.error,.bug) > :is(ul) > :is(li) {
+    color: var(--admonition-error-text);
+}
+
+.md-typeset :is(.admonition,details):is(.tip,.hint,.important) {
+    border-color: var(--admonition-tip-border);
+    background-color: var(--admonition-tip-bg);
+}
+
+.md-typeset :is(.tip,.hint,.important)>:is(.admonition-title,summary):before {
+    background-color: var(--admonition-tip-border);
+}
+
+.md-typeset :is(.tip,.hint,.important)>:is(.admonition-title,summary) {
+    color: var(--admonition-tip-border);
+    background-color: transparent;
+}
+
+.md-typeset :is(.tip,.hint,.important) > :is(ul) > :is(li) {
+    color: var(--admonition-tip-text);
+}
+
+
+
+
+.md-typeset :is(.admonition,details):is(.github) {
+    border: 1px solid var(--admonition-github-border);
+    background-color: var(--admonition-github-bg);
+}
+
+.md-typeset :is(.github)>:is(.admonition-title,summary):before {
+    background-color: var(--admonition-github-icon);
+    -webkit-mask-image: var(--md-admonition-icon--github);
+}
+
+.md-typeset :is(.github)>:is(.admonition-title) {
+    color: var(--admonition-github-title);
+    background-color: transparent;
+    text-transform: lowercase;
+}
+
+.md-typeset :is(.github)> .admonition-title:after {
+    content: '.com';
+}
+
+.md-typeset :is(.admonition,details):is(.blue-highlight) {
+    border: none;
+    background-color: var(--admonition-blue-highlight-bg);
+}
+
+.md-typeset :is(.admonition,details):is(.blue-highlight) p {
+    color: var(--admonition-blue-highlight-text);
+}
+
+.md-typeset :is(.admonition,details):is(.yellow-highlight) {
+    border: none;
+    background-color: var(--admonition-yellow-highlight-bg);
+}
+
+.md-typeset :is(.admonition,details):is(.yellow-highlight) p {
+    color: var(--admonition-yellow-highlight-text);
+}
+
+.md-typeset :is(.admonition) > :is(ul) {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.md-typeset :is(.admonition) > :is(ul) > :is(li) {
+    margin-left: 0;
+}
+
+.md-typeset :is(.admonition,details) p {
+    color: var(--text-color);
+}
+
+.md-typeset :is(.admonition) {
+    padding: 8px 16px;
+}
+
+.md-typeset :is(.admonition-title,summary) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.65rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.01em;
+    background-color: transparent;
+    padding-bottom: 0;
+}
+
+.md-typeset :is(.admonition,details) {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.01em;
+    color: #051322;
+    box-shadow: none;
+    border-radius: 6px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .md-typeset :is(.admonition-title,summary) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    .md-typeset ol li, .md-typeset ul li {
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .md-typeset :is(.admonition-title,summary) {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .md-typeset ol li, .md-typeset ul li {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .md-typeset ol li, .md-typeset ul li {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .md-typeset :is(.admonition-title,summary) {
+        font-size: 0.75rem;
+    }
+
+    .md-typeset ol li, .md-typeset ul li {
+        font-size: 0.7rem;
+        line-height: 140%;
+    }
+}
