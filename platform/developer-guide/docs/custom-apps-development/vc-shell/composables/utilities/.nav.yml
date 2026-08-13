@@ -7,4 +7,5 @@ nav:
   - useBeforeUnload: useBeforeUnload.md
   - useErrorHandler: useErrorHandler.md
   - useFunctions: useFunctions.md
+  - useKeyboardShortcuts: useKeyboardShortcuts.md
   - useWebVitals: useWebVitals.md
