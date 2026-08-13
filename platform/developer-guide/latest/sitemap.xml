@@ -2505,7 +2505,19 @@
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepAddressType/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCartFilterRuleType/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCommunicationResultType/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepContactType/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
@@ -2521,11 +2533,23 @@
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerDetailsType/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerFilterRuleType/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerType/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepOrderFilterRuleType/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepOrderType/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>

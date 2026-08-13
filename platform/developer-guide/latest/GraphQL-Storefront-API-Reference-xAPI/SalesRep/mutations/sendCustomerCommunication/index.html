@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/mutations/sendCustomerCommunication/">
       
       
-        <link rel="prev" href="../../objects/SalesRepCustomerFilterRuleType/">
+        <link rel="prev" href="../../objects/SalesRepCommunicationResultType/">
       
       
         <link rel="next" href="../../../Recommend/overview/">
@@ -22708,6 +22708,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -22740,6 +22752,96 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../objects/SalesRepContactType/" class="md-nav__link">
+        SalesRepContactType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../objects/SalesRepCustomerType/" class="md-nav__link">
+        SalesRepCustomerType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../objects/SalesRepCustomerDetailsType/" class="md-nav__link">
+        SalesRepCustomerDetailsType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../objects/SalesRepOrderType/" class="md-nav__link">
+        SalesRepOrderType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../objects/SalesRepAddressType/" class="md-nav__link">
+        SalesRepAddressType
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -22993,6 +23095,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             
           
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../objects/SalesRepCommunicationResultType/" class="md-nav__link">
+        SalesRepCommunicationResultType
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
     </nav>
 </li>
@@ -23144,8 +23264,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#example" class="md-nav__link">
-        Example
+    <a href="#possible-returns" class="md-nav__link">
+        Possible returns
     </a>
 
     <!-- Render nested item list -->
@@ -23154,8 +23274,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#result" class="md-nav__link">
-        Result
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -34216,8 +34336,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#example" class="md-nav__link">
-        Example
+    <a href="#possible-returns" class="md-nav__link">
+        Possible returns
     </a>
 
     <!-- Render nested item list -->
@@ -34226,8 +34346,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#result" class="md-nav__link">
-        Result
+    <a href="#example" class="md-nav__link">
+        Example
     </a>
 
     <!-- Render nested item list -->
@@ -34275,7 +34395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 07:15:30 UTC">August 13, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:15:42 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34297,7 +34417,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Markdown content -->
 <h1 id="sendcustomercommunication">sendCustomerCommunication<a class="headerlink" href="#sendcustomercommunication" title="Permanent link">&para;</a></h1>
 <p>This mutation sends a communication, a storefront push notification and/or an email, to the members of a customer organization the rep serves. It backs the "My customers" contact action.</p>
+<h2 id="possible-returns">Possible returns<a class="headerlink" href="#possible-returns" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Possible return</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../objects/SalesRepCommunicationResultType/"><code>SalesRepCommunicationResultType</code></a></td>
+<td>The per-channel delivery outcome.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="grid">
 <div class="highlight"><span class="filename">Mutation</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">mutation</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">sendCustomerCommunication</span><span class="p">(</span><span class="n">command</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">organizationId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;7b8c...&quot;</span>
@@ -34315,30 +34451,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="result">Result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h2>
-<p>The mutation returns a result describing each channel's outcome, so a partial success (one channel delivered, the other could not) is visible to the storefront:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>succeeded</code></td>
-<td><code>true</code> when at least one requested channel was accepted for delivery (<code>pushSent || emailSent</code>).</td>
-</tr>
-<tr>
-<td><code>pushSent</code> / <code>emailSent</code></td>
-<td>Per-channel delivery outcome. Each channel is attempted independently, so one failing never blocks the other.</td>
-</tr>
-<tr>
-<td><code>warnings</code></td>
-<td>Stable string codes explaining any channel that did not deliver. Empty on full success.</td>
-</tr>
-</tbody>
-</table>
+<div class="highlight"><span class="filename">Return</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;sendCustomerCommunication&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;succeeded&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;pushSent&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&quot;emailSent&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;EmailNoRecipients&quot;</span><span class="p">]</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</code></pre></div>
+</div>
 <h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
 <p>The request is rejected with a GraphQL error only when it is malformed or not allowed: not authenticated, <code>message</code> missing or over 1000 characters, <code>title</code> over 128 characters, no channel selected, or the rep does not serve the organization (<code>Access denied.</code>). Everything else is reported through <code>warnings</code>:</p>
 <table>
@@ -34390,7 +34514,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <br></p>
 <hr />
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../objects/SalesRepCustomerFilterRuleType">← SalesRepCustomerFilterRuleType</a>
+    <a href="../../objects/SalesRepCommunicationResultType">← SalesRepCommunicationResultType</a>
     <a href="../../../Recommend/overview">xRecommend module overview →</a>
 </div>
                 
