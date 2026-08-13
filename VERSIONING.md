@@ -4,8 +4,9 @@ This repository publishes versioned documentation using [mike](https://github.co
 
 ## Versioning scheme
 
-- Versions are stable snapshots that track the Virto Commerce Platform stable releases: `stable10`, `stable12`, `stable14`, `stable15`. The mike title is rendered as `Stable 15`. No minor or patch numbers.
-- The version numbers are not contiguous. A docs version exists only for a Platform stable release that shipped documentation changes, so gaps such as the missing `stable11` and `stable13` are expected.
+- Versions are stable snapshots that track the Virto Commerce Platform stable releases: `stable11`, `stable12`, `stable14`, `stable15`. The mike title is rendered as `Stable 15`. No minor or patch numbers.
+- The version numbers are not contiguous. A docs version exists only for a Platform stable release that shipped documentation changes, so gaps such as the missing `stable13` are expected.
+- The version number must match the Platform stable release it documents. Getting it wrong misfiles the whole snapshot, so confirm the number against the Platform release before deploying it.
 - Fixes to a released version overwrite the existing snapshot under the same number (no `stable14.1`).
 - One version number applies to all seven documentation subsites (`platform/*`, `marketplace/*`, `storefront/*`).
 
@@ -26,11 +27,13 @@ The current version has no `release/*` branch. It lives on `main`, and its `rele
 | `main`                | `stable15` | `latest`, default | `/platform/user-guide/latest/`           |
 | `release/stable14`    | `stable14` |                   | `/platform/user-guide/stable14/`         |
 | `release/stable12`    | `stable12` |                   | `/platform/user-guide/stable12/`         |
-| `release/stable10`    | `stable10` |                   | `/platform/user-guide/stable10/`         |
+| `release/stable11`    | `stable11` | `stable10`        | `/platform/user-guide/stable11/`         |
 
 The deployed version number comes from the `VERSION` file on the branch, never from the branch name. CI subscribes to the `release/**` glob, so renaming a release branch does not affect what gets published. It does, however, fire a push event and redeploy that version.
 
-Two naming schemes predate the current one. Versions were once numbered `1.0`, `2.0`, and `3.0`, which map to `stable10`, `stable12`, and `stable14` respectively. The branches `release/1.0` and `release/2.0` were renamed to `release/stable10` and `release/stable12` on 2026-08-12. No `release/3.0` branch exists: that version was renamed to `stable14` before its release branch was cut.
+Two naming schemes predate the current one. Versions were once numbered `1.0`, `2.0`, and `3.0`, which map to `stable11`, `stable12`, and `stable14` respectively. The branches `release/1.0` and `release/2.0` were renamed to `release/stable11` and `release/stable12` on 2026-08-12. No `release/3.0` branch exists: that version was renamed to `stable14` before its release branch was cut.
+
+The oldest version was first renamed to `stable10`, which was the wrong Platform release number. It was corrected to `stable11` on 2026-08-13. `stable10` survives as a redirect alias so that links published under the wrong number keep working. Page URLs under `/stable10/` redirect to their `/stable11/` counterpart. Assets such as images and PDFs do not, because mike emits redirect stubs for pages only.
 
 ## Editing docs
 
@@ -74,6 +77,8 @@ Context7 parses one branch only, so older versions have to be declared. **contex
 The bump workflow appends the newly created release branch to `previousVersions` and commits the file to `main`. No manual step is required on release. The schema caps the list at 20 entries. On overflow the workflow drops the oldest entry and emits a build warning.
 
 Pushes that touch only **context7.json** are excluded from the deploy workflow, since the file configures an external indexer and does not affect the built site.
+
+There is a second, unrelated config: **docs/context7.json**. It claims the Context7 website project, which indexes the rendered site rather than this repository. Every non-markdown file in the root **docs** folder is published at the site root, so it is served at `https://docs.virtocommerce.org/context7.json`. Do not merge the two files. The root one describes the repository and its branches. This one describes the website and carries a different `url`.
 
 ## What not to do
 
