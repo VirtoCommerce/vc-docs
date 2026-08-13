@@ -33274,6 +33274,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33391,6 +33393,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../composables/utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../composables/utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34549,7 +34569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34725,14 +34745,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td><code>8px</code></td>
 <td>Gap between menu items</td>
 </tr>
+<tr>
+<td><code>--vc-menu-item-focus-ring-color</code></td>
+<td><code>var(--primary-500)</code></td>
+<td>Focus ring color on keyboard navigation</td>
+</tr>
 </tbody>
 </table>
 <h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Menu items are keyboard-focusable</li>
-<li>Groups expand/collapse with animated transitions</li>
-<li>Active state is explicit via the <code>active</code> prop on <code>VcMenuItem</code></li>
-<li>Collapsed mode shows tooltips for discoverability</li>
+<li><code>VcMenuItem</code> renders its interactive row as a native <code>&lt;button type="button"&gt;</code>, so it is in the tab order and the browser maps Enter/Space to activation. There is no <code>tabindex</code> juggling and no <code>keydown</code> handler to keep in sync.</li>
+<li>Focus ring on <code>:focus-visible</code> only (not on mouse click), colored via <code>--vc-menu-item-focus-ring-color</code></li>
+<li>The active item exposes <code>aria-current="page"</code>, so assistive technology announces the current location — <code>active</code> drives both the styling and the attribute</li>
+<li>When the menu is collapsed to icons the visible title is hidden, so the button carries <code>aria-label</code> with the item title; expanded items rely on their visible text instead and set no <code>aria-label</code></li>
+<li>Icons and letter abbreviations are <code>aria-hidden="true"</code> — they are decorative next to the accessible name</li>
+<li><code>VcMenuGroup</code> with <code>variant="section"</code> renders a native button that reports <code>aria-expanded</code> and points <code>aria-controls</code> at the children wrapper it toggles</li>
+<li>Collapsed mode shows tooltips for discoverability (in addition to, not instead of, the accessible name)</li>
 </ul>
 <h2 id="related-components">Related Components<a class="headerlink" href="#related-components" title="Permanent link">&para;</a></h2>
 <ul>

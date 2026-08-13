@@ -31205,6 +31205,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#on-mobile" class="md-nav__link">
+        On mobile
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -34334,6 +34344,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -34451,6 +34463,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../composables/utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../composables/utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -35893,6 +35923,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 </li>
             
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#on-mobile" class="md-nav__link">
+        On mobile
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
         </ul>
     </nav>
     
@@ -36669,7 +36709,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -37373,6 +37413,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-38-32" name="__codelineno-38-32" href="#__codelineno-38-32"></a><span class="kd">const</span><span class="w"> </span><span class="nx">expandedRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="o">&lt;</span><span class="nx">Order</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
 <a id="__codelineno-38-33" name="__codelineno-38-33" href="#__codelineno-38-33"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
+<h3 id="on-mobile">On mobile<a class="headerlink" href="#on-mobile" title="Permanent link">&para;</a></h3>
+<p>Expandable rows work the same way in the mobile card view — no extra markup. The <code>expander</code> column itself is not rendered as a card field (special columns never are); instead each expandable card gets a chevron toggle on its right edge, and the <code>#expansion</code> slot renders inside the card, below the card body. Expansion state is shared with the desktop view, so <code>expanded-rows</code> behaves identically on both.</p>
+<p>Two mobile-specific details:</p>
+<ul>
+<li>Tapping the chevron does not trigger <code>row-click</code>, so opening the details of a row and expanding it stay separate gestures.</li>
+<li>The card adds <strong>no padding</strong> around the expansion — the slot content owns its own spacing. Screen width is scarce on a phone, and slot content usually carries padding already, so anything added here would inset it twice.</li>
+<li>The expansion area scrolls horizontally when its content is wider than the card. Slot content laid out for desktop widths therefore stays reachable on a phone, though a layout that reflows for narrow screens reads better.</li>
+</ul>
 <hr />
 <h2 id="row-grouping">Row Grouping<a class="headerlink" href="#row-grouping" title="Permanent link">&para;</a></h2>
 <p>Group rows by a field value. Each group gets a subheader row.</p>
@@ -37580,7 +37628,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="p">&lt;/</span><span class="nt">VcDataTable</span><span class="p">&gt;</span>
 </code></pre></div>
 <p><strong>Storage key format:</strong> <code>VC_DATATABLE_PRODUCT-LIST</code> (uppercased <code>state-key</code>).</p>
-<p><strong>Schema version:</strong> The persisted state uses the <strong>v2 schema</strong>, which stores column weights, column order, and hidden/shown column IDs. <code>containerWidth</code> is no longer stored because weights are container-independent — the engine recomputes pixel values from weights on every mount.</p>
+<p><strong>Schema version:</strong> The persisted state uses the <strong>v2 schema</strong>, which stores column weights, column order, hidden/shown column IDs, and a <code>userSized</code> flag. <code>containerWidth</code> is not stored because weights are container-independent — the engine recomputes pixel values from weights on every mount.</p>
+<p><strong><code>userSized</code> and declarative widths:</strong> until the user actually resizes a column, weights are treated as <em>declarative</em> — re-derived from the <code>VcColumn</code> <code>width</code>/<code>minWidth</code>/<code>maxWidth</code> props at the current container width on every recompute. This heals weights captured at a transient width (blades animate their <code>width</code> for ~300ms, so the first measurement often happens mid-animation) and means <code>width="60"</code> renders as 60px at any blade width. A mouse resize sets <code>userSized: true</code>: from then on the saved weights are the user's data — restored as-is and scaled proportionally when the blade width changes. Restored states without the flag (including states saved by older versions) stay declarative; column order and hidden/shown IDs are restored either way. <strong>Reset columns</strong> returns the table to the declarative mode.</p>
 <p>If an older browser tab wrote <strong>v1</strong> state (pixel-based widths), it is automatically migrated to v2 on first load. No manual migration is needed.</p>
 <p>Use sessionStorage instead of localStorage:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="p">&lt;</span><span class="nt">VcDataTable</span> <span class="p">:</span><span class="na">items</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">products</span><span class="s">&quot;</span> <span class="na">state-key</span><span class="o">=</span><span class="s">&quot;product-list&quot;</span> <span class="na">state-storage</span><span class="o">=</span><span class="s">&quot;session&quot;</span><span class="p">&gt;</span>
@@ -39066,7 +39115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tr>
 <td><code>expansion</code></td>
 <td><code>{ data: T, index: number }</code></td>
-<td>Content rendered below an expanded row.</td>
+<td>Content rendered below an expanded row (desktop and mobile).</td>
 </tr>
 <tr>
 <td><code>empty</code></td>

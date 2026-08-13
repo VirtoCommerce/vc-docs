@@ -33362,6 +33362,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33479,6 +33481,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34725,7 +34745,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34765,11 +34785,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tbody>
 <tr>
 <td><code>useDataTableState</code></td>
-<td>Persists column state (v2 schema: weights, order, hidden/shown IDs) to localStorage/sessionStorage. Auto-migrates v1 (pixel-based) state on first load. Key format: <code>VC_DATATABLE_{KEY}</code>. Debounced auto-save (150ms) with restore-on-mount.</td>
+<td>Persists column state (v2 schema: weights, order, hidden/shown IDs, <code>userSized</code>) to localStorage/sessionStorage. Auto-migrates v1 (pixel-based) state on first load. Key format: <code>VC_DATATABLE_{KEY}</code>. Debounced auto-save (150ms) with restore-on-mount.</td>
 </tr>
 <tr>
 <td><code>useTableColumns</code></td>
-<td>Column ordering, width management via <code>columnState</code> (weight store), computed pixel widths via <code>engineOutput</code>. Exposes <code>recompute()</code> to trigger a recalculation pass. Watches <code>visibleColumns</code> and appends new columns without dropping hidden ones.</td>
+<td>Column ordering, width management via <code>columnState</code> (weight store), computed pixel widths via <code>engineOutput</code>. Exposes <code>recompute()</code> to trigger a recalculation pass, which also re-derives weights from <code>VcColumn</code> props until <code>markSizingCustomized()</code> is called. Watches <code>visibleColumns</code> and appends new columns without dropping hidden ones.</td>
 </tr>
 <tr>
 <td><code>useColumnWidthEngine</code></td>
@@ -34937,7 +34957,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tbody>
 <tr>
 <td>Column resize (drag border)</td>
-<td>Dragged column and right neighbor exchange weight proportionally</td>
+<td>Dragged column and right neighbor exchange weight proportionally; sizing becomes <strong>customized</strong> (<code>userSized</code> persisted)</td>
 </tr>
 <tr>
 <td>Column show/hide</td>
@@ -34945,11 +34965,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tr>
 <tr>
 <td>Reset columns</td>
-<td>All weights rebuilt from declarative <code>width</code> props</td>
+<td>All weights rebuilt from declarative <code>width</code> props; sizing returns to declarative mode</td>
 </tr>
 <tr>
 <td>Container resize</td>
-<td>Weights unchanged; engine recomputes px widths from same weights × new <code>availableWidth</code></td>
+<td>Declarative mode: weights re-derived from <code>VcColumn</code> props at the new width (declared px stay exact). Customized: weights unchanged, px scale with it</td>
 </tr>
 </tbody>
 </table>

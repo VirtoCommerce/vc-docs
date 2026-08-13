@@ -33099,6 +33099,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33575,6 +33577,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34917,7 +34937,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:55:59 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -35148,6 +35168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </code></pre></div>
 <h3 id="error-notifications">Error Notifications<a class="headerlink" href="#error-notifications" title="Permanent link">&para;</a></h3>
 <p>By default, <code>useAsync</code> shows a toast notification on failure. The notification is <strong>deferred</strong> via <code>setTimeout(0)</code> so that the <code>ErrorInterceptor</code> can cancel it when a blade error banner is already displayed -- this prevents duplicate toast + banner for the same error.</p>
+<p>No toast is scheduled at all while the session is flagged as expired. When a platform API call returns 401, the fetch interceptor signs the user out and redirects to the login page; every data load in flight on the page being left fails at the same time. Suppressing those toasts keeps the single "session expired" message from being buried under a cascade of load errors. The <code>error</code> ref is still populated as usual -- only the toast is skipped -- and the flag is cleared when a new sign-in begins.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Default: shows toast on error</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kt">save</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAsync</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="cm">/* ... */</span>

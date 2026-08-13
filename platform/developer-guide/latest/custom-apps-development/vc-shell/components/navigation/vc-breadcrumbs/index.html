@@ -33328,6 +33328,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33445,6 +33447,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../composables/utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../composables/utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34657,7 +34677,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -35012,7 +35032,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>The last visible item carries <code>aria-current="page"</code> to indicate the current location.</li>
 <li>Separator characters are marked <code>aria-hidden="true"</code> so screen readers skip them.</li>
 <li>When items overflow, the dropdown is accessible via the trigger button with standard keyboard interaction (Enter/Space to open).</li>
+<li>An item with an icon and no <code>title</code> (a back control, for example) would otherwise have no accessible name — its button falls back to a localized <code>aria-label</code> ("Back" / "Zurück"). Items with a visible title set no <code>aria-label</code>, so the name is never duplicated.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Prefer a real title over relying on the fallback</p>
+</div>
+<p>The fallback keeps an icon-only item usable, but "Back" says less than the destination does. Pass a <code>title</code> whenever you know it — screen-reader users then hear where the control leads, and sighted users get the truncation tooltip.</p>
 <h2 id="related-components">Related Components<a class="headerlink" href="#related-components" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../vc-dropdown/">VcDropdown</a> -- Used internally to render the overflow menu</li>

@@ -33366,6 +33366,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33483,6 +33485,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34733,7 +34753,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 25, 2026 15:26:28 UTC">May 25, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34758,7 +34778,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- To update: edit the source file in vc-shell, then run yarn docs:sync -->
 
 <h1 id="useapiclient">useApiClient<a class="headerlink" href="#useapiclient" title="Permanent link">&para;</a></h1>
-<p>Creates a typed API client instance for communicating with VirtoCommerce platform APIs. The composable accepts a generated client class constructor (extending <code>AuthApiBase</code>) and returns an async factory function that produces a client instance. The composable itself is intentionally thin — it constructs the client and returns it. Platform authentication flows through the session cookie that the browser replays on every same-origin API call; the framework's fetch wrapper enforces timeout, offline checks, and 401-redirect on top.</p>
+<p>Creates a typed API client instance for communicating with VirtoCommerce platform APIs. The composable accepts a generated client class constructor (extending <code>AuthApiBase</code>) and returns an async factory function that produces a client instance. The composable itself is intentionally thin — it constructs the client and returns it. Platform authentication flows through the session cookie that the browser replays on every same-origin API call; the framework's fetch wrapper enforces timeout, offline checks, and redirect-to-login on top. An expired session is detected from a <code>401</code> <strong>or</strong> from a response that was redirected to the login page (some platform configurations answer that way instead of a 401, and <code>fetch</code> follows the redirect transparently). A <code>403</code> is not treated as expiry — authenticated-but-unauthorized keeps the session.</p>
 <div class="admonition tip">
 <p class="admonition-title">Always call getApiClient inside async functions</p>
 </div>

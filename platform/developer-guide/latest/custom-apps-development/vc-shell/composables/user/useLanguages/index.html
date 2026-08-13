@@ -33274,6 +33274,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33391,6 +33393,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34549,7 +34569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2026 14:53:23 UTC">July 2, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34638,7 +34658,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tr>
 <td><code>setLocale</code></td>
 <td><code>(locale: string) =&gt; void</code></td>
-<td>Switches the application locale. This updates <code>vue-i18n</code>'s locale and triggers re-rendering of all translated text.</td>
+<td>Switches the application locale. Updates <code>vue-i18n</code>'s locale, re-renders translated text, configures vee-validate messages, persists the choice, and sets <code>&lt;html lang&gt;</code> to the resolved locale so assistive technology picks the right pronunciation dictionary (WCAG 3.1.1). Applications do not need to manage <code>&lt;html lang&gt;</code> themselves.</td>
 </tr>
 <tr>
 <td><code>getLocaleByTag</code></td>

@@ -33304,6 +33304,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
 
       <!-- Render toggle to expand nested items -->
@@ -33421,6 +33423,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../../composables/utilities/useFunctions/" class="md-nav__link">
         useFunctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../../composables/utilities/useKeyboardShortcuts/" class="md-nav__link">
+        useKeyboardShortcuts
       </a>
     </li>
   
@@ -34609,7 +34629,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 17:11:09 UTC">July 20, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 11:56:13 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34696,7 +34716,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td><code>additionalSandbox</code></td>
 <td><code>string</code></td>
 <td>--</td>
-<td>Extra space-separated iframe sandbox tokens appended to the secure default (see below)</td>
+<td>Extra space-separated iframe sandbox tokens appended to the resolved sandbox (see Security)</td>
 </tr>
 </tbody>
 </table>
@@ -34803,7 +34823,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li>Always use the <strong>embed</strong> URL format, not the standard watch URL. For YouTube, use <code>https://www.youtube.com/embed/VIDEO_ID</code> instead of <code>https://www.youtube.com/watch?v=VIDEO_ID</code>.</li>
 <li>The iframe has <code>loading="lazy"</code>, so videos below the fold are not loaded until the user scrolls to them. This keeps initial page load fast.</li>
-<li>The <code>sandbox</code> attribute defaults to the secure minimum <code>allow-scripts allow-presentation</code>. If your video host requires more, append tokens via <code>additionalSandbox</code> — see the Security section below.</li>
+<li>The <code>sandbox</code> attribute is resolved from the <code>source</code>: <code>allow-scripts allow-presentation</code> for any host, plus <code>allow-same-origin</code> when the source points at a known video host (YouTube, Vimeo). If your host needs more, append tokens via <code>additionalSandbox</code> — see the Security section below.</li>
 <li>The iframe sets a fixed <code>allow</code> permissions policy (<code>accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture</code>) plus <code>allowfullscreen</code>, so embedded players can autoplay, go fullscreen, and use picture-in-picture. These are not configurable per-instance.</li>
 <li>The iframe renders at a fixed height of 300px. To customize the height, override the iframe styles via a scoped CSS rule targeting <code>.vc-video__container iframe</code>.</li>
 <li>The placeholder has a height of 200px so the layout does not collapse when no source is provided.</li>
@@ -34811,19 +34831,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The iframe uses the <code>title</code> attribute (set to <code>label</code> or "Video") for screen readers</li>
-<li><code>sandbox</code> attribute defaults to the secure minimum <code>allow-scripts allow-presentation</code></li>
+<li><code>sandbox</code> is resolved per source: <code>allow-scripts allow-presentation</code> always, plus <code>allow-same-origin</code> for known video hosts</li>
 <li><code>loading="lazy"</code> defers iframe load until visible</li>
 <li>Placeholder state uses <code>role="img"</code> with <code>aria-label="No video source"</code></li>
 </ul>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
-<p>The iframe <code>sandbox</code> defaults to <code>allow-scripts allow-presentation</code> — the minimum that keeps mainstream embeds (YouTube, Vimeo) working while denying the framed page access to the parent origin. To add capabilities a specific host needs, pass them through <code>additionalSandbox</code>:</p>
+<p>The iframe <code>sandbox</code> is resolved from the <code>source</code>, not fixed:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Resolved sandbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Known video host (youtube.com, youtube-nocookie.com, youtu.be, vimeo.com, and their subdomains)</td>
+<td><code>allow-scripts allow-presentation allow-same-origin</code></td>
+</tr>
+<tr>
+<td>Any other host</td>
+<td><code>allow-scripts allow-presentation</code></td>
+</tr>
+<tr>
+<td>Relative or malformed URL</td>
+<td><code>allow-scripts allow-presentation</code></td>
+</tr>
+</tbody>
+</table>
+<p>Mainstream players need their own origin to start up: without <code>allow-same-origin</code> the framed document gets an opaque origin and YouTube's bootstrap throws on storage access before it can build the player. Restricting that token to an allowlist keeps playback working without loosening the sandbox for arbitrary sources.</p>
+<p>To add capabilities a specific host needs, pass them through <code>additionalSandbox</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cm">&lt;!-- Some embeds need popups for auth flows --&gt;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">VcVideo</span> <span class="na">source</span><span class="o">=</span><span class="s">&quot;https://example.com/embed&quot;</span> <span class="na">additional-sandbox</span><span class="o">=</span><span class="s">&quot;allow-popups&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
 <div class="admonition danger">
-<p class="admonition-title">Never combine <code>allow-same-origin</code> with <code>allow-scripts</code></p>
+<p class="admonition-title">Never add <code>allow-same-origin</code> for a source on your own origin</p>
 </div>
-<p>Per MDN and OWASP, enabling both tokens lets the embedded page remove its own sandbox and reach the parent origin's cookies, <code>localStorage</code>, and DOM. <code>VcVideo</code> renders whatever <code>source</code> you pass, so for untrusted or user-supplied URLs do <strong>not</strong> add <code>allow-same-origin</code>.</p>
+<p><code>allow-same-origin</code> combined with <code>allow-scripts</code> is only dangerous when the framed document shares the host page's origin — then its script can reach <code>parent.document</code> and remove the sandbox attribute. For a cross-origin video host the Same-Origin Policy already blocks that, which is why the allowlist above is safe. <code>VcVideo</code> renders whatever <code>source</code> you pass, so never add the token via <code>additionalSandbox</code> for user-supplied URLs or for assets served from the app's own origin.</p>
 <div class="admonition warning">
 <p class="admonition-title">Always use embed URLs, not watch URLs</p>
 </div>
