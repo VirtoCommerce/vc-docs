@@ -1,0 +1,263 @@
+.md-typeset h1 {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.01em;
+    margin: 0 0 1.2rem;
+}
+
+.md-typeset h2 {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.01em;
+    margin: 2.4rem 0 1.2rem;
+}
+
+.md-typeset h3 {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.01em;
+    margin: 2.4rem 0 1.2rem;
+}
+
+.md-typeset h4 {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.01em;
+    margin: 2.4rem 0 1.2rem;
+}
+
+.md-typeset p {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.01em;
+    margin: 0.667rem 0;
+}
+
+.md-typeset ol, .md-typeset ul {
+   margin: 8px 0;
+}
+
+.md-typeset ol li, .md-typeset ul li {
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.md-typeset p > img {
+    border-radius: 8px;
+}
+
+.md-typeset pre>code::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.md-typeset pre>code::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+}
+
+.md-typeset pre>code::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 12px;
+}
+
+.md-typeset__table {
+    width: 100%;
+}
+
+.md-typeset table, th, td {
+    border: 0.05rem solid var(--md-typeset-table-color);
+    border-collapse: collapse;
+}
+
+.md-typeset table:not([class]) {
+    font-size: 0.7rem;
+    display: inline-table;
+    border: none;
+}
+
+.md-typeset table:not([class]) th {
+    padding: 0.4rem;
+    background-color: var(--table-head);
+    color: var(--table-head-title)
+}
+
+.md-typeset table:not([class]) td {
+    padding: 0.4rem;
+    font-family: 'Circular Std Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--table-text)
+}
+
+.md-typeset code {
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    border: 1px solid grey;
+}
+
+.md-typeset pre>code {
+    padding: 0.4rem 1.2rem;
+    background-color: var(--md-code-pre-bg-color);
+    color: var(--md-code-hl-generic-color);
+}
+
+.md-typeset pre>code::-webkit-scrollbar-thumb {
+    background-color: var(--md-code-scrollbar-thumb-color);
+}
+
+.md-typeset pre>code::-webkit-scrollbar-track {
+    background-color: var(--md-code-scrollbar-track-color);
+}
+
+.highlight :is(.ge,.gr,.gh,.go,.gp,.gs,.gu,.gt,.err,.mi,.na) {
+    color: var(--md-code-hl-generic-color);
+}
+
+.md-content__inner {
+    margin: 0 1.6rem 2.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .md-typeset h1 {
+        line-height: 120%;
+        font-size: 1.8rem;
+        margin: 0 0 1rem;
+    }
+
+    .md-typeset h2 {
+        line-height: 120%;
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+    }
+
+    .md-typeset h3 {
+        line-height: 120%;
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem;
+    }
+
+    .md-typeset h4 {
+        font-size: 0.9rem;
+        line-height: 120%;
+        margin: 2rem 0 1rem;
+    }
+
+    .md-typeset p {
+        line-height: 150%;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .md-typeset h1 {
+        font-size: 1.7rem;
+    }
+
+    .md-typeset h2 {
+        font-size: 1.4rem;
+    }
+
+    .md-typeset h3 {
+        font-size: 1.1rem;
+    }
+
+    .md-typeset h4 {
+        font-size: 0.85rem;
+    }
+
+    .md-typeset p {
+        font-size: 0.85rem;
+    }
+
+    .md-typeset code {
+        font-size: 0.65rem;
+        line-height: 140%;
+    }
+
+    .md-content__inner {
+        margin: 0 2rem 2.4rem;
+    }
+
+    .md-source-file {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .md-typeset h1 {
+        font-size: 1.6rem;
+    }
+
+    .md-typeset h2 {
+        font-size: 1.3rem;
+    }
+
+    .md-typeset h3 {
+        font-size: 1rem;
+    }
+
+    .md-typeset h4 {
+        font-size: 0.85rem;
+    }
+
+    .md-typeset p {
+        font-size: 0.85rem;
+    }
+
+    .md-typeset code {
+        font-size: 0.65rem;
+        line-height: 140%;
+    }
+
+    .md-content__inner {
+        margin: 0 0.6rem 2.4rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .md-typeset h1 {
+        font-size: 1.55rem;
+    }
+
+    .md-typeset h2 {
+        font-size: 1.25rem;
+    }
+
+    .md-typeset h3 {
+        font-size: 0.95rem;
+    }
+
+    .md-typeset h4 {
+        font-size: 0.7rem;
+    }
+
+    .md-typeset p {
+        font-size: 0.7rem;
+    }
+
+    .md-typeset code {
+        font-size: 0.6rem;
+        line-height: 1.2rem;
+    }
+
+    .md-content__inner {
+        margin: 0 0 2.4rem;
+    }
+}
