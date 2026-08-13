@@ -25,7 +25,7 @@ This query allows you to evaluate dynamic content.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   evaluateDynamicContent(
     storeId: "B2B-store"

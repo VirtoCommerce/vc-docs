@@ -18,7 +18,7 @@ This query allows you to retrieve information about a purchase request.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   purchaseRequest(
     purchaseRequestId: "7a7e080d-f0ff-4358-830a-839e07b75c3b"

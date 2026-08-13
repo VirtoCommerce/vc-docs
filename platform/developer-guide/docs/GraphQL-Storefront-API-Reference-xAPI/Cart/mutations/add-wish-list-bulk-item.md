@@ -24,7 +24,7 @@ The `InputAddWishlistBulkItemType` is an input object type used for adding multi
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
   mutation addWishlistBulkItem ($command: InputAddWishlistBulkItemType!) {
     addWishlistBulkItem (command: $command) {    
       wishlists {          

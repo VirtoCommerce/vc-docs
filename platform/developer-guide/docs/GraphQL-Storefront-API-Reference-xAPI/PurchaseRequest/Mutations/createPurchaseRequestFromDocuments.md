@@ -25,7 +25,7 @@ The `InputCreatePurchaseRequestFromDocumentsType!` represents the input object f
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
     mutation createPurchaseRequestFromDocuments($command: InputCreatePurchaseRequestFromDocumentsType!) {  
       createPurchaseRequestFromDocuments(command: $command) {  
         id  

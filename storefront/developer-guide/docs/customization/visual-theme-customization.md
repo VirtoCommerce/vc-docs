@@ -16,6 +16,9 @@ You can use the following presets as a base to create own presets:
 * The [Coffee](https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/coffee.json), [Black-Gold](https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/black-gold.json), [Purple-Pink](https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/purple-pink.json), [Watermelon](https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/assets/presets/watermelon.json) presets: Redefine palettes and may introduce additional variables if needed.
 
 !!! note
+    Dark mode is available for **Mercury** (default), **Coffee**, **Watermelon**, **Black-Gold**, **Red** themes.
+
+!!! note
     You can use AI to create color palettes - ask it to generate colors for an e-commerce website in JSON format based on presets. 
 
 ![Readmore](media/readmore.png){: width="25"} [Applying presets](/platform/user-guide/latest/content/managing-themes#apply-theme-color-scheme)

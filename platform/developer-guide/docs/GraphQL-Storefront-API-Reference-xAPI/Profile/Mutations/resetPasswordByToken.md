@@ -24,7 +24,7 @@ The `InputResetPasswordByTokenType!` represents the input object for resetting a
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation resetPasswordByToken ($command:InputResetPasswordByTokenType){
 resetPasswordByToken(command:$command)
 {

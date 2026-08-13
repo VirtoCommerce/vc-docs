@@ -27,7 +27,7 @@ The `InputAddGiftItemsType!` represents the input type required for adding gift 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation addGiftItems($command: InputAddGiftItemsType!) {
   addGiftItems(command: $command) {
     id

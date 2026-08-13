@@ -22,7 +22,7 @@ This query retrieves a list of page documents that match specified search criter
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {  
   pageDocuments(after: "0", first: 10, storeId: "B2B-store", keyword: "tv", cultureName: "en-US") {  
     totalCount  

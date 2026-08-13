@@ -19,7 +19,7 @@ This connection is used to check the validity of a password.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   validatePassword(password: "tew1WEEEEr") {
     succeeded

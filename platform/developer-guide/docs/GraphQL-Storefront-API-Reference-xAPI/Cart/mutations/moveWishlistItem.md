@@ -24,7 +24,7 @@ The `InputMoveWishlistItemType!` represents the input for moving a wishlist item
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
     mutation moveWishlistItem($command: InputMoveWishlistItemType!) {
       moveWishlistItem(command: $command) {
         id

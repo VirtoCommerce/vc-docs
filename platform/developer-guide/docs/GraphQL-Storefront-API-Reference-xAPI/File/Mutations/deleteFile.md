@@ -21,7 +21,7 @@ The [DeleteFileCommandType!](../Objects/DeleteFileCommandType.md) represents the
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation DeleteFile($command: DeleteFileCommandType!) {
   deleteFile(command: $command)
 }

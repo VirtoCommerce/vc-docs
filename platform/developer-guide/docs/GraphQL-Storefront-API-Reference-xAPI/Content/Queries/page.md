@@ -21,7 +21,7 @@ This query retrieves information about a specific page based on the provided cri
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   page(storeId: "B2B-store", cultureName: "en-US", id: "12345") {
     id

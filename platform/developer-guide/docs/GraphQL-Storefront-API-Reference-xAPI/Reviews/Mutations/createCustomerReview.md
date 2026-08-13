@@ -28,7 +28,7 @@ The `CreateCustomerReviewCommandType` represents the input data required to crea
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: CreateCustomerReviewCommandType!) {  
   createCustomerReview(command: $command) {  
     id  

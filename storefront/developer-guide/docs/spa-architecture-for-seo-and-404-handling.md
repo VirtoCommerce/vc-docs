@@ -95,6 +95,70 @@ Map the fields to your product model. The values in the structured data must mat
 Validate the result with the [Rich Results Test](https://search.google.com/test/rich-results) or the [Schema Markup Validator](https://validator.schema.org).
 
 
+## Organization structured data (schema.org)
+
+Organization structured data gives search engines and AI agents a machine-readable representation of your brand identity: name, logo, social profiles, contact information, and founding date. Agents use it to verify the store is who it claims to be and to link it to a recognizable entity.
+
+The Frontend renders an `OnlineStore` JSON-LD block on the home page. The values come from the store's **Store Information** settings, which the Platform returns in the storefront initialization query, so the block is populated without any code change.
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OnlineStore",
+  "name": "Yourstore",
+  "url": "https://yourstore.com",
+  "logo": "https://yourstore.com/logo.png",
+  "description": "One-sentence description of what you sell.",
+  "slogan": "Your trusted B2B supplier",
+  "foundingDate": "1998-04-01",
+  "sameAs": [
+    "https://twitter.com/yourstore",
+    "https://www.instagram.com/yourstore"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-000-0000",
+    "contactType": "Customer Service"
+  }
+}
+</script>
+```
+
+Configure the values under **Store Information**. Each field maps to a schema property, while `name` and `url` come from the store itself:
+
+| Store Information field | Schema property |
+| --- | --- |
+| **Store description** | `description` |
+| **Tagline** | `slogan` |
+| **Founding date** | `foundingDate` |
+| **Brand logo URL** | `logo` |
+| **Profile URLs (sameAs)** | `sameAs` |
+| **Customer service phone** | `contactPoint.telephone` |
+
+!!! note
+    Because the Frontend is an SPA, crawlers and agents see this block only when the page is prerendered. The [Prerender](#seo-and-dynamic-rendering-with-prerenderio) setup above serves bots a fully rendered snapshot, so the structured data is included in what they receive.
+
+### Open Graph tags
+
+The Frontend also renders Open Graph tags on the home page, so links shared on social platforms show a title, description, and preview image. These values come from the same **Store Information** settings.
+
+```html
+<meta property="og:title" content="Yourstore — short tagline">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourstore.com/">
+<meta property="og:description" content="One-sentence description of what you sell.">
+<meta property="og:image" content="https://yourstore.com/og-cover.jpg">
+<meta property="og:site_name" content="Yourstore">
+```
+
+The **Social share image URL** field sets `og:image`, **Tagline** sets `og:title`, and **Store description** sets `og:description`.
+
+Both the JSON-LD block and the Open Graph tags appear in the rendered home page source:
+
+![Organization JSON-LD and Open Graph tags in the home page source](media/json-organization-schema-on-frontpage.png){: style="display: block; margin: 0 auto;" }
+
+
 ## Handling 404s in SPA
 
 Because Virto always serves **index.html** even for unknown URLs, the HTTP response is always 200 — even when the page doesn't exist. The Vue app handles these cases and displays a custom 404 page (e.g., the CMS page with slug **/404**). However, that error page is a **soft 404**: the browser shows an error message, but the server has already sent a 200 OK status. This is a common SPA behavior. It ensures the user sees an error page (and can navigate from it), but from the server’s point of view the request was fulfilled. 

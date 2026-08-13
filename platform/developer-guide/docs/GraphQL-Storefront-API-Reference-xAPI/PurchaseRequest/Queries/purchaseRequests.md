@@ -24,7 +24,7 @@ This query allows you to retrieve a list of purchase requests based on specific 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   purchaseRequests(
     after: "10"

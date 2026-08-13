@@ -13,7 +13,7 @@ This query retrieves the Firebase Cloud Messaging (FCM) settings required for co
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   fcmSettings {
     apiKey

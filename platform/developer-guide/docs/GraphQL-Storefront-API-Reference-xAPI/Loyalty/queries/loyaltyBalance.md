@@ -19,7 +19,7 @@ This query allows you to retrieve the loyalty balance information for a specific
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
 loyaltyBalance(
     userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"

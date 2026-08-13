@@ -81,7 +81,7 @@ Filter products based on specific criteria, include products with the color "Bla
 <div class="grid" markdown>
 
 
-```json title="Sample query"
+```graphql title="Sample query"
 {
   products(filter: "color:Black,Blue price.usd:[100 TO 200) name:\"ASUS ZenFone 2*\" {
       totalCount

@@ -27,7 +27,7 @@ The `InputCreateWishlistType` represents the input for creating a wishlist.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createWishlist ($command: InputCreateWishlistType!) {​
   createWishlist (command: $command) {​
     id​

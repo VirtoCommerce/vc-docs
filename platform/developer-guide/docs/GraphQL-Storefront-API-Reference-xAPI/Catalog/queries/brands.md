@@ -26,7 +26,7 @@ This connection allows you to retrieve a list of brands, supporting pagination, 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   brands(
     storeId: "B2B-Store"

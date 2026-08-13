@@ -29,7 +29,7 @@ The `InputUpdateCartItemDynamicPropertiesType` represents the input object type 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateCartItemDynamicProperties(
   $command: InputUpdateCartItemDynamicPropertiesType!
 ) {

@@ -25,7 +25,7 @@ The `InputPushHistoricalEventType` is a type that represents the input object fo
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation pushHistoricalEvent($command: InputPushHistoricalEventType!) {
 pushHistoricalEvent(command: $command)
 }

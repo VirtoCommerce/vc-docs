@@ -22,7 +22,7 @@ The `InputInitializePaymentType!` is a type used as an input for initializing a 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ($command: InputInitializePaymentType!)
 {
     initializePayment(command: $command)

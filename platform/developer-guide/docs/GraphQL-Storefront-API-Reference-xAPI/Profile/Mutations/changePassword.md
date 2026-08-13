@@ -23,7 +23,7 @@ The `InputChangePasswordType!` represents the input object for changing a user's
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changePassword($command: InputChangePasswordType!)  
 changePassword(command: $command) {
   succeeded

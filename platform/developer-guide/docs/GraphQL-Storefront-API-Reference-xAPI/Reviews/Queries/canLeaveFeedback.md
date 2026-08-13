@@ -20,7 +20,7 @@ This query checks if a user is eligible to leave feedback for a specific entity,
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {  
   canLeaveFeedback(  
     storeId: "B2B-store",  

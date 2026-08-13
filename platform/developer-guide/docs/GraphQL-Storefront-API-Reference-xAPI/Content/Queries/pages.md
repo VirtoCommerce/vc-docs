@@ -24,7 +24,7 @@ This query is used to retrieve a collection of pages based on specified criteria
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   pages(storeId: "B2B-store", keyword: "aliases:test", after: "0", first: 30) {
     totalCount

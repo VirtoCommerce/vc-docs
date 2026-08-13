@@ -22,7 +22,7 @@ This query allows you to retrieve a list of products recently browsed by the use
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   recentlyBrowsed(
     storeId: "B2B-Store"

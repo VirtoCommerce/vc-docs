@@ -22,7 +22,7 @@ The `SubmitQuoteCommandType!` represents .
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation SubmitQuoteRequest($command: SubmitQuoteCommandType!) {
   submitQuoteRequest(command: $command) {
     id

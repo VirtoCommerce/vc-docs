@@ -23,7 +23,7 @@ This query allows you to retrieve the history of loyalty point transactions for 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
     loyaltyPointsHistory(
     userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"

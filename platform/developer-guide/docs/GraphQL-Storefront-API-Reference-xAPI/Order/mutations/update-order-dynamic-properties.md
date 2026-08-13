@@ -22,7 +22,7 @@ The `InputUpdateOrderDynamicPropertiesType` is a type that represents the input 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateOrderDynamicProperties ($command: InputUpdateOrderDynamicPropertiesType!) {
     updateOrderDynamicProperties (command: $command)
     {

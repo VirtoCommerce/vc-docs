@@ -22,7 +22,7 @@ The `InputUpdatePurchaseRequestByDocumentsType!` represents the input object for
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updatePurchaseRequestByDocuments($command: InputUpdatePurchaseRequestByDocumentsType!) {  
   updatePurchaseRequestByDocuments(command: $command) {  
     id  

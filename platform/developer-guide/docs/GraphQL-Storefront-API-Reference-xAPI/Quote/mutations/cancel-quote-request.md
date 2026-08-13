@@ -23,7 +23,7 @@ The `CancelQuoteCommandType!` is used for a command to cancel a quote.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation cancelQuoteRequest($command: CancelQuoteCommandType!) {
   cancelQuoteRequest(command: $command)
 }

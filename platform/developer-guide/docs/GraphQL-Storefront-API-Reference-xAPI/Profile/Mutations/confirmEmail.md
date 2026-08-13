@@ -24,7 +24,7 @@ The `InputConfirmEmailType` represents the input for the `confirmEmail` mutation
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ($command: InputConfirmEmailType){
   confirmEmail(command:$command)
 }

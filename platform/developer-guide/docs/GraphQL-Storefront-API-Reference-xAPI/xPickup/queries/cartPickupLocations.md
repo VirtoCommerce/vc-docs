@@ -27,7 +27,7 @@ This query allows you to retrieve pickup locations where the items in a specific
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   cartPickupLocations(
     storeId: "B2B-store"

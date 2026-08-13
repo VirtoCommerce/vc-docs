@@ -28,7 +28,7 @@ The `InputCloneWishlistType!` represents the input for cloning a wishlist.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation cloneWishlist($command: InputCloneWishlistType!) {
   cloneWishlist(command: $command) {
     id

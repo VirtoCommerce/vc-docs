@@ -24,7 +24,7 @@ This query allows you to get a product by its Id and calculate all fields based 
 === "Example 1"
     <div class="grid" markdown>
 
-    ```json title="Query 1"
+    ```graphql title="Query 1"
     {
       product(
         id: "2dcd49147dc04892892af26bb91e5530"
@@ -55,7 +55,7 @@ This query allows you to get a product by its Id and calculate all fields based 
 
     <div class="grid" markdown>
 
-    ```json title="Query 2"
+    ```graphql title="Query 2"
     {
       product(
         id: "2dcd49147dc04892892af26bb91e5530"

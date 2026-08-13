@@ -29,7 +29,7 @@ The `InputRemoveShipmentType` represents the input object type used for removing
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
     mutation removeShipment($command: InputRemoveShipmentType!) {
       removeShipment(command: $command) {
         id

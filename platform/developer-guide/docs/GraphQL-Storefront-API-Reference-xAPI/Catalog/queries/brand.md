@@ -20,7 +20,7 @@ This query allows you to retrieve a specific brand by its ID and optionally loca
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   brand(
     id: "Efes"

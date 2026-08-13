@@ -25,7 +25,7 @@ This query allows you to retrieve a list of child categories for a given parent 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   childCategories(
     storeId: "B2B-Store"

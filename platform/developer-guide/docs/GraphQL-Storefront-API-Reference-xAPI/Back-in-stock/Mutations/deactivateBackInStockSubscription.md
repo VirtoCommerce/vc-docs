@@ -22,7 +22,7 @@ The `DeactivateBackInStockSubscriptionCommandType!` provides the necessary input
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation deactivateBackInStockSubscription($command: DeactivateBackInStockSubscriptionCommandType!) {  
   deactivateBackInStockSubscription(command: $command) {  
     id  

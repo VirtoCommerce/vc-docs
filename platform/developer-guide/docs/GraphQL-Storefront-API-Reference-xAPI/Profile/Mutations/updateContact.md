@@ -39,7 +39,7 @@ The `InputUpdateContactType!` represents the fields that can be updated for a co
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateContact($command: InputUpdateContactType!) {
   updateContact(command: $command) {
     fullName

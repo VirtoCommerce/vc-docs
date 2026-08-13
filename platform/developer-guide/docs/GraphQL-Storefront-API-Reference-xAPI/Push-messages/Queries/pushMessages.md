@@ -25,7 +25,7 @@ This query is used to retrieve push messages, including the unread count and the
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
     pushMessages (unreadOnly: true, cultureName: "en-US") {
       unreadCount

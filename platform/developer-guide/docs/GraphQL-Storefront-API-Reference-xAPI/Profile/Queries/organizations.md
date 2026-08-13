@@ -21,7 +21,7 @@ This connection allows you to retrieve the desired list of organizations, meetin
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   organizations(
     after: "cursorValue"

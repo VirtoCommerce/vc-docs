@@ -30,7 +30,7 @@ This query is used to retrieve detailed information about a vendor, including co
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query($vendorId: String!) {
   vendor(id: $vendorId) {
     id

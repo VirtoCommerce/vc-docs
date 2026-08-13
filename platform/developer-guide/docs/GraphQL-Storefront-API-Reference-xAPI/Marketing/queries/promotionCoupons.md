@@ -25,7 +25,7 @@ This query allows you to retrieve promotion coupons.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   promotionCoupons(
     storeId: "B2B-store"

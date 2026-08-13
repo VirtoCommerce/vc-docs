@@ -19,7 +19,7 @@ This query allows you to retrieve information about the available payment status
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   paymentStatuses(cultureName: "en-US") {
     items {

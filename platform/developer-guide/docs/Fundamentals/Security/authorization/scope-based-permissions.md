@@ -143,6 +143,6 @@ As a result, the authorization handler will check and change the criteria to ret
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../authorization/global-permissions">← Global permissions </a>
-    <a href="../../encryption-and-signing-credentials ">Encryption and signing credentials →</a>
+    <a href="../restrict-admin-ui-access">Restrict admin UI access →</a>
 </div>
 

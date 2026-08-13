@@ -20,7 +20,7 @@ This connection allows you to get the contact by its Id.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   contact(id: "5f807280-bb1a-42b2-9a96-ed107269ea06") {
     id

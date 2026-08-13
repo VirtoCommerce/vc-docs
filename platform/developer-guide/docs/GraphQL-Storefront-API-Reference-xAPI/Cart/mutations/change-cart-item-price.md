@@ -28,7 +28,7 @@ The `InputChangeCartItemPriceType` represents the input object type used for cha
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputChangeCartItemPriceType!) {
   changeCartItemPrice(command: $command) {
     id

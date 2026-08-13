@@ -18,7 +18,7 @@ This query allows you to get a fulfillment center by its Id.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   fulfillmentCenter(id: "vendor-fulfillment") {
     id

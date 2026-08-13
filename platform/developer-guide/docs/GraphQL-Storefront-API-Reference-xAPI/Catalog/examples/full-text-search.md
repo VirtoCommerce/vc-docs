@@ -30,7 +30,7 @@ The following product properties are stored in the `__content` field and are sea
 
 <div class="grid" markdown>
 
-```json title="Sample query"
+```graphql title="Sample query"
 query {
   products(
     query: "shirt",

@@ -28,7 +28,7 @@ This is to query whether the provided coupon is valid or not.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
     query {
       validateCoupon(
         storeId: "B2B-store",

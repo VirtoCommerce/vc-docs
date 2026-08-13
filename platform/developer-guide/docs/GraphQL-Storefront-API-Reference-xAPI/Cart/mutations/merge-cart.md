@@ -27,7 +27,7 @@ The `InputMergeCartType` represents the input object type used for merging two c
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation mergeCart($command: InputMergeCartType!) {
   mergeCart(command: $command) {
     id

@@ -23,7 +23,7 @@ The `InputUpdateMemberAddressType!` represents the input values for updating mem
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateMemberAddresses($command: InputUpdateMemberAddressType!) {
   updateMemberAddresses(command: $command) {
     addresses {

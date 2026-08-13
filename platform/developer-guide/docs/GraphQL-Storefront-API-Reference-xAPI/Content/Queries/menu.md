@@ -21,7 +21,7 @@ This query is used to retrieve a specific menu based on the provided criteria.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   menu(
     storeId: "B2B-store"

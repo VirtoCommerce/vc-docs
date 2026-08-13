@@ -22,7 +22,7 @@ The `InputAddOrUpdateOrderPaymentType` is a type that represents the input objec
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation addOrUpdateOrderPayment ($command: InputAddOrUpdateOrderPaymentType!) {
   addOrUpdateOrderPayment (command: $command)
   {

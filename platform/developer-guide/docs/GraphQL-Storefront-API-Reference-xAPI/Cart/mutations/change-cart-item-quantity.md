@@ -29,7 +29,7 @@ The `InputChangeCartItemQuantityType` represents the input object type used for 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changeCartItemQuantity($command: InputChangeCartItemQuantityType!) {
   changeCartItemQuantity(command: $command) {
     id

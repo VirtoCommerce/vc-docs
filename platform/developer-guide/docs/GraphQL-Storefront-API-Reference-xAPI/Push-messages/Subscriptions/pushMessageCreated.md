@@ -13,7 +13,7 @@ This subscription is used to receive real-time updates when a new push message i
 
 <div class="grid" markdown>
 
-```json title="Subscription"
+```graphql title="Subscription"
 subscription pushMessageCreated {
   pushMessageCreated {
     id

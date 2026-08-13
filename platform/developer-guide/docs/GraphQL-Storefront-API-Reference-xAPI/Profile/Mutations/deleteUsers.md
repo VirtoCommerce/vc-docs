@@ -20,7 +20,7 @@ The `InputDeleteUserType!` represents the input structure for deleting user data
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputDeleteUserType!) {
   deleteUsers(command: $command) {
     succeeded

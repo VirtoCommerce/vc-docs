@@ -2,4 +2,5 @@ title: Sales Rep
 nav:
   - Overview: overview.md
   - Queries: queries
+  - Objects: objects
   - Mutations: mutations

@@ -19,7 +19,7 @@ This query is used to check whether a given email address is unique in the syste
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   checkEmailUniqueness(email: "user@example.com")
 }

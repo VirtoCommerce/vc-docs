@@ -22,7 +22,7 @@ The `InputAddPurchaseRequestSourceType!` represents the input object for adding 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation addPurchaseRequestSource($command: InputAddPurchaseRequestSource!) {  
     addPurchaseRequestSource(command: $command) {  
         id  

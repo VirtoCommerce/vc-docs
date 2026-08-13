@@ -19,7 +19,7 @@ This query allows you to retrieve stored Skyflow cards for a specific store.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
 skyflowCards(storeId: "B2B-Store") {
     id

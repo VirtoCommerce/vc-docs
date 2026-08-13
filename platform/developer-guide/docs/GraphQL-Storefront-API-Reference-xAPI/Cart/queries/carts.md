@@ -28,7 +28,7 @@ This query allows you to retrieve information about shopping carts and wishlists
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   carts(
     storeId: "B2B-Store"

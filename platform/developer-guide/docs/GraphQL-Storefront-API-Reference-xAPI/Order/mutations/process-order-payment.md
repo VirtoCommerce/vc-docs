@@ -23,7 +23,7 @@ The `InputProcessOrderPaymentType!` represents the input object for processing a
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation processOrderPayment ($command: InputProcessOrderPaymentType!) {
   processOrderPayment (command: $command)
   {

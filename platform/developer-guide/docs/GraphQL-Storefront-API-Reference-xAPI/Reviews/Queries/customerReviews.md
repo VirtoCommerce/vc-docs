@@ -25,7 +25,7 @@ This query retrieves customer reviews associated with a specific entity, such as
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {  
   customerReviews(  
     after: "cursor123",  

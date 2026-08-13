@@ -27,7 +27,7 @@ This query allows you to retrieve information about a shopping cart.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   cart(
     storeId: "B2B-Store"

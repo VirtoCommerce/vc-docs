@@ -28,7 +28,7 @@ The `InputRejectGiftItemsType!` represents the input type required for rejecting
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation rejectGiftItems($command: InputRejectGiftItemsType!) {
   rejectGiftItems(command: $command) {
     id

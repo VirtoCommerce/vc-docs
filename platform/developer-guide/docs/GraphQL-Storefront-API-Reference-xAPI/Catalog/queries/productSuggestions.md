@@ -21,7 +21,7 @@ This query provides product name suggestions based on partial user input. It is 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   productSuggestions(
     storeId: "B2B-store",

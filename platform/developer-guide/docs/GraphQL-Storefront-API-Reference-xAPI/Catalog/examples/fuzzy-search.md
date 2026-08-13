@@ -7,7 +7,7 @@ You can optionally specify the fuzzy level using the `fuzzyLevel` parameter. If 
 
 <div class="grid" markdown>
 
-```json title="Sample query"
+```graphql title="Sample query"
 {
   products(query: "stel" storeId: "B2B-Store" first:20, fuzzy: true) {
       totalCount

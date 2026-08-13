@@ -22,7 +22,7 @@ The [InputMarkPushMessageReadType!](../Objects/InputMarkPushMessageReadType.md) 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation markPushMessageRead($command: InputMarkPushMessageReadType!) {
   markPushMessageRead(command: $command)
 }

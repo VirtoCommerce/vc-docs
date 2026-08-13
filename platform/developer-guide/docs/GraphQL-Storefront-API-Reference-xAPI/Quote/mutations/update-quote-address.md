@@ -22,7 +22,7 @@ The `UpdateQuoteAddressesCommandType!` is a type that represents a command for u
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation UpdateQuoteAddresses($command: UpdateQuoteAddressesCommandType!) {
   updateQuoteAddresses(command: $command) {
     id

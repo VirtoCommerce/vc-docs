@@ -52,7 +52,7 @@ Display products and variations in a list from a specific category.
 <div class="grid" markdown>
 
 
-```json title="Sample query"
+```graphql title="Sample query"
 query {
   products(
     storeId: "B2B-store"

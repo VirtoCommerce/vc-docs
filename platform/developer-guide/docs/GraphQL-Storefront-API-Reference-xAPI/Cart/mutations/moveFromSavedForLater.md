@@ -26,7 +26,7 @@ The `InputSaveForLaterType` represents the input object type used for moving a s
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation moveFromSavedForLater($command: InputSaveForLaterType!) {
     moveFromSavedForLater(command: $command) {
         id

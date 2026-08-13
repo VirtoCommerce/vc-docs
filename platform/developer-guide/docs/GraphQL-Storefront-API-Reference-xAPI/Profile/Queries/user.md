@@ -24,7 +24,7 @@ This connection allows you to get the user by several arguments.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   user(id: "78b0208a-bb52-4a33-9250-583d63aa1f77") {
     accessFailedCount

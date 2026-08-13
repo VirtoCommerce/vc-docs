@@ -22,7 +22,7 @@ The `DeleteQuoteAttachmentsCommandType!` represents the input required to delete
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation deleteQuoteAttachments($command: DeleteQuoteAttachmentsCommandType!) {
   deleteQuoteAttachments(command: $command)
 }

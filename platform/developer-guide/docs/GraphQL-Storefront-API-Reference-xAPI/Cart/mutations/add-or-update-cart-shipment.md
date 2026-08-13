@@ -31,7 +31,7 @@ The `InputAddOrUpdateCartShipmentType` represents the input object type used for
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
   mutation($command: InputAddOrUpdateCartShipmentType!) {
     addOrUpdateCartShipment(command: $command) {
       name

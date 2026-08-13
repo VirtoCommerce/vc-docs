@@ -4,7 +4,7 @@ This mutation sends a communication, a storefront push notification and/or an em
 
 ## Example
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation {
   sendCustomerCommunication(command: {
     organizationId: "7b8c..."
@@ -59,6 +59,6 @@ Delivery still depends on what each channel needs: push reaches members with a s
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../queries/salesRepOrders">← salesRepOrders query</a>
-    <a href="../../xRecommend/overview">xRecommend module overview →</a>
+    <a href="../../objects/SalesRepCustomerFilterRuleType">← SalesRepCustomerFilterRuleType</a>
+    <a href="../../../Recommend/overview">xRecommend module overview →</a>
 </div>

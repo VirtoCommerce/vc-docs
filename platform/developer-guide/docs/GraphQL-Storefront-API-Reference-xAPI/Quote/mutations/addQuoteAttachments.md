@@ -22,7 +22,7 @@ The `AddQuoteAttachmentsCommandType!` represents the input required to add attac
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation addQuoteAttachments($command: AddQuoteAttachmentsCommandType!) {
   addQuoteAttachments(command: $command)
 }

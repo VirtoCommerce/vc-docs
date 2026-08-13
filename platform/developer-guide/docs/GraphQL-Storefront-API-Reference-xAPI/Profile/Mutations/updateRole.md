@@ -23,7 +23,7 @@ The `InputUpdateRoleType!` represents the input data required to update a role.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateRole ($command: InputUpdateRoleType!) {
   updateRole (command: $command) {
     errors {

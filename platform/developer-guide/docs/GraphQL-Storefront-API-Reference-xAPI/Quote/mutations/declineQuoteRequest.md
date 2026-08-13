@@ -21,7 +21,7 @@ The `DeclineQuoteCommandType!` represents the input required to decline a quote 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation declineQuoteRequest($command: DeclineQuoteCommandType!) {
   declineQuoteRequest(command: $command)
 }

@@ -22,7 +22,7 @@ The `InputSaveSearchQueryType!` is a type that represents the input object for s
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation {
   saveSearchQuery(command: {
     storeId: "b2b-store"

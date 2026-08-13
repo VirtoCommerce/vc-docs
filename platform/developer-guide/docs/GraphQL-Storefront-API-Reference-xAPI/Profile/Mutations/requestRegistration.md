@@ -30,7 +30,7 @@ The `InputRequestRegistrationType!` represents the input object for requesting r
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation requestRegistration (command: InputRequestRegistrationType!) {
     registrationRequest(command: $command) {
         organization {

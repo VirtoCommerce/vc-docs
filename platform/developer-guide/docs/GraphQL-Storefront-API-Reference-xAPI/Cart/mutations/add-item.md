@@ -38,7 +38,7 @@ The `InputAddItemType` represents the arguments for the ClearCart operation.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
     mutation addItem($command: InputAddItemType!) {
       addItem(command: $command) {
         id

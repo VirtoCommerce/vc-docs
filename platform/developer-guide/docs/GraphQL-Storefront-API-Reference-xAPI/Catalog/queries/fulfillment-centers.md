@@ -25,7 +25,7 @@ This connection allows you to search for fulfillment centers.
 
     <div class="grid" markdown>
 
-    ```json title="Query 1"
+    ```graphql title="Query 1"
     {
       fulfillmentCenters(
         fulfillmentCenterIds: ["vendor-fulfillment", "los-angeles-fulfillment"]
@@ -71,7 +71,7 @@ This connection allows you to search for fulfillment centers.
 
     <div class="grid" markdown>
 
-    ```json title="Query 2"
+    ```graphql title="Query 2"
     {
       products (storeId:"B2B-store")
       {

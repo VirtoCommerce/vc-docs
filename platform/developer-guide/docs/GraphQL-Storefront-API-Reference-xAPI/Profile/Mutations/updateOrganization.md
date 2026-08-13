@@ -30,7 +30,7 @@ The `InputUpdateOrganizationType!` represents the input object used to update an
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputUpdateOrganizationType!) {
   updateOrganization(command: $command) {
     id

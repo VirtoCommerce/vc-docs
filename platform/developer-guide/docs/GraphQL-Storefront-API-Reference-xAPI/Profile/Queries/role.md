@@ -18,7 +18,7 @@ This connection allows you to get role by its name.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   role(roleName: "Store administrator") {
     id

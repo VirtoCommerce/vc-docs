@@ -26,7 +26,7 @@ This query allows getting a specified number of quotes from a particular user.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   quotes(
     userId: "edec910a-122f-4391-b026-831771c3c947"

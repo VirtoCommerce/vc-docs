@@ -21,7 +21,7 @@ The `InputPostProcessPurchaseRequestSourcesType!` represents the input object fo
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation postProcessPurchaseRequestSources($command: InputPostProcessPurchaseRequestSourcesType!) {  
   postProcessPurchaseRequestSources(command: $command) {  
     id  

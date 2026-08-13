@@ -27,7 +27,7 @@ The `InputAddCouponType!` represents the input object for adding a coupon to a c
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation {
   addCoupon(
     command: {

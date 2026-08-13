@@ -22,7 +22,7 @@ The `DeleteSkyflowCardCommandType!` represents the input object type used for de
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: DeleteSkyflowCardCommandType!) {
   deleteSkyflowCard(command: $command)
 }

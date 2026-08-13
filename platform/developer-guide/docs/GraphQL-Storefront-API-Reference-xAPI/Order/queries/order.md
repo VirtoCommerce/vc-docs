@@ -20,7 +20,7 @@ This query is used to retrieve specific order details.​
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   order (id:"498a60ee-b73a-4235-a0d8-4f013a6b3201") {
       id

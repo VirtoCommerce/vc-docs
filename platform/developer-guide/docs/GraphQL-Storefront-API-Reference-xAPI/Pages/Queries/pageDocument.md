@@ -18,7 +18,7 @@ This query retrieves information about a specific page document using its unique
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {  
   pageDocument(id: "24caa0d5a05145f3a3433a2930fbfb0f") {  
     id  

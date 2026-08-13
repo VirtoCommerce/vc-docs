@@ -25,7 +25,7 @@ This query allows you to retrieve information about wishlists.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   wishlists(
     after: "0", 

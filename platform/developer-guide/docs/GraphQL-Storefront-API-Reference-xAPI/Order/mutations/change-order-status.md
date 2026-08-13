@@ -23,7 +23,7 @@ The `InputChangeOrderStatusType!` represents the input object for changing the s
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changeOrderStatus ($command: InputChangeOrderStatusType!) {
 changeOrderStatus (command: $command) }
 ```

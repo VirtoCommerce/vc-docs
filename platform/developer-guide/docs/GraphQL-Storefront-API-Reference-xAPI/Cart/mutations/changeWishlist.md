@@ -25,7 +25,7 @@ The `InputChangeWishlistType!` represents the input for modifying a wishlist.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changeWishlist ($command: InputChangeWishlistType!) {​
   changeWishlist (command: $command) {​
     id​

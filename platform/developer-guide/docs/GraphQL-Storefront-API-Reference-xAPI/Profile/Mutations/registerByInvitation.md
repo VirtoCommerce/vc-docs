@@ -28,7 +28,7 @@ The `InputRegisterByInvitationType!` represents the input object for registering
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation registerByInvitation($command: InputRegisterByInvitationType!) {
   registerByInvitation(command: $command) {
     succeeded

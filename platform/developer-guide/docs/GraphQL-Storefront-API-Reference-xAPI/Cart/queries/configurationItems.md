@@ -28,7 +28,7 @@ This query retrieves a list of configuration options for a specific cart or line
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
     configurationItems(
     lineItemId: "95770655-dd4b-49a0-b91c-1ee59eb5daec"

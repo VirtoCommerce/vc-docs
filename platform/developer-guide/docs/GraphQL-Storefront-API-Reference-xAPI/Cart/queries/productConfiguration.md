@@ -23,7 +23,7 @@ This query allows you to retrieve configuration options for a specific configura
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   productConfiguration (
     configurableProductId: "d733871c-f763-44b2-99c9-5f55edf28c16"

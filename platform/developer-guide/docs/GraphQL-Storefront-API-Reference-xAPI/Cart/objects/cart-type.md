@@ -72,7 +72,6 @@ This type defines the properties and fields associated with a shopping cart.
 
 The `Cart.Addresses` field in `CartType` is a functional enabler. Currently, it is not featured in any internal business logic and is separated from `Cart.Billing.Addresses` and `Cart.Shipping.Addresses`. Feel free to add your own business logic to it.
 
-You can find the address type structure [here](https://github.com/VirtoCommerce/vc-module-experience-api/blob/dev/src/VirtoCommerce.ExperienceApiModule.Core/Schemas/AddressType.cs).
 
 ![Readmore](../media/readmore.png){: width="25"} [Mixed-currency carts](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Loyalty/overview#mixed-currency-carts)
 

@@ -23,7 +23,7 @@ This query retrieves all contextual information required to initialize and rende
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   pageContext(
     domain: "localhost"

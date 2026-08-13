@@ -32,7 +32,7 @@ The `InputChangeCartConfiguredItemType` represents the input object type used fo
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changeCartConfiguredItem($command: InputChangeCartConfiguredItemType!) {
   changeCartConfiguredItem(command: $command) {
     items {

@@ -21,7 +21,7 @@ The `InputUpdateUserType!` represents the input object for creating a contact.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateUser($command: InputUpdateUserType!) {
   updateUser(command: $command) {
     succeeded

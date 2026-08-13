@@ -13,7 +13,7 @@ This mutation clears all push messages.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ClearAllPushMessages {
   clearAllPushMessages
 }

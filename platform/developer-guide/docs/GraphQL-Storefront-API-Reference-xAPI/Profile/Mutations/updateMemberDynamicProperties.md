@@ -23,7 +23,7 @@ The `InputUpdateMemberDynamicPropertiesType!` represents the input for updating 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateMemberDynamicProperties($command: InputUpdateMemberDynamicPropertiesType!) {
   updateMemberDynamicProperties(command: $command) {
     name

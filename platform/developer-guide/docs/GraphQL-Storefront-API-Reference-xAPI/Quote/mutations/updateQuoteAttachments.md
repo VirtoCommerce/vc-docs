@@ -21,7 +21,7 @@ The `UpdateQuoteAttachmentsCommandType!` represents the input required to update
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateQuoteAttachments($command: UpdateQuoteAttachmentsCommandType!) {
   updateQuoteAttachments(command: $command)
 }

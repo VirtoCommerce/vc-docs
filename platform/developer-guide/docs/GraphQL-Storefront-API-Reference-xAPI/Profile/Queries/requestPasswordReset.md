@@ -20,7 +20,7 @@ This connection is used to initiate a password reset process for a user.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   requestPasswordReset(
     loginOrEmail: "User_1"

@@ -22,7 +22,7 @@ The `InputRenameWishlistType!` represents the input for renaming a wishlist.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation renameWishlist($command: InputRenameWishlistType!) {
   renameWishlist(command: $command) {
     id

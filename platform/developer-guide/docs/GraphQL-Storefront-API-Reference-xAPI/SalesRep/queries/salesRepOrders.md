@@ -20,7 +20,7 @@ This query returns the orders the rep created for their customers, filterable an
 
 ## Example
 
-```json title="Query"
+```graphql title="Query"
 {
   salesRepOrders(storeId: "B2B-store", first: 20, sort: "createdDate:desc") {
     totalCount
@@ -48,5 +48,5 @@ This query returns the orders the rep created for their customers, filterable an
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../salesRepCustomer">← salesRepCustomer query</a>
-    <a href="../../mutations/sendCustomerCommunication">sendCustomerCommunication mutation →</a>
+    <a href="../salesRepCustomerOrderStatistics">salesRepCustomerOrderStatistics query →</a>
 </div>

@@ -27,7 +27,7 @@ The `InputClearPaymentsType` represents the input object type used for clearing 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation clearPayments($command: InputClearPaymentsType!) {
   clearPayments(command: $command) {
     id

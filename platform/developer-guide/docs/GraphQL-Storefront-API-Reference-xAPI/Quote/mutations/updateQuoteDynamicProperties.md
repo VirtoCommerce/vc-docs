@@ -21,7 +21,7 @@ The `UpdateQuoteDynamicPropertiesCommandType!` represents the input required to 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation {
   updateQuoteDynamicProperties(
     command: {

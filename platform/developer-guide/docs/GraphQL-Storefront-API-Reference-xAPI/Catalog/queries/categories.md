@@ -31,7 +31,7 @@ This connection allows you to search for categories.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   categories(
     storeId: "B2B-Store"

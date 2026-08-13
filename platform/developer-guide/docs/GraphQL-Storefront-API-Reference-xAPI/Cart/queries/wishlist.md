@@ -21,7 +21,7 @@ This query allows you to retrieve information about a product list.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   wishlist(
     listId: "4c9fac2c-cdbe-410d-be85-8e69b76c50e2",

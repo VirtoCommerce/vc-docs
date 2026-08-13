@@ -27,7 +27,7 @@ The `InputInviteUserType!` represents the input for inviting users.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation inviteUSer ($command: InputInviteUserType!){
   inviteUser(command:$command)
   {

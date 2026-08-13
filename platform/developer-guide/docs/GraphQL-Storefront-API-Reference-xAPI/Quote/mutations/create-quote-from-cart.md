@@ -23,7 +23,7 @@ The `CreateQuoteFromCartCommandType!` represents the arguments for `CreateQuoteF
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ($command: CreateQuoteFromCartCommandType!){
   createQuoteFromCart(command: $command)
       {

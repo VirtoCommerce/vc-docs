@@ -21,7 +21,7 @@ The `InputChangeOrganizationLogoCommandType` represents the input data required 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputChangeOrganizationLogoCommandType!) {  
   changeOrganizationLogo(command: $command) {  
     isSuccess

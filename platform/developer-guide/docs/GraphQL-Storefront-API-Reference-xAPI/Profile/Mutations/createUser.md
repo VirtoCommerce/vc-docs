@@ -21,7 +21,7 @@ The `InputCreateUserType!` represents the input object for creating a user.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputCreateUserType!) {
   createUser(command: $command) {
     succeeded

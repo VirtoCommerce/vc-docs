@@ -21,7 +21,7 @@ The [InputAddFcmTokenType!](../Objects/InputAddFcmTokenType.md) is used to provi
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation {
   addFcmToken(command: { token: "qwerty" })
 }

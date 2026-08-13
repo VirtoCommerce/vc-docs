@@ -21,7 +21,7 @@ The `InputDeleteContactType!` represents the input object for deleting a contact
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputDeleteContactType!){
   deleteContact(command: $command)
 }

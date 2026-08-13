@@ -28,7 +28,7 @@ The `InputUpdateCartShipmentDynamicPropertiesType` represents the input object t
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateCartShipmentDynamicProperties(
   $command: InputUpdateCartShipmentDynamicPropertiesType!
 ) {

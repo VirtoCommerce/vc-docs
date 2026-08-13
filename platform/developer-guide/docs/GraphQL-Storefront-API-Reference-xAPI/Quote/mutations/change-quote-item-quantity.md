@@ -24,7 +24,7 @@ The `ChangeQuoteItemQuantityCommandType!` represents a command for adjusting ite
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ChangeQuoteItemQuantity($command: ChangeQuoteItemQuantityCommandType!) {
   changeQuoteItemQuantity(command: $command) {
     id

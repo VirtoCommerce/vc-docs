@@ -28,7 +28,7 @@ The `InputChangeCartItemsSelectedType` represents a set of input parameters for 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation unSelectCartItems($command: InputChangeCartItemsSelectedType!) {
   unSelectCartItems(command: $command) {
     id

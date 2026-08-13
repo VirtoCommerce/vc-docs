@@ -25,7 +25,7 @@ This query is used to retrieve a list of customer orders based on various criter
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   orders {
     totalCount

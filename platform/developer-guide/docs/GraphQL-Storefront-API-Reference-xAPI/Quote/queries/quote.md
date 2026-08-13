@@ -24,7 +24,7 @@ This query is used to get a quote by its Id.​
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   quote(id: "70e6807d-bd42-4c78-bc0d-bb2f3ff7ae65") {
     id

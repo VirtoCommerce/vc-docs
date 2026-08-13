@@ -31,7 +31,7 @@ The `InputClearCartType` represents the arguments for the ClearCart operation.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputClearCartType!) {
   clearCart(command: $command) {
     name

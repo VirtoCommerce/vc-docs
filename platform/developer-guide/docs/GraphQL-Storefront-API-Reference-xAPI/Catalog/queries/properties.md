@@ -26,7 +26,7 @@ This connection allows you to search for catalog property metadata.
 
     <div class="grid" markdown>
 
-    ```json title="Query 1"
+    ```graphql title="Query 1"
     { 
       properties(
         storeId: "B2B-Store"
@@ -84,7 +84,7 @@ This connection allows you to search for catalog property metadata.
 === "Example 2" 
     <div class="grid" markdown>
 
-    ```json title="Query 2"
+    ```graphql title="Query 2"
     {
       properties(
         storeId: "B2B-Store")

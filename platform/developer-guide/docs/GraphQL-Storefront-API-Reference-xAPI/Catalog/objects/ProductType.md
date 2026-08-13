@@ -56,7 +56,7 @@ This type represents the type or category of the product. It is used to classify
 ## Examples
 
 === "Query"
-    ```json linenums="1"
+    ```graphql linenums="1"
     query {
       products(
         storeId: "B2B-store"

@@ -24,7 +24,7 @@ The `InputAuthorizePaymentType!` is a type that represents the input object for 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ($command: InputAuthorizePaymentType!) {
   authorizePayment(command: $command) {
     isSuccess

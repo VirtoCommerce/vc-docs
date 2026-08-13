@@ -19,7 +19,7 @@ This query allows you to retrieve the most recent search terms entered by a spec
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   searchHistory(storeId: "b2b-store", maxCount: 5) {
     queries

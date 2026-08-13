@@ -23,7 +23,7 @@ The `InputRemoveMemberFromOrganizationType!` represents the input object used to
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation removeMemberFromOrganization(
   $command: InputRemoveMemberFromOrganizationType!
 ) {

@@ -22,7 +22,7 @@ The `InputChangeOrganizationContactRoleType!` provides the necessary input value
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changeOrganizationContactRole($command:  InputChangeOrganizationContactRoleType!){
   changeOrganizationContactRole(command:$command){
     succeeded

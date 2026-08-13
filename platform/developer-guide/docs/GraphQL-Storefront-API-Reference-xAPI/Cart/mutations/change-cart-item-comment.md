@@ -28,7 +28,7 @@ The `InputChangeCartItemCommentType` represents the input object type used for c
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ($command:InputChangeCartItemCommentType!) {
   (command: $command) {
     id

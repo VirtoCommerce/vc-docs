@@ -25,7 +25,7 @@ The `InputCreateConfiguredLineItemCommand` represents the input object type used
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createConfiguredLineItem($command: InputCreateConfiguredLineItemCommand!) {
   createConfiguredLineItem(command: $command) {
     currency {

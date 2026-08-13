@@ -19,7 +19,7 @@ This connection allows you to get the organization by its Id.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   organization(id: "689a72757c754bef97cde51afc663430") {
     id

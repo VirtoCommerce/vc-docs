@@ -29,7 +29,7 @@ The `InputRemoveCouponType` represents the input object type used for removing a
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation removeCoupon($command: InputRemoveCouponType!) {
   removeCoupon(command: $command) {
     id

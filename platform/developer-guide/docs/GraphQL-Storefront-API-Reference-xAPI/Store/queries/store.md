@@ -23,7 +23,7 @@ This query allows you to retrieve information about a store. The Frontend uses i
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query{
   store(storeId: "B2B-store", cultureName: "en-US") {
     userId

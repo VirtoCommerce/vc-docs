@@ -31,7 +31,7 @@ The `InputClearShipmentsType` represents the input object type used for clearing
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation clearShipments($command: InputClearShipmentsType!) {
   clearShipments(command: $command) {
     id

@@ -29,7 +29,7 @@ The `InputChangeCommentType` represents the input object type used for changing 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation($command: InputChangeCommentType!) {
   changeComment(command: $command) {
     name

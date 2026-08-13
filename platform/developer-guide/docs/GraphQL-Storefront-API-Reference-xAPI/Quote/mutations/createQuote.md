@@ -23,7 +23,7 @@ The `CreateQuoteCommandType!` represents the input required to create a new quot
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createQuote($command: CreateQuoteCommandType!) {
   createQuote(command: $command) {
     id

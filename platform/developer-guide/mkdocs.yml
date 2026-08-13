@@ -54,6 +54,7 @@ plugins:
             "Fundamentals/PageBuilder/select.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/select/"
             "Fundamentals/PageBuilder/string.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/string/"
             "Fundamentals/PageBuilder/text.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/text/"
+            "GraphQL-Storefront-API-Reference-xAPI/index.md": "https://docs.virtocommerce.org/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/overview/"
 
 theme:
     custom_dir: ../../overrides

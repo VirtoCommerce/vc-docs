@@ -18,7 +18,7 @@ This query allows you to retrieve information about the available order statuses
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   orderStatuses(cultureName: "de-DE") {
     items {

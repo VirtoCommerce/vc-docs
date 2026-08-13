@@ -29,7 +29,7 @@ The `InputChangePurchaseOrderNumber` represents the input object for changing th
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changePurchaseOrderNumber ($command: InputChangePurchaseOrderNumber!) {
   changePurchaseOrderNumber (command: $command) {
   id

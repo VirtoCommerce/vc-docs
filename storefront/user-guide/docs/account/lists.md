@@ -4,6 +4,8 @@ The lists help users save items they are interested in for future consideration.
 
 ![Lists](../media/lists.png){: style="display: block; margin: 0 auto;" width="800"}
 
+## Manage lists
+
 In the **Lists** section, you can:
 
 * Create new lists.
@@ -14,7 +16,8 @@ In the **Lists** section, you can:
 
     * Private (no sharing link).
     * Organization (shared within organization members).
-    * Anyone (readonly) (shared via public view-only link):
+    * Anyone (readonly) (shared via public view-only link).
+    * [Customer (shared with sales rep's customers)](#share-lists-with-customers):
 
     <div class="grid cards" markdown>
 
@@ -49,19 +52,21 @@ Click the desired list to view its details. Here you can:
 
 ![list management](../media/list-management.png)
 
-## Edit lists
+### Share lists with customers
 
-To edit a list:
+Sales reps can share lists with their customers individually:
 
-1. Click ![wheel](../media/wheel.png){: width="20"} to the right of the list name.
-1. In the popup menu, click **Edit** to open the list settings.
-1. Update the list name, its description, or configure privacy settings:
+1. Select **Customer** from the sharing options dropdown.
+1. Select a customer to share the list with from the dropdown that appears. If the list was previously shared with another customer, that customer will loos access to it.
+1. Optionally, add a message. If you don't, the customer will receive a default message.
+1. Check the options for sending the list - email or push notification:
+1. Click **SAVE** to send the list to the customer.
 
-    ![List settings](../media/list-settings.png){: style="display: block; margin: 0 auto;" width="500"}
+    ![Share list with customer](../media/share-list-with-customer.png){: style="display: block; margin: 0 auto;" width="400"}
 
-1. Click **Save** to save the changes.
+The customer receives the notification:
 
-You modifications have been applied.
+![Received notification](../media/received-notification.png){: style="display: block; margin: 0 auto;" }
 
 
 <br>

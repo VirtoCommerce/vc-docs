@@ -21,7 +21,7 @@ The `InputExtractDataFromPurchaseRequestSourcesType!` represents the input objec
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation extractPurchaseRequestSourcesData($command: InputExtractPurchaseRequestSourcesDataType!) {  
   extractPurchaseRequestSourcesData(command: $command) {  
     id  

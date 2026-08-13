@@ -23,7 +23,7 @@ This query retrieves information about an entity associated with a specific perm
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {  
   slugInfo(  
     permalink: "/test-2"  

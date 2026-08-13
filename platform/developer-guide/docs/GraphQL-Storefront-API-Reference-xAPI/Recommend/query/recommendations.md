@@ -25,7 +25,7 @@ This query allows you to retrieve product recommendations based on various crite
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
     recommendations(
     storeId: "B2B-store"

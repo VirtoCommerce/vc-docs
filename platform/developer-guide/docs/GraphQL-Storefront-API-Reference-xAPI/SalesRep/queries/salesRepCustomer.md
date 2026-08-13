@@ -16,7 +16,7 @@ This query returns a single customer information card for an organization the re
 
 ## Example
 
-```json title="Query"
+```graphql title="Query"
 {
   salesRepCustomer(organizationId: "7b8c...") {
     organizationId

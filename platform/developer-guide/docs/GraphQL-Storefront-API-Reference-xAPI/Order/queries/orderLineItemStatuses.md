@@ -18,7 +18,7 @@ This query allows you to retrieve information about the available order line ite
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   orderLineItemStatuses(cultureName: "en-US") {
     items {

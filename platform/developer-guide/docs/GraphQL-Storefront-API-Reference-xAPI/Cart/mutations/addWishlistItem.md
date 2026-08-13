@@ -23,7 +23,7 @@ The `InputAddWishlistItemType!` represents the input for adding an item to a wis
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation addWishlistItem($command: InputAddWishlistItemType!) {
   addWishlistItem(command: $command) {
     id

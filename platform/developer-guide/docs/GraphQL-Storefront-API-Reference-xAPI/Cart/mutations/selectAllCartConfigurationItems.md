@@ -28,7 +28,7 @@ The `InputChangeAllCartConfigurationItemsSelectedType` represents a set of input
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation selectAllCartConfigurationItems($command: InputChangeAllCartConfigurationItemsSelectedType!) {
   selectAllCartConfigurationItems(command: $command) {
     id

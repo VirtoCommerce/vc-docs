@@ -22,7 +22,7 @@ This query allows you to retrieve pickup locations available in a specific store
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   pickupLocations(
     storeId: "B2B-store"

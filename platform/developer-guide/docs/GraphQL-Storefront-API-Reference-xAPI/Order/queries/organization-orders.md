@@ -23,7 +23,7 @@ This query is used to view all orders from your organization. The user can view 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   organizationOrders(organizationId: "testidorg") {
     totalCount

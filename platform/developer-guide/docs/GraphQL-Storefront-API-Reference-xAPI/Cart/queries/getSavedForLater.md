@@ -23,7 +23,7 @@ This query retrieves a list of items that a customer has saved for later, based 
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   getSavedForLater(
     storeId: "B2B-store"

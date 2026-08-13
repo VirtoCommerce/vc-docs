@@ -28,7 +28,7 @@ The `InputRemoveItemType` represents the input object type used for removing a s
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
     mutation removeCartItem ($command: InputRemoveItemType!) {
       removeCartItem (command: $command) {
         items{

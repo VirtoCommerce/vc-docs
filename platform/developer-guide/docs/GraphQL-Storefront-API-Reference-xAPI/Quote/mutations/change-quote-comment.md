@@ -22,7 +22,7 @@ The `ChangeQuoteCommentCommandType!` represents a command for modifying quote co
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation changeQuoteComment($command: ChangeQuoteCommentCommandType!) {
   changeQuoteComment(command: $command)
 }

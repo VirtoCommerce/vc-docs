@@ -339,6 +339,20 @@ This node manages the Platform's user interface settings, including environment-
 }
 ```
 
+The **Access** node controls which accounts may enter the admin UI, independently of the permissions they hold. For how access is evaluated, see [Restrict admin UI access](../Fundamentals/Security/authorization/restrict-admin-ui-access.md).
+
+<!--platformui-access-start-->
+
+| Access node | Default or sample value | Description |
+|-------------|-------------------------|-------------|
+| AllowAdministrators | true | Lets administrator accounts enter the admin UI regardless of the other access rules. |
+| RequireAnyPermission | true | Denies entry to accounts that hold no permissions. This is the default behavior. |
+| AllowedAccountTypes | [] | When not empty, only accounts whose type is listed may enter the admin UI, for example `Manager` or `Administrator`. |
+| AllowedPermissions | [] | When not empty, an account may enter the admin UI only if it holds at least one matching permission. |
+| DeniedPermissions | [] | Accounts whose permissions match this mask are denied entry, for example `xapi:*`. |
+
+<!--platformui-access-end-->
+
 #### Settings
 
 This node configures how Platform settings behave across the Virto Commerce Platform, including default values, enforced (forced) values, and tenant- or store-specific overrides.

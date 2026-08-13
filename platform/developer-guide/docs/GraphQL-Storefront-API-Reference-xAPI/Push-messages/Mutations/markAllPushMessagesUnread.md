@@ -13,7 +13,7 @@ This mutation marks all push messages as unread.
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation MarkAllPushMessagesUnread {
   markAllPushMessagesUnread
 }

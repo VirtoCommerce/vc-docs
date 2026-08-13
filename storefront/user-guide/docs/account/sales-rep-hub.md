@@ -8,6 +8,9 @@ The **Dashboard** is the hub's landing page. It shows KPI cards summarizing the 
 
 ![Dashboard](../media/sales-rep-dashboard.png){: style="display: block; margin: 0 auto;" }
 
+The dashboard can be edited as follows:
+
+![Dashboard edition](../media/edit-dashboard.gif)
 
 ## My customers
 
@@ -15,6 +18,9 @@ The **My customers** page lists the customer organizations the rep is assigned t
 
 ![My customers](../media/my-customers.png){: style="display: block; margin: 0 auto;" }
 
+The customers can be edited as follows:
+
+![Edit customers](../media/edit-my-customers.gif)
 
 <br>
 <br>

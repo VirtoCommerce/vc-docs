@@ -22,7 +22,7 @@ This query is used to retrieve a paginated list of pickup locations available in
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   pickupLocations(storeId: "B2B-store", after: "0", first: 3, keyword: "") {
     totalCount

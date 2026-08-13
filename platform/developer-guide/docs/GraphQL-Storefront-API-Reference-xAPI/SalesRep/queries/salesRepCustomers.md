@@ -22,7 +22,7 @@ The `address` is structured (the default organization address, or its first). Th
 
 ## Example
 
-```json title="Query"
+```graphql title="Query"
 {
   salesRepCustomers(storeId: "B2B-store", cultureName: "en-US", first: 20, sort: "name:asc") {
     totalCount
@@ -50,6 +50,28 @@ The `address` is structured (the default organization address, or its first). Th
           }
         }
         itemsCount
+      }
+    }
+  }
+}
+```
+
+Each item also exposes `orderStatistics(from, to)`, which returns the customer's `total` and `count` for a date range. Request it under aliases to add purchase columns, for example year-to-date versus last year:
+
+```graphql title="Query with purchase columns"
+query CustomersWithPurchaseColumns {
+  salesRepCustomers(storeId: "B2B-store", cultureName: "en-US", first: 20, sort: "ytd-purchases") {
+    totalCount
+    items {
+      organizationId
+      organizationName
+      ytd: orderStatistics(from: "2026-01-01T00:00:00Z", to: "2027-01-01T00:00:00Z") {
+        total { amount formattedAmount }
+        count
+      }
+      lastYear: orderStatistics(from: "2025-01-01T00:00:00Z", to: "2026-01-01T00:00:00Z") {
+        total { amount formattedAmount }
+        count
       }
     }
   }

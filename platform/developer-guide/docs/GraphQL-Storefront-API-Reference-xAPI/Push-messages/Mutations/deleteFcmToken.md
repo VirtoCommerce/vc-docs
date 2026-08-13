@@ -20,7 +20,7 @@ The [InputDeleteFcmTokenType!](../Objects/InputDeleteFcmTokenType.md) is used to
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation {
   deleteFcmToken(command: { token: "qwerty" })
 }

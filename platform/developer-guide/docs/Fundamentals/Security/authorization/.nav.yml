@@ -3,3 +3,4 @@ nav:
   - Overview: overview.md
   - Global Permissions: global-permissions.md
   - Scope Based Permissions: scope-based-permissions.md
+  - Restrict Admin UI Access: restrict-admin-ui-access.md

@@ -37,7 +37,7 @@ This connection allows you to search for products.
 
     <div class="grid" markdown>
 
-    ```json title="Query 1"
+    ```graphql title="Query 1"
     {
       products(
         storeId: "B2B-Store"
@@ -96,7 +96,7 @@ This connection allows you to search for products.
 
     <div class="grid" markdown>
 
-    ```json title="Query 2"
+    ```graphql title="Query 2"
     {
       products(
         storeId: "B2B-store"
@@ -148,7 +148,7 @@ This connection allows you to search for products.
 
     <div class="grid" markdown>
 
-    ```json title="Query 3"
+    ```graphql title="Query 3"
     {
     products(
       first: 20

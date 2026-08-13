@@ -24,7 +24,7 @@ This query allows you to retrieve a list of news articles published on the Front
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
 newsArticles(
     storeId: "B2B-store"

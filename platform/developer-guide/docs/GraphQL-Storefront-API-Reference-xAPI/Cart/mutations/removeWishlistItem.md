@@ -24,7 +24,7 @@ The `InputRemoveWishlistItemType!` represents the input for removing an item fro
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation removeWishlistItem($command: InputRemoveWishlistItemType!) {
   removeWishlistItem(command: $command) {
   id

@@ -25,7 +25,7 @@ The `InputUpdateOrderPaymentDynamicPropertiesType` is a type that represents the
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateOrderPaymentDynamicProperties ($command: InputUpdateOrderPaymentDynamicPropertiesType!) {
     updateOrderPaymentDynamicProperties (command: $command)
     {

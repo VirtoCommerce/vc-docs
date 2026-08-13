@@ -7,9 +7,9 @@ The storefront queries are exposed on a dedicated scoped schema at `POST /graphq
 !!! note "Authentication"
     Every query needs a bearer token. Rep login accounts are typically store-bound, so the password grant must include the `storeId` form parameter. See [Issue and use access token](../../Fundamentals/Security/authentication/issuing-and-using-access-token.md#resource-owner-password-credential-flow).
 
-| Queries | Mutations |
-| --- | --- |
-| [customerSalesReps](queries/customerSalesReps.md) <br> [salesRepCustomers](queries/salesRepCustomers.md) <br> [salesRepCustomer](queries/salesRepCustomer.md) <br> [salesRepOrders](queries/salesRepOrders.md) | [sendCustomerCommunication](mutations/sendCustomerCommunication.md) |
+| Queries | Objects | Mutations |
+| --- | --- | --- |
+| [customerSalesReps](queries/customerSalesReps.md) <br> [salesRepCustomers](queries/salesRepCustomers.md) <br> [salesRepCustomer](queries/salesRepCustomer.md) <br> [salesRepOrders](queries/salesRepOrders.md) <br> [salesRepCustomerOrderStatistics](queries/salesRepCustomerOrderStatistics.md) <br> [salesRepCustomerCartStatistics](queries/salesRepCustomerCartStatistics.md) <br> [salesRepCustomerCounts](queries/salesRepCustomerCounts.md) <br> [salesRepTopSellers](queries/salesRepTopSellers.md) <br> [salesRepTopSellerSortRules](queries/salesRepTopSellerSortRules.md) <br> [salesRepTopSellerFilterRules](queries/salesRepTopSellerFilterRules.md) <br> [salesRepOrderFilterRules](queries/salesRepOrderFilterRules.md) <br> [salesRepCartFilterRules](queries/salesRepCartFilterRules.md) <br> [salesRepCustomerFilterRules](queries/salesRepCustomerFilterRules.md) | [CustomerOrderStatisticsType](objects/CustomerOrderStatisticsType.md) <br> [CustomerOrderStatisticsPeriodType](objects/CustomerOrderStatisticsPeriodType.md) <br> [CustomerOrderStatisticsComparisonType](objects/CustomerOrderStatisticsComparisonType.md) <br> [CustomerCartStatisticsType](objects/CustomerCartStatisticsType.md) <br> [CustomerCartStatisticsPeriodType](objects/CustomerCartStatisticsPeriodType.md) <br> [SalesRepCustomerCountsType](objects/SalesRepCustomerCountsType.md) <br> [SalesRepCustomerCountsPeriodType](objects/SalesRepCustomerCountsPeriodType.md) <br> [SalesRepCustomerCountsComparisonType](objects/SalesRepCustomerCountsComparisonType.md) <br> [SalesRepTopSellerType](objects/SalesRepTopSellerType.md) <br> [SalesRepTopSellerSortRuleType](objects/SalesRepTopSellerSortRuleType.md) <br> [SalesRepTopSellerFilterRuleType](objects/SalesRepTopSellerFilterRuleType.md) <br> [SalesRepOrderFilterRuleType](objects/SalesRepOrderFilterRuleType.md) <br> [SalesRepCartFilterRuleType](objects/SalesRepCartFilterRuleType.md) <br> [SalesRepCustomerFilterRuleType](objects/SalesRepCustomerFilterRuleType.md) | [sendCustomerCommunication](mutations/sendCustomerCommunication.md) |
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-sales-rep)
 
@@ -20,6 +20,6 @@ The storefront queries are exposed on a dedicated scoped schema at `POST /graphq
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../Quote/overview">← Quote module overview</a>
-    <a href="queries/customerSalesReps">customerSalesReps query →</a>
+    <a href="../../Quote/overview">← Quote module overview</a>
+    <a href="../queries/customerSalesReps">customerSalesReps query →</a>
 </div>

@@ -23,7 +23,7 @@ The `InputCreateOrderFromCartType!` represents the input object for creating an 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createOrder($command: InputCreateOrderFromCartType!) {
   createOrderFromCart(command: $command) {
   id

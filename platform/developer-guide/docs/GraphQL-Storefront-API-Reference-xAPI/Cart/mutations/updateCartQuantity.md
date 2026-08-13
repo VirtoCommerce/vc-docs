@@ -28,7 +28,7 @@ The `InputUpdateCartQuantity` type represents the input object used to specify w
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation updateCartQuantity($command: InputUpdateCartQuantity!) {
   updateCartQuantity(command: $command) {
     id

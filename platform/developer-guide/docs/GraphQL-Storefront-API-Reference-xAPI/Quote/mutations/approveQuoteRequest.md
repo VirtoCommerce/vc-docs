@@ -20,7 +20,7 @@ The `ApproveQuoteCommandType!` represents the input required to approve a quote 
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation approveQuoteRequest($command: ApproveQuoteCommandType!) {
   approveQuoteRequest(command: $command)
 }

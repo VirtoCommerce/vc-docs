@@ -24,7 +24,7 @@ The `InputChangePurchaseOrderNumber` represents the input object type used for c
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createPurchaseRequest($storeId: String!, $userId: String!, $currencyCode: String!, $cultureName: String!) {  
     createPurchaseRequest(storeId: $storeId, userId: $userId, currencyCode: $currencyCode, cultureName: $cultureName) {  
         id  

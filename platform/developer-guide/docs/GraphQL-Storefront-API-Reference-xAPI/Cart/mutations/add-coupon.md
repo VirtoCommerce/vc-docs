@@ -33,7 +33,7 @@ The `InputAddCouponType` represents the input object type used for adding a coup
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation addCoupon($command: InputAddCouponType!) {
   addCoupon(command: $command) {
     id

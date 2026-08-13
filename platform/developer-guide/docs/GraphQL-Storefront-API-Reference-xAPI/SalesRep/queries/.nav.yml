@@ -4,3 +4,12 @@ nav:
   - salesRepCustomers: salesRepCustomers.md
   - salesRepCustomer: salesRepCustomer.md
   - salesRepOrders: salesRepOrders.md
+  - salesRepCustomerOrderStatistics: salesRepCustomerOrderStatistics.md
+  - salesRepCustomerCartStatistics: salesRepCustomerCartStatistics.md
+  - salesRepCustomerCounts: salesRepCustomerCounts.md
+  - salesRepTopSellers: salesRepTopSellers.md
+  - salesRepTopSellerSortRules: salesRepTopSellerSortRules.md
+  - salesRepTopSellerFilterRules: salesRepTopSellerFilterRules.md
+  - salesRepOrderFilterRules: salesRepOrderFilterRules.md
+  - salesRepCartFilterRules: salesRepCartFilterRules.md
+  - salesRepCustomerFilterRules: salesRepCustomerFilterRules.md

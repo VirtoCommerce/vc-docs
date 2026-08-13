@@ -18,7 +18,7 @@ This query returns the sales representatives supporting the caller's organizatio
 
 ## Example
 
-```json title="Query"
+```graphql title="Query"
 {
   customerSalesReps(storeId: "B2B-store", first: 10) {
     totalCount
@@ -39,6 +39,6 @@ This query returns the sales representatives supporting the caller's organizatio
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overview">← Sales Rep module overview</a>
+    <a href="../../overview">← Sales Rep module overview</a>
     <a href="../salesRepCustomers">salesRepCustomers query →</a>
 </div>

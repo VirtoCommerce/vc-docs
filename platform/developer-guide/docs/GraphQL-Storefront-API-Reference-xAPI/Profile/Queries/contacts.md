@@ -22,7 +22,7 @@ This connection allows you to retrieve the desired list of contacts.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   contacts(
     after: "cursorValue"

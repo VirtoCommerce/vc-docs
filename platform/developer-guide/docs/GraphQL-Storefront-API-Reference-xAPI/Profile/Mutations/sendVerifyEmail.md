@@ -25,7 +25,7 @@ The `InputSendVerifyEmailType` represents the input for sending a verification e
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation ($command: InputSendVerifyEmailType){​
   sendVerifyEmail(command: $command)​
 }​

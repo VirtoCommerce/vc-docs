@@ -21,7 +21,7 @@ This query allows you to retrieve white labeling settings.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   whiteLabelingSettings(organizationId: "f081c52234754c9c8229aa42d6a19220", storeId: "Electronics", cultureName:"en-US") {
     userId

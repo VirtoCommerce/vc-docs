@@ -22,7 +22,7 @@ This connection allows you to retrieve information about a slug or permalink.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   slugInfo(
     slug: "brands"

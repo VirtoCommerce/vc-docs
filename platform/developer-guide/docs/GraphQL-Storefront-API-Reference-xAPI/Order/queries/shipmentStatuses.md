@@ -18,7 +18,7 @@ This query allows you to retrieve information about the available shipment statu
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   shipmentStatuses(cultureName: "en-US") {
     items {

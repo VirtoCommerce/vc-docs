@@ -23,7 +23,7 @@ The `RemoveQuoteItemCommandType!` represents a command for removing a product it
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation RemoveQuoteItem($command: RemoveQuoteItemCommandType!) {
   removeQuoteItem(command: $command) {
     id

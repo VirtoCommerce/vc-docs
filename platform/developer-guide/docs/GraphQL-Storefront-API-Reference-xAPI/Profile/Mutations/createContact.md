@@ -44,7 +44,7 @@ The `InputCreateContactType!` represents the input object for creating a contact
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createContact($command: InputCreateContactType!) {
   createContact(command: $command) {
     fullName

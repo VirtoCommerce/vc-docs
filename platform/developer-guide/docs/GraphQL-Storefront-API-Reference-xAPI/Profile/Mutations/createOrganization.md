@@ -28,7 +28,7 @@ The `InputCreateOrganizationType!` represents the input object for creating a co
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation createOrganization  ($command: InputCreateOrganizationType!) {
   createOrganization (command: $command) {
     id

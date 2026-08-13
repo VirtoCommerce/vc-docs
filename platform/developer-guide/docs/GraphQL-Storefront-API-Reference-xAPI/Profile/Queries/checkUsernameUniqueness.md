@@ -19,7 +19,7 @@ This query is used to check whether a given username is unique in the system.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   checkUsernameUniqueness(username: "john_doe")
 }

@@ -19,7 +19,7 @@ This query allows retrieving the file upload options for the specified scope.
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 query {
   fileUploadOptions(scope: "quote-attachments"){
     scope

@@ -22,7 +22,7 @@ The `InputDeleteMemberAddressType!` represents the input fields required to dele
 
 <div class="grid" markdown>
 
-```json title="Mutation"
+```graphql title="Mutation"
 mutation deleteMemberAddresses ($command: InputDeleteMemberAddressType!) {
   deleteMemberAddresses (command: $command) {
     id
