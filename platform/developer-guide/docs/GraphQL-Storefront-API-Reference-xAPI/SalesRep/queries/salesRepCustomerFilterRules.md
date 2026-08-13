@@ -46,5 +46,5 @@ This query returns the filters available for the customers list and customer cou
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../salesRepCartFilterRules">← salesRepCartFilterRules query</a>
-    <a href="../../objects/CustomerOrderStatisticsType">CustomerOrderStatisticsType →</a>
+    <a href="../../objects/SalesRepContactType">SalesRepContactType →</a>
 </div>

@@ -14,9 +14,11 @@ This query returns the sales representatives supporting the caller's organizatio
 
 | Possible return | Description |
 |-----------------|-------------|
-| Sales rep connection | A paged list of the reps supporting the caller's organization, each with `id`, `fullName`, `about`, `photoUrl`, `emails`, and `phones`. |
+| [`SalesRepContactType`](../objects/SalesRepContactType.md) | A paged list of the reps supporting the caller's organization. |
 
 ## Example
+
+<div class="grid" markdown>
 
 ```graphql title="Query"
 {
@@ -33,6 +35,36 @@ This query returns the sales representatives supporting the caller's organizatio
   }
 }
 ```
+
+```json title="Return"
+{
+  "data": {
+    "customerSalesReps": {
+      "totalCount": 2,
+      "items": [
+        {
+          "id": "a1b2c3d4e5f60718",
+          "fullName": "Jordan Blake",
+          "about": "Serving industrial supply accounts in the Midwest.",
+          "photoUrl": "https://media.example.com/reps/jordan-blake.jpg",
+          "emails": ["jordan.blake@example.com"],
+          "phones": ["+1-312-555-0142"]
+        },
+        {
+          "id": "b2c3d4e5f6071829",
+          "fullName": "Priya Nair",
+          "about": null,
+          "photoUrl": null,
+          "emails": ["priya.nair@example.com"],
+          "phones": []
+        }
+      ]
+    }
+  }
+}
+```
+
+</div>
 
 <br>
 <br>

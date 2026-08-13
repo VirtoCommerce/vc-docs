@@ -2,7 +2,15 @@
 
 This mutation sends a communication, a storefront push notification and/or an email, to the members of a customer organization the rep serves. It backs the "My customers" contact action.
 
+## Possible returns
+
+| Possible return | Description |
+|-----------------|-------------|
+| [`SalesRepCommunicationResultType`](../objects/SalesRepCommunicationResultType.md) | The per-channel delivery outcome. |
+
 ## Example
+
+<div class="grid" markdown>
 
 ```graphql title="Mutation"
 mutation {
@@ -23,15 +31,20 @@ mutation {
 }
 ```
 
-## Result
+```json title="Return"
+{
+  "data": {
+    "sendCustomerCommunication": {
+      "succeeded": true,
+      "pushSent": true,
+      "emailSent": false,
+      "warnings": ["EmailNoRecipients"]
+    }
+  }
+}
+```
 
-The mutation returns a result describing each channel's outcome, so a partial success (one channel delivered, the other could not) is visible to the storefront:
-
-| Field | Meaning |
-|-------|---------|
-| `succeeded` | `true` when at least one requested channel was accepted for delivery (`pushSent || emailSent`). |
-| `pushSent` / `emailSent` | Per-channel delivery outcome. Each channel is attempted independently, so one failing never blocks the other. |
-| `warnings` | Stable string codes explaining any channel that did not deliver. Empty on full success. |
+</div>
 
 ## Validation
 
@@ -59,6 +72,6 @@ Delivery still depends on what each channel needs: push reaches members with a s
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../objects/SalesRepCustomerFilterRuleType">← SalesRepCustomerFilterRuleType</a>
+    <a href="../../objects/SalesRepCommunicationResultType">← SalesRepCommunicationResultType</a>
     <a href="../../../Recommend/overview">xRecommend module overview →</a>
 </div>

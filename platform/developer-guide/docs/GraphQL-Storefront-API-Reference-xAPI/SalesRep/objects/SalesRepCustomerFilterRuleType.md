@@ -15,5 +15,5 @@ This type represents a filter for the customers list and customer counts.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../SalesRepCartFilterRuleType">← SalesRepCartFilterRuleType</a>
-    <a href="../../mutations/sendCustomerCommunication">sendCustomerCommunication mutation →</a>
+    <a href="../SalesRepCommunicationResultType">SalesRepCommunicationResultType →</a>
 </div>

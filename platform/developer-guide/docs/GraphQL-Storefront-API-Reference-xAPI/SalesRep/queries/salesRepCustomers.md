@@ -16,11 +16,11 @@ This query returns the customer organizations the current rep serves, each with 
 
 | Possible return | Description |
 |-----------------|-------------|
-| Customer connection | A paged list of the organizations the rep serves, each with `organizationId`, `organizationName`, `iconUrl`, a structured `address`, and the rep's `lastOrder` for that customer. |
-
-The `address` is structured (the default organization address, or its first). The storefront formats it for display, for example `City, Region`. It is loaded only when selected: requesting `address` loads the organization's addresses; omit it and only scalar columns such as `organizationName` and `iconUrl` are read.
+| [`SalesRepCustomerType`](../objects/SalesRepCustomerType.md) | A paged list of the customer organizations the rep serves. |
 
 ## Example
+
+<div class="grid" markdown>
 
 ```graphql title="Query"
 {
@@ -41,7 +41,6 @@ The `address` is structured (the default organization address, or its first). Th
         number
         createdDate
         status
-        statusDisplayValue
         total {
           amount
           formattedAmount
@@ -56,27 +55,38 @@ The `address` is structured (the default organization address, or its first). Th
 }
 ```
 
-Each item also exposes `orderStatistics(from, to)`, which returns the customer's `total` and `count` for a date range. Request it under aliases to add purchase columns, for example year-to-date versus last year:
-
-```graphql title="Query with purchase columns"
-query CustomersWithPurchaseColumns {
-  salesRepCustomers(storeId: "B2B-store", cultureName: "en-US", first: 20, sort: "ytd-purchases") {
-    totalCount
-    items {
-      organizationId
-      organizationName
-      ytd: orderStatistics(from: "2026-01-01T00:00:00Z", to: "2027-01-01T00:00:00Z") {
-        total { amount formattedAmount }
-        count
-      }
-      lastYear: orderStatistics(from: "2025-01-01T00:00:00Z", to: "2026-01-01T00:00:00Z") {
-        total { amount formattedAmount }
-        count
-      }
+```json title="Return"
+{
+  "data": {
+    "salesRepCustomers": {
+      "totalCount": 42,
+      "items": [
+        {
+          "organizationId": "7b8c1f2a3d4e5f60",
+          "organizationName": "Acme Industrial Supplies",
+          "iconUrl": "https://media.example.com/orgs/acme.png",
+          "address": {
+            "line1": "482 Warehouse Ave",
+            "city": "Columbus",
+            "regionName": "Ohio",
+            "postalCode": "43004",
+            "countryCode": "US"
+          },
+          "lastOrder": {
+            "number": "SO-2026-004821",
+            "createdDate": "2026-07-28T14:10:00Z",
+            "status": "Processing",
+            "total": { "amount": 4820.00, "formattedAmount": "$4,820.00", "currency": { "code": "USD" } },
+            "itemsCount": 7
+          }
+        }
+      ]
     }
   }
 }
 ```
+
+</div>
 
 <br>
 <br>

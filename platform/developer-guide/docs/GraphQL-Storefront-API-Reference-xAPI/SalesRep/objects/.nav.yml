@@ -1,5 +1,10 @@
 title: Objects
 nav:
+  - SalesRepContactType: SalesRepContactType.md
+  - SalesRepCustomerType: SalesRepCustomerType.md
+  - SalesRepCustomerDetailsType: SalesRepCustomerDetailsType.md
+  - SalesRepOrderType: SalesRepOrderType.md
+  - SalesRepAddressType: SalesRepAddressType.md
   - CustomerOrderStatisticsType: CustomerOrderStatisticsType.md
   - CustomerOrderStatisticsPeriodType: CustomerOrderStatisticsPeriodType.md
   - CustomerOrderStatisticsComparisonType: CustomerOrderStatisticsComparisonType.md
@@ -14,3 +19,4 @@ nav:
   - SalesRepOrderFilterRuleType: SalesRepOrderFilterRuleType.md
   - SalesRepCartFilterRuleType: SalesRepCartFilterRuleType.md
   - SalesRepCustomerFilterRuleType: SalesRepCustomerFilterRuleType.md
+  - SalesRepCommunicationResultType: SalesRepCommunicationResultType.md

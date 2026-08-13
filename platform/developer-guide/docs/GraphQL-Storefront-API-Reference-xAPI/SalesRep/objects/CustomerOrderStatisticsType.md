@@ -15,6 +15,6 @@ This type reports aggregated order statistics for a customer organization. Selec
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../queries/salesRepCustomerFilterRules">← salesRepCustomerFilterRules query</a>
+    <a href="../SalesRepAddressType">← SalesRepAddressType</a>
     <a href="../CustomerOrderStatisticsPeriodType">CustomerOrderStatisticsPeriodType →</a>
 </div>

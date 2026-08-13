@@ -12,9 +12,11 @@ This query returns a single customer information card for an organization the re
 
 | Possible return | Description |
 |-----------------|-------------|
-| Customer card | The organization's `organizationId`, `organizationName`, `accountType`, `iconUrl`, `phone`, a structured `address`, and the `primaryContact` (`fullName`, `emails`, `phones`). |
+| [`SalesRepCustomerDetailsType`](../objects/SalesRepCustomerDetailsType.md) | A single customer's information card. |
 
 ## Example
+
+<div class="grid" markdown>
 
 ```graphql title="Query"
 {
@@ -39,6 +41,34 @@ This query returns a single customer information card for an organization the re
   }
 }
 ```
+
+```json title="Return"
+{
+  "data": {
+    "salesRepCustomer": {
+      "organizationId": "7b8c1f2a3d4e5f60",
+      "organizationName": "Acme Industrial Supplies",
+      "accountType": "Customer",
+      "iconUrl": "https://media.example.com/orgs/acme.png",
+      "phone": "+1-800-555-1234",
+      "address": {
+        "line1": "482 Warehouse Ave",
+        "city": "Columbus",
+        "regionName": "Ohio",
+        "postalCode": "43004",
+        "countryCode": "US"
+      },
+      "primaryContact": {
+        "fullName": "Dana Whitfield",
+        "emails": ["dana.whitfield@acme.example.com"],
+        "phones": ["+1-614-555-0199"]
+      }
+    }
+  }
+}
+```
+
+</div>
 
 <br>
 <br>

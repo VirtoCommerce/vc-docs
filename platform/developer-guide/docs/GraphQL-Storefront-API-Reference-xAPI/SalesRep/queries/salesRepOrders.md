@@ -16,9 +16,11 @@ This query returns the orders the rep created for their customers, filterable an
 
 | Possible return | Description |
 |-----------------|-------------|
-| Order connection | A paged list of the orders the rep created, each with `id`, `number`, `createdDate`, `status`, `total`, and `itemsCount`. |
+| [`SalesRepOrderType`](../objects/SalesRepOrderType.md) | A paged list of the orders the rep created for their customers. |
 
 ## Example
+
+<div class="grid" markdown>
 
 ```graphql title="Query"
 {
@@ -41,6 +43,36 @@ This query returns the orders the rep created for their customers, filterable an
   }
 }
 ```
+
+```json title="Return"
+{
+  "data": {
+    "salesRepOrders": {
+      "totalCount": 128,
+      "items": [
+        {
+          "id": "c3d4e5f607182930",
+          "number": "SO-2026-004821",
+          "createdDate": "2026-07-28T14:10:00Z",
+          "status": "Processing",
+          "total": { "amount": 4820.00, "formattedAmount": "$4,820.00", "currency": { "code": "USD" } },
+          "itemsCount": 7
+        },
+        {
+          "id": "d4e5f60718293041",
+          "number": "SO-2026-004799",
+          "createdDate": "2026-07-21T09:32:00Z",
+          "status": "Completed",
+          "total": { "amount": 1290.50, "formattedAmount": "$1,290.50", "currency": { "code": "USD" } },
+          "itemsCount": 3
+        }
+      ]
+    }
+  }
+}
+```
+
+</div>
 
 <br>
 <br>

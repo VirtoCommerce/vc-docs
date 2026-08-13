@@ -13,7 +13,7 @@ This query returns the filters available for the orders list and order statistic
 
 | Possible return | Description |
 |-----------------|-------------|
-| [`SalesRepOrderFilterRuleType`](../objects/SalesRepOrderFilterRuleType.md) | The available order filters. |
+| [`SalesRepOrderFilterRuleType`](../objects//SalesRepOrderFilterRuleType.md) | The available order filters. |
 
 ## Example
 
