@@ -19,6 +19,8 @@
   {
     "version": "stable11",
     "title": "stable11",
-    "aliases": []
+    "aliases": [
+      "stable10"
+    ]
   }
 ]
