@@ -2115,11 +2115,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#edit-lists" class="md-nav__link">
-        Edit lists
+    <a href="#manage-lists" class="md-nav__link">
+        Manage lists
     </a>
 
     <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Manage lists">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#share-lists-with-customers" class="md-nav__link">
+        Share lists with customers
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
     
 </li>
         
@@ -3003,11 +3019,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#edit-lists" class="md-nav__link">
-        Edit lists
+    <a href="#manage-lists" class="md-nav__link">
+        Manage lists
     </a>
 
     <!-- Render nested item list -->
+    
+    <nav class="md-nav" aria-label="Manage lists">
+        <ul class="md-nav__list">
+            
+            <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#share-lists-with-customers" class="md-nav__link">
+        Share lists with customers
+    </a>
+
+    <!-- Render nested item list -->
+    
+</li>
+            
+        </ul>
+    </nav>
     
 </li>
         
@@ -3032,7 +3064,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2026 07:15:30 UTC">August 13, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3055,6 +3087,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h1>
 <p>The lists help users save items they are interested in for future consideration. The <strong>Lists</strong> section contains all the product lists created by the user. You can also quickly access the <strong>Lists</strong> section through the <strong>Lists</strong> button in the top menu. </p>
 <p><img alt="Lists" src="../../media/lists.png" style="display: block; margin: 0 auto;" width="800" /></p>
+<h2 id="manage-lists">Manage lists<a class="headerlink" href="#manage-lists" title="Permanent link">&para;</a></h2>
 <p>In the <strong>Lists</strong> section, you can:</p>
 <ul>
 <li>Create new lists.</li>
@@ -3066,7 +3099,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li>Private (no sharing link).</li>
 <li>Organization (shared within organization members).</li>
-<li>Anyone (readonly) (shared via public view-only link):</li>
+<li>Anyone (readonly) (shared via public view-only link).</li>
+<li><a href="#share-lists-with-customers">Customer (shared with sales rep's customers)</a>:</li>
 </ul>
 <div class="grid cards" markdown>
 <ul>
@@ -3099,20 +3133,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Purchase list items separately from cart. This allows customers to manage and purchase items from a list without affecting their shopping cart.</li>
 </ul>
 <p><img alt="list management" src="../../media/list-management.png" /></p>
-<h2 id="edit-lists">Edit lists<a class="headerlink" href="#edit-lists" title="Permanent link">&para;</a></h2>
-<p>To edit a list:</p>
+<h3 id="share-lists-with-customers">Share lists with customers<a class="headerlink" href="#share-lists-with-customers" title="Permanent link">&para;</a></h3>
+<p>Sales reps can share lists with their customers individually:</p>
 <ol>
-<li>Click <img alt="wheel" src="../../media/wheel.png" width="20" /> to the right of the list name.</li>
-<li>In the popup menu, click <strong>Edit</strong> to open the list settings.</li>
+<li>Select <strong>Customer</strong> from the sharing options dropdown.</li>
+<li>Select a customer to share the list with from the dropdown that appears. If the list was previously shared with another customer, that customer will loos access to it.</li>
+<li>Optionally, add a message. If you don't, the customer will receive a default message.</li>
+<li>Check the options for sending the list - email or push notification:</li>
 <li>
-<p>Update the list name, its description, or configure privacy settings:</p>
-<p><img alt="List settings" src="../../media/list-settings.png" style="display: block; margin: 0 auto;" width="500" /></p>
-</li>
-<li>
-<p>Click <strong>Save</strong> to save the changes.</p>
+<p>Click <strong>SAVE</strong> to send the list to the customer.</p>
+<p><img alt="Share list with customer" src="../../media/share-list-with-customer.png" style="display: block; margin: 0 auto;" width="400" /></p>
 </li>
 </ol>
-<p>You modifications have been applied.</p>
+<p>The customer receives the notification:</p>
+<p><img alt="Received notification" src="../../media/received-notification.png" style="display: block; margin: 0 auto;" /></p>
 <p><br>
 <br></p>
 <hr />
