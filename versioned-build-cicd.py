@@ -10,6 +10,21 @@ import subprocess
 import shutil
 import argparse
 import json
+import re
+import shlex
+
+
+def derive_title(version):
+    """Derive the version-selector title from a version slug.
+
+    Slugs are URL-safe (no spaces); the dropdown label is prettier.
+    "stable11" -> "Stable 11". Anything that does not match the
+    stable<N> pattern keeps mike's default (title == slug)."""
+    m = re.fullmatch(r"stable(\d+)", version or "")
+    if m:
+        return f"Stable {m.group(1)}"
+    return None
+
 
 def run_command(cmd, check=True, cwd=None):
     """Run shell command and return result"""
@@ -108,10 +123,21 @@ def main():
         print(f"  Deploying {subsite} version {version}...")
 
         # Build mike command
+        # --title: without it mike labels the version with the raw slug
+        # ("stable11") instead of the pretty label the selector shows for
+        # every other version ("Stable 11").
+        # --alias-type=redirect: this version carries the stable10 alias, which
+        # exists as redirect stubs. Redeploying without this would let mike
+        # recreate that alias as a symlink, which the serving layer cannot
+        # follow, breaking every published /stable10/ link.
         mike_cmd = [
             "mike", "deploy", "-F", config, "--deploy-prefix", subsite,
-            "--update-aliases", version
+            "--alias-type=redirect",
         ]
+        title = derive_title(version)
+        if title:
+            mike_cmd += ["--title", title]
+        mike_cmd += ["--update-aliases", version]
 
         # Add latest alias if requested
         if args.set_as_latest:
@@ -121,7 +147,10 @@ def main():
         mike_cmd.append("--push")
 
         # Execute mike deploy
-        result = run_command(" ".join(mike_cmd), check=False)
+        # Quote each token: run_command uses shell=True, and the title
+        # ("Stable 11") contains a space that would otherwise split into a
+        # stray positional arg. shlex.quote also closes the injection surface.
+        result = run_command(" ".join(shlex.quote(a) for a in mike_cmd), check=False)
         if result.returncode != 0:
             print(f"❌ Mike deploy failed for {subsite}: {result.stderr}")
             print("This might cause deployment issues!")
