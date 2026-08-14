@@ -20,7 +20,7 @@ This query allows you to retrieve a specific news article published on the Front
 
 <div class="grid" markdown>
 
-```json title="Query"
+```graphql title="Query"
 {
   newsArticle(
     id: "4ae1bb12-fd8f-4dcf-be92-9d5ad50b2a62"

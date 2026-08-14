@@ -1,8 +1,8 @@
-# Overview
+# GraphiQL
 
 GraphiQL is an interactive IDE for exploring and testing GraphQL APIs. It allows developers to inspect schemas, execute queries and mutations, and receive immediate feedback. Virto Commerce provides developers the flexibility to work with a fully integrated API for the entire Platform or with tailored APIs for specific modules.
 
-## GraphiQL
+## Enable GraphiQL
 
 By default, GraphiQL is disabled. To enable it, configure the following setting in the **appsettings.json** file:
 
@@ -39,7 +39,7 @@ By default, GraphiQL is disabled. To enable it, configure the following setting 
         ??? Example "View sample"
             ```json
             {
-                "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkM5QjVEMTJENjNDREI5Qzg5RTk1NEVCNTcyRjdERkFBQTNFRjgyNEMiLCJ4NXQiOiJ5YlhSTFdQTnVjaWVsVTYxY3ZmZnFxUHZna3ciLCJ0eXAiOiJhdCtqd3QifQ.eyJuYW1lIjoiMWViMmZhOGFjNjU3NDU0MWFmZGI1MjU4MzNkYWRiNDYiLCJzdWIiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluQHZjLWRlbW9zdG9yZS5jb20iLCJyb2xlIjoiX19hZG1pbmlzdHJhdG9yIiwibWVtYmVySWQiOiIiLCJvaV9hdV9pZCI6ImE3M2FkMzU3LTZlMTMtNDIxOS1hMzJmLTBhOWJiNjM4NmEyZSIsIm9pX3Rrbl9pZCI6ImE1YjA4ODQ5LWI1Y2MtNDAyZi04YTJmLTNjZDljYTQyMmJjNiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsInNjb3BlJbzSZkNLe_3pHA2zf_nPQBCwbum_wYPTbOEHNap-A"
+                "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.<payload>.<signature>"
             }
             ```
 
@@ -91,6 +91,6 @@ Similarly, you can access other partial schemas by adding the appropriate slugs 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../tools-overview">← Tools to explore GraphQL</a>
-    <a href="../postman">Postman  →</a>
+    <a href="../tools-overview">← Tools to explore GraphQL </a>
+    <a href="../postman">Postman →</a>
 </div>

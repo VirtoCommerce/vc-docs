@@ -1,4 +1,4 @@
-# Set Up Environment For Working With xAPI
+# Get Started
 
 This section explains how to prepare your environment for testing xAPI.
 
@@ -24,30 +24,32 @@ This section explains how to prepare your environment for testing xAPI.
 
 To start using xAPI:
 
-1. Open the Platform and go to **Settings**.
+1. In the Platform, open **Settings**.
 1. Select **Catalog**.
 1. Select **Search**.
-1. Enable **Store serialized catalog objects in index** option:
+1. Enable the **Store serialized catalog objects in index** option:
 
     ![Catalog-enabled](media/catalog-index-enabled.png){: style="display: block; margin: 0 auto;" }
 
-1. Rebuild index.
+1. Rebuild the index.
 
-## Test environment
+xAPI is now configured and ready for testing.
+
+## Make your first API call
 
 !!! note
     If the xAPI module is not installed out-of-the-box, you can [install it](https://github.com/VirtoCommerce/vc-module-x-api) on the Platform (version 3.0) or higher by following [this guide](../Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code.md). Then restart the Platform.
 
-Open GraphQL UI playground in the browser by navigating to **http://{platform url}/ui/graphiql**, and run some sample queries.
+With the index built, run your first query in the GraphiQL playground:
 
-
-## Examples
-
+1. Open **http://{platform url}/ui/graphiql** in your browser.
+1. Paste one of the queries below into the left pane.
+1. Click the **Play** button to run the query and see the response on the right.
 
 === "Example 1"
     <div class="grid" markdown>
 
-    ```json title="Query 1"
+    ```graphql title="Query 1"
     query {
       product(
         storeId: "B2B-store"
@@ -86,7 +88,7 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
 
     <div class="grid" markdown>
 
-    ```json title="Query 2"
+    ```graphql title="Query 2"
     query {
       products(
         query: "test"
@@ -130,8 +132,8 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
               "seoInfo": {
                 "metaDescription": ""
               }
-            },
-            // more items...
+            }
+          ]
         }
       }
     }
@@ -141,26 +143,11 @@ Open GraphQL UI playground in the browser by navigating to **http://{platform ur
 
 
 
+You have now made your first xAPI call.
+
 ## Authorization and token usage
 
-Some GraphQL queries and mutations require additional authorization. To test the query or mutation without authorization errors:
-
-1. Open the [Virto Commerce API Docs (v1)](https://virtostart-demo-admin.govirto.com/docs/index.html) in your browser.
-1. **Authorize** as an administrator or manager.
-
-    ![Auth](media/authorization.png){: style="display: block; margin: 0 auto;" }
-
-1. Expand **VirtoCommerce platform/POST/connect/token** section to fill in the required fields with appropriate credentials, then click **Execute**.
-
-    ![token](media/token-field.png){: style="display: block; margin: 0 auto;" }
-
-1. Copy the token that appears in the field below:
-
-    ![token](media/token-code.png){: style="display: block; margin: 0 auto;" }
-
-Providing token in GraphiQL is described in the [GraphiQL](graphiql.md) section. 
-
-Providing token in Postman is described in the [Postman](postman.md#authorization-and-token-usage) section.
+Some GraphQL queries and mutations require a signed-in user. See [Authentication](authentication.md) for how to obtain a token and pass it in your requests.
 
 
 <br>
@@ -168,6 +155,6 @@ Providing token in Postman is described in the [Postman](postman.md#authorizatio
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../">← xAPI module overview </a>
-    <a href="../custom-module-creation">Creating xAPI module  →</a>
+    <a href="../overview">← Overview </a>
+    <a href="../authentication">Authentication →</a>
 </div>

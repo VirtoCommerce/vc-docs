@@ -66,7 +66,7 @@ To edit a previously added customer info:
 	| User groups | Add one or more user groups if needed, for example wholesaler or VIP. |
 	| Title | Enter the customer's job title. |
 	| Accounts | Manage the current user's accounts:<ul><li>Add</li><li>Link</li><li>Unlink</li><li>Delete</li></ul> |
-	| Organization membership | Assign the contact to an organization:<ul><li>Select the organization from the dropdown.</li><li>Add roles.</li><li>Lock or unlock the account.</li></ul> |
+	| Organization membership | Assign the contact to an organization:<ul><li>Select the organization from the dropdown.</li><li>Add roles.</li><li>Lock or unlock the account.</li></ul> See [Manage organization membership status](managing-organization-membership-status.md) to set this contact's status for one specific organization. |
 	| Emails | Add one or more email addresses. |
 	| Orders | View the list of orders the customer has submitted.<br> ![Customer orders](media/customer-orders-list.png) |
 	| Addresses | Add, edit, or delete the customer's billing and shipping addresses. |

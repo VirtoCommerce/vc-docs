@@ -17,6 +17,6 @@ All three send requests to the same `/graphql` endpoint and authenticate the sam
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../troubleshooting">← Troubleshooting</a>
+    <a href="../authentication">← Authentication </a>
     <a href="../graphiql">GraphiQL →</a>
 </div>

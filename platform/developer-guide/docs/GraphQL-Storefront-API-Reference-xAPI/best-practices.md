@@ -412,6 +412,6 @@ Install Apollo DevTools immediately - it's free and saves hours.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../multiregional-development">← Multiregional development </a>
-    <a href="../troubleshooting">Troubleshooting  →</a>
+    <a href="../curl">← Curl </a>
+    <a href="../x-api-extensions">Extending xAPI module →</a>
 </div>

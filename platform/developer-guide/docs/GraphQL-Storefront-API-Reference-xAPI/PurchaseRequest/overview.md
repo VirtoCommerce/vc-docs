@@ -13,6 +13,6 @@ Please [contact us](https://virtocommerce.com/request-demo) to start using our A
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../tools-overview">← Tools to explore GraphQL</a>
+    <a href="../../troubleshooting">← Errors and troubleshooting</a>
     <a href="../Queries/purchaseRequest">PurchaseRequest query →</a>
 </div>

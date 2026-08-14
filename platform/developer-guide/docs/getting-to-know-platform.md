@@ -23,7 +23,7 @@ You can integrate it into an existing architecture as a central system, or use i
 
     * Business logic is exposed entirely via APIs.
     * [REST](https://virtostart-demo-admin.govirto.com/docs/index.html) is commonly used for integrations and admin tools.
-    * [GraphQL](GraphQL-Storefront-API-Reference-xAPI/index.md) is optimized for frontend applications. It reduces overfetching, improving performance, and enabling tailored data retrieval.
+    * [GraphQL](GraphQL-Storefront-API-Reference-xAPI/overview.md) is optimized for frontend applications. It reduces overfetching, improving performance, and enabling tailored data retrieval.
 
 * [Extensibility](Extensibility/overview.md):
 

@@ -57,6 +57,9 @@ To add and edit statuses for various contact entities globally:
 
 Your modifications have been saved.
 
+!!! info
+    The **Organization membership statuses** entity governs the **Invite status** values offered on a contact's [organization memberships](managing-organization-membership-status.md#set-or-change-a-memberships-status).
+
 To edit store-specific statuses:
 
 1. Open **Stores** from the main menu.

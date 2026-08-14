@@ -1,18 +1,19 @@
-title: GraphQL API Reference (xAPI)
+title: GraphQL API Reference (xAPI Module)
 nav:
-  - Overview: index.md
-  - Setting Up Environment For Working With xAPI: getting-started.md
-  - Extending xAPI Module: x-api-extensions.md
-  - Creating Custom xAPI Module: custom-module-creation.md
-  - Updating xAPI Modules: update-xapi-modules.md
-  - Multiregional Development: multiregional-development.md
-  - Best Practices: best-practices.md
-  - Troubleshooting: troubleshooting.md
+  - Overview: overview.md
+  - Getting Started: getting-started.md
+  - Authentication: authentication.md
   - Tools to Explore GraphQL:
       - Overview: tools-overview.md
       - GraphiQL: graphiql.md
       - Postman: postman.md
       - Curl: curl.md
+  - Best Practices: best-practices.md
+  - Extending xAPI Module: x-api-extensions.md
+  - Creating Custom xAPI Module: custom-module-creation.md
+  - Updating xAPI Modules: update-xapi-modules.md
+  - Multiregional Development: multiregional-development.md
+  - Errors and Troubleshooting: troubleshooting.md
   - AI Document Processing: PurchaseRequest
   - Back-in-Stock: Back-in-stock
   - xCart: Cart

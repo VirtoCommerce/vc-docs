@@ -32,7 +32,7 @@ Virto Commerce currently provides two types of API:
 
 * [REST](https://virtostart-demo-admin.govirto.com/docs/index.html): Enables access to module business functionality, i.e. all CRUD operations and business logic are accessible via Rest API.
 
-* [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/index.md#graphql-core-ideas): A new generation of Business API for client applications, it provides you with additional capabilities. 
+* [GraphQL](../GraphQL-Storefront-API-Reference-xAPI/overview.md#graphql-core-components): A new generation of Business API for client applications, it provides you with additional capabilities. 
 
 We also support two types of event providers:
 

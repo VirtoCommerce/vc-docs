@@ -125,6 +125,6 @@ A mutation follows the same shape, using the command base types:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../getting-started">← Setting up environment </a>
-    <a href="../x-api-extensions">Extending xAPI module  →</a>
+    <a href="../x-api-extensions">← Extending xAPI module </a>
+    <a href="../update-xapi-modules">Updating xAPI modules →</a>
 </div>

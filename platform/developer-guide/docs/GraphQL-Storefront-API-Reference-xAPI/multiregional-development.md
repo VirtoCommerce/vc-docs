@@ -33,5 +33,5 @@ This is one of the key reasons multiregional routing was difficult to implement 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../update-xapi-modules">← Updating xAPI modules </a>
-    <a href="../best-practices">Best practices  →</a>
+    <a href="../troubleshooting">Errors and troubleshooting →</a>
 </div>

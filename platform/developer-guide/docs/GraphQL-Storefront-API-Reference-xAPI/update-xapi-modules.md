@@ -383,6 +383,6 @@ Deprecated fields and mutations were removed to reduce redundancy and ensure sch
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../x-api-extensions">← Extending xAPI module </a>
-    <a href="../multiregional-development">Multiregional development  →</a>
+    <a href="../custom-module-creation">← Creating custom xAPI module </a>
+    <a href="../multiregional-development">Multiregional development →</a>
 </div>

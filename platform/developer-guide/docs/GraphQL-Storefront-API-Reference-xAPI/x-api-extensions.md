@@ -2,7 +2,7 @@
 
 The xAPI offers default GraphQL schemas for objects, queries, and mutations. However, as every project has unique requirements, it's impossible to anticipate and include them all in the base schema. Fortunately, the xAPI provides extension points that allow you to modify the baseline behavior and data structures. In this article, we explore the key extension points and techniques available for customizing your projects.
 
-In addition to the extension points that Platform provides, the xAPI project has the following main [extensions points](https://virtocommerce.com/docs/latest/fundamentals/extensibility/overview/). However, there is no opportunity to extend AutoMapper's profiles using `AbstractTypeFactory<>` type.
+In addition to the [extension points that Platform provides](../Extensibility/overview.md), the xAPI project has the following main extension points. However, there is no opportunity to extend AutoMapper's profiles using `AbstractTypeFactory<>` type.
 
 [![Sample code](media/sample_code.png)](https://github.com/VirtoCommerce/vc-module-experience-api/tree/dev/samples/VirtoCommerce.Exp.ExtensionSamples)
 
@@ -105,7 +105,6 @@ Implementation steps:
 1. Implement the field modifications. Inside `ExecuteAsync`, locate the target graph type using `schema.FindType<T>()`, then use `FieldCreator.CreateFieldAsync` to define the new field and add, remove, or modify fields on the type.
 1. Register the hook. In **module.cs**, register your hook inside the `GraphQLBuilder` block using `builder.AddGraphTypeHook<YourHook>()`, before calling `builder.AddSchema(...)`.
 
-
 ### Use case
 
 * The **White Labeling** module uses `IGraphTypeHook` to inject `whiteLabelingSettings` into `PageContextResponseType` without requiring the xFrontend module to have any knowledge of white labeling. The xFrontend module defines and owns `PageContextResponseType`; the White Labeling module extends it independently, keeping the two modules fully decoupled.
@@ -161,9 +160,7 @@ To extend a field of type `InputPersonalDataType`:
     }
     ```
 
-
 1. Override the type in **module.cs**: In your module initialization code, replace the original type mapping with your new extended type:
-
 
     ```csharp title="module.cs"
     using VirtoCommerce.XapiModule.Core.Infrastructure;
@@ -181,23 +178,6 @@ To extend a field of type `InputPersonalDataType`:
     ```
 
 The `personalData` field (of type `InputPersonalDataType`) will now include the new `gender` field.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Extend query results
 
@@ -254,7 +234,6 @@ Let’s suppose that our object is mapped to a connection type schema which give
     {
         public string Type { get; set; }
     }
-
 
     public class BannersType : ObjectGraphType<Banner>
     {
@@ -364,7 +343,6 @@ In the example above, two related components (a custom type and an extended quer
 * And in the project’s package (e.g., NuGet) references.
 
 The original module first registers the custom type in the schema, and the dependent module uses this type to extend or override the connection type. If a new module needs to override both the custom type and the extended query builder with its own implementations, it should declare a dependency on the module containing these components. This ensures a proper dependency chain for GraphQL type registration and overrides, avoiding issues with type resolution or loading order.
-
 
 ## Extend validation logic/ replace validators
 
@@ -491,6 +469,6 @@ To replace an existing command with your implementation:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../custom-module-creation">← Creating xAPI module </a>
-    <a href="../update-xapi-modules">Updating xAPI modules  →</a>
+    <a href="../best-practices">← Best practices </a>
+    <a href="../custom-module-creation">Creating custom xAPI module →</a>
 </div>

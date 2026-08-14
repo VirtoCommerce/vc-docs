@@ -1,4 +1,4 @@
-# GraphQL API call from Postman
+# Postman
 Many developers use both Postman and GraphiQL to work with GraphQL based on the specific tasks they need to accomplish. Postman provides a wide range of tools for creating, sending, and tracking requests to APIs. Postman allows you to create collections of requests, automate API testing, set up environments, work with variables, create scripts for more complex tests. This guide explains how to make GraphQL API calls using Postman. 
 
 Our instruction contains fundamental guidelines. For more information, refer to the extensive [Postman guide](https://learning.postman.com/docs/introduction/overview/). 
@@ -9,7 +9,7 @@ Exploring GraphQL via Postman includes:
 * [Creating environments.](#create-environment)
 * [Using tokens.](#authorization-and-token-usage)
 * [Building queries](#build-queries) and [mutations.](#build-mutations)
-* [Use variables.](#use-variables)
+* [Preset variables.](#preset-variables)
 
 ## Import GraphQL schemas from GraphiQL
 
@@ -52,7 +52,7 @@ This example illustrates how query responses can be adapted to meet specific req
     * Images ids.
     * Descriptions.
 
-    ```json
+    ```graphql
     query products ($after: String, $first: Int, $storeId: String!, $userId: String, $currencyCode: String, $cultureName: String, $query: String, $filter: String, $fuzzy: Boolean, $fuzzyLevel: Int, $facet: String,   
         $sort: String, $productIds: [String]) {
         products (after: $after, first: $first, storeId: $storeId, userId: $userId, currencyCode: $currencyCode, cultureName: $cultureName, query: $query, filter: $filter, fuzzy: $fuzzy, fuzzyLevel: $fuzzyLevel, 
@@ -170,11 +170,11 @@ In the **Query** tab, let's build a [requestRegistration](Profile/Mutations/requ
 
 1. Click **requestRegistration** and fill in the following fields:
 
-    ![mutation](media/requestRegistration.png)
+    ![mutation](media/requestRegistration.png){: style="display: block; margin: 0 auto;" }
 
 1. The resulting mutation looks as follows:
 
-    ```json
+    ```graphql
     mutation RequestRegistration {
         requestRegistration(
             command: {
@@ -209,13 +209,13 @@ In Postman, you can preset frequently used variables to streamline the process o
 1. Click **Environments** in the sidebar to select the required environment.
 1. Add frequently used variables and their values.
 
-    ![variables](media/setting-variables.png)
+    ![variables](media/setting-variables.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** to save the changes.
 
 Now you do not need to enter the values for each query and mutation. Enter preset variables in double curly brackets, e.g. **{{StoreID}}**.
 
-![preset variables](media/preset-variables.png)
+![preset variables](media/preset-variables.png){: style="display: block; margin: 0 auto;" }
 
 !!! info
     Some variables can be obtained from other queries. For example, you can retrieve the user ID by executing the `createUser` mutation, and to obtain the cart ID, you can use the `cart` query.
@@ -226,13 +226,13 @@ You can set variables programmatically in your request scripts. For more informa
 
 1. Execute the following query and provide a variable (e.g., `AdminToken`) to save the response value to in the **Tests** tab. 
 
-    ![token](media/token-script.png)
+    ![token](media/token-script.png){: style="display: block; margin: 0 auto;" }
 
 1. In the **Authorization** tab, set the **Token** field as **{{AdminToken}}**.
 
-    ![AdminToken](media/AdminToken.png)
+    ![AdminToken](media/AdminToken.png){: style="display: block; margin: 0 auto;" }
 
-Now you can use your token as a variable.
+Now, you can use your token as a variable.
 
 
 
@@ -242,5 +242,5 @@ Now you can use your token as a variable.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../graphiql">← GraphiQL </a>
-    <a href="../curl">Curl  →</a>
+    <a href="../curl">Curl →</a>
 </div>

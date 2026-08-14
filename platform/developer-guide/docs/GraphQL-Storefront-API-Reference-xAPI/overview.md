@@ -13,6 +13,12 @@ It is closely associated with a particular user or touch point experience and en
 
     ![Readmore](media/readmore.png){: width="25"} [Migration to new xAPI modules](../Tutorials-and-How-tos/How-tos/migration-to-new-xapi-modules.md)
 
+## Architecture
+
+The xAPI module sits between the Frontend and the Platform, acting as a GraphQL backend for frontend (BFF). It exposes a single `/graphql` endpoint and one merged schema. Reads are served from the search index, while writes and business logic are delegated to the Platform.
+
+![xAPI module architecture](media/xAPI-module-architecture.png){: style="display: block; margin: 0 auto;" }
+
 ## GraphQL vs REST
 
 GraphQL is a an API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
@@ -162,5 +168,5 @@ The xAPI project provides the following major features:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../Platform-Manager/style-guide">← Platform manager </a>
-    <a href="../GraphQL-Storefront-API-Reference-xAPI/getting-started">Setting up environment for working with xAPI  →</a>
+    <a href="../getting-started">Getting started →</a>
 </div>
