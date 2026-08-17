@@ -65,5 +65,4 @@ extra_css:
 extra_javascript:
     - assets/scripts/version-redirect.js
     - assets/scripts/version-selector-handler.js
-    - assets/scripts/scripts-loader.js
     - assets/scripts/scroll-menu.js

@@ -6,6 +6,11 @@ This guide gets you from a fresh machine to a running Virto Commerce solution in
 * [Configure your own customizations.](#configure-your-custom-solution)
 * [(Optionally) contribute back.](#contribute-optionally) 
 
+!!! tip "AI help at every step"
+    * Ask **Virto OZ** for documentation-grounded answers.
+    * Install **Claude Code** with **Context7** for instant code changes.
+    * Add **llms.txt** to your prompts for zero-install documentation grounding.
+
 ![Quick start](media/quick-start.png){: style="display: block; margin: 0 auto;" }
 
 ## Install and try locally
