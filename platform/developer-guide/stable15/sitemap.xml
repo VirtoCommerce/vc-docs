@@ -217,30 +217,6 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Background-Jobs/configuration/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Background-Jobs/creating-background-jobs/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Background-Jobs/extensibility/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Background-Jobs/map-reduce/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Background-Jobs/overview/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Background-Jobs/recurring-jobs/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Caching/01-overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -581,10 +557,6 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Security/authorization/restrict-admin-ui-access/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Security/authorization/scope-based-permissions/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -618,30 +590,6 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/Testing/testing/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/UCP/build-and-test/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/UCP/configuration/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/UCP/mcp-server/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/UCP/overview/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/UCP/quickstart/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Fundamentals/UCP/web-api/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
@@ -701,7 +649,7 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/authentication/</loc>
+         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
@@ -726,10 +674,6 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/multiregional-development/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
@@ -2481,146 +2425,6 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/overview/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/mutations/sendCustomerCommunication/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/CustomerCartStatisticsPeriodType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/CustomerCartStatisticsType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/CustomerOrderStatisticsComparisonType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/CustomerOrderStatisticsPeriodType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/CustomerOrderStatisticsType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepAddressType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCartFilterRuleType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCommunicationResultType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepContactType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerCountsComparisonType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerCountsPeriodType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerCountsType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerDetailsType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerFilterRuleType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepCustomerType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepOrderFilterRuleType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepOrderType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepTopSellerFilterRuleType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepTopSellerSortRuleType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/objects/SalesRepTopSellerType/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/customerSalesReps/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCartFilterRules/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCustomer/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCustomerCartStatistics/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCustomerCounts/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCustomerFilterRules/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCustomerOrderStatistics/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepCustomers/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepOrderFilterRules/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepOrders/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepTopSellerFilterRules/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepTopSellerSortRules/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/SalesRep/queries/salesRepTopSellers/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/GraphQL-Storefront-API-Reference-xAPI/Shipping/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -2921,10 +2725,6 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Tutorials-and-How-tos/How-tos/extending-pricing-module/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Tutorials-and-How-tos/How-tos/feature-flags/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -2953,10 +2753,6 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Tutorials-and-How-tos/How-tos/replacing-automapper-with-explicit-mappers/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -2982,10 +2778,6 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Tutorials-and-How-tos/How-tos/upgrading-to-net8/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
@@ -3086,10 +2878,6 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/custom-apps-development/vc-shell/components/data-display/vc-image-tile/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/custom-apps-development/vc-shell/components/data-display/vc-scheduler/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
@@ -3317,10 +3105,6 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/custom-apps-development/vc-shell/components/navigation/vc-popover/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/custom-apps-development/vc-shell/composables/blade-navigation/blade-nav-composables/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -3526,10 +3310,6 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/custom-apps-development/vc-shell/composables/utilities/useFunctions/</loc>
-         <lastmod>2026-08-18</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.virtocommerce.org/platform/developer-guide/stable15/custom-apps-development/vc-shell/composables/utilities/useKeyboardShortcuts/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
