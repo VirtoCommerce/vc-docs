@@ -15,17 +15,17 @@
         <link rel="canonical" href="https://docs.virtocommerce.org/storefront/developer-guide/stable14/authentication/adding-sso-provider/">
       
       
-        <link rel="prev" href="../anonymous-authentication/">
+        <link rel="prev" href="../adding-google-as-sso-provider/">
       
       
-        <link rel="next" href="../adding-google-as-sso-provider/">
+        <link rel="next" href="../anonymous-authentication/">
       
       
       <link rel="icon" href="../../assets/icons/favicon.ico">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.5.27">
     
     
-<title>Authentication - Adding Azure AD (Entra ID) as SSO Provider - Frontend Dev Docs</title>
+<title>Authentication - Add Entra ID (Azure AD) as SSO Provider - Frontend Dev Docs</title>
 
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
@@ -1526,152 +1526,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Main navigation item with nested items -->
 
-
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_2"
-        type="checkbox"
-        id="__nav_2"
-        
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_2"
-          id="__nav_2_label"
-          tabindex="0"
-        >
-          Architecture
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <!-- Render link to index page + toggle -->
-      
-
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="1"
-        aria-labelledby="__nav_2_label"
-        aria-expanded="false"
-          aria-label="Architecture"
-      >
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
     <li class="md-nav__item">
       <a href="../../architecture/" class="md-nav__link">
-        Frontend Application Architecture
+        Architecture
       </a>
     </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../application-initialization/" class="md-nav__link">
-        Application Initialization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../modules-architecture/modules-architecture/" class="md-nav__link">
-        Modules Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../spa-architecture-for-seo-and-404-handling/" class="md-nav__link">
-        SPA Architecture for SEO and 404 Handling
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-    </nav>
-</li>
-
-  <!-- Currently active page -->
   
 
         
@@ -1714,8 +1573,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../update/" class="md-nav__link">
-        Update
+      <a href="../../merge/" class="md-nav__link">
+        Merge Updates
       </a>
     </li>
   
@@ -1736,75 +1595,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Main navigation item with nested items -->
 
+    <li class="md-nav__item">
+      <a href="../../migration/" class="md-nav__link">
+        Migration
+      </a>
+    </li>
+  
 
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_5"
-        type="checkbox"
-        id="__nav_5"
         
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
         
-          
         
-          
-        
-          
-        
-      
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_5"
-          id="__nav_5_label"
-          tabindex="0"
-        >
-          Customization and Development Accelerators
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+<!-- Color palette -->
 
-      <!-- Render link to index page + toggle -->
-      
+<!-- Render current and nested navigation items -->
 
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="1"
-        aria-labelledby="__nav_5_label"
-        aria-expanded="false"
-          aria-label="Customization and Development Accelerators"
-      >
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Customization and Development Accelerators
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
 
 <!-- Determine class according to state -->
 
@@ -1813,92 +1619,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../customization/overview/" class="md-nav__link">
-        Overview
+      <a href="../../migration-on-azure/" class="md-nav__link">
+        Migration on Azure Cloud
       </a>
     </li>
   
 
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_5_2"
-        type="checkbox"
-        id="__nav_5_2"
         
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
         
-          
         
-          
-        
-          
-        
-      
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_5_2"
-          id="__nav_5_2_label"
-          tabindex="0"
-        >
-          Customization
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+<!-- Color palette -->
 
-      <!-- Render link to index page + toggle -->
-      
+<!-- Render current and nested navigation items -->
 
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="2"
-        aria-labelledby="__nav_5_2_label"
-        aria-expanded="false"
-          aria-label="Customization"
-      >
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Customization
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
 
 <!-- Determine class according to state -->
 
@@ -1907,16 +1642,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../customization/customization-overview/" class="md-nav__link">
-        Overview
+      <a href="../../migration-on-local-machine/" class="md-nav__link">
+        Migrate on Local Machine
       </a>
     </li>
   
 
-            
-          
-            
-              
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
 
 <!-- Determine class according to state -->
 
@@ -1925,195 +1665,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../customization/visual-theme-customization/" class="md-nav__link">
-        Visual Theme Customization
+      <a href="../../spa-architecture-for-seo-and-404-handling/" class="md-nav__link">
+        SPA Architecture for SEO and 404 Handling
       </a>
     </li>
   
 
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../customization/functionality-customization/" class="md-nav__link">
-        Functionality Customization
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-    </nav>
-</li>
-
-  <!-- Currently active page -->
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_5_3"
-        type="checkbox"
-        id="__nav_5_3"
         
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
         
-          
         
-          
-        
-          
-        
-          
-        
-          
-        
-      
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_5_3"
-          id="__nav_5_3_label"
-          tabindex="0"
-        >
-          Development Accelerators
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+<!-- Color palette -->
 
-      <!-- Render link to index page + toggle -->
-      
+<!-- Render current and nested navigation items -->
 
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="2"
-        aria-labelledby="__nav_5_3_label"
-        aria-expanded="false"
-          aria-label="Development Accelerators"
-      >
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          Development Accelerators
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../customization/accelerators-overview/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../customization/accelerators-guidelines/" class="md-nav__link">
-        Guidelines for Using Accelerators
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../customization/localization/" class="md-nav__link">
-        Localization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../customization/texts-customization/" class="md-nav__link">
-        Tracking and Fixing Locales
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
 
 <!-- Determine class according to state -->
 
@@ -2126,24 +1692,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Storybook
       </a>
     </li>
-  
-
-            
-          
-        </ul>
-    </nav>
-</li>
-
-  <!-- Currently active page -->
-  
-
-            
-          
-        </ul>
-    </nav>
-</li>
-
-  <!-- Currently active page -->
   
 
         
@@ -2164,7 +1712,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../tests/" class="md-nav__link">
-        Test
+        Tests
       </a>
     </li>
   
@@ -2186,154 +1734,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../merge/" class="md-nav__link">
-        Merge
+      <a href="../../update/" class="md-nav__link">
+        Update
       </a>
     </li>
-  
-
-        
-        
-        
-        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-<!-- Color palette -->
-
-<!-- Render current and nested navigation items -->
-
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-
- <!-- Determine whether to render item as a section -->
- 
-
-<!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
- 
-      
-
-      <!-- Determine checked and indeterminate state -->
-      
-      
-    <!-- Active checkbox expands items contained within nested section -->
-    
-    
-    <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_8"
-        type="checkbox"
-        id="__nav_8"
-        
-    />
-    
-
-      <!-- Determine all nested items that are index pages -->
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-
-      <!-- Render toggle to expand nested items -->
-      
-        <label
-          class="md-nav__link"
-          for="__nav_8"
-          id="__nav_8_label"
-          tabindex="0"
-        >
-          Migration to Storefrontless Architecture
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <!-- Render link to index page + toggle -->
-      
-
-      <!-- Render nested navigation -->
-      <nav
-        class="md-nav"
-        data-md-level="1"
-        aria-labelledby="__nav_8_label"
-        aria-expanded="false"
-          aria-label="Migration to Storefrontless Architecture"
-      >
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Migration to Storefrontless Architecture
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../migration/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../migration-on-azure/" class="md-nav__link">
-        Migration on Azure Cloud
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../migration-on-local-machine/" class="md-nav__link">
-        Migration on Local Machine
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-    </nav>
-</li>
-
-  <!-- Currently active page -->
   
 
         
@@ -2371,9 +1775,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <input
         class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_9"
+        data-md-toggle="__nav_12"
         type="checkbox"
-        id="__nav_9"
+        id="__nav_12"
         checked
     />
     
@@ -2396,8 +1800,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <label
           class="md-nav__link"
-          for="__nav_9"
-          id="__nav_9_label"
+          for="__nav_12"
+          id="__nav_12_label"
           tabindex="0"
         >
           Authentication
@@ -2411,11 +1815,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <nav
         class="md-nav"
         data-md-level="1"
-        aria-labelledby="__nav_9_label"
+        aria-labelledby="__nav_12_label"
         aria-expanded="true"
           aria-label="Authentication"
       >
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Authentication
         </label>
@@ -2433,26 +1837,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../authentication-types/" class="md-nav__link">
-        Token-based Authentication
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../anonymous-authentication/" class="md-nav__link">
-        Anonymous Authentication
+      <a href="../adding-google-as-sso-provider/" class="md-nav__link">
+        Add Google as SSO Provider
       </a>
     </li>
   
@@ -2490,14 +1876,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Render table of contents, if not empty -->
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Adding Azure AD (Entra ID) as SSO Provider
+          Add Entra ID (Azure AD) as SSO Provider
         </label>
       
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
       >
-        Adding Azure AD (Entra ID) as SSO Provider
+        Add Entra ID (Azure AD) as SSO Provider
       </a>
 
       <!-- Show table of contents -->
@@ -2566,8 +1952,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../adding-google-as-sso-provider/" class="md-nav__link">
-        Adding Google as SSO Provider
+      <a href="../anonymous-authentication/" class="md-nav__link">
+        Anonymous Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../authentication-types/" class="md-nav__link">
+        Authentication Types
       </a>
     </li>
   
@@ -2614,9 +2018,253 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <input
         class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_10"
+        data-md-toggle="__nav_13"
         type="checkbox"
-        id="__nav_10"
+        id="__nav_13"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_13"
+          id="__nav_13_label"
+          tabindex="0"
+        >
+          Customization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_13_label"
+        aria-expanded="false"
+          aria-label="Customization"
+      >
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Customization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/accelerators-guidelines/" class="md-nav__link">
+        Guidelines for Using Accelerators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/accelerators-overview/" class="md-nav__link">
+        Development Accelerators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/customization-overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/functionality-customization/" class="md-nav__link">
+        Functionality Customization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/localization/" class="md-nav__link">
+        Frontend Localization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/texts-customization/" class="md-nav__link">
+        Track and Fix Locales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../customization/visual-theme-customization/" class="md-nav__link">
+        Visual Theme Customization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_14"
+        type="checkbox"
+        id="__nav_14"
         
     />
     
@@ -2639,8 +2287,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <label
           class="md-nav__link"
-          for="__nav_10"
-          id="__nav_10_label"
+          for="__nav_14"
+          id="__nav_14_label"
           tabindex="0"
         >
           Integrations
@@ -2654,11 +2302,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <nav
         class="md-nav"
         data-md-level="1"
-        aria-labelledby="__nav_10_label"
+        aria-labelledby="__nav_14_label"
         aria-expanded="false"
           aria-label="Integrations"
       >
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Integrations
         </label>
@@ -2676,44 +2324,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/google-analytics/ga-events/" class="md-nav__link">
-        Google Analytics Events
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../../integrations/prerender_io/" class="md-nav__link">
         Enhancing SEO with Prerender.io
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
-      <a href="../../integrations/builder-io/overview/" class="md-nav__link">
-        Builder.io
       </a>
     </li>
   
@@ -2746,9 +2358,327 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <input
         class="md-nav__toggle md-toggle"
-        data-md-toggle="__nav_10_4"
+        data-md-toggle="__nav_14_2"
         type="checkbox"
-        id="__nav_10_4"
+        id="__nav_14_2"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_14_2"
+          id="__nav_14_2_label"
+          tabindex="0"
+        >
+          Builder io
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="2"
+        aria-labelledby="__nav_14_2_label"
+        aria-expanded="false"
+          aria-label="Builder io"
+      >
+        <label class="md-nav__title" for="__nav_14_2">
+          <span class="md-nav__icon md-icon"></span>
+          Builder io
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/catalog-menu-intergration/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/category-page-integration/" class="md-nav__link">
+        Category page integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/footer-integration/" class="md-nav__link">
+        Footer integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/index-page-integration/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/overview/" class="md-nav__link">
+        Builder.io Integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/overview_outdated/" class="md-nav__link">
+        Builder.io Integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/builder-io/registering-custom-components/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_14_3"
+        type="checkbox"
+        id="__nav_14_3"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_14_3"
+          id="__nav_14_3_label"
+          tabindex="0"
+        >
+          Google analytics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="2"
+        aria-labelledby="__nav_14_3_label"
+        aria-expanded="false"
+          aria-label="Google analytics"
+      >
+        <label class="md-nav__title" for="__nav_14_3">
+          <span class="md-nav__icon md-icon"></span>
+          Google analytics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/google-analytics/ga-events/" class="md-nav__link">
+        Google Analytics Events
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_14_4"
+        type="checkbox"
+        id="__nav_14_4"
         
     />
     
@@ -2775,8 +2705,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <label
           class="md-nav__link"
-          for="__nav_10_4"
-          id="__nav_10_4_label"
+          for="__nav_14_4"
+          id="__nav_14_4_label"
           tabindex="0"
         >
           Storyblok
@@ -2790,11 +2720,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <nav
         class="md-nav"
         data-md-level="2"
-        aria-labelledby="__nav_10_4_label"
+        aria-labelledby="__nav_14_4_label"
         aria-expanded="false"
           aria-label="Storyblok"
       >
-        <label class="md-nav__title" for="__nav_10_4">
+        <label class="md-nav__title" for="__nav_14_4">
           <span class="md-nav__icon md-icon"></span>
           Storyblok
         </label>
@@ -2812,26 +2742,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Main navigation item with nested items -->
 
     <li class="md-nav__item">
-      <a href="../../integrations/storyblok/overview/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-
-<!-- Determine class according to state -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-    <li class="md-nav__item">
       <a href="../../integrations/storyblok/catalog-menu-integration/" class="md-nav__link">
-        Catalog Menu Integration
+        Integrate Catalog Menu
       </a>
     </li>
   
@@ -2849,7 +2761,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../integrations/storyblok/category-page-integration/" class="md-nav__link">
-        Category Page Integration
+        Integrate Category Page
       </a>
     </li>
   
@@ -2867,7 +2779,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../integrations/storyblok/footer-integration/" class="md-nav__link">
-        Footer Integration
+        Overview
       </a>
     </li>
   
@@ -2885,7 +2797,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../integrations/storyblok/index-page-integration/" class="md-nav__link">
-        Index Page Integration
+        Integrate Index Page
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../integrations/storyblok/overview/" class="md-nav__link">
+        Storyblok Integration
       </a>
     </li>
   
@@ -2903,7 +2833,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <li class="md-nav__item">
       <a href="../../integrations/storyblok/registering-custom-components/" class="md-nav__link">
-        Registering Custom Components
+        Register Custom Components
       </a>
     </li>
   
@@ -2915,6 +2845,234 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 
   <!-- Currently active page -->
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_15"
+        type="checkbox"
+        id="__nav_15"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_15"
+          id="__nav_15_label"
+          tabindex="0"
+        >
+          Modules architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_15_label"
+        aria-expanded="false"
+          aria-label="Modules architecture"
+      >
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Modules architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../modules-architecture/modules-architecture/" class="md-nav__link">
+        Modules Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+    </nav>
+</li>
+
+  <!-- Currently active page -->
+  
+
+        
+        
+        
+        <!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+<!-- Color palette -->
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+
+ <!-- Determine whether to render item as a section -->
+ 
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+ 
+      
+
+      <!-- Determine checked and indeterminate state -->
+      
+      
+    <!-- Active checkbox expands items contained within nested section -->
+    
+    
+    <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="__nav_16"
+        type="checkbox"
+        id="__nav_16"
+        
+    />
+    
+
+      <!-- Determine all nested items that are index pages -->
+      
+      
+        
+          
+        
+          
+        
+      
+
+      <!-- Render toggle to expand nested items -->
+      
+        <label
+          class="md-nav__link"
+          for="__nav_16"
+          id="__nav_16_label"
+          tabindex="0"
+        >
+          Vue js starter theme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <!-- Render link to index page + toggle -->
+      
+
+      <!-- Render nested navigation -->
+      <nav
+        class="md-nav"
+        data-md-level="1"
+        aria-labelledby="__nav_16_label"
+        aria-expanded="false"
+          aria-label="Vue js starter theme"
+      >
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Vue js starter theme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../vue-js-starter-theme/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+
+<!-- Determine class according to state -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+    <li class="md-nav__item">
+      <a href="../../vue-js-starter-theme/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
   
 
             
