@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/ai-helper/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/ai-helper/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/communication/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/communication/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/marketplace-products/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/marketplace-products/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/master-catalog/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/master-catalog/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/offers/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/offers/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/operator-orders/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/operator-orders/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/overview/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/quotes/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/quotes/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/registration-requests/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/registration-requests/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/state-machines/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/state-machines/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/virto-oz/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/virto-oz/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/Commission-fees-setup/dynamic-commission-fees/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Commission-fees-setup/dynamic-commission-fees/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/Commission-fees-setup/overview/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Commission-fees-setup/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/Commission-fees-setup/static-commission-fees/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Commission-fees-setup/static-commission-fees/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/Vendors-management/vendor-management/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Vendors-management/vendor-management/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/Vendors-management/vendor-onboarding/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Operator-portal/Vendors-management/vendor-onboarding/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/ai-assistant/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/ai-assistant/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/communication/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/communication/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/import/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/import/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/marketplace-products/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/marketplace-products/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/my-store/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/my-store/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/offers/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/offers/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/orders/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/orders/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/overview/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/products-management/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/products-management/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/quotes/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/quotes/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/marketplace/user-guide/stable15/Vendor-portal/rating-and-reviews/</loc>
+         <loc>https://docs.virtocommerce.org/marketplace/user-guide/latest/Vendor-portal/rating-and-reviews/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
 </urlset>
