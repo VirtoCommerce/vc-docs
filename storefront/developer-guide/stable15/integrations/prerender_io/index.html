@@ -544,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                     <a
                         class="mega-menu__menu-button "
-                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-stable-15"
+                        href="https://docs.virtocommerce.org/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10"
                         
                     >
                         
@@ -553,7 +553,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 style="background-image: url('assets/icons/fire.svg')"
                             ></div>
                         
-                        Upgrading to Stable 15
+                        Upgrading to .NET10
                     </a>
 
                 
@@ -2720,26 +2720,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#crawler-detection" class="md-nav__link">
-        Crawler detection
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#http-headers" class="md-nav__link">
-        HTTP headers
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
     <a href="#refresh-snapshots-after-deploy" class="md-nav__link">
         Refresh snapshots after deploy
     </a>
@@ -3125,26 +3105,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <!-- Table of contents item -->
 <li class="md-nav__item">
-    <a href="#crawler-detection" class="md-nav__link">
-        Crawler detection
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
-    <a href="#http-headers" class="md-nav__link">
-        HTTP headers
-    </a>
-
-    <!-- Render nested item list -->
-    
-</li>
-            
-            <!-- Table of contents item -->
-<li class="md-nav__item">
     <a href="#refresh-snapshots-after-deploy" class="md-nav__link">
         Refresh snapshots after deploy
     </a>
@@ -3209,7 +3169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 10:38:49 UTC">July 8, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 07:10:45 UTC">June 18, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -3232,10 +3192,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 id="enhancing-seo-with-prerenderio">Enhancing SEO with Prerender.io<a class="headerlink" href="#enhancing-seo-with-prerenderio" title="Permanent link">&para;</a></h1>
 <p>The current Virto Commerce Frontend Application uses the power of Single Page Applications (SPAs) to provide a unique, interactive, and fast user experience. However, while SPAs excel in user experience, they often pose challenges for search engines due to their dynamic nature. This dynamic behavior, which is a strength for user engagement, can become a hurdle in attracting organic traffic.</p>
 <p>To overcome these challenges and strike a balance between an engaging user experience and search engine optimization (SEO), <a href="http://prerender.io/">Prerender.io</a> represents as a valuable solution. Prerender.io generates pre-rendered HTML snapshots for SPAs, significantly improving SEO-friendliness and Web Vitals metrics. This integration doesn't require the adoption of complex Server-Side Rendering (SSR) frameworks like Next or Nuxt, preserving the simplicity of the presentation application. This guide explores how Prerender.io provides a straightforward yet highly effective solution to boost the visibility, performance, and overall experience of Vue.js SPAs.</p>
-<div class="admonition note">
-<p class="admonition-title">Preview feature</p>
-<p>Virto Cloud can run a self-hosted prerender service as a preview, instead of the Prerender.io cloud SaaS. The headers and behavior mirror the cloud service, but the authentication token and the recache API endpoint differ. On-demand recaching also requires a paid Prerender.io plan, such as Advanced or Enterprise.</p>
-</div>
 <h2 id="integration-with-virto-commerce-frontend-application">Integration with Virto Commerce Frontend Application<a class="headerlink" href="#integration-with-virto-commerce-frontend-application" title="Permanent link">&para;</a></h2>
 <p>In this guide, we describe the results of Prerender.io  integration with the vc-theme-b2b-vue. A practical example is our <a href="https://virtostart-demo-store.govirto.com/">site</a>, which is built on vc-theme-b2b-vue and uses the Prerender.io service.</p>
 <h3 id="configuration-details">Configuration details<a class="headerlink" href="#configuration-details" title="Permanent link">&para;</a></h3>
@@ -3247,86 +3203,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>To measure the impact of Prerender.io on performance, a PageSpeed analysis was conducted for a category listing page. The comparison involved assessing the performance with and without SSR page rendering through Prerender.io.</p>
 <p><img alt="comparison" src="../media/with-without-ssr-page.png" style="display: block; margin: 0 auto;" /></p>
 <h2 id="operating-prerender">Operating Prerender<a class="headerlink" href="#operating-prerender" title="Permanent link">&para;</a></h2>
-<p>Once Prerender serves cached snapshots to crawlers, a few operational areas come up regularly: how crawlers are detected, the headers exchanged, refreshing snapshots after a deploy, keeping private routes out of the cache, and verifying that bots and humans are routed correctly.</p>
-<h3 id="crawler-detection">Crawler detection<a class="headerlink" href="#crawler-detection" title="Permanent link">&para;</a></h3>
-<p>The reverse proxy identifies bots by matching the <code>User-Agent</code> header against a regex. Only matching agents are forwarded to Prerender. Everything else receives the SPA shell.</p>
-<p>The baseline is the <code>prerender-node</code> crawler list, which most Prerender proxies start from. Confirm the exact pattern in your deployment's rewrite rule, since it may differ:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>embedly|quora\ link\ preview|showyoubot|outbrain|pinterest\/0\.|pinterestbot|slackbot|vkShare|
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>W3C_Validator|whatsapp|redditbot|applebot|flipboard|tumblr|bitlybot|skypeuripreview|nuzzel|
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>discordbot|google\ page\ speed|qwantify|bitrix\ link\ preview|xing-contenttabreceiver|
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>chrome-lighthouse|telegrambot|google-inspectiontool)
-</code></pre></div>
-<p>This baseline predates AI crawlers, so it does not include agents such as GPTBot or ClaudeBot. Add them if AI-crawler indexing matters. To add a bot, append <code>|&lt;new-user-agent-fragment&gt;</code> before the closing parenthesis, then redeploy the proxy configuration and verify with the recipes under <a href="#verify-routing">Verify routing</a>.</p>
-<p>For Azure Application Gateway, the rewrite rule inspects the <code>User-Agent</code> and routes matches to the Prerender backend pool.</p>
-<p><br>
-<img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway">Setting up Prerender.io with Azure Application Gateway</a></p>
-<h3 id="http-headers">HTTP headers<a class="headerlink" href="#http-headers" title="Permanent link">&para;</a></h3>
-<p>The proxy authenticates to Prerender with a request header, and Prerender returns diagnostic headers on the response.</p>
-<p>The request header from the proxy to Prerender:</p>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-<th>Value</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>X-Prerender-Token</code></td>
-<td>The token from your Prerender.io account</td>
-<td>Authenticates the proxy to Prerender. Set it through the AGW rewrite set or the nginx <code>proxy_set_header</code>. Never expose it client-side.</td>
-</tr>
-</tbody>
-</table>
-<p>The response headers from Prerender to the bot or proxy:</p>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-<th>Example</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>x-prerender-cache</code></td>
-<td><code>HIT</code> or <code>MISS</code></td>
-<td>The snapshot was served from cache (<code>HIT</code>) or freshly rendered (<code>MISS</code>). It is absent on human responses, which is the primary signal that a request took the SPA path.</td>
-</tr>
-<tr>
-<td><code>x-prerender-cache-level</code></td>
-<td><code>L2</code></td>
-<td>The cache tier. <code>L1</code> is in-memory, <code>L2</code> is the persistent snapshot store.</td>
-</tr>
-<tr>
-<td><code>Cache-Control</code></td>
-<td><code>private, max-age=600, must-revalidate</code></td>
-<td>The downstream cache directive on prerendered responses. It governs CDN and browser reuse, separate from Prerender's internal snapshot TTL.</td>
-</tr>
-<tr>
-<td><code>x-response-time</code></td>
-<td><code>13.901</code> on a MISS, near <code>0</code> on a HIT</td>
-<td>The server-side render time in milliseconds.</td>
-</tr>
-</tbody>
-</table>
-<p>The rendered HTML also carries a snapshot timestamp. Inspect it to tell whether a snapshot is stale relative to a recent deploy:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;x-prerender-render-at&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;2026-06-05T10:22:47.000Z&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
+<p>Once Prerender serves cached snapshots to crawlers, three operational tasks come up regularly: refreshing snapshots after a deploy, keeping private routes out of the cache, and verifying that bots and humans are routed correctly.</p>
 <h3 id="refresh-snapshots-after-deploy">Refresh snapshots after deploy<a class="headerlink" href="#refresh-snapshots-after-deploy" title="Permanent link">&para;</a></h3>
 <p>Prerender caches each rendered page and does not automatically invalidate snapshots when you deploy a new frontend version. Until a snapshot expires or is recached, crawlers keep receiving the old HTML.</p>
-<p>The snapshot lifecycle:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>First bot hit   -&gt; MISS -&gt; Prerender renders (3-14 s) -&gt; snapshot stored -&gt; HTML returned
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Subsequent hit  -&gt; HIT  -&gt; snapshot served immediately (near-instant)
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Frontend deploy -&gt; cache does NOT auto-invalidate -&gt; bots see the old snapshot until recache or expiry
-</code></pre></div>
-<p>Snapshots are stored in two tiers, both returning <code>x-prerender-cache: HIT</code>. The <code>x-prerender-cache-level</code> header shows which tier served the response: <code>L1</code> in-memory or <code>L2</code> persistent. The <code>Cache-Control</code> directive on prerendered responses governs downstream CDN and browser reuse, not Prerender's internal snapshot TTL.</p>
 <p>To refresh a page immediately, call the Prerender <a href="https://docs.prerender.io/docs/6-api">Recache API</a> from your CI/CD pipeline after each deploy:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;prerenderToken&quot;: &quot;&lt;your-token&gt;&quot;, &quot;url&quot;: &quot;https://&lt;storefront&gt;/catalog/laptops&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>https://api.prerender.io/recache
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;prerenderToken&quot;: &quot;&lt;your-token&gt;&quot;, &quot;url&quot;: &quot;https://&lt;storefront&gt;/catalog/laptops&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>https://api.prerender.io/recache
 </code></pre></div>
 <p>To refresh many pages at once, replace <code>url</code> with a <code>urls</code> array (up to 1000 per request). Recaching only the pages that changed lets you keep a long cache expiration and still serve fresh content.</p>
 <div class="admonition note">
@@ -3340,22 +3223,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="/platform/user-guide/latest/store/custom-robot-txt">Custom robots.txt file</a></p>
 <h3 id="verify-routing">Verify routing<a class="headerlink" href="#verify-routing" title="Permanent link">&para;</a></h3>
 <p>Use the <code>x-prerender-cache</code> response header to confirm which path a request took:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Bot path: should return x-prerender-cache: HIT (or MISS on the first hit)</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>curl<span class="w"> </span>-sI<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;googlebot&quot;</span><span class="w"> </span>https://&lt;storefront&gt;/catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>x-prerender-cache
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Human path: the header is absent, confirming the request was served the SPA shell</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>curl<span class="w"> </span>-sI<span class="w"> </span>https://&lt;storefront&gt;/catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>x-prerender-cache
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Bot path: should return x-prerender-cache: HIT (or MISS on the first hit)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>curl<span class="w"> </span>-sI<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;googlebot&quot;</span><span class="w"> </span>https://&lt;storefront&gt;/catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>x-prerender-cache
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Human path: the header is absent, confirming the request was served the SPA shell</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>curl<span class="w"> </span>-sI<span class="w"> </span>https://&lt;storefront&gt;/catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>x-prerender-cache
 </code></pre></div>
 <p>A <code>MISS</code> triggers a fresh render that takes a few seconds; a <code>HIT</code> is served from cache near-instantly. To force a fresh render during testing without clearing the cache, append a throwaway query parameter, for example <code>?cachebust=1</code>. Each unique URL is a separate cache entry, so remove the parameter when testing real cached behavior. When you contact Prerender support about a request, include the <code>x-prerender-request-id</code> value from the response.</p>
-<p>To check when a snapshot was captured, read the timestamp meta tag from the rendered HTML:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;googlebot&quot;</span><span class="w"> </span>https://&lt;storefront&gt;/catalog/laptops<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>x-prerender-render-at
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Expected: &lt;meta rel=&quot;x-prerender-render-at&quot; content=&quot;2026-06-05T...&quot;&gt;</span>
-</code></pre></div>
-<p>To force a fresh render and measure MISS latency:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">time</span><span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;googlebot&quot;</span><span class="w"> </span><span class="s2">&quot;https://&lt;storefront&gt;/catalog/laptops?cachebust=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;HTTP %{http_code} | Time: %{time_total}s\n&quot;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Expected: HTTP 200 in 3-14 s on a MISS. Rerun without ?cachebust to confirm a near-instant HIT.</span>
-</code></pre></div>
 <p>Crawlers should also receive correct HTTP status codes, for example 404 for a removed product. </p>
 <p><br>
 <img alt="Readmore" src="../media/readmore.png" width="25" /> <a href="../../spa-architecture-for-seo-and-404-handling/">SPA architecture for SEO and 404 handling</a></p>
@@ -3537,6 +3411,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script src="../../assets/scripts/version-redirect.js"></script>
       
         <script src="../../assets/scripts/version-selector-handler.js"></script>
+      
+        <script src="../../assets/scripts/scripts-loader.js"></script>
       
         <script src="../../assets/scripts/scroll-menu.js"></script>
       
