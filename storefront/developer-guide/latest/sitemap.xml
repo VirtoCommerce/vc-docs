@@ -1,171 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/application-initialization/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/application-initialization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/architecture/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/architecture/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/deployment/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/deployment/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/merge/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/merge/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/migration-on-azure/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/migration-on-azure/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/migration-on-local-machine/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/migration-on-local-machine/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/migration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/migration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/spa-architecture-for-seo-and-404-handling/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/spa-architecture-for-seo-and-404-handling/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/storybook/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/storybook/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/tests/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/tests/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/update/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/update/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/authentication/adding-google-as-sso-provider/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/authentication/adding-google-as-sso-provider/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/authentication/adding-sso-provider/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/authentication/adding-sso-provider/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/authentication/anonymous-authentication/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/authentication/anonymous-authentication/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/authentication/authentication-types/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/authentication/authentication-types/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/accelerators-guidelines/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/accelerators-guidelines/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/accelerators-overview/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/accelerators-overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/customization-overview/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/customization-overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/functionality-customization/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/functionality-customization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/localization/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/localization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/overview/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/texts-customization/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/texts-customization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/customization/visual-theme-customization/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/customization/visual-theme-customization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/prerender_io/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/prerender_io/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/catalog-menu-intergration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/catalog-menu-intergration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/category-page-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/category-page-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/footer-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/footer-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/index-page-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/index-page-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/overview/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/overview_outdated/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/overview_outdated/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/builder-io/registering-custom-components/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/builder-io/registering-custom-components/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/google-analytics/ga-events/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/google-analytics/ga-events/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/storyblok/catalog-menu-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/catalog-menu-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/storyblok/category-page-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/category-page-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/storyblok/footer-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/footer-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/storyblok/index-page-integration/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/index-page-integration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/storyblok/overview/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/integrations/storyblok/registering-custom-components/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/integrations/storyblok/registering-custom-components/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/modules-architecture/modules-architecture/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/modules-architecture/modules-architecture/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/vue-js-starter-theme/getting-started/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/vue-js-starter-theme/getting-started/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/storefront/developer-guide/stable15/vue-js-starter-theme/overview/</loc>
+         <loc>https://docs.virtocommerce.org/storefront/developer-guide/latest/vue-js-starter-theme/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
 </urlset>
