@@ -2,6 +2,12 @@
 
 This file defines the writing and formatting conventions for all documentation in this repository. Apply these rules to every new or edited Markdown file.
 
+## Working files
+
+Everything under **docs** is published at the root of docs.virtocommerce.org. Never place specs, plans, notes, or any other working file there. Internal planning documents belong outside **docs**, for example in **.specs**, which no site build reads.
+
+This is not a style preference. Four internal specs and plans left in **docs/superpowers** were served publicly for nearly three months. A **.gitignore** rule alone does not help, because it has no effect on files that are already tracked.
+
 ## Spelling
 
 Use the following forms exactly:
