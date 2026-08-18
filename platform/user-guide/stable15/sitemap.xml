@@ -293,6 +293,14 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/contacts/managing-organization-membership-status/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/contacts/managing-organization-roles/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/contacts/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -917,6 +925,18 @@
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
+         <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/sales-rep/enabling-sales-rep/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/sales-rep/managing-sales-reps/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/sales-rep/overview/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
          <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/sanity/overview/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
@@ -934,6 +954,10 @@
     </url>
     <url>
          <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/security/active-sessions/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.virtocommerce.org/platform/user-guide/stable15/security/administrator/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
