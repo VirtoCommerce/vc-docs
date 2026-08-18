@@ -8,6 +8,9 @@ hooks:
 
 # Override plugins for versioned site
 plugins:
+    - redirects:
+        redirect_maps:
+            "Operator-portal/virto-oz.md": "https://docs.virtocommerce.org/marketplace/user-guide/stable15/Operator-portal/virto-oz/"
     - search:
         # Configure search for versioned content
         lang: en

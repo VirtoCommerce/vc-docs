@@ -8,6 +8,9 @@ hooks:
 
 # Override plugins for versioned site
 plugins:
+    - redirects:
+        redirect_maps:
+            "account/coupons.md": "https://docs.virtocommerce.org/storefront/user-guide/stable15/account/coupons/"
     - search:
         # Configure search for versioned content
         lang: en

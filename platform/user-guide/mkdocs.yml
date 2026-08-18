@@ -8,6 +8,31 @@ hooks:
 
 # Override plugins for versioned site
 plugins:
+    - redirects:
+        redirect_maps:
+            "azure-search/settings.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/azure-search/settings/"
+            "backup-and-restore/backup.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/backup-and-restore/backup/"
+            "backup-and-restore/overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/backup-and-restore/overview/"
+            "backup-and-restore/restore.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/backup-and-restore/restore/"
+            "cms-overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/cms-overview/"
+            "contentful/overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/contentful/overview/"
+            "dynamic-properties/managing-dynamic-properties.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/dynamic-properties/managing-dynamic-properties/"
+            "loyalty/configuring-loyalty-points-per-product.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/loyalty/configuring-loyalty-points-per-product/"
+            "loyalty/create-loyalty-program.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/loyalty/create-loyalty-program/"
+            "loyalty/loyalty-points-history.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/loyalty/loyalty-points-history/"
+            "loyalty/set-up-loyalty-catalog-browsing.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/loyalty/set-up-loyalty-catalog-browsing/"
+            "opensearch/overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/opensearch/overview/"
+            "opensearch/settings.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/opensearch/settings/"
+            "page-builder/preview-as-user.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/page-builder/preview-as-user/"
+            "page-builder/settings.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/page-builder/settings/"
+            "pages/settings.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/pages/settings/"
+            "product-snapshot/enabling-products-snapshot.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/product-snapshot/enabling-products-snapshot/"
+            "product-snapshot/overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/product-snapshot/overview/"
+            "product-snapshot/viewing-products-snapshot.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/product-snapshot/viewing-products-snapshot/"
+            "sanity/overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/sanity/overview/"
+            "security/settings.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/security/settings/"
+            "system-operations/overview.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/system-operations/overview/"
+            "white-labeling/settings.md": "https://docs.virtocommerce.org/platform/user-guide/stable15/white-labeling/settings/"
     - search:
         # Configure search for versioned content
         lang: en
