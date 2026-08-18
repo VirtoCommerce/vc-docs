@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/add-products-via-csv/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/add-products-via-csv/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/backend-customization/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/backend-customization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/catalog-creation/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/catalog-creation/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/create-environment-via-cli-and-vc-build/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/create-environment-via-cli-and-vc-build/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/create-page-in-builder-io/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/create-page-in-builder-io/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/deploy-on-virto-cloud/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/deploy-on-virto-cloud/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/enable-gitops/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/enable-gitops/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/footer-creation/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/footer-creation/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/frontend-customization/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/frontend-customization/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/integrations-configuration/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/integrations-configuration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/main-menu-setup/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/main-menu-setup/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/qa-new-environment/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/qa-new-environment/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/store-branding/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/store-branding/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/stable15/store-configuration/</loc>
+         <loc>https://docs.virtocommerce.org/platform/deployment-on-cloud/latest/store-configuration/</loc>
          <lastmod>2026-08-18</lastmod>
     </url>
 </urlset>
