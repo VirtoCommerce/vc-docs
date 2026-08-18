@@ -11,11 +11,3 @@ This type is used to represent a connection of carts and provides metadata and p
 | `edges`  [ ==CartEdge== ](cart-edge.md)                          | An array of edges representing the connection between carts and the cursor-based pagination information.               |
 | `items`  [ ==CartType== ](cart-type.md)                          | An array of `CartType` representing the actual cart objects retrieved in the connection.                               |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../CartTotalType">← CartTotalType</a>
-    <a href="../cart-edge">CartEdge →</a>
-</div>

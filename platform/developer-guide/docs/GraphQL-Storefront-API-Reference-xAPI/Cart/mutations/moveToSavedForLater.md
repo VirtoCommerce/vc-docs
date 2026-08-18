@@ -63,12 +63,3 @@ mutation moveToSavedForLater($command: InputSaveForLaterType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../moveFromSavedForLater">← MoveFromSavedForLater mutation</a>
-    <a href="../updateCartQuantity">UpdateCartQuantity mutation →</a>
-</div>

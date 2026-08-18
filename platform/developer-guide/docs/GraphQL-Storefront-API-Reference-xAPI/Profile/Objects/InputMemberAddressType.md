@@ -28,11 +28,3 @@ This type represents the input object for member addresses.
 | `description`  ==String==   | The description of the address.                          |
 | `addressType`  ==Int==      | The type of the address.                                 |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../MemberAddressEdge">← MemberAddressEdge</a>
-    <a href="../InputDynamicPropertyValueType">InputDynamicPropertyValueType →</a>
-</div>

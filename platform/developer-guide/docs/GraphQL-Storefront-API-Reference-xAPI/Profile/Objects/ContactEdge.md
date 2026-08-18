@@ -8,12 +8,3 @@ This type represents an edge in the connection between contacts.
 |--------------------------------------------	|---------------------------------------------------------------------- |
 | `cursor`  ==String==                          | The cursor that points to the current contact in the edge.            |
 | `node` [ ==ContactType== ](ContactType.md)    | The contact associated with the edge.                                 |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ContactConnection">← ContactConnection</a>
-    <a href="../UserType">User →</a>
-</div>

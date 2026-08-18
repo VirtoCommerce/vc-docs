@@ -1,4 +1,4 @@
-# xAPI Module Overview 
+# Overview
 
 The main function of the **Experience API (xAPI)** module is to serve as a middle layer connecting clients and enterprise services using the GraphQL protocol. 
 

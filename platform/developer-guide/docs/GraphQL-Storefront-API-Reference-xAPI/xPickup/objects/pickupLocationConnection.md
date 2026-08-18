@@ -10,12 +10,3 @@ This type defines the structure of the response returned when querying for picku
 | `pageInfo` ==[PageInfo](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo)!==         | Information used for navigating through paginated results, such as whether more pages are available.                             |
 | `edges` ==[[PickupLocationEdge](pickupLocationEdge.md)]== | A list of edges in the connection, each containing a pickup location node and its associated cursor.                                         |
 | `items` ==[[PickupLocationType](pickupLocationType.md)]== | A convenience list of pickup location objects returned by the query. It can be used instead of `edges` when cursor information is not needed.|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../pickupLocationType">← pickupLocationType</a>
-    <a href="../PickupLocationAddressType">PickupLocationAddressType →</a>
-</div>

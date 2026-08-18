@@ -1,6 +1,0 @@
-title: xFrontend
-nav:
-  - Overview: overview.md
-  - Queries:
-      - PageContext: PageContext.md
-  - Objects: objects

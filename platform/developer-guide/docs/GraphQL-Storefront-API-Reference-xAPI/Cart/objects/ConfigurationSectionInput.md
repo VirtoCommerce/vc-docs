@@ -9,11 +9,3 @@ This type represents the input data for a configuration section of a configurabl
 | `sectionId` ==String!==                                                            | The Id of the configuration section.                         |
 | `value` [==ConfigurableProductOptionInput==](ConfigurableProductOptionInput.md)    | The selected option for the configuration section.           |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ConfigurationItemsResponseType">← ConfigurationItemsResponseType</a>
-    <a href="../ConfigurationSectionKeyInput">ConfigurationSectionKeyInput →</a>
-</div>

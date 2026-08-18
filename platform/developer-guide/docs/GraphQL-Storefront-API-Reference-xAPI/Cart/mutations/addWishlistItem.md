@@ -49,12 +49,3 @@ mutation addWishlistItem($command: InputAddWishlistItemType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../cloneWishlist">← CloneWishlist mutation</a>
-    <a href="../updateWishListItems">UpdateWishListItems mutation →</a>
-</div>

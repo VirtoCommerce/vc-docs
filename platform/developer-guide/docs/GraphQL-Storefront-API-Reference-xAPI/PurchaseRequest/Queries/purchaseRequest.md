@@ -71,12 +71,3 @@ This query allows you to retrieve information about a purchase request.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← AI Document Processing module overview</a>
-    <a href="../purchaseRequests">PurchaseRequests query →</a>
-</div>

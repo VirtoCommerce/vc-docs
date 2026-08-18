@@ -36,12 +36,3 @@ mutation DeleteFile($command: DeleteFileCommandType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Objects/DeleteFileCommandType">← DeleteFileCommandType</a>
-    <a href="../../../xFrontend/overview">xFrontend module overview →</a>
-</div>

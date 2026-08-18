@@ -136,12 +136,3 @@ Filter products based on specific criteria, include products with the color "Bla
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../fuzzy-search">← Fuzzy Search</a>
-    <a href="../filtering">Filtering →</a>
-</div>

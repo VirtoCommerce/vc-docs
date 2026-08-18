@@ -77,12 +77,3 @@ This connection allows you to retrieve a list of brands, supporting pagination, 
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../brand">← Brand query</a>
-    <a href="../SlugInfo">SlugInfo query →</a>
-</div>

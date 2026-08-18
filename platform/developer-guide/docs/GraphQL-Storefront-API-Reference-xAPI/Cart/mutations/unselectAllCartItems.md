@@ -53,12 +53,3 @@ mutation unselectAllCartItems($command: InputChangeAllCartItemsSelectedType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../selectAllCartItems">← SelectAllCartItems mutation</a>
-    <a href="../change-comment">ChangeComment mutation →</a>
-</div>

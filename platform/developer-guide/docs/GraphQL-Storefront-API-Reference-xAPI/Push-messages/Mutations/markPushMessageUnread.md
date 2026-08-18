@@ -36,12 +36,3 @@ mutation markPushMessageUnread($command: InputMarkPushMessageUnreadType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../markPushMessageRead">← MarkPushMessageRead mutation</a>
-    <a href="../markAllPushMessagesRead">MarkAllPushMessagesRead mutation →</a>
-</div>

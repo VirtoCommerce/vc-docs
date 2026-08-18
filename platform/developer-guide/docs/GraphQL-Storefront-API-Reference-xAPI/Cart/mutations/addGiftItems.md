@@ -62,12 +62,3 @@ mutation addGiftItems($command: InputAddGiftItemsType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../add-wish-list-bulk-item">← AddWishListBulkItem mutation</a>
-    <a href="../rejectGiftItems">RejectGiftItems mutation →</a>
-</div>

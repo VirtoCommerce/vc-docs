@@ -8,12 +8,3 @@ This type represents an edge in a connection from an object to another object of
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | `cursor` ==String!==                                       | A cursor string used for pagination. It identifies the position of this edge within the connection. |
 | `node` [ ==NewsArticleContent== ](NewsArticleContent.md)   | The `NewsArticleContent` object that this edge refers to (the actual news article).                 |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../NewsArticleContentConnection">← NewsArticleContentConnection</a>
-    <a href="../../../Order/overview">xOrder module overview →</a>
-</div>

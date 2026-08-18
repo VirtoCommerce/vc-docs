@@ -67,12 +67,3 @@ This query is used to retrieve a collection of pages based on specified criteria
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../page">← Page query</a>
-    <a href="../menu">Menu query →</a>
-</div>

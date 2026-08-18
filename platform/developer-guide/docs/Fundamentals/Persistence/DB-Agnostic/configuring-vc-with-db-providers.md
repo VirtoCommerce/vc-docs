@@ -8,7 +8,7 @@ Virto Commerce is built on a DB agnostic architecture. The following databases a
 
 At the same time, Virto Commerce architecture allows you add custom database provider on top of Entity Framework for solution as well as for a specific module.
 
-Select the tab with the required provider setup information:
+Select the tab with the required provider setup information.
 
 === "Microsoft SQL Server"
 
@@ -44,7 +44,7 @@ Select the tab with the required provider setup information:
         ```json title="appsettings.json"
         "DatabaseProvider": "MySql",
         "ConnectionStrings": {
-          "VirtoCommerce": "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Allow User Variables=true;"
+        "VirtoCommerce": "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;"
         },
         ```
 
@@ -53,13 +53,9 @@ Select the tab with the required provider setup information:
         ```json title="appsettings.json"
         "DatabaseProvider": "MySql",
         "ConnectionStrings": {
-          "VirtoCommerce": "Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;Allow User Variables=true;"
+        "VirtoCommerce": "Server=127.0.0.1;Port=6306;Uid=root;Pwd=Password1;Database=VirtoCommerce3;"
         },
         ```
-
-    !!! note
-        The `Allow User Variables=true` parameter is required for Hangfire support when using MySQL.  
-        Without it, background jobs may fail with SQL execution errors.
 
 === "PostgreSql"
 

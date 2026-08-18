@@ -15,7 +15,6 @@ The Authorize.net module enables:
 - **Real-time transactions**: Provides real-time transaction processing and reporting, ensuring that you always have up-to-date information on your payments.
 - **Comprehensive support**: Supports various payment methods including credit cards, electronic checks, and more, offering flexibility to your customers.
 - **Enhanced security**: Incorporates advanced fraud detection tools and security measures to protect against fraudulent transactions.
-- **Checkout page payment**: Displays the Authorize.net credit card form directly on the single checkout page for a faster checkout experience.
 
 The diagram below illustrates the interconnections among various key entities within the Authorize.Net module:
 

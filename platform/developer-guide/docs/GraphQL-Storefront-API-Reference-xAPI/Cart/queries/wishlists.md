@@ -63,12 +63,3 @@ This query allows you to retrieve information about wishlists.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../wishlist">← Wishlist query</a>
-    <a href="../validate-coupon">ValidateCoupon query →</a>
-</div>

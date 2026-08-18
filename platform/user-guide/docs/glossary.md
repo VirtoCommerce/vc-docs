@@ -1,45 +1,21 @@
 # Glossary
 
-This glossary explains Virto Commerce business and operations vocabulary used throughout the user documentation, and maps key terms to their equivalents in other ecommerce platforms. Use it as a reverse lookup when searching for a concept you know by a different name.
-
-For developer vocabulary, such as DDD patterns, .NET interfaces, or extensibility APIs, see the [Developer guide glossary](/platform/developer-guide/latest/glossary).
-
-## Admin UI
-Same as **Platform** and **Back office**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
-
-## Approval workflow
-A multi-step process where a cart requires authorization before becoming a confirmed order. In Virto Commerce, the approval-bearing object is the [Quote](#quote), not the cart itself. A buyer, or a sales rep using [Login on behalf](security/login-on-behalf.md), converts the cart into a [Quote Request](/storefront/user-guide/latest/shopping/submit-quotes/) and submits it. The Quote then moves through **Processing**, **Proposal sent**, and finally **Ordered** or **Declined**.
-
-The base Platform does not include a standalone cart-approval state, spending-limit-triggered rules, or multi-level approval chains. The [State Machine module](/marketplace/developer-guide/latest/state-machine-module/overview/) provides a generic state-machine engine for customizing this.
-
 ## Asset
 A file (such as an image, video, document, or media resource) that is uploaded to the platform and linked to a product, category, or catalog to provide additional visual or informational content.
 
 ## Association
 A tool that allows you to add a block of related items to a product or multiple products. For example, this could be a widget with related products or accessories that go with the product in question.
 
-## Back office
-Same as **Admin UI** and **Platform**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
-
 ## Bill of materials
 A special type of Product that is actually a list of materials required for a specific item purchased by the customer that can be created for internal purposes.
-
+ 
 ## Catalog
-A module offered by the Virto Commerce Platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations.
-
-## Catalog property
-An extra field that admins can add to a catalog, category, product, or product variation from the Admin UI to record standard product information such as size, color, brand, or weight. Catalog properties accept typed values and dictionary lookups, support multilingual content, and cascade down the catalog hierarchy so a variation receives its product's catalog properties, a product its category's, and a category its catalog's. They power faceted search, filtering, and product card display on the storefront.
-
-Equivalent in other ecommerce platforms:
-
-| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
-| --- | --- | --- | --- | --- |
-| Catalog property | Product option | Product attribute | Product type attribute | Product option |
+A module offered by the Virto Commerce Platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations. 
 
 ## Category
 Each category acts as a container, or folder, that houses various products of a particular type; these can be both physical and digital products. For example, a consumer electronics site might have categories such as laptops, tablets, smartphones, cameras, etc.
 
-## Company
+## Company 
 Same as **Organization**. A profile for an entire company, within which you can store employee profiles, other company profiles, and those of individual customers related to that company.
 
 ## Contact (Customer)
@@ -65,25 +41,6 @@ The companies and contacts to whom the contract prices apply.
 ## Digital product
 Any tangible product that the store owner can list in the Store. Digital products have unique attributes such as download type, maximum downloads, etc., unlike physical products; no shipping or inventory attributes may apply to such products.
 
-## Digital showroom
-
-A digital replacement for the physical wholesale showroom experience. Virto Commerce does not use this term but delivers all the required features:
-
-* The **rep beside the buyer** mechanic → [Login on behalf](security/login-on-behalf.md) (rep impersonates the retailer to walk them through and place orders).
-* The **your assortment, your prices** mechanic → [Catalog personalization](catalog-personalization/overview.md) + [Contracts](contracts/overview.md) + per-store catalog scoping.
-* The **curated collection presentation** mechanic → [Pages](pages/overview.md), [Page Builder](page-builder/overview.md), [Marketing dynamic content](marketing/dynamic-content-overview.md), categories, brand pages.
-* The **story-driven cross-sell/upsell** mechanic → [Dynamic associations](marketing/dynamic-associations-overview.md) + [Recommendations](recommend/overview.md) + CMS-driven narrative blocks.
-* The **fast B2B reorder** mechanic → [Bulk orders](/storefront/user-guide/latest/shopping/bulk-orders/), [Lists](/storefront/user-guide/latest/shopping/lists/), [Quotes](/storefront/user-guide/latest/shopping/submit-quotes/), [Purchase requests](/storefront/user-guide/latest/account/purchase-requests/).
-
-## Dynamic property
-An extra field that admins can add to any Virto Commerce object that supports dynamic properties, from the Admin UI. Dynamic properties capture, store, and display unique, nonstandard information.
-
-Equivalent in other ecommerce platforms:
-
-| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
-| --- | --- | --- | --- | --- |
-| Dynamic property | Metafield | Custom attribute (EAV) | Custom field | Metafield |
-
 ## Employee
 A profile of an employee working for a specific company.
 
@@ -96,10 +53,10 @@ A set of properties grouped together (e.g., size and color).
 ![Facets](media/facets-glossary.png){: style="display: block; margin: 0 auto;" }
 
 ## Fulfillment center
-Same as **Warehouse**. Processing unit involved in receiving, processing, and delivering orders to end customers.
+Processing unit involved in receiving, processing, and delivering orders to end customers.
 
 ## GTIN, or Global Trade Item Number
-Part of a numerical code used to uniquely identify a product.
+Part of a numerical code used to uniquely identify a product. 
 
 ## Inheritance
 A technique that allows entities at different levels to inherit tags. Tags can be inherited both **upwards** (e.g. a category inherits the tags of product) and **downwards** (e.g. a product inherits the tags of its category).
@@ -121,29 +78,20 @@ Collections of hyperlinks organized to facilitate efficient navigation through t
 ## Modified price
 A price that is different from the default price because it has been updated by the user.
 
-## Module
-A self-contained unit of functionality that admins install into the Virto Commerce Platform to compose a tailored solution from independent pieces such as Catalog, Pricing, Orders, Marketing, or integrations. Each module brings its own back-end features and the admin screens to manage them; an App, by contrast, contributes mostly user interface. The base installation is intentionally minimal: admins add only the modules their solution requires and can later install, update, or remove them from the Admin UI.
-
-Equivalent in other ecommerce platforms:
-
-| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
-| --- | --- | --- | --- | --- |
-| Module | n/a (uses Apps) | Extension | n/a (composable architecture) | n/a (uses Apps) |
-
 ## Organization
 Same as **Company**. A profile for an entire company, within which you can store employee profiles, other company profiles, and those of individual customers related to that company.
 
 ## Physical product
 Any tangible product that the shop owner can list in the shop. Physical products have a unique Track Inventory attribute that digital products do not have. Shipping and Fulfillment Center attributes are also relevant to them.
 
-## Platform
-Same as **Admin UI** and **Back office**. An administrative interface where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
-
 ## Product
 A basic entity in Virto Commerce's Catalog module, a product is a basic type of item that can be created and listed on an ecommerce site. You can choose to create entries for both physical and digital products. There are also special types of products, such as bills of materials, variations, and configurables.
 
 ## Product with bill of materials
 A physical product that comes with a bill of materials (a list of additional items). It can be used for specific promotions and requires physical shipping
+
+## Property
+Properties are customizable entities that each catalog, category, or product (including its variations) can have. For example, typical properties for a physical product might include size, color, brand, etc.
 
 ## Quote
 Formal document from a seller that provides a potential buyer with the estimated cost of specific products or services, along with the terms and conditions of a potential sale.
@@ -198,7 +146,7 @@ A profile for a vendor you work with.
 An integrated AI-powered assistant designed to help users navigate, learn, and work more efficiently with Virto Commerce.
 
 ## Warehouse
-Same as **Fulfillment center**. Processing unit involved in receiving, processing, and delivering orders to end customers.
+Same as **Fulfillment center**. 
 
 
 
@@ -207,6 +155,6 @@ Same as **Fulfillment center**. Processing unit involved in receiving, processin
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../ada-compliance">← ADA and WCAG compliance</a>
-    <a href="../platform-overview">Modules overview →</a>
+    <a href="../white-labeling/overview">← White Labeling module overview</a>
+    <a href="../integrations/overview">Integrations overview →</a>
 </div>

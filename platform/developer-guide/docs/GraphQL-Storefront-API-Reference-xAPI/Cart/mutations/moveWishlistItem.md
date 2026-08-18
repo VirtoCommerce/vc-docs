@@ -51,12 +51,3 @@ The `InputMoveWishlistItemType!` represents the input for moving a wishlist item
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../removeWishlistItem">← RemoveWishlistItem mutation</a>
-    <a href="../add-wish-list-bulk-item">AddWishListBulkItem mutation →</a>
-</div>

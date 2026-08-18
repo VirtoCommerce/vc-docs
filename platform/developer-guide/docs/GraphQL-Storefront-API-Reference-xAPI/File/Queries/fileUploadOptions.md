@@ -50,12 +50,3 @@ query {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../getting-started">← Getting Started</a>
-    <a href="../../Objects/FileUploadScopeOptionsType">FileUploadScopeOptionsType →</a>
-</div>

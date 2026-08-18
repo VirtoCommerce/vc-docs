@@ -1,6 +1,0 @@
-title: Objects
-nav:
-  - PickupAddressType: PickupAddressType.md
-  - PickupLocationType: PickupLocationType.md
-  - PickupLocationEdge: PickupLocationEdge.md
-  - PickupLocationConnection: PickupLocationConnection.md

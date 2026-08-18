@@ -11,11 +11,3 @@ This type represents the input object for dynamic property values.
 | `locale`  ==String==                                                                       | The locale of the dynamic property value.                 |
 | `cultureName`  ==String==                                                                  | The language to retrieve data in.                         |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputMemberAddressType">← InputMemberAddressType</a>
-    <a href="../RequestRegistrationType">RequestRegistrationType →</a>
-</div>

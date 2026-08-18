@@ -11,11 +11,3 @@ This type is used to represent a connection of news articles and provides metada
 | `edges` [ ==NewsArticleContentEdge== ](NewsArticleContentEdge.md)    | An array of edges representing the connection between news articles and cursor-based pagination details.   |
 | `items` [ ==NewsArticleContent== ](NewsArticleContent.md)            | An array representing the actual news article objects retrieved in the connection.                         |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../NewsArticleContent">← NewsArticleContent</a>
-    <a href="../NewsArticleContentEdge">NewsArticleContentEdge →</a>
-</div>

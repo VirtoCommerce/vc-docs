@@ -15,12 +15,3 @@ This type represents an image file or resource.
 | `cultureName`  ==String==  	| A language to retrieve data in.                                                                          	|
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Images](/platform/user-guide/latest/catalog/managing-categories)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../AvailabilityData">← AvailabilityData</a>
-    <a href="../Price/PriceType">PriceType →</a>
-</div>

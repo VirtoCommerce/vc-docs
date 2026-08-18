@@ -9,12 +9,3 @@ The **Customer Review** module provides high-performance search queries for retr
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-customer-review/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-customer-review/releases/latest)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Content/overview">← xCMS module overview</a>
-    <a href="../Queries/customerReviews">CustomerReviews query →</a>
-</div>

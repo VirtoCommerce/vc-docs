@@ -8,12 +8,3 @@ This type represents the input object for registering an organization.
 | `description`  ==String==                                                                     | The description of the organization                                                                               |
 | `dynamicProperties` [ ==InputDynamicPropertyValueType== ](InputDynamicPropertyValueType.md)   | An array of dynamic property value types, allowing the inclusion of custom properties and values for the organization.|
 | `address` [ ==InputMemberAddressType== ](InputMemberAddressType.md)                           | The address associated with the organization.                                                                     |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../AccountCreationResultType">← AccountCreationResultType</a>
-    <a href="../InputRegisterContactType">InputRegisterContactType →</a>
-</div>

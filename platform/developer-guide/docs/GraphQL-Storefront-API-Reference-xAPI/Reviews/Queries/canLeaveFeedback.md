@@ -39,12 +39,3 @@ This query checks if a user is eligible to leave feedback for a specific entity,
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../customerReviews">← CustomerReviews query</a>
-    <a href="../../Objects/CustomerReview">CustomerReview →</a>
-</div>

@@ -67,12 +67,3 @@ mutation addCoupon($command: InputAddCouponType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../remove-cart-item">← RemoveCartItem mutation</a>
-    <a href="../remove-coupon">RemoveCoupon mutation →</a>
-</div>

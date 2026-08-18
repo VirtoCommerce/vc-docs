@@ -48,7 +48,7 @@ To create a new page in HTML or Markdown:
 1. In the next blade, click **Add** in the toolbar. 
 1. In the next blade, select **HTML page**.
 
-    ![New page in Markdown](media/new-page-in-markdown.png){: style="display: block; margin: 0 auto;" }
+    ![New page in Markdown](media/new-page-in-markdown.png)
 
 1. In the next blade, configure the following:
 
@@ -64,94 +64,67 @@ To add content to your page:
 1. In the next blade, click **Design** to open your page in Page Builder.
 1. In Page Builder, click **Add block** in the left menu to open the block library. The available blocks are as follows:
 
+    <div class="grid" markdown>
 
-    <div class="grid cards" markdown>
+    Call to action
 
-    -   __Call to action:__
+    ![Call to action](media/call-to-action-sample.png)
 
-        ---
+    Call to action with image
 
-        ![Inline mode](media/call-to-action-sample.png)
+    ![Call to action](media/call-to-action-with-image.png)
 
-    -   __Call to action with image:__
+    Category
 
-        ---
+    ![Custom categories](media/custom-categories.png)
 
-        ![Popup mode](media/call-to-action-with-image.png)
+    Favorite products
 
-    -   __Category:__
+    ![Favorite products](media/favorite-products.png)
 
-        ---
+    Features
 
-        ![Custom categories](media/custom-categories.png)
+    ![Features](media/features.png)
 
-    -   __Favorite products:__
+    Image
 
-        ---
+    ![Image](media/image.png)
 
-        ![Favorite products](media/favorite-products.png)
+    Login
 
-    -   __Features:__
+    ![Login](media/Login.png)
 
-        ---
+    Predefined products
 
-        ![Features](media/features.png)
+    ![Predefined products](media/predefined-products.png)
 
-    -   __Image:__
+    Products
 
-        ---
+    ![Products](media/products.png)
 
-        ![Image](media/image.png)
+    Products carousel
 
-    -   __Login:__
+    ![Products carousel](media/products-carousel.png)
 
-        ---
+    Slider
 
-        ![Login](media/Login.png)
+    ![Slider](media/slider.png)
 
-    -   __Predefined products:__
+    Subscribe form
 
-        ---
+    ![Subscribe form](media/subscribe-form.png)
 
-        ![Predefined products](media/predefined-products.png)
+    Text
 
-    -   __Products:__
+    ![Text](media/text.png)
 
-        ---
+    Title
 
-        ![Products](media/products.png)
-
-    -   __Products carousel:__
-
-        ---
-
-        ![Products carousel](media/products-carousel.png)
-
-    -   __Slider:__
-
-        ---
-
-        ![Slider](media/slider.png)
-
-    -   __Subscribe form:__
-
-        ---
-
-        ![Subscribe form](media/subscribe-form.png)
-
-    -   __Text:__
-
-        ---
-
-        ![Text](media/text.png)
-
-    -   __Title:__
-
-        ---
-
-        ![Subtitle](media/title.png)
+    ![Subtitle](media/title.png)
 
     </div>
+
+
 
     !!! note 
     

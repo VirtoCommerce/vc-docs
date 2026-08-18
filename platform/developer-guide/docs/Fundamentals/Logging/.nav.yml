@@ -1,7 +1,0 @@
-title: Logging
-nav:
-  - Overview: overview.md
-  - Updating to Serilog Integrated Version: how-to-update.md
-  - AppInsights: application-insights.md
-  - Extending Logging: extended-logging.md
-  - Seq Log Module: seq-module.md

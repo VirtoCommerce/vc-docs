@@ -163,12 +163,3 @@ This connection allows you to get the contact by its Id.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../organizations">← Organizations query</a>
-    <a href="../contacts">Contacts query →</a>
-</div>

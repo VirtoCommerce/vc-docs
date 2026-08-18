@@ -70,12 +70,3 @@ This query retrieves a list of items that a customer has saved for later, based 
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../configurationItems">← ConfigurationItems query</a>
-    <a href="../../objects/cart-type">CartType →</a>
-</div>

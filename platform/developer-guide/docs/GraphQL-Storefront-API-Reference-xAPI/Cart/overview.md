@@ -14,12 +14,3 @@ The **xCart** module provides high performance API for shopping cart with the fo
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-cart/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-cart/releases/latest)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Back-in-stock/overview">← Back-in-Stock module overview</a>
-    <a href="../queries/cart">Cart query →</a>
-</div>

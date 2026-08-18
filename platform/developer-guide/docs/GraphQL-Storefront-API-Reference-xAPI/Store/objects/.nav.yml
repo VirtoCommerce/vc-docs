@@ -1,9 +1,0 @@
-title: Objects
-nav:
-  - StoreResponseType: StoreResponseType.md
-  - LanguageType: LanguageType.md
-  - StoreSettingsType: StoreSettingsType.md
-  - GraphQLSettingsType: GraphQLSettingsType.md
-  - ModuleSettingsType: ModuleSettingsType.md
-  - ModuleSettingType: ModuleSettingType.md
-  - PasswordOptionsType: PasswordOptionsType.md

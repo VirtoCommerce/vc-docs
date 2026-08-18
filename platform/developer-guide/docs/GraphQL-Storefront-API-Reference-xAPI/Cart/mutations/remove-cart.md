@@ -44,12 +44,3 @@ mutation ($command:InputRemoveCartType!){
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../merge-cart">← MergeCart mutation</a>
-    <a href="../clear-shipments">ClearShipments mutation →</a>
-</div>

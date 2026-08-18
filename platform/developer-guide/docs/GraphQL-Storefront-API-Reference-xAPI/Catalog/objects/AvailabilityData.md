@@ -16,11 +16,3 @@ This type refers to the information related to the availability and inventory st
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Product Availability](/platform/user-guide/latest/catalog/setting-product-availability)
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../VariationType">← VariationType</a>
-    <a href="../ImageType">ImageType →</a>
-</div>

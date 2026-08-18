@@ -61,12 +61,3 @@ mutation ($command: CreateQuoteFromCartCommandType!){
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../objects/UpdateQuoteDynamicPropertiesCommandType">← UpdateQuoteDynamicPropertiesCommandType</a>
-    <a href="../cancel-quote-request">CancelQuoteRequest mutation →</a>
-</div>

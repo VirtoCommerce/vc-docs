@@ -36,12 +36,3 @@ changeOrderStatus (command: $command) }
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../create-order-from-cart">← CreateOrderFromCart mutation</a>
-    <a href="../process-order-payment">ProcessOrderPayment mutation →</a>
-</div>

@@ -11,11 +11,3 @@ This type represents a facet for filtering products based on specific attributes
 | `facetType`  ==FacetTypes==                 	| The type of the filter facet, such as checkbox, slider, or dropdown. 	|
 | `count`  ==Int!==                	            | The number of products associated with the filter facet.          	|
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../VideoConnection/VideoType">← VideoType</a>
-    <a href="../RangeFacet">RangeFacet →</a>
-</div>

@@ -12,9 +12,9 @@ To open the **Search** module settings:
 
     ![Advanced settings](media/job-settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the toolbar to save the changes.
+1. Click **Save** in the top toolbar to save the changes.
 
-Your modifications have been applied.
+The settings have been saved.
 
 
 <br>
@@ -23,5 +23,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-search">← Managing search index</a>
-    <a href="../../intent-search/overview">Intent Search module overview →</a>
+    <a href="../../elastic-search-9/overview">Elasticsearch 9 module overview→</a>
 </div>

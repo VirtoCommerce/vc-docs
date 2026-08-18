@@ -26,12 +26,3 @@ This type represents a data type that describes the address of a fulfillment cen
 |`zip`  ==String== |The ZIP code of the fulfillment center address.|
 |`outerId`  ==String== |The external identifier associated with the fulfillment center address.|
 |`addressType`  ==Int== |The type of the address, represented as an integer value.|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../FulfillmentCenterType">← FulfillmentCenterType</a>
-    <a href="../FulfillmentCenterConnection">FulfillmentCenterConnection →</a>
-</div>

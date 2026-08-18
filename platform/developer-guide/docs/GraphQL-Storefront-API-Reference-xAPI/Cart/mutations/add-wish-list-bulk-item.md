@@ -50,12 +50,3 @@ The `InputAddWishlistBulkItemType` is an input object type used for adding multi
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../moveWishlistItem">← MoveWishlistItem mutation</a>
-    <a href="../addGiftItems">AddGiftItems mutation →</a>
-</div>

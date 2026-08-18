@@ -9,12 +9,3 @@ This type represents the input for resetting a user's password.
 | `token`  ==String!==            | The reset password token received by the user.                         |
 | `userId`  ==String!==           | The Id of the user for whom the password is being reset.               |
 | `newPassword`  ==String!==      | The new password to set for the user.                                  |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputRegisterByInvitationType">← InputRegisterByInvitationType</a>
-    <a href="../InputChangePasswordType">InputChangePasswordType →</a>
-</div>

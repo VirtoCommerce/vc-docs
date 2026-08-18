@@ -11,11 +11,3 @@ This type represents a connection to a list of contacts.
 | `edges` [ ==ContactEdge== ](ContactEdge.md)       	            | The edges representing connections between contacts and the cursor information. 	|
 | `items` [ ==ContactType== ](ContactType.md)       	            | The list of contacts in the connection.                                         	|
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ContactType">← Contact</a>
-    <a href="../ContactEdge">ContactEdge →</a>
-</div>

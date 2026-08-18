@@ -40,12 +40,3 @@ mutation updatePurchaseRequestByDocuments($command: InputUpdatePurchaseRequestBy
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../postProcessPurchaseRequestSources">← PostProcessPurchaseRequestSources mutation</a>
-    <a href="../../../Back-in-stock/overview">Back-in-Stock module overview →</a>
-</div>

@@ -20,5 +20,5 @@ The Frontend Application opens in a new blade.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../multiregional-ecommerce">← B2B multi-regional ecommerce architecture </a>
-    <a href="../dynamic-properties/managing-dynamic-properties">Managing dynamic properties →</a>
+    <a href="../backup-and-restore">Backup and restore →</a>
 </div>

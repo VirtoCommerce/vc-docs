@@ -71,12 +71,3 @@ This connection allows you to retrieve information about a slug or permalink.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../brands">← Brands query</a>
-    <a href="../productSuggestions">ProductSuggestions query →</a>
-</div>

@@ -19,12 +19,3 @@ With the API functionality, you can:
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-push-messages/releases/latest)
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Push Messages via Platform](/platform/user-guide/latest/push-messages/manage-push-messages)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Profile/overview">← xProfile module overview</a>
-    <a href="../Queries/pushMessages">Push messages query →</a>
-</div>

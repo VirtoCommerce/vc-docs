@@ -25,11 +25,3 @@ This type represents the fields and their types for creating an application user
 | `userType`  ==String!==                                                                     | The type of the application user.                                          |
 | `passwordExpired`  ==Boolean==                                                              | Indicates whether the password for the application user has expired.       |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputCreateUserType">← InputCreateUserType</a>
-    <a href="../InputUpdateApplicationUserType">InputUpdateApplicationUserType →</a>
-</div>

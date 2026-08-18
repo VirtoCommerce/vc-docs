@@ -24,6 +24,6 @@ The solution is ready for integration with other sales channels.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../builder-io/overview">← Builder.io module overview </a>
+    <a href="../../builder-io/overview">← Avalara module overview </a>
     <a href="../integration">Using Google Analytics →</a>
 </div>

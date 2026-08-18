@@ -15,15 +15,15 @@ You can integrate it into an existing architecture as a central system, or use i
 * [Modularity](Fundamentals/Modularity/01-overview.md):
 
     * All business logic is delivered as independent modules.
-    * The base installation is minimal - only install what you need.
+    * The base installation is minimal — only install what you need.
     * Modules can be replaced or extended without affecting the core Platform.
-    * The Platform can be used as a full ecommerce core or embedded as a subsystem in larger solutions. For example, it can be used solely as a pricing engine or as a marketing promotion service.
+    * The Platform can be used as a full e-commerce core or embedded as a subsystem in larger solutions. For example, it can be used solely as a pricing engine or as a marketing promotion service.
 
 * [Headless architecture](Back-End-Architecture/02-conceptual-overview.md):
 
     * Business logic is exposed entirely via APIs.
     * [REST](https://virtostart-demo-admin.govirto.com/docs/index.html) is commonly used for integrations and admin tools.
-    * [GraphQL](GraphQL-Storefront-API-Reference-xAPI/index.md) is optimized for frontend applications. It reduces overfetching, improving performance, and enabling tailored data retrieval.
+    * [GraphQL](GraphQL-Storefront-API-Reference-xAPI/index.md) is optimized for frontend applications — reducing overfetching, improving performance, and enabling tailored data retrieval.
 
 * [Extensibility](Extensibility/overview.md):
 

@@ -22,12 +22,3 @@ This type is an object that contains information about an address associated wit
 | `firstName`  ==String!==      | The first name of the individual associated with the address. |
 | `lastName`  ==String!==       | The last name of the individual associated with the address. |
 | `organization`  ==String==    | The name of the organization associated with the address. |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../QuoteTierPriceType">← QuoteTierPriceType</a>
-    <a href="../QuoteAttachmentType">QuoteAttachmentType →</a>
-</div>

@@ -15,11 +15,3 @@ This type is an object used to store and manage various financial or pricing-rel
 | `grandTotalExlTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)        | The grand total excluding tax.      |
 | `grandTotalInclTax` [ ==MoneyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/money-type)       | The grand total including tax.      |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../QuoteConnection">← QuoteConnection</a>
-    <a href="../QuoteItemtype">QuoteItemType →</a>
-</div>

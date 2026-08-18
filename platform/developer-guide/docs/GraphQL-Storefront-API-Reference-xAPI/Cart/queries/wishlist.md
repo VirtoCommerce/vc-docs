@@ -64,12 +64,3 @@ This query allows you to retrieve information about a product list.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../carts">← Carts query</a>
-    <a href="../wishlists">Wishlists query →</a>
-</div>

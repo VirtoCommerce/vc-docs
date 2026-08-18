@@ -17,12 +17,3 @@ This type represents a value assigned to a dynamic property.
 | `isMultilingual`  ==Boolean==                                                         | Indicates whether the dynamic property supports multilingual values. |
 | `isRequired`  ==Boolean==                                                             | Indicates whether the dynamic property is required.      |
 | `dictionaryItems(...)` [ ==DictionaryItemConnection== ](dictionary-item-connection.md)| Retrieves the dictionary items associated with the dynamic property. |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../coupon-type">← CouponType</a>
-    <a href="../dynamic-property-value-type">DynamicPropertyValueType →</a>
-</div>

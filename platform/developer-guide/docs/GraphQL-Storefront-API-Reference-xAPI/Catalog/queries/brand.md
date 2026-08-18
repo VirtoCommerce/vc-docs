@@ -49,12 +49,3 @@ This query allows you to retrieve a specific brand by its ID and optionally loca
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../child-categories">← ChildCategories query</a>
-    <a href="../brands">Brands query →</a>
-</div>

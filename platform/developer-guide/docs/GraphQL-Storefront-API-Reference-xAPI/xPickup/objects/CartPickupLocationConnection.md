@@ -13,12 +13,3 @@ This type represents a connection from an object to a list of cart-specific pick
 | `term_facets` ==[[TermFacet!](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/term-facet)]!==         | A list of term facets, giving aggregated counts for categorical filter values.                                             |
 | `range_facets` ==[[RangeFacet!](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/range-facet)]!==       | A list of range facets, providing aggregated counts for numeric/date ranges.                                              |
 | `filter_facets` ==[[FilterFacet!](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/filter-facet)]!==     | A list of filter facets, representing complex, preconfigured filters applied to the results.                             |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../pickupAddressType">← pickupAddressType</a>
-    <a href="../pickupLocationEdge">pickupLocationEdge →</a>
-</div>

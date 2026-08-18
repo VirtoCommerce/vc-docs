@@ -125,13 +125,4 @@ This query is used to retrieve a paginated list of pickup locations available in
 }
 ```
 
-</div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Shipping module overview</a>
-    <a href="../../objects/PickupAddressType">PickupAddressType →</a>
-</div>
+</div>  

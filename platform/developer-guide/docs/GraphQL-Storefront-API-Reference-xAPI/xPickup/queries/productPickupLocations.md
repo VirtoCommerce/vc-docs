@@ -123,12 +123,3 @@ This query allows you to retrieve pickup locations where a specific product is a
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../cartPickupLocations">← CartPickupLocations query</a>
-    <a href="../../objects/pickupLocationType">pickupLocationType →</a>
-</div>

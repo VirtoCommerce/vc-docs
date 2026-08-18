@@ -12,12 +12,3 @@ This type represents the configuration for password requirements in a store.
 | `requireLowercase` ==Boolean!==          | A boolean indicating whether lowercase letters are required. |
 | `requireUppercase` ==Boolean!==          | A boolean indicating whether uppercase letters are required. |
 | `requireDigit` ==Boolean!==              | A boolean indicating whether digits are required.            |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ModuleSettingType">← ModuleSettingType</a>
-    <a href="../../../Shipping/overview">Shipping module overview →</a>
-</div>

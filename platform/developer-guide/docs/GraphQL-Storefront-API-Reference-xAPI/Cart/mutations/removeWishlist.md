@@ -37,12 +37,3 @@ mutation removeWishlist($command: InputRemoveWishlistType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../renameWishlist">← RenameWishlist mutation</a>
-    <a href="../cloneWishlist">CloneWishlist mutation →</a>
-</div>

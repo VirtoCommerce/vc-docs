@@ -1,7 +1,10 @@
+
 # Settings
 
-Rating and reviews are configured via the [Stores module settings](../store/settings.md#products-reviews).
+The **Rating and Reviews** module settings include:
 
+* [Email review reminder](managing-reviews.md#enable-email-review-reminder).
+* [Product reviews settings](managing-reviews.md#enable-product-reviews).
 
 
 <br>

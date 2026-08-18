@@ -10,12 +10,3 @@ This type defines a connection from an object to a list of loyalty program opera
 | `pageInfo` [ ==PageInfo!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo)      | Information to assist with pagination, such as whether more results are available.                                                       |
 | `edges` [ ==LoyaltyOperationLogEdge== ](LoyaltyOperationLogEdge.md) | A list of edges that include both the log entry (`node`) and its pagination cursor.                                                       |
 | `items` [ ==LoyaltyOperationLog== ](LoyaltyOperationLog.md)         | A direct list of log entries. This is a shortcut to access items without edges, but should not be used if cursor data is required (e.g., with Relay). |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../LoyaltyOperationLog">← LoyaltyOperationLog</a>
-    <a href="../LoyaltyOperationLogEdge">LoyaltyOperationLogEdge →</a>
-</div>

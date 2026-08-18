@@ -70,12 +70,3 @@ mutation UpdateQuoteAddresses($command: UpdateQuoteAddressesCommandType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../submit-quote-request">← SubmitQuoteRequest mutation</a>
-    <a href="../addQuoteAttachments">AddQuoteAttachments mutation →</a>
-</div>

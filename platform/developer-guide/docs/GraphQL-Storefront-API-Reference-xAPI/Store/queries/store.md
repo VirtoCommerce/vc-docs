@@ -1,6 +1,6 @@
 # Store ==~query~==
 
-This query allows you to retrieve information about a store. The Frontend uses it, resolved by `domain`, as the `InitializeApplication` bootstrap operation that returns the store's capability manifest. See [Application Initialization](/storefront/developer-guide/latest/application-initialization/).
+This query allows you to retrieve information about a store.
 
 ## Arguments
 
@@ -10,7 +10,7 @@ This query allows you to retrieve information about a store. The Frontend uses i
 | `cultureName` ==String==          | The language to retrieve data in.                             |
 | `domain` ==String==               | The domain or region to retrieve store information from.      |
 
-## Possible returns
+## Possible Returns
 
 | Possible Return                                        | Description                                                                                                     |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -84,13 +84,4 @@ query{
 }
 ```
 
-</div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Store module overview</a>
-    <a href="../../objects/StoreResponseType">StoreResponseType →</a>
 </div>

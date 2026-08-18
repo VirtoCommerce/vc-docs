@@ -2,10 +2,6 @@
 
 As Virto Commerce Platform is an ASP.NET Core based application, it can be configured as described in [this Microsoft article](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1).
 
-## Location
-
-The **appsettings.json** file lives in the application root, next to the Platform binaries. In the source, it is at **src/VirtoCommerce.Platform.Web/appsettings.json**. The Platform loads it first, then layers environment overrides such as **appsettings.Development.json** and **appsettings.Production.json**, followed by environment variables, on top of it.
-
 ## Configuration settings
 
 The configuration keys are hierarchical, and the most convenient way to manage them is to work with the **appsettings.json** file. The following sections, organized by configuration node and alphabetically, show the general structure of the file, provide defaults, and explain what each key is.
@@ -44,9 +40,6 @@ This configuration node defines the system settings of the VC Platform.
 | LicenseActivationUrl          | https://license.virtocommerce.org/api/licenses/activate/  | The URL used to activate the Virto Commerce Platform license.                     |
 | SampleDataUrl                 | https://virtocommerce.azureedge.net/sample-data           | URL for downloading sample data during the initial setup of the Virto Commerce Platform.   |
 | DiscoveryPath                 | ./modules                                                 | The relative or absolute file system path where the Platform will discover installed modules. |
-| DefaultExportFolder           | export                                                    | The folder, relative to the asset storage root, where the Backup and Restore module writes exported backup files. |
-| DefaultExportFileName         | vc_backup_{0:yyyyMMddHHmmss}.zip                          | The file name template used for generated backup files. The **{0}** placeholder is replaced with the backup creation timestamp. |
-| LocalUploadFolderPath         | app_data/uploads                                          | **Required.** The local file system folder used to temporarily store uploaded files, including backup archives selected for restore. |
 | AllowInsecureHttp             | false                                            | Controls how the OpenID Connect server (ASOS) handles requests arriving on non-HTTPS endpoints. When set to **false**, it helps mitigate man-in-the-middle attacks. |
 | UseResponseCompression        | false <br> true                                          | Enables or disables response compression to improve performance.                 |
 | Settings                      | ![Read more](media/readmore.png){: width="20"} [Settings](#settings) | Configures global and tenant-level platform settings, including default values, enforced (forced) values, and visibility of specific parameters. |
@@ -189,39 +182,6 @@ This node configures GraphQL-specific Platform settings.
   }
 }
 ```
-
-#### GraphQLComplexityValidation
-
-This node configures query complexity validation for GraphQL in the Virto Commerce Platform. When enabled, it limits the depth and complexity of incoming GraphQL queries to protect the platform from resource-intensive or malicious requests.
-
-| Node | Default or sample value | Description |
-|---|---|---|
-| Enable | true<br>false | Enables or disables GraphQL complexity validation. |
-| IgnoreIntrospection | false<br>true | When set to **true**, disables complexity validation for introspection queries. Set to **false** by default. |
-| MaxDepth | unlimited | Limits the maximum nesting depth of a query. Unlimited by default. |
-| MaxComplexity | unlimited | Limits the total complexity score of a query. Unlimited by default. |
-| ScalarFieldImpact | 1 | The complexity score assigned to each scalar field. |
-| ObjectFieldImpact | 1 | The complexity score assigned to each object field. |
-| ListImpactMultiplier | 20 | The multiplier applied to the complexity score of list fields, representing the average number of items returned. |
-
-**Example**
-
-```json title="appsettings.json"
-{
-  "VirtoCommerce": {
-    "GraphQLComplexityValidation": {
-      "Enable": true,
-      "IgnoreIntrospection": true,
-      "MaxDepth": 2,
-      "MaxComplexity": 1000,
-      "ScalarFieldImpact": 1,
-      "ObjectFieldImpact": 1,
-      "ListImpactMultiplier": 20
-    }
-  }
-}
-```
-
 
 #### GraphQLPlayground
 
@@ -507,12 +467,11 @@ This node configures the Swagger documentation engine for the Virto Commerce Pla
 
 #### Videos
 
-This node configures the integration settings for accessing video-related services via the Google API and Vimeo API.
+This node configures the integration settings for accessing video-related services via the Google API.
 
 | Node         | Default or sample value | Description                                                                 |
 |--------------|--------------------------|-----------------------------------------------------------------------------|
 | GoogleApiKey | YOUR_GOOGLE_API_KEY      | Specifies the API key required to authenticate requests to Google video services. |
-| VimeoAccessToken | YOUR_VIMEO_ACCESS_TOKEN | Specifies the access token required to authenticate requests to Vimeo video services. |
 
 **Example**
 
@@ -520,8 +479,7 @@ This node configures the integration settings for accessing video-related servic
 {
   "VirtoCommerce": {
     "Videos": {
-      "GoogleApiKey": "YOUR_GOOGLE_API_KEY",
-      "VimeoAccessToken": "YOUR_VIMEO_ACCESS_TOKEN"
+      "GoogleApiKey": "YOUR_GOOGLE_API_KEY"
     }
   }
 }
@@ -914,7 +872,6 @@ This configuration node defines authorization settings for the system.
 | AccessTokenLifeTime      | "00:30:00"               | The time span specifying the lifetime of an access token.<br>An access token is used to access protected resources.<br>The default is 30 minutes. |
 | LimitedCookiePermissions | "platform:asset:read;platform:export;..." | A semicolon-separated list of permissions that define the limited cookie permissions for the user. These permissions determine what actions the user can perform when using cookies for authentication. |
 | AllowApiAccessForCustomers| true<br>false         | A boolean setting that controls whether API access is allowed for customers.<br>If set to **false**, customers are not allowed to access the API; if set to **true**, they are granted API access. |
-| EnablePersistentStorageTokenValidation | true<br>false | A boolean setting that enables validation of access tokens against the persistent token store on every request.<br>If set to **true**, tokens revoked in the database (for example, after a password change, password reset, lockout, or explicit session termination) stop working immediately on all browsers and devices. If set to **false**, revoked tokens remain valid until their natural expiration. |
 
 **Example**
 
@@ -924,46 +881,10 @@ This configuration node defines authorization settings for the system.
   "RefreshTokenLifeTime": "30.00:00:00",
   "AccessTokenLifeTime": "00:30:00",
   "LimitedCookiePermissions": "platform:asset:read;platform:export;content:read;platform:asset:create;licensing:issue;export:download",
-  "AllowApiAccessForCustomers": false,
-  "EnablePersistentStorageTokenValidation": true
+  "AllowApiAccessForCustomers": false
 }
 ```
 
-### AzureAppConfiguration
-
-This configuration node integrates [Azure App Configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview) as a centralized, cloud-managed configuration source for the Virto Commerce Platform. Once enabled, all platform modules automatically gain access to settings stored in Azure App Configuration without any code changes.
-
-| Node                      | Default or sample value                   | Description                                                                                               |
-| ------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Enabled                   | true<br>false                             | Enables or disables the Azure App Configuration module.                                                   |
-| ConnectionString          |                                           | Azure App Configuration connection string. Takes priority over **Endpoint** if both are specified.        |
-| Endpoint                  |                                           | Azure App Configuration endpoint URI for Managed Identity authentication (e.g., `https://myconfig.azconfig.io`). |
-| SentinelKey               | Sentinel                                  | Key name used to trigger configuration refresh. When its value changes in Azure, all configuration entries are reloaded without application restart. |
-| RefreshInterval           | 00:00:30                                  | How often the module polls Azure App Configuration for changes. Format: `hh:mm:ss`.                      |
-| KeyPrefix                 |                                           | Filters keys by prefix and trims the prefix from loaded keys, scoping configuration to your application.  |
-
-**Example**
-
-```json title="appsettings.json"
-"AzureAppConfiguration": {
-  "Endpoint": "https://myconfig.azconfig.io",
-  "SentinelKey": "Sentinel",
-  "RefreshInterval": "00:02:00",
-  "KeyPrefix": "VirtoCommerce:",
-  "Enabled": true
-}
-```
-
-An alternative connection string authentication method is also supported:
-
-```json title="appsettings.json"
-"AzureAppConfiguration": {
-  "ConnectionString": "Endpoint=https://<your-resource>.azconfig.io;Id=<id>;Secret=<secret>"
-}
-```
-
-!!! note
-    A legacy connection string key `ConnectionStrings:AzureAppConfigurationConnectionString` is also supported for backward compatibility.
 
 ### Caching
 This node manages caching configuration.
@@ -1225,16 +1146,16 @@ This node configures the settings for external modules in the Virto Commerce Pla
 
 ### FileUpload
 
-This node configures file upload settings, including storage location, upload scopes, file size limits, allowed file types, and anonymous upload permissions.
+This node is used to configure file uploads, including quotes and organization logo uploads.
 
-| Node                        | Default or sample value                                                                 | Description |
-|-----------------------------|-------------------------------------------------------------------------------------------|-------------|
-| RootPath                    | `"upload"`                                                                               | The root directory where uploaded files are stored. |
-| Scopes                      |                                                                                           | Specifies upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions. |
-| Scopes.Scope                | `"quote-attachments"` <br> `"organization-logos"` <br> `"product-configuration"` <br> `"purchase-request-sources"`      | Identifies the upload scope. Supported scopes include quote attachments, organization logos, and product configuration uploads. |
-| Scopes.MaxFileSize          | `10485760`                                                                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
-| Scopes.AllowedExtensions    | `[".jpg", ".jpeg", ".png", ".gif", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".txt"]` | Defines the allowed file extensions for uploads within this scope. Supported extensions include image (`.jpg`, `.jpeg`, `.png`, `.gif`), document (`.pdf`, `.doc`, `.docx`, `.txt`), and spreadsheet (`.xls`, `.xlsx`) formats. |
-| Scopes.AllowAnonymousUpload | `true` <br> `false`                                                                      | Indicates whether anonymous uploads are permitted for this scope. |
+| Node                      |Default or sample value            | Description                                               |
+|---------------------------|-----------------------------------|-----------------------------------------------------------|
+| RootPath                  |                                   | The root directory where uploaded files will be stored.   |
+| Scopes                    |                                   | Specifies different upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions.              |
+| Scopes.Scope              |                                   | Identifies the upload scope.              |
+| Scopes.MaxFileSize        | 123                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
+| Scopes.AllowedExtensions  | [".jpg", ".pdf", ".png", ".txt"]  | Defines the allowed file types for uploads.               |
+| Scopes.AllowAnonymousUpload | true <br> false                 | Indicates whether anonymous uploads are permitted.        |
 
 
 **Example**
@@ -1248,7 +1169,7 @@ This node configures file upload settings, including storage location, upload sc
           {
             "Scope": "quote-attachments",
             "MaxFileSize": 123,
-            "AllowedExtensions": [".jpg", ".pdf", ".png", ".txt"],
+            "AllowedExtensions": [ ".jpg", ".pdf", ".png", ".txt" ]
             "AllowAnonymousUpload": true
           }
         ]
@@ -1265,42 +1186,13 @@ This node configures file upload settings, including storage location, upload sc
           {
             "Scope": "organization-logos",
             "MaxFileSize": 5000000,
-            "AllowedExtensions": [".jpg", ".png"],
+            "AllowedExtensions": [ ".jpg", ".png" ],
             "AllowAnonymousUpload": false
           }
         ]
       }
     }
     ```
-
-=== "Product configuration upload"
-    ```json title="appsettings.json"
-    {
-      "FileUpload": {
-        "RootPath": "upload",
-        "Scopes": [
-          {
-            "Scope": "product-configuration",
-            "MaxFileSize": 10485760,
-            "AllowedExtensions": [
-              ".jpg",
-              ".jpeg",
-              ".png",
-              ".gif",
-              ".pdf",
-              ".doc",
-              ".docx",
-              ".xls",
-              ".xlsx",
-              ".txt"
-            ],
-            "AllowAnonymousUpload": true
-          }
-        ]
-      }
-    }
-    ```
-
 
 ### FrontendSecurity
 
@@ -1366,41 +1258,39 @@ This configuration node configures the ASP.NET Core Identity system.
 
 ### LoginPageUI
 
-This node configures the appearance and behavior of the login page.
+This node configures background screen and background pattern of the Login page.
 
-| Node                   | Default or sample value | Description                                                                                                       |
-|------------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------|
-| BackgroundUrl          |                         | Url for the background image of the login page. If empty, no background image is displayed.                       |
-| PatternUrl             |                         | Url for the pattern image of the login page. If empty, no pattern image is displayed.                             |
-| Preset                 |                         | The currently selected preset for the login page. If empty, no preset is applied.                                 |
-| Presets                |                         | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
-| ShowForgotPasswordLink | `true`                  | Controls whether the **Forgot password** link is displayed on the login page. Set to `false` to hide the link.    |
-| Presets:Name           | "demo", "prod"...       | The name of the preset. Used for identification and selection of the preset.                                      |
-| Presets:BackgroundUrl  |                         | Url for the background image specific to the preset. If empty, the default background is used.                    |
-| Presets:PatternUrl     |                         | Url for the pattern image specific to the preset. If empty, the default pattern is used.                          |
+| Node                      | Default or sample value   | Description                                                                                              |
+| ------------------------- | ------------------------  | -------------------------------------------------------------------------------------------------------- |
+| BackgroundUrl             |                           | Url for the background image of the login page. If empty, no background image is displayed.             |
+| PatternUrl                |                           | Url for the pattern image of the login page. If empty, no pattern image is displayed.                   |
+| Preset                    |                           | The currently selected preset for the login page. If empty, no preset is applied.                         |
+| Presets                   |                           | An array of preset configurations for the login page, allowing different visual settings for different scenarios. |
+| Presets:Name              | "demo", "prod"...         | The name of the preset. Used for identification and selection of the preset.                              |
+| Presets:BackgroundUrl     |                           | Url for the background image specific to the preset. If empty, the default background is used.          |
+| Presets:PatternUrl        |                           | Url for the pattern image specific to the preset. If empty, the default pattern is used.          |
 
 
 **Example**
 
 ```json title="appsettings.json"
-"LoginPageUI": {
-    "BackgroundUrl": "",
-    "PatternUrl": "",
-    "Preset": "",
-    "ShowForgotPasswordLink": true,
-    "Presets": [
-      {
-        "Name": "demo",
+    "LoginPageUI": {
         "BackgroundUrl": "",
-        "PatternUrl": "/images/pattern-demo.svg"
-      },
-      {
-        "Name": "prod",
-        "BackgroundUrl": "",
-        "PatternUrl": "/images/pattern-live.svg"
+        "PatternUrl": "",
+        "Preset": "",
+        "Presets": [
+          {
+            "Name": "demo",
+            "BackgroundUrl": "",
+            "PatternUrl": "/images/pattern-demo.svg"
+          },
+          {
+            "Name": "prod",
+            "BackgroundUrl": "",
+            "PatternUrl": "/images/pattern-live.svg"
+          }
+        ]
       }
-    ]
-  },
 ```
 
 
@@ -1675,28 +1565,6 @@ This node configures the DataTrans payment gateway integration, enabling secure 
 
 <!--datatrans-end-->
 
-### OpenTelemetry
-
-This node controls the OpenTelemetry observability settings:
-
-<!--opentelemetry-start-->
-
-| Node | Default or sample value | Description |
-|------|------------------------|-------------|
-| OpenTelemetry.Enabled | false | Required. Enables the module. Set to `true` to activate. |
-| OpenTelemetry.Endpoint | http://localhost:4317 | Required. OTLP collector endpoint (gRPC). Required to export data. |
-| OpenTelemetry.ServiceName | VirtoCommerce.Platform | Optional. Service name reported in telemetry. |
-
-```json title="appsettings.json"
-{
-  "OpenTelemetry": {
-    "Enabled": true,
-    "Endpoint": "http://localhost:4317",
-    "ServiceName": "VirtoCommerce.Platform"
-  }
-}
-```
-<!--opentelemetry-end-->
 
 ### PlatformSettings
 
@@ -1723,28 +1591,6 @@ This node is used for Platform settings overriding.
   "IsDictionary": false
 }
 ```
-
-### ProductSnapshot
-
-This node configures the Product Snapshot module, which captures product information at order creation so completed orders keep their original product details after catalog changes.
-
-<!--product-snapshot-start-->
-
-| Node    | Default or sample value | Description                                                                                              |
-|---------|-------------------------|----------------------------------------------------------------------------------------------------------|
-| Enabled | true<br> false          | Enables automatic product snapshot creation on new orders. Must be set to `true` to activate the module. |
-
-**Examples**
-
-```json title="appsettings.json"
-{
-  "ProductSnapshot": {
-    "Enabled": true
-  }
-}
-```
-
-<!--product-snapshot-end-->
 
 ### PushMessages
 
@@ -1884,7 +1730,7 @@ Tailor the search provider per document type to optimize search performance and 
 <!--search-end-->
 
 
-#### Elasticsearch
+#### ElasticSearch
 
 This node configures the Elasticsearch provider:
 
@@ -2203,65 +2049,6 @@ Configure Elastic Cloud v8.x:
 ```
 
 <!--elasticsearch8-end-->
-
-
-#### OpenSearch
-
-This node configures the OpenSearch provider:
-
-<!--opensearch-start-->
-
-| Node                                        | Default or sample value | Description                                                                                                                   |
-|---------------------------------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Search.Provider                             | "OpenSearch"            | Specifies the search provider name.                                                                                           |
-| Search.Scope                                | "default"               | Specifies the common name (prefix) for all indexes. Each document type is stored in a separate index, and the full index name is **scope-{documenttype}**. This allows one search service to serve multiple indexes. The key is optional. Its default value is **default**. |
-| Search.OpenSearch.Server                    |                         | Specifies the network address and port of the OpenSearch server.                                                              |
-| Search.OpenSearch.User                      | "openSearch"            | (Optional) Specifies the username for private OpenSearch server. Its default value is **openSearch**.                         |
-| Search.OpenSearch.Password                  |                         | (Optional) Specifies the password for the private OpenSearch server.                                                          |
-| Search.OpenSearch.EnableHttpCompression     | true<br>false           | (Optional) Set this to **true** to enable gzip compressed requests and responses or **false** (default) to disable compression. |
-
-**Examples**
-
-=== "OpenSearch v2.x without security features enabled"
-
-    ```json title="appsettings.json"
-        "Search": {
-            "Provider": "OpenSearch",
-            "Scope": "default",
-            "OpenSearch": {
-                "Server": "https://localhost:9200"
-            }
-        }
-    ```
-
-=== "OpenSearch v2.x with ApiKey authorization"
-
-    ```json title="appsettings.json"
-        "Search": {
-            "Provider": "OpenSearch",
-            "Scope": "default",
-            "OpenSearch": {
-                "Server": "https://localhost:9200",
-                "User": "{USER_NAME}",
-                "Password": "{PASSWORD}"
-            }
-        }
-    ```
-
-=== "Amazon OpenSearch Service"
-
-    ```json title="appsettings.json"
-        "Search": {
-            "Provider": "OpenSearch",
-            "Scope": "default",
-            "OpenSearch": {
-                "Server": "https://{master-user}:{master-user-password}@search-test-vc-c74km3tiav64fiimnisw3ghpd4.us-west-1.es.amazonaws.com"
-            }
-        }
-    ```
-
-<!--opensearch-end-->
-
 
 
 #### Lucene

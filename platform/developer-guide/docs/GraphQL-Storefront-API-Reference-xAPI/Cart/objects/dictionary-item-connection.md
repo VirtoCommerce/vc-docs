@@ -11,12 +11,3 @@ This type provides a standardized way of fetching and navigating through a large
 | `value` [ ==DynamicPropertyValue== ](dynamic-property-value-type.md)  | The actual value of the dynamic property.                                         |
 | `dictionaryItem` [ ==DictionaryItemType== ](dictionary-item-type.md)  | The dictionary item associated with the dynamic property value, if applicable.    |
 | `dynamicProperty` [ ==DynamicPropertyType== ](dynamic-property-type.md)| The dynamic property definition to which this value belongs.                     |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../dictionary-item-type">← DictionaryItemType</a>
-    <a href="../validation-error-type">ValidationErrorType →</a>
-</div>

@@ -24,12 +24,3 @@ This type is used to differentiate or group different types of product variation
 
 
 ![Readmore](media/readmore.png){: width="25"} [Managing Product Variations](/platform/user-guide/latest/catalog/managing-product-variations)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../FulfillmentCenterEdge">← FulfillmentCenterEdge</a>
-    <a href="../AvailabilityData">AvailabilityData →</a>
-</div>

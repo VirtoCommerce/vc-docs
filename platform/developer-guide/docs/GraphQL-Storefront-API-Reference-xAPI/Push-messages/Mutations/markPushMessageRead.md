@@ -12,9 +12,9 @@ The [InputMarkPushMessageReadType!](../Objects/InputMarkPushMessageReadType.md) 
 
 ## Possible returns
 
-| Possible return | Description                                                                        |
-|-----------------|------------------------------------------------------------------------------------|
-| `Boolean`       | Indicates whether the operation of marking the push message as read was successful.|
+| Possible return | Description                                                                               |
+|-----------------|-------------------------------------------------------------------------------------------|
+| `Boolean`       | Indicates whether the operation of marking the push message as read was successful or not.|
 
 
 
@@ -36,13 +36,4 @@ mutation markPushMessageRead($command: InputMarkPushMessageReadType!) {
 }
 ```
 
-</div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Objects/InputDeleteFcmTokenType">← InputDeleteFcmTokenType</a>
-    <a href="../markPushMessageUnread">MarkPushMessageUnread mutation →</a>
 </div>

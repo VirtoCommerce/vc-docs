@@ -51,12 +51,3 @@ This connection allows you to get role by its name.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../user">← User query</a>
-    <a href="../vendor">Vendor query →</a>
-</div>

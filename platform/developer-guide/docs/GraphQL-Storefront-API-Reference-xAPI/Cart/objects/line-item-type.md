@@ -42,11 +42,3 @@ This type represents the data structure that holds information about a line item
 | `width`  ==Decimal==               | The width of the product.                                                                             |
 | `fulfillmentCenterId`  ==String==  | The identifier of the fulfillment center associated with the line item.                               |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../dynamic-property-value-type">← DynamicPropertyValueType</a>
-    <a href="../dictionary-item-type">DictionaryItemType →</a>
-</div>

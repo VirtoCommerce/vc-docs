@@ -13,13 +13,4 @@ This type represents a line item in a product configuration, detailing the assoc
 | `listPrice` [ ==MoneyType!== ](../objects/money-type.md)                  | The standard list price of the configuration item.                    |  
 | `extendedPrice` [ ==MoneyType!== ](../objects/money-type.md)              | The extended price based on the quantity of the configuration item.   |  
 | `salePrice` [ ==MoneyType!== ](../objects/money-type.md)                  | The sale price of the configuration item.                             |  
-| `discountAmount` [ ==MoneyType!== ](../objects/money-type.md)             | The amount of any discount applied to the configuration item.         |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../CartConfigurationItemType">← CartConfigurationItemType</a>
-    <a href="../ConfigurationQueryResponseType">ConfigurationQueryResponseType →</a>
-</div>
+| `discountAmount` [ ==MoneyType!== ](../objects/money-type.md)             | The amount of any discount applied to the configuration item.         |  

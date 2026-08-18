@@ -15,11 +15,3 @@ This type represents a menu link within a menu. It defines the properties and ch
 | `outerId` ==String==                | The external Id of the menu link.                                      |
 | `childItems` [==MenuLinkType==]     | An array of child `MenuLinkType` objects.<br>Each object represents a nested menu link, allowing for the creation of hierarchical menus.                     |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../MenuLinkListType">← MenuLinkListType</a>
-    <a href="../../../Reviews/overview">Customer Review module overview →</a>
-</div>

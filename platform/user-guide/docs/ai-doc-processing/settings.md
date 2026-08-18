@@ -1,33 +1,20 @@
 # Settings
 
-To open the AI Document Processing module general settings:
+To configure AI smart capture settings:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **AI Document Processing** to find the settings related to the module.
-1. Click **General** to configure the following:
+1. Select settings related to the **AI Document Processing** module.
+1. In the next blade, select settings to configure:
 
-    ![General catalog settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
+    * General settings:
 
-1. Click **Save** in the toolbar to save the changes.
+        ![General settings](media/general-settings.png){: style="display: block; margin: 0 auto;" }
 
-Your modifications have been applied.
+    * Purchase request settings:
 
-<br>
-<br>
-
-
-To open store-specific module settings:
-
-1. Open **Stores** from the main menu.
-1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
-1. Find **AI Document Processing** settings in the left panel and configure the following:
-
-    ![Purchase request settings](media/purchase-request-settings.png){: style="display: block; margin: 0 auto;" }
+        ![Purchase request settings](media/purchase-request-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
-
-Your modifications have been applied.
 
 
 <br>

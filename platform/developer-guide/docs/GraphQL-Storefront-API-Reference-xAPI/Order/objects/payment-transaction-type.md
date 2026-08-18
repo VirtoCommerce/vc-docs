@@ -20,11 +20,3 @@ This type represents a specific transaction attempt associated with a payment.
 | `note`  ==String!==               | An optional note or comment related to the payment transaction.                                   |
 | `amount`  ==MoneyType==           | The amount associated with the payment transaction.                                               |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../input-order-payment-type">← InputOrderPaymentType</a>
-    <a href="../authorize-payment-result-type">AuthorizePaymentResultType →</a>
-</div>

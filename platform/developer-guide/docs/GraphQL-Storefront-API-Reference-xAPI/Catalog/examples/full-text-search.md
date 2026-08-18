@@ -75,12 +75,3 @@ query {
 
 !!! note
     The `cultureName` parameter is required for retrieving localized fields such as name, description, etc. If it is not passed, the request will return an error like **Cannot resolve field `name`**.
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../objects/ProductSuggestionsQueryResponseType">← ProductSuggestionsQueryResponseType</a>
-    <a href="../fuzzy-search">Fuzzy Search →</a>
-</div>

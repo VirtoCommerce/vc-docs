@@ -1,8 +1,0 @@
-title: Payments
-nav:
-  - Registering New Payment Method: new-payment-method-registration.md
-  - Simplified Integration via CSV files: simplified-integration.md
-  - Authorize.net: authorize-net.md
-  - CyberSource: cybersource.md
-  - DataTrans: datatrans.md
-  - Skyflow: skyflow.md

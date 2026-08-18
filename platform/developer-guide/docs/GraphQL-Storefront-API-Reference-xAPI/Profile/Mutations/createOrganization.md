@@ -56,12 +56,3 @@ mutation createOrganization  ($command: InputCreateOrganizationType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../deleteUsers">← DeleteUsers mutation</a>
-    <a href="../updateOrganization">UpdateOrganization mutation →</a>
-</div>

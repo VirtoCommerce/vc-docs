@@ -64,15 +64,12 @@ Select your preferred environment and follow the steps to set up Context7 as an 
 
 ## Usage
 
-Append `use context7` to any platform-specific prompt to ground the generation on current Virto Commerce documentation retrieved at runtime. The directive triggers documentation retrieval before the AI generates its response.
+Append **use context7** to any platform-specific prompt to ground the generation on current Virto Commerce documentation retrieved at runtime. The directive triggers documentation retrieval before the AI generates its response.
 
 ```
 Implement a custom pricing calculator service in a Virto Commerce module. use context7
 ```
 
-<br>
-<br>
-![Readmore](media/readmore.png){: width="25"} [AI quick start](../../Getting-Started/ai-quick-start.md)
 
 
 <br>
@@ -81,5 +78,5 @@ Implement a custom pricing calculator service in a Virto Commerce module. use co
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../adding-case-sensitive-search-support-for-postgre">← Adding case-insensitive search support for PostgreSQL </a>
-    <a href="../using-llms-txt">Using llms.txt  →</a>
+    <a href="../swagger-api">Swagger/API integration  →</a>
 </div>

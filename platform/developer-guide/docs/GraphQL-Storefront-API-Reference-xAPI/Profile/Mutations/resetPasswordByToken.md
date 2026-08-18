@@ -49,12 +49,3 @@ resetPasswordByToken(command:$command)
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../registerByInvitation">← RegisterByInvitation mutation</a>
-    <a href="../changePassword">ChangePassword mutation →</a>
-</div>

@@ -10,12 +10,3 @@ This type represents a facet used for filtering search results.
 | `label` ==String!==           | The label or display name of the filter facet.                                                   |
 | `facetType` ==FacetTypes!==   | The type of facet: Terms, Range, Filter.                                                         |
 | `count` ==Int!==              | The count of items associated with this facet.                                                   |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../input-key-value-type">← InputKeyValueType</a>
-    <a href="../range-facet">RangeFacet →</a>
-</div>

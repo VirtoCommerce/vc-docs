@@ -81,12 +81,3 @@ This query retrieves a list of configuration options for a specific cart or line
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../productConfiguration">← ProductConfiguration query</a>
-    <a href="../getSavedForLater">GetSavedForLater query →</a>
-</div>

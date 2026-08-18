@@ -48,12 +48,3 @@ This query retrieves information about a specific page based on the provided cri
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← xCMS module overview</a>
-    <a href="../pages">Pages query →</a>
-</div>

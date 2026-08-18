@@ -10,12 +10,3 @@ This type represents a tax detail with its associated properties.
 | `price` [ ==MoneyType== ](money-type.md)           | The price on which the tax is calculated, represented as a `MoneyType` object.         |
 | `rate` [ ==MoneyType== ](money-type.md)            | The tax rate applied, represented as a `MoneyType` object.                             |
 | `name`  ==String==                                 | The name or description of the tax.                                                    |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../currency-type">← CurrencyType</a>
-    <a href="../shipment-type">ShipmentType →</a>
-</div>

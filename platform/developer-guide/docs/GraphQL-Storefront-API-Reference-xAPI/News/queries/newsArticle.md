@@ -67,12 +67,3 @@ This query allows you to retrieve a specific news article published on the Front
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← News module overview</a>
-    <a href="../newsArticles">NewsArticles query →</a>
-</div>

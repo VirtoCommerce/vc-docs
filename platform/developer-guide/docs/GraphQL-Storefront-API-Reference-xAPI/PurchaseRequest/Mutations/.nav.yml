@@ -1,8 +1,0 @@
-title: Mutations
-nav:
-  - addPurchaseRequestSource: addPurchaseRequestSource.md
-  - createPurchaseRequest: createPurchaseRequest.md
-  - createPurchaseRequestFromDocuments: createPurchaseRequestFromDocuments.md
-  - extractPurchaseRequestSourcesData: extractPurchaseRequestSourcesData.md
-  - postProcessPurchaseRequestSources: postProcessPurchaseRequestSources.md
-  - updatePurchaseRequestByDocuments: updatePurchaseRequestByDocuments.md

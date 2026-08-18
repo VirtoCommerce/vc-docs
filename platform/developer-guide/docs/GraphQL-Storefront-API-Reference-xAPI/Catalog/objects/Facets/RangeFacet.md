@@ -10,12 +10,3 @@ This type represents a facet for filtering products based on a range of values.
 | `label`  ==String!==                                 	| A label of the range facet.                               	|
 | `facetType`  ==FacetTypes==                       	| The type of the range facet.                                	|
 | `ranges` [ ==FacetRangeType== ](FacetRangeType.md)    | A specific range within the range facet.                    	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../FilterFacet">← FilterFacet</a>
-    <a href="../FacetRangeType">FacetRangeType →</a>
-</div>

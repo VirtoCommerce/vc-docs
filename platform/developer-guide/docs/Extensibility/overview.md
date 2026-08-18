@@ -1,6 +1,6 @@
 # Overview
 
-Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce [modules](../glossary.md#module) with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
+Unlimited extensibility is an indisputable advantage of Virto Commerce. This means end-user solution developers can adapt or replace Virto Commerce modules with their own functionality. This adaptation can be done in an elegant and simple way without workarounds.
 
 There are several types of vendor-made extensions that guarantee "seamless delivery".  Virto Commerce, however, guarantees that these extensions are sufficient to build an ecommerce solution of any complexity on top of it:
 
@@ -18,9 +18,9 @@ Virto Commerce supports declarative extensions through the admin interface and A
 
 In particular, Virto Commerce supports:
 
-* [Dynamic properties](../glossary.md#dynamic-property): [Extend entities](../Fundamentals/Dynamic-Properties/using-DynamicPropertyAccessor.md), such as Cart, Order, Company, etc., with new properties.
+* [Dynamic properties](../Fundamentals/Dynamic-Properties/overview.md): Extend entities, such as Cart, Order, Company, etc., with new properties.
 
-* [Statuses](/platform/user-guide/contacts/settings#statuses): Add Order, Shipment, Payment, etc. statuses.
+* [Statuses](../../../user-guide/contacts/settings#statuses): Add Order, Shipment, Payment, etc. statuses.
 
 * [Role-based security and permissions](../Fundamentals/Security/overview.md): Restrict access for a user (API) based on their role. For example, if you want a user to only be able to call the **Search products** API, you can achieve that. In a similar way, you can allow a user to have access to the **Orders** API for a specific store, only.
 

@@ -23,6 +23,6 @@ Try our interactive demo to explore key features in action:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../purchase-requests">← Purchase requests</a>
-    <a href="../back-in-stock-lists">Back-in-stock list →</a>
+    <a href="../review-products">← Product reviews</a>
+    <a href="../lists">Lists →</a>
 </div>

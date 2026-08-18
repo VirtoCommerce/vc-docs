@@ -8,7 +8,7 @@ The **Azure Search** module serves as a search engine within the Search module. 
 
 ## Key features
 
-The diagram below illustrates the available search providers and their functionality:
+The diagram below illustrates the functionality of the Azure Search module:
 
 ![Key entities](media/key-entities.png){: style="display: block; margin: 0 auto;" }
 
@@ -19,6 +19,6 @@ The diagram below illustrates the available search providers and their functiona
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../elastic-search/overview">← Elasticsearch module overview</a>
-    <a href="../settings">Settings →</a>
+    <a href="../../lucene/overview">← Lucene Search module overview</a>
+    <a href="../../search">Search options →</a>
 </div>

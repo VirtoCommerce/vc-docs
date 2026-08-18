@@ -57,26 +57,6 @@ If you prefer no expiration, set `MaxPasswordAge` to `0`.
 ```
 
 
-## Enable or disable the unique email requirement
-
-By default, Virto Commerce requires every user account to use a unique email address. The check is controlled by `IdentityOptions:User:RequireUniqueEmail` in **appsettings.json**.
-
-| Value | Behavior |
-| --- | --- |
-| `true` (default) | Each email address can be linked to only one user account. Registration attempts that reuse an existing email are rejected. |
-| `false` | Multiple accounts may share the same email address. Email-based sign-in and password recovery become ambiguous in this mode. Use this option only when the username is the canonical sign-in identifier. |
-
-To disable the check, set the value to `false` and restart the Platform:
-
-```json title="appsettings.json"
-"User": {
-  "RequireUniqueEmail": false
-}
-```
-
-For Frontend flows that need to pre-check whether an email is already taken before submitting a registration, use the [checkEmailUniqueness](../../GraphQL-Storefront-API-Reference-xAPI/Profile/Queries/checkEmailUniqueness.md) GraphQL query.
-
-
 ## Managing lockout rules after failed login attempts
 
 The `Lockout` node helps protect accounts from brute-force attacks.

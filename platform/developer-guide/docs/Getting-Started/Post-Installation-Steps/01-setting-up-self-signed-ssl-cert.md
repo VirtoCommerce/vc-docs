@@ -37,6 +37,6 @@ If this warning appears:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../installation-guide/start-local">← Local install with start-local</a>
+    <a href="../../installation-guide/macOS">← Installation on MacOS</a>
     <a href="../02-configuring-email-notifications">Configuring email notifications →</a>
 </div>

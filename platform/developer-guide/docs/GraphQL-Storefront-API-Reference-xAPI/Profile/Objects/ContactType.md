@@ -33,11 +33,3 @@ This type represents a contact and includes various fields to describe the conta
 | `organizationsIds`  ==[String]!==                                             | The Ids of the organizations associated with the contact.        	|
 | `organizations(...)` [ ==OrganizationConnection== ](OrganizationConnection.md)| A connection to a list of organizations associated with the contact.|
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../OrganizationEdge">← OrganizationEdge</a>
-    <a href="../ContactConnection">ContactConnection →</a>
-</div>

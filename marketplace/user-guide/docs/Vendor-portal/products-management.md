@@ -99,11 +99,6 @@ For various pricing strategies a vendor might set different price tags for a sin
 
     ![Adding price tags](media/add-price-tags.gif)
 
-    !!! note
-        You will receive a notification if multiple price tags are created under identical conditions:
-
-        ![Duplicate conditions](media/price-tags-duplicates.png){: style="display: block; margin: 0 auto;" }
-
 1. Click **Confirm** in the toolbar, then **Save** to save the changes.
 
 Your price tag has been added to the offer:
@@ -124,21 +119,7 @@ To increase sales and improve product discovery, Vendors can manage product asso
 
 The associations have been added.
 
-## Configure products
-
-To adapt your products to your customers' unique needs, allow them to choose from available options. In Virto Commerce, we call customizable parts of the product **sections**, and the choices for each part of the product options. 
-
-Try our interactive demo to explore the product configuration feature:
-
-<div>
-  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
-  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.55% + 25px);width:100%;height:0;transform:scale(1)">
-    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/gwsopqhiqwyx?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
-  </div>
-</div>
-
-
-## Use AI assistant
+## AI assistant
 
 You can perform any action with the products using our AI assistant. Try our interactive demo to learn about possible use cases:
 
@@ -169,5 +150,5 @@ All dialogs are stored in the **Communication** section of the main menu, where 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../quotes">← Quotes</a>
-    <a href="../offers">Offers →</a>
+    <a href="../products-management">Products management →</a>
 </div>

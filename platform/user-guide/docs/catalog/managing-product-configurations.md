@@ -89,13 +89,7 @@ To add sections and options:
             The predefined text appears on the Frontend:
 
             ![Predefined text](media/predefined-text.png)
-            <br>
-            <br>
-            For the **Text** section, you can configure the following additional settings:
 
-            ![Text settings](media/text-settings.png)
-            <br>
-            <br>
         * **File**: Upload a file.
 
             ![File type](media/adding-text-type-option.gif)
@@ -115,18 +109,6 @@ To add sections and options:
       If you switch this option to off, a **None** option automatically appears in the list on the Frontend. This allows users to skip selecting an option for that section when configuring their product:
 
       ![Non-required option](media/none-option.png){: style="display: block; margin: 0 auto;" }
-
-    1. To set any option as the default:
-
-        1. Click **Options** in the section details blade.
-        1. Select an option from the list.
-        1. Turn the **Default** option to on:
-
-            ![Default options](media/setting-default-options.gif)
-
-        On the Frontend, the selected option is set as default:
-
-        ![Default options on the Frontend](media/default-options-frontend.png)
 
 1. Click **Confirm** in the toolbar.
 1. Your options appear in the options list of the previous blade. Click **OK** to save the changes.

@@ -10,12 +10,3 @@ This type represents a connection to a list of member addresses.
 | `pageInfo` [ ==PageInfo!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo)   | The information about the current page.                            |
 | `edges` [ ==[MemberAddressEdge]== ](MemberAddressEdge.md)         | The edges containing the cursor and node of each member address.   |
 | `items` [ ==[MemberAddressType]== ](MemberAddressType.md)         | The list of member addresses in the connection.                    |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../MemberAddressType">← MemberAddressType</a>
-    <a href="../MemberAddressEdge">MemberAddressEdge →</a>
-</div>

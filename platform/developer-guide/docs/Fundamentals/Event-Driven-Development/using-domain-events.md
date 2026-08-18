@@ -81,10 +81,6 @@ void Initialize(IServiceCollection serviceCollection)
 
 
 
-## Delivery reliability
-
-Domain events are dispatched in-process and run once, with no built-in retry and no transactional outbox. For how this affects delivery to external systems such as webhooks and Event Grid, and how to achieve at-least-once delivery, see [Transactional delivery and the outbox pattern](../../Operations/integration-failure-handling.md#transactional-delivery-and-the-outbox-pattern).
-
 <br>
 <br>
 ********

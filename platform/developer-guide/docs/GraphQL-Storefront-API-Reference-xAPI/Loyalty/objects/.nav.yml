@@ -1,7 +1,0 @@
-title: Objects
-nav:
-  - LoyaltyBalanceResult: LoyaltyBalanceResult.md
-  - LoyaltyOperationLog: LoyaltyOperationLog.md
-  - LoyaltyOperationLogConnection: LoyaltyOperationLogConnection.md
-  - LoyaltyOperationLogEdge: LoyaltyOperationLogEdge.md
-  - LoyaltyOperationLogObject: LoyaltyOperationLogObject.md
