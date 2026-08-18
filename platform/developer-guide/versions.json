@@ -2,9 +2,7 @@
   {
     "version": "stable15",
     "title": "Stable 15",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "stable14",
@@ -22,5 +20,10 @@
     "aliases": [
       "stable10"
     ]
+  },
+  {
+    "version": "latest",
+    "title": "Edge",
+    "aliases": []
   }
 ]
