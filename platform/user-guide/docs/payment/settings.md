@@ -13,7 +13,7 @@ To configure the Payment module settings:
 
 1. Click **OK** to save the changes.
 
-Your modifications have been applied.
+The payment method settings have been configured.
 
 
 ![Readmore](media/readmore.png){: width="25"} [Native payment methods settings](../native-payment-methods/settings.md)

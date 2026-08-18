@@ -64,12 +64,3 @@ query {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Push Messages module overview</a>
-    <a href="../FcmSettings">FcmSettings query →</a>
-</div>

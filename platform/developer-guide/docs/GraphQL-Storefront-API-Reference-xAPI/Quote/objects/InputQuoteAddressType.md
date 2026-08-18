@@ -24,12 +24,3 @@ This type defines the format and fields used to provide input for updating or cr
 | `firstName`  ==String!==      | The first name of the individual associated with the address.     |
 | `lastName`  ==String!==       | The last name of the individual associated with the address.      |
 | `organization`  ==String==    | The name of the organization associated with the address.         |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../UpdateQuoteAddressCommandType">← UpdateQuoteAddressCommandType</a>
-    <a href="../ApproveQuoteResultType">ApproveQuoteResultType →</a>
-</div>

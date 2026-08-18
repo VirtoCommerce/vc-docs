@@ -8,12 +8,3 @@ This type represents the result of approving a quote.
 | ----------------------- | -------------------------------------------------|
 | `id`  ==String!==       | The Id of the approved quote.                    |
 | `orderId`  ==String==   | The Id of the order created from the approved quote. |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputQuoteAddressType">← InputQuoteAddressType</a>
-    <a href="../UpdateQuoteDynamicPropertiesCommandType">UpdateQuoteDynamicPropertiesCommandType →</a>
-</div>

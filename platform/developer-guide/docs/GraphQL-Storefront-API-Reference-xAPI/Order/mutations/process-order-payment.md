@@ -52,12 +52,3 @@ mutation processOrderPayment ($command: InputProcessOrderPaymentType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../change-order-status">← ChangeOrderStatus mutation</a>
-    <a href="../update-order-dynamic-properties">UpdateOrderDynamicProperties mutation →</a>
-</div>

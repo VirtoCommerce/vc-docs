@@ -54,12 +54,3 @@ mutation addOrUpdateOrderPayment ($command: InputAddOrUpdateOrderPaymentType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../authorize-payment">← AuthorizePayment mutation</a>
-    <a href="../../../Pages/overview">Pages module overview →</a>
-</div>

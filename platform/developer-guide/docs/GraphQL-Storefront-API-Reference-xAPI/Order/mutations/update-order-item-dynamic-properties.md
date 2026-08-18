@@ -58,12 +58,3 @@ mutation updateOrderItemDynamicProperties ($command: InputUpdateOrderItemDynamic
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../update-order-dynamic-properties">← UpdateOrderDynamicProperties mutation</a>
-    <a href="../update-order-shipment-dynamic-properties">UpdateOrderShipmentDynamicProperties mutation →</a>
-</div>

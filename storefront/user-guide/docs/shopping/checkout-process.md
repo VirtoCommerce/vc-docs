@@ -70,7 +70,7 @@ To complete your order:
 1. Click **Proceed to billing** to proceed to the next step.
 
 1. Specify payment details:
-    * Select a billing address from the list, add new one, or check **Same as shipping address**. 
+    * Select a shipping address from the list, add new one, or check **Same as shipping address**. 
     * Select a payment method from the dropdown list:
 
         === "Bank card (Authorize.Net)"
@@ -92,9 +92,6 @@ To complete your order:
         === "Pay with points"
 
             **Pay with points** allows you to pay for the order with loyalty points earned from previous activity.
-
-    !!! note
-        For **Authorize.net** and **Skyflow**, the credit card form is shown directly on the checkout page as soon as you select the payment method, so you can enter your card details on the same page.
 
 <br>
 <br>

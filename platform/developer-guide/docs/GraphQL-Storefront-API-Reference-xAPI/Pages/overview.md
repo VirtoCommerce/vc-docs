@@ -10,12 +10,3 @@ The **Pages** module provides high-performance search queries for retrieving and
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pages/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-pages/releases/latest)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Order/overview">← xOrder module overview</a>
-    <a href="../Queries/pageDocument">PageDocument query →</a>
-</div>

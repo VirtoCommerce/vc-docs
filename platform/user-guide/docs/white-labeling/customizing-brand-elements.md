@@ -92,5 +92,5 @@ The footer appears in the Frontend Application.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← White Labeling module overview</a>
-    <a href="../settings">Settings →</a>
+    <a href="../../integrations/overview">Integrations →</a>
 </div>

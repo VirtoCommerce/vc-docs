@@ -66,12 +66,3 @@ This query allows you to retrieve white labeling settings.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← White Labeling module overview</a>
-    <a href="../../objects/ChangeOrganizationLogoResultType">ChangeOrganizationLogoResultType →</a>
-</div>

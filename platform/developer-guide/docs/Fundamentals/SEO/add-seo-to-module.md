@@ -103,22 +103,13 @@ This section shows how to add a new SEO entity to your module's database model a
 
 1. Add a SEO widget to your blade in the **.Web** project:
 
-    ```js
+    ```csharp
             var seoWidget = {
-                controller: 'virtoCommerce.seo.seoWidgetController',
-                template: 'Modules/$(VirtoCommerce.Seo)/Scripts/widgets/seo-widget.html',
+                controller: 'virtoCommerce.coreModule.seo.seoWidgetController',
+                template: 'Modules/$(VirtoCommerce.Core)/Scripts/SEO/widgets/seoWidget.tpl.html',
                 objectType: 'NewsArticle',
                 getDefaultContainerId: function (blade) { return undefined; },
-                getLanguages: function (blade) { return blade.languages; },
-                // Optional: provide a store data source for the store dropdown in SEO detail blade.
-                // Should return a function compatible with ui-scroll-drop-down (paginated loading).
-                // If omitted, the store selector will be hidden.
-                getStoreDataSource: function () {
-                    return function (criteria) { return storesApi.search(criteria); };
-                },
-                // Optional: set a fixed store ID to hide the store selector
-                // and lock SEO entries to a specific store.
-                // getFixedStoreId: function (blade) { return blade.currentEntity.storeId; },
+                getLanguages: function (blade) { return blade.languages; }
             };
             widgetService.registerWidget(seoWidget, 'newsArticleDetails');
     ```

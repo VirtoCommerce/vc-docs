@@ -68,12 +68,3 @@ mutation rejectGiftItems($command: InputRejectGiftItemsType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../addGiftItems">← AddGiftItems mutation</a>
-    <a href="../changeCartConfiguredItem">ChangeCartConfiguredItem mutation →</a>
-</div>

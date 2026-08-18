@@ -1,7 +1,0 @@
-title: Objects
-nav:
-  - CustomerReview: CustomerReview.md
-  - CustomerReviewConnection: CustomerReviewConnection.md
-  - createReviewResult: createReviewResult.md
-  - CustomerReviewEdge: CustomerReviewEdge.md
-  - ReviewValidationErrorType: ReviewValidationErrorType.md

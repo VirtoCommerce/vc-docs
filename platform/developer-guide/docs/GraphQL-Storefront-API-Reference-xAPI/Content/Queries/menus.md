@@ -94,12 +94,3 @@ query {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../menu">← Menu query</a>
-    <a href="../../Objects/PageConnection">PageConnection →</a>
-</div>

@@ -12,12 +12,3 @@ This type represents a value assigned to a dynamic property.
 | `dynamicPropertyValueType` ==DynamicPropertyValueTypes!==               | The format/category of the value (e.g., **ShortText**, **Integer**, **Boolean**, **DateTime**, etc.) |
 | `dictionaryItem` [ ==DictionaryItemType== ](dictionary-item-type.md)    | The dictionary item associated with the dynamic property value, if applicable.     |
 | `dynamicProperty` [ ==DynamicPropertyType== ](dynamic-property-type.md) | The dynamic property definition to which this value belongs.                       |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../dynamic-property-type">← DynamicPropertyType</a>
-    <a href="../line-item-type">LineItemType →</a>
-</div>

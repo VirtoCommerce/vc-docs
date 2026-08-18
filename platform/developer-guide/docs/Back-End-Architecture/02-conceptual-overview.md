@@ -8,7 +8,7 @@ The Virto Commerce Platform's core components are:
 
 * **Platform manager (SPA)**: A web-based user interface built as an SPA allowing you to manage your application. It also provides back office capabilities that enable master data management, configuring products, prices, inventories, employees, workflows, and other functionality required for ecommerce applications. It works with all data through REST API the Platform runtime provides.
 
-* **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the [modules](../glossary.md#module) and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless ecommerce experience, including support for different databases, search engines, and caching mechanisms.
+* **Platform application (Runtime)**: An [ASP.NET](http://asp.net/) Core application that bootstraps the modules and manager GUI and acts as a host for all Platform capabilities. It integrates various components to deliver a seamless ecommerce experience, including support for different databases, search engines, and caching mechanisms.
 
 * **Modules**: Each module is a portion of the application's overall functionality. Multiple modules get organized into independent and interchangeable [software packages hosted by the Platform Application](../Fundamentals/Modularity/01-overview.md). All modules can be divided into three main categories depending on the tasks they are intended for:
 	- **Business modules**: Contain the implementation of business functionality.
@@ -21,14 +21,13 @@ The Virto Commerce Platform's core components are:
 	- PostgreSQL 12 and higher.
 
 * **Supported search engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:
-	- [Elasticsearch.](../Fundamentals/Indexed-Search/integration/configuring-elasticsearch.md)
-	- [Elasticsearch 8.](../Fundamentals/Indexed-Search/integration/elastic-search-8.md)
-	- [Elasticsearch 9.](../Fundamentals/Indexed-Search/integration/elastic-search-9.md)
-	- [Elastic App Search.](../Fundamentals/Indexed-Search/integration/elastic-app-search-overview.md)
-	- [Azure Search.](../Fundamentals/Indexed-Search/integration/configuring-azure-cognitive-search.md)
-	- [OpenSearch.](../Fundamentals/Indexed-Search/integration/opensearch.md)
-	- [Algolia.](../Fundamentals/Indexed-Search/integration/algolia.md)
-	- [Lucene.](../Fundamentals/Indexed-Search/integration/lucene.md)
+	- Elasticsearch.
+	- Elasticsearch 8.
+	- Elasticsearch 9.
+	- Elastic App Search.
+	- Azure Search.
+	- Algolia.
+	- Lucene.
 
 * **Caching**: Virto Commerce integrates Redis for efficient caching to improve performance and scalability.
 
@@ -41,5 +40,5 @@ The Virto Commerce Platform's core components are:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../01-tech-stack">← Technical stack</a>
-    <a href="../../Security-and-Compliance/soc2-type-ii">SOC 2 Type II compliance →</a>
+    <a href="../../CLI-tools/overview">CLI tools overview →</a>
 </div>

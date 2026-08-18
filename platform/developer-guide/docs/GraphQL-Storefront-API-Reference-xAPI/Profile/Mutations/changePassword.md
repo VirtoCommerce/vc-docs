@@ -46,12 +46,3 @@ changePassword(command: $command) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../resetPasswordByToken">← ResetPasswordByToken mutation</a>
-    <a href="../../../Push-messages/overview">Push Messages module overview →</a>
-</div>

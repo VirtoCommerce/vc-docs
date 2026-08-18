@@ -56,12 +56,3 @@ mutation mergeCart($command: InputMergeCartType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../add-or-update-cart-payment">← AddOrUpdateCartPayment mutation</a>
-    <a href="../remove-cart">RemoveCart mutation →</a>
-</div>

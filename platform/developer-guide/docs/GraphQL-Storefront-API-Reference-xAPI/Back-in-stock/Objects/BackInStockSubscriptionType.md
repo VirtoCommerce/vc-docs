@@ -13,13 +13,4 @@ This type represents a back-in-stock subscription, containing details about the 
 | `productName` ==String==   | The name of the subscribed product.                                         |  
 | `userId` ==String!==       | The Id of the user who created the subscription.                    |  
 | `memberId` ==String==      | The Id of the associated customer (if applicable).                  |  
-| `isActive` ==Boolean!==    | Indicates whether the subscription is active.                               |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Queries/backInStockSubscriptions">← BackInStockSubscriptions query</a>
-    <a href="../BackInStockSubscriptionEdge">BackInStockSubscriptionEdge →</a>
-</div>
+| `isActive` ==Boolean!==    | Indicates whether the subscription is active.                               |  

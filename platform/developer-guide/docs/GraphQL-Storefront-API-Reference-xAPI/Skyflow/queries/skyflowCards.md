@@ -48,12 +48,3 @@ skyflowCards(storeId: "B2B-Store") {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Skyflow module overview</a>
-    <a href="../../objects/SkyflowCardType">SkyflowCardType →</a>
-</div>

@@ -18,12 +18,3 @@ This type represents a specific range within a range facet, allowing users to fi
 | `total`  ==Long==            	| The total count of products within the entire range facet.                                                                                                                     	|
 | `label`  ==String==          	| A label of the range.                                                                                                                                                          	|
 | `isSelected`  ==Boolean==   	| Indicates whether the range is currently selected as a filter.                                                                                                                 	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../RangeFacet">← RangeFacet</a>
-    <a href="../TermFacet">TermFacet →</a>
-</div>

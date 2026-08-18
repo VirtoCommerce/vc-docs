@@ -9,11 +9,3 @@ This type represents a connection between a product and its associated cursor.
 | `cursor`  ==String!==                          | The cursor associated with the product node. The cursor is a unique identifier<br>that can be used for efficient pagination and traversal of the product list.	|
 | `node` [ ==Product== ](../ProductType.md)      | The product associated with the edge.                                                                                                                            |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ProductConnection">← ProductConnection</a>
-    <a href="../../ProductAssociation/ProductAssociationConnection">ProductAssociationConnection →</a>
-</div>

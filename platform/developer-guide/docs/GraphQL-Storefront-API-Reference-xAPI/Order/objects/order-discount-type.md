@@ -12,11 +12,3 @@ This type represents a discount applied to an order or shipment.
 | `promotionName`  ==String==   | The name of the promotion associated with the discount. |
 | `promotionDescription`  ==String==     | A brief description of the promotion associated with the discount. |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../order-tax-detail-type">← OrderTaxDetailType</a>
-    <a href="../order-payment-method-type">OrderPaymentMethodType →</a>
-</div>

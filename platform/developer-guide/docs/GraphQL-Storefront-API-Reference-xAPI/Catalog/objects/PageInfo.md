@@ -10,12 +10,3 @@ This type provides information about pagination in a connection.
 | `hasPreviousPage`  ==Boolean!==  	| Indicates whether there is a previous page of data available.    	|
 | `startCursor`  ==String==        	| The cursor of the first item in the current page. 	            |
 | `endCursor`  ==String==          	| The cursor of the last item in the current page.  	            |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../Asset">← Asset</a>
-    <a href="../InventoryInfo">InventoryInfo →</a>
-</div>

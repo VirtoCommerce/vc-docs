@@ -9,11 +9,3 @@ This type is utilized in combination with other types, such as `PageConnection`,
 | `cursor` ==String==                 | The cursor associated with the page edge.  |
 | `node` [==PageType==](PageType.md)  | The page node associated with the edge.    |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../PageConnection">← PageConnection</a>
-    <a href="../PageType">PageType →</a>
-</div>

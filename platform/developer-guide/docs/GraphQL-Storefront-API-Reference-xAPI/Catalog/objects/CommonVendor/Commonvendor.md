@@ -10,11 +10,3 @@ This type refers to a common representation or type of a vendor.
 | `name`  ==String!==                	| The name of the vendor. 	|
 | `rating` [==Rating==](Rating.md)      | Vendor rating.          	|
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Breadcrumb">← Breadcrumb</a>
-    <a href="../Rating">Rating →</a>
-</div>

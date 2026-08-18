@@ -84,12 +84,3 @@ The `InputAddOrUpdateCartAddressType!` represents the input object type used for
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../update-cart-payment-dynamic-properties">← UpdateCartPaymentDynamicProperties mutation</a>
-    <a href="../createWishlist">CreateWishlist mutation →</a>
-</div>

@@ -72,12 +72,3 @@ mutation changeCartConfiguredItem($command: InputChangeCartConfiguredItemType!) 
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../rejectGiftItems">← RejectGiftItems mutation</a>
-    <a href="../createConfiguredLineItem">CreateConfiguredLineItem mutation →</a>
-</div>

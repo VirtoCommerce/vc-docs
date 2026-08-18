@@ -56,12 +56,3 @@ The `InputRemoveItemType` represents the input object type used for removing a s
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../change-cart-item-comment">← ChangeCartItemComment mutation</a>
-    <a href="../add-coupon">AddCoupon mutation →</a>
-</div>

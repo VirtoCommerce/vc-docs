@@ -63,11 +63,11 @@ Developers can extend authorizations for newly created Importers. The `DataImpor
 
 ## Import app
 
-Import App is the new user interface, based on [Virto Custom App Development](/platform/developer-guide/latest/custom-apps-development/vc-shell/getting-started/getting-started/).
+Import App is the new user interface, based on [Virto Custom App Development](/platform/developer-guide/latest/custom-apps-development/vc-shell/Getting-started/creating-first-custom-app).
 
 ### Key features
 
-* Expandable with [VC-Shell](/platform/developer-guide/latest/custom-apps-development/vc-shell/). 
+* Expandable with [VC-Shell](/platform/developer-guide/latest/custom-apps-development/vc-shell/vc-shell-overview). 
 * Import-on-demand for Operator user.
 
 ### Folder structure

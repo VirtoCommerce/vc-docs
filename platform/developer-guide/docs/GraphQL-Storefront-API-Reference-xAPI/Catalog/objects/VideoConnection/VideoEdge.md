@@ -8,12 +8,3 @@ This type represents an edge in queries, specifically related to videos.
 |----------------------------------------	|----------------------------------------------------------------------------------------------------	|
 | `cursor`  ==String!==               	    | A cursor that points to the specific position of this edge in the paginated list of video objects. 	|
 | `node` [ ==VideoType== ](VideoType.md) 	| The video object associated with the edge.                                                         	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../VideoConnection">← VideoConnection</a>
-    <a href="../VideoType">VideoType →</a>
-</div>

@@ -62,12 +62,3 @@ This query is used to retrieve a specific menu based on the provided criteria.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../pages">← Pages query</a>
-    <a href="../menus">Menus query →</a>
-</div>

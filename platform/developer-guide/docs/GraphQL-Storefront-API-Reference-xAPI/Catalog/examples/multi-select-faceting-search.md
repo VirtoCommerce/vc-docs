@@ -8,11 +8,4 @@ The multi-select faceting search policy is enabled by default. You do not need a
 
 ![Readmore](../media/readmore.png){: width="25"} [Request body search](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-request-body.html#request-body-search-post-filter)
 
-<br>
-<br>
-********
 
-<div style="display: flex; justify-content: space-between;">
-    <a href="../facets">← Facets</a>
-    <a href="../../../Content/overview">xCMS module overview →</a>
-</div>

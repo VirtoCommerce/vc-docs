@@ -9,12 +9,3 @@ The **Shipping** module is responsible for managing pickup locations, including 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-shipping/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-shipping/releases/latest)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Store/overview">← Store module overview</a>
-    <a href="../queries/pickupLocations">PickupLocations query →</a>
-</div>

@@ -1,5 +1,0 @@
-title: Caching
-nav:
-  - Overview: 01-overview.md
-  - Cache Configuration: 02-cache-configuration.md
-  - Setting Up Redis Backplane for Scaling Out: 03-setting-up-Redis.md

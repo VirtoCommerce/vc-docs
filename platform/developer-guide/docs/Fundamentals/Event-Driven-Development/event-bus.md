@@ -21,9 +21,6 @@ The **Event Bus** module provides:
 * High performance.
 * Predefined destination provider: [Azure Event Grid](https://azure.microsoft.com/en-us/services/event-grid) with CloudEvents-based data format.
 
-!!! note
-    Azure Event Grid is the only destination provider that ships with the module. Other brokers, such as RabbitMQ, Kafka, or Azure Service Bus, are not provided out of the box and require a custom destination provider. [Contact us](https://virtocommerce.com/contact-us) to discuss a new destination.
-
 ## Example uses for Event Bus
 
 * **Serverless application architectures:** Use Azure Event Grid to trigger serverless functions instantly for tasks like currency exchange when a new price is added to a price list.

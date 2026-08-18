@@ -10,12 +10,3 @@ This type is a connection type that facilitates pagination and retrieval of `Pro
 | PageInfo [ ==PageInfo! == ](../PageInfo.md)   | The information about the current page.                                        	|
 | PropertyDictionaryItemEdge [ ==PropertyDictionaryItemEdge== ](PropertyDictItemEdge.md) 	|  A list of edges that represent the connections between nodes in the `PropertyDictionaryItemConnection`.	|
 | items [ ==PropertyDictionaryItem== ](PropertyDictItemConnection.md)              	|  All objects returned in the connection.                       	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../PropertyEdge">← PropertyEdge</a>
-    <a href="../PropertyDictItemEdge">PropertyDictItemEdge →</a>
-</div>

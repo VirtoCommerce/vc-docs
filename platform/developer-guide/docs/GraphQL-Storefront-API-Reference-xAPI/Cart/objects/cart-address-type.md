@@ -26,12 +26,3 @@ This type represents an address associated with a shopping cart or order.
 | `zip`  ==String==                    | The ZIP code or postal code associated with the address.                     |
 | `outerId`  ==String==                | The external identifier associated with the address.                         |
 | `addressType`  ==Int==               | The type of address.                                                         |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../cart-shipment-item-type">← CartShipmentItemType</a>
-    <a href="../money-type">MoneyType →</a>
-</div>

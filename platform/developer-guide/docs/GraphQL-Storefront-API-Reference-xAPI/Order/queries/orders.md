@@ -126,12 +126,3 @@ query {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../order">← Order query</a>
-    <a href="../orderStatuses">OrderStatuses query →</a>
-</div>

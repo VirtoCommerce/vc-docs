@@ -36,12 +36,3 @@ mutation($command: InputDeleteContactType!){
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../updateContact">← UpdateContact mutation</a>
-    <a href="../confirmEmail">ConfirmEmail mutation →</a>
-</div>

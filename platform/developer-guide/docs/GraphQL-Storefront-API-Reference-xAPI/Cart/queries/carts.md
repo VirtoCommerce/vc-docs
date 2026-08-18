@@ -91,12 +91,3 @@ This query allows you to retrieve information about shopping carts and wishlists
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../cart">← Cart query</a>
-    <a href="../wishlist">Wishlist query →</a>
-</div>

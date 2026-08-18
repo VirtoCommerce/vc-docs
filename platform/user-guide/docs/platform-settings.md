@@ -75,6 +75,6 @@ The **User profile** group allows users to personalize their experience in the a
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../backup-and-restore/overview">← Backup and restore </a>
+    <a href="../backup-and-restore">← Backup and restore </a>
     <a href="../ada-compliance">ADA compliance →</a>
 </div>

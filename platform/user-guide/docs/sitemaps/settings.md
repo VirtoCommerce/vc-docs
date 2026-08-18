@@ -1,43 +1,48 @@
 ﻿# Settings
 
-Within the **Sitemaps** module, you can configure:
+The Sitemaps module settings include:
 
-* [Global settings.](#global-settings)
-* [Store-specific settings.](#store-specific-settings)
+* [General settings](settings.md#general-settings)
+* [Sitemaps settings](settings.md#sitemaps-settings)
 
-## Global settings
+## General settings
 
-To configure the module settings globally:
+To configure general settings:
 
-1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Sitemaps** to find the settings related to the module.
-1. Click **General**.
-1. In the next blade, define the following:
+1. Click **Settings**.
+1. Type **Sitemap** to find the settings related to the module.
+1. Select **General** to configure the page size for export or import and enable/ disable logging of inventory changes
 
-    ![General settings](media/global-settings.png){: style="display: block; margin: 0 auto;" }
+	![General settings](media/general-settings.png)
 
-1. Click **Save** in the toolbar to save the changes.
+1. Click **Save** to save the changes.
 
-Your modifications have been applied.
+## Sitemaps settings
 
-<br>
-<br>
+To configure search settings: 
 
-## Store-specific settings
+1. Click **Settings**.
+1. Type **Sitemaps** to find the settings related to the module.
+1. Select **Search** to enable or disable event-based indexing.
 
-To configure the store-specific module settings:
+	![Search settings](media/sitemaps-settings.png)
 
-1. Open **Stores** from the main menu.
-1. In the next blade, select  your store.
-1. In the next blade, click on the **Settings** widget.
-1. Type **Sitemaps** in the search bar and select the **Sitemaps** from the list.
-1. In the next blade, configure the following:
+1. Click **Save** to save the changes.
 
-    ![Store-specific settings](media/store-specific-settings.png){: style="display: block; margin: 0 auto;" }
+## Set values via Store module
 
-1. Click **OK**, then **Save** in the toolbar to save the changes.
+You can also set these values [at the Store level](https://docs.virtocommerce.org/new/user-guide/store/settings/#sitemaps-settings):
 
-Your modifications have been applied.
+1. In the main menu, click **Stores**.
+1. In the next blade, select the required store.
+1. In the next blade, click the **Settings** widget:
+1. Scroll down to the **Sitemaps** section and configure the settings.
+	![Store settings](media/store-settings.png)
+1. Click **Ok** to save the changes.
+1. Click **Save** to save the changes.
+
+!!! note
+	The priority and update frequency settings at the store level have a higher priority, which means they will override the settings specified at the module level.
 
 
 <br>

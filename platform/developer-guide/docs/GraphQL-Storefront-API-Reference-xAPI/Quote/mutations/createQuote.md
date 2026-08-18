@@ -49,12 +49,3 @@ mutation createQuote($command: CreateQuoteCommandType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../approveQuoteRequest">← ApproveQuoteRequest mutation</a>
-    <a href="../declineQuoteRequest">DeclineQuoteRequest mutation →</a>
-</div>

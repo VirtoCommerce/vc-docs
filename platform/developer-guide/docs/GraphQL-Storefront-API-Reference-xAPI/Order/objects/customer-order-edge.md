@@ -8,12 +8,3 @@ This type represents an edge in a connection of customer orders.
 |-----------------------------------------------------------|--------------------------------------------------------------------------|
 | `cursor`  ==String!==                                     | The Id representing the current node in the list.                        |
 | `node` [ ==CustomerOrderType== ](customer-order-type.md)  | The `CustomerOrderType` node, which represents a single customer order.  |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../LocalizedSettingResponseType">← LocalizedSettingResponseType</a>
-    <a href="../currency-type">CurrencyType →</a>
-</div>

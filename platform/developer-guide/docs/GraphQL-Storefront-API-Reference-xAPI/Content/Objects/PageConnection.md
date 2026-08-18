@@ -10,12 +10,3 @@ This type represents a connection to a collection of pages. It provides structur
 | `pageInfo` [==PageInfo!==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/PageInfo)   | The information about the current page.                |
 | `edges` [==PageEdge==](PageEdge.md)                             | An array of page edges.                                |
 | `items` [==PageType==](PageType.md)                             | An array of actual page objects.                       |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Queries/menus">← Menus query</a>
-    <a href="../PageEdge">PageEdge →</a>
-</div>

@@ -21,11 +21,3 @@ This type is an object that provides information about a specific item within a 
 | `proposalPrices` [ ==[QuoteTierPriceType]== ](QuoteTierPriceType.md)  | A list of proposal prices for the item.           |
 | `product` [ ==Product== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/ProductType)       | Information about the associated product.         |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../QuoteTotalsType">← QuoteTotalsType</a>
-    <a href="../QuoteTierPriceType">QuoteTierPriceType →</a>
-</div>

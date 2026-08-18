@@ -9,11 +9,3 @@ This type is an object that is used to represent an edge within a list of quotes
 | `cursor`  ==String!==                  | The Id representing the edge.                             |
 | `node` [ ==QuoteType== ](QuoteType.md) | The associated `QuoteType` object representing the quote. |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../QuoteTaxDetailType">← QuoteTaxDetailType</a>
-    <a href="../CancelQuoteCommandType">CancelQuoteCommandType →</a>
-</div>

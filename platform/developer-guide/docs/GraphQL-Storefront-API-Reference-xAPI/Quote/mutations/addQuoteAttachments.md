@@ -41,12 +41,3 @@ mutation addQuoteAttachments($command: AddQuoteAttachmentsCommandType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../update-quote-address">← UpdateQuoteAddresses mutation</a>
-    <a href="../approveQuoteRequest">ApproveQuoteRequest mutation →</a>
-</div>

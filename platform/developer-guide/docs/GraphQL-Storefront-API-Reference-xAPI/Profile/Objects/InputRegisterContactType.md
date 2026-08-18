@@ -14,12 +14,3 @@ This type represents the input object for registering a contact.
 | `address` [ ==InputMemberAddressType== ](InputMemberAddressType.md)                           | The address associated with the contact.                              |
 | `about`  ==String==                                                                           | The description or additional information about the contact.          |
 | `dynamicProperties` [ ==InputDynamicPropertyValueType== ](InputDynamicPropertyValueType.md)   | An array of dynamic property value types, allowing the inclusion of custom properties and values for the contact. |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputRegisterOrganizationType">← InputRegisterOrganizationType</a>
-    <a href="../InputRegisterAccountType">InputRegisterAccountType →</a>
-</div>

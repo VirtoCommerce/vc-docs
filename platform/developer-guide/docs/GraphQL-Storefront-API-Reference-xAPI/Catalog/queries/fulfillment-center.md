@@ -63,12 +63,3 @@ This query allows you to get a fulfillment center by its Id.
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../properties">← Properties query</a>
-    <a href="../fulfillment-centers">Fulfillment Centers query →</a>
-</div>

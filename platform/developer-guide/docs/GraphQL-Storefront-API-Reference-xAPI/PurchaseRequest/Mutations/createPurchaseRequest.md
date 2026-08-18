@@ -43,12 +43,3 @@ mutation createPurchaseRequest($storeId: String!, $userId: String!, $currencyCod
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../addPurchaseRequestSource">← AddPurchaseRequestSource mutation</a>
-    <a href="../createPurchaseRequestFromDocuments">CreatePurchaseRequestFromDocuments mutation →</a>
-</div>

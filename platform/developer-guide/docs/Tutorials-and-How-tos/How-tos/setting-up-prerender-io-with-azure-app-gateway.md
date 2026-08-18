@@ -192,9 +192,6 @@ To pre-render site for crawlers only:
 
     ![Postman](media/postman-token.png){: style="display: block; margin: 0 auto;" }
 
-!!! note
-    The crawler regex above predates AI crawlers. If you want LLM bots such as `GPTBot` (OpenAI) or `ClaudeBot` (Anthropic) to receive pre-rendered HTML, add their User-Agent fragments to the pattern before the closing parenthesis and redeploy the gateway.
-
 ## Summary
 
 This tutorial provides an overview of the steps involved in creating a reverse proxy using Azure Application Gateway to make your single-page application SEO-friendly by using Prerender Seamlessly Renders JavaScript for Faster Indexing for efficient rendering. Following these steps, we will deploy a public proxy, accessible by the URL **https://vc-prerender.westeurope.cloudapp.azure.com**, that will forward requests to **virtostart-demo-store.govirto.com** using the prerendering capabilities provided by the Prerender.io service.

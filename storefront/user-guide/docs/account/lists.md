@@ -16,22 +16,7 @@ In the **Lists** section, you can:
     * Organization (shared within organization members).
     * Anyone (readonly) (shared via public view-only link):
 
-    <div class="grid cards" markdown>
-
-    -   __Shareable list:__
-
-        ---
-
-        ![Shareable list](../media/shareable-list.png)
-
-    -   __Private list:__
-
-        ---
-
-        ![Private list](../media/private-list.png)
-
-    </div>
-
+        ![Shareable lists](../media/shareable-private.png){: style="display: block; margin: 0 auto;" width="700"}
 
 !!! note
     If you attempt to save a new list with a name that already exists, the system automatically appends a number to differentiate it, indicating how many lists share that name.
@@ -69,6 +54,6 @@ You modifications have been applied.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../orders">← Orders</a>
+    <a href="../saved-for-later">← Saved for later</a>
     <a href="../quote-requests">Quote requests →</a>
 </div>

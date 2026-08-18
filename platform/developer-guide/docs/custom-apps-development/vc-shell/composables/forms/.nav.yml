@@ -1,7 +1,0 @@
-# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
-# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
-title: Forms
-nav:
-  - useBladeForm: useBladeForm.md
-  - useDynamicProperties: useDynamicProperties.md
-  - useModificationTracker: useModificationTracker.md

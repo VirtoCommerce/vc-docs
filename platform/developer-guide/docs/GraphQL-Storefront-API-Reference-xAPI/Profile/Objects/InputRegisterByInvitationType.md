@@ -13,12 +13,3 @@ This type represents the input object for registering a user by invitation.
 | `phone`  ==String!==      | An optional phone number of the user.       |
 | `username`  ==String!==   | The username for the user.                  |
 | `password`  ==String!==   | The password for the user's account.        |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../RegistrationErrorType">← RegistrationErrorType</a>
-    <a href="../InputResetPasswordByTokenType">InputResetPasswordByTokenType →</a>
-</div>

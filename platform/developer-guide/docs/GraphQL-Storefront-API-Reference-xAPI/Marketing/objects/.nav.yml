@@ -1,7 +1,0 @@
-title: Objects
-nav:
-  - PromotionCouponType: PromotionCouponType.md
-  - PromotionCouponConnection: PromotionCouponConnection.md
-  - PromotionCouponEdge: PromotionCouponEdge.md
-  - DynamicContentItemType: DynamicContentItemType.md
-  - EvaluateDynamicContentResultType: EvaluateDynamicContentResultType.md

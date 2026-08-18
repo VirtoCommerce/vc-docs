@@ -17,12 +17,3 @@ This type represents a pickup location and contains all relevant information abo
 | `storageDays` ==Int==           | How long an order will be stored at this pickup point.                          |
 | `geoLocation` ==String==        | Geographic coordinates of the pickup location. |
 | `address` ==[PickupAddressType](pickupAddressType.md)== | The physical address and contact details for the pickup location.               |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../queries/productPickupLocations">← ProductPickupLocations query</a>
-    <a href="../pickupLocationConnection">pickupLocationConnection →</a>
-</div>

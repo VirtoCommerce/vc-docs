@@ -9,10 +9,9 @@ To open the Content module settings:
 
     ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
-1. Click **Save** in the toolbar to save the changes.
+1. Click **Save** to save the changes.
 
-The modifications have been applied.
-
+The settings have been saved.
 
 <br>
 <br>
@@ -20,5 +19,5 @@ The modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../managing-blogs">← Managing blogs</a>
-    <a href="../../cms-overview">CMSs overview →</a>
+    <a href="../../ai-doc-processing/overview">AI Doc Processing module →</a>
 </div>

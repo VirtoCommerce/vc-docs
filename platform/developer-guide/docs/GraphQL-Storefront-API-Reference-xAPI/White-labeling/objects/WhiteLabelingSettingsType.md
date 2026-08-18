@@ -16,11 +16,3 @@ This type defines the structure of white labeling settings.
 | [`footerLinks`](../objects/MenuLinkType.md) | A list of footer links, each represented by a **MenuLinkType** object.    |
 | [`favicons`](../objects/FaviconType.md)     | A list of favicons, each represented by a **FaviconType** object.         |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ChangeOrganizationLogoResultType">← ChangeOrganizationLogoResultType</a>
-    <a href="../FaviconType">FaviconType →</a>
-</div>

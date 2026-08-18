@@ -26,12 +26,3 @@ This type represents the input object for creating or updating an order address.
 | `zip`  ==OptionalString==           | The ZIP code of the address.                                         |
 | `outerId`  ==OptionalString==       | The external Id for the address.                                     |
 | `addressType`  ==Int==              | The type of address.                                                 |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../order-shipment-package-type">← OrderShipmentPackageType</a>
-    <a href="../order-tax-detail-type">OrderTaxDetailType →</a>
-</div>

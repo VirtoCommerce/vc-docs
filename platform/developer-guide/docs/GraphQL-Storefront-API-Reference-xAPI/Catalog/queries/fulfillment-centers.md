@@ -135,12 +135,3 @@ This connection allows you to search for fulfillment centers.
     ```
 
     </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../fulfillment-center">← Fulfillment Center query</a>
-    <a href="../child-categories">ChildCategories query →</a>
-</div>

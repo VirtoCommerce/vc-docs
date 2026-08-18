@@ -94,12 +94,3 @@ The range facet type counts the products for which the query value is a range sp
 | `ranges.includeTo`  | Indicates whether the lower bound of the range is included.                                                                                     |
 | `ranges.includeFrom`| Indicates whether the upper bound of the range is included.                                                                                     |
 | `ranges.isSelected` | Indicates whether the requested facet term is used in the `filter` expression.<br>This flag simplifies displaying the already selected facet terms on the Frontend.  |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../filtering">← Filtering</a>
-    <a href="../multi-select-faceting-search">Multi Select Faceting Search →</a>
-</div>

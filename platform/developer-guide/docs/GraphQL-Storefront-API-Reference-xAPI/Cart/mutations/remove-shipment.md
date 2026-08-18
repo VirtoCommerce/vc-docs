@@ -61,12 +61,3 @@ The `InputRemoveShipmentType` represents the input object type used for removing
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../remove-coupon">← RemoveCoupon mutation</a>
-    <a href="../add-or-update-cart-shipment">AddOrUpdateCartShipment mutation →</a>
-</div>

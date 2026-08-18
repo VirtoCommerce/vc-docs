@@ -6,8 +6,8 @@ This query allows you to retrieve the loyalty balance information for a specific
 
 | Argument              | Description                                               |
 |-----------------------|-----------------------------------------------------------|
-| `userId` ==String==  | The Id of the user whose loyalty balance is requested.    |
-| `orderId` ==String== | The Id of an order to check balance availability against. |
+| `userId` ==String!==  | The Id of the user whose loyalty balance is requested.    |
+| `orderId` ==String!== | The Id of an order to check balance availability against. |
 
 ## Possible returns
 
@@ -25,8 +25,10 @@ loyaltyBalance(
     userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"
     orderId: "f3d2a8a7-6c47-4ad0-bc8c-88e2d13f4412"
 ) {
-    currentBalance
-    resultBalance
+    balance
+    availableBalance
+    reservedBalance
+    currency
   }
 }
 ```
@@ -35,19 +37,13 @@ loyaltyBalance(
 {
   "data": {
     "loyaltyBalance": {
-      "currentBalance": 250,
-      "resultBalance": 200
+    "balance": 250,
+    "availableBalance": 200,
+    "reservedBalance": 50,
+    "currency": "USD"
     }
   }
 }
 ```
-</div>
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Loyalty module overview</a>
-    <a href="../loyaltyPointsHistory">LoyaltyPointsHistory query →</a>
 </div>

@@ -34,12 +34,3 @@ query {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../validatePassword">← ValidatePassword query</a>
-    <a href="../checkEmailUniqueness">CheckEmailUniqueness query →</a>
-</div>

@@ -91,12 +91,3 @@ This query allows you to retrieve pickup locations available in a specific store
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← xPickup module overview</a>
-    <a href="../cartPickupLocations">CartPickupLocations query →</a>
-</div>

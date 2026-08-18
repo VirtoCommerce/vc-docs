@@ -49,12 +49,3 @@ mutation($command: InputUpdateOrganizationType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../createOrganization">← CreateOrganization mutation</a>
-    <a href="../lockOrganizationContact">LockOrganizationContact mutation →</a>
-</div>

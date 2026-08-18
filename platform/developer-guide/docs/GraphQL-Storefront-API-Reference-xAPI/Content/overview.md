@@ -10,12 +10,3 @@ The **xCMS** module serves as a component for managing and delivering dynamic co
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-cms/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-cms/releases/latest)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Catalog/overview">← xCatalog module overview</a>
-    <a href="../Queries/page">Page query →</a>
-</div>

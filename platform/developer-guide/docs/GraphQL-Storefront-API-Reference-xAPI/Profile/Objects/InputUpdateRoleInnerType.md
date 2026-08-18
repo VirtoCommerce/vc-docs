@@ -11,12 +11,3 @@ This type represents the input data required to update the details of a role.
 | `name`  ==String!==                                                                       | The updated name of the role.                       |
 | `description`  ==String==                                                                 | The updated description of the role.                |
 | `permissions` [ ==InputAssignPermissionType!== ](../Objects/InputAssignPermissionType.md) | The updated permissions assigned to the role.       |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputAssignRoleType">← InputAssignRoleType</a>
-    <a href="../InputAssignPermissionType">InputAssignPermissionType →</a>
-</div>

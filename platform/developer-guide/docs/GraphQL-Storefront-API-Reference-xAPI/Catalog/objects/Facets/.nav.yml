@@ -1,7 +1,0 @@
-title: Facets
-nav:
-  - FilterFacet: FilterFacet.md
-  - RangeFacet: RangeFacet.md
-  - FacetRangeType: FacetRangeType.md
-  - TermFacet: TermFacet.md
-  - FacetTermType: facetTermType.md

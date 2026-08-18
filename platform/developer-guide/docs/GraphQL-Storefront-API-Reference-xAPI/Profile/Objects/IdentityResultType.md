@@ -8,12 +8,3 @@ This type represents the result of an identity-related operation.
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | `succeeded`  ==Boolean!==            | Indicates whether the identity operation succeeded.                                                                        |
 | `errors` [ ==IdentityErrorType== ](IdentityErrorType.md)  | Provides details about any errors encountered during the identity operation.                         |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../CustomIdentityResultType">← CustomIdentityResultType</a>
-    <a href="../IdentityErrorType">IdentityErrorType →</a>
-</div>

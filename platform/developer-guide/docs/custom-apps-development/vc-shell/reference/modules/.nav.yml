@@ -1,6 +1,0 @@
-# AUTO-GENERATED FROM vc-shell — DO NOT EDIT MANUALLY
-# To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
-title: Modules
-nav:
-  - Assets Manager: assets-manager.md
-  - Assets Module: assets.md

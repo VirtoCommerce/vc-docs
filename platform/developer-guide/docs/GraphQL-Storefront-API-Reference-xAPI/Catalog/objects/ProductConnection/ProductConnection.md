@@ -14,11 +14,3 @@ This type represents a connection to a list of products.
 | `range_facets` [ ==RangeFacet== ](../Facets/RangeFacet.md)    | A facet for filtering the products based on a range of values.                                                                  	|
 | `term_facets` [ ==TermFacet== ](../Facets/TermFacet.md)       | A facet for filtering the products based on discrete values.                                                                      |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../ProductType">← ProductType</a>
-    <a href="../ProductEdge">ProductEdge →</a>
-</div>

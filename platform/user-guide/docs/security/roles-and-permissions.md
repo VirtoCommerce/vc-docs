@@ -23,7 +23,7 @@ To create new roles and assign permissions to them:
 
 1. Click **Create** to save the changes.
 
-The new role has been added to the list in the **Roles** blade.
+The new user has been added to the list in the **Roles** blade.
 
 ## Edit roles
 
@@ -34,52 +34,6 @@ To edit a role:
 1. Click **Save** in the toolbar to save the changes.
 
 The role has been modified.
-
-## Granular catalog entity permissions
-
-Catalog access can be configured separately for categories and products within a catalog. A role can be granted full write access to categories while limiting products to read-only, or vice versa. This replaces the umbrella `catalog:*` permissions that cover both entity types together.
-
-Eight permissions are registered under the **Catalog** group in the role editor:
-
-| Permission | Purpose |
-| --- | --- |
-| `catalog:categories:create` | Create categories |
-| `catalog:categories:read` | View categories |
-| `catalog:categories:update` | Edit categories |
-| `catalog:categories:delete` | Delete categories |
-| `catalog:products:create` | Create products |
-| `catalog:products:read` | View products |
-| `catalog:products:update` | Edit products |
-| `catalog:products:delete` | Delete products |
-
-All permissions are localized for the 13 Platform languages.
-
-### Catalog scope
-
-The new permissions support the existing **Selected catalog** scope. For example, a role can be granted `catalog:categories:update` only for Catalog A. Operations on entities outside the user's scoped catalogs return HTTP 403.
-
-### Behavior in the admin UI
-
-The **Catalog** blade and detail blades respect entity-level permissions:
-
-* The unified catalog list filters automatically to show only the entity types the user can read.
-* Toolbar actions like **Add**, **Cut**, **Paste**, and **Delete** appear only for entity types the user has the corresponding permission for.
-* **Save** and **Reset** on the category detail blade require `catalog:categories:update`. On the product detail blade, they require `catalog:products:update`.
-* **Add variation** and **Delete variation** depend on `catalog:products:create` and `catalog:products:delete`.
-* Read-only users still see **Copy ID** and **Copy SKU** actions.
-
-### Backward compatibility
-
-Existing roles that use the legacy `catalog:create`, `catalog:read`, `catalog:update`, and `catalog:delete` permissions continue to work unchanged. The Platform automatically maps each legacy permission to both entity-level equivalents:
-
-| Legacy permission | Maps to |
-| --- | --- |
-| `catalog:create` | `catalog:categories:create` + `catalog:products:create` |
-| `catalog:read` | `catalog:categories:read` + `catalog:products:read` |
-| `catalog:update` | `catalog:categories:update` + `catalog:products:update` |
-| `catalog:delete` | `catalog:categories:delete` + `catalog:products:delete` |
-
-No migration is required for existing roles.
 
 
 <br>

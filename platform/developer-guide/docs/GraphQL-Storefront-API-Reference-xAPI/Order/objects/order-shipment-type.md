@@ -56,11 +56,5 @@ This type contains information about a shipment within a customer order.
 | `vendor` [ ==CommonVendor== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Catalog/objects/CommonVendor/Commonvendor)                              | The common vendor associated with the shipment.                    |
 | `dynamicProperties(...)` [ ==[DynamicPropertyValueType]== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type) | An array of dynamic properties associated with the shipment.       |
 
-<br>
-<br>
-********
 
-<div style="display: flex; justify-content: space-between;">
-    <a href="../initialize-payment-result-type">← InitializePaymentResultType</a>
-    <a href="../order-shipping-method-type">OrderShippingMethodType →</a>
-</div>
+

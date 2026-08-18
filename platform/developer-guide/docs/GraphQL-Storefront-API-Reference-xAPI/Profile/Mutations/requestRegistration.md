@@ -93,12 +93,3 @@ mutation requestRegistration (command: InputRequestRegistrationType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../updateMemberDynamicProperties">← UpdateMemberDynamicProperties mutation</a>
-    <a href="../registerByInvitation">RegisterByInvitation mutation →</a>
-</div>

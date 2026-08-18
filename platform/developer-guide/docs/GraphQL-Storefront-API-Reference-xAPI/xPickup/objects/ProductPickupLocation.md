@@ -20,12 +20,3 @@ This type represents a pickup location for a specific product, including its ava
 | `availabilityType` ==[ProductPickupAvailabilityType](ProductPickupAvailabilityType.md)== | Indicates the availability status of the product at this location. |
 | `availabilityNote` ==String==                        | Additional notes regarding the product’s availability.                                       |
 | `availableQuantity` ==Long==                         | The number of units available for pickup at this location.                                   |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../ProductPickupAvailabilityType">← productPickupAvailabilityType</a>
-    <a href="../ProductPickupLocationConnection">productPickupLocationConnection →</a>
-</div>

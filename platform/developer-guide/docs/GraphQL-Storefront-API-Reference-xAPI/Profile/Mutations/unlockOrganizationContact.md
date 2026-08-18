@@ -38,12 +38,3 @@ mutation unlockContact($command: InputLockUnlockOrganizationContactType!){
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../lockOrganizationContact">← LockOrganizationContact mutation</a>
-    <a href="../changeOrganizationContactRole">ChangeOrganizationContactRole mutation →</a>
-</div>

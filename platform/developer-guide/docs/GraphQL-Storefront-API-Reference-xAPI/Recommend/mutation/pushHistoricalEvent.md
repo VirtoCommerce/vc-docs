@@ -43,12 +43,3 @@ pushHistoricalEvent(command: $command)
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../object/SearchHistoryResultType">← SearchHistoryResultType</a>
-    <a href="../saveSearchQuery">SaveSearchQuery mutation →</a>
-</div>

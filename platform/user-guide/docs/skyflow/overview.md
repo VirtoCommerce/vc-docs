@@ -14,7 +14,6 @@ The **Skyflow** module facilitates seamless integration with [Skyflow](https://w
 * **Flexible customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and Skyflow to tailor integrations with a variety of payment providers to meet your specific requirements.
 * **Optimized for marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
 * **Saved credit card:** Enhance convenience and checkout speed by offering customers the ability to securely save their credit card information for future transactions.
-* **Checkout page payment:** Display the Skyflow credit card form directly on the single checkout page, so customers enter their card details without leaving the page.
 
 The diagram below illustrates the interconnections among various key entities within the Skyflow module:
 

@@ -1,6 +1,0 @@
-title: category
-nav:
-  - CategoryType: CategoryType.md
-  - CategoryConnection: CategoryConnection.md
-  - CategoryEdge: CategoryEdge.md
-  - CategoryDescriptionType: CategoryDescriptionType.md

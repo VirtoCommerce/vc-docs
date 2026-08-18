@@ -50,12 +50,3 @@ mutation ChangeQuoteItemQuantity($command: ChangeQuoteItemQuantityCommandType!) 
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../cancel-quote-request">← CancelQuoteRequest mutation</a>
-    <a href="../remove-quote-item">RemoveQuoteItem mutation →</a>
-</div>

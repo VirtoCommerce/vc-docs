@@ -14,12 +14,3 @@ This type provides essential data for tracking and managing inventory levels and
 | `allowBackorder`  ==Boolean==              	| Indicates whether backordering of the item is allowed.                                	|
 | `preorderAvailabilityDate`  ==DateTime==   	| The date and time when the item will be available for preorder, if applicable.        	|
 | `backorderAvailabilityDate`  ==DateTime==  	| The date and time when the item will be available for backorder, if applicable.       	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../PageInfo">← PageInfo</a>
-    <a href="../SeoInfo">SeoInfo →</a>
-</div>

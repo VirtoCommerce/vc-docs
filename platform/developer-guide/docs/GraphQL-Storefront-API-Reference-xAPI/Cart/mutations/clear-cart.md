@@ -58,12 +58,3 @@ mutation($command: InputClearCartType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../add-item">← AddItem mutation</a>
-    <a href="../selectCartItems">SelectCartItems mutation →</a>
-</div>

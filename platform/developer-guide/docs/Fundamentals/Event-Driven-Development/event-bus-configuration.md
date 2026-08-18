@@ -196,8 +196,6 @@ Event Grid ensures reliable delivery of messages by employing a durable delivery
 
 ![Readmore](media/readmore.png){: width="25"} [Event Grid. Delivery and Retry](https://docs.microsoft.com/en-us/azure/event-grid/delivery-and-retry)
 
-That at-least-once guarantee and retry cover delivery from Event Grid to your subscriber endpoints. For the step before it, forwarding an event from Virto Commerce to the provider connection, any failure is recorded in the Event Bus [fail log](#health-status-fail-logs). The Event Bus does not provide a dead-letter queue, so the fail log is where you find events that did not reach the provider.
-
 ### Default event data model for Azure Event Grid
 
 You can specify the payload transformation via the Scriban-template with the `payloadTransformationTemplate` option. If you skip this option, the Event Grid provider will apply the following structure as a payload in the `CloudEvents` format:

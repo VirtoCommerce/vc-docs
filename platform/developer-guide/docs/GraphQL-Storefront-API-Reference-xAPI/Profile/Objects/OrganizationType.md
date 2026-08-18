@@ -26,11 +26,3 @@ This type contains various fields providing information about the organization.
 | `parentId`  ==String==                                                                             	| The ID of the parent organization, if applicable.      	|
 | `contacts(...)` [ ==ContactConnection== ](ContactConnection.md)                                      	| A connection to a list of contacts associated with the organization.	|
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Queries/checkEmailUniqueness">← CheckEmailUniqueness query</a>
-    <a href="../OrganizationConnection">OrganizationConnection →</a>
-</div>

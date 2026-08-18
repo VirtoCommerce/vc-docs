@@ -8,12 +8,3 @@ This type represents an edge in the connection of organizations.
 |-------------------------------------------------------------	|----------------------------------------------------------------	|
 | `cursor`  ==String==       	                                | A string value representing the cursor for the organization.      |
 | `node`[ ==Organization== ](OrganizationType.md)               | The organization associated with the edge.                      	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../OrganizationConnection">← OrganizationConnection</a>
-    <a href="../ContactType">Contact →</a>
-</div>

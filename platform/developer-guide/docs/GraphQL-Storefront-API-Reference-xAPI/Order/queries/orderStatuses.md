@@ -54,12 +54,3 @@ This query allows you to retrieve information about the available order statuses
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../orders">← Orders query</a>
-    <a href="../organization-orders">OrganizationOrders query →</a>
-</div>

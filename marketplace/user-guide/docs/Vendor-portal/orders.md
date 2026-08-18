@@ -16,11 +16,6 @@ To edit the order:
 
     ![Edit order](media/edit_order.gif)
 
-    !!! note
-        If a product has configurations, they can be expanded and viewed:
-
-        ![Product configurations](media/expandable-configurations.gif)
-
 1. Click **Save** in the toolbar to save the changes.
 
 Your modifications have been applied. 
@@ -43,7 +38,7 @@ The newly created orders are processed in accordance with the created [states fl
 
 ## Create shipment
 
-To create an order shipment:
+To create an order order shipment:
 
 1. Click **Orders** in the main menu to open the list of the received orders.
 1. In the next blade, select the desired order. The order details will open in the next blade.
@@ -75,9 +70,6 @@ When creating or editing a shipment, users can add items to the shipment by clic
 You can use our AI assistant to collect information about orders. For example, you can ask it to show new orders or organize them by country or total:
 
 ![AI orders](media/ai-orders.png)
-
-<br>
-![Readmore](media/readmore.png){: width="25"} [More AI assistant scenarios](ai-assistant.md)
 
 <br>
 <br>

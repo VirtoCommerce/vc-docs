@@ -12,11 +12,3 @@ This type refers to an object that represents a breadcrumb navigation element.
 | `seoPath`  ==String==      	| The full path from the catalog to the current breadcrumb. |
 | `semanticUrl`  ==String==  	| Semantic URL keyword.                             	    |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../OutlineItemType">← OutlineItemType</a>
-    <a href="../CommonVendor/Commonvendor">CommonVendor →</a>
-</div>

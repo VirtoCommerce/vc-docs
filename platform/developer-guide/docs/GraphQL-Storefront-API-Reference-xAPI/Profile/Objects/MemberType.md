@@ -21,11 +21,3 @@ This type represents a member entity.
 | `addresses(...)` [ ==MemberAddressConnection== ](MemberAddressConnection.md) | A connection to retrieve the addresses associated with the member.                                            |
 | `dynamicProperties(...)` [ ==DynamicPropertyValueType!== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)| An array of dynamic properties associated with the member.                    |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputAssignPermissionScopeType">← InputAssignPermissionScopeType</a>
-    <a href="../MemberAddressType">MemberAddressType →</a>
-</div>

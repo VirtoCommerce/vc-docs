@@ -23,11 +23,3 @@ This type represents the input for updating an application user.
 | `passwordHash`  ==String==             | The hashed password of the user.                            |
 | `securityStamp`  ==String!==            | The security stamp of the user.                             |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../InputCreateApplicationUserType">← InputCreateApplicationUserType</a>
-    <a href="../InputApplicationUserLoginType">InputApplicationUserLoginType →</a>
-</div>

@@ -28,12 +28,3 @@ This type is used to differentiate or group different types of categories.
 
 
 ![Readmore](../media/readmore.png){: width="25"} [Managing Categories](/platform/user-guide/latest/catalog/managing-categories)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../ProductAssociation/ProductAssociation">← ProductAssociation</a>
-    <a href="../CategoryConnection">CategoryConnection →</a>
-</div>

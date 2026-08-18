@@ -42,5 +42,5 @@ Your price list has been filled with information.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../exporting-price-lists">← Exporting price lists</a>
-    <a href="../../product-snapshot/overview">Product Snapshot module overview →</a>
+    <a href="../../push-messages/overview">Push Messages module overview →</a>
 </div>

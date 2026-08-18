@@ -18,13 +18,4 @@ This type represents a customer review, including details about the reviewer, th
 | `title` ==String==             | The title of the review.                                                   |  
 | `review` ==String!==           | The text content of the review.                                            |  
 | `rating` ==Int!==              | The rating given in the review, typically on a predefined scale.           |  
-| `reviewStatus` ==CustomerReviewStatus== | The status of the review (e.g., new, approved, or rejected).      |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../Queries/canLeaveFeedback">← CanLeaveFeedback query</a>
-    <a href="../CustomerReviewConnection">CustomerReviewConnection →</a>
-</div>
+| `reviewStatus` ==CustomerReviewStatus== | The status of the review (e.g., new, approved, or rejected).      |  

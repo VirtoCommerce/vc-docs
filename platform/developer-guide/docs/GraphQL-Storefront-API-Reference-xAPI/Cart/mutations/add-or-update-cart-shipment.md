@@ -69,12 +69,3 @@ The `InputAddOrUpdateCartShipmentType` represents the input object type used for
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../remove-shipment">← RemoveShipment mutation</a>
-    <a href="../add-or-update-cart-payment">AddOrUpdateCartPayment mutation →</a>
-</div>

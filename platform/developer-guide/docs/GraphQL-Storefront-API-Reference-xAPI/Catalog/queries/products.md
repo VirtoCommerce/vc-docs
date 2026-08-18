@@ -13,17 +13,12 @@ This connection allows you to search for products.
 | `currencyCode`  ==String==        	| A standardized code of a specific currency.                                                                                         |
 | `query`  ==String==               	| Performs the full-text search.                                                                                                      |
 | `cultureName`  ==String==         	| A language to retrieve data in.                                                                                                     |
-| `previousOutline`  ==String==      | The previous category outline.                                                                                                      |
 | `filter`  ==String==              	| Filters query results.                                                                                                              |
 | `fuzzy`  ==Boolean==              	| If true, includes slight variations of the search text<br>in the returned products.                                                 |
 | `fuzzyLevel`  ==Int==             	| The fuzziness level is measured by the Damerau-Levenshtein distance.<br>It calculates the number of operations required to transform one word into another.|
-| `preserveUserQuery`  ==Boolean==   	| When true, the application does not modify the search query and filters.                                                            |
 | `facet`  ==String==               	| Calculates statistical counts to aid in faceted navigation.                                                                         |
 | `sort`  ==String==                	| Specifies the sorting order of the returned products.                                                                               |
-| `productIds`  ==[String]==        	| Identifies specific products within a given store.                                                                                  |
-| `selectedAddressId`  ==String==   	| The ID of the selected shipping address.                                                                                            |
-| `selectedAddress`  ==String==     	| The shipping address the products are to be delivered to.                                                                           |
-| `custom`  ==String==              	| Can be used for custom query parameters.                                                                                            |
+| `productIds`  ==String==          	| Identifies specific products within a given store.                                                                                  |
 
 ## Possible returns
 
@@ -212,12 +207,3 @@ This connection allows you to search for products.
     ```
 
     </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../product">← Product query</a>
-    <a href="../category">Category query →</a>
-</div>

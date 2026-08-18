@@ -56,12 +56,3 @@ mutation inviteUSer ($command: InputInviteUserType!){
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../updateUser">← UpdateUser mutation</a>
-    <a href="../deleteUsers">DeleteUsers mutation →</a>
-</div>

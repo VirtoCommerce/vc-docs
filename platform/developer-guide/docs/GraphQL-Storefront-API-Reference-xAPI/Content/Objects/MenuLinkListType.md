@@ -10,11 +10,3 @@ This type represents a list of menu links. It defines the structure and properti
 | `outerId` ==String==                          | The external Id of the menu link list.                                                                 |
 | `items` [==MenuLinkType==](MenuLinkType.md)   | An array of `MenuLinkType` objects.<br>Each object represents a menu link within the menu link list.   |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../PageType">← PageType</a>
-    <a href="../MenuLinkType">MenuLinkType →</a>
-</div>

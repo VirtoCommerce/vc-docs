@@ -75,12 +75,3 @@ mutation updateMemberAddresses($command: InputUpdateMemberAddressType!) {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../updateRole">← UpdateRole mutation</a>
-    <a href="../deleteMemberAddresses">DeleteMemberAddresses mutation →</a>
-</div>

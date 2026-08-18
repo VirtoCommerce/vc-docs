@@ -19,11 +19,3 @@ This type represents a range within a facet used for filtering search results ba
 | `label` ==String!==       | The human-readable label or display name for the range.                                           |
 | `isSelected` ==Boolean!== | A boolean indicating whether this range is currently selected for filtering.                      |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../facet-term-type">← FacetTermType</a>
-    <a href="../../mutations/change-purchase-order-number">ChangePurchaseOrderNumber mutation →</a>
-</div>

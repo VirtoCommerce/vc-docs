@@ -87,12 +87,3 @@ This query allows you to retrieve configuration options for a specific configura
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../validate-coupon">← ValidateCoupon query</a>
-    <a href="../configurationItems">ConfigurationItems query →</a>
-</div>

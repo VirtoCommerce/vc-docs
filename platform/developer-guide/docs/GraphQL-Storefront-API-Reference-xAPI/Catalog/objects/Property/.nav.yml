@@ -1,8 +1,0 @@
-title: Property
-nav:
-  - PropertyType: Property.md
-  - PropertyConnection: PropertyConnection.md
-  - PropertyEdge: PropertyEdge.md
-  - PropertyDictItemConnection: PropertyDictItemConnection.md
-  - PropertyDictItemEdge: PropertyDictItemEdge.md
-  - PropertyDictItem: PropertyDictItem.md

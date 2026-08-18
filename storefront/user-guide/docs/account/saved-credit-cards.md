@@ -7,12 +7,11 @@ In the **Saved credit cards** section, you can:
 
 ![Saved cards](../media/saved-credit-card.png){: style="display: block; margin: 0 auto;" width="600"}
 
-
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../addresses">← Addresses</a>
-    <a href="../../shopping/products-purchase-options">Options for buying products →</a>
+    <a href="../quote-requests">← Quote requests</a>
+    <a href="../notifications">Notifications →</a>
 </div>

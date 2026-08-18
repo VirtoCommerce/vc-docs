@@ -1,9 +1,0 @@
-title: Queries
-nav:
-  - order: order.md
-  - orders: orders.md
-  - orderStatuses: orderStatuses.md
-  - organizationOrders: organization-orders.md
-  - shipmentStatuses: shipmentStatuses.md
-  - paymentStatuses: paymentStatuses.md
-  - orderLineItemStatuses: orderLineItemStatuses.md

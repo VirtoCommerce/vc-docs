@@ -16,11 +16,3 @@ This type represents a brand in the catalog. It is used to retrieve brand metada
 | `bannerUrl` ==String==                 | URL to the brand’s banner image.                                            |
 | `logoUrl` ==String==                   | URL to the brand’s logo image.                                              |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../Facets/facetTermType">← FacetTermType</a>
-    <a href="../BrandConnection">BrandConnection →</a>
-</div>

@@ -29,59 +29,39 @@ Builder.io is an intuitive solution that allows anyone on your team to manage Fr
 
 The custom components by Virto include:
 
-<div class="grid cards" markdown>
 
--   __Breadcrumbs:__
-
-    ---
-
-    ![Breadcrumbs](media/breadcrumbs.png){: width="650" }
-
--   __Category:__
-
-    ---
+* **Category**:
 
     ![Category](media/custom-category.png)
 
--   __Favorite products:__
-
-    ---
-
-    ![Favorite products](media/custom-favorite-products.png)
-
--   __Predefined products:__
-
-    ---
-
-    ![Predefined products](media/predefined-products.png)
-
--   __Products:__
-
-    ---
+* **Products**:
 
     ![Products](media/custom-products.png)
 
--   __Products carousel:__
-
-    ---
-
-    ![Products carousel](media/products-carousel.png)
-
--   __Slider:__
-
-    ---
+* **Slider**:
 
     ![Slider](media/custom-slider.png)
 
--   __VC-container:__
+* **Favorite products**:
 
-    ---
+    ![Favorite products](media/custom-favorite-products.png)
+
+* **VC-container** that allows images to be uploaded in a format fully supported by the Frontend Application. It eliminates the need for further resizing to fit other elements:
 
     ![VC-container](media/vc-container.png)
 
-    Allows images to be uploaded in a format fully supported by the Frontend. Eliminates the need for further resizing to fit other elements.
+* **Breadcrumbs**:
 
-</div>
+    ![Breadcrumbs](media/breadcrumbs.png){: width="650" }
+
+* **Predefined products**:
+
+    ![Predefined products](media/predefined-products.png)
+
+* **Products carousel**:
+
+    ![Products carousel](media/products-carousel.png)
+
 
 !!! note 
     To add products to the **Predefined products** or **Products carousel** custom components, enter the products' SKUs:
@@ -140,19 +120,6 @@ For a solid color throughout, edit the section color:
 ![Edit background](media/edit-background-color.gif){: style="display: block; margin: 0 auto;" }
 
 
-## Customize pages for specific users
-
-Users can customize pages for different organizations so that each organization’s users see only the content intended specifically for them.
-For example, let's configure separate homepages so that users from the Melon organization see one version, while users from the Mercury organization see another:
-
-
-<div>
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div class="sl-embed" style="position:relative;padding-bottom:calc(46.62% + 25px);width:100%;height:0;transform:scale(1)">
-    <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/dtb2e4lf9t9j?embed=popup" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
-  </div>
-</div>
-
 
 ## Troubleshooting
 
@@ -167,6 +134,6 @@ If you are trying to change the formatting of the header and it does not react, 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overview">← Builder.io overview </a>
+    <a href="../getting-started">← Getting started </a>
     <a href="../settings">Settings →</a>
 </div>

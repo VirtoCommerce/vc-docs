@@ -12,12 +12,3 @@ This type represents the input object for providing bank card information during
 | `bankCardYear`  ==Int==           | The expiration year of the bank card.                                                         |
 | `bankCardCVV2`  ==String==        | The Card Verification Value 2 (CVV2) security code printed on the back of the bank card.      |
 | `cardholderName`  ==String==      | The name of the cardholder as it appears on the bank card.                                    |
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../process-payment-request-result-type">← ProcessPaymentRequestResultType</a>
-    <a href="../input-order-payment-type">InputOrderPaymentType →</a>
-</div>

@@ -1,9 +1,0 @@
-title: Authentication
-nav:
-  - Overview: overview.md
-  - Username and Password:
-      - Issuing and Using Access Token: issuing-and-using-access-token.md
-      - Access Token and Cookie Mixed Authentication: access-token-and-cookie-mixed-auth.md
-      - API Key Authentication: api-key-authentication.md
-  - OpenId Connect: oidc.md
-  - Virto as Identity Provider: virto-as-identity-provider.md

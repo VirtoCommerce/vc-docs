@@ -46,19 +46,10 @@ mutation updateOrderPaymentDynamicProperties ($command: InputUpdateOrderPaymentD
   "orderId":  "2be32440-ee84-4dd5-aa9b-fcbe35bf61f0",
   "paymentId":  "testpaymentid",
   "dynamicProperties": [
-    {"name": "property1",
+    {"name": "propery1",
     "value": "value1"}
   ]
 }
 ```
 
-</div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../update-order-shipment-dynamic-properties">← UpdateOrderShipmentDynamicProperties mutation</a>
-    <a href="../initialize-payment">InitializePayment mutation →</a>
 </div>

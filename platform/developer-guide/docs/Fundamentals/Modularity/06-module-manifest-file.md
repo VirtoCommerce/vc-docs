@@ -76,28 +76,13 @@ The **module.manifest** file can be configured using a number of required and op
     <iconUrl>Modules/$(VirtoCommerce.Cart)/Content/logo.png</iconUrl>
     ```
 
-* `<startupType>`: A fully qualified name of a class that implements the `IPlatformStartup` interface. When declared, the Platform discovers and invokes this class during startup phases that occur before the standard `IModule` lifecycle, for example, to add configuration sources or register host-level services.
+* `<dependencies>`: Any number of `<dependency>` elements that identify other modules this module depends on. 
 
-    ``` xml
-    <startupType>VirtoCommerce.CartModule.Web.CartModuleStartup, VirtoCommerce.CartModule.Web</startupType>
-    ```
-
-    <br>
-    ![Readmore](media/readmore.png){: width="25"} [IPlatformStartup](IPlatformStartup.md)
-
-    ![Readmore](media/readmore.png){: width="25"} [Loading modules into application process](04-loading-modules-into-app-process.md)
-    <br>
-
-* `<dependencies>`: Any number of `<dependency>` elements that identify other modules this module depends on. Each `<dependency>` requires an `id` and a `version` attribute. To mark a dependency as optional  add the `optional="True"` attribute.
-
-    ```xml
+    ```xml 
     <dependencies>
-      <dependency id="VirtoCommerce.Core" version="3.22.0" />
-      <dependency id="VirtoCommerce.Export" version="3.800.0" optional="True" />
+      <dependency id="VirtoCommerce.Core"` `version="3.22.0" />
     </dependencies>
     ```
-
-    ![Readmore](media/readmore.png){: width="25"} [Optional dependency between modules](optional-dependency.md)
 
 <details><summary>Module.manifest example</summary>
 
@@ -105,7 +90,7 @@ The **module.manifest** file can be configured using a number of required and op
   <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-    <id>VirtoCommerce.Cart</id>
+  <id>VirtoCommerce.Cart</id>
     <version>3.27.0</version>
     <version-tag>beta001</version-tag>
     <platformVersion>3.62.0</platformVersion>
@@ -118,19 +103,15 @@ The **module.manifest** file can be configured using a number of required and op
       <owner>Virto Commerce</owner>
     </owners>
     <projectUrl>https://virtocommerce.com/apps/extensions/virto-shoppingcart-module</projectUrl>
-    <iconUrl>Modules/$(VirtoCommerce.Cart)/Content/logo.png</iconUrl>
+  <iconUrl>Modules/$(VirtoCommerce.Cart)/Content/logo.png</iconUrl>
     <assemblyFile>VirtoCommerce.CartModule.Web.dll</assemblyFile>
     <moduleType>VirtoCommerce.CartModule.Web.Module, VirtoCommerce.CartModule.Web</moduleType>
-    <startupType>VirtoCommerce.CartModule.Web.CartModuleStartup, VirtoCommerce.CartModule.Web</startupType>
-    <dependencies>
-      <dependency id="VirtoCommerce.Core" version="3.22.0" />
-      <dependency id="VirtoCommerce.Export" version="3.800.0" optional="True" />
+  <dependencies>
+      <dependency id="VirtoCommerce.Core" version="3.22.0" />  
     </dependencies>
   </module>
   ```
-</details>
-
-
+</details>  
 
 ## Adding new app
 
@@ -160,62 +141,11 @@ You can use the following attributes:
 
 
 
-## Declaring settings
-
-A module can declare its settings directly in **module.manifest** instead of registering them in code. The platform parses the `<settings>` element at startup and registers each descriptor, so the settings surface through the existing settings API with no extra code. This also lets frontend-only modules, which ship no assembly, declare settings.
-
-Add a `<settings>` element with one `<setting>` per descriptor:
-
-```xml title="module.manifest"
-<settings>
-  <setting>
-    <name>VirtoCommerce.MyModule.MaxRetries</name>
-    <groupName>MyModule|Reliability</groupName>
-    <valueType>PositiveInteger</valueType>
-    <defaultValue>3</defaultValue>
-  </setting>
-</settings>
-```
-
-A `<setting>` supports the following elements:
-
-* `name`: The unique setting key. Required.
-* `groupName`: The group path shown in the settings UI, for example MyModule|Reliability. Required.
-* `valueType`: The value type, for example ShortText, Boolean, PositiveInteger, or Integer. Required.
-* `defaultValue`: The value used when nothing is stored.
-* `displayName`: A human-friendly label for the settings UI.
-* `allowedValues`: A fixed list of `<value>` entries when the setting is a dictionary.
-
-By default every setting is global, with one value shared across all administrators. Read global settings through `/api/platform/settings/v2/global/*`.
-
-### Per-user settings
-
-To store a value per administrator rather than globally, add the `tenant="UserProfile"` attribute. The value then follows the user across devices, for example a theme preference or layout density.
-
-```xml title="module.manifest"
-<settings>
-  <setting tenant="UserProfile">
-    <name>VirtoCommerce.SystemOperations.DefaultTheme</name>
-    <groupName>System Operations|UI</groupName>
-    <displayName>Theme preference</displayName>
-    <valueType>ShortText</valueType>
-    <defaultValue>system</defaultValue>
-    <allowedValues>
-      <value>system</value>
-      <value>light</value>
-      <value>dark</value>
-    </allowedValues>
-  </setting>
-</settings>
-```
-
-Per-user values are read and written through the `/api/platform/settings/v2/me/*` endpoints, which resolve the current user from the auth token. No `platform:setting:*` permission is required to manage your own profile settings. On the frontend, the `useModuleSettings` composable reads both the global and per-user scopes in a single round trip.
-
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../IPlatformStartup">← IPlatformStartup </a>
-    <a href="../07-backoffice-app-modularity"> Back-Office UI Modularity →</a>
+    <a href="../05-best-practices">← Best practices </a>
+    <a href="../configuration">Configuration →</a>
 </div>

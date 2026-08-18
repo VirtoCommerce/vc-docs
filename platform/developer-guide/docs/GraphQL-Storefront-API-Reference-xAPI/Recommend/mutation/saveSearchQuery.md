@@ -40,12 +40,3 @@ mutation {
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../pushHistoricalEvent">← PushHistoricalEvent mutation</a>
-    <a href="../../../Skyflow/overview">Skyflow module overview →</a>
-</div>

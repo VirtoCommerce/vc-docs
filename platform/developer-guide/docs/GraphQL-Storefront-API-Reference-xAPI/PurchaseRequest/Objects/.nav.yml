@@ -1,6 +1,0 @@
-title: Objects
-nav:
-  - PurchaseRequestType: PurchaseRequestType.md
-  - PurchaseRequestSourceType: PurchaseRequestSourceType.md
-  - PurchaseRequestConnection: PurchaseRequestConnection.md
-  - PurchaseRequestEdge: PurchaseRequestEdge.md

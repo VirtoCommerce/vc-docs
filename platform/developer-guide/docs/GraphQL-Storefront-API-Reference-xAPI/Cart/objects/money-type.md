@@ -14,11 +14,5 @@ This type represents a monetary value with associated currency information.
 | `formattedAmountWithoutPoint`  ==String!==           | The formatted string representation of the amount, without the decimal separator and the fractional part.                                           |
 | `formattedAmountWithoutPointAndCurrency`  ==String!== | The formatted string representation of the amount, without the decimal separator, the fractional part, and the currency symbol.                    |
 
-<br>
-<br>
-********
 
-<div style="display: flex; justify-content: space-between;">
-    <a href="../cart-address-type">← CartAddressType</a>
-    <a href="../currency-type">CurrencyType →</a>
-</div>
+

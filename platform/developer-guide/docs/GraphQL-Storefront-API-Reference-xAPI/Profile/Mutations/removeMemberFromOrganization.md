@@ -50,12 +50,3 @@ mutation removeMemberFromOrganization(
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../changeOrganizationContactRole">← ChangeOrganizationContactRole mutation</a>
-    <a href="../updateRole">UpdateRole mutation →</a>
-</div>

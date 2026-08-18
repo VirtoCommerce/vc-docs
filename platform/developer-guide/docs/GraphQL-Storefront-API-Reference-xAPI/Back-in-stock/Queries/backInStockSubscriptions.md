@@ -62,12 +62,3 @@ This query retrieves a list of back-in-stock subscriptions based on specified fi
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../overview">← Back-in-Stock module overview</a>
-    <a href="../../Objects/BackInStockSubscriptionType">BackInStockSubscriptionType →</a>
-</div>

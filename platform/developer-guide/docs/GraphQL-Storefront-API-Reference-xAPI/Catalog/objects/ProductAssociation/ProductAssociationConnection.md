@@ -10,12 +10,3 @@ This type represents a connection from an object to a list of objects of the `Pr
 | `pageInfo`  [ ==PageInfo== ](../PageInfo.md) 	| Information about the current page. It is used for pagination purposes.                                                                               |
 | `edges` [ ==ProductAssociationEdge== ](ProductAssociationEdge.md)  	|  The connections between nodes in the `ProductAssociationConnection`.                                                      	|
 | `items`  [ ==ProductAssociation== ](ProductAssociation.md)     	    |  `ProductAssociation` objects returned in the connection.                                                                   	|
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../ProductConnection/ProductEdge">← ProductEdge</a>
-    <a href="../ProductAssociationEdge">ProductAssociationEdge →</a>
-</div>

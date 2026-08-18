@@ -18,11 +18,3 @@ This type represents a video entity with its associated metadata and properties.
 | `ownerType` ==String==     	| The type of the owner of the video.                                                                	|
 | `sortOrder` ==Int!==       	| The sort order of the video in a list.                                                               	|
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../VideoEdge">← VideoEdge</a>
-    <a href="../../Facets/FilterFacet">FilterFacet →</a>
-</div>

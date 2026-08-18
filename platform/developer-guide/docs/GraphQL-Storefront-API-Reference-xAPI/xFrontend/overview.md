@@ -18,12 +18,3 @@ The **xFrontend** module extends the Virto Commerce GraphQL schema and aggregate
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-frontend/releases)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-x-frontend/releases/latest)
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../../File/overview">← xFile module overview</a>
-    <a href="../PageContext">PageContext →</a>
-</div>

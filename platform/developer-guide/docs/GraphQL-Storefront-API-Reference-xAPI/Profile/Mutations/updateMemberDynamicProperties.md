@@ -77,12 +77,3 @@ mutation updateMemberDynamicProperties($command: InputUpdateMemberDynamicPropert
 ```
 
 </div>
-
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../deleteMemberAddresses">← DeleteMemberAddresses mutation</a>
-    <a href="../requestRegistration">RequestRegistration mutation →</a>
-</div>

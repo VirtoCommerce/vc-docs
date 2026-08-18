@@ -17,11 +17,3 @@ This type represents a package used for shipping items in an order.
 | `width`  ==Decimal==                                                  | The width of the package.                             |
 | `items` [ ==[OrderShipmentItemType]== ](order-shipment-item-type.md)  | Shipment items included in the package.               |
 
-<br>
-<br>
-********
-
-<div style="display: flex; justify-content: space-between;">
-    <a href="../order-shipment-item-type">← OrderShipmentItemType</a>
-    <a href="../input-order-address-type">InputOrderAddressType →</a>
-</div>
