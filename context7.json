@@ -4,6 +4,9 @@
   "branch": "main",
   "previousVersions": [
     {
+      "branch": "release/stable15"
+    },
+    {
       "branch": "release/stable14"
     },
     {

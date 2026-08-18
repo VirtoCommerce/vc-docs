@@ -1,0 +1,102 @@
+name: Cut a release branch
+
+# Replaces the bump-driven snapshot that ran until 2026-08. That workflow
+# created the release branch from HEAD^1 of a version bump, so the snapshot
+# lagged the release it documented by a full cycle. Here the boundary commit
+# is supplied explicitly: it is the last commit belonging to the release,
+# which is the commit immediately preceding the first commit of the next
+# sprint cycle.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version slug, for example stable16'
+        required: true
+      boundary:
+        description: 'Commit SHA on main that is the last commit of this version'
+        required: true
+
+jobs:
+  cut:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.REPO_TOKEN }}
+
+      - name: Create the release branch
+        env:
+          VERSION: ${{ inputs.version }}
+          BOUNDARY: ${{ inputs.boundary }}
+        run: |
+          set -euo pipefail
+
+          if ! printf '%s' "$VERSION" | grep -qE '^[A-Za-z0-9._-]+$'; then
+            echo "::error::Version '$VERSION' contains unsupported characters."
+            exit 1
+          fi
+
+          if ! git cat-file -e "${BOUNDARY}^{commit}" 2>/dev/null; then
+            echo "::error::Boundary '$BOUNDARY' is not a commit in this repository."
+            exit 1
+          fi
+
+          branch="release/$VERSION"
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            echo "::error::$branch already exists."
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch" "$BOUNDARY"
+          echo "$VERSION" > VERSION
+          git commit -am "Set VERSION to $VERSION"
+          git push -u origin "$branch"
+          echo "Created $branch at $BOUNDARY"
+
+      - name: Register the branch with Context7
+        env:
+          REL_BRANCH: release/${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          git checkout main
+
+          python3 - <<'PY'
+          import json, os, sys
+
+          PATH = "context7.json"
+          MAX_ITEMS = 20  # Schema cap: context7.com/schema/context7.json
+          branch = os.environ["REL_BRANCH"]
+
+          with open(PATH) as fh:
+              cfg = json.load(fh)
+
+          versions = cfg.setdefault("previousVersions", [])
+          if any(isinstance(e, dict) and e.get("branch") == branch for e in versions):
+              print(f"{branch} already registered.")
+              sys.exit(0)
+
+          versions.insert(0, {"branch": branch})
+          if len(versions) > MAX_ITEMS:
+              dropped = versions[MAX_ITEMS:]
+              del versions[MAX_ITEMS:]
+              print(f"::warning::previousVersions hit the {MAX_ITEMS} entry cap. "
+                    f"Dropped the oldest: {dropped}")
+
+          with open(PATH, "w") as fh:
+              json.dump(cfg, fh, indent=2)
+              fh.write("\n")
+          print(f"Registered {branch}.")
+          PY
+
+          if git diff --quiet -- context7.json; then
+            echo "context7.json unchanged."
+            exit 0
+          fi
+
+          git add context7.json
+          git commit -m "Register $REL_BRANCH with Context7"
+          git push origin HEAD:main
