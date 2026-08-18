@@ -22,7 +22,11 @@ def derive_title(version):
 
     Slugs are URL-safe (no spaces); the dropdown label is prettier.
     "stable14" -> "Stable 14". Anything that does not match the
-    stable<N> pattern keeps mike's default (title == slug)."""
+    stable<N> pattern keeps mike's default (title == slug). The rolling
+    version occupies the "latest" slug and is shown as Edge, which is the
+    release channel it documents."""
+    if version == "latest":
+        return "Edge"
     m = re.fullmatch(r"stable(\d+)", version or "")
     if m:
         return f"Stable {m.group(1)}"
@@ -362,8 +366,10 @@ def main():
             mike_cmd += ["--title", title]
         mike_cmd += ["--update-aliases", version]
 
-        # Add latest alias if requested
-        if args.set_as_latest:
+        # Add latest alias if requested. When the deployed version already
+        # occupies the "latest" slug there is no alias to add; mike raises
+        # "duplicated version and alias" if a version lists its own name.
+        if args.set_as_latest and version != "latest":
             mike_cmd.append("latest")
 
         # Add push flag for CI/CD
