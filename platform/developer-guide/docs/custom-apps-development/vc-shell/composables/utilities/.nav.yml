@@ -8,4 +8,5 @@ nav:
   - useErrorHandler: useErrorHandler.md
   - useFunctions: useFunctions.md
   - useKeyboardShortcuts: useKeyboardShortcuts.md
+  - useLatestRequest: useLatestRequest.md
   - useWebVitals: useWebVitals.md
