@@ -34418,7 +34418,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         Last update:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2025 13:50:32 UTC">November 24, 2025</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2026 15:03:34 UTC">August 19, 2026</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -34440,7 +34440,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Markdown content -->
 <h1 id="set-up-redis-backplane-for-scaling-out">Set up Redis Backplane for Scaling out<a class="headerlink" href="#set-up-redis-backplane-for-scaling-out" title="Permanent link">&para;</a></h1>
 <p>Running multiple instances of your application, all accessing the same distributed cache, can be challenging: the instances should find out when the data was changed and the local cache data becomes irrelevant.  One way to solve this problem is by connecting all application instances to a service that sends messages whenever cache data becomes invalid. Redis, an in-memory key-value storage, supports a messaging system with the publish/subscribe (Pub/Sub) model as follows:</p>
-<p><img alt="Multi-level caching" src="../media/02-multi-level-caching.png" style="display: block; margin: 0 auto;" /></p>
+<p><img alt="Multi-level caching" src="../media/02-multi-level-caching.png" style="display: block; margin: 0 auto;" width="750" /></p>
 <ol>
 <li>One Platform instance evicts some data from cache.</li>
 <li>The message for this event is sent to the backplane. </li>
