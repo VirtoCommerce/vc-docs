@@ -276,10 +276,19 @@ def main():
         # Deploy with version 1.0 and set as latest.
         # --alias-type=copy: copy files into latest/ instead of redirect stubs, so
         # binary assets (images, PDFs) resolve under /<subsite>/latest/... too.
+        # Pre-existing bug fix: only append "latest" as an alias when the
+        # version being deployed is not itself "latest" (mirrors
+        # versioned-build-cicd.py's `version != "latest"` guard). Without
+        # this, mike rejects a version that lists its own name as an alias
+        # with "duplicated version and alias" -- which is exactly what has
+        # been silently breaking every local build since VERSION became the
+        # literal string "latest".
         deploy_cmd = (
             f'mike deploy -F "{config}" --deploy-prefix "{subsite}" '
-            f'--alias-type=copy --update-aliases "{version}" latest'
+            f'--alias-type=copy --update-aliases "{version}"'
         )
+        if version != "latest":
+            deploy_cmd += " latest"
         result = run_command(deploy_cmd, check=False)
         if result.returncode != 0:
             print(f"  ❌ mike deploy failed for {subsite}")
