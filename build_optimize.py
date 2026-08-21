@@ -168,10 +168,14 @@ def deduplicate_binaries(site_dir):
     makes this safe for historical fidelity, unlike a shared unversioned media
     folder, where an old version would start showing a new screenshot.
 
-    The canonical copy is the lexicographically first path, taken from a sorted
-    walk. The choice must be deterministic: an identical input tree has to
-    produce an identical output tree, or the resulting image layer differs
-    between builds for no reason.
+    The canonical copy is the first path encountered in a sorted walk, which is
+    not the same as the lexicographically first path overall: os.walk yields a
+    directory's own files before descending into its subdirectories, so a file
+    that sits directly in a parent directory is encountered, and can become
+    canonical, before a file in a child directory even when the child's full
+    path would sort first as a string. The choice must be deterministic: an
+    identical input tree has to produce an identical output tree, or the
+    resulting image layer differs between builds for no reason.
 
     IMPORTANT: call this after deduplicate_assets. os.walk does not descend
     into symlinked directories, so running second means the nested assets/
@@ -211,8 +215,21 @@ def deduplicate_binaries(site_dir):
                 continue
 
             target = os.path.relpath(keep, dirpath)
-            os.remove(path)
-            os.symlink(target, path)
+
+            # The swap is not done in place. The symlink is created at a
+            # temporary name first, then moved over the original with
+            # os.replace, which is an atomic rename on the same filesystem.
+            # The original file is therefore never missing: an interruption
+            # between the two calls below leaves the real file untouched and
+            # only a stray temp name behind. A leftover temp name from an
+            # earlier interrupted run is removed before being reused, and the
+            # ".dedup-tmp" suffix carries no deduplicable extension, so it can
+            # never be picked up as a dedup candidate itself while it exists.
+            tmp_path = path + ".dedup-tmp"
+            if os.path.lexists(tmp_path):
+                os.remove(tmp_path)
+            os.symlink(target, tmp_path)
+            os.replace(tmp_path, path)
             replaced_count += 1
             freed_bytes += size
 

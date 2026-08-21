@@ -214,6 +214,71 @@ def test_dedup_replaces_identical_image_with_working_symlink():
 
 
 @test
+def test_dedup_replacement_is_atomic_and_leaves_no_temp_files():
+    """The swap creates a temp symlink and moves it into place with
+    os.replace, so a successful run must leave a working symlink behind, no
+    ".dedup-tmp" artifact, and a stable, idempotent result on a rerun."""
+    tree = make_tree({
+        os.path.join("v1", "media", "shot.png"): b"y" * 500,
+        os.path.join("v2", "media", "shot.png"): b"y" * 500,
+    })
+    try:
+        replaced, freed = optimize.deduplicate_binaries(tree)
+        assert replaced == 1, replaced
+        assert freed == 500, freed
+
+        duplicate = os.path.join(tree, "v2", "media", "shot.png")
+        assert os.path.islink(duplicate)
+        with open(duplicate, "rb") as handle:
+            assert handle.read() == b"y" * 500, "symlink does not resolve to the content"
+
+        leftovers = [
+            name for name in os.listdir(os.path.dirname(duplicate))
+            if name.endswith(".dedup-tmp")
+        ]
+        assert not leftovers, leftovers
+
+        # The tree is already fully deduplicated, so a rerun must be a no-op
+        # and must not disturb the working symlink.
+        replaced_again, freed_again = optimize.deduplicate_binaries(tree)
+        assert replaced_again == 0, replaced_again
+        assert freed_again == 0, freed_again
+        assert os.path.islink(duplicate)
+        with open(duplicate, "rb") as handle:
+            assert handle.read() == b"y" * 500
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_dedup_rerun_recovers_from_a_leftover_temp_file():
+    """A leftover ".dedup-tmp" from an earlier interrupted run (a crash
+    between creating the temp symlink and the atomic rename) must not break
+    the next run: it is not deduplicable itself, so it is never touched by the
+    walk directly, and it is cleared only when the real file it shadows is
+    processed again."""
+    tree = make_tree({
+        os.path.join("v1", "media", "shot.png"): b"y" * 500,
+        os.path.join("v2", "media", "shot.png"): b"y" * 500,
+    })
+    try:
+        stale = os.path.join(tree, "v2", "media", "shot.png.dedup-tmp")
+        os.symlink("bogus-leftover-target", stale)
+
+        replaced, freed = optimize.deduplicate_binaries(tree)
+
+        assert replaced == 1, replaced
+        assert freed == 500, freed
+        duplicate = os.path.join(tree, "v2", "media", "shot.png")
+        assert os.path.islink(duplicate)
+        with open(duplicate, "rb") as handle:
+            assert handle.read() == b"y" * 500
+        assert not os.path.lexists(stale), "stale temp file must be cleared, not left behind"
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
 def test_dedup_keeps_different_content_and_ignores_html():
     tree = make_tree({
         os.path.join("stable14", "media", "shot.png"): b"y" * 500,
@@ -232,20 +297,50 @@ def test_dedup_keeps_different_content_and_ignores_html():
 
 
 @test
-def test_dedup_canonical_copy_is_lexicographically_first():
-    """Determinism: identical input must always keep the same file."""
-    files = {
-        os.path.join("b-version", "media", "shot.png"): b"y" * 500,
+def test_dedup_canonical_choice_survives_reversed_walk_order():
+    """Determinism: the file that sorts first must survive no matter what
+    order the filesystem hands dirnames and filenames back in.
+
+    Building the tree in two different creation orders and hoping that
+    surfaces a missing `sorted(...)` call through the filesystem's own
+    readdir order is not reliable: measured directly on this machine
+    (macOS/APFS), a two-file directory came back in alphabetical order from
+    os.scandir regardless of which file was created first, so a missing sort
+    on the filenames pass would have gone unnoticed. CI runs on a different
+    filesystem (ubuntu-latest) where the risk runs the other way. This
+    monkeypatches os.walk instead, forcing dirnames and filenames into
+    reverse-alphabetical order on every call, independent of what any real
+    filesystem happens to do, so a missing `sorted(...)` on either the
+    dirnames or the filenames pass is guaranteed to flip the outcome.
+    """
+    real_walk = os.walk
+
+    def reversed_walk(top, *args, **kwargs):
+        for dirpath, dirnames, filenames in real_walk(top, *args, **kwargs):
+            dirnames[:] = list(reversed(sorted(dirnames)))
+            yield dirpath, dirnames, list(reversed(sorted(filenames)))
+
+    tree = make_tree({
         os.path.join("a-version", "media", "shot.png"): b"y" * 500,
-    }
-    for _ in range(2):
-        tree = make_tree(files)
-        try:
-            optimize.deduplicate_binaries(tree)
-            assert not os.path.islink(os.path.join(tree, "a-version", "media", "shot.png"))
-            assert os.path.islink(os.path.join(tree, "b-version", "media", "shot.png"))
-        finally:
-            shutil.rmtree(tree)
+        os.path.join("b-version", "media", "shot.png"): b"y" * 500,
+        os.path.join("c-version", "media", "m.png"): b"z" * 500,
+        os.path.join("c-version", "media", "n.png"): b"z" * 500,
+    })
+    os.walk = reversed_walk
+    try:
+        optimize.deduplicate_binaries(tree)
+        # Exercises the dirnames sort: "a-version" must still precede
+        # "b-version" even though the fake walk visits directories in
+        # reverse-alphabetical order.
+        assert not os.path.islink(os.path.join(tree, "a-version", "media", "shot.png"))
+        assert os.path.islink(os.path.join(tree, "b-version", "media", "shot.png"))
+        # Exercises the filenames sort: "m.png" must still precede "n.png"
+        # within the same directory.
+        assert not os.path.islink(os.path.join(tree, "c-version", "media", "m.png"))
+        assert os.path.islink(os.path.join(tree, "c-version", "media", "n.png"))
+    finally:
+        os.walk = real_walk
+        shutil.rmtree(tree)
 
 
 @test
