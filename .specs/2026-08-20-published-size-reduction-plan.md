@@ -19,7 +19,7 @@
 - Never run **versioned-build-cicd.py** for verification. It deploys with `mike --push`.
 - **versioned-build.py** runs `git reset --hard origin/gh-pages` inside the **gh-pages** folder at its Step 4. That discards anything local in that folder. Task 4 fixes the consequence for reporting, but the reset stays; do not run the script if the local **gh-pages** folder holds anything you need.
 - `deduplicate_binaries` must be called **after** `deduplicate_assets`. `os.walk` does not descend into symlinked directories, so running second skips the nested `assets/` trees the earlier pass already replaced.
-- Deduplication must be deterministic: the canonical copy is the lexicographically first path from a sorted walk. Non-determinism would make the output tar differ between identical builds.
+- Deduplication must be deterministic: the canonical copy is the first path yielded by a sorted walk. Non-determinism would make the output tar differ between identical builds.
 - One extension predicate. The optimizer and the size harness must classify deduplicable files identically, or the reported "remaining duplicates" figure describes a different file set from the one that was optimized.
 - Any walk that inspects symlinks must inspect `dirnames` as well as `filenames`. `deduplicate_assets` creates symlinks to directories, which never appear in `filenames`.
 - Do not enable `cache_safe`, `minify_js`, or `minify_css` on the `minify` plugin. See decisions 8 and 9 in the spec.
@@ -819,8 +819,7 @@ def deduplicate_binaries(site_dir):
     makes this safe for historical fidelity, unlike a shared unversioned media
     folder, where an old version would start showing a new screenshot.
 
-    The canonical copy is the lexicographically first path, taken from a sorted
-    walk. The choice must be deterministic: an identical input tree has to
+    The canonical copy is the first path yielded by a sorted walk. The choice must be deterministic: an identical input tree has to
     produce an identical output tree, or the resulting image layer differs
     between builds for no reason.
 
@@ -991,7 +990,7 @@ so these duplicates are roughly 1213MB of every 2GB image tag.
 
 Identical files become relative symlinks to one canonical copy, so no HTML is
 rewritten and every version keeps referencing its own path. The canonical copy
-is the lexicographically first path from a sorted walk, which keeps the output
+is the first path yielded by a sorted walk, which keeps the output
 reproducible for identical input. Runs after deduplicate_assets, whose
 directory symlinks are skipped rather than traversed."
 ```
@@ -1875,3 +1874,15 @@ The five spec risks each map to a step: minification altering every byte is Task
 10. `versioned-build.py` discarded the version it had just built and then reported the remote. Task 4 Step 3 fixes it and makes the fetch fail loudly instead of silently.
 11. The stated failing-test output for a missing module was impossible, since the module loads at import time. Expectations now distinguish import-time failure from per-test failure, and a `@test` decorator replaces the hand-maintained list that made the two easy to confuse. The runner also catches every exception rather than only `AssertionError`: a test written before its implementation fails with `AttributeError`, which would otherwise crash the run and hide the tests that pass, making the stated Task 3 Step 2 output impossible for a second reason.
 12. A commit message hard-coded 57%. It now interpolates the measured value.
+
+---
+
+## Post-execution corrections
+
+Three defects in this plan's own reference code were found by review during execution and corrected in the delivered code. They are recorded here so that anyone re-executing the plan does not reintroduce them from the text above. The authoritative record of each is the SDD ledger.
+
+1. **Task 2, the size harness.** Directory symlinks were counted but never charged their `lstat` bytes, and `measure_ref` ignored the git file mode so a symlink blob (`120000`) was silently treated as a regular file, making its `symlinks` key structurally unreachable. Both are fixed with covering tests. A private `_digest` that duplicated `build_optimize.file_digest` was also removed.
+2. **Task 3, `deduplicate_binaries`.** The replacement was a non-atomic `os.remove` followed by `os.symlink`; an interrupt between them lost the file with no rerun recovery. It is now a symlink at a temporary name followed by `os.replace`.
+3. **Task 3, the determinism test.** As written it repeated one identical run rather than comparing two orders, and it killed the unsorted-walk mutant only because APFS returns readdir entries in creation order. It now monkeypatches `os.walk` to force reverse order, which is independent of the filesystem, and both the dirnames and the filenames sort were confirmed load-bearing by killing each mutant in isolation. Varying file creation order, which this plan originally suggested, does not work: APFS returned alphabetical order regardless.
+
+The ordering rule stated throughout this document was also imprecise. The canonical copy is the first path yielded by a sorted walk, which is a sorted pre-order traversal and is not the same as the lexicographically first path in the tree: with `v1/shot.png` and `v1x.png` holding identical bytes the walk keeps `v1x.png`, because `/` is 0x2F and `x` is 0x78. Determinism, the property that matters, is unaffected.
