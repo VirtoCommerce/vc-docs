@@ -376,6 +376,51 @@ def test_dedup_does_not_follow_directory_symlinks():
         shutil.rmtree(tree)
 
 
+checker = load("check_rendered_text.py", "check_rendered_text")
+
+
+def _text(html):
+    tree = make_tree({"page.html": html.encode("utf-8")})
+    try:
+        return checker.rendered_text(os.path.join(tree, "page.html"))
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_rendered_text_ignores_whitespace_between_block_tags():
+    assert _text("<p>First.</p>\n\n    <p>Second.</p>") == _text("<p>First.</p><p>Second.</p>")
+
+
+@test
+def test_rendered_text_detects_words_joined_across_inline_tag():
+    before = _text("<p>Click <strong>Save</strong> in the toolbar.</p>")
+    after = _text("<p>Click <strong>Save</strong>in the toolbar.</p>")
+    assert before != after, "joined words across </strong> must be detected"
+
+
+@test
+def test_rendered_text_detects_joining_across_less_common_inline_tags():
+    """The inline set must be the real phrasing-content set, not a partial one."""
+    for tag in ("label", "button", "output", "abbr", "code", "select"):
+        before = _text(f"<p><{tag}>Name</{tag}> required</p>")
+        after = _text(f"<p><{tag}>Name</{tag}>required</p>")
+        assert before != after, f"joining across </{tag}> was not detected"
+
+
+@test
+def test_rendered_text_survives_a_gt_inside_an_attribute():
+    """A naive [^>]* tag regex truncates here and leaks attribute text."""
+    text = _text('<p><abbr title="a > b">EAV</abbr> store</p>')
+    assert text == "EAV store", text
+
+
+@test
+def test_rendered_text_drops_script_and_style_content():
+    text = _text("<style>p{color:red}</style><p>Hello</p><script>var x=1;</script>")
+    assert text == "Hello", text
+
+
 def main():
     failures = 0
     for case in TESTS:
