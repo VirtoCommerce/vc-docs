@@ -17,12 +17,11 @@ Usage:
 """
 
 import argparse
-import hashlib
 import json
 import os
 import subprocess
 
-from build_optimize import format_size, is_deduplicable
+from build_optimize import file_digest, format_size, is_deduplicable
 
 # First match wins; "Other" catches the rest.
 CATEGORIES = [
@@ -34,8 +33,6 @@ CATEGORIES = [
     ("JSON", {".json"}),
 ]
 
-CHUNK = 1024 * 1024
-
 
 def categorize(filename):
     extension = os.path.splitext(filename)[1].lower()
@@ -43,17 +40,6 @@ def categorize(filename):
         if extension in extensions:
             return name
     return "Other"
-
-
-def _digest(path):
-    hasher = hashlib.sha256()
-    with open(path, "rb") as handle:
-        while True:
-            chunk = handle.read(CHUNK)
-            if not chunk:
-                break
-            hasher.update(chunk)
-    return hasher.hexdigest()
 
 
 def _blank():
@@ -85,6 +71,11 @@ def measure_tree(root):
         # them keeps the traversal explicit rather than incidental.
         linked_dirs = [d for d in dirnames if os.path.islink(os.path.join(dirpath, d))]
         report["symlink_dirs"] += len(linked_dirs)
+        for linked_dir in linked_dirs:
+            # A directory symlink is not free either: it occupies its own
+            # target string, same as a file symlink. Charging zero here would
+            # under-report total_bytes by the sum of every alias symlink.
+            report["total_bytes"] += os.lstat(os.path.join(dirpath, linked_dir)).st_size
         dirnames[:] = sorted(d for d in dirnames if d not in linked_dirs)
 
         for filename in sorted(filenames):
@@ -102,7 +93,7 @@ def measure_tree(root):
             _add(report, filename, size)
 
             if is_deduplicable(filename):
-                key = _digest(path)
+                key = file_digest(path)
                 if key in seen:
                     report["duplicate_bytes"] += size
                 else:
@@ -111,15 +102,17 @@ def measure_tree(root):
     return report
 
 
-def measure_ref(ref):
+def measure_ref(ref, cwd=None):
     """Measure a git ref without checking it out.
 
     Blob OIDs are content hashes, so identical content shares an OID and
-    duplicates are exact rather than sampled.
+    duplicates are exact rather than sampled. cwd lets a test point this at
+    a throwaway repository instead of the current one; the default behavior
+    (run in the current directory) is unchanged.
     """
     output = subprocess.run(
         ["git", "ls-tree", "-r", "-l", ref],
-        capture_output=True, text=True, check=True,
+        capture_output=True, text=True, check=True, cwd=cwd,
     ).stdout
 
     report = _blank()
@@ -130,11 +123,22 @@ def measure_ref(ref):
         fields = meta.split()
         if len(fields) < 4 or fields[1] != "blob":
             continue
+        mode = fields[0]
         oid = fields[2]
         if fields[3] == "-":
             continue
         size = int(fields[3])
         filename = os.path.basename(path)
+
+        if mode == "120000":
+            # A symlink is stored as a blob whose content is its target
+            # path, so its reported size is the same quantity os.lstat's
+            # st_size gives a real filesystem symlink. Git has no separate
+            # representation for a symlink to a directory versus a file, so
+            # this can only ever populate "symlinks", never "symlink_dirs".
+            report["symlinks"] += 1
+            report["total_bytes"] += size
+            continue
 
         _add(report, filename, size)
 

@@ -12,6 +12,7 @@ name and cannot be imported with an import statement.
 import importlib.util
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 
@@ -134,6 +135,61 @@ def test_measure_ref_reads_a_git_ref_without_checkout():
     report = measure.measure_ref("HEAD")
     assert report["total_bytes"] > 0, report
     assert report["categories"], report
+
+
+@test
+def test_measure_charges_directory_symlinks_their_own_size():
+    """A directory symlink must contribute its own lstat size, never zero.
+
+    Fix round 1, finding 1: measure_tree counted the directory symlink in
+    symlink_dirs but added nothing to total_bytes for it.
+    """
+    tree = make_tree({os.path.join("v1", "assets", "shot.png"): b"y" * 500})
+    try:
+        link = os.path.join(tree, "v2", "assets")
+        os.makedirs(os.path.dirname(link))
+        os.symlink(os.path.join("..", "v1", "assets"), link)
+        link_size = os.lstat(link).st_size
+
+        report = measure.measure_tree(tree)
+
+        assert report["symlink_dirs"] == 1, report
+        assert report["total_bytes"] == 500 + link_size, report
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_measure_ref_counts_a_symlink_blob_instead_of_a_regular_file():
+    """git stores a symlink as a blob with mode 120000; measure_ref must not
+    silently treat it as a regular file.
+
+    Fix round 1, finding 2: measure_ref never looked at the mode field, so a
+    symlink blob was added to a size category and never counted as a symlink.
+    Builds a throwaway repository so a real symlink blob exists to measure.
+    """
+    repo = tempfile.mkdtemp(prefix="build-tools-repo-")
+    try:
+        def run(*args):
+            subprocess.run(
+                ["git", *args], cwd=repo, check=True, capture_output=True, text=True
+            )
+
+        run("init", "-q")
+        run("config", "user.email", "test@example.com")
+        run("config", "user.name", "Test")
+        with open(os.path.join(repo, "shot.png"), "wb") as handle:
+            handle.write(b"y" * 500)
+        os.symlink("shot.png", os.path.join(repo, "alias.png"))
+        run("add", "-A")
+        run("commit", "-q", "-m", "init")
+
+        report = measure.measure_ref("HEAD", cwd=repo)
+
+        assert report["symlinks"] == 1, report
+        assert report["categories"]["Images"]["files"] == 1, report
+    finally:
+        shutil.rmtree(repo)
 
 
 def main():
