@@ -87,8 +87,10 @@ plugins:
     #   - autolinks
     - awesome-nav
     - git-revision-date-localized
-    - minify
-    #       minify_html: true
+    - minify:
+          minify_html: true
+          htmlmin_opts:
+              remove_comments: true
     - redirects:
           redirect_maps:
               # Legacy flat URLs (old /{section}-{guide}/ scheme still indexed by search engines).
