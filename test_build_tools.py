@@ -75,6 +75,67 @@ def test_file_digest_matches_for_identical_content():
         shutil.rmtree(tree)
 
 
+measure = load("measure_site_size.py", "measure_site_size")
+
+
+@test
+def test_measure_counts_bytes_by_category():
+    tree = make_tree({
+        os.path.join("guide", "index.html"): b"x" * 1000,
+        os.path.join("guide", "shot.png"): b"y" * 500,
+    })
+    try:
+        report = measure.measure_tree(tree)
+        assert report["categories"]["HTML"]["bytes"] == 1000, report
+        assert report["categories"]["HTML"]["files"] == 1, report
+        assert report["categories"]["Images"]["bytes"] == 500, report
+        assert report["total_bytes"] == 1500, report
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_measure_counts_file_and_directory_symlinks():
+    """deduplicate_assets creates directory symlinks, which never appear in filenames."""
+    tree = make_tree({os.path.join("v1", "assets", "shot.png"): b"y" * 500})
+    try:
+        os.makedirs(os.path.join(tree, "v2"))
+        os.symlink(os.path.join("..", "v1", "assets"), os.path.join(tree, "v2", "assets"))
+        os.symlink(os.path.join("..", "v1", "assets", "shot.png"), os.path.join(tree, "v2", "shot.png"))
+
+        report = measure.measure_tree(tree)
+
+        assert report["symlinks"] == 1, report
+        assert report["symlink_dirs"] == 1, report
+        # The linked directory must not be walked into, or its bytes are double counted.
+        assert report["categories"]["Images"]["bytes"] == 500, report
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_measure_duplicate_metric_uses_the_optimizer_predicate():
+    """Two identical .js files are not deduplicable, so they are not duplicates here."""
+    tree = make_tree({
+        os.path.join("v1", "shot.png"): b"y" * 500,
+        os.path.join("v2", "shot.png"): b"y" * 500,
+        os.path.join("v1", "app.js"): b"j" * 300,
+        os.path.join("v2", "app.js"): b"j" * 300,
+    })
+    try:
+        report = measure.measure_tree(tree)
+        assert report["duplicate_bytes"] == 500, report
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_measure_ref_reads_a_git_ref_without_checkout():
+    report = measure.measure_ref("HEAD")
+    assert report["total_bytes"] > 0, report
+    assert report["categories"], report
+
+
 def main():
     failures = 0
     for case in TESTS:
