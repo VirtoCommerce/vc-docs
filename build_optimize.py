@@ -146,3 +146,74 @@ def format_size(size_bytes):
             return f"{size_bytes:.1f} {unit}"
         size_bytes /= 1024
     return f"{size_bytes:.1f} TB"
+
+
+def deduplicate_binaries(site_dir):
+    """
+    Replace byte-identical binary files with relative symlinks to one copy.
+
+    Every published version carries its own copy of the screenshots it
+    references. Across the five published versions that is roughly 1690MB of
+    media holding roughly 355MB of unique content, because most screenshots do
+    not change between releases.
+
+    Media matters out of proportion to its share of the tree. Registry layers
+    are gzip-compressed, and media compresses about 1.1x while HTML compresses
+    about 15.5x, so these duplicates are roughly 1213MB of every 2GB image tag
+    even though HTML is the larger part of the tree.
+
+    Only files whose content hashes are equal are linked, so a version whose
+    screenshot did change keeps its own file. No HTML is rewritten: each page
+    keeps referencing its own path, and the path still resolves. That is what
+    makes this safe for historical fidelity, unlike a shared unversioned media
+    folder, where an old version would start showing a new screenshot.
+
+    The canonical copy is the lexicographically first path, taken from a sorted
+    walk. The choice must be deterministic: an identical input tree has to
+    produce an identical output tree, or the resulting image layer differs
+    between builds for no reason.
+
+    IMPORTANT: call this after deduplicate_assets. os.walk does not descend
+    into symlinked directories, so running second means the nested assets/
+    trees that pass already replaced are skipped instead of being rehashed
+    once per version.
+    """
+    canonical = {}
+    replaced_count = 0
+    freed_bytes = 0
+
+    for dirpath, dirnames, filenames in os.walk(site_dir):
+        # Sorted traversal is what makes the canonical choice reproducible.
+        # Linked directories are dropped explicitly: os.walk would not descend
+        # into them anyway, and being explicit keeps that guarantee visible.
+        dirnames[:] = sorted(
+            d for d in dirnames if not os.path.islink(os.path.join(dirpath, d))
+        )
+
+        for filename in sorted(filenames):
+            if not is_deduplicable(filename):
+                continue
+
+            path = os.path.join(dirpath, filename)
+            if os.path.islink(path):
+                continue
+
+            try:
+                digest = file_digest(path)
+                size = os.path.getsize(path)
+            except OSError as error:
+                print(f"    ⚠️  Skipped {os.path.relpath(path, site_dir)}: {error}")
+                continue
+
+            keep = canonical.get(digest)
+            if keep is None:
+                canonical[digest] = path
+                continue
+
+            target = os.path.relpath(keep, dirpath)
+            os.remove(path)
+            os.symlink(target, path)
+            replaced_count += 1
+            freed_bytes += size
+
+    return replaced_count, freed_bytes

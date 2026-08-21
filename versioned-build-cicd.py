@@ -14,7 +14,7 @@ import tempfile
 import re
 import shlex
 
-from build_optimize import deduplicate_assets, format_size
+from build_optimize import deduplicate_assets, deduplicate_binaries, format_size
 
 SITE_URL = "https://docs.virtocommerce.org"
 
@@ -427,7 +427,13 @@ def main():
     assets_replaced, assets_freed = deduplicate_assets(args.output_dir)
     print(f"  ✅ Replaced {assets_replaced} assets folders with symlinks ({format_size(assets_freed)} freed)")
 
-    total_freed = assets_freed
+    # Runs after the assets pass on purpose: os.walk does not descend into the
+    # symlinked assets/ folders it just created, so those are skipped here.
+    print("  Deduplicating identical binaries across versions...")
+    binaries_replaced, binaries_freed = deduplicate_binaries(args.output_dir)
+    print(f"  ✅ Replaced {binaries_replaced} duplicate binaries with symlinks ({format_size(binaries_freed)} freed)")
+
+    total_freed = assets_freed + binaries_freed
     print(f"✅ Build optimized! Total space saved: {format_size(total_freed)}")
 
     print("✅ CI/CD versioned build completed!")

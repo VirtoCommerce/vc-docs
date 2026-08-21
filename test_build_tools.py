@@ -192,6 +192,95 @@ def test_measure_ref_counts_a_symlink_blob_instead_of_a_regular_file():
         shutil.rmtree(repo)
 
 
+@test
+def test_dedup_replaces_identical_image_with_working_symlink():
+    tree = make_tree({
+        os.path.join("stable14", "media", "shot.png"): b"y" * 500,
+        os.path.join("stable15", "media", "shot.png"): b"y" * 500,
+    })
+    try:
+        replaced, freed = optimize.deduplicate_binaries(tree)
+
+        assert replaced == 1, replaced
+        assert freed == 500, freed
+        duplicate = os.path.join(tree, "stable15", "media", "shot.png")
+        assert os.path.islink(duplicate)
+        assert not os.path.isabs(os.readlink(duplicate)), "symlink target must be relative"
+        with open(duplicate, "rb") as handle:
+            assert handle.read() == b"y" * 500, "symlink does not resolve to the content"
+        assert not os.path.islink(os.path.join(tree, "stable14", "media", "shot.png"))
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_dedup_keeps_different_content_and_ignores_html():
+    tree = make_tree({
+        os.path.join("stable14", "media", "shot.png"): b"y" * 500,
+        os.path.join("stable15", "media", "shot.png"): b"z" * 500,
+        os.path.join("stable14", "index.html"): b"<p>same</p>",
+        os.path.join("stable15", "index.html"): b"<p>same</p>",
+    })
+    try:
+        replaced, freed = optimize.deduplicate_binaries(tree)
+
+        assert replaced == 0, replaced
+        assert freed == 0, freed
+        assert not os.path.islink(os.path.join(tree, "stable15", "index.html")), "HTML must not be touched"
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_dedup_canonical_copy_is_lexicographically_first():
+    """Determinism: identical input must always keep the same file."""
+    files = {
+        os.path.join("b-version", "media", "shot.png"): b"y" * 500,
+        os.path.join("a-version", "media", "shot.png"): b"y" * 500,
+    }
+    for _ in range(2):
+        tree = make_tree(files)
+        try:
+            optimize.deduplicate_binaries(tree)
+            assert not os.path.islink(os.path.join(tree, "a-version", "media", "shot.png"))
+            assert os.path.islink(os.path.join(tree, "b-version", "media", "shot.png"))
+        finally:
+            shutil.rmtree(tree)
+
+
+@test
+def test_dedup_is_idempotent():
+    tree = make_tree({
+        os.path.join("v1", "media", "shot.png"): b"y" * 500,
+        os.path.join("v2", "media", "shot.png"): b"y" * 500,
+    })
+    try:
+        optimize.deduplicate_binaries(tree)
+        replaced, freed = optimize.deduplicate_binaries(tree)
+
+        assert replaced == 0, replaced
+        assert freed == 0, freed
+    finally:
+        shutil.rmtree(tree)
+
+
+@test
+def test_dedup_does_not_follow_directory_symlinks():
+    """deduplicate_assets runs first and leaves directory symlinks behind."""
+    tree = make_tree({os.path.join("root", "assets", "logo.svg"): b"<svg/>" * 50})
+    try:
+        os.makedirs(os.path.join(tree, "v1"))
+        os.symlink(os.path.join("..", "root", "assets"), os.path.join(tree, "v1", "assets"))
+
+        replaced, freed = optimize.deduplicate_binaries(tree)
+
+        assert replaced == 0, "a linked directory must not be traversed"
+        assert freed == 0, freed
+        assert os.path.islink(os.path.join(tree, "v1", "assets"))
+    finally:
+        shutil.rmtree(tree)
+
+
 def main():
     failures = 0
     for case in TESTS:
