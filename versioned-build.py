@@ -335,53 +335,57 @@ def main():
         sys.exit(1)
 
     gh_pages_export_dir = tempfile.mkdtemp(prefix="vc-docs-gh-pages-export-")
+    archive_path = os.path.join(gh_pages_export_dir, "archive.tar")
     try:
-        result = run_command(
-            f'git archive gh-pages | tar -x -C "{gh_pages_export_dir}"', check=False
-        )
+        # Two separately-checked commands, not a shell pipeline. run_command
+        # uses subprocess.run(shell=True), i.e. /bin/sh -c; a pipeline's exit
+        # status is the LAST command's (tar), not git archive's, and
+        # pipefail is never set. If git archive failed for a reason the
+        # ref-existence check above does not catch (a corrupt object, disk
+        # pressure, a permissions problem), tar would receive empty stdin,
+        # exit 0, and this step would silently report success over an empty
+        # directory -- exactly the silent-failure class this task exists to
+        # remove. The temp archive file lives inside gh_pages_export_dir, so
+        # the single rmtree in the finally block below cleans up both it and
+        # the extracted content, on success or failure alike.
+        result = run_command(f'git archive gh-pages -o "{archive_path}"', check=False)
         if result.returncode != 0:
             print(f"  ❌ Could not export the local gh-pages ref: {result.stderr}")
             sys.exit(1)
+
+        result = run_command(f'tar -xf "{archive_path}" -C "{gh_pages_export_dir}"', check=False)
+        if result.returncode != 0:
+            print(f"  ❌ Could not extract the gh-pages export: {result.stderr}")
+            sys.exit(1)
+
         print(f"  ✅ Exported local gh-pages content to {gh_pages_export_dir}")
 
         print("📋 Step 5: Copy versioned content from the export to site")
 
         print("  Copying versioned content from the export...")
-        # Copy versioned subsites to site directory
-        # This overwrites the non-versioned subsites with versioned ones
-        for subsite in ["marketplace", "platform", "storefront"]:
-            for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
-                # Look for versioned content in <export>/{subsite}/{guide}/
-                src = os.path.join(gh_pages_export_dir, subsite, guide)
-                if os.path.exists(src):
-                    dst = f"site/{subsite}/{guide}"
-                    print(f"  Copying {src} to {dst}")
-                    if os.path.exists(dst):
-                        shutil.rmtree(dst)
-                    shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
-                    print(f"  ✅ Copied {src} to {dst}")
-                else:
-                    print(f"  ⚠️  {src} not found in the gh-pages export")
-                    # Try to find what's actually there
-                    guide_path = src
-                    if os.path.exists(guide_path):
-                        print(f"  📁 Found {guide_path}, contents:")
-                        try:
-                            contents = os.listdir(guide_path)
-                            for item in contents:
-                                item_path = os.path.join(guide_path, item)
-                                if os.path.isdir(item_path):
-                                    print(f"    📁 {item}/")
-                                else:
-                                    print(f"    📄 {item}")
-                        except Exception as e:
-                            print(f"    ❌ Error listing contents: {e}")
-                    else:
-                        print(f"  ❌ {guide_path} not found")
+        # Copy versioned subsites to site directory. Iterate the known list
+        # of subsites (VERSIONED_SUBSITES) rather than every
+        # {subsite}x{guide} combination -- not every subsite has every guide
+        # (only platform has deployment-on-cloud), and a missing EXPECTED
+        # subsite here must stop the script rather than merely warn: a
+        # warning that lets the run continue is what turned the Finding 1
+        # bug into a false success instead of a loud failure.
+        for subsite in VERSIONED_SUBSITES:
+            src = os.path.join(gh_pages_export_dir, subsite)
+            if not os.path.exists(src):
+                print(f"  ❌ {src} not found in the gh-pages export")
+                sys.exit(1)
+            dst = f"site/{subsite}"
+            print(f"  Copying {src} to {dst}")
+            if os.path.exists(dst):
+                shutil.rmtree(dst)
+            shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+            print(f"  ✅ Copied {src} to {dst}")
 
         print("✅ Versioned content copied to site")
     finally:
-        # Clean up the temp export regardless of success or failure above.
+        # Clean up the temp export (including the temp archive file) regardless
+        # of success or failure above.
         shutil.rmtree(gh_pages_export_dir, ignore_errors=True)
 
     print("📋 Step 6: Extract sitemaps from copied content")
@@ -450,7 +454,10 @@ def main():
     print("📋 Step 10: Report build size")
 
     # Shelling out to the harness keeps one implementation of the report.
-    print(run_command("python3 measure_site_size.py site").stdout)
+    # sys.executable, not the literal "python3": run_command uses shell=True,
+    # so a bare "python3" would resolve off the invoking shell's PATH rather
+    # than the interpreter actually running this script.
+    print(run_command(f'"{sys.executable}" measure_site_size.py site').stdout)
 
     print("📋 Step 11: Start Python HTTP server")
     print("")
