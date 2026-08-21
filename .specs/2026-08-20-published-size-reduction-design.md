@@ -49,7 +49,17 @@ Byte breakdown of a representative page, `platform/developer-guide/index.html`:
 
 The navigation tree is emitted into every page of a guide, at roughly 520 bytes per link. Material's own 9.5 templates are whitespace-stripped and carry no Jinja comments, but `overrides/partials/nav-item.html` is a fork of a pre-9.x template that keeps both, and the deployed HTML contains the comment text.
 
-The `minify` plugin is declared in the root config and in all seven guide configs, in every case as a bare `- minify` with no options. Its default is `minify_html: false`, so it currently does nothing. Measured on a random sample of 60 published pages, `htmlmin` with `remove_comments` cuts 20.5 MB to 8.8 MB, a **57% reduction**, at 2.33 s per 60 pages.
+The `minify` plugin is declared in the root config and in all seven guide configs, in every case as a bare `- minify` with no options. Its default is `minify_html: false`, so it currently does nothing.
+
+Turning it on is not one decision but three, because `mkdocs_minify_plugin` hardcodes its own htmlmin defaults at `plugin.py:134-143` and exposes `htmlmin_opts` to override them. Measured on the platform developer guide, 981 pages, before and after builds of the same commit:
+
+| Configuration | HTML reduction | Rendered text |
+| --- | --- | --- |
+| `minify_html: true` alone | 31.1% | intact |
+| plus `htmlmin_opts: {remove_comments: true}` | **58.0%** | intact, 981 of 981 pages |
+| plus `remove_empty_space: true` | no material gain | **corrupted on 603 of 981 pages** |
+
+Almost the entire saving comes from removing the Jinja comments the forked nav template emits. `remove_empty_space` adds essentially nothing in bytes while deleting the whitespace text node between adjacent footer links, so `Atomic architecture Conceptual overview` renders as `AtomicarchitectureConceptual overview`. It is rejected permanently.
 
 ### Redundancy between versions
 
@@ -98,11 +108,12 @@ The consequence is that HTML dominates the tree and media dominates the image. M
 2. **Deduplication uses symlinks to one canonical copy, not a content-addressed pool with rewritten references.** Both remove the same bytes. Symlinks require no change to any HTML, so a version's pages keep pointing at their own paths and historical fidelity is preserved by construction. It also follows the idiom `deduplicate_assets` already established, and nginx following symlinks inside the site root is already load-bearing in production.
 3. **Deduplication is deterministic.** The canonical copy is the first path yielded by a sorted walk. A non-deterministic choice would make the resulting tar differ between builds, defeating the Docker layer work that follows.
 4. **Deduplication runs after `deduplicate_assets`.** `os.walk` does not descend into symlinked directories, so running second means the already-symlinked nested `assets/` trees are skipped instead of being hashed once per version.
-5. **Minification is enabled through plugin options, not a new tool,** and it lands on `main` first. The plugin is already installed and declared; only `minify_html: true` is added.
+5. **Minification is enabled through plugin options, not a new tool,** and it lands on `main` first. The plugin is already installed and declared. Two options are added: `minify_html: true` plus `htmlmin_opts: {remove_comments: true}`. The second is required, not optional: the plugin hardcodes `remove_comments: False`, so without it the saving is 31.1% instead of 58.0%.
 6. **Minification reaches a frozen version only when that version is redeployed.** mike deploys one version per run, so enabling the option on `main` shrinks the `latest` tree and nothing else. Redeploying the four stable versions is a separate, deferred stage, because it costs more than it returns in the registry: 57% of 744 MB on `latest` is about 27 MB of registry bytes, and all five versions together are only about 112 MB, against about 1213 MB from media deduplication.
 7. **The frozen-version redeploy is blocked on ACR retention.** A push to `release/**` builds and pushes a roughly 2 GB image that, per **.github/workflows/deploy.yml**, is never promoted to prod because it would clobber the landing pages baked from `main`. Four redeploys therefore add about 8 GB of undeployable images before returning anything. Retention must exist first.
 8. **`cache_safe` stays off.** It renames `extra_css` and `extra_javascript` files under a content hash. Renaming asset files has previously broken deduplication in this repository and filled the deploy disk. Cache busting for Cloudflare is already handled by **overrides/hooks/extra_css_cache_bust.py**, which appends a query string and leaves file names alone.
-9. **`minify_js` and `minify_css` stay off.** The candidates are Material's already-minified bundles plus a handful of repository scripts, so the yield is negligible while `jsmin` on **version-redirect.js** and **scroll-menu.js** is a live risk.
+9. **`remove_empty_space` is rejected permanently.** It concatenates the titles of adjacent footer links on 603 of 981 pages, verified by the rendered-text gate at scale and again in isolation, while adding no material byte saving. It must never be reintroduced.
+10. **`minify_js` and `minify_css` stay off.** The candidates are Material's already-minified bundles plus a handful of repository scripts, so the yield is negligible while `jsmin` on **version-redirect.js** and **scroll-menu.js** is a live risk.
 10. **The optimization lives in a module both build scripts import, not in either script.** **versioned-build-cicd.py** deduplicates theme assets and **versioned-build.py** does not, and never has: its nine steps end at an HTTP server with no optimization pass anywhere. Copying the new function into both files would lock that divergence in permanently, so shared code moves to **build_optimize.py**. The dash in **versioned-build-cicd.py** makes it an invalid module name, which is why sharing needs a new file.
 11. **stable11 and stable12 stay published.** They are inside scope for optimization and are not retired, by explicit decision, notwithstanding their support dates.
 12. **Every claim is measured, not asserted.** The size harness lands first and can read a git ref directly, so a baseline is taken from the real published tree rather than from a working copy that may be stale.
