@@ -275,7 +275,7 @@ This section demonstrates how to use GraphQL SEO fields to inject meta tags into
     ```
 
 
-1. After opening your object page the title should change to the one set in the SEO block. Also, some <meta> tags should appear in the <head> section. Check it:
+1. After opening your object page the title should change to the one set in the SEO block. Also, some `<meta>` tags should appear in the `<head>` section. Check it:
 
     ![SEO data applied](media/seo-data-applied.png.png)
 

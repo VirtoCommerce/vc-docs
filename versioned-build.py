@@ -8,9 +8,12 @@ import os
 import sys
 import subprocess
 import shutil
+import tempfile
 import http.server
 import socketserver
 import json
+
+from build_optimize import deduplicate_assets, deduplicate_binaries, format_size
 
 SITE_URL = "https://docs.virtocommerce.org"
 
@@ -260,6 +263,12 @@ def main():
         sys.exit(1)
     print(f"Using version {version} from {version_file}")
 
+    # Added by ruling (not requested by the original brief): check each mike
+    # command's return code and collect failures instead of printing
+    # "deployed" unconditionally. Without this, a failed mike deploy would
+    # still be reported as a success, and the size report later in this
+    # script would describe content that was never actually deployed.
+    failed_subsites = []
     for subsite in subsites:
         config = f"{subsite}/mkdocs.yml"
         print(f"  Deploying {subsite} version {version}...")
@@ -267,68 +276,117 @@ def main():
         # Deploy with version 1.0 and set as latest.
         # --alias-type=copy: copy files into latest/ instead of redirect stubs, so
         # binary assets (images, PDFs) resolve under /<subsite>/latest/... too.
-        run_command(
-            f'mike deploy -F "{config}" --deploy-prefix "{subsite}" --alias-type=copy --update-aliases "{version}" latest',
-            check=False
+        # Pre-existing bug fix: only append "latest" as an alias when the
+        # version being deployed is not itself "latest" (mirrors
+        # versioned-build-cicd.py's `version != "latest"` guard). Without
+        # this, mike rejects a version that lists its own name as an alias
+        # with "duplicated version and alias" -- which is exactly what has
+        # been silently breaking every local build since VERSION became the
+        # literal string "latest".
+        deploy_cmd = (
+            f'mike deploy -F "{config}" --deploy-prefix "{subsite}" '
+            f'--alias-type=copy --update-aliases "{version}"'
         )
+        if version != "latest":
+            deploy_cmd += " latest"
+        result = run_command(deploy_cmd, check=False)
+        if result.returncode != 0:
+            print(f"  ❌ mike deploy failed for {subsite}")
+            print(f"     command: {deploy_cmd}")
+            print(f"     stderr: {result.stderr}")
+            failed_subsites.append(subsite)
+            continue
 
         # Set as default version
-        run_command(
-            f'mike set-default -F "{config}" --deploy-prefix "{subsite}" {version}',
-            check=False
-        )
+        set_default_cmd = f'mike set-default -F "{config}" --deploy-prefix "{subsite}" {version}'
+        result = run_command(set_default_cmd, check=False)
+        if result.returncode != 0:
+            print(f"  ❌ mike set-default failed for {subsite}")
+            print(f"     command: {set_default_cmd}")
+            print(f"     stderr: {result.stderr}")
+            failed_subsites.append(subsite)
+            continue
 
         print(f"  ✅ {subsite} deployed")
 
+    if failed_subsites:
+        print(f"❌ Mike deploy failed for {len(failed_subsites)} subsite(s): {', '.join(failed_subsites)}")
+        print("Aborting before the size report to avoid measuring content that never deployed.")
+        sys.exit(1)
+
     print("✅ Versioned subsites deployed")
 
-    print("📋 Step 4: Update local gh-pages folder with latest deployed content")
+    print("📋 Step 4: Export versioned content from the local gh-pages ref")
 
-    # Update local gh-pages folder to get the latest deployed content
-    print("  Updating local gh-pages folder with latest deployed content...")
+    # mike deploy above wrote to THIS repository's local gh-pages ref, not to
+    # the gh-pages/ folder (a separate, independent clone) and not to the
+    # remote. This repository can be a shallow clone while gh-pages/ is a
+    # full clone, and git refuses to fetch a shallow history into a complete
+    # repository ("shallow roots are not allowed to be updated") -- so a
+    # fetch-then-reset through gh-pages/ cannot work here no matter which ref
+    # it names. Export the deployed tree directly from the local ref with
+    # git archive instead, into a throwaway temp directory, and never touch
+    # the gh-pages/ folder for this purpose.
+    print("  Exporting versioned content from the local gh-pages ref...")
+
+    ref_check = run_command("git rev-parse --verify --quiet gh-pages", check=False)
+    if not ref_check.stdout.strip():
+        print("  ❌ No local gh-pages ref found; nothing to export")
+        sys.exit(1)
+
+    gh_pages_export_dir = tempfile.mkdtemp(prefix="vc-docs-gh-pages-export-")
+    archive_path = os.path.join(gh_pages_export_dir, "archive.tar")
     try:
-        run_command("cd gh-pages && git fetch origin gh-pages", check=False)
-        run_command("cd gh-pages && git reset --hard origin/gh-pages", check=False)
-        print("  ✅ Local gh-pages folder updated with latest content")
-    except Exception as e:
-        print(f"  ⚠️  Warning: Could not update gh-pages folder: {e}")
+        # Two separately-checked commands, not a shell pipeline. run_command
+        # uses subprocess.run(shell=True), i.e. /bin/sh -c; a pipeline's exit
+        # status is the LAST command's (tar), not git archive's, and
+        # pipefail is never set. If git archive failed for a reason the
+        # ref-existence check above does not catch (a corrupt object, disk
+        # pressure, a permissions problem), tar would receive empty stdin,
+        # exit 0, and this step would silently report success over an empty
+        # directory -- exactly the silent-failure class this task exists to
+        # remove. The temp archive file lives inside gh_pages_export_dir, so
+        # the single rmtree in the finally block below cleans up both it and
+        # the extracted content, on success or failure alike.
+        result = run_command(f'git archive gh-pages -o "{archive_path}"', check=False)
+        if result.returncode != 0:
+            print(f"  ❌ Could not export the local gh-pages ref: {result.stderr}")
+            sys.exit(1)
 
-    print("📋 Step 5: Copy versioned content from local gh-pages folder to site")
+        result = run_command(f'tar -xf "{archive_path}" -C "{gh_pages_export_dir}"', check=False)
+        if result.returncode != 0:
+            print(f"  ❌ Could not extract the gh-pages export: {result.stderr}")
+            sys.exit(1)
 
-    print("  Copying versioned content from local gh-pages folder...")
-    # Copy versioned subsites to site directory
-    # This overwrites the non-versioned subsites with versioned ones
-    for subsite in ["marketplace", "platform", "storefront"]:
-        for guide in ["developer-guide", "user-guide", "deployment-on-cloud"]:
-            # Look for versioned content in gh-pages/{subsite}/{guide}/
-            src = f"gh-pages/{subsite}/{guide}"
-            if os.path.exists(src):
-                dst = f"site/{subsite}/{guide}"
-                print(f"  Copying {src} to {dst}")
-                if os.path.exists(dst):
-                    shutil.rmtree(dst)
-                shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
-                print(f"  ✅ Copied {src} to {dst}")
-            else:
-                print(f"  ⚠️  {src} not found in local gh-pages folder")
-                # Try to find what's actually there
-                guide_path = f"gh-pages/{subsite}/{guide}"
-                if os.path.exists(guide_path):
-                    print(f"  📁 Found {guide_path}, contents:")
-                    try:
-                        contents = os.listdir(guide_path)
-                        for item in contents:
-                            item_path = os.path.join(guide_path, item)
-                            if os.path.isdir(item_path):
-                                print(f"    📁 {item}/")
-                            else:
-                                print(f"    📄 {item}")
-                    except Exception as e:
-                        print(f"    ❌ Error listing contents: {e}")
-                else:
-                    print(f"  ❌ {guide_path} not found")
+        print(f"  ✅ Exported local gh-pages content to {gh_pages_export_dir}")
 
-    print("✅ Versioned content copied to site")
+        print("📋 Step 5: Copy versioned content from the export to site")
+
+        print("  Copying versioned content from the export...")
+        # Copy versioned subsites to site directory. Iterate the known list
+        # of subsites (VERSIONED_SUBSITES) rather than every
+        # {subsite}x{guide} combination -- not every subsite has every guide
+        # (only platform has deployment-on-cloud), and a missing EXPECTED
+        # subsite here must stop the script rather than merely warn: a
+        # warning that lets the run continue is what turned the Finding 1
+        # bug into a false success instead of a loud failure.
+        for subsite in VERSIONED_SUBSITES:
+            src = os.path.join(gh_pages_export_dir, subsite)
+            if not os.path.exists(src):
+                print(f"  ❌ {src} not found in the gh-pages export")
+                sys.exit(1)
+            dst = f"site/{subsite}"
+            print(f"  Copying {src} to {dst}")
+            if os.path.exists(dst):
+                shutil.rmtree(dst)
+            shutil.copytree(src, dst, ignore=shutil.ignore_patterns('.git'))
+            print(f"  ✅ Copied {src} to {dst}")
+
+        print("✅ Versioned content copied to site")
+    finally:
+        # Clean up the temp export (including the temp archive file) regardless
+        # of success or failure above.
+        shutil.rmtree(gh_pages_export_dir, ignore_errors=True)
 
     print("📋 Step 6: Extract sitemaps from copied content")
 
@@ -378,7 +436,30 @@ def main():
     if os.path.exists("mkdocs-temp-root.yml"):
         os.remove("mkdocs-temp-root.yml")
 
-    print("📋 Step 9: Start Python HTTP server")
+    print("📋 Step 9: Optimize build size (remove duplicates)")
+
+    # The same two passes CI runs, in the same order, so the size reported below
+    # is the size of what a deploy would publish. The assets pass must run first:
+    # os.walk does not descend into the symlinked assets/ folders it creates.
+    print("  Deduplicating assets folders...")
+    assets_replaced, assets_freed = deduplicate_assets("site")
+    print(f"  ✅ Replaced {assets_replaced} assets folders with symlinks ({format_size(assets_freed)} freed)")
+
+    print("  Deduplicating identical binaries across versions...")
+    binaries_replaced, binaries_freed = deduplicate_binaries("site")
+    print(f"  ✅ Replaced {binaries_replaced} duplicate binaries with symlinks ({format_size(binaries_freed)} freed)")
+
+    print(f"✅ Build optimized! Total space saved: {format_size(assets_freed + binaries_freed)}")
+
+    print("📋 Step 10: Report build size")
+
+    # Shelling out to the harness keeps one implementation of the report.
+    # sys.executable, not the literal "python3": run_command uses shell=True,
+    # so a bare "python3" would resolve off the invoking shell's PATH rather
+    # than the interpreter actually running this script.
+    print(run_command(f'"{sys.executable}" measure_site_size.py site').stdout)
+
+    print("📋 Step 11: Start Python HTTP server")
     print("")
 
     # Change to site directory and start server

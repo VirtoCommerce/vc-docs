@@ -17,7 +17,10 @@ plugins:
         lang: en
     - awesome-nav
     - git-revision-date-localized
-    - minify
+    - minify:
+        minify_html: true
+        htmlmin_opts:
+            remove_comments: true
     - include-markdown
     - mike:
         alias_type: redirect
