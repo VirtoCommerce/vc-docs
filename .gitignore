@@ -259,3 +259,6 @@ gh-pages/
 .playwright-mcp/page-2026-05-26T07-48-14-333Z.yml
 .playwright-mcp/page-2026-05-26T08-16-39-230Z.yml
 /docs/superpowers/
+
+# Internal planning documents. Kept out of the published site and out of git.
+.specs/
