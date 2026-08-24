@@ -12,7 +12,7 @@ The pattern enables applications to load data on demand:
 1. If the data is not in the cache, we get it from the source. 
 1. Then the data is added to the cache. Next time, this data will be returned from the cache.
 
-![Cache Aside pattern chart](media/01-cache-aside-pattern.png){: style="display: block; margin: 0 auto;" }
+![Cache Aside pattern chart](media/01-cache-aside-pattern.png){: style="display: block; margin: 0 auto;" width="600"}
 
 This pattern improves performance and also helps maintain consistency between the data held in the cache and data in the underlying storage.
 
