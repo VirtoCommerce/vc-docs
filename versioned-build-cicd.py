@@ -309,9 +309,16 @@ def main():
 
     print("📋 Step 4: Export versioned content from gh-pages")
 
-    # Save current branch
-    result = run_command("git branch --show-current")
-    current_branch = result.stdout.strip()
+    # Save the current position so Step 4 can return to it after visiting
+    # gh-pages. A commit-pinned checkout leaves a detached HEAD, where
+    # `git branch --show-current` prints nothing and the restore below would
+    # silently leave the repository sitting on gh-pages. Fall back to the
+    # commit itself, which restores correctly either way.
+    result = run_command("git symbolic-ref --quiet --short HEAD", check=False)
+    current_ref = result.stdout.strip()
+    if not current_ref:
+        current_ref = run_command("git rev-parse HEAD").stdout.strip()
+    print(f"  Will return to {current_ref} after reading gh-pages")
 
     # Create temp directory OUTSIDE the repo to avoid git conflicts
     temp_dir = tempfile.mkdtemp(prefix="vc-docs-versioned-")
@@ -340,8 +347,8 @@ def main():
                 print(f"  ✅ {src_base}")
 
         # Return to original branch (no conflicts now!)
-        print(f"  Returning to {current_branch} branch...")
-        run_command(f"git checkout {current_branch}")
+        print(f"  Returning to {current_ref}...")
+        run_command(f"git checkout {current_ref}")
         run_command("git stash pop", check=False)
 
         # NOW move files from temp to site/
@@ -362,7 +369,7 @@ def main():
     except Exception as e:
         print(f"❌ Error during versioned content copy: {e}")
         # Try to return to original branch
-        run_command(f"git checkout {current_branch}", check=False)
+        run_command(f"git checkout {current_ref}", check=False)
         sys.exit(1)
     finally:
         # Cleanup temp directory

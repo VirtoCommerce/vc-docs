@@ -35,7 +35,12 @@ jobs:
         uses: VirtoCommerce/vc-github-actions/update-virtocommerce-docs-versioned@master
         with:
           githubToken: ${{ secrets.REPO_TOKEN }}
-          ref: ${{ github.ref_name }}
+          # Pin the build to the commit that triggered this run, not to the
+          # branch tip. The action checks this out, so passing a branch name
+          # made a queued deploy build whatever had landed by the time it
+          # started: two merges in quick succession produced two byte-identical
+          # images, and a run whose title named a commit it had not built.
+          ref: ${{ github.sha }}
           setAsLatest: ${{ github.ref_name == 'main' }}
           setAsDefault: ${{ github.ref_name == 'main' }}
           dockerRegistry: ${{ secrets.MAIN_DOCKER_REGISTRY }}
